@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d25914a6b391f54be5b4b60dbbf716436dc4d2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b014ccc46434fd0c3f13689e579ed4798ebcdb2
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569804"
 ---
 # <a name="fatal-error-c1083"></a>Erro fatal C1083
 
@@ -106,6 +107,8 @@ Quando um projeto é configurado para usar cabeçalhos pré-compilados, os arqui
 
 - O arquivo é compilado usando outro **/ANALYZE** configuração da opção de compilador que é usado para pré-compilar os cabeçalhos. Quando os cabeçalhos para um projeto são pré-compilados, deve usar a mesma **/ANALYZE** configurações. Para obter mais informações, consulte [/analyze (Análise de Código)](../../build/reference/analyze-code-analysis.md).
 
+- O arquivo ou diretório foi criado pelo subsistema Windows para Linux, diferenciação de maiusculas e minúsculas por diretório está habilitada e caso de um arquivo ou o caminho especificado não coincide com o caso do caminho ou arquivo em disco.
+
 - O arquivo, o diretório ou o disco é somente leitura.
 
 - O Visual Studio ou as ferramentas de linha de comando não tem permissões suficientes para ler o arquivo ou diretório. Isso pode acontecer, por exemplo, quando os arquivos do projeto têm propriedades diferentes que o processo executando o Visual Studio ou as ferramentas de linha de comando. Às vezes, esse problema pode ser corrigido executando o Visual Studio ou o prompt de comando do desenvolvedor como administrador.
@@ -127,4 +130,4 @@ Para obter informações sobre como criar projetos do C/C++ no IDE ou na linha d
 
 ## <a name="see-also"></a>Consulte também
 
-[Propriedades MSBuild](/visualstudio/msbuild/msbuild-properties)
+- [Propriedades MSBuild](/visualstudio/msbuild/msbuild-properties)

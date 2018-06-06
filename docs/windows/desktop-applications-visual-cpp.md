@@ -13,14 +13,22 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9c8180288374711db4e6d866c73a0bc8919caf2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e7d3612cd306dc2235b9fb4e6051415cba699c5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569788"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplicativos de desktop (Visual C++)
-Um *aplicativo de desktop* em C++ é um aplicativo nativo que pode acessar o conjunto completo de APIs do Windows e o executa em uma janela ou no console do sistema. Aplicativos de área de trabalho em C++ podem ser executados no Windows XP por meio do Windows 10 (embora oficialmente não há suporte para o Windows XP e há muitas APIs do Windows que foram introduzidos desde então).   Um aplicativo de área de trabalho é diferente de um aplicativo do Windows UWP (plataforma Universal), que pode ser executado em computadores que executam o Windows 10 e também no XBox, Windows Phone, Surface Hub e outros dispositivos. Para obter mais informações sobre a área de trabalho vs. Aplicativos UWP, consulte [escolha sua tecnologia](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
+Um *aplicativo de desktop* em C++ é um aplicativo nativo que pode acessar o conjunto completo de APIs do Windows e o executa em uma janela ou no console do sistema. Aplicativos de área de trabalho em C++ podem ser executados no Windows XP por meio do Windows 10 (embora oficialmente não há suporte para o Windows XP e há muitas APIs do Windows que foram introduzidos desde então).
+
+Um aplicativo de área de trabalho é diferente de um aplicativo do Windows UWP (plataforma Universal), que pode ser executado em computadores que executam o Windows 10 e também no XBox, Windows Phone, Surface Hub e outros dispositivos. Para obter mais informações sobre a área de trabalho vs. Aplicativos UWP, consulte [escolha sua tecnologia](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
+
+
+**Ponte de área de trabalho** conjunto de API do Windows no Windows 10 pode empacotar seu aplicativo de área de trabalho existente ou o objeto COM que um aplicativo UWP e adicionar UWP recursos, como toque ou chamar APIs da moderna. Você também pode adicionar um aplicativo UWP para uma solução de área de trabalho no Visual Studio e o pacote-los juntos em um único pacote e usam as APIs do Windows para se comunicar entre eles.  
+   
+No Visual Studio 2017 versão 15.4 e posterior, você pode criar um projeto de pacote de aplicativo do Windows para simplificar o trabalho de empacotar seu aplicativo de área de trabalho existente. Algumas restrições se aplicam em relação ao qual registro chama ou usa APIs do seu aplicativo de área de trabalho, mas em muitos casos, você pode criar caminhos de código alternativo para obter funcionalidade semelhante durante a execução em um pacote de aplicativos. Para obter mais informações, consulte [ponte de área de trabalho](/windows-uwp/porting/desktop-to-uwp-root).  
   
  **Terminologia**  
   

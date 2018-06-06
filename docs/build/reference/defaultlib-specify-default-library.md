@@ -1,7 +1,7 @@
 ---
-title: -DEFAULTLIB (especificar biblioteca padrão) | Microsoft Docs
+title: /DEFAULTLIB (especificar biblioteca padrão) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/29/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -20,36 +20,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48db05ea50917a09e618c782d86dace73a1bf7e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9afcaa0e229ec34ba91b4d60a7a4fa9acec2d7e3
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569775"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (especificar biblioteca padrão)
-```  
-/DEFAULTLIB:library  
-```  
-  
-## <a name="remarks"></a>Comentários  
- em que:  
-  
- *Biblioteca*  
- O nome de uma biblioteca de pesquisa ao resolver referências externas.  
-  
-## <a name="remarks"></a>Comentários  
- A opção /DEFAULTLIB adiciona uma *biblioteca* à lista de bibliotecas de LINK busca ao resolver referências. Uma biblioteca especificada com /DEFAULTLIB é pesquisada após bibliotecas especificadas na linha de comando e antes de bibliotecas padrão chamadas nos arquivos. obj.  
-  
- O [ignorar todas as bibliotecas padrão](../../build/reference/nodefaultlib-ignore-libraries.md) (/ /NODEFAULTLIB) opção substitui /DEFAULTLIB:*biblioteca*. O [ignorar bibliotecas](../../build/reference/nodefaultlib-ignore-libraries.md) (/ /NODEFAULTLIB:*biblioteca*) opção substitui /DEFAULTLIB:*biblioteca* quando o mesmo *biblioteca* nome é especificado em ambos.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
-  
--   Essa opção de vinculador não está disponível no ambiente de desenvolvimento do Visual Studio. Para adicionar uma biblioteca para a fase de link, use o **dependências adicionais** propriedade a partir de **entrada** página de propriedades.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
-  
--   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Consulte também  
- [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções do vinculador](../../build/reference/linker-options.md)
+
+Especifique uma biblioteca de padrão de pesquisa para resolver referências externas.
+
+## <a name="syntax"></a>Sintaxe
+
+> **/DEFAULTLIB**:_biblioteca_
+
+### <a name="arguments"></a>Arguments
+
+|Argumento|Descrição|
+|-|-|
+*Biblioteca*|O nome de uma biblioteca de pesquisa ao resolver referências externas.
+
+## <a name="remarks"></a>Comentários
+
+O **/DEFAULTLIB** opção adiciona uma *biblioteca* à lista de bibliotecas de LINK busca ao resolver referências. Uma biblioteca especificada com **/DEFAULTLIB** é pesquisado após bibliotecas explicitamente especificadas na linha de comando e antes de bibliotecas padrão chamadas nos arquivos. obj.
+
+Quando usada sem argumentos, o [/NODEFAULTLIB (ignorar todas as bibliotecas de padrão)](../../build/reference/nodefaultlib-ignore-libraries.md) opção substitui todos os **/DEFAULTLIB**:*biblioteca* opções. O **/NODEFAULTLIB**:*biblioteca* opção substituições **/DEFAULTLIB**:*biblioteca* quando o mesmo *biblioteca*nome é especificado em ambos.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra o projeto **páginas de propriedade** caixa de diálogo. Para obter mais informações, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).
+
+1. Selecione o **propriedades de configuração** > **vinculador** > **linha de comando** página de propriedades.
+
+1. Em **opções adicionais**, insira um **/DEFAULTLIB**:*biblioteca* opção para cada biblioteca a ser pesquisado. Escolha **Okey** para salvar suas alterações.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
+
+- Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Consulte também
+
+- [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)
+- [Opções do vinculador](../../build/reference/linker-options.md)

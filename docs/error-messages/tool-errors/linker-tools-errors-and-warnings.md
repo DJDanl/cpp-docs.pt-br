@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c38adaab248127f9810d53304ca1ad9593f78667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f279c4e59f8eb7f655ae10f8ea99ec6ed31115ec
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569950"
 ---
 # <a name="linker-tools-errors-and-warnings"></a>Erros e avisos das ferramentas de vinculador
 
@@ -132,6 +133,8 @@ LINK, LIB, DUMPBIN e EDITBIN geram esses erros e avisos.
 
 [Erro das ferramentas de vinculador LNK1314](../../error-messages/tool-errors/linker-tools-error-lnk1314.md)
 
+[LNK1318 de erro de ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-error-lnk1318.md)
+
 [Erro das ferramentas de vinculador LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)
 
 [Erro das ferramentas de vinculador LNK1561](../../error-messages/tool-errors/linker-tools-error-lnk1561.md)
@@ -181,6 +184,8 @@ LINK, LIB, DUMPBIN e EDITBIN geram esses erros e avisos.
 [Aviso das ferramentas de vinculador LNK4010](../../error-messages/tool-errors/linker-tools-warning-lnk4010.md)
 
 [Aviso das ferramentas de vinculador LNK4014](../../error-messages/tool-errors/linker-tools-warning-lnk4014.md)
+
+[Aviso LNK4020 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md)
 
 [Aviso das ferramentas de vinculador LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)
 

@@ -1,7 +1,7 @@
 ---
 title: Struct steady_clock | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/22/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1dbfac1eb8c67c5306bded6e6fd9ee8dacf54b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5445379597c4fefcd657303a05c33b6509d54d2e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569892"
 ---
 # <a name="steadyclock-struct"></a>Struct steady_clock
 
-Representa um relógio `steady`.
+Representa um *constante* relógio.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,25 +33,32 @@ struct steady_clock;
 
 ## <a name="remarks"></a>Comentários
 
-No Windows, steady_clock encapsula a função QueryPerformanceCounter.
+No Windows, `steady_clock` encapsula o `QueryPerformanceCounter` função.
 
-Um relógio será *monotônico* se o valor retornado por uma primeira chamada a `now()` for sempre menor ou igual ao valor retornado por uma chamada posterior a `now()`.
+Um relógio será *monotônico* se o valor retornado por uma primeira chamada a `now` for sempre menor ou igual ao valor retornado por uma chamada posterior a `now`. Um relógio será *estável* se ele for *monotônico* e se o tempo entre os tiques do relógio for constante.
 
-Um relógio será *estável* se ele for *monotônico* e se o tempo entre os tiques do relógio for constante.
+`high_resolution_clock` é um typedef para `steady_clock`.
 
-High_resolution_clock é um typdef para steady_clock.
+### <a name="public-typedefs"></a>Typedefs públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|`steady_clock::duration`|Um sinônimo para `nanoseconds`, definido em \<chrono >.|
+|`steady_clock::period`|Um sinônimo para `nano`, definido em \<taxa >.|
+|`steady_clock::rep`|Um sinônimo para **longo** **longo**, o tipo que é usado para representar o número de tiques do relógio na instanciação independente de `duration`.|
+|`steady_clock::time_point`|Um sinônimo de `chrono::time_point<steady_clock>`.|
 
 ## <a name="public-functions"></a>Funções públicas
 
 |Função|Descrição|
 |--------------|-----------------|
-|now|Retorna a hora atual como um valor de time_point.|
+|`now`|Retorna a hora atual como uma `time_point` valor.|
 
 ## <a name="public-constants"></a>Constantes públicas
 
 |Nome|Descrição|
 |----------|-----------------|
-|`system_clock::is_steady`|Contém `true`. Um `steady_clock` é *steady*.|
+|`steady_clock::is_steady`|Contém `true`. Um `steady_clock` é *steady*.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -60,6 +68,6 @@ High_resolution_clock é um typdef para steady_clock.
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
-[Estrutura system_clock](../standard-library/system-clock-structure.md)<br/>
+- [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)
+- [\<chrono>](../standard-library/chrono.md)
+- [Estrutura system_clock](../standard-library/system-clock-structure.md)

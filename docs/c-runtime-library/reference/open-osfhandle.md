@@ -1,7 +1,7 @@
 ---
 title: _open_osfhandle | Microsoft Docs
 ms.custom: ''
-ms.date: 12/12/2017
+ms.date: 05/29/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -34,11 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beb8c074beeb47274fbae21ea293d0ea55f28d36
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af3783420389dc008e39c818c39406f0b2af8af5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569830"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -67,19 +68,18 @@ Se for bem-sucedido, **open_osfhandle** retorna um descritor de arquivo de tempo
 
 ## <a name="remarks"></a>Comentários
 
-O **open_osfhandle** função aloca um descritor de arquivo de tempo de execução do C e a associa o identificador de arquivo do sistema operacional especificado pelo *osfhandle*. O *sinalizadores* argumento é uma expressão de inteiro formada de um ou mais das constantes de manifesto definidas em Fcntl.h. Quando duas ou mais constantes de manifesto são usados para formar o *sinalizadores* argumento, as constantes são combinadas com o operador OR bit a bit ( **&#124;** ).
+O **open_osfhandle** função aloca um descritor de arquivo de tempo de execução do C e a associa o identificador de arquivo do sistema operacional especificado pelo *osfhandle*. Para evitar um aviso do compilador, converter o *osfhandle* argumento de **tratar** para **intptr_t**. O *sinalizadores* argumento é uma expressão de inteiro formada de um ou mais das constantes de manifesto definidos no \<fcntl.h >. Quando duas ou mais constantes de manifesto são usados para formar o *sinalizadores* argumento, as constantes são combinadas com o operador OR bit a bit ( **&#124;** ).
 
-Fcntl.h define as seguintes constantes de manifesto:
+Constantes de manifesto são definidos no \<fcntl.h >:
 
-**\_O\_APPEND** posiciona um ponteiro de arquivo para o final do arquivo antes de cada operação de gravação.
+|||
+|-|-|
+**\_O\_APPEND**|Posiciona um ponteiro de arquivo no final do arquivo, antes de cada operação de gravação.
+**\_O\_RDONLY**|Abre o arquivo para somente leitura.
+**\_O\_TEXT**|Abre o arquivo no modo de texto (convertido).
+**\_O\_WTEXT**|Abre o arquivo no modo Unicode (convertido em UTF-16).
 
-**\_O\_RDONLY** abre o arquivo para acesso somente leitura.
-
-**\_O\_texto** abre o arquivo no modo de texto (convertido).
-
-**\_O\_WTEXT** abre o arquivo no modo Unicode (UTF-16 traduzido).
-
-Para fechar um arquivo aberto com **open_osfhandle**, chame [ \_fechar](close.md). O identificador de arquivo do sistema operacional subjacente também é fechado por uma chamada para **echar**, portanto, não é necessário chamar a função Win32 **CloseHandle** no identificador do original. Se o descritor de arquivo pertence a um **arquivo &#42;**  fluxo, em seguida, chamar [fclose](fclose-fcloseall.md) naquele **arquivo &#42;**  fluxo também fecha ambos o descritor de arquivo e o Identificador subjacente. Nesse caso, não chame **echar** no descritor de arquivo.
+O **open_osfhandle** chamada transfere a propriedade do identificador de arquivo do Win32 para o descritor de arquivo. Para fechar um arquivo aberto com **open_osfhandle**, chame [ \_fechar](close.md). O identificador de arquivo do sistema operacional subjacente também é fechado por uma chamada para **echar**, portanto, não é necessário chamar a função Win32 **CloseHandle** no identificador do original. Se o descritor de arquivo pertence a um **arquivo &#42;**  fluxo, em seguida, chamar [fclose](fclose-fcloseall.md) naquele **arquivo &#42;**  fluxo também fecha ambos o descritor de arquivo e o Identificador subjacente. Nesse caso, não chame **echar** no descritor de arquivo.
 
 ## <a name="requirements"></a>Requisitos
 

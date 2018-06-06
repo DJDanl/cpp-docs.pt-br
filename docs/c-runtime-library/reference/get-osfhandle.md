@@ -1,7 +1,7 @@
 ---
 title: _get_osfhandle | Microsoft Docs
 ms.custom: ''
-ms.date: 12/12/2017
+ms.date: 05/29/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -35,11 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b58bbeb7c0b52950509dc8005551ad706577fcf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15bddcf3d94935f56fa2e23b6ebd0398ed379c54
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569843"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -60,7 +61,7 @@ Um descritor de arquivo existente.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um identificador de arquivo do sistema operacional se *fd* é válido. Caso contrário, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essa função retorna **INVALID_HANDLE_VALUE** (-1) e define **errno** para **EBADF**, que indica o identificador de arquivo inválido.
+Retorna um identificador de arquivo do sistema operacional se *fd* é válido. Caso contrário, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essa função retorna **INVALID_HANDLE_VALUE** (-1) e define **errno** para **EBADF**, que indica o identificador de arquivo inválido. Para evitar um aviso do compilador quando o resultado é usado em rotinas que espera um identificador de arquivo do Win32, converta-o para um **tratar** tipo.
 
 ## <a name="remarks"></a>Comentários
 
