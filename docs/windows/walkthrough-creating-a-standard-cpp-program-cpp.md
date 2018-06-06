@@ -19,11 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f563e318f2defcbf36139f1f6d49e3986db5f946
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac1fac3c7f96c9f8d718efa54810f4155b1ddac5
+ms.sourcegitcommit: c0ffdff538eb961f786809eb547b35846190ee48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34800080"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Passo a passo: Criando um programa padrão do C++ (C++)
 Você pode usar o Visual C++ no ambiente de desenvolvimento integrado (IDE) do Visual Studio para criar programas C++ padrão. Seguindo as etapas neste passo a passo, você pode criar um projeto, adicione um novo arquivo ao projeto, modifique o arquivo para adicionar o código C++ e, em seguida, compilar e executar o programa usando [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
@@ -42,7 +43,7 @@ Você pode usar o Visual C++ no ambiente de desenvolvimento integrado (IDE) do V
   
 1.  Criar um projeto, basta apontar para **novo** no **arquivo** menu e, em seguida, clicando em **projeto**.  
   
-2.  No **Visual C++** painel tipos de projeto, clique em **Win32**e, em seguida, clique em **aplicativo do Console Win32**.  
+2.  No **Visual C++** painel tipos de projeto, clique em **Windows Desktop**e, em seguida, clique em **aplicativo de Console do Windows**.  
   
 3.  Digite um nome para o projeto.  
   
@@ -50,11 +51,9 @@ Você pode usar o Visual C++ no ambiente de desenvolvimento integrado (IDE) do V
   
      Clique em **OK** para criar o projeto.  
   
-4.  No **Assistente de aplicativo Win32**, clique em **próximo**, selecione **projeto vazio**e, em seguida, clique em **concluir**.  
+4.  Se **Solution Explorer** não for exibido, no **exibição** menu, clique em **Gerenciador de soluções**.  
   
-5.  Se **Solution Explorer** não for exibido, no **exibição** menu, clique em **Gerenciador de soluções**.  
-  
-6.  Adicione um novo arquivo de origem para o projeto, da seguinte maneira.  
+5.  Adicione um novo arquivo de origem para o projeto, da seguinte maneira.  
   
     1.  Em **Solution Explorer**, com o botão direito do **arquivos de origem** pasta, aponte para **adicionar**e, em seguida, clique em **Novo Item**.  
   
@@ -62,15 +61,15 @@ Você pode usar o Visual C++ no ambiente de desenvolvimento integrado (IDE) do V
   
      O arquivo. cpp aparece na pasta de arquivos de origem em **Solution Explorer**, e o arquivo é aberto no editor do Visual Studio.  
   
-7.  No arquivo no editor, digite um programa válido do C++ que usa a biblioteca padrão C++, ou copie um dos programas de exemplo e cole-o no arquivo.  
+6.  No arquivo no editor, digite um programa válido do C++ que usa a biblioteca padrão C++, ou copie um dos programas de exemplo e cole-o no arquivo.  
   
-8.  Salve o arquivo.  
+7.  Salve o arquivo.  
   
-9. No menu **Compilar**, clique em **Compilar Solução**.  
+8. No menu **Compilar**, clique em **Compilar Solução**.  
   
      O **saída** janela exibe informações sobre o progresso da compilação, por exemplo, o local do log de compilação e uma mensagem que indica o status da compilação.  
   
-10. Sobre o **depurar** menu, clique em **iniciar sem depuração**.  
+9. Sobre o **depurar** menu, clique em **iniciar sem depuração**.  
   
      Se você usou o programa de exemplo, uma janela de comando é exibida e mostra se determinados inteiros são encontrados no conjunto.  
   
