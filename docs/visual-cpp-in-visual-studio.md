@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d4f09ebe0cfaca9bb742baa902a256ac0f92996
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b43f9ac9edb0d19af4002bb839f857ae71ad4a11
+ms.sourcegitcommit: 0bc67d40aa283be42f3e1c7190d6a5d9250ecb9b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34762046"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ no Visual Studio
 
@@ -143,7 +144,7 @@ Você pode usar a ferramenta de linha de comando vcpkg para simplificar bastante
 [C++ Padrão](http://isocpp.org/)<br/>
 Saiba mais sobre o C++, obtenha uma visão geral do C++ Moderno e encontre links para livros, artigos, links e eventos
 
-[Aprender sobre o Visual C++](http://msdn.microsoft.com/vstudio/hh386302.aspx)<br/>
+[Aprender sobre o Visual C++](build/vscpp-step-1-create.md)<br/>
 Comece a conhecer o C++.
 
 ## <a name="see-also"></a>Consulte também
