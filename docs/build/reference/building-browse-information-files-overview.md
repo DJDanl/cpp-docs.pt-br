@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a2306c69c219320e11259ba6303b76588db8f7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 463bf72c07c775ef0d4965a2023e5699cf7ec715
+ms.sourcegitcommit: b04de4e90def1d0f4aa265e96d6b73779d010e1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843069"
 ---
 # <a name="building-browse-information-files-overview"></a>Compilando arquivos de informações de navegação: visão geral
 Para criar informações de navegação de símbolo de procura, o compilador cria um arquivo. SBR para cada arquivo de origem em seu projeto, em seguida, BSCMAKE. EXE concatena os arquivos. SBR em um arquivo. bsc.  
@@ -49,7 +50,7 @@ Para criar informações de navegação de símbolo de procura, o compilador cri
   
 1.  Não criar o arquivo. bsc no nível do projeto ou use a opção /n para impedir que os arquivos. SBR sendo truncado.  
   
-2.  Depois que todos os projetos são criados, execute BSCMAKE com todos os arquivos. SBR como entrada. Caracteres curinga é aceitos. Por exemplo, se você tiver pastas de projeto C:\X, C:\Y e C:\Z com arquivos. SBR neles e você quisesse combiná-las em um arquivo. bsc, em seguida, usar BSCMAKE C:\X\\*.sbr C:\Y\\\*. SBR C:\Z\\\*. SBR /o c:\whatever_directory\combined.bsc para criar o arquivo. bsc combinado.  
+2.  Depois que todos os projetos são criados, execute BSCMAKE com todos os arquivos. SBR como entrada. Caracteres curinga é aceitos. Por exemplo, se você tiver pastas de projeto C:\X, C:\Y e C:\Z com arquivos. SBR neles e você quisesse combiná-las em um arquivo. bsc, em seguida, usar BSCMAKE C:\X\\\*. SBR C:\Y\\\*. SBR C:\Z\\ \*. SBR /o c:\whatever_directory\combined.bsc para criar o arquivo. bsc combinado.  
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas de compilação do C/C++](../../build/reference/c-cpp-build-tools.md)   
