@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19b9c25659938e049807eb4e4b41dafd51ebe8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239418"
 ---
 # <a name="cmap-class"></a>Classe CMap
 Uma classe de coleção de dicionário que mapeia chaves exclusivas para valores.  
@@ -67,13 +68,13 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
  `KEY`  
  Classe do objeto usado como a chave para o mapa.  
   
- `ARG` *_* `KEY`  
+ `ARG_KEY`  
  Tipo de dados usado para `KEY` argumentos; normalmente uma referência a `KEY`.  
   
  `VALUE`  
  Classe do objeto armazenado em map.  
   
- `ARG` *_* `VALUE`  
+ `ARG_VALUE`  
  Tipo de dados usado para `VALUE` argumentos; normalmente uma referência a `VALUE`.  
   
 ## <a name="members"></a>Membros  
