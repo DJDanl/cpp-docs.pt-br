@@ -28,11 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b20fa6862a835ca913a2865a651112584966af3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8ba56f0b4fa6d7d6ac56f3f118edeaad03643b5
+ms.sourcegitcommit: 0ce270566769cba76d763dd69b304a55eb375d01
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799188"
 ---
 # <a name="crt-library-features"></a>Funcionalidades da biblioteca CRT
 
@@ -85,7 +86,7 @@ O uso do CRT vinculado estaticamente indica que todas as informações de estado
 
 Como uma DLL compilada por meio da vinculação a um CRT estático terá seu próprio estado de CRT, não é recomendável vincular estaticamente ao CRT em uma DLL, a menos que as consequências dessa ação sejam especificamente desejadas e compreendidas. Por exemplo, se você chamar [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) em um executável que carrega a DLL vinculada a seu próprio CRT estático, as exceções de hardware geradas pelo código na DLL não serão capturadas pelo conversor, mas as exceções de hardware geradas pelo código no executável principal serão capturadas.
 
-Se estiver usando a opção **/clr** do compilador, o código será vinculado a uma biblioteca estática, msvcmrt.lib. A biblioteca estática fornece um proxy entre o código gerenciado e o CRT nativo. Não é possível usar o CRT vinculado estaticamente (opções **/MT** ou **/MTd**) com **/clr**. Em vez disso, use as bibliotecas vinculadas dinamicamente (**/MD** ou **/MDd**).
+Se estiver usando a opção **/clr** do compilador, o código será vinculado a uma biblioteca estática, msvcmrt.lib. A biblioteca estática fornece um proxy entre o código gerenciado e o CRT nativo. Não é possível usar o CRT vinculado estaticamente (opções **/MT** ou **/MTd**) com **/clr**. Em vez disso, use as bibliotecas vinculadas dinamicamente (**/MD** ou **/MDd**). As bibliotecas de CRT gerenciado puro são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
 Para obter mais informações sobre o uso do CRT com **/clr**, confira [Assemblies mistos (nativos e gerenciados)](../dotnet/mixed-native-and-managed-assemblies.md).
 
@@ -112,10 +113,15 @@ Para a compatibilidade binária, mais de um arquivo DLL pode ser especificado po
 
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>Quais problemas poderão ocorrer se um aplicativo usar mais de uma versão do CRT?
 
-Caso tenha mais de uma DLL ou mais de um EXE, então você pode ter mais de um CRT, independentemente de estar usando ou não versões diferentes do Visual C++. Por exemplo, a vinculação estática do CRT em várias DLLs poderá apresentar o mesmo problema. Os desenvolvedores que tiveram esse problema com CRTs estáticos foram instruídos a compilar com **/MD** para usar a DLL do CRT. Se as DLLs passarem recursos do CRT além do limite da DLL, você poderá ter problemas com CRTs incompatíveis e precisará recompilar o projeto com o Visual C++.
+Todas as imagens executáveis (EXE ou DLL) podem ter seu próprio CRT estaticamente vinculado ou podem vincular dinamicamente a um CRT. A versão do CRT, incluída estaticamente ou carregada dinamicamente por uma imagem específica, depende das versões das ferramentas e das bibliotecas com as quais ela foi compilada. Um único processo pode carregar várias imagens EXE e DLL, cada qual com seu próprio CRT. Cada um desses CRTs pode usar um alocador diferente, pode ter layouts de estruturas internas diferentes e pode usar combinações diferentes de armazenamento. Isso significa que a memória, os recursos de CRT ou as classes alocadas transmitidas em um limite de DLL podem causar problemas no gerenciamento de memória, no uso estático interno ou na interpretação de layout. Por exemplo, se uma classe é alocada em um DLL, mas transmitida para e excluída por outra, qual desalocador CRT será usado? Os erros causados podem variar de sutis ao imediatamente fatal e, portanto, a transferência direta de tais recursos não é recomendada.
 
-Se o programa estiver usando mais de uma versão do CRT, será necessário ter cuidado ao passar determinados objetos do CRT (como identificadores de arquivo, localidades e variáveis de ambiente) em limites da DLL. Para obter mais informações sobre os problemas envolvidos e como resolvê-los, consulte [Erros potenciais ao passar objetos do CRT em limites da DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+Você pode evitar muitos desses problemas usando tecnologias ABI (Interface Binária de Aplicativo), pois elas são projetadas para serem estáveis e versáteis. Projete suas interfaces de exportação DLL para passar informações por valor ou para trabalhar na memória que é transmitida pelo chamador, em vez de alocada localmente e retornada ao chamador. Use técnicas para realizar marshaling para copiar os dados estruturados entre as imagens executáveis. Encapsule os recursos localmente e só permita a manipulação por meio de identificadores ou funções que você expõe aos clientes.
+
+Também é possível evitar alguns desses problemas, se todas as imagens em seu processo usarem a mesma versão carregada dinamicamente do CRT. Para garantir que todos os componentes usam a mesma versão DLL do CRT, compile-os usando a opção **/MD** e use as mesmas configurações de propriedade e conjunto de ferramentas de compilador.
+
+É necessário tomar algum cuidado caso o seu programa transmita determinados recursos do CRT (como identificadores de arquivos, localidades e variáveis de ambiente) em limites DLL, mesmo ao usar a mesma versão do CRT. Para obter mais informações sobre os problemas envolvidos e como resolvê-los, consulte [Erros potenciais ao passar objetos do CRT em limites da DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência da biblioteca em tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)
+- [Referência da biblioteca em tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)

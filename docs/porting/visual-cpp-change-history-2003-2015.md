@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1447bcd0cb0a9bfff1d527f6a53eccf25e008f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d4c4aeeaf79172950aae6d06c5e8a1246064246
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705680"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Histórico de alterações de 2003 a 2015 do Visual C++
 
@@ -92,7 +93,7 @@ Ao fazer a atualização para uma nova versão do Visual Studio, você pode enco
   
 -   **new e delete** Nas versões anteriores da biblioteca, as funções new e delete do operador definido pela implementação foram exportadas da biblioteca de tempo de execução DLL (por exemplo, msvcr120.dll). Essas funções de operador agora estão sempre vinculadas estaticamente em seus binários, mesmo ao usar as bibliotecas de tempo de execução DLLs.  
   
-     Essa não é uma alteração significativa para o código nativo ou misto (/clr), no entanto, para o código compilado como [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), isso pode causar falha ao compilar seu código. Se você compilar o código como /clr:pure, talvez seja necessário adicionar #include \<new> ou #include \<new.h> para contornar os erros de build devidos a essa alteração. Observe que /clr:pure foi preterido no Visual Studio 2015 e poderá ser removido em versões futuras. Os códigos que precisarem ser "puros" deverão ser movidos para C#.  
+     Essa não é uma alteração significativa para o código nativo ou misto (/clr), no entanto, para o código compilado como [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), isso pode causar falha ao compilar seu código. Se você compilar o código como /clr:pure, talvez seja necessário adicionar #include \<new> ou #include \<new.h> para contornar os erros de build devidos a essa alteração. Observe que /clr:pure foi preterido no Visual Studio 2015 e sem suporte no Visual Studio 2017. Os códigos que precisarem ser "puros" deverão ser movidos para C#.  
   
 #### <a name="processh"></a>\<process.h>  
   

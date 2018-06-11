@@ -13,11 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ae41c373257202cb08b7f8760acac4ad14dff19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705599"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novidades do Visual C++ de 2003 até 2015
 
@@ -1936,7 +1937,7 @@ O compilador tem alterações significativas nesta versão.
 - Compiladores nativos e cruzados de 64 bits.
 - A opção do compilador /analyze (Análise de código da empresa) foi adicionada.
 - A opção do compilador /bigobj foi adicionada.
-- /clr:pure, /clr:safe e /clr:oldSyntax foram adicionados. (Preterido posteriormente no Visual Studio 2015.)
+- /clr:pure, /clr:safe e /clr:oldSyntax foram adicionados. (Posteriormente preterido no Visual Studio 2015 e removido no Visual Studio 2017.)
 - Opções de compilação preteridas: muitas opções de compilador foram preteridas nesta versão. Consulte Opções de compilador preteridas para obter mais informações.
 - A conversão dupla em código /clr foi reduzida. Consulte Conversão dupla (C++) para obter mais informações.
 - /EH (Modelo de Tratamento de Exceção) ou o /EHs não pode mais ser usado para capturar uma exceção gerada com algo diferente de um lançamento; Use /EHa.
