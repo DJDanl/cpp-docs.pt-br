@@ -1,5 +1,5 @@
 ---
-title: Implantando aplicativos de área de trabalho nativos (Visual C++) | Microsoft Docs
+title: Implantando aplicativos da área de trabalho nativos (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2018
 ms.technology:
@@ -21,21 +21,22 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f4aa355c132b4c94f085cbdf7aa73785357d0f0
 ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34259238"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Implantando aplicativos da área de trabalho nativos (Visual C++)
 
-Implantação é o processo pelo qual você distribui um aplicativo concluído ou componente a ser instalado em outros computadores. Planejamento de implantação inicia quando um aplicativo é criado no computador de um desenvolvedor. Implantação termina quando o aplicativo está instalado e pronto para ser executado no computador do usuário.
+Implantação é o processo pelo qual você distribui um componente ou aplicativo concluído para ser instalado em outros computadores. O planejamento da implantação começa quando um aplicativo é criado no computador de um desenvolvedor. A implantação termina quando o aplicativo é instalado e está pronto para ser executado no computador de um usuário.
 
-Visual Studio fornece tecnologias diferentes para a implantação de aplicativos do Windows. Eles incluem a implantação do ClickOnce e implantação do Windows Installer.
+O Visual Studio fornece tecnologias diferentes para a implantação de aplicativos do Windows. Elas incluem a implantação do ClickOnce e a implantação do Windows Installer.
 
-- ClickOnce pode ser usado para implantar aplicativos C++ que o common language runtime (CLR) de destino — assemblies mistos, puros e verificáveis. Embora você possa usar o Windows Installer para implantar um aplicativo gerenciado, é recomendável usar o ClickOnce porque tira proveito dos recursos de segurança do .NET Framework como assinatura de manifesto. ClickOnce não dá suporte para implantação de aplicativos nativos do C++. Para obter mais informações, consulte [implantação de ClickOnce para aplicativos Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md).
+- O ClickOnce pode ser usado para implantar aplicativos do C++ direcionados ao CLR (Common Language Runtime) – assemblies mistos, puros e verificáveis. Embora você possa usar o Windows Installer para implantar um aplicativo gerenciado, recomendamos que você use o ClickOnce, porque ele aproveita as funcionalidades de segurança do .NET Framework, como a autenticação de manifesto. O ClickOnce não dá suporte à implantação de aplicativos do C++ nativo. Para obter mais informações, confira [Implantação do ClickOnce para aplicativos do Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md).
 
-- Tecnologia Windows Installer pode ser usada para implantar aplicativos em C++ nativo ou aplicativos C++ que visam o CLR.
+- A tecnologia do Windows Installer pode ser usada para implantar aplicativos do C++ nativo ou aplicativos do C++ direcionados ao CLR.
 
-Os artigos nesta seção da documentação descrevem como garantir que um aplicativo Visual C++ nativo seja executado em qualquer computador que fornece uma plataforma de destino com suporte, os arquivos que você deve incluir em um pacote de instalação e as maneiras recomendadas para redistribua os componentes que seu aplicativo depende.
+Os artigos desta seção da documentação descrevem como garantir que um aplicativo nativo do Visual C++ seja executado em qualquer computador que forneça uma plataforma de destino compatível, quais arquivos precisam ser incluídos em um pacote de instalação e as maneiras recomendadas para redistribuir os componentes dos quais o aplicativo depende.
 
 ## <a name="in-this-section"></a>Nesta seção
 
@@ -49,7 +50,7 @@ Os artigos nesta seção da documentação descrevem como garantir que um aplica
 
 - [Escolhendo um método de implantação](../ide/choosing-a-deployment-method.md)
 
-- [Implantação do CRT universal](universal-crt-deployment.md).
+- [Implantação do CRT Universal](universal-crt-deployment.md).
 
 - [Redistribuindo arquivos do Visual C++](../ide/redistributing-visual-cpp-files.md)
 
@@ -59,7 +60,7 @@ Os artigos nesta seção da documentação descrevem como garantir que um aplica
 
 - [Implantação de ClickOnce para aplicativos do Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md)
 
-- [Executando um aplicativo C++ /clr em uma versão anterior do tempo de execução](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
+- [Executando um aplicativo do C++ /clr em uma versão de tempo de execução anterior](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 
 ## <a name="related-sections"></a>Seções relacionadas
 

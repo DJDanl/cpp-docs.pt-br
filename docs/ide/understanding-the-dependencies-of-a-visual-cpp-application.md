@@ -1,5 +1,5 @@
 ---
-title: Noções básicas sobre as dependências de um aplicativo Visual C++ | Microsoft Docs
+title: Noções básicas sobre as dependências de um aplicativo do Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,22 +23,23 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: da2aadeba69a8be29627650ba6ef24516098a8e3
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338777"
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Noções básicas sobre as dependências de um aplicativo do Visual C++
-Para determinar quais bibliotecas do Visual C++ depende de um aplicativo, você pode exibir as propriedades do projeto. (No Gerenciador de soluções, clique com botão direito no projeto e escolha **propriedades** para abrir o **páginas de propriedade** caixa de diálogo.) Você também pode usar o Dependency Walker (depends.exe), que fornece um panorama mais abrangente das dependências.  
+Para determinar de quais bibliotecas do Visual C++ um aplicativo depende, exiba as propriedades do projeto. (No Gerenciador de Soluções, clique com o botão direito do mouse no projeto e escolha **Propriedades** para abrir a caixa de diálogo **Páginas de Propriedades**.) Você também pode usar o Dependency Walker (depends.exe), que fornece um panorama mais abrangente das dependências.  
   
- No **páginas de propriedade** caixa de diálogo, você pode examinar várias páginas em **propriedades de configuração** para entender as dependências. Por exemplo, se seu projeto usa as bibliotecas MFC e você escolher **uso de MFC**, **Use MFC em uma DLL compartilhada** no **propriedades de configuração**, **geral**  página, seu aplicativo em tempo de execução depende MFC DLLs, como mfc\<versão >. dll. Se seu aplicativo não usar MFC, ele pode depender da biblioteca CRT se você escolher um **biblioteca de tempo de execução** valor **multi-threaded depurar DLL (/ MDd)** ou **multi-threaded DLL (/ MD)** no **propriedades de configuração**, **C/C++**, **geração de código** página.  
+ Na caixa de diálogo **Páginas de Propriedades**, examine várias páginas em **Propriedades de Configuração** para entender as dependências. Por exemplo, se o projeto usar as bibliotecas MFC e você escolher **Uso do MFC**, **Usar MFC em uma DLL Compartilhada** na página **Propriedades de Configuração**, **Geral**, o aplicativo dependerá de DLLs do MFC, como mfc\<versão>.dll, em tempo de execução. Se o aplicativo não usar o MFC, ele poderá depender da biblioteca CRT, caso você escolha um valor da **Biblioteca em Tempo de Execução** de **DLL de Depuração Multi-threaded (/MDd)** ou **DLL Multi-threaded (/MD)** na página **Propriedades de Configuração**, **C/C++**, **Geração de Código**.  
   
- É uma maneira mais abrangente para determinar quais DLLs depende de seu aplicativo usar dependência Walker (depends.exe) para abrir o aplicativo. Você pode baixar a ferramenta a partir de [dependência Walker](http://go.microsoft.com/fwlink/p/?LinkId=132640) site da web.  
+ Um modo mais abrangente de determinar de quais DLLs o aplicativo depende é usar o Dependency Walker (depends.exe) para abrir o aplicativo. Baixe a ferramenta no site do [Dependency Walker](http://go.microsoft.com/fwlink/p/?LinkId=132640).  
   
- Usando depends.exe, você pode examinar uma lista de DLLs que são vinculados para o aplicativo em tempo de carregamento e uma lista de suas DLLs carregadas com atraso. Se você quiser obter uma lista completa das DLLs carregadas dinamicamente em tempo de execução, você pode usar o recurso de criação de perfil em depends.exe para testar o aplicativo até que você tiver certeza de que todos os caminhos de código tiveram sido exercidos. Quando você terminar a sessão de criação de perfil, depends.exe mostra quais DLLs foram carregados dinamicamente em tempo de execução.  
+ Usando depends.exe, você pode examinar uma lista de DLLs vinculadas ao aplicativo no tempo de carregamento e uma lista de suas DLLs carregadas com atraso. Caso deseje obter uma lista completa de DLLs carregadas dinamicamente em tempo de execução, use o recurso de criação de perfil em depends.exe para testar o aplicativo até ter certeza de que todos os caminhos de código foram usados. Quando você encerra a sessão de criação de perfil, depends.exe mostra quais DLLs foram carregadas dinamicamente durante o tempo de execução.  
   
  Quando você usar o depends.exe, lembre-se de que uma DLL pode depender de outra DLL ou de uma versão específica de uma DLL. Você pode usar o depends.exe no computador de desenvolvimento ou em um computador de destino. No computador de desenvolvimento, o depends.exe relata as DLLs que são necessárias para oferecer suporte a um aplicativo. Se você tiver dificuldade para executar um aplicativo em um computador de destino, copie o depends.exe para ele e abra o aplicativo na ferramenta para que você possa determinar se alguma DLL necessária está ausente ou incorreta.  
   
- Quando você souber de quais DLLs seu aplicativo depende, poderá determinar quais precisam ser redistribuídas com seu aplicativo ao implantá-lo em outro computador. Na maioria dos casos, você não precisa redistribuir DLLs do sistema, mas talvez seja necessário redistribuir DLLs para bibliotecas do Visual C++. Para obter mais informações, consulte [determinando quais DLLs devem ser redistribuídas](../ide/determining-which-dlls-to-redistribute.md).  
+ Quando você souber de quais DLLs seu aplicativo depende, poderá determinar quais precisam ser redistribuídas com seu aplicativo ao implantá-lo em outro computador. Na maioria dos casos, não é necessário redistribuir DLLs do sistema, mas talvez seja necessário redistribuir DLLs para bibliotecas do Visual C++. Para obter mais informações, confira [Determinando quais DLLs devem ser redistribuídas](../ide/determining-which-dlls-to-redistribute.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Implantando aplicativos de área de trabalho](../ide/deploying-native-desktop-applications-visual-cpp.md)
+ [Implantando aplicativos da área de trabalho](../ide/deploying-native-desktop-applications-visual-cpp.md)

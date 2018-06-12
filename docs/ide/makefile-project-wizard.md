@@ -1,5 +1,5 @@
 ---
-title: Assistente de projeto makefile | Microsoft Docs
+title: Assistente de Projeto Makefile | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,21 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: b4ea6619804c4215ecb53fa0e92a2b12bbdc5e31
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334393"
 ---
 # <a name="makefile-project-wizard"></a>Assistente de Projeto Makefile
-Use este assistente para criar uma linha de comando para o mecanismo de compilação executar. Depois de criar o projeto, você pode exibir e editar as propriedades do projeto do projeto [página de propriedades](../ide/working-with-project-properties.md).  
+Use este assistente para criar uma linha de comando a ser executada pelo mecanismo de build. Depois de criar o projeto, exiba e edite as propriedades do projeto na [página de propriedades](../ide/working-with-project-properties.md) do projeto.  
   
 ## <a name="overview"></a>Visão geral  
- Esta página do assistente descreve as configurações do projeto atual para o projeto que você está criando. Por padrão, o projeto é configurado para criar ambos os depuração e configurações de versão *NomeDoProjeto*.exe.  
+ Essa página do assistente descreve as configurações do projeto atual que você está criando. Por padrão, o projeto está definido para compilar as configurações de depuração e versão de *Nome_do_Projeto*.exe.  
   
- Para alterar esses padrões, clique o [configurações de aplicativo](../ide/application-settings-makefile-project-wizard.md) guia na coluna à esquerda do assistente e faça as alterações desejadas.  
+ Para alterar esses padrões, clique na guia [Configurações de Aplicativo](../ide/application-settings-makefile-project-wizard.md) na coluna à esquerda do assistente e faça as alterações desejadas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando um projeto de Makefile](../ide/creating-a-makefile-project.md)   
- [Referência NMAKE](../build/nmake-reference.md)   
- [Caracteres especiais em um Makefile](../build/special-characters-in-a-makefile.md)   
+ [Criando um Projeto Makefile](../ide/creating-a-makefile-project.md)   
+ [Referência a NMAKE](../build/nmake-reference.md)   
+ [Caracteres especiais em um makefile](../build/special-characters-in-a-makefile.md)   
  [Conteúdo de um makefile](../build/contents-of-a-makefile.md)

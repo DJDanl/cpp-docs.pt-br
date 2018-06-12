@@ -1,5 +1,5 @@
 ---
-title: Solução de problemas de compilação personalizações | Microsoft Docs
+title: Solução de problemas de personalizações de build | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,26 +22,27 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: d48e9f7bdcbf422a25fb0bdb40411e6c662fadc2
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330265"
 ---
 # <a name="troubleshooting-build-customizations"></a>Solucionando problemas de personalizações do build
-Se as etapas de compilação personalizados ou eventos não estão funcionando conforme o esperado, há várias coisas que você pode fazer para tentar entender o que está errado.  
+Se os eventos ou as etapas de build personalizadas não estão funcionando conforme esperado, há várias coisas que você pode fazer para tentar entender o que está errado.  
   
--   Certifique-se de que os arquivos que as etapas de compilação personalizada geram correspondem aos arquivos de que declarar saídas.  
+-   Verifique se os arquivos gerados pelas etapas de build personalizadas correspondem aos arquivos declarados como saídas.  
   
--   Se as etapas de compilação personalizada geram todos os arquivos que são entradas ou dependências de outros criar etapas (personalizadas ou não), certifique-se de que esses arquivos são adicionados ao seu projeto. E certifique-se de que as ferramentas que consomem os arquivos executar após a etapa de compilação personalizada.  
+-   Se as etapas de build personalizadas geram arquivos que são entradas ou dependências de outras etapas de build (personalizadas ou não), verifique se esses arquivos são adicionados ao projeto. Além disso, verifique se as ferramentas que consomem os arquivos são executadas após a etapa de build personalizada.  
   
--   Para exibir o que a etapa de compilação personalizada, na verdade, está fazendo, adicione `@echo on` como o primeiro comando. Os eventos de build e as etapas de compilação são colocadas em um arquivo temporário e executadas quando o projeto é compilado. Portanto, você pode adicionar o evento de compilação de verificação de erros ou comandos de etapa de compilação.  
+-   Para exibir o que a etapa de build personalizada está realmente fazendo, adicione `@echo on` como o primeiro comando. As etapas e os eventos de build são colocados em um arquivo .bat temporário e executados quando o projeto é compilado. Portanto, você pode adicionar a verificação de erros aos comandos do evento ou da etapa de build.  
   
--   Examine o log de compilação no diretório intermediário para ver o que realmente executado. O caminho e o nome do log de compilação é representado pelo **MSBuild** expressão de macro **$ (IntDir)\\. $(MSBuildProjectName) log**.  
+-   Examine o log de build no diretório de arquivos intermediários para ver o que realmente foi executado. O caminho e o nome do log de build é representado pela expressão de macro **$(IntDir)\\$(MSBuildProjectName).log** do **MSBuild**.  
   
--   Modificar as configurações do projeto para coletar mais do que a quantidade de informações no log de compilação padrão. No menu **Ferramentas**, clique em **Opções**. No **opções** caixa de diálogo, clique o **projetos e soluções** nó e, em seguida, clique o **compilar e executar** nó. Em seguida, no **detalhamento de arquivo de log de compilação do MSBuild projeto** , clique em **Detailed**.  
+-   Modifique as configurações do projeto para coletar mais do que a quantidade padrão de informações no log de build. No menu **Ferramentas**, clique em **Opções**. Na caixa de diálogo **Opções**, clique no nó **Projetos e Soluções** e, em seguida, clique no nó **Compilar e Executar**. Em seguida, na caixa **Detalhes do arquivo de log de build do projeto do MSBuild**, clique em **Detalhado**.  
   
--   Verifique se que os valores de qualquer arquivo macros de nome ou diretório que você está usando. Você pode ecoar macros individualmente, ou você pode adicionar `copy %0 command.bat` ao início da sua etapa de compilação personalizada, que irá copiar comandos da etapa de compilação personalizada para command.bat com todas as macros expandidas.  
+-   Verifique os valores das macros de diretório ou de nome de arquivo que você está usando. Você pode ecoar as macros individualmente ou adicionar `copy %0 command.bat` ao início da etapa de build personalizada, o que copiará os comandos da etapa de build personalizada para command.bat com todas as macros expandidas.  
   
--   Executar etapas de compilação personalizada e eventos individualmente para verificar o comportamento de compilação.  
+-   Execute os eventos e as etapas de build personalizadas individualmente para verificar o comportamento.  
   
 ## <a name="see-also"></a>Consulte também  
  [Noções básicas sobre etapas e eventos compilação personalizada](../ide/understanding-custom-build-steps-and-build-events.md)

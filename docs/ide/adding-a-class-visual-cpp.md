@@ -20,35 +20,36 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 14e16d8b5c15939adb792a96a828bafd07ba4041
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333278"
 ---
 # <a name="adding-a-class-visual-c"></a>Adicionando uma classe (Visual C++)
-Para adicionar uma classe em um projeto do Visual C++, em **Solution Explorer**, clique com o botão direito, clique em **adicionar**e, em seguida, clique em **classe**. Isso abre o [caixa de diálogo Adicionar classe](../ide/add-class-dialog-box.md) caixa de diálogo.  
+Para adicionar uma classe a um projeto do Visual C++, no **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto, clique em **Adicionar** e, em seguida, **Classe**. Isso abrirá a caixa de diálogo [Adicionar Classe](../ide/add-class-dialog-box.md).  
   
- Quando você adiciona uma classe, você deve especificar um nome que seja diferente das classes que já existem no MFC ou do ATL Se você especificar um nome que já existe em qualquer biblioteca, o IDE mostra uma mensagem de erro.  
+ Ao adicionar uma classe, é necessário especificar um nome que seja diferente das classes já existentes no MFC ou na ATL. Se você especificar um nome já existente em uma das bibliotecas, o IDE mostrará uma mensagem de erro.  
   
- Se seu projeto de convenção de nomenclatura exige que você use um nome existente, em seguida, é possível alterar apenas no caso de uma ou mais letras no nome porque C++ diferencia maiusculas de minúsculas. Por exemplo, embora você não pode nomear uma classe `CDocument`, você pode atribuir o nome `cdocument`.  
+ Caso a convenção de nomenclatura do projeto exija o uso de um nome existente, você poderá alterar apenas o uso de maiúsculas de uma ou mais letras no nome porque o C++ diferencia maiúsculas de minúsculas. Por exemplo, embora não seja possível nomear uma classe `CDocument`, é possível nomeá-la `cdocument`.  
   
-## <a name="what-kind-of-class-do-you-want-to-add"></a>O tipo de classe você deseja adicionar?  
- No **Adicionar classe** caixa de diálogo, quando você expande o **Visual C++** nó no painel esquerdo, vários agrupamentos de modelos instalados são exibidos. Os grupos de incluir **CLR**, **ATL**, **MFC**, e **C++**. Quando você seleciona um grupo, uma lista dos modelos disponíveis nesse grupo é exibida no painel central. Cada modelo contém os arquivos e o código-fonte que são necessários para uma classe.  
+## <a name="what-kind-of-class-do-you-want-to-add"></a>Qual tipo de classe você deseja adicionar?  
+ Na caixa de diálogo **Adicionar Classe**, quando você expande o nó **Visual C++** no painel esquerdo, vários agrupamentos de modelos instalados são exibidos. Os grupos incluem **CLR**, **ATL**, **MFC** e **C++**. Quando você seleciona um grupo, uma lista dos modelos disponíveis nesse grupo é exibida no painel central. Cada modelo contém os arquivos e o código-fonte necessários para uma classe.  
   
- Para gerar uma nova classe, selecione um modelo no painel central, digite um nome para a classe de **nome** caixa e clique em **adicionar**. Isso abre o **Adicionar Assistente de classe** para que você possa especificar opções para a classe.  
+ Para gerar uma nova classe, selecione um modelo no painel central, digite um nome para a classe na caixa **Nome** e clique em **Adicionar**. Isso abrirá o **Assistente de Adição de Classe**, de modo que você possa especificar opções para a classe.  
   
--   Para obter mais informações sobre como criar classes MFC, consulte [classe MFC](../mfc/reference/adding-an-mfc-class.md).  
+-   Para obter mais informações sobre como criar classes MFC, confira [Classe MFC](../mfc/reference/adding-an-mfc-class.md).  
   
--   Para obter mais informações sobre como criar classes ATL, consulte [objeto ATL simples](../atl/reference/adding-an-atl-simple-object.md).  
+-   Para obter mais informações sobre como criar classes ATL, confira [Objeto ATL Simples](../atl/reference/adding-an-atl-simple-object.md).  
   
 > [!NOTE]
->  O modelo **adicionar suporte ATL ao MFC** não cria uma classe, mas em vez disso, configura o projeto para usar ATL. Para obter mais informações, consulte [suporte ATL em um projeto MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md).  
+>  O modelo **Adicionar Suporte para ATL ao MFC** não cria uma classe, mas configura o projeto para usar a ATL. Para obter mais informações, confira [Suporte para ATL em um projeto MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md).  
   
- Para tornar uma classe C++ que não use MFC, ATL ou CLR, use o **classe C++** modelo o **C++** grupo de modelos instalados. Para obter mais informações, consulte [adicionando uma classe C++ genérica](../ide/adding-a-generic-cpp-class.md).  
+ Para criar uma classe C++ que não usa o MFC, a ATL ou o CLR, use o modelo **Classe C++** no grupo **C++** de modelos instalados. Para obter mais informações, confira [Adicionando uma classe C++ genérica](../ide/adding-a-generic-cpp-class.md).  
   
- Existem dois tipos de classes C++ baseadas no formulário. O primeiro deles, [CFormView classe](../mfc/reference/cformview-class.md) cria uma classe do MFC. Segunda cria uma classe CLR Windows Forms.  
+ Dois tipos de classes C++ baseadas em formulário estão disponíveis. O primeiro deles, [Classe CFormView](../mfc/reference/cformview-class.md), cria uma classe MFC. O segundo cria uma classe CLR do Windows Forms.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando um aplicativo MFC com base em formulários](../mfc/reference/creating-a-forms-based-mfc-application.md)   
- [Adicionar caixa de diálogo de classe](../ide/add-class-dialog-box.md)   
- [Criando projetos de área de trabalho usando os assistentes de aplicativo](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+ [Criando um aplicativo MFC baseado em formulários](../mfc/reference/creating-a-forms-based-mfc-application.md)   
+ [Caixa de diálogo Adicionar Classe](../ide/add-class-dialog-box.md)   
+ [Criando projetos da área de trabalho com assistentes de aplicativo](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Adicionando funcionalidade com assistentes de código](../ide/adding-functionality-with-code-wizards-cpp.md)

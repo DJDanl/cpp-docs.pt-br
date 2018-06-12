@@ -1,5 +1,5 @@
 ---
-title: (Ajuda HTML) de arquivos de ajuda | Microsoft Docs
+title: Arquivos de Ajuda (Ajuda HTML) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: d180fe4f9cf1baf26b27423ffda975bfe0fe85ba
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325069"
 ---
 # <a name="help-files-html-help"></a>Arquivos de ajuda (ajuda HTML)
-Os seguintes arquivos são criados quando você adicionar o tipo de Ajuda em HTML da Ajuda e suporte para o seu aplicativo selecionando o **ajuda contextual** caixa de seleção e, em seguida, selecionando **formato de ajuda HTML** no [Recursos avançados](../mfc/reference/advanced-features-mfc-application-wizard.md) página do Assistente de aplicativo MFC.  
+Os arquivos a seguir são criados quando você adiciona o tipo Ajuda HTML do suporte de Ajuda ao aplicativo, marcando a caixa de seleção **Ajuda contextual** e, em seguida, selecionando **Formato da Ajuda HTML** na página [Funcionalidades Avançadas](../mfc/reference/advanced-features-mfc-application-wizard.md) do Assistente de Aplicativo MFC.  
   
-|Nome do arquivo|Local do diretório|Local do Gerenciador de solução|Descrição|  
+|Nome do arquivo|Local do diretório|Local do Gerenciador de Soluções|Descrição|  
 |---------------|------------------------|--------------------------------|-----------------|  
-|*Projname*.hhp|*NomeDoProjeto*\hlp|Arquivos da Ajuda HTML|O arquivo de projeto de Ajuda. Ele contém os dados necessários para compilar os arquivos de Ajuda em um arquivo HXS ou um arquivo. chm.|  
-|*Projname*.hhk|*NomeDoProjeto*\hlp|Arquivos da Ajuda HTML|Contém um índice dos tópicos da Ajuda.|  
-|*Projname*.hhc|*NomeDoProjeto*\hlp|Arquivos da Ajuda HTML|O conteúdo da Ajuda do projeto.|  
-|Makehtmlhelp.bat|*Projname*|Arquivos de fonte|Usada pelo sistema para compilar o projeto de ajuda quando o projeto é compilado.|  
-|Afxcore.htm|*NomeDoProjeto*\hlp|Tópicos de ajuda HTML|Contém tópicos da Ajuda padrão para comandos do MFC padrão e objetos da tela. Adicione seus próprios tópicos de ajuda para este arquivo.|  
-|Afxprint.htm|*NomeDoProjeto*\hlp|Tópicos de ajuda HTML|Contém tópicos da Ajuda para os comandos de impressão.|  
-|*.jpg; \*.gif|*NomeDoProjeto*\hlp\Images|Arquivos de recursos|Contém imagens para os tópicos do arquivo de ajuda gerado.|  
+|*Nome_do_projeto*.hhp|*Nome_do_projeto*\hlp|Arquivos da Ajuda HTML|O arquivo de projeto da Ajuda. Ele contém os dados necessários para compilar os arquivos de Ajuda em um arquivo .hxs ou .chm.|  
+|*Nome_do_projeto*.hhk|*Nome_do_projeto*\hlp|Arquivos da Ajuda HTML|Contém um índice dos tópicos da Ajuda.|  
+|*Nome_do_projeto*.hhc|*Nome_do_projeto*\hlp|Arquivos da Ajuda HTML|O conteúdo do projeto da Ajuda.|  
+|Makehtmlhelp.bat|*Nome_do_projeto*|Arquivos de fonte|Usado pelo sistema para compilar o projeto da Ajuda quando o projeto é compilado.|  
+|Afxcore.htm|*Nome_do_projeto*\hlp|Tópicos da Ajuda HTML|Contém tópicos da Ajuda padrão para comandos MFC padrão e objetos de tela. Adicione seus próprios tópicos da Ajuda a esse arquivo.|  
+|Afxprint.htm|*Nome_do_projeto*\hlp|Tópicos da Ajuda HTML|Contém os tópicos da Ajuda para os comandos de impressão.|  
+|*.jpg; \*.gif|*Nome_do_projeto*\hlp\Images|Arquivos de recursos|Contém as imagens para os tópicos do arquivo de Ajuda gerados.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de arquivo criados para projetos do Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)

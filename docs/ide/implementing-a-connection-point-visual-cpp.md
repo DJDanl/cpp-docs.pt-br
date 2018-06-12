@@ -1,5 +1,5 @@
 ---
-title: Implementando um ponto de Conexão (Visual C++) | Microsoft Docs
+title: Implementando um ponto de conexão (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,37 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 3b75bf145da401ad9889353a1e65448831c602c9
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328341"
 ---
 # <a name="implementing-a-connection-point-visual-c"></a>Implementando um ponto de conexão (Visual C++)
-Para implementar um ponto de conexão usando o Assistente para implementar ponto de Conexão, você deve ter criado um projeto como um aplicativo COM ATL ou como um aplicativo MFC que contém suporte ATL. Você pode usar o [Assistente de projeto de ATL](../atl/reference/atl-project-wizard.md) para criar um aplicativo ATL, ou [adicionar um objeto ATL ao seu aplicativo do MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar o suporte ATL para um aplicativo do MFC.  
+Para implementar um ponto de conexão usando o Assistente para Implementação de Ponto de Conexão, você precisa ter criado um projeto como um aplicativo ATL COM ou como um aplicativo MFC que contém suporte para ATL. Use o [Assistente de Projeto ATL](../atl/reference/atl-project-wizard.md) para criar um aplicativo ATL ou [Adicionar um objeto ATL ao aplicativo MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar o suporte à ATL para um aplicativo MFC.  
   
 > [!NOTE]
->  Para obter informações sobre como implementar pontos de conexão para um projeto MFC, consulte [pontos de Conexão](../mfc/connection-points.md).  
+>  Para obter informações sobre como implementar pontos de conexão para um projeto MFC, confira [Pontos de conexão](../mfc/connection-points.md).  
   
- Depois de criar o projeto, para implementar um ponto de conexão, adicione primeiro um objeto ATL. Consulte [adicionando objetos e controles para um projeto de ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) para obter uma lista de assistentes que adicionar objetos ao seu projeto ATL.  
+ Depois de criar o projeto, para implementar um ponto de conexão, adicione primeiro um objeto ATL. Confira [Adicionando objetos e controles a um projeto ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) para obter uma lista de assistentes que adicionam objetos ao projeto ATL.  
   
 > [!NOTE]
->  O assistente não oferece suporte para as caixas de diálogo do ATL XML Web services criados com servidor ATL, objetos de desempenho ou os contadores de desempenho.  
+>  O assistente não dá suporte a caixas de diálogo da ATL, serviços Web XML criados com o servidor ATL, objetos de desempenho ou contadores de desempenho.  
   
- Um objeto conectável (ou seja, uma fonte) pode expor um ponto de conexão para cada uma das suas interfaces de saída. Cada interface de saída pode ser implementado por um cliente em um objeto (ou seja, um coletor). Para obter mais informações, consulte [pontos de Conexão de ATL](../atl/atl-connection-points.md).  
+ Um objeto conectável (ou seja, uma fonte) pode expor um ponto de conexão para cada uma de suas interfaces de saída. Cada interface de saída pode ser implementada por um cliente em um objeto (ou seja, um coletor). Para obter mais informações, confira [Pontos de conexão da ATL](../atl/atl-connection-points.md).  
   
 ### <a name="to-implement-a-connection-point"></a>Para implementar um ponto de conexão  
   
-1.  No modo de exibição de classe, clique no nome de classe para seu objeto ATL.  
+1.  Em Modo de Exibição de Classe, clique com o botão direito do mouse no nome da classe do objeto ATL.  
   
-2.  Clique em **adicionar** do menu de atalho e clique **Adicionar ponto de Conexão** para exibir o [Assistente de implementação de ponto de Conexão](../ide/implement-connection-point-wizard.md).  
+2.  Clique em **Adicionar** no menu de atalho e, em seguida, clique em **Adicionar Ponto de Conexão** para exibir o [Assistente para Implementação de Ponto de Conexão](../ide/implement-connection-point-wizard.md).  
   
-3.  Selecione as interfaces de ponto de conexão para implementar das bibliotecas de tipo apropriado e clique em **concluir**.  
+3.  Selecione as interfaces do ponto de conexão a serem implementadas nas bibliotecas de tipos apropriadas e clique em **Concluir**.  
   
-4.  No modo de exibição de classe, examine as classes de proxy criadas para cada ponto de conexão. As classes aparecem como CProxy*InterfaceName*\<T > e são derivados de [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md).  
+4.  Em Modo de Exibição de Classe, examine as classes proxy criadas para cada ponto de conexão. As classes são exibidas como CProxy*InterfaceName*\<T> e são derivadas de [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md).  
   
-5.  Clique duas vezes a classe de ponto de conexão para exibir a definição de classe do ponto de conexão.  
+5.  Clique duas vezes na classe do ponto de conexão para exibir a definição da classe do ponto de conexão.  
   
-    -   Se você implementar um ponto de conexão para a interface do seu próprio projeto, será exibida a seguinte definição  
+    -   Se você implementar um ponto de conexão para a interface de seu próprio projeto, a seguinte definição será exibida  
   
         ```  
         template< class T >  
@@ -57,9 +58,9 @@ Para implementar um ponto de conexão usando o Assistente para implementar ponto
         };  
         ```  
   
-         Se você implementar uma interface local, métodos e propriedades aparecem no corpo da classe.  
+         Se você implementar uma interface local, as propriedades e os métodos serão exibidos no corpo da classe.  
   
-    -   Se você implementar um ponto de conexão para outra interface, a definição inclui métodos da interface, cada precedido por `Fire_`.  
+    -   Se você implementar um ponto de conexão para outra interface, a definição incluirá os métodos da interface, cada um precedido por `Fire_`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionando funcionalidade com assistentes de código](../ide/adding-functionality-with-code-wizards-cpp.md)   

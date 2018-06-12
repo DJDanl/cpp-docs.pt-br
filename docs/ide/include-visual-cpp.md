@@ -1,5 +1,5 @@
 ---
-title: '&lt;incluir&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;include&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: b4c1a75acb89d9510dd7f489e5d0d582611da8de
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330421"
 ---
-# <a name="ltincludegt-visual-c"></a>&lt;incluir&gt; (Visual C++)
-A marca \<include> permite consultar comentários em outro arquivo que descrevem os tipos e membros em seu código-fonte. Essa é uma alternativa para inserir comentários de documentação diretamente em seu arquivo de código-fonte.  Por exemplo, você pode usar \<incluem > inserir comentários "boilerplate" padrão que são usados em toda a sua equipe ou da empresa.  
+# <a name="ltincludegt-visual-c"></a>&lt;include&gt; (Visual C++)
+A marca \<include> permite consultar comentários em outro arquivo que descrevem os tipos e membros em seu código-fonte. Essa é uma alternativa para inserir comentários de documentação diretamente em seu arquivo de código-fonte.  Por exemplo, use \<include> para inserir comentários "clichê" padrão usados por toda a equipe ou empresa.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,10 +36,10 @@ A marca \<include> permite consultar comentários em outro arquivo que descrevem
   
 #### <a name="parameters"></a>Parâmetros  
  `filename`  
- O nome do arquivo que contém a documentação. O nome do arquivo pode ser qualificado com um caminho.  Coloque o nome entre aspas simples ou duplas.  O compilador emite um aviso se ele não encontrar `filename`.  
+ O nome do arquivo que contém a documentação. O nome do arquivo pode ser qualificado com um caminho.  Coloque o nome entre aspas simples ou duplas.  O compilador emite um aviso se não encontra `filename`.  
   
  `tagpath`  
- Uma expressão XPath válida que seleciona o nó-conjunto desejado contido no arquivo.  
+ Uma expressão XPath válida que seleciona o conjunto de nós desejado contido no arquivo.  
   
  `name`  
  O especificador de nome na marca que precede os comentários; `name` terá um `id`.  
@@ -47,12 +48,12 @@ A marca \<include> permite consultar comentários em outro arquivo que descrevem
  A ID da marca que precede os comentários.  Coloque o nome entre aspas simples ou duplas.  
   
 ## <a name="remarks"></a>Comentários  
- A marca \<include> usa a sintaxe XML XPath. Consulte a documentação do XPath para maneiras de personalizar usando \<incluem >.  
+ A marca \<include> usa a sintaxe XML XPath. Veja a documentação do XPath para descobrir outras formas de personalização usando \<include>.  
   
  Compile com [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- Este é um exemplo de vários arquivos. O primeiro arquivo usa \<incluem >, contém os comentários de documentação a seguir:  
+ Este é um exemplo de vários arquivos. O primeiro arquivo, que usa \<include>, contém os seguintes comentários da documentação:  
   
 ```  
 // xml_include_tag.cpp  

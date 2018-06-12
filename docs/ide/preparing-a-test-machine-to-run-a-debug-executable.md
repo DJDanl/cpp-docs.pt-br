@@ -1,5 +1,5 @@
 ---
-title: Preparando uma máquina de teste para executar um executável de depuração | Microsoft Docs
+title: Preparando um computador de teste para executar um executável de depuração | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 33683ebe349fbfdcb3fd51179ed6bc3140510c00
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330291"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Preparando uma máquina de teste para executar um executável de depuração
-Para preparar o computador para testar a versão de depuração de um aplicativo que é criado com o Visual C++, você precisa implantar versões de depuração da biblioteca do Visual C++ DLLs que o aplicativo depende. Para identificar quais DLLs devem ser desenvolvidos, siga as etapas em [Noções básicas sobre as dependências de um aplicativo do Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Normalmente, as versões de depuração do Visual C++ biblioteca DLLs têm nomes que terminam em "d". Por exemplo, a versão de depuração de msvcr100.dll é denominada msvcr100d.dll.  
+Para preparar um computador para testar a versão de depuração de um aplicativo compilado com o Visual C++, é necessário implantar versões de depuração das DLLs da biblioteca do Visual C++ das quais o aplicativo depende. Para identificar quais DLLs devem ser implantadas, siga as etapas de [Noções básicas sobre as dependências de um aplicativo do Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Normalmente, as versões de depuração das DLLs da biblioteca do Visual C++ têm nomes que terminam com "d"; por exemplo, a versão de depuração de msvcr100.dll é chamada msvcr100d.dll.  
   
 > [!NOTE]
->  As versões de depuração de um aplicativo não são redistribuíveis e não são versões de depuração as DLLs de biblioteca do Visual C++ redistribuíveis. Você pode implantar versões de depuração de aplicativos e DLLs do Visual C++ apenas para outros computadores, o único propósito de depuração e teste os aplicativos em um computador que não tenha instalado o Visual Studio. Para obter mais informações, consulte [Redistribuindo arquivos do Visual C++](../ide/redistributing-visual-cpp-files.md).  
+>  As versões de depuração de um aplicativo não são redistribuíveis, assim como as versões de depuração das DLLs da biblioteca do Visual C++. Você pode implantar versões de depuração de aplicativos e DLLs do Visual C++ apenas em outros computadores, para a única finalidade de depuração e teste dos aplicativos em um computador que não tenha o Visual Studio instalado. Para obter mais informações, consulte [Redistribuindo arquivos do Visual C++](../ide/redistributing-visual-cpp-files.md).  
   
- Há três maneiras de implantar versões de depuração de DLLs de biblioteca do Visual C++ junto com a versão de depuração de um aplicativo.  
+ Há três maneiras de implantar versões de depuração de DLLs da biblioteca do Visual C++ junto com a versão de depuração de um aplicativo.  
   
--   Use implantação central para instalar uma versão de depuração de um DLL específico do Visual C++ para o diretório %windir%\system32\ usando um projeto de instalação que inclui módulos de mesclagem para a versão da biblioteca correta e a arquitetura do seu aplicativo. Módulos de mesclagem são encontrados no diretório de arquivos de programa (x86) em \Common Files\Merge módulos ou arquivos de programa\\. A versão de depuração de um módulo de mesclagem tem depuração no nome para exemplo, Microsoft_VC110_DebugCRT_x86.msm. Um exemplo desta implantação pode ser encontrado no [passo a passo: Implantando um Visual C++ aplicativo usando um projeto de instalação](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).  
+-   Use a implantação central para instalar uma versão de depuração de uma DLL específica do Visual C++ no diretório %windir%\system32\ usando um projeto de Instalação que inclua módulos de mesclagem para a versão da biblioteca e a arquitetura corretas do aplicativo. Os módulos de mesclagem são encontrados no diretório Arquivos de Programas ou Arquivos de Programas (x86) em \Common Files\Merge Modules\\. A versão de depuração de um módulo de mesclagem tem Depuração no nome, por exemplo, Microsoft_VC110_DebugCRT_x86.msm. Um exemplo dessa implantação pode ser encontrado no [Passo a passo: Implantando um aplicativo do Visual C++ usando um projeto de instalação](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).  
   
--   Usar a implantação local para instalar uma versão de depuração de um DLL específico do Visual C++ no diretório de instalação do aplicativo por meio de arquivos que são fornecidos no diretório de arquivos de programa (x86) em \Microsoft Visual Studio ou arquivos de programa \<versão > \VC\redist\Debug_NonRedist\\.  
+-   Use a implantação local para instalar uma versão de depuração de uma DLL específica do Visual C++ no diretório de instalação do aplicativo usando os arquivos fornecidos no diretório Arquivos de Programas ou Arquivos de Programas (x86) em \Microsoft Visual Studio \<versão>\VC\redist\Debug_NonRedist\\.  
   
     > [!NOTE]
-    >  Para depuração remota de seu aplicativo criado usando o Visual C++ 2005 ou do Visual C++ 2008 em outro computador, você precisa implantar versões de depuração da biblioteca do Visual C++ DLLs como assemblies lado a lado compartilhados. Você pode usar um projeto de instalação ou o Windows Installer para instalar os módulos de mesclagem correspondente.  
+    >  Para a depuração remota do aplicativo compilado com o Visual C++ 2005 ou o Visual C++ 2008 em outro computador, é necessário implantar versões de depuração de DLLs da biblioteca do Visual C++ como assemblies lado a lado compartilhados. Use um projeto de Instalação ou o Windows Installer para instalar os módulos de mesclagem correspondentes.  
   
--   Use the_**implantar** opção o **do Configuration Manager** caixa de diálogo no Visual Studio para copiar a saída do projeto e outros arquivos para o computador remoto. 
+-   Use a opção _**Deploy** na caixa de diálogo **Configuration Manager** do Visual Studio para copiar a saída do projeto e outros arquivos para o computador remoto. 
   
- Após a instalação DLLs do Visual C++, você pode executar um depurador remoto em um compartilhamento de rede. Para obter mais informações sobre a depuração remota, consulte [depuração remota](/visualstudio/debugger/remote-debugging.md).  
+ Após a instalação das DLLs do Visual C++, execute um depurador remoto em um compartilhamento de rede. Para obter mais informações sobre a depuração remota, confira [Depuração remota](/visualstudio/debugger/remote-debugging.md).  
   
 ## <a name="see-also"></a>Consulte também  
  
- [Implantação em Visual C++](../ide/deployment-in-visual-cpp.md)   
- [Opções de linha de comando do Windows Installer](http://msdn.microsoft.com/library/windows/desktop/aa367988.aspx)   
- [Exemplos de implantação](../ide/deployment-examples.md) [depuração remota](/visualstudio/debugger/remote-debugging.md)
+ [Implantação no Visual C++](../ide/deployment-in-visual-cpp.md)   
+ [Opções de Linha de comando do Windows Installer](http://msdn.microsoft.com/library/windows/desktop/aa367988.aspx)   
+ [Exemplos de implantação](../ide/deployment-examples.md) [Depuração remota](/visualstudio/debugger/remote-debugging.md)

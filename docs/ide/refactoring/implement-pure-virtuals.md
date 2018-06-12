@@ -12,29 +12,30 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328020"
 ---
-# <a name="implement-pure-virtuals"></a>Implementar virtuais puros
-**O que:** permite gerar imediatamente o código necessário para implementar todos os métodos virtual puros em uma classe. 
+# <a name="implement-pure-virtuals"></a>Implementar Virtuais Puros
+**O quê:** permite gerar imediatamente o código necessário para implementar todos os métodos virtuais puros em uma classe. 
 
 **Quando:** você deseja herdar de uma classe com funções virtuais puras.  
 
-**Motivo:** pode implementar manualmente funções virtuais puras todos os um por um, no entanto, esse recurso gerará automaticamente todas as assinaturas de método.
+**Por quê:** você pode implementar todas as funções virtuais puras manualmente uma por uma; no entanto, esse recurso gerará todas as assinaturas de método automaticamente.
 
 **Como:**
 
-1. Coloque o cursor de texto ou o mouse sobre a classe na qual você deseja implementar as funções virtuais puras da classe base.
+1. Coloque o cursor de texto ou do mouse sobre a classe na qual deseja implementar as funções virtuais puras da classe base.
 
    ![Código realçado](images/virtuals_highlight.png)
 
 1. Depois, siga um destes procedimentos:
    * **Teclado**
-     * Pressione **Ctrl +.** para disparar o **ações rápidas e refatorações** menu e selecione **implementar todos os virtuais puros para a classe*ClassName*'** no menu de contexto, onde  *Nome da classe* é o nome da classe selecionada.
+     * Pressione **Ctrl +.** para disparar o menu **Ações Rápidas e Refatorações** e selecione **Implementar todos os Virtuais Puros para a classe '*ClassName*'** no menu de contexto, em que *ClassName* é o nome da classe selecionada.
    * **Mouse**
-     * Clique com botão direito e selecione o **ações rápidas e refatorações** menu e selecione **implementar todos os virtuais puros para a classe*ClassName*'** no menu de contexto, onde  *Nome da classe* é o nome da classe selecionada.
+     * Clique com o botão direito do mouse, selecione o menu **Ações Rápidas e Refatorações** e selecione **Implementar todos os Virtuais Puros para a classe '*ClassName*'** no menu de contexto, em que *ClassName* é o nome da classe selecionada.
 
-1. As assinaturas de método virtual puro será criado automaticamente, pronto para ser implementada.
+1. As assinaturas de método virtuais puras serão criadas automaticamente, prontas para serem implementadas.
 
-   ![Implementar virtuais puros resultados](images/virtuals_result.png)
+   ![Resultado de Implementar Virtuais Puros](images/virtuals_result.png)

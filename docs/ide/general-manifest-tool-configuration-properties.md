@@ -1,5 +1,5 @@
 ---
-title: Manifesto de propriedades de configuração da ferramenta (Visual C++) | Microsoft Docs
+title: Propriedades de Configuração da Ferramenta de Manifesto (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,30 +21,31 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 1953e7c37c07f66845510efe037015a537aa7baa
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329082"
 ---
-# <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Ferramenta de manifesto, geral, propriedades de configuração, &lt;Projectname&gt; caixa de diálogo de páginas de propriedades
+# <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Caixa de diálogo Geral, Ferramenta de Manifesto, Propriedades de Configuração, Páginas de Propriedades de &lt;Projectname&gt;
 Use essa caixa de diálogo para especificar opções gerais para [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- Para acessar essa caixa de diálogo de página de propriedade, abra as páginas de propriedades para o projeto ou a folha de propriedades. Expanda o **ferramenta de manifesto** nó **propriedades de configuração**e, em seguida, selecione **geral**.  
+ Para acessar essa caixa de diálogo da página de propriedades, abra as páginas de propriedades do projeto ou da folha de propriedades. Expanda o nó **Ferramenta de Manifesto** em **Propriedades de Configuração** e, em seguida, selecione **Geral**.  
   
 ## <a name="uielement-list"></a>Lista UIElement  
- **Suprimir faixa de inicialização**  
- **Sim (/ /nologo)** Especifica que dados de direitos autorais Microsoft padrão serão ocultos, quando a ferramenta de manifesto é iniciada. Use esta opção para suprimir a saída indesejada nos arquivos de log, quando você executa mt.exe como parte de um processo de compilação ou de um ambiente de compilação.  
+ **Suprimir Faixa de Inicialização**  
+ **Sim (/nologo)** especifica que os dados padrão de direitos autorais da Microsoft ficarão ocultos quando a ferramenta de manifesto for iniciada. Use essa opção para suprimir a saída indesejada em arquivos de log quando você executar mt.exe como parte de um processo de build ou em um ambiente de build.  
   
- **Saída detalhada**  
- **Sim (/verbose)** Especifica que as informações de compilação adicionais serão exibidas durante a geração de manifesto.  
+ **Saída Detalhada**  
+ **Sim (/verbose)** especifica que as informações de build adicionais serão exibidas durante a geração do manifesto.  
   
- **Identidade do assembly**  
- Usa a opção /identity para especificar uma cadeia de caracteres de identidade, que inclui os atributos para o [ \<assemblyIdentity > elemento](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Uma cadeia de caracteres de identidade começa com o valor para o `name` de atributo e é seguido por *atributo* = *valor* pares. Os atributos em uma cadeia de caracteres de identidade são delimitados por uma vírgula.  
+ **Identidade do Assembly**  
+ Usa a opção /identity para especificar uma cadeia de caracteres de identidade, que inclui os atributos para o [\<Elemento assemblyIdentity>](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Uma cadeia de caracteres de identidade começa com o valor do atributo `name` e é seguida por pares *atributo* = *valor*. Os atributos de uma cadeia de caracteres de identidade são delimitados por uma vírgula.  
   
- Uma cadeia de caracteres de identidade de exemplo é o seguinte:  
+ Este é um exemplo de cadeia de caracteres de identidade:  
   
  `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`  
   
 ## <a name="see-also"></a>Consulte também  
  [Manifesto do aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
- [Páginas de propriedade da ferramenta de manifesto](../ide/manifest-tool-property-pages.md)   
+ [Páginas de propriedades da Ferramenta de Manifesto](../ide/manifest-tool-property-pages.md)   
  [Trabalhando com Propriedades do Projeto](../ide/working-with-project-properties.md)   

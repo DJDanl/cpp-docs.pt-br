@@ -1,5 +1,5 @@
 ---
-title: Páginas de propriedade do vinculador | Microsoft Docs
+title: Páginas de propriedades do Vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/21/2017
 ms.technology:
@@ -22,45 +22,46 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 2cec232bb4e4f2f6ac1ab9af703b368eec0ba5dd
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331513"
 ---
 # <a name="linker-property-pages"></a>Páginas de propriedade do vinculador
 
-Este tópico discute as propriedades a seguir sobre o **geral** página de propriedade do vinculador. Para a versão do Linux dessa página, consulte [propriedades de vinculador (C++ Linux)](../linux/prop-pages/linker-linux.md).
+Este tópico aborda as propriedades a seguir na página de propriedades **Geral** do vinculador. Para obter a versão do Linux desta página, confira [Propriedades do vinculador (Linux C++)](../linux/prop-pages/linker-linux.md).
 
-## <a name="general-page-properties"></a>Propriedades da página geral
+## <a name="general-page-properties"></a>Propriedades gerais da página
 
-### <a name="ignore-import-library"></a>Ignorar biblioteca de importações
+### <a name="ignore-import-library"></a>Ignorar Biblioteca de Importação
 
-Esta propriedade instrui o vinculador para não vincular nenhuma saída. lib gerada a partir desta compilação em qualquer projeto dependente. Isso permite que o sistema de projeto lidar com arquivos. dll que não produzem um arquivo quando criada. Se um projeto depende de outro projeto que produz uma DLL, o sistema do projeto vincula automaticamente o arquivo. lib produzido pelo projeto filho. Isso pode não ser necessária por projetos que estão produzindo DLLs COM ou DLLs somente de recursos; essas DLLs não tem qualquer exportações significativas. Se uma DLL não exporta o vinculador não gera um arquivo. Se nenhum arquivo. lib de exportação está presente no disco, e o sistema de projeto informa o vinculador a vincular essa DLL (ausente), o link falhar. Use o **ignorar biblioteca de importações** propriedade para resolver esse problema. Quando definido como **Sim**, o sistema do projeto ignora a presença ou ausência do arquivo. lib e faz com que qualquer projeto que depende deste projeto não vincule com o arquivo. lib inexistente.
+Essa propriedade instrui o vinculador a não vincular nenhuma saída .lib gerada por esse build a nenhum projeto dependente. Isso permite que o sistema de projeto manipule arquivos .dll que não produzem um arquivo .lib quando compilados. Se um projeto depende de outro projeto que produz uma DLL, o sistema do projeto vincula automaticamente o arquivo .lib produzido por esse projeto filho. Isso pode não ser necessário para projetos que produzem DLLs COM ou DLLs somente de recursos; essas DLLs não têm exportações significativas. Se uma DLL não tem exportações, o vinculador não gera um arquivo .lib. Se nenhum arquivo .lib de exportação estiver presente no disco e o sistema de projeto instruir o vinculador a ser vinculado a essa DLL (ausente), o vínculo falhará. Use a propriedade **Ignorar Biblioteca de Importação** para resolver esse problema. Quando definido como **Sim**, o sistema de projeto ignora a presença ou a ausência do arquivo .lib e faz com que qualquer projeto que dependa desse projeto não seja vinculado ao arquivo .lib inexistente.
 
-Para acessar essa propriedade de forma programática, consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>.
+Para acessar essa propriedade de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>.
 
-### <a name="register-output"></a>Registrar saída
+### <a name="register-output"></a>Registrar Saída
 
-Executa `regsvr32.exe /s $(TargetPath)` na saída da compilação, que é válido apenas em projetos. dll. Para projetos de .exe, essa propriedade será ignorada. Para registrar uma saída de .exe, defina um evento postbuild na configuração de fazer o registro personalizado que é sempre necessário para arquivos .exe registrado.
+Executa `regsvr32.exe /s $(TargetPath)` na saída de build, que é válido somente em projetos .dll. Para projetos .exe, essa propriedade é ignorada. Para registrar uma saída .exe, defina um evento pós-build na configuração para fazer o registro personalizado que é sempre necessário para arquivos .exe registrados.
 
-Para acessar essa propriedade de forma programática, consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RegisterOutput%2A>.
+Para acessar essa propriedade de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RegisterOutput%2A>.
 
 ### <a name="per-user-redirection"></a>Redirecionamento por usuário
 
-Registro no Visual Studio tradicionalmente foi feito em HKEY_CLASSES_ROOT (HKCR). Com o Windows Vista e sistemas operacionais posteriores, para acessar HKCR você deve executar o Visual Studio no modo elevado. Os desenvolvedores não desejar sempre executar no modo elevado, mas ainda devem trabalhar com o registro. Redirecionamento por usuário permite que você registre sem precisar executar nesse modo.
+Tradicionalmente, o registro no Visual Studio é feito em HKEY_CLASSES_ROOT (HKCR). Com o Windows Vista e sistemas operacionais posteriores, para acessar HKCR, é necessário executar o Visual Studio no modo elevado. Os desenvolvedores nem sempre desejam executá-lo no modo elevado, mas ainda precisam trabalhar com o registro. O redirecionamento por usuário permite que você faça o registro sem precisar executar o Visual Studio nesse modo.
 
-Redirecionamento de usuário individual forçará as gravações de qualquer para HKCR a serem redirecionadas para HKEY\_atual\_usuário (HKCU). Se o redirecionamento por usuário esteja desativado, isso poderá causar [prj0050 no projeto de compilação erro](../error-messages/tool-errors/project-build-error-prj0050.md) quando o programa tenta gravar HKCR.
+O redirecionamento por usuário força as gravações em HKCR a serem redirecionadas para HKEY\_CURRENT\_USER (HKCU). Se o redirecionamento por usuário estiver desativado, isso poderá causar o [Erro de Build PRJ0050 do Projeto](../error-messages/tool-errors/project-build-error-prj0050.md) quando o programa tentar fazer uma gravação em HKCR.
 
-### <a name="link-library-dependencies"></a>Dependências de biblioteca de link
+### <a name="link-library-dependencies"></a>Dependências da Biblioteca de Links
 
-Especifica se deve vincular os arquivos. lib que são produzidos por projetos dependentes. Normalmente, você deseja vincular nos arquivos. lib, mas isso não pode ser o caso para determinadas DLLs.
+Especifica se os arquivos .lib produzidos por projetos dependentes devem ser vinculados. Normalmente, você deseja criar um vínculo com os arquivos .lib, mas esse pode não ser o caso para algumas DLLs.
 
-Você também pode especificar um arquivo. obj, fornecendo o nome de arquivo e o caminho relativo, por exemplo "... \\.. \MyLibProject\MyObjFile.obj". Se a fonte de código para o arquivo. obj #includes um cabeçalho pré-compilado, por exemplo pch. h, em seguida, o arquivo pch.obj está localizado na mesma pasta que MyObjFile.obj e você também deverá adicionar pch.obj como uma dependência adicional.
+Especifique também um arquivo .obj fornecendo o nome de arquivo e o caminho relativo, por exemplo, "..\\..\MyLibProject\MyObjFile.obj". Se o código-fonte do arquivo .obj incluir um cabeçalho pré-compilado, por exemplo pch.h, o arquivo pch.obj estará localizado na mesma pasta de MyObjFile.obj e você também precisará adicionar pch.obj como uma dependência adicional.
 
-### <a name="use-library-dependency-inputs"></a>Usar entradas de dependência de biblioteca
+### <a name="use-library-dependency-inputs"></a>Usar Entradas de Dependência da Biblioteca
 
-Em um projeto grande, quando um projeto dependente produz um arquivo. lib, vínculo incremental está desabilitado. Se houver muitos projetos dependentes que produzem arquivos. lib, a criação do aplicativo pode levar muito tempo. Quando essa propriedade é definida como **Sim**, os links do sistema de projeto nos arquivos. obj para .libs produzido por projetos dependentes, permitindo vínculo incremental.
+Em um projeto grande, quando um projeto dependente produz um arquivo .lib, o vínculo incremental é desabilitado. Se houver muitos projetos dependentes que produzem arquivos .lib, a compilação do aplicativo poderá levar muito tempo. Quando essa propriedade é definida como **Sim**, o sistema de projeto cria o vínculo nos arquivos .obj para os .libs produzidos por projetos dependentes, permitindo o vínculo incremental.
 
-Para obter informações sobre como acessar o **geral** página de propriedade do vinculador, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).
+Para obter informações sobre como acessar a página de propriedades **Geral** do vinculador, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).
 
 ## <a name="see-also"></a>Consulte também
 

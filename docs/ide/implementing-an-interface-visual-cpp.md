@@ -1,5 +1,5 @@
 ---
-title: Implementando uma Interface (Visual C++) | Microsoft Docs
+title: Implementando uma interface (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 309ae9dc576f93574836ab4916e87c5232b37a6c
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332761"
 ---
 # <a name="implementing-an-interface-visual-c"></a>Implementando uma interface (Visual C++)
-Para implementar uma interface, você deve ter criado um projeto como um aplicativo COM ATL ou como um aplicativo MFC que contém suporte ATL. Você pode usar o [Assistente de projeto de ATL](../atl/reference/atl-project-wizard.md) para criar um aplicativo ATL, ou [adicionar um objeto ATL ao seu aplicativo do MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar o suporte ATL para um aplicativo do MFC.  
+Para implementar uma interface, você precisa ter criado um projeto como um aplicativo ATL COM ou como um aplicativo MFC que contém suporte para ATL. Use o [Assistente de Projeto ATL](../atl/reference/atl-project-wizard.md) para criar um aplicativo ATL ou [Adicionar um objeto ATL ao aplicativo MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar o suporte à ATL para um aplicativo MFC.  
   
- Depois de criar o projeto, para implementar uma interface, adicione primeiro um objeto ATL. Consulte [adicionando objetos e controles para um projeto de ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) para obter uma lista de assistentes que adicionar objetos ao seu projeto ATL.  
+ Depois de criar o projeto, para implementar uma interface, adicione primeiro um objeto ATL. Confira [Adicionando objetos e controles a um projeto ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) para obter uma lista de assistentes que adicionam objetos ao projeto ATL.  
   
 > [!NOTE]
->  O assistente não oferece suporte para as caixas de diálogo do ATL XML Web services usando a ATL, objetos de desempenho ou os contadores de desempenho.  
+>  O assistente não dá suporte a caixas de diálogo da ATL, serviços Web XML que usam a ATL, objetos de desempenho ou contadores de desempenho.  
   
- Se você [adicionar um controle ATL](../atl/reference/adding-an-atl-control.md), você pode especificar se deseja implementar interfaces padrão, listadas a [Interfaces](../atl/reference/interfaces-atl-control-wizard.md) página do ou do assistente e definidos no atlcom.h.  
+ Se você [adicionar um controle ATL](../atl/reference/adding-an-atl-control.md), especifique se deseja implementar interfaces padrão, listadas na página [Interfaces](../atl/reference/interfaces-atl-control-wizard.md) do assistente e definidas em atlcom.h.  
   
- Depois de adicionar o objeto ou controle, você pode implementar outras interfaces, localizados em qualquer biblioteca de tipos disponíveis, usando o Assistente para implementar a Interface.  
+ Depois de adicionar o objeto ou o controle, implemente outras interfaces, localizadas em qualquer biblioteca de tipos disponível, usando o Assistente para Implementação de Interface.  
   
- Se você estiver adicionando uma nova interface, você deve adicioná-lo manualmente para o arquivo do projeto. idl. Consulte [adicionando uma nova Interface em um projeto de ATL](../atl/reference/adding-a-new-interface-in-an-atl-project.md) para obter mais informações.  
+ Caso esteja adicionando uma nova interface, adicione-a manualmente ao arquivo .idl do projeto. Confira [Adicionando uma nova interface a um projeto ATL](../atl/reference/adding-a-new-interface-in-an-atl-project.md) para obter mais informações.  
   
 ### <a name="to-implement-an-interface"></a>Para implementar uma interface  
   
-1.  No modo de exibição de classe, clique no nome de classe para seu objeto ATL.  
+1.  Em Modo de Exibição de Classe, clique com o botão direito do mouse no nome da classe do objeto ATL.  
   
-2.  Clique em **adicionar** do menu de atalho e clique **implementar Interface** para exibir o [Assistente de implementação de Interface](../ide/implement-interface-wizard.md).  
+2.  Clique em **Adicionar** no menu de atalho e, em seguida, clique em **Implementar Interface** para exibir o [Assistente para Implementação de Interface](../ide/implement-interface-wizard.md).  
   
-3.  Selecione as interfaces para implementar das bibliotecas de tipo apropriado e clique em **concluir**.  
+3.  Selecione as interfaces a serem implementadas nas bibliotecas de tipos apropriadas e clique em **Concluir**.  
   
-4.  No modo de exibição de classe, expanda Bases de dados do objeto e Interfaces de nó para ver a interface que você tenha implementado e, em seguida, expanda o nó da interface para ver suas propriedades disponíveis, métodos e eventos.  
+4.  Em Modo de Exibição de Classe, expanda o nó Bases e Interfaces do objeto para ver a interface implementada e, em seguida, expanda o nó da interface para ver as propriedades, os métodos e os eventos disponíveis.  
   
     > [!NOTE]
-    >  Você também pode usar o [Pesquisador de objetos](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) para examinar os membros da interface.  
+    >  Use também o [Pesquisador de Objetos](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) para examinar os membros da interface.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando uma Interface COM](../ide/creating-a-com-interface-visual-cpp.md)   
+ [Criando uma interface COM](../ide/creating-a-com-interface-visual-cpp.md)   
  [Editando uma interface COM](../ide/editing-a-com-interface.md)

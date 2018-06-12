@@ -1,5 +1,5 @@
 ---
-title: '&lt;consulte&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;see&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a03dd56320b948d47c765f253bf3e6b706ed2b56
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335491"
 ---
-# <a name="ltseegt-visual-c"></a>&lt;consulte&gt; (Visual C++)
-Use a marca \<see> para especificar um link de dentro do texto. Use [ \<seealso >](../ide/seealso-visual-cpp.md) para indicar o texto que você pode aparecer em uma seção Consulte também.  
+# <a name="ltseegt-visual-c"></a>&lt;see&gt; (Visual C++)
+Use a marca \<see> para especificar um link de dentro do texto. Use [\<seealso>](../ide/seealso-visual-cpp.md) para indicar o texto que você deseja exibir em uma seção Confira também.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,17 +38,17 @@ Use a marca \<see> para especificar um link de dentro do texto. Use [ \<seealso 
  `member`  
  Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual.  Coloque o nome entre aspas simples ou duplas.  
   
- O compilador verifica se o elemento de código fornecido existe e resolve `member` para o nome do elemento no XML de saída.  O compilador emite um aviso se ele não encontrar `member`.  
+ O compilador verifica se o elemento de código fornecido existe e resolve `member` no nome de elemento no XML de saída.  O compilador emite um aviso se não encontra `member`.  
   
 ## <a name="remarks"></a>Comentários  
  Compile com [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.  
   
- Consulte [ \<resumo >](../ide/summary-visual-cpp.md) para obter um exemplo de como usar \<consulte >.  
+ Confira [\<summary>](../ide/summary-visual-cpp.md) para obter um exemplo de como usar \<see>.  
   
- O compilador do Visual C++ tentará resolver referências cref em uma passagem pela comentários de documentação.  Portanto, se usar as regras de pesquisa do C++, um símbolo não é encontrado pelo compilador a referência será marcada como não resolvidos. Consulte [ \<seealso >](../ide/seealso-visual-cpp.md) para obter mais informações.  
+ O compilador do Visual C++ tentará resolver as referências cref em uma passagem pelos comentários da documentação.  Portanto, se você estiver usando as regras de pesquisa do C++ e um símbolo não for encontrado pelo compilador, a referência será marcada como não resolvida. Confira [\<seealso>](../ide/seealso-visual-cpp.md) para obter mais informações.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como você pode fazer referência cref para um tipo genérico, de modo que o compilador resolverá a referência.  
+ A amostra a seguir explica como você pode fazer uma referência cref a um tipo genérico, de modo que o compilador resolva a referência.  
   
 ```  
 // xml_see_cref_example.cpp  

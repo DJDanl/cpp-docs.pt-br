@@ -1,5 +1,5 @@
 ---
-title: Adicionar Assistente de método | Microsoft Docs
+title: Assistente de Adição de Método | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,80 +19,81 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: cc2ebd18640f0ab778cb45252691e63206861d53
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340340"
 ---
 # <a name="add-method-wizard"></a>Assistente de Adição de Método
-Use este assistente para adicionar um método para uma interface. Dependendo do tipo de projeto ou o tipo de interface à qual você está adicionando um método, o assistente exibe opções diferentes.  
+Use este assistente para adicionar um método a uma interface. Dependendo do tipo de projeto ou de interface ao qual você está adicionando um método, o assistente exibe opções diferentes.  
   
 ## <a name="names"></a>Nomes  
  **Tipo de retorno**  
- O tipo de dados retornado pelo método. `HRESULT` é recomendado para todos os tipos de interface, porque ele fornece uma maneira padrão para retornar erros.  
+ O tipo de dados retornado pelo método. `HRESULT` é recomendado para todos os tipos de interface, porque fornece uma maneira padrão de retornar erros.  
   
 |Tipo de interface|Descrição|  
 |--------------------|-----------------|  
 |Interface dupla|`HRESULT`. Inalterável.|  
 |Interface personalizada|`HRESULT`. Inalterável.|  
-|Interface personalizada local|Fornecer seu próprio tipo de retorno ou selecione na lista.|  
-|Dispinterface|Fornecer seu próprio tipo de retorno ou selecione na lista.|  
-|Dispinterface de controle ActiveX MFC|Se você implementar um método de estoque, o tipo de retorno é definido como o valor apropriado e não pode ser alterado. Se você selecionar um método do **nome do método** lista e clique em **personalizado** em **Selecionar tipo de método**, selecione um tipo de retorno na lista.|  
+|Interface personalizada local|Forneça seu próprio tipo de retorno ou selecione um na lista.|  
+|Dispinterface|Forneça seu próprio tipo de retorno ou selecione um na lista.|  
+|Dispinterface de controle ActiveX do MFC|Se você implementar um método de estoque, o tipo de retorno será definido com o valor apropriado e não poderá ser alterado. Se você selecionar um método na lista **Nome do método** e clicar em **Personalizado** em **Selecionar tipo de método**, selecione um tipo de retorno na lista.|  
   
  **Nome do método**  
  Define o nome do método.  
   
 |Tipo de interface|Descrição|  
 |--------------------|-----------------|  
-|Interface dupla ATL, interface personalizada e interface personalizada local|Fornece seu próprio nome de método.|  
-|Dispinterface MFC|Fornecer seu próprio nome de método ou selecione um nome de método sugerido na lista. Se você selecionar um nome na lista, o valor apropriado aparece no **tipo de retorno** caixa e ele não pode ser alterado.|  
-|Dispinterface de controle ActiveX MFC|Fornecer sua própria ou selecione um dos métodos de estoque [DoClick](../mfc/reference/colecontrol-class.md#doclick) e [atualizar](../mfc/reference/colecontrol-class.md#refresh). Consulte [controles ActiveX MFC: adicionando métodos de estoque](../mfc/mfc-activex-controls-adding-stock-methods.md) para obter mais informações.|  
+|Interface dupla ATL, interface personalizada e interface personalizada local|Forneça seu próprio nome de método.|  
+|Dispinterface MFC|Forneça seu próprio nome de método ou selecione um nome de método sugerido na lista. Se você selecionar um nome na lista, o valor apropriado será exibido na caixa **Tipo de retorno** e ele não poderá ser alterado.|  
+|Dispinterface de controle ActiveX do MFC|Forneça seu próprio método ou selecione um destes métodos de estoque: [DoClick](../mfc/reference/colecontrol-class.md#doclick) e [Refresh](../mfc/reference/colecontrol-class.md#refresh). Confira [Controles ActiveX MFC: Adicionando métodos de estoque](../mfc/mfc-activex-controls-adding-stock-methods.md) para obter mais informações.|  
   
  **Tipo de método**  
- Disponível somente para controles ActiveX MFC. Se você fornecer um nome de método no **nome do método** caixa, em vez de selecionar um método na lista, essa caixa fica indisponível.  
+ Disponível somente para controles ActiveX MFC. Se você fornecer um nome de método na caixa **Nome do método**, em vez de selecionar um método na lista, essa caixa não ficará disponível.  
   
- Se você selecionar um dos métodos no **nome do método** , selecione a implementação de estoque ou uma implementação personalizada.  
+ Se você selecionar um dos métodos na lista **Nome do método**, selecione a implementação de estoque ou uma implementação personalizada.  
   
 |Tipo de método|Descrição|  
 |-----------------|-----------------|  
-|**Estoque**|O padrão. Insere a implementação das ações do método que você selecionar no **nome do método** lista. **Tipo de retorno** não pode ser alterado se você selecionar **estoque**.|  
-|**Personalizado**|Insere uma implementação de stub do método selecionado no **nome do método** lista. Para tipos de método personalizado, você pode fornecer seu próprio tipo de retorno, ou você pode selecionar uma opção do **tipo de retorno** lista.|  
+|**Estoque**|O padrão. Insere a implementação de estoque do método selecionado na lista **Nome do método**. **Tipo de retorno** não poderá ser alterado se você selecionar **Estoque**.|  
+|**Personalizado**|Insere uma implementação de stub do método selecionado na lista **Nome do método**. Para tipos de método personalizados, forneça seu próprio tipo de retorno ou selecione um na lista **Tipo de retorno**.|  
   
  **Nome interno**  
- Disponível para somente métodos personalizados adicionados a um dispinterface MFC. Define o nome usado no mapa de expedição, o arquivo de cabeçalho (. h) e o arquivo de implementação (. cpp). Por padrão, esse nome é o mesmo que **nome do método**. Você pode alterar o nome do método, se você estiver trabalhando com um dispinterface MFC ou se você estiver adicionando um método personalizado para um dispinterface de controle ActiveX do MFC.  
+ Disponível somente para métodos personalizados adicionados a uma dispinterface MFC. Define o nome usado no mapa de expedição, no arquivo de cabeçalho (.h) e no arquivo de implementação (.cpp). Por padrão, esse nome é o mesmo que o **Nome do método**. Você poderá alterar o nome do método se estiver trabalhando com uma dispinterface MFC ou se estiver adicionando um método personalizado a uma dispinterface de controle ActiveX MFC.  
   
 |Tipo de interface|Descrição|  
 |--------------------|-----------------|  
 |Interface dupla ATL, interface personalizada e interface personalizada local|Não disponível|  
-|Dispinterface MFC|Defina como o nome do método por padrão. Você pode editar o nome interno.|  
-|Dispinterface de controle ActiveX MFC|Você pode definir o nome interno apenas para métodos personalizados. Métodos de estoque não usam um nome interno.|  
+|Dispinterface MFC|Definida com o nome do método por padrão. Você pode editar o nome interno.|  
+|Dispinterface de controle ActiveX do MFC|Você pode definir o nome interno somente de métodos personalizados. Os métodos de estoque não usam um nome interno.|  
   
  **Atributos de parâmetro**  
- Define os atributos adicionais para o parâmetro especificado em **nome do parâmetro**.  
+ Define os atributos adicionais para o parâmetro especificado em **Nome do parâmetro**.  
   
 |Atributo de parâmetro|Descrição|Combinações permitidas|  
 |-------------------------|-----------------|--------------------------|  
-|**In**|Indica que o parâmetro é transmitido do procedimento de chamada para o procedimento chamado.|**em** apenas<br /><br /> **em** e **-out**|  
-|**Saída**|Indica que o parâmetro de ponteiro é retornado do procedimento chamado para o procedimento de chamada (do servidor para o cliente).|**limite** apenas<br /><br /> **em** e **-out**<br /><br /> **out** e **retval**|  
-|**retval**|Indica que o parâmetro recebe o valor de retorno do membro.|**retval** e out|  
+|**In**|Indica que o parâmetro é passado do procedimento de chamada para o procedimento chamado.|Somente **in**<br /><br /> **in** e **out**|  
+|**Saída**|Indica que o parâmetro de ponteiro é retornado do procedimento chamado para o procedimento de chamada (do servidor para o cliente).|Somente **out**<br /><br /> **in** e **out**<br /><br /> **out** e **retval**|  
+|**Retval**|Indica que o parâmetro recebe o valor retornado do membro.|**retval** e out|  
   
  **Tipo de parâmetro**  
- Define o tipo de dados do parâmetro. Selecione o tipo da lista.  
+ Define o tipo de dados do parâmetro. Selecione o tipo na lista.  
   
  **Nome do parâmetro**  
- Define o nome de um parâmetro para passar pelo seu método. Depois de digitar o nome, você deve clicar em **adicionar** para adicioná-lo à lista de parâmetros que passará por meio de seu método. Se você não fornecer um nome de parâmetro, o assistente ignora quaisquer atributos de parâmetro (ATL) ou **tipo de parâmetro** seleções.  
+ Define o nome de um parâmetro a ser passado pelo método. Depois de digitar o nome, clique em **Adicionar** para adicioná-lo à lista de parâmetros que passarão pelo método. Se você não fornecer um nome de parâmetro, o assistente ignorará os atributos de parâmetro (somente ATL) ou as seleções de **Tipo de parâmetro**.  
   
- Depois de clicar em **adicionar**, o nome do parâmetro aparece no **lista de parâmetros**.  
+ Depois de clicar em **Adicionar**, o nome do parâmetro é exibido em **Lista de parâmetros**.  
   
- **Observação** se você fornecer um nome de parâmetro e, em seguida, clique em **concluir** antes de clicar em **adicionar**, o parâmetro não for adicionado ao método. Você deve localizar o método e inserir o parâmetro manualmente.  
+ **Observação** Se você fornecer um nome de parâmetro e, em seguida, clicar em **Concluir** antes de clicar em **Adicionar**, o parâmetro não será adicionado ao método. É necessário encontrar o método e inserir o parâmetro manualmente.  
   
  **Adicionar**  
- Adiciona o parâmetro que você especificar na **nome do parâmetro**e seus atributos de tipo e o parâmetro, a **lista de parâmetros**. Você deve clicar em **adicionar** para adicionar um parâmetro à lista.  
+ Adiciona o parâmetro especificado em **Nome do parâmetro**, seu tipo e atributos de parâmetro à **Lista de parâmetros**. Clique em **Adicionar** para adicionar um parâmetro à lista.  
   
  **Removerr**  
- Remove o parâmetro selecionado na **lista de parâmetros** da lista.  
+ Remove o parâmetro selecionado em **Lista de parâmetros** da lista.  
   
  **Lista de parâmetros**  
- Exibe todos os parâmetros e os modificadores e tipos adicionados no momento para o método. Como adicionar parâmetros, o assistente atualiza **lista de parâmetros** para exibir cada parâmetro, com o modificador e tipo.  
+ Exibe todos os parâmetros e seus modificadores e tipos atualmente adicionados ao método. Conforme os parâmetros são adicionados, o assistente atualiza a **Lista de parâmetros** para exibir cada parâmetro, com seu modificador e tipo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionando um método](../ide/adding-a-method-visual-cpp.md)   

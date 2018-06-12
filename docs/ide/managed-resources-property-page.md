@@ -1,5 +1,5 @@
 ---
-title: Gerenciado a página de propriedades recursos | Microsoft Docs
+title: Página de propriedades de Recursos Gerenciados | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,28 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 2922a0a92a121d6838478daaf2c32f1c7a630d21
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340353"
 ---
 # <a name="managed-resources-property-page"></a>Página de propriedades Recursos Gerenciados
-Permite que as configurações para o compilador de recurso.  
+Habilita as configurações do compilador de recurso.  
   
- O **recursos gerenciados** página de propriedades contém as seguintes propriedades:  
+ A página de propriedades de **Recursos Gerenciados** contém as seguintes propriedades:  
   
- **Nome lógico de recursos**  
- Especifica o *nome lógico* do arquivo Resources intermediário gerado. O nome lógico é o nome usado para carregar o recurso. Se nenhum nome lógico for especificado, o nome do arquivo de recurso (. resx) é usado como o nome lógico.  
+ **Nome Lógico de Recurso**  
+ Especifica o *nome lógico* do arquivo .resources intermediário gerado. O nome lógico é o nome usado para carregar o recurso. Se nenhum nome lógico é especificado, o nome do arquivo de recurso (.resx) é usado como o nome lógico.  
   
  **Nome do arquivo de saída**  
- Especifica o nome do arquivo de saída final que o arquivo de recurso (. resx) contribui para.  
+ Especifica o nome do arquivo de saída final para o qual o arquivo de recurso (.resx) contribui.  
   
- **Recursos localizados do padrão**  
- Especifica se o arquivo. resx determinado contribui para os recursos padrão ou para uma DLL satélite.  
+ **Recursos Localizados Padrão**  
+ Especifica se o arquivo .resx fornecido contribui para os recursos padrão ou para uma .dll satélite.  
   
- Para obter informações sobre como acessar o **recursos gerenciados** página de propriedades, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).  
+ Para obter informações sobre como acessar a página de propriedades de **Recursos Gerenciados**, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Usando RC (a linha de comando RC)](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
- [Páginas de propriedade](../ide/property-pages-visual-cpp.md)   
+ [Usando o RC (a linha de comando do RC)](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
+ [Páginas de propriedades](../ide/property-pages-visual-cpp.md)   
  [/ASSEMBLYRESOURCE (inserir um recurso gerenciado)](../build/reference/assemblyresource-embed-a-managed-resource.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Criando um projeto (C++) | Microsoft Docs'
+title: 'Passo a passo: Compilando um projeto (C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,40 +18,41 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 0c8d04dc3692076b867302af0e793eaac7ed25cb
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332449"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Instruções passo a passo: compilando um projeto (C++)
-Neste passo a passo, você deliberadamente apresentar um erro de sintaxe do Visual C++ em seu código para saber a aparência de um erro de compilação e como corrigi-lo. Quando você compila o projeto, uma mensagem de erro indica qual é o problema e qual ele ocorreu.  
+Neste passo a passo, você introduzirá um erro de sintaxe do Visual C++ no código deliberadamente para saber o que é um erro de compilação e como corrigi-lo. Quando você compila o projeto, uma mensagem de erro indica qual é o problema e em que local ele ocorreu.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
   
--   Este passo a passo pressupõe que você entender os conceitos básicos da linguagem C++.  
+-   Este passo a passo pressupõe que você conheça os princípios básicos da linguagem C++.  
   
--   Ele também pressupõe que você tenha concluído as orientações relacionadas anteriormente listados na [usando o IDE do Visual Studio para desenvolvimento de área de trabalho do C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+-   Também pressupõe que você tenha concluído os passos a passos relacionados anteriores listados em [Usando o IDE do Visual Studio para desenvolvimento para desktop com C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
 ### <a name="to-fix-compilation-errors"></a>Para corrigir erros de compilação  
   
-1.  No TestGames.cpp, exclua o ponto e vírgula na última linha para que ele é semelhante a isto:  
+1.  Em TestGames.cpp, exclua o ponto-e-vírgula na última linha, de modo que ele fique parecido com isto:  
   
      `return 0`  
   
 2.  Na barra de menus, escolha **Compilar**, **Compilar Solução**.  
   
-3.  Uma mensagem no **lista de erros** janela indica que houve um erro na criação do projeto. A descrição pode ter esta aparência:  
+3.  Uma mensagem na janela **Lista de Erros** indica que houve um erro na compilação do projeto. A descrição é parecida com esta:  
   
      `error C2143: syntax error : missing ';' before '}'`  
   
-     Para exibir informações de ajuda sobre este erro, realce-na **lista de erros** janela e, em seguida, escolha a tecla F1.  
+     Para exibir informações da Ajuda sobre este erro, realce-o na janela **Lista de Erros** e, em seguida, escolha a tecla F1.  
   
-4.  Adicione o ponto e vírgula para o fim da linha que contém o erro de sintaxe:  
+4.  Adicione o ponto-e-vírgula novamente ao fim da linha que contém o erro de sintaxe:  
   
      `return 0;`  
   
 5.  Na barra de menus, escolha **Compilar**, **Compilar Solução**.  
   
-     Uma mensagem no **saída** janela indica que o projeto foi compilado com êxito.  
+     Uma mensagem na janela de **Saída** indica que o projeto foi compilado com êxito.  
   
     ```Output  
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------  
@@ -61,7 +62,7 @@ Neste passo a passo, você deliberadamente apresentar um erro de sintaxe do Visu
     ```  
   
 ## <a name="next-steps"></a>Próximas etapas  
- **Anterior:** [passo a passo: Trabalhando com projetos e soluções (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124; **próximo:**[passo a passo: Testando um projeto (C++)](../ide/walkthrough-testing-a-project-cpp.md)  
+ **Anterior:** [Passo a passo: Trabalhando com projetos e soluções (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124; **Próximo:**[Passo a passo: Testando um projeto (C++)](../ide/walkthrough-testing-a-project-cpp.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência da linguagem C++](../cpp/cpp-language-reference.md)   

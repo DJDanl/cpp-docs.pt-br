@@ -14,34 +14,35 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 1b25ad029a59c4b23bcab093b3742f16f7ca9175
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328614"
 ---
 # <a name="recommended-tags-for-documentation-comments-visual-c"></a>marcações recomendadas para comentários da documentação (Visual C++)
-O compilador do Visual C++ irá processar comentários de documentação em seu código e cria um arquivo. XDC para cada compiland e xdcmake.exe processará os arquivos. XDC para um arquivo. XML. Processando o arquivo. XML para criar documentação é um detalhe de que precisa ser implementada em seu site.  
+O compilador do Visual C++ processará os comentários da documentação no código e criará um arquivo .xdc para cada compiland, e xdcmake.exe processará os arquivos .xdc em um arquivo .xml. O processamento do arquivo .xml para criar a documentação é um detalhe que precisa ser implementado no site.  
   
- Marcas são processadas em construções, como tipos e membros de tipos.  
+ As marcas são processadas em constructos, como tipos e membros de tipo.  
   
- Marcas devem preceder imediatamente tipos ou membros.  
+ As marcas precisam preceder imediatamente tipos ou membros.  
   
 > [!NOTE]
->  Comentários de documentação não podem ser aplicados a um namespace ou na fora da definição de linha para propriedades e eventos. comentários de documentação devem em declarações de classe.  
+>  Os comentários da documentação não podem ser aplicados a um namespace ou à definição fora de linha de propriedades e eventos; os comentários da documentação precisam ser aplicados às declarações na classe.  
   
- O compilador processará qualquer marca que seja um XML válido. As seguintes marcas fornecem funcionalidades comumente usadas na documentação do usuário:  
+ O compilador processará qualquer marca que seja um XML válido. As seguintes marcas fornecem as funcionalidades geralmente usadas na documentação do usuário:  
   
 ||||  
 |-|-|-|  
 |[\<c>](../ide/c-visual-cpp.md)|[\<code>](../ide/code-visual-cpp.md)|[\<example>](../ide/example-visual-cpp.md)|  
-|[\<exceção >](../ide/exception-visual-cpp.md)1|[\<incluir >](../ide/include-visual-cpp.md)1|[\<list>](../ide/list-visual-cpp.md)|  
-|[\<para>](../ide/para-visual-cpp.md)|[\<param >](../ide/param-visual-cpp.md)1|[\<paramref >](../ide/paramref-visual-cpp.md)1|  
-|[\<permissão >](../ide/permission-visual-cpp.md)1|[\<remarks>](../ide/remarks-visual-cpp.md)|[\<returns>](../ide/returns-visual-cpp.md)|  
-|[\<Consulte >](../ide/see-visual-cpp.md)1|[\<seealso >](../ide/seealso-visual-cpp.md)1|[\<summary>](../ide/summary-visual-cpp.md)|  
+|[\<exception>](../ide/exception-visual-cpp.md)1|[\<include>](../ide/include-visual-cpp.md)1|[\<list>](../ide/list-visual-cpp.md)|  
+|[\<para>](../ide/para-visual-cpp.md)|[\<param>](../ide/param-visual-cpp.md)1|[\<paramref>](../ide/paramref-visual-cpp.md)1|  
+|[\<permission>](../ide/permission-visual-cpp.md)1|[\<remarks>](../ide/remarks-visual-cpp.md)|[\<returns>](../ide/returns-visual-cpp.md)|  
+|[\<see>](../ide/see-visual-cpp.md)1|[\<seealso>](../ide/seealso-visual-cpp.md)1|[\<summary>](../ide/summary-visual-cpp.md)|  
 |[\<value>](../ide/value-visual-cpp.md)|||  
   
- 1. Compilador verifica a sintaxe.  
+ 1. O compilador verifica a sintaxe.  
   
- Na versão atual, o compilador do Visual C++ não suporta `<paramref>`, uma marca que tem suporte por outros compiladores do Visual Studio. Visual C++ podem suportar `<paramref>` em uma versão futura.  
+ Na versão atual, o compilador do Visual C++ não dá suporte a `<paramref>`, uma marcação compatível com outros compiladores do Visual Studio. O Visual C++ poderá dar suporte a `<paramref>` em uma versão futura.  
   
 ## <a name="see-also"></a>Consulte também  
  [Documentação XML](../ide/xml-documentation-visual-cpp.md)

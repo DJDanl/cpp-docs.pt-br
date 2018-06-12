@@ -1,5 +1,5 @@
 ---
-title: Configurações do aplicativo, Assistente de projeto Makefile | Microsoft Docs
+title: Configurações de Aplicativo, Assistente de Projeto Makefile | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,30 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 07459cd4971ea6aec95b632e5c03618248cca401
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330733"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Configurações do aplicativo, Assistente de Projeto de Makefile
-Forneça as informações para o projeto. As opções que você especificar serão refletidas no projeto de [página de propriedades](../ide/working-with-project-properties.md). Depois de criar o projeto, você pode exibir e editar cada uma das opções a seguir no **Nmake** página da página de propriedades do projeto.  
+Forneça as informações para o projeto. As opções especificadas são refletidas na [página de propriedades](../ide/working-with-project-properties.md) do projeto. Depois de criar o projeto, exiba e edite cada uma das opções a seguir na página **Nmake** da página de propriedades do projeto.  
   
- **Criar linha de comando**  
- Especifica a linha de comando para ser executado quando o usuário seleciona **criar** do **criar** menu. Exibido no **linha de comando de compilação** campo o **Nmake** página da página de propriedades do projeto.  
+ **Linha de comando de Build**  
+ Especifica a linha de comando a ser executada quando o usuário seleciona **Compilar** no menu **Build**. Exibida no campo **Linha de comando de Build** na página **Nmake** da página de propriedades do projeto.  
   
  **Saída**  
- Especifica o nome do arquivo que conterá a saída da linha de comando. Por padrão, essa opção é baseada no nome do projeto. Exibido no **saída** campo o **Nmake** página da página de propriedades do projeto.  
+ Especifica o nome do arquivo de saída que conterá a saída da linha de comando. Por padrão, essa opção baseia-se no nome do projeto. Exibida no campo **Saída** na página **Nmake** da página de propriedades do projeto.  
   
- **Comandos de limpo**  
- Especifica a linha de comando para ser executado quando o usuário seleciona **limpar** do **criar** menu. Exibido no **Limpar linha de comando** campo o **Nmake** página da página de propriedades do projeto.  
+ **Comandos de Limpar**  
+ Especifica a linha de comando a ser executada quando o usuário seleciona **Limpar** no menu **Build**. Exibida no campo **Linha de comando de Limpar** na página **Nmake** da página de propriedades do projeto.  
   
- **Recriar a linha de comando**  
- Especifica a linha de comando para ser executado quando o usuário seleciona **recriar** do **criar** menu. Exibido no **recompilar toda a linha de comando** campo o **Nmake** página da página de propriedades do projeto.  
+ **Linha de comando de Recompilar**  
+ Especifica a linha de comando a ser executada quando o usuário seleciona **Recompilar** no menu **Build**. Exibida no campo **Linha de comando de Recompilar tudo** na página **Nmake** da página de propriedades do projeto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Assistente de projeto makefile](../ide/makefile-project-wizard.md)   
- [Criando um projeto de Makefile](../ide/creating-a-makefile-project.md)   
+ [Assistente de Projeto Makefile](../ide/makefile-project-wizard.md)   
+ [Criando um Projeto Makefile](../ide/creating-a-makefile-project.md)   
  [Tipos de projeto do Visual C++](../ide/visual-cpp-project-types.md)   
- [Criando projetos de área de trabalho usando os assistentes de aplicativo](../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [Páginas de propriedade](../ide/property-pages-visual-cpp.md)   
+ [Criando projetos da área de trabalho com assistentes de aplicativo](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+ [Páginas de propriedades](../ide/property-pages-visual-cpp.md)   
  [Implantando aplicativos](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)

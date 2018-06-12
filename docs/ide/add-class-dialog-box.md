@@ -1,5 +1,5 @@
 ---
-title: Adicionar caixa de diálogo classe | Microsoft Docs
+title: Caixa de diálogo Adicionar Classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,71 +18,72 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f6c4f108b30babcc30ffc5f2fc4c63fe764db2e3
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339768"
 ---
 # <a name="add-class-dialog-box"></a>Caixa de diálogo Adicionar Classe
-O **Adicionar classe** caixa de diálogo contém os modelos que permitem que você:  
+A caixa de diálogo **Adicionar Classe** contém modelos que permitem:  
   
--   Abra um Assistente de código correspondente, se houver um disponível. Para obter mais informações, consulte [adicionando funcionalidade com assistentes de código](../ide/adding-functionality-with-code-wizards-cpp.md).  
+-   Abrir um assistente de código correspondente, se houver um disponível. Para obter mais informações, confira [Adicionando funcionalidade com assistentes de código](../ide/adding-functionality-with-code-wizards-cpp.md).  
   
  \- ou -  
   
--   Crie automaticamente a nova classe adicionando o código-fonte e os arquivos apropriados para seu projeto.  
+-   Criar a nova classe automaticamente adicionando o código-fonte e os arquivos apropriados ao projeto.  
   
- Você pode acessar o **Adicionar classe** na caixa de diálogo o **projeto** menu **Solution Explorer**, ou [exibição de classe](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+ Acesse a caixa de diálogo **Adicionar Classe** no menu **Projeto**, **Gerenciador de Soluções** ou em [Modo de Exibição de Classe](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
   
 > [!NOTE]
->  Quando você tentar adicionar uma classe que não é adequada ao seu projeto atual, você receberá uma mensagem de erro. Clique em **Okey** para retornar para o **Adicionar classe** caixa de diálogo.  
+>  Quando você tentar adicionar uma classe que não é adequada ao projeto atual, você receberá uma mensagem de erro. Clique em **OK** para retornar à caixa de diálogo **Adicionar Classe**.  
   
-## <a name="add-class-templates"></a>Adicionar modelos de classe  
- Há quatro categorias de **Adicionar classe** modelos: .NET e genérico, MFC e ATL. Quando você seleciona um modelo no **modelos** painel, o texto que descreve sua seleção aparecerá sob o **categorias** e **modelos** painéis.  
+## <a name="add-class-templates"></a>Modelos de Adicionar Classe  
+ Há quatro categorias de modelos **Adicionar Classe**: .NET, ATL, MFC e Genérico. Quando você selecionar um modelo no painel **Modelos**, o texto que descreve a seleção será exibido nos painéis **Categorias** e **Modelos**.  
   
 ### <a name="net"></a>.NET  
   
 |Modelo|Wizard|  
 |--------------|------------|  
-|Serviço Web do ASP.NET|Não disponível|  
-|Classe de componente (.NET)|Não disponível|  
-|Classe de instalador (.NET)|Não disponível|  
-|Controle de usuário (.NET)|Não disponível|  
-|Formulário do Windows (.NET)|Não disponível|  
+|Serviço Web ASP.NET|Não disponível|  
+|Classe do Componente (.NET)|Não disponível|  
+|Classe do Instalador (.NET)|Não disponível|  
+|Controle de Usuário (.NET)|Não disponível|  
+|Windows Form (.NET)|Não disponível|  
   
 ### <a name="atl"></a>ATL  
   
 |Modelo|Wizard|  
 |--------------|------------|  
-|Adicionar suporte ATL ao MFC|Não disponível|  
-|Componente de página de servidor ativo do ATL|[Assistente do componente Active Server Page da ATL](../atl/reference/atl-active-server-page-component-wizard.md)|  
-|Controle ATL|[Assistente de Controle da ATL](../atl/reference/atl-control-wizard.md)|  
-|Caixa de diálogo do ATL|[Assistente de caixa de diálogo da ATL](../atl/reference/atl-dialog-wizard.md)|  
-|Componente ATL COM+ 1.0|[Assistente de componente de COM+ 1.0 da ATL](../atl/reference/atl-com-plus-1-0-component-wizard.md)|  
-|Consumidor OLEDB do ATL|[Assistente de cliente OLE DB da ATL](../atl/reference/atl-ole-db-consumer-wizard.md)|  
-|Provedor OLEDB do ATL|[Assistente de provedor OLE DB da ATL](../atl/reference/atl-ole-db-provider-wizard.md)|  
-|Página de propriedades ATL|[Assistente de página de propriedades da ATL](../atl/reference/atl-property-page-wizard.md)|  
-|Objeto ATL simples|[Assistente de objeto simples da ATL](../atl/reference/atl-simple-object-wizard.md)|  
-|Provedor de eventos WMI|Assistente de provedor de eventos do WMI|  
-|Provedor de instâncias WMI|Assistente de provedor de instância WMI|  
+|Adicionar Suporte para ATL ao MFC|Não disponível|  
+|Componente Active Server Page da ATL|[Assistente do componente Active Server Page da ATL](../atl/reference/atl-active-server-page-component-wizard.md)|  
+|Controle da ATL|[Assistente de Controle da ATL](../atl/reference/atl-control-wizard.md)|  
+|Caixa de Diálogo da ATL|[Assistente de caixa de diálogo da ATL](../atl/reference/atl-dialog-wizard.md)|  
+|Componente COM+ 1.0 da ATL|[Assistente de componente de COM+ 1.0 da ATL](../atl/reference/atl-com-plus-1-0-component-wizard.md)|  
+|Consumidor OLEDB da ATL|[Assistente de cliente OLE DB da ATL](../atl/reference/atl-ole-db-consumer-wizard.md)|  
+|Provedor OLEDB da ATL|[Assistente de provedor OLE DB da ATL](../atl/reference/atl-ole-db-provider-wizard.md)|  
+|Página de Propriedades da ATL|[Assistente de página de propriedades da ATL](../atl/reference/atl-property-page-wizard.md)|  
+|Objeto ATL Simples|[Assistente de objeto simples da ATL](../atl/reference/atl-simple-object-wizard.md)|  
+|Provedor de Eventos WMI|Assistente do Provedor de Eventos WMI|  
+|Provedor de Instâncias da WMI|Assistente do Provedor de Instâncias da WMI|  
   
 ### <a name="mfc"></a>MFC  
   
 |Modelo|Wizard|  
 |--------------|------------|  
 |MFC Class|[Assistente para adicionar classe do MFC](../mfc/reference/mfc-add-class-wizard.md)|  
-|Classe do controle ActiveX MFC|[Assistente para Adicionar Classe de Controle ActiveX](../ide/add-class-from-activex-control-wizard.md)|  
-|Classe do MFC de TypeLib|[Adicionar classe de Typelib Assistente](../mfc/reference/add-class-from-typelib-wizard.md)|  
+|Classe MFC em Controle ActiveX|[Assistente para Adicionar Classe de Controle ActiveX](../ide/add-class-from-activex-control-wizard.md)|  
+|Classe MFC em TypeLib|[Assistente para Adicionar Classe em TypeLib](../mfc/reference/add-class-from-typelib-wizard.md)|  
 |Consumidor ODBC do MFC|[Assistente de consumidor ODBC do MFC](../mfc/reference/mfc-odbc-consumer-wizard.md)|  
   
 ### <a name="generic-classes"></a>Classes genéricas  
   
 |Modelo|Wizard|  
 |--------------|------------|  
-|Classe C++ genérica|[Assistente da Classe C++ Genérica](../ide/generic-cpp-class-wizard.md)|  
+|Classe C++ Genérica|[Assistente da Classe C++ Genérica](../ide/generic-cpp-class-wizard.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar uma função de membro](../ide/adding-a-member-function-visual-cpp.md)   
- [Adicionar uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)   
- [Substituindo uma função Virtual](../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [Adicionando uma função de membro](../ide/adding-a-member-function-visual-cpp.md)   
+ [Adicionando uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)   
+ [Substituindo uma função virtual](../ide/overriding-a-virtual-function-visual-cpp.md)   
  [Manipulador de mensagens do MFC](../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navegando na estrutura de classe](../ide/navigating-the-class-structure-visual-cpp.md)
+ [Navegando pela estrutura de classe](../ide/navigating-the-class-structure-visual-cpp.md)

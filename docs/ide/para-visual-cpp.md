@@ -20,9 +20,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 1ebf50e4672ee2a3398f6c484c42f8e36f231169
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325111"
 ---
 # <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
 A marca \<para> é para uso dentro de uma marca, como [\<summary>](../ide/summary-visual-cpp.md), [\<remarks>](../ide/remarks-visual-cpp.md) ou [\<returns>](../ide/returns-visual-cpp.md) e permite que você adicione estrutura ao texto.  

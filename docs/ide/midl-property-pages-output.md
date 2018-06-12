@@ -1,5 +1,5 @@
 ---
-title: 'Páginas de propriedade MIDL: Saída | Microsoft Docs'
+title: 'Páginas de propriedades de MIDL: Saída | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,30 +24,31 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 0ff30460ad68e6efb1abc3d84925b362cf03f551
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325767"
 ---
 # <a name="midl-property-pages-output"></a>Páginas de propriedades MIDL: saída
-O **saída** página de propriedades no **MIDL** pasta especifica as opções do compilador MIDL:  
+A página de propriedades **Saída** na pasta **MIDL** especifica as seguintes opções do compilador MIDL:  
   
--   Diretório de saída ([/out](http://msdn.microsoft.com/library/windows/desktop/aa367358))  
+-   Diretório de Saída ([/out](http://msdn.microsoft.com/library/windows/desktop/aa367358))  
   
--   Arquivo de cabeçalho ([/h](http://msdn.microsoft.com/library/windows/desktop/aa367325))  
+-   Arquivo de Cabeçalho ([/h](http://msdn.microsoft.com/library/windows/desktop/aa367325))  
   
--   Arquivo de dados de DLL ([/dlldata](http://msdn.microsoft.com/library/windows/desktop/aa367322))  
+-   Arquivo de Dados DLL ([/dlldata](http://msdn.microsoft.com/library/windows/desktop/aa367322))  
   
 -   Arquivo IID ([/iid](http://msdn.microsoft.com/library/windows/desktop/aa367329))  
   
--   Arquivo proxy ([/proxy](http://msdn.microsoft.com/library/windows/desktop/aa367362))  
+-   Arquivo Proxy ([/proxy](http://msdn.microsoft.com/library/windows/desktop/aa367362))  
   
--   Gerar biblioteca de tipos ([/notlb](http://msdn.microsoft.com/library/windows/desktop/aa367343))  
+-   Gerar Biblioteca de Tipos ([/notlb](http://msdn.microsoft.com/library/windows/desktop/aa367343))  
   
--   Biblioteca de tipos ([/tlb](http://msdn.microsoft.com/library/windows/desktop/aa367372))  
+-   Biblioteca de Tipos ([/tlb](http://msdn.microsoft.com/library/windows/desktop/aa367372))  
   
- Para obter informações sobre como acessar o **saída** página de propriedades no **MIDL** pasta, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).  
+ Para obter informações sobre como acessar a página de propriedades **Saída** na pasta **MIDL**, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).  
   
- Para obter informações sobre como acessar programaticamente opções MIDL para projetos em C++, consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
+ Para obter informações sobre como acessar as opções de MIDL para projetos do C++ de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Páginas de propriedades de MIDL](../ide/midl-property-pages.md)

@@ -1,5 +1,5 @@
 ---
-title: Noções básicas sobre etapas de compilação personalizada e eventos de Build | Microsoft Docs
+title: Noções básicas sobre eventos e etapas de build personalizadas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,53 +23,54 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a50c0cf224104f720a73a4830405e7114cda74ed
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338761"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Noções básicas de etapas e eventos de build personalizados
-De dentro do ambiente de desenvolvimento do Visual C++, há três formas básicas para personalizar o processo de compilação:  
+No ambiente de desenvolvimento do Visual C++, há três formas básicas de personalizar o processo de build:  
   
- **Etapas de compilação personalizada**  
- Uma etapa de compilação personalizada é uma regra de compilação associada a um projeto. Uma etapa de compilação personalizada pode especificar uma linha de comando a ser executado, nenhuma entrada adicional ou arquivos de saída e uma mensagem a ser exibida. Para obter mais informações, consulte [como: adicionar uma etapa de compilação personalizada a projetos MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md).  
+ **Etapas de Build Personalizadas**  
+ Uma etapa de build personalizada é uma regra de build associada a um projeto. Uma etapa de build personalizada pode especificar uma linha de comando a ser executada, arquivos adicionais de entrada ou de saída e uma mensagem a ser exibida. Para obter mais informações, confira [Como adicionar uma etapa de build personalizada a projetos do MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md).  
   
- **Ferramentas de compilação personalizada**  
- Uma ferramenta de compilação personalizada é uma regra de compilação associada a um ou mais arquivos. Uma etapa de compilação personalizada pode transmitir arquivos de entrada para uma ferramenta de compilação personalizada, o que resulta em um ou mais arquivos de saída. Por exemplo, os arquivos de Ajuda em um aplicativo MFC são criados com uma ferramenta de compilação personalizada. Para obter mais informações, consulte [como: adicionar ferramentas de compilação de personalizada a projetos MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md) e [especificando ferramentas de compilação personalizada](../ide/specifying-custom-build-tools.md).  
+ **Ferramentas de Build Personalizadas**  
+ Uma ferramenta de build personalizada é uma regra de build associada a um ou mais arquivos. Uma etapa de build personalizada pode passar arquivos de entrada para uma ferramenta de build personalizada, o que resulta em um ou mais arquivos de saída. Por exemplo, os arquivos de Ajuda em um aplicativo MFC são criados com uma ferramenta de build personalizada. Para obter mais informações, confira [Como adicionar ferramentas de build personalizadas a projetos do MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md) e [Especificando ferramentas de build personalizadas](../ide/specifying-custom-build-tools.md).  
   
  **Eventos de Build**  
- Eventos de build permitem que você personalize a compilação do projeto. Há três eventos de compilação: *pré-compilação*, *pré-vínculo*, e *pós-compilação*. Um evento de compilação permite que você especifique uma ação para ocorrer em um momento específico no processo de compilação. Por exemplo, você pode usar um evento de compilação para registrar um arquivo com **regsvr32.exe** após o projeto de compilação. Para obter mais informações, consulte [especificando eventos de Build](../ide/specifying-build-events.md).  
+ Os eventos de build permitem que você personalize o build de um projeto. Há três eventos de build: *pré-build*, *pré-vínculo* e *pós-build*. Um evento de build permite que você especifique uma ação que ocorrerá em um momento específico no processo de build. Por exemplo, você pode usar um evento de build para registrar um arquivo em **regsvr32.exe** após a conclusão do projeto de build. Para obter mais informações, confira [Especificando eventos de build](../ide/specifying-build-events.md).  
   
- [Solucionando problemas de personalizações de compilação](../ide/troubleshooting-build-customizations.md) pode ajudar a garantir que as etapas de compilação personalizada e executados conforme esperado de eventos de build.  
+ O tópico [Solução de problemas de personalizações de build](../ide/troubleshooting-build-customizations.md) pode ajudá-lo a garantir que os eventos e as etapas de build personalizadas sejam executados conforme esperado.  
   
- Etapa de compilação do formato de saída de um personalizado ou evento de compilação também pode aprimorar a usabilidade da ferramenta. Para obter mais informações, consulte [Formatando a saída de uma etapa de build ou um evento de build personalizado](../ide/formatting-the-output-of-a-custom-build-step-or-build-event.md).  
+ O formato de saída de um evento ou de uma etapa de build personalizada também pode aprimorar a usabilidade da ferramenta. Para obter mais informações, consulte [Formatando a saída de uma etapa de build ou um evento de build personalizado](../ide/formatting-the-output-of-a-custom-build-step-or-build-event.md).  
   
- Eventos de build e personalizada de compilação etapas executadas na ordem a seguir, junto com as outras etapas de compilação:  
+ Os eventos e as etapas de build personalizadas são executados na seguinte ordem, junto com outras etapas de build:  
   
-1.  Evento de pré-compilação  
+1.  Evento Pré-Build  
   
-2.  As ferramentas em arquivos individuais de compilação personalizada  
+2.  Ferramentas de build personalizadas em arquivos individuais  
   
 3.  MIDL  
   
 4.  Compilador de recurso  
   
-5.  O compilador do C/C++  
+5.  O compilador C/C++  
   
 6.  evento Pré-link  
   
 7.  Vinculador ou bibliotecário (conforme apropriado)  
   
-8.  Ferramenta de manifesto  
+8.  Ferramenta de Manifesto  
   
 9. BSCMake  
   
-10. Etapa de compilação personalizada no projeto  
+10. Etapa de build personalizada no projeto  
   
-11. Evento de pós-compilação  
+11. Evento Pós-Build  
   
- O `custom build step on the project` e um `post-build event` executar sequencialmente depois que todos os outros compilar processa concluir.  
+ O `custom build step on the project` e um `post-build event` são executados sequencialmente após a conclusão de todos os outros processos de build.  
   
 ## <a name="see-also"></a>Consulte também  
  [Compilando projetos do C++ no Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)   
- [Macros comuns para compilar comandos e propriedades](../ide/common-macros-for-build-commands-and-properties.md)   
- [Caixa de diálogo de ordem de compilação de ferramenta](http://msdn.microsoft.com/en-us/6204c5b1-7ce9-4948-9ff6-0268642ee14c)
+ [Macros comuns para comandos e propriedades de build](../ide/common-macros-for-build-commands-and-properties.md)   
+ [Caixa de diálogo Ordem de Build da Ferramenta](http://msdn.microsoft.com/en-us/6204c5b1-7ce9-4948-9ff6-0268642ee14c)

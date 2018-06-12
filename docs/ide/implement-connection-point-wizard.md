@@ -1,5 +1,5 @@
 ---
-title: Assistente de ponto de Conexão de implementação | Microsoft Docs
+title: Assistente para Implementação de Ponto de Conexão | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,34 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: ef2f7efa92de3714170e403ea50b5f486c8367d6
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323752"
 ---
 # <a name="implement-connection-point-wizard"></a>Assistente de Implementação de Pontos de Conexão
-Este assistente implementa um ponto de conexão para um objeto COM. Um objeto conectável (ou seja, uma fonte) pode expor um ponto de conexão para suas próprias interfaces ou para qualquer interface de saída. Visual C++ e o Windows fornecem bibliotecas de tipo que tenham interfaces de saída. Cada interface de saída pode ser implementado por um cliente em um objeto (ou seja, um coletor).  
+Este assistente implementa um ponto de conexão para um objeto COM. Um objeto conectável (ou seja, uma fonte) pode expor um ponto de conexão para suas próprias interfaces ou para qualquer interface de saída. O Visual C++ e o Windows fornecem bibliotecas de tipos que têm interfaces de saída. Cada interface de saída pode ser implementada por um cliente em um objeto (ou seja, um coletor).  
   
- Para obter mais informações, consulte [pontos de Conexão de ATL](../atl/atl-connection-points.md).  
+ Para obter mais informações, confira [Pontos de conexão da ATL](../atl/atl-connection-points.md).  
   
- **Bibliotecas de tipo disponível**  
- Exibe as bibliotecas de tipo disponível que contém as definições de interface para o qual você pode implementar pontos de conexão. Clique no botão de reticências para localizar um arquivo que contém a biblioteca de tipo a ser usado.  
+ **Bibliotecas de tipos disponíveis**  
+ Exibe as bibliotecas de tipos disponíveis que contêm as definições de interface para as quais você pode implementar pontos de conexão. Clique no botão de reticências para localizar um arquivo que contém a biblioteca de tipos a ser usada.  
   
  **Local**  
- Exibe o local da biblioteca de tipo selecionado no momento o **bibliotecas de tipo disponível** lista.  
+ Exibe o local da biblioteca de tipos atualmente selecionada na lista **Bibliotecas de tipos disponíveis**.  
   
  **Interfaces**  
- Exibe as interfaces cujas definições estão contidas na biblioteca de tipos selecionada no momento o **bibliotecas de tipo disponível** caixa.  
+ Exibe as interfaces cujas definições estão contidas na biblioteca de tipos atualmente selecionada na caixa **Bibliotecas de tipos disponíveis**.  
   
 |Botão de transferência|Descrição|  
 |---------------------|-----------------|  
-|**>**|Adiciona o **implementar pontos de conexão** lista o nome da interface selecionado no momento o **Interfaces** lista.|  
-|**>>**|Adiciona o **implementar pontos de conexão** lista todos os nomes de interface disponíveis no **Interfaces** lista.|  
-|**<**|Remove o nome da interface selecionado no momento o **implementar pontos de conexão** lista.|  
-|**<<**|Remove todos os nomes listados no momento da interface de **implementar pontos de conexão** lista.|  
+|**>**|Adiciona à lista **Implementar pontos de conexão** o nome da interface atualmente selecionado na lista **Interfaces**.|  
+|**>>**|Adiciona à lista **Implementar pontos de conexão** todos os nomes de interfaces disponíveis na lista **Interfaces**.|  
+|**<**|Remove o nome da interface atualmente selecionado na lista **Implementar pontos de conexão**.|  
+|**<<**|Remove todos os nomes de interfaces atualmente relacionados na lista **Implementar pontos de conexão**.|  
   
  **Implementar pontos de conexão**  
- Exibe os nomes das interfaces para os quais você implementar pontos de conexão quando você clica em **concluir**.  
+ Exibe os nomes das interfaces nas quais você implementa pontos de conexão quando clica em **Concluir**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Implementando um ponto de Conexão](../ide/implementing-a-connection-point-visual-cpp.md)
+ [Implementando um ponto de conexão](../ide/implementing-a-connection-point-visual-cpp.md)

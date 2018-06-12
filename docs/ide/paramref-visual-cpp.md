@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: fe6bb2d14b79e8080815967f3a666808f2b6efcc
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326577"
 ---
 # <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; (Visual C++)
-O \<paramref > marca fornece uma maneira para indicar que uma palavra é um parâmetro. O arquivo. XML pode ser processado para formatar esse parâmetro em alguma forma distinta.  
+A marcação \<paramref> fornece uma maneira para indicar que uma palavra é um parâmetro. O arquivo .xml pode ser processado para formatar esse parâmetro de uma forma distinta.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,7 +36,7 @@ O \<paramref > marca fornece uma maneira para indicar que uma palavra é um par�
   
 #### <a name="parameters"></a>Parâmetros  
  `name`  
- O nome do parâmetro ao qual você deseja se referir.  Coloque o nome entre aspas simples ou duplas.  O compilador emite um aviso se ele não encontrar `name`.  
+ O nome do parâmetro ao qual você deseja se referir.  Coloque o nome entre aspas simples ou duplas.  O compilador emite um aviso se não encontra `name`.  
   
 ## <a name="remarks"></a>Comentários  
  Compile com [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.  

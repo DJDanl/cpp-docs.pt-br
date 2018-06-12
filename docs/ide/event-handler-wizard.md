@@ -1,5 +1,5 @@
 ---
-title: Assistente de manipulador de eventos | Microsoft Docs
+title: Assistente de Manipulador de Eventos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,34 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 544ce4cd0f4ed9a7f3592e5ec1691fb3734b8772
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340002"
 ---
 # <a name="event-handler-wizard"></a>Assistente de Manipulador de Eventos
-Este assistente adiciona um manipulador de eventos para um controle de caixa de diálogo para a classe de sua escolha. Se você adicionar um manipulador de eventos do [janela propriedades](/visualstudio/ide/reference/properties-window), você pode adicioná-lo somente para a classe que implementa a caixa de diálogo. Consulte [adicionar manipuladores de eventos para controles de caixa de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md) para obter mais informações.  
+Este assistente adiciona um manipulador de eventos a um controle de caixa de diálogo para a classe de sua escolha. Se você adicionar um manipulador de eventos por meio da [janela Propriedades](/visualstudio/ide/reference/properties-window), adicione-o somente para a classe que implementa a caixa de diálogo. Confira [Adicionando manipuladores de eventos a controles de caixa de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md) para obter mais informações.  
   
- **Nome de comando**  
- Identifica o controle selecionado, para o qual o manipulador de eventos é adicionado. Essa caixa fica indisponível.  
+ **Nome do comando**  
+ Identifica o controle selecionado, ao qual o manipulador de eventos é adicionado. Essa caixa não fica disponível.  
   
  **Tipo de mensagem**  
- Exibe a lista de manipuladores de mensagens de possíveis atual para o controle selecionado.  
+ Exibe a lista de possíveis manipuladores de mensagens atuais para o controle selecionado.  
   
- **Nome do manipulador de função**  
- Exibe o nome da função que é adicionado para manipular o evento. Por padrão, o nome é baseado no tipo de mensagem e o comando, precedida por "On". Por exemplo, para o botão chamado `IDC_BUTTON1`, o tipo de mensagem `BN_CLICKED` exibe o nome do manipulador de função `OnBnClickedButton1`.  
+ **Nome do manipulador de funções**  
+ Exibe o nome da função que é adicionada para manipular o evento. Por padrão, o nome se baseia no tipo de mensagem e no comando, precedido por "On". Por exemplo, para o botão chamado `IDC_BUTTON1`, o tipo de mensagem `BN_CLICKED` exibe o nome do manipulador de funções `OnBnClickedButton1`.  
   
  **Lista de classes**  
- Exibe as classes disponíveis para o qual você pode adicionar um manipulador de eventos. A classe de caixa de diálogo é exibida em vermelho.  
+ Exibe as classes disponíveis às quais você pode adicionar um manipulador de eventos. A classe para a caixa de diálogo selecionada é exibida em vermelho.  
   
- **Descrição de manipulador**  
- Fornece uma descrição para o item selecionado no **tipo de mensagem** caixa. Essa caixa fica indisponível.  
+ **Descrição do manipulador**  
+ Fornece uma descrição para o item selecionado na caixa **Tipo de mensagem**. Essa caixa não fica disponível.  
   
  **Adicionar e editar**  
- Adiciona o manipulador de mensagens para a classe selecionada ou o objeto e, em seguida, abre o editor de texto para a nova função para que você possa adicionar o código de manipulador de notificações de controle.  
+ Adiciona o manipulador de mensagens à classe ou ao objeto selecionado e, em seguida, abre o editor de texto na nova função, de modo que você possa adicionar o código do manipulador de notificações de controle.  
   
  **Editar código**  
- Abre o editor de texto para a função selecionada para que você pode adicionar ou editar o código de manipulador de notificações de controle.  
+ Abre o editor de texto na função selecionada, de modo que você possa adicionar ou editar o código do manipulador de notificações de controle.  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionando um manipulador de eventos](../ide/adding-an-event-handler-visual-cpp.md)

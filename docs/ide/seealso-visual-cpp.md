@@ -1,5 +1,5 @@
 ---
-title: '&lt;Consulte também&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;seealso&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 6a726a2fa1694fd346a6632fdc5e40bd53547fc8
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334302"
 ---
-# <a name="ltseealsogt-visual-c"></a>&lt;Consulte também&gt; (Visual C++)
+# <a name="ltseealsogt-visual-c"></a>&lt;seealso&gt; (Visual C++)
 A marca \<seealso > permite especificar o texto que você quer que seja exibido na seção Ver também. Use [\<see>](../ide/see-visual-cpp.md) para especificar um link de dentro do texto.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,7 +38,7 @@ A marca \<seealso > permite especificar o texto que você quer que seja exibido 
  `member`  
  Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual.  Coloque o nome entre aspas simples ou duplas.  
   
- O compilador verifica se o elemento de código fornecido existe e resolve `member` para o nome do elemento no XML de saída.  O compilador emite um aviso se ele não encontrar `member`.  
+ O compilador verifica se o elemento de código fornecido existe e resolve `member` no nome de elemento no XML de saída.  O compilador emite um aviso se não encontra `member`.  
   
  Para obter informações sobre como criar uma referência cref para um tipo genérico, consulte [ \<consulte>](../ide/see-visual-cpp.md).  
   
@@ -46,10 +47,10 @@ A marca \<seealso > permite especificar o texto que você quer que seja exibido 
   
  Consulte [\<summary>](../ide/summary-visual-cpp.md) para obter um exemplo sobre o uso de \<seealso>.  
   
- O compilador do Visual C++ tentará resolver referências cref em uma passagem pela comentários de documentação.  Portanto, se usar as regras de pesquisa do C++, um símbolo não é encontrado pelo compilador a referência será marcada como não resolvidos.  
+ O compilador do Visual C++ tentará resolver as referências cref em uma passagem pelos comentários da documentação.  Portanto, se você estiver usando as regras de pesquisa do C++ e um símbolo não for encontrado pelo compilador, a referência será marcada como não resolvida.  
   
 ## <a name="example"></a>Exemplo  
- No exemplo a seguir, um símbolo não resolvido é referenciado em um cref. O comentário XML cref para B::Test será `<seealso cref="!:B::Test" />`, enquanto que a referência ao A::Test está bem formada `<seealso cref="M:A.Test" />`.  
+ Na amostra a seguir, um símbolo não resolvido é referenciado em um cref. O comentário XML do cref para B::Test será `<seealso cref="!:B::Test" />`, enquanto a referência a A::Test é um `<seealso cref="M:A.Test" />` bem formado.  
   
 ```  
 // xml_seealso_tag.cpp  

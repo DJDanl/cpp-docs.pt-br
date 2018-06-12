@@ -1,5 +1,5 @@
 ---
-title: 'Páginas de propriedade MIDL: Geral | Microsoft Docs'
+title: 'Páginas de propriedades de MIDL: Geral | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,16 +27,17 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 6e1709c878a0b5f5325798b874e5549c5c8cb83f
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329976"
 ---
 # <a name="midl-property-pages-general"></a>Páginas de propriedade MDL: geral
-O **geral** página de propriedades no **MIDL** pasta especifica as opções do compilador MIDL:  
+A página de propriedades **Geral** na pasta **MIDL** especifica as seguintes opções do compilador MIDL:  
   
 -   Definições de pré-processador [(/D](http://msdn.microsoft.com/library/windows/desktop/aa367321))  
   
--   Adicionais diretórios de inclusão ([/i](http://msdn.microsoft.com/library/windows/desktop/aa367328))  
+-   Diretórios de inclusão adicionais ([/I](http://msdn.microsoft.com/library/windows/desktop/aa367328))  
   
 -   Ignorar caminho de inclusão padrão ([/no_def_idir](http://msdn.microsoft.com/library/windows/desktop/aa367347))  
   
@@ -48,15 +49,15 @@ O **geral** página de propriedades no **MIDL** pasta especifica as opções do 
   
 -   Suprimir faixa de inicialização ([/nologo](http://msdn.microsoft.com/library/windows/desktop/aa367341))  
   
--   Tipo de carácter de MIDL ([/char](http://msdn.microsoft.com/library/windows/desktop/aa367314))  
+-   Tipo de caractere MIDL ([/char](http://msdn.microsoft.com/library/windows/desktop/aa367314))  
   
 -   Ambiente de destino ([/env](http://msdn.microsoft.com/library/windows/desktop/aa367323))  
   
--   Gerar Proxies sem stub ([/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
+-   Gerar proxies sem stub ([/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
   
- Para obter informações sobre como acessar o **geral** página de propriedades no **MIDL** pasta, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).  
+ Para obter informações sobre como acessar a página de propriedades **Geral** na pasta **MIDL**, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).  
   
- Para obter informações sobre como acessar programaticamente opções MIDL para projetos em C++, consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> objeto.  
+ Para obter informações sobre como acessar as opções de MIDL para projetos do C++ de forma programática, confira o objeto <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Páginas de propriedades de MIDL](../ide/midl-property-pages.md)

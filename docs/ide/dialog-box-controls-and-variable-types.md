@@ -1,5 +1,5 @@
 ---
-title: Controles de caixa de diálogo e tipos de variáveis | Microsoft Docs
+title: Controles de caixa de diálogo e tipos de variável | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,35 +18,36 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f2fbae37072f50898181334a9059a7dc9c6a83a9
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335059"
 ---
 # <a name="dialog-box-controls-and-variable-types"></a>Controles da caixa de diálogo e tipos de variável
-Você pode usar o [Assistente para adição de variável de membro](../ide/add-member-variable-wizard.md) para adicionar uma variável de membro a um controle de caixa de diálogo criado usando MFC. O tipo de controle para que você adicione a variável de membro determina as opções que aparecem na caixa de diálogo.  
+Use o [Assistente de Adição de Variável de Membro](../ide/add-member-variable-wizard.md) para adicionar uma variável de membro a um controle de caixa de diálogo criado usando o MFC. O tipo de controle ao qual você adiciona a variável de membro determina as opções exibidas na caixa de diálogo.  
   
- A tabela a seguir descreve todos os tipos de controle de caixa de diálogo com suporte no MFC e [Editor de caixa de diálogo](../windows/dialog-editor.md)e os tipos disponíveis e valores.  
+ A tabela a seguir descreve todos os tipos de controle de caixa de diálogo compatíveis com o MFC e o [Editor de Caixas de Diálogo](../windows/dialog-editor.md), bem como seus tipos e valores disponíveis.  
   
-|Controle|Tipo de controle|Tipo de variável de controle|Tipo de variável de valor|Valores mínimos/máximos (somente tipo de valor)|  
+|Controle|Tipo de controle|Tipo de variável de controle|Tipo de variável de valor|Valores mín./máx. (somente tipo de valor)|  
 |-------------|------------------|---------------------------|-------------------------|-----------------------------------------|  
-|Controle de animação|SysAnimate32|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Nenhum; apenas controle|N/D|  
-|Botão|BOTÃO|[CButton](../mfc/reference/cbutton-class.md)|Nenhum; apenas controle|N/D|  
-|Caixa de seleção|SELEÇÃO|[CButton](../mfc/reference/cbutton-class.md)|**BOOL**|Valor mínimo/máximo do valor|  
-|Caixa de combinação|CAIXA DE COMBINAÇÃO|[CComboBox](../mfc/reference/ccombobox-class.md)|[CString](../atl-mfc-shared/reference/cstringt-class.md)|Caracteres de max|  
-|Controle de seletor de tempo de data|SysDateTimePick32|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|[CTime](../atl-mfc-shared/reference/ctime-class.md)|Valor mínimo/máximo do valor|  
-|Caixa de edição|EDITAR|[CEdit](../mfc/reference/cedit-class.md)|`CString`, int, UINT, long, DWORD, float, double, BYTE, short, BOOL, `COleDateTime`, ou **COleCurrency**|Valor do mínimo valor/máx; Alguns caracteres máximo de suporte|  
-|Controle de tecla de acesso|msctls_hotkey32|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Nenhum; apenas controle|N/D|  
-|Caixa de listagem|CAIXA DE LISTAGEM|[CListBox](../mfc/reference/clistbox-class.md)|`CString`|Caracteres de max|  
-|Controle de lista|SysListView32|[CListCtrl](../mfc/reference/clistctrl-class.md)|Nenhum; apenas controle|N/D|  
-|Controle de calendário mensal|SysMonthCal32|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|`CTime`|Valor mínimo/máximo do valor|  
-|Controle de progresso|msctls_progress32|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Nenhum; apenas controle|N/D|  
-|Controle Rich Editar 2|RichEdit20A|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|`CString`|Caracteres de max|  
-|Controle Rich Edit|RICHEDIT|`CRichEditCtrl`|`CString`|Caracteres de max|  
-|Barra de rolagem (vertical ou horizontal|BARRA DE ROLAGEM|[CScrollBar](../mfc/reference/cscrollbar-class.md)|`int`|Valor mínimo/máximo do valor|  
-|Controle deslizante|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|Valor mínimo/máximo do valor|  
-|Controle de rotação|msctls_updown32|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Nenhum; apenas controle|N/D|  
-|Controle de guia|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Nenhum; apenas controle|N/D|  
-|Controle de árvore|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Nenhum; apenas controle|N/D|  
+|Controle de animação|SysAnimate32|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Nenhum; somente controle|N/D|  
+|Botão|BUTTON|[CButton](../mfc/reference/cbutton-class.md)|Nenhum; somente controle|N/D|  
+|Caixa de seleção|CHECK|[CButton](../mfc/reference/cbutton-class.md)|**BOOL**|Valor mín./valor máx.|  
+|Caixa de combinação|COMBOBOX|[CComboBox](../mfc/reference/ccombobox-class.md)|[CString](../atl-mfc-shared/reference/cstringt-class.md)|Número máx. de caracteres|  
+|Controle de seletor de data e hora|SysDateTimePick32|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|[CTime](../atl-mfc-shared/reference/ctime-class.md)|Valor mín./valor máx.|  
+|Caixa de edição|EDIT|[CEdit](../mfc/reference/cedit-class.md)|`CString`, int, UINT, long, DWORD, float, double, BYTE, short, BOOL, `COleDateTime` ou **COleCurrency**|Valor mín./valor máx.; alguns dão suporte ao número máximo de caracteres|  
+|Controle de tecla de acesso|msctls_hotkey32|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Nenhum; somente controle|N/D|  
+|Caixa de listagem|LISTBOX|[CListBox](../mfc/reference/clistbox-class.md)|`CString`|Número máx. de caracteres|  
+|Controle de lista|SysListView32|[CListCtrl](../mfc/reference/clistctrl-class.md)|Nenhum; somente controle|N/D|  
+|Controle de calendário mensal|SysMonthCal32|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|`CTime`|Valor mín./valor máx.|  
+|Controle de progresso|msctls_progress32|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Nenhum; somente controle|N/D|  
+|Controle de Rich Edit 2|RichEdit20A|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|`CString`|Número máx. de caracteres|  
+|Controle de Rich Edit|RICHEDIT|`CRichEditCtrl`|`CString`|Número máx. de caracteres|  
+|Barra de rolagem (vertical ou horizontal)|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|`int`|Valor mín./valor máx.|  
+|Controle deslizante|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|Valor mín./valor máx.|  
+|Controle de giro|msctls_updown32|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Nenhum; somente controle|N/D|  
+|Controle guia|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Nenhum; somente controle|N/D|  
+|Controle de árvore|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Nenhum; somente controle|N/D|  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)
+ [Adicionando uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)

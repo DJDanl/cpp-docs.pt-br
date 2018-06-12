@@ -1,5 +1,5 @@
 ---
-title: Página de propriedade de diretórios VC + + | Microsoft Docs
+title: Página de propriedades de Diretórios do VC++ | Microsoft Docs
 ms.custom: ''
 ms.date: 04/26/2018
 ms.technology:
@@ -25,89 +25,90 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 3acaccff2e2764f4fd7f6f4815f5721f0ba845a3
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336076"
 ---
-# <a name="vc-directories-property-page-windows"></a>Página de propriedades VC + + diretórios (Windows)
+# <a name="vc-directories-property-page-windows"></a>Página de propriedades de Diretórios do VC++ (Windows)
 
-Use esta página de propriedades para informar o Visual Studio os diretórios para usar ao criar o projeto selecionado no momento. Para definir os diretórios para vários projetos em uma solução, use uma folha de propriedades personalizadas, conforme descrito em [criar configurações de propriedade reutilizável](working-with-project-properties.md#bkmkPropertySheets).
+Use esta página de propriedades para informar o Visual Studio de quais diretórios devem ser usados ao compilar o projeto atualmente selecionado. Para definir os diretórios para vários projetos em uma solução, use uma folha de propriedades personalizadas, conforme descrito em [Criando configurações de propriedade reutilizáveis](working-with-project-properties.md#bkmkPropertySheets).
 
-Para a versão do Linux dessa página, consulte [diretórios VC + + (C++ Linux)](../linux/prop-pages/directories-linux.md).   
+Para obter a versão do Linux desta página, confira [Diretórios do VC++ (Linux C++)](../linux/prop-pages/directories-linux.md).   
 
-Para acessar o **diretórios VC + +** página de propriedades:
+Para acessar a página de propriedades de **Diretórios do VC++**:
 
-1. Se o **Solution Explorer** janela não estiver visível, em seguida, no menu principal, escolha **exibição** > **Gerenciador de soluções**.
-1. Clique com botão direito em um nó de projeto (não a solução de nível superior) e escolha **propriedades**.
-1. No painel esquerdo do **páginas de propriedade** caixa de diálogo, selecione **propriedades de configuração** > **diretórios VC + +**.  
+1. Se a janela do **Gerenciador de Soluções** não estiver visível, no menu principal, escolha **Exibir** > **Gerenciador de Soluções**.
+1. Clique com o botão direito do mouse em um nó do projeto (não na solução de nível superior) e escolha **Propriedades**.
+1. No painel esquerdo da caixa de diálogo **Páginas de Propriedades**, selecione **Propriedades de Configuração** > **Diretórios do VC++**.  
 
-Propriedades de diretórios VC + + se aplicam a um projeto, não no nó da solução de nível superior. Se você não vir **diretórios VC + +** em **propriedades de configuração**, selecione um nó de projeto de C++ no **Solution Explorer** janela: 
+As propriedades de Diretórios do VC++ se aplicam a um projeto, não ao nó da solução de nível superior. Se as propriedades de **Diretórios do VC++** não forem exibidas em **Propriedades de Configuração**, selecione um nó do projeto do C++ na janela do **Gerenciador de Soluções**: 
 
-![Selecione o nó do projeto](media/vcppdir.png "selecionar o nó do projeto para ver as propriedades de diretórios VC + +")
+![Selecionar o nó do projeto](media/vcppdir.png "Selecionar o nó do projeto para ver as propriedades de Diretórios do VC++")
 
-Observe que o **diretórios VC + +** página de propriedades de projetos de plataforma cruzada parece diferente. Para obter informações específicas para projetos C++ do Linux, consulte [diretórios VC + + (C++ Linux)](../linux/prop-pages/directories-linux.md). 
+Observe que a página de propriedades de **Diretórios do VC++** para projetos multiplataforma tem outra aparência. Para obter informações específicas a projetos do Linux C++, confira [Diretórios do VC++ (Linux C++)](../linux/prop-pages/directories-linux.md). 
  
-Se você não estiver familiarizado com *propriedades do projeto* no Visual Studio, talvez seja útil ler primeiro [trabalhar com propriedades do projeto](working-with-project-properties.md). 
+Caso você não esteja familiarizado com as *propriedades do projeto* no Visual Studio, talvez seja útil ler primeiro [Trabalhando com propriedades do projeto](working-with-project-properties.md). 
  
-As configurações padrão para **diretórios VC + +** propriedades dependem do tipo de projeto. Para projetos de área de trabalho, eles incluem os locais de ferramentas do C++ para um determinado conjunto de ferramentas de plataforma e o local do SDK do Windows. Você pode alterar o **conjunto de ferramentas de plataforma** e **versão do SDK do Windows** no **propriedades de configuração** > **geral** página. 
+As configurações padrão para as propriedades de **Diretórios do VC++** dependem do tipo de projeto. Para projetos da área de trabalho, elas incluem os locais das ferramentas do C++ de determinado Conjunto de Ferramentas da Plataforma e o local do SDK do Windows. Altere o **Conjunto de Ferramentas da Plataforma** e a **versão do SDK do Windows** na página **Propriedades de Configuração** > **Geral**. 
 
-Para exibir os valores para qualquer um dos diretórios:
+Para exibir os valores para um dos diretórios:
 
-1. Selecione uma das propriedades de **diretórios VC + +** página. Por exemplo, escolha **diretórios de biblioteca**.
-1. Escolha o botão de seta para baixo no final do campo de valor de propriedade.
-1. No menu suspenso, selecione **editar**.
+1. Selecione uma das propriedades na página **Diretórios do VC++**. Por exemplo, escolha **Diretórios de Biblioteca**.
+1. Escolha o botão de seta para baixo ao final do campo de valor da propriedade.
+1. No menu suspenso, escolha **Editar**.
 
-![Editar diretórios de biblioteca](media/vcppdir_libdir_edit.png "caixa de diálogo para editar os caminhos de biblioteca")
+![Editar Diretórios de Biblioteca](media/vcppdir_libdir_edit.png "Caixa de diálogo para editar os caminhos da biblioteca")
 
-Agora, você verá uma caixa de diálogo como esta: 
+Agora você verá uma caixa de diálogo como esta: 
 
-![Mostrar diretórios de biblioteca](media/vcppdir_libdir.png "caixa de diálogo para adicionar ou remover caminhos de biblioteca")
+![Mostrar Diretórios de Biblioteca](media/vcppdir_libdir.png "Caixa de diálogo para adicionar ou remover caminhos da biblioteca")
 
-Use esta caixa de diálogo para exibir os diretórios atuais. No entanto, se você quiser alterar ou adicionar um diretório, é melhor usar **Gerenciador de propriedades** para criar uma folha de propriedades ou modificar a folha de propriedades de usuário padrão. Para obter mais informações, consulte [criar configurações de propriedade reutilizável](working-with-project-properties.md#bkmkPropertySheets).
+Use essa caixa de diálogo para exibir os diretórios atuais. No entanto, caso deseje alterar ou adicionar um diretório, será melhor usar o **Gerenciador de Propriedades** para criar uma folha de propriedades ou modificar a folha de propriedades do usuário padrão. Para obter mais informações, confira [Criando configurações de propriedade reutilizáveis](working-with-project-properties.md#bkmkPropertySheets).
 
-Como mostrado acima, muitos dos caminhos herdados são fornecidos como macros.  Para examinar o valor atual de uma macro, escolha o **Macros** botão no canto inferior direito da caixa de diálogo. Observe que muitas macros dependem do tipo de configuração. Uma macro em uma compilação de depuração pode ser avaliada como um caminho diferente de macro mesmo em uma compilação de versão. 
+Conforme mostrado acima, muitos dos caminhos herdados são fornecidos como macros.  Para examinar o valor atual de uma macro, escolha o botão **Macros** no canto inferior direito da caixa de diálogo. Observe que muitas macros dependem do tipo de configuração. Uma macro em um build de depuração pode ser avaliada como um caminho diferente comparado à mesma macro em um build de versão. 
 
-Você pode procurar as correspondências parciais ou completa na caixa de edição. A ilustração a seguir mostra todas as macros que contêm a cadeia de caracteres "WindowsSDK" e também mostra o caminho atual que avalia a macro:
+Pesquise correspondências parciais ou completas na caixa de edição. A ilustração a seguir mostra todas as macros que contêm a cadeia de caracteres "WindowsSDK" e também mostra o caminho atual para o qual a macro é avaliada:
 
-![Consulte os valores de macro](media/vcppdir_libdir_macros.png "caixa de diálogo Editar macros")
+![Veja os valores da macro](media/vcppdir_libdir_macros.png "Caixa de diálogo para editar macros")
 
-Observação: A lista é preenchida conforme você digita. Não pressione **Enter**.
+Observação: a lista é populada conforme você digita. Não pressione **Enter**.
 
-Para obter mais informações sobre macros e por que você deve usá-los em vez de caminhos embutidos sempre que possível, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros). 
+Para obter mais informações sobre macros e por que você deve usá-las em vez de caminhos embutidos em código, sempre que possível, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros). 
 
-Para obter uma lista de macros usadas, consulte [comuns Macros para compilar comandos e propriedades](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties).
+Para obter uma lista das macros geralmente usadas, confira [Macros comuns para comandos e propriedades de build](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties).
 
-Você pode definir suas próprias macros de duas maneiras:
--   Definir variáveis de ambiente em um prompt de comando do desenvolvedor. Todas as variáveis de ambiente são tratadas como propriedades do MSBuild/macros.
--   Defina macros do usuário em um arquivo de .props. Para obter mais informações, consulte [macros de página de propriedade](working-with-project-properties.md#bkmkPropertiesVersusMacros). 
+Defina suas próprias macros de duas maneiras:
+-   Defina variáveis de ambiente em um Prompt de Comando do Desenvolvedor. Todas as variáveis de ambiente são tratadas como propriedades/macros do MSBuild.
+-   Defina macros do usuário em um arquivo .props. Para obter mais informações, confira [Macros da página de propriedades](working-with-project-properties.md#bkmkPropertiesVersusMacros). 
 
-Para obter mais informações, veja estas postagens do blog: [diretórios VC + +](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [propriedades herdadas e folhas de propriedade](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), e [Visual Studio 2010 C++ projeto guia de atualização](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx).  
+Para obter mais informações, confira estas postagens no blog: [Diretórios do VC++](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [Propriedades herdadas e folha de propriedades](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx) e [Guia de Atualização de Projeto do Visual Studio 2010 C++](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx).  
   
 ## <a name="directory-types"></a>Tipos de diretório
 
 Você também pode especificar outros diretórios, como a seguir.  
   
-**Diretórios executáveis**<br/>
-Diretórios onde procurar por arquivos executáveis. Corresponde do **caminho** variável de ambiente.
+**Diretórios Executáveis**<br/>
+Diretórios onde procurar por arquivos executáveis. Corresponde à variável de ambiente **PATH**.
 
 **Incluir Diretórios**<br/>
-Diretórios nos quais procurar por arquivos de inclusão que são referenciados no código-fonte. Corresponde do **incluir** variável de ambiente.
+Diretórios nos quais procurar por arquivos de inclusão que são referenciados no código-fonte. Corresponde à variável de ambiente **INCLUDE**.
 
-**Diretórios de referência**<br/>
- Diretórios para a pesquisa de assembly e arquivos de módulo (metadados) que são referenciados no código-fonte, o [#using](../preprocessor/hash-using-directive-cpp.md) diretiva. Corresponde do **LIBPATH** variável de ambiente.
+**Diretórios de Referência**<br/>
+ Diretórios nos quais pesquisar arquivos de assembly e de módulo (metadados) referenciados no código-fonte pela diretiva [#using](../preprocessor/hash-using-directive-cpp.md). Corresponde à variável de ambiente **LIBPATH**.
 
 **Diretórios de Biblioteca**<br/>
-Diretórios onde procurar por arquivos de bibliotecas (.lib); isso inclui as bibliotecas em tempo de execução. Corresponde do **LIB** variável de ambiente. Essa configuração não se aplica a arquivos. obj; Para vincular a um arquivo. obj, do **propriedades de configuração** > **vinculador** > **geral** página de propriedades, selecione  **Dependências de biblioteca adicionais** e, em seguida, especifique o caminho relativo do arquivo. Para obter mais informações, consulte [páginas de propriedade do vinculador](../ide/linker-property-pages.md).
+Diretórios onde procurar por arquivos de bibliotecas (.lib); isso inclui as bibliotecas em tempo de execução. Corresponde à variável de ambiente **LIB**. Essa configuração não se aplica a arquivos .obj; para criar um vínculo com um arquivo .obj, na página de propriedades de **Propriedades de Configuração** > **Vinculador** > **Geral**, selecione **Dependências de Bibliotecas Adicionais** e, em seguida, especifique o caminho relativo do arquivo. Para obter mais informações, confira [Páginas de propriedades do Vinculador](../ide/linker-property-pages.md).
 
-**Biblioteca WinRT diretórios**<br/>
-Diretórios para procurar por arquivos de biblioteca do WinRT para usam em aplicativos do Windows UWP (plataforma Universal). 
+**Diretórios de Biblioteca WinRT**<br/>
+Diretórios nos quais pesquisar arquivos de biblioteca WinRT para uso em aplicativos UWP (Plataforma Universal do Windows). 
 
-**Diretórios de origem**<br/>
+**Diretórios de Origem**<br/>
 Diretórios onde procurar por arquivos de origem para uso para o IntelliSense.
 
-**Excluir diretórios**<br/>
-Antes de cada compilação, o Visual Studio consulta o carimbo de hora em todos os arquivos para determinar se qualquer tiver sido modificado desde a compilação anterior. Se o projeto tiver grandes bibliotecas estáveis, você pode potencialmente acelerar a tempos de compilação excluindo esses diretórios desde a verificação de carimbo de hora.
+**Excluir Diretórios**<br/>
+Antes de cada compilação, o Visual Studio consulta o carimbo de data/hora em todos os arquivos para determinar se um deles foi modificado desde a compilação anterior. Se o projeto tem bibliotecas grandes estáveis, potencialmente, você pode acelerar os tempos de build excluindo esses diretórios da verificação de carimbo de data/hora.
 
 ## <a name="sharing-the-settings"></a>Compartilhando as configurações
 
-Você pode compartilhar propriedades do projeto com outros usuários ou em vários computadores. Para obter mais informações, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).
+Você pode compartilhar propriedades do projeto com outros usuários ou em vários computadores. Para obter mais informações, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).

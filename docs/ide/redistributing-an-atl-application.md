@@ -19,38 +19,39 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 5c824dd4ae174a4418c6744e592dd62dc54b9595
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326378"
 ---
 # <a name="redistributing-an-atl-application"></a>Redistribuindo um aplicativo ATL
-A partir do Visual Studio 2012, ATL Active Template Library () é uma biblioteca de somente cabeçalho. Projetos ATL não tem um Link dinâmico para opção ATL. Nenhuma biblioteca ATL redistribuível é necessária.  
+Do Visual Studio 2012 em diante, a ATL (Active Template Library) é uma biblioteca somente de cabeçalho. Os projetos ATL não têm uma opção Link Dinâmico para ATL. Nenhuma biblioteca ATL redistribuível é necessária.  
   
- Se você redistribuir um aplicativo executável ATL, você deve registrar o arquivo .exe (e os controles dentro dele) emitindo o comando a seguir:  
-  
-```  
-filename /regserver  
-```  
-  
- onde `filename` é o nome do arquivo executável.  
-  
- No Visual Studio 2010, um projeto de ATL pode ser criado para um MinDependency ou uma configuração de MinSize. Uma configuração de MinDependency é o que você obtém quando você definir o **uso de ATL** propriedade **Link estático para ATL** no **geral** página de propriedades e defina o  **Biblioteca de tempo de execução** propriedade **multithread (/ MT)** no **geração de código** a página de propriedades (pasta C/C++).  
-  
- Uma configuração de MinSize é o que você obtém quando você definir o **uso de ATL** propriedade **Link dinâmico para ATL** no **geral** página de propriedades ou conjunto o **em tempo de execução Biblioteca** propriedade **multi-threaded DLL (/ MD)** no **geração de código** a página de propriedades (pasta C/C++).  
-  
- MinSize faz com que a saída de arquivo tão pequena quanto possível mas requerem que ATL100.dll e Msvcr100.dll (se você tiver selecionado o **multi-threaded DLL (/ MD)** opção) no computador de destino. ATL100.dll devem ser registradas no computador de destino para garantir que todas as funcionalidades ATL estão presente. ATL100.dll contém ANSI e Unicode exporta.  
-  
- Se você compilar o projeto ATL ou modelos OLE DB de destino MinDependency, você não precisa instalar e registrar ATL100.dll no computador de destino, embora você pode obter uma imagem de programa maior.  
-  
- Se você redistribuir um aplicativo executável ATL, você deve registrar o arquivo .exe (e os controles dentro dele) emitindo o comando a seguir:  
+ Se você redistribuir um aplicativo executável ATL, precisará registrar o arquivo .exe (e os controles dentro dele) emitindo o seguinte comando:  
   
 ```  
 filename /regserver  
 ```  
   
- onde `filename` é o nome do arquivo executável.  
+ em que `filename` é o nome do arquivo executável.  
   
- Para aplicativos de modelos OLE DB, certifique-se de que o computador de destino tem as versões mais recentes dos arquivos do Microsoft Data Access Components (MDAC). Para obter mais informações, consulte [redistribuindo arquivos de suporte do banco de dados](../ide/redistributing-database-support-files.md).  
+ No Visual Studio 2010, um projeto ATL pode ser compilado para uma configuração de MinDependency ou de MinSize. Uma configuração de MinDependency é o que você obtém quando define a propriedade **Uso da ATL** como **Link Estático para ATL** na página de propriedades **Geral** e define a propriedade **Biblioteca em Tempo de Execução** como **Multi-threaded (/MT)** na página de propriedades **Geração de Código** (pasta C/C++).  
+  
+ Uma configuração de MinSize é o que você obtém quando define a propriedade **Uso da ATL** como **Link Dinâmico para ATL** na página de propriedades **Geral** ou define a propriedade **Biblioteca em Tempo de Execução** como **DLL Multi-threaded (/MD)** na página de propriedades **Geração de Código** (pasta C/C++).  
+  
+ MinSize torna o arquivo de saída o menor possível, mas exige que ATL100.dll e Msvcr100.dll (se você selecionou a opção **DLL Multi-threaded (/MD)**) estejam no computador de destino. ATL100.dll deve ser registrada no computador de destino para garantir que todas as funcionalidades da ATL estejam presente. ATL100.dll contém exportações ANSI e Unicode.  
+  
+ Caso você compile o projeto de Modelos ATL ou OLE DB para um destino MinDependency, não precisará instalar e registrar ATL100.dll no computador de destino, embora você possa obter uma imagem de programa maior.  
+  
+ Se você redistribuir um aplicativo executável ATL, precisará registrar o arquivo .exe (e os controles dentro dele) emitindo o seguinte comando:  
+  
+```  
+filename /regserver  
+```  
+  
+ em que `filename` é o nome do arquivo executável.  
+  
+ Para aplicativos de Modelos OLE DB, verifique se o computador de destino tem as últimas versões dos arquivos do MDAC (Microsoft Data Access Components). Para obter mais informações, confira [Redistribuindo arquivos de suporte de banco de dados](../ide/redistributing-database-support-files.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Redistribuindo arquivos do Visual C++](../ide/redistributing-visual-cpp-files.md)

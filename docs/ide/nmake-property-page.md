@@ -1,5 +1,5 @@
 ---
-title: Página de propriedades NMake (Windows C++) | Microsoft Docs
+title: Página de propriedades de NMake (Windows C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,52 +21,53 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f156d69467f00c4c4a62ec84d3b870e2999d7115
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327454"
 ---
 # <a name="nmake-property-page"></a>Página de propriedades NMake
-O **NMake** página de propriedade permite que você especifique configurações de compilação para projetos de NMake.  
+A página de propriedades de **NMake** permite que você especifique configurações de build para projetos NMake.  
   
- Para obter mais informações sobre projetos de NMake, consulte [criando um projeto Makefile](../ide/creating-a-makefile-project.md). Para non_Windows projetos MakeFile, consulte [propriedades de projeto MakeFile (C++ Linux)](../linux/prop-pages/makefile-linux.md), [propriedades do projeto geral (Android C++ Makefile)](/visualstudio/cross-platform/general-makefile-android-prop-page) ou [NMake propriedades (C++ Android)](/visualstudio/cross-platform/nmake-android-prop-page).
+ Para obter mais informações sobre projetos NMake, confira [Criando um projeto Makefile](../ide/creating-a-makefile-project.md). Para projetos MakeFile que não sejam do Windows, confira [Propriedades do projeto MakeFile (Linux C++)](../linux/prop-pages/makefile-linux.md), [Propriedades gerais do projeto (Android C++ Makefile)](/visualstudio/cross-platform/general-makefile-android-prop-page) ou [Propriedades de NMake (Android C++)](/visualstudio/cross-platform/nmake-android-prop-page).
   
- O **NMake** página de propriedades contém as seguintes propriedades.  
+ A página de propriedades de **NMake** contém as propriedades a seguir.  
   
 ## <a name="uielement-list"></a>Lista UIElement  
- **Criar linha de comando**  
- Especifica o comando a ser executado quando **criar** é clicado no **criar** menu.  
+ **Linha de Comando de Build**  
+ Especifica o comando a ser executado quando o usuário clica em **Compilar** no menu **Build**.  
   
- **Recompilar toda a linha de comando**  
- Especifica o comando a ser executado quando **recriar todos** é clicado no **criar** menu.  
+ **Linha de Comando de Recompilar Tudo**  
+ Especifica o comando a ser executado quando o usuário clica em **Recompilar Tudo** no menu **Build**.  
   
- **Limpar linha de comando**  
- Especifica o comando a ser executado quando **limpar** é clicado no **criar** menu.  
+ **Linha de Comando de Limpar**  
+ Especifica o comando a ser executado quando o usuário clica em **Limpar** no menu **Build**.  
   
  **Saída**  
- Especifica o nome do arquivo que conterá a saída da linha de comando. Por padrão, esse nome de arquivo com base no nome do projeto.  
+ Especifica o nome do arquivo de saída que conterá a saída da linha de comando. Por padrão, esse nome de arquivo baseia-se no nome do projeto.  
   
- **Definições de pré-processador**  
- Especifica qualquer fonte de arquivos usam as definições de pré-processador. O valor padrão é determinado pela configuração e plataforma atual.  
+ **Definições de Pré-processador**  
+ Especifica as definições de pré-processador usadas pelos arquivos de origem. O valor padrão é determinado pela plataforma e configuração atuais.  
   
- **Caminho de pesquisa de inclusão**  
- Especifica os diretórios em que o compilador procura por arquivos de inclusão.  
+ **Caminho de Pesquisa de Inclusão**  
+ Especifica os diretórios nos quais o compilador pesquisa arquivos de inclusão.  
   
- **Forçado inclui**  
- Especifica os arquivos que o pré-processador processa automaticamente mesmo se elas não são incluídas nos arquivos de projeto.  
+ **Inclusões Forçadas**  
+ Especifica os arquivos que o pré-processador processa automaticamente mesmo se eles não são incluídos nos arquivos de projeto.  
   
- **Caminho de pesquisa de assembly**  
- Especifica os diretórios em que o .NET Framework pesquisa quando ele tenta resolver assemblies .NET.  
+ **Caminho de Pesquisa de Assembly**  
+ Especifica os diretórios pesquisados pelo .NET Framework quando ele tenta resolver assemblies .NET.  
   
- **Assemblies de uso forçado**  
- Especifica os assemblies do .NET Framework processa automaticamente.  
+ **Assemblies de Uso Forçado**  
+ Especifica os assemblies processados automaticamente pelo .NET Framework.  
   
  **Opções adicionais**  
- Especifica quaisquer opções de compilador adicionais para o IntelliSense usar ao analisar arquivos C++.  
+ Especifica as opções adicionais do compilador para uso do IntelliSense ao analisar arquivos C++.  
   
- Para obter informações sobre como acessar o **NMake** página de propriedades, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).  
+ Para obter informações sobre como acessar a página de propriedades de **NMake**, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).  
   
- Para obter informações sobre como acessar programaticamente os membros do objeto, consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.  
+ Para obter informações sobre como acessar os membros desse objeto de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Páginas de propriedade](../ide/property-pages-visual-cpp.md)   
+ [Páginas de propriedades](../ide/property-pages-visual-cpp.md)   
  [Como habilitar o IntelliSense para projetos makefile](../ide/how-to-enable-intellisense-for-makefile-projects.md)

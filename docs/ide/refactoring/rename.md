@@ -12,9 +12,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 7a064527f6afcbf91be3fb4e51180be647c1f506
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339807"
 ---
 # <a name="rename"></a>Renomear
 **O quê:** permite renomear identificadores para símbolos de código, como campos, variáveis locais, métodos, namespaces, propriedades e tipos.
@@ -36,15 +37,15 @@ ms.lasthandoff: 05/04/2018
      * Selecione **Editar > Refatorar > Renomear**.
      * Clique com o botão direito do mouse no código e selecione **Renomear**.
 
-1. No **Renomear** janela pop-up, digite o novo nome para o item selecionado e clique o **visualização** botão.  Alterar o **escopo da pesquisa** se você precisar aumentar ou restringir o escopo de renomeação.
+1. Na janela **Renomear** exibida, insira o novo nome do item selecionado e clique no botão **Visualização**.  Altere o **Escopo da pesquisa** se precisar ampliar ou restringir o escopo da renomeação.
 
-   ![Renomear a caixa de diálogo](images/rename_dialog.png)
+   ![Caixa de diálogo Renomear](images/rename_dialog.png)
 
    > [!TIP]
-   > Você pode ignorar a visualização, verificando o **visualização Ignorar alterações se as referências forem confirmadas** opção.
+   > Ignore a visualização marcando a opção **Ignorar alterações de visualização se as referências forem confirmadas**.
 
-1. Quando o **visualizar alterações - Renomear** janela aparece, certifique-se de que as alterações que você está solicitando estão sendo feitas adequadamente.  Use as caixas de seleção na parte superior da janela para habilitar ou desabilitar a renomeação de qualquer item.
+1. Quando a janela **Visualizar Alterações – Renomear** for exibida, verifique se as alterações solicitadas estão sendo feitas corretamente.  Use as caixas de seleção na parte superior da janela para habilitar ou desabilitar a renomeação de qualquer item.
 
-   ![Renomear a visualização](images/rename_preview.png)
+   ![Visualização da renomeação](images/rename_preview.png)
 
-1. Quando tudo estiver correto, clique no **aplicar** botão e o item serão renomeados no seu código-fonte.
+1. Quando tudo estiver correto, clique no botão **Aplicar** e o item será renomeado no código-fonte.

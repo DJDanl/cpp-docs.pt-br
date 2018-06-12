@@ -1,5 +1,5 @@
 ---
-title: Redistribuindo arquivos de suporte do banco de dados | Microsoft Docs
+title: Redistribuindo arquivos de suporte de banco de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a51697367480569e2d27a4cb67791f5fe4d39a8f
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323869"
 ---
 # <a name="redistributing-database-support-files"></a>Redistribuindo arquivos de suporte de banco de dados
-Você pode redistribuir os arquivos de suporte para objetos de acesso de dados (DAO) e para as tecnologias de banco de dados do Microsoft Data Access SDK.  
+Redistribua arquivos de suporte para DAO (Objetos de Acesso a Dados) e para as tecnologias de banco de dados no SDK do Microsoft Data Access.  
   
-## <a name="installing-dao-support-files"></a>Instalar arquivos de suporte do DAO  
- Para obter a versão mais recente do DAO, consulte [artigo 239114: como obter o service pack mais recente para o mecanismo de banco de dados do Microsoft Jet 4.0](http://go.microsoft.com/fwlink/p/?linkid=198014) no site da Microsoft Support.  
+## <a name="installing-dao-support-files"></a>Instalando arquivos de suporte DAO  
+ Para obter a última versão do DAO, confira o [Artigo 239114: Como obter o último service pack do Mecanismo de Banco de Dados do Microsoft Jet 4.0](http://go.microsoft.com/fwlink/p/?linkid=198014) no site do Suporte da Microsoft.  
   
-## <a name="installing-microsoft-data-access-sdk-support-files"></a>Instalar arquivos de suporte do Microsoft Data Access SDK  
- Use Mdac_typ.exe para instalar o suporte para ODBC, OLE DB, ActiveX Data Objects (ADO) e serviços de dados remota (RDS). Mdac_typ.exe está localizado em de... Pasta \WCU\MDAC28\ na mídia de instalação do Visual Studio. Você também pode baixar Mdac_typ.exe do [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=198015) site.  
+## <a name="installing-microsoft-data-access-sdk-support-files"></a>Instalando arquivos de suporte do SDK do Microsoft Data Access  
+ Use Mdac_typ.exe para instalar o suporte para ODBC, OLE DB, ADO (ActiveX Data Objects) e RDS (Serviços de Dados Remotos). Mdac_typ.exe está localizado na pasta ..\WCU\MDAC28\ na mídia de instalação do Visual Studio. Baixe também Mdac_typ.exe no site do [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/p/?linkid=198015).  
   
- Para obter mais informações, sobre o [MSDN](http://go.microsoft.com/fwlink/p/?linkid=198016) site, procure "Redistribuir o MDAC 2.8 SP1". Se você estiver usando projetos de instalação do Visual Studio para implantar seu aplicativo, consulte [implantação e dependências](http://msdn.microsoft.com/en-us/49e9b84d-bd6a-4388-b9ac-46ea79cf0733).  
+ Para obter mais informações sobre o site do [MSDN](http://go.microsoft.com/fwlink/p/?linkid=198016), pesquise "Redistribuindo o MDAC 2.8 SP1". Caso esteja usando projetos de Instalação do Visual Studio para implantar seu aplicativo, confira [Implantação e dependências](http://msdn.microsoft.com/en-us/49e9b84d-bd6a-4388-b9ac-46ea79cf0733).  
   
 ## <a name="see-also"></a>Consulte também  
  [Redistribuindo arquivos do Visual C++](../ide/redistributing-visual-cpp-files.md)

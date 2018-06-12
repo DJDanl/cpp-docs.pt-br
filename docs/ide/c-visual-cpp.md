@@ -19,12 +19,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f17d56601f49056144433155e0d898f56c42bdab
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329252"
 ---
 # <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual C++)
-O \<c > marca indica que o texto dentro de uma descrição deve ser marcado como código. Use [\<code>](../ide/code-visual-cpp.md) para indicar várias linhas como código.  
+A marcação \<c> indica que o texto dentro de uma descrição deve ser marcado como código. Use [\<code>](../ide/code-visual-cpp.md) para indicar várias linhas como código.  
   
 ## <a name="syntax"></a>Sintaxe  
   

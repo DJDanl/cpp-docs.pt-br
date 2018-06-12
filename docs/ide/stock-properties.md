@@ -17,25 +17,26 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a3586fb33c30148c870b096d0d49a41d7ad8c6c8
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335426"
 ---
 # <a name="stock-properties"></a>Propriedades de estoque
-Se você estiver adicionando uma propriedade para um dispinterface MFC usando o [Assistente para adição de propriedade](../ide/idl-attributes-add-property-wizard.md), você pode escolher uma propriedade de estoque do **nome da propriedade** lista o [nomes](../ide/names-add-property-wizard.md) página do Assistente. Estas são as seguintes propriedades:  
+Caso esteja adicionando uma propriedade a uma dispinterface MFC usando o [Assistente de Adição de Propriedade](../ide/idl-attributes-add-property-wizard.md), escolha uma propriedade de estoque na lista **Nome da propriedade** da página [Nomes](../ide/names-add-property-wizard.md) do assistente. Estas são as seguintes propriedades:  
   
 |Property name|Descrição|  
 |-------------------|-----------------|  
-|**Aparência**|Retorna ou define um valor que determina a aparência do controle. O controle **aparência** propriedade pode incluir ou omitir os efeitos de exibição tridimensionais. Essa é uma propriedade de leitura/gravação do ambiente.|  
-|`BackColor`|Retorna ou define o controle ambiente `BackColor` propriedade para uma cor da paleta (RGB) ou uma cor do sistema predefinidos. Por padrão, seu valor corresponde à cor do primeiro plano do contêiner do controle. Essa é uma propriedade de leitura/gravação do ambiente.|  
-|`BorderStyle`|Retorna ou define o estilo de borda para um controle. Esta é uma propriedade de leitura/gravação.|  
-|**Legenda**|Retorna ou define o controle **legenda** propriedade. A legenda é o título da janela. **Legenda** não tem nenhum **variável membro** tipo de implementação.|  
-|**Habilitado**|Retorna ou define o controle **habilitado** propriedade. Um controle habilitado pode responder a eventos gerados pelo usuário.|  
-|**Fonte**|Retorna ou define a fonte de ambiente do controle. NULL se o controle não tiver nenhuma fonte.|  
-|`ForeColor`|Retorna ou define o controle ambiente `ForeColor` propriedade.|  
-|**hWnd**|Retorna ou define o controle **hWnd** propriedade. **hWnd** não tem nenhum **variável membro** tipo de implementação.|  
-|**Estado de prontidão é**|Retorna ou define o controle **estado de prontidão é** propriedade. Um controle pode ser não inicializada, inicializado, carregar, interativo ou completa. Consulte [estado de prontidão é](https://msdn.microsoft.com/en-us/library/aa768362.aspx) no *SDK Internet* para obter mais informações.|  
-|**Texto**|Retorna ou define o texto contido em um controle. **Texto** não tem nenhum **variável membro** tipo de implementação.|  
+|**Appearance**|Retorna ou define um valor que determina a aparência do controle. A propriedade **Appearance** do controle pode incluir ou omitir efeitos de exibição tridimensionais. Essa é uma propriedade de leitura/gravação de ambiente.|  
+|`BackColor`|Retorna ou define a propriedade `BackColor` de ambiente do controle para uma cor da paleta (RGB) ou uma cor predefinida do sistema. Por padrão, seu valor corresponde à cor de primeiro plano do contêiner do controle. Essa é uma propriedade de leitura/gravação de ambiente.|  
+|`BorderStyle`|Retorna ou define o estilo da borda de um controle. Essa é uma propriedade de leitura/gravação.|  
+|**Caption**|Retorna ou define a propriedade **Caption** do controle. A legenda é o título da janela. **Caption** não tem nenhum tipo de implementação **Variável de membro**.|  
+|**Habilitado**|Retorna ou define a propriedade **Enabled** do controle. Um controle habilitado pode responder aos eventos gerados pelo usuário.|  
+|**Fonte**|Retorna ou define a fonte de ambiente do controle. Nulo se o controle não tem nenhuma fonte.|  
+|`ForeColor`|Retorna ou define a propriedade `ForeColor` de ambiente do controle.|  
+|**hWnd**|Retorna ou define a propriedade **hWnd** do controle. **hWnd** não tem nenhum tipo de implementação **Variável de membro**.|  
+|**ReadyState**|Retorna ou define a propriedade **ReadyState** do controle. Um controle pode estar nos seguintes estados: inicialização cancelada, inicializado, carregando, interativo ou completo. Confira [READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx) no *SDK da Internet* para obter mais informações.|  
+|**Texto**|Retorna ou define o texto contido em um controle. **Text** não tem nenhum tipo de implementação **Variável de membro**.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionando uma propriedade](../ide/adding-a-property-visual-cpp.md)   

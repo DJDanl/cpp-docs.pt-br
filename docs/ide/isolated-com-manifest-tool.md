@@ -1,5 +1,5 @@
 ---
-title: Ferramenta de manifesto isolado COM propriedades (Visual C++) | Microsoft Docs
+title: Propriedades de COM Isolado da Ferramenta de Manifesto (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,34 +19,35 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: c425a71f8bb8a7972ade29fb0d18cf3eab7debb5
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330175"
 ---
-# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Isolar as propriedades de configuração do DCOM, ferramenta de manifesto, &lt;Projectname&gt; caixa de diálogo de páginas de propriedades
-Use essa caixa de diálogo para especificar **isolado COM** opções de [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Caixa de diálogo COM Isolado, Ferramenta de Manifesto, Propriedades de Configuração, Páginas de Propriedades de &lt;Projectname&gt;
+Use essa caixa de diálogo para especificar as opções de **COM Isolado** para [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- Para acessar essa caixa de diálogo de página de propriedade, abra as páginas de propriedades para o projeto ou a folha de propriedades. Expanda o **ferramenta de manifesto** nó **propriedades comuns**e, em seguida, selecione **isolado COM**.  
+ Para acessar essa caixa de diálogo da página de propriedades, abra as páginas de propriedades do projeto ou da folha de propriedades. Expanda o nó **Ferramenta de Manifesto** em **Propriedades Comuns** e, em seguida, selecione **COM Isolado**.  
   
 ## <a name="task-list"></a>Lista de Tarefas  
   
 -   [Como compilar aplicativos isolados para consumir componentes COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
   
 ## <a name="uielement-list"></a>Lista UIElement  
- **Arquivo de biblioteca de tipo**  
- Usa a opção /tlb para especificar o nome do arquivo de biblioteca de tipo (arquivo. tlb) que usará a ferramenta de manifesto para gerar o arquivo de manifesto.  
+ **Arquivo de Biblioteca de Tipos**  
+ Usa a opção /tlb para especificar o nome do arquivo de biblioteca de tipos (arquivo .tlb) que será usado pela ferramenta de manifesto para gerar o arquivo de manifesto.  
   
- **Arquivo de Script de registrador**  
- Usa a opção /rgs para especificar o nome do arquivo de script de registrador (arquivo. rgs) que usará a ferramenta de manifesto para gerar o arquivo de manifesto.  
+ **Arquivo de Script do Registrador**  
+ Usa a opção /rgs para especificar o nome do arquivo de script do registrador (arquivo .rgs) que será usado pela ferramenta de manifesto para gerar o arquivo de manifesto.  
   
- **Nome de arquivo do componente**  
- Usa a opção /dll para especificar o nome do recurso que gerarão a ferramenta de manifesto. Você deve inserir um valor para essa propriedade quando os valores para o **arquivo de biblioteca de tipo** ou **arquivo Script de registrador** são especificados.  
+ **Nome de Arquivo do Componente**  
+ Usa a opção /dll para especificar o nome do recurso que será gerado pela ferramenta de manifesto. É necessário inserir um valor para essa propriedade quando os valores de **Arquivo de Biblioteca de Tipos** ou **Arquivo de Script do Registrador** são especificados.  
   
- **Arquivo de substituições**  
- Usa a opção /replacements para especificar o caminho completo para o arquivo que contém os valores de cadeias de caracteres substituíveis no arquivo. rgs.  
+ **Arquivo de Substituições**  
+ Usa a opção /replacements para especificar o caminho completo para o arquivo que contém os valores das cadeias de caracteres substituíveis no arquivo .rgs.  
   
 ## <a name="see-also"></a>Consulte também  
  [Aplicativos isolados](http://msdn.microsoft.com/library/aa375190)   
  [Manifesto do aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
- [Páginas de propriedade da ferramenta de manifesto](../ide/manifest-tool-property-pages.md)   
+ [Páginas de propriedades da Ferramenta de Manifesto](../ide/manifest-tool-property-pages.md)   
  [Trabalhando com Propriedades do Projeto](../ide/working-with-project-properties.md)   

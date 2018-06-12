@@ -1,5 +1,5 @@
 ---
-title: Especificando eventos de Build | Microsoft Docs
+title: Especificando eventos de build | Microsoft Docs
 ms.custom: ''
 ms.date: 12/28/2017
 ms.technology:
@@ -27,39 +27,40 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334958"
 ---
 # <a name="specifying-build-events"></a>Especificando eventos de build
 
-Você pode usar eventos de compilação para especificar comandos executados antes do início da compilação, antes que o processo de link, ou após a conclusão da compilação.
+Use eventos de build para especificar comandos que são executados antes do início do build, antes do processo de vínculo ou após a conclusão do build.
 
-Eventos de build são executados somente se o build atingir com êxito esses pontos no processo de build. Se ocorrer um erro na compilação, o *pós-compilação* evento não ocorrerá; se o erro ocorrer antes da fase de vinculação, nem o *pré-vínculo* nem o *pós-compilação* evento ocorre. Além disso, se nenhum arquivo precisa ser vinculado, o *pré-vínculo* evento não ocorrerá. O *pré-vínculo* evento também não está disponível nos projetos que não contêm uma etapa de link.
+Eventos de build são executados somente se o build atingir com êxito esses pontos no processo de build. Se ocorrer um erro no build, o evento *pós-build* não ocorrerá; se o erro ocorrer antes da fase de vinculação, os eventos *pré-vínculo* e *pós-build* não ocorrerão. Além disso, se nenhum arquivo precisar ser vinculado, o evento *pré-vínculo* não ocorrerá. O evento *pré-vínculo* também não está disponível em projetos que não contêm uma etapa de vínculo.
 
-Se nenhum arquivo precisa ser criado, não ocorre nenhum evento de compilação.
+Se nenhum arquivo precisar ser compilado, não ocorrerá nenhum evento de build.
 
-Para obter informações gerais sobre eventos de build, consulte [etapas de compilação personalizada de Noções básicas sobre e eventos de Build](../ide/understanding-custom-build-steps-and-build-events.md).
+Para obter informações gerais sobre eventos de build, confira [Noções básicas sobre eventos e etapas de build personalizadas](../ide/understanding-custom-build-steps-and-build-events.md).
 
 ### <a name="to-specify-a-build-event"></a>Para especificar um evento de build
 
 1. No **Gerenciador de Soluções**, selecione o projeto para o qual deseja especificar o evento de build.
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter mais informações, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter mais informações, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).
 
-1. No **eventos de Build** pasta, selecione uma página de propriedades de evento de compilação.
+1. Na pasta **Eventos de Build**, selecione uma página de propriedades do evento de build.
 
-1. Especifique as propriedades associadas ao evento de compilação:
+1. Especifique as propriedades associadas ao evento de build:
 
-   - Em **linha de comando**, especifique um comando como se foram especificá-lo no prompt de comando. Especifique um comando válido ou um arquivo em lote, e qualquer entrada necessária ou arquivos de saída. Especifique o **chamar** comando antes do nome de um arquivo em lotes para garantir que todos os comandos subsequentes serão executados em lote.
+   - Em **Linha de Comando**, especifique um comando como se o estivesse especificando no prompt de comando. Especifique um comando ou arquivo em lotes válido e os arquivos de entrada ou de saída necessários. Especifique o comando em lote **call** antes do nome de um arquivo em lotes para assegurar que todos os comandos seguintes sejam executados.
 
-      Vários arquivos de entrada e saídos podem ser especificados de maneira simbólica com macros do MSBuild. Para obter informações sobre como especificar o local dos arquivos ou os nomes dos conjuntos de arquivos, consulte [comuns Macros para compilar comandos e propriedades](../ide/common-macros-for-build-commands-and-properties.md).
+      Vários arquivos de entrada e de saída podem ser especificados simbolicamente com macros do MSBuild. Para obter informações sobre como especificar o local dos arquivos ou os nomes dos conjuntos de arquivos, confira [Macros comuns para comandos e propriedades de build](../ide/common-macros-for-build-commands-and-properties.md).
 
-      Como o caractere '%' é reservado pelo MSBuild, se você especificar uma variável de ambiente substitua cada **%** escape de caractere com o **% 25** sequência de escape hexadecimal. Por exemplo, substitua **% WINDIR %** com **25WINDIR % 25**. MSBuild substitui cada **% 25** de sequência com a **%** caracteres antes de acessar a variável de ambiente.
+      Como o caractere '%' é reservado pelo MSBuild, se você especificar uma variável de ambiente, substitua cada caractere de escape **%** pela sequência de escape hexadecimal **%25**. Por exemplo, substitua **%WINDIR%** por **%25WINDIR%25**. O MSBuild substitui cada sequência **%25** pelo caractere **%** antes de acessar a variável de ambiente.
 
-   - Em **descrição**, digite uma descrição para esse evento. A descrição é impressa a **saída** janela quando esse evento ocorrer.
+   - Em **Descrição**, digite uma descrição para esse evento. A descrição será impressa na janela de **Saída** quando esse evento ocorrer.
 
-   - Em **excluído da compilação**, especifique **Sim** se você não quiser que o evento seja executado.
+   - Em **Excluído do Build**, especifique **Sim** se não desejar que o evento seja executado.
 
 ## <a name="see-also"></a>Consulte também
 

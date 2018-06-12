@@ -1,5 +1,5 @@
 ---
-title: Adicionar uma função de membro (Visual C++) | Microsoft Docs
+title: Adicionando uma função de membro (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,27 +19,28 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: c79f6eaebae0065a631b8ac31a7254cdc96080e9
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324181"
 ---
 # <a name="adding-a-member-function-visual-c"></a>Adicionando uma função de membro (Visual C++)
-Em **exibição de classe**, você pode adicionar uma função de membro para qualquer classe. Quando você fizer isso, uma declaração é adicionada ao arquivo de cabeçalho e um corpo de função de membro de stub é adicionado ao arquivo de implementação da classe, que você pode modificar.  
+Em **Modo de Exibição de Classe**, adicione uma função de membro a qualquer classe. Quando você faz isso, uma declaração é adicionada ao arquivo de cabeçalho e o corpo de uma função de membro de stub é adicionado ao arquivo de implementação da classe, que pode então ser modificado.  
   
 ### <a name="to-add-a-member-function-to-a-class"></a>Para adicionar uma função de membro a uma classe  
   
-1.  Em **exibição de classe**, expanda o nó do projeto para exibir as classes no projeto. (Para abrir **exibição de classe**, na barra de menus, escolha **exibição**, **exibição de classe**.)  
+1.  Em **Modo de Exibição de Classe**, expanda o nó do projeto para exibir as classes no projeto. (Para abrir **Modo de Exibição de Classe**, na barra de menus, escolha **Exibir**, **Modo de Exibição de Classe**.)  
   
-2.  Abra o menu de atalho para a classe que você deseja adicionar uma função de membro e, em seguida, escolha **adicionar**, **Adicionar função**.  
+2.  Abra o menu de atalho da classe à qual deseja adicionar uma função de membro e, em seguida, escolha **Adicionar**, **Adicionar Função**.  
   
-3.  Forneça os detalhes apropriados sobre a função de membro. Para obter mais informações, consulte [Adicionar Assistente de função de membro](../ide/add-member-function-wizard.md).  
+3.  Forneça os detalhes apropriados sobre a função de membro. Para obter mais informações, confira [Assistente de Adição de Função de Membro](../ide/add-member-function-wizard.md).  
   
-4.  Escolha o **concluir** botão para gerar o código de função de membro.  
+4.  Escolha o botão **Concluir** para gerar o código da função de membro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionando funcionalidade com assistentes de código](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Adicionando uma classe](../ide/adding-a-class-visual-cpp.md)   
- [Adicionar uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)   
- [Substituindo uma função Virtual](../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [Adicionando uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)   
+ [Substituindo uma função virtual](../ide/overriding-a-virtual-function-visual-cpp.md)   
  [Manipulador de mensagens do MFC](../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navegando na estrutura de classe](../ide/navigating-the-class-structure-visual-cpp.md)
+ [Navegando pela estrutura de classe](../ide/navigating-the-class-structure-visual-cpp.md)

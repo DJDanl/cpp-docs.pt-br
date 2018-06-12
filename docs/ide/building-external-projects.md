@@ -20,16 +20,17 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 97b6aa1e5939afe55644df6529bf75ba043f20bb
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330340"
 ---
 # <a name="building-external-projects"></a>Compilando projetos externos
-Um projeto externo é um projeto do Visual C++ que usa um makefile ou outros recursos que estão fora (externa ou externa) o ambiente de desenvolvimento do Visual C++.  
+Um projeto externo é um projeto do Visual C++ que usa um makefile ou outros recursos que estão fora (externos) do ambiente de desenvolvimento do Visual C++.  
   
- Se você tiver um projeto externo (por exemplo, um projeto makefile) que você deseja compilar no ambiente de desenvolvimento do Visual C++, crie um projeto Makefile e especifique seu projeto de compilação comando e saída no Assistente do aplicativo Makefile. Para obter mais informações, consulte [criando um projeto Makefile](../ide/creating-a-makefile-project.md).  
+ Caso você tenha um projeto externo (por exemplo, um projeto makefile) que deseja compilar no ambiente de desenvolvimento do Visual C++, crie um projeto Makefile e especifique o comando e a saída de build do projeto no Assistente de Aplicativo Makefile. Para obter mais informações, confira [Criando um projeto makefile](../ide/creating-a-makefile-project.md).  
   
- Observe que o Visual C++ não suporta a capacidade de exportar um makefile para o projeto ativo no ambiente de desenvolvimento. Use [opções de linha de comando Devenv](/visualstudio/ide/reference/devenv-command-line-switches) para compilar projetos do Visual Studio na linha de comando.  
+ Observe que o Visual C++ não dá mais suporte à capacidade de exportar um makefile para o projeto ativo no ambiente de desenvolvimento. Use as [Opções de linha de comando Devenv](/visualstudio/ide/reference/devenv-command-line-switches) para compilar projetos do Visual Studio na linha de comando.  
   
 ## <a name="see-also"></a>Consulte também  
  [Compilando projetos do C++ no Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)

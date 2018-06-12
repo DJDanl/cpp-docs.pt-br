@@ -23,33 +23,34 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: b3afbd2019965d859895462cfdad57292bc2e0b3
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332417"
 ---
-# <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Criando e gerenciando projetos do Visual C++ com base em MSBuild
-MSBuild é o sistema de compilação nativa para Visual C++ e geralmente é que melhor criar o sistema a ser usado para aplicativos UWP, bem como aplicativos de área de trabalho que usam bibliotecas MFC ou do ATL. MSBuild está totalmente integrado com o Visual Studio IDE e o sistema de projeto, mas você também pode usá-lo na linha de comando. A partir do Visual Studio de 2017, Visual C++ dá suporte a [CMake e outros sistemas de MSBuild não por meio do recurso Abrir pasta](non-msbuild-projects.md).
+# <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Criando e gerenciando projetos do Visual C++ baseados no MSBuild
+O MSBuild é o sistema de build nativo para o Visual C++ e, geralmente, é o melhor sistema de build a ser usado para aplicativos UWP, bem como para aplicativos da Área de Trabalho que usam bibliotecas MFC ou ATL. O MSBuild está totalmente integrado com o IDE e o sistema de projeto do Visual Studio, mas você também pode usá-lo na linha de comando. Começando pelo Visual Studio 2017, o Visual C++ dá suporte ao [CMake e a outros sistemas que não são MSBuild, por meio do recurso Abrir Pasta](non-msbuild-projects.md).
 
-Um projeto do MSBuild tem um arquivo de projeto em formato XML (. vcxproj) que especifica todos os arquivos e recursos necessários para compilar o programa, bem como outras configurações, por exemplo, a plataforma de destino (x 86, x64 ou ARM) e se você estiver criando um versão da liberação ou versão de depuração do programa. Um projeto (ou vários projetos) estão contidos em um *solução*; por exemplo, uma solução pode conter vários projetos de DLL Win32 e um único aplicativo de console Win32 que usa as DLLs. Quando você compila o projeto, o mecanismo MSBuild consome o arquivo de projeto e produz o arquivo executável e/ou outra saída de personalizado que você especificou.
+Um projeto baseado no MSBuild tem um arquivo de projeto em formato XML (.vcxproj) que especifica todos os arquivos e recursos necessários para compilar o programa, bem como outras definições de configuração, por exemplo, a plataforma de destino (x86, x64 ou ARM) e indica se você está compilando uma versão de lançamento ou de depuração do programa. Um projeto (ou muitos projetos) estão contidos em uma *Solução*; por exemplo, uma solução pode conter vários projetos de DLL do Win32 e um único aplicativo de console Win32 que usa essas DLLs. Quando você compila o projeto, o mecanismo MSBuild consome o arquivo de projeto e produz o arquivo executável e/ou outra saída personalizada especificada.
 
-Você pode criar projetos do Visual C++, escolhendo **arquivo &#124; novo &#124; projeto**, garantindo que o Visual C++ está selecionado no painel esquerdo e, em seguida, escolhendo na lista de modelos de projeto no painel central. Quando você clica em um modelo, em muitos casos um assistente será exibida que permite que você defina várias propriedades de projeto para que o projeto é criado. Você pode exibir e modificar as propriedades mais tarde usando as páginas de propriedades do projeto (**projeto &#124; propriedades**).  
+Crie projetos do Visual C++ escolhendo **Arquivo &#124; Novo &#124; Projeto**, garantindo que o Visual C++ esteja selecionado no painel esquerdo e, em seguida, escolhendo uma opção na lista de modelos de projeto no painel central. Quando você clicar em um modelo, em muitos casos, será exibido um assistente, que permite definir várias propriedades do projeto antes de sua criação. Exiba e modifique essas propriedades posteriormente usando as páginas de propriedades do projeto (**Projeto &#124; Propriedades**).  
   
- Você também pode criar novos projetos por:  
+ Crie também novos projetos das seguintes maneiras:  
   
--   escolhendo **arquivo &#124; novo &#124; projeto de código existente** e seguir as instruções para adicionar arquivos de código fonte existente. Essa opção funciona melhor para projetos relativamente pequenos e simples, talvez 25 arquivos códigos-fonte ou menos, com poucas ou nenhuma dependências complexas.  
+-   escolhendo **Arquivo &#124; Novo &#124; Projeto com base em um Código Existente** e seguindo os prompts para adicionar arquivos de código-fonte existentes. Essa opção funciona melhor para projetos relativamente pequenos e simples, talvez com 25 arquivos de código-fonte ou menos, com poucas ou nenhuma dependência complexa.  
   
--   começando com um makefile e escolha o modelo de projeto Makefile na guia Geral.  
+-   começando com um makefile e escolhendo o modelo de Projeto Makefile na guia Geral.  
   
--   Criando um projeto vazio (sob o **geral** guia) e adicionar manualmente os arquivos de código fonte clicando duas vezes no nó do projeto no Gerenciador de soluções e escolha **adicionar &#124; Item existente**.  
+-   criando um projeto vazio (na guia **Geral**) e adicionando os arquivos de código-fonte manualmente clicando com o botão direito do mouse no nó do projeto no Gerenciador de Soluções e escolhendo **Adicionar &#124; Item Existente**.  
   
--   usando o [Assistente de aplicativo Win32](../windows/win32-application-wizard.md).  
+-   usando o [Assistente de Aplicativo Win32](../windows/win32-application-wizard.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Tipos de projeto do Visual C++](../ide/visual-cpp-project-types.md)  
- Descreve os tipos de projeto com base em MSBuild estão disponíveis no Visual C++.  
+ Descreve os tipos de projeto baseados no MSBuild disponíveis no Visual C++.  
   
  [Tipos de arquivo criados para projetos do Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)  
- Descreve os tipos de arquivos que são usados com vários tipos de projeto do MSBuild.  
+ Descreve os tipos de arquivos usados ​com vários tipos de projeto do MSBuild.  
   
  [Criando projetos para área de trabalho com Assistentes de Aplicativo](../ide/creating-desktop-projects-by-using-application-wizards.md)  
  Como usar os assistentes para criar projetos com o Visual C++.  

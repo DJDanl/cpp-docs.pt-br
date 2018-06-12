@@ -1,5 +1,5 @@
 ---
-title: 'Página de propriedades da etapa de compilação personalizada: Geral | Microsoft Docs'
+title: 'Página de propriedades de Etapa de Build Personalizada: Geral | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,14 +24,15 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 5d88bd738711058794a525217ba2640e8d52356d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325923"
 ---
 # <a name="custom-build-step-property-page-general"></a>Página de Propriedades de Etapa de Build Personalizado: geral
 Para cada combinação de configuração de projeto e plataforma de destino em seu projeto, você pode especificar uma etapa personalizada a ser executada quando o projeto é compilado.  
 
-Para a versão do Linux dessa página, consulte [propriedades da etapa de compilação personalizada (C++ Linux)](../linux/prop-pages/custom-build-step-linux.md).
+Para obter a versão do Linux desta página, confira [Propriedades de Etapa de Build Personalizada (Linux C++)](../linux/prop-pages/custom-build-step-linux.md).
   
 ## <a name="uielement-list"></a>Lista UIElement  
  **Linha de comando**  
@@ -46,17 +47,17 @@ Para a versão do Linux dessa página, consulte [propriedades da etapa de compil
  **Dependências adicionais**  
  Uma lista delimitada por ponto-e-vírgula de arquivos de entrada adicionais a ser usada para a etapa de compilação personalizada.  
   
- **Depois de execução e execução antes de**  
+ **Executar depois e executar antes**  
  Essas opções definem quando a etapa de compilação personalizada é executada no processo de compilação, em relação aos destinos listados. Os destinos mais comumente listados são BuildGenerateSources, BuildCompile e BuildLink, porque representam as etapas principais no processo de compilação. Outros destinos frequentemente listados são Midl, CLCompile e Link.  
   
  Tratar saída como conteúdo  
- Essa opção só é significativa para aplicativos de plataforma Universal do Windows ou Windows Phone, que incluem todos os arquivos de conteúdo no pacote. AppX.  
+ Essa opção só é significativa para aplicativos da Plataforma Universal do Windows ou do Windows Phone, que incluem todos os arquivos de conteúdo no pacote .appx.  
   
 ### <a name="to-specify-a-custom-build-step"></a>Para especificar uma etapa de compilação personalizada  
   
-1.  Na barra de menus, escolha **Projeto**, **Propriedades**. Para obter mais informações, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).  
+1.  Na barra de menus, escolha **Projeto**, **Propriedades**. Para obter mais informações, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).  
   
-2.  No **páginas de propriedade** caixa de diálogo, navegue até o **propriedades de configuração**, **etapa de compilação personalizada**, **geral** página.  
+2.  Na caixa de diálogo **Páginas de Propriedades**, navegue para a página **Propriedades de Configuração**, **Etapa de Build Personalizada**, **Geral**.  
   
 3.  Modifique as configurações.  
   

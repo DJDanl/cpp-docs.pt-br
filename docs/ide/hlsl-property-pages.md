@@ -1,5 +1,5 @@
 ---
-title: Páginas de propriedade HLSL | Microsoft Docs
+title: Páginas de propriedades de HLSL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 86bbd23f1c9fcfcc0a19d7a2c1b66f3500d84361
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323125"
 ---
 # <a name="hlsl-property-pages"></a>Páginas de propriedade HLSL
-Você pode usar as páginas de propriedade HLSL compilador (fxc.exe) para configurar como individual shader HLSL arquivos são criados. As propriedades são divididas em três categorias:  
+Use as páginas de propriedades do compilador HLSL (fxc.exe) para configurar como os arquivos individuais do sombreador HLSL são criados. As propriedades são divididas em três categorias:  
   
 -   [Páginas de propriedade HLSL: geral](../ide/hlsl-property-pages-general.md)  
   
-     Fornece propriedades para especificar as opções usadas comumente para o compilador HLSL.  
+     Fornece propriedades para especificar as opções geralmente usadas para o compilador HLSL.  
   
 -   [Páginas de propriedade HLSL: avançado](../ide/hlsl-property-pages-advanced.md)  
   
@@ -33,11 +34,11 @@ Você pode usar as páginas de propriedade HLSL compilador (fxc.exe) para config
   
 -   [Páginas de propriedades HLSL: arquivos de saída](../ide/hlsl-property-pages-output-files.md)  
   
-     Fornece propriedades para especificar como os arquivos são saída pelo compilador HLSL.  
+     Fornece propriedades para especificar como os arquivos são produzidos pelo compilador HLSL.  
   
- Você pode especificar argumentos de linha de comando para o compilador HLSL usando o **opções adicionais** propriedade do **linha de comando** página de propriedades; isso inclui argumentos que não podem ser configurados usando outros propriedades das páginas de propriedades HLSL. Para obter informações sobre o compilador HLSL, consulte [ferramenta do compilador de efeitos](http://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)  
+ Especifique argumentos de linha de comando para o compilador HLSL usando a propriedade **Opções Adicionais** da página de propriedades da **Linha de Comando**; isso inclui argumentos que não podem ser configurados usando outras propriedades das páginas de propriedades de HLSL. Para obter informações sobre o compilador HLSL, confira [Ferramenta Compilador de Efeitos](http://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)  
   
 ## <a name="see-also"></a>Consulte também  
- [Páginas de propriedade](../ide/property-pages-visual-cpp.md)   
- [Páginas de propriedades de linha de comando](../ide/command-line-property-pages.md)   
+ [Páginas de propriedades](../ide/property-pages-visual-cpp.md)   
+ [Páginas de propriedades da Linha de Comando](../ide/command-line-property-pages.md)   
  [Compilando sombreadores](http://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)

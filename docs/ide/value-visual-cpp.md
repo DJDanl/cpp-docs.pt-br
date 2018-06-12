@@ -1,5 +1,5 @@
 ---
-title: '&lt;valor&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;value&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325390"
 ---
-# <a name="ltvaluegt-visual-c"></a>&lt;valor&gt; (Visual C++)
-O \<valor > marca permite descrever uma propriedade e métodos de acessador de propriedade. Observe que quando você adiciona uma propriedade com um Assistente de código no ambiente de desenvolvimento integrado do Visual Studio, ele adicionará um [ \<resumo >](../ide/summary-visual-cpp.md) marca para a nova propriedade. Então, você deve adicionar manualmente uma marca \<value> para descrever o valor que a propriedade representa.  
+# <a name="ltvaluegt-visual-c"></a>&lt;value&gt; (Visual C++)
+A marcação \<value> permite descrever uma propriedade e os métodos do acessador de propriedade. Observe que, quando você adicionar uma propriedade com um assistente de código no ambiente de desenvolvimento integrado do Visual Studio, ele adicionará uma marcação [\<summary>](../ide/summary-visual-cpp.md) à nova propriedade. Então, você deve adicionar manualmente uma marca \<value> para descrever o valor que a propriedade representa.  
   
 ## <a name="syntax"></a>Sintaxe  
   

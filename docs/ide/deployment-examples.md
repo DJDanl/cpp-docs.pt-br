@@ -18,9 +18,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 436b289c14110dd8f616112a309e757618b6f954
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327405"
 ---
 # <a name="deployment-examples"></a>Exemplos de implantação
 Esta seção contém exemplos que demonstram como implantar aplicativos do Visual C++.  
@@ -36,4 +37,4 @@ Esta seção contém exemplos que demonstram como implantar aplicativos do Visua
   
 ## <a name="see-also"></a>Consulte também  
  [Walkthrough: Manually Deploying a ClickOnce Application](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  (Instruções passo a passo: implantando manualmente um aplicativo ClickOnce)  
- [Implantando aplicativos de área de trabalho](../ide/deploying-native-desktop-applications-visual-cpp.md)
+ [Implantando aplicativos da área de trabalho](../ide/deploying-native-desktop-applications-visual-cpp.md)

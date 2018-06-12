@@ -1,5 +1,5 @@
 ---
-title: Nomes, Assistente para adicionar propriedade | Microsoft Docs
+title: Nomes, Assistente de Adição de Propriedade | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,86 +16,87 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 17c3fd5cfc86f76fcdc1c301bd92bb1fdfac3b9c
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339560"
 ---
 # <a name="names-add-property-wizard"></a>Nomes, Assistente para Adicionar Propriedade
 Use este assistente para adicionar uma propriedade a uma interface.  
   
  **Tipo de propriedade**  
- Define o tipo de propriedade que você está adicionando. Para dispinterfaces MFC, fornecer seu próprio tipo ou selecione da lista predefinida. Se você fornecer uma implementação de uma propriedade de estoque **tipo de propriedade** é definido como o tipo de ação e não está disponível para a alteração.  
+ Define o tipo de propriedade que está sendo adicionado. Para dispinterfaces MFC, forneça seu próprio tipo ou selecione um na lista predefinida. Se você fornecer uma implementação de estoque de uma propriedade, **Tipo de propriedade** será definido como o tipo de estoque e não ficará disponível para alteração.  
   
  **Nome da propriedade**  
- Define o nome da propriedade. Para dispinterfaces MFC associados com controles ActiveX, você pode fornecer seu próprio nome ou você pode selecionar um nome de propriedade de estoque da lista predefinida. Se você fornecer seu próprio nome de propriedade, o **estoque** tipo de implementação não está disponível. Consulte [propriedades de estoque](../ide/stock-properties.md) para obter uma descrição das propriedades na lista.  
+ Define o nome da propriedade. Para dispinterfaces MFC associadas a controles ActiveX, forneça seu próprio nome ou selecione um nome de propriedade de estoque na lista predefinida. Se você fornecer seu próprio nome de propriedade, o tipo de implementação **Estoque** não ficará disponível. Confira [Propriedades de estoque](../ide/stock-properties.md) para obter uma descrição das propriedades na lista.  
   
 |Tipo de interface|Descrição|  
 |--------------------|-----------------|  
 |Interface dupla ATL, interface personalizada e interface personalizada local|Forneça um nome de propriedade.|  
-|Dispinterface MFC, dispinterface de controle ActiveX MFC|Forneça um nome de propriedade ou selecione uma propriedade de estoque na lista. Se você selecionar uma propriedade na lista, o valor apropriado aparece no **tipo de propriedade** caixa. Você pode alterar esse tipo, dependendo da seleção em **implementação do tipo**.|  
+|Dispinterface MFC, dispinterface MFC do controle ActiveX|Forneça um nome de propriedade ou selecione uma propriedade de estoque na lista. Se você selecionar uma propriedade na lista, o valor apropriado será exibido na caixa **Tipo de propriedade**. Você pode alterar esse tipo, dependendo da seleção em **Tipo de implementação**.|  
   
  **Tipo de retorno**  
- Apenas interfaces ATL. Define o tipo de retorno para a propriedade. Para interfaces duplas, `HRESULT` sempre é o tipo de retorno, e essa caixa fica indisponível. Para interfaces personalizados, você pode selecionar um tipo de retorno na lista. `HRESULT` ainda é recomendável, porque ele fornece uma maneira padrão para retornar erros.  
+ Somente interfaces ATL. Define o tipo de retorno para a propriedade. Para interfaces duplas, `HRESULT` sempre é o tipo de retorno, e essa caixa não fica disponível. Para interfaces personalizadas, selecione um tipo de retorno na lista. `HRESULT` ainda é recomendável, porque fornece uma maneira padrão de retornar erros.  
   
  **Nome da variável**  
- Somente dispinterfaces do MFC. Disponível somente se você especificar **variável membro** em **implementação do tipo**. Define o nome da variável de membro ao qual a propriedade está associada. Por padrão, o nome da variável é definido como m _*PropertyName*. Você pode editar esse nome.  
+ Somente dispinterfaces MFC. Disponível somente se você especificar **Variável de membro** em **Tipo de implementação**. Define o nome da variável de membro ao qual a propriedade está associada. Por padrão, o nome da variável é definido como m_*PropertyName*. É possível editar esse nome.  
   
  **Função de notificação**  
- Somente dispinterfaces do MFC. Disponível somente se você especificar **variável membro** em **implementação do tipo**. Define o nome da notificação função chamada se as alterações de propriedade. Por padrão, o nome da função de notificação é definido como ativado*PropertyName*alterado. Você pode editar esse nome.  
+ Somente dispinterfaces MFC. Disponível somente se você especificar **Variável de membro** em **Tipo de implementação**. Define o nome da função de notificação chamada se a propriedade é alterada. Por padrão, o nome da função de notificação é definido como On*PropertyName*Changed. É possível editar esse nome.  
   
  **Função Get**  
- Para dispinterfaces do MFC. Disponível somente se você especificar **métodos Get/Set** em **implementação do tipo**. Define o nome da função para obter a propriedade. Por padrão, o nome da função Get é definido como Get*PropertyName*. Você pode editar esse nome. Se você excluir o nome, a função [GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported) é inserido no mapa de expedição de interface. Get*PropertyName* função especifica que a propriedade como legível.  
+ Para dispinterfaces MFC. Disponível somente se você especificar **Métodos Get/Set** em **Tipo de implementação**. Define o nome da função para obter a propriedade. Por padrão, o nome da função Get é definido como Get*PropertyName*. É possível editar esse nome. Se você excluir o nome, a função [GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported) será inserida no mapa de expedição da interface. A função Get*PropertyName* especifica a propriedade como legível.  
   
- **função de conjunto**  
- Somente dispinterfaces do MFC. Disponível somente se você especificar **métodos Get/Set** em **implementação do tipo**. Define o nome da função para definir a propriedade. Por padrão, o nome da função de conjunto é definido como conjunto*PropertyName*. Você pode editar esse nome. Se você excluir o nome, a função [SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported) é inserido no mapa de expedição de interface. O conjunto*PropertyName* função especifica que a propriedade é gravável.  
+ **Função Set**  
+ Somente dispinterfaces MFC. Disponível somente se você especificar **Métodos Get/Set** em **Tipo de implementação**. Define o nome da função para definir a propriedade. Por padrão, o nome da função Set é definido como Set*PropertyName*. É possível editar esse nome. Se você excluir o nome, a função [SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported) será inserida no mapa de expedição da interface. A função Set*PropertyName* especifica que a propriedade é gravável.  
   
  **Tipo de implementação**  
- Somente dispinterfaces do MFC. Especifica como implementar a propriedade que você está adicionando.  
+ Somente dispinterfaces MFC. Especifica como implementar a propriedade que está sendo adicionada.  
   
 |Tipo de implementação|Descrição|  
 |-------------------------|-----------------|  
-|**Estoque**|Especifica uma implementação de estoque para a propriedade selecionada em **nome da propriedade**. O padrão. Consulte [propriedades de estoque](../ide/stock-properties.md) para obter mais informações.<br /><br /> Se você especificar **estoque**, em seguida, **tipo de propriedade**, **tipo de parâmetro**, e **nome do parâmetro** estão esmaecidos.|  
-|**Variável de membro**|Especifica que a propriedade é adicionada como uma variável de membro. Você pode adicionar propriedades personalizadas ou a maioria das propriedades de estoque como variáveis de membro. Não é possível especificar **variável membro** para **legenda**, **hWnd**, e **texto** propriedades.<br /><br /> Fornece nomes padrão em **nome de variável** e **função notificação**. Você pode editar esse nome.|  
-|**Métodos Get/Set**|Especifica a propriedade é adicionada como Get*PropertyName* e defina*PropertyName* funções, por padrão. Esses nomes aparecerão em **obter função** e **função Set**.<br /><br /> Você pode alterar o padrão **tipo de propriedade**, que transmite um valor para a função Get. Você pode especificar parâmetros para o **obter** e `Set` funções.|  
+|**Estoque**|Especifica uma implementação de estoque para a propriedade selecionada em **Nome da propriedade**. O padrão. Confira [Propriedades de estoque](../ide/stock-properties.md) para obter mais informações.<br /><br /> Se você especificar **Estoque**, as opções **Tipo de propriedade**, **Tipo de parâmetro** e **Nome do parâmetro** ficarão esmaecidas.|  
+|**Variável de membro**|Especifica que a propriedade é adicionada como uma variável de membro. Adicione propriedades personalizadas ou a maioria das propriedades de estoque como variáveis de membro. Não é possível especificar **Membro de variável** para as propriedades **Caption**, **hWnd** e **Text**.<br /><br /> Fornece nomes padrão em **Nome da variável** e **Função de notificação**. É possível editar esse nome.|  
+|**Métodos Get/Set**|Especifica que a propriedade é adicionada como as funções Get*PropertyName* e Set*PropertyName*, por padrão. Esses nomes são exibidos em **Função Get** e **Função Set**.<br /><br /> Altere o **Tipo de propriedade** padrão, que passa um valor para a função Get. Especifique parâmetros para as funções **Get** e `Set`.|  
   
  **Função Get**  
- Para interfaces ATL. Define a propriedade como legível; ou seja, ele cria o **obter** método para recuperar esta propriedade do objeto. Você deve selecionar **obter**, `Put`, ou ambos.  
+ Para interfaces ATL. Define a propriedade como legível; ou seja, ela cria o método **Get** para recuperar essa propriedade do objeto. Você precisa selecionar **Get**, `Put` ou ambos.  
   
- **Colocar a função**  
- Apenas interfaces ATL. Define a propriedade gravável; ou seja, ele cria o `Put` método para definir ou "colocando", essa propriedade do objeto. Você deve selecionar **obter**, `Put`, ou ambos. Se você selecionar essa opção, você pode escolher entre duas maneiras de implementar o método a seguir:  
+ **Função Put**  
+ Somente interfaces ATL. Define a propriedade gravável; ou seja, ela cria o método `Put` para definição, ou "colocação", dessa propriedade do objeto. Você precisa selecionar **Get**, `Put` ou ambos. Se você selecionar essa opção, poderá escolher uma das duas seguintes maneiras de implementar o método:  
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**PropPut**|O [PropPut](../windows/propput.md) função retorna uma cópia do objeto. Este é o padrão e a maneira mais comum para tornar a propriedade gravável.|  
-|**PropPutRef**|O [PropPutRef](../windows/propputref.md) função retorna uma referência para o objeto, em vez de retornar a cópia do objeto em si. Considere usar essa opção para objetos, como estruturas grandes ou matrizes, que podem ter a sobrecarga de inicialização.|  
+|**PropPut**|A função [PropPut](../windows/propput.md) retorna uma cópia do objeto. Esse é o padrão e a maneira mais comum para tornar a propriedade gravável.|  
+|**PropPutRef**|A função [PropPutRef](../windows/propputref.md) retorna uma referência ao objeto, em vez de retornar a cópia do objeto em si. Considere o uso dessa opção para objetos, como structs ou matrizes grandes, que podem ter a sobrecarga de inicialização.|  
   
  **Atributos de parâmetro**  
- Apenas interfaces ATL. Define se o parâmetro especificado pelo **nome do parâmetro** é **na**, **out**, ambos ou nenhum.  
+ Somente interfaces ATL. Define se o parâmetro especificado pelo **Nome do parâmetro** é **in**, **out**, ambos ou nenhum.  
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**in**|Indica que o parâmetro é transmitido do procedimento de chamada para o procedimento chamado.|  
+|**in**|Indica que o parâmetro é passado do procedimento de chamada para o procedimento chamado.|  
 |**out**|Indica que o parâmetro de ponteiro é retornado do procedimento chamado para o procedimento de chamada (do servidor para o cliente).|  
   
  **Tipo de parâmetro**  
- Define o tipo de dados do parâmetro. Selecione o tipo da lista.  
+ Define o tipo de dados do parâmetro. Selecione o tipo na lista.  
   
  **Nome do parâmetro**  
- Define o nome de um parâmetro que você está adicionando para a propriedade, se a propriedade tem parâmetros. Depois de clicar em **adicionar**, o nome do parâmetro aparece no **lista de parâmetros**.  
+ Define o nome de um parâmetro que está adicionado à propriedade, se a propriedade tiver parâmetros. Depois de clicar em **Adicionar**, o nome do parâmetro é exibido em **Lista de parâmetros**.  
   
  **Lista de parâmetros**  
- Exibe a lista de atributos a serem adicionadas à propriedade. Cada item na lista consiste do nome de parâmetro, tipo de parâmetro e atributos. Use **adicionar** e **remover** para atualizar a lista.  
+ Exibe a lista de atributos a serem adicionadas à propriedade. Cada item na lista consiste no nome de parâmetro, no tipo de parâmetro e nos atributos. Use **Adicionar** e **Remover** para atualizar a lista.  
   
  **Adicionar**  
- Adiciona o parâmetro que você especificar na **nome do parâmetro** e **tipo de parâmetro** para o **lista de parâmetros**. Você deve clicar em **adicionar** para adicionar um parâmetro à lista.  
+ Adiciona o parâmetro especificado em **Nome do parâmetro** e em **Tipo de parâmetro** à **Lista de parâmetros**. Clique em **Adicionar** para adicionar um parâmetro à lista.  
   
  **Removerr**  
- Remove o parâmetro selecionado na **lista de parâmetros**.  
+ Remove o parâmetro selecionado em **Lista de parâmetros**.  
   
  **Propriedade padrão**  
- Dispinterface MFC somente. Define essa propriedade como o padrão para a interface. Uma interface pode ter apenas uma propriedade padrão; Depois de especificar a propriedade padrão, as outras propriedades que você adicionar à interface, essa caixa fica indisponível.  
+ Somente dispinterface MFC. Define essa propriedade como o padrão para a interface. Uma interface pode ter apenas uma propriedade padrão; depois de especificar a propriedade padrão, para as outras propriedades adicionadas à interface, essa caixa não fica disponível.  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionando uma propriedade](../ide/adding-a-property-visual-cpp.md)   
- [Atributos IDL, Assistente para adicionar propriedade](../ide/idl-attributes-add-property-wizard.md)   
- [Implementando uma Interface](../ide/implementing-an-interface-visual-cpp.md)
+ [Atributos IDL, Assistente de Adição de Propriedade](../ide/idl-attributes-add-property-wizard.md)   
+ [Implementando uma interface](../ide/implementing-an-interface-visual-cpp.md)

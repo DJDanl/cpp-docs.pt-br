@@ -1,5 +1,5 @@
 ---
-title: '&lt;Resumo&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;summary&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: c0dff1d6ce31f6b26c0f8a46ef2ff620a4d40f93
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322283"
 ---
-# <a name="ltsummarygt-visual-c"></a>&lt;Resumo&gt; (Visual C++)
+# <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 A marca \<summary> deve ser usada para descrever um tipo ou um membro de tipo. Use [\<remarks>](../ide/remarks-visual-cpp.md) para adicionar mais informações a uma descrição de tipo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,7 +39,7 @@ A marca \<summary> deve ser usada para descrever um tipo ou um membro de tipo. U
  Um resumo do objeto.  
   
 ## <a name="remarks"></a>Comentários  
- O texto para o \<resumo > marca é a única fonte de informações sobre o tipo do IntelliSense e também é exibida no [Pesquisador de objetos](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) e no relatório da Web de comentário de código.  
+ O texto da marcação \<summary> é a única fonte de informações sobre o tipo no IntelliSense e também é exibido no [Pesquisador de Objetos](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) e no relatório Web de comentários sobre código.  
   
  Compile com [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Páginas de propriedade HLSL: Avançado | Microsoft Docs'
+title: 'Páginas de propriedades de HLSL: Avançado | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,22 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 58dca91d5ab3bf0cf28d30a04d33ae8bf5819401
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321188"
 ---
 # <a name="hlsl-property-pages-advanced"></a>Páginas de propriedade HLSL: avançado
-Para configurar as seguintes propriedades do compilador HLSL (fxc.exe), use seu **avançado** página de propriedades. Para obter informações sobre como acessar o **avançado** página de propriedades na pasta HLSL, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).  
+Para configurar as propriedades a seguir do compilador HLSL (fxc.exe), use a página de propriedades **Avançado**. Para obter informações sobre como acessar a página de propriedades **Avançado** na pasta HLSL, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).  
   
 ## <a name="uielement-list"></a>Lista UIElement  
- **Suprimir faixa de inicialização**  
- **Sim (/ /nologo)** para suprimir a exibição da mensagem de faixa e informações de inicialização; caso contrário, **não**. Por padrão, o valor é **Sim (/ /nologo)**.  
+ **Suprimir Faixa de Inicialização**  
+ **Sim (/nologo)** para suprimir a exibição da faixa de inicialização e da mensagem informativa; caso contrário, **Não**. Por padrão, o valor é **Sim (/nologo)**.  
   
- **Tratar avisos como erros**  
- **Sim (/WX)** para tratar todos os avisos do compilador como erros; caso contrário, **não**.  
+ **Tratar Avisos como Erros**  
+ **Sim (/WX)** para tratar todos os avisos do compilador como erros; caso contrário, **Não**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Páginas de propriedade HLSL](../ide/hlsl-property-pages.md)   
- [Páginas de propriedade HLSL: geral](../ide/hlsl-property-pages-general.md)   
+ [Páginas de propriedades de HLSL](../ide/hlsl-property-pages.md)   
+ [Páginas de propriedades de HLSL: Geral](../ide/hlsl-property-pages-general.md)   
  [Páginas de propriedades HLSL: arquivos de saída](../ide/hlsl-property-pages-output-files.md)

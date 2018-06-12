@@ -1,5 +1,5 @@
 ---
-title: '&lt;Retorna&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;returns&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 7b9956299370b4a41ce725cf903ff2aefe55bf53
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336730"
 ---
-# <a name="ltreturnsgt-visual-c"></a>&lt;Retorna&gt; (Visual C++)
+# <a name="ltreturnsgt-visual-c"></a>&lt;returns&gt; (Visual C++)
 A marca \<returns> deve ser usada no comentário para uma declaração de método descrever o valor retornado.  
   
 ## <a name="syntax"></a>Sintaxe  

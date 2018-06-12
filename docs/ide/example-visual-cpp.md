@@ -1,5 +1,5 @@
 ---
-title: '&lt;exemplo&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;example&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: cefd38a18447d0e8c9121d61c0ba963e9da39187
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321425"
 ---
-# <a name="ltexamplegt-visual-c"></a>&lt;exemplo&gt; (Visual C++)
-A marca \<example> permite especificar um exemplo de como usar um método ou outro membro da biblioteca. Normalmente, isso envolveria também uso o [ \<código >](../ide/code-visual-cpp.md) marca.  
+# <a name="ltexamplegt-visual-c"></a>&lt;example&gt; (Visual C++)
+A marca \<example> permite especificar um exemplo de como usar um método ou outro membro da biblioteca. Normalmente, isso envolve também o uso da marcação [\<code>](../ide/code-visual-cpp.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   

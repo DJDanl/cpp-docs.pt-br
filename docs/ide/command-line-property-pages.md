@@ -1,5 +1,5 @@
 ---
-title: Páginas de propriedades de linha de comando | Microsoft Docs
+title: Páginas de propriedades da Linha de Comando | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,18 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 580c11d19a1d2ea5510390296a80589cce988f12
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327805"
 ---
 # <a name="command-line-property-pages"></a>Páginas de propriedades Linha de Comando
-A maioria das pastas de página de propriedade contêm uma **linha de comando** página de propriedades. Esta página exibe as propriedades que são definidas na pasta. O **linha de comando** propriedade página também contém um **opções adicionais** caixa onde você pode especificar propriedades que são válidas para a ferramenta, mas para os quais há nenhuma propriedade na pasta.  
+A maioria das pastas de páginas de propriedades contém uma página de propriedades da **Linha de Comando**. Essa página exibe quais propriedades são definidas na pasta. A página de propriedades da **Linha de Comando** também contém uma caixa **Opções Adicionais**, em que é possível especificar propriedades válidas para a ferramenta, mas para as quais não há nenhuma propriedade na pasta.  
   
- Qualquer comando que você inseriu na caixa de edição será passado para a ferramenta para a pasta. Nenhuma verificação ou verificações serão feitas na entrada, nem haverá nenhuma verificação de dependência.  
+ Qualquer comando inserido na caixa de edição será passado para a ferramenta na pasta. Nenhuma verificação será feita na entrada, nem haverá nenhuma verificação de dependência.  
   
- Para obter informações sobre como acessar o **linha de comando** páginas de propriedade, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).  
+ Para obter informações sobre como acessar as páginas de propriedades da **Linha de Comando**, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Páginas de propriedade](../ide/property-pages-visual-cpp.md)   
+ [Páginas de propriedades](../ide/property-pages-visual-cpp.md)   
  [Arquivos .Lib como entrada do vinculador](../build/reference/dot-lib-files-as-linker-input.md)

@@ -19,76 +19,77 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336102"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Adicionando referências em projetos do Visual C++
-É muito comum para programas chamar APIs em outros binários, como DLLs, componentes do Windows Runtime, SDKs de extensão, componentes COM e assemblies .NET. A maneira que o programa localizará os outros binários depende do tipo do seu projeto e o tipo do binário.  
+É muito comum que os programas chamem APIs em outros binários, como DLLs, componentes do Tempo de Execução do Windows, SDKs de extensão, componentes COM e assemblies .NET. A maneira que o programa encontra esses outros binários depende do tipo do projeto e do tipo do binário.  
   
- Em um projeto de C++ nativo, se está consumindo um componente nativo de DLL ou COM que não está sendo produzido por outro projeto em sua solução, use LoadLibrary ou CoCreateInstance para especificar o caminho para o binário, caso contrário, deixe o sistema localizá-lo através do boas-vindas específico locais definidas l.  
+ Em um projeto do C++ nativo, se você estiver consumindo um componente COM ou DLL nativa que não está sendo produzido por outro projeto na solução, use LoadLibrary ou CoCreateInstance para especificar o caminho para o binário; caso contrário, deixe o sistema localizá-lo procurando em locais bem definidos específicos.  
   
- Em outros tipos de projetos, como projetos UWP ou C + + projetos CLI, ou quando o binário é produzido por outro projeto em sua solução, você adiciona um *referência* para o assembly, o componente ou o projeto.   Uma referência é essencialmente um conjunto de dados que permite que seu programa localizar e se comunicar com o binário.       Quando você adiciona uma referência, o Visual Studio trata os detalhes de nível inferior. Para definir as referências de um projeto de C++ para .NET Frameworkassemblies (C + + CLI somente), componentes COM, outros projetos na sua solução, incluindo projetos compartilhados ou conectada a serviços, clique com botão direito no **referências** nó **Solution Explorer** para ativar o **Gerenciador de referências**. O que é exibido no Gerenciador de referências difere dependendo de seu tipo de projeto.  
+ Em outros tipos de projetos, como projetos UWP ou C++/CLI, ou quando o binário é produzido por outro projeto na solução, adicione uma *referência* ao assembly, ao componente ou ao projeto.   Essencialmente, uma referência é um conjunto de dados que permite ao programa localizar o binário e se comunicar com ele.       Quando você adiciona uma referência, o Visual Studio cuida dos detalhes de nível inferior. Para definir as referências de um projeto do C++ para assemblies .NET Framework (somente C++/CLI), componentes COM, outros projetos na solução, incluindo projetos compartilhados ou serviços conectados, clique com o botão direito do mouse no nó **Referências** no **Gerenciador de Soluções** para exibir o **Gerenciador de Referências**. O que é exibido no Gerenciador de Referências varia, dependendo do tipo de projeto.  
   
- Em um projeto de C++ nativo (ATL) o conceito de *referências* só se aplica a outros projetos na solução, incluindo projetos compartilhados, portanto, isso é tudo o que você vê no **Gerenciador de referências**:  
+ Em um projeto do C++ nativo (ATL), o conceito de *referências* só se aplica a outros projetos na solução, incluindo projetos compartilhados; portanto, isso é tudo o que é exibido no **Gerenciador de Referências**:  
   
- ![Visual C#&#43; &#43; Gerenciador de referências &#40;projetos ATL&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Gerenciador de referências do Visual C++ (projetos ATL)")  
+ ![Gerenciador de Referências do Visual C&#43;&#43; &#40;Projetos ATL&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Gerenciador de Referências do Visual C++ (projetos ATL)")  
   
- Em C + + o conceito de referências de projeto CLI ou plataforma Universal do Windows, aplica a mais tipos de binários, além de outros projetos na solução.  Esses são expostos no **Gerenciador de referências**.
+ Em um projeto do C++/CLI ou da Plataforma Universal do Windows, o conceito de referências se aplica a mais tipos de binários, além de outros projetos na solução.  Todas elas são expostas no **Gerenciador de Referências**.
   
-## <a name="reference-properties"></a>Propriedades da referência  
- Cada tipo de referência tem propriedades. Você pode exibir as propriedades, selecionando a referência no Gerenciador de soluções e pressionando **Alt + Enter**, ou se encontram com o botão direito e escolhendo **propriedades**. Algumas propriedades são somente leitura e algumas podem ser modificadas. No entanto, normalmente você não precisa modificar manualmente essas propriedades.  
+## <a name="reference-properties"></a>Propriedades de referência  
+ Cada tipo de referência tem propriedades. Exiba as propriedades selecionando a referência no Gerenciador de Soluções e pressionando **Alt+Enter** ou clicando com o botão direito do mouse e escolhendo **Propriedades**. Algumas propriedades são somente leitura e algumas podem ser modificadas. No entanto, em geral, você não precisa modificar essas propriedades manualmente.  
   
-### <a name="activex-reference-properties"></a>Propriedades da referência do ActiveX  
- Propriedades da referência do ActiveX estão disponíveis apenas para referências a componentes COM. Essas propriedades são exibidas apenas quando um componente COM está selecionado no **referências** painel. As propriedades não podem ser modificadas.  
+### <a name="activex-reference-properties"></a>Propriedades de referência do ActiveX  
+ As propriedades de referência do ActiveX estão disponíveis somente para referências a componentes COM. Essas propriedades são exibidas apenas quando um componente COM é selecionado no painel **Referências**. As propriedades não podem ser modificadas.  
   
- **Caminho completo do controle**  
+ **Caminho Completo do Controle**  
  Exibe o caminho do diretório do controle referenciado.  
   
- **GUID de controle**  
- Exibe o GUID para o controle ActiveX.  
+ **GUID do Controle**  
+ Exibe o GUID do controle ActiveX.  
   
- **Controle de versão**  
- Exibe a versão do controle ActiveX mencionado.  
+ **Versão do Controle**  
+ Exibe a versão do controle ActiveX referenciado.  
   
- **Nome da biblioteca de tipo**  
+ **Nome da Biblioteca de Tipos**  
  Exibe o nome da biblioteca de tipos referenciada.  
   
- **Ferramenta do wrapper**  
- Exibe a ferramenta que é usada para compilar o assembly de interoperabilidade da biblioteca COM referenciada ou controle ActiveX.  
+ **Ferramenta Wrapper**  
+ Exibe a ferramenta usada para compilar o assembly de interoperabilidade da biblioteca COM referenciada ou do controle ActiveX.  
   
-### <a name="assembly-reference-properties"></a>Propriedades da referência do assembly  
- Propriedades da referência do assembly estão disponíveis apenas para referências a .NET Frameworkassemblies no C + + projetos CLI. Essas propriedades são exibidas apenas quando um Frameworkassembly .NET é selecionada no **referências** painel. As propriedades não podem ser modificadas.  
+### <a name="assembly-reference-properties"></a>Propriedades de referência do assembly  
+ As propriedades de referência do assembly estão disponíveis somente para referências a assemblies .NET Framework em projetos do C++/CLI. Essas propriedades são exibidas apenas quando um assembly .NET Framework é selecionado no painel **Referências**. As propriedades não podem ser modificadas.  
   
- **Caminho relativo**  
- Exibe o caminho relativo do diretório do projeto para o assembly referenciado.  
+ **Caminho Relativo**  
+ Exibe o caminho relativo do diretório do projeto ao assembly referenciado.  
   
-### <a name="build-properties"></a>Propriedades de compilação  
- As seguintes propriedades estão disponíveis em vários tipos de referências. Elas permitem que você especificar como compilar com referências.  
+### <a name="build-properties"></a>Propriedades de build  
+ As propriedades a seguir estão disponíveis em vários tipos de referências. Elas permitem que você especifique como compilar com referências.  
   
- **Local da cópia**  
- Especifica se deve copiar o assembly referenciado automaticamente para o local de destino durante uma compilação.  
+ **Local da Cópia**  
+ Especifica se o assembly referenciado será copiado automaticamente para o local de destino durante um build.  
   
- **Copiar Assemblies satélite de Local**  
- Especifica se deve copiar os assemblies satélites do assembly referenciado automaticamente para o local de destino durante uma compilação. Usado somente se **Copy Local** é `true`.  
+ **Assemblies Satélite do Local da Cópia**  
+ Especifica se os assemblies satélite serão copiados automaticamente do assembly referenciado para o local de destino durante um build. Usado somente se **Local da Cópia** é `true`.  
   
- **Saída de Assembly de referência**  
- Especifica que este assembly é usado no processo de compilação. Se `true`, o assembly é usado na linha de comando do compilador durante a compilação.  
+ **Saída do Assembly de Referência**  
+ Especifica que esse assembly é usado no processo de build. Se `true`, o assembly é usado na linha de comando do compilador durante o build.  
   
-### <a name="project-to-project-reference-properties"></a>Propriedades da referência de projeto-a-projeto  
- Definem as propriedades a seguir um *referência projeto a projeto* do projeto selecionado no **referências** painel para outro projeto na mesma solução. Para obter mais informações, consulte [Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project).  
+### <a name="project-to-project-reference-properties"></a>Propriedades de referência projeto a projeto  
+ As propriedades a seguir definem uma *referência projeto a projeto* do projeto selecionado no painel **Referências** como outro projeto na mesma solução. Para obter mais informações, consulte [Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project).  
   
- **Dependências de biblioteca de link**  
- Quando essa propriedade é **True**, o sistema do projeto contém links para o projeto dependente os arquivos. lib que são produzidos pelo projeto independente. Normalmente, você especificará **True**.  
+ **Dependências da Biblioteca de Links**  
+ Quando essa propriedade é **True**, o sistema de projeto é vinculado ao projeto dependente dos arquivos .lib que são produzidos pelo projeto independente. Normalmente, você especificará **True**.  
   
- **Identificador do projeto**  
- Identifica exclusivamente o projeto independente. O valor da propriedade é um sistema interno GUID não pode ser modificado.  
+ **Identificador do Projeto**  
+ Identifica exclusivamente o projeto independente. O valor da propriedade é um GUID de sistema interno que não pode ser modificado.  
   
- **Usar entradas de dependência de biblioteca**  
- Quando essa propriedade é **False**, o sistema do projeto não será vinculado para o projeto dependente os arquivos. obj para a biblioteca produzidos pelo projeto independente. Como consequência, este valor desabilita vínculo incremental. Normalmente, você especificará **False** porque a criação do aplicativo pode levar muito tempo se houver muitos projetos independentes.  
+ **Usar Entradas de Dependência da Biblioteca**  
+ Quando essa propriedade é **False**, o sistema de projeto não é vinculado ao projeto dependente dos arquivos .obj para a biblioteca produzidos pelo projeto independente. Consequentemente, esse valor desabilita a vinculação incremental. Em geral, você especificará **False** porque o build do aplicativo pode levar muito tempo se há muitos projetos independentes.  
   
-### <a name="reference-properties"></a>Propriedades da referência  
- As propriedades a seguir são encontradas no .NET e COM referências de assembly e não podem ser modificadas.  
+### <a name="reference-properties"></a>Propriedades de referência  
+ As propriedades a seguir são encontradas em referências de assembly .NET e COM e não podem ser modificadas.  
   
  **Nome do assembly**  
  Exibe o nome do assembly para o assembly referenciado.  
@@ -99,11 +100,11 @@ ms.lasthandoff: 05/04/2018
  **Descrição**  
  Exibe a descrição da referência selecionada.  
   
- **Caminho completo**  
+ **Caminho Completo**  
  Exibe o caminho do diretório do assembly referenciado.  
   
  **Identidade**  
- Para o .NET Frameworkassemblies, exibe o caminho completo. Para componentes COM, exibe o GUID.  
+ Para assemblies .NET Framework, exibe o caminho completo. Para componentes COM, exibe o GUID.  
   
  **Rótulo**  
  Exibe o rótulo da referência.  
@@ -111,15 +112,15 @@ ms.lasthandoff: 05/04/2018
  **Nome**  
  Exibe o nome da referência.  
   
- **Token de chave pública**  
- Exibe o token de chave pública que é usado para identificar o assembly referenciado.  
+ **Token de Chave Pública**  
+ Exibe o token de chave pública usado para identificar o assembly referenciado.  
   
- **Nome forte**  
- `true` Se o assembly mencionado tiver um nome forte. Um assembly com nome forte é exclusivamente da versão.  
+ **Nome Forte**  
+ `true` se o assembly referenciado tem um nome forte. Um assembly com nome forte tem uma versão exclusiva.  
   
  **Versão**  
  Exibe a versão do assembly referenciado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Páginas de propriedade](../ide/property-pages-visual-cpp.md)   
+ [Páginas de propriedades](../ide/property-pages-visual-cpp.md)   
  [Trabalhando com Propriedades do Projeto](../ide/working-with-project-properties.md)

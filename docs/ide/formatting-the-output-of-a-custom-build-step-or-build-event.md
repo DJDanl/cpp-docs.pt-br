@@ -1,5 +1,5 @@
 ---
-title: Formatando a saída de uma etapa de compilação personalizada ou evento de compilação | Microsoft Docs
+title: Formatando a saída de uma etapa de build personalizada ou um evento de build | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,38 +21,39 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 7da71e6391d2d3223b47ba528686d2fec003ab3a
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321344"
 ---
 # <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>Formatando a saída de uma etapa de build personalizado ou evento de build
-Se a saída de uma etapa de compilação personalizada ou evento de compilação está formatada corretamente, os usuários podem obter os seguintes benefícios:  
+Se a saída de uma etapa de build personalizada ou um evento de build está formatada corretamente, os usuários podem obter os seguintes benefícios:  
   
--   Erros e avisos são contados no **saída** janela.  
+-   Os avisos e erros são contados na janela de **Saída**.  
   
--   Saída é exibida no **lista de tarefas** janela.  
+-   A saída é exibida na janela **Lista de Tarefas**.  
   
--   Clicar na saída no **saída** janela exibe o tópico apropriado.  
+-   Se você clicar na saída da janela de **Saída**, o tópico apropriado será exibido.  
   
--   F1 operações estão habilitadas no **lista de tarefas** janela ou **saída** janela.  
+-   As operações F1 estão habilitadas na janela **Lista de Tarefas** ou na janela de **Saída**.  
   
  O formato da saída deve ser:  
   
- {*filename* (*linha #* [, *coluna #*]) &#124; *toolname*} **:**  
+ {*filename* (*line#* [, *column#*]) &#124; *toolname*} **:**  
   
- [*qualquer texto*] {**erro** &#124; **aviso**} *código # # #***:*** cadeia de caracteres localizável*  
+ [*qualquer texto*] {**erro** &#124; **aviso**} *code####***:*** cadeia de caracteres localizável*  
   
- [ *qualquer texto* ]  
+ [ *any text* ]  
   
  Sendo que:  
   
--   {*um* &#124; *b*} é uma opção do *um* ou *b*.  
+-   {*a* &#124; *b*} é a opção *a* ou *b*.  
   
 -   [`ccc`] é um parâmetro ou uma cadeia de caracteres opcional.  
   
  Por exemplo:  
   
- C:\\*sourcefile.cpp*(134): erro C2143: erro de sintaxe: faltando ';' antes '}'  
+ C:\\*sourcefile.cpp*(134) : error C2143: syntax error : missing ';' before '}'  
   
  LINK: erro fatal LNK1104: não é possível abrir o arquivo '*somelib.lib*'  
   

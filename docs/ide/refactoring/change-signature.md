@@ -1,5 +1,5 @@
 ---
-title: Alterar assinatura | Microsoft Docs
+title: Alterar Assinatura | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -12,30 +12,31 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f913f0b3065b136f626ef15cc2a77dce8d0254f
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335085"
 ---
 # <a name="change-signature"></a>Alterar assinatura
-**O que:** permite que você modifique os parâmetros da função.
+**O quê:** permite modificar os parâmetros de uma função.
 
-**Quando:** você deseja reordenar, adicionar, remover ou modificar os parâmetros da função que está sendo usado em uma variedade de locais.  
+**Quando:** você deseja reordenar, adicionar, remover ou modificar os parâmetros de uma função que está sendo usada em uma variedade de locais.  
 
-**Motivo:** você pode manualmente alterar esses parâmetros e, em seguida, localizar todas as chamadas para essa função e alterá-los um por um, mas que poderiam levar a erros.  Essa ferramenta de refatoração executará a tarefa automaticamente.
+**Por quê:** você pode alterar esses parâmetros manualmente por conta própria e, em seguida, encontrar todas as chamadas a essa função e alterá-las uma por uma, mas isso pode levar a erros.  Essa ferramenta de refatoração executará a tarefa automaticamente.
 
 **Como:**
 
-1. Posicione o cursor do mouse ou texto dentro do nome do método para modificar, ou um de seus usos:
+1. Coloque o cursor de texto ou do mouse dentro do nome do método a ser modificado, ou um de seus usos:
 
    ![Código realçado](images/changesignature_highlight.png)
 
 1. Depois, siga um destes procedimentos:
    * **Teclado**
-     * Pressione **Ctrl + R**, em seguida, **Ctrl + O**.  (Observe que o atalho de teclado pode ser diferente com base no perfil selecionado.)
-     * Pressione **Ctrl +.** para disparar o **ações rápidas e refatorações** menu e selecione **alterar assinatura** no menu de contexto.
+     * Pressione **Ctrl+R** e, em seguida, **Ctrl+O**.  (Observe que o atalho de teclado pode ser diferente com base no perfil selecionado.)
+     * Pressione **Ctrl +.** para disparar o menu **Ações Rápidas e Refatorações** e selecione **Alterar Assinatura** no menu de contexto.
    * **Mouse**
      * Selecione **Editar > Refatorar > Reordenar Parâmetros**.
-     * Clique com botão direito do código, selecione o **ações rápidas e refatorações** menu e selecione **alterar assinatura** no menu de contexto.
+     * Clique com o botão direito do mouse no código, selecione o menu **Ações Rápidas e Refatorações** e selecione **Alterar Assinatura** no menu de contexto.
 
 1. Na caixa de diálogo **Alterar Assinatura** que aparecer, você pode usar os botões à direita para alterar a assinatura do método:
 
@@ -44,35 +45,35 @@ ms.lasthandoff: 05/04/2018
    | Botão | Descrição
    | ------ | ---
    | **Para cima/baixo**    | Mova o parâmetro selecionado para cima e para baixo na lista
-   | **Adicionar**        | Adicionar um novo parâmetro à lista
+   | **Adicionar**        | Adicione um novo parâmetro à lista
    | **Removerr**     | Remova o parâmetro selecionado da lista
-   | **Modificar**     | Modifique o parâmetro selecionado alterando seu tipo, nome e se ele é opcional, e que seu valor injetado seriam
-   | **Reverter**     | Restaurar o parâmetro selecionado em seu estado original
-   | **Reverta todas** | Restaurar todos os parâmetros para seu estado original
+   | **Modificar**     | Modifica o parâmetro selecionado alterando seu tipo, nome e indica se ele é opcional e qual seu valor injetado
+   | **Reverter**     | Restaura o parâmetro selecionado para seu estado original
+   | **Reverter Tudo** | Restaura todos os parâmetros para seu estado original
 
    > [!TIP]
-   > Use o **de referência de visualização ignorar altera se todas as referências forem confirmadas** caixa de seleção para tornar as alterações imediatamente sem a janela de visualização estão aparecendo primeiro.
+   > Use a caixa de seleção **Ignorar visualização das alterações de referência se todas as referências forem confirmadas** para fazer as alterações imediatamente sem primeiro exibir a janela de visualização.
 
-   Ao adicionar ou modificar um parâmetro, você verá o **Adicionar parâmetro** ou **Editar parâmetro** janela.
+   Ao adicionar ou modificar um parâmetro, você verá a janela **Adicionar Parâmetro** ou **Editar Parâmetro**.
 
-   ![Adicionar/modificar o parâmetro](images/changesignature_addmodify.png)
+   ![Adicionar/Modificar parâmetro](images/changesignature_addmodify.png)
 
    Aqui, você pode fazer o seguinte:
 
    | Entrada | Descrição
    | ----- | ---
-   | **Tipo**               | O tipo do parâmetro (int, clique duas vezes, float, etc.)
+   | **Tipo**               | O tipo do parâmetro (int, double, float, etc.)
    | **Nome**               | O nome do parâmetro
-   | **Parâmetro opcional** | Faz com que o parâmetro opcionalmente especificado
-   | **Valor injetado**     | O valor inserido em qualquer chamada para a função em que o parâmetro não for especificado (válido somente para **adicionar**)
-   | **Valor padrão**      | O valor usado pela função se o chamador não especificar uma (válido somente para **parâmetros opcionais**)
+   | **Parâmetro Opcional** | Torna o parâmetro opcionalmente especificado
+   | **Valor Injetado**     | O valor inserido em chamadas à função, em que o parâmetro não é especificado (válido somente para **Adicionar**)
+   | **Valor padrão**      | O valor usado pela função se o chamador não especifica um (válido somente para **Parâmetros Opcionais**)
 
-1. Use o **escopo da pesquisa** lista suspensa para selecionar se as alterações serão aplicadas para o projeto ou solução inteira.
+1. Use a lista suspensa **Escopo da Pesquisa** para selecionar se as alterações serão aplicadas ao projeto ou à solução inteira.
 
-1. Quando tiver terminado, pressione o botão **OK** para fazer as alterações.  Certifique-se de que as alterações que você está solicitando estão sendo feitas adequadamente.  Use as caixas de seleção na parte superior da janela para habilitar ou desabilitar a renomeação de qualquer item.
+1. Quando tiver terminado, pressione o botão **OK** para fazer as alterações.  Verifique se as alterações que você está solicitando estão sendo feitas adequadamente.  Use as caixas de seleção na parte superior da janela para habilitar ou desabilitar a renomeação de qualquer item.
 
-   ![Alterar a visualização de assinatura](images/changesignature_preview.png)
+   ![Visualização de Alterar Assinatura](images/changesignature_preview.png)
 
-1. Quando tudo estiver correto, clique no **aplicar** botão e a função serão alterados em seu código-fonte.
+1. Quando tudo estiver correto, clique no botão **Aplicar** e a função será alterada no código-fonte.
 
    ![Resultado de Alterar Assinatura](images/changesignature_result.png)
