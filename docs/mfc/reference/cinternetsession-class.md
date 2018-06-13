@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374559"
 ---
 # <a name="cinternetsession-class"></a>Classe CInternetSession
 Cria e inicializa uma única ou várias sessões simultâneas de Internet e, se necessário, descreve sua conexão em um servidor proxy.  

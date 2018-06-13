@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094365"
 ---
 # <a name="type-system-ccx"></a>Sistema de tipos (C++/CX)
 Usando a arquitetura de tempo de execução do Windows, você pode usar C + + CX, Visual Basic, Visual c# e JavaScript para escrever aplicativos e componentes que diretamente acessar a API do Windows e interoperem com outros componentes e aplicativos de tempo de execução do Windows. Aplicativos da plataforma Windows universais que são escritos em C++ são compilados para código nativo executado diretamente na CPU. Aplicativos da plataforma Windows universais que são escritos em c# ou Visual Basic compile para Microsoft intermediate language (MSIL) e execute no common language runtime (CLR). Aplicativos da plataforma Windows universais que são escritos em JavaScript são executados em um ambiente de tempo de execução. Os componentes do sistema operacional Windows Runtime são escritos em C++ e executados como código nativo. Todos esses componentes e aplicativos de plataforma Universal do Windows se comunicam diretamente por meio da interface de binária de aplicativo do Windows Runtime (ABI).  

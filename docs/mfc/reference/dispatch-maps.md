@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377090"
 ---
 # <a name="dispatch-maps"></a>Mapas de expedição
 Automação OLE fornece maneiras para chamar os métodos e acessar propriedades em aplicativos. O mecanismo fornecido pelo biblioteca Microsoft Foundation Class para distribuir essas solicitações é o "mapa de expedição", que designa os nomes internos e externos de funções de objetos e propriedades, bem como os tipos de dados das propriedades de si mesmos e do argumentos de função.  

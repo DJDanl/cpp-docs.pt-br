@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377882"
 ---
 # <a name="event-maps"></a>Mapas de evento
 Sempre que um controle deseja notificar seu contêiner que alguma ação (determinada pelo desenvolvedor do controle) aconteceu (como uma alteração de estado do controle, clique do mouse ou um pressionamento de tecla), ele chama uma função de acionamento do evento. Essa função notifica o contêiner de controle que alguma ação importante ocorreu ao acionamento do evento relacionado.  

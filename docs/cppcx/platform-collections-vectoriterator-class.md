@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092526"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Classe Platform::Collections::VectorIterator
 Fornece um iterador da biblioteca de modelos padrão para objetos derivados da interface IVector de tempo de execução do Windows.  
