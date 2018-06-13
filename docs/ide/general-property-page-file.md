@@ -1,5 +1,5 @@
 ---
-title: Página de propriedade geral (arquivo) | Microsoft Docs
+title: Página de propriedades Geral (arquivo) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,28 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 523ac16a647116f4d18da7e516adb4f0e6bb7fc4
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324029"
 ---
 # <a name="general-property-page-file"></a>Página de propriedade geral (arquivo)
 
-Quando um arquivo é selecionado no **Solution Explorer**, o **geral** página de propriedade sob o **propriedades de configuração** nó contém as seguintes propriedades:
+Quando um arquivo é selecionado no **Gerenciador de Soluções**, a página de propriedades **Geral** no nó **Propriedades de Configuração** contém as seguintes propriedades:
 
-**Excluir da compilação**  
-Especifica se o arquivo deve estar em compilação para a configuração atual.
+**Excluir do Build**  
+Especifica se o arquivo deve estar no build da configuração atual.
 
-Para acessar essa propriedade de forma programática, consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
+Para acessar essa propriedade de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
 
 **Ferramenta**  
-A ferramenta que será usada para criar esse arquivo. Consulte [especificando ferramentas de compilação personalizada](../ide/specifying-custom-build-tools.md) para obter mais informações.
+A ferramenta que será usada para compilar esse arquivo. Confira [Especificando ferramentas de build personalizadas](../ide/specifying-custom-build-tools.md) para obter mais informações.
 
-Para acessar essa propriedade de forma programática, consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
+Para acessar essa propriedade de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
 
-Para obter informações sobre como acessar o **geral** página de propriedade sob o **propriedades de configuração** nó, consulte [trabalhar com propriedades do projeto](../ide/working-with-project-properties.md).
+Para obter informações sobre como acessar a página de propriedades **Geral** no nó **Propriedades de Configuração**, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).
 
-Para projetos de não-Windows, consulte [referência da página de propriedade do Linux C++](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->.
+Para projetos não Windows, confira [Referência de página de propriedades do Linux C++](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->.
 
 ## <a name="see-also"></a>Consulte também
 
