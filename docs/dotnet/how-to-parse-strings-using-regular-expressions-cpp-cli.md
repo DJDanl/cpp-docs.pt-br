@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131092"
 ---
 # <a name="how-to-parse-strings-using-regular-expressions-ccli"></a>Como analisar cadeias de caracteres usando expressões regulares (C++/CLI)
 O exemplo de código a seguir demonstra a análise de cadeia de caracteres simple usando o <xref:System.Text.RegularExpressions.Regex> classe no <xref:System.Text.RegularExpressions?displayProperty=fullName> namespace. Uma cadeia de caracteres que contém vários tipos de delineadores word é construída. A cadeia de caracteres é analisada, em seguida, usando o <xref:System.Text.RegularExpressions.Regex> classe junto com o <xref:System.Text.RegularExpressions.Match> classe. Em seguida, cada palavra da frase será exibida separadamente.  

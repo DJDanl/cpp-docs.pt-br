@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163199"
 ---
 # <a name="standard-conversions-and-implicit-boxing"></a>Conversões padrão e conversão boxing implícita
 Uma conversão padrão será escolhida pelo compilador sobre uma conversão que requer conversão.  

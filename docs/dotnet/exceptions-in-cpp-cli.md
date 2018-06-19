@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113181"
 ---
 # <a name="exceptions-in-ccli"></a>Exceções em C++/CLI
 Os artigos nesta seção da documentação explicam o tratamento de exceção no C + + CLI e como ela difere de tratamento de exceção padrão.  

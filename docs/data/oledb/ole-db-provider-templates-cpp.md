@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112739"
 ---
 # <a name="ole-db-provider-templates-c"></a>Modelos de provedor de banco de dados OLE (C++)
 OLE DB é uma parte importante da estratégia de acesso a dados Universal Microsoft. O design de banco de dados OLE permite acesso a dados de alto desempenho de qualquer fonte de dados. Dados de tabela são visíveis através do OLE DB, independentemente se ela veio de um banco de dados. A flexibilidade lhe oferecem uma enorme quantidade de energia.  

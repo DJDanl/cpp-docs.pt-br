@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132213"
 ---
 # <a name="implicit-boxing-of-value-types"></a>Conversão boxing implícita de tipos de valor
 A conversão boxing de tipos de valor foi alterado de extensões gerenciadas para C++ para Visual C++.  

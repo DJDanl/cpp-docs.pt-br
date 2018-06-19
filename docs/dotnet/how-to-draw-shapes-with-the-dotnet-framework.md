@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130029"
 ---
 # <a name="how-to-draw-shapes-with-the-net-framework"></a>Como desenhar formas com o .NET Framework
 O seguinte exemplo de código usa o <xref:System.Drawing.Graphics> classe para modificar o <xref:System.Windows.Forms.Form.OnPaint%2A> manipulador de eventos para recuperar um ponteiro para o <xref:System.Drawing.Graphics> objeto para o formulário principal. Esse ponteiro é usado para definir a cor de plano de fundo do formulário e desenhar uma linha e um arco usando o <xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName> e <xref:System.Drawing.Graphics.DrawArc%2A> métodos.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111634"
 ---
 # <a name="cast-notation-and-introduction-of-safecastltgt"></a>Notação de conversão e introdução de safe_cast&lt;&gt;
 A notação de conversão foi alterado de extensões gerenciadas para C++ para Visual C++.  

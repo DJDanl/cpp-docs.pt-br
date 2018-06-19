@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111348"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semântica da pilha do C++ para tipos de referência
 Antes do Visual C++ 2005, uma instância de um tipo de referência pode somente ser criada usando o `new` operador, que criou o objeto no lixo coletado heap. No entanto, agora você pode criar uma instância de um tipo de referência usando a mesma sintaxe que você usaria para criar uma instância de um tipo nativo na pilha. Portanto, você não precisa usar [gcnew novo ref](../windows/ref-new-gcnew-cpp-component-extensions.md) para criar um objeto do tipo de referência. E, quando o objeto sai do escopo, o compilador chama o destruidor do objeto.  

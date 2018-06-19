@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130143"
 ---
 # <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Como carregar recursos não gerenciados em uma matriz de bytes
 Este tópico discute várias maneiras para carregar os recursos não gerenciados em um <xref:System.Byte> matriz.  

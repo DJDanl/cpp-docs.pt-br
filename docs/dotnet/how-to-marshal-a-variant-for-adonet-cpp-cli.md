@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134422"
 ---
 # <a name="how-to-marshal-a-variant-for-adonet-ccli"></a>Como realizar marshaling de um VARIANT para ADO.NET (C++/CLI)
 Demonstra como adicionar um nativo `VARIANT` para um banco de dados e como realizar marshaling de uma <xref:System.Object?displayProperty=fullName> de um banco de dados para um nativo `VARIANT`.  

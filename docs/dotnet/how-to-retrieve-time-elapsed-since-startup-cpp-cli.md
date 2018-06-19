@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132824"
 ---
 # <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>Como recuperar tempo decorrido desde a inicialização (C++/CLI)
 O exemplo de código a seguir demonstra como determinar a contagem em escala, ou número de milissegundos decorridos desde o Windows foi iniciado. Esse valor é armazenado no <xref:System.Environment.TickCount%2A?displayProperty=fullName> membro e, como ele é um valor de 32 bits, redefine para zero aproximadamente a cada 24.9 dias.  

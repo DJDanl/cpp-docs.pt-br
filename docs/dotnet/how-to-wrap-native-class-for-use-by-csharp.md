@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128687"
 ---
 # <a name="how-to-wrap-native-class-for-use-by-c"></a>Como encapsular classe nativa a ser usada por C#
 Este exemplo mostra como encapsular uma classe C++ nativo para que ele pode ser consumido pelo código criado em c# ou outra linguagem .NET.  

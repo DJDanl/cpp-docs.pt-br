@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33140167"
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Como expor um contêiner STL/CLR a partir de um assembly
 Contêineres STL/CLR como `list` e `map` são implementados como classes de referência de modelo. Como os modelos do C++ são instanciados no tempo de compilação, duas classes de modelo que tem exatamente a mesma assinatura, mas em diferentes assemblies são realmente diferentes tipos. Isso significa que as classes de modelo não podem ser usados em limites de assembly.  

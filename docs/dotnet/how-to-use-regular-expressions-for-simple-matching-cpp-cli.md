@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128274"
 ---
 # <a name="how-to-use-regular-expressions-for-simple-matching-ccli"></a>Como usar expressões regulares para correspondência simples (C++/CLI)
 O exemplo de código a seguir usa expressões regulares para procurar as correspondências exatas de subcadeia de caracteres. A pesquisa é realizada por estático <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> método, que usa duas cadeias de caracteres como entrada. A primeira é a cadeia de caracteres a ser pesquisada e o segundo é o padrão a ser pesquisado.  

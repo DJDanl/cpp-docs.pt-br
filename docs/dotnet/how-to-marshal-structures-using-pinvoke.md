@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136607"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Como realizar marshaling de estruturas usando PInvoke
 Este documento explica como nativas funções que aceitam a estruturas de estilo C podem ser chamadas de funções gerenciadas pelo usando P/Invoke. Embora, recomendamos que você use os recursos de interoperabilidade C++ em vez de P/Invoke porque P/Invoke fornece relatórios, pouco de erros de tempo de compilação não é fortemente tipado e poderá ser tediosa implementar, se a API não gerenciada é empacotada como uma DLL e o código-fonte não é disponível, P/Invoke é a única opção. Caso contrário, consulte os seguintes documentos:  

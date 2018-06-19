@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110335"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Dando suporte a transações em banco de dados OLE
 Um [transação](../../data/transactions-mfc-data-access.md) é uma maneira de agrupar ou lote, uma série de atualizações para uma fonte de dados de modo que todos os tenha êxito e são confirmados ao mesmo tempo ou (se qualquer um dos falhá-los) nenhum são confirmadas e a transação inteira é revertida. Esse processo garante a integridade do resultado na fonte de dados.  

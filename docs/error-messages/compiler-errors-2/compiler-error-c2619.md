@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231312"
 ---
 # <a name="compiler-error-c2619"></a>C2619 de erro do compilador
 'Identificador': um membro de dados estático não é permitido em uma struct anônima ou union  

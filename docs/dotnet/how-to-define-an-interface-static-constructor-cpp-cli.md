@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127444"
 ---
 # <a name="how-to-define-an-interface-static-constructor-ccli"></a>Como definir um construtor estático de interface (C++/CLI)
 Uma interface pode ter um construtor estático, o que pode ser usado para inicializar os membros de dados estáticos.  Um construtor estático será chamado no máximo uma vez e será chamado antes da primeira vez que um membro estático de interface é acessado.  

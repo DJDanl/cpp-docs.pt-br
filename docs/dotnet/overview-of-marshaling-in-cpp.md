@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137128"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Visão geral de marshaling no C++
 No modo misto, você às vezes deve empacotar os dados entre os tipos nativos e gerenciados. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] introduziu a biblioteca de marshaling para ajudar você empacotar e converter os dados de uma maneira simple.  

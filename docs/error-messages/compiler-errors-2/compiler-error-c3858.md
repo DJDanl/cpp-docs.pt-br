@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268938"
 ---
 # <a name="compiler-error-c3858"></a>C3858 de erro do compilador
 'type': não pode ser redeclarado no escopo atual  

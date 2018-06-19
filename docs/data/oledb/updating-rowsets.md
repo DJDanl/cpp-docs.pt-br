@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112375"
 ---
 # <a name="updating-rowsets"></a>Atualizando conjuntos de linhas
 É uma operação muito básica do banco de dados atualizar ou gravar dados, o repositório de dados. No OLE DB, o mecanismo de atualização é simple: o aplicativo de consumidor define os valores dos membros de dados associados e, em seguida, grava esses valores no conjunto de linhas; o consumidor solicita que o provedor de atualizar o armazenamento de dados.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132015"
 ---
 # <a name="how-to-parse-strings-using-the-split-method-ccli"></a>Como analisar cadeias de caracteres usando o método split (C++/CLI)
 O exemplo de código a seguir demonstra como usar o <xref:System.String.Split%2A?displayProperty=fullName> método para extrair cada palavra de uma cadeia de caracteres. Uma cadeia de caracteres que contém vários tipos de delineadores word é criada e, em seguida, analisar chamando <xref:System.String.Split%2A> com uma lista dos delineadores. Em seguida, cada palavra da frase será exibida separadamente.  

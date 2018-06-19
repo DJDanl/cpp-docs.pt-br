@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33160010"
 ---
 # <a name="ptroperator-gt"></a>PTR::-&gt;
 Operador de acesso de membro, usado para chamar métodos no objeto COM exclusividade.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111465"
 ---
 # <a name="finally"></a>finally
 Além `try` e `catch` cláusulas, suporte de tratamento de exceções de CLR um `finally` cláusula. A semântica é idêntica do `__finally` bloco em (SEH) de tratamento de exceções estruturado. Um `__finally` bloco pode seguir um `try` ou `catch` bloco.  

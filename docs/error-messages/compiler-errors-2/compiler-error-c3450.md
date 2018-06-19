@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251347"
 ---
 # <a name="compiler-error-c3450"></a>C3450 de erro do compilador
 'type': não é um atributo. não é possível especificar [System::AttributeUsageAttribute] ou [Windows::Foundation::Metadata::AttributeUsageAttribute]  

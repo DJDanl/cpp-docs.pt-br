@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130497"
 ---
 # <a name="how-to-iterate-over-arrays-with-for-each"></a>Como iterar em matrizes com for each
 Este tópico mostra como usar o [para cada um, no](../dotnet/for-each-in.md) palavra-chave em diferentes tipos de matrizes.  

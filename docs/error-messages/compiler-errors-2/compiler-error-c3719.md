@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277901"
 ---
 # <a name="compiler-error-c3719"></a>C3719 de erro do compilador
 'interface': uma fonte de eventos baseada em interface só pode ser usada para eventos COM  

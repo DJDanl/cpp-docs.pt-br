@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136201"
 ---
 # <a name="marshalcontextmarshalas"></a>marshal_context::marshal_as
 Realiza marshaling de em um objeto de dados específico para convertê-lo entre um gerenciado e um tipo de dados nativos.  

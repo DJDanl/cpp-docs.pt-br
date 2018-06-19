@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136347"
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Como criar o controle de usuário e hospedá-lo em uma caixa de diálogo
 As etapas neste artigo presumem que você está criando uma caixa de diálogo com base em ([classe CDialog](../mfc/reference/cdialog-class.md)) projeto Microsoft Foundation Classes (MFC), mas você também pode adicionar suporte para um controle de formulários do Windows para uma caixa de diálogo MFC existente.  

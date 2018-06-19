@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138771"
 ---
 # <a name="how-to-use-arrays-in-ccli"></a>Como usar matrizes em C++/CLI
 Este artigo descreve como usar matrizes em C + + CLI.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135996"
 ---
 # <a name="how-to-define-and-use-delegates-ccli"></a>Como definir e usar delegados (C++/CLI)
 Este artigo mostra como definir e consumir representantes no C + + CLI.  

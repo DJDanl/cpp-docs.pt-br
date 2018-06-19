@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112635"
 ---
 # <a name="declaration-of-a-managed-class-type"></a>Declaração de um tipo de classe gerenciado
 A maneira de declarar um tipo de classe de referência alterado de extensões gerenciadas para C++ para Visual C++.  

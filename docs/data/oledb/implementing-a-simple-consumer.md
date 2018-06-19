@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112557"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementando um consumidor simples
 Os tópicos a seguir mostram como editar os arquivos criados pelo Assistente de aplicativo MFC e ATL OLE DB consumidor Assistente para criar um consumidor simples. Este exemplo tem as seguintes partes:  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129389"
 ---
 # <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Como realizar marshaling de cadeias de caracteres ANSI usando interop C++
 Este tópico demonstra como cadeias de caracteres ANSI podem ser passados usando Interop C++, mas o .NET Framework <xref:System.String> representa cadeias de caracteres em formato Unicode, portanto, a conversão em ANSI é uma etapa extra. Para interagir com outros tipos de cadeia de caracteres, consulte os tópicos a seguir:  

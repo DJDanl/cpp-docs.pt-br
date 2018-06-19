@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231211"
 ---
 # <a name="compiler-error-c2695"></a>C2695 de erro do compilador
 'function1': função virtual de substituição difere de 'function2' apenas pela convenção de chamada  

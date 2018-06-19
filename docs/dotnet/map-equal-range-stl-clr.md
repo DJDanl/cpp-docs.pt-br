@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131274"
 ---
 # <a name="mapequalrange-stlclr"></a>map::equal_range (STL/CLR)
 Localiza o intervalo que corresponde a uma chave especificada.  

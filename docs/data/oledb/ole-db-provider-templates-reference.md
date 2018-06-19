@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112414"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Referência dos modelos de provedor de banco de dados OLE
 As classes e interfaces para os modelos do provedor de banco de dados OLE podem ser agrupadas nas categorias a seguir. O material de referência também inclui informações sobre o [macros para modelos OLE DB Provider](../../data/oledb/macros-for-ole-db-provider-templates.md).  

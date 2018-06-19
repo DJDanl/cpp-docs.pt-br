@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229383"
 ---
 # <a name="fatal-error-c1084"></a>Erro fatal C1084
 Não é possível ler o arquivo de tipo de arquivo: 'file': mensagem  

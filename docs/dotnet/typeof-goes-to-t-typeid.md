@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164512"
 ---
 # <a name="typeof-goes-to-ttypeid"></a>typeof vai até T::typeid
 O `typeof` operador usado das extensões gerenciadas para C++ tem sido suplantado pelo `typeid` palavra-chave no Visual C++.  

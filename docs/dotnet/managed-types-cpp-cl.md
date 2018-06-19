@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135853"
 ---
 # <a name="managed-types-ccl"></a>Tipos gerenciados (C++/CL)
 A sintaxe para a declaração de tipos gerenciados e a criação e uso de objetos desses tipos significativamente alterada de extensões gerenciadas para C++ para Visual C++. Isso foi feito para promover sua integração dentro do sistema de tipo ISO C++. Essas alterações são apresentadas em detalhes nas subseções a seguir.  

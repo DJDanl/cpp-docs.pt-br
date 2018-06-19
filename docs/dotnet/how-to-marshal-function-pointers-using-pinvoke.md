@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132171"
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Como realizar marshaling de ponteiros de função usando PInvoke
 Este tópico explica como gerenciados delegados pode ser usado no lugar de ponteiros de função quando interoperar com não gerenciados funções usando recursos do .NET Framework P/Invoke. No entanto, os programadores de Visual C++ são incentivados a usar os recursos de interoperabilidade C++ em vez disso (quando for possível) porque P/Invoke oferece pouco tempo de compilação relatório de erro, não é de tipo seguro e poderá ser tedioso implementar. Se a API não gerenciada é empacotada como uma DLL e o código-fonte não estiver disponível, o P/Invoke é a única opção. Caso contrário, consulte os tópicos a seguir:  

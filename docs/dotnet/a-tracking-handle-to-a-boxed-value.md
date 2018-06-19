@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108257"
 ---
 # <a name="a-tracking-handle-to-a-boxed-value"></a>Uma manipulação de acompanhamento de um valor demarcado
 O uso de um identificador de rastreamento para um tipo de valor de referência foi alterado de extensões gerenciadas para C++ para Visual C++.  

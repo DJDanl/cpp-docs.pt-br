@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132889"
 ---
 # <a name="nthelement-stlclr"></a>nth_element (STL/CLR)
 Partições de um intervalo de elementos, localizando corretamente o `n`elemento th da sequência do intervalo para que todos os elementos na frente dele sejam menor ou igual a ele e todos os elementos que se seguem na sequência são maior ou igual a ele.  

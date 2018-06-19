@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127338"
 ---
 # <a name="how-to-explicitly-request-boxing"></a>Como fazer uma conversão boxing de solicitação explícita
 Você pode solicitar explicitamente boxing ao atribuir uma variável a uma variável do tipo `Object`.  

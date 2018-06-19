@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113753"
 ---
 # <a name="friend-assemblies-c"></a>Assemblies amigáveis (C++)
 Para tempos de execução aplicável, o *assemblies amigáveis* tipos que estão no escopo de namespace ou escopo global em um componente de assembly acessível a um ou mais assemblies de cliente ou. netmodules faz com que o recurso de idioma.  

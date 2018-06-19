@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111439"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Classes Rowset do esquema e Typedef
 Um esquema é uma coleção de objetos de banco de dados que são de propriedade ou foram criadas por um usuário específico. Um catálogo pode conter um ou mais esquemas, mas sempre deve conter um esquema chamado INFORMATION_SCHEMA, que contém as exibições e os domínios do esquema de informações. Informações de esquema no OLE DB são recuperadas usando conjuntos de linhas de esquema predefinido e incluem os tipos, tabelas, colunas, índices, exibições, declarações e restrições, estatísticas, conjuntos de caracteres, agrupamentos e domínios.  

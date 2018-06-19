@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135112"
 ---
 # <a name="member-declarations-within-a-class-or-interface-ccli"></a>Declarações de membro em uma classe ou uma interface (C++/CLI)
 A declaração de propriedades e operadores foi amplamente reformulada partir das extensões gerenciadas para C++ para Visual C++, ocultando os detalhes de implementação subjacente que estavam expostos no design do Managed Extensions. Declarações de evento também foram modificadas.  

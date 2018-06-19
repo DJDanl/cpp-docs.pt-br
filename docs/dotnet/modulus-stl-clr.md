@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134461"
 ---
 # <a name="modulus-stlclr"></a>módulo (STL/CLR)
 A classe de modelo descreve um functor que, quando chamado, retorna o primeiro argumento de módulo a segunda. Você usá-lo especificar um objeto de função em termos de seu tipo de argumento.  

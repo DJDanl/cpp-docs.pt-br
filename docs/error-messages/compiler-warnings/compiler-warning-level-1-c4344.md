@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271364"
 ---
 # <a name="compiler-warning-level-1-c4344"></a>Compilador C4344 de aviso (nível 1)
 alteração de comportamento: uso de resultados de argumentos de template explícitos na chamada para 'function'  

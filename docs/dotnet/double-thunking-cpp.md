@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111202"
 ---
 # <a name="double-thunking-c"></a>Conversão dupla (C++)
 Conversão dupla refere-se a perda de desempenho que você pode experimentar quando uma chamada de função em chamadas um contexto gerenciado um Visual C++ gerenciado função e onde a execução de programa chama o ponto de entrada nativo da função para chamar a função gerenciada. Este tópico discute onde ocorre a conversão dupla e como evitá-lo para melhorar o desempenho.  

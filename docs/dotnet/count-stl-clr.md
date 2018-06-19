@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105004"
 ---
 # <a name="count-stlclr"></a>count (STL/CLR)
 Retorna o número de elementos em um intervalo cujos valores correspondem a um valor especificado.  

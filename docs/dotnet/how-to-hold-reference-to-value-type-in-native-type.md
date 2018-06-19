@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129782"
 ---
 # <a name="how-to-hold-reference-to-value-type-in-native-type"></a>Como manter a referência para tipo de valor em tipo nativo
 Use `gcroot` no tipo de processador para manter uma referência a um tipo de valor em um tipo nativo.  

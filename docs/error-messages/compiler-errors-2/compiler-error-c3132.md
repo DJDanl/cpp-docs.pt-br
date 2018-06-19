@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252381"
 ---
 # <a name="compiler-error-c3132"></a>C3132 de erro do compilador
 'parâmetro de função': matrizes de parâmetro só podem ser aplicados a um argumento formal do tipo 'array gerenciado unidimensional'  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129431"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>Hospedando um controle de usuário do Windows Form em uma caixa de diálogo MFC
 MFC hospeda um controle de formulários do Windows como um tipo especial de controle ActiveX e se comunica com o controle usando interfaces ActiveX e propriedades e métodos do <xref:System.Windows.Forms.Control> classe. É recomendável que você usar métodos e propriedades do .NET Framework para operar no controle.  

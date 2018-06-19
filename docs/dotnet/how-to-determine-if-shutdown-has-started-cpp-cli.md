@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137696"
 ---
 # <a name="how-to-determine-if-shutdown-has-started-ccli"></a>Como determinar se o desligamento foi iniciado (C++/CLI)
 O exemplo de código a seguir demonstra como determinar se o aplicativo ou o .NET Framework está encerrando no momento. Isso é útil para acessar elementos estáticos no .NET Framework, porque, durante o desligamento, essas construções são finalizadas pelo sistema e não podem ser usadas de forma confiável. Verificando o <xref:System.Environment.HasShutdownStarted%2A> propriedade primeiro, você pode evitar possíveis falhas não acessar esses elementos.  
