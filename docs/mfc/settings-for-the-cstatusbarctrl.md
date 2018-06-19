@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380156"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>Configurações do CStatusBarCtrl
 A posição padrão de um [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) janela de status é na parte inferior da janela pai, mas você pode especificar o `CCS_TOP` estilo para que ele apareça na parte superior da área cliente da janela pai.  

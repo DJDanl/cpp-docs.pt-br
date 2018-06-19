@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327035"
 ---
 # <a name="nmake-fatal-error-u1070"></a>Erro fatal U1070 (NMAKE)
 ciclo em definição de macro 'nomedamacro'  

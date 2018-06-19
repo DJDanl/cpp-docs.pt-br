@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319176"
 ---
 # <a name="resource-compiler-fatal-error-rw1022"></a>Erro fatal RW1022 (compilador de recurso)
 **Erro ao gravar arquivo de e/s**  

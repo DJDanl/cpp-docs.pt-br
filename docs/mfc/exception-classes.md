@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344890"
 ---
 # <a name="exception-classes"></a>Classes de exceção
 A biblioteca de classe fornece um mecanismo de tratamento de exceção com base na classe `CException`. A estrutura de aplicativo usa exceções em seu código; Você também pode usá-los nas suas. Para obter mais informações, consulte o artigo [exceções](../mfc/exception-handling-in-mfc.md). Você pode derivar seus próprios tipos de exceção de `CException`.  

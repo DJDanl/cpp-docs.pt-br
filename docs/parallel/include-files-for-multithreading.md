@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685795"
 ---
 # <a name="include-files-for-multithreading"></a>Incluir arquivos para multithread
 Arquivos de inclusão padrão declarar funções da biblioteca de tempo de execução C como eles são implementados nas bibliotecas. Se você usar o [otimização total](../build/reference/ox-full-optimization.md) (/ Ox) ou [fastcall convenção de chamada](../build/reference/gd-gr-gv-gz-calling-convention.md) (/ Gr) opção, o compilador assumirá que todas as funções devem ser chamadas usando o registro de convenção de chamada. As funções de biblioteca de tempo de execução foram compiladas usando a convenção de chamada de C, e as declarações nos arquivos de inclusão padrão diz ao compilador para gerar referências externas corretas para essas funções.  

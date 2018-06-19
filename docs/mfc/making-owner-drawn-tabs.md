@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346497"
 ---
 # <a name="making-owner-drawn-tabs"></a>Criando guias desenhadas pelo proprietário
 Você pode definir os itens individuais de um controle de guia ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) para ser itens desenhados pelo proprietário. Para obter mais informações, consulte [Owner-Drawn guias](http://msdn.microsoft.com/library/windows/desktop/bb760550) no SDK do Windows.  

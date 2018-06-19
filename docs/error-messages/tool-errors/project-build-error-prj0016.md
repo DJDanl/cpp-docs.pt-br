@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319046"
 ---
 # <a name="project-build-error-prj0016"></a>Erro de Build PRJ0016 no Projeto
 Configurações de segurança do usuário evitam que o processo que está sendo criado. Essas configurações são necessárias para a compilação.  

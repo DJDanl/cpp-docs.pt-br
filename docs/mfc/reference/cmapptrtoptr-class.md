@@ -49,6 +49,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366818"
 ---
 # <a name="cmapptrtoptr-class"></a>Classe CMapPtrToPtr
 Dá suporte a mapas de ponteiros void chaveados ponteiros void.  

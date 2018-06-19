@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686796"
 ---
 # <a name="11-scope"></a>1.1 Escopo
 Essa especificação abrange paralelização somente direcionadas ao usuário, no qual o usuário especifica explicitamente as ações a serem tomadas pelo compilador e sistema de tempo de execução para executar o programa em paralelo. Implementações OpenMP C e C++ não são necessários para verificar se há dependências, conflitos, deadlocks, condições de corrida ou outros problemas que resultam na execução do programa incorreto. O usuário é responsável por garantir que o aplicativo usando as construções OpenMP C e C++ API seja executado corretamente. Diretivas para o compilador para auxiliar tal paralelização e gerado pelo compilador paralelização automática não são abordadas neste documento.

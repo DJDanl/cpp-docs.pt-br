@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688603"
 ---
 # <a name="iumsthreadproxy-structure"></a>Estrutura IUMSThreadProxy
 Uma abstração para um thread de execução. Se você quiser que o Agendador para receber os threads do modo de usuário agendáveis (UMS), defina o valor para o elemento de diretiva do Agendador `SchedulerKind` para `UmsThreadDefault`e implementar o `IUMSScheduler` interface. Threads UMS são apenas com suporte em sistemas operacionais de 64 bits com a versão do Windows 7 e superior.  

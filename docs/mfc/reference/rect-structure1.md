@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372587"
 ---
 # <a name="rect-structure1"></a>Estrutura RECT 1
 O `RECT` estrutura define as coordenadas dos cantos superior esquerdo e direito inferior de um retângulo.  

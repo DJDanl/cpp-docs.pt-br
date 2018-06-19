@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329316"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Conectar-se ao computador Linux remoto
 

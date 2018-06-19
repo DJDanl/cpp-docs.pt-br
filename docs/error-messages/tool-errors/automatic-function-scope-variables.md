@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295370"
 ---
 # <a name="automatic-function-scope-variables"></a>Variáveis automáticas (escopo da função)
 Uma variável declarada dentro de uma função só pode ser usada dentro do escopo da função.  

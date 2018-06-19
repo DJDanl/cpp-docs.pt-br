@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373922"
 ---
 # <a name="event-sink-maps"></a>Mapas de coleta de evento
 Quando um controle OLE inserido dispara um evento, o contêiner do controle recebe o evento usando um mecanismo chamado um "mapa coletor de evento," fornecido pelo MFC. Este mapa de coletor de evento designa funções de manipulador para cada evento específico, bem como os parâmetros dos eventos. Para obter mais informações sobre mapas de coleta de eventos, consulte o artigo [contêineres de controle ActiveX](../../mfc/activex-control-containers.md).  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342053"
 ---
 # <a name="deprecated-ansi-apis"></a>APIs ANSI preteridas
 A biblioteca Microsoft Foundation Class (MFC) está migrando para classes e métodos que se baseiam no conjunto de caracteres Unicode. Consequentemente, as versões ANSI dos vários métodos MFC foram preteridas. Use as versões de Unicode desses métodos em seus aplicativos futuros.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341891"
 ---
 # <a name="creating-windows"></a>Criando janelas
 O framework cria automaticamente a maioria das janelas que você precisa em um programa do framework. [Criação de documento/exibição](../mfc/document-view-creation.md) mostra como o framework cria as janelas de quadro associadas a documentos e exibições. Mas para fins de especial, você pode criar suas próprias janelas, incluindo suas próprias janelas filho das janelas de quadro ou exibições — além do windows fornecido pelo framework.  

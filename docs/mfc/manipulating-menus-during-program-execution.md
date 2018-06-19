@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344276"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>Manipulando menus durante a execução do programa
 Use a classe `CMenu` para manipular os menus e itens de menu em tempo real. `CMenu` encapsula um Windows `HMENU` tratar e fornece funções de membro para o trabalho com menus.  

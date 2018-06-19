@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372264"
 ---
 # <a name="measureitemstruct-structure"></a>Estrutura MEASUREITEMSTRUCT
 O `MEASUREITEMSTRUCT` estrutura informa as janelas de dimensões de um item de menu ou controle de desenho proprietário.  

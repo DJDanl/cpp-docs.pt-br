@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370514"
 ---
 # <a name="cftpfilefind-class"></a>Classe CFtpFileFind
 Recursos em pesquisas de arquivos de Internet de servidores FTP.  

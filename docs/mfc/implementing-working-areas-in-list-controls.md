@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347354"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implementando áreas de trabalho em controles de lista
 Por padrão, um controle de lista organiza todos os itens de um modo de grade padrão. No entanto, outro método tem suporte, áreas, que organiza os itens da lista em retangulares grupos de trabalho. Para uma imagem de um controle de lista que implementa áreas de trabalho, consulte usando controles de exibição de lista no SDK do Windows.  

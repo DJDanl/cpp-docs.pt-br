@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375435"
 ---
 # <a name="cpictureholder-class"></a>Classe CPictureHolder
 Implementa uma propriedade de imagem, que permite que o usuário exibir uma imagem do seu controle.  

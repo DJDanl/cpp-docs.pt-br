@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687446"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Usando lambdas, objetos de função e funções restritas
 O código C++ AMP que você deseja executar o Accelerator é especificado como um argumento em uma chamada para o [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) método. Você pode fornecer uma expressão lambda ou um objeto de função (functor) como argumento. Além disso, o objeto de função ou expressão lambda pode chamar uma função C++ AMP-restrita. Este tópico usa um algoritmo de adição de matriz para demonstrar lambdas, objetos de função e funções restritas. O exemplo a seguir mostra o algoritmo sem código C++ AMP. Duas matrizes dimensionais 1 de comprimento igual são criados. Os elementos de inteiro correspondente são adicionados e armazenados em uma terceira matriz em 1 dimensão. C++ AMP não é usado.  

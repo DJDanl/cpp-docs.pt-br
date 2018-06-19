@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345532"
 ---
 # <a name="exceptions-ole-exceptions"></a>Exceções: exceções OLE
 As técnicas e recursos para tratamento de exceções em OLE são os mesmos para lidar com outras exceções. Para obter mais informações sobre o tratamento de exceções, consulte o artigo [manipulação de exceção C++](../cpp/cpp-exception-handling.md).  

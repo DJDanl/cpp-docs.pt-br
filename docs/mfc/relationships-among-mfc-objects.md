@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379513"
 ---
 # <a name="relationships-among-mfc-objects"></a>Relacionamentos entre objetos MFC
 Para ajudar a colocar o processo de criação de documento/exibição em perspectiva, considere a possibilidade de um programa em execução: um documento, a janela do quadro usado para conter o modo de exibição e o modo de exibição associada ao documento.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687973"
 ---
 # <a name="asynchronous-agents"></a>Agentes Assíncronos
 Um *agente assíncrona* (ou apenas *agente*) é um componente de aplicativo que funciona com outros agentes para resolver as tarefas de computação maior de forma assíncrona. Considere um agente como uma tarefa que tem um ciclo de vida definido. Por exemplo, um agente pode ler dados de um dispositivo de entrada/saída (como o teclado, um arquivo em disco ou uma conexão de rede) e outro agente podem executar uma ação em dados assim que possível. O primeiro agente usa a passagem de mensagem para informar o segundo agente que há mais dados disponíveis. O Agendador de tarefas de tempo de execução de simultaneidade fornece um mecanismo eficiente para habilitar os agentes bloquear e geram trabalhem de forma sem a necessidade de preempção menos eficiente.  

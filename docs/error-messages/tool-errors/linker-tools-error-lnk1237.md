@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298610"
 ---
 # <a name="linker-tools-error-lnk1237"></a>Erro das Ferramentas de Vinculador LNK1237
 durante a geração de código, compilador introduziu referência para o símbolo 'symbol' definido no módulo compilado com /GL ' module'  

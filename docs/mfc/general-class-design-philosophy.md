@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344357"
 ---
 # <a name="general-class-design-philosophy"></a>Filosofia de design da classe geral
 Microsoft Windows foi projetado muito antes que a linguagem C++ se tornou popular. Como milhares de aplicativos usam a interface de programação de aplicativo (API) do Windows da linguagem C, essa interface será mantida para um futuro próximo. Nenhuma interface do Windows do C++, portanto, deve ser criada sobre a procedimento API da linguagem C. Isso garante que os aplicativos C++ poderão coexistir com aplicativos C.  

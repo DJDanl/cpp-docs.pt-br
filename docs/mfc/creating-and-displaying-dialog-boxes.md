@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342456"
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>Criando e exibindo caixas de diálogo
 Criação de um objeto de caixa de diálogo é uma operação de duas fases. Primeiro, construir o objeto de caixa de diálogo e criar a janela da caixa de diálogo. Caixas de diálogo modais e sem janela restrita diferem um pouco o processo usado para criar e exibi-los. A tabela a seguir lista como modal e sem janela restrita diálogo caixas normalmente são construídas e exibidas.  
