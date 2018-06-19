@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689292"
 ---
 # <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 Constructos de compartilhamento de trabalho em paralelo combinado
 Combinado construções de compartilhamento de trabalho paralelas são atalhos para especificar uma região parallel que contém somente uma construção de compartilhamento de trabalho. A semântica essas diretivas é idêntica de especificar explicitamente um **paralela** diretiva seguido por uma construção de compartilhamento em trabalho único.  

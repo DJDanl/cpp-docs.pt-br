@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882054"
 ---
 # <a name="mfc-predefined-symbols"></a>Símbolos predefinidos MFC
 Projetos MFC sempre incluem vários arquivos de cabeçalho que dão suporte ao windows. Eles são adicionados por meio de #include instruções no arquivo de Stdafx. H:  

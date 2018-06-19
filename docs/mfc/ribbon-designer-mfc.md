@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382093"
 ---
 # <a name="ribbon-designer-mfc"></a>Designer da faixa de opções (MFC)
 O Designer de faixa de opções permite que você criar e personalizar as faixas de opções em aplicativos MFC. Uma faixa de opções é um elemento de interface do usuário do usuário que organiza os comandos em grupos lógicos. Esses grupos são exibidos em guias separadas em uma faixa na parte superior da janela. A faixa de opções substitui a barra de menus e barras de ferramentas. Uma faixa de opções pode melhorar significativamente a usabilidade do aplicativo. Para obter mais informações, consulte [faixas de opções](http://go.microsoft.com/fwlink/p/?linkid=129233). A ilustração a seguir mostra uma faixa de opções.  

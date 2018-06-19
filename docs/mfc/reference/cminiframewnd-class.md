@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378376"
 ---
 # <a name="cminiframewnd-class"></a>Classe CMiniFrameWnd
 Representa uma janela do quadro de meia altura geralmente Vista em torno de flutuando barras de ferramentas.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33173132"
 ---
 # <a name="stlclr-containers"></a>Contêineres STL/CLR
 A biblioteca STL/CLR tem os mesmos contêineres que são encontrados na biblioteca C++ padrão, mas ele é executado dentro do ambiente gerenciado do .NET Framework. Se você já estiver familiarizado com a biblioteca padrão C++ STL/CLR é a melhor maneira para continuar a usar as habilidades que você já criou durante a atualização do seu código para o common language runtime (CLR) de destino.  

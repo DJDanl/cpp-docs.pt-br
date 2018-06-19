@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381164"
 ---
 # <a name="registration"></a>Registro
 Quando um usuário quiser inserir um item OLE em um aplicativo, o OLE apresenta uma lista de tipos de objeto para escolher. OLE obtém essa lista do banco de dados de registro do sistema, que contém as informações fornecidas por todos os aplicativos de servidor. Quando um servidor registrado, as entradas que ele coloca o banco de dados do sistema registration (registro) descrevem cada tipo de objeto que fornece, extensões de arquivo e o caminho para si mesmo, entre outras informações.  

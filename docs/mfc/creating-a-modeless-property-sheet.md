@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342716"
 ---
 # <a name="creating-a-modeless-property-sheet"></a>Criando uma folha de propriedades sem janela restrita
 Normalmente, as folhas de propriedades que você criar serão restritas. Ao usar uma folha de propriedades modal, o usuário deve fechar a folha de propriedades antes de usar qualquer outra parte do aplicativo. Este artigo descreve métodos que você pode usar para criar uma folha de propriedades não modal que permite ao usuário manter a folha de propriedades aberta durante o uso de outras partes do aplicativo.  

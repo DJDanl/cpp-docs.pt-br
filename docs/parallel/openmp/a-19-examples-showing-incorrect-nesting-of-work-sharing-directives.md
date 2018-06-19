@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691484"
 ---
 # <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19   Exemplos que mostram o aninhamento incorreto de diretivas de compartilhamento do trabalho
 Os exemplos nesta seção ilustram as regras de aninhamento de diretiva. Para obter mais informações sobre o aninhamento de diretiva, consulte [seção 2.9](../../parallel/openmp/2-9-directive-nesting.md) na página 33.  

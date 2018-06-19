@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383410"
 ---
 # <a name="serialization-making-a-serializable-class"></a>Serialização: criando uma classe serializável
 Cinco etapas principais são necessárias para tornar uma classe serializável. Eles são listados abaixo e explicados nas seções a seguir:  

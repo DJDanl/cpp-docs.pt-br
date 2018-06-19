@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385730"
 ---
 # <a name="tree-control-notification-messages"></a>Mensagens de notificação do controle de árvore
 Um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envia mensagens de notificação como **WM_NOTIFY** mensagens:  

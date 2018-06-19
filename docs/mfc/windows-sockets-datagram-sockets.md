@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383936"
 ---
 # <a name="windows-sockets-datagram-sockets"></a>Windows Sockets: soquetes de datagrama
 Este artigo descreve os soquetes de datagrama, um dos dois tipos de Windows Socket disponível. (O outro tipo é o [soquete fluxo](../mfc/windows-sockets-stream-sockets.md).)  

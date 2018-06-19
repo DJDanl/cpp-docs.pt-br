@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227926"
 ---
 # <a name="compiler-error-c2549"></a>C2549 de erro do compilador
 conversão definida pelo usuário não é possível especificar um tipo de retorno  

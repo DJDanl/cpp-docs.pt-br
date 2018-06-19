@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381531"
 ---
 # <a name="trackers"></a>Controladores
 O [CRectTracker](../mfc/reference/crecttracker-class.md) classe fornece uma interface de usuário entre os itens retangulares em seu aplicativo e o usuário, fornecendo uma variedade de estilos de exibição. Esses estilos incluem bordas tracejadas, tracejadas ou sólidas; um padrão hachurado que abrange o item; e as alças de redimensionamento que podem estar localizadas fora ou dentro de uma borda. Rastreadores geralmente são usados em conjunto com itens OLE, ou seja, os objetos derivados da `COleClientItem`. Os retângulos controlador dê indicações visuais sobre o status atual do item.  

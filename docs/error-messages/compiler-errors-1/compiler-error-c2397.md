@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196877"
 ---
 # <a name="compiler-error-c2397"></a>C2397 de erro do compilador
 conversão de 'type_1' em 'type_2' requer uma conversão de restrição  

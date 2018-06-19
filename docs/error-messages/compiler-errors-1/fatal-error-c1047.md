@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198619"
 ---
 # <a name="fatal-error-c1047"></a>Erro fatal C1047
 O arquivo de objeto ou de biblioteca 'file' foi criado com um compilador mais antigo que os demais objetos; recriar os objetos e bibliotecas antigas  

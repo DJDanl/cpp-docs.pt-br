@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171816"
 ---
 # <a name="stlclr-library-reference"></a>Referência de biblioteca STL/CLR
 A biblioteca STL/CLR é um pacote de um subconjunto da biblioteca C++ padrão para uso com C++ e .NET Framework common language runtime (CLR). Com STL/CLR, você pode usar os contêineres, iteradores e algoritmos da biblioteca padrão em um ambiente gerenciado.  

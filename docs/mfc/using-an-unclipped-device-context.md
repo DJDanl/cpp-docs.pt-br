@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381004"
 ---
 # <a name="using-an-unclipped-device-context"></a>Usando um contexto de dispositivo não recortado
 Se você tiver certeza de que o controle não pintado fora o retângulo de cliente, você pode obter um ganho de velocidade pequeno, mas podem ser detectados, desabilitando a chamada para `IntersectClipRect` feita por `COleControl`. Para fazer isso, remova o **clipPaintDC** sinalizador do conjunto de sinalizadores retornado por [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Por exemplo:  

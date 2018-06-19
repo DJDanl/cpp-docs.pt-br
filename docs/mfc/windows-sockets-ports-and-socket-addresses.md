@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383981"
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets: portas e endereços de soquete
 Este artigo explica os termos "port" e "address" como usado com o Windows Sockets.  

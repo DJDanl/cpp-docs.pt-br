@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892313"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>Salvando e carregando paletas de cores diferentes (editor de imagens para ícones)
 Você pode salvar e carregar uma paleta de cores que contém [personalizado cores](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (Por padrão, a paleta de cores usada mais recentemente é carregada automaticamente quando você iniciar o Visual Studio.)  

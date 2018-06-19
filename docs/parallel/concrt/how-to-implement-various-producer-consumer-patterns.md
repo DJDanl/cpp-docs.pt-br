@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687732"
 ---
 # <a name="how-to-implement-various-producer-consumer-patterns"></a>Como implementar vários padrões de produtor-consumidor
 Este tópico descreve como implementar o padrão de produtor-consumidor em seu aplicativo. Nesse padrão, o *produtor* envia mensagens a um bloco de mensagens e o *consumidor* lê mensagens nesse bloco.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686156"
 ---
 # <a name="invalidmultiplescheduling-class"></a>Classe invalid_multiple_scheduling
 Esta classe descreve uma exceção lançada quando um `task_handle` objeto é agendada várias vezes usando o `run` método de um `task_group` ou `structured_task_group` objeto sem uma chamada intermediário para o `wait` ou `run_and_wait` métodos.  

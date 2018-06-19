@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380793"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>Definindo o estado do dia de um controle de calendário mensal
 Um dos atributos de um controle de calendário mensal é a capacidade de armazenar informações, conhecidas como o estado do dia do controle, para cada dia do mês. Essas informações são usadas para enfatizar determinadas datas do mês exibido atualmente.  

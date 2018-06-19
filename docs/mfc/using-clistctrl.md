@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382980"
 ---
 # <a name="using-clistctrl"></a>Usando CListCtrl
 Use um controle de lista para exibir qualquer disposição dos ícones com rótulos, como no Explorador de arquivos ou listas de colunas de texto, com ou sem ícones. Para obter uma descrição dos quatro possíveis "modos de exibição" (não deve ser confundido com modos de exibição do MFC), você pode ter em um controle de lista – modo de exibição de ícone, modo de exibição de ícone pequeno, exibição de lista e exibição de relatório — Consulte exibições no [CListCtrl](../mfc/reference/clistctrl-class.md) visão geral da classe.  

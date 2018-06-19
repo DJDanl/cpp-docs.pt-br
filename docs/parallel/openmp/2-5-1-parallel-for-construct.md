@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687147"
 ---
 # <a name="251-parallel-for-construct"></a>2.5.1 Construto parallel for
 O **paralelo para** diretiva é um atalho para um **paralela** região que contém um único **para** diretiva. A sintaxe do **paralelo para** diretiva é da seguinte maneira:  

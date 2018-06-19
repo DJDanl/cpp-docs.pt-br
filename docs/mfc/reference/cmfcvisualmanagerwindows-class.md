@@ -155,6 +155,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378363"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>Classe CMFCVisualManagerWindows
 `CMFCVisualManagerWindows` Imita a aparência do Microsoft Windows XP ou o Microsoft Vista quando o usuário seleciona um Windows XP ou o tema do Vista.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33223576"
 ---
 # <a name="compiler-error-c2426"></a>C2426 de erro do compilador
 'token': operador inválido em 'contexto'  

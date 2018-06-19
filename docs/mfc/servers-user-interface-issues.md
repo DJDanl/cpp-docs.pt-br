@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379665"
 ---
 # <a name="servers-user-interface-issues"></a>Servidores: emissões de interface do usuário
 Um aplicativo de servidor tem um número de recursos que devem ser adicionados à interface do usuário para fornecer itens OLE para aplicativos de contêiner. Para obter mais informações sobre os menus e recursos adicionais que precisam ser adicionados a um aplicativo de servidor, consulte [Menus e recursos: adições de servidor](../mfc/menus-and-resources-server-additions.md).  

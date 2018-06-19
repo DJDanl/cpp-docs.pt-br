@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686715"
 ---
 # <a name="3110-ompgetnested-function"></a>3.1.10 função omp_get_nested
 O `omp_get_nested` função retorna um valor diferente de zero se paralelismo aninhado está habilitado e 0 se ele estiver desabilitado. Para obter mais informações sobre o paralelismo aninhada, consulte a seção 3.1.9 na página 40. O formato é o seguinte:  

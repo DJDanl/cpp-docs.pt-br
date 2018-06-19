@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33222209"
 ---
 # <a name="compiler-error-c2334"></a>C2334 de erro do compilador
 tokens inesperados anterior ': ou {'; ignorando corpo aparente de função  

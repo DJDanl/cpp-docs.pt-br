@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882921"
 ---
 # <a name="displaying-or-hiding-the-pixel-grid-image-editor-for-icons"></a>Exibindo ou ocultando a grade de pixels (editor de imagens para ícones)
 Para todos os painéis do Editor de imagem com um fator de ampliação de 4 ou superior, você pode exibir uma grade que delimita os pixels individuais na imagem.  

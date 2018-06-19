@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380703"
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>Suporte para contextos de ativação no estado do módulo MFC
 MFC cria um contexto de ativação usando um recurso de manifesto fornecido pelo módulo de usuário. Para obter mais informações sobre como os contextos de ativação são criados, consulte os tópicos a seguir:  

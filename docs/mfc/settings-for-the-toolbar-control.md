@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379701"
 ---
 # <a name="settings-for-the-toolbar-control"></a>Configurações para o controle da barra de ferramentas
 Os botões da barra de ferramentas podem exibir um bitmap, uma cadeia de caracteres ou ambos. Por padrão, o tamanho da imagem é definido para as dimensões de 16 por 15 pixels. Todos os botões têm a mesma largura, em pixels de 24 a 22 padrão. Altura da barra de ferramentas é determinada pela altura dos botões e largura da barra de ferramentas é o mesmo que a largura da área de cliente da janela pai, também por padrão.  

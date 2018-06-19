@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385619"
 ---
 # <a name="using-ctooltipctrl"></a>Usando CToolTipCtrl
 O [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) classe encapsula a funcionalidade de um controle de dica de ferramenta, uma pequena janela pop-up que exibe uma única linha de texto que descreve a finalidade de uma ferramenta em um aplicativo. Uma dica de ferramenta está oculto na maioria das vezes, que aparecem somente quando o usuário coloca o cursor em uma ferramenta e deixa-lo para aproximadamente metade de segundo. A dica de ferramenta é exibida próximo ao cursor e desaparece quando o usuário clica em um botão do mouse ou move o cursor fora a ferramenta.  

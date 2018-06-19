@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693189"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Instruções passo a passo: multiplicação de matrizes
 Este passo a passo demonstra como usar C++ AMP para acelerar a execução de multiplicação de matriz. Dois algoritmos são apresentadas sem lado a lado e uma com lado a lado.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382373"
 ---
 # <a name="using-cmonthcalctrl"></a>Usando CMonthCalCtrl
 O controle de calendário mensal ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) implementa uma interface de usuário do tipo de calendário. Isso fornece ao usuário com um método muito reconhecível e intuitivo de inserir ou selecionar uma data. O controle também fornece o aplicativo com os meios para obter e definir as informações de data no controle usando tipos de dados existentes. Por padrão, o controle de calendário mensal exibe o dia atual e o mês. No entanto, o usuário é capaz de rolagem para os meses anteriores e posteriores e selecionar um mês específico e/ou ano.  

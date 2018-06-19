@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380104"
 ---
 # <a name="styles-for-the-progress-control"></a>Estilos para o controle de progresso
 Quando você cria inicialmente o controle de progresso ([CProgressCtrl::Create](../mfc/reference/cprogressctrl-class.md#create)), use o `dwStyle` para especificar os estilos de janela desejado para o controle de andamento. A lista a seguir detalha os estilos de janela aplicável. O controle ignora qualquer estilo de janela diferentes daqueles listados aqui. Você sempre deve criar o controle como uma janela filho, geralmente de um pai de caixa de diálogo.  

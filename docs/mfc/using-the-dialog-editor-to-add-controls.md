@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381938"
 ---
 # <a name="using-the-dialog-editor-to-add-controls"></a>Usando o editor da caixa de diálogos para adicionar controles
 Quando você cria o recurso de modelo de caixa de diálogo com o [editor de caixa de diálogo](../windows/dialog-editor.md), arraste os controles de uma paleta de controles e soltá-los na caixa de diálogo. Isso adiciona as especificações para esse tipo de controle para o recurso de modelo de caixa de diálogo. Quando você cria um objeto de caixa de diálogo e chame seu **criar** ou `DoModal` função de membro, o framework cria um controle do Windows e coloca-o na janela de diálogo na tela.  

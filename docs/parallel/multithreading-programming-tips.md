@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689981"
 ---
 # <a name="multithreading-programming-tips"></a>Multithread: dicas de programação
 Aplicativos multithread exigem cuidado mais rígido que os aplicativos de thread único ao acessar dados. Porque há vários, caminhos independentes de execução em usam simultaneamente em aplicativos multissegmentados, os algoritmos, os dados ou ambos devem estar cientes que os dados podem ser usados por mais de um segmento por vez. Este tópico explica as técnicas para evitar possíveis problemas ao programar aplicativos multithread com a biblioteca Microsoft Foundation Class (MFC).  

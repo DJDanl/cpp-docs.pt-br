@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382967"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: mapeamento de identificadores do Windows para objetos
 Esta anotação descreve o MFC rotinas que dão suporte a mapeamento Windows identificadores de objetos C++ do objeto.  

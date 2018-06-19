@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172665"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Windows Forms/diferenças de programação MFC
 Os tópicos [usando um controle de usuário do Windows Form no MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md) descrevem o suporte do MFC para formulários do Windows. Se você não estiver familiarizado com o .NET Framework ou MFC de programação, este tópico fornece informações básicas sobre programação diferenças entre os dois.  

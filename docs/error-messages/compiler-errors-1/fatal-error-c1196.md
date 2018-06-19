@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199009"
 ---
 # <a name="fatal-error-c1196"></a>Erro fatal C1196
 'Identificador': identificador encontrado na biblioteca de tipos 'typelib' não é um identificador válido do C++  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383741"
 ---
 # <a name="view-classes-architecture"></a>Classes de exibição (arquitetura)
 `CView` e suas classes derivadas são janelas filho que representam a área cliente de uma janela do quadro. Modos de exibição mostram dados e aceitam entrada de um documento.  

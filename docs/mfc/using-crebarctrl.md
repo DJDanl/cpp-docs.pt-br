@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383303"
 ---
 # <a name="using-crebarctrl"></a>Usando CReBarCtrl
 Um controle rebar atua como um contêiner para as janelas filho. Essas janelas filho, geralmente outros controles, são atribuídas a uma faixa do controle rebar. Um controle rebar pode conter uma ou mais faixas, com cada faixa com qualquer combinação de uma barra dupla, um bitmap, um rótulo de texto e uma janela filho. No entanto, as faixas não podem conter mais de uma janela filho.  

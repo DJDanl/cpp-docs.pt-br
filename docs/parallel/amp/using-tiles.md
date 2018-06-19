@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692984"
 ---
 # <a name="using-tiles"></a>Usando blocos
 Você pode usar o lado a lado para maximizar a aceleração de seu aplicativo. Lado a lado divide threads em subconjuntos retangulares iguais ou *blocos*. Se você usar um tamanho de bloco apropriado e o algoritmo lado a lado, você pode obter aceleração ainda mais a partir do código C++ AMP. Os componentes básicos de lado a lado são:  

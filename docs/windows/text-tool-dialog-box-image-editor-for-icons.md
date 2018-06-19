@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890282"
 ---
 # <a name="text-tool-dialog-box-image-editor-for-icons"></a>Caixa de diálogo Ferramenta de Texto (editor de imagens para ícones)
 Use o **ferramenta texto** caixa de diálogo para adicionar texto a um recurso de cursor, bitmap ou ícone.  

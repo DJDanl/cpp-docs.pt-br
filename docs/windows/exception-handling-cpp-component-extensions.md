@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877729"
 ---
 # <a name="exception-handling--c-component-extensions"></a>Tratamento de Exceção (Extensões de Componentes C++)
 Os aplicativos compilados com o **/ZW** opção de compilador ou **/clr** opção de compilador que usam *exceções* para tratar erros inesperados durante a execução do programa. Os tópicos a seguir abordam a manipulação de exceções em qualquer C + + CX ou C + + aplicativos CLI.  

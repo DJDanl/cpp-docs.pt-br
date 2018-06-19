@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890172"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Salvando bitmaps como GIFs ou JPEGs (editor de imagens para ícones)
 Quando você cria um bitmap, a imagem é criada no formato de bitmap (bmp). No entanto, você pode, salve a imagem como GIF ou JPEG ou em outros formatos de gráfico.  

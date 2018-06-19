@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377434"
 ---
 # <a name="dhtml-event-maps"></a>Mapas de evento DHTML
 As macros a seguir podem ser usadas para tratar eventos DHTML.  

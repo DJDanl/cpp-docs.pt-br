@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686666"
 ---
 # <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
 O **OMP_DYNAMIC** variável de ambiente ativa ou desativa o ajuste dinâmico do número de threads disponíveis para execução de regiões paralelas, a menos que o ajuste dinâmico é habilitado ou desabilitado chamando o explicitamente**omp_set_dynamic** rotina de biblioteca. O valor deve ser **TRUE** ou **FALSE**.  

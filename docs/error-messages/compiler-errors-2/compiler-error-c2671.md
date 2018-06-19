@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233129"
 ---
 # <a name="compiler-error-c2671"></a>C2671 de erro do compilador
 'function': funções membro static não possuem ponteiros 'this'  

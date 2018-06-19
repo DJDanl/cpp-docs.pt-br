@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692738"
 ---
 # <a name="a23---examples-of-the-ordered-directive"></a>A.23   Exemplos da diretiva ordered
 É possível ter várias seções ordenadas com uma `for` especificado com o `ordered` cláusula. O primeiro exemplo não for compatível, porque a API Especifica o seguinte:  

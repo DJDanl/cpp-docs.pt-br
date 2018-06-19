@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890655"
 ---
 # <a name="v1enum"></a>v1_enum
 Direciona-se de que o tipo enumerado especificado ser transmitidos como uma entidade de 32 bits em vez do padrão de 16 bits.  

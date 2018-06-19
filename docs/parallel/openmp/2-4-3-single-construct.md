@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690576"
 ---
 # <a name="243-single-construct"></a>2.4.3 Construto single
 O **único** diretiva identifica uma construção que especifica que o bloco estruturado associado é executado por um thread na equipe (não necessariamente o thread principal). A sintaxe do **único** diretiva é da seguinte maneira:  

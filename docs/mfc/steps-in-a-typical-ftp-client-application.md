@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381118"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>Etapas em um aplicativo cliente FTP típico
 Cria um aplicativo de cliente FTP típico um [CInternetSession](../mfc/reference/cinternetsession-class.md) e um [CFtpConnection](../mfc/reference/cftpconnection-class.md) objeto. Observe que essas classes WinInet MFC, na verdade, não controlam as configurações de tipo de proxy; IIS faz.  

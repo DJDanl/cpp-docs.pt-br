@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891731"
 ---
 # <a name="win32-predefined-symbols"></a>Símbolos predefinidos Win32
 Esses símbolos são definidos nos arquivos de cabeçalho do Win32 e eles oferecem suporte a ações e funções de aplicativo do Windows padrão. Esses símbolos são usados principalmente com elementos de interface de usuário comuns. Quando você estiver trabalhando com controles nos editores de recursos, esses símbolos aparecerão no [janela propriedades](/visualstudio/ide/reference/properties-window) associados a controles comuns. Por exemplo, se sua barra de ferramentas deve exibir o ícone do aplicativo, o ícone será associado com o símbolo IDI_SMALL na janela Propriedades.  

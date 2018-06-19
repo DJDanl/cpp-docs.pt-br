@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380897"
 ---
 # <a name="tn050-mfcole-common-dialogs-mfcuix32"></a>TN050: caixas de diálogo comuns MFC/OLE (MFCUIx32)
 Esta anotação originalmente coberto alguns problemas e o futuro das OLE caixas de diálogo comuns fornecidos e usados pelo MFC. As caixas de diálogo comuns OLE agora são fornecidas como um componente interno do sistema (OLEDLG. DLL) e são totalmente documentados na documentação do produto.  

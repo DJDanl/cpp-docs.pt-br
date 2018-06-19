@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197735"
 ---
 # <a name="compiler-error-c2394"></a>C2394 de erro do compilador
 'your_type::operator'op' ": CLR ou WinRToperator não é válido. Pelo menos um parâmetro deve ser dos seguintes tipos: ' t ^', ' t ^ %', ' t ^ &', onde T = 'your_type'  

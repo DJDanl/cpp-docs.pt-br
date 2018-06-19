@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198606"
 ---
 # <a name="compiler-error-c2474"></a>C2474 de erro do compilador
 'palavra-chave': faltando uma ponto e vírgula adjacente, poderia ser palavra-chave ou identificador.  

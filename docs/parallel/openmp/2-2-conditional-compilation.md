@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685899"
 ---
 # <a name="22-conditional-compilation"></a>2.2 Compilação condicional
 O _**OPENMP** nome de macro é definido pelas implementações OpenMP compatível como a constante decimal *yyyymm*, que será o ano e o mês da especificação aprovada. Esta macro não deve ser o assunto de uma **#define** ou um **#undef** diretiva de pré-processamento.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382561"
 ---
 # <a name="what-frame-windows-do"></a>O que fazem janelas de quadro
 Além de simplesmente uma exibição de enquadramento, janelas com moldura serão responsáveis por várias tarefas envolvidas na coordenar o quadro com o modo de exibição e com o aplicativo. [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) e [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) herdam [CFrameWnd](../mfc/reference/cframewnd-class.md), para que tenham `CFrameWnd` recursos, bem como novos recursos que eles adicionar. Janelas filho exemplos de modos de exibição, os controles como botões e caixas de listagem e barras de controle, incluindo as barras de ferramentas, barras de status e barras da caixa de diálogo.  

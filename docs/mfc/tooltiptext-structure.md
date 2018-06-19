@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383426"
 ---
 # <a name="tooltiptext-structure"></a>Estrutura TOOLTIPTEXT
 Na gravação seu [manipulador de notificação de dica de ferramenta](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), você precisa usar o `TOOLTIPTEXT` estrutura. Os membros de `TOOLTIPTEXT` estrutura são:  

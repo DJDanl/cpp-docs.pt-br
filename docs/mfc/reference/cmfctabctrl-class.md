@@ -119,6 +119,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377765"
 ---
 # <a name="cmfctabctrl-class"></a>Classe CMFCTabCtrl
 O `CMFCTabCtrl` classe fornece funcionalidade para um controle guia. O controle de guia exibe uma janela encaixável com guias de planas ou tridimensionais na sua parte superior ou inferior. As guias podem exibir texto e uma imagem e podem alterar a cor quando ativo.  

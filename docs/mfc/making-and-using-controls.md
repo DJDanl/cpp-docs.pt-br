@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347001"
 ---
 # <a name="making-and-using-controls"></a>Criando e usando controles
 Verifique a maioria dos controles de caixas de diálogo no Visual C++ [editor de caixa de diálogo](../windows/dialog-editor.md). Mas você também pode criar controles de qualquer caixa de diálogo ou janela.  

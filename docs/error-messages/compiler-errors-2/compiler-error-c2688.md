@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236008"
 ---
 # <a name="compiler-error-c2688"></a>C2688 de erro do compilador
 'C2::fgrv': retornos covariantes com múltiplas heranças ou herança virtual não tem suportada para funções varargs  

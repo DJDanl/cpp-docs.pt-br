@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380426"
 ---
 # <a name="serializing-data-to-and-from-files"></a>Serializando dados para e de arquivos
 A ideia básica de persistência é que um objeto deve ser capaz de gravar o estado atual, indicado pelos valores de suas variáveis de membro, para o armazenamento persistente. Posteriormente, o objeto pode ser recriado lendo ou "desserialização", o estado do objeto de armazenamento persistente. Um ponto importante aqui é que o próprio objeto é responsável por ler e gravar seu próprio estado. Portanto, para uma classe persistente, ele deve implementar as operações básicas de serialização.  

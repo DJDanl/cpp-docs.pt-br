@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349252"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Controles ActiveX MFC: adicionando métodos de estoque
 Um método de ação difere de um método personalizado em que ele já foi implementado pela classe [COleControl](../mfc/reference/colecontrol-class.md). Por exemplo, `COleControl` contém uma função de membro predefinidas que suporta o método de atualização para o seu controle. A entrada de mapa de expedição para esse método de estoque é **DISP_STOCKFUNC_REFRESH**.  

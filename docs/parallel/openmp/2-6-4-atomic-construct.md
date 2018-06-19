@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688122"
 ---
 # <a name="264-atomic-construct"></a>2.6.4 Constructo atomic
 O `atomic` diretiva garante que um local de memória específica é atualizado atomicamente, em vez de expô-lo para a possibilidade de várias simultâneas de gravação de threads. A sintaxe da `atomic` diretiva é da seguinte maneira:  

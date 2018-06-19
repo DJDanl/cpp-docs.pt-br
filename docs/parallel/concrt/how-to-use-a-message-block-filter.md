@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688265"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>Como usar um filtro de bloco de mensagens
 Este documento demonstra como usar uma função de filtro para habilitar um bloco de mensagens assíncronas aceitar ou rejeitar uma mensagem com base na carga da mensagem.  

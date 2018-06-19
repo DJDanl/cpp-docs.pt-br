@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230760"
 ---
 # <a name="compiler-error-c2571"></a>C2571 de erro do compilador
 'function': função virtual não pode estar em union 'union'  

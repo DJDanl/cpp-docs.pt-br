@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686003"
 ---
 # <a name="how-to-write-a-parallelforeach-loop"></a>Como gravar um loop parallel_for_each
 Este exemplo mostra como usar o [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo para calcular a contagem de números primos em uma [std:: array](../../standard-library/array-class-stl.md) objeto em paralelo.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690605"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Usando objetos accelerator e accelerator_view
 Você pode usar o [accelerator](../../parallel/amp/reference/accelerator-class.md) e [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) classes para especificar o dispositivo ou emulador para executar seu código C++ AMP em. Um sistema pode ter vários dispositivos ou emuladores que diferem por quantidade de memória, suporte à memória compartilhada, suporte à depuração ou suporte de precisão dupla. C++ Accelerated Massive Parallelism (C++ AMP) fornece APIs que você pode usar para examinar os Aceleradores disponíveis, definido como o padrão, especifique vários accelerator_views para várias chamadas para parallel_for_each e executar tarefas de depuração especiais.  

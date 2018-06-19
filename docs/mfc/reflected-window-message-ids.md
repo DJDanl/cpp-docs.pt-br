@@ -61,6 +61,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379990"
 ---
 # <a name="reflected-window-message-ids"></a>IDs de mensagem da janela refletida
 Uma maneira rápida de criar um controle ActiveX ou outro controle especializado, é a subclasse uma janela. Para obter mais informações, consulte [controles ActiveX MFC: subclasses de um controle de Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  

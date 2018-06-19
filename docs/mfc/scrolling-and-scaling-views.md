@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379262"
 ---
 # <a name="scrolling-and-scaling-views"></a>Rolando e colocando exibições em escala
 MFC oferece suporte a modos de exibição que rolagem e modos de exibição que são dimensionados automaticamente para o tamanho da janela do quadro que exibe-os. Classe `CScrollView` oferece suporte a ambos os tipos de modos de exibição.  

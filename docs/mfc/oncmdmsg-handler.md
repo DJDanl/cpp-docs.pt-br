@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347023"
 ---
 # <a name="oncmdmsg-handler"></a>Manipulador OnCmdMsg
 Para fazer o roteamento de comandos, cada destino do comando chama o `OnCmdMsg` a função de membro do próximo destino de comando na sequência. Comando destina-se usar `OnCmdMsg` para determinar se eles possam lidar com um comando e encaminhá-lo para outro destino de comando se ele não podem lidar com eles.  

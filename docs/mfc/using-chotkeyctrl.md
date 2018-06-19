@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381797"
 ---
 # <a name="using-chotkeyctrl"></a>Usando CHotKeyCtrl
 Um controle de tecla ativo, representado pela classe [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), é uma janela que exibe uma representação de texto da combinação de chave, o usuário digita, como CTRL + SHIFT + Q. Ele também mantém uma representação interna dessa chave na forma de um código de tecla virtual e um conjunto de sinalizadores que representam o estado de shift. O controle de chave de acesso não definem a tecla de acesso — isso é até seu programa. (Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser.)  

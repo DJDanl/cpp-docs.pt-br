@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380858"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Servidores: implementando janelas de quadro in-loco
 Este artigo explica o que você deve fazer para implementar janelas com moldura no local em seu aplicativo de servidor de edição visual, se você não usar o Assistente de aplicativo para criar o aplicativo de servidor. Em vez de seguir o procedimento descrito neste artigo, você pode usar uma classe de janela com moldura no local existente de um aplicativo gerados pelo Assistente de aplicativo ou um exemplo fornecido com o Visual C++.  

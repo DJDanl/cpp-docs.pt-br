@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383864"
 ---
 # <a name="technical-notes-by-category"></a>Observações técnicas por categoria
 Observações técnicas são divididas nas categorias a seguir. Para obter uma lista numérica das notas técnicas, consulte [Observações técnicas por número](../mfc/technical-notes-by-number.md).  

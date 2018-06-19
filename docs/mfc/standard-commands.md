@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380140"
 ---
 # <a name="standard-commands"></a>Comandos padrão
 A estrutura define muitas mensagens de comando padrão. Normalmente, as IDs para esses comandos assumem a forma:  

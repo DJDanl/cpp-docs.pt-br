@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379945"
 ---
 # <a name="settings-for-the-tool-tip-control"></a>Configurações para o controle da dica de ferramenta
 Você pode definir o controle de dica de ferramenta ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) a ser ativos ou inativos. Quando for definido como ativo, o controle de dica de ferramenta é exibida quando o cursor estiver em uma ferramenta. Quando você definir para ficar inativo, o controle de dica de ferramenta não aparece, mesmo se o cursor estiver em uma ferramenta. Chamar [ativar](../mfc/reference/ctooltipctrl-class.md#activate) para ativar ou desativar um controle de dica de ferramenta.  

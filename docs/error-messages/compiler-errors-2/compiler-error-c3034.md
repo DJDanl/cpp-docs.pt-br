@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247003"
 ---
 # <a name="compiler-error-c3034"></a>C3034 de erro do compilador
 Diretiva de OpenMP 'directive1' não pode ser aninhada diretamente dentro de diretiva 'directive2'  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379571"
 ---
 # <a name="serialization-serialization-vs-database-inputoutput"></a>Serialização: Serialização vs. Banco de dados de entrada/saída
 Este artigo explica quando usar a serialização e objetos de documento para baseado em arquivo de entrada/saída (e/s) e outras técnicas de e/s são apropriadas, porque o aplicativo lê e grava dados em uma base por transação, como aplicativos de banco de dados. Se você não usar a serialização, você também não precisa abrir o arquivo, salvar e salvar como comandos. Os tópicos abordados incluem:  

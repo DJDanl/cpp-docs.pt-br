@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693855"
 ---
 # <a name="scheduler-instances"></a>Instâncias de agendador
 Este documento descreve a função de instâncias de Agendador em tempo de execução de simultaneidade e como usar o [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) e [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) classes para criar e gerenciar instâncias de Agendador. Instâncias de Agendador são úteis quando você deseja associar políticas de agendamento explícitas com tipos específicos de cargas de trabalho. Por exemplo, você pode criar uma instância de Agendador para executar algumas tarefas em uma prioridade de thread com privilégios elevados e use o agendador padrão para executar outras tarefas com a prioridade normal de threads.  

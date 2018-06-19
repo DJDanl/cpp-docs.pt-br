@@ -193,6 +193,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377817"
 ---
 # <a name="cframewndex-class"></a>Classe CWinAppEx é
 Implementa a funcionalidade de uma janela única interface de documento (SDI) sobrepostas ou janela do quadro de janela pop-up e fornece membros para gerenciar a janela. Ele estende o [CFrameWnd](../../mfc/reference/cframewnd-class.md) classe.  

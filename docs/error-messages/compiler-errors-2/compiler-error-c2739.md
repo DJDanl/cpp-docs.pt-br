@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231843"
 ---
 # <a name="compiler-error-c2739"></a>C2739 de erro do compilador
 'número': gerenciados explícita ou dimensões de matriz WinRT devem estar entre 1 e 32  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880866"
 ---
 # <a name="mutexlock-method"></a>Método Mutex::Lock
 Aguarda até que o objeto atual ou o objeto de Mutex associado com o identificador especificado, libera o mutex ou o intervalo de tempo limite especificado tiver decorrido.  

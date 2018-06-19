@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382442"
 ---
 # <a name="using-cheaderctrl"></a>Usando CHeaderCtrl
 Usar um controle de cabeçalho, representado pela classe [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)para exibir cabeçalhos de coluna para uma lista de coluna. Por exemplo, um controle de cabeçalho pode ser útil para implementar controles de coluna em uma planilha.  

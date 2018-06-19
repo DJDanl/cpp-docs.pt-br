@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33238157"
 ---
 # <a name="compiler-error-c2797"></a>Erro do Compilador C2797
 (Obsoleto) Lista de inicializações dentro da lista de inicializador de membro ou inicializador de membro de dados não estático não está implementada.  

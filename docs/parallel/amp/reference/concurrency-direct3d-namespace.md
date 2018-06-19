@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687381"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Namespace Concurrency::direct3d
 O `direct3d` namespace fornece funções que oferecem suporte à interoperabilidade D3D. Ele permite o uso contínuo do D3D recursos de computação no código de AMP, bem como permitir o uso de recursos criados em AMP D3D código, sem criar cópias redundantes de intermediárias. Pode acelerar as seções de computação intensiva de seus aplicativos DirectX usando C++ AMP e usar a API do D3D dados produzidos de cálculos AMP incrementalmente.  

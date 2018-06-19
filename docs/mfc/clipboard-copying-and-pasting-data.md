@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343344"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Área de Transferência: copiando e colando dados
 Este tópico descreve o trabalho mínimo necessário para implementar a copiar e colar da área de transferência no seu aplicativo OLE. É recomendável que você leia o [objetos de dados e fontes de dados (OLE)](../mfc/data-objects-and-data-sources-ole.md) tópicos antes de continuar.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385180"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Acesso fortemente tipado a controles com assistentes de código
 Se você estiver familiarizado com recursos DDX, você pode usar a propriedade de controle no [Adicionar Assistente de variável de membro](../ide/add-member-variable-wizard.md) para criar acesso fortemente tipado. Essa abordagem é mais fácil do que a criação de controles sem assistentes de código.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229683"
 ---
 # <a name="compiler-error-c2567"></a>C2567 de erro do compilador
 não é possível abrir metadados 'file', arquivo pode ter foi excluído ou movido  

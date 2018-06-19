@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380559"
 ---
 # <a name="steps-in-a-typical-ftp-client-application-to-delete-a-file"></a>Etapas em um aplicativo cliente FTP típico para excluir um arquivo
 A tabela a seguir mostra as etapas que você pode executar em um aplicativo cliente FTP típico que exclui um arquivo.  

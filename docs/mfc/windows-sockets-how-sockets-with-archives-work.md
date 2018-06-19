@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385210"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: como funcionam soquetes com arquivos mortos
 Este artigo explica como um [CSocket](../mfc/reference/csocket-class.md) objeto, um [CSocketFile](../mfc/reference/csocketfile-class.md) objeto e um [CArchive](../mfc/reference/carchive-class.md) objeto são combinadas para simplificar o envio e recebimento de dados por meio de um Windows Soquete.  

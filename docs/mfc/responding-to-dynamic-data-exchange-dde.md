@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379197"
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>Respondendo à troca dinâmica de dados (DDE)
 A janela do quadro pode responder a solicitações de intercâmbio (DDE) de dados dinâmicos para abrir arquivos do Gerenciador de arquivos (se a extensão de arquivo é registrada ou associada ao aplicativo). Consulte [registro de Shell](../mfc/special-cwinapp-services.md).  

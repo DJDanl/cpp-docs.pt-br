@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382773"
 ---
 # <a name="using-image-lists-with-header-controls"></a>Usando listas de imagens com controles de cabeçalho
 Itens de cabeçalho tem a capacidade de exibir uma imagem em um item de cabeçalho. Essa imagem, armazenada em uma lista de imagem associado é 16x16 pixels e tem as mesmas características que as imagens de ícone usadas em um controle de exibição de lista. Para implementar com êxito a esse comportamento, primeiro crie e inicializar a lista de imagens, associar a lista de controle de cabeçalho e, em seguida, modifique os atributos do item de cabeçalho que exibirá a imagem.  

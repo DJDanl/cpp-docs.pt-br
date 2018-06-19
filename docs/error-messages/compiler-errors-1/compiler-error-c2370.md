@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33195874"
 ---
 # <a name="compiler-error-c2370"></a>C2370 de erro do compilador
 'Identificador': redefinição; classe de armazenamento diferente  

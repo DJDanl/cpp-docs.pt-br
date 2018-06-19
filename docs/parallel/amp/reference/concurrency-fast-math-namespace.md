@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692152"
 ---
 # <a name="concurrencyfastmath-namespace"></a>Namespace Concurrency::fast_math
 Funções no `fast_math` namespace tem menos precisão, suporte apenas de precisão única (`float`) e chame os intrínsecos do DirectX. Há duas versões de cada função, por exemplo `cos` e `cosf`. Ambas as versões levar e retornar um `float`, mas cada chama o DirectX mesmo intrínseco.  

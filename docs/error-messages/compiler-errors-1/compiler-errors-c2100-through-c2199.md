@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33237132"
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>Erros C2100 a C2199 (compilador)
 

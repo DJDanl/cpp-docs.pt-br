@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385785"
 ---
 # <a name="using-cimagelist"></a>Usando CImageList
 Uma lista de imagens, representada pela classe [CImageList](../mfc/reference/cimagelist-class.md), é uma coleção de imagens do mesmo tamanho, cada um deles pode ser referenciada por seu índice. Listas de imagens são usadas para gerenciar de maneira eficiente grandes conjuntos de ícones ou bitmaps. Listas de imagens são não controles já que não são windows. No entanto, eles são usados com vários tipos diferentes de controles, incluindo controles de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)), controles de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) e controles de guia ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).  

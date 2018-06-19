@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891916"
 ---
 # <a name="switching-between-dialog-box-controls-and-code"></a>Alternando controles de caixa de diálogo e código
 Em aplicativos MFC, você pode clicar duas vezes em controles de caixa de diálogo para ir para o seu código de manipulador de ou para criar rapidamente o stub de funções de manipulador.  

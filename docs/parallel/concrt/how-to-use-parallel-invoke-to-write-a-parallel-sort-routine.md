@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689162"
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Como usar parallel_invoke para escrever uma rotina de classificação em paralelo
 Este documento descreve como usar o [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) algoritmo para melhorar o desempenho do algoritmo de classificação bitonic. O algoritmo de classificação bitonic forma recursiva divide a sequência de entrada em menores classificadas partições. O algoritmo de classificação bitonic pode ser executados em paralelo porque cada operação de partição é independente de todas as outras operações.  

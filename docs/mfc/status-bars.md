@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379626"
 ---
 # <a name="status-bars"></a>Barras de status
 Barras de status oferecem um local para exibir informações úteis e mensagens para o usuário sem interromper o trabalho do usuário de seu aplicativo. Normalmente é exibida na parte inferior de uma janela, barras de status tem "painéis", que incluem "indicadores" e "linha de mensagem". Os indicadores de atribuir o status de coisas como bloqueio de ROLAGEM, se a gravação de macro estiver ativada, e assim por diante. A linha de mensagem na barra de status pode exibir informações sobre o status do programa ou um item de menu ou botão de barra de ferramentas que aponta para o usuário com o mouse.  

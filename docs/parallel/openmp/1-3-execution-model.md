@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687888"
 ---
 # <a name="13-execution-model"></a>1.3 Modelo de execução
 OpenMP usa o modelo de associação de bifurcação de execução paralela. Embora esse modelo de associação de bifurcação pode ser útil para solucionar vários problemas, um pouco sob medida para aplicativos grandes baseada em conjunto. OpenMP destina-se aos programas de suporte que serão executados corretamente ambos como programas de paralelo (vários threads de execução e uma biblioteca de suporte OpenMP completa) e programas sequenciais (diretivas ignoradas e uma biblioteca de stubs OpenMP simple). No entanto, é possível e permissão para desenvolver um programa que não funcionam corretamente quando executadas sequencialmente. Além disso, diferentes graus de paralelismo podem causar resultados numéricos diferentes devido a alterações na associação de operações numéricas. Por exemplo, uma redução de adição serial pode ter um padrão diferente das associações de adição de uma redução em paralela. Essas associações diferentes podem alterar os resultados da adição de ponto flutuante.  

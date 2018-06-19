@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380364"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>Sequência de operações para criação de controles ActiveX
 A tabela a seguir mostra a função e a função do framework na criação de controles ActiveX (anteriormente conhecidos como controles OLE).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234088"
 ---
 # <a name="compiler-error-c2678"></a>C2678 de erro do compilador
 binário 'operator': Nenhum operador definido que receba um operando esquerdo do tipo 'type' (ou não há nenhuma conversão aceitável)  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381973"
 ---
 # <a name="slider-notification-messages"></a>Mensagens de notificação do controle deslizante
 Um controle deslizante notificará sua janela pai de ações de usuário enviando pai `WM_HSCROLL` ou `WM_VSCROLL` mensagens, dependendo da orientação do controle deslizante. Para lidar com essas mensagens, adicionar manipuladores para o `WM_HSCROLL` e `WM_VSCROLL` mensagens para a janela pai. O [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) e [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) funções de membro serão passadas um código de notificação, a posição do controle deslizante e um ponteiro para o [CSliderCtrl](../mfc/reference/csliderctrl-class.md) objeto. Observe que o ponteiro for do tipo **CScrollBar \***  mesmo que ele aponta para um `CSliderCtrl` objeto. Você precisará de conversão de tipo deste ponteiro caso você precise manipular o controle deslizante.  

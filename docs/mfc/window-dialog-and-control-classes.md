@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381840"
 ---
 # <a name="window-dialog-and-control-classes"></a>Classes de janela, caixa de diálogo e controle
 Classe `CWnd` e suas classes derivadas encapsulam um `HWND`, um identificador para uma janela do Windows. `CWnd` pode ser usada sozinha ou como base para derivar novas classes. As classes derivadas fornecidas pela biblioteca de classe representam vários tipos de windows.  

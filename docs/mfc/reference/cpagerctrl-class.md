@@ -63,6 +63,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377165"
 ---
 # <a name="cpagerctrl-class"></a>Classe CPagerCtrl
 O `CPagerCtrl` classe envolve o controle de pager do Windows, que pode aparecer na exibição de uma janela independente que não se ajustar a janela.  

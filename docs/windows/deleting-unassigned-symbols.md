@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882934"
 ---
 # <a name="deleting-unassigned-symbols"></a>Excluindo símbolos não atribuídos
 ### <a name="to-delete-an-unassigned-unused-symbol"></a>Para excluir um símbolo (não utilizado) não atribuído  

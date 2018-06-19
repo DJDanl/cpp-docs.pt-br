@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382067"
 ---
 # <a name="window-procedure-entry-points"></a>Pontos de entrada do procedimento de janela
 Para proteger os procedimentos de janela MFC, links módulo estático com uma implementação do procedimento de janela especial. A ligação ocorre automaticamente quando o módulo é vinculado a MFC. Usa esse procedimento de janela a `AFX_MANAGE_STATE` macro para definir corretamente o estado do módulo efetivo, em seguida, ele chama **AfxWndProc**, que por sua vez delega para o `WindowProc` a função de membro do `CWnd`-derivado objeto.  

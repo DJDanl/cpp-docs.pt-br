@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381082"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementação da barra de status no MFC
 Um [CStatusBar](../mfc/reference/cstatusbar-class.md) objeto é uma barra de controle com uma linha de texto de painéis de saída. Os painéis de saída são usados como linhas de mensagem e indicadores de status. Exemplos incluem as linhas de mensagem de Ajuda do menu que explicam rapidamente o comando de menu selecionado e os indicadores que mostram o status de SCROLL LOCK, NUM LOCK e outras chaves.  

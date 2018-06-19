@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380270"
 ---
 # <a name="servers-implementing-server-documents"></a>Servidores: implementando documentos de servidor
 Este artigo explica as etapas que necessárias para implementar com êxito um documento do servidor se você não especificou a opção de servidor OLE no Assistente do aplicativo.  

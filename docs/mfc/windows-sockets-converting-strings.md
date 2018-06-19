@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383754"
 ---
 # <a name="windows-sockets-converting-strings"></a>Windows Sockets: convertendo cadeias de caracteres
 Este artigo e dois artigos complementar explicam vários problemas na programação do Windows Sockets. Este artigo aborda convertendo cadeias de caracteres. Os outros problemas são abordados em [Windows Sockets: bloqueando](../mfc/windows-sockets-blocking.md) e [Windows Sockets: ordenação de bytes](../mfc/windows-sockets-byte-ordering.md).  

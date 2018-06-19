@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385103"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Passo a passo: Atualizando o aplicativo de rabisco MFC (parte 1)
 Este passo a passo demonstra como modificar um aplicativo MFC existente para usar a interface do usuário da faixa de opções. Visual Studio oferece suporte a faixa de opções do Office 2007 e Windows 7 clip faixa de opções. Para obter mais informações sobre a interface do usuário da faixa de opções, consulte [faixas de opções](http://go.microsoft.com/fwlink/p/?linkid=129233) no site do MSDN.  

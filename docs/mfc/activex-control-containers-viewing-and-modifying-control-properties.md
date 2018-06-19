@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340288"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>Contêineres de controle ActiveX: exibindo e modificando propriedades de controle
 Quando você insere um controle ActiveX em um projeto, é útil exibir e alterar as propriedades com suporte pelo controle ActiveX. Este artigo descreve como usar o editor de recursos do Visual C++ para fazer isso.  

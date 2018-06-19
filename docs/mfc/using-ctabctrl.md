@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383676"
 ---
 # <a name="using-ctabctrl"></a>Usando CTabCtrl
 Um "controle de guia" é análogo a rotulado pastas em um arquivo de gabinete ou divisores em um bloco de anotações. Use o controle de guia, representado pela classe [CTabCtrl](../mfc/reference/ctabctrl-class.md), para mostrar várias páginas de informações ou controles a um usuário, um de cada vez, em um formato que sugere uma relação lógica entre cada página ou pares.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382685"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Usando controles comuns em uma caixa de diálogo
 Controles comuns do Windows podem ser usados em [caixas de diálogo](../mfc/dialog-boxes.md), exibições, exibições de registro e qualquer outra janela baseada em um modelo de caixa de diálogo de formulário. O procedimento a seguir, com algumas pequenas alterações, funcionará para formulários.  

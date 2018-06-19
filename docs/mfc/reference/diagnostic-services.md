@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377315"
 ---
 # <a name="diagnostic-services"></a>Serviços de diagnóstico
 A biblioteca Microsoft Foundation Class fornece muitos serviços de diagnósticos que tornam seus programas mais fácil de depuração. Esses serviços de diagnósticos incluem macros e funções globais que permitem que você acompanhe a memória do seu programa alocações, despeje o conteúdo de objetos em tempo de execução e imprimir as mensagens de depuração durante o tempo de execução. As macros e funções globais para serviços de diagnóstico são agrupadas nas seguintes categorias:  

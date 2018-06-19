@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686276"
 ---
 # <a name="316-ompinparallel-function"></a>3.1.6 função omp_in_parallel
 O **omp_in_parallel** função retorna um valor diferente de zero se ele é chamado dentro de extensão dinâmica de uma região parallel em execução em paralelo; caso contrário, retornará 0. O formato é o seguinte:  

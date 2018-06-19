@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695243"
 ---
 # <a name="a7---using-the-reduction-clause"></a>A.7   Usando a cláusula reduction
 O exemplo a seguir demonstra a cláusula de redução ([seção 2.7.2.6](../../parallel/openmp/2-7-2-6-reduction.md) na página 28):  

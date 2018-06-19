@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384775"
 ---
 # <a name="turning-off-the-activate-when-visible-option"></a>Desativando a opção Ativar Quando Visível
 Um controle tem dois estados básico: ativas e inativas. Tradicionalmente, esses estados foram diferenciados por se o controle tiver uma janela. Um controle ativo tinha uma janela. um controle inativo não faziam isso. Com a introdução da ativação sem janelas, essa diferença não é mais universal, mas ainda se aplica a vários controles.  

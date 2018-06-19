@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689604"
 ---
 # <a name="a30---use-of-reprivatization"></a>A.30   Uso de reprivatização
 O exemplo a seguir demonstra o reprivatization de variáveis. Variáveis privadas podem ser marcados `private` novamente em uma diretiva aninhada. Eles não precisam ser compartilhado na região parallel delimitador.  

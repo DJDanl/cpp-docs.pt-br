@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380595"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Definindo as imagens para um item individual
 Os diferentes tipos de imagens usadas pelo item de caixa de combinação estendidas são determinados pelos valores a `iImage`, **iSelectedImage**, e **iOverlay** membros a [COMBOBOXEXITEM ](http://msdn.microsoft.com/library/windows/desktop/bb775746) estrutura. Cada valor é o índice de uma imagem na lista de imagens associado do controle. Por padrão, esses membros são definidos como 0, fazendo com que o controle para não exibir nenhuma imagem do item. Se você quiser usar imagens para um item específico, você pode modificar a estrutura da mesma forma, ao inserir o item de caixa de combinação ou modificando um item de caixa de combinação existente.  

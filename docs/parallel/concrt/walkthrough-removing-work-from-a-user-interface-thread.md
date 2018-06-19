@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694281"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Instruções passo a passo: removendo trabalho de um thread de interface de usuário
 Este documento demonstra como usar o tempo de execução de simultaneidade para mover o trabalho realizado pelo thread de interface do usuário (IU) em um aplicativo do Microsoft Foundation Classes (MFC) para um thread de trabalho. Este documento também demonstra como melhorar o desempenho de uma operação demorada de desenho.  

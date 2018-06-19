@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879055"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (Extensões de Componentes C++)
 O `ref new` palavra-chave agregação aloca uma instância de um tipo que será limpo quando o objeto se torna inacessível e que retorna um identificador ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) para o objeto alocado.  

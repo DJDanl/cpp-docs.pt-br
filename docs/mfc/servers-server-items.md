@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382496"
 ---
 # <a name="servers-server-items"></a>Servidores: itens de servidor
 Quando um contêiner inicia um servidor para que um usuário pode editar um item OLE incorporado ou vinculado, o aplicativo de servidor cria um "item de servidor". O item do servidor, que é um objeto de uma classe derivada de `COleServerItem`, fornece uma interface entre o documento do servidor e o aplicativo de contêiner.  

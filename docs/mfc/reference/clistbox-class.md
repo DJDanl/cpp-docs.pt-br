@@ -117,6 +117,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377830"
 ---
 # <a name="clistbox-class"></a>Classe CListBox
 Fornece a funcionalidade de uma caixa de listagem do Windows.  

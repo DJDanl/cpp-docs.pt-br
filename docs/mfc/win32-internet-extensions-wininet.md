@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383955"
 ---
 # <a name="win32-internet-extensions-wininet"></a>Extensões da Internet Win32 (WinInet)
 Um aplicativo de cliente da Internet é um programa que acessa as informações de uma fonte de dados de rede (servidor) usando protocolos de Internet como HTTP, FTP ou gopher. Um aplicativo de cliente da Internet pode acessar um servidor para recuperar dados, como mapas de clima, os preços de estoque ou manchetes jornal, por exemplo. O cliente da Internet pode acessar o servidor por meio de uma rede externa (Internet) ou uma rede interna (às vezes chamado de uma intranet).  

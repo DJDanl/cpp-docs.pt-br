@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892277"
 ---
 # <a name="srwlocktrylockshared-method"></a>Método SRWLock::TryLockShared
 Tenta adquirir um objeto SRWLock no modo compartilhado para o objeto SRWLock especificado ou atual.  

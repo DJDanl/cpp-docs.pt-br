@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379919"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Operações de fluxo em controles de edição avançada
 Você pode usar fluxos para transferir dados para dentro ou fora de um controle de edição avançada ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Um fluxo é definido por um [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) estrutura, que especifica um buffer e uma função de retorno de chamada definido pelo aplicativo.  

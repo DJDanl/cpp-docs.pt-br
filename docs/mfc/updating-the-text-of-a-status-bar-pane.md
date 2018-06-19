@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384472"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Atualizando o texto de um painel da barra de status
 Este artigo explica como alterar o texto que aparece em um painel de barra de status do MFC. Uma barra de status — um objeto window da classe [CStatusBar](../mfc/reference/cstatusbar-class.md) — contém vários "painéis". Cada painel é uma área retangular da barra de status que você pode usar para exibir informações. Por exemplo, muitos aplicativos exibem o status da tecla CAPS LOCK, NUM LOCK e outras chaves nos painéis na extrema direita. Aplicativos normalmente exibem texto informativo na extrema esquerdo painel de (0), às vezes chamado de "painel de mensagem". Por exemplo, a barra de status MFC padrão usa o painel para exibir uma cadeia de caracteres explicando o botão de item ou a barra de ferramentas do menu selecionado no momento. A figura no [barras de Status](../mfc/status-bar-implementation-in-mfc.md) mostra uma barra de status de um aplicativo criado pelo Assistente de aplicativo MFC.  

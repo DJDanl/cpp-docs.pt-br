@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687368"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Comparando estruturas de dados de sincronização com a API do Windows
 Este tópico compara o comportamento das estruturas de dados de sincronização que são fornecidos pelo tempo de execução de simultaneidade aos fornecidos pela API do Windows.  

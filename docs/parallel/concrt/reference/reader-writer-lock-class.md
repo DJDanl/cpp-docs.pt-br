@@ -30,6 +30,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692263"
 ---
 # <a name="readerwriterlock-class"></a>Classe reader_writer_lock
 Um bloqueio de leitor-gravador baseadas em fila do gravador de preferência com local apenas girando. O bloqueio concede primeiro - primeiro acesso (PEPS) para gravadores e impede leitores sob uma carga contínua de gravadores.  

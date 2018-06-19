@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383887"
 ---
 # <a name="using-property-sheets-in-your-application"></a>Usando folhas de propriedade no aplicativo
 Para usar uma folha de propriedades em seu aplicativo, conclua as seguintes etapas:  

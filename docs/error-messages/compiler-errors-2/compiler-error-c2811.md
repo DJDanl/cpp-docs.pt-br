@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236073"
 ---
 # <a name="compiler-error-c2811"></a>C2811 de erro do compilador
 'type1': não é possível herdar de 'type2', uma referência de classe só pode herdar de uma classe ref ou classe de interface  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345980"
 ---
 # <a name="mapping-messages"></a>Mapeando mensagens
 Cada classe de estrutura que pode receber mensagens ou comandos tem seu próprio "mapa de mensagem". A estrutura usa mapas de mensagem para conectar-se as mensagens e comandos para suas funções de manipulador. Qualquer classe derivada da classe `CCmdTarget` pode ter um mapa de mensagem. Outros artigos explicam os mapas de mensagem em detalhes e descrevem como usá-los.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385151"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets: ordenação de bytes
 Este artigo e dois artigos complementar explicam vários problemas na programação do Windows Sockets. Este artigo aborda a ordem de bytes. Os outros problemas são abordados nos artigos: [Windows Sockets: bloqueando](../mfc/windows-sockets-blocking.md) e [Windows Sockets: Convertendo cadeias de caracteres](../mfc/windows-sockets-converting-strings.md).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691684"
 ---
 # <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25   Exemplos da cláusula de atributo de dados copyprivate
 **Exemplo 1:** o `copyprivate` cláusula ([seção 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) na página 32) pode ser usado para transmitir valores adquiridos por um único thread diretamente para todas as instâncias das variáveis privadas em outros threads.  

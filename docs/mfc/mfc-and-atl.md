@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347728"
 ---
 # <a name="mfc-and-atl"></a>MFC e ATL
 O Microsoft Foundation Classes (MFC) fornecem um wrapper de orientada a objeto de C++ em Win32 para o desenvolvimento rápido de aplicativos de área de trabalho nativos. A biblioteca de modelo ativa (ATL) é uma biblioteca de conteúdo adicional que simplifica o desenvolvimento COM e é muito usada para criação de controles ActiveX.  

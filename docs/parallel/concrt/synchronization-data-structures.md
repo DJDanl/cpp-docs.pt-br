@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693800"
 ---
 # <a name="synchronization-data-structures"></a>Estruturas de dados de sincronização
 O tempo de execução de simultaneidade fornece várias estruturas de dados que lhe permite sincronizar o acesso aos dados compartilhados de vários threads. Essas estruturas de dados são úteis quando você compartilhou dados que você pode modificar raramente. Um objeto de sincronização, por exemplo, uma seção crítica, faz com que outros threads de espera até que o recurso compartilhado está disponível. Portanto, se você usar esse tipo de objeto para sincronizar o acesso aos dados que são usados com frequência, você poderá perder escalabilidade em seu aplicativo. O [biblioteca de padrões paralelos (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) fornece o [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) classe, que permite que você compartilhe um recurso, entre vários threads ou tarefas sem a necessidade de sincronização. Para obter mais informações sobre o `combinable` de classe, consulte [objetos e contêineres paralelos](../../parallel/concrt/parallel-containers-and-objects.md).  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890406"
 ---
 # <a name="transmitas"></a>transmit_as
 Instrui o compilador para associar um tipo apresentado que manipulam a aplicativos cliente e servidor, com um tipo transmitido.  

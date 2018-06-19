@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890419"
 ---
 # <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>Caixa de diálogo Fonte da Ferramenta de Texto (editor de imagens para ícones)
 Especifica as configurações de fonte, quando você usar o [caixa de diálogo Ferramenta de texto](../windows/text-tool-dialog-box-image-editor-for-icons.md) do [Editor de imagem](../windows/image-editor-for-icons.md).  

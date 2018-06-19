@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382759"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Operações de arrastar e soltar de controle de árvore
 Um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envia uma notificação quando o usuário começa a arrastar um item. O controle envia um [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) mensagem de notificação quando o usuário começa a arrastar um item com o botão esquerdo do mouse e um [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) mensagem de notificação quando o usuário começa a arrastar com o botão direito. Você pode impedir que um controle de árvore envie essas notificações, fornecendo o controle de árvore de **TVS_DISABLEDRAGDROP** estilo.  

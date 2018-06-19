@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380722"
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>Armazenando e carregando CObjects por meio de um arquivo morto
 Armazenando e carregando `CObject`s por meio de um arquivo morto requer considerações adicionais. Em certos casos, você deve chamar o `Serialize` função do objeto, onde o `CArchive` objeto é um parâmetro do `Serialize` chamada, em vez de usar o **< \<** ou **>>** operador o `CArchive`. O fato importante ter em mente é que o `CArchive` **>>** construções de operador de `CObject` na memória com base em `CRuntimeClass` previamente gravadas para o arquivo, o arquivo de armazenamento de informações.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382867"
 ---
 # <a name="when-to-initialize-cwnd-objects"></a>Quando inicializar objetos CWnd
 Você não pode criar seu próprio filho windows ou chamar quaisquer funções de API do Windows no construtor de uma `CWnd`-objeto derivado. Isso ocorre porque o `HWND` para o `CWnd` objeto ainda não foi criado. Inicialização mais específicos do Windows, como a adição de janelas filho, deve ser feita em um [OnCreate](../mfc/reference/cwnd-class.md#oncreate) manipulador de mensagens.  

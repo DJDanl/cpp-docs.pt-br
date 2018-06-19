@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382844"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>Usando listas de imagens em um controle da barra de ferramentas
 Por padrão, as imagens usadas pelos botões em um controle de barra de ferramentas são armazenadas como um único bitmap. No entanto, você também pode armazenar imagens de botão em um conjunto de listas de imagens. O objeto de controle de barra de ferramentas pode usar até três listas de imagens separadas:  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689315"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Agendador de tarefas (Tempo de Execução de Simultaneidade)
 Os tópicos desta parte da documentação descrevem os recursos importantes do Agendador de tarefas de tempo de execução de simultaneidade. O Agendador de tarefas é útil quando você deseja ajustar o desempenho do seu código existente que usa o tempo de execução de simultaneidade.  

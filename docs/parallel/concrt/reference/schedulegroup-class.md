@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688681"
 ---
 # <a name="schedulegroup-class"></a>Classe ScheduleGroup
 Representa uma abstração para um grupo de agendamento. Organizam os grupos de agendamento de um conjunto de trabalho relacionados que se beneficia de ser agendado próximas temporariamente, por outra tarefa em execução no mesmo grupo antes de passar para outro grupo ou espacialmente, executando vários itens dentro do mesmo grupo no mesmo Nó NUMA ou soquete físico.  

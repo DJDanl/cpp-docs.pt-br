@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692417"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Visão geral do Tempo de Execução de Simultaneidade
 Este documento fornece uma visão geral do tempo de execução de simultaneidade. Descreve os benefícios do tempo de execução de simultaneidade, quando usá-lo e como seus componentes interagem entre si e com o sistema operacional e aplicativos.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687986"
 ---
 # <a name="sample-multithread-c-program"></a>Programa C multithread de exemplo
 Bounce.c é um programa multithread de exemplo que cria um novo thread de cada vez que a letra **um** ou **um** é digitado. Cada thread devoluções rosto feliz de outra cor na tela. Até 32 threads podem ser criados. Um encerramento normal do programa ocorre quando `q` ou **p** é digitado. Para obter informações sobre como compilar e vincular Bounce.c, consulte [compilação e vinculando programas de Multithread](../parallel/compiling-and-linking-multithread-programs.md).  

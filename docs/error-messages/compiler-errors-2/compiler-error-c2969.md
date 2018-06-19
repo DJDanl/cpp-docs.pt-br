@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241893"
 ---
 # <a name="compiler-error-c2969"></a>C2969 de erro do compilador
 Erro de sintaxe: 'symbol': esperado da definição de função de membro para terminar com '}'  

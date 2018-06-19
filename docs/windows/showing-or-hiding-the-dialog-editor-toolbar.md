@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891588"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>Mostrando ou ocultando a barra de ferramentas Editor de Caixa de Diálogo
 Quando você abre o editor de caixa de diálogo, a barra de ferramentas do Editor de caixa de diálogo é exibida automaticamente na parte superior da sua solução.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198788"
 ---
 # <a name="fatal-error-c1509"></a>Erro fatal C1509
 limite do compilador: muitos estados de manipulador de exceção na função 'function'. Simplifique a função  

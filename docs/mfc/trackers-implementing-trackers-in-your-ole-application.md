@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381544"
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>Controladores: implementando controladores no aplicativo OLE
 Rastreadores fornecem uma interface gráfica para permitir que os usuários interagem com itens de cliente OLE. Usando estilos diferentes de controlador, OLE cliente itens podem ser exibidos com bordas tracejadas, redimensionar identificadores ou uma variedade de outros efeitos visuais. Este artigo descreve:  

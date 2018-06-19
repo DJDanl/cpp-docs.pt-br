@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381771"
 ---
 # <a name="servers"></a>Servidores
 Um aplicativo de servidor (ou o aplicativo de componente) cria OLE itens (ou componentes) para uso por aplicativos de contêiner. Um aplicativo de servidor de edição visual também oferece suporte à edição visual ou a ativação no local. Outra forma de servidor OLE é um [servidor de automação](../mfc/automation-servers.md). Alguns aplicativos de servidor oferecem suporte somente à criação de itens inseridos; outros oferecem suporte à criação de itens incorporados e vinculados. Alguns oferecem suporte a vinculação, embora isso é raro. Todos os aplicativos de servidor devem dar suporte à ativação por aplicativos de contêiner quando o usuário deseja editar um item. Um aplicativo pode ser um contêiner e um servidor. Em outras palavras, ele pode ambos incorporar dados em seus documentos e criar dados que podem ser incorporados como itens em documentos de outros aplicativos.  

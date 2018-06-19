@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384459"
 ---
 # <a name="windows"></a>Windows
 Essa família de artigos abrange objetos de janela no framework MFC. Todas as janelas do MFC derivam da classe [CWnd](../mfc/reference/cwnd-class.md), inclusive janelas de quadro, modos de exibição, caixas de diálogo e controles.  

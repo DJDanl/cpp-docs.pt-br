@@ -35,6 +35,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693407"
 ---
 # <a name="choice-class"></a>Classe choice
 Um `choice` bloco de mensagens é um bloco de várias fonte, destino único que representa uma interação com um conjunto de fontes de fluxo de controle. O bloco de opção esperará por qualquer uma das várias fontes para produzir uma mensagem e propagará o índice da origem que gerou a mensagem.  

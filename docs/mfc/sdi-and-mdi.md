@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385798"
 ---
 # <a name="sdi-and-mdi"></a>SDI e MDI
 MFC facilita a trabalhar com a interface de documento único (SDI) e aplicativos de interface de documentos múltiplos (MDI).  

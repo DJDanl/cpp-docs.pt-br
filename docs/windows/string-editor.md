@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891370"
 ---
 # <a name="string-editor"></a>Editor de Cadeia de Caracteres
 Uma tabela de cadeia de caracteres é um recurso do Windows que contém uma lista de IDs, valores e legendas para todas as cadeias de caracteres de seu aplicativo. Por exemplo, os avisos de barra de status estão localizados na tabela de cadeia de caracteres.  

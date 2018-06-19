@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385064"
 ---
 # <a name="root-class-cobject"></a>Classe raiz: CObject
 A maioria das classes da biblioteca Microsoft Foundation Class (MFC) é derivada de uma única classe base na raiz da hierarquia de classe. `CObject` Fornece uma série de recursos úteis para todas as classes derivadas dele, com pouca sobrecarga. Para obter mais informações sobre `CObject` e seus recursos, consulte [usando CObject](../mfc/using-cobject.md).  

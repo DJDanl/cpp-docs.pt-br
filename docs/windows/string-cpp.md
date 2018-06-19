@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889014"
 ---
 # <a name="string-c"></a>string (C++)
 Indica que o unidimensional `char`, `wchar_t`, **bytes** (ou equivalente) array ou ponteiro para essa matriz deve ser tratado como uma cadeia de caracteres.  
