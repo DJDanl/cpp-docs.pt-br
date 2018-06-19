@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412459"
 ---
 # <a name="secure-template-overloads"></a>Sobrecargas de modelo seguras
 A Microsoft preteriu muitas funções CRT (biblioteca de tempo de execução C) em favor de versões com segurança aprimorada. Por exemplo, `strcpy_s` é o substituto mais seguro de `strcpy`. As funções preteridas são as origens comuns de bugs de segurança, pois não impedem operações que podem substituir a memória. Por padrão, o compilador gerará um aviso de substituição quando você usar uma dessas funções. A CRT fornece sobrecargas de modelo do C++ para essas funções para ajudar a facilitar a transição para as variantes mais seguras.  
