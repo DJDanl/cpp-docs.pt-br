@@ -46,6 +46,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366465"
 ---
 # <a name="ccommodule-class"></a>Classe CComModule
 A partir de ATL 7.0, `CComModule` foi preterido: consulte [Classes de módulo ATL](../../atl/atl-module-classes.md) para obter mais detalhes.  

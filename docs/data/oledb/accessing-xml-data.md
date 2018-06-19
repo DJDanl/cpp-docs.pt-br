@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093396"
 ---
 # <a name="accessing-xml-data"></a>Acessando dados XML
 Há dois métodos separados de recuperar dados XML de uma fonte de dados: uma usa [CStreamRowset](../../data/oledb/cstreamrowset-class.md) e outra que usa [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371415"
 ---
 # <a name="cgthreads-compiler-threads"></a>/CGTHREADS (threads compiladoras)
 Defina quantos threads cl.exe devem ser usados na otimização e na geração de códigos quando a geração de código vínculo-tempo for especificada.  

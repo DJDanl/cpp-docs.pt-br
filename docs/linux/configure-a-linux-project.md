@@ -19,6 +19,7 @@ ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/21/2018
+ms.locfileid: "34422674"
 ---
 # <a name="configure-a-linux-project"></a>Configurar um projeto do Linux
 Este tópico descreve como configurar um projeto do Visual Studio Linux. Para obter mais informações sobre projetos do CMake Linux, consulte [Configurar um projeto do CMake Linux ](cmake-linux-project.md).

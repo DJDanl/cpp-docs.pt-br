@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111244"
 ---
 # <a name="record-views--mfc-data-access"></a>Exibição de registro (Acesso a dados MFC)
 Esta seção se aplica apenas às classes MFC ODBC. Para obter informações sobre exibições de registro de OLE DB, consulte [COleDBRecordView](../mfc/reference/coledbrecordview-class.md) e [usando OLE DB exibições de registro](../data/oledb/using-ole-db-record-views.md).  

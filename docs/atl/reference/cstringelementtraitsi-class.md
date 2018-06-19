@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362099"
 ---
 # <a name="cstringelementtraitsi-class"></a>Classe CStringElementTraitsI
 Essa classe fornece funções estáticas relacionadas a cadeias de caracteres armazenadas em objetos de classe de coleção. Ele é semelhante a [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), mas executa comparações em maiusculas e minúsculas.  

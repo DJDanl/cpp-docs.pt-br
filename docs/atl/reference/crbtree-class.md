@@ -42,6 +42,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365579"
 ---
 # <a name="crbtree-class"></a>Classe CRBTree
 Essa classe fornece métodos para criação e uso de uma árvore de vermelho-preto.  

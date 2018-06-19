@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372276"
 ---
 # <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>Como mesclar vários perfis PGO em um único perfil
 

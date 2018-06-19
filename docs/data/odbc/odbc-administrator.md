@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090189"
 ---
 # <a name="odbc-administrator"></a>Administrador ODBC
 Administrador ODBC registra e configura o [fontes de dados](../../data/odbc/data-source-odbc.md) disponíveis localmente ou em uma rede. Os assistentes usam informações fornecidas pelo administrador de ODBC para criar o código em seus aplicativos que se conecta aos usuários a fontes de dados.  

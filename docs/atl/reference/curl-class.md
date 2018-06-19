@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366228"
 ---
 # <a name="curl-class"></a>Classe de rotação
 Essa classe representa uma URL. Ele permite que você manipule cada elemento da URL, independentemente de outras pessoas se uma URL existente de análise de cadeia de caracteres ou criando uma cadeia de caracteres a partir do zero.  

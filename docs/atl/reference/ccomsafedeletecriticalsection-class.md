@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363853"
 ---
 # <a name="ccomsafedeletecriticalsection-class"></a>Classe CComSafeDeleteCriticalSection
 Essa classe fornece métodos para a obtenção e liberar a propriedade de um objeto de seção crítica.  

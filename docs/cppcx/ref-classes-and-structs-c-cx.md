@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092438"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Classes e estruturas ref (C++/CX)
 C + + suporta CX definidos pelo usuário *classes ref* e *estruturas ref*, definidas pelo usuário *valor classes* e *estruturas de valor*. Essas estruturas de dados são os contêineres principais pelos quais C + + CX oferece suporte ao sistema de tipo de tempo de execução do Windows. O conteúdo é emitido para metadados de acordo com determinadas regras específicas e isso permite que ele seja transmitido entre componentes de tempo de execução do Windows e aplicativos de plataforma Universal do Windows que são escritos em C++ ou em outras linguagens.  

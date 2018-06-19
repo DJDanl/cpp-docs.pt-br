@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088184"
 ---
 # <a name="platformdetailsiprintable-interface"></a>Interface Platform::Details::IPrintable
 Essa interface destina-se somente a uso interno e não se destina a ser usada para desenvolvimento.  

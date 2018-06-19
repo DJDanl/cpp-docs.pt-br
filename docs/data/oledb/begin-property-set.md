@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093754"
 ---
 # <a name="beginpropertyset"></a>BEGIN_PROPERTY_SET
 Mapa do conjunto de marcas de que início de uma propriedade definido em uma propriedade.  

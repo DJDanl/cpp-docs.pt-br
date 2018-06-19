@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362278"
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Usando parâmetros substituíveis (o registrador&#39;s pré-processador)
 Parâmetros substituíveis permitem que o cliente do registrador especificar dados de tempo de execução. Para fazer isso, o registrador mantém um mapa de substituição em que ele insere os valores associados com os parâmetros substituíveis em seu script. O registrador torna essas entradas de tempo de execução.  

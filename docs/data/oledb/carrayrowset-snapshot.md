@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089432"
 ---
 # <a name="carrayrowsetsnapshot"></a>CArrayRowset::Snapshot
 Lê o conjunto de linhas inteiro na memória, criando uma imagem ou um instantâneo dele.  

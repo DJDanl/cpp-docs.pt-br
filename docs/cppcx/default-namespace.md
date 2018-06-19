@@ -16,6 +16,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086935"
 ---
 # <a name="default-namespace"></a>namespace padrão
 O `default` namespace tem como escopo os tipos internos que são suportados pelo C + + CX.  

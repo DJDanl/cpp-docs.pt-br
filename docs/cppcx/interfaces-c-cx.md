@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090635"
 ---
 # <a name="interfaces-ccx"></a>Interfaces (C++/CX)
 Embora uma classe ref possa ser herdada de, no máximo, uma classe base concreta, ela pode implementar qualquer número de classes de interface. Uma classe de interface (ou estrutura de interface) em si pode herdar (ou exigir) várias classes de interface, pode sobrecarregar suas funções de membro e pode ter parâmetros de tipo.  

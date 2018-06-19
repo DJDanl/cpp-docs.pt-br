@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371990"
 ---
 # <a name="compiler-controlled-link-options"></a>Opções LINK controladas por compilador
 O compilador CL chama automaticamente o LINK, a menos que você especificar a opção /c. CL fornece algum controle sobre o vinculador por meio de opções de linha de comando e argumentos. A tabela a seguir resume os recursos CL que afetam a vinculação.  

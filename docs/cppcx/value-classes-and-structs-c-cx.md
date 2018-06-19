@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090706"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classes e estruturas de valor (C++/CX)
 Um *estrutura de valor* ou *classe de valor* é um compatível com o tempo de execução POD ("estrutura plain old data") do Windows. Ela tem um tamanho fixo e consiste somente em campos; diferentemente de uma classe ref, ela não tem propriedades.  

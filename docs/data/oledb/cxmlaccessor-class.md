@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102902"
 ---
 # <a name="cxmlaccessor-class"></a>Classe CXMLAccessor
 Permite que você acesse fontes de dados como dados de cadeia de caracteres quando você não possui conhecimento do esquema do repositório de dados (estrutura subjacente).  

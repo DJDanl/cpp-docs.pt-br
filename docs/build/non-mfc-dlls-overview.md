@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368636"
 ---
 # <a name="non-mfc-dlls-overview"></a>DLLs que não sejam MFC: visão geral
 Uma DLL do MFC - não é uma DLL que não usa internamente MFC e as funções exportadas na DLL podem ser chamadas por arquivos executáveis do MFC ou não MFC. Funções normalmente são exportadas de uma não - DLL MFC usando a interface padrão do C.  

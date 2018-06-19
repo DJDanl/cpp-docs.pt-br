@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092940"
 ---
 # <a name="working-with-documents-and-views"></a>Trabalhando com documentos e exibições
 A biblioteca Microsoft Foundation Classes (MFC) se baseia em uma arquitetura de documento/exibição para muitos de seus recursos. Normalmente, um documento armazena seus dados e um modo de exibição exibe dentro da área cliente de uma janela do quadro e gerencia a interação do usuário com os dados. O modo de exibição se comunica com o documento para obter e atualizar os dados. Você pode usar as classes de banco de dados com a estrutura ou sem ele.  

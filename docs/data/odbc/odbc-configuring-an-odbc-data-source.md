@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089146"
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC: configurando uma fonte de dados ODBC
 Para usar um [fonte de dados](../../data/odbc/data-source-odbc.md) com um aplicativo desenvolvido, você deve usar o administrador ODBC para configurá-lo. Administrador ODBC controla de fontes de dados disponíveis e suas informações de conexão no registro do Windows. Use o administrador ODBC para adicionar, modificar e excluir fontes de dados de **fontes de dados** caixa de diálogo para adicionar e excluir os drivers ODBC.  

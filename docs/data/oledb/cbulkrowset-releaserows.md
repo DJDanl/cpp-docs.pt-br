@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094921"
 ---
 # <a name="cbulkrowsetreleaserows"></a>CBulkRowset::ReleaseRows
 Chamadas [IRowset:: Releaserows](https://msdn.microsoft.com/en-us/library/ms719771.aspx) para diminuir a contagem de referência para todas as linhas recuperadas no momento do conjunto de linhas em massa.  

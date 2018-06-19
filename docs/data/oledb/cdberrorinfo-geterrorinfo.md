@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095684"
 ---
 # <a name="cdberrorinfogeterrorinfo"></a>CDBErrorInfo::GetErrorInfo
 Chamadas [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/en-us/library/ms711230.aspx) para retornar um [IErrorInfo](https://msdn.microsoft.com/en-us/library/ms718112.aspx) ponteiro de interface para o registro especificado.  

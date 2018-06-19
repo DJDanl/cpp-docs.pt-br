@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369351"
 ---
 # <a name="parameter-passing"></a>Passagem de parâmetro
 Os argumentos de inteiro de quatro primeiro são passados em registros. Valores inteiros são passados (na ordem da esquerda para a direita) em RCX, RDX, R8 e R9. Argumentos de 5 e superior são passados na pilha. Todos os argumentos forem justificado à direita nos registros. Isso é feito para o receptor pode ignorar os bits superiores do registro se necessário e pode acessar apenas a parte do Registro necessários.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370482"
 ---
 # <a name="lib-output-files"></a>Arquivos de saída LIB
 Os arquivos de saída produzidos por LIB dependem do modo no qual ele está sendo usado, conforme mostrado na tabela a seguir.  

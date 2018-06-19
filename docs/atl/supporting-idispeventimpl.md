@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362213"
 ---
 # <a name="supporting-idispeventimpl"></a>Suporte IDispEventImpl
 A classe de modelo [IDispEventImpl](../atl/reference/idispeventimpl-class.md) pode ser usado para fornecer suporte para Coletores de ponto de conexão em sua classe ATL. Um coletor de ponto de conexão permite que a sua classe manipular eventos disparados por objetos externos. Esses coletores de ponto de conexão são mapeadas com um mapa de coletor de eventos, fornecido por sua classe.  

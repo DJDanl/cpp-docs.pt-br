@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367353"
 ---
 # <a name="command-macros-and-options-macros"></a>Macros de comando e opções
 Macros de comando são predefinidas para produtos da Microsoft. Macros de opção representam opções para esses produtos e não são definidas por padrão. Ambos são usados em regras de inferência predefinidos e podem ser usados em blocos de descrição ou regras de inferência de tipos definidos pelo usuário. Macros de comando podem ser redefinidas para representar a parte ou toda uma linha de comando, incluindo as opções. Macros de opção geram uma cadeia de caracteres nula se esquerda indefinido.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090693"
 ---
 # <a name="cdbpropidsetcdbpropidset"></a>CDBPropIDSet::CDBPropIDSet
 O construtor. Inicializa o **rgProperties**, **cProperties**e (opcionalmente) **guidPropertySet** campos do [DBPROPIDSET](https://msdn.microsoft.com/en-us/library/ms717981.aspx) estrutura.  

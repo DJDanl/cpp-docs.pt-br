@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368415"
 ---
 # <a name="inference-rules"></a>Regras de inferência
 Regras de inferência fornecem comandos para atualizar os destinos e inferir dependentes para destinos. Extensões em uma regra de inferência correspondem a um único destino e dependente que têm o mesmo nome de base. Regras de inferência são definidos pelo usuário ou predefinido; regras predefinidas podem ser redefinidas.  

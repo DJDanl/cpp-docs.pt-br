@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093341"
 ---
 # <a name="atltraceerrorrecords"></a>AtlTraceErrorRecords
 OLE DB erro informações de registro para o dispositivo de despejo de despejos de memória se um erro será retornado.  

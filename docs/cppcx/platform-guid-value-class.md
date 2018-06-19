@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089445"
 ---
 # <a name="platformguid-value-class"></a>Platform::classe de valor Guid
 Representa um tipo de [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) no sistema de tipos do Tempo de Execução do Windows.  

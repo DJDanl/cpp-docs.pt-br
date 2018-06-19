@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367440"
 ---
 # <a name="fpcsr"></a>FpCsr
 O estado do registro também inclui o x87 palavra de controle FPU. A convenção de chamada impõe esse registro para ser não-volátil.  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094489"
 ---
 # <a name="accessors-and-rowsets"></a>Acessadores e conjuntos de linhas
 Para definir e recuperar dados, modelos OLE DB é usar um acessador e um conjunto de linhas por meio de [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) classe. Essa classe pode manipular vários acessadores de tipos diferentes.  

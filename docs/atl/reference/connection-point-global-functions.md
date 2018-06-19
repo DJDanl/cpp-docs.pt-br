@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362785"
 ---
 # <a name="connection-point-global-functions"></a>Funções globais do ponto de Conexão
 Essas funções fornecem suporte para pontos de conexão e do coletor de mapas.  

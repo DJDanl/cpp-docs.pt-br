@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367154"
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>Suporte de ponto flutuante para código anterior (Visual C++)
 Os registros de pilha de ponto flutuante (MM0-MM7/ST0-ST7) e MMX são preservados em alternâncias de contexto.  Não há nenhum convenção de chamada explícita para esses registros.  O uso de um desses registros é proibido no código em modo kernel.  

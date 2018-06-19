@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371093"
 ---
 # <a name="exp-files-as-linker-input"></a>Arquivos .Exp como entrada de vinculador
 Arquivos de exportação (. Exp) contêm informações sobre itens de funções e os dados exportados. Quando o LIB cria uma biblioteca de importação, ele também cria um arquivo. Exp. Você usa o arquivo. EXP quando você vincular um programa que exporta para e importa de outro programa, direta ou indiretamente. Se você vincular com um arquivo. EXP, LINK não produz uma biblioteca de importação, porque ele pressupõe que LIB já criado um. Para obter detalhes sobre os arquivos. EXP e bibliotecas de importação, consulte [trabalhando com bibliotecas importar e exportar arquivos](../../build/reference/working-with-import-libraries-and-export-files.md).  

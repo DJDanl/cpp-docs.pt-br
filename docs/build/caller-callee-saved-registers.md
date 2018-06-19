@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366790"
 ---
 # <a name="callercallee-saved-registers"></a>Registros salvos de chamador/receptor
 Destruído registra RAX RCX, RDX, R8, R9, R10, R11 são considerados volátil e deve ser considerado em chamadas de função (a menos que outra forma de segurança-provável pela análise de como a otimização de programa parcial).  

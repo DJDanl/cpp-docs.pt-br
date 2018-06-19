@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367076"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Chamando funções DLL a partir de aplicativos Visual Basic
 Para aplicativos do Visual Basic (ou aplicativos em outras linguagens, como Pascal ou Fortran) chamar funções em uma DLL do C/C++, as funções devem ser exportadas usando a convenção de chamada correta sem qualquer decoração de nome feita pelo compilador.  

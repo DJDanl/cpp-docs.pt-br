@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362194"
 ---
 # <a name="string-and-text-classes"></a>Cadeia de caracteres e Classes de texto
 Essas classes oferecem suporte para cadeias de caracteres e conversões de cadeia de caracteres de texto.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096932"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>Criando um provedor somente leitura simples
 Quando você tiver criado um provedor OLE DB usando o Assistente de projeto de ATL e ATL OLE DB Provider assistente, você pode adicionar outra funcionalidade que você deseja dar suporte. Começar a criar seu provedor examinando o tipo de dados que você está enviando para o consumidor e sob que condições. É especialmente importante determinar se é necessário dar suporte a comandos, transações e outros objetos opcionais. Um bom design adiantado irão acelerar a implementação e teste.  

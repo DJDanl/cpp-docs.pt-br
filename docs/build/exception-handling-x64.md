@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367180"
 ---
 # <a name="exception-handling-x64"></a>Tratamento de exceções (x64)
 Esta seção aborda o tratamento estruturado de exceções e o comportamento de tratamento de exceção de C++ de [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  

@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365975"
 ---
 # <a name="ccomobjectrootex-class"></a>Classe CComObjectRootEx
 Essa classe fornece métodos para lidar com o gerenciamento de contagem de referência de objeto para objetos agregados e agregados.  

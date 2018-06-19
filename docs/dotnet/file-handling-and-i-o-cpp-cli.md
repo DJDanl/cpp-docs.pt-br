@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108298"
 ---
 # <a name="file-handling-and-io-ccli"></a>Tratamento de arquivos e E/S (C++/CLI)
 Demonstra várias operações de arquivo usando o .NET Framework.  

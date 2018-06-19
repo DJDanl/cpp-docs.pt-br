@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366257"
 ---
 # <a name="arm-exception-handling"></a>Tratamento de exceção ARM
 O Windows baseado em ARM usa o mesmo mecanismo de tratamento de exceção estruturado para exceções geradas por hardware assíncronas e exceções geradas por software síncronas. Os manipuladores de exceção específicos da linguagem são compilados sobre o tratamento de exceção estruturado do Windows usando funções de auxiliares da linguagem. Este documento descreve o tratamento de exceção no Windows baseado em ARM e os auxiliares da linguagem usados pelo código que é gerado por MASM e o compilador do Visual C++.  

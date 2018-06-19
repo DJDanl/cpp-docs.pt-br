@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088866"
 ---
 # <a name="advanced-provider-techniques"></a>Técnicas de provedor avançadas
 Para obter mais informações sobre técnicas de provedor avançadas, consulte os tópicos a seguir:  

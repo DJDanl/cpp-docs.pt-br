@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087836"
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>Interoperando com outras linguagens (C++/CX)
 Esta parte da documentação descreve como usar C + c++ /CX para criar componentes de tempo de execução do Windows que podem ser consumidos por outras linguagens de programação e bibliotecas. Você também pode criar componentes que não podem ser consumidos por todas as linguagens. Esta seção descreve os diferentes aspectos a serem considerados quando seu C + + aplicativo CX interopera com componentes que são escritos usando JavaScript, uma linguagem .NET Framework gerenciado ou a biblioteca de modelos do Windows em tempo de execução C++.  

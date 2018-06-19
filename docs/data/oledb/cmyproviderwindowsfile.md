@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097920"
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
 O assistente cria uma classe para conter uma linha de dados. Nesse caso, ele é chamado `CMyProviderWindowsFile`. O código a seguir para `CMyProviderWindowsFile` é gerado pelo assistente e lista todos os arquivos em um diretório usando o **WIN32_FIND_DATA** estrutura. `CMyProviderWindowsFile` herda o **WIN32_FIND_DATA** estrutura:  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092028"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Registrar troca de campos: usando as funções RFX
 Este tópico explica como usar as chamadas de função RFX que compõem o corpo do seu `DoFieldExchange` substituir.  

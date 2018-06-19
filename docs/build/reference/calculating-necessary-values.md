@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369322"
 ---
 # <a name="calculating-necessary-values"></a>Calculando valores necessários
 Duas informações fundamentais precisam ser calculado pela rotina auxiliar atraso. Para esse fim, há duas funções embutidas em delayhlp.cpp para calcular a essas informações.  

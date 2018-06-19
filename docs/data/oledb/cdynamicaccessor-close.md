@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089305"
 ---
 # <a name="cdynamicaccessorclose"></a>CDynamicAccessor::Close
 Desvincula todas as colunas, libera a memória alocada e libera o [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) ponteiro de interface na classe.  

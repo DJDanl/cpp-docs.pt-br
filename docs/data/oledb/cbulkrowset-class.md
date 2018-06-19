@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090709"
 ---
 # <a name="cbulkrowset-class"></a>Classe CBulkRowset
 Busca e manipula as linhas para trabalhar nos dados em massa recuperando vários identificadores de linha com uma única chamada.  

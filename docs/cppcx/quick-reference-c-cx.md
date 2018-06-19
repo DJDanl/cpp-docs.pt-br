@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092552"
 ---
 # <a name="quick-reference-ccx"></a>Referência rápida (C++/CX)
 O tempo de execução do Windows oferece suporte a aplicativos de Windows UWP (plataforma Universal) que execute somente em um ambiente de sistema operacional confiável, usam funções autorizadas, tipos de dados e dispositivos e são distribuídos por meio da Microsoft Store. C + + CX simplifica a criação de aplicativos para o tempo de execução do Windows. Este artigo é uma referência rápida; Para obter a documentação mais completa, consulte [sistema de tipo](../cppcx/type-system-c-cx.md) e [extensões de componentes para plataformas de tempo de execução](http://go.microsoft.com/fwlink/p/?linkid=228720).  

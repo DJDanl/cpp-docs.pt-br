@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367986"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Como adicionar uma etapa de build personalizada a projetos MSBuild
 Uma etapa de compilação personalizada é uma etapa definido pelo usuário em uma compilação. Uma etapa de compilação personalizada se comporta como qualquer outro *ferramenta de comando* etapa, como a etapa de ferramenta de compilação ou link padrão.  

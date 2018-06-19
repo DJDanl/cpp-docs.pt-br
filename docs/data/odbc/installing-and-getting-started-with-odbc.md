@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088057"
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>Instalação e introdução com ODBC
 Os tópicos a seguir o ajudarão a instalar os componentes que você precisa para começar a trabalhar com conectividade aberta de banco de dados (ODBC).  

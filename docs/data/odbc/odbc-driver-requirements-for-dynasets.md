@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089227"
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>Requisitos de driver ODBC para dynasets
 As classes de banco de dados ODBC MFC, dynasets são conjuntos de registros com as propriedades dinâmicas; eles permanecem sincronizados com a fonte de dados de determinadas maneiras. MFC dynasets (mas conjuntos de registros somente de encaminhamento não) requerem um driver ODBC com conformidade de API do nível 2. Se o driver para o seu [fonte de dados](../../data/odbc/data-source-odbc.md) está em conformidade com a API de nível 1 definido, você ainda pode usar instantâneos atualizáveis tanto somente leitura e conjuntos de registros somente de encaminhamento, mas não dynasets. No entanto, um driver de nível 1 pode suporta dynasets se ele dá suporte a busca estendida e os cursores controlados por conjunto de chaves.  

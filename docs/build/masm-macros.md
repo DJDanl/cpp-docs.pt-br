@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368688"
 ---
 # <a name="masm-macros"></a>Macros MASM
 Para simplificar o uso do [Pseudo-operações brutas](../build/raw-pseudo-operations.md), há um conjunto de macros, definido em ksamd64.inc, que pode ser usado para criar Prólogos procedimento típico e epilogues.  
