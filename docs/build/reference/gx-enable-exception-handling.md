@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376709"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (habilitar tratamento de exceções)
 Preterido. Permite a manipulação de exceção síncrona usando a suposição de que as funções declarada usando `extern "C"` nunca lançam uma exceção.  

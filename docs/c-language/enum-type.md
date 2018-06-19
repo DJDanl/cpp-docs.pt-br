@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382751"
 ---
 # <a name="enum-type"></a>Tipo enum
 **ANSI 3.5.2.2** O tipo de inteiro escolhido para representar os valores de um tipo de enumeração  

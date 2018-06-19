@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365289"
 ---
 # <a name="cfiletime-class"></a>Classe CFileTime
 Essa classe fornece métodos para gerenciar os valores de data e hora associados a um arquivo.  

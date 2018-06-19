@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356713"
 ---
 # <a name="multiple-dual-interfaces"></a>Várias Interfaces duplas
 Talvez você queira combinar as vantagens de uma interface dupla (ou seja, a flexibilidade de vtable e associação tardia, tornando a classe disponíveis para linguagens de script, bem como C++) com as técnicas de várias heranças.  

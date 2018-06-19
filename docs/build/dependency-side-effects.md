@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367518"
 ---
 # <a name="dependency-side-effects"></a>Efeitos colaterais da dependência
 Se for especificado um destino com dois-pontos (:) em duas linhas de dependência em locais diferentes, e se os comandos exibidos depois de apenas uma das linhas, NMAKE interpreta as dependências, como se adjacentes ou combinados. Ele não chama uma regra de inferência de tipos para a dependência que não há comandos, mas em vez disso, presume que as dependências pertencem ao bloco de uma descrição e executa os comandos especificados com a dependência de outra. Por exemplo, o conjunto de regras:  

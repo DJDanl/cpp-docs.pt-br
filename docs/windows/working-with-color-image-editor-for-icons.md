@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891653"
 ---
 # <a name="working-with-color-image-editor-for-icons"></a>Trabalhando com cor (editor de imagens para ícones)
 O editor de imagem contém muitos recursos que manipulam especificamente e personalizar as cores. Você pode definir uma cor de primeiro plano ou segundo plano, preencher as áreas associadas com a cor ou selecione uma cor em uma imagem para usar como a cor de primeiro plano ou segundo plano atual. Você pode usar ferramentas o [barra de ferramentas do Editor de imagem](../windows/toolbar-image-editor-for-icons.md) junto com a paleta de cores no [janela cores](../windows/colors-window-image-editor-for-icons.md) para criar imagens.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372237"
 ---
 # <a name="modules-button"></a>Botão Módulos
 Clique o **módulos** botão para exibir o **módulos adicionais para a pesquisa de erro** caixa de diálogo. Insira o nome da DLL ou EXE desejado na caixa de edição e clique em **adicionar** para incluir os módulos na sua pesquisa de mensagem de erro. Remover um módulo da lista realçando-o e clicando no **remover** botão.  

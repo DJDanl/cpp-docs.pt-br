@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372410"
 ---
 # <a name="linking"></a>Vinculação
 Para obter informações sobre como usar o vinculador, consulte as seções a seguir:  

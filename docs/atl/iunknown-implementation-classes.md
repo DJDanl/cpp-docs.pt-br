@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357210"
 ---
 # <a name="iunknown-implementation-classes"></a>Classes de implementação de IUnknown
 As classes a seguir implementam **IUnknown** e métodos relacionados:  

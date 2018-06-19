@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371896"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma
 Você pode alterar as configurações de projeto do Visual C++ para diferentes versões do .NET Framework de destino e usar conjuntos de ferramentas de plataforma diferente. Por padrão, o sistema do projeto usa a versão do .NET Framework e do conjunto de ferramentas que corresponde à versão do Visual Studio usada para criar o projeto. É possível alterar o conjunto de ferramentas da plataforma de destino modificando as propriedades do projeto. É possível alterar a Estrutura de destino modificando o arquivo do projeto (.vcxproj). Não é preciso manter uma base de código separada para cada destino de compilação.  

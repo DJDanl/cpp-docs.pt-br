@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891082"
 ---
 # <a name="type-forwarding-ccli"></a>Encaminhamento de tipos (C++/CLI)
 *Encaminhamento de tipos* permite que você mova um tipo de um assembly (um assembly) em outro assembly (assembly B), de modo que não é necessário recompilar os clientes que utilizam o assembly A.  

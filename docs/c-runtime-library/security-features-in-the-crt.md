@@ -39,6 +39,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451804"
 ---
 # <a name="security-features-in-the-crt"></a>funcionalidades de segurança no CRT
 Muitas funções de CRT antigas têm versões mais recentes e mais seguras. Se houver uma função de segurança, a versão mais antiga e menos segura estará marcada como preterida, e a nova versão terá o sufixo `_s` ("seguro").  

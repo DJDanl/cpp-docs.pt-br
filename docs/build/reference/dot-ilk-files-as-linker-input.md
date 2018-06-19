@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371678"
 ---
 # <a name="ilk-files-as-linker-input"></a>Arquivos .Ilk como entrada de vinculador
 Durante a vinculação incremental, o LINK atualiza o arquivo de status. ilk criadas durante o primeiro link incremental. Este arquivo tem o mesmo nome base do arquivo de .exe ou o arquivo. dll, e tem a. ilk de extensão. Durante os links incrementais subsequentes, LINK atualiza o arquivo. ilk. Se o arquivo. ilk estiver ausente, o LINK executa um link completo e cria um novo arquivo. ilk. Se o arquivo. ilk for usado, o LINK executa um link não incrementais. Para obter detalhes sobre a vinculação incremental, consulte o [Link incremental (/incremental)](../../build/reference/incremental-link-incrementally.md) opção.  

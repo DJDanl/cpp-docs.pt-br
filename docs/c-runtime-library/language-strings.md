@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391357"
 ---
 # <a name="language-strings"></a>Cadeias de caracteres de idioma
 As funções `setlocale` e `_create_locale` podem usar os idiomas dão suporte pela API NLS do Windows em sistemas operacionais que não usam a página de código Unicode. Para obter uma lista dos idiomas que tem suporte pela versão do sistema operacional, consulte [Referência da API National Language Support (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). A cadeia de caracteres de idioma pode ser qualquer um dos valores nas colunas **Idioma** e **Abreviação do nome do idioma** da lista de idiomas com suporte. Para obter informações adicionais de suporte de idioma por versão do sistema operacional, veja [Apêndice A: Comportamento de produto](http://msdn.microsoft.com/goglobal/bb896001.aspx) no [MS-LCID]: referência do identificador de código de idioma (LCID) do Windows.   

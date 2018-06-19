@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419775"
 ---
 # <a name="linkage-in-names-with-file-scope"></a>Ligação em nomes com escopo de arquivo
 As seguintes regras de vinculação se aplicam a nomes (diferentes de `typedef` e nomes de enumeradores) com escopo de arquivo:  

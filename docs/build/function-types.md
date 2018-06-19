@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367645"
 ---
 # <a name="function-types"></a>Tipos de função
 Basicamente, há dois tipos de funções. Uma função que requer um quadro de pilha é chamada de função de quadro. Uma função que não requer um quadro de pilha é chamada de função de folha.  

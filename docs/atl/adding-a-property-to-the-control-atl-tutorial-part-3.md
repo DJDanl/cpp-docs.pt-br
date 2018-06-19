@@ -17,6 +17,7 @@ ms.sourcegitcommit: 9b442b44ee912822d06cabec826aac4a8d82ec75
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472080"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Adicionando uma propriedade ao controle (Tutorial ATL, parte 3)
 `IPolyCtl` é a interface que contém propriedades e métodos personalizados de controle, e você irá adicionar uma propriedade a ele.  

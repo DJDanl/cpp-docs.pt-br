@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378903"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (favorecer código pequeno, favorecer código rápido)
 Minimiza ou maximiza o tamanho de EXEs e DLLs.  

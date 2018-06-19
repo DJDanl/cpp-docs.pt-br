@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408465"
 ---
 # <a name="comptrt-operators"></a>Operadores (_com_ptr_t)
 Para obter informações sobre o `_com_ptr_t` operadores, consulte [com_ptr_t classe](../cpp/com-ptr-t-class.md).  

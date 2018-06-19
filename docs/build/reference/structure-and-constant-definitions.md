@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376027"
 ---
 # <a name="structure-and-constant-definitions"></a>Definições de estrutura e constante
 A rotina de auxiliar padrão usa várias estruturas para se comunicar com as funções de gancho e durante todas as exceções. Aqui estão os valores de notificação e falha, estruturas de informações e o tipo de ponteiro para função de gancho passado nos ganchos de:  

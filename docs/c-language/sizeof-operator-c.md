@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388319"
 ---
 # <a name="sizeof-operator-c"></a>Operador sizeof (C)
 O operador `sizeof` indica a quantidade de armazenamento, em bytes, necessária para armazenar um objeto do tipo do operando. Esse operador permite que você evite especificar tamanhos de dados dependentes do computador em seus programas.  

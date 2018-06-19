@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378516"
 ---
 # <a name="editbin-options"></a>Opções EDITBIN
 Você pode usar EDITBIN para modificar arquivos de objeto, arquivos executáveis e bibliotecas de vínculo dinâmico (DLLs). Opções especificam as alterações que EDITBIN faz.  

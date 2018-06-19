@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371909"
 ---
 # <a name="cl-invokes-the-linker"></a>O CL invoca o vinculador
 Automaticamente o CL invoca o vinculador após a compilação, a menos que a opção /c é usada. CL passa para o vinculador os nomes dos arquivos. obj criados durante a compilação e os nomes de todos os outros arquivos especificados na linha de comando. O vinculador usa as opções listadas na variável de ambiente LINK. Você pode usar a opção /link para especificar opções de vinculador na linha de comando CL. Opções que se seguem a opção /link substituem aquelas na variável de ambiente LINK. As opções na tabela a seguir suprimir a vinculação.  

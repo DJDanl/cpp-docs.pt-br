@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128287"
 ---
 # <a name="how-to-specify-an-out-parameter"></a>Como especificar um parâmetro out
 Este exemplo mostra como especificar um parâmetro de função é um parâmetro de saída e como chamar a função de um programa c#.  

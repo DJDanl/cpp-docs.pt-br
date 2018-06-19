@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371428"
 ---
 # <a name="improving-compiler-throughput"></a>Melhorando taxa de transferência do compilador
 Use arquivos de cabeçalho pré-compilado para compilar o projeto mais rápido. Isso é importante se você estiver usando a ATL, MFC ou os arquivos de cabeçalho do SDK do Windows.  

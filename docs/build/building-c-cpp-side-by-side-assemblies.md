@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364015"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Compilando assemblies lado a lado do C/C++
 Um [assembly lado a lado](http://msdn.microsoft.com/library/windows/desktop/ff951640) é uma coleção de recursos — um grupo de DLLs, classes de windows, servidores COM, bibliotecas de tipo ou interfaces — disponível para um aplicativo para usar em tempo de execução. A principal vantagem de remontagem DLLs em assemblies é que várias versões de módulos (assemblies) podem ser usadas por aplicativos ao mesmo tempo e é possível assemblies de serviço instalado atualmente no caso de uma versão de atualização.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367853"
 ---
 # <a name="how-to-build-registration-free-com-components"></a>Como compilar componentes COM sem registro
 OS componentes com sem registro são componentes COM que tenham manifestos incorporados as DLLs.  

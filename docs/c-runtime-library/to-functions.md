@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413200"
 ---
 # <a name="to-functions"></a>Funções to
 Cada uma das funções **to** e sua macro associada, se houver, converte um único caractere em outro caractere.  

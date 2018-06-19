@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33114439"
 ---
 # <a name="collectionadapter-stlclr"></a>collection_adapter (STL/CLR)
 Encapsula uma coleção .NET para uso como um contêiner STL/CLR. A `collection_adapter` é uma classe de modelo que descreve um objeto de contêiner STL/CLR simples. Ele encapsula uma interface de classe biblioteca BCL (Base) e retorna um par de iterador que é usada para manipular a sequência controlada.  

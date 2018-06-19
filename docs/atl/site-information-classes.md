@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359789"
 ---
 # <a name="site-information-classes"></a>Classes de informações do site
 As classes a seguir permitem a um objeto para se comunicar com seu site:  

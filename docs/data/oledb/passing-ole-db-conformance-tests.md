@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110458"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Passando testes de conformidade de banco de dados OLE
 Para que os provedores de mais consistente, o SDK de acesso de dados fornece um conjunto de testes de conformidade do OLE DB. Os testes verificar todos os aspectos do seu provedor e fornecer garantia razoável que suas funções de provedor como esperadas. Você pode encontrar os testes de conformidade do OLE DB no SDK do Microsoft Data Access. Esta seção aborda as coisas que você deve fazer para os testes de conformidade. Para obter informações sobre como executar os testes de conformidade do OLE DB, consulte o SDK.  

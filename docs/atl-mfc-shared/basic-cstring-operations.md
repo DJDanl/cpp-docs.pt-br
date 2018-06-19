@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359088"
 ---
 # <a name="basic-cstring-operations"></a>Operações CString básicas
 Este tópico explica o seguinte basic [CString](../atl-mfc-shared/reference/cstringt-class.md) operações:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388234"
 ---
 # <a name="c-keywords"></a>Palavras-chave C
 “Palavras-chave” são palavras que têm um significado especial para o compilador C. Nas fases 7 e 8 da conversão, um identificador não pode ter a mesma ortografia e caixa (maiúscula/minúscula) que a palavra-chave C. (Consulte uma descrição de [fases de translação](../preprocessor/phases-of-translation.md) na *Referência de pré-processador*; para obter informações sobre os identificadores, consulte [Identificadores](../c-language/c-identifiers.md).) A linguagem C usa as seguintes palavras-chave:  

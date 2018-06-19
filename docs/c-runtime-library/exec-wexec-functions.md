@@ -68,6 +68,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451518"
 ---
 # <a name="exec-wexec-functions"></a>Funções _exec, _wexec
 Cada função desta família carrega e executa um novo processo:  

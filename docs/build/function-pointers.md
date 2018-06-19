@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367141"
 ---
 # <a name="function-pointers"></a>Ponteiros de função
 Ponteiros de função são simplesmente ponteiros para o rótulo da respectiva função. Não há nenhuma tabela de requisitos de sumário para ponteiros de função.  

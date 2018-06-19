@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421254"
 ---
 # <a name="virtual-specifier"></a>Especificador virtual
 O [virtual](../cpp/virtual-cpp.md) palavra-chave pode ser aplicado somente a funções de membro não estático de classe. Significa que a associação de chamadas à função é adiada até o tempo de execução. Para obter mais informações, consulte [funções virtuais](../cpp/virtual-functions.md).  

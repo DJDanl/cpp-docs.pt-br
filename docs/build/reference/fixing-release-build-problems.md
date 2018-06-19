@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372146"
 ---
 # <a name="fixing-release-build-problems"></a>Corrigindo problemas de build da versão
 Se o seu código gera erros de compilação após a troca de compilação de depuração para compilação de lançamento, há algumas áreas que você deve verificar.  

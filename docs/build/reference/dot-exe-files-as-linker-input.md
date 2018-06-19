@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372397"
 ---
 # <a name="exe-files-as-linker-input"></a>Arquivos .Exe como entrada de vinculador
 O [nome de arquivo Stub MS-DOS](../../build/reference/stub-ms-dos-stub-file-name.md) (/ STUB) opção especifica o nome de um arquivo de .exe que é executado com o MS-DOS. LINK examina o arquivo especificado para certificar-se de que se trata de um programa do MS-DOS válido.  

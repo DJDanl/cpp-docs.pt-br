@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369222"
 ---
 # <a name="bscmake-exit-codes"></a>Códigos de saída BSCMAKE
 BSCMAKE retorna um código de saída (também chamado de código de retorno ou código de erro) para o sistema operacional ou programa de chamada.  

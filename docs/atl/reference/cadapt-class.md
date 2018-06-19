@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365592"
 ---
 # <a name="cadapt-class"></a>Classe CAdapt
 Este modelo é usado para incluir classes que redefinem o operador address-of para retornar algo diferente do endereço do objeto.  

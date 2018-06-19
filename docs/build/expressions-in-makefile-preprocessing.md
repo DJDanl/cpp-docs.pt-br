@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367262"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Expressões no pré-processamento de makefile
 O **! Se** ou **! ELSE IF** `constantexpression` consiste em comandos, constantes de cadeia de caracteres ou constantes de inteiro (em notação decimal ou linguagem C). Use parênteses para agrupar expressões. As expressões usam C-style longo inteiro aritmético; números são na forma de complemento de dois de 32 bits no intervalo de-2147483648 a 2147483647.  

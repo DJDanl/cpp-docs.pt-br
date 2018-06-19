@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354926"
 ---
 # <a name="event-handling-and-atl"></a>Manipulação de eventos e ATL
 Esta seção mostra como coletar eventos usando a ATL. Ele abrange os princípios de manipulação de eventos de COM e as especificações de recebendo eventos usando o suporte fornecido por ATL.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889898"
 ---
 # <a name="troubleshooting-the-dialog-editor"></a>Solucionando problemas do Editor de Caixa de Diálogo
 Abaixo estão alguns problemas dos quais você deve estar ciente ao trabalhar no editor de caixa de diálogo.  

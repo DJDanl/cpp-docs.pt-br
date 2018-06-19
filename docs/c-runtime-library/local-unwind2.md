@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391373"
 ---
 # <a name="localunwind2"></a>_local_unwind2
 Função CRT interna. Executa todos os manipuladores de terminação listados na tabela de escopo indicada.  

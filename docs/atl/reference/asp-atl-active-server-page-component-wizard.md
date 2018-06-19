@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356133"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, o Assistente de componente de página Active Server ATL
 Use esta página do Assistente de componente do ATL Active Server página para especificar configurações opcionais para manipular informações e estados relacionados para o seu componente ASP.  

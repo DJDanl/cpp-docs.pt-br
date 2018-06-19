@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355869"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>Programando com código de tempo de execução ATL e C
 Esta seção discute as vantagens de usar a biblioteca de tempo de execução do C (CRT) com a vinculação estática ou dinâmica.  

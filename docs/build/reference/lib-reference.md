@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371935"
 ---
 # <a name="lib-reference"></a>Referência LIB
 O Gerenciador de biblioteca da Microsoft (LIB.exe) cria e gerencia uma biblioteca de arquivos de objeto do formato de arquivo de objeto comum (COFF). LIB também pode ser usado para criar arquivos de exportação e bibliotecas de importação para referência exportada de definições.  

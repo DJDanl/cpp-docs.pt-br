@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368220"
 ---
 # <a name="makefile-preprocessing"></a>Pré-processamento de makefile
 Você pode controlar a sessão NMAKE usando diretivas de pré-processamento e expressões. Instruções de pré-processamento pode ser colocado em makefile ou em Tools.ini. Usando diretivas, você pode condicionalmente processar seu makefile, exibir mensagens de erro, incluir outros makefiles, exclua uma macro e ativar ou desativar o determinadas opções.  

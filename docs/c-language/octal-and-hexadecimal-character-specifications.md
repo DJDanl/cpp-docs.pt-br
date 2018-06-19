@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387382"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>Especificações de caractere octa e hexadecimal
 A sequência **\\***ooo* significa que é possível especificar qualquer caractere no conjunto de caracteres ASCII como um código de caracteres octal de três dígitos. O valor numérico inteiro octal especifica o valor de caractere desejado ou do caractere largo.  

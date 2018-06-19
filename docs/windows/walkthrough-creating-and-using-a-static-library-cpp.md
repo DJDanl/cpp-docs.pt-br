@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891575"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Instruções passo a passo: criando e usando uma biblioteca estática (C++)
 Este passo a passo mostra como criar uma biblioteca estática (arquivo. lib) para uso com aplicativos do C++. Usando uma biblioteca estática é uma ótima maneira de reutilizar o código. Em vez de implementar novamente as rotinas mesmo em cada aplicativo que exige a funcionalidade, você grava uma vez em uma biblioteca estática e, em seguida, referenciá-lo dos aplicativos. Código vinculado a partir de uma biblioteca estática se torna parte do seu aplicativo, você não precisa instalar outro arquivo para usar o código.  

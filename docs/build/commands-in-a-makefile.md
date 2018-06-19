@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366868"
 ---
 # <a name="commands-in-a-makefile"></a>Comandos em um makefile
 Uma regra de bloqueio ou inferência Descrição especifica um bloco de comandos para executar, se a dependência está desatualizada. NMAKE exibe cada comando antes de executá-lo, a menos que /S, **. SILENCIOSA**, **! CMDSWITCHES**, ou @ é usado. NMAKE procura por uma regra de inferência correspondência se um bloco de descrição não é seguido por um bloco de comandos.  

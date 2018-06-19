@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356489"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>Modificando o controle DHTML ATL
 O Assistente de controle ATL fornece código inicial para compilar e executar o controle e, portanto, você pode ver como os métodos são gravados nos arquivos de projeto e como DHTML chama o código C++ do controle usando os métodos de expedição. Você pode adicionar qualquer método de distribuição para a interface. Em seguida, você pode chamar os métodos no recurso HTML.  

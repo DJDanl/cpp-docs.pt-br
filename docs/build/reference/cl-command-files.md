@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369871"
 ---
 # <a name="cl-command-files"></a>Arquivos de comando CL
 Um arquivo de comando é um arquivo de texto que contém opções e os nomes de arquivos caso contrário, você digitaria no [linha de comando](../../build/reference/compiler-command-line-syntax.md) ou especificar usando o [variável de ambiente CL](../../build/reference/cl-environment-variables.md). CL aceita um arquivo de comando do compilador como um argumento na variável de ambiente CL ou na linha de comando. Em vez da linha de comando ou da variável de ambiente CL, um arquivo de comando permite que você use várias linhas de opções e nomes de arquivo.  

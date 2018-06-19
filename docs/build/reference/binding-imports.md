@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368922"
 ---
 # <a name="binding-imports"></a>Associando importações
 O comportamento de vinculador padrão é criar uma tabela de endereço de importação associável para a DLL carregada com atraso. Se a DLL está associada, a função auxiliar tentará usar as informações associadas em vez de chamar **GetProcAddress** em cada um dos imports referenciado. Se o carimbo de hora ou o endereço preferencial não coincidem com aqueles da DLL carregada, a função auxiliar pressupõem a tabela de endereço associado importação está desatualizada e continuará como se ele não existe.  

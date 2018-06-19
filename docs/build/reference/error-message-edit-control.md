@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369608"
 ---
 # <a name="error-message-edit-control"></a>Controle de edição da mensagem de erro
 O **mensagem de erro** caixa contém o texto da mensagem de erro do sistema ou mensagem de erro do módulo com base no valor inserido.  

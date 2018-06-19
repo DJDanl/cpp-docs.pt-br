@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112830"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 Incluir o cabeçalho STL/CLR `<cliext/functional>` para definir a um número de classes de modelo e delegados de modelo relacionados e funções.  

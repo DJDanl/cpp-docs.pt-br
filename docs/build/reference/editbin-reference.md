@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372302"
 ---
 # <a name="editbin-reference"></a>Referência de EDITBIN
 O Editor de arquivo binário COFF da Microsoft (EDITBIN. EXE) modifica os arquivos binários do formato de arquivo de objeto comum (COFF). Você pode usar EDITBIN para modificar arquivos de objeto, arquivos executáveis e bibliotecas de vínculo dinâmico (DLL).  

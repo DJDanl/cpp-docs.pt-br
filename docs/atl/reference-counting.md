@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358242"
 ---
 # <a name="reference-counting"></a>Contagem de referência
 COM em si não tentará automaticamente remover um objeto de memória, quando ele achar que o objeto não está sendo usado. Em vez disso, o programador de objeto deve remover o objeto não utilizado. O programador determina se um objeto pode ser removido com base em uma contagem de referência.  

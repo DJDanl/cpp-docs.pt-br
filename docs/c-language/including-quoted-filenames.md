@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383211"
 ---
 # <a name="including-quoted-filenames"></a>Incluindo nomes de arquivo entre aspas
 **ANSI 3.8.2** O suporte para nomes entre aspas para arquivos de origem incluíveis  

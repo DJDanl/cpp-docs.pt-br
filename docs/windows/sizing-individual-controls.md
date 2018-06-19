@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890095"
 ---
 # <a name="sizing-individual-controls"></a>Dimensionando controles individuais
 Use as alças de dimensionamento para redimensionar um controle. Quando o ponteiro está posicionado em uma alça de dimensionamento, ele muda de forma para indicar as instruções no qual o controle pode ser redimensionado. Alças de dimensionamento ativo são sólidas; Se uma alça de dimensionamento estiver vazia, o controle não pode ser redimensionado ao longo desse eixo.  

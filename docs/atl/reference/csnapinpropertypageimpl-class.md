@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366137"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Classe CSnapInPropertyPageImpl
 Essa classe fornece métodos para a implementação de um objeto de página de propriedade do snap-in.  

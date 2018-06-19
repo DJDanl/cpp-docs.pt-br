@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111267"
 ---
 # <a name="using-ole-db-record-views"></a>Usando exibições de registro de banco de dados OLE
 Se você deseja exibir dados de conjunto de linhas do OLE DB em um aplicativo MFC, você deve usar a classe do MFC [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md). Criar um objeto de exibição de registro de `COleDBRecordView` permite que você exiba os registros do banco de dados em controles MFC. O modo de exibição de registro é uma exibição de formulário de caixa de diálogo conectada diretamente a um objeto de linhas do OLE DB criado a partir de `CRowset` classe de modelo. Obtendo um identificador para o objeto de conjunto de linhas é simple:  

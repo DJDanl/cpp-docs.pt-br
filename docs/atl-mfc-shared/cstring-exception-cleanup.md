@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355500"
 ---
 # <a name="cstring-exception-cleanup"></a>Limpeza de exceção de CString
 Em versões anteriores do MFC, era importante limpar [CString](../atl-mfc-shared/reference/cstringt-class.md) objetos após o uso. Com MFC versão 3.0 e posterior, limpeza explícita não é mais necessária.  

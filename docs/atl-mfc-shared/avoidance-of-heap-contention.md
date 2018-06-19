@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358079"
 ---
 # <a name="avoidance-of-heap-contention"></a>Impedimento de contenção de Heap
 Os gerenciadores de cadeia de caracteres padrão fornecidos pelo MFC e ATL são wrappers simples sobre um heap global. Esta pilha global é totalmente thread-safe, que significa que vários threads podem alocar e liberar memória dele simultaneamente, sem a corrupção de heap. Para ajudar a fornecer acesso thread-safe, o heap tem que serializar o acesso a mesmo. Isso geralmente é feito com uma seção crítica ou mecanismo de bloqueio semelhante. Sempre que dois threads tentarem acessar simultaneamente o heap, um thread está bloqueado até que a solicitação do outro thread é concluída. Para muitos aplicativos, essa situação ocorre raramente e o impacto no desempenho do mecanismo de bloqueio do heap é insignificante. No entanto, para aplicativos que acessam com frequência o heap de vários threads de contenção de bloqueio da pilha pode causar o aplicativo seja executado mais lentamente do que se fosse single-threaded (mesmo em computadores com várias CPUs).  

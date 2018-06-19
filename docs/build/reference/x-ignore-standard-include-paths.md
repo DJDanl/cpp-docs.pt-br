@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376462"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (ignorar demarcadores de inclusão padrão)
 Impede que o compilador procurando por arquivos de inclusão nos diretórios especificados nas variáveis de ambiente PATH e INCLUDE.  

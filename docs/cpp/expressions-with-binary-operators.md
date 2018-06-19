@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414670"
 ---
 # <a name="expressions-with-binary-operators"></a>Expressões com operadores binários
 Os operadores binários atuam em dois operandos em uma expressão. Os operadores binários são:  

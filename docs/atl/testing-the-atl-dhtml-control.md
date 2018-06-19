@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361860"
 ---
 # <a name="testing-the-atl-dhtml-control"></a>Testando o controle DHTML ATL
 Depois de criar seu projeto, você pode criar e testar o controle de exemplo. Antes de fazer isso, use o modo de exibição de classe e o Gerenciador de soluções para examinar o projeto. Os elementos de seu projeto são descritos mais detalhadamente nos [identificação dos elementos do projeto de controle DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).  

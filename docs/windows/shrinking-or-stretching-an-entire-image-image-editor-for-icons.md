@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889911"
 ---
 # <a name="shrinking-or-stretching-an-entire-image-image-editor-for-icons"></a>Reduzindo ou alongando uma imagem inteira (editor de imagens para ícones)
 ### <a name="to-shrink-or-stretch-an-entire-image"></a>Para reduzir ou alongar uma imagem inteira  

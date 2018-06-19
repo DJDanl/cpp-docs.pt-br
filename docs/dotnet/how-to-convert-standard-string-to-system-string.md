@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127829"
 ---
 # <a name="how-to-convert-standard-string-to-systemstring"></a>Como converter cadeia de caracteres padrão em System::String
 Este tópico mostra como converter uma cadeia de caracteres da biblioteca padrão C++ ([\<cadeia de caracteres >](../standard-library/string.md)) para um <xref:System.String>.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387857"
 ---
 # <a name="function-calls"></a>Chamadas de função
 Uma *chamada de função* é uma expressão que passa o controle e os argumentos (se houver) para uma função e tem o formato:  

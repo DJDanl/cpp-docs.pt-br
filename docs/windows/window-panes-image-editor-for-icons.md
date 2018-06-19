@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892833"
 ---
 # <a name="window-panes-image-editor-for-icons"></a>Painéis Janela (editor de imagens para ícones)
 A janela do Editor de imagem exibe uma imagem em dois painéis separados por uma barra de divisão. Um modo de exibição é o tamanho real e a outra é ampliada (o fator de ampliação padrão é 6). Os modos de exibição nesses dois painéis são atualizados automaticamente: as alterações feitas em um painel são mostradas imediatamente no outro. Os dois painéis tornam mais fácil para você trabalhar em uma exibição ampliada da imagem, na qual você pode distinguir pixels individuais e, ao mesmo tempo, observar o efeito de seu trabalho no modo de exibição de tamanho real da imagem.  

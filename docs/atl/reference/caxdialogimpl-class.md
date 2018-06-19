@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365071"
 ---
 # <a name="caxdialogimpl-class"></a>Classe CAxDialogImpl
 Essa classe implementa uma caixa de diálogo (modal ou sem janela restrita) que hospeda os controles ActiveX.  

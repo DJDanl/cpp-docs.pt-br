@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419637"
 ---
 # <a name="nullptr"></a>nullptr
 Designa uma constante do ponteiro nulo do tipo `std::nullptr_t`, que é convertido em qualquer tipo bruto de ponteiro.  Embora você possa usar a palavra-chave `nullptr` sem incluir nenhum cabeçalho, se o código dela usar o tipo `std::nullptr_t`, você deve defini-lo incluindo o cabeçalho `<cstddef>`.  

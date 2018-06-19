@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358822"
 ---
 # <a name="understanding-parse-trees"></a>Noções básicas sobre árvores de análise
 Você pode definir uma ou mais árvores de análise no seu script de registrador, onde cada árvore de análise tem a seguinte forma:  

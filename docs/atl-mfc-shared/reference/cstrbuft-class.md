@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361352"
 ---
 # <a name="cstrbuft-class"></a>Classe CStrBufT
 Essa classe fornece a limpeza automática de recursos para `GetBuffer` e `ReleaseBuffer` chama um existente `CStringT` objeto.  

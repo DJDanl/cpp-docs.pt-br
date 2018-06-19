@@ -69,6 +69,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366309"
 ---
 # <a name="cimage-class"></a>Classe CImage
 `CImage` Fornece suporte de bitmap aprimorada, incluindo a capacidade de carregar e salvar imagens em formatos JPEG, GIF, BMP e elementos gráficos PNG (Portable Network).  

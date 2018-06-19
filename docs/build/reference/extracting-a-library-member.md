@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371236"
 ---
 # <a name="extracting-a-library-member"></a>Extraindo um membro da biblioteca
 Você pode usar a biblioteca para criar um arquivo de objeto (. obj) que contenha uma cópia de um membro de uma biblioteca existente. Para extrair uma cópia de um membro, use a seguinte sintaxe:  

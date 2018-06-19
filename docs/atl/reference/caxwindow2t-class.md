@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360752"
 ---
 # <a name="caxwindow2t-class"></a>Classe CAxWindow2T
 Essa classe fornece métodos para manipular uma janela que hospeda um controle ActiveX e também tem suporte para hospedagem de controles ActiveX licenciados.  

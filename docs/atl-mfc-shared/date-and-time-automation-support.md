@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357588"
 ---
 # <a name="date-and-time-automation-support"></a>Data e hora: suporte de automação
 Este artigo descreve como tirar proveito dos serviços de biblioteca de classe relacionadas ao gerenciamento de data e hora. Os procedimentos descritos incluem:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363240"
 ---
 # <a name="what-is-the-atl-control-hosting-api"></a>O que é o ATL API de hospedagem de controle?
 ATL da hospedagem de controles API é o conjunto de funções que permite que qualquer janela atuar como um contêiner de controle ActiveX. Essas funções podem ser estaticamente ou dinamicamente vinculado em seu projeto, porque eles estão disponíveis como código-fonte e expostos pelo ATL90.dll. As funções de controle de hospedagem são listadas na tabela a seguir.  

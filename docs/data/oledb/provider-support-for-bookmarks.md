@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112502"
 ---
 # <a name="provider-support-for-bookmarks"></a>Suporte do provedor para indicadores
 O exemplo neste tópico adiciona o `IRowsetLocate` interface para o `CMyProviderRowset` classe. Em quase todos os casos, você começa adicionando uma interface para um objeto existente do COM. Você pode testá-lo com a adição de mais chamadas nos modelos de consumidor. O exemplo demonstra como:  

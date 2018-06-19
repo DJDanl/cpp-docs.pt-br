@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127897"
 ---
 # <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>Como recuperar texto a partir da Área de Transferência (C++/CLI)
 O seguinte exemplo de código usa o <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> a função de membro para retornar um ponteiro para o <xref:System.Windows.Forms.IDataObject> interface. Essa interface pode ser consultada para o formato dos dados e usada para recuperar os dados reais.  

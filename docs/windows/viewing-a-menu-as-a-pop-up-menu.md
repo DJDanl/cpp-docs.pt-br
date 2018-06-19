@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891004"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Exibindo um menu como um menu pop-up
 Normalmente, quando você estiver trabalhando no editor de Menu, um recurso de menu é exibido como uma barra de menus. No entanto, você pode ter recursos de menu que são adicionados à barra de menus do aplicativo enquanto o programa é executado.  

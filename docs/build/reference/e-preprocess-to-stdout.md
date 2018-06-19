@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376908"
 ---
 # <a name="e-preprocess-to-stdout"></a>/E (pré-processar em stdout)
 Pré-processa arquivos de origem C e C++ e copia os arquivos pré-processado para o dispositivo de saída padrão.  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366150"
 ---
 # <a name="cwindowimpl-class"></a>Classe CWindowImpl
 Fornece métodos para criar ou subclasses de uma janela.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357223"
 ---
 # <a name="ccomautocriticalsection-class"></a>Classe CComAutoCriticalSection
 `CComAutoCriticalSection` fornece métodos para a obtenção e liberar a propriedade de um objeto de seção crítica.  

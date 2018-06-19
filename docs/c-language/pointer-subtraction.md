@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383716"
 ---
 # <a name="pointer-subtraction"></a>Subtração do ponteiro
 **ANSI 3.3.6, 4.1.1** O tipo de inteiro necessário para manter a diferença entre dois ponteiros em relação aos elementos da mesma matriz, **ptrdiff_t**  

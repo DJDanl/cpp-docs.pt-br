@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382819"
 ---
 # <a name="execution-character-set"></a>Conjunto de caracteres de execução
 Este conteúdo refere-se ao “conjunto de caracteres de execução”. O conjunto de caracteres de execução não é necessariamente o mesmo conjunto de caracteres de origem usado para escrever programas C. O conjunto de caracteres de execução inclui todos os caracteres no conjunto de caracteres de origem bem como o caractere nulo, o caractere de nova linha, backspace, tabulação horizontal, tabulação vertical, retorno de carro e sequências de escape. Os conjuntos de caracteres de origem e de execução podem diferir em outras implementações.  

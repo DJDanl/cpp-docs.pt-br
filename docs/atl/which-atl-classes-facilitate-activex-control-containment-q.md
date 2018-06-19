@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361931"
 ---
 # <a name="which-atl-classes-facilitate-activex-control-containment"></a>Quais Classes ATL facilitam a contenção de controle ActiveX?
 Código de hospedagem de controles da ATL não exige que você usar todas as classes ATL; Você pode simplesmente criar um **"AtlAxWin80"** janela e use a API de hospedagem de controles, se necessário (para obter mais informações, consulte **o que é a API de hospedagem de controles de ATL**. No entanto, as seguintes classes de tornam os recursos de contenção mais fácil de usar.  

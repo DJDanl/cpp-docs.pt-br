@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366946"
 ---
 # <a name="chained-unwind-info-structures"></a>Estruturas de informações desenroladas encadeadas
 Se o sinalizador UNW_FLAG_CHAININFO for definido, uma estrutura de informações de liberação é um secundário, e o campo de endereço de exceção-manipulador/encadeados-info compartilhada contém as informações de liberação principal. A código a seguir recupera informações sobre, supondo que o desenrolamento primário `unwindInfo` é a estrutura que tem o UNW_FLAG_CHAININFO o sinalizador será definido.  

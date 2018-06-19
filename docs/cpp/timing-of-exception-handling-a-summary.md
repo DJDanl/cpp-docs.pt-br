@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422170"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Tempo de tratamento de exceções: um resumo
 Um manipulador de término é executado não importa como o bloco de instruções `__try` é terminado. Entre as causas estão: saltar para fora do bloco `__try`, uma instrução `longjmp` que transfere o controle para fora do bloco e desenrolar a pilha devido à manipulação de exceções.  
