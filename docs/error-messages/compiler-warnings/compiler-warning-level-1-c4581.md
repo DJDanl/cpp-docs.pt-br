@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281853"
 ---
 # <a name="compiler-warning-level-1-c4581"></a>Compilador C4581 de aviso (nível 1)
 comportamento preterido: '"string1" ' substituído por string2 para processar atributo  

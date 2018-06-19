@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255907"
 ---
 # <a name="compiler-error-c3170"></a>C3170 de erro do compilador
 não é possível ter identificadores de módulo diferentes em um projeto  

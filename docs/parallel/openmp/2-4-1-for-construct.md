@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693543"
 ---
 # <a name="241-for-construct"></a>2.4.1 Constructo for
 O **para** diretiva identifica uma construção de compartilhamento de trabalho iterativa que especifica que as iterações do loop associado serão executadas em paralelo. As iterações do **para** loop são distribuídas entre os threads que já existem na equipe executando a construção paralela à qual ela está associada. A sintaxe do **para** construção é o seguinte:  

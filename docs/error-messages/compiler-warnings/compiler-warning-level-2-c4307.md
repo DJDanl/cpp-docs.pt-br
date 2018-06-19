@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292026"
 ---
 # <a name="compiler-warning-level-2-c4307"></a>Compilador C4307 de aviso (nível 2)
 'operator': estouro de constante integral  

@@ -67,6 +67,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377116"
 ---
 # <a name="coledocument-class"></a>Classe COleDocument
 A classe base para documentos OLE que dão suporte à edição visual.  

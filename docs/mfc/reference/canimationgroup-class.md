@@ -61,6 +61,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355627"
 ---
 # <a name="canimationgroup-class"></a>Classe CAnimationGroup
 Implementa um grupo de animação, que combina um storyboard de animação, objetos de animação e faz a transição para definir uma animação.  

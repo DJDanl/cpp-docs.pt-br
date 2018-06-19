@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385236"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: versão DLL do MFC
 Esta anotação descreve como você pode usar o MFCxx.DLL e MFCxxD.DLL (onde x é o número de versão do MFC) compartilhado bibliotecas de vínculo dinâmico com aplicativos MFC e DLLs de extensão do MFC. Para obter mais informações sobre DLLs normais do MFC, consulte [usando MFC como parte de uma DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).  

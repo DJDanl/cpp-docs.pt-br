@@ -34,6 +34,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692139"
 ---
 # <a name="tiledindex-class"></a>Classe tiled_index
 Fornece um índice em uma [tiled_extent](tiled-extent-class.md) objeto. Essa classe tem propriedades para acessar elementos relativo à origem do bloco local e relativo à origem global. Para obter mais informações sobre os espaços de lado a lado, consulte [usando blocos](../../../parallel/amp/using-tiles.md).  

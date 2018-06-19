@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375967"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funções da troca de dados da caixa de diálogo para controles OLE
 Este tópico lista as funções DDX_OC usadas para trocar dados entre uma propriedade de um controle OLE em uma caixa de diálogo, o modo de exibição de formulário ou o objeto de exibição de controle e um membro de dados do objeto de exibição de controle, exibição de formulário ou caixa de diálogo.  

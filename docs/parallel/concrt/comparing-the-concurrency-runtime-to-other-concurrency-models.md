@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694063"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparando o Tempo de Execução de Simultaneidade com outros modelos de simultaneidade
 Este documento descreve as diferenças entre os recursos e modelos de programação de tempo de execução de simultaneidade e outras tecnologias. Compreendendo como as vantagens do tempo de execução de simultaneidade em comparação com os benefícios de outros modelos de programação, você pode selecionar a tecnologia que melhor satisfaz os requisitos de seus aplicativos.  

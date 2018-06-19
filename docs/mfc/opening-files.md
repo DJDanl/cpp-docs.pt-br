@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352757"
 ---
 # <a name="opening-files"></a>Abrindo arquivos
 Em MFC, a maneira mais comum para abrir um arquivo é um processo de duas etapas.  

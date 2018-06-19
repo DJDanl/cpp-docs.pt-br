@@ -55,6 +55,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372554"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>Classe CMFCRibbonColorButton
 O `CMFCRibbonColorButton` classe implementa um botão de cor que você pode adicionar a uma barra de faixa de opções. Botão de cor da faixa de opções exibe um menu suspenso que contém um ou mais paletas de cores.  

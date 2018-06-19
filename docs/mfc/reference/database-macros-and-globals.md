@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370767"
 ---
 # <a name="database-macros-and-globals"></a>Macros e globais de banco de dados
 As macros e globais listados a seguir se aplicam a aplicativos de banco de dados baseado em ODBC. Eles não são usados com aplicativos baseados em DAO.  

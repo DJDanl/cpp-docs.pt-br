@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294944"
 ---
 # <a name="compiler-warning-levels-2-and-4-c4200"></a>Compilador C4200 de aviso (níveis 2 e 4)
 extensão não padrão usada: matriz de tamanho zero na estrutura/união  

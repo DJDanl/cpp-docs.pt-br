@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297427"
 ---
 # <a name="compiler-warning-level-4-c4625"></a>Compilador C4625 de aviso (nível 4)
 'classe derivada': construtor de cópia foi implicitamente definido como excluído, pois um construtor de cópia da classe base é inacessível ou excluídos  

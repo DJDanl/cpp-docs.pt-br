@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685587"
 ---
 # <a name="15-normative-references"></a>1.5 Referências normativas
 -   ISO/IEC 9899:1999, *informações tecnologia - linguagens de programação - C*. Essa especificação de API OpenMP se refere a ISO/IEC 9899:1999 como C99.  

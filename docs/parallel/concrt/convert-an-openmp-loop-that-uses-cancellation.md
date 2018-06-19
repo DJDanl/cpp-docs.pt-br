@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693257"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Como converter um loop OpenMP que usa cancelamento para usar o tempo de execução de simultaneidade
 Alguns loops paralelos não exigem que todas as iterações ser executado. Por exemplo, um algoritmo que procura um valor possa ser encerrado depois que o valor for encontrado. OpenMP não fornece um mecanismo para interromper um loop paralelo. No entanto, você pode usar um valor booliano ou o sinalizador para permitir uma iteração do loop para indicar que a solução foi encontrada. O tempo de execução de simultaneidade fornece a funcionalidade que permite que uma tarefa cancelar a outras tarefas que ainda não foram iniciados.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376032"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Rotinas de validação dos dados da caixa de diálogo padrão
 Este tópico lista as rotinas de validação (DDV) de dados de caixa de diálogo padrão usadas para controles de caixa de diálogo comuns do MFC.  

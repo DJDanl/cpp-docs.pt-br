@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352783"
 ---
 # <a name="docking-and-floating-toolbars"></a>Encaixando e flutuando barras de ferramentas
 A biblioteca Microsoft Foundation Class suporta encaixáveis barras de ferramentas. Uma barra de ferramentas encaixável pode ser anexada ou encaixada, para qualquer lado da sua janela pai, ou pode ser desanexado, ou flutuante, em sua própria janela do quadro simplificado. Este artigo explica como usar as barras de ferramentas encaixáveis em seus aplicativos.  

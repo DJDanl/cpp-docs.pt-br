@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350027"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>Controles ActiveX MFC: adicionando métodos personalizados
 Métodos personalizados são diferentes de métodos de estoque que eles já não são implementados por `COleControl`. Você deve fornecer a implementação para cada método personalizado que você adicionar ao seu controle.  

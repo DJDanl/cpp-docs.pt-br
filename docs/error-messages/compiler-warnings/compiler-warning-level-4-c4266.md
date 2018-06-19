@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294554"
 ---
 # <a name="compiler-warning-level-4-c4266"></a>Compilador C4266 de aviso (nível 4)
 'function': nenhuma substituição disponível para a função de membro virtual de base 'type'; função é ocultada  

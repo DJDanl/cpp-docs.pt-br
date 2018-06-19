@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373886"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>Classe CMultiPageDHtmlDialog
 Uma caixa de diálogo de Multipágina exibe várias páginas HTML sequencialmente e trata os eventos de cada página.  

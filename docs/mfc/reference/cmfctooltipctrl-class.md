@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372950"
 ---
 # <a name="cmfctooltipctrl-class"></a>Classe CMFCToolTipCtrl
 Uma implementação de dica de ferramenta estendida se baseia o [classe CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md). Uma dica de ferramenta com base no `CMFCToolTipCtrl` classe pode exibir um ícone, um rótulo e uma descrição. Você pode personalizar a aparência visual usando um preenchimento de gradiente, texto personalizado e cores da borda, negrito, cantos arredondados ou um estilo de balão.  

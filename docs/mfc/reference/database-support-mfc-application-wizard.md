@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372238"
 ---
 # <a name="database-support-mfc-application-wizard"></a>Suporte ao banco de dados, Assistente de Aplicativo MFC
 Esta página fornece opções que permitem que você especifique o nível de banco de dados de suporte (mais de uma fonte de dados, se necessário) para seu projeto.  

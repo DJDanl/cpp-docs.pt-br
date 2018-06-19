@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690482"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrando de OpenMP no Tempo de Execução de Simultaneidade
 O tempo de execução de simultaneidade permite uma variedade de modelos de programação. Esses modelos podem se sobrepor ou complementar os modelos de outras bibliotecas. Os documentos nesta seção comparar [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) no tempo de execução de simultaneidade e fornece exemplos sobre como migrar código OpenMP existente para usar o tempo de execução de simultaneidade.  

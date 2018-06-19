@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351683"
 ---
 # <a name="dialog-box-classes"></a>Classes da caixa de diálogo
 Classe `CDialog` e suas classes derivadas encapsulam funcionalidades de caixa de diálogo. Como uma caixa de diálogo é um tipo especial de janela, `CDialog` é derivado de `CWnd`. Derivar suas classes de caixa de diálogo de `CDialog` ou use uma das classes de caixa de diálogo comum para as caixas de diálogo padrão, como abrir ou salvar um arquivo, impressão, selecionando uma fonte ou a cor, iniciando uma operação de pesquisa e substituição, ou executando vários relacionadas a OLE operações.  

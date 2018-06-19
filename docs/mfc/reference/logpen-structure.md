@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374144"
 ---
 # <a name="logpen-structure"></a>Estrutura LOGPEN
 O `LOGPEN` estrutura define o estilo, a largura e a cor de uma caneta, um objeto usado para desenhar linhas e bordas. O [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) função usa o `LOGPEN` estrutura.  

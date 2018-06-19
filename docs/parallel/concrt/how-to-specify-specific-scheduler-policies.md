@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685779"
 ---
 # <a name="how-to-specify-specific-scheduler-policies"></a>Como especificar políticas de agendador específicas
 Políticas de Agendador permitem que você controle a estratégia que o Agendador usa quando ele gerencia as tarefas. Este tópico mostra como usar uma política de Agendador para aumentar a prioridade de thread de uma tarefa que imprime um indicador de progresso para o console.  

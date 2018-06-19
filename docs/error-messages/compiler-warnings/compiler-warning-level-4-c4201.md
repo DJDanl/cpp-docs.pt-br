@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292286"
 ---
 # <a name="compiler-warning-level-4-c4201"></a>Compilador C4201 de aviso (nível 4)
 extensão não padrão usada: struct/union sem nome  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355529"
 ---
 # <a name="help-menu-merging"></a>Mescla do menu Ajuda
 Quando um objeto está ativo em um contêiner, o menu de mesclagem de protocolo de documentos OLE fornece o controle total do objeto do **ajuda** menu. Como resultado, os tópicos de Ajuda do contêiner não estão disponíveis, a menos que o usuário desativa o objeto. A arquitetura de confinamento do documento ativo expande as regras de menu no local de mesclagem para permitir que o contêiner e um documento ativo está ativo para compartilhar o menu. As novas regras são convenções simplesmente adicionais sobre qual componente possui que faz parte do menu e como menu compartilhado é construído.  

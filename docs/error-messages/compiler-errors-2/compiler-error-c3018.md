@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254327"
 ---
 # <a name="compiler-error-c3018"></a>C3018 de erro do compilador
 'var1': OpenMP 'for' deve usar o teste ou incremento de índice 'var2' variável  

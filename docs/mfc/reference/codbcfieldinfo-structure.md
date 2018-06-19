@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370728"
 ---
 # <a name="codbcfieldinfo-structure"></a>Estrutura CODBCFieldInfo
 O `CODBCFieldInfo` estrutura contém informações sobre os campos em uma fonte de dados ODBC.  

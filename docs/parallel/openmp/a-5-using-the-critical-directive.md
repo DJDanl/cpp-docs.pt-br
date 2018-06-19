@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686250"
 ---
 # <a name="a5---using-the-critical-directive"></a>A.5   Usando a diretiva critical
 O exemplo a seguir inclui vários `critical` diretivas ([seção 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md) na página 18). O exemplo ilustra um modelo de enfileiramento de mensagens em que uma tarefa é removida da fila e trabalhada. Para se proteger contra vários threads removê-la fila a mesma tarefa, a operação dequeuing deve estar em um `critical` seção. Como as duas filas neste exemplo são independentes, eles são protegidos por `critical` diretivas com nomes diferentes, *xaxis* e *yaxis*.  

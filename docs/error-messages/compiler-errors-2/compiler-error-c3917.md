@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270597"
 ---
 # <a name="compiler-error-c3917"></a>C3917 de erro do compilador
 '*propriedade*': estilo de declaração de construção obsoleta  

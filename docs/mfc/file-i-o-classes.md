@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356180"
 ---
 # <a name="file-io-classes"></a>Classes de E/S do arquivo
 Essas classes fornecem uma interface para arquivos de disco tradicional, arquivos em memória, fluxos ativos e soquetes do Windows. Todas as classes derivam de `CFile` pode ser usado com um `CArchive` objeto para executar a serialização.  

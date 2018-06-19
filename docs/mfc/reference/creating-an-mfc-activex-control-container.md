@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372476"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>Criando um contêiner de controle ActiveX MFC
 Um contêiner de controle ActiveX é um programa de pai que fornece o ambiente para um controle ActiveX (anteriormente OLE) para executar. Você pode criar um aplicativo capaz de conter controles ActiveX com ou sem MFC, mas é muito mais fácil de fazer com MFC.  
