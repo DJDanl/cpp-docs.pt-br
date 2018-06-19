@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236812"
 ---
 # <a name="compiler-error-c2725"></a>C2725 de erro do compilador
 'exception': não é possível lançar ou capturar um gerenciado ou um objeto WinRT por valor ou referência  

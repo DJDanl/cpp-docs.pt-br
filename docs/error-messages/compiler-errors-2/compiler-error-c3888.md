@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270658"
 ---
 # <a name="compiler-error-c3888"></a>C3888 de erro do compilador
 'name': a expressão const associada a este membro de dados literal não é suportado pelo C + + CLI  

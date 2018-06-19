@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875039"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Como declarar ponteiros internos com a palavra-chave const (C++/CLI)
 O exemplo a seguir mostra como usar `const` na declaração de um ponteiro interior.  

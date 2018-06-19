@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270490"
 ---
 # <a name="compiler-warning-c4368"></a>C4368 de aviso do compilador
 não é possível definir 'member' como um membro de gerenciado 'type': não há suporte para tipos mistos  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879322"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>Agrupando botões de opção em uma caixa de diálogo
 Quando você adiciona botões de opção para uma caixa de diálogo, tratá-los como um grupo, definindo uma propriedade de grupo na janela Propriedades para o primeiro botão no grupo. Uma ID de controle de botão de opção que aparece no [Assistente para adição de variável de membro](../ide/add-member-variable-wizard.md), permitindo que você adicione uma variável de membro do grupo de botões de opção.  

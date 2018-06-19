@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880313"
 ---
 # <a name="modifying-the-layout-grid"></a>Modificando a grade de layout
 Quando você está colocando ou Organizando controles em uma caixa de diálogo, você pode usar a grade de layout para um posicionamento mais preciso. Quando a grade é ativada, controles parecem "Ajustar à" as linhas pontilhadas da grade como se magnetizada. Você pode ativar e desativar o esse recurso de "Ajustar à grade" e alterar o tamanho das células de grade de layout.  

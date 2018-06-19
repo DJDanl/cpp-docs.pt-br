@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253886"
 ---
 # <a name="compiler-error-c3374"></a>C3374 de erro do compilador
 não é possível obter o endereço de 'função', a menos que a criação represente a instância  

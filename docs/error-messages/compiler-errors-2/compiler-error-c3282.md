@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254403"
 ---
 # <a name="compiler-error-c3282"></a>C3282 de erro do compilador
 gerenciado de parâmetro genérico listas só podem aparecer em ou WinRTclasses, estruturas ou funções  

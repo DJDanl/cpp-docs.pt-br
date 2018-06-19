@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267708"
 ---
 # <a name="compiler-error-c3834"></a>C3834 de erro do compilador
 conversão explícita inválida para um ponteiro de fixação; Use uma variável local fixada em vez disso  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253656"
 ---
 # <a name="compiler-error-c3495"></a>C3495 de erro do compilador
 'var': uma captura de lambda deve ter duração de armazenamento automática  

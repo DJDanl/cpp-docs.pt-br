@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882570"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>Guia Editor de Caixa de Diálogo, caixa de ferramentas
 A guia Editor de caixa de diálogo aparece no [janela caixa de ferramentas](/visualstudio/ide/reference/toolbox) quando você estiver trabalhando no editor de caixa de diálogo. Para adicionar controles à sua caixa de diálogo Novo, arraste os controles da caixa de ferramentas para a caixa de diálogo que você está criando (para obter mais informações, consulte [adicionar um controle a uma caixa de diálogo](adding-a-control-to-a-dialog-box.md)). Em seguida, você pode mover os controles ou alterar seu tamanho e forma.  

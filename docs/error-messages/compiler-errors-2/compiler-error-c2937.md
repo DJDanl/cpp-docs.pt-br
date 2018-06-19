@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244759"
 ---
 # <a name="compiler-error-c2937"></a>C2937 de erro do compilador
 'class': tipo de id de classe redefinido como um typedef global  

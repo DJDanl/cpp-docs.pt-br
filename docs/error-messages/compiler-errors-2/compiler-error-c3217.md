@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251288"
 ---
 # <a name="compiler-error-c3217"></a>C3217 de erro do compilador
 'param': parâmetro genérico não pode ser restringido nesta declaração  

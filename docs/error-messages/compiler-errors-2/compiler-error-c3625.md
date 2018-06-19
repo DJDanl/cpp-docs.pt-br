@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255170"
 ---
 # <a name="compiler-error-c3625"></a>C3625 de erro do compilador
 'native_type': um tipo nativo não pode derivar de gerenciada ou WinRT ' tipo '  

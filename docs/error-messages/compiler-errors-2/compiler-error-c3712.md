@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277153"
 ---
 # <a name="compiler-error-c3712"></a>C3712 de erro do compilador
 'method': um método de manipulador de eventos deve retornar o mesmo tipo que a origem 'method'  

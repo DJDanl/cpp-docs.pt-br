@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880563"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Preenchendo uma área limitada de uma imagem com uma cor (editor de imagens para ícones)
 O editor de imagem fornece o **preencher** colocados de ferramenta para o preenchimento de qualquer área da imagem com a cor de desenho atual ou a cor de plano de fundo atual.  

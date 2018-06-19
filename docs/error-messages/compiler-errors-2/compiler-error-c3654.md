@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265318"
 ---
 # <a name="compiler-error-c3654"></a>C3654 de erro do compilador
 'texto': erro de sintaxe em substituição explícita  

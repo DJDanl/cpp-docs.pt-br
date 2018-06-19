@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882818"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Como: usar o Windows 10 SDK em um aplicativo de área de trabalho do Windows
 Quando você cria um projeto de área de trabalho clássico do Windows no Visual Studio de 2017, ela é configurada por padrão para compilar com a versão do SDK do Windows 10 foi instalado quando a carga de trabalho de área de trabalho do C++ foi instalada ou atualizado pela última vez. Esta versão do SDK do Windows é compatível com todas as versões recentes do Windows. Se você deseja direcionar uma versão anterior do SDK, você pode abrir o projeto | Propriedades e escolha entre as outras versões do SDK disponíveis na lista suspensa de versão de SDK do Windows.  

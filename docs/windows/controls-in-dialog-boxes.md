@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873115"
 ---
 # <a name="controls-in-dialog-boxes"></a>Controles em caixas de diálogo
 Você pode adicionar controles a uma caixa de diálogo usando o [guia Editor de caixa de diálogo](../windows/dialog-editor-tab-toolbox.md) no [janela caixa de ferramentas](/visualstudio/ide/reference/toolbox), que permite que você escolha o controle desejado e arraste-o para a caixa de diálogo. Por padrão, a janela de caixa de ferramentas é definida para ocultar automaticamente. Ele aparece como uma guia na margem esquerda da sua solução quando o editor de caixa de diálogo é aberto. No entanto, você pode fixar a janela da caixa de ferramentas para a posição clicando o **AutoOcultar** botão no canto superior direito da janela. Para obter mais informações sobre como controlar o comportamento desta janela, consulte [gerenciamento de janela](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  

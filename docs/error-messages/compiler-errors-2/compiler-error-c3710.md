@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266481"
 ---
 # <a name="compiler-error-c3710"></a>C3710 de erro do compilador
 'function': sintaxe inadequada ao especificar o manipulador de eventos em hook /\__unhook  

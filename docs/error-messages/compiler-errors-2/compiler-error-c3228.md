@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248990"
 ---
 # <a name="compiler-error-c3228"></a>C3228 de erro do compilador
 'function': argumento de tipo genérico para 'param' não pode ser 'type', ele deve ser um tipo valuetype ou identificador  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290706"
 ---
 # <a name="compiler-warning-level-2-c4244"></a>Compilador C4244 de aviso (nível 2)
 'argumento de ': conversão de 'type1' em 'type2', possível perda de dados  

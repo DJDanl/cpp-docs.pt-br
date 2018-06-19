@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227376"
 ---
 # <a name="fatal-error-c1206"></a>Erro fatal C1206
 Dados Per-appdomain não há suporte para a versão do tempo de execução instalado  

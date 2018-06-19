@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251092"
 ---
 # <a name="compiler-error-c3381"></a>C3381 de erro do compilador
 'assembly': especificadores de acesso de assembly só estão disponíveis no código compilado com uma opção /clr  

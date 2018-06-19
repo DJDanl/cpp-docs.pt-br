@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882769"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>Desenhando linhas ou figuras fechadas (editor de imagens para ícones)
 Ferramentas do editor de imagem para desenhar linhas e figuras fechadas todos funcionam da mesma maneira: colocar o ponto de inserção em um ponto e arraste para outro. Para linhas, esses pontos são os pontos de extremidade. Para figuras fechadas, esses pontos são opostas vértices de um retângulo delimitador a figura.  

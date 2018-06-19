@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252465"
 ---
 # <a name="compiler-error-c3183"></a>C3183 de erro do compilador
 não é possível definir sem nome de classe, struct ou união 'type' do tipo de WinRT ou dentro de gerenciado  

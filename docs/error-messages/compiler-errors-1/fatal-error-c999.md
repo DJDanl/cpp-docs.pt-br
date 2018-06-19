@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227092"
 ---
 # <a name="fatal-error-c999"></a>Erro fatal C999
 MENSAGEM desconhecida, escolha o comando de suporte técnico no menu Ajuda do Visual C++ ou abrir o arquivo de Ajuda do suporte técnico para obter mais informações  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33259124"
 ---
 # <a name="compiler-error-c3480"></a>C3480 de erro do compilador
 'var': uma variável de captura de lambda deve ser de um escopo de função delimitadora  

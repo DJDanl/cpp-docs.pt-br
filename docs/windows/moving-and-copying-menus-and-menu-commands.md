@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878431"
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>Movendo e copiando menus e comandos de menu
 Você pode mover ou copiar menus e comandos de menu usando o método de arrastar e soltar ou usando os comandos no menu de atalho (menu de atalho).  

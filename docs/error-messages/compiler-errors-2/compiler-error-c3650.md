@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265112"
 ---
 # <a name="compiler-error-c3650"></a>C3650 de erro do compilador
 'interface_method': não pode ser usado como uma substituição explícita, deve ser uma função membro virtual de uma classe base  

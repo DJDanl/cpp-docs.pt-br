@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877957"
 ---
 # <a name="removing-space-between-buttons-on-a-toolbar"></a>Removendo o espaço entre botões em uma barra de ferramentas
 O procedimento a seguir mostra como remover um espaço entre botões em uma barra de ferramentas.  

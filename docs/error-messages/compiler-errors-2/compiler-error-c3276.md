@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248236"
 ---
 # <a name="compiler-error-c3276"></a>C3276 de erro do compilador
 'palavra-chave': salto para fora de Finally/bloco finally possui comportamento indefinido durante manipulação de encerramento  

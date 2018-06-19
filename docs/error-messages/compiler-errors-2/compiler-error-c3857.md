@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267820"
 ---
 # <a name="compiler-error-c3857"></a>C3857 de erro do compilador
 'type': várias listas de parâmetros de tipo não são permitidas  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250118"
 ---
 # <a name="compiler-error-c3251"></a>C3251 de erro do compilador
 não é possível invocar o método da classe base em uma instância de tipo de valor  

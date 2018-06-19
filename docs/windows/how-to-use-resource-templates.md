@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882726"
 ---
 # <a name="how-to-use-resource-templates"></a>Como usar modelos de recurso
 Um modelo de recurso é um recurso personalizado que você salvou como um arquivo. rct. Um modelo de recursos, em seguida, pode servir como um ponto de partida para a criação de outros recursos. Modelos de recursos economizar tempo no desenvolvimento de recursos adicionais ou grupos de recursos que compartilham recursos, como controles padrão e outros elementos repetidos. Por exemplo, você talvez queira incluir um botão de Ajuda e o ícone de um logotipo da empresa em várias caixas de diálogo. Para fazer tão rapidamente, crie um novo modelo de caixa de diálogo e personalizá-lo com o logotipo e o botão Ajuda.  

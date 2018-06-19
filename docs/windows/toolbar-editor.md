@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891305"
 ---
 # <a name="toolbar-editor"></a>Editor de Barra de Ferramentas
 O editor de barra de ferramentas permite que você criar recursos da barra de ferramentas e converter bitmaps em recursos da barra de ferramentas. O editor de barra de ferramentas usa uma exibição gráfica para mostrar uma barra de ferramentas e os botões que se assemelhem como eles aparecerão em um aplicativo concluído.  

@@ -37,6 +37,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33865830"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Suporte de MBCS no Visual C++
 Quando executado em uma versão do Windows habilitada MBCS, o sistema de desenvolvimento do Visual C++ (incluindo as ferramentas de editor, o depurador e a linha de comando de código fonte integrado) está habilitado para MBCS, com exceção da janela de memória.  

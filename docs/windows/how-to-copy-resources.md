@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879842"
 ---
 # <a name="how-to-copy-resources"></a>Como copiar recursos
 Você pode copiar recursos de um arquivo para outro sem alterá-los ou você pode [alterar o idioma ou a condição de um recurso ao copiá-la](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md).  

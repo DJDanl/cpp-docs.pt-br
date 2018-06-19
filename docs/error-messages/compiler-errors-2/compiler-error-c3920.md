@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270274"
 ---
 # <a name="compiler-error-c3920"></a>C3920 de erro do compilador
 ' operador ': não é possível definir um incremento/decremento de sufixo WinRT ou um operador CLR chamando o sufixo prefixo correspondente será chamada de operador de WinRT ou CLR WinRT ou CLR operador (op_Increment/op_Decrement), mas com semântica de pós-fixo  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888640"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Selecionando cores em primeiro plano ou segundo plano (editor de imagens para ícones)
 Exceto para o **borracha**, ferramentas no **Editor de imagem** desenho de barra de ferramentas com a atual cor de primeiro plano ou segundo plano quando você pressiona o botão esquerdo ou direito do mouse, respectivamente.  

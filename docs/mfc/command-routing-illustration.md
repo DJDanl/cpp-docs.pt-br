@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341130"
 ---
 # <a name="command-routing-illustration"></a>Ilustração de roteamento do comando
 Para ilustrar, considere uma mensagem de comando de um item de menu Limpar tudo no menu Editar do aplicativo um MDI. Suponha que a função de manipulador desse comando é uma função de membro de classe de documento do aplicativo. Aqui está como o comando atinge seu manipulador depois que o usuário escolhe o item de menu:  

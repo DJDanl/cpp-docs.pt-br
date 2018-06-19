@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256129"
 ---
 # <a name="compiler-error-c3212"></a>C3212 de erro do compilador
 'especialização': uma especialização explícita de um membro de modelo deve ser um membro de uma especialização explícita  

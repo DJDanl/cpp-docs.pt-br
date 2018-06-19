@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890207"
 ---
 # <a name="wiremarshal"></a>wire_marshal
 Especifica um tipo de dados que será usado para a transmissão em vez de um tipo de dados específicos do aplicativo.  

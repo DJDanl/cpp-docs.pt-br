@@ -35,6 +35,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882544"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Criando regiões transparentes ou inversas em imagens de dispositivo (editor de imagens para ícones)
 No [editor de imagem](../windows/image-editor-for-icons.md), a imagem de ícone ou cursor inicial possui um atributo transparente. Embora as imagens de ícone e cursor são retangulares, muitos não são exibidos isso porque partes da imagem são transparentes; mostra a imagem subjacente na tela por meio do ícone ou cursor. Quando você arrasta um ícone, partes da imagem podem aparecer em uma cor invertida. Você cria esse efeito, definindo as cores de tela e inversa no [janela cores](../windows/colors-window-image-editor-for-icons.md).  

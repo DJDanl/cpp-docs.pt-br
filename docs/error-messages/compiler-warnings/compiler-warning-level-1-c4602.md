@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279521"
 ---
 # <a name="compiler-warning-level-1-c4602"></a>Compilador C4602 de aviso (nível 1)
 \#pragma pop_macro: 'nome de macro' Nenhum push_macro #pragma anterior para este identificador  

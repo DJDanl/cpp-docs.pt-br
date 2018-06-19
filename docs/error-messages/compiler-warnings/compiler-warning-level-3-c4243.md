@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290810"
 ---
 # <a name="compiler-warning-level-3-c4243"></a>Compilador C4243 de aviso (nível 3)
 conversão de 'tipo de conversão' existe a partir de 'type1' em 'type2', mas é inacessível  

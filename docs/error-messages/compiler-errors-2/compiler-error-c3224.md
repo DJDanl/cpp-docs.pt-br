@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247078"
 ---
 # <a name="compiler-error-c3224"></a>C3224 de erro do compilador
 'type': nenhuma classe de generic sobrecarregada tem argumentos de tipo genérico 'número'  

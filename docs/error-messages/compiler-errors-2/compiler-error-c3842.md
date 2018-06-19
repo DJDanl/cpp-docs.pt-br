@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270756"
 ---
 # <a name="compiler-error-c3842"></a>C3842 de erro do compilador
 'function': não há suporte para qualificadores 'const' e 'volatile' em funções membro de WinRT ou tipos gerenciados  

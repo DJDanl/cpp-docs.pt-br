@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269251"
 ---
 # <a name="compiler-error-c3803"></a>C3803 de erro do compilador
 'property': propriedade tem um tipo que é incompatível com um dos seu acessadores 'o acessador'  

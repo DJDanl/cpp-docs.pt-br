@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267103"
 ---
 # <a name="compiler-error-c3755"></a>C3755 de erro do compilador
 'delegate': um delegate não pode ser definido  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343250"
 ---
 # <a name="exceptions-examining-exception-contents"></a>Exceções: examinando o conteúdo da exceção
 Embora um **catch** argumento do bloco pode ser de praticamente qualquer tipo de dados, as funções MFC lançam exceções de tipos derivados da classe `CException`. Para capturar uma exceção gerada por uma função MFC, em seguida, você escreve um **catch** bloco cujo argumento é um ponteiro para um `CException` objeto (ou um objeto derivado de `CException`, como `CMemoryException`). Dependendo do tipo exato da exceção, você pode examinar os membros de dados do objeto de exceção para obter informações sobre a causa específica da exceção.  

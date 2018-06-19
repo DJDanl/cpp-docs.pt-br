@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233051"
 ---
 # <a name="compiler-error-c2670"></a>C2670 de erro do compilador
 'Identificador': o modelo de função não é possível converter o número do parâmetro de tipo 'type'  

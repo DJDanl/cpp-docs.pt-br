@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277888"
 ---
 # <a name="compiler-warning-level-1-c4190"></a>Compilador C4190 de aviso (nível 1)
 'identifier1' possui vínculo a C especificado, mas retorna UDT 'identifier2', que é incompatível com C  

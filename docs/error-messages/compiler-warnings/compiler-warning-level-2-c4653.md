@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290989"
 ---
 # <a name="compiler-warning-level-2-c4653"></a>Compilador C4653 de aviso (nível 2)
 opção de compilador 'option' inconsistente com cabeçalho pré-compilado; opção de linha de comando atual ignorada  

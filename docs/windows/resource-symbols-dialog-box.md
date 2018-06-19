@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880186"
 ---
 # <a name="resource-symbols-dialog-box"></a>Caixa de diálogo Símbolos do Recurso
 O **símbolos de recurso** caixa de diálogo permite que você adicionar novos símbolos de recurso, altere os símbolos que são exibidos ou vá para o local no código-fonte em que um símbolo está em uso.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272153"
 ---
 # <a name="compiler-warning-level-1-c4518"></a>Compilador C4518 de aviso (nível 1)
 'especificador': classe de armazenamento ou digitar specifier(s) inesperado aqui. ignorado  

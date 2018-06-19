@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275217"
 ---
 # <a name="compiler-error-c3708"></a>C3708 de erro do compilador
 'interface': uso inadequado de 'palavra-chave'; deve ser um membro de uma fonte de eventos compatível  

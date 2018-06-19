@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255602"
 ---
 # <a name="compiler-error-c3254"></a>C3254 de erro do compilador
 'substituição explícita': classe contém substituição explícita 'override', mas não deriva de uma interface que contém a declaração da função  

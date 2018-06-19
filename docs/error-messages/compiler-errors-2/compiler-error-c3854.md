@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275506"
 ---
 # <a name="compiler-error-c3854"></a>C3854 de erro do compilador
 avalia a expressão à esquerda de '=' para uma função. Não é possível atribuir a uma função (uma função não é um l-value)  

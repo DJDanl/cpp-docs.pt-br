@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277134"
 ---
 # <a name="compiler-warning-level-1-c4376"></a>Compilador C4376 de aviso (nível 1)
 especificador de acesso ' old_specifier:' não é mais suportado: use ' new_specifier:' em vez disso  

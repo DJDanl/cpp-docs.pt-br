@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098570"
 ---
 # <a name="crowset-class"></a>Classe CRowset
 Encapsula um objeto de conjunto de linhas do OLE DB e vários relacionados interfaces e fornece métodos de manipulação de dados do conjunto de linhas.  

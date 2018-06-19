@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257068"
 ---
 # <a name="compiler-error-c3367"></a>C3367 de erro do compilador
 'static_member_function': não é possível usar função static para criar um delegate não associado  

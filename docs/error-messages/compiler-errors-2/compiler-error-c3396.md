@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252121"
 ---
 # <a name="compiler-error-c3396"></a>C3396 de erro do compilador
 'attribute': atributo personalizado não encontrado em 'namespace'  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281028"
 ---
 # <a name="compiler-warning-level-1-c4624"></a>Compilador C4624 de aviso (nível 1)
 'classe derivada': destrutor foi implicitamente definido como excluído porque um destruidor de classe base é inacessível ou excluídos  

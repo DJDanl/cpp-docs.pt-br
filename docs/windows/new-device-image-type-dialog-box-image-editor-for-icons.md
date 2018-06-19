@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879614"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Novo &lt;dispositivo&gt; imagem da caixa de diálogo de tipo (Editor de imagens para ícones)
 Permite que você crie uma nova imagem de dispositivo de um tipo especificado. Para abrir o **novo \<dispositivo > imagem** caixa de diálogo, clique em **novo tipo de imagem** no **imagem** menu.  

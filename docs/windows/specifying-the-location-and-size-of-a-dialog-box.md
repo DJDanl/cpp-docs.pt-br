@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890571"
 ---
 # <a name="specifying-the-location-and-size-of-a-dialog-box"></a>Especificando o local e o tamanho de uma caixa de diálogo
 O local e o tamanho de uma caixa de diálogo, bem como o local e o tamanho dos controles dentro dele, são medidos em unidades de diálogo. Os valores para os controles individuais e a caixa de diálogo aparecer no canto inferior direito da barra quando você seleciona o status para Visual Studio.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271598"
 ---
 # <a name="compiler-error-c3915"></a>C3915 de erro do compilador
 'type' não tem nenhuma propriedade padrão indexada (indexador de classe)  

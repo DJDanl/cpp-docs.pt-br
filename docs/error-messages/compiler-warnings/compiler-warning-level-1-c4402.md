@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274327"
 ---
 # <a name="compiler-warning-level-1-c4402"></a>Compilador C4402 de aviso (nível 1)
 deve usar operador PTR  

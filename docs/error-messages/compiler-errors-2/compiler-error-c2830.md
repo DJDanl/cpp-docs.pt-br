@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244091"
 ---
 # <a name="compiler-error-c2830"></a>C2830 de erro do compilador
 somente os parâmetros de posicionamento para 'operator new' podem ter valores padrão  

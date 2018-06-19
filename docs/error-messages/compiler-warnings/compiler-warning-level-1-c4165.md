@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277560"
 ---
 # <a name="compiler-warning-level-1-c4165"></a>Compilador C4165 de aviso (nível 1)
 'HRESULT' está sendo convertido em 'bool'; Tem certeza de que é isso que você deseja?  

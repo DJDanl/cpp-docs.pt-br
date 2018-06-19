@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881452"
 ---
 # <a name="key-wrl-apis-by-category"></a>APIs de chave WRL por categoria
 As tabelas a seguir listam os principais produtos de classes, estruturas, funções e macros biblioteca de modelos C++ do Windows Runtime. As construções em auxiliar namespaces e classes são omitidas. Essas listas aumentar a documentação da API, que é organizada por namespace.  

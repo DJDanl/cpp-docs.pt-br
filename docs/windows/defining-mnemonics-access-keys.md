@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873687"
 ---
 # <a name="defining-mnemonics-access-keys"></a>Definindo mnemônica (teclas de acesso)
 Normalmente, os usuários de teclado mover o foco de entrada de um controle para outro em uma caixa de diálogo com as teclas TAB e de direção. No entanto, você pode definir uma chave de acesso (um mnemônico ou fácil de lembrar nome) que permite aos usuários escolher um controle pressionando uma única chave.  

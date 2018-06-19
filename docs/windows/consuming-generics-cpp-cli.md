@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870813"
 ---
 # <a name="consuming-generics-ccli"></a>Consumindo genéricos (C++/CLI)
 Genéricos criados em uma linguagem .NET podem ser usados em outras linguagens .NET. Ao contrário de modelos, um genérico em um assembly compilado ainda permanece genérico. Assim, um pode criar uma instância de tipo genérico em um assembly diferente e até mesmo em um idioma diferente do assembly no qual o tipo genérico foi definido.  

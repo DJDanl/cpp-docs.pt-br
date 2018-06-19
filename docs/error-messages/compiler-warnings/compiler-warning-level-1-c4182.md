@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278175"
 ---
 # <a name="compiler-warning-level-1-c4182"></a>Compilador C4182 de aviso (nível 1)
 \#incluir o nível de aninhamento é 'number' profundidade; possível recursão infinita  

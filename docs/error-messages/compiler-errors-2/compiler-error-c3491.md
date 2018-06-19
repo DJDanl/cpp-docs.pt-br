@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257287"
 ---
 # <a name="compiler-error-c3491"></a>C3491 de erro do compilador
 'var': uma captura por valor não pode ser modificada em um lambda não mutável  

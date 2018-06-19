@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289666"
 ---
 # <a name="compiler-warning-level-3-c4357"></a>Compilador C4357 de aviso (nível 3)
 argumento de matriz de parâmetro na lista de argumentos formais para delegate 'del' ignorada ao gerar 'function'  

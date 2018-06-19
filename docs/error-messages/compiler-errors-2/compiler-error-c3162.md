@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253794"
 ---
 # <a name="compiler-error-c3162"></a>C3162 de erro do compilador
 'type': um tipo de referência que tenha um destruidor não pode ser usado como o tipo de membro de dados estáticos 'member'  

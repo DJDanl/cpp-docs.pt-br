@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256879"
 ---
 # <a name="compiler-error-c3195"></a>C3195 de erro do compilador
 'operator': é reservado e não pode ser usado como um membro de um tipo de valor ou classe ref. Operadores CLR ou WinRT devem ser definidas usando a palavra-chave 'operator'  

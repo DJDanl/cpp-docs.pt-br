@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880788"
 ---
 # <a name="predefined-accelerator-keys"></a>Teclas de aceleração predefinidas
 Há um número de teclas de aceleração predefinidas que podem ser parte de um projeto de aplicativo do Windows. Algumas dessas chaves virtual são para o ambiente do Windows. Outros navegadores de suporte ou aplicativos Unicode. Você pode usar qualquer uma dessas chaves em qualquer acelerador.  
