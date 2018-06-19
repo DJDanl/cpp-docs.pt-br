@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880790"
 ---
 # <a name="comptrptr-data-member"></a>Membro de dados ComPtr::ptr_
 Contém um ponteiro para a interface que está associado e gerenciado por este ComPtr.  

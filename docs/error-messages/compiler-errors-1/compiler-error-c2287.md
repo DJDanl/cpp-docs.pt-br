@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170262"
 ---
 # <a name="compiler-error-c2287"></a>C2287 de erro do compilador
 'class': representação de herança: 'representation1' é menos geral do que o necessário 'representation2'  

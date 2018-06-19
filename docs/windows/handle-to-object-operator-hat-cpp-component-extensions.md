@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881163"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Operador Handle to Object (^) (Extensões de Componentes C++)
 O *tratar declarador* (`^`, ou "hat"), modifica o tipo [especificador](../cpp/overview-of-declarators.md) significa que o objeto declarado deve ser excluído automaticamente quando o sistema determina que o objeto é não é mais acessível.  

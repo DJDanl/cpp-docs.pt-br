@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878828"
 ---
 # <a name="generic-functions-ccli"></a>Funções genéricas (C++/CLI)
 Uma função genérica é uma função que é declarada com parâmetros de tipo. Quando chamado, tipos reais são usados em vez dos parâmetros de tipo.  

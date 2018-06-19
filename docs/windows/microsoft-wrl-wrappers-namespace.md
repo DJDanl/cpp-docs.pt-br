@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878275"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Namespace Microsoft::WRL::Wrappers
 Define os tipos de wrapper de inicialização de é de aquisição de recursos (RAII) que simplificam o gerenciamento de tempo de vida de objetos, cadeias de caracteres e identificadores.  

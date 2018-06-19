@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880666"
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr (Extensões de Componentes C++)
 O `nullptr` palavra-chave representa um *valor de ponteiro nulo*. Use um valor de ponteiro nulo para indicar que um identificador de objeto, o ponteiro interior ou o tipo de ponteiro nativo não apontar para um objeto.  

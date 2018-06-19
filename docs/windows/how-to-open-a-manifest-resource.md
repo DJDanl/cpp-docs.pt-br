@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881836"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>Como abrir um recurso de manifesto
 Se você abrir um recurso de manifesto do [exibição recursos](../windows/resource-view-window.md), o recurso será aberto no formato binário. Para exibir o conteúdo de um recurso de manifesto em um formato mais visível, você deve abrir o recurso do Gerenciador de soluções.  

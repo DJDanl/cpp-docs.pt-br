@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881517"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Como executar operações assíncronas com WRL
 Este documento mostra como usar a biblioteca de modelo (WRL) do Windows em tempo de execução C++ para iniciar operações assíncronas e executar o trabalho quando as operações concluídas.  

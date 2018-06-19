@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882031"
 ---
 # <a name="msunion"></a>ms_union
 Controla o alinhamento de representação de dados de rede de uniões nonencapsulated.  

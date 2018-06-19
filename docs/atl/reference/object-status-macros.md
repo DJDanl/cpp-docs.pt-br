@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360868"
 ---
 # <a name="object-status-macros"></a>Macros de Status do objeto
 Esta macro define os sinalizadores que pertencem aos controles ActiveX.  

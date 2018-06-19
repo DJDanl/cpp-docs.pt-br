@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880238"
 ---
 # <a name="custom-controls-in-the-dialog-editor"></a>Controles personalizados no Editor de Caixa de Diálogo
 O editor de caixa de diálogo lhe permite usar existente "custom" ou controles de "usuário" em um modelo de caixa de diálogo.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874074"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>Invertendo as cores em uma seleção (editor de imagens para ícones)
 O editor de imagem fornece uma maneira conveniente de Inverter cores na parte selecionada da imagem para que você possa perceber como uma imagem apareceria com cores invertidas.  

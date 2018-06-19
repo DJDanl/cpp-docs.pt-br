@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359989"
 ---
 # <a name="what-is-atlaxwin100"></a>O que é AtlAxWin100?
 `AtlAxWin100` é o nome de uma classe de janela que ajuda a fornecer a funcionalidade de hospedagem de controles da ATL. Quando você cria uma instância dessa classe, o procedimento de janela usará automaticamente a API de hospedagem de controles para criar um objeto de host associado à janela e carregá-lo com o controle que você especificar como o título da janela.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878857"
 ---
 # <a name="menu-command-properties"></a>Propriedades do comando Menu
 As informações a seguir são organizadas de acordo com as propriedades de Menu que aparecem no [janela propriedades](/visualstudio/ide/reference/properties-window) quando você seleciona um comando de menu. Eles estão listados em ordem alfabética Embora a janela Propriedades também permite que você exibir essas propriedades por categoria.  

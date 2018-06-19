@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876508"
 ---
 # <a name="eventsource-class"></a>Classe EventSource
 Representa um evento não agile. Funções de membro de EventSource adicionar, removem e invocar os manipuladores de eventos. Para eventos agile, use [AgileEventSource](agileeventsource-class.md). 

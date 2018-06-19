@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876846"
 ---
 # <a name="editing-parts-of-an-image-image-editor-for-icons"></a>Editando partes de uma imagem (editor de imagens para ícones)
 Você pode executar operações de edição padrão — recortar, copiar, limpar e mover — em uma [seleção](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), se a seleção for a imagem inteira ou apenas uma parte dele. Como o editor de imagem usa a área de transferência do Windows, você pode transferir imagens entre o editor de imagens e outros aplicativos do Windows.  

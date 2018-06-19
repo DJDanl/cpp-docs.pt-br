@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108992"
 ---
 # <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Como criar um aplicativo confiável parcialmente removendo a dependência da DLL de biblioteca CRT
 Este tópico discute como criar um aplicativo de Common Language Runtime parcialmente confiável usando o Visual C++, removendo a dependência no msvcm90.dll.  

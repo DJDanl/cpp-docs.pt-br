@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873830"
 ---
 # <a name="defining-member-variables-for-dialog-controls"></a>Definindo variáveis de membro para controles da caixa de diálogo
 Para definir uma variável de membro de qualquer controle de caixa de diálogo exceto botões, você pode usar o método a seguir.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135876"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Como estender a biblioteca de marshaling
 Este tópico explica como estender a biblioteca de marshaling para fornecer mais conversões entre tipos de dados. Os usuários podem estender a biblioteca de marshaling para qualquer conversões de dados sem suporte no momento da biblioteca.  

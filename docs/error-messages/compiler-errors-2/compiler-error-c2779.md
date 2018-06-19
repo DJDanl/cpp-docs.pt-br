@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233922"
 ---
 # <a name="compiler-error-c2779"></a>C2779 de erro do compilador
 'declaração de ': métodos de propriedade só podem ser associados a membros de dados não estático  

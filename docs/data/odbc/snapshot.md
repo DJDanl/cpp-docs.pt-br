@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094758"
 ---
 # <a name="snapshot"></a>Instantâneo
 Um instantâneo é um conjunto de registros que reflete uma exibição estática dos dados que existia no momento em que o instantâneo foi criado. Quando você abre o instantâneo e move para todos os registros, o conjunto de registros que ele contém e seus valores não são alteradas até que você recria o instantâneo chamando **Requery**.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33158515"
 ---
 # <a name="param-array-and-ellipsis"></a>Matriz de parâmetros e reticências
 Precedência da matriz de parâmetro para a resolução de chamadas de função sobrecarregada foi alterado de extensões gerenciadas para C++ para Visual C++.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138295"
 ---
 # <a name="outline-of-changes-ccli"></a>Destaques de alterações (C++/CLI)
 Essa estrutura de tópicos mostra exemplos de algumas das alterações na linguagem de extensões gerenciadas para C++ para Visual C++. Siga o link que acompanha cada item para obter mais informações.  

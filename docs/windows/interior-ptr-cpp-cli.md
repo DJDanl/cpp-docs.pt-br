@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879101"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 Um *ponteiro interior* declara um ponteiro para dentro de um tipo de referência, mas não o próprio objeto. Um ponteiro interior pode apontar para um identificador de referência, o tipo de valor, o identificador de tipo demarcado, o membro de um tipo gerenciado, ou a um elemento de uma matriz gerenciada.  

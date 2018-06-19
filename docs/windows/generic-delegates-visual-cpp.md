@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875592"
 ---
 # <a name="generic-delegates-visual-c"></a>Delegados genéricos (Visual C++)
 Você pode usar parâmetros de tipo genérico com delegados. Para obter mais informações sobre delegados, consulte [delegado (extensões de componentes C++)](../windows/delegate-cpp-component-extensions.md).  

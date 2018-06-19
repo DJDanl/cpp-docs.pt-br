@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877690"
 ---
 # <a name="odl"></a>odl
 Identifica uma interface como uma interface de linguagem de descrição do objeto (ODL). Não exige que o compilador MIDL o **odl** atributo; ele é reconhecido somente para compatibilidade com arquivos. odl mais antigos.  

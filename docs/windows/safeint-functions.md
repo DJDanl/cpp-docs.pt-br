@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889300"
 ---
 # <a name="safeint-functions"></a>Funções (SafeInt)
 A biblioteca de SafeInt fornece várias funções que você pode usar sem criar uma instância do [classe SafeInt](../windows/safeint-class.md). Se você quiser proteger uma única operação matemática de estouro de inteiro, você pode usar essas funções. Se você deseja proteger várias operações matemáticas, você deve criar `SafeInt` objetos. É mais eficiente criar `SafeInt` objetos de usar essas funções várias vezes.  

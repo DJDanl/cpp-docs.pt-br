@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172438"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 A classe de modelo descreve um objeto que controla uma sequência de comprimento variável de elementos que tem acesso no último primeiro a sair. Usar o adaptador de contêiner `stack` para gerenciar um contêiner subjacente como uma pilha de rebaixamento.  

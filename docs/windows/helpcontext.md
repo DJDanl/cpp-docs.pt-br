@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877209"
 ---
 # <a name="helpcontext"></a>helpcontext
 Especifica uma ID de contexto que permite que usuários exibir informações sobre este elemento no arquivo de Ajuda.  

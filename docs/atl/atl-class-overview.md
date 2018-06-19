@@ -22,6 +22,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255922"
 ---
 # <a name="atl-class-overview"></a>Visão geral da classe ATL
 Classes na biblioteca de modelo ativa (ATL) podem ser categorizados da seguinte maneira:  

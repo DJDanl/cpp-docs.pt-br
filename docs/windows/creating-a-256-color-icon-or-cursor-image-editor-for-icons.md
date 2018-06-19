@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872355"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Criando um ícone ou cursor de 256 cores (editor de imagens para ícones)
 Usando o editor de imagens, ícones e cursores podem ser dimensionado grande (64 × 64) com uma paleta de 256 cores para escolher. Depois de criar o recurso, um estilo de imagem do dispositivo é selecionado.  

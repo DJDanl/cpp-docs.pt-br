@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889856"
 ---
 # <a name="source-c"></a>source (C++)
 Em uma classe, especifica as interfaces de origem do objeto COM para pontos de conexão. Uma propriedade ou método, indica que o membro retorna um objeto ou uma VARIANTE é uma origem de eventos.  

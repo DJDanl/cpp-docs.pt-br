@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358440"
 ---
 # <a name="ca2aex-class"></a>Classe CA2AEX
 Essa classe é usada pelas macros de conversão de cadeia de caracteres `CA2TEX` e `CT2AEX`e o typedef **CA2A**.  

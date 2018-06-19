@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371441"
 ---
 # <a name="look-up-button"></a>Botão Pesquisar
 Clique em **consultar** para recuperar a mensagem de erro que corresponde ao valor de sistema ou módulo digitados. Valores podem ser inseridos no formato hexadecimal ou decimal (incluindo valores negativos de decimais). Módulos listados no **módulos adicionais para a pesquisa de erro** caixa de diálogo também são pesquisados.  

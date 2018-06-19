@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876417"
 ---
 # <a name="predefined-symbol-ids"></a>IDs de símbolo predefinido
 Quando você iniciar um novo projeto, dependendo do tipo de projeto, algumas IDs de símbolo são predefinidos para seu uso. Essas IDs de símbolo oferecem suporte a várias bibliotecas e tipos de projeto, como o MFC. Eles representam as tarefas comuns que normalmente são incluídas em qualquer aplicativo ou ações de itens de hardware, como uma impressora ou mouse.  

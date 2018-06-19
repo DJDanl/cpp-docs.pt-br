@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357899"
 ---
 # <a name="atl-project-wizard"></a>Assistente de projeto ATL
 A biblioteca de modelo ativa (ATL) é um conjunto de classes C++ com base em modelo que simplificam a criação de objetos pequenos e rápidos. O Assistente de projeto de ATL cria um projeto com estruturas para conter objetos COM.  

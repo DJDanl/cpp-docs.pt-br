@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874727"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>Criando um ícone ou outra imagem (editor de imagens para ícones)
 Você pode criar uma nova imagem (bitmap, ícone, cursor ou barra de ferramentas) e usar o editor de imagens para personalizar sua aparência. Você também pode criar um novo bitmap padronizado depois um [modelo](../windows/how-to-use-resource-templates.md).  

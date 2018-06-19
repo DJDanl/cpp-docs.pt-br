@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871826"
 ---
 # <a name="creating-a-new-custom-or-data-resource"></a>Criando um recurso de dados ou novo personalizado
 Você pode criar um novo recurso de dados ou personalizado, colocando o recurso em um arquivo separado, usando a sintaxe de arquivo de script (. rc) do recurso normal e, em seguida, incluindo o arquivo clicando duas vezes o seu projeto no Gerenciador de soluções e clicando em **recurso inclui**  no menu de atalho.  

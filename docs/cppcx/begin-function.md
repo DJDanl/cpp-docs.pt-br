@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086506"
 ---
 # <a name="begin-function"></a>Função begin
 Retorna um iterador que aponta para o início de uma coleção que é acessada pelo parâmetro de interface especificado.  

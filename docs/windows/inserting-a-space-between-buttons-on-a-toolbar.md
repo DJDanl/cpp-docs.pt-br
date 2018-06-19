@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879829"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>Inserindo um espaço entre botões em uma barra de ferramentas
 Em geral, para inserir um espaço entre botões, simplesmente arraste-os dos outros na barra de ferramentas. Para remover espaço, arraste-os para outro.  

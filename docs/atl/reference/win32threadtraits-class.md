@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362010"
 ---
 # <a name="win32threadtraits-class"></a>Classe Win32ThreadTraits
 Essa classe fornece a função de criação de um thread do Windows. Use essa classe se o thread não usará as funções de CRT.  

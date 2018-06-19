@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871335"
 ---
 # <a name="creating-moving-and-editing-toolbar-buttons"></a>Criando, movendo e editando botões da barra de ferramentas
 Você pode facilmente criar, mover, copiar e editar botões da barra de ferramentas.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873505"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>Criando e definindo guias e margens
 Se você estiver movendo controles, adicionando controles ou reorganizando um layout atual, guias podem ajudar você a alinhar controles com precisão em uma caixa de diálogo. Guias aparecem como linhas pontilhadas azuis na caixa de diálogo exibida no editor e setas correspondentes nas réguas (na parte superior e no lado esquerdo do editor de caixa de diálogo).  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360107"
 ---
 # <a name="active-technology-and-dlls"></a>Tecnologia ativa e DLLs
 Tecnologia ativa permite que os servidores de objeto a ser implementada completamente dentro de uma DLL. Esse tipo de servidor é chamado de um servidor em processo. MFC não suporta completamente servidores em processo para todos os recursos de edição visual, principalmente porque tecnologia ativa não fornecem uma maneira para um servidor para conectar-se em um loop de mensagem principal do contêiner. MFC requer acesso ao loop de mensagens do aplicativo de contêiner para lidar com processamento de tempo ocioso e teclas de aceleração.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170077"
 ---
 # <a name="compiler-error-c2254"></a>C2254 de erro do compilador
 'function': especificador puro ou abstrato especificador de substituição não permitido em função friend  

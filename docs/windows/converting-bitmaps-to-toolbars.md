@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872621"
 ---
 # <a name="converting-bitmaps-to-toolbars"></a>Convertendo bitmaps em barras de ferramentas
 Você pode criar uma nova barra de ferramentas, convertendo um bitmap. O gráfico de bitmap converte as imagens de botão de uma barra de ferramentas. Normalmente, o bitmap contém várias imagens de botão em um único bitmap, com uma imagem para cada botão. Imagens podem ser de qualquer tamanho. o padrão é 16 pixels de largura e a altura da imagem. Você pode especificar o tamanho das imagens no botão de [caixa de diálogo novo recurso da barra de ferramentas](../windows/new-toolbar-resource-dialog-box.md) quando você escolhe o Editor de barra de ferramentas do **imagem** menu enquanto estiver no editor de imagem.  

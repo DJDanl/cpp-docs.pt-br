@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392569"
 ---
 # <a name="ismbc-routines"></a>Rotinas _ismbc
 Cada teste de rotina **_ismbc** testa um caractere multibyte `c` para uma condição determinada.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879432"
 ---
 # <a name="menu-editor"></a>Editor de menu
 Menus permitem organizar os comandos de forma lógica e fácil de localizar. Com o editor de Menu, você pode criar e editar menus trabalhando diretamente com uma barra de menu que se assemelhe no seu aplicativo concluído.  

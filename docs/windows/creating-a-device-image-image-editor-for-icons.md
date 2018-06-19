@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873219"
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>Criando a imagem de um dispositivo (editor de imagens para ícones)
 Quando você cria um novo ícone ou cursor de recurso, a imagem do editor cria primeiro uma imagem em um estilo específico (32 x 32, 16 cores de ícones e 32 x 32, monocromática para cursores). Você pode adicionar imagens em estilos e tamanhos diferentes para o cursor ou ícone inicial e editar cada imagem adicional, conforme necessário, para os dispositivos de exibição diferente. Você também pode editar uma imagem, executando uma operação recortar e colar a partir de um tipo de imagem existente ou um bitmap criado em um programa de elementos gráficos.  

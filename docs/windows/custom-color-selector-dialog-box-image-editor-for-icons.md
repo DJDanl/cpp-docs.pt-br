@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880251"
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>Caixa de diálogo Seletor de Cor Personalizada (editor de imagens para ícones)
 Essa caixa de diálogo permite que você personalize as cores que você pode usar para a imagem. Para obter mais informações, consulte [personalizando ou alterando cores](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  

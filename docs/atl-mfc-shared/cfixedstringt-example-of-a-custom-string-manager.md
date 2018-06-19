@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359543"
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Exemplo de um Gerenciador de cadeia de caracteres personalizada
 A biblioteca do ATL para implementar um exemplo de um Gerenciador de cadeia de caracteres personalizada usado pela classe [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), chamado **CFixedStringMgr**. `CFixedStringT` é derivado de [CStringT](../atl-mfc-shared/reference/cstringt-class.md) e implementa uma cadeia de caracteres que aloca seus dados de caractere como parte do `CFixedStringT` objeto em si, desde que a cadeia de caracteres é menor que o comprimento especificado pelo **t_nChars** parâmetro do modelo de `CFixedStringT`. Com essa abordagem, a cadeia de caracteres não precisa de heap, a menos que o comprimento da cadeia de caracteres ultrapassar o tamanho do buffer fixo. Porque `CFixedStringT` não sempre use um heap para alocar a seus dados de cadeia de caracteres, não é possível usar **CAtlStringMgr** como seu gerente de cadeia de caracteres. Ele usa um Gerenciador de cadeia de caracteres personalizada (**CFixedStringMgr**), a implementação de [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interface. Essa interface é discutida em [implementação um Gerenciador de personalizado cadeia de caracteres (método avançado)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880144"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>Como incluir recursos na hora da compilação
 Normalmente, é fácil e conveniente para trabalhar com a organização padrão de todos os recursos em um arquivo de script (. rc) do recurso. No entanto, você pode adicionar recursos em outros arquivos para o projeto atual no tempo de compilação listando-os no **diretivas de tempo de compilação** caixa o [caixa de diálogo recurso inclui](../windows/resource-includes-dialog-box.md).  

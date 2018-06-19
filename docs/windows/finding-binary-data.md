@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873557"
 ---
 # <a name="finding-binary-data"></a>Localizando dados binários
 Você pode procurar cadeias de caracteres ASCII ou bytes hexadecimais. Por exemplo, para localizar "Hello", você pode procurar por uma a cadeia de caracteres "Hello" ou "48 65 6C 6F de C 6" (o equivalente hexadecimal).  

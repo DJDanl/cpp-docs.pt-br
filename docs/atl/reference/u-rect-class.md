@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360881"
 ---
 # <a name="urect-class"></a>Classe _U_RECT
 Essa classe de adaptador do argumento permite tanto `RECT` ponteiros ou referências a serem passados para uma função que é implementada em termos de ponteiros.  

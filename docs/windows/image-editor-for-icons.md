@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879276"
 ---
 # <a name="image-editor-for-icons"></a>Editor de imagens para ícones
 O Editor de Imagens possui um extenso conjunto de ferramentas para criar e editar imagens, bem como recursos para ajudar a criar bitmaps de barra de ferramentas. Além de bitmaps, ícones e cursores, você pode editar imagens no formato GIF ou JPEG usando os comandos a **imagem** menu e as ferramentas de **Editor de imagem** barra de ferramentas.  

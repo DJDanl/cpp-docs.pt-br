@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891101"
 ---
 # <a name="viewing-resource-symbols"></a>Exibindo símbolos de recurso
 ### <a name="to-view-resource-symbols"></a>Para exibir os símbolos de recurso  

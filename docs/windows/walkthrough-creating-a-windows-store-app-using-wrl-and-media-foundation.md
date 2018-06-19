@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891679"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Passo a passo: Criando um aplicativo UWP usando WRL e Media Foundation
 Saiba como usar a biblioteca de modelo (WRL) do Windows em tempo de execução C++ para criar um aplicativo do Windows UWP (plataforma Universal) que usa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  

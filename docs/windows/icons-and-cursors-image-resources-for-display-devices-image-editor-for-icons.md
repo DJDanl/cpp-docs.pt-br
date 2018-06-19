@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881904"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Ícones e cursores: recursos de imagem para exibir dispositivos (editor de imagens para ícones)
 Ícones e cursores são recursos gráficos que podem conter várias imagens em tamanhos diferentes e esquemas para diferentes tipos de dispositivos de vídeo de cores. Além disso, um cursor tem um "ponto de acesso", o local em que o Windows usa para controlar sua posição. Ícones e cursores são criados e editados usando o editor de imagem, conforme são bitmaps e outras imagens.  

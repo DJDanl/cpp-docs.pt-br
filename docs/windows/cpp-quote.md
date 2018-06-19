@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871156"
 ---
 # <a name="cppquote"></a>cpp_quote
 Emite a cadeia de caracteres especificada, sem o caractere de aspas, no arquivo. idl gerado.  

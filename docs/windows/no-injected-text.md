@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880342"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 Impede que o compilador injeção de código como resultado do uso do atributo.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879221"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Incluindo símbolos compartilhados (somente leitura) ou calculados
 Na primeira vez que o ambiente de desenvolvimento lê um arquivo de recurso criado por outro aplicativo, ele marca todos os arquivos de cabeçalho incluído como somente leitura. Em seguida, você pode usar o [caixa de diálogo recurso inclui](../windows/resource-includes-dialog-box.md) para adicionar arquivos de cabeçalho de símbolo adicionais de somente leitura.  

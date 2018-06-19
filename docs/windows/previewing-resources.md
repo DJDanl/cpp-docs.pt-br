@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878665"
 ---
 # <a name="previewing-resources"></a>Visualizando recursos
 Visualizar seus recursos permite que você exibir recursos gráficos sem abri-los. Visualizando também é útil para executáveis depois que você tenha compilado-los porque os identificadores de recurso Alterar para números. Como esses identificadores numéricos geralmente não fornecem informações suficientes, visualizar os recursos ajuda a identificá-los rapidamente.  

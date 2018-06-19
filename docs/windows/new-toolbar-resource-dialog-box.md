@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877534"
 ---
 # <a name="new-toolbar-resource-dialog-box"></a>Caixa de diálogo Novo Recurso da Barra de Ferramentas
 A caixa de diálogo novo recurso da barra de ferramentas permite que você especifique a largura e altura dos botões do qual que você está adicionando a um recurso da barra de ferramentas. O padrão é 16 × 15 pixels.  

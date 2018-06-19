@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33228058"
 ---
 # <a name="compiler-error-c2518"></a>C2518 de erro do compilador
 palavra-chave 'palavra-chave' inválida na lista de classe base. ignorado  

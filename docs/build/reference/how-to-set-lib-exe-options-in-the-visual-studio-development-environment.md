@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372354"
 ---
 # <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>Como definir opções de LIB.EXE no ambiente de desenvolvimento do Visual Studio
 ### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>Para definir LIB. Opções de EXE no ambiente de desenvolvimento do Visual Studio  

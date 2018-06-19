@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882083"
 ---
 # <a name="disabling-guides"></a>Desabilitando guias
 Você pode usar chaves especiais em conjunto com o mouse para desabilitar o efeito de encaixe dos guias. Usando a tecla ALT desabilita os efeitos de ajuste do guia selecionada. Mover um guia com a tecla SHIFT impede que os controles sem-instantâneo movendo com o guia.  

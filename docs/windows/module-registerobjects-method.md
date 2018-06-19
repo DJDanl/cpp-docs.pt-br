@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875338"
 ---
 # <a name="moduleregisterobjects-method"></a>Método Module::RegisterObjects
 Registra objetos COM ou tempo de execução do Windows para que outros aplicativos possam se conectar a eles.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255747"
 ---
 # <a name="atl-classes-and-structs"></a>Estruturas e classes da ATL
 A biblioteca de modelo ativa (ATL) inclui as seguintes classes e estruturas. Para localizar uma classe específica por categoria, consulte o [visão geral da classe ATL](../../atl/atl-class-overview.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878899"
 ---
 # <a name="generics-and-templates-visual-c"></a>Genéricos e modelos (Visual C++)
 Genéricos e modelos são ambos os recursos de linguagem que oferecem suporte para tipos parametrizados. No entanto, eles são diferentes e têm usos diferentes. Este tópico fornece uma visão geral das diferenças de muitos.  

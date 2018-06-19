@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877560"
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>Como melhorar o desempenho com genéricos (Visual C++)
 Com genéricos, você pode criar com base em um parâmetro de tipo de código reutilizável. O tipo real do parâmetro de tipo é adiado até que a chamada pelo código do cliente. Para obter mais informações sobre genéricos, consulte [genéricos](../windows/generics-cpp-component-extensions.md).  

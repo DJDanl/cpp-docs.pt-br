@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418179"
 ---
 # <a name="strcoll-functions"></a>Funções strcoll
 Cada uma das funções `strcoll` e `wcscoll` compara duas cadeias de caracteres de acordo com a configuração da categoria `LC_COLLATE` da página de código de localidade em uso no momento. Cada uma das funções `_mbscoll` compara duas cadeias de caracteres de acordo com a página de código multibyte em uso no momento. Use as funções `coll` para comparações de cadeia de caracteres quando há uma diferença entre a ordem de conjunto de caracteres e a ordem lexicográfica de caracteres na página de código atual e essa diferença é de interesse para a comparação. Use as funções `cmp` correspondentes para testar apenas para igualdade de cadeia de caracteres.  

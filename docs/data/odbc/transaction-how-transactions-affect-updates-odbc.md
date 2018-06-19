@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097998"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transação: como as transações afetam atualizações (ODBC)
 Atualizações para o [fonte de dados](../../data/odbc/data-source-odbc.md) gerenciados durante as transações com o uso de um buffer de edição (o mesmo método usado fora de transações). Os membros de um conjunto de registros de dados de campo coletivamente servem como um buffer de edição que contém o registro atual, o conjunto de registros faz backup temporariamente durante uma `AddNew` ou **editar**. Durante uma **excluir** operação, o registro atual não é feita em uma transação. Para obter mais informações sobre como atualizações armazenam o registro atual e o buffer de edição, consulte [conjunto de registros: como conjuntos de registros atualização registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  

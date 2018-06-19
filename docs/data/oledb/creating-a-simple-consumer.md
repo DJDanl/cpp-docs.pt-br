@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098518"
 ---
 # <a name="creating-a-simple-consumer"></a>Criando um consumidor simples
 Use o Assistente de projeto de ATL e ATL OLE DB consumidor Assistente para gerar um consumidor de modelos OLE DB.  

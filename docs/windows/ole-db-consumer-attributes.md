@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876014"
 ---
 # <a name="ole-db-consumer-attributes"></a>Atributos de consumidor de banco de dados OLE
 Os atributos de consumidor OLE DB injetar código, com base no [OLE DB modelos de consumidor](../data/oledb/ole-db-consumer-templates-reference.md), para criar um trabalho OLE DB consumidor que executa tarefas como tabelas de abertura, execução de comandos e acesso a dados.  

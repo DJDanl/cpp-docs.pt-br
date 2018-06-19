@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879666"
 ---
 # <a name="resource-includes-dialog-box"></a>Caixa de diálogo Recurso Inclui
 Você pode usar o **inclui recursos** caixa de diálogo para modificar a organização de trabalho normal do ambiente de armazenamento de todos os recursos no arquivo. RC do projeto e todos os [símbolos](../windows/symbols-resource-identifiers.md) em Resource.h.  

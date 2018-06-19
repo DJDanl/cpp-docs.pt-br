@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891666"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>Usando uma ferramenta de desenho (editor de imagens para ícones)
 O editor de imagens do traçada desenho e ferramentas todos eles funcionam da mesma maneira de apagar: selecione a ferramenta e, se necessário, [selecione as cores de primeiro plano e plano de fundo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) e opções de tamanho e forma. Você, em seguida, mova o ponteiro para a imagem e clique ou arraste para desenhar e apagar.  

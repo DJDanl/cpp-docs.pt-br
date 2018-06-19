@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880378"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>Como declarar ponteiros de fixação e tipos de valor
 Um tipo de valor pode ser convertido implicitamente. Você pode, em seguida, declarar um ponteiro de fixação para o objeto de tipo de valor em si e use um **pin_ptr** para o tipo de valor Demarcado.  

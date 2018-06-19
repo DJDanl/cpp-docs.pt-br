@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872059"
 ---
 # <a name="evening-the-spacing-between-controls"></a>Equalizando o espaçamento entre controles
 O editor de caixa de diálogo permite controles espaço uniformemente entre os controles externos selecionados.  

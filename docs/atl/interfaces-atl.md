@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359308"
 ---
 # <a name="interfaces-atl"></a>Interfaces (ATL)
 Uma interface é a maneira na qual um objeto expõe sua funcionalidade com o mundo exterior. COM, uma interface é uma tabela de ponteiros (como uma vtable C++) para funções implementadas pelo objeto. A tabela representa a interface e as funções que ele aponta são os métodos da interface. Um objeto pode expor interfaces tantos conforme ele escolhe.  

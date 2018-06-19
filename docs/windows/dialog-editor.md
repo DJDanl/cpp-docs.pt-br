@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875852"
 ---
 # <a name="dialog-editor"></a>Editor de Caixa de Diálogo
 O editor de caixa de diálogo permite criar ou editar os recursos da caixa de diálogo. Para abrir o editor de caixa de diálogo clicando duas vezes no arquivo. rc da caixa de diálogo na janela de exibição de recurso (**exibição &#124; exibição recursos**). Observe que o modo de exibição de recurso não está disponível em edições Express.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167262"
 ---
 # <a name="vectorreserve-stlclr"></a>vector::reserve (STL/CLR)
 Garante a capacidade de crescimento mínimo para o contêiner.  

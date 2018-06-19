@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171875"
 ---
 # <a name="compiler-error-c2298"></a>C2298 de erro do compilador
 'operação de ': operação ilegal no ponteiro para a expressão de função de membro  

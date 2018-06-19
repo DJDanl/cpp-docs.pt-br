@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358121"
 ---
 # <a name="date-type"></a>Tipo de data
 O **data** tipo é implementado usando um número de ponto flutuante de 8 bytes. Dias são representados por incrementos de números inteiros, iniciando em 30 de dezembro de 1899, meia-noite como zero hora. Os valores de hora são expressos como o valor absoluto da parte fracionária do número. A tabela a seguir ilustra várias datas junto com seus **data** equivalente numérico do tipo:  

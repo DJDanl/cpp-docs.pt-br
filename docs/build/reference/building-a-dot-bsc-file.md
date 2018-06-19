@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369000"
 ---
 # <a name="building-a-bsc-file"></a>Compilando um arquivo .Bsc
 BSCMAKE pode criar um novo arquivo de informações de procura de arquivos. SBR recém-criado. Ele também pode manter um arquivo. bsc existente usando arquivos. SBR para arquivos de objeto que foram alterados desde a última compilação.  

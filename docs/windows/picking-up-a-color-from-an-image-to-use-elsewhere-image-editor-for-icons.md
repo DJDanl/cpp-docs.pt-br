@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877404"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Escolhendo uma cor na imagem a ser usada em qualquer lugar (editor de imagens para ícones)
 O **selecionar cor**, ou recebimento de cor, ferramenta faz com que todas as cores na imagem a cor de primeiro plano atual ou a cor de plano de fundo, dependendo se você pressionar à esquerda ou o botão direito do mouse. Para cancelar o **selecionar cor** ferramenta, escolher outra ferramenta.  

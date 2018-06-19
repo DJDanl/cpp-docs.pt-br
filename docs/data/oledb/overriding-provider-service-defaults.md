@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110074"
 ---
 # <a name="overriding-provider-service-defaults"></a>Substituindo padrões de serviço do fornecedor
 O valor do provedor do registro para **OLEDB_SERVICES** é retornado como o valor padrão para o [DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx) propriedade de inicialização no objeto de fonte de dados.  

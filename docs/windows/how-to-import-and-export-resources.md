@@ -32,6 +32,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879172"
 ---
 # <a name="how-to-import-and-export-resources"></a>Como importar e exportar recursos
 Você pode importar recursos gráficos (bitmaps, ícones, cursores e barras de ferramentas), arquivos HTML e recursos personalizados para uso em Visual C++. Você pode exportar os mesmos tipos de arquivos de um projeto do Visual C++ para separar arquivos que podem ser usados fora do ambiente de desenvolvimento.  

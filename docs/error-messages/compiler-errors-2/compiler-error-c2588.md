@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231664"
 ---
 # <a name="compiler-error-c2588"></a>C2588 de erro do compilador
 ':: ~ identificador ': destruidor global inválido  

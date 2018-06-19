@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168536"
 ---
 # <a name="compiler-error-c2157"></a>C2157 de erro do compilador
 'function': deve ser declarado antes do uso em lista de pragma  

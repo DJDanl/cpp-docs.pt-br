@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358108"
 ---
 # <a name="active-template-library-atl-concepts"></a>Conceitos da Biblioteca de Modelo Ativa (ATL)
 A biblioteca de modelo ativa (ATL) é um conjunto de classes C++ com base em modelo que lhe permitem criar objetos de modelo de objeto de componente (COM) pequeno e rápido. Ele tem suporte especial para os principais recursos de COM, incluindo as implementações de estoque, duas interfaces, interfaces de enumerador COM padrão, pontos de conexão, destacável interfaces e controles ActiveX.  

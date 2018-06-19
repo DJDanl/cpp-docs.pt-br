@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871899"
 ---
 # <a name="handlethandle-data-member"></a>Membro de dados HandleT::handle_
 Contém o identificador que é representado pelo objeto HandleT.  

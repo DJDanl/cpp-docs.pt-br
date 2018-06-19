@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097699"
 ---
 # <a name="cenumeratorgetmoniker"></a>CEnumerator::GetMoniker
 Analisa o nome para exibição para extrair o componente da cadeia de caracteres que pode ser convertido em um identificador de origem.  

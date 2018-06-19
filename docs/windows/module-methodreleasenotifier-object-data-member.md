@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881523"
 ---
 # <a name="modulemethodreleasenotifierobject-data-member"></a>Membro de dados Module::MethodReleaseNotifier::object_
 Contém um ponteiro para o objeto cuja função de membro é o manipulador de eventos para o objeto methodreleasenotifier atual.  
