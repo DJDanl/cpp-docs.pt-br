@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284219"
 ---
 # <a name="compiler-warning-level-1-c4566"></a>Compilador C4566 de aviso (nível 1)
 caractere representado por nome de caractere universal 'char' não pode ser representado na página de código atual (página)  

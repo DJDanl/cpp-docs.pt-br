@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286949"
 ---
 # <a name="compiler-warning-c4439"></a>C4439 de aviso do compilador
 'function': definição de função com um tipo gerenciado na assinatura deve ter um clrcall convenção de chamada  

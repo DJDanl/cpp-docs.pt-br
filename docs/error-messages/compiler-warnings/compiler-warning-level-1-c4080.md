@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277830"
 ---
 # <a name="compiler-warning-level-1-c4080"></a>Compilador C4080 de aviso (nível 1)
 Identificador esperado para o nome de segmento; encontrado 'symbol'  

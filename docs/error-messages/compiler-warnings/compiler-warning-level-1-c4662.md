@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283420"
 ---
 # <a name="compiler-warning-level-1-c4662"></a>Compilador C4662 de aviso (nível 1)
 instanciação explícita; classe de template 'identifier1' não possui nenhuma definição de qual especializar 'identifier2'  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277466"
 ---
 # <a name="compiler-warning-level-1-c4183"></a>Compilador C4183 de aviso (nível 1)
 'Identificador': faltando tipo de retorno; presume-se que uma função membro retornando 'int'  

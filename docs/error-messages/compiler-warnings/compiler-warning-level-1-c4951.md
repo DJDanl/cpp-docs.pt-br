@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290459"
 ---
 # <a name="compiler-warning-level-1-c4951"></a>Compilador C4951 de aviso (nível 1)
 'function' foi editado após os dados de perfil de função não usados coleta dados de perfil  

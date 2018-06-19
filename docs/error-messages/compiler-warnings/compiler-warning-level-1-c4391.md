@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277862"
 ---
 # <a name="compiler-warning-level-1-c4391"></a>Compilador C4391 de aviso (nível 1)
 'assinatura': tipo de retorno incorreto para função intrínseca, esperado 'type'  
