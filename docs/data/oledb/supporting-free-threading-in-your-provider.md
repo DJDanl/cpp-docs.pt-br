@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108508"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Dando suporte ao thread livre no provedor
 Todas as classes de provedor OLE DB são thread-safe e entradas do registro estão definidas adequadamente. É uma boa ideia para dar suporte ao thread livre para ajudar a fornecer um alto nível de desempenho em situações de multiusuários. Para ajudar a manter seu provedor de thread-safe, você deve verificar que seu código está bloqueado corretamente. Sempre que você escreve ou armazena dados, você deve bloquear o acesso com seções críticas.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370175"
 ---
 # <a name="csharedfile-class"></a>Classe CSharedFile
 O [CMemFile](../../mfc/reference/cmemfile-class.md)-compartilhado de classe derivada que dá suporte a arquivos de memória.  

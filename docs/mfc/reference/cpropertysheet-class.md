@@ -67,6 +67,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377456"
 ---
 # <a name="cpropertysheet-class"></a>Classe CPropertySheet
 Representa as folhas de propriedades, também conhecido como caixas de diálogo de guia.  

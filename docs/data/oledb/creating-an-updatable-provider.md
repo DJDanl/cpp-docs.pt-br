@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098635"
 ---
 # <a name="creating-an-updatable-provider"></a>Criando um provedor atualizável
 Atualizável ou provedores que podem ser atualizada pela linguagem Visual C++ (gravar) no repositório de dados. Este tópico discute como criar provedores atualizáveis usando modelos OLE DB.  

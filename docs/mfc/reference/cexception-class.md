@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368027"
 ---
 # <a name="cexception-class"></a>Classe CException
 A classe base para todas as exceções na biblioteca Microsoft Foundation Class.  

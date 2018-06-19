@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379223"
 ---
 # <a name="relationship-to-the-c-language-api"></a>Relacionamento com a API da linguagem C
 A única característica que define a biblioteca Microsoft Foundation Class (MFC) além de outras bibliotecas de classe do Windows é o mapeamento muito próxima à API do Windows escritos na linguagem C. Além disso, você geralmente pode misturar chamadas para a biblioteca de classes livremente com chamadas diretas a API do Windows. Esse acesso direto não, no entanto, significa que as classes são uma substituição completa para essa API. Os desenvolvedores ainda ocasionalmente devem fazer chamadas diretas para algumas funções do Windows, como [SetCursor](http://msdn.microsoft.com/library/windows/desktop/ms648393) e [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385), por exemplo. Uma função do Windows é encapsulada por uma função de membro de classe somente quando há uma vantagem óbvia para fazer isso.  

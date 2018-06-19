@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374218"
 ---
 # <a name="csplitbutton-class"></a>Classe CSplitButton
 O `CSplitButton` classe representa um controle de botão de divisão. O controle de botão de divisão executa um comportamento padrão quando um usuário clica a parte principal do botão e um menu suspenso é exibido quando um usuário clica na seta suspensa do botão.  

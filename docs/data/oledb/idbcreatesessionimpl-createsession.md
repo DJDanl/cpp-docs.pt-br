@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099193"
 ---
 # <a name="idbcreatesessionimplcreatesession"></a>IDBCreateSessionImpl::CreateSession
 Cria uma nova sessão do objeto de origem de dados e retorna a interface solicitada a sessão recém-criada.  

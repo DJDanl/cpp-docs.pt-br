@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355474"
 ---
 # <a name="strings-atlmfc"></a>Cadeias de caracteres (ATL/MFC)
 Quase todos os programas trabalham com dados de cadeia de caracteres. Visual C++ fornece várias maneiras de gerenciar esses dados de cadeia de caracteres.  

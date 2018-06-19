@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383439"
 ---
 # <a name="slider-control-member-functions"></a>Funções de membro de controle deslizante
 Um aplicativo pode chamar o controle deslizante de funções de membro do controle para recuperar informações sobre o controle deslizante ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) e para alterar suas características.  

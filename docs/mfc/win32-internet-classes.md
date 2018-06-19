@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383218"
 ---
 # <a name="win32-internet-classes"></a>Classes de Internet Win32
 MFC encapsula a Internet Win32 (WinInet) e a tecnologia de ActiveX para facilitar a programação da Internet.  

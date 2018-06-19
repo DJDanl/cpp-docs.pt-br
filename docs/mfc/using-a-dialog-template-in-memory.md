@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381232"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Usando um modelo da caixa de diálogo na memória
 Em vez de usar os métodos fornecidos no [tabela de criação da caixa de diálogo](../mfc/creating-a-dialog-class-with-code-wizards.md), você pode criar qualquer tipo de caixa de diálogo indiretamente a partir de um modelo de caixa de diálogo na memória. Para obter mais informações, consulte a classe [CDialog](../mfc/reference/cdialog-class.md) no *referência MFC*.  

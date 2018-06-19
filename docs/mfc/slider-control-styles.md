@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380540"
 ---
 # <a name="slider-control-styles"></a>Estilos de controle de controle deslizante
 Controles deslizantes ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) pode ter uma orientação vertical ou horizontal. Eles podem ter marcas de escala em ambos os lados, ambos os lados, ou nenhum. Eles também podem ser usados para especificar um intervalo de valores consecutivos. Essas propriedades são controladas usando estilos de controle deslizante, que você especifica ao criar o controle deslizante.  

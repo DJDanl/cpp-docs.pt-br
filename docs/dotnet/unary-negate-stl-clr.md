@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169443"
 ---
 # <a name="unarynegate-stlclr"></a>unary_negate (STL/CLR)
 A classe de modelo descreve um functor que, quando chamado, retorna a lógica não é de sua functor armazenado de um argumento. Você usá-lo especificar um objeto de função em termos de seu functor armazenado.  

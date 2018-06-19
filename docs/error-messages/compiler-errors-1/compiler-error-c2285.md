@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170422"
 ---
 # <a name="compiler-error-c2285"></a>C2285 de erro do compilador
 ponteiros para representação de membros já foi determinada - pragma ignorado  

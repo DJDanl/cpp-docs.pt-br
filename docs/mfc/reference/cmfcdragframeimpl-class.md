@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373824"
 ---
 # <a name="cmfcdragframeimpl-class"></a>Classe CMFCDragFrameImpl
 O `CMFCDragFrameImpl` classe desenha arrastar retângulo que é exibido quando o usuário arrasta um painel no modo padrão de encaixe.  

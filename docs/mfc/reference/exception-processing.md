@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376982"
 ---
 # <a name="exception-processing"></a>Processamento de exceção
 Quando um programa é executado, um número de condições anormais e erros chamados "exceções" pode ocorrer. Eles podem incluir falta de memória, erros de alocação de recurso e Falha ao localizar os arquivos.  

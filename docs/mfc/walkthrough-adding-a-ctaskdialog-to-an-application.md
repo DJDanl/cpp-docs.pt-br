@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384905"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Instruções passo a passo: adicionando um CTaskDialog a um aplicativo
 Este passo a passo apresenta a [CTaskDialog classe](../mfc/reference/ctaskdialog-class.md) e mostra como adicionar um ao seu aplicativo.  

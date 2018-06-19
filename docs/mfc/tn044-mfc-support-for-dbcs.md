@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380299"
 ---
 # <a name="tn044-mfc-support-for-dbcs"></a>TN044: suporte do MFC para DBCS
 Essa observação técnica descrita o suporte do MFC para "conjuntos de caracteres de byte duplo" ou DBCS. Esta informações bem como informações sobre do MFC suporte para UNICODE agora está disponível na *referência da biblioteca de classe*.  

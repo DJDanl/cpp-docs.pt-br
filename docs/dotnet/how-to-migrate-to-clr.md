@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138434"
 ---
 # <a name="how-to-migrate-to-clr"></a>Como migrar para /clr
 Este tópico aborda problemas que surgem durante a compilação de código nativo com **/clr** (consulte [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) para obter mais informações). **/CLR** permite que os módulos do Visual C++ invocar e ser chamado de assemblies .NET enquanto mantém a compatibilidade com módulos não gerenciados. Consulte [Assemblies misto (nativo e gerenciado)](../dotnet/mixed-native-and-managed-assemblies.md) e [nativo e interoperabilidade .NET](../dotnet/native-and-dotnet-interoperability.md) para obter mais informações sobre as vantagens de compilação com **/clr**.  

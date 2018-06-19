@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382187"
 ---
 # <a name="tree-control-image-lists"></a>Listas de imagens de controle de árvore
 Cada item em um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) pode ter um par de imagens de bitmap associados a ele. As imagens aparecem à esquerda do rótulo do item. Uma imagem é exibida quando o item é selecionado e o outro é exibido quando o item não está selecionado. Por exemplo, um item pode exibir uma pasta aberta quando ele é selecionado e uma pasta fechada quando não estiver selecionada.  

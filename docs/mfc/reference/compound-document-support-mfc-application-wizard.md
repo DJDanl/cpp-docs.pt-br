@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368303"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Suporte a documento composto, Assistente de Aplicativo MFC
 Nesta página do Assistente de aplicativo MFC, indica o nível de seu aplicativo fornece suporte a documentos compostos e ativo. O aplicativo deve oferecer suporte a arquitetura de documento/exibição para dar suporte a documentos compostos e modelos de documento.  

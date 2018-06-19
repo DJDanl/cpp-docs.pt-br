@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370328"
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>Classe CMFCDesktopAlertWndButton
 Permite que os botões a serem adicionados a uma caixa de diálogo de alerta de área de trabalho.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367068"
 ---
 # <a name="class-factories-and-licensing"></a>Alocadores de classe e licenciamento
 Para criar uma instância do seu controle OLE, um aplicativo de contêiner chama uma função de membro de fábrica de classe do controle. Como o controle é um objeto OLE real, a fábrica de classe é responsável pela criação de instâncias de seu controle. Cada classe de controle OLE deve ter uma fábrica de classes.  

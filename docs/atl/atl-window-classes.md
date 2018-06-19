@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355426"
 ---
 # <a name="atl-window-classes"></a>Classes de janela ATL
 ATL inclui várias classes que permitem que você use e implementar o windows. Essas classes, como outras classes ATL, fornecem uma implementação eficiente que não impõe uma sobrecarga no seu código.  

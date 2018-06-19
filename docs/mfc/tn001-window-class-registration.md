@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383848"
 ---
 # <a name="tn001-window-class-registration"></a>TN001: registro da classe Window
 Esta anotação descreve as rotinas MFC que registrar especiais [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es necessárias pelo Microsoft Windows. Específico `WNDCLASS` atributos usados pelo MFC e Windows são discutidos.  

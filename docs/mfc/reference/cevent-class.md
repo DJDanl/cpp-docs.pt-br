@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367497"
 ---
 # <a name="cevent-class"></a>Classe CEvent
 Representa um evento, que é um objeto de sincronização que permite que um thread notificar o outro que um evento ocorreu.  

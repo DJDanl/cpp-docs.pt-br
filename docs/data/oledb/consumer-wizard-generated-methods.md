@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098596"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Métodos gerados pelo Assistente do Consumidor
 Assistente de ATL OLE DB consumidor e o Assistente de aplicativo MFC geram determinadas funções das quais você deve estar ciente. Observe que alguns métodos são implementados de maneira em projetos atribuídos, portanto, há algumas limitações; cada caso é abordado abaixo. Para obter informações sobre como exibir o código injetado, consulte [depurar código injetado](/visualstudio/debugger/how-to-debug-injected-code).  

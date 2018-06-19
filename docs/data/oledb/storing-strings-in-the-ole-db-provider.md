@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106980"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Armazenando cadeias de caracteres no provedor de banco de dados OLE
 Em myproviderrs. H, o OLE DB Provider assistente ATL cria um registro de usuário padrão chamado `CWindowsFile`. Para lidar com as duas cadeias de caracteres, modifique `CWindowsFile` ou adicionar seu próprios registro de usuário, conforme mostrado no código a seguir:  

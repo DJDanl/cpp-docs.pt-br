@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235774"
 ---
 # <a name="compiler-error-c2665"></a>C2665 de erro do compilador
 'function': nenhuma das sobrecargas Número1 pode converter Número2 de parâmetro de tipo 'type'  

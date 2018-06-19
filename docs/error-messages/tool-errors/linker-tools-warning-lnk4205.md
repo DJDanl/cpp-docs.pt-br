@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300710"
 ---
 # <a name="linker-tools-warning-lnk4205"></a>Aviso LNK4205 (Ferramentas de Vinculador)
 'filename' está faltando informação de depuração para a referência de módulo; Vinculando objeto quando sem informação de depuração  

@@ -171,6 +171,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378221"
 ---
 # <a name="cmdiframewndex-class"></a>Classe CMDIFrameWndEx
 Estende a funcionalidade do [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), uma janela do quadro de Interface de documentos múltiplos (MDI).  

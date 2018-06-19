@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169537"
 ---
 # <a name="value-types-and-their-behaviors-ccli"></a>Tipos de valor e seus comportamentos (C++/CLI)
 Tipos de valor foram alterados de várias maneiras de extensões gerenciadas para C++ para Visual C++. Nesta seção, vamos examinar o tipo de enum CLR e o tipo de classe de valor, junto com uma olhada boxing e acesso à instância demarcado no heap CLR, bem como uma olhada em ponteiros de fixação e interiores. Houve alterações de vários idiomas nessa área.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33195068"
 ---
 # <a name="compiler-error-c2368"></a>C2368 de erro do compilador
 'Identificador': redefinição; especificadores de alocação diferentes  

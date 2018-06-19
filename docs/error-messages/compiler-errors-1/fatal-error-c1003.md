@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196630"
 ---
 # <a name="fatal-error-c1003"></a>Erro fatal C1003
 Contagem de erros excede o número; interrompendo compilação  

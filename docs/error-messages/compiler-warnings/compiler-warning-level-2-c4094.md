@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290498"
 ---
 # <a name="compiler-warning-level-2-c4094"></a>Compilador C4094 de aviso (nível 2)
 sem marcas 'token' não declarado nenhum símbolo  

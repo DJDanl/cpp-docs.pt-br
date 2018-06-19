@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356548"
 ---
 # <a name="providing-flicker-free-activation"></a>Fornecendo ativação sem cintilação
 Se o controle se desenha identicamente nos Estados inativos e ativos (e não usar a ativação sem janelas), você poderá eliminar as operações de desenho e a oscilação visual que normalmente ocorrem quando você faz a transição entre o inativo e estados ativos. Para fazer isso, inclua o **noFlickerActivate** sinalizador no conjunto de sinalizadores retornado por [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Por exemplo:  

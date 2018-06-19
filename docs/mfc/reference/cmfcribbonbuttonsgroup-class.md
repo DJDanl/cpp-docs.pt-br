@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368853"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>Classe CMFCRibbonButtonsGroup
 O `CMFCRibbonButtonsGroup` classe permite que você agrupar um conjunto de botões de faixa de opções em um. Todos os botões do grupo são diretamente adjacentes uns aos outros horizontalmente e entre em uma borda.  

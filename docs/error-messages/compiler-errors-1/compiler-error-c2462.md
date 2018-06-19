@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198554"
 ---
 # <a name="compiler-error-c2462"></a>C2462 de erro do compilador
 'Identificador': não é possível definir um tipo em uma 'new-expression'  

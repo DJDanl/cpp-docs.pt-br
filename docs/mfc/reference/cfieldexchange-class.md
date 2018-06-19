@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367055"
 ---
 # <a name="cfieldexchange-class"></a>Classe CFieldExchange
 Dá suporte a troca de campos de registro (RFX) e as rotinas de troca (RFX em massa) de campos de registro em massa usadas pelas classes de banco de dados.  

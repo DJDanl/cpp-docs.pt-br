@@ -65,6 +65,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375106"
 ---
 # <a name="cdatabase-class"></a>Classe CDatabase
 Representa uma conexão a uma fonte de dados, por meio do qual você pode operar na fonte de dados.  

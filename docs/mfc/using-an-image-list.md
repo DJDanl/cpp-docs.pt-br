@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381599"
 ---
 # <a name="using-an-image-list"></a>Usando uma lista de imagens
 Um uso típico de uma lista de imagens segue o padrão abaixo:  

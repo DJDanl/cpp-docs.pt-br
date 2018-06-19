@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385866"
 ---
 # <a name="tab-controls-and-property-sheets"></a>Controles de guia e folhas de propriedades
 Folhas de propriedades são caixas de diálogo de várias páginas ou "guia caixas de diálogo" que podem exibir até 24 recursos de modelo de caixa de diálogo para o usuário. Para obter exemplos de folhas de propriedades, consulte a caixa de diálogo Propriedades de vídeo do Windows ou o aplicativo de exemplo do MFC seguinte:  

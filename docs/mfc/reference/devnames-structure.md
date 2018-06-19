@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371472"
 ---
 # <a name="devnames-structure"></a>Estrutura DEVNAMES
 O `DEVNAMES` estrutura contém cadeias de caracteres que identificam o driver, dispositivos e nomes de porta de saída para uma impressora.  

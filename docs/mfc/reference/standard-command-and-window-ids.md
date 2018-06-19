@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371644"
 ---
 # <a name="standard-command-and-window-ids"></a>Comando padrão e IDs do Windows
 A biblioteca Microsoft Foundation Class define um número de comando padrão e IDs de janela em Afxres.h. Essas IDs são mais comumente usados em editores de recursos e a janela Propriedades para mapear as mensagens para as funções de manipulador. Todos os comandos padrão têm um **ID _** prefixo. Por exemplo, quando você usar o editor de menu, você normalmente associar o item de menu Abrir arquivo para o padrão `ID_FILE_OPEN` comando ID.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101465"
 ---
 # <a name="definecommand"></a>DEFINE_COMMAND
 Especifica o comando que será usado para criar o conjunto de linhas ao usar o [CCommand](../../data/oledb/ccommand-class.md) classe. Aceita somente os tipos de cadeia de caracteres correspondente ao tipo de aplicativo especificado (ANSI ou Unicode).  

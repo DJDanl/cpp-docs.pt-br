@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368931"
 ---
 # <a name="cdataexchange-class"></a>Classe CDataExchange
 Dá suporte a troca de dados de caixa de diálogo (DDX) e as rotinas de validação (DDV) de dados de caixa de diálogo usadas pelo Microsoft Foundation classes.  

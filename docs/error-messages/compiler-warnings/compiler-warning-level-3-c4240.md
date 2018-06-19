@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292695"
 ---
 # <a name="compiler-warning-level-3-c4240"></a>Compilador C4240 de aviso (nível 3)
 extensão não padrão usada: acesso a 'classname' agora definido como 'especificador de acesso,' anteriormente foi definido para ser o especificador de acesso  

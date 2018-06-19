@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385265"
 ---
 # <a name="window-objects"></a>Objetos de janela
 MFC fornece a classe [CWnd](../mfc/reference/cwnd-class.md) para encapsular o `HWND` identificador de uma janela. O `CWnd` objeto é um objeto de janela C++, diferente de `HWND` que representa uma janela de janela, mas que o contém. Use `CWnd` derivar sua própria janela filho classes ou use uma das muitas classes MFC derivado de `CWnd`. Classe `CWnd` é a classe base para todas as janelas, incluindo janelas com moldura, caixas de diálogo, janelas filho, controles e barras de controle, como barras de ferramentas. Uma boa compreensão de [a relação entre um objeto de janela C++ e um HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md) é essencial para a programação eficaz com MFC.  

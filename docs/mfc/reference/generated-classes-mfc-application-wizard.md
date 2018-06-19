@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370826"
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>Classes geradas, Assistente de Aplicativo MFC
 Este tópico lista os nomes de classes base e os arquivos gerados pelo seu projeto. Por padrão, os nomes são baseados no nome do projeto que você especificou no **caixa de diálogo Novo projeto**. Você pode alterar a maioria desses nomes, conforme descrito aqui:  

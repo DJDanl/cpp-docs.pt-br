@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372502"
 ---
 # <a name="cwaitcursor-class"></a>Classe CWaitCursor
 Fornece uma maneira de uma linha para mostrar um cursor de espera, que normalmente é exibido como uma ampulheta enquanto você estiver fazendo uma operação demorada.  

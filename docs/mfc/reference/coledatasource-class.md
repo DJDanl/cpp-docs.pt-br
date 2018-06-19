@@ -51,6 +51,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376701"
 ---
 # <a name="coledatasource-class"></a>Classe COleDataSource
 Age como um cache no qual um aplicativo coloca os dados que oferecem dados durante a transferência de operações, como a área de transferência ou operações de arrastar e soltar.  

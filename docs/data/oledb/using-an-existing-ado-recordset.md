@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103558"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Usando um conjunto de registros ADO existente
 Para criar modelos de consumidor OLE DB e Active Data Objects (ADO), use o ADO para abrir um conjunto de registros (correspondente a um conjunto de linhas em que os modelos de consumidor de banco de dados OLE). Quando você tiver um conjunto de registros, faça o seguinte para conectar a um conjunto de linhas do OLE DB:  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371094"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Estruturas, estilos, retornos de chamada e mapas de mensagem
 Esta seção documenta as estruturas, estilos e funções de retorno de chamada usadas pela biblioteca Microsoft Foundation Class e mapas de mensagem do MFC.  

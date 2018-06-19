@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359332"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Controles ActiveX MFC: adicionando eventos de estoque a um controle ActiveX
 Eventos de estoque são diferentes de eventos personalizados que são disparados automaticamente pela classe [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` contém funções de membro predefinidas que acionam eventos resultante de ações comuns. Algumas ações comuns implementadas pelo `COleControl` incluem único - e duplo - clicks o controle, os eventos de teclado, e as alterações no estado dos botões do mouse. Entradas de mapa de eventos para eventos de estoque sempre são precedidas pelo **EVENT_STOCK** prefixo.  

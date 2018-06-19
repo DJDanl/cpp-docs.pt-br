@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170642"
 ---
 # <a name="user-defined-conversions-ccli"></a>Conversões definidas pelo usuário (C++/CLI)
 Esta seção discute as conversões definidas pelo usuário (UDC) quando um dos tipos na conversão é uma referência ou uma instância de um tipo de valor ou tipo de referência.  

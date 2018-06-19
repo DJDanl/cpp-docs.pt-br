@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368976"
 ---
 # <a name="cfindreplacedialog-class"></a>Classe CFindReplaceDialog
 Permite que você implemente caixas de diálogo Localizar/Substituir padrão de cadeia de caracteres em seu aplicativo.  

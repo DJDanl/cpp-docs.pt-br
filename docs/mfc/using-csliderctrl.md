@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385811"
 ---
 # <a name="using-csliderctrl"></a>Usando CSliderCtrl
 O [CSliderCtrl](../mfc/reference/csliderctrl-class.md) classe representa um controle deslizante, que também é chamado de uma barra de controle. "Controle deslizante" é uma janela que contém um controle deslizante e escala opcional marcas. Quando o usuário move o controle deslizante, usando as teclas de seta ou o mouse, o controle deslizante envia mensagens de notificação para indicar a alteração.  

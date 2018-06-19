@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370036"
 ---
 # <a name="cmfcimageeditorpalettebar-class"></a>Classe CMFCImageEditorPaletteBar
 Fornece a funcionalidade de barra de paleta para uma caixa de diálogo do editor de imagem.  

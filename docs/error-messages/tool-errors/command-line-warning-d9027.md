@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301444"
 ---
 # <a name="command-line-warning-d9027"></a>Aviso D9027 (linha de comando)
 arquivo de origem '\<filename >' ignorado  

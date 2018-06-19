@@ -135,6 +135,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377034"
 ---
 # <a name="cdocument-class"></a>Classe CDocument
 Fornece a funcionalidade básica para classes de documento definida pelo usuário.  

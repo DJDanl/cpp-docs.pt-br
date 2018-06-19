@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375383"
 ---
 # <a name="cmfcmenubutton-class"></a>Classe CMFCMenuButton
 Um botão que exibe um menu pop-up e relatórios sobre seleções do menu do usuário.  

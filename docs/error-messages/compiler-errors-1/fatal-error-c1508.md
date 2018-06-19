@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198528"
 ---
 # <a name="fatal-error-c1508"></a>Erro fatal C1508
 limite do compilador: 'function': mais de 65535 bytes de argumento  
