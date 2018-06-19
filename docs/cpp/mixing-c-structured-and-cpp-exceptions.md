@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420100"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Combinação de exceções C (Estruturada) e C++
 Se você quiser escrever um código mais portátil, não recomendamos o uso de tratamento de exceções estruturadas em um programa C/C++. No entanto, às vezes, convém compilar com **/EHa** misturar exceções estruturadas e código-fonte C++ e precisa de algum recurso para lidar com ambos os tipos de exceções. Como um manipulador de exceção estruturado não tem nenhum conceito de objetos ou exceções digitadas, ele não pode manipular exceções lançadas por código C++. No entanto, C++ **catch** manipuladores podem lidar com exceções estruturadas. Como tal, sintaxe de manipulação de exceção de C++ (**tente**, `throw`, **catch**) não é aceito pelo compilador C, mas a sintaxe de manipulação de exceção estruturada (`__try`, `__except`, `__finally`) há suporte para o compilador do C++.  

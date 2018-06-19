@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368984"
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch (arquitetura mínima de CPU)
 As opções de arquitetura especificam a arquitetura para geração de código. Selecione a arquitetura de hardware de base que você está trabalhando com consulte / arch opções para essa plataforma de destino.  

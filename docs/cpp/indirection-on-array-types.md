@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418833"
 ---
 # <a name="indirection-on-array-types"></a>Indireção em tipos de matriz
 Uso do operador de indireção (**\***) em um *n*-tipo de matriz unidimensional produz um *n*matriz dimensional de-1. Se *n* é 1, escalar (ou elemento de matriz) é produzido.  

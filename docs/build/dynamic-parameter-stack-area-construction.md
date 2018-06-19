@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367466"
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>Construção da área de pilha do parâmetro dinâmico
 Se for usado um ponteiro de quadro, existe a opção para criar dinamicamente a área de pilha do parâmetro. Isso não é feito no momento no [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] compilador.  

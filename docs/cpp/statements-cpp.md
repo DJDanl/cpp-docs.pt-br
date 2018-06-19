@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422775"
 ---
 # <a name="statements-c"></a>Instruções (C++)
 As instruções em C++ são os elementos do programa que controlam como e em que ordem os objetos são manipulados. Esta seção inclui:  

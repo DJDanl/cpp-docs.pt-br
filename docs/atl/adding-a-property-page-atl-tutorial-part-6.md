@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361584"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Adicionando uma página de propriedades (Tutorial ATL, parte 6)
 Páginas de propriedades são implementadas como objetos separados COM, que permitem que eles deve ser compartilhado, se necessário. Nesta etapa, você fará as seguintes tarefas para adicionar uma página de propriedades para o controle:  

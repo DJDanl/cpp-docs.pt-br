@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360648"
 ---
 # <a name="automation-in-a-dll"></a>Automação em um DLL
 Quando você escolhe a opção de automação no Assistente de DLL do MFC, o assistente fornece o seguinte:  

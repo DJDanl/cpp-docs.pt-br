@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355820"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL e marshaler livre de threads
 Página de atributos do ATL simples objeto Assistente fornece uma opção que permite que a classe de agregação marshaler livre de threads (FTM).  

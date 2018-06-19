@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354862"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Tutorial da Biblioteca de Modelo Ativa (ATL)
 ATL foi projetado para simplificar o processo de criação de controles leves, flexíveis e eficientes. Este tutorial orienta você durante a criação de um controle ActiveX, demonstrando vários conceitos básicos ATL e COM.  

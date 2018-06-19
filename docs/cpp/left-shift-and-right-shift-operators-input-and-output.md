@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422391"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operadores de deslocamento de deslocamento à esquerda e direita (&gt; &gt; e &lt; &lt;)
 Operadores shift bit a bit são o operador right shift (>>), que move os bits de *shift expressão* para a direita e o operador de deslocamento à esquerda (<<), que move os bits de *shift-expressão* à esquerda. <sup>1</sup>  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361548"
 ---
 # <a name="thread-pooling-classes"></a>Classes de Pooling de thread
 As seguintes classes de suportam a pool de thread:  

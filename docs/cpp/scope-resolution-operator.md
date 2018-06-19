@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420913"
 ---
 # <a name="scope-resolution-operator-"></a>Operador de resolução do escopo: ::
 O operador de resolução do escopo `::` é utilizado para identificar e remover ambiguidades de identificadores usados em escopos diferentes. Para obter mais informações sobre escopo, consulte [escopo](../cpp/scope-visual-cpp.md).  

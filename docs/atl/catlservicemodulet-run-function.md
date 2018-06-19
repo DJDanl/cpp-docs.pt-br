@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355119"
 ---
 # <a name="catlservicemoduletrun-function"></a>Função CAtlServiceModuleT::Run
 **Executar** contém chamadas para `PreMessageLoop`, `RunMessageLoop`, e `PostMessageLoop`. Após a chamada, `PreMessageLoop` primeiro armazena a ID do thread. do serviço O serviço usará essa ID para se fechar enviando um **WM_QUIT** usando a função de API do Win32, [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946).  

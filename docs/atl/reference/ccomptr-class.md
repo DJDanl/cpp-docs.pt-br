@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358534"
 ---
 # <a name="ccomptr-class"></a>Classe CComPtr
 Uma classe de ponteiro inteligente para o gerenciamento de ponteiros de interface COM.  

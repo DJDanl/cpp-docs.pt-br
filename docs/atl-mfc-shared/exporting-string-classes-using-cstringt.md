@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356390"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Exportando Classes de cadeia de caracteres usando CStringT
 No passado, os desenvolvedores MFC derivada de `CString` para especializar suas próprias classes de cadeia de caracteres. No Microsoft Visual C++ .NET (MFC 8.0), o [CString](../atl-mfc-shared/using-cstring.md) classe foi substituída por uma classe de modelo chamada [CStringT](../atl-mfc-shared/reference/cstringt-class.md). Isso fornecido várias vantagens:  

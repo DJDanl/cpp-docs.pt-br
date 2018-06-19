@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356169"
 ---
 # <a name="introduction-to-com"></a>Introdução ao COM
 COM é fundamentais "modelo de objeto" no qual OLE e controles ActiveX são criados. COM permite que um objeto expor sua funcionalidade a outros componentes e aplicativos do host. Ele define como o objeto expõe em si e como essa exposição funciona em processos e em redes. COM também define o ciclo de vida do objeto.  

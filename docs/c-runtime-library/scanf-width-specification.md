@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418192"
 ---
 # <a name="scanf-width-specification"></a>Especificação de largura scanf Width
 Essas informações se aplicam à interpretação de cadeias de caracteres de formato na família de funções `scanf`, incluindo as versões protegidas, como `scanf_s`. Essas funções geralmente pressupõem que o fluxo de entrada é dividido em uma sequência de tokens. Os tokens são separados por espaços em branco (espaço, tabulação ou nova linha) ou, no caso de tipos numéricos, pelo final natural de um tipo de dados numéricos, conforme indicado pelo primeiro caractere que não pode ser convertido em texto numérico. No entanto, a especificação de largura pode ser usada para fazer com que a análise da entrada pare antes do final natural de um token.  

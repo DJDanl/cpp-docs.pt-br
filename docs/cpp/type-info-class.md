@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422430"
 ---
 # <a name="typeinfo-class"></a>Classe type_info
 O **type_info** classe descreve as informações de tipo geradas dentro do programa pelo compilador. Os objetos dessa classe armazenam efetivamente um ponteiro para um nome do tipo. O **type_info** classe também armazena um valor codificado adequado para comparar dois tipos de igualdade ou ordem de agrupamento. As regras e a sequência de agrupamento de codificação para tipos não são especificados e podem ser diferentes entre os programas.  

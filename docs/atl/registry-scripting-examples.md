@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361883"
 ---
 # <a name="registry-scripting-examples"></a>Exemplos de script do registro
 Os script exemplos neste tópico demonstram como adicionar uma chave ao registro do sistema, registrar o servidor COM registrador e especificar várias árvores de análise.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358255"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Fazer um Noncreatable de objeto ATL
 Você pode alterar os atributos de um objeto COM baseado na ATL para que um cliente diretamente não é possível criar o objeto. Nesse caso, o objeto deve ser retornado por meio de uma chamada de método em outro objeto em vez de criado diretamente.  

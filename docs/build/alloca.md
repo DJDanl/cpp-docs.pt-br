@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360414"
 ---
 # <a name="alloca"></a>alloca
 [alloca](../c-runtime-library/reference/alloca.md) deve ser de 16 bytes alinhados e Além disso, exigido para usar um ponteiro de quadro.  

@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365683"
 ---
 # <a name="cthreadpool-class"></a>Classe CThreadPool
 Essa classe fornece um pool de threads de trabalho que processam uma fila de itens de trabalho.  

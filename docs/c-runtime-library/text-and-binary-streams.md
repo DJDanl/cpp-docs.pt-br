@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410925"
 ---
 # <a name="text-and-binary-streams"></a>Texto e fluxos binários
 Um fluxo de texto consiste em uma ou mais linhas de texto que podem ser gravados em uma exibição de texto para que possam ser lidos. Durante a leitura de um fluxo de texto, o programa lê um `NL` (nova linha) no final de cada linha. Ao gravar em um fluxo de texto, o programa grava um `NL` para sinalizar o final de uma linha. Para corresponder a convenções diferentes entre ambientes de destino para a representação de texto em arquivos, as funções da biblioteca podem alterar o número e representações de caracteres transmitidos entre o programa e um fluxo de texto.  

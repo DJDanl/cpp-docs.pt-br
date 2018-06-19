@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423864"
 ---
 # <a name="summary-of-scope-rules"></a>Resumo das regras de escopo
 O uso de um nome deve ser inequívoco dentro de seu escopo (até o ponto onde a sobrecarga é determinada). Se o nome indica que uma função, a função deve ser ambígua em relação ao número e tipo de parâmetros. Se o nome permanecerá inequívoco, [acesso de membro](../cpp/member-access-control-cpp.md) as regras são aplicadas.  

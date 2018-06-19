@@ -42,6 +42,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414601"
 ---
 # <a name="using-generic-text-mappings"></a>Usando mapeamentos de texto genérico
 **Seção específica da Microsoft**  

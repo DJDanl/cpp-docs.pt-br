@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363979"
 ---
 # <a name="cstringelementtraits-class"></a>Classe CStringElementTraits
 Essa classe fornece funções estáticas usadas pelas classes de coleção armazenar `CString` objetos.  

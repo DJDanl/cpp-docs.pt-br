@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424346"
 ---
 # <a name="smart-pointers-modern-c"></a>Ponteiros inteligentes (C++ moderno)
 Em programação C++ moderna, a biblioteca padrão inclui *ponteiros inteligentes*, que são usados para ajudar a garantir que programas estão livres de memória e recursos perdas e são a exceção de segurança.  

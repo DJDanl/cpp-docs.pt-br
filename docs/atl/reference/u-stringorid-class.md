@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359656"
 ---
 # <a name="ustringorid-class"></a>Classe _U_STRINGorID
 Esta classe de adaptador do argumento permite que qualquer um dos nomes de recursos ( `LPCTSTR`s) ou IDs de recurso ( **UINT**s) a serem passados para uma função sem exigir que o chamador converter a ID em uma cadeia de caracteres usando o **MAKEINTRESOURCE** macro.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362937"
 ---
 # <a name="object-map-macros"></a>Macros de mapa de objeto
 Essas macros definem mapas de objeto e entradas.  

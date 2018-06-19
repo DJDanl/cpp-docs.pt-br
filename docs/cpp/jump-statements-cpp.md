@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419024"
 ---
 # <a name="jump-statements-c"></a>Instruções de salto (C++)
 Uma instrução de salto do C++ executa uma transferência de controle local imediata.  

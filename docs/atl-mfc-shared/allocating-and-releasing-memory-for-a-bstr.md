@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358319"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>Alocando e liberando memória para um BSTR
 Quando você cria `BSTR`s e passá-los entre objetos COM, você deve ter cuidado em tratar a memória que eles usam para evitar perdas de memória. Quando um `BSTR` permanece dentro de uma interface, você deve liberar sua memória quando tiver terminado com ele. No entanto, quando um `BSTR` passa fora de uma interface, o objeto de recebimento assume a responsabilidade para o gerenciamento de memória.  

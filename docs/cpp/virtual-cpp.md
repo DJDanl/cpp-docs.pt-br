@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421790"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 A palavra-chave `virtual` declara uma função virtual ou uma classe base virtual.  

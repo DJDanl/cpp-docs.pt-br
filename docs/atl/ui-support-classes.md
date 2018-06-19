@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360280"
 ---
 # <a name="ui-support-classes"></a>Classes de suporte de interface do usuário
 As classes a seguir fornecem suporte geral de interface do usuário:  

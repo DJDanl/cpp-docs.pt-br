@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418387"
 ---
 # <a name="data-type-ranges"></a>Intervalos de tipos de dados
 Os compiladores de 32 bits e 64 bits do Visual C++ reconhecem os tipos na tabela mais adiante neste artigo.  

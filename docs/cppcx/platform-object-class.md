@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091875"
 ---
 # <a name="platformobject-class"></a>Classe Platform::Object
 Fornece o comportamento comum para classes e estruturas ref em aplicativos de tempo de execução do Windows. Todas as instâncias de classe e estrutura ref podem ser convertidas implicitamente em Platform::Object^ e podem substituir o método virtual ToString.  

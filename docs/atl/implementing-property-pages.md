@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357487"
 ---
 # <a name="implementing-property-pages"></a>Implementação de páginas de propriedade
 Páginas de propriedades são COM os objetos que implementam o `IPropertyPage` ou **IPropertyPage2** interface. ATL fornece suporte para a implementação de páginas de propriedade por meio de [Assistente de página de propriedades ATL](../atl/reference/atl-property-page-wizard.md) no [caixa de diálogo Adicionar classe](../ide/add-class-dialog-box.md).  

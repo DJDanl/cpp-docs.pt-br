@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355188"
 ---
 # <a name="debugging-tips"></a>Dicas de depuração
 Os tópicos a seguir descrevem algumas etapas úteis para depurar seu serviço:  

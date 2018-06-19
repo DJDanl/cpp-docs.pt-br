@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358000"
 ---
 # <a name="atl-dialog-wizard"></a>Assistente de caixa de diálogo do ATL
 Este assistente insere o projeto de um objeto de caixa de diálogo do ATL, derivado de [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Uma caixa de diálogo derivado `CAxDialogImpl` pode hospedar controles ActiveX.  

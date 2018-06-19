@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354849"
 ---
 # <a name="controls-general-support-classes"></a>Controles: Classes de suporte geral
 As classes a seguir fornecem suporte geral para controles da ATL:  

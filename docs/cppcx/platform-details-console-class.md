@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088310"
 ---
 # <a name="platformdetailsconsole-class"></a>Classe Platform::Details::Console
 Essa classe destina-se somente a uso interno e não não se destina ao desenvolvimento.  

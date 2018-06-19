@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358521"
 ---
 # <a name="atl-copy-policy-classes"></a>Classes de política de cópia do ATL
 Classes de política de cópia são [classes de utilitário](../atl/utility-classes.md) usado para inicializar, copiar e excluir dados. Classes de política de cópia permitem para definir semânticas de cópia para qualquer tipo de dados e define as conversões entre tipos de dados diferentes.  

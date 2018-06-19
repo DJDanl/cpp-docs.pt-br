@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355487"
 ---
 # <a name="mmc-snap-in-classes"></a>Classes de Snap-In do MMC
 As classes a seguir fornecem suporte para desenvolvimento Microsoft Management Console (MMC) snap-in de componentes:  

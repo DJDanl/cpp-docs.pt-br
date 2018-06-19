@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356586"
 ---
 # <a name="adding-connection-points-to-an-object"></a>Adicionando Pontos de Conexão a um Objeto
 O [Tutorial da ATL](../atl/active-template-library-atl-tutorial.md) demonstra como criar um controle com suporte para pontos de conexão, como adicionar eventos e como implementar o ponto de conexão. ATL implementa os pontos de conexão com o [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) classe.  

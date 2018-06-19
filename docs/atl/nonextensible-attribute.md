@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355627"
 ---
 # <a name="nonextensible-attribute"></a>Atributo nonextensible
 Se uma interface dupla não será estendida em tempo de execução (ou seja, você não fornecer métodos ou propriedades por meio de **IDispatch:: Invoke** que não estão disponíveis por meio de vtable), você deve aplicar o **nonextensible** o atributo à sua definição de interface. Esse atributo fornece informações para idiomas do cliente (como o Visual Basic) que pode ser usado para habilitar a verificação de código completo em tempo de compilação. Se esse atributo não for fornecido, bugs podem permanecer ocultos no código do cliente até o tempo de execução.  

@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092588"
 ---
 # <a name="odbc-the-odbc-cursor-library"></a>ODBC: a biblioteca de cursores ODBC
 Este tópico descreve a biblioteca de cursores ODBC e explica como usá-lo. Para obter mais informações, consulte:  

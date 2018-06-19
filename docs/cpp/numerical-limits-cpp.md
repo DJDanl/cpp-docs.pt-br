@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419654"
 ---
 # <a name="numerical-limits-c"></a>Limites numéricos (C++)
 O padrão de dois arquivos de inclusão, \<Limits. h > e \<float. h >, definir os limites numéricos ou valores mínimo e máximo que pode conter uma variável de um determinado tipo. Esses mínimos e máximos são garantidos para ser portátil para qualquer compilador do C++ que usa a mesma representação de dados como ANSI C. O \<Limits. h > incluir arquivo define o [limites numéricos para tipos integrais](../cpp/integer-limits.md), e \<float. h > define o [limites numéricos para tipos de flutuante](../cpp/floating-limits.md).  

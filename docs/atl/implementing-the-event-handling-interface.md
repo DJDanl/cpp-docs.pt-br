@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356302"
 ---
 # <a name="implementing-the-event-handling-interface"></a>Implementando a Interface de manipulação de eventos
 ATL ajuda com todos os três elementos necessários para a manipulação de eventos: Implementando a interface de eventos, informando a origem do evento e unadvising a origem do evento. As etapas precisas, que você precisará levar dependem do tipo de interface de eventos e os requisitos de desempenho do seu aplicativo.  

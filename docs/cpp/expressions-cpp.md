@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414577"
 ---
 # <a name="expressions-c"></a>Expressões (C++)
 Esta seção descreve as expressões C++. As expressões são sequências de operadores e operandos usadas em uma ou mais das seguintes finalidades:  

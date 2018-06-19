@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357712"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Criando o projeto (Tutorial ATL, parte 1)
 Este tutorial vai orientá-lo por meio de um projeto ATL nonattributed que cria um objeto do ActiveX que exibe um polígono. O objeto inclui opções para permitir que o usuário para alterar o número de lados que compõe o polígono e o código para atualizar a exibição.  

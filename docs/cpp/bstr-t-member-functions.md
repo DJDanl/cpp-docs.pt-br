@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408186"
 ---
 # <a name="bstrt-member-functions"></a>Funções de membro _bstr_t
 Para obter informações sobre `_bstr_t` funções de membro, consulte [bstr_t classe](../cpp/bstr-t-class.md).  

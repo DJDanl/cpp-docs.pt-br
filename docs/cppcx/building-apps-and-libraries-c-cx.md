@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086337"
 ---
 # <a name="building-apps-and-libraries-ccx"></a>Compilando aplicativos e bibliotecas (C++/CX)
 Os tópicos nesta seção fornecem alguns detalhes sobre como usar o sistema de compilação para produzir um aplicativo de plataforma Universal do Windows ou um componente de tempo de execução do Windows.  

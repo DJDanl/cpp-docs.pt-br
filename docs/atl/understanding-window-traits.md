@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362362"
 ---
 # <a name="understanding-window-traits"></a>Noções básicas sobre as características de janela
 Classes de janela com características fornecem um método simple para padronizar os estilos usados para a criação de um objeto de janela ATL. Características de janela são aceitos como parâmetros de modelo por [CWindowImpl](../atl/reference/cwindowimpl-class.md) e outras classes de janela ATL como uma maneira de fornecer padrão estilos de janela no nível de classe.  

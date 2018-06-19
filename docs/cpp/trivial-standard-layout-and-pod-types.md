@@ -9,6 +9,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424845"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Trivial, layout padrão, POD e tipos literais
 

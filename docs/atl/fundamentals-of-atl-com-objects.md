@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358284"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Conceitos básicos de objetos COM de ATL
 A ilustração a seguir descreve a relação entre as classes e interfaces que são usadas para definir um objeto COM da ATL.  

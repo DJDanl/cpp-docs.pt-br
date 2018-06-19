@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423516"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Inicialização uniforme e delegação de construtores
 No C++ moderna, você pode usar *chave de inicialização* para qualquer tipo, sem o sinal de igual. Além disso, você pode usar construtores de delegação para simplificar seu código, quando você tem vários construtores que executam trabalho semelhante.  

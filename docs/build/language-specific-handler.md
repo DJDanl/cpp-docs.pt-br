@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368792"
 ---
 # <a name="language-specific-handler"></a>Identificador específico da linguagem
 O endereço relativo do manipulador específico de idioma está presente no UNWIND_INFO sempre que UNW_FLAG_EHANDLER ou UNW_FLAG_UHANDLER estão definidos. Conforme descrito na seção anterior, o identificador específico da linguagem é chamado como parte da pesquisa para um manipulador de exceção ou como parte de uma liberação. Ele tem o seguinte protótipo:  

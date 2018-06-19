@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420289"
 ---
 # <a name="nonstandard-behavior"></a>Comportamento não padrão
 As seções a seguir listam alguns dos locais em que a implementação de C++ do Visual C++ não cumpre o padrão C++. Os números de seção fornecidos abaixo se referem aos números da seção no padrão C++ 11 (ISO/IEC 14882:2011(E)).  

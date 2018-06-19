@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420149"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl para encapsulamento do tempo de compilação (C++ moderno)
 O *pimpl idioma* é uma técnica de C++ moderna para ocultar a implementação, para minimizar o acoplamento e separe interfaces. Pimpl é abreviação de "o ponteiro para implementação." Você pode já estar familiarizado com o conceito, mas sabe por outros nomes como idioma gato Cheshire ou Firewall do compilador.  

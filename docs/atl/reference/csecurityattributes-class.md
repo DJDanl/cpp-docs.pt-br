@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357500"
 ---
 # <a name="csecurityattributes-class"></a>Classe CSecurityAttributes
 Essa classe é um wrapper fino para a estrutura de atributos de segurança.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423670"
 ---
 # <a name="namespaces-c"></a>Namespaces (C++)
 Um namespace é uma região declarativa que fornece um escopo para os identificadores (os nomes de tipos, funções, variáveis, etc) dentro dele. Namespaces são usados para organizar o código em grupos lógicos e para evitar colisões de nome que podem ocorrer especialmente quando sua base de código inclui várias bibliotecas. Todos os identificadores no escopo do namespace são visíveis para um outro sem qualificação. Identificadores fora o namespace podem acessar os membros usando o nome totalmente qualificado para cada identificador, por exemplo `std::vector<std::string> vec;`, ou se encontram em um [usando declaração](../cpp/using-declaration.md) para um único identificador (`using std::string`), ou um [usando diretiva](../cpp/namespaces-cpp.md#using_directives) para todos os identificadores no namespace (`using namespace std;`). Código em arquivos de cabeçalho sempre deve usar o nome totalmente qualificado de namespace.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424262"
 ---
 # <a name="structured-exception-handling-cc"></a>Tratamento de exceções estruturado (C/C++)
 Ainda que o Windows e Visual C++ suportem o tratamento de exceções (SEH), recomendamos o uso do tratamento de exceções do padrão ISO C++, pois ele torna o código mais portável e flexível. Entretanto, no código existente ou em tipos específicos de programas, você ainda pode precisar do SEH.  

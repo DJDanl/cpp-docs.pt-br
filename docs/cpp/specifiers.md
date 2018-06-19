@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422320"
 ---
 # <a name="specifiers"></a>Especificadores
 Este tópico descreve o *especificadores de decl* componente (especificadores de declaração) de um [declaração](declarations-and-definitions-cpp.md).  

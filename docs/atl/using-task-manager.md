@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361024"
 ---
 # <a name="using-task-manager"></a>Usando o Gerenciador de tarefas
 Uma das maneiras mais simples de depurar um serviço é com o uso do Gerenciador de tarefas. Enquanto o serviço está em execução, inicie o Gerenciador de tarefas e clique no **processos** guia. Clique no nome do EXE e, em seguida, clique em **depurar**. Isso inicia o Visual C++ anexado ao processo em execução. Agora, clique em **quebra** no **depurar** para permitir a você definir pontos de interrupção no seu código. Clique em **executar** para executar seus pontos de interrupção selecionados.  

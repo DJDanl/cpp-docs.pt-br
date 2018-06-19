@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357838"
 ---
 # <a name="using-a-template-library"></a>Usando uma biblioteca de modelos
 Um modelo é um pouco como uma macro. Assim como acontece com uma macro, invocar um modelo faz com que ele expandir (com a substituição de parâmetro apropriado) ao código escrito. No entanto, um modelo vai além do que isso para permitir a criação de novas classes com base nos tipos que você passa como parâmetros. Essas novas classes implementam fortemente tipado maneiras de executar a operação expressada em seu código de modelo.  

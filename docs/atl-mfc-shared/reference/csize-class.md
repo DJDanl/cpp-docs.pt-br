@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362950"
 ---
 # <a name="csize-class"></a>Classe CSize
 Semelhante do Windows [tamanho](http://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura, que implementa uma coordenada relativa ou posição.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359124"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Assistente de componente de página Active Server ATL
 Este assistente insere o projeto de um componente Active Server Pages (ASP). O Microsoft Internet Information Services (IIS) usa componentes ASP como parte de sua arquitetura de desenvolvimento aprimorada página da Web.  

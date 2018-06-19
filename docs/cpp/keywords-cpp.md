@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424757"
 ---
 # <a name="keywords-c"></a>Palavras-chave (C++)
 Palavras-chave são identificadores reservados pré-definidos que têm significados especiais. Não podem ser usados como identificadores em seu programa. As palavras-chave a seguir são reservadas para o Microsoft C++. Os nomes com sublinhados principais são extensões da Microsoft.  

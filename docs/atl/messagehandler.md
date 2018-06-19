@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356361"
 ---
 # <a name="messagehandler"></a>MessageHandler
 **MessageHandler** é o nome da função identificada pelo parâmetro do segundo o `MESSAGE_HANDLER` macro em seu mapa de mensagem.  

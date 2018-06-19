@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363523"
 ---
 # <a name="atl-control-wizard"></a>Assistente de controle ATL
 Inserções em um projeto de ATL (ou um projeto MFC com suporte ATL) um controle ATL. Você pode usar este assistente para inserir um dos três tipos de controles:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416652"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Reticências e modelos variadic
 Este artigo mostra como usar reticências (`...`) com modelos variadic de C++. No botão de reticências teve muitos usos em C e C++. Eles incluem listas de argumentos variáveis para funções. A função `printf()` da Biblioteca em Tempo de Execução C é um dos exemplos mais conhecidos.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368116"
 ---
 # <a name="inline-files-in-a-makefile"></a>Arquivos embutidos em um makefile
 Um arquivo embutido contém texto que você especificar no makefile. O nome pode ser usado em comandos como entrada (por exemplo, um arquivo de comando LINK), ou ele pode passar comandos para o sistema operacional. O arquivo é criado no disco quando um comando que cria o arquivo é executado.  

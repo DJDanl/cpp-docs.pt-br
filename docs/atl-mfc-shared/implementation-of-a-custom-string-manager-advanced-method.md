@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357809"
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implementação um Gerenciador de personalizado cadeia de caracteres (método avançado)
 Em situações especiais, você talvez queira implementar um Gerenciador de cadeia de caracteres personalizada que mais do que apenas alterar quais heap é usada para alocar memória. Nessa situação, você deve implementar manualmente a [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interface como Gerenciador de cadeia de caracteres personalizada.  

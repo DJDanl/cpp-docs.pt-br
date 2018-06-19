@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409716"
 ---
 # <a name="additional-startup-considerations"></a>Considerações de inicialização adicionais
 Em C++, a construção e destruição do objeto podem envolver a execução do código do usuário. Portanto, é importante entender quais inicializações acontecem antes de entrada para **principal** e quais destruidores são chamados após a saída do **principal**. (Para obter informações detalhadas sobre a construção e destruição de objetos, consulte [construtores](../cpp/constructors-cpp.md) e [destruidores](../cpp/destructors-cpp.md).)  

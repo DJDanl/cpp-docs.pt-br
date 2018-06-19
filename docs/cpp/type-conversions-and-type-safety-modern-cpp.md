@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424770"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversões e segurança de tipo (C++ moderno)
 Este documento identifica problemas de conversão de tipo comuns e descreve como evitá-los em seu código C++.  

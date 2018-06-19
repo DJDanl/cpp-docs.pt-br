@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356541"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>Implementando uma janela com CWindowImpl
 Para implementar uma janela, derive uma classe de `CWindowImpl`. Em sua classe derivada, declare um mapa de mensagem e as funções de manipulador de mensagem. Agora você pode usar a classe de três maneiras diferentes:  

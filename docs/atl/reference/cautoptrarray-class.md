@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358945"
 ---
 # <a name="cautoptrarray-class"></a>Classe CAutoPtrArray
 Essa classe fornece métodos úteis ao construir uma matriz de ponteiros inteligentes.  

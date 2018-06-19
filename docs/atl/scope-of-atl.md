@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360025"
 ---
 # <a name="scope-of-atl"></a>Escopo da ATL
 ATL permite que você crie facilmente objetos COM, servidores de automação e controles ActiveX. ATL fornece suporte interno para muitas das interfaces COM fundamentais.  

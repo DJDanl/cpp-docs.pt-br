@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089811"
 ---
 # <a name="use-database-forms-record-views-with-odbc"></a>Usar formulários de banco de dados (exibições de registro) com ODBC
 Alguns aplicativos, como entrada de dados ou a exibição de dados, exigem um formulário, uma exibição com controles de caixa de diálogo de estilo.  

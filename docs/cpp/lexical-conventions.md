@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419122"
 ---
 # <a name="lexical-conventions"></a>Convenções lexicais
 Esta seção apresenta os elementos fundamentais de um programa em C++. Você usa esses elementos, chamados de "elementos léxicos" ou "tokens", para construir instruções, definições, declarações etc. que são usadas para construir programas completos. Os elementos léxicos a seguir são abordados nesta seção:

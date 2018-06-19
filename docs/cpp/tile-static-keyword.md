@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422157"
 ---
 # <a name="tilestatic-keyword"></a>Palavra-chave tile_static
 A palavra-chave `tile_static` é usada para declarar uma variável que possa ser acessada por todos os threads em um bloco de threads. O tempo de vida da variável começa quando a execução alcança o ponto de declaração e termina com o retorno da função de kernel. Para obter mais informações sobre como usar blocos, consulte [usando blocos](../parallel/amp/using-tiles.md).  

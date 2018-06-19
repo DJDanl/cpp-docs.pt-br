@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364533"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Opções de Assistente de componente de página Active Server ATL
 Use esta página do Assistente de componente do ATL Active Server página projetar para maior eficiência e suporte de erro para o objeto.  

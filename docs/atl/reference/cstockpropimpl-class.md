@@ -79,6 +79,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366569"
 ---
 # <a name="cstockpropimpl-class"></a>Classe CStockPropImpl
 Essa classe fornece métodos para dar suporte a valores de propriedade de estoque.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418907"
 ---
 # <a name="iteration-statements-c"></a>Instruções de iteração (C++)
 As instruções de iteração fazem com que as instruções (ou instruções compostas) sejam executadas nenhuma ou mais vezes, de acordo com os critérios de término de loop. Quando essas instruções são declarações compostas, eles são executados em ordem, exceto quando ambos o [quebra](../cpp/break-statement-cpp.md) instrução ou o [continuar](../cpp/continue-statement-cpp.md) instrução for encontrada.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360156"
 ---
 # <a name="when-do-i-need-to-call-atlaxwinterm"></a>Quando é necessário chamar AtlAxWinTerm?
 [AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm) cancela o registro de **"AtlAxWin80"** classe de janela. Você deve chamar essa função (se você não precisa criar janelas de host), depois que todas as janelas de host existente tiveram sido destruídas. Se você não chamar essa função, a classe de janela será cancelada automaticamente quando o processo é encerrado.  

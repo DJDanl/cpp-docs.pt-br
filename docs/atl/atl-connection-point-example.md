@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355175"
 ---
 # <a name="atl-connection-point-example"></a>Exemplo de Ponto de Conexão de ATL
 Este exemplo mostra um objeto que oferece suporte a [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) como uma interface de saída:  

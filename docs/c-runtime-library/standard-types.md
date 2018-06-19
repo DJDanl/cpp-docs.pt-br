@@ -175,6 +175,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418517"
 ---
 # <a name="standard-types"></a>Tipos padrão
 A biblioteca em tempo de execução da Microsoft define os seguintes tipos e definições de tipo padrão.  

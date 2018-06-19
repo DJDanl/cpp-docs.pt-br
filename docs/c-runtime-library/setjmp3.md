@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408361"
 ---
 # <a name="setjmp3"></a>_setjmp3
 Função CRT interna. Uma nova implementação da função `setjmp`.  

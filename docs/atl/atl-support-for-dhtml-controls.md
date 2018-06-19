@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355516"
 ---
 # <a name="atl-support-for-dhtml-controls"></a>Suporte do ATL para controles DHTML
 Usando a ATL, você pode criar um controle com a funcionalidade de DHTML (HTML dinâmico). Um controle DHTML ATL:  

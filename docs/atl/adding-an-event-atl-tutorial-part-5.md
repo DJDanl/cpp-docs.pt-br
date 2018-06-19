@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361259"
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>Adicionando um evento (Tutorial ATL, parte 5)
 Nesta etapa, você adicionará um `ClickIn` e um `ClickOut` eventos para o controle ATL. Você será acionado a `ClickIn` evento se o usuário clica dentro do polígono e acionar `ClickOut` se o usuário clica fora. As tarefas para adicionar um evento são da seguinte maneira:  

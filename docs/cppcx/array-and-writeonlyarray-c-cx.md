@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089386"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Matriz e WriteOnlyArray (C++/CX)
 Você pode usar livremente matrizes regulares de estilo C ou [std:: array](../standard-library/array-class-stl.md) em C + + programa CX (embora [std:: Vector](../standard-library/vector-class.md) geralmente é uma opção melhor), mas em qualquer API publicada nos metadados, você deve converter uma matriz C-style ou vector para um [Platform:: array](../cppcx/platform-array-class.md) ou [Platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md) tipo dependendo de como ele está sendo usado. O tipo [Platform::Array](../cppcx/platform-array-class.md) não é tão eficiente nem tão poderoso quanto [std::vector](../standard-library/vector-class.md), assim, como uma diretriz geral, você deve evitar seu uso no código interno que executa muitas operações nos elementos da matriz.  

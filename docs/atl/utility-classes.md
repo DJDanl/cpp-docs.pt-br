@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361180"
 ---
 # <a name="utility-classes"></a>Classes de utilitário
 As seguintes classes de utilitário MFC independentes são fornecidas:  

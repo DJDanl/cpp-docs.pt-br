@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359937"
 ---
 # <a name="cheapptr-class"></a>Classe CHeapPtr
 Uma classe de ponteiro inteligente para o gerenciamento de ponteiros de pilha.  

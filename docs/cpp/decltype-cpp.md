@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418033"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 O especificador de tipo `decltype` produz o tipo de uma expressão especificada. O `decltype` digite especificador, junto com o [palavra-chave auto](../cpp/auto-cpp.md), é útil principalmente para desenvolvedores que escrevem as bibliotecas de modelo. Use `auto` e `decltype` para declarar uma função de modelo cujo tipo de retorno dependa dos tipos dos argumentos de modelo. Ou então, use `auto` e `decltype` para declarar uma função de modelo que encapsule uma chamada para outra função e depois retorne o tipo de retorno da função encapsulada.  

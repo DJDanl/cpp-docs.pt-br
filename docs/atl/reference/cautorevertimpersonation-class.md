@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359501"
 ---
 # <a name="cautorevertimpersonation-class"></a>Classe CAutoRevertImpersonation
 Essa classe é revertida [CAccessToken](../../atl/reference/caccesstoken-class.md) objetos para um estado nonimpersonating quando ele sai do escopo.  

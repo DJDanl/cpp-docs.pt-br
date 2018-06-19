@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356460"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Adicionando um componente de página de servidor ativo do ATL
 Para adicionar um objeto de biblioteca de modelo ativa (ATL) ao seu projeto, o projeto deve ter sido criado como um aplicativo COM ATL ou como um aplicativo MFC que contém suporte ATL. Você pode usar o [Assistente de projeto de ATL](../../atl/reference/atl-project-wizard.md) para criar um aplicativo ATL, você pode selecionar **adicionar suporte ATL ao MFC** do [caixa de diálogo Adicionar classe](../../ide/add-class-dialog-box.md) caixa de diálogo, ou você pode [adicionar um objeto ATL ao seu aplicativo do MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar o suporte ATL para um aplicativo do MFC.  

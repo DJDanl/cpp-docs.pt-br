@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357676"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Identificação dos elementos do projeto de controle DHTML
 A maioria dos códigos de controle DHTML exatamente como esse é criado para qualquer controle ATL. Para obter uma compreensão básica do código genérico, leia o [tutorial da ATL](../atl/active-template-library-atl-tutorial.md), e leia as seções [criando um projeto de ATL](../atl/reference/creating-an-atl-project.md) e [Fundamentals de ATL COM objetos](../atl/fundamentals-of-atl-com-objects.md).  

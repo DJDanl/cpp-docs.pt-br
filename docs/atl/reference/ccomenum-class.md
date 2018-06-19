@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362857"
 ---
 # <a name="ccomenum-class"></a>Classe CComEnum
 Essa classe define um objeto de enumerador COM base em uma matriz.  

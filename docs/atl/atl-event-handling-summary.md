@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356515"
 ---
 # <a name="atl-event-handling-summary"></a>Resumo de manipulação de eventos do ATL
 Em geral, a manipulação de eventos COM é um processo relativamente simples. Há três etapas principais:  

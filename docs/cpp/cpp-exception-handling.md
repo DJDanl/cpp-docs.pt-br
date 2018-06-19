@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413902"
 ---
 # <a name="c-exception-handling"></a>Tratamento de exceções C++
 A linguagem C++ fornece suporte interno para lançamento e captura de exceções. Ao programar em C++, você quase sempre deve usar o suporte interno à exceção C++, conforme descrito nesta seção.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368168"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Conceitos de aplicativos isolados e assemblies lado a lado
 Um aplicativo é considerado um [aplicativo isolado](http://msdn.microsoft.com/library/aa375190) se todos os seus componentes [assemblies lado a lado](http://msdn.microsoft.com/library/ff951640). Um assembly lado a lado é uma coleção de recursos – um grupo de DLLs, classes windows, servidores COM, bibliotecas de tipos ou interfaces – que são implantados juntos e disponibilizados para um aplicativo usar no tempo de execução. Normalmente, um assembly lado a lado é um para várias DLLs.  

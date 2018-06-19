@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359912"
 ---
 # <a name="threading-models-and-critical-sections-classes"></a>Classes de seções críticas e modelos de Threading
 As seguintes classes que definem um threading modelo e seção crítica:  

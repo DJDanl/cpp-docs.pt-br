@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364656"
 ---
 # <a name="ipersiststorageimpl-class"></a>Classe IPersistStorageImpl
 Essa classe implementa o [IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731) interface.  

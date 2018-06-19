@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368324"
 ---
 # <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Como adicionar ferramentas de build personalizadas a projetos MSBuild
 Uma ferramenta de compilação personalizada é uma ferramenta de linha de comando, definido pelo usuário que está associada um arquivo específico.  

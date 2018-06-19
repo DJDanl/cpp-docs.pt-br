@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355040"
 ---
 # <a name="dual-interfaces-and-atl"></a>ATL e Interfaces duplas
 Uma interface dupla permite que os seus métodos sejam acessados como dispinterface métodos ou métodos de vtable. Esta seção aborda alguns dos recursos de duas interfaces de uma perspectiva ATL.  

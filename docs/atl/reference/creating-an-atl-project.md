@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358997"
 ---
 # <a name="creating-an-atl-project"></a>Criando um projeto ATL
 A maneira mais fácil de criar um projeto de ATL é usar o Assistente de projeto de ATL, localizado na pasta de projetos do Win32 a **caixa de diálogo Novo projeto**.  

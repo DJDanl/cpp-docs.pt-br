@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364844"
 ---
 # <a name="catldllmodulet-class"></a>Classe CAtlDllModuleT
 Essa classe representa o módulo para uma DLL.  

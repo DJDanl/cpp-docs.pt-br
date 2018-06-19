@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089553"
 ---
 # <a name="properties-ccx"></a>Propriedades (C++/CX)
 Tipos de Windows Runtime expõem dados públicos como propriedades. O código de cliente acessa a propriedade como um datamember público. Internamente, a propriedade é implementada como um bloco que contém um método acessador get, um método acessador set ou ambos. Usando os métodos acessadores, você pode executar ações adicionais antes ou depois de recuperar o valor, por exemplo, você pode disparar um evento ou executar verificações de validação.  

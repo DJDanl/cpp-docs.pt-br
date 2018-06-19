@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354875"
 ---
 # <a name="using-cstringt"></a>Usando CStringT
 Os tópicos nesta seção descrevem usando a classe de modelo de programação [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  

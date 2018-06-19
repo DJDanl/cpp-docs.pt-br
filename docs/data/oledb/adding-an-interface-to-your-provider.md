@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093540"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Adicionando uma interface ao provedor
 Determine qual objeto que você deseja adicionar a interface para (geralmente dados fonte, conjunto de linhas, comando ou sessão objetos criados pelo OLE DB Provider Assistente). É possível que o objeto que você precisa adicionar a interface é aquele que seu provedor não oferece suporte. Nesse caso, execute o ATL OLE DB Provider Assistente para criar o objeto. Clique com botão direito no projeto no modo de exibição de classe, clique em **Adicionar classe** do **adicionar** menu e clique **ATL OLE DB Provider**. Você talvez queira colocar o código de interface em um diretório separado e, em seguida, copiar os arquivos para o projeto de provedor.  

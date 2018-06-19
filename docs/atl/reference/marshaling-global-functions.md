@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362821"
 ---
 # <a name="marshaling-global-functions"></a>Marshaling funções globais
 Essas funções fornecem suporte para empacotamento e a conversão de dados de marshaling em ponteiros de interface.  

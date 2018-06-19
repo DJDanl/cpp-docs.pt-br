@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367658"
 ---
 # <a name="dot-directives"></a>Diretivas de ponto
 Especifica diretivas dot fora de um bloco de descrição, no início de uma linha. Diretivas dot começam com um ponto (. ) e são seguidos por dois-pontos (:). São permitidas espaços e guias. Nomes de diretiva ponto diferenciam maiusculas de minúsculas e maiusculas.  

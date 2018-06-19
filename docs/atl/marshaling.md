@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360094"
 ---
 # <a name="marshaling"></a>realização de marshaling
 A técnica de COM de marshaling permite interfaces expostas por um objeto em um processo a ser usado em outro processo. Empacotamento, COM fornece código (ou usa o código fornecido pela implementação de interface) para o pacote de parâmetros do método em um formato que pode ser movido entre processos (bem como, pela conexão para processos em execução em outros computadores) e descompactar os parâmetros na outra extremidade. Da mesma forma, COM deve executar essas mesmas etapas no retorno de chamada.  

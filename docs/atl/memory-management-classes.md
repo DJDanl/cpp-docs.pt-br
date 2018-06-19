@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356502"
 ---
 # <a name="memory-management-classes"></a>Classes de gerenciamento de memória
 Essas classes oferecem suporte para ponteiros de pilha, ponteiros inteligentes e outras rotinas de alocação de memória.  

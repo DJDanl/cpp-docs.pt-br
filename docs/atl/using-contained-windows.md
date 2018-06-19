@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357915"
 ---
 # <a name="using-contained-windows"></a>Usando o Windows independente
 ATL implementa windows independentes com [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md). Uma janela contida representa uma janela que delega suas mensagens para um objeto de contêiner em vez de tratá-las na sua própria classe.  

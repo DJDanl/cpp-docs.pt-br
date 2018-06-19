@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355719"
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementação um Gerenciador de personalizado cadeia de caracteres (método básico)
 A maneira mais fácil para personalizar o esquema de alocação de memória para dados de cadeia de caracteres usar o ATL fornecido **CAtlStringMgr** classe mas fornecer sua própria memória rotinas de alocação. O construtor para **CAtlStringMgr** usa um único parâmetro: um ponteiro para um `IAtlMemMgr` objeto. `IAtlMemMgr` é uma classe base abstrata que fornece uma interface genérica para um heap. Usando o `IAtlMemMgr` interface, o **CAtlStringMgr** aloca realoca e libera a memória usada para armazenar dados de cadeia de caracteres. Você pode ou implementar o `IAtlMemMgr` interface por conta própria, ou usar uma das classes de Gerenciador de memória fornecida ATL cinco. Os gerenciadores de memória fornecida ATL simplesmente encapsular recursos existentes de alocação de memória:  

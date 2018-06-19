@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362578"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Colocando o controle em uma página da Web (Tutorial ATL, parte 7)
 O controle está concluído. Para ver o controle de trabalho em uma situação real, coloque-o em uma página da Web. Um arquivo HTML que contém o controle foi criado quando você definiu seu controle. Abra o arquivo PolyCtl.htm **Solution Explorer**, e você pode ver o controle em uma página da Web.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424464"
 ---
 # <a name="using-declaration"></a>Declaração de uso
 O usando a declaração apresenta um nome para a região declarativa no qual o usando a declaração é exibida.  

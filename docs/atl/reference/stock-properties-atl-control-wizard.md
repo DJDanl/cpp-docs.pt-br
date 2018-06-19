@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358893"
 ---
 # <a name="stock-properties-atl-control-wizard"></a>Propriedades de estoque, o Assistente de controle ATL
 Esta página do assistente identifica as propriedades de estoque com suporte para o controle. Por padrão, não há propriedades são identificadas.  

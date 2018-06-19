@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422378"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Cadeia de caracteres e formatação de E/S (C++ moderno)
 C++ [iostreams](../standard-library/iostream.md) são capazes de e/s de cadeia de caracteres formatada. Por exemplo, o código a seguir mostra como definir cout para formatar um número inteiro para a saída em hexadecimal, primeiro salvando desativar o estado atual e novamente configuração posteriormente, porque depois que a formatação de estado é passado para cout, ela permanece assim até que seja alterado, não apenas para uma linha de código.  

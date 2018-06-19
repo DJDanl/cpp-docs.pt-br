@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368402"
 ---
 # <a name="pseudotargets"></a>Pseudodestinos
 Um pseudotarget é um rótulo usado no lugar de um nome de arquivo em uma linha de dependência. Ele será interpretado como um arquivo que não existe e então está desatualizado. NMAKE pressupõe que o carimbo de hora do pseudotarget é o mais recente de todos os seus dependentes. Se ele tiver nenhuma dependentes, supõe-se a hora atual. Se um pseudotarget é usado como um destino, os comandos são sempre executados. Um pseudotarget usado como um dependente também deve aparecer como um destino em outra dependência. No entanto, essa dependência não precisa ter um bloco de comandos.  

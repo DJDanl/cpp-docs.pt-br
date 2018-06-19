@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356667"
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>Caixas de diálogo e assistentes do ATL
 Os assistentes de biblioteca de modelo ativa (ATL) geram código padronizado para vários tipos de objetos COM. Você pode executar os assistentes, abrindo o menu de atalho para um projeto no **Solution Explorer** e escolhendo **adicionar**, **classe**.  

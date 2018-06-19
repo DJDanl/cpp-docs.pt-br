@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367892"
 ---
 # <a name="inferred-dependents"></a>Dependentes inferidos
 Um dependente deduzido é derivado de uma regra de inferência e é avaliado antes dependentes explícitas. Se um dependentes inferidos está desatualizado em relação ao seu destino, NMAKE invoca o bloco de comandos para a dependência. Se um dependentes inferidos não existem ou está desatualizado em relação à suas própria dependentes, NMAKE atualiza primeiro deduzido dependente. Para obter mais informações sobre dependentes inferidos, consulte [regras de inferência](../build/inference-rules.md).  

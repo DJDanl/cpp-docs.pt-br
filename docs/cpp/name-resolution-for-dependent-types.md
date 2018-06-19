@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419905"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Resolução de nome para tipos dependentes
 Use **typename** para nomes qualificados em definições de modelo para informar ao compilador que o nome qualificado determinado identifica um tipo. Para obter mais informações, consulte [typename](../cpp/typename.md).  

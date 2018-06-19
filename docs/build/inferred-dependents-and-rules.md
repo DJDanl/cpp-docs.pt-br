@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368038"
 ---
 # <a name="inferred-dependents-and-rules"></a>Dependentes inferidos e regras
 NMAKE assume um dependentes inferidos para um destino se existe uma regra de inferência aplicável. Uma regra se aplica se:  

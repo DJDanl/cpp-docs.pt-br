@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421933"
 ---
 # <a name="using-structured-exception-handling-with-c"></a>Usando tratamento de exceções estruturado com C++
 O tratamento de exceções estruturado descrito nesses artigos funciona com arquivos de origem de C e C++. No entanto, ele não é projetado especificamente para C++ e não é recomendado. Você pode garantir que o código seja mais portátil usando a manipulação de exceção de C++. Além disso, o mecanismo de tratamento de exceções de C++ é mais flexível, pois pode tratar exceções de qualquer tipo.  

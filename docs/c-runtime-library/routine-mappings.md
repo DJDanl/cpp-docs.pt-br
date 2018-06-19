@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415488"
 ---
 # <a name="routine-mappings"></a>Mapeamentos de rotina
 Os mapeamentos de rotina de texto genérico são definidos em TCHAR. H. `_tccpy` e `_tclen` são mapeados para funções no modelo MBCS; eles são mapeados para macros ou funções embutidas nos modelos Unicode e SBCS para fins de integridade. Para obter informações sobre uma rotina de texto genérica, consulte o tópico da ajuda sobre as rotinas relacionadas a `SBCS`, `_MBCS` ou `_UNICODE`.  

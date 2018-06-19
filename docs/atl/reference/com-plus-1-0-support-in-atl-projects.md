@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359351"
 ---
 # <a name="com-10-support-in-atl-projects"></a>COM+ 1.0 suporte em projetos ATL
 Você pode usar o [Assistente de projeto de ATL](../../atl/reference/creating-an-atl-project.md) para criar um projeto com o suporte básico para componentes COM+ 1.0.  

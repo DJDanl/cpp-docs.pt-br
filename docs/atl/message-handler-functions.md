@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355601"
 ---
 # <a name="message-handler-functions"></a>Funções de manipulador de mensagens
 ATL fornece três tipos de funções de manipulador de mensagens:  

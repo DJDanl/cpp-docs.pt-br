@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366101"
 ---
 # <a name="catlfile-class"></a>Classe CAtlFile
 Essa classe fornece um wrapper fino em torno do Windows API de manipulação de arquivos.  

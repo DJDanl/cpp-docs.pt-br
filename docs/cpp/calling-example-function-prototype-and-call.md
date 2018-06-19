@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409365"
 ---
 # <a name="calling-example-function-prototype-and-call"></a>Exemplo de chamada: protótipo de função e chamada
 ## <a name="microsoft-specific"></a>Específico da Microsoft  

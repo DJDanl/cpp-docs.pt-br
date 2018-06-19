@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089826"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Namespaces e visibilidade do tipo (C++/CX)
 Um namespace é uma construção C++ padrão para agrupamento de tipos que têm funcionalidade relacionada e para evitar colisões de nomes em bibliotecas. O sistema de tipos do tempo de execução do Windows requer que todos os tipos públicos de tempo de execução do Windows, incluindo aqueles em seu próprio código, devem ser declarados em um namespace no escopo do namespace. Os tipos públicos que são declarados no escopo global ou aninhados dentro de outra classe causarão um erro no tempo de compilação.  

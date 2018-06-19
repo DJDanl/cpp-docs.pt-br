@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355339"
 ---
 # <a name="class-factories-classes"></a>Classes de fábricas de classe
 As classes a seguir implementam ou dar suporte a uma fábrica de classes:  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356521"
 ---
 # <a name="implementing-ccomobjectrootex"></a>Implementando CComObjectRootEx
 [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) é essencial; todos os objetos ATL devem ter uma instância de `CComObjectRootEx` ou [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) em seu herança. `CComObjectRootEx` fornece o mecanismo padrão `QueryInterface` com base em entradas de mapa COM.  
