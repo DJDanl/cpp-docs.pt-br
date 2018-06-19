@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109132"
 ---
 # <a name="general-language-changes-ccli"></a>Alterações gerais em linguagens (C++/CLI)
 Um número de recursos de linguagem CLR alterado de extensões gerenciadas para C++ para Visual C++.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138672"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hospedando um controle de usuário do Windows Form como uma caixa de diálogo MFC
 MFC fornece a classe de modelo [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) para que você pode hospedar um controle de usuário do Windows Forms (<xref:System.Windows.Forms.UserControl>) em uma caixa de diálogo modal ou sem janela restrita do MFC. `CWinFormsDialog` é derivado da classe MFC [CDialog](../mfc/reference/cdialog-class.md), portanto, a caixa de diálogo pode ser iniciada como modal ou sem janela restrita.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272298"
 ---
 # <a name="compiler-error-c3859"></a>C3859 de erro do compilador
 intervalo de memória virtual para PCH excedido; recompile com uma opção de linha de comando de '-Zmvalue' ou maior  

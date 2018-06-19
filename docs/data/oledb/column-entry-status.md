@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097842"
 ---
 # <a name="columnentrystatus"></a>COLUMN_ENTRY_STATUS
 Representa uma associação no conjunto de linhas para a coluna específica no banco de dados.  

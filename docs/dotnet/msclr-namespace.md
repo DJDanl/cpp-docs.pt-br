@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132902"
 ---
 # <a name="msclr-namespace"></a>namespace msclr
 O `msclr` namespace contém todas as classes da biblioteca de suporte do C++. Para obter mais informações sobre essas classes, consulte [biblioteca de suporte do C++](../dotnet/cpp-support-library.md).  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104546"
 ---
 # <a name="transaction-object-interfaces"></a>Interfaces de objeto da transação
 O objeto de transação define uma unidade atômica de trabalho em uma fonte de dados e determina como as unidades de trabalho se relacionam entre si. Este objeto não é diretamente suportado por modelos de provedor do OLE DB (ou seja, você deve criar seu próprio objeto).  

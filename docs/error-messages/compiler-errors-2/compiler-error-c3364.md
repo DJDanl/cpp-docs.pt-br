@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257841"
 ---
 # <a name="compiler-error-c3364"></a>C3364 de erro do compilador
 'delegate': construtor delegate: o argumento deve ser um ponteiro para a função global ou de função de membro de classe gerenciada  

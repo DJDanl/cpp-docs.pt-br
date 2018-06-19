@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249895"
 ---
 # <a name="compiler-error-c3299"></a>C3299 de erro do compilador
 'member_function': não é possível especificar restrições, elas são herdadas do método base  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279205"
 ---
 # <a name="compiler-warning-level-1-c4548"></a>Compilador C4548 de aviso (nível 1)
 expressão antes da vírgula não tem efeito; expressão esperada com efeito colateral  

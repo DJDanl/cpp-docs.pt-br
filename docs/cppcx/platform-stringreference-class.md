@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097504"
 ---
 # <a name="platformstringreference-class"></a>Classe Platform::StringReference
 Um tipo de otimização que você pode usar para transmitir dados de cadeia de caracteres dos parâmetros de entrada `Platform::String^` a outros métodos com um mínimo de operações de cópia.  

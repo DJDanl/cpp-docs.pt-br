@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100363"
 ---
 # <a name="idbinitializeimplmpcutlpropinfo"></a>IDBInitializeImpl::m_pCUtlPropInfo
 Um ponteiro para objeto de implementação para obter informações de propriedades de banco de dados.  

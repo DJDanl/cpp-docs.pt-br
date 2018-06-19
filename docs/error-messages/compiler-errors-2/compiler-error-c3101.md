@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247450"
 ---
 # <a name="compiler-error-c3101"></a>C3101 de erro do compilador
 expressão inválida para o campo' argumento de atributo nomeado'  

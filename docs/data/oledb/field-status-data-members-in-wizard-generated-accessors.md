@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104393"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Membros de dados do status de campo em acessadores gerados por assistente
 Quando você usar o Assistente de ATL OLE DB consumidor para criar um consumidor, o assistente gera um membro de dados na classe de registro de usuário para cada campo que você especificar em seu mapa de coluna. Cada membro de dados é do tipo `DWORD` e contém um valor de status correspondentes ao seu respectivo campo.  

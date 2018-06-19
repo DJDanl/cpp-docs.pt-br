@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252006"
 ---
 # <a name="compiler-error-c3611"></a>C3611 de erro do compilador
 'function': uma função sealed não pode ter um especificador puro  

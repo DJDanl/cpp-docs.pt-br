@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248223"
 ---
 # <a name="compiler-error-c3156"></a>C3156 de erro do compilador
 'class': você não pode ter uma definição de local de um serviço ou tipo de WinRT  
