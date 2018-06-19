@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349474"
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>Formatação de caractere em controles de edição avançada
 Você pode usar funções de membro do controle de edição avançada ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) para formatar caracteres e para recuperar informações de formatação. Para caracteres, você pode especificar o tipo de fonte, tamanho, cor e efeitos como negrito, itálico e protegidos.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258194"
 ---
 # <a name="compiler-error-c3006"></a>C3006 de erro do compilador
 'cláusula': cláusula de OpenMP 'diretiva' diretiva não tem um argumento esperado  

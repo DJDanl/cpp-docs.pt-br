@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248721"
 ---
 # <a name="compiler-error-c3214"></a>C3214 de erro do compilador
 'type': argumento de tipo inválido para parâmetro de generic 'generic_type' do parâmetro genérico não atender a restrição 'restrição'  

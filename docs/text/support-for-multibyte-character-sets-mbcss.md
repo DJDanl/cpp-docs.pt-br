@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863628"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Suporte para Conjuntos de Caracteres Multibyte (MBCSs)
 Conjuntos de caracteres multibyte (MBCSs) são uma abordagem mais antiga para a necessidade de oferecer suporte a conjuntos de caracteres, como japonês e chinês, que não podem ser representado em um único byte. Se você estiver fazendo um novo desenvolvimento, você deve usar Unicode para todas as cadeias de caracteres de texto exceto talvez sistema cadeias de caracteres que não são vistas por usuários finais. MBCS é uma tecnologia herdada e não é recomendado para novo desenvolvimento.  

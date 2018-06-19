@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348967"
 ---
 # <a name="handling-reflected-messages"></a>Manipulando mensagens refletidas
 Mensagem de reflexão permite que você manipule as mensagens para um controle, como `WM_CTLCOLOR`, **WM_COMMAND**, e **WM_NOTIFY**, no próprio controle. Isso torna o controle mais portátil e autossuficiente. O mecanismo funciona com controles comuns do Windows, bem como com controles ActiveX (anteriormente chamado de controles OLE).  

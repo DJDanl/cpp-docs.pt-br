@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381739"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Usando uma lista de imagens com um controle rebar
 Cada faixa rebar pode conter, entre outras coisas, uma imagem de uma lista de imagens associado. O procedimento a seguir detalha as etapas necessárias para exibir uma imagem em uma faixa de rebar.  

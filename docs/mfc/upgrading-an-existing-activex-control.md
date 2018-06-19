@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385301"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Atualizando um controle ActiveX existente
 Controles ActiveX existente (anteriormente conhecida como controles OLE) pode ser usado na Internet sem modificação. No entanto, convém modificar controles para melhorar o desempenho. Ao usar o controle em uma página da Web, há considerações adicionais. O arquivo. ocx e todos os arquivos de suporte devem estar no computador de destino ou ser baixados da Internet. Isso torna o tamanho de código e uma consideração importante de tempo de download. Downloads podem ser empacotados em um arquivo. cab assinado. Você pode marcar seu controle como seguro para script e seguro para inicialização.  

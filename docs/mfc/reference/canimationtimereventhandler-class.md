@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352093"
 ---
 # <a name="canimationtimereventhandler-class"></a>Classe CAnimationTimerEventHandler
 Implementa um retorno de chamada, que é chamado pela API de animação quando ocorrem eventos de tempo.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348173"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Como o Framework chama o código
 É fundamental compreender a relação entre seu código-fonte e o código do Framework do MFC. Quando seu aplicativo é executado, a maioria do fluxo de controle reside no código do framework. A estrutura gerencia o loop de mensagem que obtém as mensagens do Windows que o usuário escolhe comandos e edita dados em uma exibição. Eventos que a estrutura pode manipular por si só não confiam no seu código em todos os. Por exemplo, o framework sabe como fechar janelas e como sair do aplicativo em resposta aos comandos do usuário. Como ele trata essas tarefas, a estrutura usa manipuladores de mensagens e funções virtuais do C++ para lhe dar oportunidades para responder a esses eventos também. Seu código é não no controle, no entanto; a estrutura é.  

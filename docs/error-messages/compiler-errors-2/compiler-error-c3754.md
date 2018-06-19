@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268598"
 ---
 # <a name="compiler-error-c3754"></a>C3754 de erro do compilador
 construtor delegate: função de membro 'function' não pode ser chamada em uma instância do tipo 'type'  

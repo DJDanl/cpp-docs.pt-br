@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245969"
 ---
 # <a name="compiler-error-c2847"></a>C2847 de erro do compilador
 não é possível aplicar sizeof gerenciado ou tipo de WinRT 'class'  

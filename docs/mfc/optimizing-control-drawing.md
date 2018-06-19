@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351288"
 ---
 # <a name="optimizing-control-drawing"></a>Otimizando o desenho de controle
 Quando um controle é instruído para desenhar a próprio em um contexto de dispositivo fornecida pelo contêiner, ele normalmente seleciona objetos GDI (como fontes, pincéis e canetas) no contexto de dispositivo, executa as operações de desenho e restaura os objetos GDI anteriores. Se o contêiner tem vários controles que estão a ser desenhado no mesmo contexto de dispositivo, e cada controle seleciona os objetos GDI requer, tempo pode ser salvo se os controles não restauram objetos selecionados anteriormente individualmente. Depois que todos os controles foi emitidos, o contêiner pode restaurar os objetos originais automaticamente.  

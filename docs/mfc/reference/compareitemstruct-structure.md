@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368625"
 ---
 # <a name="compareitemstruct-structure"></a>Estrutura COMPAREITEMSTRUCT
 O `COMPAREITEMSTRUCT` estrutura fornece os identificadores e os dados fornecidos pelo aplicativo para dois itens em uma caixa de lista classificada, desenhados pelo proprietário ou caixa de combinação.  

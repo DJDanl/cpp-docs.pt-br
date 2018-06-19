@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241798"
 ---
 # <a name="compiler-error-c2928"></a>C2928 de erro do compilador
 instanciação explícita; 'Identificador' não é uma função ou um membro de dados estáticos da classe de modelo 'class'  

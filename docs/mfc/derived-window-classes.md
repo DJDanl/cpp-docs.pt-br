@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351484"
 ---
 # <a name="derived-window-classes"></a>Classes de janela derivadas
 Você pode criar janelas diretamente do [CWnd](../mfc/reference/cwnd-class.md), ou derivar novas classes de janela de `CWnd`. Isso é como você normalmente cria seu próprio personalizada do windows. No entanto, a maioria dos windows usados em um programa do framework são criadas de uma da `CWnd`-classes de janela com moldura fornecidos pelo MFC derivadas.  

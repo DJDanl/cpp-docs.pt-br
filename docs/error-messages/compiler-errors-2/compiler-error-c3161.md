@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250697"
 ---
 # <a name="compiler-error-c3161"></a>C3161 de erro do compilador
 'interface': aninhar classe, struct, união ou interface em uma interface é inválido; aninhar interface em uma classe, struct ou união é inválido  

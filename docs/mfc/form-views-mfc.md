@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349036"
 ---
 # <a name="form-views-mfc"></a>Exibições de formulário (MFC)
 Você pode adicionar formulários para qualquer aplicativo do Visual C++ que oferece suporte as bibliotecas MFC, incluindo um [aplicativo baseado em formulários](../mfc/reference/creating-a-forms-based-mfc-application.md) (um cuja exibição de classe é derivada de `CFormView`). Se você não tiver criado seu aplicativo para dar suporte a formulários inicialmente, o Visual C++ adicionará esse suporte para você quando você insere um novo formulário. Em um aplicativo SDI ou MDI, que implementa o padrão [arquitetura de documento/exibição](../mfc/document-view-architecture.md), quando o usuário escolhe o `New` comando (por padrão, no **arquivo** menu), Visual C++ solicita ao usuário Escolha entre formulários disponíveis.  

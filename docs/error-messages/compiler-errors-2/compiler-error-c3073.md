@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253610"
 ---
 # <a name="compiler-error-c3073"></a>C3073 de erro do compilador
 'type': classe ref não tem um construtor de cópia definido pelo usuário  

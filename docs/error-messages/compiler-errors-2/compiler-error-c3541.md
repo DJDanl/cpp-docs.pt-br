@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255104"
 ---
 # <a name="compiler-error-c3541"></a>C3541 de erro do compilador
 'type': typeid não pode ser aplicado a um tipo que contém 'auto'  

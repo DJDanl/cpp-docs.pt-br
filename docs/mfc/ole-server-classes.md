@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350423"
 ---
 # <a name="ole-server-classes"></a>Classes de servidor OLE
 Essas classes são usadas por aplicativos de servidor. Documentos de servidor são derivados de `COleServerDoc` , em vez de **CDocument**. Observe que, como `COleServerDoc` é derivado de `COleLinkingDoc`, documentos de servidor também podem ser recipientes que oferecem suporte à vinculação.  

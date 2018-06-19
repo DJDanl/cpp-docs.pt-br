@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245809"
 ---
 # <a name="compiler-error-c2904"></a>C2904 de erro do compilador
 'Identificador': nome já usado para um modelo no escopo atual  

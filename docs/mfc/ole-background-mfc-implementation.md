@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349993"
 ---
 # <a name="ole-background-mfc-implementation"></a>tela de fundo OLE: implementação MFC
 Por causa do tamanho e complexidade da bruto OLE API, chamá-lo diretamente para gravar aplicativos OLE pode ser muito demorado. O objetivo da implementação de biblioteca Microsoft Foundation Class de OLE é reduzir a quantidade de trabalho que você precisa fazer para escrever aplicativos compatíveis com OLE completo.  

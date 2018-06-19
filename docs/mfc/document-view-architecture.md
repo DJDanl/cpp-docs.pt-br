@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350049"
 ---
 # <a name="documentview-architecture"></a>Arquitetura de documento/exibição
 Por padrão, o Assistente de aplicativo MFC cria um esqueleto de aplicativo com uma classe de documento e uma classe de exibição. MFC separa o gerenciamento de dados para essas duas classes. O documento armazena os dados e gerencia os dados de impressão e coordena a atualização de vários modos de exibição dos dados. O modo de exibição exibe os dados e gerencia a interação do usuário com ele, incluindo a seleção e edição.  

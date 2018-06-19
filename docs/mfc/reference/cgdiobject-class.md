@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369009"
 ---
 # <a name="cgdiobject-class"></a>Classe CGdiObject
 Fornece uma classe base para vários tipos de gráficos do Windows objetos GDI (interface) do dispositivo como bitmaps, regiões, pincéis, canetas, paletas e fontes.  

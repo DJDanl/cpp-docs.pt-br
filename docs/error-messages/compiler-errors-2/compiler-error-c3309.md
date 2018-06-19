@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255950"
 ---
 # <a name="compiler-error-c3309"></a>C3309 de erro do compilador
 'macro_name': nome do módulo não pode ser uma macro ou uma palavra-chave  

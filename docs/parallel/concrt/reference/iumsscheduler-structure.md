@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688525"
 ---
 # <a name="iumsscheduler-structure"></a>Estrutura IUMSScheduler
 Uma interface para uma abstração de um agendador de trabalho que deseja Gerenciador de recursos do tempo de execução de simultaneidade entregá-threads do modo de usuário agendáveis (UMS). O Gerenciador de recursos usa essa interface para se comunicar com os agendadores do thread UMS. A interface `IUMSScheduler` herda da interface `IScheduler`.  

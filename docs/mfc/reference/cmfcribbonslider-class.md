@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372691"
 ---
 # <a name="cmfcribbonslider-class"></a>Classe CMFCRibbonSlider
 O `CMFCRibbonSlider` classe implementa um controle deslizante que você pode adicionar uma barra de faixa de opções ou na barra de status da faixa de opções. O controle deslizante de faixa de opções se parece com os controles deslizantes de zoom que aparecem em aplicativos do Office 2007.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349423"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>Interpretando a entrada do usuário por meio de uma exibição
 Outras funções de membro da exibição de tratarem e interpretam todas as entrada do usuário. Normalmente, você definirá funções de membro de manipulador de mensagens em sua classe de exibição para processar:  

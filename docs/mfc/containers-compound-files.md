@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348339"
 ---
 # <a name="containers-compound-files"></a>Contêineres: arquivos compostos
 Este artigo explica os componentes e a implementação de arquivos compostos e as vantagens e desvantagens do uso de arquivos compostos em seus aplicativos de OLE.  

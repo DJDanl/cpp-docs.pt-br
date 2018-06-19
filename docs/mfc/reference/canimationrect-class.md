@@ -53,6 +53,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357081"
 ---
 # <a name="canimationrect-class"></a>Classe CAnimationRect
 Implementa a funcionalidade de um retângulo cujos lados podem ser animados.  

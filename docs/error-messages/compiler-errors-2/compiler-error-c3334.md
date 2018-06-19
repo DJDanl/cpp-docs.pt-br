@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251855"
 ---
 # <a name="compiler-error-c3334"></a>C3334 de erro do compilador
 não é possível #import corrompido com biblioteca de tipos  

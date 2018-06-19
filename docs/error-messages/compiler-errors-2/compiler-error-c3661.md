@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265302"
 ---
 # <a name="compiler-error-c3661"></a>C3661 de erro do compilador
 lista de substituição explícita não encontrou nenhum método para substituir  

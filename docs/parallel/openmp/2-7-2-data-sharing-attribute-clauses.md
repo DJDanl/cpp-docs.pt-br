@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691893"
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 Cláusulas de atributo de compartilhamento de dados
 Várias diretivas aceitam cláusulas que permitem que um usuário controlar os atributos de compartilhamento de variáveis para a duração da região. Compartilhamento cláusulas de atributo se aplica somente a variáveis na extensão de léxica da diretiva na qual a cláusula é exibida. Nem todas as cláusulas a seguir são permitidas em todas as diretivas. A lista de cláusulas que são válidos em uma determinada diretiva são descritos com a diretiva.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355431"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Controles ActiveX MFC: subclasses de um controle do Windows
 Este artigo descreve o processo de subclasses de um controle comum do Windows para criar um controle ActiveX. Controle subclasses existentes do Windows é uma maneira rápida de desenvolver um controle ActiveX. O novo controle terá a capacidade do controle subclasse do Windows, como pintura e responder a cliques do mouse. Exemplo de controles do ActiveX MFC [botão](../visual-cpp-samples.md) é um exemplo de subclasses de um controle do Windows.  

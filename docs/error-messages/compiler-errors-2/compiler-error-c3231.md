@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257990"
 ---
 # <a name="compiler-error-c3231"></a>C3231 de erro do compilador
 'arg': argumento de tipo de modelo não é possível usar um parâmetro de tipo genérico  

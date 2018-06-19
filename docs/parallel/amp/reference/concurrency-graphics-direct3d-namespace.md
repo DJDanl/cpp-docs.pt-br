@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695987"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace"></a>Namespace Concurrency::graphics::direct3d
 Fornece o [get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture) e [make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture) métodos.  

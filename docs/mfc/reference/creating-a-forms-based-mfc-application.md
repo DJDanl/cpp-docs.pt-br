@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372441"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Criando um aplicativo MFC com base em formulários
 Um formulário é uma caixa de diálogo com os controles que permitem que um usuário acesse e possivelmente de alteração de dados. Você talvez queira desenvolver um aplicativo no qual o usuário seleciona em uma seleção de formulários. Normalmente, um aplicativo baseado em formulários permite que os formulários de acesso do usuário por clique **novo** do **arquivo** menu. Um aplicativo baseado em caixa de diálogo, que não oferecem aos usuários acesso a um **novo** opção o **arquivo** menu, também é considerado um aplicativo baseado em formulários.  

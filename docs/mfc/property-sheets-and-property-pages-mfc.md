@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348976"
 ---
 # <a name="property-sheets-and-property-pages-mfc"></a>Folhas de propriedades e páginas de propriedade (MFC)
 Um MFC [caixa de diálogo](../mfc/dialog-boxes.md) pode levar uma aparência "caixa de diálogo de guia" incorporando folhas de propriedades e páginas de propriedade. Esse tipo de caixa de diálogo semelhante a várias caixas de diálogo no Microsoft Word, Excel e Visual C++, chamado "folha de propriedades" no MFC, parece conter uma pilha de folhas com guias, bem como uma pilha de pastas de arquivos visto de frente para trás, ou um grupo de janelas em cascata. Controles da guia front são visíveis; somente a guia rotulada está visível nas guias traseiras. Folhas de propriedades são particularmente úteis para o gerenciamento de grandes números de propriedades ou configurações que se enquadram bem se vários grupos. Normalmente, uma folha de propriedades pode simplificar uma interface do usuário, substituindo várias caixas de diálogo separada.  

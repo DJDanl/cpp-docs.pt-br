@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863498"
 ---
 # <a name="asyncbasetrytransitiontoerror-method"></a>Método AsyncBase::TryTransitionToError
 Indica se o código de erro especificado pode modificar o estado de erro interno.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348655"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>Classes MFC para criar aplicativos clientes de Internet
 MFC fornece as seguintes classes e funções globais para gravar aplicativos cliente da Internet. Recuo indica que uma classe é derivada da classe ou acima dele. `CGopherFile` e `CHttpFile` derivam `CInternetFile`, por exemplo. Essas classes e funções globais são declaradas no AFXINET. H, exceto `CFileFind`, que é declarada no AFX. H.  

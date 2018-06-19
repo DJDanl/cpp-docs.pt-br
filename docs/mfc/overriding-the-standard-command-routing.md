@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352806"
 ---
 # <a name="overriding-the-standard-command-routing"></a>Substituindo o roteamento de comando padrão
 Em casos raros, quando você deve implementar algumas variações de roteamento de estrutura padrão, você pode substituí-la. A ideia é alterar o roteamento em uma ou mais classes, substituindo `OnCmdMsg` nessas classes. Fazer isso:  

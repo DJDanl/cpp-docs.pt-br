@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374832"
 ---
 # <a name="collection-class-helpers"></a>Auxiliares da classe de coleção
 As classes de coleção `CMap`, `CList`, e `CArray` usar funções de modelo auxiliar globais para esses fins de comparação, cópia e serializando elementos. Como parte de sua implementação de classes com base em `CMap`, `CList`, e `CArray`, você deve substituir essas funções conforme necessário com as versões de acordo com o tipo de dados armazenados em seu mapa, lista ou matriz. Para obter informações sobre substituição de funções auxiliares, como `SerializeElements`, consulte o artigo [coleções: como fazer uma coleção fortemente tipada](../../mfc/how-to-make-a-type-safe-collection.md). Observe que **ConstructElements** e **DestructElements** foram preteridos.  

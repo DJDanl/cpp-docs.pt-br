@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349338"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Dando suporte a arrastar e soltar para itens de cabeçalho
 Para fornecer suporte a arrastar e soltar para itens de cabeçalho, especifique o `HDS_DRAGDROP` estilo. Suporte a arrastar e soltar para itens de cabeçalho dá ao usuário a capacidade para reordenar os itens de cabeçalho de um controle de cabeçalho. O comportamento padrão fornece uma imagem de arrastar semitransparente do item de cabeçalho que está sendo arrastado e um indicador visual de que a nova posição, se o item de cabeçalho é descartado.  

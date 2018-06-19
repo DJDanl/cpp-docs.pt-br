@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348801"
 ---
 # <a name="dialog-bars"></a>Barras da caixa de diálogo
 Uma barra da caixa de diálogo é uma barra de ferramentas, um tipo de [barra de controle](../mfc/control-bars.md) que pode conter qualquer tipo de controle. Porque ela tem as características de uma caixa de diálogo sem janela restrita, uma [CDialogBar](../mfc/reference/cdialogbar-class.md) objeto fornece uma barra de ferramentas mais avançada.  

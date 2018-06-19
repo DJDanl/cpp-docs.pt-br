@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245362"
 ---
 # <a name="compiler-error-c3020"></a>C3020 de erro do compilador
 'var': variável de índice de OpenMP 'loop for' não pode ser modificado no corpo do loop  

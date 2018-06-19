@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864909"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Classes e Estruturas (Extensões de Componentes C++)
 Declara uma classe ou estrutura cujo *vida útil do objeto* é gerenciada automaticamente. Quando o objeto não está mais acessível ou sai do escopo, o Visual C++ descarta automaticamente a memória alocada para o objeto.  

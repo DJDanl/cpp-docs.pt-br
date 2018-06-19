@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366623"
 ---
 # <a name="cdaoerrorinfo-structure"></a>Estrutura CDaoErrorInfo
 O `CDaoErrorInfo` estrutura contém informações sobre um objeto de erro definida para os objetos de acesso de dados (DAO).  

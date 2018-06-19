@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349903"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Objetos e origens de dados: manipulação
 Depois que um objeto de dados ou fonte de dados tiver sido criado, você pode executar várias operações comuns nos dados, como inserção e remoção de dados, enumerando os formatos de que dados se encontra e muito mais. Este artigo descreve as técnicas necessárias para concluir as operações mais comuns. Os tópicos incluem:  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863563"
 ---
 # <a name="attribute-requirements"></a>Requisitos de atributo
 Os requisitos listados para atributos de C++ que descrevem os tipos de projeto, as configurações do compilador e outras informações necessárias para um atributo para trabalhar. As categorias de informações são descritas abaixo.  

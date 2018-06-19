@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354293"
 ---
 # <a name="exceptions-database-exceptions"></a>Exceções: exceções de banco de dados
 Este artigo explica como manipular exceções de banco de dados. A maioria do material neste artigo se aplica se você estiver trabalhando com as classes MFC para conectividade aberta de banco de dados (ODBC) ou as classes MFC para objetos de acesso de dados (DAO). Específica a um ou outro modelo de material é marcado explicitamente. Os tópicos incluem:  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371997"
 ---
 # <a name="mfc-application-wizard"></a>Assistente de aplicativo MFC
 O Assistente de aplicativo MFC gera um aplicativo que, quando compilado, implementa os recursos básicos de um aplicativo executável (.exe) do Windows. O aplicativo de início do MFC inclui arquivos de origem (. cpp) C++, arquivos de recurso (. rc), arquivos de cabeçalho (. h) e um arquivo de projeto (. vcxproj). O código gerado nesses arquivos de início é baseado em MFC.  

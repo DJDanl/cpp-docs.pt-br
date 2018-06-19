@@ -62,6 +62,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353678"
 ---
 # <a name="handling-customization-notifications"></a>Manipulando notificações de personalização
 Um controle comum de barra de ferramentas do Windows tem recursos internos de personalização, incluindo uma caixa de diálogo de personalização definidas pelo sistema que permitem ao usuário inserir, excluir ou reorganizar os botões da barra de ferramentas. O aplicativo determina se os recursos de personalização estão disponíveis e que controla a extensão aos quais o usuário pode personalizar a barra de ferramentas.  

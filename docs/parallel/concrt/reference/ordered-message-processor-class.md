@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688759"
 ---
 # <a name="orderedmessageprocessor-class"></a>Classe ordered_message_processor
 Um `ordered_message_processor` é um `message_processor` que permite que os blocos de mensagens processar mensagens na ordem em que foram recebidas.  

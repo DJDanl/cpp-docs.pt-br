@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252404"
 ---
 # <a name="compiler-error-c3230"></a>C3230 de erro do compilador
 'function': argumento de tipo de modelo para 'template' não pode conter um parâmetro de tipo genérico: 'param'  

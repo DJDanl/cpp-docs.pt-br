@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371791"
 ---
 # <a name="cmfcmaskededit-class"></a>Classe CMFCMaskedEdit
 O `CMFCMaskedEdit` classe oferece suporte a um controle de edição mascarada, que valida em relação a uma máscara de entrada do usuário e exibe os resultados validados de acordo com um modelo.  

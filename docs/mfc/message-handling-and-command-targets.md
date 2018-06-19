@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349461"
 ---
 # <a name="message-handling-and-command-targets"></a>Manipulação de mensagem e destinos de comando
 A interface de Despache comando `IOleCommandTarget` define um mecanismo simple e extensível para consultar e executar comandos. Esse mecanismo é mais simples do que o da automação `IDispatch` porque ele se baseia totalmente em um conjunto padrão de comandos; comandos raramente têm argumentos, e nenhuma informação de tipo envolvida (segurança de tipo é reduzida para argumentos de comando também).  

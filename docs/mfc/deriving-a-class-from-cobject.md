@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349351"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Derivando uma classe de CObject
 Este artigo descreve as etapas mínimas necessárias para derivar uma classe de [CObject](../mfc/reference/cobject-class.md). Outros `CObject` artigos de classe descrevem as etapas necessárias para tirar proveito de específicos `CObject` recursos, como a serialização e suporte de depuração de diagnóstico.  

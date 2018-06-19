@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688707"
 ---
 # <a name="332-ompgetwtick-function"></a>3.3.2 função omp_get_wtick
 O `omp_get_wtick` função retorna um valor de ponto flutuante de precisão dupla igual ao número de segundos entre tiques do relógio sucessivas. O formato é o seguinte:  

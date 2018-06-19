@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246898"
 ---
 # <a name="compiler-error-c3140"></a>C3140 de erro do compilador
 não é possível ter vários atributos de 'module' na mesma unidade de compilação  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245842"
 ---
 # <a name="compiler-error-c2989"></a>C2989 de erro do compilador
 'class': tipo de classe já foi declarado como um tipo diferente de classe  

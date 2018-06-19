@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349585"
 ---
 # <a name="managing-the-current-view"></a>Gerenciando a exibição atual
 Como parte da implementação padrão do windows do quadro, uma janela do quadro mantém o controle de um modo de exibição ativo no momento. Se a janela do quadro contiver mais de uma exibição, como o exemplo em uma janela separadora, o modo de exibição atual é o modo de exibição mais recente em uso. O modo de exibição ativo é independente da janela ativa no Windows ou o foco de entrada atual.  

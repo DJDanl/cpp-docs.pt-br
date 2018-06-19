@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695870"
 ---
 # <a name="2725-default"></a>2.7.2.5 default
 O **padrão** cláusula permite que o usuário afetar os atributos de compartilhamento de dados de variáveis. A sintaxe do **padrão** cláusula é o seguinte:  

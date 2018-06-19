@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349305"
 ---
 # <a name="memory-management-frame-allocation"></a>Gerenciamento de memória: alocação do quadro
 Alocação de quadro leva seu nome de "quadro de pilha" que é definido sempre que uma função é chamada. O quadro de pilhas é uma área da memória que temporariamente armazena os argumentos para a função, bem como todas as variáveis que são definidas locais à função. Variáveis de quadro geralmente são chamadas de variáveis "automáticos" porque o compilador automaticamente aloca o espaço para eles.  

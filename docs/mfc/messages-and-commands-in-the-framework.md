@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348865"
 ---
 # <a name="messages-and-commands-in-the-framework"></a>Mensagens e comandos no Framework
 Aplicativos escritos para o Microsoft Windows são "mensagem controlado por". Em resposta a eventos como cliques do mouse, pressionamentos de tecla, movimentos de janela e assim por diante, o Windows envia mensagens para a janela adequada. Estrutura de aplicativos processa mensagens do Windows como qualquer outro aplicativo do Windows. Mas o framework também fornece alguns aprimoramentos que tornam o processamento de mensagens melhor mais fácil e mais fácil manutenção encapsulado.  

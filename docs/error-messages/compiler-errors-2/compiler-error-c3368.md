@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251167"
 ---
 # <a name="compiler-error-c3368"></a>C3368 de erro do compilador
 declaração de função: convenção de chamada inválida para IDL  

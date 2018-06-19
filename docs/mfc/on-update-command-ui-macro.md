@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348476"
 ---
 # <a name="onupdatecommandui-macro"></a>Macro ON_UPDATE_COMMAND_UI
 Use o **propriedades** janela para se conectar a um objeto de interface do usuário para um manipulador de atualização de comando em um objeto de destino do comando. Ele se conectará automaticamente a ID do objeto de interface do usuário para o `ON_UPDATE_COMMAND_UI` macro e criar um manipulador no objeto que tratará a atualização. Consulte [mapeando mensagens para funções](../mfc/reference/mapping-messages-to-functions.md) para obter mais informações.  

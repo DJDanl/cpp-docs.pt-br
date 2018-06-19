@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373792"
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>Funcionalidades da interface do usuário, Assistente de Aplicativo MFC
 Este tópico explica as opções que você pode usar para especificar a aparência de seu aplicativo. Os recursos de interface de usuário disponíveis para seu projeto dependem do tipo de aplicativo especificado no [tipo de aplicativo, Assistente de aplicativo MFC](../../mfc/reference/application-type-mfc-application-wizard.md) página do Assistente de aplicativo MFC. Por exemplo, se você criar um aplicativo de interface de documento único, você não pode adicionar estilos de quadro filho.  

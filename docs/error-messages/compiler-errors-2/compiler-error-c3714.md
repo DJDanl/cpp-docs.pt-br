@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266393"
 ---
 # <a name="compiler-error-c3714"></a>C3714 de erro do compilador
 'method': um método de manipulador de eventos deve ter a mesma convenção de chamada como a origem 'method'  

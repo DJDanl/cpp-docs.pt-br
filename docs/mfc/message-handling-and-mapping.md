@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348522"
 ---
 # <a name="message-handling-and-mapping"></a>Manipulação e mapeamento de mensagem
 Família este artigo descreve como mensagens e comandos são processados pela estrutura MFC e como conectá-los para suas funções de manipulador.  

@@ -56,6 +56,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349776"
 ---
 # <a name="graphic-objects"></a>Objetos gráficos
 O Windows fornece uma variedade de ferramentas a ser usado em contextos de dispositivo de desenho. Ele fornece canetas para desenhar linhas, pincéis preenchimento interiores e fontes para desenhar o texto. MFC fornece classes de objeto de gráfico equivalentes para as ferramentas de desenho no Windows. A tabela a seguir mostra as classes disponíveis e os gráficos equivalentes do Windows tipos de identificador de interface (GDI) do dispositivo.  

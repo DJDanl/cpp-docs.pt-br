@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257238"
 ---
 # <a name="compiler-error-c3488"></a>C3488 de erro do compilador
 'var' não é permitida quando o modo de captura padrão é por referência  

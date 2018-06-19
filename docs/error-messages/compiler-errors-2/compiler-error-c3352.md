@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253997"
 ---
 # <a name="compiler-error-c3352"></a>C3352 de erro do compilador
 'function': a função especificada não coincide com o tipo delegado 'type'  

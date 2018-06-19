@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244915"
 ---
 # <a name="compiler-error-c3021"></a>C3021 de erro do compilador
 'arg': argumento está vazio na diretiva de OpenMP 'diretiva'  

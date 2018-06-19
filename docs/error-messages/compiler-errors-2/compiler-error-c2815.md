@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33240812"
 ---
 # <a name="compiler-error-c2815"></a>C2815 de erro do compilador
 'operator delete': primeiro parâmetro formal deve ser ' void *', mas 'param' foi usada  

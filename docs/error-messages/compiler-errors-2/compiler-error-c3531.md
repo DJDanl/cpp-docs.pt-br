@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252678"
 ---
 # <a name="compiler-error-c3531"></a>C3531 de erro do compilador
 'symbol': um símbolo cujo tipo contém 'auto' deve ter um inicializador  

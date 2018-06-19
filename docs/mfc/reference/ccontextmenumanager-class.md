@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357709"
 ---
 # <a name="ccontextmenumanager-class"></a>Classe CContextMenuManager
 O `CContextMenuManager` objeto gerencia menus de atalho, também conhecido como menus de contexto.  

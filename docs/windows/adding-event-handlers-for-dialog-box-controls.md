@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863693"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Adicionando manipuladores de eventos para controles da caixa de diálogo
 Para caixas de diálogo de projeto que já estão associadas uma classe, você pode tirar proveito de alguns atalhos quando você cria manipuladores de eventos. Você pode criar rapidamente um manipulador para o evento de notificação de controle padrão ou para qualquer mensagem aplicável do Windows.  

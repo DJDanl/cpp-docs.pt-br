@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252100"
 ---
 # <a name="compiler-error-c3044"></a>C3044 de erro do compilador
 'section': permitida apenas aninhada diretamente sob uma diretiva de OpenMP 'sections'  

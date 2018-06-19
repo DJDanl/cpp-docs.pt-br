@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351345"
 ---
 # <a name="menus-and-resources-server-additions"></a>Menus e recursos: adições de servidor
 Este artigo explica as alterações que precisam ser feitas para os menus e outros recursos em um aplicativo de servidor (componente) de edição visual. Um aplicativo de servidor requer várias adições para a estrutura de menus e outros recursos porque ela pode ser iniciada em um dos três modos: autônomo sozinho, inseridos, ou no local. Conforme descrito no [Menus e recursos OLE](../mfc/menus-and-resources-ole.md) artigo, há um máximo de quatro conjuntos de menus. Todos os quatro são usados para um aplicativo de servidor completo MDI, enquanto apenas três são usados para um miniserver. O Assistente de aplicativo criará o layout do menu necessários para o tipo de servidor que você deseja. Alguma personalização pode ser necessária.  

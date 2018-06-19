@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370149"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Criando um aplicativo MFC no estilo de Explorador de Arquivos
 Muitos aplicativos de sistema do Windows usam a interface do usuário (UI) para o Explorador de arquivos. Quando você inicia o Explorador de arquivos, por exemplo, você ver um aplicativo com uma divisão vertical barra dividir a área cliente. À esquerda da área cliente fornece navegação e os recursos de navegação e o lado direito da área cliente mostra detalhes pertinentes à seleção no painel esquerdo. Quando um usuário clica em um item no painel esquerdo, o aplicativo preenche novamente o painel direito. Em um aplicativo MDI, você pode usar comandos no **exibição** menu para alterar a quantidade de detalhes exibidos no painel direito. (Em um SDI ou vários aplicativos de nível superior do documento, você pode alterar os detalhes usando os botões da barra de ferramentas somente.)  

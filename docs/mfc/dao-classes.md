@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348914"
 ---
 # <a name="dao-classes"></a>Classes DAO
 Essas classes de trabalhar com as outras classes de estrutura de aplicativo para fornecer acesso fácil a bancos de dados do objeto de acesso a dados (DAO), que usam o mesmo mecanismo de banco de dados do Microsoft Visual Basic e Microsoft Access. As classes DAO também podem acessar uma ampla variedade de bancos de dados para os quais os drivers de conectividade de banco de dados aberto (ODBC) estão disponíveis.  

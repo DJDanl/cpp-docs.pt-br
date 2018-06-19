@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689630"
 ---
 # <a name="24-work-sharing-constructs"></a>2.4 Construtos Work-sharing
 Uma construção de compartilhamento em trabalho distribui a execução da instrução associada entre os membros da equipe que encontrou. As diretivas de compartilhamento de trabalho não iniciar novos threads e não há nenhum barreira implícita na entrada para uma construção de compartilhamento de trabalho.  

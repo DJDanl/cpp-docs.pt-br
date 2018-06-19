@@ -77,6 +77,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355943"
 ---
 # <a name="cbasetabbedpane-class"></a>Classe CBaseTabbedPane
 Estende a funcionalidade do [CDockablePane classe](../../mfc/reference/cdockablepane-class.md) para suporte à criação de janelas com guias.  

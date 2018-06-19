@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252426"
 ---
 # <a name="compiler-error-c3610"></a>C3610 de erro do compilador
 'valuetype': tipo de valor deve ser 'boxed' antes do método 'method' pode ser chamado  

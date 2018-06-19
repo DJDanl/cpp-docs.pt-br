@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354774"
 ---
 # <a name="how-to-create-a-message-map-for-a-template-class"></a>Como criar um mapa de mensagem para uma classe de modelo
 Mapeamento de mensagem em MFC fornece uma maneira eficiente para direcionar as mensagens do Windows a uma instância de objeto C++ apropriada. Classes de aplicativo, classes de documento e exibição, classes de controle e assim por diante são exemplos de destinos de mapa de mensagem do MFC.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371628"
 ---
 # <a name="mapping-messages-to-functions"></a>Mapeando mensagens para funções
 A janela Propriedades permite vincular manipuladores de mensagens (funções de membro de classes de interface do usuário do MFC) para as mensagens geradas por recursos de seu aplicativo. Eles usam [mapas de mensagem MFC](../../mfc/messages-and-commands-in-the-framework.md) para criar uma associação.  

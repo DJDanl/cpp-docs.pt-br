@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253512"
 ---
 # <a name="compiler-error-c3530"></a>C3530 de erro do compilador
 'auto' não pode ser combinado com nenhum outro especificador de tipo  

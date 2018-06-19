@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353160"
 ---
 # <a name="cctrlview-class"></a>Classe CCtrlView
 Se adapta a arquitetura do modo de exibição de documentos para os controles comuns com suporte em versões do Windows 98 e Windows NT 3.51 e posteriores.  

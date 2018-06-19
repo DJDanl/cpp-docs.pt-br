@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350348"
 ---
 # <a name="mdi-tabbed-groups"></a>Grupos com guias MDI
 O recurso de grupos com guias MDI (interface) documento vários permite que vários aplicativos de interface (MDI) do documento exibir uma ou mais janelas com guias (ou grupos do windows com guias, conhecidos como *grupos com guias*) na área do cliente MDI. As janelas tabuladas podem ser alinhadas verticalmente ou horizontalmente. Se um aplicativo hospeda mais de um grupo de guias MDI, os grupos são separados por divisores.  

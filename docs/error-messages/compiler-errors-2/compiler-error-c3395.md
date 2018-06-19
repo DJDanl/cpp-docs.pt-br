@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254304"
 ---
 # <a name="compiler-error-c3395"></a>C3395 de erro do compilador
 'function': dllexport não pode ser aplicado a uma função com o \__clrcall convenção de chamada  

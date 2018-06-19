@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381671"
 ---
 # <a name="what-does-it-cost-me-to-derive-a-class-from-cobject"></a>O que me custa derivar uma classe a partir de CObject?
 A sobrecarga em derivar da classe [CObject](../mfc/reference/cobject-class.md) é mínimo. A classe derivada herda apenas quatro funções virtuais e um único [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) objeto.  

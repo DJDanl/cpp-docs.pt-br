@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348201"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Manipuladores para mensagens do Windows padrão
 Padrão de manipuladores de mensagens padrão do Windows (**WM _**) são predefinidos na classe `CWnd`. A biblioteca de classes bases nomes para esses manipuladores no nome da mensagem. Por exemplo, o manipulador para o `WM_PAINT` mensagem for declarada em `CWnd` como:  

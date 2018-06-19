@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246024"
 ---
 # <a name="compiler-error-c3179"></a>C3179 de erro do compilador
 gerenciado sem um nome ou tipo de WinRT não é permitido  

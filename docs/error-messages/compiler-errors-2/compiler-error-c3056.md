@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249161"
 ---
 # <a name="compiler-error-c3056"></a>C3056 de erro do compilador
 'symbol': símbolo não está no mesmo escopo da diretiva 'threadprivate'  

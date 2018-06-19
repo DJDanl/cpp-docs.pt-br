@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864236"
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>Associando comandos de menu ao texto da barra de status em aplicativos MFC
 O aplicativo pode exibir o texto descritivo para cada um dos comandos de menu que um usuário pode selecionar. Você pode fazer isso atribuindo uma cadeia de caracteres de texto para cada comando de menu usando o **Prompt** propriedade na janela Propriedades. Se você tiver uma cadeia de caracteres no [tabela de cadeia de caracteres](../windows/string-editor.md) cuja ID é o mesmo que o comando, um aplicativo MFC automaticamente exibirá esse recurso de cadeia de caracteres na barra de status do aplicativo em execução quando o usuário focalizar um item de menu.  

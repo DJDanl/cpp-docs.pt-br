@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348541"
 ---
 # <a name="ole-background-containers-and-servers"></a>tela de fundo OLE: contêineres e servidores
 Um aplicativo de contêiner é um aplicativo que pode incorporar itens incorporados ou vinculados em seus próprios documentos. Os documentos gerenciados por um aplicativo de contêiner devem ser capazes de armazenar e exibir os componentes de documento OLE, bem como os dados criados pelo próprio aplicativo. Um aplicativo de contêiner também deve permitir que os usuários inserir novos itens ou editar itens existentes Ativando aplicativos de servidor quando necessário. Os requisitos de interface do usuário de um aplicativo de contêiner estão listados no artigo [contêineres: emissões de Interface do usuário](../mfc/containers-user-interface-issues.md).  

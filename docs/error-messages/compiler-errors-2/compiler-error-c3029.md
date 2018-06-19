@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245274"
 ---
 # <a name="compiler-error-c3029"></a>C3029 de erro do compilador
 'symbol': só pode aparecer uma vez no compartilhamento de dados cláusulas em uma diretiva de OpenMP  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693114"
 ---
 # <a name="concurrentqueue-class"></a>Classe concurrent_queue
 O `concurrent_queue` classe é uma classe de contêiner de sequência permite primeiro a entrar, primeiro a sair acesso para seus elementos. Ele permite que um conjunto limitado de operações com segurança de simultaneidade, como `push` e `try_pop`.  

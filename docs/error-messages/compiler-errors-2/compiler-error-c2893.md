@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246692"
 ---
 # <a name="compiler-error-c2893"></a>C2893 de erro do compilador
 Falha ao especializar template de função 'nome do modelo'  

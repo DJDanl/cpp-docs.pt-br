@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257577"
 ---
 # <a name="compiler-error-c3372"></a>C3372 de erro do compilador
 Especifique pelo menos 1 interface para atributo 'fonte' em uma coclass  

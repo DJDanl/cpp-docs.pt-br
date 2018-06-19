@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373045"
 ---
 # <a name="coleupdatedialog-class"></a>Classe COleUpdateDialog
 Usado para um caso especial da caixa de diálogo Editar Links OLE, que deve ser usado quando você precisa atualizar existente apenas objetos vinculados ou incorporados em um documento.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687505"
 ---
 # <a name="313-ompgetmaxthreads-function"></a>3.1.3 função omp_get_max_threads
 O **omp_get_max_threads** função retorna um inteiro que é garantido para ser pelo menos tão grande quanto o número de threads que será usada para formar uma equipe se uma região parallel sem um **num_threads** cláusula foram será encontrada nesse ponto no código. O formato é o seguinte:  

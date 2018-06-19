@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249840"
 ---
 # <a name="compiler-error-c3055"></a>C3055 de erro do compilador
 'symbol': símbolo não pode ser referenciado antes de ser usado na diretiva 'threadprivate'  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351109"
 ---
 # <a name="property-sheets-mfc"></a>Folhas de propriedade (MFC)
 Essa família de artigos explica como implementar o suporte para folhas de propriedade em aplicativos MFC. Uma folha de propriedades, também conhecido como uma caixa de diálogo de guia, fornece uma maneira de gerenciar grandes números de controles em uma caixa de diálogo. A folha de propriedades contém as páginas de propriedade, cada um com base em um recurso de modelo de caixa de diálogo separada. Você pode dividir os controles da caixa de diálogo em grupos lógicos e colocar cada grupo em sua própria página de propriedade.  

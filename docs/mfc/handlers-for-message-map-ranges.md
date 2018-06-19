@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351716"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Manipuladores para intervalos de mapa da mensagem
 Este artigo explica como mapear um intervalo de mensagens para uma função de manipulador de mensagem única (em vez de mapeamento de uma mensagem para apenas uma função).  
