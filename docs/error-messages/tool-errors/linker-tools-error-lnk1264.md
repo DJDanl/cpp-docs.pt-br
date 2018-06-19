@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301457"
 ---
 # <a name="linker-tools-error-lnk1264"></a>Erro das Ferramentas de Vinculador LNK1264
 /LTCG:PGINSTRUMENT especificado mas não há geração de código necessária; falhado de instrumentação  

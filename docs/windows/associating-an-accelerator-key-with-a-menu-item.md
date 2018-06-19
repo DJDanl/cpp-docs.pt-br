@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33854805"
 ---
 # <a name="associating-an-accelerator-key-with-a-menu-item"></a>Associando uma tecla de aceleração a um item de menu
 Muitas vezes, você deseja um item de menu e uma combinação de teclado para emitir o mesmo comando do programa. Você pode fazer isso atribuindo o mesmo identificador de recurso (ID) para o item de menu e uma entrada na tabela de Aceleradores do seu aplicativo. Você então editar a legenda do item de menu para mostrar o nome do acelerador. Para obter mais informações sobre itens de menu e teclas de aceleração, consulte [associar um Item de Menu com uma tecla aceleradora](../windows/associating-a-menu-command-with-an-accelerator-key.md).  

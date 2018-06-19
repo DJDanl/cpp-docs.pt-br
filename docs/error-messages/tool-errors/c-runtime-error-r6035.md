@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299741"
 ---
 # <a name="c-runtime-error-r6035"></a>R6035 de erro de tempo de execução do C
 Microsoft Visual C++ Runtime Library, erro R6035 - um módulo neste aplicativo está inicializando o cookie de segurança global do módulo, enquanto uma função depender esse cookie de segurança está ativa.  Chamada security_init_cookie anteriormente.  

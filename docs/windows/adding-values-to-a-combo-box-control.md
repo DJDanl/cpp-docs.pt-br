@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858962"
 ---
 # <a name="adding-values-to-a-combo-box-control"></a>Adicionando valores a um controle de caixa de combinação
 Você pode adicionar valores para um controle de caixa de combinação, contanto que o editor de caixa de diálogo Abrir.  

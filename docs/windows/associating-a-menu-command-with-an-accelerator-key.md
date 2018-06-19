@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858069"
 ---
 # <a name="associating-a-menu-command-with-an-accelerator-key"></a>Associando um comando Menu a uma tecla de aceleração
 Geralmente há horários em que um comando de menu e uma combinação de teclado para emitir o mesmo comando do programa. Você pode fazer isso usando o editor de Menu para atribuir o mesmo identificador de recurso para o comando de menu e uma entrada na tabela de Aceleradores do seu aplicativo. Você edita o [legenda](../windows/menu-command-properties.md) do comando de menu para mostrar o nome da chave do acelerador.  

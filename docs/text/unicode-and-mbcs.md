@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857344"
 ---
 # <a name="unicode-and-mbcs"></a>Unicode e MBCS
 A biblioteca Microsoft Foundation Classes (MFC), a biblioteca de tempo de execução C para o Visual C++ e o ambiente de desenvolvimento do Visual C++ são habilitados para ajudar sua programação internacional. Eles fornecem:  

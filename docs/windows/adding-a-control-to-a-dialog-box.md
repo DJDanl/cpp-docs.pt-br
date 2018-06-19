@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858712"
 ---
 # <a name="adding-a-control-to-a-dialog-box"></a>Adicionando um controle a uma caixa de diálogo
 ### <a name="to-add-a-control-to-a-dialog-box"></a>Para adicionar um controle a uma caixa de diálogo  

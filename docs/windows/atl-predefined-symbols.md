@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863732"
 ---
 # <a name="atl-predefined-symbols"></a>Símbolos predefinidos ATL
 Esses símbolos são definidos nos arquivos de cabeçalho ATL, mas eles oferecem suporte a ações e funções de aplicativo do Windows padrão. Esses símbolos são usados principalmente com caixas de diálogo. Quando você estiver trabalhando com caixas de diálogo e controles no [editor de caixa de diálogo](../windows/dialog-editor.md), esses símbolos aparecerá na janela Propriedades associada com controles comuns. Por exemplo, se a caixa de diálogo tem um botão de cancelamento, esse comando será associado com o símbolo IDCANCEL no [janela propriedades](/visualstudio/ide/reference/properties-window).  

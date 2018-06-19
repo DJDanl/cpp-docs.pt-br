@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862271"
 ---
 # <a name="building-an-attributed-program"></a>Compilando um programa atribuído
 Depois de você colocar atributos do Visual C++ em seu código-fonte, convém fazer com que o compilador do Visual C++ para produzir um arquivo. idl e biblioteca de tipo para você. Opções de vinculador a seguir ajudam a criar arquivos. tlb e. idl:  

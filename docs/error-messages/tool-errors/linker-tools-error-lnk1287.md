@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299286"
 ---
 # <a name="linker-tools-error-lnk1287"></a>Erro das Ferramentas de Vinculador LNK1287
 função de ponto de entrada gerenciado inválido  

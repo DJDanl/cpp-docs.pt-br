@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319033"
 ---
 # <a name="resource-compiler-warning-rc4214"></a>Aviso RC4214 (compilador de recurso)
 Página de código não é válida: ignorado  

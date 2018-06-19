@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849867"
 ---
 # <a name="inlinedepth"></a>inline_depth
 Especifica a profundidade da pesquisa heurística embutida, de modo que nenhuma função seja embutida se estiver em uma profundidade (no grafo de chamadas) maior que `n`.  

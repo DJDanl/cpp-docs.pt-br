@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849139"
 ---
 # <a name="grammar-summary-cc"></a>Resumo de gramática (C/C++)
 Esta seção descreve a gramática formal do pré-processador. Ele aborda a sintaxe de diretivas de pré-processamento e operadores discutidos [o pré-processador](../preprocessor/preprocessor.md) e em [diretivas Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).  

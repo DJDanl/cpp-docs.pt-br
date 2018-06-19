@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299988"
 ---
 # <a name="c-runtime-error-r6033"></a>R6033 de erro de tempo de execução do C
 Tentativa de usar código MSIL desse assembly durante a inicialização de código nativo. Isso indica um bug em seu aplicativo. Provavelmente é o resultado da chamada de uma compilação MSIL (/ clr) de um construtor nativo ou de DllMain de função.  

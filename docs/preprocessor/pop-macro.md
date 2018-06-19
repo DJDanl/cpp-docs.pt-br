@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849633"
 ---
 # <a name="popmacro"></a>pop_macro
 Define o valor da *macro_name* macro ao valor no topo da pilha da macro.  

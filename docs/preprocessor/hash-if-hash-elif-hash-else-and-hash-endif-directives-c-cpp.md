@@ -36,6 +36,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846643"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Diretivas #if, #elif, #else e #endif (C/C++)
 A política `#if`, com as políticas `#elif`, `#else` e `#endif`, controla a compilação de partes de um arquivo de origem. Se a expressão escrita (após `#if`) tiver um valor diferente de zero, o grupo de linhas imediatamente após a política `#if` será mantido na unidade de tradução.  

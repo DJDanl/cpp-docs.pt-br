@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862017"
 ---
 # <a name="attribute-targets-c-component-extensions"></a>Destinos de Atributos (Extensões de Componentes C++)
 Especificadores de uso de atributo permitem que você especifique os destinos de atributos.  Cada atributo é definido para aplicar a determinados elementos de linguagem. Por exemplo, um atributo pode ser definido para aplicar apenas às classes e estruturas.  A lista a seguir mostra os elementos sintáticos possíveis no qual um atributo personalizado pode ser usado. Combinações desses valores (usando lógica ou) pode ser usado.  

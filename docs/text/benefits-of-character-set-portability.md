@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33853811"
 ---
 # <a name="benefits-of-character-set-portability"></a>Benefícios da portabilidade do conjunto de caracteres
 Você pode se beneficiar do uso de recursos de portabilidade de tempo de execução MFC e C mesmo se você atualmente não pretende internacionalizar seu aplicativo:  
