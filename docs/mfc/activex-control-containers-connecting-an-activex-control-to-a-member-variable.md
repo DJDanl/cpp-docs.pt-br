@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333125"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Contêineres de controle ActiveX: conectando um controle ActiveX a uma variável membro
 É a maneira mais fácil para um controle ActiveX de dentro de seu aplicativo de contêiner de controle de acesso associar o controle ActiveX uma variável de membro da classe de caixa de diálogo que contém o controle.  

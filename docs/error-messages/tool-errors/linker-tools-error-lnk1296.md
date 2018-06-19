@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302562"
 ---
 # <a name="linker-tools-error-lnk1296"></a>Erro das Ferramentas de Vinculador LNK1296
 não é possível carregar o nome de arquivo  

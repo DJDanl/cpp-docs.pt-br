@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302666"
 ---
 # <a name="linker-tools-warning-lnk4010"></a>Aviso LNK4010 (Ferramentas de Vinculador)
 número de número de versão de subsistema inválido; versão de subsistema padrão assumida  

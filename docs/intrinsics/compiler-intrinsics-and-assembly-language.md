@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323544"
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>Intrínsecos do compilador e linguagem do assembly
 Esta seção da documentação contém informações sobre os intrínsecos do compilador e a linguagem do assembly.  

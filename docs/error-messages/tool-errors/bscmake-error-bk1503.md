@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294788"
 ---
 # <a name="bscmake-error-bk1503"></a>Erro BK1503 (BSCMAKE)
 não é possível gravar no arquivo 'filename' [: motivo]  

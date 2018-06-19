@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298805"
 ---
 # <a name="command-line-error-d8037"></a>Erro D8037 (linha de comando)
 não é possível criar arquivo il temporário; Limpe diretório temp de arquivos il antigos  

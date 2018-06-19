@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334841"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Acessando todos os membros de uma coleção
 As classes de coleção MFC matriz — ambos baseado em modelo e não — usa índices para acessar seus elementos. As classes de coleção MFC lista e mapa — ambos baseado em modelo e não — use um indicador do tipo **posição** para descrever a posição especificada dentro da coleção. Para acessar um ou mais membros dessas coleções, você primeiro inicializar o indicador de posição repetidamente passa essa posição na coleção e peça-lo para retornar o próximo elemento. A coleção não é responsável por manter informações de estado sobre o progresso da iteração. Essa informação é mantida no indicador de posição. Mas, dada uma posição específica, a coleção é responsável por retornar o próximo elemento.  
