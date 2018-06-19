@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053565"
 ---
 # <a name="local-masm"></a>LOCAL (MASM)
 Na primeira diretiva, dentro de uma macro, **LOCAL** define rótulos que são exclusivos para cada instância da macro.  

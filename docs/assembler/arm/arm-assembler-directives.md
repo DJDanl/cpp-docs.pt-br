@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053295"
 ---
 # <a name="arm-assembler-directives"></a>Diretivas do assembler ARM
 A maior parte do tempo, o assembler ARM Microsoft usa a linguagem de assembly do ARM, que está documentada no capítulo 7 da [guia de ferramentas do ARM assembler](http://go.microsoft.com/fwlink/p/?linkid=246102). No entanto, as implementações Microsoft algumas diretivas de assembly diferem as diretivas de assembly do ARM. Este artigo explica as diferenças.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050487"
 ---
 # <a name="defining-asm-blocks-as-c-macros"></a>Definindo blocos __asm como macros do C
 **Seção específica da Microsoft**  

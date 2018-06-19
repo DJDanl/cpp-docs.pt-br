@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053997"
 ---
 # <a name="if-masm"></a>IF (MASM)
 Concede o conjunto de *ifstatements* se *expression1* for true (diferente de zero) ou *elseifstatements* se *expression1* for false (0) e *expression2* é verdadeiro.  

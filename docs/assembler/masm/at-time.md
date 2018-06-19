@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049252"
 ---
 # <a name="time"></a>@Time
 A hora do sistema no formato de 24 horas hh (macro de texto).  

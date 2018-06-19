@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049711"
 ---
 # <a name="386p"></a>.386P
 Permite que o assembly de todas as instruções (inclusive privilegiados) para o processador 80386; Desabilita o conjunto de instruções introduzidas com processadores mais recente.  

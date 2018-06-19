@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052444"
 ---
 # <a name="repeat"></a>.REPEAT
 Gera um código que repete a execução do bloco de *instruções* até `condition` se torne verdadeira. [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md), que se torne verdadeiro quando CX for zero, pode ser substituído por [. ATÉ](../../assembler/masm/dot-until.md). O `condition` é opcional com **. UNTILCXZ**.  
