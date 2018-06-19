@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252478"
 ---
 # <a name="compiler-error-c3072"></a>C3072 de erro do compilador
 operador 'operator' não pode ser aplicado a uma instância de uma classe ref  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870761"
 ---
 # <a name="comptrreset"></a>ComPtr::Reset
 Libera todas as referências para o ponteiro para a interface que está associado este ComPtr.  

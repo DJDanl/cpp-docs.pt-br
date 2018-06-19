@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249223"
 ---
 # <a name="compiler-error-c3280"></a>C3280 de erro do compilador
 'class': uma função de membro de um tipo gerenciado não pode ser compilada como uma função não gerenciada  

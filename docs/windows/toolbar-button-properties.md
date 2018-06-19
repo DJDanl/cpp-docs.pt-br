@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890668"
 ---
 # <a name="toolbar-button-properties"></a>Propriedades do botão da barra de ferramentas
 As propriedades de um botão de barra de ferramentas são:  

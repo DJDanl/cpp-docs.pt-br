@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33867097"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mapeamentos de texto genéricos em Tchar.h
 Para simplificar o transporte de código para uso internacional, o [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] biblioteca de tempo de execução fornece [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-mapeamentos de texto genérico específicos para muitos tipos de dados, rotinas e outros objetos. Você pode usar esses mapeamentos, que são definidos em TCHAR. h para escrever o código genérico que pode ser compilado para byte único, vários bytes, ou [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] caracteres conjuntos, dependendo de uma constante de manifesto que você define usando uma `#define` instrução. Mapeamentos de texto genérico são [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] extensões que não são [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] compatível.  

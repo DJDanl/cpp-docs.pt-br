@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251642"
 ---
 # <a name="compiler-error-c3208"></a>C3208 de erro do compilador
 'function': lista de parâmetros de modelo de classe modelo 'class' não corresponde a lista de parâmetros de template para parâmetro de modelo 'parameter'  

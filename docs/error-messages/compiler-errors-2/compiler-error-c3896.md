@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269732"
 ---
 # <a name="compiler-error-c3896"></a>C3896 de erro do compilador
 'member': inicializador inadequado: este membro de dados literal só pode ser inicializado com 'nullptr'  

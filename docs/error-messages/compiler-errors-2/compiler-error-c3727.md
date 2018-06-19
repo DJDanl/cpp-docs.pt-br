@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33263993"
 ---
 # <a name="compiler-error-c3727"></a>C3727 de erro do compilador
 'event': um evento gerenciado deve ser uma função de membro ou um membro de dados que é um ponteiro para um delegado  

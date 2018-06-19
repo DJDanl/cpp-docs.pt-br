@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875715"
 ---
 # <a name="implementsfillarraywithiid-method"></a>Método Implements::FillArrayWithIid
 Insere a ID de interface especificada pelo parâmetro de modelo atual do zero para o elemento da matriz especificada.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267414"
 ---
 # <a name="compiler-error-c3828"></a>C3828 de erro do compilador
 tipo de objeto: argumentos de posicionamento não permitidos enquanto a criação de instâncias do gerenciado ou WinRTclasses  

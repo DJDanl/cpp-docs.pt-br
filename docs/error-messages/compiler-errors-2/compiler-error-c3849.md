@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270958"
 ---
 # <a name="compiler-error-c3849"></a>C3849 de erro do compilador
 chamada Function-style em uma expressão do tipo 'type' perderia qualificadores constantes e/ou volatile para número de todas as sobrecargas de operator disponíveis  

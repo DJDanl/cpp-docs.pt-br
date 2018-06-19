@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872829"
 ---
 # <a name="dialog-editor-states-guides-and-grids"></a>Estados do Editor de Caixa de Diálogo (guias e grades)
 Você pode organizar controles em caixas de diálogo com o editor de caixa de diálogo em um dos três estados:  

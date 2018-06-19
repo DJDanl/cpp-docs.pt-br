@@ -21,6 +21,7 @@ ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/14/2018
+ms.locfileid: "34153113"
 ---
 # <a name="fastcall"></a>__fastcall
 **Seção específica da Microsoft**  

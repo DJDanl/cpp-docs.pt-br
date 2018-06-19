@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266305"
 ---
 # <a name="compiler-error-c3669"></a>C3669 de erro do compilador
 'member': especificador de substituição 'override' não permitido em funções membro static ou construtores  

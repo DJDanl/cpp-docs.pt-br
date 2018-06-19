@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104276"
 ---
 # <a name="schema-rowsets"></a>Conjuntos de linhas do esquema
 Esquema (ou metadados) é todas as informações sobre a estrutura ou organização, como informações sobre o provedor de conjunto de linhas, tabela, colunas, um banco de dados ou outras informações além do conteúdo do banco de dados real. OLE DB permite que você obtenha essas informações sem abrir o conjunto de linhas usando conjuntos de linhas de esquema.  
