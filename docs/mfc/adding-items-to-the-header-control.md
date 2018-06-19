@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342729"
 ---
 # <a name="adding-items-to-the-header-control"></a>Adicionando itens ao controle de cabeçalho
 Depois de criar o controle de cabeçalho ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) em sua janela pai, adicione quantas "itens de cabeçalho" conforme necessário: normalmente um por coluna.  

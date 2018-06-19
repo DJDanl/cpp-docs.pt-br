@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343876"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>Como mensagens sem comando alcançam os identificadores
 Diferentemente dos comandos, mensagens padrão do Windows não sejam roteadas por meio de uma cadeia de comando destinos, mas geralmente são tratadas pela janela ao qual o Windows envia a mensagem. A janela pode ser uma janela do quadro principal, uma janela de filho MDI, um controle padrão, uma caixa de diálogo, uma exibição ou outro tipo de janela filho.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296088"
 ---
 # <a name="expression-evaluator-error-cxx0050"></a>Erro CXX0050 (avaliador de expressão)
 lado esquerdo de:: deve ser classe/struct/união  

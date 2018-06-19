@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343802"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>Identificando mensagens do Windows na caixa de diálogo
 Caixas de diálogo são windows, para que eles possam lidar com mensagens do Windows se você fornecer as funções de manipulador adequado. Quando você cria sua classe de caixa de diálogo com o Assistente para Adicionar classe, o assistente adiciona um mapa de mensagem vazio à classe. Use a janela Propriedades para mapear quaisquer mensagens do Windows ou comandos que você deseja que a classe para manipular.  

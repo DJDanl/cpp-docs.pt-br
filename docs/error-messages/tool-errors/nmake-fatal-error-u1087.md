@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319716"
 ---
 # <a name="nmake-fatal-error-u1087"></a>Erro fatal U1087 (NMAKE)
 não é possível ter: e:: dependentes para o mesmo destino  

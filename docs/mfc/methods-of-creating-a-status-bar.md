@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346923"
 ---
 # <a name="methods-of-creating-a-status-bar"></a>Métodos de criação de uma barra de status
 MFC fornece classes para criar barras de status: [CStatusBar](../mfc/reference/cstatusbar-class.md) e [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) (que encapsula a API de controle comum do Windows). `CStatusBar` fornece todas as funcionalidades da barra de controle comum de status, ele automaticamente interage com menus e barras de ferramentas e trata muitas das configurações de controle comuns necessárias e estruturas. No entanto, o executável resultante geralmente será maior do que é criado usando `CStatusBarCtrl`.  

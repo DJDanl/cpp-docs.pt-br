@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281785"
 ---
 # <a name="compiler-warning-level-1-c4269"></a>Compilador C4269 de aviso (nível 1)
 'Identificador': 'const' automática de dados inicializada com o construtor do padrão gerado pelo compilador produz resultados não confiáveis  

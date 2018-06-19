@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345134"
 ---
 # <a name="dialog-data-exchange"></a>Troca de dados da caixa de diálogo
 Se você usar o mecanismo DDX, você definir os valores iniciais da caixa de diálogo variáveis de membro do objeto, normalmente em seu `OnInitDialog` manipulador ou o construtor de caixa de diálogo. Imediatamente antes da caixa de diálogo é exibida, mecanismo DDX do framework transfere os valores das variáveis de membro para os controles na caixa de diálogo, em que aparecem quando a caixa de diálogo aparece em resposta a `DoModal` ou **criar** . A implementação padrão de `OnInitDialog` na `CDialog` chama o `UpdateData` função de membro de classe `CWnd` para inicializar os controles na caixa de diálogo.  

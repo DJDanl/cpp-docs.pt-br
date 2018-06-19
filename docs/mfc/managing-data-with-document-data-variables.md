@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344955"
 ---
 # <a name="managing-data-with-document-data-variables"></a>Gerenciando dados com variáveis de dados do documento
 Implemente os dados do documento como variáveis de membro da classe do documento. Por exemplo, o programa de rabisco declara um membro de dados do tipo `CObList` — uma lista vinculada que armazena ponteiros para `CObject` objetos. Essa lista é usada para armazenar conjuntos de pontos que compõem um desenho de linha traçado.  

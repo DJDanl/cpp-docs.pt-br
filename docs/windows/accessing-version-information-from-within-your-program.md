@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856265"
 ---
 # <a name="accessing-version-information-from-within-your-program"></a>Acessando informações de versão a partir do programa
 ### <a name="to-access-version-information-from-within-your-program"></a>Para acessar informações de versão a partir do seu programa  

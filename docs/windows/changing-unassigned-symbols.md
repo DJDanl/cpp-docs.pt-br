@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855377"
 ---
 # <a name="changing-unassigned-symbols"></a>Alterando símbolos não atribuídos
 Enquanto estiver conectado a [caixa de diálogo símbolos de recurso](../windows/resource-symbols-dialog-box.md), você pode editar ou excluir os símbolos existentes que já não estão atribuídos a um recurso ou objeto.  

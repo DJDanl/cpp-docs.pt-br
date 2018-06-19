@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347325"
 ---
 # <a name="property-sheets-as-wizards"></a>Folhas de propriedades como assistentes
 Uma característica chave de uma folha de propriedades do assistente é que a navegação é fornecida com os botões de próximo ou término e Cancelar em vez de guias. Você precisa chamar [CPropertySheet::SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode) antes de chamar [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) no objeto de folha de propriedade para tirar proveito desse recurso.  

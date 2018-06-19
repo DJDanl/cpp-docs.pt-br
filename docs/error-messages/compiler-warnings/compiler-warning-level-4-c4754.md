@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302848"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Compilador C4754 de aviso (nível 4)
 Regras de conversão para operações aritméticas em uma comparação significam que uma ramificação não pode ser executada.  

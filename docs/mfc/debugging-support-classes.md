@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342599"
 ---
 # <a name="debugging-support-classes"></a>Depurando classes de suporte
 MFC fornece as classes a seguir para ajudá-lo a depurar problemas de alocação de memória dinâmica.  

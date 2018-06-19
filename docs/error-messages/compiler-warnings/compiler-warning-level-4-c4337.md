@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295149"
 ---
 # <a name="compiler-warning-level-4-c4337"></a>Compilador C4337 de aviso (nível 4)
 biblioteca de tipos com referência cruzada 'typelib1' em 'typelib2' está sendo importada automaticamente  

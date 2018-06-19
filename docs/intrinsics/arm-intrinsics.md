@@ -1946,6 +1946,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338176"
 ---
 # <a name="arm-intrinsics"></a>Intrínsecos ARM
 O compilador do Visual C++ disponibiliza os seguintes intrínsecos na arquitetura ARM. Para obter mais informações sobre ARM, consulte o [manuais de referência de arquitetura ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) e [guia de ferramentas do ARM Assembler](http://go.microsoft.com/fwlink/p/?LinkId=246102) no site do Centro de informações de ARM.  

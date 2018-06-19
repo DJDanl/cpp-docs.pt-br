@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345059"
 ---
 # <a name="frame-window-classes-windows"></a>Classes de janela com moldura (Windows)
 Janelas de quadro são janelas que um aplicativo ou uma parte de um aplicativo do quadro. Janelas com moldura geralmente contêm outras janelas, como exibições, barras de ferramentas e barras de status. No caso de `CMDIFrameWnd`, elas podem conter `CMDIChildWnd` objetos indiretamente.  

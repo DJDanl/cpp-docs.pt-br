@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385879"
 ---
 # <a name="types-of-image-lists"></a>Tipos de listas de imagens
 Há dois tipos de listas de imagens ([CImageList](../mfc/reference/cimagelist-class.md)): nonmasked e mascarada. Uma "lista de imagens nonmasked" consiste em um bitmap de cor que contém uma ou mais imagens. Uma "lista de imagens mascaradas" consiste em dois bitmaps de tamanhos iguais. A primeira é um bitmap de cor que contém as imagens e o segundo é um bitmap monocromático que contém uma série de máscaras — um para cada imagem de bitmap primeiro.  

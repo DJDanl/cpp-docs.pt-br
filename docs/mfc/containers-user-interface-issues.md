@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341183"
 ---
 # <a name="containers-user-interface-issues"></a>Contêineres: emissões de interface do usuário
 Você deve adicionar uma série de recursos à interface do usuário do aplicativo de contêiner para gerenciar adequadamente os itens incorporados e vinculados. Esses recursos envolvem alterações para a estrutura de menu e os eventos que trata o aplicativo. Para obter informações detalhadas sobre eles, consulte os seguintes artigos:  

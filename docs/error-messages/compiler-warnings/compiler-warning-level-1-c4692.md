@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285649"
 ---
 # <a name="compiler-warning-level-1-c4692"></a>Compilador C4692 de aviso (nível 1)
 'function': assinatura de membro não privado contém tipo nativo privado de assembly 'native_type'  

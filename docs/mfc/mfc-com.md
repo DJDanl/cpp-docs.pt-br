@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347767"
 ---
 # <a name="mfc-com"></a>MFC COM
 Um subconjunto de MFC foi projetado para suporte de COM, enquanto a maioria de biblioteca de modelo ativa (ATL) foi projetado para programação COM. Esta seção de tópicos descreve o suporte do MFC para COM.  

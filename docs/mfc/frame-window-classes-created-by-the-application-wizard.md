@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345033"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Classes de janela com moldura criadas pelo Assistente de Aplicativo
 Quando você usa o [Assistente de aplicativo](../ide/creating-desktop-projects-by-using-application-wizards.md) para criar um aplicativo de esqueleto, além de aplicativo, documentos e classes de exibição, o Assistente de aplicativo cria uma classe derivada da janela do quadro de janela do quadro principal do seu aplicativo. A classe é chamada `CMainFrame` por padrão e os arquivos que contêm a ele são nomeados MAINFRM. H e MAINFRM. CPP.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320213"
 ---
 # <a name="project-build-warning-prj0029"></a>Aviso PRJ0029 no Build do Projeto
 A propriedade 'Outputs' para a etapa de compilação personalizada em nível de projeto não está definida. A etapa de compilação personalizada será ignorada.  

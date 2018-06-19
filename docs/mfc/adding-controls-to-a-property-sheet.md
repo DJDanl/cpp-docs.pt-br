@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341085"
 ---
 # <a name="adding-controls-to-a-property-sheet"></a>Adicionando controles a uma folha de propriedades
 Por padrão, uma folha de propriedades aloca área da janela para as páginas de propriedade, o índice de tabulação e os botões Okey, cancelar e aplicar. (Uma folha de propriedades sem janela restrita não tem Okey, cancelar e aplicar botões.) Você pode adicionar outros controles para a folha de propriedades. Por exemplo, você pode adicionar uma janela de visualização à direita da área da página de propriedade para mostrar ao usuário a aparência as configurações atuais se aplicado a um objeto externo.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338582"
 ---
 # <a name="active-technology-on-the-internet"></a>Tecnologia ativa na Internet
 Tecnologia ativa é uma plataforma aberta que permite aos desenvolvedores criar coisas interessantes e dinâmicos conteúdo e aplicativos de Internet global ou de rede interna de uma empresa, conhecido como uma intranet. As principais tecnologias fornecidas pela Microsoft para a programação da Internet são descritas abaixo.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342423"
 ---
 # <a name="creating-modal-dialog-boxes"></a>Criando caixas de diálogo modais
 Para criar uma caixa de diálogo modal, chamar um dos dois construtores públicos declarados em [CDialog](../mfc/reference/cdialog-class.md). Em seguida, chame o objeto de caixa de diálogo [DoModal](../mfc/reference/cdialog-class.md#domodal) função de membro para exibir a caixa de diálogo e gerenciar a interação com ele até que o usuário escolhe Okey ou em Cancelar. Este gerenciamento por `DoModal` faz com que a caixa de diálogo modal. Para caixas de diálogo modais `DoModal` carrega o recurso de caixa de diálogo.  

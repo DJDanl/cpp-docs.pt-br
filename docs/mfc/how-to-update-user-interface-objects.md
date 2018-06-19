@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346201"
 ---
 # <a name="how-to-update-user-interface-objects"></a>Como atualizar objetos de interface do usuário
 Normalmente, os itens de menu e botões de barra de ferramentas tem mais de um estado. Por exemplo, um item de menu estará inativa (esmaecido), se ele não está disponível no contexto atual. Itens de menu também podem ser marcada ou desmarcada. Um botão de barra de ferramentas também pode ser desabilitado se não estiver disponível, ou ele pode ser verificado.  

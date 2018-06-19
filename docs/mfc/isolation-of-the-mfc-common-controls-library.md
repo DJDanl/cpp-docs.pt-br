@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346809"
 ---
 # <a name="isolation-of-the-mfc-common-controls-library"></a>Isolamento da biblioteca de controles comuns MFC
 A biblioteca de controles comuns agora é isolada em MFC, permitindo que diferentes módulos (por exemplo, o usuário DLLs) para usar diferentes versões da biblioteca de controles comuns, especificando a versão em seus manifestos.  

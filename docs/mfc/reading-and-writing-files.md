@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347929"
 ---
 # <a name="reading-and-writing-files"></a>Lendo e gravando arquivos
 Se você tiver usado as funções de manipulação de arquivos de biblioteca de tempo de execução C, MFC lendo e gravando operações aparecerá familiar. Este artigo descreve ler diretamente e gravar diretamente para um `CFile` objeto. Você pode também em buffer e/s de arquivo com o [CArchive](../mfc/reference/carchive-class.md) classe.  

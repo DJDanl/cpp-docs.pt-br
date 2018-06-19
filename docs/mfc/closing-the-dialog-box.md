@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341737"
 ---
 # <a name="closing-the-dialog-box"></a>Fechando a caixa de diálogo
 Caixa de diálogo modal fecha quando o usuário escolhe um dos seus botões, geralmente o botão Okey ou o botão Cancelar. Escolha o botão Okey ou Cancelar faz com que o Windows enviar o objeto de caixa de diálogo um **BN_CLICKED** mensagem de notificação de controle com o botão da ID, ou **IDOK** ou **IDCANCEL**. `CDialog` fornece funções de manipulador de padrão para essas mensagens: `OnOK` e `OnCancel`. A chamada de manipuladores de padrão de `EndDialog` função de membro para fechar a janela da caixa de diálogo. Você também pode chamar `EndDialog` de seu próprio código. Para obter mais informações, consulte o [EndDialog](../mfc/reference/cdialog-class.md#enddialog) função de membro de classe `CDialog` no *referência MFC*.  

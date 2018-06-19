@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347146"
 ---
 # <a name="ordering-items-in-the-header-control"></a>Ordenando itens no controle de cabeçalho
 Depois que você [adicionar itens a um controle de cabeçalho](../mfc/adding-items-to-the-header-control.md), você pode manipular ou obter informações sobre sua ordem com as seguintes funções:  

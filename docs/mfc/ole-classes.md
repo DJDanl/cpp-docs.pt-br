@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343506"
 ---
 # <a name="ole-classes"></a>Classes OLE
 As classes OLE trabalhar com as outras classes de estrutura de aplicativo para fornecer acesso fácil a API do ActiveX, fornecendo uma maneira fácil de fornecer a potência do ActiveX para os usuários de seus programas. Usando o ActiveX, você pode:  

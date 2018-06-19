@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343305"
 ---
 # <a name="bottomless-rich-edit-controls"></a>Controles de edição avançada sem parte inferior
 Seu aplicativo pode redimensionar um controle de edição avançada ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) conforme necessário para que ele é sempre o mesmo tamanho que o seu conteúdo. Um controle de edição com formato dá suporte a essa funcionalidade de "sem parte inferior" chamada enviando sua janela pai um [EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983) mensagem de notificação sempre que altera o tamanho do seu conteúdo.  

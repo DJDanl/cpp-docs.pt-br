@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345180"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Exceções: obtendo e excluindo exceções
 As instruções e os exemplos a seguir mostram como capturar e excluir exceções. Para obter mais informações sobre o **tente**, **catch**, e `throw` palavras-chave, consulte [manipulação de exceção C++](../cpp/cpp-exception-handling.md).  

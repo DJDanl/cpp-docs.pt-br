@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294925"
 ---
 # <a name="compiler-warning-level-4-c4937"></a>Compilador C4937 de aviso (nível 4)
 'text1' e 'text2' são indistinguíveis como argumentos para 'diretiva'  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344942"
 ---
 # <a name="file-and-database-classes"></a>Classes de arquivo e banco de dados
 Essas classes permitem que você armazene informações para um banco de dados ou de um arquivo de disco. Há três conjuntos de classes de banco de dados, OLE DB, ODBC e DAO — que fornecem funcionalidade semelhante. O grupo de OLE DB é implementado usando o OLE DB e funciona com os modelos de consumidor OLE DB, o grupo DAO é implementado usando o objeto de acesso de dados e o grupo ODBC é implementado usando conectividade aberta de banco de dados. Há também um conjunto de classes para manipulação de arquivos padrão, fluxos ativos e fluxos HTML.  

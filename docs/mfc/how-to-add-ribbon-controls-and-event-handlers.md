@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344413"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Como adicionar controles de faixa de opções e manipuladores de evento
 Controles de faixa de opções são elementos, como botões e caixas de combinação, o que você adicionar a painéis. Painéis são áreas da barra de faixa de opções que exibem um grupo de controles relacionados.  

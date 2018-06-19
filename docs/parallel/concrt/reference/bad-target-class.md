@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33705335"
 ---
 # <a name="badtarget-class"></a>Classe bad_target
 Esta classe descreve uma exceção gerada quando um bloco de mensagens é fornecido um ponteiro para um destino que não é válido para a operação que está sendo executada.  

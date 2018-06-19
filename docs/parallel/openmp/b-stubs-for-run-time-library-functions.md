@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687576"
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. Stubs para funções de biblioteca em tempo de execução
 Esta seção fornece stubs para as funções de biblioteca de tempo de execução definidas no OpenMP C e C++ API. Os stubs são fornecidos para habilitar a portabilidade para plataformas que não dão suporte a OpenMP C e C++ API. Nessas plataformas, OpenMP programas devem ser vinculados a uma biblioteca que contém essas funções de stub. As funções de stub assumem que as diretivas no programa OpenMP são ignoradas. Assim, eles emularem semântica serial.  

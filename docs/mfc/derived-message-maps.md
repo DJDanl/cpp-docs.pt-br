@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342960"
 ---
 # <a name="derived-message-maps"></a>Mapas de mensagem derivados
 Durante a manipulação, verificando uma mensagem da classe de mensagem mapa não é o final do texto de mapa de mensagem. O que acontece se classe `CMyView` (derivado de `CView`) não tem nenhuma entrada correspondente para uma mensagem  

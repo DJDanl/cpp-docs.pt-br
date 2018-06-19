@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339008"
 ---
 # <a name="compiler-intrinsics"></a>Intrínsecos do compilador
 A maioria das funções está contidas em bibliotecas, mas algumas funções são internas (ou seja, intrínsecas) para o compilador. Elas são chamadas de funções intrínsecas ou intrínsecos.  

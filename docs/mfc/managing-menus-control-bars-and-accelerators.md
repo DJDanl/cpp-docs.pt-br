@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345736"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Gerenciando menus, barras de controle e aceleradores
 A janela do quadro gerencia atualizando objetos de interface do usuário, incluindo menus, botões da barra de ferramentas, a barra de status e aceleradores. Ele também gerencia o compartilhamento de barra de menu em aplicativos MDI.  

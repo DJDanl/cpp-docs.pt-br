@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344325"
 ---
 # <a name="drag-and-drop-ole"></a>Arrastar e soltar (OLE)
 O recurso de arrastar e soltar do OLE é principalmente um atalho para copiar e colar dados. Quando você usar a área de transferência para copiar ou colar dados, várias etapas são necessárias. Selecione os dados, clique em **Recortar** ou **cópia** do **editar** menu, vá para o arquivo de destino, a janela ou aplicativo, coloque o cursor no local desejado e clique em **Colar** do **editar** menu.  

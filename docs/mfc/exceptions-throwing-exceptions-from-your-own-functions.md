@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346188"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Exceções: lançando exceções a partir das funções próprias
 É possível usar o paradigma de tratamento de exceção MFC exclusivamente para capturar exceções geradas por funções em MFC ou outras bibliotecas. Além de capturar exceções geradas pelo código da biblioteca, você pode lançar exceções de seu próprio código, se você estiver escrevendo funções que podem encontrar condições excepcionais.  

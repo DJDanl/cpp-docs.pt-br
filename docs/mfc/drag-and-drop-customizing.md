@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344237"
 ---
 # <a name="drag-and-drop-customizing"></a>Arrastar e soltar: personalizando
 A implementação padrão do recurso de arrastar e soltar é suficiente para a maioria dos aplicativos. No entanto, alguns aplicativos podem exigir que esse comportamento padrão seja alterado. Este artigo explica as etapas necessárias para alterar esses padrões. Além disso, você pode usar esta técnica para estabelecer os aplicativos que não dão suporte a documentos compostos como remover fontes.  

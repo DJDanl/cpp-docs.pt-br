@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856993"
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Alterando o fator de ampliação (editor de imagens para ícones)
 Por padrão, o editor de imagem exibe o modo de exibição no painel esquerdo no tamanho real e o modo de exibição no painel à direita no tamanho real de 6 horas. O fator de ampliação (visto na barra de status na parte inferior do espaço de trabalho) é a razão entre o tamanho real da imagem e o tamanho exibido. O fator de padrão é 6 e o intervalo é de 1 a 10.  

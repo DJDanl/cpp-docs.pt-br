@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343409"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Criando novos documentos, janelas e exibições
 As figuras a seguir oferecem uma visão geral do processo de criação de documentos, exibições e janelas de quadro. Outros artigos que se concentrar nos objetos participantes fornecem mais detalhes.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688538"
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Instruções passo a passo: adaptando um código existente para usar tarefas leves
 Este tópico mostra como adaptar o código existente que usa a API do Windows para criar e executar um thread para usar uma tarefa simples.  

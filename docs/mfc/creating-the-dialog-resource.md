@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342079"
 ---
 # <a name="creating-the-dialog-resource"></a>Criando o recurso da caixa de diálogo
 Para criar o [caixa de diálogo](../mfc/dialog-boxes.md) e criar o recurso de caixa de diálogo, você use o [editor de caixa de diálogo](../windows/dialog-editor.md). No editor de caixa de diálogo, você pode:  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689578"
 ---
 # <a name="multithreading-terminating-threads"></a>Multithread: encerrando threads
 Duas situações normais fazer com que um thread encerrar: a função de controle for encerrada ou o thread não tem permissão para executar até a conclusão. Se um processador de texto usado um thread para impressão em segundo plano, a função controlar seria encerrar normalmente se a impressão concluída com êxito. Se o usuário deseja cancelar a impressão, no entanto, o thread de impressão em segundo plano foi encerrada prematuramente. Este tópico explica como implementar cada situação e como obter o código de saída de um thread após ele ser terminado.  

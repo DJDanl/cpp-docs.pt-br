@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340987"
 ---
 # <a name="creating-modeless-dialog-boxes"></a>Criando caixas de diálogo sem janela restrita
 Para uma caixa de diálogo sem janela restrita, você deve fornecer seu próprio construtor público em sua classe de caixa de diálogo. Para criar uma caixa de diálogo sem janela restrita, o construtor público e, em seguida, chamar o objeto de caixa de diálogo [criar](../mfc/reference/cdialog-class.md#create) função de membro para carregar o recurso de caixa de diálogo. Você pode chamar **criar** durante ou após a chamada de construtor. Se o recurso de caixa de diálogo tem a propriedade **WS_VISIBLE**, a caixa de diálogo será exibida imediatamente. Se não, você deve chamar o [ShowWindow](../mfc/reference/cwnd-class.md#showwindow) função de membro.  

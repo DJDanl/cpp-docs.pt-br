@@ -105,6 +105,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369997"
 ---
 # <a name="cdockingpanesrow-class"></a>Classe CDockingPanesRow
 Gerencia uma lista de painéis que estão localizados na mesma horizontal ou vertical linha (coluna) de um site de encaixe.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345775"
 ---
 # <a name="how-the-framework-searches-message-maps"></a>Como o Framework pesquisa mapas de mensagem
 A estrutura de procura na tabela de mapa de mensagem para correspondências com mensagens de entrada. Quando você escreve uma entrada de mapa de mensagem para cada mensagem que você deseja que uma classe para manipular e escrever os manipuladores correspondentes, o framework chama automaticamente seus manipuladores. Os tópicos a seguir explicam a pesquisa de mapa de mensagem:  

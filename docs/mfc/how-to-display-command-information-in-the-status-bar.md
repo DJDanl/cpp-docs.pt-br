@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346037"
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>Como exibir informações do comando na barra de status
 Quando você executar o Assistente de aplicativo para criar o esqueleto do seu aplicativo, você pode dar suporte a uma barra de ferramentas e uma barra de status. Somente uma opção no Assistente de aplicativo oferece suporte a ambos. Quando houver uma barra de status, o aplicativo fornece automaticamente comentários úteis, como o usuário move o ponteiro sobre os itens nos menus. O aplicativo exibe uma cadeia de caracteres de prompt automaticamente na barra de status quando o item de menu é realçado. Por exemplo, quando o usuário move o ponteiro sobre o **Recortar** comando o **editar** menu, a barra de status pode exibir "Recorta a seleção e a coloca na área de transferência" na área de mensagem da barra de status. O prompt de ajuda o usuário a entender a finalidade do item de menu. Isso também funciona quando o usuário clica em um botão de barra de ferramentas.  

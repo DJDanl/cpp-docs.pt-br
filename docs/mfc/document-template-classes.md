@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343535"
 ---
 # <a name="document-template-classes"></a>Classes de modelo do documento
 Objetos de modelo de documento coordenam a criação de documento, exibição e objetos de janela do quadro quando um novo documento ou exibição é criada.  

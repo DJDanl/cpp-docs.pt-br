@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346370"
 ---
 # <a name="handling-tool-tip-notifications"></a>Manipulando notificações da dica de ferramenta
 Quando você especifica o `TBSTYLE_TOOLTIPS` estilo, a barra de ferramentas cria e gerencia um controle de dica de ferramenta. Uma dica de ferramenta é uma pequena janela pop-up que contém uma linha de texto que descreve um botão de barra de ferramentas. A dica de ferramenta está oculto, que aparecem somente quando o usuário coloca o cursor em um botão de barra de ferramentas e deixa-lo para aproximadamente metade de segundo. A dica de ferramenta é exibida próximo ao cursor.  

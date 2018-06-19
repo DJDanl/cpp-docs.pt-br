@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344250"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>Como WinInet facilita a criação de aplicativos clientes da Internet
 As extensões da Internet Win32 ou WinInet, fornecem acesso a protocolos de Internet comuns, incluindo HTTP, FTP e gopher. Usando WinInet, você pode escrever aplicativos de cliente da Internet em um nível mais alto de programação, sem a necessidade de lidar com os detalhes específicos de protocolos de Internet, TCP/IP ou WinSock. WinInet fornece um conjunto consistente de funções para todos os protocolos de três, com uma interface familiar da API do Win32. Essa consistência minimiza as alterações de código que você precisa verificar se o protocolo subjacente for alterado (por exemplo, de FTP para HTTP).  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341255"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp e o Assistente de Aplicativo MFC
 Quando ele cria um aplicativo de esqueleto, o Assistente de aplicativo MFC declara um aplicativo de classe derivada de [CWinApp](../mfc/reference/cwinapp-class.md). O Assistente de aplicativo MFC também gera um arquivo de implementação que contém os seguintes itens:  

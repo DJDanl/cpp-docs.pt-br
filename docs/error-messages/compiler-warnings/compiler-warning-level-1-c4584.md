@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281158"
 ---
 # <a name="compiler-warning-level-1-c4584"></a>Compilador C4584 de aviso (nível 1)
 'class1': classe base 'class2' já é uma classe base de 'class3'  

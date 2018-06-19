@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341405"
 ---
 # <a name="com-interface-entry-points"></a>Pontos de entrada da interface COM
 Para funções de membro de uma interface COM, use o [METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue) macro para manter o estado global apropriado ao chamar métodos da interface exportada.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324532"
 ---
 # <a name="project-build-error-prj0044"></a>Erro de Build PRJ0044 no Projeto
 A propriedade 'Additional Dependencies' para a regra de compilação personalizada 'rule' atribuída ao arquivo 'file' é inválida. A propriedade continha 'string', que é avaliado como 'value'.  

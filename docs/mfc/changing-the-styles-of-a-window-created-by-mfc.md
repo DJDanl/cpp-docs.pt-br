@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345723"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Alternando os estilos de uma janela criada por MFC
 Em sua versão do `WinMain` função MFC registra várias classes de janela padrão para você. Como você normalmente não edita do MFC `WinMain`, que função permite que você pode alterar os estilos de janela MFC padrão. Este artigo explica como você pode alterar os estilos de uma classe de janela pré-registrados em um aplicativo existente.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342141"
 ---
 # <a name="clipboard-adding-other-formats"></a>Área de Transferência: adicionando outros formatos
 Este tópico explica como expandir a lista de formatos com suporte, principalmente para suporte OLE. O tópico [área de transferência: copiar e colar dados](../mfc/clipboard-copying-and-pasting-data.md) descreve a implementação mínimo necessária para dar suporte a copiar e colar da área de transferência. Se isso é tudo o que você implementar, são os únicos formatos colocados na área de transferência `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**e possivelmente `CF_LINKSOURCE`. A maioria dos aplicativos será necessário mais formatos na área de transferência que esses três.  

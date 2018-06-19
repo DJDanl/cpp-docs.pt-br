@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344172"
 ---
 # <a name="frame-window-classes-architecture"></a>Classes de janela com moldura (arquitetura)
 Na arquitetura de documento/exibição janelas com moldura são janelas que contêm uma janela de exibição. Eles também possuem suporte para ter controle barras anexadas a elas.  

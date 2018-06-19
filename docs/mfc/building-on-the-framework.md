@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341548"
 ---
 # <a name="building-on-the-framework"></a>Compilando no Framework
 Sua função na configuração de um aplicativo com o framework MFC é fornecer o código-fonte do aplicativo específico e para conectar os componentes com a definição de quais mensagens e comandos que eles responderem. Use a linguagem C++ e técnicas de C++ padrão para derivar suas próprias classes específicas de aplicativo daquelas fornecidas pela biblioteca de classe e para substituir e aumentar o comportamento da classe base.  

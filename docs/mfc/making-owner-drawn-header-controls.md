@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345230"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Criando controles de cabeçalho desenhados pelo proprietário
 Você pode definir os itens individuais de um controle de cabeçalho ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) para ser itens desenhados pelo proprietário. Para obter mais informações, consulte [controles de cabeçalho Owner-Drawn](http://msdn.microsoft.com/library/windows/desktop/bb775238) no SDK do Windows.  

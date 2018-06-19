@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342824"
 ---
 # <a name="containers-implementing-a-container"></a>Contêineres: implementando um contêiner
 Este artigo resume o procedimento para implementar um contêiner e direciona para outros artigos que fornecem que mais detalhadas explicações sobre a implementação de contêineres. Ela também lista alguns recursos opcionais do OLE, que talvez você queira implementar e os artigos que descrevem esses recursos.  

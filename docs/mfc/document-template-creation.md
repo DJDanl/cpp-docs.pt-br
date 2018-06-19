@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345788"
 ---
 # <a name="document-template-creation"></a>Criação do modelo de documento
 Ao criar um novo documento em resposta a um `New` ou **abrir** comando o **arquivo** menu, o modelo de documento também cria uma nova janela do quadro através da qual exibir o documento.  

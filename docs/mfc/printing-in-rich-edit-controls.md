@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347657"
 ---
 # <a name="printing-in-rich-edit-controls"></a>Imprimindo em controles de edição avançada
 Você pode ver o controle de edição de um conjunto avançado ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) para processar sua saída para um determinado dispositivo, como uma impressora. Você também pode especificar o dispositivo de saída para o qual um conjunto avançado do controle de edição formata seu texto.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342485"
 ---
 # <a name="automation-clients"></a>Clientes de automação
 Automação torna possível para o seu aplicativo para manipular objetos implementados em outro aplicativo ou para expor os objetos para que eles podem ser manipulados. Um cliente de automação é um aplicativo que pode manipular objetos expostos que pertencem a outro aplicativo. O aplicativo que expõe objetos é chamado de servidor de automação. O cliente manipula os objetos do aplicativo de servidor acessando as funções e as propriedades desses objetos.  

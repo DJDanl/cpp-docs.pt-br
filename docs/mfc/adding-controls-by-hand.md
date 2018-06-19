@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342469"
 ---
 # <a name="adding-controls-by-hand"></a>Adicionando controles manualmente
 Você pode [adicionar controles a uma caixa de diálogo com o editor de caixa de diálogo](../mfc/using-the-dialog-editor-to-add-controls.md) ou adicioná-las por conta própria, com o código.  

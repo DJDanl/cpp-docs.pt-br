@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318032"
 ---
 # <a name="resource-compiler-fatal-error-rw1016"></a>Erro fatal RW1016 (compilador de recurso)
 RC encerrado depois de erros do pré-processador  

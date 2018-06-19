@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689890"
 ---
 # <a name="a3---using-parallel-regions"></a>A.3   Usando regiões em paralelo
 O `parallel` diretiva ([seção 2.3](../../parallel/openmp/2-3-parallel-construct.md) na página 8) pode ser usado em programas paralelos de alta granularidade. No exemplo a seguir, cada thread na região parallel decide qual parte da matriz global `x` para trabalhar nela, com base no número de threads:  

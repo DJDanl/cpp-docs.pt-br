@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343769"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Troca de dados da caixa de diálogo e validação
 Troca de dados de caixa de diálogo (DDX) é uma maneira fácil para inicializar os controles na caixa de diálogo e para coletar dados de entrada do usuário. Validação de dados de caixa de diálogo (DDV) é uma maneira fácil para validar a entrada de dados em uma caixa de diálogo. Para tirar proveito de DDX e DDV em suas caixas de diálogo, use o [Adicionar Assistente de variável de membro](../ide/add-member-variable-wizard.md) para criar os membros de dados e definir os tipos de dados e especificar regras de validação.  

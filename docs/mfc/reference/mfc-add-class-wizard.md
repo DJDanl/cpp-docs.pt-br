@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373405"
 ---
 # <a name="mfc-add-class-wizard"></a>Assistente para adicionar classe MFC
 Use este assistente de código para adicionar uma classe a um projeto existente, ou para adicionar uma classe a um projeto de ATL que dá suporte a MFC. Você também pode adicionar classes MFC para projetos do Win32 que têm suporte do MFC. Os recursos que você especificou quando criou seu projeto determinam as opções disponíveis na caixa de diálogo.  

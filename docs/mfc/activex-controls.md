@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340778"
 ---
 # <a name="activex-controls"></a>Controles ActiveX
 No Visual C++, você pode criar controles ActiveX usando MFC ou do ATL  

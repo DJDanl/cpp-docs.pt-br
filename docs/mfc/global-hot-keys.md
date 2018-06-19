@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344224"
 ---
 # <a name="global-hot-keys"></a>Teclas de acesso globais
 Tecla de acesso global está associada uma janela nonchild específico. Ele permite que o usuário ativar a janela de qualquer parte do sistema. Um aplicativo define a tecla de acesso global para uma determinada janela, enviando o [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) mensagem para essa janela. Por exemplo, se `m_HotKeyCtrl` é o [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) objeto e `pMainWnd` é um ponteiro para a janela a ser ativado quando é pressionada a tecla de acesso, você pode usar o código a seguir para associar a tecla de acesso especificada no controle com a janela apontada pelo `pMainWnd`.  

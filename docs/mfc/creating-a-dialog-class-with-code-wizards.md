@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342193"
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>Criando uma classe de caixa de diálogo com assistentes de código
 A tabela a seguir lista as tarefas relacionadas à caixa de diálogo que você gerencia o ajudam a assistentes de código.  

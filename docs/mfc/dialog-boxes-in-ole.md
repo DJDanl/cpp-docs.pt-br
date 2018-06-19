@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347835"
 ---
 # <a name="dialog-boxes-in-ole"></a>Caixas de diálogo em OLE
 Enquanto um usuário executa um aplicativo habilitado para OLE, há vezes em que o aplicativo precisa de informações do usuário para realizar a operação. As classes MFC OLE fornecem uma série de caixas de diálogo para coletar as informações necessárias. Este tópico lista as tarefas tratadas pelas caixas de diálogo OLE e as classes necessárias para exibir essas caixas de diálogo. Para obter detalhes sobre caixas de diálogo OLE e as estruturas usadas para personalizar seu comportamento, consulte [referência MFC](../mfc/mfc-desktop-applications.md).  

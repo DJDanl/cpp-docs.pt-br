@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342040"
 ---
 # <a name="creating-the-list-control"></a>Criando o controle de lista
 Como a lista de controle ([CListCtrl](../mfc/reference/clistctrl-class.md)) é criada depende se você estiver usando o controle diretamente ou usando a classe [CListView](../mfc/reference/clistview-class.md) em vez disso. Se você usar `CListView`, a estrutura constrói o modo de exibição como parte da sua sequência de criação de documento/exibição. Criar o modo de exibição de lista cria o controle de lista também (os dois são iguais). O controle é criado no modo de exibição [OnCreate](../mfc/reference/cwnd-class.md#oncreate) função do manipulador. Nesse caso, o controle está pronto para adicionar itens, por meio de uma chamada para [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl).  

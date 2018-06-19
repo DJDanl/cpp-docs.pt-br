@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282981"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>Compilador C4789 de aviso (nível 1)
 Identificador de N bytes de tamanho do buffer será substituído; M bytes serão escritos começando no deslocamento L  

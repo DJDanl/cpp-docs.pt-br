@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347036"
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>Classes de transferência para arrastar e soltar dados OLE
 Essas classes são usadas nas transferências de dados OLE. Permitem que os dados a serem transferidos entre aplicativos usando a área de transferência ou por meio de arrastar e soltar.  

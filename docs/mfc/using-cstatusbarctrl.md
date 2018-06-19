@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383544"
 ---
 # <a name="using-cstatusbarctrl"></a>Usando CStatusBarCtrl
 Você pode usar o controle de barra de status ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) para criar uma janela de controle que refletem vários tipos de informações de status sobre o aplicativo. A janela de status pode ser dividida em partes que exibem mais de um tipo de informação.  

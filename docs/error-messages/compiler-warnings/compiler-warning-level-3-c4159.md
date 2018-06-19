@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291665"
 ---
 # <a name="compiler-warning-level-3-c4159"></a>Compilador C4159 de aviso (nível 3)
 \#pragma pragma(pop,...): identificador anteriormente enviado 'Identificador' ser exibido  

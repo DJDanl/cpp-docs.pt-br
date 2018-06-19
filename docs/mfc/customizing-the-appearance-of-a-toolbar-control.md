@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343688"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Personalizando a aparência de um controle de barra de ferramentas
 Classe `CToolBarCtrl` fornece vários estilos que afetam a aparência (e, ocasionalmente, o comportamento) do objeto da barra de ferramentas. Modificar o objeto de barra de ferramentas, definindo o `dwCtrlStyle` parâmetro o `CToolBarCtrl::Create` (ou `CToolBar::CreateEx`) função de membro, quando você cria o controle de barra de ferramentas.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342014"
 ---
 # <a name="control-bar-classes"></a>Classes da barra de controle
 Barras de controle são anexadas a uma janela do quadro. Eles contêm um modelo de caixa de diálogo, painéis de status ou botões. Barras de controle flutuante, também chamadas de paletas de ferramenta, são implementadas por anexá-los para um [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md) objeto.  

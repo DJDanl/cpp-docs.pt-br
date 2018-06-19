@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346611"
 ---
 # <a name="document-classes"></a>Classes de documento
 Objetos de classe de documento, criados por objetos de modelo de documento, gerenciam os dados do aplicativo. Você irá derivar uma classe para seus documentos de uma dessas classes.  

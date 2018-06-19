@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342167"
 ---
 # <a name="containers-client-item-states"></a>Contêineres: estados de item do cliente
 Este artigo explica os diferentes estados em que um item do cliente passa em seu tempo de vida.  

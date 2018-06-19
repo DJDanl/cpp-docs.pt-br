@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688928"
 ---
 # <a name="multilinkregistry-class"></a>Classe multi_link_registry
 O `multi_link_registry` objeto é um `network_link_registry` que gerencia vários blocos de origem ou de vários blocos de destino.  

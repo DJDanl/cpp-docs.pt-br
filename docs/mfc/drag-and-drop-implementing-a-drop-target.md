@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344263"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Arrastar e soltar: implementando um destino de soltar
 Este artigo descreve como fazer um destino de seu aplicativo. Implementando um destino de soltar leva um pouco mais trabalho que a implementação de uma origem para soltar, mas ela ainda é relativamente simple. Essas técnicas também se aplicam a aplicativos não-OLE.  

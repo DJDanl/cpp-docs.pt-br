@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345072"
 ---
 # <a name="memory-management"></a>Gerenciamento de memória
 Este grupo de artigos descreve como tirar proveito dos serviços de uso gerais da Microsoft Foundation Class Library (MFC) relacionadas ao gerenciamento de memória. Alocação de memória pode ser dividida em duas categorias principais: alocações e as alocações de heap do quadro.  

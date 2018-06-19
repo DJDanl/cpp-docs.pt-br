@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346432"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>Manipulando o controle da dica de ferramenta
 Classe `CToolTipCtrl` fornece um grupo de membros que controlam os vários atributos de funções de `CToolTipCtrl` objeto e a janela de dica de ferramenta.  

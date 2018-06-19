@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688278"
 ---
 # <a name="242-sections-construct"></a>2.4.2 Constructo sections
 O **seções** diretiva identifica uma construção de compartilhamento em trabalho noniterative que especifica um conjunto de construções que devem ser divididos entre os threads em uma equipe. Cada seção é executada uma vez por um thread na equipe. A sintaxe do **seções** diretiva é da seguinte maneira:  

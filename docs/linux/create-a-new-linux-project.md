@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339223"
 ---
 # <a name="create-a-new-linux-project"></a>Criar um novo projeto do Linux
 Ao codificar para Linux, você tem a opção de criar um projeto do Visual Studio ou um projeto do CMake. Este tópico descreve como criar um projeto do Visual Studio. Para obter mais informações sobre projetos do CMake, consulte [Configurar um projeto do CMake Linux ](cmake-linux-project.md).

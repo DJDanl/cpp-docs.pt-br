@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341343"
 ---
 # <a name="creating-an-active-document-container-application"></a>Criando um aplicativo de contêiner de documento ativo
 A maneira mais simples e mais recomendada para criar um aplicativo de contêiner do documento ativo é criar um aplicativo de contêiner EXE do MFC usando o Assistente de aplicativo MFC, em seguida, modificar o aplicativo para oferecer suporte a contenção de documentos ativos.  

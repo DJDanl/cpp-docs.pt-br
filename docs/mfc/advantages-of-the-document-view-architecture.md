@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340842"
 ---
 # <a name="advantages-of-the-documentview-architecture"></a>Vantagens da arquitetura de documento/exibição
 A vantagem principal de usar a arquitetura de documento/exibição MFC é que a arquitetura oferece suporte a várias exibições do mesmo documento muito bem. (Se você não precisa vários modos de exibição e pequena sobrecarga de documento/exibição é excessiva em seu aplicativo, você poderá evitar a arquitetura. [Alternativas à arquitetura de documento/exibição](../mfc/alternatives-to-the-document-view-architecture.md).)  

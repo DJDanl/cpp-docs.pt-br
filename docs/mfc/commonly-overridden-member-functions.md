@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345830"
 ---
 # <a name="commonly-overridden-member-functions"></a>Funções de membro normalmente substituídas
 A tabela a seguir lista mais provavelmente funções de membro para substituir em seu `CDialog`-classe derivada.  

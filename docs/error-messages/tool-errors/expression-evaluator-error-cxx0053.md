@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295542"
 ---
 # <a name="expression-evaluator-error-cxx0053"></a>Erro CXX0053 (avaliador de expressão)
 correspodência de símbolo que corresponde ao associar os pontos de interrupção  

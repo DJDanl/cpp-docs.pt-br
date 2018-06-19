@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334880"
 ---
 # <a name="active-documents-on-the-internet"></a>Documentos ativos na Internet
 Documentos ativos fornecem uma extensão para objetos inseridos tradicionais. Os documentos ativos podem ser várias páginas e são exibidos em toda a área cliente. Eles não negociação de menu tradicionais e podem ser editados no local, bem como em uma janela aberta no aplicativo do servidor. Em vez de exibir como um pequeno retângulo circundado por uma borda tracejada, documentos ativos são quadro completo e ativo sempre no local.  

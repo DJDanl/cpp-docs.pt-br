@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344507"
 ---
 # <a name="creating-the-header-control"></a>Criando o controle de cabeçalho
 O controle de cabeçalho não está diretamente disponível no editor de caixa de diálogo (embora você pode adicionar um controle de lista, que inclui um controle de cabeçalho).  

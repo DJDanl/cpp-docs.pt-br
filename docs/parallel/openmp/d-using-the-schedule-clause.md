@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694934"
 ---
 # <a name="d-using-the-schedule-clause"></a>D. Usando a cláusula de agenda
 Uma região parallel tem pelo menos uma barreira, seu final e pode ter barreiras adicionais nele. Em cada barreira, os outros membros da equipe devem aguardar o último segmento chegar. Para minimizar esse tempo de espera, o trabalho compartilhado deve ser distribuído para que todos os threads chegam a barreira em aproximadamente ao mesmo tempo. Se alguns dos que compartilhou o trabalho está contido no **para** constrói, o `schedule` cláusula pode ser usada para essa finalidade.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347227"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>Manipuladores para comandos e notificações de controle
 Não há nenhum manipulador padrão para comandos ou mensagens de notificação de controle. Portanto, você está associados somente por convenção em seus manipuladores de nomenclatura para essas categorias de mensagens. Ao mapear a notificação de comando ou o controle para um manipulador, as janelas de propriedades sugere um nome com base no código de identificação ou notificação de controle de comando. Você pode aceitar o nome proposto, alterá-la ou substituí-lo.  

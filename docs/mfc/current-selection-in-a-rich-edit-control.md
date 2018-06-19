@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345004"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Seleção atual em um controle de edição avançada
 O usuário pode selecionar o texto em um controle de edição avançada ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) usando o mouse ou o teclado. A seleção atual é o intervalo de caracteres selecionados ou a posição do ponto de inserção se nenhum caractere são selecionados. Um aplicativo pode obter informações sobre a seleção atual, definir a seleção atual, determine quando as alterações de seleção atual e mostrar ou ocultar a seleção de realce.  

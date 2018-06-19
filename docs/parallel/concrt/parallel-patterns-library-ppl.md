@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691535"
 ---
 # <a name="parallel-patterns-library-ppl"></a>Biblioteca de padrões paralelos (PPL)
 A biblioteca de padrões paralelos (PPL) fornece um modelo de programação imperativo que promova a escalabilidade e a facilidade de uso para o desenvolvimento de aplicativos simultâneos. PPL tem como base os componentes de gerenciamento de recursos e agendamento de tempo de execução de simultaneidade. Ele gera o nível de abstração entre o código do aplicativo e o mecanismo subjacente de threading, fornecendo algoritmos genéricos fortemente tipadas e contêineres que atuam em dados em paralelo. PPL permite desenvolver aplicativos que podem ser expandidos fornecendo alternativas para estado compartilhado.  

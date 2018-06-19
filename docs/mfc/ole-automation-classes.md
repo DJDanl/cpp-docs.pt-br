@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342872"
 ---
 # <a name="ole-automation-classes"></a>Classes de automação OLE
 Essas classes de suportam a clientes de automação (aplicativos que controlam a outros aplicativos). Servidores de automação (aplicativos que podem ser controlados por outros aplicativos) têm suporte por meio de [mapas de envios](../mfc/reference/dispatch-maps.md).  

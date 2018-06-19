@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292653"
 ---
 # <a name="compiler-warning-level-4-c4001"></a>Compilador C4001 de aviso (nível 4)
 extensão não padrão 'comentário de linha única' foi usado  

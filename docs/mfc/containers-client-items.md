@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344211"
 ---
 # <a name="containers-client-items"></a>Contêineres: itens clientes
 Este artigo explica o que são itens de cliente e de classes de que seu aplicativo deve derivar seus itens de cliente.  

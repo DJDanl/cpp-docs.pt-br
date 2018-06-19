@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33309462"
 ---
 # <a name="compiler-warning-level-2-c4099"></a>Aviso do compilador (nível 2) C4099
 'Identificador': nome de tipo visto primeiro usando 'objecttype1' agora visto usando 'objecttype2'  

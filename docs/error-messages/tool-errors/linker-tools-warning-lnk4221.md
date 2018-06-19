@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301002"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>Aviso LNK4221 (Ferramentas de Vinculador)
 Esse arquivo de objeto não define nenhum dos símbolos anteriormente indefinidos, portanto ele não será usado por nenhuma operação de vínculo que consuma esta biblioteca  

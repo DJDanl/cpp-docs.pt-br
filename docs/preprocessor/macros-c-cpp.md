@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850177"
 ---
 # <a name="macros-cc"></a>Macros (C/C++)
 Pré-processamento expande macros em todas as linhas que não são diretivas de pré-processador (linhas que não têm um **#** como o primeiro caractere que não esteja em branco) e em partes de algumas diretivas que não são ignoradas como parte de um compilação condicional. As políticas de “compilação condicional” permitem que você suprima a compilação de partes de um arquivo de origem testando uma expressão constante ou um identificador para determinar quais blocos de texto passam no compilador e que são removidos do arquivo de origem durante o pré-processamento.  

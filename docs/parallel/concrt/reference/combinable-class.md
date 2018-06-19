@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689198"
 ---
 # <a name="combinable-class"></a>Classe combinable
 O `combinable<T>` objeto destina-se a fornecer thread privada cópias de dados, para executar cálculos de subgrupos de local de thread livre de bloqueios durante os algoritmos paralelos. No final da operação em paralelo, os cálculos sub particular de thread, em seguida, podem ser mesclados em um resultado final. Esta classe pode ser usado em vez de uma variável compartilhada e pode resultar em uma melhoria de desempenho se caso contrário, haverá muita contenção nessa variável compartilhada.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341969"
 ---
 # <a name="date-and-time-picker-control-examples"></a>Exemplos de controle de seletor de data e hora
 O [CMNCTRL1](../visual-cpp-samples.md) demonstra vários atributos do `CDateTimeCtrl` classe. Uma página separada contém um controle de seletor de data e hora em que o usuário pode manipular vários atributos de alteração e testar a funcionalidade básica do controle.  

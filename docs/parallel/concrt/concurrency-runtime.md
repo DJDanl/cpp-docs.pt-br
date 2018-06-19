@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693517"
 ---
 # <a name="concurrency-runtime"></a>Tempo de Execução de Simultaneidade
 O tempo de execução de simultaneidade para C++ o ajudará a gravação robusta, escalável e responsivos aplicativos paralelos. Ele aumenta o nível de abstração para que você não precisa gerenciar os detalhes de infraestrutura que são relacionados a simultaneidade. Você também pode usar isso para especificar o agendamento políticas que atendem a qualidade das demandas de serviço de seus aplicativos. Use estes recursos para ajudá-lo a começar a trabalhar com o tempo de execução de simultaneidade.  

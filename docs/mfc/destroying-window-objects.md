@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343370"
 ---
 # <a name="destroying-window-objects"></a>Destruindo objetos de janela
 Deve ter cuidado com suas próprias janelas filho para destruir o objeto de janela C++ quando o usuário for concluído com a janela. Se esses objetos não são destruídos, seu aplicativo não recuperará a memória. Felizmente, o framework gerencia destruição de janela, bem como a criação de janelas com moldura, exibições e caixas de diálogo. Se você criar janelas adicionais, você é responsável por destruí-las.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346263"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>Mapeando mensagens do Windows para a classe
 Se você precisar de sua caixa de diálogo para lidar com mensagens do Windows, substitua as funções de manipulador adequado. Para fazer isso, use a janela Propriedades para [mapear as mensagens](../mfc/reference/mapping-messages-to-functions.md) para a classe de caixa de diálogo. Isso grava uma entrada de mapa de mensagem para cada mensagem e adiciona as funções de membro de manipulador de mensagens para a classe. Use o editor de código fonte do Visual C++ para escrever código em manipuladores de mensagens.  

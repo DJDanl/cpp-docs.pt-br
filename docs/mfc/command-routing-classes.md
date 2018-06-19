@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341956"
 ---
 # <a name="command-routing-classes"></a>Classes de roteamento do comando
 Como o usuário interage com o aplicativo escolhendo menus ou botões da barra de controle com o mouse, o aplicativo envia mensagens do objeto de interface do usuário afetado para um objeto de destino do comando apropriado. Destino do comando classes derivadas de `CCmdTarget` incluem [CWinApp](../mfc/reference/cwinapp-class.md), [CWnd](../mfc/reference/cwnd-class.md), [CDocTemplate](../mfc/reference/cdoctemplate-class.md), [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), e as classes derivadas da parte deles. A estrutura oferece suporte a roteamento de comando automático para que os comandos podem ser tratados pelo objeto ativo no momento em que o aplicativo mais apropriado.  

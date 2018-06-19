@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344836"
 ---
 # <a name="changing-list-control-styles"></a>Alterando estilos de controle de lista
 Você pode alterar o estilo da janela de um controle de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) a qualquer momento depois de criá-lo. Ao alterar o estilo da janela, você deve alterar o tipo de exibição que usa o controle. Por exemplo, para emular o Pesquisador de objetos, você pode fornecer itens de menu ou botões de barra de ferramentas para alternar entre o controle entre diferentes modos de exibição: exibição de ícones, exibição de lista e assim por diante.  

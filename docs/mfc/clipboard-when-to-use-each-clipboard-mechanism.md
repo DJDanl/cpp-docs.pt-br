@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341920"
 ---
 # <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>Área de Transferência: quando usar cada mecanismo da Área de Transferência
 Siga estas diretrizes usando a área de transferência:  

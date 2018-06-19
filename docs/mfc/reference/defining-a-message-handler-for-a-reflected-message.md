@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373163"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definindo um manipulador de mensagens para uma mensagem refletida
 Depois de criar uma nova classe de controle MFC, você pode definir manipuladores de mensagens para ela. Manipuladores de mensagens refletidas permitem que a sua classe de controle lidar com suas próprias mensagens antes da mensagem é recebida pelo pai. Você pode usar o MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) função para enviar mensagens de seu controle a uma janela pai.  

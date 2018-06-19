@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858751"
 ---
 # <a name="adding-or-deleting-a-string"></a>Adicionando ou excluindo uma cadeia de caracteres
 Você pode inserir rapidamente novas entradas na tabela de cadeia de caracteres usando o editor de cadeia de caracteres. Novas cadeias de caracteres são colocadas no final da tabela e recebem o próximo identificador disponível. Você pode editar as propriedades de ID, o valor ou a legenda no [janela propriedades](/visualstudio/ide/reference/properties-window) conforme necessário.  

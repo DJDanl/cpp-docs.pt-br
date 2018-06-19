@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341320"
 ---
 # <a name="cleaning-up-documents-and-views"></a>Limpando documentos e exibições
 Quando um documento está sendo fechado, o framework chama primeiro seu [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) função de membro. Se você tiver atribuído qualquer memória heap durante o curso de operação do documento, `DeleteContents` é o melhor lugar para desalocar a ele.  

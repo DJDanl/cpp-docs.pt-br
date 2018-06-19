@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345034"
 ---
 # <a name="handling-the-apply-button"></a>Manipulando o botão Aplicar
 Folhas de propriedade tem um recurso que caixas de diálogo padrão não: eles permitem que o usuário aplicar as alterações feitas antes de fechar a folha de propriedades. Isso é feito usando o botão Aplicar. Este artigo descreve métodos que você pode usar para implementar esse recurso corretamente.  

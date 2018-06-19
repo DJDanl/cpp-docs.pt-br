@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694879"
 ---
 # <a name="parallel-algorithms"></a>Algoritmos paralelos
 A biblioteca de padrões paralelos (PPL) fornece algoritmos que executam o trabalho simultaneamente em conjuntos de dados. Esses algoritmos são semelhantes aos fornecidos pela biblioteca C++ padrão.  

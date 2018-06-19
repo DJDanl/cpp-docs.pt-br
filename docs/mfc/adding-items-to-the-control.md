@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341359"
 ---
 # <a name="adding-items-to-the-control"></a>Adicionando itens ao controle
 Para adicionar itens ao controle de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)), chame uma das várias versões do [InsertItem](../mfc/reference/clistctrl-class.md#insertitem) função de membro, dependendo de quais informações você tem. Uma versão usa um [LV_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) estrutura que você preparar. Porque o `LV_ITEM` estrutura contém vários membros, você terá maior controle sobre os atributos do item de controle de lista.  

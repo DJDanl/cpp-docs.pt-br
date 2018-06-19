@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343914"
 ---
 # <a name="destroying-the-dialog-box"></a>Destruindo a caixa de diálogo
 Caixas de diálogo modais normalmente são criadas no quadro de pilha e destruídas quando terminar a função que os criou. Destruidor do objeto de caixa de diálogo é chamado quando o objeto sai do escopo.  

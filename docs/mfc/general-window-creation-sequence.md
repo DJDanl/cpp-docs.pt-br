@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346510"
 ---
 # <a name="general-window-creation-sequence"></a>Sequência de criação da janela geral
 Quando você cria uma janela de sua preferência, como um filho janela, a estrutura usa muito o mesmo processo descrito em [criação de documento/exibição](../mfc/document-view-creation.md).  

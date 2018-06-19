@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343012"
 ---
 # <a name="documentview-sample-list"></a>Lista de exemplos de documento/exibição
 Consulte os seguintes programas de exemplo que ilustram o uso de arquitetura de documento/exibição do MFC de maneiras interessantes:  

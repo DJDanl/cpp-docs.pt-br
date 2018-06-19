@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339009"
 ---
 # <a name="active-document-containers"></a>Contêineres de documento ativos
 Um contêiner de documento ativo, como o Microsoft Office Binder ou Internet Explorer, permite que você trabalhe com vários documentos de diferentes tipos de aplicativos em uma única estrutura (em vez de forçá-lo a criar e usar várias estruturas de aplicativo para cada tipo de documento).  

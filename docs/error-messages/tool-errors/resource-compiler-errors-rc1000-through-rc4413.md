@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339898"
 ---
 # <a name="resource-compiler-errors-rc1000-through-rc4413"></a>Erros RC1000 a RC4413 (compilador de recurso)
 Esta seção é uma referência aos erros gerados pelas ferramentas de compilação. Para obter ajuda sobre uma mensagem de erro específica, clique com o mouse sobre um número de erro na janela de saída e pressione F1 ou digite o número do erro no **procure** caixa no índice.

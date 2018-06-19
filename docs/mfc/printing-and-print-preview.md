@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346250"
 ---
 # <a name="printing-and-print-preview"></a>Impressão e visualização de impressão
 MFC dá suporte à impressão e visualização de impressão para documentos do programa por meio da classe [CView](../mfc/reference/cview-class.md). Para impressão básica e visualização de impressão, basta substituir a classe de exibição [OnDraw](../mfc/reference/cview-class.md#ondraw) função de membro, que deve ser feito mesmo assim. Essa função pode desenhar para a exibição na tela, para um contexto de dispositivo de impressora para uma impressora real, ou em um contexto de dispositivo que simula a impressora na tela.  

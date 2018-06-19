@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318806"
 ---
 # <a name="resource-compiler-error-rc2122"></a>Erro RC2122 (compilador de recurso)
 subtipo de menu desconhecido  

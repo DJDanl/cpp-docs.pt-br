@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341704"
 ---
 # <a name="declaring-message-handler-functions"></a>Declarando funções de manipulador de mensagens
 Certas regras e convenções controlam os nomes das funções de manipulador de mensagens. Eles dependem da categoria de mensagem, conforme descrito nos tópicos a seguir:  

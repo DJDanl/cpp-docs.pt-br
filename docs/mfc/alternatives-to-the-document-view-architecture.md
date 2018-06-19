@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344198"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativas à arquitetura de documento/exibição
 Aplicativos MFC normalmente usam a arquitetura de documento/exibição para gerenciar informações, formatos de arquivo e a representação visual dos dados para os usuários. Para a maioria dos aplicativos de área de trabalho, a arquitetura de documento/exibição é uma arquitetura de aplicativos apropriado e eficiente. Essa arquitetura separa os dados da exibição e, na maioria dos casos, simplifica o seu aplicativo e reduz o código redundante.  

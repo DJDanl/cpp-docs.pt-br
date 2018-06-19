@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343639"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>Fazendo bypass do mecanismo de serialização
 Como vimos, o framework fornece uma maneira de padrão para ler e gravar dados para e de arquivos. Serializando por meio de um objeto de arquivo morto adequado às necessidades de uma grande muitos aplicativos. Esse aplicativo lê um arquivo inteiramente na memória, permite que o usuário atualizar o arquivo e, em seguida, grava a versão atualizada para o disco novamente.  

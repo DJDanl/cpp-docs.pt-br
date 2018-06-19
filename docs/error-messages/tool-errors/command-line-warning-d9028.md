@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301535"
 ---
 # <a name="command-line-warning-d9028"></a>Aviso D9028 (linha de comando)
 Falha na recompilação mínima, revertendo para compilação normal  

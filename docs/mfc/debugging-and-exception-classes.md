@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341755"
 ---
 # <a name="debugging-and-exception-classes"></a>Classes de depuração e exceção
 Essas classes oferecem suporte para depuração de alocação de memória dinâmica e para transmitir informações de exceção da função em que a exceção é gerada para a função em que é capturada.  

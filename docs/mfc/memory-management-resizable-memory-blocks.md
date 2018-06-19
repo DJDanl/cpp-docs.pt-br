@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345674"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>Gerenciamento de memória: blocos de memória redimensionáveis
 O **novo** e **excluir** operadores, descritas no artigo [gerenciamento de memória: exemplos](../mfc/memory-management-examples.md), são bons para alocando e desalocando blocos de memória de tamanho fixo e objetos. Ocasionalmente, seu aplicativo pode ser necessário blocos de memória redimensionáveis. Você deve usar as funções de biblioteca de tempo de execução C padrão [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md), e [livre](../c-runtime-library/reference/free.md) para gerenciar os blocos de memória redimensionáveis no heap.  
