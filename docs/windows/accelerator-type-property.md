@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856495"
 ---
 # <a name="accelerator-type-property"></a>Propriedade do tipo de acelerador
 O Acelerador de **tipo** propriedade determina se a combinação de teclas de atalho associada à ID de aceleração é uma combinação de teclas virtual ou um valor de chave ASCII/ANSI:  

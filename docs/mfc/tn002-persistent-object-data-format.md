@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385411"
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002: formato de dados do objeto persistente
 Esta anotação descreve as rotinas MFC que oferecem suporte a objetos C++ persistentes e o formato de dados do objeto quando ele é armazenado em um arquivo. Isso se aplica apenas às classes com o [DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial) e [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) macros.  

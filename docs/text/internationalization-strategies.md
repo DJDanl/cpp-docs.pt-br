@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856590"
 ---
 # <a name="internationalization-strategies"></a>Estratégias de internacionalização
 Dependendo dos sistemas operacionais de destino e mercados, você tem várias estratégias de internacionalização:  

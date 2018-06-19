@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346175"
 ---
 # <a name="life-cycle-of-a-dialog-box"></a>Ciclo de vida de uma caixa de diálogo
 Durante o ciclo de vida de uma caixa de diálogo, o usuário chama a caixa de diálogo, geralmente dentro de um manipulador de comando que cria e inicializa o objeto de caixa de diálogo, o usuário interage com a caixa de diálogo e fecha a caixa de diálogo.  

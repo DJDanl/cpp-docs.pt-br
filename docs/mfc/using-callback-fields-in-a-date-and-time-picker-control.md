@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383780"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Usando campos de retorno de chamada em um controle de seletor de data e hora
 Além de caracteres de formato padrão que definem campos de seletor de data e hora, você pode personalizar a saída especificando algumas partes de uma cadeia de caracteres de formato personalizado como campos de retorno de chamada. Para declarar um campo de retorno de chamada, inclua um ou mais caracteres "X" (88 do código ASCII) em qualquer lugar no corpo da cadeia de caracteres de formato. Por exemplo, a seguinte cadeia de caracteres "' atualmente é: 'yy' / 'MM' / 'dd' (dia 'X')'" faz com que o controle de seletor de data e hora exibir o valor atual como o ano seguido por mês, data e, finalmente, o dia do ano.  

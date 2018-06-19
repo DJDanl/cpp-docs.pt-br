@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385944"
 ---
 # <a name="windows-sockets-blocking"></a>Windows Sockets: bloqueando
 Este artigo e dois artigos complementar explicam vários problemas na programação do Windows Sockets. Este artigo aborda o bloqueio. Os outros problemas são abordados nos artigos: [Windows Sockets: ordenação de bytes](../mfc/windows-sockets-byte-ordering.md) e [Windows Sockets: Convertendo cadeias de caracteres](../mfc/windows-sockets-converting-strings.md).  

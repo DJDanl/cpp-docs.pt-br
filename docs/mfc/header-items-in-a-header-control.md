@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344916"
 ---
 # <a name="header-items-in-a-header-control"></a>Itens de cabeçalho em um controle de cabeçalho
 Você tem controle considerável sobre a aparência e o comportamento dos itens de cabeçalho que compõem um controle de cabeçalho ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)). Cada item de cabeçalho pode ter uma cadeia de caracteres, uma imagem de bitmap, uma imagem de uma lista de imagens associado ou um valor de 32 bits definido pelo aplicativo associado a ele. A cadeia de caracteres, bitmap ou imagem é exibida no item de cabeçalho.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384717"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: janelas separadoras
 Esta anotação descreve o MFC [CSplitterWnd classe](../mfc/reference/csplitterwnd-class.md), que fornece a janela se divide e gerencia o redimensionamento de outras janelas do painel.  

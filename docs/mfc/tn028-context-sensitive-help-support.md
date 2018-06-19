@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385138"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028: suporte à ajuda contextual
 Esta anotação descreve as regras de atribuição de IDs de contextos de Ajuda e outros problemas de Ajuda em MFC. Suporte à ajuda contextual requer que o compilador de Ajuda que está disponível no Visual C++.  

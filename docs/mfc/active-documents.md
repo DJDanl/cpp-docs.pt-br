@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335492"
 ---
 # <a name="active-documents"></a>Documentos ativos
 Documentos ativos estendem a tecnologia de documento composto de OLE. Essas extensões são fornecidas na forma de interfaces adicionais que gerenciar modos de exibição, para que os objetos pode funcionar em contêineres e ainda manter o controle sobre sua exibição e funções de impressão. Esse processo torna possível exibir documentos em quadros externos (como o Microsoft Office Binder ou Microsoft Internet Explorer) e em quadros nativos (como as portas de exibição do produto).  

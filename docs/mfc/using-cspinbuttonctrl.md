@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384394"
 ---
 # <a name="using-cspinbuttonctrl"></a>Usando CSpinButtonCtrl
 O *botão de rotação* controle (também conhecido como um *acima-abaixo* controle) fornece um par de setas que um usuário pode clicar para ajustar um valor. Esse valor é conhecido como o *posição atual*. A posição permanece dentro do intervalo do botão de rotação. Quando o usuário clica na seta para cima, a posição aproxima o máximo; e, quando o usuário clica na seta para baixo, a posição aproxima o mínimo.  

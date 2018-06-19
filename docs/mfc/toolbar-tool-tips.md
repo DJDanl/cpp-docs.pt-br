@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383491"
 ---
 # <a name="toolbar-tool-tips"></a>Dicas de ferramenta da barra de ferramentas
 Dicas de ferramenta são as janelas de pop-up pequeno que apresentam breves descrições de finalidade de um botão barra de ferramentas quando você posiciona o mouse sobre um botão para um período de tempo. Quando você cria um aplicativo com o Assistente de aplicativo que tem uma barra de ferramentas, suporte de dica de ferramenta é fornecido para você. Este artigo explica as duas o suporte de dica ferramenta criado pelo Assistente do aplicativo e como adicionar suporte de dica de ferramenta para seu aplicativo.  

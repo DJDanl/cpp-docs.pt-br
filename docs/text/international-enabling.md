@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858696"
 ---
 # <a name="international-enabling"></a>Habilitação internacional
 Código C e C++ mais tradicional faz suposições sobre manipulação de caracteres e cadeia de caracteres que não funcionam bem para aplicativos internacionais. Enquanto MFC e a biblioteca de tempo de execução oferecem suporte a Unicode ou MBCS, ainda há trabalho para fazer. Para guiá-lo, esta seção explica o significado de "habilitação internacional" no Visual C++:  

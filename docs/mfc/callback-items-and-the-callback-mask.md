@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342768"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>Itens e máscara de retorno de chamada
 Para cada um de seus itens, um controle de exibição de lista geralmente armazena o texto do rótulo, o índice de lista de imagem dos ícones do item, e um conjunto de bits sinaliza para o estado do item. Você pode definir os itens individuais como itens de retorno de chamada, que são úteis se seu aplicativo já armazena algumas informações de um item.  

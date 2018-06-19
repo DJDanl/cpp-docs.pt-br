@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857708"
 ---
 # <a name="changing-a-symbol-or-symbol-name-id"></a>Alterando um símbolo ou um nome de símbolo (ID)
 Quando você cria um novo recurso ou o objeto de recurso, o ambiente de desenvolvimento atribui a ele um nome de símbolo padrão, por exemplo, IDD_DIALOG1. Você pode usar o [janela propriedades](/visualstudio/ide/reference/properties-window) para alterar o nome do símbolo padrão ou para alterar o nome de qualquer símbolo já está associado com um recurso.  

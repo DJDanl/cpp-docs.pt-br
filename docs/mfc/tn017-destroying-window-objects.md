@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384297"
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017: destruindo objetos de janela
 Esta anotação descreve o uso do [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) método. Use este método se você deseja fazer alocação personalizada de `CWnd`-objetos derivados. Esta anotação também explica por que você deve usar [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) destruir um objeto C++ do Windows em vez do `delete` operador.  
