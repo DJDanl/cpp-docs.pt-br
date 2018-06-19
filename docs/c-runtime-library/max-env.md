@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389007"
 ---
 # <a name="maxenv"></a>_MAX_ENV
 O comprimento máximo de cadeia de caracteres permitido para uma variável ambiental.  

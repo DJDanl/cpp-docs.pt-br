@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381662"
 ---
 # <a name="file-position-in-append-mode"></a>A posição do arquivo no modo de acréscimo
 **ANSI 4.9.3** Se o indicador da posição do arquivo de um fluxo de modo de acréscimo foi posicionado inicialmente no início ou no final do arquivo  

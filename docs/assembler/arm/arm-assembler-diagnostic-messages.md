@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052767"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Mensagens de diagnóstico do ARM Assembler
 O assembler ARM Microsoft (*armasm*) emite erros e avisos de diagnósticos quando encontrá-las. Este artigo descreve as mensagens mais comumente encontrados.  

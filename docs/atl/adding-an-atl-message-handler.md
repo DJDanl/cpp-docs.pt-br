@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354150"
 ---
 # <a name="adding-an-atl-message-handler"></a>Adicionando um manipulador de mensagem do ATL
 Para adicionar um manipulador de mensagens (uma função de membro que manipula mensagens do Windows) para um controle, selecione o controle no modo de exibição de classe. Abra o **propriedades** janela, selecione o **mensagens** ícone e clique na lista suspensa de controle na caixa oposta a mensagem necessária. Isso adicionará uma declaração para o manipulador de mensagens no arquivo de cabeçalho do controle e uma implementação de esqueleto do manipulador no arquivo. cpp do controle. Ele também adicionar o mapa de mensagem e adicione uma entrada para o manipulador.  

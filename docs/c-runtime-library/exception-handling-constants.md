@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388221"
 ---
 # <a name="exception-handling-constants"></a>Constantes do tratamento de exceções
 As constantes `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION` ou `EXCEPTION_EXECUTE_HANDLER` são retornadas quando ocorre uma exceção durante a execução da seção protegida de uma instrução **try-except**. O valor retornado determina como a exceção será tratada. Para obter mais informações, consulte [Instrução de try-except](../cpp/try-except-statement.md) na *Referência da linguagem C++*.  

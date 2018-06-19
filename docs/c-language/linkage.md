@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383518"
 ---
 # <a name="linkage"></a>Vinculação
 Os nomes de identificadores podem fazer referência aos identificadores diferentes em escopos diferentes. Um identificador declarado em escopos diferentes ou no mesmo escopo mais de uma vez pode ser feito para fazer referência ao mesmo identificador ou função por um processo chamado “vinculação”. A vinculação determina as partes do programa nas quais um identificador pode ser referenciado (sua "visibilidade"). Existem três tipos de vinculação: [interna](../c-language/internal-linkage.md), [externa](../c-language/external-linkage.md) e [nenhuma vinculação](../c-language/no-linkage.md).  

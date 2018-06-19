@@ -101,6 +101,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392140"
 ---
 # <a name="data-type-constants"></a>Constantes de tipo de dados
 Constantes de tipo de dados são dependentes de implementação intervalos de valores permitidos para tipos de dados integrais. As constantes listadas abaixo oferecem os intervalos para os tipos de dados integrais e são definidas em LIMITS.H.  

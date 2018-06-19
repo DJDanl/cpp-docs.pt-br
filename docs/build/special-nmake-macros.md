@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380008"
 ---
 # <a name="special-nmake-macros"></a>Macros NMAKE especiais
 NMAKE fornece várias macros especiais para representar vários nomes de arquivo e comandos. É um uso de algumas dessas macros nas regras de inferência de tipos predefinidos. Como todas as macros, as macros fornecidas pelo NMAKE diferenciam maiusculas de minúsculas.  

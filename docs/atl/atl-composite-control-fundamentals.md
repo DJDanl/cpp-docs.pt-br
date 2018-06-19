@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354611"
 ---
 # <a name="atl-composite-control-fundamentals"></a>Fundamentos do controle composto ATL
 Um controle composto é um tipo de controle ActiveX que pode conter (semelhante a uma caixa de diálogo) outros controles ActiveX ou controles do Windows. Depois que o controle composto é criado, ele pode ser inserido um controle ActiveX pode ser hospedado em qualquer lugar.  

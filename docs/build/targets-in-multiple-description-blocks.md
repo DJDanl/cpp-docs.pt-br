@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380282"
 ---
 # <a name="targets-in-multiple-description-blocks"></a>Destinos em vários blocos de descrição
 Para atualizar um destino em mais de um bloco de descrição usando comandos diferentes, especifique duas consecutivas dois-pontos (:) entre os destinos e dependentes.  

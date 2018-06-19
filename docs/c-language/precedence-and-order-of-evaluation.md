@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392179"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Precedência e ordem da avaliação
 A precedência e a associatividade dos operadores C afetam o agrupamento e a avaliação dos operandos nas expressões. A precedência de um operador é significante somente quando outros operadores com precedência maior ou menor estão presentes. As expressões com operadores de maior precedência são avaliadas primeiro. A precedência também pode ser descrita pela palavra “associação”. Os operadores com maior precedência são ditos ter uma associação mais próxima.  

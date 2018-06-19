@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383235"
 ---
 # <a name="struct-unwindinfo"></a>struct UNWIND_INFO
 A estrutura de informações de dados de desenrolamento é usada para registrar os efeitos de que uma função tem o ponteiro de pilha e onde os registros não volátil são salvos na pilha:  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380583"
 ---
 # <a name="ansi-conformance"></a>Conformidade com ANSI
 O Microsoft C está em conformidade com o padrão da linguagem C, como mostrado na edição de 9899:1990 do padrão ANSI C.  

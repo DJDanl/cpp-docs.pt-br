@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381165"
 ---
 # <a name="scalar-types"></a>Tipos escalares
 Embora o acesso de dados pode vir de qualquer alinhamento, é recomendável que ser alinhados no seu limite natural para evitar a perda de desempenho (ou um múltiplo dele). Enumerações são inteiros constantes e são tratadas como inteiros de 32 bits. A tabela a seguir descreve a definição de tipo e o armazenamento recomendado para ela relacionada à alinhamento usando os seguintes valores de alinhamento:  

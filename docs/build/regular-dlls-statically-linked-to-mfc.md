@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383742"
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>DLLs MFC regular estatisticamente vinculadas a MFC
 Uma expressão de que dll MFC vinculado estaticamente ao MFC é uma DLL que usa MFC internamente e as funções exportadas na DLL podem ser chamadas por arquivos executáveis do MFC ou não MFC. Como o nome descreve, esse tipo de DLL é criado usando a versão da biblioteca de vínculo estático do MFC. Funções normalmente são exportadas de uma DLL do MFC usando a interface padrão do C regular. Para obter um exemplo de como gravar, criar e usar uma DLL MFC regular, consulte o exemplo [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap).  

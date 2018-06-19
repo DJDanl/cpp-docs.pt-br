@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385758"
 ---
 # <a name="storage-class-specifiers-for-internal-level-declarations"></a>Especificadores de classe de armazenamento para declarações de nível interno
 Você pode usar qualquer um de quatro terminais de *especificador de classe de armazenamento* para declarações de variáveis no nível interno. Quando você omitir o *especificador de classe de armazenamento* de tal declaração, a classe de armazenamento padrão é **auto**. Consequentemente, a palavra-chave **auto** é raramente encontrada em um programa de C/C++.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391253"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Erros em potencial passando por objetos CRT em limites de DLL
 Quando você passa objetos CRT (Tempo de execução de C), como identificadores de arquivos, localidades e variáveis do ambiente de ou para uma DLL (chamadas de função além do limite da DLL), pode ocorrer um comportamento inesperado se a DLL, bem como os arquivos chamando a DLL, usar cópias diferentes das bibliotecas de CRT.  

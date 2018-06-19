@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391438"
 ---
 # <a name="countryregion-strings"></a>Cadeias de caracteres de país/região
 Cadeias de caracteres de país e região podem ser combinadas com uma cadeia de caracteres de idioma para criar uma especificação de localidade para as funções `setlocale`, `_wsetlocale`, `_create_locale` e `_wcreate_locale`. Para listas de nomes de país/região que têm suporte em várias versões do sistema operacional Windows, veja [Referência da API do suporte ao idioma nacional (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). Nas listas, a cadeia de caracteres de país/região pode ser qualquer valor na coluna **País/Região de Localidade – Idioma** ou qualquer abreviação na coluna **Abreviação de nome de país ou região**. Para obter informações adicionais de suporte de idioma no sistema operacional Windows por versão, veja [Apêndice A: comportamento de produto](http://msdn.microsoft.com/goglobal/bb896001.aspx) no [MS-LCID]: referência do identificador de código de idioma (LCID) do Windows.  

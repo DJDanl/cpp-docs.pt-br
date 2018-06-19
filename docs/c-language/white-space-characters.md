@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386953"
 ---
 # <a name="white-space-characters"></a>Caracteres de espaço em branco
 Os caracteres de espaço, tabulação, alimentação de linha, retorno de carro, tabulação vertical e nova linha são chamados de "caracteres de espaço em branco" porque têm a mesma finalidade dos espaços entre palavras e linhas em uma página impressa — facilitam a leitura. Os tokens são delimitados (limitados) por caracteres de espaço em branco e por outros tokens, como operadores e pontuação. Ao analisar o código, o compilador C ignora caracteres de espaço em branco a menos que você os use como separadores ou como componentes de constantes de caracteres ou de literais de cadeia de caracteres. Use caracteres de espaço em branco para tornar um programa mais legível. Observe que o compilador também trata comentários como espaço em branco.  

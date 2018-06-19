@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384474"
 ---
 # <a name="largest-array-size"></a>Maior tamanho da matriz
 **ANSI 3.3.3.4, 4.1.1** O tipo de inteiro necessário para manter o tamanho máximo de uma matriz – ou seja, o tamanho de **size_t**  

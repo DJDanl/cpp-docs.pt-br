@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379920"
 ---
 # <a name="struct-runtimefunction"></a>struct RUNTIME_FUNCTION
 Tratamento de exceções com base em tabela requer uma entrada de tabela para todas as funções que alocar espaço de pilha ou chamar outra função (por exemplo, funções de não-folha). Entradas de tabela da função têm o formato:  

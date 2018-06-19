@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380315"
 ---
 # <a name="return-values-c"></a>Valores de retorno (C++)
 Um valor de retorno escalar que pode se ajustar em 64 bits é retornado por meio de RAX — isso inclui tipos de m64. Tipos escalares não incluindo floats, duplicatas e tipos de vetor, como [m128](../cpp/m128.md), [__m128i](../cpp/m128i.md), [__m128d](../cpp/m128d.md) XMM0 são retornados. O estado de bits não utilizados no valor retornado em RAX ou XMM0 é indefinido.  

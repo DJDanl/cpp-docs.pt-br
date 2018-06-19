@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387493"
 ---
 # <a name="main-function-and-program-execution"></a>Função main e execução do programa
 Cada programa C tem uma função principal (main) que deve ser nomeada **main**. Se seu código obedece ao modelo de programação Unicode, você pode usar a versão de **main** para caracteres largos, **wmain**. A função **main** serve como o ponto de partida para a execução do programa. Em geral, ela controla a execução direcionando as chamadas para outras funções no programa. Normalmente, um programa para de ser executado no final de **main**, embora possa terminar em outros pontos no programa por diversos motivos. Às vezes, talvez quando um determinado erro é detectado, pode ser conveniente forçar o término de um programa. Para fazer isso, use a função **exit**. Consulte a *Referência da biblioteca em tempo de execução* para obter informações sobre como usar a função [exit](../c-runtime-library/reference/exit-exit-exit.md), juntamente com um exemplo.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385670"
 ---
 # <a name="c-bit-fields"></a>Campos de bit C
 Além dos declaradores para membros de uma estrutura ou união, um declarador de estrutura também pode ser um número especificado de bits, chamado de “campo de bits”. O comprimento é definido fora do declarador do nome de campo por dois pontos. Um campo de bits é interpretado como um tipo integral.  

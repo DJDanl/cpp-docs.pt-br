@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385251"
 ---
 # <a name="signed-bitwise-operations"></a>Operações bit a bit com sinal
 **ANSI 3.3** Os resultados de operações bit a bit em inteiros com sinal  

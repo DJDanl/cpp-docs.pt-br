@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384536"
 ---
 # <a name="declarations-and-types"></a>Declarações e tipos
 Esta seção descreve a declaração e a inicialização de variáveis, funções e tipos. A linguagem C inclui um conjunto padrão de tipos de dados básicos. Você também pode adicionar seus próprios tipos de dados, chamados “tipos derivados”, declarando novos com base em tipos já definidos. Os seguintes tópicos são abordados:  

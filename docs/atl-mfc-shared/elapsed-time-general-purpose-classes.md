@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354260"
 ---
 # <a name="elapsed-time-general-purpose-classes"></a>Tempo decorrido: Classes de uso geral
 O procedimento a seguir mostra como calcular a diferença entre dois `CTime` objetos e obter um `CTimeSpan` resultados.  

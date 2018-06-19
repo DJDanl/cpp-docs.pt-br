@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057663"
 ---
 # <a name="union"></a>UNION
 Declara uma união de um ou mais tipos de dados. O *fielddeclarations* devem ser as definições de dados válido. Omitir a [termina](../../assembler/masm/ends-masm.md) *nome* aninhados do rótulo em **união** definições.  

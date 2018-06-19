@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382842"
 ---
 # <a name="initialization"></a>Inicialização
 Um “inicializador” é um valor ou uma sequência de valores a ser atribuído à variável sendo declarada. Você pode definir uma variável como um valor inicial aplicando um inicializador ao declarador na declaração variável. O valor ou valores do inicializador são atribuídos à variável.  

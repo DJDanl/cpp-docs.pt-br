@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379829"
 ---
 # <a name="setjmplongjump"></a>setjmp/longjump
 Quando você incluir setjmpex.h ou setjmp.h, todas as chamadas para [setjmp](../c-runtime-library/reference/setjmp.md) ou [longjmp](../c-runtime-library/reference/longjmp.md) resultará em um desenrolamento que chama destruidores e, finalmente, chama.  Isso é diferente do x86, onde incluindo setjmp.h resultados em cláusulas finally e destruidores não está sendo chamados.  

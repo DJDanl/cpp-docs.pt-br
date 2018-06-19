@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387603"
 ---
 # <a name="null-crt"></a>NULL (CRT)
 **NULL** é o valor de ponteiro nulo utilizado com muitas operações e funções de ponteiro. É equivalente a 0. **NULL** é definido nestes arquivos de cabeçalho: CRTDBG.H, LOCALE.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H, TCHAR.H, TIME.H e WCHAR.H.  

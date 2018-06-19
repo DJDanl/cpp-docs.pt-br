@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381503"
 ---
 # <a name="file-access-limits"></a>Limites de acesso a arquivos
 **ANSI 4.9.3** Se o mesmo arquivo pode ser aberto várias vezes  

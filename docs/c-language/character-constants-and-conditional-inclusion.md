@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381802"
 ---
 # <a name="character-constants-and-conditional-inclusion"></a>Constantes de caractere e inclusão condicional
 **ANSI 3.8.1** Se o valor de uma constante de caractere único em uma expressão constante que controla a inclusão condicional corresponde ao valor da mesma constante de caractere no conjunto de caracteres de execução. Se essa constante de caractere pode ter um valor negativo  

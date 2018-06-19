@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379894"
 ---
 # <a name="reusing-inline-files"></a>Reutilizando arquivos embutidos
 Para reutilizar um arquivo embutido, especifique <<*filename* onde o arquivo é definido e usado pela primeira vez, em seguida, reutilize *filename* sem << posterior no mesmo ou em outro comando. O comando para criar o arquivo embutido deve executar antes de todos os comandos que usam o arquivo.  

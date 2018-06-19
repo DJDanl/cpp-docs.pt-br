@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380099"
 ---
 # <a name="specifying-an-inline-file"></a>Especificando um arquivo embutido
 Especificar dois colchetes angulares (<<) no comando onde *filename* deve aparecer. Os colchetes não pode ser uma expansão de macro.  

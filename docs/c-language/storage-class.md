@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391425"
 ---
 # <a name="storage-class"></a>Classe de armazenamento
 O especificador storage-class em uma definição de função fornece à função uma classe de armazenamento de `extern` ou **static**.  

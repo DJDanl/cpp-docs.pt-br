@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386258"
 ---
 # <a name="l-value-and-r-value-expressions"></a>Expressões L-Value e R-Value
 Expressões que fazem referência a locais de memória são chamadas de expressões “l-value”. Um l-value representa um valor de “localizador” da região de armazenamento ou um valor “à esquerda”, que indica que pode aparecer à esquerda do sinal de igual (**=**). Os l-values frequentemente são identificadores.  

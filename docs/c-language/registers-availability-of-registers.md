@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383937"
 ---
 # <a name="registers-availability-of-registers"></a>Registros: disponibilidade de registros
 **ANSI 3.5.1** A extensão até a qual os objetos podem ser realmente colocados nos registros por meio de um especificador de classe de armazenamento do registro  

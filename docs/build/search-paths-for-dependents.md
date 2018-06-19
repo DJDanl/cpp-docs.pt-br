@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380479"
 ---
 # <a name="search-paths-for-dependents"></a>Procurar dependentes em demarcadores
 Cada dependente tem um caminho de pesquisa opcional especificado da seguinte maneira:  

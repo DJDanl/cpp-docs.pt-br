@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391620"
 ---
 # <a name="conversions-from-signed-integral-types"></a>Conversões de tipos integrais com sinal
 Quando um inteiro com sinal é convertido em um inteiro sem sinal de tamanho igual ou maior e o valor do inteiro com sinal não é negativo, o valor não é alterado. A conversão é feita estendendo o sinal do inteiro com sinal. Um inteiro com sinal é convertido em um inteiro com sinal mais curto truncando os bits de ordem superior. O resultado é interpretado como um valor sem sinal, conforme é mostrado neste exemplo.  

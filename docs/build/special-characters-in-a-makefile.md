@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380441"
 ---
 # <a name="special-characters-in-a-makefile"></a>Caracteres especiais em um makefile
 Para usar um caractere especial NMAKE como um caractere literal, coloque um sinal de intercalação (^) na frente dele. NMAKE ignora acentos circunflexos que precedem outros caracteres. Os caracteres especiais são:  

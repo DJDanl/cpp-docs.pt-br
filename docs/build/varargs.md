@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380502"
 ---
 # <a name="varargs"></a>Varargs
 Se os parâmetros são passados por meio de varargs (por exemplo, argumentos de reticências), essencialmente o parâmetro normal passando aplica incluindo derramada os argumentos quinto e subsequentes. Novamente, é responsabilidade do receptor argumentos de despejo que ter seus endereços obtidos. Para valores de ponto flutuante somente, o número inteiro e o registro de ponto flutuante conterá o valor de float caso o chamador espera que o valor nos registradores inteiro.  

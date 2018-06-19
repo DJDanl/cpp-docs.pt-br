@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391464"
 ---
 # <a name="global-constants"></a>Constantes globais
 A biblioteca em tempo de execução da Microsoft contém definições para constantes globais usadas por rotinas de biblioteca. Para usar essas constantes, inclua os arquivos de cabeçalho apropriados, conforme indicado na descrição para cada constante. As constantes globais são listadas na tabela a seguir.  

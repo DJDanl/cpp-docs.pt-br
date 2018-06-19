@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379504"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Dicas para melhorar código crítico em termos de tempo
 Para gravar códigos rápidos, você precisa conhecer todos os aspectos do aplicativo e saber como ele interage com o sistema. Este tópico sugere alternativas para algumas das técnicas de codificação mais óbvias que podem ajudá-lo a garantir que as partes do código, para as quais o tempo é essencial, tenham um desempenho satisfatório.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383586"
 ---
 # <a name="improper-access-to-a-union"></a>Acesso inadequado a uma união
 **ANSI 3.3.2.3** Um membro de um objeto de união é acessado usando um membro de um tipo diferente  

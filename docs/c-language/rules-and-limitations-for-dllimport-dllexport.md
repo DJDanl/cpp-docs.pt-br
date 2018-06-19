@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388179"
 ---
 # <a name="rules-and-limitations-for-dllimportdllexport"></a>Regras e limitações para dllimport/dllexport
 **Seção específica da Microsoft**  

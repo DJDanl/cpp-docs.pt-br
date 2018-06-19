@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391672"
 ---
 # <a name="initializing-aggregate-types"></a>Inicializando tipos agregados
 Um tipo de “agregação” é um tipo de estrutura, união ou matriz. Se um tipo de agregação contém membros de tipos de agregação, as regras de inicialização são aplicadas recursivamente.  

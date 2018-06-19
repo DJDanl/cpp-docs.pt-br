@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386894"
 ---
 # <a name="array-declarations"></a>Declarações de matriz
 Uma "declaração de matriz" nomeia a matriz e especifica o tipo dos respectivos elementos. Também pode definir o número de elementos na matriz. Uma variável com tipo de matriz é considerada um ponteiro para o tipo dos elementos da matriz.  

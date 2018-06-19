@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385534"
 ---
 # <a name="time-zone"></a>Fuso horário
 **ANSI 4.12.1** O fuso horário local e o horário de verão  

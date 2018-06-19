@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354061"
 ---
 # <a name="dual-interfaces-and-events"></a>Eventos e Interfaces duplas
 Embora seja possível criar uma interface de evento como um duplo, há vários motivos bom design para não fazer isso. O motivo fundamental é que a origem do evento será disparado somente o evento por meio de vtable ou `Invoke`, mas não ambos. Se a origem do evento dispara o evento como uma chamada de método vtable direto, o `IDispatch` métodos nunca serão usados e é claro que a interface deve ter sido uma interface vtable puro. Se a origem do evento dispara o evento como uma chamada para `Invoke`, os métodos vtable nunca serão usados e é claro que a interface deve ter sido um dispinterface. Se você definir as interfaces de evento como duals, você vai exigir que clientes implementar a parte de uma interface que nunca será usada.  

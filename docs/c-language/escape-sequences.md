@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388822"
 ---
 # <a name="escape-sequences"></a>Sequências de Escape
 As combinações de caracteres que consistem em uma barra invertida (**\\**) seguida por uma letra ou por uma combinação de dígitos são chamadas de "sequências de escape". Para representar um caractere de nova linha, aspas simples ou alguns outros caracteres em uma constante de caractere, você deve usar sequências de escape. Uma sequência de escape é considerada um único caractere e, portanto, é válida como uma constante de caractere.  

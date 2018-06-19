@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380243"
 ---
 # <a name="unwind-helpers-for-masm"></a>Auxiliares desenrolados para MASM
 Para gravar rotinas de assembly apropriada, há um conjunto de pseudo operações que podem ser usados para criar a. pData apropriado e .xdata em paralelo com as instruções real do assembly. Há também um conjunto de macros que fornecem simplificado uso das operações de pseudo para os usos mais comuns.  

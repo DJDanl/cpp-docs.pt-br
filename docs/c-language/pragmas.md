@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385013"
 ---
 # <a name="pragmas"></a>Pragmas
 **ANSI 3.8.6** O comportamento em cada política #pragma reconhecida.  

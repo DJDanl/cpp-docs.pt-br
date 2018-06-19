@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380039"
 ---
 # <a name="zs-syntax-check-only"></a>/Zs (apenas verificação da sintaxe)
 Informa ao compilador para verificar somente a sintaxe dos arquivos de origem na linha de comando.  

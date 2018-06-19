@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380596"
 ---
 # <a name="stack-allocation"></a>Alocação da pilha
 Prólogo da função é responsável pela alocação de espaço de pilha para variáveis locais, registros salvos, parâmetros de pilha e registre os parâmetros.  

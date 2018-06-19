@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389735"
 ---
 # <a name="c-enumeration-declarations"></a>Declarações de enumeração C
 Uma enumeração consiste em um conjunto de constantes de número inteiro nomeadas. Uma declaração do tipo enumeração fornece o nome da marca da enumeração (opcional) e define o conjunto de identificadores de número inteiro nomeados (chamados de “conjunto de enumerações”, “constantes de enumerador”, "enumeradores” ou “membros”). Uma variável do tipo enumeração armazena um dos valores do conjunto de enumerações definido por esse tipo.  

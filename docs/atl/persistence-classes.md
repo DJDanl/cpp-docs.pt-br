@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353712"
 ---
 # <a name="persistence-classes"></a>Classes de persistência
 As seguintes classes de implementam a persistência de objeto:  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383248"
 ---
 # <a name="bitwise-shift-operators"></a>Operadores shift bit a bit
 Os operadores Shift deslocam o primeiro operando da esquerda (`<<`) ou da direita (`>>`) pelo número de posições que o segundo operando especifica.  

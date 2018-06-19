@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379852"
 ---
 # <a name="stack-usage"></a>Uso da pilha
 Toda a memória além do endereço atual do RSP é considerada volátil: O sistema operacional ou um depurador pode substituir essa memória durante uma sessão de depuração de usuário ou um manipulador de interrupção. Assim, RSP sempre deve ser definido antes de tentar ler ou gravar valores para um quadro de pilha.  

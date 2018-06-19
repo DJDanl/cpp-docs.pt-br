@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379608"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (compilação do Common Language Runtime)
 Permite que aplicativos e componentes usem recursos do CLR (Common Language Runtime).  

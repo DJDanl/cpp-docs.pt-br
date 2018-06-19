@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384288"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Conversões em e de tipos de ponteiro
 Um ponteiro para um tipo de valor que pode ser convertido em um ponteiro para um tipo diferente. No entanto, o resultado pode ser indefinido devido aos requisitos de alinhamento e aos tamanhos de tipos diferentes em armazenamento. Um ponteiro para um objeto pode ser convertido em um ponteiro para um objeto cujo tipo exige menos alinhamento de armazenamento ou igualmente restrito, e reconverter sem modificação.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390054"
 ---
 # <a name="name-spaces"></a>Namespaces
 O compilador configura os “name spaces” para distinguir entre os identificadores usados para tipos diferentes de itens. Os nomes em cada name space devem ser exclusivos para evitar conflitos, mas um nome idêntico pode aparecer em mais de um name space. Isso significa que você pode usar o mesmo identificador de dois ou mais itens diferentes, contanto que os itens estejam em name spaces diferentes. O compilador pode resolver referências com base no contexto sintático do identificador no programa.  

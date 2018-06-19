@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353944"
 ---
 # <a name="file-handling-classes"></a>Classes de manipulação de arquivos
 Essas classes fornecem métodos para manipular arquivos, arquivos temporários e arquivos mapeados na memória.  

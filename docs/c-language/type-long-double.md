@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384838"
 ---
 # <a name="type-long-double"></a>Tipo long double
 O tipo `long double` é idêntico ao tipo [duplo](../c-language/type-double.md).  

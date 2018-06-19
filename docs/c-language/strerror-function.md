@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386352"
 ---
 # <a name="strerror-function"></a>Função strerror
 **ANSI 4.11.6.2** O conteúdo das cadeias de caracteres da mensagem de erro retornada pela `strerror` função  

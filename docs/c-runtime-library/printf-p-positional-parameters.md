@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391308"
 ---
 # <a name="printfp-positional-parameters"></a>Parâmetros posicionais printf_p
 Parâmetros posicionais fornecem a capacidade de especificar por número quais dos argumentos deve ser substituído em um campo de uma cadeia de caracteres. As funções `printf` do seguinte parâmetro posicional estão disponíveis:  

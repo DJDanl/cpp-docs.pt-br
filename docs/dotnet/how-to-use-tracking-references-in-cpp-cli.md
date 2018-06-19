@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132460"
 ---
 # <a name="how-to-use-tracking-references-in-ccli"></a>Como usar referências de monitoramento em C++/CLI
 Este artigo mostra como usar uma referência de rastreamento (%) em C + + CLI passar common language runtime (CLR) tipos por referência.  

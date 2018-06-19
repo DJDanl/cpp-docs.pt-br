@@ -48,6 +48,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391503"
 ---
 # <a name="outp-outpw-outpd"></a>_outp, _outpw, _outpd
 Saídas, em uma porta, um byte (`_outp`), uma palavra (`_outpw`) ou uma palavra dupla (`_outpd`).  

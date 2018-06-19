@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382241"
 ---
 # <a name="deleting-open-files"></a>Excluindo arquivos abertos
 **ANSI 4.9.4.1** O efeito da função remove em um arquivo aberto  

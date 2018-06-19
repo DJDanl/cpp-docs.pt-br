@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381618"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Noções básicas sobre geração de manifesto para programas do C/C++
 Um [manifesto](http://msdn.microsoft.com/library/aa375365) é um documento XML que pode ser um arquivo XML externo ou um recurso incorporado dentro de um aplicativo ou um assembly. O manifesto de um [aplicativo isolado](http://msdn.microsoft.com/library/aa375190) é usado para gerenciar os nomes e as versões de assemblies lado a lado compartilhados para que o aplicativo deve associar em tempo de execução. O manifesto de um assembly lado a lado especifica suas dependências em outros assemblies, versões, recursos e nomes.  

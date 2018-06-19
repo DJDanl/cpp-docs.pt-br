@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354163"
 ---
 # <a name="creating-an-atl-dhtml-control"></a>Criando um controle DHTML ATL
 O Assistente de controle ATL automatiza o processo de criação de um controle DHTML. Ele gera arquivos de recursos necessários, incluindo um arquivo HTML que contém o código de exemplo.  

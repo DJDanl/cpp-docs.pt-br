@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383872"
 ---
 # <a name="null-characters"></a>Caracteres nulos
 **ANSI 4.9.2** O número de caracteres nulos que podem ser anexados aos dados gravados em um fluxo binário  

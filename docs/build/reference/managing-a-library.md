@@ -55,6 +55,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379634"
 ---
 # <a name="managing-a-library"></a>Gerenciando uma biblioteca
 É o modo padrão para LIB criar ou modificar uma biblioteca de objetos COFF. LIB é executado nesse modo, quando você não especificar /EXTRACT (para copiar um objeto para um arquivo) ou /DEF (para criar uma biblioteca de importação).  

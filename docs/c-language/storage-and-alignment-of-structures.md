@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388124"
 ---
 # <a name="storage-and-alignment-of-structures"></a>Armazenamento e alinhamento de estruturas
 **Seção específica da Microsoft**  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389183"
 ---
 # <a name="scope-and-visibility"></a>Escopo e visibilidade
 A "visibilidade" de um identificador determina as partes do programa nas quais pode ser feita uma referência a ele — seu "escopo”. Um identificador é visível (ou seja, pode ser usado) somente nas partes de um programa abrangidas por seu “escopo”, que pode ser limitado (em ordem crescente de restrição) ao arquivo, função, bloco ou protótipo de função em que aparece. O escopo de um identificador é a parte do programa na qual o nome pode ser usado. Isso é às vezes chamado de “escopo léxico”. Há quatro tipos de escopo: de função, de arquivo, de bloco e de protótipo de função.  

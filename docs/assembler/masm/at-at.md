@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056455"
 ---
 # <a name=""></a>@@:
 Define um rótulo de código reconhecível somente entre *label1* e *label2*, onde *label1* é o início do código ou anterior `@@:` rótulo e *label2* é o final do código ou o próximo `@@:` rótulo. Consulte [ @B ](../../assembler/masm/at-b.md) e [ @F ](../../assembler/masm/at-f.md).  

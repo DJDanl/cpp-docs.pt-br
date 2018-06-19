@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390929"
 ---
 # <a name="type-float"></a>Tipo float
 Os números de ponto flutuante usam o formato IEEE (Instituto de Engenheiros Eletricistas e Eletrônicos). Os valores de precisão simples com tipo float têm 4 bytes, que consistem em um bit de sinal, um expoente binário de 8 bits no formato de 127 em excesso e uma mantissa de 23 bits. A mantissa representa um número entre 1,0 e 2,0. Como o bit de ordem superior da mantissa é sempre 1, ele não é armazenado no número. Essa representação fornece um intervalo de aproximadamente 3,4E-38 a 3,4E+38 para o tipo float.  

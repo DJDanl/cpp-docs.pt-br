@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390685"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Solucionando problemas de aplicativos isolados do C/C++ e assemblies lado a lado
 Carregar um aplicativo C/C++ pode falhar se bibliotecas dependentes não podem ser encontradas. Este artigo descreve algumas das razões comuns por que um aplicativo C/C++ Falha ao carregar, e sugere etapas para resolver os problemas.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381779"
 ---
 # <a name="converting-multibyte-characters"></a>Convertendo caracteres multibyte
 **ANSI 3.1.3.4** A localidade atual usada para converter caracteres multibyte nos caracteres largos (código) correspondentes para uma constante de caracteres largos  

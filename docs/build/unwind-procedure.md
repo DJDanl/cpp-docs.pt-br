@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382017"
 ---
 # <a name="unwind-procedure"></a>Procedimento desenrolado
 A matriz de código de desenrolamento é classificada em ordem decrescente. Quando ocorre uma exceção, o contexto completo é armazenado pelo sistema operacional em um registro de contexto. A lógica de expedição de exceção é invocada, que executa repetidamente as etapas a seguir para localizar um manipulador de exceção.  

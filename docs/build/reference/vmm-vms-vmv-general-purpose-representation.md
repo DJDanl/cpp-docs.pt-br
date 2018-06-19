@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379556"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (representação de finalidade geral)
 Usado quando [/vmb, /vmg (método de representação)](../../build/reference/vmb-vmg-representation-method.md) é selecionado como o [método de representação](../../build/reference/vmb-vmg-representation-method.md). Essas opções indicarem o modelo de herança da definição de classe ainda não encontrado.  

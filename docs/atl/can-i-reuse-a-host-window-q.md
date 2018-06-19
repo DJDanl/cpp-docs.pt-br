@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353699"
 ---
 # <a name="can-i-reuse-a-host-window"></a>Posso reutilizar uma janela do Host?
 Não é recomendável que você reutilize windows de host. Para garantir a robustez do seu código, você deve associar o tempo de vida da janela do host para o tempo de vida de um único controle.  

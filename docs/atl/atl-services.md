@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354786"
 ---
 # <a name="atl-services"></a>Serviços ATL
 Para criar o objeto COM do ATL para que ele seja executado em um serviço, basta selecione o serviço (EXE) da lista de opções de servidor no Assistente de projeto de ATL. O assistente irá criar uma classe derivada de `CAtlServiceModuleT` para implementar o serviço.  

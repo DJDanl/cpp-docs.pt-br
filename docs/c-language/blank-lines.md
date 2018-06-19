@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380648"
 ---
 # <a name="blank-lines"></a>Linhas em branco
 **ANSI 4.9.2** Se os caracteres de espaço que são escritos em um fluxo de texto imediatamente antes de um caractere de nova linha aparecem quando lidos  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382735"
 ---
 # <a name="default-date-and-time"></a>Data e hora padrão
 **ANSI 3.8.8** As definições para _DATE\_ e _TIME\_ quando, respectivamente, a data e a hora da conversão não estão disponíveis  

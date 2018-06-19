@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385426"
 ---
 # <a name="do-while-statement-c"></a>Instrução do-while (C)
 A instrução `do-while` permite que você repita uma instrução ou instrução composta até que uma expressão especificada seja falsa.  

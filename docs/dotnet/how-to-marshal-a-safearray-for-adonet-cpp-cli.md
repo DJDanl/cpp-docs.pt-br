@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137413"
 ---
 # <a name="how-to-marshal-a-safearray-for-adonet-ccli"></a>Como realizar marshaling de um SAFEARRAY para ADO.NET (C++/CLI)
 Demonstra como adicionar um nativo `SAFEARRAY` para um banco de dados e como realizar marshaling de uma matriz gerenciada de um banco de dados para um nativo `SAFEARRAY`.  

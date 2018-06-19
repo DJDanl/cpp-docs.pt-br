@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388916"
 ---
 # <a name="inp-inpw"></a>inp, inpw
 Essas funções POSIX foram preteridas. Use o ISO C++ compatível com [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md) em vez disso.  

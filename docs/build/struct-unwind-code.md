@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390093"
 ---
 # <a name="struct-unwindcode"></a>struct UNWIND_CODE
 A matriz de código de desenrolamento é usada para registrar a sequência de operações no prólogo que afetam os registros não volátil e RSP. Cada item de código tem o seguinte formato:  

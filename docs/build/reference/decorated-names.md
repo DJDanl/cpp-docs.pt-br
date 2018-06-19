@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379374"
 ---
 # <a name="decorated-names"></a>Nomes decorados
 Funções, dados e objetos em programas C e C++ são representados internamente por seus nomes decorados. Um *decorado nome* é uma cadeia de caracteres codificada criada pelo compilador durante a compilação de uma definição de função, de dados ou de objeto. Registra as convenções de chamada, tipos, parâmetros de função e outras informações junto com o nome. Este decoração do nome, também conhecida como *desconfiguração do nome*, ajuda o vinculador a encontrar as funções corretas e os objetos ao vincular um executável.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392355"
 ---
 # <a name="initializing-scalar-types"></a>Inicializando tipos escalares
 Ao inicializar tipos escalares, o valor de *assignment-expression* é atribuído à variável. As regras de conversão para a atribuição se aplicam. (Consulte [Conversões de tipos](../c-language/type-conversions-c.md) para obter informações sobre regras de conversão.)  

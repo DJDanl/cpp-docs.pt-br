@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379426"
 ---
 # <a name="ieee-floating-point-representation"></a>Representação de ponto flutuante IEEE
 Microsoft Visual C++ é consistente com os padrões de IEEE numéricos. Há três tipos internos de números reais. Real\*4 e real\*8 são usados no Visual C++. Real\*4 é declarado usando a palavra **float**. Real\*8 é declarado usando a palavra **duplo**. Na programação do Windows de 32 bits, o `long double` tipo de dados mapeia para **duplo**. No entanto, há suporte de linguagem de assembly para cálculos usando o real * o tipo de dados de 10.  

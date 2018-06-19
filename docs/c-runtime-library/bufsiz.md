@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386177"
 ---
 # <a name="bufsiz"></a>BUFSIZ
 ## <a name="syntax"></a>Sintaxe  

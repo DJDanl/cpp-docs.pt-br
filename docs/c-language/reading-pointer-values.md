@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384159"
 ---
 # <a name="reading-pointer-values"></a>Valores de ponteiro de leitura
 **ANSI 4.9.6.2** A entrada para a conversão de **%p** na função `fscanf`  

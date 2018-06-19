@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380466"
 ---
 # <a name="unprototyped-functions"></a>Funções sem protótipo
 Para funções não totalmente prototipadas, o chamador passará valores inteiros como números inteiros e valores de ponto flutuante como precisão dupla. Para valores de ponto flutuante somente, o registro de inteiro e o registro de ponto flutuante conterá o valor de float caso o chamador espera que o valor nos registradores inteiro.  

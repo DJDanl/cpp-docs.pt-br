@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387044"
 ---
 # <a name="if-statement-c"></a>Instrução if (C)
 A instrução **if** controla a ramificação condicional. O corpo de uma instrução **if** será executado se o valor de expressão for diferente de zero. A sintaxe da instrução **if** tem dois formatos.  

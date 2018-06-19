@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383436"
 ---
 # <a name="operands-and-expressions"></a>Operandos e expressões
 Um “operando” é uma entidade em que um operador atua. Uma “expressão” é uma sequência de operadores e de operandos que executa qualquer combinação destas ações:  

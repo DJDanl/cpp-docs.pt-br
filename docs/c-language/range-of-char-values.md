@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383859"
 ---
 # <a name="range-of-char-values"></a>Intervalo de valores char
 **ANSI 3.2.1.1** Se um **char** “comum” tem o mesmo intervalo de valores que um **signed char** ou um `unsigned char`  

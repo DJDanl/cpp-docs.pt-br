@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353957"
 ---
 # <a name="aggregation"></a>Agregação
 Há ocasiões quando deseja que o implementador de um objeto para aproveitar os serviços oferecidos por outro objeto pré-compiladas. Além disso, ele gostaria que este segundo objeto a ser exibido como uma parte natural do primeiro. COM alcança ambas essas metas por meio de contenção e de agregação.  
