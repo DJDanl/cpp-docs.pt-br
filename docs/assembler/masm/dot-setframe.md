@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052580"
 ---
 # <a name="setframe"></a>.SETFRAME
 Preenche o quadro de registrar o campo e o deslocamento nas informações de liberação usando o registro especificado (`reg`) e deslocamento (`offset`). O deslocamento deve ser um múltiplo de 16 e menor ou igual a 240. Essa diretiva também gera um `UWOP_SET_FPREG` desenrolar a entrada de código para registrar especificado usando o deslocamento de prólogo atual.  

@@ -48,6 +48,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414305"
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
 

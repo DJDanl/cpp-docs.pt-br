@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057052"
 ---
 # <a name="ml-nonfatal-errors-a2100-a2149"></a>Erros não fatais A2100-A2149 (ML)
 Para obter mais informações sobre erros não fatais ML, consulte [mensagens de erro ML](../../assembler/masm/ml-error-messages.md).  

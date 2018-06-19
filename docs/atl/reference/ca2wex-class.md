@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358740"
 ---
 # <a name="ca2wex-class"></a>Classe CA2WEX
 Essa classe é usada pelas macros de conversão de cadeia de caracteres `CA2TEX`, `CA2CTEX`, `CT2WEX`, e `CT2CWEX`e o typedef **CA2W**.  

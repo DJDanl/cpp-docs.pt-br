@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056321"
 ---
 # <a name="operator-short"></a>operador SHORT
 Define o tipo de *rótulo* para curto. Todos os saltos para *rótulo* deve ser curto (dentro do intervalo de -128 bytes + 127 da instrução de salto para *rótulo*).  

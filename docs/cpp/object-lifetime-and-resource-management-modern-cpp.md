@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423490"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Vida útil do objeto e gerenciamento de recursos (C++ moderno)
 Ao contrário de linguagens gerenciadas, C++ não tem a coleta de lixo (GC), que libera automaticamente os recursos de memória não-mais-usado como um programa é executado. Em C++, o gerenciamento de recursos está diretamente relacionado ao tempo de vida do objeto. Este documento descreve os fatores que afetam a vida útil do objeto em C++ e como gerenciá-lo.  

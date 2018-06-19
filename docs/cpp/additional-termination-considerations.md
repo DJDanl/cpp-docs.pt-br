@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408140"
 ---
 # <a name="additional-termination-considerations"></a>Considerações de término adicionais
 Você pode encerrar um programa C++ usando **sair**, `return`, ou **anular**. Você pode adicionar processamento de saída usando a função `atexit`. Esses tópicos são discutidos nas próximas seções.  

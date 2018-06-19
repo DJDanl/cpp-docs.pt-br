@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049161"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
 O **ALIAS** diretiva cria um nome alternativo para uma função.  Isso permite que você crie vários nomes para uma função ou bibliotecas que permitem que o vinculador (LINK.exe) para mapear uma função antiga para uma nova função.  

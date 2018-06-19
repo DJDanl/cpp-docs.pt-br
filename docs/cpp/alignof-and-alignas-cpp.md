@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32407974"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof e alignas (C++)
 O `alignas` especificador de tipo é um modo padrão do C++ portáteis, para especificar um alinhamento personalizado de variáveis e tipos definidos pelo usuário. O `alignof` operador da mesma forma é uma forma padrão portátil para obter o alinhamento de um tipo especificado ou variável.  

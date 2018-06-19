@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055522"
 ---
 # <a name="struct-masm"></a>STRUCT (MASM)
 Declara um tipo de estrutura com especificado *fielddeclarations*. Cada campo deve ser uma definição de dados válido. Mesmo que [STRUC](../../assembler/masm/struc.md).  

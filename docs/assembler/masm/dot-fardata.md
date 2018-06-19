@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054940"
 ---
 # <a name="fardata"></a>.FARDATA
 Quando usado com [. MODELO](../../assembler/masm/dot-model.md), inicia um segmento de dados distante para dados inicializado (nome de segmento FAR_DATA ou *nome*).  

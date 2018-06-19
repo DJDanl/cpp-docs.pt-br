@@ -62,6 +62,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409378"
 ---
 # <a name="sal-annotations"></a>Anotações de SAL
 Se você examinar os arquivos de cabeçalho de biblioteca, notará algumas anotações incomuns, como por exemplo, `_In_z` e `_Out_z_cap_(_Size)`. Estes são exemplos de SAL (linguagem de anotação de código-fonte) da Microsoft, que fornece um conjunto de anotações para descrever como uma função usa seus parâmetros, por exemplo, as suposições que ela faz sobre eles e as garantias obtidas ao concluir. O arquivo de cabeçalho \<sal.h> define as anotações.  

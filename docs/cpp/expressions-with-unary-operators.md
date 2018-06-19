@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416165"
 ---
 # <a name="expressions-with-unary-operators"></a>Expressões com operadores unários
 Os operadores unários atuam somente em um operando em uma expressão. Os operadores unários são os seguintes:  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051111"
 ---
 # <a name="instruction-set-for-inline-assembly"></a>Conjunto de instruções para assembly embutido
 ## <a name="microsoft-specific"></a>Específico da Microsoft  

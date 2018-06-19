@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410795"
 ---
 # <a name="floating-point-coprocessor-and-calling-conventions"></a>Coprocessador de ponto flutuante e convenções de chamada
 Se você estiver escrevendo assembly rotinas para flutuante coprocessador de ponto, você deve preservar flutuante aponte a palavra de controle e limpar a pilha de coprocessador, a menos que você estiver retornando um **float** ou **duplo** valor (que a função deve retornar em ST(0)).  

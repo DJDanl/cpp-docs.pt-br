@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057637"
 ---
 # <a name="real4"></a>REAL4
 Aloca e, opcionalmente, inicializa um número de ponto flutuante de precisão simples (4 bytes) para cada *inicializador*.  

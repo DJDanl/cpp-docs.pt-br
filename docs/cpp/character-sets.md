@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414777"
 ---
 # <a name="character-sets"></a>Conjuntos de caracteres
 O texto de um programa C++ é armazenado em arquivos de origem que usam uma codificação de caracteres em particular. O padrão do C++ especifica um caractere de origem básicas definidas para arquivos de origem e um caractere de execução básico definidas para arquivos compilados. Visual C++ permite que um conjunto adicional de caracteres específicas da localidade a ser usado nos arquivos de origem e arquivos compilados.  

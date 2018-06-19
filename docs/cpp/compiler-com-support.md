@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412706"
 ---
 # <a name="compiler-com-support"></a>Suporte para COM do compilador
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
