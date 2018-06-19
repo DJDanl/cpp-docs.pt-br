@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111179"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Pooling de recursos e serviços de banco de dados OLE
 Para funcionar bem com o pool de OLE DB, ou com qualquer serviço do OLE DB, o provedor deve oferecer suporte a agregação de todos os objetos. Este é um requisito de OLE DB 1.5 ou posterior provedor. É essencial que aproveita os serviços. Provedores que não oferecem suporte a agregação não podem ser colocado em pool e sem serviços adicionais são fornecidos.  

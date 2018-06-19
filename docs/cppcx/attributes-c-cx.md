@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086838"
 ---
 # <a name="attributes-ccx"></a>Atributos (C++/CX)
 Um atributo é um tipo especial de classe ref que pode ser acrescentando no início entre colchetes para tipos de tempo de execução do Windows e métodos para especificar determinados comportamentos na criação de metadados. Vários atributos predefinidos — por exemplo, [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)— geralmente são usados em C + + código CX. Este exemplo mostra como o atributo é aplicado a uma classe:  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103366"
 ---
 # <a name="autogcrootoperator"></a>auto_gcroot::operator!
 Operador para o uso de `auto_gcroot` em uma expressão condicional.  

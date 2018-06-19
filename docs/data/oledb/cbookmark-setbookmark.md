@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093671"
 ---
 # <a name="cbookmarksetbookmark"></a>CBookmark::SetBookmark
 Copia o valor do indicador referenciado por `pBuffer` para o `CBookmark` buffer e define o tamanho do buffer para `nSize`.  

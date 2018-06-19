@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128648"
 ---
 # <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>Como iterar em uma coleção definida pelo usuário com for each
 Uma classe ser um conjunto gerenciado, ele precisa de uma função de GetEnumerator não particular que retorna um identificador para uma classe de enumerador ou uma interface.  Uma classe de enumerador deve conter a declaração de função de MoveNext não-estático e a propriedade Current.  

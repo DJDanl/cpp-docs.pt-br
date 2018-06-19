@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096529"
 ---
 # <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession (MyProviderSess.H)
 Myprovidersess. H contém a declaração e a implementação para o objeto de sessão do OLE DB. O objeto de fonte de dados cria o objeto de sessão e representa uma conversa entre um provedor e consumidor. Várias sessões simultâneas podem ser abertas para uma fonte de dados. A lista de herança para `CMyProviderSession` segue:  

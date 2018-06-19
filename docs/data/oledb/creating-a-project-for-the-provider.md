@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098349"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Criando um projeto para o provedor
 #### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Para criar um projeto que reside em que o provedor OLE DB  

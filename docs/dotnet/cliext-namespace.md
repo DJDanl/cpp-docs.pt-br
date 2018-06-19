@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104146"
 ---
 # <a name="cliext-namespace"></a>Namespace cliext
 O `cliext` namespace contém todos os tipos de biblioteca STL/CLR. Para obter uma lista de todos esses tipos e links para obter mais informações sobre os tipos STL/CLR, consulte [referência da biblioteca STL/CLR](../dotnet/stl-clr-library-reference.md).  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092382"
 ---
 # <a name="delegates-ccx"></a>Delegados (C++/CX)
 O `delegate` palavra-chave é usada para declarar um tipo de referência que é o equivalente de tempo de execução do Windows de um objeto de função em C++ padrão. Uma declaração delegate semelhante a uma assinatura de função especifica o tipo de retorno e os tipos de parâmetro que sua função envolvida deve ter. Esta é uma declaração delegate definida pelo usuário:  

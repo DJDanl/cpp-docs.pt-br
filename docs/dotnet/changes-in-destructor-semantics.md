@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113194"
 ---
 # <a name="changes-in-destructor-semantics"></a>Alterações feitas na semântica do destruidor
 Semântica de destruidores da classe foram alterados significativamente desde das extensões gerenciadas para C++ para Visual C++.  

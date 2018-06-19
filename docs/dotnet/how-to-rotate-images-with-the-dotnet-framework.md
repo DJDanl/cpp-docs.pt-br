@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129028"
 ---
 # <a name="how-to-rotate-images-with-the-net-framework"></a>Como girar imagens com o .NET Framework
 O exemplo de código a seguir demonstra o uso da <xref:System.Drawing.Image?displayProperty=fullName> classe para carregar uma imagem de disco, gira 90 graus e salvá-lo como um novo arquivo. jpg.  

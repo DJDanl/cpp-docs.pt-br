@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102945"
 ---
 # <a name="traversing-a-simple-rowset"></a>Percorrendo um conjunto de linhas simples
 O exemplo a seguir mostra um acesso de banco de dados rápida e fácil que não envolvem comandos. O seguinte código de cliente, em um projeto de ATL, recupera os registros de uma tabela chamada *artistas* no Microsoft Access de banco de dados usando o provedor Microsoft OLE DB para ODBC. O código cria um [CTable](../../data/oledb/ctable-class.md) objeto de tabela com um acessador com base na classe de registro de usuário `CArtists`. Abre uma conexão, abre uma sessão em que a conexão e abre a tabela na sessão.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096214"
 ---
 # <a name="cmultipleresults-class"></a>Classe CMultipleResults
 Se você deseja que um comando para lidar com vários conjuntos de resultados, use `CMultipleResults` para o `CCommand` argumento de modelo *TMultiple*.  

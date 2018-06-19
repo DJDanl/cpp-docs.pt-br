@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372003"
 ---
 # <a name="prolog-and-epilog"></a>Prólogo e epílogo
 Cada função que aloca espaço de pilha, chamadas de outras funções, salva os registros não volátil ou usa o tratamento de exceção devem ter um prólogo cujos endereço limites descritos nos dados de desenrolamento associados à entrada de tabela do respectivos função (consulte [(X64) de tratamento de exceção](../build/exception-handling-x64.md)). O prólogo salva argumento registros em seus endereços de base se necessário, envia registros não volátil na pilha, aloca a parte fixa da pilha de locais e de longa e opcionalmente estabelece um ponteiro de quadro. Dados desenrolados associado deve descrever a ação de prólogo e forneça as informações necessárias para desfazer o efeito do código de prólogo.  

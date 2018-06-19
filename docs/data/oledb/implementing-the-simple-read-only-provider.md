@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100610"
 ---
 # <a name="implementing-the-simple-read-only-provider"></a>Implementando o provedor somente leitura simples
 O exemplo estendido neste tópico mostra como editar os arquivos criados pelo Assistente para criar um provedor somente leitura simple que lê um conjunto de duas cadeias de caracteres de um arquivo de texto. Para criar este provedor dos arquivos do assistente, adicione código para concluir as seguintes tarefas:  

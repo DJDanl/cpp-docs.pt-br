@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093237"
 ---
 # <a name="sql"></a>SQL
 SQL (Structured Query Language) é uma maneira de se comunicar com um banco de dados relacional que permite que você defina a consulta, modificar e controla os dados. Usando a sintaxe SQL, você pode construir uma instrução que extrai os registros de acordo com os critérios que você especificar.  

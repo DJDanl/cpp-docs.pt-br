@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096994"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Criando um consumidor de banco de dados OLE sem usar um assistente
 Esse procedimento demonstra como você pode usar o Assistente de projeto de ATL e ATL OLE DB consumidor Assistente para gerar um consumidor de modelos OLE DB e, em seguida, modifique o código principal do aplicativo de console para recuperar e exibir dados de uma tabela de banco de dados.  

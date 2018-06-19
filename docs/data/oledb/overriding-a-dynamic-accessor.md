@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107851"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Substituindo um acessador dinâmico
 Quando você usa um acessador dinâmico como `CDynamicAccessor`, o comando **abrir** método cria um acessador para você automaticamente, com base nas informações de coluna do conjunto de linhas aberto. Você pode substituir o acessador dinâmico para controlar exatamente como as colunas associadas.  

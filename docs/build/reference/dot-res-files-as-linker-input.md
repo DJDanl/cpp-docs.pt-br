@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370661"
 ---
 # <a name="res-files-as-linker-input"></a>Arquivos .Res como entrada de vinculador
 Você pode especificar um arquivo. res ao vincular um programa. O arquivo. res é criado pelo compilador de recurso (RC). LINK converte automaticamente os arquivos. res para COFF. A ferramenta CVTRES.exe deve estar no mesmo diretório do LINK.exe ou em um diretório especificado na variável de ambiente PATH.  

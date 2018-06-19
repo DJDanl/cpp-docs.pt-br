@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099466"
 ---
 # <a name="enabling-and-disabling-ole-db-services"></a>Habilitando e desabilitando serviços de banco de dados OLE
 O Gerenciador de componentes de serviço do OLE DB compara as propriedades especificadas pelo consumidor para aqueles suportados pelo provedor para determinar se os componentes de serviço individual podem ser invocados para atender a funcionalidade estendida solicitada pelo consumidor. Por exemplo, se um aplicativo solicita um cursor rolável e o provedor oferece suporte apenas a um cursor somente de encaminhamento, o Gerenciador de componentes de serviço chama o componente de serviço do mecanismo de Cursor do cliente para fornecer funcionalidade rolável. Se o aplicativo depende de funcionalidade estendida com suporte por padrão no conjunto de linhas do provedor e o aplicativo não definir explicitamente as propriedades para solicitar que a funcionalidade, a funcionalidade pode não aparecer no conjunto de linhas retornado pelo cliente Mecanismo de cursor. Para ser interoperáveis, aplicativos sempre devem definir as propriedades para solicitar explicitamente a funcionalidade estendida onde for necessário.  

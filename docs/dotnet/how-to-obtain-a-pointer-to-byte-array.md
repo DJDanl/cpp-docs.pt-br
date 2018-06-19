@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127962"
 ---
 # <a name="how-to-obtain-a-pointer-to-byte-array"></a>Como obter um ponteiro para matriz de bytes
 Você pode obter um ponteiro para o bloco de matriz em um <xref:System.Byte> matriz pegar o endereço do primeiro elemento e atribuí-la a um ponteiro.  

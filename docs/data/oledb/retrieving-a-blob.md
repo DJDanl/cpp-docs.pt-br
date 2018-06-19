@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105199"
 ---
 # <a name="retrieving-a-blob"></a>Recuperando um BLOB
 Você pode recuperar um objeto binário grande (BLOB) de várias maneiras. Você pode usar **DBTYPE_BYTES** para recuperar o BLOB como uma sequência de bytes ou usar uma interface como `ISequentialStream`. Para obter mais informações, consulte [BLOBS e objetos OLE](https://msdn.microsoft.com/en-us/library/ms711511.aspx) no *referência do programador de DB OLE*.  

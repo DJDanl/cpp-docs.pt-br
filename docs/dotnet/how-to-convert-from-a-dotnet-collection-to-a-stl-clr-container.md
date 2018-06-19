@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132795"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Como converter de um coleção .NET em um contêiner STL/CLR
 Este tópico mostra como converter as coleções do .NET em seus contêineres STL/CLR equivalentes. Como um exemplo mostram como converter um .NET <xref:System.Collections.Generic.List%601> para um STL/CLR [vetor](../dotnet/vector-stl-clr.md) e como converter um .NET <xref:System.Collections.Generic.Dictionary%602> para um STL/CLR [mapa](../dotnet/map-stl-clr.md), mas o procedimento é semelhante para todos os contêineres e coleções .  

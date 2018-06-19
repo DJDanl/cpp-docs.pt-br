@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109567"
 ---
 # <a name="ole-db-templates"></a>Modelos de banco de dados OLE
 Os modelos OLE DB facilitam o acesso de dados OLE DB. Visual C++ fornece classes de modelo que implementam muitas das interfaces de OLE DB usadas com frequência. Você pode usar os modelos de consumidor do Visual C++ para escrever um aplicativo de cliente (consumidor) do OLE DB e os modelos de provedor para escrever um aplicativo de servidor (provedor).  

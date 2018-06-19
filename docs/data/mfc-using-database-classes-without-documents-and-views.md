@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093890"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: usando classes de banco de dados sem documentos e exibições
 Às vezes, não convém usar a arquitetura de documento/exibição do framework em seus aplicativos de banco de dados. Este tópico explica:  

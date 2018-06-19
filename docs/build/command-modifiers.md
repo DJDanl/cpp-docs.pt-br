@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367167"
 ---
 # <a name="command-modifiers"></a>Modificadores de comando
 Você pode especificar um ou mais modificadores de comando anterior de um comando, opcionalmente, separado por tabulações ou espaços. Assim como acontece com comandos, modificadores devem ser recuados.  

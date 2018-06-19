@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368571"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Importando e exportado funções embutidas
 Funções importadas podem ser definidas como embutidos. O efeito é aproximadamente o mesmo que definir um padrão de função embutida; chamadas para a função são expandidas em código embutido, assim como uma macro. Isso é útil principalmente como uma maneira de dar suporte a C++ classes em uma DLL que embutido pode alguns de seus membros funções para maior eficiência.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368955"
 ---
 # <a name="recursion-macros"></a>Macros de recursão
 Use macros de recursão para chamar NMAKE recursivamente. Sessões recursiva herdam macros de variável de ambiente e de linha de comando e Tools.ini informações. Eles não herdam a regras de inferência definido makefile ou **. SUFIXOS** e **. PRECIOSOS** especificações. Para passar a uma sessão NMAKE recursiva macros, definir uma variável de ambiente com definida antes da chamada recursiva, definir uma macro no comando para a chamada recursiva ou definir uma macro em Tools.ini.  

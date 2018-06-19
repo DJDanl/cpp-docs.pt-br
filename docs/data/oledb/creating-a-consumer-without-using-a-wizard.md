@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097686"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Criando um consumidor sem usar um assistente
 O exemplo a seguir pressupõe que você está adicionando suporte de consumidor OLE DB a um projeto existente do ATL. Se você deseja adicionar suporte de consumidor OLE DB para um aplicativo MFC, você deve executar o Assistente de aplicativo MFC, que cria todo o suporte necessário e invoca as rotinas MFC necessárias para executar o aplicativo.  

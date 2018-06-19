@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372861"
 ---
 # <a name="dumping-delay-loaded-imports"></a>Despejando importações carregadas com atraso
 Importações carregadas com atraso podem ser despejadas usando [dumpbin /imports](../../build/reference/imports-dumpbin.md) e mostram informações ligeiramente diferentes que importa padrão. Elas são separadas em sua própria seção do /imports despejar e explicitamente são rotuladas como importações carregadas com atraso. Se houver descarregar informações presentes na imagem, que está disponível. Se não houver informações de associação presentes, o carimbo de data/hora do destino da DLL é registrado junto com os endereços associados de imports.  

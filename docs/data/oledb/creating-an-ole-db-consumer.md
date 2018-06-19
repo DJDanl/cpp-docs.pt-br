@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096685"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Criando um consumidor de banco de dados OLE
 Você pode criar um consumidor de modelos OLE DB com ou sem o ATL OLE DB Assistente de consumidor, embora o uso do assistente é o método recomendado. Um consumidor pode operar em qualquer aplicativo que ofereça suporte ATL.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089906"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Projetando e criando uma exibição de registro (Acesso a dados MFC)
 Você pode criar a classe de exibição de registro com o [Assistente de aplicativo MFC](../mfc/reference/database-support-mfc-application-wizard.md). Se você usar um assistente de aplicativo, ele criará a classe de exibição de registro e um recurso de modelo de diálogo para ele (sem controles). Você deve usar o editor de diálogo do Visual C++ para adicionar controles ao recurso de modelo de diálogo. Por outro lado, se você usar **Adicionar classe**, você deve primeiro criar o recurso de modelo de caixa de diálogo na caixa de diálogo editor e, em seguida, criar a classe de exibição de registro.  

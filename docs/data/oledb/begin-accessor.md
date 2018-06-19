@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089839"
 ---
 # <a name="beginaccessor"></a>BEGIN_ACCESSOR
 Marca o início de uma entrada de acessador.  

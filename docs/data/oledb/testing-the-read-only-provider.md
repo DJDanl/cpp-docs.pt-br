@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112674"
 ---
 # <a name="testing-the-read-only-provider"></a>Testando o provedor somente leitura simples
 Para testar um provedor, você precisa de um consumidor. Isso será útil se o consumidor pode corresponder a com o provedor. Os modelos de consumidor OLE DB são um wrapper fino em torno do OLE DB e correspondem com os objetos COM do provedor. Como a fonte é fornecida com os modelos de consumidor, é fácil depurar um provedor com eles. Os modelos de consumidor também são uma maneira muito menor e mais rápida para desenvolver aplicativos de consumidor.  
