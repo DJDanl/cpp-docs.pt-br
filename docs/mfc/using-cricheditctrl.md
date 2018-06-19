@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382161"
 ---
 # <a name="using-cricheditctrl"></a>Usando CRichEditCtrl
 Um controle de edição é uma janela na qual o usuário pode inserir e editar texto. O texto pode ser atribuído a formatação de parágrafo e caracteres e pode incluir objetos OLE inseridos. O controle rich edit é representado em MFC pelo [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) classe.  

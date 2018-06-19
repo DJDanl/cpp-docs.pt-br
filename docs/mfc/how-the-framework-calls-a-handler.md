@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343602"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>Como o Framework chama um identificador
 Os tópicos a seguir primeiro examinar como o framework roteia comandos e depois examinar como outras mensagens e notificações de controle são enviadas para o windows:  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333824"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Contêineres de controle ActiveX: manipulando eventos a partir de um controle ActiveX
 Este artigo aborda usando a janela Propriedades para instalar os manipuladores de eventos para controles ActiveX em um contêiner de controle ActiveX. Os manipuladores de eventos são usados para receber notificações (de controle) de determinados eventos e executam alguma ação em resposta. Essa notificação é chamada de "disparo" do evento.  

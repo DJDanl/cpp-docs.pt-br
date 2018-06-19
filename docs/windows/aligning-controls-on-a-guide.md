@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857832"
 ---
 # <a name="aligning-controls-on-a-guide"></a>Alinhando controles em um guia
 As alças de dimensionamento de controles ajustam às guias quando os controles são movidos e guias de ajustam a controles (se não existem controles anteriormente ajustados para o guia). Quando um guia é movido, controles que são ajustados movem também. Ajustado para mais de um guia de controles são redimensionados quando um dos guias é movido.  

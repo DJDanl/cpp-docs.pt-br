@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861380"
 ---
 # <a name="com-attributes"></a>Atributos COM
 Os atributos COM injetar código para oferecer suporte a várias áreas de desenvolvimento COM e desenvolvimento de tempo de execução de linguagem comum do .NET Framework. Esses variam de áreas de implementação de interface personalizada e suporte às interfaces existentes para dar suporte a eventos, métodos e propriedades de estoque. Além disso, o suporte foi encontrado para composição e implementação de controle ActiveX.  

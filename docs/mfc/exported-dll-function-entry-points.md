@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343847"
 ---
 # <a name="exported-dll-function-entry-points"></a>Pontos de entrada da função DLL exportada
 Para funções exportadas de uma DLL, use o [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) macro para manter o estado global apropriado ao alternar do módulo DLL para a DLL do aplicativo de chamada.  

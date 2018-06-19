@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860054"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Configurações do aplicativo, Assistente de Projeto Win 32
 Use esta página do Assistente para definir opções para o projeto do Win32.  

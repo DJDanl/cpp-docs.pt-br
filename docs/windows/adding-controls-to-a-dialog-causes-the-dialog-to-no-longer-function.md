@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858988"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>A adição de controles a uma caixa de diálogo faz a caixa de diálogo deixar de funcionar
 Depois de adicionar um controle comum ou um controle de edição para uma caixa de diálogo, ele não será exibido quando você testar a caixa de diálogo ou a própria caixa de diálogo não aparecerá.  

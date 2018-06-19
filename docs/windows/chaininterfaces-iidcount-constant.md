@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33859996"
 ---
 # <a name="chaininterfacesiidcount-constant"></a>Constante ChainInterfaces::IidCount
 O número total de IDs contidos nas interfaces de especificados pelos parâmetros de modelo de interface `I0` por meio de `I9`.  

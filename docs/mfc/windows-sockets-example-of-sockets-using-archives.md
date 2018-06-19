@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384365"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: exemplo de soquetes que usam arquivos mortos
 Este artigo apresenta um exemplo de como usar a classe [CSocket](../mfc/reference/csocket-class.md). O exemplo utiliza `CArchive` objetos para serializar os dados por meio de um soquete. Observe que isso não é a serialização de documentos para ou de um arquivo.  

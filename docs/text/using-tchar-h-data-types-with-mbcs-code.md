@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858348"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Usando tipos de dados TCHAR.H com código _MBCS
 Quando o manifesto constante **MBCS** é definida, uma rotina de texto genérico determinada mapeado para um dos seguintes tipos de rotinas de:  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858140"
 ---
 # <a name="locales-and-code-pages"></a>Localidades e páginas de código
 Uma identificação de localidade reflete as convenções de locais e o idioma para uma determinada região geográfica. Um idioma específico pode ser falado em mais de um país/região; Por exemplo, português é falada no Brasil, bem como em Portugal. Por outro lado, um país/região pode ter mais de um idioma oficial. Por exemplo, Canadá tem dois idiomas: inglês e francês. Assim, Canadá tem dois locais diferentes: canadense inglês e francês (Canadá). Algumas categorias de localidade dependentes incluem a formatação de datas e o formato de exibição de valores monetários.  

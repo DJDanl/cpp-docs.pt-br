@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329810"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Um retrato da arquitetura de documento/exibição
 Documentos e exibições são combinadas em um aplicativo típico do MFC. Dados são armazenados no documento, mas o modo de exibição tem acesso aos dados privilegiado. A separação de documento na exibição de separa o armazenamento e a manutenção de dados de sua exibição.  

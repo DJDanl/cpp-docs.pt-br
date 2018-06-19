@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316443"
 ---
 # <a name="project-build-error-prj0015"></a>Erro de Build PRJ0015 no Projeto
 O dispositivo do nulo está ausente do seu sistema. Estamos não é possível iniciar uma compilação.  

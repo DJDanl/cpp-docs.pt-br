@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33859534"
 ---
 # <a name="asyncbasegetonprogress-method"></a>Método AsyncBase::GetOnProgress
 Copia o endereço do manipulador de eventos de andamento atual para a variável especificada.  

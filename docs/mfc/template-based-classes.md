@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385458"
 ---
 # <a name="template-based-classes"></a>Classes com base no modelo
 Este artigo explica as classes de coleção de baseado em modelo de segurança de tipos em MFC versão 3.0 e posterior. Usando esses modelos para criar coleções fortemente tipadas é mais conveniente e ajuda a fornecer segurança de tipo de forma mais eficiente do que usar as classes de coleção não baseadas em modelos.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325910"
 ---
 # <a name="active-document-classes"></a>Classes de documento ativas
 Documentos ativos podem ser exibidos na janela inteira do cliente de um navegador da Web, como o Internet Explorer 5.5, ou em um contêiner de ativo, como o Microsoft Office Binder, que oferece suporte a documentos ativos.  

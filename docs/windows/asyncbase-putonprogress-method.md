@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33859781"
 ---
 # <a name="asyncbaseputonprogress-method"></a>Método AsyncBase::PutOnProgress
 Define o endereço do manipulador de eventos de andamento para o valor especificado.  

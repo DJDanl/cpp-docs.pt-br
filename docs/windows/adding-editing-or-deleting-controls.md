@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856707"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Adicionando, editando ou excluindo controles
 Usando o editor de caixa de diálogo, você pode adicionar, redimensionar, editar e excluir controles em caixas de diálogo. Você também pode editar as propriedades de um controle, como sua ID, ou se está visível inicialmente no tempo de execução.  

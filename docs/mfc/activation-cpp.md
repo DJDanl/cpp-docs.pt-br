@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334477"
 ---
 # <a name="activation-c"></a>Ativação (C++)
 Este artigo explica a função de ativação na edição visual de itens OLE. Depois que um usuário tiver inserido um item OLE em um documento de contêiner, ele pode ser necessário ser usado. Para fazer isso, o usuário clica duas vezes o item, que ativa esse item. A atividade mais frequente para a ativação está editando. Muitos itens OLE atuais, quando ativado para edição, fazer com que os menus e barras de ferramentas na janela do quadro atual para alterar para refletir pertencente ao aplicativo do servidor que criou o item. Esse comportamento, conhecido como ativação in-loco, permite ao usuário editar qualquer item inserido em um documento composto sem sair da janela do documento contêiner.  

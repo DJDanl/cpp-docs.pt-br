@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860184"
 ---
 # <a name="attributed-programming-concepts"></a>Conceitos de programação atribuídos
 Visual C++ inclui uma variedade de material para ajudá-lo a usar os atributos em seus programas. Atributos, um novo recurso no Visual C++, são projetados para simplificar a programação COM e desenvolvimento de tempo de execução de linguagem comum do .NET Framework. Quando você incluir atributos nos arquivos de origem, o compilador funciona com bibliotecas de vínculo dinâmico (DLL) para inserir código ou modificar o código nos arquivos de objeto gerado do provedor. Há atributos que auxiliam na criação de arquivos. idl, interfaces, bibliotecas de tipo e outros elementos de COM. No ambiente de desenvolvimento integrado (IDE), os atributos têm suporte dos assistentes e pela janela Propriedades.  

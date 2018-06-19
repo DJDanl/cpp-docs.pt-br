@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327760"
 ---
 # <a name="project-build-error-prj0005"></a>Erro de Build PRJ0005 no Projeto
 Não é possível criar um arquivo temporário no diretório 'directory'.  

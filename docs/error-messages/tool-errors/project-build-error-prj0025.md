@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316979"
 ---
 # <a name="project-build-error-prj0025"></a>Erro de Build PRJ0025 no Projeto
 O arquivo de lote 'file' contém conteúdo Unicode que não pôde ser convertido na página de código ANSI do usuário.  

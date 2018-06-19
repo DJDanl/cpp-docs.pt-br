@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846227"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Diretivas Pragma e a palavra-chave __Pragma
 As políticas de pragma especificam recursos de compilador específicos do computador ou da operação. A palavra-chave `__pragma`, que é específica do compilador da Microsoft, permite codificar políticas de pragma dentro de definições de macro.  
