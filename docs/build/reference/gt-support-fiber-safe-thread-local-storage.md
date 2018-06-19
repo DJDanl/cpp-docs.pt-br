@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373823"
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (armazenamento local de thread seguro de fibra de suporte)
 Dá suporte a segurança de fibra para dados alocados usando o armazenamento local de thread estático, ou seja, os dados alocados com `__declspec(thread)`.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373121"
 ---
 # <a name="i-additional-include-directories"></a>/I (diretórios de inclusão adicionais)
 Adiciona uma pasta à lista de diretórios pesquisada em busca de arquivos de inclusão.  

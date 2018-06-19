@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374785"
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/FS (Forçar gravações PDB síncronas)
 Força grava o arquivo de programa (PDB) de banco de dados — criado por [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) ou [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)— a ser serializado por meio de MSPDBSRV. EXE.  

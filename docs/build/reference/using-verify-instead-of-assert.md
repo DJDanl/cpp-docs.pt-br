@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376553"
 ---
 # <a name="using-verify-instead-of-assert"></a>Usando VERIFY em vez de ASSERT
 Suponha que, quando você executa a versão de depuração do seu aplicativo MFC, não há nenhum problema. No entanto, a versão de lançamento do mesmo aplicativo falha, retorna resultados incorretos e/ou exibe alguns outros comportamento anormal.  

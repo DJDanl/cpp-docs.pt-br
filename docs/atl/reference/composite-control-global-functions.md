@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366595"
 ---
 # <a name="composite-control-global-functions"></a>Funções globais do controle composto
 Essas funções fornecem suporte para a criação de caixas de diálogo e para a criação, hospedagem e licenciando controles ActiveX.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375946"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/Execution-charset (defina a execução do conjunto de caracteres)
 Permite que você especifique o caractere de execução definida para o executável.  

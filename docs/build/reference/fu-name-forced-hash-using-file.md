@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375669"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (nome forçado #usando arquivo)
 Uma opção de compilador que podem ser usados como uma alternativa para passar um nome de arquivo para [#using diretiva](../../preprocessor/hash-using-directive-cpp.md) no código-fonte.  

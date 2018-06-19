@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374889"
 ---
 # <a name="dumpbin-options"></a>Opções de DUMPBIN
 Uma opção consiste em um especificador de opção, que é um traço (-) ou uma barra invertida (/), seguido do nome da opção. Nomes de opção não podem ser abreviados. Algumas opções usam argumentos, especificados após dois-pontos (:). Nenhum tabulações ou espaços são permitidas dentro de uma especificação de opção. Use um ou mais espaços ou guias para separar as especificações de opção na linha de comando. Os nomes de opções e seus argumentos de nome de arquivo ou a palavra-chave não diferenciam maiusculas de minúsculas. A maioria das opções se aplicam a todos os arquivos binários; Alguns se aplicam somente a certos tipos de arquivos. Por padrão, DUMPBIN envia informações para a saída padrão. Use o [/out](../../build/reference/out-dumpbin.md) opção para enviar a saída para um arquivo.  

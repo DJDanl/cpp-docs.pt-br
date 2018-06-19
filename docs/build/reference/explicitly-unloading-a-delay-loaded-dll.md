@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374168"
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>Descarregando de maneira explícita uma DLL carregada com atraso
 O [/Delay](../../build/reference/delay-delay-load-import-settings.md): opção de vinculador unload permite descarregar uma DLL carregada com atraso. Por padrão, quando seu código descarrega a DLL (usando /Delay: Unload e **__FUnloadDelayLoadedDLL2**), as importações carregadas com atraso permanecerão na tabela de endereço de importação (IAT). No entanto, se você usar /Delay: Unload na linha de comando do vinculador, a função auxiliar dará suporte a descarregamento explícito da DLL, redefinindo o IAT para sua forma original; os ponteiros inválido agora serão substituídos. IAT é um campo de [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) que contém o endereço de uma cópia do original IAT (se houver).  

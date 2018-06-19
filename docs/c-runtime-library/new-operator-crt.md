@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389865"
 ---
 # <a name="operator-newcrt"></a>operator new(CRT)
 A partir do Visual Studio 2013, o tempo de execução do C Universal (UCRT) não dá suporte às funções operator new e operator delete específicas de C++. Elas agora fazem parte da biblioteca C++ padrão. Para obter mais informações, consulte os [operadores new e delete](../cpp/new-and-delete-operators.md) e [operador new](../cpp/new-operator-cpp.md) na Referência da Linguagem C++. 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377478"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/UTF-8 (Definir origem e o executável conjuntos de caracteres UTF-8)
 Especifica o conjunto de caracteres de origem e o caractere de execução definida como UTF-8.  

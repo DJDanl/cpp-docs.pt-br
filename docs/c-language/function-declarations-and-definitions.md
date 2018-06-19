@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384987"
 ---
 # <a name="function-declarations-and-definitions"></a>Declarações de função e definições
 Os protótipos de função estabelecem o nome da função, seu tipo de retorno, o tipo e o número de seus parâmetros formais. Uma definição de função inclui o corpo da função.  

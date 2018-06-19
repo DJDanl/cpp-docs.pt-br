@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374915"
 ---
 # <a name="setting-linker-options"></a>Definindo opções de vinculador
 Opções do vinculador podem ser definidas dentro ou fora do ambiente de desenvolvimento. O tópico de cada opção de vinculador discute como ele pode ser definido no ambiente de desenvolvimento. Consulte [opções do vinculador](../../build/reference/linker-options.md) para obter uma lista completa.  

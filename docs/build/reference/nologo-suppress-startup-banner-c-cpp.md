@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373836"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/nologo (suprimir faixa de inicialização) (C++)
 Suprime a exibição da faixa de direitos autorais quando o compilador inicia e exibe mensagens informativas durante a compilação.  

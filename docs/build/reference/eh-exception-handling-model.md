@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379101"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (modelo de tratamento de exceções)
 Especifica o tipo de tratamento de exceção usado pelo compilador, ao otimizar exceção ausente verifica e se deseja destruir os objetos C++ que ultrapassarem o escopo devido a uma exceção. Se **/EH** não for especificado, o compilador captura estruturado de exceções assíncronas e exceções do C++, mas não destrói C++ os objetos fora do escopo devido a uma exceção assíncrona.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375656"
 ---
 # <a name="specifying-the-pathname"></a>Especificando o nome de demarcador
 Cada opção de arquivo de saída aceita um *pathname* argumento que pode especificar um local e um nome para o arquivo de saída. O argumento pode incluir um nome de unidade, o diretório e o nome do arquivo. Não são permitidos espaços entre a opção e o argumento.  

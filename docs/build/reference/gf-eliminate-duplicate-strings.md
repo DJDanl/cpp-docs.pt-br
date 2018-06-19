@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375887"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (eliminar cadeias de caracteres duplicadas)
 Permite que o compilador criar uma cópia única de cadeias de caracteres idênticas na imagem do programa e na memória durante a execução. Essa é uma otimização chamada *pooling de cadeia de caracteres* que você pode criar programas menores.  

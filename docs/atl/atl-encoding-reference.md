@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358622"
 ---
 # <a name="atl-encoding-reference"></a>Referência de codificação ATL
 Há suporte para a codificação em uma variedade de padrões de Internet comuns como uuencode, hexadecimal e UTF8 pelo código encontrado em atlenc.h.  

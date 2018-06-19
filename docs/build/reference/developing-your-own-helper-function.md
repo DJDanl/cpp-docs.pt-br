@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371392"
 ---
 # <a name="developing-your-own-helper-function"></a>Desenvolvendo a função auxiliar própria
 Você talvez queira fornecer sua própria versão da rotina para fazer o processamento específico com base nos nomes da DLL ou importações. Há duas maneiras de fazer isso: codificação de sua preferência, possivelmente com base em código fornecido, ou simplesmente conectando a versão fornecida com os ganchos de notificação detalhados anteriormente.  

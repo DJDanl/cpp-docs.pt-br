@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376160"
 ---
 # <a name="linker-command-line-syntax"></a>Sintaxe da linha de comando do vinculador
 Para executar o LINK. EXE, use a seguinte sintaxe de comando:  

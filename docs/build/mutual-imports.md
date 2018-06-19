@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377751"
 ---
 # <a name="mutual-imports"></a>Importações mútuas
 Exportar ou importar para outro arquivo executável apresenta complicações quando as Importações mútuas (ou circular). Por exemplo, duas DLLs importar símbolos umas das outras, como funções mutuamente recursivas.  

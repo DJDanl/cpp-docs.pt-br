@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375292"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge (habilitar sondas de pilha)
 Ativa as sondas de pilha para cada chamada de função que requer o armazenamento para variáveis locais.  

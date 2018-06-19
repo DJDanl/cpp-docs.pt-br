@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374968"
 ---
 # <a name="gr-enable-run-time-type-information"></a>/GR (habilitar informações de tipo de tempo de execução)
 Adiciona código para verificar tipos de objeto em tempo de execução.  

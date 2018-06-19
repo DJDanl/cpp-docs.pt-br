@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375377"
 ---
 # <a name="ep-preprocess-to-stdout-without-line-directives"></a>/EP (pré-processar para stdout sem diretivas #line)
 Pré-processa arquivos de origem C e C++ e copia os arquivos pré-processado para o dispositivo de saída padrão.  

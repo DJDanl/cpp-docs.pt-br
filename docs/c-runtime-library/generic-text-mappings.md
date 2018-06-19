@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388569"
 ---
 # <a name="generic-text-mappings"></a>Mapeamentos de texto genérico
 Para simplificar a escrita de código para mercados internacionais, mapeamentos de texto genérico são definidos em TCHAR.H para:  

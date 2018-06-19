@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373160"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Problemas comuns durante a criação de um build de versão
 Durante o desenvolvimento, você geralmente compilar e testar com uma compilação de depuração do projeto. Se você, em seguida, criar seu aplicativo para uma compilação de versão, você pode receber uma violação de acesso.  

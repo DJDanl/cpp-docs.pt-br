@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373716"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>Especificando DLLs para carga com atraso
 Você pode especificar quais DLLs de atraso de carga com o [/delayload](../../build/reference/delayload-delay-load-import.md):`dllname` opção de vinculador. Se você não planeja usar sua própria versão de uma função auxiliar, você também deve vincular seu programa com delayimp.lib (para aplicativos de área de trabalho) ou dloadhelper.lib (para aplicativos da Windows store).  

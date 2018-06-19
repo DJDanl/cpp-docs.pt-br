@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377177"
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb, /vmg (método de representação)
 Selecione o método que o compilador usa para representar ponteiros para membros de classe.  

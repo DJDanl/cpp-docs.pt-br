@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359899"
 ---
 # <a name="ccomcriticalsection-class"></a>Classe CComCriticalSection
 Essa classe fornece métodos para a obtenção e liberar a propriedade de um objeto de seção crítica.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355846"
 ---
 # <a name="implementing-a-dialog-box"></a>Implementando uma caixa de diálogo
 Há duas maneiras de adicionar uma caixa de diálogo ao seu projeto ATL: usar o Assistente de caixa de diálogo do ATL ou adicioná-lo manualmente.  

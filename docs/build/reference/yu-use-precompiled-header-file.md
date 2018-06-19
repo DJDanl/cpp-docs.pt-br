@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378711"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (usar arquivo de cabeçalho pré-compilado)
 Instrui o compilador para usar um arquivo de cabeçalho pré-compilado (. pch) existente na compilação atual.  

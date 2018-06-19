@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373482"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>Como BSCMAKE compila um arquivo .Bsc
 BSCMAKE cria ou recria um arquivo. bsc da maneira mais eficiente possível. Para evitar possíveis problemas, é importante compreender o processo de compilação.  

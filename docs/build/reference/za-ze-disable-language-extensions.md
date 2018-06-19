@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378139"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (desabilitar extensões de linguagem)
 O **/Za** opção de compilador emite um erro para construções de linguagem que não são compatíveis com C89 ANSI ou ISO C++ 11. O **/Ze** opção de compilador, que é ativado por padrão, permite que extensões da Microsoft.  

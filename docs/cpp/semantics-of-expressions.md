@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424116"
 ---
 # <a name="semantics-of-expressions"></a>Semântica de expressões
 As expressões são avaliadas de acordo com a precedência e o agrupamento dos respectivos operadores. ([Operator Precedence and Associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md) na [convenções lexicais](../cpp/lexical-conventions.md), mostra as relações do C++ impõem operadores em expressões.)  

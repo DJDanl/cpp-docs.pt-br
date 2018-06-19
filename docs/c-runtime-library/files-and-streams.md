@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390512"
 ---
 # <a name="files-and-streams"></a>Arquivos e fluxos
 Um programa se comunica com o ambiente de destino ao ler e gravar arquivos. Um arquivo pode ser:  

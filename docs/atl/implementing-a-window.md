@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357007"
 ---
 # <a name="implementing-a-window"></a>Implementar uma janela
 Classe [CWindowImpl](../atl/reference/cwindowimpl-class.md) permite implementar uma janela e controlar suas mensagens. Mensagem de envio em ATL baseia-se em um mapa de mensagem. Esta seção explica:  

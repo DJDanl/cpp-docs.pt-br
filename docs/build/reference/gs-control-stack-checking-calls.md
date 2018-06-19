@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375734"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (controlar chamadas de verificação da pilha)
 Controla investigações de pilha.  

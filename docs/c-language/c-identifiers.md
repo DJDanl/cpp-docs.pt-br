@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388663"
 ---
 # <a name="c-identifiers"></a>Identificadores C
 Os "identificadores" ou "símbolos" são os nomes que você fornece para variáveis, tipos, funções e rótulos em seu programa. Os nomes de identificadores devem ser diferentes na ortografia e nas maiúsculas e minúsculas de todas as palavras-chave. Você não pode usar palavras-chave (no C ou Microsoft) como identificadores; elas são reservadas para uso especial. Você cria um identificador especificando-o na declaração de variável, tipo ou função. Neste exemplo, `result` é um identificador para uma variável de inteiro, e `main` e `printf` são nomes de identificadores para funções.  

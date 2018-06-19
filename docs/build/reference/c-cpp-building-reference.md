@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375478"
 ---
 # <a name="cc-building-reference"></a>Referência de build C/C++
 Visual C++ fornece duas maneiras de criar um programa C/C++. A maneira mais fácil (e mais comum) é [de compilação no ambiente de desenvolvimento do Visual C++](../../ide/building-cpp-projects-in-visual-studio.md). A outra maneira é [de compilação em um prompt de comando usando as ferramentas de linha de comando](../../build/building-on-the-command-line.md). Em ambos os casos, você pode criar arquivos de origem usando o editor de código-fonte do Visual C++ ou um editor de terceiros de sua escolha.  

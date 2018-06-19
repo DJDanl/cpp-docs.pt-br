@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359776"
 ---
 # <a name="atl-property-page-wizard"></a>Assistente de página de propriedades ATL
 Este assistente [adiciona uma página de propriedades de um projeto de ATL](../../atl/reference/adding-an-atl-property-page.md) ou a um projeto com suporte ATL. Uma página de propriedades ATL fornece uma interface do usuário para definir as propriedades (ou chamar os métodos) de um ou mais objetos.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378334"
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes (listar arquivos de inclusão)
 Faz com que o compilador gerar uma lista de inclusão de arquivos. Aninhados incluem arquivos também são exibidos (arquivos inclusos dos arquivos que você incluir).  

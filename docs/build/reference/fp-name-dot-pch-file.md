@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376326"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (nomear arquivo .Pch)
 Fornece um nome de caminho para um cabeçalho pré-compilado em vez de usar o nome do caminho padrão.  

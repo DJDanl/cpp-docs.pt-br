@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373976"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>O uso do nome de função sem () não produz código
 Quando um nome de função declarado em seu programa for usado sem parênteses, o compilador não produz código. Isso ocorre independentemente de estarem ou não a função usa parâmetros porque o compilador calcula o endereço de função; No entanto, como o operador de chamada de função "()" não está presente, não é feita nenhuma chamada. Esse resultado é semelhante ao seguinte:  

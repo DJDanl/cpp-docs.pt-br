@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376173"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (Gera metadados do Windows
 Habilita a geração de um arquivo de metadados de tempo de execução do Windows (. winmd).  

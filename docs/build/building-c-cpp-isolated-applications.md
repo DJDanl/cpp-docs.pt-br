@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360143"
 ---
 # <a name="building-cc-isolated-applications"></a>Compilando aplicativos isolados do C/C++
 Um aplicativo isolado depende apenas assemblies lado a lado e associa a suas dependências usando um manifesto. Não é necessário para seu aplicativo deve ser totalmente isolado para executar corretamente no Windows. No entanto, investindo em tornar seu aplicativo totalmente isolado, você pode economizar tempo se você precisar manter seu aplicativo no futuro. Para obter mais informações sobre as vantagens de seu aplicativo totalmente isolado, consulte [aplicativos isolados](http://msdn.microsoft.com/library/aa375190).  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374266"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (mapfile de nome)
 Informa o vinculador para produzir um arquivo de mapa que contém uma lista de segmentos na ordem em que aparecem no arquivo .exe correspondente ou DLL.  

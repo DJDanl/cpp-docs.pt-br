@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377242"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (erros de compilador internos do relatório)
 Permite que você forneça informações de ICE (erro interno do compilador) diretamente à Microsoft.  

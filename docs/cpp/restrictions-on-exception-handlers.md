@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420198"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Restrições em manipuladores de exceção
 A principal limitação do uso de manipuladores de exceção no código é que você não pode usar uma instrução `goto` para ir diretamente para um bloco de instruções `__try`. Em vez disso, você deve digitar o bloco de instruções por meio do fluxo de controle normal. Você pode sair de um bloco de instruções `__try` e aninhar manipuladores de exceção como quiser.  

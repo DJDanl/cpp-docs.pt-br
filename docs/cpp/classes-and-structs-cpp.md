@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413239"
 ---
 # <a name="classes-and-structs-c"></a>Classes e structs (C++)
 Esta seção apresenta as estruturas e classes C++. As duas construções são idênticas em C++, exceto que em structs a acessibilidade padrão é pública, enquanto em classes, o padrão é particular.  

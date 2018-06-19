@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374460"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (o tipo char padrão não é assinado)
 Altera o padrão de `char` tipo `signed char` para `unsigned char`e o `char` tipo é estendido para zero quando ele será ampliado para um `int` tipo.  

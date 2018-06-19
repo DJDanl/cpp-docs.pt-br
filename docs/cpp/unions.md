@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32425693"
 ---
 # <a name="unions"></a>Uniões
 Um `union` é um tipo definido pelo usuário em que todos os membros compartilham o mesmo local de memória. Isso significa que a qualquer momento uma união pode conter não mais de um objeto de sua lista de membros. Isso também significa que, independentemente de quantos membros tem uma união, ele sempre usa apenas memória suficiente para armazenar o membro maior.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378227"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (colocar informações de depuração no arquivo de projeto)
 Prova completa de depuração informações em todos os arquivos de objeto criado a partir de um arquivo de cabeçalho pré-compilado (. pch) quando usado com o [/Yc](../../build/reference/yc-create-precompiled-header-file.md) e [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) opções. Preterido.  

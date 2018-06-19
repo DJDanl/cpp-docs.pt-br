@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369884"
 ---
 # <a name="cc-build-tools"></a>Ferramentas de build da linguagem C/C++
 Visual C++ fornece as seguintes ferramentas de linha de comando para exibir ou manipular a saída da compilação:  

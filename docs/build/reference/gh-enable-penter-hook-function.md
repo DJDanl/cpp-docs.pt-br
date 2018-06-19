@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373147"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh (habilitar função de gancho _penter)
 Faz com que uma chamada a `_penter` função no início de cada método ou função.  

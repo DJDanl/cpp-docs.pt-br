@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373381"
 ---
 # <a name="exceptions-cc"></a>Exceções (C/C++)
 Dois códigos de exceção podem ser aumentados quando falhas são encontradas:  

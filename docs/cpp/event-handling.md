@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414607"
 ---
 # <a name="event-handling"></a>Tratamento de Evento
 Manipulação de eventos principalmente tem suporte para classes COM (classes C++ que implementam os objetos COM, normalmente usando classes ATL ou [coclass](../windows/coclass.md) atributo).  Para obter mais informações, consulte [manipulação de eventos COM](../cpp/event-handling-in-com.md).  

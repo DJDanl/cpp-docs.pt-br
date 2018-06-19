@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357767"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Adicionando controles a um projeto ATL e objetos
 Você pode usar um dos assistentes de código de ATL para adicionar um objeto ou um controle de seus projetos com base em ATL ou MFC. Para cada controle ou um objeto COM adicionar, o assistente gera arquivos. h e. cpp, bem como um arquivo. rgs para suporte a registro baseado no script. Os seguintes assistentes de código ATL estão disponíveis no Visual Studio:  

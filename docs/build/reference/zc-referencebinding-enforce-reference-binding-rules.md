@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378874"
 ---
 # <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/ZC:referenceBinding (Aplicar regras de associação de referência)
 

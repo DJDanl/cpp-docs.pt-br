@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375364"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (opções de informações de depuração)
 A opção /DEBUGTYPE Especifica os tipos de informações de depuração geradas pela opção /DEBUG.  

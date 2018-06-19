@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373547"
 ---
 # <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (habilitar verificação do erro de tempo de execução do quadro da pilha)
 Executa as mesmas operações como o [/RTC (verificações de erro de tempo de execução)](../../build/reference/rtc-run-time-error-checks.md) opção. Preterido.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378321"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (indefinir símbolos)
 O **/u** remoções de definições de opção de compilador o símbolo do pré-processador especificado. O **/u** os símbolos específicos da Microsoft que define o compilador de remoções de definição de opção de compilador.  

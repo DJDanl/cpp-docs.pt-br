@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384340"
 ---
 # <a name="c-comments"></a>Comentários C
 Um “comentário” é uma sequência de caracteres que começam com uma combinação de barra e asterisco (<b>/\*</b>) que é tratada como um único caractere de espaço em branco e ignorada pelo compilador de outra forma. Um comentário pode incluir qualquer combinação de caracteres do conjunto de caracteres representável, inclusive caracteres de nova linha, mas excluindo o delimitador de fim do comentário (<b>\*/</b>). Os comentários podem ocupar mais de uma linha mas não podem ser aninhados.  

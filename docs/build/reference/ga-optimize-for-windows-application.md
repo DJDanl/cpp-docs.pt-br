@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374252"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (otimizar para aplicativo do Windows)
 Resulta em um código mais eficiente para um arquivo .exe para acessar variáveis de armazenamento local de thread (TLS).  

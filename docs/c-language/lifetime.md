@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387477"
 ---
 # <a name="lifetime"></a>Tempo de vida
 O “tempo de vida” é o período durante a execução de um programa em que uma variável ou uma função existe. A duração de armazenamento de identificador determina seu tempo de vida.  

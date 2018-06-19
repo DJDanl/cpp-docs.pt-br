@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377398"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (habilitar proteção do fluxo de controle)
 Habilite a geração de compilador protetor de fluxo de controle de verificações de segurança.  

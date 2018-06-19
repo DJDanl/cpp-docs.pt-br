@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385091"
 ---
 # <a name="c-floating-point-constants"></a>Constantes de ponto flutuante C
 Uma "constante de ponto flutuante" é um número decimal que representa um número real assinado. A representação de um número real assinado inclui uma parte inteira, uma parte fracionária e um expoente. Use as constantes de ponto flutuante para representar os valores de ponto flutuante que não podem ser alterados.  
