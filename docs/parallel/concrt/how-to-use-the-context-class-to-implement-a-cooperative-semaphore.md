@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693738"
 ---
 # <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Como usar a classe de contexto para implementar um semáforo cooperativo
 Este tópico mostra como usar a classe concurrency::Context para implementar uma classe de sinal cooperativo.  

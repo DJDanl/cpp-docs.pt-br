@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858481"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>Organização de controles em caixas de diálogo
 O editor de caixa de diálogo fornece ferramentas de layout para alinham e dimensionar automaticamente os controles. Para a maioria das tarefas, você pode usar o [barra de ferramentas do Editor de caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Todos os comandos da barra de ferramentas Editor de caixa de diálogo também estão disponíveis no menu de formato e a maioria tem [teclas de atalho](../windows/accelerator-keys-for-the-dialog-editor.md).  

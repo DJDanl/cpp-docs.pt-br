@@ -131,6 +131,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379002"
 ---
 # <a name="ctaskdialog-class"></a>Classe CTaskDialog
 Uma caixa de diálogo pop-up que funciona como uma caixa de mensagem, mas pode exibir informações adicionais para o usuário. O `CTaskDialog` também inclui a funcionalidade para coletar informações do usuário.  

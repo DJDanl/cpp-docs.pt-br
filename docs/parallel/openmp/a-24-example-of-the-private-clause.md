@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691382"
 ---
 # <a name="a24---example-of-the-private-clause"></a>A.24   Exemplo da cláusula private
 O `private` cláusula ([seção 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) na página 25) de uma região parallel tem efeito somente para a extensão de léxica da região, e não para a extensão dinâmica da região.  Portanto, no exemplo a seguir, quaisquer usos da variável *um* dentro a `for` loop na rotina *f* refere-se a uma cópia privada de *um*, enquanto um uso em rotina *g* refere-se ao global *um*.  

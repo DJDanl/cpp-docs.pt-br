@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695792"
 ---
 # <a name="321-ompinitlock-and-ompinitnestlock-functions"></a>3.2.1 funções omp_init_lock e omp_init_nest_lock
 Essas funções fornecem a única forma de inicializar um bloqueio. Cada função inicializa o bloqueio associado ao parâmetro *bloqueio* para uso em chamadas subsequentes. O formato é o seguinte:  

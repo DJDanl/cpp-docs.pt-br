@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379977"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>Definindo a cor da tela de fundo da caixa de diálogo
 Você pode definir a cor de plano de fundo de suas caixas de diálogo manipulando `WM_CTLCOLOR` mensagens para a janela da caixa de diálogo. A cor que você define é usada para a caixa de diálogo especificada.  

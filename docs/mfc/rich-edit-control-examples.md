@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379275"
 ---
 # <a name="rich-edit-control-examples"></a>Exemplos de controle edição avançada
 O exemplo OLE do MFC [WORDPAD](../visual-cpp-samples.md) usa o `CRichEditView`, `CRichEditDoc`, e `CRichEditCntrItem` classes. Por extensão, ele usa o [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md). Para obter uma descrição rápida dessas três classes, consulte [Classes relacionadas a controles de edição avançada](../mfc/classes-related-to-rich-edit-controls.md).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686107"
 ---
 # <a name="16-organization"></a>1.6 Organização
 -   Funções de biblioteca em tempo de execução ([consulte o capítulo 3](../../parallel/openmp/3-run-time-library-functions.md)).  

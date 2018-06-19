@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379735"
 ---
 # <a name="registering-window-classes"></a>Registrando classes de janela
 "Classes de janela" em programação tradicional do Windows definem as características de uma classe"" (não uma classe C++) de que qualquer número do windows pode ser criado. Esse tipo de classe é um modelo ou um modelo para a criação do windows.  

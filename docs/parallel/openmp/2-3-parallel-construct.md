@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692737"
 ---
 # <a name="23-parallel-construct"></a>2.3 Construto parallel
 A seguinte diretiva define uma região parallel, que é uma região do programa a ser executado por vários threads em paralelo. Isso é a construção fundamental que inicia a execução paralela.  

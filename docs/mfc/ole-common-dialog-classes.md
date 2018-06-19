@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348098"
 ---
 # <a name="ole-common-dialog-classes"></a>Classes de caixa de diálogo comuns OLE
 Essas classes lidar com tarefas comuns de OLE com a implementação de um número de caixas de diálogo OLE padrão. Eles também fornecem uma interface de usuário consistente para a funcionalidade OLE.  

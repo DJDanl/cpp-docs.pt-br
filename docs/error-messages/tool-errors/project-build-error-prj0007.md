@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317759"
 ---
 # <a name="project-build-error-prj0007"></a>Erro de Build PRJ0007 no Projeto
 Não foi possível criar o diretório' diretório de saída'.  

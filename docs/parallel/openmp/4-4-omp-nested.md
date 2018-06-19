@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690264"
 ---
 # <a name="44-ompnested"></a>4.4 OMP_NESTED
 O `OMP_NESTED` variável de ambiente habilita ou desabilita o paralelismo aninhado a menos que o paralelismo aninhado está habilitado ou desabilitado, chamando o `o` **mp_set_nested** rotina de biblioteca. Se definido como **TRUE**, paralelismo aninhado está habilitado; se ela for definida como **FALSE**aninhados paralelismo está desabilitado. O valor padrão é **FALSE**.  

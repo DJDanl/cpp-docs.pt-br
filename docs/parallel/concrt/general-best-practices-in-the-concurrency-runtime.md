@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694112"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Práticas recomendadas gerais no Tempo de Execução de Simultaneidade
 Este documento descreve as práticas recomendadas que se aplicam a várias áreas do tempo de execução de simultaneidade.  

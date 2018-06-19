@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686120"
 ---
 # <a name="a1---executing-a-simple-loop-in-parallel"></a>A.1   Executando um loop simples em paralelo
 O exemplo a seguir demonstra como a paralelização de um loop simples usando o `parallel for` diretiva ([seção 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md) na página 16). A variável de iteração de loop é privada por padrão, portanto, não é necessário especificá-lo explicitamente em uma cláusula privada.  

@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347185"
 ---
 # <a name="memory-management-examples"></a>Gerenciamento de memória: exemplos
 Este artigo descreve como o MFC executa alocações de quadro e as alocações de heap para cada um dos três tipos típicos de alocações de memória:  

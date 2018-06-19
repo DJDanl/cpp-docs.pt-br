@@ -53,6 +53,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376640"
 ---
 # <a name="cprintdialogex-class"></a>Classe CPrintDialogEx
 Encapsula os serviços fornecidos por folha de propriedades de impressão do Windows.  

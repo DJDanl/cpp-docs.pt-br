@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694856"
 ---
 # <a name="for-openmp"></a>for (OpenMP)
 Faz com que o trabalho feito um loop dentro de uma região parallel podem ser divididas entre threads.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380247"
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>Classes de modelo para matrizes, listas e mapas
 Essas classes de coleção são modelos cujos parâmetros determinam os tipos de objetos armazenados em agregações. O `CArray`, `CMap`, e `CList` classes usam funções auxiliares global que normalmente devem ser personalizadas. Para obter mais informações sobre essas funções de auxiliar, consulte [auxiliares da classe de coleção](../mfc/reference/collection-class-helpers.md). As classes digitada ponteiro são wrappers para outras classes na biblioteca de classes. Usando esses wrappers, você se inscrever do compilador verificação de tipo para ajudá-lo a evitar erros. Para obter mais informações sobre como usar essas classes, consulte [coleções](../mfc/collections.md).  

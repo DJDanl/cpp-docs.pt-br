@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688590"
 ---
 # <a name="12-definition-of-terms"></a>1.2 Definições de termos
 Os seguintes termos são usados neste documento:  

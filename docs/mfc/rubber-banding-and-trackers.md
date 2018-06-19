@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379236"
 ---
 # <a name="rubber-banding-and-trackers"></a>Elásticos e controladores
 Outro recurso fornecido com controladores é a seleção de "elástica", que permite que um usuário selecione vários itens OLE arrastando um retângulo de dimensionamento em redor dos itens a ser selecionado. Quando o usuário libera o botão esquerdo do mouse, itens dentro da região selecionada pelo usuário são selecionados e podem ser manipulados pelo usuário. Por exemplo, o usuário pode arrastar a seleção em outro aplicativo de contêiner.  

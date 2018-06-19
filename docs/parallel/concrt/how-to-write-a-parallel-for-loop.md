@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689812"
 ---
 # <a name="how-to-write-a-parallelfor-loop"></a>Como gravar um loop parallel_for
 Este exemplo demonstra como usar [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) para calcular o produto de duas matrizes.  
