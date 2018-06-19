@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353916"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Controles MFC ActiveX: licenciando um controle ActiveX
 Suporte de licenciamento, um recurso opcional de controles ActiveX, permite controlar quem pode usar ou distribuir o controle. (Para obter informações adicionais sobre problemas de licenciamento, consulte problemas de licenciamento no [atualizando um controle ActiveX existente](../mfc/upgrading-an-existing-activex-control.md).)  

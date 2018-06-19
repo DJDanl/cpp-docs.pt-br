@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692542"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Instruções passo a passo: usando o Tempo de Execução de Simultaneidade em um aplicativo habilitado para COM
 Este documento demonstra como usar o tempo de execução de simultaneidade em um aplicativo que usa o modelo de objeto de componente (COM).  

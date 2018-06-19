@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692646"
 ---
 # <a name="271-threadprivate-directive"></a>2.7.1 Diretiva threadprivate
 O `threadprivate` diretiva faz com que o escopo de arquivo nomeado, escopo de namespace ou variáveis estáticas de escopo de bloco especificados no *lista variável* particular a um thread. *lista de variável* é uma lista separada por vírgulas de variáveis que não têm um tipo incompleto. A sintaxe da `threadprivate` diretiva é da seguinte maneira:  

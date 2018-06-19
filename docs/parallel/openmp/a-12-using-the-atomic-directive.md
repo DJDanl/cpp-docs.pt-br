@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691398"
 ---
 # <a name="a12---using-the-atomic-directive"></a>A.12   Usando a diretiva atomic
 O exemplo a seguir evita as condições de corrida (atualizações simultâneas de um elemento de *x* por vários threads) usando o `atomic` diretiva ([seção 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md) na página 19):  

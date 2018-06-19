@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371722"
 ---
 # <a name="cmfclinkctrl-class"></a>Classe CMFCLinkCtrl
 O `CMFCLinkCtrl` classe exibe um botão como um hiperlink e invoca o destino do link quando o botão é clicado.  

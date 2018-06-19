@@ -87,6 +87,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376155"
 ---
 # <a name="cmfcstatusbar-class"></a>Classe CMFCStatusBar
 O `CMFCStatusBar` classe implementa uma barra de status semelhante de `CStatusBar` classe. No entanto, o `CMFCStatusBar` classe possui recursos não oferecidos pelo `CStatusBar` classe, como a capacidade de exibir imagens, animações e barras de progresso; e a capacidade de responder passar o mouse clica duas vezes. 

@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33841693"
 ---
 # <a name="stringizing-operator-"></a>Operador stringizing (#)
 O sinal de número ou o operador "stringizing" (**#**) converte os parâmetros de macro em literais de cadeia de caracteres sem expandir a definição de parâmetro. É usado apenas com macros que aceitam argumentos. Se ele preceder um parâmetro formal na definição da macro, o argumento real passado por invocação de macro é colocado entre em aspas e tratado como literal de cadeia de caracteres. O literal da cadeia de caracteres substitui cada ocorrência de uma combinação do operador stringizing e do parâmetro formal na definição da macro.  

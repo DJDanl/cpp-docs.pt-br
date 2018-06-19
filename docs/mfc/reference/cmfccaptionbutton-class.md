@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368771"
 ---
 # <a name="cmfccaptionbutton-class"></a>Classe CMFCCaptionButton
 O `CMFCCaptionButton` classe implementa um botão que é exibido na barra de legenda para um painel ou uma janela do quadro simplificado. Normalmente, o framework cria automaticamente botões de legenda.  

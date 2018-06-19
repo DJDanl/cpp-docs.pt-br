@@ -77,6 +77,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376457"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Classe CDataRecoveryHandler
 O `CDataRecoveryHandler` salve documentos e restaura-as se um aplicativo termina inesperadamente.  

@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374643"
 ---
 # <a name="cpagesetupdialog-class"></a>Classe CPageSetupDialog
 Encapsula os serviços fornecidos pela caixa de diálogo de configuração de página OLE comuns do Windows com suporte adicional para configuração e modificar as margens de impressão.  

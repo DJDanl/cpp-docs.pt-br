@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842225"
 ---
 # <a name="token-pasting-operator-"></a>Operador de colagem de token (##)
 O operador de sinal de número de dupla ou "colagem de token" (**##**), que às vezes é chamado de operador de "mesclar" é usado em tipo de objeto e o tipo função macros. Ele permite que tokens separados sejam agrupados em um único token e, portanto, não pode ser o primeiro ou último o token na definição da macro.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281944"
 ---
 # <a name="compiler-warning-level-1-c4621"></a>Compilador C4621 de aviso (nível 1)
 nenhuma forma de pós-fixo de 'operator--' encontrado para o tipo 'type', usando forma de prefixo  

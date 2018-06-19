@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302130"
 ---
 # <a name="expression-evaluator-error-cxx0064"></a>Erro CXX0064 (avaliador de expressão)
 não é possível definir o ponto de interrupção na função de membro virtual associada  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358633"
 ---
 # <a name="control-classes"></a>Classes de controle
 Classes de controle encapsulam uma ampla variedade de controles padrão do Windows, variando de controles de texto estático para controles em árvore. Além disso, o MFC fornece alguns novos controles, inclusive botões com barras de bitmaps e controle.  

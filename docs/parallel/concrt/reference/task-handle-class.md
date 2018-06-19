@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688200"
 ---
 # <a name="taskhandle-class"></a>Classe task_handle
 O `task_handle` classe representa um item de trabalho paralelas individual. Ele encapsula as instruções e os dados necessários para executar um trabalho.  

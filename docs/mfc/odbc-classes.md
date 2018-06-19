@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348134"
 ---
 # <a name="odbc-classes"></a>Classes ODBC
 Essas classes de trabalhar com as outras classes de estrutura de aplicativo para fornecer acesso fácil a uma ampla variedade de bancos de dados para os quais os drivers de conectividade de banco de dados aberto (ODBC) estão disponíveis.  

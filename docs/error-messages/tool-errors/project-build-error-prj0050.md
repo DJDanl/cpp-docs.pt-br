@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318507"
 ---
 # <a name="project-build-error-prj0050"></a>Erro de Build PRJ0050 no Projeto
 Falha ao registrar a saída. Verifique se que você tem as permissões apropriadas para modificar o registro.  

@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371680"
 ---
 # <a name="colepropertiesdialog-class"></a>Classe COlePropertiesDialog
 Encapsula a caixa de diálogo de propriedades do objeto OLE comuns do Windows.  

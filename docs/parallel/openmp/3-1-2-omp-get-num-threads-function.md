@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687433"
 ---
 # <a name="312-ompgetnumthreads-function"></a>3.1.2 função omp_get_num_threads
 O **omp_get_num_threads** função retorna o número de threads atualmente na equipe executando a região paralela do qual ele é chamado. O formato é o seguinte:  

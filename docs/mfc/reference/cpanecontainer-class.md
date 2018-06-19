@@ -135,6 +135,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378162"
 ---
 # <a name="cpanecontainer-class"></a>Classe CPaneContainer
 O `CPaneContainer` classe é um componente básico do modelo de encaixe implementado pelo MFC. Um objeto dessa classe armazena ponteiros para os dois painéis de encaixe ou duas instâncias do `CPaneContainer.` também armazena um ponteiro para a linha divisória que separa os painéis (ou os contêineres). Com aninhamento contêineres dentro de contêineres, a estrutura pode construir uma árvore binária que representa os layouts complexos de encaixe. A raiz da árvore binária é armazenada em um [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) objeto.  

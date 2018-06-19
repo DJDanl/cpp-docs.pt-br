@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351424"
 ---
 # <a name="mfc-application-architecture-classes"></a>Classes de arquitetura do aplicativo MFC
 Classes nessa categoria contribuem para a arquitetura de um aplicativo do framework. Eles fornecem a funcionalidade comum para a maioria dos aplicativos. Preencha a estrutura para adicionar funcionalidade específica do aplicativo. Normalmente, você faz isso por derivar novas classes de classes de arquitetura e, em seguida, adicionar novos membros ou substituindo funções de membro existente.  

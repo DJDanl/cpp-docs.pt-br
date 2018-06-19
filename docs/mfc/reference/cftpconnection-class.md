@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374530"
 ---
 # <a name="cftpconnection-class"></a>Classe CFtpConnection
 Gerencia a sua conexão de FTP para um servidor da Internet e permite a manipulação direta de diretórios e arquivos no servidor.  

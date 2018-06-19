@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267203"
 ---
 # <a name="compiler-error-c3705"></a>C3705 de erro do compilador
 'function': não é possível encontrar a interface de eventos  

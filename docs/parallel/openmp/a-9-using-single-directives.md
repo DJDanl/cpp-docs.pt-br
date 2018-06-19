@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690375"
 ---
 # <a name="a9---using-single-directives"></a>A.9   Usando diretivas single
 O exemplo a seguir demonstra o `single` diretiva ([seção 2.4.3](../../parallel/openmp/2-4-3-single-construct.md) na página 15). No exemplo, apenas um thread (normalmente o primeiro thread que encontra o `single` diretiva) imprime a mensagem de progresso. O usuário não deve fazer suposições de segmento que executará o `single` seção. Todos os outros segmentos ignorará o `single` seção e parar a barreira no final do `single` construir. Se outros threads podem prosseguir sem aguardar a execução do thread de `single` seção, uma `nowait` cláusula pode ser especificada no `single` diretiva.  

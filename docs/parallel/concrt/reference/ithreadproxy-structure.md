@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693202"
 ---
 # <a name="ithreadproxy-structure"></a>Estrutura IThreadProxy
 Uma abstração para um thread de execução. Dependendo do `SchedulerType` chave da diretiva do Agendador que você criar o Gerenciador de recursos será conceder a você um proxy de thread que é apoiado por um thread de Win32 regular ou um thread (UMS) agendáveis do modo de usuário. Threads UMS são com suporte em sistemas operacionais de 64 bits com a versão do Windows 7 e superior.  

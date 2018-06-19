@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350491"
 ---
 # <a name="ole-background-implementation-strategies"></a>Tela de fundo OLE: estratégias de implementação
 Dependendo do seu aplicativo, há quatro estratégias de implementação possíveis para adicionar suporte OLE:  

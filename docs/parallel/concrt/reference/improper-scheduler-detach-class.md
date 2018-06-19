@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696117"
 ---
 # <a name="improperschedulerdetach-class"></a>Classe improper_scheduler_detach
 Esta classe descreve uma exceção gerada quando o `CurrentScheduler::Detach` método for chamado em um contexto que não tenha sido anexado ao Agendador de usando o `Attach` método de um `Scheduler` objeto.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370315"
 ---
 # <a name="cmfcribboncontextcaption-class"></a>Classe CMFCRibbonContextCaption
 Implementa uma legenda colorida que aparece na parte superior de uma categoria de faixa de opções ou um contexto.  

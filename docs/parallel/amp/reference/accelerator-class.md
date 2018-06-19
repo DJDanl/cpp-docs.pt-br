@@ -55,6 +55,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694741"
 ---
 # <a name="accelerator-class"></a>Classe accelerator
 Um acelerador é um recurso de hardware que é otimizado para a computação paralela de dados. Um acelerador pode ser um dispositivo conectado a um barramento PCIe (como uma GPU) ou pode ser um conjunto de instruções estendido na CPU principal.  

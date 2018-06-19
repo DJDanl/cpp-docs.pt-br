@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381563"
 ---
 # <a name="using-cprogressctrl"></a>Usando CProgressCtrl
 Você pode usar o controle de progresso para indicar o progresso de uma operação demorada. É um retângulo que é preenchido com a cor de realce do sistema conforme o andamento da operação.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376034"
 ---
 # <a name="csettingsstoresp-class"></a>Classe CSettingsStoreSP
 O `CSettingsStoreSP` classe é uma classe auxiliar que você pode usar para criar instâncias de [CSettingsStore classe](../../mfc/reference/csettingsstore-class.md).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691399"
 ---
 # <a name="a20---binding-of-barrier-directives"></a>A.20  Vinculação de diretivas barrier
 A associação de diretiva regras chamada para um **barreira** diretiva para ligar para o mais próximo de circunscrição `parallel` diretiva. Para obter mais informações sobre associação de diretiva, consulte [seção 2.8](../../parallel/openmp/2-8-directive-binding.md) na página 32.  

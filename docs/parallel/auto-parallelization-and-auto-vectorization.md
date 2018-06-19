@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688460"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Paralelização automática e vetorização automática
 Paralelizador automático e Vetorizador automático são projetados para fornecer ganhos de desempenho automático para loops em seu código.  

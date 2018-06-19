@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694544"
 ---
 # <a name="thread-local-storage-tls"></a>Armazenamento local de thread (TLS)
 Armazenamento Local da thread (TLS) é o método pelo qual cada thread em um determinado processo multithread pode alocar locais para armazenar dados específicos de segmento. Dinamicamente os dados específicos de segmento de limite (tempo de execução) são suportados por meio da API de TLS ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801), [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812), [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818), e [TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). Para obter mais informações sobre como o armazenamento local de thread é implementado no Windows, consulte [armazenamento Local de Thread (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx).  Win32 e do compilador Visual C++ agora dão suporte a dados estaticamente vinculado (tempo de carregamento) por thread além de implementação da API existente.  

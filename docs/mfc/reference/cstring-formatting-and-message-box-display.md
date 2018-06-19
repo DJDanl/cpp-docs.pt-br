@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375034"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formatação CString e exibição da caixa de mensagem
 Um número de funções é fornecido para formatar e analisar `CString` objetos. Você pode usar essas funções sempre que você tiver que manipular `CString` objetos, mas eles são particularmente úteis para a formatação de cadeias de caracteres que serão exibido na caixa de mensagem de texto.  

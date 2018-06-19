@@ -40,6 +40,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355266"
 ---
 # <a name="multipage-documents"></a>Documentos multipágina
 Este artigo descreve o protocolo de impressão do Windows e explica como imprimir documentos que contêm mais de uma página. O artigo aborda os seguintes tópicos:  

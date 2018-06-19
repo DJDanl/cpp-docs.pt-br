@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354895"
 ---
 # <a name="idle-loop-processing"></a>Processamento de loop ocioso
 Muitos aplicativos de processamento longo "em segundo plano." Às vezes, considerações sobre desempenho dita usando multithread para esse trabalho. Threads envolvem sobrecarga extra de desenvolvimento, para que eles não são recomendados para tarefas simples, como o trabalho de tempo ocioso MFC faz o [OnIdle](../mfc/reference/cwinthread-class.md#onidle) função. Este artigo se concentra em processamento ocioso. Para obter mais informações sobre multithreading, consulte [Multithreading tópicos](../parallel/multithreading-support-for-older-code-visual-cpp.md).  

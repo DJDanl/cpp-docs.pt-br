@@ -95,6 +95,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375918"
 ---
 # <a name="cmultipaneframewnd-class"></a>Classe CMultiPaneFrameWnd
 O `CMultiPaneFrameWnd` estende a classe [CPaneFrameWnd classe](../../mfc/reference/cpaneframewnd-class.md). Ela pode suportar vários painéis. Em vez de um identificador único inserido em uma barra de controle, `CMultiPaneFrameWnd` contém um [CPaneContainerManager classe](../../mfc/reference/cpanecontainermanager-class.md) objeto que permite que o usuário ancorar um `CMultiPaneFrameWnd` para outro e dinamicamente criar vários flutuante, com guias Windows.  

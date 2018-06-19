@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293748"
 ---
 # <a name="compiler-warning-level-4-c4460"></a>Compilador C4460 de aviso (nível 4)
 WinRT ou CLR operador 'operator', parâmetro tiver passado por referência. Operador 'operator WinRT ou CLR' tem semânticas diferentes do operador de C++ 'operator', você pretendia passar por valor?  

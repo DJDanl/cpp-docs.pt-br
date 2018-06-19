@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296979"
 ---
 # <a name="command-line-warning-d9035"></a>Aviso D9035 (linha de comando)
 a opção 'option' foi substituída e será removida em uma versão futura  

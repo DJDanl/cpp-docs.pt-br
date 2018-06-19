@@ -247,6 +247,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378675"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Classe CMFCRibbonBaseElement
 O `CMFCRibbonBaseElement` classe é a classe base para todos os elementos que você pode adicionar a um [barra da faixa de opções](../../mfc/reference/cmfcribbonbar-class.md). Exemplos de elementos de faixa de opções são a faixa de opções como botões, caixas de seleção de faixa de opções e caixas de combinação de faixa de opções.  

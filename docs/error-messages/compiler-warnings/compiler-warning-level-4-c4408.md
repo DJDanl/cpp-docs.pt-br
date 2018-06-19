@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297574"
 ---
 # <a name="compiler-warning-level-4-c4408"></a>Compilador C4408 de aviso (nível 4)
 anonymousstruct ou union não declarou nenhum membro de dados  

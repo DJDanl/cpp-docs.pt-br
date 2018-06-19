@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353719"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Adicionando um manipulador de mensagens do MFC
 Você pode [usar a janela Propriedades para adicionar um manipulador de mensagens](../../mfc/reference/mapping-messages-to-functions.md) (uma função de membro que manipula mensagens do Windows) para uma classe e o mapa de mensagens do Windows para o manipulador de mensagens. Você também pode adicionar [um manipulador de eventos para qualquer controle de caixa de diálogo](../../windows/adding-event-handlers-for-dialog-box-controls.md).  

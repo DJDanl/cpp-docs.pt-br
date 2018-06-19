@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274443"
 ---
 # <a name="compiler-warning-level-1-c4030"></a>Compilador C4030 de aviso (nível 1)
 **primeira lista de parâmetros formais maior do que a segunda lista**  

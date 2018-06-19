@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692659"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>Práticas recomendadas na Biblioteca de Agentes Assíncrona
 Este documento descreve como fazer uso eficiente da biblioteca de agentes assíncrona. A biblioteca de agentes promove um modelo de programação baseado em ator e mensagem no processo passando para o fluxo de dados de alta granularidade e pipeline de tarefas.  

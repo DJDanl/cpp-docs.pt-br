@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270503"
 ---
 # <a name="compiler-warning-c4335"></a>C4335 de aviso do compilador
 Formato de arquivo Mac detectado: converta o arquivo de origem para o formato DOS ou UNIX  

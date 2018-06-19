@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286078"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>Compilador C4383 de aviso (nível 1)
 'instance_dereference_operator': o significado de desreferenciar um identificador pode mudar, quando existe um operador definido pelo usuário 'operator'; Escreva o operador como uma função estática para ser explícito sobre o operando  

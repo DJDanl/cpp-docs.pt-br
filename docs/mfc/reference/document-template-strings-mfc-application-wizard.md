@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373534"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Cadeias de caracteres de modelo do documento, Assistente de Aplicativo MFC
 Nesta página do Assistente de aplicativo MFC, fornecer ou refinar as seguintes opções para ajudá-lo a localização e o gerenciamento de documentos. Cadeias de caracteres de modelo de documento estão disponíveis para aplicativos que incluem **suporte para a arquitetura de documento/exibição** no [tipo de aplicativo](../../mfc/reference/application-type-mfc-application-wizard.md). Eles não estão disponíveis para caixas de diálogo. Como a maioria das cadeias de caracteres de modelo de documento são visíveis e usado por usuários do aplicativo, eles são localizados no **idioma de recurso** indicado no **tipo de aplicativo** página do assistente.  

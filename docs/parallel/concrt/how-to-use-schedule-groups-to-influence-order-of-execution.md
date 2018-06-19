@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691190"
 ---
 # <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Como usar grupos de agendas para influenciar a ordem de execução
 No tempo de execução de simultaneidade, a ordem na qual as tarefas são agendadas é não determinística. No entanto, você pode usar políticas de agendamento para influenciar a ordem na qual as tarefas executadas. Este tópico mostra como usar grupos de agendas junto com o [concurrency::SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) políticas de Agendador para influenciar a ordem na qual as tarefas executadas.  

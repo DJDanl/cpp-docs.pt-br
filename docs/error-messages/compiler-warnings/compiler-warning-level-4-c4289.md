@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292601"
 ---
 # <a name="compiler-warning-level-4-c4289"></a>Compilador C4289 de aviso (nível 4)
 extensão não padrão usada: 'var': variável de controle de loop declarada no loop for é usada fora do escopo do loop for  

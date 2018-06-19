@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375597"
 ---
 # <a name="csocket-class"></a>Classe CSocket
 Deriva `CAsyncSocket`herda o encapsulamento de API do Windows Sockets e representa um nível mais alto de abstração do que um `CAsyncSocket` objeto.  

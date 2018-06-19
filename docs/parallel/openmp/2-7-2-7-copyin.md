@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689370"
 ---
 # <a name="2727-copyin"></a>2.7.2.7 copyin
 O **copyin** cláusula fornece um mecanismo para atribuir o mesmo valor para **threadprivate** variáveis para cada thread na equipe de região paralela em execução. Para cada variável especificada em uma **copyin** cláusula, o valor da variável no thread principal da equipe é copiada, como se fosse pela atribuição nas cópias de thread privado no início da região de dados paralela. A sintaxe do **copyin** cláusula é o seguinte:  

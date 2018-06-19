@@ -129,6 +129,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376412"
 ---
 # <a name="cmfcribbonbutton-class"></a>Classe CMFCRibbonButton
 O `CMFCRibbonButton` classe implementa botões que você pode posicionar em elementos da barra de faixa de opções, como painéis, as barras de ferramentas de acesso rápido e menus pop-up.  

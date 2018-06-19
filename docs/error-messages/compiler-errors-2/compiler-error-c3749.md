@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270769"
 ---
 # <a name="compiler-error-c3749"></a>C3749 de erro do compilador
 'attribute': um atributo personalizado não pode ser usado dentro de uma função  

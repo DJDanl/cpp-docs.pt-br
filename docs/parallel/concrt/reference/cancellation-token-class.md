@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695935"
 ---
 # <a name="cancellationtoken-class"></a>Classe cancellation_token
 O `cancellation_token` classe representa a capacidade de determinar se alguma operação foi solicitada para cancelar. Um token fornecido pode ser associado com um `task_group`, `structured_task_group`, ou `task` para fornecer cancelamento implícita. Ele também pode ser controlado de cancelamento ou tem um retorno de chamada registrado para se e quando associado `cancellation_token_source` é cancelada.  

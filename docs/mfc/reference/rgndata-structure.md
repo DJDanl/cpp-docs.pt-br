@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373502"
 ---
 # <a name="rgndata-structure"></a>Estrutura RGNDATA
 O `RGNDATA` estrutura contém um cabeçalho e uma matriz de retângulos que compõem uma região. Esses retângulos, classificados de cima para baixo à esquerda para a direita, não se sobrepõem.  

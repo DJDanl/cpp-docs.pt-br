@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33840730"
 ---
 # <a name="using-directive-cclr"></a># Diretiva using (C + + CLR)
 Importa os metadados para um programa compilado com [/clr](../build/reference/clr-common-language-runtime-compilation.md).  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843282"
 ---
 # <a name="porting-from-unix-to-win32"></a>Portando de UNIX para Win32
 Ao migrar aplicativos do UNIX para o Windows, há várias opções:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688109"
 ---
 # <a name="3-run-time-library-functions"></a>3. Funções de biblioteca em tempo de execução
 Esta seção descreve as funções de biblioteca de tempo de execução OpenMP C e C++. O cabeçalho  **\<omp.h >** declara dois tipos, várias funções que podem ser usadas para controlar o ambiente de execução paralela da consulta e funções que podem ser usadas para sincronizar o acesso aos dados de bloqueio.  

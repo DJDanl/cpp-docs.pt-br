@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354433"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Como fazer uma coleção fortemente tipada
 Este artigo explica como criar coleções fortemente tipadas para seus próprios tipos de dados. Os tópicos incluem:  

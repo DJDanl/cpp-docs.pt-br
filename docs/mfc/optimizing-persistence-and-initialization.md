@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355653"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Otimizando persistência e inicialização
 Por padrão, persistência e inicialização em um controle são manipuladas pelo `DoPropExchange` função de membro. Em um controle comum, essa função contém chamadas para vários **px _** funções (`PX_Color`, `PX_Font`e assim por diante), uma para cada propriedade.  

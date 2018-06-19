@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694791"
 ---
 # <a name="concurrentunorderedmultiset-class"></a>Classe concurrent_unordered_multiset
 O `concurrent_unordered_multiset` classe é um contêiner de simultaneidade-safe que controla uma sequência de comprimento variável de elementos do tipo K. A sequência é representada de forma que permite a simultaneidade safe acrescentar, acesso de elemento, acesso de iterador e operações de passagem de iterador.  

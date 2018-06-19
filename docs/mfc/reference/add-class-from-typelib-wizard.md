@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351947"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Assistente para adicionar classe de Typelib
 Use este assistente para adicionar uma classe do MFC de uma biblioteca de tipos disponíveis. O assistente cria uma classe para cada interface que você adicionar a biblioteca de tipos selecionados.  

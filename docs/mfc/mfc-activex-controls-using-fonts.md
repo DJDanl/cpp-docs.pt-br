@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355133"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Controles ActiveX MFC: usando fontes
 Se o controle ActiveX exibe o texto, você pode permitir que o usuário do controle alterar a aparência do texto, alterando uma propriedade de fonte. Propriedades de fonte são implementadas como objetos de fonte e pode ser um dos dois tipos: estoque ou personalizado. Propriedades de fonte de estoque são propriedades de fonte preimplemented que você pode adicionar usando o Assistente para adicionar propriedade. Propriedades personalizadas da fonte não são preimplemented e o desenvolvedor do controle determina o comportamento e o uso da propriedade.  

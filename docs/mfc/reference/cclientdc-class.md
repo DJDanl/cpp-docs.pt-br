@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348901"
 ---
 # <a name="cclientdc-class"></a>Classe CClientDC
 Cuida de chamar as funções do Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) em tempo de construção e [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) em tempo de destruição.  

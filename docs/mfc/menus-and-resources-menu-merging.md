@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351960"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menus e recursos: mescla de menu
 Este artigo detalha as etapas necessárias para aplicativos de documento OLE tratar a edição visual e ativação no local corretamente. Ativação no local representa um desafio para o contêiner e o servidor de aplicativos (componente). O usuário permanece na mesma janela do quadro (dentro do contexto do documento contêiner), mas está realmente executando outro aplicativo (o servidor). Isso exige a coordenação entre os recursos do contêiner e o servidor de aplicativos.  

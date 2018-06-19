@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349707"
 ---
 # <a name="receiving-notification-from-common-controls"></a>Recebendo notificação de controles comuns
 Controles comuns são janelas filho que enviam mensagens de notificação para a janela pai quando ocorrem os eventos, como a entrada do usuário, no controle.  

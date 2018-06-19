@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692331"
 ---
 # <a name="265-flush-directive"></a>2.6.5 Diretiva flush
 O **liberar** diretiva, explícita ou implícita, especifica um ponto de sequência "entre threads" em que a implementação é necessário para garantir que todos os threads em uma equipe tem uma exibição consistente de determinados objetos (especificadas abaixo) no memória. Isso significa que o anteriores avaliações de expressões que fazem referência a esses objetos sejam concluídas e avaliações subsequentes ainda não foram iniciadas. Por exemplo, compiladores devem restaurar os valores dos objetos de registros para a memória e hardware pode ser necessário liberar buffers de gravação para a memória e recarregar os valores dos objetos de memória.  

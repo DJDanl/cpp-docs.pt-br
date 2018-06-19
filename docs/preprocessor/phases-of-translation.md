@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842762"
 ---
 # <a name="phases-of-translation"></a>Fases de translação
 Os programas em C e C++ consistem em um ou mais arquivos de origem, cada um contendo parte do texto do programa. Um arquivo de origem, junto com seus arquivos de inclusão (arquivos que são incluídos a política de pré-processador `#include`) mas sem as seções de código removidas por políticas de compilação condicional, como `#if`, é chamado de uma "unidade de tradução".  

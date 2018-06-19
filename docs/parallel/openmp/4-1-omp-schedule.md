@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691044"
 ---
 # <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
 **OMP_SCHEDULE** só se aplica ao **para** e **paralelo para** diretivas com o tipo de agenda **tempo de execução**. O tamanho de bloco e de tipo de agendamento para todos os loops pode ser definido em tempo de execução definindo-se esta variável de ambiente para qualquer um dos tipos de agenda reconhecida e opcional *chunk_size*.  

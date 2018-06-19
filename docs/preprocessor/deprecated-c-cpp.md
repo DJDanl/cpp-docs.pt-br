@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839813"
 ---
 # <a name="deprecated-cc"></a>deprecated (C/C++)
 O **preterido** pragma permite você indicar que uma função, tipo ou qualquer outro identificador talvez não tenha suporte em um futuro de versão ou não deve mais ser usado.  

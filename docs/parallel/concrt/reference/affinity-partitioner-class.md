@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691125"
 ---
 # <a name="affinitypartitioner-class"></a>Classe affinity_partitioner
 O `affinity_partitioner` classe é semelhante de `static_partitioner` classe, mas ele melhora a afinidade de cache por sua opção de mapeamento de subintervalos para threads de trabalho. Ela pode melhorar o desempenho significativamente quando um loop é executado novamente em um mesmo conjunto de dados, e os dados se encaixa no cache. Observe que o mesmo `affinity_partitioner` objeto deve ser usado com iterações subsequentes de um loop paralelo que é executado em um conjunto de dados específico, para se beneficiar com a localidade dos dados.  

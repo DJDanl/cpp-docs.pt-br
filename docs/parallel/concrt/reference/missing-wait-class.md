@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686341"
 ---
 # <a name="missingwait-class"></a>Classe missing_wait
 Esta classe descreve uma exceção gerada quando há tarefas ainda está agendadas para ser um `task_group` ou `structured_task_group` do objeto no momento em que esse objeto destruidor é executado. Essa exceção será lançada nunca se o destruidor é atingido devido a uma pilha de desenrolamento como resultado de uma exceção.  

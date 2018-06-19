@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349845"
 ---
 # <a name="rebar-controls-and-bands"></a>Controles rebar e bandas
 A principal finalidade de um controle rebar é atuar como um contêiner para janelas filho, controles de caixa de diálogo comuns, menus, barras de ferramentas e assim por diante. Essa contenção é suportada pelo conceito de "banda". Cada faixa rebar pode conter qualquer combinação de uma barra dupla, um bitmap, um rótulo de texto e uma janela filho.  

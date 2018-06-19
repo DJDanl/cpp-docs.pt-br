@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317343"
 ---
 # <a name="project-build-error-prj0036"></a>Erro de Build PRJ0036 no Projeto
 A propriedade 'Additional Files' para a ferramenta de implantação da Web continha uma entrada inválida.  

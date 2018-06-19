@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351804"
 ---
 # <a name="providing-windowless-activation"></a>Fornecendo ativação sem janelas
 Código de criação de janela (ou seja, tudo o que acontece quando você chamar **CreateWindow**) é caro para executar. Um controle que mantém uma tela janela tem que gerenciar as mensagens da janela. Controles sem janelas, portanto, são mais rápidos que os controles com o windows.  

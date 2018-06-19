@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378175"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Classe CMFCToolBarsCustomizeDialog
 Uma caixa de diálogo sem janela restrita de guia ( [classe CPropertySheet](../../mfc/reference/cpropertysheet-class.md)) que permite que o usuário personalizar barras de ferramentas, menus, atalhos de teclado, ferramentas definidas pelo usuário e o estilo visual em um aplicativo. Normalmente, o usuário acessa essa caixa de diálogo selecionando **personalizar** do **ferramentas** menu.  

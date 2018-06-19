@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695688"
 ---
 # <a name="2724-shared"></a>2.7.2.4 shared
 Essa cláusula compartilha variáveis que aparecem no *lista variável* entre todos os threads em uma equipe. Área de armazenamento para acesso a todos os threads em uma equipe **compartilhado** variáveis.  

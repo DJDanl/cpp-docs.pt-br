@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352152"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Vários tipos de documento, exibições e janelas com moldura
 A relação padrão entre um documento, o modo de exibição e sua janela do quadro é descrita em [criação de documento/exibição](../mfc/document-view-creation.md). Muitos aplicativos oferecem suporte a um único documento tipo (mas possivelmente vários documentos abertos desse tipo) com uma única exibição no documento e janela de apenas um quadro por documento. Mas alguns aplicativos podem precisar alterar um ou mais desses padrões.  
