@@ -1,7 +1,7 @@
 ---
 title: Ferramentas de vinculador LNK1000 erro | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f67df9c53b79fabfc9559380b5b57a72e64cb8a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a01db36200995813ec4b6862e9ddd04c6f069ba
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298230"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238676"
 ---
 # <a name="linker-tools-error-lnk1000"></a>Erro das Ferramentas de Vinculador LNK1000
-Erro desconhecido; Consulte a documentação para opções de suporte técnico  
-  
- Observe as circunstâncias do erro, tente isolar o problema e criar um caso de teste pode ser reproduzido, em seguida, entre em contato com `Microsoft Product Support Services`. Para obter informações sobre como investigar e relatar esses erros, consulte [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 134650](http://support.microsoft.com/default.aspx?scid=kb;en-us;134650).  
-  
- Você pode obter esse erro se você mesclar arquivos de cabeçalho padrão (por exemplo, dos.h) e seus próprios arquivos. `#include` os cabeçalhos padrão primeiro, seguido por seus próprios arquivos de cabeçalho.
+
+> Erro desconhecido; Consulte a documentação para opções de suporte técnico
+
+Observe as circunstâncias do erro, em seguida, tente isolar o problema e criar um caso de teste pode ser reproduzido. Para obter informações sobre como investigar e relatar esses erros, consulte [como relatar um problema com o conjunto de ferramentas do Visual C++ ou documentação](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+
+Você pode obter esse erro se você mesclar arquivos de cabeçalho padrão (por exemplo, Windows. h) e seus próprios arquivos. Inclua um cabeçalho pré-compilado, se qualquer um, e, depois, os cabeçalhos padrão, seguido por seus próprios arquivos de cabeçalho.

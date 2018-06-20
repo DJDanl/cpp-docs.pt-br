@@ -1,7 +1,7 @@
 ---
 title: Usando CString | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591a319671ea42236af5ae7e80ea1cb94c3c446c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5759c8a0aaa628d612010cb7d04690a3d3bfa54f
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361695"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238715"
 ---
 # <a name="using-cstring"></a>Usando CString
 Os tópicos desta seção descrevem como programar com `CString`. Para obter a documentação de referência sobre o `CString` de classe, consulte a documentação para [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
@@ -32,7 +32,7 @@ Os tópicos desta seção descrevem como programar com `CString`. Para obter a d
   
  Um objeto `CStringW` contém o tipo `wchar_t` e oferece suporte a cadeias de caracteres Unicode. Um objeto `CStringA` contém o tipo `char` e oferece suporte a cadeias de caracteres de byte único e de vários bytes (MBCS). Um objeto `CString` é compatível com o tipo `char` ou o tipo `wchar_t`, dependendo se o símbolo `MBCS` ou o símbolo `UNICODE` for definido no momento da compilação.  
   
- Um objeto `CString` mantém os dados de caracteres em um objeto `CStringData`. `CString` aceita cadeias de caracteres do estilo C de terminação `null`, mas não retém o caractere `null` nos dados de caracteres armazenados. Em vez disso, `CString` rastreia o comprimento da cadeia de caracteres. `CString` fornece uma terminação nula quando exporta uma cadeia de caracteres do estilo C. Você pode inserir um `null` em uma `CString`, mas isso pode produzir resultados inesperados.  
+ Um objeto `CString` mantém os dados de caracteres em um objeto `CStringData`. `CString` aceita `null`-encerrada cadeias de caracteres de estilo C. `CString` rastreia o comprimento da cadeia de caracteres para um desempenho mais rápido, mas também mantém o `null` caracteres nos dados de caractere armazenados para dar suporte a conversão para LPCWSTR. `CString` inclui o terminador nulo quando ele exporta uma cadeia de caracteres de estilo C. Você pode inserir um `null` em outros locais em um `CString`, mas ele pode produzir resultados inesperados.  
   
  O conjunto de classes de cadeias de caracteres a seguir pode ser usado sem vincular uma biblioteca MFC, com ou sem suporte para CRT: `CAtlString`, `CAtlStringA` e `CAtlStringW`.  
   

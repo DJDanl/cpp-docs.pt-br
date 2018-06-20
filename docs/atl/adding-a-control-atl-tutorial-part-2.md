@@ -1,7 +1,7 @@
 ---
 title: Adicionando um controle (ATL Tutorial, parte 2) | Microsoft Docs
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3b8c7eb59579363ce3580c7319b80be2557a30d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1547d48b5b5914d9b32ff8b476b0c007f972067
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358570"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238702"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Adicionando um controle (Tutorial ATL, parte 2)
 Nesta etapa, você adicionar um controle ao seu projeto, compilá-lo e testá-lo em uma página da Web.  
@@ -26,7 +26,7 @@ Nesta etapa, você adicionar um controle ao seu projeto, compilá-lo e testá-lo
   
 #### <a name="to-add-an-object-to-an-atl-project"></a>Para adicionar um objeto para um projeto de ATL  
   
-1.  No modo de exibição de classe, clique com botão direito no projeto de polígono.  
+1.  Em **Solution Explorer**, com o botão direito no projeto de polígono.  
   
 2.  Aponte para **adicionar** no menu de atalho e clique em **Novo Item** no submenu.  
   
@@ -44,8 +44,8 @@ Nesta etapa, você adicionar um controle ao seu projeto, compilá-lo e testá-lo
 |-----------|--------------|  
 |**Nome curto**|O nome inserido para o controle.|  
 |**Class**|O nome de classe C++ criado para implementar o controle.|  
-|**arquivo. h**|O arquivo criado para conter a definição de classe do C++.|  
-|**arquivo. cpp**|O arquivo criado para conter a implementação da classe C++.|  
+|**Arquivo .h**|O arquivo criado para conter a definição de classe do C++.|  
+|**Arquivo .cpp**|O arquivo criado para conter a implementação da classe C++.|  
 |**CoClass**|O nome da classe de componente para este controle.|  
 |**Interface**|O nome da interface em que o controle implementar suas propriedades e métodos personalizados.|  
 |**Tipo**|Uma descrição para o controle.|  
