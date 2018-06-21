@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a7fbdb3baff7531aa4e391e5d7e936c39e38fc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d920ca54c9e97273e4bda563921a144339eafd0f
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372613"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271341"
 ---
 # <a name="chttpfile-class"></a>Classe CHttpFile
 Fornece a funcionalidade para solicitar e ler arquivos em um servidor HTTP.  
@@ -115,7 +115,7 @@ BOOL AddRequestHeaders(
  `dwFlags`  
  Modifica a semântica dos cabeçalhos de novo. Pode ser um dos seguintes:  
   
-- `HTTP_ADDREQ_FLAG_COALESCE` Mescla os cabeçalhos de mesmo nome, usando o sinalizador para adicionar o primeiro cabeçalho encontrado para o cabeçalho subsequente. Por exemplo, "aceitar: texto / *" seguido por "aceitar: áudio /\*" resulta na formação de um único cabeçalho "aceitar: texto /\*, áudio /\*". É responsabilidade do aplicativo de chamada para garantir um esquema consistente com relação aos dados recebidos pelo solicitações enviadas com cabeçalhos separados ou agrupados.  
+- `HTTP_ADDREQ_FLAG_COALESCE` Mescla os cabeçalhos de mesmo nome, usando o sinalizador para adicionar o primeiro cabeçalho encontrado para o cabeçalho subsequente. Por exemplo, "aceitar: texto /\*" seguido por "aceitar: áudio /\*" resulta na formação de um único cabeçalho "aceitar: texto /\*, áudio /\*". É responsabilidade do aplicativo de chamada para garantir um esquema consistente com relação aos dados recebidos pelo solicitações enviadas com cabeçalhos separados ou agrupados.  
   
 - `HTTP_ADDREQ_FLAG_REPLACE` Executa uma remover e adicionar para substituir o cabeçalho atual. O nome do cabeçalho será usado para remover o cabeçalho atual e o valor total será usado para adicionar o novo cabeçalho. Se o valor de cabeçalho está vazio e o cabeçalho for encontrado, ele será removido. Se não estiver vazia, o valor do cabeçalho é substituído.  
   

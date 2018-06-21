@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6643a1c70b6a22126222d523de4426e1aebcf85b
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: ebde910e5573545c6b9b904f6db55e27f10492a3
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34283334"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271364"
 ---
 # <a name="styles-used-by-mfc"></a>Estilos usados pelo MFC  
   
@@ -321,7 +321,7 @@ Editar estilos [CEdit classe](../../mfc/reference/cedit-class.md) objetos. Espec
 |`ES_NOHIDESEL`|Normalmente, um controle de edição oculta a seleção quando o controle perde o foco de entrada e inverte a seleção quando o controle recebe o foco de entrada. Especificando `ES_NOHIDESEL` exclui essa ação padrão.|  
 |`ES_NUMBER`|Permite que somente sejam inseridos dígitos no controle de edição.|  
 |`ES_OEMCONVERT`|Texto inserido no controle de edição é convertido do conjunto de caracteres ANSI para o conjunto de caracteres OEM e depois em ANSI. Isso assegura a conversão de caracteres adequada quando o aplicativo chama o `AnsiToOem` função do Windows para converter uma cadeia de caracteres ANSI no controle de edição para caracteres OEM. Este estilo é mais útil para controles de edição que contêm nomes de arquivos.|  
-|`ES_PASSWORD`|Exibe todos os caracteres como um asterisco (**\***) quando eles são digitados no controle de edição. Um aplicativo pode usar o `SetPasswordChar` a função de membro para alterar o caractere que é exibido.|  
+|`ES_PASSWORD`|Exibe todos os caracteres como um asterisco (**\\\***) quando eles são digitados no controle de edição. Um aplicativo pode usar o `SetPasswordChar` a função de membro para alterar o caractere que é exibido.|  
 |`ES_READONLY`|Impede que o usuário inserir ou editar texto no controle de edição.|  
 |`ES_RIGHT`|Texto à direita em um controle de edição de linha única ou multilinha.|  
 |`ES_UPPERCASE`|Converte todos os caracteres para letras maiusculas quando eles são digitados no controle de edição.|  

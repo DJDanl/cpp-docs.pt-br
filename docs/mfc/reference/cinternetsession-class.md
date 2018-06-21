@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 832ae20ef5bcd1df4741f7e33be2758ab424ea5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0f885ad5ef8202e7826a8f53dc5df832eecc372
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374559"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271328"
 ---
 # <a name="cinternetsession-class"></a>Classe CInternetSession
 Cria e inicializa uma única ou várias sessões simultâneas de Internet e, se necessário, descreve sua conexão em um servidor proxy.  
@@ -498,10 +498,10 @@ CStdioFile* OpenURL(
   
 |Tipo de URL|Retorna|  
 |--------------|-------------|  
-|file://|**CStdioFile\***|  
-|http://|**CHttpFile\***|  
-|Gopher://|**CGopherFile\***|  
-|FTP: / /|**CInternetFile\***|  
+|file://|**CStdioFile\\\***|  
+|http://|**CHttpFile\\\***|  
+|Gopher://|**CGopherFile\\\***|  
+|FTP: / /|**CInternetFile\\\***|  
   
 ### <a name="remarks"></a>Comentários  
  O parâmetro `dwFlags` deve incluir **INTERNET_FLAG_TRANSFER_ASCII** ou **INTERNET_FLAG_TRANSFER_BINARY**, mas não ambos. Os sinalizadores restantes podem ser combinados com o bit a bit `OR` operador ( **&#124;**).  
