@@ -1,7 +1,7 @@
 ---
 title: MASM para x64 (ml64.exe) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42edd255b3f8730263bba9ff683ce16da6fc59b5
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: bb4f4a0ba996be34749350c0d99c1915752fe99e
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253796"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322242"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM para x64 (ml64.exe)
 
-O Visual Studio inclui 32 bits e 64 bits versões hospedadas do Microsoft Assembler (MASM) para o código de destino x64. Chamado ml64.exe, este é o assembler que aceita x64 linguagem assembler. As ferramentas de linha de comando (MASM) são instaladas quando você escolhe uma carga de trabalho C++ durante a instalação do Visual Studio. As ferramentas MASM não estão disponíveis como um download separado. Para obter instruções sobre como baixar e instalar uma cópia do Visual Studio, consulte [instale o Visual Studio](/visualstudio/install/install-visual-studio). Se você não quiser instalar o Visual Studio IDE completa, mas apenas deseja que as ferramentas de linha de comando, baixe o [Build Tools para Visual Studio de 2017](https://go.microsoft.com/fwlink/p/?linkid=840931).
+O Visual Studio inclui 32 bits e 64 bits versões hospedadas do Microsoft Assembler (MASM) para o código de destino x64. Chamado ml64.exe, este é o assembler que aceita x64 linguagem assembler. As ferramentas de linha de comando (MASM) são instaladas quando você escolhe uma carga de trabalho C++ durante a instalação do Visual Studio. As ferramentas MASM não estão disponíveis como um download separado. Para obter instruções sobre como baixar e instalar uma cópia do Visual Studio, consulte [instale o Visual Studio](/visualstudio/install/install-visual-studio). Se você não quiser instalar o Visual Studio IDE completa, mas apenas deseja que as ferramentas de linha de comando, baixe o [Build Tools para Visual Studio de 2017](https://go.microsoft.com/fwlink/p/?linkid=875721).
 
 Usar MASM para compilar código para x64 tem como alvo na linha de comando, você deve usar um prompt de comando do desenvolvedor para x64 destinos, que define o caminho necessário e outras variáveis de ambiente. Para obter informações sobre como iniciar um prompt de comando do desenvolvedor, consulte [código C/C++ compilar na linha de comando](../../build/building-on-the-command-line.md).
 

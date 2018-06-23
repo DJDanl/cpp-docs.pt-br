@@ -1,6 +1,6 @@
 ---
 title: -permissiva - (conformidade com os padrões) | Microsoft Docs
-ms.date: 11/11/2016
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90cfdcf20cf74244afe026a392759ac59616bbdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e1a9c407779b6bf441ea1375026af6ac04bb8c8
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379309"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322258"
 ---
 # <a name="permissive--standards-conformance"></a>/ permissivo-(conformidade com os padrões)
 
@@ -50,7 +50,7 @@ Extensões específicas do ambiente e áreas de idioma que o padrão permite at�
 
 O **/ permissivo-** opção usa o suporte de conformidade na versão atual do compilador para determinar quais as construções de linguagem não conforme. A opção não determina se o código está em conformidade com uma versão específica do C++ padrão. Para habilitar todo o suporte de compilador implementado para o padrão de rascunho mais recente, use o [/std:latest](../../build/reference/std-specify-language-standard-version.md) opção. Para restringir o suporte de compilador implementado atualmente C++ 17 padrão, use o [/std:c + + 17](../../build/reference/std-specify-language-standard-version.md) opção. Para restringir o suporte de compilador para atender melhor o padrão de 14 C++, use o [/std:c + + 14](../../build/reference/std-specify-language-standard-version.md) opção, que é o padrão.
 
-Não todos os C++ 11, C++ 14 ou C++ 17 em conformidade com padrões de código é suportado pelo compilador Visual C++ no Visual Studio de 2017. O **/ permissivo-** opção pode não detectar problemas sobre alguns aspectos de pesquisa de nome em duas fases, associação a uma referência não const para um temporário, tratando init cópia como init direto, permitindo que várias conversões definidas pelo usuário no a inicialização, ou tokens alternativos para os operadores lógicos e outras áreas de conformidade sem suporte. Para obter mais informações sobre problemas de conformidade no Visual C++, consulte [comportamento não padrão](../../cpp/nonstandard-behavior.md).
+Não todos os C++ 11, C++ 14 ou C++ 17 em conformidade com padrões de código é suportado pelo compilador Visual C++ no Visual Studio de 2017. Dependendo da versão do Visual Studio, o **/ permissivo-** opção pode não detectar problemas sobre alguns aspectos de pesquisa de nome em duas fases, associação a uma referência não const para um temporário, tratando init cópia como init direto, permitindo que várias conversões definidas pelo usuário na inicialização ou tokens alternativos para os operadores lógicos e outras áreas de conformidade sem suporte. Para obter mais informações sobre problemas de conformidade no Visual C++, consulte [comportamento não padrão](../../cpp/nonstandard-behavior.md). Para obter o máximo proveito do **/ permissivo-**, atualize o Visual Studio para a versão mais recente.
 
 ### <a name="how-to-fix-your-code"></a>Como corrigir seu código
 
@@ -202,11 +202,11 @@ class CFoo : public ICustom
 
 ```cpp
 // Fix for example 2
-// First, create the *.idl file. The vc140.idl generated file can be 
-// used to automatically obtain a *.idl file for the interfaces with 
-// annotation. Second, add a midl step to your build system to make 
-// sure that the C++ interface definitions are outputted. 
-// Last, adjust your existing code to use ATL directly as shown in 
+// First, create the *.idl file. The vc140.idl generated file can be
+// used to automatically obtain a *.idl file for the interfaces with
+// annotation. Second, add a midl step to your build system to make
+// sure that the C++ interface definitions are outputted.
+// Last, adjust your existing code to use ATL directly as shown in
 // the atl implementation section.
 
 -- IDL  FILE--
@@ -286,7 +286,7 @@ struct MyString
 
 extern bool cond;
 
-MyString s; 
+MyString s;
 // Using /std:c++14, /permissive- or /Zc:ternary behavior
 // is to prefer MyString("A") over (const char*)s
 // but under /std:c++17 this line causes error C2445:
@@ -309,23 +309,23 @@ void myassert(const char* text, const char* file, int line);
 Você também pode ver erros no modelo metaprogramação, onde os tipos de resultado do operador condicional podem alterar em **/Zc:ternary** e **/ permissivo-**. Uma maneira de resolver esse problema é usar [std::remove_reference](../../standard-library/remove-reference-class.md) no tipo resultante.
 
 ```cpp
-// Example 4: different result types 
+// Example 4: different result types
 extern bool cond;
 extern int count;
-char  a = 'A'; 
-const char  b = 'B'; 
-decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary 
-const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary 
+char  a = 'A';
+const char  b = 'B';
+decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary
+const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 ```
 
-#### <a name="two-phase-name-look-up-partial"></a>Pesquisar nome de duas fases (parcial)
+#### <a name="two-phase-name-look-up"></a>Pesquisar nome de duas fases
 
-Quando o **/ permissivo-** opção é definida no Visual Studio 2017 versão 15,3, o compilador analisa definições de modelo de função e de classe, identificando dependentes e independentes nomes usados em modelos conforme necessário para o nome de duas fases pesquisa. Nesta versão, a análise de dependência de nome só é executada. Nomes não dependentes que não sejam declarados no contexto de uma definição de modelo em particular, fazer com que uma mensagem de diagnóstico conforme exigido pelos padrões ISO C++. No entanto, a associação dos nomes de dependente não requerem o argumento dependentes pesquisar no contexto de definição não está pronto.
+Quando o **/ permissivo-** opção for definida, o compilador analisa definições de modelo de função e de classe, identificando dependentes e independentes nomes usados em modelos conforme necessário para pesquisa de nome em duas fases. No Visual Studio 2017 versão 15,3, análise de dependência de nome é executada. Nomes não dependentes que não sejam declarados no contexto de uma definição de modelo em particular, fazer com que uma mensagem de diagnóstico conforme exigido pelos padrões ISO C++. No Visual Studio 2017 versão 15,7, associação de nomes de dependente não requer o argumento dependentes pesquisar no contexto de definição também é feita.
 
 ```cpp
 // dependent base
 struct B {
-    void g();
+    void g() {}
 };
 
 template<typename T>
@@ -346,60 +346,106 @@ int main()
 }
 ```
 
+Se você deseja comportamento herdado para pesquisa em duas fases, mas caso contrário **/ permissivo-** comportamento, adicione o **/Zc:twoPhase-** opção.
+
 ### <a name="windows-header-issues"></a>Problemas de cabeçalho do Windows
 
 O **/ permissivo-** opção é muito estrita para versões do Windows Kits antes do SDK do Windows estão criadores de atualização (10.0.16299.0) ou a versão do Windows Driver Kit (WDK) 1709. É recomendável atualizar as versões mais recentes do Windows Kits para usar **/ permissivo-** em seu código de driver do Windows ou dispositivo.
 
-Alguns arquivos de cabeçalho do SDK do Windows estão criadores de atualização (10.0.16299.0) ou o Windows Driver Kit (WDK) 1709, ainda tiverem problemas que os tornam incompatível com o uso de **/ permissivo-**. Para solucionar esses problemas, recomendamos que você restringir o uso desses cabeçalhos para somente os arquivos de código fonte que exigem e remover o **/ permissivo-** opção quando você compila esses arquivos de código fonte específica. Os problemas a seguir são específicos para o SDK do Windows estão criadores de atualização (10.0.16299.0):
+Alguns arquivos de cabeçalho em abril o Windows SDK de atualização 2018 (10.0.17134.0), o SDK do Windows estão criadores de atualização (10.0.16299.0) ou o Windows Driver Kit (WDK) 1709, ainda tiverem problemas que os tornam incompatível com o uso de **/permissive-**. Para solucionar esses problemas, recomendamos que você restringir o uso desses cabeçalhos para somente os arquivos de código fonte que exigem e remover o **/ permissivo-** opção quando você compila esses arquivos de código fonte específica.
 
-#### <a name="issue-in-umqueryh"></a>Problema no um\Query.h
+Esses cabeçalhos de WinRT WRL liberados nas janelas de abril de 2018 atualização SDK (10.0.17134.0) não estão limpos com **/ permissivo-**. Para solucionar esses problemas, não use **/ permissivo-**, ou use **/ permissivo-** com **/Zc:twoPhase-** ao trabalhar com esses cabeçalhos:
 
-Ao usar o **/ permissivo-** opção de compilador, o `tagRESTRICTION` estrutura não compila devido ao membro case(RTOr) 'ou'.
+- Problemas no winrt/wrl/async.h
 
-```cpp
-struct tagRESTRICTION
-    {
-    ULONG rt;
-    ULONG weight;
-    /* [switch_is][switch_type] */ union _URes
-        {
-        /* [case()] */ NODERESTRICTION ar;
-        /* [case()] */ NODERESTRICTION or;  // error C2059: syntax error: '||'
-        /* [case()] */ NODERESTRICTION pxr;
-        /* [case()] */ VECTORRESTRICTION vr;
-        /* [case()] */ NOTRESTRICTION nr;
-        /* [case()] */ CONTENTRESTRICTION cr;
-        /* [case()] */ NATLANGUAGERESTRICTION nlr;
-        /* [case()] */ PROPERTYRESTRICTION pr;
-        /* [default] */  /* Empty union arm */
-        } res;
-    };
-```
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(483): error C3861: 'TraceDelegateAssigned': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(491): error C3861: 'CheckValidStateForDelegateCall': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(509): error C3861: 'TraceProgressNotificationStart': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(513): error C3861: 'TraceProgressNotificationComplete': identifier not found
+   ```
 
-Para resolver esse problema, compile arquivos que incluem Query.h sem o **/ permissivo-** opção.
+- Problema no winrt/wrl/implements.h
 
-#### <a name="issue-in-umcellularapioemh"></a>Problema no um\cellularapi_oem.h
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt\wrl\implements.h(2086): error C2039: 'SetStrongReference': is not a member of 'Microsoft::WRL::Details::WeakReferenceImpl'
+   ```
 
-Ao usar o **/ permissivo-** opção de compilador, a declaração de encaminhamento de `enum UICCDATASTOREACCESSMODE` faz com que um aviso:
+Esses cabeçalhos de modo de usuário liberados nas janelas de abril de 2018 atualização SDK (10.0.17134.0) não estão limpos com **/ permissivo-**. Para solucionar esses problemas, não use **/ permissivo-** ao trabalhar com esses cabeçalhos:
 
-```cpp
-typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
-```
+- Problemas no um/Tune.h
 
-A declaração de encaminhamento de enum sem escopo é uma extensão da Microsoft. Para resolver esse problema, compile arquivos que incluem cellularapi_oem.h sem o **/ permissivo-** opção ou use o [/wd](../../build/reference/compiler-option-warning-level.md) opção para aviso C4471 de silêncio.
+   ```Output
+   C:\ProgramFiles(x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(139): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(559): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): note: 'Release': function declaration must be available as none of the arguments depend on a template parameter
+   ```
 
-#### <a name="issue-in-umomscripth"></a>Problema no um\omscript.h
+- Problema no um/spddkhlp.h
 
-Em C + + 03, uma conversão de um literal de cadeia de caracteres BSTR (que é um typedef para ' wchar_t *') é substituído, mas permitido. No C++ 11, a conversão não é mais permitida.
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\spddkhlp.h(759): error C3861: 'pNode': identifier not found
+   ```
 
-```cpp
-virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
-    /* [in] */ __RPC__in BSTR propname,
-    /* [in] */ __RPC__in BSTR expression,
-    /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
-```
+- Problemas no um/refptrco.h
 
-Para resolver esse problema, compile arquivos que incluem omscript.h sem o **/ permissivo-** opção ou use **/Zc:strictStrings-** em vez disso.
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(179): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(342): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(395): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   ```
+
+Esses problemas são específicos aos cabeçalhos de modo de usuário do Windows estão criadores de atualização SDK (10.0.16299.0):
+
+- Problema no um/Query.h
+
+   Ao usar o **/ permissivo-** opção de compilador, o `tagRESTRICTION` estrutura não compila devido ao membro case(RTOr) 'ou'.
+
+   ```cpp
+   struct tagRESTRICTION
+   {
+       ULONG rt;
+       ULONG weight;
+       /* [switch_is][switch_type] */ union _URes
+       {
+           /* [case()] */ NODERESTRICTION ar;
+           /* [case()] */ NODERESTRICTION or;  // error C2059: syntax error: '||'
+           /* [case()] */ NODERESTRICTION pxr;
+           /* [case()] */ VECTORRESTRICTION vr;
+           /* [case()] */ NOTRESTRICTION nr;
+           /* [case()] */ CONTENTRESTRICTION cr;
+           /* [case()] */ NATLANGUAGERESTRICTION nlr;
+           /* [case()] */ PROPERTYRESTRICTION pr;
+           /* [default] */  /* Empty union arm */
+       } res;
+   };
+   ```
+
+   Para resolver esse problema, compile arquivos que incluem Query.h sem o **/ permissivo-** opção.
+
+- Problema no um/cellularapi_oem.h
+
+   Ao usar o **/ permissivo-** opção de compilador, a declaração de encaminhamento de `enum UICCDATASTOREACCESSMODE` faz com que um aviso:
+
+   ```cpp
+   typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
+   ```
+
+   A declaração de encaminhamento de enum sem escopo é uma extensão da Microsoft. Para resolver esse problema, compile arquivos que incluem cellularapi_oem.h sem o **/ permissivo-** opção ou use o [/wd](../../build/reference/compiler-option-warning-level.md) opção para aviso C4471 de silêncio.
+
+- Problema no um/omscript.h
+
+   Em C + + 03, uma conversão de um literal de cadeia de caracteres BSTR (que é um typedef para ' wchar_t *') é substituído, mas permitido. No C++ 11, a conversão não é mais permitida.
+
+   ```cpp
+   virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
+       /* [in] */ __RPC__in BSTR propname,
+       /* [in] */ __RPC__in BSTR expression,
+       /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
+   ```
+
+   Para resolver esse problema, compile arquivos que incluem omscript.h sem o **/ permissivo-** opção ou use **/Zc:strictStrings-** em vez disso.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
@@ -407,7 +453,7 @@ Na versão do Visual Studio de 2017 15,5 e versões posteriores, use este proced
 
 1. Abra seu projeto **páginas de propriedade** caixa de diálogo.
 
-1. Em **propriedades de configuração**, expanda o **C/C++** pasta e escolha o **idioma** página de propriedades.
+1. Selecione o **propriedades de configuração** > **C/C++** > **idioma** página de propriedades.
 
 1. Alterar o **modo de conformidade** valor da propriedade **Sim (/ permissivo-)**. Escolha **Okey** ou **aplicar** para salvar suas alterações.
 
@@ -425,5 +471,5 @@ Nas versões anteriores do Visual Studio 2017 versão 15,5, use este procediment
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do compilador](../../build/reference/compiler-options.md)   
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+- [Opções do Compilador](../../build/reference/compiler-options.md)
+- [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d311c730781aee70d4b77723ddec98a79407e42a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c1187d0fcfec45a21a358c8d20c4f3684f17feb3
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705560"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322388"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avisos do compilador são desativados por padrão
 
@@ -89,7 +89,7 @@ Os seguintes avisos estão desativados por padrão no Visual Studio 2015 e vers�
 |[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md) (nível 1)|'*operator1*': operador antes da vírgula não tem nenhum efeito; você pretendia usar '*operator2*'?|
 |[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) (nível 1)|expressão não tem efeito; expressão esperada com efeito colateral|
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) (nível 3)|'__assume' contém o efeito '*efeito*'|
-|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (nível 4)|Informativo: semântica catch(...) alterada desde o Visual C++ 7.1; exceções estruturadas (SEH) não são mais capturadas|
+|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (nível 4)|informativo: semântica catch(...) alterada desde o Visual C++ 7.1; exceções estruturadas (SEH) não são mais capturadas|
 |C4574 (nível 4)|'*identificador*'está definido como ' 0': você pretendia usar ' #if *identificador*'?|
 |C4577 (nível 1)|'noexcept' usado com nenhum especificado; o modo de manipulação de exceção não é garantia de terminação na exceção. Especifique /EHsc|
 |C4582 (nível 4)|'*tipo*': construtor não é chamado implicitamente|
@@ -153,12 +153,14 @@ Os seguintes avisos estão desativados por padrão no Visual Studio 2015 e vers�
 |[C5038](../error-messages/compiler-warnings/c5038.md) (nível 4)|membro de dados '*membro1*'serão inicializados após o membro de dados'*membro2*' <sup>15,3</sup>|
 |C5039 (nível 4)|'*função*': ponteiro ou referência para gerar potencialmente função passado para função de extern do C em - EHc. Um comportamento indefinido pode ocorrer se essa função lança uma exceção. <sup>15,5</sup>|
 |C5042 (nível 3)|'*função*': declarações de função no escopo de bloco não podem ser especificado 'inline' em C++ padrão, remova o especificador 'inline' <sup>15,5</sup>|
+|[C5045](../error-messages/compiler-warnings/c5045.md)|Compilador inserirá mitigação Spectre para carga de memória se o comutador /Qspectre especificado <sup>15,7</sup>|
 
-<sup>14,1</sup> esse aviso está disponível a partir do Visual Studio 2015 atualização 1.<br>
-<sup>14,3</sup> esse aviso está disponível no Visual Studio 2015 atualização 3.<br>
-<sup>15.3</sup> esse aviso está disponível no Visual Studio 2017 versão 15,3.<br>
-<sup>15,5</sup> esse aviso está disponível no Visual Studio 2017 versão 15,5.<br>
-<sup>Perm</sup> esse aviso é desativado, a menos que o [/ permissivo-](../build/reference/permissive-standards-conformance.md) opção de compilador está definida.
+<sup>14,1</sup> esse aviso está disponível a partir do Visual Studio 2015 atualização 1.  
+<sup>14,3</sup> esse aviso está disponível no Visual Studio 2015 atualização 3.  
+<sup>15.3</sup> esse aviso está disponível no Visual Studio 2017 versão 15,3.  
+<sup>15,5</sup> esse aviso está disponível no Visual Studio 2017 versão 15,5.  
+<sup>15,7</sup> esse aviso está disponível no Visual Studio 2017 versão 15,7.  
+<sup>Perm</sup> esse aviso é desativado, a menos que o [/ permissivo-](../build/reference/permissive-standards-conformance.md) opção de compilador está definida.  
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Avisos desativado por padrão em versões anteriores
 

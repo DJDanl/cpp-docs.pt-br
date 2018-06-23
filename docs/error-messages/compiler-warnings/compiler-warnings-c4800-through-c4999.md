@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06c4d65fe7b6ab2b0238c3a4e4cd081e2dc011b5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d5fb04d31451ac4c49a0a2c11a3699b8a670a6c4
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704744"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322326"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>C4800 de avisos do compilador por meio de C5999
 
@@ -250,3 +250,4 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 3) C5042|'*declaração*': declarações de função no escopo de bloco não podem ser especificado 'inline' em C++ padrão, remova o especificador 'inline'|
 |Aviso do compilador (nível 2) C5043|'*especificação*': especificação de exceção não corresponde à declaração anterior|
 |Aviso do compilador (nível 4) C5044|Um argumento para a opção de linha de comando *opção* aponta para um caminho '*caminho*' que não existe|
+|[C5045 de aviso do compilador](c5045.md)|Compilador inserirá mitigação Spectre para carga de memória se alternar /Qspectre especificado|

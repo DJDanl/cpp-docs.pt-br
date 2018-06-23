@@ -1,7 +1,7 @@
 ---
 title: Compilar o código C/C++ na linha de comando | Microsoft Docs
 ms.custom: conceptual
-ms.date: 03/29/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 241a7ae0d7f6c1adf269370301b39a3267440995
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379270"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322310"
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Compilar o código C/C++ na linha de comando
 
@@ -51,7 +51,7 @@ Os atalhos de prompt de comando estão instalados em uma pasta do Visual Studio 
 
 Início menu pasta e o atalho nomes reais variam de acordo com a versão do Visual Studio que você instalou e a instalação apelido se você definir um. Por exemplo, se você tiver o Visual Studio de 2017 instalado e você tiver fornecido ele uma instalação apelido de *visualização*, chamado de atalho do prompt de comando do desenvolvedor **Prompt de comando do desenvolvedor para VS 2017 (visualização)**, em uma pasta chamada **2017 do Visual Studio**.
 
-Se você tiver instalado o [Build Tools para Visual Studio de 2017](https://go.microsoft.com/fwlink/p/?linkid=840931) (que também inclui o conjunto de ferramentas de compilador do Visual Studio 2015 atualização 3), somente o nativo de arquitetura específicas ou cruzada das ferramentas de prompt de comando do desenvolvedor opções estão instaladas e não o geral **Prompt de comando do desenvolvedor** atalho.
+Se você tiver instalado o [Build Tools para Visual Studio de 2017](https://go.microsoft.com/fwlink/p/?linkid=875721) (que também inclui o conjunto de ferramentas de compilador do Visual Studio 2015 atualização 3), somente o nativo de arquitetura específicas ou cruzada das ferramentas de prompt de comando do desenvolvedor opções estão instaladas e não o geral **Prompt de comando do desenvolvedor** atalho.
 
 <a name="developer_command_prompt"></a>
 ### <a name="to-open-a-developer-command-prompt-window"></a>Para abrir uma janela de prompt de comando do desenvolvedor
@@ -93,10 +93,10 @@ Arquivos de comando adicionais estão disponíveis para configurar a arquitetura
 
 > **vcvarsall.bat** [*arquitetura*] [*platform_type*] [*winsdk_version*] [**-vcvars_ver =** _vcversion_]
 
-*Arquitetura*<br/>
+*arquitetura*<br/>
 Esse argumento opcional especifica a arquitetura de host e de destino a ser usado. Se *arquitetura* não for especificado, o ambiente de compilação padrão será usado. Há suporte para estes argumentos:
 
-|*Arquitetura*|Compilador|Arquitetura do computador host|Criar a arquitetura de saída (destino)|
+|*arquitetura*|Compilador|Arquitetura do computador host|Criar a arquitetura de saída (destino)|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|Nativa de 32 bits x86|x86, x64|x86|
 |**x86\_amd64** ou **x86\_x64**|cross x64 x86|x86, x64|X64|
