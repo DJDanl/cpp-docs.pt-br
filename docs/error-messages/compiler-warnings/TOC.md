@@ -558,3 +558,4 @@
 ## [Aviso do compilador (nível 1) C4997](compiler-warning-level-1-c4997.md)
 ## [Aviso do compilador (nível 1) C4999](compiler-warning-level-1-c4999.md)
 ## [Aviso do compilador C5038](c5038.md)
+## [Aviso do compilador C5045](c5045.md)
