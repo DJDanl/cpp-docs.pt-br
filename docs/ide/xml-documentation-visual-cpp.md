@@ -17,38 +17,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee19c51c04fa32ab3c2f1810bb963b22ec7e890
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: 9d763a62edc2f21d8a7669e409c164906c440f1d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705628"
 ---
 # <a name="xml-documentation-visual-c"></a>Documentação XML (Visual C++)
-No Visual C++, você pode adicionar comentários no código-fonte que será processado para um arquivo. XML. Esse arquivo pode ser a entrada para um processo que cria documentação para as classes no seu código.  
+No Visual C++, você pode adicionar comentários ao código-fonte que será processado em um arquivo .xml. Em seguida, esse arquivo pode ser a entrada para um processo que cria a documentação para as classes no código.  
   
- Em um arquivo de código do Visual C++, comentários de documentação XML devem estar localizados antes de uma definição de método ou tipo. Os comentários podem ser usados para popular a dica de dados do Intellisense QuickInfo nos seguintes cenários:  
+ Em um arquivo de código do Visual C++, os comentários da documentação XML precisam estar localizados diretamente antes de uma definição de método ou de tipo. Os comentários podem ser usados para popular a dica de dados QuickInfo do IntelliSense nos seguintes cenários:  
   
-1.  Quando o código é compilado como um componente de tempo de execução do Windows com um arquivo. winmd relacionado  
+1.  quando o código é compilado como um componente do Tempo de Execução do Windows com um arquivo .winmd complementar  
   
-2.  Quando o código-fonte está incluído no projeto atual  
+2.  quando o código-fonte é incluído no projeto atual  
   
-3.  em uma biblioteca cujo declarações de tipo e implementações está localizada no mesmo arquivo de cabeçalho  
+3.  em uma biblioteca cujas declarações de tipo e implementações estão localizadas no mesmo arquivo de cabeçalho  
   
 > [!NOTE]
->  Na versão atual, os comentários de código não são processados em modelos ou qualquer coisa que contém um tipo de modelo (por exemplo, uma função levando a um parâmetro como um modelo). Adicionar esses comentários resultará em um comportamento indefinido.  
+>  Na versão atual, os comentários sobre código não são processados em modelos ou em qualquer item que contenha um tipo de modelo (por exemplo, uma função que usa um parâmetro como modelo). A adição desses comentários resultará em um comportamento indefinido.  
   
- Para obter detalhes sobre como criar um arquivo. XML com comentários de documentação, consulte os tópicos a seguir.  
+ Para obter detalhes sobre como criar um arquivo .xml com comentários da documentação, confira os tópicos a seguir.  
   
 |Para obter informações sobre|Consulte|  
 |---------------------------|---------|  
-|As opções do compilador para usar|[/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
-|Você pode usar para fornecer mais as marcas usadas funcionalidade na documentação|[Marcas recomendadas para comentários de documentação](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)|  
-|As cadeias de caracteres de ID que o compilador gera para identificar as construções em seu código|[Processando o arquivo. XML](../ide/dot-xml-file-processing.md)|  
-|Como delimitar marcações de documentação|[Delimitadores de marcas de documentação para o Visual C++](../ide/delimiters-for-visual-cpp-documentation-tags.md)|  
-|Gerando um arquivo. XML de um ou mais arquivos. XDC.|[Referência XDCMake](../ide/xdcmake-reference.md)|  
-|Links para informações sobre XML como ele se relaciona com áreas de recursos do Visual Studio|[XML no Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)|  
+|As opções do compilador a serem usadas|[/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
+|As marcas que podem ser usadas para fornecer as funcionalidade geralmente usadas na documentação|[Marcas recomendadas para comentários de documentação](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)|  
+|As cadeias de identificação produzidas pelo compilador para identificar os constructos no código|[Processando o arquivo .xml](../ide/dot-xml-file-processing.md)|  
+|Como delimitar as marcas da documentação|[Delimitadores de marcas de documentação para o Visual C++](../ide/delimiters-for-visual-cpp-documentation-tags.md)|  
+|Gerando um arquivo .xml com base em um ou mais arquivos .xdc.|[Referência XDCMake](../ide/xdcmake-reference.md)|  
+|Links para informações sobre XML relacionado às áreas de recursos do Visual Studio|[XML no Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)|  
   
- Se você precisa colocar os caracteres especiais de XML no texto de um comentário de documentação, você deve usar entidades XML ou uma seção CDATA.  
+ Caso precise colocar caracteres especiais XML no texto de um comentário da documentação, use entidades XML ou uma seção CDATA.  
   
 ## <a name="see-also"></a>Consulte também  
  [Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
