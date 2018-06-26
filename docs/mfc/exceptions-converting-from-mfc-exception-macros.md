@@ -24,17 +24,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8953cc28e35974f7a2a63754533ffd851ca62a3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a386de558730e12bb8cf40da250c1d04dd4ff37a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350742"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931112"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>Exceções: convertendo a partir de macros de exceção MFC
 Este é um tópico avançado.  
   
- Este artigo explica como converter o código existente gravado com macros do Microsoft Foundation Class — **tente**, **CATCH**, **lançar**, e assim por diante, para usar a manipulação de exceção de C++ palavras-chave **tente**, **catch**, e `throw`. Os tópicos incluem:  
+ Este artigo explica como converter o código existente gravado com macros do Microsoft Foundation Class — **tente**, **CATCH**, **lançar**, e assim por diante, para usar a manipulação de exceção de C++ palavras-chave **tente**, **catch**, e **gerar**. Os tópicos incluem:  
   
 -   [Vantagens de conversão](#_core_advantages_of_converting)  
   
@@ -47,7 +47,7 @@ Este é um tópico avançado.
   
 -   O código que usa as palavras-chave de tratamento de exceções C++ compila um pouco menores. EXE ou. DLL.  
   
--   As palavras-chave de tratamento de exceções C++ são mais versáteis: eles possam lidar com exceções de qualquer tipo de dados que podem ser copiados (`int`, **float**, `char`e assim por diante), enquanto as macros tratam exceções somente da classe `CException` e classes derivadas dele.  
+-   As palavras-chave de tratamento de exceções C++ são mais versáteis: eles possam lidar com exceções de qualquer tipo de dados que podem ser copiados (**int**, **float**, **char**, e assim por diante), enquanto o macros de lidar com exceções somente da classe `CException` e classes derivadas dele.  
   
  A principal diferença entre as macros e as palavras-chave é que o código usando as macros "automaticamente" exclui uma exceção capturada quando a exceção sai do escopo. Código usando as palavras-chave não, você deve excluir explicitamente uma exceção capturada. Para obter mais informações, consulte o artigo [exceções: exceções de detectar e excluindo](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
@@ -69,19 +69,19 @@ Este é um tópico avançado.
   
 2.  Delimitação de blocos catch:  
   
-     Com as macros, o **CATCH** macro (com os argumentos) começa o primeiro bloco catch; o `AND_CATCH` macro começa blocos catch subsequentes e o `END_CATCH` macro encerra a sequência de blocos catch.  
+     Com as macros, o **CATCH** macro (com os argumentos) começa o primeiro bloco catch; o **AND_CATCH** macro começa blocos catch subsequentes e o **END_CATCH** macro encerra a sequência de blocos catch.  
   
-     Com as palavras-chave, o **catch** palavra-chave (com sua declaração de exceção) começa cada bloco catch. Não há nenhum equivalente para o `END_CATCH` macro; catch bloquear termina com seu colchete de fechamento.  
+     Com as palavras-chave, o **catch** palavra-chave (com sua declaração de exceção) começa cada bloco catch. Não há nenhum equivalente para o **END_CATCH** macro; catch bloquear termina com seu colchete de fechamento.  
   
 3.  A expressão throw:  
   
-     Usam as macros `THROW_LAST` para gerar novamente a exceção atual. O `throw` palavra-chave sem argumento tem o mesmo efeito.  
+     Usam as macros **THROW_LAST** para gerar novamente a exceção atual. O **gerar** palavra-chave sem argumento tem o mesmo efeito.  
   
 ##  <a name="_core_doing_the_conversion"></a> A conversão  
   
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>Para converter o código usando macros para usar as palavras-chave de tratamento de exceções C++  
   
-1.  Localizar todas as ocorrências de macros MFC **tente**, **CATCH**, `AND_CATCH`, `END_CATCH`, **gerar**, e `THROW_LAST`.  
+1.  Localizar todas as ocorrências de macros MFC **tente**, **CATCH**, **AND_CATCH**, **END_CATCH**, **gerar**, e **THROW_LAST**.  
   
 2.  Substituir ou excluir todas as ocorrências de macros a seguir:  
   
@@ -89,13 +89,13 @@ Este é um tópico avançado.
   
      **CATCH** (substituí-lo por **catch**)  
   
-     `AND_CATCH` (Substitua-o por **catch**)  
+     **AND_CATCH** (substituí-lo por **catch**)  
   
-     `END_CATCH` (Excluir)  
+     **END_CATCH** (excluir)  
   
-     **LANÇAR** (substituí-lo por `throw`)  
+     **LANÇAR** (substituí-lo por **gerar**)  
   
-     `THROW_LAST` (Substitua-o por `throw`)  
+     **THROW_LAST** (substituí-lo por **gerar**)  
   
 3.  Modifique os argumentos de macro para que eles fazem declarações de exceção válido.  
   

@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b1b5b0a49fdb59417be04864c9d1ef5341f849
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4f36a634e4e5e6d4ee6c2618d0d43313c7c8094
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379236"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931730"
 ---
 # <a name="rubber-banding-and-trackers"></a>Elásticos e controladores
 Outro recurso fornecido com controladores é a seleção de "elástica", que permite que um usuário selecione vários itens OLE arrastando um retângulo de dimensionamento em redor dos itens a ser selecionado. Quando o usuário libera o botão esquerdo do mouse, itens dentro da região selecionada pelo usuário são selecionados e podem ser manipulados pelo usuário. Por exemplo, o usuário pode arrastar a seleção em outro aplicativo de contêiner.  
   
- Implementar esse recurso requer um código adicional no seu aplicativo `WM_LBUTTONDOWN` função do manipulador.  
+ Implementar esse recurso requer um código adicional na função de manipulador WM_LBUTTONDOWN do seu aplicativo.  
   
  O exemplo de código a seguir implementa a seleção elástica e recursos adicionais.  
   

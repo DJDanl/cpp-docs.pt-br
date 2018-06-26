@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8024acc4abbb02b14ed968df83779d34bd4a7271
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2551709652df0e0c65b1b0b6b5085550044e9966
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351644"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928991"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Como converter uma faixa de opções MFC existente em um recurso da faixa de opções
 Recursos de faixa de opções são mais fáceis de visualizar, modificar e manter que faixas de opções codificadas manualmente. Este tópico descreve como converter uma faixa de opções manualmente codificada em um projeto MFC em um recurso de faixa de opções.  
@@ -29,7 +29,7 @@ Recursos de faixa de opções são mais fáceis de visualizar, modificar e mante
   
 ### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>Para converter uma faixa de opções do MFC para um recurso de faixa de opções  
   
-1.  No Visual Studio, em um projeto MFC existente, abra o arquivo de origem em que o objeto de CMFCRibbonBar é inicializado. Normalmente, o arquivo é mainfrm.cpp. Adicione o seguinte código após o código de inicialização para a faixa de opções.  
+1.  No Visual Studio, em um projeto MFC existente, abra o arquivo de origem onde o `CMFCRibbonBar` objeto é inicializado. Normalmente, o arquivo é mainfrm.cpp. Adicione o seguinte código após o código de inicialização para a faixa de opções.  
   
  ```  
     m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");

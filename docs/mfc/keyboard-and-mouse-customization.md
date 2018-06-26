@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b073ff2a9565c9106111299ba5b1b9d5a47351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fda670198dd9bd03a6d944ce4db70542926bf41
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351657"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931574"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Personalização de teclado e mouse
 MFC permite que o usuário do seu aplicativo para personalizar como ele trata a entrada do mouse e teclado. O usuário pode personalizar a entrada do teclado, atribuindo atalhos de teclado para comandos. O usuário também pode personalizar a entrada do mouse, selecionando o comando que deve ser executado quando o usuário clica duas vezes dentro do windows específico do aplicativo. Este tópico explica como personalizar a entrada para seu aplicativo.  
@@ -61,7 +61,7 @@ Guia de personalização de mouse
   
  Depois que o aplicativo inicia o Gerenciador de mouse, adiciona a estrutura de **Mouse** guia para o **personalizar** caixa de diálogo. Se você não adicionar nenhum modo de exibição, acessando a guia fará com que uma exceção sem tratamento. Depois de criar uma lista de modos de exibição, o **Mouse** guia está disponível para o usuário.  
   
- Se você adicionar um novo modo de exibição para o Gerenciador de mouse, você atribuir uma ID exclusiva. Se você deseja oferecer suporte a personalização de mouse para uma janela, você deve processar o `WM_LBUTTONDBLCLICK` mensagem e chame o [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) função. Quando você chamar essa função, um dos parâmetros é a ID para essa janela. É responsabilidade do programador para controlar os números de ID e os objetos associados a eles.  
+ Se você adicionar um novo modo de exibição para o Gerenciador de mouse, você atribuir uma ID exclusiva. Se você deseja oferecer suporte a personalização de mouse para uma janela, você deve processar a mensagem WM_LBUTTONDBLCLICK e a chamada a [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) função. Quando você chamar essa função, um dos parâmetros é a ID para essa janela. É responsabilidade do programador para controlar os números de ID e os objetos associados a eles.  
   
 ## <a name="security-concerns"></a>Problemas de segurança  
  Conforme descrito em [ferramentas definidas pelo usuário](../mfc/user-defined-tools.md), o usuário pode associar uma ID de ferramenta definida pelo usuário com o evento de clique duplo. Quando o usuário clica duas vezes em um modo de exibição, o aplicativo procura por uma ferramenta de usuário que corresponde a ID associada. Se o aplicativo encontra uma ferramenta correspondente, ele executa a ferramenta. Se o aplicativo não é possível localizar uma ferramenta correspondente, ele envia uma mensagem WM_COMMAND com a ID para o modo de exibição que foi clicado duas vezes.  

@@ -22,17 +22,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edcdcbad2b7b3e70988579786c1c8cf28f734a48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58ddef11e56da760bbecaa47f03dfa6c57dfa3ed
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344929"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929475"
 ---
 # <a name="managing-mdi-child-windows"></a>Gerenciando janelas filhos MDI
-Janelas de quadro principal MDI (uma por aplicativo) contêm uma janela filho especial chamada de **MDICLIENT** janela. O **MDICLIENT** janela gerencia a área cliente da janela do quadro principal, e tem janelas filho: as janelas de documentos, derivadas de `CMDIChildWnd`. Como as janelas de documentos são janelas com moldura próprios (windows de filho MDI), eles também podem ter seus próprios filhos. Em todos esses casos, a janela pai gerencia suas janelas filho e encaminha alguns comandos para eles.  
+Janelas de quadro principal MDI (uma por aplicativo) contém uma janela filho especial denominada janela MDICLIENT. A janela MDICLIENT gerencia a área cliente da janela do quadro principal, e tem janelas filho: as janelas de documentos, derivadas de `CMDIChildWnd`. Como as janelas de documentos são janelas com moldura próprios (windows de filho MDI), eles também podem ter seus próprios filhos. Em todos esses casos, a janela pai gerencia suas janelas filho e encaminha alguns comandos para eles.  
   
- Em uma janela de quadro MDI, a janela do quadro gerencia o **MDICLIENT** janela, reposicione em conjunto com barras de controle. O **MDICLIENT** janela, por sua vez, gerencia todas as janelas de quadro filho MDI. A figura a seguir mostra a relação entre uma janela de quadro MDI, seu **MDICLIENT** janela e janelas de quadro de documento filho.  
+ Em uma janela de quadro MDI, a janela do quadro gerencia janela MDICLIENT, reposicione em conjunto com barras de controle. Janela MDICLIENT, por sua vez, gerencia todas as janelas de quadro filho MDI. A figura a seguir mostra a relação entre uma janela de quadro MDI, sua janela MDICLIENT e janelas de quadro de documento filho.  
   
  ![Janelas filho em uma janela de quadro MDI](../mfc/media/vc37gb1.gif "vc37gb1")  
 Filhos e janelas de quadro MDI  

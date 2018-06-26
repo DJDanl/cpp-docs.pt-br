@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 332f84346e6445fdf0550c3ddb142d9582722f0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b99d8fb82b014fc2221f1ec1c0e6ad08ee75b4c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344198"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930281"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativas à arquitetura de documento/exibição
 Aplicativos MFC normalmente usam a arquitetura de documento/exibição para gerenciar informações, formatos de arquivo e a representação visual dos dados para os usuários. Para a maioria dos aplicativos de área de trabalho, a arquitetura de documento/exibição é uma arquitetura de aplicativos apropriado e eficiente. Essa arquitetura separa os dados da exibição e, na maioria dos casos, simplifica o seu aplicativo e reduz o código redundante.  
@@ -41,11 +41,11 @@ Aplicativos MFC normalmente usam a arquitetura de documento/exibição para gere
   
  Os assistentes do Visual C++, bem como os editores de origem e a caixa de diálogo, trabalhar com o aplicativo gerado como faria com qualquer outro aplicativo gerados pelo assistente. O aplicativo pode dar suporte a barras de ferramentas, barras de rolagem e uma barra de status e tem um **sobre** caixa. Seu aplicativo não registrará os modelos de documento, e ele não conterá uma classe de documento.  
   
- Observe que o aplicativo gerado tem uma classe de exibição, **CChildView**, derivada de `CWnd`. MFC cria e coloca uma instância da classe de exibição dentro de janelas com moldura criadas pelo seu aplicativo. MFC ainda impõe usando uma janela de exibição, pois isso simplifica o posicionamento e gerenciamento de conteúdo do aplicativo. Você pode adicionar código de pintura para o `OnPaint` membro dessa classe. Seu código deve adicionar barras de rolagem no modo de exibição em vez de quadro.  
+ Observe que o aplicativo gerado tem uma classe de exibição, `CChildView`, derivada de `CWnd`. MFC cria e coloca uma instância da classe de exibição dentro de janelas com moldura criadas pelo seu aplicativo. MFC ainda impõe usando uma janela de exibição, pois isso simplifica o posicionamento e gerenciamento de conteúdo do aplicativo. Você pode adicionar código de pintura para o `OnPaint` membro dessa classe. Seu código deve adicionar barras de rolagem no modo de exibição em vez de quadro.  
   
  Como a arquitetura de documento/exibição fornecida pelo MFC é responsável por implementar muitos dos recursos básicos de um aplicativo, sua ausência em seu projeto significa que você é responsável por implementar vários recursos importantes do seu aplicativo:  
   
--   Conforme fornecido pelo Assistente de aplicativo MFC, o menu de seu aplicativo contém apenas `New` e `Exit` comandos no **arquivo** menu. (O `New` comando só tem suporte para aplicativos MDI, suportam de não aplicativos SDI sem a exibição de documentos.) O recurso de menu gerado não dará suporte a uma lista MRU (usado mais recentemente).  
+-   Conforme fornecido pelo Assistente de aplicativo MFC, o menu de seu aplicativo contém apenas **novo** e **Exit** comandos no **arquivo** menu. (O **novo** comando só tem suporte para aplicativos MDI, suportam de não aplicativos SDI sem a exibição de documentos.) O recurso de menu gerado não dará suporte a uma lista MRU (usado mais recentemente).  
   
 -   Você deve adicionar funções do manipulador e implementações para os comandos que seu aplicativo dará suporte, incluindo **abrir** e **salvar** no **arquivo** menu. MFC normalmente fornece código para oferecer suporte a esses recursos, mas esse suporte está estreitamente ligado à arquitetura de documento/exibição.  
   
@@ -53,9 +53,9 @@ Aplicativos MFC normalmente usam a arquitetura de documento/exibição para gere
   
  É altamente recomendável que você use o Assistente de aplicativo MFC para criar aplicativos sem a arquitetura de documento/exibição, porque o assistente garante uma arquitetura correta do MFC. No entanto, se você deve evitar usar o assistente, aqui estão várias abordagens para ignorar a arquitetura de documento/exibição no seu código:  
   
--   Tratar o documento como um sufixo não utilizado e implementar o código de gerenciamento de dados da classe de exibição, conforme sugerido acima. Sobrecarga para o documento é relativamente baixa. Um único [CDocument](../mfc/reference/cdocument-class.md) objeto incorre em uma pequena quantidade de sobrecarga por si só, além de pequena sobrecarga de **CDocument**da base de classes, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) e [ CObject](../mfc/reference/cobject-class.md). Ambas as classes de segunda são pequenas.  
+-   Tratar o documento como um sufixo não utilizado e implementar o código de gerenciamento de dados da classe de exibição, conforme sugerido acima. Sobrecarga para o documento é relativamente baixa. Um único [CDocument](../mfc/reference/cdocument-class.md) objeto incorre em uma pequena quantidade de sobrecarga por si só, além de pequena sobrecarga de `CDocument`da base de classes, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) e [CObject](../mfc/reference/cobject-class.md). Ambas as classes de segunda são pequenas.  
   
-     Declarado em **CDocument**:  
+     Declarado em `CDocument`:  
   
     -   Dois `CString` objetos.  
   

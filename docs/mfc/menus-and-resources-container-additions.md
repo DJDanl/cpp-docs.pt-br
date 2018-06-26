@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c71e8a79652a86ba412ef829ac1151256d1bf65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 437b80a0766a07b181a60743e79bdbaf32347de4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350647"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930536"
 ---
 # <a name="menus-and-resources-container-additions"></a>Menus e recursos: adições de contêiner
 Este artigo explica as alterações que precisam ser feitas para os menus e outros recursos em um aplicativo de contêiner de edição visual.  
@@ -67,27 +67,27 @@ Este artigo explica as alterações que precisam ser feitas para os menus e outr
   
 |ID|Chave|Tipo|  
 |--------|---------|----------|  
-|**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|  
   
- A segunda alteração é criar uma nova tabela de teclas aceleradoras correspondente para o novo recurso de menu criado para ativação no local. Esta tabela tem entradas para os menus de arquivo e janela além de **VK_ESCAPE** entrada acima. O exemplo a seguir é a tabela de teclas aceleradoras criada para a ativação no local no exemplo do MFC [CONTÊINER](../visual-cpp-samples.md):  
+ A segunda alteração é criar uma nova tabela de teclas aceleradoras correspondente para o novo recurso de menu criado para ativação no local. Esta tabela tem entradas para os menus de arquivo e janela além da entrada VK_ESCAPE acima. O exemplo a seguir é a tabela de teclas aceleradoras criada para a ativação no local no exemplo do MFC [CONTÊINER](../visual-cpp-samples.md):  
   
 |ID|Chave|Tipo|  
 |--------|---------|----------|  
-|`ID_FILE_NEW`|CTRL+N|**VIRTKEY**|  
-|`ID_FILE_OPEN`|CTRL+O|**VIRTKEY**|  
-|**ID_FILE_SAVE**|CTRL+S|**VIRTKEY**|  
-|**ID_FILE_PRINT**|CTRL + P|**VIRTKEY**|  
-|**ID_NEXT_PANE**|VK_F6|**VIRTKEY**|  
-|**ID_PREV_PANE**|SHIFT + VK_F6|**VIRTKEY**|  
-|**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
+|ID_FILE_NEW|CTRL+N|**VIRTKEY**|  
+|ID_FILE_OPEN|CTRL+O|**VIRTKEY**|  
+|ID_FILE_SAVE|CTRL+S|**VIRTKEY**|  
+|ID_FILE_PRINT|CTRL + P|**VIRTKEY**|  
+|ID_NEXT_PANE|VK_F6|**VIRTKEY**|  
+|ID_PREV_PANE|SHIFT + VK_F6|**VIRTKEY**|  
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|  
   
 ##  <a name="_core_string_table_additions_for_container_applications"></a> Adições de tabela de cadeia de caracteres para aplicativos de contêiner  
  A maioria das alterações às tabelas de cadeia de caracteres para aplicativos de contêiner corresponde aos itens de menu adicionais mencionados [adições de Menu do contêiner](#_core_container_menu_additions). Eles fornecem o texto exibido na barra de status quando cada item de menu é exibido. Por exemplo, aqui estão as entradas da tabela de cadeia de caracteres que gera o Assistente de aplicativo:  
   
 |ID|Cadeia de Caracteres|  
 |--------|------------|  
-|**IDP_OLE_INIT_FAILED**|Falha na inicialização de OLE. Certifique-se de que as bibliotecas OLE são da versão correta.|  
-|**IDP_FAILED_TO_CREATE**|Falha ao criar o objeto. Certifique-se de que o objeto foi digitado no registro do sistema.|  
+|IDP_OLE_INIT_FAILED|Falha na inicialização de OLE. Certifique-se de que as bibliotecas OLE são da versão correta.|  
+|IDP_FAILED_TO_CREATE|Falha ao criar o objeto. Certifique-se de que o objeto foi digitado no registro do sistema.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Menus e recursos (OLE)](../mfc/menus-and-resources-ole.md)   

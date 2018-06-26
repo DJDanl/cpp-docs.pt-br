@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d51589d9261d497c4c1f9185bd90b889e46eb34
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381164"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930684"
 ---
 # <a name="registration"></a>Registro
 Quando um usuário quiser inserir um item OLE em um aplicativo, o OLE apresenta uma lista de tipos de objeto para escolher. OLE obtém essa lista do banco de dados de registro do sistema, que contém as informações fornecidas por todos os aplicativos de servidor. Quando um servidor registrado, as entradas que ele coloca o banco de dados do sistema registration (registro) descrevem cada tipo de objeto que fornece, extensões de arquivo e o caminho para si mesmo, entre outras informações.  
@@ -59,7 +59,7 @@ Quando um usuário quiser inserir um item OLE em um aplicativo, o OLE apresenta 
   
  Quando o aplicativo de servidor é iniciado, certifique-se de que ele pode realizar o registro da instância. Registro de instância informa a DLLs do sistema OLE que o servidor está ativo e pronto para receber solicitações de contêineres. Ele não adicione uma entrada para o banco de dados de registro. Executar o registro de instância do servidor chamando o `ConnectTemplate` função de membro definida pelo `COleTemplateServer`. Isso conecta o `CDocTemplate` o objeto para o `COleTemplateServer` objeto.  
   
- O `ConnectTemplate` função usa três parâmetros: o servidor **CLSID**, um ponteiro para o `CDocTemplate` objeto e um sinalizador que indica se o servidor oferece suporte a várias instâncias. Um miniserver deve ser capaz de dar suporte a várias instâncias, ou seja, deve ser possível que várias instâncias do servidor a ser executadas simultaneamente, uma para cada contêiner. Consequentemente, passar **TRUE** para esse sinalizador ao iniciar um miniserver.  
+ O `ConnectTemplate` função usa três parâmetros: o servidor *CLSID*, um ponteiro para o `CDocTemplate` objeto e um sinalizador que indica se o servidor oferece suporte a várias instâncias. Um miniserver deve ser capaz de dar suporte a várias instâncias, ou seja, deve ser possível que várias instâncias do servidor a ser executadas simultaneamente, uma para cada contêiner. Consequentemente, passar **TRUE** para esse sinalizador ao iniciar um miniserver.  
   
  Se você estiver escrevendo um miniserver, por definição, que ele sempre será iniciado por um contêiner. Você ainda deve analisar a linha de comando para verificar se há a opção "/ incorporação". A ausência dessa opção na linha de comando significa que o usuário tentou iniciar o miniserver como um aplicativo autônomo. Se isso ocorrer, registrar o servidor com o banco de dados de registro do sistema e, em seguida, exibir uma caixa de mensagem informando ao usuário para iniciar o miniserver de um aplicativo de contêiner.  
   

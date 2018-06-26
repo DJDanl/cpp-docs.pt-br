@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2073e432dd0d0792e358a3f159892aea405197c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33068a96d8d0ca0a228012385da6437c455468e5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346611"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928535"
 ---
 # <a name="document-classes"></a>Classes de documento
 Objetos de classe de documento, criados por objetos de modelo de documento, gerenciam os dados do aplicativo. Você irá derivar uma classe para seus documentos de uma dessas classes.  
@@ -29,7 +29,7 @@ Objetos de classe de documento, criados por objetos de modelo de documento, gere
  Objetos de classe de documento interagirem com objetos de exibição. Exibir objetos representam a área cliente de uma janela, exibem dados de um documento e permitir que os usuários interajam com ele. Documentos e exibições são criadas por um objeto de modelo de documento.  
   
  [CDocument](../mfc/reference/cdocument-class.md)  
- A classe base para documentos específicos do aplicativo. Derive a classe de documento ou classes de **CDocument**.  
+ A classe base para documentos específicos do aplicativo. Derive a classe de documento ou classes de `CDocument`.  
   
  [COleDocument](../mfc/reference/coledocument-class.md)  
  Usado para a implementação do documento composto, bem como suporte básicos do contêiner. Funciona como um contêiner para classes derivadas de [CDocItem](../mfc/reference/cdocitem-class.md). Essa classe pode ser usada como a classe base para o contêiner de documentos e é a classe base para `COleServerDoc`.  

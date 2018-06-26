@@ -19,21 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c057657605296b3ba65128f26b25aa526f45b211
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e77119ac5b662165fd965047ae60fc2d5818cc1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345606"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928974"
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>Arrastar e soltar: implementando uma origem para soltar
 Este artigo explica como obter o seu aplicativo para fornecer dados para uma operação de arrastar e soltar.  
   
- A implementação básica de uma origem para soltar é relativamente simple. A primeira etapa é determinar quais eventos iniciar uma operação de arrastar. Recomendado diretrizes de interface de usuário definem o início de uma operação de arrastar como a seleção de dados e um `WM_LBUTTONDOWN` eventos que ocorrem em um ponto de dados selecionados. Os exemplos de OLE do MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md) siga estas diretrizes.  
+ A implementação básica de uma origem para soltar é relativamente simple. A primeira etapa é determinar quais eventos iniciar uma operação de arrastar. Recomendado diretrizes de interface de usuário definem o início de uma operação de arrastar como a seleção de dados e um **WM_LBUTTONDOWN** eventos que ocorrem em um ponto de dados selecionados. Os exemplos de OLE do MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md) siga estas diretrizes.  
   
  Se seu aplicativo é um contêiner e os dados selecionados são vinculado ou um objeto do tipo `COleClientItem`, chame seu `DoDragDrop` função de membro. Caso contrário, construir um `COleDataSource` do objeto, inicializá-lo com a seleção e chamar o objeto de fonte de dados `DoDragDrop` função de membro. Se seu aplicativo for um servidor, use `COleServerItem::DoDragDrop`. Para obter informações sobre como personalizar o comportamento padrão de arrastar e soltar, consulte o artigo [arrastar e soltar: Personalizando](../mfc/drag-and-drop-customizing.md).  
   
- Se `DoDragDrop` retorna `DROPEFFECT_MOVE`, exclua os dados de origem do documento de origem imediatamente. Nenhum outro valor de retorno de `DoDragDrop` tem qualquer efeito sobre uma origem para soltar.  
+ Se `DoDragDrop` retorna **DROPEFFECT_MOVE**, exclua os dados de origem do documento de origem imediatamente. Nenhum outro valor de retorno de `DoDragDrop` tem qualquer efeito sobre uma origem para soltar.  
   
  Para obter mais informações, consulte:  
   

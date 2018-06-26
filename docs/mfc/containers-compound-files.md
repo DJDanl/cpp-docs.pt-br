@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8983fd8cb51a9f305ef4b0fad4d546fc8091f5a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8bee847d1121a6d5da1679c29a9107c8a447ab1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348339"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930219"
 ---
 # <a name="containers-compound-files"></a>Contêineres: arquivos compostos
 Este artigo explica os componentes e a implementação de arquivos compostos e as vantagens e desvantagens do uso de arquivos compostos em seus aplicativos de OLE.  
@@ -46,7 +46,7 @@ Este artigo explica os componentes e a implementação de arquivos compostos e a
   
 -   Objetos de armazenamento, como pastas, podem conter outros objetos de armazenamento e o fluxo.  
   
--   **LockBytes** representar a interface entre os objetos de armazenamento e o hardware físico. Elas determinam como os bytes reais são gravados para qualquer dispositivo de armazenamento de **LockBytes** acessa o objeto, como um disco rígido ou uma área da memória global. Para obter mais informações sobre **LockBytes** objetos e o `ILockBytes` interface, consulte o *referência do programador de OLE*.  
+-   `LockBytes` os objetos representam a interface entre os objetos de armazenamento e o hardware físico. Elas determinam como os bytes reais são gravados para qualquer dispositivo de armazenamento do `LockBytes` acessa o objeto, como um disco rígido ou uma área da memória global. Para obter mais informações sobre `LockBytes` objetos e o `ILockBytes` interface, consulte o *referência do programador de OLE*.  
   
 ##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> Vantagens e desvantagens de arquivos compostos  
  Arquivos compostos fornecem benefícios não está disponíveis com os métodos anteriores de armazenamento de arquivos. Entre elas estão:  

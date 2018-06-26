@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d488ff21501eb83ef8f3115bdc2e4d899a68d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2385efcef9949eab60b1542b2039e3ff2ac80e38
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345134"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930853"
 ---
 # <a name="dialog-data-exchange"></a>Troca de dados da caixa de diálogo
-Se você usar o mecanismo DDX, você definir os valores iniciais da caixa de diálogo variáveis de membro do objeto, normalmente em seu `OnInitDialog` manipulador ou o construtor de caixa de diálogo. Imediatamente antes da caixa de diálogo é exibida, mecanismo DDX do framework transfere os valores das variáveis de membro para os controles na caixa de diálogo, em que aparecem quando a caixa de diálogo aparece em resposta a `DoModal` ou **criar** . A implementação padrão de `OnInitDialog` na `CDialog` chama o `UpdateData` função de membro de classe `CWnd` para inicializar os controles na caixa de diálogo.  
+Se você usar o mecanismo DDX, você definir os valores iniciais da caixa de diálogo variáveis de membro do objeto, normalmente em seu `OnInitDialog` manipulador ou o construtor de caixa de diálogo. Imediatamente antes da caixa de diálogo é exibida, mecanismo DDX do framework transfere os valores das variáveis de membro para os controles na caixa de diálogo, em que aparecem quando a caixa de diálogo aparece em resposta a `DoModal` ou `Create`. A implementação padrão de `OnInitDialog` na `CDialog` chama o `UpdateData` função de membro de classe `CWnd` para inicializar os controles na caixa de diálogo.  
   
  O mesmo mecanismo transfere os valores dos controles para as variáveis de membro quando o usuário clica no botão Okey (ou sempre que você chamar o `UpdateData` função membro com o argumento **TRUE**). O mecanismo de validação de dados de caixa de diálogo valida os itens de dados para o qual você especificou as regras de validação.  
   

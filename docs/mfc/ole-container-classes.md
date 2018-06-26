@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfdff6023beeedfa14d37e5b404fa3c223691b85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f8214b2f40926cc4ab1471dce99ce5215362011
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349035"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930484"
 ---
 # <a name="ole-container-classes"></a>Classes Container OLE
-Essas classes são usadas por aplicativos de contêiner. Ambos `COleLinkingDoc` e `COleDocument` gerenciar coleções de `COleClientItem` objetos. Em vez de derivar de sua classe de documento da **CDocument**, vamos derivar de `COleLinkingDoc` ou `COleDocument`, dependendo se você quer o suporte para obter links para objetos incorporados no documento.  
+Essas classes são usadas por aplicativos de contêiner. Ambos `COleLinkingDoc` e `COleDocument` gerenciar coleções de `COleClientItem` objetos. Em vez de derivar de sua classe de documento da `CDocument`, vamos derivar de `COleLinkingDoc` ou `COleDocument`, dependendo se você quer o suporte para obter links para objetos incorporados no documento.  
   
  Use um `COleClientItem` objeto para representar cada item OLE no documento que é incorporado a partir de outro documento ou um link para outro documento.  
   

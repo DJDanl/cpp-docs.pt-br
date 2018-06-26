@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a0cdc4ebeab81a0eb69b96b161350f75ebc8b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef6a9e605948fac4f31338f87b4d00bbaa8712f4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379513"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931646"
 ---
 # <a name="relationships-among-mfc-objects"></a>Relacionamentos entre objetos MFC
 Para ajudar a colocar o processo de criação de documento/exibição em perspectiva, considere a possibilidade de um programa em execução: um documento, a janela do quadro usado para conter o modo de exibição e o modo de exibição associada ao documento.  
@@ -53,7 +53,7 @@ Para ajudar a colocar o processo de criação de documento/exibição em perspec
  Normalmente, uma janela do quadro tem um modo de exibição, mas às vezes, como em janelas separadoras, a mesma janela do quadro contém vários modos de exibição. A janela do quadro mantém um ponteiro para a exibição ativa no momento; o ponteiro é atualizado sempre que outro modo de exibição é ativado.  
   
 > [!NOTE]
->  Um ponteiro para a janela do quadro principal é armazenado no [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) variável de membro de objeto do aplicativo. Uma chamada para `OnFileNew` em sua substituição do `InitInstance` função membro de `CWinApp` define `m_pMainWnd` para você. Se você não chama `OnFileNew`, você deve definir o valor da variável no `InitInstance` por conta própria. (COM SDI (servidor) de componente aplicativos podem não definir a variável se a opção /Embedding na linha de comando.) Observe que `m_pMainWnd` agora é um membro da classe `CWinThread` em vez de `CWinApp`.  
+>  Um ponteiro para a janela do quadro principal é armazenado no [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) variável de membro de objeto do aplicativo. Uma chamada para `OnFileNew` em sua substituição do `InitInstance` função membro de `CWinApp` define *m_pMainWnd* para você. Se você não chama `OnFileNew`, você deve definir o valor da variável no `InitInstance` por conta própria. (COM SDI (servidor) de componente aplicativos podem não definir a variável se a opção /Embedding na linha de comando.) Observe que *m_pMainWnd* agora é um membro da classe `CWinThread` em vez de `CWinApp`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Modelos de documento e o processo de criação de documento/exibição](../mfc/document-templates-and-the-document-view-creation-process.md)   

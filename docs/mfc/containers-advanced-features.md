@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2999e82bd05d75cb8637ba7404c36cdc2be047a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347916"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932166"
 ---
 # <a name="containers-advanced-features"></a>Contêineres: funcionalidades avançadas
 Este artigo descreve as etapas necessárias para incorporar recursos avançados opcionais em aplicativos de contêiner existente. Esses recursos são:  
@@ -70,13 +70,13 @@ Este artigo descreve as etapas necessárias para incorporar recursos avançados 
   
     -   Conecte-se a `COleTemplateServer` objeto para os modelos de documento chamando o objeto `ConnectTemplate` função de membro.  
   
-    -   Chamar o **COleTemplateServer::RegisterAll** a função de membro para registrar todos os objetos de classe com o sistema OLE.  
+    -   Chamar o `COleTemplateServer::RegisterAll` a função de membro para registrar todos os objetos de classe com o sistema OLE.  
   
-    -   Call `COleTemplateServer::UpdateRegistry`. O único parâmetro para `UpdateRegistry` devem ser `OAT_CONTAINER` se o aplicativo não é iniciado com a opção "/ incorporado". Isso registra o aplicativo como um contêiner que pode dar suporte a links para objetos inseridos.  
+    -   Chamar `COleTemplateServer::UpdateRegistry`. O único parâmetro para `UpdateRegistry` devem ser *OAT_CONTAINER* se o aplicativo não é iniciado com a opção "/ incorporado". Isso registra o aplicativo como um contêiner que pode dar suporte a links para objetos inseridos.  
   
          Se o aplicativo é iniciado com a opção "/ inserido", ele não deve exibir a janela principal, semelhante a um aplicativo de servidor.  
   
- O exemplo OLE do MFC [OCLIENT](../visual-cpp-samples.md) implementa esse recurso. Para obter um exemplo de como fazer isso, consulte o `InitInstance` função o OCLIENT. Arquivo CPP desse aplicativo de exemplo.  
+ O exemplo OLE do MFC [OCLIENT](../visual-cpp-samples.md) implementa esse recurso. Para obter um exemplo de como fazer isso, consulte o `InitInstance` funcionar a *OCLIENT. CPP* arquivo desse aplicativo de exemplo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Contêineres](../mfc/containers.md)   

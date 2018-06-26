@@ -20,23 +20,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efe510c4376255c24470a799b5dde17021894bf0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c39f2d7803630aaaef6e803e90bf332c74937a71
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342469"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930609"
 ---
 # <a name="adding-controls-by-hand"></a>Adicionando controles manualmente
 Você pode [adicionar controles a uma caixa de diálogo com o editor de caixa de diálogo](../mfc/using-the-dialog-editor-to-add-controls.md) ou adicioná-las por conta própria, com o código.  
   
  Para criar um objeto de controle, você geralmente irá inserir o objeto de controle de C++ em uma caixa de diálogo de C++ ou janela do quadro. Como muitos outros objetos no framework, controles requerem construção de dois estágios. Você deve chamar o controle **criar** função de membro como parte da criação da caixa de diálogo caixa ou quadro de janela pai. Para caixas de diálogo, isso geralmente é feito no [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)e para janelas de quadro no [OnCreate](../mfc/reference/cwnd-class.md#oncreate).  
   
- O exemplo a seguir mostra como você pode declarar uma `CEdit` do objeto na declaração da classe de uma classe derivada da caixa de diálogo e, em seguida, chame o **criar** função de membro em `OnInitDialog`. Porque o `CEdit` objeto for declarado como um objeto inserido, ele é construído automaticamente quando o objeto de caixa de diálogo é construído, mas ainda deve ser inicializado com seu próprio **criar** função de membro.  
+ O exemplo a seguir mostra como você pode declarar uma `CEdit` do objeto na declaração da classe de uma classe derivada da caixa de diálogo e, em seguida, chame o `Create` função de membro em `OnInitDialog`. Porque o `CEdit` objeto for declarado como um objeto inserido, ele é construído automaticamente quando o objeto de caixa de diálogo é construído, mas ainda deve ser inicializado com seu próprio `Create` função de membro.  
   
  [!code-cpp[NVC_MFCControlLadenDialog#1](../mfc/codesnippet/cpp/adding-controls-by-hand_1.h)]  
   
- O seguinte `OnInitDialog` função configura um retângulo, em seguida, chama **criar** para criar o controle de edição do Windows e anexá-lo para o não inicializada `CEdit` objeto.  
+ O seguinte `OnInitDialog` função configura um retângulo, em seguida, chama `Create` para criar o controle de edição do Windows e anexá-lo para o não inicializada `CEdit` objeto.  
   
  [!code-cpp[NVC_MFCControlLadenDialog#2](../mfc/codesnippet/cpp/adding-controls-by-hand_2.cpp)]  
   

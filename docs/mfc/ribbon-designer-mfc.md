@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbde67e61a38190a2e26884659d273b55a63f89e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07131c64097457bd6a8035b5fe100ba376d49fbd
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382093"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931151"
 ---
 # <a name="ribbon-designer-mfc"></a>Designer da faixa de opções (MFC)
 O Designer de faixa de opções permite que você criar e personalizar as faixas de opções em aplicativos MFC. Uma faixa de opções é um elemento de interface do usuário do usuário que organiza os comandos em grupos lógicos. Esses grupos são exibidos em guias separadas em uma faixa na parte superior da janela. A faixa de opções substitui a barra de menus e barras de ferramentas. Uma faixa de opções pode melhorar significativamente a usabilidade do aplicativo. Para obter mais informações, consulte [faixas de opções](http://go.microsoft.com/fwlink/p/?linkid=129233). A ilustração a seguir mostra uma faixa de opções.  
@@ -34,7 +34,7 @@ O Designer de faixa de opções permite que você criar e personalizar as faixas
 ## <a name="understanding-the-ribbon-designer"></a>Noções básicas sobre o Designer de faixa de opções  
  O designer de faixa de opções cria e armazena a faixa de opções como um recurso. Quando você cria um recurso de faixa de opções, o designer de faixa de opções faz essas três coisas:  
   
--   Adiciona uma entrada para o script de definição de recurso do projeto (*. rc). No exemplo a seguir, `IDR_RIBBON` é o nome exclusivo que identifica o recurso de faixa de opções, `RT_RIBBON_XML` é o tipo de recurso, e `ribbon.mfcribbon-ms` é o nome do arquivo de recurso.  
+-   Adiciona uma entrada para o script de definição de recurso do projeto (*. rc). No exemplo a seguir, IDR_RIBBON é o nome exclusivo que identifica o recurso de faixa de opções, RT_RIBBON_XML é o tipo de recurso e ribbon.mfcribbon ms é o nome do arquivo de recurso.  
   
  ```  
     IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a47db4f9715c539ecf9bcbfb78e48b7e8edbc94b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c912b6c703ef7e05825e070d09f0a1b3cd73003
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339009"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932153"
 ---
 # <a name="active-document-containers"></a>Contêineres de documento ativos
 Um contêiner de documento ativo, como o Microsoft Office Binder ou Internet Explorer, permite que você trabalhe com vários documentos de diferentes tipos de aplicativos em uma única estrutura (em vez de forçá-lo a criar e usar várias estruturas de aplicativo para cada tipo de documento).  
@@ -50,15 +50,15 @@ Um contêiner de documento ativo, como o Microsoft Office Binder ou Internet Exp
   
  Um contêiner de documento ativo que integra documentos ativos deve:  
   
--   Ser capaz de manipular o armazenamento de objeto por meio de **IPersistStorage** interface, ou seja, ele deve fornecer um `IStorage` instância para cada documento ativo.  
+-   Ser capaz de manipular o armazenamento de objeto por meio de `IPersistStorage` interface, ou seja, ele deve fornecer um `IStorage` instância para cada documento ativo.  
   
--   Suporte os recursos básicos de incorporação de documentos OLE, necessidade nos objetos de "site" (uma por documento ou inserindo) que implementam **IOleClientSite** e **IAdviseSink**.  
+-   Suporte os recursos básicos de incorporação de documentos OLE, necessidade nos objetos de "site" (um por documento ou inserindo) que implementam `IOleClientSite` e `IAdviseSink`.  
   
--   Suporte a ativação no local de objetos inseridos ou documentos ativos. Objetos do site do contêiner devem implementar `IOleInPlaceSite` e objeto de quadro do contêiner deve fornecer **IOleInPlaceFrame**.  
+-   Suporte a ativação no local de objetos inseridos ou documentos ativos. Objetos do site do contêiner devem implementar `IOleInPlaceSite` e objeto de quadro do contêiner deve fornecer `IOleInPlaceFrame`.  
   
 -   Suporte a extensões dos documentos ativos implementando `IOleDocumentSite` para fornecer um mecanismo para o contêiner para se comunicar com o documento. Opcionalmente, o contêiner pode implementar as interfaces do documento ativo `IOleCommandTarget` e `IContinueCallback` para acompanhar comandos simples como imprimir ou salvar.  
   
- O objeto de quadro, os objetos de exibição e o objeto de contêiner podem implementar **IOleCommandTarget** para dar suporte a expedição de certos comandos, conforme discutido em [destinos de comando](../mfc/message-handling-and-command-targets.md). Objetos de exibição e contêiner também podem implementar `IPrint` e `IContinueCallback`, para dar suporte a impressão programática, conforme discutido em [impressão programática](../mfc/programmatic-printing.md).  
+ O objeto de quadro, os objetos de exibição e o objeto de contêiner podem implementar `IOleCommandTarget` para dar suporte a expedição de certos comandos, conforme discutido em [destinos de comando](../mfc/message-handling-and-command-targets.md). Objetos de exibição e contêiner também podem implementar `IPrint` e `IContinueCallback`, para dar suporte a impressão programática, conforme discutido em [impressão programática](../mfc/programmatic-printing.md).  
   
  A figura a seguir mostra as relações conceituais entre um contêiner e seus componentes (à esquerda) e o documento ativo e seus modos de exibição (à direita). O documento ativo gerencia o armazenamento e os dados e o modo de exibição exibe ou imprime opcionalmente que os dados. Interfaces em negrito são aqueles necessários para a participação do documento ativo; Esses negrito e itálico são opcionais. Todas as outras interfaces são necessárias.  
   
@@ -85,7 +85,7 @@ Um contêiner de documento ativo, como o Microsoft Office Binder ou Internet Exp
  Um contêiner que dá suporte a vários modos de exibição deve ser capaz de criar a exibição de vários objetos de site no site de documentos. Isso fornece cada modo de exibição com os serviços de ativação e desativação separados, conforme fornecido por meio de `IOleInPlaceSite`.  
   
 ##  <a name="frame_object"></a> Objeto de quadro  
- Objeto de quadro do contêiner é, a maior parte do tempo, mesmo quadro que é usado para ativação no local em documentos OLE, ou seja, aquele que lida com a negociação de menu e barra de ferramentas. Um objeto de exibição tem acesso a esse objeto de quadro por meio de **IOleInPlaceSite::GetWindowContext**, que também fornece acesso ao objeto de contêiner que representa o documento de contêiner (que pode lidar com a negociação de nível de painel de ferramentas e enumeração de objeto contido).  
+ Objeto de quadro do contêiner é, a maior parte do tempo, mesmo quadro que é usado para ativação no local em documentos OLE, ou seja, aquele que lida com a negociação de menu e barra de ferramentas. Um objeto de exibição tem acesso a esse objeto de quadro por meio de `IOleInPlaceSite::GetWindowContext`, que também fornece acesso ao objeto de contêiner que representa o documento de contêiner (que pode lidar com a negociação de barra de ferramentas do painel nível e enumeração de objeto contido).  
   
  Um contêiner de documento ativo pode aumentar o quadro adicionando `IOleCommandTarget`. Isso permite que ele receber comandos que se originam na interface do usuário do documento ativo da mesma forma que essa interface pode permitir que um contêiner enviar os mesmos comandos (como **arquivo novo**, **abrir**,  **Salvar como**, **impressão**; **Editar cópia**, **colar**, **desfazer**e outros) para um documento ativo. Para obter mais informações, consulte [destinos de comando](../mfc/message-handling-and-command-targets.md).  
   

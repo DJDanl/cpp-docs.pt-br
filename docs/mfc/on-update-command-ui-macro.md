@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 726eba2edbb857784a3a23ddcfb2d69fd8e30a72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43caffe53be180221b4145a03df7cfc41c31828e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348476"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928632"
 ---
 # <a name="onupdatecommandui-macro"></a>Macro ON_UPDATE_COMMAND_UI
-Use o **propriedades** janela para se conectar a um objeto de interface do usuário para um manipulador de atualização de comando em um objeto de destino do comando. Ele se conectará automaticamente a ID do objeto de interface do usuário para o `ON_UPDATE_COMMAND_UI` macro e criar um manipulador no objeto que tratará a atualização. Consulte [mapeando mensagens para funções](../mfc/reference/mapping-messages-to-functions.md) para obter mais informações.  
+Use o **propriedades** janela para se conectar a um objeto de interface do usuário para um manipulador de atualização de comando em um objeto de destino do comando. Ele irá conectar-se a ID do objeto de interface do usuário para a macro ON_UPDATE_COMMAND_UI e criar um manipulador de no objeto que tratará a atualização automaticamente. Consulte [mapeando mensagens para funções](../mfc/reference/mapping-messages-to-functions.md) para obter mais informações.  
   
  Por exemplo, para atualizar um comando Limpar tudo no menu Editar do programa, use o **propriedades** janela para adicionar uma entrada de mapa de mensagens na classe escolhida, uma declaração de função para um manipulador de atualização de comando chamado `OnUpdateEditClearAll` na classe declaração e um modelo de função vazio no arquivo de implementação da classe. O protótipo de função tem esta aparência:  
   

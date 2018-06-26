@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f02712f3df56bf2fc04fba736f28931250f7bcb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2005391c6d91ee09703194eb8b8062ecfe08ba77
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349252"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929793"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Controles ActiveX MFC: adicionando métodos de estoque
-Um método de ação difere de um método personalizado em que ele já foi implementado pela classe [COleControl](../mfc/reference/colecontrol-class.md). Por exemplo, `COleControl` contém uma função de membro predefinidas que suporta o método de atualização para o seu controle. A entrada de mapa de expedição para esse método de estoque é **DISP_STOCKFUNC_REFRESH**.  
+Um método de ação difere de um método personalizado em que ele já foi implementado pela classe [COleControl](../mfc/reference/colecontrol-class.md). Por exemplo, `COleControl` contém uma função de membro predefinidas que suporta o método de atualização para o seu controle. A entrada de mapa de expedição para esse método de estoque é DISP_STOCKFUNC_REFRESH.  
   
  `COleControl` oferece suporte a dois métodos de estoque: DoClick e a atualização. A atualização é chamada pelo usuário do controle para atualizar imediatamente a aparência do controle; DoClick é chamado para acionar o clique do controle eventos.  
   
 |Método|Entrada de mapa de expedição|Comentário|  
 |------------|------------------------|-------------|  
 |`DoClick`|**(DISP_STOCKPROP_DOCLICK)**|Dispara um evento de clique.|  
-|**Atualizar**|**(DISP_STOCKPROP_REFRESH)**|Atualiza imediatamente a aparência do controle.|  
+|`Refresh`|**(DISP_STOCKPROP_REFRESH)**|Atualiza imediatamente a aparência do controle.|  
   
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Adicionando um método de ação usando o Assistente para o método adicionar  
  Adicionando um método de estoque é simple usando o [Assistente para adição de método](../ide/add-method-wizard.md). O procedimento a seguir demonstra como adicionar o método de atualização para um controle criado usando o Assistente de controle ActiveX MFC.  

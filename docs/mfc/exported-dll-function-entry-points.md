@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be4c74a48f1367369582b433a2a833ceb8e1976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8e9ff08054fbef3f15283395d7eb150551926dc
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343847"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928619"
 ---
 # <a name="exported-dll-function-entry-points"></a>Pontos de entrada da função DLL exportada
 Para funções exportadas de uma DLL, use o [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) macro para manter o estado global apropriado ao alternar do módulo DLL para a DLL do aplicativo de chamada.  
   
  Quando chamado, define essa macro `pModuleState`, um ponteiro para um `AFX_MODULE_STATE` estrutura que contém dados globais para o módulo, como o estado do módulo efetivo para o restante do escopo da função de armazenamento. Após sair do escopo que contém a macro, o estado anterior do módulo efetiva é restaurado automaticamente.  
   
- Essa alternância é obtido criando uma instância de um **AFX_MODULE_STATE** classe na pilha. No construtor, essa classe obtém um ponteiro para o estado atual do módulo e armazena em uma variável de membro e, em seguida, define `pModuleState` como o novo estado do módulo efetivo. Em seu destruidor, essa classe restaura o ponteiro armazenado em sua variável de membro como o estado do módulo efetivo.  
+ Essa alternância é obtido criando uma instância de um `AFX_MODULE_STATE` classe na pilha. No construtor, essa classe obtém um ponteiro para o estado atual do módulo e armazena em uma variável de membro e, em seguida, define `pModuleState` como o novo estado do módulo efetivo. Em seu destruidor, essa classe restaura o ponteiro armazenado em sua variável de membro como o estado do módulo efetivo.  
   
  Se você tiver uma função exportada, por exemplo, um que inicia uma caixa de diálogo na DLL, você precisa adicionar o código a seguir para o início da função:  
   

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec9757a463bce7ef873720f229b70da695deae8d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf25b84c4ee9808210d2dbf2f5115319a517c71b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334841"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931932"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Acessando todos os membros de uma coleção
 As classes de coleção MFC matriz — ambos baseado em modelo e não — usa índices para acessar seus elementos. As classes de coleção MFC lista e mapa — ambos baseado em modelo e não — use um indicador do tipo **posição** para descrever a posição especificada dentro da coleção. Para acessar um ou mais membros dessas coleções, você primeiro inicializar o indicador de posição repetidamente passa essa posição na coleção e peça-lo para retornar o próximo elemento. A coleção não é responsável por manter informações de estado sobre o progresso da iteração. Essa informação é mantida no indicador de posição. Mas, dada uma posição específica, a coleção é responsável por retornar o próximo elemento.  
@@ -51,7 +51,7 @@ As classes de coleção MFC matriz — ambos baseado em modelo e não — usa í
   
      Este exemplo usa uma matriz de ponteiro tipado que contém ponteiros para `CPerson` objetos. A matriz é derivada da classe `CObArray`, um de nontemplate classes predefinidas. `GetAt` Retorna um ponteiro para um `CPerson` objeto. Para classes de coleção do tipo ponteiro — matrizes ou listas — o primeiro parâmetro especifica a classe base; o segundo parâmetro especifica o tipo para armazenar.  
   
-     O `CTypedPtrArray` classe também sobrecargas de **[]** operador para que você pode usar a sintaxe de subscrito de matriz habitual para acessar elementos de uma matriz. Uma alternativa à instrução no corpo do `for` está acima do loop  
+     O `CTypedPtrArray` classe também sobrecargas de **[]** operador para que você pode usar a sintaxe de subscrito de matriz habitual para acessar elementos de uma matriz. Uma alternativa à instrução no corpo do **para** está acima do loop  
   
      [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]  
   

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8048a38c2ec09828c462d5b671cc0c89aec30805
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ca7c673f47510282e129eab2538008400eb2fb9
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344955"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929426"
 ---
 # <a name="managing-data-with-document-data-variables"></a>Gerenciando dados com variáveis de dados do documento
 Implemente os dados do documento como variáveis de membro da classe do documento. Por exemplo, o programa de rabisco declara um membro de dados do tipo `CObList` — uma lista vinculada que armazena ponteiros para `CObject` objetos. Essa lista é usada para armazenar conjuntos de pontos que compõem um desenho de linha traçado.  
@@ -35,7 +35,7 @@ Implemente os dados do documento como variáveis de membro da classe do document
   
  Quando você define os dados de membro do documento, você adicionará geralmente funções de membro para a classe de documento para definir e obter itens de dados e executar outras operações útil neles.  
   
- As exibições acessar o objeto de documento usando o ponteiro da exibição no documento, instalado no modo de exibição no momento da criação. Você pode recuperar este ponteiro em funções de membro de um modo de exibição, chamando o `CView` função de membro **GetDocument**. Certifique-se de converter esse ponteiro para seu próprio tipo de documento. Em seguida, você pode acessar membros de documentos públicos através do ponteiro.  
+ As exibições acessar o objeto de documento usando o ponteiro da exibição no documento, instalado no modo de exibição no momento da criação. Você pode recuperar este ponteiro em funções de membro de um modo de exibição, chamando o `CView` função de membro `GetDocument`. Certifique-se de converter esse ponteiro para seu próprio tipo de documento. Em seguida, você pode acessar membros de documentos públicos através do ponteiro.  
   
  Se a transferência de dados frequentes requer acesso direto, ou você deseja usar os membros não públicos da classe do documento, convém fazer com que a exibição de classe um amigo (em termos de C++) da classe do documento.  
   

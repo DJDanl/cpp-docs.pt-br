@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 880c6953addd0ec7db3abf5864010bd472d2d5a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8817133ba1004e746f568ad3e039de5130693174
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341343"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929439"
 ---
 # <a name="creating-an-active-document-container-application"></a>Criando um aplicativo de contêiner de documento ativo
 A maneira mais simples e mais recomendada para criar um aplicativo de contêiner do documento ativo é criar um aplicativo de contêiner EXE do MFC usando o Assistente de aplicativo MFC, em seguida, modificar o aplicativo para oferecer suporte a contenção de documentos ativos.  
@@ -36,7 +36,7 @@ A maneira mais simples e mais recomendada para criar um aplicativo de contêiner
   
 3.  Selecione **aplicativo MFC** no painel direito.  
   
-4.  Nomeie o projeto `MyProj`, clique em **Okey**.  
+4.  Nomeie o projeto *MeuProjeto*, clique em **Okey**.  
   
 5.  Selecione o **suporte a documentos compostos** página.  
   
@@ -48,9 +48,9 @@ A maneira mais simples e mais recomendada para criar um aplicativo de contêiner
   
 9. Quando o Assistente de aplicativo MFC terminar de gerar o aplicativo, abra os arquivos a seguir usando o Gerenciador de soluções:  
   
-    -   MyProjview.cpp  
+    -   *MyProjview.cpp*  
   
-10. No MyProjview.cpp, faça as seguintes alterações:  
+10. Em *MyProjview.cpp*, faça as seguintes alterações:  
   
     -   Em `CMyProjView::OnPreparePrinting`, substitua o conteúdo de função com o código a seguir:  
   

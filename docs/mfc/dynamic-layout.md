@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7518e2fdd07254b8b1991fae8a41f26058920858
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e0fcfff6bcca8cb073c337043490d32f8724aad
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350843"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930346"
 ---
 # <a name="dynamic-layout"></a>Layout dinâmico
 Com MFC no Visual Studio 2015, você pode criar caixas de diálogo que o usuário pode redimensionar e você pode controlar a forma que ajusta o layout para a alteração no tamanho. Por exemplo, você pode anexar botões na parte inferior de uma caixa de diálogo para a borda inferior para que eles permanecem sempre na parte inferior. Você também pode configurar determinados controles, como caixas de listagem, editboxes e campos de texto para expandir conforme o usuário expande a caixa de diálogo.  
@@ -31,7 +31,7 @@ Com MFC no Visual Studio 2015, você pode criar caixas de diálogo que o usuári
   
  ![Caixa de diálogo depois que está sendo redimensionada. ] (../mfc/media/mfcdynamiclayout5.png "mfcdynamiclayout5")  
   
- Você pode controlar o layout dinâmico, especificando os detalhes para cada controle no Editor de recursos no IDE, ou você pode fazer para programaticamente ao acessar o objeto CMFCDynamicLayout para um determinado controle e definindo as propriedades.  
+ Você pode controlar o layout dinâmico, especificando os detalhes para cada controle no Editor de recursos no IDE, ou você pode fazer para programaticamente, acessando a `CMFCDynamicLayout` do objeto para um determinado controle e definindo as propriedades.  
   
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>Definindo propriedades de layout dinâmico no editor de recursos  
  Você pode definir o comportamento de layout dinâmico para uma caixa de diálogo sem precisar gravar qualquer código, usando o editor de recurso.  
@@ -61,7 +61,7 @@ Com MFC no Visual Studio 2015, você pode criar caixas de diálogo que o usuári
   
 1.  Localizar ou criar um local no código de implementação da sua classe de caixa de diálogo onde você deseja especificar o layout dinâmico para a caixa de diálogo. Por exemplo, você talvez queira adicionar um método como `AdjustLayout` em sua caixa de diálogo e a chamada de locais onde o layout precisa ser alterado. Você pode chamar essa primeiro a partir do construtor, ou depois de fazer alterações na caixa de diálogo.  
   
-2.  Para a caixa de diálogo, chame [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), um método da classe CWnd. GetDynamicLayout retorna um ponteiro para um objeto CMFCDynamicLayout.  
+2.  Para a caixa de diálogo, chame [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), um método de `CWnd` classe. `GetDynamicLayout` Retorna um ponteiro para um `CMFCDynamicLayout` objeto.  
   
  ```  
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
@@ -106,7 +106,7 @@ Com MFC no Visual Studio 2015, você pode criar caixas de diálogo que o usuári
   
 9. Na próxima vez que o usuário o redimensiona a caixa de diálogo, o [CMFCDynamicLayout::Adjust](../mfc/reference/cmfcdynamiclayout-class.md#adjust) método é chamado que realmente aplica as configurações.  
   
-10. Se você quiser desabilitar layout dinâmico, chame [CWnd::EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) com `FALSE` para o `bEnabled` parâmetro.  
+10. Se você quiser desabilitar layout dinâmico, chame [CWnd::EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) com **FALSE** para o *bAtivado* parâmetro.  
   
  ```  
     pDialog->EnableDynamicLayout(FALSE);
@@ -122,7 +122,7 @@ Com MFC no Visual Studio 2015, você pode criar caixas de diálogo que o usuári
 
  ```  
   
-     O recurso denominado deve fazer referência a uma caixa de diálogo que contém informações de layout na forma de uma entrada AFX_DIALOG_LAYOUT no arquivo de recurso, como no exemplo a seguir:  
+     O recurso denominado deve fazer referência a uma caixa de diálogo que contém informações de layout na forma de um **AFX_DIALOG_LAYOUT** entrada no arquivo de recurso, como no exemplo a seguir:  
   
  ' ' * / / / * / / * / / AFX_DIALOG_LAYOUT * / /  
  

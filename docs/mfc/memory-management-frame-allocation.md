@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f67149e5835ee6f2b8922b29ee92872b24d0ec4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 264a3b5618b1c153219d5dee838af38bd7f49f49
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349305"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931054"
 ---
 # <a name="memory-management-frame-allocation"></a>Gerenciamento de memória: alocação do quadro
 Alocação de quadro leva seu nome de "quadro de pilha" que é definido sempre que uma função é chamada. O quadro de pilhas é uma área da memória que temporariamente armazena os argumentos para a função, bem como todas as variáveis que são definidas locais à função. Variáveis de quadro geralmente são chamadas de variáveis "automáticos" porque o compilador automaticamente aloca o espaço para eles.  
@@ -42,7 +42,7 @@ Alocação de quadro leva seu nome de "quadro de pilha" que é definido sempre q
   
  [!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]  
   
- Para variáveis de função local, essa transição de escopo ocorre quando a função encerrará o escopo de uma variável de quadro pode ser menor do que uma função se forem usadas chaves aninhadas. Essa exclusão automática de variáveis de quadro é muito importante. No caso de tipos primitivos simples (como `int` ou **bytes**), matrizes, ou estruturas de dados, a exclusão automática simplesmente recupera a memória usada pela variável. Desde que a variável está fora do escopo, ele não pode ser acessado mesmo assim. No entanto, no caso de objetos C++, o processo de exclusão automática é um pouco mais complicado.  
+ Para variáveis de função local, essa transição de escopo ocorre quando a função encerrará o escopo de uma variável de quadro pode ser menor do que uma função se forem usadas chaves aninhadas. Essa exclusão automática de variáveis de quadro é muito importante. No caso de tipos primitivos simples (como **int** ou **bytes**), matrizes, ou estruturas de dados, a exclusão automática simplesmente recupera a memória usada pela variável. Desde que a variável está fora do escopo, ele não pode ser acessado mesmo assim. No entanto, no caso de objetos C++, o processo de exclusão automática é um pouco mais complicado.  
   
  Quando um objeto é definido como uma variável de quadro, seu construtor é invocado automaticamente no ponto em que a definição é encontrada. Quando o objeto sai do escopo, seu destruidor é invocado automaticamente antes que a memória para o objeto é recuperada. Essa construção automática e destruição de podem ser muito útil, mas você deve estar ciente das chamadas automático, especialmente para o destruidor.  
   

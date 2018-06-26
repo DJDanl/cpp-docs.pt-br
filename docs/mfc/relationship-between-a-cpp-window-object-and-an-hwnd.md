@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51daa375c3c920443316b6e10b6415ee018fdb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3864de8b3133fd2284b3ce57b75b30d8f41c26a7
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385772"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928522"
 ---
 # <a name="relationship-between-a-c-window-object-and-an-hwnd"></a>Relação entre um objeto de janela do C++ e um HWND
-A janela *objeto* é um objeto do C++ `CWnd` classe (ou uma classe derivada) que o programa cria diretamente. Ela é ativada e desativada em resposta a chamadas de construtor e destruidor do programa. O Windows *janela*, por outro lado, é um identificador opaco para uma estrutura de dados interno do Windows que corresponde a uma janela e consome recursos do sistema quando presentes. Uma janela do Windows é identificada por um identificador de janela"" (`HWND`) e é criada após o `CWnd` objeto é criado por uma chamada para o **criar** função de membro de classe `CWnd`. A janela pode ser destruída por uma chamada do programa ou por uma ação do usuário. O identificador de janela é armazenado no objeto de janela `m_hWnd` variável de membro. A figura a seguir mostra a relação entre o objeto de janela C++ e a janela do Windows. Criando janelas é abordado em [criando Windows](../mfc/creating-windows.md). Destruindo janelas é abordado em [destruindo objetos de janela](../mfc/destroying-window-objects.md).  
+A janela *objeto* é um objeto do C++ `CWnd` classe (ou uma classe derivada) que o programa cria diretamente. Ela é ativada e desativada em resposta a chamadas de construtor e destruidor do programa. O Windows *janela*, por outro lado, é um identificador opaco para uma estrutura de dados interno do Windows que corresponde a uma janela e consome recursos do sistema quando presentes. Uma janela do Windows é identificada por um identificador de janela"" (`HWND`) e é criada após o `CWnd` objeto é criado por uma chamada para o `Create` função de membro de classe `CWnd`. A janela pode ser destruída por uma chamada do programa ou por uma ação do usuário. O identificador de janela é armazenado no objeto de janela *m_hWnd* variável de membro. A figura a seguir mostra a relação entre o objeto de janela C++ e a janela do Windows. Criando janelas é abordado em [criando Windows](../mfc/creating-windows.md). Destruindo janelas é abordado em [destruindo objetos de janela](../mfc/destroying-window-objects.md).  
   
  ![CWnd objeto de janela e janela resultante](../mfc/media/vc37fj1.gif "vc37fj1")  
 Objeto de janela e janela do Windows  

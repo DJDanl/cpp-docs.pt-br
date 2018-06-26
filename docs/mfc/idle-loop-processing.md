@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d66983eb915c856ecf52e225b71151359a499b4b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20be85f7089f2a53b067d7287780159de51a8c86
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354895"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929550"
 ---
 # <a name="idle-loop-processing"></a>Processamento de loop ocioso
 Muitos aplicativos de processamento longo "em segundo plano." Às vezes, considerações sobre desempenho dita usando multithread para esse trabalho. Threads envolvem sobrecarga extra de desenvolvimento, para que eles não são recomendados para tarefas simples, como o trabalho de tempo ocioso MFC faz o [OnIdle](../mfc/reference/cwinthread-class.md#onidle) função. Este artigo se concentra em processamento ocioso. Para obter mais informações sobre multithreading, consulte [Multithreading tópicos](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
@@ -48,7 +48,7 @@ Muitos aplicativos de processamento longo "em segundo plano." Às vezes, conside
  Em um aplicativo desenvolvido com MFC, a mensagem principal loop no `CWinThread` classe contém um loop de mensagem que chama o [PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) API do Win32. Isso também loop chama o `OnIdle` função membro de `CWinThread` entre as mensagens. Um aplicativo pode processar mensagens nesse período ocioso, substituindo o `OnIdle` função.  
   
 > [!NOTE]
->  **Executar**, `OnIdle`, e outras funções de membro determinados agora são membros da classe `CWinThread` em vez da classe `CWinApp`. `CWinApp` é derivado de `CWinThread`.  
+>  `Run`, `OnIdle`, e outras funções de membro determinados agora são membros da classe `CWinThread` em vez da classe `CWinApp`. `CWinApp` é derivado de `CWinThread`.  
   
  Para obter mais informações sobre o desempenho de processamento ocioso, consulte [OnIdle](../mfc/reference/cwinthread-class.md#onidle) no *referência MFC*.  
   
@@ -57,7 +57,7 @@ Muitos aplicativos de processamento longo "em segundo plano." Às vezes, conside
   
  [!code-cpp[NVC_MFCDocView#8](../mfc/codesnippet/cpp/idle-loop-processing_1.cpp)]  
   
- Esse código inserido em uma função, executa um loop enquanto houver processamento ocioso fazer. Dentro do loop, um loop aninhado chama repetidamente **PeekMessage**. Como essa chamada retorna um valor diferente de zero, o loop chama `CWinThread::PumpMessage` para executar a conversão de mensagem normal e distribuição. Embora `PumpMessage` é documentado, você pode examinar o código-fonte no arquivo ThrdCore.Cpp no diretório \atlmfc\src\mfc da instalação do Visual C++.  
+ Esse código inserido em uma função, executa um loop enquanto houver processamento ocioso fazer. Dentro do loop, um loop aninhado chama repetidamente `PeekMessage`. Como essa chamada retorna um valor diferente de zero, o loop chama `CWinThread::PumpMessage` para executar a conversão de mensagem normal e distribuição. Embora `PumpMessage` é documentado, você pode examinar o código-fonte no arquivo ThrdCore.Cpp no diretório \atlmfc\src\mfc da instalação do Visual C++.  
   
  Uma vez as extremidades do loop interno, o loop externo executa processamento ocioso com uma ou mais chamadas para `OnIdle`. A primeira chamada é para fins do MFC. Você pode fazer chamadas adicionais para `OnIdle` seu próprio trabalho em segundo plano.  
   

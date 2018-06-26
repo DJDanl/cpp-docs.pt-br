@@ -57,17 +57,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3636d3db480563295213b76de06133e78e30cd0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b95af9c0562c4b3210cbcdd7b9ce6216a5d49fb
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353678"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930011"
 ---
 # <a name="handling-customization-notifications"></a>Manipulando notificações de personalização
 Um controle comum de barra de ferramentas do Windows tem recursos internos de personalização, incluindo uma caixa de diálogo de personalização definidas pelo sistema que permitem ao usuário inserir, excluir ou reorganizar os botões da barra de ferramentas. O aplicativo determina se os recursos de personalização estão disponíveis e que controla a extensão aos quais o usuário pode personalizar a barra de ferramentas.  
   
- Você pode disponibilizar esses recursos de personalização para o usuário, fornecendo a barra de ferramentas de `CCS_ADJUSTABLE` estilo. Os recursos de personalização permitem ao usuário arrastar um botão para uma nova posição ou para remover um botão arrastando-a da barra de ferramentas. Além disso, o usuário pode clicar duas vezes a barra de ferramentas para exibir o **Personalizar barra de ferramentas** caixa de diálogo que permite que o usuário adicionar, excluir e reorganizar os botões da barra de ferramentas. O aplicativo pode exibir a caixa de diálogo usando o [personalizar](../mfc/reference/ctoolbarctrl-class.md#customize) função de membro.  
+ Você pode disponibilizar esses recursos de personalização para o usuário, fornecendo a barra de ferramentas de **CCS_ADJUSTABLE** estilo. Os recursos de personalização permitem ao usuário arrastar um botão para uma nova posição ou para remover um botão arrastando-a da barra de ferramentas. Além disso, o usuário pode clicar duas vezes a barra de ferramentas para exibir o **Personalizar barra de ferramentas** caixa de diálogo que permite que o usuário adicionar, excluir e reorganizar os botões da barra de ferramentas. O aplicativo pode exibir a caixa de diálogo usando o [personalizar](../mfc/reference/ctoolbarctrl-class.md#customize) função de membro.  
   
  O controle de barra de ferramentas envia mensagens de notificação para a janela pai em cada etapa no processo de personalização. Se o usuário mantiver a tecla SHIFT pressionada e começa a arrastar um botão, a barra de ferramentas controla automaticamente a operação de arrastar. A barra de ferramentas envia o **TBN_QUERYDELETE** mensagem de notificação para a janela pai para determinar se o botão pode ser excluído. A operação de arrastar será encerrado se a janela pai retorna **FALSE**. Caso contrário, a barra de ferramentas de captura a entrada do mouse e aguarda até que o usuário liberar o botão do mouse.  
   
@@ -165,7 +165,7 @@ Um controle comum de barra de ferramentas do Windows tem recursos internos de pe
  Índice do botão associado à notificação.  
   
  **tbButton**  
- `TBBUTTON` estrutura que contém informações sobre o botão da barra de ferramentas associado à notificação.  
+ **TBBUTTON** estrutura que contém informações sobre o botão da barra de ferramentas associado à notificação.  
   
  **cchText**  
  Contagem de caracteres no texto do botão.  

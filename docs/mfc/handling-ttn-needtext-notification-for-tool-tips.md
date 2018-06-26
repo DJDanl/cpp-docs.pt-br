@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7a4d6dc6edf122b5d9b5301768dea8389e771e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5879082ddc23630e5ee497d8abf6b65873a2b6d4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345911"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931958"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Manipulando notificação TTN_NEEDTEXT para dicas de ferramenta
 Como parte do [habilitando dicas de ferramenta](../mfc/enabling-tool-tips.md), manipular o **TTN_NEEDTEXT** mensagem adicionando a seguinte entrada ao mapa de mensagem da janela do proprietário:  
@@ -48,7 +48,7 @@ Como parte do [habilitando dicas de ferramenta](../mfc/enabling-tool-tips.md), m
  Um ponteiro para o [NMTTDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760258) estrutura. Essa estrutura também é discutida mais [a estrutura de TOOLTIPTEXT](../mfc/tooltiptext-structure.md).  
   
  `pResult`  
- Um ponteiro para o código de resultado que você pode definir antes de retornar. **TTN_NEEDTEXT** manipuladores podem ignorar o `pResult` parâmetro.  
+ Um ponteiro para o código de resultado que você pode definir antes de retornar. **TTN_NEEDTEXT** manipuladores podem ignorar o *pResult* parâmetro.  
   
  Como um exemplo de um manipulador de notificação de exibição de formulário:  
   

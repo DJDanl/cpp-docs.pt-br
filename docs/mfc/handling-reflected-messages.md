@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05b5f62169d2b65010ec75ab8c8b5c30959b77b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b317f4c1b55e04f61aa0639bbd6953e5f36187a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348967"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931834"
 ---
 # <a name="handling-reflected-messages"></a>Manipulando mensagens refletidas
-Mensagem de reflexão permite que você manipule as mensagens para um controle, como `WM_CTLCOLOR`, **WM_COMMAND**, e **WM_NOTIFY**, no próprio controle. Isso torna o controle mais portátil e autossuficiente. O mecanismo funciona com controles comuns do Windows, bem como com controles ActiveX (anteriormente chamado de controles OLE).  
+Mensagem de reflexão permite que você manipule as mensagens para um controle, como **WM_CTLCOLOR**, **WM_COMMAND**, e **WM_NOTIFY**, no próprio controle. Isso torna o controle mais portátil e autossuficiente. O mecanismo funciona com controles comuns do Windows, bem como com controles ActiveX (anteriormente chamado de controles OLE).  
   
  Mensagem de reflexão permite que você reutilize o `CWnd`-classes derivadas mais rapidamente. Reflexão funciona por meio de mensagem [CWnd::OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify), usando especial **ON_XXX_REFLECT** entradas do mapa de mensagem: por exemplo, **ON_CTLCOLOR_REFLECT** e **ON_CONTROL_REFLECT**. [62 de observação técnica](../mfc/tn062-message-reflection-for-windows-controls.md) explica reflexão de mensagem em mais detalhes.  
   

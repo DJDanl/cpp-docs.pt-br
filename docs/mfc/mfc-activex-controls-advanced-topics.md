@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99480a8d77aef1822034be100a03f73cfa9d1be0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354012"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929998"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Controles ActiveX MFC: tópicos avançados
 Este artigo aborda tópicos avançados relacionados ao desenvolvimento de controles ActiveX. Elas incluem:  
@@ -79,9 +79,9 @@ Este artigo aborda tópicos avançados relacionados ao desenvolvimento de contro
   
 8.  No **obter função** e **função Set** caixas, digite os nomes exclusivos para o Get e definir funções ou aceite os nomes padrão.  
   
-9. Adicionar um parâmetro chamado `row` (tipo `short`) usando o **nome do parâmetro** e **tipo de parâmetro** controles.  
+9. Adicionar um parâmetro chamado *linha* (tipo *curto*) usando o **nome do parâmetro** e **tipo de parâmetro** controles.  
   
-10. Adicionar um segundo parâmetro chamado `column` (tipo `short`).  
+10. Adicionar um segundo parâmetro chamado *coluna* (tipo *curto*).  
   
 11. Clique em **Finalizar**.  
   
@@ -111,48 +111,48 @@ Este artigo aborda tópicos avançados relacionados ao desenvolvimento de contro
   
 |Erro|Descrição|  
 |-----------|-----------------|  
-|**CTL_E_ILLEGALFUNCTIONCALL**|Chamada de função ilegal|  
-|**CTL_E_OVERFLOW**|Estouro|  
-|**CTL_E_OUTOFMEMORY**|Memória insuficiente|  
-|**CTL_E_DIVISIONBYZERO**|Divisão por zero|  
-|**CTL_E_OUTOFSTRINGSPACE**|Sem espaço de cadeia de caracteres|  
-|**CTL_E_OUTOFSTACKSPACE**|Espaço de pilha|  
-|**CTL_E_BADFILENAMEORNUMBER**|Nome ou número de arquivo inválido|  
-|**CTL_E_FILENOTFOUND**|Arquivo não encontrado|  
-|**CTL_E_BADFILEMODE**|Modo de arquivo inválido|  
-|**CTL_E_FILEALREADYOPEN**|Arquivo já aberto|  
-|**CTL_E_DEVICEIOERROR**|Erro de E/S do dispositivo|  
-|**CTL_E_FILEALREADYEXISTS**|O arquivo já existe|  
-|**CTL_E_BADRECORDLENGTH**|Comprimento de registro inválido|  
-|**CTL_E_DISKFULL**|Disco cheio|  
-|**CTL_E_BADRECORDNUMBER**|Número de registro incorreto|  
-|**CTL_E_BADFILENAME**|Nome de arquivo inválido|  
-|**CTL_E_TOOMANYFILES**|Muitos arquivos|  
-|**CTL_E_DEVICEUNAVAILABLE**|Dispositivo não disponível|  
-|**CTL_E_PERMISSIONDENIED**|Permissão negada|  
-|**CTL_E_DISKNOTREADY**|Disco não está pronto|  
-|**CTL_E_PATHFILEACCESSERROR**|Erro de acesso caminho/arquivo|  
-|**CTL_E_PATHNOTFOUND**|demarcador não localizado|  
-|**CTL_E_INVALIDPATTERNSTRING**|Cadeia de caracteres de padrão inválido|  
-|**CTL_E_INVALIDUSEOFNULL**|Uso inválido de NULL|  
-|**CTL_E_INVALIDFILEFORMAT**|Formato de arquivo inválido|  
-|**CTL_E_INVALIDPROPERTYVALUE**|Valor de propriedade inválido|  
-|**CTL_E_INVALIDPROPERTYARRAYINDEX**|Índice de matriz de propriedade inválido|  
-|**CTL_E_SETNOTSUPPORTEDATRUNTIME**|Conjunto não tem suportado em tempo de execução|  
-|**CTL_E_SETNOTSUPPORTED**|Definições não suportadas (propriedade somente leitura)|  
-|**CTL_E_NEEDPROPERTYARRAYINDEX**|Índice da matriz de propriedade necessário|  
-|**CTL_E_SETNOTPERMITTED**|Set não permitido|  
-|**CTL_E_GETNOTSUPPORTEDATRUNTIME**|Obter não tem suporte em tempo de execução|  
-|**CTL_E_GETNOTSUPPORTED**|Obter sem suporte (propriedade de somente gravação)|  
-|**CTL_E_PROPERTYNOTFOUND**|Propriedade não localizada|  
-|**CTL_E_INVALIDCLIPBOARDFORMAT**|Formato inválido de área de transferência|  
-|**CTL_E_INVALIDPICTURE**|Imagem inválida|  
-|**CTL_E_PRINTERERROR**|Erro de impressora|  
-|**CTL_E_CANTSAVEFILETOTEMP**|Não é possível salvar o arquivo no diretório TEMP|  
-|**CTL_E_SEARCHTEXTNOTFOUND**|Texto de pesquisa não encontrado|  
-|**CTL_E_REPLACEMENTSTOOLONG**|Substituições muito longos|  
+|CTL_E_ILLEGALFUNCTIONCALL|Chamada de função ilegal|  
+|CTL_E_OVERFLOW|Estouro|  
+|CTL_E_OUTOFMEMORY|Memória insuficiente|  
+|CTL_E_DIVISIONBYZERO|Divisão por zero|  
+|CTL_E_OUTOFSTRINGSPACE|Sem espaço de cadeia de caracteres|  
+|CTL_E_OUTOFSTACKSPACE|Espaço de pilha|  
+|CTL_E_BADFILENAMEORNUMBER|Nome ou número de arquivo inválido|  
+|CTL_E_FILENOTFOUND|Arquivo não encontrado|  
+|CTL_E_BADFILEMODE|Modo de arquivo inválido|  
+|CTL_E_FILEALREADYOPEN|Arquivo já aberto|  
+|CTL_E_DEVICEIOERROR|Erro de E/S do dispositivo|  
+|CTL_E_FILEALREADYEXISTS|O arquivo já existe|  
+|CTL_E_BADRECORDLENGTH|Comprimento de registro inválido|  
+|CTL_E_DISKFULL|Disco cheio|  
+|CTL_E_BADRECORDNUMBER|Número de registro incorreto|  
+|CTL_E_BADFILENAME|Nome de arquivo inválido|  
+|CTL_E_TOOMANYFILES|Muitos arquivos|  
+|CTL_E_DEVICEUNAVAILABLE|Dispositivo não disponível|  
+|CTL_E_PERMISSIONDENIED|Permissão negada|  
+|CTL_E_DISKNOTREADY|Disco não está pronto|  
+|CTL_E_PATHFILEACCESSERROR|Erro de acesso caminho/arquivo|  
+|CTL_E_PATHNOTFOUND|demarcador não localizado|  
+|CTL_E_INVALIDPATTERNSTRING|Cadeia de caracteres de padrão inválido|  
+|CTL_E_INVALIDUSEOFNULL|Uso inválido de NULL|  
+|CTL_E_INVALIDFILEFORMAT|Formato de arquivo inválido|  
+|CTL_E_INVALIDPROPERTYVALUE|Valor de propriedade inválido|  
+|CTL_E_INVALIDPROPERTYARRAYINDEX|Índice de matriz de propriedade inválido|  
+|CTL_E_SETNOTSUPPORTEDATRUNTIME|Conjunto não tem suportado em tempo de execução|  
+|CTL_E_SETNOTSUPPORTED|Definições não suportadas (propriedade somente leitura)|  
+|CTL_E_NEEDPROPERTYARRAYINDEX|Índice da matriz de propriedade necessário|  
+|CTL_E_SETNOTPERMITTED|Set não permitido|  
+|CTL_E_GETNOTSUPPORTEDATRUNTIME|Obter não tem suporte em tempo de execução|  
+|CTL_E_GETNOTSUPPORTED|Obter sem suporte (propriedade de somente gravação)|  
+|CTL_E_PROPERTYNOTFOUND|Propriedade não localizada|  
+|CTL_E_INVALIDCLIPBOARDFORMAT|Formato inválido de área de transferência|  
+|CTL_E_INVALIDPICTURE|Imagem inválida|  
+|CTL_E_PRINTERERROR|Erro de impressora|  
+|CTL_E_CANTSAVEFILETOTEMP|Não é possível salvar o arquivo no diretório TEMP|  
+|CTL_E_SEARCHTEXTNOTFOUND|Texto de pesquisa não encontrado|  
+|CTL_E_REPLACEMENTSTOOLONG|Substituições muito longos|  
   
- Se necessário, use o **CUSTOM_CTL_SCODE** macro para definir um código de erro personalizado para uma condição que não é coberto por um dos códigos de padrão. O parâmetro para esta macro deve ser um inteiro entre 1000 e 32767, inclusive. Por exemplo:  
+ Se necessário, use a macro CUSTOM_CTL_SCODE para definir um código de erro personalizado para uma condição que não é coberto por um dos códigos de padrão. O parâmetro para esta macro deve ser um inteiro entre 1000 e 32767, inclusive. Por exemplo:  
   
  [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]  
   
@@ -176,7 +176,7 @@ Este artigo aborda tópicos avançados relacionados ao desenvolvimento de contro
   
      -ou-  
   
--   Declare uma variável local e da subclasse como o item de caixa de diálogo. Inserir código semelhante ao seguinte (`CMyCtrl` é a classe de invólucro, `IDC_MYCTRL1` é a identificação do controle):  
+-   Declare uma variável local e da subclasse como o item de caixa de diálogo. Inserir código semelhante ao seguinte (`CMyCtrl` é a classe de invólucro, IDC_MYCTRL1 é a identificação do controle):  
   
      [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]  
   

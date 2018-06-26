@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74398d731c51223ea74fc6b827b0626af89286b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44b34c2e2d22d0a0a2feb15f6bf2793b68dc7042
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342914"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929563"
 ---
 # <a name="-attributes-comment"></a>// Comentário sobre atributos
 O `// Attributes` seção de uma declaração de classe MFC contém os atributos públicos (ou propriedades) do objeto. Normalmente, esses são variáveis de membro, ou funções de Get/Set. As funções de "Get" e "Set" podem ou não ser virtuais. As funções de "Get" normalmente são **const**, pois na maioria dos casos eles não têm efeitos colaterais. Esses membros são normalmente públicos; atributos protegidos e privados são geralmente encontrados na seção de implementação.  
   
- No exemplo a listagem da classe `CStdioFile`, em [um exemplo dos comentários](../mfc/an-example-of-the-comments.md), a lista inclui uma variável de membro, `m_pStream`. Classe `CDC` lista aproximadamente 20 membros sob esse comentário.  
+ No exemplo a listagem da classe `CStdioFile`, em [um exemplo dos comentários](../mfc/an-example-of-the-comments.md), a lista inclui uma variável de membro, *m_pStream*. Classe `CDC` lista aproximadamente 20 membros sob esse comentário.  
   
 > [!NOTE]
 >  Classes de grande, como `CDC` e `CWnd`, pode ter muitos membros que simplesmente lista todos os atributos em um grupo não adicionaria muito para maior clareza. Nesses casos, a biblioteca de classes usa outros comentários como títulos para delimitar ainda mais os membros. Por exemplo, `CDC` usa `// Device-Context Functions`, `// Drawing Tool Functions`, `// Drawing Attribute Functions`e muito mais. Grupos que representam atributos seguirá a sintaxe normal descrita acima. Muitas classes OLE tem uma seção de implementação chamada `// Interface Maps`.  

@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430af2344888696e3cbf053677ef59c7249b50bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 317527d87c12a0c140c4a618ec4500dbe12bb003
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352783"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931883"
 ---
 # <a name="docking-and-floating-toolbars"></a>Encaixando e flutuando barras de ferramentas
 A biblioteca Microsoft Foundation Class suporta encaixáveis barras de ferramentas. Uma barra de ferramentas encaixável pode ser anexada ou encaixada, para qualquer lado da sua janela pai, ou pode ser desanexado, ou flutuante, em sua própria janela do quadro simplificado. Este artigo explica como usar as barras de ferramentas encaixáveis em seus aplicativos.  
@@ -62,7 +62,7 @@ A biblioteca Microsoft Foundation Class suporta encaixáveis barras de ferrament
  Consulte o exemplo de MFC geral [DOCKTOOL](../visual-cpp-samples.md) para obter exemplos.  
   
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> Ativar encaixe em uma janela com moldura  
- Para encaixar barras de ferramentas em uma janela do quadro, a janela do quadro (ou o destino) deve ser habilitado para permitir encaixe. Isso é feito usando o [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) função, que usa uma `DWORD` parâmetro que é um conjunto de estilo de bits que indica qual lado da janela do quadro aceita de encaixe. Se uma barra de ferramentas está prestes a ser encaixado e houver vários lados que ele poderia ser encaixado, os lados indicado no parâmetro passado para `EnableDocking` são usados na seguinte ordem: superior, inferior, esquerda, direita. Se você deseja ser capaz de controle de encaixe barras em qualquer lugar, transmitir `CBRS_ALIGN_ANY` para `EnableDocking`.  
+ Para encaixar barras de ferramentas em uma janela do quadro, a janela do quadro (ou o destino) deve ser habilitado para permitir encaixe. Isso é feito usando o [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) função, que usa uma *DWORD* parâmetro que é um conjunto de estilo de bits que indica qual lado da janela do quadro aceita de encaixe. Se uma barra de ferramentas está prestes a ser encaixado e houver vários lados que ele poderia ser encaixado, os lados indicado no parâmetro passado para `EnableDocking` são usados na seguinte ordem: superior, inferior, esquerda, direita. Se você deseja ser capaz de controle de encaixe barras em qualquer lugar, transmitir **CBRS_ALIGN_ANY** para `EnableDocking`.  
   
 ##  <a name="_core_enabling_docking_for_a_toolbar"></a> Ativar encaixe de uma barra de ferramentas  
  Depois de preparar o destino de encaixe, você deve preparar a barra de ferramentas (ou origem) de maneira semelhante. Chamar [CControlBar::EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking) para cada barra de ferramentas que você deseja encaixar, especificar o destino lados que deve encaixar a barra de ferramentas. Se nenhum dos lados especificados na chamada para `CControlBar::EnableDocking` corresponde os lados habilitados para a janela do quadro de encaixe, não é possível encaixar a barra de ferramentas — ela flutua. Quando tiver sido flutuante, ela permanece uma barra de ferramentas flutuante, não é possível encaixar a janela do quadro.  

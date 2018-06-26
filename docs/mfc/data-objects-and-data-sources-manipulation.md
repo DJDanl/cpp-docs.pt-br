@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f276e85be33f3042b19ab7dc6158a4e9f856fb2e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349903"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929855"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Objetos e origens de dados: manipulação
 Depois que um objeto de dados ou fonte de dados tiver sido criado, você pode executar várias operações comuns nos dados, como inserção e remoção de dados, enumerando os formatos de que dados se encontra e muito mais. Este artigo descreve as técnicas necessárias para concluir as operações mais comuns. Os tópicos incluem:  
@@ -73,7 +73,7 @@ Depois que um objeto de dados ou fonte de dados tiver sido criado, você pode ex
   
     -   Chamar o objeto de dados `BeginEnumFormats` a função de membro para enumerar os formatos disponíveis na área de transferência. Em seguida, chamar `GetNextFormat` até retorna a área de transferência dá suporte a um formato de seu aplicativo ou não há mais formatos.  
   
- Se você estiver usando `ON_UPDATE_COMMAND_UI`, agora você pode habilitar a colar e, possivelmente, itens de colar especial no menu Editar. Para fazer isso, chame `CMenu::EnableMenuItem` ou `CCmdUI::Enable`. Para obter mais informações sobre o contêiner aplicativos devem fazer com itens de menu e quando, consulte [Menus e recursos: adições de contêiner](../mfc/menus-and-resources-container-additions.md).  
+ Se você estiver usando **ON_UPDATE_COMMAND_UI**, agora você pode habilitar a colar e, possivelmente, itens de colar especial no menu Editar. Para fazer isso, chame `CMenu::EnableMenuItem` ou `CCmdUI::Enable`. Para obter mais informações sobre o contêiner aplicativos devem fazer com itens de menu e quando, consulte [Menus e recursos: adições de contêiner](../mfc/menus-and-resources-container-additions.md).  
   
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> Recuperando dados de um objeto de dados  
  Depois de ter decidido em um formato de dados, tudo o que resta é recuperar os dados do objeto de dados. Para fazer isso, o usuário decidir onde colocar os dados e o aplicativo chama a função apropriada. Os dados estarão disponíveis em um dos meios a seguir:  

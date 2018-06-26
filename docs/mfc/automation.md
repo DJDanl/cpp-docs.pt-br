@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce325073d8a1585ffa9e520cebdfc372280306d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdd62c73c099cbae8a21c82cca55cb8430d7fd04
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345875"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930596"
 ---
 # <a name="automation"></a>Automação
 Automação (anteriormente conhecida como automação OLE) possibilita que um aplicativo para manipular objetos implementados em outro aplicativo ou para expor os objetos para que eles podem ser manipulados.  
@@ -57,7 +57,7 @@ Automação (anteriormente conhecida como automação OLE) possibilita que um ap
  Muitos aplicativos comerciais, como Microsoft Excel e o Microsoft Visual C++ permitem automatizar grande parte de sua funcionalidade. Por exemplo, no Visual C++, você pode escrever macros de VBScript para automatizar compilações, aspectos do código de edição ou tarefas de depuração.  
   
 ##  <a name="_core_passing_parameters_in_automation"></a> Passando parâmetros de automação  
- Uma dificuldade durante a criação de métodos de automação está ajudando a fornecem um mecanismo de "seguro" uniforme para passar dados entre clientes e servidores de automação. Automação usa o **VARIANT** tipo para passar dados. O **VARIANT** tipo é uma união marcada. Ele tem um membro de dados para o valor (Esta é uma união anônima do C++) e um membro de dados que indica o tipo de informações armazenadas na União. O **VARIANT** tipo oferece suporte a vários tipos de dados padrão: inteiros de 2 e 4 bytes e valores booleanos, cadeias de caracteres e números de ponto flutuante de 4 e 8 bytes. Além disso, ele dá suporte a `HRESULT` (códigos de erro OLE), **moeda** (um ponto fixo tipo numérico), e **data** tipos (absoluta data e hora), bem como ponteiros para **IUnknown**  e `IDispatch` interfaces.  
+ Uma dificuldade durante a criação de métodos de automação está ajudando a fornecem um mecanismo de "seguro" uniforme para passar dados entre clientes e servidores de automação. Automação usa o **VARIANT** tipo para passar dados. O **VARIANT** tipo é uma união marcada. Ele tem um membro de dados para o valor (Esta é uma união anônima do C++) e um membro de dados que indica o tipo de informações armazenadas na União. O **VARIANT** tipo oferece suporte a vários tipos de dados padrão: inteiros de 2 e 4 bytes e valores booleanos, cadeias de caracteres e números de ponto flutuante de 4 e 8 bytes. Além disso, ele dá suporte a **HRESULT** (códigos de erro OLE), **moeda** (um ponto fixo tipo numérico), e **data** tipos (absoluta data e hora), bem como ponteiros para `IUnknown` e `IDispatch` interfaces.  
   
  O **VARIANT** tipo é encapsulado no [COleVariant](../mfc/reference/colevariant-class.md) classe. O suporte **moeda** e **data** encapsuladas em classes de [COleCurrency](../mfc/reference/colecurrency-class.md) e [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) classes.  
   

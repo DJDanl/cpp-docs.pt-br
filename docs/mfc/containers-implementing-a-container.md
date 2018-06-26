@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3693cb7d52a048045f4745b69b45cacc4defc75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 066c032a18b2fedc88884b7e6eee55f07fcf43ad
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342824"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930069"
 ---
 # <a name="containers-implementing-a-container"></a>Contêineres: implementando um contêiner
 Este artigo resume o procedimento para implementar um contêiner e direciona para outros artigos que fornecem que mais detalhadas explicações sobre a implementação de contêineres. Ela também lista alguns recursos opcionais do OLE, que talvez você queira implementar e os artigos que descrevem esses recursos.  
   
 #### <a name="to-prepare-your-cwinapp-derived-class"></a>Para preparar sua classe derivada de CWinApp  
   
-1.  Inicializar as bibliotecas OLE chamando **AfxOleInit** no `InitInstance` função de membro.  
+1.  Inicializar as bibliotecas OLE chamando `AfxOleInit` no `InitInstance` função de membro.  
   
 2.  Chamar `CDocTemplate::SetContainerInfo` na `InitInstance` para atribuir o menu e o Acelerador de recursos usados quando um item inserido está ativado no local. Para obter mais informações sobre este tópico, consulte [ativação](../mfc/activation-cpp.md).  
   
@@ -39,7 +39,7 @@ Este artigo resume o procedimento para implementar um contêiner e direciona par
   
 2.  Substituir `IsSelected` para verificar se o item passado para ele no momento está selecionado.  
   
-3.  Implementar um **OnInsertObject** manipulador de mensagem para exibir o **Inserir objeto** caixa de diálogo.  
+3.  Implementar um `OnInsertObject` manipulador de mensagem para exibir o **Inserir objeto** caixa de diálogo.  
   
 4.  Implementar um `OnSetFocus` mensagem manipulador para transferir o foco do modo de exibição para uma OLE active in-loco inseridos item.  
   
@@ -51,9 +51,9 @@ Este artigo resume o procedimento para implementar um contêiner e direciona par
   
 1.  Derive uma classe de [COleClientItem](../mfc/reference/coleclientitem-class.md). Objetos dessa classe representam os itens que foram incorporados ou vinculados ao documento OLE.  
   
-2.  Substituir **OnChange**, `OnChangeItemPosition`, e `OnGetItemPosition`. Lidar com essas funções de dimensionamento, posicionamento e modificar os itens incorporados e vinculados.  
+2.  Substituir `OnChange`, `OnChangeItemPosition`, e `OnGetItemPosition`. Lidar com essas funções de dimensionamento, posicionamento e modificar os itens incorporados e vinculados.  
   
- O Assistente de aplicativo derivará a classe para você, mas provavelmente você precisará substituir **OnChange** e as outras funções listadas com ele na etapa 2 do procedimento anterior. As implementações de esqueleto precisam ser personalizado para a maioria dos aplicativos, porque essas funções são implementadas de forma diferente de um aplicativo para o próximo. Para obter exemplos de isso, consulte os exemplos MFC [DRAWCLI](../visual-cpp-samples.md) e [CONTÊINER](../visual-cpp-samples.md).  
+ O Assistente de aplicativo derivará a classe para você, mas provavelmente você precisará substituir `OnChange` e as outras funções listadas com ele na etapa 2 do procedimento anterior. As implementações de esqueleto precisam ser personalizado para a maioria dos aplicativos, porque essas funções são implementadas de forma diferente de um aplicativo para o próximo. Para obter exemplos de isso, consulte os exemplos MFC [DRAWCLI](../visual-cpp-samples.md) e [CONTÊINER](../visual-cpp-samples.md).  
   
  Você deve adicionar um número de itens a estrutura de menu do aplicativo de contêiner para dar suporte a OLE. Para obter mais informações sobre estas configurações, consulte [Menus e recursos: adições de contêiner](../mfc/menus-and-resources-container-additions.md).  
   

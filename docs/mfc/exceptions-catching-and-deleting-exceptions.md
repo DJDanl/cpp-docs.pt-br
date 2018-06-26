@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3527dabab96fe8f2832430f928a922941178ea97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29dea08d778ba91c5b8ab3a10aaff998095e7123
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345180"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928763"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Exceções: obtendo e excluindo exceções
-As instruções e os exemplos a seguir mostram como capturar e excluir exceções. Para obter mais informações sobre o **tente**, **catch**, e `throw` palavras-chave, consulte [manipulação de exceção C++](../cpp/cpp-exception-handling.md).  
+As instruções e os exemplos a seguir mostram como capturar e excluir exceções. Para obter mais informações sobre o **tente**, **catch**, e **gerar** palavras-chave, consulte [manipulação de exceção C++](../cpp/cpp-exception-handling.md).  
   
  Seus manipuladores de exceção devem excluir objetos de exceção tratam, pois a falha ao excluir a exceção faz com que um vazamento de memória sempre que esse código captura uma exceção.  
   
@@ -42,7 +42,7 @@ As instruções e os exemplos a seguir mostram como capturar e excluir exceçõe
 -   Retorna a execução de dentro do **catch** bloco.  
   
 > [!NOTE]
->  Ao excluir um `CException`, use o **excluir** a função de membro para excluir a exceção. Não use o **excluir** palavra-chave, pois ele pode falhar se a exceção não estiver na pilha.  
+>  Ao excluir um `CException`, use o `Delete` a função de membro para excluir a exceção. Não use o **excluir** palavra-chave, pois ele pode falhar se a exceção não estiver na pilha.  
   
 #### <a name="to-catch-and-delete-exceptions"></a>Capturar e excluir exceções  
   

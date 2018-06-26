@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c28fd1d628d0aed79028e43d9cce383f3acbb4ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67004ac43193d47720626da241a8030ba396abdf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342141"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932011"
 ---
 # <a name="clipboard-adding-other-formats"></a>Área de Transferência: adicionando outros formatos
-Este tópico explica como expandir a lista de formatos com suporte, principalmente para suporte OLE. O tópico [área de transferência: copiar e colar dados](../mfc/clipboard-copying-and-pasting-data.md) descreve a implementação mínimo necessária para dar suporte a copiar e colar da área de transferência. Se isso é tudo o que você implementar, são os únicos formatos colocados na área de transferência `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**e possivelmente `CF_LINKSOURCE`. A maioria dos aplicativos será necessário mais formatos na área de transferência que esses três.  
+Este tópico explica como expandir a lista de formatos com suporte, principalmente para suporte OLE. O tópico [área de transferência: copiar e colar dados](../mfc/clipboard-copying-and-pasting-data.md) descreve a implementação mínimo necessária para dar suporte a copiar e colar da área de transferência. Se isso é tudo o que você implementar, são os únicos formatos colocados na área de transferência **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**e possivelmente **CF_LINKSOURCE**. A maioria dos aplicativos será necessário mais formatos na área de transferência que esses três.  
   
 ##  <a name="_core_registering_custom_formats"></a> Formatos de registro personalizadas  
  Para criar formatos personalizados, siga o mesmo procedimento, você usaria ao registrar qualquer formato personalizado de área de transferência: passe o nome do formato para o **RegisterClipboardFormat** de função e usar seu valor de retorno como a ID de formato.  

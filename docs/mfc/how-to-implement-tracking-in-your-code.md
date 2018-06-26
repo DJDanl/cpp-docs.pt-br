@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae9696be10ab00a076a73c14281a9baabe3d6d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc21369dd8d241bd00da2a0a8005c977094c3abf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349730"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932088"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>Como implementar o acompanhamento no código
 Para rastrear um item OLE, você deve tratar determinados eventos relacionados ao item, como clicando no item ou atualizando a exibição do documento. Em todos os casos, é suficiente declarar um temporário [CRectTracker](../mfc/reference/crecttracker-class.md) do objeto e manipular o item por meio desse objeto.  
@@ -36,7 +36,7 @@ Para rastrear um item OLE, você deve tratar determinados eventos relacionados a
 |Borda tracejada|Item está ativo no momento no local|  
 |Item de sobreposições de padrão de hachura|Servidor do item está aberta|  
   
- Você pode tratar essa inicialização facilmente usando um procedimento que verifica o estado do item OLE e define os estilos apropriados. O **SetupTracker** função encontrada no exemplo OCLIENT demonstra a inicialização do controlador. Os parâmetros para esta função são o endereço do controlador, *pTracker*; um ponteiro para o item de cliente que está relacionado ao controlador, `pItem`; e um ponteiro para um retângulo, *pTrueRect*. Para obter um exemplo mais completo dessa função, consulte o exemplo OLE do MFC [OCLIENT](../visual-cpp-samples.md).  
+ Você pode tratar essa inicialização facilmente usando um procedimento que verifica o estado do item OLE e define os estilos apropriados. O `SetupTracker` função encontrada no exemplo OCLIENT demonstra a inicialização do controlador. Os parâmetros para esta função são o endereço do controlador, *pTracker*; um ponteiro para o item de cliente que está relacionado ao controlador, *pItem*; e um ponteiro para um retângulo, *pTrueRect* . Para obter um exemplo mais completo dessa função, consulte o exemplo OLE do MFC [OCLIENT](../visual-cpp-samples.md).  
   
  O **SetupTracker** código de exemplo apresenta uma única função, linhas da função são intercaladas com a discussão sobre os recursos da função:  
   
@@ -54,9 +54,9 @@ Para rastrear um item OLE, você deve tratar determinados eventos relacionados a
   
  [!code-cpp[NVC_MFCOClient#4](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_4.cpp)]  
   
- Em seguida, você pode chamar essa função sempre que o controlador tem a ser exibido. Por exemplo, chamar essa função do `OnDraw` função da sua classe de exibição. Isso atualiza a aparência do rastreador sempre que o modo de exibição é redesenhado. Para obter um exemplo completo, consulte o **CMainView::OnDraw** função MFC OLE do exemplo de [OCLIENT](../visual-cpp-samples.md).  
+ Em seguida, você pode chamar essa função sempre que o controlador tem a ser exibido. Por exemplo, chamar essa função do `OnDraw` função da sua classe de exibição. Isso atualiza a aparência do rastreador sempre que o modo de exibição é redesenhado. Para obter um exemplo completo, consulte o `CMainView::OnDraw` função MFC OLE do exemplo de [OCLIENT](../visual-cpp-samples.md).  
   
- Em seu aplicativo, os eventos que requerem o código do controlador, como detecção de ocorrências, redimensionamento ou movimentação, ocorrerá. Essas ações geralmente indicam que está sendo feita uma tentativa de obter ou mover o item. Nesses casos, você precisará decidir o que foi capturado: uma alça de redimensionamento ou uma parte da borda entre alças de redimensionamento. O `OnLButtonDown` manipulador de mensagens é um bom lugar para testar a posição do mouse em relação ao item. Fazer uma chamada para `CRectTracker::HitTest`. Se o teste retorna algo além **CRectTracker::hitOutside**, o item está sendo redimensionado ou movido. Portanto, você deve fazer uma chamada para o `Track` função de membro. Consulte o **CMainView::OnLButtonDown** função localizada no MFC OLE exemplo [OCLIENT](../visual-cpp-samples.md) para obter um exemplo completo.  
+ Em seu aplicativo, os eventos que requerem o código do controlador, como detecção de ocorrências, redimensionamento ou movimentação, ocorrerá. Essas ações geralmente indicam que está sendo feita uma tentativa de obter ou mover o item. Nesses casos, você precisará decidir o que foi capturado: uma alça de redimensionamento ou uma parte da borda entre alças de redimensionamento. O `OnLButtonDown` manipulador de mensagens é um bom lugar para testar a posição do mouse em relação ao item. Fazer uma chamada para `CRectTracker::HitTest`. Se o teste retorna algo além `CRectTracker::hitOutside`, o item está sendo redimensionado ou movido. Portanto, você deve fazer uma chamada para o `Track` função de membro. Consulte o `CMainView::OnLButtonDown` função localizada no MFC OLE exemplo [OCLIENT](../visual-cpp-samples.md) para obter um exemplo completo.  
   
  O `CRectTracker` classe fornece várias formas diferentes de cursor usadas para indicar se um mover, redimensionar ou arraste operação está ocorrendo. Para lidar com esse evento, verifique se o item atualmente sob o mouse é selecionado. Se for, fazer uma chamada para `CRectTracker::SetCursor`, ou ligue para o manipulador padrão. O exemplo a seguir é um OLE do MFC exemplo de [OCLIENT](../visual-cpp-samples.md):  
   

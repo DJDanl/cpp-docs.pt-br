@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7026dd5ffaab04eb445ae68449127e65c772394
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de12a21c4b411f3cd1fe25d7d6badd8d26318351
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354083"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929806"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Controles ActiveX MFC: pintando um controle ActiveX
 Este artigo descreve o processo de pintura do controle ActiveX e como você pode alterar o código para otimizar o processo. (Consulte [otimizando o desenho de controle](../mfc/optimizing-control-drawing.md) para técnicas sobre como otimizar o desenho não tem controles individualmente restaurem objetos GDI selecionados anteriormente. Depois que todos os controles foi emitidos, o contêiner pode restaurar automaticamente os objetos originais.)  
@@ -38,7 +38,7 @@ Este artigo descreve o processo de pintura do controle ActiveX e como você pode
 ##  <a name="_core_the_painting_process_of_an_activex_control"></a> O processo de pintura de um controle ActiveX  
  Quando controles ActiveX são inicialmente exibidos ou são redesenhados, elas seguirão um processo de pintura semelhante a outros aplicativos desenvolvidos usando MFC, com uma diferença importante: os controles ActiveX podem estar em um ativo ou em um estado inativo.  
   
- Um controle ativo é representado em um contêiner de controle ActiveX por uma janela filho. Como outras janelas, ele é responsável por pintura em si quando um `WM_PAINT` mensagem é recebida. A classe base do controle, [COleControl](../mfc/reference/colecontrol-class.md), manipula esta mensagem no seu `OnPaint` função. Esta implementação padrão chama o `OnDraw` função do seu controle.  
+ Um controle ativo é representado em um contêiner de controle ActiveX por uma janela filho. Como outras janelas, ele é responsável por pintura em si, quando é recebida uma mensagem WM_PAINT. A classe base do controle, [COleControl](../mfc/reference/colecontrol-class.md), manipula esta mensagem no seu `OnPaint` função. Esta implementação padrão chama o `OnDraw` função do seu controle.  
   
  Um controle inativo é pintado diferente. Quando o controle estiver inativo, sua janela é invisível ou que não existe, portanto ele não pode receber uma mensagem de pintura. Em vez disso, o contêiner de controle chama diretamente o `OnDraw` função do controle. Isso é diferente do processo de pintura do controle de um ativo em que o `OnPaint` nunca é chamada de função de membro.  
   
@@ -63,12 +63,12 @@ Este artigo descreve o processo de pintura do controle ActiveX e como você pode
   
  A implementação padrão de controle ActiveX pintura pinta a área do controle inteiro. Isso é suficiente para controles simples, mas em muitos casos redesenho controle seria mais rápido se apenas a parte que é necessário atualizar foi pintada novamente, em vez de todo o controle.  
   
- O `OnDraw` função fornece um método fácil de otimização passando `rcInvalid`, a área retangular do controle precisa ser redesenhada. Use esta área, geralmente menor do que a área de controle inteiro, para acelerar o processo de pintura.  
+ O `OnDraw` função fornece um método fácil de otimização passando *rcInvalid*, a área retangular do controle precisa ser redesenhada. Use esta área, geralmente menor do que a área de controle inteiro, para acelerar o processo de pintura.  
   
 ##  <a name="_core_painting_your_control_using_metafiles"></a> Pintura seu controle usando metarquivos  
- Na maioria dos casos o `pdc` parâmetro para o `OnDraw` função aponta para um contexto de dispositivo de tela (DC). No entanto, ao imprimir imagens do controle ou durante uma sessão de visualização de impressão, o controlador de domínio recebida para a renderização é um tipo especial chamado "metarquivo DC". Ao contrário de uma tela de controlador de domínio, que trata as solicitações enviadas a ele imediatamente, um controlador de domínio de metarquivo armazena as solicitações a serem reproduzidas mais tarde. Alguns aplicativos de contêiner também podem optar por processar a imagem de controle usando um controlador de domínio no modo de design de metarquivo.  
+ Na maioria dos casos o *pdc* parâmetro para o `OnDraw` função aponta para um contexto de dispositivo de tela (DC). No entanto, ao imprimir imagens do controle ou durante uma sessão de visualização de impressão, o controlador de domínio recebida para a renderização é um tipo especial chamado "metarquivo DC". Ao contrário de uma tela de controlador de domínio, que trata as solicitações enviadas a ele imediatamente, um controlador de domínio de metarquivo armazena as solicitações a serem reproduzidas mais tarde. Alguns aplicativos de contêiner também podem optar por processar a imagem de controle usando um controlador de domínio no modo de design de metarquivo.  
   
- Metarquivo desenho solicitações pode ser feito pelo contêiner por meio de duas funções de interface: **IViewObject::Draw** (essa função também pode ser chamada para desenhar não-metarquivo) e **IDataObject::**. Quando um controlador de domínio é passado como um dos parâmetros de metarquivo, a estrutura MFC faz uma chamada para [COleControl::OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile). Como esta é uma função membro virtual, substitua essa função na classe de controle para fazer qualquer processamento especial. As chamadas do comportamento padrão `COleControl::OnDraw`.  
+ Metarquivo desenho solicitações pode ser feito pelo contêiner por meio de duas funções de interface: `IViewObject::Draw` (essa função também pode ser chamada para desenhar não-metarquivo) e `IDataObject::GetData`. Quando um controlador de domínio é passado como um dos parâmetros de metarquivo, a estrutura MFC faz uma chamada para [COleControl::OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile). Como esta é uma função membro virtual, substitua essa função na classe de controle para fazer qualquer processamento especial. As chamadas do comportamento padrão `COleControl::OnDraw`.  
   
  Para certificar-se de que o controle pode ser desenhado na tela e Metarquivo contextos de dispositivo, você deve usar apenas as funções de membro que têm suporte em uma tela e um controlador de domínio de metarquivo. Lembre-se de que o sistema de coordenadas não pode ser medido em pixels.  
   
@@ -76,11 +76,11 @@ Este artigo descreve o processo de pintura do controle ActiveX e como você pode
   
 |Arco|BibBlt|Corda|  
 |---------|------------|-----------|  
-|**Ellipse**|**Escape**|`ExcludeClipRect`|  
+|`Ellipse`|`Escape`|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
 |`OffsetViewportOrg`|`OffsetWindowOrg`|`PatBlt`|  
-|`Pie`|**polígono**|`Polyline`|  
+|`Pie`|`Polygon`|`Polyline`|  
 |`PolyPolygon`|`RealizePalette`|`RestoreDC`|  
 |`RoundRect`|`SaveDC`|`ScaleViewportExt`|  
 |`ScaleWindowExt`|`SelectClipRgn`|`SelectObject`|  
@@ -95,7 +95,7 @@ Este artigo descreve o processo de pintura do controle ActiveX e como você pode
   
  Funções que não são registradas em um metarquivo são: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)e [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Como um controlador de domínio de metarquivo não é realmente associado um dispositivo, você não pode usar SetDIBits, GetDIBits e CreateDIBitmap com um controlador de domínio de metarquivo. Você pode usar SetDIBitsToDevice e StretchDIBits com um controlador de domínio de metarquivo como o destino. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), e [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) não são significativos com um controlador de domínio de metarquivo.  
   
- Outro ponto a considerar ao usar um controlador de domínio de metarquivo é que o sistema de coordenadas não pode ser medido em pixels. Por esse motivo, todo o código de desenho deve ser ajustado para se ajustar no retângulo passado para `OnDraw` no `rcBounds` parâmetro. Isso impede que a pintura acidental fora do controle porque `rcBounds` representa o tamanho da janela do controle.  
+ Outro ponto a considerar ao usar um controlador de domínio de metarquivo é que o sistema de coordenadas não pode ser medido em pixels. Por esse motivo, todo o código de desenho deve ser ajustado para se ajustar no retângulo passado para `OnDraw` no *rcBounds* parâmetro. Isso impede que a pintura acidental fora do controle porque *rcBounds* representa o tamanho da janela do controle.  
   
  Depois que você implementou metarquivo renderização para o controle, use o contêiner de teste para testar o metarquivo. Consulte [testando propriedades e eventos com contêiner de teste](../mfc/testing-properties-and-events-with-test-container.md) para obter informações sobre como acessar o contêiner de teste.  
   

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be596ea38a8d0a3919ed43d9c5478bb0127032d9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 896977da8ca57cc17a9fa3b7864e1744ee07f35d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351716"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930817"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Manipuladores para intervalos de mapa da mensagem
 Este artigo explica como mapear um intervalo de mensagens para uma função de manipulador de mensagem única (em vez de mapeamento de uma mensagem para apenas uma função).  
@@ -96,7 +96,7 @@ Este artigo explica como mapear um intervalo de mensagens para uma função de m
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
   
- Funções do manipulador de comandos único normalmente não usam parâmetros. Com exceção das funções de manipulador de atualização, as funções de manipulador para intervalos de mapas de mensagem requerem um parâmetro extra, `nID`, do tipo **UINT**. Esse parâmetro é o primeiro parâmetro. O parâmetro extra acomoda a ID de comando adicionais necessária para especificar que o usuário escolheu realmente de comando.  
+ Funções do manipulador de comandos único normalmente não usam parâmetros. Com exceção das funções de manipulador de atualização, as funções de manipulador para intervalos de mapas de mensagem requerem um parâmetro extra, *nID*, do tipo **UINT**. Esse parâmetro é o primeiro parâmetro. O parâmetro extra acomoda a ID de comando adicionais necessária para especificar que o usuário escolheu realmente de comando.  
   
  Para obter mais informações sobre requisitos de parâmetros para funções de manipulador de atualização, consulte [para um intervalo de IDs de comando de exemplo](#_core_example_for_a_range_of_command_ids).  
   
@@ -109,7 +109,7 @@ Este artigo explica como mapear um intervalo de mensagens para uma função de m
   
 -   Dois IDs, abertura e fechamento de um intervalo contíguo de comando.  
   
-     Aqui estão elas `ID_VIEW_ZOOM25` e `ID_VIEW_ZOOM300`.  
+     Aqui estão elas **ID_VIEW_ZOOM25** e **ID_VIEW_ZOOM300**.  
   
 -   O nome da função de manipulador para os comandos.  
   
@@ -119,9 +119,9 @@ Este artigo explica como mapear um intervalo de mensagens para uma função de m
   
  [!code-cpp[NVC_MFCMessageHandling#9](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_4.h)]  
   
- No caso de funções de manipulador de atualização é semelhante e provavelmente serão mais úteis. É muito comum gravar `ON_UPDATE_COMMAND_UI` manipuladores para um número de comandos e perceber que está gravando ou cópia, o mesmo código repetidamente. A solução é mapear um intervalo de IDs para um uso da função de manipulador de atualização de comando do `ON_UPDATE_COMMAND_UI_RANGE` macro. As IDs de comando devem formar um intervalo contíguo. Para obter um exemplo, consulte o **OnUpdateZoom** manipulador e sua `ON_UPDATE_COMMAND_UI_RANGE` entrada de mapa de mensagens na classe de exibição do exemplo HIERSVR.  
+ No caso de funções de manipulador de atualização é semelhante e provavelmente serão mais úteis. É muito comum gravar `ON_UPDATE_COMMAND_UI` manipuladores para um número de comandos e perceber que está gravando ou cópia, o mesmo código repetidamente. A solução é mapear um intervalo de IDs para um uso da função de manipulador de atualização de comando do `ON_UPDATE_COMMAND_UI_RANGE` macro. As IDs de comando devem formar um intervalo contíguo. Para obter um exemplo, consulte o `OnUpdateZoom` manipulador e sua `ON_UPDATE_COMMAND_UI_RANGE` entrada de mapa de mensagens na classe de exibição do exemplo HIERSVR.  
   
- Atualizar funções de manipulador de comandos único normalmente têm um único parâmetro, `pCmdUI`, do tipo **CCmdUI\***. Diferente das funções de manipulador, funções de manipulador de atualização para intervalos de mapas de mensagem não exigem um parâmetro extra, `nID`, do tipo **UINT**. A ID de comando, que é necessário para especificar quais comandos que o usuário realmente escolhido, foi encontrada no `CCmdUI` objeto.  
+ Atualizar funções de manipulador de comandos único normalmente têm um único parâmetro, *pCmdUI*, do tipo `CCmdUI*`. Diferente das funções de manipulador, funções de manipulador de atualização para intervalos de mapas de mensagem não exigem um parâmetro extra, *nID*, do tipo **UINT**. A ID de comando, que é necessário para especificar quais comandos que o usuário realmente escolhido, foi encontrada no `CCmdUI` objeto.  
   
 ##  <a name="_core_example_for_a_range_of_control_ids"></a> Exemplo de um controle de intervalo de IDs  
  Outro caso interessante está mapeando mensagens de notificação de controle para um intervalo de IDs de controle para um único manipulador. Suponha que o usuário pode clicar em qualquer um dos botões de 10. Para mapear todos os botões de 10 para um manipulador, sua entrada de mapa de mensagem teria esta aparência:  
@@ -136,7 +136,7 @@ Este artigo explica como mapear um intervalo de mensagens para uma função de m
   
 -   Os valores de ID do controle associados ao intervalo contíguo de controles.  
   
-     Aqui são `IDC_BUTTON1` e `IDC_BUTTON10`.  
+     Aqui são **IDC_BUTTON1** e **IDC_BUTTON10**.  
   
 -   O nome da função de manipulador de mensagens.  
   

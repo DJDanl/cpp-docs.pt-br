@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd25089594d31de21a3a315d997ee01111aff4fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 179e959ce4d6a516f51576712e50408ef41d5c7e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347893"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931785"
 ---
 # <a name="control-bars"></a>Barras de controle
-"Barra de controle" é o nome geral para barras de ferramentas, barras de status e barras da caixa de diálogo. Classes MFC `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, e **CReBar** deriva da classe [CControlBar](../mfc/reference/ccontrolbar-class.md), que implementa a funcionalidade comum.  
+"Barra de controle" é o nome geral para barras de ferramentas, barras de status e barras da caixa de diálogo. Classes MFC `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, e `CReBar` deriva da classe [CControlBar](../mfc/reference/ccontrolbar-class.md), que implementa a funcionalidade comum.  
   
  Barras de controle são janelas que exibem linhas de controles com a qual os usuários podem selecionar opções, executar comandos ou obter informações sobre o programa. Tipos de barras de controle incluem barras de ferramentas, barras de caixa de diálogo e barras de status.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33347893"
 -   Rebars na classe [CReBar](../mfc/reference/crebar-class.md)  
   
 > [!IMPORTANT]
->  A partir da versão 4.0 do MFC, barras de ferramentas, barras de status e dicas de ferramenta são implementadas usando a funcionalidade do sistema implementada em comctl32.dll em vez da implementação anterior específica para MFC. Em MFC versão 6.0, **CReBar**, que também inclui a funcionalidade de comctl32.dll, foi adicionado.  
+>  A partir da versão 4.0 do MFC, barras de ferramentas, barras de status e ferramenta dicas são implementadas usando a funcionalidade do sistema implementada no *comctl32.dll* em vez da implementação anterior específica do MFC. Em MFC versão 6.0, `CReBar`, que também inclui a funcionalidade de comctl32.dll, foi adicionado.  
   
  Execute as breves apresentações para os tipos de barra de controle. Para obter mais informações, consulte os links abaixo.  
   

@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf5553904c859e38f42423408c0b7bddd9237fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1209353f10e52b13202a91ae120057ba85dfa805
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361329"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930091"
 ---
 # <a name="mfc-activex-controls"></a>Controles ActiveX MFC
-Um controle ActiveX é um componente de software reutilizáveis com base no modelo COM (Component Object) que oferece suporte a uma ampla variedade de funcionalidades OLE e podem ser personalizadas para atender às várias necessidades de software. Controles ActiveX são projetados para uso em contêineres de controle ActiveX comuns e na Internet, em páginas da Web. Você pode criar controles ActiveX com MFC, descrito aqui, ou com o [biblioteca ATL (Active Template)](../atl/active-template-library-atl-concepts.md).  
+Um controle ActiveX é um componente de software reutilizável baseado no COM (Component Object Model) que dá suporte a uma ampla variedade de funcionalidades OLE e que pode ser personalizado para atender às várias necessidades de software. Controles ActiveX são projetados para uso em contêineres de controle ActiveX comuns e na Internet, em páginas da Web. Você pode criar controles ActiveX com MFC, descrito aqui, ou com o [biblioteca ATL (Active Template)](../atl/active-template-library-atl-concepts.md).  
   
  Um controle ActiveX pode desenhar a próprio em sua própria janela, responder a eventos (como cliques do mouse) e gerenciadas por meio de uma interface que inclui propriedades e métodos semelhantes aos objetos de automação.  
   
@@ -77,7 +77,7 @@ Comunicação entre um contêiner de controle ActiveX e um controle ActiveX
   
  A figura anterior também ilustra como as outras interfaces OLE (além de automação e eventos) são tratados por controles.  
   
- Todas a comunicação com o contêiner do controle é executada por `COleControl`. Para lidar com algumas das solicitações do contêiner, **COleControl** chamará membro funções que são implementadas na classe de controle. Todos os métodos e algumas propriedades são tratadas dessa maneira. Classe do controle também pode iniciar a comunicação com o contêiner chamando funções membro de `COleControl`. Os eventos são disparados dessa maneira.  
+ Todas a comunicação com o contêiner do controle é executada por `COleControl`. Para lidar com algumas das solicitações do contêiner, `COleControl` chamará membro funções que são implementadas na classe de controle. Todos os métodos e algumas propriedades são tratadas dessa maneira. Classe do controle também pode iniciar a comunicação com o contêiner chamando funções membro de `COleControl`. Os eventos são disparados dessa maneira.  
   
 ##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> Estados ativo e inativo de um controle ActiveX  
  Um controle tem dois estados básico: ativas e inativas. Tradicionalmente, esses estados foram diferenciados por se o controle tiver uma janela. Um controle ativo tinha uma janela. um controle inativo não faziam isso. Com a introdução da ativação sem janelas, essa diferença não é mais universal, mas ainda se aplica a vários controles.  
@@ -89,7 +89,7 @@ Comunicação entre um contêiner de controle ActiveX e um controle ActiveX
  ![Msg active controle ActiveX em janelas de processamento](../mfc/media/vc37223.gif "vc37223")  
 Processamento em um controle ActiveX em janelas (quando ativo) de mensagens do Windows  
   
-##  <a name="_core_serializing_activex_elements"></a> Serialização  
+##  <a name="_core_serializing_activex_elements"></a> serialização  
  A capacidade de serializar dados, às vezes chamados de persistência, permite que o controle gravar o valor de suas propriedades para o armazenamento persistente. Em seguida, podem ser recriados controles lendo o estado do objeto do armazenamento.  
   
  Observe que um controle não é responsável por obter acesso à mídia de armazenamento. Em vez disso, o contêiner do controle é responsável por fornecer o controle com uma mídia de armazenamento para usar nos momentos apropriados. Para obter mais informações sobre serialização, consulte o artigo [controles ActiveX MFC: serializando](../mfc/mfc-activex-controls-serializing.md). Para obter informações sobre como otimizar a serialização, consulte [otimizando persistência e inicialização](../mfc/optimizing-persistence-and-initialization.md) em controles ActiveX: otimização.  

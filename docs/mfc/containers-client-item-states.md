@@ -17,31 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5046ea7f3f3775cfe0009afe50f33a6ce6723cc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c02fb9e695fe206912f360dd1ad9907c6714cf1b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342167"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929712"
 ---
 # <a name="containers-client-item-states"></a>Contêineres: estados de item do cliente
 Este artigo explica os diferentes estados em que um item do cliente passa em seu tempo de vida.  
   
- Um item do cliente passa por vários estados, conforme ele é criado, ativado, modificado e salvo. Cada vez que as alterações de estado do item, o framework chama [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) com o `OLE_CHANGED_STATE` notificação. O segundo parâmetro é um valor da **COleClientItem::ItemState** enumeração. Pode ser um dos seguintes:  
+ Um item do cliente passa por vários estados, conforme ele é criado, ativado, modificado e salvo. Cada vez que as alterações de estado do item, o framework chama [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) com o **OLE_CHANGED_STATE** notificação. O segundo parâmetro é um valor da `COleClientItem::ItemState` enumeração. Pode ser um dos seguintes:  
   
--   **COleClientItem::emptyState**  
+-   *COleClientItem::emptyState*  
   
--   **COleClientItem::loadedState**  
+-   *COleClientItem::loadedState*  
   
--   **COleClientItem::openState**  
+-   *COleClientItem::openState*  
   
--   **COleClientItem::activeState**  
+-   *COleClientItem::activeState*  
   
--   **COleClientItem::activeUIState**  
+-   *COleClientItem::activeUIState*  
   
  No estado vazio, um item do cliente ainda não está completamente um item. Memória foi alocada para ele, mas ainda não foi inicializado com dados do item OLE. Este é o estado de um item do cliente está em quando ela foi criada por uma chamada a **novo** , mas ainda não tiver sofrido a segunda etapa da criação de duas etapas típicas.  
   
- Na segunda etapa, realizada por meio de uma chamada para `COleClientItem::CreateFromFile` ou outro **CreateFrom * xxxx* função, o item é criado completamente. Os dados OLE (de um arquivo ou de outra fonte, como a área de transferência) foi associados a `COleClientItem`-objeto derivado. Agora o item está no estado carregado.  
+ Na segunda etapa, realizada por meio de uma chamada para `COleClientItem::CreateFromFile` ou outro `CreateFrom` *xxxx* função, o item é criado completamente. Os dados OLE (de um arquivo ou de outra fonte, como a área de transferência) foi associados a `COleClientItem`-objeto derivado. Agora o item está no estado carregado.  
   
  Quando um item foi aberto na janela do servidor mas não foi aberto no local de documento do contêiner, ele está no estado abrir (ou totalmente abrir). Nesse estado, uma cruz-hachura geralmente é desenhada sobre a representação do item na janela do contêiner para indicar que o item está ativo em outro lugar.  
   
@@ -49,7 +49,7 @@ Este artigo explica os diferentes estados em que um item do cliente passa em seu
   
 ## <a name="see-also"></a>Consulte também  
  [Contêineres](../mfc/containers.md)   
- [ativação](../mfc/activation-cpp.md)   
+ [Ativação](../mfc/activation-cpp.md)   
  [Contêineres: Notificações de Item do cliente](../mfc/containers-client-item-notifications.md)   
  [Controladores](../mfc/trackers.md)   
  [Classe CRectTracker](../mfc/reference/crecttracker-class.md)

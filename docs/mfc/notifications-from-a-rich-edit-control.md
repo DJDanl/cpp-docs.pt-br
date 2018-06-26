@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c678af3444ef408a0a9c50e972942d67e2d3cf1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 928728093ff6e2150578c4ba48f2d8081620a48d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353847"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931138"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>Notificações de um controle de edição avançada
 Mensagens de notificação de eventos que afetam um conjunto avançado de controle de edição de relatório ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Eles podem ser processados pela janela pai ou, usando a reflexão de mensagem, o sofisticado Editar controle em si. Controles de edição avançada oferecem suporte a todas as mensagens de notificação usadas com controles de edição, bem como vários outros adicionais. Você pode determinar quais mensagens de notificação de um controle de edição rica envia sua janela pai, definindo seu "máscara de evento".  
@@ -31,13 +31,13 @@ Mensagens de notificação de eventos que afetam um conjunto avançado de contro
   
  Os parágrafos a seguir listam várias notificações específicas e seus usos:  
   
--   **EN_MSGFILTER** tratando o **EN_MSGFILTER** notificação permite que uma classe, ou o sofisticado editar sua janela pai ou, filtrar todas as teclado e entrada para o controle do mouse. O manipulador pode impedir que a mensagem do teclado ou mouse sendo processada ou pode alterar a mensagem modificando especificado [filtro de mensagens](http://msdn.microsoft.com/library/windows/desktop/bb787936) estrutura.  
+-   EN_MSGFILTER manipulando a notificação EN_MSGFILTER permite que uma classe ou o controle rich edit ou sua janela pai, todos os teclado e mouse a entrada para o controle de filtro. O manipulador pode impedir que a mensagem do teclado ou mouse sendo processada ou pode alterar a mensagem modificando especificado [filtro de mensagens](http://msdn.microsoft.com/library/windows/desktop/bb787936) estrutura.  
   
--   **EN_PROTECTED** tratar o **EN_PROTECTED** mensagem de notificação para detectar quando o usuário tenta modificar texto protegido. Para marcar um intervalo de texto como protegido, você pode definir o efeito de caractere protegido. Para obter mais informações, consulte [formatação de caracteres em controles de edição avançada](../mfc/character-formatting-in-rich-edit-controls.md).  
+-   EN_PROTECTED lidar com a mensagem de notificação EN_PROTECTED para detectar quando o usuário tenta modificar texto protegido. Para marcar um intervalo de texto como protegido, você pode definir o efeito de caractere protegido. Para obter mais informações, consulte [formatação de caracteres em controles de edição avançada](../mfc/character-formatting-in-rich-edit-controls.md).  
   
--   **EN_DROPFILES** você pode habilitar o usuário solta arquivos em um controle de edição rica processando o **EN_DROPFILES** mensagem de notificação. Especificado [ENDROPFILES](http://msdn.microsoft.com/library/windows/desktop/bb787895) estrutura contém informações sobre os arquivos que está sendo descartado.  
+-   EN_DROPFILES você pode habilitar o usuário solta arquivos em um controle de edição rica processando a mensagem de notificação EN_DROPFILES. Especificado [ENDROPFILES](http://msdn.microsoft.com/library/windows/desktop/bb787895) estrutura contém informações sobre os arquivos que está sendo descartado.  
   
--   **EN_SELCHANGE** um aplicativo pode detectar quando a seleção atual é alterada pelo processamento de **EN_SELCHANGE** mensagem de notificação. Especifica a mensagem de notificação um [SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb787952) estrutura que contém informações sobre a nova seleção.  
+-   EN_SELCHANGE um aplicativo pode detectar quando a seleção atual é alterada por processar a mensagem de notificação EN_SELCHANGE. Especifica a mensagem de notificação um [SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb787952) estrutura que contém informações sobre a nova seleção.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando CRichEditCtrl](../mfc/using-cricheditctrl.md)   

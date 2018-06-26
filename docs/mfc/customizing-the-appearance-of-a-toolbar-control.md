@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ec459e1c956c805991f2e37d22b8260f0ffdf2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48825a264b7d82152f47e70c5911bea400c313db
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343688"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932111"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Personalizando a aparência de um controle de barra de ferramentas
 Classe `CToolBarCtrl` fornece vários estilos que afetam a aparência (e, ocasionalmente, o comportamento) do objeto da barra de ferramentas. Modificar o objeto de barra de ferramentas, definindo o `dwCtrlStyle` parâmetro o `CToolBarCtrl::Create` (ou `CToolBar::CreateEx`) função de membro, quando você cria o controle de barra de ferramentas.  
@@ -47,17 +47,17 @@ Classe `CToolBarCtrl` fornece vários estilos que afetam a aparência (e, ocasio
 -   **TBSTYLE_ALTDRAG** permite que os usuários alterar a posição de um botão barra de ferramentas arrastando-o enquanto mantém pressionada a tecla ALT. Se esse estilo não for especificado, o usuário deve manter pressionada a tecla SHIFT enquanto arrasta um botão.  
   
     > [!NOTE]
-    >  O `CCS_ADJUSTABLE` estilo deve ser especificado para habilitar os botões da barra de ferramentas ser arrastado.  
+    >  O **CCS_ADJUSTABLE** estilo deve ser especificado para habilitar os botões da barra de ferramentas ser arrastado.  
   
 -   **TBSTYLE_REGISTERDROP** gera **TBN_GETOBJECT** mensagens para solicitar descartam objetos de destino quando o ponteiro do mouse passa sobre botões da barra de notificação.  
   
  Os estilos restantes afetam os aspectos visuais e do objeto da barra de ferramentas:  
   
--   `TBSTYLE_WRAPABLE` Cria uma barra de ferramentas que pode ter várias linhas de botões. Botões da barra de ferramentas podem "encapsular" para a próxima linha quando ela se torne muito estreita para incluir todos os botões na mesma linha. Quebra automática ocorre em limites nongroup e separação.  
+-   **TBSTYLE_WRAPABLE** cria uma barra de ferramentas que pode ter várias linhas de botões. Botões da barra de ferramentas podem "encapsular" para a próxima linha quando ela se torne muito estreita para incluir todos os botões na mesma linha. Quebra automática ocorre em limites nongroup e separação.  
   
--   **TBSTYLE_CUSTOMERASE** gera **NM_CUSTOMDRAW** quando ele processa as mensagens de notificação `WM_ERASEBKGND` mensagens.  
+-   **TBSTYLE_CUSTOMERASE** gera **NM_CUSTOMDRAW** quando ele processa as mensagens de notificação **WM_ERASEBKGND** mensagens.  
   
--   `TBSTYLE_TOOLTIPS` Cria um controle de dica de ferramenta que um aplicativo pode usar para exibir o texto descritivo para os botões na barra de ferramentas.  
+-   **TBSTYLE_TOOLTIPS** cria um controle de dica de ferramenta que um aplicativo pode usar para exibir o texto descritivo para os botões na barra de ferramentas.  
   
  Para obter uma lista completa de estilos de barra de ferramentas e estendidos, consulte [controle de barra de ferramentas e os estilos de botão](http://msdn.microsoft.com/library/windows/desktop/bb760439) e [estilos de barra de ferramentas estendido](http://msdn.microsoft.com/library/windows/desktop/bb760430) no SDK do Windows.  
   

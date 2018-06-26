@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313cbe53189a4a6e9b87b1723a166de83f56df05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 356d7acd67747f4310ed0e4f564df7d1533e88ed
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354911"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930642"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Controles ActiveX MFC: usando imagens em um controle ActiveX
 Este artigo descreve o tipo de imagem comuns e como implementá-la em seu controle ActiveX. Os tópicos incluem:  
@@ -71,11 +71,11 @@ Este artigo descreve o tipo de imagem comuns e como implementá-la em seu contro
      Essas modificações serão feitas para várias funções que são responsáveis pelo desenho do controle ActiveX.  
   
 ##  <a name="_core_additions_to_your_control_project"></a> Adições ao seu projeto de controle  
- Para adicionar a ID de página de propriedade para a página de propriedades de imagem padrão, insira a linha a seguir após o `BEGIN_PROPPAGEIDS` macro no arquivo de implementação de controle (. CPP):  
+ Para adicionar a ID de página de propriedade para a página de propriedades de imagem padrão, insira a linha a seguir depois da macro BEGIN_PROPPAGEIDS no arquivo de implementação de controle (. CPP):  
   
  [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
   
- Você também deve incrementar o parâmetro de contagem de seu `BEGIN_PROPPAGEIDS` macro por um. A linha a seguir ilustra isso:  
+ Você também deve incrementar o parâmetro de contagem da macro BEGIN_PROPPAGEIDS por um. A linha a seguir ilustra isso:  
   
  [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]  
   
@@ -83,7 +83,7 @@ Este artigo descreve o tipo de imagem comuns e como implementá-la em seu contro
   
  [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
   
- Não é necessário nomear o membro de dados `m_pic`; qualquer nome será suficiente.  
+ Não é necessário nomear o membro de dados *m_pic*; qualquer nome será suficiente.  
   
  Em seguida, adicione uma propriedade personalizada que dá suporte a um tipo de imagem:  
   
@@ -123,7 +123,7 @@ Este artigo descreve o tipo de imagem comuns e como implementá-la em seu contro
 >  Os nomes de classe e a função de controle podem ser diferentes do exemplo acima.  
   
 ###  <a name="_core_modifications_to_your_control_project"></a> Modificações ao seu projeto de controle  
- Depois de ter feito as inclusões necessárias ao seu projeto de controle, você precisa modificar várias funções que afetam a renderização do controle ActiveX. Essas funções, `OnResetState`, `OnDraw`, e as funções Get/Set de uma propriedade de imagem personalizada, estão localizados no arquivo de implementação de controle. (Observe que, neste exemplo de classe de controle é chamado `CSampleCtrl`, o `CPictureHolder` é chamado de membro de dados `m_pic`, e o nome de propriedade de imagem personalizada é `ControlPicture`.)  
+ Depois de ter feito as inclusões necessárias ao seu projeto de controle, você precisa modificar várias funções que afetam a renderização do controle ActiveX. Essas funções, `OnResetState`, `OnDraw`, e as funções Get/Set de uma propriedade de imagem personalizada, estão localizados no arquivo de implementação de controle. (Observe que, neste exemplo de classe de controle é chamado `CSampleCtrl`, o `CPictureHolder` é chamado de membro de dados *m_pic*, e o nome de propriedade de imagem personalizada é `ControlPicture`.)  
   
  No controle `OnResetState` funcionar, adicione a seguinte linha opcional após a chamada a `COleControl::OnResetState`:  
   
@@ -153,7 +153,7 @@ Este artigo descreve o tipo de imagem comuns e como implementá-la em seu contro
  Depois de concluir as modificações, recompile o projeto para incorporar a nova funcionalidade da propriedade de imagem personalizada e use o contêiner de teste para testar a nova propriedade. Consulte [testando propriedades e eventos com contêiner de teste](../mfc/testing-properties-and-events-with-test-container.md) para obter informações sobre como acessar o contêiner de teste.  
   
 ## <a name="see-also"></a>Consulte também  
- [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)   
+ [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)   
  [Controles ActiveX MFC: Usando fontes](../mfc/mfc-activex-controls-using-fonts.md)   
  [Controles ActiveX do MFC: páginas de propriedade](../mfc/mfc-activex-controls-property-pages.md)
 

@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2a30f2ccf1963fe2985794a2bf8eca0c49474cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13a78c769a3c32f0293598ec6bd3c07788ea07b5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349513"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929213"
 ---
 # <a name="documents-views-and-the-framework"></a>Documentos, exibições e o Framework
-A essência do framework MFC são os conceitos de documento e exibição. Um documento é um objeto de dados com o qual o usuário interage em uma sessão de edição. Ela é criada pelo `New` ou **abrir** comando o **arquivo** menu e normalmente é salvo em um arquivo. (Os documentos padrão MFC, derivados da classe **CDocument**, são diferentes de documentos ativos e documentos compostos OLE.) Um modo de exibição é um objeto de janela por meio do qual o usuário interage com um documento.  
+A essência do framework MFC são os conceitos de documento e exibição. Um documento é um objeto de dados com o qual o usuário interage em uma sessão de edição. Ela é criada pelo **novo** ou **abrir** comando o **arquivo** menu e normalmente é salvo em um arquivo. (Os documentos padrão MFC, derivados da classe `CDocument`, são diferentes de documentos ativos e documentos compostos OLE.) Um modo de exibição é um objeto de janela por meio do qual o usuário interage com um documento.  
   
  Os objetos de chave em um aplicativo em execução são:  
   

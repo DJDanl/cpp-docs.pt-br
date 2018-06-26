@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7184a6e8df67dfd220173c42bfa3e0580bd2cd3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc0f00e4f660036e73e96d4beb999d37453bdf26
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349461"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929350"
 ---
 # <a name="message-handling-and-command-targets"></a>Manipulação de mensagem e destinos de comando
 A interface de Despache comando `IOleCommandTarget` define um mecanismo simple e extensível para consultar e executar comandos. Esse mecanismo é mais simples do que o da automação `IDispatch` porque ele se baseia totalmente em um conjunto padrão de comandos; comandos raramente têm argumentos, e nenhuma informação de tipo envolvida (segurança de tipo é reduzida para argumentos de comando também).  
@@ -33,7 +33,7 @@ A interface de Despache comando `IOleCommandTarget` define um mecanismo simple e
   
  `IOleCommandTarget` lida com os seguintes cenários:  
   
--   Quando um objeto é ativado, somente as barras de ferramentas do objeto geralmente são exibidas e barras de ferramentas do objeto podem ter botões para alguns dos comandos contêiner como in-loco **impressão**, **Visualizar impressão**,  **Salvar**, `New`, **Zoom**e outros. (Ativação in-loco padrões recomendam que objetos remover esses botões das barras de ferramentas, ou em menos desabilitá-los. Esse design permite que esses comandos para ser habilitado e ainda é roteado para o manipulador de à direita.) No momento, não há nenhum mecanismo para o objeto de expedição estes comandos para o contêiner.  
+-   Quando um objeto é ativado, somente as barras de ferramentas do objeto geralmente são exibidas e barras de ferramentas do objeto podem ter botões para alguns dos comandos contêiner como in-loco **impressão**, **Visualizar impressão**,  **Salvar**, **novo**, **Zoom**e outros. (Ativação in-loco padrões recomendam que objetos remover esses botões das barras de ferramentas, ou em menos desabilitá-los. Esse design permite que esses comandos para ser habilitado e ainda é roteado para o manipulador de à direita.) No momento, não há nenhum mecanismo para o objeto de expedição estes comandos para o contêiner.  
   
 -   Quando um documento ativo é inserido em um contêiner de documento ativo (como o Office Binder), o contêiner pode ser necessário enviar comandos de tais **impressão**, **Configurar página**, **propriedades**e outros para o documento ativo independente.  
   
@@ -56,7 +56,7 @@ interface IOleCommandTarget : IUnknown
     }  
 ```  
   
- O `QueryStatus` método aqui testa se um determinado conjunto de comandos, o conjunto que está sendo identificado com um **GUID**, há suporte. Essa chamada preenche uma matriz de **OLECMD** valores (estruturas) com a lista com suporte de comandos, bem como retornar o texto que descreve o nome de um comando e/ou status de informações. Quando o chamador deseja invocar um comando, ele pode passar o comando (e o conjunto **GUID**) para **Exec** junto com as opções e argumentos, obter de volta um valor de retorno.  
+ O `QueryStatus` método aqui testa se um determinado conjunto de comandos, o conjunto que está sendo identificado com um **GUID**, há suporte. Essa chamada preenche uma matriz de **OLECMD** valores (estruturas) com a lista com suporte de comandos, bem como retornar o texto que descreve o nome de um comando e/ou status de informações. Quando o chamador deseja invocar um comando, ele pode passar o comando (e o conjunto **GUID**) para `Exec` junto com as opções e argumentos, obter de volta um valor de retorno.  
   
 ## <a name="see-also"></a>Consulte também  
  [Contêineres de documento ativos](../mfc/active-document-containers.md)

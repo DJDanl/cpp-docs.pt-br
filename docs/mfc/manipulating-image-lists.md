@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 559cb87dbed412e706cc85b3db1120083b694991
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1eeccfa5245c6395e530859eb91c7f9a5c01335e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349152"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930365"
 ---
 # <a name="manipulating-image-lists"></a>Manipulando listas de imagens
-O [substituir](../mfc/reference/cimagelist-class.md#replace) função membro substitui uma imagem em uma lista de imagens ([CImageList](../mfc/reference/cimagelist-class.md)) com uma nova imagem. Essa função também é útil se você precisar aumentar dinamicamente o número de imagens em um objeto de lista de imagem. O [SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount) função muda dinamicamente o número de imagens armazenadas na lista de imagens. Se você aumentar o tamanho da lista de imagens, chame **substituir** adicionar imagens aos novos slots de imagem. Se você diminuir o tamanho da lista de imagens, as imagens além do tamanho do novo são liberadas.  
+O [substituir](../mfc/reference/cimagelist-class.md#replace) função membro substitui uma imagem em uma lista de imagens ([CImageList](../mfc/reference/cimagelist-class.md)) com uma nova imagem. Essa função também é útil se você precisar aumentar dinamicamente o número de imagens em um objeto de lista de imagem. O [SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount) função muda dinamicamente o número de imagens armazenadas na lista de imagens. Se você aumentar o tamanho da lista de imagens, chame `Replace` adicionar imagens aos novos slots de imagem. Se você diminuir o tamanho da lista de imagens, as imagens além do tamanho do novo são liberadas.  
   
  O [remover](../mfc/reference/cimagelist-class.md#remove) função membro remove uma imagem de uma lista de imagens. O [cópia](../mfc/reference/cimagelist-class.md#copy) copiar função de membro ou trocar imagens dentro de uma lista de imagens. Essa função permite que você indique se a imagem de origem deve ser copiada para o índice de destino ou as imagens de origem e destino devem ser permutadas.  
   
- Para criar uma nova lista de imagem mesclando duas listas de imagens, use a sobrecarga apropriada do [criar](../mfc/reference/cimagelist-class.md#create) função de membro. Esta sobrecarga do **criar** mesclagens lista a primeira imagem da imagem existente, armazenar a imagem resultante em um novo objeto de lista de imagem. A nova imagem é criada ao desenhar a segunda imagem transparente sobre o primeiro. A máscara para a nova imagem é o resultado da execução de uma operação OR lógico nos bits das máscaras para as duas imagens existentes.  
+ Para criar uma nova lista de imagem mesclando duas listas de imagens, use a sobrecarga apropriada do [criar](../mfc/reference/cimagelist-class.md#create) função de membro. Esta sobrecarga do `Create` mesclagens lista a primeira imagem da imagem existente, armazenar a imagem resultante em um novo objeto de lista de imagem. A nova imagem é criada ao desenhar a segunda imagem transparente sobre o primeiro. A máscara para a nova imagem é o resultado da execução de uma operação OR lógico nos bits das máscaras para as duas imagens existentes.  
   
  Isso é repetido até que todas as imagens são mescladas e adicionadas ao novo objeto de lista de imagem.  
   

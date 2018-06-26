@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb54f36f57702d43cf065604641124e38ed053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a18b84b30445060631589e72f6c158ea9b3626f0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334880"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930882"
 ---
 # <a name="active-documents-on-the-internet"></a>Documentos ativos na Internet
 Documentos ativos fornecem uma extensão para objetos inseridos tradicionais. Os documentos ativos podem ser várias páginas e são exibidos em toda a área cliente. Eles não negociação de menu tradicionais e podem ser editados no local, bem como em uma janela aberta no aplicativo do servidor. Em vez de exibir como um pequeno retângulo circundado por uma borda tracejada, documentos ativos são quadro completo e ativo sempre no local.  
@@ -55,7 +55,7 @@ Documentos ativos fornecem uma extensão para objetos inseridos tradicionais. Os
 |-------------------------|---------------------------------|  
 |Usa composta arquivos como seu mecanismo de armazenamento.|`IPersistStorage`.|  
 |Suporta os recursos básicos de incorporação de documentos ativos, incluindo criar do arquivo.|`IPersistFile`, `IOleObject` e `IDataObject`.|  
-|Dá suporte à ativação no local.|`IOleInPlaceObject` e `IOleInPlaceActiveObject` (usando o contêiner `IOleInPlaceSite` e **IOleInPlaceFrame** interfaces).|  
+|Dá suporte à ativação no local.|`IOleInPlaceObject` e `IOleInPlaceActiveObject` (usando o contêiner `IOleInPlaceSite` e `IOleInPlaceFrame` interfaces).|  
 |Oferece suporte as extensões de documento ativo que envolvem essas novas interfaces. Algumas interfaces são opcionais.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget` e `IPrint`.|  
   
  MFC fornece suporte para estender o suporte de servidor inserido existente para documentos ativos.  
@@ -68,7 +68,7 @@ Documentos ativos fornecem uma extensão para objetos inseridos tradicionais. Os
   
 |Tipo de classe|Derivado anteriormente|Alteração de derivar de|  
 |----------------|---------------------------|---------------------------|  
-|Quadro no local|`COleIPFrameWnd`|**COleDocIPFrameWnd**|  
+|Quadro no local|`COleIPFrameWnd`|`COleDocIPFrameWnd`|  
 |Item|`COleServerItem`|`CDocObjectServerItem`|  
   
  Você também alterar como as informações são inseridas no registro e fazer várias outras alterações. Se seu aplicativo tiver atualmente não há suporte para componentes COM, você pode adicionar suporte ao servidor executando o Assistente de aplicativo e integrar o código específico do componente COM o seu aplicativo.  

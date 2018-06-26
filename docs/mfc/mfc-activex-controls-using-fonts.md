@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b53ab98e44a8696795e810b8d6f643720d8f9655
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f5d1475412de736970d0ae36a39540121bfbc01
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355133"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930709"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Controles ActiveX MFC: usando fontes
 Se o controle ActiveX exibe o texto, você pode permitir que o usuário do controle alterar a aparência do texto, alterando uma propriedade de fonte. Propriedades de fonte são implementadas como objetos de fonte e pode ser um dos dois tipos: estoque ou personalizado. Propriedades de fonte de estoque são propriedades de fonte preimplemented que você pode adicionar usando o Assistente para adicionar propriedade. Propriedades personalizadas da fonte não são preimplemented e o desenvolvedor do controle determina o comportamento e o uso da propriedade.  
@@ -137,11 +137,11 @@ Se o controle ActiveX exibe o texto, você pode permitir que o usuário do contr
   
 8.  Clique em **Finalizar**.  
   
- O Assistente para adicionar propriedade cria o código para adicionar o `HeadingFont` propriedade personalizada para o `CSampleCtrl` classe e o exemplo. Arquivo IDL. Porque `HeadingFont` é um tipo de propriedade Get/Set, o Assistente para adicionar propriedade modifica o `CSampleCtrl` mapa de expedição da classe para incluir um `DISP_PROPERTY_EX_ID` [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex) entrada de macro:  
+ O Assistente para adicionar propriedade cria o código para adicionar o `HeadingFont` propriedade personalizada para o `CSampleCtrl` classe e o exemplo. Arquivo IDL. Porque `HeadingFont` é um tipo de propriedade Get/Set, o Assistente para adicionar propriedade modifica o `CSampleCtrl` mapa de expedição da classe para incluir um DISP_PROPERTY_EX_ID[DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex) entrada de macro:  
   
  [!code-cpp[NVC_MFC_AxFont#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_5.cpp)]  
   
- O `DISP_PROPERTY_EX` macro associa o `HeadingFont` nome da propriedade correspondente `CSampleCtrl` classe métodos Get e Set, `GetHeadingFont` e `SetHeadingFont`. O tipo do valor da propriedade também é especificado; Nesse caso, **VT_FONT**.  
+ A macro DISP_PROPERTY_EX associa o `HeadingFont` nome da propriedade correspondente `CSampleCtrl` classe métodos Get e Set, `GetHeadingFont` e `SetHeadingFont`. O tipo do valor da propriedade também é especificado; Nesse caso, VT_FONT.  
   
  O Assistente para adicionar propriedade também adiciona uma declaração no arquivo de controle de cabeçalho (. H) para o `GetHeadingFont` e `SetHeadingFont` funções e adiciona os modelos de função no arquivo de implementação de controle (. CPP):  
   
@@ -160,11 +160,11 @@ Se o controle ActiveX exibe o texto, você pode permitir que o usuário do contr
   
  No arquivo de implementação de controle (. CPP), faça o seguinte:  
   
--   Inicializar `m_fontHeading` no construtor de controle.  
+-   Inicializar *m_fontHeading* no construtor de controle.  
   
      [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]  
   
--   Declarar um estático **FONTDESC** estrutura que contém os atributos padrão da fonte.  
+-   Declare uma estrutura FONTDESC estática que contém os atributos padrão da fonte.  
   
      [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]  
   
@@ -192,27 +192,27 @@ Se o controle ActiveX exibe o texto, você pode permitir que o usuário do contr
   
      [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]  
   
- Depois que a propriedade de fonte personalizada tiver sido implementada, a página de propriedades de fonte padrão deve ser implementada, permitindo que os usuários de controle alterar a fonte atual do controle. Para adicionar a ID de página de propriedade para a página de propriedades de fonte padrão, insira a linha a seguir após o `BEGIN_PROPPAGEIDS` macro:  
+ Depois que a propriedade de fonte personalizada tiver sido implementada, a página de propriedades de fonte padrão deve ser implementada, permitindo que os usuários de controle alterar a fonte atual do controle. Para adicionar a ID de página de propriedade para a página de propriedades de fonte padrão, insira a linha a seguir depois da macro BEGIN_PROPPAGEIDS:  
   
  [!code-cpp[NVC_MFC_AxFont#17](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_17.cpp)]  
   
- Você também deve incrementar o parâmetro de contagem de seu `BEGIN_PROPPAGEIDS` macro por um. A linha a seguir ilustra isso:  
+ Você também deve incrementar o parâmetro de contagem da macro BEGIN_PROPPAGEIDS por um. A linha a seguir ilustra isso:  
   
  [!code-cpp[NVC_MFC_AxFont#18](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_18.cpp)]  
   
  Depois que essas alterações foram feitas, recompile o projeto inteiro para incorporar a funcionalidade adicional.  
   
 ###  <a name="_core_processing_font_notifications"></a> Processando notificações de fonte  
- Na maioria dos casos o controle precisa saber quando as características do objeto font foram modificadas. Cada objeto de fonte é capaz de fornecer notificações quando altera chamando uma função de membro de **IFontNotification** interface implementada por `COleControl`.  
+ Na maioria dos casos o controle precisa saber quando as características do objeto font foram modificadas. Cada objeto de fonte é capaz de fornecer notificações quando altera chamando uma função de membro de `IFontNotification` interface implementada por `COleControl`.  
   
- Se o controle usa a propriedade de estoque de fonte, suas notificações são manipuladas pelo `OnFontChanged` função de membro `COleControl`. Quando você adicionar propriedades de fonte personalizado, é necessário que eles usam a mesma implementação. No exemplo na seção anterior, isso foi feito, passando &**m_xFontNotification** ao inicializar o **m_fontHeading** variável de membro.  
+ Se o controle usa a propriedade de estoque de fonte, suas notificações são manipuladas pelo `OnFontChanged` função de membro `COleControl`. Quando você adicionar propriedades de fonte personalizado, é necessário que eles usam a mesma implementação. No exemplo na seção anterior, isso foi feito, passando &*m_xFontNotification* ao inicializar o *m_fontHeading* variável de membro.  
   
  ![Implementando várias interfaces de objeto de fonte](../mfc/media/vc373q1.gif "vc373q1")  
 Implementando várias Interfaces de objeto de fonte  
   
- As linhas sólidas na figura acima mostram que os dois objetos de fonte estão usando a mesma implementação de **IFontNotification**. Isso pode causar problemas se você quiser distinguir qual fonte alterada.  
+ As linhas sólidas na figura acima mostram que os dois objetos de fonte estão usando a mesma implementação de `IFontNotification`. Isso pode causar problemas se você quiser distinguir qual fonte alterada.  
   
- Uma forma de distinguir entre as notificações de objeto de fonte do controle é criar uma implementação separada do **IFontNotification** interface para cada objeto de fonte no controle. Essa técnica permite otimizar o código de desenho atualizando somente a cadeia de caracteres ou cadeias de caracteres, que usam a fonte modificada recentemente. As seções a seguir demonstram as etapas necessárias para implementar as interfaces de notificação separada para uma segunda propriedade de fonte. A segunda propriedade font é considerada o `HeadingFont` propriedade que foi adicionada na seção anterior.  
+ Uma forma de distinguir entre as notificações de objeto de fonte do controle é criar uma implementação separada do `IFontNotification` interface para cada objeto de fonte no controle. Essa técnica permite otimizar o código de desenho atualizando somente a cadeia de caracteres ou cadeias de caracteres, que usam a fonte modificada recentemente. As seções a seguir demonstram as etapas necessárias para implementar as interfaces de notificação separada para uma segunda propriedade de fonte. A segunda propriedade font é considerada o `HeadingFont` propriedade que foi adicionada na seção anterior.  
   
 ###  <a name="_core_implementing_a_new_font_notification_interface"></a> Implementar uma nova Interface de notificação de fonte  
  Para distinguir entre as notificações de duas ou mais fontes, uma nova interface de notificação deve ser implementada para cada fonte usada no controle. As seções a seguir descrevem como implementar uma nova interface de notificação de fonte, modificando os arquivos de cabeçalho e a implementação de controle.  
@@ -225,16 +225,16 @@ Implementando várias Interfaces de objeto de fonte
  Isso cria uma implementação de `IPropertyNotifySink` interface chamado `HeadingFontNotify`. Essa nova interface contém um método chamado `OnChanged`.  
   
 ### <a name="additions-to-the-implementation-file"></a>Adições para o arquivo de implementação  
- O código que inicializa a fonte do título (no construtor de controle), altere `&m_xFontNotification` para `&m_xHeadingFontNotify`. Em seguida, adicione o seguinte código:  
+ O código que inicializa a fonte do título (no construtor de controle), altere &*m_xFontNotification* para &*m_xHeadingFontNotify*. Em seguida, adicione o seguinte código:  
   
  [!code-cpp[NVC_MFC_AxFont#20](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_20.cpp)]  
   
- O `AddRef` e `Release` métodos o `IPropertyNotifySink` interface atento a contagem de referência para o objeto de controle ActiveX. Quando o controle obtém acesso ao ponteiro de interface, o controle chama `AddRef` para incrementar a contagem de referência. Quando o controle é terminado com o ponteiro, ele chama `Release`, da mesma forma que **GlobalFree** pode ser chamado para liberar um bloco de memória global. Quando a contagem de referência para essa interface chega a zero, a implementação da interface pode ser liberada. Neste exemplo, o `QueryInterface` função retorna um ponteiro para um `IPropertyNotifySink` interface em um objeto específico. Essa função permite que um controle ActiveX consultar um objeto para determinar quais interfaces ele suporta.  
+ O `AddRef` e `Release` métodos o `IPropertyNotifySink` interface atento a contagem de referência para o objeto de controle ActiveX. Quando o controle obtém acesso ao ponteiro de interface, o controle chama `AddRef` para incrementar a contagem de referência. Quando o controle é terminado com o ponteiro, ele chama `Release`, da mesma forma que `GlobalFree` pode ser chamado para liberar um bloco de memória global. Quando a contagem de referência para essa interface chega a zero, a implementação da interface pode ser liberada. Neste exemplo, o `QueryInterface` função retorna um ponteiro para um `IPropertyNotifySink` interface em um objeto específico. Essa função permite que um controle ActiveX consultar um objeto para determinar quais interfaces ele suporta.  
   
  Depois que essas alterações foram feitas ao seu projeto, recompile o projeto e use o contêiner de teste para testar a interface. Consulte [testando propriedades e eventos com contêiner de teste](../mfc/testing-properties-and-events-with-test-container.md) para obter informações sobre como acessar o contêiner de teste.  
   
 ## <a name="see-also"></a>Consulte também  
- [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)   
+ [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)   
  [Controles ActiveX MFC: Usando imagens em um controle ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)   
  [Controles ActiveX do MFC: usando páginas de propriedade de estoque](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 

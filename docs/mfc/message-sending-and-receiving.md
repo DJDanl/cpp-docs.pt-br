@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7ded8dd0c818b95d6f45a722bd7b8516d48ff1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55f450085c446503ebf86960dbee1b0d930691c2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347172"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931998"
 ---
 # <a name="message-sending-and-receiving"></a>Envio e recebimento da mensagem
 Considere a enviar parte do processo e como o framework responde.  
   
  A maioria das mensagens resultantes da interação do usuário com o programa. Comandos são gerados por cliques do mouse em itens de menu ou botões da barra de ferramentas ou pressionamentos de teclas de aceleração. O usuário gera também mensagens do Windows, em, por exemplo, mover ou redimensionar uma janela. Outras mensagens do Windows são enviadas quando ocorrem eventos, como inicialização de programa ou encerramento, como windows obter ou perder o foco e assim por diante. Mensagens de notificação de controle são geradas por cliques do mouse ou outras interações do usuário com um controle, como um controle de botão ou caixa de listagem na caixa de diálogo.  
   
- O **executar** função de membro de classe `CWinApp` recupera mensagens e expede para a janela apropriada. A maioria das mensagens de comando são enviados para a janela do quadro principal do aplicativo. O `WindowProc` predefinida pelo obtém de biblioteca de classe as mensagens e direciona-os de forma diferente, dependendo da categoria de mensagem recebida.  
+ O `Run` função de membro de classe `CWinApp` recupera mensagens e expede para a janela apropriada. A maioria das mensagens de comando são enviados para a janela do quadro principal do aplicativo. O `WindowProc` predefinida pelo obtém de biblioteca de classe as mensagens e direciona-os de forma diferente, dependendo da categoria de mensagem recebida.  
   
  Agora, considere a parte receptora do processo.  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b6bbcbcf226d343d8b3cb51f110442e133a379
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eb3ba387d4b6fcca7b30cd360dff84b9da4302a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351833"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928358"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Controles ActiveX MFC: implementação da propriedade avançada
 Este artigo descreve os tópicos relacionados à implementação de propriedades em um controle ActiveX avançadas:  
@@ -66,9 +66,9 @@ Este artigo descreve os tópicos relacionados à implementação de propriedades
  Este exemplo de código chama `SetNotSupported` se o `m_bReadOnlyMode` é membro de dados **TRUE**. Se **FALSE**, em seguida, a propriedade é definida para o novo valor.  
   
 ##  <a name="_core_returning_error_codes_from_a_property"></a> Retornando códigos de erro a partir de uma propriedade  
- Para indicar que ocorreu um erro ao tentar obter ou definir uma propriedade, use o `COleControl::ThrowError` função, o que leva um `SCODE` (código de status) como um parâmetro. Você pode usar um modelo predefinido `SCODE` ou definir seu próprio. Para obter uma lista de predefinidos `SCODE`s e instruções para definir personalizado `SCODE`s, consulte [tratamento de erros no controle ActiveX do seu](../mfc/mfc-activex-controls-advanced-topics.md) nos controles do ActiveX artigo: tópicos avançados.  
+ Para indicar que ocorreu um erro ao tentar obter ou definir uma propriedade, use o `COleControl::ThrowError` função, o que leva um SCODE (código de status) como um parâmetro. Você pode usar um SCODE predefinido ou definir seu próprio. Para obter uma lista de predefinidos SCODEs e instruções para definir SCODEs personalizados, consulte [tratamento de erros no controle ActiveX do seu](../mfc/mfc-activex-controls-advanced-topics.md) nos controles do ActiveX artigo: tópicos avançados.  
   
- Existem funções auxiliares para os mais comuns predefinidos `SCODE`s, como [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), e [COleControl:: SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
+ Funções auxiliares existem para o mais comum predefinidas SCODEs, como [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), e [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
 >  `ThrowError` deve ser usado apenas como um meio de retornar um erro de dentro Get da propriedade ou Set função ou um método de automação. Esses são os únicos vezes que o manipulador de exceção apropriada será presentes na pilha.  
@@ -76,7 +76,7 @@ Este artigo descreve os tópicos relacionados à implementação de propriedades
  Para obter mais informações sobre relatórios de exceções em outras áreas do código, consulte [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) e a seção [tratamento de erros no controle ActiveX do seu](../mfc/mfc-activex-controls-advanced-topics.md) no artigo controles ActiveX: avançado Tópicos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)   
+ [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)   
  [Controles ActiveX MFC: propriedades](../mfc/mfc-activex-controls-properties.md)   
  [Controles ActiveX MFC: métodos](../mfc/mfc-activex-controls-methods.md)   
  [Classe COleControl](../mfc/reference/colecontrol-class.md)

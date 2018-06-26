@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c51a2efba3c89b4e216fec96459b14c3d0c637d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 791694bfa1bcd7472be4691d9aef133b80ccace4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357553"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930124"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Controles ActiveX MFC: adicionando propriedades de estoque
-Propriedades de estoque são diferentes de propriedades personalizadas em que eles já são implementados pela classe `COleControl`. `COleControl` contém funções de membro predefinidas que oferecem suporte a propriedades comuns para o controle. Algumas propriedades comuns incluem a legenda do controle e as cores de primeiro plano e plano de fundo. Para obter informações sobre outras propriedades de estoque, consulte [suporte a propriedades de estoque, o Assistente para adicionar propriedade](#_core_stock_properties_supported_by_classwizard) posteriormente neste artigo. As entradas de mapa de expedição de propriedades de estoque sempre são prefixadas por **DISP_STOCKPROP**.  
+Propriedades de estoque são diferentes de propriedades personalizadas em que eles já são implementados pela classe `COleControl`. `COleControl` contém funções de membro predefinidas que oferecem suporte a propriedades comuns para o controle. Algumas propriedades comuns incluem a legenda do controle e as cores de primeiro plano e plano de fundo. Para obter informações sobre outras propriedades de estoque, consulte [suporte a propriedades de estoque, o Assistente para adicionar propriedade](#_core_stock_properties_supported_by_classwizard) posteriormente neste artigo. As entradas de mapa de expedição de ação propriedades sempre são prefixadas por DISP_STOCKPROP.  
   
  Este artigo descreve como adicionar uma propriedade de estoque (nesse caso, legenda) para um controle ActiveX usando o Assistente para adicionar propriedade e explica as modificações de código resultante. Os tópicos incluem:  
   
@@ -81,16 +81,16 @@ Propriedades de estoque são diferentes de propriedades personalizadas em que el
   
 |Propriedade|Entrada de mapa de expedição|Como acessar o valor|  
 |--------------|------------------------|-------------------------|  
-|**Aparência**|**(DISP_STOCKPROP_APPEARANCE)**|Valor acessível como **m_sAppearance**.|  
-|`BackColor`|**(DISP_STOCKPROP_BACKCOLOR)**|Valor acessível chamando `GetBackColor`.|  
-|`BorderStyle`|**(DISP_STOCKPROP_BORDERSTYLE)**|Valor acessível como **m_sBorderStyle**.|  
-|**Legenda**|**(DISP_STOCKPROP_CAPTION)**|Valor acessível chamando `InternalGetText`.|  
-|**Habilitado**|**(DISP_STOCKPROP_ENABLED)**|Valor acessível como **m_bEnabled**.|  
-|**Fonte**|**(DISP_STOCKPROP_FONT)**|Consulte o artigo [controles ActiveX MFC: usando fontes](../mfc/mfc-activex-controls-using-fonts.md) para uso.|  
-|`ForeColor`|**(DISP_STOCKPROP_FORECOLOR)**|Valor acessível chamando `GetForeColor`.|  
-|**hWnd**|**(DISP_STOCKPROP_HWND)**|Valor acessível como `m_hWnd`.|  
-|**Texto**|**(DISP_STOCKPROP_TEXT)**|Valor acessível chamando `InternalGetText`. Essa propriedade é o mesmo que **legenda**, exceto o nome da propriedade.|  
-|**Estado de prontidão é**|**DISP_STOCKPROP_READYSTATE()**|Valor acessível como m_lReadyState ou `GetReadyState`|  
+|`Appearance`|(DISP_STOCKPROP_APPEARANCE)|Valor acessível como `m_sAppearance`.|  
+|`BackColor`|(DISP_STOCKPROP_BACKCOLOR)|Valor acessível chamando `GetBackColor`.|  
+|`BorderStyle`|(DISP_STOCKPROP_BORDERSTYLE)|Valor acessível como `m_sBorderStyle`.|  
+|`Caption`|(DISP_STOCKPROP_CAPTION)|Valor acessível chamando `InternalGetText`.|  
+|`Enabled`|(DISP_STOCKPROP_ENABLED)|Valor acessível como `m_bEnabled`.|  
+|`Font`|(DISP_STOCKPROP_FONT)|Consulte o artigo [controles ActiveX MFC: usando fontes](../mfc/mfc-activex-controls-using-fonts.md) para uso.|  
+|`ForeColor`|(DISP_STOCKPROP_FORECOLOR)|Valor acessível chamando `GetForeColor`.|  
+|`hWnd`|(DISP_STOCKPROP_HWND)|Valor acessível como `m_hWnd`.|  
+|`Text`|(DISP_STOCKPROP_TEXT)|Valor acessível chamando `InternalGetText`. Essa propriedade é o mesmo que `Caption`, exceto o nome da propriedade.|  
+|`ReadyState`|DISP_STOCKPROP_READYSTATE()|Valor acessível como `m_lReadyState` ou `GetReadyState`|  
   
 ##  <a name="_core_stock_properties_and_notification"></a> Notificação e propriedades de estoque  
  A maioria das propriedades de estoque têm funções de notificação que podem ser substituídas. Por exemplo, sempre que o `BackColor` propriedade for alterada, o `OnBackColorChanged` é chamada de função (uma função de membro da classe de controle). A implementação padrão (em `COleControl`) chamadas `InvalidateControl`. Substitua essa função se você deseja executar ações adicionais em resposta a essa situação.  
@@ -105,7 +105,7 @@ Propriedades de estoque são diferentes de propriedades personalizadas em que el
  [!code-cpp[NVC_MFC_AxUI#24](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_3.cpp)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)   
+ [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)   
  [Controles ActiveX MFC: propriedades](../mfc/mfc-activex-controls-properties.md)   
  [Controles ActiveX MFC: métodos](../mfc/mfc-activex-controls-methods.md)   
  [Classe COleControl](../mfc/reference/colecontrol-class.md)

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c59004f27e0f3a1c629daae621df831fe82cd7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c4ebbc8e792e36461f7c52c17fa23815239e323
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347211"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929084"
 ---
 # <a name="html-basics"></a>Noções básicas de HTML
 A maioria dos navegadores têm a capacidade de examinar a fonte HTML das páginas que você procura. Quando você exibir a fonte, você verá um número de marcas do HTML (linguagem de marcação de hipertexto), entre colchetes angulares (<>), intercalados com texto.  
@@ -30,7 +30,7 @@ A maioria dos navegadores têm a capacidade de examinar a fonte HTML das página
   
 1.  Abra o bloco de notas ou em qualquer editor de texto sem formatação.  
   
-2.  Do **arquivo** menu, escolha `New`.  
+2.  Do **arquivo** menu, escolha **novo**.  
   
 3.  Digite as seguintes linhas:  
   
@@ -44,7 +44,7 @@ A maioria dos navegadores têm a capacidade de examinar a fonte HTML das página
   
 4.  Do **arquivo** menu, escolha **salvar**e salve o arquivo como c:\webpages\First.htm. Deixe o arquivo aberto no editor.  
   
-5.  Comutador de seu navegador e o **arquivo** menu, escolha **abrir**, ou tipo `file://C:/webpages/first.htm` na caixa de edição de URL do navegador. Você deve ver uma página em branco com a legenda da janela "Principais marcas HTML."  
+5.  Comutador de seu navegador e o **arquivo** menu, escolha **abrir**, ou tipo *file://C:/webpages/first.htm* na caixa de edição de URL do navegador. Você deve ver uma página em branco com a legenda da janela "Principais marcas HTML."  
   
      Observe as marcas associadas e são incluídas entre colchetes. Marcas não diferenciam maiusculas de minúsculas, mas o uso de maiusculas geralmente é usado para destacar as marcas.  
   

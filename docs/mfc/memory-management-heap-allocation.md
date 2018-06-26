@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99df4a50f021e0981354a5d316606729bb824d94
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7ef166201103b1544d0a36d82452b485af75418
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352406"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928603"
 ---
 # <a name="memory-management-heap-allocation"></a>Gerenciamento de memória: alocação do heap
-Heap é reservado para as necessidades de alocação de memória do programa. É uma área além do código do programa e a pilha. Programas C típicos usam as funções `malloc` e **livre** para alocar e desalocar memória de heap. A versão de depuração do MFC fornece versões modificadas dos operadores internos C++ **novo** e **excluir** aloque e desaloque objetos na memória de heap.  
+Heap é reservado para as necessidades de alocação de memória do programa. É uma área além do código do programa e a pilha. Programas C típicos usam as funções **malloc** e **livre** para alocar e desalocar memória de heap. A versão de depuração do MFC fornece versões modificadas dos operadores internos C++ **novo** e **excluir** aloque e desaloque objetos na memória de heap.  
   
- Quando você usa **novo** e **excluir** em vez de `malloc` e **livre**, é possível tirar proveito dos aprimoramentos de depuração de gerenciamento de memória da biblioteca de classes , que pode ser útil na detecção de vazamentos de memória. Quando você cria seu programa com a versão de lançamento do MFC, as versões padrão do **novo** e **excluir** operadores fornecem uma maneira eficiente para alocar e desalocar memória (versão de lançamento do MFC não fornece versões modificadas desses operadores).  
+ Quando você usa **novo** e **excluir** em vez de **malloc** e **livre**, é possível tirar proveito da biblioteca de classes memória-depuração aprimoramentos de gerenciamento, que podem ser úteis na detecção de vazamentos de memória. Quando você cria seu programa com a versão de lançamento do MFC, as versões padrão do **novo** e **excluir** operadores fornecem uma maneira eficiente para alocar e desalocar memória (versão de lançamento do MFC não fornece versões modificadas desses operadores).  
   
  Observe que o tamanho total dos objetos alocados no heap é limitado apenas pela memória virtual disponível de seu sistema.  
   

@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69302202059914217e066eb0389bb14e7c5190c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4979b75a7644ab747d1a32c14826a25678e276b6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344276"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929754"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>Manipulando menus durante a execução do programa
-Use a classe `CMenu` para manipular os menus e itens de menu em tempo real. `CMenu` encapsula um Windows `HMENU` tratar e fornece funções de membro para o trabalho com menus.  
+Use a classe `CMenu` para manipular os menus e itens de menu em tempo real. `CMenu` encapsula um identificador HMENU do Windows e fornece funções de membro para o trabalho com menus.  
   
  Consulte a visão geral para a classe [CMenu](../mfc/reference/cmenu-class.md) para obter detalhes.  
   

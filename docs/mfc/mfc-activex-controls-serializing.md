@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74d62411747dbe920b772b66d11cd1e2a789c5db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9db6ff6c0cdda01875e4968e4d92ca087ad2b57
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353492"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930055"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Controles ActiveX MFC: serializando
 Este artigo aborda como serializar um controle ActiveX. A serialização é o processo de leitura ou gravação em uma mídia de armazenamento persistente, como um arquivo de disco. A biblioteca Microsoft Foundation Class (MFC) fornece suporte interno para serialização na classe `CObject`. `COleControl` estende esse suporte aos controles ActiveX com o uso de um mecanismo de troca de propriedade.  
@@ -77,7 +77,7 @@ Este artigo aborda como serializar um controle ActiveX. A serialização é o pr
  Para obter mais informações sobre essas funções do exchange de propriedade, consulte [persistência de OLE controles](../mfc/reference/persistence-of-ole-controls.md) no *referência MFC*.  
   
 ##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> Personalizar o comportamento padrão de DoPropExchange  
- A implementação padrão de **DoPropertyExchange** (conforme mostrado no tópico anterior) faz uma chamada para a classe base `COleControl`. Isso serializa o conjunto de propriedades com suporte automaticamente pelo `COleControl`, que usa mais espaço de armazenamento que serializar apenas as propriedades personalizadas do controle. Remover esta chamada permite que o objeto a ser serializado somente as propriedades que você considerar importantes. Qualquer estado de propriedade de estoque implementou o controle não será serializado ao salvar ou carregar o objeto de controle, a menos que você adicione explicitamente **px _** chama para eles.  
+ A implementação padrão de `DoPropertyExchange` (conforme mostrado no tópico anterior) faz uma chamada para a classe base `COleControl`. Isso serializa o conjunto de propriedades com suporte automaticamente pelo `COleControl`, que usa mais espaço de armazenamento que serializar apenas as propriedades personalizadas do controle. Remover esta chamada permite que o objeto a ser serializado somente as propriedades que você considerar importantes. Qualquer estado de propriedade de estoque implementou o controle não será serializado ao salvar ou carregar o objeto de controle, a menos que você adicione explicitamente **px _** chama para eles.  
   
 ##  <a name="_core_implementing_version_support"></a> Implementando o suporte à versão  
  Suporte à versão permite um controle ActiveX revisado adicionar novas propriedades persistentes e ainda ser capaz de detectar e carregar o estado persistente criado por uma versão anterior do controle. Para disponibilizar a versão do controle como parte de seus dados persistentes, chame [COleControl::ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion) no controle do `DoPropExchange` função. Esta chamada é inserida automaticamente se o controle ActiveX foi criado usando o Assistente de controle ActiveX. Ele pode ser removido se não for necessário suporte de versão. No entanto, o custo de tamanho do controle é muito pequeno (4 bytes) para garantir flexibilidade que oferece suporte à versão.  
@@ -87,7 +87,7 @@ Este artigo aborda como serializar um controle ActiveX. A serialização é o pr
  [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]  
 [!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]  
   
- Você pode usar qualquer `DWORD` como o número de versão. Usam projetos gerados pelo Assistente de controle ActiveX **_wVerMinor** e **_wVerMajor** como padrão. Esses são constantes globais definidas no arquivo de implementação da classe de controle ActiveX do projeto. No restante do seu `DoPropExchange` função, você pode chamar [CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion) a qualquer momento para recuperar a versão que você está salvando ou recuperar.  
+ Você pode usar qualquer **DWORD** como o número de versão. Usam projetos gerados pelo Assistente de controle ActiveX `_wVerMinor` e `_wVerMajor` como padrão. Esses são constantes globais definidas no arquivo de implementação da classe de controle ActiveX do projeto. No restante do seu `DoPropExchange` função, você pode chamar [CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion) a qualquer momento para recuperar a versão que você está salvando ou recuperar.  
   
  No exemplo a seguir, a versão 1 deste controle de exemplo tem apenas uma propriedade "ReleaseDate". Versão 2 adiciona uma propriedade "OriginalDate". Se o controle é instruído para carregar o estado persistente da versão antiga, ele inicializa a variável de membro para a nova propriedade para um valor padrão.  
   

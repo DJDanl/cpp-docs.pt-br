@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19615aabce489049d38539b48300311504fbbbfe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1df0d00aa6356fa1741e7f4fc34d8063782da859
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347527"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930668"
 ---
 # <a name="mapi"></a>MAPI
-Este artigo descreve o Microsoft MAPI Messaging Application Programming Interface () para os desenvolvedores de aplicativos de mensagem do cliente. MFC fornece suporte para um subconjunto de MAPI em classe **CDocument** , mas não encapsula a API do toda. Para obter mais informações, consulte [suporte a MAPI no MFC](../mfc/mapi-support-in-mfc.md).  
+Este artigo descreve o Microsoft MAPI Messaging Application Programming Interface () para os desenvolvedores de aplicativos de mensagem do cliente. MFC fornece suporte para um subconjunto de MAPI na classe `CDocument` , mas não encapsula a API do toda. Para obter mais informações, consulte [suporte a MAPI no MFC](../mfc/mapi-support-in-mfc.md).  
   
  MAPI é um conjunto de funções que usam aplicativos habilitados para email e reconhecimento de email para criar, manipular, transferir e armazenar mensagens de email. Ele fornece as ferramentas para definir o conteúdo das mensagens de email de desenvolvedores de aplicativos e oferece flexibilidade no gerenciamento de mensagens de email armazenado. MAPI também fornece uma interface comum que os desenvolvedores de aplicativos podem usar para criar o email e aplicativos habilitados para email independentes do sistema de mensagens subjacente.  
   

@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 440e550e6e1ba5a82cac3f35dcb3c76b346b5343
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84f1a12dd9ca25ec19415cde42dc8ce12e515833
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346037"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930947"
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>Como exibir informações do comando na barra de status
 Quando você executar o Assistente de aplicativo para criar o esqueleto do seu aplicativo, você pode dar suporte a uma barra de ferramentas e uma barra de status. Somente uma opção no Assistente de aplicativo oferece suporte a ambos. Quando houver uma barra de status, o aplicativo fornece automaticamente comentários úteis, como o usuário move o ponteiro sobre os itens nos menus. O aplicativo exibe uma cadeia de caracteres de prompt automaticamente na barra de status quando o item de menu é realçado. Por exemplo, quando o usuário move o ponteiro sobre o **Recortar** comando o **editar** menu, a barra de status pode exibir "Recorta a seleção e a coloca na área de transferência" na área de mensagem da barra de status. O prompt de ajuda o usuário a entender a finalidade do item de menu. Isso também funciona quando o usuário clica em um botão de barra de ferramentas.  
   
  Você pode adicionar a esta Ajuda da barra de status definindo cadeias de caracteres de prompt para itens de menu que você adicionar ao programa. Para fazer isso, forneça as cadeias de caracteres de prompt quando você edita as propriedades do item de menu no editor de menu. Você define as cadeias de caracteres são armazenadas no arquivo de recurso do aplicativo; eles têm as mesmas IDs que os comandos que explicam por eles.  
   
- Por padrão, o Assistente de aplicativo adiciona `AFX_IDS_IDLEMESSAGE`, a ID de uma mensagem de "Pronta" padrão, que é exibida quando o programa está aguardando novas mensagens. Se você especificar a opção de ajuda sensível ao contexto no Assistente do aplicativo, a mensagem será alterada para "Para obter ajuda, pressione F1."  
+ Por padrão, o Assistente de aplicativo adiciona **AFX_IDS_IDLEMESSAGE**, a ID de uma mensagem de "Pronta" padrão, que é exibida quando o programa está aguardando novas mensagens. Se você especificar a opção de ajuda sensível ao contexto no Assistente do aplicativo, a mensagem será alterada para "Para obter ajuda, pressione F1."  
   
 ## <a name="see-also"></a>Consulte também  
  [Tratamento e mapeamento de mensagem](../mfc/message-handling-and-mapping.md)

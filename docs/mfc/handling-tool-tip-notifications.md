@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9dffa2513c11a5feb3228cb4fdb1f6efbebe7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8df4b584a4e8b0ef940d5934a5968037427c607d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346370"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931808"
 ---
 # <a name="handling-tool-tip-notifications"></a>Manipulando notificações da dica de ferramenta
-Quando você especifica o `TBSTYLE_TOOLTIPS` estilo, a barra de ferramentas cria e gerencia um controle de dica de ferramenta. Uma dica de ferramenta é uma pequena janela pop-up que contém uma linha de texto que descreve um botão de barra de ferramentas. A dica de ferramenta está oculto, que aparecem somente quando o usuário coloca o cursor em um botão de barra de ferramentas e deixa-lo para aproximadamente metade de segundo. A dica de ferramenta é exibida próximo ao cursor.  
+Quando você especifica o **TBSTYLE_TOOLTIPS** estilo, a barra de ferramentas cria e gerencia um controle de dica de ferramenta. Uma dica de ferramenta é uma pequena janela pop-up que contém uma linha de texto que descreve um botão de barra de ferramentas. A dica de ferramenta está oculto, que aparecem somente quando o usuário coloca o cursor em um botão de barra de ferramentas e deixa-lo para aproximadamente metade de segundo. A dica de ferramenta é exibida próximo ao cursor.  
   
  Antes da dica de ferramenta é exibida, o **TTN_NEEDTEXT** mensagem de notificação é enviada à janela do proprietário da barra de ferramentas para recuperar o texto descritivo para o botão. Se a janela do proprietário da barra de ferramentas é um `CFrameWnd` janela de ferramenta dicas são exibidas sem qualquer esforço extra, porque `CFrameWnd` tem um manipulador padrão para o **TTN_NEEDTEXT** notificação. Se a janela do proprietário da barra de ferramentas não é derivada de `CFrameWnd`, como uma exibição de formulário ou uma caixa de diálogo, você deve adicionar uma entrada para mapa de mensagem da janela do proprietário e fornecer um manipulador de notificação no mapa de mensagem. A entrada de mapa de mensagem da janela do proprietário é o seguinte:  
   

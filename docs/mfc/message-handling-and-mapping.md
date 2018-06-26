@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66171c5df636597a2ff6be0438b558dc418b72af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 906d84d70b3bf2ae2a9da14ce9e5b06ed92d3730
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348522"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931028"
 ---
 # <a name="message-handling-and-mapping"></a>Manipulação e mapeamento de mensagem
 Família este artigo descreve como mensagens e comandos são processados pela estrutura MFC e como conectá-los para suas funções de manipulador.  
   
  Programas tradicionais para Windows, as mensagens do Windows são tratadas em uma instrução switch grande em um procedimento de janela. Em vez disso, usa o MFC [mapas de mensagem](../mfc/message-categories.md) para mapear mensagens diretas a funções de membro de classe distintos. Mapas de mensagem são mais eficientes que funções virtuais para essa finalidade, e eles permitem que as mensagens sejam tratadas pelo objeto C++ mais apropriado, aplicativo, documento, exibição e assim por diante. Você pode mapear uma única mensagem ou um intervalo de mensagens, IDs de comando, ou IDs de controle.  
   
- **WM_COMMAND** mensagens — normalmente é gerado por menus, botões da barra de ferramentas ou aceleradores — também usam o mecanismo de mapa de mensagem. MFC define um padrão [roteamento](../mfc/command-routing.md) de mensagens de comando entre o aplicativo, quadro janela modo de exibição e documentos ativos em seu programa. Você pode substituir este roteamento se for necessário.  
+ Mensagens WM_COMMAND — normalmente é gerado por menus, botões da barra de ferramentas ou aceleradores — também usam o mecanismo de mapa de mensagem. MFC define um padrão [roteamento](../mfc/command-routing.md) de mensagens de comando entre o aplicativo, quadro janela modo de exibição e documentos ativos em seu programa. Você pode substituir este roteamento se for necessário.  
   
  Mapas de mensagem também fornecem uma maneira de atualizar os objetos de interface do usuário (por exemplo, menus e botões de barra de ferramentas), habilitar ou desabilitá-las de acordo com o contexto atual.  
   

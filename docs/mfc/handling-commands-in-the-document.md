@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c20ff02b2d72f1dfa6afab5a0d547b46aa55b18c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a1e848827b46d40c1ec39f2af4788e6957932c5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343541"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929106"
 ---
 # <a name="handling-commands-in-the-document"></a>Manipulando comandos no documento
-A classe de documento também pode lidar com determinados comandos gerados pelos itens de menu, botões da barra de ferramentas ou teclas de aceleração. Por padrão, **CDocument** manipula o salvamento e salvar como comandos no menu Arquivo, usando a serialização. Outros comandos que afetam os dados também podem ser tratados por funções de membro do documento. Por exemplo, no programa rabisco, classe `CScribDoc` fornece um manipulador para o comando Editar Limpar tudo, que exclui todos os dados atualmente armazenados no documento. Documentos podem ter mapas de mensagem, mas ao contrário de modos de exibição, os documentos não podem tratar mensagens padrão do Windows — somente **WM_COMMAND** mensagens ou "comandos".  
+A classe de documento também pode lidar com determinados comandos gerados pelos itens de menu, botões da barra de ferramentas ou teclas de aceleração. Por padrão, `CDocument` manipula o salvamento e salvar como comandos no menu Arquivo, usando a serialização. Outros comandos que afetam os dados também podem ser tratados por funções de membro do documento. Por exemplo, no programa rabisco, classe `CScribDoc` fornece um manipulador para o comando Editar Limpar tudo, que exclui todos os dados atualmente armazenados no documento. Documentos podem ter mapas de mensagem, mas ao contrário de modos de exibição, os documentos não podem tratar mensagens padrão do Windows — somente **WM_COMMAND** mensagens ou "comandos".  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando documentos](../mfc/using-documents.md)

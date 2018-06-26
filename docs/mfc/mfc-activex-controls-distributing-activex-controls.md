@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6658c972b9d9cdeececd43a89ac424964d2289
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d052b2d77df8b3209671b4330347ef642877e47a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358801"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928876"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>Controles ActiveX MFC: distribuindo controles ActiveX
 Este artigo descreve vários problemas relacionados à redistribuindo controles ActiveX:  
@@ -60,7 +60,7 @@ Este artigo descreve vários problemas relacionados à redistribuindo controles 
  O programa de instalação que você forneça aos seus controles ActiveX deve criar um subdiretório especial do diretório do Windows e instale os controles. Arquivos OCX nela.  
   
 > [!NOTE]
->  Use o Windows **GetWindowsDirectory** API em seu programa de instalação para obter o nome do diretório do Windows. Talvez você queira derivar o nome do subdiretório do nome da sua empresa ou produto.  
+>  Use o Windows `GetWindowsDirectory` API em seu programa de instalação para obter o nome do diretório do Windows. Talvez você queira derivar o nome do subdiretório do nome da sua empresa ou produto.  
   
  O programa de instalação deve instalar os arquivos DLL redistribuíveis necessários no diretório de sistema do Windows. Se qualquer uma das DLLs que já estão presentes no computador do usuário, o programa de instalação deve comparar suas versões com as versões que você está instalando. Reinstale um arquivo apenas se o seu número de versão é maior do que o arquivo já está instalado.  
   
@@ -71,14 +71,14 @@ Este artigo descreve vários problemas relacionados à redistribuindo controles 
   
  Se preferir, você pode escrever o programa de instalação para registrar o controle diretamente.  
   
- Use o **LoadLibrary** API do Windows para carregar a DLL de controle. Em seguida, use **GetProcAddress** para obter o endereço da função "DllRegisterServer". Finalmente, chame o `DllRegisterServer` função. O exemplo de código a seguir demonstra um método possível, onde `hLib` armazena o identificador da biblioteca de controle, e `lpDllEntryPoint` armazena o endereço da função "DllRegisterServer".  
+ Use o `LoadLibrary` API do Windows para carregar a DLL de controle. Em seguida, use `GetProcAddress` para obter o endereço da função "DllRegisterServer". Finalmente, chame o `DllRegisterServer` função. O exemplo de código a seguir demonstra um método possível, onde `hLib` armazena o identificador da biblioteca de controle, e `lpDllEntryPoint` armazena o endereço da função "DllRegisterServer".  
   
  [!code-cpp[NVC_MFC_AxCont#16](../mfc/codesnippet/cpp/mfc-activex-controls-distributing-activex-controls_1.cpp)]  
   
  Registrando o controle diretamente a vantagem é que você não precisa chamar e carregar um processo separado (ou seja, REGSVR32), reduzindo o tempo de instalação. Além disso, como o registro é um processo interno, o programa de instalação pode tratar erros e situações inesperadas melhores do que um processo externo podem.  
   
 > [!NOTE]
->  Antes do programa de instalação instala um controle ActiveX, é necessário chamar **OleInitialize**. Quando o programa de instalação for concluído, chame **OleUnitialize**. Isso garante que as DLLs do sistema OLE estejam no estado apropriado para registrar um controle ActiveX.  
+>  Antes do programa de instalação instala um controle ActiveX, é necessário chamar `OleInitialize`. Quando o programa de instalação for concluído, chame `OleUnitialize`. Isso garante que as DLLs do sistema OLE estejam no estado apropriado para registrar um controle ActiveX.  
   
  Você deve registrar MFCx0.DLL.  
   

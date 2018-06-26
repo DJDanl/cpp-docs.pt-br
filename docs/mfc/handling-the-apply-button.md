@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d80dc3d02a7530ee54c9ff26cd0a03465bd77cdd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: acbbd4ec8e075abbcbbeeaf199cae0d3a8d3c41a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345034"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930446"
 ---
 # <a name="handling-the-apply-button"></a>Manipulando o botão Aplicar
 Folhas de propriedade tem um recurso que caixas de diálogo padrão não: eles permitem que o usuário aplicar as alterações feitas antes de fechar a folha de propriedades. Isso é feito usando o botão Aplicar. Este artigo descreve métodos que você pode usar para implementar esse recurso corretamente.  
@@ -33,11 +33,11 @@ Folhas de propriedade tem um recurso que caixas de diálogo padrão não: eles p
   
  Se você não desejar oferecer a funcionalidade de aplicar ao usuário, não é necessário remover o botão Aplicar. Você pode deixá-la desabilitada, pois serão comuns entre os aplicativos que usam o suporte de folha de propriedade padrão disponível em versões futuras do Windows.  
   
- Para relatar uma página como sendo modificadas e habilitar o botão Aplicar, chame **CPropertyPage::SetModified (TRUE)**. Se houver páginas do relatório de tabela que está sendo modificado, o botão Aplicar permanecerá habilitado, independentemente se a página ativa no momento foi modificada.  
+ Para relatar uma página como sendo modificadas e habilitar o botão Aplicar, chame `CPropertyPage::SetModified( TRUE )`. Se houver páginas do relatório de tabela que está sendo modificado, o botão Aplicar permanecerá habilitado, independentemente se a página ativa no momento foi modificada.  
   
  Você deve chamar [CPropertyPage::SetModified](../mfc/reference/cpropertypage-class.md#setmodified) sempre que o usuário altera as configurações na página. Uma maneira de detectar quando um usuário altera uma configuração na página é implementar manipuladores de notificação de alteração para cada um dos controles na página de propriedades, como **EN_CHANGE** ou **BN_CLICKED**.  
   
- Para implementar o efeito do botão Aplicar, a folha de propriedades deve informar o seu proprietário ou algum outro objeto externo do aplicativo, para aplicar as configurações atuais nas páginas de propriedades. Ao mesmo tempo, a folha de propriedades deve desabilitar o botão Aplicar chamando **CPropertyPage::SetModified (FALSE)** para todas as páginas que são aplicadas as suas modificações para o objeto externo.  
+ Para implementar o efeito do botão Aplicar, a folha de propriedades deve informar o seu proprietário ou algum outro objeto externo do aplicativo, para aplicar as configurações atuais nas páginas de propriedades. Ao mesmo tempo, a folha de propriedades deve desabilitar o botão Aplicar chamando `CPropertyPage::SetModified( FALSE )` para todas as páginas que são aplicadas as suas modificações para o objeto externo.  
   
  Para obter um exemplo desse processo, consulte o exemplo de MFC geral [PROPDLG](../visual-cpp-samples.md).  
   

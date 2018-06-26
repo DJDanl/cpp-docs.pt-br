@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1fac5f83f19fab37604a14e239cf505891c737f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ae83c3e41ebabf62ad98211f3943af2b535c806
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349845"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929501"
 ---
 # <a name="rebar-controls-and-bands"></a>Controles rebar e bandas
 A principal finalidade de um controle rebar é atuar como um contêiner para janelas filho, controles de caixa de diálogo comuns, menus, barras de ferramentas e assim por diante. Essa contenção é suportada pelo conceito de "banda". Cada faixa rebar pode conter qualquer combinação de uma barra dupla, um bitmap, um rótulo de texto e uma janela filho.  
@@ -43,7 +43,7 @@ A principal finalidade de um controle rebar é atuar como um contêiner para jan
   
  [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) e [DeleteBand](../mfc/reference/crebarctrl-class.md#deleteband) adicionar e remover bandas rebar. [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband) e [MaximizeBand](../mfc/reference/crebarctrl-class.md#maximizeband) afeta o tamanho atual de uma faixa de rebar específico. [MoveBand](../mfc/reference/crebarctrl-class.md#moveband) altera o índice de uma faixa de rebar específico. [ShowBand](../mfc/reference/crebarctrl-class.md#showband) mostra ou oculta uma faixa de rebar do usuário.  
   
- O exemplo a seguir demonstra como adicionar uma faixa da barra de ferramentas (`m_wndToolBar`) para um controle rebar existente (`m_wndReBar`). A faixa é descrita por inicializar o `rbi` estrutura e, em seguida, chamar o `InsertBand` função de membro:  
+ O exemplo a seguir demonstra como adicionar uma faixa da barra de ferramentas (*m_wndToolBar*) para um controle rebar existente (*m_wndReBar*). A faixa é descrita por inicializar o `rbi` estrutura e, em seguida, chamar o `InsertBand` função de membro:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]  
   

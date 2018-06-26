@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ce59bfe298798d4574bf158998e989c4a6af62c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 462d9177b1f6300eb356d052cbdfff3b85db86a1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348355"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928056"
 ---
 # <a name="processing-tab-control-notification-messages"></a>Processando mensagens de notificação do controle de guia
 Como os usuários clicam em guias ou botões, o controle de guia ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) envia mensagens de notificação para sua janela pai. Se você quiser fazer algo em resposta, lidar com essas mensagens. Por exemplo, quando o usuário clica em uma guia, você talvez queira predefinição dados de controle na página antes de exibi-lo.  
   
- Processo **WM_NOTIFY** mensagens de controle guia em sua classe de exibição ou a caixa de diálogo. Use a janela de propriedades para criar um [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) função de manipulador com uma instrução switch com base em qual mensagem de notificação está sendo tratada. Para obter uma lista das notificações de um controle guia pode enviar para sua janela pai, consulte o **notificações** seção [referência de controle de guia](http://msdn.microsoft.com/library/windows/desktop/bb760548) no SDK do Windows.  
+ Processar mensagens WM_NOTIFY do controle guia em sua classe de exibição ou a caixa de diálogo. Use a janela de propriedades para criar um [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) função de manipulador com uma instrução switch com base em qual mensagem de notificação está sendo tratada. Para obter uma lista das notificações de um controle guia pode enviar para sua janela pai, consulte o **notificações** seção [referência de controle de guia](http://msdn.microsoft.com/library/windows/desktop/bb760548) no SDK do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando CTabCtrl](../mfc/using-ctabctrl.md)   

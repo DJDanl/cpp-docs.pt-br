@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 267d47b7e061e3bde39b199cd948ba9875dea16b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353267"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929725"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Controles ActiveX MFC: usando associação de dados em um controle ActiveX
 Um dos usos mais eficientes dos controles ActiveX é associação de dados, que permite que uma propriedade do controle a ser associado a um campo específico em um banco de dados. Quando um usuário modifica dados nessa propriedade associada, o controle notifica o banco de dados e as solicitações que o campo de registro sejam atualizados. O banco de dados, em seguida, notifica o controle do sucesso ou falha da solicitação.  
@@ -51,7 +51,7 @@ Diagrama conceitual de um controle associado a dados
  É possível criar uma propriedade de estoque de associação de dados, embora é mais provável que você queira um [método associável get/set](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
->  Propriedades de estoque tem o **associável** e **requestedit** atributos por padrão.  
+>  Propriedades de estoque tem o `bindable` e `requestedit` atributos por padrão.  
   
 #### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>Para adicionar uma propriedade de estoque vinculável usando o Assistente para adicionar propriedade  
   

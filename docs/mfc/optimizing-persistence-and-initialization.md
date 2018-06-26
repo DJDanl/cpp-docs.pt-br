@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e528ea7901518112c255eefbfb1e674fddee04e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d03966cb61e1ccab3f8f3886638efdf95a534a73
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355653"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930307"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Otimizando persistência e inicialização
 Por padrão, persistência e inicialização em um controle são manipuladas pelo `DoPropExchange` função de membro. Em um controle comum, essa função contém chamadas para vários **px _** funções (`PX_Color`, `PX_Font`e assim por diante), uma para cada propriedade.  
@@ -45,7 +45,7 @@ Por padrão, persistência e inicialização em um controle são manipuladas pel
   
  [!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]  
   
- Observe que, no caso de carga, uma variável temporária é usada e, em seguida, seu valor é atribuído, em vez de conversão `m_boolProp` para um **bytes** referência. A técnica de conversão resultaria em um byte de `m_boolProp` que está sendo modificado, deixando os bytes restantes não inicializados.  
+ Observe que, no caso de carga, uma variável temporária é usada e, em seguida, seu valor é atribuído, em vez de conversão *m_boolProp* para um **bytes** referência. A técnica de conversão resultaria em um byte de *m_boolProp* que está sendo modificado, deixando os bytes restantes não inicializados.  
   
  Para o mesmo controle, você pode otimizar a inicialização do controle, substituindo [COleControl::OnResetState](../mfc/reference/colecontrol-class.md#onresetstate) da seguinte maneira:  
   

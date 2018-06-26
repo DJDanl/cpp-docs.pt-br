@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d1691f9a61a11dc4d9dfe7e869ccb7899746bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c4e6c7744c3d5328985eee24e67ee1eb359fb3c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350006"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931012"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Exceções: alterações feitas em macros de exceção na versão 3.0
 Este é um tópico avançado.  
@@ -46,13 +46,13 @@ Este é um tópico avançado.
   
  [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
   
- é gerada como um **CException\***, mesmo que ela é criada como uma **CCustomException**. O **CATCH** macro na versão 2.5 do MFC e usa anteriores `CObject::IsKindOf` para testar o tipo em tempo de execução. Porque a expressão  
+ é gerada como um `CException*`, mesmo que ele é criado como um `CCustomException`. O **CATCH** macro na versão 2.5 do MFC e usa anteriores `CObject::IsKindOf` para testar o tipo em tempo de execução. Porque a expressão  
   
  [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
   
  é verdadeiro, o primeiro bloco catch captura a exceção. Na versão 3.0, que usa as exceções do C++ para implementar muitas das macros a manipulação de exceção, o segundo bloco catch corresponde a lançado `CException`.  
   
- Como este é incomum. Ele geralmente é exibida quando um objeto de exceção é transmitido a outra função que aceita um genérico **CException\***, realiza o processamento de "pré-lançamento" e, finalmente, lança a exceção.  
+ Como este é incomum. Ele geralmente é exibida quando um objeto de exceção é transmitido a outra função que aceita um genérico `CException*`, realiza o processamento de "pré-lançamento" e, finalmente, lança a exceção.  
   
  Para contornar esse problema, mova a expressão throw da função para o código de chamada e lançar uma exceção do tipo real conhecido para o compilador no momento em que a exceção é gerada.  
   
@@ -63,7 +63,7 @@ Este é um tópico avançado.
   
  [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]  
   
- Usando **gerar** em catch bloco faz com que o ponteiro `e` a ser excluído, para que o site externo catch receberá um ponteiro inválido. Use `THROW_LAST` para gerar novamente `e`.  
+ Usando **gerar** em catch bloco faz com que o ponteiro `e` a ser excluído, para que o site externo catch receberá um ponteiro inválido. Use **THROW_LAST** para gerar novamente `e`.  
   
  Para obter mais informações, consulte [exceções: exceções de detectar e excluindo](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   

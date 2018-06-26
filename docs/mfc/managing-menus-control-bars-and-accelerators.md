@@ -22,22 +22,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1055fd9b1ef75b2090478d85e8251d1800b8b039
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e19cda1869938a854ff03ea83cdda747e8120a0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345736"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929524"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Gerenciando menus, barras de controle e aceleradores
 A janela do quadro gerencia atualizando objetos de interface do usuário, incluindo menus, botões da barra de ferramentas, a barra de status e aceleradores. Ele também gerencia o compartilhamento de barra de menu em aplicativos MDI.  
   
 ## <a name="managing-menus"></a>Gerenciando Menus  
- A janela do quadro participa Atualizando itens de interface do usuário usando o `ON_UPDATE_COMMAND_UI` mecanismo descrito em [como objetos de atualização de Interface do usuário](../mfc/how-to-update-user-interface-objects.md). Botões da barra de ferramentas e outras barras de controle são atualizadas durante o loop ocioso. Itens de menu nos menus de lista suspensa na barra de menu são atualizados imediatamente antes do menu suspenso.  
+ A janela do quadro participa Atualizando itens de interface do usuário usando o mecanismo ON_UPDATE_COMMAND_UI descrito em [como objetos de atualização de Interface do usuário](../mfc/how-to-update-user-interface-objects.md). Botões da barra de ferramentas e outras barras de controle são atualizadas durante o loop ocioso. Itens de menu nos menus de lista suspensa na barra de menu são atualizados imediatamente antes do menu suspenso.  
   
  Para aplicativos MDI, a janela do quadro MDI gerencia a barra de menus e a legenda. Uma janela de quadro MDI possui um menu padrão que é usado como a barra de menus quando nenhuma janela de filho MDI ativo. Quando há filhos ativos, barra de menus da janela de quadro MDI é controlada por menu para a janela filho MDI ativo. Se um aplicativo MDI dá suporte a vários tipos de documento, como documentos de planilha e de gráfico, cada tipo coloca seus próprios menus na barra de menus e altera a legenda da janela do quadro principal.  
   
- [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) fornece implementações padrão para os comandos padrão no menu janela que aparece para aplicativos MDI. Em particular, o comando nova janela (**ID_WINDOW_NEW**) é implementado para criar uma nova janela do quadro e o modo de exibição no documento atual. Você precisa substituir essas implementações somente se precisar de personalização avançada.  
+ [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) fornece implementações padrão para os comandos padrão no menu janela que aparece para aplicativos MDI. Em particular, o comando nova janela (ID_WINDOW_NEW) é implementado para criar uma nova janela do quadro e o modo de exibição no documento atual. Você precisa substituir essas implementações somente se precisar de personalização avançada.  
   
  Várias janelas de filho MDI do mesmo tipo de documento compartilham recursos do menu. Se várias janelas de filho MDI são criadas pelo mesmo modelo de documento, todas elas poderão usar o mesmo recurso de menu, salvando nos recursos do sistema no Windows.  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2255f28c1250096bfbeb1a9365c57f78e17e20d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d76717e68e37769cf55dceb4492ed78031c49e10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344618"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928218"
 ---
 # <a name="containers-client-item-notifications"></a>Contêineres: notificações de item do cliente
 Este artigo descreve as funções substituíveis que a estrutura MFC chama quando aplicativos de servidor modificar itens no documento do aplicativo cliente.  
@@ -32,11 +32,11 @@ Este artigo descreve as funções substituíveis que a estrutura MFC chama quand
   
 |Notificação|Significado|  
 |------------------|-------------|  
-|`OLE_CHANGED`|Aparência do item OLE foi alterado.|  
-|`OLE_SAVED`|O item OLE foi salvo.|  
-|`OLE_CLOSED`|O item OLE foi fechado.|  
+|**OLE_CHANGED**|Aparência do item OLE foi alterado.|  
+|**OLE_SAVED**|O item OLE foi salvo.|  
+|**OLE_CLOSED**|O item OLE foi fechado.|  
 |**OLE_RENAMED**|O documento de servidor que contém o item OLE foi renomeado.|  
-|`OLE_CHANGED_STATE`|O item OLE foi alterado de um estado para outro.|  
+|**OLE_CHANGED_STATE**|O item OLE foi alterado de um estado para outro.|  
 |**OLE_CHANGED_ASPECT**|Aspecto de desenho do item OLE foi alterado pela estrutura.|  
   
  Esses valores são a partir de **OLE_NOTIFICATION** enumeração, que é definida em AFXOLE. H.  
@@ -45,9 +45,9 @@ Este artigo descreve as funções substituíveis que a estrutura MFC chama quand
   
 |Quando o primeiro argumento é|Segundo argumento|  
 |----------------------------|---------------------|  
-|`OLE_SAVED` ou `OLE_CLOSED`|Não é usado.|  
-|`OLE_CHANGED`|Especifica a proporção do item OLE que foi alterado.|  
-|`OLE_CHANGED_STATE`|Descreve o estado que está sendo inserido (`emptyState`, **loadedState**, `openState`, `activeState`, ou `activeUIState`).|  
+|**OLE_SAVED** ou **OLE_CLOSED**|Não é usado.|  
+|**OLE_CHANGED**|Especifica a proporção do item OLE que foi alterado.|  
+|**OLE_CHANGED_STATE**|Descreve o estado que está sendo inserido (*emptyState*, *loadedState*, *openState*, *activeState*, ou  *activeUIState*).|  
   
  Para obter mais informações sobre os estados de um item do cliente pode assumir, consulte [contêineres: Estados de Item do cliente](../mfc/containers-client-item-states.md).  
   

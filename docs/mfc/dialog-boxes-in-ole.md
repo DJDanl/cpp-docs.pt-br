@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fdff45963419b3676ea8ca6b1bf0239348387dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9fe7f9b4b97fd17e73c3dd9f113a87d8f087b93c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347835"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929657"
 ---
 # <a name="dialog-boxes-in-ole"></a>Caixas de diálogo em OLE
 Enquanto um usuário executa um aplicativo habilitado para OLE, há vezes em que o aplicativo precisa de informações do usuário para realizar a operação. As classes MFC OLE fornecem uma série de caixas de diálogo para coletar as informações necessárias. Este tópico lista as tarefas tratadas pelas caixas de diálogo OLE e as classes necessárias para exibir essas caixas de diálogo. Para obter detalhes sobre caixas de diálogo OLE e as estruturas usadas para personalizar seu comportamento, consulte [referência MFC](../mfc/mfc-desktop-applications.md).  
@@ -46,7 +46,7 @@ Enquanto um usuário executa um aplicativo habilitado para OLE, há vezes em que
  A caixa de diálogo Editar Links permite que o usuário altere as informações sobre a origem de um objeto vinculado. A caixa de diálogo Links de atualização verifica as fontes de todos os itens vinculados na caixa de diálogo atual e exibe a caixa de diálogo Editar Links, se necessário. Exiba a caixa de diálogo Editar Links quando o usuário escolhe Links no menu Editar. A caixa de diálogo Links de atualização normalmente é exibida quando um documento composto é aberto pela primeira vez. Use o [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) ou [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) classe, dependendo de qual caixa de diálogo que você deseja exibir.  
   
  *Servidor ocupado ou não está respondendo*  
- A caixa de diálogo servidor ocupado é exibida quando o usuário tenta ativar um item e o servidor está disponível atualmente manipular a solicitação, normalmente porque o servidor está em uso por outro usuário ou de tarefas. A caixa de diálogo do servidor não está respondendo será exibida se o servidor não responder à solicitação de ativação em todos os. Essas caixas de diálogo são exibidas por meio de `COleMessageFilter`, com base em uma implementação da interface OLE **IMessageFilter**, e o usuário pode decidir se deve tentar novamente a solicitação de ativação. Use o [COleBusyDialog](../mfc/reference/colebusydialog-class.md) classe para exibir essa caixa de diálogo.  
+ A caixa de diálogo servidor ocupado é exibida quando o usuário tenta ativar um item e o servidor está disponível atualmente manipular a solicitação, normalmente porque o servidor está em uso por outro usuário ou de tarefas. A caixa de diálogo do servidor não está respondendo será exibida se o servidor não responder à solicitação de ativação em todos os. Essas caixas de diálogo são exibidas por meio de `COleMessageFilter`, com base em uma implementação da interface OLE `IMessageFilter`, e o usuário pode decidir se deve tentar novamente a solicitação de ativação. Use o [COleBusyDialog](../mfc/reference/colebusydialog-class.md) classe para exibir essa caixa de diálogo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Caixas de diálogo](../mfc/dialog-boxes.md)   

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd1fbce9e6dda649da8fe2e53fc7dc70db1da33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cbcdeec6e39e104625d1b5d47c494915a821d38
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354433"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930027"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Como fazer uma coleção fortemente tipada
 Este artigo explica como criar coleções fortemente tipadas para seus próprios tipos de dados. Os tópicos incluem:  
@@ -52,7 +52,7 @@ Este artigo explica como criar coleções fortemente tipadas para seus próprios
   
 3.  Se necessário, implemente o [funções auxiliares](../mfc/reference/collection-class-helpers.md) e [SerializeElements](../mfc/reference/collection-class-helpers.md#serializeelements). Para obter informações sobre a implementação dessas funções, consulte [implementando funções de auxiliar](#_core_implementing_helper_functions).  
   
- Este exemplo mostra a declaração de uma lista de números inteiros. O primeiro parâmetro na etapa 1 é o tipo de dados armazenados como elementos da lista. O segundo parâmetro especifica como os dados são passados para e retornadas de funções de membro da classe de coleção, como **adicionar** e `GetAt`.  
+ Este exemplo mostra a declaração de uma lista de números inteiros. O primeiro parâmetro na etapa 1 é o tipo de dados armazenados como elementos da lista. O segundo parâmetro especifica como os dados são passados para e retornadas de funções de membro da classe de coleção, como `Add` e `GetAt`.  
   
 ##  <a name="_core_implementing_helper_functions"></a> Implementando funções auxiliares  
  As classes de coleção com base em modelo `CArray`, `CList`, e `CMap` usar cinco funções de auxiliar global que você pode personalizar conforme necessário para sua classe derivada de coleção. Para obter informações sobre essas funções de auxiliar, consulte [auxiliares da classe de coleção](../mfc/reference/collection-class-helpers.md) no *referência MFC*. Implementação da função de serialização é necessária para a maioria dos usos das classes de coleção com base em modelo.  
@@ -66,10 +66,10 @@ Este artigo explica como criar coleções fortemente tipadas para seus próprios
   
  [!code-cpp[NVC_MFCCollections#9](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_3.cpp)]  
   
- Os operadores de inserção sobrecarregado para `CArchive` chamar `CObject::Serialize` (ou uma substituição dessa função) para cada **CPerson** objeto.  
+ Os operadores de inserção sobrecarregado para `CArchive` chamar `CObject::Serialize` (ou uma substituição dessa função) para cada `CPerson` objeto.  
   
 ##  <a name="_core_using_nontemplate_collection_classes"></a> Usando Classes de coleção de Nontemplate  
- MFC também oferece suporte as classes de coleção introduzidas com a versão 1.0 do MFC. Essas classes não são baseadas em modelos. Eles podem ser usados para conter dados dos tipos suportados `CObject*`, **UINT**, `DWORD`, e `CString`. Você pode usar essas coleções predefinidas (como `CObList`) para armazenar coleções de qualquer objeto derivado de `CObject`. MFC também fornece outras coleções predefinidas para conter tipos primitivos como **UINT** e ponteiros de void (`void`*). Em geral, no entanto, geralmente é útil definir suas próprias coleções fortemente tipadas para armazenar objetos de uma classe mais específica e seus derivados. Observe que não fazer isso com as classes de coleção com base em modelos mais trabalho do que usar as classes de modelo.  
+ MFC também oferece suporte as classes de coleção introduzidas com a versão 1.0 do MFC. Essas classes não são baseadas em modelos. Eles podem ser usados para conter dados dos tipos suportados `CObject*`, `UINT`, `DWORD`, e `CString`. Você pode usar essas coleções predefinidas (como `CObList`) para armazenar coleções de qualquer objeto derivado de `CObject`. MFC também fornece outras coleções predefinidas para conter tipos primitivos como `UINT` e ponteiros de void (`void`*). Em geral, no entanto, geralmente é útil definir suas próprias coleções fortemente tipadas para armazenar objetos de uma classe mais específica e seus derivados. Observe que não fazer isso com as classes de coleção com base em modelos mais trabalho do que usar as classes de modelo.  
   
  Há duas maneiras de criar coleções fortemente tipadas com as coleções de nontemplate:  
   

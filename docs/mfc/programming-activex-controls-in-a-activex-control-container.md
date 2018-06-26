@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae926cfc7e83edeef9ee68c7ce7118c55009a08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1bd8a99faa4cf0444782f402e69da761a8c25e2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355035"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929949"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>Contêineres de controle ActiveX: programando controles ActiveX em um contêiner de controle ActiveX
 Este artigo descreve o processo para acessar o exposto [métodos](../mfc/mfc-activex-controls-methods.md) e [propriedades](../mfc/mfc-activex-controls-properties.md) de controles ActiveX incorporados. Basicamente, você seguirá estas etapas:  
@@ -76,7 +76,7 @@ Este artigo descreve o processo para acessar o exposto [métodos](../mfc/mfc-act
 ##  <a name="_core_member_variable_modifications_to_the_project"></a> Modificações de variável de membro para o projeto  
  Depois que o controle ActiveX foi adicionado ao projeto e inserido em um contêiner de caixa de diálogo, ele pode ser acessado por outras partes do projeto. A maneira mais fácil para o controle de acesso é [criar uma variável de membro](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) da classe de caixa de diálogo, `CContainerDlg` (etapa 2), que é do mesmo tipo de classe wrapper adicionado ao projeto pelo Visual C++. Você pode usar a variável de membro para acessar o controle incorporado a qualquer momento.  
   
- Quando o **Adicionar variável de membro** caixa de diálogo adiciona o `m_circctl` membro variável ao projeto, ele também adiciona as seguintes linhas no arquivo de cabeçalho (. H) do `CContainerDlg` classe:  
+ Quando o **Adicionar variável de membro** caixa de diálogo adiciona o *m_circctl* membro variável ao projeto, ele também adiciona as seguintes linhas no arquivo de cabeçalho (. H) do `CContainerDlg` classe:  
   
  [!code-cpp[NVC_MFC_AxCont#4](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_4.h)]  
 [!code-cpp[NVC_MFC_AxCont#5](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_5.h)]  
@@ -92,7 +92,7 @@ Este artigo descreve o processo para acessar o exposto [métodos](../mfc/mfc-act
   
  Um local comum para modificar as propriedades do controle está no `OnInitDialog` a função de membro da classe principal da caixa de diálogo. Essa função é chamada logo antes da caixa de diálogo aparece e é usada para inicializar o seu conteúdo, inclusive qualquer um de seus controles.  
   
- O seguinte exemplo de código usa o `m_circctl` variável de membro para modificar as propriedades da legenda e CircleShape do controle inserido c:  
+ O seguinte exemplo de código usa o *m_circctl* variável de membro para modificar as propriedades da legenda e CircleShape do controle inserido c:  
   
  [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
   

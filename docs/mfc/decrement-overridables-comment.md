@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b71d61175e5446ac33dd0ff6a011d06f601b5a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a1b9b04647717fc5892421f2b45947ebd079a0c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345382"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928721"
 ---
 # <a name="-overridables-comment"></a>// Comentário sobre substituíveis
 O `// Overridables` seção de uma declaração de classe MFC contém funções virtuais que pode ser substituído em uma classe derivada quando você precisa modificar o comportamento da classe base. Elas geralmente são nomeadas começando com "On", embora não seja estritamente necessária. Funções são projetadas para ser substituído e geralmente implementar ou fornecer algum tipo de "retorno de chamada" ou "conectar". Normalmente, esses membros são protegidos.  
@@ -31,7 +31,7 @@ O `// Overridables` seção de uma declaração de classe MFC contém funções 
   
  `virtual void OnDraw( ) = 0;`  
   
- No exemplo a listagem da classe `CStdioFile`, na [um exemplo dos comentários](../mfc/an-example-of-the-comments.md), a lista não inclui nenhuma seção sobre substituíveis. Classe **CDocument**, por outro lado, lista aproximadamente 10 funções de membro substituíveis.  
+ No exemplo a listagem da classe `CStdioFile`, na [um exemplo dos comentários](../mfc/an-example-of-the-comments.md), a lista não inclui nenhuma seção sobre substituíveis. Classe `CDocument`, por outro lado, lista aproximadamente 10 funções de membro substituíveis.  
   
  Em algumas classes, você também poderá ver o comentário `// Advanced Overridables`. Essas são funções avançadas apenas programadores devem tentar substituir. Provavelmente nunca será necessário substituí-los.  
   

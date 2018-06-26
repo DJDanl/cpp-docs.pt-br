@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b78e74b4b8d974fceaf5f854c9890cd7cdd1a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f58c8410de51a4692dd0e7f018d40eaa28c0dae8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344159"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929576"
 ---
 # <a name="-constructors-comment"></a>// Comentário sobre construtores
-O `// Constructors` seção de uma declaração de classe MFC declara construtores (no sentido de C++), bem como quaisquer funções de inicialização necessárias para realmente usar o objeto. Por exemplo, `CWnd::Create` está na seção de construtores porque antes de usar o `CWnd` do objeto, ele deve ser "totalmente construído" primeiro chamando o construtor de C++ e, em seguida, chamar o **criar** função. Normalmente, esses membros são públicos.  
+O `// Constructors` seção de uma declaração de classe MFC declara construtores (no sentido de C++), bem como quaisquer funções de inicialização necessárias para realmente usar o objeto. Por exemplo, `CWnd::Create` está na seção de construtores porque antes de usar o `CWnd` do objeto, ele deve ser "totalmente construído" primeiro chamando o construtor de C++ e, em seguida, chamar o `Create` função. Normalmente, esses membros são públicos.  
   
  Por exemplo, a classe `CStdioFile` tem três construtores, um dos quais é mostrado na listagem em [um exemplo dos comentários](../mfc/an-example-of-the-comments.md).  
   

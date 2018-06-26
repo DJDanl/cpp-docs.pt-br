@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95d6109bdc6ae28b748ee0be78e14ab62bba10fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e44366927cf5d17b5ec5edeebafb396b4e3f1b28
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355431"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929699"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Controles ActiveX MFC: subclasses de um controle do Windows
 Este artigo descreve o processo de subclasses de um controle comum do Windows para criar um controle ActiveX. Controle subclasses existentes do Windows é uma maneira rápida de desenvolver um controle ActiveX. O novo controle terá a capacidade do controle subclasse do Windows, como pintura e responder a cliques do mouse. Exemplo de controles do ActiveX MFC [botão](../visual-cpp-samples.md) é um exemplo de subclasses de um controle do Windows.  
@@ -50,7 +50,7 @@ Este artigo descreve o processo de subclasses de um controle comum do Windows pa
  Consulte o artigo da Base de dados de Conhecimento Q243454 para obter mais informações sobre subclasses de um controle.  
   
 ##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Substituindo IsSubclassedControl e PreCreateWindow  
- Para substituir `PreCreateWindow` e `IsSubclassedControl`, adicione as seguintes linhas de código para o `protected` seção da declaração de classe do controle:  
+ Para substituir `PreCreateWindow` e `IsSubclassedControl`, adicione as seguintes linhas de código para o **protegido** seção da declaração de classe do controle:  
   
  [!code-cpp[NVC_MFC_AxSub#1](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_1.h)]  
   
@@ -60,11 +60,11 @@ Este artigo descreve o processo de subclasses de um controle comum do Windows pa
   
  Observe que, neste exemplo, os Windows controle de botão é especificado em `PreCreateWindow`. No entanto, os controles de Windows padrão podem ser uma subclasse. Para obter mais informações sobre controles padrão do Windows, consulte [controles](../mfc/controls-mfc.md).  
   
- Quando subclasses de um controle do Windows, você talvez queira especificar o estilo de janela específico (**WS_**) ou o estilo de janela estendido (**WS_EX_**) sinalizadores a ser usado na criação de janela do controle. Você pode definir valores para esses parâmetros no `PreCreateWindow` função de membro, modificando o **cs.style** e **cs.dwExStyle** campos de estrutura. Modificações para esses campos devem ser feitas usando um `OR` operação, para preservar os sinalizadores padrão que são definidos pela classe `COleControl`. Por exemplo, se o controle é Subclassificação do controle de botão e você deseja que o controle seja exibido como uma caixa de seleção, insira a seguinte linha de código na implementação de `CSampleCtrl::PreCreateWindow`, antes da instrução de retorno:  
+ Quando subclasses de um controle do Windows, você talvez queira especificar o estilo de janela específico (WS_) ou de janela estendidos sinalizadores de estilo (WS_EX_) a ser usado na criação de janela do controle. Você pode definir valores para esses parâmetros no `PreCreateWindow` a função de membro, modificando o `cs.style` e `cs.dwExStyle` estrutura campos. Modificações para esses campos devem ser feitas usando um **ou** operação, para preservar os sinalizadores padrão que são definidos pela classe `COleControl`. Por exemplo, se o controle é Subclassificação do controle de botão e você deseja que o controle seja exibido como uma caixa de seleção, insira a seguinte linha de código na implementação de `CSampleCtrl::PreCreateWindow`, antes da instrução de retorno:  
   
  [!code-cpp[NVC_MFC_AxSub#3](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_3.cpp)]  
   
- Essa operação adiciona o **BS_CHECKBOX** estilo sinalizador, deixando o sinalizador de estilo padrão (**WS_CHILD**) da classe `COleControl` intactos.  
+ Essa operação adiciona o sinalizador de estilo BS_CHECKBOX, deixando o sinalizador de estilo padrão (estilo) da classe `COleControl` intactos.  
   
 ##  <a name="_core_modifying_the_ondraw_member_function"></a> Modificando a função de membro OnDraw  
  Se você desejar que o controle de subclasse para manter a mesma aparência que o controle do Windows correspondente, o `OnDraw` a função de membro para o controle deve conter apenas uma chamada para o `DoSuperclassPaint` a função de membro, como no exemplo a seguir:  
@@ -74,10 +74,10 @@ Este artigo descreve o processo de subclasses de um controle comum do Windows pa
  O `DoSuperclassPaint` implementada pela função de membro, `COleControl`, usa o procedimento de janela de controle do Windows para desenhar o controle no contexto de dispositivo especificado, dentro do retângulo delimitador. Isso torna o controle visível mesmo quando não está ativa.  
   
 > [!NOTE]
->  O `DoSuperclassPaint` função membro só funcionará com esses tipos de controle que permitem a um contexto de dispositivo a ser passado como o **wParam** de um `WM_PAINT` mensagem. Isso inclui alguns dos controles padrão do Windows, como **SCROLLBAR** e **botão**e todos os controles comuns. Para controles que não oferecem suporte a esse comportamento, você precisará fornecer seu próprio código para exibir corretamente um controle inativo.  
+>  O `DoSuperclassPaint` função membro só funcionará com esses tipos de controle que permitem a um contexto de dispositivo a ser passado como o *wParam* de uma mensagem WM_PAINT. Isso inclui alguns dos controles padrão do Windows, como botão e a barra de ROLAGEM e todos os controles comuns. Para controles que não oferecem suporte a esse comportamento, você precisará fornecer seu próprio código para exibir corretamente um controle inativo.  
   
 ##  <a name="_core_handling_reflected_window_messages"></a> Manipulando janela mensagens refletidas  
- Controles do Windows geralmente enviam determinadas mensagens de janela para a janela pai. Algumas dessas mensagens, como **WM_COMMAND**, fornecer notificação de uma ação do usuário. Outras, como `WM_CTLCOLOR`, são usadas para obter informações da janela pai. Um controle ActiveX geralmente se comunica com a janela pai por outros meios. As notificações são comunicadas por acionando eventos (enviar notificações de eventos) e informações sobre o contêiner de controle são obtidas acessando propriedades ambiente do contêiner. Como essas técnicas de comunicação existem, contêineres de controle ActiveX não são esperados para processar as mensagens de janela enviadas pelo controle.  
+ Controles do Windows geralmente enviam determinadas mensagens de janela para a janela pai. Algumas dessas mensagens, como WM_COMMAND, fornecem notificação de uma ação do usuário. Outras, como WM_CTLCOLOR, são usadas para obter informações da janela pai. Um controle ActiveX geralmente se comunica com a janela pai por outros meios. As notificações são comunicadas por acionando eventos (enviar notificações de eventos) e informações sobre o contêiner de controle são obtidas acessando propriedades ambiente do contêiner. Como essas técnicas de comunicação existem, contêineres de controle ActiveX não são esperados para processar as mensagens de janela enviadas pelo controle.  
   
  Para impedir que o contêiner receba as mensagens de janela enviadas por um controle de Windows subclasse, `COleControl` cria uma janela extra para servir como o pai do controle. Essa janela extra, chamada "reflector", é criada apenas para um controle ActiveX que subclasses de uma janela de controlam e tem o mesmo tamanho e a posição da janela de controle. A janela reflector intercepta determinadas mensagens de janela e envia-os de volta para o controle. O controle, em seu procedimento de janela pode processar essas mensagens refletidas executando ações apropriadas para um controle ActiveX (por exemplo, disparar um evento). Consulte [IDs de mensagem da janela refletida](../mfc/reflected-window-message-ids.md) para uma lista de janelas interceptadas mensagens e seus correspondente refletidas mensagens.  
   
@@ -92,13 +92,13 @@ Este artigo descreve o processo de subclasses de um controle comum do Windows pa
      [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]  
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]  
   
--   Na classe de controle. CPP de arquivo, adicione um `ON_MESSAGE` entrada para o mapa de mensagens. Os parâmetros desta entrada devem ser o identificador da mensagem e o nome da função de manipulador. Por exemplo:  
+-   Na classe de controle. CPP de arquivo, adicione uma entrada ON_MESSAGE ao mapa da mensagem. Os parâmetros desta entrada devem ser o identificador da mensagem e o nome da função de manipulador. Por exemplo:  
   
      [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]  
   
--   Também no. O arquivo CPP, implementar a **OnOcmCommand** a função de membro para processar a mensagem refletida. O **wParam** e **lParam** parâmetros são os mesmos da mensagem original da janela.  
+-   Também no. O arquivo CPP, implementar a `OnOcmCommand` a função de membro para processar a mensagem refletida. O *wParam* e *lParam* parâmetros são os mesmos da mensagem original da janela.  
   
- Para um exemplo de como refletido as mensagens são processadas, consulte o exemplo de controles ActiveX MFC [botão](../visual-cpp-samples.md). Ele demonstra uma **OnOcmCommand** manipulador que detecta o **BN_CLICKED** código de notificação e um evento de clique responde acionando (envio).  
+ Para um exemplo de como refletido as mensagens são processadas, consulte o exemplo de controles ActiveX MFC [botão](../visual-cpp-samples.md). Ele demonstra uma `OnOcmCommand` manipulador que detecta o código de notificação BN_CLICKED e responde acionamento (envio) um `Click` eventos.  
   
 ## <a name="see-also"></a>Consulte também  
  [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)

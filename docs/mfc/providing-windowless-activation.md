@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe72fcaf26a245d40544acaf59def9e24e0fa6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a42d952ade479c4eb117d21921c9b0feafb81cea
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351804"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931945"
 ---
 # <a name="providing-windowless-activation"></a>Fornecendo ativação sem janelas
-Código de criação de janela (ou seja, tudo o que acontece quando você chamar **CreateWindow**) é caro para executar. Um controle que mantém uma tela janela tem que gerenciar as mensagens da janela. Controles sem janelas, portanto, são mais rápidos que os controles com o windows.  
+Código de criação de janela (ou seja, tudo o que acontece quando você chamar `CreateWindow`) é caro para executar. Um controle que mantém uma tela janela tem que gerenciar as mensagens da janela. Controles sem janelas, portanto, são mais rápidos que os controles com o windows.  
   
  Uma vantagem adicional de controles sem janela é que, ao contrário de controles de janela, controles sem janela suportam pintura transparente e regiões da tela não retangulares. Um exemplo comum de um controle transparente é um controle de texto com um plano de fundo transparente. Os controles pinta o texto, mas não o plano de fundo, para que tudo o que está sob o texto aparece. Formulários mais recentes geralmente tornam o uso de controles não retangulares, como setas e botões de ida e volta.  
   
@@ -41,7 +41,7 @@ Código de criação de janela (ou seja, tudo o que acontece quando você chamar
   
  O código para incluir esse sinalizador é gerado automaticamente se você selecionar o **ativação sem janelas** opção o [configurações de controle](../mfc/reference/control-settings-mfc-activex-control-wizard.md) página do Assistente de controle ActiveX do MFC.  
   
- Quando a ativação sem janelas é habilitada, o contêiner delegará a mensagens de entrada para o controle `IOleInPlaceObjectWindowless` interface. `COleControl`da implementação dessa interface envia as mensagens pelo mapa de mensagem do controle, depois de ajustar o mouse coordena adequadamente. Você pode processar as mensagens como mensagens de janela comum, adicionando as entradas correspondentes no mapa de mensagem. Em seus manipuladores para essas mensagens, evite usar o `m_hWnd` variável de membro (ou qualquer função de membro que utiliza) sem antes conferir que seu valor não é **nulo**.  
+ Quando a ativação sem janelas é habilitada, o contêiner delegará a mensagens de entrada para o controle `IOleInPlaceObjectWindowless` interface. `COleControl`da implementação dessa interface envia as mensagens pelo mapa de mensagem do controle, depois de ajustar o mouse coordena adequadamente. Você pode processar as mensagens como mensagens de janela comum, adicionando as entradas correspondentes no mapa de mensagem. Em seus manipuladores para essas mensagens, evite usar o *m_hWnd* variável de membro (ou qualquer função de membro que utiliza) sem antes conferir que seu valor não é **nulo**.  
   
  `COleControl` fornece funções de membro que invocam a captura do mouse, o foco do teclado, rolar e outros serviços do Windows do contêiner conforme apropriado, incluindo:  
   

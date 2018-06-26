@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14979f1c5f11e9a229c408e33e7c17d8776a54a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a7b498ed1ddc3a3d040abde6ebcb7e27615b801
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344211"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929337"
 ---
 # <a name="containers-client-items"></a>Contêineres: itens clientes
 Este artigo explica o que são itens de cliente e de classes de que seu aplicativo deve derivar seus itens de cliente.  
   
  Itens de cliente são itens de dados que pertencem a outro aplicativo que são contidos em ou referenciado pelo documento do aplicativo recipiente OLE. Itens de cliente cujos dados estão contidos dentro do documento são incorporados. aqueles cujos dados são armazenados em outro local referenciado pelo documento contêiner estão vinculados.  
   
- A classe de documento em um aplicativo OLE é derivada da classe [COleDocument](../mfc/reference/coledocument-class.md) , em vez de **CDocument**. O `COleDocument` classe herda de **CDocument** toda a funcionalidade necessária para usar a arquitetura de documento/exibição na qual MFC aplicativos se baseiam. `COleDocument` também define uma interface que trata de um documento como uma coleção de `CDocItem` objetos. Vários `COleDocument` funções de membro são fornecidas para adicionar, recuperar e excluir os elementos da coleção.  
+ A classe de documento em um aplicativo OLE é derivada da classe [COleDocument](../mfc/reference/coledocument-class.md) , em vez de `CDocument`. O `COleDocument` classe herda de `CDocument` todos os recursos necessários para usar a arquitetura de documento/exibição na qual MFC aplicativos se baseiam. `COleDocument` também define uma interface que trata de um documento como uma coleção de `CDocItem` objetos. Vários `COleDocument` funções de membro são fornecidas para adicionar, recuperar e excluir os elementos da coleção.  
   
  Cada aplicativo de contêiner deve derivar de pelo menos uma classe de `COleClientItem`. Objetos dessa classe representam os itens, incorporado ou vinculado no documento OLE. Esses objetos existem durante a vida útil do documento que os contém, a menos que eles são excluídos do documento.  
   

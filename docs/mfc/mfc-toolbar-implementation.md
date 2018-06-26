@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0fd3a41d7574d627ebd374af170ce47801cd351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d21bfa1dcc39e00de852203d05a2eae743b8a2f6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360960"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929215"
 ---
 # <a name="mfc-toolbar-implementation"></a>Implementação da barra de ferramentas MFC
 Uma barra de ferramentas é um [barra de controle](../mfc/control-bars.md) que contém as imagens de bitmap de controles. Essas imagens podem se comportar como pushbuttons, caixas de seleção ou botões de opção. MFC fornece a classe [CToolbar](../mfc/reference/ctoolbar-class.md) para gerenciar as barras de ferramentas.  
@@ -44,7 +44,7 @@ Uma barra de ferramentas é um [barra de controle](../mfc/control-bars.md) que c
 > [!NOTE]
 >  A partir da versão 4.0 do MFC, barras de ferramentas e dicas de ferramenta são implementadas usando o Windows 95 e posterior funcionalidade em vez da implementação anterior específica a MFC.  
   
- Para compatibilidade com versões anteriores, MFC retém a implementação da barra de ferramentas mais antiga na classe **COldToolBar**. A documentação de versões anteriores do MFC descrevem **COldToolBar** em `CToolBar`.  
+ Para compatibilidade com versões anteriores, MFC retém a implementação da barra de ferramentas mais antiga na classe `COldToolBar`. A documentação de versões anteriores do MFC descrevem `COldToolBar` em `CToolBar`.  
   
  Crie a barra de ferramentas primeiro em seu programa, selecionando a opção de barra de ferramentas no Assistente do aplicativo. Você também pode criar outras barras de ferramentas.  
   

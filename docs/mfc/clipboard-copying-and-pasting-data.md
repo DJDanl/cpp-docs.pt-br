@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfd43933453e44c49d713a1565ac3f71e019de4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4756da7459f3e584dd02b882f5c790412c095561
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343344"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929462"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Área de Transferência: copiando e colando dados
 Este tópico descreve o trabalho mínimo necessário para implementar a copiar e colar da área de transferência no seu aplicativo OLE. É recomendável que você leia o [objetos de dados e fontes de dados (OLE)](../mfc/data-objects-and-data-sources-ole.md) tópicos antes de continuar.  
@@ -41,16 +41,16 @@ Este tópico descreve o trabalho mínimo necessário para implementar a copiar e
   
 3.  Se o usuário optou por uma operação de transferência, em vez de uma operação de cópia, exclua os dados selecionados do seu aplicativo.  
   
- Para ver um exemplo dessa sequência, consulte o **OnEditCut** e **OnEditCopy** programas de exemplo de funções de MFC OLE [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md). Observe que esses exemplos mantenham um ponteiro para os dados selecionados no momento, portanto, etapa 1 já está concluída.  
+ Para ver um exemplo dessa sequência, consulte o `OnEditCut` e `OnEditCopy` programas de exemplo de funções de MFC OLE [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md). Observe que esses exemplos mantenham um ponteiro para os dados selecionados no momento, portanto, etapa 1 já está concluída.  
   
 ##  <a name="_core_pasting_data"></a> Colando dados  
  Colando dados é mais complicado do que copiá-lo porque você precisa escolher o formato a ser usado em colando os dados em seu aplicativo.  
   
 #### <a name="to-paste-data-from-the-clipboard"></a>Para colar os dados da área de transferência  
   
-1.  Em sua classe de exibição, implementar **OnEditPaste** para lidar com usuários escolhendo a opção de colar no menu Editar.  
+1.  Em sua classe de exibição, implementar `OnEditPaste` para lidar com usuários escolhendo a opção de colar no menu Editar.  
   
-2.  No **OnEditPaste** funcionar, crie um `COleDataObject` objeto e chame seu `AttachClipboard` função de membro para vincular esse objeto para os dados na área de transferência.  
+2.  No `OnEditPaste` funcionar, crie um `COleDataObject` objeto e chame seu `AttachClipboard` função de membro para vincular esse objeto para os dados na área de transferência.  
   
 3.  Chamar `COleDataObject::IsDataAvailable` para verificar se um formato específico está disponível.  
   
@@ -58,10 +58,10 @@ Este tópico descreve o trabalho mínimo necessário para implementar a copiar e
   
 4.  Execute a operação de colagem do formato.  
   
- Para obter um exemplo de como isso funciona, consulte a implementação de **OnEditPaste** funções de membro em classes de exibição definidas em programas de exemplo OLE do MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md).  
+ Para obter um exemplo de como isso funciona, consulte a implementação de `OnEditPaste` funções de membro em classes de exibição definidas em programas de exemplo OLE do MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md).  
   
 > [!TIP]
->  O principal benefício de separar a operação de colagem em sua própria função é que o mesmo código de colar pode ser usado quando dados são descartados em seu aplicativo durante uma operação de arrastar e soltar. Como OCLIENT e HIERSVR, seu `OnDrop` também pode chamar a função **DoPasteItem**, reutilizando o código escrito para implementar operações de colagem.  
+>  O principal benefício de separar a operação de colagem em sua própria função é que o mesmo código de colar pode ser usado quando dados são descartados em seu aplicativo durante uma operação de arrastar e soltar. Como OCLIENT e HIERSVR, seu `OnDrop` também pode chamar a função `DoPasteItem`, reutilizando o código escrito para implementar operações de colagem.  
   
  Para lidar com a opção de colar especial no menu Editar, consulte o tópico [caixas de diálogo em OLE](../mfc/dialog-boxes-in-ole.md).  
   

@@ -20,29 +20,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d0e4710c74c12bf62cd19df6a053aea9ac35eaf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 051fe93ef689959b0a0beb2b1b0f213adc942446
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348443"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929641"
 ---
 # <a name="message-categories"></a>Categorias de mensagem
 Que tipos de mensagens escrever manipuladores para há três categorias principais:  
   
 1.  mensagens do Windows  
   
-     Isso inclui principalmente essas mensagens começando com o **WM _** prefixo, exceto para **WM_COMMAND**. Mensagens do Windows são manipuladas pelo windows e modos de exibição. Essas mensagens geralmente têm parâmetros que são usados para determinar como tratar a mensagem.  
+     Isso inclui principalmente essas mensagens começando com o **WM _** prefixo, exceto WM_COMMAND. Mensagens do Windows são manipuladas pelo windows e modos de exibição. Essas mensagens geralmente têm parâmetros que são usados para determinar como tratar a mensagem.  
   
 2.  Notificações de controle  
   
-     Isso inclui **WM_COMMAND** mensagens de notificação de controles e outras janelas filho para as janelas de pai. Por exemplo, um controle de edição envia seu pai um **WM_COMMAND** de mensagem que contém o **EN_CHANGE** código de notificação de controle quando o usuário executou uma ação que pode ter alterado o texto no controle de edição. Manipulador da janela para a mensagem responde à mensagem de notificação de forma apropriada, como recuperar o texto no controle.  
+     Isso inclui mensagens de notificação WM_COMMAND de controles e outras janelas filho para as janelas de pai. Por exemplo, um controle de edição envia seu pai uma mensagem WM_COMMAND que contém o código de notificação de controle EN_CHANGE quando o usuário executou uma ação que pode ter alterado o texto no controle de edição. Manipulador da janela para a mensagem responde à mensagem de notificação de forma apropriada, como recuperar o texto no controle.  
   
-     A estrutura roteia as mensagens de notificação de controle como outro **WM _** mensagens. No entanto, é uma exceção, o **BN_CLICKED** mensagem de notificação de controle enviada por botões quando o usuário clica neles. Essa mensagem é tratada de forma especial, como uma mensagem de comando e roteada como outros comandos.  
+     A estrutura roteia as mensagens de notificação de controle como outro **WM _** mensagens. Uma exceção, no entanto, é a mensagem de notificação de controle BN_CLICKED enviada por botões quando o usuário clica neles. Essa mensagem é tratada de forma especial, como uma mensagem de comando e roteada como outros comandos.  
   
 3.  Mensagens de comando  
   
-     Isso inclui **WM_COMMAND** mensagens de notificação de objetos de interface do usuário: menus, botões da barra de ferramentas e teclas de aceleração. A estrutura processa comandos de forma diferente de outras mensagens, e podem ser tratados por mais tipos de objetos, conforme explicado em [destinos de comando](../mfc/command-targets.md).  
+     Isso inclui mensagens de notificação de WM_COMMAND dos objetos de interface do usuário: menus, botões da barra de ferramentas e teclas de aceleração. A estrutura processa comandos de forma diferente de outras mensagens, e podem ser tratados por mais tipos de objetos, conforme explicado em [destinos de comando](../mfc/command-targets.md).  
   
 ##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> Mensagens do Windows e mensagens de notificação de controle  
  Mensagens em categorias 1 e 2 — mensagens do Windows e notificações de controle — são manipuladas pelo windows: objetos das classes derivam da classe `CWnd`. Isso inclui `CFrameWnd`, `CMDIFrameWnd`, `CMDIChildWnd`, `CView`, `CDialog`, e suas próprias classes derivadas dessas classes base. Esses objetos encapsulam um `HWND`, um identificador para uma janela do Windows.  

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f142fc49d2759c4edd7cdb8701b300d435e67f54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a3844788330cfe79366221ee215c437fc4aefc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333824"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930655"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Contêineres de controle ActiveX: manipulando eventos a partir de um controle ActiveX
 Este artigo aborda usando a janela Propriedades para instalar os manipuladores de eventos para controles ActiveX em um contêiner de controle ActiveX. Os manipuladores de eventos são usados para receber notificações (de controle) de determinados eventos e executam alguma ação em resposta. Essa notificação é chamada de "disparo" do evento.  
@@ -46,7 +46,7 @@ Este artigo aborda usando a janela Propriedades para instalar os manipuladores d
   
  Como usar a janela Propriedades para adicionar eventos, um evento de entrada do mapa (`ON_EVENT`) é adicionado para o mapa de coletor de evento e um manipulador de eventos função é adicionada a implementação do contêiner (. Arquivo CPP).  
   
- O exemplo a seguir declara um manipulador de eventos, chamado `OnClickInCircCtrl`, para o controle de c **ClickIn** evento:  
+ O exemplo a seguir declara um manipulador de eventos, chamado `OnClickInCircCtrl`, para o controle de c `ClickIn` evento:  
   
  [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
   

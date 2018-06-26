@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54cc874fd3c95123446ab81b920bfe0fce52df5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cae180ca71b89732e073b9039483b8b46366a42a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347088"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929628"
 ---
 # <a name="menus-and-resources-ole"></a>Menus e recursos (OLE)
 Este grupo de artigos explica o uso de menus e recursos em aplicativos de documento OLE do MFC.  
@@ -54,10 +54,10 @@ Este grupo de artigos explica o uso de menus e recursos em aplicativos de docume
   
 |Nome do recurso|Use|  
 |-------------------|---------|  
-|**IDR_MAINFRAME**|Usado em um aplicativo MDI se nenhum arquivo estiver aberto, ou em um aplicativo SDI independentemente de arquivos abertos. Esse é o menu padrão usado em aplicativos OLE não.|  
-|**IDR\<projeto > tipo**|Usado em um aplicativo MDI se arquivos estiverem abertos. Usado quando um aplicativo está em execução autônomo. Esse é o menu padrão usado em aplicativos OLE não.|  
-|**IDR\<projeto > TYPE_SRVR_IP**|Usado pelo servidor ou contêiner quando um objeto é aberto no lugar.|  
-|**IDR\<projeto > TYPE_SRVR_EMB**|Usado por um aplicativo de servidor se um objeto for aberto sem usar a ativação no local.|  
+|IDR_MAINFRAME|Usado em um aplicativo MDI se nenhum arquivo estiver aberto, ou em um aplicativo SDI independentemente de arquivos abertos. Esse é o menu padrão usado em aplicativos OLE não.|  
+|IDR\<projeto > tipo|Usado em um aplicativo MDI se arquivos estiverem abertos. Usado quando um aplicativo está em execução autônomo. Esse é o menu padrão usado em aplicativos OLE não.|  
+|IDR\<projeto > TYPE_SRVR_IP|Usado pelo servidor ou contêiner quando um objeto é aberto no lugar.|  
+|IDR\<projeto > TYPE_SRVR_EMB|Usado por um aplicativo de servidor se um objeto for aberto sem usar a ativação no local.|  
   
  Cada um desses nomes de recurso representa um menu e, geralmente, uma tabela de aceleradores. Um esquema semelhante deve ser usado em aplicativos MFC que não são criados com o Assistente de aplicativo.  
   

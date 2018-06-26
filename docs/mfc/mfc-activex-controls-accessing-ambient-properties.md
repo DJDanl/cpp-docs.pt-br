@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523fc0f5c87712cd61ec0709d94edcb7bcbde72c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd3376e19d7780922102240ae1bfaa1b4eb89b2b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348206"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931717"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>Controles ActiveX MFC: acessando propriedades ambiente
 Este artigo descreve como um controle ActiveX pode acessar as propriedades do ambiente de seu contêiner de controle.  
@@ -44,7 +44,7 @@ Este artigo descreve como um controle ActiveX pode acessar as propriedades do am
 -   [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)  
   
     > [!NOTE]
-    >  Deve ser chamado **() de liberação** da fonte retornado.  
+    >  Deve ser chamado `Release( )` da fonte retornado.  
   
 -   [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)  
   
@@ -62,7 +62,7 @@ Este artigo descreve como um controle ActiveX pode acessar as propriedades do am
   
 -   [AmbientShowGrabHandles](../mfc/reference/colecontrol-class.md#ambientshowgrabhandles)  
   
- Se o valor de uma propriedade de ambiente é alterado (por meio de alguma ação do contêiner), o **OnAmbientPropertyChanged** é chamada de função de membro do controle. Substitua essa função de membro para manipular uma notificação. O parâmetro **OnAmbientPropertyChanged** é a ID de expedição da propriedade ambiente afetada. O valor da ID distribuição pode ser **DISPID_UNKNOWN**, que indica que uma ou mais propriedades de ambiente foi alterado, mas não estão disponíveis com informações sobre quais propriedades foram afetadas.  
+ Se o valor de uma propriedade de ambiente é alterado (por meio de alguma ação do contêiner), o `OnAmbientPropertyChanged` é chamada de função de membro do controle. Substitua essa função de membro para manipular uma notificação. O parâmetro `OnAmbientPropertyChanged` é a ID de expedição da propriedade ambiente afetada. O valor da ID distribuição pode ser DISPID_UNKNOWN, que indica que uma ou mais propriedades de ambiente foi alterado, mas informações sobre quais propriedades foram afetadas não estão disponíveis.  
   
 ## <a name="see-also"></a>Consulte também  
  [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)

@@ -24,18 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30d220c928f2ca3fe0594d03d558d2d6dcfce773
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 64a8df138ef0d581bcc93bf836ee0935a634983d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347075"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930497"
 ---
 # <a name="files-in-mfc"></a>Arquivos no MFC
 No Microsoft Foundation Class Library (MFC), classe [CFile](../mfc/reference/cfile-class.md) manipula as operações de e/s de arquivo normal. Essa família de artigos explica como abrir e fechar arquivos, bem como ler e gravar dados nesses arquivos. Ele também discute o status de operações de arquivo. Para obter uma descrição de como usar os recursos de serialização com base em objeto do MFC como uma maneira alternativa de ler e gravar dados em arquivos, consulte o artigo [serialização](../mfc/serialization-in-mfc.md).  
   
 > [!NOTE]
->  Quando você usa MFC **CDocument** objetos, a estrutura faz muito do trabalho de serialização para você. Em particular, o framework cria e usa o `CFile` objeto. Você só precisa escrever código em sua substituição do `Serialize` função de membro de classe **CDocument**.  
+>  Quando você usa MFC `CDocument` objetos, a estrutura faz muito do trabalho de serialização para você. Em particular, o framework cria e usa o `CFile` objeto. Você só precisa escrever código em sua substituição do `Serialize` função de membro de classe `CDocument`.  
   
  O `CFile` classe fornece uma interface para uso geral de arquivo binário. O `CStdioFile` e `CMemFile` classes derivadas de `CFile` e `CSharedFile` classe derivada de `CMemFile` fornecer serviços de arquivo mais especializados.  
   

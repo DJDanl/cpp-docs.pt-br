@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36650e0ae1ce042a887c6a87d1bbe62d8b6d7fe4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3695d2795fa324051b76cf012aae7e1b1f275fa1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345788"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928016"
 ---
 # <a name="document-template-creation"></a>Criação do modelo de documento
-Ao criar um novo documento em resposta a um `New` ou **abrir** comando o **arquivo** menu, o modelo de documento também cria uma nova janela do quadro através da qual exibir o documento.  
+Ao criar um novo documento em resposta a um **novo** ou **abrir** comando o **arquivo** menu, o modelo de documento também cria uma nova janela do quadro através da qual exibir o documento.  
   
  O construtor de modelo de documento especifica quais tipos de documentos, janelas e modos de exibição que do modelo poderá ser capaz de criar. Isso é determinado pelos argumentos que você passa para o construtor de modelo de documento. O código a seguir ilustra a criação de um [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) para um aplicativo de exemplo:  
   

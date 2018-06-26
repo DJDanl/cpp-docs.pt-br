@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02a4c2e8d9da553ffe14c8d9d061d11d7357c19c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352294"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931971"
 ---
 # <a name="activex-controls-on-the-internet"></a>Controles ActiveX na Internet
 Controles ActiveX são a versão atualizada da especificação de controle OLE. Os controles são uma arquitetura principal para o desenvolvimento de componentes de software programável que podem ser usados em uma variedade de diferentes contêineres, incluindo navegadores COM suporte na Internet. Qualquer controle ActiveX pode ser um controle de Internet e pode adicionar sua funcionalidade a um documento ativo ou fazer parte de uma página da Web. Controles em uma página da Web podem se comunicar entre si usando scripts.  
@@ -39,7 +39,7 @@ Controles ActiveX são a versão atualizada da especificação de controle OLE. 
   
  **Para ser um controle ActiveX, um controle deve:**  
   
--   Suporte a **IUnknown** interface.  
+-   Suporte a `IUnknown` interface.  
   
 -   Ser um objeto COM.  
   
@@ -85,7 +85,7 @@ Controles ActiveX são a versão atualizada da especificação de controle OLE. 
   
 #### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>Para criar o projeto usando o Assistente de controle ActiveX MFC  
   
-1.  Clique em `New` no **arquivo** menu.  
+1.  Clique em **novo** no **arquivo** menu.  
   
 2.  Selecione **Assistente de controle ActiveX MFC** do Visual C++ projetos e nomeie o projeto.  
   
@@ -129,7 +129,7 @@ Controles ActiveX são a versão atualizada da especificação de controle OLE. 
   
      [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]  
   
-5.  Implementar o **Get/Set** métodos. Para **obter**, a cadeia de caracteres de retorno. Para `Set`, carregar a propriedade e a chamada `SetModifiedFlag`.  
+5.  Implementar o `Get/Set` métodos. Para `Get`, a cadeia de caracteres de retorno. Para `Set`, carregar a propriedade e a chamada `SetModifiedFlag`.  
   
      [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]  
   

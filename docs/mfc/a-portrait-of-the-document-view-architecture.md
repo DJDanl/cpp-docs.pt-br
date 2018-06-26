@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d366cf7c9aee6988d715edbe30e3938c30557e2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d903d183675ae4b79d4610fe4413cfd8bf0e704c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329810"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928938"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Um retrato da arquitetura de documento/exibição
 Documentos e exibições são combinadas em um aplicativo típico do MFC. Dados são armazenados no documento, mas o modo de exibição tem acesso aos dados privilegiado. A separação de documento na exibição de separa o armazenamento e a manutenção de dados de sua exibição.  
@@ -37,7 +37,7 @@ Documentos e exibições são combinadas em um aplicativo típico do MFC. Dados 
 ## <a name="gaining-access-to-document-data-from-the-view"></a>O acesso aos dados da exibição de documento  
  O modo de exibição acessa dados do seu documento com a [GetDocument](../mfc/reference/cview-class.md#getdocument) de função, que retorna um ponteiro para o documento, ou fazendo com que o modo de exibição de classe C++ de `friend` da classe do documento. O modo de exibição, em seguida, usa o acesso aos dados para obter os dados quando estiver pronto para desenhar ou manipulá-lo.  
   
- Por exemplo, a partir do modo de exibição [OnDraw](../mfc/reference/cview-class.md#ondraw) função de membro, a exibição usa **GetDocument** para obter um ponteiro de documento. Em seguida, ele usa esse ponteiro para acessar um `CString` membro de dados no documento. O modo de exibição passa a cadeia de caracteres para o `TextOut` função. Para ver o código para este exemplo, consulte [desenhando uma exibição](../mfc/drawing-in-a-view.md).  
+ Por exemplo, a partir do modo de exibição [OnDraw](../mfc/reference/cview-class.md#ondraw) função de membro, a exibição usa `GetDocument` para obter um ponteiro de documento. Em seguida, ele usa esse ponteiro para acessar um `CString` membro de dados no documento. O modo de exibição passa a cadeia de caracteres para o `TextOut` função. Para ver o código para este exemplo, consulte [desenhando uma exibição](../mfc/drawing-in-a-view.md).  
   
 ## <a name="user-input-to-the-view"></a>Entrada do usuário para o modo de exibição  
  O modo de exibição também pode interpretar um clique do mouse em si mesmo como seleção ou edição de dados. Da mesma forma, ele poderá interpretá pressionamentos de tecla como entrada de dados ou edição. Suponha que o usuário digita uma cadeia de caracteres em uma exibição que gerencia o texto. O modo de exibição obtém um ponteiro para o documento e usa o ponteiro para passar os novos dados para o documento, que armazena em algumas estruturas de dados.  

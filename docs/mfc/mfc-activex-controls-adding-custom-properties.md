@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7facc4c712d070cffe9be5f07a236b2b04b972e9
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352419"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931909"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Controles ActiveX MFC: adicionando propriedades personalizadas
 Propriedades personalizadas são diferentes das propriedades de estoque de propriedades personalizadas já não são implementadas pelo `COleControl` classe. Uma propriedade personalizada é usada para expor um determinado estado ou a aparência de um controle ActiveX para um programador usando o controle.  
@@ -47,7 +47,7 @@ Propriedades personalizadas são diferentes das propriedades de estoque de propr
   
 -   Implementação com parâmetros  
   
-     Implementação com parâmetros é compatível com o Assistente para adicionar propriedade. Uma propriedade com parâmetros (às vezes chamada de uma matriz de propriedade) pode ser usada para acessar um conjunto de valores por meio de uma única propriedade de seu controle. A macro de entrada de mapa de expedição para esta implementação é `DISP_PROPERTY_PARAM`. Para obter mais informações sobre a implementação desse tipo, consulte [implementando uma propriedade parametrizada](../mfc/mfc-activex-controls-advanced-topics.md) no artigo controles ActiveX: tópicos avançados.  
+     Implementação com parâmetros é compatível com o Assistente para adicionar propriedade. Uma propriedade com parâmetros (às vezes chamada de uma matriz de propriedade) pode ser usada para acessar um conjunto de valores por meio de uma única propriedade de seu controle. A macro de entrada de mapa de expedição para esta implementação é DISP_PROPERTY_PARAM. Para obter mais informações sobre a implementação desse tipo, consulte [implementando uma propriedade parametrizada](../mfc/mfc-activex-controls-advanced-topics.md) no artigo controles ActiveX: tópicos avançados.  
   
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Usando o Assistente para adicionar propriedade para adicionar uma propriedade personalizada  
  O procedimento a seguir demonstra como adicionar uma propriedade personalizada, CircleOffset, que usa a implementação de métodos Get/Set. A propriedade personalizada CircleOffset permite que o usuário do controle deslocar o círculo do centro do retângulo delimitador do controle. O procedimento para adicionar propriedades personalizadas com uma implementação diferente de métodos Get/Set é muito semelhante.  
@@ -66,7 +66,7 @@ Propriedades personalizadas são diferentes das propriedades de estoque de propr
   
      Isso abre o [Assistente para adição de propriedade](../ide/names-add-property-wizard.md).  
   
-5.  No **nome da propriedade** , digite `CircleOffset`.  
+5.  No **nome da propriedade** , digite *CircleOffset*.  
   
 6.  Para **o tipo de implementação**, clique em **métodos Get/Set**.  
   
@@ -100,7 +100,7 @@ Propriedades personalizadas são diferentes das propriedades de estoque de propr
  Observe que o Assistente para adicionar propriedade adiciona automaticamente uma chamada para [SetModifiedFlag](../mfc/reference/colecontrol-class.md#setmodifiedflag), para o corpo da função de conjunto. Chamar essa função marca o controle como modificadas. Se um controle tiver sido modificado, seu novo estado será salvo quando o contêiner é salvo. Essa função deve ser chamada sempre que uma propriedade, salva como parte do estado persistente do controle, altera o valor.  
   
 ## <a name="see-also"></a>Consulte também  
- [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)   
+ [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)   
  [Controles ActiveX MFC: propriedades](../mfc/mfc-activex-controls-properties.md)   
  [Controles ActiveX MFC: métodos](../mfc/mfc-activex-controls-methods.md)   
  [Classe COleControl](../mfc/reference/colecontrol-class.md)

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95c896308970ffc6a2040657927dc127eee278ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f3608fbc0c7e34de4ae67ae60a12af23e9ac885
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342768"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931682"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>Itens e máscara de retorno de chamada
 Para cada um de seus itens, um controle de exibição de lista geralmente armazena o texto do rótulo, o índice de lista de imagem dos ícones do item, e um conjunto de bits sinaliza para o estado do item. Você pode definir os itens individuais como itens de retorno de chamada, que são úteis se seu aplicativo já armazena algumas informações de um item.  
@@ -29,13 +29,13 @@ Para cada um de seus itens, um controle de exibição de lista geralmente armaze
   
  Além de definir os itens de retorno de chamada, você também pode modificar a máscara de retorno de chamada do controle. Esta máscara é um conjunto de sinalizadores de bit que especificam os estados de item para o qual o aplicativo, em vez de controle, armazena os dados atuais. A máscara de retorno de chamada se aplica a todos os itens do controle, ao contrário a designação de item de retorno de chamada, que se aplica a um item específico. A máscara de retorno de chamada é zero por padrão, o que significa que o controle rastreia todos os estados de item. Para alterar esse comportamento padrão, inicialize a máscara de qualquer combinação dos valores a seguir:  
   
--   `LVIS_CUT` O item está marcado para uma operação recortar e colar.  
+-   **LVIS_CUT** o item está marcado para uma operação recortar e colar.  
   
--   `LVIS_DROPHILITED` O item é realçado como um destino de arrastar e soltar.  
+-   **LVIS_DROPHILITED** o item é realçado como um destino de arrastar e soltar.  
   
--   `LVIS_FOCUSED` O item tem o foco.  
+-   **LVIS_FOCUSED** o item tem o foco.  
   
--   `LVIS_SELECTED` O item é selecionado.  
+-   **LVIS_SELECTED** o item é selecionado.  
   
 -   **LVIS_OVERLAYMASK** o aplicativo armazena o índice de lista de imagem da imagem de sobreposição atual para cada item.  
   

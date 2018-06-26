@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ac243333c8dc778486dd18323658f262c6d6610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b221bd97d9ee943e19b043bcc9be6aba0fa1672
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380202"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929589"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Recuperando dados a partir do objeto da caixa de diálogo
 O framework fornece uma maneira fácil para inicializar valores de controles em uma caixa de diálogo e para recuperar os valores dos controles. A abordagem manual mais trabalhosa é chamar funções, como o `SetDlgItemText` e `GetDlgItemText` funções membro de classe `CWnd`, que se aplicam ao windows do controle. Com essas funções, você acessar cada controle individualmente para definir ou obter seu valor, chamar funções como `SetWindowText` e `GetWindowText`. Abordagem da estrutura automatiza a inicialização e recuperação.  
@@ -47,7 +47,7 @@ O framework fornece uma maneira fácil para inicializar valores de controles em 
   
  DDX e DDV são explicados em mais detalhes em [troca de dados de caixa de diálogo e validação](../mfc/dialog-data-exchange-and-validation.md).  
   
- Para uma caixa de diálogo modal, você pode recuperar os dados que o usuário inseriu quando `DoModal` retorna **IDOK** , mas antes da caixa de diálogo objeto é destruído. Para uma caixa de diálogo sem janela restrita, você pode recuperar dados do objeto de caixa de diálogo a qualquer momento chamando `UpdateData` com o argumento **TRUE** e, em seguida, acessando variáveis de membro de classe de caixa de diálogo. Este assunto é discutido em mais detalhes em [troca de dados de caixa de diálogo e validação](../mfc/dialog-data-exchange-and-validation.md).  
+ Para uma caixa de diálogo modal, você pode recuperar os dados que o usuário inseriu quando `DoModal` retorna IDOK, mas antes da caixa de diálogo objeto é destruído. Para uma caixa de diálogo sem janela restrita, você pode recuperar dados do objeto de caixa de diálogo a qualquer momento chamando `UpdateData` com o argumento **TRUE** e, em seguida, acessando variáveis de membro de classe de caixa de diálogo. Este assunto é discutido em mais detalhes em [troca de dados de caixa de diálogo e validação](../mfc/dialog-data-exchange-and-validation.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)

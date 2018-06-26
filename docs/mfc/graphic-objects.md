@@ -51,12 +51,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52b8c6c5b6d27bdf4ce4c9ad46a75c21b9f47333
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2cf7e2c56094727c6956d0e2e21708dd81be4f10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349776"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930840"
 ---
 # <a name="graphic-objects"></a>Objetos gráficos
 O Windows fornece uma variedade de ferramentas a ser usado em contextos de dispositivo de desenho. Ele fornece canetas para desenhar linhas, pincéis preenchimento interiores e fontes para desenhar o texto. MFC fornece classes de objeto de gráfico equivalentes para as ferramentas de desenho no Windows. A tabela a seguir mostra as classes disponíveis e os gráficos equivalentes do Windows tipos de identificador de interface (GDI) do dispositivo.  
@@ -82,7 +82,7 @@ O Windows fornece uma variedade de ferramentas a ser usado em contextos de dispo
   
  Cada classe de objeto de gráfico na biblioteca de classes tem um construtor que permite que você crie objetos gráficos dessa classe, que você, em seguida, deverá inicializar com a função apropriada de criar, como `CreatePen`.  
   
- Cada classe de objeto de gráfico na biblioteca de classes com um operador de conversão que será convertido de um objeto do MFC para o identificador do Windows associado. O identificador resultante é válido até que o objeto associado desanexa-lo. Usar o objeto **desanexar** função de membro para desanexar o identificador.  
+ Cada classe de objeto de gráfico na biblioteca de classes com um operador de conversão que será convertido de um objeto do MFC para o identificador do Windows associado. O identificador resultante é válido até que o objeto associado desanexa-lo. Usar o objeto `Detach` função de membro para desanexar o identificador.  
   
  O código a seguir conversões um `CPen` objeto para um identificador do Windows:  
   
