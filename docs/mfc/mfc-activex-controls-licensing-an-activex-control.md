@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 725e6cf167ec01635a3072f09ecaa2f5055b1891
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0b1e8f0c54cf4d409aedb99fc3195b927d5f127
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353916"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929738"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Controles MFC ActiveX: licenciando um controle ActiveX
 Suporte de licenciamento, um recurso opcional de controles ActiveX, permite controlar quem pode usar ou distribuir o controle. (Para obter informações adicionais sobre problemas de licenciamento, consulte problemas de licenciamento no [atualizando um controle ActiveX existente](../mfc/upgrading-an-existing-activex-control.md).)  
@@ -44,7 +44,7 @@ Suporte de licenciamento, um recurso opcional de controles ActiveX, permite cont
  Controles ActiveX que implementam o licenciamento permitir que você, como desenvolvedor do controle, para determinar como outras pessoas usarão o controle ActiveX. Forneça o comprador de controle com o controle e. Arquivo lic., o contrato que o comprador pode distribuir o controle, mas não o. Arquivo lic., com um aplicativo que usa o controle. Isso impede que os usuários desse aplicativo de gravar novos aplicativos que usam o controle, sem primeiro licenciamento o controle do usuário.  
   
 ##  <a name="_core_overview_of_activex_control_licensing"></a> Visão geral do controle ActiveX de licenciamento  
- Para oferecer suporte a licença para controles ActiveX, o [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md) classe fornece uma implementação para várias funções no **IClassFactory2** interface: **IClassFactory2 :: RequestLicKey**, **IClassFactory2::GetLicInfo**, e **IClassFactory2::CreateInstanceLic**. Quando o desenvolvedor do aplicativo recipiente faz uma solicitação para criar uma instância do controle, uma chamada para `GetLicInfo` é feita para verificar se o controle. Arquivo lic. estiver presente. Se o controle é licenciado, uma instância do controle pode ser criada e colocada no contêiner. Depois que o desenvolvedor terminou de criar o aplicativo de contêiner, outra chamada de função, desta vez para `RequestLicKey`, é feita. Essa função retorna uma chave de licença (uma cadeia de caracteres simples) para o aplicativo de contêiner. A chave retornada é então incorporada no aplicativo.  
+ Para oferecer suporte a licença para controles ActiveX, o [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md) classe fornece uma implementação para várias funções no `IClassFactory2` interface: `IClassFactory2::RequestLicKey`, `IClassFactory2::GetLicInfo`, e `IClassFactory2::CreateInstanceLic`. Quando o desenvolvedor do aplicativo recipiente faz uma solicitação para criar uma instância do controle, uma chamada para `GetLicInfo` é feita para verificar se o controle. Arquivo lic. estiver presente. Se o controle é licenciado, uma instância do controle pode ser criada e colocada no contêiner. Depois que o desenvolvedor terminou de criar o aplicativo de contêiner, outra chamada de função, desta vez para `RequestLicKey`, é feita. Essa função retorna uma chave de licença (uma cadeia de caracteres simples) para o aplicativo de contêiner. A chave retornada é então incorporada no aplicativo.  
   
  A figura a seguir demonstra a verificação da licença de um controle ActiveX que será usado durante o desenvolvimento de um aplicativo de contêiner. Conforme mencionado anteriormente, o desenvolvedor do aplicativo de contêiner deve ter o próprio. Arquivo lic. instalado no computador de desenvolvimento para criar uma instância do controle.  
   
@@ -79,15 +79,15 @@ Verificação de um controle ActiveX licenciado durante a execução
   
 -   [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)  
   
-     Verifica se o controle permite a utilização de tempo de design verificando o sistema para verificar a presença do arquivo de licença do controle. Essa função é chamada pelo framework como parte do processamento **IClassFactory2::GetLicInfo** e **IClassFactory::CreateInstanceLic**.  
+     Verifica se o controle permite a utilização de tempo de design verificando o sistema para verificar a presença do arquivo de licença do controle. Essa função é chamada pelo framework como parte do processamento `IClassFactory2::GetLicInfo` e `IClassFactory::CreateInstanceLic`.  
   
 -   [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)  
   
-     Solicita uma chave exclusiva do controle DLL. Essa chave é inserida no aplicativo de contêiner e posterior, usada em conjunto com `VerifyLicenseKey`, para criar uma instância do controle. Essa função é chamada pelo framework como parte do processamento **IClassFactory2::RequestLicKey**.  
+     Solicita uma chave exclusiva do controle DLL. Essa chave é inserida no aplicativo de contêiner e posterior, usada em conjunto com `VerifyLicenseKey`, para criar uma instância do controle. Essa função é chamada pelo framework como parte do processamento `IClassFactory2::RequestLicKey`.  
   
 -   [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)  
   
-     Verifica se a chave inserida e chave exclusiva do controle são os mesmos. Isso permite que o contêiner criar uma instância do controle para seu uso. Essa função é chamada pelo framework como parte do processamento **IClassFactory2::CreateInstanceLic** e pode ser substituído para fornecer verificação personalizada da chave de licença. A implementação padrão executa uma comparação de cadeia de caracteres. Para obter mais informações, consulte [Personalizando o licenciamento de um controle ActiveX](#_core_customizing_the_licensing_of_an_activex_control), mais adiante neste artigo.  
+     Verifica se a chave inserida e chave exclusiva do controle são os mesmos. Isso permite que o contêiner criar uma instância do controle para seu uso. Essa função é chamada pelo framework como parte do processamento `IClassFactory2::CreateInstanceLic` e pode ser substituído para fornecer verificação personalizada da chave de licença. A implementação padrão executa uma comparação de cadeia de caracteres. Para obter mais informações, consulte [Personalizando o licenciamento de um controle ActiveX](#_core_customizing_the_licensing_of_an_activex_control), mais adiante neste artigo.  
   
 ###  <a name="_core_header_file_modifications"></a> Modificações de arquivos de cabeçalho  
  O Assistente de controle ActiveX coloca o código a seguir no arquivo de cabeçalho de controle. Neste exemplo, duas funções de membro de `CSampleCtrl`do objeto `factory` são declaradas, que verifica a presença do controle. Arquivo lic. e outra que recupera a chave de licença a ser usado no aplicativo que contém o controle:  
@@ -100,7 +100,7 @@ Verificação de um controle ActiveX licenciado durante a execução
  [!code-cpp[NVC_MFC_AxUI#40](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_2.cpp)]  
   
 > [!NOTE]
->  Se você modificar **szLicString** de qualquer forma, você também deve modificar a primeira linha no controle. Arquivo lic. ou licenciamento não funcionará corretamente.  
+>  Se você modificar `szLicString` de qualquer forma, você também deve modificar a primeira linha no controle. Arquivo lic. ou licenciamento não funcionará corretamente.  
   
  O Assistente de controle ActiveX coloca o código a seguir no arquivo de implementação de controle para definir a classe de controle `VerifyUserLicense` e `GetLicenseKey` funções:  
   
@@ -123,6 +123,6 @@ Verificação de um controle ActiveX licenciado durante a execução
  Para obter informações adicionais sobre problemas de licenciamento, consulte problemas de licenciamento no [atualizando um controle ActiveX existente](../mfc/upgrading-an-existing-activex-control.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)   
+ [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)   
  [Assistente de controle ActiveX do MFC](../mfc/reference/mfc-activex-control-wizard.md)
 
