@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c3ec260fad8b0e2f8224c639aa745a9101e8b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 39588a6835b3484fc3961e793596c1190f85f7c4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358035"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952746"
 ---
 # <a name="ccustomtransition-class"></a>Classe CCustomTransition
 Implementa uma transição personalizada.  
@@ -97,7 +97,7 @@ CCustomTransition(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pInterpolator`  
+ *pInterpolator*  
  Um ponteiro para interpolador personalizado.  
   
 ##  <a name="create"></a>  CCustomTransition::Create  
@@ -110,7 +110,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pFactory`  
+ *pFactory*  
  Um ponteiro para a fábrica de transição, que é responsável pela criação de transições personalizadas.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -161,7 +161,7 @@ void SetInitialValue(DOUBLE initialValue);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `initialValue`  
+ *initialValue*  
   
 ##  <a name="setinitialvelocity"></a>  CCustomTransition::SetInitialVelocity  
  Define uma velocidade inicial, que será aplicada a uma variável de animação associada a essa transição.  
@@ -171,7 +171,7 @@ void SetInitialVelocity(DOUBLE initialVelocity);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `initialVelocity`  
+ *initialVelocity*  
   
 ## <a name="see-also"></a>Consulte também  
  [Classes](../../mfc/reference/mfc-classes.md)

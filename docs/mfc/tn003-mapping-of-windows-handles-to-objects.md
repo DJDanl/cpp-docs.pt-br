@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8658868c36008c5ed6b9db9747eb63ae37e4d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2be47da802fd1168ec7b43c2f7701351b3c88d8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382967"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951502"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: mapeamento de identificadores do Windows para objetos
 Esta anotação descreve o MFC rotinas que dão suporte a mapeamento Windows identificadores de objetos C++ do objeto.  
@@ -56,15 +56,15 @@ Esta anotação descreve o MFC rotinas que dão suporte a mapeamento Windows ide
   
 -   SOQUETE ([CSocket](../mfc/reference/csocket-class.md))  
   
- Dado um identificador para qualquer um desses objetos, você pode localizar o objeto MFC que encapsula o identificador chamando o método estático `FromHandle`. Por exemplo, dado um HWND chamado `hWnd`, a linha a seguir retorna um ponteiro para o `CWnd` que encapsula `hWnd`:  
+ Dado um identificador para qualquer um desses objetos, você pode localizar o objeto MFC que encapsula o identificador chamando o método estático `FromHandle`. Por exemplo, dado um HWND chamado *hWnd*, a linha a seguir retorna um ponteiro para o `CWnd` que encapsula *hWnd*:  
   
 ```  
 CWnd::FromHandle(hWnd)  
 ```  
   
- Se `hWnd` não tem um objeto wrapper específico, um temporário `CWnd` é criado para encapsular `hWnd`. Isso torna possível obter um objeto válido do C++ de qualquer identificador.  
+ Se *hWnd* não tem um objeto wrapper específico, um temporário `CWnd` é criado para encapsular *hWnd*. Isso torna possível obter um objeto válido do C++ de qualquer identificador.  
   
- Depois que você tiver um objeto wrapper, você pode recuperar seu identificador de uma variável de membro público da classe wrapper. No caso de um `CWnd`, `m_hWnd` contém o HWND para esse objeto.  
+ Depois que você tiver um objeto wrapper, você pode recuperar seu identificador de uma variável de membro público da classe wrapper. No caso de um `CWnd`, *m_hWnd* contém o HWND para esse objeto.  
   
 ## <a name="attaching-handles-to-mfc-objects"></a>Anexando identificadores de objetos MFC  
  Dado um objeto recém-criado de wrapper de identificador e um identificador para um objeto do Windows, você pode associar as duas chamando o `Attach` funcionar como neste exemplo:  
@@ -74,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- Isso faz com que uma entrada na associação de mapa permanente `myWnd` e `hWnd`. Chamando `CWnd::FromHandle(hWnd)` agora irá retornar um ponteiro para `myWnd`. Quando `myWnd` é excluído, o destruidor automaticamente destruirá `hWnd` chamando o Windows [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) função. Se isso não for desejado, `hWnd` deve ser desanexado de `myWnd` antes de `myWnd` é destruído (normalmente ao sair do escopo no qual `myWnd` foi definido). O `Detach` método faz isso.  
+ Isso faz com que uma entrada na associação de mapa permanente *myWnd* e *hWnd*. Chamando `CWnd::FromHandle(hWnd)` agora irá retornar um ponteiro para *myWnd*. Quando *myWnd* é excluído, o destruidor automaticamente destruirá *hWnd* chamando o Windows [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) função. Se isso não for desejado, *hWnd* deve ser desanexado de *myWnd* antes de *myWnd* é destruído (normalmente ao sair do escopo no qual *myWnd*foi definido). O `Detach` método faz isso.  
   
 ```  
 myWnd.Detach();

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68a6d5a0cda8c4d7fd06cf7bb6b9c1b60e50374b
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 87e1c696f3da374d7b71e1b24e3a8bd3ebfe41b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306002"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954858"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Instruções passo a passo: adicionando um objeto D2D a um projeto
 
@@ -48,7 +48,7 @@ Para concluir este passo a passo, você deve ter o Visual Studio instalado com o
 
 1. Sobre o **arquivo** , aponte para **novo** e, em seguida, escolha **projeto**.
 
-2. No **novo projeto** caixa de diálogo, no painel esquerdo, em **modelos instalados**, expanda **Visual C++** e, em seguida, selecione **MFC**. No painel central, selecione **aplicativo MFC**. Na caixa **Nome**, digite `MFCD2DWalkthrough`. Escolha **OK**.
+2. No **novo projeto** caixa de diálogo, no painel esquerdo, em **modelos instalados**, expanda **Visual C++** e, em seguida, selecione **MFC**. No painel central, selecione **aplicativo MFC**. No **nome** , digite *MFCD2DWalkthrough*. Escolha **OK**.
 
 3. No **Assistente de aplicativo MFC**, escolha **concluir** sem alterar as configurações.
 
@@ -132,7 +132,7 @@ Para concluir este passo a passo, você deve ter o Visual Studio instalado com o
 
 3. Sobre o **mensagens** guia, escolha **adicionar personalizado mensagem**.
 
-4. No **adicionar personalizado mensagem** na caixa de **mensagem do Windows personalizada** , digite `AFX_WM_DRAW2D`. No **nome do manipulador de mensagem** , digite `OnDraw2D`. Selecione o **mensagem registrado** opção e, em seguida, escolha **Okey**. Essa ação adiciona um manipulador de mensagens para o `AFX_WM_DRAW2D` de mensagem para o `CMFCD2DWalkthroughView` classe.
+4. No **adicionar personalizado mensagem** na caixa de **mensagem do Windows personalizada** , digite *AFX_WM_DRAW2D*. No **nome do manipulador de mensagem** , digite *OnDraw2D*. Selecione o **mensagem registrado** opção e, em seguida, escolha **Okey**. Essa ação adiciona um manipulador de mensagens para a mensagem AFX_WM_DRAW2D o `CMFCD2DWalkthroughView` classe.
 
 5. No **existente manipuladores** caixa, selecione `OnDraw2D`. Escolha **editar código** para exibir o `CMFCD2DWalkthroughView::OnDraw2D` método. Use este código para o `CMFCD2DWalkthroughView::OnDrawD2D` método:
 

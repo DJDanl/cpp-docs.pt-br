@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecde11ddb55992032b2a8b052e2897a384293bc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d6b6b07040fbece5fae24fb2ca6be8985695eb0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382548"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950531"
 ---
 # <a name="using-an-animation-control"></a>Usando um controle de animação
 Um uso típico de um controle de animação segue o padrão abaixo:  
@@ -30,11 +30,11 @@ Um uso típico de um controle de animação segue o padrão abaixo:
   
 -   Carregar um clipe AVI no controle de animação, chamando o [abrir](../mfc/reference/canimatectrl-class.md#open) função de membro. Se o controle de animação estiver em uma caixa de diálogo, um bom lugar para fazer isso é da classe de caixa de diálogo [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) função.  
   
--   Reproduzir o clipe chamando o [reproduzir](../mfc/reference/canimatectrl-class.md#play) função de membro. Se o controle de animação estiver em uma caixa de diálogo, um bom lugar para fazer isso é da classe de caixa de diálogo **OnInitDialog** função. Chamando **reproduzir** não é necessário se o controle de animação tem o `ACS_AUTOPLAY` conjunto de estilos.  
+-   Reproduzir o clipe chamando o [reproduzir](../mfc/reference/canimatectrl-class.md#play) função de membro. Se o controle de animação estiver em uma caixa de diálogo, um bom lugar para fazer isso é da classe de caixa de diálogo `OnInitDialog` função. Chamando `Play` não é necessário se o controle de animação tiver o estilo ACS_AUTOPLAY definida.  
   
 -   Se você quiser exibir as partes do clipe ou executá-lo por quadro, use o `Seek` função de membro. Para interromper um clipe de execução, use o `Stop` função de membro.  
   
--   Se você não pretende destruir o controle imediatamente, remova o clipe da memória chamando o **fechar** função de membro.  
+-   Se você não pretende destruir o controle imediatamente, remova o clipe da memória chamando o `Close` função de membro.  
   
 -   Se o controle de animação está em uma caixa de diálogo, ele e o `CAnimateCtrl` objeto será destruído automaticamente. Se não, você precisará garantir que ambos o controle e o `CAnimateCtrl` objeto corretamente são destruídas. Destruindo o controle automaticamente fecha o clipe AVI.  
   

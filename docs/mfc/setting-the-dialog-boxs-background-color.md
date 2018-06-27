@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 114a1b53e55d6e341c09d2437caa8d26b9c1b0fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29870af50c549f432e87b6cc39be50d41fa40240
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379977"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951211"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>Definindo a cor da tela de fundo da caixa de diálogo
-Você pode definir a cor de plano de fundo de suas caixas de diálogo manipulando `WM_CTLCOLOR` mensagens para a janela da caixa de diálogo. A cor que você define é usada para a caixa de diálogo especificada.  
+Você pode definir a cor de plano de fundo de suas caixas de diálogo tratando mensagens WM_CTLCOLOR para a janela da caixa de diálogo. A cor que você define é usada para a caixa de diálogo especificada.  
   
 ## <a name="see-also"></a>Consulte também  
  [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)   

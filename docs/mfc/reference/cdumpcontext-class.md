@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7acd7e94dbb45439a1812f8572ef442e43f9dab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80795131915da89928afc883fec0985087c4f38f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367387"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955437"
 ---
 # <a name="cdumpcontext-class"></a>Classe CDumpContext
 Saída de diagnóstico de suporte orientado por fluxo na forma de texto legível.  
@@ -79,7 +79,7 @@ class CDumpContext
   
  O `CDumpContext` classe tem uma inserção sobrecarregada ( **<<**) operador para `CObject` ponteiros que descarta os dados do objeto. Se você precisar de um formato personalizado de despejo de memória para um objeto derivado, substituir [CObject::Dump](../../mfc/reference/cobject-class.md#dump). A maioria das classes Microsoft Foundation implementar uma substituição `Dump` função de membro.  
   
- Classes que não derivam de `CObject`, como `CString`, `CTime`, e `CTimeSpan`, têm seus próprios sobrecarregados `CDumpContext` operadores de inserção, como estruturas são usadas como **CFileStatus**, `CPoint`, e `CRect`.  
+ Classes que não derivam de `CObject`, como `CString`, `CTime`, e `CTimeSpan`, têm seus próprios sobrecarregados `CDumpContext` operadores de inserção, como estruturas são usadas como `CFileStatus`, `CPoint`, e `CRect`.  
   
  Se você usar o [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) ou [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) macro na implementação de sua classe, em seguida, `CObject::Dump` imprimirá o nome do seu `CObject`-classe derivada. Caso contrário, ela será impressa `CObject`.  
   
@@ -105,7 +105,7 @@ CDumpContext(CFile* pFile = NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pFile`  
+ *pFile*  
  Um ponteiro para o `CFile` objeto que é o destino de despejo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -180,10 +180,10 @@ void HexDump(
  *pby*  
  Um ponteiro para um buffer que contém os bytes de despejo.  
   
- `nBytes`  
+ *nBytes*  
  O número de bytes para despejar.  
   
- `nWidth`  
+ *nWidth*  
  Número máximo de bytes despejados por linha (não a largura da linha de saída).  
   
 ### <a name="remarks"></a>Comentários  
@@ -223,7 +223,7 @@ CDumpContext& operator<<(HFONT h);
  Uma referência a `CDumpContext`. Usando o valor de retorno, você pode escrever várias inserções em uma única linha do código-fonte.  
   
 ### <a name="remarks"></a>Comentários  
- O operador de inserção é sobrecarregado para `CObject` ponteiros, bem como para tipos primitivos mais. Um ponteiro para resultados de caractere em um despejo de conteúdo da cadeia de caracteres. um ponteiro para `void` resulta em um despejo hexadecimal do endereço somente. Um **LONGLONG** resulta em um despejo de um inteiro assinado de 64 bits; Um **ULONGLONG** resulta em um despejo de um inteiro não assinado de 64 bits.  
+ O operador de inserção é sobrecarregado para `CObject` ponteiros, bem como para tipos primitivos mais. Um ponteiro para resultados de caractere em um despejo de conteúdo da cadeia de caracteres. um ponteiro para **void** resulta em um despejo hexadecimal do endereço somente. Um **LONGLONG** resulta em um despejo de um inteiro assinado de 64 bits; Um **ULONGLONG** resulta em um despejo de um inteiro não assinado de 64 bits.  
   
  Se você usar o `IMPLEMENT_DYNAMIC` ou `IMPLEMENT_SERIAL` macro na implementação de sua classe e, em seguida, o operador de inserção, por meio de `CObject::Dump`, imprimirá o nome do seu `CObject`-classe derivada. Caso contrário, ela será impressa `CObject`. Se você substituir o `Dump` função da classe, você pode fornecer uma saída mais significativa do conteúdo do objeto, em vez de um despejo hexadecimal.  
   

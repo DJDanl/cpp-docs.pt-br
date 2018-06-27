@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902cb24d5cd8525a99f58fc5feeac416138148
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1786c89f4ec9cf1c0908dac5d81858d5b2e6b7db
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381739"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950700"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Usando uma lista de imagens com um controle rebar
 Cada faixa rebar pode conter, entre outras coisas, uma imagem de uma lista de imagens associado. O procedimento a seguir detalha as etapas necessárias para exibir uma imagem em uma faixa de rebar.  
@@ -31,9 +31,9 @@ Cada faixa rebar pode conter, entre outras coisas, uma imagem de uma lista de im
   
 2.  Modificar o **REBARBANDINFO** estrutura para atribuir uma imagem a uma faixa de rebar:  
   
-    -   Definir o **fMask** membro **RBBIM_IMAGE**, usando o operador OR bit a bit para incluir sinalizadores adicionais conforme necessário.  
+    -   Definir o *fMask* membro `RBBIM_IMAGE`, usando o operador OR bit a bit para incluir sinalizadores adicionais conforme necessário.  
   
-    -   Definir o `iImage` membro para o índice de lista de imagem da imagem a ser exibida.  
+    -   Definir o *iImage* membro para o índice de lista de imagem da imagem a ser exibida.  
   
 3.  Inicialize quaisquer membros de dados restantes, como o tamanho, o texto e o identificador da janela filho independente, com as informações necessárias.  
   

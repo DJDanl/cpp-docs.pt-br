@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a31928bc98b8b2fd403f1db40c040357c388b104
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367224"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952281"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>Estrutura CDaoQueryDefInfo
 O `CDaoQueryDefInfo` estrutura contém informações sobre um objeto querydef definida para os objetos de acesso de dados (DAO).  
@@ -45,10 +45,10 @@ struct CDaoQueryDefInfo
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `m_strName`  
+ *m_strName*  
  Nomes de objeto querydef exclusivamente. Para obter mais informações, consulte o tópico "Propriedade de nome" na Ajuda do DAO. Chamar [CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname) para recuperar esta propriedade diretamente.  
   
- `m_nType`  
+ *m_nType*  
  Um valor que indica o tipo de operacional de um objeto querydef. O valor pode ser um dos seguintes:  
   
 - **dbQSelect** selecione — a consulta Selecionar registros.  
@@ -78,13 +78,13 @@ struct CDaoQueryDefInfo
   
  Para obter mais informações, consulte o tópico "Propriedade do tipo" na Ajuda do DAO.  
   
- `m_dateCreated`  
+ *m_dateCreated*  
  A data e hora que QueryDef foi criado. Para recuperar diretamente a data querydef foi criada, chame o [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) função de membro a `CDaoTableDef` objeto associado à tabela. Consulte os comentários abaixo para obter mais informações. Também consulte o tópico "Propriedades DateCreated e LastUpdated" na Ajuda do DAO.  
   
- `m_dateLastUpdated`  
+ *m_dateLastUpdated*  
  A data e hora da alteração mais recente feita para querydef. Para recuperar diretamente a data da última atualização de tabela, chame o [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) a função de membro de querydef. Consulte os comentários abaixo para obter mais informações. E consulte o tópico "Propriedades DateCreated e LastUpdated" na Ajuda do DAO.  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  Indica se podem ser feitas alterações para um objeto querydef. Se essa propriedade for **TRUE**, querydef é atualizável; caso contrário, não é. Atualizável significa a que definição de consulta do objeto pode ser alterada. A propriedade atualizável de um objeto querydef é definida como **TRUE** se a definição de consulta pode ser atualizada, mesmo que o conjunto de registros resultante não é atualizável. Para recuperar esta propriedade diretamente, chame o querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate) função de membro. Para obter mais informações, consulte o tópico "Propriedade atualizável" na Ajuda do DAO.  
   
  *m_bReturnsRecords*  
@@ -93,7 +93,7 @@ struct CDaoQueryDefInfo
  *m_strSQL*  
  A instrução SQL que define a consulta executada por um objeto querydef. A propriedade SQL contém a instrução SQL que determina como os registros são selecionados, agrupados e classificados quando você executar a consulta. Você pode usar a consulta para selecionar registros a serem incluídos em um objeto de conjunto de registros do tipo dynaset ou instantâneo. Você também pode definir consultas em massa para modificar os dados sem retornar registros. Você pode recuperar o valor dessa propriedade chamando o querydef [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql) função de membro.  
   
- `m_strConnect`  
+ *m_strConnect*  
  Fornece informações sobre a origem de um banco de dados usado em uma consulta de passagem. Essas informações assumem a forma de uma cadeia de caracteres de conexão. Para obter mais informações sobre conexão cadeias de caracteres e para obter informações sobre como recuperar o valor dessa propriedade diretamente, consulte o [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) função de membro.  
   
  *m_nODBCTimeout*  

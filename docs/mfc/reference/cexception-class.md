@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a152c55944fca5fa858c148c009ef6301ff0f762
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d145129d8f9e640da9040c8c70a92cedcf3565d9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368027"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951703"
 ---
 # <a name="cexception-class"></a>Classe CException
 A classe base para todas as exceções na biblioteca Microsoft Foundation Class.  
@@ -99,24 +99,24 @@ explicit CException(BOOL bAutoDelete);
   
 ### <a name="parameters"></a>Parâmetros  
  *b_AutoDelete*  
- Especifique **TRUE** se a memória para o `CException` objeto tenha sido alocado no heap. Isso fará com que o `CException` objeto a ser excluído quando o **excluir** função de membro é chamada para remover a exceção. Especifique **FALSE** se o `CException` objeto na pilha ou é um objeto global. Nesse caso, o `CException` não serão excluídos quando o **excluir** é chamada de função de membro.  
+ Especifique **TRUE** se a memória para o `CException` objeto tenha sido alocado no heap. Isso fará com que o `CException` objeto a ser excluído quando o `Delete` função de membro é chamada para remover a exceção. Especifique **FALSE** se o `CException` objeto na pilha ou é um objeto global. Nesse caso, o `CException` não serão excluídos quando o `Delete` é chamada de função de membro.  
   
 ### <a name="remarks"></a>Comentários  
  Você normalmente não precisa chamar este construtor diretamente. Uma função que gera uma exceção deve criar uma instância de um `CException`-classe derivada e chamar seu construtor, ou ele deve usar um dos MFC acionar funções, como [AfxThrowFileException](exception-processing.md#afxthrowfileexception), para gerar um tipo predefinido. Esta documentação é fornecida somente para fins de integridade.  
   
 ##  <a name="delete"></a>  CException::Delete  
- Essa função verifica se o **CException** objeto foi criado no heap e, nesse caso, ele chama o **excluir** operador no objeto.  
+ Essa função verifica se o `CException` objeto foi criado no heap e, nesse caso, ele chama o **excluir** operador no objeto.  
   
 ```  
 void Delete();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ao excluir um **CException** de objeto, use o **excluir** a função de membro para excluir a exceção. Não use o **excluir** operador diretamente, porque o `CException` objeto pode ser um objeto global ou foram criadas na pilha.  
+ Ao excluir um `CException` de objeto, use o `Delete` a função de membro para excluir a exceção. Não use o **excluir** operador diretamente, porque o `CException` objeto pode ser um objeto global ou foram criadas na pilha.  
   
  Você pode especificar se o objeto deve ser excluído quando o objeto for construído. Para obter mais informações, consulte [CException::CException](#cexception).  
   
- Você só precisa chamar **excluir** se você estiver usando o C++ **tente**- **catch** mecanismo. Se você estiver usando as macros MFC **tente** e **CATCH**, em seguida, essas macros automaticamente chamará essa função.  
+ Você só precisa chamar `Delete` se você estiver usando o C++ **tente**- **catch** mecanismo. Se você estiver usando as macros MFC **tente** e **CATCH**, em seguida, essas macros automaticamente chamará essa função.  
   
 ### <a name="example"></a>Exemplo  
  ```cpp  
@@ -178,7 +178,7 @@ virtual int ReportError(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nType`  
+ *nType*  
  Especifica o estilo da caixa de mensagem. Aplique qualquer combinação da [estilos de caixa de mensagem](styles-used-by-mfc.md#message-box-styles) à caixa. Se você não especificar esse parâmetro, o padrão é **MB_OK**.  
   
  *nMessageID*  

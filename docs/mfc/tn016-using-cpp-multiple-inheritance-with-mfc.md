@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe1e79324c4c1f7408e1b801cf2be581b9884717
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cba37344a2d065c84e196330e3b4f9d859975102
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384082"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954852"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: usando várias heranças do C++ com MFC
 Esta anotação descreve como usar várias heranças (MI) com o Microsoft Foundation Classes. O uso de MI não é necessário com MFC. MI não é usado em todas as classes MFC e não é necessário para gravar uma biblioteca de classe.  
@@ -52,7 +52,7 @@ class CListWnd : public CFrameWnd, public CObList
 CListWnd myListWnd;  
 ```  
   
- Nesse caso `CObject` está incluído duas vezes. Isso significa que você precisa de uma maneira para resolver a ambiguidade qualquer referência a `CObject` métodos ou operadores. O `operator new` e [operador delete](../mfc/reference/cobject-class.md#operator_delete) são dois operadores ambiguidade devem ser resolvidas. Como outro exemplo, o código a seguir causa um erro em tempo de compilação:  
+ Nesse caso `CObject` está incluído duas vezes. Isso significa que você precisa de uma maneira para resolver a ambiguidade qualquer referência a `CObject` métodos ou operadores. O **operador novo** e [operador delete](../mfc/reference/cobject-class.md#operator_delete) são dois operadores ambiguidade devem ser resolvidas. Como outro exemplo, o código a seguir causa um erro em tempo de compilação:  
   
 ```  
 myListWnd.Dump(afxDump);
@@ -60,7 +60,7 @@ myListWnd.Dump(afxDump);
 ```  
   
 ## <a name="reimplementing-cobject-methods"></a>Métodos Reimplementação de CObject  
- Quando você cria uma nova classe que tenha duas ou mais `CObject` derivadas de classes base, você deve reimplementar a `CObject` métodos que você deseja que outras pessoas usem. Operadores `new` e `delete` são obrigatórios e [despejar](../mfc/reference/cobject-class.md#dump) é recomendado. Os reimplements de exemplo a seguir o `new` e `delete` operadores e o `Dump` método:  
+ Quando você cria uma nova classe que tenha duas ou mais `CObject` derivadas de classes base, você deve reimplementar a `CObject` métodos que você deseja que outras pessoas usem. Operadores **novo** e **excluir** são obrigatórios e [despejar](../mfc/reference/cobject-class.md#dump) é recomendado. Os reimplements de exemplo a seguir o **novo** e **excluir** operadores e o `Dump` método:  
   
 ```  
 class CListWnd : public CFrameWnd, public CObList  
@@ -89,9 +89,9 @@ public:
  Pode parecer que herdando praticamente `CObject` resolveria o problema de ambiguidade de função, mas que não for o caso. Porque não há nenhum dado de membro em `CObject`, você não precisa de herança virtual para evitar várias cópias de dados de membro de classe base. No primeiro exemplo que foi mostrado anteriormente, o `Dump` método virtual é ainda ambíguo porque é implementado de maneira diferente no `CFrameWnd` e `CObList`. A melhor maneira de remover a ambiguidade é seguir as recomendações apresentadas na seção anterior.  
   
 ## <a name="cobjectiskindof-and-run-time-typing"></a>CObject::IsKindOf e digitando de tempo de execução  
- O mecanismo de tempo de execução digitando suportado pelo MFC em `CObject` usa as macros `DECLARE_DYNAMIC`, `IMPLEMENT_DYNAMIC`, `DECLARE_DYNCREATE`, `IMPLEMENT_DYNCREATE`, `DECLARE_SERIAL` e `IMPLEMENT_SERIAL`. Essas macros podem executar uma verificação de tipo de tempo de execução para garantir a segurança downcasts.  
+ O mecanismo de tempo de execução digitando suportado pelo MFC em `CObject` usa as macros DECLARE_DYNAMIC, IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE, IMPLEMENT_DYNCREATE, DECLARE_SERIAL e IMPLEMENT_SERIAL. Essas macros podem executar uma verificação de tipo de tempo de execução para garantir a segurança downcasts.  
   
- Essas macros dar suporte a apenas uma única classe base e funcionarão de forma limitada para classes herdadas várias vezes. A classe base que você especificar na `IMPLEMENT_DYNAMIC` ou `IMPLEMENT_SERIAL` deve ser a primeiro (ou mais à esquerda) da classe base. Esse posicionamento permite que você para o tipo de verificação para a classe base mais à esquerda só. O sistema de tipos do tempo de execução saberá nada sobre classes base adicionais. O exemplo a seguir, os sistemas de tempo de execução fará verificação em relação de tipo `CFrameWnd`, mas saber nada sobre `CObList`.  
+ Essas macros dar suporte a apenas uma única classe base e funcionarão de forma limitada para classes herdadas várias vezes. A classe base que você especificar em IMPLEMENT_DYNAMIC ou IMPLEMENT_SERIAL deve ser a primeiro (ou mais à esquerda) da classe base. Esse posicionamento permite que você para o tipo de verificação para a classe base mais à esquerda só. O sistema de tipos do tempo de execução saberá nada sobre classes base adicionais. O exemplo a seguir, os sistemas de tempo de execução fará verificação em relação de tipo `CFrameWnd`, mas saber nada sobre `CObList`.  
   
 ```  
 class CListWnd : public CFrameWnd,

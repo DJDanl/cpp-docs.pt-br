@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ba9615f583069ec63946fe52840dc5bc4fa545e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73596ec5ec9f17b2007a6816bbe0ab90b1463430
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376457"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957098"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Classe CDataRecoveryHandler
 O `CDataRecoveryHandler` salve documentos e restaura-as se um aplicativo termina inesperadamente.  
@@ -188,21 +188,21 @@ virtual BOOL AutosaveDocumentInfo(
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `pDocument`|Um ponteiro para o `CDocument` para salvar.|  
-|[in] `bResetModifiedFlag`|`TRUE` indica que o `CDataRecoveryHandler` considera `pDocument` a ser modificada; `FALSE` indica que a estrutura considera `pDocument` ser modificados. Consulte a seção de comentários para obter mais informações sobre o efeito do sinalizador.|  
+|[in] *pDocument*|Um ponteiro para o `CDocument` para salvar.|  
+|[in] *bResetModifiedFlag*|`TRUE` indica que o `CDataRecoveryHandler` considera *pDocument* a ser modificada; `FALSE` indica que a estrutura considera *pDocument* ser modificados. Consulte a seção de comentários para obter mais informações sobre o efeito do sinalizador.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se os sinalizadores apropriados são definidos e `pDocument` é válido `CDocument` objeto.  
+ `TRUE` Se os sinalizadores apropriados são definidos e *pDocument* é válido `CDocument` objeto.  
   
 ### <a name="remarks"></a>Comentários  
  Cada `CDocument` objeto tem um sinalizador que indica se ele foi alterado desde a última gravação. Use [CDocument::IsModified](../../mfc/reference/cdocument-class.md#ismodified) para determinar o estado do sinalizador. Se um `CDocument` não foi alterado desde a última gravação, `AutosaveDocumentInfo` exclui todos os arquivos salva automaticamente para o documento. Se um documento foi alterado desde o último salvamento, fechá-lo solicita que o usuário salve o documento antes de fechar.  
   
 > [!NOTE]
->  Usando `bResetModifiedFlag` alterar o estado do documento para não modificado pode fazer com que o usuário perder dados não salvos. Se a estrutura considera um documento sem modificações, fechá-lo não solicita ao usuário para salvar.  
+>  Usando *bResetModifiedFlag* alterar o estado do documento para não modificado pode fazer com que o usuário perder dados não salvos. Se a estrutura considera um documento sem modificações, fechá-lo não solicita ao usuário para salvar.  
   
- Esse método lançará uma exceção com o [ASSERT](diagnostic-services.md#assert) macro se `pDocument` não é válido `CDocument` objeto.  
+ Esse método lançará uma exceção com o [ASSERT](diagnostic-services.md#assert) macro se *pDocument* não é válido `CDocument` objeto.  
   
- Para usar esse método, `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` ou `AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL` deve ser definido em `m_dwRestartManagerSupportFlags`.   
+ Para usar esse método, `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` ou `AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL` deve ser definido em *m_dwRestartManagerSupportFlags*.   
   
 ##  <a name="cdatarecoveryhandler"></a>  CDataRecoveryHandler::CDataRecoveryHandler  
  Constrói um objeto `CDataRecoveryHandler`.  
@@ -218,8 +218,8 @@ CDataRecoveryHandler(
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `dwRestartManagerSupportFlags`|Indica quais opções do Gerenciador de reinicialização são suportadas.|  
-|[in] `nAutosaveInterval`|O tempo entre a salve. Esse parâmetro é em milissegundos.|  
+|[in] *dwRestartManagerSupportFlags*|Indica quais opções do Gerenciador de reinicialização são suportadas.|  
+|[in] *nAutosaveInterval*|O tempo entre a salve. Esse parâmetro é em milissegundos.|  
   
 ### <a name="remarks"></a>Comentários  
  A estrutura MFC cria automaticamente um `CDataRecoveryHandler` objeto para seu aplicativo quando você usa o **novo projeto** assistente. A menos que você estiver personalizando o comportamento de recuperação de dados ou o Gerenciador de reinicialização, você não deve criar um `CDataRecoveryHandler` objeto.  
@@ -237,15 +237,15 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `pDocument`|Um ponteiro para um `CDocument`. Esse método cria as informações do documento para este `CDocument`.|  
+|[in] *pDocument*|Um ponteiro para um `CDocument`. Esse método cria as informações do documento para este `CDocument`.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  A implementação padrão retorna `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
- Este método verifica se `pDocument` já está na lista de documentos antes de adicionar o documento. Se `pDocument` já está na lista, este método exclui o arquivo salva automaticamente associado `pDocument`.  
+ Este método verifica se *pDocument* já está na lista de documentos antes de adicionar o documento. Se *pDocument* já está na lista, este método exclui o arquivo salva automaticamente associado *pDocument*.  
   
- Para usar esse método, `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` ou `AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL` deve ser definido em `m_dwRestartManagerSupportFlags`. 
+ Para usar esse método, `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` ou `AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL` deve ser definido em *m_dwRestartManagerSupportFlags*. 
   
 ##  <a name="deleteallautosavedfiles"></a>  CDataRecoveryHandler::DeleteAllAutosavedFiles  
  Exclui todos os arquivos atuais salva automaticamente.  
@@ -269,7 +269,7 @@ virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `strAutosavedFile`|Uma cadeia de caracteres que contém o nome de arquivo salva automaticamente.|  
+|[in] *strAutosavedFile*|Uma cadeia de caracteres que contém o nome de arquivo salva automaticamente.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  A implementação padrão sempre retornam `TRUE`.  
@@ -285,11 +285,11 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `strDocumentName`  
+ [in] *strDocumentName*  
  Uma cadeia de caracteres que contém o nome do documento. `GenerateAutosaveFileName` usa esse nome de documento para gerar um nome de arquivo de salvamento automático correspondente.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O nome do arquivo de salvamento automático gerado a partir de `strDocumentName`.  
+ O nome do arquivo de salvamento automático gerado a partir de *strDocumentName*.  
   
 ### <a name="remarks"></a>Comentários  
  Nome de cada documento tem um mapeamento um para um com um nome de arquivo de salvamento automático.  
@@ -326,13 +326,13 @@ virtual CString GetDocumentListName(CDocument* pDocument) const;
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `pDocument`|Um ponteiro para um `CDocument`. `GetDocumentListName` recupera o nome do documento neste `CDocument`.|  
+|[in] *pDocument*|Um ponteiro para um `CDocument`. `GetDocumentListName` recupera o nome do documento neste `CDocument`.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- O nome do documento de `pDocument`.  
+ O nome do documento de *pDocument*.  
   
 ### <a name="remarks"></a>Comentários  
- O `CDataRecoveryHandler` usa o nome do documento como a chave em `m_mapDocNameToAutosaveName`, `m_mapDocNameToDocumentPtr`, e `m_mapDocNameToRestoreBool`. Esses parâmetros permitem a `CDataRecoveryHandler` para monitorar `CDocument` objetos, o nome do arquivo de salvamento automático e as configurações de salvamento automático.  
+ O `CDataRecoveryHandler` usa o nome do documento como a chave em *m_mapDocNameToAutosaveName*, *m_mapDocNameToDocumentPtr*, e *m_mapDocNameToRestoreBool*. Esses parâmetros permitem a `CDataRecoveryHandler` para monitorar `CDocument` objetos, o nome do arquivo de salvamento automático e as configurações de salvamento automático.  
   
 ##  <a name="getnormaldocumenttitle"></a>  CDataRecoveryHandler::GetNormalDocumentTitle  
  Recupera o título normal para o documento especificado.  
@@ -346,7 +346,7 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `pDocument`|Um ponteiro para um `CDocument`.|  
+|[in] *pDocument*|Um ponteiro para um `CDocument`.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  O título normal para o documento especificado.  
@@ -362,7 +362,7 @@ virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `strDocumentTitle`  
+ [in] *strDocumentTitle*  
  O título normal para o documento.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -433,7 +433,7 @@ virtual void QueryRestoreAutosavedDocuments();
 ### <a name="remarks"></a>Comentários  
  Se seu aplicativo for Unicode, esse método exibirá uma [CTaskDialog](../../mfc/reference/ctaskdialog-class.md) para o usuário. Caso contrário, a estrutura usa [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) para consultar o usuário.  
   
- Depois de `QueryRestoreAutosavedDocuments` reúne todas as respostas do usuário, ele armazena as informações na variável de membro `m_mapDocNameToRestoreBool`. Esse método não restaura os documentos salva automaticamente.  
+ Depois de `QueryRestoreAutosavedDocuments` reúne todas as respostas do usuário, ele armazena as informações na variável de membro *m_mapDocNameToRestoreBool*. Esse método não restaura os documentos salva automaticamente.  
   
 ##  <a name="readopendocumentlist"></a>  CDataRecoveryHandler::ReadOpenDocumentList  
  Carrega a lista de documentos abertos no registro.  
@@ -446,7 +446,7 @@ virtual BOOL ReadOpenDocumentList();
  `TRUE` indica que `ReadOpenDocumentList` carregar as informações de pelo menos um documento do registro. `FALSE` indica que nenhuma informação de documento foi carregada.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função carrega as informações do documento aberto do registro e o armazena na variável de membro `m_mapDocNameToAutosaveName`.  
+ Essa função carrega as informações do documento aberto do registro e o armazena na variável de membro *m_mapDocNameToAutosaveName*.  
   
  Depois de `ReadOpenDocumentList` carrega todos os dados, ele exclui as informações do documento do registro.  
   
@@ -462,17 +462,17 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `pDocument`|Um ponteiro para o documento a ser removido.|  
+|[in] *pDocument*|Um ponteiro para o documento a ser removido.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se `pDocument` foi removido da lista; `FALSE` se ocorreu um erro.  
+ `TRUE` Se *pDocument* foi removido da lista; `FALSE` se ocorreu um erro.  
   
 ### <a name="remarks"></a>Comentários  
  Quando o usuário fecha um documento, a estrutura usa esse método para removê-lo da lista de documentos abertos.  
   
- Se `RemoveDocumentInfo` não é possível localizar `pDocument` na lista de documentos abertos, ele não faz nada e retorna `TRUE`.  
+ Se `RemoveDocumentInfo` não é possível localizar *pDocument* na lista de documentos abertos, ele não faz nada e retorna `TRUE`.  
   
- Para usar esse método, `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` deve ser definido em `m_dwRestartManagerSupportFlags`.   
+ Para usar esse método, `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` deve ser definido em *m_dwRestartManagerSupportFlags*.   
   
 ##  <a name="reopenpreviousdocuments"></a>  CDataRecoveryHandler::ReopenPreviousDocuments  
  Abre os documentos abertos anteriormente.  
@@ -487,7 +487,7 @@ virtual BOOL ReopenPreviousDocuments();
 ### <a name="remarks"></a>Comentários  
  Este método abre o salvamento mais recente dos documentos abertos anteriormente. Se um documento não foi salvo ou salva automaticamente, `ReopenPreviousDocuments` abre um documento em branco baseado no modelo para esse tipo de arquivo.  
   
- Para usar esse método, `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` deve ser definido em `m_dwRestartManagerSupportFlags`. Se esse parâmetro não for definido, `ReopenPreviousDocuments` não faz nada e retorna `FALSE`.  
+ Para usar esse método, `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` deve ser definido em *m_dwRestartManagerSupportFlags*. Se esse parâmetro não for definido, `ReopenPreviousDocuments` não faz nada e retorna `FALSE`.  
   
  Se não há documentos armazenados na lista de documentos abertos anteriormente `ReopenPreviousDocuments` não faz nada e retorna `FALSE`.  
   
@@ -529,7 +529,7 @@ Virtual void SetAutosaveInterval(int nAutosaveInterval);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nAutosaveInterval`  
+ [in] *nAutosaveInterval*  
  O novo intervalo de salvamento automático em milissegundos.  
   
 ##  <a name="setautosavepath"></a>  CDataRecoveryHandler::SetAutosavePath  
@@ -544,7 +544,7 @@ virtual void SetAutosavePath(const CString& strAutosavePath);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `strAutosavePath`|O caminho onde os arquivos de salvamento automático são armazenados.|  
+|[in] *strAutosavePath*|O caminho onde os arquivos de salvamento automático são armazenados.|  
   
 ### <a name="remarks"></a>Comentários  
  Alterar o diretório de salvamento automático não move atualmente salva automaticamente arquivos.  
@@ -561,7 +561,7 @@ virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `strRestartIdentifier`|O identificador exclusivo para o Gerenciador de reinicialização.|  
+|[in] *strRestartIdentifier*|O identificador exclusivo para o Gerenciador de reinicialização.|  
   
 ### <a name="remarks"></a>Comentários  
  O Gerenciador de reinicialização registra informações sobre os documentos abertos no registro. Essa informação é armazenada com o identificador exclusivo de reinicialização como a chave. Como o identificador de reinicialização é exclusivo para cada instância de um aplicativo, várias instâncias de um aplicativo podem ser encerrado inesperadamente e o Gerenciador de reinicialização pode recuperar cada um deles.  
@@ -578,7 +578,7 @@ virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `bSaveOnIdle`|`TRUE` Para salvar as informações do documento durante o ciclo de ociosidade atual; `FALSE to not perform a save`.|  
+|[in] *bSaveOnIdle*|`TRUE` Para salvar as informações do documento durante o ciclo de ociosidade atual; `FALSE to not perform a save`.|  
   
 ##  <a name="setshutdownbyrestartmanager"></a>  CDataRecoveryHandler::SetShutdownByRestartManager  
  Define se a saída anterior do aplicativo foi causada pelo Gerenciador de reinicialização.  
@@ -592,7 +592,7 @@ virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `bShutdownByRestartManager`|`TRUE` para indicar que o Gerenciador de reinicialização fez com que o aplicativo Sair; `FALSE` para indicar que o aplicativo foi encerrado por outro motivo.|  
+|[in] *bShutdownByRestartManager*|`TRUE` para indicar que o Gerenciador de reinicialização fez com que o aplicativo Sair; `FALSE` para indicar que o aplicativo foi encerrado por outro motivo.|  
   
 ### <a name="remarks"></a>Comentários  
  A estrutura se comporta de maneira diferente com base em se a saída anterior era esperada ou se ele foi iniciado pelo Gerenciador de reinicialização.  
@@ -609,15 +609,15 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `pDocument`|Um ponteiro para o documento salvo.|  
+|[in] *pDocument*|Um ponteiro para o documento salvo.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` Se esse método excluído o documento salva automaticamente e atualizar as informações do documento; `FALSE` se ocorreu um erro.  
   
 ### <a name="remarks"></a>Comentários  
- Quando um usuário salva um documento, o aplicativo remove o arquivo salva automaticamente porque ele não é mais necessário. `UpdateDocumentInfo` Exclui o arquivo salva automaticamente chamando [CDataRecoveryHandler::RemoveDocumentInfo](#removedocumentinfo). `UpdateDocumentInfo` em seguida, adiciona as informações de `pDocument` à lista de atualmente documentos abertos porque `RemoveDocumentInfo` exclui essas informações, mas o salvo documento ainda está aberto.  
+ Quando um usuário salva um documento, o aplicativo remove o arquivo salva automaticamente porque ele não é mais necessário. `UpdateDocumentInfo` Exclui o arquivo salva automaticamente chamando [CDataRecoveryHandler::RemoveDocumentInfo](#removedocumentinfo). `UpdateDocumentInfo` em seguida, adiciona as informações de *pDocument* à lista de atualmente documentos abertos porque `RemoveDocumentInfo` exclui essas informações, mas o salvo documento ainda está aberto.  
   
- Para usar esse método, `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` deve ser definido em `m_dwRestartManagerSupportFlags`.   
+ Para usar esse método, `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` deve ser definido em *m_dwRestartManagerSupportFlags*.   
   
 ## <a name="see-also"></a>Consulte também  
  [Classes](../../mfc/reference/mfc-classes.md)   

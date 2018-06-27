@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9951fd087619371e24f06822774cec005787c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f89812fbc0e1b6a3df80cd7c99879d8d630179de
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367400"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956447"
 ---
 # <a name="cdocobjectserver-class"></a>Classe CDocObjectServer
 Implementa as interfaces OLE adicionais necessárias para tomar um normal `COleDocument` server em um servidor DocObject completo: `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, e `IPrint`.  
@@ -95,7 +95,7 @@ void ActivateDocObject();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- `ActivateDocObject` chamadas `IOleDocumentSite`do **ActivateMe** método, mas não mostra o modo de exibição porque ele espera para obter instruções específicas sobre como configurar e exibir o modo de exibição fornecido na chamada para [CDocObjectServer::OnActivateView](#onactivateview).  
+ `ActivateDocObject` chamadas `IOleDocumentSite`do `ActivateMe` método, mas não mostra o modo de exibição porque ele espera para obter instruções específicas sobre como configurar e exibir o modo de exibição fornecido na chamada para [CDocObjectServer::OnActivateView](#onactivateview).  
   
  Juntas, `ActivateDocObject` e `OnActivateView` ativar e mostrar a exibição DocObject. Ativação DocObject difere de outros tipos de ativação no local OLE. Ativação DocObject ignora a exibição in-loco hachura bordas e adornos de objeto (por exemplo, alças de dimensionamento), ignora as funções de extensão de objeto e desenha barras de rolagem dentro do retângulo de exibição em vez de desenho fora do retângulo (como normal ativação no local).  
   
@@ -112,7 +112,7 @@ explicit CDocObjectServer(
  *pOwner*  
  Um ponteiro para o documento de site do cliente que é o cliente para o servidor DocObject.  
   
- `pDocSite`  
+ *pDocSite*  
  Um ponteiro para o `IOleDocumentSite` interface implementada pelo contêiner.  
   
 ### <a name="remarks"></a>Comentários  
@@ -139,7 +139,7 @@ virtual void OnApplyViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `ar`  
+ *ar*  
  Um `CArchive` objeto do qual serializar o estado de exibição.  
   
 ### <a name="remarks"></a>Comentários  
@@ -155,7 +155,7 @@ virtual void OnSaveViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `ar`  
+ *ar*  
  Um `CArchive` do objeto para o qual o estado de exibição é serializado.  
   
 ### <a name="remarks"></a>Comentários  

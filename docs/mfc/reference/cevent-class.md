@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da3dc6df825988794481795ca7e47e72b5736bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8450f4b4105f5302750ea0f369d0e6c1dc2925ab
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367497"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950879"
 ---
 # <a name="cevent-class"></a>Classe CEvent
 Representa um evento, que é um objeto de sincronização que permite que um thread notificar o outro que um evento ocorreu.  
@@ -64,7 +64,7 @@ class CEvent : public CSyncObject
   
  `CEvent` objetos têm dois tipos: manual e automática.  
   
- Automático `CEvent` objeto automaticamente retorna ao estado (não disponível) não sinalizado depois que pelo menos um thread é liberado. Por padrão, um `CEvent` objeto é automático, a menos que você passe `TRUE` para o `bManualReset` parâmetro durante a construção.  
+ Automático `CEvent` objeto automaticamente retorna ao estado (não disponível) não sinalizado depois que pelo menos um thread é liberado. Por padrão, um `CEvent` objeto é automático, a menos que você passe `TRUE` para o *bManualReset* parâmetro durante a construção.  
   
  Manual `CEvent` objeto permanece no estado definido por [SetEvent](#setevent) ou [ResetEvent](#resetevent) até que a outra função seja chamada. Para criar um manual `CEvent` de objeto, passe `TRUE` para o `bManualReset` parâmetro durante a construção.  
   
@@ -103,16 +103,16 @@ CEvent(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bInitiallyOwn`  
- Se **TRUE**, o thread para o **CMultilock** ou `CSingleLock` objeto está habilitado. Caso contrário, todos os threads que desejam acessar o recurso devem esperar.  
+ *bInitiallyOwn*  
+ Se **TRUE**, o thread para o `CMultilock` ou `CSingleLock` objeto está habilitado. Caso contrário, todos os threads que desejam acessar o recurso devem esperar.  
   
  *bManualReset*  
  Se **TRUE**, especifica que o objeto de evento é um evento manual, caso contrário, o objeto de evento é um evento automático.  
   
- `lpszName`  
+ *lpszName*  
  Nome do objeto de `CEvent` . Deve ser fornecido se o objeto será usado pelos limites do processo. Se o nome corresponder a um evento existente, o construtor cria um novo `CEvent` objeto que faz referência a esse nome do evento. Se o nome corresponder a um objeto de sincronização existente que não é um evento, a construção falhará. Se **nulo**, o nome será nulo.  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  Atributos de segurança para o objeto de evento. Para obter uma descrição completa dessa estrutura, consulte [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) no SDK do Windows.  
   
 ### <a name="remarks"></a>Comentários  

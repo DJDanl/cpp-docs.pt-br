@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf77a5581dd9e8c9181c61287b6032f700d7d64b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de63a53e23f4ea22a6fe8df7ab55bfc57d409779
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376565"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955070"
 ---
 # <a name="cfilefind-class"></a>Classe CFileFind
 Realiza pesquisas de arquivos local e é a classe base para [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) e [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), que executar pesquisas de arquivos da Internet.  
@@ -159,7 +159,7 @@ CFileFind(CAtlTransactionManager* pTM);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pTM`  
+ *pTM*  
  Ponteiro para objeto CAtlTransactionManager  
   
 ### <a name="example"></a>Exemplo  
@@ -188,7 +188,7 @@ virtual void CloseContext();
 ### <a name="remarks"></a>Comentários  
  Fecha o arquivo especificado pelo valor atual do identificador de pesquisa. Substitua esta função para alterar o comportamento padrão.  
   
- Você deve chamar o [FindFile](#findfile) ou [FindNextFile](#findnextfile) funções pelo menos uma vez para recuperar um identificador de pesquisa válido. O **FindFile** e `FindNextFile` funções usam o identificador de pesquisa para localizar arquivos com nomes que correspondem a um determinado nome.  
+ Você deve chamar o [FindFile](#findfile) ou [FindNextFile](#findnextfile) funções pelo menos uma vez para recuperar um identificador de pesquisa válido. O `FindFile` e `FindNextFile` funções usam o identificador de pesquisa para localizar arquivos com nomes que correspondem a um determinado nome.  
   
 ##  <a name="findfile"></a>  CFileFind::FindFile  
  Chame essa função de membro para abrir uma pesquisa de arquivos.  
@@ -200,17 +200,17 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pstrName`  
- Um ponteiro para uma cadeia de caracteres que contém o nome do arquivo a ser localizado. Se você passar **nulo** para `pstrName`, **FindFile** um caractere curinga (\*.\*) a pesquisa.  
+ *pstrName*  
+ Um ponteiro para uma cadeia de caracteres que contém o nome do arquivo a ser localizado. Se você passar **nulo** para *pstrName*, **FindFile** um caractere curinga (*.\*) a pesquisa.  
   
  *dwUnused*  
- Reservado para tornar **FindFile** polimórfico com classes derivadas. Deve ser 0.  
+ Reservado para tornar `FindFile` polimórfico com classes derivadas. Deve ser 0.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0. Para obter mais informações sobre o erro, chame a função Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Comentários  
- Depois de chamar **FindFile** para iniciar a pesquisa de arquivo, chame [FindNextFile](#findnextfile) para recuperar os arquivos posteriores. Você deve chamar `FindNextFile` pelo menos uma vez antes de chamar funções de membro a qualquer um dos seguinte atributo:  
+ Depois de chamar `FindFile` para iniciar a pesquisa de arquivo, chame [FindNextFile](#findnextfile) para recuperar os arquivos posteriores. Você deve chamar `FindNextFile` pelo menos uma vez antes de chamar funções de membro a qualquer um dos seguinte atributo:  
   
 - [GetCreationTime](#getcreationtime)  
   
@@ -238,7 +238,7 @@ virtual BOOL FindFile(
   
 - [IsDots](#isdots)  
   
-- [isHidden](#ishidden)  
+- [IsHidden](#ishidden)  
   
 - [IsNormal](#isnormal)  
   
@@ -292,7 +292,7 @@ virtual BOOL FindNextFile();
   
 - [IsDots](#isdots)  
   
-- [isHidden](#ishidden)  
+- [IsHidden](#ishidden)  
   
 - [IsNormal](#isnormal)  
   
@@ -318,10 +318,10 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pTimeStamp`  
+ *pTimeStamp*  
  Um ponteiro para um [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) estrutura que contém a hora em que o arquivo foi criado.  
   
- `refTime`  
+ *refTime*  
  Uma referência a um [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -435,10 +435,10 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `refTime`  
+ *refTime*  
  Uma referência a um [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto.  
   
- `pTimeStamp`  
+ *pTimeStamp*  
  Um ponteiro para um [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) estrutura que contém a hora em que o arquivo foi acessado pela última vez.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -462,10 +462,10 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pTimeStamp`  
+ *pTimeStamp*  
  Um ponteiro para um [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) estrutura que contém a hora em que o arquivo foi gravado pela última.  
   
- `refTime`  
+ *refTime*  
  Uma referência a um [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -714,7 +714,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwMask`  
+ *dwMask*  
  Especifica um ou mais atributos de arquivo, identificados no [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) estrutura, para o arquivo encontrado. Para pesquisar vários atributos, use o OR bit a bit (&#124;) operador. Qualquer combinação dos atributos a seguir é aceitável:  
   
 -   FILE_ATTRIBUTE_ARCHIVE o arquivo é um arquivo morto. Aplicativos usam esse atributo para marcar os arquivos de backup ou de remoção.  

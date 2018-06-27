@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd7210f2f63d55fc4244a6b88456ede1265c8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9cb5c8892583adac01ca883034b8c0af18595c9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384863"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954589"
 ---
 # <a name="using-tree-controls"></a>Usando controles de árvore
 Um uso típico de um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) segue o padrão abaixo:  
@@ -31,7 +31,7 @@ Um uso típico de um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl
   
 -   Colocar dados no controle chamando o `CTreeCtrl`do [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) função uma vez para cada item de dados. `InsertItem` Retorna um identificador para o item que você pode usar para se referir a ele mais tarde, por exemplo, ao adicionar itens filhos. É um bom momento para inicializar os dados em `OnInitDialog` (para controles em caixas de diálogo) ou `OnInitialUpdate` (para modos de exibição).  
   
--   Como o usuário interage com o controle, ele envia várias mensagens de notificação. Você pode especificar uma função para lidar com cada uma das mensagens que você deseja manipular adicionando um **ON_NOTIFY_REFLECT** macro no mapa de mensagem da janela de controle ou adicionando um `ON_NOTIFY` macro ao mapa de mensagem da janela de seu pai. Consulte [mensagens de notificação de controle de árvore](../mfc/tree-control-notification-messages.md) mais adiante neste tópico para obter uma lista de notificações possíveis.  
+-   Como o usuário interage com o controle, ele envia várias mensagens de notificação. Você pode especificar uma função para lidar com cada uma das mensagens que você deseja manipular adicionando uma macro ON_NOTIFY_REFLECT no mapa de mensagem da janela de controle ou pela adição de uma macro ON_NOTIFY ao mapa de mensagem da janela de seu pai. Consulte [mensagens de notificação de controle de árvore](../mfc/tree-control-notification-messages.md) mais adiante neste tópico para obter uma lista de notificações possíveis.  
   
 -   Chame várias funções de membro de conjunto para definir os valores para o controle. As alterações que você pode fazer incluem definir o recuo e alterar o texto, imagem ou associados a um item de dados.  
   

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f3bd6c6463bbbe26214a29960260d2be583e20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb5e6ad4cfcc1e14d3b6accc1e5adaf4037669a4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385621"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950208"
 ---
 # <a name="using-documents"></a>Usando documentos
 Trabalhando juntos, documentos e exibições:  
@@ -44,7 +44,7 @@ Trabalhando juntos, documentos e exibições:
   
 -   [Tratar](../mfc/handling-commands-in-the-document.md) a maioria dos comandos e mensagens de seu aplicativo.  
   
- O documento é particularmente envolvido no gerenciamento de dados. Armazene os dados, normalmente, em variáveis de membro de classe de documento. A exibição usa essas variáveis para acessar os dados para exibir e atualizar. Mecanismo de serialização do documento padrão gerencia lendo e gravando os dados para e de arquivos. Documentos também podem lidar com comandos (mas não Windows mensagens que **WM_COMMAND**).  
+ O documento é particularmente envolvido no gerenciamento de dados. Armazene os dados, normalmente, em variáveis de membro de classe de documento. A exibição usa essas variáveis para acessar os dados para exibir e atualizar. Mecanismo de serialização do documento padrão gerencia lendo e gravando os dados para e de arquivos. Também podem lidar com os documentos comandos (mas não as mensagens do Windows que não sejam WM_COMMAND).  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
   

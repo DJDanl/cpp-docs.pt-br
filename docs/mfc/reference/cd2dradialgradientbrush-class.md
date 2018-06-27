@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be476c43b0752b95a6514057e240a030325b95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 002b9fd5d919bb277f9546f038e4b81c45380c81
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354344"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952268"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>Classe CD2DRadialGradientBrush
 Um wrapper para ID2D1RadialGradientBrush.  
@@ -133,7 +133,7 @@ void Attach(ID2D1RadialGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pResource`  
+ *pResource*  
  Interface de recurso existente. Não pode ser NULL  
   
 ##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush  
@@ -152,28 +152,28 @@ CD2DRadialGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pParentTarget`  
+ *pParentTarget*  
  Um ponteiro para o destino de renderização.  
   
- `gradientStops`  
+ *gradientStops*  
  Um ponteiro para uma matriz de estruturas de D2D1_GRADIENT_STOP.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Um valor maior que ou igual a 1 que especifica o número de paradas de gradiente na matriz gradientStops.  
   
- `RadialGradientBrushProperties`  
+ *RadialGradientBrushProperties*  
  O centro, deslocamento de gradiente de origem e radius x e y-radius do pincel do gradiente.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  O espaço no qual cor interpolação entre os limites de gradiente é executada.  
   
- `extendMode`  
+ *extendMode*  
  O comportamento do gradiente fora do intervalo [0,1] de normalizado.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Um ponteiro para a opacidade e a transformação de um pincel.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Indica se o objeto será destruído pelo proprietário (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DRadialGradientBrush::Create  
@@ -184,7 +184,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pRenderTarget`  
+ *pRenderTarget*  
  Um ponteiro para o destino de renderização.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -289,7 +289,7 @@ void SetCenter(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `point`  
+ *Ponto*  
  O centro da elipse gradiente, no espaço de coordenadas do pincel  
   
 ##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset  
@@ -300,7 +300,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `gradientOriginOffset`  
+ *gradientOriginOffset*  
  O deslocamento da origem da gradação do centro da elipse gradiente  
   
 ##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX  
@@ -311,7 +311,7 @@ void SetRadiusX(FLOAT radiusX);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `radiusX`  
+ *radiusX*  
  O raio x da elipse gradiente. Esse valor está no espaço de coordenadas do pincel  
   
 ##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY  
@@ -322,7 +322,7 @@ void SetRadiusY(FLOAT radiusY);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `radiusY`  
+ *radiusY*  
  O raio y da elipse gradiente. Esse valor está no espaço de coordenadas do pincel  
   
 ## <a name="see-also"></a>Consulte também  

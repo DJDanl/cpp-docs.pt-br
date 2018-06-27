@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d6520aef1ec04c6419fb1c9c901475c9c109f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 967485f358d6659d759f2651c80c9390bff0b912
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383169"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952031"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: recursos MFC padrão
 Esta anotação descreve os recursos padrão fornecida com e necessárias para a biblioteca do MFC.  
@@ -45,7 +45,7 @@ Esta anotação descreve os recursos padrão fornecida com e necessárias para a
   
 -   Indicate.RC: Contém recursos de cadeia de caracteres para os indicadores de estado de chave com a barra de status, como "CAP" Caps Lock.  
   
--   Prompts.RC: Contém recursos de cadeia de caracteres do prompt do menu de cada comando predefinido, como "Criar um novo documento" para `ID_FILE_NEW`.  
+-   Prompts.RC: Contém recursos de cadeia de caracteres de prompt de menu para cada comando predefinido, como "Criar um novo documento" para ID_FILE_NEW.  
   
 -   Commdlg.RC: Um arquivo de RC compatível do Visual C++ que contém os modelos de caixa de diálogo COMMDLG padrão.  
   
@@ -77,7 +77,7 @@ Esta anotação descreve os recursos padrão fornecida com e necessárias para a
 >  Tenha cuidado para não mover acidentalmente recursos fora do Common.rc permanentemente. Se você mantiver a tecla CTRL enquanto arrasta recursos, você criará uma cópia. Se você não mantiver CTRL pressionada enquanto arrasta, os recursos serão movidos. Se você estiver preocupado que você pode acidentalmente fez alterações no arquivo Common.rc, clique em "Não" quando for perguntado se deseja salvar as alterações para Common.rc.  
   
 > [!NOTE]
->  Os arquivos de recursos de RC têm um especial `TEXTINCLUDE` recurso neles que irá impedi-lo acidentalmente salve sobre os arquivos. rc standard.  
+>  Os arquivos de recursos de RC possuem um recurso TEXTINCLUDE especial que irá impedi-lo acidentalmente salve sobre os arquivos. rc standard.  
   
 ### <a name="customizing-standard-framework-resources"></a>Personalizando recursos de estrutura padrão  
  Recursos de estrutura padrão normalmente são incluídos em um aplicativo usando o #include comando no arquivo de recurso do aplicativo. AppWizard irá gerar um arquivo de recurso. Este arquivo inclui os recursos de estrutura padrão apropriado, dependendo de quais opções de AppWizard você selecionar. Você pode revisar, adicionar ou remover a quais recursos estão incluídos alterando as diretivas de tempo de compilação. Para fazer isso, abra o **recurso** menu e selecione **definir inclui**. Examinar as diretivas de tempo de compilação"" Editar item. Por exemplo:  
