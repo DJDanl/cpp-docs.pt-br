@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 515103fc66ad221a3806fc101dcbc01f507ef535
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a706c927a7aacaf69091d6b448e00bd7938c265f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383182"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950429"
 ---
 # <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: modelo Apartment Threading em controles ActiveX
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33383182"
  Habilitar o modelo apartment threading é fácil para a maioria dos controles, especialmente se eles têm pouco ou nenhum dados compartilhados.  
   
 ## <a name="protecting-shared-data"></a>Protegendo dados compartilhados  
- Se o controle usa dados compartilhados, como uma variável de membro estático, o acesso ao que os dados devem ser protegidos com uma seção crítica para impedir que mais de um thread de modificação de dados ao mesmo tempo. Para configurar uma seção crítica para essa finalidade, declarar uma variável de membro estático da classe `CCriticalSection` na classe do controle. Use o `Lock` e **Unlock** funções de membro desta seção crítica do objeto sempre que seu código acessa os dados compartilhados.  
+ Se o controle usa dados compartilhados, como uma variável de membro estático, o acesso ao que os dados devem ser protegidos com uma seção crítica para impedir que mais de um thread de modificação de dados ao mesmo tempo. Para configurar uma seção crítica para essa finalidade, declarar uma variável de membro estático da classe `CCriticalSection` na classe do controle. Use o `Lock` e `Unlock` funções de membro desta seção crítica do objeto sempre que seu código acessa os dados compartilhados.  
   
  Considere, por exemplo, uma classe de controle que precisa para manter uma cadeia de caracteres que é compartilhada por todas as instâncias. Essa cadeia de caracteres pode ser mantida em uma variável de membro estático e protegida por uma seção crítica. Declaração de classe do controle deve conter o seguinte:  
   
@@ -81,7 +81,7 @@ if (_strShared.Empty())
 ```  
   
 ## <a name="registering-an-apartment-model-aware-control"></a>Registrar um controle de reconhecimento de modelo de Apartment  
- Controles que oferecem suporte a modelo apartment threading devem indicar esse recurso no registro, adicionando o valor nomeado "ThreadingModel" com um valor de "Apartment" na sua entrada de registro de ID de classe no *id da classe* \\ **InprocServer32** chave. Para fazer com que essa chave a ser registrado automaticamente para o seu controle, passar o `afxRegApartmentThreading` sinalizador no sexto parâmetro para `AfxOleRegisterControlClass`:  
+ Controles que oferecem suporte a modelo apartment threading devem indicar esse recurso no registro, adicionando o valor nomeado "ThreadingModel" com um valor de "Apartment" na sua entrada de registro de ID de classe no *id da classe* \\ **InprocServer32** chave. Para fazer com que essa chave a ser registrado automaticamente para o seu controle, passar o *afxRegApartmentThreading* sinalizador no sexto parâmetro para `AfxOleRegisterControlClass`:  
   
 ```  
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)  
@@ -108,9 +108,9 @@ BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)
   
  Se seu projeto de controle foi gerado pelo ControlWizard no Visual C++ versão 4.1 ou posterior, esse sinalizador já estará presente no seu código. Nenhuma alteração é necessária registrar o modelo de threading.  
   
- Se seu projeto foi gerado por uma versão anterior do ControlWizard, seu código existente terá um valor booliano como o sexto parâmetro. Se o parâmetro existente for TRUE, altere-o para `afxRegInsertable | afxRegApartmentThreading`. Se o parâmetro existente for FALSE, altere-o para `afxRegApartmentThreading`.  
+ Se seu projeto foi gerado por uma versão anterior do ControlWizard, seu código existente terá um valor booliano como o sexto parâmetro. Se o parâmetro existente for TRUE, altere-o para *afxRegInsertable | afxRegApartmentThreading*. Se o parâmetro existente for FALSE, altere-o para *afxRegApartmentThreading*.  
   
- Se o controle não segue as regras de modelo apartment threading, você não deve passar `afxRegApartmentThreading` nesse parâmetro.  
+ Se o controle não segue as regras de modelo apartment threading, você não deve passar *afxRegApartmentThreading* nesse parâmetro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Observações técnicas por número](../mfc/technical-notes-by-number.md)   

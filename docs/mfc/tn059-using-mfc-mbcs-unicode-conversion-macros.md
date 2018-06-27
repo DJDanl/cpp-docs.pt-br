@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 379c5b4fb9ed302ad1ea0167f2b32c30e48ab2bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e857d6f5bc2ebabb0f36a3c97e011a4f2a00d641
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384284"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953497"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059: usando macros de conversão MBCS/Unicode MFC
 > [!NOTE]
@@ -86,9 +86,9 @@ pI->SomeFunctionThatNeedsUnicode(T2OLE(lpszA));
   
  Há extras chamadas em que a conversão é necessária, mas usar as macros é simples e eficiente.  
   
- A implementação de cada macro usa a função alloca () para alocar a memória da pilha, em vez de heap. Alocação de memória da pilha é muito mais rápido que a alocação de memória no heap e a memória é liberada automaticamente quando a função for fechada. Além disso, as macros Evite chamar **MultiByteToWideChar** (ou **WideCharToMultiByte**) mais de uma vez. Isso é feito ao alocar um pouco mais memória do que é necessário. Sabemos que um MBC converterá no máximo uma **WCHAR** e para cada **WCHAR** teremos um máximo de dois bytes MBC. Alocando um pouco mais do que o necessário, mas sempre é suficiente para lidar com a conversão a segunda chamada segunda chamada para a função de conversão é evitada. A chamada para a função auxiliar **AfxA2Whelper** reduz o número de envios por push de argumento deve ser feito para realizar a conversão (Isso resulta em código menor, que se chamado **MultiByteToWideChar**diretamente).  
+ A implementação de cada macro usa a função alloca () para alocar a memória da pilha, em vez de heap. Alocação de memória da pilha é muito mais rápido que a alocação de memória no heap e a memória é liberada automaticamente quando a função for fechada. Além disso, as macros Evite chamar `MultiByteToWideChar` (ou `WideCharToMultiByte`) mais de uma vez. Isso é feito ao alocar um pouco mais memória do que é necessário. Sabemos que um MBC converterá no máximo uma **WCHAR** e para cada **WCHAR** teremos um máximo de dois bytes MBC. Alocando um pouco mais do que o necessário, mas sempre é suficiente para lidar com a conversão a segunda chamada segunda chamada para a função de conversão é evitada. A chamada para a função auxiliar `AfxA2Whelper` reduz o número de envios por push de argumento deve ser feito para realizar a conversão (Isso resulta em código menor, que se chamado `MultiByteToWideChar` diretamente).  
   
- Em ordem para macros tenha espaço para armazenar o comprimento temporário, é necessário declarar uma variável local chamada converter em que faz isso em cada função que usa as macros de conversão. Isso é feito chamando a **USES_CONVERSION** macro, como mostra o exemplo acima.  
+ Em ordem para macros tenha espaço para armazenar o comprimento temporário, é necessário declarar uma variável local chamada converter em que faz isso em cada função que usa as macros de conversão. Isso é feito chamando a macro USES_CONVERSION conforme mostra o exemplo acima.  
   
  Há macros de conversão genérico e macros específicas de OLE. Esses dois conjuntos diferentes de macro são discutidos abaixo. Todas as macros residem no AFXPRIV. H.  
   
@@ -105,7 +105,7 @@ W2A      (LPCWSTR) -> (LPSTR)
  Além de fazer conversões de texto, também há macros e funções auxiliares para converter `TEXTMETRIC`, `DEVMODE`, `BSTR`e OLE alocada cadeias de caracteres. Essas macros estão além do escopo desta discussão - consulte AFXPRIV. H para obter mais informações sobre essas macros.  
   
 ## <a name="ole-conversion-macros"></a>Macros de conversão de OLE  
- As macros de conversão de OLE são projetadas especificamente para manipular funções que esperam **OLESTR** caracteres. Se você examinar os cabeçalhos OLE, você verá muitas referências a **LPCOLESTR** e **OLECHAR**. Esses tipos são usados para se referir ao tipo de caracteres usado nas interfaces de OLE de uma maneira que não é específico para a plataforma. **OLECHAR** mapeia para `char` nas plataformas Win16 e Macintosh e **WCHAR** no Win32.  
+ As macros de conversão de OLE são projetadas especificamente para manipular funções que esperam **OLESTR** caracteres. Se você examinar os cabeçalhos OLE, você verá muitas referências a **LPCOLESTR** e **OLECHAR**. Esses tipos são usados para se referir ao tipo de caracteres usado nas interfaces de OLE de uma maneira que não é específico para a plataforma. **OLECHAR** mapeia para **char** nas plataformas Win16 e Macintosh e **WCHAR** no Win32.  
   
  Para manter o número de **#ifdef** diretivas em MFC código mínimo temos uma macro semelhante para cada conversão que onde as cadeias de caracteres OLE estão envolvidas. As seguintes macros são mais usadas:  
   
@@ -116,7 +116,7 @@ OLE2CT   (LPCOLESTR) -> (LPCTSTR)
 OLE2T   (LPCOLESTR) -> (LPCSTR)  
 ```  
   
- Novamente, existem macros semelhantes para fazer `TEXTMETRIC`, `DEVMODE`, `BSTR`e OLE alocada cadeias de caracteres. Consulte AFXPRIV. H para obter mais informações.  
+ Novamente, há macros semelhantes para fazer TEXTMETRIC, DEVMODE, BSTR e OLE alocada cadeias de caracteres. Consulte AFXPRIV. H para obter mais informações.  
   
 ## <a name="other-considerations"></a>Outras considerações  
  Não use as macros em um loop estreito. Por exemplo, você não deseja gravar o seguinte tipo de código:  

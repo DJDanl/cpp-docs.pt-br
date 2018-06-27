@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351631"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950296"
 ---
 # <a name="bitmap-structure"></a>Estrutura BITMAP
 O **BITMAP** estrutura define a altura, largura, formato de cor e valores de bit de um bitmap lógico **.**  
@@ -51,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  Especifica a altura do bitmap em linhas de varredura. A altura deve ser maior que 0.  
   
  *bmWidthBytes*  
- Especifica o número de bytes em cada linha de varredura. Esse valor deve ser um número par, pois a interface gráfica de dispositivo (GDI) pressupõe que os valores de bit de um bitmap formam uma matriz de inteiros (2 bytes). Em outras palavras, **bmWidthBytes** \* 8 deve ser o próximo múltiplo de 16 maior que ou igual ao valor obtido quando o **bmWidth** membro é multiplicado pelo **bmBitsPixel**  membro.  
+ Especifica o número de bytes em cada linha de varredura. Esse valor deve ser um número par, pois a interface gráfica de dispositivo (GDI) pressupõe que os valores de bit de um bitmap formam uma matriz de inteiros (2 bytes). Em outras palavras, *bmWidthBytes* \* 8 deve ser o próximo múltiplo de 16 maior que ou igual ao valor obtido quando o *bmWidth* membro é multiplicado pelo *bmBitsPixel*  membro.  
   
  *bmPlanes*  
  Especifica o número de planos de cores no bitmap.  
@@ -60,7 +60,7 @@ typedef struct tagBITMAP {  /* bm */
  Especifica o número de bits de cor adjacentes em cada plano necessário para definir um pixel.  
   
  *bmBits*  
- Aponta para o local dos valores de bit do bitmap. O **bmBits** membro deve ser um ponteiro longo para uma matriz de valores de 1 byte.  
+ Aponta para o local dos valores de bit do bitmap. O *bmBits* membro deve ser um ponteiro longo para uma matriz de valores de 1 byte.  
   
 ## <a name="remarks"></a>Comentários  
  Os formatos de bitmap usada atualmente são monocromática e cor. O bitmap monocromático usa um formato de 1 bit, o plano de 1. Cada exame é um múltiplo de 16 bits.  

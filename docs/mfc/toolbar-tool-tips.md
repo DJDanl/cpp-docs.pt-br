@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7024284a1be22aed211e8cf58f8366df88aa917
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90f325df3825b3546616ce145d4477322a1b4eed
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383491"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956288"
 ---
 # <a name="toolbar-tool-tips"></a>Dicas de ferramenta da barra de ferramentas
 Dicas de ferramenta são as janelas de pop-up pequeno que apresentam breves descrições de finalidade de um botão barra de ferramentas quando você posiciona o mouse sobre um botão para um período de tempo. Quando você cria um aplicativo com o Assistente de aplicativo que tem uma barra de ferramentas, suporte de dica de ferramenta é fornecido para você. Este artigo explica as duas o suporte de dica ferramenta criado pelo Assistente do aplicativo e como adicionar suporte de dica de ferramenta para seu aplicativo.  
@@ -42,7 +42,7 @@ Dicas de ferramenta são as janelas de pop-up pequeno que apresentam breves desc
 ##  <a name="_core_activating_tool_tips"></a> Ativar dicas de ferramenta  
  Para ativar dicas de ferramenta em seu aplicativo, você deve fazer duas coisas:  
   
--   Adicionar o `CBRS_TOOLTIPS` estilo nos outros estilos (como **WS_CHILD**, **WS_VISIBLE**e outros **CBRS_** estilos) passado como o `dwStyle` parâmetro para o [ CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) função ou no [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
+-   Adicionar o estilo CBRS_TOOLTIPS nos outros estilos (como WS_CHILD, WS_VISIBLE e outros **CBRS_** estilos) passado como o *dwStyle* parâmetro para o [CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) função ou no [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
   
 -   Conforme descrito no procedimento a seguir, acrescente o texto da dica de ferramentas, separado por um caractere de nova linha ("\n"), para o recurso de cadeia de caracteres que contém o prompt de linha de comando para o comando da barra de ferramentas. O recurso de cadeia de caracteres compartilha a ID do botão da barra de ferramentas.  
   
@@ -62,7 +62,7 @@ Dicas de ferramenta são as janelas de pop-up pequeno que apresentam breves desc
 -   A entrada da tabela de cadeia de caracteres com a mesma ID que o controle filho no arquivo de recurso tem uma cadeia de caracteres de dica de ferramenta.  
   
 ##  <a name="_core_fly_by_status_bar_updates"></a> Atualizações da barra de Status flyby  
- Um recurso relacionado a dicas de ferramenta é a barra de atualização de status de "flyby". Por padrão, a mensagem na barra de status descreve apenas um botão de barra de ferramentas específica quando o botão estiver ativado. Incluindo `CBRS_FLYBY` na sua lista de estilos passado para `CToolBar::Create`, você pode ter essas mensagens atualizadas quando o cursor do mouse passa sobre a barra de ferramentas sem realmente ativar o botão.  
+ Um recurso relacionado a dicas de ferramenta é a barra de atualização de status de "flyby". Por padrão, a mensagem na barra de status descreve apenas um botão de barra de ferramentas específica quando o botão estiver ativado. Incluindo CBRS_FLYBY em sua lista de estilos passado para `CToolBar::Create`, você pode ter essas mensagens atualizadas quando o cursor do mouse passa sobre a barra de ferramentas sem realmente ativar o botão.  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
   

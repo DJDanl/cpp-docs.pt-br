@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 858304a41cb015711393ea6cc41e73ddbcc8cd8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0252cc64a1d14a6d096a5c4ad6dd2e0d6c3c7ff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366929"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957026"
 ---
 # <a name="cdiscretetransition-class"></a>Classe CDiscreteTransition
 Encapsula uma transição discreta.  
@@ -88,13 +88,13 @@ CDiscreteTransition(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `delay`  
+ *atraso*  
  A quantidade de tempo pelo qual atrasar a opção de instantânea para o valor final.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  O valor da variável de animação no final da transição.  
   
- `hold`  
+ *Manter*  
  A quantidade de tempo pelo qual manter a variável com seu valor final.  
   
 ##  <a name="create"></a>  CDiscreteTransition::Create  
@@ -106,7 +106,7 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-`pLibrary`  
+*pLibrary*  
  Um ponteiro para um [IUIAnimationTransitionLibrary interface](https://msdn.microsoft.com/library/windows/desktop/dd371897), que define uma biblioteca de transições padrão.  
 
   

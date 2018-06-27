@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 001a1e66707544f6446a5bc54e70269f94108654
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8697e52368fd407d1c325990552ee9851d48a76
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351902"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953204"
 ---
 # <a name="ccubictransition-class"></a>Classe CCubicTransition
 Encapsula uma transição cúbica.  
@@ -88,13 +88,13 @@ CCubicTransition(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `duration`  
+ *Duração*  
  A duração da transição.  
   
- `finalValue`  
+ *finalValue*  
  O valor da variável de animação no final da transição.  
   
- `finalVelocity`  
+ *finalVelocity*  
  A velocidade da variável no final da transição.  
   
 ##  <a name="create"></a>  CCubicTransition::Create  
@@ -107,7 +107,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
-`pLibrary`  
+*pLibrary*  
  Um ponteiro para um [IUIAnimationTransitionLibrary interface](https://msdn.microsoft.com/library/windows/desktop/dd371897), que define uma biblioteca de transições padrão.  
 
 ### <a name="return-value"></a>Valor de retorno  

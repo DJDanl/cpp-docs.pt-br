@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c08366f995c1ecb4182fff04a88ac37fe7334bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7d89b6c6e05a5baf973abace2c64de3b52754f5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384258"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954550"
 ---
 # <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: escrevendo programas de instalação e administração ODBC para aplicativos de banco de dados MFC
 > [!NOTE]
@@ -41,9 +41,9 @@ ms.locfileid: "33384258"
   
 -   Como alternativa, você pode escrever seu próprio programa de instalação, que instalará o Gerenciador de driver e o driver.  
   
- A API do instalador ODBC pode ser usada para gravar programas de instalação específicas do aplicativo. As funções no instalador do API são implementadas pelo instalador ODBC DLL — ODBCINST. DLL no Windows de 16 bits e ODBCCP32. DLL Win32. Um aplicativo pode chamar **SQLInstallODBC** do instalador de DLL, que irá instalar o Gerenciador de driver ODBC, os drivers ODBC e qualquer necessário tradutores. Em seguida, registra os drivers instalados e tradutores no ODBCINST. O arquivo INI (ou o registro, no NT). **SQLInstallODBC** requer o caminho completo para o ODBC. Arquivo INF, que contém a lista de drivers a serem instalados e descreve os arquivos que compõem cada driver. Ele também contém informações semelhantes sobre o Gerenciador de driver e tradutores. ODBC. Normalmente, os arquivos INF são fornecidos por desenvolvedores de driver.  
+ A API do instalador ODBC pode ser usada para gravar programas de instalação específicas do aplicativo. As funções no instalador do API são implementadas pelo instalador ODBC DLL — ODBCINST. DLL no Windows de 16 bits e ODBCCP32. DLL Win32. Um aplicativo pode chamar `SQLInstallODBC` do instalador de DLL, que irá instalar o Gerenciador de driver ODBC, os drivers ODBC e qualquer necessário tradutores. Em seguida, registra os drivers instalados e tradutores no ODBCINST. O arquivo INI (ou o registro, no NT). `SQLInstallODBC` requer o caminho completo para o ODBC. Arquivo INF, que contém a lista de drivers a serem instalados e descreve os arquivos que compõem cada driver. Ele também contém informações semelhantes sobre o Gerenciador de driver e tradutores. ODBC. Normalmente, os arquivos INF são fornecidos por desenvolvedores de driver.  
   
- Um programa também pode instalar componentes individuais do ODBC. Para instalar o Gerenciador de Driver, um programa primeiro chama **SQLInstallDriverManager** no instalador do DLL para obter o diretório de destino para o Gerenciador de Driver. Isso geralmente é o diretório no qual residem DLLs do Windows. O programa, em seguida, usa as informações na seção [ODBC Driver Manager] do ODBC. Arquivo INF para copiar o Gerenciador de Driver e arquivos relacionados do disco de instalação para este diretório. Para instalar um driver individual, um programa primeiro chama **SQLInstallDriver** no instalador do DLL para adicionar a especificação de driver para o ODBCINST. O arquivo INI (ou o registro, no NT). **SQLInstallDriver** retorna o diretório de destino do driver — geralmente o diretório no qual residem DLLs do Windows. O programa, em seguida, usa as informações na seção do driver ODBC. Arquivo INF para copiar os arquivos relacionados e a DLL do driver do disco de instalação para este diretório.  
+ Um programa também pode instalar componentes individuais do ODBC. Para instalar o Gerenciador de Driver, um programa primeiro chama `SQLInstallDriverManager` no instalador do DLL para obter o diretório de destino para o Gerenciador de Driver. Isso geralmente é o diretório no qual residem DLLs do Windows. O programa, em seguida, usa as informações na seção [ODBC Driver Manager] do ODBC. Arquivo INF para copiar o Gerenciador de Driver e arquivos relacionados do disco de instalação para este diretório. Para instalar um driver individual, um programa primeiro chama `SQLInstallDriver` no instalador do DLL para adicionar a especificação de driver para o ODBCINST. O arquivo INI (ou o registro, no NT). `SQLInstallDriver` Retorna o diretório de destino do driver — geralmente o diretório no qual residem DLLs do Windows. O programa, em seguida, usa as informações na seção do driver ODBC. Arquivo INF para copiar os arquivos relacionados e a DLL do driver do disco de instalação para este diretório.  
   
  Para obter mais informações sobre ODBC. INF, ODBCINST. INI e usar o instalador API, consulte o SDK do ODBC *referência do programador,* capítulo 19, instalando o Software de ODBC.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "33384258"
   
  Um programa que configura fontes de dados faz chamadas de função para a DLL do instalador. O instalador DLL chama um DLL para configurar uma fonte de dados de configuração. Há uma DLL de configuração para cada driver. pode ser o própria DLL do driver ou uma DLL separada. A DLL de instalação solicitará ao usuário para obter informações que o driver precisa se conectar à fonte de dados e o conversor padrão, se houver suporte. Em seguida, ele chama o instalador DLL e APIs do Windows para registrar essas informações no ODBC. O arquivo INI (ou registro).  
   
- Para exibir uma caixa de diálogo com a qual um usuário pode adicionar, modificar e excluir fontes de dados, um programa chama **SQLManageDataSources** no instalador do DLL. Esta função é invocada quando o instalador DLL é chamado de painel de controle. Para adicionar, modificar ou excluir uma fonte de dados **SQLManageDataSources** chamadas **ConfigDSN** na configuração de DLL para o driver associado a essa fonte de dados. Para adicionar, modificar ou excluir dados diretamente fontes, um programa chama **SQLConfigDataSource** no instalador do DLL. O programa passa o nome da fonte de dados e uma opção que especifica a ação a ser tomada. **SQLConfigDataSource** chamadas **ConfigDSN** na configuração da DLL e passa os argumentos de **SQLConfigDataSource**.  
+ Para exibir uma caixa de diálogo com a qual um usuário pode adicionar, modificar e excluir fontes de dados, um programa chama `SQLManageDataSources` no instalador do DLL. Esta função é invocada quando o instalador DLL é chamado de painel de controle. Para adicionar, modificar ou excluir uma fonte de dados `SQLManageDataSources` chamadas `ConfigDSN` na configuração de DLL para o driver associado a essa fonte de dados. Para adicionar, modificar ou excluir dados diretamente fontes, um programa chama `SQLConfigDataSource` no instalador do DLL. O programa passa o nome da fonte de dados e uma opção que especifica a ação a ser tomada. `SQLConfigDataSource` chamadas `ConfigDSN` na configuração da DLL e passa os argumentos de `SQLConfigDataSource`.  
   
  Para obter mais informações, consulte o SDK do ODBC *referência do programador,* capítulo 23, referência de função de DLL de instalação e capítulo 24, referência de função de DLL do instalador.  
   

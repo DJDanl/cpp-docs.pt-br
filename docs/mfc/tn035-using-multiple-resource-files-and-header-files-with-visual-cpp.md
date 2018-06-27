@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c374e0d14375450533326be5fd406fe8147e475a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c23e0a978ab8cb3c63566bd8d5ce64ecb2a80d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385372"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952405"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: usando vários arquivos de recurso e arquivos de cabeçalho com o Visual C++
 > [!NOTE]
@@ -227,7 +227,7 @@ RESOURCE.H     AFXRES.H
 #endif //APSTUDIO_INVOKED  
 ```  
   
- Quando o Visual C++ compila o. Arquivo RC, ela define **APSTUDIO_INVOKED** , bem como **RC_INVOKED**. Se a estrutura de arquivos criado AppWizard está corrompida e Visual C++ lê a linha #error acima, ele relata um erro fatal e anular a leitura da. Arquivo RC.  
+ Quando o Visual C++ compila o. Arquivo RC, ela define `APSTUDIO_INVOKED` , bem como `RC_INVOKED`. Se a estrutura de arquivos criado AppWizard está corrompida e Visual C++ lê a linha #error acima, ele relata um erro fatal e anular a leitura da. Arquivo RC.  
   
  **Gerenciando símbolos compartilhados por vários Visual C++ editados. Arquivos RC**  
   
@@ -262,19 +262,19 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 #define _APS_NEXT_SYMED_VALUE     101  
 ```  
   
- **_APS_NEXT_RESOURCE_VALUE** é o próximo valor de símbolo que será usado para um recurso de caixa de diálogo, recurso de menu e assim por diante. O intervalo válido para valores de símbolo de recurso é 1 para 0x6FFF.  
+ `_APS_NEXT_RESOURCE_VALUE` é o próximo valor de símbolo que será usado para um recurso de caixa de diálogo, recurso de menu e assim por diante. O intervalo válido para valores de símbolo de recurso é 1 para 0x6FFF.  
   
- **_APS_NEXT_COMMAND_VALUE** é o próximo valor de símbolo que será usado para uma identificação de comando. O intervalo válido para valores de símbolo de comando é 0x8000 a 0xDFFF.  
+ `_APS_NEXT_COMMAND_VALUE` é o próximo valor de símbolo que será usado para uma identificação de comando. O intervalo válido para valores de símbolo de comando é 0x8000 a 0xDFFF.  
   
- **_APS_NEXT_CONTROL_VALUE** é o próximo valor de símbolo que será usado para um controle de caixa de diálogo. O intervalo válido para valores de símbolo de controle de caixa de diálogo é 8 a 0xDFFF.  
+ `_APS_NEXT_CONTROL_VALUE` é o próximo valor de símbolo que será usado para um controle de caixa de diálogo. O intervalo válido para valores de símbolo de controle de caixa de diálogo é 8 a 0xDFFF.  
   
- **_APS_NEXT_SYMED_VALUE** é o próximo valor de símbolo que será emitido quando você atribuir manualmente um valor de símbolo usando o comando de novo no navegador do símbolo.  
+ `_APS_NEXT_SYMED_VALUE` o próximo valor de símbolo que será emitido quando você atribuir manualmente um valor do símbolo está usando o novo comando no navegador do símbolo.  
   
  Visual C++ será iniciada com valores ligeiramente maiores que jurídico menor valor quando criar um novo. Arquivo RC. AppWizard também inicializar esses valores para algo mais apropriado para aplicativos MFC. Para obter mais informações sobre intervalos de valores de ID, consulte [20 de observação técnica](../mfc/tn020-id-naming-and-numbering-conventions.md).  
   
- Agora, sempre que você criar um novo arquivo de recursos, até mesmo no mesmo projeto, o Visual C++ define a mesma **_APS_NEXT\_**  valores. Isso significa que se você adicionar, digamos, várias caixas de diálogo em duas diferentes. Arquivos RC, é muito provável que o mesmo #define valor será atribuído a diferentes caixas de diálogo. Por exemplo, IDD_MY_DLG1 no primeiro. Arquivo RC pode ter o mesmo número, 101, como IDD_MY_DLG2 em um segundo. Arquivo RC.  
+ Agora, sempre que você criar um novo arquivo de recursos, até mesmo no mesmo projeto, o Visual C++ define a mesma `_APS_NEXT_` valores. Isso significa que se você adicionar, digamos, várias caixas de diálogo em duas diferentes. Arquivos RC, é muito provável que o mesmo #define valor será atribuído a diferentes caixas de diálogo. Por exemplo, IDD_MY_DLG1 no primeiro. Arquivo RC pode ter o mesmo número, 101, como IDD_MY_DLG2 em um segundo. Arquivo RC.  
   
- Para evitar isso, você deve reservar um intervalo numérico separado para cada um dos quatro domínios de IDs do respectivo. Arquivos RC. Para fazer isso, atualizar manualmente o **_APS_NEXT** valores em cada o. Arquivos RC `before` iniciar a adição de recursos. Por exemplo, se o primeiro. Arquivo RC usa o padrão **_APS_NEXT** valores, em seguida, talvez você queira atribuir a seguinte **_APS_NEXT** valores para o segundo. Arquivo RC:  
+ Para evitar isso, você deve reservar um intervalo numérico separado para cada um dos quatro domínios de IDs do respectivo. Arquivos RC. Para fazer isso, atualizar manualmente o `_APS_NEXT` valores em cada o. Arquivos RC **antes de** iniciar a adição de recursos. Por exemplo, se o primeiro. Arquivo RC usa o padrão `_APS_NEXT` valores, em seguida, talvez você queira atribuir a seguinte `_APS_NEXT` valores para o segundo. Arquivo RC:  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  2000  

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1032ffac46af6370c45f4bcb2c251ddae73ce69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48c431ecbcc415776ff9accfb68004c7c8e46d34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356390"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952320"
 ---
 # <a name="canimatectrl-class"></a>Classe CAnimateCtrl
 Fornece a funcionalidade de controle de animação comuns do Windows.  
@@ -146,23 +146,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwStyle`  
+ *dwStyle*  
  Especifica o estilo do controle de animação. Aplique qualquer combinação das janelas de estilos descritos na seção comentários abaixo e os estilos de controle de animação descritos em [estilos de controle de animação](http://msdn.microsoft.com/library/windows/desktop/bb761886) no SDK do Windows.  
   
- `rect`  
+ *Rect*  
  Especifica a posição e o tamanho do controle de animação. Ele pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou um [RECT](../../mfc/reference/rect-structure1.md) estrutura.  
   
- `pParentWnd`  
- Especifica a janela do pai do controle de animação, geralmente um `CDialog`. Ele não deve ser **nulo.**  
+ *pParentWnd*  
+ Especifica a janela do pai do controle de animação, geralmente um `CDialog`. Ele não deve ser **nulo**.  
   
- `nID`  
+ *nID*  
  Especifica a identificação. do controle de animação  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, zero.  
   
 ### <a name="remarks"></a>Comentários  
- Você pode criar um `CAnimateCtrl` em duas etapas. Primeiro, chame o construtor e, em seguida, chamar **criar**, que cria o controle de animação e anexa-o para o `CAnimateCtrl` objeto.  
+ Você pode criar um `CAnimateCtrl` em duas etapas. Primeiro, chame o construtor e, em seguida, chamar `Create`, que cria o controle de animação e anexa-o para o `CAnimateCtrl` objeto.  
   
  Aplicar o seguinte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) a um controle de animação.  
   
@@ -172,7 +172,7 @@ virtual BOOL Create(
   
 - **WS_DISABLED** raramente  
   
- Se você quiser usar estilos de windows estendida com o controle de animação, chame [CreateEx](#createex) em vez de **criar**.  
+ Se você quiser usar estilos de windows estendida com o controle de animação, chame [CreateEx](#createex) em vez de `Create`.  
   
  Além dos estilos de janela listados acima, convém aplicar um ou mais dos estilos de controle de animação a um controle de animação. Consulte o SDK do Windows para obter mais informações sobre [estilos de controle de animação](http://msdn.microsoft.com/library/windows/desktop/bb761886).  
   
@@ -192,19 +192,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwExStyle`  
- Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o `dwExStyle` parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
+ *dwExStyle*  
+ Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o *dwExStyle* parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica o estilo do controle de animação. Aplique qualquer combinação de janela e estilos de controle de animação descritos em [estilos de controle de animação](http://msdn.microsoft.com/library/windows/desktop/bb761886) no SDK do Windows.  
   
- `rect`  
- Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e a posição da janela deve ser criada, nas coordenadas do cliente de `pParentWnd`.  
+ *Rect*  
+ Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e a posição da janela deve ser criada, nas coordenadas do cliente de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para a janela que é o pai do controle.  
   
- `nID`  
+ *nID*  
  ID de janela filho. do controle  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -235,10 +235,10 @@ BOOL Open(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszFileName`  
+ *lpszFileName*  
  Um `CString` objeto ou um ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome do arquivo AVI ou o nome de um recurso AVI. Se esse parâmetro for **nulo**, o sistema fecha o clipe AVI que foi aberto anteriormente para o controle de animação, se houver.  
   
- `nID`  
+ *nID*  
  O identificador de recurso AVI. Se esse parâmetro for **nulo**, o sistema fecha o clipe AVI que foi aberto anteriormente para o controle de animação, se houver.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -269,10 +269,10 @@ BOOL Play(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nFrom`  
+ *nFrom*  
  Índice de base zero do quadro onde começa a execução. Valor deve ser menor que 65.536. Um valor de 0 significa que começa com o primeiro quadro o clipe AVI.  
   
- `nTo`  
+ *nPara*  
  Índice de base zero do quadro onde execução termina. Valor deve ser menor que 65.536. Um valor de - 1 significa que terminam com o último quadro o clipe AVI.  
   
  *nRep*  
@@ -295,7 +295,7 @@ BOOL Seek(UINT nTo);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nTo`  
+ *nPara*  
  Índice de base zero do quadro para exibir. Valor deve ser menor que 65.536. Um valor de 0 significa exibir o primeiro quadro no clipe AVI. Um valor de -1 significa exibir o último quadro no clipe AVI.  
   
 ### <a name="return-value"></a>Valor de retorno  

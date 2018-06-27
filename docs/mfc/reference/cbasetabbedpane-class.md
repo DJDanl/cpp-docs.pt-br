@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d628758f19c36112bf896e11c97df3e1f92cbc47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edb9fe1942f9fe8b462ce9fc6a56e37538866174
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355943"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954982"
 ---
 # <a name="cbasetabbedpane-class"></a>Classe CBaseTabbedPane
 Estende a funcionalidade do [CDockablePane classe](../../mfc/reference/cdockablepane-class.md) para suporte à criação de janelas com guias.  
@@ -173,23 +173,23 @@ virtual BOOL AddTab(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] [out] `pNewBar`  
+ [in] [out] *pNewBar*  
  Um ponteiro para o painel para adicionar. Esse ponteiro pode se tornar inválido depois de chamar esse método. Para obter mais informações, consulte a seção Comentários.  
   
- [in] `bVisible`  
+ [in] *bVisible*  
  `TRUE` Para tornar visível; a guia Caso contrário, `FALSE`.  
   
- [in] `bSetActive`  
+ [in] *bSetActive*  
  `TRUE` Para tornar a guia a guia ativa; Caso contrário, `FALSE`.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  `TRUE` Para tornar a guia destacáveis; Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` Se o painel foi adicionado com êxito como uma guia e não foi destruído no processo. `FALSE` Se o painel que está sendo adicionado é um objeto do tipo `CBaseTabbedPane`. Para obter mais informações, consulte a seção Comentários.  
   
 ### <a name="remarks"></a>Comentários  
- Chame este método para adicionar um painel como uma nova guia em um painel com guias. Se `pNewBar` aponta para um objeto do tipo `CBaseTabbedPane`, todas as suas guias são copiados para o painel com guias e, em seguida, `pNewBar` é destruído. Portanto, `pNewBar` se torna um ponteiro inválido e não deve ser usado.  
+ Chame este método para adicionar um painel como uma nova guia em um painel com guias. Se *pNewBar* aponta para um objeto do tipo `CBaseTabbedPane`, todas as suas guias são copiados para o painel com guias e, em seguida, *pNewBar* é destruído. Portanto, *pNewBar* se torna um ponteiro inválido e não deve ser usado.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
  Especifica se um painel com guias vazio pode ser destruído.  
@@ -212,7 +212,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bUseTabIndexes`  
+ [in] *bUseTabIndexes*  
  Esse parâmetro é usado internamente pelo framework.  
   
 ### <a name="remarks"></a>Comentários  
@@ -249,7 +249,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bActiveTabOnly`  
+ [in] *bActiveTabOnly*  
  Quando você converte um painel com guias, especifique `TRUE` para converter apenas a guia ativa. Especifique `FALSE` para converter todas as guias no painel.  
   
 ##  <a name="detachpane"></a>  CBaseTabbedPane::DetachPane  
@@ -262,14 +262,14 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
+ [in] *pBar*  
  Ponteiro para o painel para desanexar.  
   
- [in] `bHide`  
+ [in] *bHide*  
  Parâmetro booleano que especifica se a estrutura oculta o painel depois que ele é desanexado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se a estrutura com êxito desanexa o painel; `FALSE` se `pBar` é `NULL` ou se refere a um painel que não está no painel com guias.  
+ `TRUE` Se a estrutura com êxito desanexa o painel; `FALSE` se *pBar* é `NULL` ou se refere a um painel que não está no painel com guias.  
   
 ### <a name="remarks"></a>Comentários  
  A estrutura flutua painel desanexado se possível. Para obter mais informações, consulte [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).  
@@ -282,7 +282,7 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` para sincronizar a legenda do painel com guias com a legenda a guia ativa; Caso contrário, `FALSE`.  
   
 ##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray  
@@ -303,14 +303,14 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uBarID`  
+ [in] *uBarID*  
  Especifica a ID do painel para localizar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o painel se ele foi encontrado; Caso contrário, `NULL`.  
   
 ### <a name="remarks"></a>Comentários  
- Este método compara todas as guias no painel e retorna um com a ID especificada pelo `uBarID` parâmetro.  
+ Este método compara todas as guias no painel e retorna um com a ID especificada pelo *uBarID* parâmetro.  
   
 ##  <a name="findbarbytabnumber"></a>  CBaseTabbedPane::FindBarByTabNumber  
  Retorna um painel que reside em uma guia.  
@@ -322,17 +322,17 @@ virtual CWnd* FindBarByTabNumber(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nTabNum`  
+ [in] *nTabNum*  
  Especifica o índice com base em zero da guia para recuperar.  
   
- [in] `bGetWrappedBar`  
+ [in] *bGetWrappedBar*  
  `TRUE` para retornar a janela subjacente (encapsulada) do painel, em vez do painel em si; Caso contrário, `FALSE`. Isso se aplica apenas aos painéis derivados [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se o painel for encontrado, será retornado um ponteiro válido para o painel que está sendo pesquisado; Caso contrário, `NULL`.  
   
 ### <a name="remarks"></a>Comentários  
- Chame esse método para recuperar o painel que residem na guia especificada pelo `nTabNum` parâmetro.  
+ Chame esse método para recuperar o painel que residem na guia especificada pelo *nTabNum* parâmetro.  
   
 ##  <a name="floattab"></a>  CBaseTabbedPane::FloatTab  
  Flutua um painel, mas apenas se o painel estiver atualmente em uma guia destacáveis.  
@@ -346,16 +346,16 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  Um ponteiro para o painel para float.  
   
- [in] `nTabID`  
+ [in] *nTabID*  
  Especifica o índice com base em zero da guia em float.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Especifica o método a ser usado para fazer a flutuação do painel. Para obter mais informações, consulte a seção Comentários.  
   
- [in] `bHide`  
+ [in] *bHide*  
  `TRUE` Para ocultar o painel antes flutuante; Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -364,7 +364,7 @@ virtual BOOL FloatTab(
 ### <a name="remarks"></a>Comentários  
  Chame este método para desencaixar um painel que resida em uma guia destacáveis.  
   
- Especifique se deseja desanexar um painel por meio de programação, `DM_SHOW` para o `dockMethod` parâmetro. Se você quiser float painel na mesma posição em que anteriormente flutuante, especifique `DM_DBL_CLICK` como o `dockMethod` parâmetro.  
+ Especifique se deseja desanexar um painel por meio de programação, `DM_SHOW` para o *dockMethod* parâmetro. Se você quiser float painel na mesma posição em que anteriormente flutuante, especifique `DM_DBL_CLICK` como o *dockMethod* parâmetro.  
   
 ##  <a name="getdefaulttabsorder"></a>  CBaseTabbedPane::GetDefaultTabsOrder  
  Retorna a ordem padrão das guias no painel.  
@@ -387,7 +387,7 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iTabNum`  
+ [in] *iTabNum*  
  Uma referência a um número inteiro. Esse método grava o índice com base em zero da primeira guia exibida para esse parâmetro, ou -1 se não exibido guia foi encontrada.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -401,11 +401,11 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `size`  
+ [out] *tamanho*  
  Um `CSize` objeto que é preenchido com o mínimo permitido de tamanho.  
   
 ### <a name="remarks"></a>Comentários  
- Se o tratamento consistente de tamanhos mínimo do painel está ativo ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` é preenchido com o mínimo permitido de tamanho para a guia ativa. Caso contrário, `size` é preenchido com o valor de retorno [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
+ Se o tratamento consistente de tamanhos mínimo do painel está ativo ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *tamanho* é preenchido com o mínimo permitido de tamanho para a guia ativa. Caso contrário, *tamanho* é preenchido com o valor de retorno [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
   
 ##  <a name="getpaneicon"></a>  CBaseTabbedPane::GetPaneIcon  
  Recupera o mínimo permitido de tamanho para o painel.  
@@ -415,11 +415,11 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `size`  
+ [out] *tamanho*  
  Um `CSize` objeto que é preenchido com o mínimo permitido de tamanho.  
   
 ### <a name="remarks"></a>Comentários  
- Se o tratamento consistente de tamanhos mínimo do painel está ativo ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` é preenchido com o mínimo permitido de tamanho para a guia ativa. Caso contrário, `size` é preenchido com o valor de retorno [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
+ Se o tratamento consistente de tamanhos mínimo do painel está ativo ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *tamanho* é preenchido com o mínimo permitido de tamanho para a guia ativa. Caso contrário, *tamanho* é preenchido com o valor de retorno [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
   
 ##  <a name="getpanelist"></a>  CBaseTabbedPane::GetPaneList  
  Retorna uma lista de painéis que estão contidos no painel com guias.  
@@ -431,10 +431,10 @@ virtual void GetPaneList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `lst`  
+ [out] *lst*  
  Um `CObList` que é preenchida com os painéis que estão contidos no painel com guias.  
   
- [in] `pRTCFilter`  
+ [in] *pRTCFilter*  
  Se não for `NULL`, a lista retornada contém somente os painéis de classe de tempo de execução especificado.  
   
 ##  <a name="gettabarea"></a>  CBaseTabbedPane::GetTabArea  
@@ -447,10 +447,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `rectTabAreaTop`  
+ [out] *rectTabAreaTop*  
  Recebe as coordenadas de tela da área da guia superior.  
   
- [out] `rectTabAreaBottom`  
+ [out] *rectTabAreaBottom*  
  Recebe as coordenadas de tela da área de guias inferior.  
   
 ### <a name="remarks"></a>Comentários  
@@ -523,14 +523,14 @@ virtual BOOL RemovePane(CWnd* pBar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  Um ponteiro para o painel para remover do painel com guias.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` Se o painel foi removido com êxito do painel com guias e se o painel com guias ainda é válido. `FALSE` Se o último painel tiver sido removido do painel com guias e painel com guias está prestes a ser destruído. Se o valor de retorno é `FALSE`, não use o painel com guias mais.  
   
 ### <a name="remarks"></a>Comentários  
- Chame esse método para remover o painel especificado pelo `pBar` parâmetro do painel com guias.  
+ Chame esse método para remover o painel especificado pelo *pBar* parâmetro do painel com guias.  
   
 ##  <a name="setautodestroy"></a>  CBaseTabbedPane::SetAutoDestroy  
  Determina se a barra de controle com guias será destruída automaticamente.  
@@ -540,7 +540,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` Se o painel com guias foi criado dinamicamente e você não está controlando o seu tempo de vida; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -558,23 +558,23 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
+ [in] *pBar*  
  Um ponteiro para o painel para mostrar ou ocultar.  
   
- [in] `bShow`  
+ [in] *bMostrar*  
  `TRUE` para mostrar o painel; `FALSE` para ocultar o painel.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  `TRUE` Para atrasar o ajuste do layout do guia; Caso contrário, `FALSE`.  
   
- [in] `bActivate`  
+ [in] *bActivate*  
  `TRUE` Para tornar a guia a guia ativa; Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` Se a guia foi mostrada ou ocultada com êxito; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
- Quando você chamar esse método, um painel é mostrado ou oculto, dependendo do valor da `bShow` parâmetro. Se você ocultar uma guia e é a última guia visível na janela de guia subjacente, o painel com guias está oculto. Se você mostrar uma guia quando anteriormente não havia nenhuma guias visíveis, o painel com guias é mostrado.  
+ Quando você chamar esse método, um painel é mostrado ou oculto, dependendo do valor da *bMostrar* parâmetro. Se você ocultar uma guia e é a última guia visível na janela de guia subjacente, o painel com guias está oculto. Se você mostrar uma guia quando anteriormente não havia nenhuma guias visíveis, o painel com guias é mostrado.  
   
 ##  <a name="recalclayout"></a>  CBaseTabbedPane::RecalcLayout  
  Recalcula as informações de layout para o painel.  
@@ -600,16 +600,16 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bMode`  
+ [in] *bMode*  
  `TRUE` Para habilitar o modo de ocultar automaticamente; `FALSE` para habilitar o modo de encaixe regular.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Especifica o alinhamento do painel de ocultar automaticamente que deve ser criado. Para obter uma lista de valores possíveis, consulte [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
   
- [in] [out] `pCurrAutoHideBar`  
+ [in] [out] *pCurrAutoHideBar*  
  Um ponteiro para a barra de ferramentas de ocultar automaticamente atual. Pode ser `NULL`.  
   
- [in] `bUseTimer`  
+ [in] *bUseTimer*  
  Especifica se deve usar o efeito de ocultar automaticamente quando o usuário alterna o painel para o modo de ocultar automaticamente, ou para ocultar o painel imediatamente.  
   
 ### <a name="return-value"></a>Valor de retorno  

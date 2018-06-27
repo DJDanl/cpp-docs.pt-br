@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21499f65ac762dfd08d90decad41eedf3dfc5cdf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 635019011b655f338e499724c788bc433df5d571
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368976"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957072"
 ---
 # <a name="cfindreplacedialog-class"></a>Classe CFindReplaceDialog
 Permite que você implemente caixas de diálogo Localizar/Substituir padrão de cadeia de caracteres em seu aplicativo.  
@@ -95,7 +95,7 @@ class CFindReplaceDialog : public CCommonDialog
   
  Uma vez um `CFindReplaceDialog` objeto foi construído, você deve chamar o [criar](#create) função de membro para criar e exibir a caixa de diálogo.  
   
- Use o [m_fr](#m_fr) estrutura para inicializar a caixa de diálogo antes de chamar **criar**. O `m_fr` estrutura é do tipo [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Para obter mais informações sobre essa estrutura, consulte o SDK do Windows.  
+ Use o [m_fr](#m_fr) estrutura para inicializar a caixa de diálogo antes de chamar `Create`. O `m_fr` estrutura é do tipo [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Para obter mais informações sobre essa estrutura, consulte o SDK do Windows.  
   
  Para a janela pai ser notificado de localizar/substituir solicitações, você deve usar o Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) de função e use o [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macros de mapa de mensagem em seu quadro janela que manipula esta mensagem registrada.  
   
@@ -133,9 +133,9 @@ CFindReplaceDialog();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Porque o `CFindReplaceDialog` objeto é uma caixa de diálogo sem janela restrita, deve ser construir no heap, usando o `new` operador.  
+ Porque o `CFindReplaceDialog` objeto é uma caixa de diálogo sem janela restrita, deve ser construir no heap, usando o **novo** operador.  
   
- Durante a destruição, a estrutura tenta executar um `delete this` no ponteiro para a caixa de diálogo. Se você criou a caixa de diálogo na pilha, o `this` ponteiro não existe e pode resultar em comportamento indefinido.  
+ Durante a destruição, a estrutura tenta executar um **excluir este** no ponteiro para a caixa de diálogo. Se você criou a caixa de diálogo na pilha, o **isso** ponteiro não existe e pode resultar em comportamento indefinido.  
   
  Para obter mais informações sobre a construção de `CFindReplaceDialog` objetos, consulte o [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md) visão geral. Use o [CFindReplaceDialog::Create](#create) a função de membro para exibir a caixa de diálogo.  
   
@@ -155,19 +155,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bFindDialogOnly`  
+ *bFindDialogOnly*  
  Definir esse parâmetro como `TRUE` para exibir uma **localizar** caixa de diálogo. Defina-a como `FALSE` para exibir uma **localizar/substituir** caixa de diálogo.  
   
- `lpszFindWhat`  
+ *lpszFindWhat*  
  Ponteiro para a cadeia de caracteres de pesquisa de padrão quando a caixa de diálogo é exibida. Se `NULL`, a caixa de diálogo não contém uma cadeia de caracteres de pesquisa padrão.  
   
- `lpszReplaceWith`  
+ *lpszReplaceWith*  
  Ponteiro para a cadeia de caracteres de substituição de padrão quando a caixa de diálogo é exibida. Se `NULL`, a caixa de diálogo não contém uma cadeia de caracteres de substituição padrão.  
   
- `dwFlags`  
+ *dwFlags*  
  Um ou mais sinalizadores que você pode usar para personalizar as configurações da caixa de diálogo, combinadas que usam o operador OR bit a bit. O valor padrão é `FR_DOWN`, que especifica que a pesquisa continuar em uma direção descendente. Consulte o [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) estrutura no SDK do Windows para obter mais informações sobre esses sinalizadores.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para a janela do pai ou o proprietário da caixa de diálogo. Esta é a janela que receberá a mensagem especial que indica que uma ação de localizar/substituir é solicitada. Se `NULL`, a janela principal do aplicativo é usada.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -218,7 +218,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lParam`  
+ *lParam*  
  O **lparam** valor passado para a janela do quadro **OnFindReplace** função de membro.  
   
 ### <a name="return-value"></a>Valor de retorno  

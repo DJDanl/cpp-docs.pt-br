@@ -16,18 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60b41c31c2fa8985953515700cc2e3c802aced31
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c087bb7782b7b140b07683b40cad358049f682c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381576"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953019"
 ---
 # <a name="using-cdatetimectrl"></a>Usando CDateTimeCtrl
 O controle de seletor de data e hora ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implementa um método reconhecível e intuitivo de inserir ou selecionar uma data específica. A interface principal do controle é semelhante em funcionalidade a uma caixa de combinação. No entanto, se o usuário expande o controle, um controle de calendário do mês aparece (por padrão), permitindo que o usuário especifique uma data específica. Quando uma data é escolhida, o controle de calendário mensal desaparecerá automaticamente.  
   
 > [!NOTE]
->  Para usar ambos os **CDateTimePicker** e `CMonthCalCtrl` classes no seu projeto, você deve incluir AFXDTCTL. H, normalmente em STDAFX do seu projeto. Arquivo de H.  
+>  Para usar ambos os `CDateTimePicker` e `CMonthCalCtrl` classes no seu projeto, você deve incluir AFXDTCTL. H, normalmente em STDAFX do seu projeto. Arquivo de H.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
   

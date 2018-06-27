@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e55689fa71ed5f0e4ebd4978a004212d5fb82b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 017267a2b633ee8e0a9c23149fe9d3cb7a8be980
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352884"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955463"
 ---
 # <a name="cd2dtextformat-class"></a>Classe CD2DTextFormat
 Um wrapper para IDWriteTextFormat.  
@@ -117,31 +117,31 @@ CD2DTextFormat(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pParentTarget`  
+ *pParentTarget*  
  Um ponteiro para o destino de renderização.  
   
- `strFontFamilyName`  
+ *strFontFamilyName*  
  Um objeto de CString que contém o nome da família de fonte.  
   
- `fontSize`  
+ *FontSize*  
  O tamanho lógico da fonte em unidades DIP ("pixel independente de dispositivo"). Um DIPequals 1/96 polegada.  
   
- `fontWeight`  
+ *fontWeight*  
  Um valor que indica a espessura da fonte para o objeto de texto.  
   
- `fontStyle`  
+ *fontStyle*  
  Um valor que indica o estilo da fonte para o objeto de texto.  
   
- `fontStretch`  
+ *fontStretch*  
  Um valor que indica a ampliação de fonte para o objeto de texto.  
   
- `strFontLocale`  
+ *strFontLocale*  
  Um objeto de CString que contém o nome da localidade.  
   
- `pFontCollection`  
+ *pFontCollection*  
  Um ponteiro para um objeto de coleção de fontes. Quando isso for NULL, indica a coleção de fontes de sistema.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Indica se o objeto será destruído pelo proprietário (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DTextFormat::Create  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824ac88326042eb55ecb9667c39331d1ab5464e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7766b56e75edefda4f40194a5ce18572c8d6d78d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368329"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952242"
 ---
 # <a name="cdbexception-class"></a>Classe CDBException
 Representa uma condição de exceção decorrentes das classes de banco de dados.  
@@ -92,13 +92,13 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_LOCK_MODE_NOT_SUPPORTED** sua solicitação para registros de bloqueio de atualização não pôde ser atendida porque o driver ODBC não dá suporte a bloqueio.  
   
-- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED** você chamou `CRecordset::Update` ou **excluir** para uma tabela sem chave exclusiva e alterado vários registros.  
+- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED** você chamou `CRecordset::Update` ou `Delete` para uma tabela sem chave exclusiva e alterado vários registros.  
   
 - **AFX_SQL_ERROR_NO_CURRENT_RECORD** tentou editar ou excluir um registro excluído anteriormente. É necessário rolar para um novo registro atual após a exclusão.  
   
 - **AFX_SQL_ERROR_NO_POSITIONED_UPDATES** sua solicitação para um dynaset não pôde ser atendido porque o driver ODBC não suporta atualizações posicionadas.  
   
-- **AFX_SQL_ERROR_NO_ROWS_AFFECTED** você chamou `CRecordset::Update` ou **excluir**, mas quando a operação começou o registro não pôde ser encontrado.  
+- **AFX_SQL_ERROR_NO_ROWS_AFFECTED** você chamou `CRecordset::Update` ou `Delete`, mas quando a operação começou o registro não pôde ser encontrado.  
   
 - **AFX_SQL_ERROR_ODBC_LOAD_FAILED** uma tentativa de carregar o ODBC. DLL com falha; O Windows não pôde localizar ou não foi possível carregar esta DLL. Esse erro é fatal.  
   
@@ -114,7 +114,7 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_RECORDSET_READONLY** você tentou atualizar um conjunto de registros somente leitura ou a fonte de dados é somente leitura. Não há operações de atualização podem ser executadas com o conjunto de registros ou `CDatabase` objeto está associado.  
   
-- **SQL_ERROR** Falha na função. A mensagem de erro retornada pela função ODBC **SQLError** é armazenado no **m_strError** membro de dados.  
+- **SQL_ERROR** Falha na função. A mensagem de erro retornada pela função ODBC `SQLError` é armazenado no **m_strError** membro de dados.  
   
 - **SQL_INVALID_HANDLE** função falhou devido a um identificador de ambiente inválida, o identificador de conexão ou o identificador de instrução. Isso indica um erro de programação. Nenhuma informação adicional está disponível da função ODBC **SQLError**.  
   
@@ -132,11 +132,11 @@ class CDBException : public CException
 ### <a name="remarks"></a>Comentários  
  A cadeia de caracteres é do formulário "estado: % s, nativo: % ld, origem: % s", onde os códigos de formato, em ordem, são substituídos por valores que descrevem:  
   
--   O **SQLSTATE**, uma cadeia de caracteres terminada em nulo que contém um código de erro de cinco caracteres retornado no *szSqlState* parâmetro da função ODBC **SQLError**. **SQLSTATE** valores estão listados no Apêndice A, [códigos de erro de ODBC](https://msdn.microsoft.com/library/ms714687.aspx), além de *referência do programador de ODBC*. Exemplo: "S0022".  
+-   O **SQLSTATE**, uma cadeia de caracteres terminada em nulo que contém um código de erro de cinco caracteres retornado no *szSqlState* parâmetro da função ODBC `SQLError`. **SQLSTATE** valores estão listados no Apêndice A, [códigos de erro de ODBC](https://msdn.microsoft.com/library/ms714687.aspx), além de *referência do programador de ODBC*. Exemplo: "S0022".  
   
--   O código de erro nativo, específico para a fonte de dados retornado no *pfNativeError* parâmetro do **SQLError** função. Exemplo: 207.  
+-   O código de erro nativo, específico para a fonte de dados retornado no *pfNativeError* parâmetro do `SQLError` função. Exemplo: 207.  
   
--   O texto da mensagem de erro retornado no *szErrorMsg* parâmetro o **SQLError** função. Esta mensagem consiste em vários nomes entre colchetes. Como um erro é passado da fonte para o usuário, cada componente do ODBC (fonte de dados, driver, o Gerenciador de Driver) acrescenta seu próprio nome. Essas informações ajudam a identificar a origem do erro. Exemplo: [Microsoft] [Driver do ODBC SQL Server] [SQL Server]  
+-   O texto da mensagem de erro retornado no *szErrorMsg* parâmetro o `SQLError` função. Esta mensagem consiste em vários nomes entre colchetes. Como um erro é passado da fonte para o usuário, cada componente do ODBC (fonte de dados, driver, o Gerenciador de Driver) acrescenta seu próprio nome. Essas informações ajudam a identificar a origem do erro. Exemplo: [Microsoft] [Driver do ODBC SQL Server] [SQL Server]  
   
  A estrutura interpreta a cadeia de caracteres de erro e coloca seus componentes em **m_strStateNativeOrigin**; se **m_strStateNativeOrigin** contém informações para mais de um erro, os erros são separados por novas linhas. A estrutura coloca o texto de erro alfanuméricos em **m_strError**.  
   

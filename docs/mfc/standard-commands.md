@@ -25,19 +25,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe1b1676c5d1944adf61f6ae4234a7e3478c3b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 943d1bf01890696466638eca3c73839297807fd2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380140"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953116"
 ---
 # <a name="standard-commands"></a>Comandos padrão
 A estrutura define muitas mensagens de comando padrão. Normalmente, as IDs para esses comandos assumem a forma:  
   
  **ID _** *fonte*_*Item*  
   
- onde *fonte* geralmente é um nome de menu e *Item* é um item de menu. Por exemplo, a ID de comando para o novo comando no menu arquivo é `ID_FILE_NEW`. IDs de comando padrão são mostrados em negrito na documentação. IDs definidos pelo programador são mostrados em uma fonte diferente do texto ao redor.  
+ onde *fonte* geralmente é um nome de menu e *Item* é um item de menu. Por exemplo, a ID de comando para o novo comando no menu arquivo é ID_FILE_NEW. IDs de comando padrão são mostrados em negrito na documentação. IDs definidos pelo programador são mostrados em uma fonte diferente do texto ao redor.  
   
  A seguir está uma lista de alguns dos comandos mais importantes com suporte:  
   
@@ -59,7 +59,7 @@ A estrutura define muitas mensagens de comando padrão. Normalmente, as IDs para
  *Comandos OLE (Menu Editar)*  
  Inserir objeto novo, Editar Links, Colar vínculo, Colar especial, e *typename* objeto (comandos de verbo).  
   
- O framework fornece vários níveis de suporte para esses comandos. Alguns comandos são suportados apenas como IDs de comando definido, enquanto outros são compatíveis com implementações completa. Por exemplo, a estrutura implementa o comando Abrir no menu Arquivo Criando um novo objeto de documento, exibindo uma caixa de diálogo Abrir e abrir e ler o arquivo. Por outro lado, você deve implementar comandos no menu Editar, desde que os comandos **ID_EDIT_COPY** dependerá da natureza dos dados que você está copiando.  
+ O framework fornece vários níveis de suporte para esses comandos. Alguns comandos são suportados apenas como IDs de comando definido, enquanto outros são compatíveis com implementações completa. Por exemplo, a estrutura implementa o comando Abrir no menu Arquivo Criando um novo objeto de documento, exibindo uma caixa de diálogo Abrir e abrir e ler o arquivo. Por outro lado, você deve implementar comandos no menu Editar por conta própria, desde que os comandos ID_EDIT_COPY dependerão da natureza dos dados que você está copiando.  
   
  Para obter mais informações sobre os comandos com suporte e o nível de implementação fornecido, consulte [22 de observação técnica](../mfc/tn022-standard-commands-implementation.md). Os comandos padrão são definidos no arquivo AFXRES. H.  
   

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3888f054baab61bb7422403b0766d7f757914d1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef863a0eb8cec66e7f640a734088a98b1e8d7b83
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357976"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952100"
 ---
 # <a name="ccolordialog-class"></a>Classe CColorDialog
 Permite que você inserir uma caixa de diálogo de seleção de cor em seu aplicativo.  
@@ -80,7 +80,7 @@ class CColorDialog : public CCommonDialog
   
  Para construir um `CColorDialog` do objeto, use o construtor fornecido ou derivar uma nova classe e usar seu próprio construtor personalizado.  
   
- Depois que a caixa de diálogo foi construída, você pode definir ou modificar valores no [m_cc](#m_cc) estrutura para inicializar os valores de controles da caixa de diálogo. O `m_cc` estrutura é do tipo [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
+ Depois que a caixa de diálogo foi construída, você pode definir ou modificar valores no [m_cc](#m_cc) estrutura para inicializar os valores de controles da caixa de diálogo. O *m_cc* estrutura é do tipo [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
   
  Após a inicialização de controles da caixa de diálogo, chame o `DoModal` a função de membro para exibir a caixa de diálogo e permitir que o usuário selecione uma cor. `DoModal` Retorna a seleção do usuário da Okey caixa de diálogo ( **IDOK**) ou Cancelar ( **IDCANCEL**) botão.  
   
@@ -129,10 +129,10 @@ CColorDialog(
  *clrInit*  
  A seleção de cor padrão. Se nenhum valor for especificado, o padrão é RGB(0,0,0) (preto).  
   
- `dwFlags`  
+ *dwFlags*  
  Um conjunto de sinalizadores que personalizam a função e a aparência da caixa de diálogo. Para obter mais informações, consulte o [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) estrutura no SDK do Windows.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para a janela do pai ou o proprietário da caixa de diálogo.  
   
 ### <a name="example"></a>Exemplo  
@@ -197,7 +197,7 @@ CHOOSECOLOR m_cc;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Depois de construir um `CColorDialog` do objeto, você pode usar `m_cc` para definir vários aspectos da caixa de diálogo antes de chamar o [DoModal](#domodal) função de membro.  
+ Depois de construir um `CColorDialog` do objeto, você pode usar *m_cc* para definir vários aspectos da caixa de diálogo antes de chamar o [DoModal](#domodal) função de membro.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#53](../../mfc/codesnippet/cpp/ccolordialog-class_4.cpp)]  
@@ -231,18 +231,18 @@ virtual BOOL OnColorOK();
  [!code-cpp[NVC_MFCDocView#52](../../mfc/codesnippet/cpp/ccolordialog-class_5.cpp)]  
   
 ##  <a name="setcurrentcolor"></a>  CColorDialog::SetCurrentColor  
- Chamar essa função depois de chamar `DoModal` para forçar a seleção de cor atual para o valor de cor especificado no `clr`.  
+ Chamar essa função depois de chamar `DoModal` para forçar a seleção de cor atual para o valor de cor especificado no *clr*.  
   
 ```  
 void SetCurrentColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `clr`  
+ *CLR*  
  Um valor de cor RGB.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função é chamada de dentro de um manipulador de mensagens ou `OnColorOK`. A caixa de diálogo atualizará automaticamente a seleção do usuário com base no valor da `clr` parâmetro.  
+ Essa função é chamada de dentro de um manipulador de mensagens ou `OnColorOK`. A caixa de diálogo atualizará automaticamente a seleção do usuário com base no valor da *clr* parâmetro.  
   
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CColorDialog::OnColorOK](#oncolorok).  

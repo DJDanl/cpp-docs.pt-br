@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82b729caaa650fde72741497d3f4ab3c131f46ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 617157c3adce8521eb54156988cb098c0e709fd2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383326"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953279"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Usando o CArchive &lt; &lt; e &gt; &gt; operadores
 `CArchive` Fornece <\< e >> operadores para gravar e ler os tipos de dados simples, bem como `CObject`s para e de um arquivo.  
@@ -40,13 +40,13 @@ ms.locfileid: "33383326"
   
      [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]  
   
- Normalmente, você pode armazenar e carregar dados para e de um arquivo por meio de um arquivo morto no `Serialize` funções de `CObject`-classes derivadas, que você deve ter declarado com o **DECLARE_SERIALIZE** macro. Uma referência a um `CArchive` objeto é passado para o `Serialize` função. Você chama o `IsLoading` função do `CArchive` objeto para determinar se o `Serialize` a função foi chamada para carregar dados do arquivo ou armazenar dados no arquivo.  
+ Normalmente, você pode armazenar e carregar dados para e de um arquivo por meio de um arquivo morto no `Serialize` funções de `CObject`-classes derivadas, que você deve ter declarado com a macro DECLARE_SERIALIZE. Uma referência a um `CArchive` objeto é passado para o `Serialize` função. Você chama o `IsLoading` função do `CArchive` objeto para determinar se o `Serialize` a função foi chamada para carregar dados do arquivo ou armazenar dados no arquivo.  
   
  O `Serialize` a função de um serializável `CObject`-classe derivada normalmente tem a seguinte forma:  
   
  [!code-cpp[NVC_MFCSerialization#9](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_3.cpp)]  
   
- O modelo de código acima é exatamente o mesmo que um AppWizard cria para o `Serialize` função do documento (uma classe derivada de **CDocument)**. Esse modelo de código ajuda você a escrever código que é mais fácil a revisão, porque o código de armazenamento e o código de carregamento devem sempre ser paralelos, como no exemplo a seguir:  
+ O modelo de código acima é exatamente o mesmo que um AppWizard cria para o `Serialize` função do documento (uma classe derivada de `CDocument`). Esse modelo de código ajuda você a escrever código que é mais fácil a revisão, porque o código de armazenamento e o código de carregamento devem sempre ser paralelos, como no exemplo a seguir:  
   
  [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]  
   
@@ -54,7 +54,7 @@ ms.locfileid: "33383326"
   
 ||||  
 |-|-|-|  
-|`CObject*`|**TAMANHO e CSize**|**float**|  
+|`CObject*`|**TAMANHO** e `CSize`|**float**|  
 |**WORD**|`CString`|**PONTO** e `CPoint`|  
 |`DWORD`|**BYTE**|`RECT` e `CRect`|  
 |**Duplo**|**LONG**|`CTime` e `CTimeSpan`|  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63b8d8dbde679d030eddd77fae6ca1fab519fdac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f040978c898dae3bfd4ca21c2cf9886fde9b5238
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385265"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951266"
 ---
 # <a name="window-objects"></a>Objetos de janela
 MFC fornece a classe [CWnd](../mfc/reference/cwnd-class.md) para encapsular o `HWND` identificador de uma janela. O `CWnd` objeto é um objeto de janela C++, diferente de `HWND` que representa uma janela de janela, mas que o contém. Use `CWnd` derivar sua própria janela filho classes ou use uma das muitas classes MFC derivado de `CWnd`. Classe `CWnd` é a classe base para todas as janelas, incluindo janelas com moldura, caixas de diálogo, janelas filho, controles e barras de controle, como barras de ferramentas. Uma boa compreensão de [a relação entre um objeto de janela C++ e um HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md) é essencial para a programação eficaz com MFC.  
@@ -44,7 +44,7 @@ MFC fornece a classe [CWnd](../mfc/reference/cwnd-class.md) para encapsular o `H
  `CWnd` e seus [classes de janela derivadas](../mfc/derived-window-classes.md) fornecer funções de membro para inicializar o objeto de construtores e destruidores criam estruturas subjacentes do Windows e acessar o encapsulada `HWND`. `CWnd` também fornece funções de membro que encapsula as APIs do Windows para enviar mensagens, acessando o estado da janela, converter coordenadas, atualizar, rolagem, acessar a área de transferência e muitas outras tarefas. A maioria das APIs de gerenciamento de janela do Windows que usam um `HWND` argumento são encapsulados como funções de membro `CWnd`. Os nomes de funções e seus parâmetros serão preservados no `CWnd` função de membro. Para obter detalhes sobre as APIs do Windows encapsulado por `CWnd`, consulte a classe [CWnd](../mfc/reference/cwnd-class.md).  
   
 ## <a name="cwnd-and-windows-messages"></a>CWnd e mensagens do Windows  
- Uma das principais finalidades do `CWnd` é fornecer uma interface para lidar com mensagens do Windows, como `WM_PAINT` ou `WM_MOUSEMOVE`. Muitas das funções de membro de `CWnd` são manipuladores para mensagens padrão — aquelas que começam com o identificador **afx_msg** e o prefixo "On", como `OnPaint` e **OnMouseMove**. [Manipulação e mapeamento de mensagem](../mfc/message-handling-and-mapping.md) abrange as mensagens e manipulação com detalhes de mensagens. As informações nesse local se aplica ao windows da estrutura e aquelas que você criou para fins especiais.  
+ Uma das principais finalidades dos `CWnd` é fornecer uma interface para lidar com mensagens do Windows, como WM_PAINT ou WM_MOUSEMOVE. Muitas das funções de membro de `CWnd` são manipuladores para mensagens padrão — aquelas que começam com o identificador **afx_msg** e o prefixo "On", como `OnPaint` e `OnMouseMove`. [Manipulação e mapeamento de mensagem](../mfc/message-handling-and-mapping.md) abrange as mensagens e manipulação com detalhes de mensagens. As informações nesse local se aplica ao windows da estrutura e aquelas que você criou para fins especiais.  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
   

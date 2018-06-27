@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 400114e557632c9a1dd11cc2f9ec5b3101eb8c37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ec6b8383f13e8b632163a1fe83a2cd79f7966c5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385944"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956181"
 ---
 # <a name="windows-sockets-blocking"></a>Windows Sockets: bloqueando
 Este artigo e dois artigos complementar explicam vários problemas na programação do Windows Sockets. Este artigo aborda o bloqueio. Os outros problemas são abordados nos artigos: [Windows Sockets: ordenação de bytes](../mfc/windows-sockets-byte-ordering.md) e [Windows Sockets: Convertendo cadeias de caracteres](../mfc/windows-sockets-converting-strings.md).  
@@ -31,7 +31,7 @@ Este artigo e dois artigos complementar explicam vários problemas na programaç
  Se você usar ou derivar da classe [CAsyncSocket](../mfc/reference/casyncsocket-class.md), você precisará gerenciar esses problemas por conta própria. Se você usar ou derivar da classe [CSocket](../mfc/reference/csocket-class.md), gerencia MFC-los para você.  
   
 ## <a name="blocking"></a>Bloqueando  
- Um soquete pode estar em "modo de bloqueio" ou "modo sem bloqueio". As funções de soquetes no modo de bloqueio (ou síncrono) não retornam até que eles podem concluir sua ação. Isso é chamado de bloqueio porque o soquete cuja função foi chamada não é possível fazer qualquer coisa — está bloqueada, até que a chamada retorne. Uma chamada para o **Receive** função de membro, por exemplo, pode levar um tempo longo arbitrariamente completar conforme ele aguarda o aplicativo de envio enviar (Isso é se você estiver usando `CSocket`, ou usando `CAsyncSocket` com bloqueio). Se um `CAsyncSocket` objeto está no modo sem bloqueio (operação assíncrona), a chamada retorna imediatamente e o código de erro atual, possam ser recuperado com o [GetLastError](../mfc/reference/casyncsocket-class.md#getlasterror) é de função de membro, **WSAEWOULDBLOCK**, indicando que a chamada deve ter bloqueado tinha não retornar imediatamente devido o modo. (`CSocket` nunca retorna **WSAEWOULDBLOCK**. A classe gerencia o bloqueio para você.)  
+ Um soquete pode estar em "modo de bloqueio" ou "modo sem bloqueio". As funções de soquetes no modo de bloqueio (ou síncrono) não retornam até que eles podem concluir sua ação. Isso é chamado de bloqueio porque o soquete cuja função foi chamada não é possível fazer qualquer coisa — está bloqueada, até que a chamada retorne. Uma chamada para o `Receive` função de membro, por exemplo, pode levar um tempo longo arbitrariamente completar conforme ele aguarda o aplicativo de envio enviar (Isso é se você estiver usando `CSocket`, ou usando `CAsyncSocket` com bloqueio). Se um `CAsyncSocket` objeto está no modo sem bloqueio (operação assíncrona), a chamada retorna imediatamente e o código de erro atual, possam ser recuperado com o [GetLastError](../mfc/reference/casyncsocket-class.md#getlasterror) é de função de membro, **WSAEWOULDBLOCK**, indicando que a chamada deve ter bloqueado tinha não retornar imediatamente devido o modo. (`CSocket` nunca retorna **WSAEWOULDBLOCK**. A classe gerencia o bloqueio para você.)  
   
  O comportamento de soquetes é diferente em 32 bits e 64 bits sistemas operacionais (como o Windows 95 ou Windows 98) que em sistemas operacionais de 16 bits (como Windows 3.1). Ao contrário de sistemas operacionais de 16 bits, os sistemas operacionais de 32 bits e 64 bits use multitarefa preemptiva e fornecer multithreading. Nos sistemas de operacionais de 32 bits e 64 bits, você pode colocar seu soquetes em threads de trabalho separados. Um soquete em um thread pode bloquear sem interferir com outras atividades em seu aplicativo e sem gastar tempo de computação em que o bloqueio. Para obter informações sobre a programação multi-threaded, consulte o artigo [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
@@ -40,7 +40,7 @@ Este artigo e dois artigos complementar explicam vários problemas na programaç
   
  O restante desta discussão é para programadores de direcionamento de sistemas operacionais de 16 bits:  
   
- Normalmente, se você estiver usando `CAsyncSocket`, você deve evitar o uso de bloqueio de operações e operar de forma assíncrona em vez disso. Em operações assíncronas, do ponto em que você recebe um **WSAEWOULDBLOCK** código de erro depois de chamar **Receive**, por exemplo, você esperar até que seu `OnReceive` função de membro é chamada para notificar Você pode ser lido novamente. Chamadas assíncronas são feitas por meio da chamada volta função de notificação de retorno de chamada apropriados do soquete, como [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive).  
+ Normalmente, se você estiver usando `CAsyncSocket`, você deve evitar o uso de bloqueio de operações e operar de forma assíncrona em vez disso. Em operações assíncronas, do ponto em que você recebe um **WSAEWOULDBLOCK** código de erro depois de chamar `Receive`, por exemplo, você esperar até que seu `OnReceive` função de membro é chamada para notificar a que você pode ler novamente. Chamadas assíncronas são feitas por meio da chamada volta função de notificação de retorno de chamada apropriados do soquete, como [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive).  
   
  No Windows, chamadas de bloqueio são consideradas prática incorreta. Por padrão, [CAsyncSocket](../mfc/reference/casyncsocket-class.md) oferece suporte a chamadas e você deve gerenciar o bloqueio por conta própria usando notificações de retorno de chamada. Classe [CSocket](../mfc/reference/csocket-class.md), por outro lado, é síncrono. Ele bomba de mensagens do Windows e gerencia o bloqueio para você.  
   

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22793706a67a3d301f88700ca6b43fb9c83e4dc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d892ea225e3b1c1089447587eb808e56370bbb69
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357384"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952216"
 ---
 # <a name="cconnectionpoint-class"></a>Classe CConnectionPoint
 Define um tipo especial de interface usada para se comunicar com outros objetos OLE, chamados de "ponto de conexão".  
@@ -66,7 +66,7 @@ class CConnectionPoint : public CCmdTarget
 |[CConnectionPoint::GetContainer](#getcontainer)|Recupera o contêiner do controle que possui o mapa de conexão.|  
 |[CConnectionPoint::GetIID](#getiid)|Recupera a ID de interface de um ponto de conexão.|  
 |[CConnectionPoint::GetMaxConnections](#getmaxconnections)|Recupera o número máximo de pontos de conexão com suporte por um controle.|  
-|[CConnectionPoint::GetNextConnection](#getnextconnection)|Recupera um ponteiro para o elemento de conexão no `pos`.|  
+|[CConnectionPoint::GetNextConnection](#getnextconnection)|Recupera um ponteiro para o elemento de conexão no *pos*.|  
 |[CConnectionPoint::GetStartPosition](#getstartposition)|Inicia uma iteração de mapa, retornando um **posição** valor que pode ser passado para um `GetNextConnection` chamar.|  
 |[CConnectionPoint::OnAdvise](#onadvise)|Chamado pelo framework quando estabelecer ou interrompendo conexões.|  
 |[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|Recupera um ponteiro para a interface do coletor solicitada.|  
@@ -82,13 +82,13 @@ class CConnectionPoint : public CCmdTarget
   
  [!code-cpp[NVC_MFCConnectionPoints#7](../../mfc/codesnippet/cpp/cconnectionpoint-class_1.h)]  
   
- O `BEGIN_CONNECTION_PART` e `END_CONNECTION_PART` macros declarar uma classe incorporada, `XSampleConnPt` (derivado de `CConnectionPoint`) que implementa este ponto de conexão específico. Se você quiser substituir qualquer `CConnectionPoint` funções de membro, ou adicionar funções de membro de sua preferência, declará-los entre essas duas macros. Por exemplo, o `CONNECTION_IID` macro substitui o `CConnectionPoint::GetIID` quando colocada entre essas duas macros de função de membro.  
+ As macros BEGIN_CONNECTION_PART e END_CONNECTION_PART declarar uma classe incorporada, `XSampleConnPt` (derivado de `CConnectionPoint`) que implementa este ponto de conexão específico. Se você quiser substituir qualquer `CConnectionPoint` funções de membro, ou adicionar funções de membro de sua preferência, declará-los entre essas duas macros. Por exemplo, a macro CONNECTION_IID substitui o `CConnectionPoint::GetIID` quando colocada entre essas duas macros de função de membro.  
   
  O segundo fragmento de código é inserido no arquivo de implementação (. CPP) de sua classe de controle. Esse código implementa o mapa de conexão, que inclui o ponto de conexão adicionais, `SampleConnPt`:  
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/cconnectionpoint-class_2.cpp)]  
   
- Depois que esses fragmentos de código foram inseridos, o controle OLE do exemplo expõe um ponto de conexão para o **ISampleSink** interface.  
+ Depois que esses fragmentos de código foram inseridos, o controle OLE do exemplo expõe um ponto de conexão para o `ISampleSink` interface.  
   
  Normalmente, os pontos de conexão oferecem suporte a "multicast", que é a capacidade de difusão para vários coletores conectados à mesma interface. O fragmento de código a seguir demonstra como realizar multicast ao iterar por cada coletor em um ponto de conexão:  
   
@@ -136,7 +136,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
  Se for bem-sucedido, um ponteiro para o contêiner; Caso contrário, **nulo**.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função é geralmente implementada pelo `BEGIN_CONNECTION_PART` macro.  
+ Normalmente, essa função é implementada pela macro BEGIN_CONNECTION_PART.  
   
 ##  <a name="getiid"></a>  CConnectionPoint::GetIID  
  Chamado pelo framework para recuperar a ID de interface de um ponto de conexão.  
@@ -167,18 +167,18 @@ virtual int GetMaxConnections();
  Substitua essa função se você deseja limitar o número de receptores que pode se conectar ao seu controle.  
   
 ##  <a name="getnextconnection"></a>  CConnectionPoint::GetNextConnection  
- Recupera um ponteiro para o elemento de conexão no `pos`.  
+ Recupera um ponteiro para o elemento de conexão no *pos*.  
   
 ```  
 LPUNKNOWN GetNextConnection(POSITION& pos) const;  
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pos`  
+ *POS*  
  Especifica uma referência a um **posição** valor retornado pelo anterior `GetNextConnection` ou [GetStartPosition](#getstartposition) chamar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o elemento de conexão especificado por `pos`, ou nulo.  
+ Um ponteiro para o elemento de conexão especificado por *pos*, ou nulo.  
   
 ### <a name="remarks"></a>Comentários  
  Essa função é mais útil para iterar através de todos os elementos no mapa de conexão. Ao fazer a iteração, ignore quaisquer valores nulos retornados de sua função.  
@@ -210,7 +210,7 @@ virtual void OnAdvise(BOOL bAdvise);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bAdvise`  
+ *bAdvise*  
  **TRUE**, se uma conexão está sendo estabelecida; caso contrário **FALSE**.  
   
 ### <a name="remarks"></a>Comentários  
@@ -228,11 +228,11 @@ virtual HRESULT QuerySinkInterface(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pUnkSink`  
+ *pUnkSink*  
  O identificador da interface do coletor está sendo solicitado.  
   
- `ppInterface`  
- Um ponteiro para o ponteiro de interface identificado por `pUnkSink`. Se o objeto não oferece suporte a essa interface, \* `ppInterface` é definido como **nulo**.  
+ *ppInterface*  
+ Um ponteiro para o ponteiro de interface identificado por *pUnkSink*. Se o objeto não oferece suporte a essa interface, \* *ppInterface* é definido como **nulo**.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  

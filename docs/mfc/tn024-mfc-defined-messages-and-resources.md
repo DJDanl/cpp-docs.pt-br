@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dd403693dd860966cfcca42eacc909b01eb513b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a21ae615a3f4c644f6f0aa7c8f1306378a00ae5c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385606"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957179"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: mensagens e recursos definidos pelo MFC
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33385606"
   
  Essas mensagens particulares do Windows e estruturas de parâmetro associados são declaradas no cabeçalho MFC privado ' AFXPRIV. H'. Lembre-se que qualquer código que inclui esse cabeçalho pode ser confiam em comportamento não documentado e será provavelmente quebrará em futuras versões do MFC.  
   
- No caso raro de necessidade de lidar com uma dessas mensagens, você deve usar o `ON_MESSAGE` macros de mapa de mensagem e manipular a mensagem no formato WPARAM/LRESULT/LPARAM genérico.  
+ No caso raro de necessidade de lidar com uma dessas mensagens, você deve usar a macro de mapa de mensagem ON_MESSAGE e manipular a mensagem no formato WPARAM/LRESULT/LPARAM genérico.  
   
  **WM_QUERYAFXWNDPROC**  
   
@@ -60,12 +60,12 @@ ms.locfileid: "33385606"
   
  **WM_SIZEPARENT**  
   
- Esta mensagem é enviada por uma janela do quadro para seus filhos imediatos durante o redimensionamento (**CFrameWnd::OnSize** chamadas `CFrameWnd::RecalcLayout` que chama `CWnd::RepositionBars`) para reposicionar as barras de controle em torno do lado do quadro. O **AFX_SIZEPARENTPARAMS** estrutura contém o retângulo de cliente disponíveis atual de pai e um HDWP (que pode ser NULL) com o qual chamar `DeferWindowPos` para minimizar redesenho.  
+ Esta mensagem é enviada por uma janela do quadro para seus filhos imediatos durante o redimensionamento (`CFrameWnd::OnSize` chamadas `CFrameWnd::RecalcLayout` que chama `CWnd::RepositionBars`) para reposicionar as barras de controle em torno do lado do quadro. A estrutura AFX_SIZEPARENTPARAMS contém o retângulo de cliente disponíveis atual de pai e um HDWP (que pode ser NULL) com o qual chamar `DeferWindowPos` para minimizar redesenho.  
   
 |||  
 |-|-|  
 |wParam|Não usado|  
-|lParam|Endereço de um **AFX_SIZEPARENTPARAMS** estrutura|  
+|lParam|Endereço de uma estrutura de AFX_SIZEPARENTPARAMS|  
 |retorna|Não usado (0)|  
   
  Ignorando a mensagem indica que a janela não fazem parte de layout.  
@@ -82,7 +82,7 @@ ms.locfileid: "33385606"
   
  **WM_IDLEUPDATECMDUI**  
   
- Esta mensagem é enviada no tempo ocioso para implementar a atualização de tempo ocioso de manipuladores de interface do usuário do comando de atualização. Se a janela (geralmente uma barra de controle) manipula a mensagem, ele cria um `CCmdUI` objeto (ou um objeto de uma classe derivada) e chame **CCmdUI::DoUpdate** para cada "itens" na janela. Isso vai procurar por sua vez um `ON_UPDATE_COMMAND_UI` manipulador para os objetos na cadeia de manipulador de comandos.  
+ Esta mensagem é enviada no tempo ocioso para implementar a atualização de tempo ocioso de manipuladores de interface do usuário do comando de atualização. Se a janela (geralmente uma barra de controle) manipula a mensagem, ele cria um `CCmdUI` objeto (ou um objeto de uma classe derivada) e chame `CCmdUI::DoUpdate` para cada "itens" na janela. Por sua vez, isso verificará para um manipulador de ON_UPDATE_COMMAND_UI para os objetos na cadeia de manipulador de comandos.  
   
 |||  
 |-|-|  
@@ -90,11 +90,11 @@ ms.locfileid: "33385606"
 |lParam|Não usado (0)|  
 |retorna|Não usado (0)|  
   
- *bDisableIfNoHandler* é diferente de zero para desativar o objeto de interface do usuário se não houver nenhum um `ON_UPDATE_COMMAND_UI` nem `ON_COMMAND` manipulador.  
+ *bDisableIfNoHandler* é diferente de zero para desabilitar o objeto de interface do usuário, se houver um ON_UPDATE_COMMAND_UI, nem um manipulador ON_COMMAND.  
   
  **WM_EXITHELPMODE**  
   
- Esta mensagem é enviada para um `CFrameWnd` modo para sair sensíveis ao contexto de Ajuda. O recebimento da mensagem encerra o loop modal iniciado por **CFrameWnd::OnContextHelp.**  
+ Esta mensagem é enviada para um `CFrameWnd` modo para sair sensíveis ao contexto de Ajuda. O recebimento da mensagem encerra o loop modal iniciado por `CFrameWnd::OnContextHelp`.  
   
 |||  
 |-|-|  
@@ -150,35 +150,35 @@ ms.locfileid: "33385606"
   
  **WM_FLOATSTATUS**  
   
- Esta mensagem é enviada para todas as janelas pop-up pertencentes a uma janela do quadro quando o quadro é ativado ou desativado por outra janela do quadro de nível superior. Isso é usado pela implementação de **MFS_SYNCACTIVE** em `CMiniFrameWnd`, para manter a ativação dessas janelas pop-up em sincronia com a ativação da janela do quadro de nível superior.  
+ Esta mensagem é enviada para todas as janelas pop-up pertencentes a uma janela do quadro quando o quadro é ativado ou desativado por outra janela do quadro de nível superior. Isso é usado pela implementação de MFS_SYNCACTIVE em `CMiniFrameWnd`, para manter a ativação dessas janelas pop-up em sincronia com a ativação da janela do quadro de nível superior.  
   
 |||  
 |-|-|  
-|wParam|É um dos seguintes valores:<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
+|wParam|É um dos seguintes valores:<br /><br /> FS_SHOW<br /><br /> FS_HIDE<br /><br /> FS_ACTIVATE<br /><br /> FS_DEACTIVATE<br /><br /> FS_ENABLEFS_DISABLE<br /><br /> FS_SYNCACTIVE|  
 |lParam|Não usado (0)|  
   
- O valor de retorno deve ser diferente de zero se **FS_SYNCACTIVE** é definido e sincroniza a janela sua ativação com o quadro do pai. `CMiniFrameWnd` Retorna diferente de zero quando o estilo é definido como **MFS_SYNCACTIVE.**  
+ O valor de retorno deve ser diferente de zero se FS_SYNCACTIVE está definida e sincroniza a janela sua ativação com o quadro do pai. `CMiniFrameWnd` Retorna diferente de zero quando o estilo é definido como MFS_SYNCACTIVE.  
   
  Para obter mais informações, consulte a implementação de `CMiniFrameWnd`.  
   
 ## <a name="wmactivatetoplevel"></a>WM_ACTIVATETOPLEVEL  
- Esta mensagem é enviada para uma janela de nível superior quando uma janela em seu "grupo de nível superior" é ativada ou desativada. Uma janela é parte de um grupo de nível superior, se ela for uma janela de nível superior (nenhum pai ou proprietário) ou ele pertence a uma janela. Essa mensagem é semelhante em uso para **WM_ACTIVATEAPP,** , mas funciona em situações onde que pertencem a diferentes processos do windows é combinado em uma hierarquia de janela única (comum em aplicativos OLE).  
+ Esta mensagem é enviada para uma janela de nível superior quando uma janela em seu "grupo de nível superior" é ativada ou desativada. Uma janela é parte de um grupo de nível superior, se ela for uma janela de nível superior (nenhum pai ou proprietário) ou ele pertence a uma janela. Essa mensagem é semelhante em uso para WM_ACTIVATEAPP, mas funciona em situações onde a que pertencem a diferentes processos do windows são combinados em uma hierarquia de janela única (comum em aplicativos OLE).  
   
 ## <a name="wmcommandhelp-wmhelphittest-wmexithelpmode"></a>WM_COMMANDHELP, WM_HELPHITTEST, WM_EXITHELPMODE  
  Essas mensagens são usadas na implementação de ajuda contextual. Consulte [28 de observação técnica](../mfc/tn028-context-sensitive-help-support.md) para obter mais informações.  
   
 ## <a name="mfc-private-resource-formats"></a>Formatos de recurso particular MFC  
- Atualmente, o MFC define dois formatos de recurso particular: **RT_TOOLBAR** e **RT_DLGINIT**.  
+ Atualmente, o MFC define dois formatos de recurso particular: RT_TOOLBAR e RT_DLGINIT.  
   
 ## <a name="rttoolbar-resource-format"></a>Formato de recurso RT_TOOLBAR  
- A barra de ferramentas padrão fornecida pelo AppWizard baseia-se em uma **RT_TOOLBAR** recurso personalizado, que foi introduzido no MFC 4.0. Você pode editar esse recurso usando o editor de barra de ferramentas.  
+ A barra de ferramentas padrão fornecida pelo AppWizard baseia-se em um recurso RT_TOOLBAR personalizado, que foi introduzido no MFC 4.0. Você pode editar esse recurso usando o editor de barra de ferramentas.  
   
 ## <a name="rtdlginit-resource-format"></a>Formato de recurso RT_DLGINIT  
  Um formato de recurso particular MFC é usado para armazenar informações de inicialização da caixa de diálogo extra. Isso inclui as cadeias de caracteres iniciais armazenadas em uma caixa de combinação. O formato desse recurso não foi projetado para ser editado manualmente, mas é tratado pelo Visual C++.  
   
- Visual C++ e isso **RT_DLGINIT** recursos não devem usar os recursos relacionados do MFC, pois há alternativa de API para usar as informações no recurso. Usando o Visual C++ torna muito mais fácil de escrever, manter e converter seu aplicativo a longo prazo.  
+ Visual C++ e esse recurso RT_DLGINIT não são necessários para usar os recursos relacionados do MFC como não há alternativa de API para usar as informações no recurso. Usando o Visual C++ torna muito mais fácil de escrever, manter e converter seu aplicativo a longo prazo.  
   
- A estrutura básica de um **RT_DLGINIT** recurso é o seguinte:  
+ A estrutura básica de um recurso RT_DLGINIT é o seguinte:  
   
 ```  
 +---------------+    \  

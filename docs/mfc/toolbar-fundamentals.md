@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb63ade0d1f2ad179448f448a10d88b71b91037
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5240cf50b35b2e1a300071ccb6cc15a065ac364e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383968"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951631"
 ---
 # <a name="toolbar-fundamentals"></a>Fundamentos da barra de ferramentas
 Este artigo descreve a implementação MFC fundamental que permite adicionar uma barra de ferramentas padrão para seu aplicativo selecionando uma opção no Assistente do aplicativo. Os tópicos abordados incluem:  
@@ -56,11 +56,11 @@ Este artigo descreve a implementação MFC fundamental que permite adicionar uma
 -   Gerencia a barra de ferramentas, incluindo a capacidade para encaixar ou flutuar.  
   
 ##  <a name="_core_the_toolbar_in_code"></a> A barra de ferramentas no código  
- A barra de ferramentas é um [CToolBar](../mfc/reference/ctoolbar-class.md) objeto declarado como um membro de dados do seu aplicativo **CMainFrame** classe. Em outras palavras, o objeto de barra de ferramentas está incorporado no objeto de janela do quadro principal. Isso significa que o MFC cria a barra de ferramentas quando ele cria a janela do quadro e destrói a barra de ferramentas quando ele destrói a janela do quadro. A seguinte declaração de classe parcial, para um aplicativo de interface MDI vários documentos, mostra os membros de dados para uma barra de ferramentas inserida e uma barra de status incorporada. Ele também mostra a substituição do `OnCreate` função de membro.  
+ A barra de ferramentas é um [CToolBar](../mfc/reference/ctoolbar-class.md) objeto declarado como um membro de dados do seu aplicativo `CMainFrame` classe. Em outras palavras, o objeto de barra de ferramentas está incorporado no objeto de janela do quadro principal. Isso significa que o MFC cria a barra de ferramentas quando ele cria a janela do quadro e destrói a barra de ferramentas quando ele destrói a janela do quadro. A seguinte declaração de classe parcial, para um aplicativo de interface MDI vários documentos, mostra os membros de dados para uma barra de ferramentas inserida e uma barra de status incorporada. Ele também mostra a substituição do `OnCreate` função de membro.  
   
  [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
   
- Criação de barra de ferramentas ocorre em **CMainFrame::OnCreate**. Chamadas MFC [OnCreate](../mfc/reference/cwnd-class.md#oncreate) depois de criar a janela do quadro, mas antes de se tornar visível. O padrão `OnCreate` que o Assistente de aplicativo gera realiza as seguintes tarefas de barra de ferramentas:  
+ Criação de barra de ferramentas ocorre em `CMainFrame::OnCreate`. Chamadas MFC [OnCreate](../mfc/reference/cwnd-class.md#oncreate) depois de criar a janela do quadro, mas antes de se tornar visível. O padrão `OnCreate` que o Assistente de aplicativo gera realiza as seguintes tarefas de barra de ferramentas:  
   
 1.  Chamadas de `CToolBar` do objeto [criar](../mfc/reference/ctoolbar-class.md#create) a função de membro para criar subjacente [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objeto.  
   
@@ -69,7 +69,7 @@ Este artigo descreve a implementação MFC fundamental que permite adicionar uma
 3.  Chama funções para habilitar o encaixe, flutuantes e dicas de ferramenta. Para obter detalhes sobre essas chamadas, consulte o artigo [encaixe e barras de ferramentas flutuantes](../mfc/docking-and-floating-toolbars.md).  
   
 > [!NOTE]
->  O exemplo de MFC geral [DOCKTOOL](../visual-cpp-samples.md) inclui ilustrações das barras de ferramentas MFC antigas e novas. As barras de ferramentas que usam **COldToolbar** exigem chamadas na etapa 2 para `LoadBitmap` (em vez de `LoadToolBar`) e `SetButtons`. Novas barras de ferramentas exigem chamadas para `LoadToolBar`.  
+>  O exemplo de MFC geral [DOCKTOOL](../visual-cpp-samples.md) inclui ilustrações das barras de ferramentas MFC antigas e novas. As barras de ferramentas que usam `COldToolbar` exigem chamadas na etapa 2 para `LoadBitmap` (em vez de `LoadToolBar`) e `SetButtons`. Novas barras de ferramentas exigem chamadas para `LoadToolBar`.  
   
  O encaixe flutuante e chamadas de dicas de ferramenta são opcionais. Você pode remover as linhas de `OnCreate` se você preferir. O resultado é uma barra de ferramentas que permanece fixo, não é possível float ou encaixe-o novamente e não é possível exibir dicas de ferramenta.  
   

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1c9769055e0ab69f57f58b136b7844cb1f860
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60e42aedd406e7478db83ecddca7d8b82230abc5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386087"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951988"
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: rotinas DFX personalizadas para classes de banco de dados DAO
 > [!NOTE]
@@ -134,19 +134,19 @@ PopUpEmployeeData(emp.m_strFirstName,
   
 |Operação|Descrição|  
 |---------------|-----------------|  
-|**AddToParameterList**|Cláusula de parâmetros de compilações|  
-|**AddToSelectList**|Cláusula SELECT compilações|  
-|**BindField**|Define a estrutura de vinculação|  
-|**BindParam**|Define valores de parâmetro|  
-|**Correção**|Define o status NULL|  
-|**AllocCache**|Aloca o cache para seleção suja|  
-|**StoreField**|Salva o registro atual em cache|  
-|**LoadField**|Restaurações de cache para valores de membro|  
-|**FreeCache**|Libera o cache|  
+|`AddToParameterList`|Cláusula de parâmetros de compilações|  
+|`AddToSelectList`|Cláusula SELECT compilações|  
+|`BindField`|Define a estrutura de vinculação|  
+|`BindParam`|Define valores de parâmetro|  
+|`Fixup`|Define o status NULL|  
+|`AllocCache`|Aloca o cache para seleção suja|  
+|`StoreField`|Salva o registro atual em cache|  
+|`LoadField`|Restaurações de cache para valores de membro|  
+|`FreeCache`|Libera o cache|  
 |`SetFieldNull`|Conjuntos de campo de status e o valor para NULL|  
-|**MarkForAddNew**|Campos de marcas sujas se não PSEUDO nulo|  
-|**MarkForEdit**|Se problemas de campos de marcas não correspondem ao cache|  
-|**SetDirtyField**|Conjuntos de campo valores marcados como sujos|  
+|`MarkForAddNew`|Campos de marcas sujas se não PSEUDO nulo|  
+|`MarkForEdit`|Se problemas de campos de marcas não correspondem ao cache|  
+|`SetDirtyField`|Conjuntos de campo valores marcados como sujos|  
   
  Na próxima seção, cada operação será explicada mais detalhadamente em `DFX_Text`.  
   
@@ -168,45 +168,45 @@ PopUpEmployeeData(emp.m_strFirstName,
 ##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> Detalhes de DFX_Text  
  Conforme mencionado anteriormente, a melhor maneira para explicar como funciona o DFX é trabalhar com um exemplo. Para essa finalidade for por meio dos recursos internos do `DFX_Text` devem funcionar muito bem para ajudar a fornecer pelo menos um entendimento básico de DFX.  
   
- **AddToParameterList**  
- Essa operação cria SQL **parâmetros** cláusula ("`Parameters <param name>, <param type> ... ;`") exigido pelo Jet. Cada parâmetro é chamado e digitado (conforme especificado na chamada RFX). Consulte a função **CDaoFieldExchange::AppendParamType** função para ver os nomes dos tipos individuais. No caso de `DFX_Text`, o tipo usado é `text`.  
+ `AddToParameterList`  
+ Essa operação cria SQL **parâmetros** cláusula ("`Parameters <param name>, <param type> ... ;`") exigido pelo Jet. Cada parâmetro é chamado e digitado (conforme especificado na chamada RFX). Consulte a função `CDaoFieldExchange::AppendParamType` função para ver os nomes dos tipos individuais. No caso de `DFX_Text`, é o tipo usado **texto**.  
   
- **AddToSelectList**  
+ `AddToSelectList`  
  Compilações de SQL **selecione** cláusula. Isso é bastante direto como o nome de coluna especificado pela chamada DFX é simplesmente anexado ("`SELECT <column name>, ...`").  
   
- **BindField**  
+ `BindField`  
  As mais complexas das operações. Conforme mencionado anteriormente, isso é onde a estrutura de vinculação DAO usado por `GetRows` é configurada. Como você pode ver no código `DFX_Text` os tipos de informações na estrutura de incluem o tipo DAO usado (**DAO_CHAR** ou **DAO_WCHAR** no caso de `DFX_Text`). Além disso, o tipo de associação usada é também configurado. Em uma seção anterior `GetRows` foi descrito resumidamente, mas é suficiente explicar que o tipo de associação usada pelo MFC é sempre ligação de endereço direto (**DAOBINDING_DIRECT**). Além disso, para a associação de coluna de comprimento variável (como `DFX_Text`) associação de retorno de chamada é usada para que MFC pode controlar a alocação de memória e especifique um endereço do tamanho correto. Isso significa que MFC sempre poderá indicar DAO "where" para colocar os dados, permitindo assim que a associação diretamente para variáveis de membro. O restante da estrutura de associação é preenchido com coisas como o endereço da função de retorno de chamada de alocação de memória e o tipo de associação de coluna (associação de nome de coluna).  
   
- **BindParam**  
+ `BindParam`  
  Essa é uma operação simple que chama `SetParamValue` com o valor do parâmetro especificado em seu membro de parâmetro.  
   
- **Correção**  
+ `Fixup`  
  Preenche o **nulo** status para cada campo.  
   
  `SetFieldNull`  
  Esta operação somente marca o status de cada campo como **nulo** e define o membro valor da variável como **PSEUDO_NULL**.  
   
- **SetDirtyField**  
+ `SetDirtyField`  
  Chamadas `SetFieldValue` para cada campo marcado como sujo.  
   
  Todas as operações restantes somente lidam com o uso de cache de dados. O cache de dados é um buffer adicional dos dados no registro atual é usado para tornar certas coisas mais simples. Por exemplo, "sujos" campos podem ser detectados automaticamente. Conforme descrito na documentação online pode ter sido desligado completamente ou no nível de campo. A implementação do buffer utiliza um mapa. Este mapa é usado para corresponder alocada dinamicamente cópias dos dados com o endereço do campo "ligado" (ou `CDaoRecordset` derivada do membro de dados).  
   
- **AllocCache**  
+ `AllocCache`  
  Dinamicamente aloca o valor do campo em cache e o adiciona ao mapa.  
   
- **FreeCache**  
+ `FreeCache`  
  Exclui o valor do campo em cache e a remove do mapa.  
   
- **StoreField**  
+ `StoreField`  
  Copia o valor do campo atual no cache de dados.  
   
- **LoadField**  
+ `LoadField`  
  Copia o valor armazenado em cache para o membro do campo.  
   
- **MarkForAddNew**  
+ `MarkForAddNew`  
  Verifica se o valor do campo atual é não -**nulo** e marca sujas se necessário.  
   
- **MarkForEdit**  
+ `MarkForEdit`  
  Compara o valor do campo atual com o cache de dados e marca sujo, se necessário.  
   
 > [!TIP]

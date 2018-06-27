@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdd6cf2f2bb76c30f4cc00d75eb55d7d2c01fa7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14da7f0e5b0adbe72b6705700c1e9298751bc345
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380413"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953603"
 ---
 # <a name="thread-specific-hot-keys"></a>Teclas de acesso específicas de thread
-Um aplicativo define uma tecla de acesso específicas de thread ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) usando o Windows **RegisterHotKey** função. Quando o usuário pressiona uma tecla de acesso específicas de thread, o Windows envia um [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) mensagem para o início da fila de mensagens de um determinado segmento. O **WM_HOTKEY** mensagem contém o código de tecla virtual, o estado de shift e a ID definida pelo usuário a tecla de acesso específica que foi pressionada. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. Para obter mais informações sobre esse método, consulte [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
+Um aplicativo define uma tecla de acesso específicas de thread ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) usando o Windows `RegisterHotKey` função. Quando o usuário pressiona uma tecla de acesso específicas de thread, o Windows envia um [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) mensagem para o início da fila de mensagens de um determinado segmento. A mensagem WM_HOTKEY contém o código de tecla virtual, o estado de shift e a ID definida pelo usuário a tecla de acesso específica que foi pressionada. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. Para obter mais informações sobre esse método, consulte [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
   
- Observe que o estado de shift sinalizadores usado na chamada para **RegisterHotKey** não são iguais aos retornados pelo [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) função de membro; você precisará converter esses sinalizadores antes de chamar **RegisterHotKey**.  
+ Observe que o estado de shift sinalizadores usado na chamada para `RegisterHotKey` não são iguais aos retornados pelo [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) função de membro; você precisará converter esses sinalizadores antes de chamar `RegisterHotKey`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   

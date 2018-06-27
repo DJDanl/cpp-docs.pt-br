@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226b69c9521016a2d5abbbdb7225cbbec972db3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df916cddacd5a435ef5cb130f9f6f5b6a25d2d4c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383026"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952717"
 ---
 # <a name="working-with-a-header-control"></a>Trabalhando com um controle de cabeçalho
-A maneira fácil de usar um controle de cabeçalho ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) em conjunto com um controle de lista; consulte [usando CListCtrl](../mfc/using-clistctrl.md) posterior da família neste tópico. Você também pode usar um controle de cabeçalho por si só. Chamadas MFC **InitCommonControls** para você. As tarefas principais são da seguinte maneira:  
+A maneira fácil de usar um controle de cabeçalho ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) em conjunto com um controle de lista; consulte [usando CListCtrl](../mfc/using-clistctrl.md) posterior da família neste tópico. Você também pode usar um controle de cabeçalho por si só. Chamadas MFC `InitCommonControls` para você. As tarefas principais são da seguinte maneira:  
   
 -   [Criando o controle de cabeçalho](../mfc/creating-the-header-control.md)  
   

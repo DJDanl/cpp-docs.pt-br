@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bd8f7b12eee847fd6b8784d21f4b565c7fc6a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d292c3f48f0a375fbd914cf287f1e8d2cef5c6c3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357009"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952379"
 ---
 # <a name="ccommandlineinfo-class"></a>Classe CCommandLineInfo
 Ajuda na análise da linha de comando na inicialização do aplicativo.  
@@ -93,11 +93,11 @@ class CCommandLineInfo : public CObject
 |*aplicativo* filename|Abrir o arquivo.|  
 |*aplicativo* `/p` nome de arquivo|Imprima o arquivo para a impressora padrão.|  
 |*aplicativo* `/pt` porta de driver de impressora de nome de arquivo|Imprima o arquivo para a impressora especificada.|  
-|*Aplicativo* `/dde`|Inicie o e await comando DDE.|  
-|*Aplicativo* `/Automation`|Inicie-o como um servidor de automação OLE.|  
-|*Aplicativo* `/Embedding`|Inicie para editar um item OLE inserido.|  
-|*Aplicativo* `/Register`<br /><br /> *Aplicativo* `/Regserver`|Informa ao aplicativo para executar as tarefas de registro.|  
-|*Aplicativo* `/Unregister`<br /><br /> *Aplicativo* `/Unregserver`|Informa ao aplicativo para executar as tarefas de cancelamento de registro.|  
+|*aplicativo* `/dde`|Inicie o e await comando DDE.|  
+|*aplicativo* `/Automation`|Inicie-o como um servidor de automação OLE.|  
+|*aplicativo* `/Embedding`|Inicie para editar um item OLE inserido.|  
+|*aplicativo* `/Register`<br /><br /> *aplicativo* `/Regserver`|Informa ao aplicativo para executar as tarefas de registro.|  
+|*aplicativo* `/Unregister`<br /><br /> *aplicativo* `/Unregserver`|Informa ao aplicativo para executar as tarefas de cancelamento de registro.|  
   
  Derive uma nova classe de `CCommandLineInfo` para lidar com outros sinalizadores e valores de parâmetro. Substituir [ParseParam](#parseparam) para lidar com os sinalizadores de novo.  
   
@@ -270,17 +270,17 @@ virtual void ParseParam(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pszParam`  
+ *pszParam*  
  O parâmetro ou sinalizador.  
   
  *bFlag*  
- Indica se `pszParam` é um parâmetro ou um sinalizador.  
+ Indica se *pszParam* é um parâmetro ou um sinalizador.  
   
- `bLast`  
+ *Demais*  
  Indica se este é o último parâmetro ou sinalizador na linha de comando.  
   
 ### <a name="remarks"></a>Comentários  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) chamadas `ParseParam` uma vez para cada parâmetro ou sinalizador na linha de comando, passando o argumento `pszParam`. Se o primeiro caractere do parâmetro é um ' **-**'ou' **/**', em seguida, ele será removido e *bFlag* é definido como `TRUE`. Ao analisar o parâmetro final, `bLast` é definido como `TRUE`.  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) chamadas `ParseParam` uma vez para cada parâmetro ou sinalizador na linha de comando, passando o argumento *pszParam*. Se o primeiro caractere do parâmetro é um ' **-**'ou' **/**', em seguida, ele será removido e *bFlag* é definido como `TRUE`. Ao analisar o parâmetro final, *demais* é definido como `TRUE`.  
   
  A implementação padrão dessa função reconhece os seguintes sinalizadores: `/p`, `/pt`, `/dde`, `/Automation`, e `/Embedding`, conforme mostrado na tabela a seguir:  
   
@@ -290,11 +290,11 @@ virtual void ParseParam(
 |*aplicativo* filename|Abrir o arquivo.|  
 |*aplicativo* `/p` nome de arquivo|Imprima o arquivo para a impressora padrão.|  
 |*aplicativo* `/pt` porta de driver de impressora de nome de arquivo|Imprima o arquivo para a impressora especificada.|  
-|*Aplicativo* `/dde`|Inicie o e await comando DDE.|  
-|*Aplicativo* `/Automation`|Inicie-o como um servidor de automação OLE.|  
-|*Aplicativo* `/Embedding`|Inicie para editar um item OLE inserido.|  
-|*Aplicativo* `/Register`<br /><br /> *Aplicativo* `/Regserver`|Informa ao aplicativo para executar as tarefas de registro.|  
-|*Aplicativo* `/Unregister`<br /><br /> *Aplicativo* `/Unregserver`|Informa ao aplicativo para executar as tarefas de cancelamento de registro.|  
+|*aplicativo* `/dde`|Inicie o e await comando DDE.|  
+|*aplicativo* `/Automation`|Inicie-o como um servidor de automação OLE.|  
+|*aplicativo* `/Embedding`|Inicie para editar um item OLE inserido.|  
+|*aplicativo* `/Register`<br /><br /> *aplicativo* `/Regserver`|Informa ao aplicativo para executar as tarefas de registro.|  
+|*aplicativo* `/Unregister`<br /><br /> *aplicativo* `/Unregserver`|Informa ao aplicativo para executar as tarefas de cancelamento de registro.|  
   
  Essas informações são armazenadas em [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), e [m_nShellCommand](#m_nshellcommand). Sinalizadores são marcados por uma barra ' **/**'ou hífen' **-**'.  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18fc3f586c7fc8861bfc29dade7b62e741bb0ffc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a95725565dee2b25fd7f2e39927fde88c9cddff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385151"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955996"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets: ordenação de bytes
 Este artigo e dois artigos complementar explicam vários problemas na programação do Windows Sockets. Este artigo aborda a ordem de bytes. Os outros problemas são abordados nos artigos: [Windows Sockets: bloqueando](../mfc/windows-sockets-blocking.md) e [Windows Sockets: Convertendo cadeias de caracteres](../mfc/windows-sockets-converting-strings.md).  
@@ -80,7 +80,7 @@ Este artigo e dois artigos complementar explicam vários problemas na programaç
   
  [!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_2.cpp)]  
   
- Em C++, um `struct` é essencialmente o mesmo que uma classe. O `Message` estrutura pode ter funções de membro, como o `Serialize` função de membro declaradas acima. O `Serialize` função de membro pode ter esta aparência:  
+ Em C++, um **struct** é essencialmente o mesmo que uma classe. O `Message` estrutura pode ter funções de membro, como o `Serialize` função de membro declaradas acima. O `Serialize` função de membro pode ter esta aparência:  
   
  [!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_3.cpp)]  
   

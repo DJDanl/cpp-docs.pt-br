@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40240367d3e8350cee030b2c08dc5a48325e05f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 145546a83bb91d09499049308b8d37e5adafeb92
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385301"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955668"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Atualizando um controle ActiveX existente
 Controles ActiveX existente (anteriormente conhecida como controles OLE) pode ser usado na Internet sem modificação. No entanto, convém modificar controles para melhorar o desempenho. Ao usar o controle em uma página da Web, há considerações adicionais. O arquivo. ocx e todos os arquivos de suporte devem estar no computador de destino ou ser baixados da Internet. Isso torna o tamanho de código e uma consideração importante de tempo de download. Downloads podem ser empacotados em um arquivo. cab assinado. Você pode marcar seu controle como seguro para script e seguro para inicialização.  
@@ -136,9 +136,9 @@ C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf
  O `-s 6144` parâmetro reserva espaço no gabinete para assinatura de código.  
   
 ### <a name="the-version-tag"></a>A marca de versão  
- Observe aqui que o `#Version` informações especificadas com um arquivo CAB aplica-se para o controle especificado pelo `CLASSID` parâmetro o `<OBJECT>` marca.  
+ Observe aqui que o `#Version` informações especificadas com um arquivo CAB aplica-se para o controle especificado pelo *CLASSID* parâmetro o `<OBJECT>` marca.  
   
- Dependendo da versão especificada, você pode forçar o download do controle. Para as especificações completas do `OBJECT` marca incluindo o `CODEBASE` parâmetro, consulte o W3C referência.  
+ Dependendo da versão especificada, você pode forçar o download do controle. Para as especificações completas do `OBJECT` marca incluindo o *CODEBASE* parâmetro, consulte o W3C referência.  
   
 ##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> Marcar um cofre de controle para script e inicialização  
  Controles ActiveX usados em páginas da Web devem ser marcados como seguro para script e para inicialização se na verdade são seguras. Um controle de segurança não será executar e/s de disco ou acessar a memória ou os registros de uma máquina diretamente.  
@@ -236,7 +236,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  Em diretrizes de 96 OCX, um controle deve sempre obter sua paleta em segundo plano.  
   
- Contêineres mais antigos que não usam a propriedade palette ambiente enviará `WM_QUERYNEWPALETTE` e `WM_PALETTECHANGED` mensagens. Um controle pode substituir `OnQueryNewPalette` e `OnPaletteChanged` para lidar com essas mensagens.  
+ Contêineres mais antigos que não usam a propriedade palette ambiente enviará mensagens WM_QUERYNEWPALETTE e WM_PALETTECHANGED. Um controle pode substituir `OnQueryNewPalette` e `OnPaletteChanged` para lidar com essas mensagens.  
   
 ##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Níveis de segurança de navegador do Internet Explorer e o comportamento de controle  
  Um navegador tem opções para o nível de segurança configurável pelo usuário. Como páginas da Web pode conter conteúdo ativo que pode danificar o computador do usuário, navegadores permitem que o usuário selecione opções para o nível de segurança. Dependendo da forma como um navegador implementa níveis de segurança, um controle não pode ser baixado em todos os ou exibirá um certificado ou uma mensagem de aviso para permitir que o usuário escolha se deseja ou não baixar o controle em tempo de execução. O comportamento de controles ActiveX em níveis de segurança alta, média e baixa no Internet Explorer esteja listado abaixo.  

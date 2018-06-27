@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba8e9cac3b7f7997da8c620966234a630b9b9fbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 683281af3d029dca7e8060bb250a49f8e095d597
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384950"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954576"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062: reflexão de mensagem para controles do Windows
 > [!NOTE]
@@ -54,25 +54,25 @@ ms.locfileid: "33384950"
   
  **O que é a reflexão de mensagem**  
   
- Controles de Windows frequentemente enviam mensagens de notificação para as janelas de pai. Por exemplo, muitos controles enviar uma mensagem de notificação do controle cor (`WM_CTLCOLOR` ou uma de suas variantes) para o pai, para permitir que o pai fornecer um pincel para pintar o plano de fundo do controle.  
+ Controles de Windows frequentemente enviam mensagens de notificação para as janelas de pai. Por exemplo, muitos controles enviar uma mensagem de notificação de cor de controle (WM_CTLCOLOR ou uma de suas variantes) para o pai, para permitir que o pai fornecer um pincel para pintar o plano de fundo do controle.  
   
  No Windows e no MFC antes da versão 4.0, a janela pai, geralmente uma caixa de diálogo é responsável por manipular essas mensagens. Isso significa que o código para manipular a mensagem precisa estar na classe da janela pai e que ele precisa ser duplicados em todas as classes necessárias para manipular a mensagem. Nesse caso, cada caixa de diálogo que desejava controles com planos de fundo personalizados precisa lidar com a mensagem de notificação do controle cor. Seria muito mais fácil reutilizar o código se uma classe de controle pode ser gravada que usaria sua própria cor de plano de fundo.  
   
- Em MFC 4.0, o mecanismo antigo ainda funciona — windows pai podem lidar com mensagens de notificação. Além disso, no entanto, 4.0 MFC facilita a reutilização, fornecendo um recurso chamado "reflexão de mensagem" que permite que essas mensagens de notificação deve ser tratado em janela de controle filho ou a janela pai, ou ambos. No exemplo a cor de plano de fundo controle, agora você pode escrever uma classe de controle que define sua própria cor de plano de fundo ao manipular o refletido `WM_CTLCOLOR` mensagem — tudo isso sem contar com o pai. (Observe que como reflexão de mensagem é implementada pelo MFC, não pelo Windows, a classe de janela pai deve ser derivada de `CWnd` para reflexão de mensagem trabalhar.)  
+ Em MFC 4.0, o mecanismo antigo ainda funciona — windows pai podem lidar com mensagens de notificação. Além disso, no entanto, 4.0 MFC facilita a reutilização, fornecendo um recurso chamado "reflexão de mensagem" que permite que essas mensagens de notificação deve ser tratado em janela de controle filho ou a janela pai, ou ambos. No exemplo a cor de plano de fundo controle, agora você pode escrever uma classe de controle que define sua própria cor de plano de fundo ao manipular a mensagem WM_CTLCOLOR refletida — tudo isso sem contar com o pai. (Observe que como reflexão de mensagem é implementada pelo MFC, não pelo Windows, a classe de janela pai deve ser derivada de `CWnd` para reflexão de mensagem trabalhar.)  
   
- Versões mais antigas do MFC faziam algo semelhante a reflexão de mensagem, fornecendo funções virtuais para algumas mensagens, como mensagens das caixas de listagem do desenho proprietário (`WM_DRAWITEM`, e assim por diante). O novo mecanismo de reflexão de mensagem é generalizada e consistente.  
+ Versões mais antigas do MFC faziam algo semelhante a reflexão de mensagem, fornecendo funções virtuais para algumas mensagens, como mensagens para caixas de listagem de desenho proprietário (WM_DRAWITEM e assim por diante). O novo mecanismo de reflexão de mensagem é generalizada e consistente.  
   
  Reflexão de mensagem é compatível com o código escrito para versões do MFC antes de 4.0.  
   
- Se você tiver fornecido um manipulador para uma mensagem específica ou um intervalo de mensagens na classe da sua janela pai, ele substituirá refletidas manipuladores de mensagens para a mesma mensagem, desde que você não chama a função de manipulador de classe base em seu próprio manipulador. Por exemplo, se você tratar `WM_CTLCOLOR` na sua classe de caixa de diálogo, o tratamento substituirá qualquer manipuladores de mensagens refletidas.  
+ Se você tiver fornecido um manipulador para uma mensagem específica ou um intervalo de mensagens na classe da sua janela pai, ele substituirá refletidas manipuladores de mensagens para a mesma mensagem, desde que você não chama a função de manipulador de classe base em seu próprio manipulador. Por exemplo, se você tratar WM_CTLCOLOR em sua classe de caixa de diálogo, o tratamento substituirá qualquer manipuladores de mensagens refletidas.  
   
- Se, em sua classe de janela pai, você fornece um manipulador para um determinado **WM_NOTIFY** mensagem ou um intervalo de **WM_NOTIFY** mensagens, o manipulador será chamado apenas se o controle filho enviar as mensagens não tem um manipulador de mensagem refletida por meio de **ON_NOTIFY_REFLECT()**. Se você usar **ON_NOTIFY_REFLECT_EX()** em seu mapa de mensagem, o manipulador de mensagens pode ou não pode permitir que a janela pai manipular a mensagem. Se o manipulador retorna **FALSE**, a mensagem será tratada pelo pai, enquanto uma chamada que retorna **TRUE** não permite que o pai para tratá-la. Observe que a mensagem refletida é manipulada antes da mensagem de notificação.  
+ Se, em sua classe de janela pai, você deve fornecer um manipulador para uma WM_NOTIFY específica ou um intervalo de WM_NOTIFY mensagens, o manipulador será chamado apenas se o controle filho enviando essas mensagens não tem um manipulador de mensagens refletidas por meio de `ON_NOTIFY_REFLECT()`. Se você usar `ON_NOTIFY_REFLECT_EX()` em seu mapa de mensagem, o manipulador de mensagens pode ou não pode permitir que a janela pai manipular a mensagem. Se o manipulador retorna **FALSE**, a mensagem será tratada pelo pai, enquanto uma chamada que retorna **TRUE** não permite que o pai para tratá-la. Observe que a mensagem refletida é manipulada antes da mensagem de notificação.  
   
- Quando um **WM_NOTIFY** mensagem é enviada, o controle é oferecido a primeira chance de tratá-la. Se qualquer outra mensagem refletida for enviada, a janela pai tem a primeira oportunidade de tratá-la e o controle receberá a mensagem refletida. Para fazer isso, ele precisará de uma função de manipulador e uma entrada apropriada no mapa de mensagem de classe do controle.  
+ Quando uma mensagem WM_NOTIFY é enviada, o controle é oferecido a primeira chance de tratá-la. Se qualquer outra mensagem refletida for enviada, a janela pai tem a primeira oportunidade de tratá-la e o controle receberá a mensagem refletida. Para fazer isso, ele precisará de uma função de manipulador e uma entrada apropriada no mapa de mensagem de classe do controle.  
   
- A macro de mapa de mensagem para mensagens refletidas é ligeiramente diferente para notificações regulares: tem **_REFLECT** acrescentado ao nome comum. Por exemplo, para manipular um **WM_NOTIFY** mensagem no pai, você pode usar a macro `ON_NOTIFY` no mapa de mensagem do pai. Para manipular a mensagem refletida no controle filho, use o **ON_NOTIFY_REFLECT** macro no mapa de mensagem do controle filho. Em alguns casos, os parâmetros são diferentes, também. Observe que ClassWizard geralmente pode adicionar as entradas de mapa de mensagem para você e fornecer implementações de função em esqueleto com os parâmetros corretos.  
+ A macro de mapa de mensagem para mensagens refletidas é ligeiramente diferente para notificações regulares: tem *_REFLECT* acrescentado ao nome comum. Por exemplo, para lidar com uma mensagem WM_NOTIFY no pai, use a macro ON_NOTIFY no mapa de mensagem do pai. Para manipular a mensagem refletida no controle filho, use a macro ON_NOTIFY_REFLECT no mapa de mensagem do controle filho. Em alguns casos, os parâmetros são diferentes, também. Observe que ClassWizard geralmente pode adicionar as entradas de mapa de mensagem para você e fornecer implementações de função em esqueleto com os parâmetros corretos.  
   
- Consulte [TN061: mensagens ON_NOTIFY e WM_NOTIFY](../mfc/tn061-on-notify-and-wm-notify-messages.md) para obter informações sobre o novo **WM_NOTIFY** mensagem.  
+ Consulte [TN061: mensagens ON_NOTIFY e WM_NOTIFY](../mfc/tn061-on-notify-and-wm-notify-messages.md) para obter informações sobre a nova mensagem WM_NOTIFY.  
   
  **Entradas de mapa de mensagem e de protótipos de função do manipulador de mensagens refletidas**  
   
@@ -80,19 +80,19 @@ ms.locfileid: "33384950"
   
  ClassWizard geralmente pode adicionar essas entradas de mapa de mensagem para você e fornecer implementações de função em esqueleto. Consulte [definindo um manipulador de mensagens para uma mensagem refletida](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md) para obter informações sobre como definir manipuladores de mensagens refletidas.  
   
- Para converter o nome da mensagem para o nome da macro refletidas, preceda **on _** e acrescente **_REFLECT**. Por exemplo, `WM_CTLCOLOR` se torna **ON_WM_CTLCOLOR_REFLECT**. (Para ver as mensagens que podem ser refletidas, fazer a conversão oposta nas entradas de macro na tabela abaixo).  
+ Para converter o nome da mensagem para o nome da macro refletidas, preceda *on _* e acrescente *_REFLECT*. Por exemplo, WM_CTLCOLOR torna-se ON_WM_CTLCOLOR_REFLECT. (Para ver as mensagens que podem ser refletidas, fazer a conversão oposta nas entradas de macro na tabela abaixo).  
   
  As três exceções à regra acima são os seguintes:  
   
--   A macro **WM_COMMAND** notificações é **ON_CONTROL_REFLECT**.  
+-   A macro para notificações de WM_COMMAND é ON_CONTROL_REFLECT.  
   
--   A macro **WM_NOTIFY** reflexos é **ON_NOTIFY_REFLECT**.  
+-   A macro reflexos WM_NOTIFY é ON_NOTIFY_REFLECT.  
   
--   A macro `ON_UPDATE_COMMAND_UI` reflexos é **ON_UPDATE_COMMAND_UI_REFLECT**.  
+-   A macro reflexos ON_UPDATE_COMMAND_UI é ON_UPDATE_COMMAND_UI_REFLECT.  
   
  Em cada um dos casos especiais acima, você deve especificar o nome da função do manipulador de membro. Em outros casos, você deve usar o nome padrão para a função do manipulador.  
   
- Os significados dos parâmetros e valores de retorno das funções estão documentados em nome da função ou o nome da função com **em** anexado. Por exemplo, **CtlColor** está documentado em `OnCtlColor`. Vários manipuladores de mensagem refletida necessário menos parâmetros que manipuladores semelhantes em uma janela pai. Apenas correspondem aos nomes na tabela a seguir com os nomes dos parâmetros formais na documentação.  
+ Os significados dos parâmetros e valores de retorno das funções estão documentados em nome da função ou o nome da função com *em* anexado. Por exemplo, `CtlColor` está documentado em `OnCtlColor`. Vários manipuladores de mensagem refletida necessário menos parâmetros que manipuladores semelhantes em uma janela pai. Apenas correspondem aos nomes na tabela a seguir com os nomes dos parâmetros formais na documentação.  
   
 |Entrada de mapa|Protótipo da função|  
 |---------------|------------------------|  
@@ -110,7 +110,7 @@ ms.locfileid: "33384950"
 |**(ON_WM_VSCROLL_REFLECT)**|**afx_msg void VScroll (UINT** `nSBCode` **, UINT** `nPos` **);**|  
 |**(ON_WM_PARENTNOTIFY_REFLECT)**|**afx_msg void ParentNotify (UINT** `message` **, LPARAM** `lParam` **);**|  
   
- O **ON_NOTIFY_REFLECT** e **ON_CONTROL_REFLECT** macros tem variações que permitem que mais de um objeto (como o controle e seu pai) para lidar com uma determinada mensagem.  
+ As macros ON_NOTIFY_REFLECT e ON_CONTROL_REFLECT tem variações que permitem que mais de um objeto (como o controle e seu pai) para lidar com uma determinada mensagem.  
   
 |Entrada de mapa|Protótipo da função|  
 |---------------|------------------------|  
@@ -128,7 +128,7 @@ ms.locfileid: "33384950"
   
 2.  Com o projeto carregado no Visual C++, use ClassWizard para criar uma nova classe chamada `CYellowEdit` com base em `CEdit`.  
   
-3.  Adicionar três variáveis de membro para o `CYellowEdit` classe. Os dois primeiros serão **COLORREF** variáveis para manter a cor do texto e a cor do plano de fundo. A terceira será um `CBrush` objeto que conterá o pincel para pintar o plano de fundo. O `CBrush` objeto permite que você criar o pincel de uma vez, simplesmente fazem referência a ele depois que e destruir o pincel automaticamente quando o `CYellowEdit` controle é destruído.  
+3.  Adicionar três variáveis de membro para o `CYellowEdit` classe. Os dois primeiros serão *COLORREF* variáveis para manter a cor do texto e a cor do plano de fundo. A terceira será um `CBrush` objeto que conterá o pincel para pintar o plano de fundo. O `CBrush` objeto permite que você criar o pincel de uma vez, simplesmente fazem referência a ele depois que e destruir o pincel automaticamente quando o `CYellowEdit` controle é destruído.  
   
 4.  Inicialize as variáveis de membro, escrevendo o construtor da seguinte maneira:  
   
@@ -148,7 +148,7 @@ ms.locfileid: "33384950"
  }  
  ```  
   
-5.  Usando ClassWizard, adicione um manipulador para o refletido `WM_CTLCOLOR` mensagem para sua `CYellowEdit` classe. Observe que o sinal de igual na frente do nome de mensagem na lista de mensagens, que você pode manipular indica que a mensagem seja refletida. Isso é descrito em [definindo um manipulador de mensagens para uma mensagem refletida](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).  
+5.  Usando ClassWizard, adicione um manipulador para a mensagem refletida WM_CTLCOLOR seu `CYellowEdit` classe. Observe que o sinal de igual na frente do nome de mensagem na lista de mensagens, que você pode manipular indica que a mensagem seja refletida. Isso é descrito em [definindo um manipulador de mensagens para uma mensagem refletida](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).  
   
      ClassWizard adiciona a seguinte função de macro e esqueleto de mapa de mensagem para você:  
   

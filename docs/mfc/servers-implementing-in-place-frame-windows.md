@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc26e2874921d30ef233509ee46b776ec8e3e9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0f03d66fac6d58bdb48aa9b7a6d8aafe18a74ea
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380858"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956417"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Servidores: implementando janelas de quadro in-loco
 Este artigo explica o que você deve fazer para implementar janelas com moldura no local em seu aplicativo de servidor de edição visual, se você não usar o Assistente de aplicativo para criar o aplicativo de servidor. Em vez de seguir o procedimento descrito neste artigo, você pode usar uma classe de janela com moldura no local existente de um aplicativo gerados pelo Assistente de aplicativo ou um exemplo fornecido com o Visual C++.  
@@ -32,13 +32,13 @@ Este artigo explica o que você deve fazer para implementar janelas com moldura 
   
 1.  Derivar uma classe de janela com moldura no local de `COleIPFrameWnd`.  
   
-    -   Use o `DECLARE_DYNCREATE` macro em seu arquivo de cabeçalho de classe.  
+    -   Use a macro DECLARE_DYNCREATE em seu arquivo de cabeçalho de classe.  
   
-    -   Use o `IMPLEMENT_DYNCREATE` macro em seu arquivo de implementação (. cpp) de classe. Isso permite que os objetos dessa classe a ser criado pela estrutura.  
+    -   Use a macro IMPLEMENT_DYNCREATE em seu arquivo de implementação (. cpp) de classe. Isso permite que os objetos dessa classe a ser criado pela estrutura.  
   
 2.  Declarar um `COleResizeBar` membro da classe de janela do quadro. Isso é necessário se você quiser oferecer suporte ao redimensionamento no local em aplicativos de servidor.  
   
-     Declarar um `OnCreate` manipulador de mensagens (usando o **propriedades** janela) e chame **criar** para sua `COleResizeBar` membro, se você definiu.  
+     Declarar um `OnCreate` manipulador de mensagens (usando o **propriedades** janela) e chame `Create` para sua `COleResizeBar` membro, se você definiu.  
   
 3.  Se você tiver uma barra de ferramentas, declare um `CToolBar` membro da classe de janela do quadro.  
   

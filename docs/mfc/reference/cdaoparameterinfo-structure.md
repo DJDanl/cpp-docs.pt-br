@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e743e7456c185acd100c898cfb946182d63ce63
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ef473912489e9c757574545be2f8a53d7f3f9b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366233"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951592"
 ---
 # <a name="cdaoparameterinfo-structure"></a>Estrutura CDaoParameterInfo
 O `CDaoParameterInfo` estrutura contém informações sobre um objeto de parâmetro definida para os objetos de acesso de dados (DAO).  
@@ -39,11 +39,11 @@ struct CDaoParameterInfo
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `m_strName`  
+ *m_strName*  
  Exclusivamente nomeia o objeto de parâmetro. Para obter mais informações, consulte o tópico "Propriedade de nome" na Ajuda do DAO.  
   
- `m_nType`  
- Um valor que indica o tipo de dados de um objeto de parâmetro. Para obter uma lista dos valores possíveis, consulte o `m_nType` membro o [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) estrutura. Para obter mais informações, consulte o tópico "Propriedade do tipo" na Ajuda do DAO.  
+ *m_nType*  
+ Um valor que indica o tipo de dados de um objeto de parâmetro. Para obter uma lista dos valores possíveis, consulte o *m_nType* membro o [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) estrutura. Para obter mais informações, consulte o tópico "Propriedade do tipo" na Ajuda do DAO.  
   
  *m_varValue*  
  O valor do parâmetro, armazenado em um [COleVariant](../../mfc/reference/colevariant-class.md) objeto.  

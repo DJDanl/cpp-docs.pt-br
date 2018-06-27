@@ -17,35 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c1044c82c2864d71047e4fe3c7461d03a17d9d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7b29d0df8342ce00a2ddb0d46970d9504a06edd8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380104"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956675"
 ---
 # <a name="styles-for-the-progress-control"></a>Estilos para o controle de progresso
-Quando você cria inicialmente o controle de progresso ([CProgressCtrl::Create](../mfc/reference/cprogressctrl-class.md#create)), use o `dwStyle` para especificar os estilos de janela desejado para o controle de andamento. A lista a seguir detalha os estilos de janela aplicável. O controle ignora qualquer estilo de janela diferentes daqueles listados aqui. Você sempre deve criar o controle como uma janela filho, geralmente de um pai de caixa de diálogo.  
+Quando você cria inicialmente o controle de progresso ([CProgressCtrl::Create](../mfc/reference/cprogressctrl-class.md#create)), use o *dwStyle* parâmetro para especificar os estilos de janela desejado para o controle de andamento. A lista a seguir detalha os estilos de janela aplicável. O controle ignora qualquer estilo de janela diferentes daqueles listados aqui. Você sempre deve criar o controle como uma janela filho, geralmente de um pai de caixa de diálogo.  
   
 |Estilo da janela|Efeito|  
 |------------------|------------|  
-|`WS_BORDER`|Cria uma borda em torno da janela.|  
-|**ESTILO**|Cria uma janela filho (sempre deve ser usado para `CProgressCtrl`).|  
-|**WS_CLIPCHILDREN**|Exclui a área ocupada pelas janelas filho ao desenhar dentro da janela pai. Usado quando você cria a janela pai.|  
-|**WS_CLIPSIBLINGS**|Recorta janelas filho relação umas às outras.|  
-|**WS_DISABLED**|Cria uma janela que é inicialmente desabilitada.|  
-|**WS_VISIBLE**|Cria uma janela que é visível inicialmente.|  
-|**WS_TABSTOP**|Especifica que o controle pode receber o foco quando o usuário pressiona a tecla TAB para mover a ele.|  
+|WS_BORDER|Cria uma borda em torno da janela.|  
+|ESTILO|Cria uma janela filho (sempre deve ser usado para `CProgressCtrl`).|  
+|WS_CLIPCHILDREN|Exclui a área ocupada pelas janelas filho ao desenhar dentro da janela pai. Usado quando você cria a janela pai.|  
+|WS_CLIPSIBLINGS|Recorta janelas filho relação umas às outras.|  
+|WS_DISABLED|Cria uma janela que é inicialmente desabilitada.|  
+|WS_VISIBLE|Cria uma janela que é visível inicialmente.|  
+|WS_TABSTOP|Especifica que o controle pode receber o foco quando o usuário pressiona a tecla TAB para mover a ele.|  
   
- Além disso, você pode especificar dois estilos que se aplicam somente para o controle de progresso, `PBS_VERTICAL` e `PBS_SMOOTH`.  
+ Além disso, você pode especificar dois estilos que se aplicam somente para o controle de progresso, PBS_VERTICAL e PBS_SMOOTH.  
   
- Use `PBS_VERTICAL` para orientar o controle verticalmente, em vez de horizontalmente. Use `PBS_SMOOTH` para preencher o controle completamente, em vez de exibir pequenos quadrados delineados que preencher o controle de forma incremental.  
+ Use PBS_VERTICAL para orientar o controle verticalmente, em vez de horizontalmente. Use PBS_SMOOTH para preencher o controle completamente, em vez de exibir pequenos quadrados delineados que preencher o controle de forma incremental.  
   
- Sem `PBS_SMOOTH` estilo:  
+ Sem estilo PBS_SMOOTH:  
   
  ![Estilo de barra de progresso padrão](../mfc/media/vc4ruw1.gif "vc4ruw1")  
   
- Com `PBS_SMOOTH` e `PBS_VERTICAL` estilos:  
+ Com estilos PBS_SMOOTH e PBS_VERTICAL:  
   
  ![Estilo, smooth e vertical de barra de progresso](../mfc/media/vc4ruw2.gif "vc4ruw2")  
   

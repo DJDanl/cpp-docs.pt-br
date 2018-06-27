@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dcaa0aaf903787549cc91ffd19a34aa4aa066bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b558bb373416338f4136a6142ca6d491b28b510
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384704"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951452"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: usando MFC como parte de uma DLL
 Esta anotação descreve DLLs normais do MFC, que permitem que você use a biblioteca do MFC como parte de uma biblioteca de vínculo dinâmico (DLL) do Windows. Ele pressupõe que você esteja familiarizado com DLLs do Windows e como criá-los. Para obter informações sobre DLLs de extensão do MFC, com a qual você pode criar extensões para a biblioteca do MFC, consulte [versão de DLL do MFC](../mfc/tn033-dll-version-of-mfc.md).  
@@ -65,7 +65,7 @@ Esta anotação descreve DLLs normais do MFC, que permitem que você use a bibli
   
  Coloque suas APIs em um cabeçalho separado que pode ser incluído por arquivos C e C++. Consulte o cabeçalho ScreenCap.h no exemplo de conceitos avançados do MFC [DLLScreenCap](../visual-cpp-samples.md) para obter um exemplo. Para exportar suas funções, inseri-los a `EXPORTS` seção do seu arquivo de definição de módulo (. DEF) ou incluir `__declspec(dllexport)` em suas definições de função. Use `__declspec(dllimport)` para importar essas funções para o executável do cliente.  
   
- Você deve adicionar o `AFX_MANAGE_STATE` macro no início de todas as funções exportadas DLLs normais do MFC que vincular dinamicamente a MFC. Esta macro define o estado atual do módulo para o outro para a DLL. Para usar essa macro, adicione a seguinte linha de código para o início da função DLL exportada:  
+ Você deve adicionar a macro AFX_MANAGE_STATE no início de todas as funções exportadas DLLs normais do MFC que vincular dinamicamente a MFC. Esta macro define o estado atual do módulo para o outro para a DLL. Para usar essa macro, adicione a seguinte linha de código para o início da função DLL exportada:  
   
  `AFX_MANAGE_STATE(AfxGetStaticModuleState( ))`  
   

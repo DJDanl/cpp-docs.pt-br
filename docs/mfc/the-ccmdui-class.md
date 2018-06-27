@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dde8c31620f64e6201c59b7031c789caa16c4902
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a857d1cddcc78c7cfff4243b9c99194986af3d9b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379802"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956480"
 ---
 # <a name="the-ccmdui-class"></a>A classe CCmdUI
 Quando ele encaminha a um comando de atualização para seu manipulador, o framework passa o manipulador de um ponteiro para um `CCmdUI` objeto (ou a um objeto de um `CCmdUI`-classe derivada). Esse objeto representa o botão de barra de ferramentas ou item de menu ou outro objeto de interface do usuário que gerou o comando. O manipulador de atualização chama membro funções do `CCmdUI` estrutura através do ponteiro para atualizar o objeto de interface do usuário. Por exemplo, aqui está um manipulador de atualização para o item de menu Limpar tudo:  
   
  [!code-cpp[NVC_MFCDocView#3](../mfc/codesnippet/cpp/the-ccmdui-class_1.cpp)]  
   
- Este manipulador chama o **habilitar** função de membro de um objeto com acesso ao item de menu. **Habilitar** disponibiliza o item.  
+ Este manipulador chama o `Enable` a função de membro de um objeto com acesso ao item de menu. `Enable` o item torna disponível para uso.  
   
 ## <a name="see-also"></a>Consulte também  
  [Como atualizar objetos da interface do usuário](../mfc/how-to-update-user-interface-objects.md)

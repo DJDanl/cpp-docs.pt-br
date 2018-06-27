@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f32b9502d2e8bd1c1483d817b759ca204f5c9c1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 425cbf2f9c769dbbb6cd054b9af6b7f6f5fc9d52
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381141"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954459"
 ---
 # <a name="specifying-levels-of-functionality"></a>Especificando níveis de funcionalidade
 Este artigo descreve como adicionar os seguintes níveis de funcionalidade ao seu [CObject](../mfc/reference/cobject-class.md)-classe derivada:  
@@ -43,26 +43,26 @@ Este artigo descreve como adicionar os seguintes níveis de funcionalidade ao se
   
 1.  Derive a classe de `CObject`, conforme descrito no [derivando uma classe de CObject](../mfc/deriving-a-class-from-cobject.md) artigo.  
   
-2.  Use o `DECLARE_DYNAMIC` macro na sua declaração de classe, conforme mostrado aqui:  
+2.  Use a macro DECLARE_DYNAMIC na sua declaração de classe, conforme mostrado aqui:  
   
      [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]  
   
-3.  Use o `IMPLEMENT_DYNAMIC` macro no arquivo de implementação (. CPP) da sua classe. Esta macro usa como argumentos o nome da classe e sua classe base, da seguinte maneira:  
+3.  Use a macro IMPLEMENT_DYNAMIC no arquivo de implementação (. CPP) da sua classe. Esta macro usa como argumentos o nome da classe e sua classe base, da seguinte maneira:  
   
      [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]  
   
 > [!NOTE]
->  Sempre colocar `IMPLEMENT_DYNAMIC` no arquivo de implementação (. CPP) para a sua classe. O `IMPLEMENT_DYNAMIC` macro deve ser avaliada apenas uma vez durante uma compilação e, portanto, não deve ser usada em um arquivo de interface (. H) que potencialmente pode ser incluído em mais de um arquivo.  
+>  Sempre colocar IMPLEMENT_DYNAMIC no arquivo de implementação (. CPP) para a sua classe. A macro IMPLEMENT_DYNAMIC deve ser avaliada apenas uma vez durante uma compilação e, portanto, não deve ser usada em um arquivo de interface (. H) que potencialmente pode ser incluído em mais de um arquivo.  
   
 #### <a name="_core_to_add_dynamic_creation_support"></a> Para adicionar suporte à criação dinâmica  
   
 1.  Derive a classe de `CObject`.  
   
-2.  Use o `DECLARE_DYNCREATE` macro na declaração da classe.  
+2.  Use a macro DECLARE_DYNCREATE na declaração da classe.  
   
 3.  Defina um construtor sem argumentos (um construtor padrão).  
   
-4.  Use o `IMPLEMENT_DYNCREATE` macro no arquivo de implementação da classe.  
+4.  Use a macro IMPLEMENT_DYNCREATE no arquivo de implementação da classe.  
   
 #### <a name="_core_to_add_serialization_support"></a> Para adicionar suporte de serialização  
   
@@ -73,11 +73,11 @@ Este artigo descreve como adicionar os seguintes níveis de funcionalidade ao se
     > [!NOTE]
     >  Se você chamar `Serialize` diretamente, ou seja, você não deseja serializar o objeto por meio de um ponteiro polimórfico, omita as etapas 3 a 5.  
   
-3.  Use o `DECLARE_SERIAL` macro na declaração da classe.  
+3.  Use a macro DECLARE_SERIAL na declaração da classe.  
   
 4.  Defina um construtor sem argumentos (um construtor padrão).  
   
-5.  Use o `IMPLEMENT_SERIAL` macro no arquivo de implementação da classe.  
+5.  Use a macro IMPLEMENT_SERIAL no arquivo de implementação da classe.  
   
 > [!NOTE]
 >  Um "ponteiro polimórfico" aponta para um objeto de uma classe (chamá-lo um) ou a um objeto de qualquer classe derivada de um (digamos, B). Para serializar através de um ponteiro polimórfico, a estrutura deve determinar a classe de tempo de execução do objeto que ele é serializar (B), como ele pode ser um objeto de qualquer classe derivada de uma classe base (A).  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e35fc33b26fa6bead73458a46d7c4edee1cf136
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58646efaaa0087be2bd73e45acd8ade4a16e9767
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350986"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957085"
 ---
 # <a name="canimationvariablechangehandler-class"></a>Classe CAnimationVariableChangeHandler
 Implementa um retorno de chamada, que é chamado pela API de animação quando o valor de uma variável de animação é alterado.  
@@ -77,16 +77,16 @@ IFACEMETHOD(OnValueChanged) (
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `storyboard`  
+ *storyboard*  
  O storyboard que é a variável de animação.  
   
- `variable`  
+ *variable*  
  A variável de animação que foi atualizada.  
   
- `newValue`  
+ *newValue*  
  O novo valor.  
   
- `previousValue`  
+ *previousValue*  
  O valor anterior.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -100,7 +100,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pAnimationController`  
+ *pAnimationController*  
  Um ponteiro para o controlador de animação, que irá receber eventos.  
   
 ## <a name="see-also"></a>Consulte também  

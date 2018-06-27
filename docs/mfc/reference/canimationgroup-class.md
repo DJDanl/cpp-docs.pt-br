@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11b78cf273fd510b8ce224004c759dcc5bbe3bec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a6a2a65172115d42f984b8f59156d3849692bf8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355627"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955729"
 ---
 # <a name="canimationgroup-class"></a>Classe CAnimationGroup
 Implementa um grupo de animação, que combina um storyboard de animação, objetos de animação e faz a transição para definir uma animação.  
@@ -144,10 +144,10 @@ void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pStoryboard`  
+ *pStoryboard*  
  Um ponteiro para um objeto storyboard COM.  
   
- `bAddDeep`  
+ *bAddDeep*  
  Especifica se esse método deve adicionar para os quadros-chave do storyboard que dependem de outros quadros-chave.  
   
 ##  <a name="addtransitions"></a>  CAnimationGroup::AddTransitions  
@@ -160,10 +160,10 @@ void AddTransitions(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pStoryboard`  
+ *pStoryboard*  
  Um ponteiro para um objeto storyboard COM.  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
   
 ##  <a name="animate"></a>  CAnimationGroup::Animate  
  Anima a um grupo.  
@@ -176,9 +176,9 @@ BOOL Animate(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pManager`  
- `pTimer`  
- `bScheduleNow`  
+ *pManager*  
+ *pTimer*  
+ *bScheduleNow*  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o método for bem-sucedido; Caso contrário, FALSE.  
@@ -204,10 +204,10 @@ CAnimationGroup(CAnimationController* pParentController, UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pParentController`  
+ *pParentController*  
  Um ponteiro para o controlador de animação que cria um grupo.  
   
- `nGroupID`  
+ *nGroupID*  
  Especifica a ID do grupo.  
   
 ##  <a name="createtransitions"></a>  CAnimationGroup::CreateTransitions  
@@ -228,7 +228,7 @@ CAnimationBaseObject* FindAnimationObject(IUIAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pVariable`  
+ *pVariable*  
  Um ponteiro para a variável de animação.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -328,10 +328,10 @@ BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pTimer`  
+ *pTimer*  
  Um ponteiro para o timer de animação.  
   
- `time`  
+ *time*  
  Especifica a hora de agendar a animação.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -348,7 +348,7 @@ void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Especifica como as transições de destruir.  
   
 ### <a name="remarks"></a>Comentários  

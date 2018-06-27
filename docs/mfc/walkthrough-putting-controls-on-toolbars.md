@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c134431500ed3e7b2b2229ea5b4b3da7cac6fa48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 45a04f81ee7419bdf45052f0f1f2746dd7866af8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385077"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957166"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Instruções passo a passo: colocando controles em barras de ferramentas
 Este tópico descreve como adicionar um botão de barra de ferramentas que contém um controle do Windows para uma barra de ferramentas. Em MFC, um botão de barra de ferramentas deve ser um [CMFCToolBarButton classe](../mfc/reference/cmfctoolbarbutton-class.md)-derivado de classe, por exemplo [CMFCToolBarComboBoxButton classe](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [CMFCToolBarEditBoxButton classe](../mfc/reference/cmfctoolbareditboxbutton-class.md), [CMFCDropDownToolbarButton classe](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), ou [CMFCToolBarMenuButton classe](../mfc/reference/cmfctoolbarmenubutton-class.md).  
@@ -32,7 +32,7 @@ Este tópico descreve como adicionar um botão de barra de ferramentas que cont�
   
 2.  Reserve uma imagem da barra de ferramentas (ícone do botão) para o botão em todos os bitmaps da barra de ferramentas do pai.  
   
-3.  No manipulador de mensagens que processa o `AFX_WM_RESETTOOLBAR` da mensagem, faça o seguinte:  
+3.  No manipulador de mensagens que processa a mensagem AFX_WM_RESETTOOLBAR, faça o seguinte:  
   
     1.  Construir o controle de botão usando um `CMFCToolbarButton`-classe derivada.  
   
@@ -47,7 +47,7 @@ Este tópico descreve como adicionar um botão de barra de ferramentas que cont�
  Quando você habilita a personalização, você cria o **personalizar** caixa de diálogo no manipulador de personalização `OnViewCustomize` usando o [CMFCToolBarsCustomizeDialog classe](../mfc/reference/cmfctoolbarscustomizedialog-class.md) classe. Antes de exibir o **personalizar** caixa de diálogo chamando [CMFCToolBarsCustomizeDialog::Create](../mfc/reference/cmfctoolbarscustomizedialog-class.md#create), chame [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) para substituir o botão padrão com o novo controle.  
   
 ## <a name="example-creating-a-find-combo-box"></a>Exemplo: Criando uma caixa de combinação localizar  
- Esta seção descreve como criar um `Find` controle de caixa de combinação que aparece na barra de ferramentas e contém cadeias de caracteres de pesquisa usados recentemente. O usuário pode digitar uma cadeia de caracteres no controle e, em seguida, pressione a tecla enter para pesquisar um documento ou pressione escape para retornar o foco para o quadro principal. Este exemplo supõe que o documento é exibido em uma [CEditView classe](../mfc/reference/ceditview-class.md)-derivado de exibição.  
+ Esta seção descreve como criar um **localizar** controle de caixa de combinação que aparece na barra de ferramentas e contém cadeias de caracteres de pesquisa usados recentemente. O usuário pode digitar uma cadeia de caracteres no controle e, em seguida, pressione a tecla enter para pesquisar um documento ou pressione escape para retornar o foco para o quadro principal. Este exemplo supõe que o documento é exibido em uma [CEditView classe](../mfc/reference/ceditview-class.md)-derivado de exibição.  
   
 ### <a name="creating-the-find-control"></a>Criando o controle de localização  
  Primeiro, crie o `Find` controle caixa de combinação:  
@@ -65,9 +65,9 @@ Este tópico descreve como adicionar um botão de barra de ferramentas que cont�
   
 2.  Criar uma nova classe, `CFindComboBox`, derivada de [classe CComboBox](../mfc/reference/ccombobox-class.md).  
   
-3.  No `CFindComboBox` classe, substitua o `PreTranslateMessage` método virtual. Este método permitirá que a caixa de combinação processar o [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) mensagem. Se o usuário pressiona a tecla escape (`VK_ESCAPE`), retorna o foco para a janela do quadro principal. Se o usuário pressiona a tecla Enter (`VK_ENTER`), post para a janela do quadro principal um `WM_COMMAND` mensagem que contém o `ID_EDIT_FIND_COMBO` comando ID.  
+3.  No `CFindComboBox` classe, substitua o `PreTranslateMessage` método virtual. Este método permitirá que a caixa de combinação processar o [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) mensagem. Se o usuário pressiona a tecla escape (`VK_ESCAPE`), retorna o foco para a janela do quadro principal. Se o usuário pressiona a tecla Enter (`VK_ENTER`), postar uma mensagem WM_COMMAND que contém a janela do quadro principal a `ID_EDIT_FIND_COMBO` comando ID.  
   
-4.  Crie uma classe para o `Find` botão da caixa de combinação, derivado do [CMFCToolBarComboBoxButton classe](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). Neste exemplo, o nome usado é `CFindComboButton`.  
+4.  Crie uma classe para o **localizar** botão da caixa de combinação, derivado do [CMFCToolBarComboBoxButton classe](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). Neste exemplo, o nome usado é `CFindComboButton`.  
   
 5.  O construtor de `CMFCToolbarComboBoxButton` usa três parâmetros: a ID de comando do botão, o índice de imagem do botão e o estilo da caixa de combinação. Defina esses parâmetros da seguinte maneira:  
   
@@ -81,9 +81,9 @@ Este tópico descreve como adicionar um botão de barra de ferramentas que cont�
   
 7.  Use o [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) macro para que o botão de combinação persistente. O Gerenciador de espaço de trabalho automaticamente carrega e salva o estado do botão no registro do Windows.  
   
-8.  Implementar o `ID_EDIT_FIND_COMBO` manipulador no modo de exibição de documento. Use [CMFCToolBar::GetCommandButtons](../mfc/reference/cmfctoolbar-class.md#getcommandbuttons) com `ID_EDIT_FIND_COMBO` para recuperar todas `Find` botões da caixa de combinação. Pode haver várias cópias de um botão com a mesma ID de comando devido a personalização.  
+8.  Implementar o `ID_EDIT_FIND_COMBO` manipulador no modo de exibição de documento. Use [CMFCToolBar::GetCommandButtons](../mfc/reference/cmfctoolbar-class.md#getcommandbuttons) com `ID_EDIT_FIND_COMBO` para recuperar todos os **localizar** botões da caixa de combinação. Pode haver várias cópias de um botão com a mesma ID de comando devido a personalização.  
   
-9. No manipulador de mensagens ID_EDIT_FIND `OnFind`, use [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) para determinar se o comando Localizar foi enviado do `Find` botão da caixa de combinação. Nesse caso, localizar o texto e adicione a cadeia de caracteres de pesquisa à caixa de combinação.  
+9. No manipulador de mensagens ID_EDIT_FIND `OnFind`, use [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) para determinar se o comando Localizar foi enviado do **localizar** botão da caixa de combinação. Nesse caso, localizar o texto e adicione a cadeia de caracteres de pesquisa à caixa de combinação.  
   
 ### <a name="adding-the-find-control-to-the-main-toolbar"></a>Adicionar o controle de localizar a barra de ferramentas principal  
  Para adicionar o botão de caixa de combinação na barra de ferramentas, siga estas etapas:  
@@ -91,15 +91,15 @@ Este tópico descreve como adicionar um botão de barra de ferramentas que cont�
 1.  Implementar o `AFX_WM_RESETTOOLBAR` manipulador de mensagens `OnToolbarReset` na janela do quadro principal.  
   
     > [!NOTE]
-    >  A estrutura envia essa mensagem para a janela do quadro principal quando uma barra de ferramentas é inicializada durante a inicialização do aplicativo, ou quando uma barra de ferramentas é redefinida durante a personalização. Em ambos os casos, você deve substituir o botão da barra de ferramentas padrão com personalizado `Find` botão da caixa de combinação.  
+    >  A estrutura envia essa mensagem para a janela do quadro principal quando uma barra de ferramentas é inicializada durante a inicialização do aplicativo, ou quando uma barra de ferramentas é redefinida durante a personalização. Em ambos os casos, você deve substituir o botão da barra de ferramentas padrão com personalizado **localizar** botão da caixa de combinação.  
   
-2.  No `AFX_WM_RESETTOOLBAR` manipulador, examine a ID de barra de ferramentas, ou seja, o `WPARAM` do `AFX_WM_RESETTOOLBAR` mensagem. Se a ID de barra de ferramentas é igual da barra de ferramentas que contém o `Find` botão da caixa de combinação, chamada [CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton) para substituir o `Find` botão (ou seja, o botão com a ID de comando `ID_EDIT_FIND)` com um `CFindComboButton` objeto.  
+2.  No `AFX_WM_RESETTOOLBAR` manipulador, examine a ID de barra de ferramentas, ou seja, o *WPARAM* da mensagem AFX_WM_RESETTOOLBAR. Se a ID de barra de ferramentas é igual da barra de ferramentas que contém o **localizar** botão da caixa de combinação, chamada [CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton) para substituir o **localizar** botão (ou seja, o botão com a ID de comando `ID_EDIT_FIND)` com um `CFindComboButton` objeto.  
   
     > [!NOTE]
     >  Você pode construir um `CFindComboBox` o objeto na pilha, pois `ReplaceButton` copia o objeto de botão e mantém a cópia.  
   
 ### <a name="adding-the-find-control-to-the-customize-dialog-box"></a>Adicionar o controle de localizar a caixa de diálogo Personalizar  
- No manipulador de personalização `OnViewCustomize`, chame [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) para substituir o `Find` botão (ou seja, o botão com a ID de comando `ID_EDIT_FIND)` com um `CFindComboButton` objeto.  
+ No manipulador de personalização `OnViewCustomize`, chame [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) para substituir o **localizar** botão (ou seja, o botão com a ID de comando `ID_EDIT_FIND)` com um `CFindComboButton` objeto.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico de hierarquia](../mfc/hierarchy-chart.md)   

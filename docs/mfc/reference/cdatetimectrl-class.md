@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80b63c6bd44b6d3606b7807913f1e3ae1b4e33f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f53d96c6b4c30b79d9724421debd7ccc989b64f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372324"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955697"
 ---
 # <a name="cdatetimectrl-class"></a>Classe CDateTimeCtrl
 Encapsula a funcionalidade de um controle de seletor de data e hora.  
@@ -132,7 +132,7 @@ void CloseMonthCal() const;
  Esse método envia o [DTM_CLOSEMONTHCAL](http://msdn.microsoft.com/library/windows/desktop/bb761753) mensagem, que é descrita no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
- O exemplo de código a seguir define a variável `m_dateTimeCtrl`, que é usado para acessar programaticamente o controle de seletor de data e hora. Essa variável é usada no exemplo a seguir.  
+ O exemplo de código a seguir define a variável, *m_dateTimeCtrl*, que é usado para acessar programaticamente o controle de seletor de data e hora. Essa variável é usada no exemplo a seguir.  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
@@ -153,16 +153,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwStyle`  
+ *dwStyle*  
  Especifica a combinação de estilos de controle de tempo de data. Consulte [data e hora estilos de controle de seletor](http://msdn.microsoft.com/library/windows/desktop/bb761728) no SDK do Windows para obter mais informações sobre estilos de seletor de data e hora.  
   
- `rect`  
+ *Rect*  
  Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura, que é a posição e o tamanho do controle de seletor de data e hora.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle de seletor de data e hora. Ele não deve ser **nulo**.  
   
- `nID`  
+ *nID*  
  Especifica a ID de controle de. Data e hora seletor do controle  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -192,7 +192,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[out] `pDateTimePickerInfo`|Um ponteiro para um [DATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761729) estrutura que recebe uma descrição do que o controle de seletor de data e hora atual.<br /><br /> O chamador é responsável pela alocação essa estrutura. No entanto, esse método inicializa o `cbSize` membro da estrutura.|  
+|[out] *pDateTimePickerInfo*|Um ponteiro para um [DATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761729) estrutura que recebe uma descrição do que o controle de seletor de data e hora atual.<br /><br /> O chamador é responsável pela alocação essa estrutura. No entanto, esse método inicializa o *cbSize* membro da estrutura.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` Se esse método for bem-sucedida; Caso contrário, `false`.  
@@ -201,7 +201,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
  Esse método envia o [DTM_GETDATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761755) mensagem, que é descrita no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
- O exemplo de código a seguir define a variável `m_dateTimeCtrl`, que é usado para acessar programaticamente o controle de seletor de data e hora. Essa variável é usada no exemplo a seguir.  
+ O exemplo de código a seguir define a variável, *m_dateTimeCtrl*, que é usado para acessar programaticamente o controle de seletor de data e hora. Essa variável é usada no exemplo a seguir.  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
@@ -218,8 +218,8 @@ COLORREF GetMonthCalColor(int iColor) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `iColor`  
- Um `int` valor que especifica qual área de cor do calendário de mês para recuperar. Para obter uma lista de valores, consulte o `iColor` parâmetro [SetMonthCalColor](#setmonthcalcolor).  
+ *iColor*  
+ Um **int** valor que especifica qual área de cor do calendário de mês para recuperar. Para obter uma lista de valores, consulte o *iColor* parâmetro [SetMonthCalColor](#setmonthcalcolor).  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um **COLORREF** valor que representa a configuração de cor para a parte especificada do controle de calendário do mês, se for bem-sucedido. A função retornará -1 se não houver êxito.  
@@ -286,10 +286,10 @@ DWORD GetRange(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pMinRange`  
+ *pMinRange*  
  Um ponteiro para um [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objeto ou um [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que contém a hora mais antiga permitida no `CDateTimeCtrl` objeto.  
   
- `pMaxRange`  
+ *pMaxRange*  
  Um ponteiro para um `COleDateTime` objeto ou um `CTime` objeto que contém a hora mais recente permitida no `CDateTimeCtrl` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -326,12 +326,12 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
  Um ponteiro para o [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura para receber as informações de hora do sistema. Não deve ser **nulo**.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Na primeira versão, diferente de zero se a hora é gravada com êxito o `COleDateTime` objeto; caso contrário, 0. Nas versões do segunda e terceira, um `DWORD` valor igual ao **Dwfrag** conjunto de membros de [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) estrutura. Consulte o **comentários** seção abaixo para obter mais informações.  
+ Na primeira versão, diferente de zero se a hora é gravada com êxito o `COleDateTime` objeto; caso contrário, 0. Nas versões do segunda e terceira, um `DWORD` valor igual ao *Dwfrag* conjunto de membros de [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) estrutura. Consulte o **comentários** seção abaixo para obter mais informações.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função de membro implementa o comportamento da mensagem de Win32 [DTM_GETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761769), conforme descrito no SDK do Windows. Na implementação do MFC **GetTime**, você pode usar `COleDateTime` ou `CTime` classes, ou você pode usar um `SYSTEMTIME` estrutura, para armazenar as informações de tempo.  
+ Essa função de membro implementa o comportamento da mensagem de Win32 [DTM_GETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761769), conforme descrito no SDK do Windows. Na implementação do MFC `GetTime`, você pode usar `COleDateTime` ou `CTime` classes, ou você pode usar um `SYSTEMTIME` estrutura, para armazenar as informações de tempo.  
   
- O valor de retorno `DWORD` nas versões do segunda e terceira, acima, indica se o controle de seletor de data e hora é definido como o status de "nenhuma data", conforme indicado no [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) membro de estrutura `dwFlags`. Se o valor retornado é igual a **GDT_NONE**, o controle é definido para o status de "nenhuma data" e usa o **DTS_SHOWNONE** estilo. Se o valor retornado é igual a **GDT_VALID**, a hora do sistema com êxito é armazenada no local de destino.  
+ O valor de retorno `DWORD` nas versões do segunda e terceira, acima, indica se o controle de seletor de data e hora é definido como o status de "nenhuma data", conforme indicado no [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) membro de estrutura  *dwFlags*. Se o valor retornado é igual a **GDT_NONE**, o controle é definido para o status de "nenhuma data" e usa o **DTS_SHOWNONE** estilo. Se o valor retornado é igual a **GDT_VALID**, a hora do sistema com êxito é armazenada no local de destino.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_8.cpp)]  
@@ -347,7 +347,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[out] `psize`|Ponteiro para um [tamanho](http://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura que contém o tamanho ideal para o controle.|  
+|[out] *psize*|Ponteiro para um [tamanho](http://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura que contém o tamanho ideal para o controle.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  O valor retornado é sempre `true`.  
@@ -356,7 +356,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
  Esse método envia o [DTM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb761757) mensagem, que é descrita no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
- O exemplo de código a seguir define a variável `m_dateTimeCtrl`, que é usado para acessar programaticamente o controle de seletor de data e hora. Essa variável é usada no exemplo a seguir.  
+ O exemplo de código a seguir define a variável, *m_dateTimeCtrl*, que é usado para acessar programaticamente o controle de seletor de data e hora. Essa variável é usada no exemplo a seguir.  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
@@ -398,8 +398,8 @@ COLORREF SetMonthCalColor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `iColor`  
- `int` valor que especifica qual área do controle de calendário de mês para definir. Esse valor pode ser uma das seguintes opções:  
+ *iColor*  
+ **int** valor que especifica qual área do controle de calendário de mês para definir. Esse valor pode ser uma das seguintes opções:  
   
 |Valor|Significado|  
 |-----------|-------------|  
@@ -410,7 +410,7 @@ COLORREF SetMonthCalColor(
 |MCSC_TITLETEXT|Defina a cor usada para exibir texto no título do calendário.|  
 |MCSC_TRAILINGTEXT|Define a cor usada para exibir o cabeçalho e o texto do dia à direita. Dias seguinte e anterior são os dias dos meses anteriores e seguintes exibidos no calendário atual.|  
   
- `ref`  
+ *ref*  
  Um **COLORREF** valor que representa a cor que será definida para a área especificada de calendário mensal.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -432,10 +432,10 @@ void SetMonthCalFont(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `hFont`  
+ *hFont*  
  Identificador para a fonte que será definida.  
   
- `bRedraw`  
+ *bRedraw*  
  Especifica se o controle deve ser redesenhado imediatamente após a definição da fonte. Definir esse parâmetro para **TRUE** faz com que o controle redesenhado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -445,7 +445,7 @@ void SetMonthCalFont(
  [!code-cpp[NVC_MFC_CDateTimeCtrl#7](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_11.cpp)]  
   
 > [!NOTE]
->  Se você usar esse código, você desejará tornar um membro de seu `CDialog`-chamado de classe derivada `m_MonthFont` do tipo **CFont**.  
+>  Se você usar esse código, você desejará tornar um membro de seu `CDialog`-chamado de classe derivada *m_MonthFont* do tipo `CFont`.  
   
 ##  <a name="setmonthcalstyle"></a>  CDateTimeCtrl::SetMonthCalStyle  
  Define o estilo do controle de calendário de mês suspenso que está associado com o controle de seletor de data e hora atual.  
@@ -458,7 +458,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `dwStyle`|Estilo de controle, que é uma combinação bit a bit (ou) de estilos de controle de calendário do mês do calendário de um novo mês. Para obter mais informações, consulte [estilos de controle de calendário de mês](http://msdn.microsoft.com/library/windows/desktop/bb760919).|  
+|[in] *dwStyle*|Estilo de controle, que é uma combinação bit a bit (ou) de estilos de controle de calendário do mês do calendário de um novo mês. Para obter mais informações, consulte [estilos de controle de calendário de mês](http://msdn.microsoft.com/library/windows/desktop/bb760919).|  
   
 ### <a name="return-value"></a>Valor de retorno  
  O estilo anterior do controle de calendário de mês de lista suspensa.  
@@ -467,7 +467,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
  Esse método envia o [DTM_SETMCSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb761778) mensagem, que é descrita no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
- O exemplo de código a seguir define a variável `m_dateTimeCtrl`, que é usado para acessar programaticamente o controle de seletor de data e hora. Essa variável é usada no exemplo a seguir.  
+ O exemplo de código a seguir define a variável, *m_dateTimeCtrl*, que é usado para acessar programaticamente o controle de seletor de data e hora. Essa variável é usada no exemplo a seguir.  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
@@ -491,10 +491,10 @@ BOOL SetRange(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pMinRange`  
+ *pMinRange*  
  Um ponteiro para um [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objeto ou um [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que contém a hora mais antiga permitida no `CDateTimeCtrl` objeto.  
   
- `pMaxRange`  
+ *pMaxRange*  
  Um ponteiro para um `COleDateTime` objeto ou um `CTime` objeto que contém a hora mais recente permitida no `CDateTimeCtrl` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -526,7 +526,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função de membro implementa o comportamento da mensagem de Win32 [DTM_SETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761782), conforme descrito no SDK do Windows. Na implementação do MFC **SetTime**, você pode usar o `COleDateTime` ou `CTime` classes, ou você pode usar um `SYSTEMTIME` estrutura para definir as informações de tempo.  
+ Essa função de membro implementa o comportamento da mensagem de Win32 [DTM_SETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761782), conforme descrito no SDK do Windows. Na implementação do MFC `SetTime`, você pode usar o `COleDateTime` ou `CTime` classes, ou você pode usar um `SYSTEMTIME` estrutura para definir as informações de tempo.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#8](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_13.cpp)]  

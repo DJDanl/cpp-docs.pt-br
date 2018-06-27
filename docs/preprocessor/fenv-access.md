@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f74f20b1dcb20c1449d21e91181f8bfb17075b7e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2f6f379e61ea84c1142bd94be49b55a50b28753
+ms.sourcegitcommit: 1ac8f983eeaacd09135a249dea00f10e1c94e0e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912960"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36963317"
 ---
 # <a name="fenvaccess"></a>fenv_access
 
-Desabilita (**na**) ou permite (**off*) otimizações que podem alterar o ambiente de ponto flutuante sinalizador testes e alterações de modo.
+Desabilita (**na**) ou permite (**off**) otimizações que podem alterar o ambiente de ponto flutuante sinalizador testes e alterações de modo.
 
 ## <a name="syntax"></a>Sintaxe
 

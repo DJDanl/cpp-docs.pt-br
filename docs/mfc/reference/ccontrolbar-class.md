@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 443e55ab69bc9585a780374a82d5d99b0fd9eef9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6eb567babdea0d747e6b684f6373403cb685c6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356026"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956662"
 ---
 # <a name="ccontrolbar-class"></a>Classe CControlBar
 A classe base para as classes da barra de controle [CStatusBar](../../mfc/reference/cstatusbar-class.md), [CToolBar](../../mfc/reference/ctoolbar-class.md), [CDialogBar](../../mfc/reference/cdialogbar-class.md), [CReBar](../../mfc/reference/crebar-class.md), e [ COleResizeBar](../../mfc/reference/coleresizebar-class.md).  
@@ -141,21 +141,21 @@ virtual CSize CalcDynamicLayout(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nLength`  
- A dimensão solicitada da barra de controle, horizontal ou verticalmente, dependendo da `dwMode`.  
+ *nLength*  
+ A dimensão solicitada da barra de controle, horizontal ou verticalmente, dependendo da *dwMode*.  
   
- `nMode`  
+ *nMode*  
  Os seguintes sinalizadores predefinidos são usados para determinar a altura e largura da barra de controle dinâmico. Use o OR bit a bit (&#124;) operador para combinar os sinalizadores.  
   
 |Sinalizadores de modo de layout|O que significa|  
 |-----------------------|-------------------|  
-|`LM_STRETCH`|Indica se a barra de controle deve ser estendida para o tamanho do quadro. Defina se a barra não é uma barra de encaixe (não disponível para encaixar). Não defina quando a barra estiver encaixado ou flutuante (disponível para encaixar). Se definido, `LM_STRETCH` ignora `nLength` e retorna as dimensões com base no `LM_HORZ` estado. `LM_STRETCH` funciona da mesma forma que o `bStretch` parâmetro usado em [CalcFixedLayout](#calcfixedlayout); consulte essa função de membro para obter mais informações sobre a relação entre ampliar e orientação.|  
-|`LM_HORZ`|Indica que a barra é orientada horizontal ou verticalmente. Defina se a barra é orientada horizontal, e se ele é orientado verticalmente, ele não está definido. `LM_HORZ` funciona da mesma forma que o `bHorz` parâmetro usado em [CalcFixedLayout](#calcfixedlayout); consulte essa função de membro para obter mais informações sobre a relação entre ampliar e orientação.|  
-|**LM_MRUWIDTH**|Usado mais recentemente largura dinâmica. Ignora `nLength` parâmetro e usa o lembrados largura usado mais recentemente.|  
-|`LM_HORZDOCK`|Horizontal encaixado dimensões. Ignora `nLength` parâmetro e retorna o tamanho dinâmico com a maior largura.|  
-|`LM_VERTDOCK`|Vertical encaixado dimensões. Ignora `nLength` parâmetro e retorna o tamanho dinâmico com a altura maior.|  
-|`LM_LENGTHY`|Defina se `nLength` indica a altura (direção Y) em vez de largura.|  
-|`LM_COMMIT`|Redefine **LM_MRUWIDTH** a largura atual da barra de controle flutuante.|  
+|`LM_STRETCH`|Indica se a barra de controle deve ser estendida para o tamanho do quadro. Defina se a barra não é uma barra de encaixe (não disponível para encaixar). Não defina quando a barra estiver encaixado ou flutuante (disponível para encaixar). Se definido, `LM_STRETCH` ignora *nLength* e retorna as dimensões com base no `LM_HORZ` estado. `LM_STRETCH` funciona da mesma forma que o *bStretch* parâmetro usado em [CalcFixedLayout](#calcfixedlayout); consulte essa função de membro para obter mais informações sobre a relação entre ampliar e orientação.|  
+|`LM_HORZ`|Indica que a barra é orientada horizontal ou verticalmente. Defina se a barra é orientada horizontal, e se ele é orientado verticalmente, ele não está definido. `LM_HORZ` funciona da mesma forma que o *bHorz* parâmetro usado em [CalcFixedLayout](#calcfixedlayout); consulte essa função de membro para obter mais informações sobre a relação entre ampliar e orientação.|  
+|`LM_MRUWIDTH`|Usado mais recentemente largura dinâmica. Ignora *nLength* parâmetro e usa o lembrados largura usado mais recentemente.|  
+|`LM_HORZDOCK`|Horizontal encaixado dimensões. Ignora *nLength* parâmetro e retorna o tamanho dinâmico com a maior largura.|  
+|`LM_VERTDOCK`|Vertical encaixado dimensões. Ignora *nLength* parâmetro e retorna o tamanho dinâmico com a altura maior.|  
+|`LM_LENGTHY`|Defina se *nLength* indica a altura (direção Y) em vez de largura.|  
+|`LM_COMMIT`|Redefine `LM_MRUWIDTH` a largura atual da barra de controle flutuante.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  A barra de controle de tamanho, em pixels, de um [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.  
@@ -173,11 +173,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bStretch`  
- Indica se a barra deve ser estendida para o tamanho do quadro. O `bStretch` parâmetro é diferente de zero quando a barra não é uma barra de encaixe (não disponível para encaixar) e é 0 quando ele está encaixado ou flutuante (disponível para encaixar).  
+ *bStretch*  
+ Indica se a barra deve ser estendida para o tamanho do quadro. O *bStretch* parâmetro é diferente de zero quando a barra não é uma barra de encaixe (não disponível para encaixar) e é 0 quando ele está encaixado ou flutuante (disponível para encaixar).  
   
- `bHorz`  
- Indica que a barra é orientada horizontal ou verticalmente. O `bHorz` parâmetro é diferente de zero se a barra é orientada horizontal e é 0 se for orientação vertical.  
+ *bHorz*  
+ Indica que a barra é orientada horizontal ou verticalmente. O *bHorz* parâmetro é diferente de zero se a barra é orientada horizontal e é 0 se for orientação vertical.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A barra de controle de tamanho, em pixels, de um `CSize` objeto.  
@@ -185,7 +185,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="remarks"></a>Comentários  
  Barras de controle, como barras de ferramentas podem ampliar horizontalmente ou verticalmente acomodar os botões contidos na barra de controle.  
   
- Se `bStretch` é **TRUE**, Alongar dimensão a orientação fornecida pelo `bHorz`. Em outras palavras, se `bHorz` é **FALSE**, a barra de controle é ampliada verticalmente. Se `bStretch` é **FALSE**, nenhum stretch ocorre. A tabela a seguir mostra os estilos de barra de controle resultante e a possíveis permutações de `bStretch` e `bHorz`.  
+ Se *bStretch* é **TRUE**, alongar a dimensão ao longo da orientação fornecida pelo *bHorz*. Em outras palavras, se *bHorz* é **FALSE**, a barra de controle é ampliada verticalmente. Se *bStretch* é **FALSE**, nenhum stretch ocorre. A tabela a seguir mostra os estilos de barra de controle resultante e a possíveis permutações de *bStretch* e *bHorz*.  
   
 |bStretch|bHorz|Ampliar|{1&gt;Orientação&lt;1}|Encaixe de encaixe ou não|  
 |--------------|-----------|----------------|-----------------|--------------------------|  
@@ -204,11 +204,11 @@ virtual void CalcInsideRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `rect`  
+ *Rect*  
  Contém as dimensões atuais da barra de controle; incluindo as bordas.  
   
- `bHorz`  
- Indica que a barra é orientada horizontal ou verticalmente. O `bHorz` parâmetro é diferente de zero se a barra é orientada horizontal e é 0 se for orientação vertical.  
+ *bHorz*  
+ Indica que a barra é orientada horizontal ou verticalmente. O *bHorz* parâmetro é diferente de zero se a barra é orientada horizontal e é 0 se for orientação vertical.  
   
 ### <a name="remarks"></a>Comentários  
  Essa função é chamada antes que a barra de controle é pintada.  
@@ -230,7 +230,7 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDC`  
+ *pDC*  
  Aponta para o contexto de dispositivo a ser usado para a renderização de bordas e da alça da barra de controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -248,10 +248,10 @@ virtual void DrawBorders(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDC`  
+ *pDC*  
  Aponta para o contexto de dispositivo a ser usado para a renderização de bordas da barra de controle.  
   
- `rect`  
+ *Rect*  
  Um `CRect` objeto que contém as dimensões da barra de controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -267,10 +267,10 @@ virtual void DrawGripper(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDC`  
+ *pDC*  
  Aponta para o contexto de dispositivo a ser usado para renderizar a alça da barra de controle.  
   
- `rect`  
+ *Rect*  
  Um `CRect` objeto que contém as dimensões da garra de barra de controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -284,7 +284,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwDockStyle`  
+ *dwDockStyle*  
  Especifica se a barra de controle oferece suporte de encaixe e os lados da sua janela pai à qual a barra de controle pode ser encaixada, se houver suporte. Pode ser um ou mais dos seguintes:  
   
 - `CBRS_ALIGN_TOP` Permite que o encaixe na parte superior da área cliente.  
@@ -325,7 +325,7 @@ CRect GetBorders() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um `CRect` objeto que contém a largura atual (em pixels) de cada lado do objeto de barra de controle. Por exemplo, o valor da `left` membro, de [CRect](../../atl-mfc-shared/reference/crect-class.md) de objeto, é a largura da borda esquerda.  
+ Um `CRect` objeto que contém a largura atual (em pixels) de cada lado do objeto de barra de controle. Por exemplo, o valor da *esquerdo* membro, de [CRect](../../atl-mfc-shared/reference/crect-class.md) de objeto, é a largura da borda esquerda.  
   
 ##  <a name="getcount"></a>  CControlBar::GetCount  
  Retorna o número de não - `HWND` itens no `CControlBar` objeto.  
@@ -376,9 +376,9 @@ BOOL m_bAutoDelete;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- `m_bAutoDelete` é uma variável pública do tipo **BOOL**.  
+ *m_bAutoDelete* é uma variável pública do tipo **BOOL**.  
   
- Um objeto de barra de controle geralmente é inserido em um objeto de janela do quadro. Nesse caso, `m_bAutoDelete` é 0 porque o objeto de barra de controle inserido é destruído quando a janela do quadro é destruída.  
+ Um objeto de barra de controle geralmente é inserido em um objeto de janela do quadro. Nesse caso, *m_bAutoDelete* é 0 porque o objeto de barra de controle inserido é destruído quando a janela do quadro é destruída.  
   
  Definir essa variável como um valor diferente de zero, se você alocar um `CControlBar` objeto no heap e você não planeja chamar **excluir**.  
   
@@ -399,10 +399,10 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pTarget`  
+ *pTarget*  
  Aponta para a janela do quadro principal do aplicativo. Esse ponteiro é usado para roteamento de mensagens de atualização.  
   
- `bDisableIfNoHndler`  
+ *bDisableIfNoHndler*  
  Sinalizador que indica se um controle que não possui nenhum manipulador de atualização deve ser exibido automaticamente como desabilitado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -418,7 +418,7 @@ void SetBarStyle(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwStyle`  
+ *dwStyle*  
  Os estilos desejados para a barra de controle. Pode ser um ou mais dos seguintes:  
   
 - `CBRS_ALIGN_TOP` Permite que a barra de controle para ser encaixado à parte superior da área cliente de uma janela do quadro.  
@@ -445,7 +445,7 @@ void SetBarStyle(DWORD dwStyle);
   
 - `CBRS_FLYBY` Faz com que o texto da mensagem a ser atualizados ao mesmo tempo como dicas de ferramenta.  
   
-- **CBRS_GRIPPER** faz com que uma garra semelhante àquela usada em faixas em um **CReBar** objeto a ser desenhada para qualquer `CControlBar`-classe derivada.  
+- `CBRS_GRIPPER` Faz com que uma garra semelhante àquela usada em faixas em um `CReBar` objeto a ser desenhada para qualquer `CControlBar`-classe derivada.  
   
 ### <a name="remarks"></a>Comentários  
  Não afeta o **WS_** configurações (estilo da janela).  
@@ -476,7 +476,7 @@ void SetBorders(LPCRECT lpRect);
  *cyBottom*  
  A altura (em pixels) da borda de parte inferior da barra de controle.  
   
- `lpRect`  
+ *lpRect*  
  Um ponteiro para um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que contém a largura atual (em pixels) de cada borda do objeto de barra de controle.  
   
 ### <a name="example"></a>Exemplo  
@@ -492,7 +492,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWnd`  
+ *pWnd*  
  Um ponteiro para um `CWnd` objeto.  
   
 ### <a name="remarks"></a>Comentários  

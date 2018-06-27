@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ef1c1a328b785c189a2d7d4a2eb28ec3995a810
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358349"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952174"
 ---
 # <a name="cbitmapbutton-class"></a>Classe CBitmapButton
 Cria os controles de botão de pressão rotulados com imagens de bitmap em vez de texto.  
@@ -98,7 +98,7 @@ class CBitmapButton : public CButton
   
 6.  No `CDialog` do objeto [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) rotina, chamada de `CBitmapButton` do objeto [AutoLoad](#autoload) funcionar, usando como parâmetros de ID de controle do botão e o `CDialog` objeto **isso** ponteiro.  
   
- Se você desejar tratar mensagens de notificação do Windows, como **BN_CLICKED**, enviado por um controle de botão de bitmap para seu pai (geralmente uma classe derivada de **CDialog)**, adicionar ao `CDialog`-derivado um mapa de mensagem manipulador de mensagens e de entrada de função de membro para cada mensagem do objeto. As notificações enviadas por uma `CBitmapButton` objeto são iguais àquelas enviadas por uma [CButton](../../mfc/reference/cbutton-class.md) objeto.  
+ Se você desejar tratar mensagens de notificação do Windows, como BN_CLICKED, enviado por um controle de botão de bitmap para seu pai (geralmente uma classe derivada de `CDialog`), adicionar ao `CDialog`-objeto derivado um membro de entrada e o manipulador de mensagens do mapa de mensagem função para cada mensagem. As notificações enviadas por uma `CBitmapButton` objeto são iguais àquelas enviadas por uma [CButton](../../mfc/reference/cbutton-class.md) objeto.  
   
  A classe [CToolBar](../../mfc/reference/ctoolbar-class.md) adota uma abordagem diferente para os botões de bitmap.  
   
@@ -128,10 +128,10 @@ BOOL AutoLoad(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nID`  
+ *nID*  
  ID de controle. do botão  
   
- `pParent`  
+ *pParent*  
  Ponteiro para o objeto que possui o botão.  
   
 ### <a name="return-value"></a>Valor de retorno  

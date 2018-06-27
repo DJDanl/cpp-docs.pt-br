@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85e59173ec330d0a5abb968225ce6b2e12263948
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367029"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954059"
 ---
 # <a name="cdaoindexinfo-structure"></a>Estrutura CDaoIndexInfo
 O `CDaoIndexInfo` estrutura contém informações sobre um objeto de índice definida para os objetos de acesso de dados (DAO).  
@@ -48,14 +48,14 @@ struct CDaoIndexInfo {
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `m_strName`  
+ *m_strName*  
  Exclusivamente nomeia o objeto de campo. Para obter detalhes, consulte o tópico "Propriedade de nome" na Ajuda do DAO.  
   
- `m_pFieldInfos`  
+ *m_pFieldInfos*  
  Um ponteiro para uma matriz de [CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md) objetos indicando quais campos tabledef ou conjunto de registros são campos de chave em um índice. Cada objeto identifica um campo no índice. A ordem de índice padrão é crescente. Um objeto de índice pode ter um ou mais campos que representam as chaves de índice para cada registro. Eles podem ser crescente, decrescente, ou uma combinação.  
   
- `m_nFields`  
- O número de campos armazenados em `m_pFieldInfos`.  
+ *m_nFields*  
+ O número de campos armazenados em *m_pFieldInfos*.  
   
  *m_bPrimary*  
  Se a propriedade primária é **TRUE**, o objeto de índice representa um índice primário. Um índice primário consiste em um ou mais campos que identificam exclusivamente a todos os registros em uma tabela em uma ordem predefinida. Como o campo de índice deve ser exclusivo, a propriedade exclusiva do objeto Index também é definida como **TRUE** em DAO. Se o índice primário consistir em mais de um campo, cada campo pode conter valores duplicados, mas cada combinação de valores de todos os campos indexados deve ser exclusiva. Um índice primário consiste em uma chave para a tabela e geralmente contém os mesmos campos de chave primária.  
@@ -89,7 +89,7 @@ struct CDaoIndexInfo {
   
  Para obter mais informações, consulte o tópico "Propriedade ignorar" na Ajuda do DAO.  
   
- `m_bRequired`  
+ *m_bRequired*  
  Indica se um objeto de índice DAO requer um valor não nulo. Se essa propriedade for **TRUE**, o objeto de índice não permite que um valor Null. Para obter mais informações, consulte o tópico "Propriedade necessária" na Ajuda do DAO.  
   
 > [!TIP]
@@ -106,7 +106,7 @@ struct CDaoIndexInfo {
   
  Objetos de índice não são representados por uma classe do MFC. Em vez disso, DAO objetos subjacentes objetos MFC classe [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) contém uma coleção de objetos de índice, chamado de coleção de índices. Essas classes fornecem funções de membro para acessar itens individuais de informações de índice, ou você pode acessá-los todos de uma vez com um `CDaoIndexInfo` objeto chamando o `GetIndexInfo` a função de membro do objeto contentor.  
   
- `CDaoIndexInfo` tem um construtor e um destruidor para corretamente aloque e desaloque as informações de campo de índice em `m_pFieldInfos`.  
+ `CDaoIndexInfo` tem um construtor e um destruidor para corretamente aloque e desaloque as informações de campo de índice em *m_pFieldInfos*.  
   
  As informações recuperadas pelo `GetIndexInfo` a função de membro de um objeto tabledef é armazenada em um `CDaoIndexInfo` estrutura. Chamar o `GetIndexInfo` a função de membro do objeto contentor tabledef cuja coleção de índices, o objeto de índice é armazenado. `CDaoIndexInfo` também define uma `Dump` cria a função de membro na depuração. Você pode usar `Dump` para despejar o conteúdo de um `CDaoIndexInfo` objeto.  
   

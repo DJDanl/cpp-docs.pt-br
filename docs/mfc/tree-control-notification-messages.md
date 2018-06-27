@@ -18,30 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7c352da9f9283f53c926a8223984620ee7fa6ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92035d3f1a20a0fd9cc0c7b95d7238ef014033da
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385730"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950961"
 ---
 # <a name="tree-control-notification-messages"></a>Mensagens de notificação do controle de árvore
-Um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envia mensagens de notificação como **WM_NOTIFY** mensagens:  
+Um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envia as mensagens de notificação a seguir como mensagens WM_NOTIFY:  
   
 |Mensagem de notificação|Descrição|  
 |--------------------------|-----------------|  
-|**TVN_BEGINDRAG**|Indica o início de uma operação de arrastar e soltar|  
-|**TVN_BEGINLABELEDIT**|Sinaliza o início da edição do rótulo no local|  
-|**TVN_BEGINRDRAG**|Indica o início de uma operação de arrastar e soltar com o botão direito do mouse|  
-|**TVN_DELETEITEM**|Sinaliza a exclusão de um item específico|  
-|**TVN_ENDLABELEDIT**|Sinaliza o término de edição do rótulo|  
-|**TVN_GETDISPINFO**|Informações de solicitações que requer que o controle de árvore para exibir um item|  
-|**TVN_ITEMEXPANDED**|Sinaliza que a lista de um item pai de itens filho foi expandida ou recolhida|  
-|**TVN_ITEMEXPANDING**|Sinais de que a lista de um item pai de itens filho está prestes a ser expandido ou recolhido|  
-|**TVN_KEYDOWN**|Indica um evento de teclado|  
-|**TVN_SELCHANGED**|Indica que a seleção foi alterada de um item para outro|  
-|**TVN_SELCHANGING**|Sinais de que a seleção está prestes a ser alterada de um item para outro|  
-|**TVN_SETDISPINFO**|Notificação para atualizar as informações mantidas para um item|  
+|TVN_BEGINDRAG|Indica o início de uma operação de arrastar e soltar|  
+|TVN_BEGINLABELEDIT|Sinaliza o início da edição do rótulo no local|  
+|TVN_BEGINRDRAG|Indica o início de uma operação de arrastar e soltar com o botão direito do mouse|  
+|TVN_DELETEITEM|Sinaliza a exclusão de um item específico|  
+|TVN_ENDLABELEDIT|Sinaliza o término de edição do rótulo|  
+|TVN_GETDISPINFO|Informações de solicitações que requer que o controle de árvore para exibir um item|  
+|TVN_ITEMEXPANDED|Sinaliza que a lista de um item pai de itens filho foi expandida ou recolhida|  
+|TVN_ITEMEXPANDING|Sinais de que a lista de um item pai de itens filho está prestes a ser expandido ou recolhido|  
+|TVN_KEYDOWN|Indica um evento de teclado|  
+|TVN_SELCHANGED|Indica que a seleção foi alterada de um item para outro|  
+|TVN_SELCHANGING|Sinais de que a seleção está prestes a ser alterada de um item para outro|  
+|TVN_SETDISPINFO|Notificação para atualizar as informações mantidas para um item|  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando CTreeCtrl](../mfc/using-ctreectrl.md)   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca18f12c5aa1ae767b8921c28e650f3fb69d9942
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f0419e8f8aea141c3aaa54e320200160dae877f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384717"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957218"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: janelas separadoras
 Esta anotação descreve o MFC [CSplitterWnd classe](../mfc/reference/csplitterwnd-class.md), que fornece a janela se divide e gerencia o redimensionamento de outras janelas do painel.  
@@ -66,7 +66,7 @@ Esta anotação descreve o MFC [CSplitterWnd classe](../mfc/reference/csplitterw
  Painel:  
  Uma janela específica do aplicativo que um `CSplitterWnd` gerencia. Um painel geralmente é um objeto que é derivado do [classe CView](../mfc/reference/cview-class.md), mas pode ser qualquer [CWnd](../mfc/reference/cwnd-class.md) objeto que tem a ID da janela filho apropriados.  
   
- Para usar um `CWnd`-derivado de objeto, passe o `RUNTIME_CLASS` do objeto para o `CreateView` funcionar como você faria se estivesse usando um `CView`-classe derivada. Use a classe `DECLARE_DYNCREATE` e `IMPLEMENT_DYNCREATE` porque a estrutura usa criação dinâmica no tempo de execução. Embora não haja muitos códigos em `CSplitterWnd` que é específico para o `CView` classe [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) é sempre usado antes que essas ações são executadas.  
+ Para usar um `CWnd`-derivado do objeto, passe o RUNTIME_CLASS do objeto para o `CreateView` funcionar como você faria se estivesse usando um `CView`-classe derivada. A classe deve usar DECLARE_DYNCREATE e IMPLEMENT_DYNCREATE porque a estrutura usa criação dinâmica no tempo de execução. Embora não haja muitos códigos em `CSplitterWnd` que é específico para o `CView` classe [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) é sempre usado antes que essas ações são executadas.  
   
  Barra de divisão:  
  Um controle que é colocado entre linhas e colunas dos painéis. Ele pode ser usado para ajustar o tamanho das linhas ou colunas de painéis.  
@@ -88,14 +88,14 @@ Esta anotação descreve o MFC [CSplitterWnd classe](../mfc/reference/csplitterw
 [      ][      ][v]  
 ```  
   
- Quando o usuário move a barra de rolagem, `WM_VSCROLL` as mensagens serão enviadas para ambos os modos de exibição. Quando o modo de exibição define a posição da barra de rolagem, a barra de rolagem compartilhado será definida.  
+ Quando o usuário move a barra de rolagem, WM_VSCROLL mensagens serão enviadas para ambos os modos de exibição. Quando o modo de exibição define a posição da barra de rolagem, a barra de rolagem compartilhado será definida.  
   
  Observe que as barras de rolagem compartilhado são mais úteis com objetos de modo semelhante. Se você combinar os modos de exibição de tipos diferentes em um separador, precisará escrever códigos especiais para coordenar as posições de rolagem. Qualquer `CView`-derivada da classe que usa o `CWnd` barra de rolagem APIs delegará a barra de rolagem compartilhado se ele existir. O `CScrollView` implementação é um exemplo de um `CView` compartilhado de classe que dá suporte a barras de rolagem. Classes que não derivam de `CView`, classes que dependem de barras de rolagem do controle não ou as classes que usam as implementações padrão do Windows (por exemplo, `CEditView`) não funcionará com o recurso de barra de rolagem compartilhado do `CSplitterWnd`.  
   
 ## <a name="minimum-sizes"></a>Tamanhos mínimo  
  Há uma altura mínima da linha para cada linha, e há uma largura mínima da coluna para cada coluna. Este mínimo garante que um painel não é muito pequeno para ser mostrada em detalhes completos.  
   
- Para uma janela de separador estático, a mínimo da linha inicial altura e largura de coluna é 0. Para uma janela separadora dinâmica, a mínimo da linha inicial altura e largura de coluna são definidos pelo `sizeMin` parâmetro o `CSplitterWnd::Create` função.  
+ Para uma janela de separador estático, a mínimo da linha inicial altura e largura de coluna é 0. Para uma janela separadora dinâmica, a mínimo da linha inicial altura e largura de coluna são definidos pelo *sizeMin* parâmetro o `CSplitterWnd::Create` função.  
   
  Você pode alterar esses tamanhos mínimo usando o [CSplitterWnd::SetRowInfo](../mfc/reference/csplitterwnd-class.md#setrowinfo) e [CSplitterWnd::SetColumnInfo](../mfc/reference/csplitterwnd-class.md#setcolumninfo) funções.  
   

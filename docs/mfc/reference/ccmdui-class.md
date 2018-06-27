@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf80f2ebea8fe27596ce1b240cc414cc0db7a8db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dd417872ab4009a9e0f6c06fc0958f5780de477
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356682"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954146"
 ---
 # <a name="ccmdui-class"></a>Classe CCmdUI
 É usado somente em um `ON_UPDATE_COMMAND_UI` manipulador em um `CCmdTarget`-classe derivada.  
@@ -79,7 +79,7 @@ class CCmdUI
   
  Quando um usuário de seu aplicativo recebe para baixo de um menu, cada item de menu precisa saber se ele deve ser exibido como habilitado ou desabilitado. O destino de um comando de menu fornece essas informações ao implementar um `ON_UPDATE_COMMAND_UI` manipulador. Para cada um dos objetos de interface do usuário de comando em seu aplicativo, use a janela Propriedades para criar um protótipo de função e de entrada de mapa de mensagem para cada manipulador de.  
   
- Quando o menu é movido para baixo, o framework pesquisa e chama cada `ON_UPDATE_COMMAND_UI` chamadas do manipulador, cada manipulador `CCmdUI` , como funções de membro **habilitar** e **verificar**e, em seguida, o framework adequadamente exibe cada item de menu.  
+ Quando o menu é movido para baixo, o framework pesquisa e chama cada `ON_UPDATE_COMMAND_UI` chamadas do manipulador, cada manipulador `CCmdUI` , como funções de membro `Enable` e `Check`, e a estrutura adequadamente exibe cada item de menu.  
   
  Um item de menu pode ser substituído por um botão da barra de controle ou outro objeto de interface do usuário do comando sem alterar o código dentro do `ON_UPDATE_COMMAND_UI` manipulador.  
   
@@ -119,7 +119,7 @@ virtual void Enable(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bOn`  
+ *bOn*  
  **TRUE** para habilitar o item **FALSE** para desabilitá-lo.  
   
 ### <a name="example"></a>Exemplo  
@@ -159,7 +159,7 @@ CMenu* m_pSubMenu;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- **NULO** se o item não é um menu. Se o submenu é um pop-up, `m_nID` contém a ID do primeiro item no menu pop-up. Para obter mais informações, consulte [21 de observação técnica](../../mfc/tn021-command-and-message-routing.md).  
+ **NULO** se o item não é um menu. Se o submenu é um pop-up, *m_nID* contém a ID do primeiro item no menu pop-up. Para obter mais informações, consulte [21 de observação técnica](../../mfc/tn021-command-and-message-routing.md).  
   
 ##  <a name="m_pother"></a>  CCmdUI::m_pOther  
  Ponteiro (do tipo `CWnd`) para o objeto de janela, como uma barra de status ou ferramenta que enviou a notificação.  
@@ -179,7 +179,7 @@ virtual void SetCheck(int nCheck = 1);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nCheck`  
+ *nVerifique*  
  Especifica o estado de seleção para definir. Se 0, desmarca; Se 1, verifica; e se 2, define indeterminado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -207,7 +207,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszText`  
+ *lpszText*  
  Um ponteiro para uma cadeia de caracteres de texto.  
   
 ### <a name="example"></a>Exemplo  

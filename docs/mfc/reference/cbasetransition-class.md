@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db69941b0ee0f2267185604318d240d107604177
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7cdd8f527b8df8ae80896bbb17fab1b15684180
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356374"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953564"
 ---
 # <a name="cbasetransition-class"></a>Classe CBaseTransition
 Representa uma transição básica.  
@@ -139,7 +139,7 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pStoryboard`  
+ *pStoryboard*  
  Um ponteiro para storyboard, que será animado a variável relacionada.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -156,7 +156,7 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pStoryboard`  
+ *pStoryboard*  
  Um ponteiro para storyboard, que será animado a variável relacionada.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -192,10 +192,10 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pLibrary`  
+ *pLibrary*  
  Um ponteiro para a biblioteca de transição, que cria transições padrão. Pode ser NULL para transições personalizadas.  
   
- `pFactory`  
+ *pFactory*  
  Um ponteiro para a fábrica de transição, que cria transições personalizadas. Pode ser NULL para transições padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -255,10 +255,10 @@ IUIAnimationTransition* GetTransition();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pLibrary`  
+ *pLibrary*  
  Um ponteiro para a biblioteca de transição, que cria transições padrão. Pode ser NULL para transições personalizadas.  
   
- `pFactory`  
+ *pFactory*  
  Um ponteiro para a fábrica de transição, que cria transições personalizadas. Pode ser NULL para transições padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -345,10 +345,10 @@ void SetKeyframes(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pStart`  
+ *pStart*  
  Um quadro-chave que especifica o início da transição.  
   
- `pEnd`  
+ *Pendente*  
  Um quadro-chave que especifica o fim da transição.  
   
 ### <a name="remarks"></a>Comentários  
@@ -362,7 +362,7 @@ void SetRelatedVariable(CAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pVariable`  
+ *pVariable*  
  Um ponteiro para a variável de animação relacionados.  
   
 ### <a name="remarks"></a>Comentários  

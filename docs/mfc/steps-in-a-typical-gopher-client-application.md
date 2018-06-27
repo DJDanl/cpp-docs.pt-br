@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ebb97d7cb5cbf2e2ed9ac7ae5287b2261990f2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a85e178f59eab88844b1990922870f52463f54a8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381105"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955616"
 ---
 # <a name="steps-in-a-typical-gopher-client-application"></a>Etapas em um aplicativo cliente gopher típico
 A tabela a seguir mostra as etapas que você pode executar em um aplicativo de cliente gopher típico.  
@@ -33,7 +33,7 @@ A tabela a seguir mostra as etapas que você pode executar em um aplicativo de c
 |Conecte a um servidor gopher.|Use [CInternetSession::GetGopherConnection](../mfc/reference/cinternetsession-class.md#getgopherconnection).|Retorna um [CGopherConnection](../mfc/reference/cgopherconnection-class.md) objeto.|  
 |Localize o primeiro recurso no gopher.|Use [CGopherFileFind::FindFile](../mfc/reference/cgopherfilefind-class.md#findfile).|Localiza o primeiro arquivo. Se nenhum arquivo for encontrado, retorna falso.|  
 |Localize o recurso Avançar no gopher.|Use [CGopherFileFind::FindNextFile](../mfc/reference/cgopherfilefind-class.md#findnextfile).|Localiza o próximo arquivo. Se o arquivo não for encontrado, retorna falso.|  
-|Abra o arquivo encontrado por **FindFile** ou `FindNextFile` para leitura.|Obter um localizador de gopher usando [CGopherFileFind::GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator). Use [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|Abre o arquivo especificado pelo localizador. `OpenFile` Retorna um [CGopherFile](../mfc/reference/cgopherfile-class.md) objeto.|  
+|Abra o arquivo encontrado por `FindFile` ou `FindNextFile` para leitura.|Obter um localizador de gopher usando [CGopherFileFind::GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator). Use [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|Abre o arquivo especificado pelo localizador. `OpenFile` Retorna um [CGopherFile](../mfc/reference/cgopherfile-class.md) objeto.|  
 |Abra um arquivo usando um localizador de gopher que você fornecer.|Criar um localizador de gopher usando [CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator). Use [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|Abre o arquivo especificado pelo localizador. `OpenFile` Retorna um [CGopherFile](../mfc/reference/cgopherfile-class.md) objeto.|  
 |Ler o arquivo.|Use [CGopherFile](../mfc/reference/cgopherfile-class.md).|Lê o número especificado de bytes, usando um buffer que você fornecer.|  
 |Trate exceções.|Use o [CInternetException](../mfc/reference/cinternetexception-class.md) classe.|Trata todos os tipos de exceção de Internet comuns.|  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3dc5dae7758c77d335cf6e1255d8caba28df9f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49fe725c700a46e59625289de7ca5edf4b4d25b2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367767"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955681"
 ---
 # <a name="cgopherconnection-class"></a>Classe CGopherConnection
 Gerencia a conexão para um servidor de Internet gopher.  
@@ -99,32 +99,32 @@ CGopherConnection(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pSession`  
+ *pSession*  
  Um ponteiro para relacionado [CInternetSession](../../mfc/reference/cinternetsession-class.md) objeto.  
   
- `hConnected`  
+ *hConnected*  
  O identificador do Windows da sessão atual da Internet.  
   
- `pstrServer`  
+ *pstrServer*  
  Um ponteiro para uma cadeia de caracteres que contém o nome do servidor FTP.  
   
- `dwContext`  
- O identificador de contexto para a operação. `dwContext` identifica as informações de status da operação retornadas por [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). O padrão é definido como 1; No entanto, você pode explicitamente atribuir uma ID de contexto específico para a operação. O objeto e qualquer trabalho faz será associados esse ID de contexto.  
+ *dwContext*  
+ O identificador de contexto para a operação. *dwContext* identifica as informações de status da operação retornadas por [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). O padrão é definido como 1; No entanto, você pode explicitamente atribuir uma ID de contexto específico para a operação. O objeto e qualquer trabalho faz será associados esse ID de contexto.  
   
- `pstrUserName`  
+ *pstrUserName*  
  Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do usuário para fazer logon. Se **nulo**, o padrão é anônimo.  
   
- `pstrPassword`  
- Um ponteiro para uma cadeia de caracteres terminada em nulo que especifica a senha a ser usada para fazer logon. Se ambos os `pstrPassword` e `pstrUserName` são **nulo**, a senha anônima padrão é o nome de email do usuário. Se `pstrPassword` é **nulo** (ou uma cadeia de caracteres vazia), mas `pstrUserName` não é **nulo**, uma senha em branco será usada. A tabela a seguir descreve o comportamento para as quatro configurações possíveis de `pstrUserName` e `pstrPassword`:  
+ *pstrPassword*  
+ Um ponteiro para uma cadeia de caracteres terminada em nulo que especifica a senha a ser usada para fazer logon. Se ambos os *pstrPassword* e *pstrUserName* são **nulo**, a senha anônima padrão é o nome de email do usuário. Se *pstrPassword* é **nulo** (ou uma cadeia de caracteres vazia), mas *pstrUserName* não é **nulo**, uma senha em branco será usada. A tabela a seguir descreve o comportamento para as quatro configurações possíveis de *pstrUserName* e *pstrPassword*:  
   
-|`pstrUserName`|`pstrPassword`|Nome de usuário enviado ao servidor FTP|Senha enviada ao servidor FTP|  
+|*pstrUserName*|*pstrPassword*|Nome de usuário enviado ao servidor FTP|Senha enviada ao servidor FTP|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
 |**NULO** ou ""|**NULO** ou ""|"anônimo"|Nome de email do usuário|  
-|Não- **nulo** cadeia de caracteres|**NULO** ou ""|`pstrUserName`|" "|  
+|Não- **nulo** cadeia de caracteres|**NULO** ou ""|*pstrUserName*|" "|  
 |**NULO** não **nulo** cadeia de caracteres|**ERROR**|**ERROR**||  
-|Não- **nulo** cadeia de caracteres|Não- **nulo** cadeia de caracteres|`pstrUserName`|`pstrPassword`|  
+|Não- **nulo** cadeia de caracteres|Não- **nulo** cadeia de caracteres|*pstrUserName*|*pstrPassword*|  
   
- `nPort`  
+ *nPort*  
  Um número que identifica a porta TCP/IP para usar no servidor.  
   
 ### <a name="remarks"></a>Comentários  
@@ -151,22 +151,22 @@ static CGopherLocator CreateLocator(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pstrDisplayString`  
- Um ponteiro para uma cadeia de caracteres que contém o nome do documento gopher ou diretório a ser recuperado. Se o `pstrDisplayString` parâmetro é **nulo**, o diretório padrão para o servidor gopher será retornado.  
+ *pstrDisplayString*  
+ Um ponteiro para uma cadeia de caracteres que contém o nome do documento gopher ou diretório a ser recuperado. Se o *pstrDisplayString* parâmetro é **nulo**, o diretório padrão para o servidor gopher será retornado.  
   
- `pstrSelectorString`  
- Um ponteiro para a cadeia de caracteres do seletor para ser enviado ao servidor gopher para recuperar um item. `pstrSelectorString` pode ser **nulo**.  
+ *pstrSelectorString*  
+ Um ponteiro para a cadeia de caracteres do seletor para ser enviado ao servidor gopher para recuperar um item. *pstrSelectorString* pode ser **nulo**.  
   
  *dwGopherType*  
- Especifica se `pstrSelectorString` refere-se a um diretório ou um documento, e se a solicitação é gopher ou gopher +. Consulte os atributos para a estrutura [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) no SDK do Windows.  
+ Especifica se *pstrSelectorString* refere-se a um diretório ou um documento, e se a solicitação é gopher ou gopher +. Consulte os atributos para a estrutura [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) no SDK do Windows.  
   
- `pstrLocator`  
+ *pstrLocator*  
  Um ponteiro para uma cadeia de caracteres que identifica o arquivo a ser aberto. Geralmente, essa cadeia de caracteres é retornada de uma chamada para [CGopherFileFind::GetLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator).  
   
  *pstrServerName*  
  Um ponteiro para uma cadeia de caracteres que contém o nome do servidor gopher.  
   
- `nPort`  
+ *nPort*  
  O número que identifica a porta de Internet para esta conexão.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -187,13 +187,13 @@ BOOL GetAttribute(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `refLocator`  
+ *refLocator*  
  Uma referência a um [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objeto.  
   
  *strRequestedAttributes*  
  Uma cadeia delimitada por espaço especificando os nomes dos atributos solicitados.  
   
- `strResult`  
+ *strResult*  
  Uma referência a um [CString](../../atl-mfc-shared/reference/cstringt-class.md) que recebe o tipo de localizador.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -211,23 +211,23 @@ CGopherFile* OpenFile(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `refLocator`  
+ *refLocator*  
  Uma referência a um [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objeto.  
   
- `dwFlags`  
+ *dwFlags*  
  Qualquer combinação dos sinalizadores INTERNET_FLAG_ *. Consulte [CInternetSession::OpenUrl](../../mfc/reference/cinternetsession-class.md#openurl) para obter mais informações sobre INTERNET_FLAG_\* sinalizadores.  
   
- `pstrView`  
- Um ponteiro para uma cadeia de caracteres de exibição do arquivo. Se existirem vários modos de exibição do arquivo no servidor, esse parâmetro especifica qual modo de exibição para abrir o arquivo. Se `pstrView` é **nulo**, a exibição de arquivo padrão é usada.  
+ *pstrView*  
+ Um ponteiro para uma cadeia de caracteres de exibição do arquivo. Se existirem vários modos de exibição do arquivo no servidor, esse parâmetro especifica qual modo de exibição para abrir o arquivo. Se *pstrView* é **nulo**, a exibição de arquivo padrão é usada.  
   
- `dwContext`  
- A ID do contexto para o arquivo que está sendo aberto. Consulte **comentários** para obter mais informações sobre `dwContext`.  
+ *dwContext*  
+ A ID do contexto para o arquivo que está sendo aberto. Consulte **comentários** para obter mais informações sobre *dwContext*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o [CGopherFile](../../mfc/reference/cgopherfile-class.md) objeto a ser aberto.  
   
 ### <a name="remarks"></a>Comentários  
- Substituir o `dwContext` padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto está associado essa operação específica do `CGopherConnection` objeto criado pelo seu [CInternetSession](../../mfc/reference/cinternetsession-class.md) objeto. O valor é retornado para [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer o status sobre a operação com a qual ela é identificada. Consulte o artigo [Internet primeiras etapas: WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.  
+ Substituir o *dwContext* padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto está associado essa operação específica do `CGopherConnection` objeto criado pelo seu [CInternetSession](../../mfc/reference/cinternetsession-class.md) objeto. O valor é retornado para [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer o status sobre a operação com a qual ela é identificada. Consulte o artigo [Internet primeiras etapas: WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CInternetConnection](../../mfc/reference/cinternetconnection-class.md)   

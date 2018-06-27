@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cfe91812d178618b1707f99aa10d6bd492109069
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385103"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956789"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Passo a passo: Atualizando o aplicativo de rabisco MFC (parte 1)
 Este passo a passo demonstra como modificar um aplicativo MFC existente para usar a interface do usuário da faixa de opções. Visual Studio oferece suporte a faixa de opções do Office 2007 e Windows 7 clip faixa de opções. Para obter mais informações sobre a interface do usuário da faixa de opções, consulte [faixas de opções](http://go.microsoft.com/fwlink/p/?linkid=129233) no site do MSDN.  
@@ -186,31 +186,31 @@ Este passo a passo demonstra como modificar um aplicativo MFC existente para usa
   
 3.  Você pode personalizar o botão do aplicativo por meio de modificação de suas propriedades. As IDs de mensagem que são usadas neste código já estão definidas no menu para Rabisco 1.0.  
   
-4.  No modo design, clique no botão de aplicativo para exibir suas propriedades. Alterar valores de propriedade da seguinte maneira: **imagem** para `IDB_RIBBON_MAIN`, **Prompt** para `File`, **chaves** para `f`, **imagens grandes** para `IDB_RIBBON_FILELARGE`, e **imagens pequenas** para `IDB_RIBBON_FILESMALL`.  
+4.  No modo design, clique no botão de aplicativo para exibir suas propriedades. Alterar valores de propriedade da seguinte maneira: **imagem** para *IDB_RIBBON_MAIN*, **Prompt** para *arquivo*, **chaves** para *f*, **imagens grandes** para *IDB_RIBBON_FILELARGE*, e **imagens pequenas** para *IDB_RIBBON_ FILESMALL*.  
   
 5.  As modificações a seguir criar um menu que aparece quando o usuário clica no botão do aplicativo. Clique no botão de reticências (**...** ) ao lado de **principal itens** para abrir o **itens Editor**.  
   
-    1.  Clique em **adicionar** para adicionar um botão. Alterar **legenda** para `&New`, **ID** para `ID_FILE_NEW`, **imagem** para `0`, **imagem grande** para `0`.  
+    1.  Clique em **adicionar** para adicionar um botão. Alterar **legenda** para *& novo*, **ID** para *ID_FILE_NEW*, **imagem** para *0*, **Imagem grande** para *0*.  
   
-    2.  Clique em **adicionar** para adicionar um segundo botão. Alterar **legenda** para `&Save`, **ID** para `ID_FILE_SAVE`, **imagem** para `2`, e **imagem grande** para `2`.  
+    2.  Clique em **adicionar** para adicionar um segundo botão. Alterar **legenda** para *& Salvar*, **ID** para *ID_FILE_SAVE*, **imagem** para *2* , e **imagem grande** para *2*.  
   
-    3.  Clique em **adicionar** para adicionar um botão de terceiro. Alterar **legenda** para `Save &As`, **ID** para `ID_FILE_SAVE_AS`, **imagem** para `3`, e **imagem grande** para `3`.  
+    3.  Clique em **adicionar** para adicionar um botão de terceiro. Alterar **legenda** para *Salvar & como*, **ID** para *ID_FILE_SAVE_AS*, **imagem** para *3*, e **imagem grande** para *3*.  
   
-    4.  Clique em **adicionar** para adicionar um quarto botão. Alterar **legenda** para `&Print`, **ID** para `ID_FILE_PRINT`, **imagem** para `4`, e **imagem grande** para `4`.  
+    4.  Clique em **adicionar** para adicionar um quarto botão. Alterar **legenda** para *& impressão*, **ID** para *ID_FILE_PRINT*, **imagem** para *4* , e **imagem grande** para *4*.  
   
     5.  Alterar o **Item** tipo **separador** e, em seguida, clique em **adicionar**.  
   
-    6.  Alterar o **Item** tipo **botão**. Clique em **adicionar** para adicionar um quinto botão. Alterar **legenda** para `&Close`, **ID** para `ID_FILE_CLOSE`, **imagem** para `5`, e **imagem grande** para `5`.  
+    6.  Alterar o **Item** tipo **botão**. Clique em **adicionar** para adicionar um quinto botão. Alterar **legenda** para *& Fechar*, **ID** para *ID_FILE_CLOSE*, **imagem** para *5* , e **imagem grande** para *5*.  
   
 6.  As modificações a seguir cria um submenu sob o botão de impressão que você criou na etapa anterior.  
   
-    1.  Clique o **impressão** botão, altere o **Item** tipo **rótulo**e, em seguida, clique em **inserir**. Alterar **legenda** para `Preview and print the document`.  
+    1.  Clique o **impressão** botão, altere o **Item** tipo **rótulo**e, em seguida, clique em **inserir**. Alterar **legenda** para *visualizar e imprimir o documento*.  
   
-    2.  Clique o **impressão** botão, altere o **Item** tipo **botão**e clique em **inserir**. Alterar **legenda** para `&Print`, **ID** para `ID_FILE_PRINT`, **imagem** para `4`, e **imagem grande** para `4`.  
+    2.  Clique o **impressão** botão, altere o **Item** tipo **botão**e clique em **inserir**. Alterar **legenda** para *& impressão*, **ID** para *ID_FILE_PRINT*, **imagem** para *4* , e **imagem grande** para *4*.  
   
-    3.  Clique o **impressão** botão e, em seguida, clique em **inserir** para adicionar um botão. Alterar **legenda** para `&Quick Print`, **ID** para `ID_FILE_PRINT_DIRECT`, **imagem** para `7`, e **imagem grande** para `7`.  
+    3.  Clique o **impressão** botão e, em seguida, clique em **inserir** para adicionar um botão. Alterar **legenda** para *& rápida impressão*, **ID** para *ID_FILE_PRINT_DIRECT*, **imagem** para *7*, e **imagem grande** para *7*.  
   
-    4.  Clique o **impressão** botão e, em seguida, clique em **inserir** para adicionar outro botão. Alterar **legenda** para `Print Pre&view`, **ID** para `ID_FILE_PRINT_PREVIEW`, **imagem** para `6`, e **imagem grande** para `6`.  
+    4.  Clique o **impressão** botão e, em seguida, clique em **inserir** para adicionar outro botão. Alterar **legenda** para *impressão Visuali &*, **ID** para *ID_FILE_PRINT_PREVIEW*, **imagem** para *6*, e **imagem grande** para *6*.  
   
     5.  Agora você modificou o **itens principal**. Clique em **fechar** para sair do **itens Editor**.  
   
@@ -218,7 +218,7 @@ Este passo a passo demonstra como modificar um aplicativo MFC existente para usa
   
     1.  No **propriedades** janela, clique no botão de reticências (**...** ) ao lado de **botão** para abrir o **itens Editor**.  
   
-    2.  Clique em **adicionar** para adicionar um botão. Alterar **legenda** para `E&xit`, **ID** para `ID_APP_EXIT`, **imagem** para `8`.  
+    2.  Clique em **adicionar** para adicionar um botão. Alterar **legenda** para *E & xecução*, **ID** para *ID_APP_EXIT*, **imagem** para *8* .  
   
  [[Seções](#top)]  
   
@@ -233,7 +233,7 @@ Este passo a passo demonstra como modificar um aplicativo MFC existente para usa
     CMFCRibbonBar m_wndRibbonBar;  
  ```  
   
-2.  In the mainfrm.cpp file, add the following code before the final `return` statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
+2.  In the mainfrm.cpp file, add the following code before the final **return** statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
   
  ``` *// Create the ribbon bar  
     if (!m_wndRibbonBar.Create(this))  
@@ -254,11 +254,11 @@ Este passo a passo demonstra como modificar um aplicativo MFC existente para usa
   
 #### <a name="to-add-a-home-category-and-edit-panel"></a>Para adicionar uma categoria de Home e editar o painel  
   
-1.  O programa de rabisco requer somente uma categoria. No modo design, clique em **categoria** para exibir suas propriedades. Alterar valores de propriedade da seguinte maneira: **legenda** para `&Home`, **imagens grandes** para `IDB_RIBBON_HOMELARGE`, **imagens pequenas** para `IDB_RIBBON_HOMESMALL`.  
+1.  O programa de rabisco requer somente uma categoria. No modo design, clique em **categoria** para exibir suas propriedades. Alterar valores de propriedade da seguinte maneira: **legenda** para *& início*, **imagens grandes** para *IDB_RIBBON_HOMELARGE*,  **Imagens pequenas** para *IDB_RIBBON_HOMESMALL*.  
   
-2.  Cada categoria de faixa de opções é organizada em painéis nomeadas. Cada painel contém um conjunto de controles que executam operações relacionadas. Esta categoria tem um painel. Clique em **painel**e, em seguida, alterar **legenda** para `Edit` e **índice de imagem** para `0`.  
+2.  Cada categoria de faixa de opções é organizada em painéis nomeadas. Cada painel contém um conjunto de controles que executam operações relacionadas. Esta categoria tem um painel. Clique em **painel**e, em seguida, alterar **legenda** para *editar* e **índice de imagem** para *0*.  
   
-3.  Para o **editar** painel, adicione um botão que é responsável por limpar o conteúdo do documento. A ID da mensagem para este botão já foi definida no recurso de menu IDR_SCRIBBTYPE. Especifique `Clear All` como o texto do botão e o índice do bitmap que decora o botão. Abra o **caixa de ferramentas**e, em seguida, arraste um **botão** para o **editar** painel. Clique no botão e, em seguida, alterar **legenda** para `Clear All`, **ID** para `ID_EDIT_CLEAR_ALL`, **índice de imagem** para `0`, **índice da imagem grande**  para `0`.  
+3.  Para o **editar** painel, adicione um botão que é responsável por limpar o conteúdo do documento. A ID da mensagem para este botão já foi definida no recurso de menu IDR_SCRIBBTYPE. Especifique *Limpar tudo* como o texto do botão e o índice do bitmap que decora o botão. Abra o **caixa de ferramentas**e, em seguida, arraste um **botão** para o **editar** painel. Clique no botão e, em seguida, alterar **legenda** para *Limpar tudo*, **ID** para *ID_EDIT_CLEAR_ALL*, **índicedeimagem** para *0*, **índice de imagem grande** para *0*.  
   
 4.  Salvar as alterações e, em seguida, compilar e executar o aplicativo. O aplicativo de rabisco deve ser exibido, e ele deve ter uma barra de faixa de opções na parte superior da janela, em vez de uma barra de menus. A barra de faixa de opções deve ter uma categoria, **início**, e **início** devem ter um painel, **editar**. Os botões da faixa de opções que você adicionou devem ser associados com os manipuladores de eventos existentes e o **abrir**, **fechar**, **salvar**, **impressão**, e **Limpar tudo** botões devem funcionar conforme o esperado.  
   

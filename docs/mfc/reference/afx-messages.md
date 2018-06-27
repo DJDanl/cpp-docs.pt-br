@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc11b3eb79f0d535775f073c772e40c4ed9e822c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76396a402f348181fbcd65a2ccb962207216abda
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355402"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954654"
 ---
 # <a name="afx-messages"></a>Mensagens AFX
 Essas mensagens são usadas em MFC.  
@@ -89,7 +89,7 @@ Essas mensagens são usadas em MFC.
   
 ||||||  
 |-|-|-|-|-|  
-|Mensagem|Descrição|[in] `wParam`|`lParam` (Todos os parâmetros são [in], a menos que indicado o contrário).|Valor de retorno|  
+|Mensagem|Descrição|[in] *wParam*|*lParam* (todos os parâmetros são [in], a menos que indicado o contrário).|Valor de retorno|  
 |AFX_WM_ACCGETOBJECT|Não usado.|Não usado.|Não aplicável.|Não aplicável.|  
 |AFX_WM_ACCGETSTATE|Usado para suporte de acessibilidade. Enviar esta mensagem para `CMFCPopupMenu` ou `CMFCRibbonPanelMenu` para recuperar o estado do elemento atual.|Índice de elemento, que pode ser um botão de menu ou separador.|Não usado.|O estado do elemento. É -1 se o índice é inválido, 0 se o botão de menu não tem nenhum atributo especial. Caso contrário, é uma combinação dos sinalizadores a seguir:<br /><br /> TBBS_DISABLED — o item está desabilitado<br /><br /> TBBS_CHECKED — o item é verificado<br /><br /> TBBS_BUTTON — o item é um botão de ação padrão<br /><br /> TBBS_PRESSED – botão é pressionado<br /><br /> TBBS_INDETERMINATE — estado indefinido<br /><br /> TBBS_SEPARATOR - em vez de um botão de menu, essa forma de elemento uma separação entre outros itens de menu|  
 |AFX_WM_CHANGE_ACTIVE_TAB|A estrutura envia essa mensagem para o controle de barra de controle redimensionável. Processar esta mensagem para receber notificações de `CMFCTabCtrl` objetos quando um usuário altera a guia ativa.|O índice de uma guia.|Não usado.|Diferente de zero.|  
@@ -131,7 +131,7 @@ Essas mensagens são usadas em MFC.
 |AFX_WM_UPDATETOOLTIPS|Enviada a todos os proprietários de dica de ferramenta para indicar que os seus controles de dica de ferramenta devem ser recriadas.|O tipo de controle deve processar essa mensagem. Consulte a tabela neste tópico para obter uma lista de valores possíveis.|Não usado.|Não usado.|  
 |AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog` envia essa mensagem para o quadro pai quando o usuário clica o **ajuda** botão ou entra no modo de Ajuda clicando o **ajuda** botão legenda ou a tecla F1.|Não usado.|Um ponteiro para a instância do `CMFCWindowsManagerDialog`.|Não usado.|  
   
- A tabela a seguir mostra os valores para a palavra baixa do `lParam` parâmetro do método AFX_WM_HSCROLL:  
+ A tabela a seguir mostra os valores para a palavra baixa do *lParam* parâmetro do método AFX_WM_HSCROLL:  
   
 |||  
 |-|-|  
@@ -147,9 +147,9 @@ Essas mensagens são usadas em MFC.
 |SB_THUMBTRACK|O usuário está arrastando a caixa de rolagem. A mensagem AFX_WM_ON_HSCROLL é enviada repetidamente com esse valor até que o usuário libera o botão do mouse. A palavra de ordem superior indica a posição em que foi arrastada da caixa de rolagem.|  
   
 > [!NOTE]
->  A palavra de ordem alta do `lParam` parâmetro especifica a posição atual da caixa de rolagem, se a palavra de ordem inferior é SB_THUMBPOSITION ou SB_THUMBTRACK; caso contrário, esta palavra não será usada.  
+>  A palavra de ordem alta do *lParam* parâmetro especifica a posição atual da caixa de rolagem, se a palavra de ordem inferior é SB_THUMBPOSITION ou SB_THUMBTRACK; caso contrário, esta palavra não será usada.  
   
- A tabela a seguir lista os valores de sinalizador para o `lParam` parâmetro da mensagem AFX_WM_UPDATETOOLTIPS:  
+ A tabela a seguir lista os valores de sinalizador para o *lParam* parâmetro da mensagem AFX_WM_UPDATETOOLTIPS:  
   
 |||  
 |-|-|  

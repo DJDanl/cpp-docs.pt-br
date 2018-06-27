@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0b00c40ded45d1d71b42c126e2461c404eb5223
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6565ea15a2440855aa7f22ef7bbe37d2f583fb71
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378794"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957254"
 ---
 # <a name="cdockablepane-class"></a>Classe CDockablePane
 Implementa um painel que pode ser encaixado em um site de encaixe ou incluído em um painel com guias.  
@@ -280,14 +280,14 @@ class CDockablePane : public CPane
   
 -   Arrastar um painel ao exibir um retângulo de arrastar.  
   
- Para usar um painel em seu aplicativo, derive sua classe de painel do `CDockablePane` classe. Inserir ou o objeto derivado para o objeto de janela do quadro principal ou em um objeto de janela que controla a instância do seu painel. Em seguida, chame o [CDockablePane::Create](#create) método ou o [CDockablePane::CreateEx](#createex) método quando você processar o `WM_CREATE` mensagem na janela do quadro principal. Finalmente, configure o objeto de painel chamando [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), [CBasePane::DockPane](../../mfc/reference/cbasepane-class.md#dockpane), ou [CDockablePane::AttachToTabWnd](#attachtotabwnd).  
+ Para usar um painel em seu aplicativo, derive sua classe de painel do `CDockablePane` classe. Inserir ou o objeto derivado para o objeto de janela do quadro principal ou em um objeto de janela que controla a instância do seu painel. Em seguida, chame o [CDockablePane::Create](#create) método ou o [CDockablePane::CreateEx](#createex) método quando você processar a mensagem WM_CREATE na janela do quadro principal. Finalmente, configure o objeto de painel chamando [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), [CBasePane::DockPane](../../mfc/reference/cbasepane-class.md#dockpane), ou [CDockablePane::AttachToTabWnd](#attachtotabwnd).  
   
 ## <a name="customization-tips"></a>Dicas de personalização  
  As dicas a seguir se aplicam a `CDockablePane` objetos:  
   
 -   Se você chamar [CDockablePane::AttachToTabWnd](#attachtotabwnd) para dois painéis não com guias, acopláveis, um ponteiro para uma janela com guias será retornado o `ppTabbedControlBar` parâmetro. Você pode continuar a adicionar guias na janela com guias usando esse parâmetro.  
   
--   O tipo de painel com guias que é criado pela [CDockablePane::AttachToTabWnd](#attachtotabwnd) é determinado pelo `CDockablePane` objeto o `pTabControlBarAttachTo` parâmetro. Você pode chamar [CDockablePane::SetTabbedPaneRTC](#settabbedpanertc) para definir o tipo de painel com guias que o `CDockablePane` criará. O tipo padrão é determinado pelo `dwTabbedStyle` de [CDockablePane::Create](#create) quando você cria o `CDockablePane`. Se `dwTabbedStyle` é o tipo padrão é de AFX_CBRS_OUTLOOK_TABS [CMFCOutlookBar classe](../../mfc/reference/cmfcoutlookbar-class.md); se `dwTabbedStyle` é o tipo padrão é de AFX_CBRS_REGULAR_TABS [CTabbedPane classe](../../mfc/reference/ctabbedpane-class.md).  
+-   O tipo de painel com guias que é criado pela [CDockablePane::AttachToTabWnd](#attachtotabwnd) é determinado pelo `CDockablePane` objeto o *pTabControlBarAttachTo* parâmetro. Você pode chamar [CDockablePane::SetTabbedPaneRTC](#settabbedpanertc) para definir o tipo de painel com guias que o `CDockablePane` criará. O tipo padrão é determinado pelo `dwTabbedStyle` de [CDockablePane::Create](#create) quando você cria o `CDockablePane`. Se *dwTabbedStyle* é o tipo padrão é de AFX_CBRS_OUTLOOK_TABS [CMFCOutlookBar classe](../../mfc/reference/cmfcoutlookbar-class.md); se *dwTabbedStyle* AFX_CBRS_REGULAR_TABS o tipo padrão é [ Classe CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
   
 -   Se você deseja encaixar um painel encaixável para outro, chame o [CDockablePane::DockToWindow](#docktowindow) método. O painel original deve ser encaixado em algum lugar antes de chamar esse método.  
   
@@ -329,16 +329,16 @@ virtual CDockablePane* AttachToTabWnd(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] [out] `pTabControlBarAttachTo`  
+ [in] [out] *pTabControlBarAttachTo*  
  Especifica o painel de destino que o painel atual se anexa ao. O painel de destino deve ser um painel encaixável.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Especifica o método de encaixe.  
   
- [in] `bSetActive`  
+ [in] *bSetActive*  
  `TRUE` Para ativar o painel com guias após a operação de anexação. Caso contrário, `FALSE`.  
   
- [out] `ppTabbedControlBar`  
+ [out] *ppTabbedControlBar*  
  Contém o painel com guias que é o resultado da operação de anexação.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -347,13 +347,13 @@ virtual CDockablePane* AttachToTabWnd(
 ### <a name="remarks"></a>Comentários  
  Quando um painel encaixável anexado a outro painel usando esse método, ocorre o seguinte:  
   
-1.  O framework verifica se o painel de destino `pTabControlBarAttachTo` é uma expressão de encaixe painel ou se ele é derivado do [CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md).  
+1.  O framework verifica se o painel de destino *pTabControlBarAttachTo* é uma expressão de encaixe painel ou se ele é derivado do [CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md).  
   
 2.  Se o painel de destino é um painel com guias, o framework adiciona o painel atual a ele como uma guia.  
   
 3.  Se o painel de destino é um painel ancorado regular, o framework cria um painel com guias.  
   
-    -   A estrutura chama `pTabControlBarAttachTo->CreateTabbedPane`. O estilo do novo painel com guias depende de `m_pTabbedControlBarRTC` membro. Por padrão, esse membro é definido como a classe de tempo de execução do [CTabbedPane](../../mfc/reference/ctabbedpane-class.md). Se você passar o `AFX_CBRS_OUTLOOK_TABS` estilo como o `dwTabbedStyle` parâmetro para o [CDockablePane::Create](#create) método, o objeto de classe de tempo de execução é definido como a classe de tempo de execução do [CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md). Você pode alterar esse membro a qualquer momento para alterar o estilo do painel de novo.  
+    -   A estrutura chama `pTabControlBarAttachTo->CreateTabbedPane`. O estilo do novo painel com guias depende de `m_pTabbedControlBarRTC` membro. Por padrão, esse membro é definido como a classe de tempo de execução do [CTabbedPane](../../mfc/reference/ctabbedpane-class.md). Se você passar o `AFX_CBRS_OUTLOOK_TABS` estilo como o *dwTabbedStyle* parâmetro para o [CDockablePane::Create](#create) método, o objeto de classe de tempo de execução é definido como a classe de tempo de execução do [CMFCOutlookBar ](../../mfc/reference/cmfcoutlookbar-class.md). Você pode alterar esse membro a qualquer momento para alterar o estilo do painel de novo.  
   
     -   Quando esse método cria um painel com guias, o framework substitui o ponteiro para `pTabControlBarAttachTo` (se o painel estiver encaixado ou flutuante em uma janela de multi-miniquadros) com um ponteiro para o novo painel com guias.  
   
@@ -375,10 +375,10 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bStretch`  
+ [in] *bStretch*  
  Não usado.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Não usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -392,11 +392,11 @@ virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pMiniFrame`  
+ [in] *pMiniFrame*  
  Ponteiro para uma `CPaneFrameWnd` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se `pMiniFrame` podem ser encaixados no painel; caso contrário, `FALSE`.  
+ `TRUE` Se *pMiniFrame* podem ser encaixados no painel; caso contrário, `FALSE`.  
   
 ##  <a name="canacceptpane"></a>  CDockablePane::CanAcceptPane  
  Determina se o outro painel pode ser encaixado para o painel atual.  
@@ -406,7 +406,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
+ [in] *pBar*  
  Especifica o painel para encaixar o painel atual.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -417,7 +417,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
   
  Substitua essa função em uma classe derivada para ativar ou desativar o encaixe para um painel específico.  
   
- Por padrão, esse método retorna `TRUE` se `pBar` ou seu pai é do tipo `CDockablePane`.  
+ Por padrão, esse método retorna `TRUE` se *pBar* ou seu pai é do tipo `CDockablePane`.  
   
 ##  <a name="canautohide"></a>  CDockablePane::CanAutoHide  
  Determina se o painel pode ocultar automaticamente.  
@@ -469,7 +469,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bActiveTabOnly`  
+ [in] *bActiveTabOnly*  
  Quando você converte um `CTabbedPane`, especifique `TRUE` para converter apenas a guia ativa. Especifique `FALSE` para converter todas as guias no painel.  
   
 ##  <a name="checkautohidecondition"></a>  CDockablePane::CheckAutoHideCondition  
@@ -495,7 +495,7 @@ virtual BOOL CheckStopSlideCondition(BOOL bDirection);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bDirection`  
+ [in] *bDirection*  
  `TRUE` Se o painel estiver visível; `FALSE` se o painel está oculto.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -514,11 +514,11 @@ virtual void CopyState(CDockablePane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pOrgBar`  
+ [in] *pOrgBar*  
  Um ponteiro para um painel encaixável.  
   
 ### <a name="remarks"></a>Comentários  
- `CDockablePane::CopyState` Copia o estado do `pOrgBar` para o painel atual chamando os métodos a seguir:  
+ `CDockablePane::CopyState` Copia o estado do *pOrgBar* para o painel atual chamando os métodos a seguir:  
   
 - [CPane::CopyState](../../mfc/reference/cpane-class.md#copystate)  
   
@@ -558,37 +558,37 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszCaption`  
+ [in] *lpszCaption*  
  Especifica o nome da janela.  
   
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Especifica a janela pai.  
   
- [in] `rect`  
- Especifica o tamanho e a posição da janela, em coordenadas do cliente de `pParentWnd`.  
+ [in] *rect*  
+ Especifica o tamanho e a posição da janela, em coordenadas do cliente de *pParentWnd*.  
   
- [in] `bHasGripper`  
+ [in] *bHasGripper*  
  `TRUE` para criar o painel com uma legenda; Caso contrário, `FALSE`.  
   
- [in] `nID`  
+ [in] *nID*  
  Especifica a ID da janela filho. Esse valor deve ser exclusivo, se você deseja salvar o estado de encaixe para esse painel ancorado.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Especifica os atributos de estilo de janela.  
   
- [in] `dwTabbedStyle`  
+ [in] *dwTabbedStyle*  
  Especifica o estilo com guias de uma janela com guias que é criado quando o usuário arrasta um painel na legenda deste painel.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Especifica os atributos de estilo adicionais.  
   
- [in] [out] `pContext`  
+ [in] [out] *pContext*  
  Especifica o contexto de criação da janela.  
   
- [in] `lpszWindowName`  
+ [in] *lpszWindowName*  
  Especifica o nome da janela.  
   
- [in] `sizeDefault`  
+ [in] *sizeDefault*  
  Especifica o tamanho da janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -597,9 +597,9 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Comentários  
  Cria um painel do Windows e anexa-o para o `CDockablePane` objeto.  
   
- Se o `dwStyle` estilo de janela tem a `CBRS_FLOAT_MULTI` sinalizador, a janela de miniquadros pode flutuar com outros painéis na janela de miniquadros. Por padrão, encaixar painéis pode apenas flutuar individualmente.  
+ Se o *dwStyle* estilo de janela tem a `CBRS_FLOAT_MULTI` sinalizador, a janela de miniquadros pode flutuar com outros painéis na janela de miniquadros. Por padrão, encaixar painéis pode apenas flutuar individualmente.  
   
- Se o `dwTabbedStyle` parâmetro tem o `AFX_CBRS_OUTLOOK_TABS` sinalizador especificado, o painel cria painéis de estilo do Outlook com guias quando outro painel está anexado a este painel usando o [CDockablePane::AttachToTabWnd](#attachtotabwnd) método. Por padrão, os painéis encaixáveis criam painéis com guias regulares do tipo [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
+ Se o *dwTabbedStyle* parâmetro tem o `AFX_CBRS_OUTLOOK_TABS` sinalizador especificado, o painel cria painéis de estilo do Outlook com guias quando outro painel está anexado a este painel usando o [CDockablePane::AttachToTabWnd](#attachtotabwnd)método. Por padrão, os painéis encaixáveis criam painéis com guias regulares do tipo [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
   
 ##  <a name="createdefaultpanedivider"></a>  CDockablePane::CreateDefaultPaneDivider  
  Cria um divisor de padrão para o painel de como ele está sendo encaixado para uma janela do quadro.  
@@ -612,20 +612,20 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwAlignment`  
- Especifica o lado do quadro principal ao qual o painel está encaixado. Se `dwAlignment` contém o `CBRS_ALIGN_LEFT` ou `CBRS_ALIGN_RIGHT` sinalizador, esse método cria um vertical ( `CPaneDivider::SS_VERT`) divisor; caso contrário, esse método cria um horizontal ( `CPaneDivider::SS_HORZ`) divisor.  
+ [in] *dwAlignment*  
+ Especifica o lado do quadro principal ao qual o painel está encaixado. Se *dwAlignment* contém o `CBRS_ALIGN_LEFT` ou `CBRS_ALIGN_RIGHT` sinalizador, esse método cria um vertical ( `CPaneDivider::SS_VERT`) divisor; caso contrário, esse método cria um horizontal ( `CPaneDivider::SS_HORZ`) divisor.  
   
- [in] `pParent`  
+ [in] *pParent*  
  Ponteiro para o quadro do pai.  
   
- [in] `pSliderRTC`  
+ [in] *pSliderRTC*  
  Não usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Esse método retorna um ponteiro para o divisor recém-criado, ou `NULL` se houver falha na criação do divisor.  
   
 ### <a name="remarks"></a>Comentários  
- `dwAlignment` pode ser qualquer um dos seguintes valores:  
+ *dwAlignment* pode ser qualquer um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -652,34 +652,34 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwStyleEx`  
+ [in] *dwStyleEx*  
  Especifica os atributos de estilo ampliado para a nova janela.  
   
- [in] `lpszCaption`  
+ [in] *lpszCaption*  
  Especifica o nome da janela.  
   
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Especifica a janela pai.  
   
- [in] `rect`  
- Especifica o tamanho e a posição da janela, em coordenadas do cliente de `pParentWnd`.  
+ [in] *rect*  
+ Especifica o tamanho e a posição da janela, em coordenadas do cliente de *pParentWnd*.  
   
- [in] `bHasGripper`  
+ [in] *bHasGripper*  
  `TRUE` para criar o painel com uma legenda; Caso contrário, `FALSE`.  
   
- [in] `nID`  
+ [in] *nID*  
  Especifica a ID da janela filho. Esse valor deve ser exclusivo, se você deseja salvar o estado de encaixe para este painel de encaixe.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Especifica os atributos de estilo de janela.  
   
- [in] `dwTabbedStyle`  
+ [in] *dwTabbedStyle*  
  Especifica o estilo com guias de uma janela com guias que é criado quando o usuário arrasta um painel na legenda deste painel.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Especifica os atributos de estilo adicionais.  
   
- [in] [out] `pContext`  
+ [in] [out] *pContext*  
  Especifica o contexto de criação da janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -688,9 +688,9 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Comentários  
  Cria um painel do Windows e anexa-o para o `CDockablePane` objeto.  
   
- Se o `dwStyle` estilo de janela tem a `CBRS_FLOAT_MULTI` sinalizador, a janela de miniquadros pode flutuar com outros painéis na janela de miniquadros. Por padrão, encaixar painéis pode apenas flutuar individualmente.  
+ Se o *dwStyle* estilo de janela tem a `CBRS_FLOAT_MULTI` sinalizador, a janela de miniquadros pode flutuar com outros painéis na janela de miniquadros. Por padrão, encaixar painéis pode apenas flutuar individualmente.  
   
- Se o `dwTabbedStyle` parâmetro tem o `AFX_CBRS_OUTLOOK_TABS` sinalizador especificado, o painel cria painéis de estilo do Outlook com guias quando outro painel está anexado a este painel usando o [CDockablePane::AttachToTabWnd](#attachtotabwnd) método. Por padrão, os painéis encaixáveis criam painéis com guias regulares do tipo [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
+ Se o *dwTabbedStyle* parâmetro tem o `AFX_CBRS_OUTLOOK_TABS` sinalizador especificado, o painel cria painéis de estilo do Outlook com guias quando outro painel está anexado a este painel usando o [CDockablePane::AttachToTabWnd](#attachtotabwnd)método. Por padrão, os painéis encaixáveis criam painéis com guias regulares do tipo [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
   
 ##  <a name="createtabbedpane"></a>  CDockablePane::CreateTabbedPane  
  Cria um painel com guias do painel atual.  
@@ -720,20 +720,20 @@ virtual BOOL DockPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `barContainerManager`  
+ [in] *barContainerManager*  
  Uma referência para o Gerenciador de contêiner do contêiner que está sendo encaixado.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  `DWORD` que especifica o lado do painel ao qual o contêiner está sendo encaixado.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Não usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` Se o contêiner foi encaixado com êxito para o painel; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
- `dwAlignment` pode ser qualquer um dos seguintes valores:  
+ *dwAlignment* pode ser qualquer um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -750,11 +750,11 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bWasDocked`  
+ [in] *bWasDocked*  
  Quando o método retorna, esse valor contém `TRUE` se o painel foi com êxito encaixada; caso contrário, ele contém `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Se o painel foi encaixado uma janela com guias, ou se uma janela com guias foi criada como resultado de encaixe, esse método retorna um ponteiro para a janela com guias. Se o painel tenha sido encaixada com êxito, esse método retorna o `this` ponteiro. Se encaixe falha, este método retorna `NULL`.  
+ Se o painel foi encaixado uma janela com guias, ou se uma janela com guias foi criada como resultado de encaixe, esse método retorna um ponteiro para a janela com guias. Se o painel tenha sido encaixada com êxito, esse método retorna o **isso** ponteiro. Se encaixe falha, este método retorna `NULL`.  
   
 ##  <a name="docktorecentpos"></a>  CDockablePane::DockToRecentPos  
  Encaixa um painel para sua posição de encaixe armazenada.  
@@ -780,20 +780,20 @@ virtual BOOL DockToWindow(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] [out] `pTargetWindow`  
+ [in] [out] *pTargetWindow*  
  Especifica o painel encaixável para encaixar nesse painel para.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Especifica o alinhamento de encaixe do painel. Pode ser um dos CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM ou CBRS_ALIGN_ANY. (Definido em afxres.h).  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  Especifica o retângulo de encaixe do painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` Se o painel foi encaixado com êxito; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
- Chame este método para ancorar um painel para outro painel com o alinhamento especificado pelo `dwAlignment`.  
+ Chame este método para ancorar um painel para outro painel com o alinhamento especificado por *dwAlignment*.  
   
 ##  <a name="drawcaption"></a>  CDockablePane::DrawCaption  
  Desenha a legenda (também chamada de garra) de um painel.  
@@ -805,10 +805,10 @@ virtual void DrawCaption(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Representa o contexto de dispositivo usado para desenhar.  
   
- [in] `rectCaption`  
+ [in] *rectCaption*  
  Especifica o retângulo delimitador da legenda do painel.  
   
 ### <a name="remarks"></a>Comentários  
@@ -824,13 +824,13 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar o AutoOcultar todos os recursos para o painel encaixável; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Quando um usuário mantém o `Ctrl` chave e clica no botão Fixar um painel para o modo de ocultar automaticamente, todos os outros painéis no mesmo contêiner também são alternado para o modo de ocultar automaticamente.  
   
- Chame este método com `bEnable` definida como `FALSE` para desabilitar esse recurso para um painel específico.  
+ Chame este método com *bAtivar* definida como `FALSE` para desabilitar esse recurso para um painel específico.  
   
 ##  <a name="enablegripper"></a>  CDockablePane::EnableGripper  
  Mostra ou oculta a legenda (também chamada de garra).  
@@ -840,7 +840,7 @@ virtual void EnableGripper(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar a legenda; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -908,10 +908,10 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pt`  
+ [in] *pt*  
  O local do ponteiro em coordenadas da tela.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  A distância, em pixels, fora da borda de um retângulo o ponteiro deve ser para ativar o encaixe.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -949,7 +949,7 @@ int GetLastPercentInPaneContainer() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um `int` que especifica a porcentagem de espaço que ocupa o painel em seu contêiner.  
+ Um *int* que especifica a porcentagem de espaço que ocupa o painel em seu contêiner.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método é usado quando o contêiner ajusta seu layout.  
@@ -964,10 +964,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `rectTabAreaTop`  
+ [in] *rectTabAreaTop*  
  `GetTabArea` preenche essa variável com a área da guia se guias estão localizadas na parte superior do painel. Se as guias estão localizadas na parte inferior do painel, essa variável é preenchida com um retângulo vazio.  
   
- [in] `rectTabAreaBottom`  
+ [in] *rectTabAreaBottom*  
  `GetTabArea` preenche essa variável com a área da guia se guias estão localizadas na parte inferior do painel. Se as guias estão localizadas na parte superior do painel, essa variável é preenchida com um retângulo vazio.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1011,24 +1011,24 @@ virtual int HitTest(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  Especifica o ponto de teste.  
   
- [in] `bDetectCaption`  
+ [in] *bDetectCaption*  
  `TRUE` Se `HTCAPTION` deve ser retornado se o ponto está na legenda do painel; caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um dos seguintes valores:  
   
-- `HTNOWHERE` Se `point` não está no painel encaixável.  
+- `HTNOWHERE` Se *ponto* não está no painel encaixável.  
   
-- `HTCLIENT` Se `point` está na área de cliente do painel encaixável.  
+- `HTCLIENT` Se *ponto* está na área de cliente do painel encaixável.  
   
-- `HTCAPTION` Se `point` está na área de legenda do painel encaixável.  
+- `HTCAPTION` Se *ponto* está na área de legenda do painel encaixável.  
   
-- `AFX_HTCLOSE` Se `point` está no botão Fechar.  
+- `AFX_HTCLOSE` Se *ponto* é no botão Fechar.  
   
-- `HTMAXBUTTON` Se `point` está no botão de pin.  
+- `HTMAXBUTTON` Se *ponto* é no botão de pin.  
   
 ##  <a name="isautohideallenabled"></a>  CDockablePane::IsAutohideAllEnabled  
  Indica se o painel de encaixe e todos os outros painéis no contêiner podem ser alternados para o modo de ocultar automaticamente.  
@@ -1193,7 +1193,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWndOldParent`  
+ [in] *pWndOldParent*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1217,10 +1217,10 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWndNewParent`  
+ [in] *pWndNewParent*  
  Um ponteiro para a nova janela pai.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  `BOOL` que especifica se deseja atrasar o recálculo do layout do encaixe se o painel estiver desencaixado. Para obter mais informações, consulte [CDockablePane::UndockPane](#undockpane).  
   
 ### <a name="remarks"></a>Comentários  
@@ -1238,10 +1238,10 @@ virtual BOOL OnBeforeFloat(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `rectFloat`  
+ [in] *rectFloat*  
  Especifica a posição e o tamanho do painel quando ele está em um estado flutuante.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Especifica o método de encaixe. Consulte [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) para obter uma lista de valores possíveis.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1258,7 +1258,7 @@ virtual void OnPressButtons(UINT nHit);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nHit`  
+ [in] *nHit*  
  Este parâmetro não é usado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1272,7 +1272,7 @@ virtual void OnSlide(BOOL bSlideOut);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bSlideOut`  
+ [in] *bSlideOut*  
  `TRUE` para mostrar o painel; `FALSE` para ocultar o painel.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1299,13 +1299,13 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBarToReplaceWith`  
+ [in] *pBarToReplaceWith*  
  Um ponteiro para um painel encaixável.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Não usado.  
   
- [in] `bRegisterWithFrame`  
+ [in] *bRegisterWithFrame*  
  Se `TRUE`, o novo painel está registrado com o Gerenciador de encaixe do pai do painel antigo. O novo painel é inserido no índice do painel antigo na lista de painéis que é mantida pelo Gerenciador de encaixe.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1333,16 +1333,16 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bMode`  
+ [in] *bMode*  
  `TRUE` Para habilitar o modo de ocultar automaticamente; `FALSE` para habilitar o modo de encaixe regular.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Especifica o alinhamento do painel AutoOcultar para criar.  
   
- [in] [out] `pCurrAutoHideBar`  
+ [in] [out] *pCurrAutoHideBar*  
  Um ponteiro para a barra de ferramentas AutoOcultar atual. Pode ser `NULL`.  
   
- [in] `bUseTimer`  
+ [in] *bUseTimer*  
  Especifica se deve usar o efeito de ocultar automaticamente quando o usuário alterna o painel para o modo de ocultar automaticamente ou para ocultar o painel imediatamente.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1363,10 +1363,10 @@ void SetAutoHideParents(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pToolBar`  
+ [in] *pToolBar*  
  Ponteiro para uma barra de ferramentas de ocultar automaticamente.  
   
- [in] `pBtn`  
+ [in] *pBtn*  
  Ponteiro para um botão Ocultar automaticamente.  
   
 ##  <a name="setlastpercentinpanecontainer"></a>  CDockablePane::SetLastPercentInPaneContainer  
@@ -1377,8 +1377,8 @@ void SetLastPercentInPaneContainer(int n);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `n`  
- Um `int` que especifica a porcentagem de espaço que ocupa o painel em seu contêiner.  
+ [in] *n*  
+ Um **int** que especifica a porcentagem de espaço que ocupa o painel em seu contêiner.  
   
 ### <a name="remarks"></a>Comentários  
  A estrutura ajusta o painel para usar o novo valor quando o layout é recalculado.  
@@ -1391,7 +1391,7 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `hRestoredSlider`  
+ [in] *hRestoredSlider*  
  Um identificador para um divisor de painel (controle).  
   
 ### <a name="remarks"></a>Comentários  
@@ -1405,13 +1405,13 @@ void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pRTC`  
+ [in] *pRTC*  
  As informações de classe de tempo de execução para o painel com guias.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para definir as informações de classe de tempo de execução para painéis com guias que são criados dinamicamente. Isso pode ocorrer quando um usuário arrasta um painel para a legenda de outro painel, ou se você chamar o [CDockablePane::AttachToTabWnd](#attachtotabwnd) método para criar programaticamente um painel com guias de dois painéis encaixáveis.  
   
- A classe de tempo de execução padrão é definida de acordo com o `dwTabbedStyle` parâmetro [CDockablePane::Create](#create) e [CDockablePane::CreateEx](#createex). Para personalizar os novos painéis com guias, derive sua classe de uma das seguintes classes:  
+ A classe de tempo de execução padrão é definida de acordo com o *dwTabbedStyle* parâmetro [CDockablePane::Create](#create) e [CDockablePane::CreateEx](#createex). Para personalizar os novos painéis com guias, derive sua classe de uma das seguintes classes:  
   
 - [Classe CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)  
   
@@ -1432,13 +1432,13 @@ virtual void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bShow`  
+ [in] *bMostrar*  
  `TRUE` para mostrar o painel; `FALSE` para ocultar o painel.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  `TRUE` Para atrasar a ajustar o layout de encaixe; `FALSE` para ajustar o layout de encaixe imediatamente.  
   
- [in] `bActivate`  
+ [in] *bActivate*  
  `TRUE` Para ativar o painel quando exibido; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1454,10 +1454,10 @@ virtual void Slide(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bSlideOut`  
+ [in] *bSlideOut*  
  `TRUE` para mostrar o painel; `FALSE` para ocultar o painel.  
   
- [in] `bUseTimer`  
+ [in] *bUseTimer*  
  `TRUE` para mostrar ou ocultar o painel com o efeito de ocultar automaticamente; `FALSE` para mostrar ou ocultar o painel imediatamente.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1483,7 +1483,7 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bDelay`  
+ [in] *bDelay*  
  `TRUE` Para atrasar a calcular o layout de encaixe; `FALSE` para recalcular o layout de encaixe imediatamente.  
   
 ### <a name="remarks"></a>Comentários  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17b27b4cfc1b624c9c12138154a660951a0f2a13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca1e78ab4b94d9055b8f0c7cc14bde12506695b8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384105"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951361"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: convenções de nomenclatura de ID e numeração
 Esta anotação descreve a nomenclatura de ID e numeração convenções MFC 2.0 usa para recursos, comandos, cadeias de caracteres, controles e janelas filho.  
@@ -68,7 +68,7 @@ Esta anotação descreve a nomenclatura de ID e numeração convenções MFC 2.0
 |IDM_|Itens de menu que não usam a arquitetura de comando do MFC.|  
 |ID _|Comandos de menu que usam a arquitetura de comando do MFC.|  
   
- Comandos que siga a arquitetura de comando MFC devem ter uma `ON_COMMAND` manipulador de comando e pode ter um `ON_UPDATE_COMMAND_UI` manipulador. Se esses manipuladores de comando siga a arquitetura de comando do MFC, eles funcionarão corretamente se eles estão associados a um comando de menu, um botão de barra de ferramentas ou um botão de barra da caixa de diálogo. O mesmo prefixo de "ID _" também é usado para uma sequência de prompt de menu é exibida na barra de mensagens do programa. A maioria dos itens de menu em seu aplicativo deve seguir as convenções de comando do MFC. Todas as do padrão de IDs de comando (por exemplo, `ID_FILE_NEW`) seguem a convenção.  
+ Comandos que siga a arquitetura de comando MFC devem ter um manipulador de comando ON_COMMAND e podem ter um manipulador ON_UPDATE_COMMAND_UI. Se esses manipuladores de comando siga a arquitetura de comando do MFC, eles funcionarão corretamente se eles estão associados a um comando de menu, um botão de barra de ferramentas ou um botão de barra da caixa de diálogo. O mesmo prefixo de "ID _" também é usado para uma sequência de prompt de menu é exibida na barra de mensagens do programa. A maioria dos itens de menu em seu aplicativo deve seguir as convenções de comando do MFC. Todas as IDs de comando padrão (por exemplo, ID_FILE_NEW) seguem a convenção.  
   
  MFC também usa "IDP_" como uma forma especializada de cadeias de caracteres (em vez de "IDs _"). Cadeias de caracteres com o prefixo "IDP_" são avisos, isto é, cadeias de caracteres usadas nas caixas de mensagem. Cadeias de caracteres "IDP_" podem conter "%1" e "%2" como espaços reservados de determinado pelo programa de cadeias de caracteres. Cadeias de caracteres "IDP_" geralmente têm tópicos da Ajuda associados a eles, e cadeias de caracteres "IDs _" não. Cadeias de caracteres "IDP_" sempre estão localizadas e cadeias de caracteres "IDs _" não podem ser localizadas.  
   

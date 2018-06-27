@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fb1caa496c34111de133a113433a614ff5eb22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db1b807856baf4cab3cdef57092cd29fdff3a19d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383824"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951134"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Assistentes e os editores de recursos
 O Visual C++ inclui vários assistentes para uso na programação de MFC, juntamente com vários editores de recursos integrados. Para controles do ActiveX programação, o [Assistente de controle ActiveX](../mfc/reference/mfc-activex-control-wizard.md) serve a uma finalidade semelhante a que o Assistente de aplicativo do MFC. Enquanto você pode escrever aplicativos MFC sem a maioria dessas ferramentas, as ferramentas consideravelmente simplificarem e acelerar o seu trabalho.  
@@ -41,7 +41,7 @@ O Visual C++ inclui vários assistentes para uso na programação de MFC, juntam
 > [!NOTE]
 >  Exibição de classe também ajuda você a substituir funções virtuais nas classes MFC. Selecione a classe e a função virtual para substituir. O restante do processo é semelhante ao tratamento de mensagens, conforme descrito nos parágrafos a seguir.  
   
- Aplicativos em execução no Windows são [mensagem direcionado](../mfc/message-handling-and-mapping.md). Ações de usuário e outros eventos que ocorrem no programa em execução com que o Windows enviar mensagens para o windows no programa. Por exemplo, se o usuário clica com o mouse em uma janela, o Windows envia um `WM_LBUTTONDOWN` quando o botão esquerdo do mouse é pressionado e uma mensagem `WM_LBUTTONUP` mensagem quando o botão é liberado. O Windows também envia **WM_COMMAND** mensagens quando o usuário seleciona os comandos da barra de menus.  
+ Aplicativos em execução no Windows são [mensagem direcionado](../mfc/message-handling-and-mapping.md). Ações de usuário e outros eventos que ocorrem no programa em execução com que o Windows enviar mensagens para o windows no programa. Por exemplo, à se o usuário clica com o mouse em uma janela, o Windows envia uma mensagem WM_LBUTTONDOWN quando o botão esquerdo do mouse é pressionado e uma mensagem WM_LBUTTONUP quando o botão é liberado. Além disso, o Windows envia mensagens WM_COMMAND quando o usuário seleciona os comandos da barra de menus.  
   
  Estrutura MFC, vários objetos, como documentos, exibições, janelas de quadro, modelos de documento e o objeto de aplicativo, podem "tratar" mensagens. Tal objeto fornece uma "função de manipulador" como um de seus membros funções e o framework mapeia a mensagem de entrada para seu manipulador.  
   

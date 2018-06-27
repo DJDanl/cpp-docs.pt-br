@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9230a304473c3f29bda2652f8941fb692b14c038
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf2ffe62760e3879d834409f5b3207588ea06f36
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357222"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956301"
 ---
 # <a name="afxglobaldata-structure"></a>Estrutura AFX_GLOBAL_DATA
 O `AFX_GLOBAL_DATA` estrutura contém campos e métodos que são usados para gerenciar a estrutura ou personalizar a aparência e comportamento do seu aplicativo.  
@@ -148,13 +148,13 @@ HRESULT D2D1MakeRotateMatrix(
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- `angle`  
+ *ângulo*  
  O ângulo da rotação no sentido horário, em graus.  
   
- `center`  
+ *Center*  
  O ponto sobre qual girar.  
   
- `matrix`  
+ *Matriz*  
  Quando este método retorna, contém a transformação de rotação de novo. Você deve alocar armazenamento para esse parâmetro.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -172,13 +172,13 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] `pWnd`  
+ [in] *pWnd*  
  Ponteiro para uma janela do controle.  
   
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  Ponteiro para um retângulo que circunda a área para desenhar. O valor padrão é `NULL`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -202,42 +202,42 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] `hTheme`  
+ [in] *hTheme*  
  Identificador para os dados de tema de uma janela, ou `NULL`. A estrutura usa o tema especificado para desenhar o texto, se esse parâmetro não for `NULL` e temas têm suporte. Caso contrário, o framework não usa um tema para desenhar o texto.  
   
  Use o [OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821) método para criar um `HTHEME`.  
   
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo.  
   
- [in] `iPartId`  
+ [in] *iPartId*  
  A parte do controle que tem a aparência do texto desejado. Para obter mais informações, consulte a coluna de partes da tabela na [partes e estados](http://msdn.microsoft.com/library/windows/desktop/bb773210). Se esse valor for 0, o texto é desenhado na fonte padrão ou uma fonte selecionada no contexto do dispositivo.  
   
- [in] `iStateId`  
+ [in] *iStateId*  
  O estado de controle que tem a aparência do texto desejado. Para obter mais informações, consulte a coluna de estados da tabela na [partes e estados](http://msdn.microsoft.com/library/windows/desktop/bb773210).  
   
- [in] `strText`  
+ [in] *strText*  
  O texto a ser desenhado.  
   
- [in] `rect`  
+ [in] *rect*  
  O limite da área na qual o texto especificado é desenhado.  
   
- [in] `dwFlags`  
+ [in] *dwFlags*  
  Uma combinação bit a bit (ou) de sinalizadores que especificam como o texto especificado é desenhado.  
   
- Se o `hTheme` parâmetro é `NULL` ou se temas não têm suporte e habilitados, o `nFormat` parâmetro o [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) método descreve os sinalizadores válidos. Se houver suporte para temas, o `dwFlags` parâmetro o [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) método descreve os sinalizadores válidos.  
+ Se o *hTheme* parâmetro é `NULL` ou se temas não têm suporte e habilitados, o *nFormat* parâmetro o [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) método descreve válidos sinalizadores. Se houver suporte para temas, o *dwFlags* parâmetro o [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) método descreve os sinalizadores válidos.  
   
- [in] `nGlowSize`  
+ [in] *nGlowSize*  
  O tamanho de um efeito de brilho é desenhado no plano de fundo antes do desenho do texto especificado. O valor padrão é 0.  
   
- [in] `clrText`  
+ [in] *clrText*  
  A cor na qual o texto especificado é desenhado. O valor padrão é a cor padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` Se um tema é usado para desenhar o texto especificado. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
- Um tema define o estilo visual de um aplicativo. Um tema não é usado para desenhar o texto, se o `hTheme` parâmetro é `NULL`, ou se o [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) não há suporte para o método, ou se [Desktop Window Manager](http://msdn.microsoft.com/library/windows/desktop/aa969540) composição está desabilitada .  
+ Um tema define o estilo visual de um aplicativo. Um tema não é usado para desenhar o texto, se o *hTheme* parâmetro é `NULL`, ou se o [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) não há suporte para o método, ou se [Desktop Window Manager](http://msdn.microsoft.com/library/windows/desktop/aa969540) ( Composição de DWM) está desabilitada.  
   
 ### <a name="see-also"></a>Consulte também  
  [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
@@ -257,7 +257,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar o suporte de acessibilidade; `FALSE` para desabilitar o suporte de acessibilidade. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -283,25 +283,25 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] `strBuffer`  
+ [in] *strBuffer*  
  Um buffer de texto.  
   
- [in] `lpszTag`  
+ [in] *lpszTag*  
  O nome de um par de abertura e fechamento de marcas XML.  
   
- [out] `strTag`  
- Quando este método retorna, o `strTag` parâmetro contém o texto que está entre a abertura e fechamento XML marcas que são denominadas com o `lpszTag` parâmetro. Qualquer espaço em branco à esquerda ou à direita é retirado do resultado.  
+ [out] *strTag*  
+ Quando este método retorna, o *strTag* parâmetro contém o texto que está entre a abertura e fechamento XML marcas que são nomeadas, o *lpszTag* parâmetro. Qualquer espaço em branco à esquerda ou à direita é retirado do resultado.  
   
- [in] `bIsCharsList`  
- `TRUE` Para converter símbolos para caracteres de escape no `strTag` parâmetro em caracteres de escape real; `FALSE` para não executar a conversão. O valor padrão é `FALSE`. Para obter mais informações, consulte Comentários.  
+ [in] *bIsCharsList*  
+ `TRUE` Para converter símbolos para caracteres de escape no *strTag* parâmetro em caracteres de escape real; `FALSE` para não executar a conversão. O valor padrão é `FALSE`. Para obter mais informações, consulte Comentários.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` Se esse método for bem-sucedida; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
- Um par de marca XML consiste em chamada de abertura e fechamento de marcas que indicam o início e término de uma execução de texto no buffer especificado. O `strBuffer` parâmetro especifica o buffer e o `lpszTag` parâmetro especifica o nome das marcas XML.  
+ Um par de marca XML consiste em chamada de abertura e fechamento de marcas que indicam o início e término de uma execução de texto no buffer especificado. O *strBuffer* parâmetro especifica o buffer e o *lpszTag* parâmetro especifica o nome das marcas XML.  
   
- Use os símbolos na tabela a seguir para codificar um conjunto de caracteres de escape no buffer especificado. Especifique `TRUE` para o `bIsCharsList` parâmetro para converter os símbolos no `strTag` parâmetro em caracteres de escape real. A tabela a seguir usa o [_T()](../../c-runtime-library/data-type-mappings.md) macro para especificar o símbolo e cadeias de caracteres de escape.  
+ Use os símbolos na tabela a seguir para codificar um conjunto de caracteres de escape no buffer especificado. Especifique `TRUE` para o *bIsCharsList* parâmetro para converter os símbolos no *strTag* parâmetro em caracteres de escape real. A tabela a seguir usa o [_T()](../../c-runtime-library/data-type-mappings.md) macro para especificar o símbolo e cadeias de caracteres de escape.  
   
 |Símbolo|Caractere de escape|  
 |------------|----------------------|  
@@ -322,14 +322,14 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] `nColor`  
- Um valor que especifica um elemento de interface do usuário cuja cor é recuperada. Para obter uma lista de valores válidos, consulte o `nIndex` parâmetro o [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) método.  
+ [in] *nColor*  
+ Um valor que especifica um elemento de interface do usuário cuja cor é recuperada. Para obter uma lista de valores válidos, consulte o *nIndex* parâmetro o [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) método.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O valor de cor RGB do elemento de interface do usuário especificado. Para obter mais informações, consulte Comentários.  
   
 ### <a name="remarks"></a>Comentários  
- Se o `nColor` parâmetro está fora do intervalo, o valor de retorno é zero. Como zero também é um valor válido de RGB, você não pode usar esse método para determinar se uma cor do sistema é suportada pelo sistema operacional atual. Em vez disso, use o [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) método, que retorna `NULL` se não há suporte para a cor.  
+ Se o *nColor* parâmetro está fora do intervalo, o valor de retorno é zero. Como zero também é um valor válido de RGB, você não pode usar esse método para determinar se uma cor do sistema é suportada pelo sistema operacional atual. Em vez disso, use o [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) método, que retorna `NULL` se não há suporte para a cor.  
   
 ### <a name="see-also"></a>Consulte também  
 
@@ -368,7 +368,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in, out] `info`  
+ [out no] *informações*  
  Um [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175) estrutura que contém as métricas escalonáveis associadas com a área não cliente de uma janela nonminimized.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -387,7 +387,7 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` para recuperar a altura de caracteres quando o texto é executado horizontalmente; `FALSE` para recuperar a altura de caracteres quando o texto é executado verticalmente. O valor padrão é `TRUE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -426,10 +426,10 @@ BOOL InitD2D(
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- `d2dFactoryType`  
+ *d2dFactoryType*  
  O modelo de threading de fábrica D2D e os recursos que ele cria.  
   
- `writeFactoryType`  
+ *writeFactoryType*  
  Um valor que especifica se o objeto de fábrica de gravação será compartilhado ou isolado  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -645,14 +645,14 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] `lpszClassNamePrefix`  
+ [in] *lpszClassNamePrefix*  
  O nome da classe de janela para registrar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O nome qualificado da classe registrado se esse método for bem-sucedida; Caso contrário, um [exceção de recurso](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d).  
   
 ### <a name="remarks"></a>Comentários  
- O valor de retorno é uma lista delimitada por vírgula do `lpszClassNamePrefix` cadeia de caracteres do parâmetro e as representações de texto hexadecimal de identificadores do atual de instância do aplicativo; o cursor do aplicativo, que é o cursor de seta cujo identificador é IDC_ARROW; e o pincel do plano de fundo. Para obter mais informações sobre como registrar classes de janela MFC, consulte [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
+ O valor de retorno é uma lista delimitada por vírgula do *lpszClassNamePrefix* cadeia de caracteres do parâmetro e as representações de texto hexadecimal dos identificadores da instância do aplicativo atual; o cursor do aplicativo, que é a seta cursor cujo identificador é IDC_ARROW; e o pincel do plano de fundo. Para obter mais informações sobre como registrar classes de janela MFC, consulte [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
   
 ### <a name="see-also"></a>Consulte também    
  [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)   
@@ -685,17 +685,17 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] `hwnd`  
+ [in] *hwnd*  
  Identificador para a janela em camadas.  
   
- [in] `crKey`  
+ [in] *crKey*  
  A cor de transparência da chave que o [Desktop Window Manager](http://msdn.microsoft.com/library/windows/desktop/aa969540) usa para compor a janela em camadas.  
   
- [in] `bAlpha`  
+ [in] *bAlpha*  
  O valor alfa que é usado para descrever a opacidade da janela em camadas.  
   
- [in] `dwFlags`  
- Uma combinação bit a bit (ou) de sinalizadores que especificam quais parâmetros de método a ser usado. Especifique LWA_COLORKEY para usar o `crKey` parâmetro como a cor de transparência. Especifique LWA_ALPHA para usar o `bAlpha` parâmetro para determinar a opacidade da janela em camadas.  
+ [in] *dwFlags*  
+ Uma combinação bit a bit (ou) de sinalizadores que especificam quais parâmetros de método a ser usado. Especifique LWA_COLORKEY para usar o *crKey* parâmetro como a cor de transparência. Especifique LWA_ALPHA para usar o *bAlpha* parâmetro para determinar a opacidade da janela em camadas.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` se esse método tiver êxito; caso contrário, `FALSE`.   
@@ -715,10 +715,10 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] `lpLogFont`  
+ [in] *lpLogFont*  
  Ponteiro para uma estrutura que contém os atributos de uma fonte.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` para especificar que o texto seja executada horizontalmente; `FALSE` para especificar que o texto é executado verticalmente.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -824,17 +824,17 @@ HRESULT ShellCreateItemFromParsingName(
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- `pszPath`  
+ *pszPath*  
  [in] Um ponteiro para um nome de exibição.  
   
- `pbc`  
+ *PBC*  
  Um ponteiro para um contexto de associação que controla a operação de análise.  
   
- `riid`  
+ *riid*  
  Uma referência a uma ID de interface.  
   
- `ppv`  
- [out] Quando essa função retorna, contém o ponteiro de interface solicitado na `riid`. Isso geralmente será `IShellItem` ou `IShellItem2`.  
+ *ppv*  
+ [out] Quando essa função retorna, contém o ponteiro de interface solicitado na *riid*. Isso geralmente será `IShellItem` ou `IShellItem2`.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna S_OK se bem-sucedido; um valor de erro caso contrário.  

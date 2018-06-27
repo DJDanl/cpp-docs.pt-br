@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba88269cf37f41cf8a594745eb2e98a57ccf64ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb8cc37396069dc7e0ea53506436b536100bdbb4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369009"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956123"
 ---
 # <a name="cgdiobject-class"></a>Classe CGdiObject
 Fornece uma classe base para vários tipos de gráficos do Windows objetos GDI (interface) do dispositivo como bitmaps, regiões, pincéis, canetas, paletas e fontes.  
@@ -114,7 +114,7 @@ BOOL Attach(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `hObject`  
+ *hObject*  
  Um `HANDLE` para um objeto Windows GDI (por exemplo, `HPEN` ou `HBRUSH`).  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -128,7 +128,7 @@ CGdiObject();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Você nunca criar um `CGdiObject` diretamente. Em vez disso, você cria um objeto de uma de suas classes derivadas, tais como `CPen` ou **Cbrush**.  
+ Você nunca criar um `CGdiObject` diretamente. Em vez disso, você cria um objeto de uma de suas classes derivadas, tais como `CPen` ou `Cbrush`.  
   
 ##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject  
  Recupera um identificador para o predefinidos canetas Windows GDI estoque, pincéis ou fontes e anexa o objeto GDI para o `CGdiObject` objeto.  
@@ -138,7 +138,7 @@ BOOL CreateStockObject(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Uma constante que especificam o tipo de objeto de estoque desejado. Consulte o parâmetro *fnObject* para [GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) no SDK do Windows para obter uma descrição dos valores apropriados.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -193,7 +193,7 @@ static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `hObject`  
+ *hObject*  
  Um `HANDLE` para um objeto GDI do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -214,10 +214,10 @@ int GetObject(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nCount`  
- Especifica o número de bytes a serem copiados para o `lpObject` buffer.  
+ *nCount*  
+ Especifica o número de bytes a serem copiados para o *lpObject* buffer.  
   
- `lpObject`  
+ *lpObject*  
  Aponta para um buffer fornecido pelo usuário que receberá as informações.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -306,7 +306,7 @@ BOOL operator!=(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `obj`  
+ *obj*  
  Um ponteiro para um existente `CGdiObject`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -320,7 +320,7 @@ BOOL operator==(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `obj`  
+ *obj*  
  Uma referência a um existente `CGdiObject`.  
   
 ### <a name="remarks"></a>Comentários  

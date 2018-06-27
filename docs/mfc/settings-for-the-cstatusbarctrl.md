@@ -17,24 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eea701c33001ffa3585c2d5847f3056454b7850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dde1f005e53aff7ebe505d1ce619bf5c94410f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380156"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955450"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>Configurações do CStatusBarCtrl
-A posição padrão de um [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) janela de status é na parte inferior da janela pai, mas você pode especificar o `CCS_TOP` estilo para que ele apareça na parte superior da área cliente da janela pai.  
+A posição padrão de um [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) janela de status é na parte inferior da janela pai, mas você pode especificar o estilo CCS_TOP para que ele apareça na parte superior da área cliente da janela pai.  
   
- Você pode especificar o **SBARS_SIZEGRIP** estilo para incluir uma alça de dimensionamento na extremidade direita do `CStatusBarCtrl` janela de status. Uma alça de dimensionamento é semelhante a uma borda de dimensionamento; é uma área retangular que o usuário pode clicar e arrastar para redimensionar a janela pai.  
+ Você pode especificar o estilo SBARS_SIZEGRIP para incluir na extremidade direita de uma alça de dimensionamento de `CStatusBarCtrl` janela de status. Uma alça de dimensionamento é semelhante a uma borda de dimensionamento; é uma área retangular que o usuário pode clicar e arrastar para redimensionar a janela pai.  
   
 > [!NOTE]
->  Se você combinar o `CCS_TOP` e **SBARS_SIZEGRIP** estilos, a alça de dimensionamento resultante não está funcionando, embora o sistema desenha na janela de status.  
+>  Se você combinar os estilos CCS_TOP e SBARS_SIZEGRIP, a alça de dimensionamento resultante não está funcionando, embora o sistema desenha na janela de status.  
   
  O procedimento de janela para a janela de status define automaticamente o tamanho inicial e a posição da janela do controle. A largura é o mesmo da área cliente da janela pai. A altura baseia-se a métrica da fonte selecionada no momento no contexto de dispositivo da janela de status e a largura das bordas da janela.  
   
- O procedimento de janela ajusta automaticamente o tamanho da janela de status sempre que ele recebe um `WM_SIZE` mensagem. Normalmente, quando o tamanho da janela pai for alterada, o pai envia um `WM_SIZE` mensagem para a janela de status.  
+ O procedimento de janela ajusta automaticamente o tamanho da janela de status sempre que ele recebe uma mensagem WM_SIZE. Normalmente, quando o tamanho da janela pai for alterado, o pai envia uma mensagem WM_SIZE para a janela de status.  
   
  Você pode definir a altura mínima da área de desenho de uma janela de status chamando [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight), especificando a altura mínima em pixels. A área de desenho não incluem as bordas da janela.  
   

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d64ec306f77174b72c130c3afc14a732464c43be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff998b8be93d1248775d49bcef7680f4c9777fd4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368342"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953669"
 ---
 # <a name="cfontdialog-class"></a>Classe CFontDialog
 Permite que você inserir uma caixa de diálogo de seleção de fonte em seu aplicativo.  
@@ -146,19 +146,19 @@ CFontDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- L `plfInitial`  
+ *plfInitial*  
  Um ponteiro para um [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estrutura de dados que permite que você defina algumas das características da fonte.  
   
- `charFormat`  
+ *charFormat*  
  Um ponteiro para um [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) estrutura de dados que permite que você defina algumas das características da fonte em um conjunto avançado de controle de edição.  
   
- `dwFlags`  
+ *dwFlags*  
  Especifica um ou mais sinalizadores de escolha de fonte. Um ou mais valores predefinidos podem ser combinados usando o operador bit a bit OR. Se você modificar o membro da estrutura `m_cf.Flag`, certifique-se de usar um operador bit a bit OR em suas alterações para manter o comportamento padrão intacto. Para obter detalhes sobre cada um desses sinalizadores, consulte a descrição do [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) estrutura no SDK do Windows.  
   
- pdcPrinter  
+ *pdcPrinter*  
  Um ponteiro para um contexto de dispositivo de impressão. Se fornecido, esse parâmetro apontará para um contexto de dispositivo de impressão para a impressora na qual as fontes serão selecionadas.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para a janela pai ou proprietária da caixa de diálogo da fonte.  
   
 ### <a name="remarks"></a>Comentários  
@@ -198,7 +198,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `cf`  
+ *CF*  
  Um [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) estrutura que contém informações sobre a formatação de caracteres da fonte selecionada.  
   
 ##  <a name="getcolor"></a>  CFontDialog::GetColor  

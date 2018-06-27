@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1627d11c5c55c62e39092882177ec893cefb89a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ded586e6d8ad5252d73e0972424915d174b8b1f3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366415"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956510"
 ---
 # <a name="cfolderpickerdialog-class"></a>Classe CFolderPickerDialog
 Classe CFolderPickerDialog implementa CFileDialog no modo do seletor de pasta.  
@@ -75,16 +75,16 @@ explicit CFolderPickerDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszFolder`  
+ *lpszFolder*  
  Pasta inicial.  
   
- `dwFlags`  
+ *dwFlags*  
  Uma combinação de um ou mais sinalizadores que permitem que você personalize a caixa de diálogo.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para a janela do pai ou o proprietário do objeto de caixa de diálogo.  
   
- `dwSize`  
+ *dwSize*  
  O tamanho da estrutura OPENFILENAME.  
   
 ### <a name="remarks"></a>Comentários  

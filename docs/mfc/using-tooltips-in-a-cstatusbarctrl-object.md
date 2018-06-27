@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 323f2861da9fcc498e34792c30c763b4dffb2fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9cce98e4a3b3ffd506607529b9fea6f0c1114cc3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385957"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951260"
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>Usando dicas de ferramenta em um objeto CStatusBarCtrl
-Para ativar dicas de ferramenta para um controle de barra de status, crie o `CStatusBarCtrl` do objeto com o **SBT_TOOLTIPS** estilo.  
+Para ativar dicas de ferramenta para um controle de barra de status, crie o `CStatusBarCtrl` objeto com o estilo SBT_TOOLTIPS.  
   
 > [!NOTE]
->  Se você estiver usando um `CStatusBar` objeto para implementar sua barra de status, use o `CStatusBar::CreateEx` função. Ele permite que você especifique estilos adicionais para o item inserido **CStatusBarCtrl** objeto.  
+>  Se você estiver usando um `CStatusBar` objeto para implementar sua barra de status, use o `CStatusBar::CreateEx` função. Ele permite que você especifique estilos adicionais para o item inserido `CStatusBarCtrl` objeto.  
   
  Uma vez o `CStatusBarCtrl` objeto foi criado com êxito, use [CStatusBarCtrl::SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) e [CStatusBarCtrl::GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext) para definir e recuperar o texto da dica para um painel específico.  
   

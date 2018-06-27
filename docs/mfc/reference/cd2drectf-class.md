@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec43e6bb14b9c5629bde60faec80d9e31e2e5188
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7dc518832dd84bf5ca91765211f96934ea0b4f0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350791"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956441"
 ---
 # <a name="cd2drectf-class"></a>Classe CD2DRectF
 Um wrapper para `D2D1_RECT_F`.  
@@ -48,7 +48,7 @@ class CD2DRectF : public D2D1_RECT_F;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CD2DRectF::IsNull](#isnull)|Retorna um `boolean` valor que indica se uma expressão não contém dados válidos ( `null`).|  
+|[CD2DRectF::IsNull](#isnull)|Retorna um **booliano** valor que indica se uma expressão não contém dados válidos ( **nulo**).|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -81,19 +81,19 @@ CD2DRectF(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `rect`  
+ *Rect*  
  retângulo de origem  
   
- `fLeft`  
+ *fLeft*  
  coordenada esquerda do código-fonte  
   
- `fTop`  
+ *fTop*  
  coordenada superior do código-fonte  
   
- `fRight`  
+ *baterão*  
  fonte de coordenada direita  
   
- `fBottom`  
+ *fBottom*  
  coordenada inferior de origem  
   
 ##  <a name="isnull"></a>  CD2DRectF::IsNull  

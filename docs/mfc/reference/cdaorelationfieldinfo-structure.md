@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e53daaaa5ef4997762342cbfb74ae4d5fa96097d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d86faf89aea0f991a9fdd27bec6bb7969404986
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366155"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956905"
 ---
 # <a name="cdaorelationfieldinfo-structure"></a>Estrutura CDaoRelationFieldInfo
 O `CDaoRelationFieldInfo` estrutura contém informações sobre um campo em uma relação definida para objetos de acesso de dados (DAO).  
@@ -38,10 +38,10 @@ struct CDaoRelationFieldInfo
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `m_strName`  
+ *m_strName*  
  O nome do campo na tabela primária da relação.  
   
- `m_strForeignName`  
+ *m_strForeignName*  
  O nome do campo da tabela externa da relação.  
   
 ## <a name="remarks"></a>Comentários  

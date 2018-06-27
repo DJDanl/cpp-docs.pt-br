@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4dbc01c83f9561c8174d2a14365a6a8c94e6ded
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab7d4f434bf958c3bf47dc1f91101d35cf04add7
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383156"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954953"
 ---
 # <a name="working-with-a-tab-control"></a>Trabalhando com um controle de guia
-A maneira mais fácil de usar um controle de guia ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) é adicionando-o a um recurso de modelo de caixa de diálogo com o editor de caixa de diálogo. Você também pode usar um controle guia por si só. Chamadas MFC **InitCommonControls** para você. As tarefas principais são da seguinte maneira:  
+A maneira mais fácil de usar um controle de guia ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) é adicionando-o a um recurso de modelo de caixa de diálogo com o editor de caixa de diálogo. Você também pode usar um controle guia por si só. Chamadas MFC `InitCommonControls` para você. As tarefas principais são da seguinte maneira:  
   
 -   [Criando o controle de guia](../mfc/creating-the-tab-control.md)  
   

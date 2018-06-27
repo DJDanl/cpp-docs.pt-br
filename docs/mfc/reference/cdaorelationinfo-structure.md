@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112af640d020dc579c1ec2b1b7eace509daa451e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49bdfb00c3f2ceba424af7bfdfa652cacec929e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366256"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951286"
 ---
 # <a name="cdaorelationinfo-structure"></a>Estrutura CDaoRelationInfo
 O `CDaoRelationInfo` estrutura contém informações sobre uma relação definida entre os campos de duas tabelas em um [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objeto.  
@@ -44,7 +44,7 @@ struct CDaoRelationInfo
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `m_strName`  
+ *m_strName*  
  Exclusivamente nomeia o objeto de relação. Para obter mais informações, consulte o tópico "Propriedade de nome" na Ajuda do DAO.  
   
  *m_strTable*  
@@ -53,7 +53,7 @@ struct CDaoRelationInfo
  *m_strForeignTable*  
  Nomes de tabela externa na relação. Uma tabela externa é uma tabela usada para conter chaves estrangeiras. Em geral, você deve usar uma tabela externa para estabelecer ou impor a integridade referencial. A tabela externa normalmente está no lado muitos de uma relação um-para-muitos. Exemplos de tabelas externas incluem tabelas que contêm códigos do American estados ou províncias canadenses ou pedidos de clientes.  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  Contém informações sobre o tipo de relação. O valor desse membro pode ser qualquer um dos seguintes:  
   
 - **dbRelationUnique** relação é um para um.  
@@ -70,11 +70,11 @@ struct CDaoRelationInfo
   
 - **dbRelationDeleteCascade** exclusões ocorrerão em cascata.  
   
- `m_pFieldInfos`  
- Um ponteiro para uma matriz de [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) estruturas. A matriz contém um objeto para cada campo na relação. O `m_nFields` membro de dados fornece uma contagem dos elementos da matriz.  
+ *m_pFieldInfos*  
+ Um ponteiro para uma matriz de [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) estruturas. A matriz contém um objeto para cada campo na relação. O *m_nFields* membro de dados fornece uma contagem dos elementos da matriz.  
   
- `m_nFields`  
- O número de `CDaoRelationFieldInfo` objetos no `m_pFieldInfos` membro de dados.  
+ *m_nFields*  
+ O número de `CDaoRelationFieldInfo` objetos no *m_pFieldInfos* membro de dados.  
   
 ## <a name="remarks"></a>Comentários  
  As referências a primária e secundária acima indicam como as informações são retornadas pelo [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) a função de membro na classe `CDaoDatabase`.  

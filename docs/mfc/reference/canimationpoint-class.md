@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b81c49ce96fd026cd1974e505ac50dec131611
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58c8c9aaaf212e98fdeff1e639bb09423304e643
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355156"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957397"
 ---
 # <a name="canimationpoint-class"></a>Classe CAnimationPoint
 Implementa a funcionalidade de um ponto de cujas coordenadas podem ser animadas.  
@@ -114,10 +114,10 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pXTransition`  
+ *pXTransition*  
  Um ponteiro para fazer a transição para coordenadas X.  
   
- `pYTransition`  
+ *pYTransition*  
  Um ponteiro para fazer a transição para a Y coordenada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -138,16 +138,16 @@ CAnimationPoint(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `ptDefault`  
+ *ptDefault*  
  Especifica as coordenadas de ponto padrão.  
   
- `nGroupID`  
+ *nGroupID*  
  Especifica a ID do grupo.  
   
- `nObjectID`  
+ *nObjectID*  
  Especifica a ID de objeto.  
   
- `dwUserData`  
+ *dwUserData*  
  Especifica os dados definidos pelo usuário.  
   
 ### <a name="remarks"></a>Comentários  
@@ -161,7 +161,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lst`  
+ *lst*  
  Quando a função retornar, contém ponteiros para os dois objetos CAnimationVariable que representam as coordenadas X e Y.  
   
 ##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue  
@@ -185,7 +185,7 @@ BOOL GetValue(CPoint& ptValue);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `ptValue`  
+ *ptValue*  
  Saída. Quando este método retorna, contém o valor atual.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -255,7 +255,7 @@ void operator=(const CPoint& ptSrc);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `ptSrc`  
+ *ptSrc*  
  Refere-se a CPoint ou ponto.  
   
 ### <a name="remarks"></a>Comentários  
@@ -269,7 +269,7 @@ void SetDefaultValue(const POINT& ptDefault);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `ptDefault`  
+ *ptDefault*  
  Especifica o valor de ponto padrão.  
   
 ### <a name="remarks"></a>Comentários  

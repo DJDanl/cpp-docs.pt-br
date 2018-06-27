@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4f702f619eb06a11cbbf7ec5be7407d12f7f445
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9e65b4880c80f8a4b0d9a192f316b16a92a3e69
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368723"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953903"
 ---
 # <a name="cdaofieldexchange-class"></a>Classe CDaoFieldExchange
 Oferece suporte as rotinas de troca (DFX) dos campos de registro DAO usadas pelas classes de banco de dados DAO.  
@@ -67,7 +67,7 @@ class CDaoFieldExchange
 > [!NOTE]
 >  Troca de campos de registro DAO (DFX) é muito semelhante à troca de campos de registro (RFX) nas classes de banco de dados baseado em ODBC MFC ( `CDatabase`, `CRecordset`). Se você entender RFX, você achará DFX fácil de usar.  
   
- Um `CDaoFieldExchange` objeto fornece as informações de contexto necessário para DAO registrar troca de campos entrem em vigor. `CDaoFieldExchange` objetos dão suporte a um número de operações, incluindo parâmetros de associação e os membros de dados de campo e definir vários sinalizadores nos campos do registro atual. DFX operações são executadas em membros de dados de classe de conjunto de registros de tipos definidos pelo `enum` **FieldType** em `CDaoFieldExchange`. Possíveis **FieldType** os valores são:  
+ Um `CDaoFieldExchange` objeto fornece as informações de contexto necessário para DAO registrar troca de campos entrem em vigor. `CDaoFieldExchange` objetos dão suporte a um número de operações, incluindo parâmetros de associação e os membros de dados de campo e definir vários sinalizadores nos campos do registro atual. DFX operações são executadas em membros de dados de classe de conjunto de registros de tipos definidos pelo **enum** **FieldType** em `CDaoFieldExchange`. Possíveis **FieldType** os valores são:  
   
 - **CDaoFieldExchange::outputColumn** para membros de dados do campo.  
   
@@ -118,7 +118,7 @@ BOOL IsValidOperation();
 |**StoreField**|Salva o registro atual no cache.|  
 |**LoadField**|Restaura as variáveis de membro de dados armazenados em cache no conjunto de registros.|  
 |**FreeCache**|Libera o cache usado para verificar se há "sujos" campos do conjunto de registros.|  
-|`SetFieldNull`|Define o status do campo para Null e o valor para **PSEUDONULL**.|  
+|**SetFieldNull**|Define o status do campo para Null e o valor para **PSEUDONULL**.|  
 |**MarkForAddNew**|Marca os campos "sujos" se não **PSEUDONULL**.|  
 |**MarkForEdit**|Marca os campos "sujos" se não corresponder o cache.|  
 |**SetDirtyField**|Conjuntos de campo valores marcados como "sujos".|  
@@ -138,7 +138,7 @@ void SetFieldType(UINT nFieldType);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nFieldType`  
+ *nFieldType*  
  Um valor de **enum FieldType**, declarado em `CDaoFieldExchange`, que pode ser um dos seguintes:  
   
 - **CDaoFieldExchange::outputColumn**  
@@ -146,9 +146,9 @@ void SetFieldType(UINT nFieldType);
 - **CDaoFieldExchange::param**  
   
 ### <a name="remarks"></a>Comentários  
- Normalmente, ClassWizard grava essa chamada para você. Se você escrever sua própria função e estiver usando o Assistente para gravar seu `DoFieldExchange` função, adicione chamadas para sua própria função fora o mapa de campo. Se você não usar o assistente, não haverá um mapeamento de campos. A chamada precede chamadas a funções DFX, uma para cada membro de dados do campo de sua classe e identifica o tipo de campo como **CDaoFieldExchange::outputColumn**.  
+ Normalmente, ClassWizard grava essa chamada para você. Se você escrever sua própria função e estiver usando o Assistente para gravar seu `DoFieldExchange` função, adicione chamadas para sua própria função fora o mapa de campo. Se você não usar o assistente, não haverá um mapeamento de campos. A chamada precede chamadas a funções DFX, uma para cada membro de dados do campo de sua classe e identifica o tipo de campo como `CDaoFieldExchange::outputColumn`.  
   
- Se você parametrizar sua classe de conjunto de registros, você deve adicionar DFX chamadas para todos os membros de dados de parâmetro (fora de mapa de campo) e preceder essas chamadas com uma chamada para `SetFieldType`. Passe o valor **CDaoFieldExchange::param**. (Em vez disso, você pode usar um [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) e definir os valores de parâmetro.)  
+ Se você parametrizar sua classe de conjunto de registros, você deve adicionar DFX chamadas para todos os membros de dados de parâmetro (fora de mapa de campo) e preceder essas chamadas com uma chamada para `SetFieldType`. Passe o valor `CDaoFieldExchange::param`. (Em vez disso, você pode usar um [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) e definir os valores de parâmetro.)  
   
  Em geral, cada grupo de chamadas de função DFX associados a membros de dados do campo ou membros de dados do parâmetro deve ser precedido por uma chamada para `SetFieldType`. O `nFieldType` parâmetro de cada `SetFieldType` chamada identifica o tipo dos membros de dados representado pelas chamadas de função DFX que seguem o `SetFieldType` chamar.  
   

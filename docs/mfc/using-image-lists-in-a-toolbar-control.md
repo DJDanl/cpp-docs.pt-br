@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76325d2b078f51860cad7fa3fab61ed7c518a41c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50e7cb936c55ced1f16a325a031dccd1edde7d06
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382844"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951901"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>Usando listas de imagens em um controle da barra de ferramentas
 Por padrão, as imagens usadas pelos botões em um controle de barra de ferramentas são armazenadas como um único bitmap. No entanto, você também pode armazenar imagens de botão em um conjunto de listas de imagens. O objeto de controle de barra de ferramentas pode usar até três listas de imagens separadas:  
@@ -30,7 +30,7 @@ Por padrão, as imagens usadas pelos botões em um controle de barra de ferramen
   
 -   Desabilitado imagem listar contém imagens de botões de barra de ferramentas que estão atualmente desabilitados.  
   
--   Realçado imagem listar contém imagens de botões de barra de ferramentas que são realçadas no momento. Essa lista de imagem é usada somente quando a barra de ferramentas usa a **TBSTYLE_FLAT** estilo.  
+-   Realçado imagem listar contém imagens de botões de barra de ferramentas que são realçadas no momento. Esta lista de imagens é usada somente quando a barra de ferramentas usa o estilo TBSTYLE_FLAT.  
   
  Essas listas de imagens são usadas pelo controle de barra de ferramentas quando você associá-los com o `CToolBarCtrl` objeto. Essa associação é realizada por meio de chamadas para [CToolBarCtrl::SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist), [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist), e [SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist).  
   

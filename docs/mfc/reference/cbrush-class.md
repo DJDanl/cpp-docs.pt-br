@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ffd5e43267ad6a5a462705f410cc1073161ecf0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355883"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954098"
 ---
 # <a name="cbrush-class"></a>Classe CBrush
 Encapsula um pincel GDI (interface) do dispositivo de gráficos Windows.  
@@ -105,10 +105,10 @@ explicit CBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `crColor`  
+ *crColor*  
  Especifica a cor de primeiro plano do pincel como uma cor RGB. Se o pincel é hatched, esse parâmetro especifica a cor da hachura.  
   
- `nIndex`  
+ *nIndex*  
  Especifica o estilo de hachura do pincel. Ele pode ser qualquer um dos seguintes valores:  
   
 - `HS_BDIAGONAL` Hachura descendente (da esquerda para a direita) em 45 graus  
@@ -123,7 +123,7 @@ explicit CBrush(CBitmap* pBitmap);
   
 - `HS_VERTICAL` Hachura vertical  
   
- `pBitmap`  
+ *pBitmap*  
  Aponta para um `CBitmap` objeto que especifica um bitmap com a qual o pincel pinta.  
   
 ### <a name="remarks"></a>Comentários  
@@ -133,7 +133,7 @@ explicit CBrush(CBitmap* pBitmap);
   
  O construtor com um único [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parâmetro constrói um pincel sólido com a cor especificada. A cor Especifica um valor de RGB e pode ser construída com o `RGB` macro no WINDOWS. H.  
   
- O construtor com dois parâmetros constrói um pincel de hachura. O `nIndex` parâmetro especifica o índice de um padrão de tracejada. O `crColor` parâmetro especifica a cor.  
+ O construtor com dois parâmetros constrói um pincel de hachura. O *nIndex* parâmetro especifica o índice de um padrão de tracejada. O *crColor* parâmetro especifica a cor.  
   
  O construtor com um `CBitmap` parâmetro constrói um pincel padronizado. O parâmetro identifica um bitmap. O bitmap é assumido como foram criados usando [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), ou [ CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). O tamanho mínimo para um bitmap a ser usado em um padrão de preenchimento é 8 pixels por 8.  
   
@@ -198,9 +198,9 @@ BOOL CreateDIBPatternBrush(
   
  A maneira como você manipula o DIB diferem as duas versões:  
   
--   Na primeira versão, para obter um identificador para o DIB você chamar o Windows **GlobalAlloc** função para alocar um bloco de memória global e, em seguida, preencha a memória com o DIB compactado.  
+-   Na primeira versão, para obter um identificador para o DIB você chamar o Windows `GlobalAlloc` função para alocar um bloco de memória global e, em seguida, preencha a memória com o DIB compactado.  
   
--   Na segunda versão, não é necessário chamar **GlobalAlloc** alocar memória para o DIB compactado.  
+-   Na segunda versão, não é necessário chamar `GlobalAlloc` alocar memória para o DIB compactado.  
   
  DIB compactado consiste em um `BITMAPINFO` estrutura de dados seguida imediatamente a matriz de bytes que define os pixels do bitmap. Bitmaps usados como padrões de preenchimento deve ser 8 pixels por 8. Se o bitmap for maior, o Windows cria um padrão de preenchimento usando apenas os bits correspondentes para as 8 primeiras linhas e 8 colunas de pixels no canto superior esquerdo do bitmap.  
   
@@ -208,7 +208,7 @@ BOOL CreateDIBPatternBrush(
   
  Para obter informações sobre como usar as seguintes funções do Windows, consulte o SDK do Windows:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (esta função é fornecida somente para compatibilidade com aplicativos escritos para versões do Windows anteriores ao 3.0; use o **CreateDIBPatternBrushPt** função.)  
+- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (esta função é fornecida somente para compatibilidade com aplicativos escritos para versões do Windows anteriores ao 3.0; use o `CreateDIBPatternBrushPt` função.)  
   
 - [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (esta função deve ser usada para aplicativos Win32.)  
   
@@ -227,7 +227,7 @@ BOOL CreateHatchBrush(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Especifica o estilo de hachura do pincel. Ele pode ser qualquer um dos seguintes valores:  
   
 - `HS_BDIAGONAL` Hachura descendente (da esquerda para a direita) em 45 graus  
@@ -242,7 +242,7 @@ BOOL CreateHatchBrush(
   
 - `HS_VERTICAL` Hachura vertical  
   
- `crColor`  
+ *crColor*  
  Especifica a cor de primeiro plano do pincel como uma cor RGB (a cor das hachuras). Consulte [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) no SDK do Windows para obter mais informações.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -262,14 +262,14 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pBitmap`  
+ *pBitmap*  
  Identifica um bitmap.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- O pincel posteriormente pode ser selecionado para qualquer contexto de dispositivo que dá suporte a operações de varredura. O bitmap identificado por `pBitmap` seja geralmente inicializada usando o [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), ou [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) função.  
+ O pincel posteriormente pode ser selecionado para qualquer contexto de dispositivo que dá suporte a operações de varredura. O bitmap identificado por *pBitmap* seja geralmente inicializada usando o [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), ou [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) função.  
   
  Bitmaps usados como padrões de preenchimento deve ser 8 pixels por 8. Se o bitmap for maior, o Windows usará apenas os bits correspondentes para as 8 primeiras linhas e colunas de pixels no canto superior esquerdo do bitmap.  
   
@@ -290,8 +290,8 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `crColor`  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) estrutura que especifica a cor do pincel. A cor Especifica um valor de RGB e pode ser construída com o `RGB` macro no WINDOWS. H.  
+ *crColor*  
+ Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) estrutura que especifica a cor do pincel. A cor Especifica um valor de RGB e pode ser construída com a macro RGB no WINDOWS. H.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
@@ -312,7 +312,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Especifica um índice de cor. Esse valor corresponde à cor usada para pintar um dos elementos de 21 janela. Consulte [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) no SDK do Windows para obter uma lista de valores.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -334,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `hBrush`  
+ *hBrush*  
  `HANDLE` para um pincel de Windows GDI.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -356,13 +356,13 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pLogBrush`  
+ *pLogBrush*  
  Aponta para um [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) estrutura que contém informações sobre o pincel.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Se a função tiver êxito, e `pLogBrush` é um ponteiro válido, o valor de retorno é o número de bytes armazenados no buffer.  
+ Se a função tiver êxito, e *pLogBrush* é um ponteiro válido, o valor de retorno é o número de bytes armazenados no buffer.  
   
- Se a função tiver êxito, e `pLogBrush` é **nulo**, o valor de retorno é o número de bytes necessários para armazenar as informações de função deve ser armazenados no buffer.  
+ Se a função tiver êxito, e *pLogBrush* é **nulo**, o valor de retorno é o número de bytes necessários para armazenar as informações de função deve ser armazenados no buffer.  
   
  Se a função falhar, o valor de retorno será 0.  
   

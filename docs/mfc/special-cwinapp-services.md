@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81c3804ccc4f9e30e2d287102c408c98a77c6833
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd6af2ab524711c591772c28ed47742e6aa406ad
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382925"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955866"
 ---
 # <a name="special-cwinapp-services"></a>Serviços CWinApp especiais
 Além de executar o loop de mensagem e fornecendo uma oportunidade para inicializar o aplicativo e limpar depois dele, [CWinApp](../mfc/reference/cwinapp-class.md) fornece vários outros serviços.  
@@ -61,7 +61,7 @@ Além de executar o loop de mensagem e fornecendo uma oportunidade para iniciali
   
  Se você deseja inicializar GDI+ para seu aplicativo (chamando [GdiplusStartup](https://msdn.microsoft.com/library/ms534077) no seu [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) função), você tem que suprimir o thread de plano de fundo GDI+.  
   
- Você pode fazer isso definindo o **SuppressBackgroundThread** membro o [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) estrutura para **TRUE**. Quando suprimindo o GDI+ em segundo plano thread, o **NotificationHook** e **NotificationUnhook** chamadas devem ser feitas apenas anteriores entrando e saindo do loop de mensagens do aplicativo. Para obter mais informações sobre essas chamadas, consulte [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068). Portanto, um bom lugar para chamar **GdiplusStartup** e as funções de gancho de notificação está em uma substituição da função virtual [CWinApp:: Run](../mfc/reference/cwinapp-class.md#run), conforme mostrado abaixo:  
+ Você pode fazer isso definindo o `SuppressBackgroundThread` membro o [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) estrutura para **TRUE**. Quando suprimindo o GDI+ em segundo plano thread, o `NotificationHook` e `NotificationUnhook` chamadas devem ser feitas apenas anteriores entrando e saindo do loop de mensagens do aplicativo. Para obter mais informações sobre essas chamadas, consulte [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068). Portanto, um bom lugar para chamar `GdiplusStartup` e as funções de gancho de notificação está em uma substituição da função virtual [CWinApp:: Run](../mfc/reference/cwinapp-class.md#run), conforme mostrado abaixo:  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3503f59096d3879f986b2a8c99bdb9823ef4e24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06b2f8338756b24971fcdf9a89b055272ee261bd
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353160"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955515"
 ---
 # <a name="cctrlview-class"></a>Classe CCtrlView
 Se adapta a arquitetura do modo de exibição de documentos para os controles comuns com suporte em versões do Windows 98 e Windows NT 3.51 e posteriores.  
@@ -91,10 +91,10 @@ CCtrlView(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszClass`  
+ *lpszClass*  
  Nome da classe de exibição da classe Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  Estilo da classe de exibição.  
   
 ### <a name="remarks"></a>Comentários  
@@ -125,11 +125,11 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDC`  
+ *pDC*  
  Um ponteiro para o contexto de dispositivo no qual ocorre o desenho.  
   
 ### <a name="remarks"></a>Comentários  
- `OnDraw` geralmente é chamado para a exibição de tela, passando um contexto de dispositivo de tela especificado pelo `pDC`.  
+ `OnDraw` geralmente é chamado para a exibição de tela, passando um contexto de dispositivo de tela especificado por *pDC*.  
   
 ##  <a name="precreatewindow"></a>  CCtrlView::PreCreateWindow  
  Chamado antes da criação da janela Windows anexada a este `CWnd` objeto.  

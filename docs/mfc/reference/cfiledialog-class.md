@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c52d2912edc1632dc2fbe4fe330def6d357f16d2
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 1512ae9a26b5b0cf25c4b4ebeff2d05bd0993f7f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255763"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955239"
 ---
 # <a name="cfiledialog-class"></a>Classe CFileDialog
 Encapsula a caixa de diálogo comum que é usada para abrir o arquivo ou salvar as operações de arquivo.  
@@ -248,7 +248,7 @@ class CFileDialog : public CCommonDialog
   
  Você pode usar `CFileDialog` como é com o construtor fornecido, ou você pode derivar sua própria classe de caixa de diálogo de `CFileDialog` e escrever um construtor para atender às suas necessidades. Em ambos os casos, essas caixas de diálogo se comportará como caixas de diálogo MFC padrão porque eles são derivados do [CCommonDialog classe](../../mfc/reference/ccommondialog-class.md). `CFileDialog` depende do COMMDLG. Arquivo DLL que está incluído no Windows.  
   
- A aparência e a funcionalidade do `CFileDialog` com o Windows Vista ou posterior são diferentes das versões anteriores do Windows. O padrão `CFileDialog` usa automaticamente o novo Windows Vista ou posterior estilo sem alterações de código, se um programa é compilado e executado no Windows Vista ou posterior. Use o `bVistaStyle` parâmetro no construtor para substituir manualmente a atualização automática. A exceção para a atualização automática é caixas de diálogo personalizadas. Eles não serão convertidos para o novo estilo. Para obter mais informações sobre o construtor, consulte [CFileDialog::CFileDialog](#cfiledialog).  
+ A aparência e a funcionalidade do `CFileDialog` com o Windows Vista ou posterior são diferentes das versões anteriores do Windows. O padrão `CFileDialog` usa automaticamente o novo Windows Vista ou posterior estilo sem alterações de código, se um programa é compilado e executado no Windows Vista ou posterior. Use o *bVistaStyle* parâmetro no construtor para substituir manualmente a atualização automática. A exceção para a atualização automática é caixas de diálogo personalizadas. Eles não serão convertidos para o novo estilo. Para obter mais informações sobre o construtor, consulte [CFileDialog::CFileDialog](#cfiledialog).  
   
 > [!NOTE]
 >  O sistema de controle de ID é diferente no Windows Vista ou posterior a partir de versões anteriores do Windows quando você usar um `CFileDialog`. Você deve atualizar todas as referências a `CFileDialog` controles no código antes de você pode transferir seu projeto de uma versão anterior do Windows.  
@@ -319,13 +319,13 @@ HRESULT AddCheckButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do botão de seleção para adicionar.  
   
- `strLabel`  
+ *strLabel*  
  O nome do botão de seleção.  
   
- `bChecked`  
+ *bChecked*  
  Um valor booleano que indica o estado atual do botão de seleção. `TRUE` Se marcado. `FALSE` caso contrário  
   
 ### <a name="remarks"></a>Comentários  
@@ -338,7 +338,7 @@ HRESULT AddComboBox(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A identificação da caixa de combinação.  
   
 ### <a name="remarks"></a>Comentários  
@@ -354,13 +354,13 @@ HRESULT AddControlItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do controle de contêiner para adicionar o item.  
   
- `dwIDItem`  
+ *dwIDItem*  
  A ID do item.  
   
- `strLabel`  
+ *strLabel*  
  Texto do item.  
   
 ### <a name="remarks"></a>Comentários  
@@ -375,10 +375,10 @@ HRESULT AddEditBox(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A identificação da caixa de edição.  
   
- `strText`  
+ *strText*  
  O nome da caixa de edição.  
   
 ### <a name="remarks"></a>Comentários  
@@ -393,10 +393,10 @@ HRESULT AddMenu(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A identificação do menu.  
   
- `strLabel`  
+ *strLabel*  
  O nome do menu.  
   
 ### <a name="remarks"></a>Comentários  
@@ -416,13 +416,13 @@ void AddPlace(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszFolder`  
+ *lpszFolder*  
  Um caminho para a pasta a ser disponibilizados para o usuário. Isso só pode ser uma pasta.  
   
- `fdap`  
+ *FDAP*  
  Especifica onde a pasta é colocada dentro da lista.  
   
- `psi`  
+ *PSI*  
  Um ponteiro para um IShellItem que representa a pasta a ser disponibilizados para o usuário. Isso só pode ser uma pasta.  
   
 ### <a name="remarks"></a>Comentários  
@@ -437,10 +437,10 @@ HRESULT AddPushButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do botão Adicionar.  
   
- `strLabel`  
+ *strLabel*  
  O nome do botão.  
   
 ### <a name="remarks"></a>Comentários  
@@ -453,7 +453,7 @@ HRESULT AddRadioButtonList(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do grupo de botões de opção para adicionar.  
   
 ### <a name="remarks"></a>Comentários  
@@ -466,7 +466,7 @@ HRESULT AddSeparator(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  Adicione a ID do separador.  
   
 ### <a name="remarks"></a>Comentários  
@@ -481,10 +481,10 @@ HRESULT AddText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A identificação do texto.  
   
- `strText`  
+ *strText*  
  O nome de texto.  
   
 ### <a name="remarks"></a>Comentários  
@@ -522,36 +522,36 @@ explicit CFileDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bOpenFileDialog`  
+ [in] *bOpenFileDialog*  
  O parâmetro que especifica o tipo de caixa de diálogo para criar. Defina-a como `TRUE` para construir um **abrir arquivo** caixa de diálogo. Defina-a como `FALSE` para construir um **Salvar como arquivo** caixa de diálogo.  
   
- [in] `lpszDefExt`  
- A extensão de nome de arquivo padrão. Se o usuário não inclui uma extensão conhecida (uma que tenha uma associação no computador do usuário) na caixa Nome do arquivo, a extensão especificada pelo `lpszDefExt` automaticamente é acrescentado ao nome do arquivo. Se esse parâmetro for `NULL`, sem extensão é anexado.  
+ [in] *lpszDefExt*  
+ A extensão de nome de arquivo padrão. Se o usuário não inclui uma extensão conhecida (uma que tenha uma associação no computador do usuário) na caixa Nome do arquivo, a extensão especificada por *lpszDefExt* automaticamente é acrescentado ao nome do arquivo. Se esse parâmetro for `NULL`, sem extensão é anexado.  
   
- [in] `lpszFileName`  
+ [in] *lpszFileName*  
  O nome do arquivo inicial que aparece na caixa Nome do arquivo. Se `NULL`, nenhum nome de arquivo inicial é exibida.  
   
- [in] `dwFlags`  
+ [in] *dwFlags*  
  Uma combinação de um ou mais sinalizadores que você pode usar para personalizar a caixa de diálogo. Para obter uma descrição desses sinalizadores, consulte o [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) estrutura no SDK do Windows. Se você modificar o `m_ofn.Flags` membro da estrutura, use um operador OR bit a bit em suas alterações para manter o comportamento padrão.  
   
- [in] `lpszFilter`  
+ [in] *lpszFilter*  
  Uma série de pares de cadeia de caracteres que especifique os filtros que você pode aplicar o arquivo. Se você especificar filtros de arquivo, somente os arquivos que correspondem aos critérios de filtro serão exibidos na lista de arquivos. Consulte a seção comentários para obter mais informações sobre como trabalhar com filtros de arquivo.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Um ponteiro para a janela pai ou o proprietário da caixa de diálogo de arquivo.  
   
- [in] `dwSize`  
+ [in] *dwSize*  
  O tamanho do `OPENFILENAME` estrutura. Esse valor depende da versão do sistema operacional. MFC usado esse parâmetro para determinar o tipo apropriado de caixa de diálogo para criar. O tamanho padrão de 0 significa que o código MFC determinará o tamanho da caixa de diálogo correto a ser usado com base na versão do sistema operacional no qual o programa é executado.  
   
- [in] `bVistaStyle`  
+ [in] *bVistaStyle*  
  **Observação** esse parâmetro está disponível no Visual Studio 2008 e posterior e será fazer com que a caixa de diálogo Novo estilo a ser usado somente se você estiver executando no Windows Vista ou posterior.  
   
  O parâmetro que especifica o estilo da caixa de diálogo de arquivo. Defina-a como `TRUE` para usar as caixas de diálogo de arquivo de estilo Vista novo. Caso contrário, será usado o estilo antigo de caixas de diálogo. Consulte a seção comentários para obter mais informações em execução em Vista.  
   
 ### <a name="remarks"></a>Comentários  
- Qualquer um **abrir arquivo** ou **Salvar como arquivo** caixa de diálogo é construída, dependendo do valor de `bOpenFileDialog`.  
+ Qualquer um **abrir arquivo** ou **Salvar como arquivo** caixa de diálogo é construída, dependendo do valor de *bOpenFileDialog*.  
   
- Especificando uma extensão padrão usando `lpszDefExt` podem não produzir o comportamento esperado, pois raramente é previsível quais extensões têm associações de arquivo no computador do usuário. Se você precisar de mais controle sobre o acréscimo de uma extensão padrão, você pode derivar sua própria classe de `CFileDialog`e substituir o `CFileDialog::OnFileNameOK` método para executar seu próprio tratamento de extensão.  
+ Especificando uma extensão padrão usando *lpszDefExt* podem não produzir o comportamento esperado, pois raramente é previsível quais extensões têm associações de arquivo no computador do usuário. Se você precisar de mais controle sobre o acréscimo de uma extensão padrão, você pode derivar sua própria classe de `CFileDialog`e substituir o `CFileDialog::OnFileNameOK` método para executar seu próprio tratamento de extensão.  
   
  Para permitir que o usuário selecione vários arquivos, defina o `OFN_ALLOWMULTISELECT` sinalizador antes de chamar [DoModal](#domodal). Você deve fornecer seu próprio buffer do nome de arquivo para armazenar a lista retornada de vários nomes de arquivo. Para fazer isso, substituindo `m_ofn.lpstrFile` com um ponteiro para um buffer alocou, depois de construir o [CFileDialog](../../mfc/reference/cfiledialog-class.md), mas antes de chamar `DoModal`. Além disso, você deve definir `m_ofn.nMaxFile` com o número de caracteres no buffer apontado pelo `m_ofn.lpstrFile`. Se você definir o número máximo de arquivos a ser selecionado para `n`, é o tamanho do buffer necessário `n`*(_MAX_PATH + 1) + 1. Por exemplo:  
   
@@ -559,7 +559,7 @@ explicit CFileDialog(
   
  Para habilitar o usuário redimensionar uma caixa de diálogo de estilo do Explorer usando o mouse ou teclado, defina o `OFN_ENABLESIZING` sinalizador. Defina esse sinalizador é necessário somente se você fornecer um modelo personalizado ou um procedimento de cabo. O sinalizador funciona apenas com uma caixa de diálogo de estilo do Explorer. caixas de diálogo de estilo antigo não podem ser redimensionadas.  
   
- O `lpszFilter` parâmetro é usado para determinar o tipo de nome de arquivo deve ter um arquivo a ser exibido na lista de arquivos. A primeira cadeia de caracteres do par de cadeia de caracteres descreve o filtro. a segunda cadeia indica a extensão de nome de arquivo a ser usado. Várias extensões podem ser especificadas usando um ponto e vírgula (o caractere ';') como o delimitador. A cadeia de caracteres termina com dois '&#124;' caracteres, seguido por um `NULL` caracteres. Você também pode usar um [CString](../../atl-mfc-shared/using-cstring.md) objeto para este parâmetro.  
+ O *lpszFilter* parâmetro é usado para determinar o tipo de nome de arquivo deve ter um arquivo a ser exibido na lista de arquivos. A primeira cadeia de caracteres do par de cadeia de caracteres descreve o filtro. a segunda cadeia indica a extensão de nome de arquivo a ser usado. Várias extensões podem ser especificadas usando um ponto e vírgula (o caractere ';') como o delimitador. A cadeia de caracteres termina com dois '&#124;' caracteres, seguido por um `NULL` caracteres. Você também pode usar um [CString](../../atl-mfc-shared/using-cstring.md) objeto para este parâmetro.  
   
  Por exemplo, [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] permite aos usuários abrir arquivos que têm extensões. xlc (gráfico) ou. xls (planilha), entre outros. O filtro para o Excel pode ser escrito como:  
   
@@ -567,9 +567,9 @@ explicit CFileDialog(
   
  No entanto, se você pretende usar essa cadeia de caracteres diretamente atualizar o `OPENFILENAME` estrutura, você deve delimitar cadeias de caracteres com o caractere null, '\0', em vez das barras verticais ('&#124;').  
   
- O `bVistaStyle` parâmetro só é aplicável quando em execução no Windows Vista ou posterior. Em versões anteriores do Windows, esse parâmetro é ignorado. Se `bVistaStyle` é definido como `TRUE`, quando você compilar um programa com o Visual Studio 2008 ou posterior, o novo estilo Vista **caixa de diálogo arquivo** será usado. Caso contrário, o estilo MFC anterior **caixa de diálogo arquivo** será usado.  
+ O *bVistaStyle* parâmetro só é aplicável quando em execução no Windows Vista ou posterior. Em versões anteriores do Windows, esse parâmetro é ignorado. Se *bVistaStyle* é definido como `TRUE`, quando você compilar um programa com o Visual Studio 2008 ou posterior, o novo estilo Vista **caixa de diálogo arquivo** será usado. Caso contrário, o estilo MFC anterior **caixa de diálogo arquivo** será usado.  
   
- Não há suporte para modelos de caixa de diálogo em caixas de diálogo com base em `bVistaStyle`  
+ Não há suporte para modelos de caixa de diálogo em caixas de diálogo com base em *bVistaStyle*  
   
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CFileDialog::DoModal](#domodal).  
@@ -606,7 +606,7 @@ HRESULT EnableOpenDropDown(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID da lista suspensa.  
   
 ### <a name="remarks"></a>Comentários  
@@ -633,10 +633,10 @@ HRESULT GetCheckButtonState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID da caixa de seleção.  
   
- `bChecked`  
+ *bChecked*  
  O estado da caixa de seleção. `TRUE` indica a ativação; `FALSE` indica desmarcada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -652,13 +652,13 @@ HRESULT GetControlItemState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do controle de contêiner.  
   
- `dwIDItem`  
+ *dwIDItem*  
  A ID do item.  
   
- `dwState`  
+ *dwState*  
  Uma referência a uma variável que recebe um dos mais valores de enumeração CDCONTROLSTATE que indica o estado atual do controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -673,10 +673,10 @@ HRESULT GetControlState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do controle.  
   
- `dwState`  
+ *dwState*  
  Uma referência a uma variável que recebe um ou mais valores de enumeração CDCONTROLSTATE que indica o estado atual do controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -691,10 +691,10 @@ HRESULT GetEditBoxText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID da caixa de edição.  
   
- `strText`  
+ *strText*  
  O valor do texto.  
   
 ### <a name="remarks"></a>Comentários  
@@ -773,7 +773,7 @@ IFileDialogCustomize* GetIFileDialogCustomize();
  O ponteiro para o objeto COM interno para o `CFileDialog`. É sua responsabilidade para liberar esse ponteiro adequadamente.  
   
 ### <a name="remarks"></a>Comentários  
- Use esta função apenas no Windows Vista ou posterior com um objeto que tem `bVistaStyle` definido como `true`. Se você usar essa função quando `bVistaStyle` é `false`, ela retornará `NULL` no modo de liberação e lançar uma asserção no modo de depuração.  
+ Use esta função apenas no Windows Vista ou posterior com um objeto que tem *bVistaStyle* definido como `true`. Se você usar essa função quando *bVistaStyle* é `false`, ela retornará `NULL` no modo de liberação e lançar uma asserção no modo de depuração.  
   
  Para obter mais informações sobre o `IFileDialogCustomize` interface, consulte [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912).  
   
@@ -793,7 +793,7 @@ IFileOpenDialog* GetIFileOpenDialog();
  O ponteiro para o objeto COM interno para o `CFileDialog`. É sua responsabilidade para liberar esse ponteiro adequadamente.  
   
 ### <a name="remarks"></a>Comentários  
- Use esta função apenas no Windows Vista ou posterior com um objeto que tem `bVistaStyle` definido como `true`. Essa função retorna `NULL` se o `CFileDialog` não é um **abrir** caixa de diálogo ou se `bVistaStyle` é definido como `false`. Nesse caso final, a função retornará somente `NULL` no modo de liberação - no modo de depuração lançará uma asserção.  
+ Use esta função apenas no Windows Vista ou posterior com um objeto que tem *bVistaStyle* definido como `true`. Essa função retorna `NULL` se o `CFileDialog` não é um **abrir** caixa de diálogo ou se *bVistaStyle* é definido como `false`. Nesse caso final, a função retornará somente `NULL` no modo de liberação - no modo de depuração lançará uma asserção.  
   
  Para obter mais informações sobre o `IFileOpenDialog` interface, consulte [IFileOpenDialog](http://msdn.microsoft.com/library/windows/desktop/bb775834).  
   
@@ -813,7 +813,7 @@ IFileSaveDialog* GetIFileSaveDialog();
  O ponteiro para o objeto COM interno para o `CFileDialog`. É sua responsabilidade para liberar esse ponteiro adequadamente.  
   
 ### <a name="remarks"></a>Comentários  
- Use esta função apenas no Windows Vista ou posterior com um objeto que tem `bVistaStyle` definido como `true`. Esta função retornará `NULL` se o `CFileDialog` não é um **salvar** caixa de diálogo ou se `bVistaStyle` é definido como `false`. Nesse caso final, a função retornará somente `NULL` no modo de liberação - no modo de depuração lançará uma asserção.  
+ Use esta função apenas no Windows Vista ou posterior com um objeto que tem *bVistaStyle* definido como `true`. Esta função retornará `NULL` se o `CFileDialog` não é um **salvar** caixa de diálogo ou se *bVistaStyle* é definido como `false`. Nesse caso final, a função retornará somente `NULL` no modo de liberação - no modo de depuração lançará uma asserção.  
   
  Para obter mais informações sobre o `IFileSaveDialog` interface, consulte [IFileSaveDialog](http://msdn.microsoft.com/library/windows/desktop/bb775688).  
   
@@ -830,7 +830,7 @@ CString GetNextPathName(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pos`  
+ *POS*  
  Uma referência a um **posição** valor retornado pelo anterior `GetNextPathName` ou `GetStartPosition` chamada de função. **NULO** se tiver sido alcançado o final da lista.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -924,10 +924,10 @@ HRESULT GetSelectedControlItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do controle de contêiner.  
   
- `dwIDItem`  
+ *dwIDItem*  
  A ID do item selecionado pelo usuário no controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -950,7 +950,7 @@ void HideControl(int nID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nID`  
+ *nID*  
  A ID do controle para ocultar.  
   
 ### <a name="remarks"></a>Comentários  
@@ -972,7 +972,7 @@ BOOL IsPickFoldersMode() const;
  `m_ofn` é uma estrutura de tipo `OPENFILENAME`. Os dados nessa estrutura representam o estado atual do `CFileDialog`.  
   
 ### <a name="remarks"></a>Comentários  
- Usar essa estrutura para inicializar a aparência de um **abrir arquivo** ou **Salvar como arquivo** caixa de diálogo depois que você a construir, mas antes de exibi-lo com o [DoModal](#domodal) método. Por exemplo, você pode definir o `lpstrTitle` membro de `m_ofn` para a legenda você deseja ter a caixa de diálogo.  
+ Usar essa estrutura para inicializar a aparência de um **abrir arquivo** ou **Salvar como arquivo** caixa de diálogo depois que você a construir, mas antes de exibi-lo com o [DoModal](#domodal) método. Por exemplo, você pode definir o *lpstrTitle* membro de `m_ofn` para a legenda você deseja ter a caixa de diálogo.  
   
  Com o Windows Vista ou posterior estilo de [CFileDialog](../../mfc/reference/cfiledialog-class.md), `m_ofn` não é garantia de que sempre coincidir com o estado da caixa de diálogo. Ele é sincronizado com a caixa de diálogo em versões anteriores do Windows. Consulte [CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog) e [CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog) para obter mais informações sobre a sincronização de `m_ofn` estrutura e o `CFileDialog` estado no Windows Vista ou posterior.  
   
@@ -1026,7 +1026,7 @@ HRESULT MakeProminent(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1039,7 +1039,7 @@ virtual void OnButtonClicked(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do botão.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1054,10 +1054,10 @@ virtual void OnCheckButtonToggled(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID da caixa de seleção.  
   
- `bChecked`  
+ *bChecked*  
  Marcada ou desmarcada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1070,7 +1070,7 @@ virtual void OnControlActivating(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1139,10 +1139,10 @@ virtual void OnItemSelected(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do controle de contêiner.  
   
- `dwIDItem`  
+ *dwIDItem*  
  A ID do item.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1161,17 +1161,17 @@ virtual void OnLBSelChangedNotify(
  *nIDBox*  
  A ID da caixa de listagem ou caixa de combinação no qual ocorreu a seleção.  
   
- `iCurSel`  
+ *iCurSel*  
  O índice da seleção atual.  
   
- `nCode`  
+ *nCode*  
  O código de notificação do controle. Esse parâmetro deve ter um dos seguintes valores:  
   
-- **CD_LBSELCHANGE** especifica `iCurSel` é o item selecionado em uma caixa de listagem de seleção única.  
+- **CD_LBSELCHANGE** especifica *iCurSel* é o item selecionado em uma caixa de listagem de seleção única.  
   
-- **CD_LBSELSUB** Especifica que `iCurSel` não está selecionado em uma caixa de listagem de seleção múltipla.  
+- **CD_LBSELSUB** Especifica que *iCurSel* não está selecionado em uma caixa de listagem de seleção múltipla.  
   
-- **CD_LBSELADD** Especifica que `iCurSel` está selecionado em uma caixa de listagem de seleção múltipla.  
+- **CD_LBSELADD** Especifica que *iCurSel* está selecionado em uma caixa de listagem de seleção múltipla.  
   
 - **CD_LBSELNOITEMS** Especifica que nenhuma seleção existe em uma caixa de listagem de seleção múltipla.  
   
@@ -1186,7 +1186,7 @@ virtual UINT OnShareViolation(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszPathName`  
+ *lpszPathName*  
  O caminho do arquivo no qual ocorreu a violação de compartilhamento.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1225,10 +1225,10 @@ HRESULT RemoveControlItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do controle de contêiner para remover o item do.  
   
- `dwIDItem`  
+ *dwIDItem*  
  A ID do item.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1243,10 +1243,10 @@ HRESULT SetCheckButtonState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID da caixa de seleção.  
   
- `bChecked`  
+ *bChecked*  
  O estado da caixa de seleção. `TRUE` indica a ativação; `FALSE` indica desmarcado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1262,13 +1262,13 @@ HRESULT SetControlItemState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do controle de contêiner.  
   
- `dwIDItem`  
+ *dwIDItem*  
  A ID do item.  
   
- `dwState`  
+ *dwState*  
  Um ou mais valores de enumeração CDCONTROLSTATE que indicam o novo estado do controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1284,13 +1284,13 @@ HRESULT SetControlItemText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do controle de contêiner.  
   
- `dwIDItem`  
+ *dwIDItem*  
  A ID do item.  
   
- `strLabel`  
+ *strLabel*  
  Texto do item.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1305,10 +1305,10 @@ HRESULT SetControlLabel(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do controle.  
   
- `strLabel`  
+ *strLabel*  
  O nome do controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1323,10 +1323,10 @@ HRESULT SetControlState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do controle.  
   
- `dwState`  
+ *dwState*  
  Um ou mais valores de enumeração CDCONTROLSTATE que indicam o estado atual do controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1346,10 +1346,10 @@ void SetControlText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nID`  
+ [in] *nID*  
  A ID do controle para o qual definir o texto.  
   
- [in] `lpsz`  
+ [in] *lpsz*  
  Um ponteiro para a cadeia de caracteres que contém o texto a ser definido para o controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1365,7 +1365,7 @@ void SetDefExt(LPCSTR lpsz);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpsz`  
+ *lpsz*  
  Um ponteiro para uma cadeia de caracteres que contém a extensão padrão a ser usado para o objeto de caixa de diálogo. Essa cadeia de caracteres não deve conter um ponto (.).  
   
 ### <a name="remarks"></a>Comentários  
@@ -1381,10 +1381,10 @@ HRESULT SetEditBoxText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID da caixa de edição.  
   
- `strText`  
+ *strText*  
  O valor do texto.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1397,7 +1397,7 @@ BOOL SetProperties(LPCWSTR lpszPropList);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszPropList`  
+ *lpszPropList*  
  Uma lista de propriedades predefinidas separadas por ";". Para obter uma lista dos sinalizadores, consulte o `Flags` seção [OPENFILENAME](http://msdn.microsoft.com/en-us/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104).  
   
 ### <a name="remarks"></a>Comentários  
@@ -1412,10 +1412,10 @@ HRESULT SetSelectedControlItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do controle de contêiner.  
   
- `dwIDItem`  
+ *dwIDItem*  
  A ID do item selecionado pelo usuário no controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1435,16 +1435,16 @@ void SetTemplate(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nWin3ID`  
+ [in] *nWin3ID*  
  Contém o número da ID do recurso de modelo para o Gerenciador não- `CFileDialog` objeto. Este modelo é usado somente no Windows NT 3.51 ou quando o estilo OFN_EXPLORER não está presente.  
   
- [in] `nWin4ID`  
+ [in] *nWin4ID*  
  Contém o número da ID do recurso de modelo para o Gerenciador de `CFileDialog` objeto. Este modelo é usado somente em [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] e versões posteriores, o Windows 95 e versões posteriores, ou quando o estilo OFN_EXPLORER está presente.  
   
- [in] `lpWin3ID`  
+ [in] *lpWin3ID*  
  Contém o nome do recurso de modelo para o Gerenciador não- `CFileDialog` objeto. Este modelo é usado somente no Windows NT 3.51 ou quando o estilo OFN_EXPLORER não está presente.  
   
- [in] `lpWin4ID`  
+ [in] *lpWin4ID*  
  Contém o nome do recurso de modelo do Gerenciador de `CFileDialog` objeto. Este modelo é usado somente em [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] e versões posteriores, o Windows 95 e versões posteriores, ou quando o estilo OFN_EXPLORER está presente.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1463,10 +1463,10 @@ HRESULT StartVisualGroup(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwIDCtl`  
+ *dwIDCtl*  
  A ID do grupo de visual.  
   
- `strLabel`  
+ *strLabel*  
  O nome do grupo.  
   
 ### <a name="remarks"></a>Comentários  

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4e4fd0106687927706b0ba303035258de7e651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f946a7af93a8cbf7a285f0c01ebd0512231f7b3f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357177"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953382"
 ---
 # <a name="carray-class"></a>Classe CArray
 Oferece suporte a matrizes que são como matrizes de C, mas podem reduzir e dinamicamente cresça conforme necessário.  
@@ -70,11 +70,11 @@ class CArray : public CObject
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `TYPE`  
- Parâmetro de modelo que especifica o tipo de objetos armazenados na matriz. `TYPE` é um parâmetro que é retornado por `CArray`.  
+ *TIPO DE*  
+ Parâmetro de modelo que especifica o tipo de objetos armazenados na matriz. *TIPO* é um parâmetro que é retornado por `CArray`.  
   
- `ARG` *_* `TYPE`  
- Parâmetro de modelo que especifica o tipo de argumento que é usado para acessar objetos armazenados na matriz. Geralmente, uma referência a `TYPE`. `ARG_TYPE` é um parâmetro que é passado para `CArray`.  
+ *ARG* *_* *TIPO*  
+ Parâmetro de modelo que especifica o tipo de argumento que é usado para acessar objetos armazenados na matriz. Geralmente, uma referência a *tipo*. *ARG_TYPE* é um parâmetro que é passado para `CArray`.  
   
 ## <a name="members"></a>Membros  
   
@@ -147,17 +147,17 @@ INT_PTR Add(ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Especifica o tipo de referência de elementos nesta matriz de argumentos de parâmetro de modelo.  
   
- `newElement`  
+ *newElement*  
  O elemento a ser adicionado a essa matriz.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O índice do elemento adicionado.  
   
 ### <a name="remarks"></a>Comentários  
- Se [SetSize](#setsize) foi usado com um `nGrowBy` valor maior que 1, em seguida, memória adicional pode ser alocado. No entanto, o limite superior aumentam em 1 somente.  
+ Se [SetSize](#setsize) foi usado com um *nGrowBy* valor maior que 1, em seguida, memória adicional pode ser alocado. No entanto, o limite superior aumentam em 1 somente.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
@@ -179,7 +179,7 @@ INT_PTR Append(const CArray& src);
 ### <a name="remarks"></a>Comentários  
  As matrizes devem ser do mesmo tipo.  
   
- Se necessário, **Append** pode alocar memória adicional para acomodar os elementos anexados à matriz.  
+ Se necessário, `Append` pode alocar memória adicional para acomodar os elementos anexados à matriz.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
@@ -211,7 +211,7 @@ void Copy(const CArray& src);
 ### <a name="remarks"></a>Comentários  
  Chame essa função de membro para substituir os elementos de uma matriz com os elementos da matriz de outro.  
   
- **Cópia** não libera memória; no entanto, se necessário, **cópia** pode alocar memória adicional para acomodar os elementos copiados para a matriz.  
+ **Cópia** não libera memória; no entanto, se necessário, `Copy` pode alocar memória adicional para acomodar os elementos copiados para a matriz.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
@@ -225,7 +225,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Um índice de inteiro que é maior que ou igual a 0 e menor ou igual ao valor retornado por [GetUpperBound](#getupperbound).  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -262,7 +262,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
  *TIPO DE*  
  Especifica o tipo dos elementos da matriz de parâmetro de modelo.  
   
- `nIndex`  
+ *nIndex*  
  Um índice de inteiro que é maior que ou igual a 0 e menor ou igual ao valor retornado por [GetUpperBound](#getupperbound).  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -336,7 +336,7 @@ INT_PTR GetUpperBound() const;
 ### <a name="remarks"></a>Comentários  
  Como os índices de matriz são baseadas em zero, essa função retorna um valor de 1 menor `GetSize`.  
   
- A condição **(GetUpperBound)** = -1 indica que a matriz não contém elementos.  
+ A condição `GetUpperBound( )` = -1 indica que a matriz não contém elementos.  
   
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CArray::GetAt](#getat).  
@@ -356,28 +356,28 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Um índice de inteiro pode ser maior que o valor retornado por `GetUpperBound`.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parâmetro de modelo especificando o tipo dos elementos nesta matriz.  
   
- `newElement`  
+ *newElement*  
  O elemento a ser colocado nesta matriz.  
   
- `nCount`  
+ *nCount*  
  O número de vezes que esse elemento deve ser inserido (o padrão é 1).  
   
- `nStartIndex`  
+ *nStartIndex*  
  Um índice de inteiro pode ser maior que o valor retornado por [GetUpperBound](#getupperbound).  
   
- `pNewArray`  
+ *pNewArray*  
  Outra matriz que contém os elementos a serem adicionados a essa matriz.  
   
 ### <a name="remarks"></a>Comentários  
  No processo, desloca para cima (aumentando o índice) do elemento existente nesse índice e desloca a todos os elementos acima dele.  
   
- A segunda versão insere todos os elementos de outro `CArray` coleção, a partir de `nStartIndex` posição.  
+ A segunda versão insere todos os elementos de outro `CArray` coleção, a partir de *nStartIndex* posição.  
   
  O `SetAt` função, por outro lado, substitui um elemento da matriz especificada e não deslocar a todos os elementos.  
   
@@ -406,7 +406,7 @@ const TYPE& operator[](int_ptr nindex) const;
  *TIPO DE*  
  Parâmetro de modelo especificando o tipo dos elementos nesta matriz.  
   
- `nIndex`  
+ *nIndex*  
  Índice do elemento a ser acessado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -429,17 +429,17 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pNewData`  
+ *pNewData*  
  Um novo buffer para a matriz de elementos.  
   
- `pData`  
+ *pData*  
  A matriz antiga de elementos.  
   
- `nCount`  
+ *nCount*  
  Número de elementos na matriz antigo.  
   
 ### <a name="remarks"></a>Comentários  
- `pNewData` sempre é grande o suficiente para manter todos os `pData` elementos.  
+ *pNewData* sempre é grande o suficiente para manter todos os *pData* elementos.  
   
  O [CArray](../../mfc/reference/carray-class.md) implementação usa esse método para copiar os dados antigos para um novo buffer quando a matriz deve ser ampliada ou reduzida (quando [SetSize](#setsize) ou [FreeExtra](#freeextra) são chamados). A implementação padrão apenas copia os dados.  
   
@@ -468,10 +468,10 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Um índice de inteiro que é maior que ou igual a 0 e menor ou igual ao valor retornado por [GetUpperBound](#getupperbound).  
   
- `nCount`  
+ *nCount*  
  O número de elementos a serem removidos.  
   
 ### <a name="remarks"></a>Comentários  
@@ -490,13 +490,13 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Um índice de inteiro que é maior que ou igual a 0 e menor ou igual ao valor retornado por [GetUpperBound](#getupperbound).  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Especifica o tipo de argumentos usados para fazer referência a elementos da matriz de parâmetro de modelo.  
   
- `newElement`  
+ *newElement*  
  O novo valor do elemento a ser armazenado na posição especificada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -515,13 +515,13 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Um índice de inteiro que é maior que ou igual a 0.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Especifica o tipo de elementos na matriz de parâmetro de modelo.  
   
- `newElement`  
+ *newElement*  
  O elemento a ser adicionado a essa matriz. Um **nulo** valor permitido.  
   
 ### <a name="remarks"></a>Comentários  
@@ -540,10 +540,10 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nNewSize`  
+ *nNewSize*  
  O tamanho da matriz novo (número de elementos). Deve ser maior ou igual a 0.  
   
- `nGrowBy`  
+ *nGrowBy*  
  O número mínimo de slots de elemento para alocar se um aumento de tamanho é necessário.  
   
 ### <a name="remarks"></a>Comentários  
@@ -551,7 +551,7 @@ void SetSize(
   
  Use esta função para definir o tamanho da sua matriz antes de começar a usar a matriz. Se `SetSize` não for utilizado, incluir elementos à matriz fará com que ela seja frequentemente realocada e copiada. Realocações e cópias frequentes são ineficientes e podem fragmentar a memória.  
   
- O `nGrowBy` parâmetro afeta a alocação de memória interna enquanto a matriz está aumentando. Seu uso não afeta o tamanho da matriz conforme relatado pelo [GetSize](#getsize) e [GetUpperBound](#getupperbound). Se o valor padrão é usado, o MFC aloca memória de forma calculada para evitar a fragmentação de memória e otimizar a eficiência na maioria dos casos.  
+ O *nGrowBy* parâmetro afeta a alocação de memória interna enquanto a matriz está aumentando. Seu uso não afeta o tamanho da matriz conforme relatado pelo [GetSize](#getsize) e [GetUpperBound](#getupperbound). Se o valor padrão é usado, o MFC aloca memória de forma calculada para evitar a fragmentação de memória e otimizar a eficiência na maioria dos casos.  
   
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [GetData](#getdata).  

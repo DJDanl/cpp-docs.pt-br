@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4531d63ff7047881f20368cbeaf8e5de4136bb9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69d1d85f946ce596dae09779296fceab74113400
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369210"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952392"
 ---
 # <a name="cdaoexception-class"></a>Classe CDaoException
 Representa uma condição de exceção decorrentes das classes de banco de dados MFC com base em objetos de acesso de dados (DAO).  
@@ -143,7 +143,7 @@ void GetErrorInfo(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  O índice das informações de erro na coleção de erros do mecanismo de banco de dados, pesquisa por índice.  
   
 ### <a name="remarks"></a>Comentários  
@@ -187,11 +187,11 @@ void GetErrorInfo(int nIndex);
   
 |Membro CDaoErrorInfo|Informações|Significado|  
 |--------------------------|-----------------|-------------|  
-|**m_lErrorCode**|Código do erro|O código de erro DAO|  
+|`m_lErrorCode`|Código do erro|O código de erro DAO|  
 |`m_strSource`|Origem|O nome do objeto ou aplicativo que originalmente gerou o erro|  
 |`m_strDescription`|Descrição|Uma cadeia de caracteres descritiva associada ao erro|  
 |`m_strHelpFile`|Arquivo de ajuda|Um caminho para um arquivo de Ajuda do Windows no qual o usuário pode obter informações sobre o problema|  
-|**m_lHelpContext**|Contexto de ajuda|A ID do contexto de um tópico no arquivo de Ajuda do DAO|  
+|`m_lHelpContext`|Contexto de ajuda|A ID do contexto de um tópico no arquivo de Ajuda do DAO|  
   
  Para obter detalhes completos sobre as informações contidas no `CDaoErrorInfo` de objeto, consulte o [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) estrutura.  
   

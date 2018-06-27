@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a5fd603fdb45ac0f754858384df1455f559222e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97db14dcb8c0b8b5b71823cf39d6bf36f0d19f25
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383045"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956688"
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025: documento, exibição e criação de quadro
 > [!NOTE]
@@ -43,12 +43,12 @@ pTemplate = new CDocTemplate(IDR_MYDOCUMENT, ...);
 AddDocTemplate(pTemplate);
 ```  
   
- O `CWinApp` objeto possui todas as janelas de quadro no aplicativo. A janela do quadro principal para o aplicativo deve ser armazenada em **CWinApp::m_pMainWnd**; normalmente você definir `m_pMainWnd` no `InitInstance` implementação se você não tem que AppWizard fazê-lo para você. Para a interface de documento único (SDI) esse é um `CFrameWnd` que serve como a janela do quadro principal do aplicativo, bem como a janela do quadro de documento somente. Para a interface de documentos múltiplos (MDI), este é um quadro MDI (classe `CMDIFrameWnd`) que serve como a janela do quadro principal do aplicativo que contém todos os filhos `CFrameWnd`s. Cada janela filho é da classe `CMDIChildWnd` (derivado de `CFrameWnd`) e serve como um potencialmente muitas janelas de quadro do documento.  
+ O `CWinApp` objeto possui todas as janelas de quadro no aplicativo. A janela do quadro principal para o aplicativo deve ser armazenada em `CWinApp::m_pMainWnd`; normalmente você definir *m_pMainWnd* no `InitInstance` implementação se você não tem que AppWizard fazê-lo para você. Para a interface de documento único (SDI) esse é um `CFrameWnd` que serve como a janela do quadro principal do aplicativo, bem como a janela do quadro de documento somente. Para a interface de documentos múltiplos (MDI), este é um quadro MDI (classe `CMDIFrameWnd`) que serve como a janela do quadro principal do aplicativo que contém todos os filhos `CFrameWnd`s. Cada janela filho é da classe `CMDIChildWnd` (derivado de `CFrameWnd`) e serve como um potencialmente muitas janelas de quadro do documento.  
   
 ## <a name="doctemplates"></a>DocTemplates  
  O `CDocTemplate` é o criador e o Gerenciador de documentos. Ele possui os documentos que ele cria. Se seu aplicativo usa a abordagem baseada em recursos descrita abaixo, não será necessário derivar de `CDocTemplate`.  
   
- Para um aplicativo SDI, a classe `CSingleDocTemplate` mantém o controle de um documento aberto. Para um aplicativo MDI, a classe `CMultiDocTemplate` mantém uma lista (um `CPtrList`) de todos os documentos abertos criados a partir desse modelo. `CDocTemplate::AddDocument` e `CDocTemplate::RemoveDocument` fornecem o membro virtual funções para adicionar ou remover um documento do modelo. `CDocTemplate` é um amigo do **CDocument** forma podemos definir protegido **CDocument::m_pDocTemplate** retorno que apontam para o modelo de documento que criou o documento.  
+ Para um aplicativo SDI, a classe `CSingleDocTemplate` mantém o controle de um documento aberto. Para um aplicativo MDI, a classe `CMultiDocTemplate` mantém uma lista (um `CPtrList`) de todos os documentos abertos criados a partir desse modelo. `CDocTemplate::AddDocument` e `CDocTemplate::RemoveDocument` fornecem o membro virtual funções para adicionar ou remover um documento do modelo. `CDocTemplate` é um amigo do `CDocument` forma podemos definir protegido `CDocument::m_pDocTemplate` retorno que apontam para o modelo de documento que criou o documento.  
   
  `CWinApp` manipula o padrão `OnFileOpen` implementação, que por sua vez consultará todos os modelos de documento. A implementação inclui procurando documentos já abertos e decidir qual formato para abrir novos documentos no.  
   
@@ -57,13 +57,13 @@ AddDocTemplate(pTemplate);
  `CDocTemplate` mantém uma contagem do número de documentos sem nome.  
   
 ## <a name="cdocument"></a>CDocument  
- Um **CDocument** pertence a um `CDocTemplate`.  
+ Um `CDocument` pertence a um `CDocTemplate`.  
   
  Documentos tem uma lista de abertos exibições (derivado de `CView`) que está exibindo o documento (um `CPtrList`).  
   
  Documentos não criar/destruir os modos de exibição, mas eles são conectados uns aos outros após serem criadas. Quando um documento é fechado (ou seja, a arquivo/fechar), todas as exibições anexadas serão fechadas. O documento será fechado quando a última exibição em um documento é fechada (ou seja, janela/Fechar).  
   
- O `CDocument::AddView`, `RemoveView` interface é usada para manter a lista de exibição. **CDocument** é um amigo do `CView` forma podemos definir o **CView::m_pDocument** retorno.  
+ O `CDocument::AddView`, `RemoveView` interface é usada para manter a lista de exibição. `CDocument` é um amigo do `CView` forma podemos definir o `CView::m_pDocument` retorno.  
   
 ## <a name="cframewnd"></a>CFrameWnd  
  Um `CFrameWnd` (também conhecido como um quadro) desempenha a mesma função de MFC 1.0, mas agora o `CFrameWnd` classe foi projetada para ser usado em muitos casos sem derivar uma nova classe. As classes derivadas `CMDIFrameWnd` e `CMDIChildWnd` também foram aprimorados para muitos comandos padrão já são implementados.  

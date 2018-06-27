@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 245ffcb66223813c7146c50c964cd97203ed8d53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0be2e87f77e047e1b29d99e562a67bb9f4f1ee9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383848"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951972"
 ---
 # <a name="tn001-window-class-registration"></a>TN001: registro da classe Window
 Esta anotação descreve as rotinas MFC que registrar especiais [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es necessárias pelo Microsoft Windows. Específico `WNDCLASS` atributos usados pelo MFC e Windows são discutidos.  
   
 ## <a name="the-problem"></a>O problema  
- Os atributos de uma [CWnd](../mfc/reference/cwnd-class.md) do objeto, como um `HWND` tratar no Windows, são armazenadas em dois locais: o objeto de janela e `WNDCLASS`. O nome do `WNDCLASS` é transmitido como funções de criação da janela geral [CWnd::Create](../mfc/reference/cwnd-class.md#create) e [CFrameWnd::Create](../mfc/reference/cframewnd-class.md#create) no `lpszClassName` parâmetro.  
+ Os atributos de uma [CWnd](../mfc/reference/cwnd-class.md) do objeto, como um `HWND` tratar no Windows, são armazenadas em dois locais: o objeto de janela e `WNDCLASS`. O nome do `WNDCLASS` é transmitido como funções de criação da janela geral [CWnd::Create](../mfc/reference/cwnd-class.md#create) e [CFrameWnd::Create](../mfc/reference/cframewnd-class.md#create) no *lpszClassName* parâmetro.  
   
  Isso `WNDCLASS` devem ser registrados por meio de quatro formas:  
   
@@ -46,15 +46,15 @@ Esta anotação descreve as rotinas MFC que registrar especiais [WNDCLASS](http:
   
 |Campo|Descrição|  
 |-----------|-----------------|  
-|`lpfnWndProc`|procedimento de janela, deve ser um `AfxWndProc`|  
-|`cbClsExtra`|não usado (deve ser zero)|  
-|`cbWndExtra`|não usado (deve ser zero)|  
-|`hInstance`|preenchida automaticamente com [AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
-|`hIcon`|ícone de janelas com moldura, consulte abaixo|  
-|`hCursor`|o cursor para quando o mouse estiver sobre janela, consulte abaixo|  
-|`hbrBackground`|cor do plano de fundo, consulte abaixo|  
-|`lpszMenuName`|não usado (deve ser NULL)|  
-|`lpszClassName`|nome de classe, consulte abaixo|  
+|*lpfnWndProc*|procedimento de janela, deve ser um `AfxWndProc`|  
+|*cbClsExtra*|não usado (deve ser zero)|  
+|*cbWndExtra*|não usado (deve ser zero)|  
+|*hInstance*|preenchida automaticamente com [AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
+|*hIcon*|ícone de janelas com moldura, consulte abaixo|  
+|*hCursor*|o cursor para quando o mouse estiver sobre janela, consulte abaixo|  
+|*hbrBackground*|cor do plano de fundo, consulte abaixo|  
+|*lpszMenuName*|não usado (deve ser NULL)|  
+|*lpszClassName*|nome de classe, consulte abaixo|  
   
 ## <a name="provided-wndclasses"></a>Fornecido WNDCLASSes  
  Versões anteriores do MFC (antes do MFC 4.0), fornecida várias classes de janela predefinidas. Essas classes de janela já não são fornecidos por padrão. Os aplicativos devem usar `AfxRegisterWndClass` com os parâmetros apropriados.  
@@ -105,7 +105,7 @@ pWnd->Create(strWndClass, ...);
  `AfxRegisterWndClass` lançará uma [CResourceException](../mfc/reference/cresourceexception-class.md) se a classe de janela Falha ao registrar (devido a parâmetros incorretos ou falta de memória do Windows).  
   
 ## <a name="the-registerclass-and-afxregisterclass-functions"></a>As funções de AfxRegisterClass e RegisterClass  
- Se você quiser fazer qualquer coisa mais sofisticadas do que `AfxRegisterWndClass` fornece, você pode chamar a API do Windows `RegisterClass` ou a função MFC `AfxRegisterClass`. O `CWnd`, [CFrameWnd](../mfc/reference/cframewnd-class.md) e [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create` funções usam um `lpszClassName` nome de cadeia de caracteres para a classe de janela como o primeiro parâmetro. Você pode usar qualquer nome de classe de janela registrado, independentemente do método usado para registrá-lo.  
+ Se você quiser fazer qualquer coisa mais sofisticadas do que `AfxRegisterWndClass` fornece, você pode chamar a API do Windows `RegisterClass` ou a função MFC `AfxRegisterClass`. O `CWnd`, [CFrameWnd](../mfc/reference/cframewnd-class.md) e [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create` funções usam um *lpszClassName* nome de cadeia de caracteres para a classe de janela como o primeiro parâmetro. Você pode usar qualquer nome de classe de janela registrado, independentemente do método usado para registrá-lo.  
   
  É importante usar `AfxRegisterClass` (ou `AfxRegisterWndClass`) em uma DLL no Win32. Win32 não automaticamente o registro classes registrados por uma DLL, portanto você deve explicitamente cancelar registro classes quando a DLL é finalizada. Usando `AfxRegisterClass` em vez de `RegisterClass` isso é tratado automaticamente para você. `AfxRegisterClass` mantém uma lista de classes exclusivos registrados por sua DLL e automaticamente cancelará-los quando a DLL é encerrado. Quando você usa `RegisterClass` em uma DLL, você deve garantir que todas as classes são não registradas quando a DLL é finalizada (em seu [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) função). Falha ao fazer isso pode causar `RegisterClass` falhe inesperadamente quando outro aplicativo cliente tenta usar a DLL.  
   

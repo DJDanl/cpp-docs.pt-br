@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe5cc426e3494117bff98577f02178709a2588f3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a2dc227815f8888b85784ea92e58b3e91ffc83a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380722"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954969"
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>Armazenando e carregando CObjects por meio de um arquivo morto
 Armazenando e carregando `CObject`s por meio de um arquivo morto requer considerações adicionais. Em certos casos, você deve chamar o `Serialize` função do objeto, onde o `CArchive` objeto é um parâmetro do `Serialize` chamada, em vez de usar o **< \<** ou **>>** operador o `CArchive`. O fato importante ter em mente é que o `CArchive` **>>** construções de operador de `CObject` na memória com base em `CRuntimeClass` previamente gravadas para o arquivo, o arquivo de armazenamento de informações.  
@@ -37,7 +37,7 @@ Armazenando e carregando `CObject`s por meio de um arquivo morto requer consider
 -   Ao desserializar o objeto, você já tem memória alocada para ele.  
   
 > [!CAUTION]
->  Se você carregar o objeto usando o `Serialize` função, você também deve armazenar o objeto usando o `Serialize` função. Não armazene usando o `CArchive` **<<** operador e o uso de carga, em seguida, o `Serialize` de função ou o repositório usando o `Serialize` de função e, em seguida, carregar usando **CArchive >>** operador.  
+>  Se você carregar o objeto usando o `Serialize` função, você também deve armazenar o objeto usando o `Serialize` função. Não armazene usando o `CArchive` **<<** operador e o uso de carga, em seguida, o `Serialize` de função ou o repositório usando o `Serialize` de função e, em seguida, carregar usando `CArchive >>` operador.  
   
  O exemplo a seguir ilustra os casos:  
   
@@ -45,7 +45,7 @@ Armazenando e carregando `CObject`s por meio de um arquivo morto requer consider
   
  [!code-cpp[NVC_MFCSerialization#37](../mfc/codesnippet/cpp/storing-and-loading-cobjects-via-an-archive_2.cpp)]  
   
- Em resumo, se sua classe serializável define inserida **CObjec**t como um membro, você deve *não* usar o `CArchive` **< \<** e **>>** operadores para o objeto, mas deve chamar o `Serialize` function em vez disso. Além disso, se sua classe serializável define um ponteiro para um `CObject` (ou um objeto derivado de `CObject`) como um membro, mas construções esse outro objeto em seu próprio construtor, você também deve chamar `Serialize`.  
+ Em resumo, se sua classe serializável define inserida `CObject` como um membro, você deve *não* usar o `CArchive` **< \<** e **>>** operadores para o objeto, mas deve chamar o `Serialize` function em vez disso. Além disso, se sua classe serializável define um ponteiro para um `CObject` (ou um objeto derivado de `CObject`) como um membro, mas construções esse outro objeto em seu próprio construtor, você também deve chamar `Serialize`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Serialização: serializando um objeto](../mfc/serialization-serializing-an-object.md)

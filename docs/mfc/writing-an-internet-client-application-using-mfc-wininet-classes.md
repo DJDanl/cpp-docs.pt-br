@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822b75ec71d79b6e40ec6b61a77239707c32ce39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00ace36eef483d8385d718e14e1fc4c5f4e9ea1e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384430"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956460"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>Escrevendo um aplicativo cliente da Internet usando classes WinInet MFC
 A base de cada aplicativo de cliente da Internet é a sessão de Internet. MFC implementa sessões de Internet como objetos da classe [CInternetSession](../mfc/reference/cinternetsession-class.md). O uso dessa classe, você pode criar uma sessão de Internet ou de várias sessões simultâneas.  
@@ -43,9 +43,9 @@ A base de cada aplicativo de cliente da Internet é a sessão de Internet. MFC i
   
 -   Se você usar `CInternetSession::OpenURL` para estabelecer a conexão de servidor, a chamada para `OpenURL` retorna um `CStdioFile`.  
   
--   Se usar **CInternetSession::GetFtpConnection**, `GetGopherConnection`, ou `GetHttpConnection` para estabelecer a conexão de servidor, você deve chamar `CFtpConnection::OpenFile`, `CGopherConnection::OpenFile`, ou **CHttpConnection::OpenRequest,**  respectivamente, para retornar um `CInternetFile`, `CGopherFile`, ou `CHttpFile`, respectivamente.  
+-   Se usar `CInternetSession::GetFtpConnection`, `GetGopherConnection`, ou `GetHttpConnection` para estabelecer a conexão de servidor, você deve chamar `CFtpConnection::OpenFile`, `CGopherConnection::OpenFile`, ou `CHttpConnection::OpenRequest`, respectivamente, para retornar um `CInternetFile`, `CGopherFile`, ou `CHttpFile`, respectivamente.  
   
- As etapas na implementação de um aplicativo cliente da Internet variam dependendo se você criar um cliente de Internet genérico com base em **Abrirurl** ou um cliente de protocolo específico usando um do **GetConnection** funções.  
+ As etapas na implementação de um aplicativo cliente da Internet variam dependendo se você criar um cliente de Internet genérico com base em `OpenURL` ou um cliente de protocolo específico usando um do `GetConnection` funções.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
   

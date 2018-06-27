@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b0d59aa8c30e9308448467bb198e898106e61f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4cf132de39eb630f314c1c5a99e629cbfb25394a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383780"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951121"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Usando campos de retorno de chamada em um controle de seletor de data e hora
 Além de caracteres de formato padrão que definem campos de seletor de data e hora, você pode personalizar a saída especificando algumas partes de uma cadeia de caracteres de formato personalizado como campos de retorno de chamada. Para declarar um campo de retorno de chamada, inclua um ou mais caracteres "X" (88 do código ASCII) em qualquer lugar no corpo da cadeia de caracteres de formato. Por exemplo, a seguinte cadeia de caracteres "' atualmente é: 'yy' / 'MM' / 'dd' (dia 'X')'" faz com que o controle de seletor de data e hora exibir o valor atual como o ano seguido por mês, data e, finalmente, o dia do ano.  
@@ -39,23 +39,23 @@ Além de caracteres de formato padrão que definem campos de seletor de data e h
  Você pode distinguir entre os vários campos de retorno de chamada em uma cadeia de caracteres personalizada, repetindo o caractere "X". Assim, a cadeia de caracteres de formato "XXddddMMMdd', ' yyyXXX" contém dois campos de retorno de chamada exclusivo "XX" e "XXX".  
   
 > [!NOTE]
->  Campos de retorno de chamada são tratados como campos válidos, para que seu aplicativo deve estar preparado para lidar com **DTN_WMKEYDOWN** mensagens de notificação.  
+>  Campos de retorno de chamada são tratados como campos válidos, para que seu aplicativo deve estar preparado para lidar com mensagens de notificação DTN_WMKEYDOWN.  
   
  Implementar os campos de retorno de chamada no controle de seletor de data e hora consiste em três partes:  
   
 -   Inicializando a cadeia de caracteres de formato personalizado  
   
--   Tratamento de **DTN_FORMATQUERY** notificação  
+-   Tratamento de DTN_FORMATQUERY (notificação)  
   
--   Tratamento de **DTN_FORMAT** notificação  
+-   Tratamento de DTN_FORMAT (notificação)  
   
 ## <a name="initializing-the-custom-format-string"></a>Inicializando a cadeia de caracteres de formato personalizado  
  Inicialize a cadeia de caracteres personalizada com uma chamada para `CDateTimeCtrl::SetFormat`. Para obter mais informações, consulte [usando cadeias de formato personalizado em uma data e o controle seletor de hora](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md). É um local comum para definir a cadeia de caracteres de formato personalizado no `OnInitDialog` função da sua classe de caixa de diálogo contém ou `OnInitialUpdate` função da sua classe de exibição contém.  
   
 ## <a name="handling-the-dtnformatquery-notification"></a>Tratamento de DTN_FORMATQUERY (notificação)  
- Quando o controle analisa a cadeia de caracteres de formato e encontra um campo de retorno de chamada, o aplicativo envia **DTN_FORMAT** e **DTN_FORMATQUERY** mensagens de notificação. A cadeia de caracteres de campo de retorno de chamada é incluída com as notificações para que possa determinar qual campo de retorno de chamada está sendo consultado.  
+ Quando o controle analisa a cadeia de caracteres de formato e encontra um campo de retorno de chamada, o aplicativo envia mensagens de notificação DTN_FORMAT e DTN_FORMATQUERY. A cadeia de caracteres de campo de retorno de chamada é incluída com as notificações para que possa determinar qual campo de retorno de chamada está sendo consultado.  
   
- O **DTN_FORMATQUERY** notificação é enviada para recuperar o tamanho máximo permitido em pixels da cadeia de caracteres que será exibido no campo de retorno de chamada atual.  
+ A notificação DTN_FORMATQUERY é enviada para recuperar o tamanho máximo permitido em pixels da cadeia de caracteres que será exibido no campo de retorno de chamada atual.  
   
  Para calcular corretamente esse valor, você deve calcular a altura e largura da cadeia de caracteres a serem substituídos por campo, usando a fonte de exibição do controle. O cálculo real da cadeia de caracteres é fácil com uma chamada para o [GetTextExtentPoint32](http://msdn.microsoft.com/library/windows/desktop/dd144938) função Win32. Depois que o tamanho é determinado, passe o valor para o aplicativo e a função do manipulador de saída.  
   
@@ -63,10 +63,10 @@ Além de caracteres de formato padrão que definem campos de seletor de data e h
   
  [!code-cpp[NVC_MFCControlLadenDialog#8](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_1.cpp)]  
   
- Depois que o tamanho do campo de retorno de chamada atual foi calculado, você deve fornecer um valor para o campo. Isso é feito no manipulador para o **DTN_FORMAT** notificação.  
+ Depois que o tamanho do campo de retorno de chamada atual foi calculado, você deve fornecer um valor para o campo. Isso é feito no manipulador para o DTN_FORMAT (notificação).  
   
 ## <a name="handling-the-dtnformat-notification"></a>Tratamento de DTN_FORMAT (notificação)  
- O **DTN_FORMAT** notificação é usada pelo aplicativo para solicitar a cadeia de caracteres que será substituída. O exemplo a seguir demonstra um método possível:  
+ A DTN_FORMAT (notificação) é usada pelo aplicativo para solicitar a cadeia de caracteres que será substituída. O exemplo a seguir demonstra um método possível:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#9](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_2.cpp)]  
   

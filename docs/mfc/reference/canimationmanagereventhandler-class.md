@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ef63cf5c781348e873512c8b2f5bb190ae4976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62a775457d6da763a5c8426146d421a4cc958454
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358252"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955642"
 ---
 # <a name="canimationmanagereventhandler-class"></a>Classe CAnimationManagerEventHandler
 Implementa um retorno de chamada, que é chamado pela API de animação quando um status de um Gerenciador de animação é alterado.  
@@ -90,10 +90,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pAnimationController`  
+ *pAnimationController*  
  Um ponteiro para o controlador de animação, que irá receber eventos.  
   
- `ppManagerEventHandler`  
+ *ppManagerEventHandler*  
  Saída. Se o método for bem-sucedido ele contém um ponteiro para o objeto COM que tratará as atualizações de status para um Gerenciador de animação.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -111,10 +111,10 @@ IFACEMETHOD(OnManagerStatusChanged)(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `newStatus`  
+ *newStatus*  
  Novo status.  
   
- `previousStatus`  
+ *previousStatus*  
  Status anterior.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -130,7 +130,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pAnimationController`  
+ *pAnimationController*  
  Um ponteiro para o controlador de animação, que irá receber eventos.  
   
 ## <a name="see-also"></a>Consulte também  

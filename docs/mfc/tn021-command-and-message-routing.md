@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a1061f4a7d4394cb84c26514795c406f78146df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22fcb3f9815e5100251e6bf478c6714fbb0b7df3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384944"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955716"
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021: comando e roteamento de mensagem
 > [!NOTE]
@@ -34,11 +34,11 @@ ms.locfileid: "33384944"
  Consulte Visual C++ para obter detalhes gerais sobre as arquiteturas descritas aqui, especialmente a distinção entre as mensagens, notificações de controle e comandos do Windows. Esta anotação supõe que você esteja familiarizado com os problemas descritos na documentação do impressa e aborda apenas tópicos muito avançados.  
   
 ## <a name="command-routing-and-dispatch-mfc-10-functionality-evolves-to-mfc-20-architecture"></a>Funcionalidade de roteamento de comando e expedição MFC 1.0 evolui ao MFC 2.0 arquitetura  
- O Windows tem o **WM_COMMAND** mensagem está sobrecarregada para fornecer notificações de comandos de menu, teclas de aceleração e notificações de controle de caixa de diálogo.  
+ O Windows tem a mensagem WM_COMMAND está sobrecarregada para fornecer notificações de comandos de menu, teclas de aceleração e notificações de controle de caixa de diálogo.  
   
- MFC 1.0 criados em que um pouco, permitindo que um manipulador de comando (por exemplo, "OnFileNew") um **CWnd** derivado da classe for chamado em resposta a um determinado **WM_COMMAND**. Isso é colado junto com uma estrutura de dados chamada de mapa de mensagem e resulta em um mecanismo de comando muito eficiente de espaço.  
+ MFC 1.0 criados em que um pouco, permitindo que um manipulador de comando (por exemplo, "OnFileNew") um `CWnd` derivado da classe for chamado em resposta a um WM_COMMAND específico. Isso é colado junto com uma estrutura de dados chamada de mapa de mensagem e resulta em um mecanismo de comando muito eficiente de espaço.  
   
- 1.0 MFC também fornecida funcionalidade adicional para separar as notificações de controle de mensagens de comando. Comandos são representados por uma ID de 16 bits, às vezes conhecida como uma ID de comando. Comandos normalmente iniciam a partir de um **CFrameWnd** (ou seja, um menu, selecione ou um acelerador traduzido) e roteada para uma variedade de outras janelas.  
+ 1.0 MFC também fornecida funcionalidade adicional para separar as notificações de controle de mensagens de comando. Comandos são representados por uma ID de 16 bits, às vezes conhecida como uma ID de comando. Comandos normalmente iniciam a partir de um `CFrameWnd` (ou seja, um menu, selecione ou um acelerador traduzido) e roteada para uma variedade de outras janelas.  
   
  1.0 MFC usado roteamento de comando em um sentido limitado para a implementação de Interface de documentos múltiplos (MDI). (Uma janela de quadro MDI delegar comandos para a janela filho MDI ativo.)  
   
@@ -63,9 +63,9 @@ ms.locfileid: "33384944"
   
 -   TALVEZ em uma matriz de ID usada para criar uma barra de ferramentas.  
   
--   Em um **ON_COMMAND** macro.  
+-   Em uma macro ON_COMMAND.  
   
--   TALVEZ em um **ON_UPDATE_COMMAND_UI** macro.  
+-   TALVEZ em uma macro ON_UPDATE_COMMAND_UI.  
   
  Atualmente, a única implementação em MFC que requer IDs de comando ser > = 0x8000 é a implementação de caixas de diálogo GOSUB/comandos.  
   
@@ -78,23 +78,23 @@ ms.locfileid: "33384944"
   
  Você pode colocar um botão normal em uma caixa de diálogo modal normal com IDC do botão definido como a ID de comando apropriado. Quando o usuário seleciona o botão, o proprietário da caixa de diálogo (geralmente a janela do quadro principal) obtém o comando exatamente como qualquer outro comando. Isso é chamado um comando GOSUB porque geralmente é usado para abrir outra caixa de diálogo (GOSUB da caixa de diálogo primeiro).  
   
- Você também pode chamar a função **CWnd::UpdateDialogControls** na sua caixa de diálogo e passá-lo o endereço da janela do quadro principal. Essa função será habilitar ou desabilitar os controles de caixa de diálogo com base em se eles têm manipuladores de comandos no quadro. Essa função é chamada automaticamente para você das barras de controle de loop ocioso do seu aplicativo, mas você deve chamá-lo diretamente para as caixas de diálogo normais que você deseja que tenham esse recurso.  
+ Você também pode chamar a função `CWnd::UpdateDialogControls` na sua caixa de diálogo e passá-lo o endereço da janela do quadro principal. Essa função será habilitar ou desabilitar os controles de caixa de diálogo com base em se eles têm manipuladores de comandos no quadro. Essa função é chamada automaticamente para você das barras de controle de loop ocioso do seu aplicativo, mas você deve chamá-lo diretamente para as caixas de diálogo normais que você deseja que tenham esse recurso.  
   
 ## <a name="when-onupdatecommandui-is-called"></a>Quando ON_UPDATE_COMMAND_UI é chamado  
- Manter o estado da habilitado/check de todas de um programa itens de menu sempre pode ser um problema de computação dispendioso. Uma técnica comum é habilitar/verificação de itens de menu apenas quando o usuário seleciona o pop-up. A implementação do MFC 2.0 de **CFrameWnd** identificadores de **WM_INITMENUPOPUP** mensagem e usa a arquitetura de roteamento de comando para determinar os estados de menus por meio de **ON_UPDATE_COMMAND_ Interface do usuário** manipuladores.  
+ Manter o estado da habilitado/check de todas de um programa itens de menu sempre pode ser um problema de computação dispendioso. Uma técnica comum é habilitar/verificação de itens de menu apenas quando o usuário seleciona o pop-up. A implementação do MFC 2.0 de `CFrameWnd` lida com a mensagem WM_INITMENUPOPUP e usa a arquitetura de roteamento de comando para determinar os estados de menus por meio de manipuladores ON_UPDATE_COMMAND_UI.  
   
- **CFrameWnd** também controla o **WM_ENTERIDLE** mensagem para descrever o menu atual ao item selecionado no status de barra (também conhecido como a linha de mensagem).  
+ `CFrameWnd` também lida com a mensagem WM_ENTERIDLE para descrever o menu atual ao item selecionado no status de barra (também conhecido como a linha de mensagem).  
   
- Estrutura de menu do aplicativo, editada pelo Visual C++, é usada para representar os potencial de comandos disponíveis na **WM_INITMENUPOPUP** tempo. **ON_UPDATE_COMMAND_UI** manipuladores podem modificar o estado ou o texto de um menu ou para usos avançados (como a lista MRU de arquivo ou o menu de verbos OLE), na verdade, modifique a estrutura do menu antes de menu é desenhado.  
+ Estrutura de menu do aplicativo, editada pelo Visual C++, é usada para representar os potenciais comandos disponíveis em tempo de WM_INITMENUPOPUP. Manipuladores ON_UPDATE_COMMAND_UI podem modificar o estado ou o texto de um menu ou para usos avançados (como a lista MRU de arquivo ou o menu de verbos OLE pop-up), na verdade, modificar a estrutura de menu antes de menu é desenhado.  
   
- O mesmo tipo de **ON_UPDATE_COMMAND_UI** processamento é feito para barras de ferramentas (e outras barras de controle) quando o aplicativo entra em seu loop ocioso. Consulte o *referência da biblioteca de classe* e [31 de observação técnica](../mfc/tn031-control-bars.md) para obter mais informações sobre barras de controle.  
+ O mesmo tipo de processamento de ON_UPDATE_COMMAND_UI é feito para barras de ferramentas (e outras barras de controle) quando o aplicativo entra em seu loop ocioso. Consulte o *referência da biblioteca de classe* e [31 de observação técnica](../mfc/tn031-control-bars.md) para obter mais informações sobre barras de controle.  
   
 ## <a name="nested-pop-up-menus"></a>Menus pop-up aninhadas  
- Se você estiver usando uma estrutura aninhada de menu, você observará que o **ON_UPDATE_COMMAND_UI** manipulador para o primeiro item de menu no menu pop-up é chamado em dois casos diferentes.  
+ Se você estiver usando uma estrutura aninhada de menu, você observará que o manipulador ON_UPDATE_COMMAND_UI do primeiro item de menu no menu pop-up é chamado em dois casos diferentes.  
   
- Primeiro, ele é chamado para o próprio menu pop-up. Isso é necessário porque os menus pop-up não têm IDs e usamos a ID do primeiro item de menu do menu pop-up para se referir ao menu pop-up inteiro. Nesse caso, o **m_pSubMenu** variável de membro do **CCmdUI** objeto será não nulo e apontará para o menu pop-up.  
+ Primeiro, ele é chamado para o próprio menu pop-up. Isso é necessário porque os menus pop-up não têm IDs e usamos a ID do primeiro item de menu do menu pop-up para se referir ao menu pop-up inteiro. Nesse caso, o *m_pSubMenu* variável de membro do `CCmdUI` objeto será não nulo e apontará para o menu pop-up.  
   
- Em segundo lugar, ele é chamado antes que os itens de menu no menu pop-up devem ser desenhada. Nesse caso, a ID refere-se apenas para o primeiro item de menu e a **m_pSubMenu** variável de membro do **CCmdUI** objeto será nulo.  
+ Em segundo lugar, ele é chamado antes que os itens de menu no menu pop-up devem ser desenhada. Nesse caso, a ID refere-se apenas para o primeiro item de menu e a *m_pSubMenu* variável de membro do `CCmdUI` objeto será nulo.  
   
  Isso permite que você habilite o menu pop-up distinto de seus itens de menu, mas requer que você escreva algum código de percepção de menu. Por exemplo, em um menu aninhado com a seguinte estrutura:  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a7ef7f6fd9a9da92c208366ee401d55d07fd5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9625b3eafa75bdafff7d17ea63db8904d9b49529
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384576"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956841"
 ---
 # <a name="tn014-custom-controls"></a>TN014: controles personalizados
 Esta anotação descreve o suporte do MFC para controles personalizados e desenho automaticamente. Ele também descreve subclassificação dinâmica e descreve a relação entre [CWnd](../mfc/reference/cwnd-class.md) objetos e `HWND`s.  
@@ -100,11 +100,11 @@ Esta anotação descreve o suporte do MFC para controles personalizados e desenh
 ## <a name="using-self-draw-controls-and-menus"></a>Usando os menus e desenhar os controles  
  Para desenhar os menus, você deve substituir o `OnMeasureItem` e `OnDrawItem` métodos.  
   
- Para caixas de listagem desenhar automaticamente e caixas de combinação, você deve substituir `OnMeasureItem` e `OnDrawItem`. Você deve especificar o `LBS_OWNERDRAWVARIABLE` estilo das caixas de listagem ou `CBS_OWNERDRAWVARIABLE` caixas de estilo para a combinação do modelo de caixa de diálogo. O `OWNERDRAWFIXED` estilo não funcionarão com automaticamente desenhar itens, como a altura do item fixa é determinada para desenhar os controles estão anexados à caixa de listagem. (Você pode usar os métodos [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) e [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) para superar essa limitação.)  
+ Para caixas de listagem desenhar automaticamente e caixas de combinação, você deve substituir `OnMeasureItem` e `OnDrawItem`. Você deve especificar o estilo LBS_OWNERDRAWVARIABLE para caixas de listagem ou CBS_OWNERDRAWVARIABLE para caixas de combinação no modelo de caixa de diálogo. O estilo OWNERDRAWFIXED não funcionará com automaticamente desenhar itens porque a altura do item fixa é determinada para que desenhar os controles estão anexados à caixa de listagem. (Você pode usar os métodos [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) e [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) para superar essa limitação.)  
   
- Alternar para um `OWNERDRAWVARIABLE` estilo forçará o sistema para aplicar o `NOINTEGRALHEIGHT` estilo para o controle. Porque o controle não pode calcular uma altura integral com tamanho variável de itens, o estilo padrão de `INTEGRALHEIGHT` será ignorado e o controle é sempre `NOINTEGRALHEIGHT`. Se os itens são uma altura fixa, você pode impedir que itens parciais desenhada, especificando o tamanho do controle para ser um multiplicador de inteiro do tamanho do item.  
+ Alternar para um estilo OWNERDRAWVARIABLE forçará o sistema para aplicar o estilo NOINTEGRALHEIGHT ao controle. Porque o controle não pode calcular uma altura integral com itens de tamanhos variável, o estilo padrão de INTEGRALHEIGHT será ignorado e o controle é sempre NOINTEGRALHEIGHT. Se os itens são uma altura fixa, você pode impedir que itens parciais desenhada, especificando o tamanho do controle para ser um multiplicador de inteiro do tamanho do item.  
   
- Para desenhar automaticamente caixas de listagem e caixas de combinação com o `LBS_SORT` ou `CBS_SORT` estilo, você deve substituir o `OnCompareItem` método.  
+ Para caixas de listagem e caixas de combinação com o estilo LBS_SORT ou CBS_SORT de desenho automaticamente, você deve substituir o `OnCompareItem` método.  
   
  Para desenhar automaticamente caixas de listagem e caixas de combinação, `OnDeleteItem` geralmente não é substituída. Você pode substituir `OnDeleteItem` se você quiser executar qualquer processamento especial. Um caso onde isso seria aplicável é quando mais memória ou outros recursos são armazenados com cada item de caixa de combinação ou de caixa de listagem.  
   

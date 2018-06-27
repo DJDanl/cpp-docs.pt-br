@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88e6916056f988a1cee52020c8ce7e9fce11e574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba8f6d8cf90e7523fe4497cfc3b36c3616a8f10
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370514"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956272"
 ---
 # <a name="cftpfilefind-class"></a>Classe CFtpFileFind
 Recursos em pesquisas de arquivos de Internet de servidores FTP.  
@@ -88,14 +88,14 @@ explicit CFtpFileFind(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pConnection`  
+ *pConnection*  
  Um ponteiro para um `CFtpConnection` objeto. Você pode obter uma conexão FTP chamando [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection).  
   
- `dwContext`  
+ *dwContext*  
  O identificador de contexto para o `CFtpFileFind` objeto. Consulte **comentários** para obter mais informações sobre esse parâmetro.  
   
 ### <a name="remarks"></a>Comentários  
- O valor padrão para `dwContext` é enviada pelo MFC para o `CFtpFileFind` de objeto o [CInternetSession](../../mfc/reference/cinternetsession-class.md) do objeto que criou o `CFtpFileFind` objeto. Você pode substituir o padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto é retornado ao [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer o status do objeto ao qual ela é identificada. Consulte o artigo [Internet primeiras etapas: WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.  
+ O valor padrão para *dwContext* é enviada pelo MFC para o `CFtpFileFind` de objeto o [CInternetSession](../../mfc/reference/cinternetsession-class.md) do objeto que criou o `CFtpFileFind` objeto. Você pode substituir o padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto é retornado ao [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer o status do objeto ao qual ela é identificada. Consulte o artigo [Internet primeiras etapas: WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.  
   
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo de visão geral da classe neste tópico.  
@@ -110,10 +110,10 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pstrName`  
+ *pstrName*  
  Um ponteiro para uma cadeia de caracteres que contém o nome do arquivo a ser localizado. Se **nulo**, a chamada irá realizar uma pesquisa de curinga (*).  
   
- `dwFlags`  
+ *dwFlags*  
  Os sinalizadores que descrevem como lidar com essa sessão. Esses sinalizadores podem ser combinados com o operador OR bit a bit (&#124;) e é o seguinte:  
   
 -   INTERNET_FLAG_RELOAD obter os dados de transmissão, mesmo se ela está armazenada em cache localmente. Este é o sinalizador de padrão.  

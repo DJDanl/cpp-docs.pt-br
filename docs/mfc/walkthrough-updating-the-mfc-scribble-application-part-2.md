@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83caf353ca4a45e3ae834a41062de955a91dbb8a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385385"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952412"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Instruções passo a passo: atualizando o aplicativo de rabisco MFC (parte 2)
 [Parte 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) deste passo a passo mostrada como adicionar uma faixa de opções do Office Fluent para clássica Rabisco aplicativo. Esta parte mostra como adicionar painéis de faixa de opções e os controles que os usuários podem usar em vez de menus e comandos.  
@@ -47,31 +47,31 @@ ms.locfileid: "33385385"
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>Para adicionar um painel de exibição e o painel de janela para a barra de faixa de opções  
   
-1.  Criar um painel chamado `View`, que tem duas caixas de seleção que alternar a barra de status e a barra de ferramentas.  
+1.  Criar um painel chamado *exibição*, que tem duas caixas de seleção que alternar a barra de status e a barra de ferramentas.  
   
     1.  Do **caixa de ferramentas**, arraste um **painel** para o **início** categoria. Em seguida, arraste dois **caixas de seleção** ao painel.  
   
-    2.  Clique no painel para modificar suas propriedades. Alterar **legenda** para `View`.  
+    2.  Clique no painel para modificar suas propriedades. Alterar **legenda** para *exibição*.  
   
-    3.  Clique na primeira caixa de seleção para modificar suas propriedades. Alterar **ID** para `ID_VIEW_TOOLBAR` e **legenda** para `Toolbar`.  
+    3.  Clique na primeira caixa de seleção para modificar suas propriedades. Alterar **ID** para *ID_VIEW_TOOLBAR* e **legenda** para *barra de ferramentas*.  
   
-    4.  Clique na segunda caixa para modificar suas propriedades. Alterar **ID** para `ID_VIEW_STATUS_BAR` e **legenda** para `Status Bar`.  
+    4.  Clique na segunda caixa para modificar suas propriedades. Alterar **ID** para *ID_VIEW_STATUS_BAR* e **legenda** para *barra de Status*.  
   
-2.  Criar um painel chamado `Window` que tem um botão de divisão. Quando um usuário clica no botão de divisão, um menu de atalho exibe três comandos que já estão definidos no aplicativo de rabisco.  
+2.  Criar um painel chamado *janela* que tem um botão de divisão. Quando um usuário clica no botão de divisão, um menu de atalho exibe três comandos que já estão definidos no aplicativo de rabisco.  
   
     1.  Do **caixa de ferramentas**, arraste um **painel** para o **início** categoria. Em seguida, arraste um **botão** ao painel.  
   
-    2.  Clique no painel para modificar suas propriedades. Alterar **legenda** para `Window`.  
+    2.  Clique no painel para modificar suas propriedades. Alterar **legenda** para *janela*.  
   
-    3.  Clique no botão. Alterar **legenda** para `Windows`, **chaves** para `w`, **índice de imagem grande** para `1`, e **modo de divisão** para `False`. Em seguida, clique no botão de reticências (**...** ) ao lado de **itens de Menu** para abrir o **itens Editor** caixa de diálogo.  
+    3.  Clique no botão. Alterar **legenda** para *Windows*, **chaves** para *w*, **índice de imagem grande** para *1* , e **modo de divisão** para *False*. Em seguida, clique no botão de reticências (**...** ) ao lado de **itens de Menu** para abrir o **itens Editor** caixa de diálogo.  
   
     4.  Clique em **adicionar** três vezes para adicionar três botões.  
   
-    5.  Clique no primeiro botão e, em seguida, alterar **legenda** para `New Window`, e **ID** para `ID_WINDOW_NEW`.  
+    5.  Clique no primeiro botão e, em seguida, alterar **legenda** para *nova janela*, e **ID** para *ID_WINDOW_NEW*.  
   
-    6.  Clique no segundo botão e, em seguida, alterar **legenda** para `Cascade`, e **ID** para `ID_WINDOW_CASCADE`.  
+    6.  Clique no segundo botão e, em seguida, alterar **legenda** para *Cascade*, e **ID** para *ID_WINDOW_CASCADE*.  
   
-    7.  Clique no botão de terceiro e, em seguida, alterar **legenda** para `Tile`, e **ID** para `ID_WINDOW_TILE_HORZ`.  
+    7.  Clique no botão de terceiro e, em seguida, alterar **legenda** para *bloco*, e **ID** para *ID_WINDOW_TILE_HORZ*.  
   
 3.  Salvar as alterações e, em seguida, compilar e executar o aplicativo. O **exibição** e **janela** painéis devem ser exibidos. Clique nos botões para confirmar que funcionem corretamente.  
   
@@ -84,11 +84,11 @@ ms.locfileid: "33385385"
   
 1.  Do **caixa de ferramentas**, arraste um **painel** para o **início** categoria. Em seguida, arraste dois **botões** ao painel.  
   
-2.  Clique no painel para modificar suas propriedades. Alterar **legenda** para `Help`.  
+2.  Clique no painel para modificar suas propriedades. Alterar **legenda** para *ajuda*.  
   
-3.  Clique no primeiro botão. Alterar **legenda** para `Help Topics`, e **ID** para `ID_HELP_FINDER`.  
+3.  Clique no primeiro botão. Alterar **legenda** para *tópicos da Ajuda*, e **ID** para *ID_HELP_FINDER*.  
   
-4.  Clique no botão de segundo. Alterar **legenda** para `About Scribble...`, e **ID** para `ID_APP_ABOUT`.  
+4.  Clique no botão de segundo. Alterar **legenda** para *sobre Rabisco...* , e **ID** para *ID_APP_ABOUT*.  
   
 5.  Salvar as alterações e, em seguida, compilar e executar o aplicativo. Um **ajuda** painel que contém dois botões da faixa de opções deve ser exibido.  
   
@@ -106,21 +106,21 @@ ms.locfileid: "33385385"
   
 1.  Do **caixa de ferramentas**, arraste um **painel** para o **início** categoria. Em seguida, arraste um **caixa de seleção** e dois **caixas de combinação** ao painel.  
   
-2.  Clique no painel para modificar suas propriedades. Alterar **legenda** para `Pen`.  
+2.  Clique no painel para modificar suas propriedades. Alterar **legenda** para *caneta*.  
   
-3.  Clique na caixa de seleção. Alterar **legenda** para `Use Thick`, e **ID** para `ID_PEN_THICK_OR_THIN`.  
+3.  Clique na caixa de seleção. Alterar **legenda** para *usar espesso*, e **ID** para *ID_PEN_THICK_OR_THIN*.  
   
-4.  Clique na primeira caixa de combinação. Alterar **legenda** para `Thin Pen`, **ID** para `ID_PEN_THIN_WIDTH`, **texto** para `2`, **tipo** para `Drop List`, e **dados** para `1;2;3;4;5;6;7;8;9;`.  
+4.  Clique na primeira caixa de combinação. Alterar **legenda** para *fino caneta*, **ID** para *ID_PEN_THIN_WIDTH*, **texto** para *2* , **Tipo** para *lista suspensa*, e **dados** para *1; 2; 3; 4; 5; 6; 7; 8; 9;*.  
   
-5.  Clique na segunda caixa de combinação. Alterar **legenda** para `Thick Pen`, **ID** para `ID_PEN_THICK_WIDTH`, **texto** para `5`, **tipo** para `Drop List`, e **dados** para `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`.  
+5.  Clique na segunda caixa de combinação. Alterar **legenda** para *caneta espessa*, **ID** para *ID_PEN_THICK_WIDTH*, **texto** para  *5*, **tipo** para *lista suspensa*, e **dados** para *5, 6, 7; 8; 9; 10; 11; 12; 13; 14; 15; 16; 17; 18; 19, 20;*.  
   
 6.  As novas caixas de combinação não corresponde a qualquer item de menu existente. Portanto, você deve criar um item de menu para cada opção de caneta.  
   
     1.  No **exibição recursos** janela, abra o recurso de menu IDR_SCRIBBTYPE.  
   
-    2.  Clique em **caneta** para abrir o p**en** menu. Em seguida, clique em **tipo aqui** e digite `Thi&n Pen`.  
+    2.  Clique em **caneta** para abrir o p**en** menu. Em seguida, clique em **tipo aqui** e tipo *est & Caneta n*.  
   
-    3.  Clique o texto que você acabou de digitar para abrir o **propriedades** janela e, em seguida, alterar a ID de propriedade para `ID_PEN_THIN_WIDTH`.  
+    3.  Clique o texto que você acabou de digitar para abrir o **propriedades** janela e, em seguida, alterar a ID de propriedade para *ID_PEN_THIN_WIDTH*.  
   
     4.  Você também deve criar um manipulador de eventos para cada item de menu de caneta. Clique com botão direito do **est & Caneta n** item de menu que você acabou de criar e, em seguida, clique em **Adicionar manipulador de eventos**. O **Assistente de manipulador de eventos** é exibido.  
   
@@ -142,9 +142,9 @@ m_nThinWidth = atoi (pThinComboBox -> GetItem(nCurSel));
   
     1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type `Thic&k Pen`.  
+    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type *Thic&k Pen*.  
   
-    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to `ID_PEN_THICK_WIDTH`.  
+    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to *ID_PEN_THICK_WIDTH*.  
   
     4.  Right-click the **Thick Pen** menu item that you just created and then click **Add Event Handler**. The **Event Handler Wizard** is displayed.  
   
@@ -178,11 +178,11 @@ if (nCurSel>= 0)
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>Para adicionar um botão de cor para o painel de caneta  
   
-1.  Antes de adicionar o botão de cor, crie um item de menu para ele. No **exibição recursos** janela, abra o recurso de menu IDR_SCRIBBTYPE. Clique o **caneta** item de menu para abrir o menu de caneta. Em seguida, clique em **tipo aqui** e digite `&Color`. Clique o texto que você acabou de digitar para exibir o **propriedades** janela. Alterar a ID para `ID_PEN_COLOR`.  
+1.  Antes de adicionar o botão de cor, crie um item de menu para ele. No **exibição recursos** janela, abra o recurso de menu IDR_SCRIBBTYPE. Clique o **caneta** item de menu para abrir o menu de caneta. Em seguida, clique em **tipo aqui** e tipo *& cor*. Clique o texto que você acabou de digitar para exibir o **propriedades** janela. Alterar a ID para *ID_PEN_COLOR*.  
   
 2.  Agora, adicione o botão de cor. Do **caixa de ferramentas**, arraste um **botão de cor** para o **caneta** painel.  
   
-3.  Clique no botão de cor. Alterar **legenda** para `Color`, **ID** para `ID_PEN_COLOR`, **SimpleLook** para `True`, **índice de imagem grande** para `1`, e **modo de divisão** para `False`.  
+3.  Clique no botão de cor. Alterar **legenda** para *cor*, **ID** para *ID_PEN_COLOR*, **SimpleLook** para  *True*, **índice de imagem grande** para *1*, e **modo de divisão** para *False*.  
   
 4.  Salvar as alterações e, em seguida, compilar e executar o aplicativo. O novo botão de cor deve ser exibido no **caneta** painel. No entanto, ele não pode ser usado porque ele ainda não tiver um manipulador de eventos. As próximas etapas mostram como adicionar um manipulador de eventos para o botão de cor.  
   

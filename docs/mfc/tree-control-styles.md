@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c0158bfc24eb86f88695b58943989fbb7cac435
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f44f0de4527d6d9f14a06795a297617f46c0010a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382031"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953139"
 ---
 # <a name="tree-control-styles"></a>Estilos de controle da árvore
-Controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) estilos controlam aspectos da aparência de um controle de árvore. Você definir os estilos inicias quando você cria o controle de árvore. Você pode recuperar e alterar os estilos depois de criar o controle de árvore usando o [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) e [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) funções do Windows, especificando **GWL_STYLE** para o `nIndex` parâmetro. Para obter uma lista completa de estilos, consulte [estilos de janela de controle de exibição de árvore](http://msdn.microsoft.com/library/windows/desktop/bb760013) no SDK do Windows.  
+Controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) estilos controlam aspectos da aparência de um controle de árvore. Você definir os estilos inicias quando você cria o controle de árvore. Você pode recuperar e alterar os estilos depois de criar o controle de árvore usando o [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) e [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) funções do Windows, especificando **GWL_STYLE** para o *nIndex* parâmetro. Para obter uma lista completa de estilos, consulte [estilos de janela de controle de exibição de árvore](http://msdn.microsoft.com/library/windows/desktop/bb760013) no SDK do Windows.  
   
  O **TVS_HASLINES** estilo aprimora a representação gráfica da hierarquia de um controle de árvore, desenhar linhas que se vincular itens filho a seu item pai correspondente. Este estilo não vincular itens na raiz da hierarquia. Para fazer isso, você precisa combinar o **TVS_HASLINES** e **TVS_LINESATROOT** estilos.  
   

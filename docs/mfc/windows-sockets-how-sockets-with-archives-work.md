@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c03ae586e346be2ba1e7c71475b69318ded0dd18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6c4f581acb0af27f44c88d59597e52b057991ee4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385210"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954273"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: como funcionam soquetes com arquivos mortos
 Este artigo explica como um [CSocket](../mfc/reference/csocket-class.md) objeto, um [CSocketFile](../mfc/reference/csocketfile-class.md) objeto e um [CArchive](../mfc/reference/carchive-class.md) objeto são combinadas para simplificar o envio e recebimento de dados por meio de um Windows Soquete.  
   
- O artigo [Windows Sockets: exemplo de soquetes usando arquivos](../mfc/windows-sockets-example-of-sockets-using-archives.md) apresenta o **PacketSerialize** função. O objeto de arquivo morto no **PacketSerialize** exemplo funciona praticamente como um objeto de arquivo morto passado para um MFC [Serialize](../mfc/reference/cobject-class.md#serialize) função. A diferença fundamental é que, para soquetes, o arquivamento é anexado não com um padrão [CFile](../mfc/reference/cfile-class.md) objeto (geralmente associado a um arquivo de disco) mas para um `CSocketFile` objeto. Em vez de se conectar a um arquivo de disco, o `CSocketFile` objeto se conecta a um `CSocket` objeto.  
+ O artigo [Windows Sockets: exemplo de soquetes usando arquivos](../mfc/windows-sockets-example-of-sockets-using-archives.md) apresenta o `PacketSerialize` função. O objeto de arquivo morto no `PacketSerialize` exemplo funciona praticamente como um objeto de arquivo morto passado para um MFC [Serialize](../mfc/reference/cobject-class.md#serialize) função. A diferença fundamental é que, para soquetes, o arquivamento é anexado não com um padrão [CFile](../mfc/reference/cfile-class.md) objeto (geralmente associado a um arquivo de disco) mas para um `CSocketFile` objeto. Em vez de se conectar a um arquivo de disco, o `CSocketFile` objeto se conecta a um `CSocket` objeto.  
   
  Um `CArchive` objeto gerencia um buffer. Quando o buffer de um arquivo de armazenamento (envio) estiver cheio, um tipo de objeto `CFile` objeto grava o conteúdo do buffer. Liberando o buffer de um arquivo anexado a um soquete é equivalente ao enviar uma mensagem. Quando o buffer de um arquivo de carregamento (recebimento) está cheio, o `CFile` objeto para de leitura até que o buffer está disponível novamente.  
   
@@ -51,7 +51,7 @@ CArchive, CSocketFile e CSocket
  Se `CSocket` não foram implementadas como um objeto de dois estados, ele poderá receber notificações adicionais para o mesmo tipo de evento enquanto estava processando uma notificação anterior. Por exemplo, você pode obter um `OnReceive` notificação ao processar um `OnReceive`. No fragmento de código acima, extraindo `str` do arquivo morto pode levar a recursão. Alternando estados, `CSocket` impede a recursão, impedindo que as notificações adicionais. A regra geral não é nenhuma notificação em notificações.  
   
 > [!NOTE]
->  Um `CSocketFile` também pode ser usado como um arquivo (limitado) sem um `CArchive` objeto. Por padrão, o `CSocketFile` do construtor `bArchiveCompatible` parâmetro é **TRUE**. Isso especifica que o objeto de arquivo é para uso com um arquivo morto. Para usar o objeto de arquivo sem um arquivo morto, passar **FALSE** no `bArchiveCompatible` parâmetro.  
+>  Um `CSocketFile` também pode ser usado como um arquivo (limitado) sem um `CArchive` objeto. Por padrão, o `CSocketFile` do construtor *bArchiveCompatible* parâmetro é **TRUE**. Isso especifica que o objeto de arquivo é para uso com um arquivo morto. Para usar o objeto de arquivo sem um arquivo morto, passar **FALSE** no *bArchiveCompatible* parâmetro.  
   
  No modo de "compatível com o arquivo", um `CSocketFile` objeto fornece um melhor desempenho e reduz o risco de um "bloqueio". Um deadlock ocorre quando os soquetes de envio e recebimento estão aguardando em si ou aguardando um recurso comum. Esta situação pode ocorrer se o `CArchive` objeto trabalhou com o `CSocketFile` da forma que faz com um `CFile` objeto. Com `CFile`, o arquivo morto pode assumir que se ele recebe menos bytes solicitados por ele, o final do arquivo foi atingido. Com `CSocketFile`, no entanto, dados for baseado em mensagem; o buffer pode conter várias mensagens, para receber menos do que o número de bytes solicitado não implica a fim de arquivo. O aplicativo não bloquear nesse caso, como pode ocorrer com `CFile`, e ele poderá continuar a ler mensagens do buffer até que o buffer está vazio. O [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) funcionar em `CArchive` é útil para monitorar o estado do buffer do arquivo nesse caso.  
   

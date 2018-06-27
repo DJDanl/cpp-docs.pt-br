@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dbb2d8202e9b87d2825b7d40a0dde4323246aa0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5477921ff89c8bb0b23245d3848139a7c7c86444
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366708"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951550"
 ---
 # <a name="cdialogbar-class"></a>Classe CDialogBar
 Fornece a funcionalidade de uma caixa de diálogo sem janela restrita do Windows em uma barra de controle.  
@@ -53,7 +53,7 @@ class CDialogBar : public CControlBar
 ## <a name="remarks"></a>Comentários  
  Uma barra da caixa de diálogo se assemelha a uma caixa de diálogo em que ele contém controles padrão do Windows que o usuário pode usar tab entre. Similaridade outra é que você criar um modelo de caixa de diálogo para representar a barra da caixa de diálogo.  
   
- Criando e usando uma caixa de diálogo é semelhante a criar e usar um `CFormView` objeto. Primeiro, use o [editor de caixa de diálogo](../../windows/dialog-editor.md) para definir um modelo de caixa de diálogo com o estilo **WS_CHILD** e nenhum outro estilo. O modelo não deve ter o estilo **WS_VISIBLE**. No código do aplicativo, chame o construtor para construir o `CDialogBar` do objeto e, em seguida, chamar **criar** para criar a janela de diálogo barra e anexá-lo para o `CDialogBar` objeto.  
+ Criando e usando uma caixa de diálogo é semelhante a criar e usar um `CFormView` objeto. Primeiro, use o [editor de caixa de diálogo](../../windows/dialog-editor.md) para definir um modelo de caixa de diálogo com o estilo **WS_CHILD** e nenhum outro estilo. O modelo não deve ter o estilo **WS_VISIBLE**. No código do aplicativo, chame o construtor para construir o `CDialogBar` do objeto e, em seguida, chamar `Create` para criar a janela de diálogo barra e anexá-lo para o `CDialogBar` objeto.  
   
  Para obter mais informações sobre `CDialogBar`, consulte o artigo [barras da caixa de diálogo](../../mfc/dialog-bars.md) e [31 de observação técnica](../../mfc/tn031-control-bars.md), barras de controle.  
   
@@ -100,22 +100,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para o pai `CWnd` objeto.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Um ponteiro para o nome do `CDialogBar` modelo de recurso de caixa de diálogo do objeto.  
   
- `nStyle`  
+ *nStyle*  
  O estilo de barra de ferramentas. Estilos de barra de ferramentas adicionais com suporte são:  
   
-- `CBRS_TOP` Barra de controle está na parte superior da janela do quadro.  
+- **CBRS_TOP** barra de controle está na parte superior da janela do quadro.  
   
-- `CBRS_BOTTOM` Barra de controle está na parte inferior da janela do quadro.  
+- **CBRS_BOTTOM** barra de controle está na parte inferior da janela do quadro.  
   
-- `CBRS_NOALIGN` Barra de controle é reposicionado de forma não quando o pai for redimensionado.  
+- **CBRS_NOALIGN** barra de controle é reposicionada não quando o pai for redimensionado.  
   
-- `CBRS_TOOLTIPS` Barra de controle exibe dicas de ferramenta.  
+- **CBRS_TOOLTIPS** barra de controle exibe dicas de ferramenta.  
   
 - **CBRS_SIZE_DYNAMIC** barra de controle é dinâmica.  
   
@@ -123,21 +123,21 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING** barra de controle é flutuante.  
   
-- `CBRS_FLYBY` Barra de status exibe informações sobre o botão.  
+- **CBRS_FLYBY** barra de Status exibe informações sobre o botão.  
   
 - **CBRS_HIDE_INPLACE** barra de controle não será exibida para o usuário.  
   
- `nID`  
+ *nID*  
  A ID de controle da barra de caixa de diálogo.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  A ID de recurso de `CDialogBar` modelo de caixa de diálogo do objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Se você especificar o `CBRS_TOP` ou `CBRS_BOTTOM` estilo de alinhamento, largura da barra de caixa de diálogo é que a janela do quadro e sua altura é que o recurso especificado pela `nIDTemplate`. Se você especificar o `CBRS_LEFT` ou `CBRS_RIGHT` estilo de alinhamento, altura da barra de caixa de diálogo é que a janela do quadro e sua largura é que o recurso especificado pela `nIDTemplate`.  
+ Se você especificar o **CBRS_TOP** ou **CBRS_BOTTOM** estilo de alinhamento, largura da barra de caixa de diálogo é que a janela do quadro e sua altura é que o recurso especificado pela *nIDTemplate*. Se você especificar o **CBRS_LEFT** ou **CBRS_RIGHT** estilo de alinhamento, altura da barra de caixa de diálogo é que a janela do quadro e sua largura é que o recurso especificado pela *nIDTemplate*.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  
