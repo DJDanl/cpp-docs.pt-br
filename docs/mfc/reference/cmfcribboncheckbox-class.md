@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 444d42c7273e64a07966592b315660b92ddf8ee0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369701"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042050"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Classe CMFCRibbonCheckBox
 O `CMFCRibbonCheckBox` classe implementa uma caixa de seleção que você pode adicionar a um menu pop-up, ferramentas de acesso rápido ou painel de faixa de opções.  
@@ -77,7 +77,7 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```  
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)  
 ```  
-onde `nID` é a ID de comando da caixa de seleção e `lpszText` é o rótulo de texto da caixa de seleção.  
+onde *nID* é a ID de comando da caixa de seleção e *lpszText* é o rótulo de texto da caixa de seleção.  
   
  Você pode adicionar uma caixa de seleção para um painel de faixa de opções usando [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
@@ -103,10 +103,10 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nID`  
+ [in] *nID*  
  Especifica a ID de comando.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Especifica o rótulo de texto.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -125,7 +125,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para o `CDC` associado com a caixa de seleção.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -142,7 +142,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para o `CDC` associado a esta caixa de seleção.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para o `CDC` objeto associado a esta caixa de seleção.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -188,7 +188,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para o `CDC` no qual desenhar a caixa de seleção.  
   
 ### <a name="remarks"></a>Comentários  
@@ -201,10 +201,10 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `CDC*`  
+ [in] *CDC**  
  Ponteiro para o `CDC` associado com a caixa de seleção.  
   
- [in] `CRect`  
+ [in] *CRect*  
  Um `CRect` objeto especificando o retângulo na qual desenhar a imagem do menu.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -227,22 +227,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para o contexto de dispositivo no qual desenhar a caixa de seleção.  
   
- [in] `strText`  
+ [in] *strText*  
  O texto de exibição.  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  A distância, em pixels, do lado esquerdo da caixa de listagem para o texto de exibição.  
   
- [in] `rect`  
+ [in] *rect*  
  O retângulo de exibição da caixa de seleção.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  `TRUE` Se a caixa de seleção estiver marcada, ou `FALSE` se não for.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  `TRUE` Se a caixa de seleção é realçada, ou `FALSE` se não for.  
   
 ### <a name="remarks"></a>Comentários  
@@ -257,10 +257,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pParent`  
+ *pParent*  
  A janela pai da caixa de seleção.  
   
- `data`  
+ *data*  
  Os dados de acessibilidade para a caixa de seleção.  
   
 ### <a name="return-value"></a>Valor de retorno  

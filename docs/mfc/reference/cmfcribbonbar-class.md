@@ -198,12 +198,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f10113af9e20bb9ea91d0b020cb24a9ff4f1a031
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e5d2a65e1f75fb084c2878dc1231f0dffc12102
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378234"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042385"
 ---
 # <a name="cmfcribbonbar-class"></a>Classe CMFCRibbonBar
 O `CMFCRibbonBar` classe implementa uma barra de faixa de opções semelhante àquela usada no Office 2007.  
@@ -353,11 +353,11 @@ BOOL ActivateContextCategory(UINT uiContextID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiContextID`  
+ [in] *uiContextID*  
  A ID da categoria de contexto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se uma categoria de contexto com `uiContextID` for encontrado e ativado; caso contrário `FALSE`.  
+ `TRUE` Se uma categoria de contexto com *uiContextID* for encontrado e ativado; caso contrário `FALSE`.  
   
 ##  <a name="addcategory"></a>  CMFCRibbonBar::AddCategory  
  Cria e inicializa uma nova categoria de faixa de opções para a barra da faixa de opções.  
@@ -376,32 +376,32 @@ CMFCRibbonCategory* AddCategory(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszName`  
+ [in] *lpszName*  
  Nome da categoria de faixa de opções.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  ID do recurso da lista de imagem em miniatura para a categoria de faixa de opções.  
   
- [in] `uiLargeImagesResID`  
+ [in] *uiLargeImagesResID*  
  ID do recurso da lista de imagens grandes para a categoria de faixa de opções.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  Especifica o tamanho das imagens pequenas para a categoria de faixa de opções.  
   
- [in] `sizeLargeImage`  
+ [in] *sizeLargeImage*  
  Especifica o tamanho das imagens grandes para a categoria de faixa de opções.  
   
- [in] `nInsertAt`  
+ [in] *nInsertAt*  
  Índice zero com base no local de categoria.  
   
- [in] `pRTI`  
+ [in] *pRTI*  
  Ponteiro para um [classe CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) classe de tempo de execução para criar uma categoria de faixa de opções dinamicamente em tempo de execução.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para a nova categoria de faixa de opções, se o método teve êxito; Caso contrário, `NULL`.  
   
 ### <a name="remarks"></a>Comentários  
- Se o `pRTI` parâmetro não é `NULL`, a nova categoria de faixa de opções é criada dinamicamente usando a classe de tempo de execução.  
+ Se o *pRTI* parâmetro não é `NULL`, a nova categoria de faixa de opções é criada dinamicamente usando a classe de tempo de execução.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como usar o `AddCategory` método o `CMFCRibbonBar` classe.  
@@ -427,35 +427,35 @@ CMFCRibbonCategory* AddContextCategory(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszName`  
+ [in] *lpszName*  
  Nome da categoria.  
   
- [in] `lpszContextName`  
+ [in] *lpszContextName*  
  Nome da legenda da categoria do contexto.  
   
- [in] `uiContextID`  
+ [in] *uiContextID*  
  ID do contexto.  
   
- [in] `clrContext`  
+ [in] *clrContext*  
  Cor da legenda da categoria do contexto.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  ID do recurso da imagem pequena de uma categoria de contexto.  
   
- [in] `uiLargeImagesResID`  
+ [in] *uiLargeImagesResID*  
  ID do recurso da imagem grande de uma categoria de contexto.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  Tamanho de uma imagem em miniatura.  
   
- [in] `sizeLargeImage`  
+ [in] *sizeLargeImage*  
  Tamanho de uma imagem grande.  
   
- [in] `pRTI`  
+ [in] *pRTI*  
  Ponteiro para uma classe de tempo de execução.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para a categoria recém-criado, ou `NULL` se o `CreateObject` método `pRTI` não é possível criar a categoria especificada.  
+ Um ponteiro para a categoria recém-criado, ou `NULL` se o `CreateObject` método *pRTI* não é possível criar a categoria especificada.  
   
 ### <a name="remarks"></a>Comentários  
  Use esta função para adicionar uma categoria de contexto. Categorias de contexto são um tipo especial de categoria que pode ser mostrado ou ocultado em tempo de execução, dependendo do contexto atual do aplicativo. Por exemplo, quando o usuário seleciona um objeto, você pode exibir guias especiais com categorias de contexto que é usado para alterar o objeto selecionado.  
@@ -493,19 +493,19 @@ CMFCRibbonMainPanel* AddMainCategory(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszName`  
+ [in] *lpszName*  
  Nome da categoria principal da faixa de opções.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  ID do recurso de imagens pequenas.  
   
- [in] `uiLargeImagesResID`  
+ [in] *uiLargeImagesResID*  
  ID do recurso de imagens grandes.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  O tamanho das imagens pequenas.  
   
- [in] `sizeLargeImage`  
+ [in] *sizeLargeImage*  
  O tamanho das imagens grandes.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -544,13 +544,13 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszName`  
+ [in] *lpszName*  
  Nome da categoria.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  ID de lista de imagens para a categoria de recursos.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  Tamanho de imagens para elementos de faixa de opções na categoria.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -567,7 +567,7 @@ void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pElement`  
+ [in] *pElement*  
  Ponteiro para um elemento de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -581,7 +581,7 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bReplaceFrameCaption`  
+ [in] *bReplaceFrameCaption*  
  `TRUE` para a barra da faixa de opções substituir a legenda da janela do quadro principal. `FALSE` para localizar a barra de faixa de opções sob a legenda da janela do quadro principal.  
   
 ### <a name="remarks"></a>Comentários  
@@ -597,13 +597,13 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Ponteiro para a janela pai para a barra da faixa de opções.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Uma combinação de lógica de estilos para a nova janela.  
   
- [in] `nID`  
+ [in] *nID*  
  ID da nova janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -628,16 +628,16 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Ponteiro para a janela pai para a barra da faixa de opções.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  Este parâmetro não é usado.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Uma combinação de lógica de estilos para a nova janela.  
   
- [in] `nID`  
+ [in] *nID*  
  ID da nova janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -653,7 +653,7 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bSetFocus`  
+ [in] *bSetFocus*  
  `TRUE` Para definir o foco para a janela pai da barra de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -669,13 +669,13 @@ BOOL DrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo para o botão de menu.  
   
- [in] `pMenuItem`  
+ [in] *pMenuItem*  
  Ponteiro para um botão de menu da barra de ferramentas.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  O retângulo de exibição para um botão de menu.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -700,7 +700,7 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar o recurso de dicas de tecla; `FALSE` para desabilitar o recurso de dicas de tecla.  
   
 ### <a name="remarks"></a>Comentários  
@@ -714,11 +714,11 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar o **Visualizar impressão** recurso; `FALSE` para desabilitar o **Visualizar impressão** recurso.  
   
 ### <a name="remarks"></a>Comentários  
- Se `bEnable` é `FALSE` e existe uma categoria de visualização de impressão, ele será excluído.  
+ Se *bAtivar* é `FALSE` e existe uma categoria de visualização de impressão, ele será excluído.  
   
  Por padrão o **Visualizar impressão** está ativado.  
   
@@ -732,14 +732,14 @@ void EnableToolTips(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para ativar dicas de ferramenta na barra de faixa de opções; `FALSE` para desabilitar as dicas de ferramenta na barra de faixa de opções.  
   
- [in] `bEnableDescr`  
+ [in] *bEnableDescr*  
  `TRUE` Para habilitar as descrições de dica de ferramenta na dica de ferramenta; `FALSE` para desabilitar as descrições de dica de ferramenta na dica de ferramenta.  
   
 ### <a name="remarks"></a>Comentários  
- O `bEnable` parâmetro determina se as dicas de ferramenta são exibidas quando o mouse passa sobre um elemento de faixa de opções. O `bEnableDescr` parâmetro determina se o texto descritivo adicional aparece com o texto de dica de ferramenta.  
+ O *bAtivar* parâmetro determina se as dicas de ferramenta são exibidas quando o mouse passa sobre um elemento de faixa de opções. O *bEnableDescr* parâmetro determina se o texto descritivo adicional aparece com o texto de dica de ferramenta.  
   
 ##  <a name="findbydata"></a>  CMFCRibbonBar::FindByData  
  Recupera um ponteiro para um elemento de faixa de opções, se os dados especificados e visibilidade.  
@@ -751,10 +751,10 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwData`  
+ [in] *dwData*  
  Os dados associados a um elemento de faixa de opções.  
   
- [in] `bVisibleOnly`  
+ [in] *bVisibleOnly*  
  `TRUE` para pesquisar elementos de faixa de opções visíveis. `FALSE` para pesquisar todos os elementos da faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -774,13 +774,13 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  ID de comando para um elemento de faixa de opções.  
   
- [in] `bVisibleOnly`  
+ [in] *bVisibleOnly*  
  `TRUE` para pesquisar elementos de faixa de opções visíveis. `FALSE` para pesquisar todos os elementos da faixa de opções.  
   
- [in] `bExcludeQAT`  
+ [in] *bExcludeQAT*  
  `TRUE` Para excluir os elementos da barra de ferramentas de acesso rápido de pesquisa; Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -799,7 +799,7 @@ int FindCategoryIndexByData(DWORD dwData) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwData`  
+ [in] *dwData*  
  Os dados associados a uma categoria de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -859,11 +859,11 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  O índice de base zero de uma categoria de faixa de opções na lista de categorias de faixa de opções que está contida na barra de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para a categoria de faixa de opções no índice especificado; Caso contrário, `NULL` se `nIndex` estava fora do intervalo.  
+ Um ponteiro para a categoria de faixa de opções no índice especificado; Caso contrário, `NULL` se *nIndex* estava fora do intervalo.  
   
 ##  <a name="getcategorycount"></a>  CMFCRibbonBar::GetCategoryCount  
  Recupera o número de categorias de faixa de opções na barra de faixa de opções.  
@@ -896,11 +896,11 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pCategory`  
+ [in] *pCategory*  
  Ponteiro para uma categoria de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O índice de base zero de uma categoria de faixa de opções especificada pelo `pCategory`; ou -1 se a categoria de faixa de opções não for encontrada.  
+ O índice de base zero de uma categoria de faixa de opções especificada pelo *pCategory*; ou -1 se a categoria de faixa de opções não for encontrada.  
   
 ##  <a name="getcontextname"></a>  CMFCRibbonBar::GetContextName  
  Recupera o nome da legenda de categoria do contexto especificado por uma ID de contexto.  
@@ -912,14 +912,14 @@ BOOL GetContextName(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiContextID`  
+ [in] *uiContextID*  
  Uma ID de contexto da categoria de faixa de opções.  
   
- [out] `strName`  
+ [out] *strName*  
  O nome de uma legenda de categoria de contexto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o método teve êxito; Caso contrário, `FALSE` se `uiContextID` era zero ou a legenda da categoria de contexto não foi encontrada.  
+ `TRUE` Se o método teve êxito; Caso contrário, `FALSE` se *uiContextID* era zero ou a legenda da categoria de contexto não foi encontrada.  
   
 ##  <a name="getdroppeddown"></a>  CMFCRibbonBar::GetDroppedDown  
  Recupera o elemento de faixa de opções está suspensa no momento.  
@@ -943,10 +943,10 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  ID de comando de um elemento de faixa de opções.  
   
- [out] `arButtons`  
+ [out] *arButtons*  
  Uma matriz de ponteiros para elementos de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -980,10 +980,10 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `lstItems`  
+ [out] *lstItems*  
  A lista de IDs de comando para elementos de faixa de opções que estão contidos na barra de faixa de opções.  
   
- [in] `bHiddenOnly`  
+ [in] *bHiddenOnly*  
  `TRUE` Para excluir os elementos de faixa de opções que são exibidos; `FALSE` para incluir todos os elementos da faixa de opções na barra de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1081,7 +1081,7 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `lstCommands`  
+ [out] *lstCommands*  
  A lista de IDs de comando para os elementos da faixa de opções na barra de ferramentas de acesso rápido.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1183,20 +1183,20 @@ virtual CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  Local do ponto em coordenadas de barra de faixa de opções.  
   
- [in] `bCheckActiveCategory`  
+ [in] *bCheckActiveCategory*  
  `TRUE` para pesquisar a categoria ativa; `FALSE` não para pesquisar a categoria ativa.  
   
- [in] `bCheckPanelCaption`  
+ [in] *bCheckPanelCaption*  
  `TRUE` Para testar a legenda do painel de faixa de opções com o ponto de localizado em. `FALSE` não para testar a legenda do painel de faixa de opções com o ponto de localizados nele. Consulte a seção Comentários para obter mais informações.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o elemento de faixa de opções, localizado no ponto especificado; Caso contrário, `NULL` se o ponto não estiver localizado em um elemento de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
- A legenda do painel de faixa de opções com o ponto de localizados nele não é testada, a menos que o `bCheckActiveCategory` parâmetro é `TRUE`.  
+ A legenda do painel de faixa de opções com o ponto de localizados nele não é testada, a menos que o *bCheckActiveCategory* parâmetro é `TRUE`.  
   
 ##  <a name="iskeytipenabled"></a>  CMFCRibbonBar::IsKeyTipEnabled  
  Indica se o recurso de dicas de tecla está habilitado.  
@@ -1325,10 +1325,10 @@ virtual void OnClickButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pButton`  
+ [in] *pButton*  
  Ponteiro para o botão foi clicado.  
   
- [in] `point`  
+ [in] *ponto*  
  Este parâmetro não é usado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1343,8 +1343,8 @@ virtual void OnEditContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pEdit`  
- [in] `point`  
+ [in] *pEdit*  
+ [in] *ponto*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1356,7 +1356,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  `TRUE` Se o layout é da direita para esquerda; `FALSE` se o layout é esquerda para a direita.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1370,7 +1370,7 @@ BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- Longas `lVal`  
+ longo *lVal*  
  O índice do objeto acessível.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1390,10 +1390,10 @@ virtual BOOL OnShowRibbonContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWnd`  
- [in] `x`  
- [in] `y`  
- [in] `pHit`  
+ [in] *pWnd*  
+ [in] *x*  
+ [in] *y*  
+ [in] *pHit*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -1411,10 +1411,10 @@ virtual BOOL OnShowRibbonQATMenu(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWnd`  
- [in] `x`  
- [in] `y`  
- [in] `pHit`  
+ [in] *pWnd*  
+ [in] *x*  
+ [in] *y*  
+ [in] *pHit*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -1431,13 +1431,13 @@ BOOL OnSysKeyDown(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pFrameWnd`  
+ [in] *pFrameWnd*  
  Ponteiro para a janela do quadro principal do pai da barra de faixa de opções.  
   
- [in] `wParam`  
+ [in] *wParam*  
  Código de tecla virtual da chave que está sendo pressionada.  
   
- [in] `lParam`  
+ [in] *lParam*  
  Sinalizadores de estado do teclado quando a tecla foi pressionada.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1456,13 +1456,13 @@ BOOL OnSysKeyUp(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pFrameWnd`  
+ [in] *pFrameWnd*  
  Ponteiro para a janela do quadro principal do pai da barra de faixa de opções.  
   
- [in] `wParam`  
+ [in] *wParam*  
  Código de tecla virtual da chave que está sendo liberado.  
   
- [in] `lParam`  
+ [in] *lParam*  
  Este parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1487,7 +1487,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pMsg`  
+ [in] *pMsg*  
  Ponteiro para uma mensagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1533,7 +1533,7 @@ BOOL RemoveCategory(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  O índice de base zero de uma categoria na lista de categorias de faixa de opções que está contida na barra de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1552,10 +1552,10 @@ BOOL SetActiveCategory(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pCategory`  
+ [in] *pCategory*  
  Uma categoria de faixa de opções que está contida na barra de faixa de opções.  
   
- [in] `bForceRestore`  
+ [in] *bForceRestore*  
  `TRUE` para maximizar a barra da faixa de opções se ele é minimizado. `FALSE` para exibir a categoria ativa em uma janela pop-up, se a barra de faixa de opções é minimizada.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1564,7 +1564,7 @@ BOOL SetActiveCategory(
 ### <a name="remarks"></a>Comentários  
  A categoria principal da faixa de opções não pode ser a categoria ativa.  
   
- Se a categoria especificada pelo `pCategory` não é exibido, ele não pode ser definido como a categoria de ativa.  
+ Se a categoria especificada por *pCategory* não é exibido, ele não pode ser definido como a categoria de ativa.  
   
 ##  <a name="setactivemdichild"></a>  CMFCRibbonBar::SetActiveMDIChild  
  Associa os botões de sistema na barra de faixa de opções que pertencem a uma janela filho de interface de documentos múltiplos (MDI) para a janela de filho MDI especificada.  
@@ -1574,7 +1574,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWnd`  
+ [in] *pWnd*  
  Ponteiro para uma janela de filho MDI.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1589,10 +1589,10 @@ void SetApplicationButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pButton`  
+ [in] *pButton*  
  Um ponteiro para o botão de faixa de opções do aplicativo.  
   
- [in] `sizeButton`  
+ [in] *sizeButton*  
  O tamanho do botão de faixa de opções do aplicativo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1614,13 +1614,13 @@ BOOL SetElementKeys(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  A ID de comando de um elemento de faixa de opções.  
   
- [in] `lpszKeys`  
+ [in] *lpszKeys*  
  Keytip.  
   
- [in] `lpszMenuKeys`  
+ [in] *lpszMenuKeys*  
  Keytip do menu.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1639,10 +1639,10 @@ void SetKeyboardNavigationLevel(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pLevel`  
+ [in] *pLevel*  
  Ponteiro para o objeto de navegação do teclado atual.  
   
- [in] `bSetFocus`  
+ [in] *bSetFocus*  
  `TRUE` Para definir o foco do teclado para a barra de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1658,10 +1658,10 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bMax`  
+ [in] *bMax*  
  `TRUE` Para exibir os botões de sistema para uma janela de filho MDI na barra de faixa de opções; `FALSE` para remover os botões de sistema para uma janela de filho MDI da barra de faixa de opções.  
   
- [in] `pWnd`  
+ [in] *pWnd*  
  Ponteiro para a janela do quadro principal para a barra da faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1677,10 +1677,10 @@ void SetQuickAccessCommands(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lstCommands`  
+ [in] *lstCommands*  
  A lista de comandos a serem colocados na barra de ferramentas de acesso rápido.  
   
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  `TRUE` Se deseja redesenhar a faixa de opções depois de adicionar os elementos da faixa de opções; `FALSE` caso contrário.  
   
 ### <a name="example"></a>Exemplo  
@@ -1696,7 +1696,7 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `state`  
+ [in] *estado*  
  O estado padrão de barra de ferramentas de acesso rápido.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1715,7 +1715,7 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bOnTop`  
+ [in] *bOnTop*  
  `TRUE` para posicionar a barra de ferramentas de acesso rápido acima da barra de faixa de opções; `FALSE` para posicionar a barra de ferramentas de acesso rápido abaixo da barra da faixa de opções.  
   
 ##  <a name="settooltipfixedwidth"></a>  CMFCRibbonBar::SetTooltipFixedWidth  
@@ -1728,10 +1728,10 @@ void SetTooltipFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nWidthRegular`  
+ [in] *nWidthRegular*  
  A largura, em pixels, de uma dica de ferramenta tamanho fixa regular.  
   
- [in] `nWidthLargeImage`  
+ [in] *nWidthLargeImage*  
  A largura, em pixels, da grande fixa dimensionado de dica de ferramenta.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1747,10 +1747,10 @@ void ShowCategory(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  O índice da categoria de faixa de opções.  
   
- [in] `bShow`  
+ [in] *bMostrar*  
  Se `TRUE`, mostra a categoria de faixa de opções; caso contrário, ocultar a categoria de faixa de opções.  
   
 ##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories  
@@ -1763,10 +1763,10 @@ void ShowContextCategories(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiContextID`  
+ [in] *uiContextID*  
  A ID da categoria de contexto.  
   
- [in] `bShow`  
+ [in] *bMostrar*  
  Se `TRUE`, mostra as categorias que têm a ID especificada; caso contrário, ocultar as categorias que têm a ID especificada.  
   
 ##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips  
@@ -1798,7 +1798,7 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nChar`  
+ [in] *nChar*  
  Um código de caractere de pressionamento de tecla do usuário.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1848,16 +1848,16 @@ virtual BOOL LoadFromResource(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `uiXMLResID`  
+ *uiXMLResID*  
  Especifica o recurso de cadeia de caracteres de ID de XML com informações da barra da faixa de opções.  
   
- `lpszResType`  
- Especifica o tipo do recurso localizado em `uiXMLResID`.  
+ *lpszResType*  
+ Especifica o tipo do recurso localizado em *uiXMLResID*.  
   
- `hInstance`  
- Identificador para o módulo cujo arquivo executável contém o recurso. Se `hInstance` é `NULL`, o sistema carrega o recurso do módulo que foi usado para criar o processo atual.  
+ *hInstance*  
+ Identificador para o módulo cujo arquivo executável contém o recurso. Se *hInstance* é `NULL`, o sistema carrega o recurso do módulo que foi usado para criar o processo atual.  
   
- `lpszXMLResID`  
+ *lpszXMLResID*  
  Especifica a ID de recurso (na forma de cadeia de caracteres) com informações da barra da faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1873,8 +1873,8 @@ UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `ppBuffer`  
- Quando essa função retorna, `ppBuffer` aponta para um buffer alocado por este método e contém informações de barra de faixa de opções em formato XML.  
+ *ppBuffer*  
+ Quando essa função retorna, *ppBuffer* aponta para um buffer alocado por este método e contém informações de barra de faixa de opções em formato XML.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` caso bem-sucedido; caso contrário, `FALSE`.  
@@ -1889,7 +1889,7 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszFilePath`  
+ *lpszFilePath*  
  Especifica o arquivo de saída.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1907,10 +1907,10 @@ void SetWindows7Look(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bWindows7Look`  
+ *bWindows7Look*  
  `TRUE` Define a aparência do Windows 7; `FALSE` caso contrário.  
   
- `bRecalc`  
+ *bRecalc*  
  `TRUE` recalcula o layout de faixa de opções; `FALSE` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  

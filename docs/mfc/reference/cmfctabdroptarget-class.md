@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53988248ac183fd551d100ede29648bcecd067f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68d78e221b9bcdbffbfc80ba26c6106498c4fa41
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372908"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040981"
 ---
 # <a name="cmfctabdroptarget-class"></a>Classe CMFCTabDropTarget
 Fornece o mecanismo de comunicação entre um controle de guia e as bibliotecas OLE.  
@@ -100,13 +100,13 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `pWnd`|Não utilizado.|  
-|[in] `pDataObject`|Um ponteiro para o objeto que o usuário arrasta.|  
-|[in] `dwKeyState`|Contém o estado das teclas modificadoras. Esta é uma combinação de qualquer número das seguintes opções: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, e `MK_RBUTTON`.|  
-|[in] `point`|O local do cursor em coordenadas do cliente.|  
+|[in] *pWnd*|Não utilizado.|  
+|[in] *pDataObject*|Um ponteiro para o objeto que o usuário arrasta.|  
+|[in] *dwKeyState*|Contém o estado das teclas modificadoras. Esta é uma combinação de qualquer número das seguintes opções: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, e `MK_RBUTTON`.|  
+|[in] *ponto*|O local do cursor em coordenadas do cliente.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- O efeito resultante se ocorrer o descarte no local especificado por `point`. Pode ser uma ou mais das seguintes opções:  
+ O efeito resultante se ocorrer o descarte no local especificado por *ponto*. Pode ser uma ou mais das seguintes opções:  
   
 - `DROPEFFECT_NONE`  
   
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `pWnd`|Não utilizado.|  
+|[in] *pWnd*|Não utilizado.|  
   
 ### <a name="remarks"></a>Comentários  
  Este método chama o `CMFCBaseTabCtrl::OnDragLeave` método para executar a operação de arrastar.  
@@ -156,13 +156,13 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `pWnd`|Não utilizado.|  
-|[in] `pDataObject`|Um ponteiro para o objeto que o usuário arrasta.|  
-|[in] `dwKeyState`|Contém o estado das teclas modificadoras. Esta é uma combinação de qualquer número das seguintes opções: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, e `MK_RBUTTON`.|  
-|[in] `point`|O local do ponteiro do mouse em coordenadas do cliente.|  
+|[in] *pWnd*|Não utilizado.|  
+|[in] *pDataObject*|Um ponteiro para o objeto que o usuário arrasta.|  
+|[in] *dwKeyState*|Contém o estado das teclas modificadoras. Esta é uma combinação de qualquer número das seguintes opções: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, e `MK_RBUTTON`.|  
+|[in] *ponto*|O local do ponteiro do mouse em coordenadas do cliente.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- O efeito resultante se ocorrer o descarte no local especificado por `point`. Pode ser uma ou mais das seguintes opções:  
+ O efeito resultante se ocorrer o descarte no local especificado por *ponto*. Pode ser uma ou mais das seguintes opções:  
   
 - `DROPEFFECT_NONE`  
   
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `pWnd`|Não utilizado.|  
-|[in] `pDataObject`|Um ponteiro para o objeto que o usuário arrasta.|  
-|[in] `dropEffect`|A operação de soltar padrão.|  
-|[in] `dropList`|Não utilizado.|  
-|[in] `point`|O local do ponteiro do mouse em coordenadas do cliente.|  
+|[in] *pWnd*|Não utilizado.|  
+|[in] *pDataObject*|Um ponteiro para o objeto que o usuário arrasta.|  
+|[in] *dropEffect*|A operação de soltar padrão.|  
+|[in] *lista suspensa*|Não utilizado.|  
+|[in] *ponto*|O local do ponteiro do mouse em coordenadas do cliente.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  O efeito de soltar resultante. Pode ser uma ou mais das seguintes opções:  
@@ -216,7 +216,7 @@ virtual DROPEFFECT OnDropEx(
 - `DROPEFFECT_SCROLL`  
   
 ### <a name="remarks"></a>Comentários  
- Este método chama `CMFCBaseTabCtrl::OnDrop` se a estrutura da barra de ferramentas está no modo de personalização e o formato de dados de área de transferência está disponível. Se a chamada para `CMFCBaseTabCtrl::OnDrop` retorna um valor diferente de zero, este método retorna o efeito de soltar padrão especificado pelo `dropEffect`. Do contrário, esse método retorna `DROPEFFECT_NONE`. Para obter mais informações sobre os efeitos de descarte, consulte [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).  
+ Este método chama `CMFCBaseTabCtrl::OnDrop` se a estrutura da barra de ferramentas está no modo de personalização e o formato de dados de área de transferência está disponível. Se a chamada para `CMFCBaseTabCtrl::OnDrop` retorna um valor diferente de zero, este método retorna o efeito de soltar padrão especificado pelo *dropEffect*. Do contrário, esse método retorna `DROPEFFECT_NONE`. Para obter mais informações sobre os efeitos de descarte, consulte [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).  
   
  Para obter mais informações sobre o modo de personalização, consulte [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Para obter mais informações sobre formatos de dados de área de transferência, consulte [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `pOwner`|O controle de guia para registrar como um destino de soltar.|  
+|[in] *pOwner*|O controle de guia para registrar como um destino de soltar.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o registro foi bem-sucedido; Caso contrário, 0.  

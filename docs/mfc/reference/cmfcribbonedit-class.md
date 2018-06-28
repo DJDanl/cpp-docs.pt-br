@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa6a5976f4f20ba067eed047a4ff83b30550ea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a67696289603697ddac541382d63f989881afaf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374170"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040854"
 ---
 # <a name="cmfcribbonedit-class"></a>Classe CMFCRibbonEdit
 Implementa um controle de edição que está localizado em uma barra de faixa de opções.  
@@ -181,16 +181,16 @@ CMFCRibbonEdit();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nID`  
+ [in] *nID*  
  Comando ID para o `CMFCRibbonEdit` controle.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  A largura, em pixels, da caixa de texto para o `CMFCRibbonEdit` controle.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  O rótulo para o `CMFCRibbonEdit` controle.  
   
- [in] `nImage`  
+ [in] *nImage*  
  Índice de imagem em miniatura a ser usado para o `CMFCRibbonEdit` controle. A coleção de imagens pequenas é mantida pela categoria de faixa de opções do pai.  
   
 ### <a name="remarks"></a>Comentários  
@@ -204,11 +204,11 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `src`  
+ [in] *src*  
  A fonte `CMFCRibbonEdit` objeto.  
   
 ### <a name="remarks"></a>Comentários  
- O `src` parâmetro deve ser do tipo `CMFCRibbonEdit`.  
+ O *src* parâmetro deve ser do tipo `CMFCRibbonEdit`.  
   
 ##  <a name="createedit"></a>  CMFCRibbonEdit::CreateEdit  
  Cria uma nova caixa de texto para o [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) objeto.  
@@ -220,10 +220,10 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Um ponteiro para a janela pai do `CMFCRibbonEdit` objeto.  
   
- [in] `dwEditStyle`  
+ [in] *dwEditStyle*  
  Especifica o estilo da caixa de texto. Você pode combinar os estilos de janela listados na seção comentários com o [estilos de controle de edição](http://msdn.microsoft.com/library/windows/desktop/bb775464) conforme descrito no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -273,10 +273,10 @@ void EnableSpinButtons(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nMin`  
+ [in] *nMin*  
  O valor mínimo do botão de rotação.  
   
- [in] `nMax`  
+ [in] *nMax*  
  O valor máximo do botão de rotação.  
   
 ### <a name="remarks"></a>Comentários  
@@ -290,7 +290,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo para o `CMFCRibbonEdit` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -318,7 +318,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo para o `CMFCRibbonEdit` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -355,7 +355,7 @@ int GetWidth(BOOL bInFloatyMode = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bInFloatyMode`  
+ [in] *bInFloatyMode*  
  `TRUE` Se o `CMFCRibbonEdit` controle está no modo flutuante; caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -433,7 +433,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo para o `CMFCRibbonEdit` controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -446,7 +446,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo para o `CMFCRibbonEdit` controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -459,7 +459,7 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo para o `CMFCRibbonEdit` controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -478,22 +478,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo para o `CMFCRibbonEdit` controle.  
   
- [in] `strText`  
- O texto de exibição [ ] (../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit classe").  
+ [in] *strText*  
+ O texto de exibição [cmfcribbonedit classe](../../mfc/reference/cmfcribbonedit-class.md "").  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  Distância, em pixels, do lado esquerdo da caixa de listagem para o texto de exibição.  
   
- [in] `rect`  
+ [in] *rect*  
  O retângulo de exibição para o `CMFCRibbonEdit` controle.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  Este parâmetro não é usado.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Este parâmetro não é usado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -507,7 +507,7 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar o controle. `FALSE` para desabilitar o controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -520,7 +520,7 @@ virtual void OnHighlight(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bHighlight`  
+ [in] *bHighlight*  
  `TRUE` Se o ponteiro estiver em limites do `CMFCRibbonEdit` controle; caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -533,7 +533,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bIsMenuKey`  
+ [in] *bIsMenuKey*  
  `TRUE` Se o keytip exibe um menu pop-up. Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -549,7 +549,7 @@ virtual void OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  Este parâmetro não é usado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -562,7 +562,7 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  Este parâmetro não é usado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -575,7 +575,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  `TRUE` Se o layout é da direita para esquerda; `FALSE` se o layout é esquerda para a direita.  
   
 ### <a name="remarks"></a>Comentários  
@@ -588,7 +588,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bShow`  
+ [in] *bMostrar*  
  `TRUE` para mostrar o controle. `FALSE` para ocultar o controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -613,10 +613,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pParent`  
+ *pParent*  
  Ponteiro para a janela pai para o `CMFCRibbonEdit` objeto.  
   
- `data`  
+ *data*  
  Os dados de acessibilidade para o `CMFCRibbonEdit` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -632,7 +632,7 @@ void SetEditText(CString strText);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `strText`  
+ [in] *strText*  
  O texto da caixa de texto.  
   
 ##  <a name="settextalign"></a>  CMFCRibbonEdit::SetTextAlign  
@@ -643,11 +643,11 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nAlign`  
+ [in] *nAlign*  
  Um valor de enumeração de alinhamento de texto. Consulte a seção comentários para os valores possíveis.  
   
 ### <a name="remarks"></a>Comentários  
- O parâmetro `nAlign` é um dos seguinte Editar estilos de controle:  
+ O parâmetro *nAlign* é um dos seguinte Editar estilos de controle:  
   
 - **ES_LEFT** para alinhamento à esquerda  
   
@@ -667,10 +667,10 @@ void SetWidth(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nWidth`  
+ [in] *nWidth*  
  A largura, em pixels, da caixa de texto.  
   
- `bInFloatyMode`  
+ *bInFloatyMode*  
  `TRUE` Para definir a largura de modo flutuante; `FALSE` para definir a largura de modo normal.  
   
 ### <a name="remarks"></a>Comentários  
