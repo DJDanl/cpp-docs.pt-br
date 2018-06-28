@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad7e67cc32621fc30108767493c3a7bffd481b68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a3d4c8af6373f2b526c07ee570f4be878bd073d4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374809"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042037"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Classe CMFCColorPickerCtrl
 O `CMFCColorPickerCtrl` classe fornece funcionalidade para um controle que é usado para selecionar as cores.  
@@ -158,10 +158,10 @@ virtual void DrawCursor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Especifica uma área retangular ao redor da cor selecionada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -190,13 +190,13 @@ void GetHLS(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `hue`  
+ [out] *matiz*  
  Ponteiro para uma variável do tipo duplo que recebe informações de matiz.  
   
- [out] `luminance`  
+ [out] *luminância*  
  Ponteiro para uma variável do tipo duplo que recebe informações de luminescência.  
   
- [out] `saturation`  
+ [out] *saturação*  
  Ponteiro para uma variável do tipo duplo que recebe informações de saturação.  
   
 ### <a name="remarks"></a>Comentários  
@@ -253,19 +253,19 @@ BOOL SelectCellHexagon(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `R`  
+ [in] *R*  
  O componente de cor vermelha.  
   
- [in] `G`  
+ [in] *G*  
  O componente de cor verde.  
   
- [in] `B`  
+ [in] *B*  
  O componente de cor azul.  
   
- [in] `x`  
+ [in] *x*  
  A coordenada x do cursor, que aponta para um hexágono de célula.  
   
- [in] `y`  
+ [in] *y*  
  A coordenada y do cursor, que aponta para um hexágono de célula.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -284,7 +284,7 @@ void SetColor(COLORREF Color);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `Color`  
+ [in] *Cor*  
  Um valor de cor RGB.  
   
 ### <a name="remarks"></a>Comentários  
@@ -301,16 +301,16 @@ void SetHLS(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `hue`  
+ [in] *matiz*  
  Um valor de matiz.  
   
- [in] `luminance`  
+ [in] *luminância*  
  Um valor de luminescência.  
   
- [in] `saturation`  
+ [in] *saturação*  
  Um valor de saturação.  
   
- [in] `bInvalidate`  
+ [in] *bInvalidate*  
  `TRUE` para forçar a janela para atualizar imediatamente para a nova cor; Caso contrário, `FALSE`. O padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -323,7 +323,7 @@ void SetHue(double Hue);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `Hue`  
+ [in] *Matiz*  
  Um valor de matiz.  
   
 ### <a name="remarks"></a>Comentários  
@@ -336,7 +336,7 @@ void SetLuminance(double Luminance);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `Luminance`  
+ [in] *Luminância*  
  Um valor de luminescência.  
   
 ### <a name="remarks"></a>Comentários  
@@ -349,11 +349,11 @@ void SetLuminanceBarWidth(int w);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `w`  
+ [in] *w*  
  A largura da barra de luminosidade medida em pixels.  
   
 ### <a name="remarks"></a>Comentários  
- Use esse método para redimensionar a barra de luminosidade, que está no **personalizado** guia do controle de seletor de cor. O `w` parâmetro especifica a nova largura da barra de luminosidade. O valor de largura é ignorado se ele exceder três-quartos da largura da área do cliente.  
+ Use esse método para redimensionar a barra de luminosidade, que está no **personalizado** guia do controle de seletor de cor. O *w* parâmetro especifica a nova largura da barra de luminosidade. O valor de largura é ignorado se ele exceder três-quartos da largura da área do cliente.  
   
 ##  <a name="setoriginalcolor"></a>  CMFCColorPickerCtrl::SetOriginalColor  
  Define a cor selecionada inicial.  
@@ -363,7 +363,7 @@ void SetOriginalColor(COLORREF ref);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `ref`  
+ [in] *ref*  
  Um valor de cor RGB.  
   
 ### <a name="remarks"></a>Comentários  
@@ -377,7 +377,7 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pPalette`  
+ [in] *pPalette*  
  Ponteiro para uma paleta de cores.  
   
 ### <a name="remarks"></a>Comentários  
@@ -391,7 +391,7 @@ void SetSaturation(double Saturation);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `Saturation`  
+ [in] *Saturação*  
  Um valor de saturação.  
   
 ### <a name="remarks"></a>Comentários  
@@ -404,7 +404,7 @@ void SetType(COLORTYPE colorType);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `colorType`  
+ [in] *colorType*  
  Um tipo de controle de seletor de cor.  
   
  Os tipos são definidos pelo `CMFCColorPickerCtrl::COLORTYPE` enumeração. Os possíveis tipos são `LUMINANCE`, `PICKER`, `HEX` e `HEX_GREYSCALE`. O tipo padrão é `PICKER`.  

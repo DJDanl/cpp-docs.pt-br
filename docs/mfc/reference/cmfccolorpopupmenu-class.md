@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66bdd0cdf9e9c13ceac6eb01716ae8c859462524
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54999252af2ec55c67e1afc69c2788f96cfc640e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372370"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037298"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Classe CMFCColorPopupMenu
 Representa um menu pop-up que os usuários usam para selecionar as cores em um documento ou aplicativo.  
@@ -133,50 +133,50 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `colors`  
+ [in] *cores*  
  Uma matriz de cores exibe a estrutura no menu pop-up.  
   
- [in] `color`  
+ [in] *cor*  
  A cor padrão selecionado.  
   
- [in] `lpszAutoColor`  
+ [in] *lpszAutoColor*  
  O rótulo de texto a *automático* botão de cor (padrão), ou `NULL`.  
   
  O rótulo padrão para o botão automático é **automática**.  
   
- [in] `lpszOtherColor`  
+ [in] *lpszOtherColor*  
  O rótulo de texto a *outros* botão, que exibe mais opções de cores, ou `NULL`.  
   
  O rótulo padrão para o outro botão é **mais cores...** .  
   
- [in] `lpszDocColors`  
+ [in] *lpszDocColors*  
  O rótulo de texto do botão de cores do documento. A paleta de cores do documento lista todas as cores que atualmente usa o documento.  
   
- [in] `lstDocColors`  
+ [in] *lstDocColors*  
  Uma lista de cores que atualmente usa o documento.  
   
- [in] `nColumns`  
+ [in] *nColumns*  
  O número de colunas que tem a matriz de cores.  
   
- [in] `nHorzDockRows`  
+ [in] *nHorzDockRows*  
  O número de linhas que a barra de cores tem quando ela estiver encaixada horizontalmente.  
   
- [in] `nVertDockColumns`  
+ [in] *nVertDockColumns*  
  O número de colunas da barra de cores com quando ela estiver encaixada verticalmente.  
   
- [in] `colorAutomatic`  
+ [in] *automáticaCor*  
  A cor padrão que se aplica a estrutura de quando você clica no botão automático.  
   
- [in] `uiCommandID`  
+ [in] *uiCommandID*  
  ID do comando de controle de barra de cores.  
   
- [in] `bStdColorDlg`  
+ [in] *bStdColorDlg*  
  Um valor booleano que indica se a caixa de diálogo de cor padrão do sistema ou o [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) caixa de diálogo.  
   
- [in] `pParentBtn`  
+ [in] *pParentBtn*  
  Um ponteiro para um botão de pai.  
   
- [in] `nID`  
+ [in] *nID*  
  A ID de comando.  
   
 ### <a name="remarks"></a>Comentários  
@@ -202,9 +202,9 @@ virtual CPane* CreateTearOffBar(
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `pWndMain`|Ponteiro para a janela pai da barra destacável.|  
-|[in] `uiID`|A ID de comando da barra destacável.|  
-|[in] `lpszName`|O texto da janela da barra destacável.|  
+|[in] *pWndMain*|Ponteiro para a janela pai da barra destacável.|  
+|[in] *uiID*|A ID de comando da barra destacável.|  
+|[in] *lpszName*|O texto da janela da barra destacável.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o novo objeto barra destacável controle.  
@@ -233,7 +233,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWndList`  
+ [in] *pWndList*  
  Ponteiro para um objeto de controle de grade de propriedade.  
   
 ## <a name="see-also"></a>Consulte também  

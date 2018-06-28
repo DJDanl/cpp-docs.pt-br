@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6195735c25bb188449638750f6100869a44f082
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c80c3b81b804a66e70efe9269b12d4e18d31c676
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370751"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040708"
 ---
 # <a name="colecmdui-class"></a>Classe COleCmdUI
 Implementa um método para MFC atualizar o estado dos objetos de interface do usuário relacionado para o `IOleCommandTarget`-controlados por recursos de seu aplicativo.  
@@ -82,13 +82,13 @@ COleCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `rgCmds`  
+ *rgCmds*  
  Uma lista de comandos com suporte associadas com o GUID especificado. O **OLECMD** estrutura associa comandos com sinalizadores de comando.  
   
  *cCmds*  
- A contagem de comandos no `rgCmds`.  
+ A contagem de comandos no *rgCmds*.  
   
- `pGroup`  
+ *pGroup*  
  Um ponteiro para um GUID que identifica um conjunto de comandos.  
   
 ### <a name="remarks"></a>Comentários  
@@ -102,7 +102,7 @@ virtual void Enable(BOOL bOn);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bOn`  
+ *bOn*  
  Indica se o comando associado a `COleCmdUI` objeto deve ser habilitado ou desabilitado. NonZero permite que o comando. 0 desabilita o comando.  
   
 ##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
@@ -113,7 +113,7 @@ virtual void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nCheck`  
+ *nVerifique*  
  Um valor determinando o estado para definir uma alternância de ativar/desativar comando. Os valores são:  
   
 |Valor|Descrição|  
@@ -130,7 +130,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszText`  
+ *lpszText*  
  Um ponteiro para o texto a ser usado com o comando.  
   
 ## <a name="see-also"></a>Consulte também  

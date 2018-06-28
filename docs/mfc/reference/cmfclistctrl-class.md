@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495bf2a3eab9ceee4ca0bab337d590c1820905e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00933a392486064fac7c9a526d8b0c096703460c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369616"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037718"
 ---
 # <a name="cmfclistctrl-class"></a>Classe CMFCListCtrl
 O `CMFCListCtrl` classe estende a funcionalidade do [classe CListCtrl](../../mfc/reference/clistctrl-class.md) classe, dando suporte a funcionalidade de controle de cabeçalho avançadas do [CMFCHeaderCtrl classe](../../mfc/reference/cmfcheaderctrl-class.md).  
@@ -105,10 +105,10 @@ void EnableMarkSortedColumn(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bMark`  
+ [in] *bMark*  
  Um parâmetro booliano que determina se é necessário habilitar uma cor de plano de fundo diferentes.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Um parâmetro booliano que determina se deve redesenhar o controle imediatamente.  
   
 ### <a name="remarks"></a>Comentários  
@@ -122,7 +122,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  Um valor booleano que especifica se é para habilitar o modo de classificar várias colunas.  
   
 ### <a name="remarks"></a>Comentários  
@@ -165,13 +165,13 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lParam1`  
+ [in] *lParam1*  
  O primeiro item a ser comparado.  
   
- [in] `lParam2`  
+ [in] *lParam2*  
  O segundo item a ser comparado.  
   
- [in] `iColumn`  
+ [in] *iColumn*  
  O índice da coluna que está classificando este método.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -213,13 +213,13 @@ virtual HFONT OnGetCellFont(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nRow`  
+ [in] *nRow*  
  A linha da célula em questão.  
   
- [in] `nColumn`  
+ [in] *nColumn*  
  A coluna da célula em questão.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Dados definidos pelo usuário. A implementação padrão não use esse parâmetro.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -238,10 +238,10 @@ virtual COLORREF OnGetCellTextColor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nRow`  
+ [in] *nRow*  
  A linha da célula em questão.  
   
- [in] `nColumn`  
+ [in] *nColumn*  
  A coluna da célula em questão.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -258,7 +258,7 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iColumn`  
+ [in] *iColumn*  
  A coluna a ser removida.  
   
 ### <a name="remarks"></a>Comentários  
@@ -275,14 +275,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iColumn`  
+ [in] *iColumn*  
  A coluna a ser classificada.  
   
- [in] `bAscending`  
+ [in] *bAscending*  
  Um booliano que especifica a ordem de classificação.  
   
- [in] `bAdd`  
- Um valor booleano que especifica se o método adiciona a coluna indicada pelo `iColumn` à lista de colunas de classificação.  
+ [in] *bAdicionar*  
+ Um valor booleano que especifica se o método adiciona a coluna indicada pelo *iColumn* à lista de colunas de classificação.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método passa os parâmetros de entrada para o controle de cabeçalho usando o método [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
@@ -298,14 +298,14 @@ virtual void Sort(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iColumn`  
+ [in] *iColumn*  
  A coluna a ser classificada.  
   
- [in] `bAscending`  
+ [in] *bAscending*  
  Um booliano que especifica a ordem de classificação.  
   
- [in] `bAdd`  
- Um valor booleano que especifica se este método adiciona a coluna indicada pelo `iColumn` à lista de colunas de classificação.  
+ [in] *bAdicionar*  
+ Um valor booleano que especifica se este método adiciona a coluna indicada pelo *iColumn* à lista de colunas de classificação.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   

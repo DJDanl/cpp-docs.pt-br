@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
-ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
+ms.openlocfilehash: c477ee69b8bc8e824aae6df1f74ba97d2825524f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239418"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039148"
 ---
 # <a name="cmap-class"></a>Classe CMap
 Uma classe de coleção de dicionário que mapeia chaves exclusivas para valores.  
@@ -65,17 +65,17 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `KEY`  
+ *KEY*  
  Classe do objeto usado como a chave para o mapa.  
   
- `ARG_KEY`  
- Tipo de dados usado para `KEY` argumentos; normalmente uma referência a `KEY`.  
+ *ARG_KEY*  
+ Tipo de dados usado para *chave* argumentos; normalmente uma referência a *chave*.  
   
- `VALUE`  
+ *VALOR*  
  Classe do objeto armazenado em map.  
   
- `ARG_VALUE`  
- Tipo de dados usado para `VALUE` argumentos; normalmente uma referência a `VALUE`.  
+ *ARG_VALUE*  
+ Tipo de dados usado para *valor* argumentos; normalmente uma referência a *valor*.  
   
 ## <a name="members"></a>Membros  
   
@@ -147,11 +147,11 @@ CMap(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nBlockSize`  
+ *nBlockSize*  
  Especifica a granularidade de alocação de memória para estender o mapa.  
   
 ### <a name="remarks"></a>Comentários  
- À medida que cresce o mapa, a memória é alocada em unidades de `nBlockSize` entradas.  
+ À medida que cresce o mapa, a memória é alocada em unidades de *nBlockSize* entradas.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
@@ -210,25 +210,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `rNextPosition`  
+ *rNextPosition*  
  Especifica uma referência a um **posição** valor retornado pelo anterior `GetNextAssoc` ou `GetStartPosition` chamar.  
   
  *KEY*  
  Parâmetro de modelo especificando o tipo de chave do mapa.  
   
- `rKey`  
+ *rKey*  
  Especifica a chave retornada do elemento recuperado.  
   
  *VALOR*  
  Parâmetro de modelo especificando o tipo de valor do mapa.  
   
- `rValue`  
+ *rValue*  
  Especifica o valor retornado do elemento recuperado.  
   
 ### <a name="remarks"></a>Comentários  
  Essa função é mais útil para iterar através de todos os elementos no mapa. Observe que a sequência de posição não é necessariamente o mesmo que a sequência de valor de chave.  
   
- Se o elemento recuperado é o último no mapa, em seguida, o novo valor de `rNextPosition` é definido como **nulo**.  
+ Se o elemento recuperado é o último no mapa, em seguida, o novo valor de *rNextPosition* é definido como **nulo**.  
   
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo para [CMap::SetAt](#setat).  
@@ -273,10 +273,10 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `hashSize`  
+ *hashSize*  
  Número de entradas na tabela de hash.  
   
- `bAllocNow`  
+ *bAllocNow*  
  Se **TRUE**, aloca a tabela de hash na inicialização; caso contrário, a tabela é alocada quando necessário.  
   
 ### <a name="remarks"></a>Comentários  
@@ -306,16 +306,16 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `ARG_KEY`  
- Especifica o tipo de parâmetro do modelo de `key` valor.  
+ *ARG_KEY*  
+ Especifica o tipo de parâmetro do modelo de *chave* valor.  
   
- `key`  
+ *key*  
  Especifica a chave que identifica o elemento a ser pesquisado.  
   
  *VALOR*  
  Especifica o tipo do valor a ser pesquisado.  
   
- `rValue`  
+ *rValue*  
  Recebe o valor pesquisado-up.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -338,10 +338,10 @@ VALUE& operator[](arg_key key);
  *VALOR*  
  Parâmetro de modelo especificando o tipo do valor do mapa.  
   
- `ARG_KEY`  
+ *ARG_KEY*  
  Especifica o tipo do valor de chave de parâmetro de modelo.  
   
- `key`  
+ *key*  
  A chave usada para recuperar o valor do mapa.  
   
 ### <a name="remarks"></a>Comentários  
@@ -370,7 +370,7 @@ CPair* PGetFirstAssoc();
  [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
- Recupera o elemento de mapa apontado pelo `pAssocRec`.  
+ Recupera o elemento de mapa apontado pelo *pAssocRec*.  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssocRet) const;  
@@ -400,7 +400,7 @@ CPair* PLookup(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `key`  
+ *key*  
  Chave do elemento a ser procurado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -433,10 +433,10 @@ BOOL RemoveKey(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `ARG_KEY`  
+ *ARG_KEY*  
  Especifica o tipo da chave de parâmetro de modelo.  
   
- `key`  
+ *key*  
  Chave do elemento a ser removido.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -456,16 +456,16 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `ARG_KEY`  
- Especifica o tipo de parâmetro do modelo de `key` parâmetro.  
+ *ARG_KEY*  
+ Especifica o tipo de parâmetro do modelo de *chave* parâmetro.  
   
- `key`  
+ *key*  
  Especifica a chave do novo elemento.  
   
- `ARG_VALUE`  
- Especifica o tipo de parâmetro do modelo de `newValue` parâmetro.  
+ *ARG_VALUE*  
+ Especifica o tipo de parâmetro do modelo de *newValue* parâmetro.  
   
- `newValue`  
+ *newValue*  
  Especifica o valor do novo elemento.  
   
 ### <a name="remarks"></a>Comentários  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6ca49fd2696a8fc5a488962f1f13ead1d861c20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e04bcdf797f7036d943219f9d067dcbf786cfa3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369525"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039775"
 ---
 # <a name="cmfcacceleratorkey-class"></a>Classe CMFCAcceleratorKey
 Uma classe auxiliar que implementa o mapeamento de chave virtual e a formatação.  
@@ -80,7 +80,7 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpAccel`  
+ [in] *lpAccel*  
  Um ponteiro para uma tecla de atalho.  
   
 ### <a name="remarks"></a>Comentários  
@@ -94,7 +94,7 @@ void Format(CString& str) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `str`  
+ [out] *str*  
  Uma referência a um `CString` objeto onde o método grava a tecla de atalho traduzidos.  
   
 ### <a name="remarks"></a>Comentários  
@@ -108,7 +108,7 @@ void SetAccelerator(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpAccel`  
+ [in] *lpAccel*  
  Um ponteiro para uma tecla de atalho.  
   
 ### <a name="remarks"></a>Comentários  

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c65cf3070f199b013a0e85c1ae56764174fdc33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c894ff57bbbee59842f56dbfef0ec06a6c7899f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372528"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041689"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Classe CMFCDropDownToolbarButton
 Um tipo de botão de barra de ferramentas que se comporta como um botão regular quando ele for clicado. No entanto, ele abre uma barra de ferramentas de lista suspensa ( [CMFCDropDownToolBar classe](../../mfc/reference/cmfcdropdowntoolbar-class.md) se o usuário pressiona e pressiona o botão de barra de ferramentas.  
@@ -132,11 +132,11 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `src`  
+ [in] *src*  
  Uma referência para o botão de origem da qual copiar.  
   
 ### <a name="remarks"></a>Comentários  
- Chame este método para copiar outro botão da barra de ferramentas para este botão de barra de ferramentas. `src` deve ser do tipo `CMFCDropDownToolbarButton`.  
+ Chame este método para copiar outro botão da barra de ferramentas para este botão de barra de ferramentas. *src* deve ser do tipo `CMFCDropDownToolbarButton`.  
   
 ##  <a name="cmfcdropdowntoolbarbutton"></a>  CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
  Constrói um objeto `CMFCDropDownToolbarButton`.  
@@ -151,16 +151,16 @@ CMFCDropDownToolbarButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszName`  
+ [in] *lpszName*  
  O texto padrão do botão.  
   
- [in] `pToolBar`  
+ [in] *pToolBar*  
  Um ponteiro para o `CMFCDropDownToolBar` objeto que é exibido quando o usuário pressiona o botão.  
   
 ### <a name="remarks"></a>Comentários  
- A segunda sobrecarga de construtor copia para o botão suspenso no primeiro botão da barra de ferramentas que `pToolBar` especifica.  
+ A segunda sobrecarga de construtor copia para o botão suspenso no primeiro botão da barra de ferramentas que *pToolBar* especifica.  
   
- Normalmente, um botão suspenso utiliza o texto do botão usado mais recentemente na barra de ferramentas que `pToolBar` especifica. Ele usa o texto especificado por `lpszName` quando o botão é convertido em um botão de menu ou é exibido no **comandos** guia do **personalizar** caixa de diálogo. Para obter mais informações sobre o **personalizar** caixa de diálogo, consulte [CMFCToolBarsCustomizeDialog classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
+ Normalmente, um botão suspenso utiliza o texto do botão usado mais recentemente na barra de ferramentas que *pToolBar* especifica. Ele usa o texto especificado por *lpszName* quando o botão é convertido em um botão de menu ou é exibido no **comandos** guia do **personalizar** caixa de diálogo. Para obter mais informações sobre o **personalizar** caixa de diálogo, consulte [CMFCToolBarsCustomizeDialog classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como construir um objeto de `CMFCDropDownToolbarButton` classe. Este trecho de código é parte do [exemplo de demonstração do Visual Studio](../../visual-cpp-samples.md).  
@@ -175,7 +175,7 @@ BOOL DropDownToolbar(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWnd`  
+ [in] *pWnd*  
  A janela pai do quadro, o menu suspenso ou `NULL` para usar a janela pai do botão de barra de ferramentas de lista suspensa.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -186,7 +186,7 @@ BOOL DropDownToolbar(CWnd* pWnd);
   
  Esse método cria a barra de ferramentas de lista suspensa, usando o [CMFCDropDownFrame::Create](../../mfc/reference/cmfcdropdownframe-class.md#create) método. Se a barra de ferramentas do pai estiver encaixada verticalmente, esse método posiciona a barra de ferramentas de lista suspensa para o lado esquerdo ou direito da barra de ferramentas pai, dependendo do ajuste. Caso contrário, esse método posiciona a barra de ferramentas de lista suspensa sob a barra de ferramentas do pai.  
   
- Esse método falhar se `pWnd` é `NULL` e o botão de barra de ferramentas de lista suspensa não tem uma janela pai.  
+ Esse método falhar se *pWnd* é `NULL` e o botão de barra de ferramentas de lista suspensa não tem uma janela pai.  
   
 ##  <a name="exporttomenubutton"></a>  CMFCDropDownToolbarButton::ExportToMenuButton  
  Copia o texto do botão da barra de ferramentas para um menu.  
@@ -196,7 +196,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `menuButton`  
+ [in] *botão de menu*  
  Uma referência para o botão de menu de destino.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -267,13 +267,13 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  O contexto de dispositivo que exibe o botão.  
   
- [in] `sizeDefault`  
+ [in] *sizeDefault*  
  O tamanho padrão do botão.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  O estado de encaixe da barra de ferramentas do pai. Esse parâmetro é `TRUE` se a barra de ferramentas é ancorada na horizontal ou estiver flutuando, ou `FALSE` se a barra de ferramentas estiver encaixada verticalmente.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -290,7 +290,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Nova janela pai.  
   
 ### <a name="remarks"></a>Comentários  
@@ -306,10 +306,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWnd`  
+ [in] *pWnd*  
  A janela pai do botão da barra de ferramentas.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  `TRUE` Se a mensagem deve ser tratada com um atraso.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -345,14 +345,14 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWnd`  
+ [in] *pWnd*  
  A janela pai do botão da barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o botão processa a mensagem de Ajuda. Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Este método estende a implementação da classe base ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) chamando o [CMFCDropDownToolbarButton::OnClick](#onclick) método com `bDelay` definido como `FALSE` . Esse método retorna o valor retornado por [CMFCDropDownToolbarButton::OnClick](#onclick).  
+ Este método estende a implementação da classe base ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) chamando o [CMFCDropDownToolbarButton::OnClick](#onclick) método com *bDelay*definido como `FALSE`. Esse método retorna o valor retornado por [CMFCDropDownToolbarButton::OnClick](#onclick).  
   
  Para obter mais informações sobre o `WM_HELPHITTEST message, see` [TN028: suporte de ajuda sensível ao contexto](../../mfc/tn028-context-sensitive-help-support.md).  
   
@@ -364,7 +364,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pMenu`  
+ [in] *pMenu*  
  O menu para personalizar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -401,28 +401,28 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  O contexto de dispositivo que exibe o botão.  
   
- [in] `rect`  
+ [in] *rect*  
  O retângulo delimitador do botão.  
   
- [in] `pImages`  
+ [in] *pImages*  
  A coleção de imagens da barra de ferramentas que está associada com o botão.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  O estado de encaixe da barra de ferramentas do pai. Esse parâmetro é `TRUE` quando o botão estiver encaixado horizontalmente e `FALSE` quando o botão estiver encaixado verticalmente.  
   
- [in] `bCustomizeMode`  
+ [in] *bCustomizeMode*  
  Especifica se a barra de ferramentas está no modo de personalização. Esse parâmetro é `TRUE` quando a barra de ferramentas está no modo de personalização e `FALSE` quando a barra de ferramentas não está no modo de personalização.  
   
- [in] `bHighlight`  
+ [in] *bHighlight*  
  Especifica se o botão é realçado. Esse parâmetro é `TRUE` quando o botão é realçado e `FALSE` quando o botão não esteja realçado.  
   
- [in] `bDrawBorder`  
+ [in] *bDrawBorder*  
  Especifica se o botão deve exibir sua borda. Esse parâmetro é `TRUE` quando o botão deve exibir sua borda e `FALSE` quando o botão não deve exibir sua borda.  
   
- [in] `bGrayDisabledButtons`  
+ [in] *bGrayDisabledButtons*  
  Especifica se deve sombrear botões desabilitado ou usar a coleção de imagens desabilitado. Esse parâmetro é `TRUE` quando desabilitado botões deverá estar sombreada e `FALSE` quando este método deve usar a coleção de imagens desabilitado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -439,13 +439,13 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  O contexto de dispositivo que exibe o botão.  
   
- [in] `rect`  
+ [in] *rect*  
  O retângulo delimitador do botão.  
   
- [in] `bSelected`  
+ [in] *bSelected*  
  Se o botão é selecionado. Se esse parâmetro for `TRUE`, o botão é selecionado. Se esse parâmetro for `FALSE`, o botão não estiver selecionado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -464,7 +464,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `ar`  
+ [in] *ar*  
  O `CArchive` objeto do qual ou para a qual serializar.  
   
 ### <a name="remarks"></a>Comentários  
@@ -478,11 +478,11 @@ void SetDefaultCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  A ID do comando padrão.  
   
 ### <a name="remarks"></a>Comentários  
- Chame este método para especificar um comando padrão que a estrutura executará quando o usuário clica no botão. Um item com a ID de comando especificada pelo `uiCmd` devem estar localizados na barra de ferramentas de lista suspensa de pai.  
+ Chame este método para especificar um comando padrão que a estrutura executará quando o usuário clica no botão. Um item com a ID de comando especificada pelo *uiCmd* devem estar localizados na barra de ferramentas de lista suspensa de pai.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   

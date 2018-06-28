@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a9e9ff3d6e3e4bcccf8e9ebd46f791f60f1cc37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56fa354a46e40704ac063791931ca01d1386a558
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367179"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038452"
 ---
 # <a name="ckeyframe-class"></a>Classe CKeyFrame
 Representa um quadro-chave de animação.  
@@ -102,10 +102,10 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pStoryboard`  
+ *pStoryboard*  
  Um ponteiro para um storyboard.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Especifica se deseja adicionar o quadro-chave ou transição recursivamente.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -124,10 +124,10 @@ BOOL AddToStoryboardAfterTransition(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pStoryboard`  
+ *pStoryboard*  
  Um ponteiro para um storyboard.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Especifica se deseja adicionar uma transição de forma recursiva.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -146,10 +146,10 @@ virtual BOOL AddToStoryboardAtOffset(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pStoryboard`  
+ *pStoryboard*  
  Um ponteiro para um storyboard.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Especifica se para adicionar um quadro-chave este quadro-chave dependem recursivamente.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -171,13 +171,13 @@ CKeyFrame(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pTransition`  
+ *pTransition*  
  Um ponteiro para uma transição.  
   
- `pKeyframe`  
+ *pKeyframe*  
  Um ponteiro de quadro-chave.  
   
- `offset`  
+ *deslocamento*  
  Deslocamento, em segundos, de quadro-chave especificada pelo pKeyframe.  
   
 ### <a name="remarks"></a>Comentários  

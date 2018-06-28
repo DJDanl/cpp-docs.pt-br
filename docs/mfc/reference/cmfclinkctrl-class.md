@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8b0a512d0969f88d270ab7373be4807b1c55914
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371722"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038348"
 ---
 # <a name="cmfclinkctrl-class"></a>Classe CMFCLinkCtrl
 O `CMFCLinkCtrl` classe exibe um botão como um hiperlink e invoca o destino do link quando o botão é clicado.  
@@ -91,10 +91,10 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Um retângulo que circunda o controle de link.  
   
 ### <a name="remarks"></a>Comentários  
@@ -108,7 +108,7 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszURL`  
+ [in] *lpszURL*  
  O texto do botão para exibir.  
   
 ### <a name="remarks"></a>Comentários  
@@ -121,7 +121,7 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszPrefix`  
+ [in] *lpszPrefix*  
  O prefixo do protocolo de URL.  
   
 ### <a name="remarks"></a>Comentários  
@@ -137,10 +137,10 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bVCenter`  
+ [in] *bVCenter*  
  `TRUE` para centralizar o texto do botão e bitmap verticalmente entre as partes superior e inferior do controle link; Caso contrário, `FALSE`. O valor padrão é `FALSE`.  
   
- [in] `bHCenter`  
+ [in] *bHCenter*  
  `TRUE` para centralizar o texto do botão e bitmap horizontalmente entre os lados esquerdo e direito de controle de link; Caso contrário, `FALSE`. O valor padrão é `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  

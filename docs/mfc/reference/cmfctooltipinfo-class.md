@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 325650f35d097b54eda160bbdbbd5c877dbd0242
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb5cb4020b851f3522842951030c8155ee68516f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368368"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037539"
 ---
 # <a name="cmfctooltipinfo-class"></a>Classe CMFCToolTipInfo
 Armazena informações sobre a aparência visual de dicas de ferramentas.  
@@ -229,7 +229,7 @@ CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="return-value"></a>Valor de retorno  
   

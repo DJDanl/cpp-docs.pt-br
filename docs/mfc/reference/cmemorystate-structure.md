@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9dbcaa3f8e02a87713363f1ea38c5d2260171df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba1d156d9453cd6a74a3543295d9d90d761e77f9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367965"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040734"
 ---
 # <a name="cmemorystate-structure"></a>Estrutura CMemoryState
 Fornece uma maneira conveniente para detectar perdas de memória em seu programa.  
@@ -66,7 +66,7 @@ struct CMemoryState
   
  Assim como acontece com outros diagnóstico, o `CMemoryState` diagnóstico só está disponível em versões de depuração do seu programa. Uma versão de depuração deve ter o **Debug** constante definida.  
   
- Se você suspeitar que o programa tiver um vazamento de memória, você pode usar o `Checkpoint`, **diferença**, e `DumpStatistics` funções para descobrir a diferença entre o estado de memória (objetos alocados) em duas diferentes pontos no programa execução. Essa informação pode ser útil para determinar se uma função está limpando todos os objetos que aloca.  
+ Se você suspeitar que o programa tiver um vazamento de memória, você pode usar o `Checkpoint`, `Difference`, e `DumpStatistics` funções para descobrir a diferença entre o estado de memória (objetos alocados) em dois pontos diferentes na execução do programa. Essa informação pode ser útil para determinar se uma função está limpando todos os objetos que aloca.  
   
  Se simplesmente saber onde ocorre o desequilíbrio da alocação e desalocação não fornecer informações suficientes, você pode usar o `DumpAllObjectsSince` função para despejar todos os objetos alocados desde a chamada anterior para `Checkpoint`. Este despejo mostra a ordem de alocação, o arquivo de origem e a linha em que o objeto foi alocado (se você estiver usando `DEBUG_NEW` para alocação) e a derivação de objeto, seu endereço e seu tamanho. `DumpAllObjectsSince` também chama cada objeto `Dump` função para fornecer informações sobre seu estado atual.  
   

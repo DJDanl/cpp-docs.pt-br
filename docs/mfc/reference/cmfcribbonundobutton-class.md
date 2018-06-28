@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 233f37fc0ab31afcd8ba112677af8cd144d01c2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcddf0f1848bdd75714bd5b931dcf8520e68cf8c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370162"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041241"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Classe CMFCRibbonUndoButton
 O `CMFCRibbonUndoButton` classe implementa um botão de lista suspensa que contém os comandos mais recentes do usuário. Os usuários podem selecionar um ou mais dos comandos mais recentes da lista suspensa para refazer ou desfazê-las.  
@@ -89,7 +89,7 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  O rótulo de ação que será exibido na lista suspensa.  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
@@ -117,19 +117,19 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nID`  
+ [in] *nID*  
  Especifica o identificador de comando.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Especifica o rótulo de texto do botão.  
   
- [in] `nSmallImageIndex`  
+ [in] *nSmallImageIndex*  
  Índice de base zero na lista de imagens do objeto pai para a imagem em miniatura do botão.  
   
- [in] `nLargeImageIndex`  
+ [in] *nLargeImageIndex*  
  Índice de base zero na lista de imagens do objeto pai para a imagem grande do botão.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Um identificador para um ícone que você pode usar como imagem do botão.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  

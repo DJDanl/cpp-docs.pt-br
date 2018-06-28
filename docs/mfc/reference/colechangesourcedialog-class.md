@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 376b61dbbbfe734ecc49263718902dd387c7fce8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08b4095b535724f7132a2b286ce52cb46286932b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376444"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037590"
 ---
 # <a name="colechangesourcedialog-class"></a>Classe COleChangeSourceDialog
 Usado para a caixa de diálogo Alterar fonte de dados OLE.  
@@ -111,10 +111,10 @@ explicit COleChangeSourceDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pItem`  
+ *pItem*  
  Ponteiro para o vinculado [COleClientItem](../../mfc/reference/coleclientitem-class.md) cuja origem é atualizado.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Aponta para o objeto de janela pai ou o proprietário (do tipo `CWnd`) ao qual pertence o objeto de caixa de diálogo. Se for **nulo**, a janela pai da caixa de diálogo será definida para a janela principal do aplicativo.  
   
 ### <a name="remarks"></a>Comentários  

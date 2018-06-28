@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 340f9f698d63587b7a3812d5922d8963c87751ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31bf2796d85dec335183b61a83ea5c675d5f4602
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376786"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038940"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>Classe CMFCToolBarDateTimeCtrl
 Um botão de barra de ferramentas que contém um controle de seletor de data e hora.  
@@ -104,7 +104,7 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 |`CMFCToolBarDateTimeCtrl::OnCalculateSize`|Chamado pelo framework para calcular o tamanho do botão para o contexto de dispositivo especificado e o estado de encaixe. (Substitui [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
 |[CMFCToolBarDateTimeCtrl::OnChangeParentWnd](#onchangeparentwnd)|Chamado pelo framework quando o botão é inserido em uma nova barra de ferramentas. (Substitui [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
 |[CMFCToolBarDateTimeCtrl::OnClick](#onclick)|Chamado pelo framework quando o usuário clica no controle. (Substitui [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
-|[CMFCToolBarDateTimeCtrl::OnCtlColor](#onctlcolor)|Chamado pelo framework quando a barra de ferramentas do pai manipula um `WM_CTLCOLOR` mensagem. (Substitui [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor).)|  
+|[CMFCToolBarDateTimeCtrl::OnCtlColor](#onctlcolor)|Chamado pelo framework quando a barra de ferramentas do pai manipula uma WM_CTLCOLOR (mensagem). (Substitui [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor).)|  
 |`CMFCToolBarDateTimeCtrl::OnDraw`|Chamado pelo framework para desenhar o botão usando as opções e estilos especificados. (Substitui [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
 |`CMFCToolBarDateTimeCtrl::OnDrawOnCustomizeList`|Chamado pelo framework para desenhar o botão no **comandos** painel do **personalizar** caixa de diálogo. (Substitui [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
 |[CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged](#onglobalfontschanged)|Chamado pelo framework quando a fonte global foi alterada. (Substitui [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged).)|  
@@ -155,20 +155,20 @@ CMFCToolBarDateTimeCtrl(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiID`  
+ [in] *uiID*  
  A ID do controle.  
   
- [in] `iImage`  
+ [in] *iImage*  
  O índice da imagem da barra de ferramentas `CMFCToolBarImages` objeto.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  O estilo do `CMFCToolBarDateTimeCtrlImpl` janela que é criada quando um usuário clica no botão.  
   
- [in] `iWidth`  
+ [in] *iWidth*  
  A largura do controle, em pixels.  
   
 ### <a name="remarks"></a>Comentários  
- Este objeto é inicializado para a data do sistema e a hora. O estilo da janela de interno `CMFCToolBarDateTimeCtrlImpl` objeto inclui o `dwStyle` parâmetro e o `WS_CHILD` e `WS_VISIBLE` estilos. Você não pode alterar esses estilos usando `CMFCToolBarDateTimeCtrl::SetStyle`. Use `SetStyle` para alterar o estilo do `CMFCToolBarDateTimeCtrl` controle.  
+ Este objeto é inicializado para a data do sistema e a hora. O estilo da janela de interno `CMFCToolBarDateTimeCtrlImpl` objeto inclui o *dwStyle* parâmetro e o `WS_CHILD` e `WS_VISIBLE` estilos. Você não pode alterar esses estilos usando `CMFCToolBarDateTimeCtrl::SetStyle`. Use `SetStyle` para alterar o estilo do `CMFCToolBarDateTimeCtrl` controle.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como construir um objeto de `CMFCToolBarDateTimeCtrl` classe. Este trecho de código é parte do [exemplo de seletor de tempo de data da barra de ferramentas](../../visual-cpp-samples.md).  
@@ -183,11 +183,11 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `src`  
+ [in] *src*  
  Uma referência para o botão de origem da qual copiar.  
   
 ### <a name="remarks"></a>Comentários  
- Chame este método para copiar outro botão da barra de ferramentas para este botão de barra de ferramentas. `src` deve ser do tipo `CMFCToolBarDateTimeCtrl`.  
+ Chame este método para copiar outro botão da barra de ferramentas para este botão de barra de ferramentas. *src* deve ser do tipo `CMFCToolBarDateTimeCtrl`.  
   
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarDateTimeCtrl::ExportToMenuButton  
  Copia o texto do botão da barra de ferramentas para um menu.  
@@ -197,7 +197,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `menuButton`  
+ [in] *botão de menu*  
  Uma referência para o botão de menu de destino.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -214,7 +214,7 @@ static CMFCToolBarDateTimeCtrl* __stdcall GetByCmd(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  A ID do botão de comando para recuperar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -259,10 +259,10 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `[out] timeDest`  
+ [out] *timeDest*  
  Na primeira sobrecarga, uma [COleDateTime classe](../../atl-mfc-shared/reference/coledatetime-class.md) objeto que receberá as informações de hora do sistema. Na segunda sobrecarga, uma [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que receberá as informações de hora do sistema.  
   
- `[out] pTimeDest`  
+ [out] *pTimeDest*  
  Um ponteiro para o [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura para receber as informações de hora do sistema. Não deve ser `NULL`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -289,17 +289,17 @@ static DWORD GetTimeAll(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `[in] uiCmd`  
+ [in] *uiCmd*  
  Especifica a ID de comando de. de um botão barra de ferramentas  
   
- `[out] timeDest`  
+ [out] *timeDest*  
  Na primeira sobrecarga, uma [COleDateTime classe](../../atl-mfc-shared/reference/coledatetime-class.md) objeto que receberá as informações de hora do sistema. Na segunda sobrecarga, uma [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que receberá as informações de hora do sistema.  
   
- `[out] pTimeDest`  
+ [out] *pTimeDest*  
  Um ponteiro para o [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura para receber as informações de hora do sistema. Não deve ser `NULL`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Se a estrutura não é possível localizar um botão de barra de ferramentas que corresponde à ID de comando `uiCmd`, o valor de retorno é zero na primeira sobrecarga e GDT_NONE em outras sobrecargas. Se o botão de barra de ferramentas for encontrado, o valor de retorno é o mesmo que o valor de retorno de uma chamada para [CMFCToolBarDateTimeCtrl::GetTime](#gettime) no botão. Retorno de um valor de zero ou GDT_NONE pode ocorrer quando o botão for encontrado, o que indica que a chamada para `GetTime` não retornou uma data válida por algum outro motivo.  
+ Se a estrutura não é possível localizar um botão de barra de ferramentas que corresponde à ID de comando *uiCmd*, o valor de retorno é zero na primeira sobrecarga e GDT_NONE em outras sobrecargas. Se o botão de barra de ferramentas for encontrado, o valor de retorno é o mesmo que o valor de retorno de uma chamada para [CMFCToolBarDateTimeCtrl::GetTime](#gettime) no botão. Retorno de um valor de zero ou GDT_NONE pode ocorrer quando o botão for encontrado, o que indica que a chamada para `GetTime` não retornou uma data válida por algum outro motivo.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método procura um botão de barra de ferramentas que tem a ID de comando especificado e chama [CMFCToolBarDateTimeCtrl::GetTime](#gettime) método em que o botão.  
@@ -325,11 +325,11 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iNotifyCode`  
+ [in] *iNotifyCode*  
  A mensagem de notificação que está associada com o comando.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o botão processa o `WM_COMMAND` mensagem, ou `FALSE` para indicar que a mensagem deve ser tratada pela barra de ferramentas do pai.  
+ `TRUE` Se o botão processa a mensagem WM_COMMAND, ou `FALSE` para indicar que a mensagem deve ser tratada pela barra de ferramentas do pai.  
   
 ### <a name="remarks"></a>Comentários  
  O framework chama esse método quando ele está prestes a enviar um [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensagem para a janela pai.  
@@ -356,7 +356,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Nova janela pai.  
   
 ### <a name="remarks"></a>Comentários  
@@ -372,10 +372,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWnd`  
+ [in] *pWnd*  
  Não utilizado.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  Não utilizado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -385,7 +385,7 @@ virtual BOOL OnClick(
  Esse método substitui a implementação da classe base, [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick), retornando um valor diferente de zero se interno `CMFCToolBarDateTimeCtrlImpl` objeto está visível.  
   
 ##  <a name="onctlcolor"></a>  CMFCToolBarDateTimeCtrl::OnCtlColor  
- Chamado pelo framework quando a barra de ferramentas do pai manipula um `WM_CTLCOLOR` mensagem.  
+ Chamado pelo framework quando a barra de ferramentas do pai manipula uma WM_CTLCOLOR (mensagem).  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -394,10 +394,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  O contexto de dispositivo que exibe o botão.  
   
- [in] `nCtlColor`  
+ [in] *nCtlColor*  
  Não utilizado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -438,11 +438,11 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bShow`  
+ [in] *bMostrar*  
  Especifica se o botão é visível. Se esse parâmetro for `TRUE`, o botão é visível. Caso contrário, o botão não estiver visível.  
   
 ### <a name="remarks"></a>Comentários  
- Este método estende a implementação da classe base ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)), exibindo o botão se `bShow` é `TRUE`. Caso contrário, esse método oculta o botão.  
+ Este método estende a implementação da classe base ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)), exibindo o botão se *bMostrar* é `TRUE`. Caso contrário, esse método oculta o botão.  
   
 ##  <a name="onsize"></a>  CMFCToolBarDateTimeCtrl::OnSize  
  Chamado pelo framework quando a barra de ferramentas do pai altera seu tamanho ou posição e essa alteração faz com que o botão Alterar o tamanho.  
@@ -452,7 +452,7 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iSize`  
+ [in] *iSize*  
  A nova largura do botão, em pixels.  
   
 ### <a name="remarks"></a>Comentários  
@@ -470,16 +470,16 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  A janela pai.  
   
- [in] `iButtonIndex`  
+ [in] *iButtonIndex*  
  O índice de base zero do botão na coleção de botão pai.  
   
- [in] `wndToolTip`  
+ [in] *wndToolTip*  
  O controle que exibe o texto de dica de ferramenta.  
   
- [out] `str`  
+ [out] *str*  
  Um `CString` objeto que recebe o texto de dica de ferramenta atualizada.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -498,10 +498,10 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `[in] timeNew`  
+ [in] *timeNew*  
  Na primeira versão, uma referência a um [COleDateTime classe](../../atl-mfc-shared/reference/coledatetime-class.md) objeto que contém a hora em que o controle será definido. Na segunda versão, um ponteiro para um [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que contém a hora em que o controle será definido.  
   
- `[in] pTimeNew`  
+ [in] *pTimeNew*  
  Um ponteiro para o [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que contém a hora em que o controle será definido.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -528,13 +528,13 @@ static BOOL SetTimeAll(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `[in] uiCmd`  
+ [in] *uiCmd*  
  Especifica a ID de comando de. de um botão barra de ferramentas  
   
- `[in] timeNew`  
+ [in] *timeNew*  
  Na primeira versão, uma [COleDateTime classe](../../atl-mfc-shared/reference/coledatetime-class.md) objeto que contém a hora em que o controle será definido. Na segunda versão, um ponteiro para um [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que contém a hora em que o controle será definido.  
   
- `[in] pTimeNew`  
+ [in] *pTimeNew*  
  Um ponteiro para o [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que contém a hora em que o controle será definido.  
   
 ### <a name="return-value"></a>Valor de retorno  

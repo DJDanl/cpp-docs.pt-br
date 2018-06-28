@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d51b29f9ea2719f98f263565680ded2360197572
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e6c56116c94abeaf4dd266ca823e66c68d099fd
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370839"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037490"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Classe CMFCTasksPaneTaskGroup
 O `CMFCTasksPaneTaskGroup` classe é uma classe auxiliar usada pelo [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) controle. Objetos do tipo `CMFCTasksPaneTaskGroup` representar uma *grupo tarefas*. O grupo de tarefas é uma lista de itens que o framework exibe em uma caixa separada que tenha um botão Recolher. A caixa pode ter uma legenda opcional (nome do grupo). Se um grupo estiver recolhido, a lista de tarefas não é visível.  
@@ -116,22 +116,22 @@ CMFCTasksPaneTaskGroup(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszName`  
+ *lpszName*  
  Especifica o nome do grupo na legenda do grupo.  
   
- `bIsBottom`  
+ *bIsBottom*  
  Especifica se o grupo é alinhado à parte inferior do controle de painel de tarefas.  
   
- `bIsSpecial`  
+ *bIsSpecial*  
  Especifica se o grupo é designado como *especial* e, portanto, se a legenda do grupo é preenchida com uma cor diferente.  
   
- `bIsCollapsed`  
+ *bIsCollapsed*  
  Especifica se o grupo é recolhido.  
   
- `pPage`  
+ *Página*  
  Especifica a página de propriedade que este grupo de tarefa pertence.  
   
- `hIcon`  
+ *hIcon*  
  Especifica o ícone exibido na legenda do grupo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -216,14 +216,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pParent`  
+ [in] *pParent*  
  Representa a janela pai do grupo de tarefas atual.  
   
- [out] `data`  
+ [out] *dados*  
  Um objeto do tipo `CAccessibilityData` que é preenchida com os dados de acessibilidade do grupo de tarefas atual.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o `data` parâmetro estava com êxito preenchida com os dados de acessibilidade do grupo de tarefas atual; caso contrário, `FALSE`.  
+ `TRUE` Se o *dados* parâmetro estava com êxito preenchida com os dados de acessibilidade do grupo de tarefas atual; caso contrário, `FALSE`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   

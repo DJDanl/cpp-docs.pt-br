@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bbd2b19e85f70ae9e61044ccd5a6c369e61b296
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371384"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041439"
 ---
 # <a name="colestreamfile-class"></a>Classe COleStreamFile
 Representa um fluxo de dados ( `IStream`) em um arquivo composto como parte de armazenamento estruturado OLE.  
@@ -92,7 +92,7 @@ void Attach(LPSTREAM lpStream);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpStream`  
+ *lpStream*  
  Aponta para o fluxo OLE ( `IStream`) a ser associado ao objeto. Não pode ser **nulo**.  
   
 ### <a name="remarks"></a>Comentários  
@@ -108,11 +108,11 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpStream`  
+ *lpStream*  
  Ponteiro para o fluxo OLE a ser associado ao objeto.  
   
 ### <a name="remarks"></a>Comentários  
- Se `lpStream` é **nulo**, o objeto não está associado um fluxo OLE, caso contrário, o objeto está associado com o fluxo OLE fornecido.  
+ Se *lpStream* é **nulo**, o objeto não está associado um fluxo OLE, caso contrário, o objeto está associado com o fluxo OLE fornecido.  
   
  Para obter mais informações, consulte [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) no SDK do Windows.  
   
@@ -124,7 +124,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pError`  
+ *pError*  
  Aponta para um [CFileException](../../mfc/reference/cfileexception-class.md) objeto ou **nulo** que indica o status de conclusão da operação criar. Forneça esse parâmetro se desejar monitorar possíveis exceções geradas por tentativa de criar o fluxo.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -147,23 +147,23 @@ BOOL CreateStream(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpStorage`  
+ *lpStorage*  
  Aponta para o objeto de armazenamento OLE que contém o fluxo a ser criado. Não pode ser **nulo**.  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  Nome do fluxo a ser criado. Não pode ser **nulo**.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Modo de acesso para usar ao abrir o fluxo. Leitura/gravação exclusivo e criar modos são usadas por padrão. Para obter uma lista completa dos modos disponíveis, consulte [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
- `pError`  
+ *pError*  
  Aponta para um [CFileException](../../mfc/reference/cfileexception-class.md) objeto ou **nulo**. Forneça esse parâmetro se desejar monitorar possíveis exceções geradas por tentativa de criar o fluxo.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o fluxo é criado com êxito; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Uma exceção de arquivo será lançada se abrir falhar e `pError` não é **nulo**.  
+ Uma exceção de arquivo será lançada se abrir falhar e *pError* não é **nulo**.  
   
  Para obter mais informações, consulte [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) no SDK do Windows.  
   
@@ -204,23 +204,23 @@ BOOL OpenStream(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpStorage`  
+ *lpStorage*  
  Aponta para o objeto de armazenamento OLE que contém o fluxo a ser aberto. Não pode ser **nulo**.  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  Nome do fluxo a ser aberto. Não pode ser **nulo**.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Modo de acesso para usar ao abrir o fluxo. Exclusivo e leitura/gravação são utilizados por padrão. Para obter uma lista dos modos disponíveis, consulte [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
- `pError`  
+ *pError*  
  Aponta para um [CFileException](../../mfc/reference/cfileexception-class.md) objeto ou **nulo**. Forneça esse parâmetro se desejar monitorar possíveis exceções geradas ao tentar abrir o fluxo.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o fluxo está aberto com êxito; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Uma exceção de arquivo será lançada se abrir falhar e `pError` não é **nulo**.  
+ Uma exceção de arquivo será lançada se abrir falhar e *pError* não é **nulo**.  
   
  Para obter mais informações, consulte [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) no SDK do Windows.  
   

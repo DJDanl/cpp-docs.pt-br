@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 590914ac312a4f998eb759beb08ed2e7935874fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 365f984385eab870d46b0772719346fa5d1ae383
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368746"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040149"
 ---
 # <a name="chotkeyctrl-class"></a>Classe CHotKeyCtrl
 Fornece a funcionalidade de controle do Windows comuns hot chave.  
@@ -73,7 +73,7 @@ class CHotKeyCtrl : public CWnd
   
  Esse controle (e, portanto, o `CHotKeyCtrl` classe) está disponível apenas para programas em execução na versão do Windows 95/98 e Windows NT 3.51 e posterior.  
   
- Quando o usuário escolher uma combinação de teclas, o aplicativo pode recuperar a combinação de chave especificada do controle e use o **WM_SETHOTKEY** mensagem para configurar a tecla de acesso no sistema. Sempre que o usuário pressiona a tecla de atalho depois disso, de qualquer parte do sistema, a janela especificada no **WM_SETHOTKEY** mensagem recebe um `WM_SYSCOMMAND` mensagem especificando **SC_HOTKEY**. Esta mensagem ativa a janela que recebe. A tecla de acesso permanece válida até o aplicativo que chamou **WM_SETHOTKEY** será encerrado.  
+ Quando o usuário escolher uma combinação de teclas, o aplicativo pode recuperar a combinação de chave especificada do controle e use o **WM_SETHOTKEY** mensagem para configurar a tecla de acesso no sistema. Sempre que o usuário pressiona a tecla de atalho depois disso, de qualquer parte do sistema, a janela especificada no **WM_SETHOTKEY** mensagem recebe um **WM_SYSCOMMAND** mensagem especificando **SC_HOTKEY** . Esta mensagem ativa a janela que recebe. A tecla de acesso permanece válida até o aplicativo que chamou **WM_SETHOTKEY** será encerrado.  
   
  Esse mecanismo é diferente do suporte a chave ativo que depende de **WM_HOTKEY** mensagem e o Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) e [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) funções.  
   
@@ -110,25 +110,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwStyle`  
+ *dwStyle*  
  Especifica o estilo do controle de chave ativa. Aplique qualquer combinação de estilos de controle. Consulte [estilos de controle comuns](http://msdn.microsoft.com/library/windows/desktop/bb775498) no SDK do Windows para obter mais informações.  
   
- `rect`  
+ *Rect*  
  Especifica o tamanho e a posição do controle de chave ativo. Ele pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou um [estrutura RECT](../../mfc/reference/rect-structure1.md).  
   
- `pParentWnd`  
+ *pParentWnd*  
  Especifica o hot chave janela pai do controle, geralmente um [CDialog](../../mfc/reference/cdialog-class.md). Ele não deve ser **nulo**.  
   
- `nID`  
+ *nID*  
  Especifica a identificação. do controle de chave ativa  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero, se a inicialização foi bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Você pode criar um `CHotKeyCtrl` objeto em duas etapas. Primeiro, chame o construtor e, em seguida, chamar **criar**, que cria o controle de chave de acesso e anexa-o para o `CHotKeyCtrl` objeto.  
+ Você pode criar um `CHotKeyCtrl` objeto em duas etapas. Primeiro, chame o construtor e, em seguida, chamar `Create`, que cria o controle de chave de acesso e anexa-o para o `CHotKeyCtrl` objeto.  
   
- Se desejar usar estilos de windows estendida com o controle, chame [CreateEx](#createex) em vez de **criar**.  
+ Se desejar usar estilos de windows estendida com o controle, chame [CreateEx](#createex) em vez de `Create`.  
   
 ##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
  Chamar essa função para criar um controle (uma janela filho) e associá-lo com o `CHotKeyCtrl` objeto.  
@@ -143,19 +143,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwExStyle`  
- Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o `dwExStyle` parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
+ *dwExStyle*  
+ Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o *dwExStyle* parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica o estilo do controle de chave ativa. Aplique qualquer combinação de estilos de controle. Para obter mais informações, consulte [estilos de controle comuns](http://msdn.microsoft.com/library/windows/desktop/bb775498) no SDK do Windows.  
   
- `rect`  
- Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e a posição da janela deve ser criada, nas coordenadas do cliente de `pParentWnd`.  
+ *Rect*  
+ Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e a posição da janela deve ser criada, nas coordenadas do cliente de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para a janela que é o pai do controle.  
   
- `nID`  
+ *nID*  
  ID de janela filho. do controle  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -176,10 +176,10 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `wVirtualKeyCode`  
+ [out] *wVirtualKeyCode*  
  Código de tecla virtual o atalho de teclado. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser.  
   
- [out] `wModifiers`  
+ [out] *wModifiers*  
  Uma combinação bit a bit (ou) de sinalizadores que indicam as teclas modificadoras no atalho do teclado.  
   
  Os sinalizadores de modificador são da seguinte maneira:  
@@ -220,14 +220,14 @@ static CString GetKeyName(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `vk`  
+ *vk*  
  O código de tecla virtual.  
   
  *fExtended*  
  Se o código de tecla virtual é uma chave estendida, **TRUE**; caso contrário, **FALSE**.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O nome localizado da chave especificado pelo `vk` parâmetro. Se a chave não tiver mapeado nome, `GetKeyName` retorna uma cadeia de caracteres vazia.  
+ O nome localizado da chave especificado pelo *vk* parâmetro. Se a chave não tiver mapeado nome, `GetKeyName` retorna uma cadeia de caracteres vazia.  
   
 ### <a name="remarks"></a>Comentários  
  O nome da chave que essa função retorna vem do driver de teclado, para que você pode instalar um driver de teclado não localizada em uma versão localizada do Windows e vice-versa.  
@@ -245,10 +245,10 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `wVirtualKeyCode`  
+ [in] *wVirtualKeyCode*  
  Código de tecla virtual o atalho de teclado. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser.  
   
- [in] `wModifiers`  
+ [in] *wModifiers*  
  Uma combinação bit a bit (ou) de sinalizadores que indicam as teclas modificadoras no atalho do teclado.  
   
  Os sinalizadores de modificador são da seguinte maneira:  
@@ -273,7 +273,7 @@ void SetRules(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `wInvalidComb`  
+ *wInvalidComb*  
  Matriz de sinalizadores que especifica as combinações de chave inválidas. Pode ser uma combinação dos seguintes valores:  
   
 - `HKCOMB_A` ALT  
@@ -292,11 +292,11 @@ void SetRules(
   
 - `HKCOMB_SCA` SHIFT + CTRL + ALT  
   
- `wModifiers`  
+ *wModifiers*  
  Matriz de sinalizadores que especifica a combinação de chave a ser usado quando o usuário insere uma combinação inválida. Para obter mais informações sobre os sinalizadores de modificador, consulte [GetHotKey](#gethotkey).  
   
 ### <a name="remarks"></a>Comentários  
- Quando um usuário insere uma combinação de chave inválida, conforme definido pelos sinalizadores especificados na `wInvalidComb`, o sistema usa o operador OR para combinar as chaves inseridas pelo usuário com os sinalizadores especificados na `wModifiers`. A combinação de chave resultante é convertida em uma cadeia de caracteres e, em seguida, é exibida no controle de chave de acesso.  
+ Quando um usuário insere uma combinação de chave inválida, conforme definido pelos sinalizadores especificados na *wInvalidComb*, o sistema usa o operador OR para combinar as chaves inseridas pelo usuário com os sinalizadores especificados na *wModifiers*. A combinação de chave resultante é convertida em uma cadeia de caracteres e, em seguida, é exibida no controle de chave de acesso.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CWnd](../../mfc/reference/cwnd-class.md)   

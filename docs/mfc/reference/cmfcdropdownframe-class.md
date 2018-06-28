@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1680305b359bb273ba492083dd2e99703e2d930d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c7264273f3db1dab1e6cab72333c0629a802e28
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368612"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041988"
 ---
 # <a name="cmfcdropdownframe-class"></a>Classe CMFCDropDownFrame
 Fornece a funcionalidade de janela do quadro da lista suspensa barras de ferramentas de lista suspensa e botões de barra de ferramentas de lista suspensa.  
@@ -107,10 +107,10 @@ virtual BOOL Create(
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `pWndParent`|A janela pai do quadro de lista suspensa.|  
-|[in] `x`|A coordenada horizontal da tela para o local do quadro suspensa.|  
-|[in] `y`|A coordenada vertical da tela para o local do quadro suspensa.|  
-|[in] `pWndOriginToolbar`|A barra de ferramentas tem os botões de menu suspenso que usa esse método para popular o novo objeto de quadro da lista suspensa.|  
+|[in] *pWndParent*|A janela pai do quadro de lista suspensa.|  
+|[in] *x*|A coordenada horizontal da tela para o local do quadro suspensa.|  
+|[in] *y*|A coordenada vertical da tela para o local do quadro suspensa.|  
+|[in] *pWndOriginToolbar*|A barra de ferramentas tem os botões de menu suspenso que usa esse método para popular o novo objeto de quadro da lista suspensa.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` Se o quadro da lista suspensa foi criado com êxito; Caso contrário, `FALSE`.  
@@ -158,7 +158,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `bNotify`|Não utilizado.|  
+|[in] *bNotify*|Não utilizado.|  
   
 ### <a name="remarks"></a>Comentários  
  O framework chama esse método quando o quadro da lista suspensa é criado ou a janela pai é redimensionada. Esse método calcula a posição e o tamanho do quadro suspensa usando a posição e o tamanho da janela pai.  
@@ -171,11 +171,11 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` para destruir automaticamente a janela de ferramentas de lista suspensa associada; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
- Se `bAutoDestroy` é `TRUE`, em seguida, o `CMFCDropDownFrame` destruidor destrói a janela de ferramentas de lista suspensa associada. O valor padrão é `TRUE`.  
+ Se *bAutoDestroy* é `TRUE`, em seguida, o `CMFCDropDownFrame` destruidor destrói a janela de ferramentas de lista suspensa associada. O valor padrão é `TRUE`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   

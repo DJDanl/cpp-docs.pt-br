@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50d2d68aedaf1d5560c39971e9dd5f74b4492ac6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3bde85e64fe8593ec2637e767e8c3c70d3b8200
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372454"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038071"
 ---
 # <a name="cmutex-class"></a>Classe CMutex
 Representa um "mutex" — um objeto de sincronização que permite que um thread mutuamente acesse um recurso.  
@@ -74,13 +74,13 @@ CMutex(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bInitiallyOwn`  
+ *bInitiallyOwn*  
  Especifica se a criação de thread de `CMutex` inicialmente, o objeto tem acesso ao recurso controlado pelo mutex.  
   
- `lpszName`  
- Nome do objeto de `CMutex` . Se o mutex de outro com o mesmo nome existe, `lpszName` deve ser fornecido se o objeto será usado pelos limites do processo. Se **nulo**, o mutex será sem nome. Se o nome corresponder a um mutex existente, o construtor cria um novo `CMutex` objeto que referencia o mutex esse nome. Se o nome corresponder a um objeto de sincronização existente que não é um mutex, construção falhará.  
+ *lpszName*  
+ Nome do objeto de `CMutex` . Se o mutex de outro com o mesmo nome existe, *lpszName* deve ser fornecido se o objeto será usado pelos limites do processo. Se **nulo**, o mutex será sem nome. Se o nome corresponder a um mutex existente, o construtor cria um novo `CMutex` objeto que referencia o mutex esse nome. Se o nome corresponder a um objeto de sincronização existente que não é um mutex, construção falhará.  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  Atributos de segurança para o objeto de mutex. Para obter uma descrição completa dessa estrutura, consulte [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) no SDK do Windows.  
   
 ### <a name="remarks"></a>Comentários  

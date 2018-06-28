@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4dcb17c2650bf8b56702241a0ab4e77a3e2fc48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61544026f559e0c45cbd81735e76203a088d2d6b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377804"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040867"
 ---
 # <a name="colecontrolsite-class"></a>Classe COleControlSite
 Fornece suporte para interfaces de controle personalizado do lado do cliente.  
@@ -205,7 +205,7 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_rect](#m_rect)|As dimensões do site do controle.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse suporte é o principal meio pelo qual um controle ActiveX incorporado obtém informações sobre o local e a extensão do seu site de exibição, o identificador de origem, sua interface de usuário, suas propriedades de ambiente e outros recursos fornecidos por seu contêiner. `COleControlSite` implementa totalmente a [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638),  **IBoundObjectSite**, **INotifyDBEvents**, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) interfaces. Além disso, a interface IDispatch (fornecendo suporte para propriedades de ambiente e Coletores de eventos) também é implementada.  
+ Esse suporte é o principal meio pelo qual um controle ActiveX incorporado obtém informações sobre o local e a extensão do seu site de exibição, o identificador de origem, sua interface de usuário, suas propriedades de ambiente e outros recursos fornecidos por seu contêiner. `COleControlSite` implementa totalmente a [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), `IBoundObjectSite`, `INotifyDBEvents`, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) interfaces. Além disso, a interface IDispatch (fornecendo suporte para propriedades de ambiente e Coletores de eventos) também é implementada.  
   
  Para criar um site de controle ActiveX usando `COleControlSite`, derive uma classe de `COleControlSite`. No seu `CWnd`-classe derivada para o contêiner (por exemplo, a caixa de diálogo) substituir o **CWnd::CreateControlSite** função.  
   
@@ -231,16 +231,16 @@ virtual void BindDefaultProperty(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwDispID`  
+ *dwDispID*  
  Especifica o **DISPID** de uma propriedade em um controle de associação de dados que é vinculado a um controle de fonte de dados.  
   
- `vtProp`  
- Especifica o tipo da propriedade a ser vinculado — por exemplo, `VT_BSTR`, **VT_VARIANT**, e assim por diante.  
+ *vtProp*  
+ Especifica o tipo da propriedade a ser vinculado — por exemplo, **VT_BSTR**, **VT_VARIANT**, e assim por diante.  
   
- `szFieldName`  
+ *szFieldName*  
  Especifica o nome da coluna, o cursor fornecidos pelo controle de fonte de dados, para que a propriedade será associada.  
   
- `pDSCWnd`  
+ *pDSCWnd*  
  Um ponteiro para o `CWnd`-objeto derivado que hospeda o controle de fonte de dados ao qual a propriedade será associada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -259,7 +259,7 @@ virtual void BindProperty(
  *dwDispId*  
  Especifica o **DISPID** de uma propriedade em um controle de associação de dados que é vinculado a um controle de fonte de dados.  
   
- `pWndDSC`  
+ *pWndDSC*  
  Um ponteiro para o `CWnd`-objeto derivado que hospeda o controle de fonte de dados ao qual a propriedade será associada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -273,7 +273,7 @@ explicit COleControlSite(COleControlContainer* pCtrlCont);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pCtrlCont`  
+ *pCtrlCont*  
  Um ponteiro para o contêiner do controle (que representa a janela que hospeda o controle ActiveX).  
   
 ### <a name="remarks"></a>Comentários  
@@ -309,50 +309,50 @@ virtual HRESULT CreateControl(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWndCtrl`  
+ *pWndCtrl*  
  Um ponteiro para o objeto de janela que representa o controle.  
   
- `clsid`  
+ *clsid*  
  A ID exclusiva de classe do controle.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Um ponteiro para o texto a ser exibido no controle. Define o valor da propriedade de legenda ou o texto do winodw (se houver).  
   
- `dwStyle`  
+ *dwStyle*  
  Estilos de Windows. Os estilos disponíveis são listados sob o **comentários** seção.  
   
- `rect`  
+ *Rect*  
  Especifica o tamanho e a posição do controle. Ele pode ser um `CRect` objeto ou um `RECT` estrutura.  
   
- `nID`  
+ *nID*  
  Especifica a ID de janela filho do controle  
   
- `pPersist`  
+ *pPersist*  
  Um ponteiro para um `CFile` que contém o estado persistente para o controle. O valor padrão é **nulo**, indicando que o controle inicializa a próprio sem restaurar o estado de qualquer armazenamento persistente. Se não **nulo**, ele deve ser um ponteiro para um `CFile`-derivados do objeto que contém os dados do controle persistente, na forma de um fluxo ou de armazenamento. Esses dados podem ter sido salvo em uma ativação anterior do cliente. O `CFile` pode conter outros dados, mas deve ter o ponteiro de leitura-gravação definido como o primeiro byte de dados persistentes no momento da chamada para `CreateControl`.  
   
- `bStorage`  
- Indica se os dados em `pPersist` devem ser interpretadas como `IStorage` ou `IStream` dados. Se os dados em `pPersist` é um armazenamento `bStorage` devem ser **TRUE**. Se os dados em `pPersist` é um fluxo `bStorage` devem ser **FALSE**. O valor padrão é **FALSE**.  
+ *bStorage*  
+ Indica se os dados em *pPersist* devem ser interpretadas como `IStorage` ou `IStream` dados. Se os dados em *pPersist* é um armazenamento *bStorage* devem ser **TRUE**. Se os dados em *pPersist* é um fluxo *bStorage* devem ser **FALSE**. O valor padrão é **FALSE**.  
   
- `bstrLicKey`  
+ *bstrLicKey*  
  Dados opcionais de chave de licença. Esses dados é necessária somente para a criação de controles que exigem uma chave de licença de tempo de execução. Se o controle dá suporte ao licenciamento, você deve fornecer uma chave de licença para a criação do controle seja bem-sucedida. O valor padrão é **nulo**.  
   
- `ppt`  
- Um ponteiro para um **ponto** estrutura que contém o canto superior esquerdo do controle. O tamanho do controle é determinado pelo valor de *psize*. O `ppt` e *psize* valores são um método opcional de especificar o tamanho e posição opf o controle.  
+ *ppt*  
+ Um ponteiro para um **ponto** estrutura que contém o canto superior esquerdo do controle. O tamanho do controle é determinado pelo valor de *psize*. O *ppt* e *psize* valores são um método opcional de especificar o tamanho e posição opf o controle.  
   
  *psize*  
- Um ponteiro para um **tamanho** estrutura que contém o tamanho do controle. O canto superior esquerdo é determinado pelo valor de `ppt`. O `ppt` e *psize* valores são um método opcional de especificar o tamanho e posição opf o controle.  
+ Um ponteiro para um **tamanho** estrutura que contém o tamanho do controle. O canto superior esquerdo é determinado pelo valor de *ppt*. O *ppt* e *psize* valores são um método opcional de especificar o tamanho e posição opf o controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
   
 ### <a name="remarks"></a>Comentários  
- Apenas um subconjunto das janelas de `dwStyle` sinalizadores são suportados pelo `CreateControl`:  
+ Apenas um subconjunto das janelas de *dwStyle* sinalizadores são suportados pelo `CreateControl`:  
   
 - **WS_VISIBLE** cria uma janela que é visível inicialmente. Necessário se você quiser que o controle esteja visível imediatamente, como janelas comuns.  
   
 - **WS_DISABLED** cria uma janela que é inicialmente desabilitada. Uma janela desabilitada não pode receber entrada do usuário. Pode ser definido se o controle tiver uma propriedade Enabled.  
   
-- `WS_BORDER` Cria uma janela com uma borda de linha fina. Pode ser definido se o controle tem uma propriedade BorderStyle.  
+- **WS_BORDER** cria uma janela com uma borda de linha fina. Pode ser definido se o controle tem uma propriedade BorderStyle.  
   
 - **WS_GROUP** Especifica o primeiro controle de um grupo de controles. O usuário pode alterar o foco do teclado de um controle no grupo para o próximo usando as teclas de direção. Todos os controles definidos com o **WS_GROUP** após o primeiro controle pertencem ao mesmo grupo de estilo. O próximo controle com o **WS_GROUP** estilo encerra o grupo e inicia o próximo grupo.  
   
@@ -383,7 +383,7 @@ virtual HRESULT DoVerb(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nVerb`  
+ *nVerb*  
  Especifica o verbo a ser executado. Ele pode incluir um dos seguintes:  
   
 |Valor|Significado|Símbolo|  
@@ -394,10 +394,10 @@ virtual HRESULT DoVerb(
 |-2|Edita o item em uma janela separada.|`OLEIVERB_OPEN`|  
 |-3|Oculta o objeto.|`OLEIVERB_HIDE`|  
 |-4|Ativa um controle no local.|`OLEIVERB_UIACTIVATE`|  
-|-5|Ativa um controle no local, sem os elementos de interface de usuário adicionais.|**OLEIVERB_INPLACEACTIVATE**|  
-|-7|Exiba as propriedades do controle.|**OLEIVERB_PROPERTIES**|  
+|-5|Ativa um controle no local, sem os elementos de interface de usuário adicionais.|`OLEIVERB_INPLACEACTIVATE`|  
+|-7|Exiba as propriedades do controle.|`OLEIVERB_PROPERTIES`|  
   
- `lpMsg`  
+ *lpMsg*  
  Ponteiro para a mensagem que causou o item a ser ativado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -426,7 +426,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bEnable`  
+ *bAtivar*  
  Especifica se deseja habilitar ou desabilitar a janela: **TRUE** se a entrada de janela é para ser habilitado, caso contrário, **FALSE**.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -440,11 +440,11 @@ void FreezeEvents(BOOL bFreeze);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bFreeze`  
+ *bFreeze*  
  Especifica se o site de controle deseja parar de aceitar eventos. Diferente de zero se o controle não está aceitando eventos; Caso contrário, zero.  
   
 ### <a name="remarks"></a>Comentários  
- Se `bFreeze` é **TRUE**, o site de controle solicita o controle para interromper eventos fring. Se `bFreeze` é **FALSE**, o site de controle solicita o controle para continuar acionando eventos.  
+ Se *bFreeze* é **TRUE**, o site de controle solicita o controle para interromper eventos fring. Se *bFreeze* é **FALSE**, o site de controle solicita o controle para continuar acionando eventos.  
   
 > [!NOTE]
 >  O controle não é necessário para interromper eventos acionados, se solicitado pelo site de controle. Ele pode continuar acionando mas todos os eventos subsequentes serão ignorados pelo site de controle.  
@@ -493,11 +493,11 @@ BOOL GetEventIID(IID* piid);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `piid`  
+ *piid*  
  Um ponteiro para uma ID de interface.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedido, caso contrário, 0. Se for bem-sucedido, `piid` contém a ID de interface para a interface de evento padrão do controle.  
+ Diferente de zero se for bem-sucedido, caso contrário, 0. Se for bem-sucedido, *piid* contém a ID de interface para a interface de evento padrão do controle.  
   
 ##  <a name="getexstyle"></a>  COleControlSite::GetExStyle  
  Recupera os estilos estendidos da janela.  
@@ -513,7 +513,7 @@ virtual DWORD GetExStyle() const;
  Para recuperar os estilos regulares, chame [COleControlSite::GetStyle](#getstyle).  
   
 ##  <a name="getproperty"></a>  COleControlSite::GetProperty  
- Obtém a propriedade do controle especificada pelo `dwDispID`.  
+ Obtém a propriedade do controle especificada por *dwDispID*.  
   
 ```  
 virtual void GetProperty(
@@ -523,17 +523,17 @@ virtual void GetProperty(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwDispID`  
+ *dwDispID*  
  Identifica a ID de expedição da propriedade, encontrada no padrão do controle `IDispatch` interface a ser recuperado.  
   
- `vtProp`  
+ *vtProp*  
  Especifica o tipo da propriedade a ser recuperado. Para os valores possíveis, consulte a seção comentários para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
- `pvProp`  
- Endereço da variável que receberá o valor da propriedade. Ele deve corresponder ao tipo especificado pelo `vtProp`.  
+ *pvProp*  
+ Endereço da variável que receberá o valor da propriedade. Ele deve corresponder ao tipo especificado pelo *vtProp*.  
   
 ### <a name="remarks"></a>Comentários  
- O valor é retornado por meio de `pvProp`.  
+ O valor é retornado por meio de *pvProp*.  
   
 ##  <a name="getstyle"></a>  COleControlSite::GetStyle  
  Recupera os estilos do site do controle.  
@@ -556,14 +556,14 @@ virtual void GetWindowText(CString& str) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `str`  
+ *str*  
  Uma referência a um `CString` objeto que contém o texto atual do controle.  
   
 ### <a name="remarks"></a>Comentários  
  Se o controle suporta a propriedade de estoque de legenda, esse valor é retornado. Se não há suporte para a propriedade de estoque de legenda, o valor da propriedade Text é retornado.  
   
 ##  <a name="invokehelper"></a>  COleControlSite::InvokeHelper  
- Invoca o método ou propriedade especificada pelo `dwDispID`, no contexto especificado pelos `wFlags`.  
+ Invoca o método ou propriedade especificada pelo *dwDispID*, no contexto especificado pelos *wFlags*.  
   
 ```  
 virtual void AFX_CDECL InvokeHelper(
@@ -575,31 +575,31 @@ virtual void AFX_CDECL InvokeHelper(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwDispID`  
+ *dwDispID*  
  Identifica a ID de expedição da propriedade ou método, encontrado no controle do `IDispatch` interface a ser invocado.  
   
- `wFlags`  
- Sinalizadores que descrevem o contexto da chamada para IDispatch:: Invoke. Para possível `wFlags` valores, consulte `IDispatch::Invoke` no SDK do Windows.  
+ *wFlags*  
+ Sinalizadores que descrevem o contexto da chamada para IDispatch:: Invoke. Para possível *wFlags* valores, consulte `IDispatch::Invoke` no SDK do Windows.  
   
- `vtRet`  
+ *vtRet*  
  Especifica o tipo do valor de retorno. Para os valores possíveis, consulte a seção comentários para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
- `pvRet`  
- Endereço da variável que receberá o valor da propriedade ou valor de retorno. Ele deve corresponder ao tipo especificado pelo `vtRet`.  
+ *pvRet*  
+ Endereço da variável que receberá o valor da propriedade ou valor de retorno. Ele deve corresponder ao tipo especificado pelo *vtRet*.  
   
- `pbParamInfo`  
- Ponteiro para uma cadeia de caracteres terminada em nulo de bytes especificando os tipos dos parâmetros a seguir `pbParamInfo`. Para os valores possíveis, consulte a seção comentários para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ *pbParamInfo*  
+ Ponteiro para uma cadeia de caracteres terminada em nulo de bytes especificando os tipos dos parâmetros a seguir *pbParamInfo*. Para os valores possíveis, consulte a seção comentários para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *...*  
- A lista de variáveis de parâmetros de tipos especificados no `pbParamInfo`.  
+ A lista de variáveis de parâmetros de tipos especificados no *pbParamInfo*.  
   
 ### <a name="remarks"></a>Comentários  
- O `pbParamInfo` parâmetro especifica os tipos de parâmetros passados para o método ou propriedade. Lista de argumentos variável é representada por... na declaração da sintaxe.  
+ O *pbParamInfo* parâmetro especifica os tipos de parâmetros passados para o método ou propriedade. Lista de argumentos variável é representada por... na declaração da sintaxe.  
   
- Esta função converte os parâmetros a serem **VARIANTARG** valores e, em seguida, invoca o **IDispatch:: Invoke** método no controle. Se a chamada para **IDispatch:: Invoke** falhar, esta função lançará uma exceção. Se o código de status retornado pelo **IDispatch:: Invoke** é `DISP_E_EXCEPTION`, essa função lança um **COleDispatchException** objeto, caso contrário, ele lança um `COleException`.  
+ Esta função converte os parâmetros a serem **VARIANTARG** valores e, em seguida, invoca o `IDispatch::Invoke` método no controle. Se a chamada para `IDispatch::Invoke` falhar, esta função lançará uma exceção. Se o código de status retornado pelo `IDispatch::Invoke` é `DISP_E_EXCEPTION`, essa função lança um `COleDispatchException` objeto, caso contrário, ele lança um `COleException`.  
   
 ##  <a name="invokehelperv"></a>  COleControlSite::InvokeHelperV  
- Invoca o método ou propriedade especificada pelo `dwDispID`, no contexto especificado pelos `wFlags`.  
+ Invoca o método ou propriedade especificada pelo *dwDispID*, no contexto especificado pelos *wFlags*.  
   
 ```  
 virtual void InvokeHelperV(
@@ -612,26 +612,26 @@ virtual void InvokeHelperV(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwDispID`  
+ *dwDispID*  
  Identifica a ID de expedição da propriedade ou método, encontrado no controle do `IDispatch` interface a ser invocado.  
   
- `wFlags`  
+ *wFlags*  
  Sinalizadores que descrevem o contexto da chamada para IDispatch:: Invoke.  
   
- `vtRet`  
+ *vtRet*  
  Especifica o tipo do valor de retorno. Para os valores possíveis, consulte a seção comentários para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
- `pvRet`  
- Endereço da variável que receberá o valor da propriedade ou valor de retorno. Ele deve corresponder ao tipo especificado pelo `vtRet`.  
+ *pvRet*  
+ Endereço da variável que receberá o valor da propriedade ou valor de retorno. Ele deve corresponder ao tipo especificado pelo *vtRet*.  
   
- `pbParamInfo`  
- Ponteiro para uma cadeia de caracteres terminada em nulo de bytes especificando os tipos dos parâmetros a seguir `pbParamInfo`. Para os valores possíveis, consulte a seção comentários para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ *pbParamInfo*  
+ Ponteiro para uma cadeia de caracteres terminada em nulo de bytes especificando os tipos dos parâmetros a seguir *pbParamInfo*. Para os valores possíveis, consulte a seção comentários para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
- `argList`  
+ *argList*  
  Ponteiro para uma lista de argumentos variável.  
   
 ### <a name="remarks"></a>Comentários  
- O `pbParamInfo` parâmetro especifica os tipos de parâmetros passados para o método ou propriedade. Parâmetros adicionais para o método ou propriedade que está sendo invocado podem ser passados usando o *va_list* parâmetro.  
+ O *pbParamInfo* parâmetro especifica os tipos de parâmetros passados para o método ou propriedade. Parâmetros adicionais para o método ou propriedade que está sendo invocado podem ser passados usando o *va_list* parâmetro.  
   
  Normalmente, essa função é chamada `COleControlSite::InvokeHelper`.  
   
@@ -790,13 +790,13 @@ virtual BOOL ModifyStyle(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwRemove`  
+ *dwRemove*  
  Os estilos a ser removido dos estilos da janela atual.  
   
- `dwAdd`  
+ *dwAdd*  
  Os estilos a ser adicionado a estilos de janela atual.  
   
- `nFlags`  
+ *nFlags*  
  Sinalizadores de posicionamento de janela. Para obter uma lista de valores possíveis, consulte o [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) função no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -807,7 +807,7 @@ virtual BOOL ModifyStyle(
   
  Modifica os estilos de janela do controle. Estilos que devem ser adicionados ou removidos podem ser combinados usando o OR bit a bit ( &#124; ) operador. Consulte o [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) função no SDK do Windows para obter informações sobre os estilos de janela disponível.  
   
- Se `nFlags` é diferente de zero, `ModifyStyle` chama a função Win32 `SetWindowPos`e redesenhar a janela combinando `nFlags` com quatro sinalizadores a seguir:  
+ Se *nFlags* é diferente de zero, `ModifyStyle` chama a função Win32 `SetWindowPos`e redesenhar a janela combinando *nFlags* com quatro sinalizadores a seguir:  
   
 - `SWP_NOSIZE` Mantém o tamanho atual.  
   
@@ -830,13 +830,13 @@ virtual BOOL ModifyStyleEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwRemove`  
+ *dwRemove*  
  Os estilos estendidos a ser removido dos estilos da janela atual.  
   
- `dwAdd`  
+ *dwAdd*  
  Os estilos estendidos a serem adicionados a estilos de janela atual.  
   
- `nFlags`  
+ *nFlags*  
  Sinalizadores de posicionamento de janela. Para obter uma lista de valores possíveis, consulte o [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) função no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -847,7 +847,7 @@ virtual BOOL ModifyStyleEx(
   
  Modifica a janela estendidos estilos do objeto de controle do site. Estilos que devem ser adicionados ou removidos podem ser combinados usando o OR bit a bit ( &#124; ) operador. Consulte o [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) função no SDK do Windows para obter informações sobre os estilos de janela disponível.  
   
- Se `nFlags` é diferente de zero, `ModifyStyleEx` chama a função Win32 `SetWindowPos`e redesenhar a janela combinando `nFlags` com quatro sinalizadores a seguir:  
+ Se *nFlags* é diferente de zero, `ModifyStyleEx` chama a função Win32 `SetWindowPos`e redesenhar a janela combinando *nFlags* com quatro sinalizadores a seguir:  
   
 - `SWP_NOSIZE` Mantém o tamanho atual.  
   
@@ -877,10 +877,10 @@ virtual void MoveWindow(
  *y*  
  A nova posição na parte superior da janela.  
   
- `nWidth`  
+ *nWidth*  
  A nova largura da janela  
   
- `nHeight`  
+ *nHeight*  
  A nova altura da janela.  
   
 ##  <a name="quickactivate"></a>  COleControlSite::QuickActivate  
@@ -899,7 +899,7 @@ virtual BOOL QuickActivate();
  O `IPersist*::Load` e `IPersist*::InitNew` métodos devem ser chamados após a ativação rápida. O controle deve estabelecer suas conexões com coletores do contêiner durante a ativação rápida. No entanto, essas conexões não são em tempo real até `IPersist*::Load` ou `IPersist*::InitNew` foi chamado.  
   
 ##  <a name="safesetproperty"></a>  COleControlSite::SafeSetProperty  
- Define a propriedade do controle especificada pelo `dwDispID`.  
+ Define a propriedade do controle especificada por *dwDispID*.  
   
 ```  
 virtual BOOL AFX_CDECL SafeSetProperty(
@@ -908,14 +908,14 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwDispID`  
+ *dwDispID*  
  Identifica a ID de expedição da propriedade ou método, encontrado no controle do `IDispatch` interface a ser definido.  
   
- `vtProp`  
+ *vtProp*  
  Especifica o tipo de propriedade a ser definida. Para os valores possíveis, consulte a seção comentários para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *...*  
- Um único parâmetro do tipo especificado pelo `vtProp`.  
+ Um único parâmetro do tipo especificado pelo *vtProp*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, zero.  
@@ -933,7 +933,7 @@ void SetDefaultButton(BOOL bDefault);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bDefault`  
+ *bNível padrão*  
  Diferente de zero se o controle deve se tornar o botão padrão; Caso contrário, zero.  
   
 ### <a name="remarks"></a>Comentários  
@@ -949,7 +949,7 @@ virtual int SetDlgCtrlID(int nID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nID`  
+ *nID*  
  O novo valor de identificador.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -973,7 +973,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
  Um ponteiro para a janela que tinha o foco.  
   
 ##  <a name="setproperty"></a>  COleControlSite::SetProperty  
- Define a propriedade do controle especificada pelo `dwDispID`.  
+ Define a propriedade do controle especificada por *dwDispID*.  
   
 ```  
 virtual void AFX_CDECL SetProperty(
@@ -982,22 +982,22 @@ virtual void AFX_CDECL SetProperty(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwDispID`  
+ *dwDispID*  
  Identifica a ID de expedição da propriedade ou método, encontrado no controle do `IDispatch` interface a ser definido.  
   
- `vtProp`  
+ *vtProp*  
  Especifica o tipo de propriedade a ser definida. Para os valores possíveis, consulte a seção comentários para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *...*  
- Um único parâmetro do tipo especificado pelo `vtProp`.  
+ Um único parâmetro do tipo especificado pelo *vtProp*.  
   
 ### <a name="remarks"></a>Comentários  
  Se `SetProperty` encontra um erro, uma exceção será lançada.  
   
- O tipo de exceção é determinado pelo valor de retorno da tentativa de definir a propriedade ou método. Se o valor de retorno é `DISP_E_EXCEPTION`, um **COleDispatchExcpetion** for lançado; caso contrário, um `COleException`.  
+ O tipo de exceção é determinado pelo valor de retorno da tentativa de definir a propriedade ou método. Se o valor de retorno é `DISP_E_EXCEPTION`, um `COleDispatchExcpetion` for lançado; caso contrário, um `COleException`.  
   
 ##  <a name="setpropertyv"></a>  COleControlSite::SetPropertyV  
- Define a propriedade do controle especificada pelo `dwDispID`.  
+ Define a propriedade do controle especificada por *dwDispID*.  
   
 ```  
 virtual void SetPropertyV(
@@ -1007,19 +1007,19 @@ virtual void SetPropertyV(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwDispID`  
+ *dwDispID*  
  Identifica a ID de expedição da propriedade ou método, encontrado no controle do `IDispatch` interface a ser definido.  
   
- `vtProp`  
+ *vtProp*  
  Especifica o tipo de propriedade a ser definida. Para os valores possíveis, consulte a seção comentários para [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
- `argList`  
+ *argList*  
  Ponteiro para a lista de argumentos.  
   
 ### <a name="remarks"></a>Comentários  
  Parâmetros adicionais para o método ou propriedade que está sendo invocado podem ser passeed usando o *arg_list* parâmetro. Se `SetProperty` encontra um erro, uma exceção será lançada.  
   
- O tipo de exceção é determinado pelo valor de retorno da tentativa de definir a propriedade ou método. Se o valor de retorno é `DISP_E_EXCEPTION`, um **COleDispatchExcpetion** for lançado; caso contrário, um `COleException`.  
+ O tipo de exceção é determinado pelo valor de retorno da tentativa de definir a propriedade ou método. Se o valor de retorno é `DISP_E_EXCEPTION`, um `COleDispatchExcpetion` for lançado; caso contrário, um `COleException`.  
   
 ##  <a name="setwindowpos"></a>  COleControlSite::SetWindowPos  
  Define o tamanho, posição e ordem Z do site de controle.  
@@ -1035,7 +1035,7 @@ virtual BOOL SetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWndInsertAfter`  
+ *pWndInsertAfter*  
  Um ponteiro para a janela.  
   
  *x*  
@@ -1044,13 +1044,13 @@ virtual BOOL SetWindowPos(
  *y*  
  A nova posição na parte superior da janela.  
   
- `cx`  
+ *CX*  
  A nova largura da janela  
   
- `cy`  
+ *Cy*  
  A nova altura da janela.  
   
- `nFlags`  
+ *nFlags*  
  Especifica a janela de dimensionamento e o posicionamento de sinalizadores. Para os valores possíveis, consulte a seção comentários para [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1064,7 +1064,7 @@ virtual void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszString`  
+ *lpszString*  
  Ponteiro para uma cadeia de caracteres terminada em nulo a ser usado como o novo texto do título ou controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1078,7 +1078,7 @@ virtual BOOL ShowWindow(int nCmdShow);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nCmdShow`  
+ *nCmdShow*  
  Especifica como o site de controle deve ser mostrado. Ele deve ser um dos seguintes valores:  
   
 - **SW_HIDE** oculta essa janela e passa a ativação para outra janela.  

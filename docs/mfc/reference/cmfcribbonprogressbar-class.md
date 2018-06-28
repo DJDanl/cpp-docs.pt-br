@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b9d0d1ab9722b14caddc3935d820301ae229f5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24981d2544c2b3e2c8be6a3307829f8a1e1c29ad
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369330"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040214"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Classe CMFCRibbonProgressBar
 Implementa um controle que indica visualmente o andamento de uma operação demorada.  
@@ -106,13 +106,13 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nID`  
+ [in] *nID*  
  Especifica a ID de comando para a barra de progresso da faixa de opções.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Especifica a largura, em pixels, da barra de progresso da faixa de opções.  
   
- [in] `nHeight`  
+ [in] *nHeight*  
  Especifica a altura, em pixels, da barra de progresso da faixa de opções.  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
@@ -158,7 +158,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -185,7 +185,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -197,7 +197,7 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` para especificar que a barra de progresso é no modo de infinito. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -213,10 +213,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nPos`  
+ [in] *nPos*  
  Especifica a posição em que a barra de progresso é definida.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Especifica se a barra de progresso deve ser redesenhada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -232,10 +232,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nMin`  
+ [in] *nMin*  
  Especifica o valor mínimo do intervalo.  
   
- [in] `nMax`  
+ [in] *nMax*  
  Especifica o valor máximo do intervalo.  
   
 ### <a name="remarks"></a>Comentários  

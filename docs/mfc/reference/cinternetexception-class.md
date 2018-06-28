@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6908b72f30b3a2561f7091b912e8144f2b763cc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6db83d88eec06ce21258ed751c5e1b232f696836
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366890"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037883"
 ---
 # <a name="cinternetexception-class"></a>Classe CInternetException
 Representa uma condição de exceção relacionada a uma operação de Internet.  
@@ -76,7 +76,7 @@ CInternetException(DWORD dwError);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwError`  
+ *dwError*  
  O erro que causou a exceção.  
   
 ### <a name="remarks"></a>Comentários  
@@ -90,7 +90,7 @@ DWORD_PTR m_dwContext;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O identificador de contexto é especificado originalmente no [CInternetSession](../../mfc/reference/cinternetsession-class.md) e passado pelo MFC para [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- e [CInternetFile](../../mfc/reference/cinternetfile-class.md)-classes derivadas. Você pode substituir esse padrão e atribuir um `dwContext` parâmetro um valor de sua escolha. `dwContext` está associado a qualquer operação do objeto especificado. `dwContext` identifica as informações de status da operação retornadas por [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
+ O identificador de contexto é especificado originalmente no [CInternetSession](../../mfc/reference/cinternetsession-class.md) e passado pelo MFC para [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- e [CInternetFile](../../mfc/reference/cinternetfile-class.md)-classes derivadas. Você pode substituir esse padrão e atribuir um *dwContext* parâmetro um valor de sua escolha. *dwContext* está associado a qualquer operação do objeto especificado. *dwContext* identifica as informações de status da operação retornadas por [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
   
 ##  <a name="m_dwerror"></a>  CInternetException::m_dwError  
  O erro que causou a exceção.  

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85161e7f3dd752c6df27afedf6276f8823e7ec6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f758a3cc82d4f6cfcc28f89ae206a82b899c0042
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371358"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037603"
 ---
 # <a name="colemessagefilter-class"></a>Classe COleMessageFilter
 Gerencia a simultaneidade necessária para a interação de aplicativos OLE.  
@@ -110,7 +110,7 @@ virtual void BeginBusyState();
   
  O `BeginBusyState` e `EndBusyState` chamadas incrementar e decrementar, respectivamente, um contador que determina se o aplicativo está ocupado. Por exemplo, duas chamadas para `BeginBusyState` e uma chamada para `EndBusyState` ainda resultar em um estado ocupado. Para cancelar um estado ocupado, é necessário chamar `EndBusyState` o mesmo número de vezes que `BeginBusyState` foi chamado.  
   
- Por padrão, a estrutura entra no estado de ocupado durante o processamento ocioso, que é executado pelo [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Enquanto o aplicativo está tratando **ON_COMMANDUPDATEUI** notificações, chamadas de entrada são tratadas mais tarde, após a conclusão do processamento ocioso.  
+ Por padrão, a estrutura entra no estado de ocupado durante o processamento ocioso, que é executado pelo [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Enquanto o aplicativo está manipulando notificações ON_COMMANDUPDATEUI, chamadas de entrada são tratadas mais tarde, após a conclusão do processamento ocioso.  
   
 ##  <a name="colemessagefilter"></a>  COleMessageFilter::COleMessageFilter  
  Cria um objeto `COleMessageFilter`.  
@@ -153,7 +153,7 @@ virtual void EndBusyState();
   
  O `BeginBusyState` e `EndBusyState` chamadas incrementar e decrementar, respectivamente, um contador que determina se o aplicativo está ocupado. Por exemplo, duas chamadas para `BeginBusyState` e uma chamada para `EndBusyState` ainda resultar em um estado ocupado. Para cancelar um estado ocupado, é necessário chamar `EndBusyState` o mesmo número de vezes que `BeginBusyState` foi chamado.  
   
- Por padrão, a estrutura entra no estado de ocupado durante o processamento ocioso, que é executado pelo [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Enquanto o aplicativo está tratando `ON_UPDATE_COMMAND_UI` notificações, chamadas de entrada são manipuladas após a conclusão do processamento ocioso.  
+ Por padrão, a estrutura entra no estado de ocupado durante o processamento ocioso, que é executado pelo [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Enquanto o aplicativo está manipulando notificações ON_UPDATE_COMMAND_UI, chamadas de entrada são manipuladas após a conclusão do processamento ocioso.  
   
 ##  <a name="onmessagepending"></a>  COleMessageFilter::OnMessagePending  
  Chamado pelo framework para processar mensagens enquanto uma chamada OLE estiver em andamento.  
@@ -163,14 +163,14 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pMsg`  
+ *pMsg*  
  Ponteiro para a mensagem pendente.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero em caso de sucesso; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Quando um aplicativo de chamada está aguardando uma chamada para ser concluída, o framework chama `OnMessagePending` com um ponteiro para a mensagem pendente. Por padrão, o framework despacha `WM_PAINT` mensagens, para que a janela atualizações podem ocorrer durante uma chamada que está levando muito tempo.  
+ Quando um aplicativo de chamada está aguardando uma chamada para ser concluída, o framework chama `OnMessagePending` com um ponteiro para a mensagem pendente. Por padrão, o framework envia mensagens WM_PAINT, para que a janela atualizações podem ocorrer durante uma chamada que está levando muito tempo.  
   
  Você deve registrar seu filtro de mensagem por meio de uma chamada para [registrar](#register) antes que ele pode se tornar ativado.  
   
@@ -233,7 +233,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nTimeout`  
+ *nTimeout*  
  Número de milissegundos para o atraso de mensagens pendentes.  
   
 ### <a name="remarks"></a>Comentários  
@@ -247,7 +247,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nRetryReply`  
+ *nRetryReply*  
  Número de milissegundos entre as tentativas.  
   
 ### <a name="remarks"></a>Comentários  
@@ -255,7 +255,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
   
  Resposta do chamador é controlada pelas funções `SetRetryReply` e [SetMessagePendingDelay](#setmessagependingdelay). `SetRetryReply` Determina quanto tempo o aplicativo de chamada deve aguardar entre tentativas para uma determinada chamada. `SetMessagePendingDelay` Determina quanto tempo o aplicativo de chamada aguarda uma resposta do servidor antes de executar uma ação adicional.  
   
- Geralmente, os padrões são aceitáveis e não precisam ser alteradas. A estrutura de tentativas de chamada de cada `nRetryReply` milissegundos até que a chamada atravessa ou atraso pendente de mensagem expirou. Um valor de 0 para `nRetryReply` Especifica uma repetição imediatas e - 1 Especifica o cancelamento da chamada.  
+ Geralmente, os padrões são aceitáveis e não precisam ser alteradas. A estrutura de tentativas de chamada de cada *nRetryReply* milissegundos até que a chamada atravessa ou atraso pendente de mensagem expirou. Um valor de 0 para *nRetryReply* Especifica uma repetição imediatas e - 1 Especifica o cancelamento da chamada.  
   
  Quando o atraso de mensagens pendentes expirou, a OLE "caixa de diálogo ocupado" (consulte [COleBusyDialog](../../mfc/reference/colebusydialog-class.md)) é exibida para que o usuário pode optar por cancelar ou repetir a chamada. Chamar [EnableBusyDialog](#enablebusydialog) para habilitar ou desabilitar essa caixa de diálogo.  
   

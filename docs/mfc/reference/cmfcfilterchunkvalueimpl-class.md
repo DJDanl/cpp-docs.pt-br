@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d274cbafbd50df2f577b484e433c964f1dec096
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c1f2fcdedb6b01025b06e4384ec2c32e95d08b6e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376324"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040123"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>Classe CMFCFilterChunkValueImpl
 Esta é uma classe que simplifica a lógica de par de valores de bloco e de propriedade.  
@@ -166,7 +166,7 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pStatChunk`  
+ *pStatChunk*  
  Um ponteiro para o valor de destino que descrevem as características da parte.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -182,7 +182,7 @@ void CopyFrom (IFilterChunkValue* pValue);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pValue`  
+ *pValue*  
  Especifica o valor de origem para copiar de.  
   
 ### <a name="remarks"></a>Comentários  
@@ -243,11 +243,11 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `ppPropVariant`  
+ *ppPropVariant*  
  Quando a função retornar, este parâmetro contém o valor de bloco.  
   
 ### <a name="return-value"></a>Valor de retorno  
- S_OK se PROPVARIANT foi alocada com êxito e o valor de bloco foi copiado com êxito para `ppPropVariant`; caso contrário, um código de erro.  
+ S_OK se PROPVARIANT foi alocada com êxito e o valor de bloco foi copiado com êxito para *ppPropVariant*; caso contrário, um código de erro.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -300,25 +300,25 @@ HRESULT SetBoolValue(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pkey`  
+ *PKEY*  
  Especifica uma chave de propriedade.  
   
- `bVal`  
+ *bVal*  
  Especifica o valor de bloco para definir.  
   
- `chunkType`  
+ *chunkType*  
  Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  O idioma e um subidioma associada a um bloco de texto. Localidade do fragmento é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, esse campo é ignorado.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto derivado. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  O deslocamento do qual o texto de origem para uma parte derivada inicia na parte de origem.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  O tipo de intervalo que separa a parte anterior do bloco atual. São valores de enumeração CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -340,22 +340,22 @@ HRESULT SetChunk(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pkey`  
+ *PKEY*  
  Especifica uma chave de propriedade.  
   
- `chunkType`  
+ *chunkType*  
  Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  O idioma e um subidioma associada a um bloco de texto. Localidade do fragmento é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, esse campo é ignorado.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto derivado. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  O deslocamento do qual o texto de origem para uma parte derivada inicia na parte de origem.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  O tipo de intervalo que separa a parte anterior do bloco atual. São valores de enumeração CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -378,25 +378,25 @@ HRESULT SetDwordValue(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pkey`  
+ *PKEY*  
  Especifica uma chave de propriedade.  
   
- `dwVal`  
+ *dwVal*  
  Especifica o valor de bloco para definir.  
   
- `chunkType`  
+ *chunkType*  
  Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  O idioma e um subidioma associada a um bloco de texto. Localidade do fragmento é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, esse campo é ignorado.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto derivado. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  O deslocamento do qual o texto de origem para uma parte derivada inicia na parte de origem.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  O tipo de intervalo que separa a parte anterior do bloco atual. São valores de enumeração CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -419,25 +419,25 @@ HRESULT SetFileTimeValue(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pkey`  
+ *PKEY*  
  Especifica uma chave de propriedade.  
   
- `dtVal`  
+ *dtVal*  
  Especifica o valor de bloco para definir.  
   
- `chunkType`  
+ *chunkType*  
  Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  O idioma e um subidioma associada a um bloco de texto. Localidade do fragmento é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, esse campo é ignorado.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto derivado. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  O deslocamento do qual o texto de origem para uma parte derivada inicia na parte de origem.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  O tipo de intervalo que separa a parte anterior do bloco atual. São valores de enumeração CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -460,25 +460,25 @@ HRESULT SetInt64Value(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pkey`  
+ *PKEY*  
  Especifica uma chave de propriedade.  
   
- `nVal`  
+ *nVal*  
  Especifica o valor de bloco para definir.  
   
- `chunkType`  
+ *chunkType*  
  Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  O idioma e um subidioma associada a um bloco de texto. Localidade do fragmento é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, esse campo é ignorado.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto derivado. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  O deslocamento do qual o texto de origem para uma parte derivada inicia na parte de origem.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  O tipo de intervalo que separa a parte anterior do bloco atual. São valores de enumeração CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -501,25 +501,25 @@ HRESULT SetIntValue(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pkey`  
+ *PKEY*  
  Especifica uma chave de propriedade.  
   
- `nVal`  
+ *nVal*  
  Especifica o valor de bloco para definir.  
   
- `chunkType`  
+ *chunkType*  
  Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  O idioma e um subidioma associada a um bloco de texto. Localidade do fragmento é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, esse campo é ignorado.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto derivado. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  O deslocamento do qual o texto de origem para uma parte derivada inicia na parte de origem.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  O tipo de intervalo que separa a parte anterior do bloco atual. São valores de enumeração CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -542,25 +542,25 @@ HRESULT SetLongValue(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pkey`  
+ *PKEY*  
  Especifica uma chave de propriedade.  
   
- `lVal`  
+ *lVal*  
  Especifica o valor de bloco para definir.  
   
- `chunkType`  
+ *chunkType*  
  Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  O idioma e um subidioma associada a um bloco de texto. Localidade do fragmento é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, esse campo é ignorado.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto derivado. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  O deslocamento do qual o texto de origem para uma parte derivada inicia na parte de origem.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  O tipo de intervalo que separa a parte anterior do bloco atual. São valores de enumeração CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -583,25 +583,25 @@ HRESULT SetSystemTimeValue(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pkey`  
+ *PKEY*  
  Especifica uma chave de propriedade.  
   
- `systemTime`  
+ *systemTime*  
  Especifica o valor de bloco para definir.  
   
- `chunkType`  
+ *chunkType*  
  Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  O idioma e um subidioma associada a um bloco de texto. Localidade do fragmento é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, esse campo é ignorado.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto derivado. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  O deslocamento do qual o texto de origem para uma parte derivada inicia na parte de origem.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  O tipo de intervalo que separa a parte anterior do bloco atual. São valores de enumeração CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -624,25 +624,25 @@ HRESULT SetTextValue(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pkey`  
+ *PKEY*  
  Especifica uma chave de propriedade.  
   
- `pszValue`  
+ *pszValue*  
  Especifica o valor de bloco para definir.  
   
- `chunkType`  
+ *chunkType*  
  Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  O idioma e um subidioma associada a um bloco de texto. Localidade do fragmento é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, esse campo é ignorado.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto derivado. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  O deslocamento do qual o texto de origem para uma parte derivada inicia na parte de origem.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  O tipo de intervalo que separa a parte anterior do bloco atual. São valores de enumeração CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor de retorno  

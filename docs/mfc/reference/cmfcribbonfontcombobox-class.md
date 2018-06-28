@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86a46614cdb61e39af1016e496b12518b87f59ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 857eb87caf42e39366e261ac92c3b2f289fb41d9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370501"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039369"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Classe CMFCRibbonFontComboBox
 Implementa uma caixa de combinação que contém uma lista de fontes. Você pode colocar a caixa de combinação em um painel de faixa de opções.  
@@ -106,13 +106,13 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nFontType`  
+ [in] *nFontType*  
  Especifica o tipo de fonte de fontes para adicionar.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Especifica o conjunto de caracteres das fontes para adicionar.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Especifica a densidade e a família de fontes para adicionar.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
@@ -128,25 +128,25 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nID`  
+ [in] *nID*  
  A ID de comando do comando que é executado quando o usuário seleciona um item da caixa de combinação.  
   
- [in] `nFontType`  
+ [in] *nFontType*  
  Especifica os tipos de fonte que exibir na caixa de combinação. As opções válidas são **DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, e **TRUETYPE_FONTTYPE**, ou uma combinação bit a bit disso.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Filtra as fontes na caixa de combinação para aqueles que pertencem ao conjunto de caracteres especificado.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Especifica a densidade e a família de fontes que são exibidos na caixa de combinação.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Especifica a largura, em pixels, da caixa de combinação.  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações sobre possíveis `nFontType` valores de parâmetro, consulte [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) na documentação do SDK do Windows.  
+ Para obter mais informações sobre possíveis *nFontType* valores de parâmetro, consulte [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) na documentação do SDK do Windows.  
   
- Para obter mais informações sobre conjuntos de caracteres válida que podem ser atribuídos a `nCharSet`e os valores válidos que podem ser atribuídos a `nPitchAndFamily`, consulte [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) na documentação do SDK do Windows.  
+ Para obter mais informações sobre conjuntos de caracteres válida que podem ser atribuídos a *nCharSet*e os valores válidos que podem ser atribuídos a *nPitchAndFamily*, consulte [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) do Documentação do SDK do Windows.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -156,7 +156,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iIndex`  
+ [in] *iIndex*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -183,13 +183,13 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszName`  
+ ' lpszName *  
  Especifica o nome da fonte para selecionar.  
   
- `nCharSet`  
+ *nCharSet*  
  Especifica o conjunto de caracteres para a fonte selecionada.  
   
- `bExact`  
+ *bExact*  
  `TRUE` para especificar que o conjunto de caracteres deve corresponder ao selecionar uma fonte. `FALSE` para especificar que o conjunto de caracteres pode ser ignorado ao selecionar uma fonte.  
   
 ### <a name="return-value"></a>Valor de retorno  

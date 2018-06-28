@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b9d4aace502310836429ec8f8f9db74d7cf17ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27ff8f622eb3af52ad23f8f4fc7a20ecb8be9b77
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369096"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041130"
 ---
 # <a name="ckeyboardmanager-class"></a>Classe CKeyboardManager
 Gerencia as tabelas de chave de atalho para a janela do quadro principal e janelas de quadro filho.  
@@ -134,23 +134,23 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  A ID de comando.  
   
- [out] `str`  
+ [out] *str*  
  Uma referência a um objeto `CString`.  
   
- [in] `pWndFrame`  
+ [in] *pWndFrame*  
  Um ponteiro para uma janela do quadro.  
   
- [in] `bIsDefaultFrame`  
+ [in] *bIsDefaultFrame*  
  Especifica se a janela do quadro é a janela do quadro padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o atalho for encontrado; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Este método pesquisa o comando especificado por `uiCmd` e recupera a tecla de atalho do padrão. Em seguida, o método usa a cadeia de caracteres associada a essa tecla de atalho e grava o valor para o `str` parâmetro.  
+ Este método pesquisa o comando especificado por *uiCmd* e recupera a tecla de atalho do padrão. Em seguida, o método usa a cadeia de caracteres associada a essa tecla de atalho e grava o valor para o *str* parâmetro.  
   
 ##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled  
  Determina se a chave especificada é tratada pelo [CKeyboardManager classe](../../mfc/reference/ckeyboardmanager-class.md).  
@@ -168,16 +168,16 @@ static BOOL __stdcall IsKeyHandled(
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `nKey`|A tecla a ser verificada.|  
-|[in] `fVirt`|Especifica o comportamento de tecla de atalho. Para obter uma lista de valores possíveis, consulte [ACELERAÇÃO estrutura](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
-|[in] `pWndFrame`|Uma janela do quadro. Este método determina se uma tecla de atalho é tratada neste quadro.|  
-|[in] `bIsDefaultFrame`|Um parâmetro booliano que indica se `pWndFrame` é a janela do quadro padrão.|  
+|[in] *nKey*|A tecla a ser verificada.|  
+|[in] *fVirt*|Especifica o comportamento de tecla de atalho. Para obter uma lista de valores possíveis, consulte [ACELERAÇÃO estrutura](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[in] *pWndFrame*|Uma janela do quadro. Este método determina se uma tecla de atalho é tratada neste quadro.|  
+|[in] *bIsDefaultFrame*|Um parâmetro booliano que indica se *pWndFrame* é a janela do quadro padrão.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se a tecla de atalho é tratada. `FALSE` Se a chave não é manipulada ou se `pWndFrame` é `NULL`.  
+ `TRUE` Se a tecla de atalho é tratada. `FALSE` Se a chave não é manipulada ou se *pWndFrame* é `NULL`.  
   
 ### <a name="remarks"></a>Comentários  
- Os parâmetros de entrada devem corresponder à entrada na tabela de aceleradores ambos para `nKey` e `fVirt` para determinar se uma tecla de atalho é tratada no `pWndFrame`.  
+ Os parâmetros de entrada devem corresponder à entrada na tabela de aceleradores ambos para *nKey* e *fVirt* para determinar se uma tecla de atalho é tratada no *pWndFrame*.  
   
 ##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable  
  Indica se um caractere imprimível.  
@@ -191,7 +191,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `nChar`|O caractere que verifica a este método.|  
+|[in] *nChar*|O caractere que verifica a este método.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o caractere for imprimível, zero se não for.  
@@ -222,17 +222,17 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  O caminho do registro onde `CKeyboardManager` os dados são salvos.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  Um ponteiro para uma janela do quadro para usar como a janela padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o estado foi carregado com êxito ou 0, caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
- Se o `lpszProfileName` parâmetro é `NULL`, esse método verifica se o local do registro padrão `CKeyboardManager` dados. O local de registro padrão for especificado o [CWinAppEx classe](../../mfc/reference/cwinappex-class.md). Os dados devem ser gravados anteriormente com o método [CKeyboardManager::SaveState](#savestate).  
+ Se o *lpszProfileName* parâmetro é `NULL`, esse método verifica se o local do registro padrão `CKeyboardManager` dados. O local de registro padrão for especificado o [CWinAppEx classe](../../mfc/reference/cwinappex-class.md). Os dados devem ser gravados anteriormente com o método [CKeyboardManager::SaveState](#savestate).  
   
  Se você não especificar uma janela padrão, a janela do quadro principal do seu aplicativo será usada.  
   
@@ -256,17 +256,17 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  O caminho do registro para salvar o `CKeyboardManager` estado.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  Um ponteiro para uma janela do quadro que se torna a janela padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o estado do Gerenciador de teclado foi salvo com êxito, ou caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Se o `lpszProfileName` parâmetro é `NULL`, esse método gravará o `CKeyboardManager` estado para o local padrão especificado pelo [CWinAppEx classe](../../mfc/reference/cwinappex-class.md). Se você especificar um local, você pode carregar os dados mais tarde usando o método [CKeyboardManager::LoadState](#loadstate).  
+ Se o *lpszProfileName* parâmetro é `NULL`, esse método gravará o `CKeyboardManager` estado para o local padrão especificado pelo [CWinAppEx classe](../../mfc/reference/cwinappex-class.md). Se você especificar um local, você pode carregar os dados mais tarde usando o método [CKeyboardManager::LoadState](#loadstate).  
   
  Se você não especificar uma janela padrão, a janela do quadro principal será usada como a janela padrão.  
   
@@ -280,16 +280,16 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bShowAll`  
+ [in] *bShowAll*  
  Se `true`, todas as teclas de atalho serão exibidas. Se `false`, somente a primeira tecla de atalho será exibida.  
   
- [in] `lpszDelimiter`  
+ [in] *lpszDelimiter*  
  Uma cadeia de caracteres a ser inserido entre as teclas de atalho. Este delimitador não tem nenhum efeito se apenas uma tecla de atalho é exibida.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, se um comando tiver mais de uma tecla de atalho associada a ele, somente a primeira tecla de atalho será mostrada. Esta função permite listar todas as teclas de atalho associadas a todos os comandos.  
   
- As teclas de atalho aparecerá ao lado do comando na barra de menus. Se todas as teclas de atalho são exibidas, a cadeia de caracteres fornecida pelo `lpszDelimiter` separará teclas de atalho individuais.  
+ As teclas de atalho aparecerá ao lado do comando na barra de menus. Se todas as teclas de atalho são exibidas, a cadeia de caracteres fornecida pelo *lpszDelimiter* separará teclas de atalho individuais.  
   
 ##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper  
  Converte um caractere em seu registro superior.  
@@ -299,7 +299,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nChar`  
+ [in] *nChar*  
  O caractere a ser convertido.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -323,19 +323,19 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pTemplate`  
+ [in] *pTemplate*  
  Um ponteiro para um modelo de documento.  
   
- [in] `lpAccel`  
+ [in] *lpAccel*  
  Um ponteiro para a nova chave de atalho.  
   
- [in] `nSize`  
+ [in] *nSize*  
  O tamanho da nova tabela de atalho.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  Um ponteiro para a janela do quadro padrão.  
   
- [in] `hAccelNew`  
+ [in] *hAccelNew*  
  Um identificador para a nova tabela de atalho.  
   
 ### <a name="return-value"></a>Valor de retorno  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 766faaa50e4efead96ff72c67aee71fec2386b18
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378376"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038573"
 ---
 # <a name="cminiframewnd-class"></a>Classe CMiniFrameWnd
 Representa uma janela do quadro de meia altura geralmente Vista em torno de flutuando barras de ferramentas.  
@@ -98,7 +98,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpClassName`  
+ *lpClassName*  
  Aponta para uma cadeia de caracteres terminada em nulo que nomeia a classe do Windows. O nome da classe pode ser qualquer nome registrado com global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função. Se **nulo**, a classe de janela será registrada para você pela estrutura. MFC fornece a classe padrão, os seguintes atributos e estilos:  
   
 -   Conjuntos de bit de estilo **CS_DBLCLKS**, que envia duas vezes em mensagens para o procedimento de janela quando o usuário clica duas vezes o mouse.  
@@ -113,10 +113,10 @@ virtual BOOL Create(
   
 -   Define a janela para o tamanho padrão e a posição, conforme indicado pelo Windows.  
   
- `lpWindowName`  
+ *Sinalizador para liberação final*  
  Aponta para uma cadeia de caracteres terminada em nulo que contém o nome da janela.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica os atributos de estilo de janela. Eles podem incluir estilos de janela padrão e um ou mais dos seguintes estilos especiais:  
   
 - **MFS_MOVEFRAME** permite que a janela do quadro simplificado a ser movido, basta clicar em qualquer borda da janela, não apenas a legenda.  
@@ -131,13 +131,13 @@ virtual BOOL Create(
   
  Consulte [CWnd::Create](../../mfc/reference/cwnd-class.md#create) para obter uma descrição dos valores de estilo de janela possíveis. É a combinação de típica usada para janelas de mini-quadro **WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**.  
   
- `rect`  
+ *Rect*  
  Um `RECT` estrutura especificando as dimensões desejadas da janela.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Aponta para a janela pai. Use **nulo** para janelas de nível superior.  
   
- `nID`  
+ *nID*  
  Se a janela do quadro mini é criada como uma janela filho, esse é o identificador do controle filho; Caso contrário, 0.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -161,25 +161,25 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwExStyle`  
+ *dwExStyle*  
  Especifica o estilo estendido do `CMiniFrameWnd` que está sendo criado. Aplicar qualquer um do [estendidos estilos de janela](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) à janela.  
   
- `lpClassName`  
+ *lpClassName*  
  Aponta para uma cadeia de caracteres terminada em nulo que nomeia a classe do Windows (um [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estrutura). O nome da classe pode ser qualquer nome registrado com global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função ou qualquer um dos nomes predefinidos de classe de controle. Ele não deve ser **nulo**.  
   
- `lpWindowName`  
+ *Sinalizador para liberação final*  
  Aponta para uma cadeia de caracteres terminada em nulo que contém o nome da janela.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica os atributos de estilo de janela. Consulte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) e [CWnd::Create](../../mfc/reference/cwnd-class.md#create) para obter uma descrição dos valores possíveis.  
   
- `rect`  
- O tamanho e posição da janela, em coordenadas do cliente de `pParentWnd`.  
+ *Rect*  
+ O tamanho e posição da janela, em coordenadas do cliente de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Aponta para o objeto de janela pai.  
   
- `nID`  
+ *nID*  
  O identificador da janela filho.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -194,9 +194,9 @@ virtual BOOL CreateEx(
   
  Substituir mais **em * mensagem* adicionar mais funcionalidade a sua classe derivada de manipuladores de mensagens.  
   
- Se o **WS_VISIBLE** estilo for fornecido, o Windows envia a janela de todas as mensagens necessárias para ativar e mostrar a janela. Se o estilo da janela especifica uma barra de título, o título da janela apontada pelo `lpszWindowName` parâmetro é exibido na barra de título.  
+ Se o **WS_VISIBLE** estilo for fornecido, o Windows envia a janela de todas as mensagens necessárias para ativar e mostrar a janela. Se o estilo da janela especifica uma barra de título, o título da janela apontada pelo *lpszWindowName* parâmetro é exibido na barra de título.  
   
- O `dwStyle` parâmetro pode ser qualquer combinação de [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+ O *dwStyle* parâmetro pode ser qualquer combinação de [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
  Não há suporte para as janelas de ferramentas de paleta de estilo antigas. O estilo antigo, que não tem um botão "X" Fechar, tinha suporte durante a execução de um aplicativo MFC em versões anteriores do Windows, mas não há suporte para o Visual C++ .NET. Somente o novo `WS_EX_TOOLWINDOW` estilo agora tem suporte; para obter uma descrição desse estilo, consulte [estilos de janela estendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
   

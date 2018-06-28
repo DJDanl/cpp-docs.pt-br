@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81421c99623fd3ab0abde20b479ec1ba91c3f936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e13c3b609a53e8c885e04530995a11218bf2704d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368355"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040045"
 ---
 # <a name="cmemfile-class"></a>Classe CMemFile
 O [CFile](../../mfc/reference/cfile-class.md)-derivada da classe que dá suporte a arquivos de memória.  
@@ -108,7 +108,7 @@ virtual BYTE* Alloc(SIZE_T nBytes);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nBytes`  
+ *nBytes*  
  Número de bytes de memória a ser alocada.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -130,23 +130,23 @@ void Attach(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpBuffer`  
+ *lpBuffer*  
  Ponteiro para o buffer a ser anexado à `CMemFile`.  
   
- `nBufferSize`  
+ *nBufferSize*  
  Um inteiro que especifica o tamanho do buffer em bytes.  
   
- `nGrowBytes`  
+ *nGrowBytes*  
  O incremento de alocação de memória em bytes.  
   
 ### <a name="remarks"></a>Comentários  
  Isso faz com que `CMemFile` para usar o bloco de memória como o arquivo de memória.  
   
- Se `nGrowBytes` é 0, `CMemFile` definirá o comprimento do arquivo como `nBufferSize`. Isso significa que os dados no bloco de memória antes que ele foi anexado ao `CMemFile` será usado como o arquivo. Arquivos de memória criados dessa maneira não podem ser aumentados.  
+ Se *nGrowBytes* é 0, `CMemFile` definirá o comprimento do arquivo como *nBufferSize*. Isso significa que os dados no bloco de memória antes que ele foi anexado ao `CMemFile` será usado como o arquivo. Arquivos de memória criados dessa maneira não podem ser aumentados.  
   
- Desde que o arquivo não pode ser expandido, tenha cuidado para não gerar `CMemFile` para tentar aumentar o arquivo. Por exemplo, não chamar o `CMemFile` substituições do [CFile:Write](../../mfc/reference/cfile-class.md#write) para gravar após o final ou não chamar [CFile:SetLength](../../mfc/reference/cfile-class.md#setlength) com um tamanho maior que `nBufferSize`.  
+ Desde que o arquivo não pode ser expandido, tenha cuidado para não gerar `CMemFile` para tentar aumentar o arquivo. Por exemplo, não chamar o `CMemFile` substituições do [CFile:Write](../../mfc/reference/cfile-class.md#write) para gravar após o final ou não chamar [CFile:SetLength](../../mfc/reference/cfile-class.md#setlength) com um tamanho maior que *nBufferSize*.  
   
- Se `nGrowBytes` é maior que 0, `CMemFile` irá ignorar o conteúdo do bloco de memória anexado. Você precisa gravar o conteúdo do arquivo de memória do zero usando o `CMemFile` substituição do `CFile::Write`. Se você tentar gravar após o fim do arquivo ou o tamanho do arquivo chamando o `CMemFile` substituição do `CFile::SetLength`, `CMemFile` aumentará a alocação de memória em incrementos de `nGrowBytes`. Aumentando a alocação de memória falhará se o bloco de memória que você passa para **Attach** não foi alocado com um método compatível com [alocação](#alloc). Para ser compatível com a implementação padrão de `Alloc`, você deve alocar a memória com a função de biblioteca de tempo de execução [malloc](../../c-runtime-library/reference/malloc.md) ou [calloc](../../c-runtime-library/reference/calloc.md).  
+ Se *nGrowBytes* é maior que 0, `CMemFile` irá ignorar o conteúdo do bloco de memória anexado. Você precisa gravar o conteúdo do arquivo de memória do zero usando o `CMemFile` substituição do `CFile::Write`. Se você tentar gravar após o fim do arquivo ou o tamanho do arquivo chamando o `CMemFile` substituição do `CFile::SetLength`, `CMemFile` aumentará a alocação de memória em incrementos de *nGrowBytes*. Aumentando a alocação de memória falhará se o bloco de memória que você passa para `Attach` não foi alocado com um método compatível com [alocação](#alloc). Para ser compatível com a implementação padrão de `Alloc`, você deve alocar a memória com a função de biblioteca de tempo de execução [malloc](../../c-runtime-library/reference/malloc.md) ou [calloc](../../c-runtime-library/reference/calloc.md).  
   
 ##  <a name="cmemfile"></a>  CMemFile::CMemFile  
  A primeira sobrecarga abre um arquivo de memória vazia.  
@@ -162,19 +162,19 @@ CMemFile(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nGrowBytes`  
+ *nGrowBytes*  
  O incremento de alocação de memória em bytes.  
   
  *lpBuffe*r  
- Ponteiro para um buffer que recebe informações de tamanho `nBufferSize`.  
+ Ponteiro para um buffer que recebe informações de tamanho *nBufferSize*.  
   
- `nBufferSize`  
+ *nBufferSize*  
  Um inteiro que especifica o tamanho do buffer de arquivo, em bytes.  
   
 ### <a name="remarks"></a>Comentários  
  Observe que o arquivo for aberto pelo construtor e você não deve chamar [CFile::Open](../../mfc/reference/cfile-class.md#open).  
   
- A segunda sobrecarga age como se você usou o primeiro construtor e imediatamente chamado o mesmo [Attach](#attach) com os mesmos parâmetros. Consulte **Attach** para obter detalhes.  
+ A segunda sobrecarga age como se você usou o primeiro construtor e imediatamente chamado o mesmo [Attach](#attach) com os mesmos parâmetros. Consulte `Attach` para obter os detalhes.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCFiles#36](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]  
@@ -190,7 +190,7 @@ BYTE* Detach();
  Um ponteiro para o bloco de memória que contém o conteúdo do arquivo de memória.  
   
 ### <a name="remarks"></a>Comentários  
- Chamar essa função também fecha o `CMemFile`. Você pode anexar novamente o bloco de memória `CMemFile` chamando [Attach](#attach). Se você quiser anexar novamente o arquivo e usar os dados, você deve chamar [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) para obter o tamanho do arquivo antes de chamar **desanexar**. Observe que, se você anexar um bloco de memória `CMemFile` para que você possa usar seus dados ( `nGrowBytes` = = 0), em seguida, você não poderá aumentar o arquivo de memória.  
+ Chamar essa função também fecha o `CMemFile`. Você pode anexar novamente o bloco de memória `CMemFile` chamando [Attach](#attach). Se você quiser anexar novamente o arquivo e usar os dados, você deve chamar [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) para obter o tamanho do arquivo antes de chamar `Detach`. Observe que, se você anexar um bloco de memória `CMemFile` para que você possa usar seus dados ( `nGrowBytes` = = 0), em seguida, você não poderá aumentar o arquivo de memória.  
   
 ##  <a name="free"></a>  CMemFile::Free  
  Essa função é chamada `CMemFile` funções de membro.  
@@ -200,7 +200,7 @@ virtual void Free(BYTE* lpMem);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpMem`  
+ *lpMem*  
  Ponteiro para a memória a ser desalocada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -214,7 +214,7 @@ virtual void GrowFile(SIZE_T dwNewLen);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwNewLen`  
+ *dwNewLen*  
  Novo tamanho do arquivo de memória.  
   
 ### <a name="remarks"></a>Comentários  
@@ -231,17 +231,17 @@ virtual BYTE* Memcpy(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpMemTarget`  
+ *lpMemTarget*  
  Ponteiro para o bloco de memória na qual a memória de origem será copiada.  
   
- `lpMemSource`  
+ *lpMemSource*  
  Ponteiro para o bloco de memória de origem.  
   
- `nBytes`  
+ *nBytes*  
  Número de bytes a serem copiados.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Uma cópia de `lpMemTarget`.  
+ Uma cópia do *lpMemTarget*.  
   
 ### <a name="remarks"></a>Comentários  
  Substituir essa função se desejar alterar a maneira que `CMemFile` essas cópias de memória.  
@@ -256,10 +256,10 @@ virtual BYTE* Realloc(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpMem`  
+ *lpMem*  
  Um ponteiro para o bloco de memória a ser realocados.  
   
- `nBytes`  
+ *nBytes*  
  Novo tamanho para o bloco de memória.  
   
 ### <a name="return-value"></a>Valor de retorno  

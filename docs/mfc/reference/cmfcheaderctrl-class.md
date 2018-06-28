@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a1c10cd6242f2845d64965d914093455da21c8a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6af0859811ad4064c12f6e4ef8d470437fe3ded9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370023"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037655"
 ---
 # <a name="cmfcheaderctrl-class"></a>Classe CMFCHeaderCtrl
 O `CMFCHeaderCtrl` classe dá suporte à classificação de várias colunas em um controle de cabeçalho.  
@@ -137,7 +137,7 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar o modo de classificação de coluna vários; `FALSE` para desabilitar o modo de classificar várias colunas e remova todas as colunas da lista de colunas classificadas. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -151,7 +151,7 @@ int GetColumnState(int iColumn) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iColumn`  
+ [in] *iColumn*  
  O índice de base zero de uma coluna.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -227,19 +227,19 @@ virtual void OnDrawItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
- [in] `iItem`  
+ [in] *item*  
  O índice de base zero do item para desenhar.  
   
- [in] `rect`  
+ [in] *rect*  
  O retângulo delimitador de item para desenhar.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  `TRUE` Para desenhar o item em um estado pressionado; Caso contrário, `FALSE`.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  `TRUE` Para desenhar o item realçado estado; Caso contrário, `FALSE`.  
   
 ##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
@@ -252,10 +252,10 @@ virtual void OnDrawSortArrow(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
- [in] `rectArrow`  
+ [in] *rectArrow*  
  O retângulo delimitador da seta de classificação.  
   
 ##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
@@ -266,7 +266,7 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -279,7 +279,7 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iColumn`  
+ [in] *iColumn*  
  O índice baseado em zero da coluna a ser removida.  
   
 ##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
@@ -293,14 +293,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iColumn`  
+ [in] *iColumn*  
  O índice de base zero de uma coluna de controle de cabeçalho. Se esse parâmetro for menor que zero, este método Remove todas as colunas da lista de colunas de classificação.  
   
- [in] `bAscending`  
- Especifica a ordem de classificação da coluna que o `iColumn` parâmetro especifica. `TRUE` Para definir a ordem crescente; `FALSE` para definir a ordem decrescente. O valor padrão é `TRUE`.  
+ [in] *bAscending*  
+ Especifica a ordem de classificação da coluna que o *iColumn* parâmetro especifica. `TRUE` Para definir a ordem crescente; `FALSE` para definir a ordem decrescente. O valor padrão é `TRUE`.  
   
- [in] `bAdd`  
- `TRUE` Para definir a ordem de classificação da coluna que o `iColumn` parâmetro especifica.  
+ [in] *bAdicionar*  
+ `TRUE` Para definir a ordem de classificação da coluna que o *iColumn* parâmetro especifica.  
   
  Se o controle de cabeçalho atual está no *classificação de várias colunas* modo, este método adiciona a coluna especificada à lista de colunas de classificação. Use [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) para definir o modo de classificar várias colunas.  
   

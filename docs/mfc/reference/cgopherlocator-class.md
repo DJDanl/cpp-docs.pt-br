@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 377708108f96a42d23dcf3aa5e8214d7bf9ffe5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f466864e694f332f70d9f5932a528917a000974
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366916"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041280"
 ---
 # <a name="cgopherlocator-class"></a>Classe CGopherLocator
 Obtém um gopher "localizador" de um servidor gopher, determina o tipo do localizador e disponibiliza para o localizador [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md).  
@@ -84,7 +84,7 @@ CGopherLocator(const CGopherLocator& ref);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `ref`  
+ *ref*  
  Uma referência a uma constante `CGopherLocator` objeto.  
   
 ### <a name="remarks"></a>Comentários  

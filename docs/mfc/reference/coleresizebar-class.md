@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf000b45e2bd24ec40e1ae15001c3df46d1b12c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3046fa4c9446afeba45fd41a6b571ccf58f2cfb
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375610"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040110"
 ---
 # <a name="coleresizebar-class"></a>Classe COleResizeBar
 Um tipo de barra de controle que dá suporte a redimensionamento de itens OLE no local.  
@@ -92,13 +92,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pParentWnd`  
+ *pParentWnd*  
  Ponteiro para a janela pai da barra de redimensionamento.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica o [estilo de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) atributos.  
   
- `nID`  
+ *nID*  
  ID da janela de filho da barra de redimensionamento.  
   
 ### <a name="return-value"></a>Valor de retorno  

@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79cba2981a6ae6a742ad2839499f2acff6f0a5f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3d40ad0bf70fb3fda32265da321a3474723e8037
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379015"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039252"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -332,8 +332,8 @@ virtual HRESULT accSelect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `flagsSelect`  
- [in] `varChild`  
+ [in] *flagsSelect*  
+ [in] *varChild*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -350,13 +350,13 @@ int AddProperty(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pProp`  
+ [in] *pProp*  
  Ponteiro para uma propriedade.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` redesenhar a propriedade imediatamente. Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
   
- [in] `bAdjustLayout`  
+ [in] *bAdjustLayout*  
  `TRUE` para recalcular como desenhar o texto e o valor da propriedade e, em seguida, desenhar a propriedade; `FALSE` usar cálculos existentes para desenhar a propriedade. O valor padrão é `TRUE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -383,7 +383,7 @@ void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bShow`  
+ [in] *bMostrar*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -418,19 +418,19 @@ virtual int CompareProps(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pProp1`  
+ *pProp1*  
  Um ponteiro para uma propriedade.  
   
- `pProp2`  
+ *pProp2*  
  Um ponteiro para uma propriedade.  
   
 ### <a name="return-value"></a>Valor de retorno  
   
 |Valor de retorno|Descrição|  
 |------------------|-----------------|  
-|< 0|O nome do `pProp1` parâmetro for menor que o nome do `pProp2` parâmetro.|  
-|0|O nome do `pProp1` parâmetro for igual ao nome do `pProp2` parâmetro.|  
-|> 0|O nome do `pProp1` objeto é maior que o nome do `pProp2` parâmetro.|  
+|< 0|O nome do *pProp1* parâmetro for menor que o nome do *pProp2* parâmetro.|  
+|0|O nome do *pProp1* parâmetro for igual ao nome do *pProp2* parâmetro.|  
+|> 0|O nome do *pProp1* objeto é maior que o nome do *pProp2* parâmetro.|  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, esse método usa o [CString::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) método para comparar o `CMFCPropertyGridProperty::m_strName` membros dos parâmetros especificados.  
@@ -447,16 +447,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Uma combinação bit a bit (ou) de [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `rect`  
- Um retângulo que especifica o tamanho e a posição da janela, no cliente de coordenadas do `pParentWnd`.  
+ [in] *rect*  
+ Um retângulo que especifica o tamanho e a posição da janela, no cliente de coordenadas do *pParentWnd*.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Ponteiro para a janela pai. Não deve ser `NULL`.  
   
- [in] `nID`  
+ [in] *nID*  
  A ID da janela filho.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -481,13 +481,13 @@ BOOL DeleteProperty(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pProp`  
+ [in] *pProp*  
  Ponteiro para uma propriedade.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` redesenhar o controle de grade de propriedade; Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
   
- [in] `bAdjustLayout`  
+ [in] *bAdjustLayout*  
  `TRUE` para recalcular como desenhar o texto, imagens e itens no controle de grade de propriedade e, em seguida, desenhar o controle. Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -517,10 +517,10 @@ virtual BOOL EditItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pProp`  
+ [in] *pProp*  
  Ponteiro para uma propriedade.  
   
- [in] `lptClick`  
+ [in] *lptClick*  
  O ponto de controle de grade de propriedades que o usuário clicou para iniciar a operação de edição. É o ponto em coordenadas de cliente do controle. O valor padrão é `NULL`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -536,7 +536,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar a área de descrição; `FALSE` para desabilitar a área de descrição. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -553,13 +553,13 @@ void EnableHeaderCtrl(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar o controle de cabeçalho; `FALSE` para desabilitar o controle de cabeçalho. O valor padrão é `TRUE`.  
   
- [in] `lpszLeftColumn`  
+ [in] *lpszLeftColumn*  
  O título da coluna à esquerda do controle de cabeçalho. O valor padrão é **propriedade**.  
   
- [in] `lpszRightColumn`  
+ [in] *lpszRightColumn*  
  O título da coluna à direita do controle de cabeçalho. O valor padrão é **valor**.  
   
 ##  <a name="endedititem"></a>  CMFCPropertyGridCtrl::EndEditItem  
@@ -570,7 +570,7 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bUpdateData`  
+ [in] *bUpdateData*  
  `TRUE` para especificar que os dados da propriedade modificada devem ser validados quando a operação de edição é concluída; Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -588,10 +588,10 @@ void EnsureVisible(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pProp`  
+ [in] *pProp*  
  Ponteiro para uma propriedade.  
   
- [in] `bExpandParents`  
+ [in] *bExpandParents*  
  `TRUE` Expanda os itens pai para tornar a propriedade especificada visível; Caso contrário, `FALSE`. O padrão é `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -604,7 +604,7 @@ void ExpandAll(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bExpand`  
+ [in] *bExpand*  
  `TRUE` para expandir todos os nós. `FALSE` para recolher todos os nós. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -619,10 +619,10 @@ CMFCPropertyGridProperty* FindItemByData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwData`  
+ [in] *dwData*  
  Um valor `DWORD`.  
   
- [in] `bSearchSubItems`  
+ [in] *bSearchSubItems*  
  `TRUE` para pesquisar a propriedade subitens; Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -653,7 +653,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pvarChild`  
+ [in] *pvarChild*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -669,8 +669,8 @@ virtual HRESULT get_accHelp(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `varChild`  
- [in] `pszHelp`  
+ [in] *varChild*  
+ [in] *pszHelp*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -687,9 +687,9 @@ virtual HRESULT get_accHelpTopic(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pszHelpFile`  
- [in] `varChild`  
- [in] `pidTopic`  
+ [in] *pszHelpFile*  
+ [in] *varChild*  
+ [in] *pidTopic*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -705,8 +705,8 @@ virtual HRESULT get_accKeyboardShortcut(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `varChild`  
- [in] `pszKeyboardShortcut`  
+ [in] *varChild*  
+ [in] *pszKeyboardShortcut*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -720,7 +720,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pvarChildren`  
+ [in] *pvarChildren*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -776,25 +776,25 @@ void GetCustomColors(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `clrBackground`  
+ [out] *clrBackground*  
  A cor de plano de fundo de valores de propriedade.  
   
- [out] `clrText`  
+ [out] *clrText*  
  A cor do texto do valor de propriedade e de nomes de propriedade.  
   
- [out] `clrGroupBackground`  
+ [out] *clrGroupBackground*  
  A cor de plano de fundo de um grupo de propriedade.  
   
- [out] `clrGroupText`  
+ [out] *clrGroupText*  
  A cor do texto no grupo de propriedades.  
   
- [out] `clrDescriptionBackground`  
+ [out] *clrDescriptionBackground*  
  A cor de plano de fundo da área de descrição.  
   
- [out] `clrDescriptionText`  
+ [out] *clrDescriptionText*  
  A cor do texto na área de descrição.  
   
- [out] `clrLine`  
+ [out] *clrLine*  
  A cor das linhas que são desenhadas entre as propriedades.  
   
 ### <a name="remarks"></a>Comentários  
@@ -883,10 +883,10 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  O índice de base zero de um item de controle de grade de propriedade.  
   
- Esse método declara se o `nIndex` parâmetro for menor que zero ou maior que ou igual ao número de propriedades.  
+ Esse método declara se o *nIndex* parâmetro for menor que zero ou maior que ou igual ao número de propriedades.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o objeto de propriedade que corresponde ao índice especificado se esse método for bem-sucedida; Caso contrário, `NULL`.  
@@ -939,7 +939,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nBar`  
+ [in] *nBar*  
  A orientação da barra de rolagem, que deve ser `SB_VERT`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -972,24 +972,24 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pt`  
+ [in] *pt*  
  Um ponto, nas coordenadas do cliente.  
   
- [in, out] `pnArea`  
+ [out no] *pnArea*  
  Um ponteiro para um `ClickArea` variável. Quando esse método retorna, a variável indica o *área propriedade* que contém o ponto especificado. Para obter mais informações sobre uma área de propriedade, consulte comentários.  
   
- [in] `bPropsOnly`  
+ [in] *bPropsOnly*  
  `TRUE` Para testar somente a área de propriedade; `FALSE` para testar o *área de descrição* se o ponto especificado não está na área de propriedade. O valor padrão é `FALSE`. Para obter mais informações sobre a área de descrição, consulte comentários.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Se o `bPropsOnly` parâmetro é `TRUE` e o ponto especificado está em uma área de propriedade, o valor de retorno é um ponteiro para o objeto de propriedade correspondente. Além disso, o `pnArea` parâmetro está definido para a área específica que contém o ponto especificado. Caso contrário, o valor de retorno será `NULL` e `pnArea` parâmetro não é modificado.  
+ Se o *bPropsOnly* parâmetro é `TRUE` e o ponto especificado está em uma área de propriedade, o valor de retorno é um ponteiro para o objeto de propriedade correspondente. Além disso, o *pnArea* parâmetro está definido para a área específica que contém o ponto especificado. Caso contrário, o valor de retorno será `NULL` e *pnArea* parâmetro não é modificado.  
   
- Se o `bPropsOnly` parâmetro é `FALSE`, o valor retornado é sempre `NULL`. No entanto, se o ponto especificado está na área de descrição, o `pnArea` parâmetro está definido como `CMFCPropertyGridProperty::ClickDescription`.  
+ Se o *bPropsOnly* parâmetro é `FALSE`, o valor retornado é sempre `NULL`. No entanto, se o ponto especificado está na área de descrição, o *pnArea* parâmetro está definido como `CMFCPropertyGridProperty::ClickDescription`.  
   
 ### <a name="remarks"></a>Comentários  
  O termo *área propriedade* refere-se a qualquer uma do nome, valor, ou expandir as áreas de caixa de um item de controle de grade de propriedade. O *área de descrição* é a zona na parte inferior de um controle de grade de propriedade. Quando você clica em um item de controle de grade de propriedade, a área de descrição exibe uma descrição da propriedade correspondente.  
   
- Esse método define o valor da variável a `pnArea` parâmetro aponta para. A tabela a seguir lista os valores possíveis e áreas correspondentes.  
+ Esse método define o valor da variável a *pnArea* parâmetro aponta para. A tabela a seguir lista os valores possíveis e áreas correspondentes.  
   
 |Valor|Área|  
 |-----------|----------|  
@@ -1127,10 +1127,10 @@ void MarkModifiedProperties(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bMark`  
+ [in] *bMark*  
  `TRUE` Para exibir modificar as propriedades de estilo em negrito; `FALSE` para exibir as propriedades modificadas no estilo normal. O valor padrão é `TRUE`.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` redesenhar o controle de grade de propriedade imediatamente. Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1148,8 +1148,8 @@ virtual void OnChangeSelection(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `pNewSel`|Ponteiro para a propriedade selecionada recentemente.|  
-|[in] `pOldSel`|Ponteiro para a propriedade selecionada anteriormente.|  
+|[in] *pNewSel*|Ponteiro para a propriedade selecionada recentemente.|  
+|[in] *pOldSel*|Ponteiro para a propriedade selecionada anteriormente.|  
   
 ### <a name="remarks"></a>Comentários  
  A implementação padrão desse método não fará nada.  
@@ -1162,7 +1162,7 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  Um ponto, nas coordenadas do cliente.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1176,7 +1176,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1191,10 +1191,10 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Um retângulo que especifica o local desenhar a área de descrição.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1208,7 +1208,7 @@ virtual void OnDrawList(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1223,10 +1223,10 @@ virtual int OnDrawProperty(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
- [in] `pProp`  
+ [in] *pProp*  
  Um ponteiro para um objeto de propriedade.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1242,7 +1242,7 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pProp`  
+ [in] *pProp*  
  Um ponteiro para um objeto de propriedade cujo valor foi alterado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1274,7 +1274,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` redesenhar a lista de propriedades; Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1287,7 +1287,7 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` Para definir o modo alfabético; `FALSE` modo alfabético redefinição. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1303,10 +1303,10 @@ void SetBoolLabels(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszTrue`  
+ [in] *lpszTrue*  
  A cadeia de caracteres de texto a ser exibida para o valor booliano True.  
   
- [in] `lpszFalse`  
+ [in] *lpszFalse*  
  A cadeia de caracteres de texto a ser exibida para o valor booliano False.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1321,10 +1321,10 @@ void SetCurSel(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pProp`  
+ [in] *pProp*  
  Um ponteiro para um objeto de propriedade.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` redesenhar o controle de grade de propriedade imediatamente. Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1345,25 +1345,25 @@ void SetCustomColors(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `clrBackground`  
+ [in] *clrBackground*  
  A cor de plano de fundo de valores de propriedade.  
   
- [in] `clrText`  
+ [in] *clrText*  
  A cor do texto do valor de propriedade e de nomes de propriedade.  
   
- [in] `clrGroupBackground`  
+ [in] *clrGroupBackground*  
  A cor de plano de fundo de um grupo de propriedade.  
   
- [in] `clrGroupText`  
+ [in] *clrGroupText*  
  A nova cor do texto do grupo de propriedades.  
   
- [in] `clrDescriptionBackground`  
+ [in] *clrDescriptionBackground*  
  A cor de plano de fundo da área de descrição.  
   
- [in] `clrDescriptionText`  
+ [in] *clrDescriptionText*  
  A cor do texto na área de descrição.  
   
- [in] `clrLine`  
+ [in] *clrLine*  
  A cor das linhas que são desenhadas entre as propriedades.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1379,7 +1379,7 @@ void SetDescriptionRows(int nDescRows);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nDescRows`  
+ [in] *nDescRows*  
  O número de linhas a serem exibidas na descrição da propriedade.  
   
 ##  <a name="setgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::SetGroupNameFullWidth  
@@ -1392,10 +1392,10 @@ void SetGroupNameFullWidth(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bGroupNameFullWidth`  
+ [in] *bGroupNameFullWidth*  
  `TRUE` Para exibir a largura completa do nome da categoria, independentemente da largura da coluna de nome de propriedade. `FALSE` para limitar a largura do nome da categoria para a largura da coluna de nome de propriedade. O valor padrão é `TRUE`.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Para atualizar o controle de grade de propriedade imediatamente; `FALSE` atualizar o controle quando a próxima redesenhar o evento ocorre. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1411,11 +1411,11 @@ void SetListDelimiter(TCHAR c);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `c`  
+ [in] *c*  
  Um caractere para servir como um delimitador.  
   
 ### <a name="remarks"></a>Comentários  
- Use esse método para definir um caractere delimitador em uma lista de valores de propriedade que são usados no [CMFCPropertyGridProperty::CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) construtor. Esse construtor, definir o `bIsValueList` parâmetro `TRUE`.  
+ Use esse método para definir um caractere delimitador em uma lista de valores de propriedade que são usados no [CMFCPropertyGridProperty::CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) construtor. Esse construtor, definir o *bIsValueList* parâmetro `TRUE`.  
   
  Por padrão, o [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) construtor define o caractere delimitador de vírgula (',').  
   
@@ -1427,7 +1427,7 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bShowDragContext`  
+ [in] *bShowDragContext*  
  `TRUE` redimensionar as colunas nome e valor durante uma operação de redimensionamento; `FALSE` redesenhar as colunas depois que a operação de arrastar seja concluída. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1441,7 +1441,7 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` Para definir o controle de grade de propriedade para o estilo que é usado no Visual Studio .NET; Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1454,7 +1454,7 @@ virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `color`  
+ [in] *cor*  
  Um valor de cor RGB.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1471,13 +1471,13 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `pProp`|Ponteiro para uma propriedade. Este parâmetro não é usado.|  
+|[in] *pProp*|Ponteiro para uma propriedade. Este parâmetro não é usado.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Sempre `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
- O [CMFCPropertyGridCtrl::EndEditItem](#endedititem) método chama esse método para validar os dados. Por padrão, esse método não usa seu `pProp` parâmetro e seu valor de retorno é sempre `TRUE`.  
+ O [CMFCPropertyGridCtrl::EndEditItem](#endedititem) método chama esse método para validar os dados. Por padrão, esse método não usa seu *pProp* parâmetro e seu valor de retorno é sempre `TRUE`.  
   
  Se você substituir esse método, retornar `TRUE` se os dados de propriedade especificado são válidos. Caso contrário, retornará `FALSE`, caso em que a estrutura não atualiza a propriedade.  
   

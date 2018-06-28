@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a38e9ba4c01e5f3d92640f5ec55c63a45d70fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23f3672a3b78b1bf86c481b6991c003267e6b0bf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368853"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037428"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>Classe CMFCRibbonButtonsGroup
 O `CMFCRibbonButtonsGroup` classe permite que você agrupar um conjunto de botões de faixa de opções em um. Todos os botões do grupo são diretamente adjacentes uns aos outros horizontalmente e entre em uma borda.  
@@ -106,7 +106,7 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pButton`  
+ [in] *pButton*  
  Um ponteiro para um botão Adicionar.  
   
 ##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
@@ -118,7 +118,7 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lstButtons`  
+ [in] *lstButtons*  
  Uma lista de ponteiros para os botões que você deseja adicionar.  
   
 ##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
@@ -130,7 +130,7 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pButton`  
+ [in] *pButton*  
  Especifica um botão para adicionar a recém-criado `CMFCRibbonButtonsGroup` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -145,7 +145,7 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `i`  
+ [in] *i*  
  Um índice com base em zero de um botão para retornar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -183,7 +183,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para o contexto de dispositivo do grupo da faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -214,16 +214,16 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para o contexto do `CMFCRibbonButtonsGroup` objeto.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  O retângulo na qual desenhar a imagem.  
   
- [in] `pButton`  
+ [in] *pButton*  
  O botão para qual desenhar a imagem.  
   
- [in] `nImageIndex`  
+ [in] *nImageIndex*  
  O índice da imagem para desenhar o botão (em uma das matrizes três imagem botões normal, realçado ou desabilitado).  
   
 ### <a name="remarks"></a>Comentários  
@@ -248,13 +248,13 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pImages`  
+ [in] *pImages*  
  Imagens regulares.  
   
- [in] `pHotImages`  
+ [in] *pHotImages*  
  Imagens ativas.  
   
- [in] `pDisabledImages`  
+ [in] *pDisabledImages*  
  Imagens desabilitadas.  
   
 ### <a name="remarks"></a>Comentários  
@@ -271,7 +271,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pCategory`  
+ [in] *pCategory*  
  Ponteiro para a categoria pai para definir (os grupos com guias em controles de faixa de opções são chamados de categorias).  
   
 ### <a name="remarks"></a>Comentários  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d61d773e2c35bb67f34ae2b4a989a388d8b4015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 358798e3945378d0fa43fa6e2fa91d686212efab
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371680"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040175"
 ---
 # <a name="colepropertiesdialog-class"></a>Classe COlePropertiesDialog
 Encapsula a caixa de diálogo de propriedades do objeto OLE comuns do Windows.  
@@ -112,7 +112,7 @@ COlePropertiesDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pItem`  
+ *pItem*  
  Ponteiro para o item do documento cujas propriedades estão sendo acessadas.  
   
  *nScaleMin*  
@@ -121,7 +121,7 @@ COlePropertiesDialog(
  *nScaleMax*  
  Máximo de escala porcentagem para a imagem de item do documento.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ponteiro para o pai ou o proprietário da caixa de diálogo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -228,10 +228,10 @@ virtual BOOL OnApplyScale(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pItem`  
+ *pItem*  
  Ponteiro para o item do documento cujas propriedades estão sendo acessadas.  
   
- `nCurrentScale`  
+ *nCurrentScale*  
  Valor numérico da escala de caixa de diálogo.  
   
  *bRelativeToOrig*  
@@ -244,7 +244,7 @@ virtual BOOL OnApplyScale(
  A implementação padrão não fará nada. Você deve substituir esta função para habilitar os controles de dimensionamento.  
   
 > [!NOTE]
->  Antes que seja exibida a caixa de diálogo Propriedades do objeto OLE comum, o framework chama essa função com um **nulo** para `pItem` e -1 para `nCurrentScale`. Isso é feito para determinar se os controles de dimensionamento devem ser habilitados.  
+>  Antes que seja exibida a caixa de diálogo Propriedades do objeto OLE comum, o framework chama essa função com um **nulo** para *pItem* e -1 para *nCurrentScale*. Isso é feito para determinar se os controles de dimensionamento devem ser habilitados.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo MFC c](../../visual-cpp-samples.md)   

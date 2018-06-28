@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 582ffffc4461edd41078f1a89844bdc260b2dd40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e765241029c0380dce7b28fa9fb4f9c84410d515
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376013"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041952"
 ---
 # <a name="cheaderctrl-class"></a>Classe CHeaderCtrl
 Fornece a funcionalidade de controle de cabeçalho comuns do Windows.  
@@ -196,7 +196,7 @@ BOOL ClearFilter(int nColumn);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nColumn`  
+ *nColumn*  
  Valor de coluna que indica quais filtrar para limpar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -220,23 +220,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwStyle`  
+ *dwStyle*  
  Especifica o estilo do controle de cabeçalho. Para obter uma descrição dos estilos de controle de cabeçalho, consulte [estilos de controle de cabeçalho](http://msdn.microsoft.com/library/windows/desktop/bb775241) no SDK do Windows.  
   
- `rect`  
+ *Rect*  
  Especifica o tamanho e a posição do controle de cabeçalho. Ele pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Especifica a janela do pai do controle de cabeçalho, geralmente um `CDialog`. Ele não deve ser **nulo**.  
   
- `nID`  
+ *nID*  
  Especifica a ID. do controle de cabeçalho  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a inicialização foi bem-sucedida; Caso contrário, zero.  
   
 ### <a name="remarks"></a>Comentários  
- Você pode criar um `CHeaderCtrl` objeto em duas etapas. Primeiro, chame o construtor e, em seguida, chamar **criar**, que cria o controle de cabeçalho e anexa-o para o `CHeaderCtrl` objeto.  
+ Você pode criar um `CHeaderCtrl` objeto em duas etapas. Primeiro, chame o construtor e, em seguida, chamar `Create`, que cria o controle de cabeçalho e anexa-o para o `CHeaderCtrl` objeto.  
   
  Além dos estilos de controle de cabeçalho, você pode usar os seguintes estilos de controle comum para determinar como o controle de cabeçalho posiciona e redimensionado (consulte [estilos de controle comuns](http://msdn.microsoft.com/library/windows/desktop/bb775498) para obter mais informações):  
   
@@ -264,7 +264,7 @@ virtual BOOL Create(
   
 - **WS_TABSTOP** Especifica um número de controles por meio do qual o usuário pode mover usando a tecla TAB. A tecla TAB move o usuário para o próximo controle especificado pelo **WS_TABSTOP** estilo.  
   
- Se desejar usar estilos de windows estendida com o controle, chame [CreateEx](#createex) em vez de **criar**.  
+ Se desejar usar estilos de windows estendida com o controle, chame [CreateEx](#createex) em vez de `Create`.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
@@ -282,26 +282,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwExStyle`  
- Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o `dwExStyle` parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
+ *dwExStyle*  
+ Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o *dwExStyle* parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  Estilo do controle de cabeçalho. Para obter uma descrição dos estilos de controle de cabeçalho, consulte [estilos de controle de cabeçalho](http://msdn.microsoft.com/library/windows/desktop/bb775241) no SDK do Windows. Consulte [criar](#create) para obter uma lista de estilos adicionais.  
   
- `rect`  
- Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e a posição da janela deve ser criada, nas coordenadas do cliente de `pParentWnd`.  
+ *Rect*  
+ Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e a posição da janela deve ser criada, nas coordenadas do cliente de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para a janela que é o pai do controle.  
   
- `nID`  
+ *nID*  
  ID de janela filho. do controle  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Use `CreateEx` em vez de **criar** para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_**.  
+ Use `CreateEx` em vez de `Create` para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_**.  
   
 ##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage  
  Cria uma versão transparente da imagem de um item dentro de um controle de cabeçalho.  
@@ -311,7 +311,7 @@ CImageList* CreateDragImage(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  O índice de base zero do item dentro do controle de cabeçalho. A imagem atribuída a este item é a base para a imagem transparente.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -330,7 +330,7 @@ BOOL DeleteItem(int nPos);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nPos`  
+ *nPos*  
  Especifica o índice com base em zero do item a ser excluído.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -347,7 +347,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Um ponteiro para um [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) estrutura que descreve o item a ser pintado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -355,7 +355,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  Por padrão, essa função de membro não faz nada. Substituir essa função de membro para implementar o desenho de um desenho proprietário `CHeaderCtrl` objeto.  
   
- O aplicativo deve restaurar todos os objetos de interface (GDI) do dispositivo gráficos selecionados para o contexto de exibição fornecido no `lpDrawItemStruct` antes desse membro função termina.  
+ O aplicativo deve restaurar todos os objetos de interface (GDI) do dispositivo gráficos selecionados para o contexto de exibição fornecido no *lpDrawItemStruct* antes desse membro função termina.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
@@ -370,10 +370,10 @@ BOOL EditFilter(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nColumn`  
+ *nColumn*  
  A coluna para editar.  
   
- `bDiscardChanges`  
+ *bDiscardChanges*  
  Um valor que especifica como tratar o usuário de edição do alterações se o usuário estiver editando o filtro quando o [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312) mensagem é enviada.  
   
  Especifique `true` para descartar as alterações feitas pelo usuário, ou `false` para aceitar as alterações feitas pelo usuário.  
@@ -452,10 +452,10 @@ BOOL GetItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nPos`  
+ *nPos*  
  Especifica o índice de base zero do item para recuperar.  
   
- `pHeaderItem`  
+ *pHeaderItem*  
  Ponteiro para um [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) estrutura que recebe o novo item. Essa estrutura é usada com o `InsertItem` e `SetItem` funções de membro. Definir os sinalizadores no **máscara** elemento Certifique-se de que os valores nos elementos correspondentes corretamente são preenchidos após retornar. Se o **máscara** é definido como zero, os valores nos elementos de estrutura são sem sentido.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `iItem`|Índice de base zero de um item de cabeçalho cujo estilo é `HDF_SPLITBUTTON`. Para obter mais informações, consulte o `fmt` membro o [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) estrutura.|  
-|[out] `lpRect`|Ponteiro para um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura para receber as informações de retângulo delimitador.|  
+|[in] *item*|Índice de base zero de um item de cabeçalho cujo estilo é `HDF_SPLITBUTTON`. Para obter mais informações, consulte o `fmt` membro o [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) estrutura.|  
+|[out] *lpRect*|Ponteiro para um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura para receber as informações de retângulo delimitador.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` Se essa função for bem-sucedida; Caso contrário, `false`.  
@@ -519,10 +519,10 @@ BOOL GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  O índice de base zero do item de controle de cabeçalho.  
   
- `lpRect`  
+ *lpRect*  
  Um ponteiro para o endereço de um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que recebe as informações de retângulo delimitador.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -541,10 +541,10 @@ BOOL GetOrderArray(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `piArray`  
+ *piArray*  
  Um ponteiro para o endereço de um buffer que recebe os valores de índice dos itens no controle de cabeçalho, na ordem em que aparecem da esquerda para a direita.  
   
- `iCount`  
+ *iCount*  
  O número de itens de controle de cabeçalho. Deve ser não negativo.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[out] `lpRect`|Ponteiro para um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que recebe as informações de retângulo delimitador.|  
+|[out] *lpRect*|Ponteiro para um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que recebe as informações de retângulo delimitador.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` Se essa função for bem-sucedida; Caso contrário, `false`.  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in, out] `phdhti`|Ponteiro para um [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) estrutura que especifica o ponto de teste e recebe os resultados do teste.|  
+|[out no] *phdhti*|Ponteiro para um [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) estrutura que especifica o ponto de teste e recebe os resultados do teste.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  O índice com base em zero do item de cabeçalho, se houver, na posição especificada; Caso contrário, retornará -1.  
@@ -626,7 +626,7 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nPos`  
+ *nPos*  
  O índice de base zero do item a ser inserido. Se o valor for zero, o item é inserido no início do controle de cabeçalho. Se o valor for maior que o valor máximo, o item é inserido no final do controle de cabeçalho.  
   
  *phdi*  
@@ -683,7 +683,7 @@ int SetBitmapMargin(int nWidth);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nWidth`  
+ *nWidth*  
  Largura, especificada em pixels, da margem ao redor de um bitmap dentro de um controle de cabeçalho existente.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `iItem`|Índice de base zero de um item de cabeçalho.|  
+|[in] *item*|Índice de base zero de um item de cabeçalho.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` Se esse método for bem-sucedida; Caso contrário, `false`.  
@@ -753,10 +753,10 @@ int SetHotDivider(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pt`  
+ *pt*  
  A posição do ponteiro. O controle de cabeçalho realça o divisor apropriado com base na posição do ponteiro.  
   
- `nIndex`  
+ *nIndex*  
  O índice da divisória realçado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -776,7 +776,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pImageList`  
+ *pImageList*  
  Um ponteiro para um `CImageList` objeto que contém a lista de imagens a ser atribuído ao controle de cabeçalho.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -798,10 +798,10 @@ BOOL SetItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nPos`  
+ *nPos*  
  O índice de base zero do item a ser manipulada.  
   
- `pHeaderItem`  
+ *pHeaderItem*  
  Ponteiro para um [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) estrutura que contém informações sobre o novo item.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -820,10 +820,10 @@ BOOL SetOrderArray(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `iCount`  
+ *iCount*  
  O número de itens de controle de cabeçalho.  
   
- `piArray`  
+ *piArray*  
  Um ponteiro para o endereço de um buffer que recebe os valores de índice dos itens no controle de cabeçalho, na ordem em que aparecem da esquerda para a direita.  
   
 ### <a name="return-value"></a>Valor de retorno  

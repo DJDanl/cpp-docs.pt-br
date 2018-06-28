@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 808c88e3a98df12d35afa9ce207f57456520b169
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09f92440a926f547f051dd0bee73468a1958813e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367640"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041020"
 ---
 # <a name="chttpconnection-class"></a>Classe CHttpConnection
 Gerencia a conexão a um servidor HTTP.  
@@ -100,36 +100,36 @@ CHttpConnection(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pSession`  
+ *pSession*  
  Um ponteiro para um [CInternetSession](../../mfc/reference/cinternetsession-class.md) objeto.  
   
- `hConnected`  
+ *hConnected*  
  Um identificador para uma conexão de Internet.  
   
- `pstrServer`  
+ *pstrServer*  
  Um ponteiro para uma cadeia de caracteres que contém o nome do servidor.  
   
- `dwContext`  
- O identificador de contexto para o `CInternetConnection` objeto. Consulte **comentários** para obter mais informações sobre `dwContext`.  
+ *dwContext*  
+ O identificador de contexto para o `CInternetConnection` objeto. Consulte **comentários** para obter mais informações sobre *dwContext*.  
   
- `nPort`  
+ *nPort*  
  O número que identifica a porta de Internet para esta conexão.  
   
- `pstrUserName`  
+ *pstrUserName*  
  Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do usuário para fazer logon. Se **nulo**, o padrão é anônimo.  
   
- `pstrPassword`  
- Um ponteiro para uma cadeia de caracteres terminada em nulo que especifica a senha a ser usada para fazer logon. Se ambos os `pstrPassword` e `pstrUserName` são **nulo**, a senha anônima padrão é o nome de email do usuário. Se `pstrPassword` é **nulo** (ou uma cadeia de caracteres vazia), mas `pstrUserName` não é **nulo**, uma senha em branco será usada. A tabela a seguir descreve o comportamento para as quatro configurações possíveis de `pstrUserName` e `pstrPassword`:  
+ *pstrPassword*  
+ Um ponteiro para uma cadeia de caracteres terminada em nulo que especifica a senha a ser usada para fazer logon. Se ambos os *pstrPassword* e *pstrUserName* são **nulo**, a senha anônima padrão é o nome de email do usuário. Se *pstrPassword* é **nulo** (ou uma cadeia de caracteres vazia), mas *pstrUserName* não é **nulo**, uma senha em branco será usada. A tabela a seguir descreve o comportamento para as quatro configurações possíveis de *pstrUserName* e *pstrPassword*:  
   
-|`pstrUserName`|`pstrPassword`|Nome de usuário enviado ao servidor FTP|Senha enviada ao servidor FTP|  
+|*pstrUserName*|*pstrPassword*|Nome de usuário enviado ao servidor FTP|Senha enviada ao servidor FTP|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
 |**NULO** ou ""|**NULO** ou ""|"anônimo"|Nome de email do usuário|  
-|Não- **nulo** cadeia de caracteres|**NULO** ou ""|`pstrUserName`|" "|  
+|Não- **nulo** cadeia de caracteres|**NULO** ou ""|*pstrUserName*|" "|  
 |**NULO** não **nulo** cadeia de caracteres|**ERROR**|**ERROR**||  
-|Não- **nulo** cadeia de caracteres|Não- **nulo** cadeia de caracteres|`pstrUserName`|`pstrPassword`|  
+|Não- **nulo** cadeia de caracteres|Não- **nulo** cadeia de caracteres|*pstrUserName*|*pstrPassword*|  
   
- `dwFlags`  
- Qualquer combinação da **Flag Internet _ _\***  sinalizadores. Consulte a tabela de **comentários** seção [CHttpConnection::OpenRequest](#openrequest) para obter uma descrição de `dwFlags` valores.  
+ *dwFlags*  
+ Qualquer combinação da **Flag Internet _ _\***  sinalizadores. Consulte a tabela de **comentários** seção [CHttpConnection::OpenRequest](#openrequest) para obter uma descrição de *dwFlags* valores.  
   
 ### <a name="remarks"></a>Comentários  
  Você nunca criar um `CHttpConnection` diretamente. Em vez disso, você cria um objeto chamando [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  
@@ -159,31 +159,31 @@ CHttpFile* OpenRequest(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pstrVerb`  
+ *pstrVerb*  
  Um ponteiro para uma cadeia de caracteres que contém o verbo a ser usado na solicitação. Se `NULL`, "GET" é usado.  
   
- `pstrObjectName`  
+ *pstrObjectName*  
  Um ponteiro para uma cadeia de caracteres que contém o objeto de destino do verbo especificado. Isso geralmente é um nome de arquivo, um módulo executável ou um especificador de pesquisa.  
   
- `pstrReferer`  
- Um ponteiro para uma cadeia de caracteres que especifica o endereço (URL) do documento do qual a URL na solicitação ( `pstrObjectName`) foi obtido. Se `NULL`, nenhum cabeçalho HTTP especificado.  
+ *pstrReferer*  
+ Um ponteiro para uma cadeia de caracteres que especifica o endereço (URL) do documento do qual a URL na solicitação ( *pstrObjectName*) foi obtido. Se `NULL`, nenhum cabeçalho HTTP especificado.  
   
- `dwContext`  
- O identificador de contexto para o `OpenRequest` operação. Consulte a seção de comentários para obter mais informações `dwContext`.  
+ *dwContext*  
+ O identificador de contexto para o `OpenRequest` operação. Consulte a seção de comentários para obter mais informações *dwContext*.  
   
- `ppstrAcceptTypes`  
- Um ponteiro para uma matriz com terminação nula de `LPCTSTR` ponteiros em cadeias de caracteres que indica os tipos de conteúdo aceito pelo cliente. Se `ppstrAcceptTypes` é `NULL`, os servidores de interpretam o que o cliente só aceita documentos do tipo "texto / *" (ou seja, documentos de texto somente e não imagens ou outros arquivos binários). O tipo de conteúdo é equivalente a tipo_de_conteúdo variável CGI, que identifica o tipo de dados para consultas que foram anexados informações, como HTTP POST e PUT.  
+ *ppstrAcceptTypes*  
+ Um ponteiro para uma matriz com terminação nula de `LPCTSTR` ponteiros em cadeias de caracteres que indica os tipos de conteúdo aceito pelo cliente. Se *ppstrAcceptTypes* é `NULL`, os servidores de interpretam o que o cliente só aceita documentos do tipo "texto / *" (ou seja, documentos de texto somente e não imagens ou outros arquivos binários). O tipo de conteúdo é equivalente a tipo_de_conteúdo variável CGI, que identifica o tipo de dados para consultas que foram anexados informações, como HTTP POST e PUT.  
   
- `pstrVersion`  
+ *pstrVersion*  
  Um ponteiro para uma cadeia de caracteres que define a versão HTTP. Se `NULL`, "HTTP/1.0" é usado.  
   
- `dwFlags`  
- Qualquer combinação dos sinalizadores Internet _ Flag _ *. Consulte a seção comentários para obter uma descrição de possíveis `dwFlags` valores.  
+ *dwFlags*  
+ Qualquer combinação dos sinalizadores Internet _ Flag _ *. Consulte a seção comentários para obter uma descrição de possíveis *dwFlags* valores.  
   
- `nVerb`  
+ *nVerb*  
  Um número associado ao tipo de solicitação HTTP. Pode ser um dos seguintes:  
   
-|Tipo de solicitação HTTP|Valor `nVerb`|  
+|Tipo de solicitação HTTP|*nVerb* valor|  
 |-----------------------|-------------------|  
 |`HTTP_VERB_POST`|0|  
 |`HTTP_VERB_GET`|1|  
@@ -197,7 +197,7 @@ CHttpFile* OpenRequest(
  Um ponteiro para o [CHttpFile](../../mfc/reference/chttpfile-class.md) objeto solicitado.  
   
 ### <a name="remarks"></a>Comentários  
- `dwFlags` pode ser um dos seguintes itens:  
+ *dwFlags* pode ser um dos seguintes:  
   
 |Sinalizador de Internet|Descrição|  
 |-------------------|-----------------|  

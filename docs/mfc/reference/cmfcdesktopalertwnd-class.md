@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf09b2f598391a599df5106fcf8933c580dd30e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1947f93e65126df403feee658ade15648b081076
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370650"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039980"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>Classe CMFCDesktopAlertWnd
 O `CMFCDesktopAlertWnd` classe implementa a funcionalidade de uma caixa de diálogo sem janela restrita que aparece na tela para informar ao usuário sobre um evento.  
@@ -163,22 +163,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] [out] `pWndOwner`  
+ [in] [out] *pWndOwner*  
  Especifica o proprietário da janela do alerta. Proprietário receberá todas as notificações para a janela da área de trabalho de alerta. Este valor pode não ser `NULL`.  
   
- [in] `uiDlgResID`  
+ [in] *uiDlgResID*  
  Especifica a ID de recurso da janela do alerta.  
   
- [in] `hMenu`  
+ [in] *hMenu*  
  Especifica o menu que é exibido quando o usuário clica no botão de menu. Se `NULL`, não é exibido no botão de menu.  
   
- [in] `ptPos`  
+ [in] *ptPos*  
  Especifica a posição inicial onde a janela de alerta é exibida, usando coordenadas da tela. Se esse parâmetro for (-1, -1), a janela de alerta é exibida no canto inferior direito da tela.  
   
- [in] `pRTIDlgBar`  
+ [in] *pRTIDlgBar*  
  Informações de classe de tempo de execução para uma classe de caixa de diálogo personalizada que abrange a área cliente da janela do alerta.  
   
- [in] `params`  
+ [in] *params*  
  Especifica os parâmetros que são usados para criar uma janela de alerta.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -297,7 +297,7 @@ virtual BOOL OnBeforeShow(CPoint&);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `CPoint&`  
+ [in] *CPoint &*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -311,7 +311,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Este parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `wParam`  
- [in] `lParam`  
+ [in] *wParam*  
+ [in] *lParam*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -345,7 +345,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -357,7 +357,7 @@ BOOL ProcessCommand(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `hwnd`  
+ [in] *hwnd*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -371,7 +371,7 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nSpeed`  
+ [in] *nSpeed*  
  Especifica a velocidade da animação nova, em milissegundos.  
   
 ### <a name="remarks"></a>Comentários  
@@ -385,7 +385,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `type`  
+ [in] *tipo*  
  Especifica o tipo de animação.  
   
 ### <a name="remarks"></a>Comentários  
@@ -409,7 +409,7 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nTime`  
+ [in] *nTime*  
  O tempo, em milissegundos, que expira antes que a janela de alerta é fechado automaticamente.  
   
 ### <a name="remarks"></a>Comentários  
@@ -423,7 +423,7 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bSmallCaption`  
+ [in] *bSmallCaption*  
  `TRUE` para especificar que a janela de alerta exibe uma legenda curta; Caso contrário, `FALSE` para especificar que a janela de alerta exibe uma legenda de tamanho regular.  
   
 ### <a name="remarks"></a>Comentários  
@@ -437,7 +437,7 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nTransparency`  
+ [in] *nTransparency*  
  Especifica o nível de transparência. Esse valor deve estar entre 0 e 255, inclusive. Quanto maior o valor, o mais opaco a janela.  
   
 ### <a name="remarks"></a>Comentários  

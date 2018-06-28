@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 943dc2e56b896531b7deeb14a17602c97484926c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e32b127a31cf27fa2bddb189335d2edf19a8f7de
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378221"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041189"
 ---
 # <a name="cmdiframewndex-class"></a>Classe CMDIFrameWndEx
 Estende a funcionalidade do [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), uma janela do quadro de Interface de documentos múltiplos (MDI).  
@@ -314,10 +314,10 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Ponteiro para o painel para registrar.  
   
- [in] `bTail`  
+ [in] *bTail*  
  Especifica se deseja adicionar este painel para o final da lista.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -341,7 +341,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `hdwp`  
+ [in] *hdwp*  
  Identifica a estrutura da posição da janela de múltiplos. Você pode obter esse valor chamando `BeginDeferWindowPos`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -355,7 +355,7 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `pnMDITabsType`  
+ [out] *pnMDITabsType*  
  Um ponteiro para uma variável de inteiro que indica quais recursos estão habilitados:  
   
 -   0: todos os recursos são desabilitados.  
@@ -395,7 +395,7 @@ virtual CMDIChildWndEx* ControlBarToTabbedDocument(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pBar`  
+ *pBar*  
  Um ponteiro para o painel de encaixe para converter.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -414,10 +414,10 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpcszDocName`  
+ [in] *lpcszDocName*  
  Uma cadeia de caracteres de texto que contém um identificador de documento. Normalmente, é o caminho completo de um arquivo de documento.  
   
- [in] `pObj`  
+ [in] *pObj*  
  Um ponteiro para um objeto definido pelo usuário. Por exemplo, um desenvolvedor pode criar uma estrutura de dados específicos do aplicativo que descreve o documento e informando como o documento deve ser inicializado durante a inicialização.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -445,10 +445,10 @@ virtual CMDIChildWndEx* CreateNewWindow(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpcszDocName`  
+ [in] *lpcszDocName*  
  O nome do documento.  
   
- [in] `pObj`  
+ [in] *pObj*  
  Reservado para uso futuro.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -465,13 +465,13 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
+ [in] *pBar*  
  Ponteiro para encaixar o painel.  
   
- [in] `nDockBarID`  
+ [in] *nDockBarID*  
  Especifica os lados para encaixar a janela do quadro.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  Não usado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -492,17 +492,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
+ [in] *pBar*  
  Um ponteiro para o painel de encaixe.  
   
- [in] `pLeftOf`  
+ [in] *pLeftOf*  
  Um ponteiro para o painel que serve como o local de encaixe. .  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna `TRUE` se a operação for bem-sucedida. Caso contrário, retornará `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
- Chame esse método para encaixar a vários objetos de painel em uma ordem predefinida. Esse método encaixa painel especificado por `pBar` à esquerda do painel especificado pelo `pLeftOf`.  
+ Chame esse método para encaixar a vários objetos de painel em uma ordem predefinida. Esse método encaixa painel especificado por *pBar* à esquerda do painel especificado por *pLeftOf*.  
   
 ### <a name="example"></a>Exemplo  
  A exemplo a seguir mostra como o `DockPaneLeftOf` método é usado o [VisualStudioDemo exemplo: aplicativo MFC do Visual Studio](../../visual-cpp-samples.md).  
@@ -517,7 +517,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  Especifica os lados da janela do quadro principal será habilitado. Use um ou mais dos sinalizadores a seguir.  
   
 - `CBRS_ALIGN_LEFT`  
@@ -546,7 +546,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  Especifica o estilo de encaixe que você deseja aplicar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -567,7 +567,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnableMenu`  
+ [in] *bEnableMenu*  
  `TRUE` para mostrar o menu principal no modo de tela inteira, ou `FALSE` para ocultá-la.  
   
 ### <a name="remarks"></a>Comentários  
@@ -580,7 +580,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiFullScreenCmd`  
+ [in] *uiFullScreenCmd*  
  A ID de um comando que habilita ou desabilita o modo de tela inteira.  
   
 ### <a name="remarks"></a>Comentários  
@@ -594,7 +594,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar o carregamento do estado do encaixe, `FALSE` para desabilitar o carregamento do estado de encaixe.  
   
 ### <a name="remarks"></a>Comentários  
@@ -609,10 +609,10 @@ void EnableMDITabbedGroups(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  Se `TRUE`, o recurso de grupos com guias MDI está habilitado; se `FALSE`, o recurso de grupos com guias MDI está desabilitado.  
   
- [in] `params`  
+ [in] *params*  
  Especifica os parâmetros que se aplica a estrutura para janelas filho que são criadas na área cliente MDI.  
   
 ### <a name="remarks"></a>Comentários  
@@ -628,9 +628,9 @@ void EnableMDITabbedGroups(
   
 -   Seu aplicativo pode salvar o layout atual de janelas com guias e a lista de documentos abertos no momento.  
   
- Se você chamar esse método com `bEnable` definida como `FALSE`, `params` será ignorado.  
+ Se você chamar esse método com *bAtivar* definida como `FALSE`, *params* será ignorado.  
   
- Mesmo se MDI tabbed groups já estiver habilitado, você pode chamar esse método novamente para modificar as configurações de janelas filho. Chame o método com `bEnable` definida como `TRUE` e modificar os membros do `CMDITabInfo` objeto que são especificados pelo `params` parâmetro.  
+ Mesmo se MDI tabbed groups já estiver habilitado, você pode chamar esse método novamente para modificar as configurações de janelas filho. Chame o método com *bAtivar* definida como `TRUE` e modificar os membros do `CMDITabInfo` objeto que são especificados pelo *params* parâmetro.  
   
  Para obter mais informações sobre como usar MDI grupos com guias, consulte [grupos com guias MDI](../../mfc/mdi-tabbed-groups.md).  
   
@@ -654,33 +654,33 @@ void EnableMDITabs(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bEnable`  
+ *bAtivar*  
  Especifica se as guias estão habilitadas.  
   
- `bIcons`  
+ *bIcons*  
  Especifica se ícones devem ser exibidos nas guias.  
   
- `tabLocation`  
+ *tabLocation*  
  Especifica o local dos rótulos de guia.  
   
- `bTabCloseButton`  
+ *bTabCloseButton*  
  Especifica se deve exibir botões Fechar guia.  
   
- `style`  
+ *style*  
  Especifica o estilo das guias. Use `STYLE_3D_SCROLLED` para guias regulares ou `STYLE_3D_ONENOTE` para as guias do Microsoft OneNote.  
   
- `bTabCustomTooltips`  
+ *bTabCustomTooltips*  
  Especifica se as dicas de ferramenta personalizadas estão habilitadas.  
   
- `bActiveTabCloseButton`  
+ *bActiveTabCloseButton*  
  Se `TRUE`, um **fechar** botão será exibido na guia ativa em vez de no canto direito da área da guia.  
   
 ### <a name="remarks"></a>Comentários  
  Chame este método para habilitar ou desabilitar o recurso de guias MDI para a janela do quadro MDI. Quando habilitada, todas as janelas filho são exibidas como guias.  
   
- Os rótulos de guia podem ser localizados na parte superior ou inferior do quadro, dependendo da configuração do parâmetro `tabLocation`. Você pode especificar um `CMFCTabCtrl::LOCATION_BOTTOM` (a configuração padrão) ou `CMFCTabCtrl::LOCATION_TOP`.  
+ Os rótulos de guia podem ser localizados na parte superior ou inferior do quadro, dependendo da configuração do parâmetro *tabLocation*. Você pode especificar um `CMFCTabCtrl::LOCATION_BOTTOM` (a configuração padrão) ou `CMFCTabCtrl::LOCATION_TOP`.  
   
- Se `bTabCustomTooltips` é `TRUE`, um `AFX_WM_ON_GET_TAB_TOOLTIP` mensagem será enviada para a janela do quadro principal. Seu código pode lidar com essa mensagem e fornecem a estrutura com dicas de ferramentas personalizadas para as guias MDI.  
+ Se *bTabCustomTooltips* é `TRUE`, um `AFX_WM_ON_GET_TAB_TOOLTIP` mensagem será enviada para a janela do quadro principal. Seu código pode lidar com essa mensagem e fornecem a estrutura com dicas de ferramentas personalizadas para as guias MDI.  
   
 ### <a name="example"></a>Exemplo  
  A exemplo a seguir mostra como `EnableMDITabs` é usado no [MDITabsDemo exemplo: aplicativo do MFC com guias MDI](../../visual-cpp-samples.md).  
@@ -695,7 +695,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bLastActiveTab`  
+ [in] *bLastActiveTab*  
  Se `TRUE`, habilitar a ativação da última guia ativa. Se `FALSE`, desabilitar a ativação da última guia ativa.  
   
 ### <a name="remarks"></a>Comentários  
@@ -723,22 +723,22 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  Se `TRUE`, a manipulação automática de menu do painel está habilitada; se `FALSE`, a manipulação automática está desabilitada.  
   
- [in] `uiCustomizeCmd`  
+ [in] *uiCustomizeCmd*  
  ID do comando de **personalizar** item de menu. Este item de menu geralmente é adicionado ao final da lista de painéis.  
   
- [in] `strCustomizeLabel`  
+ [in] *strCustomizeLabel*  
  O texto a ser exibido para o **personalizar** item de menu (de localização).  
   
- [in] `uiViewToolbarsMenuEntryID`  
+ [in] *uiViewToolbarsMenuEntryID*  
  Especifica a ID de um item de menu da barra de ferramentas que abre o menu do painel. Geralmente, isso é o **barras de ferramentas** submenu a **exibição** menu.  
   
- [in] `bContextMenuShowsToolbarsOnly`  
+ [in] *bContextMenuShowsToolbarsOnly*  
  Se `TRUE`, o menu de painel exibe apenas uma lista das barras de ferramentas. Se `FALSE`, o menu exibe uma lista de barras de ferramentas e barras de encaixe.  
   
- [in] `bViewMenuShowsToolbarsOnly`  
+ [in] *bViewMenuShowsToolbarsOnly*  
  Se `TRUE`, o menu de painel exibe apenas uma lista das barras de ferramentas. Se `FALSE`, o menu exibe uma lista de barras de ferramentas e barras de encaixe.  
   
 ### <a name="remarks"></a>Comentários  
@@ -768,20 +768,20 @@ void EnableWindowsDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiMenuId`  
+ [in] *uiMenuId*  
  Especifica a ID de recurso de um menu.  
   
- [in] `lpszMenuText`  
+ [in] *lpszMenuText*  
  Especifica o texto do item.  
   
- [in] `bShowHelpButton`  
+ [in] *bShowHelpButton*  
  Especifica se deve exibir um **ajuda** botão na caixa de diálogo de gerenciamento do windows.  
   
- [in] `uiMenuTextResId`  
+ [in] *uiMenuTextResId*  
  O identificador do recurso de cadeia de caracteres que contém a cadeia de caracteres de texto do item.  
   
 ### <a name="remarks"></a>Comentários  
- Use esse método para inserir um item de menu cujo comando chama uma caixa de diálogo de gerenciamento de janela do MDI filho ( [CMFCWindowsManagerDialog classe](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). O novo item é inserido no menu especificado por `uiMenuId`. Chamar `EnableWindowsDialog` ao processar o `WM_CREATE` mensagem.  
+ Use esse método para inserir um item de menu cujo comando chama uma caixa de diálogo de gerenciamento de janela do MDI filho ( [CMFCWindowsManagerDialog classe](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). O novo item é inserido no menu especificado por *uiMenuId*. Chamar `EnableWindowsDialog` ao processar a mensagem WM_CREATE.  
   
 ### <a name="example"></a>Exemplo  
  A exemplo a seguir mostra como `EnableWindowsDialog` é usado no [VisualStudioDemo exemplo: aplicativo MFC do Visual Studio](../../visual-cpp-samples.md).  
@@ -884,7 +884,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nID`  
+ [in] *nID*  
  A ID do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -925,10 +925,10 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pButton`  
+ [in] *pButton*  
  Um ponteiro para um botão de barra de ferramentas.  
   
- [in] `strTTText`  
+ [in] *strTTText*  
  O texto de dica de ferramenta a ser exibida para o botão.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -947,20 +947,20 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Um ponteiro para o painel a ser inserido.  
   
- [in] `pTarget`  
+ [in] *pTarget*  
  Um ponteiro para o painel antes ou após o qual o painel.  
   
- [in] `bAfter`  
- Se `TRUE`, `pControlBar` é inserida depois `pTarget`. Se `FALSE`, `pControlBar` é inserida antes `pTarget`.  
+ [in] *bDepois*  
+ Se `TRUE`, *pControlBar* é inserida depois *pTarget*. Se `FALSE`, *pControlBar* é inserida antes *pTarget*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` Se o método foi registrado com êxito o painel, `FALSE` se o painel já foi registrado com o Gerenciador de encaixe.  
   
 ### <a name="remarks"></a>Comentários  
- Use esse método para informar ao Gerenciador de encaixe sobre um painel especificado pelo `pControlBar`. O Gerenciador de encaixe alinhará este painel de acordo com o alinhamento e a posição na lista interna do gerente de encaixe do painel.  
+ Use esse método para informar ao Gerenciador de encaixe sobre um painel especificado por *pControlBar*. O Gerenciador de encaixe alinhará este painel de acordo com o alinhamento e a posição na lista interna do gerente de encaixe do painel.  
   
 ##  <a name="isfullscreen"></a>  CMDIFrameWndEx::IsFullScreen  
  Determina se a janela do quadro está no modo de tela inteira.  
@@ -996,7 +996,7 @@ BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWnd`  
+ [in] *pWnd*  
  Um ponteiro para a janela com guias.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1023,13 +1023,13 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  O ponto especificado em coordenadas da tela.  
   
- [in] `dwBarAlignment`  
+ [in] *dwBarAlignment*  
  Especifica que o ponto está próximo de borda. Os valores possíveis são `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, e `CBRS_ALIGN_BOTTOM`  
   
- [in] `bOuterEdge`  
+ [in] *bOuterEdge*  
  `TRUE` Se o ponto está próximo a borda externa do site do encaixe; `FALSE` caso contrário.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1062,16 +1062,16 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIDResource`  
+ [in] *nIDResource*  
  A ID de um recurso compartilhado associado com a janela do quadro.  
   
- [in] `dwDefaultStyle`  
+ [in] *dwDefaultStyle*  
  O estilo da janela do quadro.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Um ponteiro para o pai do quadro.  
   
- [in] `pContext`  
+ [in] *pContext*  
  Um ponteiro para um [CCreateContext estrutura](../../mfc/reference/ccreatecontext-structure.md). Esse parâmetro pode ser `NULL`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1085,7 +1085,7 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Especifica o nome do perfil.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1115,7 +1115,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bNext`  
+ [in] *bAvançar*  
  Se `TRUE`, mover guia para o próximo grupo de guias. Se `FALSE`, mova-o para o grupo de guias anterior.  
   
 ##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup  
@@ -1126,7 +1126,7 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bVert`  
+ [in] *bVert*  
  Especifica o alinhamento de grupo novo. Se `TRUE`, o novo grupo é alinhado verticalmente. Se `FALSE`, o novo grupo é alinhado horizontalmente.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1178,7 +1178,7 @@ virtual BOOL NegotiateBorderSpace(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nBorderCmd`  
+ [in] *nBorderCmd*  
  Contém um dos seguintes valores da enumeração `CFrameWnd::BorderCmd`:  
   
 - `borderGet` = 1  
@@ -1187,7 +1187,7 @@ virtual BOOL NegotiateBorderSpace(
   
 - `borderSet` = 3  
   
- [in, out] `lpRectBorder`  
+ [out no] *lpRectBorder*  
  Ponteiro para um [estrutura RECT](../../mfc/reference/rect-structure1.md) ou um [CRect classe](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica as coordenadas da borda.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1204,7 +1204,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWnd`  
+ [in] *pWnd*  
  Ponteiro para o painel que está sendo fechado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1223,7 +1223,7 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWnd`  
+ [in] *pWnd*  
  Ponteiro para a janela do quadro simplificado que está sendo fechado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1242,7 +1242,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pMenuPopup`  
+ [in] *pMenuPopup*  
  Ponteiro para um menu pop-up.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1260,17 +1260,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nID`  
+ [in] *nID*  
  A ID de comando.  
   
- [in] `nCode`  
- Identifica o código de notificação de comando. Consulte [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) para obter mais informações sobre os valores de `nCode`.  
+ [in] *nCode*  
+ Identifica o código de notificação de comando. Consulte [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) para obter mais informações sobre os valores de *nCode*.  
   
- [in] `pExtra`  
- Usada de acordo com o valor de `nCode`. Consulte [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) para obter mais informações sobre `pExtra`.  
+ [in] *pExtra*  
+ Usada de acordo com o valor de *nCode*. Consulte [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) para obter mais informações sobre *pExtra*.  
   
- [in, out] `pHandlerInfo`  
- Normalmente, esse parâmetro deve ser `NULL`. Se não `NULL`, `OnCmdMsg` preenche o `pTarget` e `pmf` membros o `pHandlerInfo` estrutura em vez de expedir o comando.  
+ [out no] *pHandlerInfo*  
+ Normalmente, esse parâmetro deve ser `NULL`. Se não `NULL`, `OnCmdMsg` preenche o `pTarget` e `pmf` membros a *pHandlerInfo* estrutura em vez de expedir o comando.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a mensagem é lida; Caso contrário, 0.  
@@ -1286,13 +1286,13 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo.  
   
- [in] `pMenuButton`  
+ [in] *pMenuButton*  
  Ponteiro para o botão de menu.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Retângulo delimitador da imagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1302,7 +1302,7 @@ virtual BOOL OnDrawMenuImage(
  Substitua este método se você quiser personalizar a renderização de imagem para os itens de menu que pertencem a barra de menus pertencente a `CMDIFrameWndEx`-objeto derivado. A implementação padrão não fará nada.  
   
 ##  <a name="ondrawmenulogo"></a>  CMDIFrameWndEx::OnDrawMenuLogo  
- Chamado pelo framework quando um [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)processos um `WM_PAINT` mensagem.  
+ Chamado pelo framework quando um [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)processa uma mensagem WM_PAINT.  
   
 ```  
 virtual void OnDrawMenuLogo(
@@ -1325,10 +1325,10 @@ virtual BOOL OnEraseMDIClientBackground(CDC*);
  `TRUE` Se o aplicativo processa a mensagem e apaga o plano de fundo.  
   
 ### <a name="remarks"></a>Comentários  
- Substituir essa função de membro, se você quiser processar o `WM_ERASEBKGND` de mensagem em uma `CMDIFrameWndEx`-classe derivada.  
+ Substituir essa função de membro para processar a mensagem WM_ERASEBKGND em um `CMDIFrameWndEx`-classe derivada.  
   
 ##  <a name="onmenubuttontoolhittest"></a>  CMDIFrameWndEx::OnMenuButtonToolHitTest  
- Chamado pelo framework quando um [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)objeto processos um `WM_NCHITTEST` mensagem.  
+ Chamado pelo framework quando um [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)objeto processa uma mensagem WM_NCHITTEST.  
   
 ```  
 virtual BOOL OnMenuButtonToolHitTest(
@@ -1337,14 +1337,14 @@ virtual BOOL OnMenuButtonToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pButton`  
+ [in] *pButton*  
  O botão de barra de ferramentas.  
   
- [out] `pTI`  
+ [out] *pTI*  
  Ponteiro para um [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) estrutura.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o aplicativo preenche o `pTI` parâmetro. A implementação padrão retorna `FALSE`.  
+ `TRUE` Se o aplicativo preenche o *pTI* parâmetro. A implementação padrão retorna `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método se desejar fornecer informações sobre os itens de menu específico para uma dica de ferramenta. A implementação padrão não fará nada.  
@@ -1357,7 +1357,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pFrame`  
+ [in] *pFrame*  
  Um ponteiro para uma janela do quadro simplificado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1373,10 +1373,10 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bPreview`  
+ [in] *bPreview*  
  Se `TRUE`, define o modo de visualização de impressão. Se `FALSE`, cancela o modo de visualização.  
   
- [in] `pState`  
+ [in] *pState*  
  Um ponteiro para um `CPrintPreviewState` estrutura.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1392,10 +1392,10 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pMenuPane`  
+ [in] *pMenuPane*  
  Um ponteiro para o painel Personalizar rápida.  
   
- [in] `uiToolbarID`  
+ [in] *uiToolbarID*  
  ID de controle da barra de ferramentas para personalizar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1417,10 +1417,10 @@ virtual BOOL OnShowMDITabContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  O local do menu em coordenadas da tela.  
   
- [in] `dwAllowedItems`  
+ [in] *dwAllowedItems*  
  Uma combinação de OR bit a bit dos sinalizadores que indica quais ações são permitidas para a guia atual:  
   
 - `BCGP_MDI_CREATE_VERT_GROUP` -criar um grupo de barra vertical.  
@@ -1433,7 +1433,7 @@ virtual BOOL OnShowMDITabContextMenu(
   
 - `BCGP_MDI_CAN_BE_DOCKED` -alternar de um documento com guias para estado encaixado (pertinente apenas documentos com guias).  
   
- [in] `bTabDrop`  
+ [in] *bTabDrop*  
  `TRUE` Para exibir o menu como resultado de arrastar a guia para outro grupo com guias. `FALSE` Para exibir o menu como um menu de atalho na guia ativa no momento.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1455,11 +1455,11 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bShow`  
+ [in] *bMostrar*  
  `TRUE` para mostrar painéis, `FALSE` para ocultar painéis.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o estado dos painéis alterado como resultado de chamar esse método, `FALSE` se os painéis estiverem no estado especificado pelo `bShow`. Por exemplo, se os painéis estão ocultos e `bShow` é `FALSE`, o valor de retorno é `FALSE`.  
+ `TRUE` Se o estado dos painéis alterado como resultado de chamar esse método, `FALSE` se os painéis estiverem no estado especificado pelo *bMostrar*. Por exemplo, se os painéis estão ocultos e *bMostrar* é `FALSE`, o valor de retorno é `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  A implementação padrão remove a barra de ferramentas da janela do quadro de nível superior.  
@@ -1491,10 +1491,10 @@ virtual void OnSizeMDIClient(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `rectOld`  
+ [in] *rectOld*  
  O tamanho atual da janela do cliente MDI.  
   
- [in] `rectNew`  
+ [in] *rectNew*  
  O novo tamanho da janela do cliente MDI.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1509,10 +1509,10 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pMenuPopup`  
+ [in] *pMenuPopup*  
  Um ponteiro para o menu pop-up.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Um ponteiro para a barra destacável.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1529,7 +1529,7 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `hMenuAlt`  
+ [in] *hMenuAlt*  
  Um identificador para um menu.  
   
 ##  <a name="panefrompoint"></a>  CMDIFrameWndEx::PaneFromPoint  
@@ -1550,23 +1550,23 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  O ponto (em coordenadas de tela).  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  O retângulo da janela de cada painel check é ampliado em todas as direções por esse valor.  
   
- [in] `bExactBar`  
- Se `TRUE`, o `nSensitivity` parâmetro é ignorado.  
+ [in] *bExactBar*  
+ Se `TRUE`, o *nSensitivity* parâmetro é ignorado.  
   
- [in] `pRTCBarType`  
+ [in] *pRTCBarType*  
  Se não `NULL`, o método itera somente os painéis do tipo especificado.  
   
- [out] `dwAlignment`  
+ [out] *dwAlignment*  
  Se um painel é encontrado, este parâmetro especificará qual lado do painel é mais próximo para o ponto especificado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para um painel, ou `NULL` se o controle não contém o ponto especificado por `point`.  
+ Um ponteiro para um painel, ou `NULL` se o controle não contém o ponto especificado por *ponto*.  
   
 ### <a name="remarks"></a>Comentários  
  A chamada é redirecionada para o [CDockingManager classe](../../mfc/reference/cdockingmanager-class.md). Consulte [CDockingManager::ControlBarFromPoint](../../mfc/reference/cdockingmanager-class.md#panefrompoint) para obter mais informações.  
@@ -1579,7 +1579,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bNotify`  
+ [in] *bNotify*  
  Determina se o item ativo do local para a janela do quadro recebe notificação de alteração de layout. Se `TRUE`, o item é notificado; caso contrário `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1598,19 +1598,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Um ponteiro para um painel a ser removido.  
   
- [in] `bDestroy`  
+ [in] *bDestroy*  
  `TRUE` para destruir o painel removido. `FALSE` não destruir a ele.  
   
- [in] `bAdjustLayout`  
+ [in] *bAdjustLayout*  
  `TRUE` Para ajustar o layout de encaixe imediatamente. Se `FALSE`, o ajuste ocorrerá somente quando um evento de atualização ocorre por outros motivos (o usuário redimensionar a janela, arrasta o quadro principal, etc.).  
   
- [in] `bAutoHide`  
+ [in] *bAutoHide*  
  `TRUE` Para remover o painel da lista de painéis de ocultar automaticamente. `FALSE` Para remover o painel da lista de painéis regulares.  
   
- [in] `pBarReplacement`  
+ [in] *pBarReplacement*  
  Um ponteiro para um painel que substitui o painel removido.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1626,7 +1626,7 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Especifica o nome do perfil.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1660,7 +1660,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWnd`  
+ [in] *pWnd*  
  Ponteiro para uma janela do quadro de visualização de impressão.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1676,13 +1676,13 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `menu`  
+ [in] *menu*  
  Uma referência a um [classe CMenu](../../mfc/reference/cmenu-class.md) objeto a ser modificado.  
   
- [in] `uiViewUserToolbarCmdFirst`  
+ [in] *uiViewUserToolbarCmdFirst*  
  Especifica o primeiro comando definido pelo usuário.  
   
- [in] `uiViewUserToolbarCmdLast`  
+ [in] *uiViewUserToolbarCmdLast*  
  Especifica o último comando definido pelo usuário.  
   
 ##  <a name="showfullscreen"></a>  CMDIFrameWndEx::ShowFullScreen  
@@ -1706,16 +1706,16 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
+ [in] *pBar*  
  Ponteiro para o painel a ser mostrado ou oculto.  
   
- [in] `bShow`  
+ [in] *bMostrar*  
  `TRUE` para mostrar o painel. `FALSE` Para ocultar o painel.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  `TRUE` Para atrasar o recálculo do layout do encaixe. `FALSE` para recalcular o layout de encaixe imediatamente.  
   
- [in] `bActivate`  
+ [in] *bActivate*  
  `TRUE` para mostrar o painel deve como ativo. `FALSE` para mostrar o painel como inativo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1746,7 +1746,7 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pMDIChildWnd`  
+ *pMDIChildWnd*  
  Um ponteiro para a janela filho MDI que contém um painel ancorado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1786,11 +1786,11 @@ virtual void WinHelp(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwData`  
- Especifica os dados conforme necessário para o tipo de ajuda especificado pelo `nCmd`.  
+ [in] *dwData*  
+ Especifica os dados conforme necessário para o tipo de ajuda especificado por *nCmd*.  
   
- [in] `nCmd`  
- Especifica o tipo de ajuda solicitado. Para obter uma lista de valores possíveis e como eles afetam o `dwData` parâmetro, consulte o [função WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) no SDK do Windows.  
+ [in] *nCmd*  
+ Especifica o tipo de ajuda solicitado. Para obter uma lista de valores possíveis e como eles afetam o *dwData* parâmetro, consulte o [função WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) no SDK do Windows.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método substitui [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).  

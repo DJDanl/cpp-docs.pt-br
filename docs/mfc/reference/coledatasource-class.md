@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4df2584bd9b74640266d8ddf87087e2820deaac8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b5060c850a1fcdba089b732d019f958f2e7410
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376701"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038545"
 ---
 # <a name="coledatasource-class"></a>Classe COleDataSource
 Age como um cache no qual um aplicativo coloca os dados que oferecem dados durante a transferência de operações, como a área de transferência ou operações de arrastar e soltar.  
@@ -117,14 +117,14 @@ void CacheData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `cfFormat`  
+ *cfFormat*  
  O formato de área de transferência na qual os dados são oferecida. Esse parâmetro pode ser um dos formatos predefinidos de área de transferência ou o valor retornado pelo Windows nativo [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) função.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Aponta para um [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) estrutura que contém os dados no formato especificado.  
   
- `lpFormatEtc`  
- Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato no qual os dados são oferecida. Forneça um valor para esse parâmetro se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado pelo `cfFormat`. Se for **nulo**, valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
+ *lpFormatEtc*  
+ Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato no qual os dados são oferecida. Forneça um valor para esse parâmetro se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado por *cfFormat*. Se for **nulo**, valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
   
 ### <a name="remarks"></a>Comentários  
  Você deve fornecer os dados, porque essa função fornece a ele usando o processamento imediato. Os dados armazenados em cache até que o necessário.  
@@ -150,14 +150,14 @@ void CacheGlobalData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `cfFormat`  
+ *cfFormat*  
  O formato de área de transferência na qual os dados são oferecida. Esse parâmetro pode ser um dos formatos predefinidos de área de transferência ou o valor retornado pelo Windows nativo [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) função.  
   
  *hGlobal*  
  Identificador para o bloco de memória global que contém os dados no formato especificado.  
   
- `lpFormatEtc`  
- Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato no qual os dados são oferecida. Forneça um valor para esse parâmetro se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado pelo `cfFormat`. Se for **nulo**, valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
+ *lpFormatEtc*  
+ Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato no qual os dados são oferecida. Forneça um valor para esse parâmetro se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado por *cfFormat*. Se for **nulo**, valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
   
 ### <a name="remarks"></a>Comentários  
  Essa função fornece os dados usando processamento imediato, portanto você deve fornecer os dados ao chamar a função. os dados armazenados em cache até que o necessário. Use o `CacheData` função de membro, se você está fornecendo uma grande quantidade de dados ou se precisar de uma mídia de armazenamento estruturado.  
@@ -185,11 +185,11 @@ void DelayRenderData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `cfFormat`  
+ *cfFormat*  
  O formato de área de transferência na qual os dados são oferecida. Esse parâmetro pode ser um dos formatos predefinidos de área de transferência ou o valor retornado pelo Windows nativo [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) função.  
   
- `lpFormatEtc`  
- Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato no qual os dados são oferecida. Forneça um valor para esse parâmetro se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado pelo `cfFormat`. Se for **nulo**, valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
+ *lpFormatEtc*  
+ Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato no qual os dados são oferecida. Forneça um valor para esse parâmetro se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado por *cfFormat*. Se for **nulo**, valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
   
 ### <a name="remarks"></a>Comentários  
  Essa função fornece os dados usando renderização atrasada, portanto, os dados não for fornecidos imediatamente. O [OnRenderData](#onrenderdata) ou [OnRenderGlobalData](#onrenderglobaldata) função de membro será chamada para solicitar os dados.  
@@ -212,11 +212,11 @@ void DelayRenderFileData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `cfFormat`  
+ *cfFormat*  
  O formato de área de transferência na qual os dados são oferecida. Esse parâmetro pode ser um dos formatos predefinidos de área de transferência ou o valor retornado pelo Windows nativo [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) função.  
   
- `lpFormatEtc`  
- Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato no qual os dados são oferecida. Forneça um valor para esse parâmetro se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado pelo `cfFormat`. Se for **nulo**, valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
+ *lpFormatEtc*  
+ Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato no qual os dados são oferecida. Forneça um valor para esse parâmetro se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado por *cfFormat*. Se for **nulo**, valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
   
 ### <a name="remarks"></a>Comentários  
  Essa função fornece os dados usando renderização atrasada, portanto, os dados não for fornecidos imediatamente. O [OnRenderFileData](#onrenderfiledata) função de membro será chamada para solicitar os dados.  
@@ -239,11 +239,11 @@ void DelaySetData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `cfFormat`  
+ *cfFormat*  
  O formato de área de transferência na qual os dados são colocado. Esse parâmetro pode ser um dos formatos predefinidos de área de transferência ou o valor retornado pelo Windows nativo [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) função.  
   
- `lpFormatEtc`  
- Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato no qual os dados são a ser substituído. Forneça um valor para esse parâmetro se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado pelo `cfFormat`. Se for **nulo**, valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
+ *lpFormatEtc*  
+ Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato no qual os dados são a ser substituído. Forneça um valor para esse parâmetro se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado por *cfFormat*. Se for **nulo**, valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
   
 ### <a name="remarks"></a>Comentários  
  [OnSetData](#onsetdata) será chamado pelo framework quando isso acontece. Isso é usado somente quando a estrutura retorna a fonte de dados [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Se `DelaySetData` não for chamado, o `OnSetData` função nunca será chamada. `DelaySetData` deve ser chamado para cada área de transferência ou **FORMATETC** formato você oferece suporte.  
@@ -263,7 +263,7 @@ DROPEFFECT DoDragDrop(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwEffects`  
+ *dwEffects*  
  Arrastar e soltar operações que são permitidas nessa fonte de dados. Pode ser um ou mais dos seguintes:  
   
 - `DROPEFFECT_COPY` Uma operação de cópia pode ser executada.  
@@ -274,7 +274,7 @@ DROPEFFECT DoDragDrop(
   
 - `DROPEFFECT_SCROLL` Indica que uma operação de arrastar rolagem pode ocorrer.  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  Ponteiro para o retângulo que define qual realmente começa a operação de arrastar. Para obter mais informações, consulte a seção Comentários a seguir.  
   
  *pDropSource*  
@@ -284,7 +284,7 @@ DROPEFFECT DoDragDrop(
  Remover efeito gerado pela operação de arrastar e soltar; Caso contrário, `DROPEFFECT_NONE` se a operação nunca inicia, já que o usuário liberado o botão do mouse antes de deixar o retângulo fornecido.  
   
 ### <a name="remarks"></a>Comentários  
- A operação de arrastar e soltar não será iniciado imediatamente. Aguardar até que o cursor do mouse sai do retângulo especificado por `lpRectStartDrag` ou até que um número especificado de milissegundos. Se `lpRectStartDrag` é **nulo**, o tamanho do retângulo é um pixel.  
+ A operação de arrastar e soltar não será iniciado imediatamente. Aguardar até que o cursor do mouse sai do retângulo especificado por *lpRectStartDrag* ou até que um número especificado de milissegundos. Se *lpRectStartDrag* é **nulo**, o tamanho do retângulo é um pixel.  
   
  O tempo de atraso é especificado pela configuração da chave do registro. Você pode alterar o tempo de atraso chamando [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) ou [CWinApp::WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). Se você não especificar o tempo de espera, é usado um valor padrão de 200 milissegundos. Tempo de atraso de arrastar é armazenado como segue:  
   
@@ -340,10 +340,10 @@ virtual BOOL OnRenderData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Aponta para o [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura especificando o formato no qual as informações são solicitadas.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Aponta para um [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) estrutura na qual os dados são a ser retornado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -352,7 +352,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>Comentários  
  O formato especificado é um colocado anteriormente no `COleDataSource` objeto usando o [DelayRenderData](#delayrenderdata) ou [DelayRenderFileData](#delayrenderfiledata) a função de membro para renderização atrasada. A implementação padrão dessa função chamará [OnRenderFileData](#onrenderfiledata) ou [OnRenderGlobalData](#onrenderglobaldata) se a mídia de armazenamento fornecido é um arquivo ou a memória, respectivamente. Se nenhum desses formatos são fornecidos, a implementação padrão retorna 0 e não fazer nada. Para obter mais informações sobre renderização atrasada tratados pelo MFC, consulte o artigo [objetos de dados e fontes de dados: manipulação](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Se `lpStgMedium` ->  *tymed* é **TYMED_NULL**, o **STGMEDIUM** deve ser alocada e preenchido conforme especificado pelas *lpFormatEtc -> TYMED*. Se não for **TYMED_NULL**, o **STGMEDIUM** devem ser preenchidos local com os dados.  
+ Se *lpStgMedium*-> *tymed* é **TYMED_NULL**, o **STGMEDIUM** deve ser alocada e preenchido conforme especificado por *lpFormatEtc -> tymed*. Se não for **TYMED_NULL**, o **STGMEDIUM** devem ser preenchidos local com os dados.  
   
  Isso é uma avançada substituível. Substitua essa função para fornecer seus dados no formato solicitado e média. Dependendo de seus dados, convém substituir uma das versões dessa função em vez disso. Se os dados forem pequenos e de tamanho fixo, substituir `OnRenderGlobalData`. Se os dados estão em um arquivo ou de tamanho variável, substituir `OnRenderFileData`.  
   
@@ -368,10 +368,10 @@ virtual BOOL OnRenderFileData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Aponta para o [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura especificando o formato no qual as informações são solicitadas.  
   
- `pFile`  
+ *pFile*  
  Aponta para um [CFile](../../mfc/reference/cfile-class.md) objeto no qual os dados são a ser processado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -394,10 +394,10 @@ virtual BOOL OnRenderGlobalData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Aponta para o [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura especificando o formato no qual as informações são solicitadas.  
   
- `phGlobal`  
+ *phGlobal*  
  Aponta para um identificador para a memória global no qual os dados são a ser retornado. Se um ainda não foi alocado, esse parâmetro pode ser **nulo**.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -406,7 +406,7 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="remarks"></a>Comentários  
  O formato especificado é um colocado anteriormente no `COleDataSource` objeto usando o [DelayRenderData](#delayrenderdata) a função de membro para renderização atrasada. A implementação padrão dessa função simplesmente retorna **FALSE**.  
   
- Se `phGlobal` é **nulo**, em seguida, um novo `HGLOBAL` deve ser alocada e retornados em `phGlobal`. Caso contrário, o `HGLOBAL` especificado por `phGlobal` deve ser preenchido com os dados. A quantidade de dados colocados no `HGLOBAL` não deve exceder o tamanho atual do bloco de memória. Além disso, o bloco não pode ser realocado para um tamanho maior.  
+ Se *phGlobal* é **nulo**, em seguida, um novo `HGLOBAL` deve ser alocada e retornados em *phGlobal*. Caso contrário, o `HGLOBAL` especificado por *phGlobal* deve ser preenchido com os dados. A quantidade de dados colocados no `HGLOBAL` não deve exceder o tamanho atual do bloco de memória. Além disso, o bloco não pode ser realocado para um tamanho maior.  
   
  Isso é uma avançada substituível. Substitua essa função para fornecer seus dados no formato solicitado e média. Dependendo de seus dados, convém substituir uma das versões dessa função em vez disso. Se você desejar tratar várias mídias de armazenamento, substitua [OnRenderData](#onrenderdata). Se os dados estão em um arquivo ou de tamanho variável, substituir [OnRenderFileData](#onrenderfiledata). Para obter mais informações sobre renderização atrasada tratados pelo MFC, consulte o artigo [objetos de dados e fontes de dados: manipulação](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
@@ -423,14 +423,14 @@ virtual BOOL OnSetData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Aponta para o [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura especificando o formato de dados no qual está sendo substituídos.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Aponta para o [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) estrutura que contém os dados que irá substituir o conteúdo atual do `COleDataSource` objeto.  
   
- `bRelease`  
- Indica que é proprietária da mídia de armazenamento depois de concluir a chamada de função. O chamador decide quem é responsável para liberar os recursos alocados em nome de mídia de armazenamento. O chamador faz isso definindo `bRelease`. Se `bRelease` é diferente de zero, a fonte de dados assume a propriedade, liberando a mídia quando tiver concluído a usá-lo. Quando `bRelease` é 0, o chamador reterá a propriedade e a fonte de dados pode usar a mídia de armazenamento somente para a duração da chamada.  
+ *bRelease*  
+ Indica que é proprietária da mídia de armazenamento depois de concluir a chamada de função. O chamador decide quem é responsável para liberar os recursos alocados em nome de mídia de armazenamento. O chamador faz isso definindo *bRelease*. Se *bRelease* é diferente de zero, a fonte de dados assume a propriedade, liberando a mídia quando tiver concluído a usá-lo. Quando *bRelease* é 0, o chamador reterá a propriedade e a fonte de dados pode usar a mídia de armazenamento somente para a duração da chamada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  

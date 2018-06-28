@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe37e1a159fa0138c237b58ffbd622292dcba714
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 843c79d9b3c7ffeb0ceef7338132048ac51d52ef
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369841"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039967"
 ---
 # <a name="colelinkingdoc-class"></a>Classe COleLinkingDoc
 A classe base para documentos de contêiner OLE que dão suporte a vinculação aos itens inseridos que elas contêm.  
@@ -79,7 +79,7 @@ class COleLinkingDoc : public COleDocument
   
  [!code-cpp[NVC_MFCOleContainer#24](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]  
   
- Conecte-se a `COleTemplateServer` objeto para os modelos de documento chamando o objeto `ConnectTemplate` função de membro e registrar a classe de todos os objetos com o sistema OLE chamando **COleTemplateServer::RegisterAll**:  
+ Conecte-se a `COleTemplateServer` objeto para os modelos de documento chamando o objeto `ConnectTemplate` função de membro e registrar a classe de todos os objetos com o sistema OLE chamando `COleTemplateServer::RegisterAll`:  
   
  [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]  
   
@@ -119,7 +119,7 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszItemName`  
+ *lpszItemName*  
  Ponteiro para o nome da OLE inserido item solicitado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -136,7 +136,7 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszItemName`  
+ *lpszItemName*  
  Ponteiro para o nome da OLE vinculado item solicitado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -158,7 +158,7 @@ BOOL Register(
  *pFactory*  
  Ponteiro para um objeto de fábrica OLE (pode ser **nulo**).  
   
- `lpszPathName`  
+ *lpszPathName*  
  Ponteiro para o caminho totalmente qualificado do documento contêiner.  
   
 ### <a name="return-value"></a>Valor de retorno  

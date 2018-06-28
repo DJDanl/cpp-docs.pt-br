@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 180c6db999ed72a83de3f4addbec3db73ee64fa1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2fee346e1bc16206df72f3056e6fbb3d73d0d21a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368064"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038225"
 ---
 # <a name="cmapptrtoword-class"></a>Classe CMapPtrToWord
 Dá suporte a mapas de palavras de 16 bits chaveados ponteiros void.  
@@ -61,7 +61,7 @@ class CMapPtrToWord : public CObject
 ```  
   
 ## <a name="members"></a>Membros  
- As funções de membro de `CMapPtrToWord` são semelhantes às funções de membro da classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CMapStringToOb` para obter a função específica de membro. Sempre que você vê um `CObject` ponteiro como um parâmetro de função ou o valor de retorno, substitua **WORD**. Sempre que você vê um `CString` ou um **const** ponteiro para `char` como um valor de retorno ou parâmetro de função, substitua um ponteiro para `void`.  
+ As funções de membro de `CMapPtrToWord` são semelhantes às funções de membro da classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CMapStringToOb` para obter a função específica de membro. Sempre que você vê um `CObject` ponteiro como um parâmetro de função ou o valor de retorno, substitua **WORD**. Sempre que você vê um `CString` ou um **const** ponteiro para **char** como um valor de retorno ou parâmetro de função, substitua um ponteiro para **void**.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   

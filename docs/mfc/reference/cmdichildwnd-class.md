@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e27551c04be5d6e985c6e7829f11f94d0aafeba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 037a6091f11ad12a8f4e46ccb837c48f1f9a685b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369343"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040841"
 ---
 # <a name="cmdichildwnd-class"></a>Classe CMDIChildWnd
 Fornece a funcionalidade de um Windows várias janelas de filho de interface (MDI) do documento, juntamente com os membros para gerenciar a janela.  
@@ -75,17 +75,17 @@ class CMDIChildWnd : public CFrameWnd
   
  Há três maneiras de construir uma janela de filho MDI:  
   
--   Construir diretamente usando **criar**.  
+-   Construir diretamente usando `Create`.  
   
 -   Construir diretamente usando `LoadFrame`.  
   
 -   Indiretamente construí-lo por meio de um modelo de documento.  
   
- Antes de chamar **criar** ou `LoadFrame`, você deve construir o objeto de janela do quadro na pilha usando o C++ **novo** operador. Antes de chamar **criar** você também pode registrar uma classe de janela com o [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função global para definir os estilos de ícone e a classe do quadro.  
+ Antes de chamar `Create` ou `LoadFrame`, você deve construir o objeto de janela do quadro na pilha usando o C++ **novo** operador. Antes de chamar `Create` você também pode registrar uma classe de janela com o [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função global para definir os estilos de ícone e a classe do quadro.  
   
- Use o **criar** função de membro para passar parâmetros de criação do quadro imediatos como argumentos.  
+ Use o `Create` a função de membro para passar parâmetros de criação do quadro imediatos como argumentos.  
   
- `LoadFrame` requer menos argumentos que **criar**e em vez disso, recupera a maioria de seus valores padrão de recursos, incluindo a legenda do quadro, ícone, tabela de Aceleradores e menu. Para ser acessível por `LoadFrame`, todos esses recursos devem ter a mesma ID de recurso (por exemplo, **IDR_MAINFRAME**).  
+ `LoadFrame` requer menos argumentos que `Create`e em vez disso, recupera a maioria de seus valores padrão de recursos, incluindo a legenda do quadro, ícone, tabela de Aceleradores e menu. Para ser acessível por `LoadFrame`, todos esses recursos devem ter a mesma ID de recurso (por exemplo, **IDR_MAINFRAME**).  
   
  Quando um `CMDIChildWnd` objeto contém exibições e documentos, elas são criadas indiretamente pelo framework em vez de diretamente pelo programador. O `CDocTemplate` objeto coordena a criação do quadro, a criação de modos de exibição de conteúdo e a conexão dos modos de exibição para o documento apropriado. Os parâmetros do `CDocTemplate` construtor especificar o `CRuntimeClass` das três classes envolvidos (documento, quadro e exibição). Um `CRuntimeClass` objeto é usado pelo framework para criar dinamicamente novos quadros quando especificado pelo usuário (por exemplo, usando o comando novo arquivo ou o comando MDI janela nova).  
   
@@ -142,22 +142,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszClassName`  
+ *lpszClassName*  
  Aponta para uma cadeia de caracteres terminada em nulo que nomeia a classe do Windows (um [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estrutura). O nome da classe pode ser qualquer nome registrado com o [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função global. Deve ser **nulo** para um padrão `CMDIChildWnd`.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Aponta para uma cadeia de caracteres terminada em nulo que representa o nome da janela. Usado como o texto da barra de título.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica a janela [estilo](../../mfc/reference/styles-used-by-mfc.md#window-styles) atributos. O **WS_CHILD** estilo é necessário.  
   
- `rect`  
+ *Rect*  
  Contém o tamanho e a posição da janela. O `rectDefault` valor permite que o Windows especificar o tamanho e a posição do novo `CMDIChildWnd`.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Especifica o pai da janela. Se **nulo**, a janela principal do aplicativo é usada.  
   
- `pContext`  
+ *pContext*  
  Especifica um [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) estrutura. Esse parâmetro pode ser **nulo**.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -166,7 +166,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Comentários  
  A janela do quadro de filho MDI ativa atualmente pode determinar a legenda da janela do quadro do pai. Este recurso está desabilitado, desativando o **FWS_ADDTOTITLE** bit de estilo da janela do quadro filho.  
   
- O framework chama esta função de membro em resposta a um comando de usuário para criar uma janela filho e usa a estrutura de `pContext` parâmetro para se conectar corretamente a janela filho para o aplicativo. Quando você chama **criar**, `pContext` pode ser **nulo**.  
+ O framework chama esta função de membro em resposta a um comando de usuário para criar uma janela filho e usa a estrutura de *pContext* parâmetro para se conectar corretamente a janela filho para o aplicativo. Quando você chama `Create`, *pContext* pode ser **nulo**.  
   
 ### <a name="example"></a>Exemplo  
  Exemplo 1:  
@@ -255,10 +255,10 @@ void SetHandles(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `hMenu`  
+ *hMenu*  
  O identificador de um recurso de menu.  
   
- `hAccel`  
+ *hAccel*  
  O identificador de um recurso de aceleração.  
   
 ### <a name="remarks"></a>Comentários  

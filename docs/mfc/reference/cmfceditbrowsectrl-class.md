@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c7214e4da0bce1a01834df556289b61e0ed8574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 495f6360601fc41493f68bd4fdd7ac769b9a634c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369317"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037968"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Classe CMFCEditBrowseCtrl
 O `CMFCEditBrowseCtrl` classe oferece suporte para o controle de navegação de edição, que é uma caixa de texto editável que contém, opcionalmente, um botão Procurar. Quando o usuário clica no botão, o controle executa uma ação personalizada ou exibe uma caixa de diálogo padrão que contém um navegador de arquivo ou uma pasta.  
@@ -108,7 +108,7 @@ class CMFCEditBrowseCtrl : public CEdit
   
 6.  Para fornecer uma imagem personalizada para o botão Procurar, chame o [SetBrowseButtonImage](#setbrowsebuttonimage) método ou substituição de [OnDrawBrowseButton](#ondrawbrowsebutton) método.  
   
-7.  Para remover o controle de navegação de edição no botão Procurar, chame o [EnableBrowseButton](#enablebrowsebutton) método com o `bEnable` parâmetro definido como `FALSE`.  
+7.  Para remover o controle de navegação de edição no botão Procurar, chame o [EnableBrowseButton](#enablebrowsebutton) método com o *bAtivar* parâmetro definido como `FALSE`.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -140,14 +140,14 @@ void EnableBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bEnable`  
+ *bAtivar*  
  `TRUE` Para exibir o botão Procurar; `FALSE` para não exibir o botão Procurar. O valor padrão é `TRUE`.  
   
- `szLabel`  
+ *szLabel*  
  O rótulo que é exibido no botão Procurar. O valor padrão é " **...** ".  
   
 ### <a name="remarks"></a>Comentários  
- Se o `bEnable` parâmetro é `TRUE`, implementam uma ação personalizada para executar quando o botão é clicado. Para implementar uma ação personalizada, derive uma classe a partir de `CMFCEditBrowseCtrl` classe e substituir seu [OnBrowse](#onbrowse) método.  
+ Se o *bAtivar* parâmetro é `TRUE`, implementam uma ação personalizada para executar quando o botão é clicado. Para implementar uma ação personalizada, derive uma classe a partir de `CMFCEditBrowseCtrl` classe e substituir seu [OnBrowse](#onbrowse) método.  
   
  Se o `bEnable` parâmetro é `TRUE`, o modo de procura do controle é `BrowseMode_Default`; caso contrário, o modo de procura é `BrowseMode_None`. Para obter mais informações sobre modos de procura, consulte o [GetMode](#getmode) método.  
   
@@ -162,13 +162,13 @@ void EnableFileBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszDefExt`  
+ *lpszDefExt*  
  Especifica a extensão de nome de arquivo padrão que é usada na caixa de diálogo de seleção de arquivo. O valor padrão é `NULL`.  
   
- `lpszFilter`  
+ *lpszFilter*  
  Especifica a cadeia de caracteres de filtro padrão que é usada na caixa de diálogo de seleção de arquivo. O valor padrão é `NULL`.  
   
- `dwFlags`  
+ *dwFlags*  
  Sinalizadores de caixa de diálogo. O valor padrão é uma combinação bit a bit (ou) de OFN_HIDEREADONLY e OFN_OVERWRITEPROMPT.  
   
 ### <a name="remarks"></a>Comentários  
@@ -250,16 +250,16 @@ virtual void OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDC`  
+ *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
- `Rect`  
+ *Rect*  
  O retângulo delimitador do botão Procurar.  
   
- `bIsButtonPressed`  
+ *bIsButtonPressed*  
  `TRUE` Se o botão for pressionado; Caso contrário, `FALSE`.  
   
- `bIsButtonHot`  
+ *bIsButtonHot*  
  `TRUE` Se o botão é realçado; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -282,16 +282,16 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `hIcon`  
+ *hIcon*  
  O identificador de um ícone.  
   
- `hBitmap`  
+ *hBitmap*  
  O identificador de um bitmap.  
   
- `uiBmpResId`  
+ *uiBmpResId*  
  A ID de recurso de um bitmap.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  `TRUE` Para excluir o bitmap ou ícone especificado quando este método será encerrado; Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -305,7 +305,7 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `strFileName`  
+ *strFileName*  
  Especifica o nome de arquivo ilegal.  
   
 ### <a name="return-value"></a>Valor de retorno  

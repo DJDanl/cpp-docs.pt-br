@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e190c8b8cb11fefccb2847214dcaebf713f35dc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb24b73ba23b430e29ed9144e51372eefdb673a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368963"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042528"
 ---
 # <a name="colelinksdialog-class"></a>Classe COleLinksDialog
 Usado para a caixa de diálogo Editar Links de OLE.  
@@ -117,16 +117,16 @@ COleLinksDialog (
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDoc`  
+ *pDoc*  
  Aponta para o documento OLE que contém os links a ser editado.  
   
- `pView`  
- Aponta para o modo de exibição atual em `pDoc`.  
+ *pView*  
+ Aponta para o modo de exibição atual em *pDoc*.  
   
- `dwFlags`  
+ *dwFlags*  
  Sinalizador de criação, que contém 0 ou **ELF_SHOWHELP** para especificar se o botão de Ajuda será exibido quando a caixa de diálogo é exibida.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Aponta para o objeto de janela pai ou o proprietário (do tipo `CWnd`) ao qual pertence o objeto de caixa de diálogo. Se for **nulo**, a janela pai da caixa de diálogo é definida como a janela principal do aplicativo.  
   
 ### <a name="remarks"></a>Comentários  

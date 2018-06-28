@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 673ce0694357a397590a29f7328612cfcc3cce09
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b59a1ef4d1a70063c15b7de41963abc60dd341a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375331"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041923"
 ---
 # <a name="colecontrolcontainer-class"></a>Classe COleControlContainer
 Atua como um contêiner de controle para controles ActiveX.  
@@ -122,7 +122,7 @@ class COleControlContainer : public CCmdTarget
 |[COleControlContainer::GetDlgItem](#getdlgitem)|Recupera o controle de caixa de diálogo especificada.|  
 |[COleControlContainer::GetDlgItemInt](#getdlgitemint)|Recupera o valor do controle de caixa de diálogo especificada.|  
 |[COleControlContainer::GetDlgItemText](#getdlgitemtext)|Recupera a legenda do controle de caixa de diálogo especificada.|  
-|[COleControlContainer::HandleSetFocus](#handlesetfocus)|Determina se o contêiner manipula `WM_SETFOCUS` mensagens.|  
+|[COleControlContainer::HandleSetFocus](#handlesetfocus)|Determina se o contêiner manipula mensagens WM_SETFOCUS.|  
 |[COleControlContainer::HandleWindowlessMessage](#handlewindowlessmessage)|Manipula mensagens enviadas para um controle sem janelas.|  
 |[COleControlContainer::IsDlgButtonChecked](#isdlgbuttonchecked)|Determina o estado do botão especificado.|  
 |[COleControlContainer::OnPaint](#onpaint)|Chamado para redesenhar uma parte do contêiner.|  
@@ -178,10 +178,10 @@ void AttachControlSite(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWnd`  
+ *pWnd*  
  Um ponteiro para um `CWnd` objeto.  
   
- `nIDC`  
+ *nIDC*  
  A ID do controle a ser anexado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -198,7 +198,7 @@ virtual void BroadcastAmbientPropertyChange(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dispid`  
+ *DISPID*  
  A ID de expedição da propriedade de ambiente que está sendo alterada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -214,10 +214,10 @@ virtual void CheckDlgButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIDButton`  
+ *nIDButton*  
  A ID do botão a ser modificado.  
   
- `nCheck`  
+ *nVerifique*  
  Especifica o estado do botão. Pode ser um dos seguintes:  
   
 - **BST_CHECKED** define o estado do botão ativação.  
@@ -237,13 +237,13 @@ virtual void CheckRadioButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIDFirstButton`  
+ *nIDFirstButton*  
  Especifica o identificador do primeiro botão de opção no grupo.  
   
- `nIDLastButton`  
+ *nIDLastButton*  
  Especifica o identificador do último botão de opção no grupo.  
   
- `nIDCheckButton`  
+ *nIDCheckButton*  
  Especifica o identificador do botão de opção a ser verificada.  
   
 ##  <a name="colecontrolcontainer"></a>  COleControlContainer::COleControlContainer  
@@ -254,7 +254,7 @@ explicit COleControlContainer(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWnd`  
+ *pWnd*  
  Um ponteiro para a janela pai do contêiner de controle.  
   
 ### <a name="remarks"></a>Comentários  
@@ -292,53 +292,53 @@ BOOL CreateControl(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWndCtrl`  
+ *pWndCtrl*  
  Um ponteiro para o objeto de janela que representa o controle.  
   
- `clsid`  
+ *clsid*  
  A ID exclusiva de classe do controle.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Um ponteiro para o texto a ser exibido no controle. Define o valor da propriedade de legenda ou o texto do controle (se houver). Se **nulo**, propriedade de legenda ou o texto do controle não será alterada.  
   
- `dwStyle`  
+ *dwStyle*  
  Estilos de Windows. Os estilos disponíveis são listados sob o **comentários** seção.  
   
- `rect`  
+ *Rect*  
  Especifica o tamanho e a posição do controle. Ele pode ser um `CRect` objeto ou um `RECT` estrutura.  
   
- `nID`  
+ *nID*  
  Especifica a ID de janela filho do controle  
   
- `pPersist`  
+ *pPersist*  
  Um ponteiro para um `CFile` que contém o estado persistente para o controle. O valor padrão é **nulo**, indicando que o controle inicializa a próprio sem restaurar o estado de qualquer armazenamento persistente. Se não **nulo**, ele deve ser um ponteiro para um `CFile`-derivados do objeto que contém os dados do controle persistente, na forma de um fluxo ou de armazenamento. Esses dados podem ter sido salvo em uma ativação anterior do cliente. O `CFile` pode conter outros dados, mas deve ter o ponteiro de leitura-gravação definido como o primeiro byte de dados persistentes no momento da chamada para `CreateControl`.  
   
- `bStorage`  
- Indica se os dados em `pPersist` devem ser interpretadas como `IStorage` ou `IStream` dados. Se os dados em `pPersist` é um armazenamento `bStorage` devem ser **TRUE**. Se os dados em `pPersist` é um fluxo `bStorage` devem ser **FALSE**. O valor padrão é **FALSE**.  
+ *bStorage*  
+ Indica se os dados em *pPersist* devem ser interpretadas como `IStorage` ou `IStream` dados. Se os dados em *pPersist* é um armazenamento *bStorage* devem ser **TRUE**. Se os dados em *pPersist* é um fluxo *bStorage* devem ser **FALSE**. O valor padrão é **FALSE**.  
   
- `bstrLicKey`  
+ *bstrLicKey*  
  Dados opcionais de chave de licença. Esses dados é necessária somente para a criação de controles que exigem uma chave de licença de tempo de execução. Se o controle dá suporte ao licenciamento, você deve fornecer uma chave de licença para a criação do controle seja bem-sucedida. O valor padrão é **nulo**.  
   
  *ppNewSite*  
  Um ponteiro para o site de controle existente que hospedará o controle que está sendo criado. O valor padrão é **nulo**, indicando que um novo site de controle será automaticamente criado e anexado ao novo controle.  
   
- `ppt`  
- Um ponteiro para um **ponto** estrutura que contém o canto superior esquerdo do controle. O tamanho do controle é determinado pelo valor de *psize*. O `ppt` e *psize* os valores são um método opcional para especificar o tamanho e a posição do controle.  
+ *ppt*  
+ Um ponteiro para um **ponto** estrutura que contém o canto superior esquerdo do controle. O tamanho do controle é determinado pelo valor de *psize*. O *ppt* e *psize* os valores são um método opcional para especificar o tamanho e a posição do controle.  
   
  *psize*  
- Um ponteiro para um **tamanho** estrutura que contém o tamanho do controle. O canto superior esquerdo é determinado pelo valor de `ppt`. O `ppt` e *psize* os valores são um método opcional para especificar o tamanho e a posição do controle.  
+ Um ponteiro para um **tamanho** estrutura que contém o tamanho do controle. O canto superior esquerdo é determinado pelo valor de *ppt*. O *ppt* e *psize* os valores são um método opcional para especificar o tamanho e a posição do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Apenas um subconjunto das janelas de `dwStyle` sinalizadores são suportados pelo `CreateControl`:  
+ Apenas um subconjunto das janelas de *dwStyle* sinalizadores são suportados pelo `CreateControl`:  
   
 - **WS_VISIBLE** cria uma janela que é visível inicialmente. Necessário se você quiser que o controle esteja visível imediatamente, como janelas comuns.  
   
 - **WS_DISABLED** cria uma janela que é inicialmente desabilitada. Uma janela desabilitada não pode receber entrada do usuário. Pode ser definido se o controle tiver uma propriedade Enabled.  
   
-- `WS_BORDER` Cria uma janela com uma borda de linha fina. Pode ser definido se o controle tem uma propriedade BorderStyle.  
+- **WS_BORDER** cria uma janela com uma borda de linha fina. Pode ser definido se o controle tem uma propriedade BorderStyle.  
   
 - **WS_GROUP** Especifica o primeiro controle de um grupo de controles. O usuário pode alterar o foco do teclado de um controle no grupo para o próximo usando as teclas de direção. Todos os controles definidos com o **WS_GROUP** após o primeiro controle pertencem ao mesmo grupo de estilo. O próximo controle com o **WS_GROUP** estilo encerra o grupo e inicia o próximo grupo.  
   
@@ -354,7 +354,7 @@ void CreateOleFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pFont`  
+ *pFont*  
  Um ponteiro para a fonte a ser usada pelo contêiner de controle.  
   
 ##  <a name="finditem"></a>  COleControlContainer::FindItem  
@@ -365,7 +365,7 @@ virtual COleControlSite* FindItem(UINT nID) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nID`  
+ *nID*  
  O identificador do item a ser localizado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -379,7 +379,7 @@ void FreezeAllEvents(BOOL bFreeze);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bFreeze`  
+ *bFreeze*  
  Diferente de zero se os eventos serão processados; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
@@ -398,10 +398,10 @@ virtual BOOL GetAmbientProp(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pSite`  
+ *pSite*  
  Um ponteiro para um site de controle do qual a propriedade de ambiente será recuperada.  
   
- `dispid`  
+ *DISPID*  
  A ID de expedição da propriedade ambiente desejada.  
   
  *pVarResult*  
@@ -422,10 +422,10 @@ virtual void GetDlgItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nID`  
+ *nID*  
  Identificador do item da caixa de diálogo para recuperar.  
   
- `phWnd`  
+ *phWnd*  
  Um ponteiro para o identificador do item de caixa de diálogo especificada objeto de janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -442,21 +442,21 @@ virtual UINT GetDlgItemInt(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nID`  
+ *nID*  
  O identificador do controle.  
   
- `lpTrans`  
+ *lpTrans*  
  Ponteiro para uma variável booleana que recebe um valor de êxito/falha de função ( **TRUE** indica êxito, **FALSE** indica falha).  
   
- `bSigned`  
- Especifica se a função deve examinar o texto de um sinal de menos no início e retornar um valor inteiro se encontrar um. Se o `bSigned` parâmetro é **TRUE**, especificando o valor a ser recuperado é um valor inteiro com sinal, converter o valor de retorno para um `int` tipo. Para obter mais informações sobre o erro, chame [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ *bSigned*  
+ Especifica se a função deve examinar o texto de um sinal de menos no início e retornar um valor inteiro se encontrar um. Se o *bSigned* parâmetro é **TRUE**, especificando o valor a ser recuperado é um valor inteiro com sinal, converter o valor de retorno para um **int** tipo. Para obter mais informações sobre o erro, chame [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, a variável apontada pelo `lpTrans` é definido como **TRUE**, e o valor de retorno é o valor traduzido do texto do controle.  
+ Se for bem-sucedido, a variável apontada pelo *lpTrans* é definido como **TRUE**, e o valor de retorno é o valor traduzido do texto do controle.  
   
- Se a função falhar, a variável apontada pelo `lpTrans` é definido como **FALSE**, e o valor de retorno é zero. Observe que, como zero é um possível valor traduzido, um valor de retorno de zero, não por si só indica falha.  
+ Se a função falhar, a variável apontada pelo *lpTrans* é definido como **FALSE**, e o valor de retorno é zero. Observe que, como zero é um possível valor traduzido, um valor de retorno de zero, não por si só indica falha.  
   
- Se `lpTrans` é **nulo**, a função não retorna nenhuma informação sobre o êxito ou falha.  
+ Se *lpTrans* é **nulo**, a função não retorna nenhuma informação sobre o êxito ou falha.  
   
 ### <a name="remarks"></a>Comentários  
  A função converte o texto recuperado pela remoção de todos os espaços adicionais no início do texto e, em seguida, converter os dígitos decimais. A função para a conversão quando atingir o final do texto ou encontrar um caractere numérico.  
@@ -474,14 +474,14 @@ virtual int GetDlgItemText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nID`  
+ *nID*  
  O identificador do controle.  
   
- `lpStr`  
+ *lpStr*  
  Ponteiro para o texto do controle.  
   
- `nMaxCount`  
- Especifica o tamanho máximo, em caracteres, da cadeia de caracteres a serem copiados para o buffer apontado pelo `lpStr`. Se o comprimento da cadeia de caracteres excede o limite, a cadeia de caracteres está truncada.  
+ *nMaxCount*  
+ Especifica o tamanho máximo, em caracteres, da cadeia de caracteres a serem copiados para o buffer apontado pelo *lpStr*. Se o comprimento da cadeia de caracteres excede o limite, a cadeia de caracteres está truncada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se a função tiver êxito, o valor de retorno Especifica o número de caracteres copiados para o buffer, não incluindo o caractere null de terminação.  
@@ -489,14 +489,14 @@ virtual int GetDlgItemText(
  Se a função falhar, o valor retornado será zero. Para obter mais informações sobre o erro, chame [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus  
- Determina se o contêiner manipula `WM_SETFOCUS` mensagens.  
+ Determina se o contêiner manipula mensagens WM_SETFOCUS.  
   
 ```  
 virtual BOOL HandleSetFocus();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o contêiner manipula `WM_SETFOCUS` mensagens; caso contrário, zero.  
+ Diferente de zero se o contêiner manipula mensagens WM_SETFOCUS; Caso contrário, zero.  
   
 ##  <a name="handlewindowlessmessage"></a>  COleControlContainer::HandleWindowlessMessage  
  Processa as mensagens de janela para controles sem janelas.  
@@ -510,14 +510,14 @@ virtual BOOL HandleWindowlessMessage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `message`  
+ *message*  
  O identificador para a mensagem de janela, fornecida pelo Windows.  
   
- `wParam`  
- Parâmetro da mensagem; fornecido pelo Windows. Especifica informações adicionais de mensagem específica. O conteúdo deste parâmetro depende do valor da `message` parâmetro.  
+ *wParam*  
+ Parâmetro da mensagem; fornecido pelo Windows. Especifica informações adicionais de mensagem específica. O conteúdo deste parâmetro depende do valor da *mensagem* parâmetro.  
   
- `lParam`  
- Parâmetro da mensagem; fornecido pelo Windows. Especifica informações adicionais de mensagem específica. O conteúdo deste parâmetro depende do valor da `message` parâmetro.  
+ *lParam*  
+ Parâmetro da mensagem; fornecido pelo Windows. Especifica informações adicionais de mensagem específica. O conteúdo deste parâmetro depende do valor da *mensagem* parâmetro.  
   
  *plResult*  
  Código de resultado do Windows. Especifica o resultado do processamento de mensagem e depende da mensagem enviada.  
@@ -536,7 +536,7 @@ virtual UINT IsDlgButtonChecked(int nIDButton) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIDButton`  
+ *nIDButton*  
  O identificador do controle de botão.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -622,14 +622,14 @@ CMapPtrToPtr m_siteMap;
 ```  
   
 ##  <a name="onpaint"></a>  COleControlContainer::OnPaint  
- Chamado pelo framework para tratar `WM_PAINT` solicitações.  
+ Chamado pelo framework para manipular solicitações WM_PAINT.  
   
 ```  
 virtual BOOL OnPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDC`  
+ *pDC*  
  Um ponteiro para o contexto de dispositivo usado pelo contêiner.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -639,28 +639,28 @@ virtual BOOL OnPaint(CDC* pDC);
  Substitua esta função para personalizar o processo de pintura.  
   
 ##  <a name="onuiactivate"></a>  COleControlContainer::OnUIActivate  
- Chamado pelo framework quando o site de controle, apontada pelo `pSite`, está prestes a ser ativado no local.  
+ Chamado pelo framework quando o site de controle, apontada pelo *pSite*, está prestes a ser ativado no local.  
   
 ```  
 virtual void OnUIActivate(COleControlSite* pSite);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pSite`  
+ *pSite*  
  Um ponteiro para o site de controle prestes a ser ativado no local.  
   
 ### <a name="remarks"></a>Comentários  
  Ativação no local significa que o menu principal do contêiner é substituído por um menu composto no local.  
   
 ##  <a name="onuideactivate"></a>  COleControlContainer::OnUIDeactivate  
- Chamado pelo framework quando o site de controle, apontada pelo `pSite`, está prestes a ser desativado.  
+ Chamado pelo framework quando o site de controle, apontada pelo *pSite*, está prestes a ser desativado.  
   
 ```  
 virtual void OnUIDeactivate(COleControlSite* pSite);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pSite`  
+ *pSite*  
  Um ponteiro para o site de controle prestes a ser desativada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -676,7 +676,7 @@ virtual void ScrollChildren(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dx`  
+ *DX*  
  A quantidade, em pixels, da rolagem ao longo do eixo x.  
   
  *dy*  
@@ -694,16 +694,16 @@ virtual LRESULT SendDlgItemMessage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nID`  
+ *nID*  
  Especifica o identificador do controle que recebe a mensagem.  
   
- `message`  
+ *message*  
  Especifica a mensagem a ser enviada.  
   
- `wParam`  
+ *wParam*  
  Especifica informações adicionais de mensagem específica.  
   
- `lParam`  
+ *lParam*  
  Especifica informações adicionais de mensagem específica.  
   
 ##  <a name="setdlgitemint"></a>  COleControlContainer::SetDlgItemInt  
@@ -717,17 +717,17 @@ virtual void SetDlgItemInt(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nID`  
+ *nID*  
  O identificador do controle.  
   
- `nValue`  
+ *Nvalor*  
  O valor inteiro a ser exibido.  
   
- `bSigned`  
- Especifica se o `nValue` parâmetro está assinado ou não assinado. Se esse parâmetro for **TRUE**, `nValue` está assinado. Se esse parâmetro for **TRUE** e `nValue` é menor que zero, um sinal de subtração sinal é colocado antes do primeiro dígito na cadeia de caracteres. Se esse parâmetro for **FALSE**, `nValue` não está assinado.  
+ *bSigned*  
+ Especifica se o *Nvalor* parâmetro está assinado ou não assinado. Se esse parâmetro for **TRUE**, *Nvalor* está assinado. Se esse parâmetro for **TRUE** e *Nvalor* é menor que zero, um sinal de subtração sinal é colocado antes do primeiro dígito na cadeia de caracteres. Se esse parâmetro for **FALSE**, *Nvalor* não está assinado.  
   
 ##  <a name="setdlgitemtext"></a>  COleControlContainer::SetDlgItemText  
- Define o texto do controle especificado, usando o texto contido em `lpszString`.  
+ Define o texto do controle especificado, usando o texto contido em *lpszString*.  
   
 ```  
 virtual void SetDlgItemText(
@@ -736,10 +736,10 @@ virtual void SetDlgItemText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nID`  
+ *nID*  
  O identificador do controle.  
   
- `lpszString`  
+ *lpszString*  
  Ponteiro para o texto do controle.  
   
 ## <a name="see-also"></a>Consulte também  

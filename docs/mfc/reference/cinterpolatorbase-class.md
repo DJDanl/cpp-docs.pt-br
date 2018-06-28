@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ca520fe89e04d984e6490c495f2622a6037c79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81ad51fe00a0b205000b15a05ede9497850f488e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367754"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041267"
 ---
 # <a name="cinterpolatorbase-class"></a>Classe CInterpolatorBase
 Implementa um retorno de chamada, que é chamado pela API de animação quando ele tem que calcular um novo valor de uma variável de animação.  
@@ -104,10 +104,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pInterpolator`  
+ *pInterpolator*  
  Um ponteiro para interpolador personalizado.  
   
- `ppHandler`  
+ *ppHandler*  
  Saída. Contém um ponteiro para a instância do CInterpolatorBase quando a função retorna.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -123,13 +123,13 @@ IFACEMETHOD(GetDependencies)(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  Saída. Aspectos do interpolador que dependem do valor inicial é passado para SetInitialValueAndVelocity.  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  Saída. Aspectos do interpolador que dependem da velocidade inicial passado para SetInitialValueAndVelocity.  
   
- `durationDependencies`  
+ *durationDependencies*  
  Saída. Aspectos que dependem da duração do interpolador passado para SetDuration.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -143,7 +143,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `duration`  
+ *Duração*  
  Saída. A duração da transição, em segundos.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -157,7 +157,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `value`  
+ *value*  
  Saída. O valor final de uma variável no final da transição.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -173,10 +173,10 @@ IFACEMETHOD(InterpolateValue)(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `offset`  
+ *deslocamento*  
  O deslocamento do início da transição. O deslocamento é sempre maior que ou igual a zero e menor que a duração da transição. Este método não é chamado se a duração da transição é zero.  
   
- `value`  
+ *value*  
  Saída. O valor interpolado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -192,10 +192,10 @@ IFACEMETHOD(InterpolateVelocity)(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `offset`  
+ *deslocamento*  
  O deslocamento do início da transição. O deslocamento é sempre maior que ou igual a zero e menor ou igual a duração da transição. Este método não é chamado se a duração da transição é zero.  
   
- `velocity`  
+ *velocidade*  
  Saída. A velocidade da variável no deslocamento.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -209,7 +209,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pInterpolator`  
+ *pInterpolator*  
  Um ponteiro para interpolador personalizado.  
   
 ##  <a name="setduration"></a>  CInterpolatorBase::SetDuration  
@@ -220,7 +220,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `duration`  
+ *Duração*  
  A duração da transição.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -236,10 +236,10 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `initialValue`  
+ *initialValue*  
  O valor da variável no início da transição.  
   
- `initialVelocity`  
+ *initialVelocity*  
  A velocidade da variável no início da transição.  
   
 ### <a name="return-value"></a>Valor de retorno  

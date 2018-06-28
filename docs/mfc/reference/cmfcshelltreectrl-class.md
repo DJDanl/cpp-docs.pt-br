@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdd7e13e74fc3ae739c825f8aff95a79db8b5e29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e014219a12985142c6d45aae711d0410ff12642
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371440"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041939"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Classe CMFCShellTreeCtrl
 O `CMFCShellTreeCtrl` estende a classe [classe CTreeCtrl](../../mfc/reference/ctreectrl-class.md) funcionalidade exibindo uma hierarquia de itens de Shell.  
@@ -104,7 +104,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  Um valor booleano que especifica se deseja habilitar o menu de atalho.  
   
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags  
@@ -130,19 +130,19 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `strPath`  
+ [out] *strPath*  
  Uma referência a um parâmetro de cadeia de caracteres. O método grava o caminho do item para esse parâmetro.  
   
- [in] `htreeItem`  
+ [in] *htreeItem*  
  O método recupera o caminho para este item de controle de árvore.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Se esse método falhar, `strPath` contém a cadeia de caracteres vazia.  
+ Se esse método falhar, *strPath* contém a cadeia de caracteres vazia.  
   
- Se você não especificar `hTreeItem`, esse método tentará obter a cadeia de caracteres para o item atualmente selecionado. Se nenhum item selecionado e `hTreeItem` é `NULL`, esse método falhar.  
+ Se você não especificar *hTreeItem*, esse método tentará obter a cadeia de caracteres para o item atualmente selecionado. Se nenhum item selecionado e *hTreeItem* é `NULL`, esse método falhar.  
   
 ##  <a name="getrelatedlist"></a>  CMFCShellTreeCtrl::GetRelatedList  
  Retorna um ponteiro para o [CMFCShellListCtrl classe](../../mfc/reference/cmfcshelllistctrl-class.md) objeto que está associado com esta [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) objeto.  
@@ -169,10 +169,10 @@ virtual BOOL OnChildNotify(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `message`  
- [in] `wParam`  
- [in] `lParam`  
- [in] `pLResult`  
+ [in] *mensagem*  
+ [in] *wParam*  
+ [in] *lParam*  
+ [in] *pLResult*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -188,8 +188,8 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pItem`  
- [in] `bSelected`  
+ [in] *pItem*  
+ [in] *bSelected*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -203,7 +203,7 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pItem`  
+ [in] *pItem*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -228,10 +228,10 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszPath`  
+ [in] *lpszPath*  
  Uma cadeia de caracteres que especifica o caminho de um item.  
   
- [in] `lpidl`  
+ [in] *lpidl*  
  Um PIDL que especifica o item  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -247,10 +247,10 @@ void SetFlags(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwFlags`  
+ [in] *dwFlags*  
  Os sinalizadores a serem definidos.  
   
- [in] `bRefresh`  
+ [in] *bRefresh*  
  Um valor booleano que especifica se o `CMFCShellTreeCtrl` devem ser atualizadas imediatamente.  
   
 ### <a name="remarks"></a>Comentários  
@@ -264,7 +264,7 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pShellList`  
+ [in] *pShellList*  
  Um ponteiro para um `CMFCShellListCtrl` objeto.  
   
 ### <a name="remarks"></a>Comentários  

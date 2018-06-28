@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec36bfc82064272e165ea274cd127cc626731643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df36f8a6af5d8ad7e2a96780e02f236e3225333d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368771"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040623"
 ---
 # <a name="cmfccaptionbutton-class"></a>Classe CMFCCaptionButton
 O `CMFCCaptionButton` classe implementa um botão que é exibido na barra de legenda para um painel ou uma janela do quadro simplificado. Normalmente, o framework cria automaticamente botões de legenda.  
@@ -106,13 +106,13 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nHit`  
+ [in] *nHit*  
  O comando associado ao botão.  
   
- [in] `bLeftAlign`  
+ [in] *bLeftAlign*  
  Especifica se o botão é alinhado à esquerda.  
   
- A tabela a seguir lista os possíveis valores para o `nHit` parâmetro.  
+ A tabela a seguir lista os possíveis valores para o *nHit* parâmetro.  
   
 |Valor|Comando|  
 |-----------|-------------|  
@@ -161,10 +161,10 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` imagem de seta para a esquerda ou direita IDs; `FALSE` para cima ou seta para IDs de imagem.  
   
- [in] `bMaximized`  
+ [in] *bMaximized*  
  `TRUE` para uma ID de imagem maximizar; `FALSE` para um minimizar imagem ID.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -221,10 +221,10 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `ptTo`  
+ [in] *ptTo*  
  O novo local.  
   
- [in] `bHide`  
+ [in] *bHide*  
  Se o botão Mostrar.  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
@@ -240,23 +240,23 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo para o botão.  
   
- [in] `bActive`  
+ [in] *bScripts Ativos*  
  Se desenhar uma imagem do botão ativo.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Reservado para uso em uma classe derivada.  
   
- [in] `bMaximized`  
+ [in] *bMaximized*  
  Se desenhar uma imagem do botão maximizada.  
   
- [in] `bDisabled`  
+ [in] *bDesabilitado*  
  Se desenhar uma imagem do botão habilitado.  
   
 ### <a name="remarks"></a>Comentários  
- O `bMaximized` parâmetro é usado quando o botão é um maximizar ou minimizar botão.  
+ O *bMaximized* parâmetro é usado quando o botão é um maximizar ou minimizar botão.  
   
 ##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
  Define o tamanho mini da barra de título.  
@@ -266,7 +266,7 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` para a altura da barra de título mini; `FALSE` para a altura da barra de título padrão.  
   
 ## <a name="see-also"></a>Consulte também  

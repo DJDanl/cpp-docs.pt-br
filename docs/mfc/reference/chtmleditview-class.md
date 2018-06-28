@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f474ce860bf5d9071a93f17654123f4777efa7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ca4d5a88b14f32064e473bd129fcd0f8ddd7898
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367338"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040607"
 ---
 # <a name="chtmleditview-class"></a>Classe CHtmlEditView
 Fornece a funcionalidade da plataforma de edição de WebBrowser dentro do contexto de arquitetura de documento/exibição do MFC.  
@@ -100,25 +100,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszClassName`  
+ *lpszClassName*  
  Aponta para uma cadeia de caracteres terminada em nulo que nomeia a classe do Windows. O nome da classe pode ser qualquer nome registrado com o [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função global ou **RegisterClass** função do Windows. Se **nulo**, usa o padrão predefinido [CFrameWnd](../../mfc/reference/cframewnd-class.md) atributos.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Aponta para uma cadeia de caracteres terminada em nulo que representa o nome da janela.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica os atributos de estilo de janela. Por padrão, o **WS_VISIBLE** e **WS_CHILD** estilos do Windows são definidos.  
   
- `rect`  
- Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura especificando o tamanho e a posição da janela. O `rectDefault` valor permite que o Windows especificar o tamanho e a posição da nova janela.  
+ *Rect*  
+ Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura especificando o tamanho e a posição da janela. O *rectDefault* valor permite que o Windows especificar o tamanho e a posição da nova janela.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para a janela pai do controle.  
   
- `nID`  
+ *nID*  
  O número de identificação do modo de exibição. Por padrão, definido como **AFX_IDW_PANE_FIRST**.  
   
- `pContext`  
+ *pContext*  
  Um ponteiro para um [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). **NULO** por padrão.  
   
 ### <a name="remarks"></a>Comentários  
@@ -132,7 +132,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `ppDocument`  
+ *ppDocument*  
  O [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interface.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  

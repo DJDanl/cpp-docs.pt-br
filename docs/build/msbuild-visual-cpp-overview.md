@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae6e6d826f4bc1e8c9ab6cc28686e4ad1e6e3b02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe3499cdd8f9a9a1cfb91a45e9f039e1b8be2e76
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379257"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039083"
 ---
 # <a name="msbuild-visual-c-overview"></a>Visão geral de MSBuild (Visual C++)  
   
@@ -136,10 +136,13 @@ A tabela a seguir lista vários destinos útil orientado ao usuário.
 |Link|Executa a ferramenta de vinculador do Visual C++, link.exe.|  
 |ManifestResourceCompile|Extrai uma lista de recursos de um manifesto e, em seguida, executa a ferramenta do compilador de recurso do Microsoft Windows, rc.exe.|  
 |MIDL|Executa a ferramenta do compilador de linguagem de definição de Interface da Microsoft (MIDL), midl.exe.|  
-|recriar|Limpa e compila seu projeto.|  
+|Recriar|Limpa e compila seu projeto.|  
 |ResourceCompile|Executa a ferramenta do compilador de recurso do Microsoft Windows, rc.exe.|  
 |XdcMake|Executa a ferramenta de documentação XML, xdcmake.exe.|  
-|XSD|Executa a ferramenta de definição de esquema XML, xsd.exe.|  
+|XSD|Executa a ferramenta de definição de esquema XML, xsd.exe. *Consulte a observação abaixo.*|  
+
+> [!NOTE] 
+> No Visual Studio de 2017, o suporte para o projeto C++ **xsd** arquivos foi preterido. Você ainda pode usar **Microsoft.VisualC.CppCodeProvider** adicionando **CppCodeProvider.dll** manualmente para o GAC.
   
 ## <a name="see-also"></a>Consulte também  
   

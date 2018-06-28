@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa188930f6fe80d26282252ef3aae875aa19922f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bc3b4be5b7b5a6168287135511f3f401203a7e2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372554"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037909"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>Classe CMFCRibbonColorButton
 O `CMFCRibbonColorButton` classe implementa um botão de cor que você pode adicionar a uma barra de faixa de opções. Botão de cor da faixa de opções exibe um menu suspenso que contém um ou mais paletas de cores.  
@@ -128,13 +128,13 @@ void AddColorsGroup(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszName`  
+ [in] *lpszName*  
  O nome do grupo.  
   
- [in] `lstColors`  
+ [in] *lstColors*  
  A lista de cores.  
   
- [in] `bContiguousColumns`  
+ [in] *bContiguousColumns*  
  Controla como os itens de cor são exibidos no grupo. Se `TRUE`, os itens de cor são desenhados sem um espaçamento vertical. Se `FALSE`, os itens de cor são desenhados com um espaçamento vertical.  
   
 ### <a name="remarks"></a>Comentários  
@@ -164,22 +164,22 @@ CMFCRibbonColorButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nID`  
+ [in] *nID*  
  Especifica a ID de comando para executar quando um usuário clica no botão de comando.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Especifica o texto a ser exibido no botão.  
   
- [in] `nSmallImageIndex`  
+ [in] *nSmallImageIndex*  
  O índice baseado em zero da imagem pequena seja exibido no botão.  
   
- [in] `color`  
+ [in] *cor*  
  A cor do botão (o padrão é preto).  
   
- [in] `bSimpleButtonLook`  
+ [in] *bSimpleButtonLook*  
  Se `TRUE`, o botão é desenhado como um retângulo simple.  
   
- [in] `nLargeImageIndex`  
+ [in] *nLargeImageIndex*  
  O índice baseado em zero da imagem grande para ser exibido no botão.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -200,22 +200,22 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  O rótulo para o **automáticas** botão.  
   
- [in] `colorAutomatic`  
+ [in] *automáticaCor*  
  Um valor RGB que especifica o **automáticas** cor do padrão do botão.  
   
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Se o **automáticas** botão estiver habilitado; `FALSE` se ele estiver desabilitado.  
   
- [in] `lpszToolTip`  
+ [in] *lpszToolTip*  
  A dica de ferramenta do **automáticas** botão.  
   
- [in] `bOnTop`  
+ [in] *bOnTop*  
  Especifica se o **automáticas** botão fica na parte superior, antes da paleta de cores.  
   
- [in] `bDrawBorder`  
+ [in] *bDrawBorder*  
  `TRUE` Se o aplicativo desenha uma borda em torno da barra de cores do botão de cor da faixa de opções. Na barra de cores exibe a cor atualmente selecionada. `FALSE` Se o aplicativo não desenhar uma borda  
   
 ##  <a name="enableotherbutton"></a>  CMFCRibbonColorButton::EnableOtherButton  
@@ -228,10 +228,10 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszLabel`  
+ *lpszLabel*  
  O rótulo do botão.  
   
- `lpszToolTip`  
+ *lpszToolTip*  
  O texto de dica de ferramenta para o **outros** botão.  
   
 ### <a name="remarks"></a>Comentários  
@@ -307,7 +307,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `color`  
+ [in] *cor*  
  Uma cor a ser definido.  
   
 ##  <a name="setcolorboxsize"></a>  CMFCRibbonColorButton::SetColorBoxSize  
@@ -318,7 +318,7 @@ void SetColorBoxSize(CSize sizeBox);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `sizeBox`  
+ [in] *sizeBox*  
  O novo tamanho dos botões de cor na paleta de cores.  
   
 ##  <a name="setcolorname"></a>  CMFCRibbonColorButton::SetColorName  
@@ -331,10 +331,10 @@ static void __stdcall SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `color`  
+ [in] *cor*  
  O valor RGB da cor.  
   
- [in] `strName`  
+ [in] *strName*  
  O novo nome para a cor especificada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -348,7 +348,7 @@ void SetColumns(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nColumns`  
+ [in] *nColumns*  
  O número de ícones de cor para exibir em cada linha.  
   
 ### <a name="remarks"></a>Comentários  
@@ -363,10 +363,10 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  O texto a ser exibido com as cores do documento.  
   
- [in] `lstColors`  
+ [in] *lstColors*  
  Uma referência a uma lista de valores RGB.  
   
 ##  <a name="setpalette"></a>  CMFCRibbonColorButton::SetPalette  
@@ -377,7 +377,7 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pPalette`  
+ [in] *pPalette*  
  Um ponteiro para uma paleta de cores.  
   
 ### <a name="remarks"></a>Comentários  
@@ -390,11 +390,11 @@ void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `color`  
+ [in] *cor*  
  Cor selecionada pelo usuário.  
   
 ### <a name="remarks"></a>Comentários  
- O `CMFCRibbonColorButton::UpdateColor` método altera a cor do botão selecionado no momento e notificará seu pai, enviando um `WM_COMMAND` mensagem com um `BN_CLICKED` notificação padrão. Use o [CMFCRibbonColorButton::GetColor](#getcolor) método para recuperar a cor selecionada.  
+ O `CMFCRibbonColorButton::UpdateColor` método altera a cor do botão selecionado no momento e notificará seu pai enviando uma mensagem WM_COMMAND com uma notificação de BN_CLICKED padrão. Use o [CMFCRibbonColorButton::GetColor](#getcolor) método para recuperar a cor selecionada.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   

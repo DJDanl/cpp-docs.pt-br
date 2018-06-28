@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6599ddf3663f56c651907fe3823849787a05b50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4bcc39645c079ef9a0b61a4e12782223dd19a92
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373697"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042216"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Classe CMFCVisualManagerWindows7
 O `CMFCVisualManagerWindows7` fornece um aplicativo a aparência de um [!INCLUDE[win7](../../build/includes/win7_md.md)] aplicativo.  
@@ -149,20 +149,20 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pEdit`  
+ [in] *pEdit*  
  Um ponteiro para o controle de edição. Este valor pode não ser `NULL`.  
   
- [out] `bIsHighlighted`  
+ [out] *bIsHighlighted*  
  Retorna se a caixa de faixa de opções é realçada.  
   
- [out] `bIsPaneHighlighted`  
- Retorna `TRUE` se a faixa de opções do painel que contém `pEdit` é realçado.  
+ [out] *bIsPaneHighlighted*  
+ Retorna `TRUE` se a faixa de opções do painel que contém *pEdit* é realçado.  
   
- [out] `bIsDisabled`  
- Retorna se `pEdit` está desabilitado.  
+ [out] *bIsDisabled*  
+ Retorna se *pEdit* está desabilitado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A cor de plano de fundo da caixa de edição `pEdit`.  
+ A cor de plano de fundo da caixa de edição *pEdit*.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -178,16 +178,16 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para o contexto de dispositivo de um botão de menu.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Um ponteiro para um `CMFCToolBarButton`. A estrutura preenche o plano de fundo para este botão.  
   
- [in] `rect`  
+ [in] *rect*  
  Um retângulo que especifica os limites da área de imagem do botão de menu.  
   
- [in] `state`  
+ [in] *estado*  
  O estado do botão.  
   
 ### <a name="remarks"></a>Comentários  

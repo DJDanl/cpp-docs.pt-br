@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd5dd96c51c6b4ff5d3376581ddd760a2741968a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dea815ef86b16ad472303fd53da5c51e333b13a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368316"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037355"
 ---
 # <a name="cmfcimagepaintarea-class"></a>Classe CMFCImagePaintArea
 Fornece a área da imagem que você pode usar para modificar uma imagem em uma caixa de diálogo do editor de imagem.  
@@ -98,7 +98,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `pParentDlg`|Um ponteiro para a caixa de diálogo que é o pai do editor de imagem.|  
+|[in] *pParentDlg*|Um ponteiro para a caixa de diálogo que é o pai do editor de imagem.|  
   
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  Recupera o modo de desenho atual.  
@@ -122,10 +122,10 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `pBitmap`|A nova imagem de bitmap para exibir.|  
+|[in] *pBitmap*|A nova imagem de bitmap para exibir.|  
   
 ### <a name="remarks"></a>Comentários  
- Se `pBitmap` é `NULL`, esse método define o tamanho da área de pintura modificável como zero. Caso contrário, ele define o tamanho da área de pintura pode ser modificado para o tamanho da imagem de bitmap fornecido.  
+ Se *pBitmap* é `NULL`, esse método define o tamanho da área de pintura modificável como zero. Caso contrário, ele define o tamanho da área de pintura pode ser modificado para o tamanho da imagem de bitmap fornecido.  
   
 ##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
  Define a cor de desenho atual.  
@@ -139,7 +139,7 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `color`|A nova cor de desenho.|  
+|[in] *cor*|A nova cor de desenho.|  
   
 ### <a name="remarks"></a>Comentários  
  Quando você selecionar uma cor da barra de paleta do editor de imagem ou o seletor de cores, o framework chama esse método para atualizar a cor de desenho atual. A cor inicial do desenho é preta (um `COLORREF` valor 0).  
@@ -158,7 +158,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `mode`|Um [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) valor que especifica o modo de desenho atual.|  
+|[in] *modo*|Um [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) valor que especifica o modo de desenho atual.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496c6905276e789a72c55db1835187b0d4ab342a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b18eef5b828577f6d77846a5e9e231dcf828332
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369145"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040721"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Classe CMFCBaseVisualManager
 Uma camada entre derivada gerenciadores visual e a API de tema do Windows.  
@@ -136,31 +136,31 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo  
   
- [in] `rect`  
+ [in] *rect*  
  O retângulo delimitador da caixa de seleção.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Especifica se a caixa de seleção é realçada.  
   
- [in] `nState`  
+ [in] *nState*  
  0 para 1 desmarcada, para ativação normal,  
   
  2 para misto normal.  
   
- [in] `bEnabled`  
+ [in] *bAtivado*  
  Especifica se a caixa de seleção está habilitada.  
   
- [in] `bPressed`  
+ [in] *bPressed*  
  Especifica se a caixa de seleção é pressionada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` Se a API de tema está ativado. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
- Os valores de `nState` correspondem aos seguintes estilos de caixa de seleção.  
+ Os valores de *nState* correspondem aos seguintes estilos de caixa de seleção.  
   
 |nState|Estilo de caixa de seleção|  
 |------------|---------------------|  
@@ -181,19 +181,19 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Retângulo delimitador da borda da caixa de combinação.  
   
- [in] `bDisabled`  
+ [in] *bDesabilitado*  
  Especifica se a borda da caixa de combinação está desabilitada.  
   
- [in] `bIsDropped`  
+ [in] *bIsDropped*  
  Especifica se a borda da caixa de combinação está aberta.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Especifica se a borda da caixa de combinação é realçada.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -215,11 +215,11 @@ virtual BOOL DrawComboDropButton(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `pDC`|Um ponteiro para um contexto de dispositivo.|  
-|[in] `rect`|O retângulo delimitador do botão de lista suspensa da caixa de combinação.|  
-|[in] `bDisabled`|Especifica se o botão de menu suspenso de caixa de combinação está desabilitado.|  
-|[in] `bIsDropped`|Especifica se o botão de menu suspenso de caixa de combinação está aberto.|  
-|[in] `bIsHighlighted`|Especifica se o botão de menu suspenso de caixa de combinação é realçado.|  
+|[in] *pDC*|Um ponteiro para um contexto de dispositivo.|  
+|[in] *rect*|O retângulo delimitador do botão de lista suspensa da caixa de combinação.|  
+|[in] *bDesabilitado*|Especifica se o botão de menu suspenso de caixa de combinação está desabilitado.|  
+|[in] *bIsDropped*|Especifica se o botão de menu suspenso de caixa de combinação está aberto.|  
+|[in] *bIsHighlighted*|Especifica se o botão de menu suspenso de caixa de combinação é realçado.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` Se a API de tema está ativado. Caso contrário, `FALSE`.  
@@ -236,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  O retângulo delimitador do botão de envio.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Um ponteiro para o [CMFCButton classe](../../mfc/reference/cmfcbutton-class.md) objeto ao desenhar.  
   
- [in] `uiState`  
- Ignorado. O estado é obtido `pButton`.  
+ [in] *uiState*  
+ Ignorado. O estado é obtido *pButton*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` Se a API de tema está ativado. Caso contrário, `FALSE`.  
@@ -265,22 +265,22 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  O retângulo delimitador de botão de opção.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Especifica se o botão de opção é realçado.  
   
- [in] `bChecked`  
+ [in] *bChecked*  
  Especifica se o botão de opção é verificado.  
   
- [in] `bEnabled`  
+ [in] *bAtivado*  
  Especifica se o botão de opção é habilitado.  
   
- [in] `bPressed`  
+ [in] *bPressed*  
  Especifica se o botão é pressionado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -303,31 +303,31 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
- [in] `pStatusBar`  
+ [in] *pStatusBar*  
  Um ponteiro para a barra de status. Este valor é ignorado.  
   
- [in] `rectProgress`  
- O retângulo delimitador da barra de progresso em `pDC` coordenadas.  
+ [in] *rectProgress*  
+ O retângulo delimitador da barra de progresso em *pDC* coordenadas.  
   
- [in] `nProgressTotal`  
+ [in] *nProgressTotal*  
  O valor de progresso total.  
   
- [in] `nProgressCurr`  
+ [in] *nProgressCurr*  
  O valor de andamento atual.  
   
- [in] `clrBar`  
+ [in] *clrBar*  
  A cor inicial. `CMFCBaseVisualManager` ignora isso. Classes derivadas podem usá-lo para gradientes de cor.  
   
- [in] `clrProgressBarDest`  
+ [in] *clrProgressBarDest*  
  A cor final. `CMFCBaseVisualManager` ignora isso. Classes derivadas podem usá-lo para gradientes de cor.  
   
- [in] `clrProgressText`  
+ [in] *clrProgressText*  
  Cor do texto do progresso. `CMFCBaseVisualManager` ignora isso. A cor do texto é definida por `afxGlobalData.clrBtnText`.  
   
- [in] `bProgressText`  
+ [in] *bProgressText*  
  Especifica se deve exibir o texto do progresso.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -344,13 +344,13 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Um ponteiro para um painel cujo plano de fundo deve ser desenhado.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  O retângulo delimitador da área a ser preenchido.  
   
 ### <a name="return-value"></a>Valor de retorno  

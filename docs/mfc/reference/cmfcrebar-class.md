@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abb880c1add83ec03d787c28b816f2e82caeddd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcef7bab4fd2b0cd913c0da929534d6964730215
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368794"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037955"
 ---
 # <a name="cmfcrebar-class"></a>Classe CMFCReBar
 Um `CMFCReBar` objeto é uma barra de controle que fornece informações de estado para controles rebar, persistência e layout.  
@@ -110,22 +110,22 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  Um ponteiro para a janela filho que devem ser inseridos em rebar. O objeto referenciado deve ter o **WS_CHILD** estilo da janela.  
   
- [in] `pszText`  
+ [in] *pszText*  
  Especifica o texto a ser exibido em rebar. O texto não é parte da janela filho. Em vez disso, ele é exibido o rebar em si.  
   
- [in] [out] `pbmp`  
+ [in] [out] *pbmp*  
  Especifica o bitmap a ser exibido no plano de fundo rebar.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Contém o estilo a ser aplicado para a faixa. Para obter uma lista completa dos estilos de banda, consulte a descrição de `fStyle` no [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) estrutura na documentação do SDK do Windows.  
   
- [in] `clrFore`  
+ [in] *clrFore*  
  Representa a cor de primeiro plano do rebar.  
   
- [in] `clrBack`  
+ [in] *clrBack*  
  Representa a cor de plano de fundo do rebar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -143,16 +143,16 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Um ponteiro para a janela pai deste controle rebar.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  Especifica o estilo do controle rebar. O valor de estilo padrão é **RBS_BANDBORDERS**, que exibe restringir linhas para separar adjacentes bandas do controle rebar. Para obter uma lista de estilos válidos, consulte [estilos de controle Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) na documentação do SDK do Windows.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  O estilo da janela do controle rebar. Para obter uma lista de estilos válidos, consulte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `nID`  
+ [in] *nID*  
  ID de janela filho. do rebar  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -209,7 +209,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -232,7 +232,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `CPoint`  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
- [in] `pTI`  
+ [in] *ponto*  
+ [in] *pTI*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in] *pTarget*  
+ [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -278,7 +278,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
   
 ### <a name="remarks"></a>Comentários  
   

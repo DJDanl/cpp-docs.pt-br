@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a67b1e405f1e3be472f9b9b3b5ebe00be3fb8a5d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375093"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041039"
 ---
 # <a name="colechangeicondialog-class"></a>Classe COleChangeIconDialog
 Usado para a caixa de diálogo OLE alterar ícone.  
@@ -100,10 +100,10 @@ explicit COleChangeIconDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pItem`  
+ *pItem*  
  Aponta para o item a ser convertido.  
   
- `dwFlags`  
+ *dwFlags*  
  Sinalizador de criação, que contém qualquer número de valores a seguir combinadas que usam o bit a bit- ou o operador:  
   
 - **CIF_SELECTCURRENT** Especifica que o botão de opção atual será selecionado inicialmente quando a caixa de diálogo é chamada. Esse é o padrão.  
@@ -116,7 +116,7 @@ explicit COleChangeIconDialog(
   
 - **CIF_USEICONEXE** Especifica que o ícone deve ser extraído do executável especificado no **szIconExe** campo de [m_ci](#m_ci) em vez de recuperada do tipo. Isso é útil para incorporar ou vincular a arquivos OLE não.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Aponta para o objeto de janela pai ou o proprietário (do tipo `CWnd`) ao qual pertence o objeto de caixa de diálogo. Se for **nulo**, a janela pai da caixa de diálogo será definida para a janela principal do aplicativo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -132,7 +132,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pItem`  
+ *pItem*  
  Aponta para o item cujo ícone está sendo alterado.  
   
 ### <a name="return-value"></a>Valor de retorno  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a588a848e7964a70f47d4cf29a5f5ef2741881d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eaec2b7951b0655a8a47106374c7527dad27bd20
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368137"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039531"
 ---
 # <a name="cmetafiledc-class"></a>Classe CMetaFileDC
 Implementa um metarquivo do Windows, que contém uma sequência de comandos de interface (GDI) do dispositivo de gráficos que você pode reproduzir para criar uma imagem desejada ou texto.  
@@ -64,7 +64,7 @@ class CMetaFileDC : public CDC
   
  Em seguida enviar o `CMetaFileDC` do objeto de sequência de `CDC` comandos GDI que você pretenda para ele repetir. Somente os comandos GDI que criam a saída, tais como `MoveTo` e `LineTo`, pode ser usado.  
   
- Depois que você enviou os comandos desejados para o metarquivo, chame o **fechar** função de membro, que fecha os contextos de dispositivo de metarquivo e retorna um identificador de metarquivo. Em seguida, descarte o `CMetaFileDC` objeto.  
+ Depois que você enviou os comandos desejados para o metarquivo, chame o `Close` a função de membro, que fecha os contextos de dispositivo de metarquivo e retorna um identificador de metarquivo. Em seguida, descarte o `CMetaFileDC` objeto.  
   
  [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) pode usar o identificador de metarquivo para executar o metarquivo repetidamente. O metarquivo também pode ser manipulado por funções do Windows como [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), que copia um meta-arquivo em disco.  
   
@@ -171,16 +171,16 @@ BOOL CreateEnhanced(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDCRef`  
+ *pDCRef*  
  Identifica um dispositivo de referência para o metarquivo aprimorado.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Aponta para uma cadeia de caracteres terminada em nulo. Especifica o nome do arquivo para o metarquivo a ser criado. Se esse parâmetro for **nulo**, o metarquivo avançado é memória com base e seu conteúdo perdido quando o objeto é destruído ou quando o Win32 **DeleteEnhMetaFile** função é chamada.  
   
- `lpBounds`  
+ *lpBounds*  
  Aponta para um [RECT](../../mfc/reference/rect-structure1.md) estrutura de dados ou um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica as dimensões em **HIMETRIC** unidades (em incrementos de.01 milímetro) da imagem a ser armazenado na Metarquivo aprimorado.  
   
- `lpszDescription`  
+ *lpszDescription*  
  Aponta para uma cadeia de caracteres terminada em zero que especifica o nome do aplicativo que criou a imagem, bem como o título da imagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -189,15 +189,15 @@ BOOL CreateEnhanced(
 ### <a name="remarks"></a>Comentários  
  Este controlador de domínio pode ser usado para armazenar uma imagem independente de dispositivo.  
   
- O Windows usa o dispositivo de referência identificado pelo `pDCRef` parâmetro para registrar a resolução e unidades do dispositivo no qual uma imagem é exibido. Se o `pDCRef` parâmetro é **nulo**, ele usa o dispositivo de vídeo atual para referência.  
+ O Windows usa o dispositivo de referência identificado pelo *pDCRef* parâmetro para registrar a resolução e unidades do dispositivo no qual uma imagem é exibido. Se o *pDCRef* parâmetro é **nulo**, ele usa o dispositivo de vídeo atual para referência.  
   
- Os membros da esquerda e superior do `RECT` dados estrutura apontada pelo `lpBounds` parâmetro deve ser menor do que os membros da direita e inferior, respectivamente. Pontos ao longo das bordas do retângulo são incluídos na imagem. Se `lpBounds` é **nulo**, a interface gráfica de dispositivo (GDI) calcula as dimensões do retângulo menor que pode colocar a imagem desenhada pelo aplicativo. O `lpBounds` parâmetro deve ser fornecido quando possível.  
+ Os membros da esquerda e superior do `RECT` dados estrutura apontada pelo *lpBounds* parâmetro deve ser menor do que os membros da direita e inferior, respectivamente. Pontos ao longo das bordas do retângulo são incluídos na imagem. Se *lpBounds* é **nulo**, a interface gráfica de dispositivo (GDI) calcula as dimensões do retângulo menor que pode colocar a imagem desenhada pelo aplicativo. O *lpBounds* parâmetro deve ser fornecido quando possível.  
   
- A cadeia de caracteres apontada pelo `lpszDescription` parâmetro deve conter um caractere null entre o nome do aplicativo e o nome da imagem e deve terminar com dois caracteres nulos — por exemplo, "XYZ gráficos Editor\0Bald Eagle\0\0," onde \0 representa o nulo caractere. Se `lpszDescription` é **nulo**, não há nenhuma entrada correspondente no cabeçalho de metarquivo avançado.  
+ A cadeia de caracteres apontada pelo *lpszDescription* parâmetro deve conter um caractere null entre o nome do aplicativo e o nome da imagem e deve terminar com dois caracteres nulos — por exemplo, "XYZ gráficos Editor\0Bald Eagle\0\0, "onde \0 representa o caractere nulo. Se *lpszDescription* é **nulo**, não há nenhuma entrada correspondente no cabeçalho de metarquivo avançado.  
   
  Aplicativos usam o controlador de domínio criado por essa função para armazenar uma imagem de gráfico em um metarquivo avançado. O identificador que identifica este controlador de domínio pode ser passado para qualquer função GDI.  
   
- Depois que um aplicativo armazena uma imagem em um metarquivo avançado, ele pode exibir a imagem em qualquer dispositivo de saída chamando o `CDC::PlayMetaFile` função. Ao exibir a imagem, o Windows usa o retângulo apontado pelo `lpBounds` parâmetro e os dados de resolução do dispositivo de referência para posicionar e dimensionar a imagem. O contexto de dispositivo retornado por essa função contém os mesmos atributos padrão associados a qualquer novo controlador de domínio.  
+ Depois que um aplicativo armazena uma imagem em um metarquivo avançado, ele pode exibir a imagem em qualquer dispositivo de saída chamando o `CDC::PlayMetaFile` função. Ao exibir a imagem, o Windows usa o retângulo apontado pelo *lpBounds* parâmetro e os dados de resolução do dispositivo de referência para posicionar e dimensionar a imagem. O contexto de dispositivo retornado por essa função contém os mesmos atributos padrão associados a qualquer novo controlador de domínio.  
   
  Os aplicativos devem usar o Win32 **GetWinMetaFileBits** function para converter um metarquivo avançado para o formato mais antigo.  
   

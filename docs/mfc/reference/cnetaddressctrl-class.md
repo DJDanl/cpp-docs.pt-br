@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c579f452f26761abd7b52c849fa0117a98777355
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e80b74262a05548d9aede80df44d204b759b84da
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373071"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038510"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl Class
 O `CNetAddressCtrl` classe representa o controle de endereço de rede, que pode ser usado para entrada e validar o formato de IPv4, IPv6 e nomeados endereços DNS.  
@@ -127,10 +127,10 @@ virtual BOOL Create(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `dwStyle`|Uma combinação bit a bit de estilos a ser aplicada ao controle. Para obter mais informações, consulte [Editar estilos](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
-|[in] `rect`|Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle.|  
-|[in] `pParentWnd`|Um ponteiro não nulo para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle.|  
-|[in] `nID`|A ID do controle.|  
+|[in] *dwStyle*|Uma combinação bit a bit de estilos a ser aplicada ao controle. Para obter mais informações, consulte [Editar estilos](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
+|[in] *rect*|Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle.|  
+|[in] *pParentWnd*|Um ponteiro não nulo para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle.|  
+|[in] *nID*|A ID do controle.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` Se esse método for bem-sucedida; Caso contrário, `false`.  
@@ -151,11 +151,11 @@ virtual BOOL CreateEx(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `dwExStyle`|Uma combinação bit a bit (ou) de estilos estendidos a serem aplicados ao controle. Para obter mais informações, consulte o `dwExStyle` parâmetro o [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) função.|  
-|[in] `dwStyle`|Uma combinação bit a bit (ou) de estilos a ser aplicada ao controle. Para obter mais informações, consulte [Editar estilos](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
-|[in] `rect`|Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle.|  
-|[in] `pParentWnd`|Um ponteiro não nulo para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle.|  
-|[in] `nID`|A ID do controle.|  
+|[in] *dwExStyle*|Uma combinação bit a bit (ou) de estilos estendidos a serem aplicados ao controle. Para obter mais informações, consulte o *dwExStyle* parâmetro o [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) função.|  
+|[in] *dwStyle*|Uma combinação bit a bit (ou) de estilos a ser aplicada ao controle. Para obter mais informações, consulte [Editar estilos](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
+|[in] *rect*|Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle.|  
+|[in] *pParentWnd*|Um ponteiro não nulo para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle.|  
+|[in] *nID*|A ID do controle.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` Se esse método for bem-sucedida; Caso contrário, `false`.  
@@ -186,7 +186,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in, out] `pAddress`|Ponteiro para um [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) estrutura.  Definir o `pAddrInfo` membro dessa estrutura para o endereço de um [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) antes de chamar o método GetAddress da estrutura.|  
+|[out no] *pAddress*|Ponteiro para um [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) estrutura.  Definir o *pAddrInfo* membro dessa estrutura para o endereço de um [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) antes de chamar o método GetAddress da estrutura.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  O valor `S_OK` se esse método for bem-sucedida; caso contrário, um código de erro COM. Para obter mais informações sobre possíveis códigos de erro, consulte a seção do valor de retorno do [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) macro.  
@@ -209,7 +209,7 @@ DWORD GetAllowType() const;
  Uma combinação bit a bit (ou) de sinalizadores que especifica os tipos de endereços de controle de endereço de rede pode dar suporte. Para obter mais informações, consulte [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).  
   
 ### <a name="remarks"></a>Comentários  
- Esta mensagem invoca o [NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318) macro, que é descrita no SDK do Windows. Macro envia o `NCM_GETALLOWTYPE` mensagem.  
+ Esta mensagem invoca o [NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318) macro, que é descrita no SDK do Windows. Macro envia a mensagem NCM_GETALLOWTYPE.  
   
 ##  <a name="setallowtype"></a>  CNetAddressCtrl::SetAllowType  
  Define o tipo de endereço de rede que pode dar suporte a controle de endereço de rede atual.  
@@ -222,7 +222,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `dwAddrMask`|Uma combinação bit a bit (ou) de sinalizadores que especifica os tipos de endereços de controle de endereço de rede pode dar suporte. Para obter mais informações, consulte [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).|  
+|[in] *dwAddrMask*|Uma combinação bit a bit (ou) de sinalizadores que especifica os tipos de endereços de controle de endereço de rede pode dar suporte. Para obter mais informações, consulte [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `S_OK` Se esse método for bem-sucedida; Caso contrário, um código de erro COM.  
@@ -230,7 +230,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 ### <a name="remarks"></a>Comentários  
  Use o [CNetAddressCtrl::SetAllowType](#setallowtype) método para especificar os tipos de endereços que pode dar suporte a controle de endereço de rede atual. Use o [CNetAddressCtrl::GetAddress](#getaddress) método para validar e analisar o endereço de rede que o usuário insere. Use o [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) método para exibir uma InfoDica de mensagem de erro se o [CNetAddressCtrl::GetAddress](#getaddress) método for bem-sucedido.  
   
- Esta mensagem invoca o [NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320) macro, que é descrita no SDK do Windows. Macro envia o `NCM_SETALLOWTYPE` mensagem.  
+ Esta mensagem invoca o [NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320) macro, que é descrita no SDK do Windows. Macro envia a mensagem NCM_SETALLOWTYPE.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CNetAddressCtrl](../../mfc/reference/cnetaddressctrl-class.md)   

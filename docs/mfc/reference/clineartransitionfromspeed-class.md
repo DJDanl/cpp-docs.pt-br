@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64c8829336378e24759bc26e306fb7b43ab226bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d6b3ba22fbe9feffc52d0f6ebfd970247929caa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366903"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039476"
 ---
 # <a name="clineartransitionfromspeed-class"></a>Classe CLinearTransitionFromSpeed
 Encapsula uma transição de velocidade linear.  
@@ -84,10 +84,10 @@ CLinearTransitionFromSpeed(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dblSpeed`  
+ *dblSpeed*  
  O valor absoluto da velocidade da variável.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  O valor da variável de animação no final da transição.  
   
 ##  <a name="create"></a>  CLinearTransitionFromSpeed::Create  
@@ -100,7 +100,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
-`pLibrary`  
+*pLibrary*  
  Um ponteiro para um [IUIAnimationTransitionLibrary interface](https://msdn.microsoft.com/library/windows/desktop/dd371897), que define uma biblioteca de transições padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  

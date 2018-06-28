@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8f411aeb88a2d76265c6e8c277b367cb1ebce57
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367068"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038221"
 ---
 # <a name="class-factories-and-licensing"></a>Alocadores de classe e licenciamento
 Para criar uma instância do seu controle OLE, um aplicativo de contêiner chama uma função de membro de fábrica de classe do controle. Como o controle é um objeto OLE real, a fábrica de classe é responsável pela criação de instâncias de seu controle. Cada classe de controle OLE deve ter uma fábrica de classes.  
@@ -140,23 +140,23 @@ BOOL AFXAPI AfxVerifyLicFile(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `hInstance`  
+ *hInstance*  
  O identificador de instância da DLL associada ao controle licenciado.  
   
- `pszLicFileName`  
+ *pszLicFileName*  
  Aponta para uma cadeia de caracteres terminada em nulo que contém o nome do arquivo de licença.  
   
- `pszLicFileContents`  
+ *pszLicFileContents*  
  Aponta para uma sequência de bytes que deve corresponder a sequência encontrada no início do arquivo de licença.  
   
- `cch`  
- Número de caracteres em `pszLicFileContents`.  
+ *CCH*  
+ Número de caracteres em *pszLicFileContents*.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o arquivo de licença existe e começa com a sequência de caracteres em `pszLicFileContents`; caso contrário, 0.  
+ Diferente de zero se o arquivo de licença existe e começa com a sequência de caracteres em *pszLicFileContents*; caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Se `cch` é -1, essa função usa:  
+ Se *cch* é -1, essa função usa:  
   
  [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 

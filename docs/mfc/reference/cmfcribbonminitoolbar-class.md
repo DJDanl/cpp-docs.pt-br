@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8aebd796e0edb587e18db910df808fa349ca37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371667"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041730"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Classe CMFCRibbonMiniToolBar
 Implementa uma barra de ferramentas contextuais pop-up.  
@@ -98,10 +98,10 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  A barra de faixa de opções que pesquisa a Minibarra de ferramentas para os botões a serem exibidos.  
   
- [in] `lstCommands`  
+ [in] *lstCommands*  
  A lista de comandos a ser exibido na barra de ferramentas mini. Todas as categorias de faixa de opções são pesquisadas para encontrar os botões associados.  
   
 ### <a name="remarks"></a>Comentários  
@@ -122,10 +122,10 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `x`  
+ [in] *x*  
  Especifica a posição horizontal da barra de ferramentas mini em coordenadas da tela.  
   
- [in] `y`  
+ [in] *y*  
  Especifica a posição vertical da barra de ferramentas mini em coordenadas da tela.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -143,16 +143,16 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `x`  
+ [in] *x*  
  Especifica a posição horizontal do menu de contexto em coordenadas da tela.  
   
- [in] `y`  
+ [in] *y*  
  Especifica a posição vertical do menu de contexto em coordenadas da tela.  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  Especifica a ID de recurso do menu de contexto para exibir.  
   
- [in] `pWndOwner`  
+ [in] *pWndOwner*  
  Identifica a janela que recebe mensagens no menu de contexto.  
   
 ### <a name="return-value"></a>Valor de retorno  

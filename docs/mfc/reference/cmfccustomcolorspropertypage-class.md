@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02c2590e4143460a2cd89bb2b7e7e167c92c0e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8123db8e4a8dfba94e469881af8fbb2ecb40e2a0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370803"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041975"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>Classe CMFCCustomColorsPropertyPage
 Representa uma página de propriedades que pode selecionar cores personalizadas em uma caixa de diálogo de cor.  
@@ -91,9 +91,9 @@ void Setup(
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `R`|O componente vermelho, o valor de RGB.|  
-|[in] `G`|O componente verde, o valor de RGB.|  
-|[in] `B`|O componente azul, o valor de RGB.|  
+|[in] *R*|O componente vermelho, o valor de RGB.|  
+|[in] *G*|O componente verde, o valor de RGB.|  
+|[in] *B*|O componente azul, o valor de RGB.|  
   
 ### <a name="remarks"></a>Comentários  
  Este método atualizará o RGB atual e as HLS (matiz, luminosidade e saturação) cor valores associados da página de propriedades. O [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) método chama este método quando o framework inicializa a caixa de diálogo de cor ou o usuário pressiona o botão esquerdo do mouse. Para obter mais informações sobre `CMFCColorDialog`, consulte [CMFCColorDialog classe](../../mfc/reference/cmfccolordialog-class.md).  

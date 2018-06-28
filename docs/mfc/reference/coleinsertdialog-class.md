@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041b707bec58abeb19617fbfd275428ca2cf67e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aaf60141747f1ff1db2256815f24e6708307ab7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374875"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042164"
 ---
 # <a name="coleinsertdialog-class"></a>Classe COleInsertDialog
 Usado para a caixa de diálogo Inserir objeto OLE.  
@@ -114,7 +114,7 @@ COleInsertDialog (
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwFlags`  
+ *dwFlags*  
  Sinalizador de criação que contém qualquer número de valores a seguir para ser combinados usando o operador OR bit a bit:  
   
 - **IOF_SHOWHELP** Especifica que o botão de Ajuda será exibido quando a caixa de diálogo é chamada.  
@@ -131,7 +131,7 @@ COleInsertDialog (
   
 - **IOF_VERIFYSERVERSEXIST** Especifica que a caixa de diálogo deve validar as classes adiciona à caixa de listagem, garantindo que os servidores especificados no banco de dados de registro existem antes da caixa de diálogo é exibida. Defina esse sinalizador pode prejudicar significativamente o desempenho.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Aponta para o objeto de janela pai ou o proprietário (do tipo `CWnd`) ao qual pertence o objeto de caixa de diálogo. Se for **nulo**, a janela pai do objeto de caixa de diálogo é definida como a janela principal do aplicativo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -145,7 +145,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pItem`  
+ *pItem*  
  Aponta para o item a ser criado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -167,7 +167,7 @@ INT_PTR
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwFlags`  
+ *dwFlags*  
  Um dos seguintes valores:  
   
  `COleInsertDialog::DocObjectsOnly` Insere apenas DocObjects.  

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9267dd6ab89871bcf8058529f32eb3686be937df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d078900c3436c2205905b92d651bab86e94db246
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368430"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039005"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Classe CMFCRibbonLinkCtrl
 Implementa um hiperlink que está posicionado em uma faixa de opções. O hiperlink abre uma página da Web quando você clicar nele.  
@@ -106,13 +106,13 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nID`  
+ [in] *nID*  
  Especifica a ID de comando do comando que é executado quando o controle de link é clicado.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Especifica o rótulo a ser exibido no controle de link.  
   
- [in] `lpszLink`  
+ [in] *lpszLink*  
  Especifica o hiperlink associado ao controle de link.  
   
 ### <a name="example"></a>Exemplo  
@@ -128,7 +128,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -140,7 +140,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -166,7 +166,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -191,8 +191,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `CDC*`  
- [in] `CRect`  
+ [in] *CDC**  
+ [in] *CRect*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -217,7 +217,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -229,7 +229,7 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -263,7 +263,7 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszLink`  
+ [in] *lpszLink*  
  Especifica o texto do hiperlink.  
   
 ## <a name="see-also"></a>Consulte também  

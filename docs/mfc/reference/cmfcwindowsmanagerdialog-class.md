@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6900164b3ce89031d0db7630c026a302616511c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b5ae46280a537577ae3e3ab0fbdf73f2e449e58
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366558"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042089"
 ---
 # <a name="cmfcwindowsmanagerdialog-class"></a>Classe CMFCWindowsManagerDialog
 O `CMFCWindowsManagerDialog` objeto permite que um usuário gerencie janelas filho MDI um aplicativo de MDI.  
@@ -76,10 +76,10 @@ CMFCWindowsManagerDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pMDIFrame`  
+ [in] *pMDIFrame*  
  Um ponteiro para a janela pai ou proprietário.  
   
- [in] `bHelpButton`  
+ [in] *bHelpButton*  
  Um parâmetro booleano que especifica se a estrutura exibe um **ajuda** botão.  
   
 ### <a name="remarks"></a>Comentários  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddd48c51e1e9b5d206cefa56e2879dfb3ace3b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c284f5d5fdfee09349cc6eb9cbde38da21918d25
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367923"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040955"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Classe CMFCPropertyGridToolTipCtrl
 Implementa uma dica de ferramenta de controle que o [CMFCPropertyGridCtrl classe](../../mfc/reference/cmfcpropertygridctrl-class.md) usa para exibir dicas de ferramenta.  
@@ -106,7 +106,7 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Um ponteiro para a janela pai.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -130,7 +130,7 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `rect`  
+ [out] *rect*  
  Contém a última posição do controle tooltip.  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
@@ -148,7 +148,7 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nTextMargin`  
+ [in] *nTextMargin*  
  Especifica o espaçamento entre o texto do controle de dica de ferramenta e a borda da janela de dica de ferramenta. O valor padrão é 10 pixels.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
@@ -161,14 +161,14 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `rect`  
+ [in] *rect*  
  Especifica a posição e o tamanho do controle tooltip.  
   
- [in] `strText`  
+ [in] *strText*  
  Especifica o texto a ser mostrado na dica de ferramenta.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método exibe o controle de dica de ferramenta na posição e tamanho especificado pelo `rect`. Se a posição, o tamanho e o texto não foram alterados desde a última vez em que esse método foi chamado, esse método não terá efeito.  
+ Esse método exibe o controle de dica de ferramenta na posição e tamanho especificado por *rect*. Se a posição, o tamanho e o texto não foram alterados desde a última vez em que esse método foi chamado, esse método não terá efeito.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   

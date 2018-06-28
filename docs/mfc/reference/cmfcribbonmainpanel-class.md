@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05257749c95b619c479538a1322746ae2b487b6a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d92df2378ea8f41c140b69ba3878ca0d7a18e08a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367952"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037352"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>Classe CMFCRibbonMainPanel
 Implementa um painel de faixa de opções que exibe quando você clica o [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).  
@@ -90,7 +90,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  Um ponteiro para o elemento de faixa de opções para adicionar ao painel principal.  
   
 ### <a name="remarks"></a>Comentários  
@@ -106,10 +106,10 @@ void AddRecentFilesList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszLabel`  
+ *lpszLabel*  
  Especifica a cadeia de caracteres para adicionar à lista de arquivos recentes.  
   
- `nWidth`  
+ *nWidth*  
  Especifica a largura, em pixels, do painel de lista de arquivos recentes.  
   
 ### <a name="remarks"></a>Comentários  
@@ -122,7 +122,7 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  Um ponteiro para o elemento de faixa de opções para adicionar a parte inferior do painel principal.  
   
 ### <a name="remarks"></a>Comentários  
@@ -137,10 +137,10 @@ void AddToRight(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pElem`  
+ *pElem*  
  Um ponteiro para um elemento de faixa de opções a serem adicionadas ao lado direito do painel principal.  
   
- `nWidth`  
+ *nWidth*  
  Especifica a largura, em pixels, do painel à direita.  
   
 ### <a name="remarks"></a>Comentários  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4f56a02f469babe22c8e5cbb9ebb4d6b806499f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74005682036e0a4d15d17d147b5994864fa97378
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369802"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042112"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>Classe CMFCDropDownToolBar
 Uma barra de ferramentas é exibida quando o usuário pressiona e mantém um botão de barra de ferramentas de nível superior.  
@@ -133,22 +133,22 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiResID`  
+ [in] *uiResID*  
  A ID de recurso do bitmap que se refere às imagens da barra de ferramentas ativa.  
   
- [in] `uiColdResID`  
+ [in] *uiColdResID*  
  A ID de recurso do bitmap que se refere às imagens de barra de ferramentas frios.  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  A ID de recurso do bitmap que se refere às imagens de menu comum.  
   
- [in] `bLocked`  
+ [in] *bloqueado*  
  `TRUE` para bloquear a barra de ferramentas. Caso contrário, `FALSE`.  
   
- [in] `uiDisabledResID`  
+ [in] *uiDisabledResID*  
  A ID de recurso do bitmap que se refere às imagens da barra de ferramentas desabilitado.  
   
- [in] `uiMenuDisabledResID`  
+ [in] *uiMenuDisabledResID*  
  A ID de recurso do bitmap que se refere às imagens de menu desativado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -174,13 +174,13 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiResID`  
- [in] `uiColdResID`  
- [in] `uiMenuResID`  
- [in] `BOOL`  
- [in] `uiDisabledResID`  
- [in] `uiMenuDisabledResID`  
- [in] `uiHotResID`  
+ [in] *uiResID*  
+ [in] *uiColdResID*  
+ [in] *uiMenuResID*  
+ [in] *BOOL*  
+ [in] *uiDisabledResID*  
+ [in] *uiMenuDisabledResID*  
+ [in] *uiHotResID*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -196,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nFlags`  
- [in] `point`  
+ [in] *nFlags*  
+ [in] *ponto*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -211,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nFlags`  
- [in] `point`  
+ [in] *nFlags*  
+ [in] *ponto*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -224,7 +224,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -240,8 +240,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in] *pTarget*  
+ [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Comentários  
   

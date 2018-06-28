@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d195b2888c47a318369df13c371f85b21cc7bf84
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8e693a0e6a2353693f676ed0d63d7087d3e57455
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370188"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040893"
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>Classe CMFCRibbonCustomizeDialog
 Exibe a faixa de opções **personalizar** página.  
@@ -82,10 +82,10 @@ CMFCRibbonCustomizeDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Um ponteiro para a janela pai (geralmente o quadro principal).  
   
- [in] `pRibbon`  
+ [in] *pRibbon*  
  Um ponteiro para o `CMFCRibbonBar` que está para ser personalizado.  
   
 ### <a name="example"></a>Exemplo  

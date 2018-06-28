@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b2c5734618bf1bedc72fe78dbeaada8c437391f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53f87dd55373599f8ab8394284a6271930b9fcd6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372776"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037503"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>Classe CMFCToolBarFontSizeComboBox
 Um botão de barra de ferramentas que contém um controle de caixa de combinação que permite que o usuário selecione um tamanho de fonte.  
@@ -105,7 +105,7 @@ void RebuildFontSizes(const CString& strFontName);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `[in] strFontName`  
+ [in] *strFontName*  
  Especifica um nome de fonte.  
   
 ### <a name="remarks"></a>Comentários  
@@ -119,7 +119,7 @@ void SetTwipSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nSize`  
+ [in] *nSize*  
  Especifica o tamanho da fonte (em twips) para definir.  
   
 ### <a name="remarks"></a>Comentários  

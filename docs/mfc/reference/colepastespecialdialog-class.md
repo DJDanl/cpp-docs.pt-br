@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e2e668a2ad15ec9ec2fb779be32d35c17eb57cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1be5cdc05ab387000828ce6424aed1fcc253d6c2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374351"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039150"
 ---
 # <a name="colepastespecialdialog-class"></a>Classe COlePasteSpecialDialog
 Usado para a caixa de diálogo OLE Colar especial.  
@@ -68,7 +68,7 @@ class COlePasteSpecialDialog : public COleDialog
 |----------|-----------------|  
 |[COlePasteSpecialDialog::AddFormat](#addformat)|Adiciona formatos personalizados à lista de formatos de que seu aplicativo pode colar.|  
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Adiciona uma nova entrada à lista de formatos com suporte de área de transferência.|  
-|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Adiciona **CF_BITMAP**, **CF_DIB**, `CF_METAFILEPICT`e, opcionalmente, `CF_LINKSOURCE` à lista de formatos de seu aplicativo pode colar.|  
+|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Adiciona **CF_BITMAP**, **CF_DIB**, **CF_METAFILEPICT**e, opcionalmente, **CF_LINKSOURCE** à lista de formatos de seu aplicativo pode colar .|  
 |[COlePasteSpecialDialog::CreateItem](#createitem)|Cria o item no documento contêiner usando o formato especificado.|  
 |[COlePasteSpecialDialog::DoModal](#domodal)|Exibe a caixa de diálogo OLE Colar especial.|  
 |[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|Indica se será desenhado item como um ícone ou não.|  
@@ -130,22 +130,22 @@ void AddFormat(
  *FMT*  
  Referência ao tipo de dados para adicionar.  
   
- `lpszFormat`  
+ *lpszFormat*  
  Cadeia de caracteres que descreve o formato para o usuário.  
   
  *lpszResult*  
  Cadeia de caracteres que descreve o resultado se esse formato for escolhido na caixa de diálogo.  
   
- `flags`  
+ *flags*  
  Os diferentes vinculando e inserindo opções disponíveis para esse formato. Esse sinalizador é uma combinação bit a bit de um ou mais dos valores diferentes de **OLEUIPASTEFLAG** tipo enumerado.  
   
- `cf`  
+ *CF*  
  O formato de área de transferência para adicionar.  
   
  *TYMED*  
  Os tipos de mídia disponíveis neste formato. Esta é uma combinação bit a bit de um ou mais dos valores a **TYMED** tipo enumerado.  
   
- `nFormatID`  
+ *nFormatID*  
  A ID da cadeia de caracteres que identifica esse formato. O formato dessa cadeia de caracteres é duas cadeias de caracteres separadas separadas por um caractere '\n'. A primeira cadeia de caracteres é o mesmo que seria passado a *lpstrFormat* parâmetro e o segundo é o mesmo que o *lpstrResult* parâmetro.  
   
  *bEnableIcon*  
@@ -169,7 +169,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `cf`  
+ *CF*  
  O formato de área de transferência para adicionar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -192,7 +192,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
 - **CF_DIB**  
   
-- `CF_METAFILEPICT`  
+- **CF_METAFILEPICT**  
   
 - **"Objeto incorporado"**  
   
@@ -211,7 +211,7 @@ COlePasteSpecialDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwFlags`  
+ *dwFlags*  
  Sinalizador de criação, contém qualquer número de sinalizadores a seguir combinadas que usam o operador OR bit a bit:  
   
 - `PSF_SELECTPASTE` Especifica que o botão de opção de colar será verificado inicialmente quando a caixa de diálogo é chamada. Não pode ser usado em combinação com `PSF_SELECTPASTELINK`. Esse é o padrão.  
@@ -222,10 +222,10 @@ COlePasteSpecialDialog(
   
 - `PSF_SHOWHELP` Especifica que o botão de Ajuda será exibido quando a caixa de diálogo é chamada.  
   
- `pDataObject`  
+ *pDataObject*  
  Aponta para o [COleDataObject](../../mfc/reference/coledataobject-class.md) para colá-lo. Se esse valor for **nulo**, ele obtém o `COleDataObject` da área de transferência.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Aponta para o objeto de janela pai ou o proprietário (do tipo `CWnd`) ao qual pertence o objeto de caixa de diálogo. Se for **nulo**, a janela pai da caixa de diálogo é definida como a janela principal do aplicativo.  
   
 ### <a name="remarks"></a>Comentários  

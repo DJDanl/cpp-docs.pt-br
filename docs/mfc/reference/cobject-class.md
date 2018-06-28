@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c27d2fa0e04770bae69901e1164da84c2186ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34babea47abaab9fcfb45f57aedd5cec94e82963
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377234"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041705"
 ---
 # <a name="cobject-class"></a>Classe CObject
 A principal classe base para a biblioteca Microsoft Foundation Class.  
@@ -137,7 +137,7 @@ CObject(const CObject& objectSrc);
 ### <a name="remarks"></a>Comentários  
  A versão padrão é chamada automaticamente pelo construtor de classe derivada.  
   
- Se sua classe serializável (ele incorpora o `IMPLEMENT_SERIAL` macro), em seguida, você deve ter um construtor padrão (um construtor sem argumentos) na sua declaração de classe. Se você não precisar de um construtor padrão, declarar uma particular ou protegido construtor "empty". Para obter mais informações, consulte [usando CObject](../../mfc/using-cobject.md).  
+ Se sua classe serializável (incorpora a macro IMPLEMENT_SERIAL), em seguida, você deve ter um construtor padrão (um construtor sem argumentos) na sua declaração de classe. Se você não precisar de um construtor padrão, declarar uma particular ou protegido construtor "empty". Para obter mais informações, consulte [usando CObject](../../mfc/using-cobject.md).  
   
  O construtor de cópia padrão do C++ padrão classe faz uma cópia do membro por membro. A presença de particular `CObject` construtor de cópia garante uma mensagem de erro do compilador se o construtor de cópia da sua classe for necessária, mas não está disponível. Portanto, você deve fornecer um construtor de cópia se sua classe exige esse recurso.  
   
@@ -154,11 +154,11 @@ virtual void Dump(CDumpContext& dc) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dc`  
+ *dc*  
  O contexto de diagnóstico de despejo para despejar, normalmente `afxDump`.  
   
 ### <a name="remarks"></a>Comentários  
- Quando você escrever sua própria classe, você deve substituir o `Dump` função para fornecer serviços de diagnóstico para você e outros usuários da sua classe. Substituído `Dump` normalmente chama o `Dump` função de sua classe base antes de imprimir os membros de dados exclusivos para a classe derivada. `CObject::Dump` Imprime o nome da classe, se a classe usa a `IMPLEMENT_DYNAMIC` ou `IMPLEMENT_SERIAL` macro.  
+ Quando você escrever sua própria classe, você deve substituir o `Dump` função para fornecer serviços de diagnóstico para você e outros usuários da sua classe. Substituído `Dump` normalmente chama o `Dump` função de sua classe base antes de imprimir os membros de dados exclusivos para a classe derivada. `CObject::Dump` Imprime o nome da classe, se a classe usa a `IMPLEMENT_DYNAMIC` ou macro IMPLEMENT_SERIAL.  
   
 > [!NOTE]
 >  O `Dump` função não deve imprimir um caractere de nova linha no final de sua saída.  
@@ -216,14 +216,14 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pClass`  
+ *pClass*  
  Um ponteiro para um [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) estrutura associada a sua `CObject`-classe derivada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o objeto corresponde à classe; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função testa `pClass` se (1) é um objeto da classe especificada ou (2) é um objeto de uma classe derivada da classe especificada. Essa função funciona somente para classes declaradas com o [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic), [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate), ou [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) macro.  
+ Essa função testa *pClass* se (1) é um objeto da classe especificada ou (2) é um objeto de uma classe derivada da classe especificada. Essa função funciona somente para classes declaradas com o [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic), [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate), ou [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) macro.  
   
  Não use essa função extensivamente porque ele anula o recurso do C++ polimorfismo. Use funções virtuais.  
   
@@ -330,7 +330,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `ar`  
+ *ar*  
  Um `CArchive` objeto a ser serializado para ou do.  
   
 ### <a name="remarks"></a>Comentários  

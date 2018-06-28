@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 870f2e53688f4ea45bbf61c8f41dd30606670d6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a767c0c53aff4234a773cc8b788eaf0289972347
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378873"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041757"
 ---
 # <a name="cmfctoolbar-class"></a>Classe CMFCToolBar
 O `CMFCToolBar` é semelhante a classe [classe CToolBar](../../mfc/reference/ctoolbar-class.md), mas fornece suporte adicional para recursos de interface do usuário. Isso inclui simples barras de ferramentas, barras de ferramentas com imagens hot, ícones grandes, os botões de pager, bloqueadas barras de ferramentas, controles rebar, texto em imagens, imagens de plano de fundo e com guias barras de ferramentas. O `CMFCToolBar` classe também contém suporte interno para personalização de usuário das barras de ferramentas e menus, arrastar e soltar entre barras de ferramentas e menus, botões da caixa de combinação, editar caixa botões, selecionadores e botões de acumulação.
@@ -563,7 +563,7 @@ static void __stdcall AddBasicCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Especifica o comando para adicionar.  
   
 ### <a name="remarks"></a>Comentários  
@@ -579,7 +579,7 @@ static void __stdcall AddCommandUsage(UINT uiCommand);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCommand`  
+ [in] *uiCommand*  
  Especifica o contador de comando para incrementar.  
   
 ### <a name="remarks"></a>Comentários  
@@ -603,26 +603,26 @@ static BOOL __stdcall AddToolBarForImageCollection(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiResID`  
+ [in] *uiResID*  
  ID de recurso da barra de ferramentas com imagens a carregar.  
   
- [in] `uiBmpResID`  
+ [in] *uiBmpResID*  
  ID do recurso de um bitmap com imagens da barra de ferramentas.  
   
- [in] `uiColdResID`  
+ [in] *uiColdResID*  
  ID do recurso de um bitmap com imagens da barra de ferramentas "frio".  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  ID do recurso de um bitmap com imagens do menu.  
   
- [in] `uiDisabledResID`  
+ [in] *uiDisabledResID*  
  ID do recurso de um bitmap com imagens da barra de ferramentas desativado.  
   
- [in] `uiMenuDisabledResID`  
+ [in] *uiMenuDisabledResID*  
  ID do recurso de um bitmap com imagens de menu desativado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o método for bem-sucedido; `FALSE` se `uiResID` ou `uiBmpResID` não especificar recursos válidos ou outro erro ocorre.  
+ `TRUE` Se o método for bem-sucedido; `FALSE` se *uiResID* ou *uiBmpResID* não especificar recursos válidos ou outro erro ocorre.  
   
 ### <a name="remarks"></a>Comentários  
  Chame este método para carregar um bitmap com imagens da barra de ferramentas e adicioná-lo à coleção de imagens da barra de ferramentas. Esse método cria um objeto temporário de barra de ferramentas e chamadas [CMFCToolBar::LoadToolBar](#loadtoolbar).  
@@ -709,19 +709,19 @@ static void AutoGrayInactiveImages(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  Um valor booleano que especifica se a dim imagens inativas. Se esse parâmetro for `TRUE`, inativas imagens estão esmaecidas. Caso contrário, as imagens inativas não ficam acinzentadas.  
   
- [in] `nGrayImagePercentage`  
- Especifica a porcentagem de luminância para imagens inativas. Se `bEnable` é `FALSE`, esse valor é ignorado.  
+ [in] *nGrayImagePercentage*  
+ Especifica a porcentagem de luminância para imagens inativas. Se *bAtivar* é `FALSE`, esse valor é ignorado.  
   
- [in] `bRedrawAllToolbars`  
+ [in] *bRedrawAllToolbars*  
  Um valor booleano que especifica se a redesenhar todas as barras de ferramentas no aplicativo. Se esse parâmetro for `TRUE`, esse método redesenha todas as barras de ferramentas.  
   
 ### <a name="remarks"></a>Comentários  
- Se `bEnable` é `TRUE`, a estrutura usa `nGrayImagePercentage` para gerar imagens inativas de imagens regulares. Caso contrário, você deve fornecer o conjunto de imagens inativos usando o [CMFCToolBar::GetColdImages](#getcoldimages) método. Por padrão, essa opção está desabilitada.  
+ Se *bAtivar* é `TRUE`, a estrutura usa *nGrayImagePercentage* para gerar imagens inativas de imagens regulares. Caso contrário, você deve fornecer o conjunto de imagens inativos usando o [CMFCToolBar::GetColdImages](#getcoldimages) método. Por padrão, essa opção está desabilitada.  
   
- Para obter mais informações sobre o `nGrayImagePercentage` parâmetro, consulte [CMFCToolBarImages::GrayImages](../../mfc/reference/cmfctoolbarimages-class.md#grayimages).  
+ Para obter mais informações sobre o *nGrayImagePercentage* parâmetro, consulte [CMFCToolBarImages::GrayImages](../../mfc/reference/cmfctoolbarimages-class.md#grayimages).  
   
 ##  <a name="buttontoindex"></a>  CMFCToolBar::ButtonToIndex  
  Retorna o índice de um especificado [CMFCToolBarButton classe](../../mfc/reference/cmfctoolbarbutton-class.md) objeto essa barra de ferramentas.  
@@ -731,11 +731,11 @@ int ButtonToIndex(const CMFCToolBarButton* pButton) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pButton`  
+ [in] *pButton*  
  Um ponteiro para o objeto de botão de barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Índice de `pButton` na lista interna de botões de barra de ferramentas; ou -1 se o botão especificado não está na barra de ferramentas.  
+ Índice de *pButton* na lista interna de botões de barra de ferramentas; ou -1 se o botão especificado não está na barra de ferramentas.  
   
 ##  <a name="calcfixedlayout"></a>  CMFCToolBar::CalcFixedLayout  
  Calcula o tamanho horizontal da barra de ferramentas.  
@@ -747,17 +747,17 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bStretch`  
+ [in] *bStretch*  
  `TRUE` para ampliar a barra de ferramentas para o tamanho do quadro pai.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` para orientar a barra de ferramentas horizontal; `FALSE` para orientar a barra de ferramentas vertical.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um `CSize` objeto que especifica o tamanho da barra de ferramentas.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método calcula o tamanho da barra de ferramentas usando o `CMFCToolBar::CalcLayout` método. Ele passa a `LM_STRETCH` sinalizador para o `dwMode` parâmetro se `bStretch` é `TRUE`. Ele passa a `LM_HORZ` sinalizador se `bHorz` é `TRUE`.  
+ Esse método calcula o tamanho da barra de ferramentas usando o `CMFCToolBar::CalcLayout` método. Ele passa a `LM_STRETCH` sinalizador para o *dwMode* parâmetro se *bStretch* é `TRUE`. Ele passa a `LM_HORZ` sinalizador se *bHorz* é `TRUE`.  
   
  Consulte o exemplo VisualStudioDemo para obter um exemplo que usa esse método.  
   
@@ -784,7 +784,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bVertDock`  
+ [in] *bVertDock*  
  `TRUE` para especificar que a barra de ferramentas está encaixada verticalmente; `FALSE` para especificar que a barra de ferramentas é ancorada na horizontal.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -887,10 +887,10 @@ int CommandToIndex(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIDFind`  
+ [in] *nIDFind*  
  Especifica a ID de comando.  
   
- [in] `iIndexFirst`  
+ [in] *iIndexFirst*  
  Especifica o índice inicial para iniciar em.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -899,7 +899,7 @@ int CommandToIndex(
 ### <a name="remarks"></a>Comentários  
  Um `CMFCToolBar` objeto mantém uma lista interna de botões na barra de ferramentas. Chame essa função para recuperar o índice de um botão na lista dada a ID de comando do botão.  
   
- Se `iIndex` é maior que 0, esse método ignora qualquer botão na barra de ferramentas que tem um índice menor `iIndex`.  
+ Se *iIndex* é maior que 0, esse método ignora qualquer botão na barra de ferramentas que tem um índice menor *iIndex*.  
   
 ##  <a name="create"></a>  CMFCToolBar::Create  
  Cria um objeto `CMFCToolBar`.  
@@ -912,13 +912,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Um ponteiro para a janela pai da barra de ferramentas.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  O estilo de barra de ferramentas. Consulte [controle de barra de ferramentas e os estilos de botão](http://msdn.microsoft.com/library/windows/desktop/bb760439) no SDK do Windows para a lista de estilos.  
   
- [in] `nID`  
+ [in] *nID*  
  A ID da janela filho da barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -943,19 +943,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Um ponteiro para a janela pai da barra de ferramentas.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  Estilos adicionais para criar o objeto de barra de controle inserido.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  O estilo de barra de ferramentas. Consulte [controle de barra de ferramentas e os estilos de botão](http://msdn.microsoft.com/library/windows/desktop/bb760439) para obter uma lista de estilos apropriados.  
   
- [in] `rcBorders`  
+ [in] *rcBorders*  
  Um `CRect` objeto que especifica as larguras das bordas da janela de ferramentas.  
   
- [in] `nID`  
+ [in] *nID*  
  A ID da janela filho da barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -964,7 +964,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Comentários  
  Esse método cria uma barra de controle e a anexa à barra de ferramentas.  
   
- Chame este método em vez de [CMFCToolBar::Create](#create) quando você deseja fornecer estilos específicos. Por exemplo, definir `dwCtrlStyle` para `TBSTYLE_FLAT | TBSTYLE_TRANSPARENT` para criar uma barra de ferramentas que se parece com as barras de ferramentas que são usadas pelo Internet Explorer 4.  
+ Chame este método em vez de [CMFCToolBar::Create](#create) quando você deseja fornecer estilos específicos. Por exemplo, definir *dwCtrlStyle* para `TBSTYLE_FLAT | TBSTYLE_TRANSPARENT` para criar uma barra de ferramentas que se parece com as barras de ferramentas que são usadas pelo Internet Explorer 4.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como usar o `CreateEx` método o `CMFCToolBar` classe. Este trecho de código é parte do [exemplo de demonstração do IE](../../visual-cpp-samples.md).  
@@ -990,7 +990,7 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1011,19 +1011,19 @@ virtual BOOL DrawButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Um ponteiro para um botão para desenhar.  
   
- [in] `pImages`  
+ [in] *pImages*  
  Um ponteiro para as imagens da barra de ferramentas.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  `TRUE` Se o botão é realçado; Caso contrário, `FALSE`.  
   
- [in] `bDrawDisabledImages`  
+ [in] *bDrawDisabledImages*  
  `TRUE` Se estiverem esmaecidos botões desabilitados; Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1045,13 +1045,13 @@ virtual void DrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  O retângulo delimitador do local em que o separador é desenhado, em pixels.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` Se o separador é horizontal, `FALSE` se o separador é vertical.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1078,27 +1078,27 @@ void EnableCustomizeButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  Habilita ou desabilita o botão Personalizar.  
   
- [in] `iCustomizeCmd`  
+ [in] *iCustomizeCmd*  
  A ID de comando do botão Personalizar.  
   
- [in] `strCustomizeText`  
+ [in] *strCustomizeText*  
  O rótulo de texto do botão Personalizar.  
   
- [in] `uiCustomizeTextResId`  
+ [in] *uiCustomizeTextResId*  
  A ID da cadeia de caracteres de recurso do rótulo do botão Personalizar.  
   
- [in] `bQuickCustomize`  
+ [in] *bQuickCustomize*  
  Habilita ou desabilita o **adicionar ou remover botões** opção no menu suspenso do botão.  
   
 ### <a name="remarks"></a>Comentários  
- Se `iCustomizeCmd` é -1, o exibe framework Personalizar botão quando vários botões de barra de ferramentas não caber na área de barra de ferramentas. O botão exibe um duplo esquerda apontando seta ou divisa, que indica que há mais botões.  
+ Se *iCustomizeCmd* é -1, o exibe framework Personalizar botão quando vários botões de barra de ferramentas não caber na área de barra de ferramentas. O botão exibe um duplo esquerda apontando seta ou divisa, que indica que há mais botões.  
   
- Se `iCustomizeCmd` Especifica uma ID de comando válido, e `bEnable` é `TRUE`, no botão Personalizar sempre é exibido. O botão tem uma pequena seta para baixo e abre um menu que contém um comando. Esse comando usa o rótulo de texto especificado por `strCustomizeText`. Se `bQuickCustomize` também é `TRUE`, o menu exibe o **adicionar ou remover botões** opção.  
+ Se *iCustomizeCmd* Especifica uma ID de comando válido, e *bAtivar* é `TRUE`, no botão Personalizar sempre é exibido. O botão tem uma pequena seta para baixo e abre um menu que contém um comando. Esse comando usa o rótulo de texto especificado por *strCustomizeText*. Se *bQuickCustomize* também é `TRUE`, o menu exibe o **adicionar ou remover botões** opção.  
   
- A estrutura adiciona dinamicamente ao menu quaisquer botões que não cabem na área de barra de ferramentas antes do item que é especificado pelo `iCustomizeCmd`. Na divisa é exibida ao lado da seta para baixo.  
+ A estrutura adiciona dinamicamente ao menu quaisquer botões que não cabem na área de barra de ferramentas antes do item que é especificado pelo *iCustomizeCmd*. Na divisa é exibida ao lado da seta para baixo.  
   
 ##  <a name="enabledocking"></a>  CMFCToolBar::EnableDocking  
  Permite que se encaixe do painel para o quadro principal.  
@@ -1108,11 +1108,11 @@ virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Especifica o alinhamento de encaixe para habilitar.  
   
 ### <a name="remarks"></a>Comentários  
- Este método estende a implementação da classe base, [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), definindo o `CBasePane::m_dwControlBarStyle` membro de dados para `AFX_CBRS_FLOAT`. Esse método passa `dwAlignment` para a implementação da classe base.  
+ Este método estende a implementação da classe base, [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), definindo o `CBasePane::m_dwControlBarStyle` membro de dados para `AFX_CBRS_FLOAT`. Esse método passa *dwAlignment* para a implementação da classe base.  
   
 ##  <a name="enablelargeicons"></a>  CMFCToolBar::EnableLargeIcons  
  Habilita ou desabilita os ícones grandes nos botões de barra de ferramentas.  
@@ -1122,7 +1122,7 @@ void EnableLargeIcons(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar ícones grandes, `FALSE` para desabilitar ícones grandes.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1136,7 +1136,7 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar a personalização rápida, `FALSE` para desabilitar a personalização rápida.  
   
 ##  <a name="enablereflections"></a>  CMFCToolBar::EnableReflections  
@@ -1147,7 +1147,7 @@ void EnableReflections(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar a reflexão de comando; `FALSE` para desabilitar a reflexão de comando.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1163,7 +1163,7 @@ void EnableTextLabels(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bEnable`  
+ *bAtivar*  
  `TRUE` Se os rótulos de texto aparecem em imagens de botão de barra de ferramentas; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1177,7 +1177,7 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `hwnd`  
+ [in] *hwnd*  
  O identificador de janela Procurar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1227,7 +1227,7 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iIndex`  
+ [in] *iIndex*  
  Especifica o índice do botão para retornar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1245,22 +1245,22 @@ void GetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica o índice do botão na lista de botões na barra de ferramentas.  
   
- [out] `nID`  
+ [out] *nID*  
  A ID de um botão de comando.  
   
- [out] `nStyle`  
+ [out] *nStyle*  
  O estilo do botão.  
   
- [out] `iImage`  
+ [out] *iImage*  
  O índice da imagem do botão.  
   
 ### <a name="remarks"></a>Comentários  
  O `GetButtonInfo` método localiza um botão de barra de ferramentas no índice especificado e retorna o índice de comando ID, o estilo e a imagem do botão.  
   
- Se o botão no índice especificado não existir, a estrutura define `nID` e `nStyle` como 0, e `iImage` como -1 quando o método retorna.  
+ Se o botão no índice especificado não existir, a estrutura define *nID* e *nStyle* como 0, e *iImage* como -1 quando o método retorna.  
   
 ##  <a name="getbuttonsize"></a>  CMFCToolBar::GetButtonSize  
  Retorna as dimensões de cada botão na barra de ferramentas.  
@@ -1283,7 +1283,7 @@ UINT GetButtonStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica o índice de um botão de barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1304,10 +1304,10 @@ void GetButtonText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  O índice de um botão de barra de ferramentas.  
   
- [out] `rString`  
+ [out] *rString*  
  O texto do rótulo do botão da barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1352,10 +1352,10 @@ static int GetCommandButtons(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  A ID de comando dos botões.  
   
- [out] `listButtons`  
+ [out] *listButtons*  
  Uma referência a um [CObList classe](../../mfc/reference/coblist-class.md) objeto que recebe a lista de botões de barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1394,7 +1394,7 @@ static int GetDefaultImage(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiID`  
+ [in] *uiID*  
  Especifica a ID de comando do botão.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1437,14 +1437,14 @@ CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `pIndex`  
+ [out] *pIndex*  
  Recebe o índice do botão na coleção de botões de barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o objeto de botão de menu que está exibindo um submenu correspondente ou `NULL` se nenhum menu estiver exibindo um submenu correspondente.  
   
 ### <a name="remarks"></a>Comentários  
- Se esse método retornar não `NULL` valor e `pIndex` não é `NULL`, o valor apontado por `pIndex` é definida para o índice do botão de menu na coleção de botões de barra de ferramentas.  
+ Se esse método retornar não `NULL` valor e *pIndex* não é `NULL`, o valor apontado por *pIndex* é definida para o índice do botão de menu na coleção de botões de barra de ferramentas.  
   
 ##  <a name="getgraydisabledbuttons"></a>  CMFCToolBar::GetGrayDisabledButtons  
  Especifica se as imagens de botões desabilitados são esmaecidas versões de imagens de botão regular, ou da coleção de imagens de botões desabilitados.  
@@ -1573,14 +1573,14 @@ virtual void GetInvalidateItemRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  O índice do botão para o qual recuperar a área cliente.  
   
- [out] `lpRect`  
+ [out] *lpRect*  
  Um ponteiro para um `RECT` objeto que recebe a região da área do cliente.  
   
 ### <a name="remarks"></a>Comentários  
- O `lpRect` parâmetro não deve ser `NULL`. Se nenhum botão existe no índice fornecido, `lpRect` recebe um `RECT` objeto que é inicializado a zero.  
+ O *lpRect* parâmetro não deve ser `NULL`. Se nenhum botão existe no índice fornecido, *lpRect* recebe um `RECT` objeto que é inicializado a zero.  
   
 ##  <a name="getitemid"></a>  CMFCToolBar::GetItemID  
  Retorna a ID de comando do botão da barra de ferramentas em um índice especificado.  
@@ -1590,7 +1590,7 @@ UINT GetItemID(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica o índice do botão da barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1606,14 +1606,14 @@ virtual void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica o índice de um botão de barra de ferramentas.  
   
- [out] `lpRect`  
+ [out] *lpRect*  
  Um ponteiro para `CRect` objeto que recebe as coordenadas da imagem delimitadora retângulo.  
   
 ### <a name="remarks"></a>Comentários  
- O `CRect` objeto ao qual `lpRect` pontos é definido como 0 se não existir um botão no índice especificado.  
+ O `CRect` objeto ao qual *lpRect* pontos é definido como 0 se não existir um botão no índice especificado.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como usar o `GetItemRect` método o `CMFCToolBar` classe. Este trecho de código é parte do [exemplo de demonstração do IE](../../visual-cpp-samples.md).  
@@ -1904,7 +1904,7 @@ virtual int HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  O ponto a ser testada, nas coordenadas do cliente.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1925,17 +1925,17 @@ virtual int InsertButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `button`  
+ [in] *botão*  
  Especifica o botão a ser inserido.  
   
- [in] `iInsertAt`  
+ [in] *iInsertAt*  
  Especifica a posição de base zero para inserir o botão no.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A posição em que o botão foi inserido ou -1 se um erro ocorre.  
   
 ### <a name="remarks"></a>Comentários  
- Se `iInsertAt` é -1, este método adiciona o botão ao final da lista de botões de barra de ferramentas.  
+ Se *iInsertAt* é -1, este método adiciona o botão ao final da lista de botões de barra de ferramentas.  
   
  Chamar o [CMFCToolBar::InsertSeparator](#insertseparator) método para inserir um separador de barra de ferramentas.  
   
@@ -1947,14 +1947,14 @@ virtual int InsertSeparator(INT_PTR iInsertAt=-1);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iInsertAt`  
+ [in] *iInsertAt*  
  Especifica a posição de base zero para inserir o separador em. Esse parâmetro deve ser maior que 0.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A posição em que o separador foi inserido ou -1 se um erro ocorre.  
   
 ### <a name="remarks"></a>Comentários  
- Chame esse método para inserir um separador entre dois botões existentes. Se `iInsertAt` é -1, este método adiciona o separador ao final da lista de botões de barra de ferramentas.  
+ Chame esse método para inserir um separador entre dois botões existentes. Se *iInsertAt* é -1, este método adiciona o separador ao final da lista de botões de barra de ferramentas.  
   
  Você não pode usar esse método para adicionar um separador de uma barra de ferramentas vazio.  
   
@@ -1968,7 +1968,7 @@ CMFCToolBarButton* InvalidateButton(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  O índice de base zero do botão na barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -2022,14 +2022,14 @@ static BOOL IsBasicCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Especifica o comando para verificar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` Se o comando especificado pertence à lista de comandos; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método estático determina se o comando especificado por `uiCmd` pertence à lista global de comandos. Você pode alterar a lista de comandos básicos chamando [CMFCToolBar::AddBasicCommand](#addbasiccommand) ou [CMFCToolBar::SetBasicCommands](#setbasiccommands).  
+ Esse método estático determina se o comando especificado por *uiCmd* pertence à lista global de comandos. Você pode alterar a lista de comandos básicos chamando [CMFCToolBar::AddBasicCommand](#addbasiccommand) ou [CMFCToolBar::SetBasicCommands](#setbasiccommands).  
   
 ##  <a name="isbuttonextrasizeavailable"></a>  CMFCToolBar::IsButtonExtraSizeAvailable  
  Determina se a barra de ferramentas pode exibir botões que tem estendido bordas.  
@@ -2054,7 +2054,7 @@ BOOL IsButtonHighlighted(int iButton) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iButton`  
+ [in] *iButton*  
  Especifica o índice de um botão de barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -2070,14 +2070,14 @@ static BOOL IsCommandPermitted(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Especifica o comando para verificar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` Se o comando especificado é permitido; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método estático determina se o comando especificado por `uiCmd` pertence à lista global de comandos não permitido.  
+ Esse método estático determina se o comando especificado por *uiCmd* pertence à lista global de comandos não permitido.  
   
  Você pode alterar a lista de comandos não permitido chamando [CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands).  
   
@@ -2089,7 +2089,7 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Especifica o comando para verificar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -2131,7 +2131,7 @@ BOOL IsDragButton(const CMFCToolBarButton* pButton) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pButton`  
+ [in] *pButton*  
  Ponteiro para um botão de barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -2187,11 +2187,11 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pButton`  
+ [in] *pButton*  
  Ponteiro para o botão.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o último comando foi enviado com o botão que `pButton` Especifica; caso contrário, `FALSE`.  
+ `TRUE` Se o último comando foi enviado com o botão que *pButton* Especifica; caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método obtém um ponteiro para um [estrutura MSG](../../mfc/reference/msg-structure1.md) chamando `CWnd::GetCurrentMessage`. Em seguida, ele compara o `HWND` do botão com o `MSG::lParam` e `MSG::hwnd` membros para determinar se o botão foi a origem do comando.  
@@ -2272,22 +2272,22 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiResID`  
+ [in] *uiResID*  
  A ID de recurso do bitmap que se refere às imagens da barra de ferramentas ativa.  
   
- [in] `uiColdResID`  
+ [in] *uiColdResID*  
  A ID de recurso do bitmap que se refere às imagens de barra de ferramentas frios.  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  A ID de recurso do bitmap que se refere às imagens de menu comum.  
   
- [in] `bLocked`  
+ [in] *bloqueado*  
  `TRUE` para bloquear a barra de ferramentas. Caso contrário, `FALSE`.  
   
- [in] `uiDisabledResID`  
+ [in] *uiDisabledResID*  
  A ID de recurso do bitmap que se refere às imagens da barra de ferramentas desabilitado.  
   
- [in] `uiMenuDisabledResID`  
+ [in] *uiMenuDisabledResID*  
  A ID de recurso do bitmap que se refere às imagens de menu desativado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -2308,8 +2308,8 @@ virtual BOOL LoadBitmapEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `params`  
- [in] `bLocked`  
+ [in] *params*  
+ [in] *bloqueado*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -2323,7 +2323,7 @@ static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -2337,7 +2337,7 @@ static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Especifica o caminho relativo da chave do registro do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -2359,13 +2359,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Especifica o caminho relativo da chave do registro do Windows.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica a ID de controle da barra de ferramentas.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Especifica a ID de recurso da barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -2389,25 +2389,25 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiResID`  
+ [in] *uiResID*  
  A ID de recurso da barra de ferramentas.  
   
- [in] `uiColdResID`  
+ [in] *uiColdResID*  
  A ID de recurso do bitmap que se refere às imagens de barra de ferramentas frios.  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  A ID de recurso do bitmap que se refere às imagens de menu comum.  
   
- [in] `bLocked`  
- Um valor booleano que especifica se a barra de ferramentas está bloqueada ou não. Se esse parâmetro for `TRUE`, a barra de ferramentas está bloqueada. Caso contrário, a barra de ferramentas não está bloqueada.  
+ [in] *bloqueado*  
+ Um valor booleano que especifica se a barra de ferramentas está bloqueada ou não. Se esse parâmetro for *TRUE*, a barra de ferramentas está bloqueada. Caso contrário, a barra de ferramentas não está bloqueada.  
   
- [in] `uiDisabledResID`  
+ [in] *uiDisabledResID*  
  A ID de recurso do bitmap que se refere às imagens da barra de ferramentas desabilitado.  
   
- [in] `uiMenuDisabledResID`  
+ [in] *uiMenuDisabledResID*  
  A ID de recurso do bitmap que se refere às imagens de menu desativado.  
   
- [in] `uiHotResID`  
+ [in] *uiHotResID*  
  A ID de recurso do bitmap que se refere às imagens da barra de ferramentas ativa.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -2433,13 +2433,13 @@ virtual BOOL LoadToolBarEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiToolbarResID`  
+ [in] *uiToolbarResID*  
  A ID de recurso da barra de ferramentas.  
   
- [in] `params`  
+ [in] *params*  
  Uma referência a um `CMFCToolBarInfo` objeto que contém as IDs de recurso para as imagens da barra de ferramentas.  
   
- [in] `bLocked`  
+ [in] *bloqueado*  
  Um valor booleano que especifica se a barra de ferramentas está bloqueada ou não. Se esse parâmetro for `TRUE`, a barra de ferramentas está bloqueada. Caso contrário, a barra de ferramentas não está bloqueada.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -2481,10 +2481,10 @@ virtual BOOL OnBeforeRemoveButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pButton`  
+ [in] *pButton*  
  Não utilizado.  
   
- [in] `dropEffect`  
+ [in] *dropEffect*  
  Não utilizado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -2499,7 +2499,7 @@ virtual void OnChangeHot(int iHot);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iHot`  
+ [in] *iHot*  
  Especifica o índice do botão de barra de ferramentas está selecionado. ou -1 se nenhum botão da barra de ferramentas estiver selecionada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -2522,7 +2522,7 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -2559,7 +2559,7 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lVal`  
+ [in] *lVal*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -2573,7 +2573,7 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pButton`  
+ [in] *pButton*  
  Aponta para um botão, cujo texto está sendo definido.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -2594,17 +2594,17 @@ virtual BOOL OnUserToolTip(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pButton`  
+ [in] *pButton*  
  Aponta para um botão de barra de ferramentas para a qual uma dica de ferramenta é exibida.  
   
- [out] `strTTText`  
+ [out] *strTTText*  
  Uma referência a `CString` objeto que recebe o texto da dica de ferramenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se `strTTText` foi preenchida com o texto de dica de ferramenta; caso contrário `FALSE`.  
+ `TRUE` Se *strTTText* foi preenchida com o texto de dica de ferramenta; caso contrário `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
- O framework chama este método quando a dica de ferramenta para um botão de barra de ferramentas está prestes a ser exibido. Se `OnUserToolTip` retorna `TRUE`, a estrutura exibe uma dica de ferramenta que contém o texto retornado pela `OnUserToolTip` em `strTTText`. Caso contrário, a dica de ferramenta contém o texto do botão.  
+ O framework chama este método quando a dica de ferramenta para um botão de barra de ferramentas está prestes a ser exibido. Se `OnUserToolTip` retorna `TRUE`, a estrutura exibe uma dica de ferramenta que contém o texto retornado pela `OnUserToolTip` na *strTTText*. Caso contrário, a dica de ferramenta contém o texto do botão.  
   
  Substituir `OnUserToolTip` personalizar dicas de ferramenta dos botões da barra de ferramentas. A implementação padrão chama [CMFCToolBar::OnUserToolTip](#onusertooltip) para obter o texto de dica de ferramenta.  
   
@@ -2620,23 +2620,23 @@ virtual BOOL PrevMenu();
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="processcommand"></a>  CMFCToolBar::ProcessCommand  
- Postagens um `WM_COMMAND` mensagem para a janela que possui a barra de ferramentas.  
+ Envia uma mensagem WM_COMMAND para a janela que possui a barra de ferramentas.  
   
 ```  
 BOOL ProcessCommand(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pButton`  
+ [in] *pButton*  
  Ponteiro para um botão na barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Esse método deve retornar sempre `TRUE`. MFC usa `FALSE` valores internamente.  
   
 ### <a name="remarks"></a>Comentários  
- Este método lança um `WM_COMMAND` mensagem para a janela que possui a barra de ferramentas chamando [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) e passar a ID de comando do botão especificado como o `wParam` parâmetro.  
+ Esse método envia uma mensagem WM_COMMAND para a janela que possui a barra de ferramentas chamando [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) e passar a ID de comando do botão especificado como o `wParam` parâmetro.  
   
- Use o [ON_COMMAND](message-map-macros-mfc.md#on_command) macro para mapear o `WM_COMMAND` mensagem para uma função de membro.  
+ Use o [ON_COMMAND](message-map-macros-mfc.md#on_command) macro para mapear a mensagem WM_COMMAND para uma função de membro.  
   
 ##  <a name="removeallbuttons"></a>  CMFCToolBar::RemoveAllButtons  
  Remove todos os separadores e botões da barra de ferramentas.  
@@ -2656,7 +2656,7 @@ virtual BOOL RemoveButton(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iIndex`  
+ [in] *iIndex*  
  Especifica o índice de base zero do botão para remover.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -2678,13 +2678,13 @@ virtual BOOL RemoveStateFromRegistry(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Especifica a chave do registro onde se encontra as informações de estado.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  A ID de controle da barra de ferramentas.  
   
- [in] `uiID`  
+ [in] *uiID*  
  A ID de recurso da barra de ferramentas. Se esse parâmetro for -1, esse método usa o [CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid) método para recuperar a ID de recurso.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -2706,14 +2706,14 @@ int ReplaceButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  A ID do botão de comando para substituir.  
   
- [in] `button`  
+ [in] *botão*  
  Uma referência para o `CMFCToolBarButton` para inserir.  
   
- [in] `bAll`  
- Um valor booleano que especifica se deve substituir todos os botões que tem a ID de comando especificada pelo `uiCmd`. Se esse parâmetro for `TRUE`, todos os botões que têm a ID de comando especificado são substituídos. Caso contrário, o primeiro botão é substituído.  
+ [in] *bola*  
+ Um valor booleano que especifica se deve substituir todos os botões que tem a ID de comando especificada pelo *uiCmd*. Se esse parâmetro for `TRUE`, todos os botões que têm a ID de comando especificado são substituídos. Caso contrário, o primeiro botão é substituído.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O número de botões que são substituídas. Esse método retornará 0 se um botão com a ID de comando especificado não existe na barra de ferramentas.  
@@ -2788,7 +2788,7 @@ static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -2805,13 +2805,13 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Especifica o caminho relativo da chave do registro do Windows.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  A ID de controle da barra de ferramentas.  
   
- [in] `uiID`  
+ [in] *uiID*  
  A ID de recurso da barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -2828,7 +2828,7 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lstCommands`  
+ [in] *lstCommands*  
  Uma referência a um `CList` objeto que contém uma coleção de comandos.  
   
 ### <a name="remarks"></a>Comentários  
@@ -2850,22 +2850,22 @@ void SetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  O índice de base zero do botão cujas propriedades são definidas.  
   
- [in] `nID`  
+ [in] *nID*  
  A ID de comando do botão.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  O estilo do botão. Consulte [estilos de controle de barra de ferramentas](../../mfc/reference/toolbar-control-styles.md) para a lista de estilos de botão da barra de ferramentas disponíveis.  
   
- [in] `iImage`  
+ [in] *iImage*  
  O índice de imagem com base em zero do botão (ou seja, o índice na coleção de imagens da barra de ferramentas).  
   
 ### <a name="remarks"></a>Comentários  
  Chame este método para definir as propriedades de um botão de barra de ferramentas.  
   
- Em compilações de depuração, este método gera uma falha de asserção se o índice especificado pelo `nIndex` é inválido.  
+ Em compilações de depuração, este método gera uma falha de asserção se o índice especificado pelo *nIndex* é inválido.  
   
  Chamar o [CMFCToolBar::SetButtonStyle](#setbuttonstyle) método para definir apenas o estilo do botão.  
   
@@ -2880,13 +2880,13 @@ virtual BOOL SetButtons(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpIDArray`  
+ [in] *lpIDArray*  
  Um ponteiro para a matriz de IDs de comando dos botões para inserir.  
   
- [in] `nIDCount`  
- O número de itens em `lpIDArray`.  
+ [in] *nIDCount*  
+ O número de itens em *lpIDArray*.  
   
- [in] `bRemapImages`  
+ [in] *bRemapImages*  
  Um valor booleano que especifica se deseja associar as imagens do botão existente com os botões inseridos. Se esse parâmetro for `TRUE`, as imagens são remapeadas.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -2895,7 +2895,7 @@ virtual BOOL SetButtons(
 ### <a name="remarks"></a>Comentários  
  Chame este método para remover botões da barra de ferramentas e inserir uma coleção de novos botões.  
   
- Este método adiciona o **personalizar** botão de barra de ferramentas e envia o `AFX_WM_RESETTOOLBAR` mensagem para a janela pai da barra de ferramentas. Para obter mais informações sobre o **personalizar** botão, consulte [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton).  
+ Este método adiciona o **personalizar** botão de barra de ferramentas e envia o AFX_WM_RESETTOOLBAR da mensagem para a janela pai da barra de ferramentas. Para obter mais informações sobre o **personalizar** botão, consulte [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton).  
   
 ##  <a name="setbuttonstyle"></a>  CMFCToolBar::SetButtonStyle  
  Define o estilo do botão de barra de ferramentas no índice especificado.  
@@ -2907,10 +2907,10 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  O índice de base zero do botão da barra de ferramentas cujo estilo será definido.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  O estilo do botão. Consulte [estilos de controle de barra de ferramentas](../../mfc/reference/toolbar-control-styles.md) para a lista de estilos de botão da barra de ferramentas disponíveis.  
   
 ### <a name="remarks"></a>Comentários  
@@ -2926,10 +2926,10 @@ BOOL SetButtonText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  O índice do botão da barra de ferramentas.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  O rótulo de texto do botão de barra de ferramentas. Deve ser não - `NULL`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -2948,14 +2948,14 @@ static BOOL SetCommandUsageOptions(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nStartCount`  
+ [in] *nStartCount*  
  Especifica o número de vezes que comandos deve ser executado antes da estrutura mostra somente os comandos básicos e usados recentemente.  
   
- [in] `nMinUsagePercentage`  
+ [in] *nMinUsagePercentage*  
  A porcentagem de vezes que um comando deve ser executado para ser considerado um comando de usados recentemente.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `FALSE` Se `nMinUsagePercentage` é igual ou maior que 100; caso contrário `TRUE`.  
+ `FALSE` Se *nMinUsagePercentage* é igual ou maior que 100; caso contrário `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para personalizar o algoritmo que usa a estrutura para determinar os itens de menu como básica e usados recentemente aparecem. Para obter mais informações sobre comandos, consulte [CMFCToolBar::AddBasicCommand](#addbasiccommand).  
@@ -2970,7 +2970,7 @@ static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bSet`  
+ [in] *bSet*  
  Um valor booleano que especifica se deseja habilitar ou desabilitar o modo de personalização. Definir esse parâmetro como `TRUE` para habilitar o modo de personalização ou `FALSE` para desabilitá-lo.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -2987,7 +2987,7 @@ void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bGrayDisabledButtons`  
+ [in] *bGrayDisabledButtons*  
  Um valor booleano que especifica como exibir botões não está disponível. Se esse parâmetro for `TRUE`, o framework escurecerá os botões. Caso contrário, a estrutura usa a coleção de imagens disponíveis com o botão.  
   
 ### <a name="remarks"></a>Comentários  
@@ -3001,7 +3001,7 @@ void SetHeight(int cyHeight);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `cyHeight`  
+ [in] *cyHeight*  
  A altura da barra de ferramentas, em pixels.  
   
 ### <a name="remarks"></a>Comentários  
@@ -3015,7 +3015,7 @@ static void __stdcall SetHelpMode(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bOn`  
+ [in] *bOn*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -3027,7 +3027,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pMenuButton`  
+ [in] *pMenuButton*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -3041,7 +3041,7 @@ void SetHotBorder(BOOL bShowHotBorder);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bShowHotBorder`  
+ [in] *bShowHotBorder*  
  Um valor booleano que especifica se a quente acompanhamento de botões de barra de ferramentas. Se esse parâmetro for `TRUE`, a barra de ferramentas hot-rastreia seus botões. Caso contrário, a barra de ferramentas não hot-acompanhar seus botões.  
   
 ### <a name="remarks"></a>Comentários  
@@ -3057,7 +3057,7 @@ static void SetHotTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `clrText`  
+ [in] *clrText*  
  Especifica a cor do texto para botões de barra de ferramentas que são controladas quente.  
   
 ### <a name="remarks"></a>Comentários  
@@ -3071,7 +3071,7 @@ void SetIgnoreSetText(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bValue`  
+ [in] *bDados do valor*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -3083,7 +3083,7 @@ static void SetLargeIcons(BOOL bLargeIcons=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bLargeIcons`  
+ [in] *bLargeIcons*  
  Um valor booleano que especifica quais ícones para usar. Se esse parâmetro for `TRUE`, o framework exibe ícones grandes. Caso contrário, o framework exibe ícones regulares.  
   
 ### <a name="remarks"></a>Comentários  
@@ -3104,13 +3104,13 @@ void SetLockedSizes(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `sizeButton`  
+ [in] *sizeButton*  
  Especifica o tamanho dos botões de barra de ferramentas bloqueado.  
   
- [in] `sizeImage`  
+ [in] *sizeImage*  
  Especifica o tamanho das imagens da barra de ferramentas bloqueado.  
   
- `bDontScale`  
+ *bDontScale*  
  Especifica se dimensionar ou não bloqueada imagens da barra de ferramentas no modo de alto DPI.  
   
 ### <a name="remarks"></a>Comentários  
@@ -3126,7 +3126,7 @@ void SetMaskMode(BOOL bMasked);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bMasked`  
+ [in] *bMasked*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -3140,10 +3140,10 @@ static void __stdcall SetMenuSizes(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `sizeButton`  
+ [in] *sizeButton*  
  Especifica o tamanho dos botões da barra de ferramentas, em pixels.  
   
- [in] `sizeImage`  
+ [in] *sizeImage*  
  Especifica o tamanho das imagens da barra de ferramentas, em pixels.  
   
 ### <a name="remarks"></a>Comentários  
@@ -3161,7 +3161,7 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lstCommands`  
+ [in] *lstCommands*  
  Uma referência a um `CList` objeto que contém os comandos que não podem ser executados pelo usuário.  
   
 ### <a name="remarks"></a>Comentários  
@@ -3191,7 +3191,7 @@ void SetOrigButtons(const CObList& lstOrigButtons);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lstOrigButtons`  
+ [in] *lstOrigButtons*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -3203,7 +3203,7 @@ void SetPermament(BOOL bPermament=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bPermament`  
+ [in] *bPermament*  
  Um valor booleano que especifica se um usuário pode fechar a barra de ferramentas. Se esse parâmetro for `TRUE`, um usuário não é possível fechar a barra de ferramentas. Caso contrário, um usuário pode fechar a barra de ferramentas.  
   
 ### <a name="remarks"></a>Comentários  
@@ -3219,7 +3219,7 @@ void SetRouteCommandsViaFrame(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bValue`  
+ [in] *bDados do valor*  
  Se esse parâmetro for `TRUE`, o quadro pai envia comandos para a barra de ferramentas. Caso contrário, o proprietário envia comandos para a barra de ferramentas.  
   
 ### <a name="remarks"></a>Comentários  
@@ -3233,7 +3233,7 @@ static void SetShowTooltips(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bValue`  
+ [in] *bDados do valor*  
  Se esse parâmetro for `TRUE`, a estrutura mostra dicas de ferramenta. Caso contrário, o framework oculta dicas de ferramenta.  
   
 ### <a name="remarks"></a>Comentários  
@@ -3249,7 +3249,7 @@ void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBrotherToolbar`  
+ [in] *pBrotherToolbar*  
  Um ponteiro para a barra de ferramentas do irmão.  
   
 ### <a name="remarks"></a>Comentários  
@@ -3269,10 +3269,10 @@ static void __stdcall SetSizes(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `sizeButton`  
+ [in] *sizeButton*  
  O tamanho dos botões da barra de ferramentas, em pixels.  
   
- [in] `sizeImage`  
+ [in] *sizeImage*  
  O tamanho das imagens de botão da barra de ferramentas, em pixels.  
   
 ### <a name="remarks"></a>Comentários  
@@ -3292,22 +3292,22 @@ void SetToolBarBtnText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nBtnIndex`  
+ [in] *nBtnIndex*  
  O índice de base zero do botão da barra de ferramentas na lista de botões de barra de ferramentas.  
   
- [in] `szText`  
+ [in] *szText*  
  Especifica o rótulo de texto do botão de barra de ferramentas.  
   
- [in] `bShowText`  
+ [in] *bShowText*  
  Se esse parâmetro for `TRUE`, a estrutura mostra o rótulo de texto. Caso contrário, o framework oculta o rótulo de texto.  
   
- [in] `bShowImage`  
+ [in] *bShowImage*  
  Se esse parâmetro for `TRUE`, a estrutura mostra a imagem do botão da barra de ferramentas. Caso contrário, o framework oculta a imagem do botão da barra de ferramentas.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, o framework mostra as imagens de botões de barra de ferramentas, mas não mostra o rótulo de texto dos botões da barra de ferramentas.  
   
- Em compilações de depuração, este método gera uma falha de asserção se `nBtnIndex` não se refere a uma barra de ferramentas válida botão ou o botão da barra de ferramentas é um separador.  
+ Em compilações de depuração, este método gera uma falha de asserção se *nBtnIndex* não se refere a uma barra de ferramentas válida botão ou o botão da barra de ferramentas é um separador.  
   
 ##  <a name="settworowswithsibling"></a>  CMFCToolBar::SetTwoRowsWithSibling  
  Posiciona a barra de ferramentas e de seu irmão em linhas separadas.  
@@ -3331,14 +3331,14 @@ static BOOL SetUserImages(CMFCToolBarImages* pUserImages);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pUserImages`  
+ [in] *pUserImages*  
  Um ponteiro para a coleção de imagens definidas pelo usuário.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o método for bem-sucedido; Caso contrário, 0 se for especificado `CMFCToolBarImages` objeto não é válido ou tem um tamanho de imagem que é diferente do que o tamanho da imagem da barra de ferramentas padrão.  
   
 ### <a name="remarks"></a>Comentários  
- A estrutura usa imagens definidas pelo usuário para desenhar os botões de barra de ferramentas que são personalizados pelo usuário. A lista de imagem especificada por `pUserImages` é compartilhado entre todas as barras de ferramentas no aplicativo.  
+ A estrutura usa imagens definidas pelo usuário para desenhar os botões de barra de ferramentas que são personalizados pelo usuário. A lista de imagem especificada por *pUserImages* é compartilhado entre todas as barras de ferramentas no aplicativo.  
   
  Este método gera uma falha de asserção em compilações de depuração, se especificado `CMFCToolBarImages` objeto não é válido ou tem um tamanho de imagem que é diferente do que o tamanho da imagem da barra de ferramentas padrão.  
   
@@ -3356,10 +3356,10 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nLength`  
+ [in] *nLength*  
  A quantidade, em pixels, pelo qual ampliar o painel.  
   
- [in] `bVert`  
+ [in] *bVert*  
  Se `TRUE`, expande verticalmente o painel. Se `FALSE`, expande o painel horizontal.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -3378,7 +3378,7 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nChar`  
+ [in] *nChar*  
  Especifica um código de tecla virtual. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -3395,7 +3395,7 @@ void UpdateButton(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica o índice de base zero do botão Atualizar.  
   
 ### <a name="remarks"></a>Comentários  
@@ -3413,19 +3413,19 @@ int WrapToolBar(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nWidth`  
+ [in] *nWidth*  
  Largura máxima da barra de ferramentas.  
   
- [in] `nHeight`  
+ [in] *nHeight*  
  Altura máxima da barra de ferramentas. Não usado se a barra de ferramentas é flutuante.  
   
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo. Se for NULL, o contexto de dispositivo para a barra de ferramentas é usado.  
   
- [in] `nColumnWidth`  
+ [in] *nColumnWidth*  
  Largura do botão. Se-1, a largura atual será usada.  
   
- [m in] `nRowHeight`  
+ [in] m *nRowHeight*  
  Altura do botão. Se-1, a altura atual será usada.  
   
 ### <a name="return-value"></a>Valor de retorno  

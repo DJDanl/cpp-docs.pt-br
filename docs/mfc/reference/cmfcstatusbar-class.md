@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b622ca84ca73090d609cbb557096fb75802a023
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c82a73c95c0869f7f5245ef3ddc15c0216b07579
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376155"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041719"
 ---
 # <a name="cmfcstatusbar-class"></a>Classe CMFCStatusBar
 O `CMFCStatusBar` classe implementa uma barra de status semelhante de `CStatusBar` classe. No entanto, o `CMFCStatusBar` classe possui recursos não oferecidos pelo `CStatusBar` classe, como a capacidade de exibir imagens, animações e barras de progresso; e a capacidade de responder passar o mouse clica duas vezes. 
@@ -197,8 +197,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -212,7 +212,7 @@ int CommandToIndex(UINT nIDFind) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIDFind`  
+ [in] *nIDFind*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -229,9 +229,9 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pParentWnd`  
- [in] `dwStyle`  
- [in] `nID`  
+ [in] *pParentWnd*  
+ [in] *dwStyle*  
+ [in] *nID*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -249,10 +249,10 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pParentWnd`  
- [in] `dwCtrlStyle`  
- [in] `dwStyle`  
- [in] `nID`  
+ [in] *pParentWnd*  
+ [in] *dwCtrlStyle*  
+ [in] *dwStyle*  
+ [in] *nID*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -277,11 +277,11 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  Se `TRUE`, habilitar o processamento do mouse duas vezes. Caso contrário, desative o processamento do clique duplo do mouse.  
   
 ### <a name="remarks"></a>Comentários  
- Se a barra de status é ativada para processar os cliques duplos, o Windows envia o `WM_COMMAND` notificação junto com uma ID de recurso para o proprietário da barra toda vez que o usuário clicar duas vezes no painel de barra de status de status.  
+ Se a barra de status é ativada para processar os cliques duplos, o Windows envia a notificação de WM_COMMAND junto com uma ID de recurso para o proprietário da barra toda vez que o usuário clicar duas vezes no painel de barra de status de status.  
   
 ##  <a name="enablepaneprogressbar"></a>  CMFCStatusBar::EnablePaneProgressBar  
  Exiba uma barra de progresso no painel de dados especificado.  
@@ -297,28 +297,28 @@ void EnablePaneProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica o índice do painel cuja barra de progresso para habilitar.  
   
- [in] `nTotal`  
+ [in] *nLargura*  
  Especifica o valor máximo para a barra de progresso.  
   
- [in] `bDisplayText`  
+ [in] *bDisplayText*  
  Especifica se a barra de progresso deve exibir o valor de andamento atual.  
   
- [in] `clrBar`  
+ [in] *clrBar*  
  Especifica a cor de plano de fundo da barra de progresso.  
   
- [in] `clrBarDest`  
- Especifica a cor secundária do plano de fundo de barra de progresso. Use um valor diferente de `clrBar` para preencher por uma cor mesclada em um gradiente.  
+ [in] *clrBarDest*  
+ Especifica a cor secundária do plano de fundo de barra de progresso. Use um valor diferente de *clrBar* para preencher por uma cor mesclada em um gradiente.  
   
- [in] `clrProgressText`  
+ [in] *clrProgressText*  
  Especifica a cor do texto da barra de progresso.  
   
 ### <a name="remarks"></a>Comentários  
- Se você quiser desabilitar a chamada de barra de progresso `EnablePaneProgressBar` com `nTotal` definido como -1. Por padrão `nTotal` é definido como 100. Portanto, não é necessário qualquer cálculos adicionais para exibir o andamento como porcentagem.  
+ Se você quiser desabilitar a chamada de barra de progresso `EnablePaneProgressBar` com *nLargura* definido como -1. Por padrão *nLargura* é definido como 100. Portanto, não é necessário qualquer cálculos adicionais para exibir o andamento como porcentagem.  
   
- Você deve passar valores diferentes `clrBar` e `clrBarDest` para que a cor de plano de fundo da barra de progresso exibe uma cor mesclada em um gradiente. .  
+ Você deve passar valores diferentes *clrBar* e *clrBarDest* para que a cor de plano de fundo da barra de progresso exibe uma cor mesclada em um gradiente. .  
   
  Para definir o progresso atual, chame o [CMFCStatusBar::SetPaneProgress](#setpaneprogress) método.  
   
@@ -351,7 +351,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -365,7 +365,7 @@ UINT GetItemID(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -381,8 +381,8 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
- [in] `lpRect`  
+ [in] *nIndex*  
+ [in] *lpRect*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -398,10 +398,10 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
- [in] `nID`  
- [in] `nStyle`  
- [in] `cxWidth`  
+ [in] *nIndex*  
+ [in] *nID*  
+ [in] *nStyle*  
+ [in] *cxWidth*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -413,7 +413,7 @@ long GetPaneProgress(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -427,7 +427,7 @@ UINT GetPaneStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -445,8 +445,8 @@ CString GetPaneText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
- [in] `s`  
+ [in] *nIndex*  
+ [in] *s*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -460,11 +460,11 @@ int GetPaneWidth(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica o índice do painel da barra de status.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A largura do painel da barra de status que `nIndex` Especifica; caso contrário, zero se não existir um painel da barra de status.  
+ A largura do painel da barra de status que *nIndex* Especifica; caso contrário, zero se não existir um painel da barra de status.  
   
 ##  <a name="gettiptext"></a>  CMFCStatusBar::GetTipText  
  Recupere o texto de dica de ferramenta do painel da barra de status.  
@@ -474,11 +474,11 @@ CString GetTipText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica o índice do painel para o qual recuperar o texto da dica de ferramenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O texto de dica de ferramenta do painel barra de status que `nIndex` especifica. Caso contrário, o vazio cadeia de caracteres se não existir um painel da barra de status especificado `nIndex` ou se o texto de dica de ferramenta está vazio.  
+ O texto de dica de ferramenta do painel barra de status que *nIndex* especifica. Caso contrário, o vazio cadeia de caracteres se não existir um painel da barra de status especificado *nIndex* ou se o texto de dica de ferramenta está vazio.  
   
 ##  <a name="invalidatepanecontent"></a>  CMFCStatusBar::InvalidatePaneContent  
  Invalidar o painel da barra de status e redesenhe seu conteúdo.  
@@ -488,11 +488,11 @@ void InvalidatePaneContent(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica o índice do painel cujo conteúdo é invalidado e recriada.  
   
 ### <a name="remarks"></a>Comentários  
- Quando a barra de status é invalidada, ele é marcado para ser redesenhada. Windows redesenha-quando o `UpdateWindow` método envia uma `WM_PAINT` de mensagem para o `OnPaint` método.  
+ Quando a barra de status é invalidada, ele é marcado para ser redesenhada. Windows redesenha-quando o `UpdateWindow` método envia uma mensagem WM_PAINT o `OnPaint` método.  
   
 ##  <a name="ondrawpane"></a>  CMFCStatusBar::OnDrawPane  
  Redesenhe o painel da barra de status.  
@@ -504,14 +504,14 @@ virtual void OnDrawPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo para o desenho.  
   
- [in] `pPane`  
+ [in] *pPane*  
  Um ponteiro para um `CMFCStatusBarPaneInfo` estrutura que contém as informações sobre o painel seja redesenhado.  
   
 ### <a name="remarks"></a>Comentários  
- Por padrão, `OnDrawPane` redesenha o painel usando o contexto de dispositivo `pDC` acordo com o estilo e o conteúdo do painel.  
+ Por padrão, `OnDrawPane` redesenha o painel usando o contexto de dispositivo *pDC* acordo com o estilo e o conteúdo do painel.  
   
  Substitua este método em um `CMFCStatusBar`-derivado da classe para personalizar a aparência de um painel.  
   
@@ -523,7 +523,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `cs`  
+ [in] *cs*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -537,7 +537,7 @@ void SetDrawExtendedArea(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bSet`  
+ [in] *bSet*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -551,8 +551,8 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpIDArray`  
- [in] `nIDCount`  
+ [in] *lpIDArray*  
+ [in] *nIDCount*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -570,16 +570,16 @@ void SetPaneAnimation(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica o índice do painel ao qual você deseja atribuir a ela uma animação.  
   
- [in] `hImageList`  
+ [in] *hImageList*  
  Especifica um identificador para a lista de imagens que contêm os quadros de animação.  
   
- [in] `nFrameRate`  
+ [in] *nFrameRate*  
  Especifica a taxa de quadros, em milissegundos, para a animação.  
   
- [in] `bUpdate`  
+ [in] *b Update*  
  Se `TRUE`, atualizar o conteúdo do painel imediatamente. Caso contrário, o conteúdo do painel é atualizado quando são invalidado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -596,13 +596,13 @@ void SetPaneBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica o índice do painel para o qual definir uma nova cor de plano de fundo.  
   
- [in] `clrBackground`  
+ [in] *clrBackground*  
  Especifica a nova cor do plano de fundo.  
   
- [in] `bUpdate`  
+ [in] *b Update*  
  Se `TRUE`, atualizar o conteúdo do painel imediatamente. Caso contrário, não atualize o conteúdo do painel até o painel for invalidado por outro método.  
   
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon  
@@ -623,20 +623,20 @@ void SetPaneIcon(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica o índice do painel para o qual definir a imagem.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Especifica um identificador para o ícone a ser definido como a imagem do painel.  
   
- [in] `bUpdate`  
+ [in] *b Update*  
  Especifica se deve atualizar o conteúdo do painel imediatamente.  
   
- [in] `hBmp`  
+ [in] *hBmp*  
  Especifica um identificador para o bitmap a ser definido como a imagem do painel.  
   
- [in] `clrTransparent`  
- Especifica a cor transparente do bitmap que o `hBmp` indica.  
+ [in] *clrTransparent*  
+ Especifica a cor transparente do bitmap que o *hBmp* indica.  
   
 ### <a name="remarks"></a>Comentários  
  Você pode passar o `HICON` ou `HBITMAP` junto com a cor transparente para definir a imagem do painel. Se você não deseja exibir a imagem mais, passar o `NULL` valor como o identificador da imagem.  
@@ -655,10 +655,10 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
- [in] `nID`  
- [in] `nStyle`  
- [in] `cxWidth`  
+ [in] *nIndex*  
+ [in] *nID*  
+ [in] *nStyle*  
+ [in] *cxWidth*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -673,13 +673,13 @@ void SetPaneProgress(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica o índice do painel para o qual o indicador de progresso de atualização.  
   
- [in] `nCurr`  
+ [in] *nCurr*  
  Especifica o valor atual do indicador de progresso.  
   
- [in] `bUpdate`  
+ [in] *b Update*  
  Especifica se o painel deve ser atualizado imediatamente.  
   
 ### <a name="remarks"></a>Comentários  
@@ -697,8 +697,8 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
- [in] `nStyle`  
+ [in] *nIndex*  
+ [in] *nStyle*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -713,9 +713,9 @@ virtual BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
- [in] `lpszNewText`  
- [in] `bUpdate`  
+ [in] *nIndex*  
+ [in] *lpszNewText*  
+ [in] *b Update*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -732,13 +732,13 @@ void SetPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica o índice do painel ao qual você deseja atribuir uma nova cor do texto.  
   
- [in] `clrText`  
+ [in] *clrText*  
  Especifica a cor do texto.  
   
- [in] `bUpdate`  
+ [in] *b Update*  
  Se `TRUE`, atualizar o conteúdo do painel imediatamente. Caso contrário, não atualize o conteúdo do painel até o painel for invalidado por outro método.  
   
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth  
@@ -751,10 +751,10 @@ void SetPaneWidth(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  O índice do painel barra de status para o qual definir uma nova largura.  
   
- [in] `cx`  
+ [in] *cx*  
  A nova largura do painel da barra de status, em pixels.  
   
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText  
@@ -767,10 +767,10 @@ void SetTipText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  O índice do painel ao qual você deseja atribuir o texto de dica de ferramenta.  
   
- [in] `pszTipText`  
+ [in] *pszTipText*  
  O novo texto de dica de ferramenta.  
   
 ## <a name="see-also"></a>Consulte também  

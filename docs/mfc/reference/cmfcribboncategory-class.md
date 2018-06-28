@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91dbbe3b3207eba50fd9206719de2fd4afd5cc5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44caf81fd73567e9c206bdfe62869f5fc145fd33
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377964"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039096"
 ---
 # <a name="cmfcribboncategory-class"></a>Classe CMFCRibbonCategory
 O `CMFCRibbonCategory` classe implementa uma guia de faixa de opções que contém um grupo de [painéis da faixa de opções](../../mfc/reference/cmfcribbonpanel-class.md).  
@@ -275,7 +275,7 @@ void AddHidden(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pElem`  
+ [in] *pElem*  
  Ponteiro para um elemento de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -292,20 +292,20 @@ CMFCRibbonPanel* AddPanel(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszPanelName`  
+ [in] *lpszPanelName*  
  Ponteiro para o nome do novo painel de faixa de opções.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Identificador para o ícone padrão para o novo painel de faixa de opções.  
   
- [in] `pRTI`  
+ [in] *pRTI*  
  Ponteiro para informações de classe de tempo de execução para um painel de faixa de opções personalizada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Ponteiro para o novo painel de faixa de opções, se o método teve êxito; Caso contrário, `NULL` se o painel não foi criado.  
   
 ### <a name="remarks"></a>Comentários  
- Se você quiser criar um painel de faixa de opções personalizada, você deve especificar suas informações de classe de tempo de execução em `pRTI`. A classe do painel de faixa de opções personalizada deve ser derivada de `CMFCRibbonPanel` classe.  
+ Se você quiser criar um painel de faixa de opções personalizada, você deve especificar suas informações de classe de tempo de execução em *pRTI*. A classe do painel de faixa de opções personalizada deve ser derivada de `CMFCRibbonPanel` classe.  
   
  O ícone padrão para o painel de faixa de opções é exibido quando não houver espaço suficiente para exibir os elementos da faixa de opções.  
   
@@ -330,22 +330,22 @@ CMFCRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pParenrRibbonBar`  
+ [in] *pParenrRibbonBar*  
  Ponteiro para a barra de faixa de opções do pai da categoria de faixa de opções.  
   
- [in] `lpszName`  
+ [in] *lpszName*  
  Nome da categoria de faixa de opções.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  ID do recurso da lista de imagens para imagens pequenas que são usadas pelos elementos de faixa de opções na categoria de faixa de opções.  
   
- [in] `uiLargeImagesResID`  
+ [in] *uiLargeImagesResID*  
  ID do recurso da lista de imagens para imagens grandes que são usadas pelos elementos de faixa de opções na categoria de faixa de opções.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  Tamanho de imagens pequenas para elementos de faixa de opções na categoria de faixa de opções padrão.  
   
- [in] `sizeLargeImage`  
+ [in] *sizeLargeImage*  
  Tamanho de imagens grandes para elementos de faixa de opções na categoria de faixa de opções padrão.  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonCategory::CopyFrom  
@@ -356,7 +356,7 @@ virtual void CopyFrom(CMFCRibbonCategory& src);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `src`  
+ [in] *src*  
  A fonte `CMFCRibbonCategory` objeto.  
   
 ### <a name="remarks"></a>Comentários  
@@ -371,10 +371,10 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwData`  
+ [in] *dwData*  
  Os dados associados a um elemento de faixa de opções.  
   
- [in] `bVisibleOnly`  
+ [in] *bVisibleOnly*  
  `TRUE` para incluir elementos de faixa de opções de acesso rápido na pesquisa; `FALSE` para excluir os elementos de faixa de opções de acesso rápido na pesquisa.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -392,10 +392,10 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  ID de comando associado com um elemento de faixa de opções.  
   
- [in] `bVisibleOnly`  
+ [in] *bVisibleOnly*  
  `TRUE` para incluir elementos de faixa de opções de acesso rápido na pesquisa; `FALSE` para excluir os elementos de faixa de opções de acesso rápido na pesquisa.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -411,7 +411,7 @@ CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pElement`  
+ [in] *pElement*  
  Ponteiro para um elemento de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -463,7 +463,7 @@ void GetElements(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in, out] `arElements`  
+ [out no] *arElements*  
  Referência a um [CArray](../../mfc/reference/carray-class.md) de elementos de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -479,10 +479,10 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  ID de comando associado com um elemento de faixa de opções.  
   
- [in, out] `arElements`  
+ [out no] *arElements*  
  Referência a um [CArray](../../mfc/reference/carray-class.md) de elementos de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -532,7 +532,7 @@ int GetImageCount(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bIsLargeImage`  
+ [in] *bIsLargeImage*  
  `TRUE` para o número de imagens na lista de imagens grandes; `FALSE` para o número de imagens na lista de imagens pequenas.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -548,7 +548,7 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bIsLargeImage`  
+ [in] *bIsLargeImage*  
  `TRUE` o tamanho de imagens grandes; `FALSE` para o tamanho das imagens pequenas.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -567,10 +567,10 @@ void GetItemIDsList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `lstItems`  
+ [out] *lstItems*  
  A lista de IDs de comando para os elementos da faixa de opções na categoria de faixa de opções.  
   
- [in] `bHiddenOnly`  
+ [in] *bHiddenOnly*  
  `TRUE` Para excluir os elementos de faixa de opções exibidos em painéis a faixa de opções na categoria de faixa de opções; `FALSE` para incluir todos os elementos da faixa de opções na categoria de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -605,7 +605,7 @@ int GetMaxHeight(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo para os painéis de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -634,14 +634,14 @@ CMFCRibbonPanel* GetPanel(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  O índice de base zero de um painel de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Ponteiro para o painel de faixa de opções está localizado no índice especificado.  
   
 ### <a name="remarks"></a>Comentários  
- Uma exceção será lançada se `nIndex` está fora do intervalo.  
+ Uma exceção será lançada se *nIndex* está fora do intervalo.  
   
 ##  <a name="getpanelcount"></a>  CMFCRibbonCategory::GetPanelCount  
  Retorna o número de painéis de faixa de opções na categoria de faixa de opções.  
@@ -661,7 +661,7 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  As coordenadas x e y do ponteiro, em relação ao canto superior esquerdo da janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -678,7 +678,7 @@ int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pPanel`  
+ [in] *pPanel*  
  Ponteiro para um painel de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -807,7 +807,7 @@ void GetVisibleElements(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `arElements`  
+ *arElements*  
  Matriz de todos os elementos visíveis.  
   
 ### <a name="remarks"></a>Comentários  
@@ -822,10 +822,10 @@ CMFCRibbonPanel* HighlightPanel(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pHLPanel`  
+ [in] *pHLPanel*  
  Ponteiro para o painel de faixa de opções para realçar.  
   
- [in] `point`  
+ [in] *ponto*  
  As coordenadas x e y do ponteiro, em relação ao canto superior esquerdo da janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -844,10 +844,10 @@ CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  As coordenadas x e y do ponteiro do mouse em relação ao canto superior esquerdo da janela.  
   
- [in] `bCheckPanelCaption`  
+ [in] *bCheckPanelCaption*  
  `TRUE` Para testar a legenda do painel de faixa de opções; `FALSE` para excluir a legenda do painel de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -864,7 +864,7 @@ int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  As coordenadas x e y do ponteiro do mouse em relação ao canto superior esquerdo da janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -881,11 +881,11 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  O ponto de teste.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Se `point` cai dentro do retângulo delimitador de tanto à esquerda ou o botão de rolagem à direita da categoria de faixa de opções, retorna um ponteiro para o botão ou caso contrário, retornará `NULL`.  
+ Se *ponto* cai dentro do retângulo delimitador de tanto à esquerda ou o botão de rolagem à direita da categoria de faixa de opções, retorna um ponteiro para o botão ou caso contrário, retornará `NULL`.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -939,16 +939,16 @@ virtual BOOL NotifyControlCommand(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bAccelerator`  
+ [in] *bAccelerator*  
  `TRUE` Se esse comando se originou de um acelerador ou `FALSE` caso contrário.  
   
- [in] `nNotifyCode`  
+ [in] *nNotifyCode*  
  O código de notificação.  
   
- [in] `wParam`  
+ [in] *wParam*  
  O campo WPARAM da mensagem.  
   
- [in] `lParam`  
+ [in] *lParam*  
  O campo LPARAM da mensagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -973,7 +973,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo para a categoria de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -992,22 +992,22 @@ virtual BOOL OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo para a imagem.  
   
- [in] `rect`  
+ [in] *rect*  
  Retângulo de exibição para a imagem.  
   
- [in] `pElement`  
+ [in] *pElement*  
  Ponteiro para o elemento de faixa de opções que contém a imagem.  
   
- [in] `bIsLargeImage`  
+ [in] *bIsLargeImage*  
  `TRUE` Se a imagem é o tamanho grande. `FALSE` se a imagem é o tamanho pequeno.  
   
- [in] `nImageIndex`  
+ [in] *nImageIndex*  
  Índice de base zero da imagem na matriz de imagem que está contida na categoria de faixa de opções.  
   
- [in] `bCenter`  
+ [in] *bCenter*  
  `TRUE` para centralizar a imagem no retângulo de exibição; `FALSE` para desenhar a imagem no canto superior esquerdo do retângulo de exibição.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1025,10 +1025,10 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Este parâmetro não é usado.  
   
- [in] `pMenuBar`  
+ [in] *pMenuBar*  
  Este parâmetro não é usado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1042,7 +1042,7 @@ virtual BOOL OnKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nChar`  
+ *nChar*  
  O código de tecla virtual para a chave que o usuário pressionou.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1055,7 +1055,7 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  As coordenadas x e y do ponteiro do mouse em relação ao canto superior esquerdo da janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1071,7 +1071,7 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  As coordenadas x e y do ponteiro, em relação ao canto superior esquerdo da janela.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1084,7 +1084,7 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  As coordenadas x e y do ponteiro, em relação ao canto superior esquerdo da janela.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1097,7 +1097,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  `TRUE` Se o layout é da direita para esquerda; `FALSE` se o layout é esquerda para a direita.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1113,10 +1113,10 @@ virtual BOOL OnScrollHorz(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bScrollLeft`  
+ [in] *bScrollLeft*  
  `TRUE` para rolar para a esquerda; `FALSE` para rolar para a direita.  
   
- [in] `nScrollOffset`  
+ [in] *nScrollOffset*  
  A distância de rolagem em pixels.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1135,13 +1135,13 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pCmdUI`  
+ [in] *pCmdUI*  
  Ponteiro para o `CMFCRibbonCmdUI` objeto que especifica os elementos de interface do usuário a ser habilitada e que devem ser desabilitados.  
   
- [in] `pTarget`  
+ [in] *pTarget*  
  Ponteiro para a janela que controla o habilitando ou desabilitando os elementos de interface do usuário.  
   
- [in] `bDisableIfNoHndler`  
+ [in] *bDisableIfNoHndler*  
  `TRUE` Para desabilitar o item de interface do usuário, se nenhum manipulador é definido em um mapa de mensagem; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1154,7 +1154,7 @@ virtual void RecalcLayout(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo para a categoria de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1169,10 +1169,10 @@ BOOL RemovePanel(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  O número de índice do painel para remover. Obtido com a chamada a [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) método.  
   
- [in] `bDelete`  
+ [in] *bDelete*  
  `TRUE` Para excluir o objeto de painel da memória; `FALSE` para remover o objeto de painel sem excluí-la.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1186,7 +1186,7 @@ virtual void ReposPanels(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo para os painéis de faixa de opções que estão contidos na categoria de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1199,7 +1199,7 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `arCollapseOrder`  
+ [in] *arCollapseOrder*  
  Especifica a ordem de recolher. A matriz contém índices com base em zero de painéis de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1222,7 +1222,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwData`  
+ [in] *dwData*  
  Os dados definidos pelo usuário.  
   
 ##  <a name="setkeys"></a>  CMFCRibbonCategory::SetKeys  
@@ -1233,7 +1233,7 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszKeys`  
+ [in] *lpszKeys*  
  O texto keytip.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1247,11 +1247,11 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszName`  
+ [in] *lpszName*  
  O nome e keytip da categoria de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
- Para definir o keytip para a categoria de faixa de opções, acrescente uma sequência de escape de nova linha seguida pelos caracteres keytip para `lpszName`.  
+ Para definir o keytip para a categoria de faixa de opções, acrescente uma sequência de escape de nova linha seguida pelos caracteres keytip para *lpszName*.  
   
 ##  <a name="settabcolor"></a>  CMFCRibbonCategory::SetTabColor  
  Define a cor da categoria de faixa de opções.  
@@ -1261,7 +1261,7 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `color`  
+ [in] *cor*  
  Especifica a nova cor da categoria de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  

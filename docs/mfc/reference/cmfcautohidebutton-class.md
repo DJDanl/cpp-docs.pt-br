@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48dc35a5b3e7f6b12376a47d68a95602bed48c49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a62dcb52c6e50897c3ae4a518b1cd8f2b704c7a1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375305"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038293"
 ---
 # <a name="cmfcautohidebutton-class"></a>Classe CMFCAutoHideButton
 Um botão que exibe ou oculta um [CDockablePane classe](../../mfc/reference/cdockablepane-class.md) que está configurado para ocultar.  
@@ -144,13 +144,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pParentBar`  
+ [in] *pParentBar*  
  Um ponteiro para a barra de ferramentas do pai.  
   
- [in] `pAutoHideWnd`  
+ [in] *pAutoHideWnd*  
  Um ponteiro para um [CDockablePane](../../mfc/reference/cdockablepane-class.md) objeto. Esse botão Ocultar automaticamente oculta e mostra que `CDockablePane`.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Um valor que especifica o alinhamento de um botão com a janela do quadro principal.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -159,7 +159,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Comentários  
  Quando você cria um `CMFCAutoHideButton` do objeto, você deve associar o botão Ocultar automaticamente um determinado `CDockablePane`. O usuário pode usar o botão Ocultar automaticamente para ocultar e mostrar associado `CDockablePane`.  
   
- O `dwAlignment` parâmetro indica onde o botão Ocultar automaticamente reside no aplicativo. O parâmetro pode ser qualquer um dos seguintes valores:  
+ O *dwAlignment* parâmetro indica onde o botão Ocultar automaticamente reside no aplicativo. O parâmetro pode ser qualquer um dos seguintes valores:  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -303,7 +303,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -320,13 +320,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
- [in] `rectBounds`  
+ [in] *rectBounds*  
  O retângulo delimitador do botão Ocultar automaticamente.  
   
- [in] `rectBorderSize`  
+ [in] *rectBorderSize*  
  A espessura da borda de cada lado do botão Ocultar automaticamente.  
   
 ### <a name="remarks"></a>Comentários  
@@ -342,10 +342,10 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  O retângulo delimitador do botão Ocultar automaticamente.  
   
 ### <a name="remarks"></a>Comentários  
@@ -359,7 +359,7 @@ void ShowAttachedWindow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bShow`  
+ [in] *bMostrar*  
  Um valor booleano que especifica se esse método mostra o anexo `CDockablePane`.  
   
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
@@ -370,7 +370,7 @@ virtual void ShowButton(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bShow`  
+ [in] *bMostrar*  
  Um valor booleano que especifica se deve mostrar o botão Ocultar automaticamente.  
   
 ##  <a name="move"></a>  CMFCAutoHideButton::Move  
@@ -381,7 +381,7 @@ void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nOffset`  
+ [in] *nOffset*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -393,7 +393,7 @@ void ReplacePane(CDockablePane* pNewBar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pNewBar`  
+ [in] *pNewBar*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -405,7 +405,7 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pFirstBarInGroup`  
+ [in] *pFirstBarInGroup*  
  Um ponteiro para a primeira barra no grupo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -418,7 +418,7 @@ virtual void HighlightButton(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bHighlight`  
+ *bHighlight*  
  Especifica o novo AutoOcultar estado do botão. `TRUE` indica que o botão é realçado, `FALSE` indica que o botão não esteja realçado.  
   
 ### <a name="remarks"></a>Comentários  

@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb1ef84aabed69554ded868bbe9092c3e8b7082f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a94ad813ff72eaed2642e9c78a098b999bf128fa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370406"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040071"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Classe CMFCPreviewCtrlImpl
 Essa classe implementa uma janela que é colocada em uma janela do host fornecida pelo Shell para visualização avançada.  
@@ -136,13 +136,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `hWndParent`  
+ *hWndParent*  
  Um identificador para a janela do host fornecido pelo Shell para visualização avançada.  
   
- `prc`  
+ *República Popular da China*  
  Especifica o tamanho inicial e a posição da janela.  
   
- `pContext`  
+ *pContext*  
  Um ponteiro para um contexto de criação.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -169,7 +169,7 @@ virtual void DoPaint(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDC`  
+ *pDC*  
  Um ponteiro para um contexto de dispositivo para pintura.  
 
 
@@ -246,7 +246,7 @@ void SetDocument(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDocument`  
+ *pDocument*  
  Um ponteiro para a implementação do documento.  
 
 ## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
@@ -261,7 +261,7 @@ virtual void SetHost(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `hWndParent`  
+ *hWndParent*  
  Um identificador para a nova janela pai.  
 
 ## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
@@ -278,13 +278,13 @@ virtual void SetPreviewVisuals(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `clrBack`  
+ *clrBack*  
  Cor de plano de fundo da janela de visualização.  
   
- `clrText`  
+ *clrText*  
  Cor do texto da janela de visualização.  
   
- `plf`  
+ *plf*  
  Fonte usada para exibir o texto na janela de visualização. 
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
@@ -300,10 +300,10 @@ virtual void SetRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `prc`  
+ *República Popular da China*  
  Especifica o novo tamanho e posição do controle de visualização.  
   
- `bRedraw`  
+ *bRedraw*  
  Especifica se o controle deve ser redesenhado.  
   
 ### <a name="remarks"></a>Comentários  

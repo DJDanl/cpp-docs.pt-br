@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddfa4d26ed0a4328714fbd1a921fe7c204ca3752
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49142f4ad7ea9793bbe533be6430bce929adf9cc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377360"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039180"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Classe CMFCToolBarComboBoxButton
 Um botão de barra de ferramentas que contém um controle de caixa de combinação ( [classe CComboBox](../../mfc/reference/ccombobox-class.md)).  
@@ -138,7 +138,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
   
  2. Construir um `CMFCToolBarComboBoxButton` objeto.  
   
- 3. No manipulador de mensagens que processa o `AFX_WM_RESETTOOLBAR` mensagem, substitua o botão fictício com o novo botão de caixa de combinação usando [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+ 3. No manipulador de mensagens que processa a mensagem AFX_WM_RESETTOOLBAR, substitua o botão fictício com o novo botão de caixa de combinação usando [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
  Para obter mais informações, consulte [passo a passo: colocando controles em barras de ferramentas](../../mfc/walkthrough-putting-controls-on-toolbars.md). Para obter um exemplo de um botão de barra de ferramentas de caixa de combinação, consulte o projeto de exemplo VisualStudioDemo.  
   
@@ -168,10 +168,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszItem`  
+ [in] *lpszItem*  
  O texto do item a ser adicionado à caixa de listagem.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Os dados associados ao item a ser adicionado à caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -192,10 +192,10 @@ virtual INT_PTR AddSortedItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszItem`  
+ [in] *lpszItem*  
  O texto do item a ser adicionado à caixa de listagem.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Os dados associados ao item a ser adicionado à caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -226,16 +226,16 @@ CMFCToolBarComboBoxButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiID`  
+ [in] *uiID*  
  A ID de comando do botão novo.  
   
- [in] `iImage`  
+ [in] *iImage*  
  O índice de imagem da imagem associada ao novo botão.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  O estilo do botão novo.  
   
- [in] `iWidth`  
+ [in] *iWidth*  
  A largura, em pixels, do botão novo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -263,10 +263,10 @@ virtual int Compare(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszItem1`  
+ [in] *lpszItem1*  
  A primeira cadeia de caracteres a ser comparada.  
   
- [in] `lpszItem2`  
+ [in] *lpszItem2*  
  A segunda cadeia de caracteres a ser comparada.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -306,10 +306,10 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Um ponteiro para a janela pai do botão.  
   
- [in] `rect`  
+ [in] *rect*  
  Retângulo delimitador da caixa de combinação.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -326,13 +326,13 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Um ponteiro para a janela pai do botão.  
   
- [in] `rect`  
+ [in] *rect*  
  Retângulo delimitador da nova caixa de edição.  
   
- [in] `dwEditStyle`  
+ [in] *dwEditStyle*  
  Estilo de controle da caixa de edição de novo.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -351,13 +351,13 @@ BOOL DeleteItem(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iIndex`  
+ [in] *iIndex*  
  O índice de base zero do item a ser excluído.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Os dados associados ao item a ser excluído.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  O texto do item a ser excluído. Se houver vários itens com o mesmo texto, o primeiro item é excluído.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -383,7 +383,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar as caixas de combinação e edição; `FALSE` para desabilitar as caixas de combinação e edição.  
   
 ### <a name="remarks"></a>Comentários  
@@ -397,7 +397,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `menuButton`  
+ [out] *botão de menu*  
  Referência a um botão de menu.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -411,7 +411,7 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszText`  
+ [in] *lpszText*  
  O texto a ser pesquisado na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -429,10 +429,10 @@ static CMFCToolBarComboBoxButton* GetByCmd(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  A ID de comando de um botão da caixa de combinação.  
   
- [in] `bIsFocus`  
+ [in] *bIsFocus*  
  `TRUE` para pesquisar somente focalizado botões; `FALSE` para pesquisar todos os botões.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -482,7 +482,7 @@ static int GetCountAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  A ID de comando de um botão da caixa de combinação.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -511,7 +511,7 @@ static int GetCurSelAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  A ID de comando de um botão da caixa de combinação.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -550,7 +550,7 @@ LPCTSTR GetItem(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iIndex`  
+ [in] *iIndex*  
  Índice de base zero de um item na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -569,10 +569,10 @@ static LPCTSTR GetItemAll(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  A ID de comando de um botão da caixa de combinação.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  O índice de base zero de um item na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -589,7 +589,7 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iIndex`  
+ [in] *iIndex*  
  O índice de base zero de um item na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -608,10 +608,10 @@ static DWORD_PTR GetItemDataAll(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  A ID de comando de um botão da caixa de combinação.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  O índice de base zero de um item na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -630,10 +630,10 @@ static void* GetItemDataPtrAll(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  A ID de comando do botão da caixa de combinação.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  O índice de base zero de um item na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -674,7 +674,7 @@ static LPCTSTR GetTextAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  A ID de comando de um botão da caixa de combinação específica.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -728,7 +728,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `hwnd`  
+ [in] *hwnd*  
  Um identificador de janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -765,7 +765,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iNotifyCode`  
+ [in] *iNotifyCode*  
  A mensagem de notificação que está associada com o comando.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -789,13 +789,13 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  O contexto de dispositivo que exibe o botão da caixa de combinação.  
   
- [in] `sizeDefault`  
+ [in] *sizeDefault*  
  O tamanho padrão do botão da caixa de combinação.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  O estado de encaixe da barra de ferramentas do pai. `TRUE` Quando a barra de ferramentas estiver encaixada horizontalmente e `FALSE` quando a barra de ferramentas está encaixada verticalmente.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -809,7 +809,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Ponteiro para a nova barra de ferramentas do pai.  
   
 ##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick  
@@ -822,10 +822,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWnd`  
+ [in] *pWnd*  
  Ponteiro para a janela pai do botão da caixa de combinação.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  Reservado para uso em uma classe derivada.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -841,10 +841,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  O contexto de dispositivo que exibe o botão da caixa de combinação.  
   
- [in] `nCtlColor`  
+ [in] *nCtlColor*  
  Não utilizado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -869,28 +869,28 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `Pdc`  
+ [in] *Pdc*  
  O contexto de dispositivo que exibe o botão.  
   
- [in] `rect`  
+ [in] *rect*  
  O retângulo delimitador do botão.  
   
- [in] `pImages`  
+ [in] *pImages*  
  A coleção de imagens que está associada com o botão.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  O estado de encaixe da barra de ferramentas do pai. `TRUE` Quando a barra de ferramentas estiver encaixada horizontalmente e `FALSE` quando a barra de ferramentas está encaixada verticalmente.  
   
- [in] `bCustomizeMode`  
+ [in] *bCustomizeMode*  
  Se o aplicativo está no modo de personalização.  
   
- [in] `bHighlight`  
+ [in] *bHighlight*  
  Se desenhar o botão da caixa de combinação realçado.  
   
- [in] `bDrawBorder`  
+ [in] *bDrawBorder*  
  Se desenhar o botão de caixa de combinação com uma borda.  
   
- [in] `bGrayDisabledButtons`  
+ [in] *bGrayDisabledButtons*  
  `TRUE` Para desenhar sombreada botões desabilitado; `FALSE` usar o desabilitado as imagens de coleção.  
   
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
@@ -904,13 +904,13 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  O contexto de dispositivo que exibe o botão da caixa de combinação.  
   
- [in] `rect`  
+ [in] *rect*  
  O retângulo delimitador do botão da caixa de combinação.  
   
- [in] `bSelected`  
+ [in] *bSelected*  
  `TRUE` Se o botão de caixa de combinação é selecionada. Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -938,7 +938,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bShow`  
+ [in] *bMostrar*  
  Se deseja ocultar ou exibir o botão de caixa de combinação.  
   
 ##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
@@ -949,7 +949,7 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iSize`  
+ [in] *iSize*  
  A nova largura do botão da caixa de combinação.  
   
 ##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
@@ -964,16 +964,16 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Ponteiro para a janela pai do botão da caixa de combinação.  
   
- [in] `iButtonIndex`  
+ [in] *iButtonIndex*  
  ID do botão da caixa de combinação.  
   
- [in] `wndToolTip`  
+ [in] *wndToolTip*  
  A dica de ferramenta a ser associado com o botão da caixa de combinação.  
   
- [in] `str`  
+ [in] *str*  
  O texto da dica de ferramenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1002,16 +1002,16 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iIndex`  
+ [in] *iIndex*  
  O índice de base zero de um item na caixa de listagem.  
   
- [in] `bNotify`  
+ [in] *bNotify*  
  `TRUE` para notificar o botão da caixa de combinação de seleção; Caso contrário, `FALSE`.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Os dados associados a um item na caixa de listagem.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  O texto de um item na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1039,16 +1039,16 @@ static BOOL SelectItemAll(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  A ID de comando do botão da caixa de combinação que contém a caixa de listagem.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  O índice de base zero do item na caixa de listagem. Um valor de -1 remove qualquer seleção atual na caixa de listagem e desmarca a caixa de edição.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Os dados de um item na caixa de listagem.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  O texto de um item na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1064,7 +1064,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in, out] `ar`  
+ [out no] *ar*  
  O objeto `CArchive` a ser serializado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1080,10 +1080,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pParent`  
+ [in] *pParent*  
  A janela pai do botão da caixa de combinação.  
   
- [out] `data`  
+ [out] *dados*  
  Um `CAccessibilityData` objeto que recebe os dados de acessibilidade do botão de caixa de combinação.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1097,7 +1097,7 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bCenterVert`  
+ [in] *bCenterVert*  
  `TRUE` para o centro do botão da caixa de combinação na barra de ferramentas. `FALSE` para alinhar o botão da caixa de combinação para a parte superior da barra de ferramentas.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1111,7 +1111,7 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiResID`  
+ [in] *uiResID*  
  A ID de recurso de menu de atalho.  
   
 ##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
@@ -1122,7 +1122,7 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nHeight`  
+ [in] *nHeight*  
  A altura, em pixels, da caixa de listagem.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1136,7 +1136,7 @@ static void SetFlatMode(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bFlat`  
+ [in] *bFlat*  
  `TRUE` para uma aparência de estilo plano; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1150,7 +1150,7 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nStyle`  
+ [in] *nStyle*  
  Uma combinação bit a bit (ou) de estilos de barra de ferramentas.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1164,7 +1164,7 @@ void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszText`  
+ [in] *lpszText*  
  Ponteiro para uma cadeia de caracteres que que contém o texto da caixa de edição.  
   
 ## <a name="see-also"></a>Consulte também  

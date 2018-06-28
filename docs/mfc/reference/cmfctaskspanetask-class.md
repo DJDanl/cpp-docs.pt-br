@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4008389121a1a78ca746798af7f3fc18c9663b93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c16644a90bb349a78cac43867fdc648e9c01223d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371326"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040695"
 ---
 # <a name="cmfctaskspanetask-class"></a>Classe CMFCTasksPaneTask
 O `CMFCTasksPaneTask` classe é uma classe auxiliar que representa as tarefas para o controle de painel de tarefas ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). O objeto de tarefa representa um item no grupo de tarefas ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Cada tarefa pode ter um comando que a estrutura executará quando um usuário clica na tarefa e um ícone que aparece à esquerda do nome da tarefa.  
@@ -118,28 +118,28 @@ CMFCTasksPaneTask(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pGroup`  
+ *pGroup*  
  Especifica o [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) ao qual a tarefa pertence.  
   
- `lpszName`  
+ *lpszName*  
  Especifica o nome da tarefa.  
   
- `nIcon`  
+ *nIcon*  
  Especifica o índice da imagem da tarefa na lista de imagens.  
   
- `uiCommandID`  
+ *uiCommandID*  
  Especifica a ID de comando do comando que é executado quando a tarefa é clicada.  
   
- `dwUserData`  
+ *dwUserData*  
  Dados definidos pelo usuário.  
   
- `hwndTask`  
+ *hwndTask*  
  Especifica o identificador para a janela de tarefas.  
   
- `bAutoDestroyWindow`  
+ *bAutoDestroyWindow*  
  Se `TRUE`, a janela de tarefas será destruída automaticamente.  
   
- `nWindowHeight`  
+ *nWindowHeight*  
  Especifica a altura da janela de tarefas.  
   
 ### <a name="remarks"></a>Comentários  
@@ -252,14 +252,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pParent`  
+ [in] *pParent*  
  Representa a janela pai da tarefa atual.  
   
- [out] `data`  
+ [out] *dados*  
  Um objeto do tipo `CAccessibilityData` que é preenchida com os dados de acessibilidade da tarefa atual.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o `data` parâmetro estava com êxito preenchida com os dados de acessibilidade da tarefa atual; caso contrário, `FALSE`.  
+ `TRUE` Se o *dados* parâmetro estava com êxito preenchida com os dados de acessibilidade da tarefa atual; caso contrário, `FALSE`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   

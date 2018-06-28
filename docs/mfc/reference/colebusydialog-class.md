@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b061d2cc31a67c2e6059abeaadb6062b77cacb88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4af90e9354e7d443cb50acbafaa1468c99c12c85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374364"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040906"
 ---
 # <a name="colebusydialog-class"></a>Classe COleBusyDialog
 Usado para as caixas de diálogo OLE servidor não está respondendo ou servidor ocupado.  
@@ -107,7 +107,7 @@ explicit COleBusyDialog(
  *bNotResponding*  
  Se **TRUE**, chame a caixa de diálogo não está respondendo em vez da caixa de diálogo servidor ocupado. O texto na caixa de diálogo não está respondendo é ligeiramente diferente da frase na caixa de diálogo servidor ocupado e o botão Cancelar está desabilitado.  
   
- `dwFlags`  
+ *dwFlags*  
  Sinalizador de criação. Pode conter zero ou mais dos seguintes valores combinados com o operador OR bit a bit:  
   
 - **BZ_DISABLECANCELBUTTON** desabilitar o botão Cancelar ao chamar a caixa de diálogo.  
@@ -116,7 +116,7 @@ explicit COleBusyDialog(
   
 - **BZ_DISABLERETRYBUTTON** desabilitar o botão de repetição ao chamar a caixa de diálogo.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Aponta para o objeto de janela pai ou o proprietário (do tipo `CWnd`) ao qual pertence o objeto de caixa de diálogo. Se for **nulo**, a janela pai do objeto de caixa de diálogo é definida como a janela principal do aplicativo.  
   
 ### <a name="remarks"></a>Comentários  

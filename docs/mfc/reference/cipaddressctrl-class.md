@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86d6c4cdff533538c2f0ea7f0be1fa44bfd27359
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3e5f88dc011e358c0438209f0a4b3e277419be9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368908"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042151"
 ---
 # <a name="cipaddressctrl-class"></a>Classe CIPAddressCtrl
 Fornece a funcionalidade de controle de endereço IP comuns do Windows.  
@@ -119,16 +119,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwStyle`  
+ *dwStyle*  
  Estilo do controle de endereço IP. Aplica uma combinação de estilos de janela. Você deve incluir o **WS_CHILD** estilo porque o controle deve ser uma janela filho. Consulte [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) no SDK do Windows para obter uma lista de estilos do windows.  
   
- `rect`  
+ *Rect*  
  Uma referência para o tamanho e a posição do controle de endereço IP. Ele pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para a janela pai do controle de endereço IP. Ele não deve ser **nulo.**  
   
- `nID`  
+ *nID*  
  Identificação. do controle de endereço IP  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -139,9 +139,9 @@ virtual BOOL Create(
   
 1.  Chame o construtor, que cria o `CIPAddressCtrl` objeto.  
   
-2.  Chamar **criar**, que cria o controle de endereço IP.  
+2.  Chamar `Create`, que cria o controle de endereço IP.  
   
- Se desejar usar estilos de windows estendida com o controle, chame [CreateEx](#createex) em vez de **criar**.  
+ Se desejar usar estilos de windows estendida com o controle, chame [CreateEx](#createex) em vez de `Create`.  
   
 ##  <a name="createex"></a>  CIPAddressCtrl::CreateEx  
  Chamar essa função para criar um controle (uma janela filho) e associá-lo com o `CIPAddressCtrl` objeto.  
@@ -156,19 +156,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwExStyle`  
- Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o `dwExStyle` parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
+ *dwExStyle*  
+ Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o *dwExStyle* parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  Estilo do controle de endereço IP. Aplica uma combinação de estilos de janela. Você deve incluir o **WS_CHILD** estilo porque o controle deve ser uma janela filho. Consulte [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) no SDK do Windows para obter uma lista de estilos do windows.  
   
- `rect`  
- Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e a posição da janela deve ser criada, nas coordenadas do cliente de `pParentWnd`.  
+ *Rect*  
+ Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e a posição da janela deve ser criada, nas coordenadas do cliente de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para a janela que é o pai do controle.  
   
- `nID`  
+ *nID*  
  ID de janela filho. do controle  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -191,26 +191,26 @@ int GetAddress(DWORD& dwAddress);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nField0`  
+ *nField0*  
  Uma referência para o valor do campo 0 de um endereço IP compactado.  
   
- `nField1`  
+ *nField1*  
  Uma referência para o valor do campo 1 de um endereço IP compactado.  
   
- `nField2`  
+ *nField2*  
  Uma referência para o valor do campo 2 de um endereço IP compactado.  
   
- `nField3`  
+ *nField3*  
  Uma referência para o valor do campo 3 de um endereço IP compactado.  
   
- `dwAddress`  
- Uma referência para o endereço de uma `DWORD` valor que recebe o endereço IP. Consulte **comentários** para uma tabela que mostra como `dwAddress` é preenchido.  
+ *dwAddress*  
+ Uma referência para o endereço de uma `DWORD` valor que recebe o endereço IP. Consulte **comentários** para uma tabela que mostra como *dwAddress* é preenchido.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O número de campos de linha em branco no controle de endereço IP.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função de membro implementa o comportamento da mensagem de Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378), conforme descrito no SDK do Windows. No protótipo primeiro acima, os números nos campos de 0 a 3 do controle, lidos da esquerda para a direita respectivamente, preencher os quatro parâmetros. No protótipo segundo acima, `dwAddress` é populado como segue.  
+ Essa função de membro implementa o comportamento da mensagem de Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378), conforme descrito no SDK do Windows. No protótipo primeiro acima, os números nos campos de 0 a 3 do controle, lidos da esquerda para a direita respectivamente, preencher os quatro parâmetros. No protótipo segundo acima, *dwAddress* é populado como segue.  
   
 |Campo|Que contém o valor do campo de bits|  
 |-----------|-------------------------------------|  
@@ -246,23 +246,23 @@ void SetAddress(DWORD dwAddress);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nField0`  
+ *nField0*  
  O valor do campo 0 de um endereço IP compactado.  
   
- `nField1`  
+ *nField1*  
  O valor do campo 1 de um endereço IP compactado.  
   
- `nField2`  
+ *nField2*  
  O valor do campo 2 de um endereço IP compactado.  
   
- `nField3`  
+ *nField3*  
  O valor do campo 3 de um endereço IP compactado.  
   
- `dwAddress`  
+ *dwAddress*  
  Um `DWORD` valor que contém o novo endereço IP. Consulte **comentários** para uma tabela que mostra como o `DWORD` valor é preenchido.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função de membro implementa o comportamento da mensagem de Win32 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380), conforme descrito no SDK do Windows. No protótipo primeiro acima, os números nos campos de 0 a 3 do controle, lidos da esquerda para a direita respectivamente, preencher os quatro parâmetros. No protótipo segundo acima, `dwAddress` é populado como segue.  
+ Essa função de membro implementa o comportamento da mensagem de Win32 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380), conforme descrito no SDK do Windows. No protótipo primeiro acima, os números nos campos de 0 a 3 do controle, lidos da esquerda para a direita respectivamente, preencher os quatro parâmetros. No protótipo segundo acima, *dwAddress* é populado como segue.  
   
 |Campo|Que contém o valor do campo de bits|  
 |-----------|-------------------------------------|  
@@ -279,7 +279,7 @@ void SetFieldFocus(WORD nField);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nField`  
+ *nField*  
  Índice com base em zero do campo ao qual o foco deve ser definido. Se esse valor for maior que o número de campos, o foco é definido para o primeiro campo em branco. Se todos os campos não estão em branco, o foco é definido para o primeiro campo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -296,17 +296,17 @@ void SetFieldRange(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nField`  
+ *nField*  
  Índice com base em zero do campo ao qual o intervalo será aplicado.  
   
- `nLower`  
+ *nLower*  
  Uma referência a um número inteiro recebendo o limite inferior do campo especificado neste controle de endereço IP.  
   
- `nUpper`  
+ *nUpper*  
  Uma referência a um número inteiro recebendo o limite superior do campo especificado neste controle de endereço IP.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função de membro implementa o comportamento da mensagem de Win32 [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382), conforme descrito no SDK do Windows. Use os dois parâmetros, `nLower` e `nUpper`, para indicar os limites inferior e superiores do campo, em vez do *wRange* parâmetro usado com a mensagem de Win32.  
+ Essa função de membro implementa o comportamento da mensagem de Win32 [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382), conforme descrito no SDK do Windows. Use os dois parâmetros, *nLower* e *nUpper*, para indicar os limites inferior e superiores do campo, em vez do *wRange* parâmetro usado com a mensagem de Win32.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CWnd](../../mfc/reference/cwnd-class.md)   

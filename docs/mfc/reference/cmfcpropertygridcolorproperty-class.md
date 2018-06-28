@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de336692a821ba374996fac9ee7d282d2990bd08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9b1728958d8560362f9b330c3ba570e933d824d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367988"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040802"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>Classe CMFCPropertyGridColorProperty
 O `CMFCPropertyGridColorProperty` classe oferece suporte a um item de controle de lista de propriedade que abre uma caixa de diálogo de seleção de cor.  
@@ -103,19 +103,19 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `strName`  
+ [in] *strName*  
  O nome da propriedade.  
   
- [in] `color`  
+ [in] *cor*  
  O valor da propriedade de cor.  
   
- [in] `pPalette`  
+ [in] *pPalette*  
  Ponteiro para uma paleta de cores. O valor padrão é `NULL`.  
   
- [in] `lpszDescr`  
+ [in] *lpszDescr*  
  A descrição da propriedade. O valor padrão é `NULL`.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Dados específicos do aplicativo, como um inteiro ou um ponteiro para outros dados que está associados com a propriedade. O valor padrão é 0.  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
@@ -129,13 +129,13 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  O texto do rótulo do botão automático.  
   
- [in] `colorAutomatic`  
+ [in] *automáticaCor*  
  O valor de cor RGB da cor automático (padrão).  
   
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar o botão automático; Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -151,13 +151,13 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  O texto do rótulo do botão outros.  
   
- [in] `bAltColorDlg`  
+ [in] *bAltColorDlg*  
  `TRUE` Para exibir o `CMFCColorDialog` caixa de diálogo. `FALSE` para exibir a caixa de diálogo de seleção de cores padrão. O valor padrão é `TRUE`.  
   
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para exibir o botão; Caso contrário, `FALSE`.  O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -182,7 +182,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `color`  
+ [in] *cor*  
  Um valor de cor RGB.  
   
 ### <a name="remarks"></a>Comentários  
@@ -195,7 +195,7 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nColumnsNumber`  
+ [in] *nColumnsNumber*  
  O número preferido de colunas na grade de propriedade de cor.  
   
 ### <a name="remarks"></a>Comentários  
@@ -209,7 +209,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `varValue`  
+ [in] *varValue*  
  Um valor.  
   
 ### <a name="remarks"></a>Comentários  

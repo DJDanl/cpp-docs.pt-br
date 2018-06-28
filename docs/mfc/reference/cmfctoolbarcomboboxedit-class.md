@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d541702d73befedab72ad7b130b56a125a5817aa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c287d30a2a54b6e300f34ca83703baf154b36bf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376299"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042502"
 ---
 # <a name="cmfctoolbarcomboboxedit-class"></a>Classe CMFCToolBarComboBoxEdit
 A estrutura usa o `CMFCToolBarComboBoxEdit` classe para criar um botão de barra de ferramentas que se comporta como um controle de caixa de combinação editável.  
@@ -74,7 +74,7 @@ CMFCToolBarComboBoxEdit(CMFCToolBarComboBoxButton& combo);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `combo`  
+ [in] *caixa de combinação*  
  Uma referência a um [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objeto, que é um botão de barra de ferramentas que contém um controle de caixa de combinação.  
   
 ### <a name="example"></a>Exemplo  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b69aafa7f8b07d96d754d080e7fb5abd170e167
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 122ceb1715323e1482b2a8a8544cbe3f6270c713
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372200"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037851"
 ---
 # <a name="coledbrecordview-class"></a>Classe COleDBRecordView
 Uma exibição que mostra os registros do banco de dados em controles.  
@@ -92,10 +92,10 @@ COleDBRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Contém uma cadeia de caracteres terminada em nulo que é o nome de um recurso de modelo de caixa de diálogo.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Contém o número de identificação de um recurso de modelo de caixa de diálogo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -116,7 +116,7 @@ virtual CRowset<>* OnGetRowset() = 0;
  Um padrão `HRESULT` valor.  
   
 ### <a name="remarks"></a>Comentários  
- Você deve substituir esta função de membro para criar ou obter um objeto de conjunto de linhas e retornar um identificador a ele. Se você declarar a classe de exibição de registro com ClassWizard, o assistente grava uma substituição padrão para você. Implementação do padrão do ClassWizard retorna o identificador do conjunto de linhas armazenado na exibição de registro se houver um. Se não, ele constrói um objeto de conjunto de linhas do tipo especificado com ClassWizard e chama seu **abrir** membro de função para abrir a tabela ou executar a consulta e, em seguida, retorna um identificador para o objeto.  
+ Você deve substituir esta função de membro para criar ou obter um objeto de conjunto de linhas e retornar um identificador a ele. Se você declarar a classe de exibição de registro com ClassWizard, o assistente grava uma substituição padrão para você. Implementação do padrão do ClassWizard retorna o identificador do conjunto de linhas armazenado na exibição de registro se houver um. Se não, ele constrói um objeto de conjunto de linhas do tipo especificado com ClassWizard e chama seu `Open` membro de função para abrir a tabela ou executar a consulta e, em seguida, retorna um identificador para o objeto.  
   
 > [!NOTE]
 >  Antes do MFC 7.0, `OnGetRowset` retornou um ponteiro para `CRowset`. Se você tiver um código que chama `OnGetRowset`, você precisa alterar o tipo de retorno para a classe de modelo **CRowset <>**.  
@@ -134,7 +134,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIDMoveCommand`  
+ *nIDMoveCommand*  
  Um dos seguintes valores de ID de comando padrão:  
   
 - `ID_RECORD_FIRST` – Mover para o primeiro registro no conjunto de registros.  
@@ -149,7 +149,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Diferente de zero se a movimentação foi bem-sucedida; Caso contrário, 0 se a solicitação de movimentação foi negada.  
   
 ### <a name="remarks"></a>Comentários  
- A implementação padrão chama apropriada **mover** função de membro de `CRowset` objeto associado à exibição de registro.  
+ A implementação padrão chama apropriada `Move` função de membro de `CRowset` objeto associado à exibição de registro.  
   
  Por padrão, `OnMove` atualiza o registro atual na fonte de dados se o usuário alterou na exibição do registro.  
   

@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eecc1a08a3e0dcf8d8b3f1c31594488901a848f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 906e956bae9bce14c83d938218f51dfea9288b96
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377617"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041884"
 ---
 # <a name="cmdichildwndex-class"></a>Classe CMDIChildWndEx
 O `CMDIChildWndEx` classe fornece a funcionalidade de um Windows várias janelas do documento interface MDI filho. Ela estende a funcionalidade de [classe CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). A estrutura requer esta classe quando um aplicativo MDI usa algumas classes MFC.  
@@ -239,10 +239,10 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Um ponteiro para o painel.  
   
- [in] `bTail`  
+ [in] *bTail*  
  `TRUE` Para adicionar o painel ao final da lista de painéis para o Gerenciador do encaixe. Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -256,7 +256,7 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Um ponteiro para o painel.  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
@@ -267,7 +267,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `hdwp`  
+ [in] *hdwp*  
  Identificador para uma estrutura de posição de janela adiada.  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
@@ -305,17 +305,17 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
+ [in] *pBar*  
  Um ponteiro para o painel.  
   
- [in] `nDockBarID`  
+ [in] *nDockBarID*  
  A ID do painel.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  Um ponteiro para um retângulo.  
   
 ### <a name="remarks"></a>Comentários  
- O `lpRect` parâmetro não for usado.  
+ O *lpRect* parâmetro não for usado.  
   
 ##  <a name="dockpaneleftof"></a>  CMDIChildWndEx::DockPaneLeftOf  
  Encaixa um painel à esquerda do outro painel.  
@@ -327,17 +327,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pBar`  
+ *pBar*  
  Um ponteiro para o painel que deve ser encaixado.  
   
- `pLeftOf`  
+ *pLeftOf*  
  Um ponteiro para o painel que serve como o ponto de referência.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` em caso de êxito, `FALSE` em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método usa o painel especificado por `pBar` e encaixa-lo no lado esquerdo do painel especificado pelo `pLeftOf`.  
+ Esse método usa o painel especificado por *pBar* e encaixa-lo no lado esquerdo do painel especificado por *pLeftOf*.  
   
  Chame este método quando desejar encaixar vários painéis em ordem predefinida.  
   
@@ -349,7 +349,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  Especifica os lados da janela do quadro principal que está habilitado. Use um ou mais dos sinalizadores a seguir.  
   
 - `CBRS_ALIGN_LEFT`  
@@ -371,7 +371,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  Especifica o alinhamento de encaixe para habilitar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -453,7 +453,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nID`  
+ [in] *nID*  
  A ID do painel de controle para localizar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -506,14 +506,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Um ponteiro para o painel para inserir.  
   
- [in] `pTarget`  
+ [in] *pTarget*  
  Um ponteiro para o painel adjacente.  
   
- [in] `bAfter`  
- Se `TRUE`, `pControlBar` é inserida depois `pTarget`. Se `FALSE`, `pControlBar` é inserida antes `pTarget`.  
+ [in] *bDepois*  
+ Se `TRUE`, *pControlBar* é inserida depois *pTarget*. Se `FALSE`, *pControlBar* é inserida antes *pTarget*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` Se o método for bem-sucedido, `FALSE` caso contrário.  
@@ -529,13 +529,13 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  O ponto especificado.  
   
- [in] `dwBarAlignment`  
+ [in] *dwBarAlignment*  
  Especifica que o ponto está próximo de borda. Os valores possíveis são `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, e `CBRS_ALIGN_BOTTOM`  
   
- [in] `bOuterEdge`  
+ [in] *bOuterEdge*  
  `TRUE` Se o ponto está próximo a borda externa do site do encaixe; `FALSE` caso contrário.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -580,7 +580,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pFrame`  
+ [in] *pFrame*  
  Um ponteiro para uma janela do quadro simplificado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -596,10 +596,10 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bPreview`  
+ [in] *bPreview*  
  Se `TRUE`, entrar no modo de visualização de impressão. Se `FALSE`, saia do modo de visualização de impressão.  
   
- [in] `pState`  
+ [in] *pState*  
  Um ponteiro para a estrutura de estado de visualização de impressão.  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
@@ -610,7 +610,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bAddToTitle`  
+ [in] *bAddToTitle*  
  Se `TRUE`, adicione o nome do documento para o título.  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
@@ -631,19 +631,19 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  Especifica o ponto em coordenadas da tela, para verificar.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  Aumente a área de pesquisa, esse valor. Um painel de acordo com os critérios de pesquisa se determinado ponto estiver na área de trabalho maior.  
   
- [in] `bExactBar`  
- `TRUE` para ignorar o `nSensitivity` parâmetro; caso contrário, `FALSE`.  
+ [in] *bExactBar*  
+ `TRUE` para ignorar o *nSensitivity* parâmetro; caso contrário, `FALSE`.  
   
- [in] `pRTCBarType`  
+ [in] *pRTCBarType*  
  Se não for `NULL`, o método pesquisa somente os painéis do tipo especificado.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Se um painel é localizado no ponto especificado, este parâmetro contém o lado do painel que foi mais próximo para o ponto especificado. Para obter mais informações, consulte a seção Comentários.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -652,7 +652,7 @@ CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>Comentários  
  Chame este método para determinar se um painel que contém o ponto especificado de acordo com as condições especificadas como classe de tempo de execução e visibilidade.  
   
- Quando a função retorna e foi encontrado um painel, `dwAlignment` contém o alinhamento de ponto especificado. Por exemplo, se o ponto mais próximo à parte superior do painel, `dwAlignment` é definido como `CBRS_ALIGN_TOP`.  
+ Quando a função retorna e foi encontrado um painel, *dwAlignment* contém o alinhamento de ponto especificado. Por exemplo, se o ponto mais próximo à parte superior do painel, *dwAlignment* é definido como `CBRS_ALIGN_TOP`.  
   
 ##  <a name="recalclayout"></a>  CMDIChildWndEx::RecalcLayout  
  Recalcula o layout da janela.  
@@ -662,7 +662,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bNotify`  
+ [in] *bNotify*  
  Se `TRUE`, o item no local ativo para a janela recebe a notificação da alteração de layout.  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
@@ -678,19 +678,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Um ponteiro para o painel para remover.  
   
- [in] `bDestroy`  
+ [in] *bDestroy*  
  Se `TRUE`, o painel removido é destruído.  
   
- [in] `bAdjustLayout`  
+ [in] *bAdjustLayout*  
  Se `TRUE`, ajustar o layout de encaixe imediatamente.  
   
- [in] `bAutoHide`  
+ [in] *bAutoHide*  
  Se `TRUE`, o layout de encaixe está relacionado à lista de barras de ocultar automaticamente. Se `FALSE`, o layout de encaixe está relacionado à lista de painéis regulares.  
   
- [in] `pBarReplacement`  
+ [in] *pBarReplacement*  
  Um ponteiro para um painel que substitui o painel removido.  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
@@ -701,7 +701,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `p`  
+ [in] *p*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -717,10 +717,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
- [in] `bShow`  
- [in] `bDelay`  
- [in] `bActivate`  
+ [in] *pBar*  
+ [in] *bMostrar*  
+ [in] *bDelay*  
+ [in] *bActivate*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -732,7 +732,7 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `hIcon`  
+ *hIcon*  
  Um identificador para um ícone a ser exibido na guia de barra de tarefas do Windows 7.  
   
 ### <a name="remarks"></a>Comentários  
@@ -745,7 +745,7 @@ void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bCheckRegisteredMDIChildCount`  
+ *bCheckRegisteredMDIChildCount*  
  Especifica se essa função precisa verificar o número de filhos MDI registrado com guias MDI. Se esse número for 0, esta função remove o retângulo de recorte de miniatura de barra de tarefas do aplicativo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -758,7 +758,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `rect`  
+ *Rect*  
  Especifica o novo retângulo de recorte. Se o retângulo está vazio ou nulo, o recorte será removido.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -774,7 +774,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwFlags`  
+ *dwFlags*  
  Uma combinação de valores STPFLAG. Para obter mais informações, consulte [ITaskbarList4::SetTabProperties](http://msdn.microsoft.com/library/dd562049\(vs.85\).aspx).  
   
 ### <a name="remarks"></a>Comentários  
@@ -787,7 +787,7 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWndBefore`  
+ *pWndBefore*  
  Um ponteiro para a janela filho MDI cuja miniatura é inserida à esquerda. Esta janela já deve estar registrada por meio de `RegisterTaskbarTab`. Se esse valor for `NULL`, a miniatura do novo é adicionada ao final da lista.  
   
 ### <a name="remarks"></a>Comentários  
@@ -809,7 +809,7 @@ virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWndBefore`  
+ *pWndBefore*  
  Um ponteiro para a janela filho MDI cuja miniatura é inserida à esquerda. Esta janela já deve estar registrada por meio de `RegisterTaskbarTab`. Se esse valor for `NULL`, a miniatura do novo é adicionada ao final da lista.  
   
 ### <a name="remarks"></a>Comentários  
@@ -826,16 +826,16 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `hBmpDst`  
+ *hBmpDst*  
  Um identificador para um bitmap de destino.  
   
- `rectDst`  
+ *rectDst*  
  Especifica o retângulo de destino.  
   
- `hBmpSrc`  
+ *hBmpSrc*  
  Um identificador para um bitmap de origem.  
   
- `rectSrc`  
+ *rectSrc*  
  Especifica o retângulo de origem.  
   
 ### <a name="remarks"></a>Comentários  
@@ -852,13 +852,13 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDesktopWnd`  
+ *pDesktopWnd*  
  Especifica um ponteiro para a janela pai de nível superior da janela que está sendo ativada. O ponteiro pode ser temporário e não deve ser armazenado.  
   
- `nHitTest`  
+ *nHitTest*  
  Especifica o código de área de teste de hit. Um teste de clique é um teste que determina o local do cursor.  
   
- `message`  
+ *message*  
  Especifica o número de mensagens de mouse.  
   
 ### <a name="remarks"></a>Comentários  
@@ -875,13 +875,13 @@ virtual void OnTaskbarTabThumbnailActivate(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nState`  
+ *nState*  
  Especifica se o `CWnd` está sendo ativada ou desativada.  
   
- `pWndOther`  
+ *pWndOther*  
  Ponteiro para o `CWnd` que está sendo ativada ou desativada. O ponteiro pode ser `NULL`, e pode ser temporário.  
   
- `bMinimized`  
+ *bMinimized*  
  Especifica o estado minimizado o `CWnd` que está sendo ativada ou desativada. Um valor de `TRUE` indica que a janela está minimizada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -906,10 +906,10 @@ virtual HBITMAP OnGetIconicThumbnail(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nWidth`  
+ *nWidth*  
  Especifica a largura do bitmap necessária.  
   
- `nHeight`  
+ *nHeight*  
  Especifica a altura do bitmap necessária.  
   
 ### <a name="remarks"></a>Comentários  
@@ -924,10 +924,10 @@ virtual HBITMAP OnGetIconicLivePreviewBitmap(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bIsMDIChildActive`  
+ *bIsMDIChildActive*  
  Esse parâmetro é `TRUE` se o bitmap for solicitado para o filho MDI, que está atualmente ativa e a janela principal não é minimizado. O padrão de processamento nesse caso tira um instantâneo da janela principal.  
   
- `ptLocation`  
+ *ptLocation*  
  Especifica o local do bitmap no principal (nível superior) janela coordenadas do cliente. Esse ponto deve ser fornecido pelo destinatário.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1039,7 +1039,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bEnable`  
+ *bAtivar*  
  Especifica se deseja habilitar ( `TRUE`), ou desabilitar ( `FALSE`) a seleção automática de uma parte da área de cliente da janela para exibir.  
   
 ### <a name="remarks"></a>Comentários  

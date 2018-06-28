@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb52739977b641cd5d52f018efcd30a51ecf1e32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fec20d8bb960d48392f2d174dab9ee6497738c80
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373127"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039596"
 ---
 # <a name="coledroptarget-class"></a>Classe COleDropTarget
 Fornece o mecanismo de comunicação entre uma janela e das bibliotecas OLE.  
@@ -110,20 +110,20 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWnd`  
+ *pWnd*  
  Inserção de pontos para a janela do cursor.  
   
- `pDataObject`  
+ *pDataObject*  
  Aponta para o objeto de dados que contém os dados que podem ser descartados.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Contém o estado das teclas modificadoras. Esta é uma combinação de qualquer número das seguintes opções: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, e **MK_RBUTTON**.  
   
- `point`  
+ *Ponto*  
  Contém o local atual do cursor em coordenadas do cliente.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O efeito que ocorreria se foram tentada uma queda no local especificado por `point`. Pode ser uma ou mais das seguintes opções:  
+ O efeito que ocorreria se foram tentada uma queda no local especificado por *ponto*. Pode ser uma ou mais das seguintes opções:  
   
 - `DROPEFFECT_NONE` Um descarte não será permitido.  
   
@@ -148,7 +148,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWnd`  
+ *pWnd*  
  Aponta para a janela que está deixando o cursor.  
   
 ### <a name="remarks"></a>Comentários  
@@ -168,20 +168,20 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWnd`  
+ *pWnd*  
  Aponta para a janela que o cursor está sobre.  
   
- `pDataObject`  
+ *pDataObject*  
  Aponta para o objeto de dados que contém os dados a ser removido.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Contém o estado das teclas modificadoras. Esta é uma combinação de qualquer número das seguintes opções: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, e **MK_RBUTTON**.  
   
- `point`  
+ *Ponto*  
  Contém o local atual do cursor em coordenadas do cliente.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O efeito que ocorreria se foram tentada uma queda no local especificado por `point`. Pode ser uma ou mais das seguintes opções:  
+ O efeito que ocorreria se foram tentada uma queda no local especificado por *ponto*. Pode ser uma ou mais das seguintes opções:  
   
 - `DROPEFFECT_NONE` Um descarte não será permitido.  
   
@@ -202,7 +202,7 @@ virtual DROPEFFECT OnDragOver(
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
 ##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
- Chamado pelo framework antes de chamar [OnDragEnter](#ondragenter) ou [OnDragOver](#ondragover) para determinar se `point` está em uma região de rolagem.  
+ Chamado pelo framework antes de chamar [OnDragEnter](#ondragenter) ou [OnDragOver](#ondragover) para determinar se *ponto* está em uma região de rolagem.  
   
 ```  
 virtual DROPEFFECT OnDragScroll(
@@ -212,17 +212,17 @@ virtual DROPEFFECT OnDragScroll(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWnd`  
+ *pWnd*  
  Aponta para a janela que o cursor está atualmente posicionado.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Contém o estado das teclas modificadoras. Esta é uma combinação de qualquer número das seguintes opções: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, e **MK_RBUTTON**.  
   
- `point`  
+ *Ponto*  
  Contém o local do cursor, em pixels, em relação à tela.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O efeito que ocorreria se foram tentada uma queda no local especificado por `point`. Pode ser uma ou mais das seguintes opções:  
+ O efeito que ocorreria se foram tentada uma queda no local especificado por *ponto*. Pode ser uma ou mais das seguintes opções:  
   
 - `DROPEFFECT_NONE` Um descarte não será permitido.  
   
@@ -249,13 +249,13 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWnd`  
+ *pWnd*  
  Aponta para a janela que o cursor está atualmente posicionado.  
   
- `pDataObject`  
+ *pDataObject*  
  Aponta para o objeto de dados que contém os dados a ser removido.  
   
- `dropEffect`  
+ *dropEffect*  
  O efeito que o usuário escolheu para a operação de remoção. Pode ser uma ou mais das seguintes opções:  
   
 - `DROPEFFECT_COPY` Uma operação de cópia deve ser executada.  
@@ -264,7 +264,7 @@ virtual BOOL OnDrop(
   
 - `DROPEFFECT_LINK` Um link de dados descartados para os dados originais seja estabelecido.  
   
- `point`  
+ *Ponto*  
  Contém o local do cursor, em pixels, em relação à tela.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -290,23 +290,23 @@ virtual DROPEFFECT OnDropEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWnd`  
+ *pWnd*  
  Aponta para a janela que o cursor está atualmente posicionado.  
   
- `pDataObject`  
+ *pDataObject*  
  Aponta para o objeto de dados que contém os dados a ser removido.  
   
- `dropDefault`  
+ *dropDefault*  
  O efeito que o usuário escolheu para a operação de soltar padrão com base no estado atual da chave. Ele pode ser `DROPEFFECT_NONE`. Efeitos de soltar são discutidos na seção comentários.  
   
- `dropList`  
+ *lista suspensa*  
  Uma lista dos efeitos drop que oferece suporte a origem de soltar. Soltar efeito valores podem ser combinados usando o OR bit a bit ( **&#124;**) operação. Efeitos de soltar são discutidos na seção comentários.  
   
- `point`  
+ *Ponto*  
  Contém o local do cursor, em pixels, em relação à tela.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O efeito de soltar que resultaram da tentativa de descarte no local especificado por `point`. Efeitos de soltar são discutidos na seção comentários.  
+ O efeito de soltar que resultaram da tentativa de descarte no local especificado por *ponto*. Efeitos de soltar são discutidos na seção comentários.  
   
 ### <a name="remarks"></a>Comentários  
  Primeiro, o framework chama essa função. Se ele não lidar com o posicionamento, o framework chama [OnDrop](#ondrop). Normalmente, você substituirá [OnDropEx](../../mfc/reference/cview-class.md#ondropex) na classe de exibição para dar suporte ao botão direito do mouse, arraste e solte. Normalmente, a classe de exibição [OnDrop](../../mfc/reference/cview-class.md#ondrop) é usado para tratar o caso de suporte para simple arrastar e soltar.  
@@ -335,7 +335,7 @@ BOOL Register(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWnd`  
+ *pWnd*  
  Aponta para a janela que deve ser registrado como um destino de soltar.  
   
 ### <a name="return-value"></a>Valor de retorno  

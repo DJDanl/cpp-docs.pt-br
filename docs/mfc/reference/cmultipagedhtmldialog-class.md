@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2be83e3791121bdea4d7f650f7d6801517df31ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a1a4ca77e4b7a2cda10d87bd657e73931a50612
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373886"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038000"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>Classe CMultiPageDHtmlDialog
 Uma caixa de diálogo de Multipágina exibe várias páginas HTML sequencialmente e trata os eventos de cada página.  
@@ -100,19 +100,19 @@ CMultiPageDHtmlDialog();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  A cadeia terminada em nulo que é o nome de um recurso de modelo de caixa de diálogo.  
   
- `szHtmlResID`  
+ *szHtmlResID*  
  A cadeia terminada em nulo que é o nome de um recurso HTML.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para o objeto de janela pai ou o proprietário (do tipo [CWnd](../../mfc/reference/cwnd-class.md)) ao qual pertence o objeto de caixa de diálogo. Se for **nulo**, janela de pai do objeto de caixa de diálogo é definida como a janela principal do aplicativo.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Contém o número de identificação de um recurso de modelo de caixa de diálogo.  
   
- `nHtmlResID`  
+ *nHtmlResID*  
  Contém o número de identificação de um recurso HTML.  
   
 ##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  

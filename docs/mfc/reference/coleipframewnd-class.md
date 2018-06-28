@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 466948653a5464a940a027e473e79c00dbf9a6ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9136f3c57358a71186b196a4223b401e6abad2a9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370374"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040019"
 ---
 # <a name="coleipframewnd-class"></a>Classe COleIPFrameWnd
 A base para a janela de edição do seu aplicativo no local.  
@@ -119,10 +119,10 @@ virtual void RepositionFrame(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpPosRect`  
+ *lpPosRect*  
  Ponteiro para um `RECT` estrutura ou um `CRect` objeto que contém o local do quadro coordenadas de posição atual da janela, em pixels, relativas à área do cliente.  
   
- `lpClipRect`  
+ *lpClipRect*  
  Ponteiro para um `RECT` estrutura ou um `CRect` objeto que contém o local do quadro coordenadas do retângulo de recorte atual da janela, em pixels, relativas à área do cliente.  
   
 ### <a name="remarks"></a>Comentários  

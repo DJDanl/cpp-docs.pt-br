@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27d2d4e95bffa3bd074ca1c6d4bf6d9c7e095a56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370901"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041247"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Classe CMFCRibbonGalleryMenuButton
 Implementa um botão de menu de faixa de opções que contém as galerias de faixa de opções.  
@@ -108,7 +108,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -132,22 +132,22 @@ CMFCRibbonGalleryMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `uiID`  
- A ID de comando do botão. Esse é o valor enviado no **WM_COMMAND** mensagem quando o usuário clica neste botão.  
+ *uiID*  
+ A ID de comando do botão. Este é o valor enviado na mensagem WM_COMMAND quando o usuário clica neste botão.  
   
- `iImage`  
- O índice da imagem a ser exibido com o botão de menu da Galeria. As imagens são armazenadas no `imagesPalette` parâmetro.  
+ *iImage*  
+ O índice da imagem a ser exibido com o botão de menu da Galeria. As imagens são armazenadas no *imagesPalette* parâmetro.  
   
- `lpszText`  
+ *lpszText*  
  O texto a ser exibido no botão de menu.  
   
- `imagesPalette`  
+ *imagesPalette*  
  Contém a lista de imagens a serem exibidas na Galeria.  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  A ID de recurso da lista de imagens para as imagens para exibir na Galeria.  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  Especifica a largura em pixels da imagem para exibir na Galeria.  
   
 ### <a name="remarks"></a>Comentários  

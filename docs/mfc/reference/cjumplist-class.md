@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22fa264f48d3c5b1b6b88db338bc3be45c3f398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc609fac36ccdbb9f84ce8f2b9b7c0ccfc5ccd3f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369044"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038497"
 ---
 # <a name="cjumplist-class"></a>Classe CJumpList
 A `CJumpList` é a lista de atalhos exibido quando você clique com botão direito em um ícone na barra de tarefas.  
@@ -131,19 +131,19 @@ BOOL AddDestination(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpcszCategoryName`  
+ *lpcszCategoryName*  
  Especifica um nome de categoria. Se a categoria especificada não existir, ele será criado.  
   
- `strDestinationPath`  
+ *strDestinationPath*  
  Especifica um caminho para o arquivo de destino.  
   
- `strCategoryName`  
+ *strCategoryName*  
  Especifica um nome de categoria. Se a categoria especificada não existir, ele será criado.  
   
- `pShellItem`  
+ *pShellItem*  
  Especifica um Item de Shell que representa o destino que está sendo adicionado.  
   
- `pShellLink`  
+ *pShellLink*  
  Especifica um Link de Shell que representa o destino que está sendo adicionado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -159,7 +159,7 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `category`  
+ *category*  
  Especifica um tipo de categoria conhecida. Pode ser uma `KDC_RECENT`, ou `KDC_KNOWN`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -182,22 +182,22 @@ BOOL AddTask(IShellLink* pShellLink);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `strTargetExecutablePath`  
+ *strTargetExecutablePath*  
  Especifica o caminho de destino da tarefa.  
   
- `strCommandLineArgs`  
+ *strCommandLineArgs*  
  Especifica argumentos de linha de comando do executável especificado pelo strTargetExecutablePath.  
   
- `strTitle`  
+ *strTitle*  
  Nome da tarefa que será exibido na lista de destino.  
   
- `strIconLocation`  
+ *strIconLocation*  
  Localização do ícone que será exibido na lista de destino, junto com o título.  
   
- `iIconIndex`  
+ *iIconIndex*  
  Índice do ícone.  
   
- `pShellLink`  
+ *pShellLink*  
  Link de shell que representa uma tarefa a ser adicionado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -213,7 +213,7 @@ BOOL AddTasks(IObjectArray* pObjectCollection);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pObjectCollection`  
+ *pObjectCollection*  
  Uma coleção de tarefas a ser adicionado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -239,7 +239,7 @@ CJumpList(BOOL bAutoCommit = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bAutoCommit`  
+ *bAutoCommit*  
  Se esse parâmetro for FALSE a lista não é confirmada automaticamente em destruidor.  
   
 ##  <a name="clearall"></a>  CJumpList::ClearAll  
@@ -330,7 +330,7 @@ void SetAppID(LPCTSTR strAppID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `strAppID`  
+ *strAppID*  
  Uma cadeia de caracteres que especifica a ID do modelo de usuário do aplicativo.  
   
 ## <a name="see-also"></a>Consulte também  

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df9109ef4613a2fb905fc5bef525f3553155417b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f59822504e317ee43ad7fb84345fa616fe72fae
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369184"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038426"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Classe CMFCRibbonStatusBarPane
 O `CMFCRibbonStatusBarPane` classe implementa um elemento de faixa de opções que você pode adicionar a uma barra de status da faixa de opções.  
@@ -136,31 +136,31 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nCmdID`  
+ [in] *nCmdID*  
  Especifica a ID de comando do painel.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Especifica a cadeia de caracteres de texto a ser exibido no painel.  
   
- [in] `bIsStatic`  
+ [in] *bIsStatic*  
  Se `TRUE`, o painel de status não pode ser realçado ou selecionado clicando nele.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Especifica um identificador para um ícone a ser exibido no painel.  
   
- [in] `lpszAlmostLargeText`  
+ [in] *lpszAlmostLargeText*  
  Especifica a cadeia de caracteres de texto mais longa que pode ser exibida pelo painel.  
   
- [in] `hBmpAnimationList`  
+ [in] *hBmpAnimationList*  
  Especifica um identificador para uma lista de imagens que é usado para a animação.  
   
- [in] `cxAnimation`  
+ [in] *cxAnimation*  
  Especifica a largura, em pixels, do ícone na lista de imagens que é usado para a animação.  
   
- [in] `clrTrnsp`  
+ [in] *clrTrnsp*  
  Especifica a cor transparente da imagens na lista de imagens que são usadas para animação.  
   
- [in] `uiAnimationListResID`  
+ [in] *uiAnimationListResID*  
  Especifica uma ID de recurso de uma lista de imagens que é usada para a animação.  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
@@ -217,7 +217,7 @@ virtual void OnDrawBorder(CDC*);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `CDC*`  
+ [in] *CDC**  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -229,7 +229,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -253,11 +253,11 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszAlmostLargeText`  
+ [in] *lpszAlmostLargeText*  
  Especifica a cadeia de caracteres mais longa que pode ser exibida no painel de barra de status sem truncamento.  
   
 ### <a name="remarks"></a>Comentários  
- A biblioteca calcula o tamanho do texto que `lpszAlmostLargeText` Especifica e redimensionar o painel de acordo. O texto será truncado se ele ainda não se ajustar no painel.  
+ A biblioteca calcula o tamanho do texto que *lpszAlmostLargeText* Especifica e redimensionar o painel de acordo. O texto será truncado se ele ainda não se ajustar no painel.  
   
 ##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList  
  Anexa uma lista de imagens que pode ser usada para animação no painel de barra de status.  
@@ -275,16 +275,16 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `hBmpAnimationList`  
+ [in] *hBmpAnimationList*  
  Especifica um identificador para uma lista de imagens.  
   
- [in] `cxAnimation`  
+ [in] *cxAnimation*  
  Especifica a largura, em pixels, do quadro na lista de imagens.  
   
- [in] `clrTransp`  
+ [in] *clrTransp*  
  Especifica a cor transparente da lista de imagens.  
   
- [in] `uiAnimationListResID`  
+ [in] *uiAnimationListResID*  
  Especifica a ID de recurso da lista de imagens.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -298,17 +298,17 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nAlign`  
+ [in] *nAlign*  
  Especifica o alinhamento de texto.  
   
 ### <a name="remarks"></a>Comentários  
- `nAlign` Pode ter um dos seguintes valores:  
+ *nAlign* pode ter um dos seguintes valores:  
   
 - `TA_LEFT`: à esquerda  
   
-- `TA_CENTER:` Alinhamento centralizado  
+- `TA_CENTER:` alinhamento centralizado  
   
-- `TA_RIGHT:` Alinhamento à direita  
+- `TA_RIGHT:` alinhamento à direita  
   
 ##  <a name="startanimation"></a>  CMFCRibbonStatusBarPane::StartAnimation  
  Inicia a animação que você atribui ao painel.  
@@ -320,10 +320,10 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nFrameDelay`  
+ [in] *nFrameDelay*  
  Especifica a taxa de quadros de animação, em milissegundos.  
   
- [in] `nDuration`  
+ [in] *nDuration*  
  Especifica quanto tempo a reproduzir a animação, em milissegundos. Use -1 para um loop infinito.  
   
 ### <a name="remarks"></a>Comentários  

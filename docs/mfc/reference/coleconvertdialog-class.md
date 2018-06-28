@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90453d4e8550038493545b691c978b59bda90fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dce62b489cce44070111586959796aadd04079b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370283"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042515"
 ---
 # <a name="coleconvertdialog-class"></a>Classe COleConvertDialog
 Para obter mais informações, consulte o [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) estrutura no SDK do Windows.  
@@ -110,10 +110,10 @@ explicit COleConvertDialog (
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pItem`  
+ *pItem*  
  Aponta para o item a ser convertido ou ativado.  
   
- `dwFlags`  
+ *dwFlags*  
  Sinalizador de criação, que contém qualquer número de valores a seguir combinadas que usam o bit a bit- ou o operador:  
   
 - **CF_SELECTCONVERTTO** Especifica que o botão de opção Converter será selecionado inicialmente quando a caixa de diálogo é chamada. Esse é o padrão.  
@@ -126,10 +126,10 @@ explicit COleConvertDialog (
   
 - **CF_SHOWHELPBUTTON** Especifica que o botão de Ajuda será exibido quando a caixa de diálogo é chamada.  
   
- `pClassID`  
- Aponta para o CLSID do item a ser convertido ou ativado. Se **nulo**, o **CLSID** associado `pItem` será usado.  
+ *pClassID*  
+ Aponta para o CLSID do item a ser convertido ou ativado. Se **nulo**, o **CLSID** associado *pItem* será usado.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Aponta para o objeto de janela pai ou o proprietário (do tipo `CWnd`) ao qual pertence o objeto de caixa de diálogo. Se for **nulo**, a janela pai da caixa de diálogo é definida como a janela principal do aplicativo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -145,7 +145,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pItem`  
+ *pItem*  
  Aponta para o item a ser convertido ou ativado. Não pode ser **nulo**.  
   
 ### <a name="return-value"></a>Valor de retorno  

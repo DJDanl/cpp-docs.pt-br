@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3352841b1b495d1718ffa6be034239ecd7e50c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366636"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042076"
 ---
 # <a name="cmfcpropertypage-class"></a>Classe CMFCPropertyPage
 O `CMFCPropertyPage` classe oferece suporte a exibição de menus pop-up em uma página de propriedades.  
@@ -88,13 +88,13 @@ CMFCPropertyPage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIDTemplate`  
+ *nIDTemplate*  
  ID do recurso de modelo para esta página.  
   
- `nIDCaption`  
+ *nIDCaption*  
  ID do recurso do rótulo para colocar na guia para esta página. Se for 0, o nome é obtido do modelo de caixa de diálogo para essa página. O valor padrão é 0.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Aponta para o nome do modelo desta página. Não pode ser `NULL`.  
   
 ### <a name="return-value"></a>Valor de retorno  

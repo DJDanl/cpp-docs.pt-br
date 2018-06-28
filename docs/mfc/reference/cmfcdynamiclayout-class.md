@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76faab221b5e36f9795595d07cd13d0bbf1df200
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89f82f03a4c6a9faf2ddf3e8c3f2a0b7b3fd1d2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370715"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042359"
 ---
 # <a name="cmfcdynamiclayout-class"></a>Classe CMFCDynamicLayout
 Especifica como os controles em uma janela são movidos e redimensionados uma vez que o usuário redimensionar a janela.  
@@ -105,16 +105,16 @@ BOOL AddItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `hwnd`  
+ *HWND*  
  O identificador para a janela para adicionar.  
   
- `nID`  
+ *nID*  
  A identificação do controle filho.  
   
- `moveSettings`  
+ *moveSettings*  
  Uma estrutura que descreve como o controle deve ser movido como as alterações de tamanho de janela.  
   
- `sizeSettings`  
+ *sizeSettings*  
  Uma estrutura que descreve como o controle deve ser redimensionado como as alterações de tamanho de janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -141,7 +141,7 @@ BOOL Create(CWnd* pHostWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- pHostWnd  
+ *pHostWnd*  
  Um ponteiro para a janela do host.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -183,7 +183,7 @@ void GetHostWndRect(CRect& rect,);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `rect`  
+ *Rect*  
  Depois que a função retornar, este parâmetro contém o retângulo delimitador da área de layout. Este é um parâmetro de saída; o valor de entrada é substituído.  
   
 ### <a name="remarks"></a>Comentários  
@@ -196,7 +196,7 @@ BOOL HasItem(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `hwnd`  
+ *HWND*  
  O identificador de janela para o controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -226,13 +226,13 @@ static BOOL LoadResource(CWnd* pHostWnd,
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pHostWnd`  
+ *pHostWnd*  
  Um ponteiro para a janela do host.  
   
- `lpResource`  
+ *lpResource*  
  Um ponteiro para o buffer que contém o recurso AFX_DIALOG_LAYOUT.  
   
- `dwSize`  
+ *dwSize*  
  O tamanho do buffer em bytes.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -248,7 +248,7 @@ static MoveSettings MoveHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nRatio`  
+ *nRatio*  
  Define como uma porcentagem quanto um controle filho é movido horizontalmente quando o usuário o redimensiona a janela do host.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -264,10 +264,10 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nXRatio`  
+ *nXRatio*  
  Define como uma porcentagem quanto um controle filho é movido horizontalmente quando o usuário o redimensiona a janela do host.  
   
- `nYRatio`  
+ *nYRatio*  
  Define como uma porcentagem quanto um controle filho é movido verticalmente quando o usuário o redimensiona a janela do host.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -336,7 +336,7 @@ static MoveSettings MoveVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nRatio`  
+ *nRatio*  
  Define como uma porcentagem quanto um controle filho é movido verticalmente quando o usuário o redimensiona a janela do host.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -352,7 +352,7 @@ void SetMinSize(const CSize& size);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `size`  
+ *size*  
  O tamanho desejado abaixo do qual o layout não é ajustado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -366,7 +366,7 @@ static SizeSettings SizeHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nRatio`  
+ *nRatio*  
  Define como uma porcentagem quanto um controle filho é redimensionado horizontalmente quando o usuário o redimensiona a janela do host.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -382,10 +382,10 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nXRatio`  
+ *nXRatio*  
  Define como uma porcentagem quanto um controle filho é redimensionado horizontalmente quando o usuário o redimensiona a janela do host.  
   
- `nYRatio`  
+ *nYRatio*  
  Define como uma porcentagem quanto um controle filho é redimensionado verticalmente quando o usuário o redimensiona a janela do host.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -453,7 +453,7 @@ static SizeSettings SizeVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nRatio`  
+ *nRatio*  
  Define como uma porcentagem quanto um controle filho é redimensionado verticalmente quando o usuário o redimensiona a janela do host.  
   
 ### <a name="return-value"></a>Valor de retorno  

@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 048bb65ae7e8c82df0d4003916da5d7a36a9b569
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0dbb6df911f0594b106f7b069a97b1fd6590c737
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378675"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042258"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Classe CMFCRibbonBaseElement
 O `CMFCRibbonBaseElement` classe é a classe base para todos os elementos que você pode adicionar a um [barra da faixa de opções](../../mfc/reference/cmfcribbonbar-class.md). Exemplos de elementos de faixa de opções são a faixa de opções como botões, caixas de seleção de faixa de opções e caixas de combinação de faixa de opções.  
@@ -423,7 +423,7 @@ virtual void AddToKeyList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `arElems`  
+ [in] *arElems*  
  Referência a um [CArray](../../mfc/reference/carray-class.md) de dicas de tecla.  
   
 ### <a name="remarks"></a>Comentários  
@@ -439,10 +439,10 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWndListBox`  
+ [in] *pWndListBox*  
  Ponteiro para uma caixa de listagem de comandos.  
   
- [in] `bDeep`  
+ [in] *bDeep*  
  Este parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -529,7 +529,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `src`  
+ [in] *src*  
  A fonte [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) objeto.  
   
 ### <a name="remarks"></a>Comentários  
@@ -555,19 +555,19 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo.  
   
- [in] `type`  
+ [in] *tipo*  
  Um tipo de imagem enumerado valor. Consulte a seção de comentários para obter uma lista de valores possíveis.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  O retângulo da imagem.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, esse método não fará nada. Substitua este método em uma classe derivada para desenhar a imagem para o elemento de faixa de opções.  
   
- A tabela a seguir lista os possíveis valores para o `type` parâmetro:  
+ A tabela a seguir lista os possíveis valores para o *tipo* parâmetro:  
   
  `RibbonImageLarge`  
  Tamanho da imagem grande 32 x 32 pixels.  
@@ -583,11 +583,11 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pElement`  
+ [in] *pElement*  
  Ponteiro para um elemento de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o elemento de faixa de opções se `pElement` aponta para o objeto atual; caso contrário, `NULL`.  
+ Um ponteiro para o elemento de faixa de opções se *pElement* aponta para o objeto atual; caso contrário, `NULL`.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -599,7 +599,7 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwData`  
+ [in] *dwData*  
  Os dados associados a um elemento de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -615,7 +615,7 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  ID de comando para um elemento de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -631,7 +631,7 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pOriginal`  
+ [in] *pOriginal*  
  Ponteiro para um elemento de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -648,7 +648,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -698,7 +698,7 @@ virtual void GetElements(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in, out] `arElements`  
+ [out no] *arElements*  
  Uma matriz de elementos de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -713,10 +713,10 @@ virtual void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  ID de comando de um elemento de faixa de opções.  
   
- [in] `arElements`  
+ [in] *arElements*  
  Uma matriz de elementos de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -761,7 +761,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -787,10 +787,10 @@ virtual CRect GetKeyTipRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo.  
   
- [in] `bIsMenu`  
+ [in] *bIsMenu*  
  `TRUE` Se o elemento de faixa de opções exibe um menu pop-up. Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -807,7 +807,7 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -965,7 +965,7 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -984,7 +984,7 @@ virtual CSize GetSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1083,7 +1083,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  Este parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1126,7 +1126,7 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nDelay`  
+ [in] *nDelay*  
  Este parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1378,7 +1378,7 @@ BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bWithDelay`  
+ [in] *bWithDelay*  
  `TRUE` Para adicionar a notificação de comando para a fila de mensagens da janela do pai. `FALSE` para enviar a mensagem imediatamente para a janela pai.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1394,7 +1394,7 @@ virtual void NotifyHighlightListItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  O índice do elemento de faixa de opções na lista.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1407,7 +1407,7 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `qat`  
+ [in] *qat*  
  A barra de ferramentas de acesso rápido.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1423,7 +1423,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Este parâmetro não é usado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1450,7 +1450,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Este parâmetro não é usado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1465,10 +1465,10 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pPanelMenuBar`  
+ [in] *pPanelMenuBar*  
  Este parâmetro não é usado.  
   
- [in] `pHot`  
+ [in] *pHot*  
  Este parâmetro não é usado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1482,7 +1482,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para um contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1499,13 +1499,13 @@ virtual void OnDrawKeyTip(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Retângulo de limite para o keytip.  
   
- [in] `bIsMenu`  
+ [in] *bIsMenu*  
  `TRUE` Se o keytip for para um botão de menu pop-up. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1520,10 +1520,10 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Retângulo da imagem de menu.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1545,22 +1545,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Ponteiro para um contexto de dispositivo para o elemento de faixa de opções.  
   
- [in] `strText`  
+ [in] *strText*  
  O texto de exibição.  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  Distância, em pixels, do lado esquerdo da caixa de listagem para o texto de exibição.  
   
- [in] `rect`  
+ [in] *rect*  
  O retângulo de exibição para o elemento de faixa de opções.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  Este parâmetro não é usado.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Este parâmetro não é usado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1574,7 +1574,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bIsMenuKey`  
+ [in] *bIsMenuKey*  
  `TRUE` Se o keytip exibe um menu pop-up. Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1590,7 +1590,7 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nUpperChar`  
+ [in] *nUpperChar*  
  Este parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1607,7 +1607,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nChar`  
+ [in] *nChar*  
  Este parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1624,7 +1624,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  Este parâmetro não é usado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1648,7 +1648,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bShow`  
+ [in] *bMostrar*  
  Este parâmetro não é usado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1672,7 +1672,7 @@ void PostMenuCommand(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmdId`  
+ [in] *uiCmdId*  
  O parâmetro não for usado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1698,10 +1698,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pParent`  
+ *pParent*  
  A janela pai do elemento de faixa de opções.  
   
- `data`  
+ *data*  
  Os dados de acessibilidade para o elemento de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1718,13 +1718,13 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bCompactMode`  
+ [in] *bCompactMode*  
  `TRUE` para reduzir o tamanho de exibição do elemento de faixa de opções. `FALSE` para aumentar o tamanho de exibição do elemento de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
  A tabela a seguir resume a lógica para este método.  
   
-|`bCompactMode`|Tamanho atual do elemento de faixa de opções|Novo tamanho do elemento de faixa de opções|  
+|*bCompactMode*|Tamanho atual do elemento de faixa de opções|Novo tamanho do elemento de faixa de opções|  
 |--------------------|---------------------------------|-----------------------------|  
 |`TRUE`|Compact|Nenhuma alteração.|  
 |`TRUE`|Intermediários|Compacte se for possível.|  
@@ -1739,7 +1739,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwData`  
+ [in] *dwData*  
  O valor dos dados.  
   
 ##  <a name="setdefaultmenulook"></a>  CMFCRibbonBaseElement::SetDefaultMenuLook  
@@ -1750,7 +1750,7 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bIsDefaultMenuLook`  
+ [in] *bIsDefaultMenuLook*  
  `TRUE` Para definir o elemento de faixa de opções apareça como um comando de pop-up. Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1763,7 +1763,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszText`  
+ [in] *lpszText*  
  A descrição para o elemento de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1777,7 +1777,7 @@ virtual void SetID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nID`  
+ [in] *nID*  
  A ID de comando.  
   
 ##  <a name="setinitialmode"></a>  CMFCRibbonBaseElement::SetInitialMode  
@@ -1788,7 +1788,7 @@ virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bOneRow`  
+ [in] *bOneRow*  
  `TRUE` para limitar o tamanho de exibição para o elemento de faixa de opções compactar ou intermediário; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1804,10 +1804,10 @@ virtual void SetKeys(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszKeys`  
+ [in] *lpszKeys*  
  Keytip para o elemento de faixa de opções.  
   
- [in] `lpszMenuKeys`  
+ [in] *lpszMenuKeys*  
  Keytip do menu pop-up do elemento de faixa de opções.  
   
 ##  <a name="setoriginal"></a>  CMFCRibbonBaseElement::SetOriginal  
@@ -1818,7 +1818,7 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pOriginal`  
+ [in] *pOriginal*  
  Ponteiro para um elemento de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1832,7 +1832,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pParent`  
+ [in] *pParent*  
  Ponteiro para uma categoria de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1846,7 +1846,7 @@ virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pMenuBar`  
+ [in] *pMenuBar*  
  O menu pai.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1859,7 +1859,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  Ponteiro para a barra de faixa de opções do pai.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1872,7 +1872,7 @@ void SetRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `rect`  
+ [in] *rect*  
  As dimensões do retângulo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1885,11 +1885,11 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszText`  
+ [in] *lpszText*  
  O texto e keytip para o elemento de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
- Para definir o keytip para o elemento de faixa de opções, acrescente a sequência de escape de nova linha seguida pelos caracteres keytip para `lpszText`.  
+ Para definir o keytip para o elemento de faixa de opções, acrescente a sequência de escape de nova linha seguida pelos caracteres keytip para *lpszText*.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1910,7 +1910,7 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` Para exibir o texto da direita; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1923,7 +1923,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszText`  
+ [in] *lpszText*  
  O texto de dica de ferramenta.  
   
 ##  <a name="setvisible"></a>  CMFCRibbonBaseElement::SetVisible  
@@ -1934,7 +1934,7 @@ void SetVisible(BOOL bIsVisible);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bIsVisible`  
+ [in] *bIsVisible*  
  `TRUE` Para exibir o elemento de faixa de opções. `FALSE` para ocultar o elemento de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1959,10 +1959,10 @@ virtual BOOL StretchToWholeRow(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Este parâmetro não é usado.  
   
- [in] `nHeight`  
+ [in] *nHeight*  
  A altura da linha.  
   
 ### <a name="return-value"></a>Valor de retorno  

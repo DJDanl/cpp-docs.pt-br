@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dcbd5ea33b50e66d1c9e858669a3174042a19e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 105c933ee36c9bbeb634d85963d9254f3b68ebe4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367663"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041007"
 ---
 # <a name="cmenutearoffmanager-class"></a>Classe CMenuTearOffManager
 Gerencia destacável menus. Um menu destacável é um menu na barra de menus. O usuário pode remover um menu destacável da barra de menus, fazendo com que o menu destacável float.  
@@ -99,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiTearOffBarID`  
- [in] `strText`  
+ [in] *uiTearOffBarID*  
+ [in] *strText*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -136,20 +136,20 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszRegEntry`  
+ [in] *lpszRegEntry*  
  Uma cadeia de caracteres que contém o caminho de uma entrada de registro. Os aplicativos armazena as configurações de barras destacável na entrada do registro.  
   
- [in] `uiTearOffMenuFirst`  
+ [in] *uiTearOffMenuFirst*  
  A primeira ID de menu para um menu destacável.  
   
- [in] `uiTearOffMenuLast`  
+ [in] *uiTearOffMenuLast*  
  A última ID de menu para um menu destacável.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- O intervalo de IDs de menu do `uiTearOffMenuFirst` para `uiTearOffMenuLast` deve ser um intervalo contínuo. O intervalo define o número de menus destacáveis que podem aparecer ao mesmo tempo no aplicativo.  
+ O intervalo de IDs de menu do *uiTearOffMenuFirst* para *uiTearOffMenuLast* deve ser um intervalo contínuo. O intervalo define o número de menus destacáveis que podem aparecer ao mesmo tempo no aplicativo.  
   
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 
@@ -159,7 +159,7 @@ BOOL IsDynamicID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiID`  
+ [in] *uiID*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -173,7 +173,7 @@ UINT Parse(CString& str);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `str`  
+ [in] *str*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -187,7 +187,7 @@ void Reset(HMENU hmenu);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `hmenu`  
+ [in] *hmenu*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -201,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmdId`  
- [in] `bUse`  
+ [in] *uiCmdId*  
+ [in] *bUse*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -214,7 +214,7 @@ void SetupTearOffMenus(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `hMenu`  
+ [in] *hMenu*  
   
 ### <a name="remarks"></a>Comentários  
   

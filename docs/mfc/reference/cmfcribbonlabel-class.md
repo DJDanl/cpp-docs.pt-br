@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b2d78bb3f1ffaefa67a062c6498c195d46336f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370116"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042489"
 ---
 # <a name="cmfcribbonlabel-class"></a>Classe CMFCRibbonLabel
 Implementa um rótulo de texto não clicável para uma faixa de opções.  
@@ -80,10 +80,10 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszText`  
+ [in] *lpszText*  
  O texto a ser exibido no rótulo.  
   
- [in] `bIsMultiLine`  
+ [in] *bIsMultiLine*  
  `TRUE` para especificar que o rótulo é um rótulo de várias linha; Caso contrário, `FALSE`.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
@@ -96,14 +96,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pParent`  
+ [in] *pParent*  
  Representa a janela pai do rótulo da faixa de opções atual.  
   
- [out] `data`  
+ [out] *dados*  
  Um objeto do tipo `CAccessibilityData` que é preenchida com os dados de acessibilidade do rótulo da faixa de opções atual.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o `data` parâmetro estava com êxito preenchida com os dados de acessibilidade do rótulo da faixa de opções atual; caso contrário, `FALSE`.  
+ `TRUE` Se o *dados* parâmetro estava com êxito preenchida com os dados de acessibilidade do rótulo da faixa de opções atual; caso contrário, `FALSE`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6c5501159cfdb46107b4fef34637195d52f465
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542c34fc02eca1f090072f49b9688d3edd4d78e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368001"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040669"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>Classe CMFCRibbonCustomizePropertyPage
 Implementa uma página personalizada para o **personalizar** caixa de diálogo em aplicativos com base na faixa de opções.  
@@ -98,11 +98,11 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `lpszName`|Especifica o nome da categoria personalizada.|  
-|[in] `lstIDS`|Contém IDs de comando de faixa de opções a ser mostrado na categoria personalizada.|  
+|[in] *lpszName*|Especifica o nome da categoria personalizada.|  
+|[in] *lstIDS*|Contém IDs de comando de faixa de opções a ser mostrado na categoria personalizada.|  
   
 ### <a name="remarks"></a>Comentários  
- Este método adiciona uma categoria chamada `lpszName` para o **comandos** caixa de combinação. Quando o usuário seleciona a categoria, os comandos especificados em `lstIDS` aparecem na lista de comando.  
+ Este método adiciona uma categoria chamada *lpszName* para o **comandos** caixa de combinação. Quando o usuário seleciona a categoria, os comandos especificados em *lstIDS* aparecem na lista de comando.  
   
 ##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  Constrói um objeto `CMFCRibbonCustomizePropertyPage`.  
@@ -112,7 +112,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  Um ponteiro para um controle de faixa de opções para o qual as opções para personalizar.  
   
 ##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  

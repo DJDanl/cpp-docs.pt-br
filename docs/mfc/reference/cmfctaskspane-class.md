@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c37fd1b9b9b61bed78811c3b6b57325041105b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10f183ed498fde15166a6e8ee7e7d10cfe9f60d7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378609"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040929"
 ---
 # <a name="cmfctaskspane-class"></a>Classe CMFCTasksPane
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -399,19 +399,19 @@ int AddGroup(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Especifica o índice de página com base em zero.  
   
- [in] `lpszGroupName`  
+ [in] *lpszGroupName*  
  Especifica o nome do grupo.  
   
- [in] `bBottomLocation`  
+ [in] *bBottomLocation*  
  `TRUE` para criar o grupo na parte inferior do controle do painel de tarefas; Caso contrário, `FALSE`.  
   
- [in] `bSpecial`  
+ [in] *bOpções especiais*  
  `TRUE` para marcar esse grupo como uma *especial* grupo; caso contrário, `FALSE`. Para obter mais informações sobre grupos especiais, consulte a seção comentários de `CMFCTasksPane`.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Especifica o ícone para exibir a legenda do grupo.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -434,20 +434,20 @@ int AddLabel(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice do grupo em que o rótulo é adicionado.  
   
- [in] `lpszLabelName`  
+ [in] *lpszLabelName*  
  Especifica o nome do rótulo.  
   
- [in] `nTaskIcon`  
+ [in] *nTaskIcon*  
  Especifica o ícone será exibido ao lado do rótulo. A estrutura armazena ícones em uma lista de imagens. Esse parâmetro é um índice na lista.  
   
- [in] `bIsBold`  
+ [in] *bIsBold*  
  `TRUE` Para exibir o rótulo em negrito; Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O índice de base zero do grupo onde o rótulo foi adicionado, ou -1 se o grupo especificado por `nGroup` não existe.  
+ O índice de base zero do grupo onde o rótulo foi adicionado, ou -1 se o grupo especificado por *agrupar* não existe.  
   
 ### <a name="remarks"></a>Comentários  
  A estrutura trata tarefas e rótulos de maneira diferente. Quando um usuário clica em uma tarefa, o framework executa um comando. Quando um usuário clica em um rótulo, nenhum comando é executado. Para obter mais informações, consulte [CMFCTasksPane::AddTask](#addtask).  
@@ -462,14 +462,14 @@ int AddMRUFilesList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice de um grupo. Este método adiciona a lista de arquivos MRU ao grupo especificado por esse parâmetro.  
   
- [in] `nMaxFiles`  
+ [in] *nMaxFiles*  
  Especifica o número de arquivos a serem exibidos na lista de arquivos MRU.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O índice de base zero do grupo onde a lista de arquivos MRU foi adicionada, ou -1 se o grupo especificado por `nGroup` não existe.  
+ O índice de base zero do grupo onde a lista de arquivos MRU foi adicionada, ou -1 se o grupo especificado por *agrupar* não existe.  
   
 ##  <a name="addpage"></a>  CMFCTasksPane::AddPage  
  Adiciona uma página para o painel de tarefas.  
@@ -479,7 +479,7 @@ int AddPage(LPCTSTR lpszPageLabel);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszPageLabel`  
+ [in] *lpszPageLabel*  
  Especifica o rótulo para a página.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -493,7 +493,7 @@ int AddSeparator(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -512,23 +512,23 @@ int AddTask(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice de grupo em que a tarefa é adicionada.  
   
- [in] `lpszTaskName`  
+ [in] *lpszTaskName*  
  Especifica o nome da tarefa.  
   
- [in] `nTaskIcon`  
+ [in] *nTaskIcon*  
  Especifica o ícone será exibido ao lado da tarefa. A estrutura armazena ícones em uma lista de imagens. Esse parâmetro é um índice na lista.  
   
- [in] `uiCommandID`  
- Especifica a ID de comando do comando ser executado quando o usuário clica na tarefa. A tarefa será tratada como um rótulo se `uiCommandID` é 0.  
+ [in] *uiCommandID*  
+ Especifica a ID de comando do comando ser executado quando o usuário clica na tarefa. A tarefa será tratada como um rótulo se *uiCommandID* é 0.  
   
- [in] `dwUserData`  
+ [in] *dwUserData*  
  Especifica os dados definidos pelo usuário a ser associado com a tarefa.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O índice de base zero do grupo em que a tarefa foi adicionada, ou -1 se o grupo especificado por `nGroup` não existe.  
+ O índice de base zero do grupo em que a tarefa foi adicionada, ou -1 se o grupo especificado por *agrupar* não existe.  
   
 ##  <a name="addwindow"></a>  CMFCTasksPane::AddWindow  
  Adiciona uma janela filho ao painel de tarefas.  
@@ -543,23 +543,23 @@ int AddWindow(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice de grupo em que a janela é adicionada.  
   
- [in] `hwndTask`  
+ [in] *hwndTask*  
  Especifica o identificador da janela para adicionar.  
   
- [in] `nWndHeight`  
+ [in] *nWndHeight*  
  Especifica a altura da janela.  
   
- [in] `bAutoDestroyWindow`  
+ [in] *bAutoDestroyWindow*  
  `TRUE` para destruir a janela quando a tarefa é removida; Caso contrário, `FALSE`.  
   
- [in] `dwUserData`  
+ [in] *dwUserData*  
  Especifica os dados definidos pelo usuário associados à tarefa.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O índice de base zero do grupo em que a janela foi adicionada, ou -1 se o grupo especificado por `nGroup` não existe.  
+ O índice de base zero do grupo em que a janela foi adicionada, ou -1 se o grupo especificado por *agrupar* não existe.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para adicionar um controle a um painel de tarefas. Por exemplo, você pode adicionar um controle de edição que funciona como uma barra de pesquisa.  
@@ -584,8 +584,8 @@ void CollapseAllGroups(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bCollapse`  
- [in] `nPageIdx`  
+ [in] *bCollapse*  
+ [in] *nPageIdx*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -604,13 +604,13 @@ BOOL CollapseGroup(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pGroup`  
+ [in] *pGroup*  
  Especifica o grupo para recolher.  
   
- [in] `bCollapse`  
+ [in] *bCollapse*  
  `TRUE` Para recolher o grupo; `FALSE` para expandir o grupo.  
   
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice de base zero do grupo para recolher na lista interna de grupos.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -627,7 +627,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `rectInitial`  
+ [in] *rectInitial*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -656,7 +656,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar a animação que ocorre quando um grupo de tarefas expande ou recolhe; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -670,7 +670,7 @@ void EnableGroupCollapse(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Se os usuários podem recolher grupos de tarefas; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -684,7 +684,7 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar os menus suspensos no **próximo** e **anterior** botões de navegação; caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -706,16 +706,16 @@ void EnableNavigationToolbar(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar a barra de navegação. Caso contrário, `FALSE`.  
   
- [in] `uiToolbarBmpRes`  
+ [in] *uiToolbarBmpRes*  
  Especifica a ID de recurso do bitmap que contém as imagens a serem exibidas na barra de ferramentas.  
   
- [in] `sizeToolbarImage`  
+ [in] *sizeToolbarImage*  
  Especifica o tamanho de uma imagem da barra de ferramentas.  
   
- [in] `sizeToolbarButton`  
+ [in] *sizeToolbarButton*  
  Especifica o tamanho de um botão de barra de ferramentas.  
   
 ### <a name="remarks"></a>Comentários  
@@ -731,7 +731,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -743,7 +743,7 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para exibir os botões de rolagem no painel de tarefas em vez de uma barra de rolagem; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -757,7 +757,7 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` quebrar o texto em rótulos que aparecem no painel de tarefas; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -771,7 +771,7 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` para incluir as tarefas no painel de tarefas; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -840,10 +840,10 @@ BOOL GetGroupLocation(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pGroup`  
+ [in] *pGroup*  
  Especifica o grupo de tarefa cujo local é recuperado.  
   
- [out] `nGroup`  
+ [out] *agrupar*  
  Contém o índice de base zero do grupo de tarefas.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -880,7 +880,7 @@ void GetNextPages(CStringList& lstNextPages) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lstNextPages`  
+ [in] *lstNextPages*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -894,14 +894,14 @@ BOOL GetPageByGroup(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice de base zero do grupo de tarefas.  
   
- [out] `nPage`  
+ [out] *nPage*  
  Contém o índice de página para o grupo especificado. Se o grupo de tarefas contém apenas uma página padrão, o valor retornado será 0.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o grupo `nGroup` existir; caso contrário, `FALSE`.  
+ `TRUE` Se o grupo *agrupar* existir; caso contrário, `FALSE`.  
   
 ##  <a name="getpagescount"></a>  CMFCTasksPane::GetPagesCount  
  Retorna o número de páginas.  
@@ -921,7 +921,7 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lstPrevPages`  
+ [in] *lstPrevPages*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -933,7 +933,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nBar`  
+ [in] *nBar*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -949,11 +949,11 @@ CMFCTasksPaneTask* GetTask(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice de base zero do grupo que contém a tarefa.  
   
- [in] `nTask`  
- Especifica o índice de base zero da tarefa na lista especificada por `nGroup`.  
+ [in] *nTask*  
+ Especifica o índice de base zero da tarefa na lista especificada por *agrupar*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A tarefa no índice especificado.  
@@ -966,11 +966,11 @@ int GetTaskCount(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice do grupo de tarefas.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O número de tarefas no grupo especificado, ou 0 se `nGroup` é inválido.  
+ O número de tarefas no grupo especificado, ou 0 se *agrupar* é inválido.  
   
 ##  <a name="gettaskgroup"></a>  CMFCTasksPane::GetTaskGroup  
  Retorna um grupo de tarefas para um índice de grupo especificado.  
@@ -980,7 +980,7 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice de base zero do grupo para recuperar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1007,26 +1007,26 @@ BOOL GetTaskLocation(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCommandID`  
+ [in] *uiCommandID*  
  Especifica a ID de comando da tarefa de localizar.  
   
- [out] `nGroup`  
+ [out] *agrupar*  
  Contém o índice de grupo da tarefa.  
   
- [out] `nTask`  
+ [out] *nTask*  
  Contém o índice da tarefa no grupo de tarefas.  
   
- [in] `hwndTask`  
+ [in] *hwndTask*  
  Especifica a janela associada à tarefa.  
   
- [in] `pTask`  
+ [in] *pTask*  
  Especifica a tarefa de localizar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` Se o local da tarefa foi encontrado; `FALSE` se a tarefa especificada não existe.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método retorna o índice de grupo e o índice de tarefa para a tarefa especificada. Se o método retornar `FALSE`, `nGroup` e `nTask` são definidos como -1.  
+ Esse método retorna o índice de grupo e o índice de tarefa para a tarefa especificada. Se o método retornar `FALSE`, *agrupar* e *nTask* são definidos como -1.  
   
 ##  <a name="gettaskshorzoffset"></a>  CMFCTasksPane::GetTasksHorzOffset  
  Retorna o deslocamento horizontal de tarefas.  
@@ -1199,9 +1199,9 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszProfileName`  
- [in] `nIndex`  
- [in] `uiID`  
+ [in] *lpszProfileName*  
+ [in] *nIndex*  
+ [in] *uiID*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -1238,20 +1238,20 @@ virtual void OnClickTask(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroupNumber`  
+ [in] *nGroupNumber*  
  Especifica o índice de base zero do grupo que contém a tarefa clicada.  
   
- [in] `nTaskNumber`  
+ [in] *nTaskNumber*  
  Especifica o índice com base em zero da tarefa clicado.  
   
- [in] `uiCommandID`  
+ [in] *uiCommandID*  
  Especifica a ID de comando associada à tarefa.  
   
- [in] `dwUserData`  
+ [in] *dwUserData*  
  Contém dados definidos pelo usuário associados à tarefa clicada.  
   
 ### <a name="remarks"></a>Comentários  
- O framework chama este método quando um usuário clica em uma tarefa. Por padrão, o framework verifica a ID de comando associada à tarefa clicada e, se não for zero, envia o `WM_COMMAND` mensagem para o proprietário do controle de painel de tarefas.  
+ O framework chama este método quando um usuário clica em uma tarefa. Por padrão, o framework verifica a ID de comando associada à tarefa clicada e, se não for zero, envia a mensagem WM_COMMAND para o proprietário do controle de painel de tarefas.  
   
  Substitua este método em uma classe derivada para executar código personalizado quando uma tarefa é clicada.  
   
@@ -1310,8 +1310,8 @@ virtual void OnPressOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pbtn`  
- [in] `pWndOwner`  
+ [in] *pbtn*  
+ [in] *pWndOwner*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1323,7 +1323,7 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lVal`  
+ [in] *lVal*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -1339,8 +1339,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in] *pTarget*  
+ [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1352,7 +1352,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -1366,7 +1366,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bRedraw`  
+ [in] *bRedraw*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1378,11 +1378,11 @@ void RemoveAllGroups(int nPageIdx = 0);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Especifica o índice com base em zero da página.  
   
 ### <a name="remarks"></a>Comentários  
- Remove todos os grupos na página especificada pelo `nPageIdx`, ou todos os grupos se houver apenas uma página padrão.  
+ Remove todos os grupos na página especificada por *nPageIdx*, ou todos os grupos se houver apenas uma página padrão.  
   
 ##  <a name="removeallpages"></a>  CMFCTasksPane::RemoveAllPages  
  Remove todas as páginas de painel de tarefas, exceto a (primeira) página padrão.  
@@ -1399,7 +1399,7 @@ void RemoveAllTasks(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice de base zero do grupo.  
   
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup  
@@ -1410,7 +1410,7 @@ void RemoveGroup(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice de base zero do grupo a ser removido.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1426,7 +1426,7 @@ void RemovePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Especifica o índice com base em zero da página a ser removido.  
   
 ##  <a name="removetask"></a>  CMFCTasksPane::RemoveTask  
@@ -1440,17 +1440,17 @@ BOOL RemoveTask(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice de base zero do grupo de tarefas que contém a tarefa a ser removido.  
   
- [in] `nTask`  
+ [in] *nTask*  
  Especifica o índice com base em zero da tarefa para remover.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` redesenhar o painel de tarefas; Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se a função for bem-sucedida; `FALSE` se `nGroup` ou `nTask` é inválido.  
+ `TRUE` Se a função for bem-sucedida; `FALSE` se *agrupar* ou *nTask* é inválido.  
   
 ##  <a name="savestate"></a>  CMFCTasksPane::SaveState  
 
@@ -1463,9 +1463,9 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszProfileName`  
- [in] `nIndex`  
- [in] `uiID`  
+ [in] *lpszProfileName*  
+ [in] *nIndex*  
+ [in] *uiID*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -1479,7 +1479,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1491,11 +1491,11 @@ void SetActivePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Especifica o índice com base em zero da página para exibir.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método declara se o `nPageIdx` é inválido.  
+ Esse método declara se o *nPageIdx* é inválido.  
   
 ##  <a name="setcaption"></a>  CMFCTasksPane::SetCaption  
  Define o nome de legenda de um painel de tarefas.  
@@ -1505,7 +1505,7 @@ void SetCaption(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszName`  
+ [in] *lpszName*  
  Especifica o nome da legenda.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1519,13 +1519,13 @@ void SetGroupCaptionHeight(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `n`  
+ [in] *n*  
  Especifica a altura da legenda.  
   
 ### <a name="remarks"></a>Comentários  
  Chame este método para personalizar as margens de elementos do painel de tarefas.  
   
- Se `n` é -1, a estrutura determina o valor da margem usando o Gerenciador de visual ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`). A altura da legenda padrão é 25 pixels.  
+ Se *n* é -1, a estrutura determina o valor da margem usando o Gerenciador de visual ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`). A altura da legenda padrão é 25 pixels.  
   
 ##  <a name="setgroupcaptionhorzoffset"></a>  CMFCTasksPane::SetGroupCaptionHorzOffset  
  Define o deslocamento horizontal de uma legenda de grupo.  
@@ -1535,7 +1535,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `n`  
+ [in] *n*  
  Especifica o deslocamento horizontal da legenda do grupo.  
   
 ##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset  
@@ -1546,7 +1546,7 @@ void SetGroupCaptionVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `n`  
+ [in] *n*  
  Especifica o deslocamento vertical, em pixels, da legenda do grupo.  
   
 ##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName  
@@ -1559,10 +1559,10 @@ BOOL SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice de base zero do grupo.  
   
- [in] `lpszGroupName`  
+ [in] *lpszGroupName*  
  Especifica o nome do grupo.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1579,13 +1579,13 @@ BOOL SetGroupTextColor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice de base zero do grupo.  
   
- [in] `color`  
+ [in] *cor*  
  Especifica a cor do texto.  
   
- [in] `colorHot`  
+ [in] *colorHot*  
  Especifica a cor do texto para o grupo realçado. Se-1, a cor de realce padrão será usada.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1599,13 +1599,13 @@ void SetGroupVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `n`  
+ [in] *n*  
  Especifica o deslocamento vertical.  
   
 ### <a name="remarks"></a>Comentários  
  O deslocamento vertical é a distância entre um grupo de tarefas e a borda do painel de tarefas.  
   
- Chame este método para personalizar as margens de elementos do painel de tarefas. Se `n` é -1, a estrutura determina o valor da margem usando o Gerenciador de visual ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`). O deslocamento padrão é 15 pixels.  
+ Chame este método para personalizar as margens de elementos do painel de tarefas. Se *n* é -1, a estrutura determina o valor da margem usando o Gerenciador de visual ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`). O deslocamento padrão é 15 pixels.  
   
 ##  <a name="sethorzmargin"></a>  CMFCTasksPane::SetHorzMargin  
  Define a margem horizontal.  
@@ -1615,7 +1615,7 @@ void SetHorzMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `n`  
+ [in] *n*  
  Especifica a margem, em pixels.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1636,16 +1636,16 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiImageListResID`  
+ [in] *uiImageListResID*  
  Especifica a ID de recurso da lista de imagens.  
   
- [in] `cx`  
+ [in] *cx*  
  Especifica o tamanho dos ícones na lista de imagens.  
   
- [in] `clrTransparent`  
+ [in] *clrTransparent*  
  Especifica a cor transparente.  
   
- [in] `hIcons`  
+ [in] *hIcons*  
  Especifica a lista de imagens que contém os ícones do painel de tarefas.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1663,10 +1663,10 @@ void SetPageCaption(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Especifica o índice com base em zero da página.  
   
- [in] `lpszName`  
+ [in] *lpszName*  
  Especifica o texto de legenda para exibir a página.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1683,13 +1683,13 @@ BOOL SetTaskName(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice de base zero do grupo de tarefas.  
   
- [in] `nTask`  
+ [in] *nTask*  
  Especifica o índice com base em zero da tarefa.  
   
- [in] `lpszTaskName`  
+ [in] *lpszTaskName*  
  Especifica o nome da tarefa.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1703,13 +1703,13 @@ void SetTasksHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `n`  
+ [in] *n*  
  Especifica o deslocamento horizontal.  
   
 ### <a name="remarks"></a>Comentários  
  O deslocamento horizontal é a distância em pixels das bordas esquerdas e direita de um grupo.  
   
- Se `n` é -1, esse método define o deslocamento horizontal para o valor retornado pelo `CMFCVisualManager::GetTasksPaneTaskHorzOffset` método.  
+ Se *n* é -1, esse método define o deslocamento horizontal para o valor retornado pelo `CMFCVisualManager::GetTasksPaneTaskHorzOffset` método.  
   
  O deslocamento horizontal padrão é 12 pixels.  
   
@@ -1721,7 +1721,7 @@ void SetTasksIconHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `n`  
+ [in] *n*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1733,7 +1733,7 @@ void SetTasksIconVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `n`  
+ [in] *n*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1749,16 +1749,16 @@ BOOL SetTaskTextColor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice de base zero do grupo de tarefas que contém a tarefa.  
   
- [in] `nTask`  
+ [in] *nTask*  
  Especifica o índice com base em zero da tarefa.  
   
- [in] `color`  
+ [in] *cor*  
  Especifica a cor do texto para a tarefa.  
   
- [in] `colorHot`  
+ [in] *colorHot*  
  Especifica a cor do texto para o grupo realçado. Se-1, esse método usa a cor de realce padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1772,13 +1772,13 @@ void SetVertMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `n`  
+ [in] *n*  
  Especifica a margem vertical para definir.  
   
 ### <a name="remarks"></a>Comentários  
  A margem vertical é a distância entre um painel de tarefas e as bordas verticais da área do cliente.  
   
- Se `n` é -1, a estrutura determina o valor da margem usando o Gerenciador de visual ( `CMFCVisualManager::GetTasksPaneVertMargin`). A margem padrão é 12 pixels.  
+ Se *n* é -1, a estrutura determina o valor da margem usando o Gerenciador de visual ( `CMFCVisualManager::GetTasksPaneVertMargin`). A margem padrão é 12 pixels.  
   
 ##  <a name="setwindowheight"></a>  CMFCTasksPane::SetWindowHeight  
  Define a altura de um controle de janela.  
@@ -1796,17 +1796,17 @@ BOOL SetWindowHeight(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice de base zero do grupo que contém o controle de janela.  
   
- [in] `hwndTask`  
+ [in] *hwndTask*  
  Especifica o identificador para o controle de janela.  
   
- [in] `nWndHeight`  
+ [in] *nWndHeight*  
  Especifica a altura para definir.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se a altura do controle janela foi definida com êxito; `FALSE` se `nGroup` é inválido ou se `hwndTask` não existe.  
+ `TRUE` Se a altura do controle janela foi definida com êxito; `FALSE` se *agrupar* é inválido ou se *hwndTask* não existe.  
   
 ### <a name="remarks"></a>Comentários  
  Chamar [CMFCTasksPane::AddWindow](#addwindow) para adicionar tarefas com controles de janela.  
@@ -1819,7 +1819,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmdId`  
+ [in] *uiCmdId*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1835,16 +1835,16 @@ BOOL ShowTask(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroup`  
+ [in] *agrupar*  
  Especifica o índice de base zero do grupo.  
   
- [in] `nTask`  
+ [in] *nTask*  
  Especifica o índice com base em zero da tarefa para mostrar ou ocultar.  
   
- [in] `bShow`  
+ [in] *bMostrar*  
  `TRUE` para mostrar a tarefa; `FALSE` para ocultar a tarefa.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` redesenhar o painel de tarefas; Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1864,13 +1864,13 @@ BOOL ShowTaskByCmdId(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCommandID`  
+ [in] *uiCommandID*  
  Especifica a ID de comando da tarefa para mostrar ou ocultar.  
   
- [in] `bShow`  
+ [in] *bMostrar*  
  `TRUE` para mostrar a tarefa; `FALSE` para ocultar a tarefa.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` redesenhar o painel de tarefas; Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  

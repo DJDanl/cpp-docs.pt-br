@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd159597440dfb55bbe8abe147623096cdf449
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e5beccea254db8c7db6b6f52fee6c5d3021da71
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374504"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038323"
 ---
 # <a name="coledataobject-class"></a>Classe COleDataObject
 Usado em transferências de dados para recuperar dados em vários formatos da área de transferência, por meio de arrastar e soltar, ou de um item OLE inserido.  
@@ -107,7 +107,7 @@ void Attach(
  *lpDataObject*  
  Aponta para um objeto de dados OLE.  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  **TRUE** se o objeto de dados OLE deve ser liberados quando a `COleDataObject` objeto é destruído; caso contrário **FALSE**.  
   
 ### <a name="remarks"></a>Comentários  
@@ -178,14 +178,14 @@ BOOL GetData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `cfFormat`  
+ *cfFormat*  
  O formato no qual os dados estão a ser retornado. Esse parâmetro pode ser um dos formatos predefinidos de área de transferência ou o valor retornado pelo Windows nativo [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) função.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Aponta para um [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) estrutura que receberá os dados.  
   
- `lpFormatEtc`  
- Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato no qual os dados estão a ser retornado. Forneça um valor para esse parâmetro se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado pelo `cfFormat`. Se for **nulo**, os valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
+ *lpFormatEtc*  
+ Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato no qual os dados estão a ser retornado. Forneça um valor para esse parâmetro se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado por *cfFormat*. Se for **nulo**, os valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
@@ -205,11 +205,11 @@ CFile* GetFileData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `cfFormat`  
+ *cfFormat*  
  O formato no qual os dados estão a ser retornado. Esse parâmetro pode ser um dos formatos predefinidos de área de transferência ou o valor retornado pelo Windows nativo [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) função.  
   
- `lpFormatEtc`  
- Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato no qual os dados estão a ser retornado. Forneça um valor para esse parâmetro se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado pelo `cfFormat`. Se for **nulo**, os valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
+ *lpFormatEtc*  
+ Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato no qual os dados estão a ser retornado. Forneça um valor para esse parâmetro se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado por *cfFormat*. Se for **nulo**, os valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Ponteiro para o novo `CFile` ou `CFile`-objeto derivada que contém os dados se for bem-sucedida; caso contrário **nulo**.  
@@ -234,11 +234,11 @@ HGLOBAL GetGlobalData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `cfFormat`  
+ *cfFormat*  
  O formato no qual os dados estão a ser retornado. Esse parâmetro pode ser um dos formatos predefinidos de área de transferência ou o valor retornado pelo Windows nativo [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) função.  
   
- `lpFormatEtc`  
- Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato no qual os dados estão a ser retornado. Forneça um valor para esse parâmetro se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado pelo `cfFormat`. Se for **nulo**, os valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
+ *lpFormatEtc*  
+ Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato no qual os dados estão a ser retornado. Forneça um valor para esse parâmetro se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado por *cfFormat*. Se for **nulo**, os valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O identificador do bloco de memória global que contém os dados se for bem-sucedida; Caso contrário, **nulo**.  
@@ -256,7 +256,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Aponta para o [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que recebe as informações de formato quando a chamada de função retorna.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -279,11 +279,11 @@ BOOL IsDataAvailable(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `cfFormat`  
- O formato de dados de área de transferência a ser usado na estrutura apontada pelo `lpFormatEtc`. Esse parâmetro pode ser um dos formatos predefinidos de área de transferência ou o valor retornado pelo Windows nativo [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) função.  
+ *cfFormat*  
+ O formato de dados de área de transferência a ser usado na estrutura apontada pelo *lpFormatEtc*. Esse parâmetro pode ser um dos formatos predefinidos de área de transferência ou o valor retornado pelo Windows nativo [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) função.  
   
- `lpFormatEtc`  
- Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato desejado. Forneça um valor para esse parâmetro somente se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado pelo `cfFormat`. Se for **nulo**, os valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
+ *lpFormatEtc*  
+ Aponta para um [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura que descreve o formato desejado. Forneça um valor para esse parâmetro somente se você deseja especificar informações de formato adicionais além do formato de área de transferência especificado por *cfFormat*. Se for **nulo**, os valores padrão são usados para os outros campos de **FORMATETC** estrutura.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se os dados estão disponíveis no formato especificado; Caso contrário, 0.  
@@ -306,7 +306,7 @@ void Release();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O `IDataObject` foi associado a `COleDataObject` chamando **Attach** ou `AttachClipboard` explicitamente ou pela estrutura. Se o `bAutoRelease` parâmetro **Attach** é **FALSE**, o `IDataObject` objeto não será liberado. Nesse caso, o chamador é responsável pela liberação de `IDataObject` chamando [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
+ O `IDataObject` foi associado a `COleDataObject` chamando `Attach` ou `AttachClipboard` explicitamente ou pela estrutura. Se o `bAutoRelease` parâmetro `Attach` é **FALSE**, o `IDataObject` objeto não será liberado. Nesse caso, o chamador é responsável pela liberação de `IDataObject` chamando [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo MFC HIERSVR](../../visual-cpp-samples.md)   

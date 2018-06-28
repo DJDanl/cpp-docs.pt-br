@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985cd4011dbb1ea8ccad7cd40c81833dd5507f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ff84edab9166072e04637bb82dfc52c42f1722e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371791"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040097"
 ---
 # <a name="cmfcmaskededit-class"></a>Classe CMFCMaskedEdit
 O `CMFCMaskedEdit` classe oferece suporte a um controle de edição mascarada, que valida em relação a uma máscara de entrada do usuário e exibe os resultados validados de acordo com um modelo.  
@@ -132,7 +132,7 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` para especificar que o [CMFCMaskedEdit::GetWindowText](#getwindowtext) método recuperar apenas mascarado caracteres; `FALSE` para especificar o método de recuperar o texto inteiro. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -150,16 +150,16 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszMask`  
- Uma cadeia de caracteres de máscara que especifica o tipo de caractere que pode ser exibido em cada posição na entrada do usuário. O comprimento do `lpszInputTemplate` e `lpszMask` cadeias de caracteres do parâmetro devem ser o mesmo. Consulte a seção de comentários para obter mais detalhes sobre os caracteres de máscara.  
+ [in] *lpszMask*  
+ Uma cadeia de caracteres de máscara que especifica o tipo de caractere que pode ser exibido em cada posição na entrada do usuário. O comprimento do *lpszInputTemplate* e *lpszMask* cadeias de caracteres do parâmetro devem ser o mesmo. Consulte a seção de comentários para obter mais detalhes sobre os caracteres de máscara.  
   
- [in] `lpszInputTemplate`  
- Uma cadeia de caracteres de modelo de máscara que especifica que o literal de caracteres que pode ser exibido em cada posição na entrada do usuário. Use o caractere de sublinhado ('_') como um espaço reservado de caractere. O comprimento do `lpszInputTemplate` e `lpszMask` cadeias de caracteres do parâmetro devem ser o mesmo.  
+ [in] *lpszInputTemplate*  
+ Uma cadeia de caracteres de modelo de máscara que especifica que o literal de caracteres que pode ser exibido em cada posição na entrada do usuário. Use o caractere de sublinhado ('_') como um espaço reservado de caractere. O comprimento do *lpszInputTemplate* e *lpszMask* cadeias de caracteres do parâmetro devem ser o mesmo.  
   
- [in] `chMaskInputTemplate`  
+ [in] *chMaskInputTemplate*  
  Um caractere padrão que substitui a estrutura para cada caractere inválido na entrada do usuário. O valor padrão desse parâmetro é o caractere de sublinhado ('_').  
   
- [in] `lpszValid`  
+ [in] *lpszValid*  
  Uma cadeia de caracteres que contém um conjunto de caracteres válidos. `NULL` indica que todos os caracteres são válidos. O valor padrão desse parâmetro é `NULL`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -186,7 +186,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` para selecionar apenas grupos; `FALSE` para selecionar o texto inteiro. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -218,7 +218,7 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` para validar o usuário entrada com relação ao mascarado somente caracteres; `FALSE` para validar em relação a máscara inteira. O valor padrão é `TRUE`.  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
@@ -233,20 +233,20 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `lpszStringBuf`  
+ [out] *lpszStringBuf*  
  Um ponteiro para um buffer que recebe o texto do controle de edição.  
   
- [in] `nMaxCount`  
+ [in] *nMaxCount*  
  O número máximo de caracteres a ser exibida.  
   
- [out] `rstrString`  
+ [out] *rstrString*  
  Uma referência para o objeto de cadeia de caracteres que recebe o texto do controle de edição.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A primeira sobrecarga de método retorna o número de bytes da cadeia de caracteres que é copiado para o `lpszStringBuf` o buffer de parâmetros; 0 se o controle de edição mascarada não tiver texto.  
+ A primeira sobrecarga de método retorna o número de bytes da cadeia de caracteres que é copiado para o *lpszStringBuf* o buffer de parâmetros; 0 se o controle de edição mascarada não tiver texto.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método copia o texto do controle de edição mascarada para o `lpszStringBuf` buffer ou `rstrString` cadeia de caracteres.  
+ Esse método copia o texto do controle de edição mascarada para o *lpszStringBuf* buffer ou *rstrString* cadeia de caracteres.  
   
  Este método redefine [CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext).  
   
@@ -260,14 +260,14 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `chChar`  
+ [in] *chChar*  
  O caractere a ser validado.  
   
- [in] `chMaskChar`  
+ [in] *chMaskChar*  
  O caractere correspondente de cadeia de caracteres de máscara.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o `chChar` parâmetro é o tipo de caractere permitido pelo `chMaskChar` parâmetro; caso contrário, `FALSE`.  
+ `TRUE` Se o *chChar* parâmetro é o tipo de caractere permitido pelo *chMaskChar* parâmetro; caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método para validar os caracteres de entrada por conta própria. Para obter mais informações sobre caracteres de máscara, consulte o [CMFCMaskedEdit::EnableMask](#enablemask) método.  
@@ -280,7 +280,7 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszValid`  
+ [in] *lpszValid*  
  Uma cadeia de caracteres que contém o conjunto de caracteres de entrada válidos. `NULL` significa que todos os caracteres são válidos. O valor padrão desse parâmetro é `NULL`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -298,7 +298,7 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszString`  
+ [in] *lpszString*  
  Aponta para uma cadeia de caracteres terminada em nulo que será usado como um prompt.  
   
 ### <a name="remarks"></a>Comentários  

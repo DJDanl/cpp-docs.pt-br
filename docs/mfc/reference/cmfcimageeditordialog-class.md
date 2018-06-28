@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 795e5548e93323af389c3faeaefa7dda0bf7d80c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af19a9dcb207afa482f54e26540a6b706d607ce0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376243"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040763"
 ---
 # <a name="cmfcimageeditordialog-class"></a>Classe CMFCImageEditorDialog
 O `CMFCImageEditorDialog` classe oferece suporte a uma caixa de diálogo do editor de imagem.  
@@ -86,14 +86,14 @@ CMFCImageEditorDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pBitmap`  
+ *pBitmap*  
  Ponteiro para uma imagem.  
   
- `pParent`  
+ *pParent*  
  Ponteiro para a janela pai da caixa de diálogo de editor imagem atual.  
   
- `nBitsPixel`  
- O número de bits usados para representar a cor de um único pixel, que também é conhecida como profundidade de cor.  Se o `nBitsPixel` parâmetro é -1, a profundidade de cor é derivada da imagem especificada pelo `pBitmap` parâmetro. O valor padrão é -1.  
+ *nBitsPixel*  
+ O número de bits usados para representar a cor de um único pixel, que também é conhecida como profundidade de cor.  Se o *nBitsPixel* parâmetro é -1, a profundidade de cor é derivada da imagem especificada pelo *pBitmap* parâmetro. O valor padrão é -1.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Para modificar uma imagem, passe um ponteiro de imagem para o `CMFCImageEditorDialog` construtor. Em seguida, chamar o `DoModal` método para abrir a caixa de diálogo modal. Quando o `DoModal` método retorna, o bitmap conterá a nova imagem.  

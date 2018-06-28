@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b53228b6983c0293eb288cd0f38669d1b5db928
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c09234cbf41201df14aec4993174e6313c6a7d1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371576"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040828"
 ---
 # <a name="cmultidoctemplate-class"></a>Classe CMultiDocTemplate
 Define um modelo de documento que implementa o interface de documentos múltiplos (MDI).  
@@ -85,7 +85,7 @@ CMultiDocTemplate(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIDResource`  
+ *nIDResource*  
  Especifica a ID dos recursos usados com o tipo de documento. Isso pode incluir recursos de cadeia de caracteres, ícone, tabela de Aceleradores e menu.  
   
  O recurso de cadeia de caracteres consiste em subcadeias de caracteres até sete separadas pelo caractere '\n' (o caractere '\n' é necessário como um espaço reservado, se uma subcadeia de caracteres não está incluída; no entanto, não são necessários caracteres à direita de '\n'); Esses subcadeias de caracteres descrevem o tipo de documento. Para obter informações sobre as subcadeias de caracteres, consulte [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Esse recurso de cadeia de caracteres foi encontrado no arquivo de recurso do aplicativo. Por exemplo:  
@@ -104,13 +104,13 @@ CMultiDocTemplate(
   
  Para obter mais informações sobre esses tipos de recursos, consulte [editores de recursos](../../windows/resource-editors.md).  
   
- `pDocClass`  
- Aponta para o `CRuntimeClass` objeto da classe do documento. Essa classe é um **CDocument**-definir para representar documentos de classe derivada.  
+ *pDocClass*  
+ Aponta para o `CRuntimeClass` objeto da classe do documento. Essa classe é um `CDocument`-definir para representar documentos de classe derivada.  
   
- `pFrameClass`  
+ *pFrameClass*  
  Aponta para o `CRuntimeClass` objeto da classe de janela do quadro. Essa classe pode ser um `CMDIChildWnd`-classe derivada, ou pode ser `CMDIChildWnd` em si, se você quiser o comportamento padrão para as janelas de quadro do documento.  
   
- `pViewClass`  
+ *pViewClass*  
  Aponta para o `CRuntimeClass` objeto da classe de exibição. Essa classe é um `CView`-definir para exibir seus documentos de classe derivada.  
   
 ### <a name="remarks"></a>Comentários  

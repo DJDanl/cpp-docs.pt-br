@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b4824632d7ce38e50859172a24a47bdeb49f1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0089647fcdd1da5ddbab6194f4c3e9dae291ad3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369236"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037337"
 ---
 # <a name="cmfccmdusagecount-class"></a>Classe CMFCCmdUsageCount
 Rastreia a contagem de uso de mensagens do Windows, como quando o usuário seleciona um item em um menu.  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `uiCmd`|Especifica o contador de comando para incrementar.|  
+|[in] *uiCmd*|Especifica o contador de comando para incrementar.|  
   
 ### <a name="remarks"></a>Comentários  
  Este método adiciona uma nova entrada para a estrutura do mapa de contagens de comando, `m_CmdUsage`, se a entrada ainda não existir.  
@@ -113,9 +113,9 @@ void AddCmd(UINT uiCmd);
   
 -   A estrutura da barra de ferramentas está no modo de personalização (o [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode) método retorna um valor diferente de zero).  
   
--   O comando se refere a um separador de menu ou submenu ( `uiCmd` igual a 0 ou -1).  
+-   O comando se refere a um separador de menu ou submenu ( *uiCmd* igual a 0 ou -1).  
   
-- `uiCmd` refere-se a um comando padrão (global `IsStandardCommand` função retorna um valor diferente de zero).  
+- *uiCmd* refere-se a um comando padrão (global `IsStandardCommand` função retorna um valor diferente de zero).  
   
 ##  <a name="getcount"></a>  CMFCCmdUsageCount::GetCount  
  Recupera a contagem de uso que está associada com a ID de comando especificada.  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `uiCmd`|A ID do contador de comando para recuperar.|  
+|[in] *uiCmd*|A ID do contador de comando para recuperar.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  A contagem de uso que está associada com a ID de comando especificada.  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `uiCmd`|Especifica o comando para verificar.|  
+|[in] *uiCmd*|Especifica o comando para verificar.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o comando é usado com frequência; Caso contrário, 0.  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `ar`|Um `CArchive` objeto a ser serializado de ou para.|  
+|[in] *ar*|Um `CArchive` objeto a ser serializado de ou para.|  
   
 ### <a name="remarks"></a>Comentários  
  Esse método serializa a estrutura do mapa de contagens de comando, `m_CmdUsage`e o uso do comando total, `m_nTotalUsage`, contador de ou para o arquivo especificado.  
@@ -214,14 +214,14 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] `nStartCount`|A nova contagem inicial de controladas todos os comandos.|  
-|[in] `nMinUsagePercentage`|A porcentagem de uso mínimo de novo.|  
+|[in] *nStartCount*|A nova contagem inicial de controladas todos os comandos.|  
+|[in] *nMinUsagePercentage*|A porcentagem de uso mínimo de novo.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o método for bem-sucedido, `FALSE` se o `nMinUsagePercentage` parâmetro seja maior ou igual a 100.  
+ `TRUE` Se o método for bem-sucedido, `FALSE` se o *nMinUsagePercentage* parâmetro seja maior ou igual a 100.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método define compartilhado `CMFCCmdUsageCount` membros de dados de classe `m_nStartCount` e `m_nMinUsagePercentage` para `nStartCount` e `nMinUsagePercentage`, respectivamente. `m_nStartCount` é usado pelo [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) método para determinar se este objeto coletou a quantidade mínima de dados de rastreamento. `m_nMinUsagePercentage` é usado pelo [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) método para determinar se um determinado comando é usado com frequência.  
+ Esse método define compartilhado `CMFCCmdUsageCount` membros de dados de classe `m_nStartCount` e `m_nMinUsagePercentage` para *nStartCount* e *nMinUsagePercentage*, respectivamente. `m_nStartCount` é usado pelo [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) método para determinar se este objeto coletou a quantidade mínima de dados de rastreamento. `m_nMinUsagePercentage` é usado pelo [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) método para determinar se um determinado comando é usado com frequência.  
   
  Em compilações de depuração este método gera uma falha de asserção se o `nMinUsagePercentage` parâmetro seja maior ou igual a 100.  
   

@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d9c60ee3601cd4055e963997a6cd4f8bbd48b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 506ef6d9d70f336ad5a8b8df36a07ed5ba6480e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369867"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042177"
 ---
 # <a name="cmfcautohidebar-class"></a>Classe CMFCAutoHideBar
 O `CMFCAutoHideBar` é uma classe de barra de ferramentas especial que implementa o recurso de ocultar automaticamente.  
@@ -136,16 +136,16 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pAutoHideWnd`  
+ [in] *pAutoHideWnd*  
  A janela que você deseja ocultar.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Um valor que especifica o alinhamento do botão Ocultar automaticamente com a janela do aplicativo.  
   
 ### <a name="return-value"></a>Valor de retorno  
   
 ### <a name="remarks"></a>Comentários  
- O `dwAlignment` parâmetro indica onde o botão Ocultar automaticamente reside no aplicativo. O parâmetro pode ser qualquer um dos seguintes valores:  
+ O *dwAlignment* parâmetro indica onde o botão Ocultar automaticamente reside no aplicativo. O parâmetro pode ser qualquer um dos seguintes valores:  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -176,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -207,13 +207,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszClassName`  
- [in] `dwStyle`  
- [in] `rect`  
- [in] `pParentWnd`  
- [in] `nID`  
- [in] `dwControlBarStyle`  
- [in] `pContext`  
+ [in] *lpszClassName*  
+ [in] *dwStyle*  
+ [in] *rect*  
+ [in] *pParentWnd*  
+ [in] *nID*  
+ [in] *dwControlBarStyle*  
+ [in] *pContext*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -261,7 +261,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `CPoint`  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -275,7 +275,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- CDockablePane * `pAutoHideWnd`  
+ CDockablePane * *pAutoHideWnd*  
  A janela de ocultar automaticamente para remover.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -291,7 +291,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] BOOL `bActive`  
+ [in] BOOL *bScripts Ativos*  
  TRUE para definir como ativa; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
@@ -305,7 +305,7 @@ void SetRecentVisibleState(BOOL bState);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bState`  
+ [in] *bState*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -320,11 +320,11 @@ BOOL ShowAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] CDockablePane * `pAutoHideWnd`  
- [in] BOOL `bShow`  
+ [in] CDockablePane * *pAutoHideWnd*  
+ [in] BOOL *bMostrar*  
  TRUE para exibir a janela.  
   
- [in] BOOL `bDelay`  
+ [in] BOOL *bDelay*  
  Este parâmetro é ignorado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -342,10 +342,10 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nLength`  
+ [in] *nLength*  
  O valor é usado na implementação de base. Em implementações derivadas, use esse valor para indicar o tamanho do painel redimensionado.  
   
- [in] `bVert`  
+ [in] *bVert*  
  O valor é usado na implementação de base. Em implementações derivadas, use `TRUE` para lidar com o caso em que a barra de ocultar automaticamente é recolhida verticalmente, e `FALSE` para o caso em que a barra de ocultar automaticamente é recolhida horizontalmente.  
   
 ### <a name="return-value"></a>Valor de retorno  

@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da6727c54fd3c1f4ae25f401294861a6c8909e50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61ab69daadcb7e030511362932be41a3919dd087
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377856"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039317"
 ---
 # <a name="cmfcribbongallery-class"></a>Classe CMFCRibbonGallery
 Galerias de faixa de opções de estilo do Office 2007 implementa.  
@@ -150,7 +150,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|Define o número de itens por linha na Galeria.|  
 |[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|Define o texto de dica de ferramenta para um item da Galeria.|  
 |[CMFCRibbonGallery::SetPalette](#setpalette)|Anexa uma paleta em uma galeria da faixa de opções.|  
-|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Define a ID de comando que é enviada no `WM_COMMAND` mensagem quando um item da Galeria foi selecionado.|  
+|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Define a ID de comando que é enviada na mensagem WM_COMMAND quando um item da Galeria foi selecionado.|  
   
 ### <a name="protected-methods"></a>Métodos Protegidos  
   
@@ -159,7 +159,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Chamado pelo framework quando um ícone de galeria é desenhado.|  
   
 ## <a name="remarks"></a>Comentários  
- Um botão de galeria se comporta exatamente como um botão de menu comum, exceto que ele exibe uma galeria quando um usuário abre. Quando você seleciona um item em uma galeria, a estrutura envia o `WM_COMMAND` mensagem junto com a ID de comando do botão. Quando você processa a mensagem, você deve chamar [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) para determinar qual item foi selecionado da Galeria.  
+ Um botão de galeria se comporta exatamente como um botão de menu comum, exceto que ele exibe uma galeria quando um usuário abre. Quando você seleciona um item em uma galeria, a estrutura envia a mensagem WM_COMMAND junto com a ID de comando do botão. Quando você processa a mensagem, você deve chamar [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) para determinar qual item foi selecionado da Galeria.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como usar vários métodos no `CMFCRibbonGallery` classe para configurar um `CMFCRibbonGallery` objeto. O exemplo ilustra como especificar o número de itens por linha na galeria, habilitar o redimensionamento do painel do menu, barra lateral à esquerda do menu pop-up e exibir a Galeria de faixa de opções como uma paleta diretamente na barra de faixa de opções. Este trecho de código é parte do [desenhar cliente de exemplo](../../visual-cpp-samples.md).  
@@ -195,19 +195,19 @@ void AddGroup(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszGroupName`  
+ [in] *lpszGroupName*  
  Especifica o nome do grupo.  
   
- [in] `uiImagesPaletteResID`  
+ [in] *uiImagesPaletteResID*  
  Especifica a ID de lista de imagens que contém as imagens para o grupo de recursos.  
   
- [in] `cxPaletteImage`  
+ [in] *cxPaletteImage*  
  Especifica a largura em pixels da imagem.  
   
- [in] `imagesGroup`  
+ [in] *imagesGroup*  
  Uma referência a lista de imagens que contém imagens de grupo.  
   
- [in] `nIconsNum`  
+ [in] *nIconsNum*  
  Especifica o número de ícones do grupo. Esse parâmetro deve ser especificado apenas para personalizado (desenhados pelo proprietário) grupos.  
   
 ### <a name="remarks"></a>Comentários  
@@ -224,22 +224,22 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pSubItem`  
+ [in] *pSubItem*  
  Um ponteiro para o item a ser adicionado ao menu.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica o índice de base zero de um local onde inserir o item.  
   
- [in] `bOnTop`  
+ [in] *bOnTop*  
  `TRUE` para especificar que o item deve ser inserido antes da Galeria da faixa de opções; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
  Você pode combinar galerias de pop-up com itens de menu pop-up ao chamar esse método. Itens de menu podem ser colocados antes ou depois da Galeria.  
   
- Para inserir o item de galeria, defina `bOnTop` para `TRUE`. Definir `bOnTop` para `FALSE` para inserir o item abaixo a Galeria.  
+ Para inserir o item de galeria, defina *bOnTop* para `TRUE`. Definir *bOnTop* para `FALSE` para inserir o item abaixo a Galeria.  
   
 > [!NOTE]
->  O parâmetro `nIndex` Especifica o índice de inserção na parte superior da galeria e na parte inferior da Galeria. Por exemplo, se você precisa inserir um item para uma posição antes da galeria, defina `nIndex` como 1 e `bOnTop` para `TRUE`. Da mesma forma, se você precisa inserir um item para uma posição abaixo a Galeria, defina `nIndex` como 1 e `bOnTop` para `FALSE`.  
+>  O parâmetro *nIndex* Especifica o índice de inserção na parte superior da galeria e na parte inferior da Galeria. Por exemplo, se você precisa inserir um item para uma posição antes da galeria, defina *nIndex* como 1 e *bOnTop* para `TRUE`. Da mesma forma, se você precisa inserir um item para uma posição abaixo a Galeria, defina *nIndex* como 1 e *bOnTop* para `FALSE`.  
   
 ##  <a name="clear"></a>  CMFCRibbonGallery::Clear  
  Limpa o conteúdo da Galeria.  
@@ -283,34 +283,34 @@ CMFCRibbonGallery (
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nID`  
+ *nID*  
  Especifica a ID de comando para executar quando um usuário clica no botão de comando.  
   
- `lpszText`  
+ *lpszText*  
  Especifica o texto a ser exibido no botão.  
   
- `nSmallImageIndex`  
+ *nSmallImageIndex*  
  O índice baseado em zero da imagem pequena seja exibido no botão.  
   
- `nLargeImageIndex`  
+ *nLargeImageIndex*  
  O índice baseado em zero da imagem grande para ser exibido no botão.  
   
- `imagesPalette`  
+ *imagesPalette*  
  Uma referência para o [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) objeto que contém as imagens para aparecer na Galeria.  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  A ID de recurso da lista de imagens para exibir na Galeria.  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  Especifica a largura, em pixels, da imagem na Galeria.  
   
- `sizeIcon`  
+ *sizeIcon*  
  Especifica o tamanho, em pixels, da imagem de galeria.  
   
- `nIconsNum`  
+ *nIconsNum*  
  Especifica o número de ícones na Galeria.  
   
- `bDefaultButtonStyle`  
+ *bDefaultButtonStyle*  
  Especifica se deve usar o padrão ou o estilo do botão de desenho proprietário.  
   
 ### <a name="remarks"></a>Comentários  
@@ -325,10 +325,10 @@ void EnableMenuResize(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` Para habilitar o redimensionamento de menu; Caso contrário, `FALSE`.  
   
- [in] `bVertcalOnly`  
+ [in] *bVertcalOnly*  
  `TRUE` para especificar que a Galeria pode ser redimensionada apenas verticalmente; `FALSE` especificar que a Galeria pode ser redimensionada tanto vertical e horizontalmente.  
   
 ### <a name="remarks"></a>Comentários  
@@ -342,7 +342,7 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
  `TRUE` para especificar que a barra lateral é habilitada; Caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -356,7 +356,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -381,7 +381,7 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroupIndex`  
+ [in] *nGroupIndex*  
  Especifica o índice com base em zero para o grupo cujo nome você deseja recuperar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -420,7 +420,7 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nItemIndex`  
+ [in] *nItemIndex*  
  Especifica o índice com base em zero do item para o qual recuperar o texto de dica de ferramenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -436,11 +436,11 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Especifica a ID de comando do item de menu que abriu a Galeria da faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Quando o usuário seleciona qualquer item da Galeria da faixa de opções, a biblioteca envia o `WM_COMMAND` mensagem com ID de comando do botão de menu que abriu a Galeria da faixa de opções.  
+ Quando o usuário seleciona qualquer item da Galeria da faixa de opções, a biblioteca envia a mensagem WM_COMMAND junto com a ID de comando do botão de menu que abriu a Galeria da faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -464,7 +464,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -547,7 +547,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -559,7 +559,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -576,19 +576,19 @@ virtual void OnDrawPaletteIcon(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  Um ponteiro para o contexto de dispositivo que é usado para desenhar.  
   
- [in] `rectIcon`  
+ [in] *rectIcon*  
  Especifica o retângulo delimitador do ícone para desenhar.  
   
- [in] `nIconIndex`  
+ [in] *nIconIndex*  
  Especifica o índice com base em zero na lista de imagens de ícones da Galeria do ícone para desenhar.  
   
- [in] `pIcon`  
+ [in] *pIcon*  
  Um ponteiro para o ícone desenhado.  
   
- [in] `clrText`  
+ [in] *clrText*  
  Especifica a cor do texto do item para desenhar.  
   
 ### <a name="remarks"></a>Comentários  
@@ -602,7 +602,7 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
+ [in] *bAtivar*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -614,7 +614,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -645,7 +645,7 @@ void SelectItem(int nItemIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nItemIndex`  
+ [in] *nItemIndex*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -659,10 +659,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pParent`  
+ [in] *pParent*  
  A janela pai da janela de galeria da faixa de opções.  
   
- [out] `data`  
+ [out] *dados*  
  Um `CAccessibilityData` objeto que recebe os dados de acessibilidade da Galeria da faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -678,7 +678,7 @@ void SetButtonMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` Para exibir a Galeria da faixa de opções como um botão de menu suspenso. `FALSE` para exibir o conteúdo da Galeria da faixa de opções diretamente na faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
@@ -693,10 +693,10 @@ void SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nGroupIndex`  
+ [in] *nGroupIndex*  
  Especifica o índice com base em zero para o grupo para o qual o nome está sendo alterado.  
   
- [in] `lpszGroupName`  
+ [in] *lpszGroupName*  
  Especifica o novo nome para o grupo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -710,7 +710,7 @@ void SetIconsInRow(int nIconsInRow);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nIconsInRow`  
+ [in] *nIconsInRow*  
  Especifica o número de itens a serem exibidos em cada linha da Galeria.  
   
 ### <a name="remarks"></a>Comentários  
@@ -726,10 +726,10 @@ void SetItemToolTip(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nItemIndex`  
+ [in] *nItemIndex*  
  O índice de base zero do item da paleta ao qual associar a dica de ferramenta.  
   
- [in] `lpszToolTip`  
+ [in] *lpszToolTip*  
  O texto a ser exibido na dica de ferramenta.  
   
 ### <a name="remarks"></a>Comentários  
@@ -747,27 +747,27 @@ void SetPalette(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `imagesPalette`  
+ [in] *imagesPalette*  
  Especifica a lista de imagens que contém os ícones para aparecer na Galeria.  
   
- [in] `uiImagesPaletteResID`  
+ [in] *uiImagesPaletteResID*  
  Especifica a ID de recurso da lista de imagens que contém os ícones para aparecer na Galeria.  
   
- [in] `cxPaletteImage`  
+ [in] *cxPaletteImage*  
  Especifica a largura, em pixels, de uma imagem na Galeria.  
   
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="setpaletteid"></a>  CMFCRibbonGallery::SetPaletteID  
- Define a ID de comando que é enviada no **WM_COMMAND** mensagem quando um usuário seleciona um item da Galeria.  
+ Define a ID de comando que é enviada na mensagem WM_COMMAND quando um usuário seleciona um item da Galeria.  
   
 ```  
 void SetPaletteID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nID`  
- Especifica a ID de comando que é enviada no **WM_COMMAND** mensagem quando um usuário seleciona um item da Galeria.  
+ [in] *nID*  
+ Especifica a ID de comando que é enviada na mensagem WM_COMMAND quando um usuário seleciona um item da Galeria.  
   
 ### <a name="remarks"></a>Comentários  
  Para determinar o item específico que o usuário selecionou da galeria, chame o [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) método estático.  

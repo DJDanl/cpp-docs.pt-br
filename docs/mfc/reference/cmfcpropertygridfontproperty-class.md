@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7acda3bf3734a325c7d603489c1305cb63bc3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f224def5d91d47cad0cb61938f1ce9a538109014
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367608"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039031"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Classe CMFCPropertyGridFontProperty
 O `CMFCPropertyGridFileProperty` classe oferece suporte a um item de controle de lista de propriedade que abre uma caixa de diálogo de seleção de fonte.  
@@ -83,22 +83,22 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `strName`  
+ [in] *strName*  
  O nome da propriedade.  
   
- [in] `lf`  
+ [in] *lf*  
  Uma estrutura de fonte lógica que especifica os atributos da fonte.  
   
- [in] `dwFontDialogFlags`  
- Estilos que são aplicados à caixa de diálogo de fonte que é exibida quando você clicar no botão de menu suspenso de valor de propriedade. O valor padrão é a combinação de bit a bit (ou) de CF_EFFECTS e CF_SCREENFONTS. Para obter mais informações, consulte o `Flags` parâmetro o [CHOOSEFONT estrutura](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+ [in] *dwFontDialogFlags*  
+ Estilos que são aplicados à caixa de diálogo de fonte que é exibida quando você clicar no botão de menu suspenso de valor de propriedade. O valor padrão é a combinação de bit a bit (ou) de CF_EFFECTS e CF_SCREENFONTS. Para obter mais informações, consulte o *sinalizadores* parâmetro o [CHOOSEFONT estrutura](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
   
- [in] `lpszDescr`  
+ [in] *lpszDescr*  
  Descrição da propriedade font. O valor padrão é `NULL`.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Dados específicos do aplicativo, como um inteiro ou um ponteiro para outros dados que está associados com a propriedade. O valor padrão é 0.  
   
- [in] `color`  
+ [in] *cor*  
  A cor da fonte. O valor padrão é a cor padrão.  
   
 ### <a name="remarks"></a>Comentários  

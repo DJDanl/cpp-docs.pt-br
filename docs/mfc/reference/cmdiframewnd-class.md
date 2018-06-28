@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bb9f87ed5ae3027e7743a36c2484017d6381f95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f3ba2a92ad523994a458abad9d4acee506e8e85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374033"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038884"
 ---
 # <a name="cmdiframewnd-class"></a>Classe CMDIFrameWnd
 Fornece a funcionalidade de um Windows várias janelas de quadro MDI (interface) do documento, juntamente com os membros para gerenciar a janela.  
@@ -91,11 +91,11 @@ class CMDIFrameWnd : public CFrameWnd
   
  Você pode construir uma janela de quadro MDI chamando o [criar](../../mfc/reference/cframewnd-class.md#create) ou [LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe) função de membro `CFrameWnd`.  
   
- Antes de chamar **criar** ou `LoadFrame`, você deve construir o objeto de janela do quadro na pilha usando o C++ **novo** operador. Antes de chamar **criar** você também pode registrar uma classe de janela com o [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função global para definir os estilos de ícone e a classe do quadro.  
+ Antes de chamar `Create` ou `LoadFrame`, você deve construir o objeto de janela do quadro na pilha usando o C++ **novo** operador. Antes de chamar `Create` você também pode registrar uma classe de janela com o [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função global para definir os estilos de ícone e a classe do quadro.  
   
- Use o **criar** função de membro para passar parâmetros de criação do quadro imediatos como argumentos.  
+ Use o `Create` a função de membro para passar parâmetros de criação do quadro imediatos como argumentos.  
   
- `LoadFrame` requer menos argumentos que **criar**e em vez disso, recupera a maioria de seus valores padrão de recursos, incluindo a legenda do quadro, ícone, tabela de Aceleradores e menu. Para ser acessado por `LoadFrame`, todos esses recursos devem ter a mesma ID de recurso (por exemplo, **IDR_MAINFRAME**).  
+ `LoadFrame` requer menos argumentos que `Create`e em vez disso, recupera a maioria de seus valores padrão de recursos, incluindo a legenda do quadro, ícone, tabela de Aceleradores e menu. Para ser acessado por `LoadFrame`, todos esses recursos devem ter a mesma ID de recurso (por exemplo, **IDR_MAINFRAME**).  
   
  Embora **MDIFrameWnd** é derivado de `CFrameWnd`, derivado de uma classe de janela do quadro de `CMDIFrameWnd` não precisa ser declarado com `DECLARE_DYNCREATE`.  
   
@@ -145,7 +145,7 @@ CMDIFrameWnd();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Chamar o **criar** ou `LoadFrame` a função de membro para criar a janela do quadro MDI visível.  
+ Chamar o `Create` ou `LoadFrame` a função de membro para criar a janela do quadro MDI visível.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCWindowing#13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
@@ -160,10 +160,10 @@ virtual BOOL CreateClient(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpCreateStruct`  
+ *lpCreateStruct*  
  Um ponteiro de tempo para um [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) estrutura.  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  Um ponteiro para o menu pop-up de janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -187,16 +187,16 @@ CMDIChildWnd* CreateNewChild(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pClass`  
+ *pClass*  
  A classe de tempo de execução da janela filho a ser criado.  
   
  *nResource*  
  A ID de recursos compartilhados associados com a janela filho.  
   
- `hMenu`  
+ *hMenu*  
  Menu da janela filho.  
   
- `hAccel`  
+ *hAccel*  
  Acelerador da janela filho.  
   
 ### <a name="remarks"></a>Comentários  
@@ -260,7 +260,7 @@ void MDICascade(int nType);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nType`  
+ *nType*  
  Especifica um sinalizador em cascata. Pode ser especificado apenas o seguinte sinalizador: `MDITILE_SKIPDISABLED`, que evita a desabilitado MDI filho do windows que está sendo em cascata.  
   
 ### <a name="remarks"></a>Comentários  
@@ -307,7 +307,7 @@ void MDIMaximize(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWnd`  
+ *pWnd*  
  Aponta para maximizar a janela.  
   
 ### <a name="remarks"></a>Comentários  
@@ -349,7 +349,7 @@ void MDIRestore(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWnd`  
+ *pWnd*  
  Aponta para a janela para restaurar.  
   
 ### <a name="example"></a>Exemplo  
@@ -368,7 +368,7 @@ CMenu* MDISetMenu(
  *pFrameMenu*  
  Especifica o menu do novo menu janela do quadro. Se **nulo**, o menu não é alterado.  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  Especifica o menu do menu pop-up de nova janela. Se **nulo**, o menu não é alterado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -397,7 +397,7 @@ void MDITile(int nType);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nType`  
+ *nType*  
  Especifica um sinalizador de lado a lado. Esse parâmetro pode ser qualquer um dos sinalizadores a seguir:  
   
 - `MDITILE_HORIZONTAL` Blocos janelas filho MDI assim que uma janela aparece acima do outro.  
@@ -407,7 +407,7 @@ void MDITile(int nType);
 - `MDITILE_VERTICAL` Blocos janelas filho MDI assim que uma janela aparece ao lado do outro.  
   
 ### <a name="remarks"></a>Comentários  
- A primeira versão do `MDITile`, sem parâmetros, blocos windows verticalmente em Windows versões 3.1 e posteriores. A segunda versão blocos windows verticalmente ou horizontalmente, dependendo do valor da `nType` parâmetro.  
+ A primeira versão do `MDITile`, sem parâmetros, blocos windows verticalmente em Windows versões 3.1 e posteriores. A segunda versão blocos windows verticalmente ou horizontalmente, dependendo do valor da *nType* parâmetro.  
   
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo para [CMDIFrameWnd::MDICascade](#mdicascade).  

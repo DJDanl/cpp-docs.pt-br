@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4264f26028db4c581fe1dc143905ac0ffc8f66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06575c4d014f72ddbae63ea5f02c3081b4228e1d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372691"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037717"
 ---
 # <a name="cmfcribbonslider-class"></a>Classe CMFCRibbonSlider
 O `CMFCRibbonSlider` classe implementa um controle deslizante que você pode adicionar uma barra de faixa de opções ou na barra de status da faixa de opções. O controle deslizante de faixa de opções se parece com os controles deslizantes de zoom que aparecem em aplicativos do Office 2007.  
@@ -112,14 +112,14 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nID`  
+ [in] *nID*  
  ID do controle deslizante.  
   
- [in]. `nWidth`  
+ [in]. *nWidth*  
  Largura do controle deslizante em pixels.  
   
 ### <a name="remarks"></a>Comentários  
- Constrói um seletor de faixa de opções é `nWidth` pixels de largura na categoria de painel em que o controle deslizante é adicionado. Por padrão, o controle deslizante é horizontal.  
+ Constrói um seletor de faixa de opções é *nWidth* pixels de largura na categoria de painel em que o controle deslizante é adicionado. Por padrão, o controle deslizante é horizontal.  
   
 ##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos  
  Retorna a posição atual do controle deslizante.  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -193,7 +193,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -207,10 +207,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nPos`  
+ [in] *nPos*  
  Especifica a posição a ser definido para o controle deslizante. A posição é relativo ao início do controle deslizante.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Se `TRUE`, o controle deslizante irá redesenhado.  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
@@ -223,10 +223,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nMin`  
+ [in] *nMin*  
  Especifica o valor mínimo do controle deslizante.  
   
- [in] `nMax`  
+ [in] *nMax*  
  Especifica o valor máximo do controle deslizante.  
   
 ### <a name="remarks"></a>Comentários  
@@ -240,7 +240,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in]. `bSet`  
+ [in]. *bSet*  
  `TRUE` Para exibir botões de zoom; `FALSE` para ocultá-las.  
   
 ##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement  
@@ -251,7 +251,7 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nZoomIncrement`  
+ [in] *nZoomIncrement*  
  Especifica o incremento de zoom do controle deslizante.  
   
 ## <a name="see-also"></a>Consulte também  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b123b5c473c834e958263edb926ef25103d788
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c1ba2bb78260ade8dc95685789ec6af7e0ff58a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367790"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038907"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>Classe CMFCPropertyGridFileProperty
 O `CMFCPropertyGridFileProperty` classe oferece suporte a um item de controle de lista de propriedade que abre uma caixa de diálogo de seleção de arquivo.  
@@ -78,28 +78,28 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `strName`  
+ [in] *strName*  
  O nome da propriedade.  
   
- [in] `bOpenFileDialog`  
+ [in] *bOpenFileDialog*  
  `TRUE` Para abrir um **abrir arquivo** caixa de diálogo. `FALSE` para abrir um **salvar arquivo** caixa de diálogo.  
   
- [in] `strFileName`  
+ [in] *strFileName*  
  O nome do arquivo inicial.  
   
- [in] `lpszDefExt`  
+ [in] *lpszDefExt*  
  Uma cadeia de caracteres de uma ou mais extensões de nome de arquivo. O valor padrão é `NULL`.  
   
- [in] `dwFlags`  
+ [in] *dwFlags*  
  Sinalizadores de caixa de diálogo. O valor padrão é uma combinação bit a bit (ou) de `OFN_HIDEREADONLY` e `OFN_OVERWRITEPROMPT`.  
   
- [in] `lpszFilter`  
+ [in] *lpszFilter*  
  Uma cadeia de caracteres de um ou mais filtros de arquivo. O valor padrão é `NULL`.  
   
- [in] `lpszDescr`  
+ [in] *lpszDescr*  
  A descrição do item de propriedade. O valor padrão é `NULL`.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Dados específicos do aplicativo que está associados ao item de propriedade. Por exemplo, um inteiro de 32 bits ou um ponteiro para outros dados. O valor padrão é 0.  
   
 ### <a name="return-value"></a>Valor de retorno  

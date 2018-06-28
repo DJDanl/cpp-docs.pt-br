@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa89f17a546c0b1aec6e1ed53a320f57660687
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 648d295af6ca767eb0291f1eb8f0cd172d0717cc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322401"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041104"
 ---
 # <a name="cinternetsession-class"></a>Classe CInternetSession
 
@@ -422,7 +422,7 @@ Um ponteiro para uma cadeia de caracteres que contém o nome de usuário.
 Um ponteiro para uma cadeia de caracteres que contém a senha de acesso.
 
 *dwFlags*  
-Qualquer combinação da `INTERNET_FLAG_*` sinalizadores. Consulte a tabela de **comentários** seção [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) para obter uma descrição de `dwFlags` valores.
+Qualquer combinação da `INTERNET_FLAG_*` sinalizadores. Consulte a tabela de **comentários** seção [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) para obter uma descrição de *dwFlags* valores.
 
 ### <a name="return-value"></a>Valor de retorno
 
