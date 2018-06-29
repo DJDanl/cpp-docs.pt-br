@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e595db4e194744ce5d1f1d644a55423c1022fc2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85a3c51f5c59b510e1024cc5f363096952c0f35a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377581"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079456"
 ---
 # <a name="crebarctrl-class"></a>Classe CReBarCtrl
 Encapsula a funcionalidade de um controle rebar, que é um contêiner para uma janela filho.  
@@ -234,11 +234,11 @@ void BeginDrag(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `uBand`  
+ *uBand*  
  Índice de base zero da faixa que afeta a operação de arrastar e soltar.  
   
- `dwPos`  
- Um `DWORD` valor que contém as coordenadas do mouse inicial. A coordenada horizontal está contida na LOWORD e a coordenada vertical está contida no HIWORD. Se você passar `(DWORD)-1`, o controle rebar usará a posição do mouse na última vez em thread do controle chamado **GetMessage** ou **PeekMessage**.  
+ *dwPos*  
+ Um `DWORD` valor que contém as coordenadas do mouse inicial. A coordenada horizontal está contida na LOWORD e a coordenada vertical está contida no HIWORD. Se você passar `(DWORD)-1`, o controle rebar usará a posição do mouse na última vez em thread do controle chamado `GetMessage` ou `PeekMessage`.  
   
 ##  <a name="create"></a>  CReBarCtrl::Create  
  Cria um controle rebar e anexa-o para o `CReBarCtrl` objeto.  
@@ -252,16 +252,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwStyle`  
+ *dwStyle*  
  Especifica a combinação de estilos de controle rebar aplicada ao controle. Consulte [estilos de controle Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) no SDK do Windows para obter uma lista de estilos com suporte.  
   
- `rect`  
+ *Rect*  
  Uma referência a um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura, que é a posição e o tamanho do controle rebar.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle rebar. Ele não deve ser **nulo**.  
   
- `nID`  
+ *nID*  
  Especifica a ID controle. do controle rebar  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -292,19 +292,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwExStyle`  
- Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o `dwExStyle` parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
+ *dwExStyle*  
+ Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o *dwExStyle* parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica a combinação de estilos de controle rebar aplicada ao controle. Para obter uma lista de estilos com suporte, consulte [estilos de controle Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) no SDK do Windows.  
   
- `rect`  
- Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e a posição da janela deve ser criada, nas coordenadas do cliente de `pParentWnd`.  
+ *Rect*  
+ Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e a posição da janela deve ser criada, nas coordenadas do cliente de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para a janela que é o pai do controle.  
   
- `nID`  
+ *nID*  
  ID de janela filho. do controle  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -331,7 +331,7 @@ BOOL DeleteBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `uBand`  
+ *uBand*  
  Índice de base zero de banda a ser excluído.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -348,8 +348,8 @@ void DragMove(DWORD dwPos = (DWORD)-1);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwPos`  
- Um `DWORD` que contém as coordenadas do mouse novo valor. A coordenada horizontal está contida na LOWORD e a coordenada vertical está contida no HIWORD. Se você passar `(DWORD)-1`, o controle rebar usará a posição do mouse na última vez em thread do controle chamado **GetMessage** ou **PeekMessage**.  
+ *dwPos*  
+ Um `DWORD` que contém as coordenadas do mouse novo valor. A coordenada horizontal está contida na LOWORD e a coordenada vertical está contida no HIWORD. Se você passar `(DWORD)-1`, o controle rebar usará a posição do mouse na última vez em thread do controle chamado `GetMessage` ou `PeekMessage`.  
   
 ##  <a name="enddrag"></a>  CReBarCtrl::EndDrag  
  Implementa o comportamento da mensagem de Win32 [RB_ENDDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774435), conforme descrito no SDK do Windows.  
@@ -368,10 +368,10 @@ void GetBandBorders(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `uBand`  
+ *uBand*  
  Índice de base zero da faixa para a qual as bordas serão recuperadas.  
   
- `prc`  
+ *República Popular da China*  
  Um ponteiro para um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que receberá as bordas de banda. Se o controle rebar tem o **RBS_BANDBORDERS** estilo, cada membro desta estrutura recebe o número de pixels, do lado correspondente de banda, que constituem a borda. Se o controle rebar não tiver o **RBS_BANDBORDERS** de estilo, somente o membro esquerdo dessa estrutura recebe informações válidas. Para obter uma descrição dos estilos de controle rebar, consulte [estilos de controle Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) no SDK do Windows.  
   
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount  
@@ -394,10 +394,10 @@ BOOL GetBandInfo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `uBand`  
+ *uBand*  
  Índice de base zero da faixa para a qual as informações serão recuperadas.  
   
- `prbbi`  
+ *prbbi*  
  Um ponteiro para um [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) estrutura para receber as informações de banda. Você deve definir o `cbSize` membro dessa estrutura para `sizeof(REBARBANDINFO)` e defina o **fMask** membro para os itens que você deseja recuperar antes de enviar esta mensagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -435,8 +435,8 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `prbi`  
- Um ponteiro para um [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) estrutura que receberá as informações do controle rebar. Você deve definir o `cbSize` membro dessa estrutura para `sizeof(REBARINFO)` antes de enviar esta mensagem.  
+ *prbi*  
+ Um ponteiro para um [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) estrutura que receberá as informações do controle rebar. Você deve definir o *cbSize* membro dessa estrutura para `sizeof(REBARINFO)` antes de enviar esta mensagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, zero.  
@@ -459,7 +459,7 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpcs`  
+ *LPCs*  
  Um ponteiro para um [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) estrutura, conforme descrito no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -486,7 +486,7 @@ DWORD GetExtendedStyle() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Uma combinação bit a bit (ou) de sinalizadores que indicam os estilos estendidos. Os possíveis sinalizadores são `RBS_EX_SPLITTER` e `RBS_EX_TRANSPARENT`. Para obter mais informações, consulte o `dwMask` parâmetro o [CReBarCtrl::SetExtendedStyle](#setextendedstyle) método.  
+ Uma combinação bit a bit (ou) de sinalizadores que indicam os estilos estendidos. Os possíveis sinalizadores são `RBS_EX_SPLITTER` e `RBS_EX_TRANSPARENT`. Para obter mais informações, consulte o *dwMask* parâmetro o [CReBarCtrl::SetExtendedStyle](#setextendedstyle) método.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método envia o [RB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774433) mensagem, que é descrita no SDK do Windows.  
@@ -530,10 +530,10 @@ BOOL GetRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `uBand`  
+ *uBand*  
  Índice de base zero de uma faixa no controle rebar.  
   
- `prc`  
+ *República Popular da China*  
  Um ponteiro para um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que receberá os limites da faixa rebar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -636,8 +636,8 @@ BOOL InsertBand(
  *uIndex*  
  Índice de base zero do local onde a faixa será inserida. Se você definir esse parâmetro como -1, o controle irá adicionar a nova faixa no último local.  
   
- `prbbi`  
- Um ponteiro para um [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) estrutura que define a banda a ser inserido. Você deve definir o `cbSize` membro dessa estrutura para `sizeof(REBARBANDINFO)` antes de chamar essa função.  
+ *prbbi*  
+ Um ponteiro para um [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) estrutura que define a banda a ser inserido. Você deve definir o *cbSize* membro dessa estrutura para `sizeof(REBARBANDINFO)` antes de chamar essa função.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, zero.  
@@ -653,7 +653,7 @@ void MaximizeBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `uBand`  
+ *uBand*  
  Índice de base zero da faixa para ser maximizada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -670,7 +670,7 @@ void MinimizeBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `uBand`  
+ *uBand*  
  Índice de base zero da faixa para ser minimizada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -708,11 +708,11 @@ void PushChevron(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `uBand`  
+ *uBand*  
  Índice de base zero da faixa cuja divisa tiver de ser transferido.  
   
- `lAppValue`  
- Um aplicativo definido pelo valor de 32 bits. Consulte `lAppValue` na [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) no SDK do Windows.  
+ *lAppValue*  
+ Um aplicativo definido pelo valor de 32 bits. Consulte *lAppValue* na [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) no SDK do Windows.  
   
 ##  <a name="restoreband"></a>  CReBarCtrl::RestoreBand  
  Redimensiona uma faixa em um controle rebar ao seu tamanho ideal.  
@@ -722,7 +722,7 @@ void RestoreBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `uBand`  
+ *uBand*  
  Índice de base zero da faixa para ser maximizada.  
   
 ### <a name="remarks"></a>Comentários  
@@ -741,10 +741,10 @@ BOOL SetBandInfo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `uBand`  
+ *uBand*  
  Índice de base zero da faixa para receber as novas configurações.  
   
- `prbbi`  
+ *prbbi*  
  Ponteiro para um [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) estrutura que define a banda a ser inserido. Você deve definir o `cbSize` membro dessa estrutura para `sizeof(REBARBANDINFO)` antes de enviar esta mensagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -766,8 +766,8 @@ BOOL SetBandWidth(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `uBand`|Índice de base zero de uma faixa de rebar.|  
-|[in] `cxWidth`|Nova largura de banda de rebar, em pixels.|  
+|[in] *uBand*|Índice de base zero de uma faixa de rebar.|  
+|[in] *cxWidth*|Nova largura de banda de rebar, em pixels.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` se o método for bem-sucedido; caso contrário, `false`.  
@@ -793,7 +793,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `prbi`  
+ *prbi*  
  Um ponteiro para um [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) estrutura que contém as informações a serem definidos. Você deve definir o `cbSize` membro dessa estrutura para `sizeof(REBARINFO)` antes de enviar esta mensagem  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -810,7 +810,7 @@ COLORREF SetBkColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `clr`  
+ *CLR*  
  O **COLORREF** valor que representa a nova cor do plano de fundo padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -846,8 +846,8 @@ DWORD SetExtendedStyle(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `dwMask`|Uma combinação bit a bit (ou) de sinalizadores que especificam quais sinalizadores no `dwStyleEx` parâmetro se aplica. Use um ou mais dos seguintes valores:<br /><br /> RBS_EX_SPLITTER: Por padrão, mostra o separador de na parte inferior no modo horizontal e à direita no modo vertical.<br /><br /> RBS_EX_TRANSPARENT: Encaminhar o [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) mensagem para a janela pai.|  
-|[in] `dwStyleEx`|Uma combinação bit a bit (ou) de sinalizadores que especificam os estilos para aplicar. Para definir um estilo, especifique o mesmo sinalizador é usado no `dwMask` parâmetro. Para redefinir um estilo, especifique zero binário.|  
+|[in] *dwMask*|Uma combinação bit a bit (ou) de sinalizadores que especificam quais sinalizadores no *dwStyleEx* parâmetro se aplica. Use um ou mais dos seguintes valores:<br /><br /> RBS_EX_SPLITTER: Por padrão, mostra o separador de na parte inferior no modo horizontal e à direita no modo vertical.<br /><br /> RBS_EX_TRANSPARENT: Encaminhar o [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) mensagem para a janela pai.|  
+|[in] *dwStyleEx*|Uma combinação bit a bit (ou) de sinalizadores que especificam os estilos para aplicar. Para definir um estilo, especifique o mesmo sinalizador é usado no *dwMask* parâmetro. Para redefinir um estilo, especifique zero binário.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Estilo estendido anterior.  
@@ -863,7 +863,7 @@ BOOL SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pImageList`  
+ *pImageList*  
  Um ponteiro para um [CImageList](../../mfc/reference/cimagelist-class.md) objeto que contém a lista de imagens a ser atribuído ao controle rebar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -877,7 +877,7 @@ CWnd* SetOwner(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWnd`  
+ *pWnd*  
  Um ponteiro para um `CWnd` objeto para definir como o proprietário do controle rebar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -914,7 +914,7 @@ COLORREF SetTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `clr`  
+ *CLR*  
  Um **COLORREF** de cores valor que representa o novo texto de `CReBarCtrl` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -945,7 +945,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pszSubAppName`  
+ *pszSubAppName*  
  Um ponteiro para uma cadeia de caracteres Unicode que contém o estilo visual rebar definir.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -964,7 +964,7 @@ BOOL ShowBand(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `uBand`  
+ *uBand*  
  Índice de base zero de uma faixa no controle rebar.  
   
  *fShow*  
@@ -981,7 +981,7 @@ BOOL SizeToRect(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `rect`  
+ *Rect*  
  Uma referência a um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica o retângulo do controle rebar deve ser dimensionado para.  
   
 ### <a name="return-value"></a>Valor de retorno  

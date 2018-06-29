@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94fc1e0ccad8980e0ed5a1cc0f8c0262502e1398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ea2a1047864c19be3f5bbd6c303b4b00fb132dc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371132"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078758"
 ---
 # <a name="crebar-class"></a>Classe CReBar
 Uma barra de controle que fornece informações de estado para controles rebar, persistência e layout.  
@@ -56,10 +56,10 @@ class CReBar : public CControlBar
 ## <a name="rebar-control"></a>Controle rebar  
  Um objeto de rebar se comporta de maneira semelhante a um objeto de barra de ferramentas. Um rebar usa o mecanismo de clique e arraste para redimensionar seus faixas. Um controle rebar pode conter uma ou mais faixas, com cada faixa com qualquer combinação de uma barra dupla, um bitmap, um rótulo de texto e uma janela filho. No entanto, as faixas não podem conter mais de uma janela filho.  
   
- **CReBar** usa o [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) classe para fornecer sua implementação. Você pode acessar o controle rebar por meio de [GetReBarCtrl](#getrebarctrl) para tirar proveito das opções de personalização do controle. Para obter mais informações sobre controles rebar, consulte `CReBarCtrl`. Para obter mais informações sobre como usar controles rebar, consulte [usando CReBarCtrl](../../mfc/using-crebarctrl.md).  
+ `CReBar` usa o [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) classe para fornecer sua implementação. Você pode acessar o controle rebar por meio de [GetReBarCtrl](#getrebarctrl) para tirar proveito das opções de personalização do controle. Para obter mais informações sobre controles rebar, consulte `CReBarCtrl`. Para obter mais informações sobre como usar controles rebar, consulte [usando CReBarCtrl](../../mfc/using-crebarctrl.md).  
   
 > [!CAUTION]
->  Rebar e objetos de controle rebar não dão suporte a controle MFC ancoragem de barra. Se **CRebar::EnableDocking** é chamado, declarará seu aplicativo.  
+>  Rebar e objetos de controle rebar não dão suporte a controle MFC ancoragem de barra. Se `CRebar::EnableDocking` for chamado, declarará seu aplicativo.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -95,16 +95,16 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pBar`  
+ *pBar*  
  Um ponteiro para um `CWnd` objeto que é a janela filho a ser inserido na rebar. O objeto referenciado deve ter uma **WS_CHILD**.  
   
- `lpszText`  
- Um ponteiro para uma cadeia de caracteres que contém o texto a ser exibido em rebar. **NULO** por padrão. O texto contido em `lpszText` não é parte da janela filho; está em rebar em si.  
+ *lpszText*  
+ Um ponteiro para uma cadeia de caracteres que contém o texto a ser exibido em rebar. **NULO** por padrão. O texto contido em *lpszText* não é parte da janela filho; está em rebar em si.  
   
- `pbmp`  
+ *pbmp*  
  Um ponteiro para um `CBitmap` objeto a ser exibido no plano de fundo rebar. **NULO** por padrão.  
   
- `dwStyle`  
+ *dwStyle*  
  Um `DWORD` que contém o estilo a ser aplicado ao rebar. Consulte o **fStyle** descrição na estrutura de Win32 da função [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) para obter uma lista de estilos de banda.  
   
  *clrFore*  
@@ -131,16 +131,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pParentWnd`  
+ *pParentWnd*  
  Ponteiro para o `CWnd` objeto cuja janela do Windows é o pai da barra de status. Normalmente, a janela do quadro.  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  O estilo do controle rebar. Por padrão, **RBS_BANDBORDERS**, que exibe restringir linhas para separar as faixas adjacentes dentro do controle rebar. Consulte [estilos de controle Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) no SDK do Windows para obter uma lista de estilos.  
   
- `dwStyle`  
+ *dwStyle*  
  Os estilos de janela rebar.  
   
- `nID`  
+ *nID*  
  ID de janela filho. do rebar  
   
 ### <a name="return-value"></a>Valor de retorno  

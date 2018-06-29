@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 973957609b56f3bcd697f650c75c59d07cc97173
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 5d5b3e94b0b594174538aebe6542b04df7214f1b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305765"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079806"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 A classe de modelo descreve um objeto que controla uma sequência de comprimento variável de elementos que tenha acesso aleatório. Você usa o contêiner `vector` para gerenciar uma sequência de elementos como um bloco contínuo de armazenamento. O bloco é implementado como uma matriz que cresce sob demanda.  
@@ -135,7 +135,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  Valor  
  O tipo de um elemento na sequência controlada.  
   
@@ -225,10 +225,7 @@ template<typename Value>
   
  Apagar ou remover um elemento chama o destruidor para seu valor armazenado. Destruir o contêiner apaga todos os elementos. Assim, um contêiner cujo tipo de elemento é uma classe ref garante que nenhum elemento duram mais tempo o contêiner. No entanto, observe que um contêiner de identificadores não destrói seus elementos.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<cliext/vetor >  
-  
- **Namespace:** cliext  
+## <a name="members"></a>Membros
 
 ## <a name="assign"></a> Vector:: Assign (STL/CLR)
 Substitui todos os elementos.  
@@ -246,7 +243,7 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
  count  
  Número de elementos a inserir.  
   
- primeiro  
+ Primeiro  
  Início do intervalo a ser inserido.  
   
  last  
@@ -911,7 +908,7 @@ iterator erase(iterator first, iterator last);
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- primeiro  
+ Primeiro  
  Início do intervalo a ser apagado.  
   
  last  
@@ -1328,7 +1325,7 @@ void insert(iterator where,
  count  
  Número de elementos a inserir.  
   
- primeiro  
+ Primeiro  
  Início do intervalo a ser inserido.  
   
  last  
@@ -2243,7 +2240,7 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
  count  
  Número de elementos a inserir.  
   
- primeiro  
+ Primeiro  
  Início do intervalo a ser inserido.  
   
  last  

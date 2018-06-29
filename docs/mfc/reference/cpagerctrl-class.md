@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22aa408fe2933803083adc784c2dbf3a85dd4df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad0d928f7190d3908c41560c7fb106e3024ebc6e
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377165"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079636"
 ---
 # <a name="cpagerctrl-class"></a>Classe CPagerCtrl
 O `CPagerCtrl` classe envolve o controle de pager do Windows, que pode aparecer na exibição de uma janela independente que não se ajustar a janela.  
@@ -151,10 +151,10 @@ virtual BOOL Create(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `dwStyle`|Uma combinação bit a bit (ou) de [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) e [estilos de controle de pager](http://msdn.microsoft.com/library/windows/desktop/bb760859) a ser aplicado ao controle.|  
-|[in] `rect`|Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle, nas coordenadas do cliente.|  
-|[in] `pParentWnd`|Um ponteiro para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle. O parâmetro não pode ser `NULL`.|  
-|[in] `nID`|A ID do controle.|  
+|[in] *dwStyle*|Uma combinação bit a bit (ou) de [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) e [estilos de controle de pager](http://msdn.microsoft.com/library/windows/desktop/bb760859) a ser aplicado ao controle.|  
+|[in] *rect*|Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle, nas coordenadas do cliente.|  
+|[in] *pParentWnd*|Um ponteiro para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle. O parâmetro não pode ser `NULL`.|  
+|[in] *nID*|A ID do controle.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` Se esse método for bem-sucedida; Caso contrário, `false`.  
@@ -183,11 +183,11 @@ virtual BOOL CreateEx(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `dwExStyle`|Uma combinação bit a bit de estilos estendidos a serem aplicados ao controle. Para obter mais informações, consulte o `dwExStyle` parâmetro o [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) função.|  
-|[in] `dwStyle`|Uma combinação bit a bit (ou) de [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) e [estilos de controle de pager](http://msdn.microsoft.com/library/windows/desktop/bb760859) a ser aplicado ao controle.|  
-|[in] `rect`|Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle, nas coordenadas do cliente.|  
-|[in] `pParentWnd`|Um ponteiro para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle. O parâmetro não pode ser `NULL`.|  
-|[in] `nID`|A ID do controle.|  
+|[in] *dwExStyle*|Uma combinação bit a bit de estilos estendidos a serem aplicados ao controle. Para obter mais informações, consulte o *dwExStyle* parâmetro o [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) função.|  
+|[in] *dwStyle*|Uma combinação bit a bit (ou) de [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) e [estilos de controle de pager](http://msdn.microsoft.com/library/windows/desktop/bb760859) a ser aplicado ao controle.|  
+|[in] *rect*|Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle, nas coordenadas do cliente.|  
+|[in] *pParentWnd*|Um ponteiro para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle. O parâmetro não pode ser `NULL`.|  
+|[in] *nID*|A ID do controle.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` Se esse método for bem-sucedida; Caso contrário, `false`.  
@@ -206,7 +206,7 @@ void ForwardMouse(BOOL bForward);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `bForward`|`true` para encaminhar mensagens de mouse ou `false` não encaminhar mensagens de mouse.|  
+|[in] *bForward*|`true` para encaminhar mensagens de mouse ou `false` não encaminhar mensagens de mouse.|  
   
 ### <a name="remarks"></a>Comentários  
  Esse método envia o [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) mensagem, que é descrita no SDK do Windows.  
@@ -273,10 +273,10 @@ DWORD GetButtonState(int iButton) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `iButton`|Indica o botão para que o estado é recuperado. Se o estilo de controle de pager é `PGS_HORZ`, especifique `PGB_TOPORLEFT` para o botão esquerdo e `PGB_BOTTOMORRIGHT` para o botão direito. Se o estilo de controle de pager é `PGS_VERT`, especifique `PGB_TOPORLEFT` do botão superior e `PGB_BOTTOMORRIGHT` do botão inferior. Para obter mais informações, consulte [estilos de controle de Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica o botão para que o estado é recuperado. Se o estilo de controle de pager é `PGS_HORZ`, especifique `PGB_TOPORLEFT` para o botão esquerdo e `PGB_BOTTOMORRIGHT` para o botão direito. Se o estilo de controle de pager é `PGS_VERT`, especifique `PGB_TOPORLEFT` do botão superior e `PGB_BOTTOMORRIGHT` do botão inferior. Para obter mais informações, consulte [estilos de controle de Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valor de retorno  
- O estado do botão especificado pelo `iButton` parâmetro. O estado é `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, ou `PGF_HOT`. Para obter mais informações, consulte a seção do valor de retorno do [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) mensagem.  
+ O estado do botão especificado pelo *iButton* parâmetro. O estado é `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, ou `PGF_HOT`. Para obter mais informações, consulte a seção do valor de retorno do [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) mensagem.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método envia o [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) mensagem, que é descrita no SDK do Windows.  
@@ -325,7 +325,7 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `iButton`|Indica o botão para que o estado é recuperado. Se o estilo de controle de pager é `PGS_HORZ`, especifique `PGB_TOPORLEFT` para o botão esquerdo e `PGB_BOTTOMORRIGHT` para o botão direito. Se o estilo de controle de pager é `PGS_VERT`, especifique `PGB_TOPORLEFT` do botão superior e `PGB_BOTTOMORRIGHT` do botão inferior. Para obter mais informações, consulte [estilos de controle de Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica o botão para que o estado é recuperado. Se o estilo de controle de pager é `PGS_HORZ`, especifique `PGB_TOPORLEFT` para o botão esquerdo e `PGB_BOTTOMORRIGHT` para o botão direito. Se o estilo de controle de pager é `PGS_VERT`, especifique `PGB_TOPORLEFT` do botão superior e `PGB_BOTTOMORRIGHT` do botão inferior. Para obter mais informações, consulte [estilos de controle de Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` Se o botão especificado estiver no estado pressionado; Caso contrário, `false`.  
@@ -344,7 +344,7 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `iButton`|Indica o botão para que o estado é recuperado. Se o estilo de controle de pager é `PGS_HORZ`, especifique `PGB_TOPORLEFT` para o botão esquerdo e `PGB_BOTTOMORRIGHT` para o botão direito. Se o estilo de controle de pager é `PGS_VERT`, especifique `PGB_TOPORLEFT` do botão superior e `PGB_BOTTOMORRIGHT` do botão inferior. Para obter mais informações, consulte [estilos de controle de Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica o botão para que o estado é recuperado. Se o estilo de controle de pager é `PGS_HORZ`, especifique `PGB_TOPORLEFT` para o botão esquerdo e `PGB_BOTTOMORRIGHT` para o botão direito. Se o estilo de controle de pager é `PGS_VERT`, especifique `PGB_TOPORLEFT` do botão superior e `PGB_BOTTOMORRIGHT` do botão inferior. Para obter mais informações, consulte [estilos de controle de Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` Se o botão especificado estiver no estado cinza; Caso contrário, `false`.  
@@ -363,7 +363,7 @@ BOOL IsButtonHot(int iButton) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `iButton`|Indica o botão para que o estado é recuperado. Se o estilo de controle de pager é `PGS_HORZ`, especifique `PGB_TOPORLEFT` para o botão esquerdo e `PGB_BOTTOMORRIGHT` para o botão direito. Se o estilo de controle de pager é `PGS_VERT`, especifique `PGB_TOPORLEFT` do botão superior e `PGB_BOTTOMORRIGHT` do botão inferior. Para obter mais informações, consulte [estilos de controle de Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica o botão para que o estado é recuperado. Se o estilo de controle de pager é `PGS_HORZ`, especifique `PGB_TOPORLEFT` para o botão esquerdo e `PGB_BOTTOMORRIGHT` para o botão direito. Se o estilo de controle de pager é `PGS_VERT`, especifique `PGB_TOPORLEFT` do botão superior e `PGB_BOTTOMORRIGHT` do botão inferior. Para obter mais informações, consulte [estilos de controle de Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` Se o botão especificado estiver no estado ativo. Caso contrário, `false`.  
@@ -382,7 +382,7 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `iButton`|Indica o botão para que o estado é recuperado. Se o estilo de controle de pager é `PGS_HORZ`, especifique `PGB_TOPORLEFT` para o botão esquerdo e `PGB_BOTTOMORRIGHT` para o botão direito. Se o estilo de controle de pager é `PGS_VERT`, especifique `PGB_TOPORLEFT` do botão superior e `PGB_BOTTOMORRIGHT` do botão inferior. Para obter mais informações, consulte [estilos de controle de Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica o botão para que o estado é recuperado. Se o estilo de controle de pager é `PGS_HORZ`, especifique `PGB_TOPORLEFT` para o botão esquerdo e `PGB_BOTTOMORRIGHT` para o botão direito. Se o estilo de controle de pager é `PGS_VERT`, especifique `PGB_TOPORLEFT` do botão superior e `PGB_BOTTOMORRIGHT` do botão inferior. Para obter mais informações, consulte [estilos de controle de Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` Se o botão especificado estiver no estado invisível. Caso contrário, `false`.  
@@ -408,7 +408,7 @@ BOOL IsButtonNormal(int iButton) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `iButton`|Indica o botão para que o estado é recuperado. Se o estilo de controle de pager é `PGS_HORZ`, especifique `PGB_TOPORLEFT` para o botão esquerdo e `PGB_BOTTOMORRIGHT` para o botão direito. Se o estilo de controle de pager é `PGS_VERT`, especifique `PGB_TOPORLEFT` do botão superior e `PGB_BOTTOMORRIGHT` do botão inferior. Para obter mais informações, consulte [estilos de controle de Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica o botão para que o estado é recuperado. Se o estilo de controle de pager é `PGS_HORZ`, especifique `PGB_TOPORLEFT` para o botão esquerdo e `PGB_BOTTOMORRIGHT` para o botão direito. Se o estilo de controle de pager é `PGS_VERT`, especifique `PGB_TOPORLEFT` do botão superior e `PGB_BOTTOMORRIGHT` do botão inferior. Para obter mais informações, consulte [estilos de controle de Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` Se o botão especificado estiver no estado normal. Caso contrário, `false`.  
@@ -447,7 +447,7 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `clrBk`|Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que contém a nova cor do plano de fundo do controle de pager.|  
+|[in] *clrBk*|Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que contém a nova cor do plano de fundo do controle de pager.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que contém a cor de plano de fundo anterior do controle de pager.  
@@ -471,7 +471,7 @@ int SetBorder(int iBorder);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `iBorder`|O novo tamanho de borda, medida em pixels. Se o `iBorder` parâmetro for negativo, o tamanho da borda é definido como zero.|  
+|[in] *iBorder*|O novo tamanho de borda, medida em pixels. Se o *iBorder* parâmetro for negativo, o tamanho da borda é definido como zero.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  O tamanho da borda anterior, medido em pixels.  
@@ -495,7 +495,7 @@ int SetButtonSize(int iButtonSize);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `iButtonSize`|O novo tamanho do botão, medida em pixels.|  
+|[in] *iButtonSize*|O novo tamanho do botão, medida em pixels.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  O tamanho do botão anterior, medida em pixels.  
@@ -521,7 +521,7 @@ void SetChild(HWND hwndChild);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `hwndChild`|Identificador para a janela a ser contido.|  
+|[in] *hwndChild*|Identificador para a janela a ser contido.|  
   
 ### <a name="remarks"></a>Comentários  
  Esse método envia o [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) mensagem, que é descrita no SDK do Windows.  
@@ -544,7 +544,7 @@ void SetScrollPos(int iPos);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `iPos`|A nova posição de rolagem, medida em pixels.|  
+|[in] *iPos*|A nova posição de rolagem, medida em pixels.|  
   
 ### <a name="remarks"></a>Comentários  
  Esse método envia o [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) mensagem, que é descrita no SDK do Windows.  

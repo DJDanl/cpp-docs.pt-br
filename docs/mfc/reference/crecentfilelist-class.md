@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 337ecf8227f1d5c2abe0369abdea5662f882f3d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d1dc8b636d0c97bc220f9c7f0f1e1cd165369e0
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377247"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079010"
 ---
 # <a name="crecentfilelist-class"></a>Classe CRecentFileList
 Oferece suporte a controle de lista de arquivos usada recentemente (MRU).  
@@ -115,19 +115,19 @@ void Add(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszPathName`  
+ *lpszPathName*  
  Especifica o nome do caminho a ser adicionado à lista.  
   
- `lpszAppID`  
+ *lpszAppID*  
  Especifica a ID de modelo de usuário do aplicativo para o aplicativo.  
   
- `pItem`  
+ *pItem*  
  Especifica um ponteiro para o Shell do Item a ser adicionado à lista.  
   
- `pLink`  
+ *pLink*  
  Especifica um ponteiro para o Shell de Link a ser adicionado à lista.  
   
- `pidl`  
+ *PIDL*  
  Especifica o IDLIST do item de shell que deve ser adicionado à pasta de documentos recentes.  
   
 ### <a name="remarks"></a>Comentários  
@@ -146,23 +146,23 @@ CRecentFileList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nStart`  
+ *nStart*  
  Deslocamento para a numeração na exibição do menu da lista de arquivos MRU (usado mais recentemente).  
   
- `lpszSection`  
+ *lpszSection*  
  Aponta para o nome da seção do registro ou do aplicativo. Arquivo INI onde a lista de arquivos MRU é de leitura e/ou gravada.  
   
- `lpszEntryFormat`  
+ *lpszEntryFormat*  
  Aponta para uma cadeia de caracteres de formato a ser usado para os nomes das entradas armazenadas no registro ou do aplicativo. Arquivo INI.  
   
- `nSize`  
+ *nSize*  
  Número máximo de arquivos na lista de arquivos MRU.  
   
- `nMaxDispLen`  
+ *nMaxDispLen*  
  Comprimento máximo em caracteres, disponíveis para a exibição do menu de um nome de arquivo na lista de arquivos MRU.  
   
 ### <a name="remarks"></a>Comentários  
- A cadeia de caracteres de formato apontada pelo `lpszEntryFormat` deve conter "%d", que será usada para substituir o índice de cada item MRU. Por exemplo, se a cadeia de caracteres de formato é `"file%d"` , em seguida, as entradas serão nomeadas `file0`, `file1`e assim por diante.  
+ A cadeia de caracteres de formato apontada pelo *lpszEntryFormat* deve conter "%d", que será usada para substituir o índice de cada item MRU. Por exemplo, se a cadeia de caracteres de formato é `"file%d"` , em seguida, as entradas serão nomeadas `file0`, `file1`e assim por diante.  
   
 ##  <a name="getdisplayname"></a>  CRecentFileList::GetDisplayName  
  Obtém um nome de exibição para um arquivo na lista de arquivos MRU, para uso na exibição do menu da lista MRU.  
@@ -177,10 +177,10 @@ virtual BOOL GetDisplayName(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `strName`  
+ *strName*  
  Caminho completo do arquivo cujo nome é exibido na lista de arquivos MRU menu.  
   
- `nIndex`  
+ *nIndex*  
  Índice de base zero do arquivo na lista de arquivos MRU.  
   
  *lpszCurDir*  
@@ -189,14 +189,14 @@ virtual BOOL GetDisplayName(
  *nCurDir*  
  Comprimento da cadeia de caracteres do diretório atual.  
   
- `bAtLeastName`  
- Se for diferente de zero, indica que o nome base do arquivo deve ser retornado, mesmo se ele exceder o comprimento máximo de exibição (passado como o `nMaxDispLen` parâmetro para o `CRecentFileList` construtor).  
+ *bAtLeastName*  
+ Se for diferente de zero, indica que o nome base do arquivo deve ser retornado, mesmo se ele exceder o comprimento máximo de exibição (passado como o *nMaxDispLen* parâmetro para o `CRecentFileList` construtor).  
   
 ### <a name="return-value"></a>Valor de retorno  
  **FALSE** não se há nenhum nome de arquivo no índice especificado na lista de arquivos usada recentemente (MRU).  
   
 ### <a name="remarks"></a>Comentários  
- Se o arquivo estiver no diretório atual, a função deixa o diretório desativa a exibição. Se o nome do arquivo é muito longo, o diretório e a extensão são eliminados. Se o nome de arquivo ainda é muito longo, o nome de exibição é definido como uma cadeia de caracteres vazia, a menos que `bAtLeastName` é diferente de zero.  
+ Se o arquivo estiver no diretório atual, a função deixa o diretório desativa a exibição. Se o nome do arquivo é muito longo, o diretório e a extensão são eliminados. Se o nome de arquivo ainda é muito longo, o nome de exibição é definido como uma cadeia de caracteres vazia, a menos que *bAtLeastName* é diferente de zero.  
   
 ##  <a name="getsize"></a>  CRecentFileList::GetSize  
  Recupera o número de arquivos na lista de arquivos MRU.  
@@ -209,14 +209,14 @@ int GetSize() const;
  O número de arquivos atual usado mais recentemente a lista de arquivos (MRU).  
   
 ##  <a name="operator_at"></a>  [CRecentFileList::operator]  
- A subscrição sobrecarregada ( `[]`) operador retorna um único `CString` especificado pelo índice de base zero em `nIndex`.  
+ A subscrição sobrecarregada ( `[]`) operador retorna um único `CString` especificado pelo índice de base zero em *nIndex*.  
   
 ```  
 CString& operator[ ](int nindex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Índice de base zero de um `CString` em um conjunto de `CString`s.  
   
 ##  <a name="readlist"></a>  CRecentFileList::ReadList  
@@ -234,7 +234,7 @@ virtual void Remove(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Índice de base zero do arquivo a ser removido da lista de arquivos usada recentemente (MRU).  
   
 ##  <a name="updatemenu"></a>  CRecentFileList::UpdateMenu  
@@ -245,7 +245,7 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pCmdUI`  
+ *pCmdUI*  
  Um ponteiro para o [CCmdUI](../../mfc/reference/ccmdui-class.md) objeto do menu de lista de arquivos usado recentemente (MRU).  
   
 ##  <a name="writelist"></a>  CRecentFileList::WriteList  

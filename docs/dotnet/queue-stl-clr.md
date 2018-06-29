@@ -73,12 +73,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b4d591d2abd7613777dec6ae668badd84fe31d0c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 1ae23bf845e3fa78a1971def6ea0034c94b57991
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305540"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079701"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 A classe de modelo descreve um objeto que controla uma sequência de comprimento variável de elementos que tenha acesso primeiro na fila. Usar o adaptador de contêiner `queue` para gerenciar um contêiner subjacente como uma fila.  
@@ -97,7 +97,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  Valor  
  O tipo de um elemento na sequência controlada.  
   
@@ -157,7 +157,7 @@ template<typename Value,
 |<xref:System.ICloneable>|Duplicar um objeto.|  
 |IFila\<valor, o contêiner >|Manter o adaptador de contêiner genérico.|  
   
-### <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Comentários  
  O objeto aloca e libera o armazenamento para a sequência controla por meio de um contêiner subjacente, do tipo `Container`, que armazena `Value` elementos e sob demanda. O objeto restringe o acesso ao enviar apenas o primeiro elemento e retirar o último elemento, implementando uma primeiro a sair na primeira fila (também conhecido como uma fila FIFO, ou simplesmente uma fila).  
   
 ## <a name="members"></a>Membros

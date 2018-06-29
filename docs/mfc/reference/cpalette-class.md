@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36cc13fa77becf5bdeb3960f6ac9db18d5d63dbb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb5aeef3970488c293d4199261d765f2531c201a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377270"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079675"
 ---
 # <a name="cpalette-class"></a>Classe CPalette
 Encapsula uma paleta de cores do Windows.  
@@ -108,14 +108,14 @@ void AnimatePalette(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nStartIndex`  
+ *nStartIndex*  
  Especifica a primeira entrada na paleta ser animada.  
   
- `nNumEntries`  
+ *nNumEntries*  
  Especifica o número de entradas na paleta ser animada.  
   
- `lpPaletteColors`  
- Aponta para o primeiro membro de uma matriz de [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) estruturas para substituir as entradas de paleta identificadas por `nStartIndex` e `nNumEntries`.  
+ *lpPaletteColors*  
+ Aponta para o primeiro membro de uma matriz de [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) estruturas para substituir as entradas de paleta identificadas por *nStartIndex* e *nNumEntries*.  
   
 ### <a name="remarks"></a>Comentários  
  Quando um aplicativo chama `AnimatePalette`, ele não precisa atualizar sua área de cliente, como Windows mapeia as novas entradas na paleta do sistema imediatamente.  
@@ -140,7 +140,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDC`  
+ *pDC*  
  Identifica o contexto de dispositivo.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -159,7 +159,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpLogPalette`  
+ *lpLogPalette*  
  Aponta para um [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) estrutura que contém informações sobre as cores na paleta lógica.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -176,7 +176,7 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `hPalette`  
+ *hPalette*  
  Um identificador para uma paleta de cores do Windows GDI.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -203,7 +203,7 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `crColor`  
+ *crColor*  
  Especifica a cor a ser correspondido.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -220,14 +220,14 @@ UINT GetPaletteEntries(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nStartIndex`  
+ *nStartIndex*  
  Especifica a primeira entrada na paleta lógica a ser recuperado.  
   
- `nNumEntries`  
+ *nNumEntries*  
  Especifica o número de entradas na paleta lógica a ser recuperado.  
   
- `lpPaletteColors`  
- Aponta para uma matriz de [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) estruturas de dados para receber as entradas da paleta. A matriz deve conter pelo menos o mesmo número de estruturas de dados conforme especificado pelo `nNumEntries`.  
+ *lpPaletteColors*  
+ Aponta para uma matriz de [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) estruturas de dados para receber as entradas da paleta. A matriz deve conter pelo menos o mesmo número de estruturas de dados conforme especificado pelas *nNumEntries*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O número de entradas recuperados da paleta lógica; 0 se a função falhou.  
@@ -248,14 +248,14 @@ operator HPALETTE() const;
  Para obter mais informações sobre como usar objetos gráficos, consulte o artigo [objetos de gráfico](http://msdn.microsoft.com/library/windows/desktop/dd144962) no SDK do Windows.  
   
 ##  <a name="resizepalette"></a>  CPalette::ResizePalette  
- Altera o tamanho da paleta lógica anexado para o `CPalette` objeto para o número de entradas especificado pelo `nNumEntries`.  
+ Altera o tamanho da paleta lógica anexado para o `CPalette` o número de entradas especificado pelo objeto *nNumEntries*.  
   
 ```  
 BOOL ResizePalette(UINT nNumEntries);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nNumEntries`  
+ *nNumEntries*  
  Especifica o número de entradas na paleta depois que ele foi redimensionado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -277,14 +277,14 @@ UINT SetPaletteEntries(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nStartIndex`  
+ *nStartIndex*  
  Especifica a primeira entrada na paleta lógica a ser definido.  
   
- `nNumEntries`  
+ *nNumEntries*  
  Especifica o número de entradas na paleta lógica a ser definido.  
   
- `lpPaletteColors`  
- Aponta para uma matriz de [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) estruturas de dados para receber as entradas da paleta. A matriz deve conter pelo menos o mesmo número de estruturas de dados conforme especificado pelo `nNumEntries`.  
+ *lpPaletteColors*  
+ Aponta para uma matriz de [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) estruturas de dados para receber as entradas da paleta. A matriz deve conter pelo menos o mesmo número de estruturas de dados conforme especificado pelas *nNumEntries*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Definir o número de entradas na paleta lógica; 0 se a função falhou.  

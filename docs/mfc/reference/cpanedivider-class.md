@@ -94,12 +94,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def39547a40c41d7e8d61d7ce9d54bb72e176985
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7315adc855b0bfbe1cc4ffae87c416fbaa584d57
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374672"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079358"
 ---
 # <a name="cpanedivider-class"></a>Classe CPaneDivider
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -203,7 +203,7 @@ void SetAutoHideMode(BOOL bMode);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bMode`  
+ [in] *bMode*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -215,7 +215,7 @@ void SetPaneContainerManager(CPaneContainerManager* p);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `p`  
+ [in] *p*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -227,7 +227,7 @@ virtual void AddPane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -247,10 +247,10 @@ virtual BOOL AddPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `barContainerManager`  
- [in] `bOuterEdge`  
- [in] `pTargetBar`  
- [in] `dwAlignment`  
+ [in] *barContainerManager*  
+ [in] *bOuterEdge*  
+ [in] *pTargetBar*  
+ [in] *dwAlignment*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -264,7 +264,7 @@ virtual CDockablePane* AddRecentPane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -283,11 +283,11 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWndToDock`  
- [in] `ptMouse`  
- [in] `rectResult`  
- [in] `bDrawTab`  
- [in] `ppTargetBar`  
+ [in] *pWndToDock*  
+ [in] *ptMouse*  
+ [in] *rectResult*  
+ [in] *bDrawTab*  
+ [in] *ppTargetBar*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -301,8 +301,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -332,8 +332,8 @@ CPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bDefaultSlider`  
- [in] `pParent`  
+ [in] *bDefaultSlider*  
+ [in] *pParent*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -353,12 +353,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwStyleEx`  
- [in] `dwStyle`  
- [in] `rect`  
- [in] `pParentWnd`  
- [in] `nID`  
- [in] `pContext`  
+ [in] *dwStyleEx*  
+ [in] *dwStyle*  
+ [in] *rect*  
+ [in] *pParentWnd*  
+ [in] *nID*  
+ [in] *pContext*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -396,8 +396,8 @@ CPaneContainer* FindPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
- [in] `bLeftBar`  
+ [in] *pBar*  
+ [in] *bLeftBar*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -411,7 +411,7 @@ CDockablePane* FindTabbedPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nID`  
+ [in] *nID*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -447,7 +447,7 @@ void GetPaneDividers(CObList& lstSliders);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `lstSliders`  
+ [out] *lstSliders*  
  Contém a lista de divisores de painel que residem no contêiner do painel.  
   
 ### <a name="remarks"></a>Comentários  
@@ -472,7 +472,7 @@ void GetPanes(CObList& lstBars);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `lstBars`  
+ [out] *lstBars*  
  Contém a lista de painéis que residem no contêiner do painel.  
   
 ### <a name="remarks"></a>Comentários  
@@ -510,8 +510,8 @@ void Init(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bDefaultSlider`  
- [in] `pParent`  
+ [in] *bDefaultSlider*  
+ [in] *pParent*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -527,10 +527,10 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBarToInsert`  
- [in] `pTargetBar`  
- [in] `dwAlignment`  
- [in] `lpRect`  
+ [in] *pBarToInsert*  
+ [in] *pTargetBar*  
+ [in] *dwAlignment*  
+ [in] *lpRect*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -586,8 +586,8 @@ virtual void Move(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `ptOffset`  
- [in] `bAdjustLayout`  
+ [in] *ptOffset*  
+ [in] *bAdjustLayout*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -632,8 +632,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
- [in] `bShow`  
+ [in] *pBar*  
+ [in] *bMostrar*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -654,7 +654,7 @@ virtual void RemovePane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -668,8 +668,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBarToReplace`  
- [in] `pBarToReplaceWith`  
+ [in] *pBarToReplace*  
+ [in] *pBarToReplaceWith*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -685,8 +685,8 @@ virtual void RepositionPanes(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `rectNew`  
- [in] `hdwp`  
+ [in] *rectNew*  
+ [in] *hdwp*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -698,7 +698,7 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -710,7 +710,7 @@ void ShowWindow(int nCmdShow);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nCmdShow`  
+ [in] *nCmdShow*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -722,7 +722,7 @@ void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -736,8 +736,8 @@ void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDockingBar`  
- [in] `pTabbedBar`  
+ [in] *pDockingBar*  
+ [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Comentários  
   

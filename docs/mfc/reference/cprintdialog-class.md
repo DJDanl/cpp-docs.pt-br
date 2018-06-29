@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d72b96e0be786aab18903e95f346eccd5364dd4b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377221"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079638"
 ---
 # <a name="cprintdialog-class"></a>Classe CPrintDialog
 Encapsula os serviços fornecidos pela caixa de diálogo comuns do Windows para impressão.  
@@ -159,13 +159,13 @@ CPrintDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bPrintSetupOnly`  
- Especifica se a caixa de diálogo de impressão do Windows padrão ou a caixa de diálogo Configurar impressão é exibida. Definir esse parâmetro como **TRUE** para exibir a caixa de diálogo de configuração de impressão do Windows padrão. Defina-a como **FALSE** para exibir a caixa de diálogo de impressão do Windows. Se `bPrintSetupOnly` é **FALSE**, um botão de opção de configurar impressão ainda é exibido na caixa de diálogo Imprimir.  
+ *bPrintSetupOnly*  
+ Especifica se a caixa de diálogo de impressão do Windows padrão ou a caixa de diálogo Configurar impressão é exibida. Definir esse parâmetro como **TRUE** para exibir a caixa de diálogo de configuração de impressão do Windows padrão. Defina-a como **FALSE** para exibir a caixa de diálogo de impressão do Windows. Se *bPrintSetupOnly* é **FALSE**, um botão de opção de configurar impressão ainda é exibido na caixa de diálogo Imprimir.  
   
- `dwFlags`  
+ *dwFlags*  
  Um ou mais sinalizadores que você pode usar para personalizar as configurações da caixa de diálogo, combinadas que usam o operador OR bit a bit. Por exemplo, o **PD_ALLPAGES** sinalizador define o intervalo de impressão padrão para todas as páginas do documento. Consulte o [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) estrutura no SDK do Windows para obter mais informações sobre esses sinalizadores.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para a janela do pai ou o proprietário da caixa de diálogo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -209,7 +209,7 @@ virtual INT_PTR DoModal();
   
  Depois de chamar `DoModal`, você pode chamar outro membro funções para recuperar as configurações ou a entrada de informações pelo usuário na caixa de diálogo.  
   
- Observe que, quando você chamar o construtor com `bPrintSetupOnly` definida como **FALSE**, o **PD_RETURNDC** sinalizador é usado automaticamente. Depois de chamar `DoModal`, `GetDefaults`, ou `GetPrinterDC`, será retornada uma controlador de domínio de impressora em `m_pd.hDC`. Este controlador de domínio deve ser liberado com uma chamada para [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) pelo chamador de `CPrintDialog`.  
+ Observe que, quando você chamar o construtor com *bPrintSetupOnly* definida como **FALSE**, o **PD_RETURNDC** sinalizador é usado automaticamente. Depois de chamar `DoModal`, `GetDefaults`, ou `GetPrinterDC`, será retornada uma controlador de domínio de impressora em `m_pd.hDC`. Este controlador de domínio deve ser liberado com uma chamada para [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) pelo chamador de `CPrintDialog`.  
   
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CPrintDialog::CreatePrinterDC](#createprinterdc).  
@@ -243,7 +243,7 @@ BOOL GetDefaults();
 ### <a name="remarks"></a>Comentários  
  Os valores recuperados são colocados no `m_pd` estrutura.  
   
- Em alguns casos, uma chamada para essa função chamará o [construtor](#cprintdialog) para `CPrintDialog` com `bPrintSetupOnly` definida como **FALSE**. Nesses casos, uma controlador de domínio de impressora e **hDevNames** e **hDevMode** (duas alças localizado no `m_pd` membro de dados) são alocados automaticamente.  
+ Em alguns casos, uma chamada para essa função chamará o [construtor](#cprintdialog) para `CPrintDialog` com *bPrintSetupOnly* definida como **FALSE**. Nesses casos, uma controlador de domínio de impressora e **hDevNames** e **hDevMode** (duas alças localizado no `m_pd` membro de dados) são alocados automaticamente.  
   
  Se o construtor para `CPrintDialog` foi chamado com `bPrintSetupOnly` definida como **FALSE**, essa função não retornará apenas **hDevNames** e **hDevMode** (localizado em **m_pd.hDevNames** e **m_pd.hDevMode**) para o chamador, mas também retornará uma impressora DC em **m_pd.hDC**. É responsabilidade do chamador para excluir a impressora DC e chamar o Windows [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) função em identificadores quando tiver terminado com o `CPrintDialog` objeto.  
   
@@ -345,7 +345,7 @@ HDC GetPrinterDC() const;
  Um identificador para o contexto de dispositivo de impressora se bem-sucedido; Caso contrário, **nulo**.  
   
 ### <a name="remarks"></a>Comentários  
- Se o `bPrintSetupOnly` parâmetro o `CPrintDialog` construtor foi **FALSE** (indicando que a caixa de diálogo Imprimir é exibida,), em seguida, `GetPrinterDC` retorna um identificador para o contexto de dispositivo de impressora. Você deve chamar o Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) função para excluir o contexto de dispositivo quando você terminar de usá-lo.  
+ Se o *bPrintSetupOnly* parâmetro o `CPrintDialog` construtor foi **FALSE** (indicando que a caixa de diálogo Imprimir é exibida,), em seguida, `GetPrinterDC` retorna um identificador para o dispositivo de impressora contexto. Você deve chamar o Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) função para excluir o contexto de dispositivo quando você terminar de usá-lo.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#109](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  

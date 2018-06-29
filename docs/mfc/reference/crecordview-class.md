@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3784bfd637c40f326a67807d0002fae66177ac37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3d040f2da622cbfd6d1577729861917a5a03270
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373479"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079141"
 ---
 # <a name="crecordview-class"></a>Classe CRecordView
 Uma exibição que mostra os registros do banco de dados em controles.  
@@ -109,10 +109,10 @@ explicit CRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Contém uma cadeia de caracteres terminada em nulo que é o nome de um recurso de modelo de caixa de diálogo.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Contém o número de identificação de um recurso de modelo de caixa de diálogo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -124,7 +124,7 @@ explicit CRecordView(UINT nIDTemplate);
  **CRecordView::OnInitialUpdate** chamadas `UpdateData`, que chama `DoDataExchange`. Essa chamada inicial para `DoDataExchange` conecta `CRecordView` controla (indiretamente) ao `CRecordset` campo membros de dados criados por ClassWizard. Esses membros de dados não podem ser usados até depois de chamar a classe base **CFormView::OnInitialUpdate** função de membro.  
   
 > [!NOTE]
->  Se você usar ClassWizard, o assistente define uma `enum` valor `CRecordView::IDD`, especifica-lo na declaração da classe e utiliza-o na lista de inicialização de membro para o construtor.  
+>  Se você usar ClassWizard, o assistente define uma **enum** valor `CRecordView::IDD`, especifica-lo na declaração da classe e utiliza-o na lista de inicialização de membro para o construtor.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDatabase#32](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
@@ -158,7 +158,7 @@ BOOL IsOnLastRecord();
  Essa função é útil para escrever suas próprias implementações do padrão manipuladores de atualização de comando que grava ClassWizard para dar suporte a uma interface do usuário para a movimentação de um registro para outro.  
   
 > [!CAUTION]
->  O resultado dessa função é confiável, exceto que o modo de exibição não pode detectar o final do conjunto de registros até que o usuário passou para ele. O usuário deve mover além do último registro antes que a exibição de registro pode dizer que ele deve desabilitar quaisquer objetos de interface do usuário para mover para o próximo ou o último registro. Se o usuário ultrapassar o último registro e, em seguida, volta para o último registro (ou antes dele), o modo de exibição de registro pode controlar a posição do usuário no conjunto de registros e desabilitar os objetos de interface de usuário corretamente. `IsOnLastRecord` também é confiável após uma chamada para a função de implementação **OnRecordLast**, que trata o `ID_RECORD_LAST` comando, ou `CRecordset::MoveLast`.  
+>  O resultado dessa função é confiável, exceto que o modo de exibição não pode detectar o final do conjunto de registros até que o usuário passou para ele. O usuário deve mover além do último registro antes que a exibição de registro pode dizer que ele deve desabilitar quaisquer objetos de interface do usuário para mover para o próximo ou o último registro. Se o usuário ultrapassar o último registro e, em seguida, volta para o último registro (ou antes dele), o modo de exibição de registro pode controlar a posição do usuário no conjunto de registros e desabilitar os objetos de interface de usuário corretamente. `IsOnLastRecord` também é confiável após uma chamada para a função de implementação `OnRecordLast`, que trata o `ID_RECORD_LAST` comando, ou `CRecordset::MoveLast`.  
   
 ##  <a name="ongetrecordset"></a>  CRecordView::OnGetRecordset  
  Retorna um ponteiro para o `CRecordset`-derivados do objeto associado à exibição de registro.  
@@ -171,7 +171,7 @@ virtual CRecordset* OnGetRecordset() = 0;
  Um ponteiro para um `CRecordset`-objeto derivado se o objeto foi criado com êxito; caso contrário, um **nulo** ponteiro.  
   
 ### <a name="remarks"></a>Comentários  
- Você deve substituir esta função de membro para criar ou obter um objeto de conjunto de registros e retornar um ponteiro para ele. Se você declarar a classe de exibição de registro com ClassWizard, o assistente grava uma substituição padrão para você. Implementação do padrão do ClassWizard retorna o ponteiro de conjunto de registros armazenado na exibição do registro, se houver. Se não, ele constrói um objeto de conjunto de registros do tipo especificado com ClassWizard e chama seu **abrir** membro de função para abrir a tabela ou executar a consulta e, em seguida, retorna um ponteiro para o objeto.  
+ Você deve substituir esta função de membro para criar ou obter um objeto de conjunto de registros e retornar um ponteiro para ele. Se você declarar a classe de exibição de registro com ClassWizard, o assistente grava uma substituição padrão para você. Implementação do padrão do ClassWizard retorna o ponteiro de conjunto de registros armazenado na exibição do registro, se houver. Se não, ele constrói um objeto de conjunto de registros do tipo especificado com ClassWizard e chama seu `Open` membro de função para abrir a tabela ou executar a consulta e, em seguida, retorna um ponteiro para o objeto.  
   
  Para obter mais informações e exemplos, consulte o artigo [exibições de registro: usando uma exibição de registro](../../data/using-a-record-view-mfc-data-access.md).  
   
@@ -198,7 +198,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Diferente de zero se a movimentação foi bem-sucedida; Caso contrário, 0 se a solicitação de movimentação foi negada.  
   
 ### <a name="remarks"></a>Comentários  
- A implementação padrão chama apropriada **mover** função de membro de `CRecordset` objeto associado à exibição de registro.  
+ A implementação padrão chama apropriada `Move` função de membro de `CRecordset` objeto associado à exibição de registro.  
   
  Por padrão, `OnMove` atualiza o registro atual na fonte de dados se o usuário alterou na exibição do registro.  
   
@@ -207,7 +207,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Se você mover além do último registro no conjunto de registros, o modo de exibição de registro continua a exibir o último registro. Se você retroceder após o primeiro registro, o modo de exibição de registro continua a exibir o primeiro registro.  
   
 > [!CAUTION]
->  Chamando `OnMove` lança uma exceção se o conjunto de registros não contém registros. Chame a função de manipulador de atualização de interface de usuário apropriado — **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, ou  **OnUpdateRecordPrev** — correspondente antes de operação de movimentação para determinar se o conjunto de registros tem todos os registros.  
+>  Chamando `OnMove` lança uma exceção se o conjunto de registros não contém registros. Chame a função de manipulador de atualização de interface de usuário apropriado — `OnUpdateRecordFirst`, `OnUpdateRecordLast`, `OnUpdateRecordNext`, ou `OnUpdateRecordPrev` — correspondente antes de operação de movimentação para determinar se o conjunto de registros tem todos os registros.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CFormView](../../mfc/reference/cformview-class.md)   

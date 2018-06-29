@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6846f50b0e89193992a42ea50e785009f31e6d19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c17c81fb39d4397c58b4baba7124de2bda646db7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378781"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079688"
 ---
 # <a name="cpaneframewnd-class"></a>Classe CPaneFrameWnd
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -271,7 +271,7 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWnd`  
+ [in] *pWnd*  
  O painel para adicionar.  
   
 ##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList  
@@ -284,10 +284,10 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWnd`  
+ [in] *pWnd*  
  O painel para adicionar ou remover.  
   
- [in] `bAdd`  
+ [in] *bAdicionar*  
  Se diferente de zero, adicione o painel. Se for 0, remova o painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -317,7 +317,7 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `rectBorderSize`  
+ [out] *rectBorderSize*  
  Contém o tamanho, em pixels, da borda da janela de miniquadros.  
   
 ### <a name="remarks"></a>Comentários  
@@ -336,23 +336,23 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWndToDock`  
+ [in] *pWndToDock*  
  Um ponteiro para a janela encaixar.  
   
- [in] `ptMouse`  
+ [in] *ptMouse*  
  O local do mouse.  
   
- [out] `rectResult`  
+ [out] *rectResult*  
  O retângulo calculado.  
   
- [out] `bDrawTab`  
+ [out] *bDrawTab*  
  Se `TRUE`, desenhar uma guia. Se `FALSE`, não desenhar uma guia.  
   
- [out] `ppTargetBar`  
+ [out] *ppTargetBar*  
  Um ponteiro para o painel de destino.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método calcula o retângulo que uma janela poderia ocupar se um usuário arrastar a janela para o ponto especificado por `ptMouse` e encaixado ele existe.  
+ Esse método calcula o retângulo que uma janela poderia ocupar se um usuário arrastar a janela para o ponto especificado por *ptMouse* e encaixado ele existe.  
   
 ##  <a name="canbeattached"></a>  CPaneFrameWnd::CanBeAttached  
  Determina se o painel atual pode ser encaixado outra janela do painel ou quadro.  
@@ -372,11 +372,11 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDockingBar`  
+ [in] *pDockingBar*  
  Um painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o minipode quadro ser encaixado `pDockingBar`; caso contrário, 0.  
+ Diferente de zero se o minipode quadro ser encaixado *pDockingBar*; caso contrário, 0.  
   
 ##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility  
 
@@ -407,19 +407,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszWindowName`  
+ [in] *lpszWindowName*  
  Especifica o texto a ser exibido na janela de miniquadros.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Especifica o estilo da janela. Para obter mais informações, consulte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `rect`  
+ [in] *rect*  
  Especifica o tamanho inicial e a posição da janela de miniquadros.  
   
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Especifica o quadro pai da janela de miniquadros. Esse valor não deve ser `NULL`.  
   
- [in] [out] `pContext`  
+ [in] [out] *pContext*  
  Especifica o contexto definido pelo usuário.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -442,22 +442,22 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwStyleEx`  
+ [in] *dwStyleEx*  
  Especifica o estilo de janela estendidos. Para obter mais informações, consulte [estilos de janela estendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
- [in] `lpszWindowName`  
+ [in] *lpszWindowName*  
  Especifica o texto a ser exibido na janela de miniquadros.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Especifica o estilo da janela. Para obter mais informações, consulte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `rect`  
+ [in] *rect*  
  Especifica o tamanho inicial e a posição da janela de miniquadros.  
   
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Especifica o quadro pai da janela de miniquadros. Esse valor não deve ser `NULL`.  
   
- [in] [out] `pContext`  
+ [in] [out] *pContext*  
  Especifica o contexto definido pelo usuário.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -474,7 +474,7 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `bWasDocked`  
+ [out] *bWasDocked*  
  `TRUE` Se o painel já foi encaixado; Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -488,7 +488,7 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nID`  
+ [in] *nID*  
  Representa a ID de controle do painel para localizar.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -506,20 +506,20 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pt`  
+ [in] *pt*  
  O ponto em coordenadas da tela.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  A área de pesquisa da janela do miniaumente quadro esse tamanho. Uma janela do minisatisfaz quadro os critérios de pesquisa se determinado ponto estiver na área de trabalho maior.  
   
- [in] `pFrameToExclude`  
+ [in] *pFrameToExclude*  
  Especifica uma janela do minipara quadro excluir da pesquisa.  
   
- [in] `bFloatMultiOnly`  
+ [in] *bFloatMultiOnly*  
  Se `TRUE`, pesquisar somente janelas com minique moldura têm o `CBRS_FLOAT_MULTI` estilo. Se `FALSE`, pesquisar todas as janelas de quadro simplificado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para a janela do minique quadro contém `pt`; caso contrário, `NULL`.  
+ Um ponteiro para a janela do minique quadro contém *pt*; caso contrário, `NULL`.  
   
 ##  <a name="getcaptionheight"></a>  CPaneFrameWnd::GetCaptionHeight  
  Retorna a altura da legenda da janela do mini quadro.  
@@ -542,7 +542,7 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `rectCaption`  
+ [out] *rectCaption*  
  Contém o tamanho e a posição da legenda da janela do quadro simplificado, em coordenadas da tela.  
   
 ### <a name="remarks"></a>Comentários  
@@ -688,10 +688,10 @@ virtual LRESULT HitTest(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  O ponto de teste.  
   
- [in] `bDetectCaption`  
+ [in] *bDetectCaption*  
  Se `TRUE`, verifique o ponto em relação a legenda. Se `FALSE`, ignorar a legenda.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -780,10 +780,10 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  O nome do perfil.  
   
- [in] `uiID`  
+ [in] *uiID*  
  A ID do painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -836,7 +836,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
+ [in] *pDC*  
  O contexto de dispositivo usado para desenhar a borda.  
   
 ### <a name="remarks"></a>Comentários  
@@ -859,10 +859,10 @@ virtual void OnMovePane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
+ [in] *pBar*  
  Um ponteiro para um painel (ignorado).  
   
- [in] `ptOffset`  
+ [in] *ptOffset*  
  O deslocamento pela qual mover o painel.  
   
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
@@ -894,10 +894,10 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
+ [in] *pBar*  
  O painel que está sendo mostrado ou oculto.  
   
- [in] `bShow`  
+ [in] *bMostrar*  
  `TRUE` Se o painel está sendo exibido; `FALSE` se o painel está sendo ocultado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -911,7 +911,7 @@ void Pin(BOOL bPin = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bPin`  
+ [in] *bPin*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -926,13 +926,13 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `point`  
+ [in] *ponto*  
  O ponto que o usuário clicou em coordenadas da tela.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  Este parâmetro não é usado.  
   
- [in] `bCheckVisibility`  
+ [in] *bCheckVisibility*  
  `TRUE` para especificar que somente os painéis visíveis devem ser retornados; Caso contrário, `FALSE`.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -969,17 +969,17 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pWnd`  
+ [in] *pWnd*  
  Um ponteiro para o painel para remover.  
   
- [in] `bDestroy`  
- Especifica o que acontece com a janela do quadro simplificado. Se `bDestroy` é `TRUE`, este método destrói a janela do mini-quadro imediatamente. Se for `FALSE`, este método destrói a janela do quadro mini após um determinado intervalo.  
+ [in] *bDestroy*  
+ Especifica o que acontece com a janela do quadro simplificado. Se *bDestroy* é `TRUE`, este método destrói a janela do mini-quadro imediatamente. Se for `FALSE`, este método destrói a janela do quadro mini após um determinado intervalo.  
   
- [in] `bNoDelayedDestroy`  
+ [in] *bNoDelayedDestroy*  
  Se `TRUE`, atrasada destruição está desabilitada. Se `FALSE`, atrasada destruição está habilitada.  
   
 ### <a name="remarks"></a>Comentários  
- A estrutura pode destruir janelas com mini-moldura imediatamente ou após um determinado intervalo. Se você deseja atrasar a destruição de janelas com moldura simplificado, passar `FALSE` no `bNoDelayedDestroy` parâmetro. Destruição atrasada ocorre quando o framework processa o `AFX_WM_CHECKEMPTYMINIFRAME` mensagem.  
+ A estrutura pode destruir janelas com mini-moldura imediatamente ou após um determinado intervalo. Se você deseja atrasar a destruição de janelas com moldura simplificado, passar `FALSE` no *bNoDelayedDestroy* parâmetro. Destruição atrasada ocorre quando o framework processa o `AFX_WM_CHECKEMPTYMINIFRAME` mensagem.  
   
 ##  <a name="replacepane"></a>  CPaneFrameWnd::ReplacePane  
  Substitui um painel com outra.  
@@ -991,10 +991,10 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBarOrg`  
+ [in] *pBarOrg*  
  Um ponteiro para o painel original.  
   
- [in] `pBarReplaceWith`  
+ [in] *pBarReplaceWith*  
  Um ponteiro para o painel que substitui o painel de dados original.  
   
 ##  <a name="savestate"></a>  CPaneFrameWnd::SaveState  
@@ -1007,10 +1007,10 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  O nome do perfil.  
   
- [in] `uiID`  
+ [in] *uiID*  
  A ID do painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1024,7 +1024,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `dwButtons`  
+ [in] *dwButtons*  
  Combinação de OR bit a bit dos valores a seguir:  
   
 - `AFX_CAPTION_BTN_CLOSE`  
@@ -1043,7 +1043,7 @@ void SetDelayShow(BOOL bDelayShow);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bDelayShow`  
+ [in] *bDelayShow*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1055,7 +1055,7 @@ void SetDockingManager(CDockingManager* pManager);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pManager`  
+ [in] *pManager*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1067,7 +1067,7 @@ void SetDockingTimer(UINT nTimeOut);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `nTimeOut`  
+ [in] *nTimeOut*  
  Valor de tempo limite em milissegundos.  
   
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState  
@@ -1078,7 +1078,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDockManager`  
+ [in] *pDockManager*  
  Um ponteiro para um Gerenciador de encaixe.  
   
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint  
@@ -1089,7 +1089,7 @@ void SetHotPoint(CPoint& ptNew);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `ptNew`  
+ [in] *ptNew*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1104,7 +1104,7 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `preDockState`  
+ [in] *preDockState*  
  Valores possíveis:  
   
 - `PDS_NOTHING`,  
@@ -1113,10 +1113,10 @@ virtual BOOL SetPreDockState(
   
 - `PDS_DOCK_TO_TAB`  
   
- [in] `pBarToDock`  
+ [in] *pBarToDock*  
  Um ponteiro para encaixar o painel.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  O método de encaixe. (Esse parâmetro é ignorado).  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1140,7 +1140,7 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pMenu`  
+ [in] *pMenu*  
  Um ponteiro para um menu.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -1154,7 +1154,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1168,8 +1168,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDockingBar`  
- [in] `pTabbedBar`  
+ [in] *pDockingBar*  
+ [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Comentários  
   

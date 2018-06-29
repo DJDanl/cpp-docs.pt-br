@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36f620f0a29e7d1715e7cb5bfb83c0685f97f643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 022fe884f611eb5bc3254ef23c7078280e2a1046
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374934"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078537"
 ---
 # <a name="cpanedialog-class"></a>Classe CPaneDialog
 O `CPaneDialog` classe oferece suporte a uma caixa de diálogo sem janela restrita, acopláveis.  
@@ -58,7 +58,7 @@ class CPaneDialog : public CDockablePane
 |`CPaneDialog::OnEraseBkgnd`|Manipula o [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) mensagem. (Redefine [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
 |`CPaneDialog::OnLButtonDblClk`|Manipula o [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) mensagem. (Redefine [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
 |`CPaneDialog::OnLButtonDown`|Manipula o [WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607) mensagem. (Redefine [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
-|`CPaneDialog::OnUpdateCmdUI`|Chamado pelo framework para atualizar a janela da caixa de diálogo. (Substitui [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|`CPaneDialog::OnUpdateCmdUI`|Chamado pelo framework para atualizar a janela da caixa de diálogo. (Substitui [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
 |`CPaneDialog::OnWindowPosChanging`|Manipula o [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) mensagem. (Redefine [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Especifica o modelo para uma caixa de diálogo que é um contêiner de controle OLE.|  
   
@@ -122,31 +122,31 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `lpszWindowName`  
+ [in] *lpszWindowName*  
  O nome da caixa de diálogo de encaixe.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Aponta para a janela pai.  
   
- [in] `bHasGripper`  
+ [in] *bHasGripper*  
  `TRUE` para criar a caixa de diálogo de encaixe com uma legenda (garra); Caso contrário, `FALSE`.  
   
- [in] `lpszTemplateName`  
+ [in] *lpszTemplateName*  
  O nome do modelo de caixa de diálogo de recursos.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  O estilo do Windows.  
   
- [in] `nID`  
+ [in] *nID*  
  A ID do controle.  
   
- [in] `nIDTemplate`  
+ [in] *nIDTemplate*  
  A ID de recurso do modelo de caixa de diálogo.  
   
- [in] `dwTabbedStyle`  
+ [in] *dwTabbedStyle*  
  O estilo da janela com guias que ocorre quando o usuário arrasta outro painel de controle para a legenda deste painel de controle. O valor padrão é `AFX_CBRS_REGULAR_TABS`. Para obter mais informações, consulte a seção comentários a [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) método.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Atributos de estilo adicionais. O valor padrão é `AFX_DEFAULT_DOCKING_PANE_STYLE`. Para obter mais informações, consulte a seção comentários a [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) método.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -170,14 +170,14 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `wParam`  
+ [in] *wParam*  
  Identificador para o controle que deve receber o foco do teclado padrão.  
   
- [in] `lParam`  
+ [in] *lParam*  
  Especifica os dados de inicialização adicionais.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se esse método for bem-sucedida; Caso contrário, `FALSE`. Além disso, `TRUE` define o foco do teclado para o controle especificado pelo `wParam` parâmetro; `FALSE` impede que definir o foco do teclado padrão.  
+ `TRUE` Se esse método for bem-sucedida; Caso contrário, `FALSE`. Além disso, `TRUE` define o foco do teclado para o controle especificado pelo *wParam* parâmetro; `FALSE` impede que definir o foco do teclado padrão.  
   
 ### <a name="remarks"></a>Comentários  
  A estrutura usa esse método para inicializar a aparência de uma caixa de diálogo e controles. O framework chama esse método antes de exibir a caixa de diálogo.  
@@ -190,7 +190,7 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pOccDialogInfo`  
+ [in] *pOccDialogInfo*  
  Ponteiro para um modelo de caixa de diálogo que é usado para criar o objeto de caixa de diálogo. Posteriormente, o valor desse parâmetro é passado para o [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) método.  
   
 ### <a name="return-value"></a>Valor de retorno  

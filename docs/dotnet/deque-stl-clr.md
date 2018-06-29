@@ -108,12 +108,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ec92f1fcda75c8d632ea2c5a8f66583d960c744a
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 881db763518f31d9682ba050e460d4a3f7b39317
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305859"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079819"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 A classe de modelo descreve um objeto que controla uma sequência de comprimento variável de elementos que tenha acesso aleatório. Você usa o contêiner `deque` para gerenciar uma sequência de elementos que se parece com um bloco de contíguo de armazenamento, mas que pode aumentar ou diminuir em ambas as extremidades sem a necessidade de copiar todos os elementos restantes. Assim, ela pode implementar com eficiência um `double-ended queue`. (Portanto, o nome.)  
@@ -148,7 +148,7 @@ template<typename Value>
   
  **Namespace:** cliext  
 
-## <a name="members"></a>Membros  
+## <a name="declarations"></a>Declarações  
   
 |Definição do tipo|Descrição|  
 |---------------------|-----------------|  
@@ -229,7 +229,7 @@ template<typename Value>
   
  Apagar ou remover um elemento chama o destruidor para seu valor armazenado. Destruir o contêiner apaga todos os elementos. Assim, um contêiner cujo tipo de elemento é uma classe ref garante que nenhum elemento duram mais tempo o contêiner. No entanto, observe que um contêiner de identificadores não `not` destruir seus elementos.  
  
-## <a name="member-definitions"></a>Definições de membro
+## <a name="members"></a>Membros
 
 ## <a name="assign"></a> Assign (STL/CLR)
 Substitui todos os elementos.  

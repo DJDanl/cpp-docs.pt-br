@@ -119,12 +119,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4e6ae13efabd34c6c685b07691789634ca0aed9c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: db7398512e6b981f4da3fc0b88b6fbc7890c6016
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305911"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079780"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 A classe de modelo descreve um objeto que controla uma sequência de comprimento variável de elementos que tenha acesso bidirecional. Você usa o contêiner `list` para gerenciar uma sequência de elementos como uma lista vinculada bidirecional de nós, cada armazenamento de um elemento.  
@@ -146,7 +146,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  Valor  
  O tipo de um elemento na sequência controlada.  
   
@@ -155,7 +155,7 @@ template<typename Value>
   
  **Namespace:** cliext 
 
-## <a name="members"></a>Membros  
+## <a name="declarations"></a>Declarações  
   
 |Definição do tipo|Descrição|  
 |---------------------|-----------------|  
@@ -240,6 +240,8 @@ template<typename Value>
   
  Apagar ou remover um elemento chama o destruidor para seu valor armazenado. Destruir o contêiner apaga todos os elementos. Assim, um contêiner cujo tipo de elemento é uma classe ref garante que nenhum elemento duram mais tempo o contêiner. No entanto, observe que um contêiner de identificadores não `not` destruir seus elementos.  
   
+## <a name="members"></a>Membros
+
 ## <a name="assign"></a> List:: Assign (STL/CLR)
 Substitui todos os elementos.  
   
@@ -256,7 +258,7 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
  count  
  Número de elementos a inserir.  
   
- primeiro  
+ Primeiro  
  Início do intervalo a ser inserido.  
   
  last  
@@ -823,7 +825,7 @@ iterator erase(iterator first, iterator last);
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- primeiro  
+ Primeiro  
  Início do intervalo a ser apagado.  
   
  last  
@@ -1240,7 +1242,7 @@ void insert(iterator where,
  count  
  Número de elementos a inserir.  
   
- primeiro  
+ Primeiro  
  Início do intervalo a ser inserido.  
   
  last  
@@ -2456,7 +2458,7 @@ void splice(iterator where, list<Value>% right,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- primeiro  
+ Primeiro  
  Início do intervalo para juntar.  
   
  last  

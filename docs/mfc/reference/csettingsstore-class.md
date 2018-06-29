@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5ed7d1dad634d330ac857f52d6ef35ef36c9c9a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7711e0105085f0b7af1344ce230839e90f2b6851
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376887"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079482"
 ---
 # <a name="csettingsstore-class"></a>Classe CSettingsStore
 Encapsula as funções de API do Windows, fornecendo uma interface orientada a objeto que você usa para acessar o registro.  
@@ -102,14 +102,14 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pszPath`  
+ [in] *pszPath*  
  Especifica o nome de uma chave a ser criado ou aberto.  
   
 ### <a name="return-value"></a>Valor de retorno  
  0 se for bem-sucedido; Caso contrário, um valor diferente de zero.  
   
 ### <a name="remarks"></a>Comentários  
- `CreateKey` usa `m_hKey` como a raiz de consultas de registro. Ele procura `pszPath` como uma subchave de `m_hKey`. Se a chave não existir, `CreateKey` cria. Caso contrário, ele abre a chave. `CreateKey` em seguida, define `m_hKey` para a chave criada ou aberta.  
+ `CreateKey` usa `m_hKey` como a raiz de consultas de registro. Ele procura *pszPath* como uma subchave de `m_hKey`. Se a chave não existir, `CreateKey` cria. Caso contrário, ele abre a chave. `CreateKey` em seguida, define `m_hKey` para a chave criada ou aberta.  
   
 ##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
  Cria um objeto `CSettngsStore`.  
@@ -121,16 +121,16 @@ CSettingsStore(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bAdmin`  
+ [in] *bCaminho Admin*  
  Parâmetro booleano que especifica se o `CSettingsStore` objeto está funcionando no modo de administrador.  
   
- [in] `bReadOnly`  
+ [in] *bReadOnly*  
  Parâmetro booleano que especifica se o `CSettingsStore` objeto é criado no modo somente leitura.  
   
 ### <a name="remarks"></a>Comentários  
- Se `bAdmin` é definido como `true`, o `m_hKey` variável de membro é definido como `HKEY_LOCAL_MACHINE`. Se você definir `bAdmin` para `false`, `m_hKey` é definido como `HKEY_CURRENT_USER`.  
+ Se *bCaminho Admin* é definido como `true`, o `m_hKey` variável de membro é definido como `HKEY_LOCAL_MACHINE`. Se você definir *bCaminho Admin* para `false`, `m_hKey` é definido como `HKEY_CURRENT_USER`.  
   
- A segurança de acesso depende do `bReadOnly` parâmetro. Se `bReadonly` é `false`, o acesso de segurança será definido como `KEY_ALL_ACCESS`. Se `bReadyOnly` é `true`, o acesso de segurança será definido como uma combinação de `KEY_QUERY_VALUE, KEY_NOTIFY` e `KEY_ENUMERATE_SUB_KEYS`. Para obter mais informações sobre o acesso de segurança junto com o registro, consulte [direitos de acesso e segurança de chave do registro](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
+ A segurança de acesso depende do *bReadOnly* parâmetro. Se *bReadonly* é `false`, o acesso de segurança será definido como `KEY_ALL_ACCESS`. Se *bReadyOnly* é `true`, o acesso de segurança será definido como uma combinação de `KEY_QUERY_VALUE, KEY_NOTIFY` e `KEY_ENUMERATE_SUB_KEYS`. Para obter mais informações sobre o acesso de segurança junto com o registro, consulte [direitos de acesso e segurança de chave do registro](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
   
  O destruidor de `CSettingsStore` libera `m_hKey` automaticamente.  
   
@@ -144,10 +144,10 @@ virtual BOOL DeleteKey(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pszPath`  
+ [in] *pszPath*  
  O nome da chave a ser excluída.  
   
- [in] `bAdmin`  
+ [in] *bCaminho Admin*  
  Opção que especifica o local da chave para excluir.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -156,7 +156,7 @@ virtual BOOL DeleteKey(
 ### <a name="remarks"></a>Comentários  
  Esse método irá falhar se o `CSettingsStore` objeto está no modo somente leitura.  
   
- Se o parâmetro `bAdmin` for zero, `DeleteKey` procura a chave a ser excluída em `HKEY_CURRENT_USER`. Se `bAdmin` é diferente de zero, `DeleteKey` procura a chave a ser excluída em `HKEY_LOCAL_MACHINE`.  
+ Se o parâmetro *bCaminho Admin* for zero, `DeleteKey` procura a chave a ser excluída em `HKEY_CURRENT_USER`. Se *bCaminho Admin* é diferente de zero, `DeleteKey` procura a chave a ser excluída em `HKEY_LOCAL_MACHINE`.  
   
 ##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
  Exclui um valor de `m_hKey`.  
@@ -166,7 +166,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pszValue`  
+ [in] *pszValue*  
  Especifica o campo de valor a ser removido.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -180,7 +180,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pszPath`  
+ [in] *pszPath*  
  O nome de uma chave do registro.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -265,59 +265,59 @@ virtual BOOL Read(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pszKey`  
+ [in] *pszKey*  
  Ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome do valor a ser lido no registro.  
   
- [out] `iVal`  
+ [out] *iVal*  
  Referência a uma variável inteira que recebe o valor da chave do registro de leitura.  
   
- [out] `dwVal`  
+ [out] *dwVal*  
  Referência a uma variável de palavra dupla de 32 bits que recebe o valor da chave do registro de leitura.  
   
- [out] `sVal`  
+ [out] *sVal*  
  Referência a uma variável de cadeia de caracteres que recebe o valor da chave do registro de leitura.  
   
- [out] `scStringList`  
+ [out] *scStringList*  
  Referência a uma variável de lista de cadeia de caracteres que recebe o valor da chave do registro de leitura.  
   
- [out] `scArray`  
+ [out] *scArray*  
  Referência a uma variável de matriz de cadeia de caracteres que recebe o valor da chave do registro de leitura.  
   
- [out] `dwcArray`  
+ [out] *dwcArray*  
  Referência a uma variável de matriz de palavra dupla de 32 bits que recebe o valor da chave do registro de leitura.  
   
- [out] `wcArray`  
+ [out] *wcArray*  
  Referência a uma variável de matriz de palavra de 16 bits que recebe o valor da chave do registro de leitura.  
   
- [out] `bcArray`  
+ [out] *bcArray*  
  Referência a uma variável de matriz de bytes que recebe o valor da chave do registro de leitura.  
   
- [out] `lpPoint`  
+ [out] *lpPoint*  
  Referência a um ponteiro para um `POINT` ler estrutura que recebe o valor da chave do registro.  
   
- [out] `rect`  
+ [out] *rect*  
  Referência a um [CRect](../../atl-mfc-shared/reference/crect-class.md) ler variável que recebe o valor da chave do registro.  
   
- [out] `ppData`  
+ [out] *ppData*  
  Leitura de ponteiro para um ponteiro para dados que recebe o valor da chave do registro.  
   
- [out] `pBytes`  
- Ponteiro para uma variável de inteiro não assinado. Essa variável recebe o tamanho do buffer que `ppData` aponta para.  
+ [out] *petabytes*  
+ Ponteiro para uma variável de inteiro não assinado. Essa variável recebe o tamanho do buffer que *ppData* aponta para.  
   
- [out] `list`  
+ [out] *lista*  
  Referência a um [CObList](../../mfc/reference/coblist-class.md) ler variável que recebe o valor da chave do registro.  
   
- [out] `obj`  
+ [out] *obj*  
  Referência a um [CObject](../../mfc/reference/cobject-class.md) ler variável que recebe o valor da chave do registro.  
   
- [out] `pObj`  
+ [out] *pObj*  
  Referência a um ponteiro para um `CObject` ler variável que recebe o valor da chave do registro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- `Read` verifica se há `pszKey` como uma subchave de `m_hKey`.  
+ `Read` verifica se há *pszKey* como uma subchave de `m_hKey`.  
   
 ##  <a name="write"></a>  CSettingsStore::Write  
  Grava um valor do registro na chave aberta.  
@@ -395,59 +395,59 @@ virtual BOOL Write(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pszKey`  
+ [in] *pszKey*  
  Ponteiro para uma cadeia de caracteres que contém o nome do valor a ser definido.  
   
- [in] `iVal`  
+ [in] *iVal*  
  Referência a uma variável de inteiro que contém os dados para armazenar.  
   
- [in] `dwVal`  
+ [in] *dwVal*  
  Referência a uma variável de palavra dupla de 32 bits que contém os dados para armazenar.  
   
- [in] `pszVal`  
+ [in] *pszVal*  
  Ponteiro para uma variável de cadeia de caracteres terminada em nulo que contém os dados para armazenar.  
   
- [in] `scStringList`  
+ [in] *scStringList*  
  Referência a um [CStringList](../../mfc/reference/cstringlist-class.md) variável que contém os dados para armazenar.  
   
- [in] `bcArray`  
+ [in] *bcArray*  
  Referência a uma variável de matriz de bytes que contém os dados para armazenar.  
   
- [in] `scArray`  
+ [in] *scArray*  
  Referência a uma variável de matriz de cadeia de caracteres que contém os dados para armazenar.  
   
- [in] `dwcArray`  
+ [in] *dwcArray*  
  Referência a uma variável de matriz de palavra dupla de 32 bits que contém os dados para armazenar.  
   
- [in] `wcArray`  
+ [in] *wcArray*  
  Referência a uma variável de matriz de palavra de 16 bits que contém os dados para armazenar.  
   
- [in] `rect`  
+ [in] *rect*  
  Referência a um [CRect](../../atl-mfc-shared/reference/crect-class.md) variável que contém os dados para armazenar.  
   
- [in] `lpPoint`  
+ [in] *lpPoint*  
  Referência a um ponteiro para um `POINT` variável que contém os dados para armazenar.  
   
- [in] `pData`  
+ [in] *pData*  
  Ponteiro para um buffer que contém os dados para armazenar.  
   
- [in] `nBytes`  
- Especifica o tamanho, em bytes, dos dados para o qual o `pData` pontos de parâmetro.  
+ [in] *nBytes*  
+ Especifica o tamanho, em bytes, dos dados para o qual o *pData* pontos de parâmetro.  
   
- [in] `list`  
+ [in] *lista*  
  Referência a um [CObList](../../mfc/reference/coblist-class.md) variável que contém os dados para armazenar.  
   
- [in] `obj`  
+ [in] *obj*  
  Referência a um [CObject](../../mfc/reference/cobject-class.md) variável que contém os dados para armazenar.  
   
- [in] `pObj`  
+ [in] *pObj*  
  Ponteiro para um ponteiro para um `CObject` variável que contém os dados para armazenar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE` caso bem-sucedido; caso contrário, `FALSE`.  
   
 ### <a name="remarks"></a>Comentários  
- Para gravar no registro, você deve definir `bReadOnly` para um valor diferente de zero quando você cria um [CSettingsStore](../../mfc/reference/csettingsstore-class.md) objeto. Para obter mais informações, consulte [CSettingsStore::CSettingsStore](#csettingsstore).  
+ Para gravar no registro, você deve definir *bReadOnly* para um valor diferente de zero quando você cria um [CSettingsStore](../../mfc/reference/csettingsstore-class.md) objeto. Para obter mais informações, consulte [CSettingsStore::CSettingsStore](#csettingsstore).  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   

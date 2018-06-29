@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e005d18b57a4ada2c1a3aad605b7724f17a62347
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376640"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079092"
 ---
 # <a name="cprintdialogex-class"></a>Classe CPrintDialogEx
 Encapsula os serviços fornecidos por folha de propriedades de impressão do Windows.  
@@ -146,10 +146,10 @@ CPrintDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwFlags`  
+ *dwFlags*  
  Um ou mais sinalizadores que você pode usar para personalizar as configurações da caixa de diálogo, combinadas que usam o operador OR bit a bit. Por exemplo, o **PD_ALLPAGES** sinalizador define o intervalo de impressão padrão para todas as páginas do documento. Consulte o [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) estrutura no SDK do Windows para obter mais informações sobre esses sinalizadores.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para a janela do pai ou o proprietário da caixa de diálogo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -248,7 +248,7 @@ CString GetDriverName() const;
  Um `CString` especificando o nome do driver definidos pelo sistema.  
   
 ### <a name="remarks"></a>Comentários  
- Usar um ponteiro para o `CString` objeto retornado por `GetDriverName` como o valor de `lpszDriverName` em uma chamada para [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
+ Usar um ponteiro para o `CString` objeto retornado por `GetDriverName` como o valor de *lpszDriverName* em uma chamada para [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
 ##  <a name="getportname"></a>  CPrintDialogEx::GetPortName  
  Chamar essa função depois de chamar [DoModal](#domodal) ou [GetDefaults](#getdefaults) para recuperar o nome da porta da impressora selecionada no momento.  

@@ -59,12 +59,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 598159ff01fe1628a693085f84077d9adfcbbf49
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: a472284df67993a65de98df7db698ea533451ea3
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305534"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079430"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 O cabeçalho STL/CLR `<cliext/adapter>` especifica duas classes de modelo (`collection_adapter` e `range_adapter`) e a função de modelo `make_collection`.  
@@ -80,7 +80,7 @@ O cabeçalho STL/CLR `<cliext/adapter>` especifica duas classes de modelo (`coll
   
  **Namespace:** cliext 
   
-## <a name="members"></a>Membros  
+## <a name="declarations"></a>Declarações  
   
 |Classe|Descrição|  
 |-----------|-----------------|  
@@ -91,6 +91,8 @@ O cabeçalho STL/CLR `<cliext/adapter>` especifica duas classes de modelo (`coll
 |--------------|-----------------|  
 |[make_collection (STL/CLR)](#make_collection)|Cria um adaptador de intervalo usando um par iterador.|   
   
+## <a name="members"></a>Membros
+
 ## <a name="collection_adapter"></a> collection_adapter (STL/CLR)
 Encapsula uma coleção .NET para uso como um contêiner STL/CLR. A `collection_adapter` é uma classe de modelo que descreve um objeto de contêiner STL/CLR simples. Ele encapsula uma interface de classe biblioteca BCL (Base) e retorna um par de iterador que é usada para manipular a sequência controlada.  
   
@@ -990,7 +992,7 @@ template<typename Iter>
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- iter  
+ Iter  
  O tipo associado os iteradores encapsulados.  
   
 ### <a name="members"></a>Membros  
@@ -1083,7 +1085,7 @@ range_adapter(Iter first, Iter last);
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- primeiro  
+ Primeiro  
  Primeiro iterador para encapsular.  
   
  last  

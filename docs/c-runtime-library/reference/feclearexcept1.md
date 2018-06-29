@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe943bcc0a1e1a027e432911bd2ad722fc7c7c1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: face2637f308a56d95baa7563a6409dd38870d73
+ms.sourcegitcommit: 2f571220e16f6c20e1fdb005f6cbc9e7ef5608f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399017"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070071"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -72,7 +72,7 @@ O **feclearexcept** função tenta limpar flutuante ponto sinalizadores de statu
 |FE_INVALID|Ocorreu um erro de domínio em uma operação de ponto flutuante anterior.|
 |FE_OVERFLOW|Ocorreu um erro de intervalo. O resultado de uma operação de ponto flutuante anterior era muito grande para ser representado.|
 |FE_UNDERFLOW|O resultado de uma operação de ponto flutuante anterior era muito pequeno para ser representado na precisão total. Um valor de denormal foi criado.|
-|FE_ALLEXCEPT|O OR bit a bit de todas as exceções de ponto flutuante com suporte.|
+|FE_ALL_EXCEPT|O OR bit a bit de todas as exceções de ponto flutuante com suporte.|
 
 O *excepts* argumento pode ser zero ou o OR bit a bit de um ou mais as macros de exceção com suporte. O resultado de qualquer outro valor de argumento é indefinido.
 

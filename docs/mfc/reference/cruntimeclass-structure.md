@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365247dc41ea75e67f63b2bb76b5bfe0c14a7ead
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e36baac5850942239bc9e553ed041a2914f8d670
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376285"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079538"
 ---
 # <a name="cruntimeclass-structure"></a>Estrutura CRuntimeClass
 Cada classe derivada de `CObject` está associado com um `CRuntimeClass` estrutura que você pode usar para obter informações sobre um objeto ou sua classe base em tempo de execução.  
@@ -83,7 +83,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszClassName`  
+ *lpszClassName*  
  O nome familiar da classe a ser criado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -105,11 +105,11 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszClassName`  
+ *lpszClassName*  
  O nome familiar de uma classe derivado da `CObject`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para um `CRuntimeClass` objeto, correspondente ao nome conforme transmitido `lpszClassName`. A função retorna **nulo** se nenhum nome de classe correspondente foi encontrado.  
+ Um ponteiro para um `CRuntimeClass` objeto, correspondente ao nome conforme transmitido *lpszClassName*. A função retorna **nulo** se nenhum nome de classe correspondente foi encontrado.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]  
@@ -134,7 +134,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
  A relação é determinada pelo "caminhada" da classe do membro, a cadeia de classes derivadas para cima. Essa função retorna apenas **FALSE** se nenhuma correspondência for encontrada para a classe base.  
   
 > [!NOTE]
->  Para usar o `CRuntimeClass` estrutura, você deve incluir o `IMPLEMENT_DYNAMIC`, `IMPLEMENT_DYNCREATE`, ou `IMPLEMENT_SERIAL` macro na implementação da classe para a qual você deseja recuperar informações de objeto de tempo de execução.  
+>  Para usar o `CRuntimeClass` estrutura, você deve incluir a macro IMPLEMENT_DYNAMIC, IMPLEMENT_DYNCREATE ou IMPLEMENT_SERIAL na implementação da classe para a qual você deseja recuperar informações de objeto de tempo de execução.  
   
  Para obter mais informações sobre como usar `CRuntimeClass`, consulte o artigo [classe CObject: acessar informações de classe de tempo de execução](../../mfc/accessing-run-time-class-information.md).  
   

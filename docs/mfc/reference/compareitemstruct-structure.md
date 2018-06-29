@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94d39c6b6c256444cd2850f7e55a7e4b87f6d7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a54b4f4749e7865d793559a9cb5f475c1d57898
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368625"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078252"
 ---
 # <a name="compareitemstruct-structure"></a>Estrutura COMPAREITEMSTRUCT
 O `COMPAREITEMSTRUCT` estrutura fornece os identificadores e os dados fornecidos pelo aplicativo para dois itens em uma caixa de lista classificada, desenhados pelo proprietário ou caixa de combinação.  
@@ -41,13 +41,13 @@ typedef struct tagCOMPAREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `CtlType`  
+ *CtlType*  
  **ODT_LISTBOX** (que especifica uma caixa de listagem do desenho proprietário) ou **ODT_COMBOBOX** (que especifica uma caixa de combinação do desenho proprietário).  
   
- `CtlID`  
+ *CtlID*  
  A identificação do controle de caixa de listagem ou caixa de combinação.  
   
- `hwndItem`  
+ *hwndItem*  
  O identificador de janela do controle.  
   
  *itemID1*  
@@ -63,7 +63,7 @@ typedef struct tagCOMPAREITEMSTRUCT {
  Dados fornecidos pelo aplicativo para o segundo item que estão sendo comparado. Esse valor foi passado na chamada que adicionou o item à caixa de combinação ou lista.  
   
 ## <a name="remarks"></a>Comentários  
- Sempre que um aplicativo adiciona um novo item a uma caixa de listagem de desenho proprietário ou caixa de combinação criada com o **CBS_SORT** ou **LBS_SORT** estilo, o Windows envia o proprietário de um `WM_COMPAREITEM` mensagem. O `lParam` parâmetro da mensagem contém um ponteiro de tempo para um `COMPAREITEMSTRUCT` estrutura. Ao receber a mensagem, o proprietário compara os dois itens e retorna um valor que indica qual item classifica antes da outra.  
+ Sempre que um aplicativo adiciona um novo item a uma caixa de listagem de desenho proprietário ou caixa de combinação criada com o **CBS_SORT** ou **LBS_SORT** estilo, o Windows envia o proprietário uma mensagem WM_COMPAREITEM. O *lParam* parâmetro da mensagem contém um ponteiro de tempo para um `COMPAREITEMSTRUCT` estrutura. Ao receber a mensagem, o proprietário compara os dois itens e retorna um valor que indica qual item classifica antes da outra.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** WinUser  

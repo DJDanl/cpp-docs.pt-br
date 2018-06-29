@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82ffdb26c5766a0ff7cbada511c9bc9c82ebfd93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b480ee1118551b09c705fb4f79f8a50c0a1f895
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375536"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079561"
 ---
 # <a name="cscrollview-class"></a>Classe CScrollView
 Um [CView](../../mfc/reference/cview-class.md) com recursos de rolagem.  
@@ -100,7 +100,7 @@ class CScrollView : public CView
   
  Antes do `OnDraw` a função de membro da sua classe derivada de exibição é chamada, `CScrollView` ajusta automaticamente a origem do visor para o `CPaintDC` objeto de contexto de dispositivo que ele passa para `OnDraw`.  
   
- Para ajustar a origem do visor para a janela de rolagem, `CScrollView` substitui [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). Esse ajuste é automática para o `CPaintDC` contexto de dispositivo que `CScrollView` passa para `OnDraw`, mas você deve chamar **CScrollView::OnPrepareDC** por conta própria para outros contextos de dispositivo usar, como um `CClientDC`. Você pode substituir **CScrollView::OnPrepareDC** para definir a caneta, cor de plano de fundo e outros atributos de desenho, mas chame a classe base para fazer o dimensionamento.  
+ Para ajustar a origem do visor para a janela de rolagem, `CScrollView` substitui [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). Esse ajuste é automática para o `CPaintDC` contexto de dispositivo que `CScrollView` passa para `OnDraw`, mas você deve chamar `CScrollView::OnPrepareDC` por conta própria para outros contextos de dispositivo é usar, como um `CClientDC`. Você pode substituir `CScrollView::OnPrepareDC` para definir a caneta, cor de plano de fundo e outros atributos de desenho, mas chame a classe base para fazer o dimensionamento.  
   
  Barras de rolagem podem ser exibido em três locais em relação a um modo de exibição, conforme mostrado nos seguintes casos:  
   
@@ -162,10 +162,10 @@ void FillOutsideRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDC`  
+ *pDC*  
  Contexto de dispositivo no qual o preenchimento é deve ser feito.  
   
- `pBrush`  
+ *pBrush*  
  Pincel com a qual a área é a ser preenchida.  
   
 ### <a name="remarks"></a>Comentários  
@@ -201,16 +201,16 @@ void GetDeviceScrollSizes(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nMapMode`  
+ *nMapMode*  
  Retorna o modo de mapeamento atual para este modo de exibição. Para obter uma lista de valores possíveis, consulte `SetScrollSizes`.  
   
- `sizeTotal`  
+ *sizeTotal*  
  Retorna o tamanho total atual da exibição da rolagem em unidades de dispositivo.  
   
- `sizePage`  
+ *sizePage*  
  Retorna os valores atuais horizontais e verticais para rolar em cada direção em resposta a um mouse clique em um eixo de barra de rolagem. O **cx** membro contém a quantidade horizontal. O **cy** membro contém a quantidade de vertical.  
   
- `sizeLine`  
+ *sizeLine*  
  Retorna os valores atuais horizontais e verticais para rolar em cada direção em resposta a um mouse clique em uma seta de rolagem. O **cx** membro contém a quantidade horizontal. O **cy** membro contém a quantidade de vertical.  
   
 ### <a name="remarks"></a>Comentários  
@@ -267,7 +267,7 @@ void ScrollToPosition(POINT pt);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pt`  
+ *pt*  
  O ponto de rolar, em unidades lógicas. O **x** membro deve ser um valor positivo (maior ou igual a 0, até o tamanho total do modo de exibição). O mesmo é verdadeiro para o **y** membro quando o modo de mapeamento é `MM_TEXT`. O **y** membro é negativo no mapeamento de modos diferentes de `MM_TEXT`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -281,7 +281,7 @@ void SetScaleToFitSize(SIZE sizeTotal);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `sizeTotal`  
+ *sizeTotal*  
  Os tamanhos horizontais e verticais para que a exibição é dimensionado. Tamanho da exibição da rolagem é medido em unidades lógicas. O tamanho horizontal está contido no **cx** membro. O tamanho vertical está contido no **cy** membro. Ambos **cx** e **cy** deve ser maior que ou igual a 0.  
   
 ### <a name="remarks"></a>Comentários  
@@ -307,7 +307,7 @@ void SetScrollSizes(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nMapMode`  
+ *nMapMode*  
  O modo de mapeamento a ser definido para este modo de exibição. Os possíveis valores incluem:  
   
 |Modo de mapeamento|Unidade lógica|Estende positivos do eixo y...|  
@@ -321,13 +321,13 @@ void SetScrollSizes(
   
  Todos os modos são definidos pelo Windows. Dois modos de mapeamento padrão, `MM_ISOTROPIC` e `MM_ANISOTROPIC`, não são usados para `CScrollView`. A biblioteca de classe fornece a `SetScaleToFitSize` a função de membro para expandir a exibição para o tamanho da janela. A coluna três na tabela acima descreve a orientação de coordenadas.  
   
- `sizeTotal`  
+ *sizeTotal*  
  O tamanho total da exibição da rolagem. O **cx** membro contém a extensão horizontal. O **cy** membro contém a extensão vertical. Tamanhos estão em unidades lógicas. Ambos **cx** e **cy** deve ser maior que ou igual a 0.  
   
- `sizePage`  
+ *sizePage*  
  Os valores horizontais e verticais para rolar em cada direção em resposta a um mouse clique em um eixo de barra de rolagem. O **cx** membro contém a quantidade horizontal. O **cy** membro contém a quantidade de vertical.  
   
- `sizeLine`  
+ *sizeLine*  
  Os valores horizontais e verticais para rolar em cada direção em resposta a um mouse clique em uma seta de rolagem. O **cx** membro contém a quantidade horizontal. O **cy** membro contém a quantidade de vertical.  
   
 ### <a name="remarks"></a>Comentários  

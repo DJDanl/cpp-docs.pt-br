@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be5d27adabe8b271e2f8f3ed338e63e18d2432fc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369919"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078230"
 ---
 # <a name="csimpleexception-class"></a>Classe CSimpleException
 Essa classe é uma classe base para exceções críticas para os recursos do MFC.  
@@ -84,8 +84,8 @@ explicit CSimpleException(BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bAutoDelete`  
- Especifique **TRUE** se a memória para o `CSimpleException` objeto tenha sido alocado no heap. Isso fará com que o `CSimpleException` objeto a ser excluído quando o **excluir** função de membro é chamada para remover a exceção. Especifique **FALSE** se o `CSimpleException` objeto na pilha ou é um objeto global. Nesse caso, o `CSimpleException` não serão excluídos quando o **excluir** é chamada de função de membro.  
+ *bAutoDelete*  
+ Especifique **TRUE** se a memória para o `CSimpleException` objeto tenha sido alocado no heap. Isso fará com que o `CSimpleException` objeto a ser excluído quando o `Delete` função de membro é chamada para remover a exceção. Especifique **FALSE** se o `CSimpleException` objeto na pilha ou é um objeto global. Nesse caso, o `CSimpleException` não serão excluídos quando o `Delete` é chamada de função de membro.  
   
 ### <a name="remarks"></a>Comentários  
  Você normalmente não precisa chamar este construtor diretamente. Uma função que gera uma exceção deve criar uma instância de um `CException`-classe derivada e chamar seu construtor, ou ele deve usar um dos MFC acionar funções, como [AfxThrowFileException](exception-processing.md#afxthrowfileexception), para gerar um tipo predefinido.  
@@ -101,13 +101,13 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszError`  
+ *lpszError*  
  Um ponteiro para um buffer que receberá uma mensagem de erro.  
   
- `nMaxError`  
+ *nMaxError*  
  O número máximo de caracteres que o buffer pode manter, incluindo o **nulo** terminador.  
   
- `pnHelpContext`  
+ *pnHelpContext*  
  O endereço de um **UINT** que receberá a ID do contexto de Ajuda. Se **nulo**, nenhuma ID será retornado.  
   
 ### <a name="return-value"></a>Valor de retorno  

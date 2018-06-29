@@ -61,19 +61,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 300cb9e7708c02717aeb8ea8fda59986f3fd9fa7
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: abfe2a740a51ffe8b2735942bc9387f0b13bb0d2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306028"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079525"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 A classe de modelo descreve um objeto que controla um comprimento variável ordenados de sequência de elementos com acesso limitado. Usar o adaptador de contêiner `priority_queue` para gerenciar um contêiner subjacente como uma fila de prioridade.  
   
  Na descrição abaixo, `GValue` é o mesmo que `Value` , a menos que o último é um tipo de referência, caso em que é `Value^`. Da mesma forma, `GContainer` é o mesmo que `Container` , a menos que o último é um tipo de referência, caso em que é `Container^`.  
   
-### <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename Value,  
@@ -84,7 +84,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  Valor  
  O tipo de um elemento na sequência controlada.  
   
@@ -138,7 +138,7 @@ template<typename Value,
 |<xref:System.ICloneable>|Duplicar um objeto.|  
 |IPriorityQueue\<valor, o contêiner >|Manter o adaptador de contêiner genérico.|  
   
-### <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Comentários  
  O objeto aloca e libera o armazenamento para a sequência controla por meio de um contêiner subjacente, do tipo `Container`, que armazena `Value` elementos e sob demanda. Isso mantém a sequência ordenada como um heap, com o elemento de prioridade mais alta (o elemento superior) prontamente acessível e removível. O objeto restringe o acesso a novos elementos de envio por push e exibir apenas o elemento de prioridade mais alta, a implementação de uma fila de prioridade.  
   
  O objeto classifica a sequência controla chamando um objeto de representante armazenado do tipo [priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md). Você pode especificar o objeto do representante armazenado quando você construir o priority_queue; Se você não especificar nenhum objeto do representante, o padrão é a comparação `operator<(value_type, value_type)`. Acessar esse objeto armazenado chamando a função de membro [priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`.  
@@ -696,7 +696,7 @@ template<typename InIt>
  continuação  
  O contêiner a ser copiado.  
   
- primeiro  
+ Primeiro  
  Início do intervalo a ser inserido.  
   
  last  

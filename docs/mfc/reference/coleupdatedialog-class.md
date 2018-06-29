@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54088de4c07f1c58656aad468160ef58f0e41398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0208a24b69c1884d72c0ae525ce95b3d3258271
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373045"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079968"
 ---
 # <a name="coleupdatedialog-class"></a>Classe COleUpdateDialog
 Usado para um caso especial da caixa de diálogo Editar Links OLE, que deve ser usado quando você precisa atualizar existente apenas objetos vinculados ou incorporados em um documento.  
@@ -85,7 +85,7 @@ explicit COleUpdateDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDoc`  
+ *pDoc*  
  Aponta para o documento que contém os links que talvez precisem ser atualizados.  
   
  *bUpdateLinks*  
@@ -94,7 +94,7 @@ explicit COleUpdateDialog(
  *bUpdateEmbeddings*  
  Sinalizador que determina se os objetos inseridos devem ser atualizadas.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Aponta para o objeto de janela pai ou o proprietário (do tipo `CWnd`) ao qual pertence o objeto de caixa de diálogo. Se for **nulo**, a janela pai da caixa de diálogo será definida para a janela principal do aplicativo.  
   
 ### <a name="remarks"></a>Comentários  

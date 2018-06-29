@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c5be90e57d558ba2dcceb3965d1cc1474dcaf463
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 693d4f8b8f0e7271a4c1f7df9931e0a85e57c332
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305872"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079714"
 ---
 # <a name="multimap-stlclr"></a>multimapa (STL/CLR)
 A classe de modelo descreve um objeto que controla uma sequência de comprimento variável de elementos que tenha acesso bidirecional. Você usa o contêiner `multimap` para gerenciar uma sequência de elementos como uma árvore equilibrada (quase) ordenada de nós, cada armazenamento de um elemento. Um elemento consiste em uma chave, para ordenar a sequência e um valor mapeado, o que vai ao longo da simultaneamente.  
@@ -127,7 +127,7 @@ A classe de modelo descreve um objeto que controla uma sequência de comprimento
   
  `GMapped` é o mesmo que `Mapped` , a menos que o último é um tipo de referência, caso em que é `Mapped^`  
   
-### <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 template<typename Key,  
@@ -144,7 +144,7 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  Chave  
  O tipo do componente principal de um elemento na sequência controlada.  
   
@@ -222,7 +222,7 @@ template<typename Key,
 |<xref:System.Collections.Generic.ICollection%601>|Manter o grupo de elementos com tipo.|  
 |ITree\<chave, valor >|Manter contêiner genérico.|  
   
-### <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Comentários  
  O objeto aloca e libera o armazenamento para a sequência em que ele controla como os nós individuais. Ele insere elementos em uma árvore equilibrada (quase) que mantém ordenada alterando os links entre nós nunca copiando o conteúdo de um nó para outro. Isso significa que você pode inserir e remover elementos livremente, sem prejudicar elementos restantes.  
   
  O objeto classifica a sequência controla chamando um objeto de representante armazenado do tipo [multimap:: key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md). Você pode especificar o objeto do representante armazenado quando você construir o multimap; Se você não especificar nenhum objeto do representante, o padrão é a comparação `operator<(key_type, key_type)`. Acessar esse objeto armazenado chamando a função de membro [multimap:: key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`.  
@@ -763,7 +763,7 @@ bool erase(key_type key)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- primeiro  
+ Primeiro  
  Início do intervalo a ser apagado.  
   
  key  
@@ -1140,7 +1140,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- primeiro  
+ Primeiro  
  Início do intervalo a ser inserido.  
   
  last  
@@ -1514,7 +1514,7 @@ static value_type make_value(key_type key, mapped_type mapped);
  key  
  Valor da chave a ser usado.  
   
- Mapeado  
+ mapeado  
  Valor mapeado para pesquisar.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1613,7 +1613,7 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- primeiro  
+ Primeiro  
  Início do intervalo a ser inserido.  
   
  last  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 413b7b4a7cf11ff7e83596ecc61423d4bc4f0358
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efdd8f5b806b7e5745aed0091a2638c8592a6ecc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371615"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079055"
 ---
 # <a name="csingledoctemplate-class"></a>Classe CSingleDocTemplate
 Define um modelo de documento que implementa a interface de documento único (SDI).  
@@ -45,7 +45,7 @@ class CSingleDocTemplate : public CDocTemplate
   
  Um modelo de documento define a relação entre três tipos de classes:  
   
--   Uma classe de documento, que derivam de **CDocument**.  
+-   Uma classe de documento, que derivam de `CDocument`.  
   
 -   Uma classe de exibição, que exibe dados de classe de documento listado acima. Você pode derivar dessa classe de `CView`, `CScrollView`, `CFormView`, ou `CEditView`. (Você também pode usar `CEditView` diretamente.)  
   
@@ -81,7 +81,7 @@ CSingleDocTemplate(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIDResource`  
+ *nIDResource*  
  Especifica a ID dos recursos usados com o tipo de documento. Isso pode incluir recursos de cadeia de caracteres, ícone, tabela de Aceleradores e menu.  
   
  O recurso de cadeia de caracteres consiste em subcadeias de caracteres até sete separadas pelo caractere '\n' (o caractere '\n' é necessário como um espaço reservado, se uma subcadeia de caracteres não estiver incluída; no entanto, não são necessários caracteres à direita de '\n'); Esses subcadeias de caracteres descrevem o tipo de documento. Para obter informações sobre as subcadeias de caracteres, consulte [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Esse recurso de cadeia de caracteres foi encontrado no arquivo de recurso do aplicativo. Por exemplo:  
@@ -100,13 +100,13 @@ CSingleDocTemplate(
   
  Para obter mais informações sobre esses tipos de recursos, consulte o [Editor de cadeia de caracteres](../../windows/string-editor.md).  
   
- `pDocClass`  
- Aponta para o `CRuntimeClass` objeto da classe do documento. Essa classe é um **CDocument**-definir para representar documentos de classe derivada.  
+ *pDocClass*  
+ Aponta para o `CRuntimeClass` objeto da classe do documento. Essa classe é um `CDocument`-definir para representar documentos de classe derivada.  
   
- `pFrameClass`  
+ *pFrameClass*  
  Aponta para o `CRuntimeClass` objeto da classe de janela do quadro. Essa classe pode ser um `CFrameWnd`-classe derivada, ou pode ser `CFrameWnd` em si, se você quiser o comportamento padrão para a janela do quadro principal.  
   
- `pViewClass`  
+ *pViewClass*  
  Aponta para o `CRuntimeClass` objeto da classe de exibição. Essa classe é um `CView`-definir para exibir seus documentos de classe derivada.  
   
 ### <a name="remarks"></a>Comentários  

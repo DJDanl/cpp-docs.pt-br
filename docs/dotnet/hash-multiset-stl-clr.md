@@ -105,12 +105,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 02678db98c40927114adf1b061482d9e8304aa30
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 3e5db2aafb10ad6d95fe50d073085041a1016cac
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305833"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079858"
 ---
 # <a name="hashmultiset-stlclr"></a>hash_multiset (STL/CLR)
 A classe de modelo descreve um objeto que controla uma sequência de comprimento variável de elementos que tenha acesso bidirecional. Você usa o contêiner `hash_multiset` para gerenciar uma sequência de elementos como uma tabela de hash, cada entrada da tabela de armazenar um bidirecional vinculado a lista de nós e cada nó de armazenamento de um elemento. O valor de cada elemento é usado como uma chave para ordenar a sequência.  
@@ -133,7 +133,7 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  Chave  
  O tipo do componente principal de um elemento na sequência controlada.  
 
@@ -142,7 +142,7 @@ template<typename Key>
   
  **Namespace:** cliext  
   
-## <a name="members"></a>Membros  
+## <a name="declarations"></a>Declarações  
   
 |Definição do tipo|Descrição|  
 |---------------------|-----------------|  
@@ -207,7 +207,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|Manter o grupo de elementos com tipo.|  
 |IHash\<chave, valor >|Manter contêiner genérico.|  
   
-### <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Comentários  
  O objeto aloca e libera o armazenamento para a sequência em que ele controla como nós individuais em uma lista vinculada bidirecional. Para agilizar o acesso, o objeto também mantém uma matriz de comprimento variável de ponteiros na lista (a tabela de hash), gerenciar com eficiência a lista inteira como uma sequência de sublistas, ou buckets. Ele insere elementos em uma partição que mantém ordenada alterando os links entre nós nunca copiando o conteúdo de um nó para outro. Isso significa que você pode inserir e remover elementos livremente, sem prejudicar elementos restantes.  
   
  O objeto classifica cada bucket controla chamando um objeto de representante armazenado do tipo [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Você pode especificar o objeto do representante armazenado quando você construir o hash_set; Se você não especificar nenhum objeto do representante, o padrão é a comparação `operator<=(key_type, key_type)`.  
@@ -240,6 +240,8 @@ template<typename Key>
   
  Apagar ou remover um elemento chama o destruidor para seu valor armazenado. Destruir o contêiner apaga todos os elementos. Assim, um contêiner cujo tipo de elemento é uma classe ref garante que nenhum elemento duram mais tempo o contêiner. No entanto, observe que um contêiner de identificadores não `not` destruir seus elementos.  
   
+## <a name="members"></a>Membros
+
 ## <a name="begin"></a> hash_multiset:: Begin (STL/CLR)
 Designa o início da sequência controlada.  
   
@@ -817,7 +819,7 @@ bool erase(key_type key)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- primeiro  
+ Primeiro  
  Início do intervalo a ser apagado.  
   
  key  
@@ -1231,7 +1233,7 @@ hash_multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- primeiro  
+ Primeiro  
  Início do intervalo a ser inserido.  
   
  hashfn  
@@ -1494,7 +1496,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- primeiro  
+ Primeiro  
  Início do intervalo a ser inserido.  
   
  last  

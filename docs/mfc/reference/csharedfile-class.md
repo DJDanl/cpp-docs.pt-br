@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bee22940fb197d480f4ae3550d8dd59780c256b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df3c052f3cefb3aa7d2a55e81fd5f7813632ceb1
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370175"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078272"
 ---
 # <a name="csharedfile-class"></a>Classe CSharedFile
 O [CMemFile](../../mfc/reference/cmemfile-class.md)-compartilhado de classe derivada que dá suporte a arquivos de memória.  
@@ -56,9 +56,9 @@ class CSharedFile : public CMemFile
 ## <a name="remarks"></a>Comentários  
  Arquivos de memória se comportam como arquivos de disco, exceto que o arquivo é armazenado na memória RAM, em vez de no disco. Um arquivo de memória é útil para armazenamento temporário rápida ou para a transferência de bytes brutos ou serializado objetos entre processos independentes.  
   
- Arquivos de memória compartilhada são diferentes de outros arquivos de memória é alocada memória para eles com o [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) função do Windows. O `CSharedFile` classe armazena dados em um bloco de memória alocada globalmente (criada usando **GlobalAlloc**), e este bloco de memória pode ser compartilhado usando DDE, a área de transferência ou outras OLE/COM operações de transferência uniforme de dados, o, por exemplo, usando `IDataObject`.  
+ Arquivos de memória compartilhada são diferentes de outros arquivos de memória é alocada memória para eles com o [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) função do Windows. O `CSharedFile` classe armazena dados em um bloco de memória alocada globalmente (criada usando `GlobalAlloc`), e este bloco de memória pode ser compartilhado usando DDE, a área de transferência ou outras OLE/COM operações de transferência uniforme de dados, o, por exemplo, usando `IDataObject`.  
   
- **GlobalAlloc** retorna um `HGLOBAL` tratar em vez de um ponteiro de memória, como o ponteiro retornado por [malloc](../../c-runtime-library/reference/malloc.md). O `HGLOBAL` identificador é necessária em determinados aplicativos. Por exemplo, para colocar dados na área de transferência é necessário um `HGLOBAL` tratar.  
+ `GlobalAlloc` Retorna um `HGLOBAL` tratar em vez de um ponteiro de memória, como o ponteiro retornado por [malloc](../../c-runtime-library/reference/malloc.md). O `HGLOBAL` identificador é necessária em determinados aplicativos. Por exemplo, para colocar dados na área de transferência é necessário um `HGLOBAL` tratar.  
   
  Observe que `CSharedFile` não use memória mapeada arquivos e os dados não podem ser compartilhados diretamente entre processos.  
   
@@ -91,7 +91,7 @@ CSharedFile(
  *nAllocFlags*  
  Sinalizadores indicando como for possível alocar memória. Consulte [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) para obter uma lista de valores de sinalizador válido.  
   
- `nGrowBytes`  
+ *nGrowBytes*  
  O incremento de alocação de memória em bytes.  
   
 ##  <a name="detach"></a>  CSharedFile::Detach  
@@ -120,11 +120,11 @@ void SetHandle(
  *hGlobalMemory*  
  Identificador para a memória global a ser anexado ao `CSharedFile`.  
   
- `bAllowGrow`  
+ *bAllowGrow*  
  Especifica se o bloco de memória pode crescer.  
   
 ### <a name="remarks"></a>Comentários  
- Se `bAllowGrow` é diferente de zero, o tamanho do bloco de memória aumenta conforme necessário, por exemplo, se uma tentativa for feita para gravar mais bytes para o arquivo que foi alocada para o bloco de memória.  
+ Se *bAllowGrow* é diferente de zero, o tamanho do bloco de memória aumenta conforme necessário, por exemplo, se uma tentativa for feita para gravar mais bytes para o arquivo que foi alocada para o bloco de memória.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CMemFile](../../mfc/reference/cmemfile-class.md)   

@@ -109,12 +109,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e3691ad17aff90e866a21918c0853d2b1f4ce3a2
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 51570171fbd8de9919bcba5dabb47c26d8e1c748
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305820"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079897"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 A classe de modelo descreve um objeto que controla uma sequência de comprimento variável de elementos que tenha acesso bidirecional. Você usa o contêiner `map` para gerenciar uma sequência de elementos como uma árvore equilibrada (quase) ordenada de nós, cada armazenamento de um elemento. Um elemento consiste em uma chave, para ordenar a sequência e um valor mapeado, o que vai ao longo da simultaneamente.  
@@ -147,7 +147,7 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  Chave  
  O tipo do componente principal de um elemento na sequência controlada.  
   
@@ -762,7 +762,7 @@ bool erase(key_type key)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- primeiro  
+ Primeiro  
  Início do intervalo a ser apagado.  
   
  key  
@@ -1139,7 +1139,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- primeiro  
+ Primeiro  
  Início do intervalo a ser inserido.  
   
  last  
@@ -1516,7 +1516,7 @@ static value_type make_value(key_type key, mapped_type mapped);
  key  
  Valor da chave a ser usado.  
   
- Mapeado  
+ mapeado  
  Valor mapeado para pesquisar.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1571,7 +1571,7 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- primeiro  
+ Primeiro  
  Início do intervalo a ser inserido.  
   
  last  

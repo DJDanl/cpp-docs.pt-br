@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c2ffbe685ac643116fa60d4f97d03781d1efc83
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b81a35a696d3d5cdcb22a6f9a66425320b544c2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375435"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079443"
 ---
 # <a name="cpictureholder-class"></a>Classe CPictureHolder
 Implementa uma propriedade de imagem, que permite que o usuário exibir uma imagem do seu controle.  
@@ -133,29 +133,29 @@ BOOL CreateFromBitmap(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `idResource`  
+ *idResource*  
  ID do recurso de um recurso de bitmap.  
   
- `pBitmap`  
+ *pBitmap*  
  Ponteiro para um [CBitmap](../../mfc/reference/cbitmap-class.md) objeto.  
   
  *pPal*  
  Ponteiro para um [CPalette](../../mfc/reference/cpalette-class.md) objeto.  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  Indica se o objeto de imagem será assumir a propriedade dos objetos de bitmap e paleta.  
   
- `hbm`  
+ *hbm*  
  Identificador para o bitmap do qual o `CPictureHolder` objeto é criado.  
   
- `hpal`  
+ *hpal*  
  Identificador para a paleta usada para renderizar o bitmap.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o objeto é criado com êxito; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Se `bTransferOwnership` é **TRUE**, o chamador não deve usar o bitmap ou retorna um objeto da paleta de qualquer forma após esta chamada. Se `bTransferOwnership` é **FALSE**, o chamador é responsável por garantir que os objetos de bitmap e paleta permaneçam válidos para o tempo de vida do objeto de imagem.  
+ Se *bTransferOwnership* é **TRUE**, o chamador não deve usar o bitmap ou retorna um objeto da paleta de qualquer forma após esta chamada. Se *bTransferOwnership* é **FALSE**, o chamador é responsável por garantir que os objetos de bitmap e paleta permaneçam válidos para o tempo de vida do objeto de imagem.  
   
 ##  <a name="createfromicon"></a>  CPictureHolder::CreateFromIcon  
  Usa um ícone para inicializar o objeto de imagem em um `CPictureHolder`.  
@@ -171,20 +171,20 @@ BOOL CreateFromIcon(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `idResource`  
+ *idResource*  
  ID do recurso de um recurso de bitmap.  
   
- `hIcon`  
+ *hIcon*  
  Identificador para o ícone do qual o `CPictureHolder` objeto é criado.  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  Indica se o objeto de imagem será assumir a propriedade do objeto de ícone.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o objeto é criado com êxito; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Se `bTransferOwnership` é **TRUE**, o chamador não deve usar o objeto de ícone de qualquer forma depois retorna esta chamada. Se `bTransferOwnership` é **FALSE**, o chamador é responsável por garantir que o objeto de ícone permanece válido para o tempo de vida do objeto de imagem.  
+ Se *bTransferOwnership* é **TRUE**, o chamador não deve usar o objeto de ícone de qualquer forma depois retorna esta chamada. Se *bTransferOwnership* é **FALSE**, o chamador é responsável por garantir que o objeto de ícone permanece válido para o tempo de vida do objeto de imagem.  
   
 ##  <a name="createfrommetafile"></a>  CPictureHolder::CreateFromMetafile  
  Usa um metarquivo para inicializar o objeto de imagem em um `CPictureHolder`.  
@@ -198,7 +198,7 @@ BOOL CreateFromMetafile(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `hmf`  
+ *hmf*  
  Identificador para o metarquivo usado para criar o `CPictureHolder` objeto.  
   
  *xExt*  
@@ -207,14 +207,14 @@ BOOL CreateFromMetafile(
  *yExt*  
  Extensão de Y da imagem.  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  Indica se o objeto de imagem será assumir a propriedade do objeto metarquivo.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o objeto é criado com êxito; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Se `bTransferOwnership` é **TRUE**, o chamador não deve usar o objeto de metarquivo de qualquer forma depois retorna esta chamada. Se `bTransferOwnership` é **FALSE**, o chamador é responsável por garantir que o objeto de metarquivo permanece válido para o tempo de vida do objeto de imagem.  
+ Se *bTransferOwnership* é **TRUE**, o chamador não deve usar o objeto de metarquivo de qualquer forma depois retorna esta chamada. Se *bTransferOwnership* é **FALSE**, o chamador é responsável por garantir que o objeto de metarquivo permanece válido para o tempo de vida do objeto de imagem.  
   
 ##  <a name="getdisplaystring"></a>  CPictureHolder::GetDisplayString  
  Recupera a cadeia de caracteres que é exibida no navegador de propriedade do recipiente.  
@@ -224,7 +224,7 @@ BOOL GetDisplayString(CString& strValue);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `strValue`  
+ *StrValue*  
  Referência para o [CString](../../atl-mfc-shared/reference/cstringt-class.md) que é manter a cadeia de caracteres de exibição.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -269,7 +269,7 @@ LPPICTURE m_pPict;
 ```  
   
 ##  <a name="render"></a>  CPictureHolder::Render  
- Processa a imagem no retângulo referenciada por `rcRender`.  
+ Processa a imagem no retângulo referenciada por *rcRender*.  
   
 ```  
 void Render(
@@ -279,14 +279,14 @@ void Render(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDC`  
+ *pDC*  
  Ponteiro para o contexto de exibição em que a imagem for processado.  
   
- `rcRender`  
+ *rcRender*  
  Retângulo em que a imagem for processado.  
   
  *rcWBounds*  
- Um retângulo que representa o retângulo delimitador do objeto de renderização de imagem. Para um controle, esse retângulo é o `rcBounds` parâmetro passado para uma substituição de [COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw).  
+ Um retângulo que representa o retângulo delimitador do objeto de renderização de imagem. Para um controle, esse retângulo é o *rcBounds* parâmetro passado para uma substituição de [COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw).  
   
 ##  <a name="setpicturedispatch"></a>  CPictureHolder::SetPictureDispatch  
  Conecta-se a `CPictureHolder` o objeto para um `IPictureDisp` interface.  
@@ -296,7 +296,7 @@ void SetPictureDispatch(LPPICTUREDISP pDisp);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDisp`  
+ *pDisp*  
  Ponteiro para o novo `IPictureDisp` interface.  
   
 ## <a name="see-also"></a>Consulte também  

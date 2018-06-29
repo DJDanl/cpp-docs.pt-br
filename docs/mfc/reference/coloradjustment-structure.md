@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffb0ec0233edd968ad121b84f9e1d584a26f3387
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bb4cba5ef2eafa27a26c945f8754eb1a0ab0315
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369958"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37077949"
 ---
 # <a name="coloradjustment-structure"></a>Estrutura COLORADJUSTMENT
-O `COLORADJUSTMENT` estrutura define os valores de ajuste de cor usados pelo Windows `StretchBlt` e **StretchDIBits** funções quando o `StretchBlt` modo é **meio tom**.  
+O `COLORADJUSTMENT` estrutura define os valores de ajuste de cor usados pelo Windows `StretchBlt` e `StretchDIBits` funções quando o `StretchBlt` modo é **meio tom**.  
   
 ## <a name="syntax"></a>Sintaxe  
   

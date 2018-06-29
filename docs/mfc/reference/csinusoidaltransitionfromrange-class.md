@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09c302ec414e26c71d8989bb6d624314c8eb6db4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 646878a1cfd77dd61fbb854512c56512083ff609
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370201"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078677"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>Classe CSinusoidalTransitionFromRange
 Encapsula uma transição de intervalo sinusoidal que tem um determinado intervalo de oscilação.  
@@ -93,7 +93,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pLibrary`  
+ *pLibrary*  
  Um ponteiro para a biblioteca de transição, que é responsável pela criação de transições padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -112,19 +112,19 @@ CSinusoidalTransitionFromRange(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `duration`  
+ *Duração*  
  A duração da transição.  
   
- `dblMinimumValue`  
+ *dblMinimumValue*  
  O valor da variável de animação em um trough do wave sinusoidal.  
   
- `dblMaximumValue`  
+ *dblMaximumValue*  
  O valor da variável de animação em um horário de pico de onda de sinusoidal.  
   
- `period`  
+ *Período*  
  O período de oscilação do wave sinusoidal em segundos.  
   
- `slope`  
+ *inclinação*  
  A inclinação no início da transição.  
   
 ##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue  

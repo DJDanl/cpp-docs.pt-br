@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434a0b428199b7c2298815523517097aeee2ab47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: beeef0d8ff1a89a003987f9cd79172ad2ff86d75
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376168"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079623"
 ---
 # <a name="cpropertypage-class"></a>Classe CPropertyPage
 Representa as páginas individuais de uma folha de propriedades, também conhecido como uma caixa de diálogo de guia.  
@@ -165,19 +165,19 @@ void Construct(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIDTemplate`  
+ *nIDTemplate*  
  ID do modelo usado para esta página.  
   
- `nIDCaption`  
+ *nIDCaption*  
  ID do nome será colocado na guia para esta página. Se for 0, será levado o nome do modelo de caixa de diálogo para essa página.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Contém uma cadeia de caracteres terminada em nulo que é o nome de um recurso de modelo.  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  ID do nome será colocado no local de título do cabeçalho da página de propriedade. Por padrão, 0.  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  ID do nome a ser colocado no local do cabeçalho da página de propriedade subtítulo. Por padrão, 0.  
   
 ### <a name="remarks"></a>Comentários  
@@ -189,9 +189,9 @@ void Construct(
   
 -   O usuário selecionou (com guias para) nesta página.  
   
- Chamar **construir** se um dos construtores de classe não tiver sido chamado. O `Construct` função de membro é flexível porque você pode deixar a declaração de parâmetro em branco e, em seguida, especificar vários parâmetros e construção em qualquer ponto no seu código.  
+ Chamar `Construct` se um dos construtores de classe não tiver sido chamado. O `Construct` função de membro é flexível porque você pode deixar a declaração de parâmetro em branco e, em seguida, especificar vários parâmetros e construção em qualquer ponto no seu código.  
   
- Você deve usar `Construct` quando você trabalhar com matrizes, e você deve chamar **construir** para cada membro da matriz para que os membros de dados são atribuídos valores adequados.  
+ Você deve usar `Construct` quando você trabalhar com matrizes, e você deve chamar `Construct` para cada membro da matriz para que os membros de dados são atribuídos valores adequados.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]  
@@ -232,20 +232,20 @@ CPropertyPage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIDTemplate`  
+ *nIDTemplate*  
  ID do modelo usado para esta página.  
   
- `nIDCaption`  
+ *nIDCaption*  
  ID do nome será colocado na guia para esta página. Se for 0, será levado o nome do modelo de caixa de diálogo para essa página.  
   
- `dwSize`  
- `lpszTemplateName`  
+ *dwSize*  
+ *lpszTemplateName*  
  Aponta para uma cadeia de caracteres que contém o nome do modelo desta página. Não pode ser **nulo**.  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  ID do nome será colocado no local de título do cabeçalho da página de propriedade.  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  ID do nome a ser colocado no local do cabeçalho da página de propriedade subtítulo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -488,10 +488,10 @@ LRESULT QuerySiblings(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `wParam`  
+ *wParam*  
  Especifica informações adicionais de dependente de mensagem.  
   
- `lParam`  
+ *lParam*  
  Especifica informações adicionais de dependente de mensagem  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -515,7 +515,7 @@ void SetModified(BOOL bChanged = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bChanged`  
+ *bChanged*  
  **TRUE** para indicar que as configurações de página de propriedade foram modificadas desde a última vez em que foram aplicados; **FALSE** para indicar que as configurações de página de propriedade foram aplicadas, ou devem ser ignoradas.  
   
 ### <a name="remarks"></a>Comentários  

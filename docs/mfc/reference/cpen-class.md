@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 995e3f85ec21cae1be18f0bf7b6548c912ca5254
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 17337239a3a58a0283fc96eadcd4417c3d5c69b0
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376373"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079584"
 ---
 # <a name="cpen-class"></a>Classe CPen
 Encapsula uma caneta GDI (interface) do dispositivo de gráficos Windows.  
@@ -103,7 +103,7 @@ CPen(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nPenStyle`  
+ *nPenStyle*  
  Especifica o estilo de caneta. Esse parâmetro na primeira versão do construtor pode ser um dos seguintes valores:  
   
 - **PS_SOLID** cria uma caneta sólida.  
@@ -118,7 +118,7 @@ CPen(
   
 - **PS_NULL** cria uma caneta nulo.  
   
-- **PS_INSIDEFRAME** cria uma caneta que desenha uma linha dentro do quadro de formas fechadas produzido pelas funções de saída do Windows GDI que especificam um retângulo delimitador (por exemplo, o **elipse**, **retângulo** , `RoundRect`, `Pie`, e `Chord` funções de membro). Quando este estilo é usado com funções de saída do Windows GDI que não especificam um retângulo delimitador (por exemplo, o `LineTo` função de membro), a área de desenho da caneta não é limitada por um quadro.  
+- **PS_INSIDEFRAME** cria uma caneta que desenha uma linha dentro do quadro de formas fechadas produzido pelas funções de saída do Windows GDI que especificam um retângulo delimitador (por exemplo, o `Ellipse`, `Rectangle`, `RoundRect`, `Pie`, e `Chord` funções de membro). Quando este estilo é usado com funções de saída do Windows GDI que não especificam um retângulo delimitador (por exemplo, o `LineTo` função de membro), a área de desenho da caneta não é limitada por um quadro.  
   
  A segunda versão do `CPen` construtor Especifica uma combinação de tipo, estilo, proteção final e atributos de junção. Os valores de cada categoria devem ser combinados usando o operador OR bit a bit (&#124;). O tipo de caneta pode ser um dos seguintes valores:  
   
@@ -126,7 +126,7 @@ CPen(
   
 - **PS_COSMETIC** cria uma caneta superficial.  
   
-     A segunda versão do `CPen` construtor adiciona os seguintes estilos de caneta para `nPenStyle`:  
+     A segunda versão do `CPen` construtor adiciona os seguintes estilos de caneta para *nPenStyle*:  
   
 - **PS_ALTERNATE** cria uma caneta que define todos os outros pixels. (Este estilo é aplicável somente para cosméticas canetas.)  
   
@@ -148,24 +148,24 @@ CPen(
   
 - **PS_JOIN_ROUND** junções são round.  
   
- `nWidth`  
+ *nWidth*  
  Especifica a largura da caneta.  
   
 -   Para a primeira versão do construtor, se esse valor for 0, a largura em unidades de dispositivo é sempre 1 pixel, independentemente do modo de mapeamento.  
   
--   Para a segunda versão do construtor, se `nPenStyle` é **PS_GEOMETRIC**, a largura é determinada em unidades lógicas. Se `nPenStyle` é **PS_COSMETIC**, a largura deve ser definida como 1.  
+-   Para a segunda versão do construtor, se *nPenStyle* é **PS_GEOMETRIC**, a largura é determinada em unidades lógicas. Se *nPenStyle* é **PS_COSMETIC**, a largura deve ser definida como 1.  
   
- `crColor`  
+ *crColor*  
  Contém uma cor RGB para a caneta.  
   
- `pLogBrush`  
- Aponta para um `LOGBRUSH` estrutura. Se `nPenStyle` é **PS_COSMETIC**, o `lbColor` membro do `LOGBRUSH` estrutura Especifica a cor da caneta e o `lbStyle` membro do `LOGBRUSH` estrutura deve ser definida como **BS_ SÓLIDO**. Se `nPenStyle` é **PS_GEOMETRIC**, todos os membros devem ser usados para especificar os atributos de pincel da caneta.  
+ *pLogBrush*  
+ Aponta para um `LOGBRUSH` estrutura. Se *nPenStyle* é **PS_COSMETIC**, o *lbColor* membro o `LOGBRUSH` estrutura Especifica a cor da caneta e o *lbStyle*membro o `LOGBRUSH` estrutura deve ser definida como **BS_SOLID**. Se *nPenStyle* é **PS_GEOMETRIC**, todos os membros devem ser usados para especificar os atributos de pincel da caneta.  
   
- `nStyleCount`  
- Especifica o comprimento, em unidades de doubleword da `lpStyle` matriz. Esse valor deve ser zero se `nPenStyle` não é **PS_USERSTYLE**.  
+ *nStyleCount*  
+ Especifica o comprimento, em unidades de doubleword, do *lpStyle* matriz. Esse valor deve ser zero se *nPenStyle* não é **PS_USERSTYLE**.  
   
- `lpStyle`  
- Aponta para uma matriz de valores doubleword. O primeiro valor Especifica o comprimento de um traço primeiro em um estilo definido pelo usuário, o segundo valor Especifica o comprimento do primeiro espaço e assim por diante. Este ponteiro deve ser **nulo** se `nPenStyle` não é **PS_USERSTYLE**.  
+ *lpStyle*  
+ Aponta para uma matriz de valores doubleword. O primeiro valor Especifica o comprimento de um traço primeiro em um estilo definido pelo usuário, o segundo valor Especifica o comprimento do primeiro espaço e assim por diante. Este ponteiro deve ser **nulo** se *nPenStyle* não é **PS_USERSTYLE**.  
   
 ### <a name="remarks"></a>Comentários  
  Se você usar o construtor sem argumentos, você deverá inicializar resultante `CPen` do objeto com o `CreatePen`, `CreatePenIndirect`, ou `CreateStockObject` funções de membro.  
@@ -194,27 +194,27 @@ BOOL CreatePen(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nPenStyle`  
- Especifica o estilo de caneta. Para obter uma lista de valores possíveis, consulte o `nPenStyle` parâmetro o [CPen](#cpen) construtor.  
+ *nPenStyle*  
+ Especifica o estilo de caneta. Para obter uma lista de valores possíveis, consulte o *nPenStyle* parâmetro o [CPen](#cpen) construtor.  
   
- `nWidth`  
+ *nWidth*  
  Especifica a largura da caneta.  
   
 -   Para a primeira versão do `CreatePen`, se esse valor for 0, a largura em unidades de dispositivo é sempre 1 pixel, independentemente do modo de mapeamento.  
   
--   Para a segunda versão do `CreatePen`, se `nPenStyle` é **PS_GEOMETRIC**, a largura é determinada em unidades lógicas. Se `nPenStyle` é **PS_COSMETIC**, a largura deve ser definida como 1.  
+-   Para a segunda versão do `CreatePen`, se *nPenStyle* é **PS_GEOMETRIC**, a largura é determinada em unidades lógicas. Se *nPenStyle* é **PS_COSMETIC**, a largura deve ser definida como 1.  
   
- `crColor`  
+ *crColor*  
  Contém uma cor RGB para a caneta.  
   
- `pLogBrush`  
- Aponta para um [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) estrutura. Se `nPenStyle` é **PS_COSMETIC**, o **lbColor** membro o `LOGBRUSH` estrutura Especifica a cor da caneta e o `lbStyle` membro do `LOGBRUSH` estrutura deve ser definido como **BS_SOLID**. Se **nPenStyle** é **PS_GEOMETRIC**, todos os membros devem ser usados para especificar os atributos de pincel da caneta.  
+ *pLogBrush*  
+ Aponta para um [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) estrutura. Se *nPenStyle* é **PS_COSMETIC**, o **lbColor** membro o `LOGBRUSH` estrutura Especifica a cor da caneta e o *lbStyle*membro o `LOGBRUSH` estrutura deve ser definida como **BS_SOLID**. Se **nPenStyle** é **PS_GEOMETRIC**, todos os membros devem ser usados para especificar os atributos de pincel da caneta.  
   
- `nStyleCount`  
- Especifica o comprimento, em unidades de doubleword da `lpStyle` matriz. Esse valor deve ser zero se `nPenStyle` não é **PS_USERSTYLE**.  
+ *nStyleCount*  
+ Especifica o comprimento, em unidades de doubleword, do *lpStyle* matriz. Esse valor deve ser zero se *nPenStyle* não é **PS_USERSTYLE**.  
   
- `lpStyle`  
- Aponta para uma matriz de valores doubleword. O primeiro valor Especifica o comprimento de um traço primeiro em um estilo definido pelo usuário, o segundo valor Especifica o comprimento do primeiro espaço e assim por diante. Este ponteiro deve ser **nulo** se `nPenStyle` não é **PS_USERSTYLE**.  
+ *lpStyle*  
+ Aponta para uma matriz de valores doubleword. O primeiro valor Especifica o comprimento de um traço primeiro em um estilo definido pelo usuário, o segundo valor Especifica o comprimento do primeiro espaço e assim por diante. Este ponteiro deve ser **nulo** se *nPenStyle* não é **PS_USERSTYLE**.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se tiver êxito, ou zero se o método falhar.  
@@ -228,11 +228,11 @@ BOOL CreatePen(
   
  A segunda versão do `CreatePen` inicializa uma caneta superficial ou geométrica lógica que foi especificado de estilo, largura e atributos de pincel. A largura de uma caneta superficial é sempre 1. a largura de uma caneta geométrica sempre é especificada em unidades do mundo. Depois que um aplicativo cria uma caneta lógica, pode selecionar que caneta em um contexto de dispositivo chamando o [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) função. Depois de seleciona uma caneta em um contexto de dispositivo, ele pode ser usado para desenhar linhas e curvas.  
   
--   Se `nPenStyle` é **PS_COSMETIC** e **PS_USERSTYLE**, as entradas na `lpStyle` matriz especificam os comprimentos dos traços e espaços em unidades de estilo. Uma unidade de estilo é definida pelo dispositivo em que a caneta é usada para desenhar uma linha.  
+-   Se *nPenStyle* é **PS_COSMETIC** e **PS_USERSTYLE**, as entradas na *lpStyle* matriz Especifica os tamanhos de traços e espaços unidades de estilo. Uma unidade de estilo é definida pelo dispositivo em que a caneta é usada para desenhar uma linha.  
   
--   Se `nPenStyle` é **PS_GEOMETRIC** e **PS_USERSTYLE**, as entradas na `lpStyle` matriz Especifica os tamanhos de traços e espaços em unidades lógicas.  
+-   Se *nPenStyle* é **PS_GEOMETRIC** e **PS_USERSTYLE**, as entradas na *lpStyle* matriz Especifica os tamanhos de traços e espaços unidades lógicas.  
   
--   Se `nPenStyle` é **PS_ALTERNATE**, a unidade de estilo é ignorada e todos os outros pixel é definido.  
+-   Se *nPenStyle* é **PS_ALTERNATE**, a unidade de estilo é ignorada e todos os outros pixel é definido.  
   
  Quando um aplicativo não exige uma caneta determinada, ele deve chamar o [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) membro de função ou destruir o `CPen` do objeto para o recurso não está mais em uso. Um aplicativo não deve excluir uma caneta quando a caneta está selecionada em um contexto de dispositivo.  
   
@@ -240,14 +240,14 @@ BOOL CreatePen(
  [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
 ##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect  
- Inicializa uma caneta que tem o estilo, a largura e a cor fornecido na estrutura apontada pelo `lpLogPen`.  
+ Inicializa uma caneta que tem o estilo, a largura e a cor fornecido na estrutura apontada pelo *lpLogPen*.  
   
 ```  
 BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpLogPen`  
+ *lpLogPen*  
  Aponta para o Windows [LOGPEN](../../mfc/reference/logpen-structure.md) estrutura que contém informações sobre a caneta.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -289,7 +289,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pLogPen`  
+ *pLogPen*  
  Aponta para um [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) estrutura que contém informações sobre a caneta.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -321,7 +321,7 @@ int GetLogPen(LOGPEN* pLogPen);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pLogPen`  
+ *pLogPen*  
  Aponta para um [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) estrutura contenha informações sobre a caneta.  
   
 ### <a name="return-value"></a>Valor de retorno  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fef6d3e30791d2a08a82d1b152cd849cd4ebf24b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377334"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078402"
 ---
 # <a name="cpropexchange-class"></a>Classe CPropExchange
 Oferece suporte à implementação de persistência para os controles OLE.  
@@ -95,20 +95,20 @@ virtual BOOL ExchangeBlobProp(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pszPropName`  
+ *pszPropName*  
  O nome da propriedade que está sendo trocado.  
   
- `phBlob`  
+ *phBlob*  
  Ponteiro para uma variável que aponta para onde a propriedade é armazenada (variável normalmente é um membro da sua classe).  
   
- `hBlobDefault`  
+ *hBlobDefault*  
  Valor padrão para a propriedade.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
   
 ### <a name="remarks"></a>Comentários  
- O valor da propriedade é lido ou gravado a, conforme apropriado, a variável referenciada por `phBlob`. Se `hBlobDefault` for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, a serialização do controle falhar.  
+ O valor da propriedade é lido ou gravado a, conforme apropriado, a variável referenciada por *phBlob*. Se *hBlobDefault* for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, a serialização do controle falhar.  
   
  As funções **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, e **CPropsetPropExchange::ExchangeBlobProp** substituir Essa função virtual pura.  
   
@@ -124,23 +124,23 @@ virtual BOOL ExchangeFontProp(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pszPropName`  
+ *pszPropName*  
  O nome da propriedade que está sendo trocado.  
   
- `font`  
+ *Fonte*  
  Uma referência a um [CFontHolder](../../mfc/reference/cfontholder-class.md) objeto que contém a propriedade de fonte.  
   
- `pFontDesc`  
- Um ponteiro para um [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) estrutura que contém valores para inicializar o estado padrão da propriedade font quando `pFontDispAmbient` é **nulo**.  
+ *pFontDesc*  
+ Um ponteiro para um [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) estrutura que contém valores para inicializar o estado padrão da propriedade font quando *pFontDispAmbient* é **nulo**.  
   
- `pFontDispAmbient`  
+ *pFontDispAmbient*  
  Um ponteiro para o **IFontDisp** interface de uma fonte a ser usado para inicializar o estado padrão da propriedade font.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
   
 ### <a name="remarks"></a>Comentários  
- Se a propriedade de fonte está sendo carregada da mídia para o controle, características da fonte são recuperadas do meio e o `CFontHolder` objeto referenciado por `font` é inicializada com eles. Se a propriedade font está sendo armazenada, as características do objeto de fonte são gravadas na mídia.  
+ Se a propriedade de fonte está sendo carregada da mídia para o controle, características da fonte são recuperadas do meio e o `CFontHolder` objeto referenciado por *fonte* é inicializada com eles. Se a propriedade font está sendo armazenada, as características do objeto de fonte são gravadas na mídia.  
   
  As funções **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, e **CPropsetPropExchange::ExchangeFontProp** substituir Essa função virtual pura.  
   
@@ -156,16 +156,16 @@ virtual BOOL ExchangePersistentProp(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pszPropName`  
+ *pszPropName*  
  O nome da propriedade que está sendo trocado.  
   
- `ppUnk`  
+ *ppUnk*  
  Um ponteiro para uma variável que contém um ponteiro para a propriedade **IUnknown** interface (essa variável normalmente é um membro da sua classe).  
   
- `iid`  
+ *IID*  
  ID de interface da interface na propriedade que irá usar o controle.  
   
- `pUnkDefault`  
+ *pUnkDefault*  
  Valor padrão para a propriedade.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -188,10 +188,10 @@ virtual BOOL ExchangeProp(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pszPropName`  
+ *pszPropName*  
  O nome da propriedade que está sendo trocado.  
   
- `vtProp`  
+ *vtProp*  
  Um símbolo que especifica o tipo da propriedade sendo trocado. Os possíveis valores são:  
   
 |Símbolo|Tipo de propriedade|  
@@ -204,7 +204,7 @@ virtual BOOL ExchangeProp(
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
   
- `pvProp`  
+ *pvProp*  
  Um ponteiro para o valor da propriedade.  
   
  *pvDefault*  
@@ -214,7 +214,7 @@ virtual BOOL ExchangeProp(
  Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
   
 ### <a name="remarks"></a>Comentários  
- Se a propriedade está sendo carregada da mídia para o controle, o valor da propriedade é recuperado de médio porte e armazenado no objeto apontado pelo `pvProp`. Se a propriedade estiver sendo armazenada na mídia, o valor do objeto apontado pela `pvProp` é gravado na mídia.  
+ Se a propriedade está sendo carregada da mídia para o controle, o valor da propriedade é recuperado de médio porte e armazenado no objeto apontado pelo *pvProp*. Se a propriedade estiver sendo armazenada na mídia, o valor do objeto apontada pelo *pvProp* é gravado na mídia.  
   
  As funções **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, e **CPropsetPropExchange::ExchangeProp** substituição nesse pura função virtual.  
   
@@ -232,10 +232,10 @@ virtual BOOL ExchangeVersion(
  *dwVersionLoaded*  
  Referência a uma variável onde o número de versão dos dados persistentes que está sendo carregados será armazenado.  
   
- `dwVersionDefault`  
+ *dwVersionDefault*  
  O número de versão atual do controle.  
   
- `bConvert`  
+ *bConvert*  
  Indica se deve converter os dados persistentes para a versão atual ou mantê-lo na mesma versão que foi carregada.  
   
 ### <a name="return-value"></a>Valor de retorno  

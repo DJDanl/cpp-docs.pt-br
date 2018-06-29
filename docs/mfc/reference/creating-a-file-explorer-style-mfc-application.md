@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b0f5d4bdabc987d4f4177f616ce756c351b8b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a2c3e8e1c7956a5dff33cd8ff78612f5f844ad6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370149"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078415"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Criando um aplicativo MFC no estilo de Explorador de Arquivos
 Muitos aplicativos de sistema do Windows usam a interface do usuário (UI) para o Explorador de arquivos. Quando você inicia o Explorador de arquivos, por exemplo, você ver um aplicativo com uma divisão vertical barra dividir a área cliente. À esquerda da área cliente fornece navegação e os recursos de navegação e o lado direito da área cliente mostra detalhes pertinentes à seleção no painel esquerdo. Quando um usuário clica em um item no painel esquerdo, o aplicativo preenche novamente o painel direito. Em um aplicativo MDI, você pode usar comandos no **exibição** menu para alterar a quantidade de detalhes exibidos no painel direito. (Em um SDI ou vários aplicativos de nível superior do documento, você pode alterar os detalhes usando os botões da barra de ferramentas somente.)  
@@ -32,7 +32,7 @@ Muitos aplicativos de sistema do Windows usam a interface do usuário (UI) para 
   
  O assistente cria as classes a seguir para você:  
   
--   O **CLeftView** classe define o painel esquerdo da área cliente. Ele sempre é derivado do [CTreeView](../../mfc/reference/ctreeview-class.md).  
+-   O `CLeftView` classe define o painel esquerdo da área cliente. Ele sempre é derivado do [CTreeView](../../mfc/reference/ctreeview-class.md).  
   
 -   C*NomeDoProjeto*exibir classe define o painel direito da área do cliente. Por padrão, ele é derivado do [CListView](../../mfc/reference/clistview-class.md) , mas pode ser outro tipo de exibição dependendo da classe que você especificar na **classe Base** lista o [Classes geradas pelo](../../mfc/reference/generated-classes-mfc-application-wizard.md) página do Assistente.  
   

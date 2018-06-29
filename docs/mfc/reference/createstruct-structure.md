@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e51aed1eb7f74c721a5a4da092f205a2492ba5f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7bc510f0d0cfc88476c9e222f51bcfeb958e31a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370865"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078461"
 ---
 # <a name="createstruct-structure"></a>Estrutura CREATESTRUCT
 O `CREATESTRUCT` estrutura define os parâmetros de inicialização passados para o procedimento de janela de um aplicativo.  
@@ -46,40 +46,40 @@ typedef struct tagCREATESTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `lpCreateParams`  
+ *lpCreateParams*  
  Pontos de dados a ser usado para criar a janela.  
   
- `hInstance`  
+ *hInstance*  
  Identifica o identificador de instância de módulo do módulo que possui a nova janela.  
   
- `hMenu`  
+ *hMenu*  
  Identifica o menu a ser usado pela nova janela. Se uma janela filho, contém a ID de inteiro.  
   
- `hwndParent`  
+ *hwndParent*  
  Identifica a janela que possui a nova janela. Esse membro é **nulo** se a nova janela é uma janela de nível superior.  
   
- `cy`  
+ *Cy*  
  Especifica a altura da nova janela.  
   
- `cx`  
+ *CX*  
  Especifica a largura da nova janela.  
   
- `y`  
+ *y*  
  Especifica a coordenada y do canto superior esquerdo da nova janela. As coordenadas são em relação a janela pai se a nova janela é uma janela filho; Caso contrário, as coordenadas são em relação à origem da tela.  
   
- `x`  
+ *x*  
  Especifica a coordenada x do canto superior esquerdo da nova janela. As coordenadas são em relação a janela pai se a nova janela é uma janela filho; Caso contrário, as coordenadas são em relação à origem da tela.  
   
- `style`  
+ *style*  
  Especifica a nova janela [estilo](../../mfc/reference/styles-used-by-mfc.md).  
   
- `lpszName`  
+ *lpszName*  
  Aponta para uma cadeia de caracteres terminada em nulo que especifica o nome da nova janela.  
   
- `lpszClass`  
+ *lpszClass*  
  Aponta para uma cadeia de caracteres terminada em nulo que especifica o nome da classe a nova janela Windows (um [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estrutura; para obter mais informações, consulte o SDK do Windows).  
   
- `dwExStyle`  
+ *dwExStyle*  
  Especifica o [estilo estendido](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) para a nova janela.  
   
 ## <a name="requirements"></a>Requisitos  
