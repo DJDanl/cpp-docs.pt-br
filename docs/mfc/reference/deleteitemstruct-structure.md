@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f56a09742276c7fcb1bd66ff1a36b1d17cdf882
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c844ad428143c82e8214eab74262b326bf2c9a4
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370940"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123234"
 ---
 # <a name="deleteitemstruct-structure"></a>Estrutura DELETEITEMSTRUCT
 O `DELETEITEMSTRUCT` estrutura descreve um item excluído de caixa de listagem ou caixa de combinação desenhados pelo proprietário.  
@@ -39,23 +39,23 @@ typedef struct tagDELETEITEMSTRUCT { /* ditms */
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `CtlType`  
- Especifica **ODT_LISTBOX** (uma caixa de listagem de desenho proprietário) ou **ODT_COMBOBOX** (uma caixa de combinação do desenho proprietário).  
+ *CtlType*  
+ Especifica o ODT_LISTBOX (uma caixa de listagem de desenho proprietário) ou ODT_COMBOBOX (uma caixa de combinação do desenho proprietário).  
   
- `CtlID`  
+ *CtlID*  
  Especifica o identificador da caixa de listagem ou caixa de combinação.  
   
- `itemID`  
+ *itemID*  
  Especifica o índice do item na caixa de listagem ou caixa de combinação que está sendo removido.  
   
- `hwndItem`  
+ *hwndItem*  
  Identifica o controle.  
   
- `itemData`  
- Especifica os dados definidos pelo aplicativo para o item. Esse valor é passado para o controle no **lParam** parâmetro da mensagem que adiciona o item à caixa de listagem ou caixa de combinação.  
+ *itemData*  
+ Especifica os dados definidos pelo aplicativo para o item. Esse valor é passado para o controle no *lParam* parâmetro da mensagem que adiciona o item à caixa de listagem ou caixa de combinação.  
   
 ## <a name="remarks"></a>Comentários  
- Quando um item é removido da caixa de listagem ou caixa de combinação ou caixa de listagem ou caixa de combinação é destruída, o Windows envia o `WM_DELETEITEM` mensagem para o proprietário de cada item excluído. O **lParam** parâmetro da mensagem contém um ponteiro para essa estrutura.  
+ Quando um item é removido da caixa de listagem ou caixa de combinação ou caixa de listagem ou caixa de combinação é destruída, o Windows envia a mensagem WM_DELETEITEM para o proprietário de cada item excluído. O *lParam* parâmetro da mensagem contém um ponteiro para essa estrutura.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atldbcli.h  

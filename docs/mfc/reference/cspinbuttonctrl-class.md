@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43b0967309813603e4f683f35c3ca51dce99fd8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddf8e6530530552a4ef7b811698c816352f7719c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374685"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122961"
 ---
 # <a name="cspinbuttonctrl-class"></a>Classe CSpinButtonCtrl
 Fornece a funcionalidade de controle de botão de rotação comuns do Windows.  
@@ -120,25 +120,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwStyle`  
+ *dwStyle*  
  Especifica o estilo do controle de botão de rotação. Aplica qualquer combinação de estilos de controle de botão de rotação para o controle. Esses estilos são descritos na [estilos de controle acima-abaixo](http://msdn.microsoft.com/library/windows/desktop/bb759885) no SDK do Windows.  
   
- `rect`  
+ *Rect*  
  Especifica o tamanho e a posição do controle de botão de rotação. Ele pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura  
   
- `pParentWnd`  
- Um ponteiro para a janela do pai do controle de botão de rotação, geralmente um `CDialog`. Ele não deve ser **nulo.**  
+ *pParentWnd*  
+ Um ponteiro para a janela do pai do controle de botão de rotação, geralmente um `CDialog`. Ele não deve ser NULL.  
   
- `nID`  
+ *nID*  
  Especifica a ID. do controle de botão de rotação  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a inicialização foi bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Você pode criar um `CSpinButtonCtrl` objeto em duas etapas, primeiro, chame o construtor e, em seguida, chamar **criar**, que cria o controle de botão de rotação e anexa-o para o `CSpinButtonCtrl` objeto.  
+ Você pode criar um `CSpinButtonCtrl` objeto em duas etapas, primeiro, chame o construtor e, em seguida, chamar `Create`, que cria o controle de botão de rotação e anexa-o para o `CSpinButtonCtrl` objeto.  
   
- Para criar um controle de botão de rotação com estilos de janela estendidos, chame [CSpinButtonCtrl::CreateEx](#createex) em vez de **criar**.  
+ Para criar um controle de botão de rotação com estilos de janela estendidos, chame [CSpinButtonCtrl::CreateEx](#createex) em vez de `Create`.  
   
 ##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
  Cria um controle (uma janela filho) e o associa a `CSpinButtonCtrl` objeto.  
@@ -153,26 +153,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwExStyle`  
- Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista de estilos estendida do windows, consulte o `dwExStyle` parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
+ *dwExStyle*  
+ Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista de estilos estendida do windows, consulte o *dwExStyle* parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica o estilo do controle de botão de rotação. Aplica qualquer combinação de estilos de controle de botão de rotação para o controle. Esses estilos são descritos na [estilos de controle acima-abaixo](http://msdn.microsoft.com/library/windows/desktop/bb759885) no SDK do Windows.  
   
- `rect`  
- Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e a posição da janela deve ser criada, nas coordenadas do cliente de `pParentWnd`.  
+ *Rect*  
+ Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e a posição da janela deve ser criada, nas coordenadas do cliente de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para a janela que é o pai do controle.  
   
- `nID`  
+ *nID*  
  ID de janela filho. do controle  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Use `CreateEx` em vez de [criar](#create) para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_**.  
+ Use `CreateEx` em vez de [criar](#create) para aplicar estilos estendidos do Windows, especificados pelo prefácio estilo estendido do Windows WS_EX_.  
   
 ##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
  Constrói um objeto `CSpinButtonCtrl`.  
@@ -191,10 +191,10 @@ UINT GetAccel(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nAccel`  
- Número de elementos na matriz especificada pelo `pAccel`.  
+ *nAccel*  
+ Número de elementos na matriz especificada por *pAccel*.  
   
- `pAccel`  
+ *pAccel*  
  Ponteiro para uma matriz de [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) estruturas que recebe informações de aceleração.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -229,7 +229,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
   
 ### <a name="parameters"></a>Parâmetros  
  *lpbError*  
- Um ponteiro para um valor booliano que é definido como zero se o valor é recuperado com êxito ou zero se ocorrer um erro. Se esse parâmetro for definido como **nulo**, não são relatados erros.  
+ Um ponteiro para um valor booliano que é definido como zero se o valor é recuperado com êxito ou zero se ocorrer um erro. Se esse parâmetro for definido como NULL, não são relatados erros.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A primeira versão retorna a posição atual de 16-bit na palavra de ordem inferior. A palavra de ordem alta é diferente de zero se ocorreu um erro.  
@@ -255,7 +255,7 @@ void GetRange32(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *Inferior*  
+ *inferior*  
  Referência a um número inteiro que recebe o limite inferior do controle.  
   
  *superior*  
@@ -277,11 +277,11 @@ BOOL SetAccel(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nAccel`  
- Número de [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) estruturas especificadas pelo `pAccel`.  
+ *nAccel*  
+ Número de [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) estruturas especificadas por *pAccel*.  
   
- `pAccel`  
- Ponteiro para uma matriz de `UDACCEL` estruturas que contêm informações de aceleração. Elementos devem ser classificados em ordem crescente com base no **nSec** membro.  
+ *pAccel*  
+ Ponteiro para uma matriz de estruturas UDACCEL, que contêm informações de aceleração. Elementos devem ser classificados em ordem crescente com base no `nSec` membro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
@@ -294,7 +294,7 @@ int SetBase(int nBase);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nBase`  
+ *nBase*  
  Novo valor de base para o controle. Ele pode ser 10 para decimal ou 16 para hexadecimal.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -311,7 +311,7 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWndBuddy`  
+ *pWndBuddy*  
  Ponteiro para a nova janela buddy.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -329,7 +329,7 @@ int SetPos32(int nPos);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nPos`  
+ *nPos*  
  Nova posição do controle. Esse valor deve estar no intervalo especificado pelos limites superiores e inferiores do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -353,8 +353,8 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nLower` e `nUpper`  
- Limites superior e inferior do controle. Para `SetRange`, nenhum limite pode ser maior que **UD_MAXVAL** ou menor que **UD_MINVAL**; Além disso, a diferença entre os dois limites não pode exceder **UD_MAXVAL**. `SetRange32` não coloca nenhuma restrição sobre os limites; Use qualquer inteiros.  
+ *nLower* e *nUpper*  
+ Limites superior e inferior do controle. Para `SetRange`, nenhum limite pode ser maior que UD_MAXVAL ou menor que UD_MINVAL; Além disso, a diferença entre os dois limites não pode exceder UD_MAXVAL. `SetRange32` não coloca nenhuma restrição sobre os limites; Use qualquer inteiros.  
   
 ### <a name="remarks"></a>Comentários  
  A função de membro `SetRange32` define o intervalo de 32 bits para o controle de botão de rotação.  

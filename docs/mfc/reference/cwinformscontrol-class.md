@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d126c7e6ef77142f20a9dd9d7ed68c44ede5fc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00ec945c5f0cdbb0c12f49b90719c31bf841ef2f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375272"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121631"
 ---
 # <a name="cwinformscontrol-class"></a>Classe CWinFormsControl
 Fornece a funcionalidade básica para a hospedagem de um controle de formulários do Windows.  
@@ -113,25 +113,25 @@ inline BOOL CreateManagedControl(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pType`  
+ *PDigite*  
  O tipo de dados do controle a ser criado. Deve ser um [tipo](https://msdn.microsoft.com/en-us/library/system.type) tipo de dados.  
   
- `dwStyle`  
+ *dwStyle*  
  O estilo da janela para aplicar ao controle. Especificar uma combinação de [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles). Atualmente, há suporte para apenas os seguintes estilos: WS_TABSTOP, WS_VISIBLE, WS_DISABLED e WS_GROUP.  
   
- `rect`  
+ *Rect*  
  Um [estrutura RECT](../../mfc/reference/rect-structure1.md) que define as coordenadas dos cantos superior esquerdo e direito inferior do controle (primeiro sobrecarregar somente).  
   
- `nPlaceHolderID`  
+ *nPlaceHolderID*  
  O identificador do controle de suporte local estática colocada no Editor de recursos. O controle de formulários do Windows recentemente criado substitui o controle estático, supondo que sua posição, ordem z e estilos (segunda sobrecarga somente).  
   
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para a janela pai.  
   
- `nID`  
+ *nID*  
  O número de identificação de recurso a ser atribuído ao controle recém-criado.  
   
- `pControl`  
+ *pControl*  
  Uma instância de um controle de formulários do Windows a ser associado com a [CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md) (somente sobrecarga quarta) do objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -140,13 +140,13 @@ inline BOOL CreateManagedControl(
 ### <a name="remarks"></a>Comentários  
  Esse método cria um controle de formulários do Windows do .NET Framework em um contêiner do MFC.  
   
- A primeira sobrecarga do método aceita um tipo de dados do .NET Framework `pType` para que o MFC pode criar um novo objeto desse tipo. `pType` deve ser um [tipo](https://msdn.microsoft.com/en-us/library/system.type) tipo de dados.  
+ A primeira sobrecarga do método aceita um tipo de dados do .NET Framework *PDigite* para que o MFC pode criar um novo objeto desse tipo. *PDigite* deve ser um [tipo](https://msdn.microsoft.com/en-us/library/system.type) tipo de dados.  
   
- A segunda sobrecarga do método cria um controle de formulários do Windows com base no `TManagedControl` parâmetro de modelo do `CWinFormsControl` classe. O tamanho e a posição do controle se baseia o `RECT` estrutura passado para o método. Somente `dwStyle` é importante para os estilos.  
+ A segunda sobrecarga do método cria um controle de formulários do Windows com base no `TManagedControl` parâmetro de modelo do `CWinFormsControl` classe. O tamanho e a posição do controle se baseia o `RECT` estrutura passado para o método. Somente *dwStyle* é importante para os estilos.  
   
- A terceira sobrecarga do método cria um controle de formulários do Windows que substitui um controle estático, destruí-lo e supondo que sua posição, ordem z e estilos. O controle estático serve apenas como um espaço reservado para o controle de formulários do Windows. Ao criar o controle, essa sobrecarga combina os estilos de `dwStyle` com estilos de recurso do controle estático.  
+ A terceira sobrecarga do método cria um controle de formulários do Windows que substitui um controle estático, destruí-lo e supondo que sua posição, ordem z e estilos. O controle estático serve apenas como um espaço reservado para o controle de formulários do Windows. Ao criar o controle, essa sobrecarga combina os estilos de *dwStyle* com estilos de recurso do controle estático.  
   
- A quarta sobrecarga do método permite que você passe em um controle de formulários do Windows já instanciado `pControl` que MFC será ajustado. Ele deve ser do mesmo tipo que o `TManagedControl` parâmetro de modelo do `CWinFormsControl` classe.  
+ A quarta sobrecarga do método permite que você passe em um controle de formulários do Windows já instanciado *pControl* que MFC será ajustado. Ele deve ser do mesmo tipo que o `TManagedControl` parâmetro de modelo do `CWinFormsControl` classe.  
   
  Consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) para obter exemplos usando o formulário do Windows controla.  
   

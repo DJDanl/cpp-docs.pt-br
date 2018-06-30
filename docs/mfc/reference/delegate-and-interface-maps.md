@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1e6f2e8cc501f9a466e4970d27a2e6ecd9174ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d817ec62734b3646c4df0977daa8161601e5c592
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372976"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122686"
 ---
 |||  
 |-|-|  
@@ -31,7 +31,7 @@ ms.locfileid: "33372976"
 |[END_DELEGATE_MAP](#end_delegate_map)|Termina um mapa de delegado.|
 |[END_INTERFACE_MAP](#end_interface_map)|Termina o mapa de interface no arquivo de implementação. |
 |[EVENT_DELEGATE_ENTRY](#event_delegate_entry)|Cria uma entrada no mapa do delegado.|
-|[INTERFACE_PART](#interface_part)|Usado entre o `BEGIN_INTERFACE_MAP` macro e `END_INTERFACE_MAP` macro para cada interface que seu objeto oferecerá suporte.|
+|[INTERFACE_PART](#interface_part)|Usado entre a macro BEGIN_INTERFACE_MAP e a macro END_INTERFACE_MAP para cada interface de que seu objeto oferecerá suporte.|
 |[MAKE_DELEGATE](#make_delegate)|Anexa um manipulador de eventos para um controle gerenciado.|
 
 
@@ -43,7 +43,7 @@ Inicia um mapa de delegado.
 BEGIN_DELEGATE_MAP(  CLASS );  
 ```
 ### <a name="parameters"></a>Parâmetros  
- `CLASS`  
+ *CLASSE*  
  A classe em que o controle gerenciado está hospedado.  
    
 ### <a name="remarks"></a>Comentários  
@@ -63,14 +63,14 @@ Começa a definição do mapa interfaced quando usado no arquivo de implementaç
 BEGIN_INTERFACE_MAP( theClass, baseClass )  
 ```
 ### <a name="parameters"></a>Parâmetros  
- `theClass`  
+ *theClass*  
  A classe na qual o mapa de interface é a ser definido  
   
- `baseClass`  
- A classe da qual `theClass` deriva.  
+ *baseClass*  
+ A classe da qual *theClass* deriva.  
    
 ### <a name="remarks"></a>Comentários  
- Para cada interface que é implementada, há um ou mais `INTERFACE_PART` invocações de macro. Para cada agregação, que usa a classe, há um **INTERFACE_AGGREGATE** invocação de macro.  
+ Para cada interface que é implementada, há um ou mais chamadas de macro INTERFACE_PART. Para cada agregação, que usa a classe, há uma chamada de macro INTERFACE_AGGREGATE.  
   
  Para obter mais informações sobre mapas de interface, consulte [38 de observação técnica](../tn038-mfc-ole-iunknown-implementation.md).  
    
@@ -85,7 +85,7 @@ Registra os métodos de retorno de chamada com uma fonte de comando.
 delegate void CommandHandler(  UINT^ cmdID  );  
 ```
 ### <a name="parameters"></a>Parâmetros  
- `cmdID`  
+ *cmdID*  
  A ID de comando.  
    
 ### <a name="remarks"></a>Comentários  
@@ -109,10 +109,10 @@ Registra os métodos de retorno de chamada com uma mensagem de comando de atuali
 delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);  
 ```
 ### <a name="parameters"></a>Parâmetros  
- `cmdID`  
+ *cmdID*  
  A ID de comando.  
   
- `cmdUI`  
+ *cmdUI*  
  A ID de mensagem de comando.  
    
 ### <a name="remarks"></a>Comentários  
@@ -173,20 +173,20 @@ Cria uma entrada no mapa do delegado.
 EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);  
 ```
 ### <a name="parameters"></a>Parâmetros  
- `MEMBER`  
+ *MEMBRO*  
  O método do manipulador de eventos a ser anexado ao controle.  
   
- `ARG0`  
- O primeiro argumento do método do manipulador de eventos gerenciados, como **objeto ^**.  
+ *ARG0*  
+ O primeiro argumento do método do manipulador de eventos gerenciados, como `Object^`.  
   
- `ARG1`  
- O segundo argumento do método do manipulador de eventos gerenciados, como **EventArgs ^**.  
+ *ARG1*  
+ O segundo argumento do método do manipulador de eventos gerenciados, como `EventArgs^`.  
    
 ### <a name="remarks"></a>Comentários  
  Cada entrada no mapa de delegado corresponde a um delegado de manipulador de eventos gerenciado criado por [MAKE_DELEGATE](#make_delegate).  
    
 ### <a name="example"></a>Exemplo  
- O exemplo de código a seguir mostra como usar `EVENT_DELEGATE_ENTRY` para criar uma entrada no mapa do representante para o `OnClick` manipulador de eventos; também consulte o exemplo de código em `MAKE_DELEGATE`. Para obter mais informações, consulte [como: coletor de eventos do Windows Forms de Classes C++ nativas](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  
+ O exemplo de código a seguir mostra como usar EVENT_DELEGATE_ENTRY para criar uma entrada no mapa do delegado a `OnClick` manipulador de eventos; também consulte o exemplo de código em MAKE_DELEGATE. Para obter mais informações, consulte [como: coletor de eventos do Windows Forms de Classes C++ nativas](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  
   
  ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -205,22 +205,22 @@ END_DELEGATE_MAP()
  
 
 ##  <a name="interface_part"></a>INTERFACE_PART
-Usado entre o `BEGIN_INTERFACE_MAP` macro e `END_INTERFACE_MAP` macro para cada interface que seu objeto oferecerá suporte.  
+Usado entre a macro BEGIN_INTERFACE_MAP e a macro END_INTERFACE_MAP para cada interface de que seu objeto oferecerá suporte.  
    
 ### <a name="syntax"></a>Sintaxe    
 ```
 INTERFACE_PART( theClass, iid, localClass)  
 ```
 ### <a name="parameters"></a>Parâmetros  
- `theClass`  
+ *theClass*  
  O nome da classe que contém o mapa de interface.    
- `iid`  
+ *IID*  
  O IID deve ser mapeada para a classe incorporada.    
  *localClass*  
  O nome da classe local.  
    
 ### <a name="remarks"></a>Comentários  
- Ele permite que você mapeie um IID para um membro da classe indicado pelo `theClass` e *localClass*.  
+ Ele permite que você mapeie um IID para um membro da classe indicado pelo *theClass* e *localClass*.  
   
  Para obter mais informações sobre mapas de interface, consulte [38 de observação técnica](../tn038-mfc-ole-iunknown-implementation.md).  
    
@@ -236,14 +236,14 @@ Anexa um manipulador de eventos para um controle gerenciado.
 MAKE_DELEGATE( DELEGATE,  MEMBER) ;  
 ```
 ### <a name="parameters"></a>Parâmetros  
- `DELEGATE`  
+ *DELEGADO*  
  Delegar o tipo do manipulador de eventos gerenciados, como [EventHandler](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True).  
   
- `MEMBER`  
+ *MEMBRO*  
  O nome do método do manipulador de eventos a ser anexado ao controle.  
    
 ### <a name="remarks"></a>Comentários  
- Esta macro cria um delegado de manipulador de eventos gerenciado do tipo `DELEGATE` e do nome `MEMBER`. O delegado de manipulador de eventos gerenciado permite que uma classe nativa manipular eventos gerenciados.  
+ Esta macro cria um delegado de manipulador de eventos gerenciado do tipo *delegar* e do nome *membro*. O delegado de manipulador de eventos gerenciado permite que uma classe nativa manipular eventos gerenciados.  
    
 ### <a name="example"></a>Exemplo  
  O exemplo de código a seguir mostra como chamar `MAKE_DELEGATE` para anexar um `OnClick` manipulador de eventos para um controle MFC `MyControl`. Para obter uma explicação mais ampla de como essa macro funciona em um aplicativo MFC, consulte [como: coletor de eventos do Windows Forms de Classes C++ nativas](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  

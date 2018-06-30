@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd0af17faf3eb4a7206f50d81753e1def508aed4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5e82dce1d80ee241c8bffae99457c2e25555818
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370543"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121709"
 ---
 # <a name="cwinformsview-class"></a>Classe CWinFormsView
 Fornece funcionalidade genérica para a hospedagem de um controle de formulários do Windows como uma exibição MFC.  
@@ -78,7 +78,7 @@ CWinFormsView(System::Type^ pManagedViewType);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pManagedViewType`  
+ *pManagedViewType*  
  Um ponteiro para o tipo de dados do controle de usuário de formulários do Windows.   
   
 ### <a name="example"></a>Exemplo  

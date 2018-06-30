@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce997441c11287626e9681a661f858e33ccdde24
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: f4522b9ea2f336f5ac88f5444edc0c7df16b5bc6
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322206"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122383"
 ---
 # <a name="event-maps"></a>Mapas de evento
 
@@ -71,7 +71,7 @@ DECLARE_EVENT_MAP()
 
 ### <a name="remarks"></a>Comentários
 
-Use o `DECLARE_EVENT_MAP` macro no final da sua declaração de classe. Em seguida, no arquivo. cpp que define as funções de membro para a classe, use o `BEGIN_EVENT_MAP` macro, entradas de macro para cada um dos eventos do controle e o `END_EVENT_MAP` macro para declarar o final da lista de eventos.
+Use a macro DECLARE_EVENT_MAP no final da sua declaração de classe. Em seguida, no arquivo. cpp que define as funções de membro para a classe, use a macro BEGIN_EVENT_MAP, entradas de macro para cada um dos eventos de controle e a macro END_EVENT_MAP para declarar o final da lista de eventos.
 
 Para obter mais informações sobre mapas de evento, consulte o artigo [controles ActiveX: eventos](../../mfc/mfc-activex-controls-events.md).
 
@@ -97,9 +97,9 @@ Especifica o nome da classe base do *theClass*.
 
 ### <a name="remarks"></a>Comentários
 
-No arquivo de implementação (. cpp) que define as funções de membro para a sua classe, inicie o mapa de evento com o `BEGIN_EVENT_MAP` macro, em seguida, adicionar entradas de macro para cada um dos seus eventos e concluir o mapa de evento com o `END_EVENT_MAP` macro.
+No arquivo de implementação (. cpp) que define as funções de membro para a sua classe, inicie o mapa de evento com a macro BEGIN_EVENT_MAP, em seguida, adicionar entradas de macro para cada um dos seus eventos e concluir o mapa de evento com a macro END_EVENT_MAP.
 
-Para obter mais informações sobre o evento e o `BEGIN_EVENT_MAP` macro, consulte o artigo [controles ActiveX: eventos](../../mfc/mfc-activex-controls-events.md).
+Para obter mais informações sobre mapas de evento e a macro BEGIN_EVENT_MAP, consulte o artigo [controles ActiveX: eventos](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -107,7 +107,7 @@ Para obter mais informações sobre o evento e o `BEGIN_EVENT_MAP` macro, consul
 
 ##  <a name="end_event_map"></a>  END_EVENT_MAP
 
-Use o `END_EVENT_MAP` macro para finalizar a definição do mapa de evento.
+Use a macro END_EVENT_MAP para finalizar a definição do mapa de evento.
 
 ```cpp
 END_EVENT_MAP()
@@ -148,36 +148,36 @@ O `VTS_` constantes e seus significados são os seguintes:
 
 |Símbolo|tipo de parâmetro|
 |------------|--------------------|
-|`VTS_I2`|**short**|
-|`VTS_I4`|**long**|
-|`VTS_R4`|**float**|
-|`VTS_R8`|**double**|
-|`VTS_COLOR`|`OLE_COLOR`|
-|`VTS_CY`|`CURRENCY`|
-|`VTS_DATE`|`DATE`|
-|`VTS_BSTR`|**Const** __char\*__|
-|`VTS_DISPATCH`|`LPDISPATCH`|
-|`VTS_FONT`|`IFontDispatch*`|
-|`VTS_HANDLE`|`HANDLE`|
-|`VTS_SCODE`|`SCODE`|
-|`VTS_BOOL`|`BOOL`|
-|`VTS_VARIANT`|`const VARIANT*`|
-|`VTS_PVARIANT`|`VARIANT*`|
-|`VTS_UNKNOWN`|`LPUNKNOWN`|
-|`VTS_OPTEXCLUSIVE`|`OLE_OPTEXCLUSIVE`|
-|`VTS_PICTURE`|`IPictureDisp*`|
-|`VTS_TRISTATE`|`OLE_TRISTATE`|
-|`VTS_XPOS_PIXELS`|`OLE_XPOS_PIXELS`|
-|`VTS_YPOS_PIXELS`|`OLE_YPOS_PIXELS`|
-|`VTS_XSIZE_PIXELS`|`OLE_XSIZE_PIXELS`|
-|`VTS_YSIZE_PIXELS`|`OLE_YSIZE_PIXELS`|
-|`VTS_XPOS_HIMETRIC`|`OLE_XPOS_HIMETRIC`|
-|`VTS_YPOS_HIMETRIC`|`OLE_YPOS_HIMETRIC`|
-|`VTS_XSIZE_HIMETRIC`|`OLE_XSIZE_HIMETRIC`|
-|`VTS_YSIZE_HIMETRIC`|`OLE_YSIZE_HIMETRIC`|
+|VTS_I2|**short**|
+|VTS_I4|**long**|
+|VTS_R4|**float**|
+|VTS_R8|**double**|
+|VTS_COLOR|OLE_COLOR|
+|VTS_CY|MOEDA|
+|VTS_DATE|DATE|
+|VTS_BSTR|**Const** __char\*__|
+|VTS_DISPATCH|LPDISPATCH|
+|VTS_FONT|`IFontDispatch*`|
+|VTS_HANDLE|IDENTIFICADOR|
+|VTS_SCODE|SCODE|
+|VTS_BOOL|BOOL|
+|VTS_VARIANT|`const VARIANT*`|
+|VTS_PVARIANT|`VARIANT*`|
+|VTS_UNKNOWN|LPUNKNOWN|
+|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE|
+|VTS_PICTURE|`IPictureDisp*`|
+|VTS_TRISTATE|OLE_TRISTATE|
+|VTS_XPOS_PIXELS|OLE_XPOS_PIXELS|
+|VTS_YPOS_PIXELS|OLE_YPOS_PIXELS|
+|VTS_XSIZE_PIXELS|OLE_XSIZE_PIXELS|
+|VTS_YSIZE_PIXELS|OLE_YSIZE_PIXELS|
+|TS_XPOS_HIMETRIC|OLE_XPOS_HIMETRIC|
+|VTS_YPOS_HIMETRIC|OLE_YPOS_HIMETRIC|
+|VTS_XSIZE_HIMETRIC|OLE_XSIZE_HIMETRIC|
+|VTS_YSIZE_HIMETRIC|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> Constantes variantes adicionais foram definidas para todos os tipos de variável, com exceção de `VTS_FONT` e `VTS_PICTURE`, que fornecem um ponteiro para a constante de dados variant. Essas constantes são nomeados por meio de `VTS_Pconstantname` convenção. Por exemplo, `VTS_PCOLOR` é um ponteiro para um `VTS_COLOR` constante.
+> Constantes variantes adicionais foi definidas para todos os tipos variantes, com exceção do VTS_FONT e VTS_PICTURE, que fornece um ponteiro para a constante de dados variant. Essas constantes são nomeados por meio de `VTS_Pconstantname` convenção. Por exemplo, VTS_PCOLOR é um ponteiro para uma constante VTS_COLOR.
 
 ### <a name="requirements"></a>Requisitos
 
@@ -251,7 +251,7 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-Os valores de *lpMsg*, *hWndParent*, e *lpRect* parâmetros são tirados os parâmetros correspondentes do **IOleObject:: DoVerb** função de membro.
+Os valores a *lpMsg*, *hWndParent*, e *lpRect* parâmetros são tirados os parâmetros correspondentes do `IOleObject::DoVerb` função de membro.
 
 ### <a name="requirements"></a>Requisitos
 
@@ -275,7 +275,7 @@ A função chamada pelo framework quando o verbo é invocado.
 
 ### <a name="remarks"></a>Comentários
 
-O índice de verbo padrão está no formato `OLEIVERB_`, seguido por uma ação. `OLEIVERB_SHOW`, `OLEIVERB_HIDE`, e `OLEIVERB_UIACTIVATE` são alguns exemplos de verbos padrão.
+O índice de verbo padrão está no formato `OLEIVERB_`, seguido por uma ação. OLEIVERB_SHOW, OLEIVERB_HIDE e OLEIVERB_UIACTIVATE são alguns exemplos de verbos padrão.
 
 Consulte [ON_OLEVERB](#on_oleverb) para obter uma descrição do protótipo de função a ser usado como o *memberFxn* parâmetro.
 

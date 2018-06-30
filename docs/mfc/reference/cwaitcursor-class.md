@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e7bc4755d2e96c78735f1b3ef175ff3603686fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89cd3a27869434bc5874037005fee6a592db233
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372502"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122665"
 ---
 # <a name="cwaitcursor-class"></a>Classe CWaitCursor
 Fornece uma maneira de uma linha para mostrar um cursor de espera, que normalmente é exibido como uma ampulheta enquanto você estiver fazendo uma operação demorada.  
@@ -62,7 +62,7 @@ class CWaitCursor
 > [!NOTE]
 >  Devido a seus construtores e destruidores funcionam, `CWaitCursor` objetos sempre são declarados como variáveis locais — nunca são declaradas como variáveis globais, nem são alocados com **novo**.  
   
- Se você executar uma operação que pode fazer com que o cursor seja alterado, como exibir uma caixa de mensagem ou a caixa de diálogo, a chamada a [restaurar](#restore) função de membro para restaurar o cursor de espera. É okey chamar **restaurar** mesmo quando um cursor de espera é exibido atualmente.  
+ Se você executar uma operação que pode fazer com que o cursor seja alterado, como exibir uma caixa de mensagem ou a caixa de diálogo, a chamada a [restaurar](#restore) função de membro para restaurar o cursor de espera. É okey chamar `Restore` até mesmo quando um cursor de espera é exibido atualmente.  
   
  Outra maneira de exibir um cursor de espera é usar a combinação de [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor), [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)e talvez [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor). No entanto, `CWaitCursor` é mais fácil de usar porque você não precisa definir o cursor até o cursor anterior quando você concluiu a operação demorada.  
   
@@ -106,7 +106,7 @@ void Restore();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- É Okey para chamar **restaurar** mesmo quando o cursor de espera é exibido atualmente.  
+ É Okey para chamar `Restore` até mesmo quando o cursor de espera é exibido atualmente.  
   
  Se você precisar restaurar o cursor de espera enquanto estiver em uma função diferente no qual o `CWaitCursor` objeto for declarado, você pode chamar [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor).  
   

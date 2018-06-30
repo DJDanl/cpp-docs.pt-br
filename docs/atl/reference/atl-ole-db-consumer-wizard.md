@@ -1,7 +1,7 @@
 ---
 title: Assistente de cliente ATL OLE DB | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d51569eaece5e3fac59c7cc2ff82a8454a5f959
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f53d8273a708b7f84393290dd578933a5390313c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364944"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121683"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Assistente de cliente ATL OLE DB
 Este assistente configura uma classe de consumidor OLE DB com as associações de dados necessário para acessar a fonte de dados especificado por meio do provedor OLE DB especificado.  
@@ -52,10 +52,10 @@ Este assistente configura uma classe de consumidor OLE DB com as associações d
   
      Clique em **Okey** para concluir. O **Selecionar objeto de banco de dados** caixa de diálogo é exibida. Na caixa de diálogo, selecione a tabela, exibição ou procedimento armazenado que o consumidor usará.  
   
- **Provedor**  
+ **provedor**  
      Selecione um provedor apropriado para gerenciar a conexão à fonte de dados. O tipo de provedor normalmente é determinado pelo tipo de banco de dados ao qual você está se conectando. Clique o `Next` botão ou clique no **Conexão** guia.  
   
- **conexão**  
+ **Conexão**  
      O conteúdo dessa guia depende do provedor selecionado. Embora haja muitos tipos de provedores, esta seção aborda as conexões para os dois mais comuns: dados SQL e ODBC. Os outros são semelhantes variações nos campos descritos aqui.  
   
      Para dados do SQL:  
@@ -111,7 +111,7 @@ Este assistente configura uma classe de consumidor OLE DB com as associações d
  `Class`  
  Depois de selecionar uma fonte de dados, esta caixa é preenchida com um nome de classe padrão com base na tabela ou procedimento armazenado que você selecionou (consulte **selecionar uma fonte de dados** abaixo). Você pode editar o nome da classe.  
   
- **arquivo. h**  
+ **Arquivo .h**  
  Depois de selecionar uma fonte de dados, esta caixa é preenchida com um nome de classe de cabeçalho padrão com base na tabela ou procedimento armazenado que você selecionou (consulte **selecionar uma fonte de dados** abaixo). Você pode editar o nome do arquivo de cabeçalho ou selecionar um arquivo de cabeçalho existente.  
   
  **Atribuído**  
@@ -133,7 +133,7 @@ Este assistente configura uma classe de consumidor OLE DB com as associações d
   
  ``` 
  // Table accessor class  
-    class COrdersAccessor; *// Table class  
+    class COrdersAccessor; // Table class  
     class COrders : public CTable<CAccessor<COrdersAccessor>>;  
  ... 
  // Column map  

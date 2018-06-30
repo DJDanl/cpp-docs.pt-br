@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2f5f0a72c08aeabcd764cf4c7763c9506769585
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372399"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121618"
 ---
 # <a name="cuintarray-class"></a>Classe CUIntArray
 Oferece suporte a matrizes de inteiros sem sinal.  
@@ -69,7 +69,7 @@ class CUIntArray : public CObject
 ```  
   
 ## <a name="members"></a>Membros  
- As funções de membro de `CUIntArray` são semelhantes às funções de membro da classe [CObArray](../../mfc/reference/cobarray-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CObArray` para obter a função específica de membro. Sempre que você vê um `CObject` ponteiro como um parâmetro de função ou o valor de retorno, substitua um **UINT**.  
+ As funções de membro de `CUIntArray` são semelhantes às funções de membro da classe [CObArray](../../mfc/reference/cobarray-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CObArray` para obter a função específica de membro. Sempre que você vê um `CObject` ponteiro como um parâmetro de função ou o valor de retorno, substitua UINT.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -94,7 +94,7 @@ class CUIntArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libera toda memória não usada acima do limite superior atual.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Retorna o valor a um determinado índice.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Obtém o número de elementos nesta matriz.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Permite acesso aos elementos na matriz. Pode ser **nulo**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Permite acesso aos elementos na matriz. Pode ser NULL.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Obtém o número de elementos nesta matriz.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Retorna o maior índice válido.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Insere um elemento (ou todos os elementos em outra matriz) em um índice especificado.|  
@@ -112,7 +112,7 @@ class CUIntArray : public CObject
 |[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Define ou obtém o elemento no índice especificado.|  
   
 ## <a name="remarks"></a>Comentários  
- Um inteiro sem sinal, ou **UINT**, difere de palavras e doublewords em que o tamanho físico de um **UINT** pode mudar dependendo do ambiente operacional de destino. Um **UINT** é o mesmo tamanho que um doubleword.  
+ Um inteiro não assinado ou UINT, difere de palavras e doublewords pode alterar o tamanho físico do UINT dependendo do ambiente operacional de destino. UINT é o mesmo tamanho que um doubleword.  
   
  `CUIntArray` incorpora o [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) macro para dar suporte ao acesso de tipo de tempo de execução e despejo para um [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objeto. Se você precisar de um despejo de elementos individuais inteiro sem sinal, você deve definir a profundidade do contexto de despejo para 1 ou superior. Matrizes de inteiro não assinado não podem ser serializados.  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81b14e0c397ac9179142627bca04b647c1db96db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 79de28847809a9b9d7e0a160f2a4a45375f0e1fe
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371925"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121507"
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>Cadeias de caracteres de modelo do documento, Assistente para Adicionar Classe MFC
 Esta página do assistente está disponível somente para classes que atendem aos seguintes critérios:  
@@ -43,7 +43,7 @@ Esta página do assistente está disponível somente para classes que atendem ao
  Aplica-se a aplicativos que criam documentos do usuário. Os usuários podem abrir e salvar documentos mais facilmente se o tipo de documento tem uma extensão de arquivo e a ID do tipo de arquivo. Esses itens não são localizados, porque eles são usados pelo sistema e não pelo usuário.  
   
  **Extensão de arquivo**  
- Define a extensão de arquivo associada ao tipo de documento para este aplicativo de formulários. O padrão de extensão de arquivo com base no nome da classe. Por exemplo, se a nova classe do MFC é denominada **CWidget**, por padrão, a extensão de arquivo é. WID. A extensão de arquivo é usada em filtros de arquivo e o **abrir** e **Salvar como** caixas de diálogo.  
+ Define a extensão de arquivo associada ao tipo de documento para este aplicativo de formulários. O padrão de extensão de arquivo com base no nome da classe. Por exemplo, se a nova classe do MFC é denominada `CWidget`, por padrão, a extensão de arquivo é. WID. A extensão de arquivo é usada em filtros de arquivo e o **abrir** e **Salvar como** caixas de diálogo.  
   
  Se você alterar a extensão de arquivo, a alteração será refletida no **nome do filtro** caixa.  
   
@@ -63,15 +63,15 @@ Esta página do assistente está disponível somente para classes que atendem ao
  Define o nome que os usuários podem indicar para localizar arquivos de tipo de arquivo especificado. Essa opção está disponível na **arquivos do tipo** e **Salvar como tipo** opções padrão do Windows **abrir** e **Salvar como** caixas de diálogo. Por padrão, o nome é baseado no nome do projeto e arquivos, em seguida, a extensão é indicado no **extensão de arquivo**. Por exemplo, se seu projeto for chamado Widget, e a extensão de arquivo é .wid, o **nome do filtro** é Widget arquivos (*.wid) por padrão.  
   
  **Nome curto do novo arquivo**  
- Define o nome que aparece no padrão do Windows `New` caixa de diálogo, se o projeto tiver mais de um modelo de documento. Se seu aplicativo for um [servidor de automação](../../mfc/automation-servers.md), esse nome é usado como o nome curto de seu objeto de automação. Por padrão, esse nome é baseado no nome da classe.  
+ Define o nome que aparece na janela padrão **novo** caixa de diálogo, se o projeto tiver mais de um modelo de documento. Se seu aplicativo for um [servidor de automação](../../mfc/automation-servers.md), esse nome é usado como o nome curto de seu objeto de automação. Por padrão, esse nome é baseado no nome da classe.  
   
  **Nome longo do tipo de arquivo**  
- Define o nome do tipo de arquivo no registro do sistema. Se seu aplicativo for um servidor de automação, esse nome é usado como o nome longo de seu objeto de automação. Por padrão, esse nome é com base no nome da classe adição. Documento. Por exemplo, se o nome da classe é **CWidget**, o **nome longo do tipo de arquivo** é documento de Widget.  
+ Define o nome do tipo de arquivo no registro do sistema. Se seu aplicativo for um servidor de automação, esse nome é usado como o nome longo de seu objeto de automação. Por padrão, esse nome é com base no nome da classe adição. Documento. Por exemplo, se o nome da classe é `CWidget`, o **nome longo do tipo de arquivo** é documento de Widget.  
   
  **Classe de documento**  
  Indica a classe de documento do projeto. Por padrão, essa classe é classe de documento do aplicativo principal, conforme listado no [revisão gerados Classes](../../mfc/reference/generated-classes-mfc-application-wizard.md) página do Assistente de aplicativo MFC. Você pode selecionar outra classe de documento na lista, se você tiver adicionado outras classes de documento no projeto.  
   
 ## <a name="see-also"></a>Consulte também  
  [MFC Assistente para Adicionar classe](../../mfc/reference/mfc-add-class-wizard.md)   
- [Classe do MFC](../../mfc/reference/adding-an-mfc-class.md)   
+ [Classe MFC](../../mfc/reference/adding-an-mfc-class.md)   
  [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)

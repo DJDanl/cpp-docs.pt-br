@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0dfacc6bf08aa5b36288a9933ffa9980937f2b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ae4a24424acc4385927e0f7c99735bd50a6d472
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368869"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121644"
 ---
 # <a name="csplitterwndex-class"></a>Classe CSplitterWndEx
 
@@ -81,13 +81,13 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pDC`  
- Ponteiro para o contexto de dispositivo. Se esse parâmetro for `NULL`, o framework redesenha a janela ativa.  
+ [in] *pDC*  
+ Ponteiro para o contexto de dispositivo. Se esse parâmetro for NULL, o framework redesenha a janela ativa.  
   
- [in] `nType`  
+ [in] *nType*  
  Uma da `CSplitterWnd::ESplitType` valores de enumeração que especifica o elemento de janela separadora para desenhar. Os valores válidos são `splitBox`, `splitBar`, `splitIntersection` e `splitBorder`.  
   
- [in] `rect`  
+ [in] *rect*  
  Um retângulo que especifica as dimensões e o local para desenhar o elemento de janela de divisão especificada.  
   
 ### <a name="remarks"></a>Comentários  

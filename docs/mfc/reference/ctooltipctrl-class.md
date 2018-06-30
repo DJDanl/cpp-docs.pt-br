@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de230a82adaaafc149d2ed5a762977205c798b03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9436f3809a337b732a2e95d9c30b9baa45c4e8ba
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377604"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123104"
 ---
 # <a name="ctooltipctrl-class"></a>Classe CToolTipCtrl
 Encapsula a funcionalidade de um "controle dica de ferramenta," uma pequena janela pop-up que exibe uma única linha de texto que descreve a finalidade de uma ferramenta em um aplicativo.  
@@ -174,11 +174,11 @@ void Activate(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `bActivate`  
+ *bActivate*  
  Especifica se o controle de dica de ferramenta deve ser ativada ou desativada.  
   
 ### <a name="remarks"></a>Comentários  
- Se `bActivate` é **TRUE**, o controle é ativado; se **FALSE**, ele é desativado.  
+ Se *bActivate* for TRUE, o controle é ativado; se for FALSE, ele é desativado.  
   
  Quando um controle de dica de ferramenta está ativo, as informações de dica de ferramenta é exibida quando o cursor estiver em uma ferramenta que está registrada com o controle. Quando ele estiver inativo, as informações de dica de ferramenta não aparecer, mesmo quando o cursor estiver em uma ferramenta.  
   
@@ -204,26 +204,26 @@ BOOL AddTool(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWnd`  
+ *pWnd*  
  Ponteiro para a janela que contém a ferramenta.  
   
- `nIDText`  
+ *nIDText*  
  ID do recurso de cadeia de caracteres que contém o texto para a ferramenta.  
   
  *lpRectTool*  
- Ponteiro para um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém as coordenadas da ferramenta de limite do retângulo. As coordenadas são em relação ao canto superior esquerdo da área cliente da janela identificada por `pWnd`.  
+ Ponteiro para um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém as coordenadas da ferramenta de limite do retângulo. As coordenadas são em relação ao canto superior esquerdo da área cliente da janela identificada por *pWnd*.  
   
- `nIDTool`  
+ *nIDTool*  
  ID da ferramenta.  
   
- `lpszText`  
- Ponteiro para o texto para a ferramenta. Se este parâmetro contém o valor **LPSTR_TEXTCALLBACK**, **TTN_NEEDTEXT** mensagens de notificação de ir para o pai da janela que `pWnd` aponta para.  
+ *lpszText*  
+ Ponteiro para o texto para a ferramenta. Se este parâmetro contém o valor LPSTR_TEXTCALLBACK, mensagens de notificação TTN_NEEDTEXT ir para o pai da janela que *pWnd* aponta para.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- O **lpRectTool** e **nIDTool** parâmetros devem ser válidos, ou se **lpRectTool** for NULL, **nIDTool** deve ser 0.  
+ O *lpRectTool* e *nIDTool* parâmetros devem ser válidos, ou se *lpRectTool* for NULL, *nIDTool* deve ser 0.  
   
  Um controle de dica de ferramenta pode ser associado a mais de uma ferramenta. Chame essa função para registrar uma ferramenta com o controle de dica de ferramenta, para que as informações armazenadas na dica de ferramenta são exibidas quando o cursor estiver sobre a ferramenta.  
   
@@ -243,11 +243,11 @@ BOOL AdjustRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lprc`  
+ *lprc*  
  Ponteiro para um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém um retângulo de janela de dica de ferramenta ou um retângulo de exibição de texto.  
   
- `bLarger`  
- Se **TRUE**, `lprc` é usado para especificar um retângulo de exibição de texto, e ela recebe o retângulo de janela correspondente. Se **FALSE**, `lprc` é usado para especificar um retângulo de janela, e ela recebe o retângulo de exibição de texto correspondente.  
+ *bLarger*  
+ Se TRUE, *lprc* é usado para especificar um retângulo de exibição de texto, e ela recebe o retângulo de janela correspondente. Se for FALSE, *lprc* é usado para especificar um retângulo de janela, e ela recebe o retângulo de exibição de texto correspondente.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o retângulo é ajustado com êxito; Caso contrário, 0.  
@@ -265,28 +265,28 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pParentWnd`  
- Especifica a janela do pai do controle de dica de ferramenta, geralmente um `CDialog`. Ele não deve ser **nulo**.  
+ *pParentWnd*  
+ Especifica a janela do pai do controle de dica de ferramenta, geralmente um `CDialog`. Ele não deve ser NULL.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica o estilo do controle de dica de ferramenta. Consulte o **comentários** para obter mais informações.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o `CToolTipCtrl` objeto é criado com êxito; caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Você pode criar um `CToolTipCtrl` em duas etapas. Primeiro, chame o construtor para construir o `CToolTipCtrl` do objeto e, em seguida, chame **criar** para criar o controle de dica de ferramenta e anexá-lo para o `CToolTipCtrl` objeto.  
+ Você pode criar um `CToolTipCtrl` em duas etapas. Primeiro, chame o construtor para construir o `CToolTipCtrl` do objeto e, em seguida, chame `Create` para criar o controle de dica de ferramenta e anexá-lo para o `CToolTipCtrl` objeto.  
   
- O `dwStyle` parâmetro pode ser qualquer combinação de [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles). Além disso, um controle de dica de ferramenta tem dois estilos de classe específica: **TTS_ALWAYSTIP** e **TTS_NOPREFIX**.  
+ O *dwStyle* parâmetro pode ser qualquer combinação de [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles). Além disso, um controle de dica de ferramenta tem dois estilos de classe específica: TTS_ALWAYSTIP e TTS_NOPREFIX.  
   
 |Estilo|Significado|  
 |-----------|-------------|  
-|**TTS_ALWAYSTIP**|Especifica que a dica de ferramenta será exibida quando o cursor estiver em uma ferramenta, independentemente se a janela do proprietário do controle de dica de ferramenta está ativo ou inativo. Sem esse estilo, o controle de dica de ferramenta é exibida quando a janela do proprietário da ferramenta está ativa, mas não quando ele estiver inativo.|  
-|**TTS_NOPREFIX**|Esse estilo impede que o sistema retirando o caractere de uma cadeia de caracteres "e" comercial (&). Se um controle de dica de ferramenta não tem o **TTS_NOPREFIX** estilo, o sistema automaticamente remove os caracteres de e comercial, permitindo que um aplicativo para usar a mesma cadeia de caracteres como item de menu e como texto em um controle de dica de ferramenta.|  
+|TTS_ALWAYSTIP|Especifica que a dica de ferramenta será exibida quando o cursor estiver em uma ferramenta, independentemente se a janela do proprietário do controle de dica de ferramenta está ativo ou inativo. Sem esse estilo, o controle de dica de ferramenta é exibida quando a janela do proprietário da ferramenta está ativa, mas não quando ele estiver inativo.|  
+|TTS_NOPREFIX|Esse estilo impede que o sistema retirando o caractere de uma cadeia de caracteres "e" comercial (&). Se um controle de dica de ferramenta não tem o estilo TTS_NOPREFIX, o sistema remove automaticamente os caracteres de e comercial, permitindo que um aplicativo para usar a mesma cadeia de caracteres como item de menu e como texto em um controle de dica de ferramenta.|  
   
- Um controle de dica de ferramenta tiver o `WS_POPUP` e **WS_EX_TOOLWINDOW** estilos da janela, independentemente de se você especificá-los ao criar o controle.  
+ Um controle de dica de ferramenta tem os estilos de janela WS_POPUP e WS_EX_TOOLWINDOW, independentemente se você especificá-los ao criar o controle.  
   
- Para criar um controle de dica de ferramenta com estilos windows estendidos, chame [CToolTipCtrl::CreateEx](#createex) em vez de **criar**.  
+ Para criar um controle de dica de ferramenta com estilos windows estendidos, chame [CToolTipCtrl::CreateEx](#createex) em vez de `Create`.  
   
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
@@ -302,20 +302,20 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pParentWnd`  
+ *pParentWnd*  
  Um ponteiro para a janela que é o pai do controle.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica o estilo do controle de dica de ferramenta. Consulte o **comentários** seção [criar](#create) para obter mais informações.  
   
  *dwStyleEx*  
- Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o `dwExStyle` parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
+ Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o *dwExStyle* parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Caso contrário, 0 diferente de zero se tiver êxito.  
   
 ### <a name="remarks"></a>Comentários  
- Use `CreateEx` em vez de **criar** para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_**.  
+ Use `CreateEx` em vez de `Create` para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_**.  
   
 ##  <a name="ctooltipctrl"></a>  CToolTipCtrl::CToolTipCtrl  
  Constrói um objeto `CToolTipCtrl`.  
@@ -325,13 +325,13 @@ CToolTipCtrl();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Você deve chamar **criar** após a criação do objeto.  
+ Você deve chamar `Create` após a criação do objeto.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCControlLadenDialog#74](../../mfc/codesnippet/cpp/ctooltipctrl-class_1.h)]  
   
 ##  <a name="deltool"></a>  CToolTipCtrl::DelTool  
- Remove a ferramenta especificada por `pWnd` e `nIDTool` da coleção de ferramentas com suporte por um controle de dica de ferramenta.  
+ Remove a ferramenta especificada por *pWnd* e *nIDTool* da coleção de ferramentas com suporte por um controle de dica de ferramenta.  
   
 ```  
 void DelTool(
@@ -340,10 +340,10 @@ void DelTool(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWnd`  
+ *pWnd*  
  Ponteiro para a janela que contém a ferramenta.  
   
- `nIDTool`  
+ *nIDTool*  
  ID da ferramenta.  
   
 ##  <a name="getbubblesize"></a>  CToolTipCtrl::GetBubbleSize  
@@ -354,7 +354,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpToolInfo`  
+ *lpToolInfo*  
  Um ponteiro para a dica de ferramenta [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) estrutura.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -374,10 +374,10 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[out] `lpToolInfo`|Ponteiro para um [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) estrutura que recebe informações sobre a janela de dica de ferramenta atual.|  
+|[out] *lpToolInfo*|Ponteiro para um [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) estrutura que recebe informações sobre a janela de dica de ferramenta atual.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true` Se as informações são recuperadas com êxito; Caso contrário, `false.`  
+ TRUE se as informações são recuperadas com êxito; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método envia o [TTM_GETCURRENTTOOL](http://msdn.microsoft.com/library/windows/desktop/bb760389) mensagem, que é descrita no SDK do Windows.  
@@ -395,14 +395,14 @@ int GetDelayTime(DWORD dwDuration) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwDuration`  
+ *dwDuration*  
  Sinalizador que especifica o valor de duração serão recuperados. Esse parâmetro pode ser um dos seguintes valores:  
   
-- `TTDT_AUTOPOP` Recupere o período de tempo que a janela de dica de ferramenta permanece visível se o ponteiro estiver parado dentro do retângulo delimitador da ferramenta.  
+- Recuperar TTDT_AUTOPOP o período de tempo a janela de dica de ferramenta permanece visível se o ponteiro estiver parado dentro do retângulo delimitador da ferramenta.  
   
-- `TTDT_INITIAL` Recupere o período de tempo que o ponteiro deve permanecer parado dentro do retângulo delimitador da ferramenta antes que a janela de dica de ferramenta seja exibida.  
+- Recuperar TTDT_INITIAL o período de tempo que o ponteiro deve permanecer parado dentro do retângulo da ferramenta antes da janela de dica de ferramenta é exibida.  
   
-- `TTDT_RESHOW` Recupere o período de tempo que leva para janelas de dica de ferramenta subsequentes sejam exibidas quando o ponteiro se move de uma ferramenta para outra.  
+- O período de tempo que leva para janelas de dica de ferramenta subsequentes aparecem quando o ponteiro TTDT_RESHOW recuperar move de uma ferramenta para outra.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O tempo de atraso especificado, em milissegundos  
@@ -418,15 +418,15 @@ void GetMargin(LPRECT lprc) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lprc`  
+ *lprc*  
  Endereço de um `RECT` estrutura que receberá as informações de margem. Os membros de [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura não definem um retângulo delimitador. Para fins desta mensagem, os membros de estrutura são interpretados da seguinte maneira:  
   
 |Membro|Representação|  
 |------------|--------------------|  
-|**top**|Distância entre a borda superior e a parte superior do texto de dica de ferramenta, em pixels.|  
-|**left**|Distância entre a borda esquerda e a extremidade esquerda do texto da dica, em pixels.|  
-|**Inferior**|Distância entre a borda inferior e a parte inferior do texto da dica, em pixels.|  
-|**right**|Distância entre a borda direita e a extremidade direita do texto da dica, em pixels.|  
+|`top`|Distância entre a borda superior e a parte superior do texto de dica de ferramenta, em pixels.|  
+|`left`|Distância entre a borda esquerda e a extremidade esquerda do texto da dica, em pixels.|  
+|`bottom`|Distância entre a borda inferior e a parte inferior do texto da dica, em pixels.|  
+|`right`|Distância entre a borda direita e a extremidade direita do texto da dica, em pixels.|  
   
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem de Win32 [TTM_GETMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb760391), conforme descrito no SDK do Windows.  
@@ -455,17 +455,17 @@ void GetText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `str`  
+ *str*  
  Referência a um `CString` objeto que recebe o texto da ferramenta.  
   
- `pWnd`  
+ *pWnd*  
  Ponteiro para a janela que contém a ferramenta.  
   
- `nIDTool`  
+ *nIDTool*  
  ID da ferramenta.  
   
 ### <a name="remarks"></a>Comentários  
- O `pWnd` e `nIDTool` parâmetros identificam a ferramenta. Se essa ferramenta tenha sido previamente registrada com o controle de dica de ferramenta por meio de uma chamada anterior a **CToolTipCtrl::AddTool**, o objeto referenciado pelo `str` parâmetro recebe o texto da ferramenta.  
+ O *pWnd* e *nIDTool* parâmetros identificam a ferramenta. Se essa ferramenta tenha sido previamente registrada com o controle de dica de ferramenta por meio de uma chamada anterior a `CToolTipCtrl::AddTool`, o objeto referenciado pelo *str* parâmetro recebe o texto da ferramenta.  
   
 ##  <a name="gettipbkcolor"></a>  CToolTipCtrl::GetTipBkColor  
  Recupera a cor de plano de fundo em uma janela de dica de ferramenta.  
@@ -504,7 +504,7 @@ void GetTitle(PTTGETTITLE pttgt) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[out] `pttgt`|Ponteiro para um [TTGETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760260) estrutura que contém informações sobre o controle de dica de ferramenta. Quando este método retorna, o `pszTitle` membro o [TTGETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760260) estrutura aponta para o texto do título.|  
+|[out] *pttgt*|Ponteiro para um [TTGETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760260) estrutura que contém informações sobre o controle de dica de ferramenta. Quando este método retorna, o *pszTitle* membro o [TTGETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760260) estrutura aponta para o texto do título.|  
   
 ### <a name="remarks"></a>Comentários  
  Esse método envia o [TTM_GETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760396) mensagem, que é descrita no SDK do Windows.  
@@ -533,17 +533,17 @@ BOOL GetToolInfo(
  *ToolInfo*  
  Referência a um `TOOLINFO` objeto que recebe o texto da ferramenta.  
   
- `pWnd`  
+ *pWnd*  
  Ponteiro para a janela que contém a ferramenta.  
   
- `nIDTool`  
+ *nIDTool*  
  ID da ferramenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- O **hwnd** e **uId** membros o [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) estrutura referenciada por *CToolInfo* identificar a ferramenta. Se essa ferramenta tiver sido registrada com o controle de dica de ferramenta por meio de uma chamada anterior a `AddTool`, o `TOOLINFO` estrutura é preenchida com informações sobre a ferramenta.  
+ O `hwnd` e `uId` membros o [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) estrutura referenciada por *CToolInfo* identificar a ferramenta. Se essa ferramenta tiver sido registrada com o controle de dica de ferramenta por meio de uma chamada anterior a `AddTool`, o `TOOLINFO` estrutura é preenchida com informações sobre a ferramenta.  
   
 ##  <a name="hittest"></a>  CToolTipCtrl::HitTest  
  Testa um ponto para determinar se ele está dentro do retângulo delimitador da ferramenta de determinada e, nesse caso, recuperar informações sobre a ferramenta.  
@@ -556,20 +556,20 @@ BOOL HitTest(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWnd`  
+ *pWnd*  
  Ponteiro para a janela que contém a ferramenta.  
   
- `pt`  
+ *pt*  
  Ponteiro para uma `CPoint` objeto que contém as coordenadas do ponto a ser testada.  
   
- `lpToolInfo`  
+ *lpToolInfo*  
  Ponteiro para [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) estrutura que contém informações sobre a ferramenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o ponto especificado pelas informações de teste de hit está dentro do retângulo da ferramenta; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Se essa função retorna um valor diferente de zero, a estrutura apontada pelo `lpToolInfo` é preenchido com informações sobre a ferramenta cujo retângulo se encontra o ponto.  
+ Se essa função retorna um valor diferente de zero, a estrutura apontada por *lpToolInfo* é preenchido com informações sobre a ferramenta cujo retângulo se encontra o ponto.  
   
  O `TTHITTESTINFO` estrutura é definida da seguinte maneira:  
   
@@ -583,13 +583,13 @@ BOOL HitTest(
   
  `} TTHITTESTINFO, FAR * LPHITTESTINFO;`  
   
- **HWND**  
+ `hwnd`  
  Especifica o identificador da ferramenta.  
   
- **pt**  
+ `pt`  
  Especifica as coordenadas de um ponto se o ponto é a ferramenta delimitadora do retângulo.  
   
- **TI**  
+ `ti`  
  Informações sobre a ferramenta. Para obter mais informações sobre o `TOOLINFO` estrutura, consulte [CToolTipCtrl::GetToolInfo](#gettoolinfo).  
   
 ##  <a name="pop"></a>  CToolTipCtrl::Pop  
@@ -625,7 +625,7 @@ void RelayEvent(LPMSG lpMsg);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpMsg`  
+ *lpMsg*  
  Ponteiro para um [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) estrutura que contém a mensagem a retransmissão.  
   
 ### <a name="remarks"></a>Comentários  
@@ -633,9 +633,9 @@ void RelayEvent(LPMSG lpMsg);
   
 |WM_LBUTTONDOWN|WM_MOUSEMOVE|  
 |---------------------|-------------------|  
-|`WM_LBUTTONUP`|`WM_RBUTTONDOWN`|  
-|`WM_MBUTTONDOWN`|`WM_RBUTTONUP`|  
-|`WM_MBUTTONUP`||  
+|WM_LBUTTONUP|WM_RBUTTONDOWN|  
+|WM_MBUTTONDOWN|WM_RBUTTONUP|  
+|WM_MBUTTONUP||  
   
 ### <a name="example"></a>Exemplo  
   Consulte o exemplo para [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
@@ -656,7 +656,7 @@ void SetDelayTime(
  *nDelay*  
  Especifica o novo tempo de atraso em milissegundos.  
   
- `dwDuration`  
+ *dwDuration*  
  Sinalizador que especifica o valor de duração serão recuperados. Consulte [CToolTipCtrl::GetDelayTime](#getdelaytime) para obter uma descrição dos valores válidos.  
   
  *iTime*  
@@ -673,7 +673,7 @@ void SetMargin(LPRECT lprc);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lprc`  
+ *lprc*  
  Endereço de um `RECT` estrutura que contém as informações de margem a ser definido. Os membros de `RECT` estrutura não definem um retângulo delimitador. Consulte [CToolTipCtrl::GetMargin](#getmargin) para obter uma descrição das informações de margem.  
   
 ### <a name="remarks"></a>Comentários  
@@ -704,7 +704,7 @@ void SetTipBkColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `clr`  
+ *CLR*  
  A nova cor do plano de fundo.  
   
 ### <a name="remarks"></a>Comentários  
@@ -718,7 +718,7 @@ void SetTipTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `clr`  
+ *CLR*  
  A nova cor do texto.  
   
 ### <a name="remarks"></a>Comentários  
@@ -754,7 +754,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpToolInfo`  
+ *lpToolInfo*  
  Um ponteiro para um [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) estrutura que especifica as informações para definir.  
   
 ##  <a name="settoolrect"></a>  CToolTipCtrl::SetToolRect  
@@ -768,13 +768,13 @@ void SetToolRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pWnd`  
+ *pWnd*  
  Ponteiro para a janela que contém a ferramenta.  
   
- `nIDTool`  
+ *nIDTool*  
  ID da ferramenta.  
   
- `lpRect`  
+ *lpRect*  
  Ponteiro para um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura especificando o novo retângulo delimitador.  
   
 ##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme  
@@ -785,7 +785,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pszSubAppName`  
+ *pszSubAppName*  
  Um ponteiro para uma cadeia de caracteres Unicode que contém o estilo visual para definir.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -818,16 +818,16 @@ void UpdateTipText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszText`  
+ *lpszText*  
  Ponteiro para o texto para a ferramenta.  
   
- `pWnd`  
+ *pWnd*  
  Ponteiro para a janela que contém a ferramenta.  
   
- `nIDTool`  
+ *nIDTool*  
  ID da ferramenta.  
   
- `nIDText`  
+ *nIDText*  
  ID do recurso de cadeia de caracteres que contém o texto para a ferramenta.  
   
 ## <a name="see-also"></a>Consulte também  

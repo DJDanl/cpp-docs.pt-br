@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d6039459eed097af5e927c4bd2f30d3e7c3c4bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32d684d7b9b5f8057893d79b864be7b6d9b512fc
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373534"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122190"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Cadeias de caracteres de modelo do documento, Assistente de Aplicativo MFC
 Nesta página do Assistente de aplicativo MFC, fornecer ou refinar as seguintes opções para ajudá-lo a localização e o gerenciamento de documentos. Cadeias de caracteres de modelo de documento estão disponíveis para aplicativos que incluem **suporte para a arquitetura de documento/exibição** no [tipo de aplicativo](../../mfc/reference/application-type-mfc-application-wizard.md). Eles não estão disponíveis para caixas de diálogo. Como a maioria das cadeias de caracteres de modelo de documento são visíveis e usado por usuários do aplicativo, eles são localizados no **idioma de recurso** indicado no **tipo de aplicativo** página do assistente.  
@@ -43,7 +43,7 @@ Nesta página do Assistente de aplicativo MFC, fornecer ou refinar as seguintes 
 |**Legenda do quadro principal**|Define o texto que aparece na parte superior do quadro principal do aplicativo. Por padrão, o nome do projeto.|  
 |**Nome do tipo de documento**|Identifica o tipo de documento no qual um documento do aplicativo pode ser agrupado. Por padrão, o nome do projeto. Alterar o padrão não altera qualquer outra opção na caixa de diálogo.|  
 |**Nome do filtro**|Define o nome que os usuários podem indicar para localizar arquivos de seu tipo de arquivo. Essa opção está disponível na **arquivos do tipo** e **Salvar como tipo** opções padrão do Windows **abrir** e **Salvar como** caixas de diálogo. Por padrão, o nome do projeto mais arquivos, seguido pela extensão fornecido na **extensão de arquivo**. Por exemplo, se seu projeto for chamado Widget, e a extensão de arquivo é .wgt, o **nome do filtro** é Widget arquivos (*.wgt) por padrão.|  
-|**Nome curto do novo arquivo**|Define o nome que aparece no padrão do Windows `New` caixa de diálogo, se houver mais de um novo modelo de documento. Se seu aplicativo for um [servidor de automação](../../mfc/automation-servers.md), esse nome é usado como o nome curto de seu objeto de automação. Por padrão, o nome do projeto.|  
+|**Nome curto do novo arquivo**|Define o nome que aparece na janela padrão **novo** caixa de diálogo, se houver mais de um novo modelo de documento. Se seu aplicativo for um [servidor de automação](../../mfc/automation-servers.md), esse nome é usado como o nome curto de seu objeto de automação. Por padrão, o nome do projeto.|  
 |**Nome longo do tipo de arquivo**|Define o nome do tipo de arquivo no registro do sistema. Se seu aplicativo for um servidor de automação, esse nome é usado como o nome longo de seu objeto de automação. Por padrão, o nome do projeto mais. Documento.|  
   
 ## <a name="see-also"></a>Consulte também  

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69630d00b09534d97d5e46a8400b73f0e9d85b24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1d040f3cb4c9bf8e1f3afc0e8213cd4513fc8571
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375129"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123364"
 ---
 # <a name="dhtml-editing-command-maps"></a>Mapas de comando de edição DHTML
 As macros a seguir podem ser usadas para mapear os comandos de edição DHTML [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-classes derivadas. Para obter um exemplo de uso, consulte [HTMLEdit exemplo](../../visual-cpp-samples.md).  
@@ -42,7 +42,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `className`  
+ *nome de classe*  
  O nome da classe.  
   
 ### <a name="remarks"></a>Comentários  
@@ -64,13 +64,13 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `className`  
+ *nome de classe*  
  O nome da classe que contém o mapa de comando de edição DHTML. Essa classe deve derivar direta ou indiretamente de [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) e incluir o [DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap) macro dentro de sua definição de classe.  
   
 ### <a name="remarks"></a>Comentários  
  Adicione um mapa de comando de edição DHTML à sua classe para mapear os comandos de interface de usuário para os comandos de edição de HTML.  
   
- Coloque o `BEGIN_DHTMLEDITING_CMDMAP` seguido de macro no arquivo de implementação (. cpp) da classe [DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry) macros para os comandos a classe é mapear (por exemplo, de **ID_EDIT_CUT** para  **IDM_CUT**). Use o [END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap) macro para marcar o fim do mapa de evento.  
+ Coloque a macro BEGIN_DHTMLEDITING_CMDMAP no arquivo de implementação (. cpp) da classe seguido por [DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry) macros para os comandos a classe é mapear (por exemplo, de ID_EDIT_CUT para IDM_CUT). Use o [END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap) macro para marcar o fim do mapa de evento.  
   
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxhtml.h  
@@ -99,11 +99,11 @@ DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `cmdID`  
- A ID de comando (como **ID_EDIT_COPY**).  
+ *cmdID*  
+ A ID de comando (como ID_EDIT_COPY).  
   
- `dhtmlcmdID`  
- O HTML editando o comando para o qual `cmdID` mapeia (como **IDM_COPY**).  
+ *dhtmlcmdID*  
+ O HTML editando o comando para o qual *cmdID* mapeia (como IDM_COPY).  
   
 ### <a name="example"></a>Exemplo  
  Consulte [HTMLEdit exemplo](../../visual-cpp-samples.md).  
@@ -119,13 +119,13 @@ DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `cmdID`  
- A ID de comando (como **ID_EDIT_COPY**).  
+ *cmdID*  
+ A ID de comando (como ID_EDIT_COPY).  
   
- `dhtmlcmdID`  
- O HTML editando o comando para o qual `cmdID` mapeia (como **IDM_COPY**).  
+ *dhtmlcmdID*  
+ O HTML editando o comando para o qual *cmdID* mapeia (como IDM_COPY).  
   
- `member_func_name`  
+ *member_func_name*  
  O nome da função de manipulador de mensagens que o comando é mapeado.  
   
 ### <a name="example"></a>Exemplo  
@@ -142,14 +142,14 @@ DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `cmdID`  
- A ID de comando (como **ID_EDIT_COPY**).  
+ *cmdID*  
+ A ID de comando (como ID_EDIT_COPY).  
   
- `dhtmlcmdID`  
- O HTML editando o comando para o qual `cmdID` mapeia (como **IDM_COPY**).  
+ *dhtmlcmdID*  
+ O HTML editando o comando para o qual *cmdID* mapeia (como IDM_COPY).  
   
- `elemType`  
- O tipo de elemento de interface do usuário; um dos **AFX_UI_ELEMTYPE_NORMAL**, **AFX_UI_ELEMTYPE_CHECKBOX**, ou **AFX_UI_ELEMTYPE_RADIO**.  
+ *elemType*  
+ O tipo de elemento de interface do usuário; um dos AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEMTYPE_CHECKBOX ou AFX_UI_ELEMTYPE_RADIO.  
   
 ### <a name="example"></a>Exemplo  
  Consulte [HTMLEdit exemplo](../../visual-cpp-samples.md).  
@@ -165,17 +165,17 @@ DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `cmdID`  
- A ID de comando (como **ID_EDIT_COPY**).  
+ *cmdID*  
+ A ID de comando (como ID_EDIT_COPY).  
   
- `dhtmlcmdID`  
- O HTML editando o comando para o qual `cmdID` mapeia (como **IDM_COPY**).  
+ *dhtmlcmdID*  
+ O HTML editando o comando para o qual *cmdID* mapeia (como IDM_COPY).  
   
- `member_func_name`  
+ *member_func_name*  
  O nome da função de manipulador de mensagens que o comando é mapeado.  
   
- `elemType`  
- O tipo de elemento de interface do usuário; um dos **AFX_UI_ELEMTYPE_NORMAL**, **AFX_UI_ELEMTYPE_CHECKBOX**, ou **AFX_UI_ELEMTYPE_RADIO**.  
+ *elemType*  
+ O tipo de elemento de interface do usuário; um dos AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEMTYPE_CHECKBOX ou AFX_UI_ELEMTYPE_RADIO.  
   
 ### <a name="example"></a>Exemplo  
  Consulte [HTMLEdit exemplo](../../visual-cpp-samples.md).  

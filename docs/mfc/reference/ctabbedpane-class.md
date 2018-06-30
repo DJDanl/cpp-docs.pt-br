@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a6c42a4203fb1d0224f5f31e4123dca9a6fad65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9da7016e98d9bd84e62c3b05cae32346827142f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373808"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121832"
 ---
 # <a name="ctabbedpane-class"></a>Classe CTabbedPane
 Implementa a funcionalidade de um painel com guias destacáveis.  
@@ -88,7 +88,7 @@ class CTabbedPane : public CBaseTabbedPane
 ## <a name="remarks"></a>Comentários  
  A estrutura automaticamente cria uma instância dessa classe quando um usuário anexa um painel para outro, basta apontar para a legenda do painel de segundo. Todos os painéis com guias que são criados pelo framework têm uma ID de -1.  
   
- Para especificar as guias regulares em vez de guias de estilo do Outlook, passe o `AFX_CBRS_REGULAR_TABS` de estilo para o [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) método.  
+ Para especificar as guias regulares em vez de guias de estilo do Outlook, passe o estilo AFX_CBRS_REGULAR_TABS para o [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) método.  
   
  Se você criar um painel com guias com guias destacáveis, o painel pode ser destruído automaticamente pela estrutura, para que você não deve armazenar o ponteiro. Para obter um ponteiro para o painel com guias, chame o `CBasePane::GetParentTabbedPane` método.  
   
@@ -177,8 +177,8 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
- [in] `bHide`  
+ [in] *pBar*  
+ [in] *bHide*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -192,8 +192,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `bEnable`  
- `TRUE` Para habilitar a coloração automática das guias; Caso contrário, `FALSE`.  
+ [in] *bAtivar*  
+ TRUE para habilitar a coloração automática das guias; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método estático para habilitar ou desabilitar a coloração automática das guias em todos os painéis com guias no aplicativo. Quando esse recurso está habilitado, cada guia é preenchido por sua própria cor. Você pode encontrar a lista de cores que são usados para as guias de cor chamando o [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) método.  
@@ -214,10 +214,10 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pBar`  
- [in] `nTabID`  
- [in] `dockMethod`  
- [in] `bHide`  
+ [in] *pBar*  
+ [in] *nTabID*  
+ [in] *dockMethod*  
+ [in] *bHide*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -233,10 +233,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] `rectTabAreaTop`  
+ [out] *rectTabAreaTop*  
  Contém o tamanho e posição, em coordenadas de tela da área da guia superior.  
   
- [out] `rectTabAreaBottom`  
+ [out] *rectTabAreaBottom*  
  Contém o tamanho e posição, em coordenadas de tela da área da guia inferior.  
   
 ### <a name="remarks"></a>Comentários  
@@ -274,7 +274,7 @@ virtual BOOL IsTabLocationBottom() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se a área da guia está localizada na parte inferior da janela com guias. Caso contrário, `FALSE`.  
+ TRUE se a área da guia está localizada na parte inferior da janela com guias. Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -286,11 +286,11 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Definir este membro estático `TRUE` para forçar a todas as guias no aplicativo a ser exibida na parte superior do painel com guias.  
+ Defina este membro estático para True para forçar todos os guias no aplicativo a ser exibida na parte superior do painel com guias.  
   
  Você deve definir esse valor antes de criar um painel com guias.  
   
- O valor padrão é `FALSE`.  
+ O valor padrão é FALSE.  
   
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC  
  Informações de classe de tempo de execução para um personalizado `CMFCTabCtrl`-objeto derivado.  
@@ -320,7 +320,7 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `arColors`  
+ [in] *arColors*  
  Contém a matriz de cores para definir.  
   
 ### <a name="remarks"></a>Comentários  

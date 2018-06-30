@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 380b470531fd28d8cfe68aa931105430111c3dbf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 582ddd1340dd94f367d5401d517e9335d370b634
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372989"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122631"
 ---
 # <a name="cvslistbox-class"></a>Classe CVSListBox
 O `CVSListBox` classe oferece suporte a um controle de lista editável.  
@@ -124,20 +124,20 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `strIext`  
+ [in] *strIext*  
  Uma referência a uma cadeia de caracteres.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Um valor de 32 bits específico do aplicativo que está associado com a cadeia de caracteres. O valor padrão é 0.  
   
- [in] `iIndex`  
- O índice baseado em zero da posição que conterá a cadeia de caracteres. Se o `iIndex` parâmetro é -1, a cadeia de caracteres é adicionada ao final da lista. O valor padrão é -1.  
+ [in] *iIndex*  
+ O índice baseado em zero da posição que conterá a cadeia de caracteres. Se o *iIndex* parâmetro é -1, a cadeia de caracteres é adicionada ao final da lista. O valor padrão é -1.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O índice baseado em zero da posição da cadeia de caracteres na lista de controle.  
   
 ### <a name="remarks"></a>Comentários  
- Use o [CVSListBox::GetItemData](#getitemdata) método para recuperar o valor especificado pelo `dwData` parâmetro. Esse valor pode ser um inteiro de aplicativo específico ou um ponteiro para outros dados.  
+ Use o [CVSListBox::GetItemData](#getitemdata) método para recuperar o valor especificado pelo *dwData* parâmetro. Esse valor pode ser um inteiro de aplicativo específico ou um ponteiro para outros dados.  
   
 ##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
  Constrói um objeto `CVSListBox`.  
@@ -158,11 +158,11 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iIndex`  
+ [in] *iIndex*  
  Índice de base zero de um item de controle de lista.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se a operação de edição é iniciado com êxito; Caso contrário, `FALSE`.  
+ TRUE se a operação de edição é iniciado com êxito; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
  O usuário inicia uma operação de edição clicando duas vezes o rótulo de um item ou pressionando o **F2** ou **SPACEBAR** quando um item tem o foco da chave.  
@@ -188,7 +188,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iIndex`  
+ [in] *iIndex*  
  O índice de base zero de um item de controle de lista editável.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -246,11 +246,11 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iIndex`  
+ [in] *iIndex*  
  O índice de base zero de um item de controle de lista editável.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o item especificado for removido; Caso contrário, `FALSE`.  
+ TRUE se o item especificado for removido; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -262,11 +262,11 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iItem`  
+ [in] *item*  
  O índice de base zero de um item de controle de lista editável.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se esse método for bem-sucedida; Caso contrário, `FALSE`.  
+ TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método seleciona o item especificado e se for necessário, o item é movido para a exibição.  
@@ -281,10 +281,10 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iIndex`  
+ [in] *iIndex*  
  O índice de base zero de um item de controle de lista editável.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Um valor de 32 bits. Esse valor pode ser um inteiro de aplicativo específico ou um ponteiro para outros dados.  
   
 ### <a name="remarks"></a>Comentários  

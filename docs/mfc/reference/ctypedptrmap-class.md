@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f312d7e829657f2cc9c7c41c65afad8d8f8b343
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376389"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121858"
 ---
 # <a name="ctypedptrmap-class"></a>Classe CTypedPtrMap
 Fornece um "wrapper" para objetos das classes de mapa de ponteiros de tipo seguro `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, e `CMapStringToPtr`.  
@@ -42,13 +42,13 @@ class CTypedPtrMap : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Classe base da classe map ponteiro tipado; deve ser uma classe de mapa de ponteiro ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, ou `CMapStringToPtr`).  
   
- `KEY`  
+ *KEY*  
  Classe do objeto usado como a chave para o mapa.  
   
- `VALUE`  
+ *VALOR*  
  Classe do objeto armazenado em map.  
   
 ## <a name="members"></a>Membros  
@@ -94,25 +94,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `rPosition`  
- Especifica uma referência a um **posição** valor retornado pelo anterior `GetNextAssoc` ou `BASE_CLASS` **:: GetStartPosition** chamar.  
+ *rPosition*  
+ Especifica uma referência a um valor de posição retornado pela anterior `GetNextAssoc` ou `BASE_CLASS` **:: GetStartPosition** chamar.  
   
  *KEY*  
  Parâmetro de modelo especificando o tipo de chaves do mapa.  
   
- `rKey`  
+ *rKey*  
  Especifica a chave retornada do elemento recuperado.  
   
  *VALOR*  
  Parâmetro de modelo especificando o tipo de valores do mapa.  
   
- `rValue`  
+ *rValue*  
  Especifica o valor retornado do elemento recuperado.  
   
 ### <a name="remarks"></a>Comentários  
  Essa função é mais útil para iterar através de todos os elementos no mapa. Observe que a sequência de posição não é necessariamente o mesmo que a sequência de valor de chave.  
   
- Se o elemento recuperado é o último no mapa, em seguida, o novo valor de `rNextPosition` é definido como **nulo**.  
+ Se o elemento recuperado é o último no mapa, em seguida, o novo valor de `rNextPosition` é definido como NULL.  
   
  Esta função embutida chama `BASE_CLASS` **:: GetNextAssoc**.  
   
@@ -124,16 +124,16 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Especifica a classe base da classe deste mapa de parâmetro de modelo.  
   
- `key`  
+ *key*  
  A chave do elemento a ser pesquisado.  
   
  *VALOR*  
  Especifica o tipo de valores armazenados nesse mapa de um parâmetro de modelo.  
   
- `rValue`  
+ *rValue*  
  Especifica o valor retornado do elemento recuperado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -153,10 +153,10 @@ VALUE& operator[ ](base_class ::base_arg_key key);
  *VALOR*  
  Especifica o tipo de valores armazenados nesse mapa de um parâmetro de modelo.  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Especifica a classe base da classe deste mapa de parâmetro de modelo.  
   
- `key`  
+ *key*  
  A chave do elemento a ser pesquisado ou criado no mapa.  
   
 ### <a name="remarks"></a>Comentários  
@@ -173,7 +173,7 @@ BOOL RemoveKey(KEY key);
  *KEY*  
  Parâmetro de modelo especificando o tipo de chaves do mapa.  
   
- `key`  
+ *key*  
  Chave do elemento a ser removido.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -193,10 +193,10 @@ void SetAt(KEY key, VALUE newValue);
  *KEY*  
  Parâmetro de modelo especificando o tipo de chaves do mapa.  
   
- `key`  
+ *key*  
  Especifica o valor da chave do newValue.  
   
- `newValue`  
+ *newValue*  
  Especifica o ponteiro de objeto que é o valor do novo elemento.  
   
 ### <a name="remarks"></a>Comentários  

@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199aa7adc6cb96a4bc92e196ff94d57abdedfede
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb5fb6b09ba6d27828c9f76a1b2ee21323197f6b
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374293"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122935"
 ---
 # <a name="cstatusbar-class"></a>Classe CStatusBar
 Uma barra de controle com uma linha de painéis de saída de texto ou "indicadores".  
@@ -110,7 +110,7 @@ class CStatusBar : public CControlBar
   
 1.  Chamar [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) para atualizar o texto no painel somente 0.  
   
-2.  Chamar [CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext) na barra de status `ON_UPDATE_COMMAND_UI` manipulador.  
+2.  Chamar [CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext) no manipulador ON_UPDATE_COMMAND_UI da barra de status.  
   
 3.  Chamar [SetPaneText](#setpanetext) para atualizar o texto de qualquer painel.  
   
@@ -140,7 +140,7 @@ int CommandToIndex(UINT nIDFind) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIDFind`  
+ *nIDFind*  
  ID do indicador cujo índice é a serem recuperados de cadeia de caracteres.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -160,19 +160,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pParentWnd`  
+ *pParentWnd*  
  Ponteiro para o [CWnd](../../mfc/reference/cwnd-class.md) objeto cuja janela do Windows é o pai da barra de status.  
   
- `dwStyle`  
+ *dwStyle*  
  O estilo de barra de status. Além do padrão do Windows [estilos](../../mfc/reference/styles-used-by-mfc.md#window-styles), há suporte para esses estilos.  
   
-- `CBRS_TOP` Barra de controle está na parte superior da janela do quadro.  
+- Barra de controle de CBRS_TOP está na parte superior da janela do quadro.  
   
-- `CBRS_BOTTOM` Barra de controle está na parte inferior da janela do quadro.  
+- Barra de controle de CBRS_BOTTOM é na parte inferior da janela do quadro.  
   
-- `CBRS_NOALIGN` Barra de controle é reposicionado de forma não quando o pai for redimensionado.  
+- Barra de controle de CBRS_NOALIGN não é reposicionada quando o pai for redimensionado.  
   
- `nID`  
+ *nID*  
  ID de janela filho. da barra de ferramentas  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -193,22 +193,22 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pParentWnd`  
+ *pParentWnd*  
  Ponteiro para o [CWnd](../../mfc/reference/cwnd-class.md) objeto cuja janela do Windows é o pai da barra de status.  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  Estilos adicionais para a criação do item inserido [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) objeto. O padrão especifica uma barra de status sem uma alça de dimensionamento ou uma dica de ferramenta suporte. Estilos de barra de status com suporte são:  
   
-- **SBARS_SIZEGRIP** o controle de barra de status inclui uma alça de dimensionamento na extremidade direita da barra de status. Uma alça de dimensionamento é semelhante a uma borda de dimensionamento; é uma área retangular que o usuário pode clicar e arrastar para redimensionar a janela pai.  
+- O controle de barra de status SBARS_SIZEGRIP inclui uma alça de dimensionamento na extremidade direita da barra de status. Uma alça de dimensionamento é semelhante a uma borda de dimensionamento; é uma área retangular que o usuário pode clicar e arrastar para redimensionar a janela pai.  
   
-- **SBT_TOOLTIPS** a barra de status dá suporte a dicas de ferramenta.  
+- A barra de status SBT_TOOLTIPS oferece suporte a dicas de ferramenta.  
   
  Para obter detalhes sobre esses estilos, consulte [configurações do CStatusBarCtrl](../../mfc/settings-for-the-cstatusbarctrl.md).  
   
- `dwStyle`  
+ *dwStyle*  
  O estilo de barra de status. O padrão especifica a criação de uma barra de status visíveis na parte inferior da janela do quadro. Aplique qualquer combinação de estilos de controle listados da barra de status [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) e [CDialogBar::Create](../../mfc/reference/cdialogbar-class.md#create). No entanto, esse parâmetro sempre deve incluir os estilos WS_CHILD e WS_VISIBLE.  
   
- `nID`  
+ *nID*  
  ID da janela filho da barra de status.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -217,7 +217,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Comentários  
  Essa função também define a fonte inicial e define o status da altura da barra em um valor padrão.  
   
- Use `CreateEx`, em vez de [criar](#create), quando determinados estilos precisam estar presente durante a criação do controle da barra de status incorporada. Por exemplo, definir `dwCtrlStyle` para **SBT_TOOLTIPS** para exibir dicas de ferramenta em um objeto de barra de status.  
+ Use `CreateEx`, em vez de [criar](#create), quando determinados estilos precisam estar presente durante a criação do controle da barra de status incorporada. Por exemplo, definir *dwCtrlStyle* para SBT_TOOLTIPS para exibir dicas de ferramenta em um objeto de barra de status.  
   
 ##  <a name="cstatusbar"></a>  CStatusBar::CStatusBar  
  Constrói uma `CStatusBar` objeto, cria uma fonte de barra de status padrão, se necessário e define as características da fonte para os valores padrão.  
@@ -234,28 +234,28 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Um ponteiro para um [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) estrutura que contém informações sobre o tipo de desenho necessárias.  
   
 ### <a name="remarks"></a>Comentários  
- O **itemAction** membro o `DRAWITEMSTRUCT` estrutura define a ação de desenho que deve ser executada. Substituir essa função de membro para implementar o desenho de um desenho proprietário `CStatusBar` objeto. O aplicativo deve restaurar todos os objetos de interface (GDI) do dispositivo gráficos selecionados para o contexto de exibição fornecido no `lpDrawItemStruct` antes do encerramento desta função de membro.  
+ O `itemAction` membro o `DRAWITEMSTRUCT` estrutura define a ação de desenho que deve ser executada. Substituir essa função de membro para implementar o desenho de um desenho proprietário `CStatusBar` objeto. O aplicativo deve restaurar todos os objetos de interface (GDI) do dispositivo gráficos selecionados para o contexto de exibição fornecido no *lpDrawItemStruct* antes do encerramento desta função de membro.  
   
 ##  <a name="getitemid"></a>  CStatusBar::GetItemID  
- Retorna a ID do indicador especificado pelo `nIndex`.  
+ Retorna a ID do indicador especificado por *nIndex*.  
   
 ```  
 UINT GetItemID(int nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Índice do indicador cuja ID é a ser recuperado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A ID do indicador especificado pelo `nIndex`.  
+ A ID do indicador especificado por *nIndex*.  
   
 ##  <a name="getitemrect"></a>  CStatusBar::GetItemRect  
- Copia as coordenadas do indicador especificado por `nIndex` para a estrutura apontada pelo `lpRect`.  
+ Copia as coordenadas do indicador especificado por *nIndex* para a estrutura apontada pelo *lpRect*.  
   
 ```  
 void GetItemRect(
@@ -264,17 +264,17 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Índice do indicador cujas coordenadas do retângulo devem ser recuperados.  
   
- `lpRect`  
- Aponta para um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura ou um [CRect](../../atl-mfc-shared/reference/crect-class.md) que receberá as coordenadas do indicador especificado pelo objeto `nIndex`.  
+ *lpRect*  
+ Aponta para um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura ou um [CRect](../../atl-mfc-shared/reference/crect-class.md) que receberá as coordenadas do indicador especificado pelo objeto *nIndex*.  
   
 ### <a name="remarks"></a>Comentários  
  As coordenadas são em pixels em relação ao canto superior esquerdo da barra de status.  
   
 ##  <a name="getpaneinfo"></a>  CStatusBar::GetPaneInfo  
- Conjuntos de `nID`, `nStyle`, e `cxWidth` para a ID, o estilo e a largura do painel indicador no local especificado por `nIndex`.  
+ Conjuntos de *nID*, *nStyle*, e *cxWidth* para a ID, o estilo e a largura do painel indicador no local especificado por *nIndex*.  
   
 ```  
 void GetPaneInfo(
@@ -285,16 +285,16 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Índice do painel são cujas informações a serem recuperados.  
   
- `nID`  
- Referência a um **UINT** que é definido como a ID do painel.  
+ *nID*  
+ Referência a um UINT que é definida como a ID do painel.  
   
- `nStyle`  
- Referência a um **UINT** que é definido para o estilo do painel.  
+ *nStyle*  
+ Referência a um UINT que é definido para o estilo do painel.  
   
- `cxWidth`  
+ *cxWidth*  
  Referência a um número inteiro que é definida como a largura do painel.  
   
 ##  <a name="getpanestyle"></a>  CStatusBar::GetPaneStyle  
@@ -305,11 +305,11 @@ UINT GetPaneStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Índice do painel é cujo estilo a ser recuperado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O estilo do painel barra de status especificado pelo `nIndex`.  
+ O estilo do painel barra de status especificado por *nIndex*.  
   
 ### <a name="remarks"></a>Comentários  
  Estilo do painel determina como o painel será exibido.  
@@ -324,10 +324,10 @@ CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rS
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Índice do painel cujo texto está para ser recuperado.  
   
- `rString`  
+ *rString*  
  Uma referência a um [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto que contém o texto a ser recuperado.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -352,7 +352,7 @@ CStatusBarCtrl& GetStatusBarCtrl() const;
  Para obter mais informações sobre controles comuns, consulte [controles comuns](http://msdn.microsoft.com/library/windows/desktop/bb775493) no SDK do Windows.  
   
 ##  <a name="setindicators"></a>  CStatusBar::SetIndicators  
- Define a ID do indicador, cada para o valor especificado pelo elemento correspondente da matriz `lpIDArray`, carrega o recurso de cadeia de caracteres especificado por cada ID e define o texto do indicador para a cadeia de caracteres.  
+ Define a ID do indicador, cada para o valor especificado pelo elemento correspondente da matriz *lpIDArray*, carrega o recurso de cadeia de caracteres especificado por cada ID e define o texto do indicador para a cadeia de caracteres.  
   
 ```  
 BOOL SetIndicators(
@@ -361,11 +361,11 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpIDArray`  
+ *lpIDArray*  
  Ponteiro para uma matriz de IDs.  
   
- `nIDCount`  
- Número de elementos na matriz apontada pelo `lpIDArray`.  
+ *nIDCount*  
+ Número de elementos na matriz apontada pelo *lpIDArray*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
@@ -382,30 +382,30 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Índice do painel indicador cujo estilo será definido.  
   
- `nID`  
+ *nID*  
  Nova ID para o painel do indicador.  
   
- `nStyle`  
+ *nStyle*  
  Novo estilo para o painel do indicador.  
   
- `cxWidth`  
+ *cxWidth*  
  Nova largura para o painel do indicador.  
   
 ### <a name="remarks"></a>Comentários  
  Há suporte para os seguintes estilos de indicador:  
   
-- **SBPS_NOBORDERS** nenhuma borda 3D ao redor do painel.  
+- Sem SBPS_NOBORDERS 3D borda ao redor do painel.  
   
-- **SBPS_POPOUT** inversa da borda para que o texto "exibido."  
+- Inverter SBPS_POPOUT da borda para que o texto "exibido."  
   
-- **SBPS_DISABLED** não desenhar o texto.  
+- SBPS_DISABLED não desenhar texto.  
   
-- **SBPS_STRETCH** painel de ampliação para preencher o espaço não utilizado. Somente um painel por barra de status pode ter esse estilo.  
+- Painel SBPS_STRETCH Alongar para preencher o espaço não utilizado. Somente um painel por barra de status pode ter esse estilo.  
   
-- **SBPS_NORMAL** nenhum stretch, bordas ou pop-out.  
+- Stretch não SBPS_NORMAL, bordas ou pop-out.  
   
 ##  <a name="setpanestyle"></a>  CStatusBar::SetPaneStyle  
  Chame essa função de membro para definir o estilo do painel da barra de status.  
@@ -417,10 +417,10 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Índice do painel cujo estilo será definido.  
   
- `nStyle`  
+ *nStyle*  
  Estilo do painel cujo estilo será definido.  
   
 ### <a name="remarks"></a>Comentários  
@@ -429,7 +429,7 @@ void SetPaneStyle(
  Para obter uma lista de estilos disponíveis para barras de status, consulte [SetPaneInfo](#setpaneinfo).  
   
 ##  <a name="setpanetext"></a>  CStatusBar::SetPaneText  
- Chamar essa função de membro para definir o texto do painel para a cadeia de caracteres apontada por `lpszNewText`.  
+ Chamar essa função de membro para definir o texto do painel para a cadeia de caracteres apontada por *lpszNewText*.  
   
 ```  
 BOOL SetPaneText(
@@ -439,14 +439,14 @@ BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  Índice do painel cujo texto será definido.  
   
- `lpszNewText`  
+ *lpszNewText*  
  Ponteiro para o novo texto de painel.  
   
  *b Update*  
- Se **TRUE**, o painel é invalidado depois que o texto é definido.  
+ Se for TRUE, o painel é invalidado depois que o texto é definido.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  

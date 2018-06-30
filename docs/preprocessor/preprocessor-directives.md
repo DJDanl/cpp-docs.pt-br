@@ -1,7 +1,7 @@
 ---
 title: Diretivas de pré-processador | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/28/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -15,32 +15,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b73f6ce579f94d38621820a63888dc0aa5a75863
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a5621c1a338ea6870d15dca65c303d4ac2bf8c7a
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849880"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122589"
 ---
 # <a name="preprocessor-directives"></a>Diretivas de pré-processador
-Diretivas de pré-processador, tais como `#define` e **#ifdef**, normalmente são usados para fazer a programas de software fácil alterar e compilar em ambientes de execução diferentes. As políticas no arquivo de origem mandam o pré-processador realizar ações específicas. Por exemplo, o pré-processador pode substituir tokens no texto, inserir o conteúdo de outros arquivos no arquivo de origem ou suprimir a compilação de parte do arquivo removendo seções de texto. As linhas do pré-processador são reconhecidas e executadas antes de expansão macro. Portanto, se uma macro se expandir até algo que se pareça com um comando do pré-processador, esse comando não será reconhecido pelo pré-processador.  
-  
- As instruções do pré-processador usam o mesmo conjunto de caracteres das instruções de arquivo de origem, com exceção das sequências de escape, que não têm suporte. O conjunto de caracteres usado em instruções de pré-processador é igual a [conjunto de caracteres de execução](http://msdn.microsoft.com/en-us/a7901c61-524d-47c6-beb6-d9dacc2e72ed). O pré-processador também reconhece valores negativos de caracteres.  
-  
- O pré-processador reconhece as políticas a seguir:  
-  
-|||||  
-|-|-|-|-|  
-|[#define](../preprocessor/hash-define-directive-c-cpp.md)|[#error](../preprocessor/hash-error-directive-c-cpp.md)|[#import](../preprocessor/hash-import-directive-cpp.md)|[#undef](../preprocessor/hash-undef-directive-c-cpp.md)|  
-|[#elif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|[#if](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|[#include](../preprocessor/hash-include-directive-c-cpp.md)|[#using](../preprocessor/hash-using-directive-cpp.md)|  
-|[#else](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|[#ifdef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#line](../preprocessor/hash-line-directive-c-cpp.md)|[#endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|  
-|[#ifndef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)|||  
-  
- O sinal de número (**#**) deve ser o primeiro caractere de espaço não brancas na linha que contém a diretiva; caracteres de espaço em branco podem aparecer entre o sinal de número e a primeira letra da diretiva. Algumas políticas incluem argumentos ou valores. Qualquer texto que segue uma diretiva (exceto um argumento ou um valor que é parte da diretiva) deve ser precedido pelo delimitador de comentário de linha única (**//**) ou colocados entre os delimitadores de comentário ( **/ \* \*/**). Linhas que contêm as diretivas de pré-processador podem ser continuadas precedendo imediatamente o marcador de fim de linha com uma barra invertida (**\\**).  
-  
- As políticas do pré-processador podem aparecer em qualquer lugar do arquivo de origem, mas se aplicam somente ao restante dele.  
-  
-## <a name="see-also"></a>Consulte também  
- [Operadores de pré-processador](../preprocessor/preprocessor-operators.md)   
- [Macros predefinidas](../preprocessor/predefined-macros.md)   
- [Referência de pré-processador do C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
+
+Diretivas de pré-processador, tais como `#define` e **#ifdef**, normalmente são usados para fazer a programas de software fácil alterar e compilar em ambientes de execução diferentes. As políticas no arquivo de origem mandam o pré-processador realizar ações específicas. Por exemplo, o pré-processador pode substituir tokens no texto, inserir o conteúdo de outros arquivos no arquivo de origem ou suprimir a compilação de parte do arquivo removendo seções de texto. As linhas do pré-processador são reconhecidas e executadas antes de expansão macro. Portanto, se uma macro se expandir até algo que se pareça com um comando do pré-processador, esse comando não será reconhecido pelo pré-processador.
+
+As instruções do pré-processador usam o mesmo conjunto de caracteres das instruções de arquivo de origem, com exceção das sequências de escape, que não têm suporte. O conjunto de caracteres usado em instruções de pré-processador é igual a [conjunto de caracteres de execução](http://msdn.microsoft.com/en-us/a7901c61-524d-47c6-beb6-d9dacc2e72ed). O pré-processador também reconhece valores negativos de caracteres.
+
+O pré-processador reconhece as políticas a seguir:
+
+|||||
+|-|-|-|-|
+|[#define](../preprocessor/hash-define-directive-c-cpp.md)|[#error](../preprocessor/hash-error-directive-c-cpp.md)|[#import](../preprocessor/hash-import-directive-cpp.md)|[#undef](../preprocessor/hash-undef-directive-c-cpp.md)|
+|[#elif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|[#if](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|[#include](../preprocessor/hash-include-directive-c-cpp.md)|[#using](../preprocessor/hash-using-directive-cpp.md)|
+|[#else](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|[#ifdef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#line](../preprocessor/hash-line-directive-c-cpp.md)|[#endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|
+|[#ifndef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)|||
+
+O sinal de número (**#**) deve ser o primeiro caractere de espaço não brancas na linha que contém a diretiva; caracteres de espaço em branco podem aparecer entre o sinal de número e a primeira letra da diretiva. Algumas políticas incluem argumentos ou valores. Qualquer texto que segue uma diretiva (exceto um argumento ou um valor que é parte da diretiva) deve ser precedido pelo delimitador de comentário de linha única (**//**) ou colocados entre os delimitadores de comentário ( __/ \*\*/__).   Linhas que contêm as diretivas de pré-processador podem ser continuadas precedendo imediatamente o marcador de fim de linha com uma barra invertida (**\\**).
+
+As políticas do pré-processador podem aparecer em qualquer lugar do arquivo de origem, mas se aplicam somente ao restante dele.
+
+## <a name="see-also"></a>Consulte também
+
+[Operadores de pré-processador](../preprocessor/preprocessor-operators.md)  
+[Macros predefinidas](../preprocessor/predefined-macros.md)  
+[Referência de pré-processador do C/C++](../preprocessor/c-cpp-preprocessor-reference.md)  

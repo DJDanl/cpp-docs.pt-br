@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7596140f48b62a63189444bee6fb363552766fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1fe7c8518366065e93360187247cbd07df42d79f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371553"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122491"
 ---
 # <a name="cwinformsdialog-class"></a>Classe CWinFormsDialog
 Um wrapper para uma classe de caixa de diálogo do MFC que hospeda um controle de usuário do Windows Forms.  
@@ -85,7 +85,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIDTemplate`  
+ *nIDTemplate*  
  Contém a ID de um recurso de modelo de caixa de diálogo. Use o editor de caixa de diálogo para criar o modelo de caixa de diálogo e armazená-la no arquivo de script de recurso do aplicativo. Para obter mais informações sobre modelos de caixa de diálogo, consulte [classe CDialog](../../mfc/reference/cdialog-class.md).  
   
 ##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
@@ -119,7 +119,7 @@ virtual BOOL OnInitDialog();
  Um valor booleano que especifica se o aplicativo definiu o foco de entrada para um dos controles na caixa de diálogo. Se `OnInitDialog` retorna zero, Windows define o foco de entrada para o primeiro controle na caixa de diálogo. Esse método pode retornar 0 somente se o aplicativo tenha definido explicitamente o foco de entrada para um dos controles na caixa de diálogo.  
   
 ### <a name="remarks"></a>Comentários  
- Quando a caixa de diálogo MFC é criada (usando o [criar](../../mfc/reference/cdialog-class.md#create), [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect), ou [DoModal](../../mfc/reference/cdialog-class.md#domodal) método herdado do [CDialog](../../mfc/reference/cdialog-class.md)), um `WM_INITDIALOG` mensagem é enviada, e esse método é chamado. Ele cria uma instância de um controle de formulários do Windows na caixa de diálogo e ajusta o tamanho da caixa de diálogo para acomodar o tamanho do controle de usuário. Em seguida, ele hospeda o novo controle na caixa de diálogo MFC.  
+ Quando a caixa de diálogo MFC é criada (usando o [criar](../../mfc/reference/cdialog-class.md#create), [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect), ou [DoModal](../../mfc/reference/cdialog-class.md#domodal) método herdado do [CDialog](../../mfc/reference/cdialog-class.md)), um WM _ INITDIALOG mensagem é enviada, e esse método é chamado. Ele cria uma instância de um controle de formulários do Windows na caixa de diálogo e ajusta o tamanho da caixa de diálogo para acomodar o tamanho do controle de usuário. Em seguida, ele hospeda o novo controle na caixa de diálogo MFC.  
   
  Substitua essa função de membro, se você precisar realizar processamento especial quando a caixa de diálogo é inicializada. Para obter mais informações sobre como usar esse método, consulte [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog).  
   

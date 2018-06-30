@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6cdd84b9ac7547ac7c0ae0a664de0f672c10202
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d098a88e57ecbbedfde1a4674a915e13c28ab435
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375347"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121008"
 ---
 # <a name="data-types-mfc"></a>Tipos de dados (MFC)
 Este tópico lista os tipos de dados mais comumente usados na biblioteca Microsoft Foundation Class. A maioria dos tipos de dados é os mesmos na plataforma de Software Development Kit (SDK), enquanto outras são exclusivas para MFC.  
@@ -48,9 +48,9 @@ Este tópico lista os tipos de dados mais comumente usados na biblioteca Microso
   
  Tipos de dados exclusivos para a biblioteca Microsoft Foundation Class incluem o seguinte:  
   
--   **POSIÇÃO** um valor usado para indicar a posição de um elemento em uma coleção; usado pelas classes de coleção MFC.  
+-   POSICIONAR um valor usado para indicar a posição de um elemento em uma coleção. usado por classes de coleção MFC.  
   
--   **LPCRECT** A 32 bits de ponteiro para uma constante (modificável) `RECT` estrutura.  
+-   Ponteiro de um de 32 bits LPCRECT para uma constante (modificável) `RECT` estrutura.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../mfc/class-library-overview.md)   

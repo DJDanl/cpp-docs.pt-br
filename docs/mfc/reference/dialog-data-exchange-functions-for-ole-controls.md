@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dd7e1b9b18e8478cfa4e61a22806cf067cb3699
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542afe8ba67e1d9c6138998320483a964a08724a
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375967"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121819"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funções da troca de dados da caixa de diálogo para controles OLE
 Este tópico lista as funções DDX_OC usadas para trocar dados entre uma propriedade de um controle OLE em uma caixa de diálogo, o modo de exibição de formulário ou o objeto de exibição de controle e um membro de dados do objeto de exibição de controle, exibição de formulário ou caixa de diálogo.  
@@ -48,8 +48,8 @@ Este tópico lista as funções DDX_OC usadas para trocar dados entre uma propri
 |[DDX_OCColorRO](#ddx_occolorro)|Gerencia a transferência de **OLE_COLOR** dados entre uma propriedade somente leitura de um controle OLE e um **OLE_COLOR** membro de dados.|  
 |[DDX_OCFloat](#ddx_ocfloat)|Gerencia a transferência de **float** (ou **duplo**) dados entre uma propriedade de um controle OLE e um **float** (ou **duplo**) membro de dados.|  
 |[DDX_OCFloatRO](#ddx_ocfloatro)|Gerencia a transferência de **float** (ou **duplo**) dados entre uma propriedade somente leitura de um controle OLE e um **float** (ou **duplo**) dados membro.|  
-|[DDX_OCInt](#ddx_ocint)|Gerencia a transferência de `int` (ou **longo**) dados entre uma propriedade de um controle OLE e um `int` (ou **longo**) membro de dados.|  
-|[DDX_OCIntRO](#ddx_ocintro)|Gerencia a transferência de `int` (ou **longo**) dados entre uma propriedade somente leitura de um controle OLE e um `int` (ou **longo**) membro de dados.|  
+|[DDX_OCInt](#ddx_ocint)|Gerencia a transferência de **int** (ou **longo**) dados entre uma propriedade de um controle OLE e um **int** (ou **longo**) membro de dados.|  
+|[DDX_OCIntRO](#ddx_ocintro)|Gerencia a transferência de **int** (ou **longo**) dados entre uma propriedade somente leitura de um controle OLE e um **int** (ou **longo**) membro de dados.|  
 |[DDX_OCShort](#ddx_ocshort)|Gerencia a transferência de **curto** dados entre uma propriedade de um controle OLE e um **curto** membro de dados.|  
 |[DDX_OCShortRO](#ddx_ocshortro)|Gerencia a transferência de **curto** dados entre uma propriedade somente leitura de um controle OLE e um **curto** membro de dados.|  
 |[DDX_OCText](#ddx_octext)|Gerencia a transferência de **CString** dados entre uma propriedade de um controle OLE e um **CString** membro de dados.|  
@@ -67,13 +67,13 @@ void AFXAPI DDX_OCBool(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDX`  
+ *pDX*  
  Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.  
   
- `nIDC`  
+ *nIDC*  
  A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.  
   
- `dispid`  
+ *DISPID*  
  A ID de expedição de uma propriedade do controle.  
   
  *value*  
@@ -97,13 +97,13 @@ void AFXAPI DDX_OCBoolRO(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDX`  
+ *pDX*  
  Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.  
   
- `nIDC`  
+ *nIDC*  
  A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.  
   
- `dispid`  
+ *DISPID*  
  A ID de expedição de uma propriedade do controle.  
   
  *value*  
@@ -116,7 +116,7 @@ void AFXAPI DDX_OCBoolRO(
   **Cabeçalho** afxdisp.h  
   
 ##  <a name="ddx_occolor"></a>  DDX_OCColor  
- O `DDX_OCColor` função gerencia a transferência de **OLE_COLOR** dados entre uma propriedade de um controle OLE em uma caixa de diálogo, exibição ou objeto de exibição de controle de formulário e um **OLE_COLOR** membro de dados de caixa de diálogo exibição de formulário, ou o objeto de exibição de controle.  
+ O `DDX_OCColor` função gerencia a transferência de dados OLE_COLOR entre uma propriedade de um controle OLE em uma caixa de diálogo, o modo de exibição de formulário, ou o objeto de exibição de controle e um membro de dados OLE_COLOR da caixa de diálogo, exibição de formulário ou controle de objeto de exibição.  
   
 ```   
 void AFXAPI DDX_OCColor(
@@ -127,13 +127,13 @@ void AFXAPI DDX_OCColor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDX`  
+ *pDX*  
  Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.  
   
- `nIDC`  
+ *nIDC*  
  A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.  
   
- `dispid`  
+ *DISPID*  
  A ID de expedição de uma propriedade do controle.  
   
  *value*  
@@ -146,7 +146,7 @@ void AFXAPI DDX_OCColor(
   **Cabeçalho** afxdisp.h  
   
 ##  <a name="ddx_occolorro"></a>  DDX_OCColorRO  
- O `DDX_OCColorRO` função gerencia a transferência de **OLE_COLOR** dados entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, exibição ou objeto de exibição de controle de formulário e um **OLE_COLOR** membro de dados a caixa de diálogo, exibição de formulário ou objeto de exibição de controle.  
+ O `DDX_OCColorRO` função gerencia a transferência de dados OLE_COLOR entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, o modo de exibição de formulário, ou o objeto de exibição de controle e um membro de dados OLE_COLOR da caixa de diálogo, exibição de formulário ou controle de objeto de exibição.  
   
 ```   
 void AFXAPI DDX_OCColorRO(
@@ -157,13 +157,13 @@ void AFXAPI DDX_OCColorRO(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDX`  
+ *pDX*  
  Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.  
   
- `nIDC`  
+ *nIDC*  
  A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.  
   
- `dispid`  
+ *DISPID*  
  A ID de expedição de uma propriedade do controle.  
   
  *value*  
@@ -193,13 +193,13 @@ void AFXAPI DDX_OCFloat(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDX`  
+ *pDX*  
  Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.  
   
- `nIDC`  
+ *nIDC*  
  A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.  
   
- `dispid`  
+ *DISPID*  
  A ID de expedição de uma propriedade do controle.  
   
  *value*  
@@ -229,13 +229,13 @@ void AFXAPI DDX_OCFloatRO(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDX`  
+ *pDX*  
  Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.  
   
- `nIDC`  
+ *nIDC*  
  A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.  
   
- `dispid`  
+ *DISPID*  
  A ID de expedição de uma propriedade do controle.  
   
  *value*  
@@ -248,7 +248,7 @@ void AFXAPI DDX_OCFloatRO(
   **Cabeçalho** afxdisp.h  
   
 ##  <a name="ddx_ocint"></a>  DDX_OCInt  
- O `DDX_OCInt` função gerencia a transferência de `int` (ou **longo**) dados entre uma propriedade de um controle OLE em uma caixa de diálogo, exibição ou objeto de exibição de controle de formulário e um `int` (ou **longa**) membro de dados da caixa de diálogo, a exibição de formulário ou o objeto de exibição de controle.  
+ O `DDX_OCInt` função gerencia a transferência de **int** (ou **longo**) dados entre uma propriedade de um controle OLE em uma caixa de diálogo, exibição ou objeto de exibição de controle de formulário e um **int**(ou **longo**) membro de dados da caixa de diálogo, a exibição de formulário ou o objeto de exibição de controle.  
   
 ```   
 void AFXAPI DDX_OCInt(
@@ -265,13 +265,13 @@ void AFXAPI DDX_OCInt(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDX`  
+ *pDX*  
  Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.  
   
- `nIDC`  
+ *nIDC*  
  A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.  
   
- `dispid`  
+ *DISPID*  
  A ID de expedição de uma propriedade do controle.  
   
  *value*  
@@ -284,7 +284,7 @@ void AFXAPI DDX_OCInt(
   **Cabeçalho** afxdisp.h  
   
 ##  <a name="ddx_ocintro"></a>  DDX_OCIntRO  
- O `DDX_OCIntRO` função gerencia a transferência de `int` (ou **longo**) dados entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, exibição ou objeto de exibição de controle de formulário e um `int` (ou **longo** ) membro de dados da caixa de diálogo, a exibição de formulário ou o objeto de exibição de controle.  
+ O `DDX_OCIntRO` função gerencia a transferência de **int** (ou **longo**) dados entre uma propriedade somente leitura de um controle OLE em uma caixa de diálogo, exibição ou objeto de exibição de controle de formulário e um **int** (ou **longo**) membro de dados da caixa de diálogo, a exibição de formulário ou o objeto de exibição de controle.  
   
 ```   
 void AFXAPI DDX_OCIntRO(
@@ -301,13 +301,13 @@ void AFXAPI DDX_OCIntRO(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDX`  
+ *pDX*  
  Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.  
   
- `nIDC`  
+ *nIDC*  
  A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.  
   
- `dispid`  
+ *DISPID*  
  A ID de expedição de uma propriedade do controle.  
   
  *value*  
@@ -331,13 +331,13 @@ void AFXAPI DDX_OCShort(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDX`  
+ *pDX*  
  Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.  
   
- `nIDC`  
+ *nIDC*  
  A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.  
   
- `dispid`  
+ *DISPID*  
  A ID de expedição de uma propriedade do controle.  
   
  *value*  
@@ -361,13 +361,13 @@ void AFXAPI DDX_OCShortRO(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDX`  
+ *pDX*  
  Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.  
   
- `nIDC`  
+ *nIDC*  
  A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.  
   
- `dispid`  
+ *DISPID*  
  A ID de expedição de uma propriedade do controle.  
   
  *value*  
@@ -391,13 +391,13 @@ void AFXAPI DDX_OCText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDX`  
+ *pDX*  
  Um ponteiro para um **CDataExchange** objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.  
   
- `nIDC`  
+ *nIDC*  
  A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.  
   
- `dispid`  
+ *DISPID*  
  A ID de expedição de uma propriedade do controle.  
   
  *value*  
@@ -421,13 +421,13 @@ void AFXAPI DDX_OCTextRO(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDX`  
+ *pDX*  
  Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.  
   
- `nIDC`  
+ *nIDC*  
  A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.  
   
- `dispid`  
+ *DISPID*  
  A ID de expedição de uma propriedade do controle.  
   
  *value*  

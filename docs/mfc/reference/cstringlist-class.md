@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91a88fc73b27323327bce477fa2cdaca747ed21c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31e13222ccd5ac12768961ff5e93d11e68ecfded
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375142"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122709"
 ---
 # <a name="cstringlist-class"></a>Classe CStringList
 Dá suporte a listas de `CString` objetos.  
@@ -128,7 +128,7 @@ class CStringList : public CObject
 ## <a name="remarks"></a>Comentários  
  Todas as comparações são feitas por valor, o que significa que os caracteres na cadeia de caracteres são comparados, em vez dos endereços das cadeias de caracteres.  
   
- A `CStringList` incorpora a macro `IMPLEMENT_SERIAL` para suportar serialização e despejo de seus elementos. Se uma lista de `CString` objetos são armazenados para um arquivo, com um operador de inserção sobrecarregado ou com o `Serialize` função de membro, cada `CString` elemento é serializado por sua vez.  
+ `CStringList` incorpora a macro IMPLEMENT_SERIAL para dar suporte à serialização e despejo de seus elementos. Se uma lista de `CString` objetos são armazenados para um arquivo, com um operador de inserção sobrecarregado ou com o `Serialize` função de membro, cada `CString` elemento é serializado por sua vez.  
   
  Se você precisar de um despejo do indivíduo `CString` elementos, você deve definir a profundidade do contexto de despejo para 1 ou superior.  
   

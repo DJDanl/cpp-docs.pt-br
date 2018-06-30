@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89de8dddae6d6549fe12086b84e6bb656afcbc4f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95e05c071057025bda8e841be2cd5c6b17971626
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374982"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122562"
 ---
 # <a name="cstdiofile-class"></a>Classe CStdioFile
 Representa um arquivo de fluxo de tempo de execução C como abertos pela função de tempo de execução [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
@@ -109,28 +109,28 @@ CStdioFile(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pOpenStream`  
+ *pOpenStream*  
  Especifica o ponteiro de arquivo retornado por uma chamada à função tempo de execução C [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
   
- `lpszFileName`  
+ *lpszFileName*  
  Especifica uma cadeia de caracteres que é o caminho para o arquivo desejado. O caminho pode ser relativo ou absoluto.  
   
- `nOpenFlags`  
- Especifica opções para a criação de arquivos, compartilhamento de arquivos e modos de acesso de arquivo. Você pode especificar várias opções usando o OR bit a bit ( `|`) operador.  
+ *nOpenFlags*  
+ Especifica opções para a criação de arquivos, compartilhamento de arquivos e modos de acesso de arquivo. Você pode especificar várias opções usando o OR bit a bit ( **|** ) operador.  
   
  Uma opção de modo de acesso de arquivo é obrigatória. outros modos são opcionais. Consulte [CFile::CFile](../../mfc/reference/cfile-class.md#cfile) para obter uma lista de opções de modo e outros sinalizadores. Em MFC versão 3.0 e posterior, sinalizadores de compartilhamento são permitidos.  
   
- `pTM`  
+ *pTM*  
  Ponteiro para objeto CAtlTransactionManager.  
   
 ### <a name="remarks"></a>Comentários  
  O construtor padrão não é anexado a um arquivo para o `CStdioFile` objeto. Ao usar esse construtor, você deve usar o `CStdioFile::Open` método para abrir um arquivo e anexá-lo para o `CStdioFile` objeto.  
   
- O construtor de parâmetro único anexa um fluxo de arquivos abertos para o `CStdioFile` objeto. Permitidos valores de ponteiro incluem os ponteiros de arquivo de entrada/saída predefinido `stdin`, `stdout`, ou `stderr`.  
+ O construtor de parâmetro único anexa um fluxo de arquivos abertos para o `CStdioFile` objeto. Permitidos valores de ponteiro incluem os ponteiros de arquivo de entrada/saída predefinido *stdin*, *stdout*, ou *stderr*.  
   
  O construtor de parâmetro dois cria um `CStdioFile` do objeto e abre o arquivo correspondente com o caminho fornecido.  
   
- Se você passar `NULL` para um `pOpenStream` ou `lpszFileName`, o construtor lançará um `CInvalidArgException*`.  
+ Se você passar NULL para o *pOpenStream* ou *lpszFileName*, o construtor lançará um `CInvalidArgException*`.  
   
  Se o arquivo não pode ser aberto ou criado, o construtor lançará um `CFileException*`.  
   
@@ -145,7 +145,7 @@ FILE* m_pStream;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- É **nulo** se o arquivo nunca foi aberto ou foi fechado.  
+ É NULL se o arquivo nunca foi aberto ou foi fechado.  
   
 ##  <a name="open"></a>  CStdioFile::Open  
  Sobrecarregado. Abrir é projetado para uso com o padrão `CStdioFile` construtor.  
@@ -165,25 +165,25 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpszFileName`  
+ *lpszFileName*  
  Uma cadeia de caracteres que é o caminho para o arquivo desejado. O caminho pode ser relativo ou absoluto.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Modo de compartilhamento e acesso. Especifica a ação a ser tomada ao abrir o arquivo. Você pode combinar as opções usando OR bit a bit (&#124;) operador. Permissão de acesso de um e um compartilhamento de opção são necessários; os modos de modeCreate e modeNoInherit são opcionais.  
   
- `pError`  
+ *pError*  
  Um ponteiro para um objeto de exceção de arquivo existente que receberá o status de uma operação com falha.  
   
- `pTM`  
+ *pTM*  
  Ponteiro para uma `CAtlTransactionManager` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` caso bem-sucedido; caso contrário, `FALSE`.  
+ VERDADEIRO se bem-sucedido; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="readstring"></a>  CStdioFile::ReadString  
- Lê dados de texto em um buffer, até o limite de `nMax`caracteres -1, do arquivo associado a `CStdioFile` objeto.  
+ Lê dados de texto em um buffer, até o limite de *nMax*caracteres -1, do arquivo associado a `CStdioFile` objeto.  
   
 ```  
 virtual LPTSTR ReadString(
@@ -194,25 +194,25 @@ virtual BOOL ReadString(CString& rString);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpsz`  
+ *lpsz*  
  Especifica um ponteiro para um buffer fornecido pelo usuário que recebe uma cadeia de caracteres de texto terminada em nulo.  
   
- `nMax`  
+ *nMax*  
  Especifica o número máximo de caracteres a serem lidos, sem contar o caractere null de terminação.  
   
- `rString`  
+ *rString*  
  Uma referência a um `CString` objeto que contém a cadeia de caracteres quando a função retorna.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o buffer que contém os dados de texto. **NULO** se o final do arquivo atingido sem ler todos os dados; ou se booliano, **FALSE** se o final do arquivo atingido sem ler todos os dados.  
+ Um ponteiro para o buffer que contém os dados de texto. NULL se o final do arquivo atingido sem ler todos os dados; ou, se boolean, FALSE se o final do arquivo foi atingido sem ler todos os dados.  
   
 ### <a name="remarks"></a>Comentários  
- Leitura é interrompida com o primeiro caractere de nova linha. Se, nesse caso, menos de `nMax`-1 caracteres tenham sido lidos, um caractere de nova linha é armazenado no buffer. Um caractere nulo ('\0') é acrescentado em ambos os casos.  
+ Leitura é interrompida com o primeiro caractere de nova linha. Se, nesse caso, menos de *nMax*-1 caracteres tenham sido lidos, um caractere de nova linha é armazenado no buffer. Um caractere nulo ('\0') é acrescentado em ambos os casos.  
   
  [CFile::Read](../../mfc/reference/cfile-class.md#read) também está disponível para entrada de modo de texto, mas não encerra em um par de avanço de linha de retorno de carro.  
   
 > [!NOTE]
->  O `CString` versão dessa função remove o `'\n'` se estiver presente; o `LPTSTR` versão não.  
+>  O `CString` versão dessa função remove o `'\n'` se estiver presente; a versão LPTSTR não.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCFiles#38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
@@ -227,17 +227,17 @@ virtual ULONGLONG Seek(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lOff`  
+ *lOff*  
  Número de bytes para mover o ponteiro.  
   
- `nFrom`  
+ *nFrom*  
  Modo de movimento do ponteiro. Deve ser um dos seguintes valores:  
   
-- `CFile::begin`: Move o ponteiro do arquivo `lOff` bytes encaminham desde o início do arquivo.  
+- `CFile::begin`: Move o ponteiro do arquivo *lOff* bytes encaminham desde o início do arquivo.  
   
-- `CFile::current`: Move o ponteiro do arquivo `lOff` bytes a partir da posição atual no arquivo.  
+- `CFile::current`: Move o ponteiro do arquivo *lOff* bytes a partir da posição atual no arquivo.  
   
-- `CFile::end`: Move o ponteiro do arquivo `lOff` bytes do final do arquivo. Observe que `lOff` deve ser negativo para buscar em existente de arquivos; positivo valores buscará após o fim do arquivo.  
+- `CFile::end`: Move o ponteiro do arquivo *lOff* bytes do final do arquivo. Observe que *lOff* deve ser negativo para buscar em existente de arquivos; positivo valores buscará após o fim do arquivo.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se a posição solicitada é legal, `Seek` retorna o deslocamento de byte novos desde o início do arquivo. Caso contrário, o valor retornado é indefinido e um `CFileException` objeto é gerado.  
@@ -262,15 +262,15 @@ virtual void WriteString(LPCTSTR lpsz);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpsz`  
+ *lpsz*  
  Especifica um ponteiro para um buffer que contém uma cadeia de caracteres terminada em nulo.  
   
 ### <a name="remarks"></a>Comentários  
- O caractere null de terminação ( `\0`) não é gravado no arquivo. Esse método grava caracteres de nova linha `lpsz` para o arquivo como um par de avanço de linha/retorno de carro.  
+ O caractere null de terminação ( `\0`) não é gravado no arquivo. Esse método grava caracteres de nova linha *lpsz* para o arquivo como um par de avanço de linha/retorno de carro.  
   
  Se você quiser gravar dados que não é terminada em nulo em um arquivo, use `CStdioFile::Write` ou [CFile::Write](../../mfc/reference/cfile-class.md#write).  
   
- Este método lança um `CInvalidArgException*` se você especificar `NULL` para o `lpsz` parâmetro.  
+ Este método lança um `CInvalidArgException*` se você especificar NULL para o *lpsz* parâmetro.  
   
  Este método lança um `CFileException*` em resposta a erros de sistema de arquivos.  
   

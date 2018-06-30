@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a3ebc30304f2d194a10b71f832b42039bac6a53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da29c1b3c62769157735bca556eedc7557a4268d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375500"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121806"
 ---
 # <a name="cstringarray-class"></a>Classe CStringArray
 Oferece suporte a matrizes de [CString](../../atl-mfc-shared/using-cstring.md) objetos.  
@@ -120,7 +120,7 @@ class CStringArray : public CObject
 |[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Define ou obtém o elemento no índice especificado.|  
   
 ## <a name="remarks"></a>Comentários  
- A `CStringArray` incorpora a macro `IMPLEMENT_SERIAL` para suportar serialização e despejo de seus elementos. Se uma matriz de objetos `CString` for armazenada em um arquivo, com um operador de inserção sobrecarregado ou com a função de membro `Serialize`, cada elemento é serializado por vez.  
+ `CStringArray` incorpora a macro IMPLEMENT_SERIAL para dar suporte à serialização e despejo de seus elementos. Se uma matriz de objetos `CString` for armazenada em um arquivo, com um operador de inserção sobrecarregado ou com a função de membro `Serialize`, cada elemento é serializado por vez.  
   
 > [!NOTE]
 >  Antes de usar uma matriz, utilize `SetSize` para estabelecer seu tamanho e alocar memória para ela. Se `SetSize` não for utilizado, incluir elementos à matriz fará com que ela seja frequentemente realocada e copiada. Realocações e cópias frequentes são ineficientes e podem fragmentar a memória.  

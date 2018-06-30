@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c0cff2f6586ab5e385808fb806ed435b00bfc9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d64d503c4bad0d452be174064e2932ed100d7de
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375217"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121751"
 ---
 # <a name="ctabview-class"></a>Classe CTabView
 O `CTabView` classe simplifica o uso da classe de controle de guia ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) em aplicativos que usam a arquitetura de documento/exibição do MFC.  
@@ -95,16 +95,16 @@ int AddView(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `pViewClass`  
+ [in] *pViewClass*  
  Um ponteiro para uma classe de tempo de execução do modo de exibição inserida.  
   
- [in] `strViewLabel`  
+ [in] *strViewLabel*  
  Especifica o texto da guia.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  Especifica a posição de base zero no qual inserir o modo de exibição. Se a posição é -1, que a nova guia é inserida no final.  
   
- [in] `pContext`  
+ [in] *pContext*  
  Um ponteiro para o `CCreateContext` do modo de exibição.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -121,7 +121,7 @@ int FindTab(HWND hWndView) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `hWndView`  
+ [in] *hWndView*  
  O identificador da exibição.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -138,7 +138,7 @@ CView* GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro válido para o modo de exibição ativo ou `NULL` se não houver nenhum modo de exibição ativo.  
+ Um ponteiro válido para a exibição ativa, ou nulo se não houver nenhum modo de exibição ativo.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -160,12 +160,12 @@ virtual BOOL IsScrollBar() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o modo de exibição de guia deve ser criado com uma barra de rolagem compartilhado. Caso contrário, `FALSE`.  
+ TRUE se o modo de exibição de guia deve ser criado com uma barra de rolagem compartilhado. Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- O framework chama esse método quando um `CTabView` objeto está sendo criado.  
+ O framework chama esse método quando um *CTabView* objeto está sendo criado.  
   
- Substituir o `IsScrollBar` método em um `CTabView`-derivado da classe e retornar `TRUE` se você quiser criar uma exibição que tem uma barra de rolagem horizontal compartilhado.  
+ Substituir o *IsScrollBar* método em um *CTabView*-classe derivada e retorna verdadeiro se você deseja criar uma exibição que tenha uma barra de rolagem horizontal compartilhado.  
   
 ##  <a name="onactivateview"></a>  CTabView::OnActivateView  
  Chamado pelo framework quando o modo de exibição da guia fica ativo ou inativo.  
@@ -175,7 +175,7 @@ virtual void OnActivateView(CView* view);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `view`  
+ [in] *exibição*  
  Um ponteiro para o modo de exibição.  
   
 ### <a name="remarks"></a>Comentários  
@@ -189,7 +189,7 @@ BOOL RemoveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iTabNum`  
+ [in] *iTabNum*  
  O índice da exibição a ser removida.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -205,11 +205,11 @@ BOOL SetActiveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iTabNum`  
+ [in] *iTabNum*  
  O índice baseado em zero da exibição de guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se a exibição especificada foi feita ativa, `FALSE` se o índice da exibição é inválido.  
+ TRUE se a exibição especificada foi feita ativa, FALSO se o índice da exibição é inválido.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).  
