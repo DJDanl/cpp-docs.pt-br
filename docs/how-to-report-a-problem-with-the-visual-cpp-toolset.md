@@ -1,6 +1,6 @@
 ---
 title: Como relatar um problema com o conjunto de ferramentas do Visual C++ | Microsoft Docs
-ms.date: 06/08/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dec9cfac5273469eb37418929d83e273f6ab8612
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: f1735f890c0f106d82884a5ad7d63a5a3f0f8920
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253874"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322362"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Como relatar um problema com o conjunto de ferramentas ou a documentação do Visual C++
 
@@ -358,7 +358,7 @@ Crie sua reprodução como um projeto do IDE mínimo e empacote-o compactando to
 Há várias boas maneiras de enviar seu relatório para nós. Você pode usar a ferramenta interna [Relatar um Problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) do Visual Studio ou as páginas da [Comunidade de Desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/). Também acesse diretamente as nossas páginas da Comunidade de Desenvolvedores escolhendo o botão **Comentários sobre o produto** na parte inferior desta página. A escolha depende se você deseja usar as ferramentas incorporadas ao IDE para capturar telas e organizar seu relatório para publicar nas páginas da comunidade de desenvolvedores ou se você prefere usar o site diretamente.
 
 > [!NOTE]
-> Independentemente de como você enviar seu relatório, a Microsoft respeita sua privacidade. A Microsoft está comprometida com a conformidade com todas as leis e regulamentos de privacidade de dados. Para obter informações sobre como tratamos os dados que você nos envia, confira a [Política de privacidade da Microsoft](https://www.visualstudio.com/dn948229).
+> Independentemente de como você enviar seu relatório, a Microsoft respeita sua privacidade. A Microsoft está comprometida com a conformidade com todas as leis e regulamentos de privacidade de dados. Para obter informações sobre como tratamos os dados que você nos envia, confira a [Política de privacidade da Microsoft](https://privacy.microsoft.com/privacystatement).
 
 ### <a name="use-the-report-a-problem-tool"></a>Usar a ferramenta Relatar um Problema
 
@@ -391,7 +391,7 @@ Se você está preocupado com a revelação da sua identidade, [crie uma conta d
 
 1. No relatório que você criou, escolha **Adicionar comentário** para criar sua descrição privada do problema.
 
-1. no editor de resposta, use o controle de lista suspensa abaixo dos botões **Enviar** e **Cancelar** para especificar o público-alvo para a sua resposta. Somente as pessoas que você especificar podem ver essas respostas privadas e imagens, links ou código que você incluir. Escolha **Visível por moderadores e o cartaz original** para limitar a visibilidade aos funcionários da Microsoft e a você mesmo.
+1. No editor de resposta, use o controle de lista suspensa abaixo dos botões **Enviar** e **Cancelar** para especificar o público-alvo para a sua resposta. Somente as pessoas que você especificar podem ver essas respostas privadas e imagens, links ou código que você incluir. Escolha **Visível por moderadores e o cartaz original** para limitar a visibilidade aos funcionários da Microsoft e a você mesmo.
 
 1. Adicione a descrição e quaisquer outras informações, imagens e anexos de arquivo necessários para a reprodução. Escolha o botão **Enviar** para enviar essas informações em particular.
 

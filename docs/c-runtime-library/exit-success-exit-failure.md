@@ -1,7 +1,7 @@
 ---
 title: EXIT_SUCCESS, EXIT_FAILURE | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -18,26 +18,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22bb302e89ae8bb6c4586c09c38a51b8c848eb7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 671946045de5cfd2a7a34e163b459ebfc3bb5479
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387672"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954342"
 ---
 # <a name="exitsuccess-exitfailure"></a>EXIT_SUCCESS, EXIT_FAILURE
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-#include <stdlib.h>  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Estes são argumentos para as funções **exit** e `_exit` e valores retornados para as funções `atexit` e `_onexit`.  
-  
-## <a name="see-also"></a>Consulte também  
- [atexit](../c-runtime-library/reference/atexit.md)   
- [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)   
- [Constantes globais](../c-runtime-library/global-constants.md)
+
+## <a name="required-header"></a>Cabeçalho necessário
+
+```c
+#include <stdlib.h>
+```
+
+## <a name="remarks"></a>Comentários
+
+Estes são argumentos para as funções [exit](reference/exit-exit-exit.md) e [_exit](reference/exit-exit-exit.md) e os valores retornados para as funções [atexit](reference/atexit.md) e [_onexit](reference/onexit-onexit-m.md).
+
+|Constante|Valor definido|
+|-|-|
+|EXIT_SUCCESS|0|
+|EXIT_FAILURE|1|
+
+## <a name="see-also"></a>Consulte também
+
+[Constantes globais](../c-runtime-library/global-constants.md)

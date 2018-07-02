@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ef91c42d0787dac371d324eece1527e5366c89c3
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705599"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271390"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novidades do Visual C++ de 2003 até 2015
 
@@ -1585,7 +1585,7 @@ Esse suporte aperfeiçoado para padrões ISO C/C++ pode exigir alterações do c
 
 - Adiciona o ponto e vírgula para tipos de classe.
 - Preenche parênteses para literais de cadeia de caracteres bruta.
-- Conclui comentários de várias linhas (/* */)
+- Conclui comentários de várias linhas (/\* \*/)
 
 **Localizar Todas as Referências** agora resolve e filtra automaticamente referências em segundo plano depois que exibe a lista de correspondências textuais.
 
