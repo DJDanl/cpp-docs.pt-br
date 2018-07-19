@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0db0ea95fe3f5491780cd0297e8d3f56b6800e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4772c62db1443beaf6a5fff962a52a71823674bc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942297"
 ---
 # <a name="varianttoperator-"></a>_variant_t::operator =
 **Seção específica da Microsoft**  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      _variant_t& operator=(  
+_variant_t& operator=(  
    const VARIANT& varSrc   
 );  
   
@@ -127,37 +128,37 @@ _variant_t& operator=(
 ## <a name="remarks"></a>Comentários  
  O operador atribui um novo valor ao objeto `_variant_t`:  
   
--   **operador = (***varSrc***)** atribui uma existente **VARIANT** para um `_variant_t` objeto.      
+-   **operador = (***1&gt;Operator=(&lt;1}{2&gt;varsrc&lt;2}{3&gt;)&lt;3***)** atribui uma existente `VARIANT` para um `_variant_t` objeto.      
   
--   **operador = (***pVarSrc***)** atribui uma existente **VARIANT** para um `_variant_t` objeto.      
+-   **operador = (***1&gt;Operator=(&lt;1}{2&gt;pvarSrc&lt;2}{3&gt;)&lt;3***)** atribui uma existente `VARIANT` para um `_variant_t` objeto.      
   
--   **operador = (***var_t_Src***)** atribui uma existente `_variant_t` o objeto para um `_variant_t` objeto.      
+-   **operador = (***1&gt;Operator=(&lt;1}{2&gt;var_t_src&lt;2}{3&gt;)&lt;3***)** atribui uma existente `_variant_t` do objeto para um `_variant_t` objeto.      
   
--   **operador = (***sSrc***)** atribui um **curto** valor inteiro para um `_variant_t` objeto.      
+-   **operador = (***1&gt;Operator=(&lt;1}{2&gt;SSRC&lt;2}{3&gt;)&lt;3***)** atribui uma **curto** valor inteiro para um `_variant_t` objeto.      
   
--   **operador = (**`lSrc`**)** atribui um **longo** valor inteiro para um `_variant_t` objeto.      
+-   **operador = (**`lSrc`**)** atribui uma **longo** valor inteiro para um `_variant_t` objeto.      
   
--   **operador = (***fltSrc***)** atribui um **float** valor numérico para um `_variant_t` objeto.      
+-   **operador = (***1&gt;Operator=(&lt;1}{2&gt;fltsrc&lt;2}{3&gt;)&lt;3***)** atribui uma **float** valor numérico a um `_variant_t` objeto.      
   
--   **operador = (***dblSrc***)** atribui um **duplo** valor numérico para um `_variant_t` objeto.      
+-   **operador = (***1&gt;Operator=(&lt;1}{2&gt;dblsrc&lt;2}{3&gt;)&lt;3***)** atribui uma **double** valor numérico a um `_variant_t` objeto.      
   
--   **operador = (***cySrc***)** atribui um **CY** o objeto para um `_variant_t` objeto.      
+-   **operador = (***1&gt;Operator=(&lt;1}{2&gt;cysrc&lt;2}{3&gt;)&lt;3***)** atribui uma `CY` do objeto para um `_variant_t` objeto.      
   
--   **operador = (***bstrSrc***)** atribui um `BSTR` o objeto para um `_variant_t` objeto.      
+-   **operador = (***1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3***)** atribui uma `BSTR` do objeto para um `_variant_t` objeto.      
   
--   **operador = (***wstrSrc***)** atribui uma cadeia de caracteres Unicode para um `_variant_t` objeto.      
+-   **operador = (***1&gt;Operator=(&lt;1}{2&gt;wstrsrc&lt;2}{3&gt;)&lt;3***)** atribui uma cadeia de caracteres Unicode para um `_variant_t` objeto.      
   
 -   **operador = (**`strSrc`**)** atribui uma cadeia de caracteres multibyte para um `_variant_t` objeto.      
   
--   **operador = (** `bSrc` **)** atribui um `bool` valor para um `_variant_t` objeto.    
+-   **operador = (** `bSrc` **)** atribui uma **bool** valor para um `_variant_t` objeto.    
   
--   **operador = (***pDispSrc***)** atribui um **VT_DISPATCH** o objeto para um `_variant_t` objeto.      
+-   **operador = (***1&gt;Operator=(&lt;1}{2&gt;pdispsrc&lt;2}{3&gt;)&lt;3***)** atribui uma `VT_DISPATCH` do objeto para um `_variant_t` objeto.      
   
--   **operador = (***pIUnknownSrc***)** atribui um **VT_UNKNOWN** o objeto para um `_variant_t` objeto.      
+-   **operador = (***1&gt;Operator=(&lt;1}{2&gt;piunknownsrc&lt;2}{3&gt;)&lt;3***)** atribui uma `VT_UNKNOWN` do objeto para um `_variant_t` objeto.      
   
--   **operador = (***decSrc***)** atribui um **DECIMAL** valor para um `_variant_t` objeto.      
+-   **operador = (***1&gt;Operator=(&lt;1}{2&gt;decsrc&lt;2}{3&gt;)&lt;3***)** atribui uma `DECIMAL` valor para um `_variant_t` objeto.      
   
--   **operador = (** `bSrc` **)** atribui um **bytes** valor para um `_variant_t` objeto.    
+-   **operador = (** `bSrc` **)** atribui uma `BYTE` valor para um `_variant_t` objeto.    
   
  **Fim da seção específica da Microsoft**  
   

@@ -15,20 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5523abd0142b8b6dc3a25beb8ca8d113cf5463bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d914b668140f1cbf372e29bcdd4f4b526397fb9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942132"
 ---
 # <a name="temporary-objects"></a>Objetos temporários
 Em alguns casos, é necessário que o compilador crie objetos temporários. Esses objetos temporários podem ser criados pelos seguintes motivos:  
   
--   Para inicializar uma referência `const` com um inicializador de um tipo diferente do tipo subjacente da referência que está sendo inicializada.  
+-   Para inicializar uma **const** referência com um inicializador de um tipo diferente do tipo subjacente da referência que está sendo inicializado.  
   
 -   Para armazenar o valor de retorno de uma função que retorna um tipo definido pelo usuário. Esses temporários só serão criados quando o programa não copia o valor de retorno para um objeto. Por exemplo:  
   
-    ```  
+    ```cpp 
     UDT Func1();    //  Declare a function that returns a user-defined  
                     //   type.  
   
@@ -41,7 +42,7 @@ Em alguns casos, é necessário que o compilador crie objetos temporários. Esse
   
      Como o valor de retorno não é copiado a outro objeto, um objeto temporário será criado. Um caso comum mais comum onde os temporários são criados é durante a avaliação de uma expressão onde as funções sobrecarregadas do operador devem ser chamadas. Essas funções sobrecarregadas do operador retornam um tipo definido pelo usuário que geralmente não é copiado a outro objeto.  
   
-     Considere a expressão `ComplexResult = Complex1 + Complex2 + Complex3`. A expressão `Complex1 + Complex2` é avaliada, e o resultado é armazenado em um objeto temporário. Em seguida, a expressão *temporário* `+ Complex3` é avaliada, e o resultado é copiado para `ComplexResult` (o supondo que o operador de atribuição não está sobrecarregado).  
+     Considere a expressão `ComplexResult = Complex1 + Complex2 + Complex3`. A expressão `Complex1 + Complex2` é avaliada, e o resultado é armazenado em um objeto temporário. Em seguida, a expressão *temporária* `+ Complex3` é avaliada, e o resultado é copiado para `ComplexResult` (o supondo que o operador de atribuição não seja sobrecarregado).  
   
 -   Para armazenar o resultado de uma conversão em um tipo definido pelo usuário. Quando um objeto de um determinado tipo é convertido explicitamente em um tipo definido pelo usuário, o novo objeto é criado como um objeto temporário.  
   
@@ -51,6 +52,6 @@ Em alguns casos, é necessário que o compilador crie objetos temporários. Esse
   
 |Motivo temporário criado|Ponto de destruição|  
 |------------------------------|-----------------------|  
-|Resultado da avaliação de expressão|Todos os temporaries criados como resultado da avaliação da expressão são destruídos o final da instrução de expressão (ou seja, no ponto-e-vírgula), ou no final das expressões de controle para instruções `for`, `if`, `while`, `do` e `switch`.|  
-|Inicializando referências `const`|Se um inicializador não for um valor l do mesmo tipo da referência que está sendo inicializada, um temporário do tipo de objeto subjacente será criada e inicializada com a expressão de inicialização. Esse objeto temporário será destruído imediatamente depois que o objeto de referência ao qual está associado é destruído.|  
+|Resultado da avaliação de expressão|Todos os temporaries criados como resultado da avaliação da expressão são destruídos no final da instrução de expressão (ou seja, em que o ponto e vírgula), ou no final das expressões de controle para **para**, **se**, **enquanto**, **fazer**, e **alternar** instruções.|  
+|Inicializando **const** referências|Se um inicializador não for um valor l do mesmo tipo da referência que está sendo inicializada, um temporário do tipo de objeto subjacente será criada e inicializada com a expressão de inicialização. Esse objeto temporário será destruído imediatamente depois que o objeto de referência ao qual está associado é destruído.|  
   

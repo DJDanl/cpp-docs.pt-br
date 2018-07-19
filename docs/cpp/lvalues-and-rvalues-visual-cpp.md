@@ -15,34 +15,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bbe048ee6667aaf71b2a3cf52e82993f90ab1c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ed6f9a11b6cf2a0045729acbc79d8e45103064ea
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419131"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940180"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues e Rvalues (Visual C++)
 
-Cada expressão C++ tem um tipo e pertence a um *categoria valor*. As categorias de valor são a base para regras que compiladores devem seguir ao criar, copiar e mover objetos temporários durante a avaliação da expressão.
+Cada expressão C++ tem um tipo e pertence a um *categoria de valor*. As categorias de valor são a base para regras que os compiladores devem seguir ao criar, copiar e mover objetos temporários durante a avaliação da expressão.
 
- O padrão C++ 17 define categorias de valor de expressão da seguinte maneira:
+ O padrão c++17 define categorias de valor de expressão da seguinte maneira:
 
 - Um *glvalue* é uma expressão cuja avaliação determina a identidade de um objeto, um campo de bits ou uma função.
-- Um *não prvalue* é uma expressão cuja avaliação inicializa um objeto ou um campo de bits ou calcula o valor do operando de um operador, conforme especificado pelo contexto no qual ela aparece.
-- Um *xvalue* é um glvalue que denota um objeto ou um campo de bits cujos recursos podem ser reutilizados (normalmente porque é próximo ao final de sua vida útil). [Exemplo: determinados tipos de expressões que envolvem referências a rvalue (8.3.2) geram xvalues, como uma chamada para uma função cujo tipo de retorno é uma referência rvalue ou uma conversão para um tipo de referência de rvalue. ]
-- Um *lvalue* é um glvalue que não seja um xvalue.
-- Um *rvalue* é um não prvalue ou um xvalue.
+- Um *prvalue* é uma expressão cuja avaliação inicializa um objeto ou um campo de bits ou calcula o valor do operando de um operador, conforme especificado pelo contexto no qual ela aparece.
+- Uma *xvalue* é um glvalue que denota um objeto ou um campo de bits cujos recursos podem ser reutilizados (normalmente porque ele está perto do fim do seu tempo de vida). [Exemplo: certos tipos de expressões que envolvem as referências de rvalue (8.3.2) produzem xvalues, como uma chamada para uma função cujo tipo de retorno é uma referência rvalue ou uma conversão para um tipo de referência de rvalue. ]
+- Uma *lvalue* é um que não seja um xvalue glvalue.
+- Uma *rvalue* é um prvalue ou um xvalue.
 
 O diagrama a seguir ilustra as relações entre as categorias:
 
  ![Categorias de valor de expressão C++](media/value_categories.png "categorias de valor de expressão C++")
 
- Lvalue tem um endereço que seu programa pode acessar. Exemplos de expressões de lvalue nomes de variável, incluindo `const` chamadas que retornam uma referência lvalue, os campos de bits, uniões e membros de classe de função de variáveis, elementos de matriz.
+ Um lvalue tem um endereço que seu programa pode acessar. Exemplos de expressões de lvalue incluem nomes de variáveis, incluindo **const** chamadas que retornam uma referência de lvalue, campos de bits, uniões e membros de classe de função de variáveis, elementos de matriz.
 
- Uma expressão não prvalue não tem endereço acessível pelo seu programa. Exemplos de expressões não prvalue incluem literais, chamadas de função que retornam um tipo de referência não e objetos temporários criados durante a avaliação da expressão, mas acessível somente pelo compilador.
+ Uma expressão de prvalue não possui endereço que é acessível pelo seu programa. Exemplos de expressões de prvalue incluem literais, chamadas de função que retornam um tipo de não referência e os objetos temporários criados durante a avaliação de expressão, mas acessíveis apenas pelo compilador.
 
- Uma expressão de xvalue tem um endereço que não são mais acessíveis pelo seu programa, mas pode ser usado para inicializar uma referência de rvalue, que fornece acesso à expressão. Exemplos incluem as chamadas de função que retornam uma referência de rvalue e de subscrito de matriz, membro e ponteiro para expressões de membro onde a matriz ou o objeto é uma referência rvalue.
+ Uma expressão de xvalue tem um endereço que não estarão mais acessíveis pelo seu programa, mas pode ser usado para inicializar uma referência de rvalue, que fornece acesso à expressão. Exemplos incluem chamadas de função que retornam uma referência de rvalue e o subscrito de matriz, membro e ponteiro para expressões de membro em que a matriz ou objeto é uma referência de rvalue.
 
 ## <a name="example"></a>Exemplo
 
@@ -76,7 +76,7 @@ int main()
 > [!NOTE]
 > Os exemplos neste tópico ilustram o uso correto e incorreto quando os operadores não são sobrecarregados. Ao sobrecarregar os operadores, é possível tornar uma expressão como `j * 4` um l-value.
 
-Os termos de *lvalue* e *rvalue* são geralmente usados quando você se referir a referências de objeto. Para obter mais informações sobre referências, consulte [Declarador de referência Lvalue: &](../cpp/lvalue-reference-declarator-amp.md) e [Declarador de referência Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Os termos *lvalue* e *rvalue* geralmente são usadas quando você se referir a referências de objeto. Para obter mais informações sobre referências, consulte [Declarador de referência Lvalue: &](../cpp/lvalue-reference-declarator-amp.md) e [Declarador de referência Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Consulte também
 

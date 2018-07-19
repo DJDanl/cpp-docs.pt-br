@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28dc4e52e2f114600ad3a22697500ce9d8594113
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccc01372d08edb997ed6b0aaa70be69fde60a1e2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850301"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954317"
 ---
 # <a name="cachesuballoc-class"></a>Classe cache_suballoc
 
@@ -42,13 +42,13 @@ class cache_suballoc
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`Sz`|O número de elementos na matriz a serem alocados.|
+|*SZ*|O número de elementos na matriz a serem alocados.|
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo cache_suballoc armazena blocos de memória desalocados em uma lista livre com comprimento ilimitado, usando `freelist<sizeof(Type), max_unbounded>` e subaloca blocos de memória de uma parte maior alocada com `operator new` quando a lista livre está vazia.
+A classe de modelo cache_suballoc armazena blocos de memória desalocados em uma lista livre com comprimento ilimitado, usando `freelist<sizeof(Type), max_unbounded>`e os subaloca blocos de memória de uma parte maior alocada com **operador new** quando a lista livre está vazio.
 
-Cada parte contém `Sz * Nelts` bytes de memória utilizável e os dados que `operator new` e `operator delete` requerem. Partes alocadas nunca são liberadas.
+Cada parte contém `Sz * Nelts` bytes de memória utilizável e os dados que **operador new** e **operador delete** exigem. Partes alocadas nunca são liberadas.
 
 ### <a name="constructors"></a>Construtores
 
@@ -81,7 +81,7 @@ void *allocate(std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`count`|O número de elementos na matriz a serem alocados.|
+|*count*|O número de elementos na matriz a serem alocados.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -111,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`ptr`|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
-|`count`|O número de objetos a serem desalocados do armazenamento.|
+|*ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
+|*count*|O número de objetos a serem desalocados do armazenamento.|
 
 ### <a name="remarks"></a>Comentários
 

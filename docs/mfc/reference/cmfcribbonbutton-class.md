@@ -124,15 +124,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dc6e780ece78bca59a95f8050a36a77656f0ad6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d1da517ef952dd3fcdb0772feedb8e576be9502b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040032"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850014"
 ---
 # <a name="cmfcribbonbutton-class"></a>Classe CMFCRibbonButton
-O `CMFCRibbonButton` classe implementa botões que você pode posicionar em elementos da barra de faixa de opções, como painéis, as barras de ferramentas de acesso rápido e menus pop-up.  
+O `CMFCRibbonButton` classe implementa botões que você pode posicionar em elementos de barra de faixa de opções, como painéis, barras de ferramentas de acesso rápido e menus pop-up.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
@@ -148,7 +148,7 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CMFCRibbonButton::CMFCRibbonButton](#cmfcribbonbutton)|Constrói um objeto de botão de faixa de opções.|  
+|[CMFCRibbonButton::CMFCRibbonButton](#cmfcribbonbutton)|Constrói um objeto de botão da faixa de opções.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -161,28 +161,28 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |[CMFCRibbonButton::DrawBottomText](#drawbottomtext)||  
 |[CMFCRibbonButton::DrawImage](#drawimage)|(Substitui [CMFCRibbonBaseElement::DrawImage](../../mfc/reference/cmfcribbonbaseelement-class.md#drawimage).)|  
 |[CMFCRibbonButton::DrawRibbonText](#drawribbontext)||  
-|[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|Retorna o índice de um item de menu pop-up que é associado à ID de comando especificado.|  
+|[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|Retorna o índice de um item de menu pop-up que está associado com a ID do comando especificado.|  
 |[CMFCRibbonButton::GetCommandRect](#getcommandrect)||  
-|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|Retorna o tamanho compact do elemento de faixa de opções. (Substitui [CMFCRibbonBaseElement::GetCompactSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).)|  
+|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|Retorna o tamanho compacto do elemento da faixa de opções. (Substitui [CMFCRibbonBaseElement::GetCompactSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).)|  
 |[CMFCRibbonButton::GetIcon](#geticon)||  
 |[CMFCRibbonButton::GetImageIndex](#getimageindex)|Retorna o índice da imagem que está associado com o botão.|  
-|[CMFCRibbonButton::GetImageSize](#getimagesize)|Retorna o tamanho da imagem do elemento de faixa de opções. (Substitui [CMFCRibbonBaseElement::GetImageSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|  
+|[CMFCRibbonButton::GetImageSize](#getimagesize)|Retorna o tamanho da imagem do elemento da faixa de opções. (Substitui [CMFCRibbonBaseElement::GetImageSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|  
 |[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|Retorna o tamanho do elemento de faixa de opções em seu estado intermediário. (Substitui [CMFCRibbonBaseElement::GetIntermediateSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize).)|  
 |[CMFCRibbonButton::GetMenu](#getmenu)|Retorna um identificador para um menu do Windows que é atribuído ao botão da faixa de opções.|  
 |[CMFCRibbonButton::GetMenuRect](#getmenurect)||  
-|[CMFCRibbonButton::GetRegularSize](#getregularsize)|Retorna o tamanho normal do elemento de faixa de opções. (Substitui [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
+|[CMFCRibbonButton::GetRegularSize](#getregularsize)|Retorna o tamanho regular do elemento da faixa de opções. (Substitui [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
 |[CMFCRibbonButton::GetSubItems](#getsubitems)||  
 |[CMFCRibbonButton::GetTextRowHeight](#gettextrowheight)||  
-|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|Retorna o texto de dica de ferramenta do elemento de faixa de opções. (Substitui [CMFCRibbonBaseElement::GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).)|  
+|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|Retorna o texto de dica de ferramenta do elemento da faixa de opções. (Substitui [CMFCRibbonBaseElement::GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).)|  
 |[CMFCRibbonButton::HasCompactMode](#hascompactmode)|Especifica se o elemento de faixa de opções tem um modo compacto. (Substitui [CMFCRibbonBaseElement::HasCompactMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode).)|  
-|[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|Especifica se o elemento de faixa de opções tem um modo intermediário. (Substitui [CMFCRibbonBaseElement::HasIntermediateMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode).)|  
+|[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|Especifica se o elemento de faixa de opções tem um modo de intermediário. (Substitui [CMFCRibbonBaseElement::HasIntermediateMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode).)|  
 |[CMFCRibbonButton::HasLargeMode](#haslargemode)|Determina se o elemento de faixa de opções tem um grande modo. (Substitui [CMFCRibbonBaseElement::HasLargeMode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode).)|  
 |[CMFCRibbonButton::HasMenu](#hasmenu)|(Substitui [CMFCRibbonBaseElement::HasMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#hasmenu).)|  
 |[CMFCRibbonButton::IsAlwaysDrawBorder](#isalwaysdrawborder)||  
 |[CMFCRibbonButton::IsAlwaysLargeImage](#isalwayslargeimage)|(Substitui [CMFCRibbonBaseElement::IsAlwaysLargeImage](../../mfc/reference/cmfcribbonbaseelement-class.md#isalwayslargeimage).)|  
 |[CMFCRibbonButton::IsApplicationButton](#isapplicationbutton)||  
 |[CMFCRibbonButton::IsCommandAreaHighlighted](#iscommandareahighlighted)||  
-|[CMFCRibbonButton::IsDefaultCommand](#isdefaultcommand)|Determina se você tiver habilitado o comando padrão para um botão de faixa de opções.|  
+|[CMFCRibbonButton::IsDefaultCommand](#isdefaultcommand)|Determina se você tiver habilitado o comando padrão para um botão da faixa de opções.|  
 |[CMFCRibbonButton::IsDefaultPanelButton](#isdefaultpanelbutton)||  
 |[CMFCRibbonButton::IsDrawTooltipImage](#isdrawtooltipimage)||  
 |[CMFCRibbonButton::IsLargeImage](#islargeimage)||  
@@ -198,11 +198,11 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |[CMFCRibbonButton::RemoveAllSubItems](#removeallsubitems)|Remove todos os itens de menu no menu pop-up.|  
 |[CMFCRibbonButton::RemoveSubItem](#removesubitem)|Remove um item de menu no menu pop-up.|  
 |[CMFCRibbonButton::SetACCData](#setaccdata)|(Substitui [CMFCRibbonBaseElement::SetACCData](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata).)|  
-|[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|Especifica se o botão exibe um grande ou uma imagem em miniatura quando o usuário o botão é recolhido.|  
-|[CMFCRibbonButton::SetDefaultCommand](#setdefaultcommand)|Permite que o comando padrão para o botão de faixa de opções.|  
+|[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|Especifica se o botão exiba um grande ou uma imagem pequena, quando o usuário o botão é recolhido.|  
+|[CMFCRibbonButton::SetDefaultCommand](#setdefaultcommand)|Permite que o comando padrão para o botão da faixa de opções.|  
 |[CMFCRibbonButton::SetDescription](#setdescription)|Define a descrição para o elemento de faixa de opções. (Substitui [CMFCRibbonBaseElement::SetDescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription).)|  
 |[CMFCRibbonButton::SetImageIndex](#setimageindex)|Atribui um índice para a imagem do botão.|  
-|[CMFCRibbonButton::SetMenu](#setmenu)|Atribui um menu pop-up para o botão de faixa de opções.|  
+|[CMFCRibbonButton::SetMenu](#setmenu)|Atribui um menu pop-up para o botão da faixa de opções.|  
 |[CMFCRibbonButton::SetParentCategory](#setparentcategory)|(Substitui [CMFCRibbonBaseElement::SetParentCategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).)|  
 |[CMFCRibbonButton::SetRightAlignMenu](#setrightalignmenu)|Alinha o menu pop-up à direita do botão.|  
 |[CMFCRibbonButton::SetText](#settext)|Define o texto para o elemento de faixa de opções. (Substitui [CMFCRibbonBaseElement::SetText](../../mfc/reference/cmfcribbonbaseelement-class.md#settext).)|  
@@ -214,12 +214,12 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |[CMFCRibbonButton::OnClick](#onclick)|Chamado pelo framework quando o usuário clica no botão.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar os vários métodos no `CMFCRibbonButton` classe. O exemplo mostra como construir um objeto de `CMFCRibbonButton` classe, atribuir um menu pop-up para o botão de faixa de opções, defina a descrição do botão, remover um item de menu no menu pop-up e alinhar à direita do menu pop-up para a borda do botão.  
+ O exemplo a seguir demonstra como usar os vários métodos no `CMFCRibbonButton` classe. O exemplo mostra como construir um objeto do `CMFCRibbonButton` de classe, atribua um menu pop-up para o botão da faixa de opções, definir a descrição do botão, remover um item de menu no menu pop-up e alinhar à direita no menu pop-up para a borda do botão.  
   
  [!code-cpp[NVC_MFC_RibbonApp#7](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_1.cpp)]  
   
 ## <a name="remarks"></a>Comentários  
- Para usar um botão de faixa de opções em um aplicativo, construir o objeto botão e adicioná-lo à faixa de opções apropriada [painel](../../mfc/reference/cmfcribbonpanel-class.md).  
+ Para usar um botão da faixa de opções em um aplicativo, construir o objeto de botão e adicioná-lo à faixa de opções apropriada [painel](../../mfc/reference/cmfcribbonpanel-class.md).  
   
 ```  
 CMFCRibbonPanel* pPanel = pCategory->AddPanel (
@@ -265,7 +265,7 @@ void AddSubItem(
  Especifica um ponteiro para o novo elemento a ser adicionado.  
   
  [in] *nIndex*  
- Especifica o índice no qual adicionar o elemento para a matriz de itens de menu do botão. -1 para adicionar o elemento no final da matriz de itens de menu.  
+ Especifica o índice no qual adicionar o elemento para a matriz de itens de menu do botão; -1 para adicionar o elemento no final da matriz de itens de menu.  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
 
@@ -297,7 +297,7 @@ virtual void ClosePopupMenu();
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="cmfcribbonbutton"></a>  CMFCRibbonButton::CMFCRibbonButton  
- Constrói um objeto de botão de faixa de opções.  
+ Constrói um objeto de botão da faixa de opções.  
   
 ```  
 CMFCRibbonButton(
@@ -325,10 +325,10 @@ CMFCRibbonButton(
  Especifica o rótulo de texto do botão.  
   
  [in] *nSmallImageIndex*  
- Especifica um índice com base em zero da imagem em miniatura do botão na lista de imagens da categoria pai.  
+ Especifica um índice baseado em zero da imagem em miniatura do botão na lista de imagens da categoria pai.  
   
  [in] *nLargeImageIndex*  
- Especifica um índice com base em zero da imagem grande do botão na lista de imagens da categoria pai.  
+ Especifica um índice baseado em zero da imagem grande do botão na lista de imagens da categoria pai.  
   
  [in] *hIcon*  
  Especifica um identificador para o ícone que o aplicativo usa como a imagem do botão.  
@@ -396,7 +396,7 @@ virtual int DrawRibbonText(
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="findsubitemindexbyid"></a>  CMFCRibbonButton::FindSubItemIndexByID  
- Retorna o índice de um item de menu pop-up que é associado à ID de comando especificado.  
+ Retorna o índice de um item de menu pop-up que está associado com a ID do comando especificado.  
   
 ```  
 int FindSubItemIndexByID(UINT uiID) const;  
@@ -407,7 +407,7 @@ int FindSubItemIndexByID(UINT uiID) const;
  Especifica a ID de comando do item de menu pop-up.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O índice de base zero do item sub que está associado com o *uiID*. -1 se não houver nenhum item tal sub.  
+ O índice baseado em zero do subitem que está associado com o *uiID*. -1 se não houver nenhum desses itens de subpastas.  
   
 ##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect  
 
@@ -457,7 +457,7 @@ int GetImageIndex(BOOL bLargeImage) const;
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *bLargeImage*  
- Se `TRUE`, retorna o índice de imagem na lista de imagens que contém as imagens grandes; caso contrário, retorna o índice de imagem na lista de imagens que contém as imagens pequenas.  
+ Se for TRUE, retorna o índice de imagem na lista de imagens que contém as imagens grandes; Caso contrário, retorna o índice de imagem na lista de imagens que contém as imagens pequenas.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O índice da imagem do botão na lista de imagens associado.  
@@ -498,7 +498,7 @@ HMENU GetMenu() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um identificador para um menu do Windows atribuído ao botão; `NULL` se não há nenhum menu atribuído.  
+ Um identificador para um menu do Windows atribuído ao botão; NULL se não houver nenhum menu atribuído.  
   
 ##  <a name="getmenurect"></a>  CMFCRibbonButton::GetMenuRect  
 
@@ -647,14 +647,14 @@ virtual BOOL IsCommandAreaHighlighted() const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="isdefaultcommand"></a>  CMFCRibbonButton::IsDefaultCommand  
- Especifica se o comando padrão para um botão de faixa de opções está habilitado.  
+ Especifica se o comando padrão para um botão da faixa de opções está habilitado.  
   
 ```  
 BOOL IsDefaultCommand() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se você tiver habilitado o comando padrão para um botão de faixa de opções. `FALSE` caso contrário.  
+ TRUE se você tiver habilitado o comando padrão para um botão da faixa de opções; FALSE caso contrário.  
   
 ##  <a name="isdefaultpanelbutton"></a>  CMFCRibbonButton::IsDefaultPanelButton  
 
@@ -730,7 +730,7 @@ BOOL IsRightAlignMenu() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o menu está alinhado à direita; Caso contrário, `FALSE`.  
+ TRUE se o menu é alinhado à direita; Caso contrário, FALSE.  
   
 ##  <a name="issinglelinetext"></a>  CMFCRibbonButton::IsSingleLineText  
 
@@ -767,7 +767,7 @@ virtual void OnClick(CPoint point);
  Especifica a posição do mouse, clique em.  
   
 ### <a name="remarks"></a>Comentários  
- Substitua este método em uma classe derivada, se você desejar tratar esse evento.  
+ Substitua este método em uma classe derivada se você quiser manipular esse evento.  
   
 ##  <a name="ondraw"></a>  CMFCRibbonButton::OnDraw  
 
@@ -823,13 +823,13 @@ BOOL RemoveSubItem(int nIndex);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *nIndex*  
- Especifica o índice de base zero do item de menu que você deseja remover.  
+ Especifica o índice baseado em zero do item de menu que você deseja remover.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o item especificado foi removido com êxito; Caso contrário, `FALSE` se *nIndex* for negativo ou excede o número de itens de menu no menu pop-up.  
+ TRUE se o item especificado foi removido com êxito; Caso contrário, FALSO se *nIndex* for negativo ou exceder o número de itens de menu no menu pop-up.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonButton::SetACCData  
- Define os dados de acessibilidade para o botão de faixa de opções.  
+ Define os dados de acessibilidade para o botão da faixa de opções.  
   
 ```  
 virtual BOOL SetACCData(
@@ -839,18 +839,18 @@ virtual BOOL SetACCData(
   
 ### <a name="parameters"></a>Parâmetros  
  *pParent*  
- A janela pai do elemento de faixa de opções.  
+ A janela pai para o elemento de faixa de opções.  
   
  *data*  
  Os dados de acessibilidade para o elemento de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna `TRUE` se bem-sucedido; caso contrário, FALSE.  
+ Retornará TRUE se bem-sucedido; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="setalwayslargeimage"></a>  CMFCRibbonButton::SetAlwaysLargeImage  
- Especifica se o botão exibe um grande ou uma imagem em miniatura quando o usuário o botão é recolhido.  
+ Especifica se o botão exiba um grande ou uma imagem pequena, quando o usuário o botão é recolhido.  
   
 ```  
 void SetAlwaysLargeImage(BOOL bSet=TRUE);
@@ -858,10 +858,10 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *bSet*  
- Se `TRUE`, no botão exibe uma imagem grande. Caso contrário, o botão exibe uma imagem em miniatura.  
+ Se for TRUE, o botão exibe uma imagem grande. Caso contrário, o botão exibe uma imagem pequena.  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
- Permite que o comando padrão para o botão de faixa de opções.  
+ Permite que o comando padrão para o botão da faixa de opções.  
   
 ```  
 void SetDefaultCommand(BOOL bSet=TRUE);
@@ -869,10 +869,10 @@ void SetDefaultCommand(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *bSet*  
- Se `TRUE`, o botão pode executar o comando padrão. Se `FALSE`, o botão não é possível executar o comando padrão.  
+ Se for TRUE, o botão pode executar o comando padrão. Se for FALSE, o botão não é possível executar o comando padrão.  
   
 ### <a name="remarks"></a>Comentários  
- *bSet* é relevante apenas quando o botão tem um menu. Se *bSet* é `TRUE`, no botão pode executar o comando padrão e o menu pop-up atribuído será exibida somente quando um usuário clica na seta na borda direita do botão. Caso contrário, o botão não é possível executar o comando padrão e o menu pop-up será exibida, independentemente de qual área do botão o usuário clica.  
+ *bSet* é relevante apenas quando o botão tem um menu. Se *bSet* for TRUE, o botão pode executar o comando padrão e o menu pop-up atribuído aparece somente quando um usuário clica na seta na borda direita do botão. Caso contrário, o botão não é possível executar o comando padrão e o menu pop-up será exibida, independentemente de qual área do botão o usuário clica.  
   
 ##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription  
 
@@ -900,10 +900,10 @@ void SetImageIndex(
  Especifica o índice de imagem.  
   
  [in] *bLargeImage*  
- Se `TRUE`, o índice especificado refere-se à lista de imagens grandes. Caso contrário, o índice refere-se à lista de imagens pequenas.  
+ Se for TRUE, o índice especificado se refere à lista de imagens grandes. Caso contrário, o índice refere-se à lista de imagens pequenas.  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
- Atribui um menu pop-up para o botão de faixa de opções.  
+ Atribui um menu pop-up para o botão da faixa de opções.  
   
 ```  
 void SetMenu(
@@ -922,16 +922,16 @@ void SetMenu(
  Um identificador para um menu do Windows.  
   
  *bIsDefaultCommand*  
- Se `TRUE`, o botão pode executar o comando padrão; caso contrário, o botão exibe um menu pop-up.  
+ Se for TRUE, o botão pode executar o comando padrão; Caso contrário, o botão exibe um menu pop-up.  
   
  *bRightAlign*  
- Se `TRUE`, o menu está alinhado à direita. Caso contrário, o menu é alinhado à esquerda.  
+ Se for TRUE, o menu é alinhado à direita. Caso contrário, o menu é alinhado à esquerda.  
   
  *uiMenuResID*  
  Uma ID de recurso de menu.  
   
 ### <a name="remarks"></a>Comentários  
- Quando o aplicativo atribui o menu para o botão, o botão exibe uma seta do lado direito. Se *bIsDefaultCommand* é `TRUE`, o menu é exibido apenas quando o usuário clica na seta. Se o usuário clica no botão, o comando padrão é executado. Se *bIsDefaultCommand* é `FALSE`, o menu é exibido clicando em qualquer lugar no botão.  
+ Quando o aplicativo atribui o menu de botão, o botão exibe uma seta do lado direito. Se *bIsDefaultCommand* for TRUE, o menu é exibido apenas quando o usuário clica na seta. Se o usuário clica no botão, o comando padrão é executado. Se *bIsDefaultCommand* é FALSE, o menu é exibido ao clicar em qualquer lugar no botão.  
   
 ##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory  
 
@@ -954,7 +954,7 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *bSet*  
- Se `TRUE`, o menu está alinhado à direita. Caso contrário, o menu está alinhado à esquerda  
+ Se for TRUE, o menu é alinhado à direita. Caso contrário, o menu é alinhado à esquerda  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
 
@@ -969,5 +969,5 @@ virtual void SetText(LPCTSTR lpszText);
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)

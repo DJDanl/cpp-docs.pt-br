@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd86b1756de2aa33fafdd992033cb56ca86266f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 610a46c7906cda3c44cdf1f0aaf652552efb9bcb
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942140"
 ---
 # <a name="ifexists-statement"></a>Instrução __if_exists
-A instrução `__if_exists` testa se o identificador especificado existe. Se o identificador especificado existir, o bloco de instrução especificado é executado.  
+O **if_exists** instrução testa se o identificador especificado existe. Se o identificador especificado existir, o bloco de instrução especificado é executado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,27 +41,27 @@ statements
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
 |`identifier`|O identificador cuja existência você deseja testar.|  
-|`statements`|Uma ou mais instruções para executar se `identifier` existe.|  
+|`statements`|Um ou mais instruções a executar se `identifier` existe.|  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!CAUTION]
->  Para obter os resultados mais confiáveis, use a instrução `__if_exists` sob as seguintes restrições.  
+>  Para obter os resultados mais confiáveis, use o **if_exists** instrução sob as restrições a seguir.  
   
--   Aplique a instrução `__if_exists` apenas em tipos simples, não em modelos.  
+-   Aplicar a **if_exists** instrução apenas em tipos simples, e não por modelos.  
   
--   Aplique a instrução `__if_exists` aos identificadores dentro ou fora de uma classe. Não aplique a instrução `__if_exists` às variáveis locais.  
+-   Aplicar a **if_exists** instrução para identificadores dentro ou fora de uma classe. Não se aplicam a **if_exists** instrução para variáveis locais.  
   
--   Use a instrução `__if_exists` somente no corpo de uma função. Fora do corpo de uma função, a instrução `__if_exists` pode testar apenas tipos totalmente definidos.  
+-   Use o **if_exists** instrução somente no corpo de uma função. Fora do corpo de uma função, o **if_exists** instrução pode testar apenas tipos totalmente definidos.  
   
 -   Quando você testa funções sobrecarregadas, não é possível testar um formato específico de sobrecarga.  
   
- O complemento para o `__if_exists` instrução é a [if_not_exists](../cpp/if-not-exists-statement.md) instrução.  
+ O complemento para o **if_exists** instrução é a [if_not_exists](../cpp/if-not-exists-statement.md) instrução.  
   
 ## <a name="example"></a>Exemplo  
  Observe que este exemplo usa modelos, o que não é recomendável.  
   
-```  
+```cpp 
 // the__if_exists_statement.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -119,7 +120,7 @@ int main() {
   
 ## <a name="output"></a>Saída  
   
-```  
+```Output  
 In X<T>::Dump()  
 In A::Dump()  
 In X<T>::Dump()  

@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca25ca31475d2870e62d00676e7bf3717c10fa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ccff761cb9b738de9e2f0debc470746d1482ab56
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414738"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940362"
 ---
 # <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
 **Seção específica da Microsoft**  
   
- Anexa a uma instância existente de um objeto, considerando um **CLSID** ou **ProgID**.  
+ Anexa a uma instância existente de um objeto, considerando um `CLSID` ou `ProgID`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,23 +44,23 @@ HRESULT GetActiveObject(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `rclsid`  
- O **CLSID** de um objeto.  
+ *rclsid*  
+ O `CLSID` de um objeto.  
   
- `clsidString`  
- Uma cadeia de caracteres Unicode que contém a um **CLSID** (começando com "**{**") ou um **ProgID**.  
+ *clsidString*  
+ Uma cadeia de caracteres Unicode que contém um `CLSID` (começando com "**{**") ou um `ProgID`.  
   
- `clsidStringA`  
- Uma cadeia de caracteres multibyte, usando a página de código ANSI, que contém o um **CLSID** (começando com "**{**") ou um **ProgID**.  
+ *clsidStringA*  
+ Uma cadeia de caracteres multibyte, usando a página de código ANSI, que contém um `CLSID` (começando com "**{**") ou um `ProgID`.  
   
 ## <a name="remarks"></a>Comentários  
- Essas funções de membro chamam `GetActiveObject` para recuperar um ponteiro para um objeto em execução que foi registrado com OLE e depois consulta o tipo de interface desse ponteiro inteligente. O ponteiro resultante é encapsulado nesse objeto `_com_ptr_t`. **Versão** é chamado para diminuir a contagem de referência para o ponteiro anteriormente encapsulado. Essa rotina retorna `HRESULT` para indicar êxito ou falha.  
+ Essas funções de membro chamam `GetActiveObject` para recuperar um ponteiro para um objeto em execução que foi registrado com OLE e depois consulta o tipo de interface desse ponteiro inteligente. O ponteiro resultante é encapsulado nesse objeto `_com_ptr_t`. `Release` é chamado para diminuir a contagem de referência para o ponteiro anteriormente encapsulado. Essa rotina retorna o HRESULT para indicar êxito ou falha.  
   
--   **GetActiveObject (**`rclsid`**)** anexa a uma instância existente de um objeto, considerando um **CLSID**.      
+-   **1&gt;getactiveobject(&lt;1}{2&gt;)&lt;2 (**`rclsid`**)** anexa a uma instância existente de um objeto dado um `CLSID`.      
   
--   **GetActiveObject (**`clsidString`**)** anexa a uma instância existente de um objeto, considerando uma cadeia de caracteres Unicode que contém a um **CLSID** (começando com "**{**") ou um **ProgID**.      
+-   **1&gt;getactiveobject(&lt;1}{2&gt;)&lt;2 (**`clsidString`**)** anexa a uma instância existente de um objeto dada uma cadeia de caracteres Unicode que contém um `CLSID` (começando com "**{**") ou um `ProgID`.      
   
--   **GetActiveObject (**`clsidStringA`**)** anexa a uma instância existente de um objeto, considerando uma cadeia de caracteres multibyte que mantém a um **CLSID** (começando com "**{** ") ou um **ProgID**.     Chamadas [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), que assume que a cadeia de caracteres é a página de código ANSI em vez de uma página de código OEM.  
+-   **1&gt;getactiveobject(&lt;1}{2&gt;)&lt;2 (**`clsidStringA`**)** anexa a uma instância existente de um objeto dada uma cadeia de caracteres multibyte que contém um `CLSID` (começando com "**{**") ou um `ProgID`.     Chamadas [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), que presume que a cadeia de caracteres está em página de código ANSI em vez de uma página de código OEM.  
   
  **Fim da seção específica da Microsoft**  
   

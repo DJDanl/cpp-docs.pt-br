@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93bd00c89df69d655f42c06509ef0360eff0c092
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a95f012b36e30c171fde1cbc8d28a21a074e281
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942146"
 ---
 # <a name="raise"></a>__raise
 Enfatiza o site de chamada de um evento.  
@@ -30,23 +31,21 @@ Enfatiza o site de chamada de um evento.
   
 ```  
   
-__raise   
-method-declarator  
-;  
+__raise method-declarator;  
   
 ```  
   
 ## <a name="remarks"></a>Comentários  
- No código gerenciado, um evento só pode ser acionado de dentro da classe em que é definido. Consulte [evento](../windows/event-cpp-component-extensions.md) para obter mais informações.  
+ No código gerenciado, um evento só pode ser acionado de dentro da classe em que é definido. Ver [evento](../windows/event-cpp-component-extensions.md) para obter mais informações.  
   
- A palavra-chave `__raise` causa um erro a ser emitido se você chamar um não evento.  
+ A palavra-chave **__raise** causa um erro a ser emitido se você chamar um não evento.  
   
 > [!NOTE]
 >  Uma classe ou um struct modelo não podem conter eventos.  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // EventHandlingRef_raise.cpp  
 struct E {  
    __event void func1();  

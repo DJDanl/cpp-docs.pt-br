@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2af648b2b93d2d01eaf66f5b642b6514063577d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f3bd43c9ceb4f0a0f73b86e3a4ecf4d851d504b3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410857"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939306"
 ---
 # <a name="bool-c"></a>bool (C++)
 
-Essa palavra-chave é um tipo interno. Uma variável desse tipo pode ter valores [true](../cpp/true-cpp.md) e [false](../cpp/false-cpp.md). As expressões condicionais têm o tipo `bool` e, sendo assim, têm valores do tipo `bool`. Por exemplo, `i!=0` agora tem **true** ou **false** dependendo do valor de `i`.  
+Essa palavra-chave é um tipo interno. Uma variável desse tipo pode ter valores [verdadeira](../cpp/true-cpp.md) e [falso](../cpp/false-cpp.md). As expressões condicionais têm o tipo **bool** e, portanto os valores do tipo **bool**. Por exemplo, `i!=0` agora tem TRUE ou FALSE dependendo do valor de `i`.  
 
-**Visual Studio 2017 versão posterior e 15,3** (disponível com [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): O operando de um prefixo ou sufixo de incremento ou decremento operador não pode ser do tipo **bool**. Em outras palavras, dada uma variável **b** do tipo **bool**, essas expressões não são permitidas:
+**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): O operando de um sufixo ou prefixo incremento ou decremento operador não pode ser do tipo **bool**. Em outras palavras, dada uma variável `b` do tipo **bool**, essas expressões não são permitidas:
 
 ```cpp
     b++;
@@ -38,7 +38,7 @@ Essa palavra-chave é um tipo interno. Uma variável desse tipo pode ter valores
     --b;
 ```
   
-Os valores **true** e **false** tem a seguinte relação:  
+Os valores TRUE e FALSE têm a seguinte relação:  
   
 ```cpp  
 !false == true  
@@ -51,14 +51,14 @@ Na instrução a seguir:
 if (condexpr1) statement1;   
 ```  
   
-Se `condexpr1` é **true**, `statement1` sempre é executada; se `condexpr1` é **false**, `statement1` nunca será executado.  
+Se `condexpr1` for TRUE, `statement1` sempre será executado; se `condexpr1` for FALSE, `statement1` nunca será executado.  
   
-Quando um prefixo ou sufixo **++** operador é aplicado a uma variável do tipo **bool**, a variável é definida como **true**. 
-**Visual Studio 2017 versão posterior e 15,3**: operador + + para **bool** foi removida do idioma e não é mais suportada.
+Quando um sufixo ou prefixo **++** operador é aplicado a uma variável do tipo **bool**, a variável é definida como TRUE. 
+**Visual Studio 2017 versão 15.3 e posterior**: operator + + de **bool** foi removida da linguagem e não é mais suportada.
 
-O prefixo ou sufixo **--** operador não pode ser aplicado a uma variável desse tipo.  
+Sufixo ou prefixo **--** operador não pode ser aplicado a uma variável desse tipo.  
   
- O **bool** tipo participa promoções integrais. Um r do tipo **bool** pode ser convertido em um r do tipo **int**, com **false** se torna zero e **true** se tornando um. Como um tipo distinto, **bool** participa na resolução de sobrecarga.  
+ O **bool** tipo participa de promoções de integral. Um valor de r do tipo **bool** pode ser convertido em um valor de r do tipo **int**, tornando-se falso com o zero e TRUE se tornando um. Como um tipo diferente, **bool** participa da resolução de sobrecarga.  
   
 ## <a name="see-also"></a>Consulte também
 

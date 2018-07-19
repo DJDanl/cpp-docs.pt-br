@@ -12,23 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdd5742bb86992ce20f5a52f587c8557d46a97eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7ce233b4ffa33873b752ebc409fb8570856acbff
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412290"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940193"
 ---
 # <a name="algorithms-modern-c"></a>Algoritmos (C++ moderno)
-Para programação C++ moderna, recomendamos que você use os algoritmos no [biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md). Aqui estão alguns exemplos importantes:  
+Para a programação do C++ moderna, é recomendável que você use os algoritmos de [biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md). Aqui estão alguns exemplos importantes:  
   
--   `for_each`, que é o algoritmo padrão de passagem. (Também `transform` para semântica não no local.)  
+-   **for_each**, que é o algoritmo transversal padrão. (Também **transformar** para a semântica não local.)  
   
--   `find_if`, que é o algoritmo de pesquisa padrão.  
+-   **find_if**, que é o algoritmo de pesquisa padrão.  
   
--   `sort`, `lower_bound`e o padrão de classificação e algoritmos de pesquisa.  
+-   **Classificar**, **lower_bound**e o padrão de classificação e algoritmos de pesquisa.  
   
- Para gravar um comparador, use strict `<` e usar *chamado lambdas* quando você pode.  
+ Para gravar um comparador, usar estrito **<** e use *chamado lambdas* quando possível.  
   
 ```cpp  
 auto comp = [](const widget& w1, const widget& w2)  
@@ -40,7 +40,7 @@ auto i = lower_bound( v.begin(), v.end(), comp );
 ```  
   
 ## <a name="loops"></a>Loops  
- Quando possível, use baseada em intervalo `for` loops ou chamadas de algoritmo ou ambos, em vez de loops manual.`copy`, `transform`, `count_if`, `remove_if`, e outros, como eles são muito melhores do que os loops manuscritos porque sua intenção é óbvio e eles facilitam a escrever código livre de bug. Além disso, muitos algoritmos de biblioteca padrão C++ tem otimizações de implementação que torná-los mais eficiente.  
+ Quando possível, use baseado em intervalo **para** loops ou chamadas de algoritmo ou ambos, em vez de loops gravados para à mão. **cópia**, **transformar**, **count_if**, **remove_if**, e outros como eles são muito melhores do que loops manuscritos porque a intenção são óbvias e eles torna mais fácil escrever código livre de bugs. Além disso, muitos algoritmos da biblioteca padrão C++ têm as otimizações de implementação que os tornam mais eficientes.  
   
  Em vez de C++ antigo como este:  
   
@@ -56,7 +56,7 @@ for ( ; i != v.end(); ++i ) {
 }  
 ```  
   
- Use C++ moderno como este:  
+ Use C++ moderno assim:  
   
 ```cpp  
 for_each( begin(strings), end(strings), [](string& s) {  
@@ -66,19 +66,19 @@ for_each( begin(strings), end(strings), [](string& s) {
 auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );  
 ```  
   
-### <a name="range-based-for-loops"></a>Com base em intervalo para loops  
- O intervalo com base em `for` loop é um 11 linguagem recurso do C++, não é um algoritmo de biblioteca padrão C++. Mas ele merece menção nesta discussão sobre loops. Com base em intervalo `for` loops são uma extensão do `for` palavra-chave e fornecem uma maneira eficiente e conveniente de escrever loops iterar em um intervalo de valores. Biblioteca padrão C++ contêineres, cadeias de caracteres e matrizes são prontas para baseada em intervalo `for` loops. Para habilitar essa nova sintaxe de iteração para o tipo definido pelo usuário, adicione o seguinte suporte:  
+### <a name="range-based-for-loops"></a>Baseado em intervalo para loops  
+ Baseado em intervalo **para** loop é um 11 idioma recurso, não é um algoritmo de biblioteca padrão C++. Mas ele merece ser mencionado neste debate sobre loops. Baseado em intervalo **para** loops são uma extensão das **para** palavra-chave e fornecem uma maneira conveniente e eficiente para gravar loops que iterar sobre um intervalo de valores. Contêineres da biblioteca padrão C++, cadeias de caracteres e matrizes já estão prontos para baseado em intervalo **para** loops. Para habilitar essa nova sintaxe de iteração para seu tipo definido pelo usuário, adicione o suporte a seguir:  
   
--   Um `begin` método que retorna um iterador para o início da estrutura e um `end` método que retorna um iterador até o final da estrutura.  
+-   Um **começar** método que retorna um iterador para o início da estrutura e um **final** método que retorna um iterador para o final da estrutura.  
   
--   Suporte no iterador para estes métodos: `operator*`, `operator!=`, e `operator++` (versão de prefixo).  
+-   Suporte no iterador para esses métodos: * * operador * **operador! =**, e **operator + +** (versão de prefixo).  
   
  Esses métodos podem ser membros ou funções autônomas.  
   
 ## <a name="random-numbers"></a>Números aleatórios  
- Não é segredo que o antigo CRT `rand()` função tem muitas falhas, que foram discutidas em detalhes na comunidade do C++. Em C++ moderna, você não precisa lidar com essas limitações, também não é necessário para seu próprio uniformemente distribuído gerador de número aleatório de estoque — porque as ferramentas para criá-los de forma rápida e fácil estão disponíveis na biblioteca C++ padrão, conforme mostrado no [ \<aleatória >](../standard-library/random.md).  
+ Não é segredo que o CRT antigo **rand ()** função possui várias falhas, que foi discutidas em detalhes na comunidade do C++. No C++ moderno, você não precisa lidar com esses defeitos — nem precisa inventar seu próprio gerador de números aleatórios distribuído uniformemente — porque as ferramentas para criá-los de forma rápida e fácil estão disponíveis na biblioteca C++ padrão, conforme mostrado na [ \<random >](../standard-library/random.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Bem-vindo novamente para C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [Bem-vindo ao C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Referência da linguagem C++](../cpp/cpp-language-reference.md)   
  [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)

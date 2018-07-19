@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5254e463050d685840ff90334ecbdb94372f27ef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8513a3de54f8a99191936dfff5b894962c597381
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358534"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881585"
 ---
 # <a name="ccomptr-class"></a>Classe CComPtr
-Uma classe de ponteiro inteligente para o gerenciamento de ponteiros de interface COM.  
+Uma classe de ponteiro inteligente para gerenciar os ponteiros de interface COM.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,8 +36,8 @@ class CComPtr
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
- Uma interface COM especificando o tipo de ponteiro para ser armazenado.  
+ *T*  
+ Uma interface COM especificando o tipo de ponteiro a ser armazenado.  
   
 ## <a name="members"></a>Membros  
   
@@ -54,15 +54,15 @@ class CComPtr
 |[CComPtr::operator =](#operator_eq)|Atribui um ponteiro para o ponteiro de membro.|  
   
 ## <a name="remarks"></a>Comentários  
- ATL usa `CComPtr` e [CComQIPtr](../../atl/reference/ccomqiptr-class.md) para gerenciar os ponteiros de interface COM. Ambos são derivadas de [CComPtrBase](../../atl/reference/ccomptrbase-class.md), e ambos executam a contagem de referência automática.  
+ Usa o ATL `CComPtr` e [CComQIPtr](../../atl/reference/ccomqiptr-class.md) para gerenciar os ponteiros de interface COM. Ambos derivam [CComPtrBase](../../atl/reference/ccomptrbase-class.md), e ambos executem a contagem de referência automática.  
   
- O **CComPtr** e [CComQIPtr](../../atl/reference/ccomqiptr-class.md) classes podem ajudar a eliminar vazamentos de memória, executando a contagem de referência automática.  As seguintes funções de executam as mesmas operações lógicas; No entanto, observe como a segunda versão pode ser menos propensas a erros usando o **CComPtr** classe:  
+ O `CComPtr` e [CComQIPtr](../../atl/reference/ccomqiptr-class.md) classes podem ajudar a eliminar vazamentos de memória ao executar a contagem de referência automática.  As funções a seguir os dois executam as mesmas operações lógicas; No entanto, observe como a segunda versão pode ser menos propenso a erro, usando o `CComPtr` classe:  
   
  [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]  
   
  [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]  
   
- Em compilações de depuração, vincule atlsd.lib para rastreamento de código.  
+ Em compilações de depuração, vincule atlsd para rastreamento de código.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
@@ -70,7 +70,7 @@ class CComPtr
  `CComPtr`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase  
+ **Cabeçalho:** atlbase. h  
   
 ##  <a name="ccomptr"></a>  CComPtr::CComPtr  
  O construtor.  
@@ -82,10 +82,10 @@ CComPtr (const CComPtr<T>& lp) throw ();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lp`  
+ *LP*  
  Usado para inicializar o ponteiro de interface.  
   
- `T`  
+ *T*  
  Uma interface COM.  
   
 ##  <a name="operator_eq"></a>  CComPtr::operator =  

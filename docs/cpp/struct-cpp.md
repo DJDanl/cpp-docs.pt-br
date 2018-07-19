@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a9ea6bea20ad1591db9b07507b4db959d10a318
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4f4b343097be6c15b5a273fd4e2a59198858d576
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942139"
 ---
 # <a name="struct-c"></a>struct (C++)
-A palavra-chave `struct` define um tipo de estrutura e/ou uma variável de um tipo de estrutura.  
+O **struct** palavra-chave define um tipo de estrutura e/ou uma variável de um tipo de estrutura.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,36 +37,36 @@ A palavra-chave `struct` define um tipo de estrutura e/ou uma variável de um ti
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `template-spec`  
+ *especificações de modelo*  
  Especificações de modelo opcionais. Para obter mais informações, consulte [especificações de modelo](templates-cpp.md).  
   
- `struct`  
- A palavra-chave `struct`.  
+ *struct*  
+ O **struct** palavra-chave.  
   
- `ms-decl-spec`  
+ *MS-decl-spec*  
  Especificação de classe de armazenamento opcional. Para obter mais informações, consulte o [declspec](../cpp/declspec.md) palavra-chave.  
   
- `tag`  
+ *Marca*  
  O nome do tipo dado à estrutura. A marca se torna uma palavra reservada no escopo da estrutura. A marca é opcional. Se omitida, uma estrutura anônima será definida. Para obter mais informações, consulte [tipos de classe anônima](../cpp/anonymous-class-types.md).  
   
- `base-list`  
- A lista opcional de classes ou estruturas de que esta estrutura derivará seus membros. Consulte [Classes Base](../cpp/base-classes.md) para obter mais informações. Cada nome de classe ou estrutura de base pode ser precedido por um especificador de acesso ([pública](../cpp/public-cpp.md), [privada](../cpp/private-cpp.md), [protegido](../cpp/protected-cpp.md)) e o [virtual](../cpp/virtual-cpp.md) palavra-chave. Consulte a tabela de acesso de membro em [controlando o acesso a membros de classe](member-access-control-cpp.md) para obter mais informações.  
+ *Base de dados de lista*  
+ A lista opcional de classes ou estruturas de que esta estrutura derivará seus membros. Ver [Classes Base](../cpp/base-classes.md) para obter mais informações. Cada nome de classe ou estrutura de base pode ser precedido por um especificador de acesso ([pública](../cpp/public-cpp.md), [privada](../cpp/private-cpp.md), [protegido](../cpp/protected-cpp.md)) e o [virtual](../cpp/virtual-cpp.md) palavra-chave. Consulte a tabela de acesso de membro [controlando o acesso a membros de classe](member-access-control-cpp.md) para obter mais informações.  
   
- `member-list`  
- Lista de membros da estrutura. Consulte [visão geral de membro de classe](../cpp/class-member-overview.md) para obter mais informações. A única diferença aqui é que `struct` é usado no lugar de `class`.  
+ *lista de membros*  
+ Lista de membros da estrutura. Consulte a [visão geral de membros de classe](../cpp/class-member-overview.md) para obter mais informações. A única diferença aqui é que **struct** é usado no lugar de **classe**.  
   
- `declarators`  
- Lista de declaradores que especificam os nomes da classe. As listas de declaradores declaram uma ou mais instâncias do tipo de estrutura. Os declaradores podem incluir listas de inicializadores se todos os membros de dados da classe forem `public`. Listas de inicializadores são comuns em estruturas porque membros de dados são `public` por padrão.  Consulte [visão geral dos declaradores](../cpp/overview-of-declarators.md) para obter mais informações.  
+ *declaradores*  
+ Lista de declaradores que especificam os nomes da classe. As listas de declaradores declaram uma ou mais instâncias do tipo de estrutura. Os declaradores podem incluir listas de inicializadores se todos os membros de dados da classe estiverem **público**. Listas de inicializadores são comuns em estruturas porque membros de dados são **pública** por padrão.  Ver [visão geral dos declaradores](../cpp/overview-of-declarators.md) para obter mais informações.  
   
 ## <a name="remarks"></a>Comentários  
  Um tipo de estrutura é um tipo composto definido pelo usuário. É composto de campos ou membros que podem ter tipos diferentes.  
   
- Em C++, uma estrutura é a mesma de uma classe, porém seus membros são `public` por padrão.  
+ No C++, uma estrutura é o mesmo que uma classe, exceto pelo fato de que seus membros são **pública** por padrão.  
   
- Para obter informações sobre classes gerenciadas e estruturas, consulte [Classes e estruturas](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Para obter informações sobre classes e estruturas gerenciadas, consulte [Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
 ## <a name="using-a-structure"></a>Usando uma estrutura  
- Em C, você deve usar explicitamente a palavra-chave `struct` para declarar uma estrutura. Em C++, você não precisa usar a palavra-chave `struct` depois que o tipo é definido.  
+ Em C, você deve usar explicitamente o **struct** palavra-chave para declarar uma estrutura. No C++, você não precisará usar o **struct** palavra-chave depois que o tipo foi definido.  
   
  Há também a opção de declarar variáveis quando o tipo de estrutura é definido colocando um ou vários nomes de variável separados por vírgulas entre a chave de fechamento e o ponto-e-vírgula.  
   
@@ -75,7 +76,7 @@ A palavra-chave `struct` define um tipo de estrutura e/ou uma variável de um ti
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   

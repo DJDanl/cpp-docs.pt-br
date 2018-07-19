@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea629afbe975e60e9fc4f25e51d757eb3f0f8728
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56372764c70498aec4ccf7b23fc7d074d1df179e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942231"
 ---
 # <a name="relational-operators-lt-gt-lt-and-gt"></a>Operadores relacionais: &lt;, &gt;, &lt;=, e &gt;=
 ## <a name="syntax"></a>Sintaxe  
@@ -52,11 +53,11 @@ expression >= expression
   
 -   Maior que ou igual a (**>=**)  
   
- Esses operadores relacionais possuem associatividade da esquerda para a direita. Ambos os operandos de operadores relacionais devem ser do tipo aritmético ou de ponteiro. Eles resultam em valores do tipo `bool`. O valor retornado é **false** (0) se a relação na expressão for false; caso contrário, o valor retornado é **true** (1).  
+ Esses operadores relacionais possuem associatividade da esquerda para a direita. Ambos os operandos de operadores relacionais devem ser do tipo aritmético ou de ponteiro. Eles resultam em valores do tipo **bool**. O valor retornado será **falsos** (0) se a relação na expressão for false; caso contrário, o valor retornado é **verdadeiro** (1).  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // expre_Relational_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -71,28 +72,28 @@ int main() {
 }  
 ```  
   
- As expressões no exemplo anterior devem ser colocadas entre parênteses, porque o operador de inserção de fluxo (**<<**) tem precedência maior do que os operadores relacionais. Portanto, a primeira expressão sem parênteses seria avaliada como:  
+ As expressões no exemplo anterior devem ser incluídas em parênteses porque o operador de inserção de fluxo (**<<**) tem precedência maior do que os operadores relacionais. Portanto, a primeira expressão sem parênteses seria avaliada como:  
   
-```  
+```cpp 
 (cout << "The true expression 3 > 2 yields: " << 3) < (2 << "\n");  
 ```  
   
- Conversões aritméticas usuais abordados [conversões padrão](standard-conversions.md) são aplicados a operandos de tipos aritméticos.  
+ As conversões aritméticas usuais abordadas [conversões padrão](standard-conversions.md) são aplicadas aos operandos de tipos aritméticos.  
   
 ## <a name="comparing-pointers"></a>Comparando ponteiros  
- Quando dois ponteiros para objetos do mesmo tipo são comparados, o resultado é determinado pelo local dos objetos apontados no espaço de endereço do programa. Os ponteiros também podem ser comparados a uma expressão constante que é avaliada como 0 ou a um ponteiro do tipo nulo *. Se uma comparação de ponteiro é feita em relação a um ponteiro de tipo void \*, o outro ponteiro é convertido implicitamente para tipo void \*. Então, a comparação será feita.  
+ Quando dois ponteiros para objetos do mesmo tipo são comparados, o resultado é determinado pelo local dos objetos apontados no espaço de endereço do programa. Os ponteiros também podem ser comparados a uma expressão constante que é avaliada como 0 ou a um ponteiro do tipo nulo *. Se uma comparação de ponteiros é feita em relação a um ponteiro de tipo void \*, o outro ponteiro é implicitamente convertido para o tipo void \*. Então, a comparação será feita.  
   
  Dois ponteiros de tipos diferentes não podem ser comparados, a menos que:  
   
 -   Um tipo é um tipo de classe derivado de outro tipo.  
   
--   Pelo menos um dos ponteiros é convertido explicitamente (conversão) no tipo nulo *. (O outro ponteiro é convertido implicitamente para tipo void \* para a conversão.)  
+-   Pelo menos um dos ponteiros é convertido explicitamente (conversão) no tipo nulo *. (O outro ponteiro é implicitamente convertido para o tipo void \* para a conversão.)  
   
  Dois ponteiros do mesmo tipo que apontam para o mesmo objeto são obrigatoriamente comparados como iguais. Se dois ponteiros para membros não estáticos de um objeto são comparados, as seguintes regras se aplicam:  
   
--   Se o tipo de classe não é uma união, e se os dois membros não são separados por um *especificador de acesso*, como pública, protegida ou privada, o ponteiro para o membro declarado última comparará maior do que o ponteiro para o membro declarado anteriormente.  
+-   Se o tipo de classe não é uma união, e se os dois membros não são separados por um *especificador de acesso*, como público, protegido ou particular, o ponteiro para o membro declarado por último será comparado maior que o ponteiro para o membro declarado anteriormente.  
   
--   Se os dois membros são separados por um *especificador de acesso*, os resultados serão indefinidos.  
+-   Se os dois membros são separados por um *especificador de acesso*, os resultados são indefinidos.  
   
 -   Se o tipo de classe for uma união, os ponteiros para membros de dados diferentes nessa união serão comparados como iguais.  
   
@@ -100,5 +101,5 @@ int main() {
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)   
- [Operadores C++ internos, precedência e capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores C++ internos, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operadores relacionais e de igualdade C](../c-language/c-relational-and-equality-operators.md)

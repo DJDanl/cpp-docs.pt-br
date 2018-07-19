@@ -16,34 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82fb9e13fc5dbbafcc37905716a37322b2966c6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 594bc432cb12b63c76172b06ee078d5b0f72de55
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942121"
 ---
 # <a name="final-specifier"></a>especificador final
-Você pode usar a palavra-chave `final` para designar funções virtuais que não podem ser substituídas em uma classe derivada. Também é possível usá-la para designar classes que não podem ser herdadas.  
+Você pode usar o **final** palavra-chave para designar funções virtuais que não podem ser substituídas em uma classe derivada. Também é possível usá-la para designar classes que não podem ser herdadas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 function-declaration final;  
-```  
-  
-```  
-  
 class class-name final base-classes  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- `final` é contextual e tem um significado especial somente quando é usada após uma declaração de função ou um nome de classe; caso contrário, não é uma palavra-chave reservada.  
+ **final** é contextual e tem um significado especial somente quando ele é usado após uma declaração de função ou nome de classe; caso contrário, ele não é uma palavra-chave reservada.  
   
- Quando `final` é usada em declarações de classe, `base-classes` é uma parte opcional da declaração.  
+ Quando **final** é usado em declarações de classe, `base-classes` é uma parte opcional da declaração.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa a palavra-chave `final` para especificar que uma função virtual não pode ser substituída.  
+ O exemplo a seguir usa o **final** palavra-chave para especificar que uma função virtual não pode ser substituída.  
   
 ```cpp  
 class BaseClass  
@@ -60,7 +57,7 @@ class DerivedClass: public BaseClass
   
  Para obter informações sobre como especificar que as funções de membro podem ser substituídas, consulte [especificador de substituição](../cpp/override-specifier.md).  
   
- O exemplo a seguir usa a palavra-chave `final` para especificar que uma classe não pode ser herdada.  
+ O próximo exemplo usa o **final** palavra-chave para especificar que uma classe não pode ser herdada.  
   
 ```cpp  
 class BaseClass final   

@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9122431d0d71d33406250a624048dbede46fd387
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e99299d1232fda75d6b0552b5236a060903a08e5
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361925"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879646"
 ---
 # <a name="ccomqiptrelementtraits-class"></a>Classe CComQIPtrElementTraits
-Essa classe fornece métodos, funções estáticas e typedefs útil ao criar coleções de ponteiros de interface COM.  
+Essa classe fornece métodos, funções estáticas e definições de tipo útil durante a criação de coleções de ponteiros de interface COM.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,11 +37,11 @@ class CComQIPtrElementTraits :
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `I`  
- Uma interface COM especificando o tipo de ponteiro para ser armazenado.  
+ *I*  
+ Uma interface COM especificando o tipo de ponteiro a ser armazenado.  
   
- `piid`  
- Um ponteiro para o IID da `I`.  
+ *piid*  
+ Um ponteiro para o IID da *eu*.  
   
 ## <a name="members"></a>Membros  
   
@@ -49,10 +49,10 @@ class CComQIPtrElementTraits :
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CComQIPtrElementTraits::INARGTYPE](#inargtype)|O tipo de dados a ser usado para a adição de elementos para o objeto de classe de coleção.|  
+|[CComQIPtrElementTraits::INARGTYPE](#inargtype)|O tipo de dados a ser usado para adicionar elementos ao objeto de classe da coleção.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe é derivada de métodos e fornece um typedef útil ao criar uma classe de coleção de [CComQIPtr](../../atl/reference/ccomqiptr-class.md) objetos de ponteiro de interface COM. Essa classe é utilizada por ambos os [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) e [CInterfaceList](../../atl/reference/cinterfacelist-class.md) classes.  
+ Essa classe é derivada de métodos e fornece um typedef útil durante a criação de uma classe de coleção de [CComQIPtr](../../atl/reference/ccomqiptr-class.md) objetos de ponteiro de interface COM. Essa classe é utilizada por ambos os [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) e [CInterfaceList](../../atl/reference/cinterfacelist-class.md) classes.  
   
  Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl-collection-classes.md).  
   
@@ -71,7 +71,7 @@ class CComQIPtrElementTraits :
  **Cabeçalho:** atlcoll.h  
   
 ##  <a name="inargtype"></a>  CComQIPtrElementTraits::INARGTYPE  
- O tipo de dados a ser usado para a adição de elementos para o objeto de classe de coleção.  
+ O tipo de dados a ser usado para adicionar elementos ao objeto de classe da coleção.  
   
 ```
 typedef I* INARGTYPE;

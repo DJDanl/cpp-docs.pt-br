@@ -1,5 +1,5 @@
 ---
-title: Inicialização e delegação de construtores de Uniform | Microsoft Docs
+title: Uniforme de inicialização e delegação de construtores | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df40eef538ec09a0189bf6c1e6b4881edb59f5c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423516"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939826"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Inicialização uniforme e delegação de construtores
-No C++ moderna, você pode usar *chave de inicialização* para qualquer tipo, sem o sinal de igual. Além disso, você pode usar construtores de delegação para simplificar seu código, quando você tem vários construtores que executam trabalho semelhante.  
+No C++ moderno, você pode usar *chave de inicialização* para qualquer tipo, sem o sinal de igual. Além disso, você pode usar construtores de delegação para simplificar o seu código quando você tem vários construtores que executam um trabalho semelhante.  
   
-## <a name="brace-initialization"></a>Chave de inicialização  
- Você pode usar a chave de inicialização para qualquer classe, struct ou união. Se um tipo tem um construtor padrão, implicitamente ou explicitamente declarado, você pode usar a inicialização de chave padrão (com chaves vazias). Por exemplo, a seguinte classe pode ser inicializada usando o padrão e inicialização de chave não padrão:  
+## <a name="brace-initialization"></a>Inicialização da chave  
+ Você pode usar a inicialização da chave para qualquer classe, struct ou união. Se um tipo tem um construtor padrão, implícita ou explicitamente declarado, você pode usar a inicialização da chave padrão (com chaves vazias). Por exemplo, a classe a seguir pode ser inicializada usando o padrão e a inicialização da chave não padrão:  
   
 ```cpp  
 #include <string>  
@@ -53,7 +53,7 @@ int main()
   
 ```  
   
- Se uma classe tem construtores não padrão, a ordem na qual classe membros aparecem no inicializador chave é a ordem na qual os parâmetros correspondentes aparecem no construtor, não a ordem na qual os membros são declarados (assim como acontece com `class_a` do exemplo anterior). Caso contrário, se o tipo não tiver nenhum construtor declarado, a ordem na qual os membros aparecem no inicializador de chave é o mesmo que a ordem na qual eles são declarados; Nesse caso, você pode inicializar quantos membros públicos que desejar, mas não é possível ignorar qualquer membro. O exemplo a seguir mostra a ordem em que é usada na inicialização de chave quando não houver nenhum construtor declarado:  
+ Se uma classe tiver construtores não padrão, a ordem na qual classe membros aparecem no inicializador de chave é a ordem na qual os parâmetros correspondentes são exibidos no construtor, não a ordem na qual os membros são declarados (assim como acontece com `class_a` no exemplo anterior). Caso contrário, se o tipo não tem nenhum construtor declarado, a ordem na qual os membros são exibidos no inicializador de chave é o mesmo que a ordem na qual eles são declarados; Nesse caso, você pode inicializar o máximo de membros públicos como desejar, mas não é possível ignorar qualquer membro. O exemplo a seguir mostra a ordem em que é usada na inicialização da chave quando não há nenhum construtor declarado:  
   
 ```cpp  
 class class_d {  
@@ -75,7 +75,7 @@ int main()
 }   
 ```  
   
- Se o construtor padrão é explicitamente declarado mas marcado como excluídas, a inicialização de chave padrão não pode ser usada:  
+ Se o construtor padrão é explicitamente declarado, mas marcado como excluído, a inicialização da chave padrão não pode ser usada:  
   
 ```cpp  
 class class_f {  
@@ -91,7 +91,7 @@ int main()
 }  
 ```  
   
- Você pode usar a chave de inicialização em qualquer lugar você normalmente faria inicialização — por exemplo, como um parâmetro de função ou um valor de retorno, ou com o `new` palavra-chave:  
+ Você pode usar a inicialização da chave em qualquer lugar que normalmente faria inicialização — por exemplo, como um parâmetro de função ou um valor de retorno, ou com o **novo** palavra-chave:  
   
 ```cpp  
 class_d* cf = new class_d{4.5};  
@@ -100,17 +100,17 @@ return { 4.5 };
   
 ```  
   
-## <a name="initializerlist-constructors"></a>lista_de_inicializadores construtores  
- O [lista_de_inicializadores classe](../standard-library/initializer-list-class.md) representa uma lista de objetos de um tipo especificado que pode ser usado em um construtor e em outros contextos. Você pode construir um lista_de_inicializadores usando a chave de inicialização:  
+## <a name="initializerlist-constructors"></a>initializer_list construtores  
+ O [classe initializer_list](../standard-library/initializer-list-class.md) representa uma lista de objetos de um tipo especificado que pode ser usado em um construtor e em outros contextos. Você pode construir um initializer_list, usando a inicialização da chave:  
   
 ```cpp  
 initializer_list<int> int_list{5, 6, 7};  
 ```  
   
 > [!IMPORTANT]
->  Para usar essa classe, você deve incluir o [< lista_de_inicializadores >](../standard-library/initializer-list.md) cabeçalho.  
+>  Para usar essa classe, você deve incluir a [< initializer_list >](../standard-library/initializer-list.md) cabeçalho.  
   
- Um `initializer_list` podem ser copiados. Nesse caso, os membros da lista de novos são referências para os membros da lista original:  
+ Um `initializer_list` podem ser copiados. Nesse caso, os membros da nova lista são referências para os membros da lista original:  
   
 ```cpp  
 initializer_list<int> ilist1{ 5, 6, 7 };  
@@ -120,7 +120,7 @@ if (ilist1.begin() == ilist2.begin())
   
 ```  
   
- As classes de contêiner de biblioteca padrão e também `string`, `wstring`, e `regex`, ter `initializer_list` construtores. Os exemplos a seguir mostram como chave de inicialização com estes construtores:  
+ As classes de contêiner da biblioteca padrão e também `string`, `wstring`, e `regex`, têm `initializer_list` construtores. Os exemplos a seguir mostram como chave de inicialização com esses construtores:  
   
 ```cpp  
 vector<int> v1{ 9, 10, 11 };   
@@ -130,7 +130,7 @@ regex rgx{'x', 'y', 'z'};
 ```  
   
 ## <a name="delegating-constructors"></a>Construtores de delegação  
- Muitas classes tem vários construtores que fazer coisas semelhantes — por exemplo, validar parâmetros:  
+ Muitas classes de tem vários construtores que fazem coisas semelhantes — por exemplo, validar parâmetros:  
   
 ```cpp  
 class class_c {  
@@ -155,7 +155,7 @@ public:
 };  
 ```  
   
- Você pode reduzir o código repetitivo, adicionando uma função que faz a validação, mas o código para `class_c` seria mais fácil de entender e manter se um construtor pode delegar algumas do trabalho para outra. Para adicionar os construtores de delegação, use o `constructor (. . .) : constructor (. . .)` sintaxe:  
+ Você pode reduzir o código repetitivo, adicionando uma função que faz a validação, mas o código para `class_c` seria mais fácil de entender e manter se um construtor pode delegar a parte do trabalho para outro. Para adicionar os construtores de delegação, use o `constructor (. . .) : constructor (. . .)` sintaxe:  
   
 ```cpp  
 class class_c {  
@@ -181,9 +181,9 @@ int main() {
   
 ```  
   
- À medida que você percorrer o exemplo anterior, observe que o construtor `class_c(int, int, int)` primeiro chama o construtor `class_c(int, int)`, que por sua vez chama `class_c(int)`. Cada um dos construtores executa somente o trabalho que não é executado por outros construtores.  
+ Conforme você percorre o exemplo anterior, observe que o construtor `class_c(int, int, int)` primeiro chama o construtor `class_c(int, int)`, que por sua vez chama `class_c(int)`. Cada um dos construtores executa apenas o trabalho que não é executado pelos outros construtores.  
   
- O primeiro construtor é chamado inicializa o objeto para que todos os seus membros são inicializados nesse ponto. Você não pode fazer a inicialização de membro em um construtor que delega para outro construtor, conforme mostrado aqui:  
+ O primeiro construtor é chamado inicializa o objeto, de modo que todos os seus membros são inicializados nesse ponto. Você não pode fazer a inicialização de membro em um construtor que delega para outro construtor, conforme mostrado aqui:  
   
 ```cpp  
 class class_a {  
@@ -204,7 +204,7 @@ public:
   
 ```  
   
- O exemplo a seguir mostra o uso de inicializadores de membro de dados não estático. Observe que, se um construtor inicializa também um membro de dados específico, o inicializador de membro seja substituído:  
+ O exemplo a seguir mostra o uso de inicializadores de membro de dados não estáticos. Observe que, se um construtor também inicializa um determinado membro de dados, o inicializador de membro é substituído:  
   
 ```cpp  
 class class_a {  
@@ -222,7 +222,7 @@ int main() {
 }  
 ```  
   
- A sintaxe de delegação do construtor não impede a criação acidental de recursividade do construtor — Constructor1 chama Constructor2 que chama Constructor1 — e nenhum erro é gerado até que haja um estouro de pilha. É sua responsabilidade para evitar ciclos.  
+ A sintaxe de delegação do construtor não impede a criação acidental de recursão de construtor — Constructor1 chama Constructor2 que chama Constructor1 — e nenhum erro é gerado até que haja um estouro de pilha. É sua responsabilidade para evitar ciclos.  
   
 ```cpp  
 class class_f{  

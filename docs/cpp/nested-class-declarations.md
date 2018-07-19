@@ -1,5 +1,5 @@
 ---
-title: Aninhados declarações de classe | Microsoft Docs
+title: Declarações de classes aninhadas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fe55a1f67ff3c6ac06f1d6431e6e1a2fb8052d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86c61792ab20bc0c10c9297d2a66588dd3c066ef
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942166"
 ---
 # <a name="nested-class-declarations"></a>Declarações de classe aninhada
 Uma classe pode ser declarada dentro do escopo de outra classe. Essa classe é chamada de “classe aninhada”. As classes aninhadas são consideradas como estando dentro do escopo da classe delimitadora e estão disponíveis para uso dentro desse escopo. Para fazer referência a uma classe aninhada a partir de um escopo diferente de seu escopo delimitador imediato, você deve usar um nome totalmente qualificado.  
   
  O exemplo a seguir mostra como declarar as classes aninhadas:  
   
-```  
+```cpp 
 // nested_class_declarations.cpp  
 class BufferedIO  
 {  
@@ -73,7 +74,7 @@ int main()
   
  Uma exceção à visibilidade do escopo de uma declaração de classe aninhada é quando num nome de tipo é declarado junto com uma declaração de encaminhamento.  Nesse caso, o nome da classe declarada pela declaração de encaminhamento é visível fora da classe delimitadora, com seu escopo definido como o menor escopo delimitador que não seja da classe.  Por exemplo:  
   
-```  
+```cpp 
 // nested_class_declarations_2.cpp  
 class C  
 {  
@@ -98,13 +99,13 @@ int main()
 }  
 ```  
   
-## <a name="access-privilege-in-nested-classes"></a>Privilégios de acesso em classes aninhadas  
+## <a name="access-privilege-in-nested-classes"></a>Privilégio de acesso em classes aninhadas  
  O aninhamento de uma classe dentro de outra não concede privilégios de acesso especiais às funções membro da classe aninhada. Da mesma forma, as funções membro da classe delimitadora não têm acesso especial a membros da classe aninhada.  
   
 ## <a name="member-functions-in-nested-classes"></a>Funções de membro em classes aninhadas  
  As funções de membro declaradas em classes aninhadas podem ser definidas no escopo do arquivo. O exemplo anterior poderia ter sido escrito:  
   
-```  
+```cpp 
 // member_functions_in_nested_classes.cpp  
 class BufferedIO  
 {  
@@ -140,26 +141,26 @@ int main()
 }  
 ```  
   
- No exemplo anterior, o *nome qualificado de tipo* sintaxe é usada para declarar o nome da função. Esta declaração:  
+ No exemplo anterior, o *nome de tipo qualificado* sintaxe é usada para declarar o nome da função. Esta declaração:  
   
-```  
+```cpp 
 BufferedIO::BufferedInput::read()  
 ```  
   
- significa que “a função `read`, que é um membro da classe `BufferedInput` e que está no escopo da classe `BufferedIO`”. Como essa declaração usa o *nome qualificado de tipo* sintaxe, construções do formulário a seguir são possíveis:  
+ significa que “a função `read`, que é um membro da classe `BufferedInput` e que está no escopo da classe `BufferedIO`”. Como essa declaração usa o *nome de tipo qualificado* sintaxe, constructos do formulário a seguir são possíveis:  
   
-```  
+```cpp 
 typedef BufferedIO::BufferedInput BIO_INPUT;  
   
 int BIO_INPUT::read()  
 ```  
   
- A declaração acima é equivalente à anterior, mas usa um nome `typedef` no lugar dos nomes da classe.  
+ A declaração anterior é equivalente ao anterior, mas usa uma **typedef** nome no lugar dos nomes de classe.  
   
 ## <a name="friend-functions-in-nested-classes"></a>Funções Friend em classes aninhadas  
  As funções friend declaradas em uma classe aninhada são consideradas como pertencentes ao escopo da classe aninhada, não à classe delimitadora. Portanto, as funções friend não ganham privilégios de acesso especiais aos membros ou às funções de membro da classe delimitadora. Se você quiser usar um nome que seja declarado em uma classe aninhada em uma função friend e essa função estiver definida no escopo do arquivo, use nomes de tipos qualificados da seguinte maneira:  
   
-```  
+```cpp 
 // friend_functions_and_nested_classes.cpp  
   
 #include <string.h>  
@@ -205,7 +206,7 @@ int main()
   
  O código a seguir mostra a função `GetExtendedErrorStatus` declarada como uma função friend. Na função, que é definida no escopo do arquivo, uma mensagem é copiada de uma matriz estática para um membro da classe. Uma implementação melhor de `GetExtendedErrorStatus` é declará-lo como:  
   
-```  
+```cpp 
 int GetExtendedErrorStatus( char *message )  
 ```  
   

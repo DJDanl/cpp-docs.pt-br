@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e377a465dd55d8940e74617130216220d03f1218
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3b10e18e12b5a2f27c0b83562ef16321da67422
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370036"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851444"
 ---
 # <a name="cmfcimageeditorpalettebar-class"></a>Classe CMFCImageEditorPaletteBar
 Fornece a funcionalidade de barra de paleta para uma caixa de diálogo do editor de imagem.  
@@ -49,7 +49,7 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 ### <a name="remarks"></a>Comentários  
  Essa classe não se destina a ser usada diretamente do seu código.  
   
- A estrutura usa essa classe para exibir uma barra de paleta em uma caixa de diálogo do editor de imagem. Para obter mais informações sobre a caixa de diálogo do editor de imagem, consulte [CMFCImageEditorDialog classe](../../mfc/reference/cmfcimageeditordialog-class.md).  
+ A estrutura usa essa classe para exibir uma barra de paleta em uma caixa de diálogo do editor de imagem. Para obter mais informações sobre a caixa de diálogo do editor de imagem, consulte [classe CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -89,9 +89,9 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Este método retorna `FALSE`.  
+ Esse método retornará FALSE.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)

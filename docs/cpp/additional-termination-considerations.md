@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b634c7c792d4462f96f022f223d0b1eec2a750ba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50cf3d7e5168ba40acde386b62cf02c0933f8ca4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408140"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941243"
 ---
 # <a name="additional-termination-considerations"></a>Considerações de término adicionais
-Você pode encerrar um programa C++ usando **sair**, `return`, ou **anular**. Você pode adicionar processamento de saída usando a função `atexit`. Esses tópicos são discutidos nas próximas seções.  
+Você pode encerrar um programa C++ usando **saia**, **retornar**, ou **anular**. Você pode adicionar processamento de saída usando a função `atexit`. Esses tópicos são discutidos nas próximas seções.  
   
 ## <a name="see-also"></a>Consulte também  
  [Inicialização e término](../cpp/startup-and-termination-cpp.md)

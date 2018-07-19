@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eb1eec82e7f9e39f508bd0c9559cec787f6ec9a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e2cc04a711e211c7dcc5f3491edc8b4646f73dbb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847631"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959999"
 ---
 # <a name="insertiterator-class"></a>Classe insert_iterator
 
@@ -44,7 +44,7 @@ class insert_iterator;
 
 ## <a name="remarks"></a>Comentários
 
-O contêiner do tipo **Container** deve atender aos requisitos de um contêiner de tamanho variável e ter uma função membro de inserção de dois argumentos, em que os parâmetros sejam do tipo **Container::iterator** e **Container::value_type** e que retorne um tipo **Container::iterator**. Os contêineres associativos classificados e de sequência da Biblioteca Padrão do C++ atendem a esses requisitos e podem ser adaptados para uso com `insert_iterator`s. Para contêineres associativos, o argumento de posição é tratado como uma dica, que tem o potencial de aumentar ou degradar o desempenho, dependendo da qualidade da dica. Um `insert_iterator` sempre deve ser inicializado com seu contêiner.
+O contêiner do tipo `Container` deve satisfazer os requisitos para um contêiner de tamanho variável e ter uma função de membro de inserção de dois argumentos em que os parâmetros são do tipo `Container::iterator` e `Container::value_type` e que retorna um tipo `Container::iterator`. Os contêineres associativos classificados e de sequência da Biblioteca Padrão do C++ atendem a esses requisitos e podem ser adaptados para uso com `insert_iterator`s. Para contêineres associativos, o argumento de posição é tratado como uma dica, que tem o potencial de aumentar ou degradar o desempenho, dependendo da qualidade da dica. Um `insert_iterator` sempre deve ser inicializado com seu contêiner.
 
 ### <a name="constructors"></a>Construtores
 
@@ -83,7 +83,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo do parâmetro de modelo **Container**.
+O tipo é um sinônimo do parâmetro de modelo *Container*.
 
 ### <a name="example"></a>Exemplo
 
@@ -125,9 +125,9 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Cont` O contêiner no qual o `insert_iterator` é inserir elementos.
+*_Cont* o contêiner no qual o `insert_iterator` deve inserir elementos.
 
-`_It` A posição para a inserção.
+*_It* a posição da inserção.
 
 ### <a name="remarks"></a>Comentários
 
@@ -193,7 +193,7 @@ A função membro retorna o valor do elemento de destino.
 
 ### <a name="remarks"></a>Comentários
 
-Usado para implementar a expressão do iterador de saída **\*Iter** = **value**. Se **Iter** for um iterador que trata de um elemento em uma sequência, **\*Iter** = **value** substituirá esse elemento pelo valor e não alterará o número total de elementos na sequência.
+Usado para implementar a expressão do iterador de saída **\*Iter** = **value**. Se `Iter` é um iterador que trata de um elemento em uma sequência, em seguida,  **\*Iter** = **valor** substituirá esse elemento pelo valor e não altera o número total de elementos na sequência.
 
 ### <a name="example"></a>Exemplo
 
@@ -241,7 +241,7 @@ After the insertions, the list L is:
 
 ## <a name="op_add_add"></a>  insert_iterator::operator++
 
-Incrementa o **insert_iterator** para o próximo local no qual um valor pode ser armazenado.
+Incrementa o `insert_iterator` para o próximo local no qual um valor pode ser armazenado.
 
 ```cpp
 insert_iterator<Container>& operator++();
@@ -317,7 +317,7 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>Parâmetros
 
-`val` O valor a ser atribuído ao contêiner.
+*Val* o valor a ser atribuído ao contêiner.
 
 ### <a name="return-value"></a>Valor de retorno
 

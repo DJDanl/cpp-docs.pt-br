@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 072b6a62bde2ab58909fd0c8dd1954e7d330ced5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7a94ee7df512262c58d7a90e3dbf461270b5d4c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424300"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939853"
 ---
 # <a name="initializers"></a>Inicializadores
 Um inicializador especifica o valor inicial de uma variável. Você pode inicializar variáveis nestes contextos:  
@@ -86,16 +86,16 @@ Um inicializador especifica o valor inicial de uma variável. Você pode inicial
 ## <a name="kinds-of-initialization"></a>Tipos de inicialização  
  Há vários tipos de inicialização que podem ocorrer em pontos diferentes na execução do programa. Os tipos diferentes de inicialização não são mutuamente exclusivos — por exemplo, a inicialização de lista pode acionar a inicialização de valor e, em outras circunstâncias, pode acionar a inicialização de agregação.  
   
-### <a name="zero-initialization"></a>Inicialização de zero  
+### <a name="zero-initialization"></a>Inicialização do zero  
  A inicialização do zero é a configuração de uma variável para um valor zero convertido implicitamente no tipo:  
   
 -   As variáveis numéricas são inicializadas como 0 (ou 0,0 ou 0,0000000000, etc.).  
   
--   Char variáveis são inicializadas como `'\0'`.  
+-   As variáveis char são inicializadas para `'\0'`.  
   
 -   Os ponteiros são inicializados como `nullptr`.  
   
--   Matrizes, [POD](../standard-library/is-pod-class.md) classes, estruturas e uniões têm seus membros inicializados com um valor igual a zero.  
+-   Matrizes [POD](../standard-library/is-pod-class.md) classes, estruturas e uniões têm seus membros inicializados como um valor igual a zero.  
   
  A inicialização do zero é executada em diferentes momentos:  
   
@@ -125,7 +125,7 @@ int main() {
 ```  
   
 ### <a name="default_initialization"></a> Inicialização padrão  
- Inicialização padrão para classes, estruturas e uniões é inicialização com um construtor padrão. O construtor padrão pode ser chamado sem expressão de inicialização ou com o `new` palavra-chave:  
+ Inicialização padrão para classes, estruturas e uniões é a inicialização com um construtor padrão. O construtor padrão pode ser chamado sem expressão de inicialização ou com o **novo** palavra-chave:  
   
 ```cpp  
 MyClass mc1;  
@@ -134,7 +134,7 @@ MyClass* mc3 = new MyClass;
   
  Se a classe, estrutura ou união não tiver um construtor diferente, o compilador emitirá um erro.  
   
- Variáveis escalares são inicializados quando eles são definidos com nenhuma expressão de inicialização de modo padrão. Elas têm valores indeterminados.  
+ Variáveis escalares são inicializado quando são definidas com nenhuma expressão de inicialização do padrão. Elas têm valores indeterminados.  
   
 ```cpp  
 int i1;  
@@ -142,7 +142,7 @@ float f;
 char c;  
 ```  
   
- As matrizes são inicializados quando eles são definidos com nenhuma expressão de inicialização de modo padrão. Quando uma matriz é inicializada por padrão, seus membros são inicializados de modo padrão e tem valores indeterminados, como no exemplo a seguir:  
+ As matrizes são inicializado quando são definidas com nenhuma expressão de inicialização do padrão. Quando uma matriz é inicializada por padrão, seus membros são inicializado por padrão e têm valores indeterminados, como no exemplo a seguir:  
   
 ```cpp  
 int int_arr[3];  
@@ -150,8 +150,8 @@ int int_arr[3];
   
  Se os membros da matriz não tiverem um construtor padrão, o compilador emitirá um erro.  
   
-#### <a name="default-initialization-of-constant-variables"></a>Inicialização padrão de constantes variáveis  
- As variáveis constantes devem ser declaradas juntamente com um inicializador. Se forem tipos escalares que elas causem um erro do compilador, e se eles são os tipos de classe que tem um construtor padrão que causem um aviso:  
+#### <a name="default-initialization-of-constant-variables"></a>Inicialização padrão de variáveis constantes  
+ As variáveis constantes devem ser declaradas juntamente com um inicializador. Se eles forem tipos escalares que causem um erro do compilador, e se eles forem tipos de classe que tem um construtor padrão elas geram um aviso:  
   
 ```cpp  
 class MyClass{};  
@@ -163,7 +163,7 @@ int main() {
 ```  
   
 #### <a name="default-initialization-of-static-variables"></a>Inicialização padrão de variáveis estáticas  
- Variáveis estáticas que são declarados com nenhum inicializador são inicializadas como 0 (implicitamente convertido para o tipo).  
+ Variáveis estáticas que são declaradas com nenhum inicializador são inicializadas como 0 (implicitamente convertido no tipo).  
   
 ```cpp  
 class MyClass {     
@@ -180,26 +180,26 @@ int main() {
 }  
 ```  
   
- Para obter mais informações sobre a inicialização de objetos estáticos globais, consulte [considerações adicionais de inicialização](../cpp/additional-startup-considerations.md).  
+ Para obter mais informações sobre inicialização de objetos estáticos globais, consulte [considerações adicionais de inicialização](../cpp/additional-startup-considerations.md).  
   
 ### <a name="value-initialization"></a>Inicialização de valor  
- A inicialização do valor ocorre nos seguintes casos:  
+ Inicialização de valor ocorre nos seguintes casos:  
   
--   um valor nomeado é inicializado usando a inicialização de colchetes vazios  
+-   um valor nomeado é inicializado usando a inicialização de chaves vazias  
   
--   um objeto temporário anônimo é inicializado usando parênteses vazios ou chaves  
+-   um objeto temporário anônimo é inicializado usando parênteses ou chaves vazios  
   
--   um objeto é inicializado com o `new` palavra-chave além de parênteses vazios ou chaves  
+-   um objeto é inicializado com o **novo** palavra-chave mais parênteses ou chaves vazios  
   
- Valor de inicialização faz o seguinte:  
+ Inicialização de valor faz o seguinte:  
   
--   para classes com pelo menos um construtor público, o construtor padrão é chamado  
+-   para classes com pelo menos um construtor público, o construtor padrão é chamado.  
   
--   União não classes com construtores não declaradas, o objeto é inicializada do zero e o construtor padrão é chamado  
+-   para classes de não união com nenhum construtor declarado, o objeto é inicializada do zero e o construtor padrão é chamado  
   
 -   para matrizes, cada elemento é inicializado por valor  
   
--   todos os outros casos, a variável é inicializado do zero  
+-   em todos os outros casos, a variável é inicializado do zero  
   
 ```cpp  
 class BaseClass {    
@@ -226,11 +226,11 @@ int main() {
   
 -   um objeto é retornado de uma função  
   
--   uma exceção é gerada ou detectada  
+-   uma exceção é lançada ou capturada  
   
--   um membro de dados não estático é inicializado com um sinal de igual  
+-   um membro de dados não estático é inicializado usando um sinal de igual  
   
--   classe, struct e union membros são inicializados por inicialização de cópia durante a inicialização de agregação. Consulte [inicialização de agregação](#agginit) para obter exemplos.  
+-   classe, struct e membros de união são inicializados pela inicialização de cópia durante a inicialização de agregação. Ver [inicialização de agregação](#agginit) para obter exemplos.  
   
  O código a seguir mostra vários exemplos de inicialização de cópia:  
   
@@ -264,7 +264,7 @@ int main() {
 }  
 ```  
   
- Inicialização de cópia não pode chamar construtores explícitos.  
+ Inicialização de cópia não pode invocar construtores explícitos.  
   
 ```cpp  
 vector<int> v = 10; // the constructor is explicit; compiler error C2440: cannot convert from 'int' to 'std::vector<int,std::allocator<_Ty>>'  
@@ -275,17 +275,17 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
  Em alguns casos, se o construtor de cópia da classe for excluído ou estiver inacessível, a inicialização de cópia emitirá um erro de compilador. 
   
 ### <a name="direct-initialization"></a>Inicialização direta  
- A inicialização direta é inicialização usando chaves (não vazio) ou parênteses. Diferentemente da inicialização de cópia, ela pode invocar construtores explícitos. Ele ocorre nos seguintes casos:  
+ Inicialização direta é inicialização usando chaves ou parênteses (não vazios). Diferentemente da inicialização de cópia, ela pode invocar construtores explícitos. Ele ocorre nos seguintes casos:  
   
--   uma variável é inicializada com chaves não vazio ou parênteses  
+-   uma variável é inicializada com chaves ou parênteses não vazios  
   
--   uma variável é inicializada com o `new` palavra-chave além de chaves não vazio ou parênteses  
+-   uma variável é inicializada com o **novo** palavra-chave além de não-chaves ou parênteses vazios  
   
--   uma variável é inicializada com `static_cast`  
+-   uma variável é inicializada com **static_cast**  
   
 -   em um construtor de classes base e membros não estáticos são inicializados com uma lista de inicializadores  
   
--   na cópia de uma variável capturada em uma expressão lambda  
+-   na cópia de uma variável capturada dentro de uma expressão lambda  
   
  O código a seguir mostra alguns exemplos de inicialização direta:  
   
@@ -317,11 +317,11 @@ int main(){
 ```  
   
 ### <a name="list-initialization"></a>Inicialização de lista  
- Inicialização de lista ocorre quando uma variável é inicializada usando uma lista de inicializadores entre chaves. Entre chaves inicializador listas podem ser usadas nos seguintes casos:  
+ Inicialização de lista ocorre quando uma variável é inicializada usando uma lista de inicializadores entre chaves. De inicializadores entre chaves listas podem ser usadas nos seguintes casos:  
   
 -   uma variável é inicializada  
   
--   uma classe é inicializada com o `new` palavra-chave  
+-   uma classe é inicializada com o **novo** palavra-chave  
   
 -   um objeto é retornado de uma função  
   
@@ -329,11 +329,11 @@ int main(){
   
 -   um dos argumentos em uma inicialização direta  
   
--   em um inicializador de membro de dados não estático  
+-   em um inicializador de membro de dados não estáticos  
   
 -   em uma lista de inicializador de construtor  
   
- O código a seguir mostra alguns exemplos de inicialização da lista:  
+ O código a seguir mostra alguns exemplos de inicialização de lista:  
   
 ```cpp  
 class MyClass {  
@@ -371,16 +371,16 @@ int main() {
   
 -   Não há membros particulares ou protegidos  
   
--   Nenhum construtor fornecido pelo usuário, com exceção de construtores explicitamente padronizadas ou excluídas  
+-   Nenhum construtor fornecido pelo usuário, exceto construtores explicitamente padronizados ou excluídos  
   
--   Nenhuma classe base  
+-   sem classes base  
   
 -   Nenhuma função membro virtual  
   
 > [!NOTE]
->  <!--conformance note-->In Visual Studio 2015 and earlier, an aggregate is not allowed to have  brace-or-equal initializers for non-static members. This restriction was removed in the C++14 standard and implemented in Visual Studio 2017. 
+>  <!--conformance note-->No Visual Studio 2015 e anteriores, uma agregação não é permitida ter inicializadores de chave-or-equal para membros não estáticos. Essa restrição foi removida no padrão de 14 C + + e implementada no Visual Studio 2017. 
   
- Inicializadores de agregação consistem em uma lista de inicialização entre chaves, com ou sem um sinal de igual, como no exemplo a seguir:  
+ Os inicializadores de agregação consistem em uma lista de inicialização entre chaves, com ou sem um sinal de igual, como no exemplo a seguir:  
   
 ```cpp  
 #include <iostream>  
@@ -425,10 +425,10 @@ myArr3: 8 9 10 0 0
 ```  
   
 > [!IMPORTANT]
->  Membros de matriz declarados, mas não foi explicitamente inicializados durante a inicialização de agregação são inicializada do zero, como em `myArr3` acima.  
+>  Membros da matriz que são declarados, mas não explicitamente inicializados durante a inicialização de agregação são inicializadas em zero, como em `myArr3` acima.  
   
-#### <a name="initializing-unions-and-structs"></a>Estruturas e uniões de inicialização  
- Se uma união não tem um construtor, inicializá-lo com um único valor (ou com outra instância de uma união). O valor é usado para inicializar o primeiro campo não estático. Essa inicialização é diferente da inicialização de estrutura, na qual o primeiro valor no inicializador é usado para inicializar o primeiro campo, o segundo valor para inicializar o segundo campo e assim por diante. Compare a inicialização de uniões e estruturas no exemplo a seguir:  
+#### <a name="initializing-unions-and-structs"></a>Inicializando uniões e estruturas  
+ Se uma união não tiver um construtor, você pode inicializá-lo com um único valor (ou com outra instância de uma união). O valor é usado para inicializar o primeiro campo não estático. Essa inicialização é diferente da inicialização de estrutura, na qual o primeiro valor no inicializador é usado para inicializar o primeiro campo, o segundo valor para inicializar o segundo campo e assim por diante. Compare a inicialização de uniões e estruturas no exemplo a seguir:  
   
 ```cpp  
 struct MyStruct {  
@@ -460,7 +460,7 @@ int main() {
 ```  
   
 #### <a name="initializing-aggregates-that-contain-aggregates"></a>Inicializando agregações que contêm agregações  
- Tipos de agregação podem conter outros tipos de agregação de exemplo, as matrizes de matrizes, matrizes de estruturas e assim por diante. Esses tipos são inicializados usando conjuntos aninhados de chaves, por exemplo:  
+ Tipos de agregação podem conter outros tipos de agregação, por exemplo, as matrizes de matrizes, matrizes de structs e assim por diante. Esses tipos são inicializados usando conjuntos de chaves, aninhados, por exemplo:  
   
 ```cpp  
 struct MyStruct {  
@@ -516,7 +516,7 @@ int main()
     class c {public:   int& i;};  
     ```  
   
--   Declaração de uma variável especificada explicitamente como `extern`. Por exemplo:  
+-   Declaração de uma variável especificada explicitamente como **extern**. Por exemplo:  
   
     ```  
     extern int& iVal;  
@@ -524,13 +524,13 @@ int main()
   
  Ao inicializar uma variável do tipo de referência, o compilador usa o gráfico de decisão mostrado na figura a seguir para selecionar entre a criação de uma referência para um objeto ou a criação de um objeto temporário para o qual a referência aponta.  
   
- ![Gráfico de decisão para inicialização de tipos de ref](../cpp/media/vc38s71.gif "vc38S71")  
+ ![Gráfico de decisão para a inicialização dos tipos ref](../cpp/media/vc38s71.gif "vc38S71")  
 Gráfico de decisão para a inicialização de tipos de referência  
   
- As referências a `volatile` tipos (declarado como `volatile` *typename * &** *identificador*) pode ser inicializado com `volatile` objetos do mesmo tipo ou com objetos que não foi declarados como `volatile`. Eles não é possível, no entanto, ser inicializado com **const** objetos desse tipo. Da mesma forma, as referências a **const** tipos (declarado como **const** *typename * &** *identificador*) pode ser inicializado com **const** objetos do mesmo tipo (ou qualquer coisa que tenha uma conversão de tipo ou com objetos que não foi declarados como **const**). No entanto, eles não podem ser inicializados com objetos `volatile` desse tipo.  
+ Referências aos **volátil** tipos (declaradas como **volátil** *typename * * * &** *identificador*) pode ser inicializado com o **volátil** objetos do mesmo tipo ou com objetos que não tenham sido declarados como **volátil**. Eles não é possível, no entanto, ser inicializado com **const** objetos desse tipo. Da mesma forma, as referências a **const** tipos (declaradas como **const** *typename * * * &** *identificador*) pode ser inicializado com **const** objetos do mesmo tipo (ou qualquer coisa que tem uma conversão para esse tipo ou com objetos que não tenham sido declarados como **const**). Eles não é possível, no entanto, ser inicializado com **volátil** objetos desse tipo.  
   
- As referências que não são qualificadas com o **const** ou `volatile` palavra-chave pode ser inicializado somente com objetos declarados como nenhuma **const** nem `volatile`.  
+ As referências que não são qualificadas com o **const** ou **volátil** palavra-chave pode ser inicializado somente com objetos não declarados como **const** nem  **volátil**.  
   
 ### <a name="initialization-of-external-variables"></a>Inicialização de variáveis externas  
- Declarações de variáveis automáticas, estáticos e externas podem conter inicializadores. No entanto, as declarações de variáveis externas poderão conter inicializadores apenas se as variáveis não forem declaradas como `extern`.
+ Declarações de variáveis automáticas, estáticas e externas podem conter inicializadores. No entanto, as declarações de variáveis externas podem conter inicializadores apenas se as variáveis não são declaradas como **extern**.
   

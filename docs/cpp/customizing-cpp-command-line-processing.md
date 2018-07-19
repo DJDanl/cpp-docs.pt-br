@@ -1,5 +1,5 @@
 ---
-title: Personalizando processamento de linha de comando C++ | Microsoft Docs
+title: Personalizando o processamento de linha de comando do C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,20 +24,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e2691ba3b83cd536c6f0a152bf4de2a855f81e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9415073630505e3cc879f53de14ed469c7e0e2ba
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411105"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939046"
 ---
 # <a name="customizing-c-command-line-processing"></a>Personalizando processamento de linha de comando C++
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
- Se o seu programa não utiliza argumentos de linha de comando, é possível economizar um pequeno espaço suprimindo o uso da rotina de biblioteca que executa o processamento de linha de comando. Esta rotina é chamada **setargv** e é descrito na [expansão de curinga](../cpp/wildcard-expansion.md). Para suprimir o seu uso, definir uma rotina que não faz nada no arquivo que contém o **principal** de função e nomeie-o **setargv**. A chamada para **setargv** , em seguida, é atendido pela sua definição de **setargv**, e a versão da biblioteca não está carregada.  
+ Se o seu programa não utiliza argumentos de linha de comando, é possível economizar um pequeno espaço suprimindo o uso da rotina de biblioteca que executa o processamento de linha de comando. Essa rotina é chamada `_setargv` e é descrito na [expansão de curinga](../cpp/wildcard-expansion.md). Para suprimir seu uso, defina uma rotina que não faça nada no arquivo que contém o `main` funcionar e nomeie- `_setargv`. A chamada para `_setargv` é atendida por sua definição de `_setargv`, e a versão da biblioteca não está carregada.  
   
- Da mesma forma, se você nunca acessa a tabela de ambiente por meio de `envp` argumento, você pode fornecer sua própria rotina vazia a ser usado no lugar de **setenvp**, a rotina de processamento de ambiente. Assim como ocorre com o **setargv** função **setenvp** deve ser declarado como **extern "C"**.  
+ Da mesma forma, se você nunca acessar a tabela de ambiente por meio de `envp` argumento, você pode fornecer sua própria rotina vazia a ser usado no lugar de `_setenvp`, a rotina de processamento de ambiente. Assim como ocorre com o `_setargv` função, `_setenvp` deve ser declarado como **extern "C"**.  
   
- Seu programa pode fazer chamadas para o **geração** ou `exec` família de rotinas na biblioteca de tempo de execução do C. Se esse for o caso, você não deve suprimir a rotina de processamento de ambiente, pois essa rotina é usada para passar um ambiente do processo pai para o processo filho.  
+ O programa poderá fazer chamadas para o `spawn` ou `exec` família de rotinas na biblioteca de tempo de execução C. Se esse for o caso, você não deve suprimir a rotina de processamento de ambiente, pois essa rotina é usada para passar um ambiente do processo pai para o processo filho.  
   
 **Fim da seção específica da Microsoft**  
   

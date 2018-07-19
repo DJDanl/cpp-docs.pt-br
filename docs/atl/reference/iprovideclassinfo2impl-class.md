@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a970b0258c8d353dabad96d712598416caf2acb4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7e0bd440e2e4bd8d32525fe4be6aaad2c401f6a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361339"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880607"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>Classe IProvideClassInfo2Impl
-Essa classe fornece uma implementação padrão de [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) e [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) métodos.  
+Essa classe fornece uma implementação padrão do [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) e [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) métodos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,21 +46,21 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
   
 #### <a name="parameters"></a>Parâmetros  
  *pcoclsid*  
- Um ponteiro para o identificador de coclass.  
+ Um ponteiro para o identificador dos coclass.  
   
  *psrcid*  
- Um ponteiro para o identificador de padrão dos coclass dispinterface de saída.  
+ Um ponteiro para o identificador do padrão dos coclass dispinterface de saída.  
   
- `plibid`  
- Um ponteiro para a ID da biblioteca da biblioteca de tipo que contém informações sobre a interface. Por padrão, a biblioteca de tipos de nível de servidor é passada.  
+ *plibid*  
+ Um ponteiro para o LIBID da biblioteca de tipos que contém informações sobre a interface. Por padrão, a biblioteca de tipos de nível de servidor é passada.  
   
- `wMajor`  
+ *wMajor*  
  A versão principal da biblioteca de tipos. O valor padrão é 1.  
   
- `wMinor`  
+ *wMinor*  
  A versão secundária da biblioteca de tipos. O valor padrão é 0.  
   
- `tihclass`  
+ *tihclass*  
  A classe usada para gerenciar informações de tipo dos coclass. O valor padrão é `CComTypeInfoHolder`.  
   
 ## <a name="members"></a>Membros  
@@ -75,8 +75,8 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|Recupera um **ITypeInfo** ponteiro para informações sobre o tipo dos coclass.|  
-|[IProvideClassInfo2Impl::GetGUID](#getguid)|Recupera o GUID de dispinterface de saída do objeto.|  
+|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|Recupera um `ITypeInfo` ponteiro para informações de tipo dos coclass.|  
+|[IProvideClassInfo2Impl::GetGUID](#getguid)|Recupera o GUID para dispinterface de saída do objeto.|  
   
 ### <a name="protected-data-members"></a>Membros de dados protegidos  
   
@@ -85,7 +85,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 |[IProvideClassInfo2Impl::_tih](#_tih)|Gerencia as informações de tipo para coclass.|  
   
 ## <a name="remarks"></a>Comentários  
- O [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) estende a interface [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) adicionando o `GetGUID` método. Esse método permite que um cliente recuperar interface de saída de um objeto IID para seu conjunto de eventos padrão. Classe `IProvideClassInfo2Impl` fornece uma implementação padrão de **IProvideClassInfo** e `IProvideClassInfo2` métodos.  
+ O [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) interface estende [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) adicionando o `GetGUID` método. Esse método permite que um cliente recuperar interface de saída de um objeto IID para que o conjunto de eventos padrão. Classe `IProvideClassInfo2Impl` fornece uma implementação padrão do `IProvideClassInfo` e `IProvideClassInfo2` métodos.  
   
  `IProvideClassInfo2Impl` contém um membro estático do tipo `CComTypeInfoHolder` que gerencia as informações de tipo para coclass.  
   
@@ -95,20 +95,20 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
  `IProvideClassInfo2Impl`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlcom.h  
+ **Cabeçalho:** atlcom  
   
 ##  <a name="getclassinfo"></a>  IProvideClassInfo2Impl::GetClassInfo  
- Recupera um `ITypeInfo` ponteiro para informações sobre o tipo dos coclass.  
+ Recupera um `ITypeInfo` ponteiro para informações de tipo dos coclass.  
   
 ```
 STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) no SDK do Windows.  
+ Ver [IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) no Windows SDK.  
   
 ##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID  
- Recupera o GUID de dispinterface de saída do objeto.  
+ Recupera o GUID para dispinterface de saída do objeto.  
   
 ```
 STDMETHOD(GetGUID)(
@@ -117,7 +117,7 @@ STDMETHOD(GetGUID)(
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) no SDK do Windows.  
+ Ver [IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) no Windows SDK.  
   
 ##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl  
  O construtor.  
@@ -127,10 +127,10 @@ IProvideClassInfo2Impl();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Chamadas `AddRef` no [_tih](#_tih) membro. As chamadas de destruidor **versão**.  
+ Chamadas `AddRef` sobre o [_tih](#_tih) membro. O destruidor chama `Release`.  
   
 ##  <a name="_tih"></a>  IProvideClassInfo2Impl::_tih  
- Este membro de dados estáticos é uma instância do parâmetro de modelo de classe, `tihclass`, que por padrão é `CComTypeInfoHolder`.  
+ Esse membro de dados estáticos é uma instância do parâmetro de modelo de classe, *tihclass*, que, por padrão é `CComTypeInfoHolder`.  
   
 ```
 static  tihclass
@@ -138,7 +138,7 @@ static  tihclass
 ```     
   
 ### <a name="remarks"></a>Comentários  
- `_tih` Gerencia as informações de tipo para coclass.  
+ `_tih` gerencia as informações de tipo para coclass.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)

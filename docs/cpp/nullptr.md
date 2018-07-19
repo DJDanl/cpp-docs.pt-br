@@ -16,21 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1bcfee3f408f6815e51740f9fc02d842afaa4d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dd7d7c9ccf70286040d06e7e01400299b806157e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419637"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940962"
 ---
 # <a name="nullptr"></a>nullptr
-Designa uma constante do ponteiro nulo do tipo `std::nullptr_t`, que é convertido em qualquer tipo bruto de ponteiro.  Embora você possa usar a palavra-chave `nullptr` sem incluir nenhum cabeçalho, se o código dela usar o tipo `std::nullptr_t`, você deve defini-lo incluindo o cabeçalho `<cstddef>`.  
+Designa uma constante do ponteiro nulo do tipo `std::nullptr_t`, que é convertido em qualquer tipo bruto de ponteiro.  Embora você possa usar a palavra-chave **nullptr** sem incluir nenhum cabeçalho, se seu código usa o tipo `std::nullptr_t`, em seguida, você deve defini-lo, incluindo o cabeçalho `<cstddef>`.  
   
 > [!NOTE]
->  A palavra-chave `nullptr` também é definida em C++/CLI para os aplicativos de código gerenciado e não é intercambiável com a palavra-chave do padrão ISO C++. Se seu código pode ser compilado usando o [/clr](../build/reference/clr-common-language-runtime-compilation.md) , em seguida, use a opção de compilador, que tem como alvo o código gerenciado, `__nullptr` em qualquer linha de código em que você deve assegurar que o compilador usa a interpretação de C++ nativo. Para obter mais informações, consulte [nullptr](../windows/nullptr-cpp-component-extensions.md).  
+>  O **nullptr** palavra-chave também é definida no C + + c++ CLI para aplicativos de código gerenciado e não é intercambiável com a palavra-chave C++ padrão ISO. Se seu código pode ser compilado usando o [/clr](../build/reference/clr-common-language-runtime-compilation.md) opção de compilador, que se destina ao código gerenciado, em seguida, use `__nullptr` em qualquer linha de código em que você deve garantir que o compilador usará a interpretação do C++ nativo. Para obter mais informações, consulte [nullptr](../windows/nullptr-cpp-component-extensions.md).  
   
 ## <a name="remarks"></a>Comentários  
- Evite usar `NULL` ou zero (`0`) como constante do ponteiro nulo; `nullptr` é menos vulnerável ao uso indevido e funciona melhor na maioria das situações.  Por exemplo, com `func(std::pair<const char *, double>)`, chamar `func(std::make_pair(NULL, 3.14))` causa um erro do compilador.  A macro NULL expande para `0`, para que a chamada `std::make_pair(0, 3.14)` retorne `std::pair<int, double>`, que não é conversível para o tipo de parâmetro `std::pair<const char *, double>` de func().  Chamar `func(std::make_pair(nullptr, 3.14))` resulta em uma compilação bem-sucedida porque `std::make_pair(nullptr, 3.14)` retorna `std::pair<std::nullptr_t, double>`, que é convertido em `std::pair<const char *, double>`.  
+ Evite usar valor nulo ou zero (`0`) como uma constante de ponteiro nulo; **nullptr** é menos vulnerável ao uso indevido e funciona melhor na maioria das situações.  Por exemplo, com `func(std::pair<const char *, double>)`, chamar `func(std::make_pair(NULL, 3.14))` causa um erro do compilador.  A macro NULL expande para `0`, para que a chamada `std::make_pair(0, 3.14)` retorne `std::pair<int, double>`, que não é conversível para o tipo de parâmetro `std::pair<const char *, double>` de func().  Chamar `func(std::make_pair(nullptr, 3.14))` resulta em uma compilação bem-sucedida porque `std::make_pair(nullptr, 3.14)` retorna `std::pair<std::nullptr_t, double>`, que é convertido em `std::pair<const char *, double>`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Palavras-chave](../cpp/keywords-cpp.md)   

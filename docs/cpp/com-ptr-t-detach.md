@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fbe8fd203c3fda75e83aee623254676dacaf1da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c07a9ce1d315c6738472850b987ccb397feda267
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410574"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941347"
 ---
 # <a name="comptrtdetach"></a>_com_ptr_t::Detach
 **Seção específica da Microsoft**  
@@ -37,7 +37,7 @@ Interface* Detach( ) throw( );
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Extrai e retorna o ponteiro de interface encapsulados e limpa o armazenamento de ponteiro encapsulada **nulo**. Isso remove o ponteiro de interface do encapsulamento. Cabe a você chamar **versão** no ponteiro de interface retornado.  
+ Extrai e retorna o ponteiro de interface encapsulado e, em seguida, limpa o armazenamento de ponteiro encapsulado como NULL. Isso remove o ponteiro de interface do encapsulamento. Cabe a você chamar `Release` no ponteiro de interface retornado.  
   
  **Fim da seção específica da Microsoft**  
   

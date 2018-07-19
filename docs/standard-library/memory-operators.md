@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fe61112e5b36c8341e4a3209a9bec335549736
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad33ff04c688ab79fa4a73234829d3e13fd1b44d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857185"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954229"
 ---
 # <a name="ltmemorygt-operators"></a>Operadores &lt;memory&gt;
 
@@ -56,13 +56,13 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um dos objetos a ser testada para fins de desigualdade.
+*à esquerda* um dos objetos a serem testados quanto à desigualdade.
 
-`right` Um dos objetos a ser testada para fins de desigualdade.
+*à direita* um dos objetos a serem testados quanto à desigualdade.
 
-`Ty1` O tipo controlado pelo ponteiro compartilhado à esquerda.
+*Ty1* o tipo controlado pelo esquerda compartilhado ponteiro.
 
-`Ty2` O tipo controlado pelo ponteiro compartilhado à direita.
+*Ty2* o tipo controlado pelo direita compartilhado ponteiro.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -154,23 +154,23 @@ bool operator==(
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um dos objetos a ser testado para igualdade.
+*à esquerda* um dos objetos a serem testados quanto à igualdade.
 
-`right` Um dos objetos a ser testado para igualdade.
+*à direita* um dos objetos a serem testados quanto à igualdade.
 
-`Ty1` O tipo controlado pelo ponteiro compartilhado à esquerda.
+*Ty1* o tipo controlado pelo esquerda compartilhado ponteiro.
 
-`Ty2` O tipo controlado pelo ponteiro compartilhado à direita.
+*Ty2* o tipo controlado pelo direita compartilhado ponteiro.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se os objetos forem iguais, `false` se os objetos não forem iguais.
+**Verdadeiro** se os objetos forem iguais; **falso** se objetos não forem iguais.
 
 ### <a name="remarks"></a>Comentários
 
 O primeiro operador de modelo retorna true. (Todos os alocadores padrão são iguais.)
 
-O segundo e o terceiro operadores de modelo retornam ` left.get() ==  right.get()`.
+O segundo e o terceiro operadores de modelo retornam `left.get() ==  right.get()`.
 
 ### <a name="example"></a>Exemplo
 
@@ -258,13 +258,13 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um dos objetos a ser comparado.
+*à esquerda* um dos objetos a serem comparados.
 
-`right` Um dos objetos a ser comparado.
+*à direita* um dos objetos a serem comparados.
 
-`Ty1` O tipo controlado pelo ponteiro compartilhado à esquerda.
+*Ty1* o tipo controlado pelo esquerda compartilhado ponteiro.
 
-`Ty2` O tipo controlado pelo ponteiro compartilhado à direita.
+*Ty2* o tipo controlado pelo direita compartilhado ponteiro.
 
 ### <a name="remarks"></a>Comentários
 
@@ -288,13 +288,13 @@ bool operator<(
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um dos objetos a ser comparado.
+*à esquerda* um dos objetos a serem comparados.
 
-`right` Um dos objetos a ser comparado.
+*à direita* um dos objetos a serem comparados.
 
-`Ty1` O tipo controlado pelo ponteiro à esquerda.
+*Ty1* o tipo controlado pelo ponteiro esquerdo.
 
-`Ty2` O tipo controlado pelo ponteiro à direita.
+*Ty2* o tipo controlado pelo ponteiro direito.
 
 ## <a name="op_lt_eq"></a>  operator&lt;=
 
@@ -314,17 +314,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um dos objetos a ser comparado.
+*à esquerda* um dos objetos a serem comparados.
 
-`right` Um dos objetos a ser comparado.
+*à direita* um dos objetos a serem comparados.
 
-`Ty1` O tipo controlado pelo ponteiro compartilhado à esquerda.
+*Ty1* o tipo controlado pelo esquerda compartilhado ponteiro.
 
-`Ty2` O tipo controlado pelo ponteiro compartilhado à direita.
+*Ty2* o tipo controlado pelo direita compartilhado ponteiro.
 
 ### <a name="remarks"></a>Comentários
 
-Retornam os operadores de modelo `left.get() <= right.get()`
+O operador de modelo retorna `left.get() <= right.get()`
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -344,13 +344,13 @@ bool operator>(
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um dos objetos a ser comparado.
+*à esquerda* um dos objetos a serem comparados.
 
-`right` Um dos objetos a ser comparado.
+*à direita* um dos objetos a serem comparados.
 
-`Ty1` O tipo controlado pelo ponteiro compartilhado à esquerda.
+*Ty1* o tipo controlado pelo esquerda compartilhado ponteiro.
 
-`Ty2` O tipo controlado pelo ponteiro compartilhado à direita.
+*Ty2* o tipo controlado pelo direita compartilhado ponteiro.
 
 ## <a name="op_lt_lt"></a>  operator&lt;&lt;
 
@@ -364,15 +364,15 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Parâmetros
 
-`Elem` O tipo de elemento de fluxo.
+*Elem* o tipo do elemento de fluxo.
 
-`Tr` O tipo as características do elemento de fluxo.
+*TR* o tipo de características do elemento de fluxo.
 
-`Ty` O tipo controlado pelo ponteiro compartilhado.
+*Ty* o tipo controlado pelo ponteiro compartilhado.
 
-`out` O fluxo de saída.
+*out* no fluxo de saída.
 
-`sp` O ponteiro compartilhado.
+*SP* o ponteiro compartilhado.
 
 ### <a name="remarks"></a>Comentários
 

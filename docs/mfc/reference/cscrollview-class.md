@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b480ee1118551b09c705fb4f79f8a50c0a1f895
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 43ad1d1d047b9e44da27d1c9eb24dde39fd429ef
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079561"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849910"
 ---
 # <a name="cscrollview-class"></a>Classe CScrollView
 Um [CView](../../mfc/reference/cview-class.md) com recursos de rolagem.  
@@ -66,49 +66,49 @@ class CScrollView : public CView
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CScrollView::CheckScrollBars](#checkscrollbars)|Indica se o modo de exibição de rolagem tem barras de rolagem horizontal e vertical.|  
-|[CScrollView::FillOutsideRect](#filloutsiderect)|Preenche a área de visualização para fora da área de rolagem.|  
-|[CScrollView::GetDeviceScrollPosition](#getdevicescrollposition)|Obtém a posição de rolagem atual em unidades de dispositivo.|  
+|[CScrollView::CheckScrollBars](#checkscrollbars)|Indica se a exibição de rolagem tem barras de rolagem horizontal e vertical.|  
+|[CScrollView::FillOutsideRect](#filloutsiderect)|Preenche a área de uma exibição fora da área de rolagem.|  
+|[CScrollView::GetDeviceScrollPosition](#getdevicescrollposition)|Obtém a atual posição de rolagem em unidades de dispositivo.|  
 |[CScrollView::GetDeviceScrollSizes](#getdevicescrollsizes)|Obtém o modo de mapeamento atual, o tamanho total e os tamanhos de linha e página do modo de exibição rolável. Tamanhos são em unidades de dispositivo.|  
-|[CScrollView::GetScrollPosition](#getscrollposition)|Obtém a posição de rolagem atual em unidades lógicas.|  
+|[CScrollView::GetScrollPosition](#getscrollposition)|Obtém a atual posição de rolagem em unidades lógicas.|  
 |[CScrollView::GetTotalSize](#gettotalsize)|Obtém o tamanho total da exibição da rolagem em unidades lógicas.|  
-|[CScrollView::ResizeParentToFit](#resizeparenttofit)|Faz com que o tamanho da exibição a ser determinam o tamanho do quadro.|  
-|[CScrollView::ScrollToPosition](#scrolltoposition)|Rola o modo de exibição para um determinado ponto especificado em unidades lógicas.|  
-|[CScrollView::SetScaleToFitSize](#setscaletofitsize)|Coloca o modo de exibição de rolagem no modo de escala para caber.|  
-|[CScrollView::SetScrollSizes](#setscrollsizes)|Define o modo de mapeamento, tamanho total e quantidades de rolagem horizontal e vertical da exibição da rolagem.|  
+|[CScrollView::ResizeParentToFit](#resizeparenttofit)|Faz com que o tamanho da exibição a ser Determine o tamanho de seu quadro.|  
+|[CScrollView::ScrollToPosition](#scrolltoposition)|Rola a exibição para um determinado ponto, especificado em unidades lógicas.|  
+|[CScrollView::SetScaleToFitSize](#setscaletofitsize)|Coloca a exibição de rolagem no modo de escala para caber.|  
+|[CScrollView::SetScrollSizes](#setscrollsizes)|Define o modo de mapeamento do modo de exibição de rolagem, tamanho total e quantidades de rolagem horizontal e vertical.|  
   
 ## <a name="remarks"></a>Comentários  
- Você pode manipular padrão rolagem por conta própria em qualquer classe derivada de `CView` , substituindo a mensagem mapeada [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) e [OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) funções de membro. Mas `CScrollView` adiciona os seguintes recursos para sua `CView` recursos:  
+ Você pode manipular o padrão de rolagem por conta própria em qualquer classe derivada de `CView` , substituindo a mensagem mapeada [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) e [OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) funções de membro. Mas `CScrollView` adiciona os seguintes recursos para sua `CView` recursos:  
   
--   Ele gerencia os tamanhos de janela e visor e modos de mapeamento.  
+-   Ele gerencia os tamanhos de janela e o visor e modos de mapeamento.  
   
--   Rola automaticamente em resposta a mensagens da barra de rolagem.  
+-   Rola automaticamente em resposta às mensagens da barra de rolagem.  
   
--   Rola automaticamente em resposta a mensagens de teclado, mouse não rolagem ou a roda do IntelliMouse.  
+-   Rola automaticamente em resposta às mensagens do teclado, mouse não rolam ou a roda do IntelliMouse.  
   
- Para rolar automaticamente em resposta a mensagens do teclado, adicionar uma mensagem WM_KEYDOWN e de teste para VK_DOWN, VK_PREV e chamada [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597).  
+ Para rolar automaticamente em resposta às mensagens do teclado, adicionar uma mensagem WM_KEYDOWN e de teste para VK_DOWN, VK_PREV e chame [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597).  
   
- Você pode manipular a roda do mouse para rolar por conta própria, substituindo a mensagem mapeada [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) e [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) funções de membro. Como eles são para `CScrollView`, o comportamento recomendado para dar suporte a essas funções de membro [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617), a mensagem de rotação da roda.  
+ Você pode lidar com a roda do mouse para rolar por conta própria, substituindo a mensagem mapeada [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) e [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) funções de membro. Como são para `CScrollView`, o comportamento recomendado para dar suporte a essas funções de membro [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617), a mensagem de rotação da roda.  
   
- Para tirar proveito de rolagem automática, derive sua classe de exibição da `CScrollView` em vez de `CView`. Quando o modo de exibição é criado, se você deseja calcular o tamanho da exibição rolável com base no tamanho do documento, chamada de `SetScrollSizes` a função de membro de sua substituição do [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) ou [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Você deve escrever seu próprio código para consultar o tamanho do documento. Para obter um exemplo, consulte o [Rabisco exemplo](../../visual-cpp-samples.md).)  
+ Para tirar proveito da rolagem automática, derive sua classe de exibição da `CScrollView` em vez do `CView`. Quando o modo de exibição é criado, se você deseja calcular o tamanho da exibição rolável com base no tamanho do documento, a chamada a `SetScrollSizes` função de membro de sua substituição de um [cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate) ou [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Você deve escrever seu próprio código para consultar o tamanho do documento. Por exemplo, consulte o [exemplo de Scribble](../../visual-cpp-samples.md).)  
   
- A chamada para o `SetScrollSizes` função membro define o modo de mapeamento do modo de exibição, as dimensões total da exibição da rolagem e os valores para rolar horizontalmente e verticalmente. Todos os tamanhos estão em unidades lógicas. O tamanho lógico do modo de exibição normalmente é calculado dos dados armazenados no documento, mas em alguns casos, você talvez queira especificar um tamanho fixo. Para obter exemplos de ambas as abordagens, consulte [CScrollView::SetScrollSizes](#setscrollsizes).  
+ A chamada para o `SetScrollSizes` função de membro define o modo de mapeamento do modo de exibição, as dimensões total da exibição da rolagem e os valores para rolar horizontalmente e verticalmente. Todos os tamanhos são em unidades lógicas. O tamanho lógico do modo de exibição normalmente é calculado dos dados armazenados no documento, mas em alguns casos, você talvez queira especificar um tamanho fixo. Para obter exemplos de ambas as abordagens, consulte [CScrollView::SetScrollSizes](#setscrollsizes).  
   
- Você especificar valores para rolar horizontalmente e verticalmente em unidades lógicas. Por padrão, se o usuário clica em um eixo de barra de rolagem fora da caixa de rolagem, `CScrollView` rolar uma "página". Se o usuário clica em uma seta de rolagem em ambas as extremidades de uma barra de rolagem, `CScrollView` rola "linha". Por padrão, uma página é 1/10 do tamanho total do modo de exibição; uma linha é 1/10 do tamanho da página. Substituir esses valores padrão, passando tamanhos personalizados no `SetScrollSizes` função de membro. Por exemplo, você pode definir o tamanho horizontal para alguma fração da largura do tamanho total e o tamanho vertical para a altura de uma linha na fonte atual.  
+ Você especifique os valores de rolar horizontalmente e verticalmente em unidades lógicas. Por padrão, se o usuário clica em um eixo de barra de rolagem fora da caixa de rolagem, `CScrollView` rolar uma "página". Se o usuário clica em uma seta de rolagem em ambas as extremidades de uma barra de rolagem, `CScrollView` Rola uma "linha". Por padrão, uma página é 1/10 do tamanho total do modo de exibição; uma linha é 1/10 do tamanho da página. Substituir esses valores padrão passando tamanhos personalizados no `SetScrollSizes` função de membro. Por exemplo, você pode definir o tamanho horizontal para uma fração da largura do tamanho total e o tamanho vertical para a altura de uma linha na fonte atual.  
   
- Em vez de rolagem, `CScrollView` possível dimensionar automaticamente a exibição para o tamanho da janela atual. Nesse modo, o modo de exibição tem sem barras de rolagem e o modo de exibição lógico é ampliado ou reduzido se ajuste exatamente a área cliente da janela. Para usar esse recurso escala para ajustar, chame [CScrollView::SetScaleToFitSize](#setscaletofitsize). (Chame `SetScaleToFitSize` ou `SetScrollSizes`, mas não ambos.)  
+ Em vez de rolagem, `CScrollView` pode dimensionar automaticamente o modo de exibição para o tamanho da janela atual. Nesse modo, a exibição não tem nenhuma barra de rolagem e o modo de exibição lógico é ampliado ou reduzido para ajustar exatamente a área de cliente da janela. Para usar essa capacidade de dimensionar para caber, chame [CScrollView::SetScaleToFitSize](#setscaletofitsize). (Chame o `SetScaleToFitSize` ou `SetScrollSizes`, mas não ambos.)  
   
- Antes do `OnDraw` a função de membro da sua classe derivada de exibição é chamada, `CScrollView` ajusta automaticamente a origem do visor para o `CPaintDC` objeto de contexto de dispositivo que ele passa para `OnDraw`.  
+ Antes do `OnDraw` função de membro da sua classe derivada é chamada, `CScrollView` ajusta automaticamente a origem do visor para o `CPaintDC` objeto de contexto de dispositivo que ele passa para `OnDraw`.  
   
- Para ajustar a origem do visor para a janela de rolagem, `CScrollView` substitui [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). Esse ajuste é automática para o `CPaintDC` contexto de dispositivo que `CScrollView` passa para `OnDraw`, mas você deve chamar `CScrollView::OnPrepareDC` por conta própria para outros contextos de dispositivo é usar, como um `CClientDC`. Você pode substituir `CScrollView::OnPrepareDC` para definir a caneta, cor de plano de fundo e outros atributos de desenho, mas chame a classe base para fazer o dimensionamento.  
+ Para ajustar a origem do visor para a janela de rolagem `CScrollView` substituições [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). Esse ajuste é automática para o `CPaintDC` contexto de dispositivo que `CScrollView` passa para `OnDraw`, mas você deve chamar `CScrollView::OnPrepareDC` por conta própria para outros contextos de dispositivo você usa, como um `CClientDC`. Você pode substituir `CScrollView::OnPrepareDC` para definir a caneta, cor de plano de fundo e outros atributos de desenho, mas chamar a classe base para fazer o dimensionamento.  
   
- Barras de rolagem podem ser exibido em três locais em relação a um modo de exibição, conforme mostrado nos seguintes casos:  
+ Barras de rolagem podem aparecer em três locais em relação a um modo de exibição, conforme mostrado nos seguintes casos:  
   
--   Barras de rolagem de estilo de janela padrão podem ser definidas para o modo de exibição usando o **WS_HSCROLL** e **WS_VSCROLL**[estilos Windows](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+-   Barras de rolagem de estilo de janela padrão podem ser definidas para o modo de exibição usando o WS_HSCROLL e WS_VSCROLL[estilos Windows](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
--   Controles de barra de rolagem também podem ser adicionados ao quadro que contém o modo de exibição, nesse caso o framework encaminha `WM_HSCROLL` e `WM_VSCROLL` mensagens de janela do quadro para a exibição ativa no momento.  
+-   Controles de barra de rolagem também podem ser adicionados para o quadro que contém a exibição, caso em que a estrutura encaminha mensagens WM_HSCROLL e WM_VSCROLL da janela do quadro para a exibição ativa no momento.  
   
--   A estrutura também encaminha Role mensagens de um `CSplitterWnd` controle de separador para o painel do divisor ativo no momento (um modo de exibição). Quando colocada em um [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md) com barras de rolagem compartilhado, um `CScrollView` objeto usará os compartilhados em vez de criar o seu próprio.  
+-   A estrutura também encaminha role as mensagens de um `CSplitterWnd` controle de splitter para o painel ativo no momento do divisor (um modo de exibição). Quando colocada em uma [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md) com barras de rolagem compartilhado, um `CScrollView` objeto usará aqueles compartilhados em vez de criar o seu próprio.  
   
  Para obter mais informações sobre como usar `CScrollView`, consulte [arquitetura de documento/exibição](../../mfc/document-view-architecture.md) e [derivado exibição Classes disponíveis no MFC](../../mfc/derived-view-classes-available-in-mfc.md).  
   
@@ -124,10 +124,10 @@ class CScrollView : public CView
  `CScrollView`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxwin.h  
+ **Cabeçalho:** afxwin. h  
   
 ##  <a name="checkscrollbars"></a>  CScrollView::CheckScrollBars  
- Chame essa função de membro para determinar se o modo de exibição de rolagem tem barras horizontais e verticais.  
+ Chame essa função de membro para determinar se a exibição de rolagem tem barras horizontais e verticais.  
   
 ```  
 void CheckScrollBars(
@@ -150,10 +150,10 @@ CScrollView();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Você deve chamar `SetScrollSizes` ou `SetScaleToFitSize` antes da rolagem exibição é utilizável.  
+ Você deve chamar `SetScrollSizes` ou `SetScaleToFitSize` antes da rolagem de modo de exibição é utilizável.  
   
 ##  <a name="filloutsiderect"></a>  CScrollView::FillOutsideRect  
- Chamar `FillOutsideRect` para preencher a área de exibição que aparece fora da área de rolagem.  
+ Chamar `FillOutsideRect` para preencher a área do modo de exibição que aparece fora da área de rolagem.  
   
 ```  
 void FillOutsideRect(
@@ -163,31 +163,31 @@ void FillOutsideRect(
   
 ### <a name="parameters"></a>Parâmetros  
  *pDC*  
- Contexto de dispositivo no qual o preenchimento é deve ser feito.  
+ Contexto de dispositivo no qual o preenchimento deve ser feito.  
   
  *pBrush*  
- Pincel com a qual a área é a ser preenchida.  
+ Pincel com a qual a área é a ser preenchido.  
   
 ### <a name="remarks"></a>Comentários  
- Use `FillOutsideRect` em seu modo de exibição de rolagem `OnEraseBkgnd` função de manipulador para evitar redesenho excessiva.  
+ Use `FillOutsideRect` no seu modo de exibição de rolagem `OnEraseBkgnd` função do manipulador para evitar o redesenho da tela de fundo excessiva.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#164](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
   
 ##  <a name="getdevicescrollposition"></a>  CScrollView::GetDeviceScrollPosition  
- Chamar `GetDeviceScrollPosition` quando você precisar de posições atuais de horizontais e verticais das caixas de rolagem nas barras de rolagem.  
+ Chamar `GetDeviceScrollPosition` quando precisar que as posições atuais de horizontais e verticais das caixas de rolagem nas barras de rolagem.  
   
 ```  
 CPoint GetDeviceScrollPosition() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- As posições horizontais e verticais (em unidades de dispositivo) das caixas de rolagem como um `CPoint` objeto.  
+ As posições horizontais e verticais (em unidades de dispositivo) das caixas de rolagem, como um `CPoint` objeto.  
   
 ### <a name="remarks"></a>Comentários  
- Esse par de coordenadas corresponde ao local do documento para que tenha sido rolado o canto superior esquerdo da exibição. Isso é útil para a compensação de posições de dispositivo de mouse para as posições de dispositivo de exibição da rolagem.  
+ Esse par de coordenadas corresponde ao local do documento ao qual o canto superior esquerdo do modo de exibição foi rolado. Isso é útil para a compensação de posições de dispositivo de mouse para posições de dispositivo de exibição de rolagem.  
   
- `GetDeviceScrollPosition` Retorna valores em unidades de dispositivo. Se você quiser que as unidades lógicas, use `GetScrollPosition` em vez disso.  
+ `GetDeviceScrollPosition` Retorna os valores em unidades de dispositivo. Se você quiser unidades lógicas, use `GetScrollPosition` em vez disso.  
   
 ##  <a name="getdevicescrollsizes"></a>  CScrollView::GetDeviceScrollSizes  
  `GetDeviceScrollSizes` Obtém o modo de mapeamento atual, o tamanho total e os tamanhos de linha e página do modo de exibição rolável.  
@@ -202,47 +202,47 @@ void GetDeviceScrollSizes(
   
 ### <a name="parameters"></a>Parâmetros  
  *nMapMode*  
- Retorna o modo de mapeamento atual para este modo de exibição. Para obter uma lista de valores possíveis, consulte `SetScrollSizes`.  
+ Retorna o modo de mapeamento atual para esta exibição. Para obter uma lista de valores possíveis, consulte `SetScrollSizes`.  
   
  *sizeTotal*  
  Retorna o tamanho total atual da exibição da rolagem em unidades de dispositivo.  
   
  *sizePage*  
- Retorna os valores atuais horizontais e verticais para rolar em cada direção em resposta a um mouse clique em um eixo de barra de rolagem. O **cx** membro contém a quantidade horizontal. O **cy** membro contém a quantidade de vertical.  
+ Retorna os valores atuais horizontais e verticais para rolar em cada direção em resposta a um mouse clique em um eixo de barra de rolagem. O `cx` membro contém a quantidade de horizontal. O `cy` membro contém a quantidade de vertical.  
   
  *sizeLine*  
- Retorna os valores atuais horizontais e verticais para rolar em cada direção em resposta a um mouse clique em uma seta de rolagem. O **cx** membro contém a quantidade horizontal. O **cy** membro contém a quantidade de vertical.  
+ Retorna os valores atuais horizontais e verticais para rolar em cada direção em resposta a um mouse clique em uma seta de rolagem. O `cx` membro contém a quantidade de horizontal. O `cy` membro contém a quantidade de vertical.  
   
 ### <a name="remarks"></a>Comentários  
- Tamanhos são em unidades de dispositivo. Essa função de membro raramente é chamada.  
+ Tamanhos são em unidades de dispositivo. Essa função membro raramente é chamada.  
   
 ##  <a name="getscrollposition"></a>  CScrollView::GetScrollPosition  
- Chamar `GetScrollPosition` quando você precisar de posições atuais de horizontais e verticais das caixas de rolagem nas barras de rolagem.  
+ Chamar `GetScrollPosition` quando precisar que as posições atuais de horizontais e verticais das caixas de rolagem nas barras de rolagem.  
   
 ```  
 CPoint GetScrollPosition() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- As posições horizontais e verticais (em unidades lógicas) das caixas de rolagem como um `CPoint` objeto.  
+ As posições horizontais e verticais (em unidades lógicas) das caixas de rolagem, como um `CPoint` objeto.  
   
 ### <a name="remarks"></a>Comentários  
- Esse par de coordenadas corresponde ao local do documento para que tenha sido rolado o canto superior esquerdo da exibição.  
+ Esse par de coordenadas corresponde ao local do documento ao qual o canto superior esquerdo do modo de exibição foi rolado.  
   
- `GetScrollPosition` Retorna valores em unidades lógicas. Se você quiser que as unidades de dispositivo, use `GetDeviceScrollPosition` em vez disso.  
+ `GetScrollPosition` Retorna os valores em unidades lógicas. Se você quiser que as unidades de dispositivo, use `GetDeviceScrollPosition` em vez disso.  
   
 ##  <a name="gettotalsize"></a>  CScrollView::GetTotalSize  
- Chamar `GetTotalSize` para recuperar os tamanhos atuais horizontais e verticais da exibição da rolagem.  
+ Chamar `GetTotalSize` para recuperar os tamanhos atuais de horizontais e verticais da exibição da rolagem.  
   
 ```  
 CSize GetTotalSize() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- O tamanho total da exibição da rolagem em unidades lógicas. O tamanho horizontal está no **cx** membro o `CSize` valor de retorno. O tamanho vertical está no **cy** membro.  
+ O tamanho total da exibição da rolagem em unidades lógicas. O tamanho horizontal está no `cx` membro do `CSize` valor de retorno. O tamanho vertical está no `cy` membro.  
   
 ##  <a name="resizeparenttofit"></a>  CScrollView::ResizeParentToFit  
- Chamar `ResizeParentToFit` para permitir que o tamanho do modo de exibição determinam o tamanho da sua janela do quadro.  
+ Chamar `ResizeParentToFit` para permitir que o tamanho do modo de exibição Determine o tamanho de sua janela de quadro.  
   
 ```  
 void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
@@ -250,17 +250,17 @@ void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  *bShrinkOnly*  
- O tipo de redimensionamento para executar. O valor padrão, **TRUE**, reduz a janela do quadro se apropriado. Barras de rolagem ainda aparecerá para exibições grandes ou janelas com moldura pequeno. Um valor de **FALSE** faz com que o modo de exibição sempre redimensionar a janela do quadro exatamente. Isso pode ser um pouco perigoso, desde que a janela do quadro pode obter muito grande para caber na janela de quadro vários documentos MDI (interface) ou a tela.  
+ O tipo de redimensionamento para executar. O valor padrão, TRUE, reduz a janela do quadro, se apropriado. Barras de rolagem ainda aparecerá para exibições grandes ou janelas com moldura pequeno. Um valor FALSE faz com que a exibição sempre redimensionar a janela do quadro exatamente. Isso pode ser um pouco perigoso, pois a janela do quadro poderia fique muito grande para caber na janela de quadro MDI (interface MDI) da vários documento ou a tela.  
   
 ### <a name="remarks"></a>Comentários  
- Isso é recomendado apenas para modos de exibição em janelas de quadro filho MDI. Use `ResizeParentToFit` no `OnInitialUpdate` função do manipulador de derivada `CScrollView` classe. Para obter um exemplo dessa função de membro, consulte [CScrollView::SetScrollSizes](#setscrollsizes).  
+ Isso é recomendado apenas para modos de exibição em janelas de quadro MDI filho. Use `ResizeParentToFit` no `OnInitialUpdate` função de manipulador de seus derivados `CScrollView` classe. Para obter um exemplo dessa função de membro, consulte [CScrollView::SetScrollSizes](#setscrollsizes).  
   
- `ResizeParentToFit` pressupõe-se de que o tamanho da janela de exibição foi definido. Se o tamanho da janela de exibição não foi definido quando `ResizeParentToFit` é chamado, você obterá uma declaração. Para garantir que isso não aconteça, fazer a chamada a seguir antes de chamar `ResizeParentToFit`:  
+ `ResizeParentToFit` pressupõe-se de que o tamanho da janela do modo de exibição foi definido. Se o tamanho da janela de exibição não foi definido quando `ResizeParentToFit` é chamado, você obterá uma asserção. Para garantir que isso não aconteça, fazer a chamada a seguir antes de chamar `ResizeParentToFit`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
 ##  <a name="scrolltoposition"></a>  CScrollView::ScrollToPosition  
- Chamar `ScrollToPosition` rolar para um determinado ponto no modo de exibição.  
+ Chamar `ScrollToPosition` para rolar para um determinado ponto no modo de exibição.  
   
 ```  
 void ScrollToPosition(POINT pt);
@@ -268,7 +268,7 @@ void ScrollToPosition(POINT pt);
   
 ### <a name="parameters"></a>Parâmetros  
  *pt*  
- O ponto de rolar, em unidades lógicas. O **x** membro deve ser um valor positivo (maior ou igual a 0, até o tamanho total do modo de exibição). O mesmo é verdadeiro para o **y** membro quando o modo de mapeamento é `MM_TEXT`. O **y** membro é negativo no mapeamento de modos diferentes de `MM_TEXT`.  
+ O ponto de rolar para, em unidades lógicas. O `x` membro deve ser um valor positivo (maior que ou igual a 0, até o tamanho total do modo de exibição). O mesmo é verdadeiro para o `y` membro quando o modo de mapeamento é MM_TEXT. O `y` membro for negativo em modos de mapeamento diferentes MM_TEXT.  
   
 ### <a name="remarks"></a>Comentários  
  O modo de exibição será ser rolado para que esse ponto está no canto superior esquerdo da janela. Essa função de membro não deve ser chamada se o modo de exibição é dimensionado para ajustar.  
@@ -282,16 +282,16 @@ void SetScaleToFitSize(SIZE sizeTotal);
   
 ### <a name="parameters"></a>Parâmetros  
  *sizeTotal*  
- Os tamanhos horizontais e verticais para que a exibição é dimensionado. Tamanho da exibição da rolagem é medido em unidades lógicas. O tamanho horizontal está contido no **cx** membro. O tamanho vertical está contido no **cy** membro. Ambos **cx** e **cy** deve ser maior que ou igual a 0.  
+ Os tamanhos horizontais e verticais ao qual a exibição deve ser dimensionado. Tamanho da exibição de rolagem é medido em unidades lógicas. O tamanho horizontal está contido no `cx` membro. O tamanho vertical está contido no `cy` membro. Ambos `cx` e `cy` deve ser maior que ou igual a 0.  
   
 ### <a name="remarks"></a>Comentários  
- Barras de rolagem, apenas uma parte do modo de exibição lógica pode estar visível a qualquer momento. Mas com a capacidade de dimensionar para ajustar a exibição tem sem barras de rolagem e o modo de exibição lógico é ampliado ou reduzido se ajuste exatamente a área cliente da janela. Quando a janela é redimensionada, o modo de exibição desenha seus dados em uma escala de novo com base no tamanho da janela.  
+ Com as barras de rolagem, apenas uma parte do modo de exibição lógica pode estar visível a qualquer momento. Mas com a capacidade de dimensionar para caber o modo de exibição não tem nenhuma barra de rolagem e o modo de exibição lógico é ampliado ou reduzido para ajustar exatamente a área de cliente da janela. Quando a janela é redimensionada, o modo de exibição desenha seus dados em uma nova escala com base no tamanho da janela.  
   
- Normalmente você vai fazer a chamada para `SetScaleToFitSize` em sua substituição do modo de exibição `OnInitialUpdate` função de membro. Se você não quiser que o dimensionamento automático, chame o `SetScrollSizes` função de membro em vez disso.  
+ Normalmente, você colocará a chamada para `SetScaleToFitSize` em seu substituto do modo de exibição `OnInitialUpdate` função de membro. Se você não quiser que o dimensionamento automático, chame o `SetScrollSizes` função de membro em vez disso.  
   
- `SetScaleToFitSize` pode ser usado para implementar uma operação "Zoom para ajustar". Use `SetScrollSizes` para reinicializar a rolagem.  
+ `SetScaleToFitSize` pode ser usado para implementar uma operação "Reduzir para caber". Use `SetScrollSizes` para reinicializar a rolagem.  
   
- `SetScaleToFitSize` pressupõe-se de que o tamanho da janela de exibição foi definido. Se o tamanho da janela de exibição não foi definido quando `SetScaleToFitSize` é chamado, você obterá uma declaração. Para garantir que isso não aconteça, fazer a chamada a seguir antes de chamar `SetScaleToFitSize`:  
+ `SetScaleToFitSize` pressupõe-se de que o tamanho da janela do modo de exibição foi definido. Se o tamanho da janela de exibição não foi definido quando `SetScaleToFitSize` é chamado, você obterá uma asserção. Para garantir que isso não aconteça, fazer a chamada a seguir antes de chamar `SetScaleToFitSize`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
@@ -312,28 +312,28 @@ void SetScrollSizes(
   
 |Modo de mapeamento|Unidade lógica|Estende positivos do eixo y...|  
 |------------------|------------------|---------------------------------|  
-|`MM_TEXT`|1 pixel|Para baixo|  
-|`MM_HIMETRIC`|mm 0,01|Para cima|  
-|`MM_TWIPS`|1/1440 em|Para cima|  
-|`MM_HIENGLISH`|em 0,001|Para cima|  
-|`MM_LOMETRIC`|0,1 mm|Para cima|  
-|`MM_LOENGLISH`|in 0,01|Para cima|  
+|MM_TEXT|1 pixel|Para baixo|  
+|MM_HIMETRIC|0,01 mm|Para cima|  
+|MM_TWIPS|1/1440 em|Para cima|  
+|MM_HIENGLISH|0,001 pol|Para cima|  
+|MM_LOMETRIC|0,1 mm|Para cima|  
+|MM_LOENGLISH|0,01 pol|Para cima|  
   
- Todos os modos são definidos pelo Windows. Dois modos de mapeamento padrão, `MM_ISOTROPIC` e `MM_ANISOTROPIC`, não são usados para `CScrollView`. A biblioteca de classe fornece a `SetScaleToFitSize` a função de membro para expandir a exibição para o tamanho da janela. A coluna três na tabela acima descreve a orientação de coordenadas.  
+ Todos os modos são definidos pelo Windows. Dois modos de mapeamento padrão, MM_ISOTROPIC e MM_ANISOTROPIC, não são usados para `CScrollView`. A biblioteca de classes fornece o `SetScaleToFitSize` a função de membro para dimensionar o modo de exibição para o tamanho da janela. A coluna três na tabela acima descreve a orientação de coordenadas.  
   
  *sizeTotal*  
- O tamanho total da exibição da rolagem. O **cx** membro contém a extensão horizontal. O **cy** membro contém a extensão vertical. Tamanhos estão em unidades lógicas. Ambos **cx** e **cy** deve ser maior que ou igual a 0.  
+ O tamanho total da exibição da rolagem. O `cx` membro contém a extensão horizontal. O `cy` membro contém a extensão vertical. Tamanhos são em unidades lógicas. Ambos `cx` e `cy` deve ser maior que ou igual a 0.  
   
  *sizePage*  
- Os valores horizontais e verticais para rolar em cada direção em resposta a um mouse clique em um eixo de barra de rolagem. O **cx** membro contém a quantidade horizontal. O **cy** membro contém a quantidade de vertical.  
+ As quantidades horizontais e verticais para rolar em cada direção em resposta a um mouse clique em um eixo de barra de rolagem. O `cx` membro contém a quantidade de horizontal. O `cy` membro contém a quantidade de vertical.  
   
  *sizeLine*  
- Os valores horizontais e verticais para rolar em cada direção em resposta a um mouse clique em uma seta de rolagem. O **cx** membro contém a quantidade horizontal. O **cy** membro contém a quantidade de vertical.  
+ As quantidades horizontais e verticais para rolar em cada direção em resposta a um mouse clique em uma seta de rolagem. O `cx` membro contém a quantidade de horizontal. O `cy` membro contém a quantidade de vertical.  
   
 ### <a name="remarks"></a>Comentários  
- Chamá-la em sua substituição do `OnUpdate` a função de membro para ajustar as características de rolagem quando, por exemplo, o documento é exibido inicialmente ou quando ele altera o tamanho.  
+ Chamá-lo em seu substituto do `OnUpdate` a função de membro para ajustar as características de rolagem quando, por exemplo, o documento é exibido inicialmente ou quando ele altera o tamanho.  
   
- Você geralmente obterá informações sobre o tamanho do documento associado do modo de exibição chamando uma função de membro de documento, talvez chamado `GetMyDocSize`, que você fornece à sua classe derivada de documento. O código a seguir mostra essa abordagem:  
+ Você normalmente irá obter informações sobre o tamanho do documento de associados do modo de exibição, chamando uma função de membro de documento, talvez chamada `GetMyDocSize`, que você fornece a sua classe derivada de documento. O código a seguir mostra essa abordagem:  
   
  [!code-cpp[NVC_MFCDocView#166](../../mfc/codesnippet/cpp/cscrollview-class_3.cpp)]  
   
@@ -341,7 +341,7 @@ void SetScrollSizes(
   
  [!code-cpp[NVC_MFCDocView#167](../../mfc/codesnippet/cpp/cscrollview-class_4.cpp)]  
   
- Você deve definir o modo de mapeamento para qualquer um dos modos de mapeamento de Windows, exceto `MM_ISOTROPIC` ou `MM_ANISOTROPIC`. Se você quiser usar um modo de mapeamento irrestrita, chame o `SetScaleToFitSize` a função de membro em vez de `SetScrollSizes`.  
+ Você deve definir o modo de mapeamento para qualquer um dos modos de mapeamento do Windows, exceto MM_ISOTROPIC ou MM_ANISOTROPIC. Se você quiser usar um modo de mapeamento irrestrita, chame o `SetScaleToFitSize` função de membro em vez de `SetScrollSizes`.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#168](../../mfc/codesnippet/cpp/cscrollview-class_5.cpp)]  
@@ -351,6 +351,6 @@ void SetScrollSizes(
 ## <a name="see-also"></a>Consulte também  
  [Exemplo MFC DIBLOOK](../../visual-cpp-samples.md)   
  [Classe CView](../../mfc/reference/cview-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe CView](../../mfc/reference/cview-class.md)   
  [Classe CSplitterWnd](../../mfc/reference/csplitterwnd-class.md)

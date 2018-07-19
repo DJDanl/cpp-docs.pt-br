@@ -16,20 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d421f00839d21236741e8d33f1415fe129b18c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b7334fdc420c096c42360dd6b75fc400b8b34f3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420289"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941792"
 ---
 # <a name="nonstandard-behavior"></a>Comportamento não padrão
 As seções a seguir listam alguns dos locais em que a implementação de C++ do Visual C++ não cumpre o padrão C++. Os números de seção fornecidos abaixo se referem aos números da seção no padrão C++ 11 (ISO/IEC 14882:2011(E)).  
   
- A lista de limites do compilador diferentes daqueles definidos no C++ padrão é determinada em [limites do compilador](../cpp/compiler-limits.md).  
+ A lista de limites do compilador que diferem daqueles definidos no padrão C++ é fornecida em [limites do compilador](../cpp/compiler-limits.md).  
   
 ## <a name="covariant-return-types"></a>Tipos de retorno covariantes  
- As classes base virtuais não têm suporte como tipo de retorno covariante quando a função virtual tem um número variável de argumentos. Isso não está em conformidade com a seção 10.3, parágrafo 7 da especificação ISO do C++. O exemplo a seguir não é compilado, dando o erro do compilador [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
+ As classes base virtuais não têm suporte como tipo de retorno covariante quando a função virtual tem um número variável de argumentos. Isso não está em conformidade com a seção 10.3, parágrafo 7 da especificação ISO do C++. O exemplo a seguir não é compilado, dando erro do compilador [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
   
 ```cpp  
 // CovariantReturn.cpp  
@@ -78,10 +78,10 @@ void f() throw(int); // parsed but not used
 void g() throw();    // parsed and used  
 ```  
   
- Para obter mais informações sobre as especificações de exceção, consulte [especificações de exceção](../cpp/exception-specifications-throw-cpp.md).  
+ Para obter mais informações sobre especificações de exceção, consulte [especificações de exceção](../cpp/exception-specifications-throw-cpp.md).  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- O padrão C++ estados que [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) não deve corresponder a uma opção válida `char_type` valor. O compilador do Visual C++ impõe essa restrição para o tipo `char`, mas não para o tipo `wchar_t`. Isso não está em conformidade com o requisito da Tabela 62, na seção 12.1.1 da especificação ISO do C++. O exemplo abaixo demonstra isso.  
+ O padrão C++ declara que [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) não deve corresponder a um válido `char_type` valor. O compilador do Visual C++ impõe essa restrição para o tipo **char**, mas não para o tipo `wchar_t`. Isso não está em conformidade com o requisito da Tabela 62, na seção 12.1.1 da especificação ISO do C++. O exemplo abaixo demonstra isso.  
   
 ```cpp  
 #include <iostream>  

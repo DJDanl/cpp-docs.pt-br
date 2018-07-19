@@ -16,31 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03f286f21f213f5b2a193ccb824ba22b7c7c1f00
-ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
+ms.openlocfilehash: f50239d42c164e2f9c6876e26389eb60e710ed34
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "34153113"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940089"
 ---
 # <a name="fastcall"></a>__fastcall
 **Seção específica da Microsoft**  
   
- A convenção de chamada `__fastcall` especifica se os argumentos para funções devem ser passados em registros, quando possível. Esta convenção de chamada se aplica somente à arquitetura x86. A lista a seguir mostra a implementação dessa convenção de chamada.  
+ O **fastcall** convenção de chamada especifica que os argumentos para funções devem ser passados em registros, quando possível. Esta convenção de chamada se aplica somente à arquitetura x86. A lista a seguir mostra a implementação dessa convenção de chamada.  
   
 |Elemento|Implementação|  
 |-------------|--------------------|  
 |Ordem de passagem de argumentos|Os dois primeiros argumentos de DWORD ou menores encontrados na lista de argumentos da esquerda para a direita são passados em registros de ECX e de EDX; todos os outros argumentos são passados na pilha da direita para a esquerda.|  
 |Responsabilidade de manutenção de pilha|A função de chamada retira os argumentos da pilha.|  
-|Convenção de decoração de nome|Sinal de arroba (\@) é antecedido pelos nomes; um arroba seguido pelo número de bytes (em decimal) no parâmetro de lista é o sufixo para nomes.|  
+|Convenção de decoração de nome|Sinal de arroba (\@) é prefixado para nomes; um sinal de arroba seguido pelo número de bytes (em decimais) no parâmetro de lista é como sufixo aos nomes.|  
 |Convenção de conversão de maiúsculas/minúsculas|Nenhuma conversão de maiúsculas/minúsculas é realizada.|  
   
 > [!NOTE]
 >  As versões futuras do compilador podem usar registros diferentes para armazenar parâmetros.  
   
- Usando o [/Gr](../build/reference/gd-gr-gv-gz-calling-convention.md) opção de compilador faz com que cada função no módulo para compilar como `__fastcall` a menos que a função é declarada usando um atributo em conflito, ou o nome da função `main`.  
+ Usando o [/Gr](../build/reference/gd-gr-gv-gz-calling-convention.md) opção de compilador faz com que cada função no módulo seja compilada como **fastcall** , a menos que a função é declarada usando um atributo conflitante ou o nome da função é `main` .  
   
- A palavra-chave `__fastcall` é aceita e ignorada pelos compiladores voltados para arquiteturas ARM e x64; em um chip x64, por convenção, os primeiros quatro argumentos são passados em registros quando possível, e os argumentos adicionais são passados na pilha. Para obter mais informações, consulte [visão geral do x64 convenções de chamada](../build/overview-of-x64-calling-conventions.md). Em um chip ARM, até quatro argumentos inteiros e oito argumentos de ponto flutuante podem ser passados em registros, e os argumentos adicionais são passados na pilha.  
+ O **fastcall** palavra-chave é aceita e ignorada pelos compiladores que direcionam o ARM e x64 arquiteturas; em x64 de chip, por convenção, os primeiros quatro argumentos são passados em registros quando possível e argumentos adicionais são passados na pilha. Para obter mais informações, consulte [visão geral do x64 convenções de chamada](../build/overview-of-x64-calling-conventions.md). Em um chip ARM, até quatro argumentos inteiros e oito argumentos de ponto flutuante podem ser passados em registros, e os argumentos adicionais são passados na pilha.  
   
  Para funções de classe não estáticas, se a função for definida como fora da linha, o modificador da convenção de chamada não precisará ser especificado na definição fora da linha. Ou seja, para métodos de membro de classe não estática, a convenção de chamada especificada durante a declaração é assumida no ponto de definição. Dada esta definição de classe:  
   

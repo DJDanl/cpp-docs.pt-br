@@ -15,22 +15,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d6e916cbd7cd8f5fbb259ff096159f9a49202ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a21b7dd00aa0bb0894da4cc13cf0f6f40078ee1b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412706"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941821"
 ---
 # <a name="compiler-com-support"></a>Suporte para COM do compilador
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
  O compilador do Visual C++ pode ler bibliotecas de tipos COM (Component Object Model) diretamente e converter o conteúdo em um código-fonte do C++ que pode ser incluído na compilação. Há extensões de linguagem disponíveis para facilitar a programação COM do lado do cliente.  
   
- Usando o [diretiva de pré-processador #import](../preprocessor/hash-import-directive-cpp.md), o compilador pode ler uma biblioteca de tipos e converter em um arquivo de cabeçalho do C++ que descreve o COM interfaces como classes. Um conjunto de atributos de `#import` está disponível para o usuário controlar o conteúdo referente aos arquivos resultantes de cabeçalho de biblioteca de tipos.  
+ Usando o [diretiva de pré-processador #import](../preprocessor/hash-import-directive-cpp.md), o compilador pode ler uma biblioteca de tipos e convert-lo em um arquivo de cabeçalho de C++ que descreve o COM interfaces como classes. Um conjunto de atributos de `#import` está disponível para o usuário controlar o conteúdo referente aos arquivos resultantes de cabeçalho de biblioteca de tipos.  
   
- Você pode usar o [declspec](../cpp/declspec.md) atributo estendido [uuid](../cpp/uuid-cpp.md) para atribuir um identificador global exclusivo (GUID) para um objeto COM. A palavra-chave [uuidof](../cpp/uuidof-operator.md) pode ser usado para extrair o GUID associado a um objeto COM. Outro `__declspec` atributo, [propriedade](../cpp/property-cpp.md), pode ser usado para especificar o **obter** e **definir** métodos para um membro de dados de um objeto COM.  
+ Você pode usar o [declspec](../cpp/declspec.md) atributo estendido [uuid](../cpp/uuid-cpp.md) para atribuir um identificador global exclusivo (GUID) para um objeto COM. A palavra-chave [uuidof](../cpp/uuidof-operator.md) pode ser usado para extrair o GUID associado a um objeto COM. Outra `__declspec` atributo, [propriedade](../cpp/property-cpp.md), pode ser usado para especificar o **obter** e **definir** métodos para um membro de dados de um objeto COM.  
   
- Um conjunto de classes e funções globais do COM suporte é fornecido para dar suporte a **VARIANT** e `BSTR` tipos, implementar ponteiros inteligentes e encapsular o objeto de erro gerado pelo `_com_raise_error`:  
+ Um conjunto de classes e funções globais do COM suporte é fornecido para dar suporte a `VARIANT` e `BSTR` tipos, implementar ponteiros inteligentes e encapsular o objeto de erro lançado por `_com_raise_error`:  
   
 -   [Funções globais COM do compilador](../cpp/compiler-com-global-functions.md)  
   

@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6912d410018966432ef66331354213bd70dfa8b
-ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
+ms.openlocfilehash: cd7e7a64b1dfc30d1827da614f67a5b47bd42218
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814333"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942157"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Regras gerais para sobrecarga de operador
-As seguintes regras restringem o modo como os operadores sobrecarregados são implementados. No entanto, não são aplicadas para o [novo](../cpp/new-operator-cpp.md) e [excluir](../cpp/delete-operator-cpp.md) operadores que são abordados separadamente.  
+As seguintes regras restringem o modo como os operadores sobrecarregados são implementados. No entanto, eles não se aplicam para o [novos](../cpp/new-operator-cpp.md) e [excluir](../cpp/delete-operator-cpp.md) operadores, que são cobertos separadamente.  
   
--   Você não pode definir novos operadores, como **.**.  
+-   Você não pode definir novos operadores, tais como **.**.  
   
 -   Você não pode redefinir o significado dos operadores quando aplicados aos tipos de dados internos.  
   
@@ -47,15 +47,15 @@ As seguintes regras restringem o modo como os operadores sobrecarregados são im
     }  
     ```  
   
-     O exemplo de código anterior declara o operador menor que como uma função membro; no entanto, os operadores de adição são declarados como funções globais que têm acesso de amigo. Observe que mais de uma implementação pode ser fornecida para um determinado operador. No caso do operador de adição acima, as duas implementações são fornecidas para facilitar a comutatividade. É tão provável que os operadores que adicionam `Point` a `Point`, `int` a `Point`, e assim por diante, possam ser implementados.  
+     O exemplo de código anterior declara o operador menor que como uma função membro; no entanto, os operadores de adição são declarados como funções globais que têm acesso de amigo. Observe que mais de uma implementação pode ser fornecida para um determinado operador. No caso do operador de adição acima, as duas implementações são fornecidas para facilitar a comutatividade. É tão provável que os operadores que adicionam uma `Point` para um `Point`, **int** para um `Point`e assim por diante, pode ser implementado.  
   
--   Os operadores obedecem a precedência, agrupamento e número de operandos ditados por seu uso típico com tipos internos. Portanto, não há nenhum modo de expressar o conceito "Adicionar 2 e 3 para um objeto do tipo `Point`," esperando 2 a serem adicionadas à *x* coordenada e 3 a serem adicionadas à *y* coordenar.  
+-   Os operadores obedecem a precedência, agrupamento e número de operandos ditados por seu uso típico com tipos internos. Portanto, não há nenhuma maneira para expressar o conceito "Adicionar 2 e 3 para um objeto do tipo `Point`," esperando 2 ser adicionado ao *x* coordenadas e 3 a ser adicionado ao *y* coordenar.  
   
 -   Os operadores unários declarados como funções membro não pegam argumentos; se declarados como funções globais, eles pegam um argumento.  
   
 -   Os operadores binários declarados como funções membro pegam um argumento; se declarados como funções globais, eles pegam dois argumentos.  
   
--   Se um operador pode ser usado como um unário ou um operador binário (__&__, __*__, __+__, e __-__), você pode sobrecarregar cada uso separadamente.  
+-   Se um operador pode ser usado como um unário ou um operador binário (__&__, __*__, __+__, e __-__), você poderá sobrecarregar cada uso separadamente.  
   
 -   Os operadores sobrecarregados não podem ter argumentos padrão.  
   
@@ -63,9 +63,9 @@ As seguintes regras restringem o modo como os operadores sobrecarregados são im
   
 -   O primeiro argumento para operadores sobrecarregados da função membro sempre é do tipo de classe do objeto para o qual o operador é invocado (a classe na qual o operador é declarado, ou uma classe derivada dessa classe.) Nenhuma conversão é fornecida para o primeiro argumento.  
   
- Observe que o significado de qualquer operador pode ser alterado completamente. Que inclui o significado do endereço de (**&**), a atribuição (**=**) e os operadores de chamada de função. Além disso, as identidades que podem ser confiáveis para os tipos internos podem ser modificadas usando a sobrecarga do operador. Por exemplo, as quatro instruções a seguir geralmente são equivalentes quando avaliada completamente:  
+ Observe que o significado de qualquer operador pode ser alterado completamente. Isso inclui o significado do endereço de (**&**), atribuição (**=**) e operadores de chamada de função. Além disso, as identidades que podem ser confiáveis para os tipos internos podem ser modificadas usando a sobrecarga do operador. Por exemplo, as quatro instruções a seguir geralmente são equivalentes quando avaliada completamente:  
   
-```  
+```cpp 
 var = var + 1;  
 var += 1;  
 var++;  

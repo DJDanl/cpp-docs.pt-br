@@ -34,15 +34,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e6c56116c94abeaf4dd266ca823e66c68d099fd
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: e2f53aa98d7743ccee804ed7a89df160368c8a23
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037490"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849153"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Classe CMFCTasksPaneTaskGroup
-O `CMFCTasksPaneTaskGroup` classe é uma classe auxiliar usada pelo [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) controle. Objetos do tipo `CMFCTasksPaneTaskGroup` representar uma *grupo tarefas*. O grupo de tarefas é uma lista de itens que o framework exibe em uma caixa separada que tenha um botão Recolher. A caixa pode ter uma legenda opcional (nome do grupo). Se um grupo estiver recolhido, a lista de tarefas não é visível.  
+O `CMFCTasksPaneTaskGroup` classe é uma classe auxiliar usada pelo [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) controle. Objetos do tipo `CMFCTasksPaneTaskGroup` representam uma *grupo de tarefas*. O grupo de tarefas é uma lista de itens exibida pela estrutura em uma caixa separada que tem um botão de recolhimento. A caixa pode ter uma legenda opcional (nome de grupo). Se um grupo estiver recolhido, a lista de tarefas não está visível.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,15 +63,15 @@ class CMFCTasksPaneTaskGroup : public CObject
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|Determina os dados de acessibilidade para o grupo de tarefas atual.|  
+|[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|Determina os dados de acessibilidade para o grupo de tarefa atual.|  
   
 ### <a name="data-members"></a>Membros de Dados  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Determina se o grupo de tarefas será alinhado à parte inferior do controle de painel de tarefas.|  
+|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Determina se o grupo de tarefas é alinhado à parte inferior do controle do painel de tarefas.|  
 |[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|Determina se o grupo de tarefas é recolhido.|  
-|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|Determina se o grupo de tarefas é *especial.* A estrutura exibe legendas especiais em uma cor diferente.|  
+|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|Determina se o grupo de tarefas é *especial.* O framework exibe legendas especiais em uma cor diferente.|  
 |[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|Contém a lista interna de tarefas.|  
 |[CMFCTasksPaneTaskGroup::m_rect](#m_rect)|Especifica o retângulo delimitador da legenda do grupo.|  
 |[CMFCTasksPaneTaskGroup::m_rectGroup](#m_rectgroup)|Especifica o retângulo delimitador do grupo.|  
@@ -82,7 +82,7 @@ class CMFCTasksPaneTaskGroup : public CObject
   
  ![Grupo de tarefas, expandido](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
   
- A ilustração a seguir mostra um grupo recolhido tarefas:  
+ A ilustração a seguir mostra um grupo de tarefas recolhido:  
   
  ![Grupo de tarefas recolhido](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")  
   
@@ -90,9 +90,9 @@ class CMFCTasksPaneTaskGroup : public CObject
   
  ![Grupo de tarefas sem uma legenda](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")  
   
- A ilustração a seguir mostra dois grupos de tarefas. O primeiro grupo de tarefas está marcado como especial, definindo o `m_bIsSpecial` sinalizador como `TRUE`, enquanto o segundo grupo de tarefas não é especial. Observe como a legenda para o primeiro grupo de tarefas é mais escura do que o segundo grupo de tarefas:  
+ A ilustração a seguir mostra dois grupos de tarefas. O primeiro grupo de tarefas está marcado como especial, definindo o `m_bIsSpecial` sinalizador como TRUE, enquanto o segundo grupo de tarefas não é especial. Observe como a legenda para o primeiro grupo de tarefas é mais escura do que o segundo grupo de tarefas:  
   
- ![Grupo de tarefas especial](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")  
+ ![Grupo de tarefas especiais](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -117,10 +117,10 @@ CMFCTasksPaneTaskGroup(
   
 ### <a name="parameters"></a>Parâmetros  
  *lpszName*  
- Especifica o nome do grupo na legenda do grupo.  
+ Especifica o nome do grupo da legenda do grupo.  
   
  *bIsBottom*  
- Especifica se o grupo é alinhado à parte inferior do controle de painel de tarefas.  
+ Especifica se o grupo é alinhado à parte inferior do controle do painel de tarefas.  
   
  *bIsSpecial*  
  Especifica se o grupo é designado como *especial* e, portanto, se a legenda do grupo é preenchida com uma cor diferente.  
@@ -129,7 +129,7 @@ CMFCTasksPaneTaskGroup(
  Especifica se o grupo é recolhido.  
   
  *Página*  
- Especifica a página de propriedade que este grupo de tarefa pertence.  
+ Especifica a página de propriedade pertencente a esse grupo de tarefas.  
   
  *hIcon*  
  Especifica o ícone exibido na legenda do grupo.  
@@ -137,14 +137,14 @@ CMFCTasksPaneTaskGroup(
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="m_bisbottom"></a>  CMFCTasksPaneTaskGroup::m_bIsBottom  
- Determina se o grupo de tarefas será alinhado à parte inferior do controle de painel de tarefas.  
+ Determina se o grupo de tarefas é alinhado à parte inferior do controle do painel de tarefas.  
   
 ```  
 BOOL m_bIsBottom;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Apenas um grupo pode ser alinhado à parte inferior do controle de painel de tarefas. Este grupo de tarefas deve ser adicionado pela última. Para obter mais informações, consulte [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
+ Apenas um grupo pode ser alinhado à parte inferior do controle do painel de tarefas. Esse grupo de trabalho deve ser adicionado pela última vez. Para obter mais informações, consulte [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
 ##  <a name="m_biscollapsed"></a>  CMFCTasksPaneTaskGroup::m_bIsCollapsed  
  Determina se o grupo de tarefas é recolhido.  
@@ -157,14 +157,14 @@ BOOL m_bIsCollapsed;
  Você pode habilitar ou desabilitar a capacidade de recolher grupos no painel de tarefas chamando [CMFCTasksPane::EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).  
   
 ##  <a name="m_bisspecial"></a>  CMFCTasksPaneTaskGroup::m_bIsSpecial  
- Determina se o grupo de tarefas é *especial* e se a legenda para um grupo de tarefas especial deve ser identificada por uma cor diferente.  
+ Determina se o grupo de tarefas está *especial* e se a legenda para um grupo de tarefas especiais deve ser identificada por uma cor diferente.  
   
 ```  
 BOOL m_bIsSpecial;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Se seu aplicativo estiver usando o tema visual do Windows XP e `m_bIsSpecial` é `FALSE`, a estrutura chama `DrawThemeBackground` com o `EBP_NORMALGROUPBACKGROUND` sinalizador. Se `m_bIsSpecial` é `TRUE`, a estrutura chama `DrawThemeBackground` com o `EBP_SPECIALGROUPBACKGROUND` sinalizador.  
+ Se seu aplicativo estiver usando o tema visual do Windows XP e `m_bIsSpecial` for FALSE, a estrutura chama `DrawThemeBackground` com o sinalizador EBP_NORMALGROUPBACKGROUND. Se `m_bIsSpecial` for TRUE, a estrutura chama `DrawThemeBackground` com o sinalizador EBP_SPECIALGROUPBACKGROUND.  
   
 ##  <a name="m_lsttasks"></a>  CMFCTasksPaneTaskGroup::m_lstTasks  
  Contém a lista interna de tarefas.  
@@ -194,7 +194,7 @@ CRect m_rectGroup;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Esse valor é calculado automaticamente com a estrutura.  
+ Esse valor é calculado automaticamente pela estrutura.  
   
 ##  <a name="m_strname"></a>  CMFCTasksPaneTaskGroup::m_strName  
  Especifica o nome do grupo.  
@@ -207,7 +207,7 @@ CString m_strName;
  Se esse valor estiver vazio, não é exibida na legenda do grupo e o grupo não pode ser recolhido.  
   
 ##  <a name="setaccdata"></a>  CMFCTasksPaneTaskGroup::SetACCData  
- Determina os dados de acessibilidade para o grupo de tarefas atual.  
+ Determina os dados de acessibilidade para o grupo de tarefa atual.  
   
 ```  
 virtual BOOL SetACCData(
@@ -223,10 +223,10 @@ virtual BOOL SetACCData(
  Um objeto do tipo `CAccessibilityData` que é preenchida com os dados de acessibilidade do grupo de tarefas atual.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o *dados* parâmetro estava com êxito preenchida com os dados de acessibilidade do grupo de tarefas atual; caso contrário, `FALSE`.  
+ TRUE se o *dados* parâmetro estava com êxito preenchida com os dados de acessibilidade do grupo de tarefas atual; caso contrário, FALSE.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)   
  [Classe CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)   

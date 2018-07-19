@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295654586a3fe251526a4764d54f80f3a70c7014
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ae3419cc7df0b9ed436981d5e845764a762c8ee8
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423943"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940960"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 Um qualificador de tipo que você pode usar para declarar que um objeto pode ser modificado no programa pelo hardware.  
@@ -37,33 +37,33 @@ volatile declarator ;
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Você pode usar o [/volátil](../build/reference/volatile-volatile-keyword-interpretation.md) opção de compilador para modificar como o compilador interpreta essa palavra-chave.  
+ Você pode usar o [/volatile](../build/reference/volatile-volatile-keyword-interpretation.md) comutador de compilador para modificar como o compilador interpreta essa palavra-chave.  
   
- O Visual Studio interpreta a palavra-chave `volatile` de modo diferente de acordo com a arquitetura de destino. Para ARM, se nenhum **/volátil** opção de compilador for especificada, o compilador executa como se **/volatile:iso** foram especificadas. Para arquiteturas diferentes ARM, se nenhum **/volátil** opção de compilador for especificada, o compilador executa como se **/volatile:ms** foram especificados; portanto, para arquiteturas diferentes de ARM é fortemente Recomendamos que você especificar **/volatile:iso**e usar os primitivos de sincronização explícita e intrínsecos do compilador ao lidar com a memória que é compartilhada entre threads.  
+ Visual Studio interpreta a **volátil** palavra-chave diferente dependendo da arquitetura de destino. Para ARM, se nenhum **/volatile** opção de compilador for especificada, o compilador executa como se **/volatile: ISO** foram especificadas. Para arquiteturas que não sejam ARM, se nenhum **/volátil** opção de compilador for especificada, o compilador executa como se **/volatile: MS** foram especificados; portanto, para arquiteturas diferentes de ARM é fortemente é recomendável que você especificar **/volatile: ISO**e usar primitivos de sincronização explícitos e intrínsecos do compilador quando você está lidando com a memória que é compartilhada entre threads.  
   
- Você pode usar o qualificador `volatile` para fornecer acesso aos locais de memória usados por processos assíncronos, como manipuladores de interrupção.  
+ Você pode usar o **volátil** qualificador para fornecer acesso aos locais de memória que são usados por processos assíncronos, como manipuladores de interrupção.  
   
- Quando `volatile` é usado em uma variável que também tenha o [Restrict](../cpp/extension-restrict.md) palavra-chave, `volatile` terá precedência.  
+ Quando **volátil** é usado em uma variável que também tem a [Restrict](../cpp/extension-restrict.md) palavra-chave **volátil** terá precedência.  
   
- Se um membro `struct` é marcado como `volatile`, `volatile` é propagado para a estrutura inteira. Se uma estrutura não tem um tamanho que pode ser copiado na arquitetura atual usando uma instrução, `volatile` pode ser completamente perdido nessa estrutura.  
+ Se um **struct** membro estiver marcado como **volátil**, em seguida, **volátil** é propagada para a estrutura inteira. Se uma estrutura não tem um comprimento que pode ser copiado na arquitetura atual usando uma instrução, **volátil** pode ser completamente perdido nessa estrutura.  
   
- A palavra-chave `volatile` pode não ter nenhum efeito sobre um campo se uma das seguintes condições for verdadeira:  
+ O **volátil** palavra-chave não pode ter nenhum efeito em um campo se uma das seguintes condições for verdadeira:  
   
 -   O tamanho do campo volátil excede o tamanho máximo que pode ser copiado na arquitetura atual usando uma instrução.  
   
--   O tamanho do contentor `struct` mais externo (ou se for um membro de uma `struct` possivelmente aninhada) excede o tamanho máximo que pode ser copiado para a arquitetura atual usando uma instrução.  
+-   O comprimento do que mais externo contém **struct**— ou se for um membro de um possivelmente aninhada **struct**— excede o tamanho máximo que pode ser copiado na arquitetura atual usando uma instrução.  
   
- Embora o processador não reorganize acessos de memória sem cache, as variáveis sem cache devem ser marcadas como `volatile` para garantir que o compilador não reorganize os acessos de memória.  
+ Embora o processador não reorganize acessos de memória, variáveis não armazenável em cache devem ser marcadas como **volátil** garantir que o compilador não reorganize a memória acessa.  
   
- Objetos que são declarados como `volatile` não são usados em determinadas otimizações porque seus valores podem ser alterados a qualquer momento.  O sistema sempre lê o valor atual de um objeto volátil quando solicitado, mesmo que uma instrução anterior tenha solicitado um valor do mesmo objeto.  Além disso, o valor do objeto é gravado imediatamente na atribuição.  
+ Objetos que são declarados como **volátil** não são usados em determinadas otimizações porque seus valores podem ser alterados a qualquer momento.  O sistema sempre lê o valor atual de um objeto volátil quando solicitado, mesmo que uma instrução anterior tenha solicitado um valor do mesmo objeto.  Além disso, o valor do objeto é gravado imediatamente na atribuição.  
   
 ## <a name="iso-compliant"></a>Compatível com ISO  
- Se você estiver familiarizado com a c# palavra-chave volatile ou familiarizado com o comportamento de `volatile` em versões anteriores do Visual C++, lembre-se que o C++ 11 padrão ISO `volatile` palavra-chave é diferente e tem suporte no Visual Studio quando o [/ volátil: iso](../build/reference/volatile-volatile-keyword-interpretation.md) opção de compilador é especificada. (Para ARM, ela é especificada por padrão). A palavra-chave `volatile` no código C++11 ISO padrão deve ser usada somente para acesso de hardware. Não a use para comunicação entre threads. Para comunicação entre thread, usar mecanismos como [std::atomic\<T >](../standard-library/atomic.md) do [biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md).  
+ Se você estiver familiarizado com a c# palavra-chave volátil ou familiarizado com o comportamento de **volátil** em versões anteriores do Visual C++, lembre-se que o ISO padrão C++11 **volátil** palavra-chave é diferente e é com suporte no Visual Studio quando o [/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md) for especificada a opção de compilador. (Para ARM, ela é especificada por padrão). O **volátil** palavra-chave no C + + 11 padrão ISO código deve ser usada somente para acesso de hardware; não a use para comunicação entre threads. Para comunicação entre threads, use mecanismos como [std:: Atomic\<T >](../standard-library/atomic.md) partir os [biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md).  
   
 ## <a name="end-of-iso-compliant"></a>Fim de compatível com ISO  
   
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
- Quando o **/volatile:ms** é usada a opção de compilador — por padrão quando arquiteturas diferentes ARM são direcionadas — o compilador gera o código extra para manter a ordem entre as referências a objetos voláteis além de manutenção ordenação de referências a outros objetos globais. Em particular:  
+ Quando o **/volatile: MS** é usada a opção de compilador — por padrão quando arquiteturas que não sejam ARM são direcionadas — o compilador gera códigos adicionais para manter a ordem entre referências a objetos voláteis, além de manter ordem para referências a outros objetos globais. Em particular:  
   
 -   Uma gravação em um objeto volátil (também conhecida como gravação volátil) tem semântica de versão; ou seja, uma referência a um objeto global ou estático que ocorre antes de uma gravação em um objeto volátil na sequência da instrução ocorrerá antes dessa gravação volátil no binário compilado.  
   
@@ -72,7 +72,7 @@ volatile declarator ;
  Isso permite que os objetos voláteis sejam usados para versões e bloqueios de memória em aplicativos multithread.  
   
 > [!NOTE]
->  Quando ele se baseia na garantia aprimorada que fornecido quando o **/volatile:ms** opção de compilador é usada, o código é não-portáteis.  
+>  Quando depende da garantia aprimorada que é fornecida quando o **/volatile: MS** opção de compilador é usada, o código é não portátil.  
   
 **Fim da seção específica da Microsoft**  
   

@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f08f0d6ea57aa5a153d190b357785911e64d6f09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c182840ed3592a229b8d6c7b98930ade57a18b25
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358160"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883015"
 ---
 # <a name="crtthreadtraits-class"></a>Classe CRTThreadTraits
-Essa classe fornece a função de criação de um thread do CRT. Use essa classe se o thread de usar funções de CRT.  
+Essa classe fornece a função de criação de um thread de CRT. Use essa classe se o thread usará as funções de CRT.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ class CRTThreadTraits
 ## <a name="remarks"></a>Comentários  
  Características de thread são classes que fornecem uma função de criação de um tipo específico de thread. A função de criação tem a mesma assinatura e a semântica de como o Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) função.  
   
- Características de segmento são usadas por classes a seguir:  
+ Características de thread são usadas pelas classes:  
   
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)  
   
@@ -59,7 +59,7 @@ class CRTThreadTraits
  Se o thread não usando funções de CRT, use [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md) em vez disso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase  
+ **Cabeçalho:** atlbase. h  
   
 ##  <a name="createthread"></a>  CRTThreadTraits::CreateThread  
  Chame essa função para criar um thread que pode usar funções de CRT.  
@@ -75,31 +75,31 @@ static HANDLE CreateThread(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `lpsa`  
+ *lpsa*  
  Os atributos de segurança para o novo thread.  
   
- `dwStackSize`  
+ *dwStackSize*  
  O tamanho da pilha para o novo thread.  
   
- `pfnThreadProc`  
+ *pfnThreadProc*  
  O procedimento de thread do novo thread.  
   
- `pvParam`  
- O parâmetro a ser passado para o procedimento de thread.  
+ *pvParam*  
+ O parâmetro a serem passados ao procedimento de thread.  
   
- `dwCreationFlags`  
+ *dwCreationFlags*  
  A criação de sinalizadores (0 ou CREATE_SUSPENDED).  
   
- `pdwThreadId`  
+ *pdwThreadId*  
  [out] Endereço da variável DWORD que, em caso de sucesso, recebe a ID do thread do thread recém-criado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna o identificador para o thread recém-criado ou NULL em caso de falha. Chamar [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) para obter mais informações sobre o erro.  
+ Retorna o identificador para o thread recém-criado ou nulo, em caso de falha. Chame [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) para obter mais informações sobre o erro.  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) para obter mais informações sobre os parâmetros para essa função.  
+ Ver [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) para obter mais informações sobre os parâmetros para essa função.  
   
- Esta função chama [beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) para criar o thread.  
+ Essa função chama [beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) para criar o thread.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)

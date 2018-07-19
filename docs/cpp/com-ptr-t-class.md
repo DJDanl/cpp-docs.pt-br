@@ -16,26 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ec54735fce39cc54bdb5e396da7c637b889b92c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb343431a52df9fae32bb17f3303738c04385cf5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942144"
 ---
 # <a name="comptrt-class"></a>Classe _com_ptr_t
 **Seção específica da Microsoft**  
   
- Um objeto `_com_ptr_t` encapsula um ponteiro da interface COM e é chamado de ponteiro “inteligente”. Essa classe de modelo gerencia a alocação e desalocação por meio de chamadas de função para o **IUnknown** funções de membro: `QueryInterface`, `AddRef`, e **versão**.  
+ Um objeto `_com_ptr_t` encapsula um ponteiro da interface COM e é chamado de ponteiro “inteligente”. Essa classe de modelo gerencia a alocação de recursos e a desalocação por meio de chamadas de função para o `IUnknown` funções de membro: `QueryInterface`, `AddRef`, e `Release`.  
   
- Um ponteiro inteligente geralmente é referenciado pela definição de typedef fornecida pelo **_COM_SMARTPTR_TYPEDEF** macro. Essa macro usa um nome de interface e o IID e declara uma especialização de `_com_ptr_t` com o nome da interface mais um sufixo de `Ptr`. Por exemplo:  
+ Um ponteiro inteligente é geralmente referenciado pela definição typedef fornecida pela macro com_smartptr_typedef. Essa macro usa um nome de interface e o IID e declara uma especialização de `_com_ptr_t` com o nome da interface mais um sufixo de `Ptr`. Por exemplo:  
   
-```  
+```cpp 
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
 ```  
   
- declara o `_com_ptr_t` especialização **IMyInterfacePtr**.  
+ declara o `_com_ptr_t` especialização `IMyInterfacePtr`.  
   
- Um conjunto de [modelos de função](../cpp/relational-function-templates.md), não os membros do modelo de classe, suporte a comparações com um ponteiro inteligente à direita do operador de comparação.  
+ Um conjunto de [modelos de função](../cpp/relational-function-templates.md), não os membros desse modelo de classe, oferece suporte a comparações com um ponteiro inteligente à direita do operador de comparação.  
   
 ### <a name="construction"></a>Construção  
   
@@ -47,29 +48,29 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[AddRef](../cpp/com-ptr-t-addref.md)|Chamadas de `AddRef` função membro de **IUnknown** no ponteiro de interface encapsulado.|  
+|[AddRef](../cpp/com-ptr-t-addref.md)|Chamadas a `AddRef` função de membro de `IUnknown` no ponteiro de interface encapsulado.|  
 |[Anexar](../cpp/com-ptr-t-attach.md)|Encapsula um ponteiro de interface bruto desse tipo de ponteiro inteligente.|  
-|[CreateInstance](../cpp/com-ptr-t-createinstance.md)|Cria uma nova instância de um objeto, considerando um **CLSID** ou **ProgID**.|  
+|[CreateInstance](../cpp/com-ptr-t-createinstance.md)|Cria uma nova instância de um objeto, considerando um `CLSID` ou `ProgID`.|  
 |[Desanexar](../cpp/com-ptr-t-detach.md)|Extrai e retorna o ponteiro de interface encapsulado.|  
-|[GetActiveObject](../cpp/com-ptr-t-getactiveobject.md)|Anexa a uma instância existente de um objeto, considerando um **CLSID** ou **ProgID**.|  
+|[GetActiveObject](../cpp/com-ptr-t-getactiveobject.md)|Anexa a uma instância existente de um objeto, considerando um `CLSID` ou `ProgID`.|  
 |[GetInterfacePtr](../cpp/com-ptr-t-getinterfaceptr.md)|Retorna o ponteiro de interface encapsulado.|  
-|[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|Chamadas de `QueryInterface` função membro de **IUnknown** no ponteiro de interface encapsulado.|  
-|[Versão](../cpp/com-ptr-t-release.md)|Chamadas de **versão** função membro de **IUnknown** no ponteiro de interface encapsulado.|  
+|[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|Chamadas a `QueryInterface` função de membro de `IUnknown` no ponteiro de interface encapsulado.|  
+|[Versão](../cpp/com-ptr-t-release.md)|Chamadas a `Release` função de membro de `IUnknown` no ponteiro de interface encapsulado.|  
   
 ### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
 |[operador =](../cpp/com-ptr-t-operator-equal.md)|Atribui um novo valor a um objeto `_com_ptr_t` existente.|  
-|[operadores = =,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Compare o objeto de ponteiro inteligente para outro ponteiro inteligente, o ponteiro de interface bruto, ou **nulo**.|  
+|[operadores = =,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Comparar o objeto de ponteiro inteligente com outro ponteiro inteligente, o ponteiro de interface bruto ou NULL.|  
 |[Extratores](../cpp/com-ptr-t-extractors.md)|Extrai o ponteiro de interface COM encapsulado.|  
   
 **Fim da seção específica da Microsoft**  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<comip.h >  
+ **Cabeçalho:** \<comip. h >  
   
- **Lib:** comsuppw.lib ou comsuppwd.lib (consulte [/ZC: (wchar_t é do tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)  
+ **Lib:** comsuppw. lib ou comsuppwd (consulte [/ZC: wchar_t (wchar_t Is Native Type)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)  
   
 ## <a name="see-also"></a>Consulte também  
  [Classes de suporte COM do compilador](../cpp/compiler-com-support-classes.md)

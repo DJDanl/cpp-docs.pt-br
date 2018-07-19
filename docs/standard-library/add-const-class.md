@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e79c06c49c8245da4911e8b72020537aa2e7bb45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eff64a70b2a666a6df081601c0e2a24f04563317
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850672"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954061"
 ---
 # <a name="addconst-class"></a>Classe add_const
 
@@ -37,11 +37,11 @@ struct add_const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` Digite para modificar.
+*Ty* para modificar o tipo.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do modificador de tipo mantém um tipo modificado que será `Ty` se `Ty` for uma referência, uma função ou um tipo qualificado como const, caso contrário, será `const Ty`.
+Uma instância do modificador de tipo mantém um tipo modificado que é *Ty* se *Ty* é uma referência, uma função ou um tipo qualificado como const, caso contrário, `const Ty`.
 
 ## <a name="example"></a>Exemplo
 

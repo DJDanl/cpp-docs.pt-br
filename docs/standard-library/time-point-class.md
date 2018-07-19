@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::chrono [C++], time_point
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b2f425e37d9471db42fa9ceec69048e3936f07c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99209063e8856ffe9ea26ffaaf0917e1f6cd487b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865558"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954254"
 ---
 # <a name="timepoint-class"></a>Classe time_point
 
@@ -111,7 +111,8 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Dur` Um `duration` objeto.
+*Dur*  
+ Um objeto `duration`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -127,7 +128,8 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Dur` Um `duration` objeto.
+*Dur*  
+ Um objeto `duration`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -148,15 +150,17 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Dur` Um [duração](../standard-library/duration-class.md) objeto.
+*Dur*  
+ Um objeto [duration](../standard-library/duration-class.md).
 
-`Tp` Um `time_point` objeto.
+*TP*  
+ Um objeto `time_point`.
 
 ### <a name="remarks"></a>Comentários
 
 O primeiro construtor constrói um objeto cujo valor `duration` armazenado é igual a [duration::zero](../standard-library/duration-class.md#zero).
 
-O segundo construtor constrói um objeto cujo valor de duração armazenado é igual a `Dur`. A menos que `is_convertible<Duration2, duration>`*seja verdadeiro*, o segundo construtor não participará da resolução de sobrecarga. Para obter mais informações, consulte [<type_traits>](../standard-library/type-traits.md).
+O segundo construtor constrói um objeto cujo valor de duração armazenado é igual a *Dur*. A menos que `is_convertible<Duration2, duration>`*seja verdadeiro*, o segundo construtor não participará da resolução de sobrecarga. Para obter mais informações, consulte [<type_traits>](../standard-library/type-traits.md).
 
 O terceiro construtor inicializa seu valor `duration` usando `Tp.time_since_epoch()`.
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17046239cf4ca5cc95afbc709f10b9c8aedaa9fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dd8fe2120ad42d7df223d05a43591937ffcce6e2
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362857"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885383"
 ---
 # <a name="ccomenum-class"></a>Classe CComEnum
 Essa classe define um objeto de enumerador COM base em uma matriz.  
@@ -39,35 +39,35 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `Base`  
- Um enumerador COM ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) interface.  
+ *Base de dados de*  
+ Um enumerador de COM ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) interface.  
   
- `piid`  
+ *piid*  
  Um ponteiro para a ID de interface da interface do enumerador.  
   
- `T`  
+ *T*  
  O tipo de item exposto pela interface do enumerador.  
   
- `Copy`  
- Um homogênea [Copiar classe política](../../atl/atl-copy-policy-classes.md).  
+ *Copiar*  
+ Um homogêneos [copie a classe da diretiva](../../atl/atl-copy-policy-classes.md).  
   
- `ThreadModel`  
- O modelo de threading da classe. Esse parâmetro padrão para o modelo de thread do objeto global usado no seu projeto.  
+ *ThreadModel*  
+ O modelo de threading da classe. Esse parâmetro assume como padrão para o modelo de thread do objeto global usado no seu projeto.  
   
 ## <a name="remarks"></a>Comentários  
- `CComEnum` define um objeto de enumerador COM base em uma matriz. Essa classe é análoga a [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) que implementa um enumerador com base em um contêiner de biblioteca padrão C++. As etapas típicas para usar essa classe são descritas abaixo. Para obter mais informações, consulte [ATL coleções e enumeradores](../../atl/atl-collections-and-enumerators.md).  
+ `CComEnum` define um objeto de enumerador COM base em uma matriz. Essa classe é análoga à [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) que implementa um enumerador com base em um contêiner de biblioteca padrão C++. Etapas típicas para usar essa classe são descritas abaixo. Para obter mais informações, consulte [ATL coleções e enumeradores](../../atl/atl-collections-and-enumerators.md).  
   
 ## <a name="to-use-this-class"></a>Para usar essa classe:  
   
-- `typedef` uma especialização dessa classe.  
+- **TypeDef** uma especialização dessa classe.  
   
--   Use o `typedef` como o argumento de modelo em uma especialização de `CComObject`.  
+-   Use o **typedef** como o argumento de modelo em uma especialização de `CComObject`.  
   
--   Criar uma instância do `CComObject` especialização.  
+-   Criar uma instância da `CComObject` especialização.  
   
 -   Inicializar o objeto de enumerador chamando [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init).  
   
--   Retorna a interface de enumerador para o cliente.  
+-   Retorne a interface de enumerador para o cliente.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `CComObjectRootBase`  
@@ -81,7 +81,7 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
  `CComEnum`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlcom.h  
+ **Cabeçalho:** atlcom  
   
 ## <a name="example"></a>Exemplo  
  O código mostrado abaixo fornece uma função reutilizável para criar e inicializar um objeto de enumerador.  
@@ -92,7 +92,7 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
   
  [!code-cpp[NVC_ATL_COM#33](../../atl/codesnippet/cpp/ccomenum-class_2.h)]  
   
- Esse código cria um `typedef` para `CComEnum` que expõe um vetor de **VARIANT**s por meio de **IEnumVariant** interface. O **CVariantArrayCollection** classe simplesmente especializada **CreateEnumerator** para trabalhar com objetos de enumerador desse tipo e passa os argumentos necessários.  
+ Esse código cria uma **typedef** para `CComEnum` que expõe um vetor de variantes por meio de `IEnumVariant` interface. O `CVariantArrayCollection` classe especializada simplesmente `CreateEnumerator` para trabalhar com objetos de enumerador desse tipo e passa os argumentos necessários.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)   

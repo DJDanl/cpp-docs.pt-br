@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55d9456a62c97a2edf1523634268582a7f568b79
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8b54eb2757f4f58acd0339a058c8bee999b4c8b7
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942118"
 ---
 # <a name="labeled-statements"></a>Instruções rotuladas
 Rótulos são usados para transferir o controle do programa diretamente para a instrução especificada.  
@@ -62,15 +63,15 @@ int main() {
   
 ```  
   
- **Instrução goto**  
+ **A instrução goto**  
   
- A aparência de um *identificador* rótulo no programa de origem declara um rótulo. Somente um [goto](../cpp/goto-statement-cpp.md) instrução pode transferir o controle para um *identificador* rótulo. O fragmento de código a seguir ilustra o uso do `goto` instrução e um *identificador* rótulo:  
+ A aparência de um *identificador* rótulo no programa de origem declara um rótulo. Somente um [goto](../cpp/goto-statement-cpp.md) instrução pode transferir o controle para um *identificador* rótulo. O fragmento de código a seguir ilustra o uso do **goto** instrução e um *identificador* rótulo:  
   
  Um rótulo não pode aparecer sozinho: deve estar sempre anexado a uma instrução. Se for necessário usar um rótulo sozinho, coloque uma instrução nula depois do rótulo.  
   
  O rótulo tem o escopo da função e não pode ser redeclarado dentro da função. No entanto, o mesmo nome pode ser usado como um rótulo em funções diferentes.  
   
-```  
+```cpp 
 // labels_with_goto.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -89,9 +90,9 @@ int main() {
   
  **A instrução case**  
   
- Rótulos que são exibidos após o **caso** palavra-chave também não pode aparecer fora de um `switch` instrução. (Essa restrição também se aplica a **padrão** palavra-chave.) O fragmento de código a seguir mostra o uso correto de **caso** rótulos:  
+ Rótulos que aparecem depois de **caso** palavra-chave também não pode aparecer fora de uma **alternar** instrução. (Essa restrição também se aplica a **padrão** palavra-chave.) O fragmento de código a seguir mostra o uso correto de **caso** rótulos:  
   
-```  
+```cpp 
 // Sample Microsoft Windows message processing loop.  
 switch( msg )  
 {  
@@ -118,9 +119,9 @@ switch( msg )
 ```  
   
 ## <a name="labels-in-the-case-statement"></a>Rótulos na instrução case  
- Rótulos que são exibidos após o **caso** palavra-chave também não pode aparecer fora de um `switch` instrução. (Essa restrição também se aplica a **padrão** palavra-chave.) O fragmento de código a seguir mostra o uso correto de **caso** rótulos:  
+ Rótulos que aparecem depois de **caso** palavra-chave também não pode aparecer fora de uma **alternar** instrução. (Essa restrição também se aplica a **padrão** palavra-chave.) O fragmento de código a seguir mostra o uso correto de **caso** rótulos:  
   
-```  
+```cpp 
 // Sample Microsoft Windows message processing loop.  
 switch( msg )  
 {  
@@ -162,13 +163,13 @@ switch( msg )
 ```  
   
 ## <a name="labels-in-the-goto-statement"></a>Rótulos na instrução goto  
- A aparência de um *identificador* rótulo no programa de origem declara um rótulo. Somente um [goto](../cpp/goto-statement-cpp.md) instrução pode transferir o controle para um *identificador* rótulo. O fragmento de código a seguir ilustra o uso do `goto` instrução e um *identificador* rótulo:  
+ A aparência de um *identificador* rótulo no programa de origem declara um rótulo. Somente um [goto](../cpp/goto-statement-cpp.md) instrução pode transferir o controle para um *identificador* rótulo. O fragmento de código a seguir ilustra o uso do **goto** instrução e um *identificador* rótulo:  
   
  Um rótulo não pode aparecer sozinho: deve estar sempre anexado a uma instrução. Se for necessário usar um rótulo sozinho, coloque uma instrução nula depois do rótulo.  
   
  O rótulo tem o escopo da função e não pode ser redeclarado dentro da função. No entanto, o mesmo nome pode ser usado como um rótulo em funções diferentes.  
   
-```  
+```cpp 
 // labels_with_goto.cpp  
 // compile with: /EHsc  
 #include <iostream>  

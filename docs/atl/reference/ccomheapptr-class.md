@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1937bb96cabfd1a42650e2a27fd04c11aa648f2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3cc64804dbd628669b31de070b0f30aa92a77a3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359052"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884776"
 ---
 # <a name="ccomheapptr-class"></a>Classe CComHeapPtr
-Uma classe de ponteiro inteligente para o gerenciamento de ponteiros de pilha.  
+Uma classe de ponteiro inteligente para gerenciar os ponteiros de pilha.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
+ *T*  
  O tipo de objeto a ser armazenado no heap.  
   
 ## <a name="members"></a>Membros  
@@ -48,7 +48,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 |[CComHeapPtr::CComHeapPtr](#ccomheapptr)|O construtor.|  
   
 ## <a name="remarks"></a>Comentários  
- `CComHeapPtr` deriva `CHeapPtr`, mas usa [CComAllocator](../../atl/reference/ccomallocator-class.md) para alocar memória usando as rotinas de COM. Consulte [CHeapPtr](../../atl/reference/cheapptr-class.md) e [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) para os métodos disponíveis.  
+ `CComHeapPtr` deriva `CHeapPtr`, mas usa [CComAllocator](../../atl/reference/ccomallocator-class.md) para alocar memória usando as rotinas de COM. Ver [CHeapPtr](../../atl/reference/cheapptr-class.md) e [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) para os métodos disponíveis.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
@@ -58,7 +58,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
  `CComHeapPtr`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase  
+ **Cabeçalho:** atlbase. h  
   
 ##  <a name="ccomheapptr"></a>  CComHeapPtr::CComHeapPtr  
  O construtor.  
@@ -69,11 +69,11 @@ explicit CComHeapPtr(T* pData) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pData`  
+ *pData*  
  Um objeto `CComHeapPtr` existente.  
   
 ### <a name="remarks"></a>Comentários  
- O ponteiro de pilha, opcionalmente, pode ser criado usando uma existente `CComHeapPtr` objeto. Nesse caso, o novo `CComHeapPtr` objeto assume a responsabilidade de gerenciar os recursos e o ponteiro.  
+ O ponteiro do heap, opcionalmente, pode ser criado usando uma existente `CComHeapPtr` objeto. Nesse caso, o novo `CComHeapPtr` objeto assume a responsabilidade por gerenciar o novo ponteiro e recursos.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CHeapPtr](../../atl/reference/cheapptr-class.md)   

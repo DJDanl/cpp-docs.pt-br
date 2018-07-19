@@ -23,19 +23,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 764ee2026e0ffcd112f202e0d400805c9df55e0b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c7768558b735644a8f98a9380a509098c62dfeb
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942348"
 ---
 # <a name="using-dllimport-and-dllexport-in-c-classes"></a>Usando o dllimport e o dllexport nas classes do C++
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
- Você pode declarar classes C++ com o **dllimport** ou `dllexport` atributo. Esses formulários implicam que a classe inteira será importada ou exportada. As classes exportadas dessa maneira são chamadas classes exportáveis.  
+ É possível declarar classes C++ com o **dllimport** ou **dllexport** atributo. Esses formulários implicam que a classe inteira será importada ou exportada. As classes exportadas dessa maneira são chamadas classes exportáveis.  
   
  O exemplo a seguir define uma classe exportável. Todas as suas funções de membro e dados estáticos são exportados:  
   
-```  
+```cpp 
 #define DllExport   __declspec( dllexport )  
   
 class DllExport C {  
@@ -44,23 +45,23 @@ class DllExport C {
 };  
 ```  
   
- Observe que o uso explícito do **dllimport** e `dllexport` atributos em membros de uma classe exportável é proibido.  
+ Observe que o uso explícito do **dllimport** e **dllexport** atributos em membros de uma classe exportável é proibido.  
   
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bdllexportclasses"></a> Classes de dllexport  
- Ao declarar uma classe `dllexport`, todos os seus membros de dados estáticos e funções membro são exportados. Você deve fornecer as definições de todos esses membros no mesmo programa. Caso contrário, será gerado um erro de vinculador. A única exceção a essa regra se aplica às funções virtuais puras, para as quais você não precisa fornecer definições explícitas. No entanto, como um destruidor de uma classe abstrata é sempre chamado pelo destruidor da classe base, os destruidores virtuais puros devem fornecer sempre uma definição. Essas regras são as mesmas para classes não exportáveis.  
+##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bdllexportclasses"></a> Classes dllexport  
+ Quando você declara uma classe **dllexport**, todos os seus membros de dados estáticos e funções de membro são exportados. Você deve fornecer as definições de todos esses membros no mesmo programa. Caso contrário, será gerado um erro de vinculador. A única exceção a essa regra se aplica às funções virtuais puras, para as quais você não precisa fornecer definições explícitas. No entanto, como um destruidor de uma classe abstrata é sempre chamado pelo destruidor da classe base, os destruidores virtuais puros devem fornecer sempre uma definição. Essas regras são as mesmas para classes não exportáveis.  
   
  Se você exportar dados do tipo de classe ou de funções que retornarem classes, exporte a classe.  
   
-##  <a name="_pluslang_dllexport_classesdllexportclasses"></a> Classes de DllImport  
- Quando você declara uma classe **dllimport**, todas as suas funções de membro e membros de dados estáticos são importados. Ao contrário do comportamento de **dllimport** e `dllexport` em tipos nonclass, membros de dados estáticos não é possível especificar uma definição no mesmo programa no qual um **dllimport** classe é definida.  
+##  <a name="_pluslang_dllexport_classesdllexportclasses"></a> Classes DllImport  
+ Quando você declara uma classe **dllimport**, todos os seus membros de dados estáticos e funções de membro são importados. Ao contrário do comportamento de **dllimport** e **dllexport** em tipos sem classe, os membros de dados estáticos não é possível especificar uma definição no mesmo programa no qual um **dllimport** classe é definido.  
   
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2binheritanceandexportableclasses"></a> Classes exportáveis e herança  
- Todas as classes base de uma classe exportável devem ser exportáveis. Caso contrário, um aviso do compilador será gerado. Além disso, todos os membros acessíveis que também são classes devem ser exportáveis. Essa regra permite um `dllexport` classe para herdar de um **dllimport** classe e um **dllimport** classe para herdar de um `dllexport` classe (embora o último não é recomendado). Como regra, tudo que pode ser acessado pelo cliente da DLL (de acordo com as regras de acesso do C++) deve fazer parte da interface exportável. Isso inclui os membros de dados confidenciais referenciados em funções integradas.  
+##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2binheritanceandexportableclasses"></a> Herança e Classes exportáveis  
+ Todas as classes base de uma classe exportável devem ser exportáveis. Caso contrário, um aviso do compilador será gerado. Além disso, todos os membros acessíveis que também são classes devem ser exportáveis. Essa regra permite uma **dllexport** classe para herdar de uma **dllimport** classe e uma **dllimport** classe para herdar de uma **dllexport** classe (embora o último não é recomendado). Como regra, tudo que pode ser acessado pelo cliente da DLL (de acordo com as regras de acesso do C++) deve fazer parte da interface exportável. Isso inclui os membros de dados confidenciais referenciados em funções integradas.  
   
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bselectivememberimportexport"></a> Importação/exportação seletiva de membro  
- Como funções de membro e dados estáticos dentro de uma classe implicitamente tem vinculação externa, você pode declará-los com o **dllimport** ou `dllexport` de atributo, a menos que a classe inteira é exportada. Se a classe inteira é importada ou exportada, a declaração explícita de funções de membro e dados como **dllimport** ou `dllexport` é proibido. Se você declarar um membro de dados estáticos em uma definição de classe como `dllexport`, deverá ocorrer uma definição em algum lugar no mesmo programa (assim como ocorre na vinculação externa sem classe).  
+##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bselectivememberimportexport"></a> Importação/exportação seletiva de membros  
+ Como funções de membro e dados estáticos dentro de uma classe têm implicitamente vinculação externa, você pode declará-las com o **dllimport** ou **dllexport** de atributo, a menos que a classe inteira seja exportada. Se a classe inteira for importada ou exportada, a declaração explícita de funções de membro e dados como **dllimport** ou **dllexport** é proibida. Se você declarar um membro de dados estáticos dentro de uma definição de classe como **dllexport**, deverá ocorrer uma definição em algum lugar dentro do mesmo programa (assim como acontece com ocorre na vinculação externa).  
   
- Da mesma forma, você pode declarar membros funções com o **dllimport** ou `dllexport` atributos. Nesse caso, você deve fornecer uma definição de `dllexport` em algum lugar dentro do mesmo programa.  
+ Da mesma forma, você pode declarar funções de membro com o **dllimport** ou **dllexport** atributos. Nesse caso, você deve fornecer um **dllexport** definição em algum lugar dentro do mesmo programa.  
   
  Vale a pena observar vários pontos importantes sobre a importação e a exportação seletiva de membros:  
   
@@ -70,11 +71,11 @@ class DllExport C {
   
 -   Se você tiver uma classe em que usa a importação/exportação seletiva de membros com funções virtuais, as funções deverão estar na interface exportável ou ser definidas como integradas (podem ser vistas pelo cliente).  
   
--   Se você definir um membro como `dllexport` mas não incluí-lo na definição de classe, um erro do compilador será gerado. Você deve definir o membro no cabeçalho da classe.  
+-   Se você definir um membro como **dllexport** , mas não incluí-lo na definição de classe, um erro do compilador será gerado. Você deve definir o membro no cabeçalho da classe.  
   
--   Embora a definição de membros de classe como **dllimport** ou `dllexport` é permitido, você não pode substituir a interface especificada na definição de classe.  
+-   Embora a definição de membros de classe como **dllimport** ou **dllexport** é permitido, você não pode substituir a interface especificada na definição de classe.  
   
--   Se você definir uma função de membro em um local que não seja o corpo da definição de classe na qual ela é declarada, um aviso será gerado se a função é definida como `dllexport` ou **dllimport** (se essa definição é diferente do especificado na declaração da classe).  
+-   Se você definir uma função de membro em um local que não seja o corpo da definição de classe em que você declarou, um aviso será gerado se a função é definida como **dllexport** ou **dllimport** (se este definição é diferente do que o especificado na declaração de classe).  
   
 **Fim da seção específica da Microsoft**  
   

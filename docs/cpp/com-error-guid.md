@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee1952e50251cfac7563357c7626ab8603589e4d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e324a84a16874a7e33f8687943b1302fbdd73a7a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409671"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939020"
 ---
 # <a name="comerrorguid"></a>_com_error::GUID
 **Seção específica da Microsoft**  
   
- Chamadas **IErrorInfo::GetGUID** função.  
+ Chama a função `IErrorInfo::GetGUID`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +37,10 @@ GUID GUID( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna o resultado da **IErrorInfo::GetGUID** para o **IErrorInfo** objeto registrados dentro de `_com_error` objeto. Se nenhum **IErrorInfo** objeto é registrado, ele retorna `GUID_NULL`.  
+ Retorna o resultado da `IErrorInfo::GetGUID` para o `IErrorInfo` registrado no `_com_error` objeto. Se nenhum `IErrorInfo` é registrado, ele retorna GUID_NULL.  
   
 ## <a name="remarks"></a>Comentários  
- Qualquer falha ao chamar o **IErrorInfo::GetGUID** método será ignorado.  
+ Qualquer falha ao chamar o `IErrorInfo::GetGUID` método é ignorado.  
   
  **Fim da seção específica da Microsoft**  
   

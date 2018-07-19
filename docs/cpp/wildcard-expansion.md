@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb58d5da479d686cac0d18c9d36e500bd6b5a632
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f4de54cbbe978534a42dcb9cbfa677eb1597aa5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420638"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939130"
 ---
 # <a name="wildcard-expansion"></a>Expansão de curinga
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
  Você pode usar caracteres curinga — o ponto de interrogação (?) e o asterisco (*) — para especificar argumentos de nome de arquivo e caminho na linha de comando.  
   
- Argumentos de linha de comando são tratados por uma rotina chamada **setargv** (ou **_wsetargv** no ambiente de caractere largo), que por padrão não expandir curingas em cadeias de caracteres separadas no `argv`matriz de cadeia de caracteres. Para obter mais informações sobre como habilitar a expansão de curinga, consulte [expandindo argumentos de curinga](../c-language/expanding-wildcard-arguments.md).  
+ Argumentos de linha de comando são tratados por uma rotina chamada `_setargv` (ou `_wsetargv` no ambiente de caractere largo), que, por padrão, não expande curingas em cadeias de caracteres separadas no `argv` matriz de cadeia de caracteres. Para obter mais informações sobre como habilitar a expansão de curinga, consulte [expandindo argumentos curinga](../c-language/expanding-wildcard-arguments.md).  
   
 **Fim da seção específica da Microsoft**  
   

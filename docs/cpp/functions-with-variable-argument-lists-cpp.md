@@ -19,17 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14bbb56c7ae62bd7ef8c58b45704a4ba809965e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e66ee17f8aa82e46011a78e34baa79b3dea3cdb1
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942124"
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Lista de funções com argumentos variáveis (C++)
-Declarações de função em que o último membro é o botão de reticências (...) pode levar a um número variável de argumentos. Nesses casos, o C++ fornece verificação de tipo apenas para os argumentos explicitamente declarados. Você pode usar listas de argumentos variáveis quando precisar criar uma função tão geral que mesmo o número e os tipos de argumentos possam variar. A família de funções é um exemplo de funções que usam listas de argumentos de variável. `printf` *argumento de declaração de lista*  
+Declarações de função em que o último membro de é o botão de reticências (...) pode levar a um número variável de argumentos. Nesses casos, o C++ fornece verificação de tipo apenas para os argumentos explicitamente declarados. Você pode usar listas de argumentos variáveis quando precisar criar uma função tão geral que mesmo o número e os tipos de argumentos possam variar. A família de funções é um exemplo de funções que usam listas de argumentos variáveis. `printf` *argument-declaration-list*  
   
 ## <a name="functions-with-variable-arguments"></a>Funções com argumentos variáveis  
- Para acessar argumentos após aqueles declarados, usar as macros contidas no arquivo de inclusão padrão \<stdarg.h > conforme descrito abaixo.  
+ Para acessar argumentos após a declaração, use as macros contidos no arquivo de inclusão padrão \<stdarg. h > conforme descrito abaixo.  
   
  **Seção específica da Microsoft**  
   
@@ -39,13 +40,13 @@ Declarações de função em que o último membro é o botão de reticências (.
   
  A declaração de uma função que pega um número variável de argumentos que requer pelo menos um argumento de espaço reservado, mesmo se não for usado. Se esse argumento de espaço reservado não for fornecido, não há como acessar os argumentos restantes.  
   
- Quando os argumentos do tipo `char` são passados como argumentos variáveis, são convertidos para o tipo `int`. Da mesma forma, quando os argumentos de tipo **float** são transmitidos como argumentos de variável, eles são convertidos para o tipo **duplo**. Os argumentos de outros tipos estão sujeitos às promoções integral e de ponto flutuante comuns. Consulte [conversões padrão](standard-conversions.md) para obter mais informações.  
+ Quando os argumentos de tipo **char** são passados como argumentos variáveis, eles serão convertidos ao tipo **int**. Da mesma forma, quando os argumentos de tipo **float** são passados como argumentos variáveis, eles serão convertidos ao tipo **duplo**. Os argumentos de outros tipos estão sujeitos às promoções integral e de ponto flutuante comuns. Ver [conversões padrão](standard-conversions.md) para obter mais informações.  
   
- Funções que exigem listas de variáveis são declaradas usando o botão de reticências (...) na lista de argumentos. Use os tipos e as macros são descritas no \<stdarg.h > incluir arquivo para acesso argumentos que são transmitidos por uma lista de variáveis. Para obter mais informações sobre essas macros, consulte [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). a documentação para a biblioteca de tempo de execução C.  
+ Funções que exigem listas de variáveis são declaradas usando o botão de reticências (...) na lista de argumentos. Usar os tipos e macros que são descritas no \<stdarg. h > incluir arquivo para acessar os argumentos são passados por uma lista de variáveis. Para obter mais informações sobre essas macros, consulte [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). na documentação para a biblioteca de tempo de execução C.  
   
- O exemplo a seguir mostra como as macros funcionam em conjunto com o tipo (declarado em \<stdarg.h >): 
+ O exemplo a seguir mostra como as macros funcionam em conjunto com o tipo (declarado em \<stdarg. h >): 
   
-```  
+```cpp 
 // variable_argument_lists.cpp  
 #include <stdio.h>  
 #include <stdarg.h>  

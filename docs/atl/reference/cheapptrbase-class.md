@@ -23,18 +23,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ca18054509ab069722e632308b4d8f57706e548
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d847c83fce13ea39c3032e7db638a91b1cb7ad85
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364562"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880314"
 ---
 # <a name="cheapptrbase-class"></a>Classe CHeapPtrBase
-Essa classe constitui a base para várias classes de ponteiro inteligente do heap.  
+Essa classe constitui a base para várias classes de ponteiro inteligente de heap.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,11 +44,11 @@ class CHeapPtrBase
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
+ *T*  
  O tipo de objeto a ser armazenado no heap.  
   
- `Allocator`  
- A classe de alocação de memória a ser usado. Por padrão, as rotinas de CRT são usadas para alocar e liberar memória.  
+ *Alocador*  
+ A classe de alocação de memória para usar. Por padrão, as rotinas de CRT são usadas para alocar e liberar memória.  
   
 ## <a name="members"></a>Membros  
   
@@ -63,10 +63,10 @@ class CHeapPtrBase
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CHeapPtrBase::AllocateBytes](#allocatebytes)|Chame esse método para alocar memória.|  
-|[CHeapPtrBase::Attach](#attach)|Chame esse método para assumir a propriedade de um ponteiro existente.|  
-|[CHeapPtrBase::Detach](#detach)|Chame este método para liberar a propriedade de um ponteiro.|  
-|[CHeapPtrBase::Free](#free)|Chame esse método para excluir um objeto que aponta para um `CHeapPtrBase`.|  
-|[CHeapPtrBase::ReallocateBytes](#reallocatebytes)|Chame este método para realocar a memória.|  
+|[CHeapPtrBase::Attach](#attach)|Chame esse método para apropriar-se de um ponteiro existente.|  
+|[CHeapPtrBase::Detach](#detach)|Chame esse método para liberar a propriedade de um ponteiro.|  
+|[CHeapPtrBase::Free](#free)|Chame esse método para excluir um objeto apontado por um `CHeapPtrBase`.|  
+|[CHeapPtrBase::ReallocateBytes](#reallocatebytes)|Chame esse método para realocar a memória.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -74,7 +74,7 @@ class CHeapPtrBase
 |----------|-----------------|  
 |[CHeapPtrBase::operator T *](#operator_t_star)|O operador cast.|  
 |[CHeapPtrBase::operator &](#operator_amp)|A & operador.|  
-|[CHeapPtrBase::operator ->](#operator_ptr)|O operador de ponteiro-para-membro.|  
+|[CHeapPtrBase::operator ->](#operator_ptr)|O operador de ponteiro para membro.|  
 
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
@@ -84,7 +84,7 @@ class CHeapPtrBase
 |[CHeapPtrBase::m_pData](#m_pdata)|A variável de membro de dados de ponteiro.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe constitui a base para várias classes de ponteiro inteligente do heap. As classes derivadas, por exemplo, [CHeapPtr](../../atl/reference/cheapptr-class.md) e [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), adicionar seus próprios operadores e construtores. Consulte essas classes para obter exemplos de implementação.  
+ Essa classe constitui a base para várias classes de ponteiro inteligente de heap. As classes derivadas, por exemplo, [CHeapPtr](../../atl/reference/cheapptr-class.md) e [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), adicionar seus próprios construtores e operadores. Consulte essas classes para obter exemplos de implementação.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcore.h  
@@ -97,28 +97,28 @@ bool AllocateBytes(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nBytes`  
- O número de bytes de memória a ser alocada.  
+ *nBytes*  
+ O número de bytes de memória para alocar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retornará true se a memória com êxito é alocado, false caso contrário.  
+ Retorna VERDADEIRO se a memória com êxito é alocado, false caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Em compilações de depuração, uma falha de asserção ocorrerá se o [CHeapPtrBase::m_pData](#m_pdata) variável de membro atualmente aponta para um valor existente; ou seja, não é igual a NULL.  
   
 ##  <a name="attach"></a>  CHeapPtrBase::Attach  
- Chame esse método para assumir a propriedade de um ponteiro existente.  
+ Chame esse método para apropriar-se de um ponteiro existente.  
   
 ```
 void Attach(T* pData) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pData`  
- O `CHeapPtrBase` objeto será assumir a propriedade deste ponteiro.  
+ *pData*  
+ O `CHeapPtrBase` objeto assumirá a propriedade do ponteiro this.  
   
 ### <a name="remarks"></a>Comentários  
- Quando um `CHeapPtrBase` objeto assume a propriedade de um ponteiro, ele automaticamente excluirá o ponteiro e quaisquer dados alocados quando ele sai do escopo.  
+ Quando um `CHeapPtrBase` objeto assume a propriedade de um ponteiro, ele automaticamente excluirá o ponteiro e todos os dados alocados quando ele sai do escopo.  
   
  Em compilações de depuração, uma falha de asserção ocorrerá se o [CHeapPtrBase::m_pData](#m_pdata) variável de membro atualmente aponta para um valor existente; ou seja, não é igual a NULL.  
   
@@ -133,7 +133,7 @@ void Attach(T* pData) throw();
  Libera todos os recursos alocados.  
   
 ##  <a name="detach"></a>  CHeapPtrBase::Detach  
- Chame este método para liberar a propriedade de um ponteiro.  
+ Chame esse método para liberar a propriedade de um ponteiro.  
   
 ```
 T* Detach() throw();
@@ -146,14 +146,14 @@ T* Detach() throw();
  Libera a propriedade de um ponteiro, define o [CHeapPtrBase::m_pData](#m_pdata) variável de membro para NULL e retorna uma cópia do ponteiro.  
   
 ##  <a name="free"></a>  CHeapPtrBase::Free  
- Chame esse método para excluir um objeto que aponta para um `CHeapPtrBase`.  
+ Chame esse método para excluir um objeto apontado por um `CHeapPtrBase`.  
   
 ```
 void Free() throw();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O objeto apontado pelo `CHeapPtrBase` é liberado e o [CHeapPtrBase::m_pData](#m_pdata) variável de membro é definido como NULL.  
+ O objeto apontado pela `CHeapPtrBase` é liberado e o [CHeapPtrBase::m_pData](#m_pdata) variável de membro é definido como NULL.  
   
 ##  <a name="m_pdata"></a>  CHeapPtrBase::m_pData  
  A variável de membro de dados de ponteiro.  
@@ -163,7 +163,7 @@ T* m_pData;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Essa variável de membro contém as informações do ponteiro.  
+ Essa variável de membro contém as informações de ponteiro.  
   
 ##  <a name="operator_amp"></a>  CHeapPtrBase::operator &amp;  
  A & operador.  
@@ -173,12 +173,12 @@ T** operator&() throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna o endereço do objeto que aponta para o `CHeapPtrBase` objeto.  
+ Retorna o endereço do objeto apontado pelo `CHeapPtrBase` objeto.  
   
 
 ##  <a name="operator_ptr"></a>  CHeapPtrBase::operator-&gt;  
 
- O operador de ponteiro-para-membro.  
+ O operador de ponteiro para membro.  
   
 ```
 T* operator->() const throw();
@@ -188,7 +188,7 @@ T* operator->() const throw();
  Retorna o valor da [CHeapPtrBase::m_pData](#m_pdata) variável de membro.  
   
 ### <a name="remarks"></a>Comentários  
- Use este operador para chamar um método em uma classe que aponta para o `CHeapPtrBase` objeto. Em compilações de depuração, uma falha de asserção ocorrerá se o `CHeapPtrBase` aponta para NULL.  
+ Use este operador para chamar um método em uma classe apontada pelo `CHeapPtrBase` objeto. Em compilações de depuração, uma falha de asserção ocorrerá se o `CHeapPtrBase` aponta para NULL.  
   
 ##  <a name="operator_t_star"></a>  CHeapPtrBase::operator T *  
  O operador cast.  
@@ -201,18 +201,18 @@ operator T*() const throw();
  Retorna [CHeapPtrBase::m_pData](#m_pdata).  
   
 ##  <a name="reallocatebytes"></a>  CHeapPtrBase::ReallocateBytes  
- Chame este método para realocar a memória.  
+ Chame esse método para realocar a memória.  
   
 ```
 bool ReallocateBytes(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nBytes`  
- A nova quantidade de memória a ser alocada em bytes.  
+ *nBytes*  
+ A nova quantidade de memória para alocar, em bytes.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retornará true se a memória com êxito é alocado, false caso contrário.  
+ Retorna VERDADEIRO se a memória com êxito é alocado, false caso contrário.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CHeapPtr](../../atl/reference/cheapptr-class.md)   

@@ -15,25 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf4204e55811cd33fa48e2b3a07d3058100729ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4d64a25475ad7ac40f63d29798768f8f57866b3c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411641"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941619"
 ---
 # <a name="casting-operators"></a>Operadores de conversão
 Há vários operadores de conversão específicos à linguagem C++. Esses operadores são destinados a remover qualquer ambiguidade e perigo inerente no estilo antigo de conversões da linguagem C. Esses operadores são:  
   
--   [dynamic_cast](../cpp/dynamic-cast-operator.md) usada para a conversão de tipos polimórficos.  
+-   [dynamic_cast](../cpp/dynamic-cast-operator.md) usado para a conversão de tipos polimórficos.  
   
--   [static_cast](../cpp/static-cast-operator.md) usada para a conversão de tipos nonpolymorphic.  
+-   [static_cast](../cpp/static-cast-operator.md) usado para a conversão de tipos não polimórficos.  
   
--   [const_cast](../cpp/const-cast-operator.md) usado para remover o `const`, `volatile`, e `__unaligned` atributos.  
+-   [const_cast](../cpp/const-cast-operator.md) usado para remover o **const**, **volátil**, e **unaligned** atributos.  
   
--   [reinterpret_cast](../cpp/reinterpret-cast-operator.md) usado para reinterpretation simple de bits.  
+-   [reinterpret_cast](../cpp/reinterpret-cast-operator.md) usado para a reinterpretação simples de bits.  
   
--   [Safe_cast](../windows/safe-cast-cpp-component-extensions.md) usado para gerar MSIL verificável.  
+-   [Safe_cast](../windows/safe-cast-cpp-component-extensions.md) usado para produzir MSIL verificável.  
   
  Use `const_cast` e `reinterpret_cast` como último recurso, pois esses operadores apresentam os mesmos perigos das conversões antigas. No entanto, ainda são necessários para substituir completamente as conversões antigas.  
   

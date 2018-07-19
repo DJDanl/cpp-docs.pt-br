@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 663d8e24af8362de8ea809bc37a68c33d3278bc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 08d7f5c7c244d242c3d1dd7af7d2c2af017bcc78
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942223"
 ---
 # <a name="variantt-relational-operators"></a>Operadores relacionais _variant_t
 **Seção específica da Microsoft**  
@@ -40,32 +41,28 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      bool operator==(  
-   const VARIANT& varSrc   
-) const;  
 bool operator==(  
-   const VARIANT* pSrc   
-) const;  
+   const VARIANT& varSrc) const;  
+bool operator==(  
+   const VARIANT* pSrc) const;  
 bool operator!=(  
-   const VARIANT& varSrc   
-) const;  
+   const VARIANT& varSrc) const;  
 bool operator!=(  
-   const VARIANT* pSrc   
-) const;  
+   const VARIANT* pSrc) const;  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
  *varSrc*  
- Um **VARIANT** a ser comparado com o `_variant_t` objeto.  
+ Um `VARIANT` a ser comparado com o `_variant_t` objeto.  
   
- `pSrc`  
- Ponteiro para o **VARIANT** a ser comparado com o `_variant_t` objeto.  
+ *pSrc*  
+ Ponteiro para o `VARIANT` a ser comparado com o `_variant_t` objeto.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna **true** se mantém em comparação, **false** se não for.  
+ Retorna **verdadeira** se mantém em comparação, **falso** se não for.  
   
 ## <a name="remarks"></a>Comentários  
- Compara uma `_variant_t` do objeto com um **VARIANT**, teste de igualdade ou de desigualdade.  
+ Compara uma `_variant_t` do objeto com um `VARIANT`, testes de igualdade ou desigualdade.  
   
  **Fim da seção específica da Microsoft**  
   

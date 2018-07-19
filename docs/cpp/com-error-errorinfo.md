@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fbc735dfae1b30209eccfd14f1170826fb07680
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52935c81849ded072cb20d6c835b3a71b66c2871
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410987"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941308"
 ---
 # <a name="comerrorerrorinfo"></a>_com_error::ErrorInfo
 **Seção específica da Microsoft**  
   
- Recupera o **IErrorInfo** objeto transmitido ao construtor.  
+ Recupera o objeto `IErrorInfo` passado para o construtor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +37,10 @@ IErrorInfo * ErrorInfo( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Bruto **IErrorInfo** item passado para o construtor.  
+ O item `IErrorInfo` bruto passado para o construtor.  
   
 ## <a name="remarks"></a>Comentários  
- Recupera o encapsulada **IErrorInfo** item em uma `_com_error` objeto, ou **nulo** se nenhum **IErrorInfo** item é registrado. O chamador deve chamar **versão** no objeto retornado quando terminar de usá-lo.  
+ Recupera encapsulado `IErrorInfo` de item em uma `_com_error` do objeto ou nulo se nenhum `IErrorInfo` item é registrado. O chamador deve chamar `Release` no objeto retornado quando terminar de usá-lo.  
   
  **Fim da seção específica da Microsoft**  
   

@@ -1,5 +1,5 @@
 ---
-title: Funções globais COM mapa | Microsoft Docs
+title: Funções globais de mapa COM | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509479a923203acd80eaac1ef90aa64125d208c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a23dc598d499071183cfcf7b0172611a693e569d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359873"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884230"
 ---
-# <a name="com-map-global-functions"></a>Funções globais COM mapa
-Essas funções fornecem suporte para o mapa COM **IUnknown** implementações.  
+# <a name="com-map-global-functions"></a>Funções globais de mapa COM
+Essas funções fornecem suporte para o mapa COM `IUnknown` implementações.  
   
 |||  
 |-|-|  
-|[AtlInternalQueryInterface](#atlinternalqueryinterface)|Delega para o **IUnknown** de um objeto agregado.|  
-|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Gera código eficiente para comparação de interfaces contra **IUnknown**.|  
+|[AtlInternalQueryInterface](#atlinternalqueryinterface)|Delega para o `IUnknown` de um objeto não agregado.|  
+|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Gera um código eficiente para comparar as interfaces com `IUnknown`.|  
 
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase  
+ **Cabeçalho:** atlbase. h  
 
 ##  <a name="atlinternalqueryinterface"></a>  AtlInternalQueryInterface  
  Recupera um ponteiro para a interface solicitada.  
@@ -48,29 +48,29 @@ HRESULT AtlInternalQueryInterface(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pThis`  
+ *pEsse*  
  [in] Um ponteiro para o objeto que contém o mapa COM interfaces expostas a `QueryInterface`.  
   
- `pEntries`  
- [in] Uma matriz de **_ATL_INTMAP_ENTRY** estruturas que acessam um mapa das interfaces disponíveis.  
+ *pEntries*  
+ [in] Uma matriz de `_ATL_INTMAP_ENTRY` estruturas que acessam um mapa das interfaces disponíveis.  
   
- `iid`  
+ *IID*  
  [in] O GUID da interface que está sendo solicitado.  
   
- `ppvObject`  
- [out] Um ponteiro para o ponteiro de interface especificado em `iid`, ou **nulo** se a interface não foi encontrada.  
+ *ppvObject*  
+ [out] Um ponteiro para o ponteiro de interface especificado na *iid*, ou nulo se a interface não foi encontrada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um dos valores HRESULT padrão.  
   
 ### <a name="remarks"></a>Comentários  
- `AtlInternalQueryInterface` somente lida com interfaces na tabela de mapa COM. Se o objeto é agregado, `AtlInternalQueryInterface` não delegar a externo desconhecido. Você pode inserir interfaces na tabela de mapa COM a macro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) ou uma de suas variantes.  
+ `AtlInternalQueryInterface` somente lida com interfaces na tabela de mapa COM. Se o objeto for agregado, `AtlInternalQueryInterface` não delegar para o externo desconhecido. Você pode inserir interfaces na tabela de mapa COM a macro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) ou uma de suas variantes.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing#94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]  
   
 ##  <a name="inlineisequaliunknown"></a>  InlineIsEqualIUnknown  
- Chamar essa função, no caso especial de testes para **IUnknown**.  
+ Chame essa função, para o caso especial de teste para `IUnknown`.  
   
 ```
 BOOL InlineIsEqualUnknown(REFGUID rguid1);
@@ -78,7 +78,7 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
   
 ### <a name="parameters"></a>Parâmetros  
  *rguid1*  
- [in] O GUID a ser comparado com **IID_IUnknown**.  
+ [in] O GUID a ser comparado com `IID_IUnknown`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções](../../atl/reference/atl-functions.md)   

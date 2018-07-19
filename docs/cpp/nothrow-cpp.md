@@ -17,30 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69a706577cf112c3d8a3b7748f72679f7213936d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7efbd22c846327c5731cf3ab14ba1f2045c8636f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420640"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939143"
 ---
 # <a name="nothrow-c"></a>nothrow (C++)
 
 **Seção específica da Microsoft**
 
-Um atributo `__declspec` estendido que pode ser usado na declaração de funções.
+Um **declspec** atributo estendido que pode ser usado na declaração de funções.
 
 ## <a name="syntax"></a>Sintaxe  
   
-> *tipo de retorno* nothrow [*convenção de chamada*] *nome de função* ([*lista de argumentos*])
+> *tipo de retorno* __declspec(nothrow) [*convenção de chamada*] *nome da função* ([*lista de argumentos*])
 
 ## <a name="remarks"></a>Comentários
 
 É recomendável que todos os novos códigos usem o [noexcept](noexcept-cpp.md) operador em vez de `__declspec(nothrow)`.
 
-Esse atributo diz ao compilador que a função declarada, e as funções que ela chama nunca lançam uma exceção. No entanto, ele não impõe a diretiva. Em outras palavras, ele nunca faz com que [std::terminate](../standard-library/exception-functions.md#terminate) a ser invocado, ao contrário de `noexcept`, ou em **std:c + + 17** (Visual Studio 2017 versão 15.5 e posterior), de modo `throw()`.
+Esse atributo diz ao compilador que a função declarada, e as funções que ela chama nunca lançam uma exceção. No entanto, ele não impõe a diretiva. Em outras palavras, ele nunca faz com que [std:: Terminate](../standard-library/exception-functions.md#terminate) a ser invocado, ao contrário `noexcept`, ou no **/std: c + + 17** (Visual Studio 2017 versão 15.5 e posteriores), de modo `throw()`.
 
-Com o modelo de tratamento de exceções síncronas, agora padrão, o compilador pode eliminar a mecânica de acompanhar o tempo de vida útil de determinados objetos desenroláveis nessa função e reduzir significativamente o tamanho do código. Dada a seguinte diretiva de pré-processador, as declarações de três função abaixo são equivalentes em **/std:c + + 14** modo:
+Com o modelo de tratamento de exceções síncronas, agora padrão, o compilador pode eliminar a mecânica de acompanhar o tempo de vida útil de determinados objetos desenroláveis nessa função e reduzir significativamente o tamanho do código. Dada a seguinte diretiva de pré-processador, as três declarações de função abaixo são equivalentes **/std: c + + 14** modo:
 
 ```cpp
 #define WINAPI __declspec(nothrow) __stdcall
@@ -50,9 +50,9 @@ void __declspec(nothrow) __stdcall f2();
 void __stdcall f3() throw();
 ```
 
-Em **/std:c + + 17** modo, `throw()` não é equivalente a outras pessoas que usam `__declspec(nothrow)` porque ele faz com que `std::terminate` a ser chamado se uma exceção é gerada da função.
+Na **/std:c++17 + + 17** modo, `throw()` não é equivalente de outras pessoas que usam `__declspec(nothrow)` porque ele faz com que `std::terminate` a ser chamado se uma exceção é gerada a partir da função.
 
-O `void __stdcall f3() throw();` declaração usa a sintaxe definida por padrão o C++. No C++ 17 o `throw()` palavra-chave foi preterida.
+O `void __stdcall f3() throw();` declaração usa a sintaxe definida pelo padrão C++. No C++ 17 a `throw()` palavra-chave foi preterida.
 
 **Fim da seção específica da Microsoft**
 

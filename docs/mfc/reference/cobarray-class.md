@@ -52,15 +52,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41165f177671379eecbc700df016cd19aea69962
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: c1c29a317ff2d4d8e40d6aca0d6b46ee3ba2fd88
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040201"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853830"
 ---
 # <a name="cobarray-class"></a>Classe CObArray
-Oferece suporte a matrizes de `CObject` ponteiros.  
+Dá suporte a matrizes de `CObject` ponteiros.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -87,7 +87,7 @@ class CObArray : public CObject
 |[CObArray::FreeExtra](#freeextra)|Libera toda memória não usada acima do limite superior atual.|  
 |[CObArray::GetAt](#getat)|Retorna o valor a um determinado índice.|  
 |[CObArray::GetCount](#getcount)|Obtém o número de elementos nesta matriz.|  
-|[CObArray::GetData](#getdata)|Permite acesso aos elementos na matriz. Pode ser **nulo**.|  
+|[CObArray::GetData](#getdata)|Permite acesso aos elementos na matriz. Pode ser NULL.|  
 |[CObArray::GetSize](#getsize)|Obtém o número de elementos nesta matriz.|  
 |[CObArray::GetUpperBound](#getupperbound)|Retorna o maior índice válido.|  
 |[CObArray::InsertAt](#insertat)|Insere um elemento (ou todos os elementos em outra matriz) em um índice especificado.|  
@@ -105,27 +105,27 @@ class CObArray : public CObject
 |[[CObArray::operator]](#operator_at)|Define ou obtém o elemento no índice especificado.|  
   
 ## <a name="remarks"></a>Comentários  
- Essas matrizes de objetos são semelhantes às matrizes de C, mas eles podem reduzir dinamicamente e cresça conforme necessário.  
+ Essas matrizes de objeto são semelhantes às matrizes do C, mas eles podem reduzir dinamicamente e cresça conforme necessário.  
   
- Índices de matriz sempre começam na posição 0. Você pode decidir se o limite superior de corrigir ou permitir que a matriz expandir quando você adiciona elementos após o limite atual. Memória está alocada continuamente o limite superior, mesmo que alguns elementos são nulos.  
+ Índices de matriz sempre começam na posição 0. Você pode decidir se o limite superior de corrigir ou permitir que a matriz expandir quando você adiciona elementos após o limite atual. Memória é alocada contiguamente ao limite superior, mesmo que alguns elementos são nulos.  
   
- Sob Win32, o tamanho de um `CObArray` objeto é limitado somente a memória disponível.  
+ No Win32, o tamanho de um `CObArray` objeto é limitado somente a memória disponível.  
   
  Assim como acontece com uma matriz de C, o tempo de acesso para um `CObArray` elemento indexado é constante e é independente do tamanho da matriz.  
   
- `CObArray` incorpora a macro IMPLEMENT_SERIAL para dar suporte à serialização e despejo de seus elementos. Se uma matriz de `CObject` ponteiros são armazenados para um arquivo, com o operador sobrecarregado inserção ou com o `Serialize` função de membro, cada `CObject` elemento é, por sua vez, serializado junto com o índice de matriz.  
+ `CObArray` incorpora a macro IMPLEMENT_SERIAL para dar suporte à serialização e despejo de seus elementos. Se uma matriz de `CObject` ponteiros é armazenada em um arquivo, com o operador de inserção sobrecarregado ou com o `Serialize` função de membro, cada `CObject` elemento é, por sua vez, serializado junto com seu índice de matriz.  
   
- Se você precisar de um despejo do indivíduo `CObject` elementos em uma matriz, você deve definir a profundidade do `CDumpContext` objeto como 1 ou maior.  
+ Se você precisar de um despejo do indivíduo `CObject` elementos em uma matriz, você deve definir a profundidade do `CDumpContext` objeto a ser 1 ou maior.  
   
- Quando um `CObArray` objeto é excluído, ou quando seus elementos são removidos, somente o `CObject` ponteiros são removidos, não os objetos que eles fazem referência.  
+ Quando um `CObArray` objeto é excluído, ou quando seus elementos são removidos, somente o `CObject` ponteiros são removidos, não os objetos que fazem referência.  
   
 > [!NOTE]
 >  Antes de usar uma matriz, utilize `SetSize` para estabelecer seu tamanho e alocar memória para ela. Se `SetSize` não for utilizado, incluir elementos à matriz fará com que ela seja frequentemente realocada e copiada. Realocações e cópias frequentes são ineficientes e podem fragmentar a memória.  
   
- Derivação de classe de matriz é semelhante a derivação de lista. Para obter detalhes sobre a derivação de uma classe de lista de finalidade especial, consulte o artigo [coleções](../../mfc/collections.md).  
+ Derivação de classe de matriz é semelhante à derivação de lista. Para obter detalhes sobre a derivação de uma classe de lista de finalidade especial, consulte o artigo [coleções](../../mfc/collections.md).  
   
 > [!NOTE]
->  Você deve usar a macro IMPLEMENT_SERIAL na implementação de sua classe derivada, se você pretende serializar a matriz.  
+>  Você deve usar a macro IMPLEMENT_SERIAL na implementação de sua classe derivada se você deseja serializar a matriz.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -133,10 +133,10 @@ class CObArray : public CObject
  `CObArray`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxcoll.h  
+ **Cabeçalho:** & amp;lt;1}afxcoll.h  
   
 ##  <a name="add"></a>  CObArray::Add  
- Adiciona um novo elemento ao final de uma matriz, aumentando a matriz em 1.  
+ Adiciona um novo elemento ao final de uma matriz, aumentando a matriz de 1.  
   
 ```  
 INT_PTR Add(CObject* newElement);
@@ -150,7 +150,7 @@ INT_PTR Add(CObject* newElement);
  O índice do elemento adicionado.  
   
 ### <a name="remarks"></a>Comentários  
- Se [SetSize](#setsize) foi usado com um *nGrowBy* valor maior que 1, em seguida, memória adicional pode ser alocado. No entanto, o limite superior aumentam em 1 somente.  
+ Se [SetSize](#setsize) foi usado com um *nGrowBy* valor maior que 1, em seguida, memória extra pode ser alocada. No entanto, o limite superior terão um aumento de apenas 1.  
   
  A tabela a seguir mostra outro membro funções que são semelhantes às `CObArray::Add`.  
   
@@ -164,7 +164,7 @@ INT_PTR Add(CObject* newElement);
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**Adicionar INT_PTR (WORD** `newElement` **);**<br /><br /> **Throw (CMemoryException\* );**|  
   
 ### <a name="example"></a>Exemplo  
-  Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista da `CAge` classe usada em todos os exemplos de coleção.  
+  Ver [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista de `CAge` classe usado em todos os exemplos de coleção.  
   
  [!code-cpp[NVC_MFCCollections#75](../../mfc/codesnippet/cpp/cobarray-class_1.cpp)]  
   
@@ -177,7 +177,7 @@ INT_PTR Add(CObject* newElement);
  `[1] = a CAge at $4468 40`  
   
 ##  <a name="append"></a>  CObArray::Append  
- Chame essa função de membro para adicionar o conteúdo de outro conjunto no final da matriz fornecida.  
+ Chame essa função de membro para adicionar o conteúdo de outra matriz até o final da matriz especificada.  
   
 ```  
 INT_PTR Append(const CObArray& src);
@@ -185,15 +185,15 @@ INT_PTR Append(const CObArray& src);
   
 ### <a name="parameters"></a>Parâmetros  
  *src*  
- Fonte dos elementos a serem acrescentados à matriz.  
+ Origem dos elementos a ser acrescentado à matriz.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O índice do primeiro elemento anexado.  
+ O índice do primeiro elemento acrescentado.  
   
 ### <a name="remarks"></a>Comentários  
  As matrizes devem ser do mesmo tipo.  
   
- Se necessário, `Append` pode alocar memória adicional para acomodar os elementos anexados à matriz.  
+ Se necessário, `Append` pode alocar memória extra para acomodar os elementos acrescentados à matriz.  
   
  A tabela a seguir mostra outro membro funções que são semelhantes às `CObArray::Append`.  
   
@@ -207,12 +207,12 @@ INT_PTR Append(const CObArray& src);
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**Acrescentar INT_PTR (const CWordArray &** *src* **);**|  
   
 ### <a name="example"></a>Exemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista da `CAge` classe usada em todos os exemplos de coleção.  
+ Ver [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista de `CAge` classe usado em todos os exemplos de coleção.  
   
  [!code-cpp[NVC_MFCCollections#76](../../mfc/codesnippet/cpp/cobarray-class_2.cpp)]  
   
 ##  <a name="copy"></a>  CObArray::Copy  
- Chame essa função de membro para substituir os elementos da matriz fornecida com os elementos da matriz outra do mesmo tipo.  
+ Chame essa função de membro para substituir os elementos da matriz especificada com os elementos de outra matriz do mesmo tipo.  
   
 ```  
 void Copy(const CObArray& src);
@@ -220,10 +220,10 @@ void Copy(const CObArray& src);
   
 ### <a name="parameters"></a>Parâmetros  
  *src*  
- Fonte dos elementos a serem copiados para a matriz.  
+ Origem dos elementos a serem copiados para a matriz.  
   
 ### <a name="remarks"></a>Comentários  
- `Copy` não libera memória; No entanto, se necessário, `Copy` pode alocar memória adicional para acomodar os elementos copiados para a matriz.  
+ `Copy` não libera memória; No entanto, se necessário, `Copy` pode alocar memória extra para acomodar os elementos copiados para a matriz.  
   
  A tabela a seguir mostra outro membro funções que são semelhantes às `CObArray::Copy`.  
   
@@ -237,7 +237,7 @@ void Copy(const CObArray& src);
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**anular copiar (const CWordArray &** *src* **);**|  
   
 ### <a name="example"></a>Exemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista da `CAge` classe usada em todos os exemplos de coleção.  
+ Ver [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista de `CAge` classe usado em todos os exemplos de coleção.  
   
  [!code-cpp[NVC_MFCCollections#77](../../mfc/codesnippet/cpp/cobarray-class_3.cpp)]  
   
@@ -251,16 +251,16 @@ CObArray();
 ### <a name="remarks"></a>Comentários  
  A matriz aumenta um elemento por vez.  
   
- A tabela a seguir mostra outros construtores que são semelhantes às `CObArray::CObArray`.  
+ A tabela a seguir mostra outros construtores que são semelhantes aos `CObArray::CObArray`.  
   
 |Classe|Construtor|  
 |-----------|-----------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**() CByteArray;**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**() CDWordArray;**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**() CPtrArray;**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**() CStringArray;**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**() CUIntArray;**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**() CWordArray;**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**(De) CByteArray;**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**(De) CDWordArray;**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**(De) CPtrArray;**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**(De) CStringArray;**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**(De) CUIntArray;**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**(De) CWordArray;**|  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCCollections#78](../../mfc/codesnippet/cpp/cobarray-class_4.cpp)]  
@@ -280,7 +280,7 @@ CObject*& ElementAt(INT_PTR nIndex);
  Uma referência a um `CObject` ponteiro.  
   
 ### <a name="remarks"></a>Comentários  
- Ele é usado para implementar o operador de atribuição da esquerda para matrizes. Observe que se trata de uma função avançada que deve ser usada somente para implementar operadores especiais de matriz.  
+ Ele é usado para implementar o operador de atribuição do lado esquerdo para matrizes. Observe que se trata de uma função avançada que deve ser usada somente para implementar os operadores especiais de matriz.  
   
  A tabela a seguir mostra outro membro funções que são semelhantes às `CObArray::ElementAt`.  
   
@@ -294,31 +294,31 @@ CObject*& ElementAt(INT_PTR nIndex);
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**PALAVRA & ElementAt (INT_PTR** `nIndex` **);**|  
   
 ### <a name="example"></a>Exemplo  
-  Consulte o exemplo para [CObArray::GetSize](#getsize).  
+  Veja o exemplo de [CObArray::GetSize](#getsize).  
   
 ##  <a name="freeextra"></a>  CObArray::FreeExtra  
- Libera qualquer memória extra que foi alocada enquanto a matriz foi aumentada.  
+ Libera a memória extra que foi alocada enquanto a matriz foi aumentada.  
   
 ```  
 void FreeExtra();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Essa função não tem efeito sobre o tamanho ou o limite superior da matriz.  
+ Essa função não tem nenhum efeito sobre o tamanho ou o limite superior da matriz.  
   
  A tabela a seguir mostra outro membro funções que são semelhantes às `CObArray::FreeExtra`.  
   
 |Classe|Função membro|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void () FreeExtra;**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void () FreeExtra;**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void () FreeExtra;**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void () FreeExtra;**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void () FreeExtra;**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void () FreeExtra;**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void (de) FreeExtra;**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void (de) FreeExtra;**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void (de) FreeExtra;**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void (de) FreeExtra;**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void (de) FreeExtra;**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void (de) FreeExtra;**|  
   
 ### <a name="example"></a>Exemplo  
-  Consulte o exemplo para [CObArray::GetData](#getdata).  
+  Veja o exemplo de [CObArray::GetData](#getdata).  
   
 ##  <a name="getat"></a>  CObArray::GetAt  
  Retorna o elemento de matriz no índice especificado.  
@@ -332,7 +332,7 @@ CObject* GetAt(INT_PTR nIndex) const;
  Um índice de inteiro que é maior que ou igual a 0 e menor ou igual ao valor retornado por `GetUpperBound`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O `CObject` elemento ponteiro no momento nesse índice.  
+ O `CObject` elemento ponteiro no momento, esse índice.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -343,15 +343,15 @@ CObject* GetAt(INT_PTR nIndex) const;
   
 |Classe|Função membro|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**GetAt bytes (INT_PTR** `nIndex` **) const;**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**GetAt DWORD (INT_PTR** `nIndex` **) const;**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**BYTES GetAt (INT_PTR** `nIndex` **) const;**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD GetAt (INT_PTR** `nIndex` **) const;**|  
 |[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\* GetAt (INT_PTR** `nIndex` **) const;**|  
 |[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString GetAt (INT_PTR** `nIndex` **) const;**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**GetAt UINT (INT_PTR** `nIndex` **) const;**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT GetAt (INT_PTR** `nIndex` **) const;**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD GetAt (INT_PTR** `nIndex` **) const;**|  
   
 ### <a name="example"></a>Exemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista da `CAge` classe usada em todos os exemplos de coleção.  
+ Ver [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista de `CAge` classe usado em todos os exemplos de coleção.  
   
  [!code-cpp[NVC_MFCCollections#79](../../mfc/codesnippet/cpp/cobarray-class_5.cpp)]  
   
@@ -366,7 +366,7 @@ INT_PTR GetCount() const;
  O número de itens na matriz.  
   
 ### <a name="remarks"></a>Comentários  
- Chame esse método para recuperar o número de elementos na matriz. Como os índices com base em zero, o tamanho é maior que o maior índice de 1.  
+ Chame esse método para recuperar o número de elementos na matriz. Porque os índices são baseados em zero, o tamanho é maior que o maior índice de 1.  
   
  A tabela a seguir mostra outro membro funções que são semelhantes às `CObArray::GetCount`.  
   
@@ -380,12 +380,12 @@ INT_PTR GetCount() const;
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**() GetCount INT_PTR const;**|  
   
 ### <a name="example"></a>Exemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista da `CAge` classe usada em todos os exemplos de coleção.  
+ Ver [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista de `CAge` classe usado em todos os exemplos de coleção.  
   
  [!code-cpp[NVC_MFCCollections#80](../../mfc/codesnippet/cpp/cobarray-class_6.cpp)]  
   
 ##  <a name="getdata"></a>  CObArray::GetData  
- Use esta função de membro para obter acesso direto aos elementos na matriz.  
+ Use essa função de membro para obter acesso direto aos elementos na matriz.  
   
 ```  
 const CObject** GetData() const;  
@@ -397,23 +397,23 @@ CObject** GetData();
  Um ponteiro para a matriz de `CObject` ponteiros.  
   
 ### <a name="remarks"></a>Comentários  
- Se nenhum elemento estiver disponível, `GetData` retorna um valor nulo.  
+ Se nenhum elemento estiverem disponível, `GetData` retorna um valor nulo.  
   
- Enquanto o acesso direto aos elementos de uma matriz pode ajudá-lo a trabalhar mais rapidamente, tenha cuidado ao chamar `GetData`; os erros que você fizer diretamente afetam os elementos da sua matriz.  
+ Embora o acesso direto aos elementos de uma matriz pode ajudá-lo a trabalhar mais rapidamente, tenha cuidado ao chamar `GetData`; os erros que você fizer diretamente afetam os elementos da matriz.  
   
  A tabela a seguir mostra outro membro funções que são semelhantes às `CObArray::GetData`.  
   
 |Classe|Função membro|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**BYTES const\* GetData () const; BYTES\* GetData (de);**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**BYTES de const\* GetData () de const; BYTES\* GetData (de);**|  
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**Const DWORD\* GetData () const; DWORD\* GetData (de);**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void const\* \* (GetData) const; void\* \* GetData (de);**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**Const CString\* GetData () const; CString\* GetData (de);**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT const\* GetData () const; UINT\* GetData (de);**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD const\* GetData () const; WORD\* GetData (de);**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**Const void\* \* (GetData) const; void\* \* GetData (de);**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**Const CString\* GetData () de const; CString\* GetData (de);**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT const\* GetData () de const; UINT\* GetData (de);**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD const\* GetData () de const; WORD\* GetData (de);**|  
   
 ### <a name="example"></a>Exemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista da `CAge` classe usada em todos os exemplos de coleção.  
+ Ver [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista de `CAge` classe usado em todos os exemplos de coleção.  
   
  [!code-cpp[NVC_MFCCollections#81](../../mfc/codesnippet/cpp/cobarray-class_7.cpp)]  
   
@@ -425,7 +425,7 @@ INT_PTR GetSize() const;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Como os índices com base em zero, o tamanho é maior que o maior índice de 1.  
+ Uma vez que os índices são baseados em zero, o tamanho é maior que o maior índice de 1.  
   
  A tabela a seguir mostra outro membro funções que são semelhantes às `CObArray::GetSize`.  
   
@@ -439,7 +439,7 @@ INT_PTR GetSize() const;
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**() GetSize INT_PTR const;**|  
   
 ### <a name="example"></a>Exemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista da `CAge` classe usada em todos os exemplos de coleção.  
+ Ver [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista de `CAge` classe usado em todos os exemplos de coleção.  
   
  [!code-cpp[NVC_MFCCollections#82](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]  
   
@@ -451,12 +451,12 @@ INT_PTR GetUpperBound() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- O índice do limite superior (com base em zero).  
+ O índice do limite superior (baseado em zero).  
   
 ### <a name="remarks"></a>Comentários  
- Como os índices de matriz são baseadas em zero, essa função retorna um valor de 1 menor `GetSize`.  
+ Como os índices de matriz são com base em zero, essa função retorna um valor de 1 menor que `GetSize`.  
   
- A condição **(GetUpperBound)** = -1 indica que a matriz não contém elementos.  
+ A condição `GetUpperBound( )` = -1 indica que a matriz não contém elementos.  
   
  A tabela a seguir mostra outro membro funções que são semelhantes às `CObArray::GetUpperBound`.  
   
@@ -470,7 +470,7 @@ INT_PTR GetUpperBound() const;
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**() GetUpperBound INT_PTR const;**|  
   
 ### <a name="example"></a>Exemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista da `CAge` classe usada em todos os exemplos de coleção.  
+ Ver [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista de `CAge` classe usado em todos os exemplos de coleção.  
   
  [!code-cpp[NVC_MFCCollections#83](../../mfc/codesnippet/cpp/cobarray-class_9.cpp)]  
   
@@ -491,40 +491,40 @@ void InsertAt(
   
 ### <a name="parameters"></a>Parâmetros  
  *nIndex*  
- Um índice de inteiro pode ser maior que o valor retornado por `GetUpperBound`.  
+ Um índice de inteiro que pode ser maior que o valor retornado por `GetUpperBound`.  
   
  *newElement*  
- O `CObject` ponteiro sejam colocados nessa matriz. Um *newElement* do valor **nulo** é permitido.  
+ O `CObject` ponteiro a ser colocado nesta matriz. Um *newElement* de valor NULL é permitido.  
   
  *nCount*  
  O número de vezes que esse elemento deve ser inserido (o padrão é 1).  
   
  *nStartIndex*  
- Um índice de inteiro pode ser maior que o valor retornado por `GetUpperBound`.  
+ Um índice de inteiro que pode ser maior que o valor retornado por `GetUpperBound`.  
   
  *pNewArray*  
- Outra matriz que contém os elementos a serem adicionados a essa matriz.  
+ Outra matriz que contém elementos a serem adicionados a essa matriz.  
   
 ### <a name="remarks"></a>Comentários  
- A primeira versão do `InsertAt` insere um elemento (ou várias cópias de um elemento) em um índice especificado em uma matriz. No processo, desloca para cima (aumentando o índice) do elemento existente nesse índice e desloca a todos os elementos acima dele.  
+ A primeira versão do `InsertAt` insere um elemento (ou várias cópias de um elemento) em um índice especificado em uma matriz. No processo, ele desloca-se (incrementando o índice) ao elemento existente neste índice e ele desloca-se todos os elementos acima dele.  
   
- A segunda versão insere todos os elementos de outro `CObArray` coleção, a partir de *nStartIndex* posição.  
+ A segunda versão insere todos os elementos de outro `CObArray` coleção, começando na *nStartIndex* posição.  
   
- O `SetAt` função, por outro lado, substitui um elemento da matriz especificada e não deslocar a todos os elementos.  
+ O `SetAt` função, por outro lado, substitui um elemento da matriz especificada e não mudar todos os elementos.  
   
  A tabela a seguir mostra outro membro funções que são semelhantes às `CObArray::InsertAt`.  
   
 |Classe|Função membro|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, BYTE** `newElement` **, int** `nCount` **= 1);**<br /><br /> **Throw (CMemoryException\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CByteArray\***  `pNewArray` **);**<br /><br /> **Throw (CMemoryException\* );**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, bytes** `newElement` **, int** `nCount` **= 1);**<br /><br /> **Throw (CMemoryException\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CByteArray\***  `pNewArray` **);**<br /><br /> **Throw (CMemoryException\* );**|  
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, DWORD** `newElement` **, int** `nCount` **= 1);**<br /><br /> **Throw (CMemoryException\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CDWordArray\***  `pNewArray` **);**<br /><br /> **Throw (CMemoryException\* );**|  
 |[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, void\***  `newElement` **, int** `nCount` **= 1);**<br /><br /> **Throw (CMemoryException\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CPtrArray\***  `pNewArray` **);**<br /><br /> **Throw (CMemoryException\* );**|  
 |[CStringArray](../../mfc/reference/cstringarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, LPCTSTR** `newElement` **, int** `nCount` **= 1);**<br /><br /> **Throw (CMemoryException\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CStringArray\***  `pNewArray` **);**<br /><br /> **Throw (CMemoryException\* );**|  
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, UINT** `newElement` **, int** `nCount` **= 1);**<br /><br /> **Throw (CMemoryException\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CUIntArray\***  `pNewArray` **);**<br /><br /> **Throw (CMemoryException\* );**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, WORD** `newElement` **, int** `nCount` **= 1);**<br /><br /> **Throw (CMemoryException\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CWordArray\***  `pNewArray` **);**<br /><br /> **Throw (CMemoryException\* );**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, o WORD** `newElement` **, int** `nCount` **= 1);**<br /><br /> **Throw (CMemoryException\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, CWordArray\***  `pNewArray` **);**<br /><br /> **Throw (CMemoryException\* );**|  
   
 ### <a name="example"></a>Exemplo  
-  Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista da `CAge` classe usada em todos os exemplos de coleção.  
+  Ver [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista de `CAge` classe usado em todos os exemplos de coleção.  
   
  [!code-cpp[NVC_MFCCollections#84](../../mfc/codesnippet/cpp/cobarray-class_10.cpp)]  
   
@@ -557,28 +557,28 @@ CObject* operator[](int_ptr nindex) const;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O operador primeiro, chamado de matrizes que não são **const**, pode ser usado em à direita (r) ou à esquerda (l-value) de uma instrução de atribuição. A segunda chamada para **const** matrizes, pode ser usado somente no lado direito.  
+ O primeiro operador, chamado para matrizes que não sejam **const**, pode ser usada em (r-Value) direita ou esquerda (l-value) de uma instrução de atribuição. A segunda chamada para **const** matrizes, podem ser usados somente no lado direito.  
   
- A versão de depuração da biblioteca declara se subscrito (tanto no lado esquerdo ou direito de uma instrução de atribuição) está fora dos limites.  
+ A versão de depuração da biblioteca declara se o subscrito (tanto no lado esquerdo ou direito de uma instrução de atribuição) está fora dos limites.  
   
- A tabela a seguir mostra os outros operadores que são semelhantes às **[CObArray::operator]**.  
+ A tabela a seguir mostra outros operadores que são semelhantes aos `CObArray::operator []`.  
   
 |Classe|Operador|  
 |-----------|--------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**[] Do operador & bytes (int_ptr** `nindex`  **\);**<br /><br /> **Operador BYTE [] (int_ptr** `nindex`  **\) const;**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**[] Do operador & DWORD (int_ptr** `nindex`  **\);**<br /><br /> **DWORD operador [] (int_ptr** `nindex`  **\) const;**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\*& operador [] (int_ptr** `nindex`  **\);**<br /><br /> **void\* operador [] (int_ptr** `nindex`  **\) const;**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**[] CString & operador (int_ptr** `nindex`  **\);**<br /><br /> **CString operador [] (int_ptr** `nindex`  **\) const;**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**[] Do operador & UINT (int_ptr** `nindex`  **\);**<br /><br /> **UINT operador [] (int_ptr** `nindex`  **\) const;**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**[] Do operador & WORD (int_ptr** `nindex`  **\);**<br /><br /> **WORD operador [] (int_ptr** `nindex`  **\) const;**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**[] Operador & bytes (int_ptr** `nindex`  **\);**<br /><br /> **BYTE [] de operador (int_ptr** `nindex`  **\) const;**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**[] Operador & DWORD (int_ptr** `nindex`  **\);**<br /><br /> **DWORD operator [] (int_ptr** `nindex`  **\) const;**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\*& operador [] (int_ptr** `nindex`  **\);**<br /><br /> **void\* operator [] (int_ptr** `nindex`  **\) const;**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**[] Operador & CString (int_ptr** `nindex`  **\);**<br /><br /> **CString operator [] (int_ptr** `nindex`  **\) const;**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**[] Operador & UINT (int_ptr** `nindex`  **\);**<br /><br /> **UINT operator [] (int_ptr** `nindex`  **\) const;**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**[] Operador & palavra (int_ptr** `nindex`  **\);**<br /><br /> **WORD operator [] (int_ptr** `nindex`  **\) const;**|  
   
 ### <a name="example"></a>Exemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista da `CAge` classe usada em todos os exemplos de coleção.  
+ Ver [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista de `CAge` classe usado em todos os exemplos de coleção.  
   
  [!code-cpp[NVC_MFCCollections#88](../../mfc/codesnippet/cpp/cobarray-class_11.cpp)]  
   
 ##  <a name="removeall"></a>  CObArray::RemoveAll  
- Remove todos os ponteiros dessa matriz, mas, na verdade, não exclui o `CObject` objetos.  
+ Remove todos os ponteiros dessa matriz, mas não exclui o `CObject` objetos.  
   
 ```  
 void RemoveAll();
@@ -593,15 +593,15 @@ void RemoveAll();
   
 |Classe|Função membro|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void () RemoveAll;**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void () RemoveAll;**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void () RemoveAll;**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void () RemoveAll;**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void () RemoveAll;**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void () RemoveAll;**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void (de) RemoveAll;**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void (de) RemoveAll;**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void (de) RemoveAll;**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void (de) RemoveAll;**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void (de) RemoveAll;**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void (de) RemoveAll;**|  
   
 ### <a name="example"></a>Exemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista da `CAge` classe usada em todos os exemplos de coleção.  
+ Ver [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista de `CAge` classe usado em todos os exemplos de coleção.  
   
  [!code-cpp[NVC_MFCCollections#85](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]  
   
@@ -624,9 +624,9 @@ void RemoveAt(
 ### <a name="remarks"></a>Comentários  
  O processo, ele muda para baixo de todos os elementos acima do elemento removido (s). Ele diminui a superior associado da matriz, mas não libera memória.  
   
- Se você tentar remover mais elementos que estão contidos na matriz acima do ponto de remoção, declara a versão de depuração da biblioteca.  
+ Se você tentar remover mais elementos que estão contidos na matriz acima do ponto de remoção, a versão de depuração da biblioteca de declarações.  
   
- O `RemoveAt` função remove o `CObject` ponteiro de matriz, mas ele não exclui o objeto propriamente dito.  
+ O `RemoveAt` função remove o `CObject` ponteiro de matriz, mas ele não exclui o objeto em si.  
   
  A tabela a seguir mostra outro membro funções que são semelhantes às `CObArray::RemoveAt`.  
   
@@ -640,7 +640,7 @@ void RemoveAt(
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAt (INT_PTR** `nIndex` **, INT_PTR** *nCount* **= 1);**|  
   
 ### <a name="example"></a>Exemplo  
-  Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista da `CAge` classe usada em todos os exemplos de coleção.  
+  Ver [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista de `CAge` classe usado em todos os exemplos de coleção.  
   
  [!code-cpp[NVC_MFCCollections#112](../../mfc/codesnippet/cpp/cobarray-class_13.cpp)]  
   
@@ -664,26 +664,26 @@ void SetAt(
  Um índice de inteiro que é maior que ou igual a 0 e menor ou igual ao valor retornado por `GetUpperBound`.  
   
  *newElement*  
- O ponteiro de objeto a ser inserido nesta matriz. Um **nulo** valor permitido.  
+ O ponteiro de objeto a ser inserido nesta matriz. Um valor NULL é permitido.  
   
 ### <a name="remarks"></a>Comentários  
- `SetAt` não fará com que a matriz de crescimento. Use `SetAtGrow` se você quiser que a matriz para crescer automaticamente.  
+ `SetAt` não fará com que a matriz a crescer. Use `SetAtGrow` se você quiser que a matriz para crescer automaticamente.  
   
- Certifique-se de que o valor de índice representa uma posição válida na matriz. Se ele está fora dos limites, declara a versão de depuração da biblioteca.  
+ Você deve garantir que seu valor de índice representa uma posição válida na matriz. Se ele está fora dos limites, a versão de depuração da biblioteca de declarações.  
   
  A tabela a seguir mostra outro membro funções que são semelhantes às `CObArray::SetAt`.  
   
 |Classe|Função membro|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetAt (INT_PTR** `nIndex` **, BYTE** `newElement` **);**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetAt (INT_PTR** `nIndex` **, bytes** `newElement` **);**|  
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, DWORD** `newElement` **);**|  
 |[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, void\***  `newElement` **);**|  
 |[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, LPCTSTR** `newElement` **);**|  
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, UINT** `newElement` **);**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, WORD** `newElement` **);**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, o WORD** `newElement` **);**|  
   
 ### <a name="example"></a>Exemplo  
-  Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista da `CAge` classe usada em todos os exemplos de coleção.  
+  Ver [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista de `CAge` classe usado em todos os exemplos de coleção.  
   
  [!code-cpp[NVC_MFCCollections#86](../../mfc/codesnippet/cpp/cobarray-class_14.cpp)]  
   
@@ -709,24 +709,24 @@ void SetAtGrow(
  Um índice de inteiro que é maior que ou igual a 0.  
   
  *newElement*  
- O ponteiro de objeto a ser adicionado a essa matriz. Um **nulo** valor permitido.  
+ O ponteiro de objeto a ser adicionado a essa matriz. Um valor NULL é permitido.  
   
 ### <a name="remarks"></a>Comentários  
- A matriz cresce automaticamente se necessário (ou seja, o limite superior é ajustado para acomodar o novo elemento).  
+ A matriz aumenta automaticamente quando necessário (ou seja, o limite superior é ajustado para acomodar o novo elemento).  
   
  A tabela a seguir mostra outro membro funções que são semelhantes às `CObArray::SetAtGrow`.  
   
 |Classe|Função membro|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, BYTE** `newElement` **);**<br /><br /> **Throw (CMemoryException\* );**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, bytes** `newElement` **);**<br /><br /> **Throw (CMemoryException\* );**|  
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, DWORD** `newElement` **);**<br /><br /> **Throw (CMemoryException\* );**|  
 |[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, void\***  `newElement` **);**<br /><br /> **Throw (CMemoryException\* );**|  
 |[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, LPCTSTR** `newElement` **);**<br /><br /> **Throw (CMemoryException\* );**|  
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, UINT** `newElement` **);**<br /><br /> **Throw (CMemoryException\* );**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, WORD** `newElement` **);**<br /><br /> **Throw (CMemoryException\* );**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, o WORD** `newElement` **);**<br /><br /> **Throw (CMemoryException\* );**|  
   
 ### <a name="example"></a>Exemplo  
-  Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista da `CAge` classe usada em todos os exemplos de coleção.  
+  Ver [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter uma lista de `CAge` classe usado em todos os exemplos de coleção.  
   
  [!code-cpp[NVC_MFCCollections#87](../../mfc/codesnippet/cpp/cobarray-class_15.cpp)]  
   
@@ -743,7 +743,7 @@ void SetAtGrow(
  `[3] = a CAge at $4840 65`  
   
 ##  <a name="setsize"></a>  CObArray::SetSize  
- Estabelece o tamanho de uma matriz vazia ou existente; aloca memória se necessário.  
+ Estabelece o tamanho de uma matriz vazia ou existente; aloca memória, se necessário.  
   
 ```  
 void SetSize(
@@ -759,11 +759,11 @@ void SetSize(
  O número mínimo de slots de elemento para alocar se um aumento de tamanho é necessário.  
   
 ### <a name="remarks"></a>Comentários  
- Se o novo tamanho for menor que o tamanho anterior, em seguida, a matriz será truncada e não utilizada toda a memória é liberada. Para eficiência, chame `SetSize` para definir o tamanho da matriz antes de usá-lo. Isso evita a necessidade de realocar e copiar a matriz sempre que um item é adicionado.  
+ Se o novo tamanho for menor que o tamanho anterior, em seguida, a matriz será truncada e não utilizada toda a memória é liberada. Para obter eficiência, chame `SetSize` para definir o tamanho da matriz antes de usá-lo. Isso evita a necessidade de realocar e copiar a matriz cada vez que um item é adicionado.  
   
- O *nGrowBy* parâmetro afeta a alocação de memória interna enquanto a matriz está aumentando. Seu uso não afeta o tamanho da matriz conforme relatado pelo `GetSize` e `GetUpperBound`.  
+ O *nGrowBy* parâmetro afeta a alocação de memória interna enquanto a matriz está crescendo. Seu uso nunca afeta o tamanho da matriz, conforme relatado pelo `GetSize` e `GetUpperBound`.  
   
- Se o tamanho da matriz cresceu, todos os novos alocado **CObject \***  ponteiros são definidos como NULL.  
+ Se o tamanho da matriz cresceu, todos os novos alocada **CObject \***  ponteiros são definidos como NULL.  
   
  A tabela a seguir mostra outro membro funções que são semelhantes às `CObArray::SetSize`.  
   
@@ -777,11 +777,11 @@ void SetSize(
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **Throw (CMemoryException\* );**|  
   
 ### <a name="example"></a>Exemplo  
-  Consulte o exemplo para [CObArray::GetData](#getdata).  
+  Veja o exemplo de [CObArray::GetData](#getdata).  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CObject](../../mfc/reference/cobject-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe CStringArray](../../mfc/reference/cstringarray-class.md)   
  [Classe CPtrArray](../../mfc/reference/cptrarray-class.md)   
  [Classe CByteArray](../../mfc/reference/cbytearray-class.md)   

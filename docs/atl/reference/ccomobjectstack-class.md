@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac37ac5abc193082aaccb8d5de1a4f75f8a3f7c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3abbd69a69205b0dd7f4ee9fb43d5889e2824552
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360737"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882702"
 ---
 # <a name="ccomobjectstack-class"></a>Classe CComObjectStack
-Essa classe cria um objeto COM temporário e fornece uma implementação esqueleto de **IUnknown**.  
+Essa classe cria um objeto COM temporário e a fornece com uma implementação de esqueleto da `IUnknown`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,8 +41,8 @@ class CComObjectStack
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `Base`  
- A classe derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bem como qualquer outra interface desejar dar suporte ao objeto.  
+ *Base de dados de*  
+ Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como bem como qualquer outra interface para o qual você deseja dar suporte no objeto.  
   
 ## <a name="members"></a>Membros  
   
@@ -58,23 +58,23 @@ class CComObjectStack
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CComObjectStack::AddRef](#addref)|Retorna zero. No modo de depuração, chamadas `_ASSERTE`.|  
-|[CComObjectStack::QueryInterface](#queryinterface)|Retorna **E_NOINTERFACE**. No modo de depuração, chamadas `_ASSERTE`.|  
+|[CComObjectStack::QueryInterface](#queryinterface)|Retorna E_NOINTERFACE. No modo de depuração, chamadas `_ASSERTE`.|  
 |[CComObjectStack::Release](#release)|Retorna zero. No modo de depuração, chamadas `_ASSERTE`. ~|  
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Contém o **HRESULT** retornado durante a construção do `CComObjectStack` objeto.|  
+|[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Contém o HRESULT retornado durante a construção do `CComObjectStack` objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- `CComObjectStack` é usado para criar um objeto COM temporário e fornecer o objeto de uma implementação esqueleto de **IUnknown**. Normalmente, o objeto é usado como uma variável local dentro de uma função (isto é, inserida na pilha). Desde que o objeto é destruído quando a função for concluído, a contagem de referência não é executada para aumentar a eficiência.  
+ `CComObjectStack` é usado para criar um objeto COM temporário e fornecer o objeto de uma implementação de esqueleto de `IUnknown`. Normalmente, o objeto é usado como uma variável local dentro de uma função (isto é, inserida na pilha). Uma vez que o objeto é destruído quando a função for concluída, a contagem de referência não é executada para aumentar a eficiência.  
   
  O exemplo a seguir mostra como criar um objeto COM usado dentro de uma função:  
   
  [!code-cpp[NVC_ATL_COM#42](../../atl/codesnippet/cpp/ccomobjectstack-class_1.cpp)]  
   
- O objeto temporário `Tempobj` é inserido na pilha e desaparece automaticamente quando a função é concluída.  
+ O objeto temporário `Tempobj` é enviado para a pilha e automaticamente desaparece quando a função for concluída.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `Base`  
@@ -82,7 +82,7 @@ class CComObjectStack
  `CComObjectStack`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlcom.h  
+ **Cabeçalho:** atlcom  
   
 ##  <a name="addref"></a>  CComObjectStack::AddRef  
  Retorna zero.  
@@ -105,7 +105,7 @@ CComObjectStack(void* = NULL);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Chamadas `FinalConstruct` e, em seguida, define [m_hResFinalConstruct](#m_hresfinalconstruct) para o `HRESULT` retornado por `FinalConstruct`. Se você não tiver derivado sua classe base da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), você deve fornecer seu próprio `FinalConstruct` método. O destruidor chama `FinalRelease`.  
+ Chamadas `FinalConstruct` e, em seguida, define [m_hResFinalConstruct](#m_hresfinalconstruct) para o HRESULT retornado pela `FinalConstruct`. Se você não tiver derivadas sua classe base a partir [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), você deve fornecer seu próprio `FinalConstruct` método. O destruidor chama `FinalRelease`.  
   
 ##  <a name="dtor"></a>  CComObjectStack:: ~ CComObjectStack  
  O destruidor.  
@@ -115,17 +115,17 @@ CComObjectStack();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Libera todos os recursos alocados e chamadas [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
+ Libera todos os recursos alocados e chama [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
   
 ##  <a name="m_hresfinalconstruct"></a>  CComObjectStack::m_hResFinalConstruct  
- Contém o `HRESULT` retornado ao chamar `FinalConstruct` durante a construção do `CComObjectStack` objeto.  
+ Contém o HRESULT retornado ao chamar `FinalConstruct` durante a construção do `CComObjectStack` objeto.  
   
 ```
 HRESULT    m_hResFinalConstruct;
 ```  
   
 ##  <a name="queryinterface"></a>  CComObjectStack::QueryInterface  
- Retorna **E_NOINTERFACE**.  
+ Retorna E_NOINTERFACE.  
   
 ```
 HRESULT    QueryInterface(REFIID, void**)
@@ -133,7 +133,7 @@ HRESULT    QueryInterface(REFIID, void**)
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna **E_NOINTERFACE**.  
+ Retorna E_NOINTERFACE.  
   
 ### <a name="remarks"></a>Comentários  
  No modo de depuração, chamadas `_ASSERTE`.  

@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0f456d217119020f5683a58560283a1ff08ac75
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f268dd12ca0eca55cbc91bffe5daccbc23ef4dbe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422729"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940144"
 ---
 # <a name="thread"></a>thread
 
 **Seção específica da Microsoft**
 
-O **thread** modificador de classe de armazenamento estendido é usada para declarar uma variável local de thread. Para o portátil equivalente em C++ 11 e posterior, use o [thread_local](../cpp/storage-classes-cpp.md#thread_local) especificador de classe de armazenamento para código portátil. No Windows **thread_local** é implementado com **__declspec(thread)**.
+O **thread** modificador de classe de armazenamento estendido é usado para declarar uma variável local de thread. Para o portable equivalente no C++ 11 e posterior, use o [thread_local](../cpp/storage-classes-cpp.md#thread_local) especificador de classe de armazenamento para código portátil. No Windows `thread_local` é implementado com `__declspec(thread)`.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,29 +38,29 @@ O **thread** modificador de classe de armazenamento estendido é usada para decl
 
 ## <a name="remarks"></a>Comentários
 
-O TLS (armazenamento local de threads) é o mecanismo pelo qual cada thread em um processo multithread aloca armazenamento para dados específicos ao thread. Em programas multithread padrão, os dados são compartilhados entre todos os threads de um processo específico, enquanto o armazenamento local de threads é o mecanismo para alocar dados por thread. Para obter uma discussão completa de threads, consulte [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
+O TLS (armazenamento local de threads) é o mecanismo pelo qual cada thread em um processo multithread aloca armazenamento para dados específicos ao thread. Em programas multithread padrão, os dados são compartilhados entre todos os threads de um processo específico, enquanto o armazenamento local de threads é o mecanismo para alocar dados por thread. Para obter uma discussão completa sobre threads, consulte [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-Declarações de variáveis locais de thread devem usar [estendido a sintaxe do atributo](../cpp/declspec.md) e o `__declspec` palavra-chave with a **thread** palavra-chave. Por exemplo, o código a seguir declara uma variável local de thread de inteiro e a inicializa com um valor:
+Declarações de variáveis locais de thread devem usar [sintaxe de atributo estendida](../cpp/declspec.md) e o **declspec** palavra-chave com o **thread** palavra-chave. Por exemplo, o código a seguir declara uma variável local de thread de inteiro e a inicializa com um valor:
 
 ```cpp
 __declspec( thread ) int tls_i = 1;
 ```
 
-Ao usar variáveis locais de thread em bibliotecas carregadas dinamicamente, você precisa estar ciente dos fatores que podem causar uma variável local de thread não seja inicializada corretamente:
+Ao usar variáveis locais de thread nas bibliotecas carregado dinamicamente, você precisa estar ciente de fatores que podem fazer com que uma variável local de thread não sejam inicializados corretamente:
 
-1. Se a variável é inicializada com uma chamada de função (incluindo construtores), essa função será chamada somente para o segmento que causou a binário/DLL carregar no processo de e para esses threads iniciadas depois que o binário/DLL foi carregado. As funções de inicialização não são chamadas por qualquer outro thread já estava em execução quando o DLL foi carregado. Inicialização dinâmica ocorre na chamada para DLL_THREAD_ATTACH DllMain, mas o DLL nunca obtém a mensagem se a DLL não está no processo de quando o thread é iniciado.
+1. Se a variável é inicializada com uma chamada de função (incluindo construtores), essa função será chamada somente para o thread que causou a binário/DLL carregar no processo de e para esses threads iniciadas depois que o binário/DLL foi carregado. As funções de inicialização não são chamadas para qualquer outro thread que já estava executando quando a DLL foi carregada. Inicialização dinâmica ocorre na chamada para DLL_THREAD_ATTACH DllMain, mas a DLL nunca obtém a mensagem se a DLL não está no processo de quando o thread é iniciado.
 
-1. Variáveis locais de thread que são inicializadas estaticamente com valores constantes geralmente são inicializadas corretamente em todos os threads. No entanto, a partir de dezembro de 2017 há um problema de conformidade conhecidos no compilador do Microsoft Visual C++ no qual as variáveis de constexpr recebem dinâmico em vez de inicialização estática.
+1. Variáveis locais de thread que são inicializadas estaticamente com valores constantes geralmente são inicializadas corretamente em todos os threads. No entanto, a partir de dezembro de 2017 há um problema de compatibilidade conhecidos no compilador do Microsoft Visual C++ no qual variáveis constexpr recebem dinâmica em vez de inicialização estática.
 
    Observação: Esses dois problemas devem ser corrigidos em futuras atualizações do compilador.
 
-Além disso, você deve observar estas diretrizes ao declarar variáveis e objetos de thread local:
+Além disso, você deve observar estas diretrizes ao declarar variáveis e objetos locais de thread:
 
-- Você pode aplicar o **thread** atributo somente para a classe e declarações de dados e as definições. **thread** não pode ser usado em definições ou declarações de função.
+- Você pode aplicar a **thread** atributo somente a classe e declarações de dados e as definições. **thread** não pode ser usado em definições ou declarações de função.
 
-- Você pode especificar o **thread** atributo apenas em itens de dados com duração de armazenamento estático. Isso inclui objetos de dados globais (ambos **estático** e **extern**), locais objetos static e membros de dados estáticos de classes. Você não pode declarar objetos automática de dados com o **thread** atributo.
+- Você pode especificar o **thread** atributo apenas em itens de dados com duração de armazenamento estático. Isso inclui objetos de dados globais (ambos **estáticos** e **extern**), objetos estáticos locais e membros de dados estáticos de classes. Você não pode declarar objetos de dados automáticos com o **thread** atributo.
 
-- Você deve usar o **thread** atributo para a declaração e a definição de um objeto de thread local, se a declaração e a definição de ocorrerem no mesmo arquivo ou arquivos separados.
+- Você deve usar o **thread** de atributo para a declaração e a definição de um objeto de thread local, se a declaração e a definição ocorrem no mesmo arquivo ou arquivos separados.
 
 - Não é possível usar o **thread** atributo como um modificador de tipo.
 
@@ -91,7 +91,7 @@ Além disso, você deve observar estas diretrizes ao declarar variáveis e objet
    Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
    ```
 
-   Observe que uma **sizeof** expressão que inclui o objeto que está sendo inicializado não constitui uma referência a mesmo e é permitido em C e C++.
+   Observe que um **sizeof** expressão que inclui o objeto que está sendo inicializado não constitui uma referência a mesma e é permitido em C e C++.
 
 **Fim da seção específica da Microsoft**
 

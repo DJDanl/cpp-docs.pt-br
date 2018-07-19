@@ -32,16 +32,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe76a74a46a6da48e22cc07232457f8c0957fbc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4c41e2cf0765c036715377038357d587a755196f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942351"
 ---
 # <a name="user-defined-type-conversions-c"></a>Conversões de tipo definido pelo usuário (C++)
-Um *conversão* produz um novo valor de tipo de um valor de um tipo diferente. *Conversões padrão* são incorporados a linguagem C++ e o suporte seus tipos internos e você pode criar *conversões definidas pelo usuário* para realizar conversões para, de ou entre tipos definidos pelo usuário.  
+Um *conversão* produz um novo valor de algum tipo de um valor de um tipo diferente. *Conversões padrão* são criados sobre a linguagem C++ e o suporte de seus tipos internos e você pode criar *conversões definidas pelo usuário* para realizar conversões para, de ou entre tipos definidos pelo usuário.  
   
- As conversões padrão realizam conversões entre tipos internos, entre ponteiros ou referências para tipos relacionados por herança, para os ponteiros void e nulo. Para obter mais informações, consulte [conversões padrão](../cpp/standard-conversions.md). As conversões definidas pelo usuário realizam conversões entre tipos definidos pelo usuário ou entre tipos definidos pelo usuário e tipos internos. Você pode implementá-las como [construtores de conversão](#ConvCTOR) ou como [funções de conversão](#ConvFunc).  
+ As conversões padrão realizam conversões entre tipos internos, entre ponteiros ou referências para tipos relacionados por herança, para os ponteiros void e nulo. Para obter mais informações, consulte [conversões padrão](../cpp/standard-conversions.md). As conversões definidas pelo usuário realizam conversões entre tipos definidos pelo usuário ou entre tipos definidos pelo usuário e tipos internos. Você pode implementá-los como [construtores de conversão](#ConvCTOR) ou como [funções de conversão](#ConvFunc).  
   
  As conversões podem ser implícitas (quando as chamadas do programador de um tipo a ser convertido para outro, como em uma inicialização direta ou convertida) ou implícita (quando o programa ou a linguagem chama um tipo diferente daquele fornecido pelo programador).  
   
@@ -72,16 +73,16 @@ Um *conversão* produz um novo valor de tipo de um valor de um tipo diferente. *
 ## <a name="the-explicit-keyword-and-problems-with-implicit-conversion"></a>A palavra-chave e problemas explícitos com conversão implícita  
  Por padrão, ao criar uma conversão definida pelo usuário, o compilador pode usá-la para executar conversões implícitas. Algumas vezes pode ser que você queira isso, mas outras vezes as regras simples que guiam o compilador para fazer conversões implícitas pode levá-lo a aceitar códigos que não quer.  
   
- Um exemplo conhecido de conversão implícita que pode causar problemas é a conversão para `bool`. Existem muitas razões para você querer criar um tipo de classe que pode ser utilizado em um contexto booliano, por exemplo, para que possa ser usado para controlar uma instrução ou loop `if`. Mas quando o compilador executa uma conversão definida pelo usuário para um tipo interno, o compilador tem permissão para aplicar posteriormente uma conversão padrão adicional. A intenção dessa conversão padrão adicional é permitir coisas como promoções de `short` para `int`, mas ela também abre a porta para conversões menos óbvias, como por exemplo, de `bool` para `int`, que permite que o seu tipo de classe seja utilizado em contextos inteiros, que você nunca teve a intenção de usar. Esse problema específico é conhecido como o *problema de Bool seguro*. Esse tipo de problema é onde a palavra-chave `explicit` pode ajudar.  
+ Um exemplo bem conhecido de uma conversão implícita que pode causar problemas é a conversão em **bool**. Há muitas razões que você talvez queira criar um tipo de classe que pode ser usado em um contexto booliano — por exemplo, assim que ele pode ser usada para controlar uma **se** instrução ou loop — mas quando o compilador executa uma conversão definida pelo usuário para um tipo interno, o compilador tem permissão para aplicar posteriormente uma conversão de padrão adicional. A intenção dessa conversão padrão adicional é permitir coisas como promoções de **curto** à **int**, mas ele também abre a porta para conversões menos óbvias — por exemplo, de  **bool** à **int**, que permite que seu tipo de classe a ser usado em contextos de inteiros, você nunca desejou. Esse problema específico é conhecido como o *problema de Bool seguro*. Esse tipo de problema é o local onde o **explícita** pode ajudar a palavra-chave.  
   
- A palavra-chave `explicit` informa o compilador que a conversão especificada não pode ser utilizada para executar conversões implícitas. Se quisesse que a praticidade sintática de conversões implícitas antes da palavra-chave `explicit` fosse introduzida, você teria que aceitar as consequências não intencionais que a conversão implícita às vezes cria ou usar funções de conversão nomeada, menos convenientes como uma solução alternativa. Agora, usando a palavra-chave `explicit`, você pode criar conversões convenientes que podem ser utilizadas apenas para executar conversões explícitas e que não resultam nos tipos de problemas exemplificados pelo Problema de booliano seguro (Safe Bool).  
+ O **explícita** palavra-chave informa ao compilador que a conversão especificada não pode ser usada para executar conversões implícitas. Se você quisesse a conveniência sintática de conversões implícitas antes do **explícita** foi introduzida a palavra-chave, você teria que aceitar as consequências não intencionais que a conversão implícita às vezes, é criada ou usar menos convenientes, funções de conversão nomeada como uma solução alternativa. Agora, usando o **explícita** palavra-chave, você pode criar conversões convenientes que só pode ser usado para executar conversões explícitas ou inicialização direta e que não resultam nos tipos de problemas exemplificados pelo problema de Bool seguro.  
   
- A palavra-chave `explicit` pode ser aplicada a construtores de conversão desde C++98 e a funções de conversão desde C++11. As seguintes seções contém mais informações sobre como usar a palavra-chave `explicit`.  
+ O **explícita** palavra-chave pode ser aplicada para construtores de conversão desde c++98 e funções de conversão desde c++11. As seções a seguir contêm mais informações sobre como usar o **explícita** palavra-chave.  
   
 ##  <a name="ConvCTOR"></a> Construtores de conversão  
- Os construtores de conversão definem conversões de tipos internos ou definidos pelo usuário para um tipo definido pelo usuário. O exemplo a seguir demonstra um construtor de conversão que converte do tipo interno `double` para um tipo definido pelo usuário `Money`.  
+ Os construtores de conversão definem conversões de tipos internos ou definidos pelo usuário para um tipo definido pelo usuário. O exemplo a seguir demonstra um construtor de conversão que converte do tipo interno **duplas** para um tipo definido pelo usuário `Money`.  
   
-```  
+```cpp 
 #include <iostream>  
   
 class Money  
@@ -110,7 +111,7 @@ int main(int argc, char* argv[])
 }  
 ```  
   
- Observe que a primeira chamada para a função `display_balance`, que leva um argumento do tipo `Money`, não necessita de uma conversão porque seu argumento é do tipo correto. No entanto, na segunda chamada `display_balance`, uma conversão é necessária porque o tipo do argumento, uma `double` com um valor de `49.95`, é não o que a função espera. A função não pode usar esse valor diretamente, mas porque há uma conversão do tipo do argumento (`double`)para o tipo de parâmetro correspondente (`Money`) um valor temporário de tipo `Money` é construído a partir do argumento e utilizado para completar a chamada de função. Na terceira chamada `display_balance`, observe que o argumento não é um `double`, mas em vez disso, é um `float` com um valor de `9.99`— e ainda a chamada de função pode ainda ser concluída porque o compilador pode executar uma conversão padrão — neste caso , de `float` para `double`— e, em seguida, executar a conversão definida pelo usuário de `double` para `Money` para concluir a conversão necessária.  
+ Observe que a primeira chamada para a função `display_balance`, que leva um argumento do tipo `Money`, não necessita de uma conversão porque seu argumento é do tipo correto. No entanto, na segunda chamada para `display_balance`, uma conversão é necessária porque o tipo do argumento, uma **duplo** com um valor de `49.95`, é não o que a função espera. A função não é possível usar esse valor diretamente, mas porque há uma conversão do tipo do argumento —**duplas**— para o tipo de parâmetro correspondente —`Money`— um valor temporário do tipo `Money` é construído a partir de o argumento e utilizado para completar a chamada de função. Na terceira chamada para `display_balance`, observe que o argumento não é um **duplo**, mas em vez disso, uma **float** com um valor de `9.99`— e ainda a chamada de função pode ainda ser concluída porque o compilador pode executar uma conversão padrão — nesse caso, a partir **float** à **duplo**— e, em seguida, executar a conversão definida pelo usuário do **double** para `Money` para concluir a conversão necessária.  
   
 ### <a name="declaring-conversion-constructors"></a>Declaração de construtores de conversão  
  As regras a seguir aplicam-se à declaração de um construtor de conversão:  
@@ -124,9 +125,9 @@ int main(int argc, char* argv[])
 -   Os construtores de conversão podem ser explícitos.  
   
 ### <a name="explicit-conversion-constructors"></a>Construtores de conversão explícita  
- Ao declarar um construtor de conversão como `explicit`, ele só pode ser utilizado para realizar a inicialização direta de um objeto ou para realizar uma conversão explícita. Isso evita que funções que aceitam um argumento do tipo de classe também aceitem argumentos implicitamente do tipo de fonte do construtor de conversão, evitando que o tipo de classe seja inicializado por cópia a partir de um valor do tipo de fonte. O exemplo a seguir demonstra como definir um construtor de conversão explícita e o efeito que tem sobre qual código é bem formado.  
+ Ao declarar um construtor de conversão como **explícita**, ele só pode ser usado para executar a inicialização direta de um objeto ou para executar uma conversão explícita. Isso evita que funções que aceitam um argumento do tipo de classe também aceitem argumentos implicitamente do tipo de fonte do construtor de conversão, evitando que o tipo de classe seja inicializado por cópia a partir de um valor do tipo de fonte. O exemplo a seguir demonstra como definir um construtor de conversão explícita e o efeito que tem sobre qual código é bem formado.  
   
-```  
+```cpp 
 #include <iostream>  
   
 class Money  
@@ -155,14 +156,14 @@ int main(int argc, char* argv[])
 }  
 ```  
   
- Nesse exemplo, observe que você pode ainda usar o construtor de conversão explícita para executar a inicialização direta de `payable`. Se ao invés disso você tivesse que inicializar `Money payable = 79.99;` por cópia, o resultado seria um erro. A primeira chamada para `display_balance` é sem efeito porque o argumento é o tipo correto. A segunda chamada para `display_balance` é um erro, porque o construtor de conversão não pode ser usado para executar conversões implícitas. A terceira chamada para `display_balance` é legal por causa da conversão explícita para `Money`, mas observe que o compilador ainda ajudou a completar a conversão ao inserir uma conversão implícita de `float` para `double`.  
+ Nesse exemplo, observe que você pode ainda usar o construtor de conversão explícita para executar a inicialização direta de `payable`. Se ao invés disso você tivesse que inicializar `Money payable = 79.99;` por cópia, o resultado seria um erro. A primeira chamada para `display_balance` é sem efeito porque o argumento é o tipo correto. A segunda chamada para `display_balance` é um erro, porque o construtor de conversão não pode ser usado para executar conversões implícitas. A terceira chamada para `display_balance` é legal por causa da conversão explícita para `Money`, mas observe que o compilador ainda ajudou a completar a conversão ao inserir uma conversão implícita de **float** para **double**.  
   
  Embora a praticidade de permitir conversões implícitas possa ser tentadora, fazer isso pode introduzir bugs difíceis de encontrar. A regra recomendada é tornar explícitos todos os construtores de conversão, exceto quando você tem certeza que deseja que uma conversão específica ocorra implicitamente.  
   
 ##  <a name="ConvFunc"></a> Funções de conversão  
- As funções de conversão definem conversões de um tipo definidas pelo usuário para outros tipos. Essas funções são algumas vezes chamadas como operadores cast pois, juntamente com os construtores de conversão, são chamadas quando um valor é convertido para um tipo diferente. O exemplo a seguir demonstra uma função de conversão que converte do tipo definido pelo usuário como `Money` para um tipo interno, `double`:  
+ As funções de conversão definem conversões de um tipo definidas pelo usuário para outros tipos. Essas funções são algumas vezes chamadas como operadores cast pois, juntamente com os construtores de conversão, são chamadas quando um valor é convertido para um tipo diferente. O exemplo a seguir demonstra uma função de conversão que converte do tipo definido pelo usuário, `Money`, para um tipo interno, **duplo**:  
   
-```  
+```cpp 
 #include <iostream>  
   
 class Money  
@@ -183,16 +184,16 @@ void display_balance(const Money balance)
   
 ```  
   
- Observe que a variável de membro `amount` se torna privada e que uma função de conversão pública para o tipo `double` é introduzida apenas para retornar o valor de `amount`. Na função `display_balance`, uma conversão implícita ocorre quando o valor de `balance` é transmitido para saída padrão usando o operador de inserção de fluxo `<<`. Como nenhum operador de inserção de fluxo foi definido para o tipo definido pelo usuário `Money`, mas há um para o tipo interno `double`, o compilador pode usar a função de conversão de `Money` para `double` para atender o operador de inserção de fluxo.  
+ Observe que a variável de membro `amount` se torna privada e que a função de tipo de uma conversão pública **duplo** é introduzida apenas para retornar o valor de `amount`. Na função `display_balance`, uma conversão implícita ocorre quando o valor de `balance` é transmitido para saída padrão usando o operador de inserção de fluxo `<<`. Como Nenhum operador de inserção de fluxo é definido para o tipo definido pelo usuário `Money`, mas há um para o tipo interno **duplo**, o compilador pode usar a função de conversão de `Money` para **duplo** para atender o operador de inserção de fluxo.  
   
- As funções de conversão são herdadas por classes derivadas. As funções de conversão em uma classe derivada apenas substitui uma função de conversão herdada quando convertidas exatamente para o mesmo tipo. Por exemplo, uma função definida pelo usuário da classe derivada `operator int` não substitui ou influencia uma função de conversão definida pelo usuário da classe base `operator short`, embora as conversões padrão definam uma relação de conversão entre `int` e `short`.  
+ As funções de conversão são herdadas por classes derivadas. As funções de conversão em uma classe derivada apenas substitui uma função de conversão herdada quando convertidas exatamente para o mesmo tipo. Por exemplo, uma função de conversão definida pelo usuário da classe derivada **operador int** não substitui — ou influencia — uma função de conversão definida pelo usuário da classe base **operador curto**, até mesmo Embora as conversões padrão definam uma relação de conversão entre **int** e **curto**.  
   
 ### <a name="declaring-conversion-functions"></a>Declaração de funções de conversão  
  As regras a seguir são aplicadas ao declarar uma função de conversão:  
   
 -   O tipo de destino da conversão deve ser declarado antes da declaração da função de conversão. Classes, estruturas, enumerações e typedefs não podem ser declarados na declaração da função de conversão.  
   
-    ```  
+    ```cpp 
     operator struct String { char string_storage; }() // illegal  
     ```  
   
@@ -207,7 +208,7 @@ void display_balance(const Money balance)
 ### <a name="explicit-conversion-functions"></a>Funções de conversão explícitas  
  Quando uma função de conversão é declarada como explícita, ele pode ser usada para executar uma conversão explícita. Isso evita que funções que aceitam um argumento do tipo de destino da função de conversão também aceitem implicitamente argumentos do tipo de classe, além de evitar que o tipo de destino seja inicializado por cópia, a partir de um valor do tipo de classe. O exemplo a seguir demonstra como definir uma função de conversão explícita e o efeito que tem sobre qual código é bem formado.  
   
-```  
+```cpp 
 #include <iostream>  
   
 class Money  
@@ -228,5 +229,5 @@ void display_balance(const Money balance)
   
 ```  
   
- Aqui a função de conversão `operator double` foi feita explícita e uma conversão explícita para o tipo `double` foi introduzida na função `display_balance` para executar a conversão. Se essa conversão for omitida, o compilador será incapaz de localizar um operador de inserção de fluxo adequado `<<` de tipo `Money` e poderá ocorrer um erro.  
+ Aqui a função de conversão **operador double** foi feita explícita e uma conversão explícita para o tipo **duplo** foi introduzida na função `display_balance` para realizar a conversão. Se essa conversão for omitida, o compilador será incapaz de localizar um operador de inserção de fluxo adequado `<<` de tipo `Money` e poderá ocorrer um erro.  
   

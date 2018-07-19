@@ -1,5 +1,5 @@
 ---
-title: Classe _U_RECT | Microsoft Docs
+title: Classe u_rect | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,68 +19,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93d067daf34538e3745e9a4efdd91fda65ef4de9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ebb76d2f373862b39f2a3742481e14523a7a94b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360881"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882215"
 ---
-# <a name="urect-class"></a>Classe _U_RECT
+# <a name="urect-class"></a>Classe u_rect
 Essa classe de adaptador do argumento permite tanto `RECT` ponteiros ou referências a serem passados para uma função que é implementada em termos de ponteiros.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```
-class _U_RECT```  
+class _U_RECT
+```  
   
-## Members  
+## <a name="members"></a>Membros  
   
-### Public Constructors  
+### <a name="public-constructors"></a>Construtores Públicos  
   
-|Name|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
-|[_U_RECT::_U_RECT](#_u_rect___u_rect)|The constructor.|  
+|[_U_RECT::_U_RECT](#_u_rect___u_rect)|O construtor.|  
   
-### Public Data Members  
+### <a name="public-data-members"></a>Membros de Dados Públicos  
   
-|Name|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
-|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Pointer to a `RECT`.|  
+|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Ponteiro para um `RECT`.|  
   
-## Remarks  
- The class defines two constructor overloads: one accepts a **RECT&** argument and the other accepts an `LPRECT` argument. The first constructor stores the address of the reference argument in the class's single data member, [m_lpRect](#_u_rect__m_lprect). The argument to the pointer constructor is stored directly without conversion.  
+## <a name="remarks"></a>Comentários  
+ A classe define duas sobrecargas de construtor: uma aceita um **RECT &** argumento e o outro aceita um `LPRECT` argumento. O primeiro construtor armazena o endereço do argumento de referência no membro de dados único da classe, [m_lpRect](#_u_rect__m_lprect). O argumento para o construtor do ponteiro é armazenado diretamente, sem conversão.  
   
-## Requirements  
- **Header:** atlwin.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atlwin  
   
 ##  <a name="_u_rect__m_lprect"></a>  _U_RECT::m_lpRect  
- The class holds the value passed to either of its constructors as a public `LPRECT` data member.  
+ A classe contém o valor passado para qualquer um dos seus construtores como pública `LPRECT` membro de dados.  
   
 ```
 LPRECT m_lpRect;
 ```  
   
 ##  <a name="_u_rect___u_rect"></a>  _U_RECT::_U_RECT  
- The address of the reference argument is stored in the class's single data member, [m_lpRect](#_u_rect__m_lprect).  
+ O endereço do argumento de referência é armazenado no membro de dados único da classe, [m_lpRect](#_u_rect__m_lprect).  
   
 ```
-_U_RECT (RECT & rc);  
-_U_RECT (LPRECT lpRect);
+_U_RECT(RECT& rc);  
+_U_RECT(LPRECT lpRect);
 ```  
   
-### Parameters  
- `rc`  
- A `RECT` reference.  
+### <a name="parameters"></a>Parâmetros  
+ *RC*  
+ Uma referência a `RECT`.  
   
- `lpRect`  
- A `RECT` pointer.  
+ *lpRect*  
+ Um `RECT` ponteiro.  
   
-### Remarks  
- The argument to the pointer constructor is stored directly without conversion.  
+### <a name="remarks"></a>Comentários  
+ O argumento para o construtor do ponteiro é armazenado diretamente, sem conversão.  
   
-## See Also  
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>Consulte também  
+ [Visão geral da classe](../../atl/atl-class-overview.md)

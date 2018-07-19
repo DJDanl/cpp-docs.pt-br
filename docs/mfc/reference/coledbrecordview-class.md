@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122ceb1715323e1482b2a8a8544cbe3f6270c713
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 623ba901d1998a899a443d235d65c6b205cfea4f
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037851"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853687"
 ---
 # <a name="coledbrecordview-class"></a>Classe COleDBRecordView
-Uma exibição que mostra os registros do banco de dados em controles.  
+Uma exibição que exibe registros de banco de dados em controles.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,18 +50,18 @@ class COleDBRecordView : public CFormView
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[COleDBRecordView::OnGetRowset](#ongetrowset)|Retorna um padrão `HRESULT` valor.|  
+|[COleDBRecordView::OnGetRowset](#ongetrowset)|Retorna um valor padrão de HRESULT.|  
 |[COleDBRecordView::OnMove](#onmove)|Atualiza o registro atual (se estiver sujo) na fonte de dados e, em seguida, move para o registro especificado (próximo, anterior, primeiro ou último).|  
   
 ## <a name="remarks"></a>Comentários  
- A exibição é um modo de exibição de formulário conectado diretamente a um `CRowset` objeto. A exibição é criada a partir de um recurso de modelo de caixa de diálogo e exibe os campos do `CRowset` objeto nos controles do modelo de caixa de diálogo. O `COleDBRecordView` objeto usa a troca de dados de caixa de diálogo (DDX) e a funcionalidade de navegação incorporados `CRowset`, para automatizar a movimentação de dados entre os controles no formulário e os campos do conjunto de linhas. `COleDBRecordView` também fornece uma implementação padrão para mover para a primeira, próximo, anterior ou o último registro e uma interface para atualizar o registro no momento no modo de exibição.  
+ A exibição é um modo de exibição de formulário conectado diretamente a um `CRowset` objeto. O modo de exibição é criado a partir de um recurso de modelo de caixa de diálogo e exibe os campos do `CRowset` objeto nos controles do modelo de caixa de diálogo. O `COleDBRecordView` usa o objeto de troca de dados de caixa de diálogo (DDX) e a funcionalidade de navegação inserida no `CRowset`, para automatizar a movimentação de dados entre os controles no formulário e os campos do conjunto de linhas. `COleDBRecordView` também fornece uma implementação padrão para a movimentação para o primeiro, próximo, anterior ou o último registro e uma interface para atualizar o registro no momento no modo de exibição.  
   
- Você pode usar funções DDX com **COleDbRecordView** obter dados diretamente do conjunto de registros do banco de dados e exibi-lo em um controle de caixa de diálogo. Você deve usar o **DDX_\***  métodos (como `DDX_Text`), não o **DDX_Field\***  funções (como `DDX_FieldText`) com **COleDbRecordView** . `DDX_FieldText` não funcionarão com **COleDbRecordView** porque `DDX_FieldText` usa um argumento adicional do tipo **CRecordset\***  (para `CRecordView`) ou **CDaoRecordset\***  (para `CDaoRecordView`).  
+ Você pode usar funções DDX com `COleDbRecordView` obter dados diretamente do conjunto de registros de banco de dados e exibi-lo em um controle de caixa de diálogo. Você deve usar o **funções DDX _\***  métodos (como `DDX_Text`), e não o **DDX_Field\***  funções (como `DDX_FieldText`) com `COleDbRecordView`. `DDX_FieldText` não funcionará com `COleDbRecordView` porque `DDX_FieldText` usa um argumento adicional do tipo **CRecordset\***  (para `CRecordView`) ou **CDaoRecordset\***  (para `CDaoRecordView`).  
   
 > [!NOTE]
->  Se você estiver trabalhando com as classes de objetos de acesso de dados (DAO) em vez das OLE DB consumidor classes de modelo, use a classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) em vez disso. Para obter mais informações, consulte o artigo [visão geral: programação do banco de dados](../../data/data-access-programming-mfc-atl.md).  
+>  Se você estiver trabalhando com as classes de objetos de acesso a dados (DAO) em vez de OLE DB consumidor classes de modelo, use a classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) em vez disso. Para obter mais informações, consulte o artigo [visão geral: banco de dados de programação](../../data/data-access-programming-mfc-atl.md).  
   
- `COleDBRecordView` Controla de posição do usuário no conjunto de linhas para que a exibição de registro possa atualizar a interface do usuário. Quando o usuário move para o fim do conjunto de linhas, o modo de exibição de registro desabilita os objetos de interface do usuário — como itens de menu ou botões da barra de ferramentas — para mover adicional na mesma direção.  
+ `COleDBRecordView` Controla de posição do usuário no conjunto de linhas para que o modo de exibição de registro possa atualizar a interface do usuário. Quando o usuário move para ambas as extremidades do conjunto de linhas, o modo de exibição do registro desabilita os objetos de interface do usuário — como itens de menu ou botões da barra de ferramentas — para a movimentação adicional na mesma direção.  
   
  Para obter mais informações sobre classes de conjunto de linhas, consulte o [usando OLE DB modelos de consumidor](../../data/oledb/ole-db-consumer-templates-cpp.md) artigo.  
   
@@ -99,13 +99,13 @@ COleDBRecordView(UINT nIDTemplate);
  Contém o número de identificação de um recurso de modelo de caixa de diálogo.  
   
 ### <a name="remarks"></a>Comentários  
- Quando você cria um objeto de um tipo derivado de `COleDBRecordView`, chamar um dos construtores para criar o objeto de exibição e identificar o recurso de caixa de diálogo na qual a exibição é baseada. Você pode identificar os recursos por nome (passar uma cadeia de caracteres como o argumento para o construtor) ou por sua ID (um inteiro sem sinal, como o argumento de passagem).  
+ Quando você cria um objeto de um tipo derivado de `COleDBRecordView`, chamar um dos construtores para criar o objeto de exibição e identificar o recurso de caixa de diálogo na qual o modo de exibição se baseia. Você pode identificar o recurso por nome (passar uma cadeia de caracteres como o argumento para o construtor) ou pela sua ID (um inteiro sem sinal, como o argumento de passagem).  
   
 > [!NOTE]
->  A classe derivada *deve* fornecer seu próprio construtor. No construtor, chamar o construtor, `COleDBRecordView::COleDBRecordView`, com o nome do recurso ou a ID como um argumento.  
+>  Sua classe derivada *deve* fornecer seu próprio construtor. No construtor, invocar o construtor, `COleDBRecordView::COleDBRecordView`, com o nome do recurso ou ID como um argumento.  
   
 ##  <a name="ongetrowset"></a>  COleDBRecordView::OnGetRowset  
- Retorna um identificador para o **CRowset <>** objeto associado à exibição de registro.  
+ Retorna um identificador para o **CRowset <>** objeto associado com o modo de exibição do registro.  
   
 ```  
 virtual CRowset<>* OnGetRowset() = 0;  
@@ -113,13 +113,13 @@ virtual CRowset<>* OnGetRowset() = 0;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um padrão `HRESULT` valor.  
+ Um valor padrão de HRESULT.  
   
 ### <a name="remarks"></a>Comentários  
- Você deve substituir esta função de membro para criar ou obter um objeto de conjunto de linhas e retornar um identificador a ele. Se você declarar a classe de exibição de registro com ClassWizard, o assistente grava uma substituição padrão para você. Implementação do padrão do ClassWizard retorna o identificador do conjunto de linhas armazenado na exibição de registro se houver um. Se não, ele constrói um objeto de conjunto de linhas do tipo especificado com ClassWizard e chama seu `Open` membro de função para abrir a tabela ou executar a consulta e, em seguida, retorna um identificador para o objeto.  
+ Você deve substituir essa função de membro para construir ou obter um objeto de conjunto de linhas e retornar um identificador a ele. Se você declarar sua classe de exibição de registro com ClassWizard, o assistente grava uma substituição padrão para você. Implementação do padrão do ClassWizard retorna o identificador de conjunto de linhas armazenado na exibição do registro, se houver. Se não, ele constrói um objeto de conjunto de linhas do tipo especificado com ClassWizard e chama seu `Open` membro de função para abrir a tabela ou executar a consulta e, em seguida, retorna um identificador para o objeto.  
   
 > [!NOTE]
->  Antes do MFC 7.0, `OnGetRowset` retornou um ponteiro para `CRowset`. Se você tiver um código que chama `OnGetRowset`, você precisa alterar o tipo de retorno para a classe de modelo **CRowset <>**.  
+>  Anteriores ao MFC 7.0 `OnGetRowset` retornou um ponteiro para `CRowset`. Se você tiver um código que chama `OnGetRowset`, você precisará alterar o tipo de retorno para a classe de modelo **CRowset <>**.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]  
@@ -135,27 +135,27 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
   
 ### <a name="parameters"></a>Parâmetros  
  *nIDMoveCommand*  
- Um dos seguintes valores de ID de comando padrão:  
+ Um dos valores de ID de comando padrão a seguir:  
   
-- `ID_RECORD_FIRST` – Mover para o primeiro registro no conjunto de registros.  
+- ID_RECORD_FIRST — Mover para o primeiro registro no conjunto de registros.  
   
-- `ID_RECORD_LAST` – Mova para o último no conjunto de registros registro.  
+- ID_RECORD_LAST — Mover para o último registro no conjunto de registros.  
   
-- `ID_RECORD_NEXT` – Mover para o próximo registro no conjunto de registros.  
+- ID_RECORD_NEXT — Mover para o próximo registro no conjunto de registros.  
   
-- `ID_RECORD_PREV` – Mover para o registro anterior no conjunto de registros.  
+- ID_RECORD_PREV — Mover para o registro anterior no conjunto de registros.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a movimentação foi bem-sucedida; Caso contrário, 0 se a solicitação de movimentação foi negada.  
   
 ### <a name="remarks"></a>Comentários  
- A implementação padrão chama apropriada `Move` função de membro de `CRowset` objeto associado à exibição de registro.  
+ A implementação padrão chama apropriado `Move` função de membro a `CRowset` objeto associado com o modo de exibição do registro.  
   
- Por padrão, `OnMove` atualiza o registro atual na fonte de dados se o usuário alterou na exibição do registro.  
+ Por padrão, `OnMove` atualiza o registro atual na fonte de dados se o usuário foi alterado na exibição do registro.  
   
- O Assistente de aplicativo cria um recurso de menu com itens de menu do primeiro registro, último registro, próximo registro e registro anterior. Se você selecionar a opção de barra de ferramentas acopláveis, o Assistente de aplicativo também cria uma barra de ferramentas com botões correspondentes a esses comandos.  
+ O Assistente de aplicativo cria um recurso de menu com itens de menu do primeiro registro, o último registro, o próximo registro e registro anterior. Se você selecionar a opção ferramentas acoplável, o Assistente de aplicativo também cria uma barra de ferramentas com botões correspondentes a esses comandos.  
   
- Se você mover além do último registro no conjunto de registros, o modo de exibição de registro continua a exibir o último registro. Se você retroceder após o primeiro registro, o modo de exibição de registro continua a exibir o primeiro registro.  
+ Se você mover além do último registro no conjunto de registros, o modo de exibição de registro continua a exibir o último registro. Se você mover para trás após o primeiro registro, o modo de exibição de registro continua a exibir o primeiro registro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)

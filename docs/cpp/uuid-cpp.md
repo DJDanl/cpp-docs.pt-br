@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b143def4d758307c6ce6737281bdca1097aaa8c5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e81b81509877ff53b613af80638b2386ed0cb0b2
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942339"
 ---
 # <a name="uuid-c"></a>uuid (C++)
 **Seção específica da Microsoft**  
   
- O compilador anexa o GUID a uma classe ou estrutura declarada ou definida (somente definições completas de objeto COM) com o atributo de `uuid`.  
+ O compilador anexa o GUID a uma classe ou estrutura declarada ou definida (completo COM definições de objeto apenas) com o **uuid** atributo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,16 +37,16 @@ __declspec( uuid("ComObjectGUID") ) declarator
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O atributo `uuid` usa uma cadeia de caracteres como seu argumento. Essa cadeia de caracteres de nomes de um GUID no formato de registro normal com ou sem o **{}** delimitadores. Por exemplo:  
+ O **uuid** atributo utiliza uma cadeia de caracteres como seu argumento. Essa cadeia de caracteres nomeia um GUID no formato normal do registro com ou sem o **{}** delimitadores. Por exemplo:  
   
-```  
+```cpp 
 struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;  
 struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;  
 ```  
   
- Esse atributo poderá ser aplicado a uma redeclaração. Isso permite que os cabeçalhos de sistema fornecer as definições das interfaces como **IUnknown**e a redeclaração em algum outro cabeçalho (como \<comdef.h >) para fornecer o GUID.  
+ Esse atributo poderá ser aplicado a uma redeclaração. Isso permite que os cabeçalhos do sistema fornecer as definições das interfaces, como `IUnknown`e a redeclaração em algum outro cabeçalho (como \<comdef >) para fornecer o GUID.  
   
- A palavra-chave [uuidof](../cpp/uuidof-operator.md) podem ser aplicados para recuperar a constante GUID anexado a um tipo definido pelo usuário.  
+ A palavra-chave [uuidof](../cpp/uuidof-operator.md) podem ser aplicados para recuperar o GUID da constante anexado a um tipo definido pelo usuário.  
   
  **Fim da seção específica da Microsoft**  
   

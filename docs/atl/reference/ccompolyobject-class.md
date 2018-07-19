@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 383a83a2e2b09c9652e7185592a5891179416e0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5bd2a384af6e73ae0c113bf8c27ae9d0c7529a8
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364096"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881094"
 ---
 # <a name="ccompolyobject-class"></a>Classe CComPolyObject
-Essa classe implementa **IUnknown** para um objeto agregado ou agregado.  
+Essa classe implementa `IUnknown` para um objeto agregado ou agregado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,8 +46,8 @@ class CComPolyObject : public IUnknown,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `contained`  
- A classe derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bem como qualquer outra interface desejar dar suporte ao objeto.  
+ *contido*  
+ Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como bem como de outras interfaces que você deseja oferecer suporte no objeto.  
   
 ## <a name="members"></a>Membros  
   
@@ -63,30 +63,30 @@ class CComPolyObject : public IUnknown,
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CComPolyObject::AddRef](#addref)|Incrementa a contagem de referência do objeto.|  
-|[CComPolyObject::CreateInstance](#createinstance)|(Estático) Permite que você crie um novo **CComPolyObject <** `contained` **>** objeto sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComPolyObject::CreateInstance](#createinstance)|(Estático) Permite que você crie uma nova **CComPolyObject <** `contained` **>** objeto sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
 |[CComPolyObject::FinalConstruct](#finalconstruct)|Executa a inicialização final de `m_contained`.|  
 |[CComPolyObject::FinalRelease](#finalrelease)|Executa a destruição de final de `m_contained`.|  
 |[CComPolyObject::QueryInterface](#queryinterface)|Recupera um ponteiro para a interface solicitada.|  
-|[CComPolyObject::Release](#release)|Contagem de referência do objeto diminui.|  
+|[CComPolyObject::Release](#release)|Diminui contagem de referência do objeto.|  
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CComPolyObject::m_contained](#m_contained)|Delegados **IUnknown** chamadas para o externo desconhecido se o objeto é agregado ou para o **IUnknown** do objeto se o objeto não é agregado.|  
+|[CComPolyObject::m_contained](#m_contained)|Delegados `IUnknown` chamadas para o externo desconhecido se o objeto for agregado ou para o `IUnknown` do objeto, se o objeto não é agregado.|  
   
 ## <a name="remarks"></a>Comentários  
  `CComPolyObject` implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para um objeto agregado ou agregado.  
   
- Quando uma instância de `CComPolyObject` é criado, o valor de externo desconhecido é verificado. Se for **nulo**, **IUnknown** é implementada por um objeto agregado. Se o desconhecido externo não é **nulo**, **IUnknown** é implementada por um objeto agregado.  
+ Quando uma instância do `CComPolyObject` é criado, o valor de externo desconhecido é verificado. Se for NULL, `IUnknown` é implementada para um objeto não agregado. Se o externo desconhecido não for nulo, `IUnknown` é implementada para um objeto agregado.  
   
- A vantagem de usar `CComPolyObject` é evitar ter dois [CComAggObject](../../atl/reference/ccomaggobject-class.md) e [CComObject](../../atl/reference/ccomobject-class.md) em seu módulo para lidar com casos agregados e agregados. Um único `CComPolyObject` objeto lida com ambos os casos. Isso significa que apenas uma cópia do vtable e uma cópia das funções existem em seu módulo. Se seu vtable for grande, isso pode diminuir significativamente o tamanho do módulo. No entanto, se seu vtable for pequeno, usando `CComPolyObject` pode resultar em um tamanho ligeiramente maior do módulo porque ele não é otimizado para um objeto agregado ou agregado, assim como `CComAggObject` e `CComObject`.  
+ A vantagem de usar `CComPolyObject` é que você evite ter dois [CComAggObject](../../atl/reference/ccomaggobject-class.md) e [CComObject](../../atl/reference/ccomobject-class.md) em seu módulo para tratar de casos agregados e não agregados. Um único `CComPolyObject` objeto lida com ambos os casos. Isso significa que apenas uma cópia de vtable e uma cópia das funções existem em seu módulo. Se seu vtable for grande, isso pode diminuir substancialmente o tamanho do módulo. No entanto, se seu vtable for pequeno, usando `CComPolyObject` pode resultar em um tamanho de módulo ligeiramente maior porque ele não é otimizado para um objeto agregado ou não agregado, que estejam `CComAggObject` e `CComObject`.  
   
- Se o `DECLARE_POLY_AGGREGATABLE` macro é especificada na definição de classe do objeto, `CComPolyObject` será usado para criar o objeto. `DECLARE_POLY_AGGREGATABLE` serão automaticamente declarados se você usar o Assistente de projeto de ATL para criar um controle de Internet Explorer ou controle total.  
+ Se a macro DECLARE_POLY_AGGREGATABLE for especificada na definição de classe do objeto, `CComPolyObject` será usado para criar o objeto. DECLARE_POLY_AGGREGATABLE será declarada automaticamente se você usar a ATL Project Wizard para criar um controle de Internet Explorer ou controle total.  
   
- Se agregados, o `CComPolyObject` objeto tem seu próprio **IUnknown**separado do objeto externo **IUnknown**e mantém seu próprio contagem de referência. `CComPolyObject` usa [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) delegue externo desconhecido.  
+ Se agregado, o `CComPolyObject` objeto tem seu próprio `IUnknown`separada do objeto externo `IUnknown`e mantém seu próprio contagem de referência. `CComPolyObject` usa [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) para delegar para o externo desconhecido.  
   
- Para obter mais informações sobre a agregação, consulte o artigo [Fundamentals de ATL COM objetos](../../atl/fundamentals-of-atl-com-objects.md).  
+ Para obter mais informações sobre agregação, consulte o artigo [conceitos básicos de objetos COM de ATL](../../atl/fundamentals-of-atl-com-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `CComObjectRootBase`  
@@ -98,7 +98,7 @@ class CComPolyObject : public IUnknown,
  `CComPolyObject`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlcom.h  
+ **Cabeçalho:** atlcom  
   
 ##  <a name="addref"></a>  CComPolyObject::AddRef  
  Incrementa a contagem de referência no objeto.  
@@ -108,7 +108,7 @@ STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um valor que pode ser útil para um diagnóstico ou teste.  
+ Um valor que pode ser útil para diagnóstico ou teste.  
   
 ##  <a name="ccompolyobject"></a>  CComPolyObject::CComPolyObject  
  O construtor.  
@@ -118,13 +118,13 @@ CComPolyObject(void* pv);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pv`  
- [in] Um ponteiro para externo desconhecido se o objeto é agregada, ou **nulo** se o objeto se o objeto não é agregado.  
+ *VP*  
+ [in] Um ponteiro para o externo desconhecido se o objeto deve ser agregada ou nulo se o objeto se o objeto não é agregado.  
   
 ### <a name="remarks"></a>Comentários  
- Inicializa o `CComContainedObject` membro de dados, [m_contained](#m_contained)e incrementa a contagem de bloqueios do módulo.  
+ Inicializa o `CComContainedObject` membro de dados [m_contained](#m_contained)e incrementa a contagem de bloqueios do módulo.  
   
- Decrementa o destruidor a módulo contagem de bloqueio.  
+ O destruidor decrementa a módulo contagem de bloqueio.  
   
 ##  <a name="dtor"></a>  CComPolyObject:: ~ CComPolyObject  
  O destruidor.  
@@ -134,10 +134,10 @@ CComPolyObject(void* pv);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Libera todos os recursos alocados, chamadas [FinalRelease](#finalrelease), e diminui a módulo contagem de bloqueio.  
+ Libera todos os recursos alocados, chamadas [FinalRelease](#finalrelease), e diminui a contagem de bloqueio de módulo.  
   
 ##  <a name="createinstance"></a>  CComPolyObject::CreateInstance  
- Permite que você crie um novo **CComPolyObject <** `contained` **>** objeto sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Permite que você crie uma nova **CComPolyObject <** `contained` **>** objeto sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(  
@@ -146,47 +146,47 @@ static HRESULT WINAPI CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pp`  
- [out] Um ponteiro para um **CComPolyObject <** `contained` **>** ponteiro. Se `CreateInstance` for bem-sucedido, `pp` é definido como **nulo**.  
+ *PP*  
+ [out] Um ponteiro para um **CComPolyObject <** `contained` **>** ponteiro. Se `CreateInstance` não for bem-sucedida, *pp* é definido como NULL.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um padrão `HRESULT` valor.  
+ Um valor padrão de HRESULT.  
   
 ### <a name="remarks"></a>Comentários  
- O objeto retornado tem uma contagem de referência igual a zero, portanto, chame `AddRef` imediatamente, em seguida, use **versão** para liberar a referência no ponteiro de objeto quando estiver pronto.  
+ O objeto retornado tem uma contagem de referência de zero, portanto, chame `AddRef` imediatamente, em seguida, use `Release` para liberar a referência no ponteiro de objeto quando você terminar.  
   
- Se você não precisa de acesso ao objeto direto, mas ainda deseja criar um novo objeto sem a sobrecarga de `CoCreateInstance`, use [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) em vez disso.  
+ Se você não precisa de acesso ao objeto direto, mas ainda quiser criar um novo objeto sem a sobrecarga de `CoCreateInstance`, use [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) em vez disso.  
   
 ##  <a name="finalconstruct"></a>  CComPolyObject::FinalConstruct  
- Chamado durante os estágios finais da construção do objeto, esse método executa qualquer inicialização final sobre o [m_contained](#m_contained) membro de dados.  
+ Chamado durante os estágios finais da construção do objeto, este método executa qualquer inicialização final sobre o [m_contained](#m_contained) membro de dados.  
   
 ```
 HRESULT FinalConstruct();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um padrão `HRESULT` valor.  
+ Um valor padrão de HRESULT.  
   
 ##  <a name="finalrelease"></a>  CComPolyObject::FinalRelease  
- Chamado durante a destruição do objeto, esse método libera o [m_contained](#m_contained) membro de dados.  
+ Chamado durante a destruição de objeto, esse método libera o [m_contained](#m_contained) membro de dados.  
   
 ```
 void FinalRelease();
 ```  
   
 ##  <a name="m_contained"></a>  CComPolyObject::m_contained  
- Um [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) objeto derivado de sua classe.  
+ Um [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) objeto derivado da sua classe.  
   
 ```
 CComContainedObject<contained> m_contained;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `contained`  
- [in] A classe derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bem como qualquer outra interface desejar dar suporte ao objeto.  
+ *contido*  
+ [in] Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como bem como de outras interfaces que você deseja oferecer suporte no objeto.  
   
 ### <a name="remarks"></a>Comentários  
- **IUnknown** chamadas por meio de `m_contained` são delegadas a externo desconhecido se o objeto é agregado ou para o **IUnknown** deste objeto, se o objeto não é agregado.  
+ `IUnknown` chama por meio `m_contained` são delegadas ao externo desconhecido se o objeto for agregado, ou para o `IUnknown` deste objeto se o objeto não é agregado.  
   
 ##  <a name="queryinterface"></a>  CComPolyObject::QueryInterface  
  Recupera um ponteiro para a interface solicitada.  
@@ -198,23 +198,23 @@ HRESULT QueryInterface(Q** pp);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `Q`  
+ *Q*  
  A interface COM.  
   
- `iid`  
+ *IID*  
  [in] O identificador da interface que está sendo solicitado.  
   
- `ppvObject`  
- [out] Um ponteiro para o ponteiro de interface identificado por `iid`. Se o objeto não oferece suporte a essa interface, `ppvObject` é definido como **nulo**.  
+ *ppvObject*  
+ [out] Um ponteiro para o ponteiro de interface identificado pelo *iid*. Se o objeto não dá suporte a essa interface, *ppvObject* é definido como NULL.  
   
- `pp`  
- [out] Um ponteiro para a interface identificado por **__uuidof(Q)**.  
+ *PP*  
+ [out] Um ponteiro para a interface identificada pelo `__uuidof(Q)`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um padrão `HRESULT` valor.  
+ Um valor padrão de HRESULT.  
   
 ### <a name="remarks"></a>Comentários  
- Para um objeto agregado, se a interface solicitada é **IUnknown**, `QueryInterface` retorna um ponteiro para o agregado do objeto próprio **IUnknown** e incrementa a contagem de referência. Caso contrário, esse método de consulta para a interface por meio de `CComContainedObject` membro de dados, [m_contained](#m_contained).  
+ Para um objeto agregado, se for a interface solicitada `IUnknown`, `QueryInterface` retorna um ponteiro para o objeto agregado próprio `IUnknown` e incrementa a contagem de referência. Caso contrário, este método consulta para a interface por meio de `CComContainedObject` membro de dados [m_contained](#m_contained).  
   
 ##  <a name="release"></a>  CComPolyObject::Release  
  Diminui a contagem de referência no objeto.  
@@ -224,7 +224,7 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Em compilações de depuração, **versão** retorna um valor que pode ser útil para um diagnóstico ou teste. Em compilações de nondebug **versão** sempre retorna 0.  
+ Em compilações de depuração, `Release` retorna um valor que pode ser útil para diagnóstico ou teste. Em compilações de nondebug `Release` sempre retorna 0.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d5ed1bae5f4571cad6b942af9d6e9b4ff646ed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 71bb3985fe870b29d06ebc01d0b7dab4712f1797
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414526"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941061"
 ---
 # <a name="function-templates"></a>Modelos de função
 Os modelos de classe definem uma família de classes relacionadas que se baseiam nos argumentos de tipo passados para a classe na instanciação. Os modelos de função são semelhantes aos modelos de classe, mas definem uma família de funções. Com modelos de função, você pode especificar um conjunto de funções que se baseiam no mesmo código, mas atuam em tipos ou classes diferentes. O modelo de função a seguir permuta dois itens:  
@@ -37,9 +37,9 @@ int main() {
 }  
 ```  
   
- Esse código define uma família de funções que permutam os valores dos argumentos. Com base neste modelo, você pode gerar funções alternará **int** e **longo** tipos e também tipos definidos pelo usuário. `MySwap` permutará até mesmo classes se o operador de atribuição e o construtor de cópia da classe estiverem definidos corretamente.  
+ Esse código define uma família de funções que permutam os valores dos argumentos. Com base neste modelo, você pode gerar funções que permutarão **int** e **longo** tipos e também tipos definidos pelo usuário. `MySwap` permutará até mesmo classes se o operador de atribuição e o construtor de cópia da classe estiverem definidos corretamente.  
   
- Além disso, o modelo de função impedirá a permuta de objetos de tipos diferentes, pois o compilador conhece os tipos dos parâmetros `a` e `b` em tempo de compilação.  
+ Além disso, o modelo de função impedirá você de permuta de objetos de tipos diferentes, pois o compilador conhece os tipos dos *uma* e *b* parâmetros em tempo de compilação.  
   
  Embora essa função possa ser executada por uma função sem modelo, usando ponteiros nulos, a versão com modelo oferece segurança de tipos. Considere as seguintes chamadas:  
   
@@ -64,7 +64,7 @@ int main(int j) {
 }  
 ```  
   
- Quando o argumento de modelo é especificado explicitamente, as conversões implícitas normais são realizadas para converter o argumento da função no tipo dos parâmetros correspondentes do modelo de função. No exemplo acima, o compilador converterá `char j` digitar `int`.  
+ Quando o argumento de modelo é especificado explicitamente, as conversões implícitas normais são realizadas para converter o argumento da função no tipo dos parâmetros correspondentes do modelo de função. No exemplo acima, o compilador converterá `char j` digitar **int**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Modelos](../cpp/templates-cpp.md)   

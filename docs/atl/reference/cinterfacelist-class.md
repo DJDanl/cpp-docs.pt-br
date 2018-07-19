@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fc523b1eccc88678cda48a0c7e429ea0fc09f9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 33cfcc072e000bc903cceb4ac5551071e35610d9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362168"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884370"
 ---
 # <a name="cinterfacelist-class"></a>Classe CInterfaceList
 Essa classe fornece métodos úteis ao construir uma lista de ponteiros de interface COM.  
@@ -38,11 +38,11 @@ class CInterfaceList
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `I`  
- Uma interface COM especificando o tipo de ponteiro para ser armazenado.  
+ *I*  
+ Uma interface COM especificando o tipo de ponteiro a ser armazenado.  
   
- `piid`  
- Um ponteiro para o IID da `I`.  
+ *piid*  
+ Um ponteiro para o IID da *eu*.  
   
 ## <a name="members"></a>Membros  
   
@@ -50,7 +50,7 @@ class CInterfaceList
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CInterfaceList::CInterfaceList](#cinterfacelist)|O construtor para a lista de interfaces.|  
+|[CInterfaceList::CInterfaceList](#cinterfacelist)|O construtor para a lista de interface.|  
   
 ## <a name="remarks"></a>Comentários  
  Essa classe fornece um construtor e métodos derivados para criar uma lista de ponteiros de interface COM. Use [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) quando uma matriz é necessária.  
@@ -66,18 +66,18 @@ class CInterfaceList
  **Cabeçalho:** atlcoll.h  
   
 ##  <a name="cinterfacelist"></a>  CInterfaceList::CInterfaceList  
- O construtor para a lista de interfaces.  
+ O construtor para a lista de interface.  
   
 ```
 CInterfaceList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nBlockSize`  
+ *nBlockSize*  
  O tamanho do bloco, com um padrão de 10.  
   
 ### <a name="remarks"></a>Comentários  
- O tamanho do bloco é uma medida da quantidade de memória alocada quando um novo elemento é necessário. Tamanhos de bloco maiores reduzem as chamadas para rotinas de alocação de memória, mas usam mais recursos.  
+ O tamanho do bloco é uma medida da quantidade de memória alocada quando um novo elemento é necessário. Tamanhos de bloco maiores reduzem chamadas para rotinas de alocação de memória, mas usam mais recursos.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CAtlList](../../atl/reference/catllist-class.md)   

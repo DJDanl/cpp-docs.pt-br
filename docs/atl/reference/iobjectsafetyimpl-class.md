@@ -23,18 +23,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 592a23286ad6592bc0ce6faab999cb362aac42f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f474c73a63c7eaeb7452e88812180a24d1321df
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364031"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881182"
 ---
 # <a name="iobjectsafetyimpl-class"></a>Classe IObjectSafetyImpl
 Essa classe fornece uma implementação padrão da `IObjectSafety` interface para permitir que um cliente recuperar e definir níveis de segurança de um objeto.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,15 +44,15 @@ class IObjectSafetyImpl
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
- A classe derivada de `IObjectSafetyImpl`.  
+ *T*  
+ Sua classe, derivada de `IObjectSafetyImpl`.  
   
  *dwSupportedSafety*  
- Especifica as opções de segurança com suporte para o controle. Pode ser um dos seguintes valores:  
+ Especifica as opções de segurança com suporte para o controle. pode ser um dos seguintes valores:  
   
-- **INTERFACESAFE_FOR_UNTRUSTED_CALLER** a interface identificada pelo [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) parâmetro `riid` devem ser feitas seguros para script.  
+- INTERFACESAFE_FOR_UNTRUSTED_CALLER a interface identificada pelo [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) parâmetro `riid` deve ser feita seguros para script.  
   
-- **INTERFACESAFE_FOR_UNTRUSTED_DATA** a interface identificada pelo `SetInterfaceSafetyOptions` parâmetro `riid` devem ser feitas com segurança dados não confiáveis durante a inicialização.  
+- INTERFACESAFE_FOR_UNTRUSTED_DATA a interface identificada pelo `SetInterfaceSafetyOptions` parâmetro `riid` deve ser feita seguro para dados não confiáveis durante a inicialização.  
   
 ## <a name="members"></a>Membros  
   
@@ -61,7 +61,7 @@ class IObjectSafetyImpl
 |Nome|Descrição|  
 |----------|-----------------|  
 |[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|Recupera as opções de segurança com suporte pelo objeto, bem como as opções de segurança definidas no momento para o objeto.|  
-|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|Faz com que o objeto seguros para inicialização ou script.|  
+|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|Torna o objeto seguro para inicialização ou de script.|  
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
   
@@ -70,9 +70,9 @@ class IObjectSafetyImpl
 |[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|Armazena o nível de segurança atual do objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- Classe `IObjectSafetyImpl` fornece uma implementação padrão de `IObjectSafety`. O `IObjectSafety` interface permite que um cliente recuperar e definir níveis de segurança de um objeto. Por exemplo, um navegador da web pode chamar **IObjectSafety::SetInterfaceSafetyOptions** para tornar um controle para inicialização ou seguros para script.  
+ Classe `IObjectSafetyImpl` fornece uma implementação padrão de `IObjectSafety`. O `IObjectSafety` interface permite que um cliente recuperar e definir níveis de segurança de um objeto. Por exemplo, um navegador da web pode chamar `IObjectSafety::SetInterfaceSafetyOptions` para fazer um controle seguro para inicialização ou de seguros para script.  
   
- Observe que o uso de [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) macro com a **CATID_SafeForScripting** e **CATID_SafeForInitializing** categorias de componentes oferece uma alternativa maneira de especificar que um componente é seguro.  
+ Observe que o uso de [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) macro com as categorias de componente CATID_SafeForScripting e CATID_SafeForInitializing fornece uma maneira alternativa de especificar que um componente é seguro.  
   
  **Artigos relacionados** [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -95,12 +95,12 @@ HRESULT GetInterfaceSafetyOptions(
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A implementação retorna os valores apropriados para qualquer interface compatível com a implementação do objeto de **IUnknown:: QueryInterface**.  
+ A implementação retorna os valores apropriados para qualquer interface compatível com a implementação do objeto de `IUnknown::QueryInterface`.  
   
 > [!IMPORTANT]
->  Qualquer objeto que dá suporte a `IObjectSafety` é responsável por sua própria segurança e de qualquer objeto que ela delega. O programador deve levar em problemas de conta decorrentes da execução de código no contexto do usuário, scripts entre sites e executar a verificação de zona adequada.  
+>  Qualquer objeto que dá suporte a `IObjectSafety` é responsável por sua própria segurança e de qualquer objeto que ela delega. O programador deve levar em conta surgirem devido a executem o código no contexto do usuário, scripts entre sites e executar a verificação de zona adequada.  
   
- Consulte [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) no SDK do Windows.  
+ Ver [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) no Windows SDK.  
   
 ##  <a name="m_dwcurrentsafety"></a>  IObjectSafetyImpl::m_dwCurrentSafety  
  Armazena o nível de segurança atual do objeto.  
@@ -110,7 +110,7 @@ DWORD m_dwCurrentSafety;
 ```  
   
 ##  <a name="setinterfacesafetyoptions"></a>  IObjectSafetyImpl::SetInterfaceSafetyOptions  
- Faz com que o objeto seguros para inicialização ou script definindo a [m_dwCurrentSafety](#m_dwcurrentsafety) membro para o valor apropriado.  
+ Torna o objeto seguro para inicialização ou de script definindo a [m_dwCurrentSafety](#m_dwcurrentsafety) membro para o valor apropriado.  
   
 ```
 HRESULT SetInterfaceSafetyOptions(  
@@ -120,12 +120,12 @@ HRESULT SetInterfaceSafetyOptions(
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Retorna a implementação **E_NOINTERFACE** para qualquer interface não compatível com a implementação do objeto de **IUnknown:: QueryInterface**.  
+ A implementação retorna E_NOINTERFACE para qualquer interface que não tem suportada pela implementação do objeto do `IUnknown::QueryInterface`.  
   
 > [!IMPORTANT]
->  Qualquer objeto que dá suporte a `IObjectSafety` é responsável por sua própria segurança e de qualquer objeto que ela delega. O programador deve levar em problemas de conta decorrentes da execução de código no contexto do usuário, scripts entre sites e executar a verificação de zona adequada.  
+>  Qualquer objeto que dá suporte a `IObjectSafety` é responsável por sua própria segurança e de qualquer objeto que ela delega. O programador deve levar em conta surgirem devido a executem o código no contexto do usuário, scripts entre sites e executar a verificação de zona adequada.  
   
- Consulte [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) no SDK do Windows.  
+ Ver [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) no Windows SDK.  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface IObjectSafety](https://msdn.microsoft.com/library/aa768224.aspx)   

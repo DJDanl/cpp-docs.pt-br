@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c13b5d0a3bb30e08eaaeb0250da7deef692a66d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a41aa479fd87c76dbf167d728ad2dbb830f6a24b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368654"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853615"
 ---
 # <a name="coledialog-class"></a>Classe COleDialog
 Fornece funcionalidade comum às caixas de diálogo para OLE.  
@@ -82,14 +82,14 @@ class COleDialog : public CCommonDialog
  **Cabeçalho:** afxodlgs.h  
   
 ##  <a name="getlasterror"></a>  COleDialog::GetLastError  
- Chamar o `GetLastError` a função de membro para obter informações adicionais sobre erros quando `DoModal` retorna **IDABORT**.  
+ Chame o `GetLastError` função de membro para obter informações adicionais sobre erros quando `DoModal` retorna IDABORT.  
   
 ```  
 UINT GetLastError() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Os códigos de erro retornados pelo `GetLastError` dependem da caixa de diálogo específica exibida.  
+ Os códigos de erro retornados pelo `GetLastError` dependem da caixa de diálogo específico exibido.  
   
 ### <a name="remarks"></a>Comentários  
  Consulte o `DoModal` função de membro em classes derivadas para obter informações sobre mensagens de erro específicas.  

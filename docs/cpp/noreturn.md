@@ -17,25 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90fab865a02b7ad00bd25b6d74f2d19b2678875c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2323af14472741901c4e4b7d8fe27e56e1d4d4f0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942333"
 ---
 # <a name="noreturn"></a>noreturn
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
- Esse atributo `__declspec` diz ao compilador que uma função não retorna. Como consequência, o compilador sabe que o código que segue uma chamada para um **__declspec(noreturn)** função está inacessível.  
+ Isso **declspec** atributo diz ao compilador que uma função não retorna. Como consequência, o compilador sabe que o código que segue uma chamada para um **__declspec(noreturn)** função está inacessível.  
   
- Se o compilador encontra uma função com um caminho de controle que não retorna um valor, ele gera um aviso (C4715) ou uma mensagem de erro (C2202). Se o caminho de controle não pode ser acessado devido a uma função que nunca retorna, você pode usar **__declspec(noreturn)** para evitar este aviso ou erro.  
+ Se o compilador encontra uma função com um caminho de controle que não retorna um valor, ele gera um aviso (C4715) ou uma mensagem de erro (C2202). Se o caminho de controle não pode ser acessado devido a uma função que nunca retorna, você pode usar **__declspec(noreturn)** para evitar esse aviso ou erro.  
   
 > [!NOTE]
->  Adicionando **__declspec(noreturn)** para uma função que deve retornar pode resultar em um comportamento indefinido.  
+>  Adicionando **__declspec(noreturn)** para uma função que deve retornar pode resultar em comportamento indefinido.  
   
 ## <a name="example"></a>Exemplo  
- No exemplo a seguir, o **else** cláusula não contém uma instrução return.  Declarando `fatal` como **__declspec(noreturn)** evita uma mensagem de erro ou aviso.  
+ No exemplo a seguir, o **else** cláusula não contém uma instrução return.  Declarando `fatal` como **__declspec(noreturn)** evita uma mensagem de aviso ou erro.  
   
-```  
+```cpp 
 // noreturn2.cpp  
 __declspec(noreturn) extern void fatal () {}  
   

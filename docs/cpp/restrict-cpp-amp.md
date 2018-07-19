@@ -17,19 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe3bd4f737cfb26a326a1f0d83b731c36e6c7bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 175dcbbf94ff28b1f59804eb996254e29dfef243
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942264"
 ---
 # <a name="restrict-c-amp"></a>restrita (C++ AMP)
 O especificador de restrição pode ser aplicado a declarações de função e lambda. Impõe restrições no código na função e no comportamento da função em aplicativos que usam o tempo de execução do C++ Accelerated Massive Parallelism(AMP C++).  
   
 > [!NOTE]
->  Para obter informações sobre o `restrict` palavra-chave que é parte do `__declspec` atributos de classe de armazenamento, consulte [restringir](../cpp/restrict.md).  
+>  Para obter informações sobre o **restringir** palavra-chave que faz parte do **declspec** atributos de classe de armazenamento, consulte [restringir](../cpp/restrict.md).  
   
- A cláusula de `restrict` usa os seguintes formas:  
+ O **restringir** cláusula usa os seguintes formulários:  
   
 |Cláusula|Descrição|  
 |------------|-----------------|  
@@ -38,7 +39,7 @@ O especificador de restrição pode ser aplicado a declarações de função e l
 |Uma sequência de `restrict(cpu)` e `restrict(amp)`.|A função deve atender às limitações de `restrict(cpu)` e `restrict(amp)`. A função pode ser chamada por funções que são declaradas usando `restrict(cpu)`, `restrict(amp)`, `restrict(cpu, amp)` ou `restrict(amp, cpu)`.<br /><br /> A forma `restrict(A) restrict(B)` pode ser escrita como `restrict(A,B)`.|  
   
 ## <a name="remarks"></a>Comentários  
- A palavra-chave `restrict` é uma palavra-chave contextual. Os especificadores de restrição `cpu` e `amp` não são palavras reservadas. A lista de especificadores não é extensível. Uma função que não tem uma cláusula `restrict` é igual a uma função que tem a cláusula `restrict(cpu)`.  
+ O **restringir** palavra-chave é uma palavra-chave contextual. Os especificadores de restrição `cpu` e `amp` não são palavras reservadas. A lista de especificadores não é extensível. Uma função que não tem um **restringir** cláusula é o mesmo que uma função que tem o `restrict(cpu)` cláusula.  
   
  Uma função que tem a cláusula `restrict(amp)` tem as seguintes limitações:  
   
@@ -46,7 +47,7 @@ O especificador de restrição pode ser aplicado a declarações de função e l
   
 -   A função deve ser embutível.  
   
--   A função pode declarar somente as variáveis `int`, `unsigned int`, `float` e `double`, e classes e estruturas que contenham apenas esses tipos. `bool` também é permitido, mas também deve ser alinhado com 4 bytes se você usá-lo em um tipo composto.  
+-   A função pode declarar somente **int**, **unsigned int**, **float**, e **double** variáveis e as classes e estruturas que contêm apenas Esses tipos. **bool** também é permitido, mas ele deve ser alinhado com 4 bytes se você usá-lo em um tipo composto.  
   
 -   As funções lambda não podem capturar por referência nem capturar os ponteiros.  
   
@@ -68,30 +69,30 @@ O especificador de restrição pode ser aplicado a declarações de função e l
   
     -   Ponteiros para ponteiros.  
   
-    -   Instruções `goto`.  
+    -   **GoTo** instruções.  
   
     -   Instruções rotuladas.  
   
-    -   Instruções `try`, `catch` ou `throw`.  
+    -   **tente**, **catch**, ou **throw** instruções.  
   
     -   Variáveis globais.  
   
     -   Variáveis estáticas. Use [palavra-chave tile_static](../cpp/tile-static-keyword.md) em vez disso.  
   
-    -   Conversões `dynamic_cast`.  
+    -   **dynamic_cast** conversões.  
   
-    -   O operador `typeid`.  
+    -   O **typeid** operador.  
   
     -   Declarações asm.  
   
     -   Varargs.  
   
- Para obter uma discussão das limitações de função, consulte [restrict(amp) restrições](http://go.microsoft.com/fwlink/p/?LinkId=251089).  
+ Para uma discussão sobre limitações da função, consulte [Restrict (amp) restrições](http://go.microsoft.com/fwlink/p/?LinkId=251089).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar o `restrict(amp)`cláusula.  
   
-```  
+```cpp 
   
 void functionAmp() restrict(amp) {}   
 void functionNonAmp() {}   

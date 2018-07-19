@@ -17,21 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f81ab892fd7f406292925f424bebc7514fd7ea0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37098e904402a42f6ff28e594db265fc07b4d458
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942255"
 ---
 # <a name="noinline"></a>noinline
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
- **__declspec(noinline)** informa ao compilador embutido nunca uma função de membro particular (em uma classe de função).  
+ **{1&gt;__declspec(noinline)&lt;1** informa ao compilador para nunca embutir uma função de membro particular (em uma classe de função).  
   
  Pode ser válido não embutir uma função quando ela é pequena e não é crítica para o desempenho do seu código. Ou seja, se a função for pequena e se for improvável que ela seja chamada com frequência, como uma função que trata de uma condição de erro.  
   
- Lembre-se de que, se uma função for marcada como `noinline`, a função de chamada será menor e portanto, será uma candidata para embutimento pelo compilador.  
+ Tenha em mente que, se uma função for marcada **noinline**, a função de chamada será menor e, portanto, em si uma candidata para Embutimento pelo compilador.  
   
-```  
+```cpp 
 class X {  
    __declspec(noinline) int mbrfunc() {  
       return 0;   

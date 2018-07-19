@@ -18,55 +18,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 807754bb13f8302fe9583b6f4a8219e3aea81086
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 273572fd6ad79ba45ae2aabbf91296afd6e8308e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942235"
 ---
 # <a name="conditional-operator--"></a>Operador condicional:? :
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+``` 
   
 expression ? expression : expression  
-```  
+``` 
   
 ## <a name="remarks"></a>Comentários  
- O operador condicional (**?:**) é um operador ternário (usa três operandos). O operador condicional funciona desta forma:  
+ O operador condicional (**?:**) é um operador ternário (utiliza três operandos). O operador condicional funciona desta forma:  
   
--   O primeiro operando é convertido implicitamente em `bool`. É avaliado e todos os efeitos colaterais são concluídos antes de continuar.  
+-   O primeiro operando é convertido implicitamente em **bool**. É avaliado e todos os efeitos colaterais são concluídos antes de continuar.  
   
--   Se o primeiro operando é avaliado como **true** (1), o segundo operando é avaliado.  
+-   Se o primeiro operando for avaliado como **verdadeira** (1), o segundo operando é avaliado.  
   
--   Se o primeiro operando é avaliado como **false** (0), o terceiro operando é avaliado.  
+-   Se o primeiro operando for avaliado como **falsos** (0), o terceiro operando é avaliado.  
   
  O resultado do operador condicional é o resultado de qualquer operando avaliado — o segundo ou o terceiro. Somente um dos dois operandos dos dois mais recentes é avaliado em uma expressão condicional.  
   
- As expressões condicionais têm a capacidade da direita para a esquerda. O primeiro operando deve ser do tipo integral ou ponteiro. As seguintes regras se aplicam ao segundo e terceiro operandos:  
+ As expressões condicionais têm a capacidade da direita para a esquerda. O primeiro operando deve ser do tipo integral ou ponteiro. As seguintes regras se aplicam para o segundo e terceiro operandos:  
   
--   Se ambos os operandos forem do mesmo tipo, o resultado será daquele tipo.  
+-   Se ambos os operandos forem do mesmo tipo, o resultado é desse tipo.  
   
--   Se ambos os operandos forem de tipos de aritmética ou de enumeração, as conversões aritméticas normais (abordados [conversões padrão](standard-conversions.md)) são executadas para convertê-los em um tipo comum.  
+-   Se ambos os operandos forem de tipos de aritmética ou de enumeração, as conversões aritméticas comuns (abordados [conversões padrão](standard-conversions.md)) serão executadas para convertê-los em um tipo comum.  
   
--   Se ambos os operandos forem de tipos de ponteiro ou se uma é um tipo de ponteiro e a outra é uma expressão constante que é avaliada como 0, conversões de ponteiro são executadas para convertê-los em um tipo comum.  
+-   Se ambos os operandos forem de tipos de ponteiro ou se uma é um tipo de ponteiro e o outro é uma expressão constante que é avaliada como 0, conversões de ponteiro serão executadas para convertê-los em um tipo comum.  
   
--   Se ambos os operandos forem de tipos de referência, conversões de referência são executadas para convertê-los em um tipo comum.  
+-   Se ambos os operandos forem de tipos de referência, conversões de referência serão executadas para convertê-los em um tipo comum.  
   
--   Se ambos os operandos forem do tipo void, o tipo comum é tipo void.  
+-   Se ambos os operandos forem do tipo void, o tipo comum será do tipo nulo.  
   
 -   Se ambos os operandos forem do mesmo tipo definido pelo usuário, o tipo comum é desse tipo.  
   
--   Se os operandos tiverem tipos diferentes e pelo menos um dos operandos tem tipo definido pelo usuário, em seguida, as regras do idioma são usadas para determinar o tipo comum. (Consulte abaixo de aviso).  
+-   Se os operandos têm tipos diferentes e pelo menos um dos operandos tem tipo definido pelo usuário, em seguida, as regras do idioma são usadas para determinar o tipo comum. (Consulte aviso abaixo).  
   
  Todas as combinações do segundo e do terceiro operando que não estiverem na lista anterior são ilegais. O tipo de resultado é o tipo comum, e é um l-value se o segundo e o terceiro operandos forem do mesmo tipo e ambos forem l-values.  
   
 > [!WARNING]
->  Se os tipos de segundo e terceiro operandos não forem idênticos, regras de conversão de tipo complexo, conforme especificado no C++ padrão, são invocadas. Essas conversões podem resultar em comportamento inesperado, incluindo a construção e a destruição de objetos temporários. Por esse motivo, recomendamos enfaticamente a um (1) Evite usar tipos definidos pelo usuário como operandos com o operador condicional ou (2) se você usar tipos definidos pelo usuário, converter explicitamente cada operando em um tipo comum.  
+>  Se os tipos do segundo e terceiro operandos não forem idênticos, regras de conversão de tipo complexo, conforme especificado no padrão do C++, são invocadas. Essas conversões podem resultar em comportamento inesperado, incluindo a construção e destruição de objetos temporários. Por esse motivo, recomendamos enfaticamente a qualquer um (1) Evite usar tipos definidos pelo usuário como operandos com o operador condicional ou (2) se você usar tipos definidos pelo usuário, então converter explicitamente cada operando em um tipo comum.  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // expre_Expressions_with_the_Conditional_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate conditional operator  
@@ -79,5 +80,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Operadores C++ internos, precedência e capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores C++ internos, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operador de expressão condicional](../c-language/conditional-expression-operator.md)

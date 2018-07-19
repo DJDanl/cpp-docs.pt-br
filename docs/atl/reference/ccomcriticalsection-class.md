@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25376aba3cfbade202d1cf95c2218e88713ac22a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5926f92ae636a13c1e5241792790151ee48ceddc
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359899"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884864"
 ---
 # <a name="ccomcriticalsection-class"></a>Classe CComCriticalSection
-Essa classe fornece métodos para a obtenção e liberar a propriedade de um objeto de seção crítica.  
+Essa classe fornece métodos para obter e liberar a propriedade de um objeto de seção crítica.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,15 +60,15 @@ class CComCriticalSection
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CComCriticalSection::m_sec](#m_sec)|Um **CRITICAL_SECTION** objeto.|  
+|[CComCriticalSection::m_sec](#m_sec)|Um objeto CRITICAL_SECTION.|  
   
 ## <a name="remarks"></a>Comentários  
  `CComCriticalSection` é semelhante à classe [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), exceto que você deve inicializar explicitamente e liberará a seção crítica.  
   
- Normalmente, você usa `CComCriticalSection` por meio de `typedef` nome [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Faz referência a esse nome `CComCriticalSection` quando [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) está sendo usado.  
+ Normalmente, você usa `CComCriticalSection` por meio de **typedef** nome [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Esse nome faz referência a `CComCriticalSection` quando [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) está sendo usado.  
 
   
- Consulte [CComCritSecLock classe](../../atl/reference/ccomcritseclock-class.md) de uma maneira mais segura usar essa classe que chamar `Lock` e `Unlock` diretamente.  
+ Ver [classe CComCritSecLock](../../atl/reference/ccomcritseclock-class.md) de uma maneira mais segura usar essa classe que chamar `Lock` e `Unlock` diretamente.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcore.h  
@@ -81,30 +81,30 @@ CComCriticalSection() throw();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Conjuntos de [m_sec](#m_sec) membro de dados como NULL **.**  
+ Define o [m_sec](#m_sec) membro de dados como NULL.  
   
 ##  <a name="init"></a>  CComCriticalSection::Init  
- Chama a função Win32 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), que inicializa o objeto de seção crítica dentro de [m_sec](#m_sec) membro de dados.  
+ Chama a função Win32 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), que inicializa o objeto de seção crítica contido na [m_sec](#m_sec) membro de dados.  
   
 ```
 HRESULT Init() throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna `S_OK` em caso de sucesso, **E_OUTOFMEMORY** ou **E_FAIL** em caso de falha.  
+ Retornará S_OK no êxito, E_OUTOFMEMORY ou E_FAIL em caso de falha.  
   
 ##  <a name="lock"></a>  CComCriticalSection::Lock  
- Chama a função Win32 [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), que aguarda até que o thread pode assumir a propriedade do objeto de seção crítica contido no [m_sec](#m_sec) membro de dados.  
+ Chama a função Win32 [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), que aguarda até que o thread pode assumir a propriedade do objeto de seção crítica contido na [m_sec](#m_sec) membro de dados.  
   
 ```
 HRESULT Lock() throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna `S_OK` em caso de sucesso, **E_OUTOFMEMORY** ou **E_FAIL** em caso de falha.  
+ Retornará S_OK no êxito, E_OUTOFMEMORY ou E_FAIL em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- O objeto de seção crítica primeiro deve ser inicializado com uma chamada para o [Init](#init) método. Quando o código protegido concluiu a execução, o thread deve chamar [Unlock](#unlock) Libere a propriedade da seção crítica.  
+ O objeto de seção crítica deve ser inicializado pela primeira vez com uma chamada para o [Init](#init) método. Quando o código protegido finalizou a execução, o thread deve chamar [Unlock](#unlock) para liberar a propriedade da seção crítica.  
   
 ##  <a name="m_sec"></a>  CComCriticalSection::m_sec  
  Contém um objeto de seção crítica que é usado por todos os `CComCriticalSection` métodos.  
@@ -114,30 +114,30 @@ CRITICAL_SECTION m_sec;
 ```  
   
 ##  <a name="term"></a>  CComCriticalSection::Term  
- Chama a função Win32 [DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552), que libera todos os recursos usados pelo objeto de seção crítica dentro de [m_sec](#m_sec) membro de dados.  
+ Chama a função Win32 [DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552), que libera todos os recursos usados pelo objeto de seção crítica contido na [m_sec](#m_sec) membro de dados.  
   
 ```
 HRESULT Term() throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna `S_OK`.  
+ Retorna S_OK.  
   
 ### <a name="remarks"></a>Comentários  
- Uma vez `Term` foi chamado, críticos seção não pode ser usada para sincronização.  
+ Uma vez `Term` tiver sido chamado, a crítica seção não pode mais ser usada para sincronização.  
   
 ##  <a name="unlock"></a>  CComCriticalSection::Unlock  
- Chama a função Win32 [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), que libera a propriedade do objeto de seção crítica dentro de [m_sec](#m_sec) membro de dados.  
+ Chama a função Win32 [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), que libera a propriedade do objeto de seção crítica contido na [m_sec](#m_sec) membro de dados.  
   
 ```
 HRESULT Unlock() throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna `S_OK`.  
+ Retorna S_OK.  
   
 ### <a name="remarks"></a>Comentários  
- Para obter a propriedade pela primeira vez, o thread deve chamar o [bloqueio](#lock) método. Cada chamada para `Lock` requer uma chamada correspondente para `Unlock` Libere a propriedade da seção crítica.  
+ Para obter a propriedade pela primeira vez, o thread deve chamar o [bloqueio](#lock) método. Cada chamada para `Lock` requer uma chamada correspondente para `Unlock` para liberar a propriedade da seção crítica.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)   

@@ -1,5 +1,5 @@
 ---
-title: Encerramento de programas | Microsoft Docs
+title: Encerramento do programa | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fa65e0c1d910791bed416a1b31f9de46dfb2299
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 643718dc0b58f74fbb1ed957c8dc3212a4408073
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419947"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939917"
 ---
 # <a name="program-termination"></a>Término do programa
 No C++, há várias maneiras de sair do programa:  
   
--   Chamar o [sair](../cpp/exit-function.md) função.  
+-   Chame o [sair](../cpp/exit-function.md) função.  
   
--   Chamar o [anular](../cpp/abort-function.md) função.  
+-   Chame o [anular](../cpp/abort-function.md) função.  
   
--   Executar um [retornar](../cpp/return-statement-in-program-termination-cpp.md) instrução do **principal**.  
+-   Executar uma [retornar](../cpp/return-statement-in-program-termination-cpp.md) instrução from `main`.  
   
 ## <a name="see-also"></a>Consulte também  
  [main: inicialização do programa](../cpp/main-program-startup.md)

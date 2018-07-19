@@ -1,5 +1,5 @@
 ---
-title: 'Tempo de tratamento de exceção: um resumo | Microsoft Docs'
+title: 'Tempo de tratamento de exceções: um resumo | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446925b6e00f4771229357effee0707af3fae52a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff2ac5abb13ae700e464635efc90a91c4a5835ab
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422170"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939410"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Tempo de tratamento de exceções: um resumo
-Um manipulador de término é executado não importa como o bloco de instruções `__try` é terminado. Entre as causas estão: saltar para fora do bloco `__try`, uma instrução `longjmp` que transfere o controle para fora do bloco e desenrolar a pilha devido à manipulação de exceções.  
+Um manipulador de término é executado, independentemente de como o **Try** bloco de instrução é encerrado. Causas estão: saltar para fora dos **Try** bloco, um `longjmp` instrução que transfere o controle para fora do bloco e desenrolar a pilha devido à manipulação de exceção.  
   
 > [!NOTE]
->  O Visual C++ oferece suporte a dois formatos das instruções `setjmp` e `longjmp`. A versão rápida ignora a manipulação de término, mas é mais eficiente. Para usar esta versão, o arquivo de inclusão \<setjmp.h >. A outra versão oferece suporte à manipulação de término conforme descrito no parágrafo anterior. Para usar esta versão, o arquivo de inclusão \<setjmpex.h >. O aumento no desempenho da versão rápida depende da configuração de hardware.  
+>  O Visual C++ oferece suporte a dois formatos das instruções `setjmp` e `longjmp`. A versão rápida ignora a manipulação de término, mas é mais eficiente. Para usar esta versão, inclua o arquivo \<setjmp >. A outra versão oferece suporte à manipulação de término conforme descrito no parágrafo anterior. Para usar esta versão, inclua o arquivo \<setjmpex >. O aumento no desempenho da versão rápida depende da configuração de hardware.  
   
  O sistema operacional executa todos os manipuladores de término na ordem apropriada antes que qualquer outro código possa ser executado, incluindo o corpo de um manipulador de exceção.  
   
@@ -44,7 +44,7 @@ Um manipulador de término é executado não importa como o bloco de instruçõe
   
 3.  Se esse filtro passar o controle (retornar 0), o processo continuará até que seja encontrado um filtro que não passe o controle.  
   
-4.  Se esse filtro retorna -1, a execução continua onde a exceção foi gerada, e não há terminação ocorre.  
+4.  Se esse filtro retorna -1, a execução continuará onde a exceção foi gerada, e não ocorrerá término.  
   
 5.  Se o filtro retornar 1, ocorrerão os seguintes eventos:  
   

@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4ce3c4dbfbf49791673392a1e1234728a680611
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: b39561c19754d35fc08755d7c8cf49b07ec95995
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079662"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851399"
 ---
 # <a name="crecttracker-class"></a>Classe CRectTracker
-Permite que um item para ser exibida, movida e redimensionada fashions diferentes.  
+Permite que um item seja exibido, movido e redimensionado em formas diferentes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -79,12 +79,12 @@ class CRectTracker
 |[CRectTracker::AdjustRect](#adjustrect)|Chamado quando o retângulo é redimensionado.|  
 |[CRectTracker::Draw](#draw)|Renderiza o retângulo.|  
 |[CRectTracker::DrawTrackerRect](#drawtrackerrect)|Chamado ao desenhar a borda de um `CRectTracker` objeto.|  
-|[CRectTracker::GetHandleMask](#gethandlemask)|Chamado para obter a máscara de uma `CRectTracker` alças de redimensionamento do item.|  
+|[CRectTracker::GetHandleMask](#gethandlemask)|Chamado para obter a máscara de um `CRectTracker` alças de redimensionamento do item.|  
 |[CRectTracker::GetTrueRect](#gettruerect)|Retorna a largura e altura do retângulo, incluindo as alças de redimensionamento.|  
-|[CRectTracker::HitTest](#hittest)|Retorna a posição atual do cursor relacionado para o `CRectTracker` objeto.|  
-|[CRectTracker::NormalizeHit](#normalizehit)|Normaliza um código de teste de hit.|  
+|[CRectTracker::HitTest](#hittest)|Retorna a posição atual do cursor relacionado ao `CRectTracker` objeto.|  
+|[CRectTracker::NormalizeHit](#normalizehit)|Normaliza um código de teste de clique.|  
 |[CRectTracker::OnChangedRect](#onchangedrect)|Chamado quando o retângulo foi redimensionado ou movido.|  
-|[CRectTracker::SetCursor](#setcursor)|Define o cursor, dependendo de sua posição sobre o retângulo.|  
+|[CRectTracker::SetCursor](#setcursor)|Define o cursor, dependendo da sua posição ao longo do retângulo.|  
 |[CRectTracker::Track](#track)|Permite ao usuário manipular o retângulo.|  
 |[CRectTracker::TrackRubberBand](#trackrubberband)|Permite que o usuário "elástica" a seleção.|  
   
@@ -100,13 +100,13 @@ class CRectTracker
 ## <a name="remarks"></a>Comentários  
  `CRectTracker` não tem uma classe base.  
   
- Embora o `CRectTracker` classe foi projetada para permitir que o usuário interage com itens OLE usando uma interface gráfica, seu uso não está restrito a aplicativos habilitados pelo OLE. Ele pode ser usado em qualquer lugar, cada uma interface do usuário é necessária.  
+ Embora o `CRectTracker` classe é projetada para permitir que o usuário interagir com itens OLE usando uma interface gráfica, seu uso não está restrito a aplicativos habilitados pelo OLE. Ele pode ser usado em qualquer lugar que tal uma interface do usuário é necessária.  
   
- `CRectTracker` as bordas podem ser sólidas ou linhas pontilhadas. O item pode ser fornecido a uma borda tracejada ou marcado com um padrão hachurado para indicar estados diferentes do item. Você pode colocar oito alças de redimensionamento em dentro ou fora borda do item. (Para obter uma explicação das alças de redimensionamento, consulte [GetHandleMask](#gethandlemask).) Por fim, um `CRectTracker` permite que você altere a orientação de um item durante o redimensionamento.  
+ `CRectTracker` as bordas podem ter uma base sólidas ou linhas pontilhadas. O item pode ser dado uma borda hachurada ou sobreposto com um padrão hachurado para indicar diferentes estados do item. Você pode colocar oito alças de redimensionamento na parte externa ou interna borda do item. (Para obter uma explicação das alças de redimensionamento, consulte [GetHandleMask](#gethandlemask).) Por fim, um `CRectTracker` permite que você altere a orientação de um item durante o redimensionamento.  
   
- Para usar `CRectTracker`, construir um `CRectTracker` de objeto e especificar quais estados de exibição são inicializados. Você pode usar esta interface para oferecer os comentários visuais do usuário sobre o status atual do item OLE associado a `CRectTracker` objeto.  
+ Para usar `CRectTracker`, construa um `CRectTracker` do objeto e especificar quais estados de exibição são inicializados. Em seguida, você pode usar essa interface para fornecer o feedback visual do usuário sobre o status atual do item OLE associado com o `CRectTracker` objeto.  
   
- Para obter mais informações sobre como usar `CRectTracker`, consulte o artigo [controladores](../../mfc/trackers.md).  
+ Para obter mais informações sobre como usar `CRectTracker`, consulte o artigo [rastreadores](../../mfc/trackers.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `CRectTracker`  
@@ -115,7 +115,7 @@ class CRectTracker
  **Cabeçalho:** afxext.h  
   
 ##  <a name="adjustrect"></a>  CRectTracker::AdjustRect  
- Chamado pelo framework quando o retângulo do controle é redimensionado usando uma alça de redimensionamento.  
+ Chamado pelo framework quando o retângulo de controle é redimensionado usando uma alça de redimensionamento.  
   
 ```  
 virtual void AdjustRect(
@@ -128,14 +128,14 @@ virtual void AdjustRect(
  Índice do identificador usado.  
   
  *lpRect*  
- Ponteiro para o tamanho atual do retângulo. (O tamanho de um retângulo é determinado pela altura e largura).  
+ Ponteiro para o tamanho atual do retângulo. (O tamanho de um retângulo é determinado pela sua altura e largura).  
   
 ### <a name="remarks"></a>Comentários  
  O comportamento padrão dessa função permite que a orientação do retângulo alterar somente quando `Track` e `TrackRubberBand` são chamados com invertendo permitido.  
   
- Substitua essa função para controlar o ajuste do retângulo de controle durante uma operação de arrastar. É um método ajustar as coordenadas especificadas pelas *lpRect* antes de retornar.  
+ Substitua essa função para controlar o ajuste do retângulo de controle durante uma operação de arrastar. Um método é ajustar as coordenadas especificadas por *lpRect* antes de retornar.  
   
- Recursos especiais que não são diretamente suportados por `CRectTracker`, como a grade de ajuste ou mantenha--taxa de proporção, pode ser implementada por esta função de substituição.  
+ Recursos especiais que não são diretamente suportados pelo `CRectTracker`, tais como a grade de ajuste ou keep--taxa de proporção, pode ser implementada por esta função de substituição.  
   
 ##  <a name="crecttracker"></a>  CRectTracker::CRectTracker  
  Cria e inicializa um objeto `CRectTracker`.  
@@ -151,25 +151,25 @@ CRectTracker(
   
 ### <a name="parameters"></a>Parâmetros  
  *lpSrcRect*  
- As coordenadas do objeto retângulo.  
+ As coordenadas do objeto de retângulo.  
   
  *nStyle*  
  Especifica o estilo do `CRectTracker` objeto. Há suporte para os seguintes estilos:  
   
-- **CRectTracker::solidLine** usar uma linha sólida para a borda do retângulo.  
+- `CRectTracker::solidLine` Use uma linha sólida para a borda do retângulo.  
   
-- **CRectTracker::dottedLine** usar uma linha pontilhada para a borda do retângulo.  
+- `CRectTracker::dottedLine` Use uma linha pontilhada para a borda do retângulo.  
   
-- **CRectTracker::hatchedBorder** usar um padrão hachurado para a borda do retângulo.  
+- `CRectTracker::hatchedBorder` Use um padrão hachurado da borda do retângulo.  
   
-- **CRectTracker::resizeInside** localizadas dentro do retângulo de alças de redimensionamento.  
+- `CRectTracker::resizeInside` Localizado dentro do retângulo de alças de redimensionamento.  
   
-- **CRectTracker::resizeOutside** localizadas fora do retângulo de alças de redimensionamento.  
+- `CRectTracker::resizeOutside` Localizados fora do retângulo de alças de redimensionamento.  
   
-- **CRectTracker::hatchInside** Hatched padrão abrange todo o retângulo.  
+- `CRectTracker::hatchInside` Hatched padrão abrange todo o retângulo.  
   
 ### <a name="remarks"></a>Comentários  
- O construtor padrão inicializa o `CRectTracker` objeto com os valores de *lpSrcRect* e inicializa os outros tamanhos para os padrões do sistema. Se o objeto é criado sem parâmetros, o `m_rect` e `m_nStyle` membros de dados são inicializados.  
+ O construtor padrão inicializa o `CRectTracker` objeto com os valores de *lpSrcRect* e inicializa a outros tamanhos para os padrões do sistema. Se o objeto é criado sem parâmetros, o `m_rect` e `m_nStyle` membros de dados são inicializados.  
   
 ##  <a name="draw"></a>  CRectTracker::Draw  
  Chame essa função para desenhar linhas externas e a região interna do retângulo.  
@@ -183,10 +183,10 @@ void Draw(CDC* pDC) const;
  Ponteiro para o contexto de dispositivo no qual desenhar.  
   
 ### <a name="remarks"></a>Comentários  
- O estilo do controlador determina como o desenho é feito. Consulte o construtor para `CRectTracker` para obter mais informações sobre os estilos disponíveis.  
+ O estilo de rastreador determina como o desenho é feito. Consulte o construtor para `CRectTracker` para obter mais informações sobre os estilos disponíveis.  
   
 ##  <a name="drawtrackerrect"></a>  CRectTracker::DrawTrackerRect  
- Chamado pelo framework sempre que a posição do controlador foi alterado enquanto dentro de `Track` ou `TrackRubberBand` função de membro.  
+ Chamado pelo framework sempre que a posição do controlador foi alterada enquanto dentro de `Track` ou `TrackRubberBand` função de membro.  
   
 ```  
 virtual void DrawTrackerRect(
@@ -198,42 +198,42 @@ virtual void DrawTrackerRect(
   
 ### <a name="parameters"></a>Parâmetros  
  *lpRect*  
- Ponteiro para o `RECT` que contém o retângulo para desenhar.  
+ Ponteiro para o `RECT` que contém o retângulo a ser desenhado.  
   
  *pWndClipTo*  
- Ponteiro para a janela para usar no retângulo de recorte.  
+ Ponteiro para a janela a ser usado no retângulo de recorte.  
   
  *pDC*  
  Ponteiro para o contexto de dispositivo no qual desenhar.  
   
- *pWnd*  
+ *Apropriei*  
  Ponteiro para a janela na qual o desenho ocorrerá.  
   
 ### <a name="remarks"></a>Comentários  
  A implementação padrão faz uma chamada para `CDC::DrawFocusRect`, que desenha um retângulo pontilhado.  
   
- Substitua esta função para fornecer comentários diferente durante a operação de controle.  
+ Substitua essa função para fornecer comentários diferente durante a operação de acompanhamento.  
   
 ##  <a name="gethandlemask"></a>  CRectTracker::GetHandleMask  
- O framework chama esta função de membro para recuperar a máscara para um retângulo alças de redimensionamento.  
+ O framework chama essa função de membro para recuperar a máscara de alças de redimensionamento de um retângulo.  
   
 ```  
 virtual UINT GetHandleMask() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- A máscara de uma `CRectTracker` alças de redimensionamento do item.  
+ A máscara de um `CRectTracker` alças de redimensionamento do item.  
   
 ### <a name="remarks"></a>Comentários  
  As alças de redimensionamento aparecem das laterais e cantos do retângulo e permitir que o usuário controlar a forma e o tamanho do retângulo.  
   
- Um retângulo possui 8 alças de redimensionamento numeradas de 0 a 7. Cada alça de redimensionamento é representada por um bit da máscara; o valor desse bit é 2 ^ *n*, onde *n* é o número do identificador de redimensionamento. Bits 0-3 correspondem às alças de redimensionamento do canto, começando na parte superior esquerda movendo no sentido horário. Iniciando na parte superior no sentido horário de alças de redimensionamento do bits correspondem ao lado de 4 a 7. A ilustração a seguir mostra as alças de redimensionamento do retângulo e seus correspondente redimensionar o identificador de números e valores:  
+ Um retângulo tem 8 alças de redimensionamento numeradas de 0 a 7. Cada alça de redimensionamento é representada por um bit na máscara; o valor desse bit é 2 ^ *n*, onde *n* é o número da alça de redimensionamento. Bits de 0 a 3 correspondem às alças de redimensionamento de canto, começando na parte superior esquerda movimentação no sentido horário. Começando do topo no sentido horário de alças de redimensionamento de bits correspondem ao lado de 4 a 7. A ilustração a seguir mostra as alças de redimensionamento de um retângulo e suas respectivas redimensionar o identificador de números e valores:  
   
  ![Redimensionar os números de identificador](../../mfc/reference/media/vc35dp1.gif "vc35dp1")  
   
- A implementação padrão de **GetHandleMask** retorna a máscara de bits para que sejam exibidas as alças de redimensionamento. Se for o único bit no, a alça de redimensionamento correspondente será desenhada.  
+ A implementação padrão de `GetHandleMask` retorna a máscara de bits para que sejam exibidas as alças de redimensionamento. Se o bit único estiver ativado, a alça de redimensionamento correspondente será desenhada.  
   
- Substitua essa função de membro para ocultar ou mostrar que o indicado alças de redimensionamento.  
+ Substitua essa função de membro para ocultar ou mostrar que alças de redimensionamento indicado.  
   
 ##  <a name="gettruerect"></a>  CRectTracker::GetTrueRect  
  Chame essa função para recuperar as coordenadas do retângulo.  
@@ -244,47 +244,47 @@ void GetTrueRect(LPRECT lpTrueRect) const;
   
 ### <a name="parameters"></a>Parâmetros  
  *lpTrueRect*  
- Ponteiro para o `RECT` estrutura que contém o dispositivo coordenadas do `CRectTracker` objeto.  
+ Ponteiro para o `RECT` coordena a estrutura que conterá o dispositivo do `CRectTracker` objeto.  
   
 ### <a name="remarks"></a>Comentários  
- As dimensões do retângulo incluem a altura e largura de qualquer alças de redimensionamento localizado na borda externa. No retorno, *lpTrueRect* é sempre um retângulo normalizado nas coordenadas do dispositivo.  
+ As dimensões do retângulo incluem a altura e largura de qualquer alças de redimensionamento localizadas na borda externa. Ao retornar, *lpTrueRect* é sempre um retângulo normalizado em coordenadas do dispositivo.  
   
 ##  <a name="hittest"></a>  CRectTracker::HitTest  
- Chame essa função para descobrir se o usuário foi capturado uma alça de redimensionamento.  
+ Chame essa função para descobrir se o usuário tem pegou uma alça de redimensionamento.  
   
 ```  
 int HitTest(CPoint point) const;  
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *Ponto*  
- O ponto, nas coordenadas do dispositivo, para testar.  
+ *ponto*  
+ O ponto em coordenadas de dispositivo, para testar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O valor retornado é baseado no tipo enumerado **CRectTracker::TrackerHit** e pode ter um dos seguintes valores:  
+ O valor retornado é baseado no tipo enumerado `CRectTracker::TrackerHit` e pode ter um dos seguintes valores:  
   
-- **CRectTracker::hitNothing** -1  
+- `CRectTracker::hitNothing` -1  
   
-- **CRectTracker::hitTopLeft** 0  
+- `CRectTracker::hitTopLeft` 0  
   
-- **CRectTracker::hitTopRight** 1  
+- `CRectTracker::hitTopRight` 1  
   
-- **CRectTracker::hitBottomRight** 2  
+- `CRectTracker::hitBottomRight` 2  
   
-- **CRectTracker::hitBottomLeft** 3  
+- `CRectTracker::hitBottomLeft` 3  
   
-- **CRectTracker::hitTop** 4  
+- `CRectTracker::hitTop` 4  
   
-- **CRectTracker::hitRight** 5  
+- `CRectTracker::hitRight` 5  
   
-- **CRectTracker::hitBottom** 6  
+- `CRectTracker::hitBottom` 6  
   
-- **CRectTracker::hitLeft** 7  
+- `CRectTracker::hitLeft` 7  
   
-- **CRectTracker::hitMiddle** 8  
+- `CRectTracker::hitMiddle` 8  
   
 ##  <a name="m_nhandlesize"></a>  CRectTracker::m_nHandleSize  
- O tamanho, em pixels, do `CRectTracker` alças de redimensionamento.  
+ O tamanho, em pixels, da `CRectTracker` alças de redimensionamento.  
   
 ```  
 int m_nHandleSize;  
@@ -294,7 +294,7 @@ int m_nHandleSize;
  Inicializado com o valor padrão do sistema.  
   
 ##  <a name="m_rect"></a>  CRectTracker::m_rect  
- A posição atual do retângulo em coordenadas do cliente (em pixels).  
+ A posição atual do retângulo em coordenadas do cliente (pixels).  
   
 ```  
 CRect m_rect;  
@@ -308,7 +308,7 @@ CSize m_sizeMin;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ambos os valores padrão, **cx** e **cy**, são calculados do valor padrão de sistema para a largura da borda. Este membro de dados é usado somente pelo `AdjustRect` função de membro.  
+ Ambos os valores padrão, `cx` e `cy`, são calculados a partir do valor padrão do sistema para a largura da borda. Este membro de dados é usado somente pelo `AdjustRect` função de membro.  
   
 ##  <a name="m_nstyle"></a>  CRectTracker::m_nStyle  
  Estilo atual do retângulo.  
@@ -318,7 +318,7 @@ UINT m_nStyle;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [CRectTracker::CRectTracker](#crecttracker) para obter uma lista de estilos possíveis.  
+ Ver [CRectTracker::CRectTracker](#crecttracker) para obter uma lista de possíveis estilos.  
   
 ##  <a name="normalizehit"></a>  CRectTracker::NormalizeHit  
  Chame essa função para converter um identificador potencialmente invertido.  
@@ -335,10 +335,10 @@ int NormalizeHit(int nHandle) const;
  O índice do identificador normalizado.  
   
 ### <a name="remarks"></a>Comentários  
- Quando `CRectTracker::Track` ou `CRectTracker::TrackRubberBand` é chamado com invertendo permitido, é possível para o retângulo deve ser invertida no eixo x, y ou ambos. Quando isso acontece, `HitTest` retornará identificadores também são invertidos em relação ao retângulo. Isso é apropriado para desenho comentários de cursor porque os comentários depende a posição da tela do retângulo, não a parte da estrutura de dados de retângulo que será modificada.  
+ Quando `CRectTracker::Track` ou `CRectTracker::TrackRubberBand` é chamado com a inversão de permissão, é possível para o retângulo deve ser invertida no eixo x, y ou ambos. Quando isso acontece, `HitTest` retornará alças que também são invertidas em relação ao retângulo. Isso é apropriado para o desenho comentários de cursor porque os comentários depende a posição da tela do retângulo, não a parte da estrutura de dados de retângulo que será modificada.  
   
 ##  <a name="onchangedrect"></a>  CRectTracker::OnChangedRect  
- Chamado pelo framework quando o retângulo do controlador foi alterada durante uma chamada para `Track`.  
+ Chamado pelo framework sempre que o retângulo de rastreador foi alterada durante uma chamada para `Track`.  
   
 ```  
 virtual void OnChangedRect(const CRect& rectOld);
@@ -349,12 +349,12 @@ virtual void OnChangedRect(const CRect& rectOld);
  Contém as coordenadas do dispositivo antigo do `CRectTracker` objeto.  
   
 ### <a name="remarks"></a>Comentários  
- No momento em que essa função é chamada, todos os comentários desenhado com `DrawTrackerRect` foi removido. A implementação padrão dessa função não faz nada.  
+ No momento essa função é chamada, e todos os comentários desenhado com `DrawTrackerRect` foi removido. A implementação padrão dessa função não faz nada.  
   
- Substitua essa função quando quiser realizar nenhuma ação após o retângulo foi redimensionado.  
+ Substitua essa função quando você deseja executar quaisquer ações depois que o retângulo foi redimensionado.  
   
 ##  <a name="setcursor"></a>  CRectTracker::SetCursor  
- Chamar essa função para alterar a forma do cursor enquanto ele está sobre o `CRectTracker` região do objeto.  
+ Chame essa função para alterar a forma de cursor enquanto está sobre o `CRectTracker` região do objeto.  
   
 ```  
 BOOL SetCursor(
@@ -363,17 +363,17 @@ BOOL SetCursor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *pWnd*  
+ *Apropriei*  
  Aponta para a janela que contém o cursor.  
   
  *nHitTest*  
  Resultados do teste de clique anterior, da mensagem WM_SETCURSOR.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se a ocorrência anterior no retângulo do rastreador; Caso contrário, 0.  
+ Diferente de zero se a ocorrência anterior ultrapassou o retângulo de rastreador; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Chamar essa função de dentro da função de janela que manipula a mensagem WM_SETCURSOR (geralmente `OnSetCursor`).  
+ Chame essa função de dentro da função de janela que manipula a mensagem WM_SETCURSOR (normalmente `OnSetCursor`).  
   
 ##  <a name="track"></a>  CRectTracker::Track  
  Chame essa função para exibir a interface do usuário para redimensionar o retângulo.  
@@ -387,30 +387,30 @@ BOOL Track(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *pWnd*  
+ *Apropriei*  
  O objeto de janela que contém o retângulo.  
   
- *Ponto*  
- Coordenadas do dispositivo da posição atual do mouse relativas à área do cliente.  
+ *ponto*  
+ Coordenadas do dispositivo da posição atual do mouse em relação à área de cliente.  
   
  *bAllowInvert*  
- Se **TRUE**, o retângulo pode ser invertida ao longo do eixo x ou y; caso contrário **FALSE**.  
+ Se for TRUE, o retângulo pode ser invertido ao longo do eixo x ou y; Caso contrário, FALSE.  
   
  *pWndClipTo*  
- A janela que as operações de desenho serão recortadas. Se **nulo**, *pWnd* é usado como o retângulo de recorte.  
+ A janela que operações de desenho serão recortadas. Se for NULL, *Apropriei* é usado como o retângulo de recorte.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Se for pressionada a tecla ESC, o processo de rastreamento é interrompido, o retângulo armazenado no controlador não é alterado e será retornado 0. Se a alteração é confirmada, movendo o mouse e liberar o botão esquerdo do mouse, a nova posição e/ou o tamanho é registrado no retângulo do controlador e diferente de zero será retornado.  
+ Se a tecla ESC é pressionada, o processo de rastreamento será interrompido, o retângulo armazenado no controlador não é alterado e será retornado 0. Se a alteração é confirmada, movendo o mouse e soltando o botão esquerdo do mouse, a nova posição e/ou o tamanho é registrada no retângulo do rastreador e diferente de zero será retornado.  
   
 ### <a name="remarks"></a>Comentários  
- Isso é geralmente chamado de dentro da função de aplicativo que manipula o `WM_LBUTTONDOWN` mensagem (geralmente `OnLButtonDown`).  
+ Isso geralmente é chamado de dentro da função do aplicativo que lida com o `WM_LBUTTONDOWN` mensagens (normalmente `OnLButtonDown`).  
   
- Essa função capturará o mouse até que o usuário libera o botão esquerdo do mouse, pressiona a tecla ESC ou pressiona o botão direito do mouse. Quando o usuário move o cursor do mouse, os comentários é atualizado chamando `DrawTrackerRect` e `OnChangedRect`.  
+ Esta função irá capturar o mouse até que o usuário libera o botão esquerdo do mouse, pressiona a tecla ESC ou pressiona o botão direito do mouse. Quando o usuário move o cursor do mouse, os comentários é atualizado chamando `DrawTrackerRect` e `OnChangedRect`.  
   
- Se *bAllowInvert* é **TRUE**, o retângulo de controle pode ser invertido no eixo x ou y.  
+ Se *bAllowInvert* for TRUE, o retângulo de controle pode ser invertido no eixo x ou y.  
   
 ##  <a name="trackrubberband"></a>  CRectTracker::TrackRubberBand  
- Chame essa função para fazer a seleção Elástico.  
+ Chame essa função para fazer a seleção de Retângulo Elástico.  
   
 ```  
 BOOL TrackRubberBand(
@@ -420,28 +420,28 @@ BOOL TrackRubberBand(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *pWnd*  
+ *Apropriei*  
  O objeto de janela que contém o retângulo.  
   
- *Ponto*  
- Coordenadas do dispositivo da posição atual do mouse relativas à área do cliente.  
+ *ponto*  
+ Coordenadas do dispositivo da posição atual do mouse em relação à área de cliente.  
   
  *bAllowInvert*  
- Se **verdadeiro,** o retângulo pode ser invertida ao longo do eixo x ou y; caso contrário **FALSE**.  
+ Se for TRUE, o retângulo pode ser invertido ao longo do eixo x ou y; Caso contrário, FALSE.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se moveu o mouse e o retângulo não está vazio. Caso contrário, 0.  
+ Diferente de zero se o mouse foi movido e o retângulo não está vazio. Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Geralmente é chamado de dentro da função do aplicativo que lida com a mensagem WM_LBUTTONDOWN (geralmente `OnLButtonDown`).  
+ Geralmente é chamado de dentro da função do seu aplicativo que manipula a mensagem WM_LBUTTONDOWN (normalmente `OnLButtonDown`).  
   
- Essa função capturará o mouse até que o usuário libera o botão esquerdo do mouse, pressiona a tecla ESC ou pressiona o botão direito do mouse. Quando o usuário move o cursor do mouse, os comentários é atualizado chamando `DrawTrackerRect` e `OnChangedRect`.  
+ Esta função irá capturar o mouse até que o usuário libera o botão esquerdo do mouse, pressiona a tecla ESC ou pressiona o botão direito do mouse. Quando o usuário move o cursor do mouse, os comentários é atualizado chamando `DrawTrackerRect` e `OnChangedRect`.  
   
- Controle é executado com uma seleção de tipo de faixa de borracha da alça inferior direito. Se invertendo for permitido, o retângulo pode ser dimensionado, arrastando o backup e para a esquerda ou para baixo e para a direita.  
+ Acompanhamento é executado com uma seleção de tipo de faixa de borracha na alça inferior direita. Se invertendo for permitido, o retângulo pode ser dimensionado, arrastando o backup e para a esquerda ou para baixo e à direita.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo MFC RASTREADOR](../../visual-cpp-samples.md)   
  [Exemplo MFC DRAWCLI](../../visual-cpp-samples.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe COleResizeBar](../../mfc/reference/coleresizebar-class.md)   
  [Classe CRect](../../atl-mfc-shared/reference/crect-class.md)

@@ -42,15 +42,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d078900c3436c2205905b92d651bab86e94db246
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 26837b4eda881bdf83e2f34f0c81a1b0e7034ffe
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039005"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851490"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Classe CMFCRibbonLinkCtrl
-Implementa um hiperlink que está posicionado em uma faixa de opções. O hiperlink abre uma página da Web quando você clicar nele.  
+Implementa um hiperlink que está posicionado em uma faixa de opções. O hiperlink abre uma página da Web quando você clica nele.  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -96,7 +96,7 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
  **Cabeçalho:** afxRibbonLinkCtrl.h  
   
 ##  <a name="cmfcribbonlinkctrl"></a>  CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl  
- Cria e inicializa um [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md) objeto.  
+ Constrói e inicializa um [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md) objeto.  
   
 ```  
 CMFCRibbonLinkCtrl(
@@ -116,7 +116,7 @@ CMFCRibbonLinkCtrl(
  Especifica o hiperlink associado ao controle de link.  
   
 ### <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar o construtor do `CMFCRibbonLinkCtrl` classe. Este trecho de código é parte do [exemplo Gadgets da faixa de opções](../../visual-cpp-samples.md).  
+ O exemplo a seguir demonstra como usar o construtor do `CMFCRibbonLinkCtrl` classe. Este trecho de código é parte do [exemplo de Gadgets de faixa de opções](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]  
   
@@ -250,10 +250,10 @@ BOOL OpenLink();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se a página da Web associada foi aberta com êxito; Caso contrário, `FALSE`.  
+ TRUE se a página da Web associada foi aberta com êxito; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- Abre uma página da web usando o hiperlink associado a `CMFCRibbonLinkCtrl` objeto.  
+ Abre uma página da Web usando o hiperlink associado a `CMFCRibbonLinkCtrl` objeto.  
   
 ##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink  
  Define o valor do hiperlink.  
@@ -267,6 +267,6 @@ void SetLink(LPCTSTR lpszLink);
  Especifica o texto do hiperlink.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)

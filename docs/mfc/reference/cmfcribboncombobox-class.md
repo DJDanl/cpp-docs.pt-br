@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5894f1fc9bd901bef6e830250f4e1f8e9bdd335
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: a2ccefbc435cac5b48cd2c9509831699dcec70af
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040735"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849656"
 ---
 # <a name="cmfcribboncombobox-class"></a>Classe CMFCRibbonComboBox
 O `CMFCRibbonComboBox` classe implementa um controle de caixa de combinação que você pode adicionar uma barra de faixa de opções, um painel de faixa de opções ou um menu pop-up de faixa de opções.  
@@ -80,26 +80,26 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
 |----------|-----------------|  
 |[CMFCRibbonComboBox::AddItem](#additem)|Acrescenta um item exclusivo para a caixa de listagem.|  
 |[CMFCRibbonComboBox::DeleteItem](#deleteitem)|Exclui um item especificado na caixa de listagem.|  
-|[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)|Especifica se a caixa de listagem pode alterar o tamanho quando ele está.|  
+|[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)|Especifica se a caixa de listagem pode alterar o tamanho quando ela cai para baixo.|  
 |[CMFCRibbonComboBox::FindItem](#finditem)|Retorna o índice do primeiro item na caixa de listagem que corresponde a uma cadeia de caracteres especificada.|  
 |[CMFCRibbonComboBox::GetCount](#getcount)|Retorna o número de itens na caixa de listagem.|  
 |[CMFCRibbonComboBox::GetCurSel](#getcursel)|Obtém o índice do item atualmente selecionado na caixa de listagem.|  
-|[CMFCRibbonComboBox::GetDropDownHeight](#getdropdownheight)|Obtém a altura da caixa de listagem quando a caixa de listagem é removida para baixo.|  
-|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|Retorna o tamanho da caixa de combinação, como exibido no modo intermediário.|  
+|[CMFCRibbonComboBox::GetDropDownHeight](#getdropdownheight)|Obtém a altura da caixa de listagem, quando a caixa de listagem é descartada para baixo.|  
+|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|Retorna o tamanho da caixa de combinação, conforme exibido no modo de intermediário.|  
 |[CMFCRibbonComboBox::GetItem](#getitem)|Retorna a cadeia de caracteres associada a um item em um índice especificado na caixa de listagem.|  
 |[CMFCRibbonComboBox::GetItemData](#getitemdata)|Retorna os dados associados a um item em um índice especificado na caixa de listagem.|  
 |[CMFCRibbonComboBox::HasEditBox](#haseditbox)|Indica se o controle contém uma caixa de edição.|  
 |[CMFCRibbonComboBox::IsResizeDropDownList](#isresizedropdownlist)|Indica se a caixa de listagem pode ser redimensionada.|  
 |[CMFCRibbonComboBox::OnSelectItem](#onselectitem)|Chamado pelo framework quando o usuário seleciona um item na caixa de listagem.|  
-|[CMFCRibbonComboBox::RemoveAllItems](#removeallitems)|Exclui todos os itens da caixa de listagem e limpa a caixa de edição.|  
+|[CMFCRibbonComboBox::RemoveAllItems](#removeallitems)|Exclui todos os itens da caixa de listagem e desmarca a caixa de edição.|  
 |[CMFCRibbonComboBox::SelectItem](#selectitem)|Seleciona um item na caixa de listagem.|  
-|[CMFCRibbonComboBox::SetDropDownHeight](#setdropdownheight)|Define a altura da caixa de listagem quando ele é removido para baixo.|  
+|[CMFCRibbonComboBox::SetDropDownHeight](#setdropdownheight)|Define a altura da caixa de listagem, quando ele é removido para baixo.|  
   
 ## <a name="remarks"></a>Comentários  
- A caixa de combinação de faixa de opções consiste em uma caixa de listagem combinada com um rótulo estático ou o rótulo que pode ser editado pelo usuário. Você deve especificar o tipo desejado ao criar a caixa de combinação de faixa de opções.  
+ A caixa de combinação da faixa de opções consiste em uma caixa de listagem, combinada com um rótulo estático ou um rótulo que pode ser editado pelo usuário. Você deve especificar o tipo desejado ao criar a caixa de combinação da faixa de opções.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como construir um objeto de `CMFCRibbonComboBox` classe, adicione um item à caixa de combinação, selecione um item na caixa de combinação e adicionar uma caixa de combinação a um painel.  
+ O exemplo a seguir demonstra como construir um objeto do `CMFCRibbonComboBox` de classe, adicione um item à caixa de combinação, selecione um item na caixa de combinação e adicionar uma caixa de combinação a um painel.  
   
  [!code-cpp[NVC_MFC_RibbonApp#11](../../mfc/reference/codesnippet/cpp/cmfcribboncombobox-class_1.cpp)]  
   
@@ -131,10 +131,10 @@ virtual INT_PTR AddItem(
  A cadeia de caracteres do item a ser adicionado.  
   
  [in] *dwData*  
- Os dados associados ao item a ser adicionado.  
+ Os dados associados com o item a ser adicionado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O índice de base zero do item anexado.  
+ O índice baseado em zero do item acrescentado.  
   
 ##  <a name="cmfcribboncombobox"></a>  CMFCRibbonComboBox::CMFCRibbonComboBox  
  Constrói um objeto `CMFCRibbonComboBox`.  
@@ -157,19 +157,19 @@ CMFCRibbonComboBox();
  A ID da caixa de combinação.  
   
  [in] *bHasEditBox*  
- `TRUE` Se você quiser que uma caixa de edição dentro do controle; `FALSE` caso contrário.  
+ TRUE se você quiser uma caixa de edição dentro do controle; FALSE caso contrário.  
   
  [in] *nWidth*  
- Largura da caixa de combinação em pixels. ou -1 para a largura padrão.  
+ Largura da caixa de combinação em pixels; ou -1 para a largura padrão.  
   
  [in] *lpszLabel*  
  O rótulo de exibição da caixa de combinação.  
   
- [in] *nImage*  
+ [in] *Nimagem*  
  O índice de imagem em miniatura da caixa de combinação.  
   
 ### <a name="remarks"></a>Comentários  
- A largura padrão é de 108 pixels.  
+ A largura padrão é 108 pixels.  
   
 ##  <a name="deleteitem"></a>  CMFCRibbonComboBox::DeleteItem  
  Exclui um item especificado na caixa de listagem.  
@@ -183,7 +183,7 @@ BOOL DeleteItem(LPCTSTR lpszText);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *iIndex*  
- O índice de base zero do item a ser excluído.  
+ O índice baseado em zero do item a ser excluído.  
   
  [in] *dwData*  
  Os dados associados ao item a ser excluído.  
@@ -192,12 +192,12 @@ BOOL DeleteItem(LPCTSTR lpszText);
  A cadeia de caracteres do item a ser excluído. Se houver vários itens com a mesma cadeia de caracteres, o primeiro item é excluído.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o item especificado foi excluído; Caso contrário, `FALSE`.  
+ TRUE se o item especificado foi excluído; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="enabledropdownlistresize"></a>  CMFCRibbonComboBox::EnableDropDownListResize  
- Especifica se a caixa de listagem pode alterar o tamanho quando ele está.  
+ Especifica se a caixa de listagem pode alterar o tamanho quando ela cai para baixo.  
   
 ```  
 void EnableDropDownListResize(BOOL bEnable=FALSE);
@@ -205,10 +205,10 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *bAtivar*  
- `TRUE` Para habilitar o redimensionamento; `FALSE` para desabilitar o redimensionamento.  
+ True para habilitar o redimensionamento; FALSE para desabilitar o redimensionamento.  
   
 ### <a name="remarks"></a>Comentários  
- Quando o redimensionamento estiver habilitado, a caixa de listagem alterará tamanho para os itens que ele exibe.  
+ Quando o redimensionamento é habilitado, a caixa de listagem será alterar o tamanho de acordo com os itens que ele exibe.  
   
 ##  <a name="finditem"></a>  CMFCRibbonComboBox::FindItem  
  Retorna o índice do primeiro item na caixa de listagem que corresponde a uma cadeia de caracteres especificada.  
@@ -222,7 +222,7 @@ int FindItem(LPCTSTR lpszText) const;
  A cadeia de caracteres de um item na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O índice de base zero do item; ou -1 se o item não for encontrado.  
+ O índice baseado em zero do item; ou -1 se o item não for encontrado.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -246,10 +246,10 @@ int GetCurSel() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- O índice de base zero do item atualmente selecionado na caixa de listagem; ou -1 se nenhum item selecionado.  
+ O índice baseado em zero do item atualmente selecionado na caixa de listagem; ou -1 se nenhum item está selecionado.  
   
 ##  <a name="getdropdownheight"></a>  CMFCRibbonComboBox::GetDropDownHeight  
- Obtém a altura da caixa de listagem quando a caixa de listagem é removida para baixo.  
+ Obtém a altura da caixa de listagem, quando a caixa de listagem é descartada para baixo.  
   
 ```  
 int GetDropDownHeight();
@@ -261,7 +261,7 @@ int GetDropDownHeight();
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="getintermediatesize"></a>  CMFCRibbonComboBox::GetIntermediateSize  
- Retorna o tamanho da caixa de combinação, como exibido no modo intermediário.  
+ Retorna o tamanho da caixa de combinação, conforme exibido no modo de intermediário.  
   
 ```  
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -269,13 +269,13 @@ virtual CSize GetIntermediateSize(CDC* pDC);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *pDC*  
- Ponteiro para um contexto de dispositivo da caixa de combinação.  
+ Ponteiro para um contexto de dispositivo para a caixa de combinação.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O tamanho da caixa de combinação.  
   
 ### <a name="remarks"></a>Comentários  
- O tamanho retornado é com base no tamanho da caixa de combinação quando ele exibe imagens pequenas.  
+ O tamanho retornado baseia-se no tamanho da caixa de combinação quando exibe imagens pequenas.  
   
 ##  <a name="getitem"></a>  CMFCRibbonComboBox::GetItem  
  Retorna a cadeia de caracteres associada a um item em um índice especificado na caixa de listagem.  
@@ -286,10 +286,10 @@ LPCTSTR GetItem(int iIndex) const;
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *iIndex*  
- O índice de base zero de um item na caixa de listagem.  
+ O índice baseado em zero de um item na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para a cadeia de caracteres que é associado ao item; Caso contrário, `NULL` se o parâmetro de índice é inválido, ou se o parâmetro de índice é -1 e não há nenhum item selecionado na caixa de combinação.  
+ Um ponteiro para a cadeia de caracteres que está associado com o item; Caso contrário, nulo se o parâmetro de índice é inválido, ou se o parâmetro index é -1 e não há nenhum item selecionado na caixa de combinação.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -302,10 +302,10 @@ DWORD_PTR GetItemData(int iIndex) const;
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *iIndex*  
- O índice de base zero de um item na caixa de listagem.  
+ O índice baseado em zero de um item na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Os dados associados ao item; ou 0 se o item não existe ou se o parâmetro de índice é -1 e não há nenhum item selecionado na caixa de listagem.  
+ Os dados associados com o item; ou 0 se o item não existe ou se o parâmetro index é -1 e não há nenhum item selecionado na caixa de listagem.  
   
 ##  <a name="haseditbox"></a>  CMFCRibbonComboBox::HasEditBox  
  Indica se o controle contém uma caixa de edição.  
@@ -315,7 +315,7 @@ BOOL HasEditBox() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o controle contém uma caixa de edição; Caso contrário, `FALSE`.  
+ TRUE se o controle contém uma caixa de edição; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -327,7 +327,7 @@ BOOL IsResizeDropDownList() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se a caixa de lista pode ser redimensionada; Caso contrário, `FALSE`. [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
+ TRUE se a caixa de listagem pode ser redimensionada; Caso contrário, FALSE. [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
   
 ### <a name="remarks"></a>Comentários  
  Você pode habilitar o redimensionamento de caixa de lista usando o [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize) método.  
@@ -347,7 +347,7 @@ virtual void OnSelectItem(int nItem);
  Substitua este método se você quiser processar uma seleção de entrada do usuário.  
   
 ##  <a name="removeallitems"></a>  CMFCRibbonComboBox::RemoveAllItems  
- Exclui todos os itens da caixa de listagem e limpa a caixa de edição.  
+ Exclui todos os itens da caixa de listagem e desmarca a caixa de edição.  
   
 ```  
 void RemoveAllItems();
@@ -367,7 +367,7 @@ BOOL SelectItem(LPCTSTR lpszText);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *iIndex*  
- O índice de base zero de um item na caixa de listagem.  
+ O índice baseado em zero de um item na caixa de listagem.  
   
  [in] *dwData*  
  Os dados associados a um item na caixa de listagem.  
@@ -376,12 +376,12 @@ BOOL SelectItem(LPCTSTR lpszText);
  A cadeia de caracteres de um item na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o método teve êxito; Caso contrário, `FALSE`.  
+ TRUE se o método foi bem-sucedida; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="setdropdownheight"></a>  CMFCRibbonComboBox::SetDropDownHeight  
- Define a altura da caixa de listagem quando ele é removido para baixo.  
+ Define a altura da caixa de listagem, quando ele é removido para baixo.  
   
 ```  
 void SetDropDownHeight(int nHeight);
@@ -395,6 +395,6 @@ void SetDropDownHeight(int nHeight);
  A altura padrão é 150 pixels.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)

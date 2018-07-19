@@ -23,22 +23,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa925a01633d72f43b165b87c27e5203a143d1e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6e1ea4abadc3b751b8bad9f9521462d510c5227
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942305"
 ---
 # <a name="raising-software-exceptions"></a>Acionando exceções de software
 Algumas das origens mais comuns de erros do programa não são sinalizadas como exceções pelo sistema. Por exemplo, se você tenta alocar um bloco de memória, mas não há memória suficiente, o tempo de execução ou a função de API não geram uma exceção, mas retornam um código de erro.  
   
- No entanto, você pode tratar qualquer condição como uma exceção ao detectar essa condição em seu código e relatá-las, em seguida, chamando o [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) função. Ao sinalizar erros dessa maneira, você aproveitas as vantagens de manipulação de exceções estruturada em qualquer tipo de erro de tempo de execução.  
+ No entanto, você pode tratar qualquer condição como uma exceção detectando essa condição em seu código e em seguida, o relatório por meio da chamada a [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) função. Ao sinalizar erros dessa maneira, você aproveitas as vantagens de manipulação de exceções estruturada em qualquer tipo de erro de tempo de execução.  
   
  Para usar a manipulação de exceção estruturada com erros:  
   
 -   Defina seu próprio código de exceção para o evento.  
   
--   Chamar **RaiseException** quando você detectar um problema.  
+-   Chamar `RaiseException` quando detectar um problema.  
   
 -   Use filtros de manipulação de exceções para testar o código de exceção definido.  
   
@@ -52,26 +53,26 @@ Algumas das origens mais comuns de erros do programa não são sinalizadas como 
   
  Você pode definir os dois primeiros bits com uma configuração diferente do 11 binário se você desejar, embora a configuração de “erro” seja apropriada para a maioria das exceções. É importante lembrar de definir os bits 29 e 28 conforme mostrado na tabela anterior.  
   
- O código de erro resultante, portanto, deve ter os quatro bits mais altos definido como e hexadecimal. Por exemplo, as seguintes definições definem códigos de exceção que não estão em conflito com qualquer códigos de exceção do Windows. (No entanto, talvez seja necessário verificar se os códigos são usados por DLL de terceiros.)  
+ O código de erro resultante, portanto, deve ter os quatro bits maiores definido com e hexadecimal. Por exemplo, as definições a seguir definem códigos de exceção que não entrem em conflito com os códigos de exceção do Windows. (No entanto, talvez seja necessário verificar se os códigos são usados por DLL de terceiros.)  
   
-```  
+```cpp 
 #define STATUS_INSUFFICIENT_MEM       0xE0000001  
 #define STATUS_FILE_BAD_FORMAT        0xE0000002  
 ```  
   
  Depois que você tiver definido um código de exceção, poderá usá-lo para gerar uma exceção. Por exemplo, o seguinte código gera a exceção STATUS_INSUFFICIENT_MEM em resposta a um problema de alocação de memória:  
   
-```  
+```cpp 
 lpstr = _malloc( nBufferSize );  
 if (lpstr == NULL)  
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);  
 ```  
   
- Se você quiser simplesmente gerar uma exceção, pode definir os últimos três parâmetros como 0. Os últimos três parâmetros são úteis para passar informações adicionais e definir um sinalizador que impeça manipuladores de continuarem a execução. Consulte o [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) funcionar a [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] para obter mais informações.  
+ Se você quiser simplesmente gerar uma exceção, pode definir os últimos três parâmetros como 0. Os últimos três parâmetros são úteis para passar informações adicionais e definir um sinalizador que impeça manipuladores de continuarem a execução. Consulte a [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) funcionar a [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] para obter mais informações.  
   
  Em seus filtros de manipulação de exceções, você pode testar os códigos que você definiu. Por exemplo:  
   
-```  
+```cpp 
 __try {  
     ...  
 }  

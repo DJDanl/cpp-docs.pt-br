@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f018a87f7a73de6500294b0817263e6f847af8ad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09efc905507d93bbb80b003f93b885d9d27fcb1d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422664"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939839"
 ---
 # <a name="stdcall"></a>__stdcall
 **Seção específica da Microsoft**  
   
- A convenção de chamada `__stdcall` é usada para chamar funções da API do Win32. O receptor limpa a pilha para faz com que o compilador **vararg** funções `__cdecl`. As funções que usam esta convenção de chamada exigem um protótipo de função.  
+ O **stdcall** convenção de chamada é usada para chamar funções de API do Win32. O receptor limpa a pilha, então o compilador faz **vararg** funções **cdecl**. As funções que usam esta convenção de chamada exigem um protótipo de função.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,11 +46,11 @@ return-type __stdcall function-name[(argument-list)]
 |Convenção de decoração de nome|Um sublinhado (_) é prefixado com o nome. O nome é seguido pela arroba (@) e pelo número de bytes (em decimal) na lista de argumentos. Portanto, a função declarada como `int func( int a, double b )` está decorada da seguinte maneira: `_func@12`|  
 |Convenção de conversão de maiúsculas/minúsculas|Nenhum|  
   
- O [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md) Especifica a opção de compilador `__stdcall` para todas as funções que não são explicitamente declaradas com uma convenção de chamada diferente.  
+ O [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md) opção de compilador especifica **stdcall** para todas as funções não declaradas explicitamente com outra convenção de chamada.  
   
- Funções declaradas usando o `__stdcall` da mesma maneira que as funções declaradas usando valores de retorno de modificador [cdecl](../cpp/cdecl.md).  
+ As funções declaradas usando o **stdcall** da mesma maneira que as funções declaradas usando valores de retorno de modificador [cdecl](../cpp/cdecl.md).  
   
- Nos processadores ARM e x64, `__stdcall` é aceito e ignorado pelo compilador; nas arquiteturas ARM e x64, por convenção, os argumentos são passados em registros quando possível, e os argumentos subsequentes são passados na pilha.  
+ No ARM e x64 processadores **stdcall** é aceito e ignorado pelo compilador; no ARM e x64 arquiteturas, por convenção, os argumentos são passados em registros quando possível, e os argumentos subsequentes são passados na pilha.  
   
  Para funções de classe não estáticas, se a função for definida como fora da linha, o modificador da convenção de chamada não precisará ser especificado na definição fora da linha. Ou seja, para métodos de membro de classe não estática, a convenção de chamada especificada durante a declaração é assumida no ponto de definição. Dada esta definição de classe,  
   
@@ -73,7 +73,7 @@ void __stdcall CMyClass::mymethod() { return; }
 ```  
   
 ## <a name="example"></a>Exemplo  
- No exemplo a seguir, uso de _**stdcall** resulta em todos os `WINAPI` tipos de função que está sendo tratado como um padrão de chamada:  
+ No exemplo a seguir, uso de _**stdcall** resulta em todos os `WINAPI` tipos de função que está sendo tratada como uma chamada padrão:  
   
 ```cpp  
 // Example of the __stdcall keyword  

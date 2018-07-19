@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49c7f113aa234a5e682576ff509199c0223b7cc5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa6d4abf9423df29d59f375b825a815404a3c76c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942285"
 ---
 # <a name="public-c"></a>public (C++)
 ## <a name="syntax"></a>Sintaxe  
@@ -32,18 +33,18 @@ public base-class
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Quando precede uma lista de membros de classe, o **pública** palavra-chave especifica que os membros são acessíveis de qualquer função. Isso se aplica a todos os membros declarados até o especificador seguinte do acesso ou ao final da classe.  
+ Quando precede uma lista de membros de classe, o **pública** palavra-chave especifica que esses membros são acessíveis de qualquer função. Isso se aplica a todos os membros declarados até o especificador seguinte do acesso ou ao final da classe.  
   
- Quando precede o nome de uma classe base, o **pública** palavra-chave especifica que os membros protegidos e públicos da classe base são públicos e protegidos membros, respectivamente, da classe derivada.  
+ Preceder o nome de uma classe base, o **pública** palavra-chave especifica que os membros públicos e protegidos da classe base são públicos e protegidos membros, respectivamente, da classe derivada.  
   
  O acesso padrão dos membros em um classe é particular. O acesso padrão dos membros em uma estrutura ou união é público.  
   
  O acesso padrão de uma classe base é particular para classes e público para estruturas. Uniões não podem ter classes base.  
   
- Para obter mais informações, consulte [privada](../cpp/private-cpp.md), [protegido](../cpp/protected-cpp.md), [friend](../cpp/friend-cpp.md)e a tabela de acesso de membro na [controlando o acesso a membros de classe](member-access-control-cpp.md) .  
+ Para obter mais informações, consulte [privados](../cpp/private-cpp.md), [protegido](../cpp/protected-cpp.md), [amigo](../cpp/friend-cpp.md)e a tabela de acesso de membro no [controlando o acesso a membros de classe](member-access-control-cpp.md) .  
   
 ## <a name="clr-specific"></a>Específico do /clr  
- Em tipos CLR, o C++ acessar palavras-chave do especificador (**pública**, `private`, e `protected`) podem afetar a visibilidade de tipos e métodos em relação a assemblies. Para obter mais informações, consulte [controle de acesso de membro](member-access-control-cpp.md).  
+ Nos tipos de CLR, o C++ palavras-chave do especificador de acesso (**pública**, **privada**, e **protegido**) podem afetar a visibilidade de tipos e métodos em relação aos assemblies. Para obter mais informações, consulte [controle de acesso de membro](member-access-control-cpp.md).  
   
 > [!NOTE]
 >  Arquivos compilados com [/LN](../build/reference/ln-create-msil-module.md) não são afetados por esse comportamento. Nesse caso, todas as classes gerenciadas (públicas ou particulares) serão visíveis.  
@@ -52,7 +53,7 @@ public base-class
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // keyword_public.cpp  
 class BaseClass {  
 public:  

@@ -1,5 +1,5 @@
 ---
-title: Com base em intervalo de instrução (C++) | Microsoft Docs
+title: Baseado em intervalo para a instrução (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc60c1efc307f30c06accdd7404cb35c135dae5b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1284e4f6e096ab8021c597b841a8e983673561bd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942256"
 ---
 # <a name="range-based-for-statement-c"></a>Instrução for com base em intervalo (C++)
 Executa `statement` repetidamente e em sequência para cada elemento em `expression`.  
@@ -25,16 +26,16 @@ Executa `statement` repetidamente e em sequência para cada elemento em `express
   
 ```  
   
-      for ( for-range-declaration : expression )  
+for ( for-range-declaration : expression )  
    statement   
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Use o intervalo com base em `for` instrução para construir loops que devem ser executado por meio de um "intervalo", que é definido como qualquer coisa que você pode percorrer — por exemplo, `std::vector`, ou qualquer outra sequência de biblioteca padrão C++ cujo intervalo é definido por um `begin()` e `end()`. O nome que é declarado na parte `for-range-declaration` é local para a instrução `for` e não pode ser declarado novamente em `expression` ou em `statement`. Observe que o [automática](../cpp/auto-cpp.md) palavra-chave é preferido a `for-range-declaration` parte da instrução. 
+ Usar baseado em intervalo **para** instrução para construir loops que devem ser executados por meio de um "intervalo", que é definido como qualquer coisa que você pode iterar por meio de — por exemplo, `std::vector`, ou qualquer outra biblioteca de padrão de C++ cujo intervalo de sequência é definido por uma `begin()` e `end()`. O nome que é declarado na `for-range-declaration` parte é local para o **para** instrução e não pode ser declarado novamente em `expression` ou `statement`. Observe que o [automática](../cpp/auto-cpp.md) palavra-chave é preferido no `for-range-declaration` parte da instrução. 
 
- **Novo no Visual Studio de 2017:** baseada em intervalo de loops não exigem que () e end retornam objetos do mesmo tipo. Isso permite que end() retorne um objeto sentinela como usado por intervalos, conforme definido na proposta Ranges-V3. Para obter mais informações, consulte [Generalizing the Range-Based For Loop (Generalizando o loop “for” baseado em intervalo)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) e [range-v3 library on GitHub (Biblioteca range-v3 no GitHub)](https://github.com/ericniebler/range-v3).
+ **Novo no Visual Studio 2017:** baseado em intervalo para loops não exigem mais que Begin e end () retornem objetos do mesmo tipo. Isso permite que end() retorne um objeto sentinela como usado por intervalos, conforme definido na proposta Ranges-V3. Para obter mais informações, consulte [Generalizing the Range-Based For Loop (Generalizando o loop “for” baseado em intervalo)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) e [range-v3 library on GitHub (Biblioteca range-v3 no GitHub)](https://github.com/ericniebler/range-v3).
   
- Este código mostra como usar com base em intervalo `for` loops para iterar por meio de uma matriz e um vetor de:  
+ Este código mostra como usar baseado em intervalo **para** loops para iterar por meio de uma matriz e um vetor:  
   
 ```cpp  
 // range-based-for.cpp  
@@ -93,24 +94,26 @@ int main()
 ```  
   
  Este é o resultado:  
+
+```Output
+ 1 2 3 4 5 6 7 8 9 10  
   
- `1 2 3 4 5 6 7 8 9 10`  
+ 1 2 3 4 5 6 7 8 9 10  
   
- `1 2 3 4 5 6 7 8 9 10`  
+ 1 2 3 4 5 6 7 8 9 10  
   
- `1 2 3 4 5 6 7 8 9 10`  
-  
- `1 2 3 4 5 6 7 8 9 10`  
+ 1 2 3 4 5 6 7 8 9 10  
   
  `end of integer array test`  
   
  `0.14159 1.14159 2.14159 3.14159 4.14159 5.14159 6.14159 7.14159 8.14159 9.14159`  
   
  `end of vector test`  
+```
+
+ Um baseado em intervalo **para** loop termina quando uma destas opções na `statement` é executado: um [quebra](../cpp/break-statement-cpp.md), [retornar](../cpp/return-statement-cpp.md), ou [goto](../cpp/goto-statement-cpp.md) para um rotulado instrução fora baseado em intervalo **para** loop. Um [continue](../cpp/continue-statement-cpp.md) instrução em um intervalo baseado **para** loop termina apenas a iteração atual.  
   
- Um intervalo com base em `for` loop será encerrado quando uma destas opções na `statement` é executado: um [quebra](../cpp/break-statement-cpp.md), [retornar](../cpp/return-statement-cpp.md), ou [goto](../cpp/goto-statement-cpp.md) para uma instrução rotulada fora do com base em intervalo **para** loop. Um [continuar](../cpp/continue-statement-cpp.md) instrução em um intervalo com base em `for` loop finaliza somente a iteração atual.  
-  
- Lembre-se destes fatos sobre a instrução `for` baseada em intervalo:  
+ Lembre-se destes fatos sobre baseado em intervalo **para**:  
   
 -   Reconhece matrizes automaticamente.  
   

@@ -1,5 +1,5 @@
 ---
-title: Visão geral do membro da classe | Microsoft Docs
+title: Visão geral de membros de classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd280255afe98aa5ca512c63bb00623891eafc4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ee52b42c65a34316454ea6653447938712590327
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942355"
 ---
 # <a name="class-member-overview"></a>Visão geral de membros de classe
-Uma classe ou estrutura consiste em seus membros. O trabalho que faz uma classe é executado por suas funções de membro. O estado que o mantém é armazenado em seus membros de dados. Inicialização de membros é feita por construtores e trabalho de limpeza como liberação de memória e liberação de recursos é feita por destruidores. No C++ 11 e posterior, membros de dados pode (e geralmente deve) ser inicializados no ponto de declaração.  
+Uma classe ou struct consiste em seus membros. O trabalho que faz uma classe é executado por suas funções de membro. O estado que ele mantém é armazenado em seus membros de dados. Inicialização de membros é feita por construtores e trabalho de limpeza, como a liberação de memória e liberação de recursos é feita pelo destruidores. No C++ 11 e posterior, os membros de dados pode (e geralmente deve) ser inicializados no ponto de declaração.  
   
 ## <a name="kinds-of-class-members"></a>Tipos de membros de classe  
- A lista completa das categorias de membro é o seguinte:  
+ A lista completa das categorias de membro é da seguinte maneira:  
   
 -   [Funções de membro especial](special-member-functions.md).  
   
@@ -37,7 +38,7 @@ Uma classe ou estrutura consiste em seus membros. O trabalho que faz uma classe 
   
 -   Operadores  
   
--   [Aninhados declarações de classe](nested-class-declarations.md) e.)  
+-   [Declarações de classes aninhadas](nested-class-declarations.md) e.)  
   
 -   [Uniões](unions.md)  
   
@@ -52,10 +53,10 @@ Uma classe ou estrutura consiste em seus membros. O trabalho que faz uma classe 
     > [!NOTE]
     >  Os friends são incluídos na lista anterior porque estão contidos na declaração da classe. Porém, eles não são membros da classe true, pois não estão no escopo da classe.  
   
-## <a name="example-class-declaration"></a>Declaração de classe de exemplo  
+## <a name="example-class-declaration"></a>Exemplo de declaração de classe  
  O exemplo a seguir mostra uma declaração de classe simples:  
   
-```  
+```cpp 
 // TestRun.h  
   
 class TestRun  
@@ -97,32 +98,32 @@ int TestRun::_instances{ 0 };
 ```  
   
 ## <a name="member-accessibility"></a>Acessibilidade de membro  
- Os membros de uma classe são declarados na lista de membros. A lista de membros de uma classe pode ser dividida em qualquer número de `private`, `protected` e **pública** seções usando palavras-chave, conhecidas como especificadores de acesso.  Dois-pontos **:** deve seguir o especificador de acesso.  Essas seções não precisam ser contíguas, ou seja, qualquer uma dessas palavras-chave pode aparecer várias vezes na lista de membros.  A palavra-chave designa o acesso de todos os membros acima até o próximo especificador de acesso ou a próxima chave de fechamento. Para obter mais informações, consulte [controle de acesso de membro (C++)](../cpp/member-access-control-cpp.md).  
+ Os membros de uma classe são declarados na lista de membros. A lista de membros de uma classe pode ser dividida em qualquer número de **privados**, **protegido** e **público** seções usando palavras-chave conhecidas como especificadores de acesso.  Dois-pontos **:** deve seguir o especificador de acesso.  Essas seções não precisam ser contíguas, ou seja, qualquer uma dessas palavras-chave pode aparecer várias vezes na lista de membros.  A palavra-chave designa o acesso de todos os membros acima até o próximo especificador de acesso ou a próxima chave de fechamento. Para obter mais informações, consulte [controle de acesso de membro (C++)](../cpp/member-access-control-cpp.md).  
   
 ## <a name="static-members"></a>Membros estáticos  
- Um membro de dados pode ser declarado como estático, que significa que todos os objetos da classe tem acesso para a mesma cópia dele. Uma função de membro pode ser declarada como estática, caso em que ele pode acessar somente os membros de dados estáticos da classe (e não tem nenhum *isso* ponteiro). Para obter mais informações, consulte [membros de dados estáticos](../cpp/static-members-cpp.md).  
+ Um membro de dados pode ser declarado como estática, o que significa que todos os objetos da classe têm acesso à mesma cópia dele. Uma função de membro pode ser declarada como estática, nesse caso, ele pode acessar somente os membros de dados estáticos da classe (e não tem nenhum *isso* ponteiro). Para obter mais informações, consulte [membros de dados estáticos](../cpp/static-members-cpp.md).  
   
 ## <a name="special-member-functions"></a>Funções de membro especiais  
- Funções de membro especiais são funções que são fornecidas automaticamente pelo compilador, se você não especificá-los em seu código-fonte.  
+ Funções de membro especiais são funções que são fornecidas automaticamente pelo compilador se você não especificá-los no seu código-fonte.  
   
 1.  Construtor padrão  
   
 2.  Construtor de cópia  
   
-3.  **(C + + 11)**  Construtor de movimento  
+3.  **(C++11)**  Construtor de movimentação  
   
 4.  Operador de atribuição de cópia  
   
-5.  **(C + + 11)**  Operador de atribuição de movimentação  
+5.  **(C++11)**  Operador de atribuição de movimentação  
   
 6.  Destruidor  
   
 Para obter mais informações, consulte [funções de membro especial](../cpp/special-member-functions.md).
   
-## <a name="memberwise-initialization"></a>Inicialização memberwise  
- No C++ 11 e posterior, declaradores de membro não estático podem conter inicializadores.  
+## <a name="memberwise-initialization"></a>A inicialização  
+ No C++ 11 e posterior, os declaradores de membro não estático podem conter inicializadores.  
   
-```  
+```cpp 
   
 class CanInit  
 {  
@@ -147,7 +148,7 @@ int main()
   
  Há apenas uma cópia compartilhada membros de dados estáticos para todos os objetos de um determinado tipo de classe. Os membros de dados estáticos devem ser definidos e podem ser inicializados no escopo do arquivo. (Para obter mais informações sobre membros de dados estáticos, consulte [membros de dados estáticos](../cpp/static-members-cpp.md).) O exemplo a seguir mostra como realizar essas inicializações:  
   
-```  
+```cpp 
 // class_members2.cpp  
 class CanInit2  
 {  

@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa16122a1cb3a5f8378397363a45cd28ddaef6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3603f93c5b6430cd5aa11e4f43c99f75a838497
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357796"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879238"
 ---
 # <a name="ca2caex-class"></a>Classe CA2CAEX
-Essa classe é usada por macros de conversão de cadeia de caracteres `CA2CTEX` e `CT2CAEX`e o typedef **CA2CA**.  
+Essa classe é usada em macros de conversão de cadeia de caracteres CA2CTEX CT2CAEX e typedef CA2CA.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,8 +40,8 @@ class CA2CAEX
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `t_nBufferLength`  
- O tamanho do buffer usado no processo de conversão. O comprimento padrão é 128 bytes.  
+ *t_nBufferLength*  
+ O tamanho do buffer usado no processo de tradução. O comprimento padrão é 128 bytes.  
   
 ## <a name="members"></a>Membros  
   
@@ -65,27 +65,27 @@ class CA2CAEX
 |[CA2CAEX::m_psz](#m_psz)|O membro de dados que armazena a cadeia de caracteres de origem.|  
   
 ## <a name="remarks"></a>Comentários  
- A menos que a funcionalidade adicional for necessária, use `CA2CTEX`, `CT2CAEX`, ou **CA2CA** em seu próprio código.  
+ A menos que a funcionalidade adicional for necessária, use CA2CTEX, CT2CAEX ou CA2CA em seu próprio código.  
   
- Esta classe é seguro usar em loops e não de estouro de pilha. Por padrão, as macros e classes de conversão ATL usam a página de código ANSI dos threads atuais para a conversão.  
+ Essa classe é seguro usar em loops e não estouram a pilha. Por padrão, as macros e classes de conversão ATL usam a página de código ANSI dos threads atuais para a conversão.  
   
- As seguintes macros baseiam-se esta classe:  
+ As macros a seguir se baseiam nessa classe:  
   
-- `CA2CTEX`  
+- CA2CTEX  
   
-- `CT2CAEX`  
+- CT2CAEX  
   
- Typedef seguir baseia-se essa classe:  
+ O typedef seguir baseia-se nessa classe:  
   
-- **CA2CA**  
+- CA2CA  
   
- Para uma discussão sobre essas macros de conversão de texto, consulte [ATL e MFC Macros de conversão de cadeia de caracteres](string-conversion-macros.md).  
+ Para uma discussão sobre essas macros de conversão de texto, consulte [ATL e Macros de conversão de cadeia de caracteres MFC](string-conversion-macros.md).  
   
 ## <a name="example"></a>Exemplo  
- Consulte [ATL e MFC Macros de conversão de cadeia de caracteres](string-conversion-macros.md) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.  
+ Ver [ATL e Macros de conversão de cadeia de caracteres MFC](string-conversion-macros.md) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlconv.h  
+ **Cabeçalho:** Atlconv. h  
   
 ##  <a name="ca2caex"></a>  CA2CAEX::CA2CAEX  
  O construtor.  
@@ -96,10 +96,10 @@ CA2CAEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `psz`  
+ *psz*  
  A cadeia de caracteres de texto a ser convertido.  
   
- `nCodePage`  
+ *nCodePage*  
  Não usado nessa classe.  
   
 ### <a name="remarks"></a>Comentários  
@@ -130,7 +130,7 @@ operator LPCSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna a cadeia de caracteres de texto como tipo `LPCSTR`.  
+ Retorna a cadeia de caracteres de texto como o tipo LPCSTR.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CA2AEX](../../atl/reference/ca2aex-class.md)   

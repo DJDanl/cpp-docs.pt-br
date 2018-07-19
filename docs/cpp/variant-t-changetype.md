@@ -19,36 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53fd73fc9606053dda6f8c143618373ad9bb7e4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f87d9e4d7193755f70e3463f4da60d88a7bd832c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942219"
 ---
 # <a name="varianttchangetype"></a>_variant_t::ChangeType
 **Seção específica da Microsoft**  
   
- Altera o tipo do `_variant_t` objeto do tipo **VARTYPE**.  
+ Altera o tipo dos `_variant_t` objeto a ser indicado `VARTYPE`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      void ChangeType(  
+void ChangeType(  
    VARTYPE vartype,  
    const _variant_t* pSrc = NULL   
 );  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `vartype`  
- O **VARTYPE** para este `_variant_t` objeto.  
+ *VarType*  
+ O `VARTYPE` para este `_variant_t` objeto.  
   
- `pSrc`  
- Um ponteiro para o objeto `_variant_t` a ser convertido. Se esse valor for **nulo**, conversão é feita em vigor.  
+ *pSrc*  
+ Um ponteiro para o objeto `_variant_t` a ser convertido. Se esse valor for NULL, a conversão é feita no lugar.  
   
 ## <a name="remarks"></a>Comentários  
- Esta função de membro converte um `_variant_t` objeto do tipo **VARTYPE**. Se `pSrc` é **nulo**, a conversão é feita no local, caso contrário `_variant_t` objeto é copiado do `pSrc` e, em seguida, convertida.  
+ Essa função membro converte um `_variant_t` objeto indicado `VARTYPE`. Se *pSrc* for NULL, a conversão é feita in-loco, caso contrário `_variant_t` objeto é copiado do *pSrc* e, em seguida, convertidos.  
   
  **Fim da seção específica da Microsoft**  
   

@@ -15,26 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1973223d6aab44d4c5d8652111d3e6b8251676fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a8f2853189d6b31b2f3b4e371f3583d3abb6f165
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418907"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939423"
 ---
 # <a name="iteration-statements-c"></a>Instruções de iteração (C++)
-As instruções de iteração fazem com que as instruções (ou instruções compostas) sejam executadas nenhuma ou mais vezes, de acordo com os critérios de término de loop. Quando essas instruções são declarações compostas, eles são executados em ordem, exceto quando ambos o [quebra](../cpp/break-statement-cpp.md) instrução ou o [continuar](../cpp/continue-statement-cpp.md) instrução for encontrada.  
+As instruções de iteração fazem com que as instruções (ou instruções compostas) sejam executadas nenhuma ou mais vezes, de acordo com os critérios de término de loop. Quando essas instruções são instruções compostas, são executadas em ordem, exceto quando ambos os [quebra](../cpp/break-statement-cpp.md) instrução ou o [continuar](../cpp/continue-statement-cpp.md) instrução for encontrada.  
   
- C++ fornece quatro instruções de iteração — [enquanto](../cpp/while-statement-cpp.md), [fazer](../cpp/do-while-statement-cpp.md), [para](../cpp/for-statement-cpp.md), e [com base em intervalo para](../cpp/range-based-for-statement-cpp.md). Cada uma dessas itera até que sua expressão de encerramento é avaliada como zero (false) ou encerramento do loop for forçado com um **quebra** instrução. A tabela a seguir resume essas instruções e suas ações; cada uma delas é discutida em detalhes nas seções seguintes.  
+ C++ fornece quatro instruções de iteração — [enquanto](../cpp/while-statement-cpp.md), [fazer](../cpp/do-while-statement-cpp.md), [para](../cpp/for-statement-cpp.md), e [baseado em intervalo para](../cpp/range-based-for-statement-cpp.md). Cada uma delas itera até que a expressão de término seja avaliada como zero (false) ou até o término de loop seja imposto com uma **quebra** instrução. A tabela a seguir resume essas instruções e suas ações; cada uma delas é discutida em detalhes nas seções seguintes.  
   
 ### <a name="iteration-statements"></a>Instruções de iteração  
   
 |Instrução|Avaliada como|Inicialização|Incremento|  
 |---------------|------------------|--------------------|---------------|  
-|`while`|Topo do loop|Não|Não|  
+|**while**|Topo do loop|Não|Não|  
 |**do**|Final do loop|Não|Não|  
 |**for**|Topo do loop|Sim|Sim|  
-|**com base em intervalo para**|Topo do loop|Sim|Sim|  
+|**baseado em intervalo para**|Topo do loop|Sim|Sim|  
   
  A parte da instrução de uma instrução de iteração não pode ser uma declaração. No entanto, pode ser uma instrução composta que contenha uma declaração.  
   

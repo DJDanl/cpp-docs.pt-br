@@ -19,41 +19,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa38b2ea9ea05fb9391ab8a69e11821d4422e392
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0dd4643c21ebb8626252230b90880af9f9499c0d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942129"
 ---
 # <a name="overview-of-file-translation"></a>Visão geral da translação de arquivo
 Os programas C++, como os programas C, consistem em um ou mais arquivos. Cada um desses arquivos é convertido na seguinte ordem conceitual (a ordem real segue a regra “como está”: a conversão deve ocorrer como se estas etapas tivessem sido cumpridas):  
   
-1.  Criar tokens léxicos. O mapeamento de caracteres e o processamento trígrafo, união de linhas e de geração de tokens são executados nesta fase da conversão.  
+1. Criar tokens léxicos. O mapeamento de caracteres e o processamento trígrafo, união de linhas e de geração de tokens são executados nesta fase da conversão.  
   
-2.  Pré-processamento. Nesta fase de tradução coloca nos arquivos de origem auxiliares referenciados por `#include` diretivas, manipula "stringizing" e "caracterização" diretivas e executa a expansão de macro e colagem de token (consulte [diretivas de pré-processador](../preprocessor/preprocessor-directives.md) no *referência de pré-processador* para obter mais informações). O resultado da fase de pré-processamento é uma sequência de tokens que, que juntos, definem uma "unidade de conversão”.  
+2. Pré-processamento. Esta fase da conversão traz os arquivos de origem auxiliares referenciados por `#include` diretivas, lida com "stringizing" e "charizing" diretivas e executa a expansão de macro e colagem de token (consulte [diretivas do pré-processador](../preprocessor/preprocessor-directives.md) no *referência do pré-processador* para obter mais informações). O resultado da fase de pré-processamento é uma sequência de tokens que, que juntos, definem uma "unidade de conversão”.  
   
-     Diretivas de pré-processador sempre começam com o sinal de número (**#**) caractere (isto é, o primeiro caractere de espaço não brancas na linha deve ser um sinal de número). Somente uma política do pré-processador pode aparecer em uma determinada linha. Por exemplo:  
+     Diretivas de pré-processador sempre começam com o sinal de número (**#**) caractere (ou seja, o primeiro caractere diferente de espaço na linha deve ser um sinal numérico). Somente uma política do pré-processador pode aparecer em uma determinada linha. Por exemplo:  
   
-    ```  
+    ```cpp 
     #include <iostream>  // Include text of iostream in   
                          //  translation unit.  
     #define NDEBUG       // Define NDEBUG (NDEBUG contains empty   
                          //  text string).  
     ```  
   
-3.  Geração de código. Esta fase da conversão usa os tokens gerados na fase de pré-processamento para gerar o código do objeto.  
+3. Geração de código. Esta fase da conversão usa os tokens gerados na fase de pré-processamento para gerar o código do objeto.  
   
      Durante essa fase, a verificação sintática e semântica do código-fonte é executada.  
   
- Consulte [fases de tradução](../preprocessor/phases-of-translation.md) no *referência de pré-processador* para obter mais informações.  
+ Ver [fases de conversão](../preprocessor/phases-of-translation.md) na *referência de pré-processador* para obter mais informações.  
   
  O pré-processador C++ é um superconjunto estrito do pré-processador ANSI C, mas o pré-processador C++ difere em algumas instâncias. A lista a seguir descreve várias diferenças entre os pré-processadores ANSI C e C++:  
   
--   Os comentários de linha única têm suporte. Consulte [comentários](../cpp/comments-cpp.md) para obter mais informações.  
+- Os comentários de linha única têm suporte. Ver [comentários](../cpp/comments-cpp.md) para obter mais informações.  
   
--   Uma macro predefinida, **cplusplus**, é definida somente para C++. Consulte [Macros predefinidas](../preprocessor/predefined-macros.md) no *referência de pré-processador* para obter mais informações.  
+- Uma macro predefinida, `__cplusplus`, é definido somente para C++. Ver [Macros predefinidas](../preprocessor/predefined-macros.md) na *referência de pré-processador* para obter mais informações.  
   
--   O pré-processador C não reconhece os operadores C++: **.\*** , **-> \***, e `::`. Consulte [operadores](../cpp/cpp-built-in-operators-precedence-and-associativity.md) e [expressões](../cpp/expressions-cpp.md), para obter mais informações sobre operadores.  
+- O pré-processador C não reconhece os operadores C++: **.\*** , **-> \***, e `::`. Ver [operadores](../cpp/cpp-built-in-operators-precedence-and-associativity.md) e [expressões](../cpp/expressions-cpp.md), para obter mais informações sobre operadores.  
   
 ## <a name="see-also"></a>Consulte também  
  [Convenções lexicais](../cpp/lexical-conventions.md)

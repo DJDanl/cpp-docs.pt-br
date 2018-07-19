@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca012d7b391e011d9658b0b74e0f4433d5dc9fd4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4a401caad212978372bcb02b412fa8a9648b7170
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942354"
 ---
 # <a name="argument-definitions"></a>Definições de argumento
 Os argumentos do protótipo  
   
-```  
+```cpp 
   
 int main( int argc, char* argv[], char* envp[]);
 int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);  
@@ -35,27 +36,27 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
   
  permitem uma análise conveniente dos argumentos na linha de comando e, opcionalmente, acesso a variáveis de ambiente. As definições dos argumentos são as seguintes:  
   
- `argc`  
- Um inteiro que contém a contagem dos argumentos que se seguem em `argv`. O parâmetro `argc` é sempre maior ou igual a 1.  
+ *argc*  
+ Um inteiro que contém a contagem de argumentos que se seguem em *argv*. O *argc* parâmetro é sempre maior que ou igual a 1.  
   
- `argv`  
- Uma matriz de cadeias de caracteres terminadas em nulo que representam argumentos de linha de comando inseridos pelo usuário do programa. Por convenção, `argv` **[0]** é o comando com a qual o programa é chamado, `argv` **[1]** é o primeiro argumento de linha de comando e assim por diante, até `argv`  **[**`argc`**]**, que é sempre **nulo**. Consulte [personalizando processamento de linha de comando](../cpp/customizing-cpp-command-line-processing.md) para obter informações sobre como suprimir o processamento de linha de comando.  
+ *argv*  
+ Uma matriz de cadeias de caracteres terminadas em nulo que representam argumentos de linha de comando inseridos pelo usuário do programa. Por convenção, `argv` **[0]** é o comando com a qual o programa é invocado, `argv` **[1]** é o primeiro argumento de linha de comando e assim por diante, até `argv`  **[**`argc`**]**, que é sempre nulo. Ver [Personalizando o processamento de linha de comando](../cpp/customizing-cpp-command-line-processing.md) para obter informações sobre como suprimir o processamento de linha de comando.  
   
- O primeiro argumento de linha de comando é sempre `argv` **[1]** e a última é `argv` **[** `argc` - 1 **]**.  
+ O primeiro argumento de linha de comando é sempre `argv` **[1]** e o último é `argv` **[** `argc` - 1 **]**.  
   
 > [!NOTE]
->  Por convenção, `argv`**[0]** é o comando com que o programa é invocado.  No entanto, é possível gerar um processo usando [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) e se você usar ambos os argumentos de primeiro e segundo (`lpApplicationName` e `lpCommandLine`), `argv` **[0]** não pode ser o nome do executável; Use [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) para recuperar o nome do executável e o caminho totalmente qualificado.  
+>  Por convenção, `argv`**[0]** é o comando com que o programa é invocado.  No entanto, é possível gerar um processo usando [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) e, se você usar o primeiro e segundo argumentos (`lpApplicationName` e `lpCommandLine`), `argv` **[0]** pode não ser o nome do executável; Use [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) para recuperar o nome do executável e o caminho totalmente qualificado.  
   
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
- `envp`  
- A matriz `envp`, uma extensão comum em muitos sistemas UNIX, é usada no Microsoft C++. Trata-se de uma matriz de cadeias de caracteres que representam as variáveis definidas no ambiente do usuário. Esta matriz é terminada por um **nulo** entrada. Ela pode ser declarada como uma matriz de ponteiros para **char (char** \*[envp]**)** ou como um ponteiro para ponteiros para **char (char** \* \* envp **)**. Se seu programa usa **wmain** em vez de **principal**, use o `wchar_t` de tipo de dados em vez de `char`. O bloco de ambiente passado para **principal** e **wmain** é uma cópia "congelada" do ambiente atual. Se você alterar posteriormente o ambiente por meio de uma chamada para **putenv** ou `_wputenv`, o ambiente atual (como retornado por `getenv` / `_wgetenv` e `_environ` /  `_wenviron` variável) será alteração, mas o bloco apontada pelo envp não será alterado. Consulte [personalizando processamento de linha de comando](../cpp/customizing-cpp-command-line-processing.md) para obter informações sobre como suprimir o processamento de ambiente. Esse argumento é compatível com ANSI em C, mas não em C++.  
+ *envp*  
+ O *envp* matriz, que é uma extensão comum em muitos sistemas UNIX, é usada no Microsoft C++. Trata-se de uma matriz de cadeias de caracteres que representam as variáveis definidas no ambiente do usuário. Essa matriz é encerrada por uma entrada NULL. Ela pode ser declarada como uma matriz de ponteiros para **char (char** \*envp []**)** ou como um ponteiro para ponteiros para **char (char** \* \* envp **)**. Se seu programa usa **wmain** em vez de **principal**, use o **wchar_t** em vez de **char**. O bloco de ambiente passado para **principal** e **wmain** é uma cópia "congelada" do ambiente atual. Se você alterar subsequentemente o ambiente por meio de uma chamada para **putenv** ou `_wputenv`, o ambiente atual (conforme retornado por `getenv` / `_wgetenv` e o `_environ` /  `_wenviron` variável) será alteração, mas o bloco apontado por envp não será alterado. Ver [Personalizando o processamento de linha de comando](../cpp/customizing-cpp-command-line-processing.md) para obter informações sobre como suprimir o processamento de ambiente. Esse argumento é compatível com ANSI em C, mas não em C++.  
   
 **Fim da seção específica da Microsoft**  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o `argc`, `argv`, e `envp` argumentos para **principal**:  
+ O exemplo a seguir mostra como usar o *argc*, *argv*, e *envp* argumentos a serem **principal**:  
   
-```  
+```cpp 
 // argument_definitions.cpp  
 // compile with: /EHsc  
 #include <iostream>  

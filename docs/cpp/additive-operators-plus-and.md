@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f265bf915d9ba0c984b85235bd502d6ea0a5a77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89fc0f122f0859e6fc891ddfccd4bc99e7034bfe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942347"
 ---
 # <a name="additive-operators--and--"></a>Operadores aditivos: + e -
 ## <a name="syntax"></a>Sintaxe  
@@ -47,13 +48,13 @@ expression - expression
   
  Os operadores de adição usam operandos de tipos aritméticos ou ponteiro. O resultado da adição (**+**) operador é a soma dos operandos. O resultado da subtração (**-**) operador é a diferença entre os operandos. Se um ou ambos os operandos forem ponteiros, eles devem ser ponteiros para os objetos, não para funções. Se ambos os operandos forem ponteiros, os resultados não serão significativos a menos que ambos sejam ponteiros para os objetos na mesma matriz.  
   
- Operadores aditivos usam operandos de *aritméticas*, *integral*, e *escalar* tipos. Eles são definidos na tabela a seguir.  
+ Operadores de adição usam operandos de *aritmético*, *integral*, e *escalar* tipos. Eles são definidos na tabela a seguir.  
   
 ### <a name="types-used-with-additive-operators"></a>Tipos usados com operadores de adição  
   
 |Tipo|Significado|  
 |----------|-------------|  
-|*Aritmética*|Os tipos integral e flutuante são coletivamente chamados de tipos “aritméticos”.|  
+|*aritmética*|Os tipos integral e flutuante são coletivamente chamados de tipos “aritméticos”.|  
 |*integral*|Os tipos char e int de todos os tamanhos (curto, longo) e enumerações são os tipos “integrais”.|  
 |*scalar*|Os operandos escalares são operandos aritméticos ou de ponteiro.|  
   
@@ -71,11 +72,11 @@ expression - expression
   
  Observe que a adição e subtração não são operações equivalentes.  
   
- Se ambos os operandos forem do tipo aritmético, as conversões abordados [conversões padrão](standard-conversions.md) são aplicadas para os operandos e o resultado é do tipo convertido.  
+ Se ambos os operandos forem do tipo aritmético, as conversões abordadas em [conversões padrão](standard-conversions.md) são aplicadas aos operandos, e o resultado é do tipo convertido.  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // expre_Additive_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -93,10 +94,10 @@ int main() {
 }  
 ```  
   
-## <a name="pointer-addition"></a>Adição de ponteiro  
+## <a name="pointer-addition"></a>Adição do ponteiro  
  Se um dos operandos em uma operação de adição é um ponteiro para uma matriz de objetos, o outro deve ser do tipo integral. O resultado é um ponteiro que tem o mesmo tipo do ponteiro original e que aponta para outro elemento da matriz. O fragmento de código a seguir ilustra esse conceito:  
   
-```  
+```cpp 
 short IntArray[10]; // Objects of type short occupy 2 bytes  
 short *pIntArray = IntArray;  
   
@@ -114,11 +115,11 @@ for( int i = 0; i < 10; ++i )
 >  O código do formato `pIntArray = pIntArray + 1` raramente é encontrado em programas C++; para executar um incremento, estes formatos são preferíveis: `pIntArray++` ou `pIntArray += 1`.  
   
 ## <a name="pointer-subtraction"></a>Subtração de ponteiro  
- Se ambos os operandos forem ponteiros, o resultado da subtração será a diferença (em elementos de matriz) entre os operandos. A expressão de subtração gerará um resultado de inteiro assinado de tipo ptrdiff_t (definidos no arquivo de inclusão padrão \<stddef.h >).  
+ Se ambos os operandos forem ponteiros, o resultado da subtração será a diferença (em elementos de matriz) entre os operandos. A expressão de subtração gera um resultado integral com sinal do tipo **ptrdiff_t** (definidas no arquivo de inclusão padrão \<stddef. h >).  
   
- Um dos operandos pode ser do tipo integral, desde que seja o segundo operando. O resultado da subtração é do mesmo tipo do ponteiro original. O valor de subtração é um ponteiro para o (*n* - *,*) elemento de matriz th, onde *n* é o elemento apontado pelo ponteiro original e *,* é o valor integral do segundo operando.  
+ Um dos operandos pode ser do tipo integral, desde que seja o segundo operando. O resultado da subtração é do mesmo tipo do ponteiro original. O valor da subtração é um ponteiro para o (*n* - *eu*) º elemento da matriz, onde *n* é o elemento apontado pelo ponteiro original e *eu* é o valor integral do segundo operando.  
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)   
- [Operadores C++ internos, precedência e capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores C++ internos, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operadores aditivos C](../c-language/c-additive-operators.md)

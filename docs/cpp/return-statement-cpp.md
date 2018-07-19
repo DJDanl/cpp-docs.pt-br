@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1252e6833dae0f04e1cb148c5703d04d42cee353
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aea9999adc7089499028850017a32245bba97db6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942227"
 ---
 # <a name="return-statement-c"></a>Instrução return (C++)
 Finaliza a execução de uma função e retorna o controle para a função de chamada (ou para o sistema operacional, se o controle for transferido da função `main`). A execução é retomada na função de chamada no ponto imediatamente após a chamada.  
@@ -33,19 +34,19 @@ return [expression];
 ```  
   
 ## <a name="remarks"></a>Comentários  
- A cláusula `expression`, caso exista, é convertida no tipo especificado na declaração da função, como se uma inicialização estivesse sendo executada. A conversão do tipo da expressão para o tipo `return` da função pode criar objetos temporários. Para obter mais informações sobre como e quando longa é criadas, consulte [objetos temporários](../cpp/temporary-objects.md).  
+ A cláusula `expression`, caso exista, é convertida no tipo especificado na declaração da função, como se uma inicialização estivesse sendo executada. Conversão do tipo da expressão para o **retornar** tipo de função pode criar objetos temporários. Para obter mais informações sobre como e quando os temporários são criados, consulte [objetos temporários](../cpp/temporary-objects.md).  
   
- O valor da cláusula `expression` é retornado à função de chamada. Se a expressão for omitida, o valor de retorno da função será indefinido. Construtores e destruidores e funções do tipo `void`, não é possível especificar uma expressão no `return` instrução. As funções de todos os outros tipos devem especificar uma expressão na instrução `return`.  
+ O valor da cláusula `expression` é retornado à função de chamada. Se a expressão for omitida, o valor de retorno da função será indefinido. Construtores e destruidores e funções do tipo **void**, não é possível especificar uma expressão na **retornar** instrução. Funções de todos os outros tipos devem especificar uma expressão na **retornar** instrução.  
   
- Quando o fluxo de controle sair do bloco que inclui a definição de função, o resultado é o mesmo que haveria se uma instrução `return` sem uma expressão tivesse sido executada. Isso não é válido para funções que são declaradas como retornando um valor.  
+ Quando o fluxo de controle sai do bloco que inclui a definição da função, o resultado é o mesmo como seria se um **retornar** instrução sem uma expressão tivesse sido executada. Isso não é válido para funções que são declaradas como retornando um valor.  
   
- Uma função pode ter qualquer número de instruções `return`.  
+ Uma função pode ter qualquer número de **retornar** instruções.  
   
- O exemplo a seguir usa uma expressão com uma instrução `return` para obter o maior de dois inteiros.  
+ O exemplo a seguir usa uma expressão com um **retornar** instrução para obter o maior dos dois inteiros.  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // return_statement2.cpp  
 #include <stdio.h>  
   

@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a320b02bb97c4f6b506e23a7dc93b36c22421aec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5408cf05910bdc1802213d69a286707199f0be76
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409755"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940222"
 ---
 # <a name="bstrtoperator-"></a>_bstr_t::operator !
 **Seção específica da Microsoft**  
   
- Verifica se o encapsulada `BSTR` é um **nulo** cadeia de caracteres.  
+ Verifica se encapsulado `BSTR` é uma cadeia de caracteres nula.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ bool operator!( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Ele retorna **true** em caso afirmativo, **false** se não for.  
+ Ele retorna verdadeiro em caso afirmativo, FALSE se não.  
   
  **Fim da seção específica da Microsoft**  
   

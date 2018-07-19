@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a33834df20606e8380e6a328a41435522185ac70
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f904fa11195c27f8e08856ef391d0ba8adbedece
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412339"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939670"
 ---
 # <a name="comerrorsource"></a>_com_error::Source
 **Seção específica da Microsoft**  
   
- Chamadas **IErrorInfo::GetSource** função.  
+ Chama a função `IErrorInfo::GetSource`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +37,10 @@ _bstr_t Source() const;
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna o resultado da **IErrorInfo::GetSource** para o **IErrorInfo** objeto registrados dentro de `_com_error` objeto. O BSTR resultante é encapsulado em um objeto `_bstr_t`. Se nenhum **IErrorInfo** é registrado, ele retorna vazio `_bstr_t`.  
+ Retorna o resultado da `IErrorInfo::GetSource` para o `IErrorInfo` registrado no `_com_error` objeto. O BSTR resultante é encapsulado em um objeto `_bstr_t`. Se nenhum `IErrorInfo` é registrado, ele retornará um `_bstr_t`.  
   
 ## <a name="remarks"></a>Comentários  
- Qualquer falha ao chamar o **IErrorInfo::GetSource** método será ignorado.  
+ Qualquer falha ao chamar o `IErrorInfo::GetSource` método é ignorado.  
   
  **Fim da seção específica da Microsoft**  
   

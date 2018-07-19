@@ -17,24 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4fe4e7c26d1b32f16d524407279e5e71534d00c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eba4ae92f9db67dfff58ec111b294b6cd26eff5a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411227"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939813"
 ---
 # <a name="compiler-com-support-classes"></a>Classes de suporte COM do compilador
 **Seção específica da Microsoft**  
   
- As classes padrão são usadas para dar suporte a alguns dos tipos COM. As classes são definidas no \<comdef.h > e os arquivos de cabeçalho gerados a partir da biblioteca de tipos.  
+ As classes padrão são usadas para dar suporte a alguns dos tipos COM. As classes são definidas no \<comdef > e os arquivos de cabeçalho gerados a partir da biblioteca de tipos.  
   
 |Classe|Finalidade|  
 |-----------|-------------|  
 |[_bstr_t](../cpp/bstr-t-class.md)|Encapsula o tipo `BSTR` para fornecer operadores e métodos úteis.|  
 |[_com_error](../cpp/com-error-class.md)|Define o objeto de erro gerado pelo [com_raise_error](../cpp/com-raise-error.md) na maioria das falhas.|  
-|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Encapsula os ponteiros de interface COM e automatiza as chamadas necessárias para `AddRef`, **versão**, e `QueryInterface`.|  
-|[_variant_t](../cpp/variant-t-class.md)|Encapsula o **VARIANT** tipo para fornecer métodos e operadores útil.|  
+|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Encapsula ponteiros de interface COM e automatiza as chamadas necessárias para `AddRef`, `Release`, e `QueryInterface`.|  
+|[_variant_t](../cpp/variant-t-class.md)|Encapsula o tipo `VARIANT` para fornecer operadores e métodos úteis.|  
   
 **Fim da seção específica da Microsoft**  
   

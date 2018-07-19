@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85cf9e27211763559617715a6c025055b25379fa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a87ecddfff7cb3096ae30d9da5d9e5b6913adcbd
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361506"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886239"
 ---
 # <a name="cdefaulthashtraits-class"></a>Classe CDefaultHashTraits
 Essa classe fornece uma função estática para calcular valores de hash.  
@@ -36,7 +36,7 @@ class CDefaultHashTraits
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
+ *T*  
  O tipo de dados a serem armazenados na coleção.  
   
 ## <a name="members"></a>Membros  
@@ -48,7 +48,7 @@ class CDefaultHashTraits
 |[CDefaultHashTraits::Hash](#hash)|(Estático) Chame essa função para calcular um valor de hash para um determinado elemento.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe contém uma única função estática que retorna um valor de hash para um determinado elemento. Essa classe é utilizada pelo [CDefaultElementTraits classe](../../atl/reference/cdefaultelementtraits-class.md).  
+ Essa classe contém uma única função estática que retorna um valor de hash para um determinado elemento. Essa classe é utilizada pela [classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md).  
   
  Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl-collection-classes.md).  
   
@@ -63,14 +63,14 @@ static ULONG Hash(const T& element) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `element`  
+ *Elemento*  
  O elemento.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o valor de hash.  
   
 ### <a name="remarks"></a>Comentários  
- O algoritmo de hash padrão é muito simple: o valor de retorno é o número de elemento. Substitua essa função se um algoritmo mais complicado é necessário.  
+ O algoritmo de hash padrão é muito simple: o valor retornado é o número do elemento. Substitua essa função se um algoritmo mais complicado for necessário.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)

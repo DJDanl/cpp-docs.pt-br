@@ -23,28 +23,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d8835d096575f3f7a9d50c7be26fa435e5d6bcd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6f38b5ec30626f73ab3681f674fb39c5492eb49
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422391"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939722"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operadores de deslocamento de deslocamento à esquerda e direita (&gt; &gt; e &lt; &lt;)
-Operadores shift bit a bit são o operador right shift (>>), que move os bits de *shift expressão* para a direita e o operador de deslocamento à esquerda (<<), que move os bits de *shift-expressão* à esquerda. <sup>1</sup>  
+Os operadores shift bit a bit são o operador de deslocamento à direita (>>), que move os bits da *shift-Expression&lt;2}{3&gt;Additive* para a direita e o operador de deslocamento à esquerda (<<), que move os bits de *shift-expression* à esquerda. <sup>1</sup>  
   
 ## <a name="syntax"></a>Sintaxe  
   
-> *expressão de SHIFT* `<<` *aditivo expressão*  
-> *expressão de SHIFT* `>>` *aditivo expressão*  
+> *SHIFT-Expression&lt;2}{3&gt;Additive* `<<` *additive-expression*  
+> *SHIFT-Expression&lt;2}{3&gt;Additive* `>>` *additive-expression*  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]
-> As descrições e exemplos a seguir são válidos no Windows para arquiteturas X86 e x64. A implementação de operadores shift para a esquerda e direita é significativamente diferente no Windows RT para dispositivos ARM. Para obter mais informações, consulte a seção "Operadores Shift" o [Hello ARM](http://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) postagem de blog.  
+> As descrições e exemplos a seguir são válidos no Windows para arquiteturas X86 e x64. A implementação de operadores shift para a esquerda e direita é significativamente diferente no Windows RT para dispositivos ARM. Para obter mais informações, consulte a seção "Operadores Shift" de [Hello ARM](http://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) postagem de blog.  
   
 ## <a name="left-shifts"></a>Deslocamentos para a esquerda  
- O operador left shift faz com que o bits no *shift expressão* deslocamento à esquerda, o número de posições especificado por *aditivo expressão*. As posições de bits que foram liberadas pela operação de deslocamento são preenchidas com zeros. Um deslocamento para a esquerda é um deslocamento lógico (os bits que são deslocados da extremidade são descartados, incluindo o bit de sinal). Para obter mais informações sobre os tipos de bit a bit turnos, consulte [turnos bit a bit](http://en.wikipedia.org/wiki/Bitwise_shift).  
+ O operador de deslocamento à esquerda faz com que os bits no *shift-Expression&lt;2}{3&gt;Additive* ser deslocados para a esquerda pelo número de posições especificado por *additive-expression*. As posições de bits que foram liberadas pela operação de deslocamento são preenchidas com zeros. Um deslocamento para a esquerda é um deslocamento lógico (os bits que são deslocados da extremidade são descartados, incluindo o bit de sinal). Para obter mais informações sobre os tipos de turnos de bit a bit, consulte [bit a bit turnos](http://en.wikipedia.org/wiki/Bitwise_shift).  
   
  O exemplo a seguir mostra operações de deslocamento para a esquerda usando números sem sinal. O exemplo a seguir mostra o que está acontecendo com os bit representando o valor como um conjunto de bits. Para obter mais informações, consulte [classe bitset](../standard-library/bitset-class.md).  
   
@@ -92,7 +92,7 @@ int main() {
 ```  
   
 ## <a name="right-shifts"></a>Deslocamentos para a direita  
- O operador right shift faz com que o padrão de bit em *shift expressão* deslocamento à direita pelo número de posições especificado por *aditivo expressão*. Para números sem sinal, as posições de bits que foram liberadas pela operação de deslocamento são preenchidas com zeros. Para números com sinal, o bit de sinal é usado para preencher as posições de bit vagas. Ou seja, se o número for positivo, 0 será usado, e se o número for negativo, 1 será usado.  
+ O operador de deslocamento para a direita faz com que o padrão de bits na *shift-Expression&lt;2}{3&gt;Additive* ser deslocados para a direita pelo número de posições especificado por *additive-expression*. Para números sem sinal, as posições de bits que foram liberadas pela operação de deslocamento são preenchidas com zeros. Para números com sinal, o bit de sinal é usado para preencher as posições de bit vagas. Ou seja, se o número for positivo, 0 será usado, e se o número for negativo, 1 será usado.  
   
 > [!IMPORTANT]
 > O resultado do deslocamento de um número negativo para a direita dependerá da implementação. Embora o Visual C++ use o bit de sinal para preencher as posições de bits vagas, não há garantia de que outras implementações também façam isso.  
@@ -176,9 +176,9 @@ int main() {
 ```  
   
 ## <a name="shifts-and-promotions"></a>Deslocamentos e promoções  
- As expressões em ambos os lados do operador shift devem ser tipos integrais. Promoções integrais são executadas de acordo com as regras descritas [conversões padrão](standard-conversions.md). O tipo do resultado é o mesmo que o tipo do promovida *shift expressão*.  
+ As expressões em ambos os lados do operador shift devem ser tipos integrais. Promoções integrais são executadas de acordo com as regras descritas em [conversões padrão](standard-conversions.md). O tipo do resultado é o mesmo que o tipo de promovida *shift-Expression&lt;2}{3&gt;Additive*.  
   
- No exemplo a seguir, uma variável de tipo `char` é promovida a `int`.  
+ No exemplo a seguir, uma variável do tipo **char** é promovido para um **int**.  
   
 ```cpp  
 #include <iostream>  
@@ -198,7 +198,7 @@ int main() {
 ```  
   
 ## <a name="additional-details"></a>Detalhes adicionais  
- O resultado de uma operação de shift será indefinido se *aditivo expressão* for negativo ou se *aditivo expressão* é maior que ou igual ao número de bits (promovida)  *expressão de SHIFT*. Nenhuma operação shift é realizada se *aditivo expressão* é 0.  
+ O resultado de uma operação de deslocamento é indefinido se *additive-expression* for negativo ou se *additive-expression* é maior que ou igual ao número de bits em (promovida)  *SHIFT-Expression&lt;2}{3&gt;Additive*. Nenhuma operação de deslocamento é executada se *additive-expression* é 0.  
   
 ```cpp  
 #include <iostream>  
@@ -224,11 +224,11 @@ int main() {
 ```  
   
 ## <a name="footnotes"></a>Notas de rodapé  
- 1 a seguir está a descrição dos operadores shift na C++ 11 ISO especificação (INCITS/ISO/IEC 14882-2011[2012]), seções 5.8.2 e 5.8.3.  
+ 1 Esta é a descrição dos operadores shift o ISO especificação c++11 (INCITS/ISO/IEC 14882-2011[2012]), seções 5.8.2 e 5.8.3.  
   
- O valor de **E1 << E2** é **E1** deslocada à esquerda **E2** posições de bit; vagas bits são preenchidas com zeros. Se **E1** tem um tipo não assinado, o valor do resultado é **E1 × 2**<sup>**E2**</sup>, redução de módulo mais do que o valor máximo representável no o tipo de resultado. Caso contrário, se **E1** tem um tipo assinado e o valor não negativo, e **E1 × 2**<sup>**E2** </sup> é representável no tipo correspondente não assinado do tipo de resultado, esse valor, convertido para o tipo de resultado é o valor resultante; Caso contrário, o comportamento será indefinido.  
+ O valor de `E1 << E2` é `E1` deslocado para a esquerda nas posições do bit `E2`; os bits vagos são preenchidos por zero. Se `E1` tem um tipo sem sinal, o valor do resultado é **E1 × 2**<sup>**E2**</sup>, módulo um a mais do que o valor máximo representável no tipo de resultado reduzido. Caso contrário, se `E1` tem um tipo com sinal e um valor positivo, e **E1 × 2**<sup>**E2** </sup> é representável no tipo sem sinal correspondente do tipo de resultado, em seguida, Esse valor, convertido para o tipo de resultado é o valor resultante; Caso contrário, o comportamento será indefinido.  
   
- O valor de **E1 >> E2** é **E1** deslocada direita **E2** posições de bit. Se **E1** tem um tipo não assinado ou se **E1** tem um tipo assinado e um valor negativo, o valor do resultado é parte integral do quociente de **E1/2** <sup> **E2**</sup>. Se **E1** tem um tipo assinado e um valor negativo, o valor resultante é definido pela implementação.  
+ O valor de `E1 >> E2` é `E1` é deslocado para a direita nas posições do bit `E2`. Se `E1` tem um tipo sem sinal ou se `E1` tem um tipo com sinal e um valor não negativo, o valor do resultado é a parte integral do quociente de **E1/2**<sup>**E2** </sup>. Se `E1` tiver um tipo com sinal e um valor negativo, o valor resultante será definido pela implementação.  
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)   

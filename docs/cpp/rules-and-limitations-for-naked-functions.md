@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb18f3e75bb7d912cbafbde01893d6283a4c61f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1a6f88717b8fb371c343d17a9b38608876cd900
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942160"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Regras e limitações para funções naked
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
  As seguintes regras e restrições se aplicam às funções naked:  
   
--   A instrução `return` não é permitida.  
+-   O **retornar** instrução não é permitida.  
   
 -   O tratamento de exceções estruturado e tratamento de exceções de C++ não são permitidos, pois eles devem desenrolar pelo quadro de pilhas.  
   
@@ -38,11 +39,11 @@ ms.lasthandoff: 05/03/2018
   
 -   Você não pode declarar objetos da classe do C++ no escopo lexical da função. No entanto, é possível declarar objetos em um bloco aninhado.  
   
--   O `naked` palavra-chave é ignorada durante a compilação com [/clr](../build/reference/clr-common-language-runtime-compilation.md).  
+-   O **naked** palavra-chave é ignorado ao compilar com [/clr](../build/reference/clr-common-language-runtime-compilation.md).  
   
--   Para [fastcall](../cpp/fastcall.md) funções naked, sempre que houver uma referência no código C/C++ para um dos argumentos de registro, o código de prólogo deve armazenar os valores de registrador para o local da pilha para aquela variável. Por exemplo:  
+-   Para [fastcall](../cpp/fastcall.md) funções naked, sempre que houver uma referência em código C/C++ para um dos argumentos do registro, o código de prólogo deve armazenar os valores do registro no local da pilha para essa variável. Por exemplo:  
   
-```  
+```cpp 
 // nkdfastcl.cpp  
 // compile with: /c  
 // processor: x86  

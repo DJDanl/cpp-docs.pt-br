@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f739152b502a156dc62dfab279e5ad044cfff99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 13971ede3aef6d223b1c631c4a28f8bf190e7174
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420198"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37938777"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Restrições em manipuladores de exceção
-A principal limitação do uso de manipuladores de exceção no código é que você não pode usar uma instrução `goto` para ir diretamente para um bloco de instruções `__try`. Em vez disso, você deve digitar o bloco de instruções por meio do fluxo de controle normal. Você pode sair de um bloco de instruções `__try` e aninhar manipuladores de exceção como quiser.  
+A principal limitação usando manipuladores de exceção no código é que você não pode usar um **goto** instrução para ir diretamente para um **Try** bloco de instrução. Em vez disso, você deve digitar o bloco de instruções por meio do fluxo de controle normal. Você pode ir de um **Try** instrução bloquear e aninhar manipuladores de exceção como quiser.  
   
 ## <a name="see-also"></a>Consulte também  
  [Escrevendo um manipulador de exceção](../cpp/writing-an-exception-handler.md)   

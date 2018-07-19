@@ -14,33 +14,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc7cd26add0a46bab8df7669fb6dfb6060b0010e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ecf3351180fbff4d6872c7027eee90b92e560059
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412131"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37938893"
 ---
 # <a name="compiler-limits"></a>Limites do compilador
 O padrão do C++ recomenda limites para várias construções de linguagem. A lista a seguir contém casos onde o compilador do Visual C++ não implementa os limites recomendados. O primeiro número é o limite estabelecido no padrão ISO C++11 (INCITS/ISO/IEC 14882-2011[2012], Anexo B) e o segundo número é o limite implementado pelo Visual C++:  
   
--   Níveis de aninhamento de instruções compostas, estruturas de controle de iteração e seleção de controlam estruturas - padrão do C++: 256, compilador do Visual C++: depende da combinação de instruções que são aninhadas, mas geralmente entre 100 e 110.  
+-   Níveis de aninhamento de instruções compostas, estruturas de controle de iteração e seleção de controlam estruturas - padrão C++: 256, compilador do Visual C++: depende da combinação de instruções que estão aninhadas, mas geralmente entre 100 e 110.  
   
--   Parâmetros na definição de uma macropadrão do C++: 256, compilador do Visual C++: 127.  
+-   Parâmetros em uma definição macropadrão C++: 256, compilador do Visual C++: 127.  
   
--   Argumentos na invocação de uma macropadrão do C++: compilador do Visual C++ 256, 127.  
+-   Argumentos em uma invocação de macropadrão C++: 256, compilador do Visual C++ 127.  
   
--   Caracteres em um caractere da cadeia de caracteres literal ou grande cadeia de caracteres literal (depois de concatenação) - standard C++: 65536, compilador do Visual C++: 65535 caracteres de byte único, incluindo o `null` terminador e 32.767 caracteres de byte duplo, incluindo o `null` terminador.  
+-   Literal ou largo sequência de caracteres literal de cadeia de caracteres em um caractere (depois da concatenação) - padrão do C++: 65536, compilador do Visual C++: 65535 caracteres de byte único, incluindo o terminador NULL e os caracteres de byte duplo 32767, incluindo o terminador NULL.  
   
--   Níveis de definições de união em um único, estrutura ou classe aninhada `struct-declaration-list` -padrão do C++: 256, compilador do Visual C++: 16.  
+-   Níveis de classe aninhada, estrutura ou união definições em um único `struct-declaration-list` -padrão do C++: 256, compilador do Visual C++: 16.  
   
--   Inicializadores de membro em uma definição de construtor - padrão do C++: 6144, compilador do Visual C++: pelo menos 6144.  
+-   Inicializadores de membro em uma definição de construtor - padrão C++: 6144, compilador do Visual C++: c++:6144.  
   
--   Definir o escopo de qualificações de um identificador - C++ padrão: 256, compilador do Visual C++: 127.  
+-   Qualificações do escopo de um identificador - padrão C++: 256, compilador do Visual C++: 127.  
   
--   Aninhados `extern` especificações - padrão do C++: 1024, o compilador do Visual C++: 9 (sem contar o implícita `extern` especificação em escopo global ou 10, se você contar o implícita `extern` especificação no escopo global...  
+-   Aninhado **extern** especificações - padrão C++: 1024, o compilador do Visual C++: 9 (sem contar o implícita **extern** especificação no escopo global ou 10, se você contar implícito **extern**  especificação no escopo global...  
   
--   Argumentos de modelo em uma declaração de modelo - padrão do C++: 1024, o compilador do Visual C++: 2046.  
+-   Argumentos do modelo em uma declaração de modelo – o padrão C++: 1024, o compilador do Visual C++: 2046.  
   
 ## <a name="see-also"></a>Consulte também  
  [Comportamento não padrão](../cpp/nonstandard-behavior.md)

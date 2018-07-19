@@ -17,18 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45885cc6dbac50a693bb84abb797469d8aff93a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 41c5d00efa0f827b9e1c3cd7f3647c966eed67e4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942135"
 ---
 # <a name="using-exit-or-return"></a>Usando saída ou retorno
-Quando você chama **sair** ou executar um `return` instrução do **principal**, objetos estáticos são destruídos na ordem inversa da sua inicialização. O exemplo a seguir mostra como realizar essa inicialização e as tarefas de limpeza.  
+Quando você chama **saia** ou execute uma **retornar** instrução from `main`, objetos estáticos são destruídos na ordem inversa da inicialização. O exemplo a seguir mostra como realizar essa inicialização e as tarefas de limpeza.  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // using_exit_or_return1.cpp  
 #include <stdio.h>  
 class ShowData {  
@@ -64,11 +65,11 @@ int main() {
 }  
 ```  
   
- No exemplo anterior, os objetos estáticos `sd1` e `sd2` são criados e inicializados antes da entrada em `main`. Depois que esse programa terminar de usar a instrução `return`, `sd2` será destruído primeiro, e depois `sd1`. O destruidor da classe `ShowData` fecha os arquivos associados a esses objetos estáticos.   
+ No exemplo anterior, os objetos estáticos `sd1` e `sd2` são criados e inicializados antes da entrada em `main`. Depois que esse programa terminar de usar o **retornar** instrução, primeiro `sd2` é destruído e, em seguida, `sd1`. O destruidor da classe `ShowData` fecha os arquivos associados a esses objetos estáticos.   
   
  Outra maneira de escrever o código é declarar os objetos `ShowData` com escopo de bloco, permitindo que eles sejam destruídos quando saírem do escopo:  
   
-```  
+```cpp 
 int main() {  
    ShowData sd1, sd2( "hello.dat" );  
   

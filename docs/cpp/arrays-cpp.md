@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60c7baaaf20158c29c34aea364e70c0d040a42e3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942241"
 ---
 # <a name="arrays-c"></a>Matrizes (C++)
 Uma matriz é uma coleção de objetos afins. O caso mais simples de uma matriz é um vetor, que pode ser declarado pela seguinte sequência:  
   
 ```  
   
-      decl-specifier identifier [ constant-expression ]  
+decl-specifier identifier [ constant-expression ]  
 decl-specifier identifier []  
 decl-specifier identifer [][ constant-expression] . . .  
 decl-specifier identifier [ constant-expression ]  
@@ -38,7 +39,7 @@ decl-specifier identifier [ constant-expression ]
   
 -   Um especificador de classe de armazenamento opcional.  
   
--   Opcional **const** e/ou `volatile` especificadores.  
+-   Opcional **const** e/ou **volátil** especificadores.  
   
 -   O nome do tipo dos elementos da matriz.  
   
@@ -46,17 +47,17 @@ decl-specifier identifier [ constant-expression ]
   
 -   O identificador.  
   
--   Uma expressão de constante do tipo integral entre colchetes, **[].** Se várias dimensões são declaradas usando colchetes adicionais, a expressão de constante pode ser omitida no primeiro conjunto de colchetes.  
+-   Uma expressão constante do tipo integral entre colchetes, **[]**. Se várias dimensões são declaradas usando os colchetes adicionais, a expressão de constante pode ser omitida no primeiro conjunto de colchetes.  
   
 -   Colchetes adicionais opcionais que incluem expressões constantes.  
   
- 3. Um inicializador opcional.  Consulte [inicializadores](../cpp/initializers.md).  
+ 3. Um inicializador opcional.  Ver [inicializadores](../cpp/initializers.md).  
   
- O número de elementos na matriz é determinado pela expressão constante. O primeiro elemento na matriz é o elemento 0º e é o último elemento de (*n*-1) elemento, onde *n* é o número de elementos de matriz pode conter. O *expressão constante* deve ser do tipo integral e deve ser maior que 0. Uma matriz de tamanho zero é válida somente quando a matriz é o último campo de um `struct` ou **união** e quando as extensões da Microsoft (/Ze) estão habilitadas.  
+ O número de elementos na matriz é determinado pela expressão constante. O primeiro elemento na matriz é o elemento 0 e o último elemento é o (*n*-1) elemento, onde *n* é o número de elementos de matriz pode conter. O *expressão-constante* deve ser do tipo integral e deve ser maior que 0. Uma matriz de tamanho zero é válida somente quando a matriz é o último campo em uma **struct** ou **união** e quando as extensões da Microsoft (/Ze) estão habilitadas.  
   
  O exemplo a seguir mostra como definir uma matriz no tempo de execução:  
   
-```  
+```cpp 
 // arrays.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -77,22 +78,22 @@ int main() {
 }  
 ```  
   
- Matrizes são tipos derivados e, portanto, podem ser construídas a partir de qualquer outro tipo derivado ou fundamental, exceto funções, referências e `void`.  
+ Matrizes são tipos derivados e, portanto, podem ser construídos a partir de qualquer outro tipo, derivado ou fundamental, exceto as funções, referências, e **void**.  
   
  Matrizes construídas a partir de outras matrizes são matrizes multidimensionais. Essas matrizes multidimensionais são especificadas colocando várias expressões de constante entre colchetes em sequência. Por exemplo, considere esta declaração:  
   
-```  
+```cpp 
 int i2[5][7];  
 ```  
   
- Especifica uma matriz do tipo `int`, organizada conceitualmente em uma matriz bidimensional de cinco linhas e sete colunas, conforme mostrado na figura a seguir:  
+ Especifica uma matriz do tipo **int**, organizada conceitualmente em uma matriz bidimensional de cinco linhas e sete colunas, conforme mostrado na figura a seguir:  
   
- ![Layout conceitual de uma várias&#45;matriz dimensional](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![Layout conceitual de uma de várias&#45;matriz dimensional](../cpp/media/vc38rc1.gif "vc38RC1")  
 Layout conceitual de matriz multidimensional  
   
- Em declarações de matrizes de multidimensioned que têm uma lista de inicializadores (conforme descrito em [inicializadores](../cpp/initializers.md)), a expressão de constante que especifica os limites para a primeira dimensão pode ser omitida. Por exemplo:  
+ Em declarações de matrizes multidimensionadas que têm uma lista de inicializadores (conforme descrito em [inicializadores](../cpp/initializers.md)), a expressão de constante que especifica os limites para a primeira dimensão pode ser omitida. Por exemplo:  
   
-```  
+```cpp 
 // arrays2.cpp  
 // compile with: /c  
 const int cMarkets = 4;  
@@ -121,7 +122,7 @@ double TransportCosts[][cMarkets] = {
 ## <a name="example"></a>Exemplo  
  A técnica de omitir a especificação dos limites para a primeira dimensão de uma matriz multidimensional também pode ser usada em declarações de função como a seguir:  
   
-```  
+```cpp 
 // multidimensional_arrays.cpp  
 // compile with: /EHsc  
 // arguments: 3  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36a24eadea87d0d34adf0f577b321fa16a7cfc86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c33e0783acfba1b460894ac8f5dde80e61780762
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359456"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882701"
 ---
 # <a name="cinterfacearray-class"></a>Classe CInterfaceArray
 Essa classe fornece métodos úteis ao construir uma matriz de ponteiros de interface COM.  
@@ -38,11 +38,11 @@ class CInterfaceArray :
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `I`  
- Uma interface COM especificando o tipo de ponteiro para ser armazenado.  
+ *I*  
+ Uma interface COM especificando o tipo de ponteiro a ser armazenado.  
   
- `piid`  
- Um ponteiro para o IID da `I`.  
+ *piid*  
+ Um ponteiro para o IID da *eu*.  
   
 ## <a name="members"></a>Membros  
   

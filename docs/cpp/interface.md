@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eea8f2585a1e385795a42c745aa95e180c6bb352
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03964b224603d86064290aa68344c828c2630a17
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942237"
 ---
 # <a name="interface"></a>__interface
 **Seção específica da Microsoft**  
@@ -43,36 +44,35 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-modifier  
- __interface interface-name {interface-definition};  
+modifier __interface interface-name {interface-definition};  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- C++ de [classe](../cpp/class-cpp.md) ou [struct](../cpp/struct-cpp.md) podem ser implementados com essas regras, mas `__interface` impõe-los.  
+ Um C++ [classe](../cpp/class-cpp.md) ou [struct](../cpp/struct-cpp.md) poderia ser implementado com essas regras, mas **interface** impõe-los.  
   
  Por exemplo, o seguinte é uma definição de interface de exemplo:  
   
-```  
+```cpp 
 __interface IMyInterface {  
    HRESULT CommitX();  
    HRESULT get_X(BSTR* pbstrName);  
 };  
 ```  
   
- Para obter informações sobre interfaces gerenciadas, consulte [classe de interface](../windows/interface-class-cpp-component-extensions.md).  
+ Para obter informações sobre as interfaces gerenciadas, consulte [classe de interface](../windows/interface-class-cpp-component-extensions.md).  
   
  Observe que você não precisa indicar explicitamente que as funções `CommitX` e `get_X` são puramente virtuais. Uma declaração equivalente para a primeira função seria:  
   
-```  
+```cpp 
 virtual HRESULT CommitX() = 0;  
 ```  
   
- `__interface` indica o [novtable](../cpp/novtable.md) `__declspec` modificador.  
+ **interface** implica a [novtable](../cpp/novtable.md) **declspec** modificador.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar as propriedades declaradas em uma interface.  
   
-```  
+```cpp 
 // deriv_interface.cpp  
 #define _ATL_ATTRIBUTES 1  
 #include <atlbase.h>  

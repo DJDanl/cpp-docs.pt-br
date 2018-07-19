@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4bfef99d12ae724c2ca6e70375f08a8dc1fb15b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d629806582d7ad9902ef5ca0d9425d6f1ecd7d7
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361834"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879688"
 ---
 # <a name="csimplemapequalhelper-class"></a>Classe CSimpleMapEqualHelper
-Essa classe é um auxiliar de [CSimpleMap](../../atl/reference/csimplemap-class.md) classe.  
+Essa classe é um auxiliar para o [CSimpleMap](../../atl/reference/csimplemap-class.md) classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +37,10 @@ class CSimpleMapEqualHelper
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `TKey`  
- O elemento de chave.  
+ *TKey*  
+ O elemento-chave.  
   
- `TVal`  
+ *TVal*  
  O elemento de valor.  
   
 ## <a name="members"></a>Membros  
@@ -49,48 +49,48 @@ class CSimpleMapEqualHelper
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|(Estático) Testa as duas chaves para igualdade.|  
-|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Estático) Testa dois valores para igualdade.|  
+|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|(Estático) Testes de duas chaves quanto à igualdade.|  
+|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Estático) Testa dois valores quanto à igualdade.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe de características é um suplemento de `CSimpleMap` classe. Fornece métodos para comparar dois `CSimpleMap` elementos (especificamente, os componentes de chave e valor) para igualdade do objeto. Por padrão, as chaves e valores são comparados usando `operator==()`, mas se o mapa contém tipos de dados complexos que não têm seu próprios operador de igualdade, essa classe pode ser substituída para fornecer a funcionalidade extra necessária.  
+ Essa classe de características é um suplemento para o `CSimpleMap` classe. Fornece métodos para comparar dois `CSimpleMap` igualdade de elementos (especificamente, os componentes de chave e valor) do objeto. Por padrão, as chaves e valores são comparados usando **Operator**, mas se o mapa contém tipos de dados complexos que não têm seu próprios operador de igualdade, essa classe pode ser substituída para fornecer a funcionalidade adicional necessária.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsimpcoll.h  
   
 ##  <a name="isequalkey"></a>  CSimpleMapEqualHelper::IsEqualKey  
- Testa as duas chaves para igualdade.  
+ Testes de duas chaves quanto à igualdade.  
   
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `k1`  
+ *K1*  
  A primeira chave.  
   
- `k2`  
+ *K2*  
  A segunda chave.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna VERDADEIRO se as chaves forem iguais; caso contrário, false.  
+ Retorna VERDADEIRO se as chaves são iguais, caso contrário, false.  
   
 ##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue  
- Testa dois valores para igualdade.  
+ Testa dois valores quanto à igualdade.  
   
 ```
 static bool IsEqualValue(const TVal& v1, const TVal& v2);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *V1*  
+ *v1*  
  O primeiro valor.  
   
- *V2*  
+ *v2*  
  O segundo valor.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna VERDADEIRO se os valores forem iguais; caso contrário, false.  
+ Retorna true se os valores forem iguais, caso contrário, false.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CSimpleMapEqualHelperFalse](../../atl/reference/csimplemapequalhelperfalse-class.md)   

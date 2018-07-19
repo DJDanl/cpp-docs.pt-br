@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d98b8dd082a09de461452b43b70ddeb9431abe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1339f41a0764e44f46bed7ad24181ce406998c22
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365641"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885595"
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>Classe IOleInPlaceActiveObjectImpl
-Essa classe fornece métodos para ajudar a comunicação entre um controle no local e o contêiner.  
+Essa classe fornece métodos para ajudar a comunicação entre um controle no local e seu contêiner.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,8 +47,8 @@ class IOleInPlaceActiveObjectImpl
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
- A classe derivada de `IOleInPlaceActiveObjectImpl`.  
+ *T*  
+ Sua classe, derivada de `IOleInPlaceActiveObjectImpl`.  
   
 ## <a name="members"></a>Membros  
   
@@ -56,17 +56,17 @@ class IOleInPlaceActiveObjectImpl
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[IOleInPlaceActiveObjectImpl::ContextSensitiveHelp](#contextsensitivehelp)|Habilita a Ajuda contextual. Retorna a implementação de ATL **E_NOTIMPL**.|  
-|[IOleInPlaceActiveObjectImpl::EnableModeless](#enablemodeless)|Habilita as caixas de diálogo sem janela restrita. Retorna a implementação de ATL `S_OK`.|  
+|[IOleInPlaceActiveObjectImpl::ContextSensitiveHelp](#contextsensitivehelp)|Permite que a Ajuda contextual. A implementação de ATL retornará E_NOTIMPL.|  
+|[IOleInPlaceActiveObjectImpl::EnableModeless](#enablemodeless)|Habilita as caixas de diálogo sem janela restrita. A implementação de ATL Retorna S_OK.|  
 |[IOleInPlaceActiveObjectImpl::GetWindow](#getwindow)|Obtém um identificador de janela.|  
-|[IOleInPlaceActiveObjectImpl::OnDocWindowActivate](#ondocwindowactivate)|Notifica o controle quando a janela de documento do contêiner é ativada ou desativada. Retorna a implementação de ATL `S_OK`.|  
-|[IOleInPlaceActiveObjectImpl::OnFrameWindowActivate](#onframewindowactivate)|Notifica o controle quando a janela do quadro de nível superior do contêiner é ativada ou desativada. Retorna a implementação do ATL|  
-|[IOleInPlaceActiveObjectImpl::ResizeBorder](#resizeborder)|Informa o controle precisa redimensionar suas bordas. Retorna a implementação de ATL `S_OK`.|  
-|[IOleInPlaceActiveObjectImpl::TranslateAccelerator](#translateaccelerator)|Processa as mensagens de tecla de aceleração de menu do contêiner. Retorna a implementação de ATL **E_NOTIMPL**.|  
+|[IOleInPlaceActiveObjectImpl::OnDocWindowActivate](#ondocwindowactivate)|Notifica o controle quando a janela de documento do contêiner é ativada ou desativada. A implementação de ATL Retorna S_OK.|  
+|[IOleInPlaceActiveObjectImpl::OnFrameWindowActivate](#onframewindowactivate)|Notifica o controle quando a janela de quadro de nível superior do contêiner é ativada ou desativada. Retorna a implementação do ATL|  
+|[IOleInPlaceActiveObjectImpl::ResizeBorder](#resizeborder)|Informa o controle precisa redimensionar suas bordas. A implementação de ATL Retorna S_OK.|  
+|[IOleInPlaceActiveObjectImpl::TranslateAccelerator](#translateaccelerator)|Processa as mensagens de tecla de atalho do menu do contêiner. A implementação de ATL retornará E_NOTIMPL.|  
   
   
 ## <a name="remarks"></a>Comentários  
- O [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) interface ajuda a comunicação entre um controle no local e o contêiner; por exemplo, se comunicar o estado ativo do controle de contêiner e informando o controle precisa redimensionar em si. Classe `IOleInPlaceActiveObjectImpl` fornece uma implementação padrão de `IOleInPlaceActiveObject` e dá suporte a **IUnknown** enviando informações para o despejo compilações dispositivo na depuração.  
+ O [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) interface auxilia a comunicação entre um controle no local e seu contêiner; por exemplo, se comunicando o estado ativo do controle e o contêiner e informar o controle precisa redimensionar em si. Classe `IOleInPlaceActiveObjectImpl` fornece uma implementação padrão de `IOleInPlaceActiveObject` e dá suporte a `IUnknown` enviando informações para o despejo de compilações de dispositivo na depuração.  
   
  **Artigos relacionados** [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -79,17 +79,17 @@ class IOleInPlaceActiveObjectImpl
  **Cabeçalho:** atlctl.h  
   
 ##  <a name="contextsensitivehelp"></a>  IOleInPlaceActiveObjectImpl::ContextSensitiveHelp  
- Habilita a Ajuda contextual.  
+ Permite que a Ajuda contextual.  
   
 ```
 HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna **E_NOTIMPL**.  
+ Retornará E_NOTIMPL.  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) no SDK do Windows.  
+ Ver [IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) no Windows SDK.  
   
 ##  <a name="enablemodeless"></a>  IOleInPlaceActiveObjectImpl::EnableModeless  
  Habilita as caixas de diálogo sem janela restrita.  
@@ -99,22 +99,22 @@ HRESULT EnableModeless(BOOL fEnable);
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna `S_OK`.  
+ Retorna S_OK.  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115) no SDK do Windows.  
+ Ver [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115) no Windows SDK.  
   
 ##  <a name="getwindow"></a>  IOleInPlaceActiveObjectImpl::GetWindow  
- O contêiner chama esta função para obter o identificador de janela do controle.  
+ O contêiner chama essa função para obter o identificador de janela do controle.  
   
 ```
 HRESULT GetWindow(HWND* phwnd);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Alguns contêineres não funcionará com um controle que tenha sido sem janelas, mesmo se estiver atualmente em janelas. Na implementação do ATL, se o **CComControl::m_bWasOnceWindowless** é membro de dados **TRUE**, a função retorna **E_FAIL**. Caso contrário, se \* *phwnd* não é **nulo**, `GetWindow` atribui *phwnd* para membro de dados da classe de controle `m_hWnd` e retorna `S_OK`.  
+ Alguns contêineres não funcionará com um controle que tenha sido sem janelas, mesmo se ele está atualmente em janelas. Na implementação da ATL, se o `CComControl::m_bWasOnceWindowless` membro de dados for TRUE, a função retornará E_FAIL. Caso contrário, se \* *phwnd* não for nulo, `GetWindow` atribui *phwnd* ao membro de dados da classe de controle `m_hWnd` e retorna S_OK.  
   
- Consulte [IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) no SDK do Windows.  
+ Ver [IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) no Windows SDK.  
   
 ##  <a name="ondocwindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
  Notifica o controle quando a janela de documento do contêiner é ativada ou desativada.  
@@ -124,23 +124,23 @@ HRESULT OnDocWindowActivate(BOOL fActivate);
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna `S_OK`.  
+ Retorna S_OK.  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281) no SDK do Windows.  
+ Ver [IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281) no Windows SDK.  
   
 ##  <a name="onframewindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
- Notifica o controle quando a janela do quadro de nível superior do contêiner é ativada ou desativada.  
+ Notifica o controle quando a janela de quadro de nível superior do contêiner é ativada ou desativada.  
   
 ```
 HRESULT OnFrameWindowActivate(BOOL fActivate);
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna `S_OK`.  
+ Retorna S_OK.  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) no SDK do Windows.  
+ Ver [IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) no Windows SDK.  
   
 ##  <a name="resizeborder"></a>  IOleInPlaceActiveObjectImpl::ResizeBorder  
  Informa o controle precisa redimensionar suas bordas.  
@@ -153,27 +153,27 @@ HRESULT ResizeBorder(
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna `S_OK`.  
+ Retorna S_OK.  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053) no SDK do Windows.  
+ Ver [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053) no Windows SDK.  
   
 ##  <a name="translateaccelerator"></a>  IOleInPlaceActiveObjectImpl::TranslateAccelerator  
- Processa as mensagens de tecla de aceleração de menu do contêiner.  
+ Processa as mensagens de tecla de atalho do menu do contêiner.  
   
 ```
 HRESULT TranslateAccelerator(LPMSG lpmsg);
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Esse método aceita os seguintes valores de retorno:  
+ Esse método aceita os seguintes valores de retornados:  
   
- `S_OK` Se a mensagem foi convertida com êxito.  
+ S_OK se a mensagem foi convertida com êxito.  
   
- **S_FALSE** se a mensagem não foi convertida.  
+ S_FALSE se a mensagem não foi convertida.  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [IOleInPlaceActiveObject::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) no SDK do Windows.  
+ Ver [IOleInPlaceActiveObject::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) no Windows SDK.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CComControl](../../atl/reference/ccomcontrol-class.md)  

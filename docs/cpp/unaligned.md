@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d73b082b9f41d03eb0b1a8c9fe772351ff4da91f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a7a9de35e225dabadbf9f4a3731f6d57fd9e99a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420896"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940407"
 ---
 # <a name="unaligned"></a>__unaligned
 
-**Específicos do Microsoft**. Quando você declara um ponteiro com o modificador `__unaligned`, o compilador presume que o ponteiro aborda os dados que não são alinhados. Consequentemente, o código apropriado de plataforma é gerado para manipular leituras não alinhadas e grava através do ponteiro.
+**Específico da Microsoft**. Quando você declara um ponteiro com o **unaligned** modificador, o compilador pressupõe que o ponteiro aborda os dados que não estão alinhados. Consequentemente, o código de plataforma apropriada é gerado para lidar com leituras não alinhadas e grava através do ponteiro.
 
 ## <a name="remarks"></a>Comentários
 
-Esse modificador descreve o alinhamento dos dados endereçados pelo ponteiro; o ponteiro em si deve ser alinhado.
+Esse modificador descreve o alinhamento dos dados resolvidos pelo ponteiro; o ponteiro em si é considerado alinhado.
 
-A necessidade do `__unaligned` palavra-chave varia por plataforma e o ambiente. Falha ao marcar dados adequadamente pode resultar em problemas desde penalidades de desempenho para falhas de hardware. O `__unaligned` modificador não é válido para o x86 de plataforma.
+A necessidade do **unaligned** palavra-chave varia por plataforma e o ambiente. Falha ao marcar os dados adequadamente pode resultar em problemas, desde as penalidades de desempenho para falhas de hardware. O **unaligned** modificador não é válido para o x86 de plataforma.
 
 Para obter mais informações sobre alinhamento, consulte:
 

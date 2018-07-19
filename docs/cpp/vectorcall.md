@@ -12,32 +12,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29c202a888d4c741a9a9fb54a84109100038d32a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c05707f3d6d6e323bf9605c3c742f6bef417d817
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424728"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939774"
 ---
 # <a name="vectorcall"></a>__vectorcall
 **Seção específica da Microsoft**  
   
- A convenção de chamada `__vectorcall` especifica se os argumentos para funções devem ser passados em registros, quando possível. `__vectorcall` usa mais registros para argumentos que [fastcall](../cpp/fastcall.md) ou o padrão [convenção de chamada x64](../build/overview-of-x64-calling-conventions.md) usar. A convenção de chamada `__vectorcall` é suportada somente em código nativo nos processadores de x86 e x64 que incluem Streaming SIMD Extensions 2 (SSE2) e superiores. Use `__vectorcall` para agilizar as funções que passam vários argumentos de ponto flutuante ou de vetor SIMD e executar operações que aproveitam os argumentos carregados em registros. A lista a seguir mostra os recursos que são comuns às implementações de x86 e x64 de `__vectorcall`. As diferenças são explicadas posteriormente neste artigo.  
+ A convenção de chamada `__vectorcall` especifica se os argumentos para funções devem ser passados em registros, quando possível. `__vectorcall` usa mais registros para argumentos que [fastcall](../cpp/fastcall.md) ou o padrão [convenção de chamada de x64](../build/overview-of-x64-calling-conventions.md) usar. A convenção de chamada `__vectorcall` é suportada somente em código nativo nos processadores de x86 e x64 que incluem Streaming SIMD Extensions 2 (SSE2) e superiores. Use `__vectorcall` para agilizar as funções que passam vários argumentos de ponto flutuante ou de vetor SIMD e executar operações que aproveitam os argumentos carregados em registros. A lista a seguir mostra os recursos que são comuns às implementações de x86 e x64 de `__vectorcall`. As diferenças são explicadas posteriormente neste artigo.  
   
 |Elemento|Implementação|  
 |-------------|--------------------|  
 |Convenção de nomes decoração do C|Os nomes de função têm como sufixo dois sinais de arroba (@@) seguidos pelo número de bytes (em decimais) na lista de parâmetros.|  
 |Convenção de conversão de maiúsculas/minúsculas|Nenhuma tradução realizada.|  
   
- Usando o [/Gv](../build/reference/gd-gr-gv-gz-calling-convention.md) opção de compilador faz com que cada função no módulo para compilar como `__vectorcall` , a menos que a função é uma função de membro, é declarada com um atributo de convenção de chamada conflitantes, usa um `vararg` variável lista de argumentos, ou tem o nome `main`.  
+ Usando o [/Gv](../build/reference/gd-gr-gv-gz-calling-convention.md) opção de compilador faz com que cada função no módulo seja compilada como `__vectorcall` , a menos que a função é uma função de membro, é declarado com um atributo de convenção conflitante, usa um `vararg` variável lista de argumentos, ou tem o nome `main`.  
   
- Você pode transmitir três tipos de argumentos de registro em `__vectorcall` funções: *tipo inteiro* valores, *vector tipo* valores, e *agregação vetor homogênea* (HVA ) valores.  
+ Você pode passar três tipos dos argumentos pelo registro em `__vectorcall` funções: *tipo de inteiro* valores *tipo de vetor* valores, e *agregação vetorial homogênea* (HVA ) valores.  
   
- Um tipo inteiro satisfaz dois requisitos: se encaixa no tamanho nativo de registro do processador, por exemplo, 4 bytes em um computador x86 ou 8 bytes em um computador x64, e pode ser convertido para um número inteiro do comprimento de registro e de volta para o seu formato original sem alterar sua representação de bit. Por exemplo, qualquer tipo que possa ser promovidos para `int` em x (`long long` em x64) — por exemplo, `char` ou `short`— ou que pode ser convertido em `int` (`long long` em x64) e de volta para seu tipo sem alteração original é um tipo inteiro. Os tipos inteiros incluem o ponteiro, a referência e a `struct` ou tipos `union` de 4 bytes (8 bytes em x64) ou menos. Em plataformas x64, a `struct` maior e os tipos de `union` são passados em função da memória atribuída pelo chamador; nas plataformas x86, eles são passados pelo valor na pilha.  
+ Um tipo inteiro satisfaz dois requisitos: se encaixa no tamanho nativo de registro do processador, por exemplo, 4 bytes em um computador x86 ou 8 bytes em um computador x64, e pode ser convertido para um número inteiro do comprimento de registro e de volta para o seu formato original sem alterar sua representação de bit. Por exemplo, qualquer tipo que pode ser promovido a **int** em x86 (**long long** em x64) — por exemplo, um **char** ou **curto**— ou que pode ser convertido em **int** (**long long** em x64) e sem alteração é um tipo de inteiro de volta para seu tipo original. Tipos inteiros incluem o ponteiro, referência, e **struct** ou **união** tipos de 4 bytes (8 bytes em x64) ou menos. No x64 plataformas, maiores **struct** e **união** tipos são passados por referência para a memória alocada pelo chamador; em x86 plataformas, eles são passados por valor na pilha.  
   
- Um tipo vetorial é um tipo de ponto flutuante, por exemplo, `float` ou `double`, ou um vetor de SIMD de tipo, por exemplo, `__m128` ou `__m256`.  
+ Um tipo vetorial é um tipo de ponto flutuante — por exemplo, uma **float** ou **duplo**— ou um tipo de vetor SIMD — por exemplo, **__m128** ou **__m256**.  
   
- Um tipo de HVA é um tipo composto de até quatro membros de dados que têm tipos vetoriais idênticos. Um tipo de HVA tem o mesmo requisito de alinhamento que o tipo de vetor dos seus membros. Este é um exemplo de uma definição de `struct` do HVA que contém três tipos idênticos de vetor e tem um alinhamento de 32 bytes:  
+ Um tipo de HVA é um tipo composto de até quatro membros de dados que têm tipos vetoriais idênticos. Um tipo de HVA tem o mesmo requisito de alinhamento que o tipo de vetor dos seus membros. Este é um exemplo de um HVA **struct** definição que contém três tipos idênticos de vetor e tem o alinhamento de 32 bytes:  
   
 ```cpp  
 typedef struct {  
@@ -50,7 +50,7 @@ typedef struct {
   
  Declare explicitamente suas funções com a palavra-chave `__vectorcall` em arquivos de cabeçalho para permitir que código compilado separadamente seja vinculado sem erros. As funções devem ser prototipadas para usarem `__vectorcall` e não podem usar uma lista de argumentos de comprimento variável `vararg`.  
   
- Uma função de membro pode ser declarada usando o especificador de `__vectorcall`. O ponteiro `this` oculto é transmitido pelo registro como o primeiro argumento do tipo inteiro.  
+ Uma função de membro pode ser declarada usando o especificador de `__vectorcall`. Oculto **isso** ponteiro é passado pelo registro como o primeiro argumento de tipo inteiro.  
   
  Em computadores ARM, `__vectorcall` é aceito e ignorado pelo compilador.  
   
@@ -74,7 +74,7 @@ void MyClass::mymethod() { return; }
 void __vectorcall MyClass::mymethod() { return; }  
 ```  
   
- O modificador da convenção de chamada `__vectorcall` deve ser especificado quando um ponteiro para uma função `__vectorcall` é criado. O exemplo a seguir cria `typedef` para um ponteiro para uma função `__vectorcall` que usa quatro argumentos `double` e retorna um valor `__m256`:  
+ O modificador da convenção de chamada `__vectorcall` deve ser especificado quando um ponteiro para uma função `__vectorcall` é criado. O exemplo a seguir cria uma **typedef** de um ponteiro para um `__vectorcall` função que usa quatro **double** argumentos e retorna um **__m256** valor:  
   
 ```cpp  
 typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);  
@@ -83,11 +83,11 @@ typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);
 ## <a name="vectorcall-convention-on-x64"></a>convenção de __vectorcall em x64  
  A convenção de chamada `__vectorcall` em x64 estende a convenção de chamada padrão de x64 para tirar proveito de registros adicionais. Os argumentos de tipo inteiro e os argumentos de tipo vetorial são mapeados nos registradores com base em sua posição na lista de argumentos. Os argumentos HVA são alocados a registros de vetor não utilizados.  
   
- Quando alguns dos primeiros quatro argumentos na ordem são argumentos de tipo inteiro da esquerda para a direita, eles são passados no registro correspondente a essa posição - RCX, RDX, R8, ou R9. Um ponteiro oculto de `this` é tratado como o primeiro argumento do tipo inteiro. Quando um argumento de HVA em um dos primeiros quatro argumentos não pode ser passado em registros disponíveis, uma referência à memória atribuída ao chamador é passada no registro correspondente do tipo inteiro em vez disso. Os argumentos de tipo inteiro após a quarta posição de parâmetro são passados para a pilha.  
+ Quando alguns dos primeiros quatro argumentos na ordem são argumentos de tipo inteiro da esquerda para a direita, eles são passados no registro correspondente a essa posição - RCX, RDX, R8, ou R9. Oculto **isso** ponteiro é tratado como o primeiro argumento de tipo inteiro. Quando um argumento de HVA em um dos primeiros quatro argumentos não pode ser passado em registros disponíveis, uma referência à memória atribuída ao chamador é passada no registro correspondente do tipo inteiro em vez disso. Os argumentos de tipo inteiro após a quarta posição de parâmetro são passados para a pilha.  
   
- Quando algum dos primeiros seis argumentos na ordem são argumentos de tipo vetor da esquerda para a direita, eles são passados por valor nos registros de vetor SSE 0 a 5, de acordo com a posição do argumento. Os tipos de ponto flutuante e `__m128` são passados em registros MMX e os tipos `__m256` são passados em registros YMM. Isso difere da convenção padrão de chamada do x64, porque os tipos de vetor são passados por valor, não por referência, e registros adicionais são usados. O espaço de pilha de sombra alocado para os argumentos de tipo de vetor é fixo em 8 bytes e o [/homeparams](../build/reference/homeparams-copy-register-parameters-to-stack.md) opção não se aplica. Os argumentos de tipo vetorial na posição de parâmetro sete ou posteriores são passados na pilha em função de memória atribuída pelo chamador.  
+ Quando algum dos primeiros seis argumentos na ordem são argumentos de tipo vetor da esquerda para a direita, eles são passados por valor nos registros de vetor SSE 0 a 5, de acordo com a posição do argumento. Ponto flutuante e **__m128** tipos são passados em registros MMX e **__m256** tipos são passados em YMM registra. Isso difere da convenção padrão de chamada do x64, porque os tipos de vetor são passados por valor, não por referência, e registros adicionais são usados. O espaço de pilha de sombra alocado para os argumentos de tipo vetorial é corrigido em 8 bytes e o [/homeparams](../build/reference/homeparams-copy-register-parameters-to-stack.md) opção não se aplica. Os argumentos de tipo vetorial na posição de parâmetro sete ou posteriores são passados na pilha em função de memória atribuída pelo chamador.  
   
- Após os registros serem atribuídos para argumentos vetoriais, os membros de dados dos argumentos de HVA são atribuídos em ordem crescente para registros vetoriais não usados de XMM0 a XMM5 (ou YMM0 a YMM5, para os tipos `__m256`), contanto que haja registros suficientes disponíveis para todo o HVA. Se não houver registros disponíveis, o argumento do HVA será passado por referência para a memória alocada pelo chamador. O espaço de sombra de pilha para um argumento de HVA é corrigido em 8 bytes com conteúdo indefinido. Os argumentos HVA são atribuídos a registros da esquerda para a direita na lista de parâmetros e podem estar em qualquer posição. Os argumentos HVA em uma das primeiras quatro posições de argumento que não são atribuídos a registros de vetor são passados por referência no registro de inteiro que corresponda a essa posição. Os argumentos HVA passados por referência após a quarta posição de parâmetro são enviados por push na pilha.  
+ Após os registros são atribuídos para argumentos vetoriais, os membros de dados dos argumentos de HVA são atribuídos em ordem crescente para registros vetoriais não usados XMM0 a XMM5 (ou YMM0 a YMM5, para **__m256** tipos), desde que haja registros suficientes disponível para todo o HVA. Se não houver registros disponíveis, o argumento do HVA será passado por referência para a memória alocada pelo chamador. O espaço de sombra de pilha para um argumento de HVA é corrigido em 8 bytes com conteúdo indefinido. Os argumentos HVA são atribuídos a registros da esquerda para a direita na lista de parâmetros e podem estar em qualquer posição. Os argumentos HVA em uma das primeiras quatro posições de argumento que não são atribuídos a registros de vetor são passados por referência no registro de inteiro que corresponda a essa posição. Os argumentos HVA passados por referência após a quarta posição de parâmetro são enviados por push na pilha.  
   
  Os resultados das funções `__vectorcall` são retornados pelo valor em registros quando possível. Os resultados do tipo inteiro, incluindo as estruturas ou uniões de 8 bytes ou menos, são retornadas pelo valor em RAX. Os resultados do tipo vetorial são retornados pelo valor em XMM0 ou em YMM0, dependendo do tamanho. Os resultados HVA têm cada elemento de dados retornado pelo valor em registros XMM0:XMM3 ou YMM0:YMM3, dependendo do tamanho do elemento. Os tipos de resultado que não cabem nos registros correspondentes são retornados por referência à memória alocada pelo chamador.  
   
@@ -191,13 +191,13 @@ int __cdecl main( void )
 ```  
   
 ## <a name="vectorcall-convention-on-x86"></a>convenção de __vectorcall em x86  
- A convenção de chamada `__vectorcall` segue a convenção `__fastcall` para argumentos de tipo inteiro de 32 bits e tira proveito dos registros do vetor SSE para o tipo de vetor e os argumentos de HVA.  
+ O `__vectorcall` maneira de convenção de chamada a **fastcall** convenção para argumentos de tipo inteiro de 32 bits e tira proveito dos registros do vetor SSE para o tipo de vetor e os argumentos HVA.  
   
- Os dois primeiros argumentos de tipo inteiro localizados na lista de parâmetros, da esquerda para a direita, são colocados em ECX e EDX, respectivamente. Um ponteiro oculto `this` é tratado como o primeiro argumento do tipo inteiro, e é passado no ECX. Os primeiros seis argumentos de tipo de vetor são transmitidos por valor pelos registros 0 a 5 do vetor SSE, nos registros de MMX ou YMM, dependendo do tamanho do argumento.  
+ Os dois primeiros argumentos de tipo inteiro localizados na lista de parâmetros, da esquerda para a direita, são colocados em ECX e EDX, respectivamente. Oculto **isso** ponteiro é tratado como o primeiro argumento de tipo de inteiro e é passado no ECX. Os primeiros seis argumentos de tipo de vetor são transmitidos por valor pelos registros 0 a 5 do vetor SSE, nos registros de MMX ou YMM, dependendo do tamanho do argumento.  
   
- Os primeiros seis argumentos de tipo de vetor, da esquerda para a direita, são transmitidos por valor nos registros 0 a 5 do vetor SSE. Os tipos de ponto flutuante e `__m128` são passados em registros MMX e os tipos `__m256` são passados em registros YMM. Nenhum espaço de pilha de sombra está alocado para argumentos de tipo de vetor passado pelo registro. Os argumentos de tipo vetorial sete ou posteriores são passados na pilha em referência à memória atribuída pelo chamador. A limitação de erro do compilador [C2719](../error-messages/compiler-errors-2/compiler-error-c2719.md) não é aplicável a estes argumentos.  
+ Os primeiros seis argumentos de tipo de vetor, da esquerda para a direita, são transmitidos por valor nos registros 0 a 5 do vetor SSE. Ponto flutuante e **__m128** tipos são passados em registros MMX e **__m256** tipos são passados em YMM registra. Nenhum espaço de pilha de sombra está alocado para argumentos de tipo de vetor passado pelo registro. Os argumentos de tipo vetorial sete ou posteriores são passados na pilha em referência à memória atribuída pelo chamador. A limitação de erro do compilador [C2719](../error-messages/compiler-errors-2/compiler-error-c2719.md) não se aplica a esses argumentos.  
   
- Após os registros serem atribuídos para argumentos vetoriais, os membros de dados dos argumentos de HVA são atribuídos em ordem crescente para registros vetoriais não usados de XMM0 a XMM5 (ou YMM0 a YMM5, para os tipos `__m256`), contanto que haja registros suficientes disponíveis para todo o HVA. Se não houver registros disponíveis, o argumento do HVA será passado na pilha por referência para a memória alocada pelo chamador. Nenhum espaço de sombra de pilha para um argumento do HVA está alocado. Os argumentos HVA são atribuídos a registros da esquerda para a direita na lista de parâmetros e podem estar em qualquer posição.  
+ Após os registros são atribuídos para argumentos vetoriais, os dados de membros dos argumentos de HVA são alocados em ordem crescente para vetoriais não usados registra XMM0 a XMM5 (ou YMM0 a YMM5, para **__m256** tipos), desde que haja registros suficientes disponível para todo o HVA. Se não houver registros disponíveis, o argumento do HVA será passado na pilha por referência para a memória alocada pelo chamador. Nenhum espaço de sombra de pilha para um argumento do HVA está alocado. Os argumentos HVA são atribuídos a registros da esquerda para a direita na lista de parâmetros e podem estar em qualquer posição.  
   
  Os resultados das funções `__vectorcall` são retornados pelo valor em registros quando possível. Os resultados do tipo inteiro, incluindo as estruturas ou uniões de 4 bytes ou menos, são retornadas pelo valor em EAX. As estruturas ou uniões de tipo inteiro de 8 bytes ou menos são retornadas por valor em EDX:EAX. Os resultados do tipo vetorial são retornados pelo valor em XMM0 ou em YMM0, dependendo do tamanho. Os resultados HVA têm cada elemento de dados retornado pelo valor em registros XMM0:XMM3 ou YMM0:YMM3, dependendo do tamanho do elemento. Outros tipos de resultados são retornados em referência à memória atribuída pelo chamador.  
   

@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d46a9c593826e804c62ab67b8afa894912d15bd8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7721e617541b962994b115344f33e1ec59e4acaf
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942350"
 ---
 # <a name="hook"></a>__hook
 Associa um método de manipulador a um evento.  
@@ -30,7 +31,7 @@ Associa um método de manipulador a um evento.
   
 ```  
   
-      long __hook(  
+long __hook(  
    &SourceClass::EventMethod,  
    source,  
    &ReceiverClass::HandlerMethod  
@@ -48,64 +49,64 @@ long __hook(
   
 -   Eventos nativos do C++: *SourceClass* é a classe de origem do evento e *EventMethod* é o evento.  
   
--   Eventos COM: *SourceClass* é a interface de origem do evento e *EventMethod* é um de seus métodos.  
+-   Eventos COM: *SourceClass* é a interface de origem do evento e *EventMethod* é um dos seus métodos.  
   
 -   Eventos gerenciados: *SourceClass* é a classe de origem do evento e *EventMethod* é o evento.  
   
- `interface`  
- O nome da interface que está sendo vinculado para `receiver`, apenas para receptores de evento COM no qual o *layout_dependent* parâmetro do [event_receiver](../windows/event-receiver.md) atributo é **true**.  
+ *interface*  
+ O nome da interface sendo enganchado a *receptor*, apenas para os receptores de evento no qual o *layout_dependent* parâmetro do [event_receiver](../windows/event-receiver.md) atributo é **verdadeiro**.  
   
- *Código-fonte*  
- Um ponteiro para uma instância da origem do evento. Dependendo do código `type` especificado em **event_receiver**, *fonte* pode ser um dos seguintes:  
+ *source*  
+ Um ponteiro para uma instância da origem do evento. Dependendo do código `type` especificado no `event_receiver`, *origem* pode ser uma das seguintes opções:  
   
 -   Um ponteiro nativo do objeto de origem do evento.  
   
--   Um **IUnknown**-com base em ponteiro (fonte COM).  
+-   Um `IUnknown`-com base em ponteiro (origem COM).  
   
 -   Um ponteiro gerenciado do objeto (para eventos gerenciados).  
   
  **&** *ReceiverClass* `::` `HandlerMethod`  
- Um ponteiro para o método do manipulador de eventos a ser enganchado a um evento. O manipulador é especificado como um método de uma classe ou uma referência a ela. Se você não especificar o nome da classe, `__hook` assumirá a classe como sendo a chamada.  
+ Um ponteiro para o método do manipulador de eventos a ser enganchado a um evento. O manipulador é especificado como um método de uma classe ou uma referência a ela. Se você não especificar o nome de classe **hook** pressupõe que a classe seja que, no qual ele é chamado.  
   
--   Eventos nativos do C++: *ReceiverClass* é a classe do receptor de evento e `HandlerMethod` é o manipulador.  
+-   Eventos nativos do C++: *ReceiverClass* é a classe de receptor de evento e `HandlerMethod` é o manipulador.  
   
--   Eventos COM: *ReceiverClass* é a interface de receptor de evento e `HandlerMethod` é um dos seus manipuladores.  
+-   Eventos COM: *ReceiverClass* é a interface do receptor de evento e `HandlerMethod` é um dos manipuladores.  
   
--   Eventos gerenciados: *ReceiverClass* é a classe do receptor de evento e `HandlerMethod` é o manipulador.  
+-   Eventos gerenciados: *ReceiverClass* é a classe de receptor de evento e `HandlerMethod` é o manipulador.  
   
- `receiver`(opcional)  
- Um ponteiro para uma instância da classe do receptor de eventos. Se você não especificar um receptor, o padrão será a classe ou a estrutura receptora na qual `__hook` é chamado.  
+ *receptor*(opcional)  
+ Um ponteiro para uma instância da classe do receptor de eventos. Se você não especificar um receptor, o padrão é a classe do receptor ou estrutura na qual **hook** é chamado.  
   
 ## <a name="usage"></a>Uso  
  Pode ser o uso em qualquer escopo da função, incluindo o principal, fora da classe do receptor de eventos.  
   
 ## <a name="remarks"></a>Comentários  
- Use a função intrínseca `__hook` em um receptor de eventos para associar ou enganchar um método de manipulador com um método de evento. O manipulador especificado é chamado quando a origem gera o evento especificado. Você pode enganchar vários manipuladores a um único evento, ou enganchar vários eventos a um único manipulador.  
+ Use a função intrínseca **hook** em um receptor de eventos para associar ou enganchar um método de manipulador com um método de evento. O manipulador especificado é chamado quando a origem gera o evento especificado. Você pode enganchar vários manipuladores a um único evento, ou enganchar vários eventos a um único manipulador.  
   
- Há duas formas de `__hook`. Você pode usar o primeiro formulário (quatro argumento) na maioria dos casos, especificamente, para receptores de evento COM no qual o *layout_dependent* parâmetro o [event_receiver](../windows/event-receiver.md) atributo é **false** .  
+ Há duas formas de **hook**. Você pode usar o primeiro formulário (quatro argumento) na maioria dos casos, especificamente, para os receptores de evento no qual o *layout_dependent* parâmetro do [event_receiver](../windows/event-receiver.md) atributo é **false** .  
   
- Nesses casos você não precisa enganchar todos os métodos em uma interface antes de acionar um evento em um dos métodos; somente a manipulação de método do evento precisa ser enganchado. Você pode usar a segunda forma de (dois argumentos) de `__hook` somente para um receptor de evento COM no qual * layout_dependent ***= true**.  
+ Nesses casos você não precisa enganchar todos os métodos em uma interface antes de acionar um evento em um dos métodos; somente a manipulação de método do evento precisa ser enganchado. Você pode usar o segundo formulário (dois argumentos) de **hook** apenas para um receptor de evento COM em que * * layout_dependent **= true**.  
   
- `__hook` retorna um valor longo. Um valor de retorno diferente de zero indica que ocorreu um erro (eventos gerenciados lançam uma exceção).  
+ **hook** retorna um valor longo. Um valor de retorno diferente de zero indica que ocorreu um erro (eventos gerenciados lançam uma exceção).  
   
  O compilador verifica a existência de um evento e se a assinatura do evento concorda com a assinatura de delegação.  
   
- Com a exceção de eventos COM, `__hook` e `__unhook` podem ser chamadas fora do receptor de eventos.  
+ Com exceção dos eventos COM, **hook** e **unhook** pode ser chamado fora do receptor do evento.  
   
- Uma alternativa ao uso de `__hook` é usar o operador + =.  
+ Uma alternativa ao uso **hook** é usar o operador + =.  
   
- Para obter informações sobre eventos gerenciados na nova sintaxe de codificação, consulte [evento](../windows/event-cpp-component-extensions.md).  
+ Para obter informações sobre a codificação gerenciada de eventos na nova sintaxe, consulte [evento](../windows/event-cpp-component-extensions.md).  
   
 > [!NOTE]
 >  Uma classe ou um struct modelo não podem conter eventos.  
   
 ## <a name="example"></a>Exemplo  
- Consulte [manipulação de eventos em C++ nativo](../cpp/event-handling-in-native-cpp.md) e [manipulação de eventos COM](../cpp/event-handling-in-com.md) para obter exemplos.  
+ Ver [manipulação de eventos em C++ nativo](../cpp/event-handling-in-native-cpp.md) e [manipulação de eventos em COM](../cpp/event-handling-in-com.md) para obter exemplos.  
   
 ## <a name="see-also"></a>Consulte também  
  [Palavras-chave](../cpp/keywords-cpp.md)   
  [Manipulação de eventos](../cpp/event-handling.md)   
- [origem do evento](../windows/event-source.md)   
+ [EVENT_SOURCE](../windows/event-source.md)   
  [event_receiver](../windows/event-receiver.md)   
  [unhook](../cpp/unhook.md)   
  [__raise](../cpp/raise.md)

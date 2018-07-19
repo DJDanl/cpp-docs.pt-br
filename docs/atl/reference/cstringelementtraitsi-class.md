@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1544a2fec1c4567c301eb2c051f7455c8ca393c2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d523c882754a69239ebbbfad1adcb0e91c0c4ca6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362099"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879882"
 ---
 # <a name="cstringelementtraitsi-class"></a>Classe CStringElementTraitsI
-Essa classe fornece funções estáticas relacionadas a cadeias de caracteres armazenadas em objetos de classe de coleção. Ele é semelhante a [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), mas executa comparações em maiusculas e minúsculas.  
+Essa classe fornece funções estáticas relacionadas a cadeias de caracteres armazenadas em objetos de classe de coleção. Ele é semelhante ao [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), mas executa comparações de maiusculas e minúsculas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
+ *T*  
  O tipo de dados a serem armazenados na coleção.  
   
 ## <a name="members"></a>Membros  
@@ -49,19 +49,19 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CStringElementTraitsI::INARGTYPE](#inargtype)|O tipo de dados a ser usado para a adição de elementos para o objeto de classe de coleção.|  
-|[CStringElementTraitsI::OUTARGTYPE](#outargtype)|O tipo de dados a ser usado para recuperar os elementos do objeto de classe de coleção.|  
+|[CStringElementTraitsI::INARGTYPE](#inargtype)|O tipo de dados a ser usado para adicionar elementos ao objeto de classe da coleção.|  
+|[CStringElementTraitsI::OUTARGTYPE](#outargtype)|O tipo de dados a ser usado para recuperar os elementos do objeto de classe da coleção.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CStringElementTraitsI::CompareElements](#compareelements)|Chame essa função estática para comparar dois elementos de cadeia de caracteres de igualdade, ignorando as diferenças em maiusculas.|  
-|[CStringElementTraitsI::CompareElementsOrdered](#compareelementsordered)|Chame essa função estática para comparar dois elementos de cadeia de caracteres, ignorando as diferenças em maiusculas.|  
-|[CStringElementTraitsI::Hash](#hash)|Chame a função estática para calcular um valor de hash para o elemento de cadeia de caracteres especificada.|  
+|[CStringElementTraitsI::CompareElements](#compareelements)|Chame essa função estática para comparar dois elementos de cadeia de caracteres de igualdade, ignorando as diferenças no caso.|  
+|[CStringElementTraitsI::CompareElementsOrdered](#compareelementsordered)|Chame essa função estática para comparar dois elementos de cadeia de caracteres, ignorando as diferenças no caso.|  
+|[CStringElementTraitsI::Hash](#hash)|Chame essa função estática para calcular um valor de hash para o elemento de cadeia de caracteres fornecida.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe fornece funções estáticas para comparar cadeias de caracteres e para criar um valor de hash. Essas funções são úteis ao usar uma classe de coleção para armazenar dados com base em cadeia de caracteres. Use [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) quando os objetos de cadeia de caracteres devem ser com tratadas como referências.  
+ Essa classe fornece funções estáticas para comparar cadeias de caracteres e para a criação de um valor de hash. Essas funções são úteis ao usar uma classe de coleção para armazenar dados com base em cadeia de caracteres. Use [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) quando os objetos de cadeia de caracteres devem ser com manipuladas como referências.  
   
  Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl-collection-classes.md).  
   
@@ -74,69 +74,69 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
  **Cabeçalho:** atlcoll.h  
   
 ##  <a name="compareelements"></a>  CStringElementTraitsI::CompareElements  
- Chame essa função estática para comparar dois elementos de cadeia de caracteres de igualdade, ignorando as diferenças em maiusculas.  
+ Chame essa função estática para comparar dois elementos de cadeia de caracteres de igualdade, ignorando as diferenças no caso.  
   
 ```
 static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `str1`  
+ *str1*  
  O primeiro elemento da cadeia de caracteres.  
   
- `str2`  
+ *str2*  
  O segundo elemento de cadeia de caracteres.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna VERDADEIRO se os elementos forem iguais; caso contrário, false.  
+ Retorna true se os elementos são iguais, caso contrário, false.  
   
 ### <a name="remarks"></a>Comentários  
- Comparações diferenciam maiusculas de minúsculas.  
+ As comparações diferenciam maiusculas de minúsculas.  
   
 ##  <a name="compareelementsordered"></a>  CStringElementTraitsI::CompareElementsOrdered  
- Chame essa função estática para comparar dois elementos de cadeia de caracteres, ignorando as diferenças em maiusculas.  
+ Chame essa função estática para comparar dois elementos de cadeia de caracteres, ignorando as diferenças no caso.  
   
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `str1`  
+ *str1*  
  O primeiro elemento da cadeia de caracteres.  
   
- `str2`  
+ *str2*  
  O segundo elemento de cadeia de caracteres.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Zero se as cadeias de caracteres forem idênticas, < 0 se `str1` é menor que `str2`, ou > 0 se `str1` é maior do que `str2`. O [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) método é usado para realizar as comparações.  
+ Zero se as cadeias de caracteres são idênticas, < 0 se *str1* é menor que *str2*, ou > 0 se *str1* é maior que *str2*. O [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) método é usado para realizar as comparações.  
 
   
 ### <a name="remarks"></a>Comentários  
- Comparações diferenciam maiusculas de minúsculas.  
+ As comparações diferenciam maiusculas de minúsculas.  
   
 ##  <a name="hash"></a>  CStringElementTraitsI::Hash  
- Chame a função estática para calcular um valor de hash para o elemento de cadeia de caracteres especificada.  
+ Chame essa função estática para calcular um valor de hash para o elemento de cadeia de caracteres fornecida.  
   
 ```
 static ULONG Hash(INARGTYPE str) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `str`  
+ *str*  
  O elemento de cadeia de caracteres.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna um valor de hash calculado usando o conteúdo da cadeia de caracteres.  
+ Retorna um valor de hash, calculado usando o conteúdo da cadeia de caracteres.  
   
 ##  <a name="inargtype"></a>  CStringElementTraitsI::INARGTYPE  
- O tipo de dados a ser usado para a adição de elementos para o objeto de classe de coleção.  
+ O tipo de dados a ser usado para adicionar elementos ao objeto de classe da coleção.  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CStringElementTraitsI::OUTARGTYPE  
- O tipo de dados a ser usado para recuperar os elementos do objeto de classe de coleção.  
+ O tipo de dados a ser usado para recuperar os elementos do objeto de classe da coleção.  
   
 ```
 typedef T& OUTARGTYPE;

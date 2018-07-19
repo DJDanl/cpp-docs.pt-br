@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da050dbf2b4052aeadd9fe8380857a0ba15b264f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2c571733aca48ddbfd881a294786d1de334c7c3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360914"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884659"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>Classe CComSimpleThreadAllocator
 Essa classe gerencia a seleção de thread para a classe `CComAutoThreadModule`.  
@@ -49,7 +49,7 @@ class CComSimpleThreadAllocator
  `CComSimpleThreadAllocator` gerencia a seleção de thread para [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread` simplesmente percorre cada thread e retorna o outro na sequência.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase  
+ **Cabeçalho:** atlbase. h  
   
 ##  <a name="getthread"></a>  CComSimpleThreadAllocator::GetThread  
  Seleciona um thread, especificando o próximo segmento na sequência.  
@@ -59,17 +59,17 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pApt`  
- Não usado na implementação do padrão da ATL.  
+ *pApt*  
+ Não é usado na implementação do padrão da ATL.  
   
- `nThreads`  
- O número máximo de threads no módulo EXE.  
+ *nThreads*  
+ O número máximo de threads no módulo do EXE.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um número inteiro entre zero e ( `nThreads` - 1). Identifica um dos segmentos no módulo EXE.  
+ Um inteiro entre zero e (*nThreads* - 1). Identifica um dos threads no módulo do EXE.  
   
 ### <a name="remarks"></a>Comentários  
- Você pode substituir `GetThread` para fornecer um método diferente da seleção ou fazer uso do `pApt` parâmetro.  
+ Você pode substituir `GetThread` para fornecer um método diferente da seleção ou fazer uso do *pApt* parâmetro.  
   
  `GetThread` é chamado pelo [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).  
   

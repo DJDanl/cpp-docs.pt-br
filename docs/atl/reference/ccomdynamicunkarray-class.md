@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c3384c2c8ce03132e6525f175b9d34339b7aa26
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a83ab3aa6506e9ee620d3604149bfd181678a05
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363917"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879803"
 ---
 # <a name="ccomdynamicunkarray-class"></a>Classe CComDynamicUnkArray
-Essa classe armazena uma matriz de **IUnknown** ponteiros.  
+Essa classe armazena uma matriz de `IUnknown` ponteiros.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ class CComDynamicUnkArray
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|Construtor. Inicializa os valores da coleção para **nulo** e o tamanho da coleção como zero.|  
+|[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|Construtor. Inicializa os valores da coleção como NULL e o tamanho da coleção como zero.|  
 |[CComDynamicUnkArray:: ~ CComDynamicUnkArray](#dtor)|O destruidor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
@@ -60,28 +60,28 @@ class CComDynamicUnkArray
 |[CComDynamicUnkArray::Add](#add)|Chame este método para adicionar um `IUnknown` ponteiro para a matriz.|  
 |[CComDynamicUnkArray::begin](#begin)|Retorna um ponteiro para o primeiro `IUnknown` ponteiro na coleção.|  
 |[CComDynamicUnkArray::clear](#clear)|Esvazia a matriz.|  
-|[CComDynamicUnkArray::end](#end)|Retorna um ponteiro para após o último **IUnknown** ponteiro na coleção.|  
+|[CComDynamicUnkArray::end](#end)|Retorna um ponteiro para a posição logo após o último `IUnknown` ponteiro na coleção.|  
 |[CComDynamicUnkArray::GetAt](#getat)|Recupera o elemento no índice especificado.|  
-|[CComDynamicUnkArray::GetCookie](#getcookie)|Chame esse método para obter o cookie associado com um determinado **IUnknown** ponteiro.|  
+|[CComDynamicUnkArray::GetCookie](#getcookie)|Chame esse método para obter o cookie associado com um determinado `IUnknown` ponteiro.|  
 |[CComDynamicUnkArray::GetSize](#getsize)|Retorna o comprimento de uma matriz.|  
-|[CComDynamicUnkArray::GetUnknown](#getunknown)|Chame este método para obter o **IUnknown** ponteiro associado com um cookie determinado.|  
-|[CComDynamicUnkArray::Remove](#remove)|Chame este método para remover um **IUnknown** ponteiro da matriz.|  
+|[CComDynamicUnkArray::GetUnknown](#getunknown)|Chame esse método para obter o `IUnknown` ponteiro associado a um cookie especificado.|  
+|[CComDynamicUnkArray::Remove](#remove)|Chame esse método para remover um `IUnknown` ponteiro da matriz.|  
   
 ## <a name="remarks"></a>Comentários  
- **CComDynamicUnkArray** contém uma matriz alocada dinamicamente de **IUnknown** ponteiros, cada ponto de uma interface em uma conexão. **CComDynamicUnkArray** pode ser usado como um parâmetro para o [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) classe de modelo.  
+ `CComDynamicUnkArray` contém uma matriz alocada dinamicamente do `IUnknown` ponteiros, cada ponto de uma interface em uma conexão. `CComDynamicUnkArray` pode ser usado como um parâmetro para o [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) classe de modelo.  
   
- O **CComDynamicUnkArray** métodos [começar](#begin) e [final](#end) pode ser usado para executar um loop através de todos os pontos de conexão (por exemplo, quando um evento é disparado).  
+ O `CComDynamicUnkArray` métodos [begin](#begin) e [end](#end) pode ser usado para executar loop em todos os pontos de conexão (por exemplo, quando um evento é disparado).  
   
- Consulte [adicionando pontos de Conexão para um objeto](../../atl/adding-connection-points-to-an-object.md) para obter detalhes sobre como automatizar a criação de conexão do ponto de proxies.  
+ Ver [adicionando pontos de Conexão a um objeto](../../atl/adding-connection-points-to-an-object.md) proxies de ponto para obter detalhes sobre como automatizar a criação de conexão.  
   
 > [!NOTE]
-> **Observação** a classe **CComDynamicUnkArray** é usado pelo **Adicionar classe** assistente ao criar um controle que tem pontos de Conexão. Se você quiser especificar o número de pontos de Conexão manualmente, altere a referência de **CComDynamicUnkArray** para `CComUnkArray<` *n* `>`, onde *n*é o número de pontos de conexão necessários.  
+> **Observação** a classe `CComDynamicUnkArray` é usado pelas **Adicionar classe** assistente ao criar um controle que tem pontos de Conexão. Se você quiser especificar o número de pontos de Conexão manualmente, altere a referência de `CComDynamicUnkArray` à `CComUnkArray<` *n* `>`, onde *n* é o número de pontos de conexão Necessário.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlcom.h  
+ **Cabeçalho:** atlcom  
   
 ##  <a name="add"></a>  CComDynamicUnkArray::Add  
- Chame este método para adicionar um **IUnknown** ponteiro para a matriz.  
+ Chame este método para adicionar um `IUnknown` ponteiro para a matriz.  
   
 ```
 DWORD Add(IUnknown* pUnk);
@@ -89,13 +89,13 @@ DWORD Add(IUnknown* pUnk);
   
 ### <a name="parameters"></a>Parâmetros  
  *pUnk*  
- O **IUnknown** ponteiro para adicionar à matriz.  
+ O `IUnknown` ponteiro para adicionar à matriz.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna o cookie associado com o ponteiro recém-adicionada.  
+ Retorna o cookie associado com o ponteiro recém-adicionado.  
   
 ##  <a name="begin"></a>  CComDynamicUnkArray::begin  
- Retorna um ponteiro para o início da coleção de **IUnknown** ponteiros de interface.  
+ Retorna um ponteiro para o início da coleção de `IUnknown` ponteiros de interface.  
   
 ```
 IUnknown**
@@ -103,12 +103,12 @@ IUnknown**
 ```     
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para um **IUnknown** ponteiro de interface.  
+ Um ponteiro para um `IUnknown` ponteiro de interface.  
   
 ### <a name="remarks"></a>Comentários  
- A coleção contém ponteiros para interfaces armazenados localmente como **IUnknown**. Converter cada **IUnknown** interface para o tipo de interface real e, em seguida, chamar por meio dele. Você não precisa consultar a interface primeiro.  
+ A coleção contém ponteiros para interfaces armazenados localmente como `IUnknown`. Você converter cada `IUnknown` de interface para o tipo de interface real e, em seguida, chamar por meio dele. Você não precisa consultar a interface pela primeira vez.  
   
- Antes de usar o **IUnknown** interface, você deve verificar que não é **nulo**.  
+ Antes de usar o `IUnknown` interface, você deve verificar se ele não é nulo.  
   
 ##  <a name="clear"></a>  CComDynamicUnkArray::clear  
  Esvazia a matriz.  
@@ -125,7 +125,7 @@ CComDynamicUnkArray();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Define o tamanho da coleção como zero e inicializa os valores a serem **nulo**. O destruidor libera a coleção, se necessário.  
+ Define o tamanho da coleção como zero e inicializa os valores como NULL. O destruidor libera a coleção, se necessário.  
   
 ##  <a name="dtor"></a>  CComDynamicUnkArray:: ~ CComDynamicUnkArray  
  O destruidor.  
@@ -138,7 +138,7 @@ CComDynamicUnkArray();
  Libera os recursos alocados pelo construtor de classe.  
   
 ##  <a name="end"></a>  CComDynamicUnkArray::end  
- Retorna um ponteiro para após o último **IUnknown** ponteiro na coleção.  
+ Retorna um ponteiro para a posição logo após o último `IUnknown` ponteiro na coleção.  
   
 ```
 IUnknown**
@@ -146,7 +146,7 @@ IUnknown**
 ```     
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para um **IUnknown** ponteiro de interface.  
+ Um ponteiro para um `IUnknown` ponteiro de interface.  
   
 ##  <a name="getat"></a>  CComDynamicUnkArray::GetAt  
  Recupera o elemento no índice especificado.  
@@ -156,28 +156,28 @@ IUnknown* GetAt(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nIndex`  
+ *nIndex*  
  O índice do elemento a ser recuperado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para um [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interface.  
   
 ##  <a name="getcookie"></a>  CComDynamicUnkArray::GetCookie  
- Chame esse método para obter o cookie associado com um determinado **IUnknown** ponteiro.  
+ Chame esse método para obter o cookie associado com um determinado `IUnknown` ponteiro.  
   
 ```
 DWORD WINAPI GetCookie(IUnknown** ppFind);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `ppFind`  
- O **IUnknown** ponteiro para o qual o cookie associado é necessário.  
+ *ppFind*  
+ O `IUnknown` ponteiro para o qual o cookie associado é necessário.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna o cookie associado a **IUnknown** ponteiro ou zero se nenhuma correspondência **IUnknown** ponteiro foi encontrado.  
+ Retorna o cookie associado a `IUnknown` ponteiro ou zero se nenhuma correspondência `IUnknown` ponteiro for encontrado.  
   
 ### <a name="remarks"></a>Comentários  
- Se houver mais de uma instância do mesmo **IUnknown** ponteiro, essa função retorna o cookie para o primeiro.  
+ Se houver mais de uma instância do mesmo `IUnknown` ponteiro, essa função retorna o cookie para o primeiro.  
   
 ##  <a name="getsize"></a>  CComDynamicUnkArray::GetSize  
  Retorna o comprimento de uma matriz.  
@@ -190,29 +190,29 @@ int GetSize() const;
  O comprimento da matriz.  
   
 ##  <a name="getunknown"></a>  CComDynamicUnkArray::GetUnknown  
- Chame este método para obter o **IUnknown** ponteiro associado com um cookie determinado.  
+ Chame esse método para obter o `IUnknown` ponteiro associado a um cookie especificado.  
   
 ```
 IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwCookie`  
- O cookie para o qual associado **IUnknown** ponteiro é necessário.  
+ *dwCookie*  
+ O cookie para o qual associado `IUnknown` ponteiro é necessário.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna o **IUnknown** ponteiro, ou nulo se nenhum cookie correspondente for encontrado.  
+ Retorna o `IUnknown` ponteiro, ou nulo se nenhum cookie correspondente for encontrado.  
   
 ##  <a name="remove"></a>  CComDynamicUnkArray::Remove  
- Chame este método para remover um **IUnknown** ponteiro da matriz.  
+ Chame esse método para remover um `IUnknown` ponteiro da matriz.  
   
 ```
 BOOL Remove(DWORD dwCookie);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwCookie`  
- O cookie referenciando o **IUnknown** ponteiro a ser removido da matriz.  
+ *dwCookie*  
+ O cookie referenciando o `IUnknown` ponteiro a ser removido da matriz.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retornará TRUE se o ponteiro for removido; Caso contrário, FALSE.  

@@ -1,5 +1,5 @@
 ---
-title: Assume o padrão e excluir funções explicitamente | Microsoft Docs
+title: Explicitamente funções padronizadas e excluídas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8558a2fac4995d89d0745917e6e1be5ad99d56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be96658d5e2920f480747e484f60bed5c16f09c1
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942240"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Funções explicitamente usadas como padrão e excluídas
 No C++11, as funções usadas como padrão e excluídas proporcionam controle explícito sobre se as funções de membro especial serão geradas automaticamente. As funções excluídas também oferecem uma linguagem simples para impedir que promoções de tipos problemáticos ocorram em argumentos para funções de todos os tipos — funções de membro especial, funções de membro normal e funções de não membro — que, de outra forma, causariam uma chamada de função indesejada.  
   
 ## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>Benefícios das funções explicitamente usadas como padrão e excluídas  
- No C++, o compilador gera automaticamente o construtor padrão, o construtor de cópia, o operador de atribuição de cópia e o destruidor para um tipo se ele não declarar os próprios. Essas funções são conhecidas como o *funções de membro especiais*, e eles são o que fazer tipos simples definidos pelo usuário em C++ se comportam de forma que estruturas em C. Ou seja, você pode criar, copiar e destruí-las sem qualquer esforço adicional de codificação. O C++11 traz a semântica de movimentação para a linguagem e adiciona o construtor de movimentação e o operador de atribuição de movimentação à lista de funções de membro especial que o compilador pode gerar automaticamente.  
+ No C++, o compilador gera automaticamente o construtor padrão, o construtor de cópia, o operador de atribuição de cópia e o destruidor para um tipo se ele não declarar os próprios. Essas funções são conhecidas como o *funções de membro especial*, e eles fazem com que tipos simples definidos pelo usuário no C++ se comportam como as estruturas em C. Ou seja, você pode criar, copiar e destruí-las sem qualquer esforço de codificação adicional. O C++11 traz a semântica de movimentação para a linguagem e adiciona o construtor de movimentação e o operador de atribuição de movimentação à lista de funções de membro especial que o compilador pode gerar automaticamente.  
   
  Isso é conveniente para tipos simples, mas os tipos complexos geralmente definem, por conta própria, uma ou mais das funções de membro especial, e isso pode impedir que outras funções de membro especial sejam geradas automaticamente. Na prática:  
   
@@ -50,11 +51,11 @@ No C++11, as funções usadas como padrão e excluídas proporcionam controle ex
 >   
 >  Nos dois casos, o Visual Studio continua a gerar as funções necessárias de forma automática e implícita, e não emite um aviso.  
   
- As consequências dessas regras também podem vazar para as hierarquias de objetos. Por exemplo, se por algum motivo uma classe base não tiver um construtor padrão que possa ser chamado de uma classe derivada - ou seja, um construtor `public` ou `protected` que não use parâmetros -, uma classe derivada dela não poderá automaticamente gerar seu próprio construtor padrão.  
+ As consequências dessas regras também podem vazar para as hierarquias de objetos. Por exemplo, se por algum motivo uma classe base não tiver um construtor padrão que pode ser chamado de uma classe derivada — ou seja, uma **pública** ou **protegido** construtor sem parâmetros —, em seguida, uma classe deriva de que ele não é possível gerar automaticamente seu próprio construtor padrão.  
   
  Essas regras podem complicar a implementação do que deveria ser tipos simples definidos pelo usuário e expressões comuns de C++; por exemplo, podem tornar um tipo definido pelo usuário não copiável declarando o construtor de cópia e o operador de atribuição de cópia de forma privada, sem defini-los.  
   
-```  
+```cpp 
 struct noncopyable  
 {  
   noncopyable() {};  
@@ -77,7 +78,7 @@ private:
   
  No C++11, a expressão não copiável pode ser implementada de maneira mais simples.  
   
-```  
+```cpp 
 struct noncopyable  
 {  
   noncopyable() =default;  
@@ -103,7 +104,7 @@ struct noncopyable
   
  Para usar uma função de membro especial como padrão, você a declara, como neste exemplo:  
   
-```  
+```cpp 
 struct widget  
 {  
   widget()=default;  
@@ -121,7 +122,7 @@ inline widget& widget::operator=(const widget&) =default;
 ## <a name="deleted-functions"></a>Funções excluídas  
  Você pode excluir funções de membro especial, assim como funções de membro normal e funções de não membro, para impedir que elas sejam definidas ou chamadas. A exclusão de funções de membro especial oferece uma forma mais limpa de impedir que o compilador gere funções de membro especial indesejadas. A função deve ser excluída ao ser declarada; não pode ser excluída posteriormente, da maneira como uma função pode ser declarada e depois usada como padrão mais tarde.  
   
-```  
+```cpp 
 struct widget  
 {  
   // deleted operator new prevents widget from being dynamically allocated.  
@@ -131,15 +132,15 @@ struct widget
   
  A exclusão de uma função de membro normal ou de funções de não membro impede que promoções de tipos problemáticos façam com que uma função não intencional seja chamada. Isso funciona porque as funções excluídas ainda participam da resolução de sobrecarga e fornecem uma correspondência melhor do que a função que poderia ser chamada após a promoção dos tipos. A chamada de função é resolvida para a função mais específica, mas excluída, e causa um erro do compilador.  
   
-```  
+```cpp 
 // deleted overload prevents call through type promotion of float to double from succeeding.  
 void call_with_true_double_only(float) =delete;  
 void call_with_true_double_only(double param) { return; }  
 ```  
   
- No exemplo acima, observe que chamar `call_with_true_double_only` usando um argumento `float` provocaria um erro do compilador, mas isso não aconteceria ao chamar `call_with_true_double_only` usando um argumento `int`; no caso do `int`, o argumento será promovido de `int` para `double` e chamará com êxito a versão `double` da função, mesmo que isso não seja o que se pretendia. Para garantir que qualquer chamada para essa função usando um argumento que não seja double provoque um erro do compilador, você pode declarar uma versão template da função que é excluída.  
+ Observe no exemplo anterior que chamar `call_with_true_double_only` usando um **float** argumento causaria um erro do compilador, mas a chamada `call_with_true_double_only` usando um **int** argumento não seria; o **int** caso, o argumento será promovido de **int** para **double** e chamar com êxito o **double** versão da função, Embora que pode não ser o que está planejado. Para garantir que qualquer chamada para essa função usando um argumento que não seja double provoque um erro do compilador, você pode declarar uma versão template da função que é excluída.  
   
-```  
+```cpp 
 template < typename T >  
 void call_with_true_double_only(T) =delete; //prevent call through type promotion of any T to double from succeeding.  
   

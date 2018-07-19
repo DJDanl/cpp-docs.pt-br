@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d43620ceeb0404c3ad8b10cee3d0a00e7b2f467
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420175"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940648"
 ---
 # <a name="override-specifier"></a>substituir especificador
-Você pode usar a palavra-chave `override` para designar as funções membro que substituem uma função virtual em uma classe base.  
+Você pode usar o **substituir** palavra-chave para designar as funções que substituem uma função virtual em uma classe base membro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,10 +32,10 @@ function-declaration override;
 ```  
   
 ## <a name="remarks"></a>Comentários  
- `override` é contextual e tem um significado especial somente quando usada após uma declaração de função membro. Caso contrário, não é uma palavra-chave reservada.  
+ **substituir** é contextual e tem um significado somente quando especial é usada após uma declaração de função de membro; caso contrário, ele não é uma palavra-chave reservada.  
   
 ## <a name="example"></a>Exemplo  
- Use `override` para ajudar a impedir comportamentos de herança inadequados em seu código. O exemplo a seguir mostra onde, sem usar `override`, o comportamento da função membro da classe derivada pode não ser o esperado. O compilador não emite erros para esse código.  
+ Use **substituir** para ajudar a evitar o comportamento de herança inadequados em seu código. O exemplo a seguir mostra onde, sem usar **substituir**, o comportamento da função de membro da classe derivada pode não ser o esperado. O compilador não emite erros para esse código.  
   
 ```cpp  
 class BaseClass  
@@ -61,7 +61,7 @@ class DerivedClass: public BaseClass
   
 ```  
   
- Quando você usa `override`, o compilador gera erros em vez de criar silenciosamente novas funções membro.  
+ Quando você usa **substituir**, o compilador gera erros em vez de criar silenciosamente novo membro de funções.  
   
 ```cpp  
 class BaseClass  

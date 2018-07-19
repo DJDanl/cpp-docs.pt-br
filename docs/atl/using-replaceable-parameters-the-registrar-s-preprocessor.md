@@ -17,42 +17,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91deabfd14d89c4a26384a14445fc51edbb3ac94
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd07a96feae192bd2235b5621da6fe42666280bd
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362278"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849491"
 ---
-# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Usando parâmetros substituíveis (o registrador&#39;s pré-processador)
-Parâmetros substituíveis permitem que o cliente do registrador especificar dados de tempo de execução. Para fazer isso, o registrador mantém um mapa de substituição em que ele insere os valores associados com os parâmetros substituíveis em seu script. O registrador torna essas entradas de tempo de execução.  
+# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Usando parâmetros substituíveis (registrador de&#39;s pré-processador)
+Parâmetros substituíveis permitem que o cliente de um registrador especificar dados de tempo de execução. Para fazer isso, o registrador mantém um mapa de substituição no qual ele insere os valores associados com os parâmetros substituíveis em seu script. O registrador torna essas entradas em tempo de execução.  
   
 ##  <a name="_atl_using_.25.module.25"></a> Usando o módulo %  
- O [Assistente de controle ATL](../atl/reference/atl-control-wizard.md) gera automaticamente um script que usa `%MODULE%`. ATL usa esse parâmetro substituível para o local real do seu servidor DLL ou EXE.  
+ O [Assistente de controle ATL](../atl/reference/atl-control-wizard.md) automaticamente gera um script que usa `%MODULE%`. ATL usa esse parâmetro substituível para o local real do seu servidor DLL ou EXE.  
   
-## <a name="concatenating-run-time-data-with-script-data"></a>Concatenando os dados de tempo de execução com dados de Script  
- Outro uso do pré-processador é concatenar dados de tempo de execução com dados de script. Por exemplo, suponha que uma entrada é necessário que contém um caminho completo para um módulo com a cadeia de caracteres "`, 1`" anexadas no final. Primeiro, defina a expansão do seguinte:  
+## <a name="concatenating-run-time-data-with-script-data"></a>Concatenando os dados de tempo de execução com os dados de Script  
+ Outro uso do pré-processador é concatenar dados de tempo de execução com os dados de script. Por exemplo, suponha que uma entrada é necessário que contém um caminho completo para um módulo com a cadeia de caracteres "`, 1`" acrescentado ao final. Primeiro, defina a expansão do seguinte:  
   
 ```  
 'MySampleKey' = s '%MODULE%, 1'  
 ```  
   
- Em seguida, antes de chamar um script de processamento métodos listados na [invocar Scripts](../atl/invoking-scripts.md), adicione uma substituição para o mapa:  
+ Em seguida, antes de chamar um dos scripts processamento métodos listados na [invocar Scripts](../atl/invoking-scripts.md), adicione uma substituição para o mapa:  
   
  [!code-cpp[NVC_ATL_Utilities#113](../atl/codesnippet/cpp/using-replaceable-parameters-the-registrar-s-preprocessor_1.cpp)]  
   
- Durante a análise do script, expande o registrador `'%MODULE%, 1'` para `c:\mycode\mydll.dll, 1`.  
+ Durante a análise do script, o registrador expande `'%MODULE%, 1'` para `c:\mycode\mydll.dll, 1`.  
   
 > [!NOTE]
->  Em um script de registrador, 4K é o tamanho máximo do token. (Um token é qualquer elemento reconhecível na sintaxe.) Isso inclui os tokens que foram criados ou expandidos do pré-processador.  
+>  Em um script de registrador, 4K é o tamanho máximo do token. (Um token é qualquer elemento reconhecível na sintaxe). Isso inclui os tokens que foram criados ou expandidos pelo pré-processador.  
   
 > [!NOTE]
->  Para substituir valores de substituição em tempo de execução, remova a chamada no script para o [DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource) ou [DECLARE_REGISTRY_RESOURCEID](../atl/reference/registry-macros.md#declare_registry_resourceid) macro. Em vez disso, substituí-lo com seus próprios `UpdateRegistry` método chama [CAtlModule::UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced) ou [CAtlModule::UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources)e passar a matriz de **_ATL_REGMAP_ENTRY** estruturas. A matriz de **_ATL_REGMAP_ENTRY** deve ter pelo menos uma entrada que é definida como {**nulo**,**nulo**}, e essa entrada deve ser sempre a última entrada. Caso contrário, um erro de violação de acesso será gerado quando **UpdateRegistryFromResource** é chamado.  
+>  Para substituir valores de substituição em tempo de execução, remova a chamada no script para o [DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource) ou [DECLARE_REGISTRY_RESOURCEID](../atl/reference/registry-macros.md#declare_registry_resourceid) macro. Em vez disso, substitua-o com seus próprios `UpdateRegistry` método que chama [CAtlModule::UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced) ou [CAtlModule::UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources)e passar a matriz de _ATL_REGMAP_ Estruturas de entrada. Sua matriz de _ATL_REGMAP_ENTRY deve ter pelo menos uma entrada é definida como {NULL, NULL}, e essa entrada deve ser sempre a última entrada. Caso contrário, um erro de violação de acesso será gerado quando `UpdateRegistryFromResource` é chamado.  
   
 > [!NOTE]
->  Ao criar um projeto que gera um executável, ATL adiciona automaticamente criada em tempo de execução com o nome do caminho entre aspas o **módulo %** parâmetro do script de registrador. Se você não quiser que o nome do caminho para incluir as aspas, use o novo **MODULE_RAW %** parâmetro em vez disso.  
+>  Ao criar um projeto que produz um executável, ATL adiciona automaticamente aspas ao redor do nome de caminho criado no tempo de execução com o **módulo %** parâmetro do script de registrador. Se você não quiser que o nome do caminho para incluir as aspas, use a nova **MODULE_RAW %** parâmetro em vez disso.  
 >   
->  Ao criar um projeto que gera uma DLL, ATL não adicionará aspas para o nome do caminho se **módulo %** ou **MODULE_RAW %** é usado.  
+>  Ao compilar um projeto que gera uma DLL, ATL não adicionará aspas para o nome do caminho se **% % do módulo** ou **MODULE_RAW %** é usado.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando scripts do Registrador](../atl/creating-registrar-scripts.md)

@@ -1,5 +1,5 @@
 ---
-title: Auto (C++) | Microsoft Docs
+title: automático (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14ad8e7cb81df62156d35809853e1060107d7c90
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e33faac0bf222a94b21878eb287e696ae8c7de47
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418218"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939852"
 ---
-# <a name="auto-c"></a>Auto (C++)
+# <a name="auto-c"></a>automático (C++)
 Deduz o tipo de uma variável declarada da expressão de inicialização.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,40 +38,40 @@ auto declarator initializer;
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O `auto` palavra-chave direciona o compilador para usar a expressão de inicialização de uma variável declarada ou parâmetro de expressão lambda, para deduzir o tipo.  
+ O **automática** palavra-chave instrui o compilador a usar a expressão de inicialização de uma variável declarada, ou o parâmetro de expressão lambda, para deduzir o tipo.  
   
- Recomendamos que você use a palavra-chave `auto` para a maioria das situações, a menos que você realmente deseje uma conversão, pois ela fornece estes benefícios:  
+ É recomendável que você use o **automática** palavra-chave para a maioria das situações — a menos que você realmente deseje uma conversão — porque ele oferece estes benefícios:  
   
--   **Robustez:** se do tipo da expressão for alterado — isso inclui quando um tipo de retorno da função é alterado — simplesmente funciona.  
+-   **Robustez:** se o tipo da expressão for alterado — isso inclui quando um tipo de retorno da função é alterado — ele apenas funciona.  
   
 -   **Desempenho:** tem a garantia de que não haja nenhuma conversão.  
   
--   **Uso:** você não precisa se preocupar com dificuldades de ortografia do nome de tipo e erros de digitação.  
+-   **Facilidade de uso:** você não precisa se preocupar com dificuldades de ortografia do nome de tipo e erros de digitação.  
   
 -   **Eficiência:** a codificação pode ser mais eficiente.  
   
- Casos de conversão nos quais você pode não querer usar `auto`:  
+ Casos de conversão em que você não poderá usar **automática**:  
   
 -   Quando você desejar um tipo específico e nada mais serve.  
   
 -   Tipos de auxiliar de modelo de expressão — por exemplo, `(valarray+valarray)`.  
   
- Para usar a palavra-chave `auto`, use-a em vez de um tipo para declarar uma variável e especifique uma expressão de inicialização. Além disso, você pode alterar a palavra-chave `auto` usando especificadores e declaradores como `const`, `volatile`, ponteiro (`*`), referência (`&`) e a referência de rvalue `(&&`). O compilador avalia a expressão e de inicialização e usa essas informações para deduzir o tipo da variável.  
+ Para usar o **automática** palavra-chave, usá-lo em vez de um tipo para declarar uma variável e especifique uma expressão de inicialização. Além disso, você pode modificar os **automática** palavra-chave usando especificadores e declaradores como **const**, **volátil**, ponteiro (`*`), referência (`&`) e referência de rvalue (`&&`). O compilador avalia a expressão e de inicialização e usa essas informações para deduzir o tipo da variável.  
   
- A expressão de inicialização pode ser uma atribuição (sintaxe do sinal de igual), uma inicialização direta (sintaxe de função estilo), um [operador novo](new-operator-cpp.md) expressão ou a expressão de inicialização pode ser o  *declaração de intervalo* parâmetro em uma [com base em intervalo de instrução (C++)](../cpp/range-based-for-statement-cpp.md) instrução. Para obter mais informações, consulte [inicializadores](../cpp/initializers.md) e os exemplos de código neste documento.  
+ A expressão de inicialização pode ser uma atribuição (sintaxe de sinal de igual), uma inicialização direta (sintaxe de estilo de função), uma [operador new](new-operator-cpp.md) expressão ou a expressão de inicialização pode ser o  *para range-declaration* parâmetro em uma [de instrução (C++) baseado em intervalo](../cpp/range-based-for-statement-cpp.md) instrução. Para obter mais informações, consulte [inicializadores](../cpp/initializers.md) e exemplos de código neste documento.  
   
- A palavra-chave `auto` é um espaço reservado para um tipo, mas não é um tipo ela mesma. Portanto, o `auto` palavra-chave não pode ser usado em conversões ou operadores como [sizeof](../cpp/sizeof-operator.md) e [typeid](../windows/typeid-cpp-component-extensions.md).  
+ O **automática** palavra-chave é um espaço reservado para um tipo, mas ele não é um tipo. Portanto, o **automática** palavra-chave não pode ser usado nas conversões ou operadores, como [sizeof](../cpp/sizeof-operator.md) e [typeid](../windows/typeid-cpp-component-extensions.md).  
   
 ## <a name="usefulness"></a>Utilidade  
- A palavra-chave `auto` é uma maneira simples de declarar uma variável que tenha um tipo complicado. Por exemplo, você pode usar `auto` para declarar uma variável onde a expressão de inicialização envolve modelos, ponteiros para as funções ou ponteiros para os membros.  
+ O **automática** palavra-chave é uma maneira simples de declarar uma variável que tenha um tipo complicado. Por exemplo, você pode usar **automática** para declarar uma variável em que a expressão de inicialização envolve modelos, ponteiros para funções ou ponteiros para membros.  
   
- Você também pode usar `auto` para declarar e inicializar uma variável em uma expressão lambda. Você não pode declarar o tipo da variável você mesmo pois o tipo de uma expressão lambda é conhecido apenas pelo compilador. Para obter mais informações, consulte [exemplos de expressões Lambda](../cpp/examples-of-lambda-expressions.md).  
+ Você também pode usar **automática** declarar e inicializar uma variável para uma expressão lambda. Você não pode declarar o tipo da variável você mesmo pois o tipo de uma expressão lambda é conhecido apenas pelo compilador. Para obter mais informações, consulte [exemplos de expressões Lambda](../cpp/examples-of-lambda-expressions.md).  
   
 ## <a name="trailing-return-types"></a>Rastreamento de tipos de retorno  
- Você pode usar `auto` junto ao especificador de tipo `decltype` para ajudar a escrever bibliotecas do modelo. Use `auto` e `decltype` para declarar uma função de modelo cujo tipo de retorno dependa dos tipos dos argumentos de modelo. Ou, pode usar `auto` e `decltype` para declarar uma função do modelo que envolve uma chamada para outra função e então retorna o que for o tipo de retorno dessa outra função. Para obter mais informações, consulte [decltype](../cpp/decltype-cpp.md).  
+ Você pode usar **automática**, juntamente com o **decltype** especificador, para ajudar a escrever bibliotecas do modelo de tipo. Use **automática** e **decltype** para declarar uma função de modelo cujo retorno tipo depende dos tipos de seus argumentos de modelo. Ou, use **automática** e **decltype** para declarar uma função de modelo que encapsula uma chamada para outra função e, em seguida, retorna a tudo o que é o tipo de retorno dessa outra função. Para obter mais informações, consulte [decltype](../cpp/decltype-cpp.md).  
   
 ## <a name="references-and-cv-qualifiers"></a>Referências e qualificadores CV  
- Observe que o uso de `auto` solta referências, qualificadores de constante e qualificadores voláteis. Considere o exemplo a seguir:  
+ Observe que o uso **automática** remove referências, qualificadores de constante e qualificadores voláteis. Considere o exemplo a seguir:  
   
 ```cpp  
 // cl.exe /analyze /EHsc /W4  
@@ -94,10 +94,10 @@ int main( )
   
 ```  
   
- No exemplo anterior, myAuto é um inteiro, não é uma referência de int, portanto, a saída é `11 11`, não `11 12` como seria o caso se o qualificador de referência não tinha sido descartado pelo `auto`.  
+ No exemplo anterior, myAuto é um int, não uma referência int, portanto, a saída é `11 11`, e não `11 12` como seria o caso se o qualificador de referência não tivesse sido solta **automática**.  
   
-## <a name="type-deduction-with-braced-initializers-c14"></a>Dedução de tipo com inicializadores entre chaves (C + + 14)  
- O exmample de código a seguir mostra como inicializar uma variável automática usando chaves. Observe a diferença entre B e C e entre A e E.  
+## <a name="type-deduction-with-braced-initializers-c14"></a>Dedução de tipo com inicializadores entre chaves (c++14)  
+ O exmample de código a seguir mostra como inicializar uma variável automática usando chaves. Observe a diferença entre B e C e entre um e E.  
   
 ```cpp  
 #include <initializer_list>  
@@ -125,38 +125,38 @@ int main()
 ```  
   
 ## <a name="restrictions-and-error-messages"></a>Limitações e mensagens de erro  
- A tabela a seguir lista as limitações no uso da palavra-chave `auto` e a mensagem de erro de diagnóstico correspondente, emitida pelo compilador.  
+ A tabela a seguir lista as restrições no uso do **automática** palavra-chave e a mensagem de erro de diagnóstico correspondente que o compilador emite.  
   
 |Número do erro|Descrição|  
 |------------------|-----------------|  
-|[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|A palavra-chave `auto` não pode ser combinada com qualquer outro especificador de tipo.|  
-|[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|Um símbolo que é declarado com a palavra-chave `auto` deve ter um inicializador.|  
-|[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|Você usou incorretamente a palavra-chave `auto` para declarar um tipo. Por exemplo, você declarou um tipo de retorno do método ou matriz.|  
-|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md), [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|Um argumento de modelo ou parâmetro não pode ser declarado com a palavra-chave `auto`.|  
-|[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|Um parâmetro de modelo ou método não pode ser declarado com a palavra-chave `auto`.|  
+|[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|O **automática** palavra-chave não pode ser combinado com qualquer outro especificador de tipo.|  
+|[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|Um símbolo que é declarado com o **automática** palavra-chave deve ter um inicializador.|  
+|[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|Você usou incorretamente a **automática** palavra-chave para declarar um tipo. Por exemplo, você declarou um tipo de retorno do método ou matriz.|  
+|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md), [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|Um argumento de modelo ou parâmetro não pode ser declarado com o **automática** palavra-chave.|  
+|[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|Um parâmetro de modelo ou método não pode ser declarado com o **automática** palavra-chave.|  
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|Um símbolo não pode ser usado antes de ser inicializado. Na prática, isso significa que uma variável não pode ser usada para se inicializar.|  
-|[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|Você não converter para um tipo que é declarado com a palavra-chave `auto`.|  
-|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Todos os símbolos em uma lista de declaradores que são declarados com a palavra-chave `auto` devem ser resolvidos para o mesmo tipo. Para obter mais informações, consulte [declarações e definições](declarations-and-definitions-cpp.md).|  
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|O [sizeof](../cpp/sizeof-operator.md) e [typeid](../windows/typeid-cpp-component-extensions.md) operadores não podem ser aplicados a um símbolo que é declarado com o `auto` palavra-chave.|  
+|[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|Você não pode ser convertido em um tipo que é declarado com o **automática** palavra-chave.|  
+|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Todos os símbolos em uma lista de declaradores que é declarado com o **automática** palavra-chave deve ser resolvido para o mesmo tipo. Para obter mais informações, consulte [declarações e definições](declarations-and-definitions-cpp.md).|  
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|O [sizeof](../cpp/sizeof-operator.md) e [typeid](../windows/typeid-cpp-component-extensions.md) operadores não podem ser aplicados a um símbolo que é declarado com o **automático** palavra-chave.|  
   
 ## <a name="examples"></a>Exemplos  
- Estes fragmentos de código ilustram alguns modos de uso da palavra-chave `auto`.  
+ Esses fragmentos de código ilustram algumas das maneiras em que o **automática** palavra-chave pode ser usado.  
   
- As declarações a seguir são equivalentes. Na primeira instrução, a variável `j` é declarada como tipo `int`. Na segunda instrução, a variável `k` é deduzida como sendo do tipo `int` pois a expressão de inicialização (0) é um inteiro.  
+ As declarações a seguir são equivalentes. Na primeira instrução, variável `j` é declarado como tipo **int**. Na segunda instrução, variável `k` é deduzida como sendo do tipo **int** porque a expressão de inicialização (0) é um número inteiro.  
   
 ```cpp  
 int j = 0;  // Variable j is explicitly type int.  
 auto k = 0; // Variable k is implicitly type int because 0 is an integer.  
 ```  
   
- As seguintes declarações são equivalentes, mas a segunda declaração é mais simples do que a primeira. Um dos motivos mais convincentes para o uso da palavra-chave `auto` é a simplicidade.  
+ As seguintes declarações são equivalentes, mas a segunda declaração é mais simples do que a primeira. Um dos motivos mais convincentes para usar o **automática** palavra-chave é a simplicidade.  
   
 ```cpp  
 map<int,list<string>>::iterator i = m.begin();   
 auto i = m.begin();   
 ```  
   
- O fragmento de código a seguir declara o tipo de variável `iter` e `elem` quando os loops de `for` e de `for` do intervalo são iniciados.  
+ O fragmento de código a seguir declara o tipo de variáveis `iter` e `elem` quando o **para** e o intervalo **para** faz um loop iniciar.  
   
 ```cpp  
 // cl /EHsc /nologo /W4  
@@ -184,7 +184,7 @@ int main()
 }  
 ```  
   
- O fragmento de código a seguir usa a declaração do operador `new` e um ponteiro para declarar ponteiros.  
+ O fragmento de código a seguir usa o **novo** declaração do operador e o ponteiro para declarar ponteiros.  
   
 ```cpp  
 double x = 12.34;  
@@ -207,7 +207,7 @@ int v1 = 100, v2 = 200;
 auto x = v1 > v2 ? v1 : v2;  
 ```  
   
- O fragmento de código a seguir inicializa a variável `x` para o tipo `int`, variáveis, `y` para uma referência ao tipo `const int`e a variável `fp` para um ponteiro para uma função que retorna tipo `int`.  
+ O fragmento de código a seguir inicializa a variável `x` para o tipo **int**, a variável `y` para uma referência ao tipo **const int**e a variável `fp` em um ponteiro para uma função que retorna o tipo **int**.  
   
 ```cpp  
 int f(int x) { return x; }  
@@ -228,7 +228,7 @@ int main()
  [/ZC: auto (deduzir tipo variável)](../build/reference/zc-auto-deduce-variable-type.md)   
  [Operador sizeof](../cpp/sizeof-operator.md)   
  [TypeId](../windows/typeid-cpp-component-extensions.md)   
- [operador novo](new-operator-cpp.md)   
+ [operador new](new-operator-cpp.md)   
  [Declarações e definições](declarations-and-definitions-cpp.md)   
  [Exemplos de expressões Lambda](../cpp/examples-of-lambda-expressions.md)   
  [Inicializadores](../cpp/initializers.md)   

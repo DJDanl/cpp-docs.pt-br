@@ -15,16 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e4200548100804d1e64c16311875e85ffcdd717
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49149a055f60cb24c6f676b91a2d9ddd55132a3a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942341"
 ---
 # <a name="anonymous-class-types"></a>Tipos de classe anônima
-As classes podem ser anônimas — ou seja, eles podem ser declarados sem um *identificador*. Isso é útil quando você substitui um nome de classe por um nome de `typedef`, como a seguir:  
+As classes podem ser anônimas — ou seja, eles podem ser declarados sem um *identificador*. Isso é útil quando você substituir um nome de classe com um **typedef** nome, da seguinte maneira:  
   
-```  
+```cpp 
 typedef struct  
 {  
     unsigned x;  
@@ -33,11 +34,11 @@ typedef struct
 ```  
   
 > [!NOTE]
->  O uso de classes anônimas mostradas no exemplo anterior é útil para preservar a compatibilidade com o código C existente. Em alguns códigos C, o uso de `typedef` em conjunto com estruturas anônimas será prevalente.  
+>  O uso de classes anônimas mostradas no exemplo anterior é útil para preservar a compatibilidade com o código C existente. Em alguns códigos C, o uso de **typedef** em conjunto com estruturas anônimas é predominante.  
   
  As classes anônimas também são úteis quando você quer que uma referência a um membro da classe apareça como se não estivesse contida em uma classe separada, como a seguir:  
   
-```  
+```cpp 
 struct PTValue  
 {  
     POINT ptLoc;  
@@ -53,11 +54,11 @@ PTValue ptv;
   
  No código anterior, `iValue` podem ser acessados usando o operador de seleção de membro de objeto (**.**) da seguinte maneira:  
   
-```  
+```cpp 
 int i = ptv.iValue;  
 ```  
   
- As classes anônimas estão sujeitas a determinadas restrições. (Para obter mais informações sobre uniões anônimas, consulte [uniões](../cpp/unions.md).) Classes anônimas:  
+ As classes anônimas estão sujeitas a determinadas restrições. (Para obter mais informações sobre unions anônimas, consulte [uniões](../cpp/unions.md).) Classes anônimas:  
   
 -   Não é possível ter um construtor ou um destruidor.  
   
@@ -72,7 +73,7 @@ int i = ptv.iValue;
   
  Você pode acessar os membros de uma estrutura anônima como se fossem membros da estrutura que os contém.  
   
-```  
+```cpp 
 // anonymous_structures.c  
 #include <stdio.h>  
   

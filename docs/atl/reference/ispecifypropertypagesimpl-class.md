@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74f10684c32cc5b1b4b07ac30406520c9ba41ddd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b54b8e4fdfbbfd282475ed0ca6e221d826953cad
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362226"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879566"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>Classe ISpecifyPropertyPagesImpl
-Essa classe implementa **IUnknown** e fornece uma implementação padrão de [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) interface.  
+Essa classe implementa `IUnknown` e fornece uma implementação padrão do [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) interface.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,8 +42,8 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
- A classe derivada de `ISpecifyPropertyPagesImpl`.  
+ *T*  
+ Sua classe, derivada de `ISpecifyPropertyPagesImpl`.  
   
 ## <a name="members"></a>Membros  
   
@@ -54,10 +54,10 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 |[ISpecifyPropertyPagesImpl::GetPages](#getpages)|Preenche os valores de uma matriz de contado de UUID. Cada UUID corresponde ao CLSID para uma das páginas de propriedades que podem ser exibidas na folha de propriedades do objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- O [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) interface permite que um cliente obter uma lista de CLSIDs para as páginas de propriedades com suporte por um objeto. Classe `ISpecifyPropertyPagesImpl` fornece uma implementação padrão dessa interface e implementa **IUnknown** enviando informações para o despejo compilações dispositivo na depuração.  
+ O [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) interface permite que um cliente para obter uma lista de CLSIDs para as páginas de propriedades com suporte por um objeto. Classe `ISpecifyPropertyPagesImpl` fornece uma implementação padrão dessa interface e implementa `IUnknown` enviando informações para o despejo de compilações de dispositivo na depuração.  
   
 > [!NOTE]
->  Não exponha o **ISpecifyPropertyPages** se o objeto não oferece suporte a páginas de propriedade de interface.  
+>  Não exponha o `ISpecifyPropertyPages` se seu objeto não dá suporte a páginas de propriedades de interface.  
   
  **Artigos relacionados** [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -67,19 +67,19 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
  `ISpecifyPropertyPagesImpl`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlcom.h  
+ **Cabeçalho:** atlcom  
   
 ##  <a name="getpages"></a>  ISpecifyPropertyPagesImpl::GetPages  
- Preencha a matriz de [CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048) estrutura com os CLSIDs para as páginas de propriedades que podem ser exibidas na folha de propriedades do objeto.  
+ Preenche a matriz de [CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048) estrutura com os CLSIDs para as páginas de propriedades que podem ser exibidos na folha de propriedades do objeto.  
   
 ```
 STDMETHOD(GetPages)(CAUUID* pPages);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- ATL usa mapa de propriedade do objeto para recuperar cada CLSID.  
+ ATL usa o mapa de propriedade do objeto para recuperar cada CLSID.  
   
- Consulte [ISpecifyPropertyPages::GetPages](http://msdn.microsoft.com/library/windows/desktop/ms687276) no SDK do Windows.  
+ Ver [ISpecifyPropertyPages::GetPages](http://msdn.microsoft.com/library/windows/desktop/ms687276) no Windows SDK.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)   

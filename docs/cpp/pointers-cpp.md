@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d794041df385a9e18a8a4b25460d961a340cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dad1f9a223d8eb97c8e59e955bd5358b27dafd08
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942233"
 ---
 # <a name="pointers-c"></a>Ponteiros (C++)
 Os ponteiros são declarados usando a seguinte sequência:  
@@ -39,25 +40,25 @@ Os ponteiros são declarados usando a seguinte sequência:
   
  1. Os especificadores da declaração:  
   
--   Um especificador de classe de armazenamento opcional. Para obter mais informações, consulte [especificadores](../cpp/specifiers.md).  
+    - Um especificador de classe de armazenamento opcional. Para obter mais informações, consulte [especificadores](../cpp/specifiers.md).  
   
--   Uma palavra-chave `const` ou `volatile` opcional que se aplica ao tipo do objeto que será o alvo do ponteiro.  
+    - Um recurso opcional **const** ou **volátil** palavra-chave para o tipo do objeto a ser apontado para a aplicação.  
   
--   O especificador de tipo: o nome de um tipo que representa o tipo do objeto que será o alvo do ponteiro.  
+    - O especificador de tipo: o nome de um tipo que representa o tipo do objeto que será o alvo do ponteiro.  
   
  2. O declarador:  
   
--   Um modificador opcional específico da Microsoft. Para obter mais informações, consulte [modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md).  
+    - Um modificador opcional específico da Microsoft. Para obter mais informações, consulte [modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
--   O operador `*`.  
+    - O operador `*`.  
   
--   Uma palavra-chave `const` ou `volatile` opcional que se aplica ao próprio ponteiro.  
+    - Um recurso opcional **const** ou **volátil** aplicando ao próprio ponteiro de palavra-chave.  
   
--   O identificador.  
+    - O identificador.  
   
--   Um inicializador opcional.  
+    - Um inicializador opcional.  
   
- O declarador de um ponteiro para função tem esta aparência:  
+     O declarador de um ponteiro para função tem esta aparência:  
   
 ```  
 (* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]  
@@ -74,31 +75,31 @@ Os ponteiros são declarados usando a seguinte sequência:
   
  Um exemplo simples de uma declaração de ponteiro é:  
   
-```  
+```cpp 
 char *pch;  
 ```  
   
- A declaração acima especifica que `pch` aponta para um objeto do tipo `char`.  
+ A declaração acima Especifica que `pch` aponta para um objeto do tipo **char**.  
   
  Um exemplo mais complexo é:  
   
-```  
+```cpp 
 static unsigned int * const ptr;  
 ```  
   
- A declaração anterior Especifica que `ptr` é um ponteiro para um objeto do tipo de constante `unsigned` `int` com duração de armazenamento estático.  
+ A declaração acima Especifica que `ptr` é um ponteiro constante para um objeto do tipo **não assinados** **int** com duração de armazenamento estático.  
   
  O exemplo a seguir mostra como vários ponteiros são declarados e inicializados:  
   
-```  
+```cpp 
 static int *p = &i, *q = &j;  
 ```  
   
- No exemplo acima, os ponteiros p e q apontam para objetos do tipo `int` e são inicializados para os endereços de i e j respectivamente.  O especificador de classe de armazenamento `static` se aplica aos dois ponteiros.  
+ No exemplo anterior, ponteiros p e q apontam para objetos do tipo **int** e são inicializados com os endereços de i e j respectivamente.  O especificador de classe de armazenamento **estático** se aplica a ambos os ponteiros.  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // pointer.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -189,7 +190,7 @@ dog dog
 ## <a name="example"></a>Exemplo  
  Outro exemplo ilustra o uso de ponteiros em estruturas de dados; neste caso, uma lista vinculada.  
   
-```  
+```cpp 
 // pointer_linkedlist.cpp  
 // compile with: /EHsc  
 #include <iostream>  

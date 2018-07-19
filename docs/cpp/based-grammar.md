@@ -14,33 +14,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e1c14cd7add01f8583c24541987b2980da794a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fad00244be53a2eebe4a02b99c6368333f3daf23
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409531"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939358"
 ---
 # <a name="based-grammar"></a>Gramática __based
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
  O endereçamento baseado é útil quando é necessário controle preciso sobre o segmento ao qual os objetos estão alocados (dados estáticos e com base dinâmica).  
   
- O único formulário aceitável de endereçamento baseado em compilações de 32 bits e de 64 bits é o “baseado em um ponteiro”, que define um tipo que contém um deslocamento de 32 bits ou de 64 bits para uma base de 32 bits ou de 64 bits, ou com base em `void`.  
+ A única forma de endereçamento baseado aceitável em compilações de 32 bits e 64 bits é "com base em um ponteiro" que define um tipo que contém um deslocamento de 32 bits ou 64 bits a uma base de 32 bits ou 64 bits ou com base em **void**.  
   
 ## <a name="grammar"></a>Gramática  
- *modificador com base de intervalo*:  
- **based (***base de dados de expressão***)**   
+ *com base-intervalo-modifier*:  
+ **based (***base-expression***)**   
   
- *Base de dados de expressão*:  
+ *expressão de base*:  
  *based-variablebased-abstract-declaratorsegment-namesegment-cast*  
   
  *variável com base na*:  
  *identifier*  
   
- *Declarador com base de resumo*:  
- *Declarador abstrato*  
+ *com base-abstract-declarator*:  
+ *abstract-declarator&lt;1}{2&gt;opt&lt;2*  
   
- *tipo de base*:  
+ *tipo base*:  
  *type-name*  
   
 **Fim da seção específica da Microsoft**  

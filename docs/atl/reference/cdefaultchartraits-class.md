@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24aa01ec29f063c1fa65ebe24c707deb1ea58556
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e591bc8c77e2130548e65c6197f9e550efc480fb
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361721"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881848"
 ---
 # <a name="cdefaultchartraits-class"></a>Classe CDefaultCharTraits
-Essa classe fornece duas funções estáticas para conversão de caracteres entre maiusculas e minúsculas.  
+Essa classe fornece duas funções estáticas para a conversão de caracteres entre letras maiusculas e minúsculas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +37,7 @@ class CDefaultCharTraits
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
+ *T*  
  O tipo de dados a serem armazenados na coleção.  
   
 ## <a name="members"></a>Membros  
@@ -50,7 +50,7 @@ class CDefaultCharTraits
 |[CDefaultCharTraits::CharToUpper](#chartoupper)|(Estático) Chame essa função para converter um caractere em minúsculas.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe fornece funções que são usadas pela classe [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
+ Essa classe fornece funções que são utilizadas pela classe [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcoll.h  

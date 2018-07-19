@@ -1,5 +1,5 @@
 ---
-title: Como blocos Catch são avaliados (C++) | Microsoft Docs
+title: Como os blocos Catch são avaliados (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,38 +18,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6343abec7e80bcbc47595856e6fd71a3e204ed54
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0190b62491dbb9d15ee4f01a1cbc4c2741f74dbe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942325"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Como blocos catch são avaliados (C++)
-O C++ permite lançar exceções de qualquer tipo, embora seja recomendável lançar os tipos derivados de std::exception. Uma exceção de C++ pode ser capturada por um **catch** manipulador que especifica o mesmo tipo, como a exceção lançada, ou por um manipulador que pode capturar qualquer tipo de exceção.  
+O C++ permite lançar exceções de qualquer tipo, embora seja recomendável lançar os tipos derivados de std::exception. Uma exceção de C++ pode ser capturada por um **catch** manipulador que especifica o mesmo tipo da exceção lançada ou por um manipulador que pode capturar qualquer tipo de exceção.  
   
  Se o tipo de exceção lançada for uma classe, que também tenha uma classe base (ou classes), ela pode ser capturada pelos manipuladores que aceitam classes base do tipo da exceção, bem como por referências às bases do tipo da exceção. Observe que, quando uma exceção é capturada por uma referência, ela é associada ao objeto de exceção lançado real; caso contrário, é uma cópia (bem semelhante a um argumento para uma função).  
   
- Quando uma exceção for lançada, podem ser detectado pelos seguintes tipos de **catch** manipuladores:  
+ Quando uma exceção é lançada, ela pode ser capturada pelos seguintes tipos de **catch** manipuladores:  
   
 -   Um manipulador que pode aceitar qualquer tipo (usando a sintaxe de reticências).  
   
--   Um manipulador que aceita o mesmo tipo que o objeto de exceção; porque é uma cópia, **const** e `volatile` modificadores são ignorados.  
+-   Um manipulador que aceita o mesmo tipo que o objeto de exceção; porque é uma cópia **const** e **volátil** modificadores são ignorados.  
   
 -   Um manipulador que aceita uma referência para mesmo tipo do objeto de exceção.  
   
--   Um manipulador que aceita uma referência a um **const** ou `volatile` formulário do mesmo tipo do objeto de exceção.  
+-   Um manipulador que aceita uma referência a um **const** ou **volátil** formulário do mesmo tipo que o objeto de exceção.  
   
--   Um manipulador que aceita uma classe base do mesmo tipo do objeto de exceção; como é uma cópia **const** e `volatile` modificadores são ignorados. O **catch** manipulador para uma classe base não deve preceder o **catch** manipulador para a classe derivada.  
+-   Um manipulador que aceita uma classe base do mesmo tipo que o objeto de exceção; uma vez que é uma cópia **const** e **volátil** modificadores são ignorados. O **catch** manipulador para uma classe base não deve preceder o **catch** manipulador para a classe derivada.  
   
 -   Um manipulador que aceita uma referência a uma classe base do mesmo tipo do objeto de exceção.  
   
--   Um manipulador que aceita uma referência a um **const** ou `volatile` forma de uma classe base do mesmo tipo do objeto de exceção.  
+-   Um manipulador que aceita uma referência a um **const** ou **volátil** forma de uma classe base do mesmo tipo que o objeto de exceção.  
   
 -   Um manipulador que aceita um ponteiro no qual um objeto de ponteiro gerado pode ser convertido pelas regras padrão de conversão de ponteiro.  
   
- A ordem na qual **catch** manipuladores aparecem é importante, porque manipuladores para um determinado **tente** bloco são examinados em ordem de sua aparência. Por exemplo, é um erro para colocar o manipulador de uma classe base antes do manipulador de uma classe derivada. Depois de encontrar uma correspondência **catch** manipulador foi encontrado, manipuladores subsequentes não são examinadas. Como resultado, uma elipse **catch** manipulador deve ser o último manipulador para seus **tente** bloco. Por exemplo:  
+ A ordem na qual **catch** manipuladores aparecem é importante, porque manipuladores para um determinado **tente** bloco são examinadas em ordem de sua aparência. Por exemplo, é um erro para colocar o manipulador de uma classe base antes do manipulador de uma classe derivada. Depois que a correspondência **catch** manipulador for encontrado, os manipuladores subsequentes não são verificados. Como resultado, um sinal de reticências **catch** manipulador deve ser o último manipulador para seu **tente** bloco. Por exemplo:  
   
-```  
+```cpp 
 // ...  
 try  
 {  
@@ -70,7 +71,7 @@ catch( CExcptClass E )
 }  
 ```  
   
- Neste exemplo, no botão de reticências **catch** manipulador é o único manipulador é examinado.  
+ Neste exemplo, no botão de reticências **catch** manipulador é o único manipulador que é examinado.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tratamento de exceções em C++](../cpp/cpp-exception-handling.md)

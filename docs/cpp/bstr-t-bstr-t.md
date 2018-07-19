@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824108b78ede3999a83b1c7c1ac75cc847f182f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb2e870c7418c0d0a6cf3cd82bc0a8acb45466a0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413278"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941259"
 ---
 # <a name="bstrtbstrt"></a>_bstr_t::_bstr_t
 **Seção específica da Microsoft**  
@@ -53,23 +53,23 @@ _bstr_t(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `s1`  
+ *S1*  
  Um objeto `_bstr_t` a ser copiado.  
   
- `s2`  
+ *S2*  
  Uma cadeia de caracteres multibyte.  
   
- `s3`  
+ *S3*  
  Uma cadeia de caracteres Unicode  
   
- `var`  
+ *var*  
  Um [variant_t](../cpp/variant-t-class.md) objeto.  
   
- `bstr`  
+ *BSTR*  
  Um objeto `BSTR` existente.  
   
- `fCopy`  
- Se `false`, o argumento `bstr` é anexado ao novo objeto sem que uma cópia seja feita chamando `SysAllocString`.  
+ *fCopy*  
+ Se for FALSE, o *bstr* argumento é anexado ao novo objeto sem fazer uma cópia chamando `SysAllocString`.  
   
 ## <a name="remarks"></a>Comentários  
  A tabela a seguir descreve os construtores `_bstr_t`.  
@@ -77,7 +77,7 @@ _bstr_t(
 |Construtor|Descrição|  
 |-----------------|-----------------|  
 |`_bstr_t( )`|Constrói um padrão `_bstr_t` objeto que encapsula um valor nulo `BSTR` objeto.|  
-|`_bstr_t( _bstr_t&`  `s1`  `)`|Constrói um objeto `_bstr_t` como uma cópia de outro.<br /><br /> Este é um *superficial* cópia, o que incrementa a contagem de referência do encapsulada `BSTR` objeto em vez de criar um novo.|  
+|`_bstr_t( _bstr_t&`  `s1`  `)`|Constrói um objeto `_bstr_t` como uma cópia de outro.<br /><br /> Esse é um *superficial* cópia, o que incrementa a contagem de referência de encapsulado `BSTR` objeto em vez de criar um novo.|  
 |`_bstr_t( char*`  `s2`  `)`|Constrói um objeto `_bstr_t` chamando `SysAllocString` para criar um novo objeto `BSTR` e encapsulá-lo.<br /><br /> Esse construtor primeiro executa uma conversão de multibyte em Unicode.|  
 |`_bstr_t( wchar_t*`  `s3`  `)`|Constrói um objeto `_bstr_t` chamando `SysAllocString` para criar um novo objeto `BSTR` e encapsulá-lo.|  
 |`_bstr_t( _variant_t&`  `var`  `)`|Constrói um objeto `_bstr_t` de um objeto `_variant_t` recuperando primeiro um objeto `BSTR` do objeto VARIANT encapsulado.|  

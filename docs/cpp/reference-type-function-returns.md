@@ -1,5 +1,5 @@
 ---
-title: Tipo de referência de função retorna | Microsoft Docs
+title: Retornos de função do tipo de referência | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 867313625ccc90924eed0c0c9405970f2cb90f8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 12b86ee4505792fbc3a90d34ece8e714eb3565ff
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942134"
 ---
 # <a name="reference-type-function-returns"></a>Retornos de funções de tipo de referência
 As funções podem ser declaradas para retornar um tipo de referência. Há duas razões para fazer tal declaração:  
@@ -29,16 +30,16 @@ As funções podem ser declaradas para retornar um tipo de referência. Há duas
   
 -   O tipo da função deve ser um l-value.  
   
--   O objeto referenciadas não terão fora do escopo quando a função retorna.  
+-   O objeto mencionado não sairá do escopo quando a função retorna.  
   
- Assim como pode ser mais eficiente para passar objetos grandes *para* funções por referência, ele também pode ser mais eficiente para retornar objetos grandes *de* funções por referência. O protocolo de retorno de referência elimina a necessidade de copiar o objeto em um local temporário antes de retornar.  
+ Assim como ele pode ser mais eficiente passar objetos grandes *à* funções por referência, ele também pode ser mais eficiente retornar objetos grandes *de* funções por referência. O protocolo de retorno de referência elimina a necessidade de copiar o objeto em um local temporário antes de retornar.  
   
- Os tipos de retorno de referência também podem ser úteis quando a função deve ser avaliada como um l-value. A maioria dos operadores sobrecarregados entra nessa categoria, particularmente o operador de atribuição. Operadores sobrecarregados são abordadas em [operadores sobrecarregados](../cpp/operator-overloading.md).  
+ Os tipos de retorno de referência também podem ser úteis quando a função deve ser avaliada como um l-value. A maioria dos operadores sobrecarregados entra nessa categoria, particularmente o operador de atribuição. Operadores sobrecarregados são abordados [operadores sobrecarregados](../cpp/operator-overloading.md).  
   
 ## <a name="example"></a>Exemplo  
  Considere o exemplo de `Point`:  
   
-```  
+```cpp 
 // refType_function_returns.cpp  
 // compile with: /EHsc  
   
@@ -82,18 +83,18 @@ cout << "x = " << ThePoint.x() << "\n"
   
 ## <a name="output"></a>Saída  
   
-```  
+```Output  
 x = 7  
 y = 9  
 ```  
   
  Observe que as funções `x` e `y` são declaradas como tipos de referência de retorno. Essas funções podem ser usadas em ambos os lados de uma instrução de atribuição.  
   
- Observe também que no principal, ThePoint objeto permanece em escopo e, portanto, seus membros de referência ainda existem e podem ser acessados com segurança.  
+ Observe também que no main, ThePoint objeto permanece no escopo e, portanto, seus membros de referência ainda estão ativos e podem ser acessados com segurança.  
   
  As declarações de tipos de referência devem conter inicializadores, exceto nos seguintes casos:  
   
--   Declaração `extern` explícita  
+-   Explícito **extern** declaração  
   
 -   Declaração de um membro de classe  
   
@@ -102,9 +103,9 @@ y = 9
 -   Declaração de um argumento para uma função ou o tipo de retorno para uma função  
   
 ## <a name="caution-returning-address-of-local"></a>Cuidado, retornando o endereço do local  
- Se você declarar um objeto no escopo local, esse objeto será destruído quando a função retorna. Se a função retorna uma referência a esse objeto, essa referência provavelmente causará uma violação de acesso em tempo de execução se o chamador tenta usar a referência nula.  
+ Se você declarar um objeto no escopo local, esse objeto será destruído quando a função retorna. Se a função retorna uma referência a esse objeto, que fazem referência provavelmente causará uma violação de acesso em tempo de execução se o chamador tenta usar a referência nula.  
   
-```  
+```cpp 
 // C4172 means Don’t do this!!!  
 Foo& GetFoo()  
 {  
@@ -114,7 +115,7 @@ Foo& GetFoo()
 } // f is destroyed here  
 ```  
   
- O compilador emite um aviso nesse caso: `warning C4172: returning address of local variable or temporary`. Em programas simples é possível que, ocasionalmente, não violação de acesso ocorrerá se a referência é acessada pelo chamador para que o local de memória é substituído. Isso ocorre devido a sorte absoluto. Prestar atenção o aviso.  
+ O compilador emitirá um aviso neste caso: `warning C4172: returning address of local variable or temporary`. Em programas simples é possível que, ocasionalmente, nenhuma violação de acesso ocorrerá se a referência é acessada pelo chamador antes que o local da memória será substituído. Isso ocorre devido a enorme sorte. Prestar atenção o aviso.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referências](../cpp/references-cpp.md)

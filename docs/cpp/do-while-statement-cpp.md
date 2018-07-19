@@ -1,5 +1,5 @@
 ---
-title: Siga-enquanto a instrução (C++) | Microsoft Docs
+title: -while instrução (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81ed3628b75b98bdf7883de275ccd8f74a066abd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2de180d58c31f4bd6c8b15eb69076b99f8b57b0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942275"
 ---
 # <a name="do-while-statement-c"></a>Instrução do-while (C++)
-Executa um *instrução* repetidamente até que a condição de término especificada (o *expressão*) for avaliada como zero.  
+Executa um *instrução* repetidamente até que a condição de término especificada (o *expressão*) é avaliada como zero.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,18 +38,18 @@ while ( expression ) ;
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O teste da condição de término é realizado após cada execução do loop; portanto, um loop `do-while` é executado uma ou mais vezes, dependendo do valor da expressão de término. O `do-while` instrução também pode encerrar quando um [quebra](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), ou [retornar](../cpp/return-statement-cpp.md) instrução é executada dentro do corpo de instrução.  
+ O teste da condição de término é realizado após cada execução do loop; Portanto, uma **fazer-enquanto** loop é executado uma ou mais vezes, dependendo do valor da expressão de término. O **fazer-Embora** instrução também pode terminar quando um [quebra](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), ou [retornar](../cpp/return-statement-cpp.md) instrução é executada dentro do corpo da instrução.  
   
  A *expressão* deve ter o tipo aritmético ou ponteiro. A execução procede da seguinte maneira:  
   
 1.  O corpo da instrução é executado.  
   
-2.  Em seguida, a *expressão* é avaliada. Se a *expressão* for falsa, a instrução `do-while` será finalizada e o controle será passado para a próxima instrução no programa. Se a *expressão* for verdadeira (diferente de zero), o processo será repetido, começando da etapa 1.  
+2.  Em seguida, a *expressão* é avaliada. Se *expressão* é false, o **fazer-enquanto** instrução finaliza e o controle passará para a próxima instrução no programa. Se a *expressão* for verdadeira (diferente de zero), o processo será repetido, começando da etapa 1.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra a instrução `do-while`:  
+ O exemplo a seguir demonstra a **fazer-enquanto** instrução:  
   
-```  
+```cpp 
 // do_while_statement.cpp  
 #include <stdio.h>  
 int main()  

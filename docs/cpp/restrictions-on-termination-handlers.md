@@ -1,5 +1,5 @@
 ---
-title: Restrições em manipuladores de encerramento | Microsoft Docs
+title: Restrições em manipuladores de término | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f35560c6f29e341b05f6b8bdf22873847644d7c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 969930c3918cdc0d2e38747796279c7135aba5a7
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420576"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941334"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Restrições em manipuladores de término
-Você não pode usar uma instrução `goto` para ir diretamente para um bloco de instruções `__try` ou um bloco de instruções `__finally`. Em vez disso, você deve digitar o bloco de instruções por meio do fluxo de controle normal. (No entanto, você pode ignorar um bloco de instruções `__try`.) Além disso, você não pode aninhar um manipulador de exceção ou um manipulador de encerramento dentro de um bloco `__finally`.  
+Não é possível usar um **goto** instrução para ir diretamente para um **Try** bloco de instrução ou uma **Finally** bloco de instrução. Em vez disso, você deve digitar o bloco de instruções por meio do fluxo de controle normal. (Você pode, no entanto, ir de um **Try** bloco de instruções.) Além disso, você não pode aninhar um manipulador de exceção ou manipulador de encerramento dentro de um **Finally** bloco.  
   
- Além disso, alguns tipos de código permitidos em um manipulador de encerramento geram resultados duvidosos. Portanto, você deve usá-los com cuidado, se usá-los. Uma é uma instrução `goto` que ignora um bloco de instruções `__finally`. Se o bloco estiver sendo executado como parte do encerramento normal, nada incomum acontecerá. No entanto, se o sistema estiver desenrolando a pilha, esse processo será interrompido e a função atual obterá o controle como se não houvesse nenhum término anormal.  
+ Além disso, alguns tipos de código permitidos em um manipulador de encerramento geram resultados duvidosos. Portanto, você deve usá-los com cuidado, se usá-los. Um é um **goto** instrução que ignora um **Finally** bloco de instrução. Se o bloco estiver sendo executado como parte do encerramento normal, nada incomum acontecerá. No entanto, se o sistema estiver desenrolando a pilha, esse processo será interrompido e a função atual obterá o controle como se não houvesse nenhum término anormal.  
   
- Uma instrução `return` dentro de um bloco de instruções `__finally` apresenta aproximadamente a mesma situação. O controle retorna ao chamador imediato da função que contém o manipulador de encerramento. Se o sistema estava desenrolando a pilha, esse processo é paralisado e o programa continua como se nenhuma exceção tivesse sido gerada.  
+ Um **retornar** instrução dentro de uma **Finally** bloco de instruções apresenta aproximadamente a mesma situação. O controle retorna ao chamador imediato da função que contém o manipulador de encerramento. Se o sistema estava desenrolando a pilha, esse processo é paralisado e o programa continua como se nenhuma exceção tivesse sido gerada.  
   
 ## <a name="see-also"></a>Consulte também  
  [Escrevendo um manipulador de término](../cpp/writing-a-termination-handler.md)   

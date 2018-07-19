@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a728f84a2eaa3f0138e2b0a95c25f8867c17432e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 06c66f274ab2302689afdeda195c735d7a6e5069
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359937"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884487"
 ---
 # <a name="cheapptr-class"></a>Classe CHeapPtr
-Uma classe de ponteiro inteligente para o gerenciamento de ponteiros de pilha.  
+Uma classe de ponteiro inteligente para gerenciar os ponteiros de pilha.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,11 +41,11 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
+ *T*  
  O tipo de objeto a ser armazenado no heap.  
   
- `Allocator`  
- A classe de alocação de memória a ser usado.  
+ *Alocador*  
+ A classe de alocação de memória para usar.  
   
 ## <a name="members"></a>Membros  
   
@@ -60,7 +60,7 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CHeapPtr::Allocate](#allocate)|Chame esse método para alocar memória no heap para armazenar objetos.|  
-|[CHeapPtr::Reallocate](#reallocate)|Chame este método para realocar a memória no heap.|  
+|[CHeapPtr::Reallocate](#reallocate)|Chame esse método para realocar a memória no heap.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -69,7 +69,7 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 |[CHeapPtr::operator =](#operator_eq)|O operador de atribuição.|  
   
 ## <a name="remarks"></a>Comentários  
- `CHeapPtr` é derivado de [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) e por padrão, usa as rotinas de CRT (em [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) para alocar e liberar memória. A classe [CHeapPtrList](../../atl/reference/cheapptrlist-class.md) pode ser usado para construir uma lista dos ponteiros de pilha. Consulte também [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), que usa as rotinas de alocação de memória COM.  
+ `CHeapPtr` é derivado de [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) e, por padrão, usa as rotinas de CRT (no [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) para alocar e liberar memória. A classe [CHeapPtrList](../../atl/reference/cheapptrlist-class.md) pode ser usado para construir uma lista de ponteiros de pilha. Consulte também [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), que usa rotinas de alocação de memória do COM.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
@@ -87,11 +87,11 @@ bool Allocate(size_t nElements = 1) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nElements`  
+ *nElements*  
  O número de elementos usados para calcular a quantidade de memória para alocar. O valor padrão é 1.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna VERDADEIRO se a memória foi iniciado com êxito alocados false em caso de falha.  
+ Retorna VERDADEIRO se a memória tiver sido alocada, falso em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
  As rotinas de alocador são usadas para reservar memória suficiente no heap para armazenar *nElement* objetos de um tipo definido no construtor.  
@@ -109,11 +109,11 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `p`  
- Um ponteiro de pilha existente ou `CHeapPtr`.  
+ *p*  
+ Um ponteiro de heap existente ou `CHeapPtr`.  
   
 ### <a name="remarks"></a>Comentários  
- O ponteiro de pilha, opcionalmente, pode ser criado usando um ponteiro existente, ou um `CHeapPtr` objeto. Nesse caso, o novo `CHeapPtr` objeto assume a responsabilidade de gerenciar os recursos e o ponteiro.  
+ O ponteiro do heap, opcionalmente, pode ser criado usando um ponteiro existente, ou um `CHeapPtr` objeto. Nesse caso, o novo `CHeapPtr` objeto assume a responsabilidade por gerenciar o novo ponteiro e recursos.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Utilities#78](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]  
@@ -127,7 +127,7 @@ CHeapPtr<T, Allocator>& operator=(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `p`  
+ *p*  
  Um objeto `CHeapPtr` existente.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -137,18 +137,18 @@ CHeapPtr<T, Allocator>& operator=(
  [!code-cpp[NVC_ATL_Utilities#80](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]  
   
 ##  <a name="reallocate"></a>  CHeapPtr::Reallocate  
- Chame este método para realocar a memória no heap.  
+ Chame esse método para realocar a memória no heap.  
   
 ```
 bool Reallocate(size_t nElements) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nElements`  
+ *nElements*  
  O novo número de elementos usados para calcular a quantidade de memória para alocar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna VERDADEIRO se a memória foi iniciado com êxito alocados false em caso de falha.  
+ Retorna VERDADEIRO se a memória tiver sido alocada, falso em caso de falha.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Utilities#79](../../atl/codesnippet/cpp/cheapptr-class_4.cpp)]  

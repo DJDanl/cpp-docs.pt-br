@@ -18,25 +18,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f683b7ff17a1dd3945f5cb554a7440ab47fad454
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d826ba5a2252ba11a0b9206a0555c7a022a9382c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942299"
 ---
 # <a name="logical-and-operator-ampamp"></a>Operador AND lógico: &amp;&amp;
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-expression   
-&&  
- expression  
+expression && expression  
   
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O operador AND lógico (**&&**) retorna um valor booliano **true** se ambos os operandos forem **true** e retorna **false** Caso contrário. Os operandos são convertidos implicitamente no tipo `bool` antes da avaliação, e o resultado é do tipo `bool`. O AND lógico tem associatividade da esquerda para a direita.  
+ O operador AND lógico (**&&**) retorna um valor booliano TRUE se ambos os operandos forem TRUE e retornará FALSE caso contrário. Os operandos são implicitamente convertidos para o tipo **bool** antes da avaliação e o resultado é do tipo **bool**. O AND lógico tem associatividade da esquerda para a direita.  
   
  Os operandos para o operador AND lógico não precisam ser do mesmo tipo, mas devem ser de tipo integral ou ponteiro. Os operandos são geralmente expressões relacionais ou de igualdade.  
   
@@ -44,7 +43,7 @@ expression
   
  O segundo operando é avaliado somente se o primeiro operando for avaliado como true (diferente de zero). Essa avaliação elimina a avaliação desnecessária do segundo operando quando a expressão AND lógica for false. Você pode usar a avaliação de curto-circuito para evitar a remoção de referência do ponteiro nulo, conforme mostrado no seguinte exemplo:  
   
-```  
+```cpp 
 char *pch = 0;  
 ...  
 (pch) && (*pch = 'a');  
@@ -53,11 +52,11 @@ char *pch = 0;
  Se `pch` for nulo (0), o lado direito da expressão nunca será avaliado. Portanto, a atribuição por meio de um ponteiro nulo é impossível.  
   
 ## <a name="operator-keyword-for-"></a>Palavra-chave do operador para &&  
- O **e** operador é equivalente a texto **&&**. Há duas maneiras para acessar o **e** operador em seus programas: incluem o arquivo de cabeçalho `iso646.h`, ou de compilação com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção de compilador (desabilitar extensões de linguagem).  
+ O **e** operador é o equivalente de texto de **&&**. Há duas maneiras para acessar o **e** operador em seus programas: incluir o arquivo de cabeçalho `iso646.h`, ou compilando com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção do compilador (desabilitar extensões de linguagem).  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // expre_Logical_AND_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate logical AND  
@@ -78,5 +77,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Operadores C++ internos Precedence and Associativity](cpp-built-in-operators-precedence-and-associativity.md) [operadores C++ internos, precedência e associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores C++ internos precedência e associatividade](cpp-built-in-operators-precedence-and-associativity.md) [operadores C++ internos, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operadores lógicos C](../c-language/c-logical-operators.md)

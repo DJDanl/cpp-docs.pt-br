@@ -1,5 +1,5 @@
 ---
-title: Funções ATL | Microsoft Docs
+title: Funções da ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c5e63e884a44b310330c05fc4a77e3e7f37bec5
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: bbd6e799998abcac650ee32dd86739c157f1035d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34257094"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879466"
 ---
-# <a name="atl-functions"></a>Funções ATL
+# <a name="atl-functions"></a>Funções da ATL
 
 
 Para localizar uma função ATL por categoria, consulte os tópicos a seguir.  
@@ -31,10 +31,10 @@ Para localizar uma função ATL por categoria, consulte os tópicos a seguir.
  Fornece suporte para manipulação de caminhos de arquivo.
  
  [Funções globais de mapa COM](../../atl/reference/com-map-global-functions.md)  
- Fornece suporte para o mapa COM **IUnknown** implementações.  
+ Fornece suporte para o mapa COM `IUnknown` implementações.  
   
  [Funções globais do controle de composição](../../atl/reference/composite-control-global-functions.md)  
- Fornece suporte para a criação de caixas de diálogo e para a criação, hospedagem e licenciando controles ActiveX.  
+ Fornecem suporte para a criação de caixas de diálogo e para criação, hospedagem e licenciando controles ActiveX.  
   
  [Funções globais de ponto de conexão](../../atl/reference/connection-point-global-functions.md)  
  Fornece suporte para pontos de conexão e mapas de coleta.  
@@ -49,10 +49,10 @@ Para localizar uma função ATL por categoria, consulte os tópicos a seguir.
  Fornece um manipulador de eventos.  
   
  [Marshalling de funções globais](../../atl/reference/marshaling-global-functions.md)  
- Fornece suporte para empacotamento e a conversão de dados de realização de marshaling em ponteiros de interface.  
+ Fornece suporte para empacotamento e converter dados de marshaling em ponteiros de interface.  
   
- [Funções de conversão de pixel/HIMETRIC Global](../../atl/reference/pixel-himetric-conversion-global-functions.md)  
- Fornece suporte para converter para e de pixel e DÉCIMOS de milímetros.  
+ [Funções globais de conversão de pixel/HIMETRIC](../../atl/reference/pixel-himetric-conversion-global-functions.md)  
+ Dar suporte à conversão entre pixels e unidades HIMETRIC.  
   
  [Funções globais TypeLib e Registro](../../atl/reference/registry-and-typelib-global-functions.md)  
  Fornece suporte para carregar e registrar uma biblioteca de tipos.  
@@ -61,13 +61,13 @@ Para localizar uma função ATL por categoria, consulte os tópicos a seguir.
  Fornece suporte para modificar objetos ACL e SID.  
   
  [Funções globais de identificador de segurança](../../atl/reference/security-identifier-global-functions.md)  
- Retorna o SID bem conhecido comuns objetos.  
+ Retorne objetos de SID bem conhecido comuns.  
   
  [Funções globais de registro de servidor](../../atl/reference/server-registration-global-functions.md)  
- Fornece suporte para registrar e cancelar o registro de objetos de servidor no mapa do objeto.  
+ Fornece suporte para registrar e cancelar o registro de objetos de servidor no mapa de objetos.  
   
  [Funções globais WinModule](../../atl/reference/winmodule-global-functions.md)  
- Fornece suporte para `_AtlCreateWndData` estrutura operações.  
+ Fornecer suporte para `_AtlCreateWndData` estruturar as operações.  
   
 ## <a name="see-also"></a>Consulte também  
     
@@ -75,4 +75,4 @@ Para localizar uma função ATL por categoria, consulte os tópicos a seguir.
  [Macros](../../atl/reference/atl-macros.md)   
  [Variáveis globais](../../atl/reference/atl-global-variables.md)   
  [Definições de tipo](../../atl/reference/atl-typedefs.md)   
- [Classes e estruturas](../../atl/reference/atl-classes.md)
+ [Classes e structs](../../atl/reference/atl-classes.md)

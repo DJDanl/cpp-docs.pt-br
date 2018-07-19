@@ -14,25 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1faf0458a9cf1a528e9a0c2582e8d2ec3715f149
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eff66cb2efd1f095fee18e6db428b9f29c9f7812
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421036"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37938935"
 ---
 # <a name="lambda-expression-syntax"></a>Sintaxe da expressão lambda
-Esse artigo demonstra a sintaxe e os elementos estruturais das expressões lambda. Para obter uma descrição de expressões lambda, consulte [expressões Lambda](../cpp/lambda-expressions-in-cpp.md).  
+Esse artigo demonstra a sintaxe e os elementos estruturais das expressões lambda. Para obter uma descrição das expressões lambda, consulte [expressões Lambda](../cpp/lambda-expressions-in-cpp.md).  
   
 ## <a name="function-objects-vs-lambdas"></a>Objetos de função vs. Lambdas  
- Quando você escreve o código, você provavelmente usar ponteiros de função e objetos de função para solucionar problemas e executar cálculos, especialmente quando você usar [algoritmos da biblioteca padrão C++](../cpp/algorithms-modern-cpp.md). Ponteiros de função e objetos de função tem vantagens e desvantagens — por exemplo, ponteiros de função tem sobrecarga mínima de sintática mas não manter o estado em um escopo e objetos de função podem manter o estado mas exigem a sobrecarga sintática de um definição de classe.  
+ Quando você escreve o código, você provavelmente usa ponteiros de função e objetos de função para resolver problemas e realizar cálculos, especialmente quando você usa [algoritmos da biblioteca padrão C++](../cpp/algorithms-modern-cpp.md). Ponteiros de função e objetos de função têm vantagens e desvantagens — por exemplo, ponteiros de função têm sobrecarga sintática mínima, mas não retêm estado dentro de um escopo, e objetos de função podem manter o estado, mas exigem sobrecarga sintática de um definição de classe.  
   
- Um lambda combina os benefícios dos ponteiros de função com os objetos de função e evita suas desvantagens. Como objetos de função, uma expressão lambda é flexível e pode manter o estado, mas ao contrário de um objeto de função, sua sintaxe compact não requer uma definição de classe explícita. Ao usar lambdas, você pode escrever código que seja menos inconveniente e menos sujeito a erros do que o código para um objeto de função equivalente.  
+ Um lambda combina os benefícios dos ponteiros de função com os objetos de função e evita suas desvantagens. Como um objeto de função, uma lambda é flexível e pode manter o estado, mas ao contrário de um objeto de função, sua sintaxe compacta não exige uma definição de classe explícita. Ao usar lambdas, você pode escrever código que seja menos inconveniente e menos sujeito a erros do que o código para um objeto de função equivalente.  
   
  Os exemplos a seguir comparam o uso de uma lambda ao uso de um objeto de função. O primeiro exemplo usa uma lambda para imprimir no console se cada elemento em um objeto `vector` é para ou ímpar. O segundo exemplo usa um objeto de função para realizar a mesma tarefa.  
   
 ## <a name="example-1-using-a-lambda"></a>Exemplo 1: Usando uma lambda  
- Este exemplo passa uma expressão lambda para o `for_each` função. O lambda imprime um resultado que indica se cada elemento em uma `vector` objeto é par ou ímpar.  
+ Este exemplo passa um lambda para o **for_each** função. O lambda imprime um resultado que indica se cada elemento em um `vector` objeto é par ou ímpar.  
   
 ### <a name="code"></a>Código  
   
@@ -88,12 +88,12 @@ There are 4 even numbers in the vector.
 ```  
   
 ### <a name="comments"></a>Comentários  
- No exemplo, o terceiro argumento para a função `for_each` é um lambda. A parte `[&evenCount]` especifica a cláusula capture da expressão, `(int n)` especifica a lista de parâmetros e a parte restante especifica o corpo da expressão.  
+ No exemplo, o terceiro argumento para o **for_each** função é uma expressão lambda. A parte `[&evenCount]` especifica a cláusula capture da expressão, `(int n)` especifica a lista de parâmetros e a parte restante especifica o corpo da expressão.  
   
 ## <a name="example-2-using-a-function-object"></a>Exemplo 2: Usando um objeto de função  
- Às vezes, uma lambda seria muito pesada para se estender muito além do exemplo anterior. O próximo exemplo usa um objeto de função, em vez de uma lambada, juntamente com a função `for_each`, para gerar os mesmos resultados do Exemplo 1. Os dois exemplos armazenam a contagem de números pares em um objeto `vector`. Para manter o estado da operação, a classe `FunctorClass` armazena a variável `m_evenCount` por referência como uma variável de membro. Para executar a operação, `FunctorClass` implementa o operador da chamada de função, `operator()`. O compilador do Visual C++ gerencia o código que é comparável em tamanho e desempenho ao código da lambda no Exemplo 1. Para um problema básico como o deste artigo, o design da lambda mais simples é provavelmente melhor do que o design do objeto de função. No entanto, se achar que a funcionalidade pode exigir expansão significativa no futuro, use um design de objeto de função, assim, a manutenção do código será mais fácil.  
+ Às vezes, uma lambda seria muito pesada para se estender muito além do exemplo anterior. O exemplo a seguir usa um objeto de função em vez de uma lambda, junto com o **for_each** função, para produzir os mesmos resultados do exemplo 1. Os dois exemplos armazenam a contagem de números pares em um objeto `vector`. Para manter o estado da operação, a classe `FunctorClass` armazena a variável `m_evenCount` por referência como uma variável de membro. Para executar a operação, `FunctorClass` implementa o operador da chamada de função, `operator()`. O compilador do Visual C++ gerencia o código que é comparável em tamanho e desempenho ao código da lambda no Exemplo 1. Para um problema básico como o deste artigo, o design da lambda mais simples é provavelmente melhor do que o design do objeto de função. No entanto, se achar que a funcionalidade pode exigir expansão significativa no futuro, use um design de objeto de função, assim, a manutenção do código será mais fácil.  
   
- Para obter mais informações sobre o `operator()`, consulte [chamada de função](../cpp/function-call-cpp.md). Para obter mais informações sobre o `for_each` funcionam, consulte [for_each](../standard-library/algorithm-functions.md#for_each).  
+ Para obter mais informações sobre o `operator()`, consulte [chamada de função](../cpp/function-call-cpp.md). Para obter mais informações sobre o **for_each** , consulte [for_each](../standard-library/algorithm-functions.md#for_each).  
   
 ### <a name="code"></a>Código  
   
@@ -176,5 +176,5 @@ There are 4 even numbers in the vector.
  [generate_n](../standard-library/algorithm-functions.md#generate_n)   
  [for_each](../standard-library/algorithm-functions.md#for_each)   
  [Especificações de exceção (lançar)](../cpp/exception-specifications-throw-cpp.md)   
- [Compilador C4297 de aviso (nível 1)](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)   
+ [Compilador aviso (nível 1) C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)   
  [Modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md)

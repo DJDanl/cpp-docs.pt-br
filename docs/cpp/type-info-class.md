@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e3138c9028f72327c9d4bf2c2f2e82c942dbde
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54e4f4a2ac9be9dc68320e5121bc86e5a4280807
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422430"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941035"
 ---
 # <a name="typeinfo-class"></a>Classe type_info
-O **type_info** classe descreve as informações de tipo geradas dentro do programa pelo compilador. Os objetos dessa classe armazenam efetivamente um ponteiro para um nome do tipo. O **type_info** classe também armazena um valor codificado adequado para comparar dois tipos de igualdade ou ordem de agrupamento. As regras e a sequência de agrupamento de codificação para tipos não são especificados e podem ser diferentes entre os programas.  
+O `type_info` classe descreve as informações de tipo geradas no programa pelo compilador. Os objetos dessa classe armazenam efetivamente um ponteiro para um nome do tipo. O `type_info` classe também armazena um valor codificado adequado para comparar dois tipos para igualdade ou ordem de agrupamento. As regras e a sequência de agrupamento de codificação para tipos não são especificados e podem ser diferentes entre os programas.  
   
- O `<typeinfo>` arquivo de cabeçalho deve ser incluído para usar o **type_info** classe. A interface para o **type_info** classe é:  
+ O `<typeinfo>` arquivo de cabeçalho deve ser incluído para usar o `type_info` classe. A interface para o `type_info` classe é:  
   
 ```cpp
 class type_info {  
@@ -42,19 +42,19 @@ public:
 };  
 ```  
   
- Não é possível instanciar objetos do **type_info** classe diretamente, porque a classe tem apenas um construtor de cópia particular. A única maneira de construir (temporário) **type_info** objeto é usar o [typeid](../cpp/typeid-operator.md) operador. Como o operador de atribuição também é privado, você não pode copiar ou atribuir objetos da classe **type_info**.  
+ Você não pode instanciar objetos do `type_info` classe diretamente, pois a classe tem apenas um construtor de cópia particular. A única maneira de construir (temporário) `type_info` objeto é usar o [typeid](../cpp/typeid-operator.md) operador. Como o operador de atribuição também é particular, você não pode copiar ou atribuir objetos da classe `type_info`.  
   
- **type_info::hash_code** define uma função de hash adequada para mapeamento de valores do tipo **typeinfo** para uma distribuição de valores de índice.  
+ `type_info::hash_code` define uma função de hash adequada para mapear valores do tipo `typeinfo` para uma distribuição de valores de índice.  
   
- Os operadores `==` e `!=` pode ser usado para comparar quanto à igualdade e desigualdade com outros **type_info** objetos, respectivamente.  
+ Os operadores `==` e `!=` pode ser usado para comparar quanto à igualdade e desigualdade com outros `type_info` objetos, respectivamente.  
   
- Não há nenhum link entre a ordem de agrupamento de tipos e relações de herança. Use o **type_info::before** a função de membro para determinar a sequência de agrupamento de tipos. Não há nenhuma garantia que **type_info::before** produzirá o mesmo resultado em diferentes programas ou execuções diferentes do mesmo programa. Dessa maneira, **type_info::before** é semelhante para o endereço de **(&)** operador.  
+ Não há nenhum link entre a ordem de agrupamento de tipos e relações de herança. Use o `type_info::before` a função de membro para determinar a sequência de agrupamento de tipos. Não há nenhuma garantia de que `type_info::before` gerará o mesmo resultado em programas diferentes ou mesmo em execuções diferentes do mesmo programa. Dessa maneira `type_info::before` é semelhante ao endereço de `(&)` operador.  
   
- O **type_info::name** função membro retorna um **char const\***  para uma cadeia de caracteres terminada em nulo que representa o nome legível do tipo. A memória apontada é armazenada em cache e nunca deve ser desalocada diretamente.  
+ O `type_info::name` função de membro retorna um `const char*` para uma cadeia de caracteres terminada em nulo que representa o nome legível do tipo. A memória apontada é armazenada em cache e nunca deve ser desalocada diretamente.  
   
- O **type_info::raw_name** função membro retorna um **char const\***  para uma cadeia de caracteres terminada em nulo que representa o nome decorado do tipo de objeto. O nome é armazenado em sua forma decorada para economizar espaço. Consequentemente, essa função é mais rápida que **type_info::name** porque ele não precisa undecorate o nome. A cadeia de caracteres retornada pelo **type_info::raw_name** função é útil para operações de comparação, mas não é legível. Se você precisar de uma cadeia de caracteres legível, use o **type_info::name** function em vez disso.  
+ O `type_info::raw_name` função de membro retorna um `const char*` para uma cadeia de caracteres terminada em nulo que representa o nome decorado do tipo de objeto. O nome é armazenado em sua forma decorada para economizar espaço. Consequentemente, essa função é mais rápida que `type_info::name` porque ele não precisa /Unique o nome. A cadeia de caracteres retornada pelo `type_info::raw_name` função é útil para operações de comparação, mas não é legível. Se você precisar de uma cadeia de caracteres legível por humanos, use o `type_info::name` function em vez disso.  
   
- Informações de tipo são geradas se somente classes polimórficas o [/GR (Habilitar informações de tipo em tempo de execução)](../build/reference/gr-enable-run-time-type-information.md) opção de compilador é especificada.  
+ Informações de tipo são geradas para classes polimórficas apenas se o [/GR (Habilitar informações de tipo em tempo de execução)](../build/reference/gr-enable-run-time-type-information.md) for especificada a opção de compilador.  
   
 ## <a name="see-also"></a>Consulte também  
  [Informações de tipo em tempo de execução](../cpp/run-time-type-information.md)

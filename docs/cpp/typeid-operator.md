@@ -14,31 +14,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abb99b3dbc656d43701eebafbd7d34de125d1a31
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9646678398ff1e18d0acf45c45bc931ce37cd54a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942362"
 ---
 # <a name="typeid-operator"></a>Operador typeid
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      typeid(   
-      type-id  
-       )  
-typeid( expression )  
+typeid(type-id)  
+typeid(expression)  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O operador `typeid` permite que o tipo de um objeto seja determinado em tempo de execução.  
+ O **typeid** operador permite que o tipo de um objeto seja determinado em tempo de execução.  
   
- O resultado de `typeid` é um **type_info const &**. O valor é uma referência a um **type_info** que representa o objeto a *id do tipo* ou o tipo do *expressão*, dependendo de qual forma de `typeid` é usado . Consulte [classe type_info](../cpp/type-info-class.md) para obter mais informações.  
+ O resultado de **typeid** é um `const type_info&`. O valor é uma referência a um `type_info` objeto que representa um o *id do tipo* ou o tipo dos *expressão*, dependendo de qual forma de **typeid** é usado. Ver [classe type_info](../cpp/type-info-class.md) para obter mais informações.  
   
- O `typeid` operador não funciona com tipos gerenciados (declaradores abstratos ou instâncias), consulte [typeid](../windows/typeid-cpp-component-extensions.md) para obter informações sobre como obter o <xref:System.Type> de um tipo especificado.  
+ O **typeid** operador não funciona com tipos gerenciados (declarators abstratos ou instâncias), consulte [typeid](../windows/typeid-cpp-component-extensions.md) para obter informações sobre o <xref:System.Type> de um tipo especificado.  
   
- O operador `typeid` faz uma verificação de tempo de execução quando aplicado a um l-value de um tipo de classe polimórfica, onde o tipo true de objeto não pode ser determinado pelas informações estáticas fornecidas. Tais casos são:  
+ O **typeid** operador faz uma verificação de tempo de execução quando aplicado a um l-value de um tipo de classe polimórfica, onde o verdadeiro tipo do objeto não pode ser determinado pelas informações estáticas fornecidas. Tais casos são:  
   
 -   Uma referência à classe  
   
@@ -46,9 +45,9 @@ typeid( expression )
   
 -   Um ponteiro subscrito (isto é, []). (Geralmente, não é seguro usar um subscrito com um ponteiro para um tipo polimórfico.)  
   
- Se o *expressão* aponta para um tipo de classe base, mas o objeto na verdade é de um tipo derivado da classe base, um **type_info** referência para a classe derivada é o resultado. O *expressão* deve apontar para um tipo polimórfico (uma classe com funções virtuais). Caso contrário, o resultado é o **type_info** para a classe estática referida a *expressão*. Além disso, o ponteiro deve ser desreferenciado de forma que o objeto para o qual ele aponta seja usado. Sem o ponteiro de referência, o resultado será a **type_info** para o ponteiro não que ele aponte para. Por exemplo:  
+ Se o *expressão* aponta para um tipo de classe base, mas na verdade, o objeto é de um tipo derivado dessa classe base, um `type_info` de referência para a classe derivada é o resultado. O *expressão* deve apontar para um tipo polimórfico (uma classe com funções virtuais). Caso contrário, o resultado é o `type_info` para a classe estática referenciada na *expressão*. Além disso, o ponteiro deve ser desreferenciado de forma que o objeto para o qual ele aponta seja usado. Sem desreferenciar o ponteiro, o resultado será o `type_info` para o ponteiro não que ele aponta. Por exemplo:  
   
-```  
+```cpp 
 // expre_typeid_Operator.cpp  
 // compile with: /GR /EHsc  
 #include <iostream>  
@@ -73,11 +72,11 @@ int main() {
 }  
 ```  
   
- Se o *expressão* cancelar a referência de um ponteiro, e o valor do ponteiro for zero, **typeid** lança um [exceção bad_typeid](../cpp/bad-typeid-exception.md). Se o ponteiro não aponta para um objeto válido, um `__non_rtti_object` exceção for lançada, o que indica uma tentativa de analisar o RTTI que disparou uma falha (como a violação de acesso), porque o objeto de alguma forma é inválido (ponteiro inválido ou o código não foi compilado com [/GR](../build/reference/gr-enable-run-time-type-information.md)).  
+ Se o *expressão* estiver desreferenciando um ponteiro, e o valor do ponteiro for zero, **typeid** gera um [exceção bad_typeid](../cpp/bad-typeid-exception.md). Se o ponteiro não apontar para um objeto válido, um `__non_rtti_object` exceção for lançada, indicando uma tentativa de analisar o RTTI que acionou uma falha (como violação de acesso), porque o objeto de alguma forma, é inválido (ponteiro incorreto ou o código não foram compilado com [/GR](../build/reference/gr-enable-run-time-type-information.md)).  
   
- Se o *expressão* não é um ponteiro ou uma referência a uma classe base do objeto, o resultado é um **type_info** referência que representa o tipo estático do *expressão*. O *tipo estático* de uma expressão se refere ao tipo de uma expressão como é conhecido em tempo de compilação. A semântica da execução é ignorada ao avaliar o tipo estático de uma expressão. Além disso, as referências são ignoradas quando possível para determinar o tipo estático de uma expressão:  
+ Se o *expressão* não é um ponteiro nem uma referência a uma classe base do objeto, o resultado é um `type_info` referência que representa o tipo estático dos *expressão*. O *tipo estático* de uma expressão se refere ao tipo de uma expressão como é conhecido no tempo de compilação. A semântica da execução é ignorada ao avaliar o tipo estático de uma expressão. Além disso, as referências são ignoradas quando possível para determinar o tipo estático de uma expressão:  
   
-```  
+```cpp 
 // expre_typeid_Operator_2.cpp  
 #include <typeinfo>  
   
@@ -89,7 +88,7 @@ int main()
   
  **TypeId** também pode ser usado em modelos para determinar o tipo de um parâmetro de modelo:  
   
-```  
+```cpp 
 // expre_typeid_Operator_3.cpp  
 // compile with: /c  
 #include <typeinfo>  

@@ -28,18 +28,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a6457e92b7f4b57c7c181705e369e8582fb54f9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea792bde6e50f0e4149f802a5c852192def0fefa
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942165"
 ---
 # <a name="try-finally-statement"></a>Instrução try-finally
 **Seção específica da Microsoft**  
   
  A sintaxe a seguir descreve a instrução `try-finally`:  
   
-```  
+```cpp 
 __try {  
    // guarded code  
 }  
@@ -50,28 +51,28 @@ __finally {
   
 ## <a name="grammar"></a>Gramática  
  *try-finally-statement*:  
- `__try` *instruções compostas*  
+ **Try** *instrução composta*  
   
- `__finally` *instruções compostas*  
+ **Finally** *instrução composta*  
   
  A instrução `try-finally` é uma extensão da Microsoft para as linguagens C e C++ que permite que aplicativos de destino garantam a execução do código de limpeza quando a execução de um bloco de códigos é interrompida. A limpeza consiste em tarefas como desalocar memória, fechar arquivos e liberar identificadores de arquivos. A instrução `try-finally` é especialmente útil para rotinas que têm vários locais onde uma verificação é feita para um erro que pode causar o retorno prematuro da rotina.  
   
- Para obter informações relacionadas e um exemplo de código, consulte [tente-exceto instrução](../cpp/try-except-statement.md). Para obter mais informações sobre em geral de manipulação de exceção estruturada, consulte [tratamento de exceção estruturada](../cpp/structured-exception-handling-c-cpp.md). Para obter mais informações sobre como manipular exceções em aplicativos gerenciados, consulte [manipulação de exceções em /clr](../windows/exception-handling-cpp-component-extensions.md).  
+ Para obter informações relacionadas e um exemplo de código, consulte [tente-exceto instrução](../cpp/try-except-statement.md). Para obter mais informações em geral de manipulação de exceção estruturada, consulte [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Para obter mais informações sobre o tratamento de exceções em aplicativos gerenciados, consulte [tratamento de exceções em /clr](../windows/exception-handling-cpp-component-extensions.md).  
   
 > [!NOTE]
->  A manipulação de exceção estruturada funciona com Win32 para arquivos de código-fonte em C e C++. No entanto, não é projetada especificamente para C++. Você pode garantir que o código seja mais portátil usando a manipulação de exceção de C++. Além disso, a manipulação de exceção de C++ é mais flexível, pois pode tratar exceções de qualquer tipo. Para programas em C++, é recomendável que você use o mecanismo de tratamento de exceção C++ ([try, catch e throw](../cpp/try-throw-and-catch-statements-cpp.md) instruções).  
+>  A manipulação de exceção estruturada funciona com Win32 para arquivos de código-fonte em C e C++. No entanto, não é projetada especificamente para C++. Você pode garantir que o código seja mais portátil usando a manipulação de exceção de C++. Além disso, a manipulação de exceção de C++ é mais flexível, pois pode tratar exceções de qualquer tipo. Para programas C++, é recomendável que você use o mecanismo de tratamento de exceções do C++ ([try, catch e throw](../cpp/try-throw-and-catch-statements-cpp.md) instruções).  
   
- A instrução composta após a cláusula `__try` é a seção protegida. A instrução composta após a cláusula `__finally` é o manipulador de término. O manipulador especifica um conjunto de ações que são executadas quando você sai da seção protegida, independentemente de a saída da seção protegida ser realizada por uma exceção (encerramento anormal) ou por queda padrão (encerramento normal).  
+ A instrução composta após a **Try** cláusula é a seção protegida. A instrução composta após a **Finally** cláusula é o manipulador de término. O manipulador especifica um conjunto de ações que são executadas quando você sai da seção protegida, independentemente de a saída da seção protegida ser realizada por uma exceção (encerramento anormal) ou por queda padrão (encerramento normal).  
   
- O controle atinge a instrução `__try` em uma execução sequencial simples (queda). Quando o controle entra em `__try`, seu manipulador associado fica ativo. Se o fluxo de controle chegar ao fim do bloco try, a execução continuará da seguinte maneira:  
+ O controle atinge uma **Try** instrução em uma execução sequencial simple (queda). Quando o controle entra o **Try**, seu manipulador associado fica ativo. Se o fluxo de controle chegar ao fim do bloco try, a execução continuará da seguinte maneira:  
   
 1.  O manipulador de término é invocado.  
   
-2.  Quando o manipulador de término é concluído, a execução continua após a instrução `__finally`. Independentemente de como a seção protegida é encerrada (por exemplo, por meio de um `goto` fora do corpo protegido ou de uma instrução `return`), o manipulador de encerramento é executado `before` que o fluxo de controle sai da seção protegida.  
+2.  Quando o manipulador de término é concluído, a execução continua após o **Finally** instrução. Independentemente de como a seção protegida é encerrada (por exemplo, por meio de um **goto** fora do corpo protegido ou uma **retornar** instrução), o manipulador de término é executado *antes de* o fluxo de controle sai da seção protegida.  
   
-     Um **Finally** instrução não bloqueia a pesquisa para um manipulador de exceção apropriada.  
+     Um **Finally** instrução bloqueia a procura por um manipulador de exceção apropriado.  
   
- Se ocorrer uma exceção no bloco `__try`, o sistema operacional deve localizar um manipulador para a exceção. Caso contrário, o programa falhará. Se um manipulador for encontrado, todos os blocos `__finally` serão executados, e a execução será retomada no manipulador.  
+ Se ocorrer uma exceção na **Try** bloco, o sistema operacional deve localizar um manipulador para a exceção ou o programa falhará. Se um manipulador for encontrado, todos os **Finally** blocos são executados e a execução é retomada no manipulador.  
   
  Por exemplo, imagine que uma série de chamadas de função vincula a função A à função D, conforme mostrado na figura a seguir. Cada função tem um manipulador de encerramento. Se uma exceção é gerada na função D e tratada na A, os manipuladores de encerramento são chamados nessa ordem à medida que o sistema desenrola a pilha: D, C, B.  
   
@@ -79,17 +80,17 @@ __finally {
 Ordem de execução do manipulador de encerramento  
   
 > [!NOTE]
->  O comportamento de try-finally é diferente de outros idiomas que dão suporte ao uso de **finalmente**, como c#.  Um único `__try` pode ter `__finally` ou `__except`, mas não ambos.  Se ambos devem ser usados juntos, uma instrução try-except externa deve incluir a instrução interna try-finally.  As regras que especificam quando cada bloco é executado também são diferentes.  
+>  O comportamento de try-finally é diferente de outras linguagens que dão suporte ao uso de **finalmente**, como c#.  Uma única **Try** pode ter, mas não ambos, do **Finally** e **EXCEPT**.  Se ambos devem ser usados juntos, uma instrução try-except externa deve incluir a instrução interna try-finally.  As regras que especificam quando cada bloco é executado também são diferentes.  
   
 ## <a name="the-leave-keyword"></a>A palavra-chave __leave  
- A palavra-chave `__leave` é válida somente na seção protegida de uma instrução `try-finally`, e seu efeito é ir diretamente para o final da seção protegida. A execução continua na primeira instrução do manipulador de encerramento.  
+ O **Leave** palavra-chave é válido somente dentro da seção protegida de um `try-finally` instrução e seu efeito é ignorar ao final da seção protegida. A execução continua na primeira instrução do manipulador de encerramento.  
   
- Uma instrução `goto` também pode sair da seção protegida, mas prejudica o desempenho porque invoca o desenrolamento da pilha. A instrução `__leave` é mais eficiente porque não causa o desenrolamento da pilha.  
+ Um **goto** instrução também pode sair da seção protegida, mas prejudica o desempenho porque invoca o desenrolamento de pilha. O **Leave** instrução é mais eficiente, porque ela não causa o desenrolamento de pilha.  
   
 ## <a name="abnormal-termination"></a>encerramento anormal  
- Sair de um `try-finally` instrução usando o [longjmp](../c-runtime-library/reference/longjmp.md) função do tempo de execução é considerada o encerramento anormal. Não é permitido ir para uma instrução `__try`, mas é permitido sair de uma. Todas as instruções `__finally` que estão ativas entre o ponto de partida (encerramento normal do bloco `__try`) e o destino (o bloco `__except` que trata a exceção) devem ser executadas. Isso se chama desenrolamento local.  
+ Sair de um `try-finally` instrução usando o [longjmp](../c-runtime-library/reference/longjmp.md) função de tempo de execução é considerada um encerramento anormal. É ilegal para ir diretamente para um **Try** instrução, mas legal para sair de uma. Todos os **Finally** instruções que são ativas entre o ponto de partida (encerramento normal da **Try** bloco) e o destino (o **EXCEPT** bloquear que manipula a exceção) deve ser executado. Isso se chama desenrolamento local.  
   
- Se um **tente** bloco é terminado prematuramente por qualquer motivo, incluindo um salto para fora do bloco, o sistema executa associado **finalmente** bloco como parte do processo de desenrolamento de pilha. Nesses casos, o [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265) função retorna TRUE se for chamado de dentro de **finalmente** bloco; caso contrário, retornará FALSE.  
+ Se um **tente** bloco é encerrado prematuramente por qualquer motivo, incluindo um salto para fora do bloco, o sistema executa associado **finalmente** bloco como parte do processo de desenrolamento de pilha. Nesses casos, o [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265) retornos de função **true** se chamado de dentro do **finalmente** bloco; caso contrário, ele retornará **false**.  
   
  O manipulador de encerramento não é chamado se um processo é interrompido no meio da execução de uma instrução `try-finally`.  
   

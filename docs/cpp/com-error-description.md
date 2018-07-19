@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7df1fb3a8ca600b888e5d6f2c51fc44fda17dd27
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4be038bff05ce7a37b09ec3b3c61572635747864
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414253"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939891"
 ---
 # <a name="comerrordescription"></a>_com_error::Description
 **Seção específica da Microsoft**  
   
- Chamadas **IErrorInfo:: GetDescription** função.  
+ Chama a função `IErrorInfo::GetDescription`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +37,10 @@ _bstr_t Description( ) const;
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna o resultado da **IErrorInfo:: GetDescription** para o **IErrorInfo** objeto registrados dentro de `_com_error` objeto. O `BSTR` resultante é encapsulado em um objeto `_bstr_t`. Se nenhum **IErrorInfo** é registrado, ele retorna vazio `_bstr_t`.  
+ Retorna o resultado da `IErrorInfo::GetDescription` para o `IErrorInfo` registrado no `_com_error` objeto. O `BSTR` resultante é encapsulado em um objeto `_bstr_t`. Se nenhum `IErrorInfo` é registrado, ele retornará um `_bstr_t`.  
   
 ## <a name="remarks"></a>Comentários  
- Chamadas de **IErrorInfo:: GetDescription** função e recupera **IErrorInfo** registrados no `_com_error` objeto. Qualquer falha ao chamar o **IErrorInfo:: GetDescription** método será ignorado.  
+ Chamadas a `IErrorInfo::GetDescription` função e recupera `IErrorInfo` registrado no `_com_error` objeto. Qualquer falha ao chamar o `IErrorInfo::GetDescription` método é ignorado.  
   
  **Fim da seção específica da Microsoft**  
   

@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1088a920e5d023e4dea78e55610bebc0f20c2bac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 44cdb2b8149d2e8faf09ed715f96bc069620076b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942220"
 ---
 # <a name="inheritance-keywords"></a>Palavras-chave de herança
 **Seção específica da Microsoft**  
@@ -50,20 +51,20 @@ class [__virtual_inheritance] class-name;
   
  O C++ permite que você declare um ponteiro para um membro de classe antes da definição da classe. Por exemplo:  
   
-```  
+```cpp 
 class S;  
 int S::*p;  
 ```  
   
- No código acima, `p` é declarado como um ponteiro para membro de inteiro da classe S. No entanto, `class S` tem ainda não foi definido neste código; ele só foi declarado. Quando o compilador encontrar esse ponteiro, ele fará uma representação generalizada do ponteiro. O tamanho de representação depende do modelo de herança especificado. Há quatro maneiras de especificar um modelo de herança para o compilador:  
+ No código acima, `p` é declarado como um ponteiro para membro inteiro da classe. S. No entanto, `class S` tem ainda não foi definida neste código; ela foi apenas declarada. Quando o compilador encontrar esse ponteiro, ele fará uma representação generalizada do ponteiro. O tamanho de representação depende do modelo de herança especificado. Há quatro maneiras de especificar um modelo de herança para o compilador:  
   
--   No IDE em **representação de ponteiro para membro**  
+-   No IDE, em **representação de ponteiro para membro**  
   
 -   Na linha de comando usando o [/vmg](../build/reference/vmb-vmg-representation-method.md) alternar  
   
--   Usando o [pointers_to_members](../preprocessor/pointers-to-members.md) pragma  
+-   Usando o [pointers_to_members](../preprocessor/pointers-to-members.md) (pragma)  
   
--   Usando as palavras-chave de herança `__single_inheritance`, `__multiple_inheritance` e `__virtual_inheritance`. Essa técnica controla o modelo de herança com base em classes.  
+-   Usando as palavras-chave de herança **Single_Inheritance**, **multiple_inheritance**, e **virtual_inheritance**. Essa técnica controla o modelo de herança com base em classes.  
   
     > [!NOTE]
     >  Se você sempre declara um ponteiro para um membro de uma classe depois de defini-la, você não precisa usar qualquer uma dessas opções.  
@@ -72,7 +73,7 @@ int S::*p;
   
  Se o exemplo anterior for alterado para:  
   
-```  
+```cpp 
 class __single_inheritance S;  
 int S::*p;  
 ```  

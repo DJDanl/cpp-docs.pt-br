@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3606df325bfd41dabf99bb790ff154b383ab987f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9dbaa4631e50b14131418b902dd008e74060dbf6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358271"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881907"
 ---
 # <a name="ccomallocator-class"></a>Classe CComAllocator
-Essa classe fornece métodos para o gerenciamento de memória usando COM rotinas de memória.  
+Essa classe fornece métodos para gerenciamento de memória usando COM rotinas de memória.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,66 +42,66 @@ class CComAllocator
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CComAllocator::Allocate](#allocate)|Chame este método estático para alocar memória.|  
-|[CComAllocator::Free](#free)|Chame este método estático para liberar a memória alocada.|  
-|[CComAllocator::Reallocate](#reallocate)|Chame este método estático para realocar a memória.|  
+|[CComAllocator::Allocate](#allocate)|Chame esse método estático para alocar memória.|  
+|[CComAllocator::Free](#free)|Chame esse método estático para liberar a memória alocada.|  
+|[CComAllocator::Reallocate](#reallocate)|Chame esse método estático para realocar a memória.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe é usada por [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) para fornecer a memória COM as rotinas de alocação. A classe correspondente, [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), fornece os mesmos métodos usando rotinas do CRT.  
+ Essa classe é usada pelo [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) para fornecer a memória COM rotinas de alocação. A classe de contraparte [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), fornece os mesmos métodos usando rotinas de CRT.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase  
+ **Cabeçalho:** atlbase. h  
   
 ##  <a name="allocate"></a>  CComAllocator::Allocate  
- Chame a função estática para alocar memória.  
+ Chame essa função estática para alocar memória.  
   
 ```
 static void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nBytes`  
+ *nBytes*  
  O número de bytes para alocar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna um ponteiro nulo para o espaço alocado, ou nulo se não houver memória suficiente disponível.  
+ Retorna um ponteiro nulo para o espaço alocado ou nulo se não houver memória suficiente disponível.  
   
 ### <a name="remarks"></a>Comentários  
- Aloca memória. Consulte [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) para obter mais detalhes.  
+ Aloca memória. Ver [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) para obter mais detalhes.  
   
 ##  <a name="free"></a>  CComAllocator::Free  
- Chame a função estática para liberar a memória alocada.  
+ Chame essa função estática para liberar a memória alocada.  
   
 ```
 static void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `p`  
+ *p*  
  Ponteiro para a memória alocada.  
   
 ### <a name="remarks"></a>Comentários  
- Libera a memória alocada. Consulte [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) para obter mais detalhes.  
+ Libera a memória alocada. Ver [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) para obter mais detalhes.  
   
 ##  <a name="reallocate"></a>  CComAllocator::Reallocate  
- Chame a função estática para realocar a memória.  
+ Chame essa função estática para realocar a memória.  
   
 ```
 static void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `p`  
+ *p*  
  Ponteiro para a memória alocada.  
   
- `nBytes`  
+ *nBytes*  
  O número de bytes para realocar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna um ponteiro nulo para o espaço alocado, ou nulo se não houver memória insuficiente  
+ Retorna um ponteiro nulo para o espaço alocado ou nulo se não houver memória insuficiente  
   
 ### <a name="remarks"></a>Comentários  
- Redimensiona a quantidade de memória alocada. Consulte [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280) para obter mais detalhes.  
+ Redimensiona a quantidade de memória alocada. Ver [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280) para obter mais detalhes.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   

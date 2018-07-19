@@ -17,31 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f281007bea3f23bc8e7cebcdd68b9a306b500e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc826b588f133abb93c9942e7907dd8b0fce9574
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942152"
 ---
 # <a name="while-statement-c"></a>Instrução while (C++)
-Executa *instrução* repetidamente até *expressão* for avaliada como zero.  
+Executa *instrução* repetidamente até que *expressão* for avaliada como zero.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      while ( expression )  
+while ( expression )  
    statement  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O teste de *expressão* ocorra antes de cada execução do loop; portanto, um `while` zero ou mais vezes o loop é executado. *expressão* deve ser de um tipo integral, um tipo de ponteiro ou um tipo de classe com uma conversão não ambígua para integral ou tipo de ponteiro.  
+ O teste de *expressão* ocorre antes de cada execução do loop; portanto, um **enquanto** loop é executado zero ou mais vezes. *expressão* deve ser de um tipo integral, um tipo de ponteiro, ou um tipo de classe com conversão inequívoca em integral ou tipo de ponteiro.  
   
- Um `while` loop também pode encerrar quando um [quebra](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), ou [retornar](../cpp/return-statement-cpp.md) na declaração de corpo é executado. Use [continuar](../cpp/continue-statement-cpp.md) para finalizar a iteração atual sem sair do `while` loop. **continuar** passa o controle para a próxima iteração do `while` loop.  
+ Um **enquanto** loop também pode terminar quando um [quebra](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), ou [retornar](../cpp/return-statement-cpp.md) dentro da instrução corpo é executado. Use [continue](../cpp/continue-statement-cpp.md) para finalizar a iteração atual sem sair do **enquanto** loop. **Continue** passa para a próxima iteração do controle de **enquanto** loop.  
   
- O código a seguir usa um loop `while` para recortar os sublinhados à direita de uma cadeia de caracteres:  
+ O código a seguir usa uma **enquanto** loop à direita serão cortados sublinhados de uma cadeia de caracteres:  
   
-```  
+```cpp 
 // while_statement.cpp  
   
 #include <string.h>  

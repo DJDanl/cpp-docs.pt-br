@@ -16,27 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 882181bd3ac69257b69a79f42e12c2573f2f1da4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b6fea501724b24c07ab8b2199410a369d62dc9d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942268"
 ---
 # <a name="const-c"></a>const (C++)
-Ao modificar uma declaração de dados, o **const** palavra-chave especifica que a variável ou o objeto não pode ser modificado.  
+Ao modificar uma declaração de dados, o **const** palavra-chave especifica que o objeto ou uma variável não é modificável.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      const declaration ;  
+const declaration ;  
 member-function const ;  
 ```  
   
 ## <a name="const-values"></a>valores constantes  
- O **const** palavra-chave especifica que o valor da variável é constante e informa ao compilador para impedir que o programador modificá-lo.  
+ O **const** palavra-chave especifica que o valor da variável é constante e informa ao compilador para impedir que o programador de modificá-lo.  
   
-```  
+```cpp 
 // constant_values1.cpp  
 int main() {  
    const int i = 5;  
@@ -45,9 +46,9 @@ int main() {
 }  
 ```  
   
- No C++, você pode usar o **const** palavra-chave em vez do [#define](../preprocessor/hash-define-directive-c-cpp.md) diretiva de pré-processamento para definir valores de constante. Valores definidos com **const** estão sujeitos a verificação de tipo e pode ser usado no lugar de expressões de constante. No C++, você pode especificar o tamanho de uma matriz com um **const** variável da seguinte maneira:  
+ No C++, você pode usar o **const** palavra-chave, em vez da [#define](../preprocessor/hash-define-directive-c-cpp.md) diretiva de pré-processador para definir valores de constante. Valores definidos com **const** estão sujeitos à verificação de tipo e pode ser usado no lugar de expressões de constante. No C++, você pode especificar o tamanho de uma matriz com um **const** variável da seguinte maneira:  
   
-```  
+```cpp 
 // constant_values2.cpp  
 // compile with: /c  
 const int maxarray = 255;  
@@ -58,7 +59,7 @@ char store_char[maxarray];  // allowed in C++; not allowed in C
   
  O **const** palavra-chave também pode ser usado em declarações de ponteiro.  
   
-```  
+```cpp 
 // constant_values3.cpp  
 int main() {  
    char *mybuf = 0, *yourbuf;  
@@ -68,9 +69,9 @@ int main() {
 }  
 ```  
   
- Um ponteiro para uma variável declarada como **const** podem ser atribuídos somente a um ponteiro que também está declarado como **const**.  
+ Um ponteiro para uma variável declarada como **const** pode ser atribuída somente a um ponteiro que também é declarado como **const**.  
   
-```  
+```cpp 
 // constant_values4.cpp  
 #include <stdio.h>  
 int main() {  
@@ -89,19 +90,19 @@ int main() {
   
  Para objetos que são declarados como **const**, só é possível chamar membro constante funções. Isso assegura que o objeto constante nunca seja modificado.  
   
-```  
+```cpp 
 birthday.getMonth();    // Okay  
 birthday.setMonth( 4 ); // Error  
 ```  
   
- Você pode chamar funções membro constantes ou não constantes para um objeto não constante. Você também pode sobrecarregar uma função de membro usando o **const** palavra-chave; Isso permite que uma versão diferente da função a ser chamado para objetos constantes e não constantes.  
+ Você pode chamar funções membro constantes ou não constantes para um objeto não constante. Você também pode sobrecarregar uma função de membro usando o **const** palavra-chave; Isso permite que uma versão diferente da função a ser chamado para objetos constantes e.  
   
- Você não pode declarar construtores ou destrutores com o **const** palavra-chave.  
+ Você não pode declarar construtores ou destruidores com a **const** palavra-chave.  
   
-## <a name="const-member-functions"></a>funções de membro constantes  
- Declarar uma função de membro com o **const** palavra-chave especifica que a função é uma função "somente leitura" que não modificam o objeto para o qual ele é chamado. Uma função de membro constante não é possível modificar quaisquer membros de dados não estático ou chamar funções que não são constantes de qualquer membro. Para declarar uma função de membro constante, coloque o **const** palavra-chave após o parêntese de fechamento da lista de argumentos. O **const** palavra-chave é necessária na declaração e a definição.  
+## <a name="const-member-functions"></a>funções de membro const  
+ Declarar uma função de membro com o **const** palavra-chave especifica que a função é uma função de "somente leitura" que não modifica o objeto para o qual ele é chamado. Uma função de membro constante não é possível modificar todos os membros de dados não estáticos ou chamar funções que não seja uma constantes de qualquer membro. Para declarar uma função de membro constante, coloque o **const** palavra-chave após o parêntese de fechamento da lista de argumentos. O **const** palavra-chave é necessária na declaração e a definição.  
   
-```  
+```cpp 
 // constant_member_function.cpp  
 class Date  
 {  
@@ -132,34 +133,34 @@ int main()
 ```  
   
 ## <a name="c-and-c-const-differences"></a>Diferenças entre const de C e C++  
- Quando você declara uma variável como **const** em um arquivo de código do código-fonte C, fazer isso como:  
+ Quando você declara uma variável como **const** em um arquivo de código de origem de C, você fazer isso como:  
   
-```  
+```cpp 
 const int i = 2;  
 ```  
   
  Então, você pode usar essa variável em outro módulo como segue:  
   
-```  
+```cpp 
 extern const int i;  
 ```  
   
- Mas para obter o mesmo comportamento em C++, você deve declarar o **const** variável como:  
+ Mas para obter o mesmo comportamento em C++, você deve declarar sua **const** variável como:  
   
-```  
+```cpp 
 extern const int i = 2;  
 ```  
   
- Se você quiser declarar uma variável `extern` no arquivo de código de origem de C++ para uso no arquivo de código de origem de C, use:  
+ Se você quiser declarar uma **extern** variável em um arquivo de código fonte C++ para uso em um arquivo de código de origem do C, use:  
   
-```  
+```cpp 
 extern "C" const int x=10;  
 ```  
   
  para evitar a desconfiguração do nome pelo compilador C++.  
   
 ## <a name="remarks"></a>Comentários  
- Ao seguir a lista de parâmetros da função um membro, o **const** palavra-chave especifica que a função não modifica o objeto para o qual ele é invocado.  
+ Ao seguir a lista de parâmetros de função de membro, o **const** palavra-chave especifica que a função não modifica o objeto para o qual ele é invocado.  
   
  Para obter mais informações sobre **const**, consulte os seguintes tópicos:  
     

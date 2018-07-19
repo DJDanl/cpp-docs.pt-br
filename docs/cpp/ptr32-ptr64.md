@@ -1,5 +1,5 @@
 ---
-title: ptr32, ptr64 | Microsoft Docs
+title: __ptr32, __ptr64 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,18 +22,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5746c8f54a51e24bad23dcb66f6648266e2e4b56
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 39078cfef6b327aee60d98fce6cccc0b69c5953b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704809"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941698"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32, __ptr64
 
 **Seção específica da Microsoft**
 
-`__ptr32` representa um ponteiro nativo em um sistema de 32 bits, enquanto `__ptr64` representa um ponteiro nativo em um sistema de 64 bits.
+**__ptr32** representa um ponteiro nativo em um sistema de 32 bits, enquanto **__ptr64** representa um ponteiro nativo em um sistema de 64 bits.
 
 O exemplo a seguir mostra como declarar cada um desses tipos de ponteiro:
 
@@ -42,14 +42,14 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
- Em um sistema de 32 bits, um ponteiro declarado com `__ptr64` é truncado em um ponteiro de 32 bits. Em um sistema de 64 bits, um ponteiro declarado com `__ptr32` é imposto a um ponteiro de 64 bits.
+ Em um sistema de 32 bits, um ponteiro declarado com **__ptr64** será truncado para um ponteiro de 32 bits. Em um sistema de 64 bits, um ponteiro declarado com **__ptr32** é forçado para um ponteiro de 64 bits.
 
 > [!NOTE]
-> Não é possível usar `__ptr32` ou `__ptr64` ao compilar com **/clr: pure**. Caso contrário, será gerado C2472 de erro do compilador. O **/clr: pure** e **/CLR: safe** opções do compilador são substituídas no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+> Não é possível usar **__ptr32** ou **__ptr64** durante a compilação com **/clr: pure**. Caso contrário, o erro do compilador C2472 será gerado. O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como declarar e alocar ponteiros com as palavras-chave `__ptr32` e `__ptr64`.
+O exemplo a seguir mostra como declarar e alocar ponteiros com o **__ptr32** e **__ptr64** palavras-chave.
 
 ```cpp
 #include <cstdlib>

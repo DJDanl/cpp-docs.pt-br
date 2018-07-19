@@ -20,17 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c02a7670456dff9c7e5a3dfd1583892d918d268
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75344e8fef933b493177f812b06edd3c187046f6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942343"
 ---
 # <a name="enumerations-c"></a>Enumerações (C++)
 Uma enumeração é um tipo definido pelo usuário que consiste em um conjunto de constantes integrais nomeadas que são conhecidas como enumeradores.  
   
 > [!NOTE]
->  Este artigo abrange o tipo `enum` da Linguagem C++ Padrão ISO e o tipo `enum class` com escopo (ou fortemente tipado) que foi introduzido no C++11. Para obter informações sobre o `public enum class` ou `private enum class` tipos em C + + CLI e C + + CX, consulte [classe enum](../windows/enum-class-cpp-component-extensions.md).  
+>  Este artigo aborda a linguagem C++ padrão ISO **enum** tipo e o escopo (ou fortemente tipado) **classe enum** tipo introduzido no c++11. Para obter informações sobre o **classe enum pública** ou **classe enum privada** tipos no C + + c++ CLI e C + + c++ /CLI CX, consulte [classe enum](../windows/enum-class-cpp-component-extensions.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +46,7 @@ enum [class|struct]
 {enum-list};  
 ```  
   
-```  
+```cpp 
 // Forward declaration of enumerations  (C++11):  
 enum A : int; // non-scoped enum must have type specified
 enum class B; // scoped enum defaults to int but ...
@@ -53,17 +54,17 @@ enum class C : short;  // ... may have any integral underlying type
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
- `identifier`  
+ *identifier*  
  O nome do tipo dado à enumeração.  
   
- `type`  
+ *type*  
  O tipo subjacente dos enumeradores; todos os enumeradores têm o mesmo tipo subjacente. Pode ser qualquer tipo integral.  
   
- `enum-list`  
- Uma lista separada por vírgulas dos enumeradores na enumeração. Cada enumerador ou nome de variável no escopo deve ser exclusivo. No entanto, os valores podem ser duplicados. Em um enum sem escopo, o escopo será o escopo adjacente; em um enum com escopo, o escopo será o próprio `enum-list`.  Em um enum de escopo, a lista pode estar vazia que na verdade define um novo tipo integral.
+ *lista de enumeração*  
+ Uma lista separada por vírgulas dos enumeradores na enumeração. Cada enumerador ou nome de variável no escopo deve ser exclusivo. No entanto, os valores podem ser duplicados. Em um enum sem escopo, o escopo será o escopo adjacente; em uma enumeração com escopo, o escopo é o *enum lista* em si.  Em uma enumeração com escopo definido, a lista pode estar vazia que define o novo tipo de integral em vigor.
   
- `class`  
- Ao usar essa palavra-chave na declaração, você especifica que o enum possui escopo e que um `identifier` deve ser fornecido. Você também pode usar a palavra-chave `struct` no lugar de `class`, porque elas são equivalentes semanticamente nesse contexto.  
+ *class*  
+ Usando essa palavra-chave na declaração, especifique o enum possui escopo e uma *identificador* deve ser fornecido. Você também pode usar o **struct** palavra-chave em vez de **classe**, conforme elas são equivalentes semanticamente nesse contexto.  
   
 ## <a name="enumerator-scope"></a>Escopo de enumerador  
  Uma enumeração fornece o contexto para descrever um intervalo de valores que são representados como constantes nomeadas e que também são chamados de enumeradores. Nos tipos de enum originais de C e C++, os enumeradores não qualificados são visíveis em todo o escopo no qual o enum é declarado. Em enums com escopo, o nome do enumerador deve ser qualificado pelo nome do tipo enum. O exemplo a seguir demonstra essa diferença básica entre os dois tipos de enums:  
@@ -112,7 +113,7 @@ enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
   
  ## <a name="casting-rules"></a>Regras de conversão  
   
- As constantes enum sem escopo podem ser convertidas implicitamente em `int`, mas um `int` nunca pode ser convertido implicitamente em um valor enum. O exemplo a seguir mostra o que acontece se você tentar atribuir a `hand` um valor que não seja `Suit`:  
+ Constantes enum sem escopo podem ser convertidos implicitamente em **int**, mas um **int** nunca é implicitamente conversível para um valor de enumeração. O exemplo a seguir mostra o que acontece se você tentar atribuir a `hand` um valor que não seja `Suit`:  
   
 ```cpp  
 int account_num = 135692;  
@@ -121,7 +122,7 @@ hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
   
 ```  
   
- Uma conversão é necessária para converter um `int` em um enumerador com escopo ou sem escopo. No entanto, você pode promover um enumerador para um valor inteiro sem uma conversão.  
+ Uma conversão é necessária para converter um **int** para um enumerador com escopo ou fora do escopo. No entanto, você pode promover um enumerador para um valor inteiro sem uma conversão.  
   
 ```cpp  
 int account_num = Hearts; //OK if Hearts is in a unscoped enum  
@@ -151,15 +152,15 @@ namespace ScopedEnumConversions
   
  Observe que a linha `hand = account_num;` ainda causa o erro que ocorre com enums sem escopo, como mostrado anteriormente. É permitido com uma conversão explícita. No entanto, com enums com escopo, a conversão tentada na próxima instrução, `account_num = Suit::Hearts;`, não é mais permitida sem uma conversão explícita. 
 
-## <a name="enums-with-no-enumerators"></a>Enums com nenhuma enumeradores
-**Visual Studio 2017 versão posterior e 15,3** (disponível com [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): definindo um enum (normal ou no escopo) com um tipo subjacente explícito e nenhum enumeradores, você pode em vigor introduzir um novo tipo integral não tem nenhuma conversão implícita para qualquer outro tipo. Usando esse tipo em vez de seu tipo subjacente interno, você pode eliminar a possibilidade de erros causados por inadvertida conversões implícitas.  
+## <a name="enums-with-no-enumerators"></a>Enums com nenhum enumeradores
+**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): definindo uma enumeração (regular ou escopo) com um tipo subjacente explícito e nenhum enumeradores, você pode em vigor introduz um novo tipo integral que não tiver nenhuma conversão implícita em qualquer outro tipo. Usando esse tipo em vez de seu tipo subjacente interno, você pode eliminar a possibilidade de erros sutis causados por conversões implícitas acidentais.  
 
 
 ```cpp
 enum class byte : unsigned char { };
 ```
 
-O novo tipo é uma cópia exata do tipo base e, portanto, tem a mesma convenção de chamada, que significa que ele pode ser usado em ABIs sem qualquer penalidade de desempenho. Nenhuma conversão é necessária quando as variáveis do tipo são inicializadas usando inicialização direct-list. O exemplo a seguir mostra como inicializar enums com nenhuma enumeradores em diversos contextos:
+O novo tipo é uma cópia exata do tipo subjacente e, portanto, tem a mesma convenção de chamada, que significa que ele pode ser usado em ABIs sem nenhuma penalidade de desempenho. Nenhuma conversão é necessária quando as variáveis do tipo são inicializadas usando a inicialização de direct-list. O exemplo a seguir mostra como inicializar enums com nenhum enumeradores em vários contextos:
 
 ```cpp
 enum class byte : unsigned char { };

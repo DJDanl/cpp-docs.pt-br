@@ -16,28 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 986fc35d1a84737b441d7259bba78459a42404e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1278ab84ea8888b34290c9738e0eb88a4485e99c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942221"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 **Seção específica da Microsoft**  
   
- Converte um `BSTR` valor para um **char \*** .  
+ Converte um `BSTR` de valor para um **char \*** .  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      char* __stdcall ConvertBSTRToString(  
-   BSTR pSrc  
-);  
+char* __stdcall ConvertBSTRToString(BSTR pSrc);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `pSrc`  
+ *pSrc*  
  Uma variável BSTR.  
   
 ## <a name="remarks"></a>Comentários  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // ConvertBSTRToString.cpp  
 #include <comutil.h>  
 #include <stdio.h>  
@@ -72,9 +71,9 @@ char * text: Test
 **Fim da seção específica da Microsoft**  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<comutil.h >.  
+ **Cabeçalho:** \<comutil. h >.  
   
- **Lib:** comsuppw.lib ou comsuppwd.lib (consulte [/ZC: (wchar_t é do tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)  
+ **Lib:** comsuppw. lib ou comsuppwd (consulte [/ZC: wchar_t (wchar_t Is Native Type)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções globais COM do compilador](../cpp/compiler-com-global-functions.md)

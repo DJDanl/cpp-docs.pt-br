@@ -17,30 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4912628529ae0b47a5a5b938ab8e6d25a9099510
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d1b7718e4c6d270536f5d7973a1b5a3ec0e61f28
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704397"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941581"
 ---
 # <a name="thiscall"></a>__thiscall
 
 **Seção específica da Microsoft**
 
-A convenção de chamada `__thiscall` é usada em funções membro e é a convenção de chamada padrão usada por funções membro do C++ que não usam argumentos variáveis. Sob `__thiscall`, o receptor limpa a pilha, o que é impossível para funções `vararg`. Os argumentos são enviados por push na pilha da direita para a esquerda, com o ponteiro `this` passado por meio do registro de ECX, e não na pilha, na arquitetura x86.
+O **thiscall** convenção de chamada é usada em funções membro e é a convenção de chamada padrão usada pelas funções de membro de C++ que não usam argumentos variáveis. Sob **thiscall**, o receptor limpa a pilha, que é impossível `vararg` funções. Os argumentos são empurrados na pilha da direita para esquerda, com o **isso** ponteiro que está sendo passado por meio do registro ECX e não na pilha, em x86 arquitetura.
 
-Uma razão para usar `__thiscall` está em classes cujas funções membro usam `__clrcall` por padrão. Nesse caso, você pode usar `__thiscall` para tornar funções membro individuais a partir de código nativo.
+Um motivo para usar **thiscall** está em classes cujas funções membro usam `__clrcall` por padrão. Nesse caso, você pode usar **thiscall** para tornar funções membro individuais que pode ser chamado do código nativo.
 
-Ao compilar com [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md), todas as funções e os ponteiros de função são `__clrcall` , a menos que especificado o contrário. O **/clr: pure** e **/CLR: safe** opções do compilador são substituídas no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+Ao compilar com [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md), todas as funções e ponteiros de função são `__clrcall` , a menos que especificado o contrário. O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-Em versões do Visual C++ 2005, o `__thiscall` convenção de chamada não pôde ser explicitamente especificada em um programa, como `__thiscall` não era uma palavra-chave.
+Nas versões anteriores do Visual C++ 2005, o **thiscall** convenção de chamada não pôde ser explicitamente especificada em um programa, porque **thiscall** não era uma palavra-chave.
 
-As funções membro `vararg` usam a convenção de chamada `__cdecl`. Todos os argumentos de função são enviadas por push na pilha, com o ponteiro `this` posicionado na última pilha
+`vararg` funções membro usam o **cdecl** convenção de chamada. Todos os argumentos de função são enviados por push na pilha, com o **isso** ponteiro é colocado na pilha pela última vez
 
 Como esta convenção de chamada se aplica apenas a C++, não há nenhum esquema de decoração de nome de C.
 
-Em ARM e x64 máquinas, `__thiscall` é aceita e ignorado pelo compilador.
+No ARM e x64 máquinas **thiscall** é aceito e ignorado pelo compilador.
 
 Para funções de classe não estáticas, se a função for definida como fora da linha, o modificador da convenção de chamada não precisará ser especificado na definição fora da linha. Ou seja, para métodos de membro de classe não estática, a convenção de chamada especificada durante a declaração é assumida no ponto de definição.
 

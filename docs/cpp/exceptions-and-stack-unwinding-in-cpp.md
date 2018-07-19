@@ -12,29 +12,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05b2f6240876540cd9e67d83bcb88242b68827b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32558413dd0dc6f7288493067d7373a14e520e29
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942324"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Exceções e desenrolamento da pilha em C++
-No mecanismo de exceção do C++, o controle move-se da instrução throw para a primeira instrução catch que pode manipular o tipo lançado. Quando a instrução catch é atingida, todas as variáveis automáticas que estejam no escopo entre o throw e catch instruções serão destruídas em um processo conhecido como *desenrolamento de pilha*. No desenrolamento de pilha, a execução ocorre da seguinte maneiro:  
+No mecanismo de exceção do C++, o controle move-se da instrução throw para a primeira instrução catch que pode manipular o tipo lançado. Quando a instrução catch é atingida, todas as variáveis automáticas que estão no escopo entre o throw e instruções catch são destruídas em um processo conhecido como *desenrolamento de pilha*. No desenrolamento de pilha, a execução ocorre da seguinte maneiro:  
   
-1.  O controle atinge a instrução `try` em uma execução sequencial normal. A seção protegida no bloco `try` é executada.  
+1.  O controle atinge a **tente** instrução em uma execução sequencial normal. A seção protegida na **tente** bloco é executado.  
   
-2.  Se nenhuma exceção for lançada durante a execução da seção protegida, as cláusulas de `catch` após o bloco `try` não serão executadas. A execução continua na instrução depois da última cláusula de `catch` após o bloco `try` associado.  
+2.  Se nenhuma exceção for gerada durante a execução da seção protegida, o **catch** cláusulas que seguem o **tente** bloco não são executadas. A execução continuará na instrução após a última **catch** cláusula que segue associado **tente** bloco.  
   
-3.  Se uma exceção é lançada durante a execução da seção protegida ou em qualquer rotina que a seção protegida chamar direta ou indiretamente, um objeto de exceção é criado a partir do objeto criado pelo operando `throw`. (Isso significa que um construtor de cópia pode ser envolvido.) Nesse momento, o compilador procurará uma cláusula de `catch` em um contexto mais alto de execução que possa controlar uma exceção do tipo que foi lançado, ou por um manipulador `catch` que possa controlar qualquer tipo de exceção. Os manipuladores `catch` são verificados por ordem de ocorrência após o bloco `try`. Se nenhum manipulador apropriado for localizado, o próximo bloco `try` dinamicamente delimitado será verificado. Esse processo continua até que o bloco `try` delimitado mais externo seja verificado.  
+3.  Se uma exceção for gerada durante a execução da seção protegida ou em qualquer rotina que da seção protegida chama direta ou indiretamente, um objeto de exceção é criado do objeto que é criado pela **lançar** operando. (Isso significa que um construtor de cópia pode ser envolvido.) Neste ponto, o compilador procura um **catch** cláusula em um contexto de execução mais alto que pode manipular uma exceção do tipo que é lançado, ou para um **catch** manipulador que pode lidar com qualquer tipo de exceção. O **catch** manipuladores são examinados em ordem de ocorrência após o **tente** bloco. Se nenhum manipulador apropriado for encontrado, em seguida dinamicamente circunscrição **tente** bloco é examinado. Esse processo continua até que o delimitado mais externo **tente** bloco é examinado.  
   
 4.  Se mesmo assim um manipulador correspondente não for localizado, ou se uma exceção ocorrer durante o processo de desenrolamento antes que o manipulador obtenha o controle, a função de tempo de execução predefinida `terminate` é chamada. Se uma exceção ocorrer depois que a exceção for lançada, mas antes do início do desenrolamento, `terminate` é chamada.  
   
-5.  Se um manipulador `catch` correspondente for localizado, e fizer a captura por valor, o parâmetro formal é inicializado copiando o objeto de exceção. Se a captura for feita por referência, o parâmetro é inicializado para consultar o objeto de exceção. Depois que o parâmetro formal for inicializado, o processo de desenrolamento de pilha é iniciado. Isso envolve a destruição de todos os objetos automáticos que foram completamente construídos — mas ainda não destruídos — entre o início do bloco `try` associado ao manipulador `catch` e o site de lançamento da exceção. A destruição ocorre na ordem inversa da construção. O manipulador `catch` é executado e o programa retoma a execução depois do último manipulador — ou seja, na primeira instrução ou construção que não seja um manipulador `catch`. O controle só pode inserir um manipulador `catch` com uma exceção lançada, nunca por meio de uma instrução `goto` ou de um rótulo `case` em uma instrução `switch`.  
+5.  Se encontrar uma correspondência **catch** manipulador for encontrado e ele captura por valor, o parâmetro formal é inicializado copiando o objeto de exceção. Se a captura for feita por referência, o parâmetro é inicializado para consultar o objeto de exceção. Depois que o parâmetro formal for inicializado, o processo de desenrolamento de pilha é iniciado. Isso envolve a destruição de todos os objetos automáticos que foram completamente construídos — mas ainda não destruídos — entre o início do **tente** bloco que está associado com o **catch** manipulador e o lança o site da exceção. A destruição ocorre na ordem inversa da construção. O **catch** manipulador é executado e o programa retoma a execução após o último manipulador — ou seja, na primeira instrução ou construção que não seja um **catch** manipulador. Controle só pode inserir uma **catch** manipulador por meio de uma exceção lançada, nunca por meio de uma **goto** instrução ou uma **caso** rotular em um **alternar** instrução.  
   
 ## <a name="stack-unwinding-example"></a>Exemplo de desenrolamento de pilha  
  O exemplo a seguir demonstra como a pilha é desenrolada depois que uma exceção é lançada. A execução do thread ignora a instrução throw em `C` e passa à instrução catch em `main`, desenrolando cada função ao longo do caminho. Observe a ordem na qual os objetos `Dummy` são criados e destruídos à medida que saem do escopo. Observe também que nenhuma função é concluída, exceto `main`, que contém a instrução catch. A função `A` nunca retorna da sua chamada a `B()`, e `B` nunca retorna de sua chamada a `C()`. Se você remover o comentário da definição do ponteiro `Dummy` e a instrução delete correspondente, e executar o programa em seguida, observará que o ponteiro nunca será excluído. Isso mostra o que pode acontecer quando as funções não fornecem uma garantia de exceção. Para obter mais informações, consulte Instruções: Design para exceções. Se você fizer comentários fora da instrução catch, observe o que acontece quando um programa é encerrado devido a uma exceção sem tratamento.  
   
-```  
+```cpp 
 #include <string>  
 #include <iostream>  
 using namespace std;  
@@ -114,4 +115,4 @@ int main()
   
 */  
   
-```
+```  

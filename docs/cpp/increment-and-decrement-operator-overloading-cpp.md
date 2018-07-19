@@ -1,5 +1,5 @@
 ---
-title: Incremento e decremento sobrecarregamento (C++) | Microsoft Docs
+title: Operador de incremento e decremento sobrecarga (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee35098dbf78e04241f04687c74c40ded1a0010
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3ed5cee9d3742410c4316b0eb8c3c80b2f41353
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942344"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>Sobrecarga dos operadores de incremento e decremento (C++)
 Os operadores de incremento e decremento formam uma categoria especial porque há duas variantes de cada um:  
@@ -30,14 +31,14 @@ Os operadores de incremento e decremento formam uma categoria especial porque h�
   
 -   Pré-decremento e pós-decremento  
   
- Ao escrever funções de operador sobrecarregado, pode ser útil implementar versões separadas para as versões pré-fixada e pós-fixada desses operadores. Para distinguir entre as duas versões, observa-se a seguinte regra: a forma pré-fixada do operador é declarada exatamente da mesma maneira que qualquer outro operador unário; a forma pós-fixada aceita um argumento adicional do tipo `int`.  
+ Ao escrever funções de operador sobrecarregado, pode ser útil implementar versões separadas para as versões pré-fixada e pós-fixada desses operadores. Para distinguir entre os dois, a seguinte regra é observada: A forma de prefixo do operador é declarada exatamente da mesma maneira que qualquer outro operador unário; a forma pós-fixada aceita um argumento adicional do tipo **int**.  
   
 > [!NOTE]
->  Ao especificar um operador sobrecarregado para a forma pós-fixada do operador de incremento ou decremento, o argumento adicional deve ser do tipo `int`; especificar qualquer outro tipo gera um erro.  
+>  Ao especificar um operador sobrecarregado para a forma pós-fixada do operador de incremento ou decremento, o argumento adicional deve ser do tipo **int**; especificar qualquer outro tipo gera um erro.  
   
  O exemplo a seguir mostra como definir operadores de incremento e decremento pré-fixados e pós-fixados para a classe `Point`:  
   
-```  
+```cpp  
 // increment_and_decrement1.cpp  
 class Point  
 {  
@@ -98,16 +99,16 @@ int main()
   
  Os mesmos operadores podem ser definidos no escopo do arquivo (globalmente) usando os seguintes cabeçalhos de função:  
   
-```  
+```cpp  
 friend Point& operator++( Point& )      // Prefix increment  
 friend Point& operator++( Point&, int ) // Postfix increment  
 friend Point& operator--( Point& )      // Prefix decrement  
 friend Point& operator--( Point&, int ) // Postfix decrement  
 ```  
   
- O argumento do tipo `int` que denota a forma pós-fixada do operador de incremento ou decremento não é muito usado para passar argumentos. Em geral, ele contém o valor 0. No entanto, pode ser usado como se segue:  
+ O argumento do tipo **int** que denota a forma de pós-fixo de incremento ou decremento operador não é comumente usado para passar argumentos. Em geral, ele contém o valor 0. No entanto, pode ser usado como se segue:  
   
-```  
+```cpp  
 // increment_and_decrement2.cpp  
 class Int  
 {  

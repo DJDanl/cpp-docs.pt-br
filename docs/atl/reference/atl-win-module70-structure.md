@@ -1,5 +1,5 @@
 ---
-title: Estrutura de _ATL_WIN_MODULE70 | Microsoft Docs
+title: Estrutura _ATL_WIN_MODULE70 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 587b115c428b0d82183abbec9f712ff06ea448f4
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e330beda4770f60d5358ed8baf8d3b2fae260d3a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34256074"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883028"
 ---
 # <a name="atlwinmodule70-structure"></a>Estrutura _ATL_WIN_MODULE70
-Usado pelo código de janelas em ATL.  
+Usado pelo código de janelas na ATL.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,20 +47,20 @@ struct _ATL_WIN_MODULE70 {
  `m_csWindowCreate`  
  Usado para serializar o acesso ao código de registro de janela. Usado internamente pelo ATL.  
   
- **m_pCreateWndList**  
- Usado para associar o windows para seus objetos. Usado internamente pelo ATL.  
+ `m_pCreateWndList`  
+ Usado para ligar o windows para seus objetos. Usado internamente pelo ATL.  
   
- **m_rgWindowClassAtoms**  
- Usado para controlar os registros de classe de janela para que eles possam ser corretamente seu registro cancelados no encerramento. Usado internamente pelo ATL.  
+ `m_rgWindowClassAtoms`  
+ Usado para acompanhar os registros de classe de janela para que eles possam ser cancelados corretamente no encerramento. Usado internamente pelo ATL.  
   
 ## <a name="remarks"></a>Comentários  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) é definido como um typedef de `_ATL_WIN_MODULE70`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase  
+ **Cabeçalho:** atlbase. h  
   
 ## <a name="see-also"></a>Consulte também  
- [Classes e estruturas](../../atl/reference/atl-classes.md)
+ [Classes e structs](../../atl/reference/atl-classes.md)
 
 
 

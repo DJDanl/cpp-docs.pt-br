@@ -18,18 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b95ff49c9b1f088ac38ffb0791f18f249b211e72
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 069d206418fd392e28114d977b3448f8306a3119
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942331"
 ---
 # <a name="unhook"></a>__unhook
 Dissocia um método de manipulador de um evento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp 
   
       long  __unhook(  
    &SourceClass::EventMethod,  
@@ -52,63 +53,63 @@ long  __unhook(
   
 -   Eventos nativos do C++: *SourceClass* é a classe de origem do evento e *EventMethod* é o evento.  
   
--   Eventos COM: *SourceClass* é a interface de origem do evento e *EventMethod* é um de seus métodos.  
+-   Eventos COM: *SourceClass* é a interface de origem do evento e *EventMethod* é um dos seus métodos.  
   
 -   Eventos gerenciados: *SourceClass* é a classe de origem do evento e *EventMethod* é o evento.  
   
- `interface`  
- O nome da interface que está sendo desligado de `receiver`, apenas para receptores de evento COM no qual o *layout_dependent* parâmetro o [event_receiver](../windows/event-receiver.md) atributo é **true**.  
+ *interface*  
+ O nome da interface que está sendo desligado de *receptor*, apenas para os receptores de evento no qual o *layout_dependent* parâmetro do [event_receiver](../windows/event-receiver.md) atributo é **verdadeira**.  
   
- *Código-fonte*  
- Um ponteiro para uma instância da origem do evento. Dependendo do código `type` especificado em **event_receiver**, *fonte* pode ser um dos seguintes:  
+ *source*  
+ Um ponteiro para uma instância da origem do evento. Dependendo do código `type` especificado no **event_receiver**, *origem* pode ser uma das seguintes opções:  
   
 -   Um ponteiro nativo do objeto de origem do evento.  
   
--   Um **IUnknown**-com base em ponteiro (fonte COM).  
+-   Uma **IUnknown**-com base em ponteiro (origem COM).  
   
 -   Um ponteiro gerenciado do objeto (para eventos gerenciados).  
   
  **&** *ReceiverClass* `::` `HandlerMethod`  
- Um ponteiro para o método do manipulador de eventos a ser desenganchado de um evento. O manipulador é especificado como um método de uma classe ou uma referência a ela. Se você não especificar o nome da classe, `__unhook` assumirá a classe como sendo a chamada.  
+ Um ponteiro para o método do manipulador de eventos a ser desenganchado de um evento. O manipulador é especificado como um método de uma classe ou uma referência a ela. Se você não especificar o nome de classe **unhook** pressupõe que a classe seja que, no qual ele é chamado.  
   
--   Eventos nativos do C++: *ReceiverClass* é a classe do receptor de evento e `HandlerMethod` é o manipulador.  
+-   Eventos nativos do C++: *ReceiverClass* é a classe de receptor de evento e `HandlerMethod` é o manipulador.  
   
--   Eventos COM: *ReceiverClass* é a interface de receptor de evento e `HandlerMethod` é um dos seus manipuladores.  
+-   Eventos COM: *ReceiverClass* é a interface do receptor de evento e `HandlerMethod` é um dos manipuladores.  
   
--   Eventos gerenciados: *ReceiverClass* é a classe do receptor de evento e `HandlerMethod` é o manipulador.  
+-   Eventos gerenciados: *ReceiverClass* é a classe de receptor de evento e `HandlerMethod` é o manipulador.  
   
- `receiver`(opcional)  
- Um ponteiro para uma instância da classe do receptor de eventos. Se você não especificar um receptor, o padrão será a classe ou a estrutura receptora na qual `__unhook` é chamado.  
+ *receptor*(opcional)  
+ Um ponteiro para uma instância da classe do receptor de eventos. Se você não especificar um receptor, o padrão é a classe do receptor ou estrutura na qual **unhook** é chamado.  
   
 ## <a name="usage"></a>Uso  
  Pode ser o uso em qualquer escopo da função, incluindo o principal, fora da classe do receptor de eventos.  
   
 ## <a name="remarks"></a>Comentários  
- Use a função intrínseca `__unhook` em um receptor de eventos para desassociar ou "desenganchar" um método de manipulador de um método de evento.  
+ Use a função intrínseca **unhook** em um receptor de eventos para desassociar ou "desenganchar" um método de manipulador de um método de evento.  
   
- Há três formas de `__unhook`. Você pode usar o primeiro formulário (quatro argumento) na maioria dos casos. Você pode usar o segundo formulário (dois argumentos) de `__unhook` apenas para um receptor de eventos COM. Isso desengancha toda a interface de eventos. Você pode usar o terceiro formato (um argumento) para desenganchar todos os representantes da origem especificada.  
+ Há três formas de **unhook**. Você pode usar o primeiro formulário (quatro argumento) na maioria dos casos. Você pode usar o segundo formulário (dois argumentos) de **unhook** apenas para um receptor de evento COM; isso desengancha a interface de evento completa. Você pode usar o terceiro formato (um argumento) para desenganchar todos os representantes da origem especificada.  
   
  Um valor de retorno diferente de zero indica que ocorreu um erro (eventos gerenciados lançarão uma exceção).  
   
- Se você chamar `__unhook` em um evento e o manipulador de eventos que ainda não estão enganchados, a chamada não terá nenhum efeito.  
+ Se você chamar **unhook** em um evento e o manipulador de eventos que ainda não estão enganchados, ele não terá efeito.  
   
  Em tempo de compilação, o compilador verifica se o evento existe e faz a verificação do tipo de parâmetro com o manipulador especificado.  
   
- Com a exceção de eventos COM, `__hook` e `__unhook` podem ser chamadas fora do receptor de eventos.  
+ Com exceção dos eventos COM, **hook** e **unhook** pode ser chamado fora do receptor do evento.  
   
- Uma alternativa ao uso de `__unhook` é usar o operador - =.  
+ Uma alternativa ao uso **unhook** é usar o operador-=.  
   
- Para obter informações sobre eventos gerenciados na nova sintaxe de codificação, consulte [evento](../windows/event-cpp-component-extensions.md).  
+ Para obter informações sobre a codificação gerenciada de eventos na nova sintaxe, consulte [evento](../windows/event-cpp-component-extensions.md).  
   
 > [!NOTE]
 >  Uma classe ou um struct modelo não podem conter eventos.  
   
 ## <a name="example"></a>Exemplo  
- Consulte [manipulação de eventos em C++ nativo](../cpp/event-handling-in-native-cpp.md) e [manipulação de eventos COM](../cpp/event-handling-in-com.md) para obter exemplos.  
+ Ver [manipulação de eventos em C++ nativo](../cpp/event-handling-in-native-cpp.md) e [manipulação de eventos em COM](../cpp/event-handling-in-com.md) para obter exemplos.  
   
 ## <a name="see-also"></a>Consulte também  
  [Palavras-chave](../cpp/keywords-cpp.md)   
- [origem do evento](../windows/event-source.md)   
+ [EVENT_SOURCE](../windows/event-source.md)   
  [event_receiver](../windows/event-receiver.md)   
  [Event](../cpp/event.md)   
  [hook](../cpp/hook.md)   

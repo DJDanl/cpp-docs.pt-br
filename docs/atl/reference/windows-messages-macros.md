@@ -14,25 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21bb273b94f871e253ab927238c96256f46e2b3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3063dd1bb5bbd9c0eb957b9727027b2d01edfd7d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360211"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886200"
 ---
 # <a name="windows-messages-macros"></a>Macros de mensagens do Windows
-Esta macro encaminha mensagens de janela.  
+Essa macro encaminha mensagens de janela.  
   
 |||  
 |-|-|  
-|[WM_FORWARDMSG](#wm_forwardmsg)|Use esta opção para encaminhar uma mensagem recebida por uma janela para outra janela para o processamento.|  
+|[WM_FORWARDMSG](#wm_forwardmsg)|Use esta opção para encaminhar uma mensagem recebida por uma janela para outra janela para processamento.|  
 
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase 
+ **Cabeçalho:** atlbase. h 
    
 ##  <a name="wm_forwardmsg"></a>  WM_FORWARDMSG  
- Esta macro encaminha uma mensagem recebida por uma janela para outra janela para processamento.  
+ Essa macro encaminha uma mensagem recebida por uma janela para outra janela para processamento.  
   
 ```
 WM_FORWARDMSG
@@ -42,12 +42,12 @@ WM_FORWARDMSG
  Diferente de zero se a mensagem foi processada, zero se não.  
   
 ### <a name="remarks"></a>Comentários  
- Use `WM_FORWARDMSG` para encaminhar uma mensagem recebida por uma janela para outra janela para processamento. Os parâmetros LPARAM e WPARAM são usados da seguinte maneira:  
+ Use WM_FORWARDMSG para encaminhar uma mensagem recebida por uma janela para outra janela para processamento. O LPARAM e o WPARAM parâmetros são usados da seguinte maneira:  
   
 |Parâmetro|Uso|  
 |---------------|-----------|  
 |WPARAM|Dados definidos pelo usuário|  
-|LPARAM|Um ponteiro para um `MSG` estrutura que contém informações sobre a mensagem|  
+|LPARAM|Um ponteiro para um `MSG` estrutura que contém informações sobre uma mensagem|  
   
 ### <a name="example"></a>Exemplo  
  No exemplo a seguir, `m_hWndOther` representa a outra janela que recebe essa mensagem.  

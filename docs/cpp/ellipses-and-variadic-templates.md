@@ -12,22 +12,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eddd87660d996e0d726c4453e0eb732a5553b99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b37df4146b23404463ec869e00a8cf5298b7acf5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416652"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940999"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Reticências e modelos variadic
-Este artigo mostra como usar reticências (`...`) com modelos variadic de C++. No botão de reticências teve muitos usos em C e C++. Eles incluem listas de argumentos variáveis para funções. A função `printf()` da Biblioteca em Tempo de Execução C é um dos exemplos mais conhecidos.  
+Este artigo mostra como usar reticências (`...`) com modelos variadic de C++. As reticências tiveram muitos usos em C e C++. Eles incluem listas de argumentos variáveis para funções. A função `printf()` da Biblioteca em Tempo de Execução C é um dos exemplos mais conhecidos.  
   
  Um *modelo variadic* é um modelo de classe ou função que dá suporte a um número arbitrário de argumentos. Esse mecanismo é útil principalmente para os desenvolvedores de biblioteca C++, pois você pode aplicá-lo a modelos de classe e modelos de função e, dessa forma, fornecer uma ampla variedade de funcionalidades e flexibilidade fortemente tipadas e não triviais.  
   
 ## <a name="syntax"></a>Sintaxe  
- As reticências são usadas em duas maneiras por modelos variadic. À esquerda do nome do parâmetro, isso significa um *pacote de parâmetros*, e à direita do nome do parâmetro, separe os nomes ele expande os pacotes de parâmetro.  
+ As reticências são usadas em duas maneiras por modelos variadic. À esquerda do nome do parâmetro, isso significa uma *pacote de parâmetros*, e à direita do nome do parâmetro, expande os pacotes de parâmetros em nomes separados.  
   
- Aqui está um exemplo básico de *classe de modelo variadic* sintaxe de definição:  
+ Aqui está um exemplo básico de *classe de modelo variadic* definição de sintaxe:  
   
 ```cpp  
 template<typename... Arguments> class classname;  
@@ -72,7 +72,7 @@ template <typename First, typename... Rest> class classname;
 template <typename... Arguments> returntype functionname(Arguments... args);  
 ```  
   
- O `Arguments` pacote de parâmetros é expandida para uso, conforme mostrado na próxima seção, **Noções básicas sobre modelos variadic**.  
+ O `Arguments` pacote de parâmetros, em seguida, é expandido para uso, conforme mostrado na próxima seção, **Noções básicas sobre modelos de variadic**.  
   
  Outras formas de sintaxe de função de modelo variadic são possíveis, incluindo, mas não limitado a, esses exemplos:  
   
@@ -82,7 +82,7 @@ template <typename... Arguments> returntype functionname(Arguments&&... args);
 template <typename... Arguments> returntype functionname(Arguments*... args);  
 ```  
   
- Especificadores como `const` também são permitidos:  
+ Especificadores como **const** também são permitidos:  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(const Arguments&... args);  
@@ -116,7 +116,7 @@ void tfunc(const Arguments&... args)
   
 -   Em uma lista de parâmetros de modelo (`template <parameter-list>`), `typename...` apresenta um pacote de parâmetros de modelo.  
   
--   Em uma cláusula de parâmetro-declaração (`func(parameter-list)`), um botão de reticências "nível superior" apresenta um pacote de parâmetros de função e o posicionamento de botão de reticências é importante:  
+-   Em um parâmetro-declaration-clause (`func(parameter-list)`), um botão de reticências "de nível superior" apresenta um pacote de parâmetros de função e o posicionamento de reticências é importante:  
   
     ```cpp  
     // v1 is NOT a function parameter pack:  
@@ -174,5 +174,5 @@ first, 2, third, 3.14159
 ```  
   
 > [!NOTE]
->  A maioria das implementações que incorporam funções de modelo variadic usar recursão de alguma forma, mas é ligeiramente diferente da tradicional recursão.  Recursão tradicional envolve uma função que chama a próprio, usando a mesma assinatura. (Ela pode ser sobrecarregada ou personalizada, mas a mesma assinatura é escolhida sempre.) A recursão variadic envolve chamar um modelo de função variadic usando números diferentes (quase sempre diminuindo) de argumentos, e assim carimbando uma assinatura diferente todas as vezes. Um “caso base” ainda é necessário, mas a natureza de recursão é diferente.  
+>  A maioria das implementações que incorporam funções de modelo variadic usa recursão de alguma forma, mas é ligeiramente diferente da recursão tradicional.  A recursão tradicional envolve uma função chamando a mesmo usando a mesma assinatura. (Ela pode ser sobrecarregada ou personalizada, mas a mesma assinatura é escolhida sempre.) A recursão variadic envolve chamar um modelo de função variadic usando números diferentes (quase sempre diminuindo) de argumentos, e assim carimbando uma assinatura diferente todas as vezes. Um “caso base” ainda é necessário, mas a natureza de recursão é diferente.  
   

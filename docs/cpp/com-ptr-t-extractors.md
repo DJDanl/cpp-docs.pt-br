@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1343d7dd5f6a35bb222b731294ec897116b9e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0bfe0cdb5ea9dd524f2e81fcb2719bf40001758
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942271"
 ---
 # <a name="comptrt-extractors"></a>Extratores _com_ptr_t
 **Seção específica da Microsoft**  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      operator Interface*( ) const throw( );   
+operator Interface*( ) const throw( );   
 operator Interface&( ) const;   
 Interface& operator*( ) const;   
 Interface* operator->( ) const;   
@@ -55,17 +56,17 @@ operator bool( ) const throw( );
   
 ## <a name="remarks"></a>Comentários  
   
--   **operador Interface\***  retorna o ponteiro de interface encapsulados, o que pode ser **nulo**.  
+-   **operador Interface\***  retorna o ponteiro de interface encapsulado, que pode ser NULL.  
   
--   **operador Interface &** retorna uma referência para o ponteiro de interface encapsulados e emite um erro se o ponteiro for **nulo**.  
+-   **operador Interface &** retorna uma referência ao ponteiro de interface encapsulado e emitirá um erro se o ponteiro é NULL.  
   
--   **operador\***  permite que um objeto de ponteiro inteligente atuar como se fosse a interface encapsulada real quando cancelada.  
+-   **operador\***  permite que um objeto de ponteiro inteligente atue como se fosse a interface encapsulada real quando desreferenciado.  
   
--   **operador ->** permite que um objeto de ponteiro inteligente atuar como se fosse a interface encapsulada real quando cancelada.  
+-   **operador ->** permite que um objeto de ponteiro inteligente atue como se fosse a interface encapsulada real quando desreferenciado.  
   
--   **operador &** libera qualquer ponteiro de interface encapsulada, substituí-lo com **nulo**e retorna o endereço do ponteiro encapsulado. Isso permite que o ponteiro inteligente deve passar pelo endereço de uma função que tem um **out** parâmetro por meio do qual ele retorna um ponteiro de interface.  
+-   **operador &** libera qualquer ponteiro de interface encapsulado, substituindo-o por NULL e retorna o endereço do ponteiro encapsulado. Isso permite que o ponteiro inteligente a ser passado pelo endereço para uma função que tem um *out* parâmetro por meio do qual ele retorna um ponteiro de interface.  
   
--   **operador bool** permite que um objeto de ponteiro inteligente a ser usado em uma expressão condicional. Esse operador retorna **true** se o ponteiro não é **nulo**.  
+-   **operador bool** permite que um objeto de ponteiro inteligente a ser usado em uma expressão condicional. Esse operador retornará TRUE se o ponteiro não for nulo.  
   
  **Fim da seção específica da Microsoft**  
   

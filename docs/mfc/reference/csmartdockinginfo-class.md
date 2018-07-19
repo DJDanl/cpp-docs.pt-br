@@ -36,15 +36,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b787828c59535f0e3008816df6f4ab209e1d882c
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: a900ab0e0307cd059aaeb6f4333ef6d28f98dad6
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079128"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849809"
 ---
 # <a name="csmartdockinginfo-class"></a>Classe CSmartDockingInfo
-Define a aparência dos marcadores de encaixe inteligente.  
+Define a aparência de marcadores inteligentes de encaixe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,32 +64,32 @@ class CSmartDockingInfo : public CObject
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CSmartDockingInfo::CopyTo](#copyto)|Copia os parâmetros de informações de encaixe de smart atual em fornecidos [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) objeto.|  
+|[CSmartDockingInfo::CopyTo](#copyto)|Copia os parâmetros de encaixe informações inteligentes atual fornecido [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) objeto.|  
   
 ### <a name="data-members"></a>Membros de Dados  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Especifica se deve usar a cor do tema atual quando a estrutura exibe marcadores de encaixe inteligente.|  
-|[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Especifica a cor de plano de fundo de base de marcadores de encaixe inteligentes.|  
+|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Especifica se deve usar a cor do tema atual quando o framework exibe marcadores inteligentes de encaixe.|  
+|[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Especifica a cor do plano de fundo de base de marcadores inteligentes de encaixe.|  
 |[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|Especifica a cor que substitui `m_clrToneSrc` em bitmaps de marcador de encaixe inteligente.|  
-|[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|Especifica a cor do smart encaixe bitmaps de marcador.|  
+|[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|Especifica a cor do smart bitmaps de marcador de encaixe.|  
 |[CSmartDockingInfo::m_clrTransparent](#m_clrtransparent)|Especifica a cor do smart bitmaps de marcador de encaixe quando eles são transparentes.|  
-|[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|Especifica o deslocamento do grupo central de marcadores de encaixe inteligente dos limites do retângulo grupo central.|  
-|[CSmartDockingInfo::m_sizeTotal](#m_sizetotal)|Especifica o tamanho total de todos os marcadores de encaixe inteligentes em um grupo.|  
-|[CSmartDockingInfo::m_uiMarkerBmpResID](#m_uimarkerbmpresid)|Define o recurso IDs dos bitmaps que usa a estrutura para marcadores de encaixe inteligente que não são realçados.|  
-|[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|Define o recurso IDs dos bitmaps que usa a estrutura para marcadores de encaixe inteligente são realçados.|  
+|[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|Especifica o deslocamento do grupo central de marcadores inteligentes de encaixe dos limites do retângulo de grupo central.|  
+|[CSmartDockingInfo::m_sizeTotal](#m_sizetotal)|Especifica o tamanho total de todos os marcadores inteligentes de encaixe em um grupo.|  
+|[CSmartDockingInfo::m_uiMarkerBmpResID](#m_uimarkerbmpresid)|Define as IDs dos bitmaps de que a estrutura usa para marcadores inteligentes de encaixe que não estão realçados do recurso.|  
+|[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|Define as IDs dos bitmaps de que a estrutura usa para marcadores inteligentes de encaixe que são realçadas do recurso.|  
   
 ## <a name="remarks"></a>Comentários  
- Os identificadores de framework inteligente marcadores de encaixe internamente. A ilustração a seguir mostra os marcadores de encaixe inteligentes padrão:  
+ As alças da estrutura inteligente marcadores de encaixe internamente. A ilustração a seguir mostra os marcadores inteligentes de encaixe padrão:  
   
- ![Padrão marcadores de encaixe inteligente](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")  
+ ![Marcadores de Standard para encaixar smart](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")  
   
- Nesta figura, a imagem à esquerda mostra um marcador de encaixe inteligente grupo central que não tenha o encaixe para uma guia habilitada. A imagem do meio mostra um marcador de encaixe inteligente da borda direita. A imagem à direita mostra um grupo central inteligente encaixe marcador com encaixe para uma guia habilitada. O marcador de encaixe inteligente grupo central tem um bitmap principal e cinco inteligente encaixe bitmaps de marcador.  
+ Nesta figura, a imagem à esquerda mostra um marcador de encaixe inteligente grupo central que não tenha de encaixe para uma guia habilitada. A imagem no meio mostra um marcador de encaixe inteligentes de borda direita. A imagem à direita mostra um marcador de encaixe inteligente grupo central que têm o encaixe à guia habilitada. O marcador de encaixe inteligente do grupo central tem um bitmap principal e cinco inteligente encaixe bitmaps de marcador.  
   
- Você pode personalizar os seguintes parâmetros de marcadores de encaixe inteligentes:  
+ Você pode personalizar os seguintes parâmetros de marcadores inteligentes de encaixe:  
   
--   Cor. Por exemplo, você pode substituir a cor azul dos marcadores na figura com todas as cores definidas pelo usuário.  
+-   Cor. Por exemplo, você pode substituir a cor azul dos marcadores na figura com qualquer cor definida pelo usuário.  
   
 -   Cor de transparência.  
   
@@ -97,11 +97,11 @@ class CSmartDockingInfo : public CObject
   
 -   O bitmap principal que representa o grupo central.  
   
--   Os bitmaps que representa os marcadores de encaixe inteligentes regulares e realçados.  
+-   Os bitmaps que representa os regulares e realçados marcadores inteligentes de encaixe.  
   
- A ilustração a seguir mostra um exemplo de marcadores de encaixe inteligente personalizados:  
+ A ilustração a seguir mostra um exemplo de marcadores inteligentes de encaixe que foram personalizados:  
   
- ![Marcadores personalizados para encaixar inteligente](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")  
+ ![Marcadores personalizados para encaixar smart](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -112,30 +112,30 @@ class CSmartDockingInfo : public CObject
  **Cabeçalho:** afxDockingManager.h  
   
 ##  <a name="copyto"></a>  CSmartDockingInfo::CopyTo  
- Copia os parâmetros atuais do encaixe inteligentes fornecido [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) objeto.  
+ Copia os parâmetros atuais de encaixe inteligentes fornecido [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) objeto.  
   
 ```  
 void CopyTo(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *params*  
- Um objeto do tipo `CSmartDockingInfo` que é preenchida com os parâmetros de encaixe inteligentes atuais.  
+ [out] *param. autom.*  
+ Um objeto do tipo `CSmartDockingInfo` que é preenchida com os parâmetros atuais de encaixe inteligentes.  
   
 ##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
- Especifica se deve usar a cor do tema atual quando a estrutura exibe marcadores de encaixe inteligente.  
+ Especifica se deve usar a cor do tema atual quando o framework exibe marcadores inteligentes de encaixe.  
   
 ```  
 BOOL m_bUseThemeColorInShading;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Se `TRUE`, os marcadores são desenhados usando a cor do tema atual; caso contrário, os marcadores são desenhados com uma cor azul clara.  
+ Se for TRUE, os marcadores são desenhados usando a cor do tema atual; Caso contrário, os marcadores são desenhados com a cor azul claro.  
   
- O valor padrão é `FALSE`.  
+ O valor padrão é FALSE.  
   
 ##  <a name="m_clrbasebackground"></a>  CSmartDockingInfo::m_clrBaseBackground  
- Especifica a cor de plano de fundo de base de marcadores de encaixe inteligentes.  
+ Especifica a cor do plano de fundo de base de marcadores inteligentes de encaixe.  
   
 ```  
 COLORREF m_clrBaseBackground;  
@@ -149,12 +149,12 @@ COLORREF m_clrToneDest;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Defina esse valor para alterar a cor do marcador bitmaps programaticamente. Por exemplo, se você quiser alterar a cor dos marcadores padrão fornecidos com o framework, defina esse valor para a cor desejada. Por padrão, [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc) é definido como RGB (61, 123, 241) (uma cor azulada).  
+ Defina esse valor para alterar a cor do marcador bitmaps de forma programática. Por exemplo, se você quiser alterar a cor dos marcadores padrão fornecidos com o framework, defina esse valor para a cor desejada. Por padrão, [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc) é definido como RGB (61, 123, 241) (uma cor azulada).  
   
  Para alterar a cor dos marcadores personalizados, você deve especificar `m_clrToneDest` e `m_clrToneSrc`.  
   
 ##  <a name="m_clrtonesrc"></a>  CSmartDockingInfo::m_clrToneSrc  
- Especifica a cor do smart encaixe bitmaps de marcador.  
+ Especifica a cor do smart bitmaps de marcador de encaixe.  
   
 ```  
 COLORREF m_clrToneSrc;  
@@ -173,37 +173,37 @@ COLORREF m_clrTransparent;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Você deve definir esse valor quando você exibir marcadores personalizados e bitmaps personalizados no grupo de encaixe.  
+ Você deve definir esse valor quando você exibe marcadores personalizados e bitmaps personalizados no grupo de encaixe.  
   
 ##  <a name="m_ncentralgroupoffset"></a>  CSmartDockingInfo::m_nCentralGroupOffset  
- Especifica o deslocamento entre o grupo central de marcadores de encaixe inteligentes e os limites do retângulo grupo central.  
+ Especifica o deslocamento entre o grupo central de marcadores inteligentes de encaixe e os limites do retângulo de grupo central.  
   
 ```  
 int m_nCentralGroupOffset;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Especifique esse valor se você quiser alterar o deslocamento padrão entre marcadores personalizados e os limites do grupo central de marcadores de encaixe inteligente. O deslocamento padrão é de 5 pixels.  
+ Especifique esse valor se você quiser alterar o deslocamento padrão entre os limites do grupo central de marcadores inteligentes de encaixe e marcadores personalizados. O deslocamento padrão é 5 pixels.  
   
 ##  <a name="m_sizetotal"></a>  CSmartDockingInfo::m_sizeTotal  
- Especifica o tamanho total de um retângulo que inclui todos os marcadores de encaixe inteligente no grupo central.  
+ Especifica o tamanho total de um retângulo delimitador que inclui todos os marcadores inteligentes de encaixe no grupo central.  
   
 ```  
 CSize m_sizeTotal;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Defina `m_sizeTotal` para o tamanho do retângulo delimitador do marcador grupo central. Você deve especificar esse valor se você estiver usando bitmaps personalizados para marcadores.  
+ Definir `m_sizeTotal` para o tamanho do retângulo delimitador do marcador de grupo central. Você deve especificar esse valor se você estiver usando bitmaps personalizados para os marcadores.  
   
 ##  <a name="m_uimarkerbmpresid"></a>  CSmartDockingInfo::m_uiMarkerBmpResID  
- Define o recurso IDs dos bitmaps que são usados para não realçado personalizados marcadores de encaixe inteligente.  
+ Define as IDs dos bitmaps que são usados para não realçado personalizados marcadores inteligentes de encaixe do recurso.  
   
 ```  
 UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Preencha essa matriz com o recurso de IDs de bitmaps que representa os marcadores de encaixe inteligentes. `AFX_SD_MARKERS_NUM` no momento está definido como 5. Você pode preencher a matriz da seguinte maneira:  
+ Preencha essa matriz com as IDs dos bitmaps que representa os marcadores inteligentes de encaixe do recurso. AFX_SD_MARKERS_NUM atualmente é definido como 5. Você pode preencher a matriz da seguinte maneira:  
   
  `params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;`  
   
@@ -216,14 +216,14 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
  `params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;`  
   
 ##  <a name="m_uimarkerlightbmpresid"></a>  CSmartDockingInfo::m_uiMarkerLightBmpResID  
- Define o recurso IDs dos bitmaps que são usados para marcadores de encaixe inteligente personalizados realçados.  
+ Define as IDs dos bitmaps que são usados para realçado personalizados marcadores inteligentes de encaixe do recurso.  
   
 ```  
 UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Preencha essa matriz com o recurso de IDs de bitmaps que representa os marcadores de encaixe inteligentes realçados. `AFX_SD_MARKERS_NUM` no momento está definido como 5. Você pode preencher a matriz da seguinte maneira:  
+ Preencha essa matriz com as IDs dos bitmaps que representa os realçado marcadores inteligentes de encaixe do recurso. AFX_SD_MARKERS_NUM atualmente é definido como 5. Você pode preencher a matriz da seguinte maneira:  
   
  `params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;`  
   
@@ -236,6 +236,6 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
  `params.m_uiMarkerLightBmpResID[4] = IDB_MARKER_CENTER_LIGHT;`  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CObject](../../mfc/reference/cobject-class.md)

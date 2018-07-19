@@ -1,5 +1,5 @@
 ---
-title: Estrutura de _AtlCreateWndData | Microsoft Docs
+title: Estrutura atlcreatewnddata | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66388c12def72a9da5b5aeb7e4713ca61c23a6e0
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: cf51197750e9595570a7b011c179c2ed4c7902c3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255789"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880002"
 ---
 # <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData Structure
-Essa estrutura contém dados de instância de classe no código de janelas em ATL.  
+Essa estrutura contém dados de instância de classe no código de janelas no ATL.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,20 +40,20 @@ Essa estrutura contém dados de instância de classe no código de janelas em AT
 ```  
   
 ## <a name="members"></a>Membros  
- **m_pThis**  
+ `m_pThis`  
  O **isso** ponteiro usado para obter acesso à instância de classe em procedimentos de janela.  
   
  `m_dwThreadID`  
  A ID do thread da instância da classe atual.  
   
- **m_pNext**  
+ `m_pNext`  
  Ponteiro para o próximo `_AtlCreateWndData` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase  
+ **Cabeçalho:** atlbase. h  
   
 ## <a name="see-also"></a>Consulte também  
- [Classes e estruturas](../../atl/reference/atl-classes.md)
+ [Classes e structs](../../atl/reference/atl-classes.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: operador de uuidof | Microsoft Docs
+title: operador uuidof | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70731665ca2a2eba739f139678e0f7eaface2b85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92f7e0f3652a1142c97f878784edba6229fb19cd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942230"
 ---
 # <a name="uuidof-operator"></a>Operador __uuidof
 **Seção específica da Microsoft**  
@@ -33,29 +34,27 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      __uuidof (  
-   expression   
-)  
+__uuidof (expression)  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O *expressão* pode ser um nome de tipo, ponteiro, referência ou matriz desse tipo, um modelo especializado sobre esses tipos, ou uma variável desses tipos. O argumento é válido enquanto o compilador puder usá-lo para localizar o GUID vinculado.  
+ O *expressão* pode ser um nome de tipo, ponteiro, referência ou matriz desse tipo, um modelo especializado nesses tipos ou uma variável desses tipos. O argumento é válido enquanto o compilador puder usá-lo para localizar o GUID vinculado.  
   
- Um caso especial de nesse intrínseco é quando o **0** ou **nulo** for fornecida como argumento. Nesse caso, `__uuidof` retornará um GUID composto de zero.  
+ Um caso especial desse intrínseco é quando qualquer um dos **0** ou nulo for fornecido como o argumento. Nesse caso, **uuidof** retornará um GUID composto de zero.  
   
  Use essa palavra-chave para extrair o GUID vinculado a:  
   
--   Um objeto de [uuid](../cpp/uuid-cpp.md) atributos estendidos.  
+-   Um objeto, o [uuid](../cpp/uuid-cpp.md) atributo estendido.  
   
 -   Um bloco de biblioteca criado com o [módulo](../windows/module-cpp.md) atributo.  
   
 > [!NOTE]
->  Em uma compilação de depuração, `__uuidof` sempre inicializa um objeto dinamicamente (no tempo de execução). Em uma compilação de versão, `__uuidof` pode inicializar um objeto estaticamente (no tempo de compilação).  
+>  Em uma compilação de depuração **uuidof** sempre inicializa um objeto dinamicamente (em tempo de execução). Em um build de versão **uuidof** pode estaticamente (no tempo de compilação) inicializar um objeto.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir (compilado com ole32.lib) exibirá o uuid de um bloco de biblioteca criado com o atributo module:  
   
-```  
+```cpp 
 // expre_uuidof.cpp  
 // compile with: ole32.lib  
 #include "stdio.h"  
@@ -77,9 +76,9 @@ int main() {
 ```  
   
 ## <a name="comments"></a>Comentários  
- Em casos onde o nome da biblioteca não está no escopo, você pode usar __LIBID\_ em vez de `__uuidof`. Por exemplo:  
+ Em casos em que o nome da biblioteca não está no escopo, você pode usar `__LIBID_` em vez de **uuidof**. Por exemplo:  
   
-```  
+```cpp 
 StringFromCLSID(__LIBID_, &lpolestr);  
 ```  
   

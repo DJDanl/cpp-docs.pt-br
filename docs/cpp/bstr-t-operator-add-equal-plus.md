@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e443b233e19f6cdc64d7d6021a9a9c078a4f327
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4a2ea7cd3b93f7445190f16a92a580fe9628a976
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942147"
 ---
 # <a name="bstrtoperator--"></a>_bstr_t::operator +=, +
 **Seção específica da Microsoft**  
@@ -33,20 +34,10 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      _bstr_t& operator+=(  
-   const _bstr_t& s1   
-);  
-_bstr_t operator+(  
-   const _bstr_t& s1   
-);  
-friend _bstr_t operator+(  
-   const char* s2,  
-   const _bstr_t& s1   
-);  
-friend _bstr_t operator+(  
-   const wchar_t* s3,  
-   const _bstr_t& s1   
-);  
+_bstr_t& operator+=( const _bstr_t& s1 );  
+_bstr_t operator+( const _bstr_t& s1 );  
+friend _bstr_t operator+( const char* s2, const _bstr_t& s1);  
+friend _bstr_t operator+( const wchar_t* s3, const _bstr_t& s1);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -56,19 +47,19 @@ friend _bstr_t operator+(
  *S2*  
  Uma cadeia de caracteres multibyte.  
   
- `s3`  
+ *S3*  
  Uma cadeia de caracteres Unicode.  
   
 ## <a name="remarks"></a>Comentários  
  Esses operadores executam a concatenação de cadeias de caracteres:  
   
--   **+ operador = (***s1***)** acrescenta os caracteres a encapsulada `BSTR` de *s1* ao final da encapsuladadesseobjeto`BSTR`.      
+-   **Operator + = (***s1***)** anexa os caracteres em encapsulado `BSTR` de *s1* ao final da deencapsuladodesteobjeto`BSTR`.      
   
--   **operador + (***s1***)** retorna o novo `_bstr_t` que é formado pela concatenação do objeto `BSTR` da *s1*.      
+-   **operador + (***s1***)** retorna o novo `_bstr_t` que é formado pela concatenação desse objeto `BSTR` com do *s1*.      
   
--   **operador + (***s2***&#124;***s1***)** retorna um novo `_bstr_t` que é formado pela concatenação um cadeia de caracteres multibyte *s2*, convertido em Unicode, com o `BSTR` encapsulada na *s1*.          
+-   **operador + (***s2***&#124;***s1***)** retorna um novo `_bstr_t` formado pela concatenação de um cadeia de caracteres multibyte *s2*, convertido em Unicode, com o `BSTR` encapsulada na *s1*.          
   
--   **operador + (** `s3` **,***s1***)** retorna um novo `_bstr_t` que é formado pela concatenação de uma cadeia de caracteres Unicode `s3` com o `BSTR` encapsulada na *s1*.        
+-   **operador + (***s3* **,***s1***)** retorna um novo `_bstr_t` formado pela concatenação de uma cadeia de caracteres Unicode *s3* com o `BSTR` encapsulada na *s1*.        
   
  **Fim da seção específica da Microsoft**  
   

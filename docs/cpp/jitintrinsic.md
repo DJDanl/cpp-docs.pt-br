@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cd88882ea104275e4c1a43ccf05494a859d303
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8b1c932f53651b8ad116139724348714b183506
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418748"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939384"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
 Marca a função como significante para o Common Language Runtime de 64 bits. Isso é usado em determinadas funções em bibliotecas fornecidas pela Microsoft.  
@@ -37,7 +37,7 @@ __declspec(jitintrinsic)
 ## <a name="remarks"></a>Comentários  
  `jitintrinsic` adiciona um MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) a uma assinatura de função.  
   
- Não é aconselhável que os usuários usem esse modificador `__declspec`, porque resultados inesperados podem ocorrer.  
+ Os usuários não devem usar isso **declspec** modificador, como resultados inesperados pode ocorrer.  
   
 ## <a name="see-also"></a>Consulte também  
  [__declspec](../cpp/declspec.md)   

@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cea2c7e4bff895f9ccabc044ed5b7f5ae506b32
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1d4ab0694936fe4ad25b3c56bf286e9416e4e935
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942259"
 ---
 # <a name="switch-statement-c"></a>Instrução switch (C++)
 Permite a seleção entre várias seções de código, dependendo do valor de uma expressão integral.  
@@ -38,23 +39,23 @@ Permite a seleção entre várias seções de código, dependendo do valor de um
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O *expressão* deve ser de um tipo integral ou de um tipo de classe para o qual há uma conversão não ambígua para tipo integral. Promoção de integral é executada conforme descrito em [conversões padrão](standard-conversions.md).  
+ O *expressão* deve ser do tipo integral ou de um tipo de classe para o qual há uma conversão inequívoca para tipo integral. Promoção de integral é executada conforme descrito em [conversões padrão](standard-conversions.md).  
   
- O `switch` corpo da instrução consiste em uma série de **caso** rótulos e um opcional **padrão** rótulo. Não há duas expressões de constantes em **caso** instruções podem ser avaliadas como o mesmo valor. O **padrão** rótulo pode aparecer apenas uma vez. As instruções rotuladas não são requisitos sintáticos, mas a instrução `switch` fica sem sentido sem elas.   A instrução default não precisa vir no final; ela pode aparecer em qualquer lugar no corpo da instrução switch. Um rótulo case ou default só pode aparecer dentro de uma instrução switch.  
+ O **alternar** corpo da instrução consiste em uma série de **caso** rótulos e um opcional **padrão** rótulo. Não há duas expressões de constantes em **caso** instruções podem ser avaliada como o mesmo valor. O **padrão** rótulo pode aparecer apenas uma vez. As instruções rotuladas não são requisitos sintáticos, mas o **alternar** instrução não faz sentida sem elas.   A instrução default não precisa vir no final; ela pode aparecer em qualquer lugar no corpo da instrução switch. Um rótulo case ou default só pode aparecer dentro de uma instrução switch.  
   
- O *expressão constante* em cada **caso** rótulo é convertido para o tipo de *expressão* e comparada com *expressão* para igualdade. O controle passará para a instrução cuja **caso** *expressão constante* corresponde ao valor do *expressão*. O comportamento resultante é mostrado na tabela a seguir.  
+ O *expressão-constante* em cada **caso** rótulo é convertido para o tipo de *expressão* e em comparação com *expressão* para igualdade. Controle passa para a instrução cuja **caso** *expressão de constante* corresponde ao valor de *expressão*. O comportamento resultante é mostrado na tabela a seguir.  
   
 ### <a name="switch-statement-behavior"></a>Comportamento da instrução switch  
   
 |Condição|Ação|  
 |---------------|------------|  
 |O valor convertido corresponde ao da expressão de controle promovida.|O controle é transferido para a instrução após esse rótulo.|  
-|Nenhuma das constantes corresponder as constantes no **caso** rótulos; um **padrão** rótulo está presente.|O controle é transferido para o **padrão** rótulo.|  
-|Nenhuma das constantes corresponder as constantes no **caso** rótulos; **padrão** rótulo não está presente.|O controle é transferido para a instrução após a instrução `switch`.|  
+|Nenhuma das constantes corresponde às constantes na **caso** rotula; um **padrão** rótulo estiver presente.|O controle é transferido para o **padrão** rótulo.|  
+|Nenhuma das constantes corresponde às constantes na **caso** rótulos; **padrão** rótulo não está presente.|O controle é transferido para a instrução após o **alternar** instrução.|  
   
- Se uma expressão de correspondência for encontrada, o controle não é impedido por subsequentes **caso** ou **padrão** rótulos. O [quebra](../cpp/break-statement-cpp.md) instrução é usada para interromper a execução e transfere o controle para a instrução após a `switch` instrução. Sem um **quebra** instrução, cada instrução da correspondentes **caso** rótulo ao final do `switch`, incluindo o **padrão**, é executado. Por exemplo:  
+ Se uma expressão correspondente for encontrada, o controle não será impedido pelos subsequentes **caso** ou **padrão** rótulos. O [quebra](../cpp/break-statement-cpp.md) instrução é usada para interromper a execução e transferir o controle para a instrução após a **alternar** instrução. Sem um **quebra** instrução, cada instrução do correspondente **caso** rótulo ao final dos **alternar**, incluindo o **padrão**, é executado. Por exemplo:  
   
-```  
+```cpp 
 // switch_statement1.cpp  
 #include <stdio.h>  
   
@@ -83,9 +84,9 @@ int main() {
 }  
 ```  
   
- No exemplo acima, `capa` será incrementado se `c` for `A` maiúsculo. A instrução `break` após `capa++` termina a execução do corpo da instrução `switch` e passa o controle para o loop `while`. Sem o `break` instrução, execução "caiu por meio de" para a próxima instrução rotulada, para que `lettera` e `nota` também deve ser incrementado. A instrução `break` para `case 'a'` cumpre finalidade semelhante. Se `c` for `a` minúsculo, `lettera` será incrementado e a instrução `break` terminará o corpo da instrução `switch`. Se `c` não for `a` nem `A`, a instrução `default` será executada.  
+ No exemplo acima, `capa` será incrementado se `c` for `A` maiúsculo. O **quebra** instrução após `capa++` finaliza a execução do **alternar** corpo da instrução e o controle passa para o **enquanto** loop. Sem o **quebra** instrução, execução seria "passar" para a próxima instrução rotulada, para que `lettera` e `nota` também seriam incrementados. Uma finalidade similar é atendida pela **quebra** instrução para `case 'a'`. Se `c` está em letras minúsculas `a`, `lettera` é incrementado e a **quebra** instrução finaliza a **alternar** corpo da instrução. Se `c` não é um `a` ou `A`, o **padrão** instrução é executada.  
 
- **Visual Studio 2017 e posterior:** (disponível com [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) o `[[fallthrough]]` atributo é especificado o padrão C++ 17. Ele pode ser usado em um `switch` instrução como uma dica para o compilador (ou para qualquer pessoa que o código de leitura) destina-se esse comportamento leva a algo. O compilador do Visual C++ no momento não avisa sobre o comportamento de fallthrough para que este atributo não tem nenhum comportamento de compilador efeito. Observe que o atributo é aplicado a uma instrução vazia dentro da instrução rotulada; em outras palavras, o ponto e vírgula é necessário.
+ **Visual Studio 2017 e posterior:** (disponível com [/std:c++17 + + 17](../build/reference/std-specify-language-standard-version.md)) o `[[fallthrough]]` atributo é especificado no C++ 17 standard. Ele pode ser usado em uma **alternar** instrução como uma dica para o compilador (ou para qualquer pessoa que leia o código) destina-se que o comportamento fall-through. O compilador do Visual C++ no momento não avisa sobre o comportamento de fallthrough, para que esse atributo não tem nenhum efeito no comportamento do compilador. Observe que o atributo é aplicado a uma instrução vazia dentro da instrução rotulada; em outras palavras, o ponto e vírgula é necessário.
 
 ```cpp
 int main()
@@ -113,7 +114,7 @@ int main()
 }
 ```
 
- **Visual Studio 2017 versão posterior e 15,3** (disponível com [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): uma instrução switch pode introduzir e inicializar uma variável cujo escopo é limitado para o bloco da instrução switch:
+ **Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): uma instrução switch pode introduzir e inicializar uma variável cujo escopo esteja limitado para o bloco de instrução switch:
 
 ```cpp
  switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -126,7 +127,7 @@ int main()
         };
 ```
 
- Um bloco interno de uma instrução `switch` pode conter definições com inicializações, desde que elas sejam acessíveis, isto é, não sejam ignoradas por todos os caminhos de execução possíveis. Os nomes introduzidos por meio dessas declarações têm escopo local. Por exemplo:  
+ Um bloco interno de um **alternar** instrução pode conter definições com inicializações, desde que elas sejam acessíveis — ou seja, não sejam ignoradas por todos os possíveis caminhos de execução. Os nomes introduzidos por meio dessas declarações têm escopo local. Por exemplo:  
   
 ```cpp  
 // switch_statement2.cpp  
@@ -161,13 +162,13 @@ int main(int argc, char *argv[])
 }  
 ```  
   
- Uma instrução `switch` pode estar aninhada. Nesses casos, **caso** ou **padrão** rótulos associar com o mais próximo `switch` instrução que inclui-los.  
+ Um **alternar** instrução pode ser aninhada. Nesses casos, **caso** ou **padrão** rótulos associar com o mais próximo **alternar** instrução que inclui-los.  
 
  
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
- O Microsoft C não limita o número de valores de case em uma instrução `switch`. O número é limitado somente pela memória disponível. O ANSI C requer que pelo menos 257 rótulos case sejam permitidos em uma instrução `switch`.  
+ O Microsoft C não limita o número de valores de case em uma **alternar** instrução. O número é limitado somente pela memória disponível. ANSI C requer pelo menos 257 rótulos case sejam permitidos em uma **alternar** instrução.  
   
- O padrão do Microsoft C é que as extensões da Microsoft sejam habilitadas. Use o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção de compilador desabilitar essas extensões.  
+ O padrão do Microsoft C é que as extensões da Microsoft sejam habilitadas. Use o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção de compilador para desabilitar essas extensões.  
   
 **Fim da seção específica da Microsoft**  
   

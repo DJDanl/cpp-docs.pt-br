@@ -14,55 +14,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f841124fd12497fdb4dd4b813de2d803e43ff60b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a8c45b9556f6211f7dc1a0c4f985cd06eb8f0b19
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359543"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884441"
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Exemplo de um Gerenciador de cadeia de caracteres personalizada
-A biblioteca do ATL para implementar um exemplo de um Gerenciador de cadeia de caracteres personalizada usado pela classe [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), chamado **CFixedStringMgr**. `CFixedStringT` é derivado de [CStringT](../atl-mfc-shared/reference/cstringt-class.md) e implementa uma cadeia de caracteres que aloca seus dados de caractere como parte do `CFixedStringT` objeto em si, desde que a cadeia de caracteres é menor que o comprimento especificado pelo **t_nChars** parâmetro do modelo de `CFixedStringT`. Com essa abordagem, a cadeia de caracteres não precisa de heap, a menos que o comprimento da cadeia de caracteres ultrapassar o tamanho do buffer fixo. Porque `CFixedStringT` não sempre use um heap para alocar a seus dados de cadeia de caracteres, não é possível usar **CAtlStringMgr** como seu gerente de cadeia de caracteres. Ele usa um Gerenciador de cadeia de caracteres personalizada (**CFixedStringMgr**), a implementação de [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interface. Essa interface é discutida em [implementação um Gerenciador de personalizado cadeia de caracteres (método avançado)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  
+A biblioteca ATL para implementar um exemplo de um Gerenciador de cadeia de caracteres personalizada usado pela classe [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), chamado **CFixedStringMgr**. `CFixedStringT` é derivado de [CStringT](../atl-mfc-shared/reference/cstringt-class.md) e implementa aloca seus dados de caractere como parte de uma cadeia de caracteres a `CFixedStringT` objeto em si, desde que a cadeia de caracteres é menor que o comprimento especificado pelo `t_nChars` parâmetro de modelo de `CFixedStringT`. Com essa abordagem, a cadeia de caracteres não precisa de heap, a menos que o comprimento da cadeia de caracteres ultrapassar o tamanho do buffer fixo. Porque `CFixedStringT` nem sempre faz uso um heap para alocar seus dados de cadeia de caracteres, não é possível usar `CAtlStringMgr` como seu Gerenciador de cadeia de caracteres. Ele usa um Gerenciador de cadeia de caracteres personalizada (`CFixedStringMgr`), Implementando a [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interface. Essa interface é discutida [implementação de um cadeia de caracteres Gerenciador personalizada (método avançado)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  
   
- O construtor para **CFixedStringMgr** usa três parâmetros:  
+ O construtor para `CFixedStringMgr` usa três parâmetros:  
   
--   **pData:** um ponteiro para o fixa `CStringData` estrutura a ser usado.  
+-   *pData:* um ponteiro para a correção `CStringData` estrutura a ser usado.  
   
--   **nChars:** o número máximo de caracteres a `CStringData` estrutura pode conter.  
+-   *nChars:* o número máximo de caracteres a `CStringData` estrutura pode conter.  
   
--   **pMgr:** um ponteiro para o `IAtlStringMgr` interface de um "Gerenciador de backup de cadeia de caracteres".  
+-   *pMgr:* um ponteiro para o `IAtlStringMgr` interface de um "Gerenciador de backup de cadeia de caracteres".  
   
- O construtor armazena os valores de `pData` e **pMgr** em suas variáveis de membro do respectivos (`m_pData` e **m_pMgr**). Em seguida, define o comprimento do buffer para zero, o comprimento disponível igual ao tamanho máximo do buffer fixo e a contagem de referência como -1. O valor de contagem de referência indica que o buffer está bloqueado e usar essa instância de **CFixedStringMgr** como o Gerenciador de cadeia de caracteres.  
+ O construtor armazena os valores de *pData* e *pMgr* em suas variáveis de membro respectivos (`m_pData` e `m_pMgr`). Em seguida, define o tamanho do buffer como zero, o comprimento disponível igual ao tamanho máximo do buffer fixo e a contagem de referência como -1. O valor de contagem de referência indica que o buffer está bloqueado e usar essa instância de `CFixedStringMgr` como o Gerenciador de cadeia de caracteres.  
   
- Marcar o buffer bloqueado impede que outros `CStringT` instâncias mantendo uma referência de compartilhado para o buffer. Se outras `CStringT` instâncias foram autorizadas a compartilhar o buffer seria possível para o buffer contido pelo `CFixedStringT` a ser excluído enquanto outras cadeias de caracteres ainda estavam usando o buffer.  
+ O buffer de marcação como bloqueado impede que outros `CStringT` instâncias de manter uma referência de compartilhado para o buffer. Se outros `CStringT` instâncias foram permissão para compartilhar o buffer, seria possível para o buffer contido pelo `CFixedStringT` a ser excluído enquanto outras cadeias de caracteres ainda estavam usando o buffer.  
   
- **CFixedStringMgr** é uma implementação completa do `IAtlStringMgr` interface. A implementação de cada método é discutida separadamente.  
+ `CFixedStringMgr` é uma implementação completa da `IAtlStringMgr` interface. A implementação de cada método é discutida separadamente.  
   
 ## <a name="implementation-of-cfixedstringmgrallocate"></a>Implementação de CFixedStringMgr::Allocate  
- A implementação de **CFixedStringMgr::Allocate** primeiro verifica se o tamanho solicitado da cadeia de caracteres é menor ou igual ao tamanho do buffer fixo (armazenados no `m_pData` membro). Se o buffer fixo é grande o suficiente, **CFixedStringMgr** bloqueia o buffer fixo com um comprimento de zero. Como o comprimento da cadeia de caracteres não ultrapassem o tamanho do buffer fixo, `CStringT` não terá que realocar o buffer.  
+ A implementação de `CFixedStringMgr::Allocate` primeiro verifica para ver se o tamanho solicitado da cadeia de caracteres é menor ou igual ao tamanho do buffer fixo (armazenadas em do `m_pData` membro). Se o buffer fixo for grande o suficiente, `CFixedStringMgr` bloqueia o buffer fixo com um comprimento de zero. Desde que o comprimento da cadeia de caracteres não crescer além do tamanho do buffer fixo, `CStringT` não terá de realocar o buffer.  
   
- Se o tamanho solicitado da cadeia de caracteres for maior que o buffer fixo **CFixedStringMgr** encaminha a solicitação para o Gerenciador de backup de cadeia de caracteres. É provável que o Gerenciador de backup de cadeia de caracteres para alocar o buffer da pilha. No entanto, antes de retornar esse buffer **CFixedStringMgr** bloqueia o buffer e substitui o ponteiro de Gerenciador de cadeia de caracteres do buffer com um ponteiro para o **CFixedStringMgr** objeto. Isso garante que qualquer tentativa realocar ou liberar o buffer por `CStringT` chamará **CFixedStringMgr**.  
+ Se o tamanho solicitado da cadeia de caracteres for maior que o buffer fixo `CFixedStringMgr` encaminha a solicitação para o Gerenciador de backup de cadeia de caracteres. É provável que o Gerenciador de cadeia de caracteres de backup para alocar o buffer do heap. No entanto, antes de retornar esse buffer `CFixedStringMgr` bloqueia o buffer e substitui o ponteiro de Gerenciador de cadeia de caracteres do buffer com um ponteiro para o `CFixedStringMgr` objeto. Isso garante que qualquer tentativa realocar ou liberar o buffer pelo `CStringT` chamará `CFixedStringMgr`.  
   
 ## <a name="implementation-of-cfixedstringmgrreallocate"></a>Implementação de CFixedStringMgr::ReAllocate  
- A implementação de **CFixedStringMgr::ReAllocate** é muito semelhante à sua implementação de **alocar**.  
+ A implementação de `CFixedStringMgr::ReAllocate` é muito semelhante à sua implementação de `Allocate`.  
   
- Se o buffer que está sendo realocado for o buffer fixado e o tamanho do buffer solicitado é menor do que o buffer fixo, nenhuma alocação é feita. No entanto, se o buffer que está sendo realocado não for o buffer fixado, ele deve ser um buffer alocado com o Gerenciador de backup. Nesse caso, o Gerenciador de backup é usado para realocar o buffer.  
+ Se o buffer que está sendo realocado é buffer fixo e o tamanho do buffer solicitado é menor do que o buffer fixo, nenhuma alocação é feita. No entanto, se o buffer que está sendo realocado não for o buffer fixo, ele deve ser um buffer alocado com o Gerenciador de backup. Nesse caso, o Gerenciador de backup é usado para realocar o buffer.  
   
- Se o buffer que está sendo realocado for o buffer fixo e o novo tamanho do buffer é muito grande para caber no buffer fixo, **CFixedStringMgr** aloca um novo buffer usando o Gerenciador de backup. O conteúdo do buffer fixado, em seguida, é copiado para o novo buffer.  
+ Se o buffer que está sendo realocado é buffer fixo e o novo tamanho do buffer é muito grande para caber no buffer fixo, `CFixedStringMgr` aloca um novo buffer usando o Gerenciador de backup. O conteúdo do buffer fixo, em seguida, é copiado para o novo buffer.  
   
 ## <a name="implementation-of-cfixedstringmgrfree"></a>Implementação de CFixedStringMgr::Free  
- A implementação de **CFixedStringMgr::Free** segue o mesmo padrão **alocar** e `ReAllocate`. Se o buffer que está sendo liberado é o buffer fixo, o método define para um buffer de comprimento zero bloqueado. Se o buffer que está sendo liberado foi alocado com o Gerenciador de backup, **CFixedStringMgr** usa o Gerenciador de backup para liberá-la.  
+ A implementação de `CFixedStringMgr::Free` segue o mesmo padrão como `Allocate` e `ReAllocate`. Se o buffer que está sendo liberado é buffer fixo, o método define como um buffer de comprimento zero bloqueado. Se o buffer que está sendo liberado foi alocado com o Gerenciador de backup, `CFixedStringMgr` usa o Gerenciador de backup para liberá-la.  
   
 ## <a name="implementation-of-cfixedstringmgrclone"></a>Implementação de CFixedStringMgr::Clone  
- A implementação de **CFixedStringMgr::Clone** sempre retorna um ponteiro para o Gerenciador de backup em vez de **CFixedStringMgr** em si. Isso ocorre porque todas as instâncias de **CFixedStringMgr** só pode ser associado uma única instância de `CStringT`. Quaisquer outras instâncias do `CStringT` para clonar o Gerenciador o deve obter o Gerenciador de backup em vez disso. Isso ocorre porque o Gerenciador de backup oferece suporte a ser compartilhado.  
+ A implementação de `CFixedStringMgr::Clone` sempre retorna um ponteiro para o Gerenciador de backup em vez de `CFixedStringMgr` em si. Isso acontece porque todas as instâncias de `CFixedStringMgr` só pode ser associado uma única instância do `CStringT`. Todas as outras instâncias do `CStringT` tentando clonar o Gerenciador o deve obter o Gerenciador de backup em vez disso. Isso ocorre porque o Gerenciador de backup dá suporte a que está sendo compartilhado.  
   
 ## <a name="implementation-of-cfixedstringmgrgetnilstring"></a>Implementação de CFixedStringMgr::GetNilString  
- A implementação de **CFixedStringMgr::GetNilString** retorna o buffer fixo. Devido a correspondência individuais de **CFixedStringMgr** e `CStringT`, uma determinada instância do `CStringT` nunca usa mais de um buffer por vez. Portanto, uma cadeia de caracteres nula e um buffer de cadeia de caracteres real nunca são necessárias ao mesmo tempo.  
+ A implementação de `CFixedStringMgr::GetNilString` retorna o buffer fixo. Por causa a correspondência individual da `CFixedStringMgr` e `CStringT`, uma determinada instância do `CStringT` nunca usa mais de um buffer por vez. Portanto, uma cadeia de caracteres nulo e um buffer de cadeia de caracteres real nunca são necessárias ao mesmo tempo.  
   
- Sempre que o buffer fixo não está em uso, **CFixedStringMgr** garante que ele é inicializado com um comprimento zero. Isso permite que ele seja usado como a cadeia de caracteres nula. Como bônus, os `nAllocLength` membro do buffer fixo é sempre definido como o tamanho máximo do buffer fixo. Isso significa que `CStringT` pode aumentar a cadeia de caracteres sem chamar [IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate), mesmo para a cadeia de caracteres nula.  
+ Sempre que o buffer fixo não está em uso, `CFixedStringMgr` garante que ele é inicializado com um comprimento zero. Isso permite que ele seja usado como a cadeia de caracteres nula. Como um bônus adicional, o `nAllocLength` membro do buffer fixo é sempre definido como o tamanho total do buffer fixo. Isso significa que `CStringT` pode aumentar a cadeia de caracteres sem chamar [IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate), mesmo para a cadeia de caracteres nula.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** cstringt.h  
+ **Cabeçalho:** cstringt. h  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento de memória com CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)

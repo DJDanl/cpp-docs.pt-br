@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 129dce32dfe0ba50a07b71d2fcfaf72bdade090e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de826b1ac86656b9225560bfd9003ce0b03c1111
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942327"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operadores multiplicativos e o operador de módulo
 ## <a name="syntax"></a>Sintaxe  
@@ -51,7 +52,7 @@ expression % expression
   
  Esses operadores binários possuem associatividade da esquerda para a direita.  
   
- Os operadores de multiplicação usam operandos de tipos aritméticos. O operador de módulo (`%`) tem um requisito mais restrito, já que seus operandos devem ser do tipo integral. (Para obter o resto de uma divisão de ponto flutuante, use a função de tempo de execução, [fmod](../c-runtime-library/reference/fmod-fmodf.md).) As conversões abordados [conversões padrão](standard-conversions.md) são aplicadas para os operandos e o resultado é do tipo convertido.  
+ Os operadores de multiplicação usam operandos de tipos aritméticos. O operador de módulo (`%`) tem um requisito mais restrito, já que seus operandos devem ser do tipo integral. (Para obter o resto de uma divisão de ponto flutuante, use a função de tempo de execução [fmod](../c-runtime-library/reference/fmod-fmodf.md).) As conversões abordadas em [conversões padrão](standard-conversions.md) são aplicadas aos operandos, e o resultado é do tipo convertido.  
   
  O operador de multiplicação gera o resultado da multiplicação do primeiro operando pelo segundo.  
   
@@ -61,7 +62,7 @@ expression % expression
   
  A divisão por 0 em uma divisão ou em uma expressão de módulo é indefinida e gera um erro de tempo de execução. Desse modo, as expressões a seguir geram resultados indefinidos e errôneos:  
   
-```  
+```cpp 
 i % 0  
 f / 0.0  
 ```  
@@ -75,14 +76,14 @@ f / 0.0
  No Microsoft C++, o resultado de uma expressão de módulo sempre é igual ao sinal do primeiro operando.  
   
 **Fim da seção específica da Microsoft**  
- Se a divisão calculada de dois inteiros for inexata e apenas um operando for negativo, o resultado será o interior maior (em magnitude, independentemente do sinal), que é menor que o valor exato que seria gerado pela operação de divisão. Por exemplo, o valor calculado da -11 / 3 é-3.666666666. O resultado dessa divisão integral é -3.  
+ Se a divisão calculada de dois inteiros for inexata e apenas um operando for negativo, o resultado será o interior maior (em magnitude, independentemente do sinal), que é menor que o valor exato que seria gerado pela operação de divisão. Por exemplo, o valor calculado de -11 / 3 é-3.666666666. O resultado dessa divisão integral é -3.  
   
  A relação entre os operadores de multiplicação é fornecida pela identidade (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.  
   
 ## <a name="example"></a>Exemplo  
- O programa a seguir demonstra os operadores de multiplicação. Observe que ambos os operandos de `10 / 3` devem ser explicitamente convertidos para o tipo `float` para evitar o truncamento para que ambos os operandos forem do tipo `float` antes da divisão.  
+ O programa a seguir demonstra os operadores de multiplicação. Observe que ambos os operandos de `10 / 3` deve ser explicitamente convertido no tipo **float** para impedir o truncamento para que ambos os operandos forem do tipo **float** antes da divisão.  
   
-```  
+```cpp 
 // expre_Multiplicative_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -98,5 +99,5 @@ int main() {
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)   
- [Operadores C++ internos, precedência e capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores C++ internos, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operadores multiplicativos C](../c-language/c-multiplicative-operators.md)

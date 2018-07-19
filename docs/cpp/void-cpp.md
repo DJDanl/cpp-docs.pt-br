@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de70ec6758109bc765d0cec3552762288d51ded2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81dd7717940bb6f78063b0fba64dd5d7f8cad583
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942239"
 ---
 # <a name="void-c"></a>void (C++)
-Quando usado como um tipo de retorno da função, a palavra-chave `void` especifica que a função não retorna um valor. Quando usado para a lista de parâmetros de uma função, um item nulo especifica que a função não usa parâmetros. Quando usado em declaração de um ponteiro nulo, especifica que o ponteiro é “universal”.  
+Quando usado como um tipo de retorno de função, o **void** palavra-chave especifica que a função não retorna um valor. Quando usado para a lista de parâmetros de uma função, um item nulo especifica que a função não usa parâmetros. Quando usado em declaração de um ponteiro nulo, especifica que o ponteiro é “universal”.  
   
- Se o tipo do ponteiro é **void \*** , o ponteiro pode apontar para qualquer variável que não é declarada com o **const** ou `volatile` palavra-chave. Um ponteiro nulo não pode ter a referência removida a menos que seja convertido para outro tipo. Um ponteiro nulo pode ser convertido em outro tipo de ponteiro de dados.  
+ Se for do tipo de um ponteiro **void \*** , o ponteiro pode apontar para qualquer variável que não é declarado com o **const** ou **voláteis** palavra-chave. Um ponteiro nulo não pode ter a referência removida a menos que seja convertido para outro tipo. Um ponteiro nulo pode ser convertido em outro tipo de ponteiro de dados.  
   
  Um ponteiro nulo pode apontar para uma função, mas não para um membro da classe em C++.  
   
@@ -35,7 +36,7 @@ Quando usado como um tipo de retorno da função, a palavra-chave `void` especif
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // void.cpp  
 void vobject;   // C2182  
 void *pv;   // okay  
@@ -45,7 +46,7 @@ int main() {
    // Cast optional in C required in C++  
    pint = (int *)pv;  
 }   
-```  
+``` 
   
 ## <a name="see-also"></a>Consulte também  
  [Palavras-chave](../cpp/keywords-cpp.md)   

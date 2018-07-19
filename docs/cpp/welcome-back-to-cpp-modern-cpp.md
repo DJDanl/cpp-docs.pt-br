@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63e73657c7e018d2a4eb71170561e310aeba9d5b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 220c8f27aec52fe707e0482eb041ea71c5bd8291
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424861"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939371"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Bem-vindo ao C++ (C++ moderno)
 A C++ é uma das linguagens de programação mais usadas do mundo e os programas bem escritos que a utilizam são rápidos e eficientes. Essa linguagem é mais flexível que as demais porque é possível usá-la para criar diversos aplicativos, desde jogos divertidos e envolventes a softwares científicos de alto desempenho, drivers de dispositivos, programas incorporados e aplicativos clientes do Windows. Há mais de 20 anos, C++ é usada para solucionar problemas como esses e de muitos outros tipos. Mas talvez você ainda não saiba que cada vez mais programadores C++ estão deixando a programação C para trás e usando a moderna linguagem C++ em seu lugar.  
@@ -32,19 +32,19 @@ A C++ é uma das linguagens de programação mais usadas do mundo e os programas
   
 -   Ponteiros inteligentes, em vez de ponteiros duplos.  
   
--   `std::string` e `std::wstring` tipos (consulte [ \<cadeia de caracteres >](../standard-library/string.md)) em vez de bruto `char[]` matrizes.  
+-   `std::string` e `std::wstring` tipos (consulte [ \<cadeia de caracteres >](../standard-library/string.md)), em vez de brutos `char[]` matrizes.  
   
--   [Biblioteca padrão C++](../standard-library/cpp-standard-library-header-files.md) como contêineres `vector`, `list`, e `map` em vez de matrizes brutos ou contêineres personalizados. Consulte [ \<vetor >](../standard-library/vector.md), [ \<lista >](../standard-library/list.md), e [ \<mapa >](../standard-library/map.md).  
+-   [Biblioteca padrão C++](../standard-library/cpp-standard-library-header-files.md) como contêineres `vector`, `list`, e `map` em vez de matrizes brutas ou contêineres personalizados. Ver [ \<vector >](../standard-library/vector.md), [ \<lista >](../standard-library/list.md), e [ \<mapa >](../standard-library/map.md).  
   
--   Biblioteca padrão C++ [algoritmos](../standard-library/algorithm.md) em vez de manualmente codificado aqueles.  
+-   Biblioteca padrão C++ [algoritmos](../standard-library/algorithm.md) em vez de manualmente codificados.  
   
 -   Exceções para relatar e lidar com condições de erro.  
   
--   Usando a biblioteca padrão C++ a comunicação entre thread livre de bloqueios `std::atomic<>` (consulte [ \<atômico >](../standard-library/atomic.md)) em vez de outros mecanismos de comunicação entre thread.  
+-   Comunicação entre threads usando a biblioteca padrão C++ livres de bloqueio `std::atomic<>` (consulte [ \<atomic >](../standard-library/atomic.md)) em vez de outros mecanismos de comunicação entre threads.  
   
 -   Embutido [funções lambda](../cpp/lambda-expressions-in-cpp.md) em vez de pequenas funções implementadas separadamente.  
   
--   Com base em intervalo para loops gravar loops mais robustos que funcionam com matrizes, contêineres de biblioteca padrão C++ e tempo de execução do Windows coleções no formulário `for ( for-range-declaration : expression )`. Isso faz parte do suporte à linguagem base. Para obter mais informações, consulte [com base em intervalo de instrução (C++)](../cpp/range-based-for-statement-cpp.md).  
+-   Baseado em intervalo para loops para gravar loops mais robustos que funcionam com matrizes, contêineres da biblioteca padrão C++ e tempo de execução do Windows coleções na forma `for ( for-range-declaration : expression )`. Isso faz parte do suporte à linguagem base. Para obter mais informações, consulte [de instrução (C++) baseado em intervalo](../cpp/range-based-for-statement-cpp.md).  
   
  A linguagem C++ também evoluiu. Compare os trechos de código a seguir. Este trecho mostra como a linguagem C++ era antigamente:  
   
@@ -102,9 +102,9 @@ void f()
 
 ```
 
- Na linguagem C++ moderna, você não precisa usar novos tratamentos de exceções nem excluí-los, pois é possível usar ponteiros inteligentes. Quando você usa o `auto` dedução de tipo e [função lambda](../cpp/lambda-expressions-in-cpp.md), você pode escrever código mais rápido, restringi-lo e entende melhor. E um intervalo com base em `for` loop é mais fácil de usar, limpeza e menos propenso a erros não intencionais de um estilo C `for` loop. Você pode usar texto clichê com linhas de código mínimas para gravar seu aplicativo. Você também pode fazer com que o código seja à prova de exceções e memória e que ele não precise lidar com alocação/desalocação ou códigos de erros.  
+ Na linguagem C++ moderna, você não precisa usar novos tratamentos de exceções nem excluí-los, pois é possível usar ponteiros inteligentes. Quando você usa o **automática** dedução de tipo e [função lambda](../cpp/lambda-expressions-in-cpp.md), você pode escrever código mais rápido, restringi-lo e compreendê-los melhor. E um baseado em intervalo **para** loop é mais limpo, mais fácil de usar e menos propenso a erros não intencional de um estilo C **para** loop. Você pode usar texto clichê com linhas de código mínimas para gravar seu aplicativo. Você também pode fazer com que o código seja à prova de exceções e memória e que ele não precise lidar com alocação/desalocação ou códigos de erros.  
   
- A linguagem C++ moderna incorpora dois tipos de poliformismo: tempo de compilação, por meio de modelos, e tempo de execução, por meio de herança e virtualização. É possível combinar esses dois tipos de poliformismo para melhorar a eficiência. O modelo de biblioteca padrão C++ `shared_ptr` usa métodos virtuais internos para executar a eliminação de seu tipo aparentemente sem esforço. Porém, não use a virtualização em excesso no poliformismo quando um modelo for a melhor opção. Os modelos podem ser muito úteis.  
+ A linguagem C++ moderna incorpora dois tipos de poliformismo: tempo de compilação, por meio de modelos, e tempo de execução, por meio de herança e virtualização. É possível combinar esses dois tipos de poliformismo para melhorar a eficiência. O modelo de biblioteca padrão C++ `shared_ptr` usa métodos virtuais internos para realizar seu tipo aparentemente sem esforços. Porém, não use a virtualização em excesso no poliformismo quando um modelo for a melhor opção. Os modelos podem ser muito úteis.  
   
  Se está migrando de outra linguagem para C++, principalmente de uma linguagem gerenciada em que a maioria dos tipos é de referência e poucos são de valor, você precisa saber que as classes C++ são tipos de valor por padrão. No entanto, você pode especificá-los como tipos de referência para habilitar o comportamento polimórfico que possibilita usar a programação orientada a objetos. Uma perspectiva útil: os tipos de valor estão mais relacionados à memória e ao controle de layouts. Já os tipos de referência estão mais relacionados às classes básicas e funções virtuais para possibilitar o uso de poliformismo. Por padrão, os tipos de valor podem ser copiados. Cada um deles tem um construtor de cópia ou operador de atribuição de cópia. Ao especificar um tipo de referência, desabilite a funcionalidade de cópia das classes, o construtor de cópia e o operador de atribuição de cópia, e use um destruidor virtual, que é compatível com poliformismo. Os tipos de valor também estão relacionados ao conteúdo que, quando copiado, gera dois valores independentes, que podem ser modificados separadamente. Porém, os tipos de referência estão relacionados à identidade: o tipo de objeto. Por isso, esses tipos também são chamados de polimórficos.  
   
@@ -118,7 +118,7 @@ void f()
   
 -   [Inicialização uniforme e delegação de construtores](../cpp/uniform-initialization-and-delegating-constructors.md)  
   
--   [Vida útil do objeto e gerenciamento de recursos](../cpp/object-lifetime-and-resource-management-modern-cpp.md)  
+-   [Tempo de vida do objeto e gerenciamento de recursos](../cpp/object-lifetime-and-resource-management-modern-cpp.md)  
   
 -   [Recursos de objetos próprios (RAII)](../cpp/objects-own-resources-raii.md)  
   
@@ -132,11 +132,11 @@ void f()
   
 -   [Cadeia de caracteres e formatação (C++ moderno) de e/s](../cpp/string-and-i-o-formatting-modern-cpp.md)  
   
--   [Erros e tratamento de exceção](../cpp/errors-and-exception-handling-modern-cpp.md)  
+-   [Erros e tratamento de exceções](../cpp/errors-and-exception-handling-modern-cpp.md)  
   
 -   [Portabilidade em limites ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- Para obter mais informações, consulte o artigo StackOverflow [quais idiomas C++ foram preteridos no C++ 11](http://go.microsoft.com/fwlink/p/?linkid=402836)  
+ Para obter mais informações, consulte o artigo da StackOverflow [quais idiomas C++ foram preteridos no c++11](http://go.microsoft.com/fwlink/p/?linkid=402836)  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência da linguagem C++](../cpp/cpp-language-reference.md)   

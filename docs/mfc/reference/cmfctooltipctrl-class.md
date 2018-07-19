@@ -42,15 +42,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74efac50304554af3224b8b707b29a31248143f6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 094aa35d985d51019254bd4478ffbc8c534854a9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042063"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849533"
 ---
 # <a name="cmfctooltipctrl-class"></a>Classe CMFCToolTipCtrl
-Uma implementação de dica de ferramenta estendida se baseia o [classe CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md). Uma dica de ferramenta com base no `CMFCToolTipCtrl` classe pode exibir um ícone, um rótulo e uma descrição. Você pode personalizar a aparência visual usando um preenchimento de gradiente, texto personalizado e cores da borda, negrito, cantos arredondados ou um estilo de balão.  
+Uma implementação estendida da dica de ferramenta com base nas [classe CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md). Uma dica de ferramenta com base no `CMFCToolTipCtrl` classe pode exibir um ícone, um rótulo e uma descrição. Você pode personalizar sua aparência visual usando um preenchimento gradual, cores de borda e texto personalizado, texto em negrito, cantos arredondados ou um estilo de balão.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
@@ -79,21 +79,21 @@ class CMFCToolTipCtrl : public CToolTipCtrl
 |[CMFCToolTipCtrl::OnDrawIcon](#ondrawicon)|Exibe um ícone em uma dica de ferramenta.|  
 |[CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel)|Desenha o rótulo de uma dica de ferramenta ou calcula o tamanho do rótulo.|  
 |[CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator)|Desenha o separador entre o rótulo e a descrição em uma dica de ferramenta.|  
-|[CMFCToolTipCtrl::OnFillBackground](#onfillbackground)|Preenche o plano de fundo da dica de ferramenta.|  
-|[CMFCToolTipCtrl::SetDescription](#setdescription)|Define a descrição a ser exibido por tooltip.|  
+|[CMFCToolTipCtrl::OnFillBackground](#onfillbackground)|Preenche a tela de fundo da dica de ferramenta.|  
+|[CMFCToolTipCtrl::SetDescription](#setdescription)|Define a descrição a ser exibido, a dica de ferramenta.|  
 |[CMFCToolTipCtrl::SetFixedWidth](#setfixedwidth)||  
 |[CMFCToolTipCtrl::SetHotRibbonButton](#sethotribbonbutton)||  
 |[CMFCToolTipCtrl::SetLocation](#setlocation)||  
 |[CMFCToolTipCtrl::SetParams](#setparams)|Especifica a aparência visual de uma dica de ferramenta usando um `CMFCToolTipInfo` objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- Use `CMFCToolTipCtrl`, `CMFCToolTipInfo`, e [CTooltipManager classe](../../mfc/reference/ctooltipmanager-class.md) objetos juntas para implementar dicas de ferramenta personalizadas em seu aplicativo.  
+ Use `CMFCToolTipCtrl`, `CMFCToolTipInfo`, e [classe CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) objetos juntos para implementar dicas de ferramenta personalizadas em seu aplicativo.  
   
- Por exemplo, para usar dicas de ferramentas do estilo de balão, siga estas etapas:  
+ Por exemplo, para usar dicas de ferramenta do estilo de balão, siga estas etapas:  
   
  1. Use o [classe CWinAppEx](../../mfc/reference/cwinappex-class.md) método para inicializar o Gerenciador de dica de ferramenta em seu aplicativo.  
   
- 2. Criar um `CMFCToolTipInfo` para especificar o estilo visual que você deseja:  
+ 2. Criar um `CMFCToolTipInfo` estrutura para especificar o estilo visual que você deseja:  
   
 ```  
 CMFCToolTipInfo params;  
@@ -128,13 +128,13 @@ CMFCToolTipInfo params;
 theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,  
     RUNTIME_CLASS (CMFCToolTipCtrl), &params);
 ```  
-Você também pode derivar uma nova classe de `CMFCToolTipCtrl` para controlar o comportamento de dica de ferramenta e renderização. Para especificar uma nova classe de controle de dica de ferramenta, use o `CTooltipManager::SetTooltipParams` método:  
+Também é possível derivar uma nova classe de `CMFCToolTipCtrl` para controlar o comportamento de dica de ferramenta e renderização. Para especificar uma nova classe de controle de dica de ferramenta, use o `CTooltipManager::SetTooltipParams` método:  
   
 ```  
 myApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,  
     RUNTIME_CLASS (CMyToolTipCtrl))  
 ```  
-Para restaurar o padrão a dica de ferramenta classe de controle e redefinir a aparência de dica de ferramenta para seu estado padrão, especifique NULL nos runtime classe e a dica de ferramenta informações sobre parâmetros de `SetTooltipParams`:  
+Para restaurar o padrão a dica de ferramenta classe de controle e redefinir a aparência da dica de ferramenta para seu estado padrão, especifique NULL, o tempo de execução classe e a dica de ferramenta informações parâmetros de `SetTooltipParams`:  
   
 ```  
 theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,  
@@ -143,7 +143,7 @@ theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como construir um `CMFCToolTipCtrl` do objeto, defina a descrição do que a dica de ferramenta exibe e definir a largura do controle tooltip.  
+ O exemplo a seguir demonstra como construir um `CMFCToolTipCtrl` do objeto, defina a descrição do que a dica de ferramenta exibe e definir a largura do controle de dica de ferramenta.  
   
  [!code-cpp[NVC_MFC_RibbonApp#41](../../mfc/reference/codesnippet/cpp/cmfctooltipctrl-class_1.cpp)]  
   
@@ -191,7 +191,7 @@ const CMFCToolTipInfo& GetParams() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- As configurações de exibição de dica de ferramenta atual, que são armazenadas em um [CMFCToolTipInfo classe](../../mfc/reference/cmfctooltipinfo-class.md) objeto.  
+ As configurações de exibição de dica de ferramenta atual, que são armazenadas em um [classe CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) objeto.  
   
 ##  <a name="ondrawborder"></a>  CMFCToolTipCtrl::OnDrawBorder  
  Desenha a borda de uma dica de ferramenta.  
@@ -211,7 +211,7 @@ virtual void OnDrawBorder(
  O retângulo delimitador da dica de ferramenta.  
   
  [in] *clrLine*  
- A cor da borda.  
+ Cor da borda.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método em uma classe derivada para personalizar a aparência da borda da dica de ferramenta.  
@@ -252,10 +252,10 @@ virtual BOOL OnDrawIcon(
  Coordenadas do ícone.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o ícone foi desenhado. Caso contrário, `FALSE`.  
+ TRUE se o ícone de ter sido desenhado. Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- Substitua este método em uma classe derivada para exibir um ícone personalizado. Você também deve substituir [CMFCToolTipCtrl::GetIconSize](#geticonsize) para habilitar a dica de ferramenta calcular corretamente o layout de texto e descrição.  
+ Substitua este método em uma classe derivada para exibir um ícone personalizado. Você também deve substituir [CMFCToolTipCtrl::GetIconSize](#geticonsize) para habilitar a dica de ferramenta calcular corretamente o layout de texto e uma descrição.  
   
 ##  <a name="ondrawlabel"></a>  CMFCToolTipCtrl::OnDrawLabel  
  Desenha o rótulo de uma dica de ferramenta ou calcula o tamanho do rótulo.  
@@ -272,16 +272,16 @@ virtual CSize OnDrawLabel(
  Um ponteiro para um contexto de dispositivo.  
   
  [in] *rect*  
- Retângulo delimitador da área do rótulo.  
+ Retângulo delimitador da área de rótulo.  
   
  [in] *bCalcOnly*  
- Se `TRUE`, o rótulo não será desenhado.  
+ Se for TRUE, o rótulo não será desenhado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Tamanho do rótulo, em pixels.  
   
 ### <a name="remarks"></a>Comentários  
- Substitua este método em uma classe derivada, se você quiser personalizar a aparência do rótulo de dica de ferramenta.  
+ Substitua este método em uma classe derivada se você quiser personalizar a aparência do rótulo de dica de ferramenta.  
   
 ##  <a name="ondrawseparator"></a>  CMFCToolTipCtrl::OnDrawSeparator  
  Desenha o separador entre o rótulo e a descrição em uma dica de ferramenta.  
@@ -313,7 +313,7 @@ virtual void OnDrawSeparator(
  Substitua este método em uma classe derivada para personalizar a aparência do separador.  
   
 ##  <a name="onfillbackground"></a>  CMFCToolTipCtrl::OnFillBackground  
- Preenche o plano de fundo da dica de ferramenta.  
+ Preenche a tela de fundo da dica de ferramenta.  
   
 ```  
 virtual void OnFillBackground(
@@ -328,21 +328,21 @@ virtual void OnFillBackground(
  Um ponteiro para um contexto de dispositivo.  
   
  [in] *rect*  
- Especifica o retângulo delimitador da área de preenchimento.  
+ Especifica o retângulo delimitador da área a ser preenchida.  
   
  [in] *clrText*  
  Cor de primeiro plano da dica de ferramenta.  
   
  [in] *clrLine*  
- Cor de bordas e o delimitador da linha entre o rótulo e descrição.  
+ Cor das bordas e a linha de delimitador entre o rótulo e uma descrição.  
   
 ### <a name="remarks"></a>Comentários  
- A implementação padrão preenche o retângulo especificado por *rect* com a cor ou o padrão especificado pela chamada mais recente para [CMFCToolTipCtrl::SetParams](#setparams).  
+ A implementação padrão preenche o retângulo especificado por *rect* com a cor ou padrão especificado pela chamada a mais recente [CMFCToolTipCtrl::SetParams](#setparams).  
   
- Substitua este método em uma classe derivada, se você quiser personalizar a aparência da dica de ferramenta.  
+ Substitua este método em uma classe derivada se você quiser personalizar a aparência da dica de ferramenta.  
   
 ##  <a name="setdescription"></a>  CMFCToolTipCtrl::SetDescription  
- Define a descrição a ser exibido por tooltip.  
+ Define a descrição a ser exibido, a dica de ferramenta.  
   
 ```  
 virtual void SetDescription(const CString strDesrciption);
@@ -353,7 +353,7 @@ virtual void SetDescription(const CString strDesrciption);
  Texto de descrição.  
   
 ### <a name="remarks"></a>Comentários  
- O texto de descrição é exibido na dica de ferramenta no separador.  
+ O texto de descrição é exibido na dica de ferramenta sob o separador.  
   
 ##  <a name="setfixedwidth"></a>  CMFCToolTipCtrl::SetFixedWidth  
 
@@ -395,7 +395,7 @@ void SetLocation(CPoint pt);
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="setparams"></a>  CMFCToolTipCtrl::SetParams  
- Especifica a aparência visual de uma dica de ferramenta usando um [CMFCToolTipInfo classe](../../mfc/reference/cmfctooltipinfo-class.md) objeto.  
+ Especifica a aparência visual de uma dica de ferramenta usando um [classe CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) objeto.  
   
 ```  
 void SetParams(CMFCToolTipInfo* pParams);
@@ -403,13 +403,13 @@ void SetParams(CMFCToolTipInfo* pParams);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *pParams*  
- Ponteiro para um [CMFCToolTipInfo classe](../../mfc/reference/cmfctooltipinfo-class.md) objeto que contém os parâmetros de exibição.  
+ Ponteiro para um [classe CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) objeto que contém os parâmetros de exibição.  
   
 ### <a name="remarks"></a>Comentários  
  Sempre que a dica de ferramenta é exibida, ela é desenhada usando as cores e estilos visuais que *pParams* especifica. O valor de *pParams* é armazenado no membro protegido `m_Params`, que pode ser acessado por uma classe derivada que substitui [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl: : OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), ou [CMFCToolTipCtrl::OnFillBackground](#onfillbackground)para manter a aparência especificada.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)   
  [Classe CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)   

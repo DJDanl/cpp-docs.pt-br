@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 237671ce971d54209f3889fd93396fb4e0a42fee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 935175f522dd0b41851763f7b76781228c1881c0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363723"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880148"
 ---
 # <a name="ithreadpoolconfig-interface"></a>Interface IThreadPoolConfig
 Essa interface fornece métodos para configurar um pool de threads.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,50 +47,50 @@ __interface
   
 |||  
 |-|-|  
-|[GetSize](#getsize)|Chame este método para obter o número de threads no pool.|  
-|[GetTimeout](#gettimeout)|Chame este método para obter o tempo máximo em milissegundos que o pool de threads esperará por um thread desligar.|  
+|[GetSize](#getsize)|Chame esse método para obter o número de threads no pool.|  
+|[GetTimeout](#gettimeout)|Chame esse método para obter o tempo máximo em milissegundos que o pool de threads irá esperar por um segmento para desligar.|  
 |[SetSize](#setsize)|Chame esse método para definir o número de threads no pool.|  
-|[SetTimeout](#settimeout)|Chame esse método para definir o tempo máximo em milissegundos que o pool de threads esperará por um thread desligar.|  
+|[SetTimeout](#settimeout)|Chame esse método para definir o tempo máximo em milissegundos que o pool de threads irá esperar por um segmento para desligar.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa interface é implementada por [CThreadPool](../../atl/reference/cthreadpool-class.md).  
+ Essa interface é implementada pelo [CThreadPool](../../atl/reference/cthreadpool-class.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlutil.h  
+ **Cabeçalho:** atlutil  
   
 ##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
- Chame este método para obter o número de threads no pool.  
+ Chame esse método para obter o número de threads no pool.  
   
 ```
 STDMETHOD(GetSize)(int* pnNumThreads);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pnNumThreads`  
+ *pnNumThreads*  
  [out] Endereço da variável que, em caso de sucesso, recebe o número de threads no pool.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]  
   
 ##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout  
- Chame este método para obter o tempo máximo em milissegundos que o pool de threads esperará por um thread desligar.  
+ Chame esse método para obter o tempo máximo em milissegundos que o pool de threads irá esperar por um segmento para desligar.  
   
 ```
 STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pdwMaxWait`  
- [out] Endereço da variável que, em caso de sucesso, recebe o tempo máximo, em milissegundos, que aguarda um thread desligar o pool de threads.  
+ *pdwMaxWait*  
+ [out] Endereço da variável que, em caso de sucesso, recebe o tempo máximo em milissegundos que o pool de threads irá esperar por um segmento para desligar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="example"></a>Exemplo  
- Consulte [IThreadPoolConfig::GetSize](#getsize).  
+ Ver [IThreadPoolConfig::GetSize](#getsize).  
   
 ##  <a name="setsize"></a>  IThreadPoolConfig::SetSize  
  Chame esse método para definir o número de threads no pool.  
@@ -100,35 +100,35 @@ STDMETHOD(SetSize)int nNumThreads);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nNumThreads`  
+ *nNumThreads*  
  O número solicitado de threads no pool.  
   
- Se `nNumThreads` for negativo, seu valor absoluto será multiplicado pelo número de processadores na máquina para obter o número total de threads.  
+ Se *nNumThreads* é negativo, seu valor absoluto será multiplicado pelo número de processadores no computador para obter o número total de threads.  
   
- Se `nNumThreads` for zero, [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) será multiplicado pelo número de processadores na máquina para obter o número total de threads.  
+ Se *nNumThreads* for zero, [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) será multiplicado pelo número de processadores no computador para obter o número total de threads.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="example"></a>Exemplo  
- Consulte [IThreadPoolConfig::GetSize](#getsize).  
+ Ver [IThreadPoolConfig::GetSize](#getsize).  
   
 ##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout  
- Chame esse método para definir o tempo máximo em milissegundos que o pool de threads esperará por um thread desligar.  
+ Chame esse método para definir o tempo máximo em milissegundos que o pool de threads irá esperar por um segmento para desligar.  
   
 ```
 STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `dwMaxWait`  
- O tempo máximo solicitado em milissegundos que o pool de threads esperará por um thread desligar.  
+ *dwMaxWait*  
+ O tempo máximo solicitado em milissegundos que o pool de threads irá esperar por um segmento para desligar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="example"></a>Exemplo  
- Consulte [IThreadPoolConfig::GetSize](#getsize).  
+ Ver [IThreadPoolConfig::GetSize](#getsize).  
   
 ## <a name="see-also"></a>Consulte também  
  [Classes](../../atl/reference/atl-classes.md)   

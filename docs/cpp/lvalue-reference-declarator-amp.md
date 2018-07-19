@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de716ec8c29bbdb50462cd6ea642ed603d411c2a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d16ed882b1037123963f105b1a78bf8e1023d332
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942337"
 ---
 # <a name="lvalue-reference-declarator-amp"></a>Declarador de referência lvalue: &amp;
 Contém o endereço de um objeto mas se comporta sintaticamente como um objeto.  
@@ -38,12 +39,12 @@ type-id & cast-expression
   
  Qualquer objeto cujo endereço possa ser convertido em um determinado tipo de ponteiro também pode ser convertido no tipo semelhante de referência. Por exemplo, qualquer objeto cujo endereço possa ser convertido para o tipo `char *` também pode ser convertido para o tipo `char &`.  
   
- Não confunda declarações de referência usando o [operador address-of](../cpp/address-of-operator-amp.md). Quando o `&` *identificador* é precedido por um tipo, como `int` ou `char`, *identificador* é declarada como uma referência para o tipo. Quando `&` *identificador* não for precedido por um tipo, é o uso do operador address-of.  
+ Não confunda declarações de referência com o uso do [operador address-of](../cpp/address-of-operator-amp.md). Quando o `&` *identificador* é precedido por um tipo, como **int** ou **char**, *identificador* é declarado como uma referência a o tipo. Quando `&` *identificador* não é precedido por um tipo, é o uso do operador address-of.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra o declarador de referência declarando um objeto `Person` e uma referência a esse objeto. Como `rFriend` é uma referência a `myFriend`, atualizar qualquer variável altera o mesmo objeto.  
   
-```  
+```cpp 
 // reference_declarator.cpp  
 // compile with: /EHsc  
 // Demonstrates the reference declarator.  
@@ -80,6 +81,6 @@ Bill is 40
   
 ## <a name="see-also"></a>Consulte também  
  [Referências](../cpp/references-cpp.md)   
- [Argumentos de função de tipo de referência](../cpp/reference-type-function-arguments.md)   
- [Retornos da função de tipo de referência](../cpp/reference-type-function-returns.md)   
+ [Argumentos de função do tipo de referência](../cpp/reference-type-function-arguments.md)   
+ [Retornos de função do tipo de referência](../cpp/reference-type-function-returns.md)   
  [Referências a ponteiros](../cpp/references-to-pointers.md)

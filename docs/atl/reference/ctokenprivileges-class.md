@@ -28,18 +28,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6c9886b79739f42329b0f306c8bce6afc2d9fa0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 31e313381eac3158a6cb72c7681bc49013e92f90
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366504"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881747"
 ---
 # <a name="ctokenprivileges-class"></a>Classe CTokenPrivileges
-Essa classe é um wrapper para o **TOKEN_PRIVILEGES** estrutura.  
+Essa classe é um wrapper para o `TOKEN_PRIVILEGES` estrutura.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,31 +64,31 @@ class CTokenPrivileges
 |[CTokenPrivileges::Delete](#delete)|Exclui um privilégio do `CTokenPrivileges` objeto.|  
 |[CTokenPrivileges::DeleteAll](#deleteall)|Exclui todos os privilégios do `CTokenPrivileges` objeto.|  
 |[CTokenPrivileges::GetCount](#getcount)|Retorna o número de entradas de privilégio no `CTokenPrivileges` objeto.|  
-|[CTokenPrivileges::GetDisplayNames](#getdisplaynames)|Recupera exibe nomes para os privilégios contidos o `CTokenPrivileges` objeto.|  
-|[CTokenPrivileges::GetLength](#getlength)|Retorna o tamanho do buffer de bytes necessários para manter o **TOKEN_PRIVILEGES** estrutura representado pelo `CTokenPrivileges` objeto.|  
-|[CTokenPrivileges::GetLuidsAndAttributes](#getluidsandattributes)|Recupera os identificadores de local exclusivos (LUID) e os sinalizadores de atributo do `CTokenPrivileges` objeto.|  
-|[CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes)|Recupera os nomes de privilégio e sinalizadores de atributo do `CTokenPrivileges` objeto.|  
-|[CTokenPrivileges::GetPTOKEN_PRIVILEGES](#getptoken_privileges)|Retorna um ponteiro para o **TOKEN_PRIVILEGES** estrutura.|  
-|[CTokenPrivileges::LookupPrivilege](#lookupprivilege)|Recupera o atributo associado a um nome de privilégio.|  
+|[CTokenPrivileges::GetDisplayNames](#getdisplaynames)|Recupera exibe nomes para os privilégios contidos no `CTokenPrivileges` objeto.|  
+|[CTokenPrivileges::GetLength](#getlength)|Retorna o tamanho do buffer em bytes, necessários para manter o `TOKEN_PRIVILEGES` estrutura representada pelo `CTokenPrivileges` objeto.|  
+|[CTokenPrivileges::GetLuidsAndAttributes](#getluidsandattributes)|Recupera os identificadores exclusivos localmente (LUID) e os sinalizadores de atributo do `CTokenPrivileges` objeto.|  
+|[CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes)|Recupera os nomes de privilégio e os sinalizadores de atributo do `CTokenPrivileges` objeto.|  
+|[CTokenPrivileges::GetPTOKEN_PRIVILEGES](#getptoken_privileges)|Retorna um ponteiro para o `TOKEN_PRIVILEGES` estrutura.|  
+|[CTokenPrivileges::LookupPrivilege](#lookupprivilege)|Recupera um atributo associado ao nome de um determinado privilégio.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[TOKEN_PRIVILEGES const CTokenPrivileges::operator *](#operator_const_token_privileges__star)|Converte um valor para um ponteiro para o **TOKEN_PRIVILEGES** estrutura.|  
+|[CTokenPrivileges::operator TOKEN_PRIVILEGES de const *](#operator_const_token_privileges__star)|Converte um valor para um ponteiro para o `TOKEN_PRIVILEGES` estrutura.|  
 |[CTokenPrivileges::operator =](#operator_eq)|Operador de atribuição.|  
   
 ## <a name="remarks"></a>Comentários  
- Um [token de acesso](http://msdn.microsoft.com/library/windows/desktop/aa374909) é um objeto que descreve o contexto de segurança de um processo ou thread e é alocado para cada usuário conectado em um sistema Windows.  
+ Uma [token de acesso](http://msdn.microsoft.com/library/windows/desktop/aa374909) é um objeto que descreve o contexto de segurança de um processo ou thread e é alocado para cada usuário conectado no sistema Windows.  
   
  O token de acesso é usado para descrever os vários privilégios de segurança concedidos a cada usuário. Um privilégio consiste em um número de 64 bits, chamado de um identificador local exclusivo ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) e uma cadeia de caracteres do descritor.  
   
- O `CTokenPrivileges` classe é um wrapper para o [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) estrutura e contém 0 ou mais privilégios. Privilégios podem ser adicionados, excluídas ou consultado usando os métodos de classe fornecido.  
+ O `CTokenPrivileges` classe é um wrapper para o [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) estruturar e contém 0 ou mais privilégios. Privilégios podem ser adicionados, excluídos ou consultado usando os métodos da classe fornecida.  
   
  Para obter uma introdução ao modelo de controle de acesso no Windows, consulte [controle de acesso](http://msdn.microsoft.com/library/windows/desktop/aa374860) no SDK do Windows.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlsecurity.h  
+ **Cabeçalho:** atlsecurity. h  
   
 ##  <a name="add"></a>  CTokenPrivileges::Add  
  Adiciona um ou mais privilégios para o `CTokenPrivileges` objeto de token de acesso.  
@@ -99,17 +99,17 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pszPrivilege`  
- Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do privilégio, conforme definido no arquivo WINNT. Arquivo de cabeçalho de H.  
+ *pszPrivilege*  
+ Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do privilégio, conforme definido em WINNT. Arquivo de cabeçalho de H.  
   
- `bEnable`  
+ *bAtivar*  
  Se for true, o privilégio está habilitado. Se for false, o privilégio está desabilitado.  
   
- `rPrivileges`  
+ *rPrivileges*  
  Referência a um [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) estrutura. Os privilégios e atributos são copiados a partir dessa estrutura e adicionados ao `CTokenPrivileges` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O primeiro formulário desse método retornará true se os privilégios são adicionado com êxito, false caso contrário.  
+ A primeira forma desse método retornará true se os privilégios são adicionado com êxito, false caso contrário.  
   
 ##  <a name="ctokenprivileges"></a>  CTokenPrivileges::CTokenPrivileges  
  O construtor.  
@@ -121,14 +121,14 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `rhs`  
+ *rhs*  
  O `CTokenPrivileges` objeto para atribuir ao novo objeto.  
   
- `rPrivileges`  
+ *rPrivileges*  
  O [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) estrutura para atribuir ao novo `CTokenPrivileges` objeto.  
   
 ### <a name="remarks"></a>Comentários  
- O `CTokenPrivileges` objeto opcionalmente pode ser criado usando um **TOKEN_PRIVILEGES** estrutura ou definida anteriormente `CTokenPrivileges` objeto.  
+ O `CTokenPrivileges` objeto opcionalmente pode ser criado usando um `TOKEN_PRIVILEGES` estrutura ou definida anteriormente `CTokenPrivileges` objeto.  
   
 ##  <a name="dtor"></a>  CTokenPrivileges::~CTokenPrivileges  
  O destruidor.  
@@ -148,8 +148,8 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pszPrivilege`  
- Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do privilégio, conforme definido no arquivo WINNT. Arquivo de cabeçalho de H. Por exemplo, esse parâmetro pode especificar a constante SE_SECURITY_NAME ou sua cadeia de caracteres correspondente, "SeSecurityPrivilege".  
+ *pszPrivilege*  
+ Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do privilégio, conforme definido em WINNT. Arquivo de cabeçalho de H. Por exemplo, esse parâmetro pode especificar a constante SE_SECURITY_NAME, ou sua cadeia de caracteres correspondente, "SeSecurityPrivilege".  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna VERDADEIRO se o privilégio foi excluído com êxito, false caso contrário.  
@@ -165,23 +165,23 @@ void DeleteAll() throw();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Exclui todos os privilégios contidos o `CTokenPrivileges` objeto de token de acesso.  
+ Exclui todos os privilégios contidos no `CTokenPrivileges` objeto de token de acesso.  
   
 ##  <a name="getdisplaynames"></a>  CTokenPrivileges::GetDisplayNames  
- Recupera exibe nomes para os privilégios contidos o `CTokenPrivileges` objeto de token de acesso.  
+ Recupera exibe nomes para os privilégios contidos no `CTokenPrivileges` objeto de token de acesso.  
   
 ```
 void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDisplayNames`  
- Um ponteiro para uma matriz de objetos `CString`. **CNames** é definido como um typedef: **CTokenPrivileges::CAtlArray\<CString >**.  
+ *pDisplayNames*  
+ Um ponteiro para uma matriz de objetos `CString`. `CNames` é definido como um typedef: `CTokenPrivileges::CAtlArray<CString>`.  
   
 ### <a name="remarks"></a>Comentários  
- O parâmetro `pDisplayNames` é um ponteiro para uma matriz de `CString` objetos que irá receber os nomes de exibição correspondente para os privilégios contidos o `CTokenPrivileges` objeto. Esse método recupera nomes de exibição somente para os privilégios especificados na seção de WINNT privilégios definidos. H.  
+ O parâmetro `pDisplayNames` é um ponteiro para uma matriz de `CString` objetos que receberão os nomes de exibição correspondente aos privilégios contidos no `CTokenPrivileges` objeto. Esse método recupera nomes de exibição somente para os privilégios especificados na seção definido privilégios de WINNT. H.  
   
- Esse método retorna um nome de exibição: por exemplo, se o nome do atributo é SE_REMOTE_SHUTDOWN_NAME, o nome de exibição é "Forçar o desligamento de um sistema remoto". Para obter o nome do sistema, use [CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes).  
+ Esse método recupera um nome de exibição: por exemplo, se o nome do atributo for SE_REMOTE_SHUTDOWN_NAME, o nome de exibição é "Forçar o desligamento de um sistema remoto." Para obter o nome do sistema, use [CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes).  
   
 ##  <a name="getcount"></a>  CTokenPrivileges::GetCount  
  Retorna o número de entradas de privilégio no `CTokenPrivileges` objeto.  
@@ -191,7 +191,7 @@ UINT GetCount() const throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna o número de privilégios contidas o `CTokenPrivileges` objeto.  
+ Retorna o número de privilégios contidos no `CTokenPrivileges` objeto.  
   
 ##  <a name="getlength"></a>  CTokenPrivileges::GetLength  
  Retorna o comprimento do `CTokenPrivileges` objeto.  
@@ -201,10 +201,10 @@ UINT GetLength() const throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna o número de bytes necessários para manter um **TOKEN_PRIVILEGES** estrutura representado pelo `CTokenPrivileges` objeto, incluindo todas as entradas de privilégio que ele contém.  
+ Retorna o número de bytes necessários para manter uma `TOKEN_PRIVILEGES` estrutura representada pelo `CTokenPrivileges` objeto, incluindo todas as entradas de privilégio que ele contém.  
   
 ##  <a name="getluidsandattributes"></a>  CTokenPrivileges::GetLuidsAndAttributes  
- Recupera os identificadores de local exclusivos (LUID) e os sinalizadores de atributo do `CTokenPrivileges` objeto.  
+ Recupera os identificadores exclusivos localmente (LUID) e os sinalizadores de atributo do `CTokenPrivileges` objeto.  
   
 ```
 void GetLuidsAndAttributes(
@@ -213,17 +213,17 @@ void GetLuidsAndAttributes(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pPrivileges`  
- Ponteiro para uma matriz de [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261) objetos. **CLUIDArray** é um typedef definido como **CAtlArray\<LUID > CLUIDArray**.  
+ *pPrivileges*  
+ Ponteiro para uma matriz de [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261) objetos. `CLUIDArray` um typedef que é definido como `CAtlArray<LUID> CLUIDArray`.  
   
- `pAttributes`  
- Ponteiro para uma matriz de objetos DWORD. Se esse parâmetro for omitido ou nulo, os atributos não são recuperados. **CAttributes** é um typedef definido como **CAtlArray \<DWORD > CAttributes**.  
+ *pAttributes*  
+ Ponteiro para uma matriz de objetos DWORD. Se esse parâmetro for omitido ou nulo, os atributos não são recuperados. `CAttributes` um typedef que é definido como `CAtlArray <DWORD> CAttributes`.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método irá enumerar todos os privilégios contidos o `CTokenPrivileges` objeto de token de acesso e colocar os LUIDs individuais e (opcionalmente) os sinalizadores de atributo em objetos de matriz.  
+ Esse método vai enumerar todos os privilégios contidos no `CTokenPrivileges` objeto de token de acesso e colocar os LUIDs individuais e (opcionalmente) os sinalizadores de atributo em objetos de matriz.  
   
 ##  <a name="getnamesandattributes"></a>  CTokenPrivileges::GetNamesAndAttributes  
- Recupera os nome e atributo sinalizadores do `CTokenPrivileges` objeto.  
+ Recupera os nome e o atributo de sinalizadores do `CTokenPrivileges` objeto.  
   
 ```
 void GetNamesAndAttributes(
@@ -233,18 +233,18 @@ void GetNamesAndAttributes(
   
 ### <a name="parameters"></a>Parâmetros  
  *pNames*  
- Ponteiro para uma matriz de `CString` objetos. **CNames** é um typedef definido como **CAtlArray \<CString > CNames**.  
+ Ponteiro para uma matriz de `CString` objetos. `CNames` um typedef que é definido como `CAtlArray <CString> CNames`.  
   
- `pAttributes`  
- Ponteiro para uma matriz de objetos DWORD. Se esse parâmetro for omitido ou nulo, os atributos não são recuperados. **CAttributes** é um typedef definido como **CAtlArray \<DWORD > CAttributes**.  
+ *pAttributes*  
+ Ponteiro para uma matriz de objetos DWORD. Se esse parâmetro for omitido ou nulo, os atributos não são recuperados. `CAttributes` um typedef que é definido como `CAtlArray <DWORD> CAttributes`.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método irá enumerar todos os privilégios contidos o `CTokenPrivileges` objeto, colocando o nome e (opcionalmente) os sinalizadores de atributo em objetos de matriz.  
+ Esse método vai enumerar todos os privilégios contidos no `CTokenPrivileges` objeto, colocando o nome e (opcionalmente) os sinalizadores de atributo em objetos de matriz.  
   
- Esse método recupera o nome do atributo, em vez do nome de exibição: por exemplo, se o nome do atributo é SE_REMOTE_SHUTDOWN_NAME, o nome do sistema é "SeRemoteShutdownPrivilege". Para obter o nome de exibição, use o método [CTokenPrivileges::GetDisplayNames](#getdisplaynames).  
+ Esse método recupera o nome do atributo, em vez do nome de exibição: por exemplo, se o nome do atributo for SE_REMOTE_SHUTDOWN_NAME, o nome do sistema é "SeRemoteShutdownPrivilege". Para obter o nome de exibição, use o método [CTokenPrivileges::GetDisplayNames](#getdisplaynames).  
   
 ##  <a name="getptoken_privileges"></a>  CTokenPrivileges::GetPTOKEN_PRIVILEGES  
- Retorna um ponteiro para o **TOKEN_PRIVILEGES** estrutura.  
+ Retorna um ponteiro para o `TOKEN_PRIVILEGES` estrutura.  
   
 ```
 const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
@@ -254,7 +254,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
  Retorna um ponteiro para o [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) estrutura.  
   
 ##  <a name="lookupprivilege"></a>  CTokenPrivileges::LookupPrivilege  
- Recupera o atributo associado a um nome de privilégio.  
+ Recupera um atributo associado ao nome de um determinado privilégio.  
   
 ```
 bool LookupPrivilege(
@@ -263,10 +263,10 @@ bool LookupPrivilege(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pszPrivilege`  
- Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do privilégio, conforme definido no arquivo WINNT. Arquivo de cabeçalho de H. Por exemplo, esse parâmetro pode especificar a constante SE_SECURITY_NAME ou sua cadeia de caracteres correspondente, "SeSecurityPrivilege".  
+ *pszPrivilege*  
+ Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do privilégio, conforme definido em WINNT. Arquivo de cabeçalho de H. Por exemplo, esse parâmetro pode especificar a constante SE_SECURITY_NAME, ou sua cadeia de caracteres correspondente, "SeSecurityPrivilege".  
   
- `pdwAttributes`  
+ *pdwAttributes*  
  Ponteiro para uma variável que recebe os atributos.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -281,17 +281,17 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `rPrivileges`  
+ *rPrivileges*  
  O [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) estrutura para atribuir ao `CTokenPrivileges` objeto.  
   
- `rhs`  
- O `CTokenPrivileges` objeto para atribuir o objeto.  
+ *rhs*  
+ O `CTokenPrivileges` objeto a ser atribuído ao objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna a atualização `CTokenPrivileges` objeto.  
+ Retorna o atualizada `CTokenPrivileges` objeto.  
   
-##  <a name="operator_const_token_privileges__star"></a>  TOKEN_PRIVILEGES const CTokenPrivileges::operator *  
- Converte um valor para um ponteiro para o **TOKEN_PRIVILEGES** estrutura.  
+##  <a name="operator_const_token_privileges__star"></a>  CTokenPrivileges::operator TOKEN_PRIVILEGES de const *  
+ Converte um valor para um ponteiro para o `TOKEN_PRIVILEGES` estrutura.  
   
 ```  
 operator const TOKEN_PRIVILEGES *() const throw(...);

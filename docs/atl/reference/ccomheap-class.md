@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bd4ad2f182d2a9f62e82b78f9ee9d0db44fa00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d45a999f777a2d497542544c2d3c7f079b7a32b0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359857"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881598"
 ---
 # <a name="ccomheap-class"></a>Classe CComHeap
 Essa classe implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) usando as funções de alocação de memória COM.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,15 +47,15 @@ class CComHeap : public IAtlMemMgr
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CComHeap::Allocate](#allocate)|Chame esse método para alocar um bloco de memória.|  
-|[CComHeap::Free](#free)|Chame este método para liberar um bloco de memória alocada por este Gerenciador de memória.|  
-|[CComHeap::GetSize](#getsize)|Chame este método para obter o tamanho alocado de um bloco de memória alocado por esse gerenciador de memória.|  
-|[CComHeap::Reallocate](#reallocate)|Chame este método para realocar a memória alocada por esse gerenciador de memória.|  
+|[CComHeap::Free](#free)|Chame esse método para liberar um bloco de memória alocada por este Gerenciador de memória.|  
+|[CComHeap::GetSize](#getsize)|Chame esse método para obter o tamanho alocado de um bloco de memória alocado por este Gerenciador de memória.|  
+|[CComHeap::Reallocate](#reallocate)|Chame esse método para realocar a memória alocada por este Gerenciador de memória.|  
   
 ## <a name="remarks"></a>Comentários  
- `CComHeap` implementa as funções de alocação de memória usando as funções de alocação COM, incluindo [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)e [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280). A quantidade máxima de memória que pode ser alocada é igual a **INT_MAX** (2147483647) bytes.  
+ `CComHeap` implementa as funções de alocação de memória usando as funções de alocação de COM, incluindo [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)e [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280). A quantidade máxima de memória que pode ser alocada é igual a INT_MAX (2147483647) bytes.  
   
 ## <a name="example"></a>Exemplo  
- Consulte o exemplo para [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
+ Veja o exemplo de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `IAtlMemMgr`  
@@ -73,41 +73,41 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nBytes`  
+ *nBytes*  
  O número solicitado de bytes no novo bloco de memória.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna um ponteiro para o início do bloco de memória alocadas recentemente.  
+ Retorna um ponteiro para o início do bloco de memória recém-alocada.  
   
 ### <a name="remarks"></a>Comentários  
- Chamar [CComHeap::Free](#free) ou [CComHeap::Reallocate](#reallocate) para liberar a memória alocada por esse método.  
+ Chame [CComHeap::Free](#free) ou [CComHeap::Reallocate](#reallocate) para liberar a memória alocada por esse método.  
   
  Implementado usando [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727).  
   
 ##  <a name="free"></a>  CComHeap::Free  
- Chame este método para liberar um bloco de memória alocada por este Gerenciador de memória.  
+ Chame esse método para liberar um bloco de memória alocada por este Gerenciador de memória.  
   
 ```
 virtual void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `p`  
- Ponteiro para a memória alocada anteriormente por este Gerenciador de memória. NULL é um valor válido e não faz nada.  
+ *p*  
+ Ponteiro de memória alocado anteriormente por este Gerenciador de memória. NULL é um valor válido e não faz nada.  
   
 ### <a name="remarks"></a>Comentários  
  Implementado usando [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722).  
   
 ##  <a name="getsize"></a>  CComHeap::GetSize  
- Chame este método para obter o tamanho alocado de um bloco de memória alocado por esse gerenciador de memória.  
+ Chame esse método para obter o tamanho alocado de um bloco de memória alocado por este Gerenciador de memória.  
   
 ```
 virtual size_t GetSize(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `p`  
- Ponteiro para a memória alocada anteriormente por este Gerenciador de memória.  
+ *p*  
+ Ponteiro de memória alocado anteriormente por este Gerenciador de memória.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o tamanho do bloco de memória alocada em bytes.  
@@ -116,24 +116,24 @@ virtual size_t GetSize(void* p) throw();
  Implementado usando [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226).  
   
 ##  <a name="reallocate"></a>  CComHeap::Reallocate  
- Chame este método para realocar a memória alocada por esse gerenciador de memória.  
+ Chame esse método para realocar a memória alocada por este Gerenciador de memória.  
   
 ```
 virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `p`  
- Ponteiro para a memória alocada anteriormente por este Gerenciador de memória.  
+ *p*  
+ Ponteiro de memória alocado anteriormente por este Gerenciador de memória.  
   
- `nBytes`  
+ *nBytes*  
  O número solicitado de bytes no novo bloco de memória.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna um ponteiro para o início do bloco de memória alocadas recentemente.  
+ Retorna um ponteiro para o início do bloco de memória recém-alocada.  
   
 ### <a name="remarks"></a>Comentários  
- Chamar [CComHeap::Free](#free) para liberar a memória alocada por esse método.  
+ Chame [CComHeap::Free](#free) para liberar a memória alocada por esse método.  
   
  Implementado usando [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280).  
   
@@ -143,5 +143,5 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
  [Classe CWin32Heap](../../atl/reference/cwin32heap-class.md)   
  [Classe CLocalHeap](../../atl/reference/clocalheap-class.md)   
  [Classe CGlobalHeap](../../atl/reference/cglobalheap-class.md)   
- [Classe CCRTHeap](../../atl/reference/ccrtheap-class.md)   
+ [Classe de CCRTHeap](../../atl/reference/ccrtheap-class.md)   
  [Classe IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)

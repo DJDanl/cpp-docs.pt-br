@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c809249bbe7513e5a1e439ebaf5e4e44a2f758
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 93a399f922d79c073cc6471ebe702d8ef7fcd842
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418387"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940635"
 ---
 # <a name="data-type-ranges"></a>Intervalos de tipos de dados
 Os compiladores de 32 bits e 64 bits do Visual C++ reconhecem os tipos na tabela mais adiante neste artigo.  
@@ -105,13 +105,13 @@ Os compiladores de 32 bits e 64 bits do Visual C++ reconhecem os tipos na tabela
   
  Dependendo de como é usada, uma variável de `__wchar_t` designa um tipo de caractere largo ou um tipo de caractere multibyte. Use o prefixo `L` antes de uma constante de caractere ou de cadeia de caracteres para designar a constante de tipo de caractere largo.  
   
- `signed` e `unsigned` são os modificadores que você pode usar com qualquer tipo integral, exceto `bool`. Observe que `char`, `signed char` e `unsigned char` são três tipos distintos para fins de mecanismos como sobrecarga e modelos.  
+ **assinado** e **não assinados** são os modificadores que você pode usar com qualquer tipo integral exceto **bool**. Observe que **char**, **assinado char**, e **unsigned char** são três tipos distintos para fins de mecanismos como sobrecarga e modelos.  
   
- O `int` e `unsigned int` tipos têm um tamanho de quatro bytes. No entanto, o código portátil não deve depender do tamanho de `int` porque o padrão de linguagem permite que ele seja específico da implementação.  
+ O **int** e **unsigned int** tipos têm um tamanho de quatro bytes. No entanto, um código portátil não deve depender do tamanho do **int** porque a linguagem padrão permite que ele seja específico da implementação.  
   
- C/C++ no Visual Studio também tem suporte para tipos de inteiros dimensionados. Para obter mais informações, consulte [int8, \__int16, \__int32, \__int64](../cpp/int8-int16-int32-int64.md) e [limites de inteiro](../cpp/integer-limits.md).  
+ C/C++ no Visual Studio também tem suporte para tipos de inteiros dimensionados. Para obter mais informações, consulte [__int8, \__int16, \__int32, \__int64](../cpp/int8-int16-int32-int64.md) e [limites de inteiro](../cpp/integer-limits.md).  
   
- Para obter mais informações sobre as restrições dos tamanhos de cada tipo, consulte [tipos fundamentais](../cpp/fundamental-types-cpp.md).  
+ Para obter mais informações sobre as restrições de tamanhos de cada tipo, consulte [tipos fundamentais](../cpp/fundamental-types-cpp.md).  
   
  O intervalo dos tipos enumerados varia dependendo do contexto de linguagem e dos sinalizadores de compilador especificados. Para obter mais informações, consulte [declarações de enumeração C](../c-language/c-enumeration-declarations.md) e [enumerações](../cpp/enumerations-cpp.md).  
   

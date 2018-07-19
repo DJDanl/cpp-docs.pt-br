@@ -17,23 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 283ff09c320b67686e353f0497c665828cd8b5d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3ad0c50330d174a6139ce6e588b278e03cd99562
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942262"
 ---
 # <a name="novtable"></a>novtable
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
- Esse é um atributo `__declspec` estendido.  
+ Esse é um **declspec** atributo estendido.  
   
- Essa forma de `__declspec` pode ser aplicada a qualquer declaração de classe, mas só deve ser aplicada às classes puras da interface, ou seja, classes que nunca serão instanciadas por conta própria. `__declspec` impede que o compilador gere códigos para inicializar vfptr nos construtores e destruidores da classe. Em diversos casos, isso remove as únicas referências para vtable que estão associadas à classe. Portanto, o vinculador as removerá. Usar esta forma de `__declspec` pode resultar em uma redução significativa do tamanho do código.  
+ Essa forma de **declspec** podem ser aplicadas a qualquer declaração de classe, mas só deve ser aplicado a classes puras da interface, ou seja, classes que nunca serão instanciadas por conta própria. O **declspec** interrompe o compilador gere código para inicializar vfptr nos construtores e destruidores da classe. Em diversos casos, isso remove as únicas referências para vtable que estão associadas à classe. Portanto, o vinculador as removerá. Usando essa forma de **declspec** pode resultar em uma redução significativa no tamanho do código.  
   
  Se você tentar instanciar uma classe marcada com `novtable` e, em seguida, acessar em um membro da classe, você receberá uma violação de acesso (AV).  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // novtable.cpp  
 #include <stdio.h>  
   

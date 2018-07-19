@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8de2511096766cc4852c1c612eccb7dc65713218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42174837f0f60f9a4e3ba9f19702210d6d34ccca
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942119"
 ---
 # <a name="if-else-statement-c"></a>Instrução if-else (C++)
-Controla a ramificação condicional. Instruções o *blocos se* são executadas somente se o *expressão se* é avaliada como um valor diferente de zero (ou `true`). Se o valor de *expressão* é diferente de zero, *statement1* e quaisquer outras instruções no bloco são executadas e o outro bloco, se presente, será ignorado. Se o valor de *expressão* for zero, em seguida, o bloco se será ignorado e o outro bloco, se presente, é executado. São expressões avaliadas como diferente de zero
-- `true`
-- um ponteiro não null.
-- qualquer valor de aritmética diferente de zero, ou 
-- Digite um tipo de classe que define uma conversão ambígua em uma aritmética, booleano ou de ponteiro. (Para obter informações sobre as conversões, consulte [conversões padrão](../cpp/standard-conversions.md).)   
+Controla a ramificação condicional. As instruções na *bloco if* são executados somente se o *expressão if* é avaliada como um valor diferente de zero (ou TRUE). Se o valor de *expressão* for diferente de zero *instrução1* e quaisquer outras instruções no bloco são executadas e o-bloco else, se presente, será ignorado. Se o valor de *expressão* for zero, em seguida, o bloco de if é ignorado e o-bloco else, se presente, é executado. São expressões que são avaliadas como diferente de zero
+- TRUE
+- um ponteiro não nulo,
+- qualquer valor aritmético diferente de zero, ou 
+- tipo de um tipo de classe que define uma conversão inequívoca para uma aritmética, booliano ou ponteiro. (Para obter informações sobre conversões, consulte [conversões padrão](../cpp/standard-conversions.md).)   
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -71,8 +72,10 @@ else  // optional
    ...
 } 
 ```  
+
 ## <a name="example"></a>Exemplo  
-```  
+
+```cpp  
 // if_else_statement.cpp  
 #include <iostream>
 
@@ -118,7 +121,7 @@ int main()
 }
 ```  
 ## <a name="if-statement-with-an-initializer"></a>Se a instrução com um inicializador
-**Visual Studio 2017 versão posterior e 15,3** (disponível com [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): um **se** instrução também pode conter uma expressão que declara e inicializa uma variável nomeada. Use este formulário da instrução if quando a variável é necessário apenas dentro do escopo do bloco if. 
+**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): uma **se** instrução também pode conter uma expressão que declara e inicializa uma variável nomeada. Use este formulário da instrução if quando a variável é necessária somente dentro do escopo do bloco if. 
 
 ```cpp
 ## Example  
@@ -166,12 +169,12 @@ int main()
 }
 ```
 
- Em todos os formulários do **se** instrução, *expressão*, que pode ter qualquer valor, exceto uma estrutura, é avaliada, incluindo todos os efeitos de lado. Controle passa do **se** instrução para a próxima instrução no programa, a menos que uma da *instrução*s contém um [quebra](../cpp/break-statement-cpp.md), [continuar](../cpp/continue-statement-cpp.md), ou [goto](../cpp/goto-statement-cpp.md).  
+ Em todas as formas dos **se** instrução *expressão*, que pode ter qualquer valor exceto uma estrutura, é avaliada, inclusive todos os efeitos colaterais. Controle passa do **se** instrução para a próxima instrução no programa, a menos que um dos *instrução*s contém um [quebra](../cpp/break-statement-cpp.md), [continuar](../cpp/continue-statement-cpp.md), ou [goto](../cpp/goto-statement-cpp.md).  
   
- O **else** cláusula de um `if...else` instrução está associada com o mais próximo anterior **se** instrução no mesmo escopo que não tem um **else** instrução.   
+ O **else** cláusula de uma `if...else` instrução está associada com o mais próximo anterior **se** instrução no mesmo escopo que não tem um correspondente **else** instrução.   
 
 ## <a name="constexpr-if-statements"></a>constexpr se instruções
-**Visual Studio 2017 versão posterior e 15,3** (disponível com [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): em modelos de função, você pode usar um **constexpr se** instrução para tomar decisões de ramificação de tempo de compilação sem precisar recorrer a várias sobrecargas de função. Por exemplo, você pode escrever uma única função esse parâmetro de identificadores desempacotar (nenhuma sobrecarga de parâmetro de zero é necessária): 
+**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): em modelos de função, você pode usar um `constexpr if` instrução para tomar decisões de ramificação de tempo de compilação sem precisar recorrer a vários sobrecargas de função. Por exemplo, você pode escrever uma única função esse parâmetro de identificadores desempacotar (nenhuma sobrecarga de parâmetro de zero é necessária): 
 
 ```cpp
 template <class T, class... Rest>

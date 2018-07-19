@@ -17,12 +17,12 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b571cd2836e66ebef21898af27cf2a6d7082e0e5
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: 746b0829be6f66203d22cae4072dded9f6be32d8
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36261037"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939696"
 ---
 # <a name="header-files-c"></a>Arquivos de cabeçalho (C++)
 
@@ -33,13 +33,13 @@ int x; // declaration
 x = 42; // use x
 ```
 
- A declaração informa ao compilador se é um **int**, um **duplo**, um **função**, um **classe** ou alguma outra coisa.  Além disso, cada nome deve ser declarado (direta ou indiretamente) em todos os arquivos. cpp no qual ele é usado. Quando você compila um programa, cada arquivo. cpp é compilado independentemente em uma unidade de compilação. O compilador não tem conhecimento de que os nomes são declarados em outras unidades de compilação. Isso significa que, se você definir uma classe ou função ou variável global, você deve fornecer uma declaração que algo em cada arquivo. cpp adicionais que o utiliza. Cada declaração daquilo que deve ser exatamente idêntica em todos os arquivos. Uma inconsistência pequena fará com que erros ou comportamento indesejado, quando o vinculador tenta mesclar todas as unidades de compilação em um único programa.
+ A declaração informa ao compilador se é um **int**, um **duplo**, um **função**, um **classe** ou alguma outra coisa.  Além disso, cada nome deve ser declarado (direta ou indiretamente) em todos os arquivos. cpp no qual ele é usado. Quando você compila um programa, cada arquivo. cpp é compilado de forma independente em uma unidade de compilação. O compilador não tem conhecimento de que nomes são declarados em outras unidades de compilação. Isso significa que, se você definir uma classe ou função ou variável global, você deve fornecer uma declaração dessa coisa em cada arquivo. cpp adicionais que o utiliza. Cada declaração de lá o que deve ser exatamente idêntica em todos os arquivos. Uma inconsistência de pequena causará erros ou um comportamento não intencional, quando o vinculador tenta mesclar todas as unidades de compilação em um único programa.
 
-Para minimizar a possibilidade de erros, C++ adotou a convenção de usar *arquivos de cabeçalho* para conter declarações. Verifique as declarações em um arquivo de cabeçalho, e use o #include diretiva em todos os arquivos. cpp ou outro arquivo de cabeçalho requer essa declaração. O #include inserções diretivas uma cópia do arquivo de cabeçalho diretamente no arquivo. cpp antes da compilação. 
+Para minimizar o potencial para erros, o C++ adotou a convenção de uso *arquivos de cabeçalho* para conter as declarações. Você fazer as declarações em um arquivo de cabeçalho e usar o #include diretiva em todos os arquivos. cpp ou outro arquivo de cabeçalho requer essa declaração. O #include diretiva insere uma cópia do arquivo de cabeçalho diretamente no arquivo. cpp antes da compilação. 
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra uma maneira comum para declarar uma classe e, em seguida, usá-lo em um arquivo de origem diferente. Vamos começar com o arquivo de cabeçalho **my_class.h**. Ele contém uma definição de classe, mas observe que a definição está incompleta. a função de membro `do_something` não está definido:
+O exemplo a seguir mostra uma maneira comum de declarar uma classe e, em seguida, usá-lo em outro arquivo de origem. Vamos começar com o arquivo de cabeçalho `my_class.h`. Ela contém uma definição de classe, mas observe que a definição está incompleta. a função de membro `do_something` não está definido:
 
 ```cpp
 // my_class.h
@@ -54,9 +54,9 @@ namespace N
 }
 ```
 
-Em seguida, crie um arquivo de implementação (normalmente com uma extensão semelhante ou. cpp). Vamos chamar a my_class.cpp de arquivo e forneça uma definição para a declaração de membro. Adicionamos um `#include` diretiva para o arquivo "my_class.h" para ter a declaração my_class inserida neste momento na. cpp arquivo e incluem  **\<iostream >** para efetuar pull na declaração para `std::cout`. Observe que as aspas são usadas para arquivos de cabeçalho no mesmo diretório que o arquivo de origem e parênteses são usados para cabeçalhos de biblioteca padrão. Além disso, muitos cabeçalhos de biblioteca padrão não têm. h ou qualquer outra extensão de arquivo.
+Em seguida, crie um arquivo de implementação (normalmente com uma extensão de semelhante ou. cpp). Vamos chamar o my_class.cpp de arquivo e forneça uma definição para a declaração de membro. Adicionamos uma `#include` diretiva para o arquivo de "my_class.h" para que a declaração my_class inserida neste momento na. cpp de arquivo e podemos incluir `<iostream>` efetuar pull na declaração para `std::cout`. Observe que as aspas são usadas para arquivos de cabeçalho no mesmo diretório que o arquivo de origem e colchetes angulares são usados para os cabeçalhos da biblioteca padrão. Além disso, muitos cabeçalhos da biblioteca padrão não tem. h ou qualquer outra extensão de arquivo.
 
-O arquivo de implementação, pode, opcionalmente, usamos um **usando** instrução para evitar ter que qualificar cada menção "my_class" ou "cout" com "n::" ou "std::".  Não coloque **usando** instruções nos arquivos de cabeçalho!
+No arquivo de implementação, pode, opcionalmente, usamos uma **usando** instrução para evitar ter que qualificar cada menção de "my_class" ou "cout" com "n::" ou "std::".  Não coloque **usando** instruções em seus arquivos de cabeçalho!
 
 ```cpp
 // my_class.cpp
@@ -72,7 +72,7 @@ void my_class::do_something()
 }
 ```
 
-Agora podemos usar `my_class` em outro arquivo. cpp. Podemos #include o arquivo de cabeçalho para que o compilador extrai na declaração. Todas as necessidades de compilador saber é que my_class é uma classe que tem uma função de membro público chamada `do_something()`.
+Agora podemos usar `my_class` em outro arquivo. cpp. Podemos #include no arquivo de cabeçalho, de modo que o compilador efetua pull na declaração. Todas as necessidades de compilador saber é que my_class é uma classe que tem uma função de membro público chamada `do_something()`.
 
 ```cpp
 // my_program.cpp
@@ -88,35 +88,35 @@ int main()
 }
 ```
 
-Depois que o compilador conclusão da compilação de cada arquivo. cpp em arquivos. obj, ele passa os arquivos. obj para o vinculador. Quando o vinculador mescla os arquivos de objeto encontrar exatamente uma definição para my_class; ele está no arquivo. obj produzido para my_class.cpp e a compilação for bem-sucedida.
+Depois que o compilador conclusão da compilação de cada arquivo. cpp em arquivos. obj, ele passa os arquivos. obj para o vinculador. Quando o vinculador mescla os arquivos de objeto encontra exatamente uma definição para my_class; ele está no arquivo. obj produzido para my_class.cpp e a compilação for bem-sucedida.
 
 ## <a name="include-guards"></a>Incluir protege
 
-Normalmente, os arquivos de cabeçalho têm um *incluem proteção* ou um **#pragma uma vez** diretiva para garantir que eles não estejam inseridos várias vezes em um arquivo. cpp único. 
+Normalmente, os arquivos de cabeçalho têm um *incluem guard* ou um **#pragma uma vez** diretiva para garantir que eles não são inseridos várias vezes em um arquivo. cpp único. 
 
 my_class.h
-#<a name="ifndef-myclassh--include-guard"></a>ifndef MY_CLASS_H / / incluem proteção
+#<a name="ifndef-myclassh--include-guard"></a>ifndef MY_CLASS_H / / incluem guard
 #<a name="define-myclassh"></a>Definir MY_CLASS_H
 
 
-namespace N {classe my_class {público: void do_something();};
+namespace N {classe my_class {public: void do_something();};
 
 }
 
 #<a name="endif--myclassh-"></a>endif / * MY_CLASS_H * /
 
-## <a name="what-to-put-in-a-header-file"></a>O que deve ser colocado em um arquivo de cabeçalho
+## <a name="what-to-put-in-a-header-file"></a>O que colocar em um arquivo de cabeçalho
 
-Como um arquivo de cabeçalho potencialmente pode ser incluído por vários arquivos, ele não pode conter definições que podem produzir várias definições de mesmo nome. O exemplo a seguir não é permitidas ou é considerados prática muito ruim:
+Como um arquivo de cabeçalho potencialmente pode ser incluído por vários arquivos, ele não pode conter definições que podem produzir várias definições de mesmo nome. O exemplo a seguir não é permitidas ou é considerados muito boa prática:
 
 - definições de tipo interno no namespace ou escopo global
 - definições de função não embutida 
-- definições de variáveis não constante
+- definições de variável não const
 - definições de agregação
 - namespaces sem nome
 - usando diretivas
 
-Usar o **usando** diretiva não necessariamente causará um erro, mas poderá causar um problema porque ele traz o namespace no escopo em cada arquivo. cpp direta ou indiretamente inclui esse cabeçalho. 
+Usar o **usando** diretiva não necessariamente causará um erro, mas potencialmente pode causar um problema porque ele traz o namespace no escopo em todos os arquivos. cpp que direta ou indiretamente, inclua esse cabeçalho. 
 
 ## <a name="sample-header-file"></a>Arquivo de cabeçalho de exemplo
 

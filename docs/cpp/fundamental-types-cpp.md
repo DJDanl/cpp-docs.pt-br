@@ -53,17 +53,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c24ee360f1c14aa9b355f45ec1c12877efa306c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d91971b7d96b09fe1fd0d14a2a711f7771503a6a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417321"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941470"
 ---
 # <a name="fundamental-types--c"></a>Tipos fundamentais (C++)
-Tipos fundamentais em C++ são divididos em três categorias: integral, ponto, flutuante e void. Os tipos integrais são capazes de manipular números inteiros. Tipos de ponto flutuante são capazes de especificar os valores que podem ter partes fracionários.  
+Tipos fundamentais no C++ são divididos em três categorias: integral, ponto, flutuante e void. Os tipos integrais são capazes de manipular números inteiros. Tipos de ponto flutuante são capazes de especificar valores que podem ter partes fracionárias.  
   
- O [void](../cpp/void-cpp.md) tipo descreve um conjunto vazio de valores. Nenhuma variável do tipo `void` pode ser especificada — ele é usado basicamente para declarar funções que não retornam nenhum valor ou para declarar ponteiros genéricos para dados não tipados ou tipados arbitrariamente. Qualquer expressão pode ser explicitamente convertida no tipo `void`. No entanto, tais expressões estão restritas aos seguintes usos:  
+ O [void](../cpp/void-cpp.md) tipo descreve um conjunto vazio de valores. Nenhuma variável do tipo **void** pode ser especificada — ele é usado principalmente para declarar as funções que não retornam valores ou dados de tipo declarar ponteiros genéricos para não tipado ou arbitrariamente. Qualquer expressão pode ser explicitamente convertido ou convertido para o tipo **void**. No entanto, tais expressões estão restritas aos seguintes usos:  
   
 -   Uma instrução de expressão. (Consulte [expressões](../cpp/expressions-cpp.md), para obter mais informações.)  
   
@@ -77,17 +77,17 @@ Tipos fundamentais em C++ são divididos em três categorias: integral, ponto, f
   
 |Categoria|Tipo|Conteúdo|  
 |--------------|----------|--------------|  
-|Integral|`char`|Tipo `char` é um tipo integral que geralmente contém membros do conjunto de caracteres de execução básico — por padrão, isso é ASCII em C++ da Microsoft.<br /><br /> O compilador do C++ trata variáveis do tipo `char`, `signed` `char`, e `unsigned` `char` têm tipos diferentes. Variáveis do tipo `char` são promovidos para `int` como se fossem tipo `signed` `char` por padrão, a menos que a opção de compilação /J é usada. Nesse caso, eles são tratados como tipo `unsigned` `char` e são promovidos para `int` sem extensão de entrada.|  
-||`bool`|Tipo `bool` é um tipo integral que pode ter um dos dois valores `true` ou `false`. Seu tamanho não é especificado.|  
-||`short`|Tipo `short` `int` (ou simplesmente `short`) é um tipo integral que seja maior ou igual ao tamanho do tipo `char`e menor que ou igual ao tamanho do tipo `int`.<br /><br /> Objetos do tipo `short` podem ser declarados como `signed` `short` ou `unsigned short`. `Signed short` é um sinônimo para `short`.|  
-||`int`|Tipo `int` é um tipo integral que seja maior ou igual ao tamanho do tipo `short` `int`e menor que ou igual ao tamanho do tipo `long`.<br /><br /> Objetos do tipo `int` podem ser declarados como `signed` `int` ou `unsigned` `int`. `Signed` `int` é um sinônimo para `int`.|  
-||`__int8`, `__int16`, `__int32`, `__int64`|Inteiros dimensionados `__int n`, onde `n` é o tamanho, em bits, da variável de inteiro. `__int8`, `__int16`, `__int32` e `__int64` são palavras-chave específicas da Microsoft. Nem todos os tipos estão disponíveis em todas as arquiteturas. `(__int128` Não há suporte.)|  
-||`long`|Tipo `long` (ou `long` `int`) é um tipo integral que seja maior ou igual ao tamanho do tipo `int`.<br /><br /> Objetos do tipo `long` podem ser declarados como `signed` `long` ou `unsigned` `long`. `Signed` `long` é um sinônimo para `long`.|  
-||`long` `long`|Maior do que sem um sinal `long`.<br /><br /> Objetos do tipo `long long` podem ser declarados como `signed` `long long` ou `unsigned` `long long`. `signed` `long long` é um sinônimo para `long long`.|  
-||`wchar_t`, `__wchar_t`|Uma variável do tipo `wchar_t` designa um tipo de caracteres multibyte ou de caractere largo. Por padrão, `wchar_t` é um tipo nativo, mas você pode usar [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) fazer `wchar_t` um typedef para `unsigned short`. O `__wchar_t` tipo é um sinônimo específicas da Microsoft para o nativo `wchar_t` tipo.<br /><br /> Use o prefixo L antes de um caractere ou uma cadeia de caracteres literal para designar o tipo de caractere largo.|  
-|Ponto flutuante|`float`|Tipo `float` é flutuante menor tipo de ponto.|  
-||`double`|Tipo `double` é um tipo de ponto que é maior que ou igual ao tipo flutuante `float`, mas menor que ou igual ao tamanho do tipo `long` `double`.<br /><br /> Específico da Microsoft: A representação de `long double` e `double` é idêntica. No entanto, `long double` e `double` são tipos separados.|  
-||`long double`|Tipo `long` `double` é um tipo de ponto que é maior que ou igual ao tipo flutuante `double`.|  
+|Integral|**char**|Tipo de **char** é um tipo integral que geralmente contém membros do conjunto de caracteres de execução básico — por padrão, esse é o ASCII no Microsoft C++.<br /><br /> O compilador do C++ trata variáveis do tipo **char**, **assinado char**, e **unsigned char** como tendo tipos diferentes. Variáveis do tipo **char** são promovidos à **int** como se fossem do tipo **assinado char** por padrão, a menos que a opção de compilação /J seja usada. Nesse caso, eles são tratados como tipo **unsigned char** e são promovidos à **int** sem extensão de sinal.|  
+||**bool**|Tipo de **bool** é um tipo integral que pode ter um dos dois valores **verdadeiro** ou **false**. Seu tamanho não é especificado.|  
+||**short**|Tipo de **short int** (ou simplesmente **curto**) é um tipo integral que é maior ou igual ao tamanho do tipo **char**e menor ou igual ao tamanho do tipo **int**.<br /><br /> Objetos do tipo **curto** podem ser declarados como **1&gt;signed** ou **unsigned short**. **1&gt;signed** é um sinônimo de **curto**.|  
+||**int**|Tipo de **int** é um tipo integral que é maior ou igual ao tamanho do tipo **short int**e menor ou igual ao tamanho do tipo **longo**.<br /><br /> Objetos do tipo **int** podem ser declarados como **assinado int** ou **unsigned int**. **Assinado int** é um sinônimo de **int**.|  
+||**__int8**, **__int16**, **__int32**, **__int64**|Inteiro dimensionado `__int n`, onde `n` é o tamanho, em bits, da variável de inteiro. **__int8**, **__int16**, **__int32** e **__int64** são palavras-chave específicas da Microsoft. Nem todos os tipos estão disponíveis em todas as arquiteturas. (**__int128** não tem suporte.)|  
+||**long**|Tipo de **longo** (ou **long int**) é um tipo integral que é maior ou igual ao tamanho do tipo **int**.<br /><br /> Objetos do tipo **longo** podem ser declarados como **assinado longa** ou **unsigned long**. **Assinado longa** é um sinônimo de **longo**.|  
+||**long long**|Maior do que um unsigned **longo**.<br /><br /> Objetos do tipo **long long** podem ser declarados como **assinado longo longo** ou **longo longo sem sinal**. **assinado longo longo** é um sinônimo de **long long**.|  
+||**wchar_t**, **wchar_t**|Uma variável do tipo **wchar_t** designa um tipo de caractere multibyte ou caracteres largos. Por padrão, **wchar_t** é um tipo nativo, mas você pode usar [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) fazer **wchar_t** um typedef para **unsigned short**. O **wchar_t** tipo é um sinônimo de específico da Microsoft para nativo **wchar_t** tipo.<br /><br /> Use o prefixo L antes de um caractere ou literal de cadeia de caracteres para designar o tipo de caractere largo.|  
+|Ponto flutuante|**float**|Tipo de **float** é flutuante menor tipo de ponto.|  
+||**double**|Tipo de **duplas** é um tipo de ponto flutuante que é maior que ou igual ao tipo **float**, mas menor ou igual ao tamanho do tipo **longo duplo**.<br /><br /> Específico da Microsoft: A representação de **longo duplo** e **duplo** é idêntico. No entanto, **longo duplo** e **duplo** são tipos separados.|  
+||**long double**|Tipo de **longo duplo** é um tipo de ponto que é maior que ou igual ao tipo flutuante **duplo**.|  
   
  **Seção específica da Microsoft**  
   
@@ -97,14 +97,14 @@ Tipos fundamentais em C++ são divididos em três categorias: integral, ponto, f
   
 |Tipo|Tamanho|  
 |----------|----------|  
-|`bool`, `char`, `unsigned char`, `signed char`, `__int8`|1 byte|  
-|`__int16`, `short`, `unsigned short`, `wchar_t`, `__wchar_t`|2 bytes|  
-|`float`, `__int32`, `int`, `unsigned int`, `long`, `unsigned long`|4 bytes|  
-|`double`, `__int64`, `long double`, `long long`|8 bytes|  
+|**bool**, **char**, **unsigned char**, **assinado char**, **__int8**|1 byte|  
+|**__int16**, **curto**, **unsigned short**, **wchar_t**, **wchar_t**|2 bytes|  
+|**float**, **__int32**, **int**, **unsigned int**, **long**, **unsigned long**|4 bytes|  
+|**duplo**, **__int64**, **long double**, **long long**|8 bytes|  
   
  **Fim da seção específica da Microsoft**  
   
- Consulte [intervalos de tipos de dados](../cpp/data-type-ranges.md) para obter um resumo do intervalo de valores de cada tipo.  
+ Ver [intervalos de tipos de dados](../cpp/data-type-ranges.md) para obter um resumo do intervalo de valores de cada tipo.  
   
  Para obter mais informações sobre conversão de tipo, consulte [conversões padrão](../cpp/standard-conversions.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Resultados do exemplo de chamada | Microsoft Docs
+title: Os resultados do exemplo de chamada | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cc5d5f96b5ffabd5397f26b6ff1372232fe0cd6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0e7b022925e22f021a2ddad1b3b9ef52924b25a3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421413"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939101"
 ---
 # <a name="results-of-calling-example"></a>Resultados do exemplo de chamada
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
@@ -35,13 +35,13 @@ ms.locfileid: "32421413"
 A convenção de chamada __cdecl  
   
 ## <a name="stdcall-and-thiscall"></a>__stdcall e thiscall  
- O C decorado nome (`__stdcall`) é "_MyFunc@20." O nome decorado C++ é proprietário.  
+ O nome decorado C (**stdcall**) é "_MyFunc@20." O nome decorado C++ é proprietário.  
   
  ![&#95;&#95;stdcall e convenções de chamada thiscall](../cpp/media/vc37i02.gif "vc37I02")  
 As convenções de chamada __stdcall e thiscall  
   
 ## <a name="fastcall"></a>__fastcall  
- O C decorado nome (`__fastcall`) é "@MyFunc@20." O nome decorado C++ é proprietário.  
+ O nome decorado C (**fastcall**) é "@MyFunc@20." O nome decorado C++ é proprietário.  
   
  ![Chamando convenção para &#95; &#95;fastcall](../cpp/media/vc37i03.gif "vc37I03")  
 A convenção de chamada __fastcall  
