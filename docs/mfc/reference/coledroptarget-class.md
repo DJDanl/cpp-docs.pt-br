@@ -34,15 +34,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fec20d8bb960d48392f2d174dab9ee6497738c80
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0d54a22bd215a80f3e7cab3770a4ba12cd7baffb
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039596"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027436"
 ---
 # <a name="coledroptarget-class"></a>Classe COleDropTarget
-Fornece o mecanismo de comunicação entre uma janela e das bibliotecas OLE.  
+Fornece o mecanismo de comunicação entre uma janela e as bibliotecas OLE.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,15 +66,15 @@ class COleDropTarget : public CCmdTarget
 |[COleDropTarget::OnDragLeave](#ondragleave)|Chamado quando o cursor é arrastado para fora da janela.|  
 |[COleDropTarget::OnDragOver](#ondragover)|Chamado repetidamente quando o cursor é arrastado sobre a janela.|  
 |[COleDropTarget::OnDragScroll](#ondragscroll)|Chamado para determinar se o cursor é arrastado para a região de rolagem da janela.|  
-|[COleDropTarget::OnDrop](#ondrop)|Chamado quando dados são descartados para a janela, o manipulador padrão.|  
-|[COleDropTarget::OnDropEx](#ondropex)|Chamado quando dados são descartados para a janela, o manipulador inicial.|  
-|[COleDropTarget::Register](#register)|Registra a janela como um destino válido.|  
-|[COleDropTarget::Revoke](#revoke)|Faz com que a janela pare de ser um destino válido.|  
+|[COleDropTarget::OnDrop](#ondrop)|Chamado quando dados são soltos na janela, o manipulador padrão.|  
+|[COleDropTarget::OnDropEx](#ondropex)|Chamado quando dados são soltos na janela, o manipulador inicial.|  
+|[COleDropTarget::Register](#register)|Registra a janela como um destino de soltar válido.|  
+|[COleDropTarget::Revoke](#revoke)|Faz com que a janela pare sendo um destino de soltar válido.|  
   
 ## <a name="remarks"></a>Comentários  
- Criação de um objeto dessa classe permite que uma janela aceitar dados por meio do mecanismo de arrastar e soltar OLE.  
+ Criar um objeto dessa classe permite que uma janela aceitar dados por meio do mecanismo de arrastar e soltar OLE.  
   
- Para obter uma janela para aceitar comandos drop, você deve primeiro criar um objeto do `COleDropTarget` classe e, em seguida, chame o [registrar](#register) função com um ponteiro para o desejado `CWnd` objeto como o único parâmetro.  
+ Para obter uma janela para aceitar comandos drop, você deve primeiro criar um objeto do `COleDropTarget` de classe e, em seguida, chamar o [registre](#register) função com um ponteiro para o estado desejado `CWnd` objeto como o único parâmetro.  
   
  Para obter mais informações sobre operações de arrastar e soltar usando OLE, consulte o artigo [arrastar e soltar (OLE)](../../mfc/drag-and-drop-ole.md).  
   
@@ -96,10 +96,10 @@ COleDropTarget();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Chamar [registrar](#register) para associar o objeto uma janela.  
+ Chame [registrar](#register) para associar o objeto uma janela.  
   
 ##  <a name="ondragenter"></a>  COleDropTarget::OnDragEnter  
- Chamado pelo framework quando o cursor é arrastado primeiro na janela.  
+ Chamado pelo framework quando o cursor é arrastado primeiro para a janela.  
   
 ```  
 virtual DROPEFFECT OnDragEnter(
@@ -110,49 +110,49 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *pWnd*  
- Inserção de pontos para a janela do cursor.  
+ *Apropriei*  
+ Aponta para a janela que o cursor está entrando.  
   
  *pDataObject*  
  Aponta para o objeto de dados que contém os dados que podem ser descartados.  
   
  *dwKeyState*  
- Contém o estado das teclas modificadoras. Esta é uma combinação de qualquer número das seguintes opções: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, e **MK_RBUTTON**.  
+ Contém o estado das teclas modificadoras. Isso é uma combinação de qualquer número das seguintes opções: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.  
   
- *Ponto*  
+ *ponto*  
  Contém o local atual do cursor em coordenadas do cliente.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O efeito que ocorreria se foram tentada uma queda no local especificado por *ponto*. Pode ser uma ou mais das seguintes opções:  
+ O efeito que resultaria caso uma operação de soltar foram tentada no local especificado por *aponte*. Ele pode ser um ou mais das seguintes opções:  
   
-- `DROPEFFECT_NONE` Um descarte não será permitido.  
+- DROPEFFECT_NONE uma operação de soltar não teria permissão.  
   
-- `DROPEFFECT_COPY` Uma operação de cópia deve ser executada.  
+- DROPEFFECT_COPY seria realizada uma operação de cópia.  
   
-- `DROPEFFECT_MOVE` Uma operação de movimentação deve ser executada.  
+- DROPEFFECT_MOVE seria realizada uma operação de movimentação.  
   
-- `DROPEFFECT_LINK` Um link de dados descartados para os dados originais seja estabelecido.  
+- Link de um DROPEFFECT_LINK dos dados soltos para os dados originais seja estabelecido.  
   
-- `DROPEFFECT_SCROLL` Uma operação de arrastar rolagem está prestes a ocorrer ou está ocorrendo no destino.  
+- Operação de rolagem de arrastar de um DROPEFFECT_SCROLL está prestes a ocorrer ou está ocorrendo no destino.  
   
 ### <a name="remarks"></a>Comentários  
- Substitua essa função para permitir operações de soltar ocorra na janela. A implementação padrão chama [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter), que retorna apenas `DROPEFFECT_NONE` por padrão.  
+ Substitua essa função para permitir operações de soltar ocorrer na janela. A implementação padrão chama [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter), que simplesmente retorna DROPEFFECT_NONE por padrão.  
   
  Para obter mais informações, consulte [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) no SDK do Windows.  
   
 ##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave  
- Chamado pelo framework quando o cursor sai a janela enquanto uma operação de arrastar estiver em vigor.  
+ Chamado pelo framework quando o cursor deixa a janela enquanto uma operação de arrastar estiver em vigor.  
   
 ```  
 virtual void OnDragLeave(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *pWnd*  
+ *Apropriei*  
  Aponta para a janela que está deixando o cursor.  
   
 ### <a name="remarks"></a>Comentários  
- Substitua essa função se desejar um comportamento especial quando a operação de arrastar deixa a janela especificada. A implementação padrão Esta função chama [CView::OnDragLeave](../../mfc/reference/cview-class.md#ondragleave).  
+ Substitua essa função se você quiser o comportamento especial quando a operação de arrastar deixa a janela especificada. A implementação padrão dessa função chama [CView::OnDragLeave](../../mfc/reference/cview-class.md#ondragleave).  
   
  Para obter mais informações, consulte [IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) no SDK do Windows.  
   
@@ -168,33 +168,33 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *pWnd*  
+ *Apropriei*  
  Aponta para a janela que o cursor está sobre.  
   
  *pDataObject*  
  Aponta para o objeto de dados que contém os dados a ser removido.  
   
  *dwKeyState*  
- Contém o estado das teclas modificadoras. Esta é uma combinação de qualquer número das seguintes opções: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, e **MK_RBUTTON**.  
+ Contém o estado das teclas modificadoras. Isso é uma combinação de qualquer número das seguintes opções: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.  
   
- *Ponto*  
+ *ponto*  
  Contém o local atual do cursor em coordenadas do cliente.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O efeito que ocorreria se foram tentada uma queda no local especificado por *ponto*. Pode ser uma ou mais das seguintes opções:  
+ O efeito que resultaria caso uma operação de soltar foram tentada no local especificado por *aponte*. Ele pode ser um ou mais das seguintes opções:  
   
-- `DROPEFFECT_NONE` Um descarte não será permitido.  
+- DROPEFFECT_NONE uma operação de soltar não teria permissão.  
   
-- `DROPEFFECT_COPY` Uma operação de cópia deve ser executada.  
+- DROPEFFECT_COPY seria realizada uma operação de cópia.  
   
-- `DROPEFFECT_MOVE` Uma operação de movimentação deve ser executada.  
+- DROPEFFECT_MOVE seria realizada uma operação de movimentação.  
   
-- `DROPEFFECT_LINK` Um link de dados descartados para os dados originais seja estabelecido.  
+- Link de um DROPEFFECT_LINK dos dados soltos para os dados originais seja estabelecido.  
   
-- `DROPEFFECT_SCROLL` Indica que uma operação de arrastar rolagem está prestes a ocorrer ou se está ocorrendo no destino.  
+- DROPEFFECT_SCROLL indica que uma operação de arrastar rolagem está prestes a ocorrer ou se está ocorrendo no destino.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função deve ser substituída para permitir operações de soltar ocorra na janela. A implementação padrão Esta função chama [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover), que retorna `DROPEFFECT_NONE` por padrão. Como essa função é chamada com frequência durante uma operação de arrastar e soltar, ele deve ser otimizado tanto quanto possível.  
+ Essa função deve ser substituída para permitir operações de soltar ocorrer na janela. A implementação padrão dessa função chama [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover), que retorna DROPEFFECT_NONE por padrão. Porque essa função é chamada com frequência durante uma operação de arrastar e soltar, ele deve ser otimizado tanto quanto possível.  
   
  Para obter mais informações, consulte [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129) no SDK do Windows.  
   
@@ -202,7 +202,7 @@ virtual DROPEFFECT OnDragOver(
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
 ##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
- Chamado pelo framework antes de chamar [OnDragEnter](#ondragenter) ou [OnDragOver](#ondragover) para determinar se *ponto* está em uma região de rolagem.  
+ Chamado pelo framework antes de chamar [OnDragEnter](#ondragenter) ou [OnDragOver](#ondragover) para determinar se *aponte* está na região de rolagem.  
   
 ```  
 virtual DROPEFFECT OnDragScroll(
@@ -212,33 +212,33 @@ virtual DROPEFFECT OnDragScroll(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *pWnd*  
+ *Apropriei*  
  Aponta para a janela que o cursor está atualmente posicionado.  
   
  *dwKeyState*  
- Contém o estado das teclas modificadoras. Esta é uma combinação de qualquer número das seguintes opções: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, e **MK_RBUTTON**.  
+ Contém o estado das teclas modificadoras. Isso é uma combinação de qualquer número das seguintes opções: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.  
   
- *Ponto*  
+ *ponto*  
  Contém o local do cursor, em pixels, em relação à tela.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O efeito que ocorreria se foram tentada uma queda no local especificado por *ponto*. Pode ser uma ou mais das seguintes opções:  
+ O efeito que resultaria caso uma operação de soltar foram tentada no local especificado por *aponte*. Ele pode ser um ou mais das seguintes opções:  
   
-- `DROPEFFECT_NONE` Um descarte não será permitido.  
+- DROPEFFECT_NONE uma operação de soltar não teria permissão.  
   
-- `DROPEFFECT_COPY` Uma operação de cópia deve ser executada.  
+- DROPEFFECT_COPY seria realizada uma operação de cópia.  
   
-- `DROPEFFECT_MOVE` Uma operação de movimentação deve ser executada.  
+- DROPEFFECT_MOVE seria realizada uma operação de movimentação.  
   
-- `DROPEFFECT_LINK` Um link de dados descartados para os dados originais seja estabelecido.  
+- Link de um DROPEFFECT_LINK dos dados soltos para os dados originais seja estabelecido.  
   
-- `DROPEFFECT_SCROLL` Indica que uma operação de arrastar rolagem está prestes a ocorrer ou se está ocorrendo no destino.  
+- DROPEFFECT_SCROLL indica que uma operação de arrastar rolagem está prestes a ocorrer ou se está ocorrendo no destino.  
   
 ### <a name="remarks"></a>Comentários  
- Substitua essa função quando desejar fornecer um comportamento especial para esse evento. A implementação padrão Esta função chama [CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll), que retorna `DROPEFFECT_NONE` e rolar a janela quando o cursor é arrastado para a região de rolagem padrão dentro da borda da janela.  
+ Substitua essa função quando quiser fornecer um comportamento especial para esse evento. A implementação padrão dessa função chama [CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll), que retorna DROPEFFECT_NONE e rola a janela quando o cursor é arrastado para a região de rolagem padrão dentro da borda da janela.  
   
 ##  <a name="ondrop"></a>  COleDropTarget::OnDrop  
- Chamado pelo framework quando uma operação de soltar está ocorrer.  
+ Chamado pelo framework quando uma operação de soltar deve ocorrer.  
   
 ```  
 virtual BOOL OnDrop(
@@ -249,36 +249,36 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *pWnd*  
+*Apropriei*  
  Aponta para a janela que o cursor está atualmente posicionado.  
   
- *pDataObject*  
- Aponta para o objeto de dados que contém os dados a ser removido.  
+*pDataObject*  
+Aponta para o objeto de dados que contém os dados a ser removido.  
   
- *dropEffect*  
- O efeito que o usuário escolheu para a operação de remoção. Pode ser uma ou mais das seguintes opções:  
+*dropEffect*  
+O efeito que o usuário escolheu para a operação de soltar. Ele pode ser um ou mais das seguintes opções:  
   
-- `DROPEFFECT_COPY` Uma operação de cópia deve ser executada.  
+ - DROPEFFECT_COPY seria realizada uma operação de cópia.  
+       
+ - DROPEFFECT_MOVE seria realizada uma operação de movimentação.  
+      
+ - Link de um DROPEFFECT_LINK dos dados soltos para os dados originais seja estabelecido.  
   
-- `DROPEFFECT_MOVE` Uma operação de movimentação deve ser executada.  
-  
-- `DROPEFFECT_LINK` Um link de dados descartados para os dados originais seja estabelecido.  
-  
- *Ponto*  
- Contém o local do cursor, em pixels, em relação à tela.  
+*ponto*  
+Contém o local do cursor, em pixels, em relação à tela.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o descarte for bem-sucedida; Caso contrário, 0.  
+ Diferente de zero se a operação de soltar for bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- A estrutura do primeiro chama [OnDropEx](#ondropex). Se o `OnDropEx` função não processa o descarte, o framework chama esta função de membro, `OnDrop`. Normalmente, o aplicativo substitui [OnDropEx](../../mfc/reference/cview-class.md#ondropex) na classe de exibição para lidar com o botão direito do mouse, arraste e solte. Normalmente, a classe de exibição [OnDrop](../../mfc/reference/cview-class.md#ondrop) é usado para tratar simple arrastar e soltar.  
+ A estrutura do primeiro chama [OnDropEx](#ondropex). Se o `OnDropEx` função não lidar com a operação de soltar, a estrutura, em seguida, chama essa função de membro `OnDrop`. Normalmente, o aplicativo substitui [OnDropEx](../../mfc/reference/cview-class.md#ondropex) na classe de exibição para lidar com o botão direito do mouse, arraste e solte. Normalmente, a classe de exibição [OnDrop](../../mfc/reference/cview-class.md#ondrop) é usado para lidar com a simple arrastar e soltar.  
   
- A implementação padrão de `COleDropTarget::OnDrop` chamadas [CView::OnDrop](../../mfc/reference/cview-class.md#ondrop), que retorna apenas **FALSE** por padrão.  
+ A implementação padrão de `COleDropTarget::OnDrop` chamadas [CView::OnDrop](../../mfc/reference/cview-class.md#ondrop), que simplesmente retorna FALSE por padrão.  
   
  Para obter mais informações, consulte [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) no SDK do Windows.  
   
 ##  <a name="ondropex"></a>  COleDropTarget::OnDropEx  
- Chamado pelo framework quando uma operação de soltar está ocorrer.  
+ Chamado pelo framework quando uma operação de soltar deve ocorrer.  
   
 ```  
 virtual DROPEFFECT OnDropEx(
@@ -290,71 +290,71 @@ virtual DROPEFFECT OnDropEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *pWnd*  
+ *Apropriei*  
  Aponta para a janela que o cursor está atualmente posicionado.  
   
  *pDataObject*  
  Aponta para o objeto de dados que contém os dados a ser removido.  
   
  *dropDefault*  
- O efeito que o usuário escolheu para a operação de soltar padrão com base no estado atual da chave. Ele pode ser `DROPEFFECT_NONE`. Efeitos de soltar são discutidos na seção comentários.  
+ O efeito que o usuário escolheu para a operação de soltar padrão com base no estado atual da chave. Ele pode ser DROPEFFECT_NONE. Efeitos de soltar são discutidos na seção comentários.  
   
  *lista suspensa*  
- Uma lista dos efeitos drop que oferece suporte a origem de soltar. Soltar efeito valores podem ser combinados usando o OR bit a bit ( **&#124;**) operação. Efeitos de soltar são discutidos na seção comentários.  
+ Uma lista dos efeitos de soltar que ofereça suporte a origem de soltar. Valores de efeito de soltar podem ser combinados usando o OR bit a bit (**&#124;**) operação. Efeitos de soltar são discutidos na seção comentários.  
   
- *Ponto*  
+ *ponto*  
  Contém o local do cursor, em pixels, em relação à tela.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O efeito de soltar que resultaram da tentativa de descarte no local especificado por *ponto*. Efeitos de soltar são discutidos na seção comentários.  
+ O efeito de soltar que resultaram na tentativa de descarte no local especificado por *aponte*. Efeitos de soltar são discutidos na seção comentários.  
   
 ### <a name="remarks"></a>Comentários  
- Primeiro, o framework chama essa função. Se ele não lidar com o posicionamento, o framework chama [OnDrop](#ondrop). Normalmente, você substituirá [OnDropEx](../../mfc/reference/cview-class.md#ondropex) na classe de exibição para dar suporte ao botão direito do mouse, arraste e solte. Normalmente, a classe de exibição [OnDrop](../../mfc/reference/cview-class.md#ondrop) é usado para tratar o caso de suporte para simple arrastar e soltar.  
+ Primeiro, o framework chama essa função. Se ele não manipular a operação de soltar, a estrutura, em seguida, chama [OnDrop](#ondrop). Normalmente, você substituirá [OnDropEx](../../mfc/reference/cview-class.md#ondropex) na classe de exibição para dar suporte ao botão direito do mouse, arraste e solte. Normalmente, a classe de exibição [OnDrop](../../mfc/reference/cview-class.md#ondrop) é usado para manipular o caso de suporte simple arrastar e soltar.  
   
  A implementação padrão de `COleDropTarget::OnDropEx` chamadas [CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex). Por padrão, [CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex) simplesmente retorna um valor fictício para indicar o [OnDrop](#ondrop) função de membro deve ser chamada.  
   
- Efeitos de soltar descrevem a ação associada a uma operação de soltar. Consulte a seguinte lista de soltar efeitos:  
+ Efeitos de soltar descrevem a ação associada a uma operação de soltar. Consulte a seguinte lista de efeitos de soltar:  
   
-- `DROPEFFECT_NONE` Um descarte não será permitido.  
+ - DROPEFFECT_NONE uma operação de soltar não teria permissão.  
   
-- `DROPEFFECT_COPY` Uma operação de cópia deve ser executada.  
+ - DROPEFFECT_COPY seria realizada uma operação de cópia.  
   
-- `DROPEFFECT_MOVE` Uma operação de movimentação deve ser executada.  
+ - DROPEFFECT_MOVE seria realizada uma operação de movimentação.  
   
-- `DROPEFFECT_LINK` Um link de dados descartados para os dados originais seja estabelecido.  
+ - Link de um DROPEFFECT_LINK dos dados soltos para os dados originais seja estabelecido.  
   
-- `DROPEFFECT_SCROLL` Indica que uma operação de arrastar rolagem está prestes a ocorrer ou se está ocorrendo no destino.  
+ - DROPEFFECT_SCROLL indica que uma operação de arrastar rolagem está prestes a ocorrer ou se está ocorrendo no destino.  
   
  Para obter mais informações, consulte [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) no SDK do Windows.  
   
 ##  <a name="register"></a>  COleDropTarget::Register  
- Chame essa função para registrar sua janela com DLLs OLE como um destino válido.  
+ Chame essa função para registrar sua janela com DLLs OLE como um destino de soltar válido.  
   
 ```  
 BOOL Register(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *pWnd*  
+ *Apropriei*  
  Aponta para a janela que deve ser registrado como um destino de soltar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o registro for bem-sucedida; Caso contrário, 0.  
+ Diferente de zero se o registro for bem-sucedido; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função deve ser chamada para operações de soltar seja aceito.  
+ Essa função deve ser chamada para operações de descarte para serem aceitos.  
   
  Para obter mais informações, consulte [RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) no SDK do Windows.  
   
 ##  <a name="revoke"></a>  COleDropTarget::Revoke  
- Chamar essa função antes de destruir qualquer janela que foi registrada como um destino de soltar por meio de uma chamada para [registrar](#register) para removê-lo da lista de destinos de soltar.  
+ Chame essa função antes da destruição de qualquer janela que foi registrada como um destino de soltar por meio de uma chamada para [registrar](#register) para removê-lo da lista de destinos de soltar.  
   
 ```  
 virtual void Revoke();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Essa função é chamada automaticamente do [OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy) manipulador para a janela que foi registrada, geralmente não é necessário chamar essa função explicitamente.  
+ Essa função é chamada automaticamente a partir de [o OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy) manipulador para a janela que foi registrada, portanto, geralmente não é necessário chamar essa função explicitamente.  
   
  Para obter mais informações, consulte [RevokeDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms692643) no SDK do Windows.  
   
@@ -362,5 +362,5 @@ virtual void Revoke();
  [Exemplo MFC HIERSVR](../../visual-cpp-samples.md)   
  [Exemplo MFC OCLIENT](../../visual-cpp-samples.md)   
  [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe COleDropSource](../../mfc/reference/coledropsource-class.md)

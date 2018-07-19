@@ -7,12 +7,12 @@ f1_keywords:
 - set/std::swap (map)
 - set/std::swap (multiset)
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
-ms.openlocfilehash: aac2aaa09f609cd88c2bfab0e3fb66f4edade293
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b25194dc1cdc45bc93d9e5188715e3ea01258af4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857032"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966326"
 ---
 # <a name="ltsetgt-functions"></a>Funções &lt;set&gt;
 
@@ -31,13 +31,13 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` O conjunto de fornecer os elementos a ser trocado ou o conjunto cujos elementos devem ser trocadas com aqueles do conjunto de `left`.
+*à direita* o conjunto que fornece os elementos a serem trocados ou o conjunto cujos elementos serão trocados com aqueles do set *esquerdo*.
 
-`left` O conjunto cujos elementos devem ser trocadas com aqueles do conjunto de `right`.
+*à esquerda* o set cujos elementos são trocados por aqueles do set *direito*.
 
 ### <a name="remarks"></a>Comentários
 
-A função de modelo é um algoritmo especializado na classe de contêiner set para executar a função membro `left.`[swap](../standard-library/set-class.md#swap)( `right`). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo
+A função de modelo é um algoritmo especializado na classe de contêiner set para executar a função de membro `left.` [permuta](../standard-library/set-class.md#swap)(`right`). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo
 
 `template`\< **classT**> **void swap**( **T&**, **T&**)
 
@@ -58,13 +58,13 @@ void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocato
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` O multiconjunto fornecendo os elementos a ser trocado ou o multiconjunto cujos elementos são sejam trocadas com aqueles o multiconjunto `left`.
+*à direita* multiset que fornece os elementos a serem trocados ou o multiset cujos elementos deverão ser trocados com aqueles do multiset *esquerdo*.
 
-`left` O multiconjunto cujos elementos são sejam trocadas com aqueles o multiconjunto `right`.
+*à esquerda* o multiset cujos elementos deverão ser trocados com aqueles do multiset *direito*.
 
 ### <a name="remarks"></a>Comentários
 
-A função de modelo é um algoritmo especializado na classe de contêiner multiset para executar a função membro `left.`[swap](../standard-library/multiset-class.md#swap)( `right`). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo
+A função de modelo é um algoritmo especializado na classe de contêiner multiset para executar a função de membro `left.` [permuta](../standard-library/multiset-class.md#swap)(`right`). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo
 
 `template`\< **classT**> **void swap**( **T&**, **T&**)
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48b1d6e93aa929d95032c04a58b5b419ca312f8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 822d19e1333163dbe37a1734ce315048f81cb802
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842788"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964366"
 ---
 # <a name="codecvtbyname-class"></a>Classe codecvt_byname
 
@@ -53,15 +53,15 @@ protected:
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Locname` Uma localidade nomeada.
+*_Locname* uma localidade nomeada.
 
-`_Refs` Uma contagem de referência inicial.
+*_Refs* uma contagem de referência inicial.
 
 ## <a name="remarks"></a>Comentários
 
 As facetas byname são criadas automaticamente quando uma localidade nomeada é construída.
 
-Seu comportamento é determinado pela localidade nomeada `_Locname`. Cada construtor inicializa seu objeto base com [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`).
+Seu comportamento é determinado pela localidade nomeada *_Locname*. Cada construtor inicializa seu objeto base com [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95550c81235db58b1f8d372bf028750c003c7a9f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d59782b62ddfb51601505be6d12f01ce14cd4f1
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415719"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026628"
 ---
 # <a name="comerror-class"></a>Classe _com_error
 **Seção específica da Microsoft**  
   
- Um objeto `_com_error` representa uma condição de exceção detectada pelas funções de wrapper para tratamento de erros nos arquivos de cabeçalho gerados a partir da biblioteca de tipos ou por uma das classes de suporte COM. A classe `_com_error` encapsula o código de erro de `HRESULT` e qualquer objeto `IErrorInfo Interface` associado.  
+ Um objeto `_com_error` representa uma condição de exceção detectada pelas funções de wrapper para tratamento de erros nos arquivos de cabeçalho gerados a partir da biblioteca de tipos ou por uma das classes de suporte COM. O `_com_error` classe encapsula o código de erro HRESULT e associados `IErrorInfo Interface` objeto.  
   
 ### <a name="construction"></a>Construção  
   
@@ -44,9 +44,9 @@ ms.locfileid: "32415719"
   
 |||  
 |-|-|  
-|[Erro](../cpp/com-error-error.md)|Recupera o `HRESULT` passado para o construtor.|  
+|[Erro](../cpp/com-error-error.md)|Recupera o HRESULT transmitido ao construtor.|  
 |[ErrorInfo](../cpp/com-error-errorinfo.md)|Recupera o objeto `IErrorInfo` passado para o construtor.|  
-|[WCode](../cpp/com-error-wcode.md)|Recupera o código de erro de 16 bits mapeado para o `HRESULT` encapsulado.|  
+|[WCode](../cpp/com-error-wcode.md)|Recupera o código de erro de 16 bits mapeado para o HRESULT encapsulado.|  
   
 ### <a name="ierrorinfo-functions"></a>Funções IErrorInfo  
   
@@ -68,16 +68,16 @@ ms.locfileid: "32415719"
   
 |||  
 |-|-|  
-|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Mapas de 32 bits `HRESULT` para 16 bits `wCode`.|  
-|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Mapeia um `wCode` de 16 bits para um `HRESULT` de 32 bits.|  
+|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Mapeia o HRESULT de 32 bits para 16 bits `wCode`.|  
+|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Mapas de 16 bits `wCode` para HRESULT de 32 bits.|  
   
 **Fim da seção específica da Microsoft**  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<comdef.h >  
+ **Cabeçalho:** \<comdef >  
   
- `Lib:` comsuppw.lib ou comsuppwd.lib (consulte [/ZC: (wchar_t é do tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)  
+ `Lib:` comsuppw. lib ou comsuppwd (consulte [/ZC: wchar_t (wchar_t Is Native Type)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)  
   
 ## <a name="see-also"></a>Consulte também  
  [Classes de suporte COM do compilador](../cpp/compiler-com-support-classes.md)   
- [Interface IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)
+ [Interface IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)

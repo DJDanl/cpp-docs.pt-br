@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f89e6e0fc83a83ece82793050441fec9a1e7978b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f802dc91c3429ba718778d122d1a787aad0dec87
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844491"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964217"
 ---
 # <a name="independentbitsengine-class"></a>Classe independent_bits_engine
 
@@ -36,11 +36,11 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Engine` O tipo de mecanismo de base.
+*Mecanismo* o tipo de mecanismo de base.
 
-`W` **Tamanho do Word**. Tamanho, em bits, de cada número gerado. **Pré-condição**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*W* **tamanho da palavra**. Tamanho, em bits, de cada número gerado. **Pré-condição**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-`UIntType` O tipo de resultado de inteiro não assinado. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*UIntType* o tipo de resultado de inteiro sem sinal. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="members"></a>Membros
 
@@ -53,7 +53,7 @@ Para obter mais informações sobre membros do mecanismo, consulte [\<random>](.
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe de modelo descreve um *adaptador de mecanismo* que produz valores recompactando bits dos valores retornados pelo mecanismo básico, resultando em valores de `W` bits.
+Essa classe de modelo descreve uma *adaptador de mecanismo* que produz valores recompactando bits dos valores retornados pelo mecanismo básico, resultando em *W*-valores de bit.
 
 ## <a name="requirements"></a>Requisitos
 

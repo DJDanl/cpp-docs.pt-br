@@ -58,12 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74dc0fde7ea066707bb6e93592420009b882ee21
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 54ea69a53204de2d304340ed042b3ba028dd404c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848262"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966635"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -90,7 +90,7 @@ Em algumas plataformas, pode não ser possível implementar operações atômica
 
 **C++11**: em manipuladores de sinal, você pode executar operações atômicas em um objeto `obj` se `obj.is_lock_free()` ou `atomic_is_lock_free(x)` for true.
 
-A classe [atomic_flag](../standard-library/atomic-flag-structure.md) fornece um tipo atômico mínimo que contém um sinalizador `bool`. Suas operações são sempre livres de bloqueio.
+A classe [atomic_flag](../standard-library/atomic-flag-structure.md) fornece um tipo atômico mínimo que contém uma **bool** sinalizador. Suas operações são sempre livres de bloqueio.
 
 A classe de modelo `atomic<T>` armazena um objeto de seu tipo de argumento `T` e fornece acesso atômico para o valor armazenado. Você pode instanciá-la usando qualquer tipo que possa ser copiado usando [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) e testadas quanto à igualdade usando [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md). Em particular, você pode usá-la com tipos definidos pelo usuário que atendam a esses requisitos e, em muitos casos, os tipos de ponto flutuante.
 
@@ -110,20 +110,20 @@ Para cada um dos tipos integrais, há um tipo atômico nomeado correspondente qu
 
 |Tipo `atomic_integral`|Tipo integral|Macro `atomic_is_lock_free`|
 |----------------------------|-------------------|---------------------------------|
-|`atomic_char`|`char`|`ATOMIC_CHAR_LOCK_FREE`|
-|`atomic_schar`|`signed char`|`ATOMIC_CHAR_LOCK_FREE`|
-|`atomic_uchar`|`unsigned char`|`ATOMIC_CHAR_LOCK_FREE`|
-|`atomic_char16_t`|`char16_t`|`ATOMIC_CHAR16_T_LOCK_FREE`|
-|`atomic_char32_t`|`char32_t`|`ATOMIC_CHAR32_T_LOCK_FREE`|
-|`atomic_wchar_t`|`wchar_t`|`ATOMIC_WCHAR_T_LOCK_FREE`|
-|`atomic_short`|`short`|`ATOMIC_SHORT_LOCK_FREE`|
-|`atomic_ushort`|`unsigned short`|`ATOMIC_SHORT_LOCK_FREE`|
-|`atomic_int`|`int`|`ATOMIC_INT_LOCK_FREE`|
-|`atomic_uint`|`unsigned int`|`ATOMIC_INT_LOCK_FREE`|
-|`atomic_long`|`long`|`ATOMIC_LONG_LOCK_FREE`|
-|`atomic_ulong`|`unsigned long`|`ATOMIC_LONG_LOCK_FREE`|
-|`atomic_llong`|`long long`|`ATOMIC_LLONG_LOCK_FREE`|
-|`atomic_ullong`|`unsigned long long`|`ATOMIC_LLONG_LOCK_FREE`|
+|`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_schar`|**char assinada**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_uchar`|**unsigned char**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_char16_t`|`char16_t`|ATOMIC_CHAR16_T_LOCK_FREE|
+|`atomic_char32_t`|`char32_t`|ATOMIC_CHAR32_T_LOCK_FREE|
+|`atomic_wchar_t`|**wchar_t**|ATOMIC_WCHAR_T_LOCK_FREE|
+|`atomic_short`|**short**|ATOMIC_SHORT_LOCK_FREE|
+|`atomic_ushort`|**unsigned short**|ATOMIC_SHORT_LOCK_FREE|
+|`atomic_int`|**int**|ATOMIC_INT_LOCK_FREE|
+|`atomic_uint`|**unsigned int**|ATOMIC_INT_LOCK_FREE|
+|`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
+|`atomic_ulong`|**unsigned long**|ATOMIC_LONG_LOCK_FREE|
+|`atomic_llong`|**long long**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**longo longo sem sinal**|ATOMIC_LLONG_LOCK_FREE|
 
 Os nomes Typedef existem para especializações do modelo atômico para alguns dos tipos definidos no cabeçalho \<inttypes.h>.
 
@@ -165,7 +165,7 @@ Os nomes Typedef existem para especializações do modelo atômico para alguns d
 |Nome|Descrição|
 |----------|-----------------|
 |[Estrutura atomic](../standard-library/atomic-structure.md)|Descreve um objeto que executa operações atômicas em um valor armazenado.|
-|[Estrutura atomic_flag](../standard-library/atomic-flag-structure.md)|Descreve um objeto que define e limpa atomicamente um sinalizador `bool`.|
+|[Estrutura atomic_flag](../standard-library/atomic-flag-structure.md)|Descreve um objeto que define e limpa atomicamente um **bool** sinalizador.|
 
 ## <a name="enums"></a>Enums
 
@@ -195,10 +195,10 @@ Na lista a seguir, as funções que não terminam em `_explicit` têm a semânti
 |[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Subtrai um valor especificado de um valor armazenado existente.|
 |[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Executa um `exclusive or` bit a bit em um valor especificado e um valor armazenado existente.|
 |[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Executa um `exclusive or` bit a bit em um valor especificado e um valor armazenado existente.|
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Define o sinalizador em um objeto `atomic_flag` como `false`.|
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Define o sinalizador em um objeto `atomic_flag` como `false`.|
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Define o sinalizador em um objeto `atomic_flag` como `true`.|
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Define o sinalizador em um objeto `atomic_flag` como `true`.|
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Define o sinalizador em uma `atomic_flag` o objeto para a **falso**.|
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Define o sinalizador em uma `atomic_flag` o objeto para a **falso**.|
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Define o sinalizador em uma `atomic_flag` o objeto para a **verdadeiro**.|
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Define o sinalizador em uma `atomic_flag` o objeto para a **verdadeiro**.|
 |[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Define o valor armazenado em um objeto `atomic`.|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Especifica se operações atômicas em um objeto especificado estão livres de bloqueio.|
 |[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Recupera um valor atomicamente.|

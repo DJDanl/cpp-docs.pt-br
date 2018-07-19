@@ -1,5 +1,5 @@
 ---
-title: Assistente de projeto ATL | Microsoft Docs
+title: ATL Project Wizard | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,48 +17,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f47af89297efba2501e7f548075800d93dfda296
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 80556b31650cc04e66b2ad6681d60eff2fa72d5f
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357899"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025812"
 ---
-# <a name="atl-project-wizard"></a>Assistente de projeto ATL
-A biblioteca de modelo ativa (ATL) é um conjunto de classes C++ com base em modelo que simplificam a criação de objetos pequenos e rápidos. O Assistente de projeto de ATL cria um projeto com estruturas para conter objetos COM.  
+# <a name="atl-project-wizard"></a>ATL Project Wizard
+A biblioteca ATL (Active Template) é um conjunto de classes C++ baseadas em modelo que simplificam a criação de objetos pequenos e rápidos. A ATL Project Wizard cria um projeto com as estruturas para conter objetos COM.  
   
 ## <a name="overview"></a>Visão geral  
- Esta página do assistente descreve atual [configurações de aplicativo para o projeto ATL](../../atl/reference/application-settings-atl-project-wizard.md) você está criando. Por padrão, o projeto tem as seguintes configurações:  
+ Esta página do assistente descreve atual [configurações de aplicativo para o projeto da ATL](../../atl/reference/application-settings-atl-project-wizard.md) você está criando. Por padrão, o projeto tem as seguintes configurações:  
   
 -   Biblioteca de vínculo dinâmico especifica que o servidor é uma DLL e, portanto, um servidor em processo.  
   
 -   Especifica que o projeto usa atributos de atribuído.  
   
- Para alterar esses padrões, clique em **configurações de aplicativo** na coluna à esquerda dos assistente e faça alterações na página do Assistente de projeto de ATL.  
+ Para alterar esses padrões, clique em **configurações do aplicativo** na coluna à esquerda das alterações assistente e verifique na página do Assistente de projeto de ATL.  
   
- Para obter informações sobre as configurações de projeto padrão, incluindo a opção de conjunto de caracteres e vincular padrões, consulte [configurações padrão do projeto de ATL](../../atl/reference/default-atl-project-configurations.md).  
+ Para obter informações sobre as configurações de projeto padrão, incluindo a escolha do conjunto de caracteres e a vinculação de padrões, consulte [configurações de projeto de ATL padrão](../../atl/reference/default-atl-project-configurations.md).  
   
- Depois de criar um projeto de ATL, você pode adicionar objetos ou controles ao seu projeto usando o Visual C++ [assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md). Você pode fazer os seguintes tipos de aprimoramentos para um projeto ATL básico usando assistentes de código:  
+ Depois de criar um projeto da ATL, você pode adicionar objetos ou controles ao seu projeto usando o Visual C++ [assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md). Você pode fazer os seguintes tipos de aprimoramentos para um projeto ATL básico usando os assistentes de código:  
   
--   [Adicionar o objeto e controles para um projeto de ATL](../../atl/reference/adding-objects-and-controls-to-an-atl-project.md)  
+-   [Adicionar o objeto e controles para um projeto ATL](../../atl/reference/adding-objects-and-controls-to-an-atl-project.md)  
   
--   [Adicionar uma nova interface em um projeto ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)  
+-   [Adicione uma nova interface em um projeto ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)  
   
--   [Adicionar um componente COM+ 1.0 para um projeto de ATL](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)  
+-   [Adicionar um componente COM+ 1.0 para um projeto ATL](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)  
   
- Além disso, considere estas tarefas, quando você cria e aprimorar um projeto de ATL:  
+ Além disso, considere estas tarefas quando você cria e aprimorar um projeto ATL:  
   
--   [Fazer um noncreatable de objeto ATL](../../atl/reference/making-an-atl-object-noncreatable.md)  
+-   [Tornar um noncreatable de objeto do ATL](../../atl/reference/making-an-atl-object-noncreatable.md)  
   
--   [Otimizar o compilador para um projeto de ATL](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)  
+-   [Otimizar o compilador para um projeto ATL](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)  
   
- Você pode especificar propriedades de projeto (por exemplo, [se vincular estaticamente a CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) no [propriedades do projeto](../../ide/general-property-page-project.md) página e você pode definir [configurações de build](/visualstudio/ide/understanding-build-configurations) para um Projeto ATL. Consulte [usando projetos para criar aplicativos](http://msdn.microsoft.com/en-us/3339fa90-bac2-4b95-8361-662a2e0e7dfe) para obter mais informações.  
+ Você pode especificar as propriedades do projeto (por exemplo, [se deseja vincular estaticamente ao CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) na [propriedades do projeto](../../ide/general-property-page-project.md) página e você pode definir [configurações de build](/visualstudio/ide/understanding-build-configurations) para um Projeto ATL. Ver [usando projetos para compilar aplicativos](http://msdn.microsoft.com/3339fa90-bac2-4b95-8361-662a2e0e7dfe) para obter mais informações.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando e gerenciando projetos do Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Tipos de projeto do Visual C++](../../ide/visual-cpp-project-types.md)   
- [Criando projetos de área de trabalho usando os assistentes de aplicativo](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [Conceitos básicos de objetos COM de ATL](../../atl/fundamentals-of-atl-com-objects.md)   
- [Programando com código ATL e C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)   
+ [Criando projetos da área de trabalho com assistentes de aplicativo](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
+ [Conceitos básicos de objetos COM da ATL](../../atl/fundamentals-of-atl-com-objects.md)   
+ [Programando com código de tempo de execução de C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [Tutorial](../../atl/active-template-library-atl-tutorial.md)
 

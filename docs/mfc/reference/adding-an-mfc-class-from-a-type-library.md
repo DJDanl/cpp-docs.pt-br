@@ -16,32 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 349d06d7fecb82af64fbf2d3b2ebe54689b3b292
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 662754ae4f0f95160f18682f35eb2f7951e7e344
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355110"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026546"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Adicionando uma classe do MFC de uma biblioteca de tipos
-Use este assistente para criar uma classe do MFC de uma interface em uma biblioteca de tipos disponíveis. Você pode adicionar uma classe do MFC para um [aplicativo MFC](../../mfc/reference/creating-an-mfc-application.md), uma [DLL MFC](../../mfc/reference/creating-an-mfc-dll-project.md), ou um [controle ActiveX MFC](../../mfc/reference/creating-an-mfc-activex-control.md).  
+Use este assistente para criar uma classe MFC de uma interface em uma biblioteca de tipos disponíveis. Adicione uma classe MFC a um [aplicativo MFC](../../mfc/reference/creating-an-mfc-application.md), uma [DLL do MFC](../../mfc/reference/creating-an-mfc-dll-project.md) ou um [controle ActiveX do MFC](../../mfc/reference/creating-an-mfc-activex-control.md).  
   
 > [!NOTE]
->  Você não precisa criar seu projeto MFC com automação habilitada para adicionar uma classe de uma biblioteca de tipos.  
+>  Você não precisará criar seu projeto MFC com automação habilitada para adicionar uma classe de uma biblioteca de tipos.  
   
- Uma biblioteca de tipos contém uma descrição binária das interfaces expostas por um componente, definir os métodos junto com seus parâmetros e tipos de retorno. Sua biblioteca de tipo deve ser registrada para ser exibido no **bibliotecas de tipo disponível** lista a adição de classe em Typelib assistente. Consulte "Dentro de Distributed COM: tipo bibliotecas e linguagem integração" na biblioteca MSDN para obter mais informações.  
+ Uma biblioteca de tipos contém uma descrição binária de interfaces expostas por um componente, definindo os métodos, juntamente com seus parâmetros e tipos de retorno. Sua biblioteca de tipos deve ser registrada para que ele apareça na **bibliotecas de tipos disponíveis** lista na classe de Typelib assistente Adicionar. Consulte "Dentro de Distributed COM: tipo bibliotecas e linguagem integração" na biblioteca MSDN para obter mais informações.  
   
-### <a name="to-add-an-mfc-class-from-a-type-library"></a>Para adicionar uma classe do MFC de uma biblioteca de tipos  
+### <a name="to-add-an-mfc-class-from-a-type-library"></a>Para adicionar uma classe MFC de uma biblioteca de tipos  
   
-1.  No **Solution Explorer** ou [exibição de classe](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), clique no nome do projeto ao qual você deseja adicionar a classe.  
+1.  Em ambos **Gerenciador de soluções** ou [exibição de classe](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), clique no nome do projeto ao qual você deseja adicionar a classe.  
   
-2.  No menu de atalho, clique em **adicionar**e, em seguida, clique em **Adicionar classe**.  
+2.  No menu de atalho, clique em **Adicionar** e, em seguida, em **Adicionar Classe**.  
   
-3.  No [Adicionar classe](../../ide/add-class-dialog-box.md) caixa de diálogo, no painel modelos, clique em **classe do MFC de Typelib**e, em seguida, clique em **abrir** para exibir o [adição de classe em Typelib Assistente ](../../mfc/reference/add-class-from-typelib-wizard.md).  
+3.  No [Add Class](../../ide/add-class-dialog-box.md) caixa de diálogo, no painel modelos, clique em **MFC classe em Typelib**e, em seguida, clique em **abrir** para exibir o [Adicionar classe de Typelib Assistente ](../../mfc/reference/add-class-from-typelib-wizard.md).  
   
  No assistente, você pode adicionar mais de uma classe em uma biblioteca de tipos. Da mesma forma, você pode adicionar classes de mais de uma biblioteca de tipos em uma única sessão de assistente.  
   
- O assistente cria uma classe do MFC, derivada do [COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md), para cada interface que você adicionar a biblioteca de tipos selecionados. `COleDispatchDriver` Implementa o lado do cliente de automação OLE.  
+ O assistente cria uma classe do MFC, derivada de [COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md), para cada interface que você adicione da biblioteca de tipo selecionado. `COleDispatchDriver` implementa o lado do cliente da automação OLE.  
   
 ## <a name="see-also"></a>Consulte também  
  [Clientes de automação](../../mfc/automation-clients.md)   

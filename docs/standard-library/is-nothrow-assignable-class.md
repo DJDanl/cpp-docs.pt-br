@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f11e1ce8b016ab8c6e8af04e351e80307b2189e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 424fcf5b960182326dc1192d8d60f168ead59d98
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843438"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965409"
 ---
 # <a name="isnothrowassignable-class"></a>Classe is_nothrow_assignable
 
-Testa se um valor do tipo `From` pode ser atribuído ao tipo `To` e se é sabido que a atribuição não efetua lançamentos.
+Testa se um valor de *partir* tipo pode ser atribuído a *para* tipo e a atribuição não efetua lançamentos.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,13 +37,13 @@ struct is_nothrow_assignable;
 
 ### <a name="parameters"></a>Parâmetros
 
-Para o tipo do objeto que recebe a atribuição.
+*Para* o tipo do objeto que recebe a atribuição.
 
-O tipo de objeto que fornece o valor.
+*De* o tipo do objeto que fornece o valor.
 
 ## <a name="remarks"></a>Comentários
 
-A expressão `declval<To>() = declval<From>()` deve ser bem formada e o compilador deve ter o conhecimento de que ela não efetua lançamentos. `From` e `To` devem ser tipos completos, `void` ou matrizes de limite desconhecido.
+A expressão `declval<To>() = declval<From>()` deve ser bem formada e o compilador deve ter o conhecimento de que ela não efetua lançamentos. Ambos *partir* e *à* devem ser tipos completos, **void**, ou matrizes de limite desconhecido.
 
 ## <a name="requirements"></a>Requisitos
 

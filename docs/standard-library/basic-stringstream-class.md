@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50ec60ef094660dfa722a3a5c1f73fd9141aeef4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbac9637083a61b7fce03a844201530116b882b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912752"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964353"
 ---
 # <a name="basicstringstream-class"></a>Classe basic_stringstream
 
@@ -42,15 +42,15 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>Parâmetros
 
-`Alloc` A classe de alocador.
+*Alocação* a classe do alocador.
 
-`Elem` O tipo do elemento básico da cadeia de caracteres.
+*Elem* o tipo do elemento básico da cadeia de caracteres.
 
-*TR* as características de caractere especializado no elemento básico da cadeia de caracteres.
+*TR* as características de caractere especializadas no elemento básico da cadeia de caracteres.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve um objeto que controla a inserção e extração de elementos e objetos codificados usando um buffer de fluxo da classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>, com elementos do tipo **Elem**, cujas características de caractere são determinadas pela classe **Tr** e cujos elementos são alocados por um alocador da classe `Alloc`. O objeto armazena um objeto da classe basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
+A classe de modelo descreve um objeto que controla a inserção e extração de elementos e objetos codificados usando um buffer de fluxo da classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>, com elementos do tipo `Elem`, cujas características de caractere são determinadas pela classe `Tr`, e cujos elementos são alocados por um alocador de classe `Alloc`. O objeto armazena um objeto da classe basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
 
 ### <a name="constructors"></a>Construtores
 
@@ -97,15 +97,15 @@ explicit basic_stringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base::
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Mode` Uma das enumerações nos [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*Modo* uma das enumerações nos [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
 
-`str` Um objeto do tipo `basic_string`.
+*STR* um objeto do tipo `basic_string`.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor inicializa a classe base chamando [basic_iostream](../standard-library/basic-iostream-class.md)( **sb**), em que **sb** é o objeto armazenado da classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>. Ele também inicializa **sb** chamando basic_stringbuf< **Elem**, **Tr**, `Alloc`>(`_Mode`).
+O primeiro construtor inicializa a classe base chamando [basic_iostream](../standard-library/basic-iostream-class.md)( **sb**), onde `sb` é o objeto armazenado da classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **Elem**, **Tr**, `Alloc`>. Também inicializa `sb` chamando basic_stringbuf < **Elem**, **Tr**, `Alloc`> ( `_Mode`).
 
-O segundo construtor inicializa a classe base chamando basic_iostream(**sb**). Ele também inicializa **sb** chamando basic_stringbuf< **Elem**, **Tr**, `Alloc`>(_ *Str*, `_Mode`).
+O segundo construtor inicializa a classe base chamando basic_iostream(**sb**). Também inicializa `sb` chamando basic_stringbuf < **Elem**, **Tr**, `Alloc`> (_ *Str*, `_Mode`).
 
 ## <a name="rdbuf"></a>  basic_stringstream::rdbuf
 
@@ -117,7 +117,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O endereço do buffer de fluxo armazenado do tipo **pointer** para basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
+O endereço do buffer de fluxo armazenado do tipo `pointer` para basic_stringbuf < **Elem**, **Tr**, `Alloc`>.
 
 ### <a name="example"></a>Exemplo
 
@@ -137,7 +137,7 @@ void str(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Newstr` A nova cadeia de caracteres.
+*_Newstr* nova cadeia de caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -149,7 +149,7 @@ A primeira função membro retorna [rdbuf](#rdbuf) -> [str](../standard-library/
 
 ### <a name="example"></a>Exemplo
 
-Consulte [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str) para obter um exemplo que usa **str**.
+Ver [basic_stringbuf:: STR](../standard-library/basic-stringbuf-class.md#str) para obter um exemplo que usa `str`.
 
 ## <a name="see-also"></a>Consulte também
 

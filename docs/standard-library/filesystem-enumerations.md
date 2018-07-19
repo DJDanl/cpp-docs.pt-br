@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d876d1005e5044a6be6511482d3e3043b580adcd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8d933c80aa42ef9b954b6ae498632ab9835cb3d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846318"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025933"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Enumerações de &lt;filesystem&gt;
 
@@ -34,11 +34,11 @@ Este tópico documenta as enumerações no cabeçalho filesystem.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<experimental/sistema de arquivos > **Namespace:** std::experimental::filesystem
+**Cabeçalho:** \<experimental/filesystem > **Namespace:** std::experimental::filesystem
 
 ## <a name="copy_options"></a>  copy_options
 
-Uma enumeração de valores de bitmask que é usada com as funções [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) e [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) para especificar o comportamento.
+Uma enumeração de valores de bitmask que é usada com as funções [copy](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) e [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) para especificar o comportamento.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -95,7 +95,7 @@ enum class directory_options {
 
 ## <a name="file_type"></a>  file_type
 
-Uma enumeração de tipos de arquivo. Os valores com suporte são normal, directory, not_found e desconhecido.
+Uma enumeração de tipos de arquivo. Os valores com suporte são regular, directory, not_found e unknown.
 
 ### <a name="syntax"></a>Sintaxe
 

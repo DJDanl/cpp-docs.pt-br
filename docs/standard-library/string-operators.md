@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: b0ca7da732786c2f0ff6087052b5867150702a5e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 728a0f643a77b47bf857d409517407bec3a1b8b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862478"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966610"
 ---
 # <a name="ltstringgt-operators"></a>Operadores de &lt;cadeia de caracteres&gt;
 
@@ -107,9 +107,9 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` concatenadas.
+*à esquerda* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser concatenado.
 
-`right` Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` concatenadas.
+*à direita* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser concatenado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -194,9 +194,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*à esquerda* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-`right` Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*à direita* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -283,9 +283,9 @@ bool operator==(
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*à esquerda* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-`right` Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*à direita* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -372,9 +372,9 @@ bool operator<(
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*à esquerda* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-`right` Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*à direita* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -466,9 +466,9 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*à esquerda* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-`right` Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*à direita* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -557,13 +557,13 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parâmetros
 
-_Ostr o fluxo de saída que está sendo gravada.
+*_Ostr* que estão sendo gravado no fluxo de saída.
 
-`str` A cadeia de caracteres a serem inseridos no fluxo de saída.
+*STR* a cadeia de caracteres a ser inserido no fluxo de saída.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Grava a cadeia de caracteres especificada e o valor para o fluxo de saída `_Ostr`.
+Grava o valor de cadeia de caracteres especificada no fluxo de saída *_Ostr*.
 
 ### <a name="remarks"></a>Comentários
 
@@ -592,9 +592,9 @@ bool operator>(
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*à esquerda* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-`right` Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*à direita* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -693,9 +693,9 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*à esquerda* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-`right` Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*à direita* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -784,19 +784,19 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Istr` O fluxo de entrada usado para extrair a sequência
+*_Istr* usado para extrair a sequência de fluxo de entrada
 
-`right` A cadeia de caracteres que está sendo extraída do fluxo de entrada.
+*direito* a cadeia de caracteres que está sendo extraída do fluxo de entrada.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Lê o valor da cadeia de caracteres especificada de `_Istr` e retorna-o na `right`.
+Lê o valor da cadeia de caracteres especificada de *_Istr* e retorna-o na *direita*.
 
 ### <a name="remarks"></a>Comentários
 
 O operador ignora os espaços em branco à esquerda, a menos que o sinalizador `skipws` é definido. Ele lê todos os caracteres seguintes até o próximo caractere ser um espaço em branco ou o final do arquivo for atingido.
 
-As sobrecargas de função de modelo **operator >>** para substituir a sequência controlada por `right` com uma sequência de elementos extraída do fluxo `_Istr`. Extração para:
+As sobrecargas de função de modelo **operador >>** para substituir a sequência controlada por *à direita* com uma sequência de elementos extraídos do fluxo *_Istr*. Extração para:
 
 - Ao final do arquivo.
 
@@ -806,7 +806,7 @@ Depois que a função extrai `_Istr`. [max_size](../standard-library/basic-strin
 
 - Depois que a função extrai um elemento *ch* para o qual [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **CharType**> > ( `getloc`). **é**( **ctype** \< **CharType**>:: **space**, *ch*) é verdadeiro, caso em que o caractere é colocado de volta.
 
-Se a função não extrair nenhum elemento, chamará [setstate](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit`). Em qualquer caso, chama **istr**. **largura**(0) e retorna \* **isso**.
+Se a função não extrair nenhum elemento, ela chamará [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). Em qualquer caso, chama **istr**. **largura**(0) e retorna \* **isso**.
 
 ### <a name="example"></a>Exemplo
 

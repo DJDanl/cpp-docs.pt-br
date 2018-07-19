@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3250d9a090dcbd5eaa9a3cc0d51df84600ed3e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66f9401bed0a6c9d0b1ffa09a10f98afa258069d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912869"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964750"
 ---
 # <a name="ltlimitsgt"></a>&lt;limites&gt;
 
@@ -37,7 +37,7 @@ Define a classe de modelo `numeric_limits` e duas enumerações relacionadas a r
 
 ## <a name="remarks"></a>Comentários
 
-Especializações explícitas da classe `numeric_limits` descrevem muitas propriedades dos tipos fundamentais, incluindo os tipos de ponto flutuante, caractere e inteiro, bem como `bool`, que são definidos pela implementação e não fixados pelas regras da linguagem C++. Propriedades descritas em \<limits> incluem precisão, representações de tamanho mínimo e máximo, arredondamento e erros de tipo de sinalização.
+Especializações explícitas a `numeric_limits` classe descrevem muitas propriedades dos tipos fundamentais, incluindo o caractere, inteiro e tipos de ponto flutuante e **bool** que são implementação definida e não fixados pelas as regras da linguagem C++. Propriedades descritas em \<limits> incluem precisão, representações de tamanho mínimo e máximo, arredondamento e erros de tipo de sinalização.
 
 ### <a name="enumerations"></a>Enumerações
 

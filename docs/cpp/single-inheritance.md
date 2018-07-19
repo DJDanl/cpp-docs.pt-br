@@ -1,5 +1,5 @@
 ---
-title: Única herança | Microsoft Docs
+title: Herança única | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cab540d36f322bbe571a04046ff876d5425a317
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b06bceadf9a274253693dc8f33f3d04e6500115
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028616"
 ---
 # <a name="single-inheritance"></a>Herança única
 Na “herança única”, uma forma comum de herança, as classes têm apenas uma classe base. Considere a relação lustrada na figura a seguir.  
@@ -36,7 +37,7 @@ Gráfico simples de herança única
   
  Outro item de observação na figura: `Book` é uma classe derivada (de `PrintedDocument`) e uma classe base (`PaperbackBook` é derivado de `Book`). Uma declaração estrutural de uma hierarquia de classes é mostrada no exemplo a seguir:  
   
-```  
+```cpp 
 // deriv_SingleInheritance.cpp  
 // compile with: /LD  
 class PrintedDocument {};  
@@ -52,21 +53,21 @@ class PaperbackBook : public Book {};
   
  A classe base da qual cada classe é derivada é declarada antes da declaração da classe derivada. Não é suficiente para fornecer uma declaração de referência de encaminhamento para uma classe base; deve ser uma declaração completa.  
   
- No exemplo anterior, o especificador de acesso **pública** é usado. O significado de herança público, protegido e privado descrito no [controle de acesso de membro.](../cpp/member-access-control-cpp.md)  
+ No exemplo anterior, o especificador de acesso **pública** é usado. O significado de herança de público, protegido e privado é descrito em [controle de acesso de membro.](../cpp/member-access-control-cpp.md)  
   
  Uma classe pode servir como a classe base para muitas aulas específicas, como ilustrado na figura a seguir.  
   
- ![Gráfico acíclico direcionado](../cpp/media/vc38xj2.gif "vc38XJ2")  
+ ![Grafo direcionado acíclico](../cpp/media/vc38xj2.gif "vc38XJ2")  
 Exemplo de gráfico acíclico direcionado  
   
  No diagrama mostrado acima, chamado “grafo direcionado acíclico” (ou “DAG”), algumas das classes são classes base para mais de uma classe derivada. No entanto, o contrário não é verdadeiro: há apenas uma classe base direta para qualquer classe derivada especificada. O gráfico na figura denota uma estrutura de "herança única".  
   
 > [!NOTE]
->  Os grafos direcionados acíclicos não são exclusivos da herança única. Também são usados para denotar gráficos de herança múltipla. Este tópico é abordado em [várias heranças](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
+>  Os grafos direcionados acíclicos não são exclusivos da herança única. Também são usados para denotar gráficos de herança múltipla. Este tópico é abordado [herança múltipla](http://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
   
  Na herança, a classe derivada contém os membros da classe base mais os novos membros que você adicionar. Como resultado, uma classe derivada pode se referir a membros da classe base (a menos que esses membros sejam redefinidos na classe derivada). O operador de resolução de escopo (`::`) pode ser usado para fazer referência a membros de classes base diretas e indiretas quando esses membros são redefinidos na classe derivada. Considere este exemplo:  
   
-```  
+```cpp 
 // deriv_SingleInheritance2.cpp  
 // compile with: /EHsc /c  
 #include <iostream>  
@@ -99,7 +100,7 @@ Book::Book( char *name, long pagecount ) {
   
  Observe que o construtor para `Book` (`Book::Book`) tem acesso ao membro de dados, `Name`. Em um programa, um objeto do tipo `Book` pode ser criado e usado como segue:  
   
-```  
+```cpp 
 //  Create a new object of type Book. This invokes the  
 //   constructor Book::Book.  
 Book LibraryBook( "Programming Windows, 2nd Ed", 944 );  
@@ -112,7 +113,7 @@ LibraryBook.PrintNameOf();
   
  Como o exemplo acima mostra, o membro da classe e os dados e as funções herdados são usados de forma idêntica. Se a implementação para chamadas da classe `Book` para uma reimplementação da função `PrintNameOf`, a função que pertence à classe `Document` pode ser chamada somente usando o operador de resolução de escopo (`::`):  
   
-```  
+```cpp 
 // deriv_SingleInheritance3.cpp  
 // compile with: /EHsc /LD  
 #include <iostream>  
@@ -138,7 +139,7 @@ void Book::PrintNameOf() {
   
  Os ponteiros e as referências a classes derivadas podem ser convertidos implicitamente em ponteiros e as referências às suas classes base, se houver uma classe base acessível inequívoca. O código a seguir demonstra esse conceito usando ponteiros (o mesmo princípio se aplica às referências):  
   
-```  
+```cpp 
 // deriv_SingleInheritance4.cpp  
 // compile with: /W3  
 struct Document {  

@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e50e613885215cf13504f8c9b72e0e48d5a6447
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e02a48fddfb2e5ff8f85b59b1ff241492461e521
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852719"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966349"
 ---
 # <a name="notequalto-struct"></a>Struct not_equal_to
 
-Um predicado binário que executa a operação de desigualdade ( `operator!=`) em seus argumentos.
+Um predicado binário que executa a operação de desigualdade (`operator!=`) em seus argumentos.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -49,11 +49,11 @@ struct not_equal_to<void>
 
 ### <a name="parameters"></a>Parâmetros
 
-`Type`, `T`, `U` Qualquer tipo que oferece suporte a um `operator!=` que usa operandos dos tipos especificados ou inferidos.
+*Tipo de*, *T*, *U* qualquer tipo que dá suporte a um `operator!=` que usa operandos dos tipos especificados ou inferidos.
 
-`Left` O operando esquerdo da operação de desigualdade. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `T`.
+*Esquerda* o operando esquerdo da operação de desigualdade. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *T*.
 
-`Right` O operando direito da operação de desigualdade. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `U`.
+*Direita* o operando direito da operação de desigualdade. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *U*.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -61,7 +61,7 @@ O resultado de `Left != Right`. O modelo especializado realiza o encaminhamento 
 
 ## <a name="remarks"></a>Comentários
 
-Os objetos do tipo `Type` devem ser comparáveis por igualdade. Isso requer que o `operator!=` definido no conjunto de objetos atenda às propriedades matemáticas de uma relação de equivalência. Todos os tipos numéricos internos e de ponteiro atendem a esse requisito.
+Os objetos do tipo *tipo* deve ser comparável por igualdade. Isso requer que o `operator!=` definido no conjunto de objetos atenda às propriedades matemáticas de uma relação de equivalência. Todos os tipos numéricos internos e de ponteiro atendem a esse requisito.
 
 ## <a name="example"></a>Exemplo
 

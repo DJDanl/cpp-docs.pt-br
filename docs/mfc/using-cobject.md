@@ -20,33 +20,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 235bf1f4130f59a8af9548fcbf35e36d82255f14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0fab92dddc10a66fe350d343f1fd280ce5c9a50
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382292"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027145"
 ---
 # <a name="using-cobject"></a>Usando CObject
-[CObject](../mfc/reference/cobject-class.md) é a classe base raiz para a maioria da Microsoft Foundation Class Library (MFC). O `CObject` classe contém muitos recursos úteis que você pode incorporar em seus próprios objetos de programa, incluindo suporte a serialização, informações de classe de tempo de execução e saída de diagnóstico do objeto. Se você derivar a classe de `CObject`, sua classe pode explorar essas `CObject` recursos.  
+[CObject](../mfc/reference/cobject-class.md) é a classe de base raiz para a maior parte do Microsoft Foundation Class Library (MFC). O `CObject` classe contém muitos recursos úteis que você pode incorporar em seus próprios objetos de programa, incluindo suporte à serialização, informações de classe de tempo de execução e saída de diagnóstico do objeto. Se você derivar a classe de `CObject`, sua classe pode explorar esses `CObject` recursos.  
   
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer  
   
 -   [Derive uma classe de CObject](../mfc/deriving-a-class-from-cobject.md)  
   
--   [Adicionar suporte para serialização de informações de classe de tempo de execução e criação dinâmica a minha classe derivada](../mfc/specifying-levels-of-functionality.md)  
+-   [Adicionar suporte para informações de classe de tempo de execução, a criação dinâmica e a serialização à minha classe derivada](../mfc/specifying-levels-of-functionality.md)  
   
 -   [Informações de classe de tempo de execução de acesso](../mfc/accessing-run-time-class-information.md)  
   
 -   [Criar objetos dinamicamente](../mfc/dynamic-object-creation.md)  
   
--   [Despejar os dados do objeto para fins de diagnóstico](http://msdn.microsoft.com/en-us/727855b1-5a83-44bd-9fe3-f1d535584b59)  
+-   [Os dados do objeto de despejo para fins de diagnóstico](http://msdn.microsoft.com/727855b1-5a83-44bd-9fe3-f1d535584b59)  
   
--   Validar o estado do objeto interno (consulte [MFC ASSERT_VALID e CObject::AssertValid](http://msdn.microsoft.com/en-us/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
+-   Validar o estado do objeto interno (consulte [MFC ASSERT_VALID e CObject::assertvalid&lt;1}](http://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
   
--   [Ter a classe serializar ele mesmo para o armazenamento persistente](../mfc/serialization-in-mfc.md)  
+-   [Ter a classe serializar-se para o armazenamento persistente](../mfc/serialization-in-mfc.md)  
   
--   Consulte uma lista de [perguntas frequentes sobre o CObject](../mfc/cobject-class-frequently-asked-questions.md)  
+-   Ver uma lista de [perguntas frequentes sobre o CObject](../mfc/cobject-class-frequently-asked-questions.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Conceitos](../mfc/mfc-concepts.md)   

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d17dc3e53504add2507617c95439fa7d32565a53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d0f45f1b8eac09ae28f8a289a59d8a16a709295
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858507"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965871"
 ---
 # <a name="slice-class"></a>Classe slice
 
@@ -146,15 +146,15 @@ slice(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_StartIndex` O índice de valarray do primeiro elemento no subconjunto.
+*_StartIndex* o índice de valarray do primeiro elemento no subconjunto.
 
-`_Len` O número de elementos no subconjunto.
+*_Len* o número de elementos no subconjunto.
 
-`stride` A distância entre os elementos no subconjunto.
+*STRIDE* a distância entre os elementos no subconjunto.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O construtor padrão armazena zeros para o índice inicial, o comprimento total e o stride. O segundo construtor armazena `_StartIndex` para o índice inicial, `_Len` para o comprimento total e `stride` para o stride.
+O construtor padrão armazena zeros para o índice inicial, o comprimento total e o stride. O segundo construtor armazena *_StartIndex* para o índice inicial, *_Len* para o comprimento total, e *stride* para o stride.
 
 ### <a name="remarks"></a>Comentários
 

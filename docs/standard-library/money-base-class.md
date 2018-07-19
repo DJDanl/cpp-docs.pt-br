@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805045e4ea63f153e9a35b0d4b068bd69874b93f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3195d2c988abcfb2d62acb4ece957c8c5156bbd7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864080"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965682"
 ---
 # <a name="moneybase-class"></a>Classe money_base
 
@@ -38,17 +38,17 @@ struct pattern
 
 ## <a name="remarks"></a>Comentários
 
-A enumeração **part** descreve os possíveis valores nos elementos do campo de matriz no padrão da estrutura. Os valores de **part** são:
+A enumeração `part` descreve os possíveis valores nos elementos do campo de matriz no padrão da estrutura. Os valores de `part` são:
 
-- **none** para corresponder a zero ou mais espaços ou gerar nada.
+- `none` para corresponder a zero ou mais espaços ou gerar nada.
 
-- **sign** para corresponder ou gerar um sinal positivo ou negativo.
+- `sign` para corresponder ou gerar um sinal positivo ou negativo.
 
-- **space** para corresponder a zero ou mais espaços ou gerar um espaço.
+- `space` para corresponder a zero ou mais espaços ou gerar um espaço.
 
-- **symbol** para corresponder ou gerar um símbolo de moeda.
+- `symbol` para corresponder ou gerar um símbolo de moeda.
 
-- **value** para corresponder ou gerar um valor monetário.
+- `value` para corresponder ou gerar um valor monetário.
 
 ## <a name="requirements"></a>Requisitos
 

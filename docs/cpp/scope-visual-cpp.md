@@ -20,38 +20,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e79ae7f861553ce2bcd7bee6cbb14a3c2965d4ce
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: e8af021120c06465d0fd79ead79e2a18cb593803
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36261040"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027603"
 ---
 # <a name="scope-c"></a>Escopo (C++)
 
-Quando você declara um elemento do programa, como uma classe, função ou variável, seu nome só pode "visto" e usado em determinadas partes de seu programa. O contexto no qual um nome é visível é chamado seu *escopo*. Por exemplo, se você declarar uma variável `x` dentro de uma função, `x` só é visível no corpo da função. Ele tem *escopo local*. Você pode ter outras variáveis com o mesmo nome em seu programa; enquanto eles estiverem em diferentes escopos, eles não violam uma regra de definição e nenhum erro será gerado.
+Quando você declara um elemento de programa, como uma classe, função ou variável, seu nome só pode "Vista" e usado em certas partes do seu programa. O contexto no qual um nome é visível é chamado seu *escopo*. Por exemplo, se você declarar uma variável `x` dentro de uma função, `x` só é visível dentro do corpo da função. Ele tem *escopo local*. Você pode ter outras variáveis com o mesmo nome em seu programa; desde que eles estão em escopos diferentes, eles não violem uma regra de definição e nenhum erro será gerado.
 
-Para variáveis automáticas de não-estático, o escopo também determina quando eles são criados e destruídos na memória de programa. 
+Para as variáveis automáticas não-estático, o escopo também determina quando eles são criados e destruídos na memória de programa. 
 
 Há seis tipos de escopo:
 
-- **Escopo global** um nome global é aquele que é declarada fora de qualquer classe, função ou namespace. No entanto, em C++ mesmo esses nomes existirem com um namespace global implícita. O escopo de nomes global se estende do ponto de declaração ao final do arquivo no qual eles são declarados. Nomes globais, visibilidade é regida pelas regras de [vinculação](program-and-linkage-cpp.md) que determinam se o nome é visível em outros arquivos do programa.
+- **Escopo global** um nome global é aquele que é declarado fora de qualquer classe, função ou namespace. No entanto, em C++, mesmo que esses nomes existem com um namespace global implícito. Estende o escopo de nomes globais do ponto de declaração até o final do arquivo no qual elas são declaradas. Para nomes globais, visibilidade também é regida pelas regras da [vinculação](program-and-linkage-cpp.md) que determinam se o nome é visível em outros arquivos no programa.
 
-- **Escopo de Namespace** um nome que é declarado dentro de um [namespace](namespaces-cpp.md), fora de qualquer definição de classe ou enum ou bloco de função é visível do seu ponto de declaração ao final do namespace. Um namespace pode ser definido em vários blocos em arquivos diferentes.
+- **Escopo de Namespace** um nome que é declarado dentro de um [namespace](namespaces-cpp.md), fora de qualquer definição de classe ou enumeração ou bloco de função é visível do ponto de declaração até o final do namespace. Um namespace pode ser definido em vários blocos em arquivos diferentes.
 
-- **Escopo local** um nome declarado ou de uma função lambda, incluindo os nomes de parâmetro têm escopo local. Elas geralmente são designadas como "locais". Eles são visíveis apenas de seu ponto de declaração para o final do corpo da função ou lambda. Escopo local é um tipo de escopo de bloco, que é abordado posteriormente neste artigo.
+- **Escopo local** um nome declarado em uma função ou lambda, incluindo os nomes de parâmetro, têm escopo local. Eles são geralmente denominados "locais". Eles são visíveis apenas de seu ponto de declaração até o final do corpo da função ou lambda. Escopo local é um tipo de escopo de bloco, que é abordado neste artigo.
 
-- **Escopo de classe** nomes de membros de classe têm escopo de classe que estende em toda a definição de classe, independentemente do ponto de declaração. Acessibilidade de membro de classe é mais controlados pelo **pública**, **privada**, e **protegido** palavras-chave. Membros públicos ou protegidos podem ser acessados usando os operadores de seleção de membro (**.** ou **->**) ou operadores de ponteiro para membro (**.\***  ou **-> \***).
+- **Escopo de classe** nomes de membros de classe têm escopo de classe, que se estende em toda a definição de classe, independentemente do ponto de declaração. Acessibilidade de membro de classe é mais controlada pela **pública**, **privada**, e **protegido** palavras-chave. Membros públicos ou protegidos podem ser acessados usando os operadores de seleção de membro (**.** ou **->**) ou operadores de ponteiro para membro (**.\***  ou **-> \***).
 
-- **Escopo da instrução** nomes declarados em um **para**, **se**, **enquanto**, ou **alternar** instrução são visíveis até o final das bloco de instrução.
+- **Escopo da instrução** nomes declarados em uma **para**, **se**, **enquanto**, ou **alternar** instrução são visíveis até o final das bloco de instrução.
 
-- **Escopo de função** um [rótulo](labeled-statements.md) tem um escopo de função, o que significa que é visível em um corpo de função mesmo antes de seu ponto de declaração. Escopo de função, é possível escrever instruções como `goto cleanup` antes do `cleanup` rótulo é declarado.
+- **Escopo de função** um [rótulo](labeled-statements.md) tem escopo de função, o que significa que ela é visível durante um corpo de função mesmo antes de ponto de declaração. Escopo da função torna possível escrever instruções, como `goto cleanup` antes do `cleanup` rótulo é declarado.
 
 ## <a name="hiding-names"></a>Ocultando nomes
 
 Você pode ocultar um nome declarando-o em um bloco fechado. Na figura a seguir, `i` é redeclarado dentro do bloco interno, ocultando assim a variável associada a `i` no escopo do bloco externo.
 
- ![Bloco&#45;ocultação de nome de escopo](../cpp/media/vc38sf1.png "vc38SF1") escopo de bloco e ocultar nome
+ ![Bloco&#45;definir o escopo de ocultação de nome](../cpp/media/vc38sf1.png "vc38SF1") escopo de bloco e ocultação de nome
 
  O resultado do programa mostrado na figura é:
 
@@ -65,9 +65,9 @@ i = 0
 > [!NOTE]
 > O argumento `szWhat` é considerado como presente no escopo da função. Portanto, ele será tratado como se tivesse sido declarado no bloco externo da função.
 
-## <a name="hiding-class-names"></a>Ocultar nomes de classe
+## <a name="hiding-class-names"></a>Ocultando nomes de classe
 
- É possível ocultar nomes de classe declarando uma função, um objeto, uma variável ou um enumerador no mesmo escopo. No entanto, o nome da classe pode ser acessado ainda quando o prefixo a palavra-chave **classe**.
+ É possível ocultar nomes de classe declarando uma função, um objeto, uma variável ou um enumerador no mesmo escopo. No entanto, o nome de classe pode ainda ser acessado quando precedido da palavra-chave **classe**.
 
 ```cpp
 // hiding_class_names.cpp
@@ -101,7 +101,7 @@ int main()
 ```
 
 > [!NOTE]
-> Qualquer lugar do nome de classe (`Account`) é chamado para, a classe de palavra-chave deve ser usada para diferenciá-la da conta de variável no escopo global. Essa regra não se aplica quando o nome de classe ocorre no lado esquerdo do operador de resolução de escopo (::). Os nomes no lado esquerdo do operador de resolução de escopo são sempre considerados nomes de classe.
+> Qualquer lugar que o nome de classe (`Account`) for chamado, a palavra-chave class deve ser usada para diferenciá-lo de que a conta de variável no escopo global. Essa regra não se aplica quando o nome de classe ocorre no lado esquerdo do operador de resolução de escopo (::). Os nomes no lado esquerdo do operador de resolução de escopo são sempre considerados nomes de classe.
 
  O exemplo a seguir demonstra como declarar um ponteiro para um objeto do tipo `Account` usando o **classe** palavra-chave:
 
@@ -114,11 +114,11 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > A reutilização de nomes de identificadores como mostrada neste exemplo é considerada um estilo de programação ruim.
 
- Para obter mais informações sobre ponteiros, consulte [tipos derivados de](http://msdn.microsoft.com/en-us/aa14183c-02fe-4d81-95fe-beddb0c01c7c). Para obter informações sobre declaração e inicialização de classe de objetos, consulte [Classes, estruturas e uniões](../cpp/classes-and-structs-cpp.md). Para obter informações sobre como usar o **novo** e **excluir** liberar armazenamento de operadores, consulte [novo e excluir operadores](new-and-delete-operators.md).
+ Para obter mais informações sobre ponteiros, consulte [tipos derivados de](http://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c). Para obter informações sobre declaração e inicialização de objetos de classe, consulte [Classes, estruturas e uniões](../cpp/classes-and-structs-cpp.md). Para obter informações sobre como usar o **novos** e **excluir** operadores de armazenamento livre, consulte [novo e excluir operadores](new-and-delete-operators.md).
 
-## <a name="hiding-names-with-global-scope"></a>Ocultar nomes com escopo global
+## <a name="hiding-names-with-global-scope"></a>Ocultando nomes com escopo global
 
- Você pode ocultar nomes com escopo global, declarando explicitamente o mesmo nome no escopo de bloco. No entanto, os nomes de escopo global podem ser acessados usando o operador de resolução do escopo (`::`).
+ Você pode ocultar nomes com escopo global, declarando explicitamente o mesmo nome no escopo de bloco. No entanto, os nomes de escopo global podem ser acessados usando o operador de resolução de escopo (`::`).
 
 ```cpp
 #include <iostream>

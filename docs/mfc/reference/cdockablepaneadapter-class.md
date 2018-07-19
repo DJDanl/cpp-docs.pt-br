@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1fc576bb37a76a2dafdee47546fdf0dd49fddb
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: e43f6704476879e1848ce82b3327b23efe2192a8
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951027"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026300"
 ---
 # <a name="cdockablepaneadapter-class"></a>Classe CDockablePaneAdapter
-Oferece suporte de encaixe para `CWnd`-derivado painéis.  
+Fornece suporte de encaixe para `CWnd`-painéis derivados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,14 +47,14 @@ class CDockablePaneAdapter : public CDockablePane
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Retorna a janela encapsulada.|  
-|[CDockablePaneAdapter::LoadState](#loadstate)|(Substitui [CDockablePane::LoadState](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917).)|  
-|[CDockablePaneAdapter::SaveState](#savestate)|(Substitui [CDockablePane::SaveState](http://msdn.microsoft.com/en-us/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
+|[CDockablePaneAdapter::LoadState](#loadstate)|(Substitui [CDockablePane::LoadState](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917).)|  
+|[CDockablePaneAdapter::SaveState](#savestate)|(Substitui [CDockablePane::SaveState](http://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||  
   
 ## <a name="remarks"></a>Comentários  
- Normalmente, o framework cria objetos desta classe ao usar o [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) ou [CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) métodos.  
+ Normalmente, o framework cria uma instância de objetos dessa classe quando você usa o [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) ou [CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) métodos.  
   
- Se você deseja personalizar o `CDockablePaneAdapter` comportamento, basta derivar uma nova classe dela e defina as informações de classe de tempo de execução para uma janela com guias usando [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).  
+ Se você desejar personalizar o `CDockablePaneAdapter` comportamento, basta derivar uma nova classe dele e definir as informações de classe de tempo de execução para uma janela com guias usando [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)  
@@ -94,7 +94,7 @@ virtual BOOL LoadState(
  O nome do perfil.  
   
  [in] *nIndex*  
- O índice do perfil.  
+ O índice de perfil.  
   
  [in] *uiID*  
  A ID do painel.  
@@ -118,7 +118,7 @@ virtual BOOL SaveState(
  O nome do perfil.  
   
  [in] *nIndex*  
- O índice do perfil (o padrão é a ID de controle da janela).  
+ O índice do perfil (o padrão é a ID do controle da janela).  
   
  [in] *uiID*  
  A ID do painel.  
@@ -135,7 +135,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWnd*  
+ [in] *Apropriei*  
  Um ponteiro para a janela para o adaptador de painel encapsular.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -143,6 +143,6 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CDockablePane](../../mfc/reference/cdockablepane-class.md)

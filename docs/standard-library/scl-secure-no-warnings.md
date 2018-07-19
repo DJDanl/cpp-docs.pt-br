@@ -18,22 +18,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec02ce5aab3d8a7f95ec9020fe3e2a00c1f5bef7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b24012825b883550de6f58e6ce2d53b826f746ca
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854347"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965494"
 ---
 # <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
 
-Chamar qualquer um dos métodos potencialmente não seguros na biblioteca padrão C++ resulta em [C4996 de aviso do compilador (nível 3)](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Para desabilitar esse aviso, defina a macro **_SCL_SECURE_NO_WARNINGS** no seu código:
+Chamar qualquer um dos métodos potencialmente não seguros na biblioteca padrão C++ resulta em [aviso do compilador (nível 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Para desabilitar esse aviso, defina o scl_secure_no_warnings macro em seu código:
 
 ```cpp
 #define _SCL_SECURE_NO_WARNINGS
 ```
 
-Se você usar cabeçalhos pré-compilados, colocar esta diretiva no seu arquivo de cabeçalho pré-compilado antes de você incluir qualquer biblioteca de tempo de execução do C ou cabeçalhos de biblioteca padrão. Se você colocá-lo em um arquivo de código de origem individuais antes de incluir o arquivo de cabeçalho pré-compilado, ele será ignorado pelo compilador.
+Se você usar cabeçalhos pré-compilados, coloque essa diretiva em seu arquivo de cabeçalho pré-compilado antes de incluir qualquer biblioteca de tempo de execução do C ou cabeçalhos da biblioteca padrão. Se você colocá-lo em um arquivo de código de origem individuais antes de incluir o arquivo de cabeçalho pré-compilado, ele será ignorado pelo compilador.
 
 ## <a name="remarks"></a>Comentários
 
@@ -41,11 +41,11 @@ Outras maneiras de desabilitar o aviso C4996 incluem:
 
 - Usando a opção do compilador [/D (definições de pré-processador)](../build/reference/d-preprocessor-definitions.md):
 
-   > Cl /D_SCL_SECURE_NO_WARNINGS [outras opções do compilador] cpp
+   > Cl /D_SCL_SECURE_NO_WARNINGS [outras opções do compilador] myfile
 
 - Usando a opção do compilador [/w](../build/reference/compiler-option-warning-level.md):
 
-   > Cl /wd4996 [outras opções do compilador] cpp
+   > Cl /wd4996 [outras opções do compilador] myfile
 
 - Usando a diretiva [#pragma warning](../preprocessor/warning.md):
 
@@ -55,7 +55,7 @@ Outras maneiras de desabilitar o aviso C4996 incluem:
 
 Além disso, você pode alterar manualmente o nível de aviso C4996 com a opção do compilador **/w\<l>\<n>**. Por exemplo, para definir o aviso C4996 como nível 4:
 
-> Cl /w44996 [outras opções do compilador] cpp
+> Cl /w44996 [outras opções do compilador] myfile
 
 Para obter mais informações, consulte [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Nível de Aviso)](../build/reference/compiler-option-warning-level.md).
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 177ba6e688f6d7ed2b4c76eb0ede95cc288b1d5d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 19bed4a455ea2b0b894ba842f349aa304e9f261d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857526"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964677"
 ---
 # <a name="istriviallycopyable-class"></a>Classe is_trivially_copyable
 
@@ -37,11 +37,11 @@ struct is_trivially_copyable;
 
 ### <a name="parameters"></a>Parâmetros
 
-`T` O tipo de consulta.
+*T* o tipo de consulta.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo `T` puder ser copiado de forma trivial; caso contrário, será falsa. Tipos que podem ser copiados de forma trivial não têm operações de cópia não triviais, operações de movimentação ou destruidores. De modo geral, uma operação de cópia será considerada trivial se puder ser implementada como uma cópia bit a bit. Tipos internos e matrizes de tipos que podem ser copiados de forma trivial.
+Uma instância do predicado de tipo será verdadeira se o tipo *T* é um tipo facilmente copiado, de outra forma, será falsa. Tipos que podem ser copiados de forma trivial não têm operações de cópia não triviais, operações de movimentação ou destruidores. De modo geral, uma operação de cópia será considerada trivial se puder ser implementada como uma cópia bit a bit. Tipos internos e matrizes de tipos que podem ser copiados de forma trivial.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bea9f863df08342f17419a16b14579fa6a257b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15ed9c32a204bdef726a5ace88d811d2eeeb2c53
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415277"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027242"
 ---
 # <a name="bstrt-class"></a>Classe _bstr_t
 **Seção específica da Microsoft**  
   
- Um `_bstr_t` objeto encapsula o [o tipo de dados BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228). A classe gerencia a alocação e desalocação por meio de chamadas de função **SysAllocString** e **SysFreeString** e outros `BSTR` APIs quando apropriado. A classe `_bstr_t` usa contagem de referências para evitar sobrecarga excessiva.  
+ Um `_bstr_t` encapsula o objeto de [tipo de dados BSTR](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228). A classe gerencia a alocação de recursos e a desalocação por meio de chamadas de função `SysAllocString` e `SysFreeString` e outros `BSTR` APIs quando apropriado. A classe `_bstr_t` usa contagem de referências para evitar sobrecarga excessiva.  
   
 ### <a name="construction"></a>Construção  
   
@@ -40,7 +40,7 @@ ms.locfileid: "32415277"
   
 |||  
 |-|-|  
-|[atribuir](../cpp/bstr-t-assign.md)|Copia um `BSTR` para o `BSTR` encapsulado por um `_bstr_t`.|  
+|[Atribuir](../cpp/bstr-t-assign.md)|Copia um `BSTR` para o `BSTR` encapsulado por um `_bstr_t`.|  
 |[Anexar](../cpp/bstr-t-attach.md)|Vincula um wrapper `_bstr_t` a um `BSTR`.|  
 |[copy](../cpp/bstr-t-copy.md)|Constrói uma cópia do `BSTR` encapsulado.|  
 |[Desanexar](../cpp/bstr-t-detach.md)|Retorna o `BSTR` encapsulado por um `_bstr_t` e desanexa o `BSTR` do `_bstr_t`.|  
@@ -53,18 +53,18 @@ ms.locfileid: "32415277"
 |||  
 |-|-|  
 |[operador =](../cpp/bstr-t-operator-equal.md)|Atribui um novo valor a um objeto `_bstr_t` existente.|  
-|[+ operador =](../cpp/bstr-t-operator-add-equal-plus.md)|Acrescenta caracteres ao final do objeto `_bstr_t`.|  
+|[Operator + =](../cpp/bstr-t-operator-add-equal-plus.md)|Acrescenta caracteres ao final do objeto `_bstr_t`.|  
 |[operador +](../cpp/bstr-t-operator-add-equal-plus.md)|Concatena duas cadeias de caracteres.|  
-|[operador !](../cpp/bstr-t-operator-logical-not.md)|Verifica se o encapsulada `BSTR` é um **nulo** cadeia de caracteres.|  
+|[operador !](../cpp/bstr-t-operator-logical-not.md)|Verifica se encapsulado `BSTR` é uma cadeia de caracteres nula.|  
 |[operador = =,! =, \<, >, \<=, > =](../cpp/bstr-t-relational-operators.md)|Compara dois objetos `_bstr_t`.|  
 |[operador wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Extrai os ponteiros para o objeto `BSTR` Unicode ou multibyte encapsulado.|  
   
 **Fim da seção específica da Microsoft**  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<comutil.h >  
+ **Cabeçalho:** \<comutil. h >  
   
- **Lib:** comsuppw.lib ou comsuppwd.lib (consulte [/ZC: (wchar_t é do tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)  
+ **Lib:** comsuppw. lib ou comsuppwd (consulte [/ZC: wchar_t (wchar_t Is Native Type)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)  
   
 ## <a name="see-also"></a>Consulte também  
  [Classes de suporte COM do compilador](../cpp/compiler-com-support-classes.md)

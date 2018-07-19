@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d3de4c7538c36ac1a55ea2519fa26a878663a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7e43d5f528e85ea3233b9ea4a68e83ee0cfb7f3
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848239"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026401"
 ---
 # <a name="complex-class"></a>Classe complex
 
-A classe de modelo descreve um objeto que armazena dois objetos do tipo **Type**, um que representa a parte real de um número complexo e outro que representa a parte imaginária.
+A classe de modelo descreve um objeto que armazena dois objetos do tipo `Type`, um que representa a parte real de um número complexo e outro que representa a parte imaginária.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,7 +42,7 @@ class complex
 
 ## <a name="remarks"></a>Comentários
 
-Um objeto da classe **Type**:
+Um objeto da classe `Type`:
 
 - Tem um construtor padrão público, um destruidor, um construtor de cópia e um operador de atribuição com comportamento convencional.
 
@@ -50,9 +50,9 @@ Um objeto da classe **Type**:
 
 - Define os operadores aritméticos e funções matemáticas, conforme necessário, definidos para os tipos de ponto flutuante com comportamento convencional.
 
-Em particular, talvez não exista nenhuma diferença sutil entre a construção da cópia e a construção padrão seguida pela atribuição. Nenhuma das operações em objetos da classe **Type** pode gerar exceções.
+Em particular, talvez não exista nenhuma diferença sutil entre a construção da cópia e a construção padrão seguida pela atribuição. Nenhuma das operações em objetos da classe `Type` pode lançar exceções.
 
-Existem especializações explícitas do complexo de classe de modelo para os três tipos de ponto flutuante. Nessa implementação, um valor de qualquer outro tipo **Type** é estereotipado para **double** para cálculos reais, com o resultado **double** atribuído de volta ao objeto armazenado do tipo **Type**`.`
+Existem especializações explícitas do complexo de classe de modelo para os três tipos de ponto flutuante. Nessa implementação, um valor de qualquer outro tipo `Type` é estereotipado para **duplo** para cálculos reais, com o **duplo** atribuído de volta ao objeto armazenado do tipo de resultado `Type``.`
 
 ### <a name="constructors"></a>Construtores
 
@@ -108,11 +108,11 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_RealVal` O valor da parte real usado para inicializar o número complexo que está sendo construído.
+*_RealVal* o valor da parte real usada para inicializar o número complexo que está sendo construído.
 
-`_ImagVal` O valor da parte imaginária usado para inicializar o número complexo que está sendo construído.
+*_ImagVal* o valor da parte imaginária usada para inicializar o número complexo que está sendo construído.
 
-`complexNum` O número complexo cujos partes reais e imaginários são usados para inicializar o número complexo que está sendo construído.
+*complexNum* o número complexo cujas partes reais e imaginárias são usados para inicializar o número complexo que está sendo construído.
 
 ### <a name="remarks"></a>Comentários
 
@@ -187,7 +187,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` Um número complexo cujo valor imaginário é a ser extraído.
+*à direita* um número complexo cujo valor imaginário deve ser extraído.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -243,7 +243,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` Um número complexo ou um número que seja do mesmo tipo, como o parâmetro do número complexo de destino.
+*à direita* um número complexo ou um número que é do mesmo tipo como o parâmetro de número complexo de destino.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -326,7 +326,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` Um número complexo ou um número que seja do mesmo tipo, como o parâmetro do número complexo de destino.
+*à direita* um número complexo ou um número que é do mesmo tipo como o parâmetro de número complexo de destino.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -428,9 +428,9 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parâmetros
 
-`complexNum` Um número complexo a ser subtraído do número complexo de destino.
+*complexNum* um número complexo a ser subtraído do número complexo de destino.
 
-`_RealPart` Um número real deve ser subtraído do número complexo de destino.
+*_RealPart* um número real a ser subtraído do número complexo de destino.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -534,9 +534,9 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parâmetros
 
-`complexNum` Um número complexo a ser subtraído do número complexo de destino.
+*complexNum* um número complexo a ser subtraído do número complexo de destino.
 
-`_RealPart` Um número real deve ser subtraído do número complexo de destino.
+*_RealPart* um número real a ser subtraído do número complexo de destino.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -634,7 +634,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` Um número complexo ou um número que seja do mesmo tipo, como o parâmetro do número complexo de destino.
+*à direita* um número complexo ou um número que é do mesmo tipo como o parâmetro de número complexo de destino.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -711,7 +711,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` Um número complexo cujo valor real é a ser extraído.
+*à direita* um número complexo cujo valor real é a ser extraído.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -763,7 +763,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Comentários
 
-`value_type` é um sinônimo do parâmetro do modelo **Type** complexo da classe.
+`value_type` é um sinônimo para a classe complexa `Type` parâmetro de modelo.
 
 ### <a name="example"></a>Exemplo
 
@@ -792,5 +792,5 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>Consulte também
 
-[Membros complexos](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
+[Membros complexos](http://msdn.microsoft.com/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

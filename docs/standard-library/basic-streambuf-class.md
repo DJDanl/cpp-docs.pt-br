@@ -104,12 +104,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7453120d40efc05fd0dce919a7b85869710a9b18
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ab94a9aadc40b4313995a71171d6712657e7ff0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848905"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964945"
 ---
 # <a name="basicstreambuf-class"></a>Classe basic_streambuf
 
@@ -124,13 +124,13 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Elem` Um [char_type](#char_type).
+*Elem* um [char_type](#char_type).
 
-`Tr` O caractere [traits_type](#traits_type).
+*TR* o caractere [traits_type](#traits_type).
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve uma classe base abstrata para derivar um buffer de fluxo, que controla a transmissão de elementos de e para uma representação específica de um fluxo. Um objeto da classe `basic_streambuf` ajuda a controlar um fluxo com elementos do tipo `Tr`, também conhecido como [char_type](#char_type), cujas características de caractere são determinadas pela classe [char_traits](../standard-library/char-traits-struct.md), também conhecida como [traits_type](#traits_type).
+A classe de modelo descreve uma classe base abstrata para derivar um buffer de fluxo, que controla a transmissão de elementos de e para uma representação específica de um fluxo. Um objeto da classe `basic_streambuf` ajuda a controlar um fluxo com elementos do tipo *Tr*, também conhecido como [char_type](#char_type), cujas características de caractere são determinadas pela classe [char_traits](../standard-library/char-traits-struct.md), também conhecido como [traits_type](#traits_type).
 
 Todo buffer de fluxo controla conceitualmente dois fluxos independentes: um para extrações (entrada) e outro para inserções (saída). Uma representação específica pode, no entanto, tornar um ou ambos esses fluxos inacessíveis. Normalmente, mantém alguma relação entre os dois fluxos. O que você insere no fluxo de saída de um objeto [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`>, por exemplo, é o que você mais tarde extrai do fluxo de entrada. Ao posicionar um fluxo de um objeto [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, você posiciona o outro fluxo em tandem.
 
@@ -250,13 +250,13 @@ basic_streambuf(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` Uma referência de lvalue para o `basic_streambuf` que é usado para definir os valores para este objeto `basic_streambuf` objeto.
+*à direita* uma referência lvalue para o `basic_streambuf` que é usado para definir os valores para este objeto `basic_streambuf` objeto.
 
 ### <a name="remarks"></a>Comentários
 
 O primeiro construtor protegido armazena um ponteiro nulo em todos os ponteiros controlando o buffer de entrada e o buffer de saída. Ele também armazena `locale::classic` no objeto de localidade. Para obter mais informações, consulte [Locale::classic](../standard-library/locale-class.md#classic).
 
-O segundo construtor protegido copia os ponteiros e a localidade de `right`.
+O segundo construtor protegido copia os ponteiros e a localidade da *certa*.
 
 ## <a name="char_type"></a>  basic_streambuf::char_type
 
@@ -304,7 +304,7 @@ Um ponteiro logo após o final do buffer de saída.
 
 ## <a name="gbump"></a>  basic_streambuf::gbump
 
-Uma função protegida que adiciona `count` ao próximo ponteiro para o buffer de entrada.
+Uma função protegida que adiciona *contagem* para o próximo ponteiro para o buffer de entrada.
 
 ```cpp
 void gbump(int count);
@@ -312,7 +312,7 @@ void gbump(int count);
 
 ### <a name="parameters"></a>Parâmetros
 
-`count` O valor pelo qual Avançar o ponteiro.
+*Contagem de* a quantidade pela qual Avançar o ponteiro.
 
 ## <a name="getloc"></a>  basic_streambuf::getloc
 
@@ -370,7 +370,7 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Loc` Uma referência a uma localidade.
+*_Loc* uma referência a uma localidade.
 
 ### <a name="remarks"></a>Comentários
 
@@ -390,7 +390,7 @@ O número de elementos que estão prontos para serem lidos do buffer.
 
 ### <a name="remarks"></a>Comentários
 
-Se um [ler posição](../standard-library/basic-streambuf-class.md) estiver disponível, a função de membro retorna [egptr](#egptr) - [gptr](#gptr). Caso contrário, retorna [showmanyc](#showmanyc).
+Se um [posição de leitura](../standard-library/basic-streambuf-class.md) estiver disponível, a função membro retorna [egptr](#egptr) - [gptr](#gptr). Caso contrário, retorna [showmanyc](#showmanyc).
 
 ### <a name="example"></a>Exemplo
 
@@ -436,11 +436,11 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` Uma referência de lvalue para o `basic_streambuf` objeto que é usado para atribuir valores a este objeto.
+*à direita* uma referência lvalue para o `basic_streambuf` objeto que é usado para atribuir valores a esse objeto.
 
 ### <a name="remarks"></a>Comentários
 
-O operador membro protegido copia de `right` os ponteiros que controlam o buffer de entrada e o buffer de saída. Também armazena `right.`[getloc()](#getloc) no `locale object`. Ele retorna `*this`.
+O operador membro protegido copia de *certa* os ponteiros que controlam o buffer de entrada e o buffer de saída. Também armazena `right.`[getloc()](#getloc) no `locale object`. Ele retorna `*this`.
 
 ## <a name="overflow"></a>  basic_streambuf::overflow
 
@@ -452,7 +452,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Meta` O caractere a ser inserido no buffer, ou **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta* o caractere a ser inserido no buffer, ou **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -486,7 +486,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Meta` O caractere a ser inserido no buffer, ou **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta* o caractere a ser inserido no buffer, ou **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -516,7 +516,7 @@ Um ponteiro para o início do buffer de saída.
 
 ## <a name="pbump"></a>  basic_streambuf::pbump
 
-Uma função protegida que adiciona `count` ao próximo ponteiro para o buffer de saída.
+Uma função protegida que adiciona *contagem* para o próximo ponteiro para o buffer de saída.
 
 ```cpp
 void pbump(int count);
@@ -524,7 +524,7 @@ void pbump(int count);
 
 ### <a name="parameters"></a>Parâmetros
 
-`count` O número de caracteres pelo qual mover a posição de gravação para frente.
+*Contagem de* o número de caracteres pelo qual a gravação de mover posição para frente.
 
 ## <a name="pos_type"></a>  basic_streambuf::pos_type
 
@@ -556,7 +556,7 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Loc` Uma referência a uma localidade.
+*_Loc* uma referência a uma localidade.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -582,11 +582,11 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Off` A posição para buscar para relativo a `_Way`.
+*Off* a posição para buscar com relação a *Way*.
 
-`_Way` O ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#seekdir) para valores possíveis.
+*Way* o ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#seekdir) para valores possíveis.
 
-`_Which` Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
+*_Which* Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -594,7 +594,7 @@ Retorna a nova posição ou uma posição de fluxo inválida ( [seekoff](#seekof
 
 ### <a name="remarks"></a>Comentários
 
-Move o ponteiro com relação a `_Way`.
+Move o ponteiro com relação a *Way*.
 
 ## <a name="pubseekpos"></a>  basic_streambuf::pubseekpos
 
@@ -606,9 +606,9 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Sp` A posição de busca para.
+*_Sp* a posição pela qual buscar.
 
-`_Which` Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
+*_Which* Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -630,9 +630,9 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Buffer` Um ponteiro para `char_type` para essa instanciação.
+*_Buffer* um ponteiro para `char_type` para essa instanciação.
 
-`count` O tamanho do buffer.
+*Contagem de* o tamanho do buffer.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -707,11 +707,11 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Off` A posição para buscar para relativo a `_Way`.
+*Off* a posição para buscar com relação a *Way*.
 
-`_Way` O ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#seekdir) para valores possíveis.
+*Way* o ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#seekdir) para valores possíveis.
 
-`_Which` Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
+*_Which* Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -741,9 +741,9 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Sp` A posição de busca para.
+*_Sp* a posição pela qual buscar.
 
-`_Which` Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
+*_Which* Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -769,9 +769,9 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Buffer` Ponteiro para um buffer.
+*_Buffer* ponteiro para um buffer.
 
-`count` Tamanho do buffer.
+*Contagem de* tamanho do buffer.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -795,13 +795,13 @@ void setg(char_type* _Gbeg,
 
 *_Gbeg* um ponteiro para o início do buffer.
 
-`_Gnext` Um ponteiro para um local no meio do buffer.
+*_Gnext* um ponteiro para algum lugar no meio do buffer.
 
-`_Gend` Um ponteiro para o final do buffer.
+*_Gend* um ponteiro para o fim do buffer.
 
 ## <a name="setp"></a>  basic_streambuf::setp
 
-Uma função protegida que armazena `_Pbeg` no ponteiro inicial e `_Pend` no ponteiro final para o buffer de saída.
+Uma função protegida que armazena *_Pbeg* no ponteiro de início e *_Pend* no ponteiro final para o buffer de saída.
 
 ```cpp
 void setp(char_type* _Pbeg, char_type* _Pend);
@@ -809,9 +809,9 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Pbeg` Um ponteiro para o início do buffer.
+*_Pbeg* um ponteiro para o início do buffer.
 
-`_Pend` Um ponteiro para o final do buffer.
+*_Pend* um ponteiro para o fim do buffer.
 
 ## <a name="sgetc"></a>  basic_streambuf::sgetc
 
@@ -851,7 +851,7 @@ int main( )
 
 ## <a name="sgetn"></a>  basic_streambuf::sgetn
 
-Extrai até `count` caracteres do buffer de entrada e armazena-os no buffer `ptr` fornecido.
+Extrai até *contagem* caracteres do buffer de entrada e os armazena em buffer fornecido *ptr*.
 
 Esse método pode não ser seguro, pois depende do chamador para verificar se os valores passados estão corretos.
 
@@ -863,9 +863,9 @@ streamsize sgetn(
 
 ### <a name="parameters"></a>Parâmetros
 
-`ptr` O buffer para conter os caracteres extraídos.
+*PTR* o buffer para conter os caracteres extraídos.
 
-`count` O número de elementos a serem lidos.
+*Contagem de* o número de elementos a serem lidos.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -967,7 +967,7 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Ch` O caractere.
+*CH* o caractere.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -975,7 +975,7 @@ Retorna o caractere ou a falha.
 
 ### <a name="remarks"></a>Comentários
 
-Se houver uma posição putback estiver disponível e `_Ch` for comparável ao caractere armazenado nessa posição, a função membro diminuirá o ponteiro seguinte para o buffer de entrada e retornará **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). Caso contrário, retorna [pbackfail](#pbackfail)( `_Ch`).
+Se uma posição putback estiver disponível e *CH* comparado como igual ao caractere armazenado nessa posição, a função membro diminuirá o ponteiro seguinte para o buffer de entrada e retorna **traits_type::** [ to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). Caso contrário, retorna [pbackfail](#pbackfail)( `_Ch`).
 
 ### <a name="example"></a>Exemplo
 
@@ -1014,7 +1014,7 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Ch` O caractere.
+*CH* o caractere.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1022,7 +1022,7 @@ Retorna o caractere, se for bem-sucedido.
 
 ### <a name="remarks"></a>Comentários
 
-Se um `write position` estiver disponível, a função membro armazenará `_Ch` na posição de gravação, incrementará o ponteiro seguinte para o buffer de saída e retornará **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). Caso contrário, retorna [overflow](#overflow)( `_Ch`).
+Se um `write position` estiver disponível, a função membro armazena *CH* na posição de gravação, incrementará o ponteiro seguinte para o buffer de saída e retorna **traits_type::**[to_int_type ](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). Caso contrário, retorna [overflow](#overflow)( `_Ch`).
 
 ### <a name="example"></a>Exemplo
 
@@ -1056,9 +1056,9 @@ streamsize sputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parâmetros
 
-`ptr` A cadeia de caracteres.
+*PTR* a cadeia de caracteres.
 
-`count` A contagem de caracteres.
+*Contagem de* a contagem de caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1183,11 +1183,11 @@ void swap(basic_streambuf& right);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`right`|Uma referência lvalue para o objeto `basic_streambuf` usada para trocar valores.|
+|*right*|Uma referência lvalue para o objeto `basic_streambuf` usada para trocar valores.|
 
 ### <a name="remarks"></a>Comentários
 
-A função membro protegida troca com `right` todos os ponteiros controlando o `input buffer` e o `output buffer`. Também troca `right.`[getloc()](#getloc) com o objeto `locale`.
+A função de membro protegida troca com *certa* todos os ponteiros controlando o `input buffer` e o `output buffer`. Também troca `right.`[getloc()](#getloc) com o objeto `locale`.
 
 ## <a name="sync"></a>  basic_streambuf::sync
 
@@ -1281,9 +1281,9 @@ virtual streamsize xsgetn(
 
 ### <a name="parameters"></a>Parâmetros
 
-`ptr` O buffer para conter os caracteres extraídos.
+*PTR* o buffer para conter os caracteres extraídos.
 
-`count` O número de elementos para extrair.
+*Contagem de* o número de elementos a extrair.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1291,7 +1291,7 @@ O número de elementos extraídos.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro virtual protegida extrai até `count` elementos do fluxo de entrada, como por chamadas repetidas a [sbumpc](#sbumpc) e armazena-os na matriz que começa em `ptr`. Retorna o número de elementos realmente extraídos.
+A função membro virtual protegida extrai até *contagem* elementos do fluxo de entrada, como se fosse por chamadas repetidas para [sbumpc](#sbumpc)e os armazena na matriz que começa em *ptr*. Retorna o número de elementos realmente extraídos.
 
 ## <a name="xsputn"></a>  basic_streambuf::xsputn
 
@@ -1303,9 +1303,9 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parâmetros
 
-`ptr` Ponteiro para elementos para inserir.
+*PTR* ponteiro para elementos a ser inserido.
 
-`count` Número de elementos para inserir.
+*Contagem de* número de elementos a serem inseridos.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1313,7 +1313,7 @@ O número de elementos realmente inseridos no fluxo.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro virtual protegida insere até `count` elementos no fluxo de saída, como se por chamadas repetidas a [sputc](#sputc), da matriz que começa em `ptr`. A inserção de caracteres no fluxo de saída para quando todos os caracteres `count` tiverem sido gravados ou se chamar `sputc( count)` retornaria `traits::eof()`. Retorna o número de elementos realmente inseridos.
+A função de membro virtual protegida insere até *contagem* elementos na saída de fluxo, como se por chamadas repetidas a [sputc](#sputc), desde o início da matriz na *ptr*. A inserção de caracteres no fluxo de saída para quando todos os *contagem* caracteres tiverem sido gravados ou se chamar `sputc( count)` retornaria `traits::eof()`. Retorna o número de elementos realmente inseridos.
 
 ## <a name="see-also"></a>Consulte também
 

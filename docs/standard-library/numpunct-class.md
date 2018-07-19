@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa161e1eec0e02097f22bb15f825542a6928111b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ae2acae1664656883f4f2eba85c57c8e7725b26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861172"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965559"
 ---
 # <a name="numpunct-class"></a>Classe numpunct
 
@@ -60,7 +60,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parâmetros
 
-`CharType` O tipo usado dentro de um programa para codificar caracteres em uma localidade.
+*CharType* o tipo usado em um programa para codificar caracteres em uma localidade.
 
 ## <a name="remarks"></a>Comentários
 
@@ -85,14 +85,14 @@ Como qualquer faceta de localidade, a ID de objeto estático tem um valor armaze
 |-|-|
 |[decimal_point](#decimal_point)|Retorna um elemento específico de localidade a ser usado como uma vírgula decimal.|
 |[do_decimal_point](#do_decimal_point)|Uma função membro virtual protegida que é chamada para retornar um elemento específico de localidade a ser usado como uma vírgula decimal.|
-|[do_falsename](#do_falsename)|Uma função membro virtual protegida que é chamada para retornar uma cadeia de caracteres a ser usada como uma representação de texto do valor `false`.|
+|[do_falsename](#do_falsename)|Uma função de membro virtual que é chamada para retornar uma cadeia de caracteres a ser usado como uma representação de texto do valor protegida **falsos**.|
 |[do_grouping](#do_grouping)|Uma função membro virtual protegida que é chamada para retornar uma regra específica de localidade para determinar como os dígitos são agrupados à esquerda de qualquer vírgula decimal.|
 |[do_thousands_sep](#do_thousands_sep)|Uma função membro virtual protegida que é chamada para retornar um elemento específico de localidade a ser usado como um separador de milhares.|
-|[do_truename](#do_truename)|Uma função membro virtual protegida que é chamada para retornar uma cadeia de caracteres a ser usada como uma representação de texto do valor `true`.|
-|[falsename](#falsename)|Retorna uma cadeia de caracteres a ser usada como uma representação de texto do valor `false`.|
+|[do_truename](#do_truename)|Uma função membro virtual protegida que é chamada para retornar uma cadeia de caracteres a ser usada como uma representação de texto do valor **true**.|
+|[falsename](#falsename)|Retorna uma cadeia de caracteres a ser usada como uma representação de texto do valor **false**.|
 |[grouping](#grouping)|Retorna uma regra específica de localidade para determinar como os dígitos são agrupados à esquerda de qualquer vírgula decimal.|
 |[thousands_sep](#thousands_sep)|Retorna um elemento específico de localidade a ser usado como um separador de milhares.|
-|[truename](#truename)|Retorna uma cadeia de caracteres a ser usada como uma representação de texto do valor `true`.|
+|[truename](#truename)|Retorna uma cadeia de caracteres a ser usada como uma representação de texto do valor **true**.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -209,7 +209,7 @@ A função membro virtual protegida retorna uma regra específica de localidade 
 
 ### <a name="example"></a>Exemplo
 
-Veja o exemplo de [grouping](#grouping), em que a função membro virtual é chamada por **grouping**.
+Veja o exemplo de [agrupando](#grouping), em que a função membro virtual é chamada `grouping`.
 
 ## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
 
@@ -225,7 +225,7 @@ Retorna um elemento específico de localidade a ser usado como um separador de m
 
 ### <a name="remarks"></a>Comentários
 
-A função membro virtual protegida retorna um elemento específico de localidade do tipo **CharType** para ser usado como separador de grupo à esquerda da vírgula decimal.
+A função de membro virtual protegida retorna um elemento específico de localidade do tipo `CharType` a ser usado como separador de grupo à esquerda da vírgula decimal.
 
 ### <a name="example"></a>Exemplo
 
@@ -259,7 +259,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Uma cadeia de caracteres que contém uma sequência de **CharType**s a ser usada como uma representação de texto do valor **false**.
+Uma cadeia de caracteres que contém uma sequência de `CharType`s para usar como uma representação de texto do valor **falso**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -354,21 +354,21 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Refs` Valor inteiro usado para especificar o tipo de gerenciamento de memória para o objeto.
+*_Refs* valor inteiro usado para especificar o tipo de gerenciamento de memória para o objeto.
 
 ### <a name="remarks"></a>Comentários
 
-Os valores possíveis para o parâmetro `_Refs` e sua significância são:
+Os valores possíveis para o *_Refs* parâmetro e sua significância são:
 
 - 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
 - 1: o tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: esses valores não são definidos.
+- \> 1: esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 
-O construtor inicializa seu objeto base com **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
+O construtor inicializa seu objeto base com **localidade::**[faceta](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="string_type"></a>  numpunct::string_type
 

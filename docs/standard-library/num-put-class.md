@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a860f7c266685e7e10f9b4cbe46c280c356f2681
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81bdbd07e06ef2ec24a5f220fcd11a228b783888
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862030"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965971"
 ---
 # <a name="numput-class"></a>Classe num_put
 
@@ -45,9 +45,9 @@ class num_put : public locale::facet;
 
 ### <a name="parameters"></a>Parâmetros
 
-`CharType` O tipo usado dentro de um programa para codificar caracteres em uma localidade.
+*CharType* o tipo usado em um programa para codificar caracteres em uma localidade.
 
-`OutputIterator` O tipo de iterador para que as funções numéricas de put gravam sua saída.
+*OutputIterator* o tipo de iterador para o qual as funções put numéricas gravam sua saída.
 
 ## <a name="remarks"></a>Comentários
 
@@ -89,11 +89,11 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo do parâmetro de modelo **CharType**.
+O tipo é um sinônimo do parâmetro de modelo `CharType`.
 
 ## <a name="do_put"></a>  num_put::do_put
 
-Uma função virtual que é chamada para converter um número em uma sequência de **CharType**s que representa o número formatado para uma determinada localidade.
+Uma função virtual que é chamada para converter um número em uma sequência de `CharType`s que representa o número formatado para uma determinada localidade.
 
 ```cpp
 virtual iter_type do_put(
@@ -153,13 +153,13 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parâmetros
 
-`next` Um iterador abordar o primeiro elemento da cadeia de caracteres inserida.
+*próxima* um iterador que trata o primeiro elemento da cadeia de caracteres inserida.
 
-`_Iosbase` Especificar o fluxo que contém a localidade com a faceta numpunct usada para pontuar os sinalizadores para formatar a saída e saída.
+*Iosbase* especificado o fluxo que contém a localidade com a faceta numpunct usada para pontuar a saída e os sinalizadores para a formatação da saída.
 
-`_Fill` Um caractere que é usado para espaçamento.
+*_Fill* um caractere que é usado para espaçamento.
 
-`val` O número ou tipo booliano que deve ser a saída.
+*Val* o número ou tipo booliano que será a saída.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -167,21 +167,21 @@ Um iterador de saída que aborda uma posição além do último elemento produzi
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função membro protegida virtual gera elementos sequenciais começando em `next` para produzir um campo de saída inteiro do valor de `val`. A função retorna um iterador designando o próximo local para inserir um elemento além do campo de saída inteiro gerado.
+A primeira função membro virtual protegida gera elementos sequenciais começando em *próxima* para produzir um campo de saída inteiro do valor de *val*. A função retorna um iterador designando o próximo local para inserir um elemento além do campo de saída inteiro gerado.
 
-O campo de saída inteiro é gerado pelas mesmas regras usadas pelas funções de impressão para gerar uma série de elementos `char` para um arquivo. Cada elemento char é considerado mapeado para um elemento equivalente do tipo **CharType** por um mapeamento um para um simples. Quando uma função de impressão preenche um campo com espaços ou o dígito 0, no entanto, `do_put` usa **fill**. A especificação de conversão de impressão equivalente é determinada da seguinte forma:
+O campo de saída inteiro é gerado pelas mesmas regras usadas pelas funções de impressão para gerar uma série de **char** elementos em um arquivo. Cada elemento char é considerado mapeado para um elemento equivalente do tipo `CharType` por um mapeamento um para um simple. Sempre que uma função de impressão preenche um campo com espaços ou o dígito 0, no entanto, `do_put` em vez disso, usa `fill`. A especificação de conversão de impressão equivalente é determinada da seguinte forma:
 
-- Se **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), a especificação de conversão é **lo**.
+- Se **iosbase**. [sinalizadores](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), a especificação de conversão é `lo`.
 
-- Se **iosbase.flags** & **ios_base::basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex), a especificação de conversão é **lx**.
+- Se **iosbase** & **ios_base:: BaseField** == `ios_base::`[hex](../standard-library/ios-functions.md#hex), a especificação de conversão é `lx`.
 
-- Caso contrário, a especificação de conversão é **Id**.
+- Caso contrário, a especificação de conversão é `ld`.
 
 Se **iosbase**. [width](../standard-library/ios-base-class.md#width) é diferente de zero, uma largura de campo deste valor é anexado. Em seguida, a função chama **iosbase**. **width**(0) para redefinir a largura do campo como zero.
 
-O preenchimento ocorre apenas se o número mínimo de elementos *N* necessários para especificar o campo de saída for menor que **iosbase**. [width](../standard-library/ios-base-class.md#width). Esse preenchimento consiste em uma sequência de *N* - **largura** copia de **preenchimento**. O preenchimento ocorre então da seguinte maneira:
+O preenchimento ocorre apenas se o número mínimo de elementos *N* necessários para especificar o campo de saída for menor que **iosbase**. [width](../standard-library/ios-base-class.md#width). Esse preenchimento consiste em uma sequência de *N* - **largura** copia do **preenchimento**. O preenchimento ocorre então da seguinte maneira:
 
-- Se **iosbase**. **sinalizadores de** & `ios_base::adjustfield` == `ios_base::`[esquerdo](../standard-library/ios-functions.md#left), o sinalizador **-** é anexado. (O preenchimento ocorre após o texto gerado.)
+- Se **iosbase**. **sinalizadores** & `ios_base::adjustfield` == `ios_base::`[esquerdo](../standard-library/ios-functions.md#left), o sinalizador **-** é anexado. (O preenchimento ocorre após o texto gerado.)
 
 - Se **iosbase.flags** & **ios_base::adjustfield** == `ios_base::`[internal](../standard-library/ios-functions.md#internal), o sinalizador **0** é anexado. (Para um campo de saída numérico, o preenchimento ocorre quando as funções de impressão são preenchidas com 0.)
 
@@ -210,7 +210,7 @@ virtual iter_type do_put(iter_type next,
     unsigned long val) const;
 ```
 
-comporta-se da mesma maneira que a primeira, exceto que substitui uma especificação de conversão de **Id** por **lu**.
+comporta-se da mesma maneira que a primeira, exceto que substitui uma especificação de conversão de `ld` por `lu`.
 
 A terceira função membro virtual protegida:
 
@@ -223,11 +223,11 @@ virtual iter_type do_put(iter_type next,
 
 comporta-se da mesma maneira que a primeira, exceto que gera um campo de saída de ponto flutuante do valor de **val**. **fac**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) determina a sequência que separa os dígitos de inteiros dos dígitos de fração. A especificação de conversão de impressão equivalente é determinada da seguinte forma:
 
-- Se **iosbase**. **flags** & `ios_base::floatfield` == `ios_base::`[fixed](../standard-library/ios-functions.md#fixed), a especificação de conversão é **lf**.
+- Se **iosbase**. **sinalizadores** & `ios_base::floatfield` == `ios_base::`[fixo](../standard-library/ios-functions.md#fixed), a especificação de conversão é `lf`.
 
-- Se **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), a especificação de conversão é `le`. Se **iosbase**. **flags** & `ios_base::`[uppercase](../standard-library/ios-functions.md#uppercase) é diferente de zero **e** é substituído por **E**.
+- Se **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), a especificação de conversão é `le`. Se **iosbase**. **sinalizadores** & `ios_base::`[maiuscula](../standard-library/ios-functions.md#uppercase) for diferente de zero `e` é substituído pelo `E`.
 
-- Caso contrário, a especificação de conversão é **Ig**. Se **iosbase**. **flags** & **ios_base::uppercase** é diferente de zero, **g** é substituído por **G**.
+- Caso contrário, a especificação de conversão é **Ig**. Se **iosbase**. **sinalizadores** & **ios_base:: UpperCase** for diferente de zero `g` é substituído pelo `G`.
 
 Se **iosbase**. **flags** & **ios_base::fixed** se for diferente de zero ou se **iosbase**. [precision](../standard-library/ios-base-class.md#precision) é maior que zero, uma precisão com o valor **iosbase**. **precision** é anexado à especificação de conversão. O preenchimento comporta-se da mesma maneira que um campo de saída inteiro. O caractere de preenchimento é **fill**. Por fim:
 
@@ -244,7 +244,7 @@ virtual iter_type do_put(iter_type next,
     long double val) const;
 ```
 
-se comporta como o terceiro, exceto que o qualificador **l** na especificação de conversão é substituído por **L**.
+comporta-se a terceira, exceto que o qualificador `l` na conversão de especificação é substituída pelo `L`.
 
 A quinta função membro virtual protegida:
 
@@ -266,7 +266,7 @@ virtual iter_type do_put(iter_type next,
     bool val) const;
 ```
 
-comporta-se da mesma maneira que a primeira, exceto que gera um campo de saída booliano de `val`.
+se comporta da mesma maneira que a primeira, exceto que ele gera um campo de saída booliano de *val*.
 
 Um campo de saída booliano adota um de dois formatos. Se **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) é **false**, a função membro retorna `do_put`(_ *Next*, \_ *Iosbase*, \_ *Fill*, ( **long**) `val`), que geralmente produz uma sequência gerada de 0 (para **false**) ou 1 (para **true**). Caso contrário, a sequência gerada é **fac**. [falsename](../standard-library/numpunct-class.md#falsename)`)` (para **false**) ou **fac**. [truename](../standard-library/numpunct-class.md#truename) (para **true**).
 
@@ -279,7 +279,7 @@ virtual iter_type do_put(iter_type next,
     long long val) const;
 ```
 
-comporta-se da mesma maneira que a primeira, exceto que substitui uma especificação de conversão de **Id** por **lld**.
+comporta-se da mesma maneira que a primeira, exceto que substitui uma especificação de conversão de `ld` por `lld`.
 
 A oitava função membro virtual protegida:
 
@@ -318,17 +318,17 @@ explicit num_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Refs` Valor inteiro usado para especificar o tipo de gerenciamento de memória para o objeto.
+*_Refs* valor inteiro usado para especificar o tipo de gerenciamento de memória para o objeto.
 
 ### <a name="remarks"></a>Comentários
 
-Os valores possíveis para o parâmetro `_Refs` e sua significância são:
+Os valores possíveis para o *_Refs* parâmetro e sua significância são:
 
 - 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
 - 1: o tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: esses valores não são definidos.
+- \> 1: esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 
@@ -336,7 +336,7 @@ O construtor inicializa seu objeto base com **locale::**[facet](../standard-libr
 
 ## <a name="put"></a>  num_put::put
 
-Converte um número em uma sequência de **CharType**s que representa o número formatado para uma determinada localidade.
+Converte um número em uma sequência de `CharType`s que representa o número formatado para uma determinada localidade.
 
 ```cpp
 iter_type put(
@@ -397,13 +397,13 @@ iter_type put(
 
 ### <a name="parameters"></a>Parâmetros
 
-`dest` Um iterador abordar o primeiro elemento da cadeia de caracteres inserida.
+*dest* um iterador que trata o primeiro elemento da cadeia de caracteres inserida.
 
-`_Iosbase` Especificar o fluxo que contém a localidade com a faceta numpunct usada para pontuar os sinalizadores para formatar a saída e saída.
+*Iosbase* especificado o fluxo que contém a localidade com a faceta numpunct usada para pontuar a saída e os sinalizadores para a formatação da saída.
 
-`_Fill` Um caractere que é usado para espaçamento.
+*_Fill* um caractere que é usado para espaçamento.
 
-`val` O número ou tipo booliano que deve ser a saída.
+*Val* o número ou tipo booliano que será a saída.
 
 ### <a name="return-value"></a>Valor de retorno
 

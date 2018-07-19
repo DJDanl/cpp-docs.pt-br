@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c465ce95ecbf2ecb50e79e6e4cbaafce8cf7a407
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ddd340f0a5d988709804698f53918462f4b4e512
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843672"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964525"
 ---
 # <a name="constmemfun1reft-class"></a>Classe const_mem_fun1_ref_t
 
@@ -41,11 +41,11 @@ class const_mem_fun1_ref_t
 
 ### <a name="parameters"></a>Parâmetros
 
-`Pm` Um ponteiro para a função de membro da classe **tipo** a ser convertido em um objeto de função.
+*PM* um ponteiro para a função de membro da classe `Type` a ser convertido em um objeto de função.
 
-`left` O **const** o objeto de `Pm` função de membro é chamada em.
+*à esquerda* as **const** do objeto que o *Pm* função de membro é chamada em.
 
-`right` O argumento que está sendo fornecido ao `Pm`.
+*à direita* argumento que está sendo fornecido para *Pm*.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -53,7 +53,7 @@ Uma função binária adaptável.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo armazena uma cópia de `Pm`, que deve ser um ponteiro para uma função membro da classe **Type**, em um objeto de membro privado. Ela define sua função membro `operator()` como de retorno ( `left`.\* *Pm*)( `right`) **const**.
+A classe de modelo armazena uma cópia dos *Pm*, que deve ser um ponteiro para uma função de membro de classe `Type`, em um objeto de membro privado. Ela define sua função membro `operator()` como de retorno ( `left`.\* *Pm*)( `right`) **const**.
 
 ## <a name="example"></a>Exemplo
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 407da94d8d813e4951f12ad9951dc64ac298f61d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 256ca308160a2e34341c6156ee761473c13142e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863641"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964477"
 ---
 # <a name="matchresults-class"></a>Classe match_results
 
@@ -69,9 +69,9 @@ class match_results {
 
 ### <a name="parameters"></a>Parâmetros
 
-`BidIt` O tipo de iterador para subcorrespondentes.
+*BidIt* o tipo de iterador para subcorrespondências.
 
-`Alloc` O tipo de um alocador para gerenciamento de armazenamento.
+*Alocação* o tipo de um alocador para gerenciar o armazenamento.
 
 ## <a name="remarks"></a>Comentários
 
@@ -93,7 +93,7 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>Comentários
 
-O typedef é um sinônimo do argumento de modelo `Alloc`.
+O typedef é um sinônimo para o argumento de modelo *Alloc*.
 
 ### <a name="example"></a>Exemplo
 
@@ -1066,17 +1066,17 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>Parâmetros
 
-`OutIt` O tipo de iterador de saída.
+*OutIt* o tipo de iterador de saída.
 
-`out` O fluxo de saída para gravar.
+*out* para gravar no fluxo de saída.
 
-`fmt` A cadeia de caracteres de formato.
+*FMT* a cadeia de caracteres de formato.
 
-`flags` Os sinalizadores de formato.
+*sinalizadores de* os sinalizadores de formato.
 
 ### <a name="remarks"></a>Comentários
 
-Cada função membro gera texto formatado no controle do formato `fmt`. A primeira função membro grava o texto formatado na sequência definida pelo seu argumento `out` e retorna `out`. A segunda função membro retorna um objeto de cadeia de caracteres que mantém uma cópia do texto formatado.
+Cada função de membro gera texto formatado no controle do formato *fmt*. A primeira função membro grava o texto formatado na sequência definida por seu argumento *horizontalmente* e retorna *out*. A segunda função membro retorna um objeto de cadeia de caracteres que mantém uma cópia do texto formatado.
 
 Para gerar texto formatado. o texto literal na cadeia de caracteres de formato é copiado normalmente para a sequência de destino. Cada sequência de escape na cadeia de caracteres de formato é substituída pelo texto que ela representa. Os detalhes da cópia e da substituição são controlados pelos sinalizadores de formato transmitidos à função.
 
@@ -1441,7 +1441,7 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`sub` O índice do subcorrespondência.
+*Sub* o índice da subcorrespondência.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1568,13 +1568,13 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`alloc` O objeto de alocador para armazenar.
+*alocação* para armazenar o objeto de alocador.
 
-`right` O objeto match_results para copiar.
+*à direita* do objeto para copiar o match_results.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor cria um objeto `match_results` que não mantém nenhuma subcorrespondência. O segundo construtor cria um objeto `match_results` que é uma cópia do `right`.
+O primeiro construtor cria um objeto `match_results` que não mantém nenhuma subcorrespondência. O segundo construtor cria um `match_results` que é uma cópia do objeto *direito*.
 
 ### <a name="example"></a>Exemplo
 
@@ -1816,11 +1816,11 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` O objeto match_results para copiar.
+*à direita* do objeto para copiar o match_results.
 
 ### <a name="remarks"></a>Comentários
 
-O operador de membro substitui a sequência controlada pelo `*this` por uma cópia da sequência controlada por `right`.
+O operador membro substitui a sequência controlada por `*this` com uma cópia da sequência controlada pelo *direito*.
 
 ### <a name="example"></a>Exemplo
 
@@ -1941,11 +1941,11 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`n` Índice da subcorrespondência.
+*n* índice da subcorrespondência.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro retornará uma referência ao elemento `n` da sequência controlada ou uma referência a um objeto `sub_match` vazio se o `size() <= n` ou o grupo de captura `n` não fizer parte da correspondência.
+A função membro retorna uma referência ao elemento *n* da sequência controlada ou uma referência a um vazio `sub_match` do objeto se `size() <= n` ou, se o grupo de captura *n* não fazia parte da correspondência.
 
 ### <a name="example"></a>Exemplo
 
@@ -2066,7 +2066,7 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`sub` Índice da subcorrespondência.
+*Sub* índice da subcorrespondência.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2675,7 +2675,7 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`sub` Índice da subcorrespondência.
+*Sub* índice da subcorrespondência.
 
 ### <a name="remarks"></a>Comentários
 
@@ -3042,11 +3042,11 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` O objeto match_results para troca.
+*à direita* o match_results o objeto a ser trocado.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro alterna o conteúdo de `*this` e `right` em tempo constante e não lança exceções.
+A função membro troca o conteúdo do `*this` e *direito* em tempo constante e não lança exceções.
 
 ### <a name="example"></a>Exemplo
 

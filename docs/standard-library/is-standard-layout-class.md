@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d899d9c56ecc8b27b18498de225bbba6f0d110d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6223151acbce299178101735db05f7b4bd516f2f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852078"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965507"
 ---
 # <a name="isstandardlayout-class"></a>Classe is_standard_layout
 
@@ -39,11 +39,11 @@ struct is_standard_layout;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`Ty`|O tipo a ser consultado|
+|*Ty*|O tipo a ser consultado|
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância deste predicado de tipo será verdadeira se o tipo `Ty` for uma classe que tem um layout padrão dos objetos membro na memória; caso contrário, será falsa.
+Uma instância deste predicado de tipo será verdadeira se o tipo *Ty* é uma classe que tem um layout padrão dos objetos de membro na memória, caso contrário, será falsa.
 
 ## <a name="requirements"></a>Requisitos
 

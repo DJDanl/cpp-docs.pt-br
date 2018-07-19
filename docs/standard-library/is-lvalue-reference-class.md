@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 692c5243a7fe2984d43a1e70fc39616de5cbcc9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d21fcc27b5b4f92b690d8fae7669a18a5fcc1c46
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845356"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964922"
 ---
 # <a name="islvaluereference-class"></a>Classe is_lvalue_reference
 
@@ -37,11 +37,11 @@ struct is_lvalue_reference;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo de consulta.
+*Ty* o tipo de consulta.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância deste predicado de tipo será verdadeira se o tipo `Ty` for uma referência a um objeto ou a uma função; caso contrário, será falsa. Observe que `Ty` pode não ser uma referência rvalue. Para obter mais informações sobre rvalues, consulte [Declarador de referência Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+Uma instância deste predicado de tipo será verdadeira se o tipo *Ty* é uma referência a um objeto ou a uma função, caso contrário, será falsa. Observe que *Ty* pode não ser uma referência de rvalue. Para obter mais informações sobre rvalues, consulte [Declarador de referência Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="requirements"></a>Requisitos
 

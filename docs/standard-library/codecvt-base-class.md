@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe2a27a79705e9850df2c9fb54037278abd8cd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a471cdd63ed46e15c9ec41968ed341eefaf36963
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843256"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965386"
 ---
 # <a name="codecvtbase-class"></a>Classe codecvt_base
 
-Uma classe base da classe codecvt usada para definir um tipo de enumeração referenciado como **result**, usado como o tipo de retorno para as funções membro de faceta para indicar o resultado de uma conversão.
+Uma classe base para a classe codecvt que é usada para definir um tipo de enumeração referenciado como `result`, usado como o tipo de retorno para as funções de membro de faceta para indicar o resultado de uma conversão.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -50,13 +50,13 @@ protected:
 
 A classe descreve uma enumeração comum a todas as especializações da classe de modelo [codecvt](../standard-library/codecvt-class.md). O resultado da enumeração descreve os possíveis valores de retornos de [do_in](../standard-library/codecvt-class.md#do_in) ou [do_out](../standard-library/codecvt-class.md#do_out):
 
-- **ok** se a conversão entre codificações de caracteres internos e externos for bem-sucedida.
+- `ok` Se a conversão entre codificações de caracteres internos e externos for bem-sucedida.
 
-- **partial** se a fonte for insuficiente ou se o destino não for grande o suficiente para que a conversão seja bem-sucedida.
+- `partial` Se o destino não é grande o suficiente para a conversão seja bem-sucedida.
 
-- **error** se a sequência de origem estiver mal formada.
+- `error` Se a sequência de origem estiver mal formada.
 
-- **noconv** se a função não realizar nenhuma conversão.
+- `noconv` se a função não realizar nenhuma conversão.
 
 ## <a name="requirements"></a>Requisitos
 

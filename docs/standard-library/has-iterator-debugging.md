@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab2de61df8c4e22b1955e9fd4798b5128a3e12be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81f0509c6230020b586c0341e1de608981c05476
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845889"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965972"
 ---
 # <a name="hasiteratordebugging"></a>_HAS_ITERATOR_DEBUGGING
 
 Substituída por [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), esta macro define se o recurso de depuração do iterador está habilitado em um build de depuração. Por padrão, a depuração de iterador está habilitada em compilações de depuração e desabilitado em compilações comerciais. Para saber mais, consulte [Suporte ao iterador de depuração](../standard-library/debug-iterator-support.md).
 
 > [!IMPORTANT]
-> O uso direto da macro `_HAS_ITERATOR_DEBUGGING` foi preterido. Em vez disso, use `_ITERATOR_DEBUG_LEVEL` para controlar configurações de depuração do iterador. Para obter mais informações, consulte [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
+> Uso direto da macro has_iterator_debugging foi preterido. Em vez disso, use iterator_debug_level para controlar as configurações de depuração do iterador. Para obter mais informações, consulte [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
 ## <a name="remarks"></a>Comentários
 
-Para habilitar a depuração do iterador em compilações de depuração, defina `_ITERATOR_DEBUG_LEVEL` como 2. Isso é equivalente a configurar `_HAS_ITERATOR_DEBUGGING` como 1 ou habilitado:
+Para habilitar a depuração do iterador em compilações de depuração, defina iterator_debug_level como 2. Isso é equivalente a uma configuração de has_iterator_debugging de 1 ou habilitado:
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 2
 ```
 
-`_ITERATOR_DEBUG_LEVEL` não pode ser definido como 2 (e `_HAS_ITERATOR_DEBUGGING` não pode ser definido como 1) em compilações comerciais.
+Iterator_debug_level não pode ser definido como 2 (e has_iterator_debugging não pode ser definido como 1) em compilações comerciais.
 
-Para desabilitar a depuração de iteradores em compilações de depuração, defina `_ITERATOR_DEBUG_LEVEL` como 0 ou 1. Isso é equivalente a configurar `_HAS_ITERATOR_DEBUGGING` como 0 ou desabilitado:
+Para desabilitar a depuração de iteradores em compilações de depuração, defina iterator_debug_level como 0 ou 1. Isso é equivalente a uma configuração de has_iterator_debugging de 0 ou desabilitado:
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 0

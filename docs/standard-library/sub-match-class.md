@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 740ebe26dd36dd89786806c3960e6184b117daeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 607a200230e1dfb167707e785f7f8fbbde118587
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860249"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964776"
 ---
 # <a name="submatch-class"></a>Classe sub_match
 
@@ -65,11 +65,12 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-`BidIt` O tipo de iterador para subcorrespondentes.
+*BidIt*  
+ O tipo de iterador para subcorrespondências.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve um objeto que designa uma sequência de caracteres que corresponde a um grupo de captura em uma chamada para [regex_match](../standard-library/regex-functions.md#regex_match) ou [regex_search](../standard-library/regex-functions.md#regex_search). Objetos do tipo [Classe match_results](../standard-library/match-results-class.md) contêm uma matriz desses objetos, uma para cada grupo de captura na expressão regular que foi usada na pesquisa.
+A classe de modelo descreve um objeto que designa uma sequência de caracteres que corresponde a um grupo de captura em uma chamada para [regex_match](../standard-library/regex-functions.md#regex_match) ou a [regex_search](../standard-library/regex-functions.md#regex_search). Objetos do tipo [Classe match_results](../standard-library/match-results-class.md) contêm uma matriz desses objetos, uma para cada grupo de captura na expressão regular que foi usada na pesquisa.
 
 Se o grupo de captura não tiver sido correspondido ao membro de dados do objeto, `matched` será falso e os dois iteradores `first` e `second` (herdados de `std::pair` base) serão iguais. Se o grupo de captura for correspondido, `matched` será verdadeiro, o iterador `first` apontará para o primeiro caractere na sequência de destino que corresponde ao grupo de captura e o iterador `second` apontará para uma posição após o último caractere na sequência de destino que corresponde ao grupo de captura. Observe que para uma correspondência de comprimento zero, o membro `matched` será verdadeiro, os dois iteradores serão iguais e ambos apontarão para a posição da correspondência.
 
@@ -97,11 +98,14 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` Subcorrespondência a ser comparado.
+*right*  
+ A subcorrespondência com a qual comparar.
 
-`str` A cadeia de caracteres a ser comparado.
+*str*  
+ A cadeia de caracteres com a qual comparar.
 
-`ptr` A sequência a ser comparado com terminação nula.
+*ptr*  
+ A sequência com terminação nula com a qual comparar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -373,7 +377,7 @@ bool matched;
 
 ### <a name="remarks"></a>Comentários
 
-O membro conterá `true` somente se o grupo de captura associado a `*this` fazia parte da correspondência da expressão regular.
+O membro conterá **verdadeira** somente se o grupo de captura associado `*this` fazia parte da correspondência da expressão regular.
 
 ### <a name="example"></a>Exemplo
 

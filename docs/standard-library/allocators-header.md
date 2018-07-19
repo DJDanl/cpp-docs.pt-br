@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f578ab4ea06db68b23a03374bcd787dc03715ab5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a1d2d710631c01a39b910e7d9b15f14179b3125
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847306"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965737"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -87,7 +87,7 @@ Use a macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocat
 
 _Lst1 aloca nós com `allocator_chunklist` e o filtro de sincronização [sync_per_thread](../standard-library/sync-per-thread-class.md).
 
-Um alocador de blocos é um cache ou um filtro. Um cache é uma classe de modelo que usa um argumento do tipo std:: size_t. Ele define um alocador de blocos que aloca e desaloca os blocos de memória de um único tamanho. Ele deve obter memória usando o operador `new`, mas não precisa fazer uma chamada separada ao operador `new` para cada bloco. Ele pode, por exemplo, subalocar de um bloco maior ou armazenar em cache os blocos desalocados para uma próxima realocação.
+Um alocador de blocos é um cache ou um filtro. Um cache é uma classe de modelo que usa um argumento do tipo std:: size_t. Ele define um alocador de blocos que aloca e desaloca os blocos de memória de um único tamanho. Ele deve obter memória usando o operador **novos**, mas não precisa fazer uma chamada separada ao operador **novos** para cada bloco. Ele pode, por exemplo, subalocar de um bloco maior ou armazenar em cache os blocos desalocados para uma próxima realocação.
 
 Com um compilador que não pode compilar reassociação, o valor do argumento std::size_t usado quando a instância do modelo foi criada não é necessariamente o valor do argumento _Sz passado para as funções de membro do cache alocar e desalocar.
 
@@ -151,7 +151,7 @@ O modelo de cache `cache_freelist` usa um argumento de classe max que determina 
 |[allocator_base](../standard-library/allocator-base-class.md)|Define a classe base e as funções comuns necessárias para criar um alocador definido pelo usuário de um filtro de sincronização.|
 |[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Descreve um objeto que gerencia a alocação de armazenamento e a liberação de objetos usando um cache do tipo [cache_chunklist](../standard-library/cache-chunklist-class.md).|
 |[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|Descreve um objeto que gerencia a alocação e a liberação de armazenamento para objetos do tipo `Type` usando um cache do tipo [cache_freelist](../standard-library/cache-freelist-class.md) com um comprimento gerenciado por [max_fixed_size](../standard-library/max-fixed-size-class.md).|
-|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implementa um alocador que usa `operator delete` para desalocar um bloco de memória e `operator new` para alocar um bloco de memória.|
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implementa um alocador que usa **operador delete** para desalocar uma memória bloco e **operador new** para alocar um bloco de memória.|
 |[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|Descreve um objeto que gerencia a alocação e a liberação de armazenamento para objetos do tipo `Type` usando um cache do tipo [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 |[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|Descreve um objeto que gerencia a alocação e a liberação de armazenamento de objetos do tipo `Type`, usando um cache do tipo [cache_freelist](../standard-library/cache-freelist-class.md) com um comprimento gerenciado por [max_unbounded](../standard-library/max-unbounded-class.md).|
 |[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|Descreve um objeto que gerencia a alocação e a liberação de armazenamento para objetos do tipo `Type`, usando um cache do tipo [cache_freelist](../standard-library/cache-freelist-class.md) com um comprimento gerenciado por [max_variable_size](../standard-library/max-variable-size-class.md).|

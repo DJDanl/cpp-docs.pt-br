@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89d1e9269536ee28f2c8dd29819ff594c89c186b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6720ef830563e24d887071e1ee1e4a8c31df05c
+ms.sourcegitcommit: bb4488366e4581c561ca1e573a2b99b71d4c6288
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363739"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38993562"
 ---
 # <a name="iregistrar-interface"></a>Interface IRegistrar
-Essa interface é definido em atliface e é usado internamente por funções de membro CAtlModule como [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
+Essa interface é definida em atliface e é usado internamente pelo CAtlModule funções de membro, como [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +41,7 @@ Essa interface é definido em atliface e é usado internamente por funções de 
 typedef interface IRegistrar IRegistrar;
 ```  
 ## <a name="remarks"></a>Comentários
-Consulte o tópico [usando parâmetros substituíveis (do registrador pré-processador)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) para obter mais detalhes.  
+Consulte o tópico [usando parâmetros substituíveis (pré-processador do registrador The)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) para obter mais detalhes.  
 
 ## <a name="members"></a>Membros  
   
@@ -50,13 +50,13 @@ Consulte o tópico [usando parâmetros substituíveis (do registrador pré-proce
 |Nome|Descrição|  
 |----------|-----------------|  
 |[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Registra o recurso. |  
-|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Cancela o registro do recurso.|  
+|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Cancela o registro de recurso.|  
 |[IRegistrar::FileRegister](#fileregister)|Registra o arquivo.|  
-|[IRegistrar::FileUnregister](#fileunregister)|Cancela o registro do arquivo.|  
+|[IRegistrar::FileUnregister](#fileunregister)|Cancela o registro para o arquivo.|  
 |[IRegistrar::StringRegister](#stringregister)|Registra a cadeia de caracteres.|  
 |[IRegistrar::StringUnregister](#stringunregister)|Cancela o registro a cadeia de caracteres|  
 |[IRegistrar::ResourceRegister](#resourceregister)|Registra o recurso.|  
-|[IRegistrar::ResourceUnregister](#resourceunregister)|Cancela o registro do recurso.| 
+|[IRegistrar::ResourceUnregister](#resourceunregister)|Cancela o registro de recurso.| 
   
 
  
@@ -76,7 +76,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz(
  
   
 ##  <a name="resourceunregistersz"></a>  IRegistrar::ResourceUnregisterSz  
- Cancela o registro do recurso.
+ Cancela o registro de recurso.
   
 ```
 virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz( 
@@ -96,7 +96,7 @@ virtual HRESULT STDMETHODCALLTYPE FileRegister(
   
   
 ##  <a name="fileunregister"></a>  IRegistrar::FileUnregister  
-Cancela o registro do arquivo.
+Cancela o registro para o arquivo.
 
 ```
 virtual HRESULT STDMETHODCALLTYPE FileUnregister( 
@@ -132,7 +132,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
    
   
 ##  <a name="resourceunregister"></a>  IRegistrar::ResourceUnregister  
- Cancela o registro do recurso.  
+ Cancela o registro de recurso.  
   
 ```
 virtualHRESULT STDMETHODCALLTYPE ResourceUnregister( 

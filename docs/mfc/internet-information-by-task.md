@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086955d2d5668b447163e7b14677c265d4823190
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f22f0ab233f50a356c3a59eaf62ef8c25572233
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345496"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026845"
 ---
 # <a name="internet-information-by-task"></a>Informações da Internet por tarefa
 As tarefas listadas neste tópico são classificadas com base na tarefa que você deseja realizar.  
@@ -44,21 +44,21 @@ As tarefas listadas neste tópico são classificadas com base na tarefa que voc�
   
 -   [Otimizar um controle ActiveX](../mfc/mfc-activex-controls-optimization.md)  
   
--   [Criar arquivos CAB assinado para controles ATL e MFC](http://msdn.microsoft.com/en-us/14e50724-2505-4258-ae6b-326b706de409)  
+-   [Criar arquivos CAB assinados para controles ATL e MFC](http://msdn.microsoft.com/14e50724-2505-4258-ae6b-326b706de409)  
   
 ###  <a name="_core_wininet_tasks"></a> Tarefas de WinInet  
   
--   [Saiba mais sobre WinInet, as funções de API do Win32 para acesso à Internet](../mfc/wininet-basics.md)  
+-   [Saiba mais sobre as funções de API do Win32 para acesso à Internet, o WinInet](../mfc/wininet-basics.md)  
   
--   [Examinar o que está envolvido com WinInet de programação](../mfc/win32-internet-extensions-wininet.md)  
+-   [Examine o que está envolvido com WinInet de programação](../mfc/win32-internet-extensions-wininet.md)  
   
 -   [Escrever um aplicativo de cliente da Internet, usando classes WinInet MFC](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)  
   
--   [Escrever um aplicativo cliente FTP](../mfc/steps-in-a-typical-ftp-client-application.md)  
+-   [Escrever um aplicativo de cliente FTP](../mfc/steps-in-a-typical-ftp-client-application.md)  
   
 -   [Escrever um aplicativo de cliente HTTP](../mfc/steps-in-a-typical-http-client-application.md)  
   
--   [Escrever um aplicativo de cliente Gopher](../mfc/steps-in-a-typical-gopher-client-application.md)  
+-   [Escrever um aplicativo cliente Gopher](../mfc/steps-in-a-typical-gopher-client-application.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Noções básicas de programação da Internet no MFC](../mfc/mfc-internet-programming-basics.md)

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30d31f30971184356374b3991fedda474ca27465
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2283e74c00867e373d2ba117fd5dfbf70f137c75
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857292"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966000"
 ---
 # <a name="using-c-library-headers"></a>Usando cabeçalhos da Biblioteca C++
 
@@ -41,11 +41,11 @@ Um cabeçalho da biblioteca C++ inclui quaisquer outros cabeçalhos da bibliotec
 
 Cada função na biblioteca é declarada em um cabeçalho padrão. Ao contrário do C Padrão, o cabeçalho padrão nunca fornece uma macro de mascaramento com o mesmo nome que a função que mascara a declaração da função e alcança o mesmo efeito. Para obter mais informações sobre o macros de mascaramento, consulte [Convenções da Biblioteca C++](../standard-library/cpp-library-conventions.md).
 
-Todos os nomes que não sejam `operator delete` e `operator new` nos cabeçalhos da biblioteca C++ são definidos no namespace `std` ou em um namespace aninhado no namespace `std`. Você se refere ao nome `cin`, por exemplo, como `std::cin`. No entanto, observe que os nomes de macro não estão sujeitos à qualificação de namespace, assim, você sempre escreverá `__STD_COMPLEX` sem um qualificador de namespace.
+Todos os nomes que não sejam **operador delete** e **operador new** na biblioteca C++ cabeçalhos são definidos na `std` namespace, ou em um namespace aninhado no `std` namespace. Você se refere ao nome `cin`, por exemplo, como `std::cin`. No entanto, observe que os nomes de macro não estão sujeitos à qualificação de namespace, assim, você sempre escreverá `__STD_COMPLEX` sem um qualificador de namespace.
 
-Em alguns ambientes de translação, a inclusão de um cabeçalho de biblioteca C++ pode elevar nomes externos declarados no namespace `std` para o namespace global, com declarações `using` individuais para cada um dos nomes. Caso contrário, o cabeçalho *não* introduzirá quaisquer nomes de biblioteca no namespace atual.
+Em alguns ambientes de translação, incluindo um cabeçalho de biblioteca C++ pode elevar nomes externos declarados na `std` namespace para o namespace global, com o indivíduo **usando** declarações para cada um dos nomes. Caso contrário, o cabeçalho *não* introduzirá quaisquer nomes de biblioteca no namespace atual.
 
-O Padrão C++ requer que os cabeçalhos Padrão C declarem todos os nomes externos no namespace `std` e, em seguida, eleve-os ao namespace global com declarações `using` individuais para cada um dos nomes. Porém, em alguns ambientes de translação, os cabeçalhos Padrão C não incluem declarações de namespace, declarando todos os nomes diretamente no namespace global. Assim, a maneira mais portátil de lidar com os namespaces é seguir duas regras:
+O padrão C++ requer que os cabeçalhos padrão C declarem todos os nomes externos no namespace `std`, em seguida, eleve-os para o namespace global com o indivíduo **usando** declarações para cada um dos nomes. Porém, em alguns ambientes de translação, os cabeçalhos Padrão C não incluem declarações de namespace, declarando todos os nomes diretamente no namespace global. Assim, a maneira mais portátil de lidar com os namespaces é seguir duas regras:
 
 - De forma segura, declarar no namespace `std` um nome externo tradicionalmente declarado em \<stdlib.h>, por exemplo, incluindo o cabeçalho \<cstdlib>. Saiba que o nome também pode ser declarado no namespace global.
 

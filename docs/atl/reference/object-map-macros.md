@@ -16,27 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 671fd80bc2c4ad320efb282fd659899756c2ecbc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f0e2e14309b7175b003fbab9214d9dffde63af63
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362937"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026011"
 ---
 # <a name="object-map-macros"></a>Macros de mapa de objeto
-Essas macros definem mapas de objeto e entradas.  
+Essas macros definem entradas e mapas de objeto.  
   
 |||  
 |-|-|  
-|[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|Permite que você especifique a descrição de texto do objeto de classe, que será inserida no mapa de objeto.|  
-|[OBJECT_ENTRY_AUTO](#object_entry_auto)|Insere um objeto ATL para o mapa de objeto, atualiza o registro e cria uma instância do objeto.|  
-|[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](#object_entry_non_createable_ex_auto)|Permite que você especifique que o objeto deve ser registrado e inicializado, mas não deve ser instanciável externamente via `CoCreateInstance`.|  
+|[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|Permite que você especifique a descrição de texto de um objeto classe, que será inserida no mapa de objetos.|  
+|[OBJECT_ENTRY_AUTO](#object_entry_auto)|Insere um objeto ATL no mapa de objetos, atualiza o registro e cria uma instância do objeto.|  
+|[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](#object_entry_non_createable_ex_auto)|Permite que você especifique que o objeto deve ser registrado e inicializado, mas ele não deve ser pode ser criado externamente por meio de `CoCreateInstance`.|  
 
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlcom.h  
+ **Cabeçalho:** atlcom  
    
 ##  <a name="declare_object_description"></a>  DECLARE_OBJECT_DESCRIPTION  
- Permite que você especifique uma descrição para o objeto de classe.  
+ Permite que você especifique uma descrição de texto para seu objeto de classe.  
   
 ```
 DECLARE_OBJECT_DESCRIPTION( x )
@@ -47,67 +47,67 @@ DECLARE_OBJECT_DESCRIPTION( x )
  [in] Descrição do objeto de classe.  
   
 ### <a name="remarks"></a>Comentários  
- ATL insere essa descrição para o mapa de objeto por meio de [OBJECT_ENTRY](http://msdn.microsoft.com/en-us/abd10ee2-54f0-4f94-9ec2-ddf8f4c8c8cd) macro.  
+ ATL insere essa descrição no mapa de objetos por meio de [OBJECT_ENTRY](http://msdn.microsoft.com/abd10ee2-54f0-4f94-9ec2-ddf8f4c8c8cd) macro.  
   
- `DECLARE_OBJECT_DESCRIPTION` implementa um `GetObjectDescription` função, que você pode usar para substituir o [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) método.  
+ DECLARE_OBJECT_DESCRIPTION implementa um `GetObjectDescription` função, que você pode usar para substituir o [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) método.  
 
   
- O `GetObjectDescription` função é chamada pelo **IComponentRegistrar::GetComponents**. **IComponentRegistrar** é uma interface de automação que permite registrar e cancelar o registro de componentes individuais em uma DLL. Quando você cria um objeto do registrador de componente com o Assistente de projeto de ATL, o assistente automaticamente implementará o **IComponentRegistrar** interface. **IComponentRegistrar** normalmente é usado pelo Microsoft Transaction Server.  
+ O `GetObjectDescription` função é chamada por `IComponentRegistrar::GetComponents`. `IComponentRegistrar` é uma interface de automação que lhe permite registrar e cancelar o registro de componentes individuais em uma DLL. Quando você cria um objeto do registrador de componentes com o Assistente de projeto da ATL, o assistente irá implementar automaticamente o `IComponentRegistrar` interface. `IComponentRegistrar` normalmente é usado pelo Microsoft Transaction Server.  
   
- Para obter mais informações sobre o Assistente de projeto de ATL, consulte o artigo [criando um projeto de ATL](../../atl/reference/creating-an-atl-project.md).  
+ Para obter mais informações sobre o Assistente de projeto da ATL, consulte o artigo [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md).  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing#123](../../atl/codesnippet/cpp/object-map-macros_1.h)]  
   
 ##  <a name="object_entry_auto"></a>  OBJECT_ENTRY_AUTO  
- Insere um objeto ATL para o mapa de objeto, atualiza o registro e cria uma instância do objeto.  
+ Insere um objeto ATL no mapa de objetos, atualiza o registro e cria uma instância do objeto.  
   
 ```
 OBJECT_ENTRY_AUTO( clsid, class )
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `clsid`  
- [in] O CLSID de uma classe COM implementado pela classe C++ chamado `class`.  
+ *clsid*  
+ [in] O CLSID de uma classe COM implementado pela classe C++ chamado *classe*.  
   
- `class`  
- [in] O nome da classe C++ Implementando a classe COM representado por `clsid`.  
+ *class*  
+ [in] O nome da classe C++ Implementando a classe COM representado por *clsid*.  
   
 ### <a name="remarks"></a>Comentários  
- Macros de entrada do objeto são colocadas no escopo global no projeto para fornecer suporte para o registro, a inicialização e a criação de uma classe.  
+ Macros de entrada de objeto são colocadas no escopo global no projeto para fornecer suporte para o registro, a inicialização e a criação de uma classe.  
   
- `OBJECT_ENTRY_AUTO` Insere os ponteiros de função da classe do criador e classe do criador de fábrica de classes `CreateInstance` funções para este objeto para o mapa de objeto ATL gerado automaticamente. Quando [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver) é chamado, ele atualiza o registro do sistema para cada objeto no mapa do objeto.  
+ OBJECT_ENTRY_AUTO entra em ponteiros de função da classe do criador e da classe do criador de fábrica de classes `CreateInstance` funções para este objeto no mapa de objeto ATL gerado automaticamente. Quando [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver) é chamado, ele atualiza o registro do sistema para cada objeto no mapa de objetos.  
 
   
- A tabela a seguir descreve como as informações adicionadas ao mapa do objeto são obtidas da classe fornecida como segundo parâmetro para esta macro.  
+ A tabela a seguir descreve como as informações adicionadas ao mapa de objetos são obtidas da classe determinada como o segundo parâmetro para essa macro.  
   
-|Informações de|Obtido|  
+|Informações para|Obtido de|  
 |---------------------|-------------------|  
 |Registro COM|[Macros de Registro](../../atl/reference/registry-macros.md)|  
-|Criação da fábrica de classes|[Macros de fábrica de classe](../../atl/reference/aggregation-and-class-factory-macros.md)|  
+|Criação da classe de fábrica|[Macros de classe de fábrica](../../atl/reference/aggregation-and-class-factory-macros.md)|  
 |Criação de instância|[Macros de agregação](../../atl/reference/aggregation-and-class-factory-macros.md)|  
-|Registro de categoria de componente|[Macros de categoria](../../atl/reference/category-macros.md)|  
+|Registro de categoria do componente|[Macros de categoria](../../atl/reference/category-macros.md)|  
 |Limpeza e a inicialização de nível de classe|[ObjectMain](ccomobjectrootex-class.md#objectmain)|  
 
   
 ##  <a name="object_entry_non_createable_ex_auto"></a>  OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO  
- Permite que você especifique que o objeto deve ser registrado e inicializado, mas não deve ser instanciável externamente via `CoCreateInstance`.  
+ Permite que você especifique que o objeto deve ser registrado e inicializado, mas ele não deve ser pode ser criado externamente por meio de `CoCreateInstance`.  
   
 ```
 OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `clsid`  
- [in] O CLSID de uma classe COM implementado pela classe C++ chamado `class`.  
+ *clsid*  
+ [in] O CLSID de uma classe COM implementado pela classe C++ chamado *classe*.  
   
- `class`  
- [in] O nome da classe C++ Implementando a classe COM representado por `clsid`.  
+ *class*  
+ [in] O nome da classe C++ Implementando a classe COM representado por *clsid*.  
   
 ### <a name="remarks"></a>Comentários  
- Macros de entrada do objeto são colocadas no escopo global no projeto para fornecer suporte para o registro, a inicialização e a criação de uma classe.  
+ Macros de entrada de objeto são colocadas no escopo global no projeto para fornecer suporte para o registro, a inicialização e a criação de uma classe.  
   
- `OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO` permite que você especifique que um objeto deve ser registrado e inicializado (consulte [OBJECT_ENTRY_AUTO](#object_entry_auto) para obter mais informações), mas não deve ser instanciável via `CoCreateInstance`.  
+ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO permite que você especifique que um objeto deve ser registrado e inicializado (consulte [OBJECT_ENTRY_AUTO](#object_entry_auto) para obter mais informações), mas não deve ser pode ser criado por meio de `CoCreateInstance`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Macros](../../atl/reference/atl-macros.md)

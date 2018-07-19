@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 444d42c7273e64a07966592b315660b92ddf8ee0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042050"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027174"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Classe CMFCRibbonCheckBox
 O `CMFCRibbonCheckBox` classe implementa uma caixa de seleção que você pode adicionar a um menu pop-up, ferramentas de acesso rápido ou painel de faixa de opções.  
@@ -72,14 +72,14 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 |[CMFCRibbonCheckBox::SetACCData](#setaccdata)|(Substitui [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
   
 ## <a name="remarks"></a>Comentários  
- Para usar um `CMFCRibbonCheckBox` em seu aplicativo, adicione o seguinte construtor no seu código:  
+ Para usar um `CMFCRibbonCheckBox` em seu aplicativo, adicione o seguinte construtor ao seu código:  
   
 ```  
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)  
 ```  
-onde *nID* é a ID de comando da caixa de seleção e *lpszText* é o rótulo de texto da caixa de seleção.  
+em que *nID* é a ID de comando de caixa de seleção e *lpszText* é o rótulo de texto da caixa de seleção.  
   
- Você pode adicionar uma caixa de seleção para um painel de faixa de opções usando [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
+ Você pode adicionar uma caixa de seleção a um painel de faixa de opções usando [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -113,12 +113,12 @@ CMFCRibbonCheckBox(
  Constrói um objeto de caixa de seleção de faixa de opções.  
   
 ### <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como construir um objeto de `CMFCRibbonCheckBox` classe.  
+ O exemplo a seguir demonstra como construir um objeto do `CMFCRibbonCheckBox` classe.  
   
  [!code-cpp[NVC_MFC_RibbonApp#17](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]  
   
 ##  <a name="getcompactsize"></a>  CMFCRibbonCheckBox::GetCompactSize  
- Quando substituído, obtém o tamanho compact da caixa de seleção.  
+ Quando substituído, obtém o tamanho compacto da caixa de seleção.  
   
 ```  
 virtual CSize GetCompactSize(CDC* pDC);
@@ -126,13 +126,13 @@ virtual CSize GetCompactSize(CDC* pDC);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *pDC*  
- Ponteiro para o `CDC` associado com a caixa de seleção.  
+ Ponteiro para o CDC associado com a caixa de seleção.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna um `CSize` objeto que contém o compact tamanho da caixa de seleção.  
+ Retorna um `CSize` objeto que contém o tamanho compacto da caixa de seleção.  
   
 ### <a name="remarks"></a>Comentários  
- Se não for substituída, retorna o tamanho intermediário da caixa de seleção.  
+ Se não for substituído, retorna o tamanho intermediário da caixa de seleção.  
   
 ##  <a name="getintermediatesize"></a>  CMFCRibbonCheckBox::GetIntermediateSize  
  Obtém o tamanho intermediário da caixa de seleção.  
@@ -143,16 +143,16 @@ virtual CSize GetIntermediateSize(CDC* pDC);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *pDC*  
- Ponteiro para o `CDC` associado a esta caixa de seleção.  
+ Ponteiro para o CDC associado com esta caixa de seleção.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um `CSize` objeto que contém o tamanho intermediário da caixa de seleção.  
   
 ### <a name="remarks"></a>Comentários  
- Se não for substituída, calcula o tamanho intermediário, como o tamanho da caixa de seleção padrão ( `AFX_CHECK_BOX_DEFAULT_SIZE`) mais o tamanho do texto, além de margens.  
+ Se não for substituído, calcula o tamanho intermediário como o tamanho da caixa de seleção padrão ( `AFX_CHECK_BOX_DEFAULT_SIZE`) mais o tamanho do texto, além de margens.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonCheckBox::GetRegularSize  
- Obtém o tamanho normal da caixa de seleção.  
+ Obtém o tamanho regular da caixa de seleção.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -160,23 +160,23 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *pDC*  
- Ponteiro para o `CDC` objeto associado a esta caixa de seleção.  
+ Ponteiro para o objeto de CDC associado com esta caixa de seleção.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna um `CSize` objeto que contém o tamanho normal da caixa de seleção.  
+ Retorna um `CSize` objeto que contém o tamanho regular da caixa de seleção.  
   
 ### <a name="remarks"></a>Comentários  
- Se não for substituída, retorna o tamanho intermediário da caixa de seleção.  
+ Se não for substituído, retorna o tamanho intermediário da caixa de seleção.  
   
 ##  <a name="isdrawtooltipimage"></a>  CMFCRibbonCheckBox::IsDrawTooltipImage  
- Indica se há uma imagem de dica de ferramenta associada a caixa de seleção.  
+ Indica se há uma imagem de dica de ferramenta associada com a caixa de seleção.  
   
 ```  
 virtual BOOL IsDrawTooltipImage() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna `TRUE` se não houver uma imagem de dica de ferramenta associada a caixa de seleção, ou `FALSE` se não for.  
+ Retorna TRUE se houver uma imagem de dica de ferramenta associada com a caixa de seleção, ou FALSE se não.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -189,12 +189,12 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *pDC*  
- Ponteiro para o `CDC` no qual desenhar a caixa de seleção.  
+ Ponteiro para o CDC no qual desenhar a caixa de seleção.  
   
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="ondrawmenuimage"></a>  CMFCRibbonCheckBox::OnDrawMenuImage  
- Chamado pelo framework para desenhar uma imagem de menu para a caixa de seleção.  
+ Chamado pelo framework para desenhar uma imagem do menu da caixa de seleção.  
   
 ```  
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
@@ -202,19 +202,19 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *CDC**  
- Ponteiro para o `CDC` associado com a caixa de seleção.  
+ Ponteiro para o CDC associado com a caixa de seleção.  
   
  [in] *CRect*  
- Um `CRect` objeto especificando o retângulo na qual desenhar a imagem do menu.  
+ Um `CRect` objeto que especifica o retângulo no qual desenhar a imagem do menu.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna `TRUE` se a imagem foi desenhada, ou `FALSE` se não for.  
+ Retorna VERDADEIRO se a imagem foi desenhada, ou falso se não.  
   
 ### <a name="remarks"></a>Comentários  
- Se não for substituída, retorna `FALSE`.  
+ Se não for substituído, retorna FALSE.  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonCheckBox::OnDrawOnList  
- Chamado pelo framework para desenhar a caixa de seleção em uma caixa de lista de comandos.  
+ Chamado pelo framework para desenhar a caixa de seleção em uma caixa de listagem de comandos.  
   
 ```  
 virtual void OnDrawOnList(
@@ -240,10 +240,10 @@ virtual void OnDrawOnList(
  O retângulo de exibição da caixa de seleção.  
   
  [in] *bIsSelected*  
- `TRUE` Se a caixa de seleção estiver marcada, ou `FALSE` se não for.  
+ TRUE se a caixa de seleção for marcada, ou FALSE se não.  
   
  [in] *bHighlighted*  
- `TRUE` Se a caixa de seleção é realçada, ou `FALSE` se não for.  
+ TRUE se a caixa de seleção estiver realçada, ou FALSE se não for.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -264,12 +264,12 @@ virtual BOOL SetACCData(
  Os dados de acessibilidade para a caixa de seleção.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Sempre retorna `TRUE`.  
+ Sempre retorna TRUE.  
   
 ### <a name="remarks"></a>Comentários  
- Por padrão este método define os dados de acessibilidade para a caixa de seleção e sempre retorna `TRUE`. Substitua este método para definir os dados de acessibilidade e retornar um valor que indica êxito ou falha.  
+ Por padrão, esse método define os dados de acessibilidade para a caixa de seleção e sempre retorna TRUE. Substitua este método para definir os dados de acessibilidade e retornar um valor que indica êxito ou falha.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)

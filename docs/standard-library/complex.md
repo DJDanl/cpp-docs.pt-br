@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a29dfc976ca29405814bbae81f42a02a74300d74
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e6a8364c6f0491344eef7faf381d701944f66d9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847618"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965663"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
-Define a classe de contêiner de modelo **complexo** e seus modelos de suporte.
+Define a classe de modelo do contêiner `complex` e seus modelos de suporte.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,21 +38,21 @@ Define a classe de contêiner de modelo **complexo** e seus modelos de suporte.
 
 Um número complexo é um par ordenado de números reais. Em termos puramente geométricos, o plano complexo é o plano real bidimensional. As qualidades especiais do plano complexo que o diferencial do plano real acontecem devido a ele ter uma estrutura algébrica adicional. Essa estrutura algébrica tem duas operações fundamentais:
 
-- Adição definida como (*um*, *b*) + (*c*, *d*) = (*um* + *c* , *b* + *d*)
+- Adição definida como (*uma*, *b*) + (*c*, *1!d*) = (*um* + *c* , *b* + *1!d*)
 
-- Multiplicação definida como (*um*, *b*) \* (*c*, *d*) = (*CA*  -  *bd*, *ad* + *bc*)
+- Multiplicação definida como (*uma*, *b*) \* (*c*, *1!d*) = (*CA*  -  *bd*, *ad* + *bc*)
 
 O conjunto de números complexos com as operações de adição e multiplicação complexas é um campo no sentido algébrico padrão:
 
 - As operações de adição e multiplicação são comutativas e associativas e a multiplicação se distribui sobre a adição exatamente como ocorre com a adição e a multiplicação reais no campo de números reais.
 
-- O número complexo (0, 0) é a identidade aditivo e (1, 0) é a identidade de multiplicação.
+- O número complexo (0, 0) é a identidade de adição e (1, 0) é a identidade de multiplicação.
 
-- O inverso aditivo para um número complexo (*um*, *b*) é (-*um*, -*b*) e o inverso multiplicative todos esses números complexos exceto (0, 0) é
+- O inverso de adição para um número complexo (*uma*, *b*) é (-*um*, -*b*) e o inverso de multiplicação para todos esses números complexos exceto (0, 0) é
 
    (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
 
-Por que representa um número complexo *z* = (*um*, *b*) no formato *z* = *um*  +  *bi*, onde *,*<sup>2</sup> = -1, as regras para álgebra do conjunto de números reais pode ser aplicada ao conjunto de números complexos e seus componentes. Por exemplo:
+Por que representa um número complexo *z* = (*um*, *b*) na forma *z* = *um*  +  *bi*, onde *eu*<sup>2</sup> = -1, as regras de álgebra do conjunto de números reais pode ser aplicada ao conjunto de números complexos e aos seus componentes. Por exemplo:
 
    (1 + 2*i*) \* (2 + 3*i*)  
    = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
@@ -60,15 +60,15 @@ Por que representa um número complexo *z* = (*um*, *b*) no formato *z* = *um*  
    = (2 - 6) + (3 + 4)*i*  
    = -4 + 7*i*
 
-O sistema de números complexos é um campo, mas não é um campo ordenado. Não há nenhuma ordem dos números complexos, como há para o campo de números reais e seus subconjuntos, portanto desigualdades não podem ser aplicadas a números complexos que estiverem em números reais.
+O sistema de números complexos é um campo, mas não é um campo ordenado. Não há nenhuma ordenação dos números complexos como há para o campo de números reais e seus subconjuntos para que as desigualdades não podem ser aplicadas a números complexos como estão em números reais.
 
 Há três formas comuns de representar um número complexo *z*:
 
-- Cartesiano: *z* = *um* + *bi*
+- Cartesiana: *z* = *um* + *bi*
 
-- Polar: *z* = *r* (cos *p* + *,* sin *p*)
+- Polar: *z* = *r* (cos *p* + *eu* sin *p*)
 
-- O exponencial: *z* = *r* \* *e*<sup>*ip*</sup>
+- Exponencial: *z* = *r* \* *eletrônico*<sup>*ip*</sup>
 
 Os termos usados nessas representações padrão de um número complexo são referidas como o seguinte:
 
@@ -78,9 +78,9 @@ Os termos usados nessas representações padrão de um número complexo são ref
 
 - O módulo ou valor absoluto de um número complexo *r*.
 
-- O ângulo de argumento ou fase *p* em radianos.
+- O argumento ou ângulo de fase *p* em radianos.
 
-A menos que especificado o contrário, funções que podem retornar vários valores são necessárias para retornar um valor principal para seus argumentos de maior que - π e menor que ou igual a + π para manter a eles com valor único. Todos os ângulos devem ser expressos em radianos, onde há 2π radianos (360 graus) em um círculo.
+A menos que especificado de outra forma, funções que podem retornar vários valores são necessárias para retornar um valor de entidade de segurança para seus argumentos de maior que - π e menor que ou igual a + π para manter a eles com valor único. Todos os ângulos devem ser expresso em radianos, em que há 2π radianos (360 graus) em um círculo.
 
 ### <a name="functions"></a>Funções
 
@@ -122,9 +122,9 @@ A menos que especificado o contrário, funções que podem retornar vários valo
 
 |Classe|Descrição|
 |-|-|
-|[complex\<double>](../standard-library/complex-double.md)|A classe de modelo especializado explicitamente descreve um objeto que armazena um par ordenado de objetos, ambos do tipo **duplo**, onde a primeira representa a parte real de um número complexo, e a segunda representa a parte imaginária.|
-|[complex\<float>](../standard-library/complex-float.md)|A classe de modelo especializado explicitamente descreve um objeto que armazena um par ordenado de objetos, ambos do tipo **float**, onde a primeira representa a parte real de um número complexo, e a segunda representa a parte imaginária.|
-|[complex\<long double>](../standard-library/complex-long-double.md)|A classe de modelo especializado explicitamente descreve um objeto que armazena um par ordenado de objetos, ambos do tipo **long double**, onde a primeira representa a parte real de um número complexo, e a segunda representa a parte imaginária.|
+|[complex\<double>](../standard-library/complex-double.md)|A classe de modelo explicitamente especializada descreve um objeto que armazena um par ordenado de objetos, ambos do tipo **duplas**, em que o primeiro representa a parte real de um número complexo e o segundo representa a parte imaginária.|
+|[complex\<float>](../standard-library/complex-float.md)|A classe de modelo explicitamente especializada descreve um objeto que armazena um par ordenado de objetos, ambos do tipo **float**, em que o primeiro representa a parte real de um número complexo e o segundo representa a parte imaginária.|
+|[complex\<long double>](../standard-library/complex-long-double.md)|A classe de modelo explicitamente especializada descreve um objeto que armazena um par ordenado de objetos, ambos do tipo **longo duplo**, em que o primeiro representa a parte real de um número complexo e o segundo representa a parte imaginária.|
 |[complex](../standard-library/complex-class.md)|A classe de modelo descreve um objeto usado para representar o sistema de números complexos e efetuar operações aritméticas complexas.|
 
 ### <a name="literals"></a>Literais

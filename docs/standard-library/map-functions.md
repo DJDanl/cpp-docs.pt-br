@@ -7,12 +7,12 @@ f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-ms.openlocfilehash: d6f62868d17cec9215b18451527c3a2e4e22b7f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c6cb7d0308e4bafc531fe0baf0c5d666228c3ec
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854916"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966362"
 ---
 # <a name="ltmapgt-functions"></a>Funções &lt;map&gt;
 
@@ -33,9 +33,9 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` O mapa fornecendo os elementos a ser trocada, ou o mapa cujos elementos são sejam trocadas com aquelas do mapa `left`.
+*à direita* o mapa fornece os elementos a serem trocados ou o mapa cujos elementos deverão ser trocados por aqueles do mapa *esquerdo*.
 
-`left` O mapa cujos elementos são sejam trocadas com aquelas do mapa `right`.
+*à esquerda* o mapa cujos elementos deverão ser trocados por aqueles do mapa *direito*.
 
 ### <a name="remarks"></a>Comentários
 
@@ -58,13 +58,13 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` Os vários mapeamentos fornecendo os elementos a ser trocado ou vários mapeamentos cujos elementos são sejam trocadas com aqueles de vários mapeamentos `left`.
+*à direita* multimap que fornece os elementos a serem trocados ou o multimap cujos elementos deverão ser trocados por aqueles do multimap *esquerdo*.
 
-`left` Os vários mapeamentos cujos elementos são sejam trocadas com aqueles de vários mapeamentos `right`.
+*à esquerda* multimap cujos elementos deverão ser trocados por aqueles do multimap *direito*.
 
 ### <a name="remarks"></a>Comentários
 
-A função de modelo é um algoritmo especializado no mapa de classe de contêiner para executar em multimap de classe de contêiner para executar a função de membro `left`.[ permuta](../standard-library/multimap-class.md#swap) ( `right`). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo, **template** \< **class T**> **void swap**( **T&**, **T&**), no algoritmo de classe funciona por atribuição e é uma operação lenta. A versão especializada em cada contêiner é muito mais rápida, uma vez que ela pode funcionar com a representação interna da classe de contêiner.
+A função de modelo é um algoritmo especializado no mapa de classe de contêiner para executar no multimapa de classe de contêiner para executar a função de membro `left`.[ permuta](../standard-library/multimap-class.md#swap) (`right`). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo, **template** \< **class T**> **void swap**( **T&**, **T&**), no algoritmo de classe funciona por atribuição e é uma operação lenta. A versão especializada em cada contêiner é muito mais rápida, uma vez que ela pode funcionar com a representação interna da classe de contêiner.
 
 ### <a name="example"></a>Exemplo
 

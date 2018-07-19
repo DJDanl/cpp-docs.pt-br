@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7d09615b5f9ec7f0f72acde965d5ffbd018c9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1b0ae8be5e9f33982d9a24d3004ebb46b6b8a4d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863368"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026345"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -36,7 +36,7 @@ Define modelos que fornecem constantes de tempo de compilação e informações 
 
 ## <a name="remarks"></a>Comentários
 
-As classes e os modelos no \<type_traits > são usadas para dar suporte a inferência de tipo, classificação e transformação em tempo de compilação, para detectar erros de tipo e para ajudá-lo a otimizar o código genérico. Essas classes e modelos incluem características de tipo unário que descrevem uma propriedade de um tipo, características de tipo binário que descrevem uma relação entre tipos e características de transformação que modificam uma propriedade de um tipo.
+As classes e os modelos no \<type_traits > são usados para dar suporte à inferência de tipo, classificação e transformação em tempo de compilação, para detectar erros relacionados ao tipo e para ajudá-lo a otimizar o código genérico. Essas classes e modelos incluem características de tipo unário que descrevem uma propriedade de um tipo, características de tipo binário que descrevem uma relação entre tipos e características de transformação que modificam uma propriedade de um tipo.
 
 Para dar suporte a características de tipo, uma classe auxiliar, `integral_constant`, é definida. Ela tem especializações de modelo `true_type` e `false_type` que formam as classes de base para predicados de tipo. Um *predicado de tipo* é um modelo que usa um ou mais argumentos de tipo. Quando um predicado de tipo *mantém verdadeiro*, ele é derivado publicamente, direta ou indiretamente, de [true_type](../standard-library/type-traits-typedefs.md#true_type). Quando um predicado de tipo *mantém falso*, ele é derivado publicamente, direta ou indiretamente, de [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
@@ -74,7 +74,7 @@ Categorias de tipo principal
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|Testa se o tipo é `void`.|
+|[is_void](../standard-library/is-void-class.md)|Testa se o tipo é **void**.|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|Testa se o tipo é `std::nullptr_t`.|
 |[is_integral](../standard-library/is-integral-class.md)|Testa se o tipo é integral.|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|Testa se o tipo é um ponto flutuante.|
@@ -95,7 +95,7 @@ Categorias de tipo de composição
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|Testa se o tipo é uma referência.|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|Testa se o tipo é aritmético.|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|Testa se o tipo é `void` ou aritmético.|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|Testa se o tipo é **void** ou aritmético.|
 |[is_object](../standard-library/is-object-class.md)|Testa se o tipo é um tipo de objeto.|
 |[is_scalar](../standard-library/is-scalar-class.md)|Testa se o tipo é escalar.|
 |[is_compound](../standard-library/is-compound-class.md)|Testa se o tipo não é escalar.|
@@ -105,8 +105,8 @@ Propriedades de tipo
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|Testa se o tipo é `const`.|
-|[is_volatile](../standard-library/is-volatile-class.md)|Testa se o tipo é `volatile`.|
+|[is_const](../standard-library/is-const-class.md)|Testa se o tipo é **const**.|
+|[is_volatile](../standard-library/is-volatile-class.md)|Testa se o tipo é **volátil**.|
 |[is_trivial](../standard-library/is-trivial-class.md)|Testa se o tipo é trivial.|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|Testa se o tipo é trivialmente copiável.|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|Testa se o tipo é um layout padrão.|
@@ -142,7 +142,7 @@ Propriedades de tipo
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Testa se o tipo é atribuível usando a cópia e a atribuição não efetua lançamentos.|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Testa se o tipo é atribuível por movimentação e se a atribuição não efetua lançamentos.|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Testa se o tipo é destrutível e se o destruidor não efetua lançamentos.|
-|[has_virtual_destructor](http://msdn.microsoft.com/en-us/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Testa se o tipo tem um destruidor virtual.|
+|[has_virtual_destructor](http://msdn.microsoft.com/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Testa se o tipo tem um destruidor virtual.|
 
 Consultas de tipo de propriedade
 
@@ -164,9 +164,9 @@ Modificações constantes voláteis
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|Produz um tipo `const` de tipo.|
-|[add_volatile](../standard-library/add-volatile-class.md)|Produz um tipo `volatile` de tipo.|
-|[add_cv](../standard-library/add-cv-class.md)|Produz um tipo `const volatile` de tipo.|
+|[add_const](../standard-library/add-const-class.md)|Produz um **const** tipo de tipo.|
+|[add_volatile](../standard-library/add-volatile-class.md)|Produz um **volátil** tipo de tipo.|
+|[add_cv](../standard-library/add-cv-class.md)|Produz um **const volátil** tipo de tipo.|
 |[remove_const](../standard-library/remove-const-class.md)|Produz um tipo não constante de tipo.|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|Produz um tipo não volátil de tipo.|
 |[remove_cv](../standard-library/remove-cv-class.md)|Produz um tipo não constante e não volátil de tipo.|

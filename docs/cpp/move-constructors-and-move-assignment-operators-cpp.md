@@ -1,5 +1,5 @@
 ---
-title: 'Como: definir construtores de movimento e operadores de atribuição de movimento (C++) | Microsoft Docs'
+title: 'Como: definir construtores de movimentação e operadores de atribuição de movimento (C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/05/2018
 ms.technology:
@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad5f54bc0366b0da9286631294a10f4904b7cb30
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af1220cbb6b872ebd0370cfa526aba47338e70e6
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028145"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Operadores de construtores de movimento e de atribuição de movimento (C++)
-Este tópico descreve como escrever um *mover construtor* e um operador de atribuição de movimentação de uma classe do C++. Um construtor de movimento permite que os recursos pertencentes a um objeto rvalue a ser movido para um lvalue sem copiar. Para obter mais informações sobre a semântica de movimentação, consulte [Declarador de referência Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+Este tópico descreve como gravar um *construtor de movimentação* e um operador de atribuição de movimentação para a classe C++. Um construtor de movimentação permite que os recursos pertencentes a um objeto rvalue a ser movido para um lvalue sem copiar. Para obter mais informações sobre a semântica de movimentação, consulte [Declarador de referência Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
  Este tópico baseia-se na seguinte classe do C++, `MemoryBlock`, que gerencia um buffer de memória.  
   
@@ -225,7 +226,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como a semântica de movimentação pode melhorar o desempenho de seus aplicativos. O exemplo adiciona dois elementos a um objeto de vetor e insere um novo elemento entre os dois elementos existentes. O `vector` usa classe move semântica para executar a operação de inserção com eficiência ao mover os elementos de vetor em vez de copiá-los.  
+ O exemplo a seguir mostra como a semântica de movimentação pode melhorar o desempenho de seus aplicativos. O exemplo adiciona dois elementos a um objeto de vetor e insere um novo elemento entre os dois elementos existentes. O `vector` classe usa semântica de movimentação para executar a operação de inserção com eficiência movendo os elementos do vetor em vez de copiá-los.  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -270,7 +271,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- Antes do Visual Studio 2010, este exemplo gerou a seguinte saída:  
+ Antes do Visual Studio 2010, este exemplo produziu a saída a seguir:  
   
 ```  
 In MemoryBlock(size_t). length = 25.  
@@ -302,7 +303,8 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  Se você fornecer um construtor de movimentação e um operador de atribuição de movimentação de sua classe, poderá eliminar o código supérfluo escrevendo o construtor de movimentação para chamar o operador de atribuição de movimentação. O exemplo a seguir mostra uma versão revisada do construtor de movimentação que chama o operador de atribuição de movimentação:  
   
-```  
+```cpp
+  
 // Move constructor.  
 MemoryBlock(MemoryBlock&& other)  
    : _data(nullptr)  
@@ -312,8 +314,8 @@ MemoryBlock(MemoryBlock&& other)
 }  
 ```  
   
- O [std::move](../standard-library/utility-functions.md#move) função preserva a propriedade rvalue o `other` parâmetro.  
+ O [std:: move](../standard-library/utility-functions.md#move) função preserva a propriedade de rvalue da *outros* parâmetro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Declarador de referência Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<utilitário > Mover](http://msdn.microsoft.com/en-us/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+ [\<utilitário > Mover](http://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

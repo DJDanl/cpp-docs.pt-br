@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b53d6dc51117ffe9b82511c6084e36bc49873b88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f71257b369e7833f279c0f68ce33e0ec925ebf6b
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421934"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026254"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
 **Seção específica da Microsoft**  
   
- Desanexa o encapsulada **VARIANT** objeto neste `_variant_t` objeto.  
+ Desanexa encapsulado `VARIANT` objeto deste `_variant_t` objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,10 +40,10 @@ VARIANT Detach( );
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- O encapsulada **VARIANT**.  
+ Encapsulado `VARIANT`.  
   
 ## <a name="remarks"></a>Comentários  
- Extrai e retorna o encapsulada **VARIANT**, limpa isso `_variant_t` objeto sem destruir a ele. Remove essa função de membro a **VARIANT** de encapsulamento e define o **VARTYPE** deste `_variant_t` do objeto para `VT_EMPTY`. Cabe a você libere retornado **VARIANT** chamando o [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835) função.  
+ Extrai e retorna encapsulado `VARIANT`, em seguida, limpa esse `_variant_t` objeto sem destruí-lo. Essa função membro remove os `VARIANT` do encapsulamento e define o `VARTYPE` isso `_variant_t` objeto como VT_EMPTY. Cabe a você liberar retornado `VARIANT` chamando o [VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835) função.  
   
  **Fim da seção específica da Microsoft**  
   

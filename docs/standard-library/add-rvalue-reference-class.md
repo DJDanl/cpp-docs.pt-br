@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cceec4e7d954e07e1d776042f311dfa1a386300
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba90002bc16dee6def7f8de69314668204ff5466
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850750"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966609"
 ---
 # <a name="addrvaluereference-class"></a>Classe add_rvalue_reference
 
@@ -39,13 +39,13 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Parâmetros
 
-Para modificar o tipo de T.
+*T* para modificar o tipo.
 
 ## <a name="remarks"></a>Comentários
 
-A classe `add_rvalue_reference` tem um membro chamado `type`, que é um alias para o tipo de uma referência de rvalue ao parâmetro de modelo `T`. A semântica de recolhimento de referência implica que, para `T` de tipos que não são de objeto nem de função, `T&&` é um `T`. Por exemplo, quando `T` é um tipo de referência lvalue `add_rvalue_reference<T>::type` é o tipo de referência lvalue, não uma referência de rvalue.
+O `add_rvalue_reference` classe tem um membro chamado `type`, que é um alias para o tipo de uma referência rvalue para o parâmetro de modelo *T*. A semântica de recolhimento de referência implica que, para tipos de não-objeto e a função não *T*, `T&&` é uma *T*. Por exemplo, quando *T* é um tipo de referência de lvalue, `add_rvalue_reference<T>::type` é o tipo de referência de lvalue, não uma referência de rvalue.
 
-Para sua conveniência, \<type_traits > define um modelo de auxiliar, `add_rvalue_reference_t`, que aliases de `type` membro `add_rvalue_reference`.
+Para sua conveniência, \<type_traits > define um modelo de auxiliar `add_rvalue_reference_t`, que aliases a `type` membro `add_rvalue_reference`.
 
 ## <a name="example"></a>Exemplo
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 149b43f0485d3717ad2f413d2519e435f0da0562
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c87975e0b27934d091e896867620011a51b78d52
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857071"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966504"
 ---
 # <a name="vectorltboolgtreference-class"></a>Classe vector&lt;bool&gt;::reference
 
@@ -43,7 +43,7 @@ bool& refb = vb[1];   // conversion error - do not use
 |Função de membro|Descrição|
 |-|-|
 |[flip](../standard-library/vector-bool-reference-flip.md)|Inverte o valor booliano de um elemento de vetor.|
-|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|Fornece uma conversão implícita de `vector<bool>::reference` em `bool`.|
+|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|Fornece uma conversão implícita da `vector<bool>::reference` à **bool**.|
 |[operator=](../standard-library/vector-bool-reference-operator-assign.md)|Atribui um valor booliano a um bit ou o valor mantido por um elemento referenciado para um bit.|
 
 ## <a name="requirements"></a>Requisitos

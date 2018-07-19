@@ -1,7 +1,7 @@
 ---
-title: 'Método: Asiid | Microsoft Docs'
+title: 'Método comptr:: Asiid | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26f56a9d94620067ae31f5b4984ff24fe703822e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db5bc6b2547fb77dd887f96b6c33dee536e43f77
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870084"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025897"
 ---
 # <a name="comptrasiid-method"></a>Método ComPtr::AsIID
-Retorna um objeto ComPtr que representa a interface identificada pela ID da interface especificada.  
+Retorna um objeto de ComPtr que representa a interface identificada pela ID da interface especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,10 +41,10 @@ WRL_NOTHROW HRESULT AsIID(
  Uma ID de interface.  
   
  `p`  
- Se houver suporte, um ponteiro duplamente indireta para a interface especificada pelo `riid` parâmetro; caso contrário, um ponteiro IUnknown.  
+ Se o objeto tem uma interface cuja ID é igual a `riid`, um ponteiro indireto duplamente para a interface especificada pelo `riid` parâmetro; caso contrário, um ponteiro para IUnknown.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.  
+ S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

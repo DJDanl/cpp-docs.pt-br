@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f619554db0a85ee8aafbdb8792d8fe233cc392a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f104736d1c8f9d0ed60f2afd374345ab227300b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843009"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964906"
 ---
 # <a name="collatebyname-class"></a>Classe collate_byname
 
@@ -49,13 +49,13 @@ protected:
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Locname` Uma localidade nomeada.
+*_Locname* uma localidade nomeada.
 
-`_Refs` Uma contagem de referência inicial.
+*_Refs* uma contagem de referência inicial.
 
 ## <a name="remarks"></a>Comentários
 
-Uma classe de modelo que descreve um objeto que pode funcionar como uma [faceta de localidade](../standard-library/locale-class.md#facet_class) do tipo [collate](../standard-library/collate-class.md#collate)\<CharType>. Seu comportamento é determinado pela localidade [nomeada](../standard-library/locale-class.md#name) `_Locname`. Cada construtor inicializa seu objeto base com [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
+Uma classe de modelo que descreve um objeto que pode funcionar como uma [faceta de localidade](../standard-library/locale-class.md#facet_class) do tipo [collate](../standard-library/collate-class.md#collate)\<CharType>. Seu comportamento é determinado pela [nomeado](../standard-library/locale-class.md#name) localidade *_Locname*. Cada construtor inicializa seu objeto base com [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd851ae3cf47ca260b1923d969123b21293d8623
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3b758c5db483f74ddb43031ab41f2d2b46514e4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862423"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965236"
 ---
 # <a name="c-standard-library-containers"></a>Contêineres da biblioteca padrão C++
 
@@ -177,7 +177,7 @@ Todos os contêineres sobrecarregam o operator== para comparar dois contêineres
 
 ### <a name="comparing-dissimilar-containers-c14"></a>Comparando tipos diferentes de contêineres (C++14)
 
-No C++14 e posterior, você pode comparar tipos de contêineres e/ou de elementos diferentes, usando uma das sobrecargas de função **std::equal**, **std::mismatch** ou **std::is_permutation** que utilizam dois intervalos completos. Essas sobrecargas permitem que você compare contêineres com comprimentos diferentes. Essas sobrecargas são muito menos suscetíveis a erros de usuário e são otimizadas para retornar false em tempo constante quando contêineres de comprimentos diferentes são comparados. Portanto, recomendamos que você use essas sobrecargas, a menos que (1) você tenha um motivo muito claro para não fazê-lo ou (2) você esteja usando um contêiner [std::list](../standard-library/list-class.md), que não se beneficia de otimizações de intervalo duplo.
+No c++14 e posterior, você pode comparar tipos diferentes de contêineres e/ou tipos de elementos diferentes, usando uma da `std::equal`, `std::mismatch`, ou `std::is_permutation` sobrecargas que utilizam dois intervalos completos de função. Essas sobrecargas permitem que você compare contêineres com comprimentos diferentes. Essas sobrecargas são muito menos suscetíveis a erros de usuário e são otimizadas para retornar false em tempo constante quando contêineres de comprimentos diferentes são comparados. Portanto, recomendamos que você use essas sobrecargas, a menos que (1) você tenha um motivo muito claro para não fazê-lo ou (2) você esteja usando um contêiner [std::list](../standard-library/list-class.md), que não se beneficia de otimizações de intervalo duplo.
 
 ## <a name="see-also"></a>Consulte também
 

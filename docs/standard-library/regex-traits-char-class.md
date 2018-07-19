@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2491fd14ccb7c165665cfb948836b7351dc907ce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fec9d9e80a277a8c10a1767734a9e758177df508
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912895"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966414"
 ---
 # <a name="regextraitsltchargt-class"></a>Classe regex_traits&lt;char&gt;
 
@@ -36,7 +36,7 @@ class regex_traits<char>
 
 ## <a name="remarks"></a>Comentários
 
-A classe é uma especialização explícita da classe de modelo [regex_traits](../standard-library/regex-traits-class.md) para elementos do tipo `char` (de forma que possa aproveitar as funções da biblioteca que manipulam objetos desse tipo).
+A classe é uma especialização explícita da classe de modelo [regex_traits](../standard-library/regex-traits-class.md) para elementos do tipo **char** (de modo que ele pode tirar proveito das funções de biblioteca que manipulam objetos desse tipo).
 
 ## <a name="requirements"></a>Requisitos
 

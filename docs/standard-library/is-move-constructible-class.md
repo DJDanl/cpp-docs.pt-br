@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d87eac720b205560993a7d6995be8a8fe6ad6194
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 979e726e1374ac37844472d9e2f9ae8ddd5ddf4d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843516"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965796"
 ---
 # <a name="ismoveconstructible-class"></a>Classe is_move_constructible
 
@@ -36,11 +36,11 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Parâmetros
 
-O tipo de T a ser avaliada
+*T* o tipo a ser avaliada
 
 ## <a name="remarks"></a>Comentários
 
-Um predicado de tipo será avaliado como verdadeiro se o tipo `T` puder ser construído usando uma operação de movimentação. Esse predicado é equivalente a `is_constructible<T, T&&>`.
+Um predicado de tipo que é avaliada como true se o tipo *T* podem ser construídos por meio de uma operação de movimentação. Esse predicado é equivalente a `is_constructible<T, T&&>`.
 
 ## <a name="requirements"></a>Requisitos
 

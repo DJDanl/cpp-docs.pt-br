@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: d6f921f85ffc6ef6d7985d66fe8637f044965176
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858806"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966401"
 ---
 # <a name="lttuplegt-functions"></a>Funções &lt;tuple&gt;
 
@@ -64,17 +64,21 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>Parâmetros
 
-`Index` O índice do elemento a ser obtido.
+*Índice*  
+ O índice do elemento a ser obtido.
 
-`Types` A sequência de tipos declarados na tupla, em ordem de declaração.
+*Tipos*  
+ A sequência de tipos declarados na tupla, em ordem de declaração.
 
-`T` O tipo de elemento a ser obtido.
+*T*  
+ O tipo do elemento a ser obtido.
 
-`Tuple` Um std::tuple que contém qualquer número de elementos.
+*Tuple*  
+ Um std::tuple que contém qualquer número de elementos.
 
 ### <a name="remarks"></a>Comentários
 
-As funções de modelo retornam uma referência ao valor no índice `Index` ou de tipo `T` no objeto `tuple`.
+As funções de modelo retornam uma referência para o valor no índice *índice*, ou do tipo *T* no `tuple` objeto.
 
 Chamar `get<T>(Tuple)` produzirá um erro do compilador se a Tupla contiver mais ou menos de um elemento do tipo T.
 
@@ -118,9 +122,11 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>Parâmetros
 
-`TN` O tipo do parâmetro de função Nth.
+*TN*  
+ O tipo do enésimo parâmetro de função.
 
-`tN` O valor do parâmetro de função Nth.
+*TN*  
+ O valor do enésimo parâmetro de função.
 
 ### <a name="remarks"></a>Comentários
 
@@ -163,7 +169,7 @@ int main() {
 4 5 6 7
 ```
 
-## <a name="tie"></a>  vínculo
+## <a name="tie"></a>  tie
 
 Constitui um `tuple` das referências do elemento.
 
@@ -174,7 +180,8 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>Parâmetros
 
-`TN` O tipo base do elemento enésimo tupla.
+*TN*  
+ O tipo de base do enésimo elemento de tupla.
 
 ### <a name="remarks"></a>Comentários
 

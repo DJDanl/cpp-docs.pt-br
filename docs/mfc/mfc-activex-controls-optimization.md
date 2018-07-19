@@ -24,36 +24,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c91f147637b53250f8d373af9950d6205c82d3e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4459865bc2ba374048622167fadb7bcf8fb97c99
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355305"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028168"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Controles ActiveX MFC: otimização
 Este artigo explica as técnicas que você pode usar para otimizar seus controles ActiveX para melhorar o desempenho.  
   
- Os tópicos [ativar desativar a opção Ativar quando visível](../mfc/turning-off-the-activate-when-visible-option.md) e [fornecendo Mouse interação enquanto inativo](../mfc/providing-mouse-interaction-while-inactive.md) discutir os controles que não criam uma janela até que ativado. O tópico [fornecendo ativação sem janelas](../mfc/providing-windowless-activation.md) discute controles que nunca criarem uma janela, mesmo quando elas são habilitadas.  
+ Os tópicos [transformando desativar a opção Ativar quando visível](../mfc/turning-off-the-activate-when-visible-option.md) e [fornecendo Mouse interação enquanto inativo](../mfc/providing-mouse-interaction-while-inactive.md) discutir os controles que não criam uma janela até ser ativado. O tópico [fornecendo ativação sem janelas](../mfc/providing-windowless-activation.md) discute os controles que nunca criam uma janela, mesmo quando elas são habilitadas.  
   
- Windows tem duas principais desvantagens para objetos OLE: elas impedem que objetos sendo transparente ou não retangular quando ativa e adicionarem uma grande sobrecarga para a instanciação e a exibição dos controles. Normalmente, a criação de uma janela demora 60 por cento do tempo de criação do controle. Com uma única janela compartilhada (geralmente do contêiner) e algum código expedição, um controle recebe os mesmos serviços de janela, geralmente sem perda de desempenho. Ter uma janela é principalmente uma sobrecarga desnecessária para o objeto.  
+ Windows tem duas desvantagens importantes para objetos OLE: eles impedir que os objetos que estão sendo transparente ou não retangular ao Active Directory e adicionarem uma grande sobrecarga para a instanciação e a exibição de controles. Normalmente, a criação de uma janela leva 60 por cento do tempo de criação de um controle. Com uma única janela compartilhada (normalmente do contêiner) e algum código de expedição, um controle recebe os mesmos serviços de janela, geralmente sem perda de desempenho. Ter uma janela é principalmente uma sobrecarga desnecessária para o objeto.  
   
- Algumas otimizações não melhorar desempenho necessariamente quando o controle é usado em certos contêineres. Por exemplo, contêineres lançados antes do 1996 não deu suporte a ativação sem janelas, para que implementar esse recurso não fornecem um benefício em contêineres mais antigos. No entanto, quase todos os contêineres dá suporte à persistência, para que otimizar o código de persistência do controle provavelmente melhorará o desempenho em qualquer contêiner. Se o seu controle destina-se especificamente a ser usado com um tipo específico de contêiner, convém pesquisar que essas otimizações é suportado pelo contêiner. Em geral, no entanto, você deve tentar implementar forma muitas dessas técnicas que são aplicáveis ao seu controle específico para garantir que seu controle executa possivelmente bem como em uma ampla gama de contêineres.  
+ Algumas otimizações não melhora necessariamente desempenho quando o controle é usado em certos contêineres. Por exemplo, contêineres lançados antes do 1996 não deu suporte a ativação sem janelas, para que implementar esse recurso não fornecerá um benefício em contêineres mais antigos. No entanto, praticamente cada contêiner oferece suporte a persistência, otimizar o código de persistência do seu controle provavelmente melhorará o desempenho de qualquer contêiner. Se seu controle especificamente se destina a ser usado com um tipo específico de contêiner, você pode deseja pesquisar qual dessas otimizações é compatível com esse contêiner. Em geral, no entanto, você deve tentar implementar de forma muitas dessas técnicas como são aplicáveis ao seu controle específico para garantir que seu controle executa, possivelmente, bem como em uma ampla gama de contêineres.  
   
- Você pode implementar muitas dessas otimizações por meio de [Assistente de controle ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md), no [configurações de controle](../mfc/reference/control-settings-mfc-activex-control-wizard.md) página.  
+ Você pode implementar muitas dessas otimizações por meio do [Assistente de controle ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md), no [configurações de controle](../mfc/reference/control-settings-mfc-activex-control-wizard.md) página.  
   
 ### <a name="mfc-activex-control-wizard-ole-optimization-options"></a>Opções de otimização OLE do Assistente de controle ActiveX MFC  
   
 |Configuração de controle do Assistente de controle ActiveX MFC|Ação|Mais informações|  
 |-------------------------------------------------------|------------|----------------------|  
-|**Ativar quando visível** caixa de seleção|Clear|[Desativando o ativar quando visível opção](../mfc/turning-off-the-activate-when-visible-option.md)|  
+|**Ativar quando visível** caixa de seleção|Clear|[Desativando a ativar quando visível opção](../mfc/turning-off-the-activate-when-visible-option.md)|  
 |**Ativação sem janelas** caixa de seleção|Selecionar|[Fornecendo ativação sem janelas](../mfc/providing-windowless-activation.md)|  
 |**Contexto de dispositivo não recortado** caixa de seleção|Selecionar|[Usando um contexto de dispositivo não recortado](../mfc/using-an-unclipped-device-context.md)|  
 |**Ativação cintilação** caixa de seleção|Selecionar|[Fornecendo ativação sem cintilação](../mfc/providing-flicker-free-activation.md)|  
 |**As notificações quando inativo do ponteiro do mouse** caixa de seleção|Selecionar|[Fornecendo interação do mouse enquanto inativo](../mfc/providing-mouse-interaction-while-inactive.md)|  
-|**Otimização de código de desenho** caixa de seleção|Selecionar|[Otimizando o desenho de controle](../mfc/optimizing-control-drawing.md)|  
+|**Com a otimização de código de desenho** caixa de seleção|Selecionar|[Otimizando o desenho de controle](../mfc/optimizing-control-drawing.md)|  
   
- Para obter informações detalhadas sobre as funções de membro que implementam essas otimizações, consulte [COleControl](../mfc/reference/colecontrol-class.md). As funções de membro são listadas pelo uso, como [operações sem janelas](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) e [inativo funções de manipulação de ponteiro](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
+ Para obter informações detalhadas sobre as funções de membro que implementam essas otimizações, consulte [COleControl](../mfc/reference/colecontrol-class.md). As funções de membro são listadas por uso, tais como [operações sem janelas](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) e [funções de manipulação de ponteiro inativo](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
   
  Para obter mais informações, consulte:  
   
@@ -61,7 +61,7 @@ Este artigo explica as técnicas que você pode usar para otimizar seus controle
   
 -   [Fornecendo ativação sem janelas](../mfc/providing-windowless-activation.md)  
   
--   [Desativando o ativar quando visível opção](../mfc/turning-off-the-activate-when-visible-option.md)  
+-   [Desativando a ativar quando visível opção](../mfc/turning-off-the-activate-when-visible-option.md)  
   
 -   [Fornecendo interação do mouse enquanto inativo](../mfc/providing-mouse-interaction-while-inactive.md)  
   

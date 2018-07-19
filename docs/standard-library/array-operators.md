@@ -13,16 +13,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 09d09e47103fa263adc4c5cf288803835b112142
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 782acd7fda671d84252ab226d095fe21c75645bf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846136"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965452"
 ---
 # <a name="ltarraygt-operators"></a>Operadores &lt;array&gt;
 
-O cabeçalho \<array> inclui estas funções `array` de modelo de comparação não membro.
+O \<array > cabeçalho inclui estas **matriz** funções de modelo de comparação não membro.
 
 ||||
 |-|-|-|
@@ -42,13 +42,13 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo de um elemento.
+*Ty* o tipo de um elemento.
 
-`N` O tamanho da matriz.
+*N* o tamanho da matriz.
 
-`left` Contêiner esquerdo a ser comparado.
+*à esquerda* contêiner esquerdo a comparar.
 
-`right` Contêiner direito a ser comparado.
+*à direita* contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -111,13 +111,13 @@ bool operator<(
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo de um elemento.
+*Ty* o tipo de um elemento.
 
-`N` O tamanho da matriz.
+*N* o tamanho da matriz.
 
-`left` Contêiner esquerdo a ser comparado.
+*à esquerda* contêiner esquerdo a comparar.
 
-`right` Contêiner direito a ser comparado.
+*à direita* contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -181,13 +181,13 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo de um elemento.
+*Ty* o tipo de um elemento.
 
-`N` O tamanho da matriz.
+*N* o tamanho da matriz.
 
-`left` Contêiner esquerdo a ser comparado.
+*à esquerda* contêiner esquerdo a comparar.
 
-`right` Contêiner direito a ser comparado.
+*à direita* contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -251,13 +251,13 @@ bool operator==(
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo de um elemento.
+*Ty* o tipo de um elemento.
 
-`N` O tamanho da matriz.
+*N* o tamanho da matriz.
 
-`left` Contêiner esquerdo a ser comparado.
+*à esquerda* contêiner esquerdo a comparar.
 
-`right` Contêiner direito a ser comparado.
+*à direita* contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -321,13 +321,13 @@ bool operator>(
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo de um elemento.
+*Ty* o tipo de um elemento.
 
-`N` O tamanho da matriz.
+*N* o tamanho da matriz.
 
-`left` Contêiner esquerdo a ser comparado.
+*à esquerda* contêiner esquerdo a comparar.
 
-`right` Contêiner direito a ser comparado.
+*à direita* contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -391,13 +391,13 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo de um elemento.
+*Ty* o tipo de um elemento.
 
-`N` O tamanho da matriz.
+*N* o tamanho da matriz.
 
-`left` Contêiner esquerdo a ser comparado.
+*à esquerda* contêiner esquerdo a comparar.
 
-`right` Contêiner direito a ser comparado.
+*à direita* contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 

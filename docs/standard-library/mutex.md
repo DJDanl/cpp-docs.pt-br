@@ -14,19 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2c58f32847084407d19afea8f2946f8b3041efa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9cd4f968543ff777b9178c8f6fa6b3c1699ee465
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861513"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965650"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
 Inclua o cabeçalho padrão \<mutex> para definir as classes `mutex`, `recursive_mutex`, `timed_mutex` e `recursive_timed_mutex`; os modelos `lock_guard` e `unique_lock`; e o os tipos e as funções de suporte que definem as regiões de código de exclusão mútua.
 
 > [!WARNING]
-> A partir do Visual Studio 2015, os tipos de sincronização da biblioteca padrão C++ se baseiam em primitivos de sincronização do Windows e não usam ConcRT (exceto quando a plataforma de destino for o Windows XP). Os tipos definidos em \<mutex> não devem ser usados com as funções ou tipos ConcRT.
+> A partir do Visual Studio 2015, os tipos de sincronização da biblioteca padrão C++ são baseados em primitivos de sincronização do Windows e não usam mais ConcRT (exceto quando a plataforma de destino é Windows XP). Os tipos definidos em \<mutex> não devem ser usados com as funções ou tipos ConcRT.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,17 +43,17 @@ As classes `mutex` e `recursive_mutex` são *tipos mutex*. Um tipo mutex tem um 
 
 - O método `lock` bloqueia o thread de chamada até que ele tenha obtido a propriedade do mutex. Seu valor retornado é ignorado.
 
-- O método `try_lock` tenta obter a propriedade do mutex sem bloquear. O valor retornado poderá ser convertido para `bool` e será `true` se o método obtiver propriedade, caso contrário será `false`.
+- O método `try_lock` tenta obter a propriedade do mutex sem bloquear. Seu tipo de retorno é conversível em **bool** e é **verdadeiro** se o método obtiver a propriedade, caso contrário será **false**.
 
 - O método `unlock` libera a propriedade do mutex do thread de chamada.
 
 Você pode usar tipos mutex como argumentos de tipo para instanciar os modelos `lock_guard` e `unique_lock`. Você pode usar objetos desses tipos, como o argumento `Lock` para as funções membro de espera no modelo [condition_variable_any](../standard-library/condition-variable-any-class.md).
 
-Um *tipo mutex programado* satisfaz os requisitos para um tipo mutex. Além disso, ele tem os métodos `try_lock_for` e `try_lock_until` que devem ser chamados usando um argumento e devem retornar um tipo que pode ser convertido em `bool`. Um tipo de mutex programado pode definir essas funções usando argumentos adicionais, desde que esses argumentos adicionais tenham valores padrão.
+Um *tipo mutex programado* satisfaz os requisitos para um tipo mutex. Além disso, ele tem o `try_lock_for` e `try_lock_until` métodos que devem ser chamado usando um argumento e devem retornar um tipo que seja conversível para **bool**. Um tipo de mutex programado pode definir essas funções usando argumentos adicionais, desde que esses argumentos adicionais tenham valores padrão.
 
-- O método `try_lock_for` deve ser chamado usando um argumento, `Rel_time`, cujo tipo é uma instanciação de [chrono::duration](../standard-library/duration-class.md). O método tenta obter a propriedade do mutex, mas retorna no tempo designado pelo `Rel_time`, independentemente do êxito. O valor retornado será convertido para `true` se o método obtiver a propriedade; caso contrário, o valor retornado será convertido para `false`.
+- O método `try_lock_for` deve ser chamado usando um argumento, `Rel_time`, cujo tipo é uma instanciação de [chrono::duration](../standard-library/duration-class.md). O método tenta obter a propriedade do mutex, mas retorna no tempo designado pelo `Rel_time`, independentemente do êxito. Converte o valor de retorno **verdadeira** se o método obtiver a propriedade; caso contrário, o valor retornado será convertido para **falso**.
 
-- O método `try_lock_until` deve ser chamado usando um argumento, `Abs_time`, cujo tipo é uma instanciação de [chrono::time_point](../standard-library/time-point-class.md). O método tenta obter a propriedade do mutex, mas retorna no tempo designado pelo `Abs_time`, independentemente do êxito. O valor retornado será convertido para `true` se o método obtiver a propriedade; caso contrário, o valor retornado será convertido para `false`.
+- O método `try_lock_until` deve ser chamado usando um argumento, `Abs_time`, cujo tipo é uma instanciação de [chrono::time_point](../standard-library/time-point-class.md). O método tenta obter a propriedade do mutex, mas retorna no tempo designado pelo `Abs_time`, independentemente do êxito. Converte o valor de retorno **verdadeira** se o método obtiver a propriedade; caso contrário, o valor retornado será convertido para **falso**.
 
 Um tipo mutex é também conhecido como um *tipo bloqueável*. Se ele não fornece a função membro `try_lock`, ele é um *tipo bloqueável básico*. Um tipo mutex programado é também conhecido como um *tipo bloqueável programado*.
 
@@ -81,8 +81,8 @@ Um tipo mutex é também conhecido como um *tipo bloqueável*. Se ele não forne
 |----------|-----------------|
 |[Estrutura adopt_lock_t](../standard-library/adopt-lock-t-structure.md)|Representa um tipo que é usado para definir um `adopt_lock`.|
 |[Estrutura defer_lock_t](../standard-library/defer-lock-t-structure.md)|Representa um tipo que define um objeto `defer_lock` que é usado para selecionar um dos construtores sobrecarregados de `unique_lock`.|
-|[Estrutura once_flag](../standard-library/once-flag-structure.md)|Representa um `struct` que é usado com a função de modelo `call_once` para garantir que o código de inicialização seja chamado apenas uma vez, mesmo na presença de vários threads de execução.|
-|[Estrutura try_to_lock_t](../standard-library/try-to-lock-t-structure.md)|Representa um `struct` que define um objeto `try_to_lock` que é usado para selecionar um dos construtores sobrecarregados de `unique_lock`.|
+|[Estrutura once_flag](../standard-library/once-flag-structure.md)|Representa uma **struct** que é usado com a função de modelo `call_once` para garantir que a inicialização do código seja chamado apenas uma vez, mesmo na presença de vários threads de execução.|
+|[Estrutura try_to_lock_t](../standard-library/try-to-lock-t-structure.md)|Representa uma **struct** que define um `try_to_lock` do objeto e é usado para selecionar um dos construtores sobrecarregados de `unique_lock`.|
 
 ### <a name="variables"></a>Variáveis
 

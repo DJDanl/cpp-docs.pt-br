@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa2694e9f5bb477447d08ab976cac60634ef3b60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 09123f4b8d0200d133ae04244d38b615640f7d30
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845447"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964919"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Objetos de função na Biblioteca Padrão C++
 
@@ -58,7 +58,7 @@ template <class Key,
 class set
 ```
 
-O segundo argumento de modelo é o objeto de função `less`. Esse objeto de função retorna `true` se o primeiro parâmetro passado para ele for menor que o segundo parâmetro passado. Como alguns contêineres classificam seus elementos, o contêiner precisa de uma forma de comparar dois elementos e isso é feito usando o objeto de função. Você pode definir seus próprios critérios de classificação para contêineres criando um objeto de função e especificando-o na lista de modelos para o contêiner.
+O segundo argumento de modelo é o objeto de função `less`. Esse objeto de função retorna **verdadeira** se o primeiro parâmetro passado para ele for menor que o segundo parâmetro passado. Como alguns contêineres classificam seus elementos, o contêiner precisa de uma forma de comparar dois elementos e isso é feito usando o objeto de função. Você pode definir seus próprios critérios de classificação para contêineres criando um objeto de função e especificando-o na lista de modelos para o contêiner.
 
 ## <a name="function-objects-and-algorithms"></a>Algoritmos e objetos de função
 
@@ -72,7 +72,7 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-O último argumento para `remove_if` é um objeto de função que retorna um valor booliano (um *predicado*). Se o resultado do objeto de função for `true`, o elemento será removido do contêiner que está sendo acessado pelos iteradores `first` e `last`. Você pode usar qualquer um dos objetos de função declarados no cabeçalho [\<functional>](../standard-library/functional.md) para o argumento `pred` ou pode criar seus próprios objetos.
+O último argumento para `remove_if` é um objeto de função que retorna um valor booliano (um *predicado*). Se o resultado do objeto de função for **verdadeira**, em seguida, o elemento é removido do contêiner que está sendo acessado pelos iteradores `first` e `last`. Você pode usar qualquer um dos objetos de função declarados no cabeçalho [\<functional>](../standard-library/functional.md) para o argumento `pred` ou pode criar seus próprios objetos.
 
 ## <a name="see-also"></a>Consulte também
 

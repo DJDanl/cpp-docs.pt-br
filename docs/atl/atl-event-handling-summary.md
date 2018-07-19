@@ -14,24 +14,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a938bd072ea8df30e64cce28fbf0709f08547d28
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 743939683d212de529816a165907e12063df03be
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356515"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027187"
 ---
 # <a name="atl-event-handling-summary"></a>Resumo de manipulação de eventos do ATL
 Em geral, a manipulação de eventos COM é um processo relativamente simples. Há três etapas principais:  
   
 -   Implemente a interface de eventos em seu objeto.  
   
--   A origem do evento de aviso que o objeto deseja receber eventos.  
+-   A origem do evento de aviso que seu objeto deseja receber eventos.  
   
--   Unadvise a origem do evento quando o objeto não precisa receber eventos.  
+-   Não recomendar a origem do evento quando seu objeto não precisa mais receber eventos.  
   
 ## <a name="implementing-the-interface"></a>Implementando a Interface  
- Há quatro principais maneiras de implementar uma interface usando ATL.  
+ Há quatro maneiras principais de implementação de uma interface usando ATL.  
   
 |Derivar de|Adequado para o tipo de Interface|Exige que você implementar todos os métodos *|Requer uma biblioteca de tipos em tempo de execução|  
 |-----------------|---------------------------------|---------------------------------------------|-----------------------------------------|  
@@ -40,19 +40,17 @@ Em geral, a manipulação de eventos COM é um processo relativamente simples. H
 |[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|Dispinterface|Não|Sim|  
 |[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Dispinterface|Não|Não|  
   
- \* Ao usar as classes de suporte ATL, nunca são necessários para implementar o **IUnknown** ou `IDispatch` métodos manualmente.  
+ \* Ao usar classes de suporte ATL, você nunca é necessários para implementar o `IUnknown` ou `IDispatch` métodos manualmente.  
   
-## <a name="advising-and-unadvising-the-event-source"></a>Orientando e Unadvising a origem do evento  
- Há três maneiras principais de informando e unadvising uma origem de evento usando a ATL.  
+## <a name="advising-and-unadvising-the-event-source"></a>Conselho administrativo e Unadvising a origem do evento  
+ Há três maneiras principais de consultoria e unadvising uma origem de evento usando ATL.  
   
-|Função de aviso|Unadvise função|Mais adequado para uso com|Exige que você mantenha o controle de um cookie|Comentários|  
-|---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|  
-
-|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)| Vtable ou interfaces duplas | Sim | `AtlAdvise` é uma função global do ATL. `CComPtrBase::Advise` é usado pelo [CComPtr](../atl/reference/ccomptr-class.md) e [CComQIPtr](../atl/reference/ccomqiptr-class.md). |  
-
-|[IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) ou [ IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)| Não | Menos parâmetros que `AtlAdvise` desde que a classe base funciona mais. |  
-|[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)| Controles ActiveX em controles compostos | Não | `CComCompositeControl::AdviseSinkMap` aconselha todas as entradas do coletor de eventos de mapa. A mesma função unadvises as entradas. Este método é chamado automaticamente pelo `CComCompositeControl` classe. |  
-|[CAxDialogImpl::AdviseSinkMap(TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl::AdviseSinkMap(FALSE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)| Controles ActiveX na caixa de diálogo | Não | `CAxDialogImpl::AdviseSinkMap` aconselha e unadvises todos os controles ActiveX no recurso de caixa de diálogo. Isso é feito automaticamente para você. |  
+|Função de aviso|Não recomendar a função|Mais adequado para uso com|Exige que você mantenha o controle de um cookie|Comentários|  
+|---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|
+|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)|Vtable ou interfaces duplas|Sim|`AtlAdvise` é uma função global do ATL. `CComPtrBase::Advise` é usado pelo [CComPtr](../atl/reference/ccomptr-class.md) e [CComQIPtr](../atl/reference/ccomqiptr-class.md).|  
+|[IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) ou [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Não|Menos parâmetros que `AtlAdvise` , pois a classe base faz mais trabalho.|  
+|[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|Controles ActiveX em controles de composição|Não|`CComCompositeControl::AdviseSinkMap` recomenda que todas as entradas de mapa do coletor de eventos. A mesma função unadvises as entradas. Esse método é chamado automaticamente pelo `CComCompositeControl` classe.|  
+|[CAxDialogImpl::AdviseSinkMap(TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl::AdviseSinkMap(FALSE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|Controles ActiveX em uma caixa de diálogo|Não|`CAxDialogImpl::AdviseSinkMap` avisa e unadvises todos os controles ActiveX no recurso da caixa de diálogo. Isso é feito automaticamente para você.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de eventos](../atl/event-handling-and-atl.md)   

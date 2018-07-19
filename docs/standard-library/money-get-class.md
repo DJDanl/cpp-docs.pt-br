@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e3059a4291d21e11304fdf571d2e12828df26fb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7b6043da3945b36bd756714049b2bb6c91a32bd4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861695"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966544"
 ---
 # <a name="moneyget-class"></a>Classe money_get
 
@@ -46,9 +46,9 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>Parâmetros
 
-`CharType` O tipo usado dentro de um programa para codificar caracteres em uma localidade.
+*CharType* o tipo usado em um programa para codificar caracteres em uma localidade.
 
-`InputIterator` O tipo de iterador da qual as funções get lê sua entrada.
+*InputIterator* o tipo de iterador do qual as funções get leem sua entrada.
 
 ## <a name="remarks"></a>Comentários
 
@@ -91,7 +91,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo do parâmetro de modelo **CharType**.
+O tipo é um sinônimo do parâmetro de modelo *CharType*.
 
 ## <a name="do_get"></a>  money_get::do_get
 
@@ -113,17 +113,17 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>Parâmetros
 
-`first` Início da sequência a ser convertida de endereçamento de iterador de entrada.
+*primeiro* iterador de entrada que trata o início da sequência a ser convertido.
 
-`last` O final da sequência a ser convertida de endereçamento de iterador de entrada.
+*última* iterador de entrada que trata o fim da sequência a ser convertido.
 
-`Intl` Um valor booliano que indica o tipo do símbolo de moeda esperado na sequência: **true** se internacionais, **false** se nacionais.
+*Intl* um valor booliano que indica o tipo do símbolo de moeda esperado na sequência: **verdadeira** se internacional, **falso** se nacional.
 
-`Iosbase` Um formato de sinalizador que quando o conjunto de indica que o símbolo de moeda é opcional. Caso contrário, é necessário.
+*Iosbase* um sinalizador de formato que, quando definido indica que o símbolo de moeda é opcional; caso contrário, é necessário.
 
-`State` Define os elementos de bitmask apropriado para o estado de fluxo de acordo com se as operações foram bem-sucedidas ou não.
+*Estado* define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas ou não.
 
-`val` Uma cadeia de caracteres armazenar a sequência convertida.
+*Val* uma cadeia de caracteres que armazena a sequência convertida.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -131,9 +131,9 @@ Um iterador de entrada que trata o primeiro elemento após o campo de entrada mo
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função membro virtual protegida virtual tenta corresponder elementos sequenciais, começando pelo primeiro na sequência [ `first`, `last`) até ter reconhecido um campo de entrada monetária completo e não vazio. Se for bem-sucedido, ele converterá esse campo em uma sequência de um ou mais dígitos decimais, opcionalmente precedido por um sinal de subtração (`-`), para representar a quantidade e armazenar o resultado no objeto [string_type](#string_type) `val`. Ela retorna um iterador que designa o primeiro elemento após o campo de entrada monetário. Caso contrário, a função armazena uma sequência vazia em `val` e define `ios_base::failbit` em `State`. Ela retorna um iterador que designa o primeiro elemento após qualquer prefixo de um campo de entrada monetário válido. Em ambos os casos, se o valor retornado for igual a `last`, a função definirá `ios_base::eofbit` em `State`.
+A primeira função membro virtual protegida virtual tenta corresponder elementos sequenciais, começando pelo primeiro na sequência [ `first`, `last`) até ter reconhecido um campo de entrada monetária completo e não vazio. Se for bem-sucedido, ela converterá esse campo em uma sequência de um ou mais dígitos decimais, opcionalmente precedido por um sinal de subtração ( `-`), para representar a quantidade e armazena o resultado em de [string_type](#string_type) objeto *val*. Ela retorna um iterador que designa o primeiro elemento após o campo de entrada monetário. Caso contrário, a função armazena uma sequência vazia em *val* e define `ios_base::failbit` na *estado*. Ela retorna um iterador que designa o primeiro elemento após qualquer prefixo de um campo de entrada monetário válido. Em ambos os casos, se o valor retornado for igual a `last`, a função definirá `ios_base::eofbit` em `State`.
 
-A segunda função membro protegido virtual se comporta da mesma maneira que a primeiro, exceto que, se for bem-sucedida ela converte a sequência de dígitos com sinal opcional em um valor do tipo `long double` e armazena esse valor em `val`.
+A segunda função membro virtual protegida se comporta da mesma maneira que a primeira, exceto que, se for bem-sucedido, ele converte a sequência de dígitos com sinal opcional para um valor do tipo **longo duplo** e armazena esse valor em *val*.
 
 O formato de um campo de entrada monetário é determinado pelo [locale facet](../standard-library/locale-class.md#facet_class)**fac** retornado pela chamada efetiva [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
@@ -189,17 +189,17 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>Parâmetros
 
-`first` Início da sequência a ser convertida de endereçamento de iterador de entrada.
+*primeiro* iterador de entrada que trata o início da sequência a ser convertido.
 
-`last` O final da sequência a ser convertida de endereçamento de iterador de entrada.
+*última* iterador de entrada que trata o fim da sequência a ser convertido.
 
-`Intl` Um valor booliano que indica o tipo do símbolo de moeda esperado na sequência: **true** se internacionais, **false** se nacionais.
+*Intl* um valor booliano que indica o tipo do símbolo de moeda esperado na sequência: **verdadeira** se internacional, **falso** se nacional.
 
-`Iosbase` Um formato de sinalizador que quando o conjunto de indica que o símbolo de moeda é opcional. Caso contrário, é necessário
+*Iosbase* um sinalizador de formato que, quando definido indica que o símbolo de moeda é opcional; caso contrário, é necessário
 
-`State` Define os elementos de bitmask apropriado para o estado de fluxo de acordo com se as operações foram bem-sucedidas.
+*Estado* define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
-`val` Uma cadeia de caracteres armazenar a sequência convertida.
+*Val* uma cadeia de caracteres que armazena a sequência convertida.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -207,7 +207,7 @@ Um iterador de entrada que trata o primeiro elemento após o campo de entrada mo
 
 ### <a name="remarks"></a>Comentários
 
-Ambas as funções de membro retornam [do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`.
+Ambas as funções membro retornam [do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`.
 
 ### <a name="example"></a>Exemplo
 
@@ -280,21 +280,21 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Refs` Valor inteiro usado para especificar o tipo de gerenciamento de memória para o objeto.
+*_Refs* valor inteiro usado para especificar o tipo de gerenciamento de memória para o objeto.
 
 ### <a name="remarks"></a>Comentários
 
-Os valores possíveis para o parâmetro `_Refs` e sua significância são:
+Os valores possíveis para o *_Refs* parâmetro e sua significância são:
 
 - 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
 - 1: o tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: esses valores não são definidos.
+- \> 1: esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 
-O construtor inicializa o objeto base com **localidade::**[faceta](../standard-library/locale-class.md#facet_class)(**_ * Refs*).
+O construtor inicializa seu objeto base com **localidade::**[faceta](../standard-library/locale-class.md#facet_class)(**_ * * * Refs*).
 
 ## <a name="string_type"></a>  money_get::string_type
 

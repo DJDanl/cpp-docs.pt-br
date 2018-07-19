@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab4b9d6a294e509a6a197866e9ef775063e3da7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3d3c8f5d9f08c4dce370d49dc5a43bbc45b479e
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422775"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025751"
 ---
 # <a name="statements-c"></a>Instruções (C++)
 As instruções em C++ são os elementos do programa que controlam como e em que ordem os objetos são manipulados. Esta seção inclui:  
@@ -32,7 +32,7 @@ As instruções em C++ são os elementos do programa que controlam como e em que
   
     -   [Instruções de expressão](../cpp/expression-statement.md). Estas instruções avaliam uma expressão para verificar seus efeitos colaterais ou seu valor de retorno.  
   
-    -   [NULL instruções](../cpp/null-statement.md). Estas instruções podem ser fornecidas nos lugares em que uma instrução é exigida pela sintaxe do C++, mas nenhuma ação deve ser tomada.  
+    -   [Instruções nulas&lt;1](../cpp/null-statement.md). Estas instruções podem ser fornecidas nos lugares em que uma instrução é exigida pela sintaxe do C++, mas nenhuma ação deve ser tomada.  
   
     -   [Instruções compostas](../cpp/compound-statements-blocks.md). Estas instruções são grupos de instruções entre chaves ({ }). Podem ser usadas onde quer que uma instrução simples possa ser usada.  
   
@@ -42,9 +42,9 @@ As instruções em C++ são os elementos do programa que controlam como e em que
   
     -   [Instruções de salto](../cpp/jump-statements-cpp.md). Estas instruções transferem o controle imediatamente para outro local da função ou retornam o controle à função.  
   
-    -   [Instruções de declaração](http://msdn.microsoft.com/en-us/14538558-356f-450e-9e1e-3cd62ba952b9). As declarações introduzem um nome em um programa. ([Declarações e definições](declarations-and-definitions-cpp.md) fornece informações mais detalhadas sobre declarações.)  
+    -   [Instruções de declaração](http://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9). As declarações introduzem um nome em um programa. ([Declarações e definições](declarations-and-definitions-cpp.md) fornece informações mais detalhadas sobre declarações.)  
   
- Para obter informações sobre instruções de manipulação de exceção, consulte [tratamento de exceção](../cpp/exception-handling-in-visual-cpp.md).  
+ Para obter informações sobre instruções de tratamento de exceções, consulte [tratamento de exceções](../cpp/exception-handling-in-visual-cpp.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência da linguagem C++](../cpp/cpp-language-reference.md)

@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44de89891f3380f71e4fa590626ba4e275782f9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1e97ce9daf097e85dfc9b7b1b74bfcbf6a149fdd
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848031"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027226"
 ---
 # <a name="errorcode-class"></a>Classe error_code
 
@@ -100,12 +100,12 @@ void assign(value_type val, const error_category& _Cat);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`val`|O valor de código de erro para armazenar em `error_code`.|
-|`_Cat`|A categoria de erro para armazenar em `error_code`.|
+|*Val*|O valor de código de erro para armazenar em `error_code`.|
+|*Esteja*|A categoria de erro para armazenar em `error_code`.|
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro armazena `val` como o valor de código de erro e um ponteiro para `_Cat`.
+A função membro armazena *val* como o valor de código de erro e um ponteiro para *esteja*.
 
 ## <a name="category"></a>  error_code::category
 
@@ -164,15 +164,15 @@ error_code(_Enum _Errcode,
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`val`|O valor de código de erro para armazenar em `error_code`.|
-|`_Cat`|A categoria de erro para armazenar em `error_code`.|
-|`_Errcode`|O valor da enumeração para armazenar em `error_code`.|
+|*Val*|O valor de código de erro para armazenar em `error_code`.|
+|*Esteja*|A categoria de erro para armazenar em `error_code`.|
+|*_Errcode*|O valor da enumeração para armazenar em `error_code`.|
 
 ### <a name="remarks"></a>Comentários
 
 O primeiro construtor armazena um valor zero de código de erro e um ponteiro para [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-O segundo construtor armazena `val` como o valor de código de erro e um ponteiro para [error_category](http://msdn.microsoft.com/en-us/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
+O segundo construtor armazena *val* como o valor de código de erro e um ponteiro para [error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
 
 O terceiro construtor armazena `(value_type)_Errcode` como o valor de código de erro e um ponteiro para [generic_category](../standard-library/system-error-functions.md#generic_category).
 
@@ -204,7 +204,7 @@ bool operator==(const error_code& right) const;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`right`|O objeto a ser testado quanto à igualdade.|
+|*right*|O objeto a ser testado quanto à igualdade.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -226,11 +226,11 @@ bool operator!=(const error_code& right) const;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`right`|O objeto a ser testado quanto à desigualdade.|
+|*right*|O objeto a ser testado quanto à desigualdade.|
 
 ### <a name="return-value"></a>Valor de retorno
 
-**true** se o objeto `error_code` não for igual ao objeto `error_code` passado em `right`. Caso contrário, **false**.
+**True** se o `error_code` objeto não é igual ao `error_code` objeto passado *direita*; caso contrário **false**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -238,7 +238,7 @@ O operador de membro retorna `!(*this == right)`.
 
 ## <a name="op_lt"></a>  error_code::operator&lt;
 
-Testa se o objeto [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) é menor que o objeto `error_code` passado para comparação.
+Testa se o objeto [error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) é menor que o objeto `error_code` passado para comparação.
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -248,7 +248,7 @@ bool operator<(const error_code& right) const;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`right`|O objeto error_code a ser comparado.|
+|*right*|O objeto error_code a ser comparado.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -260,7 +260,7 @@ O operador de membro retorna `category() < right.category() || category() == rig
 
 ## <a name="op_eq"></a>  error_code::operator=
 
-Atribui um novo valor de enumeração ao objeto [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31).
+Atribui um novo valor de enumeração ao objeto [error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31).
 
 ```cpp
 template <class _Enum>
@@ -273,7 +273,7 @@ typename enable_if<is_error_code_enum<_Enum>::value,
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`_Errcode`|O valor de enumeração a ser atribuído ao objeto `error_code`.|
+|*_Errcode*|O valor de enumeração a ser atribuído ao objeto `error_code`.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -297,7 +297,7 @@ O valor booliano do objeto `error_code`.
 
 ### <a name="remarks"></a>Comentários
 
-O operador retornará um valor que pode ser convertido em `true` somente se o [valor](#value) não for igual a zero. O tipo de retorno é pode ser convertido apenas para `bool`, não para `void *` ou outros tipos escalares conhecidos.
+O operador retorna um valor conversível em **verdadeira** somente se [valor](#value) não é igual a zero. O tipo de retorno é conversível apenas em **bool**, não em `void *` ou outros tipos escalares conhecidos.
 
 ## <a name="value"></a>  error_code::value
 
@@ -323,7 +323,7 @@ typedef int value_type;
 
 ### <a name="remarks"></a>Comentários
 
-Esta definição de tipo é um sinônimo para `int`.
+Essa definição de tipo é um sinônimo de **int**.
 
 ## <a name="see-also"></a>Consulte também
 
