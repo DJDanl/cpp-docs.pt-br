@@ -14,19 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c83802dcc7382040d3b9f40bd0bbc2fe13d076f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d294eef323d96ddbfecad8f740826a5a038d7b4c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942161"
 ---
 # <a name="examples-of-lambda-expressions"></a>Exemplos de expressões lambda
-Este artigo mostra como usar expressões lambda em seus programas. Para obter uma visão geral de expressões lambda, consulte [expressões Lambda](../cpp/lambda-expressions-in-cpp.md). Para obter mais informações sobre a estrutura de uma expressão lambda, consulte [sintaxe da expressão Lambda](../cpp/lambda-expression-syntax.md).  
+Este artigo mostra como usar expressões lambda em seus programas. Para obter uma visão geral das expressões lambda, consulte [expressões Lambda](../cpp/lambda-expressions-in-cpp.md). Para obter mais informações sobre a estrutura de uma expressão lambda, consulte [sintaxe de expressão Lambda](../cpp/lambda-expression-syntax.md).  
   
 ##  <a name="declaringLambdaExpressions"></a> Declarando expressões Lambda  
   
 ### <a name="example-1"></a>Exemplo 1  
- Como uma expressão lambda é digitada, você pode atribuir a um `auto` variável ou um [função](../standard-library/function-class.md) do objeto, como mostrado aqui:  
+ Como uma expressão lambda é digitada, você pode atribuí-lo para um **automática** variável ou uma [função](../standard-library/function-class.md) do objeto, como mostrado aqui:  
   
 ### <a name="code"></a>Código  
   
@@ -61,9 +62,9 @@ int main()
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações, consulte [automática](../cpp/auto-cpp.md), [função classe](../standard-library/function-class.md), e [chamada de função](../cpp/function-call-cpp.md).  
+ Para obter mais informações, consulte [automática](../cpp/auto-cpp.md), [classe function](../standard-library/function-class.md), e [chamada de função](../cpp/function-call-cpp.md).  
   
- Embora expressões lambda geralmente são declaradas no corpo de uma função, você pode declará-los em qualquer lugar que você pode inicializar uma variável.  
+ Embora as expressões lambda geralmente são declaradas no corpo de uma função, você pode declará-los em qualquer lugar que você pode inicializar uma variável.  
   
 ### <a name="example-2"></a>Exemplo 2  
  O compilador do Visual C++ associa uma expressão lambda às suas variáveis capturadas quando a expressão é declarada, e não quando a expressão é chamada. O exemplo a seguir mostra uma expressão lambda que captura a variável local `i` por valor e a variável local `j` por referência. Como a expressão lambda é capturada `i` por valor, a reatribuição posterior de `i` no programa não afetará o resultado da expressão. No entanto, como a expressão lambda captura `j` por referência, a reatribuição de `j` afetará o resultado da expressão.  
@@ -105,7 +106,7 @@ int main()
  [[Neste artigo](#top)]  
   
 ##  <a name="callingLambdaExpressions"></a> Chamando expressões Lambda  
- Você poderá chamar uma expressão lambda imediatamente, conforme mostrado no próximo trecho de código. O segundo trecho mostra como passar um lambda como um argumento para algoritmos de biblioteca padrão C++ como `find_if`.  
+ Você poderá chamar uma expressão lambda imediatamente, conforme mostrado no próximo trecho de código. O segundo trecho mostra como passar um lambda como um argumento para algoritmos da biblioteca padrão C++, como `find_if`.  
   
 ### <a name="example-1"></a>Exemplo 1  
  Este exemplo declara uma expressão lambda que retorna a soma de dois inteiros e chama a expressão imediatamente com os argumentos `5` e `4`:  
@@ -132,7 +133,7 @@ int main()
 ```  
   
 ### <a name="example-2"></a>Exemplo 2  
- Este exemplo passa uma expressão lambda como argumento para a função `find_if`. A expressão lambda retornará `true` se o parâmetro for um número par.  
+ Este exemplo passa uma expressão lambda como argumento para a função `find_if`. Retorna a expressão lambda **verdadeira** se o parâmetro for um número par.  
   
 ### <a name="code"></a>Código  
   
@@ -176,11 +177,11 @@ The first even number in the list is 42.
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações sobre o `find_if` funcionam, consulte [find_if](../standard-library/algorithm-functions.md#find_if). Para obter mais informações sobre as funções de biblioteca padrão C++ que executam os algoritmos comuns, consulte [ \<algoritmo >](../standard-library/algorithm.md).  
+ Para obter mais informações sobre o `find_if` , consulte [find_if](../standard-library/algorithm-functions.md#find_if). Para obter mais informações sobre as funções de biblioteca padrão C++ que executam algoritmos comuns, consulte [ \<algoritmo >](../standard-library/algorithm.md).  
   
  [[Neste artigo](#top)]  
   
-##  <a name="nestingLambdaExpressions"></a> Aninhamento de expressões Lambda  
+##  <a name="nestingLambdaExpressions"></a> Aninhando expressões Lambda  
   
 ### <a name="example"></a>Exemplo  
  É possível aninhar uma expressão lambda dentro de outra, como mostrado neste exemplo. A expressão lambda interna multiplica seu argumento por 2 e retorna o resultado. A expressão lambda externa chama a expressão lambda interna com seu argumento e adiciona 3 ao resultado.  
@@ -217,10 +218,10 @@ int main()
   
  [[Neste artigo](#top)]  
   
-##  <a name="higherOrderLambdaExpressions"></a> Funções de ordem superior Lambda  
+##  <a name="higherOrderLambdaExpressions"></a> Funções Lambda de ordem superior  
   
 ### <a name="example"></a>Exemplo  
- Muitas linguagens de programação suportam o conceito de um *função de ordem superior.* Uma função de ordem superior é uma expressão lambda que usa outra expressão lambda como seu argumento ou retorna uma expressão lambda. Você pode usar o [função](../standard-library/function-class.md) classe para habilitar uma expressão lambda de C++ se comporta como uma função de ordem superior. O exemplo a seguir mostra uma expressão lambda que retorna um objeto `function` e uma expressão lambda que usa um objeto `function` como seu argumento.  
+ O conceito de dar suporte a várias linguagens de programação um *função de ordem superior.* Uma função de ordem superior é uma expressão lambda que usa outra expressão lambda como seu argumento ou retorna uma expressão lambda. Você pode usar o [função](../standard-library/function-class.md) classe para habilitar uma expressão lambda C++ se comporte como uma função de ordem superior. O exemplo a seguir mostra uma expressão lambda que retorna um objeto `function` e uma expressão lambda que usa um objeto `function` como seu argumento.  
   
 ### <a name="code"></a>Código  
   
@@ -269,10 +270,10 @@ int main()
 ##  <a name="methodLambdaExpressions"></a> Usando uma expressão Lambda em uma função  
   
 ### <a name="example"></a>Exemplo  
- Você pode usar expressões lambda no corpo de uma função. A expressão lambda pode acessar qualquer função ou membro de dados que pode acessar a função de delimitador. Você pode explicitamente ou implicitamente capturar o `this` ponteiro para fornecer acesso a membros de funções e os dados da classe de delimitador.  
-**Visual Studio 2017 versão posterior e 15,3** (disponível com [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): capturar `this` por valor (`[*this]`) quando o lambda será usado em operações assíncronas ou paralelas em que o código pode Execute depois que o objeto original sai do escopo.
+ Você pode usar expressões lambda no corpo de uma função. A expressão lambda pode acessar qualquer membro de dados ou função que a função pode acessar. Você pode capturar explicita ou implicitamente a **isso** ponteiro para fornecer acesso a membros de funções e os dados da classe delimitadora.  
+**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std:c++17 + + 17](../build/reference/std-specify-language-standard-version.md)): capturar **isso** por valor (`[*this]`) quando o lambda será usado em operações assíncronas ou paralelas em que o código pode ser executado após o objeto original sai do escopo.
   
- Você pode usar o `this` ponteiro explicitamente em uma função, conforme mostrado aqui:  
+ Você pode usar o **isso** ponteiro explicitamente em uma função, conforme mostrado aqui:  
   
 ```cpp  
 
@@ -292,9 +293,9 @@ void ApplyScale2(const vector<int>& v) const
 
 ```  
   
- Você também pode capturar o ponteiro `this` implicitamente:  
+ Você também pode capturar o **isso** ponteiro implicitamente:  
   
-```  
+```cpp 
 void ApplyScale(const vector<int>& v) const  
 {  
    for_each(v.begin(), v.end(),   
@@ -357,7 +358,7 @@ int main()
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O `ApplyScale` função usa uma expressão lambda para imprimir o produto do valor de escala e cada elemento em uma `vector` objeto. A expressão lambda captura implicitamente `this` para que possa acessar o membro `_scale`.  
+ O `ApplyScale` função usa uma expressão lambda para imprimir o produto do valor da escala e cada elemento em um `vector` objeto. A expressão lambda captura implicitamente **isso** para que ele possa acessar o `_scale` membro.  
   
  [[Neste artigo](#top)]  
   
@@ -421,14 +422,14 @@ After negate_all():
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações sobre os modelos do C++, consulte [modelos](../cpp/templates-cpp.md).  
+ Para obter mais informações sobre modelos de C++, consulte [modelos](../cpp/templates-cpp.md).  
   
  [[Neste artigo](#top)]  
   
 ##  <a name="ehLambdaExpressions"></a> Tratamento de exceções  
   
 ### <a name="example"></a>Exemplo  
- O corpo de uma expressão lambda segue as regras para a manipulação de exceção estruturada (SEH) e o tratamento de exceções C++. Você pode manipular uma exceção gerada no corpo de uma expressão lambda ou adiar o tratamento de exceções para o escopo delimitador. O exemplo a seguir usa a função `for_each` e uma expressão lambda para preencher um objeto `vector` com os valores de outro. Ele usa um `try` / `catch` blocos de lidar com acesso inválido para o primeiro vetor.  
+ O corpo de uma expressão lambda segue as regras para a manipulação de exceção estruturada (SEH) e o tratamento de exceções C++. Você pode manipular uma exceção gerada no corpo de uma expressão lambda ou adiar o tratamento de exceções para o escopo delimitador. O exemplo a seguir usa o **for_each** função e uma expressão lambda para preencher um `vector` objeto com os valores de outro. Ele usa um **tente**/**catch** bloco para lidar com acesso inválido ao primeiro vetor.  
   
 ### <a name="code"></a>Código  
   
@@ -475,11 +476,11 @@ Caught 'invalid vector<T> subscript'.
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações sobre o tratamento de exceção, consulte [tratamento de exceção](../cpp/exception-handling-in-visual-cpp.md).  
+ Para obter mais informações sobre o tratamento de exceção, consulte [tratamento de exceções](../cpp/exception-handling-in-visual-cpp.md).  
   
  [[Neste artigo](#top)]  
   
-##  <a name="managedLambdaExpressions"></a> Usar expressões Lambda com tipos gerenciados (C + + CLI)  
+##  <a name="managedLambdaExpressions"></a> Usando expressões Lambda com tipos gerenciados (C + + / CLI)  
   
 ### <a name="example"></a>Exemplo  
  A cláusula de captura de uma expressão lambda não pode conter uma variável que tenha um tipo gerenciado. No entanto, você pode passar um argumento que tenha um tipo gerenciado para uma lista de parâmetros de uma expressão lambda. O exemplo a seguir contém uma expressão lambda que captura a variável local não gerenciada `ch` por valor e usa um objeto <xref:System.String?displayProperty=fullName> como seu parâmetro.  
@@ -514,7 +515,7 @@ Hello!
  Você também pode usar expressões lambda com a biblioteca STL/CLR. Para obter mais informações, consulte [referência da biblioteca STL/CLR](../dotnet/stl-clr-library-reference.md).  
   
 > [!IMPORTANT]
->  As lambdas não têm suporte nestas entidades gerenciadas de CLR (Common Language Runtime): `ref class`, `ref struct`, `value class` e `value struct`.  
+>  Lambdas não têm suporte nessas entidades de runtime (CLR) gerenciado do common language: **classe ref**, **ref struct**, **classe de valor**, e **deestruturadevalor**.  
   
  [[Neste artigo](#top)]  
   
