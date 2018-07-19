@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d062912a441f16e9eb26415287fbbb574b829e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91132492ab6173d9d462eeb74d6393dce41f6833
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843802"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961585"
 ---
 # <a name="iscompound-class"></a>Classe is_compound
 
@@ -37,11 +37,11 @@ struct is_compound;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo de consulta.
+*Ty* o tipo de consulta.
 
 ## <a name="remarks"></a>Comentários
 
-Contém uma instância do predicado de tipo `false` se o tipo de `Ty` é um tipo fundamental (ou seja, se [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > contém `true`); caso contrário, ele contém `true`. Portanto, o predicado será `true` se `Ty` for um tipo de matriz, um tipo de função, um ponteiro para `void` ou um objeto ou uma função, uma referência, uma classe, uma união, uma enumeração ou um ponteiro para um membro de classe não estática ou uma forma *qualificada por CV* de um deles.
+Uma instância do predicado de tipo mantém **falsos** se o tipo de *Ty* é um tipo fundamental (ou seja, se [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > mantém  **True**); Caso contrário, ele mantém **verdadeira**. Portanto, o predicado mantém **verdadeira** se *Ty* é um tipo de matriz, um tipo de função, um ponteiro para **void** ou um objeto ou uma função, uma referência, uma classe, uma união, uma enumeração ou uma ponteiro para membro de classe não estática ou uma *qualificada por cv* formulário de um deles.
 
 ## <a name="example"></a>Exemplo
 

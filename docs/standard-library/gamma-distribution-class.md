@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611030b6707a6087e0908aa69349af21858aba0e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 26386ebb5e2bbb20b952200869ccffb7677c59af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847059"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962420"
 ---
 # <a name="gammadistribution-class"></a>Classe gamma_distribution
 
@@ -80,13 +80,13 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType* o tipo de resultado de ponto flutuante, o padrão será a `double`. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType* padrão é o tipo de resultado de ponto flutuante **duplo**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 *URNG* O mecanismo gerador de números aleatórios uniformes. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve uma distribuição que produz valores de um tipo de ponto flutuante especificado pelo usuário ou um tipo `double` caso nenhum seja fornecido, distribuído de acordo com a Distribuição Gamma. A tabela a seguir contém links para artigos sobre cada um dos membros.
+A classe de modelo descreve uma distribuição que produz valores de um usuário especificado pelo ponto flutuantes tipo ou tipo **duplas** caso nenhum seja fornecido, distribuído de acordo com a distribuição gama. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -207,11 +207,11 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Alpha* o `alpha` parâmetro da distribuição.
+*alfa* o `alpha` parâmetro de distribuição.
 
-*Beta* o `beta` parâmetro da distribuição.
+*Beta* o `beta` parâmetro de distribuição.
 
-*parâmetro* a estrutura de parâmetro usada para construir a distribuição.
+*parm* a estrutura de parâmetro usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
@@ -239,11 +239,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*Alpha* o `alpha` parâmetro da distribuição.
+*alfa* o `alpha` parâmetro de distribuição.
 
-*Beta* o `beta` parâmetro da distribuição.
+*Beta* o `beta` parâmetro de distribuição.
 
-*direito* o `param_type` instância para comparar isso.
+*à direita* o `param_type` instância a ser comparada com isto.
 
 ### <a name="remarks"></a>Comentários
 

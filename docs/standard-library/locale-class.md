@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0a3f60a4cbcde76a681b33ed9201e81f313bac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 80cb3dd5d60665fbfb510fb2fddf94f17ef9f171
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862092"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963788"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -213,27 +213,27 @@ static const int none = 0;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para um tipo `int` que pode representar um grupo de elemento distintos de um tipo de bitmask local de uma localidade de classe ou pode ser usado para representar qualquer uma das categorias de localidade C correspondentes. Os elementos são:
+O tipo é um sinônimo de um **int** tipo que pode representar um grupo de elementos distintos de bitmask local à localidade de classe de tipo ou pode ser usado para representar qualquer uma das categorias de localidade C correspondentes. Os elementos são:
 
-- **collate**, correspondente à categoria C LC_COLLATE
+- `collate`, correspondente à categoria C LC_COLLATE
 
-- **ctype**, correspondente à categoria C LC_CTYPE
+- `ctype`, correspondente à categoria C LC_CTYPE
 
-- **monetary**, correspondente à categoria C LC_MONETARY
+- `monetary`, correspondente à categoria C LC_MONETARY
 
-- **numeric**, correspondente à categoria C LC_NUMERIC
+- `numeric`, correspondente à categoria C LC_NUMERIC
 
-- **time**, correspondente à categoria C LC_TIME
+- `time`, correspondente à categoria C LC_TIME
 
-- **messages**, correspondente à categoria Posix LC_MESSAGES
+- `messages`, correspondente à categoria Posix LC_MESSAGES
 
 Além disso, estes são dois valores úteis:
 
-- **none**, correspondente a nenhuma das categorias C
+- `none`, correspondente a nenhuma das categorias C
 
-- **all**, correspondente à união de todas as categorias C LC_ALL
+- `all`, correspondente à união de todas as categorias LC_ALL C
 
-É possível representar um grupo arbitrário de categorias usando `OR` com essas constantes, como em **monetary** &#124; **time**.
+Você pode representar um grupo arbitrário de categorias por meio `OR` com essas constantes, como na `monetary` &#124; `time`.
 
 ## <a name="classic"></a>  locale::classic
 
@@ -301,11 +301,11 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Loc` A localidade que contém a faceta a ser inserido na localidade de destino.
+*Loc* a localidade que contém a faceta a ser inserido na localidade de destino.
 
 ### <a name="return-value"></a>Valor de retorno
 
-A função membro retorna um objeto de localidade que substitui ou adiciona a **\*essa** a faceta `Facet` listada em `Loc`.
+A função membro retorna um objeto de localidade que substitui ou adiciona ao  **\*isso** faceta `Facet` listados na *Loc*.
 
 ### <a name="example"></a>Exemplo
 
@@ -369,7 +369,7 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Loc` A localidade a ser usada como a localidade padrão pelo programa.
+*Loc* a localidade a ser usado como a localidade padrão pelo programa.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -415,7 +415,7 @@ class id { protected:    id(); private:    id(const id&) // not defined void ope
 
 ### <a name="remarks"></a>Comentários
 
-A classe membro descreve o objeto de membro estático exigido por cada faceta de localidade exclusiva. Observe que não é possível copiar ou designar um objeto da classe **id**.
+A classe membro descreve o objeto de membro estático exigido por cada faceta de localidade exclusiva. Observe que você não pode copiar ou atribuir um objeto da classe `id`.
 
 ## <a name="locale"></a>  locale::locale
 
@@ -436,35 +436,35 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Locname` Nome de uma localidade.
+*Locname* nome de uma localidade.
 
-`Loc` Uma localidade que deve ser copiado na construção do novo local.
+*Loc* uma localidade que deve ser copiada ao construir nova localidade.
 
-`Other` Uma localidade da qual selecionar uma categoria.
+*Outros* uma localidade da qual selecionar uma categoria.
 
-`Cat` A categoria a ser substituído na localidade construída.
+*CAT* a categoria a ser substituída na localidade construída.
 
-`Fac` A faceta para ser substituído na localidade construída.
+*Fac* a faceta a ser substituída na localidade construída.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor inicializa o objeto de acordo com a localidade global. O segundo e o terceiro construtor inicializam todas as categorias de localidade para que elas tenham um comportamento consistente com o nome de localidade `Locname`. Os construtores restantes copiam `Loc`, com as seguintes exceções:
+O primeiro construtor inicializa o objeto de acordo com a localidade global. Os segundo e terceiro construtores inicializam todas as categorias de localidade para ter um comportamento consistente com o nome da localidade *Locname*. Os construtores restantes copiam *Loc*, com as exceções indicadas:
 
 `locale(const locale& Loc, const locale& Other, category Cat);`
 
-substituir em `Other` as facetas correspondentes a uma categoria C para a qual C e `Cat` são diferentes de zero.
+substitui a partir *outras* as facetas correspondentes a uma categoria C para a qual C & *Cat* é diferente de zero.
 
 `locale(const locale& Loc, const char* Locname, category Cat);`
 
 `locale(const locale& Loc, const string& Locname, category Cat);`
 
-substituir em `locale(Locname, _All)` as facetas correspondentes a uma categoria C para a qual C e `Cat` são diferentes de zero.
+substitui a partir `locale(Locname, _All)` as facetas correspondentes a uma categoria C para a qual C & *Cat* é diferente de zero.
 
 `template<class Facet> locale(const locale& Loc, Facet* Fac);`
 
-substitui (ou adiciona) `Loc` à faceta `Fac`, se `Fac` não for um ponteiro nulo.
+substitui (ou adiciona a) *Loc* faceta *Fac*, se *Fac* não for um ponteiro nulo.
 
-Se um nome de localidade `Locname` for um ponteiro nulo ou inválido, a função lançará o [runtime_error](../standard-library/runtime-error-class.md).
+Se um nome de localidade *Locname* for um ponteiro nulo ou inválido, a função lançará [runtime_error](../standard-library/runtime-error-class.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -555,7 +555,7 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` Uma das localidades a ser testada para fins de desigualdade.
+*à direita* uma das localidades a ser testado quanto à desigualdade.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -618,9 +618,9 @@ bool operator()(
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` A cadeia de caracteres à esquerda.
+*à esquerda* a cadeia de caracteres à esquerda.
 
-`right` A cadeia de caracteres à direita.
+*direito* a cadeia de caracteres à direita.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -685,7 +685,7 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` Uma das localidades a ser testado para igualdade.
+*à direita* uma das localidades a ser testado quanto à igualdade.
 
 ### <a name="return-value"></a>Valor de retorno
 

@@ -7,12 +7,12 @@ f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 083d928198d8d83d8a56d8a74a6204e94c86aa67
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad8041ff6a4abab84272d2bbbdee290bfce4eff6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846279"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961871"
 ---
 # <a name="lthashsetgt-functions"></a>Funções &lt;hash_set&gt;
 
@@ -35,13 +35,13 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` O hash_set fornecendo os elementos a ser trocado ou o hash_set cujos elementos são sejam trocadas com aqueles o hash_set `left`.
+*à direita* hash_set que fornece os elementos a serem trocados ou o hash_set cujos elementos deverão ser trocados do hash_set *esquerdo*.
 
-`left` O hash_set cujos elementos são sejam trocadas com aqueles o hash_set `right`.
+*à esquerda* hash_set cujos elementos deverão ser trocados do hash_set *direito*.
 
 ### <a name="remarks"></a>Comentários
 
-A função de modelo `swap` é um algoritmo especializado na classe de contêiner hash_set para executar a função membro `left.`[swap](../standard-library/hash-set-class.md#swap)( `right`). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo
+O `swap` função de modelo é um algoritmo especializado na classe de contêiner hash_set para executar a função de membro `left.` [swap](../standard-library/hash-set-class.md#swap)(`right`). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo
 
 **modelo \<classe T> void swap(T&, T&),**
 
@@ -64,13 +64,13 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` O hash_multiset fornecendo os elementos a ser trocado ou o hash_multiset cujos elementos são sejam trocadas com aqueles o hash_multiset `left`.
+*à direita* hash_multiset que fornece os elementos a serem trocados ou o hash_multiset cujos elementos deverão ser trocados do hash_multiset *esquerdo*.
 
-`left` O hash_multiset cujos elementos são sejam trocadas com aqueles o hash_multiset `right`.
+*à esquerda* hash_multiset cujos elementos deverão ser trocados do hash_multiset *direito*.
 
 ### <a name="remarks"></a>Comentários
 
-A função de modelo `swap` é um algoritmo especializado na classe de contêiner hash_multiset para executar a função membro `left.`[swap](../standard-library/hash-multiset-class.md#swap)( `right`). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo
+O `swap` função de modelo é um algoritmo especializado na classe de contêiner hash_multiset para executar a função de membro `left.` [swap](../standard-library/hash-multiset-class.md#swap)(`right`). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo
 
 **modelo \<classe T> void swap(T&, T&),**
 

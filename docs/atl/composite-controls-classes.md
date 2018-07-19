@@ -1,5 +1,5 @@
 ---
-title: Composição controla Classes (ATL) | Microsoft Docs
+title: Classes (ATL) de controles de composição | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c421b385564299035e0045dac275859afc5a222
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acfbf8379512513e59528a6eb2855b9caed7d298
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355358"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964191"
 ---
-# <a name="composite-controls-classes"></a>Classes de controles compostos
-A seguinte classe fornece suporte para a criação de controles compostos  
+# <a name="composite-controls-classes"></a>Classes de controles de composição
+A classe a seguir fornece suporte para a criação de controles de composição  
   
--   [CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md) controles ActiveX derivados `CComCompositeControl` são hospedados por uma caixa de diálogo padrão. Esses tipos de controles são chamados controles compostos porque eles são capazes de hospedar outros controles (controles nativos do Windows e controles ActiveX).  
+-   [CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md) controles ActiveX que derivado de `CComCompositeControl` são hospedados por uma caixa de diálogo padrão. Esses tipos de controles são chamados de controles de composição porque eles são capazes de hospedar outros controles (controles nativos do Windows e controles ActiveX).  
   
 ## <a name="related-articles"></a>Artigos relacionados  
  [Fundamentos do controle composto](../atl/atl-composite-control-fundamentals.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../atl/atl-class-overview.md)   
- [Macros de controle composto](../atl/reference/composite-control-macros.md)   
+ [Macros de controle de composição](../atl/reference/composite-control-macros.md)   
  [Funções globais do controle de composição](../atl/reference/composite-control-global-functions.md)
 

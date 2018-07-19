@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3db081a3baa3b8e5d974080275fc75b372009b6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f54f036c6e647c3f04bb202b68109e227061bf7a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850125"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961916"
 ---
 # <a name="binarynegate-class"></a>Classe binary_negate
 
@@ -44,11 +44,11 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-`Func` A função binária deve ser negado.
+*Func* função binária a ser negada.
 
-`left` O operando da esquerda da função binário a ser negado.
+*à esquerda* o operando esquerdo da função binária a ser negada.
 
-`right` O operando à direita da função binário a ser negado.
+*à direita* o operando direito da função binária a ser negada.
 
 ## <a name="return-value"></a>Valor de retorno
 

@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bedb88ae44faaea9d65b41dcc98a4e83354ea71b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 222aef46fb8080ba044904dbbedd5546cec51929
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858728"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963073"
 ---
 # <a name="uniformrealdistribution-class"></a>Classe uniform_real_distribution
 
@@ -81,7 +81,7 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType* o tipo de resultado de ponto flutuante, o padrão será a `double`. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType* padrão é o tipo de resultado de ponto flutuante **duplo**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -199,17 +199,20 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*um* o limite inferior de valores aleatórios, inclusivos.
+*a*  
+O limite inferior para valor aleatório (inclusivo).
 
-*b* o limite superior de valores aleatórios, exclusivos.
+*b*  
+O limite superior para valor aleatório (exclusivo).
 
-*parâmetro* o `param_type` estrutura usada para construir a distribuição.
+*parm*  
+A estrutura `param_type` usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
 **Pré-condição:** `a < b`
 
-O primeiro construtor constrói um objeto cujo valor `a` armazenado contém o valor *a* e cujo valor `b` armazenado contém o valor *b*.
+O primeiro construtor constrói um objeto cujo armazenado *uma* valor contém o valor *um* e cujo armazenado *b* valor contém o valor de *b*.
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
@@ -231,11 +234,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*um* o limite inferior de valores aleatórios, inclusivos.
+*a*  
+O limite inferior para valor aleatório (inclusivo).
 
-*b* o limite superior de valores aleatórios, exclusivos.
+*b*  
+O limite superior para valor aleatório (exclusivo).
 
-*direito* o `param_type` objeto a ser comparado a este.
+*right*  
+O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários
 

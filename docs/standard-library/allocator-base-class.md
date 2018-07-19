@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c078933ad35cff1a52de433b1ae5d321db1985c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f27cb2bc1a711b77006fa496cc080f546e539ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847774"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962441"
 ---
 # <a name="allocatorbase-class"></a>Classe allocator_base
 
@@ -70,8 +70,8 @@ class allocator_base
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`Type`|O tipo dos elementos alocados pelo alocador.|
-|`Sync`|A política de sincronização do alocador, que é [Classe sync_none](../standard-library/sync-none-class.md), [Classe sync_per_container](../standard-library/sync-per-container-class.md), [Classe sync_per_thread](../standard-library/sync-per-thread-class.md) ou [Classe sync_shared](../standard-library/sync-shared-class.md).|
+|*Tipo*|O tipo dos elementos alocados pelo alocador.|
+|*sincronização*|A política de sincronização do alocador, que é [Classe sync_none](../standard-library/sync-none-class.md), [Classe sync_per_container](../standard-library/sync-per-container-class.md), [Classe sync_per_thread](../standard-library/sync-per-thread-class.md) ou [Classe sync_shared](../standard-library/sync-shared-class.md).|
 
 ### <a name="constructors"></a>Construtores
 
@@ -95,14 +95,14 @@ class allocator_base
 
 |Função de membro|Descrição|
 |-|-|
-|[_Charalloc](#charalloc)|Aloca armazenamento para uma matriz do tipos `char`.|
-|[_Chardealloc](#chardealloc)|Libera armazenamento para a matriz que contém os elementos do tipo `char`.|
+|[_Charalloc](#charalloc)|Aloca armazenamento para uma matriz do tipo **char**.|
+|[_Chardealloc](#chardealloc)|Libera armazenamento para a matriz que contém elementos do tipo **char**.|
 |[address](#address)|Localiza o endereço de um objeto cujo valor é especificado.|
 |[allocate](#allocate)|Aloca um bloco de memória grande o suficiente para armazenar pelo menos um número especificado de elementos.|
 |[construct](#construct)|Constrói um tipo específico de objeto em um endereço especificado que é inicializado com um valor especificado.|
 |[deallocate](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|
 |[destroy](#destroy)|Chama um destruidor de objetos sem desalocar a memória na qual o objeto foi armazenado.|
-|[max_size](#max_size)|Retorna o número de elementos do tipo `Type` que podem ser alocados por um objeto da classe allocator antes que a memória livre seja totalmente usada.|
+|[max_size](#max_size)|Retorna o número de elementos do tipo *Type* que podem ser alocados por um objeto da classe allocator antes que a memória livre seja totalmente usada.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -112,7 +112,7 @@ class allocator_base
 
 ## <a name="charalloc"></a>  allocator_base::_Charalloc
 
-Aloca armazenamento para uma matriz do tipos `char`.
+Aloca armazenamento para uma matriz do tipo **char**.
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -122,7 +122,7 @@ char *_Charalloc(size_type count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`count`|O número de elementos na matriz a serem alocados.|
+|*count*|O número de elementos na matriz a serem alocados.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -134,7 +134,7 @@ Essa função de membro é usada pelos contêineres quando são compilados com u
 
 ## <a name="chardealloc"></a>  allocator_base::_Chardealloc
 
-Libera armazenamento para a matriz que contém os elementos do tipo `char`.
+Libera armazenamento para a matriz que contém elementos do tipo **char**.
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -144,8 +144,8 @@ void _Chardealloc(void* ptr, size_type count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`ptr`|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
-|`count`|O número de objetos a serem desalocados do armazenamento.|
+|*ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
+|*count*|O número de objetos a serem desalocados do armazenamento.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -163,7 +163,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Parâmetros
 
-`val` O valor const ou nonconst do objeto cujo endereço está sendo pesquisado.
+*Val* o valor const ou do objeto cujo endereço está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -188,8 +188,8 @@ pointer allocate(size_type _Nx);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`_Nx`|O número de elementos na matriz a serem alocados.|
-|`_Hint`|Este parâmetro é ignorado.|
+|*_Nx*|O número de elementos na matriz a serem alocados.|
+|*_Hint*|Este parâmetro é ignorado.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -214,7 +214,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`right`|O objeto alocador a ser copiado.|
+|*right*|O objeto alocador a ser copiado.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -248,8 +248,8 @@ void construct(pointer ptr, const Type& val);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`ptr`|Um ponteiro para o local no qual o objeto deve ser construído.|
-|`val`|O valor com o qual o objeto que está sendo construído deve ser inicializado.|
+|*ptr*|Um ponteiro para o local no qual o objeto deve ser construído.|
+|*Val*|O valor com o qual o objeto que está sendo construído deve ser inicializado.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -267,8 +267,8 @@ void deallocate(pointer ptr, size_type _Nx);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`ptr`|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
-|`_Nx`|O número de objetos a serem desalocados do armazenamento.|
+|*ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
+|*_Nx*|O número de objetos a serem desalocados do armazenamento.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -286,7 +286,7 @@ void destroy(pointer ptr);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`ptr`|Um ponteiro que designa o endereço do objeto a ser destruído.|
+|*ptr*|Um ponteiro que designa o endereço do objeto a ser destruído.|
 
 ### <a name="remarks"></a>Comentários
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb54ae332dac556333516c5e50129b9ba43ce07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01eb327458331ca457b7b7f23d8c69668fbf1fa7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845070"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964152"
 ---
 # <a name="binaryfunction-struct"></a>Struct binary_function
 
@@ -45,7 +45,7 @@ O struct de modelo serve como base para classes que definem uma função membro 
 
 **const second_argument_type&** ) **const**
 
-Todas essas funções binárias podem se referir ao seu primeiro tipo de argumento como **first_argument_type**, seu segundo tipo de argumento como **second_argument_type** e ao seu tipo de retorno como ***result_type***.
+Todas essas funções binárias podem se referir a seu primeiro tipo de argumento como `first_argument_type`, seu segundo argumento de tipo como `second_argument_type`e seu tipo de retorno como ***result_type***.
 
 ## <a name="example"></a>Exemplo
 

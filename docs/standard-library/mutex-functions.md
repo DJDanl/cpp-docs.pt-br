@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.openlocfilehash: 85ed95250b5563cd8a7c1ef9cfc0ee048cb3bc60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: df52b5bdf9b7054fd838b1892c4e641cdf9d4dcc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858206"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962182"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>Funções e variáveis &lt;mutex&gt;
 
@@ -50,15 +50,15 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>Parâmetros
 
-`Flag` Um [once_flag](../standard-library/once-flag-structure.md) objeto que garante que o objeto pode ser chamado somente é chamado uma vez.
+*Sinalizador* um [once_flag](../standard-library/once-flag-structure.md) objeto que garante que o objeto que pode ser chamado apenas é chamado uma vez.
 
-`F` Um objeto que pode ser chamado.
+*F* um objeto que pode ser chamado.
 
-`A` Uma lista de argumentos.
+*Um* uma lista de argumentos.
 
 ### <a name="remarks"></a>Comentários
 
-Se `Flag` não for válido, a função lançará um [system_error](../standard-library/system-error-class.md) com o código de erro `invalid_argument`. Caso contrário, a função de modelo usará seu argumento `Flag` para garantir que chame `F(A...)` com êxito exatamente uma vez, independentemente de quantas vezes o modelo de função for chamado. Se `F(A...)` sai ao lançar uma exceção, a chamada não foi bem-sucedida.
+Se *sinalizador* não é válido, a função lançará um [system_error](../standard-library/system-error-class.md) que tem um código de erro `invalid_argument`. Caso contrário, a função de modelo usará seu *sinalizador* argumento para garantir que ele chama `F(A...)` com êxito exatamente uma vez, independentemente de quantas vezes a função de modelo é chamada. Se `F(A...)` sai ao lançar uma exceção, a chamada não foi bem-sucedida.
 
 ## <a name="defer_lock"></a>  Variável defer_lock
 

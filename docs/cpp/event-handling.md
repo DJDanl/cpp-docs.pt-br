@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09029f3afef0a9a28fdc572b9b7d8685cf76e811
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d27ff977bf3e4132f7782c0ffcb85bebefd42d68
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414607"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961435"
 ---
 # <a name="event-handling"></a>Tratamento de Evento
-Manipulação de eventos principalmente tem suporte para classes COM (classes C++ que implementam os objetos COM, normalmente usando classes ATL ou [coclass](../windows/coclass.md) atributo).  Para obter mais informações, consulte [manipulação de eventos COM](../cpp/event-handling-in-com.md).  
+Manipulação de eventos é suportada principalmente para classes COM (classes C++ que implementam objetos COM, normalmente usando classes ATL ou o [coclass](../windows/coclass.md) atributo).  Para obter mais informações, consulte [manipulação de eventos em COM](../cpp/event-handling-in-com.md).  
   
  A manipulação de eventos também tem suporte para classes nativas de C++ (classes C++ que não implementam objetos COM). Entretanto, esse suporte é preterido e será removido em uma versão futura.  Para obter mais informações, consulte [manipulação de eventos em C++ nativo](../cpp/event-handling-in-native-cpp.md).  
   
@@ -44,4 +44,3 @@ Manipulação de eventos principalmente tem suporte para classes COM (classes C+
 ## <a name="see-also"></a>Consulte também  
  [Referência da linguagem C++](../cpp/cpp-language-reference.md)   
  [Palavras-chave](../cpp/keywords-cpp.md)   
- [Exemplos de manipulação de eventos](http://msdn.microsoft.com/en-us/cc0287d4-f92b-4da5-85fc-a0f186e16424)

@@ -9,16 +9,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 25e40157c1872df3e970bb234accab5c487c6287
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0bc4ce7c36d3ba097b04b1704fea7633eb7d26ea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841122"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962950"
 ---
 # <a name="ltallocatorsgt-operators"></a>Operadores &lt;alocadores&gt;
 
-Essas são as funções de operador de modelo global definidas no &lt;alocadores&gt;. Para funções de operador de membro de classe, consulte a documentação da classe.
+Essas são as funções de operador de modelo global definidas &lt;alocadores&gt;. Para funções de operador de membro de classe, consulte a documentação da classe.
 
 |||
 |-|-|
@@ -39,8 +39,8 @@ bool operator!=(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`left`|Um dos objetos alocadores a serem testados quanto à desigualdade.|
-|`right`|Um dos objetos alocadores a serem testados quanto à desigualdade.|
+|*left*|Um dos objetos alocadores a serem testados quanto à desigualdade.|
+|*right*|Um dos objetos alocadores a serem testados quanto à desigualdade.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -65,8 +65,8 @@ bool operator==(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`left`|Um dos objetos alocadores a serem testados quanto à igualdade.|
-|`right`|Um dos objetos alocadores a serem testados quanto à igualdade.|
+|*left*|Um dos objetos alocadores a serem testados quanto à igualdade.|
+|*right*|Um dos objetos alocadores a serem testados quanto à igualdade.|
 
 ### <a name="return-value"></a>Valor de retorno
 

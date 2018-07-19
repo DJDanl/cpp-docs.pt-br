@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d654c526e5c856431d69c045c5018d77a6fed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf93d84534671cb65c873555d70fea756036fe06
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860012"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961633"
 ---
 # <a name="logicalnot-struct"></a>Struct logical_not
 
-Um objeto de função predefinido que executa a operação de expressão not lógica (`operator!`) em seu argumento.
+Um objeto de função predefinido que executa a lógica não operação (`operator!`) em seu argumento.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -49,9 +49,9 @@ struct logical_not<void>
 
 ### <a name="parameters"></a>Parâmetros
 
-`Type` Qualquer tipo que oferece suporte a um `operator!` que leva um operando do tipo especificado ou inferido.
+*Tipo de* qualquer tipo que dá suporte a um `operator!` que usa um operando do tipo especificado ou inferido.
 
-`Left` O operando de lógico não a operação. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `Type`.
+*Esquerda* o operando da lógica não a operação. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *tipo*.
 
 ## <a name="return-value"></a>Valor de retorno
 

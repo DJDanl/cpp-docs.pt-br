@@ -50,12 +50,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be3b8fc232c6d692dd6e4f80018ab571e4e0cb34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9bae212ec3d8edfacc7cd3afb37ab3c13dc11aef
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847709"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962439"
 ---
 # <a name="allocatortraits-class"></a>Classe allocator_traits
 
@@ -116,11 +116,11 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>Parâmetros
 
-`al` Um objeto de alocador.
+*Al* um objeto alocador.
 
-`count` O número de elementos para alocar.
+*Contagem de* o número de elementos a serem alocados.
 
-`hint` Um `const_pointer` que pode ajudar o objeto de alocador que satisfazem a solicitação de armazenamento ao localizar o endereço de um objeto alocado antes da solicitação. Um ponteiro nulo é tratado como nenhuma dica.
+*Dica* um `const_pointer` que pode ajudar o objeto de alocador a atender à solicitação para o armazenamento, localizando o endereço de um objeto alocado antes da solicitação. Um ponteiro nulo é tratado como nenhuma dica.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -141,11 +141,11 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>Parâmetros
 
-`al` Um objeto de alocador.
+*Al* um objeto alocador.
 
-`ptr` Um ponteiro para o local onde o objeto a ser construído.
+*PTR* um ponteiro para o local em que o objeto deve ser construída.
 
-`args` Uma lista de argumentos passado para o construtor do objeto.
+*args* uma lista de argumentos que é passada para o construtor do objeto.
 
 ### <a name="remarks"></a>Comentários
 
@@ -163,11 +163,11 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>Parâmetros
 
-`al` Um objeto de alocador.
+*Al* um objeto alocador.
 
-`ptr` Um ponteiro para o local inicial dos objetos a ser desalocada.
+*PTR* um ponteiro para o local inicial dos objetos a serem desalocados.
 
-`count` O número de objetos a ser desalocada.
+*Contagem de* o número de objetos a serem desalocados.
 
 ### <a name="remarks"></a>Comentários
 
@@ -186,9 +186,9 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>Parâmetros
 
-`al` Um objeto de alocador.
+*Al* um objeto alocador.
 
-`ptr` Um ponteiro para o local do objeto.
+*PTR* um ponteiro para o local do objeto.
 
 ### <a name="remarks"></a>Comentários
 
@@ -204,7 +204,7 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>Parâmetros
 
-`al` Um objeto de alocador.
+*Al* um objeto alocador.
 
 ### <a name="remarks"></a>Comentários
 
@@ -220,11 +220,11 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>Parâmetros
 
-`al` Um objeto de alocador.
+*Al* um objeto alocador.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Esse método retornará `al.select_on_container_copy_construction()`, se aquele tipo for bem formado, caso contrário, retornará `al`.
+Esse método retornará `al.select_on_container_copy_construction()`, se aquele tipo for bem formada, caso contrário, retornará *al*.
 
 ### <a name="remarks"></a>Comentários
 

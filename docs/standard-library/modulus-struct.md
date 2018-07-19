@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226e9895d7ddc199e2f15c3721228f59c0e5a0ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5b9ae4ae3b7d741624d220ba00006d51a61fd20
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853551"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962156"
 ---
 # <a name="modulus-struct"></a>Struct modulus
 
@@ -49,11 +49,11 @@ struct modulus<void>
 
 ### <a name="parameters"></a>Parâmetros
 
-`Type`, `T`, `U` Qualquer tipo que oferece suporte a um `operator%` que usa operandos dos tipos especificados ou inferidos.
+*Tipo de*, *T*, *U* qualquer tipo que dá suporte a um `operator%` que usa operandos dos tipos especificados ou inferidos.
 
-`Left` O operando da esquerda da operação de módulo. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `T`.
+*Esquerda* o operando esquerdo da operação modulus. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *T*.
 
-`Right` O operando direito da operação de módulo. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `U`.
+*Direita* o operando direito da operação modulus. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *U*.
 
 ## <a name="return-value"></a>Valor de retorno
 

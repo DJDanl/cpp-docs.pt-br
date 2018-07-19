@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8d340f79e5442f22b09f801fd3040c09ce00a45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6130a6de2504f2a625677ceaac00d23bdbcd9372
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853463"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961078"
 ---
 # <a name="outputiteratortag-struct"></a>Struct output_iterator_tag
 
-Uma classe que fornece um tipo de retorno para a função **iterator_category**, que representa um iterador de saída.
+Uma classe que fornece um tipo de retorno para `iterator_category` função que representa um iterador de saída.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,13 +36,13 @@ struct output_iterator_tag {};
 
 As classes de marca de categoria são usadas como marcas de compilação para seleção de algoritmos. A função de modelo precisa encontrar a categoria mais específica do argumento iterador para que ela possa usar o algoritmo mais eficiente em tempo de compilação. Para cada iterador do tipo `Iterator`, `iterator_traits`< `Iterator`> **::iterator_category** deve ser definido para ser a marca de categoria mais específica que descreve o comportamento do iterador.
 
-O tipo é o mesmo que **iterator**\< **Iter**> **::iterator_category** quando **Iter** descreve um objeto que pode servir como um iterador de saída.
+O tipo é o mesmo que **iterador** \< **Iter**> **:: iterator_category** quando `Iter` descreve um objeto que pode servir como um iterador de saída.
 
 Essa marca não é parametrizada no `value_type` ou `difference_type` para o iterador, assim como acontece com as outras marcas de iterador, porque os iteradores de saída não tem um `value_type` ou `difference_type`.
 
 ## <a name="example"></a>Exemplo
 
-Consulte [iterator_traits](../standard-library/iterator-traits-struct.md) ou [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) para ver um exemplo de como usar **iterator_tag**s.
+Ver [iterator_traits](../standard-library/iterator-traits-struct.md) ou [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) para obter um exemplo de como usar `iterator_tag`s.
 
 ## <a name="requirements"></a>Requisitos
 

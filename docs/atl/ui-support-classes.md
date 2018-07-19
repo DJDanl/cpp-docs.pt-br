@@ -17,25 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 044fecc07d0d6ee252a966e0395f30415c7527bd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd98d71fe52f9ecfb1410593506ab6487540d4e5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360280"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961949"
 ---
 # <a name="ui-support-classes"></a>Classes de suporte de interface do usuário
-As classes a seguir fornecem suporte geral de interface do usuário:  
+As classes a seguir fornecem suporte geral da interface do usuário:  
   
 -   [IDocHostUIHandlerDispatch](../atl/reference/idochostuihandlerdispatch-interface.md) uma interface para a análise de HTML da Microsoft e o mecanismo de renderização.  
   
--   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) fornece os principais métodos por meio do qual um contêiner se comunica com um controle. Gerencia a ativação e desativação de controles no local.  
+-   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) fornece os principais métodos por meio do qual um contêiner se comunica com um controle. Gerencia a ativação e desativação dos controles no local.  
   
--   [IOleInPlaceObjectWindowlessImpl](../atl/reference/ioleinplaceobjectwindowlessimpl-class.md) gerencia a reativação de controles no local. Permite que um controle sem janelas para receber mensagens, bem como para participar de operações de arrastar e soltar.  
+-   [IOleInPlaceObjectWindowlessImpl](../atl/reference/ioleinplaceobjectwindowlessimpl-class.md) gerencia a reativação dos controles no local. Permite que um controle sem janelas para receber mensagens, bem como para participar em operações de arrastar e soltar.  
   
--   [IOleInPlaceActiveObjectImpl](../atl/reference/ioleinplaceactiveobjectimpl-class.md) ajuda a comunicação entre um controle no local e o contêiner.  
+-   [IOleInPlaceActiveObjectImpl](../atl/reference/ioleinplaceactiveobjectimpl-class.md) auxilia a comunicação entre um controle no local e seu contêiner.  
   
--   [IViewObjectExImpl](../atl/reference/iviewobjecteximpl-class.md) permite um controle para exibir próprio diretamente e notificar o contêiner de alterações em sua exibição. Fornece suporte para desenho cintilação, controles não retangulares e transparentes e teste de clique.  
+-   [IViewObjectExImpl](../atl/reference/iviewobjecteximpl-class.md) permite que um controle para exibir a mesmo diretamente e notificar o contêiner de alterações em sua exibição. Fornece suporte para desenho sem cintilação, controles não retangulares e transparentes e teste de clique.  
   
 ## <a name="related-articles"></a>Artigos relacionados  
  [Tutorial da ATL](../atl/active-template-library-atl-tutorial.md)  

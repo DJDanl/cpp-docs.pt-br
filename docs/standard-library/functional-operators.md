@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e84ed8ed97a529d67c6d136fd8464cd13c8a502
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1b9bc37213ed2e5690f85fca738d44e6eecfaa8c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845213"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962043"
 ---
 # <a name="ltfunctionalgt-operators"></a>Operadores &lt;functional&gt;
 
@@ -44,11 +44,11 @@ bool operator==(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Fty` O tipo de função para encapsular.
+*Fty* o tipo de função para encapsular.
 
-`f` O objeto de função
+*f* o objeto de função
 
-`npc` Um ponteiro nulo.
+*npc* um ponteiro nulo.
 
 ### <a name="remarks"></a>Comentários
 
@@ -101,11 +101,11 @@ bool operator!=(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Fty` O tipo de função para encapsular.
+*Fty* o tipo de função para encapsular.
 
-`f` O objeto de função
+*f* o objeto de função
 
-`npc` Um ponteiro nulo.
+*npc* um ponteiro nulo.
 
 ### <a name="remarks"></a>Comentários
 

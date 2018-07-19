@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de37ee92805d35b25e73e0682ce8abe79822a8b5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbd2f2c652c619a954b789a3b765fc636a03c33e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841174"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962718"
 ---
 # <a name="binder2nd-class"></a>Classe binder2nd
 
@@ -53,21 +53,21 @@ protected:
 
 ### <a name="parameters"></a>Parâmetros
 
-`Func` O objeto de função binário a ser convertido em um objeto de função unário.
+*Func* o objeto de função binária a ser convertido em um objeto de função unária.
 
-`right` O valor para o qual o segundo argumento do objeto de função binário a ser associado.
+*à direita* o valor ao qual o segundo argumento do objeto de função binária deve ser associado.
 
-`left` O valor do argumento que compara o objeto binário adaptado para o valor fixo do segundo argumento.
+*à esquerda* o valor do argumento que o objeto binário adaptado compara ao valor fixo do segundo argumento.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O objeto de função unária que resulta da associação do segundo argumento do objeto de função binária ao valor `right.`
+O objeto de função unária que resulta da associação do segundo argumento do objeto de função binária ao valor *certa*.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo armazena uma cópia de um objeto de função binária _*Func* em **op** e uma cópia de `right` em **value**. Define sua função membro `operator()` como **op**( `left`, **value**) de retorno.
+A classe de modelo armazena uma cópia de um objeto de função binária _ *Func* na `op`e uma cópia de *direita* em `value`. Define sua função membro `operator()` como **op**( `left`, **value**) de retorno.
 
-Se `Func` for um objeto do tipo **Operation** e c for uma constante, [bind2nd](../standard-library/functional-functions.md#bind2nd) (`Func`, `c`) será equivalente ao construtor `binder2nd`\< **Operation**> ( `Func`, `c`) da classe `binder2nd` e será mais conveniente.
+Se `Func` é um objeto do tipo `Operation` e c é uma constante, então [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) é equivalente ao `binder2nd` construtor da classe `binder2nd` \<  **Operação**> ( `Func`, `c` ) e mais conveniente.
 
 ## <a name="example"></a>Exemplo
 

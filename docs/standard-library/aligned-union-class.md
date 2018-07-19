@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a149269117f83b18838d54c728d6d8da580882b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdd2a8417f66c0e095f571c914d5a4624179fdb6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840694"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962107"
 ---
 # <a name="alignedunion-class"></a>Classe aligned_union
 
@@ -39,13 +39,13 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Len` O valor de alinhamento para o tipo de maior na União.
+*Len* o valor do alinhamento do maior tipo na União.
 
-`Types` Os tipos distintos na União subjacente.
+*Tipos de* os tipos distintos na União subjacente.
 
 ## <a name="remarks"></a>Comentários
 
-Use a classe de modelo para obter o alinhamento e o tamanho necessários para armazenar uma união no armazenamento não inicializado. O typedef de membro `type` nomeia um tipo POD adequado para o armazenamento de qualquer tipo listado em `Types`. O tamanho mínimo é `Len`. O membro estático `alignment_value` do tipo `std::size_t` contém o alinhamento mais estrito exigido de todos os tipos listados em `Types`.
+Use a classe de modelo para obter o alinhamento e o tamanho necessários para armazenar uma união no armazenamento não inicializado. O typedef do membro `type` nomeia um tipo POD adequado para o armazenamento de qualquer tipo listado na *tipos*; o tamanho mínimo é *Len*. O membro estático `alignment_value` do tipo `std::size_t` contém o alinhamento mais estrito exigido de todos os tipos listados na *tipos*.
 
 ## <a name="example"></a>Exemplo
 

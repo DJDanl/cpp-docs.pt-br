@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1cf7d03b9c34f6be15fc947206e8d14ec04c991
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6528cb1f3aa4da429cd27d1123536ab694f60ac6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848005"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961230"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
@@ -40,7 +40,7 @@ Define as funções da Biblioteca Padrão C++ que ajudam a construir *objetos de
 
 Algoritmos requerem dois tipos de objetos de função: unário e binário. Objetos de função unários exigem um argumento e objetos de função binários requerem dois argumentos. Um objeto de função e ponteiros de função podem ser passados como um predicado para um algoritmo, mas objetos de função também são adaptáveis e aumentam o escopo, a flexibilidade e a eficiência da Biblioteca Padrão C++. Se, por exemplo, um valor precisasse ser associado a uma função antes de ser passado para um algoritmo, um ponteiro de função não poderia ser usado. Adaptadores de função convertem ponteiros de função em objetos de função adaptáveis que podem ser associados a um valor. O cabeçalho \<functional> também contém adaptadores de função de membro que permitem que funções membro sejam chamadas como objetos de função adaptáveis. Funções são adaptáveis se tiverem declarações de tipo aninhado especificando seus tipos de retorno e argumento. O Padrão C++ requer que essa capacidade de adaptação seja implementada fazendo com que todas as classes de objeto padrão herdem das classes base unary_function ou binary_function. Objetos de função e seus adaptadores permitem que a Biblioteca Padrão C++ atualize aplicativos existentes e ajudam a integrar a biblioteca ao ambiente de programação do C++.
 
-A implementação do Visual C++ os objetos de função no \<funcional > inclui *functors operador transparente*, que são especializações do padrão de objetos de função e levar sem parâmetros de modelo, e Execute encaminhamento perfeito dos argumentos da função e retornar perfeita do resultado. Esse recurso faz parte da especificação do Rascunho do padrão do C++14. Essas especializações de modelo não exigem que você especifique tipos de argumento ao invocar functores de operadores bit a bit, lógicos, de comparação e aritméticos. Você pode sobrecarregar operadores bit a bit, aritméticos, de comparação ou bit para seus próprios tipos ou para combinações heterogêneas de tipos e, em seguida, usar os functores de operadores transparentes como argumentos de função. Por exemplo, se seu tipo *MyType* implementar `operator<`, você pode chamar `sort(my_collection.begin(), my_collection.end(), less<>())` em vez de especificar explicitamente o tipo `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.
+A implementação do Visual C++ de objetos de função no \<funcional > inclui *funções de operador transparentes*, que são especializações de padrão de objetos de função e levar sem parâmetros de modelo, e Execute o encaminhamento perfeito dos argumentos da função e o retorno perfeito do resultado. Esse recurso faz parte da especificação do Rascunho do padrão do C++14. Essas especializações de modelo não exigem que você especifique tipos de argumento ao invocar functores de operadores bit a bit, lógicos, de comparação e aritméticos. Você pode sobrecarregar operadores bit a bit, aritméticos, de comparação ou bit para seus próprios tipos ou para combinações heterogêneas de tipos e, em seguida, usar os functores de operadores transparentes como argumentos de função. Por exemplo, se seu tipo *MyType* implementar `operator<`, você pode chamar `sort(my_collection.begin(), my_collection.end(), less<>())` em vez de especificar explicitamente o tipo `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.
 
 ## <a name="c11c14-implementation"></a>Implementação C++11/C++14
 
@@ -100,10 +100,10 @@ Cada wrapper de chamada tem um construtor de movimentação e um construtor de c
 |[hash](../standard-library/hash-class.md)|Uma classe que computa um código hash para um valor.|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|Uma classe que testa se um tipo específico é gerado chamando `bind`.|
 |[is_placeholder](../standard-library/is-placeholder-class.md)|Uma classe que testa se um tipo específico é um espaço reservado.|
-|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Uma classe de adaptador que permite que uma função membro **non_const** que não usa argumentos seja chamada como um objeto de função unária quando inicializada com um argumento de referência.|
-|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Uma classe de adaptador que permite que uma função membro **non_const** que não usa argumentos seja chamada como um objeto de função unária quando inicializada com um argumento de ponteiro.|
-|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Uma classe de adaptador que permite que uma função membro **non_const** que usa um único argumento seja chamada como um objeto de função binária quando inicializada com um argumento de referência.|
-|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Uma classe de adaptador que permite que uma função membro **non_const** que usa um único argumento seja chamada como um objeto de função binária quando inicializada com um argumento de ponteiro.|
+|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Uma classe de adaptador que permite uma `non_const` função de membro que não usa argumentos seja chamada como um objeto de função unária quando inicializado com um argumento de referência.|
+|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Uma classe de adaptador que permite uma `non_const` função de membro que não usa argumentos seja chamada como um objeto de função unária quando inicializado com um argumento de ponteiro.|
+|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Uma classe de adaptador que permite uma `non_const` função de membro que usa um único argumento seja chamada como um objeto de função binária quando inicializado com um argumento de referência.|
+|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Uma classe de adaptador que permite uma `non_const` função de membro que usa um único argumento seja chamada como um objeto de função binária quando inicializado com um argumento de ponteiro.|
 |[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|Converte um ponteiro de função binária em uma função binária adaptável.|
 |[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|Converte um ponteiro de função unária em uma função unária adaptável.|
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|Uma classe que encapsula uma referência.|

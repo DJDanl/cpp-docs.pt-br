@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e366f9b0cf92aed9c61609642f48f0e5cc9530d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 956a18a477ca5a713f951da31ca276bc4e379727
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858764"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964126"
 ---
 # <a name="syncperthread-class"></a>Classe sync_per_thread
 
@@ -44,7 +44,7 @@ class sync_per_thread
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`Cache`|O tipo de cache associado ao filtro de sincronização. Pode ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Cache*|O tipo de cache associado ao filtro de sincronização. Pode ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ## <a name="remarks"></a>Comentários
 
@@ -76,7 +76,7 @@ void *allocate(std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`count`|O número de elementos na matriz a serem alocados.|
+|*count*|O número de elementos na matriz a serem alocados.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -94,8 +94,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`ptr`|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
-|`count`|O número de objetos a serem desalocados do armazenamento.|
+|*ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
+|*count*|O número de objetos a serem desalocados do armazenamento.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -113,12 +113,12 @@ bool equals(const sync<Cache>& Other) const;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`Cache`|O objeto de cache do filtro de sincronização.|
-|`Other`|O objeto de cache a ser comparado quanto à igualdade.|
+|*Cache*|O objeto de cache do filtro de sincronização.|
+|*Outros*|O objeto de cache a ser comparado quanto à igualdade.|
 
 ### <a name="return-value"></a>Valor de retorno
 
-`false` se nenhum objeto de cache foi alocado a esse objeto ou a `Other` no thread atual. Caso contrário, retornará o resultado da aplicação de `operator==` aos dois objetos de cache.
+**False** se nenhum objeto de cache foi alocado para esse objeto ou para *outros* no thread atual. Caso contrário, retornará o resultado da aplicação de `operator==` aos dois objetos de cache.
 
 ### <a name="remarks"></a>Comentários
 

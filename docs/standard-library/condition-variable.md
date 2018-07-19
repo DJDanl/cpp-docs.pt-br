@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54045dfdebf3ab7c9f7ad04611bc9e267faea0d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7becd4cb5700cfb31acacc244d2640498bf8120e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845720"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963466"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -59,9 +59,9 @@ As classes `condition_variable_any` e `condition_variable` têm, cada uma, três
 
 - `wait_for` aguarda um `time interval` especificado.
 
-Cada um desses métodos tem duas versões sobrecarregadas. Um deles apenas aguarda e pode ser ativado falsamente. O outro usa um argumento de modelo adicional que define um predicado. O método não retorna até que o predicado seja `true`.
+Cada um desses métodos tem duas versões sobrecarregadas. Um deles apenas aguarda e pode ser ativado falsamente. O outro usa um argumento de modelo adicional que define um predicado. O método não retorna até que seja o predicado **verdadeira**.
 
-Cada classe também tem dois métodos usados para notificar uma variável de condição de que sua condição é `true`.
+Cada classe também tem dois métodos que são usados para notificar uma variável de condição que sua condição é **verdadeira**.
 
 - `notify_one` ativa um dos threads que está aguardando a variável de condição.
 

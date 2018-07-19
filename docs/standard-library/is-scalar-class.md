@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84cc8ade8d844b591d6cb848ebee0fb3b05fb932
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c0e37eb0eaa7f0a6e40f385315822742f15516e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33851896"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962365"
 ---
 # <a name="isscalar-class"></a>Classe is_scalar
 
@@ -37,11 +37,11 @@ struct is_scalar;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo de consulta.
+*Ty* o tipo de consulta.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo `Ty` for um tipo integral, um tipo de ponto flutuante, um tipo de enumeração, um tipo de ponteiro ou um tipo de ponteiro para membro ou uma forma `cv-qualified` de algum deles; caso contrário, será falsa.
+Uma instância do predicado de tipo será verdadeira se o tipo *Ty* é um tipo integral, um ponto flutuante tipo, um tipo de enumeração, um tipo de ponteiro ou um ponteiro para tipo de membro, ou um `cv-qualified` forma de um deles, caso contrário, será falsa.
 
 ## <a name="example"></a>Exemplo
 

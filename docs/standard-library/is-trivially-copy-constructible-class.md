@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01c95007f1db1bcaf549398fa8865a9e51fe23d1
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 410566c623595cc941ab6e6ad21dd95bd70fe516
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954096"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963661"
 ---
 # <a name="istriviallycopyconstructible-class"></a>Classe is_trivially_copy_constructible
 
@@ -36,13 +36,13 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>Parâmetros
 
-`T` O tipo de consulta.
+*T* o tipo de consulta.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo `T` for uma classe que tem um construtor de cópia trivial; caso contrário, será falsa.
+Uma instância do predicado de tipo será verdadeira se o tipo *T* é uma classe que tem um construtor de cópia trivial, caso contrário, será falsa.
 
-Um construtor de cópia para uma classe `T` será trivial se for declarado implicitamente, a classe `T` não tiver funções virtuais ou bases virtuais, todas as bases diretas da classe `T` tiverem construtores de cópia triviais, as classes de todos os membros de dados não estáticos de tipo de classe tiverem construtores de cópia triviais e as classes de todos os membros de dados não estáticos de matriz de tipo de classe tiverem operadores de cópia triviais.
+Um construtor de cópia para uma classe *T* será trivial se ele é declarado implicitamente, a classe *T* não tem funções virtuais ou bases virtuais, todas as bases diretas da classe *T* ter construtores triviais de cópia, as classes de todos os membros de dados não estáticos do tipo de classe tiverem construtores triviais de cópia e as classes de todos os membros de dados não estáticos da matriz de tipo de classe tiverem construtores triviais de cópia.
 
 ## <a name="requirements"></a>Requisitos
 

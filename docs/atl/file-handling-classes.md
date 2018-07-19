@@ -14,21 +14,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99430bc26754023bf7f23511546328e31b6be265
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: adff92e4b5c849c7fab151e716561e163cd59fff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353944"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962339"
 ---
 # <a name="file-handling-classes"></a>Classes de manipulação de arquivos
 Essas classes fornecem métodos para manipular arquivos, arquivos temporários e arquivos mapeados na memória.  
   
--   [CAtlFile](../atl/reference/catlfile-class.md) essa classe fornece um wrapper fino em torno do Windows API de manipulação de arquivos.  
+-   [CAtlFile](../atl/reference/catlfile-class.md) essa classe fornece um wrapper estreito ao redor do Windows API de manipulação de arquivos.  
   
--   [CAtlFileMapping](../atl/reference/catlfilemapping-class.md) essa classe representa um arquivo de mapeamento de memória, adicionando um operador cast para os métodos de [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md).  
+-   [CAtlFileMapping](../atl/reference/catlfilemapping-class.md) essa classe representa um arquivo mapeado em memória, adição de um operador cast para os métodos de [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md).  
   
--   [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md) essa classe representa um arquivo de mapeamento de memória.  
+-   [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md) essa classe representa um arquivo mapeado em memória.  
   
 -   [CAtlTemporaryFile](../atl/reference/catltemporaryfile-class.md) essa classe fornece métodos para a criação e uso de um arquivo temporário.  
   

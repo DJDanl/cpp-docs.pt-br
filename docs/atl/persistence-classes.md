@@ -17,21 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16490105f0ec2ded73f45e54d0f8a6700264893c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85c085e6e5a8f0bbddba5be2905b437425d9a5c3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353712"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963648"
 ---
 # <a name="persistence-classes"></a>Classes de persistência
-As seguintes classes de implementam a persistência de objeto:  
+As seguintes classes implementam a persistência de objeto:  
   
 -   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) permite que um cliente carregar e salvar as propriedades de um objeto para um conjunto de propriedades.  
   
--   [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md) permite que um cliente carregar e salvar dados de um objeto persistente em um fluxo.  
+-   [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md) permite que um cliente carregar e salvar dados persistentes de um objeto em um fluxo.  
   
--   [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md) permite que um cliente carregar e salvar dados de um objeto persistente para um armazenamento.  
+-   [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md) permite que um cliente carregar e salvar dados persistentes de um objeto para um armazenamento.  
   
 ## <a name="related-articles"></a>Artigos relacionados  
  [Tutorial da ATL](../atl/active-template-library-atl-tutorial.md)  

@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e403e0133818846deb08bb336adc98618e944bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7025e0d52aa882c26e2785279626959ca6b29ac1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861871"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962924"
 ---
 # <a name="scopedallocatoradaptor-class"></a>Classe scoped_allocator_adaptor
 
@@ -131,9 +131,9 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>Parâmetros
 
-`count` O número de elementos para o qual tem permissão armazenamento suficiente para alocar.
+*Contagem de* o número de elementos para o qual armazenamento suficiente deve ser alocado.
 
-`hint` Um ponteiro que poderão ajudar o objeto de alocador localizando o endereço de um objeto alocado antes da solicitação.
+*Dica* um ponteiro que pode ajudar o objeto alocador localizando o endereço de um objeto alocado antes da solicitação.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -168,19 +168,19 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`ptr` Um ponteiro para o local de memória em que o objeto é a ser construído.
+*PTR* um ponteiro para o local da memória em que o objeto deve ser construída.
 
-`args` Uma lista de argumentos.
+*args* uma lista de argumentos.
 
-`first` Um objeto do tipo primeiro em um par.
+*primeiro* um objeto do tipo primeiro em um par.
 
-`second` Um objeto do segundo tipo em um par.
+*segundo* um objeto do segundo tipo em um par.
 
-`right` Um objeto existente a ser movido ou copiado.
+*à direita* um objeto existente a ser movido ou copiado.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro método cria o objeto em `ptr` chamando `Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)`, em que `xargs...` é um dos mostrados a seguir.
+O primeiro método constrói o objeto no *ptr* chamando `Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)`, onde `xargs...` é um dos seguintes.
 
 - Se `uses_allocator<Ty, inner_allocator_type>` contém false, `xargs...` é `args...`.
 
@@ -188,7 +188,7 @@ O primeiro método cria o objeto em `ptr` chamando `Outermost_traits::construct(
 
 - Se `uses_allocator<Ty, inner_allocator_type>` for true e `is_constructible<Ty, args..., inner_allocator()>` for true, então `xargs...` será `args..., inner_allocator()`.
 
-O segundo método cria o objeto par em `ptr` chamando `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)`, em que `xargs...` é `first...` modificado assim como na lista acima; além disso, cria `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)`, em que `xargs...` é `second...` modificado assim como na lista acima.
+O segundo método constrói o objeto par em *ptr* chamando `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)`, onde `xargs...` está `first...` modificado assim como a lista acima, e `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)`, onde `xargs...` é `second...` modificado Assim como acontece na lista acima.
 
 O terceiro método se comporta da mesma maneira que `this->construct(ptr, piecewise_construct, tuple<>, tuple<>)`.
 
@@ -208,9 +208,9 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>Parâmetros
 
-`ptr` Um ponteiro para o local inicial dos objetos a ser desalocada.
+*PTR* um ponteiro para o local inicial dos objetos a serem desalocados.
 
-`count` O número de objetos a ser desalocada.
+*Contagem de* o número de objetos a serem desalocados.
 
 ## <a name="destroy"></a>  scoped_allocator_adaptor::destroy
 
@@ -223,7 +223,7 @@ void destroy(Ty* ptr)
 
 ### <a name="parameters"></a>Parâmetros
 
-`ptr` Um ponteiro para o objeto a ser destruído.
+*PTR* um ponteiro para o objeto a ser destruído.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -271,7 +271,7 @@ Uma referência ao objeto armazenado do tipo `outer_allocator_type`.
 
 Define o tipo `Outer::rebind\<Other>::other` como um sinônimo de `scoped_allocator_adaptor\<Other, Inner...>`.
 
-Reassociar struct {typedef Other_traits::rebind\<outros > Other_alloc; typedef scoped_allocator_adaptor\<Other_alloc, interna... > outros;};
+struct reassociação {typedef Other_traits::rebind\<outros > Other_alloc; typedef scoped_allocator_adaptor\<Other_alloc, Inner... > outros;};
 
 ## <a name="scoped_allocator_adaptor"></a> Construtor scoped_allocator_adaptor::scoped_allocator_adaptor
 
@@ -294,15 +294,15 @@ scoped_allocator_adaptor(Outer2&& al,
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` Um existente `scoped_allocator_adaptor`.
+*à direita* existente `scoped_allocator_adaptor`.
 
-`al` Um alocador existente a ser usado como o alocador externo.
+*Al* um alocador existente a ser usado como o alocador externo.
 
-`rest` Uma lista de alocadores a ser usado como os alocadores internos.
+*REST* uma lista de alocadores a ser usado como os alocadores internos.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro padrão de construtor cria seus objetos de alocador armazenado. Cada um dos três constructos de construtor seguintes cria seus objetos de alocador armazenado dos objetos correspondentes em `right`. O último construtor cria seus objetos de alocador armazenado dos argumentos correspondentes na lista de argumentos.
+O primeiro padrão de construtor cria seus objetos de alocador armazenado. Cada um dos próximos três construtores cria seus objetos de alocador armazenado dos objetos correspondentes em *certa*. O último construtor cria seus objetos de alocador armazenado dos argumentos correspondentes na lista de argumentos.
 
 ## <a name="select_on_container_copy_construction"></a>  scoped_allocator_adaptor::select_on_container_copy_construction
 
@@ -314,7 +314,7 @@ scoped_allocator_adaptor select_on_container_copy_construction();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Esse método retorna efetivamente `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`. O resultado é um novo objeto `scoped_allocator_adaptor` com cada objeto de alocador armazenado inicializado, por meio da chamada de `al.select_on_container_copy_construction()` para o alocador `al` correspondente.
+Esse método retorna efetivamente `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`. O resultado é um novo `scoped_allocator_adaptor` objeto com cada objeto de alocador armazenado inicializado chamando `al.select_on_container_copy_construction()` para o alocador correspondente *al*.
 
 ## <a name="see-also"></a>Consulte também
 

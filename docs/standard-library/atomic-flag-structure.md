@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06959bd5a22c65077f447f0f0e776025cbe5ced5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e6a5162057944ac3d91d2465cfefe99c68dd5fb3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842104"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961403"
 ---
 # <a name="atomicflag-structure"></a>Estrutura atomic_flag
 
-Descreve um objeto que define e limpa atomicamente um sinalizador `bool`. Operações em sinalizadores atômicos são sempre livres de bloqueio.
+Descreve um objeto que define e limpa atomicamente um **bool** sinalizador. Operações em sinalizadores atômicos são sempre livres de bloqueio.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,8 +39,8 @@ struct atomic_flag;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[clear](#clear)|Define o sinalizador armazenado como `false`.|
-|[test_and_set](#test_and_set)|Define o sinalizador armazenado como `true` e retorna o valor de sinalizador inicial.|
+|[clear](#clear)|Define o sinalizador armazenado como **falsos**.|
+|[test_and_set](#test_and_set)|Define o sinalizador armazenado como **verdadeira** e retorna o valor de sinalizador inicial.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -48,13 +48,13 @@ Objetos `atomic_flag` podem ser passados para as funções não membro [atomic_f
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<atômico >
+**Cabeçalho:** \<atomic >
 
 **Namespace:** std
 
 ## <a name="clear"></a>  atomic_flag::clear
 
-Define o sinalizador `bool` que é armazenado em `*this` para `false`, dentro das restrições [memory_order](../standard-library/atomic-enums.md#memory_order_enum) especificadas.
+Conjuntos do **bool** sinalizador armazenado em `*this` para **falso**, dentro de especificado [memory_order](../standard-library/atomic-enums.md#memory_order_enum) restrições.
 
 ```cpp
 void atomic_flag::clear(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -63,11 +63,11 @@ void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Order` Um [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Ordem* um [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="test_and_set"></a>  atomic_flag::test_and_set
 
-Define o sinalizador `bool` que é armazenado em `*this` para `true`, dentro das restrições [memory_order](../standard-library/atomic-enums.md#memory_order_enum) especificadas.
+Conjuntos a **bool** sinalizador armazenado em `*this` para **true**, em especificado [memory_order](../standard-library/atomic-enums.md#memory_order_enum) restrições.
 
 ```cpp
 bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -76,7 +76,7 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 
 ### <a name="parameters"></a>Parâmetros
 
-`Order` Um [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Ordem* um [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valor de retorno
 

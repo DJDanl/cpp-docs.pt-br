@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93cbd58b3259821292254d8395f5d2435ecaa365
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f749f8cd43588eea8476c2746134b706737b6f5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966929"
 ---
 # <a name="explicit-type-conversion-operator-"></a>Operador de conversão de tipo explícito: ()
 O C++ permite a conversão de tipos explícita usando uma sintaxe semelhante à sintaxe de chamada de função.  
@@ -34,9 +35,9 @@ simple-type-name ( expression-list )
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Um *nome de tipo simples* seguido por um *lista de expressões* colocados em construções de parênteses um objeto do tipo especificado usando as expressões especificadas. O exemplo a seguir mostra uma conversão de tipo explícita para o tipo int:  
+ Um *simple-type-name* seguido por um *lista de expressões* entre parênteses constrói um objeto do tipo especificado usando as expressões especificadas. O exemplo a seguir mostra uma conversão de tipo explícita para o tipo int:  
   
-```  
+```cpp 
 int i = int( d );  
 ```  
   
@@ -44,7 +45,7 @@ int i = int( d );
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // expre_Explicit_Type_Conversion_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -90,14 +91,14 @@ int main()
   
 ## <a name="output"></a>Saída  
   
-```  
+```Output  
 x = 20, y = 10  
 x = 0, y = 0  
 ```  
   
  Embora o exemplo acima demonstre a conversão de tipos explícita usando constantes, a mesma técnica funciona para executar essas conversões em objetos. O fragmento de código a seguir demonstra isso:  
   
-```  
+```cpp 
 int i = 7;  
 float d;  
   
@@ -106,13 +107,16 @@ d = float( i );
   
  As conversões de tipos explícitas também podem ser especificadas usando a sintaxe em estilo "cast". O exemplo anterior, reescrito usando a sintaxe "cast", fica assim:  
   
-```  
+```cpp
+
 d = (float)i;  
+
 ```  
   
  As conversões em estilo "cast" e em estilo de função têm os mesmos resultados na conversão de valores únicos. Porém, na sintaxe em estilo de função, você pode especificar mais de um argumento para a conversão. Essa diferença é importante para os tipos definidos pelo usuário. Considere uma classe `Point` e as respectivas conversões:  
   
-```  
+```cpp
+
 struct Point  
 {  
     Point( short x, short y ) { _x = x; _y = y; }  
@@ -121,14 +125,15 @@ struct Point
 };  
 ...  
 Point pt = Point( 3, 10 );  
-```  
+
+```
   
- O exemplo anterior, que usa a conversão de estilo de função, mostra como converter dois valores (um para *x* e outra para *y*) para o tipo definido pelo usuário `Point`.  
+ O exemplo anterior, que usa a conversão em estilo de função, mostra como converter dois valores (um para *x* e outra para *y*) para o tipo definido pelo usuário `Point`.  
   
 > [!CAUTION]
 >  Use as conversões de tipos explícitas com cuidado, já que elas substituem a verificação de tipos interna do compilador do C++.  
   
- O [cast](../cpp/cast-operator-parens.md) notação deve ser usada para conversões para tipos que não têm um *nome de tipo simples* (ponteiro ou referência de tipos, por exemplo). A conversão em tipos que podem ser expressas com um *nome de tipo simples* podem ser gravados em um formato. Consulte [especificadores de tipo](http://msdn.microsoft.com/en-us/34b6c737-0ef1-4470-9b77-b26e46c0bbd4) para obter mais informações sobre o que constitui uma *nome de tipo simples*.  
+ O [cast](../cpp/cast-operator-parens.md) notação deve ser usada para conversões para tipos que não têm um *simple-type-name* (tipos ponteiro ou referência, por exemplo). A conversão em tipos que podem ser expressas com um *simple-type-name* podem ser escritos em qualquer formulário.  
   
  A definição de tipo nas conversões em estilo "cast" é ilegal.  
   

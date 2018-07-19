@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb5003c94793bc3b8195ebad48b438786b85ce84
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c0230c92a448eedf0cae7c80778c2bd4c48d077
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844036"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963161"
 ---
 # <a name="codecvtutf8"></a>codecvt_utf8
 
@@ -34,9 +34,9 @@ class codecvt_utf8 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Parâmetros
 
-`Elem` O tipo de elemento de caractere largo.
-`Maxcode` O número máximo de caracteres para a faceta de localidade.
-`Mode` Informações de configuração para a faceta de localidade.
+*Elem* o tipo de elemento de caractere largo.
+*Maxcode* o número máximo de caracteres para a faceta de localidade.
+*Modo* informações de configuração para a faceta de localidade.
 
 ## <a name="remarks"></a>Comentários
 

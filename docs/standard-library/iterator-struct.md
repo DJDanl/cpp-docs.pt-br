@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd414e2e6f23cb2fe44e6de4b5f53b33ef3555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a399fa8a9f8fc9a73d75605f31245e42a2154b7c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857877"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963622"
 ---
 # <a name="iterator-struct"></a>Struct iterator
 
-Um struct de base vazio usado para garantir que uma classe de iterador definida pelo usuário funcione corretamente com **iterator_trait**s.
+Um struct vazio de base usado para garantir que uma classe de iterador definida pelo usuário funcione corretamente com `iterator_trait`s.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -47,7 +47,7 @@ O struct de modelo atua como um tipo base para todos os iteradores. Ele define o
 
 - `iterator_category` (um sinônimo do parâmetro de modelo `Category`).
 
-- `value_type` (um sinônimo do parâmetro de modelo **Type**).
+- `value_type` (um sinônimo do parâmetro de modelo `Type`).
 
 - `difference_type` (um sinônimo do parâmetro de modelo `Distance`).
 
@@ -57,7 +57,7 @@ O struct de modelo atua como um tipo base para todos os iteradores. Ele define o
 
 - `reference` (um sinônimo do parâmetro de modelo `Reference`).
 
-Observe que `value_type` não deve um tipo constante mesmo que o **ponteiro** aponte para um objeto de **Tipo** const e a referência designe um objeto de **Tipo** const.
+Observe que `value_type` não deve ser um tipo constante mesmo que `pointer` aponte para um objeto de **const** `Type` e a referência designe um objeto do **const** `Type`.
 
 ## <a name="example"></a>Exemplo
 

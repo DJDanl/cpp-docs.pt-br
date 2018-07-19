@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 560cad54e315aa1304e26456392b2b82404d4933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 875df2d76f10b1d8319df0e82541ddf73e9d8c2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858975"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963531"
 ---
 # <a name="piecewiseconstantdistribution-class"></a>Classe piecewise_constant_distribution
 
@@ -90,7 +90,7 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType* o ponto flutuante tipo de resultado, o padrão é `double`. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType* o tipo de resultado, o padrão é ponto flutuante **duplo**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -258,23 +258,23 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-`firstI` Um iterador de entrada do primeiro elemento no intervalo de distribuição.
+*firstI* um iterador de entrada do primeiro elemento no intervalo de distribuição.
 
-`lastI` Um iterador de entrada do último elemento no intervalo de distribuição.
+*lastI* um iterador de entrada do último elemento no intervalo de distribuição.
 
-`firstW` Um iterador de entrada do primeiro elemento no intervalo de pesos.
+*firstW* um iterador de entrada do primeiro elemento no intervalo de pesos.
 
-`intervals` Um [lista_de_inicializadores](../cpp/initializers.md) com os intervalos da distribuição.
+*intervalos* uma [initializer_list](../cpp/initializers.md) com os intervalos da distribuição.
 
-`count` O número de elementos no intervalo de distribuição.
+*Contagem de* o número de elementos no intervalo de distribuição.
 
-`xmin` O valor mais baixo no intervalo de distribuição.
+*xMin* o valor mais baixo no intervalo de distribuição.
 
-`xmax` O valor mais alto no intervalo de distribuição. Deve ser maior que `xmin`.
+*xMax* o valor mais alto no intervalo de distribuição. Deve ser maior que *xmin*.
 
-`weightfunc` O objeto que representa a função de probabilidade da distribuição. Deve ser possível converter o valor retornado e o parâmetro em `double`.
+*weightfunc* o objeto que representa a função de probabilidade da distribuição. O parâmetro e o valor de retorno devem ser conversíveis em **duplas**.
 
-`parm` A estrutura de parâmetro usada para construir a distribuição.
+*parm* a estrutura de parâmetro usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
@@ -297,7 +297,7 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-constrói um objeto de distribuição com intervalos da lista do inicializador `intervals` e pesos gerados da função `weightfunc`.
+constrói um objeto de distribuição com intervalos da lista do inicializador *intervalos* e pesos gerados da função *weightfunc*.
 
 O construtor definido como
 ```cpp
@@ -306,14 +306,14 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-constrói um objeto de distribuição com intervalos `count` distribuídos uniformemente por [`xmin,xmax`], atribuindo a cada intervalo pesos de acordo com a função `weightfunc` e `weightfunc` deve aceitar um parâmetro e ter um valor retornado, sendo que ambos podem ser convertidos em `double`. **Pré-condição:** `xmin < xmax`
+constrói um objeto de distribuição com *contagem* intervalos distribuídos uniformemente por [ `xmin,xmax`], atribuindo a cada intervalo pesos de acordo com a função *weightfunc*, e  *weightfunc* deve aceitar um parâmetro e ter um valor de retorno, sendo que ambos são conversíveis para `double`. **Pré-condição:** `xmin < xmax`
 
 O construtor definido como
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-constrói um objeto de distribuição usando `parm` como estrutura de parâmetro armazenada.
+constrói um objeto de distribuição usando *parm* como a estrutura de parâmetro armazenada.
 
 ## <a name="param_type"></a>  piecewise_constant_distribution::param_type
 

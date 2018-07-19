@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c90838bf4ae49e372b35ca2e9a2f0feede4eb9b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d73beb5b935a729eb5e304eb03cbc37536c4d0e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864054"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963148"
 ---
 # <a name="memfun1t-class"></a>Classe mem_fun1_t
 
-Uma classe de adaptador que permite que uma função membro **non_const** que usa um único argumento seja chamada como um objeto de função binária quando inicializada com um argumento de ponteiro.
+Uma classe de adaptador que permite uma `non_const` função de membro que usa um único argumento seja chamada como um objeto de função binária quando inicializado com um argumento de ponteiro.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -44,11 +44,11 @@ class mem_fun1_t : public binary_function<Type *, Arg, Result> {
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Pm` Um ponteiro para a função de membro da classe **tipo** a ser convertido em um objeto de função.
+*_Pm* um ponteiro para a função de membro da classe `Type` a ser convertido em um objeto de função.
 
-`_Pleft` O objeto que o `_Pm` membro de função é chamado em.
+*Pleft* o objeto que o *_Pm* função de membro é chamada em.
 
-`right` O argumento que está sendo fornecido ao `_Pm`.
+*à direita* argumento que está sendo fornecido para *_Pm*.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -56,7 +56,7 @@ Uma função binária adaptável.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo armazena uma cópia de `_Pm`, que deve ser um ponteiro para uma função membro da classe **Type**, em um objeto de membro privado. Ela define sua função membro `operator()` como de retorno (**_Pleft**->\* `_Pm`)( **right**).
+A classe de modelo armazena uma cópia dos *_Pm*, que deve ser um ponteiro para uma função de membro de classe `Type`, em um objeto de membro privado. Ela define sua função membro `operator()` como de retorno (**_Pleft**->\* `_Pm`)( **right**).
 
 ## <a name="example"></a>Exemplo
 

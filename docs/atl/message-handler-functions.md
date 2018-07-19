@@ -1,5 +1,5 @@
 ---
-title: Funções de manipulador de mensagens | Microsoft Docs
+title: Funções de manipulador de mensagem | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,17 +23,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 437ae282efd4b21f294e26890f16130b7a89a55f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c247874f96fa3b91af8f5b03840f716b6eb6516
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355601"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963966"
 ---
 # <a name="message-handler-functions"></a>Funções de manipulador de mensagens
 ATL fornece três tipos de funções de manipulador de mensagens:  
   
-|Tipo de manipulador de mensagens|Macro correspondente de mensagem|  
+|Tipo de manipulador de mensagens|Macro correspondente da mensagem|  
 |-----------------------------|---------------------------------|  
 |[MessageHandler](../atl/messagehandler.md)|[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)|  
 |[CommandHandler](../atl/commandhandler.md)|[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)|  
@@ -41,6 +41,6 @@ ATL fornece três tipos de funções de manipulador de mensagens:
   
 ## <a name="see-also"></a>Consulte também  
  [Implementando uma janela](../atl/implementing-a-window.md)   
- [Mapas de mensagem](../atl/message-maps-atl.md)   
+ [Mapas de Mensagens](../atl/message-maps-atl.md)   
  [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
 

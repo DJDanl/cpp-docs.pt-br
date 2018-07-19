@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e275bd195c11b605891b250e9264bad587eb853
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0fb9b61ec4d2abc6ae73b2ebed7571398857d517
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865595"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963453"
 ---
 # <a name="syncshared-class"></a>Classe sync_shared
 
@@ -44,7 +44,7 @@ class sync_shared
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`Cache`|O tipo de cache associado ao filtro de sincronização. Pode ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Cache*|O tipo de cache associado ao filtro de sincronização. Pode ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ### <a name="member-functions"></a>Funções de membro
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`count`|O número de elementos na matriz a serem alocados.|
+|*count*|O número de elementos na matriz a serem alocados.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -94,8 +94,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`ptr`|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
-|`count`|O número de objetos a serem desalocados do armazenamento.|
+|*ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
+|*count*|O número de objetos a serem desalocados do armazenamento.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -113,12 +113,12 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`Cache`|O tipo de cache associado ao filtro de sincronização.|
-|`Other`|O cache a ser comparado quanto à igualdade.|
+|*Cache*|O tipo de cache associado ao filtro de sincronização.|
+|*Outros*|O cache a ser comparado quanto à igualdade.|
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o resultado de `cache.equals(Other.cache)`, em que `cache` representa o objeto de cache, for `true`; caso contrário, `false`.
+**Verdadeiro** se o resultado da `cache.equals(Other.cache)`, onde `cache` representa o objeto de cache, é **verdadeira**; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 

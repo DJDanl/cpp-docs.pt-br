@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0fd249dd7591caaaf62a0b8a698085efedb1f25
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 00ccd9e9ffbab78534c5b6417b7567ba03d007ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854529"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963674"
 ---
 # <a name="vectorltboolgtreferenceoperator-bool"></a>vector&lt;bool&gt;::reference::operator bool
 
-Fornece uma conversão implícita de `vector<bool>::reference` em `bool`.
+Fornece uma conversão implícita da `vector<bool>::reference` à **bool**.
 
 ## <a name="syntax"></a>Sintaxe
 

@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: d0a556505370078f599d6d667fa856723d9bac8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 974b1294f8ef23936d79e64926595779a9019368
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856792"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963687"
 ---
 # <a name="ltsystemerrorgt-operators"></a>Operadores &lt;system_error&gt;
 
@@ -38,8 +38,8 @@ bool operator==(const error_condition& left,
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`left`|O objeto a ser testado quanto à igualdade.|
-|`right`|O objeto a ser testado quanto à igualdade.|
+|*left*|O objeto a ser testado quanto à igualdade.|
+|*right*|O objeto a ser testado quanto à igualdade.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -65,12 +65,12 @@ bool operator!=(const error_condition& left,
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`left`|O objeto a ser testado quanto à desigualdade.|
-|`right`|O objeto a ser testado quanto à desigualdade.|
+|*left*|O objeto a ser testado quanto à desigualdade.|
+|*right*|O objeto a ser testado quanto à desigualdade.|
 
 ### <a name="return-value"></a>Valor de retorno
 
-**true** se o objeto passado em `left` não for igual ao objeto passado em `right`; caso contrário, **false**.
+**True** se o objeto passado *esquerdo* não é igual ao objeto passado *direita*; caso contrário **false**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -108,12 +108,12 @@ inline bool operator<(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`left`|O objeto a ser comparado.|
-|`right`|O objeto a ser comparado.|
+|*left*|O objeto a ser comparado.|
+|*right*|O objeto a ser comparado.|
 
 ### <a name="return-value"></a>Valor de retorno
 
-**true** se o objeto passado em `left` for menor que o objeto passado em `right`; caso contrário, **false**.
+**Verdadeiro** se o objeto passado *esquerdo* é menor que o objeto passado em *direita*; Caso contrário, **falsos**.
 
 ### <a name="remarks"></a>Comentários
 

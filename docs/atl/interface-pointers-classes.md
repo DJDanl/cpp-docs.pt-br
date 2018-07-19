@@ -18,21 +18,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa649b6d290244a62cf94dcd68617a2926ad3e44
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7c9176d6ac22b4b9f802efabbb53d64fee3e3fef
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355529"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961792"
 ---
 # <a name="interface-pointers-classes"></a>Classes de ponteiros de interface
-As seguintes classes de gerenciam um ponteiro de interface especificado:  
+As seguintes classes gerenciam dado ponteiro de interface:  
   
 -   [CComPtr](../atl/reference/ccomptr-class.md) executa a contagem de referência automática.  
   
--   [CComQIPtr](../atl/reference/ccomqiptr-class.md) semelhante ao `CComPtr`, mas também executa a consulta automática de interfaces.  
+-   [CComQIPtr](../atl/reference/ccomqiptr-class.md) semelhante ao `CComPtr`, mas também executa a consulta automática das interfaces.  
   
--   [CInterfaceArray](../atl/reference/cinterfacearray-class.md) fornece métodos úteis ao construir uma matriz de COM ponteiros de interface.  
+-   [CInterfaceArray](../atl/reference/cinterfacearray-class.md) fornece métodos úteis ao construir uma matriz de ponteiros de interface.  
   
 -   [CInterfaceList](../atl/reference/cinterfacelist-class.md) fornece métodos úteis ao construir uma lista de COM ponteiros de interface.  
   

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d7ae039fefc0137d317a15a803a0bf5d8205c31
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc84748e35807ef0f270fe8fbbd7560a9a18e3b2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850008"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963489"
 ---
 # <a name="allocators"></a>Alocadores
 
@@ -38,7 +38,7 @@ A Biblioteca Padrão do C++ fornece uma implementação padrão de um alocador. 
 
 ## <a name="writing-your-own-allocator-c11"></a>Criando seu próprio alocador (C++11)
 
-O alocador padrão usa `new` e `delete` para alocar e desalocar a memória. Se quiser usar um método de alocação de memória diferente, como usar memória compartilhada, você deverá criar seu próprio alocador. Se você estiver usando o C++11 e precisar criar um novo alocador personalizado, crie-o como um alocador mínimo, se possível. Mesmo se você já implementou um alocador do estilo antigo, considere modificá-lo para transformá-lo em um *alocador mínimo* e aproveitar o método `construct()` mais eficiente que será fornecido automaticamente.
+O alocador padrão usa **novos** e **excluir** para alocar e desalocar a memória. Se quiser usar um método de alocação de memória diferente, como usar memória compartilhada, você deverá criar seu próprio alocador. Se você estiver usando o C++11 e precisar criar um novo alocador personalizado, crie-o como um alocador mínimo, se possível. Mesmo se você já implementou um alocador do estilo antigo, considere modificá-lo para transformá-lo em um *alocador mínimo* e aproveitar o método `construct()` mais eficiente que será fornecido automaticamente.
 
 Um alocador mínimo requer muito menos clichê e permite que você se concentre nas funções de membro `allocate` e `deallocate` que fazem todo o trabalho. Ao criar um alocador mínimo, não implemente nenhum membro, exceto os que são mostrados no exemplo a seguir:
 

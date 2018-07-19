@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b19ac68f1d1db9ac73e0519b566f68443775db11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1dc03a9d8f5f11b08ab2d5cb9d21190ac0a75925
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852198"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962667"
 ---
 # <a name="maskarray-class"></a>Classe mask_array
 
@@ -31,11 +31,11 @@ Uma classe de modelo interno e auxiliar, que dá suporte para objetos que são s
 
 ## <a name="remarks"></a>Comentários
 
-A classe descreve um objeto que armazena uma referência a um objeto **va** da classe [valarray](../standard-library/valarray-class.md)**\<Type>**, bem como um objeto **ba** da classe [valarray\<bool>](../standard-library/valarray-bool-class.md), que descreve a sequência de elementos a serem selecionados do objeto **valarray\<Type>**.
+A classe descreve um objeto que armazena uma referência a um objeto `va` da classe [valarray](../standard-library/valarray-class.md)**\<tipo >**, bem como um objeto `ba` da classe [ valarray\<bool >](../standard-library/valarray-bool-class.md), que descreve a sequência de elementos a serem selecionados do `valarray<Type>` objeto.
 
-Você cria um objeto **mask_array\<Type>** apenas escrevendo uma expressão no formato [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at). As funções de membro da classe mask_array, então, se comportam como as assinaturas de função correspondentes definidas para **valarray\<Type>**, exceto pelo fato de somente a sequência de elementos selecionados ser afetada.
+Você constrói uma `mask_array<Type>` objeto apenas escrevendo uma expressão do formulário [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at). As funções de membro da classe mask_array, em seguida, se comportam como as assinaturas de função correspondentes definidas para `valarray<Type>`, exceto que somente a sequência de elementos selecionados ser afetada.
 
-A sequência consiste, em sua maioria, de elementos **ba.size**. Um elemento *J* será incluído somente se **ba**[ *J*] for true. Portanto, há tantos elementos na sequência quanto há elementos true em **ba**. Se `I` for o índice do menor elemento true em **ba**, então **va**[ `I`] será o elemento zero na sequência selecionada.
+A sequência consiste no máximo `ba.size` elementos. Um elemento *J* será incluído somente se **ba**[ *J*] for true. Portanto, há tantos elementos na sequência quanto há elementos true em `ba`. Se `I` é o índice do menor elemento true em `ba`, em seguida, **va**[ `I`] é o elemento zero na sequência selecionada.
 
 ## <a name="example"></a>Exemplo
 

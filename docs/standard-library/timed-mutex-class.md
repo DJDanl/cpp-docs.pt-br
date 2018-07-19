@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4dc22ed8676c720dd8bde5c8f424915dfa8fe40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7181b4c5c1c74d5726fd37e98366225aecf7f63a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863252"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962654"
 ---
 # <a name="timedmutex-class"></a>Classe timed_mutex
 
@@ -112,7 +112,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o método obtiver a propriedade do `mutex` com êxito; caso contrário, `false`.
+**Verdadeiro** se o método obtiver a propriedade com êxito o `mutex`; caso contrário, **falso**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -129,11 +129,12 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Rel_time` Um [chrono::duration](../standard-library/duration-class.md) que especifica a quantidade máxima de tempo que o método tenta obter propriedade do objeto de `mutex`.
+*Rel_time*  
+ Um objeto [chrono::duration](../standard-library/duration-class.md) que especifica o tempo máximo que o método tenta obter a propriedade do `mutex`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o método obtiver a propriedade do `mutex` com êxito; caso contrário, `false`.
+**Verdadeiro** se o método obtiver a propriedade com êxito o `mutex`; caso contrário, **falso**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -152,11 +153,12 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Abs_time` Um ponto no tempo que especifica o limite depois que o método não tenta obter propriedade do `mutex`.
+*Abs_time*  
+ Um ponto no tempo que especifica o limite após o qual o método não tenta mais obter a propriedade do `mutex`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o método obtiver a propriedade do `mutex` com êxito; caso contrário, `false`.
+**Verdadeiro** se o método obtiver a propriedade com êxito o `mutex`; caso contrário, **falso**.
 
 ### <a name="remarks"></a>Comentários
 

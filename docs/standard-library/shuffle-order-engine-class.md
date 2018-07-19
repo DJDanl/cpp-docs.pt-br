@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4adbf2c0b6f3ce6d1bababf0a69bb6720ef6be77
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13b46bcd29624d696ae22494c394fa028d58fa8a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859011"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961968"
 ---
 # <a name="shuffleorderengine-class"></a>Classe shuffle_order_engine
 
@@ -45,9 +45,9 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Engine` O tipo de mecanismo de base.
+*Mecanismo* o tipo de mecanismo de base.
 
-`K` **Tamanho da tabela**. Número de elementos no buffer (tabela). **Pré-condição**: `0 < K`
+*K* **tamanho da tabela**. Número de elementos no buffer (tabela). **Pré-condição**: `0 < K`
 
 ## <a name="members"></a>Membros
 
@@ -60,7 +60,7 @@ Para obter mais informações sobre membros do mecanismo, consulte [\<random>](.
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe de modelo descreve um *adaptador de mecanismo* que produz valores ao reorganizar os valores retornados por seu mecanismo básico. Cada construtor preenche a tabela interna com os valores `K` retornados pelo mecanismo básico. Além disso, um elemento aleatório é selecionado na tabela quando um valor é solicitado.
+Essa classe de modelo descreve um *adaptador de mecanismo* que produz valores ao reorganizar os valores retornados por seu mecanismo básico. Cada construtor preenche a tabela interna com *K* valores retornados pelo mecanismo de base e um elemento aleatório é selecionado da tabela quando um valor é solicitado.
 
 ## <a name="requirements"></a>Requisitos
 

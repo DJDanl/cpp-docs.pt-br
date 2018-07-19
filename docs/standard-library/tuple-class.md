@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d265938eb024a41d8b90f3b9891c35ec1ec251
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858793"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963920"
 ---
 # <a name="tuple-class"></a>Classe tupla
 
@@ -48,17 +48,18 @@ public:
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
    };
+```
 
-### Parameters
+### <a name="parameters"></a>Parâmetros
 
-`TN`
- The type of the Nth tuple element.
+*TN*  
+ O tipo do enésimo elemento de tupla.
 
-## Remarks
+## <a name="remarks"></a>Comentários
 
-The template class describes an object that stores N objects of types `T1`, `T2`, ..., `TN`, respectively, where where `0 <= N <= Nmax`. The extent of a tuple instance `tuple<T1, T2, ..., TN>` is the number `N` of its template arguments. The index of the template argument `Ti` and of the corresponding stored value of that type is `i - 1`. Thus, while we number the types from 1 to N in this documentation, the corresponding index values range from 0 to N - 1.
+A classe de modelo descreve um objeto que armazena objetos N de tipos `T1`, `T2`,..., `TN`, respectivamente, nas quais where `0 <= N <= Nmax`. A extensão de uma instância de tupla `tuple<T1, T2, ..., TN>` é o número `N` dos seus argumentos de modelo. O índice do argumento de modelo `Ti` e do valor correspondente armazenado desse tipo é `i - 1`. Assim, enquanto estamos numerar os tipos de 1 a N nesta documentação, o índice correspondente valores variam de 0 a N - 1.
 
-## Example
+## <a name="example"></a>Exemplo
 
 ```cpp
 // tuple.cpp
@@ -153,13 +154,15 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parâmetros
 
-`UN` O tipo de Nth copiados elemento de tupla.
+*CANCELAR*  
+ O tipo do enésimo elemento de tupla copiado.
 
-`right` Para copiar da tupla.
+*right*  
+ A tupla da qual copiar.
 
 ### <a name="remarks"></a>Comentários
 
-Os primeiros dois operadores de membros atribuem os elementos de `right` aos elementos correspondentes de `*this`. O terceiro operador de membro atribui `right.first` para o elemento no índice 0 de `*this` e `right.second` para o elemento no índice 1. Todos os três operadores de membros retornam `*this`.
+Os primeiros dois operadores de membros atribuem os elementos de *certa* para os elementos correspondentes de `*this`. O terceiro operador de membro atribui `right.first` para o elemento no índice 0 de `*this` e `right.second` para o elemento no índice 1. Todos os três operadores de membros retornam `*this`.
 
 Os operadores de membro restantes são análogos aos anteriores, mas com o [Declarador de referência Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -226,8 +229,8 @@ template <class... Types>
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`left`|Uma tupla cujos elementos serão trocados por aqueles da tupla `right`.|
-|`right`|Uma tupla cujos elementos serão trocados por aqueles da tupla `left`.|
+|*left*|Uma tupla cujos elementos deverão ser trocados por aqueles da tupla *certa*.|
+|*right*|Uma tupla cujos elementos deverão ser trocados por aqueles da tupla *esquerdo*.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -260,9 +263,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parâmetros
 
-`UN` O tipo de Nth copiados elemento de tupla.
+*CANCELAR*  
+ O tipo do enésimo elemento de tupla copiado.
 
-`right` Para copiar da tupla.
+*right*  
+ A tupla da qual copiar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -270,7 +275,7 @@ O primeiro construtor constrói um objeto cujos elementos são construídos por 
 
 O segundo construtor constrói um objeto cujos elementos são construídos de cópias dos argumentos `P1`, `P2`,..., `PN` com cada `Pi` inicializando o elemento no índice `i - 1`.
 
-O terceiro e quarto construtores constroem um objeto cujos elementos são cópias criadas do elemento correspondente de `right`.
+Os terceiro e quarto construtores constroem um objeto cujos elementos são cópias criadas do elemento correspondente da *certa*.
 
 O quinto construtor constrói um objeto cujo elemento no índice 0 é cópia criada de `right.first` e cujo elemento no índice 1 é cópia criada de `right.second`.
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b3d2c37b73d79619aeb16e7b1b81ad71819b09b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 101d987574ca789ce674c7ed01726847a66a4747
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844049"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962007"
 ---
 # <a name="isfinal-class"></a>Classe is_final
 
@@ -37,11 +37,11 @@ struct is_final;
 
 ### <a name="parameters"></a>Parâmetros
 
-`T` O tipo de consulta.
+*T* o tipo de consulta.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo `T` for um tipo de classe marcado como `final`; caso contrário, será falsa. Se for um tipo de classe, `T` deverá ser um tipo completo.
+Uma instância do predicado de tipo será verdadeira se o tipo *T* é um tipo de classe marcado `final`, caso contrário, será falsa. Se *T* é um tipo de classe, ele deve ser um tipo completo.
 
 ## <a name="requirements"></a>Requisitos
 

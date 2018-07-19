@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 4aab46fa771b88d1baad311aa631a57afce4911e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5734c745f19d22c562f68aa2b518c9b4315ba12e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847823"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962267"
 ---
 # <a name="ltexceptiongt-functions"></a>Funções &lt;exception&gt;
 
@@ -58,9 +58,9 @@ Um objeto [exception_ptr](../standard-library/exception-typedefs.md#exception_pt
 
 Chame a função `current_exception` em um bloco catch. Se uma exceção estiver em voo e o bloco catch puder capturar a exceção, a função `current_exception` retornará um objeto `exception_ptr` que faz referência à exceção. Caso contrário, a função retornará um objeto `exception_ptr` nulo.
 
-A função `current_exception` captura a exceção que está em voo, independentemente de a instrução `catch` especificar uma instrução [exception-declaration](../cpp/try-throw-and-catch-statements-cpp.md).
+O `current_exception` função captura a exceção que está em voo, independentemente se o **catch** declaração especifica uma [declaração de exceção](../cpp/try-throw-and-catch-statements-cpp.md) instrução.
 
-O destruidor da exceção atual será chamado no fim do bloco `catch` se você não puder relançar a exceção. No entanto, mesmo que você chame a função `current_exception` no destruidor, a função retornará um objeto `exception_ptr` que faz referência à exceção atual.
+O destruidor da exceção atual é chamado no final o **catch** bloquear, se você não puder relançar a exceção. No entanto, mesmo que você chame a função `current_exception` no destruidor, a função retornará um objeto `exception_ptr` que faz referência à exceção atual.
 
 As chamadas sucessivas à função `current_exception` retornam objetos `exception_ptr` que se referem a diferentes cópias da exceção atual. Consequentemente, os objetos são comparados como diferentes, pois se referem a diferentes cópias, mesmo quando as cópias têm o mesmo valor binário.
 
@@ -75,11 +75,11 @@ exception_ptr make_exception_ptr(E Except);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Except` A classe com a exceção para copiar. Normalmente, você especifica um objeto de [classe de exceção](../standard-library/exception-class.md) como o argumento para a função `make_exception_ptr`, embora qualquer objeto de classe possa ser o argumento.
+*Exceto* a classe com a exceção a ser copiada. Normalmente, você especifica um objeto de [classe de exceção](../standard-library/exception-class.md) como o argumento para a função `make_exception_ptr`, embora qualquer objeto de classe possa ser o argumento.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um objeto [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) que aponta para uma cópia da exceção atual de `Except`.
+Uma [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) objeto apontando para uma cópia da exceção atual de *exceto*.
 
 ### <a name="remarks"></a>Comentários
 
@@ -97,7 +97,7 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>Parâmetros
 
-`P` A exceção capturada para gerar novamente. Se `P` for um [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) nulo, a função lançará [std::bad_exception](../standard-library/bad-exception-class.md).
+*P* a exceção capturada para relançamento. Se *P* é um valor nulo [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), a função lançará [std:: bad_exception](../standard-library/bad-exception-class.md).
 
 ### <a name="remarks"></a>Comentários
 
@@ -121,7 +121,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-`fnew` A função a ser chamado no encerramento.
+*fnew* a função a ser chamada no encerramento.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -129,7 +129,7 @@ O endereço da função anterior que costumava ser chamada no encerramento.
 
 ### <a name="remarks"></a>Comentários
 
-A função estabelece um novo [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler) como a função * `fnew`. Portanto, `fnew` não deve ser um ponteiro nulo. A função retorna o endereço do manipulador de encerramento anterior.
+A função estabelece uma nova [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler) como a função * *fnew*. Portanto, *fnew* não deve ser um ponteiro nulo. A função retorna o endereço do manipulador de encerramento anterior.
 
 ### <a name="example"></a>Exemplo
 
@@ -178,7 +178,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-`fnew` A função a ser chamada quando uma exceção inesperada é encontrada.
+*fnew* a função a ser chamado quando uma exceção inesperada é encontrada.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -186,7 +186,7 @@ O endereço do `unexpected_handler` anterior.
 
 ### <a name="remarks"></a>Comentários
 
-`fnew` não deve ser um ponteiro nulo.
+*fnew* não deve ser um ponteiro nulo.
 
 O padrão C++ requer que `unexpected` seja chamado quando uma função lançar uma exceção que não está em sua lista de lançamento. A implementação atual não dá suporte a isso. O exemplo a seguir chama `unexpected` diretamente, que, em seguida, chama `unexpected_handler`.
 
@@ -226,17 +226,17 @@ void terminate();
 
 ### <a name="remarks"></a>Comentários
 
-A função chama um manipulador de encerramento, uma função de tipo `void`. Se **terminate** é chamado diretamente pelo programa, o manipulador de encerramento é o mais recentemente definido por uma chamada a [set_terminate](../standard-library/exception-functions.md#set_terminate). Se **terminate** é chamado por qualquer um dos vários outros motivos durante a avaliação de uma expressão de lançamento, o manipulador de encerramento é aquele em vigor imediatamente depois de avaliar a expressão de lançamento.
+A função chama um manipulador de encerramento, uma função de tipo **void**. Se `terminate` é chamado diretamente pelo programa, o manipulador de encerramento é o mais recentemente definido por uma chamada para [set_terminate](../standard-library/exception-functions.md#set_terminate). Se `terminate` é chamado para qualquer um dos vários outros motivos durante a avaliação de uma expressão de lançamento, o manipulador de encerramento é aquele em vigor imediatamente após a avaliação da expressão throw.
 
-Um manipulador de encerramento não pode retornar a seu chamador. Na inicialização do programa, o manipulador de encerramento é uma função que chama **abort**.
+Um manipulador de encerramento não pode retornar a seu chamador. Na inicialização do programa, o manipulador de encerramento é uma função que chama `abort`.
 
 ### <a name="example"></a>Exemplo
 
-Consulte [set_unexpected](../standard-library/exception-functions.md#set_unexpected) para obter um exemplo do uso de **terminate**.
+Consulte [set_unexpected](../standard-library/exception-functions.md#set_unexpected) para obter um exemplo do uso de `terminate`.
 
 ## <a name="uncaught_exception"></a>  uncaught_exception
 
-Retornará `true` apenas se uma exceção lançada estiver sendo processada no momento.
+Retornará **true** apenas se uma exceção lançada estiver sendo processada no momento.
 
 ```cpp
 bool uncaught_exception();
@@ -244,7 +244,7 @@ bool uncaught_exception();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna `true` depois de concluir a avaliação de uma expressão de lançamento e antes de concluir a inicialização da declaração de exceção no manipulador correspondente ou chamar [inesperados](../standard-library/exception-functions.md#unexpected) como resultado da expressão de lançamento. Em particular, `uncaught_exception` retornará `true` quando chamado de um destruidor que está sendo invocado durante um desenrolamento de exceção. Em dispositivos, `uncaught_exception` só tem suporte no Windows CE 5.00 e versões posteriores, incluindo as plataformas Windows Mobile 2005.
+Retorna **verdadeira** depois de concluir a avaliação de uma expressão de lançamento e antes de concluir a inicialização da declaração de exceção no manipulador correspondente ou chamar [inesperado](../standard-library/exception-functions.md#unexpected) como resultado da expressão throw. Em particular, `uncaught_exception` retornarão **verdadeiro** quando chamado a partir de um destruidor que está sendo invocado durante um desenrolamento de exceção. Em dispositivos, `uncaught_exception` só tem suporte no Windows CE 5.00 e versões posteriores, incluindo as plataformas Windows Mobile 2005.
 
 ### <a name="example"></a>Exemplo
 
@@ -311,7 +311,7 @@ void unexpected();
 
 O padrão C++ requer que `unexpected` seja chamado quando uma função lançar uma exceção que não está em sua lista de lançamento. A implementação atual não dá suporte a isso. O exemplo chama `unexpected` diretamente, que chama o manipulador inesperado.
 
-A função chama um manipulador inesperado, uma função de tipo `void`. Se `unexpected` é chamado diretamente pelo programa, o manipulador inesperado é o mais recentemente definido por uma chamada a [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
+A função chama um manipulador inesperado, uma função de tipo **void**. Se `unexpected` é chamado diretamente pelo programa, o manipulador inesperado é o mais recentemente definido por uma chamada a [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
 
 Um manipulador inesperado não pode retornar a seu chamador. Ele pode encerrar a execução:
 
@@ -319,13 +319,13 @@ Um manipulador inesperado não pode retornar a seu chamador. Ele pode encerrar a
 
 - Lançando um objeto do tipo [bad_exception](../standard-library/bad-exception-class.md).
 
-- Chamando [terminate](../standard-library/exception-functions.md#terminate), **abort** ou **exit**( `int`).
+- Chamando [encerrar](../standard-library/exception-functions.md#terminate), `abort` ou **sair**(`int`).
 
 Na inicialização do programa, o manipulador inesperado é uma função que chama [terminate](../standard-library/exception-functions.md#terminate).
 
 ### <a name="example"></a>Exemplo
 
-Consulte [set_unexpected](../standard-library/exception-functions.md#set_unexpected) para obter um exemplo do uso de **unexpected.**
+Consulte [set_unexpected](../standard-library/exception-functions.md#set_unexpected) para obter um exemplo do uso de `unexpected`.
 
 ## <a name="see-also"></a>Consulte também
 

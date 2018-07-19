@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1248c8efd06069863a9f78a94378fe7aed651011
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ae0db2b789e16a39396a329a64dfb8794eef5775
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856079"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961903"
 ---
 # <a name="istriviallymoveassignable-class"></a>Classe is_trivially_move_assignable
 
@@ -36,19 +36,19 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo de consulta.
+*Ty* o tipo de consulta.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo `Ty` for uma classe com um operador de atribuição de movimentação trivial; caso contrário, será falsa.
+Uma instância do predicado de tipo será verdadeira se o tipo *Ty* é uma classe que tem um movimentação trivial operador de atribuição, caso contrário, será falsa.
 
-Um operador de atribuição de movimentação para uma classe `Ty` será trivial se:
+Um operador de atribuição de movimentação para uma classe *Ty* é trivial se:
 
 for fornecido implicitamente
 
-a classe `Ty` não tiver funções virtuais
+a classe *Ty* não tiver funções virtuais
 
-a classe `Ty` não tiver bases virtuais
+a classe *Ty* não tiver bases virtuais
 
 as classes de todos os membros de dados não estáticos do tipo de classe tiverem operadores de atribuição de movimentação trivial
 

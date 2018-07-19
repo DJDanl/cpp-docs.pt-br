@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55f000ea8458925f8ea3faa4896943e045de127d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8191b572595b8ada96f59357af095baf5d846bc4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841481"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961715"
 ---
 # <a name="binder1st-class"></a>Classe binder1st
 
@@ -53,21 +53,21 @@ protected:
 
 ### <a name="parameters"></a>Parâmetros
 
-`Func` O objeto de função binário a ser convertido em um objeto de função unário.
+*Func* o objeto de função binária a ser convertido em um objeto de função unária.
 
-`left` O valor para o qual o primeiro argumento do objeto de função binário a ser associado.
+*à esquerda* o valor ao qual o primeiro argumento do objeto de função binária deve ser associado.
 
-`right` O valor do argumento que compara o objeto binário adaptado para o valor fixo do segundo argumento.
+*à direita* o valor do argumento que o objeto binário adaptado compara ao valor fixo do segundo argumento.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O objeto de função unária que resulta da associação do primeiro argumento do objeto de função binária ao valor `left.`
+O objeto de função unária que resulta da associação o primeiro argumento do objeto de função binária ao valor *esquerdo*.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo armazena uma cópia de um objeto de função binária `Func` em **op** e uma cópia de `left` em **value**. Define sua função membro `operator()` como **op**(**value**, `right`) de retorno.
+A classe de modelo armazena uma cópia de um objeto de função binária *Func* na `op`e uma cópia de *esquerdo* em `value`. Define sua função membro `operator()` como **op**(**value**, `right`) de retorno.
 
-Se `Func` for um objeto do tipo **Operation** e `c` for uma constante, [bind1st](../standard-library/functional-functions.md#bind1st) (`Func`, `c`) será equivalente ao construtor `binder1st`\< **Operation**> (`Func`, `c`) da classe `binder1st` e será mais conveniente.
+Se *Func* é um objeto do tipo `Operation` e `c` é uma constante, então [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` ) é equivalente ao `binder1st` construtor de classe `binder1st` \< **Operação**> ( `Func`, `c` ) e mais conveniente.
 
 ## <a name="example"></a>Exemplo
 
