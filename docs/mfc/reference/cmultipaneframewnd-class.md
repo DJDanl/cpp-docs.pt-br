@@ -90,15 +90,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c95fbe88f91f3eaf0787fa9762d507a49f231c4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 544b6ef8887ab9d6f5e5063fcee435c64e355645
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039196"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852326"
 ---
 # <a name="cmultipaneframewnd-class"></a>Classe CMultiPaneFrameWnd
-O `CMultiPaneFrameWnd` estende a classe [CPaneFrameWnd classe](../../mfc/reference/cpaneframewnd-class.md). Ela pode suportar vários painéis. Em vez de um identificador único inserido em uma barra de controle, `CMultiPaneFrameWnd` contém um [CPaneContainerManager classe](../../mfc/reference/cpanecontainermanager-class.md) objeto que permite que o usuário ancorar um `CMultiPaneFrameWnd` para outro e dinamicamente criar vários flutuante, com guias Windows.  
+O `CMultiPaneFrameWnd` classe estende [classe CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md). Ele pode suportar vários painéis. Em vez de um único manipulador inserido para uma barra de controle `CMultiPaneFrameWnd` contém uma [classe CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) objeto que permite que o usuário encaixe um `CMultiPaneFrameWnd` para outro e dinamicamente criar vários flutuante, com guias Windows.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
@@ -116,11 +116,11 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |----------|-----------------|  
 |[CMultiPaneFrameWnd::AddPane](#addpane)|Adiciona um painel. (Substitui [CPaneFrameWnd::AddPane](../../mfc/reference/cpaneframewnd-class.md#addpane).)|  
 |[CMultiPaneFrameWnd::AddRecentPane](#addrecentpane)||  
-|[CMultiPaneFrameWnd::AdjustLayout](#adjustlayout)|Ajusta o layout da janela do quadro simplificado. (Substitui [CPaneFrameWnd::AdjustLayout](../../mfc/reference/cpaneframewnd-class.md#adjustlayout).)|  
+|[CMultiPaneFrameWnd::AdjustLayout](#adjustlayout)|Ajusta o layout da janela com minimoldura. (Substitui [CPaneFrameWnd::AdjustLayout](../../mfc/reference/cpaneframewnd-class.md#adjustlayout).)|  
 |[CMultiPaneFrameWnd::AdjustPaneFrames](#adjustpaneframes)|(Substitui [CPaneFrameWnd::AdjustPaneFrames](../../mfc/reference/cpaneframewnd-class.md#adjustpaneframes).)|  
 |[CMultiPaneFrameWnd::CalcExpectedDockedRect](#calcexpecteddockedrect)|Calcula o retângulo esperado de uma janela encaixada. (Substitui [CPaneFrameWnd::CalcExpectedDockedRect](../../mfc/reference/cpaneframewnd-class.md#calcexpecteddockedrect).)|  
-|[CMultiPaneFrameWnd::CanBeAttached](#canbeattached)|Determina se o painel atual pode encaixar a outra janela do painel ou quadro. (Substitui [CPaneFrameWnd::CanBeAttached](../../mfc/reference/cpaneframewnd-class.md#canbeattached).)|  
-|[CMultiPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|Determina se a janela do quadro mini pode encaixar um painel. (Substitui [CPaneFrameWnd::CanBeDockedToPane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane).)|  
+|[CMultiPaneFrameWnd::CanBeAttached](#canbeattached)|Determina se o painel atual pode encaixar em outra janela do painel ou quadro. (Substitui [CPaneFrameWnd::CanBeAttached](../../mfc/reference/cpaneframewnd-class.md#canbeattached).)|  
+|[CMultiPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|Determina se a janela com minimoldura pode encaixar um painel. (Substitui [CPaneFrameWnd::CanBeDockedToPane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane).)|  
 |[CMultiPaneFrameWnd::CheckGripperVisibility](#checkgrippervisibility)|(Substitui [CPaneFrameWnd::CheckGripperVisibility](../../mfc/reference/cpaneframewnd-class.md#checkgrippervisibility).)|  
 |[CMultiPaneFrameWnd::CloseMiniFrame](#closeminiframe)|(Substitui `CPaneFrameWnd::CloseMiniFrame`.)|  
 |[CMultiPaneFrameWnd::ConvertToTabbedDocument](#converttotabbeddocument)|Converte o painel em um documento com guias. (Substitui [CPaneFrameWnd::ConvertToTabbedDocument](../../mfc/reference/cpaneframewnd-class.md#converttotabbeddocument).)|  
@@ -129,20 +129,20 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::DockRecentPaneToMainFrame](#dockrecentpanetomainframe)||  
 |[CMultiPaneFrameWnd::GetCaptionText](#getcaptiontext)|Retorna o texto da legenda. (Substitui [CPaneFrameWnd::GetCaptionText](../../mfc/reference/cpaneframewnd-class.md#getcaptiontext).)|  
 |[CMultiPaneFrameWnd::GetPaneContainerManager](#getpanecontainermanager)|Retorna uma referência para o objeto do Gerenciador de contêiner interno.|  
-|[CMultiPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|Retorna o primeiro painel visível que está contido em uma janela do mini quadro. (Substitui [CPaneFrameWnd::GetFirstVisiblePane](../../mfc/reference/cpaneframewnd-class.md#getfirstvisiblepane).)|  
-|[CMultiPaneFrameWnd::GetPane](#getpane)|Retorna um painel que está contido na janela do quadro simplificado. (Substitui [CPaneFrameWnd::GetPane](../../mfc/reference/cpaneframewnd-class.md#getpane).)|  
-|[CMultiPaneFrameWnd::GetPaneCount](#getpanecount)|Retorna o número de painéis que estão contidos em uma janela do quadro simplificado. (Substitui [CPaneFrameWnd::GetPaneCount](../../mfc/reference/cpaneframewnd-class.md#getpanecount).)|  
-|[CMultiPaneFrameWnd::GetVisiblePaneCount](#getvisiblepanecount)|Retorna o número de painéis visíveis que estão contidos em uma janela do quadro simplificado. (Substitui [CPaneFrameWnd::GetVisiblePaneCount](../../mfc/reference/cpaneframewnd-class.md#getvisiblepanecount).)|  
+|[CMultiPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|Retorna o primeiro painel visível que está contido em uma janela com minimoldura. (Substitui [CPaneFrameWnd::GetFirstVisiblePane](../../mfc/reference/cpaneframewnd-class.md#getfirstvisiblepane).)|  
+|[CMultiPaneFrameWnd::GetPane](#getpane)|Retorna um painel que está contido na janela com minimoldura. (Substitui [CPaneFrameWnd::GetPane](../../mfc/reference/cpaneframewnd-class.md#getpane).)|  
+|[CMultiPaneFrameWnd::GetPaneCount](#getpanecount)|Retorna o número de painéis que estão contidos em uma janela com minimoldura. (Substitui [CPaneFrameWnd::GetPaneCount](../../mfc/reference/cpaneframewnd-class.md#getpanecount).)|  
+|[CMultiPaneFrameWnd::GetVisiblePaneCount](#getvisiblepanecount)|Retorna o número de painéis visíveis que estão contidos em uma janela com minimoldura. (Substitui [CPaneFrameWnd::GetVisiblePaneCount](../../mfc/reference/cpaneframewnd-class.md#getvisiblepanecount).)|  
 |[CMultiPaneFrameWnd::InsertPane](#insertpane)||  
 |[CMultiPaneFrameWnd::LoadState](#loadstate)|Carrega o estado do painel do registro. (Substitui [CPaneFrameWnd::LoadState](../../mfc/reference/cpaneframewnd-class.md#loadstate).)|  
-|[CMultiPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|Encaixa a janela do quadro mini na sua posição mais recente. (Substitui [CPaneFrameWnd::OnDockToRecentPos](../../mfc/reference/cpaneframewnd-class.md#ondocktorecentpos).)|  
-|[CMultiPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|Interrompe o timer de pacote cumulativo de atualizações. (Substitui [CPaneFrameWnd::OnKillRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onkillrolluptimer).)|  
-|[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|Ajusta o layout de um painel dentro de uma janela do quadro simplificado. (Substitui [CPaneFrameWnd::OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout).)|  
+|[CMultiPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|Encaixa a janela com minimoldura na sua posição mais recente. (Substitui [CPaneFrameWnd::OnDockToRecentPos](../../mfc/reference/cpaneframewnd-class.md#ondocktorecentpos).)|  
+|[CMultiPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|Interrompe o temporizador de pacote cumulativo de atualizações. (Substitui [CPaneFrameWnd::OnKillRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onkillrolluptimer).)|  
+|[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|Ajusta o layout de um painel de dentro de uma janela com minimoldura. (Substitui [CPaneFrameWnd::OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout).)|  
 |[CMultiPaneFrameWnd::OnSetRollUpTimer](#onsetrolluptimer)|Define o temporizador de pacote cumulativo de atualizações. (Substitui [CPaneFrameWnd::OnSetRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onsetrolluptimer).)|  
-|[CMultiPaneFrameWnd::OnShowPane](#onshowpane)|Chamado pelo framework quando um painel na janela do minié quadro ocultado ou exibido. (Substitui [CPaneFrameWnd::OnShowPane](../../mfc/reference/cpaneframewnd-class.md#onshowpane).)|  
-|[CMultiPaneFrameWnd::PaneFromPoint](#panefrompoint)|Retorna um painel se ele contém um ponto fornecido pelo usuário dentro de uma janela do quadro simplificado. (Substitui [CPaneFrameWnd::PaneFromPoint](../../mfc/reference/cpaneframewnd-class.md#panefrompoint).)|  
-|[CMultiPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Chamado pelo framework para remover painéis não válido. (Substitui [CPaneFrameWnd::RemoveNonValidPanes](../../mfc/reference/cpaneframewnd-class.md#removenonvalidpanes).)|  
-|[CMultiPaneFrameWnd::RemovePane](#removepane)|Remove um painel da janela do quadro simplificado. (Substitui [CPaneFrameWnd::RemovePane](../../mfc/reference/cpaneframewnd-class.md#removepane).)|  
+|[CMultiPaneFrameWnd::OnShowPane](#onshowpane)|Chamado pelo framework quando um painel da janela com minimoldura é ocultado ou exibido. (Substitui [CPaneFrameWnd::OnShowPane](../../mfc/reference/cpaneframewnd-class.md#onshowpane).)|  
+|[CMultiPaneFrameWnd::PaneFromPoint](#panefrompoint)|Retorna um painel se ele contiver um ponto fornecido pelo usuário dentro de uma janela com minimoldura. (Substitui [CPaneFrameWnd::PaneFromPoint](../../mfc/reference/cpaneframewnd-class.md#panefrompoint).)|  
+|[CMultiPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Chamado pelo framework para remover os painéis não válido. (Substitui [CPaneFrameWnd::RemoveNonValidPanes](../../mfc/reference/cpaneframewnd-class.md#removenonvalidpanes).)|  
+|[CMultiPaneFrameWnd::RemovePane](#removepane)|Remove um painel de janela com minimoldura. (Substitui [CPaneFrameWnd::RemovePane](../../mfc/reference/cpaneframewnd-class.md#removepane).)|  
 |[CMultiPaneFrameWnd::ReplacePane](#replacepane)|Substitui um painel com outra. (Substitui [CPaneFrameWnd::ReplacePane](../../mfc/reference/cpaneframewnd-class.md#replacepane).)|  
 |[CMultiPaneFrameWnd::SaveState](#savestate)|Salva o estado do painel no registro. (Substitui [CPaneFrameWnd::SaveState](../../mfc/reference/cpaneframewnd-class.md#savestate).)|  
 |[CMultiPaneFrameWnd::Serialize](#serialize)|(Substitui `CPaneFrameWnd::Serialize`.)|  
@@ -153,16 +153,16 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)|(Substitui [CPaneFrameWnd::StoreRecentTabRelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo).)|  
   
 ## <a name="remarks"></a>Comentários  
- A maioria dos métodos nesta classe substituir métodos no [CPaneFrameWnd classe](../../mfc/reference/cpaneframewnd-class.md) classe.  
+ A maioria dos métodos nessa classe substituir métodos na [classe CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) classe.  
   
- Se um painel usa o `AFX_CBRS_AUTO_ROLLUP` estilo e o usuário encaixa esse painel para uma janela do quadro de vários painéis, o usuário pode rolar a janela independentemente das configurações de estilo dos outros painéis encaixados.  
+ Se um painel usa o estilo AFX_CBRS_AUTO_ROLLUP e o usuário encaixa esse painel para uma janela do quadro de vários painéis, o usuário pode acumular a janela independentemente das configurações de estilo dos outros painéis encaixados.  
   
- O framework cria automaticamente um `CMultiPaneFrameWnd` objeto quando o usuário flutua um painel que usa o `CBRS_FLOAT_MULTI` estilo.  
+ O framework cria automaticamente um `CMultiPaneFrameWnd` objeto quando o usuário flutua um painel que usa o estilo CBRS_FLOAT_MULTI.  
   
- Para obter informações sobre derivando uma classe a partir de `CPaneFrameWnd` classe e criar dinamicamente, consulte [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).  
+ Para obter informações sobre uma classe a partir de `CPaneFrameWnd` de classe e criar dinamicamente, consulte [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como recuperar um ponteiro para um `CMultiPaneFrameWnd` objeto. Este trecho de código é parte do [exemplo Definir tamanho do painel](../../visual-cpp-samples.md).  
+ O exemplo a seguir demonstra como recuperar um ponteiro para um `CMultiPaneFrameWnd` objeto. Este trecho de código é parte do [exemplo de definir o tamanho do painel](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_SetPaneSize#4](../../mfc/reference/codesnippet/cpp/cmultipaneframewnd-class_1.cpp)]  
   
@@ -188,7 +188,7 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWnd*  
+ [in] *Apropriei*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -384,7 +384,7 @@ CPaneContainerManager& GetPaneContainerManager();
  Uma referência para o objeto do Gerenciador de contêiner interno.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método pode ser usado para acessar o interno [CPaneContainerManager classe](../../mfc/reference/cpanecontainermanager-class.md) objeto.  
+ Esse método pode ser usado para acessar o interno [classe CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) objeto.  
   
 ##  <a name="getpanecount"></a>  CMultiPaneFrameWnd::GetPaneCount  
 
@@ -655,6 +655,6 @@ virtual void StoreRecentTabRelatedInfo(
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)

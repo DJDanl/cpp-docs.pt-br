@@ -14,27 +14,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a6205247a468f403357245f9b2e8d1abd558f95
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 004da50bf8d688f1d7b0432e5196094b878870cf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858361"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955001"
 ---
 # <a name="sample-container-class"></a>Exemplo de Classe de Contêiner
 
 > [!NOTE]
 > Este tópico faz parte da documentação do Visual C++ como um exemplo não funcional de contêineres usados na Biblioteca Padrão C++. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
 
-Descreve um objeto que controla uma sequência de elementos de comprimento variado, geralmente do tipo **Ty**. A sequência é armazenada de diferentes maneiras, dependendo do contêiner real.
+Descreve um objeto que controla uma sequência de comprimento variado de elementos, geralmente do tipo `Ty`. A sequência é armazenada de diferentes maneiras, dependendo do contêiner real.
 
 Uma função de construtor ou membro de contêiner pode ser a ocasião para chamar o construtor **Ty**(**const Ty&**) ou a função **Ty::operator=**(**const Ty&**). Se tal chamada gerar uma exceção, o objeto de contêiner é obrigado a manter sua integridade e a relançar as exceções que ele captura. É possível trocar, atribuir, apagar ou destruir um objeto de contêiner com segurança depois que ele gera uma dessas exceções. Em geral, no entanto, não é possível prever de outra forma o estado da sequência controlada pelo objeto de contêiner.
 
 Algumas limitações adicionais:
 
-- Se a expressão **~Ty** gerar uma exceção, o estado resultante do objeto contêiner é indefinido.
+- Se a expressão `~Ty` gera uma exceção, o estado resultante do objeto de contêiner é indefinido.
 
-- Se o contêiner armazena um objeto de alocador *al*, e *al* lança uma exceção diferente como resultado de uma chamada para * al ***.allocate**, o estado resultante do contêiner objeto não está definido.
+- Se o contêiner armazenar um objeto de alocador *al*, e *al* lança uma exceção diferente como resultado de uma chamada para * * al**allocate**, o estado resultante do contêiner objeto é indefinido.
 
 - Se o contêiner armazenar um objeto de função *comp*, para determinar como ordenar a sequência controlada, *comp* gera uma exceção de qualquer tipo, o estado resultante do objeto de contêiner é indefinido.
 
@@ -42,9 +42,9 @@ As classes de contêiner definidas pela Biblioteca Padrão C++ satisfazem a vár
 
 A classe de modelo de contêiner [lista](../standard-library/list-class.md) fornece comportamento determinístico e útil, mesmo na presença das exceções descritas acima. Pro exemplo, se uma exceção for gerada durante a inserção de um ou mais elementos, o contêiner permanecerá inalterado e a exceção será gerada novamente.
 
-Para *todos os* as classes de contêiner definidas pela biblioteca do C++ padrão, se uma exceção é lançada durante as chamadas para as seguintes funções de membro, **inserir**, **push_back**, ou **push_front**, o contêiner é esquerda inalterada e a exceção é lançada novamente.
+Para *todos os* as classes de contêiner definidas pela biblioteca padrão C++, se uma exceção for gerada durante as chamadas para as funções de membro `insert`, `push_back`, ou `push_front`, o contêiner permanecerá inalterado e o exceção será gerada novamente.
 
-Para *todos os* as classes de contêiner definidas pela biblioteca padrão C++, nenhuma exceção é lançada durante as chamadas para as seguintes funções de membro: **pop_back**, **pop_front**.
+Para *todos os* as classes de contêiner definidas pela biblioteca padrão C++, nenhuma exceção é lançada durante as chamadas para as seguintes funções de membro: `pop_back`, `pop_front`.
 
 A função membro [erase](../standard-library/container-class-erase.md) gera uma exceção apenas se uma operação de cópia (construção de atribuição ou cópia) gerar uma exceção.
 
@@ -56,29 +56,29 @@ A função de membro [swap](../standard-library/container-class-swap.md) faz pro
 
 - Referências, ponteiros e iteradores que designam elementos das sequências controladas sendo trocados permanecem válidos.
 
-Um objeto de uma classe de contêiner definido pela Biblioteca Padrão C++ aloca e libera armazenamento para a sequência controlada por meio de um objeto armazenado do tipo `Alloc`, que normalmente é um parâmetro de modelo. Esse objeto alocador deve ter a mesma interface externa que um objeto da classe **allocator\<Ty>**. Especificamente, `Alloc` deve ser do mesmo tipo que **Alloc::rebind<value_type>::other**
+Um objeto de uma classe de contêiner definido pela Biblioteca Padrão C++ aloca e libera armazenamento para a sequência controlada por meio de um objeto armazenado do tipo `Alloc`, que normalmente é um parâmetro de modelo. Esse objeto de alocador deve ter a mesma interface externa que um objeto da classe `allocator<Ty>`. Em particular, `Alloc` deve ser o mesmo tipo `Alloc::rebind<value_type>::other`
 
-Para *todas* as classes de contêiner definidas pela Biblioteca Padrão C++, a função membro **Alloc get_allocator const;** retorna uma cópia do objeto alocador armazenado. Observe que o objeto alocador armazenado *não* é copiado quando o objeto de contêiner é atribuído. Todos os construtores inicializam o valor armazenado em **allocator** para `Alloc` se o construtor não contiver nenhum parâmetro alocador.
+Para *todos os* classes de contêiner definidas pela biblioteca padrão C++, a função de membro `Alloc get_allocator const;` retorna uma cópia do objeto alocador armazenado. Observe que o objeto alocador armazenado *não* é copiado quando o objeto de contêiner é atribuído. Todos os construtores inicializam o valor armazenado no `allocator`, para `Alloc` se o construtor não contiver nenhum parâmetro alocador.
 
 Segundo o Padrão C++, uma classe de contêiner definida pela Biblioteca Padrão C++ pode assumir que:
 
 - Todos os objetos da classe `Alloc` são comparados igualmente.
 
-- O tipo **Alloc::const_pointer** é o mesmo que **const Ty \***.
+- Tipo de `Alloc::const_pointer` é o mesmo que `const Ty *`.
 
-- O tipo **Alloc::const_reference** é o mesmo que **const Ty&**.
+- Tipo de `Alloc::const_reference` é o mesmo que `const Ty&`.
 
-- O tipo **Alloc::pointer** é o mesmo que **Ty \***.
+- Tipo de `Alloc::pointer` é o mesmo que `Ty *`.
 
-- O tipo **Alloc::reference** é o mesmo que **Ty&**.
+- Tipo de `Alloc::reference` é o mesmo que `Ty&`.
 
 Nessa implementação, no entanto, os contêineres não fazem essas pressuposições simplistas. Dessa forma, eles funcionam corretamente com objetos alocadores que são mais ambiciosos:
 
 - Todos os objetos da classe `Alloc` não precisa ter comparação igual. (Você pode manter vários pools de armazenamento.)
 
-- O tipo **Alloc::const_pointer** não precisa ser o mesmo que **const Ty \***. (Um ponteiro const pode ser uma classe.)
+- Tipo de `Alloc::const_pointer` não precisa ser o mesmo que `const Ty *`. (Um ponteiro const pode ser uma classe.)
 
-- O tipo **Alloc::pointer** não precisa ser o mesmo que **Ty \***. (Um ponteiro pode ser uma classe.)
+- Tipo de `Alloc::pointer` não precisa ser o mesmo que `Ty *`. (Um ponteiro pode ser uma classe.)
 
 ## <a name="requirements"></a>Requisitos
 

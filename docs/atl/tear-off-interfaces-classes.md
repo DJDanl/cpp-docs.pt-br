@@ -1,5 +1,5 @@
 ---
-title: Destacável Interfaces de Classes (ATL) | Microsoft Docs
+title: Interfaces destacáveis Classes (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf7f61a815293d27139c2739544b0e08e89583e3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb7fec440902652d8ab04f688488a00340ab41aa
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361056"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956973"
 ---
-# <a name="tear-off-interfaces-classes"></a>Classes de Interfaces destacável
-As classes a seguir oferecem suporte para interfaces destacável:  
+# <a name="tear-off-interfaces-classes"></a>Classes de Interfaces destacáveis
+As classes a seguir fornecem suporte para interfaces destacáveis:  
   
--   [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implementa **IUnknown** para uma interface destacável.  
+-   [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implementa `IUnknown` para uma interface destacáveis.  
   
--   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementa **IUnknown** para uma interface destacável "cache".  
+-   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementa `IUnknown` para uma interface destacáveis "cache".  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../atl/atl-class-overview.md)

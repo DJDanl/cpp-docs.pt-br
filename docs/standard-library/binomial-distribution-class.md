@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f46e2d7f6fd7337965d0b5dcf5b5cfe8d7a53688
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0266c33731bdbd70fe9c9fb26a33878fc5d1c495
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846305"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957679"
 ---
 # <a name="binomialdistribution-class"></a>Classe binomial_distribution
 
@@ -81,20 +81,20 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*IntType* o tipo de resultado de inteiro, o padrão será a `int`. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*IntType* padrão é o tipo de resultado inteiro **int**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 *URNG* O mecanismo gerador de números aleatórios uniformes. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve uma distribuição que gera valores de um tipo integral especificado pelo usuário ou do tipo `int` se não houver nenhuma especificação. Esses valores são distribuídos de acordo com a função de probabilidade discreta distribuição Binomial. A tabela a seguir contém links para artigos sobre cada um dos membros.
+A classe de modelo descreve uma distribuição que produz valores de um integral especificado pelo usuário tipo ou tipo **int** caso nenhum seja fornecido, distribuído de acordo com a função de probabilidade discreta distribuição Binomial. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-Os membros de propriedade `t()` e `p()` mostram os valores do parâmetro de distribuição armazenados `t` e `p`, respectivamente.
+Os membros da propriedade `t()` e `p()` retornar valores de parâmetro de distribuição atualmente armazenada *t* e *p* , respectivamente.
 
 O membro da propriedade `param()` define ou retorna o pacote de parâmetros de distribuição armazenado `param_type`.
 
@@ -250,17 +250,17 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*t* o `t` parâmetro da distribuição.
+*t* o `t` parâmetro de distribuição.
 
-*p* o `p` parâmetro da distribuição.
+*p* o `p` parâmetro de distribuição.
 
-*parâmetro* o `param_type` estrutura usada para construir a distribuição.
+*parm* o `param_type` estrutura usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
 **Precondição:** `0 ≤ t` e `0.0 ≤ p ≤ 1.0`
 
-O primeiro construtor constrói um objeto cujo valor `p` armazenado contém o valor de *p* e cujo valor de `t` armazenado contém o valor de *t*.
+O primeiro construtor constrói um objeto cujo armazenado *p* valor contém o valor *p* e cujo armazenado *t* valor contém o valor de *t*.
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
@@ -282,11 +282,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*t* o `t` parâmetro da distribuição.
+*t* o `t` parâmetro de distribuição.
 
-*p* o `p` parâmetro da distribuição.
+*p* o `p` parâmetro de distribuição.
 
-*direito* o `param_type` objeto a ser comparado a este.
+*à direita* o `param_type` objeto a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários
 

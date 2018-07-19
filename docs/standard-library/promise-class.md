@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::promise [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac8508cab7afc7e6614c29b64d78849383f5bc2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a1ddfd30a1e061426f0a19ac1118aa5ade1de17
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861040"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958542"
 ---
 # <a name="promise-class"></a>Classe promise
 
@@ -107,7 +107,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Other` Um `promise` objeto.
+*Outros* um `promise` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -115,7 +115,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="remarks"></a>Comentários
 
-Este operador transfere o estado assíncrono associado de `Other`. Após a transferência, `Other` estará *empty*.
+Este operador transfere o estado assíncrono associado de *outros*. Após a transferência *outras* é *vazia*.
 
 ## <a name="promise"></a>Construtor promise::promise
 
@@ -130,17 +130,17 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Al` Um alocador de memória. Consulte [\<allocators>](../standard-library/allocators-header.md) para obter mais informações.
+*Al* um alocador de memória. Consulte [\<allocators>](../standard-library/allocators-header.md) para obter mais informações.
 
-`Other` Um `promise` objeto.
+*Outros* um `promise` objeto.
 
 ### <a name="remarks"></a>Comentários
 
 O primeiro construtor cria um objeto *empty*`promise`.
 
-O segundo construtor cria um objeto `promise` vazio e usa `Al` para alocação de memória.
+O segundo construtor constrói um vazio `promise` objeto e usa *Al* para alocação de memória.
 
-O terceiro construtor cria um objeto `promise` e transfere o estado assíncrono associado de `Other` e deixa `Other` vazio.
+O terceiro construtor cria um `promise` do objeto e transfere o estado assíncrono associado de *outras*e deixa *outros* vazio.
 
 ## <a name="set_exception"></a>  promise::set_exception
 
@@ -152,7 +152,7 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Exc` Um [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) que é armazenado por este método devido a uma exceção.
+*Exc* uma [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) que é armazenado por esse método como o resultado de exceção.
 
 ### <a name="remarks"></a>Comentários
 
@@ -172,7 +172,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Exc` Um [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) que é armazenado por este método devido a uma exceção.
+*Exc* uma [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) que é armazenado por esse método como o resultado de exceção.
 
 ### <a name="remarks"></a>Comentários
 
@@ -195,7 +195,7 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>Parâmetros
 
-`Val` O valor a ser armazenado como o resultado.
+*Val* o valor a ser armazenado como o resultado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -205,11 +205,11 @@ Se [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exceptio
 
 Como resultado desse método, os threads bloqueados no estado assíncrono associado são desbloqueados.
 
-O primeiro método também gera qualquer exceção que é gerada quando `Val` é copiado para o estado assíncrono associado. Nessa situação, o estado assíncrono associado não está definido como pronto.
+O primeiro método também gera qualquer exceção que é gerada quando *Val* é copiado para o estado assíncrono associado. Nessa situação, o estado assíncrono associado não está definido como pronto.
 
-O segundo método também gera qualquer exceção que é gerada quando `Val` é movido para o estado assíncrono associado. Nessa situação, o estado assíncrono associado não está definido como pronto.
+O segundo método também gera qualquer exceção que é gerada quando *Val* é movido para o estado assíncrono associado. Nessa situação, o estado assíncrono associado não está definido como pronto.
 
-Para a especialização parcial `promise<Ty&>`, o valor armazenado em vigor é uma referência a `Val`.
+Para a especialização parcial `promise<Ty&>`, o valor armazenado em vigor é uma referência a *Val*.
 
 Para a especialização `promise<void>`, não existe nenhum valor armazenado.
 
@@ -226,7 +226,7 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>Parâmetros
 
-`Val` O valor a ser armazenado como o resultado.
+*Val* o valor a ser armazenado como o resultado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -236,11 +236,11 @@ Se [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exceptio
 
 Ao contrário de `set_value`, o estado assíncrono associado não é definido como pronto até que todos os objetos thread-local no thread atual tenham sido destruídos. Normalmente, threads bloqueados no estado assíncrono associado não são desbloqueados até que o thread atual seja encerrado.
 
-O primeiro método também gera qualquer exceção que é gerada quando `Val` é copiado para o estado assíncrono associado.
+O primeiro método também gera qualquer exceção que é gerada quando *Val* é copiado para o estado assíncrono associado.
 
-O segundo método também gera qualquer exceção que é gerada quando `Val` é movido para o estado assíncrono associado.
+O segundo método também gera qualquer exceção que é gerada quando *Val* é movido para o estado assíncrono associado.
 
-Para a especialização parcial `promise<Ty&>`, o valor armazenado é efetivamente uma referência a `Val`.
+Para a especialização parcial `promise<Ty&>`, o valor armazenado é efetivamente uma referência ao *Val*.
 
 Para a especialização `promise<void>`, não existe nenhum valor armazenado.
 
@@ -254,7 +254,7 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Other` Um `promise` objeto.
+*Outros* um `promise` objeto.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d48bd8dce38a5042c01b56f40cebb2e030be6f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70ffecdfdf661e7423a4db0898b05dfa2f5ce832
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858780"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954637"
 ---
 # <a name="referencewrapper-class"></a>Classe reference_wrapper
 
@@ -186,9 +186,9 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Types` Os tipos de lista de argumento.
+*Tipos de* os tipos de lista de argumento.
 
-`args` A lista de argumentos.
+*args* a lista de argumentos.
 
 ### <a name="remarks"></a>Comentários
 
@@ -229,9 +229,9 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo para encapsular.
+*Ty* para encapsular o tipo.
 
-`val` O valor a ser quebrado.
+*Val* o valor a ser encapsulado.
 
 ### <a name="remarks"></a>Comentários
 

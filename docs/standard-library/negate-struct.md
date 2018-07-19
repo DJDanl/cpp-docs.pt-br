@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1151464d4f2d863f8cdc30191199c0606d58b8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58599777f3e680b7ea124d9e9dfa427fd55b4051
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852384"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956928"
 ---
 # <a name="negate-struct"></a>Struct negate
 
@@ -49,9 +49,9 @@ struct negate<void>
 
 ### <a name="parameters"></a>Parâmetros
 
-`Type` Qualquer tipo que oferece suporte a um `operator-` que leva um operando do tipo especificado ou inferido.
+*Tipo de* qualquer tipo que dá suporte a um `operator-` que usa um operando do tipo especificado ou inferido.
 
-`Left` O operando deve ser negado. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `Type`.
+*Esquerda* o operando a ser negada. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *tipo*.
 
 ## <a name="return-value"></a>Valor de retorno
 

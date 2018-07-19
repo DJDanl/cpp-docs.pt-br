@@ -1,5 +1,5 @@
 ---
-title: Referência de contagem (ATL) | Microsoft Docs
+title: Contagem (ATL) de referências | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,30 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1ba27f00bf25f88575101b1299daf50f94000ad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8e0ce8b2cc412c576b0eded9662d8e70b34cf2ec
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358242"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850807"
 ---
 # <a name="reference-counting"></a>Contagem de referência
-COM em si não tentará automaticamente remover um objeto de memória, quando ele achar que o objeto não está sendo usado. Em vez disso, o programador de objeto deve remover o objeto não utilizado. O programador determina se um objeto pode ser removido com base em uma contagem de referência.  
+COM em si não tentará automaticamente remover um objeto de memória quando se considera que o objeto não está sendo usado. Em vez disso, o programador do objeto deve remover o objeto não utilizado. O programador determina se um objeto pode ser removido com base em uma contagem de referência.  
   
- Usa COM o **IUnknown** métodos, [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [versão](http://msdn.microsoft.com/library/windows/desktop/ms682317), para gerenciar a contagem de referência de interfaces em um objeto. As regras gerais para chamar esses métodos são:  
+ COM usa o `IUnknown` métodos, [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [versão](http://msdn.microsoft.com/library/windows/desktop/ms682317), para gerenciar a contagem de referência de interfaces em um objeto. As regras gerais para chamar esses métodos são:  
   
 -   Sempre que um cliente recebe um ponteiro de interface `AddRef` deve ser chamado na interface.  
   
--   Sempre que o cliente tiver terminado de usar o ponteiro de interface, ele deverá chamar **versão**.  
+-   Sempre que o cliente tiver terminado de usar o ponteiro de interface, ela deve chamar `Release`.  
   
- Em uma implementação simple, cada `AddRef` chamar incrementos e cada **versão** chamar decrementa uma variável de contador dentro do objeto. Quando a contagem retorna para zero, a interface não tem todos os usuários e está livre para remover a mesmo da memória.  
+ Em uma implementação simple, cada `AddRef` chamar incrementos e cada `Release` chamar decrementa uma variável de contador dentro do objeto. Quando retorna a contagem como zero, a interface não tem todos os usuários e está livre para remover a mesmo da memória.  
   
- Contagem de referência também pode ser implementado para que cada referência ao objeto (e não para uma interface individual) é contada. Nesse caso, cada `AddRef` e **versão** chamar delegados para uma implementação central no objeto, e **versão** libera o objeto inteiro quando sua contagem de referência chega a zero.  
+ Contagem de referência também pode ser implementado para que cada referência ao objeto (não para uma interface individual) é contada. Nesse caso, cada `AddRef` e `Release` chamar delegados para uma implementação central no objeto, e `Release` libera o objeto inteiro, quando sua contagem de referência chega a zero.  
   
 > [!NOTE]
->  Quando um `CComObject`-objeto derivado é construído usando o **novo** operador, a contagem de referência é 0. Portanto, uma chamada para `AddRef` devem ser feitas após a criação com êxito o `CComObject`-objeto derivado.  
+>  Quando um `CComObject`-derivada do objeto é construído usando o **nova** operador, a contagem de referência é 0. Portanto, uma chamada para `AddRef` deve ser feita após a criação com êxito o `CComObject`-objeto derivado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Introdução ao COM](../atl/introduction-to-com.md)   
- [Gerenciamento de vida útil do objeto por meio de contagem de referência](http://msdn.microsoft.com/library/windows/desktop/ms687260)
+ [Introdução a COM](../atl/introduction-to-com.md)   
+ [Gerenciando os tempos de vida do objeto por meio de contagem de referência](http://msdn.microsoft.com/library/windows/desktop/ms687260)
 

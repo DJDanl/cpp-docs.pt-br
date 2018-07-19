@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efd633fb4617a5058afd9bd55b40ccb4fbcee06e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6830baf3d474b80f2e7906a7aadd27d2eee27f9a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847680"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958614"
 ---
 # <a name="backinsertiterator-class"></a>Classe back_insert_iterator
 
@@ -40,7 +40,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Container` O tipo de contêiner na parte traseira de quais elementos serão inseridos por um `back_insert_iterator`.
+*Recipiente* o tipo de contêiner na parte traseira do qual os elementos serão inseridos por um `back_insert_iterator`.
 
 ## <a name="remarks"></a>Comentários
 
@@ -83,7 +83,7 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Cont` O contêiner que o `back_insert_iterator` é um elemento em insert.
+*_Cont* o contêiner que o `back_insert_iterator` é inserir um elemento.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -323,7 +323,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>Parâmetros
 
-`val` O valor a ser inserido no contêiner.
+*Val* o valor a ser inserido no contêiner.
 
 ### <a name="return-value"></a>Valor de retorno
 

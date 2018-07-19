@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2461d7986e87bed846d09d6e3938a339237c8f8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8f9e3f71a0d8647000f77863ecc9243b069f0521
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845161"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955806"
 ---
 # <a name="isconstructible-class"></a>Classe is_constructible
 
@@ -37,13 +37,13 @@ struct is_constructible;
 
 ### <a name="parameters"></a>Parâmetros
 
-`T` O tipo de consulta.
+*T* o tipo de consulta.
 
-`Args` Tipos de argumento para corresponder em um construtor de `T`.
+*Args* os tipos de argumento para corresponder a um construtor de *T*.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo `T` puder ser construído usando os tipos de argumento em `Args`; caso contrário, será falsa. O tipo `T` poderá ser construído se a definição da variável `T t(std::declval<Args>()...);` estiver bem formada. `T` e todos os tipos em `Args` devem ser tipos completos, `void` ou matrizes de limite desconhecido.
+Uma instância do predicado de tipo será verdadeira se o tipo *T* é construível usando os tipos de argumento na *Args*, caso contrário, será falsa. Tipo de *T* pode ser construído se a definição da variável `T t(std::declval<Args>()...);` está bem formado. Ambos *T* e todos os tipos *Args* devem ser tipos completos, **void**, ou matrizes de limite desconhecido.
 
 ## <a name="requirements"></a>Requisitos
 

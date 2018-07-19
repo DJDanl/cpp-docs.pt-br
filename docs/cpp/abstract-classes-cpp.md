@@ -1,5 +1,5 @@
 ---
-title: Classes (C++) abstratas | Microsoft Docs
+title: Abstrair Classes (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c35ea26bc5dda6c0dce27217cc75784034a77554
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 73c1d560f0e2adfbecb72fe9df96d981d0bb93af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705355"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957942"
 ---
 # <a name="abstract-classes-c"></a>Classes abstratas (C++)
 
@@ -30,7 +30,7 @@ As classes abstratas agem como expressões de conceitos gerais das quais classes
 
 Uma classe que contenha ao menos uma função virtual pura é considerada uma classe abstrata. Classes derivadas da classe abstrata devem implementar a função virtual pura, ou serão também classes abstratas.
 
-Uma função virtual é declarada como "pura" usando o *especificador puro* sintaxe (descrito na [implementação de protocolo da classe](http://msdn.microsoft.com/en-us/a319f1b3-05e8-400e-950a-1ca6eb105ab5)). Considere o exemplo apresentado [funções virtuais](../cpp/virtual-functions.md). A intenção da classe `Account` é fornecer a funcionalidade geral, mas os objetos do tipo `Account` são muito gerais para serem úteis. Portanto, `Account` é um bom candidato para uma classe abstrata:
+Considere o exemplo apresentado [funções virtuais](../cpp/virtual-functions.md). A intenção da classe `Account` é fornecer a funcionalidade geral, mas os objetos do tipo `Account` são muito gerais para serem úteis. Portanto, `Account` é um bom candidato para uma classe abstrata:
 
 ```cpp
 // deriv_AbstractClasses.cpp
@@ -63,7 +63,7 @@ Outra restrição é que se o construtor para uma classe abstrata chamar uma fun
 
 As funções virtuais puras podem ser definidas para classes abstratas, mas podem ser chamadas diretamente somente usando a sintaxe:
 
-*nome de classe abstrata*::*nome da função*)
+*nome da classe abstrata*::*nome da função*)
 
 Isso ajuda a criar hierarquias de classes cujas classes base incluem destruidores virtuais puros, porque os destruidores de classe base sempre são chamados no processo de destruição de um objeto. Considere o exemplo a seguir:
 

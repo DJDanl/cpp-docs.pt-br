@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74fbdd99c162b4362339d8c1b45ddc281d30eeee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 72c6c992f2ec92bc11d6dd009649d503d3c0bd02
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356447"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848331"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
-O nome da função identificada pelo parâmetro do terceiro o `NOTIFY_HANDLER` macro em seu mapa de mensagem.  
+O nome da função identificado pelo terceiro parâmetro da macro NOTIFY_HANDLER no seu mapa de mensagem.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,14 +39,14 @@ O nome da função identificada pelo parâmetro do terceiro o `NOTIFY_HANDLER` m
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `idCtrl`  
- O identificador do controle enviar a mensagem.  
+ *idCtrl*  
+ O identificador do controle que está enviando a mensagem.  
   
  *pnmh*  
- Endereço de um [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) estrutura que contém o código de notificação e informações adicionais. Para algumas mensagens de notificação, esse parâmetro aponta para uma estrutura maior que tem o **NMHDR** estrutura como seu primeiro membro.  
+ Endereço de um [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) estrutura que contém o código de notificação e informações adicionais. Para algumas mensagens de notificação, este parâmetro aponta para uma estrutura maior que tem o `NMHDR` estrutura como seu primeiro membro.  
   
- `bHandled`  
- Os conjuntos de mapa de mensagem `bHandled` para **TRUE** antes de *NotifyHandler* é chamado. Se *NotifyHandler* não totalmente processa a mensagem, ele deve ser definido `bHandled` para **FALSE** para indicar que a mensagem precisa de processamento adicional.  
+ *bHandled*  
+ Os conjuntos de mapa de mensagem *bHandled* como TRUE antes *NotifyHandler* é chamado. Se *NotifyHandler* totalmente não manipular a mensagem, ela deverá definir *bHandled* para **FALSE** para indicar que a mensagem precisa de processamento adicional.  
   
 ## <a name="return-value"></a>Valor de retorno  
  O resultado do processamento de mensagens. 0 se for bem-sucedido.  
@@ -56,6 +56,6 @@ O nome da função identificada pelo parâmetro do terceiro o `NOTIFY_HANDLER` m
   
 ## <a name="see-also"></a>Consulte também  
  [Implementando uma janela](../atl/implementing-a-window.md)   
- [Mapas de mensagem](../atl/message-maps-atl.md)   
+ [Mapas de Mensagens](../atl/message-maps-atl.md)   
  [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
 

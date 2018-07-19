@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5558f1e7998cca1efd64fbc5ee0ad39cc40ee2a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef5470d7c7e83c260f44d723665d5d9c0a5ad061
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858608"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953023"
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 
-Inclua o cabeçalho padrão \<thread > para definir a classe `thread` e várias funções de suporte.
+Inclua o cabeçalho padrão \<thread > para definir a classe **thread** e várias funções de suporte.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,7 +36,7 @@ Inclua o cabeçalho padrão \<thread > para definir a classe `thread` e várias 
 > [!NOTE]
 > No código que é compilado usando **/clr**, esse cabeçalho é bloqueado.
 
-O `__STDCPP_THREADS__` macro é definida como um valor diferente de zero para indicar que os threads são suportados por esse cabeçalho.
+O `__STDCPP_THREADS__` macro é definida como um valor diferente de zero para indicar que os threads têm suporte por esse cabeçalho.
 
 ## <a name="members"></a>Membros
 
@@ -50,7 +50,7 @@ O `__STDCPP_THREADS__` macro é definida como um valor diferente de zero para in
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Estrutura hash (Biblioteca Padrão C++)](../standard-library/hash-structure-stl.md)|Define uma função de membro que retorna um valor que é determinado de forma exclusiva por um `thread::id`. A função de membro define uma [hash](../standard-library/hash-class.md) função que é adequada para os valores de mapeamento de tipo `thread::id` para uma distribuição de valores de índice.|
+|[Estrutura hash (Biblioteca Padrão C++)](../standard-library/hash-structure-stl.md)|Define uma função de membro que retorna um valor que é determinado exclusivamente por um `thread::id`. A função de membro define uma [hash](../standard-library/hash-class.md) função que é adequada para mapear valores do tipo `thread::id` para uma distribuição de valores de índice.|
 
 ### <a name="public-functions"></a>Funções públicas
 
@@ -59,7 +59,7 @@ O `__STDCPP_THREADS__` macro é definida como um valor diferente de zero para in
 |[get_id](../standard-library/thread-functions.md#get_id)|Identifica exclusivamente o thread atual de execução.|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|Bloqueia o thread de chamada.|
 |[sleep_until](../standard-library/thread-functions.md#sleep_until)|Bloqueia o thread de chamada, pelo menos, até o tempo especificado.|
-|[swap](../standard-library/thread-functions.md#swap)|Troca os estados de dois `thread` objetos.|
+|[swap](../standard-library/thread-functions.md#swap)|Troca os estados de dois **thread** objetos.|
 |[yield](../standard-library/thread-functions.md#yield)|Sinaliza ao sistema operacional para executar outros threads, mesmo se o thread atual continuar normalmente em execução.|
 
 ### <a name="public-operators"></a>Operadores públicos
@@ -68,7 +68,7 @@ O `__STDCPP_THREADS__` macro é definida como um valor diferente de zero para in
 |----------|-----------------|
 |[operador > = operador](../standard-library/thread-operators.md#op_gt_eq)|Determina se um objeto `thread::id` é maior ou igual a outro.|
 |[operador > operador](../standard-library/thread-operators.md#op_gt)|Determina se um objeto `thread::id` é maior que outro.|
-|[operador < operador =](../standard-library/thread-operators.md#op_lt_eq)|Determina se um objeto `thread::id` é menor ou igual a outro.|
+|[operador < Operator =](../standard-library/thread-operators.md#op_lt_eq)|Determina se um objeto `thread::id` é menor ou igual a outro.|
 |[operador < operador](../standard-library/thread-operators.md#op_lt)|Determina se um objeto `thread::id` é menor que outro.|
 |[operador! = operador](../standard-library/thread-operators.md#op_neq)|Compara dois objetos `thread::id` quanto à desigualdade.|
 |[operador Operator = =](../standard-library/thread-operators.md#op_eq_eq)|Compara dois objetos `thread::id` quanto à igualdade.|

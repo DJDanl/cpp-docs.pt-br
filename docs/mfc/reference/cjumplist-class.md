@@ -46,15 +46,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc609fac36ccdbb9f84ce8f2b9b7c0ccfc5ccd3f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0c4090ebfa432f1d8b7f05942a6b1af68b75d270
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337886"
 ---
 # <a name="cjumplist-class"></a>Classe CJumpList
-A `CJumpList` é a lista de atalhos exibido quando você clique com botão direito em um ícone na barra de tarefas.  
+Um `CJumpList` é a lista de atalhos revelada quando você clique com botão direito em um ícone na barra de tarefas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,18 +75,18 @@ class CJumpList;
 |----------|-----------------|  
 |[CJumpList::AbortList](#abortlist)|Anula uma transação de criação de lista sem confirmação.|  
 |[CJumpList::AddDestination](#adddestination)|Sobrecarregado. Adiciona o destino à lista.|  
-|[CJumpList::AddKnownCategory](#addknowncategory)|Acrescenta uma categoria conhecida à lista.|  
-|[CJumpList::AddTask](#addtask)|Sobrecarregado. Adiciona itens a categoria de tarefa canônica.|  
-|[CJumpList::AddTasks](#addtasks)|Adiciona itens a categoria de tarefa canônica.|  
+|[CJumpList::AddKnownCategory](#addknowncategory)|Acrescenta uma categoria conhecidos à lista.|  
+|[CJumpList::AddTask](#addtask)|Sobrecarregado. Adiciona itens à categoria de tarefas canônica.|  
+|[CJumpList::AddTasks](#addtasks)|Adiciona itens à categoria de tarefas canônica.|  
 |[CJumpList::AddTaskSeparator](#addtaskseparator)|Adiciona um separador entre tarefas.|  
 |[CJumpList::ClearAll](#clearall)|Remove todas as tarefas e destinos que foram adicionados à instância atual do `CJumpList` até o momento.|  
 |[CJumpList::ClearAllDestinations](#clearalldestinations)|Remove todos os destinos que foram adicionados à instância atual do `CJumpList` até o momento.|  
 |[CJumpList::CommitList](#commitlist)|Finaliza uma transação de criação de lista e confirma a lista relatada para o armazenamento associado (o registro neste caso).|  
 |[CJumpList::GetDestinationList](#getdestinationlist)|Recupera um ponteiro de interface à lista de destino.|  
 |[CJumpList::GetMaxSlots](#getmaxslots)|Recupera o número máximo de itens, incluindo os cabeçalhos de categoria que podem exibir no menu de destino do aplicativo de chamada.|  
-|[CJumpList::GetRemovedItems](#getremoveditems)|Matriz retorna itens que representam remover destinos.|  
+|[CJumpList::GetRemovedItems](#getremoveditems)|Retorna uma matriz de itens que representam removido destinos.|  
 |[CJumpList::InitializeList](#initializelist)|Inicia uma transação de criação de lista.|  
-|[CJumpList::SetAppID](#setappid)|Define a ID de modelo de usuário do aplicativo para obter a lista que será criada.|  
+|[CJumpList::SetAppID](#setappid)|Define a ID de modelo de usuário do aplicativo para a lista que será compilada.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CJumpList](../../mfc/reference/cjumplist-class.md)  
@@ -109,7 +109,7 @@ void AbortList();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Chamar esse método tem o mesmo efeito de destruição `CJumpList` sem chamar `CommitList`.  
+ Chamar esse método tem o mesmo efeito que destruindo `CJumpList` sem chamar `CommitList`.  
   
 ##  <a name="adddestination"></a>  CJumpList::AddDestination  
  Adiciona o destino à lista.  
@@ -149,10 +149,10 @@ BOOL AddDestination(
 ### <a name="return-value"></a>Valor de retorno  
   
 ### <a name="remarks"></a>Comentários  
- A instância do `CJumpList` internamente acumula adicionados destinos e, em seguida, confirma em `CommitList`.  
+ A instância do `CJumpList` acumula internamente destinos adicionados e, em seguida, confirma-los no `CommitList`.  
   
 ##  <a name="addknowncategory"></a>  CJumpList::AddKnownCategory  
- Acrescenta uma categoria conhecida à lista.  
+ Acrescenta uma categoria conhecidos à lista.  
   
 ```  
 BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
@@ -160,15 +160,15 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
   
 ### <a name="parameters"></a>Parâmetros  
  *category*  
- Especifica um tipo de categoria conhecida. Pode ser uma `KDC_RECENT`, ou `KDC_KNOWN`.  
+ Especifica um tipo de categoria conhecidos. Pode ser KDC_RECENT ou KDC_KNOWN.  
   
 ### <a name="return-value"></a>Valor de retorno  
   
 ### <a name="remarks"></a>Comentários  
- Conhecido categorias são as categorias frequentes e recentes que podemos calcular automaticamente para cada aplicativo que utiliza `SHAddToRecentDocs` (ou indiretamente o utiliza como o shell chamá-lo em nome do aplicativo em alguns cenários).  
+ Conhecido de categorias são as categorias frequentes e recentes que podemos calcular automaticamente para cada aplicativo que utiliza `SHAddToRecentDocs` (ou indiretamente o usa como o shell de chamá-lo em nome do aplicativo em alguns cenários).  
   
 ##  <a name="addtask"></a>  CJumpList::AddTask  
- Adiciona itens a categoria de tarefa canônica.  
+ Adiciona itens à categoria de tarefas canônica.  
   
 ```  
 BOOL AddTask(
@@ -192,7 +192,7 @@ BOOL AddTask(IShellLink* pShellLink);
  Nome da tarefa que será exibido na lista de destino.  
   
  *strIconLocation*  
- Localização do ícone que será exibido na lista de destino, junto com o título.  
+ Localização do ícone que será exibido na lista de destino com o título.  
   
  *iIconIndex*  
  Índice do ícone.  
@@ -203,10 +203,10 @@ BOOL AddTask(IShellLink* pShellLink);
 ### <a name="return-value"></a>Valor de retorno  
   
 ### <a name="remarks"></a>Comentários  
- A instância do `CJumpList` acumula tarefas especificadas e os adiciona à lista de destino durante a `CommitList`. Itens de tarefas serão exibidos em uma categoria na parte inferior do menu de destino do aplicativo. Esta categoria tem precedência sobre todas as outras categorias quando ele é preenchido na interface de usuário.  
+ A instância do `CJumpList` acumula tarefas especificadas e os adiciona à lista de destino durante `CommitList`. Itens de tarefa serão exibidos em uma categoria na parte inferior do menu de destino do aplicativo. Esta categoria tem precedência sobre todas as outras categorias, quando ele é preenchido na interface do usuário.  
   
 ##  <a name="addtasks"></a>  CJumpList::AddTasks  
- Adiciona itens a categoria de tarefa canônica.  
+ Adiciona itens à categoria de tarefas canônica.  
   
 ```  
 BOOL AddTasks(IObjectArray* pObjectCollection);
@@ -219,7 +219,7 @@ BOOL AddTasks(IObjectArray* pObjectCollection);
 ### <a name="return-value"></a>Valor de retorno  
   
 ### <a name="remarks"></a>Comentários  
- A instância do CJumpList acumula tarefas especificadas e adiciona-os à lista de destino durante a `CommitList`. Itens de tarefas serão exibidos em uma categoria na parte inferior do menu de destino do aplicativo. Esta categoria tem precedência sobre todas as outras categorias quando ele é preenchido na interface de usuário.  
+ A instância do CJumpList acumula tarefas especificadas e o adiciona à lista de destino durante `CommitList`. Itens de tarefa serão exibidos em uma categoria na parte inferior do menu de destino do aplicativo. Esta categoria tem precedência sobre todas as outras categorias, quando ele é preenchido na interface do usuário.  
   
 ##  <a name="addtaskseparator"></a>  CJumpList::AddTaskSeparator  
  Adiciona um separador entre tarefas.  
@@ -229,7 +229,7 @@ BOOL AddTaskSeparator();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se ele for bem-sucedido, 0 se não for.  
+ Diferente de zero se for bem-sucedido, 0 se não estiver.  
   
 ##  <a name="cjumplist"></a>  CJumpList::CJumpList  
  Constrói um objeto `CJumpList`.  
@@ -240,7 +240,7 @@ CJumpList(BOOL bAutoCommit = TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  *bAutoCommit*  
- Se esse parâmetro for FALSE a lista não é confirmada automaticamente em destruidor.  
+ Se esse parâmetro for falso a lista não é confirmada automaticamente no destruidor.  
   
 ##  <a name="clearall"></a>  CJumpList::ClearAll  
  Remove todas as tarefas e destinos que foram adicionados à instância atual do `CJumpList` até o momento.  
@@ -260,7 +260,7 @@ void ClearAllDestinations();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Chame essa função se você precisar remover todos os destinos que foram adicionados até o momento na sessão atual de criação de lista de destino e adicionar outros destinos novamente. Se o interno `ICustomDestinationList` tiver sido inicializado, ele permanecerá ativo.  
+ Chame essa função se você precisar remover todos os destinos que serão adicionados até o momento na sessão atual de criação da lista de destino e adicionar outros destinos novamente. Se o interno `ICustomDestinationList` tiver sido inicializado, ele permanecerá ativo.  
   
 ##  <a name="commitlist"></a>  CJumpList::CommitList  
  Finaliza uma transação de criação de lista e confirma a lista relatada para o armazenamento associado (o registro neste caso).  
@@ -272,7 +272,7 @@ BOOL CommitList();
 ### <a name="return-value"></a>Valor de retorno  
   
 ### <a name="remarks"></a>Comentários  
- A confirmação é atômica. Um erro será retornado se houver uma falha.  Quando `CommitList` é chamado, atual lista de itens removidos serão limpas. Chamar este método redefine o objeto para que ele não tem uma transação ativa de criação de lista. Para atualizar a lista `BeginList` precisa ser chamado novamente.  
+ A confirmação é atômica. Um erro será retornado se a confirmação falhar.  Quando `CommitList` é chamado, atual lista de itens removidos serão limpas. Chamar este método redefine o objeto para que ele não tem uma transação ativa de construção de lista. Para atualizar a lista `BeginList` precisa ser chamado novamente.  
   
 ##  <a name="getdestinationlist"></a>  CJumpList::GetDestinationList  
  Recupera um ponteiro de interface à lista de destino.  
@@ -284,7 +284,7 @@ ICustomDestinationList* GetDestinationList();
 ### <a name="return-value"></a>Valor de retorno  
   
 ### <a name="remarks"></a>Comentários  
- Se a lista de salto não foi inicializada, ou foi confirmada ou anulada, o valor retornado será `NULL`.  
+ Se a lista de atalhos não foi inicializada, ou foi confirmada ou anulada, o valor retornado será NULL.  
   
 ##  <a name="getmaxslots"></a>  CJumpList::GetMaxSlots  
  Recupera o número máximo de itens, incluindo os cabeçalhos de categoria que podem exibir no menu de destino do aplicativo de chamada.  
@@ -296,10 +296,10 @@ UINT GetMaxSlots() const;
 ### <a name="return-value"></a>Valor de retorno  
   
 ### <a name="remarks"></a>Comentários  
- Aplicativos só podem relatar um número de itens e cabeçalhos de categoria combinados até esse valor. Se chamadas para `AppendCategory`, `AppendKnownCategory`, ou `AddUserTasks` exceder esse número, eles retornarão uma falha.  
+ Aplicativos podem apenas relatar um número de itens e cabeçalhos de categoria combinados até esse valor. Se chamadas para `AppendCategory`, `AppendKnownCategory`, ou `AddUserTasks` exceder esse número, eles retornarão uma falha.  
   
 ##  <a name="getremoveditems"></a>  CJumpList::GetRemovedItems  
- Matriz retorna itens que representam remover destinos.  
+ Retorna uma matriz de itens que representam removido destinos.  
   
 ```  
 IObjectArray* GetRemovedItems();
@@ -308,7 +308,7 @@ IObjectArray* GetRemovedItems();
 ### <a name="return-value"></a>Valor de retorno  
   
 ### <a name="remarks"></a>Comentários  
- Os destinos removidos são recuperados durante a inicialização da lista de salto. Ao gerar uma nova lista de destino, os aplicativos devem processar primeiro a lista de destinos removidos, limpar seus dados de rastreamento para qualquer item retornado pelo enumerador lista removido. Se um aplicativo tenta fornecer um item que foi removido apenas na transação atual chamada para `BeginList` iniciado, a chamada de método adicionado novamente esse item falhará, para garantir que os aplicativos são respeitando a lista removida.  
+ Os destinos removidos são recuperados durante a inicialização da lista de atalhos. Ao gerar uma nova lista de destino, os aplicativos devem processar primeiro a lista de destinos removidos, limpar seus dados de acompanhamento para qualquer item retornado pelo enumerador lista removido. Se um aplicativo tenta fornecer um item que foi removido apenas na transação que a chamada atual para `BeginList` iniciado, chamada de método que é adicionado novamente esse item não conseguirá, certifique-se de que os aplicativos são respeitando lista removida.  
   
 ##  <a name="initializelist"></a>  CJumpList::InitializeList  
  Inicia uma transação de criação de lista.  
@@ -320,10 +320,10 @@ BOOL InitializeList();
 ### <a name="return-value"></a>Valor de retorno  
   
 ### <a name="remarks"></a>Comentários  
- Você não precisa chamar este método explicitamente, a menos que você deseja recuperar um ponteiro para `ICustomDestinationList` usando `GetDestinationList`, o número de slots disponíveis usando `GetMaxSlots`, ou uma lista de itens removidos usando `GetRemovedItems`.  
+ Você não precisa chamar esse método explicitamente, a menos que você deseja recuperar um ponteiro para `ICustomDestinationList` usando `GetDestinationList`, o número de slots disponíveis usando `GetMaxSlots`, ou uma lista de itens removidos usando `GetRemovedItems`.  
   
 ##  <a name="setappid"></a>  CJumpList::SetAppID  
- Define a ID de modelo de usuário do aplicativo para obter a lista que será criada.  
+ Define a ID de modelo de usuário do aplicativo para a lista que será compilada.  
   
 ```  
 void SetAppID(LPCTSTR strAppID);

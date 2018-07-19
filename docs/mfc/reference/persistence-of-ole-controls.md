@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e84e26bae83bd131b53d10e4561ddb60854a8a5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 661735e91084bad45553de71e80a599afd674028
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336820"
 ---
 # <a name="persistence-of-ole-controls"></a>Persistência de controles OLE
-Um recurso de controles OLE é propriedade persistência (ou serialização), que permite que o controle OLE ler ou gravar valores de propriedade para e de um arquivo ou fluxo. Um aplicativo de contêiner pode usar serialização para armazenar valores de propriedade do controle, mesmo depois que o aplicativo foi destruído o controle. Os valores de propriedade do controle OLE, em seguida, podem ser lidos do arquivo ou quando uma nova instância do controle de fluxo é criado em um momento posterior.  
+Um recurso de controles OLE é propriedade persistência (serialização ou), que permite que o controle OLE ler ou gravar valores de propriedade de e para um arquivo ou fluxo. Um aplicativo de contêiner pode usar a serialização para armazenar valores de propriedade do controle, mesmo depois que o aplicativo foi destruído o controle. Os valores de propriedade do controle OLE, em seguida, podem ser lidos do arquivo ou fluxo quando uma nova instância do controle é criado em um momento posterior.  
   
 ### <a name="persistence-of-ole-controls"></a>Persistência de controles OLE  
   
@@ -36,7 +36,7 @@ Um recurso de controles OLE é propriedade persistência (ou serialização), qu
 |[PX_Color](#px_color)|Troca de uma propriedade de cor de um controle.|  
 |[PX_Currency](#px_currency)|Troca de uma propriedade de controle do tipo **CY**.|  
 |[PX_DataPath](#px_datapath)|Troca de uma propriedade de controle do tipo `CDataPathProperty`.|  
-|[PX_Double](#px_double)|Troca de uma propriedade de controle do tipo **duplo**.|  
+|[PX_Double](#px_double)|Troca de uma propriedade de controle do tipo **duplas**.|  
 |[PX_Font](#px_font)|Troca de uma propriedade de fonte de um controle.|  
 |[PX_Float](#px_float)|Troca de uma propriedade de controle do tipo **float**.|  
 |[PX_IUnknown](#px_iunknown)|Troca de uma propriedade de controle do tipo indefinido.|  
@@ -46,12 +46,12 @@ Um recurso de controles OLE é propriedade persistência (ou serialização), qu
 |[PX_ULong](#px_ulong)|Troca de uma propriedade de controle do tipo **ULONG**.|  
 |[PX_UShort](#px_ushort)|Troca de uma propriedade de controle do tipo **USHORT**.|  
 |[PXstring](#px_string)|Troca de uma propriedade de controle de cadeia de caracteres.|  
-|[PX_VBXFontConvert](#px_vbxfontconvert)|Troca VBX relacionadas à fonte propriedades de um controle em uma propriedade de fonte de controle OLE.|  
+|[PX_VBXFontConvert](#px_vbxfontconvert)|Troca VBX relacionadas a fonte propriedades de um controle em uma propriedade de fonte de controle OLE.|  
   
- Além disso, o `AfxOleTypeMatchGuid` função global é fornecida para testar uma correspondência entre um `TYPEDESC` e um GUID especificado.  
+ Além disso, o `AfxOleTypeMatchGuid` função global é fornecida para testar uma correspondência entre TYPEDESC e um GUID específico.  
   
 ##  <a name="px_blob"></a>  PX_Blob  
- Chamar essa função dentro do controle `DoPropExchange` a função de membro para serializar ou inicializar a uma propriedade que armazena dados de objeto binário grande (BLOB).  
+ Chame essa função dentro do seu controle `DoPropExchange` a função de membro para serializar ou inicializar uma propriedade que armazena dados de objeto binário grande (BLOB).  
   
 ```  
  
@@ -69,34 +69,34 @@ hBlobDefault
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pPX`  
+ *pPX*  
  Ponteiro para o [CPropExchange](../../mfc/reference/cpropexchange-class.md) objeto (geralmente é passado como um parâmetro para `DoPropExchange`).  
   
- `pszPropName`  
- O nome da propriedade que está sendo trocado.  
+ *pszPropName*  
+ O nome da propriedade sendo trocado.  
   
- `hBlob`  
- Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro de classe).  
+ *hBlob*  
+ Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro da sua classe).  
   
- `hBlobDefault`  
+ *hBlobDefault*  
  Valor padrão para a propriedade.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
+ Diferente de zero se o exchange foi bem-sucedida; 0 se não for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
- O valor da propriedade será ser lido ou gravado para a variável referenciada por `hBlob`, conforme apropriado. Essa variável deve ser inicializada para **nulo** antes de chamar inicialmente `PX_Blob` pela primeira vez (normalmente, isso pode ser feito no construtor do controle). Se `hBlobDefault` for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de inicialização ou de serialização do controle falhar.  
+ O valor da propriedade será ser lidos ou gravado para a variável referenciada por *hBlob*, conforme apropriado. Essa variável deve ser inicializada como NULL antes de chamar inicialmente `PX_Blob` pela primeira vez (normalmente, isso pode ser feito no construtor do controle). Se *hBlobDefault* for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização ou de inicialização do controle falhar.  
   
- Os identificadores de `hBlob` e `hBlobDefault` se referir a um bloco de memória que contém o seguinte:  
+ As alças *hBlob* e *hBlobDefault* se referir a um bloco de memória que contém o seguinte:  
   
--   Um `DWORD` que contém o comprimento, em bytes, dos dados binários que segue, seguido imediatamente por  
+-   Um DWORD que contém o comprimento, em bytes, dos dados binários que segue, seguida imediatamente de  
   
 -   Um bloco de memória que contém os dados binários reais.  
   
- Observe que `PX_Blob` alocará memória, usando o Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API, ao carregar as propriedades de tipo BLOB. Você é responsável pela liberação de memória. Portanto, o destruidor de seu controle deve chamar [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) em qualquer propriedade de tipo de BLOB identificadores para liberar até toda a memória alocada para o controle.  
+ Observe que `PX_Blob` alocará memória, usando o Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API, ao carregar as propriedades de tipo de BLOB. Você é responsável por liberar essa memória. Portanto, o destruidor de seu controle deve chamar [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) em qualquer propriedade de tipo de BLOB alças para liberar até toda a memória alocada para o seu controle.  
   
 ##  <a name="px_bool"></a>  PX_Bool  
- Chamar essa função dentro do controle `DoPropExchange` a função de membro para serializar ou inicializar a propriedade do tipo **BOOL**.  
+ Chame essa função dentro do seu controle `DoPropExchange` a função de membro para serializar ou inicializar uma propriedade do tipo BOOL.  
   
 ```  
  
@@ -120,26 +120,26 @@ bValue  ,
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pPX`  
+ *pPX*  
  Ponteiro para o [CPropExchange](../../mfc/reference/cpropexchange-class.md) objeto (geralmente é passado como um parâmetro para `DoPropExchange`).  
   
- `pszPropName`  
- O nome da propriedade que está sendo trocado.  
+ *pszPropName*  
+ O nome da propriedade sendo trocado.  
   
- `bValue`  
- Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro de classe).  
+ *bValue*  
+ Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro da sua classe).  
   
- `bDefault`  
+ *bNível padrão*  
  Valor padrão para a propriedade.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
+ Diferente de zero se o exchange foi bem-sucedida; 0 se não for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
- O valor da propriedade será ser lido ou gravado para a variável referenciada por `bValue`, conforme apropriado. Se `bDefault` for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
+ O valor da propriedade será ser lidos ou gravado para a variável referenciada por *bValue*, conforme apropriado. Se *bNível padrão* for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
   
 ##  <a name="px_color"></a>  PX_Color  
- Chamar essa função dentro do controle `DoPropExchange` a função de membro para serializar ou inicializar a propriedade do tipo **OLE_COLOR**.  
+ Chame essa função dentro do seu controle `DoPropExchange` a função de membro para serializar ou inicializar uma propriedade do tipo OLE_COLOR.  
   
 ```  
  
@@ -162,26 +162,26 @@ clrDefault);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pPX`  
+ *pPX*  
  Ponteiro para o [CPropExchange](../../mfc/reference/cpropexchange-class.md) objeto (geralmente é passado como um parâmetro para `DoPropExchange`).  
   
- `pszPropName`  
- O nome da propriedade que está sendo trocado.  
+ *pszPropName*  
+ O nome da propriedade sendo trocado.  
   
- `clrValue`  
- Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro de classe).  
+ *clrValue*  
+ Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro da sua classe).  
   
- `clrDefault`  
+ *clrDefault*  
  Valor padrão para a propriedade, conforme definido pelo desenvolvedor do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
+ Diferente de zero se o exchange foi bem-sucedida; 0 se não for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
- O valor da propriedade será ser lido ou gravado para a variável referenciada por `clrValue`, conforme apropriado. Se `clrDefault` for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
+ O valor da propriedade será ser lidos ou gravado para a variável referenciada por *clrValue*, conforme apropriado. Se *clrDefault* for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
   
 ##  <a name="px_currency"></a>  PX_Currency  
- Chamar essa função dentro do controle `DoPropExchange` a função de membro para serializar ou inicializar a propriedade do tipo **moeda**.  
+ Chame essa função dentro do seu controle `DoPropExchange` função de membro para serializar ou inicializar uma propriedade do tipo **moeda**.  
   
 ```  
  
@@ -205,26 +205,26 @@ cyValue  ,
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pPX`  
+ *pPX*  
  Ponteiro para o [CPropExchange](../../mfc/reference/cpropexchange-class.md) objeto (geralmente é passado como um parâmetro para `DoPropExchange`).  
   
- `pszPropName`  
- O nome da propriedade que está sendo trocado.  
+ *pszPropName*  
+ O nome da propriedade sendo trocado.  
   
- `cyValue`  
- Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro de classe).  
+ *cyValue*  
+ Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro da sua classe).  
   
- `cyDefault`  
+ *cyDefault*  
  Valor padrão para a propriedade.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
+ Diferente de zero se o exchange foi bem-sucedida; 0 se não for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
- O valor da propriedade será ser lido ou gravado para a variável referenciada por `cyValue`, conforme apropriado. Se `cyDefault` for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
+ O valor da propriedade será ser lidos ou gravado para a variável referenciada por *cyValue*, conforme apropriado. Se *cyDefault* for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
   
 ##  <a name="px_datapath"></a>  PX_DataPath  
- Chamar essa função dentro do controle `DoPropExchange` a função de membro para serializar ou inicializar a propriedade do caminho de dados do tipo [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).  
+ Chame essa função dentro do seu controle `DoPropExchange` função de membro para serializar ou inicializar uma propriedade de caminho de dados do tipo [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).  
   
 ```  
  
@@ -244,23 +244,23 @@ pPX,
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pPX`  
+ *pPX*  
  Ponteiro para o [CPropExchange](../../mfc/reference/cpropexchange-class.md) objeto (geralmente é passado como um parâmetro para `DoPropExchange`).  
   
- `pszPropName`  
- O nome da propriedade que está sendo trocado.  
+ *pszPropName*  
+ O nome da propriedade sendo trocado.  
   
- `dataPathProperty`  
- Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro de classe).  
+ *dataPathProperty*  
+ Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro da sua classe).  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
+ Diferente de zero se o exchange foi bem-sucedida; 0 se não for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
- Propriedades de caminho de dados implementam propriedades de controle assíncrono. O valor da propriedade será ser lido ou gravado para a variável referenciada por `dataPathProperty`, conforme apropriado.  
+ Propriedades de caminho de dados implementam propriedades de controle assíncrono. O valor da propriedade será ser lidos ou gravado para a variável referenciada por *dataPathProperty*, conforme apropriado.  
   
 ##  <a name="px_double"></a>  PX_Double  
- Chamar essa função dentro do controle `DoPropExchange` a função de membro para serializar ou inicializar a propriedade do tipo **duplo**.  
+ Chame essa função dentro do seu controle `DoPropExchange` função de membro para serializar ou inicializar uma propriedade do tipo **duplo**.  
   
 ```  
  
@@ -284,26 +284,26 @@ doubleValue  ,
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pPX`  
+ *pPX*  
  Ponteiro para o [CPropExchange](../../mfc/reference/cpropexchange-class.md) objeto (geralmente é passado como um parâmetro para `DoPropExchange`).  
   
- `pszPropName`  
- O nome da propriedade que está sendo trocado.  
+ *pszPropName*  
+ O nome da propriedade sendo trocado.  
   
- `doubleValue`  
- Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro de classe).  
+ *doubleValue*  
+ Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro da sua classe).  
   
- `doubleDefault`  
+ *doubleDefault*  
  Valor padrão para a propriedade.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
+ Diferente de zero se o exchange foi bem-sucedida; 0 se não for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
- O valor da propriedade é lido ou gravado para a variável referenciada por `doubleValue`, conforme apropriado. Se `doubleDefault` for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
+ O valor da propriedade é lido ou gravado para a variável referenciada por *doubleValue*, conforme apropriado. Se *doubleDefault* for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
   
 ##  <a name="px_font"></a>  PX_Font  
- Chamar essa função dentro do controle `DoPropExchange` a função de membro para serializar ou inicializar a uma propriedade de fonte de tipo.  
+ Chame essa função dentro do seu controle `DoPropExchange` a função de membro para serializar ou inicializar uma propriedade de fonte de tipo.  
   
 ```  
  
@@ -327,29 +327,29 @@ pFontDispAmbient
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pPX`  
+ *pPX*  
  Ponteiro para o [CPropExchange](../../mfc/reference/cpropexchange-class.md) objeto (geralmente é passado como um parâmetro para `DoPropExchange`).  
   
- `pszPropName`  
- O nome da propriedade que está sendo trocado.  
+ *pszPropName*  
+ O nome da propriedade sendo trocado.  
   
- `font`  
+ *fonte*  
  Uma referência a um `CFontHolder` objeto que contém a propriedade de fonte.  
   
- `pFontDesc`  
- Um ponteiro para um **FONTDESC** estrutura que contém os valores a serem usados ao inicializar o estado padrão da propriedade font, no caso onde `pFontDispAmbient` é **nulo**.  
+ *pFontDesc*  
+ Um ponteiro para um `FONTDESC` estrutura que contém os valores a serem usados ao inicializar o estado padrão da propriedade da fonte, no caso em que *pFontDispAmbient* é NULL.  
   
- `pFontDispAmbient`  
- Um ponteiro para o **IFontDisp** interface de uma fonte a ser usado ao inicializar o estado padrão da propriedade font.  
+ *pFontDispAmbient*  
+ Um ponteiro para o `IFontDisp` interface de uma fonte para usar ao inicializar o estado padrão da propriedade da fonte.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
+ Diferente de zero se o exchange foi bem-sucedida; 0 se não for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
- O valor da propriedade é lida ou gravado para `font`, um `CFontHolder` referência, quando apropriado. Se `pFontDesc` e `pFontDispAmbient` forem especificados, eles são usados para inicializar o valor da propriedade padrão, quando necessário. Esses valores são usados se, por algum motivo, o processo de serialização do controle falhar. Normalmente, você passa **nulo** para `pFontDesc` e o valor de ambiente retornado por `COleControl::AmbientFont` para `pFontDispAmbient`. Observe que o objeto de fonte retornado por `COleControl::AmbientFont` devem ser liberados por uma chamada para o **IFontDisp::Release** função de membro.  
+ O valor da propriedade é lida ou gravado para `font`, um `CFontHolder` fazem referência, quando apropriado. Se *pFontDesc* e *pFontDispAmbient* forem especificados, eles são usados para inicializar o valor da propriedade padrão, quando necessário. Esses valores são usados se, por algum motivo, o processo de serialização do controle falhar. Normalmente, passar NULL para *pFontDesc* e o valor de ambiente retornado por `COleControl::AmbientFont` para *pFontDispAmbient*. Observe que o objeto de fonte retornado por `COleControl::AmbientFont` devem ser liberados por uma chamada para o `IFontDisp::Release` função de membro.  
   
 ##  <a name="px_float"></a>  PX_Float  
- Chamar essa função dentro do controle `DoPropExchange` a função de membro para serializar ou inicializar a propriedade do tipo **float**.  
+ Chame essa função dentro do seu controle `DoPropExchange` função de membro para serializar ou inicializar uma propriedade do tipo **float**.  
   
 ```  
  
@@ -373,26 +373,26 @@ floatValue  ,
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pPX`  
+ *pPX*  
  Ponteiro para o [CPropExchange](../../mfc/reference/cpropexchange-class.md) objeto (geralmente é passado como um parâmetro para `DoPropExchange`).  
   
- `pszPropName`  
- O nome da propriedade que está sendo trocado.  
+ *pszPropName*  
+ O nome da propriedade sendo trocado.  
   
- `floatValue`  
- Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro de classe).  
+ *floatValue*  
+ Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro da sua classe).  
   
- `floatDefault`  
+ *floatDefault*  
  Valor padrão para a propriedade.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
+ Diferente de zero se o exchange foi bem-sucedida; 0 se não for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
- O valor da propriedade é lido ou gravado para a variável referenciada por `floatValue`, conforme apropriado. Se `floatDefault` for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
+ O valor da propriedade é lido ou gravado para a variável referenciada por *floatValue*, conforme apropriado. Se *floatDefault* for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
   
 ##  <a name="px_iunknown"></a>  PX_IUnknown  
- Chamar essa função dentro do controle `DoPropExchange` a função de membro para serializar ou inicializar uma propriedade representada por um objeto com um **IUnknown**-interface derivada.  
+ Chame essa função dentro do seu controle `DoPropExchange` função de membro para serializar ou inicializar uma propriedade representada por um objeto tendo um `IUnknown`-interface derivada.  
   
 ```  
  
@@ -412,29 +412,29 @@ pUnkDefault
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pPX`  
+ *pPX*  
  Ponteiro para o [CPropExchange](../../mfc/reference/cpropexchange-class.md) objeto (geralmente é passado como um parâmetro para `DoPropExchange`).  
   
- `pszPropName`  
- O nome da propriedade que está sendo trocado.  
+ *pszPropName*  
+ O nome da propriedade sendo trocado.  
   
  *pUnk*  
  Referência a uma variável que contém a interface do objeto que representa o valor da propriedade.  
   
- `iid`  
+ *IID*  
  Uma ID de interface que indica qual interface do objeto de propriedade é usada pelo controle.  
   
- `pUnkDefault`  
+ *pUnkDefault*  
  Valor padrão para a propriedade.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
+ Diferente de zero se o exchange foi bem-sucedida; 0 se não for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
- O valor da propriedade é lido ou gravado para a variável referenciada por *pUnk*, conforme apropriado. Se `pUnkDefault` for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
+ O valor da propriedade é lido ou gravado para a variável referenciada por *pUnk*, conforme apropriado. Se *pUnkDefault* for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
   
 ##  <a name="px_long"></a>  PX_Long  
- Chamar essa função dentro do controle `DoPropExchange` a função de membro para serializar ou inicializar a propriedade do tipo **longo**.  
+ Chame essa função dentro do seu controle `DoPropExchange` função de membro para serializar ou inicializar uma propriedade do tipo **longo**.  
   
 ```  
  
@@ -458,26 +458,26 @@ lValue  ,
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pPX`  
+ *pPX*  
  Ponteiro para o [CPropExchange](../../mfc/reference/cpropexchange-class.md) objeto (geralmente é passado como um parâmetro para `DoPropExchange`).  
   
- `pszPropName`  
- O nome da propriedade que está sendo trocado.  
+ *pszPropName*  
+ O nome da propriedade sendo trocado.  
   
- `lValue`  
- Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro de classe).  
+ *lValue*  
+ Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro da sua classe).  
   
- `lDefault`  
+ *lDefault*  
  Valor padrão para a propriedade.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
+ Diferente de zero se o exchange foi bem-sucedida; 0 se não for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
- O valor da propriedade é lido ou gravado para a variável referenciada por `lValue`, conforme apropriado. Se `lDefault` for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
+ O valor da propriedade é lido ou gravado para a variável referenciada por *lValue*, conforme apropriado. Se *lDefault* for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
   
 ##  <a name="px_picture"></a>  PX_Picture  
- Chamar essa função dentro do controle `DoPropExchange` a função de membro ao serializar ou inicializar a uma propriedade de imagem do seu controle.  
+ Chame essa função dentro do seu controle `DoPropExchange` a função de membro para serializar ou inicializar uma propriedade de imagem do seu controle.  
   
 ```  
  
@@ -501,26 +501,26 @@ pict  ,
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pPX`  
+ *pPX*  
  Ponteiro para o [CPropExchange](../../mfc/reference/cpropexchange-class.md) objeto (geralmente é passado como um parâmetro para `DoPropExchange`).  
   
- `pszPropName`  
- O nome da propriedade que está sendo trocado.  
+ *pszPropName*  
+ O nome da propriedade sendo trocado.  
   
- `pict`  
- Referência a um [CPictureHolder](../../mfc/reference/cpictureholder-class.md) objeto onde a propriedade é armazenada (normalmente uma variável de membro de classe).  
+ *PICT*  
+ Referência a um [CPictureHolder](../../mfc/reference/cpictureholder-class.md) objeto em que a propriedade é armazenada (normalmente uma variável de membro da sua classe).  
   
- `pictDefault`  
+ *pictDefault*  
  Valor padrão para a propriedade.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
+ Diferente de zero se o exchange foi bem-sucedida; 0 se não for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
- O valor da propriedade é lido ou gravado para a variável referenciada por `pict`, conforme apropriado. Se `pictDefault` for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
+ O valor da propriedade é lido ou gravado para a variável referenciada por *pict*, conforme apropriado. Se *pictDefault* for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
   
 ##  <a name="px_short"></a>  PX_Short  
- Chamar essa função dentro do controle `DoPropExchange` a função de membro para serializar ou inicializar a propriedade do tipo **curto**.  
+ Chame essa função dentro do seu controle `DoPropExchange` função de membro para serializar ou inicializar uma propriedade do tipo **curto**.  
   
 ```  
  
@@ -544,26 +544,26 @@ sValue  ,
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pPX`  
+ *pPX*  
  Ponteiro para o [CPropExchange](../../mfc/reference/cpropexchange-class.md) objeto (geralmente é passado como um parâmetro para `DoPropExchange`).  
   
- `pszPropName`  
- O nome da propriedade que está sendo trocado.  
+ *pszPropName*  
+ O nome da propriedade sendo trocado.  
   
- `sValue`  
- Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro de classe).  
+ *sValue*  
+ Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro da sua classe).  
   
- `sDefault`  
+ *sDefault*  
  Valor padrão para a propriedade.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
+ Diferente de zero se o exchange foi bem-sucedida; 0 se não for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
- O valor da propriedade é lido ou gravado para a variável referenciada por `sValue`, conforme apropriado. Se `sDefault` for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
+ O valor da propriedade é lido ou gravado para a variável referenciada por *sValue*, conforme apropriado. Se *sDefault* for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
   
 ##  <a name="px_ulong"></a>  PX_ULong  
- Chamar essa função dentro do controle `DoPropExchange` a função de membro para serializar ou inicializar a propriedade do tipo **ULONG**.  
+ Chame essa função dentro do seu controle `DoPropExchange` função de membro para serializar ou inicializar uma propriedade do tipo **ULONG**.  
   
 ```  
  
@@ -587,26 +587,26 @@ ulValue  ,
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pPX`  
+ *pPX*  
  Ponteiro para o [CPropExchange](../../mfc/reference/cpropexchange-class.md) objeto (geralmente é passado como um parâmetro para `DoPropExchange`).  
   
- `pszPropName`  
- Nome da propriedade que está sendo trocada.  
+ *pszPropName*  
+ Nome da propriedade sendo trocada.  
   
- `ulValue`  
- Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro de classe).  
+ *ulValue*  
+ Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro da sua classe).  
   
- `ulDefault`  
+ *ulDefault*  
  Valor padrão para a propriedade.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
+ Diferente de zero se o exchange foi bem-sucedida; 0 se não for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
- O valor da propriedade é lido ou gravado para a variável referenciada por `ulValue`, conforme apropriado. Se `ulDefault` for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
+ O valor da propriedade é lido ou gravado para a variável referenciada por *ulValue*, conforme apropriado. Se *ulDefault* for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
   
 ##  <a name="px_ushort"></a>  PX_UShort  
- Chamar essa função dentro do controle `DoPropExchange` a função de membro para serializar ou inicializar a propriedade do tipo `unsigned` **curto**.  
+ Chame essa função dentro do seu controle `DoPropExchange` função de membro para serializar ou inicializar uma propriedade do tipo **unsigned short**.  
   
 ```  
  
@@ -630,26 +630,26 @@ usValue  ,
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pPX`  
+ *pPX*  
  Ponteiro para o [CPropExchange](../../mfc/reference/cpropexchange-class.md) objeto (geralmente é passado como um parâmetro para `DoPropExchange`).  
   
- `pszPropName`  
- Nome da propriedade que está sendo trocada.  
+ *pszPropName*  
+ Nome da propriedade sendo trocada.  
   
  *usValue*  
- Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro de classe).  
+ Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro da sua classe).  
   
  *usDefault*  
  Valor padrão para a propriedade.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
+ Diferente de zero se o exchange foi bem-sucedida; 0 se não for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
  O valor da propriedade é lido ou gravado para a variável referenciada por *usValue*, conforme apropriado. Se *usDefault* for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
   
 ##  <a name="px_string"></a>  PXstring  
- Chamar essa função dentro do controle **DoPropExchange** a função de membro ao serializar ou inicializar a uma propriedade de cadeia de caracteres.  
+ Chame essa função dentro do seu controle `DoPropExchange` a função de membro para serializar ou inicializar uma propriedade de cadeia de caracteres.  
   
 ```  
  
@@ -673,26 +673,26 @@ strValue  ,
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pPX`  
+ *pPX*  
  Ponteiro para o [CPropExchange](../../mfc/reference/cpropexchange-class.md) objeto (geralmente é passado como um parâmetro para `DoPropExchange`).  
   
- `pszPropName`  
- O nome da propriedade que está sendo trocado.  
+ *pszPropName*  
+ O nome da propriedade sendo trocado.  
   
- `strValue`  
- Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro de classe).  
+ *strValue*  
+ Referência à variável em que a propriedade é armazenada (normalmente uma variável de membro da sua classe).  
   
- `strDefault`  
+ *strDefault*  
  Valor padrão para a propriedade.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
+ Diferente de zero se o exchange foi bem-sucedida; 0 se não for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
- O valor da propriedade é lido ou gravado para a variável referenciada por `strValue`, conforme apropriado. Se `strDefault` for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
+ O valor da propriedade é lido ou gravado para a variável referenciada por *strValue*, conforme apropriado. Se *strDefault* for especificado, ele será usado como o valor da propriedade padrão. Esse valor é usado se, por algum motivo, o processo de serialização do controle falhar.  
   
 ##  <a name="px_vbxfontconvert"></a>  PX_VBXFontConvert  
- Chamar essa função dentro do controle `DoPropExchange` função de membro para inicializar uma propriedade de fonte, convertendo VBX relacionadas à fonte propriedades de um controle.  
+ Chame essa função dentro do seu controle `DoPropExchange` função de membro para inicializar uma propriedade de fonte, convertendo as propriedades relacionadas a fonte de um controle VBX.  
   
 ```  
  
@@ -704,19 +704,19 @@ pPX  ,
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pPX`  
+ *pPX*  
  Ponteiro para o [CPropExchange](../../mfc/reference/cpropexchange-class.md) objeto (geralmente é passado como um parâmetro para `DoPropExchange`).  
   
- `font`  
- A propriedade de fonte do controle OLE que conterá as propriedades de fonte relacionadas de VBX convertidas.  
+ *fonte*  
+ A propriedade de fonte do controle OLE que contém as propriedades de fonte relacionadas do VBX convertidas.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o exchange foi bem-sucedida; 0 se não houver êxito.  
+ Diferente de zero se o exchange foi bem-sucedida; 0 se não for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função deve ser usada somente por um controle OLE que foi projetado como uma substituição direta para um controle VBX. Quando o ambiente de desenvolvimento do Visual Basic converte um formulário que contém um controle VBX para usar a controle OLE de substituição correspondente, ele chamará o controle **IDataObject::SetData** função, passando uma propriedade definida que contém dados de propriedade do controle VBX. Essa operação, por sua vez, faz com que o controle `DoPropExchange` função a ser invocado. `DoPropExchange` pode chamar `PX_VBXFontConvert` para converter as propriedades relacionadas a fonte do controle VBX (por exemplo, "FontName," "FontSize", e assim por diante) para os componentes correspondentes das propriedade de fonte do controle OLE.  
+ Essa função deve ser usada somente por um controle OLE que foi projetado como uma substituição direta para um controle VBX. Quando o ambiente de desenvolvimento do Visual Basic converte um formulário que contenha um controle VBX para usar a controle OLE de substituição correspondente, ele chamará o controle `IDataObject::SetData` função, passando um conjunto de propriedades que contém dados de propriedade do controle VBX. Essa operação, por sua vez, faz com que o controle `DoPropExchange` função a ser invocada. `DoPropExchange` pode chamar `PX_VBXFontConvert` para converter as propriedades de relacionadas a fonte do controle VBX (por exemplo, "FontName," "FontSize", e assim por diante) para os componentes correspondentes das propriedade de fonte do controle OLE.  
   
- `PX_VBXFontConvert` só deve ser chamado quando o controle, na verdade, está sendo convertido em um aplicativo de forma VBX. Por exemplo:  
+ `PX_VBXFontConvert` só deve ser chamado quando o controle, na verdade, está sendo convertido de um aplicativo de formulário VBX. Por exemplo:  
   
  [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]  
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]  

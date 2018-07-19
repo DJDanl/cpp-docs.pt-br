@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc71c01d7527655771e3529311dc32fb4edbc525
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec80db9282bc51106c6beedd42dd05a1ba636c74
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846825"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958013"
 ---
 # <a name="extremevaluedistribution-class"></a>Classe extreme_value_distribution
 
@@ -81,13 +81,13 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType* o tipo de resultado de ponto flutuante, o padrão será a `double`. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType* padrão é o tipo de resultado de ponto flutuante **duplo**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 *URNG* O mecanismo gerador de números aleatórios. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve uma distribuição que produz valores de um tipo de ponto flutuante especificado pelo usuário ou um tipo `double` caso nenhum seja fornecido, distribuído de acordo com a distribuição Extreme Value. A tabela a seguir contém links para artigos sobre cada um dos membros.
+A classe de modelo descreve uma distribuição que produz valores de um usuário especificado pelo ponto flutuantes tipo ou tipo **duplas** caso nenhum seja fornecido, distribuído de acordo com a distribuição Extreme Value. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -200,11 +200,11 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*a_value* o `a` parâmetro da distribuição.
+*a_value* o `a` parâmetro de distribuição.
 
-*b_value* o `b` parâmetro da distribuição.
+*b_value* o `b` parâmetro de distribuição.
 
-*parâmetro* o `param_type` estrutura usada para construir a distribuição.
+*parm* o `param_type` estrutura usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
@@ -232,11 +232,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*a_value* o `a` parâmetro da distribuição.
+*a_value* o `a` parâmetro de distribuição.
 
-*b_value* o `b` parâmetro da distribuição.
+*b_value* o `b` parâmetro de distribuição.
 
-*direito* o `param_type` objeto a ser comparado a este.
+*à direita* o `param_type` objeto a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários
 

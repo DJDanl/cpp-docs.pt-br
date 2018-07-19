@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: a26a4a0cab0bdea8a7a642cc760da0f3fc79b471
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c7f053466e8c6297b7ccd9a2a40c5980e23ccba
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861939"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960301"
 ---
 # <a name="ltutilitygt-functions"></a>Funções &lt;utility&gt;
 
@@ -41,9 +41,11 @@ T exchange(T& val, Other&& new_val)
 
 ### <a name="parameters"></a>Parâmetros
 
-`val` O objeto que receberá o valor de new_val.
+*Val*  
+ O objeto que receberá o valor de new_val.
 
-`new_val` O objeto cujo valor é copiado ou movido para o valor.
+*new_val*  
+ O objeto cujo valor é copiado ou movido para val.
 
 ### <a name="remarks"></a>Comentários
 
@@ -99,12 +101,12 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`Type`|O tipo do valor passado em `Arg`, que pode ser diferente do tipo de `Arg`. Geralmente determinado por um argumento de modelo da função de encaminhamento.|
-|`Arg`|O argumento a ser convertido.|
+|*Tipo*|O tipo do valor passado em *Arg*, que pode ser diferente do tipo de *Arg*. Geralmente determinado por um argumento de modelo da função de encaminhamento.|
+|*arg*|O argumento a ser convertido.|
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará uma referência rvalue para `Arg` se o valor passado em `Arg` era originalmente um rvalue ou uma referência a um rvalue; caso contrário, retornará `Arg` sem modificação do seu tipo.
+Retorna uma referência rvalue para *Arg* se o valor passado *Arg* era originalmente um rvalue ou uma referência a um rvalue; caso contrário, retornará *Arg* sem modificar seu tipo.
 
 ### <a name="remarks"></a>Comentários
 
@@ -161,21 +163,25 @@ constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Index` O índice de base 0 do elemento designado.
+*Índice*  
+ O índice baseado em 0 do elemento designado.
 
-`T1` O tipo do primeiro elemento do par.
+*T1*  
+ O tipo do primeiro elemento do par.
 
-`T2` O tipo do elemento segundo par.
+*T2*  
+ O tipo do segundo elemento do par.
 
-`pr` O par selecionem.
+*solicitação de pull*  
+ O par do qual selecionar.
 
 ### <a name="remarks"></a>Comentários
 
 As funções modelo retornam uma referência a um elemento de seu argumento `pair`.
 
-Para as sobrecargas indexadas, se o valor de `Index` for 0, as funções retornarão `pr.first` e se o valor de `Index` for 1, as funções retornarão `pr.second`. O tipo `RI` é o tipo do elemento retornado.
+Para as sobrecargas indexadas, se o valor de *índice* for 0, as funções retornam `pr.first` e, se o valor de *índice* é 1, as funções retornam `pr.second`. O tipo `RI` é o tipo do elemento retornado.
 
-Para sobrecargas que não têm um parâmetro de Índice, o elemento a ser retornado é deduzido pelo argumento de tipo. Chamar `get<T>(Tuple)` produzirá um erro do compilador se `pr` contiver mais ou menos de um elemento do tipo T.
+Para sobrecargas que não têm um parâmetro de Índice, o elemento a ser retornado é deduzido pelo argumento de tipo. Chamando `get<T>(Tuple)` produzirá um erro do compilador se *pr* contiver mais ou menos de um elemento do tipo T.
 
 ### <a name="example"></a>Exemplo
 
@@ -228,9 +234,11 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Val1` Valor que inicializa o primeiro elemento da `pair`.
+*Val1*  
+ O valor que inicializa o primeiro elemento de `pair`.
 
-`Val2` Valor que inicializa o segundo elemento do `pair`.
+*Val2*  
+ O valor que inicializa o segundo elemento de `pair`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -269,8 +277,8 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`Type`|Um tipo deduzido do tipo do argumento passado em `Arg`, juntamente com as regras de recolhimento de referência.|
-|`Arg`|O argumento a ser convertido. Embora o tipo de `Arg` pareça ser especificado como uma referência de rvalue, `move` também aceita argumentos lvalue, pois as referência de lvalue podem se associar a referências de rvalue.|
+|*Tipo*|Um tipo deduzido do tipo do argumento passado *Arg*, juntamente com as regras de recolhimento de referência.|
+|*arg*|O argumento a ser convertido. Embora o tipo de *Arg* pareça ser especificado como uma referência de rvalue, `move` também aceita argumentos lvalue porque as referências de lvalue podem associar a referências de rvalue.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -278,11 +286,11 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 ### <a name="remarks"></a>Comentários
 
-O argumento de modelo `Type` não é destinado a ser especificado explicitamente, mas a ser deduzido do tipo do valor passado em `Arg`. O tipo de `Type` é ainda ajustado de acordo com as regras de recolhimento de referência.
+O argumento de modelo *tipo* não se destina a ser especificado explicitamente, mas a ser deduzido do tipo do valor passado *Arg*. O tipo de *tipo* é ainda ajustado de acordo com as regras de recolhimento de referência.
 
-`move` não move seu argumento. Em vez disso, ao converter incondicionalmente seu argumento (que pode ser um lvalue) em uma referência de rvalue, ele permite que o compilador mova subsequentemente, em vez de copiar, o valor passado em `Arg` se seu tipo for habilitado para movimento. Se seu tipo não for habilitado para movimento, ele será copiado.
+`move` não move seu argumento. Em vez disso, ao converter incondicionalmente seu argumento — que pode ser um lvalue — em uma referência de rvalue, ele permite que o compilador mova subsequentemente, em vez de cópia, o valor passado em *Arg* se seu tipo for habilitado para movimento. Se seu tipo não for habilitado para movimento, ele será copiado.
 
-Se o valor passado em `Arg` for um lvalue, isto é, tiver um nome ou seu endereço puder ser usado, ele será invalidado quando a movimentação ocorrer. Não faça referência ao valor passado em `Arg` por seu nome ou endereço depois que for movido.
+Se o valor passado em *Arg* é um lvalue — ou seja, ele tem um nome ou seu endereço pode ser feito — são invalidados quando a movimentação ocorrer. Não se referem ao valor passado em *Arg* por seu nome ou endereço depois que ele é movido.
 
 ## <a name="swap"></a>  swap
 
@@ -297,8 +305,8 @@ void swap(pair<T, U>& left, pair<T, U>& right);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`left`|Um objeto do tipo `pair`.|
-|`right`|Um objeto do tipo `pair`.|
+|*left*|Um objeto do tipo `pair`.|
+|*right*|Um objeto do tipo `pair`.|
 
 ### <a name="remarks"></a>Comentários
 

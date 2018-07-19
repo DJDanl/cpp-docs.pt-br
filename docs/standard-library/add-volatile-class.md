@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf15ef0b5134af7831cf2e71b4235df9534f3425
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8775c681954799e2239da5ad429f9f8131ca25b1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841291"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958884"
 ---
 # <a name="addvolatile-class"></a>Classe add_volatile
 
-Cria um tipo volátil do tipo especificado.
+Faz uma **volátil** tipo do tipo especificado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,11 +40,11 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T* digite para modificar.
+*T* para modificar o tipo.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância de `add_volatile<T>` tem um typedef do membro `type` que será *T* se *T* for uma referência, uma função ou um tipo qualificado como volátil, caso contrário, será `volatile` *T*. O alias `add_volatile_t` é um atalho para acessar o typedef do membro `type`.
+Uma instância do `add_volatile<T>` tem um membro **typedef** `type` que é *T* se *T* é uma referência, uma função ou um tipo qualificado como volátil, caso contrário **volátil** *T*. O alias `add_volatile_t` é um atalho para acessar o membro **typedef** `type`.
 
 ## <a name="example"></a>Exemplo
 

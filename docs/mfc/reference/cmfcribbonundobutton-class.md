@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcddf0f1848bdd75714bd5b931dcf8520e68cf8c
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 11c83332c12daa6753add0618367b90f8c759532
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041241"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848762"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Classe CMFCRibbonUndoButton
-O `CMFCRibbonUndoButton` classe implementa um botão de lista suspensa que contém os comandos mais recentes do usuário. Os usuários podem selecionar um ou mais dos comandos mais recentes da lista suspensa para refazer ou desfazê-las.  
+O `CMFCRibbonUndoButton` classe implementa um botão de lista suspensa que contém os comandos mais recentes do usuário. Os usuários podem selecionar um ou mais dos comandos mais recentes na lista suspensa para refazer ou desfazê-los.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,14 +56,14 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 |----------|-----------------|  
 |[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Adiciona uma nova ação à lista de ações.|  
 |[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Limpa a lista de ação, que é a lista suspensa.|  
-|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|Determina o número de itens que um usuário selecionado na lista suspensa.|  
+|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|Determina o número de itens que o usuário selecionou na lista suspensa.|  
 |[CMFCRibbonUndoButton::HasMenu](#hasmenu)|Indica se o objeto contém um menu.|  
   
 ## <a name="remarks"></a>Comentários  
  O `CMFCRibbonUndoButton` classe usa uma pilha para representar a lista suspensa.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como construir um objeto de `CMFCRibbonUndoButton` classe e adicionar uma nova ação à lista de ações. Este trecho de código é parte do [exemplo Gadgets da faixa de opções](../../visual-cpp-samples.md).  
+ O exemplo a seguir demonstra como construir um objeto do `CMFCRibbonUndoButton` de classe e adicionar uma nova ação à lista de ações. Este trecho de código é parte do [exemplo de Gadgets de faixa de opções](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]  
   
@@ -124,23 +124,23 @@ CMFCRibbonUndoButton(
  Especifica o rótulo de texto do botão.  
   
  [in] *nSmallImageIndex*  
- Índice de base zero na lista de imagens do objeto pai para a imagem em miniatura do botão.  
+ Índice baseado em zero na lista de imagens do objeto pai para a imagem do botão pequeno.  
   
  [in] *nLargeImageIndex*  
- Índice de base zero na lista de imagens do objeto pai para a imagem grande do botão.  
+ O índice baseado em zero na lista de imagens do objeto pai para o de imagem grandes do botão.  
   
  [in] *hIcon*  
- Um identificador para um ícone que você pode usar como imagem do botão.  
+ Um identificador para um ícone que você pode usar como imagem de um botão.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
- Determina o número de itens que um usuário selecionado na lista suspensa.  
+ Determina o número de itens que o usuário selecionou na lista suspensa.  
   
 ```  
 int GetActionNumber() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- O número de itens que um usuário selecionado.  
+ O número de itens que o usuário selecionou.  
   
 ##  <a name="hasmenu"></a>  CMFCRibbonUndoButton::HasMenu  
  Indica se o objeto contém um menu.  
@@ -150,12 +150,12 @@ virtual BOOL HasMenu() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Sempre retorna `TRUE`.  
+ Sempre retorna TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)   
  [Classe CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)

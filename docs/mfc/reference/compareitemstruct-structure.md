@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a54b4f4749e7865d793559a9cb5f475c1d57898
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 6c42f356cb323bb7690b6c39b1fc7bd9ce0485f3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078252"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850583"
 ---
 # <a name="compareitemstruct-structure"></a>Estrutura COMPAREITEMSTRUCT
-O `COMPAREITEMSTRUCT` estrutura fornece os identificadores e os dados fornecidos pelo aplicativo para dois itens em uma caixa de lista classificada, desenhados pelo proprietário ou caixa de combinação.  
+O `COMPAREITEMSTRUCT` estrutura fornece os identificadores e dados fornecidos pelo aplicativo para dois itens em uma caixa de lista classificada, desenhado pelo proprietário ou a caixa de combinação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,10 +42,10 @@ typedef struct tagCOMPAREITEMSTRUCT {
   
 #### <a name="parameters"></a>Parâmetros  
  *CtlType*  
- **ODT_LISTBOX** (que especifica uma caixa de listagem do desenho proprietário) ou **ODT_COMBOBOX** (que especifica uma caixa de combinação do desenho proprietário).  
+ ODT_LISTBOX (que especifica uma caixa de listagem do desenho proprietário) ou ODT_COMBOBOX (que especifica uma caixa de combinação do desenho proprietário).  
   
  *CtlID*  
- A identificação do controle de caixa de listagem ou caixa de combinação.  
+ A ID de controle de caixa de listagem ou caixa de combinação.  
   
  *hwndItem*  
  O identificador de janela do controle.  
@@ -54,19 +54,19 @@ typedef struct tagCOMPAREITEMSTRUCT {
  O índice do primeiro item na caixa de listagem ou caixa de combinação que estão sendo comparados.  
   
  *itemData1*  
- Dados fornecidos pelo aplicativo para o primeiro item que estão sendo comparado. Esse valor foi passado na chamada que adicionou o item à caixa de combinação ou lista.  
+ Dados fornecidos pelo aplicativo para o primeiro item que estão sendo comparado. Esse valor foi passado na chamada de que adicionou o item à caixa de combinação ou lista.  
   
  *itemID2*  
  Índice do segundo item na caixa de listagem ou caixa de combinação que estão sendo comparados.  
   
  *itemData2*  
- Dados fornecidos pelo aplicativo para o segundo item que estão sendo comparado. Esse valor foi passado na chamada que adicionou o item à caixa de combinação ou lista.  
+ Dados fornecidos pelo aplicativo para o segundo item que estão sendo comparado. Esse valor foi passado na chamada de que adicionou o item à caixa de combinação ou lista.  
   
 ## <a name="remarks"></a>Comentários  
- Sempre que um aplicativo adiciona um novo item a uma caixa de listagem de desenho proprietário ou caixa de combinação criada com o **CBS_SORT** ou **LBS_SORT** estilo, o Windows envia o proprietário uma mensagem WM_COMPAREITEM. O *lParam* parâmetro da mensagem contém um ponteiro de tempo para um `COMPAREITEMSTRUCT` estrutura. Ao receber a mensagem, o proprietário compara os dois itens e retorna um valor que indica qual item classifica antes da outra.  
+ Sempre que um aplicativo adiciona um novo item a uma caixa de lista desenhado pelo proprietário ou combinação criado com o estilo CBS_SORT ou LBS_SORT, o Windows envia o proprietário de uma mensagem WM_COMPAREITEM. O *lParam* parâmetro da mensagem contém um ponteiro longo para um `COMPAREITEMSTRUCT` estrutura. Ao receber a mensagem, o proprietário compara os dois itens e retorna um valor que indica qual item classifica antes das outras.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** WinUser  
+ **Cabeçalho:** WinUser. h  
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   

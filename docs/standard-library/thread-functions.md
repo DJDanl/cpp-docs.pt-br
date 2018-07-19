@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: f151bbaf692d914fa1072021e2f14262b2c72ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 948c00f7c0b773bf366f4ea9e102c832e9878d9b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855897"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960444"
 ---
 # <a name="ltthreadgt-functions"></a>Funções &lt;thread&gt;
 
@@ -54,11 +54,12 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Rel_time` Um [duração](../standard-library/duration-class.md) objeto que especifica um intervalo de tempo.
+*Rel_time*  
+ O objeto [duration](../standard-library/duration-class.md) que especifica um intervalo de tempo.
 
 ### <a name="remarks"></a>Comentários
 
-A função bloqueia o thread de chamada durante, pelo menos, o tempo especificado por `Rel_time`. Essa função não gera exceções.
+A função bloqueia o thread de chamada pelo menos o tempo especificado por *Rel_time*. Essa função não gera exceções.
 
 ## <a name="sleep_until"></a>  sleep_until
 
@@ -73,7 +74,8 @@ void sleep_until(const xtime *Abs_time);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Abs_time` Representa um ponto no tempo.
+*Abs_time*  
+ Representa um ponto no tempo.
 
 ### <a name="remarks"></a>Comentários
 
@@ -81,7 +83,7 @@ Essa função não gera exceções.
 
 ## <a name="swap"></a>  swap
 
-Troca os estados de dois objetos `thread`.
+Troca os estados de dois **thread** objetos.
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,9 +91,11 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Left` À esquerda `thread` objeto.
+*Esquerda*  
+ À esquerda **thread** objeto.
 
-`Right` Direita `thread` objeto.
+*Direita*  
+ O direito **thread** objeto.
 
 ### <a name="remarks"></a>Comentários
 

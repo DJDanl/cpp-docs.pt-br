@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 540f5085d1f2ab3b641e023654d05f1e9e66bae2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9fe7672a925105bff3b63032a709353388143c0c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857331"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953004"
 ---
 # <a name="syncnone-class"></a>Classe sync_none
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`count`|O número de elementos na matriz a serem alocados.|
+|*count*|O número de elementos na matriz a serem alocados.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -90,8 +90,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`ptr`|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
-|`count`|O número de objetos a serem desalocados do armazenamento.|
+|*ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
+|*count*|O número de objetos a serem desalocados do armazenamento.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -109,12 +109,12 @@ bool equals(const sync<Cache>& Other) const;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`Cache`|O objeto de cache do filtro de sincronização.|
-|`Other`|O objeto de cache a ser comparado quanto à igualdade.|
+|*Cache*|O objeto de cache do filtro de sincronização.|
+|*Outros*|O objeto de cache a ser comparado quanto à igualdade.|
 
 ### <a name="return-value"></a>Valor de retorno
 
-A função membro sempre retorna `true`.
+A função membro sempre retorna **verdadeira**.
 
 ### <a name="remarks"></a>Comentários
 

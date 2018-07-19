@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4144eed22a3a16615d7fa79ecd4828835c6ebe0b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 73a051eadaf06950e606f475b2bb418425e1b19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846474"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958866"
 ---
 # <a name="alignedstorage-class"></a>Classe aligned_storage
 
@@ -40,13 +40,13 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Len` O tamanho do objeto.
+*Len* o tamanho do objeto.
 
-`Align` O alinhamento do objeto.
+*Alinhar* o alinhamento do objeto.
 
 ## <a name="remarks"></a>Comentários
 
-O typedef do membro de modelo `type` é sinônimo de um tipo POD com alinhamento `Align` e tamanho `Len`. `Align` deve ser igual a `alignment_of<T>::value` para algum tipo `T` ou para o alinhamento padrão.
+O membro de modelo typedef `type` é um sinônimo de um tipo POD com alinhamento *alinhar* e o tamanho *Len*. *Alinhar* deve ser igual a `alignment_of<T>::value` para algum tipo `T`, ou para o alinhamento padrão.
 
 ## <a name="example"></a>Exemplo
 

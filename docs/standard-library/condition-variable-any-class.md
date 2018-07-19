@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0fe38031dc215f537d82fe6e06f68acf6db8e0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 56082c63ccc64e117d9962ff35dddc01969f403b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847124"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959226"
 ---
 # <a name="conditionvariableany-class"></a>Classe condition_variable_any
 
@@ -111,9 +111,9 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Lck` Um `mutex` objeto de qualquer tipo.
+*Lck* um `mutex` objeto de qualquer tipo.
 
-`Pred` Qualquer expressão que retorna `true` ou `false`.
+*Pred* qualquer expressão que retorna **verdadeira** ou **false**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -140,21 +140,21 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>Parâmetros
 
-`Lck` Um `mutex` objeto de qualquer tipo.
+*Lck* um `mutex` objeto de qualquer tipo.
 
-`Rel_time` Um `chrono::duration` objeto que especifica a quantidade de tempo antes do thread será ativado.
+*Rel_time* um `chrono::duration` objeto que especifica a quantidade de tempo antes que o thread é ativado.
 
-`Pred` Qualquer expressão que retorna `true` ou `false`.
+*Pred* qualquer expressão que retorna **verdadeira** ou **false**.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O primeiro método retornará `cv_status::timeout` se a espera terminar quando `Rel_time` tiver decorrido. Do contrário, o método retorna `cv_status::no_timeout`.
+O primeiro método retorna `cv_status::timeout` se a espera terminar quando *Rel_time* tiver decorrido. Do contrário, o método retorna `cv_status::no_timeout`.
 
-O segundo método retorna o valor de `Pred`.
+O segundo método retorna o valor de *Pred*.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro método bloqueia até que o objeto `condition_variable_any` seja sinalizado por uma chamada para [notify_one](../standard-library/condition-variable-class.md#notify_one) ou [notify_all](../standard-library/condition-variable-class.md#notify_all) ou até que o intervalo de tempo `Rel_time` tenha decorrido. Ela também pode ser ativada falsamente.
+O primeiro método bloqueia até que o `condition_variable_any` objeto é sinalizado por uma chamada para [notify_one](../standard-library/condition-variable-class.md#notify_one) ou [notify_all](../standard-library/condition-variable-class.md#notify_all), ou até que o intervalo de tempo *Rel_time* tiver decorrido. Ela também pode ser ativada falsamente.
 
 O segundo método, na verdade, executa o código a seguir.
 
@@ -192,21 +192,21 @@ void wait_until(
 
 ### <a name="parameters"></a>Parâmetros
 
-`Lck` Um objeto mutex.
+*Lck* um objeto mutex.
 
-`Abs_time` Um [chrono::time_point](../standard-library/time-point-class.md) objeto.
+*Abs_time* um [chrono:: time_point](../standard-library/time-point-class.md) objeto.
 
-`Pred` Qualquer expressão que retorna `true` ou `false`.
+*Pred* qualquer expressão que retorna **verdadeira** ou **false**.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Os métodos que retornam um tipo `cv_status` retornarão `cv_status::timeout` se a espera terminar quando `Abs_time` for decorrido. Caso contrário, os métodos retornarão `cv_status::no_timeout`.
+Os métodos que retornam um `cv_status` tipo de retorno `cv_status::timeout` se a espera terminar quando *Abs_time* tenha decorrido. Caso contrário, os métodos retornarão `cv_status::no_timeout`.
 
-Os métodos que retornam um `bool` retornarão o valor de `Pred`.
+Os métodos que retornam um `bool` retornam o valor de *Pred*.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro método bloqueia até que o objeto `condition_variable` seja sinalizado por uma chamada para [notify_one](../standard-library/condition-variable-class.md#notify_one) ou [notify_all](../standard-library/condition-variable-class.md#notify_all) ou até `Abs_time`. Ela também pode ser ativada falsamente.
+O primeiro método bloqueia até que o `condition_variable` objeto é sinalizado por uma chamada para [notify_one](../standard-library/condition-variable-class.md#notify_one) ou [notify_all](../standard-library/condition-variable-class.md#notify_all), ou até *Abs_time*. Ela também pode ser ativada falsamente.
 
 O segundo método, na verdade, executa o código a seguir.
 

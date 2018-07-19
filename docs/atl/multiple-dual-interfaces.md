@@ -1,5 +1,5 @@
 ---
-title: Interfaces duplas vários | Microsoft Docs
+title: Múltiplas Interfaces duplas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,29 +19,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e23682bd0b7c923a1e377463405f84a6c6ee1221
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ace347148f3a339c75fd9a1069be368c7373d351
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356713"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952923"
 ---
-# <a name="multiple-dual-interfaces"></a>Várias Interfaces duplas
-Talvez você queira combinar as vantagens de uma interface dupla (ou seja, a flexibilidade de vtable e associação tardia, tornando a classe disponíveis para linguagens de script, bem como C++) com as técnicas de várias heranças.  
+# <a name="multiple-dual-interfaces"></a>Múltiplas Interfaces duplas
+Talvez você queira combinar as vantagens de uma interface dupla (ou seja, a flexibilidade de vtable e associação tardia, tornando a classe disponíveis para linguagens de script, bem como o C++) com as técnicas de herança múltipla.  
   
- Embora seja possível expor várias interfaces duplas em um único objeto COM, não é recomendável. Se houver várias interfaces duplas, deve haver apenas um `IDispatch` interface exposta. As técnicas disponíveis para garantir que esse é o caso execute penalidades como perda de função ou complexidade aumentada de códigos. O desenvolvedor considerar essa abordagem deve avaliar cuidadosamente as vantagens e desvantagens.  
+ Embora seja possível expor várias interfaces de duplos em um único objeto COM, não é recomendável. Se houver múltiplas interfaces duplas, deve haver apenas um `IDispatch` interface exposta. As técnicas disponíveis para garantir que esse é o caso carregam penalidades como perda de função ou complexidade aumentada de códigos. O desenvolvedor considerando essa abordagem deve avaliar com cuidado as vantagens e desvantagens.  
   
-## <a name="exposing-a-single-idispatch-interface"></a>Expor uma Interface IDispatch  
- É possível expor várias interfaces duplas em um único objeto derivando de dois ou mais especializações de `IDispatchImpl`. No entanto, se você permitir que os clientes consultar o `IDispatch` interface, você precisará usar o [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) macro (ou [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid))) para especificar qual classe base a ser usado para o implementação de `IDispatch`.  
+## <a name="exposing-a-single-idispatch-interface"></a>Expor uma única Interface IDispatch  
+ É possível expor várias interfaces duplas em um único objeto, derivando de duas ou mais especializações de `IDispatchImpl`. No entanto, se você permitir que os clientes de consulta para o `IDispatch` interface, você precisará usar o [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) macro (ou [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid))) para especificar qual classe base a ser usado para o implementação de `IDispatch`.  
   
  [!code-cpp[NVC_ATL_COM#23](../atl/codesnippet/cpp/multiple-dual-interfaces_1.h)]  
   
- Porque somente um `IDispatch` interface é exposta, clientes que podem acessar somente seus objetos por meio de `IDispatch` interface não poderão acessar os métodos ou propriedades em qualquer outra interface.  
+ Porque apenas um `IDispatch` interface é exposta, clientes que só podem acessar seus objetos através de `IDispatch` interface não poderão acessar os métodos ou propriedades em qualquer outra interface.  
   
 ## <a name="combining-multiple-dual-interfaces-into-a-single-implementation-of-idispatch"></a>Combinando várias Interfaces duplas em uma única implementação de IDispatch  
- ATL não fornece nenhum suporte para combinar várias interfaces duplas em uma única implementação de `IDispatch`. No entanto, há várias abordagens conhecidas para combinar manualmente as interfaces, como a criação de uma classe de modelo que contém uma união de separadas `IDispatch` interfaces, criando um novo objeto para executar o `QueryInterface` função, ou usando um a implementação baseada em TypeInfo de objetos aninhados para criar o `IDispatch` interface.  
+ ATL não fornece nenhum suporte para combinar várias interfaces duplas em uma única implementação de `IDispatch`. No entanto, há várias abordagens conhecidas para combinar manualmente as interfaces, como a criação de uma classe de modelo que contém uma união de separada `IDispatch` interfaces, criando um novo objeto para executar o `QueryInterface` função, ou usando um a implementação baseada em TypeInfo de objetos aninhados para criar o `IDispatch` interface.  
   
- Essas abordagens têm problemas potenciais colisões de namespace, bem como a complexidade de código e facilidade de manutenção. Não é recomendável que você crie várias interfaces duplas.  
+ Essas abordagens têm problemas com possíveis conflitos de namespace, bem como a complexidade do código e a facilidade de manutenção. Não é recomendável que você crie múltiplas interfaces duplas.  
   
 ## <a name="see-also"></a>Consulte também  
  [Interfaces duplas e a ATL](../atl/dual-interfaces-and-atl.md)

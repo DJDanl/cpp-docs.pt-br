@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5442888e8e370892add687c21132e397ae683ac8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861497"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954910"
 ---
 # <a name="queue-class"></a>Classe queue
 
@@ -52,17 +52,17 @@ class queue
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo* o elemento tipo de dados a ser armazenado na fila
+*Tipo* tipo de dados do elemento a ser armazenado na fila
 
-`Container` O tipo do contêiner subjacente usado para implementar a fila.
+*Contêiner* o tipo de contêiner subjacente usado para implementar a fila.
 
 ## <a name="remarks"></a>Comentários
 
-Os elementos da classe **Type** estipulados no primeiro parâmetro de modelo de um objeto de fila são sinônimo de [value_type](#value_type) e devem corresponder ao tipo de elemento na classe de contêiner subjacente **Container** estipulada pelo segundo parâmetro de modelo. O **Type** deve ser atribuível, para que seja possível copiar objetos desse tipo e atribuir valores a variáveis desse tipo.
+Os elementos da classe `Type` estipulados no primeiro modelo de parâmetro de um objeto de fila são sinônimo [value_type](#value_type) e deve corresponder ao tipo de elemento na classe de contêiner subjacente `Container` estipulado pela segundo parâmetro de modelo. O `Type` deve ser atribuível, para que seja possível copiar objetos desse tipo e atribuir valores às variáveis desse tipo.
 
-Classes de contêiner subjacente adequadas para a fila incluem [deque](../standard-library/deque-class.md) e [list](../standard-library/list-class.md) ou qualquer outro contêiner de sequência com suporte às operações de `front`, **back**, `push_back` e `pop_front`. A classe de contêiner subjacente é encapsulada dentro do adaptador do contêiner, que expõe apenas o conjunto limitado de funções membro de contêiner de sequência como uma interface pública.
+Classes de contêiner subjacente adequadas para a fila incluem [deque](../standard-library/deque-class.md) e [lista](../standard-library/list-class.md), ou qualquer outro contêiner de sequência que dá suporte a operações de `front`, `back`, `push_back`, e `pop_front`. A classe de contêiner subjacente é encapsulada dentro do adaptador do contêiner, que expõe apenas o conjunto limitado de funções membro de contêiner de sequência como uma interface pública.
 
-A igualdade dos objetos de fila será comparável somente se a igualdade dos elementos da classe **Type** for comparável e são comparáveis em menor-que somente se os elementos da classe **Type** forem comparáveis em menor-que.
+Será igualdade comparável somente se os elementos da classe dos objetos de fila `Type` são igualdade comparável e são menor-que comparáveis se e somente se os elementos da classe `Type` são menores-que comparável.
 
 Há três tipos de adaptadores de contêiner definidos pela Biblioteca Padrão C++: stack, queue e priority_queue. Cada um deles restringe a funcionalidade de uma classe de contêiner subjacente para fornecer uma interface com precisão controlada a uma estrutura de dados padrão.
 
@@ -119,7 +119,7 @@ O último elemento da fila. Se a fila estiver vazia, o valor retornado será ind
 
 ### <a name="remarks"></a>Comentários
 
-Se o valor retornado de **back** for atribuído a um `const_reference`, o objeto de fila não poderá ser modificado. Se o valor retornado de **back** for atribuído a uma **reference**, o objeto de fila poderá ser modificado.
+Se o valor retornado de `back` for atribuído a um `const_reference`, o objeto da fila não poderá ser modificado. Se o valor de retorno `back` for atribuído a um `reference`, o objeto de fila pode ser modificado.
 
 Quando compilado usando [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 ou 2, um erro em tempo de execução ocorrerá se você tentar acessar um elemento em uma fila vazia.  Consulte [Iteradores Verificados](../standard-library/checked-iterators.md) para obter mais informações.
 
@@ -229,9 +229,9 @@ O primeiro elemento da fila. Se a fila estiver vazia, o valor retornado será in
 
 ### <a name="remarks"></a>Comentários
 
-Se o valor retornado de `front` for atribuído a um `const_reference`, o objeto da fila não poderá ser modificado. Se o valor retornado de `front` for atribuído a uma **reference**, o objeto de fila poderá ser modificado.
+Se o valor retornado de `front` for atribuído a um `const_reference`, o objeto da fila não poderá ser modificado. Se o valor de retorno `front` for atribuído a um `reference`, o objeto de fila pode ser modificado.
 
-A função membro retorna uma **reference** para o primeiro elemento da sequência controlada, que não pode ser vazio.
+A função membro retorna um `reference` para o primeiro elemento da sequência controlada, que deve ser não vazio.
 
 Quando compilado usando [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 ou 2, um erro em tempo de execução ocorrerá se você tentar acessar um elemento em uma fila vazia.  Consulte [Iteradores Verificados](../standard-library/checked-iterators.md) para obter mais informações.
 
@@ -331,7 +331,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-`val` Os elementos adicionados à parte de trás da fila.
+*Val* o elemento adicionado à parte de trás da fila.
 
 ### <a name="remarks"></a>Comentários
 
@@ -381,7 +381,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` O **const** do qual a fila construída é para ser uma cópia do contêiner.
+*à direita* as **const** contêiner do qual a fila construída será uma cópia.
 
 ### <a name="remarks"></a>Comentários
 

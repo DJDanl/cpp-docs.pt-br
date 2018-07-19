@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f87ae764372990a96515a73789b373d2d6d7d01
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f8b516a3e5f5e19731a372a6531d9f26cb94fa6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843412"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958910"
 ---
 # <a name="greaterequal-struct"></a>Struct greater_equal
 
-Um predicado binário que executa a operação "maior ou igual a" (`operator>=`) em seus argumentos.
+Um predicado binário que executa a operação maior que-ou-igual a (`operator>=`) em seus argumentos.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -49,11 +49,11 @@ struct greater_equal<void>
 
 ### <a name="parameters"></a>Parâmetros
 
-`Type`, `T`, `U` Qualquer tipo que oferece suporte a um `operator>=` que usa operandos dos tipos especificados ou inferidos.
+*Tipo de*, *T*, *U* qualquer tipo que dá suporte a um `operator>=` que usa operandos dos tipos especificados ou inferidos.
 
-`Left` O operando da esquerda da operação maior que-ou-igual a. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `T`.
+*Esquerda* o operando esquerdo da operação maior que-ou-igual a. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *T*.
 
-`Right` O operando direito da operação maior que-ou-igual a. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `U`.
+*Direita* o operando direito da operação maior que-ou-igual a. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *U*.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -61,7 +61,7 @@ O resultado de `Left >= Right`. O modelo especializado realiza o encaminhamento 
 
 ## <a name="remarks"></a>Comentários
 
-O predicado binário `greater_equal`< `Type`> fornece uma ordenação fraca estrita de um conjunto de valores de elemento do tipo `Type` em classes de equivalência, se e somente se esse tipo atender aos requisitos matemáticos padrão para ser ordenado dessa forma. As especializações de qualquer tipo de ponteiro produzem uma ordenação total dos elementos, pois todos os elementos de valores distintos são ordenados em relação uns aos outros.
+O predicado binário `greater_equal` <  `Type`> fornece uma ordenação fraca estrita de um conjunto de valores de elemento do tipo *tipo* em classes de equivalência, se e somente se esse tipo satisfizer o padrão de matemático requisitos para ser ordenado dessa forma. As especializações de qualquer tipo de ponteiro produzem uma ordenação total dos elementos, pois todos os elementos de valores distintos são ordenados em relação uns aos outros.
 
 ## <a name="example"></a>Exemplo
 

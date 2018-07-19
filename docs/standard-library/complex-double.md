@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d442e6b62a7e18a3b6025633ae5f12dde7915f3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72f7b6e352240498f921c9aa5c3d1a990da34813
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844719"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955423"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
-Descreve um objeto que armazena um par ordenado de objetos do tipo **duplo ** o primeiro que representa a parte real de um número complexo e a segunda que representa a parte imaginária.
+Descreve um objeto que armazena um par ordenado de objetos do tipo **dupla * * *,* o primeiro representando a parte real de um número complexo e o segundo representando a parte imaginária.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -46,11 +46,11 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 ### <a name="parameters"></a>Parâmetros
 
-`RealVal` O valor do tipo **duplo** para a parte real do número complexo que está sendo construída.
+*RealVal* o valor do tipo **duplo** da parte real do número complexo que está sendo construído.
 
-`ImagVal` O valor do tipo **duplo** para a parte imaginária do número complexo que está sendo construída.
+*ImagVal* o valor do tipo **duplo** da parte imaginária do número complexo que está sendo construído.
 
-`complexNum` O número complexo do tipo **float** ou de tipo `long double` cujos partes reais e imaginários são usados para inicializar um número complexo do tipo **duplo** sendo construído.
+*complexNum* o número complexo do tipo **float** ou do tipo **long double** cujas partes reais e imaginárias são usados para inicializar um número complexo do tipo **double**que está sendo construído.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -58,7 +58,7 @@ Um número complexo do tipo **double**.
 
 ## <a name="remarks"></a>Comentários
 
-A especialização explícita da classe de modelo complexa para uma classe complexa do tipo **double** difere apenas da classe de modelo nos construtores que ela define. A conversão de **float** em **double** pode ser implícita, mas a conversão de `long double` em **double** precisa ser **explícita**. O uso de **explícito** exclui a iniciação com conversão de tipo usando a sintaxe de atribuição.
+A especialização explícita da classe de modelo complexa para uma classe complexa do tipo **double** difere apenas da classe de modelo nos construtores que ela define. A conversão de **float** para **duplo** pode ser implícita, mas a conversão de **long double** para **double** é necessária para ser **explícita**. O uso de **explícito** exclui a iniciação com conversão de tipo usando a sintaxe de atribuição.
 
 Para obter mais informações sobre a classe do modelo `complex`, consulte [Classe complexa](../standard-library/complex-class.md). Para obter uma lista de membros da classe do modelo `complex`, consulte.
 

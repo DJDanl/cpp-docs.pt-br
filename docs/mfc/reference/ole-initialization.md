@@ -17,26 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8224cf27313b056b95990f514e02eb9d9c08cad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 330701c4fcc75d40e782d25baa55044b88852f50
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337785"
 ---
 # <a name="ole-initialization"></a>Inicialização OLE
-Antes de um aplicativo pode usar os serviços do sistema OLE, ele deve inicializar as DLLs do sistema OLE e verifique se as DLLs são da versão correta. O **AfxOleInit** função inicializa a DLLs do sistema OLE.  
+Antes de um aplicativo pode usar os serviços do sistema OLE, ele deve inicializar as DLLs do sistema OLE e verifique se as DLLs são a versão correta. O `AfxOleInit` função inicializa as DLLs do sistema OLE.  
   
 ### <a name="ole-initialization"></a>Inicialização OLE  
   
 |||  
 |-|-|  
 |[AfxOleInit](#afxoleinit)|Inicializa as bibliotecas OLE.| 
-|[AfxEnableControlContainer](#afxenablecontrolcontainer)|Chamar essa função em seu objeto de aplicativo `InitInstance` função para habilitar o suporte para contenção de controles OLE.| 
+|[AfxEnableControlContainer](#afxenablecontrolcontainer)|Chame essa função em seu objeto de aplicativo `InitInstance` função para habilitar o suporte de confinamento de controles OLE.| 
 
 
 ## <a name="afxenablecontrolcontainer"></a> AfxEnableControlContainer
-Chamar essa função em seu objeto de aplicativo `InitInstance` função para habilitar o suporte para contenção de controles OLE.  
+Chame essa função em seu objeto de aplicativo `InitInstance` função para habilitar o suporte de confinamento de controles OLE.  
    
 ### <a name="syntax"></a>Sintaxe    
 ```
@@ -58,20 +58,20 @@ BOOL AFXAPI AfxOleInit();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; 0 se a inicialização falhar, possivelmente porque versões incorretas das DLLs do sistema OLE estão instaladas.  
+ Diferente de zero se bem-sucedido; 0 se a inicialização falhar, possivelmente porque versões incorretas das DLLs do sistema OLE estão instaladas.  
   
 ### <a name="remarks"></a>Comentários  
- Chame essa função para inicializar o suporte OLE para um aplicativo do MFC. Quando esta função é chamada, ocorrem as seguintes ações:  
+ Chame essa função para inicializar o suporte OLE para um aplicativo do MFC. Quando essa função é chamada, ocorrem as seguintes ações:  
   
--   Inicializa a biblioteca de data/hora de apartment atual do aplicativo de chamada. Para obter mais informações, consulte [OleInitialize](http://msdn.microsoft.com/library/windows/desktop/ms690134).  
+-   Inicializa a biblioteca COM no apartment atual do aplicativo de chamada. Para obter mais informações, consulte [OleInitialize](http://msdn.microsoft.com/library/windows/desktop/ms690134).  
   
 -   Cria um objeto de filtro de mensagem, Implementando a [IMessageFilter](http://msdn.microsoft.com/library/windows/desktop/ms693740) interface. Esse filtro de mensagem pode ser acessado com uma chamada para [AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter).  
   
 > [!NOTE]
->  Se **AfxOleInit** é chamado de uma DLL MFC, a chamada falhará. A falha ocorre porque a função pressupõe que, se ele é chamado de uma DLL, o sistema OLE era inicializado anteriormente pelo aplicativo de chamada.  
+>  Se **AfxOleInit** é chamado de uma DLL do MFC, a chamada falhará. A falha ocorre porque a função pressupõe que, se ele é chamado de uma DLL, o sistema OLE foi inicializado anteriormente pelo aplicativo de chamada.  
   
 > [!NOTE]
->  Aplicativos MFC devem ser inicializados como apartment threaded único (STA). Se você chamar [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) no seu `InitInstance` substituir, especifique `COINIT_APARTMENTTHREADED` (em vez de `COINIT_MULTITHREADED`). Para obter mais informações, consulte PRB: aplicativos MFC para de responder quando você inicializar o aplicativo como um Multi-Threaded Apartment (828643) em [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
+>  Aplicativos MFC devem ser inicializados como um compartimento de único thread (STA). Se você chamar [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) em seu `InitInstance` substituir, especifique COINIT_APARTMENTTHREADED (em vez de COINIT_MULTITHREADED). Para obter mais informações, consulte PRB: aplicativo do MFC para de responder quando você inicializar o aplicativo como um Multi-Threaded Apartment (828643) em [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
 
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdisp.h

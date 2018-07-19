@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58700d1f52189afb1d8baf3456bac4ed84920fab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be1d3c6d583783c391321555ae52077fba4bee3a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846172"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960733"
 ---
 # <a name="integersequence-class"></a>Classe integer_sequence
 
@@ -44,9 +44,9 @@ struct integer_sequence
 
 ### <a name="parameters"></a>Parâmetros
 
-T o tipo de valores. deve ser um tipo integral: bool, char, char16_t, char32_t, wchar_t, ou conectado ou tipos de inteiro sem sinal.
+*T* o tipo de valores; deve ser um tipo integral: bool, char, char16_t, char32_t, wchar_t, ou assinado ou tipos de inteiro sem sinal.
 
-Pacote de parâmetro de tipo não valos um que representa uma sequência de valores de tipo integral de T.
+*Valos* um pacote de parâmetros de não tipo que representa uma sequência de valores do tipo integral T.
 
 ## <a name="members"></a>Membros
 

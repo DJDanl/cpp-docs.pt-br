@@ -1,5 +1,5 @@
 ---
-title: Enumeradores e Classes de coleções (ATL) | Microsoft Docs
+title: Os enumeradores e Classes de coleções (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbe8dfb4610b88b9a53e90b7af5f52b4d1c2807f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 62729df015e214f37acdda7d5cb2ef710dce6cb9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355640"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37847876"
 ---
 # <a name="enumerators-and-collections-classes"></a>Classes de coleções e enumeradores
-As classes a seguir fornecem suporte para enumerações e coleções COM:  
+As classes a seguir fornecem suporte para coleções de COM e enumerações:  
   
 -   [CComEnum](../atl/reference/ccomenum-class.md) define uma COM o objeto de enumerador com base em uma matriz.  
   
@@ -32,9 +32,9 @@ As classes a seguir fornecem suporte para enumerações e coleções COM:
   
 -   [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md) define uma COM o objeto de enumerador com base em uma coleção de biblioteca padrão C++.  
   
--   [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md) fornece a implementação de uma interface de enumerador COM onde os itens que estão sendo enumerados são armazenados em um contêiner de biblioteca padrão C++-compatível.  
+-   [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md) fornece a implementação de uma interface de enumerador COM onde os itens que estão sendo enumerados são armazenados em um contêiner de biblioteca padrão C++ compatível com.  
   
--   [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) fornece a implementação para o **contagem**, **Item**, e `_NewEnum` propriedades de uma interface de coleção.  
+-   [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) fornece a implementação para o `Count`, `Item`, e `_NewEnum` propriedades de uma interface de coleção.  
   
 ## <a name="related-articles"></a>Artigos relacionados  
  [Coleções e enumeradores da ATL](../atl/atl-collections-and-enumerators.md)  

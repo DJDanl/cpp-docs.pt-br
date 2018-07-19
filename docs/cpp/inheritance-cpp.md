@@ -16,39 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: decef38bc69ea2b9a45005627b984c1f240afe13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3181369f492f82fca1590e07655e728dbbcd40ff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958592"
 ---
 # <a name="inheritance--c"></a>Herança (C++)
 Esta seção explica como usar classes derivadas para gerar programas extensíveis.  
   
 ## <a name="overview"></a>Visão geral  
- Novas classes podem derivar de classes existentes usando um mecanismo chamado "herança" (consulte a informações a partir do [herança única](../cpp/single-inheritance.md)). As classes que são usadas para derivação são chamadas "classes base" de uma classe derivada específica. Uma classe derivada é declarada mediante a seguinte sintaxe:  
+ Novas classes podem ser derivadas de classes existentes por meio de um mecanismo chamado "herança" (consulte as informações a partir [herança única](../cpp/single-inheritance.md)). As classes que são usadas para derivação são chamadas "classes base" de uma classe derivada específica. Uma classe derivada é declarada mediante a seguinte sintaxe:  
   
-```  
- class Derived : [virtual] [access-specifier] Base  
+```cpp 
+class Derived : [virtual] [access-specifier] Base  
 {  
    // member list  
 };  
- class Derived : [virtual] [access-specifier] Base1,  
- [virtual] [access-specifier] Base2, . . .  
+class Derived : [virtual] [access-specifier] Base1,  
+   [virtual] [access-specifier] Base2, . . .  
 {  
    // member list  
 };  
 ```  
   
- Depois da marca (nome) da classe, aparecem dois-pontos seguidos por uma lista de especificações de base.  As classes base nomeadas dessa forma devem ter sido declaradas anteriormente.  As especificações de base podem conter um especificador de acesso, que é uma das palavras-chave **pública**, `protected` ou `private`.  Esses especificadores de acesso aparecem antes do nome da classe base e só se aplicam a essa classe base.  Esses especificadores controlam a permissão da classe derivada para usar os membros da classe base.  Consulte [controle de acesso de membro](../cpp/member-access-control-cpp.md) para obter informações sobre o acesso a membros de classe base.  Se o especificador de acesso for omitido, o acesso a essa base será considerado `private`.  As especificações de base podem conter a palavra-chave **virtual** para indicar a herança virtual.  Essa palavra-chave pode aparecer antes ou depois do especificador de acesso, se houver.  Se for usada a herança virtual, a classe base será conhecida como uma classe base virtual.  
+Depois da marca (nome) da classe, aparecem dois-pontos seguidos por uma lista de especificações de base.  As classes base nomeadas dessa forma devem ter sido declaradas anteriormente.  As especificações de base podem conter um especificador de acesso, que é uma das palavras-chave **pública**, **protegido** ou **privada**.  Esses especificadores de acesso aparecem antes do nome da classe base e só se aplicam a essa classe base.  Esses especificadores controlam a permissão da classe derivada para usar os membros da classe base.  Ver [controle de acesso de membro](../cpp/member-access-control-cpp.md) para obter informações sobre o acesso a membros de classe base.  Se o especificador de acesso for omitido, o acesso a essa base é considerado **privada**.  As especificações de base podem conter a palavra-chave **virtual** para indicar a herança virtual.  Essa palavra-chave pode aparecer antes ou depois do especificador de acesso, se houver.  Se for usada a herança virtual, a classe base será conhecida como uma classe base virtual.  
   
- É possível especificar várias classes base, separadas por vírgulas.  Se uma única classe base for especificada, o modelo de herança é [único herança](../cpp/single-inheritance.md). Se mais de uma classe base for especificada, o modelo de herança é chamado [várias heranças](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca),  
+ É possível especificar várias classes base, separadas por vírgulas.  Se uma única classe base for especificada, o modelo de herança será [herança única](../cpp/single-inheritance.md). Se mais de uma classe base for especificada, o modelo de herança é chamado [herança múltipla](../cpp/multiple-base-classes.md).  
   
  Os seguintes tópicos estão incluídos:  
   
 -   [Herança única](../cpp/single-inheritance.md)  
-  
--   [Várias heranças](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca)  
   
 -   [Várias classes base](../cpp/multiple-base-classes.md)  
   

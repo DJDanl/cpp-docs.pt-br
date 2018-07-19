@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 022fe884f611eb5bc3254ef23c7078280e2a1046
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: b0edc3a255d3778711b2b8e74bde448dc34c814c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078537"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849078"
 ---
 # <a name="cpanedialog-class"></a>Classe CPaneDialog
-O `CPaneDialog` classe oferece suporte a uma caixa de diálogo sem janela restrita, acopláveis.  
+O `CPaneDialog` classe dá suporte a uma caixa de diálogo sem modo e encaixável.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ class CPaneDialog : public CDockablePane
 |----------|-----------------|  
 |[CPaneDialog::Create](#create)|Cria uma caixa de diálogo encaixáveis e anexa-o para um `CPaneDialog` objeto.|  
 |`CPaneDialog::CreateObject`|Usado pelo framework para criar uma instância dinâmica desse tipo de classe.|  
-|`CPaneDialog::GetThisClass`|Usado pelo framework para obter um ponteiro para o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto associado esse tipo de classe.|  
+|`CPaneDialog::GetThisClass`|Usado pelo framework para obter um ponteiro para o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está associado com esse tipo de classe.|  
 |[CPaneDialog::HandleInitDialog](#handleinitdialog)|Manipula o [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) mensagem. (Redefine `CBasePane::HandleInitDialog`.)|  
 |`CPaneDialog::OnEraseBkgnd`|Manipula o [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) mensagem. (Redefine [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
 |`CPaneDialog::OnLButtonDblClk`|Manipula o [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) mensagem. (Redefine [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
@@ -63,7 +63,7 @@ class CPaneDialog : public CDockablePane
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Especifica o modelo para uma caixa de diálogo que é um contêiner de controle OLE.|  
   
 ## <a name="remarks"></a>Comentários  
- Construir um `CPaneDialog` objeto em duas etapas. Primeiro, construa o objeto em seu código. Em seguida, chamar [CPaneDialog::Create](#create). Você deve especificar um nome ou o modelo de ID do modelo de recurso válido e transmitir um ponteiro para a janela pai. Caso contrário, o processo de criação falha. A caixa de diálogo deve especificar o estilo de estilo e WS_VISIBLE. É recomendável que você também pode especificar os estilos WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Para obter mais informações, consulte [estilos de janela](styles-used-by-mfc.md#window-styles).  
+ Construir um `CPaneDialog` objeto em duas etapas. Primeiro, construa o objeto em seu código. Em segundo lugar, chame [CPaneDialog::Create](#create). Você deve especificar um nome ou o modelo de ID do modelo de recurso válido e passe um ponteiro para a janela pai. Caso contrário, o processo de criação falhará. A caixa de diálogo deve especificar os estilos WS_CHILD e WS_VISIBLE. É recomendável que você também pode especificar os estilos WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Para obter mais informações, consulte [estilos de janela](styles-used-by-mfc.md#window-styles).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -129,10 +129,10 @@ BOOL Create(
  Aponta para a janela pai.  
   
  [in] *bHasGripper*  
- `TRUE` para criar a caixa de diálogo de encaixe com uma legenda (garra); Caso contrário, `FALSE`.  
+ TRUE para criar a caixa de diálogo de encaixe com uma legenda (garra); Caso contrário, FALSE.  
   
  [in] *lpszTemplateName*  
- O nome do modelo de caixa de diálogo de recursos.  
+ O nome do modelo de caixa de diálogo do recurso.  
   
  [in] *nStyle*  
  O estilo do Windows.  
@@ -144,18 +144,18 @@ BOOL Create(
  A ID de recurso do modelo de caixa de diálogo.  
   
  [in] *dwTabbedStyle*  
- O estilo da janela com guias que ocorre quando o usuário arrasta outro painel de controle para a legenda deste painel de controle. O valor padrão é `AFX_CBRS_REGULAR_TABS`. Para obter mais informações, consulte a seção comentários a [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) método.  
+ O estilo da janela com guias que resulta quando o usuário arrasta o outro painel de controle para a legenda deste painel de controle. O valor padrão é AFX_CBRS_REGULAR_TABS. Para obter mais informações, consulte a seção de comentários do [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) método.  
   
  [in] *dwControlBarStyle*  
- Atributos de estilo adicionais. O valor padrão é `AFX_DEFAULT_DOCKING_PANE_STYLE`. Para obter mais informações, consulte a seção comentários a [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) método.  
+ Atributos de estilo adicionais. O valor padrão é AFX_DEFAULT_DOCKING_PANE_STYLE. Para obter mais informações, consulte a seção de comentários do [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) método.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` se esse método tiver êxito; caso contrário, `FALSE`.  
+ TRUE se este método for bem-sucedido; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
   
 ### <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar o `Create` método o `CPaneDialog` classe. Este exemplo é parte do [exemplo Definir tamanho do painel](../../visual-cpp-samples.md).  
+ O exemplo a seguir demonstra como usar o `Create` método no `CPaneDialog` classe. Este exemplo é parte do [exemplo de definir o tamanho do painel](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]  
 [!code-cpp[NVC_MFC_SetPaneSize#3](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
@@ -177,7 +177,7 @@ afx_msg LRESULT HandleInitDialog(
  Especifica os dados de inicialização adicionais.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se esse método for bem-sucedida; Caso contrário, `FALSE`. Além disso, `TRUE` define o foco do teclado para o controle especificado pelo *wParam* parâmetro; `FALSE` impede que definir o foco do teclado padrão.  
+ TRUE se esse método for bem-sucedida; Caso contrário, FALSE. Além disso, TRUE, define o foco do teclado para o controle especificado o *wParam* parâmetro; FALSE impede que definir o foco do teclado padrão.  
   
 ### <a name="remarks"></a>Comentários  
  A estrutura usa esse método para inicializar a aparência de uma caixa de diálogo e controles. O framework chama esse método antes de exibir a caixa de diálogo.  
@@ -191,16 +191,16 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *pOccDialogInfo*  
- Ponteiro para um modelo de caixa de diálogo que é usado para criar o objeto de caixa de diálogo. Posteriormente, o valor desse parâmetro é passado para o [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) método.  
+ Ponteiro para um modelo de caixa de diálogo que é usado para criar o objeto de caixa de diálogo. Subsequentemente, o valor desse parâmetro é passado para o [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) método.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Sempre `TRUE`.  
+ Sempre TRUE.  
   
 ### <a name="remarks"></a>Comentários  
- Este método oferece suporte a [COccManager](../../mfc/reference/coccmanager-class.md) classe, que gerencia sites de controle OLE e controles ActiveX. A estrutura _AFX_OCC_DIALOG_INFO é definida no arquivo de cabeçalho afxocc.h.  
+ Este método dá suporte a [COccManager](../../mfc/reference/coccmanager-class.md) classe, que gerencia sites de controle OLE e controles ActiveX. A estrutura _AFX_OCC_DIALOG_INFO é definida no arquivo de cabeçalho afxocc.h.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CDockablePane](../../mfc/reference/cdockablepane-class.md)   
  [Estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles)

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c63aa54675bd0b1d5a52a1c0a9d80a73f53290
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65ac9dc44da5126673ee1f0699f5a5dd9dcb87e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842814"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960775"
 ---
 # <a name="iscopyassignable-class"></a>Classe is_copy_assignable
 
@@ -36,11 +36,11 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo de consulta.
+*Ty* o tipo de consulta.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo `Ty` for uma classe com um operador de atribuição de cópia; caso contrário, será falsa. Equivalente a is_assignable\<Ty&, const Ty&>.
+Uma instância do predicado de tipo será verdadeira se o tipo *Ty* é uma classe que tem um operador de atribuição, caso contrário, será falsa. Equivalente a is_assignable\<Ty&, const Ty&>.
 
 ## <a name="requirements"></a>Requisitos
 

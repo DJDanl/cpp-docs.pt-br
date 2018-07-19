@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e48a657d15fbb6526ebc9d717825f409f10928f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 309b01fac7e6461a48992ee1c2c091439353aee7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858894"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961006"
 ---
 # <a name="studenttdistribution-class"></a>Classe student_t_distribution
 
@@ -74,11 +74,11 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType* o tipo de resultado de ponto flutuante, o padrão será a `double`. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType* padrão é o tipo de resultado de ponto flutuante **duplo**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou um tipo `double`, caso nenhum seja fornecido, distribuído de acordo com a distribuição *t* de Student. A tabela a seguir contém links para artigos sobre cada um dos membros.
+A classe de modelo descreve uma distribuição que produz valores de um integral especificado pelo usuário tipo ou tipo **duplas** se nenhum for fornecido, distribuído de acordo com a do aluno *t*-distribuição. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -183,9 +183,10 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*n* o `n` parâmetro da distribuição.
+*n*  
+ O parâmetro de distribuição `n`.
 
-*parâmetro* o pacote de parâmetros usado para construir a distribuição.
+*parm* o pacote de parâmetro usado para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
@@ -212,9 +213,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*n* o `n` parâmetro da distribuição.
+*n*  
+O parâmetro de distribuição `n`.
 
-*direito* o `param_type` objeto a ser comparado a este.
+*right*  
+O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários
 

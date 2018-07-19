@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a20e9c1df241feb8dd7f16891f1e2a67068f772
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1150de3c94f8a656d46d54b673cb2d08dc05a7be
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840388"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959320"
 ---
 # <a name="chartraitsltchargt-struct"></a>char_traits&lt;char&gt; Struct
 
-Uma struct é uma especialização da struct de modelo **char_traits\<CharType>** para um elemento do tipo `char`.
+Um struct é uma especialização da struct de modelo **char_traits\<CharType >** a um elemento do tipo **char**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,7 +37,7 @@ struct char_traits<char>;
 
 ## <a name="remarks"></a>Comentários
 
-A especialização permite que a struct aproveite funções de biblioteca que manipulam objetos desse tipo `char`.
+A especialização permite que a struct aproveite funções de biblioteca que manipulam objetos desse tipo de **char**.
 
 ## <a name="example"></a>Exemplo
 

@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b42546f140dfd150676c8bc21b4b651815281f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c2f2351d55a4b4f868021bd0c44a0b942633c68
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864158"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958524"
 ---
 # <a name="lognormaldistribution-class"></a>Classe lognormal_distribution
 
@@ -78,11 +78,11 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType* o tipo de resultado de ponto flutuante, o padrão será a `double`. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType* padrão é o tipo de resultado de ponto flutuante **duplo**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-A classe do modelo descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou o tipo `double` se nenhum for fornecido, distribuído de acordo com a Distribuição Normal de Log. A tabela a seguir contém links para artigos sobre cada um dos membros.
+A classe de modelo descreve uma distribuição que produz valores de um integral especificado pelo usuário tipo ou tipo **duplas** caso nenhum seja fornecido, distribuído de acordo com a distribuição Normal de Log. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -204,11 +204,11 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*m* o `m` parâmetro da distribuição.
+*m* o `m` parâmetro de distribuição.
 
-*s* o `s` parâmetro da distribuição.
+*s* o `s` parâmetro de distribuição.
 
-*parâmetro* o `param_type` estrutura usada para construir a distribuição.
+*parm* o `param_type` estrutura usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
@@ -236,11 +236,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*m* o `m` parâmetro da distribuição.
+*m* o `m` parâmetro de distribuição.
 
-*s* o `s` parâmetro da distribuição.
+*s* o `s` parâmetro de distribuição.
 
-*direito* o `param_type` estrutura usada para comparar.
+*à direita* o `param_type` estrutura usada para comparar.
 
 ### <a name="remarks"></a>Comentários
 

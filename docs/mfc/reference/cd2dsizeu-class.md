@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 560c496ac01dc09f4e49100eceea0b9f7af14d68
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d0c3792ec315f21298cffa166777af61750fbd06
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335835"
 ---
 # <a name="cd2dsizeu-class"></a>Classe CD2DSizeU
 Um wrapper para D2D1_SIZE_U.  
@@ -42,13 +42,13 @@ class CD2DSizeU : public D2D1_SIZE_U;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|Sobrecarregado. Constrói um `CD2DSizeU` de objeto `D2D1_SIZE_U` objeto.|  
+|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|Sobrecarregado. Constrói uma `CD2DSizeU` do objeto de `D2D1_SIZE_U` objeto.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CD2DSizeU::IsNull](#isnull)|Retorna um **booliano** valor que indica se uma expressão não contém dados válidos ( **nulo**).|  
+|[CD2DSizeU::IsNull](#isnull)|Retorna um **boolean** valor que indica se uma expressão não contém dados válidos (nulo).|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -65,7 +65,7 @@ class CD2DSizeU : public D2D1_SIZE_U;
  **Cabeçalho:** afxrendertarget.h  
   
 ##  <a name="cd2dsizeu"></a>  CD2DSizeU::CD2DSizeU  
- Constrói um objeto CD2DSizeU do objeto CSize.  
+ Constrói um objeto CD2DSizeU CSize objeto.  
   
 ```  
 CD2DSizeU(const CSize& size);  
@@ -96,7 +96,7 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- TRUE se a largura e altura estão vazios. Caso contrário, FALSE.  
+ TRUE se a largura e altura são vazios. Caso contrário, FALSE.  
   
 ##  <a name="operator_csize"></a>  CD2DSizeU::Operator CSize  
  Converte CD2DSizeU CSize objeto.  

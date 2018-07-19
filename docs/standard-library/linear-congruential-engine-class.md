@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902e7a1a3ae4bcb35a4822228425747476d5bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d4069dc5151dd231773e926aadf17de7c03d3770
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864067"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958273"
 ---
 # <a name="linearcongruentialengine-class"></a>Classe linear_congruential_engine
 
@@ -55,13 +55,13 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>Parâmetros
 
-`UIntType` O tipo de resultado de inteiro não assinado. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*UIntType* o tipo de resultado de inteiro sem sinal. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
-`A` **O multiplicador**. **Pré-condição**: consulte a seção Comentários.
+*Um* **multiplicador**. **Pré-condição**: consulte a seção Comentários.
 
-`C` **Incremento**. **Pré-condição**: consulte a seção Comentários.
+*C* **incremento**. **Pré-condição**: consulte a seção Comentários.
 
-`M` **Módulo**. **Pré-condição**: consulte os comentários.
+*M* **Modulus**. **Pré-condição**: consulte os comentários.
 
 ## <a name="members"></a>Membros
 
@@ -80,9 +80,9 @@ A classe de modelo `linear_congruential_engine` é o mecanismo gerador mais simp
 
 Esse mecanismo produz valores de um tipo integral não assinado especificado pelo usuário usando a relação de recorrência (*ponto final*) `x(i) = (A * x(i-1) + C) mod M`.
 
-Se `M` for igual a zero, o valor usado para essa operação de módulo é `numeric_limits<result_type>::max() + 1`. O estado do mecanismo é o último valor retornado ou o valor semente, se nenhuma chamada tiver sido feita a `operator()`.
+Se *M* for zero, o valor usado para essa operação de módulo é `numeric_limits<result_type>::max() + 1`. O estado do mecanismo é o último valor retornado ou o valor semente, se nenhuma chamada tiver sido feita a `operator()`.
 
-Se `M` for diferente de zero, os valores dos argumentos de modelo `A` e `C` devem ser inferiores a `M`.
+Se *M* for diferente de zero, os valores dos argumentos do modelo *um* e *C* deve ser menor que *M*.
 
 Embora seja possível construir um gerador diretamente desse mecanismo, também é possível usar um dos typedefs predefinidos.
 

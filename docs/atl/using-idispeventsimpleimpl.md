@@ -16,32 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cdef5012288b7f5f17040f73dfac5ec1f90d4f0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34fad264e222d27c82f8c1cf79f59664f2c3f601
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361932"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850768"
 ---
 # <a name="using-idispeventsimpleimpl"></a>Usando IDispEventSimpleImpl
 Ao usar `IDispEventSimpleImpl` para manipular eventos, você precisará:  
   
--   Derive a classe de [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md).  
+-   Derive sua classe de [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md).  
   
 -   Adicione um mapa de coletor de eventos à sua classe.  
   
--   Definir [_ATL_FUNC_INFO](../atl/reference/atl-func-info-structure.md) estruturas que descreve os eventos.  
+-   Definir [atl_func_info](../atl/reference/atl-func-info-structure.md) estruturas que descrevem os eventos.  
   
--   Adicione entradas para o mapa de coletor de evento usando o [SINK_ENTRY_INFO](reference/composite-control-macros.md#sink_entry_info) macro.  
+-   Adicionar entradas para o mapa de coletor de eventos usando o [SINK_ENTRY_INFO](reference/composite-control-macros.md#sink_entry_info) macro.  
   
--   Implemente os métodos que você está interessado na manipulação.  
+-   Implemente os métodos que você está interessado em tratamento.  
   
--   Avisar e unadvise a origem do evento.  
+-   Avisar e não recomendar a origem do evento.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como tratar o **DocumentChange** eventos acionados por do Word **aplicativo** objeto. Esse evento é definido como um método no **ApplicationEvents** dispinterface.  
+ O exemplo a seguir mostra como lidar com o `DocumentChange` eventos acionados por do Word **aplicativo** objeto. Esse evento é definido como um método no `ApplicationEvents` dispinterface.  
   
- O exemplo é proveniente do [ATLEventHandling exemplo](../visual-cpp-samples.md).  
+ O exemplo é do [ATLEventHandling exemplo](../visual-cpp-samples.md).  
   
  `[`  
   
@@ -71,11 +71,11 @@ Ao usar `IDispEventSimpleImpl` para manipular eventos, você precisará:
   
  `};`  
   
- O exemplo usa `#import` para gerar os arquivos de cabeçalho necessários da biblioteca de tipos do Word. Se você quiser usar este exemplo com outras versões do Word, você deve especificar o arquivo de dll mso correto. Por exemplo, Office 2000 fornece Mso9 e OfficeXP fornece Mso. dll. Esse código é simplificado do Stdafx. h:  
+ O exemplo usa `#import` para gerar os arquivos de cabeçalho necessários da biblioteca de tipos do Word. Se você quiser usar este exemplo com outras versões do Word, você deve especificar o arquivo de dll do mso correto. Por exemplo, o Office 2000 fornece Mso9 e OfficeXP fornece Mso. dll. Esse código é simplificado do Stdafx. h:  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventsimpleimpl_1.h)]  
   
- As únicas informações da biblioteca de tipo realmente usada neste exemplo é o CLSID da palavra **aplicativo** objeto e o IID do **ApplicationEvents** interface. Essas informações são usadas somente em tempo de compilação.  
+ As únicas informações da biblioteca de tipos, na verdade, usada neste exemplo é o CLSID da palavra `Application` objeto e o IID do `ApplicationEvents` interface. Essas informações são usadas somente em tempo de compilação.  
   
  O código a seguir aparece no Simple.h. O código relevante é indicado por comentários:  
   

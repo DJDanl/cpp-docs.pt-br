@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d335c684ab46846e9d3c49ef45522cf7288d916a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e341b15baa54b57148582c92beb9d231da8c96bb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861858"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954565"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -42,14 +42,14 @@ A linguagem C++ e a biblioteca C++ padrão dão suporte a dois tipos de cadeias 
 
 - Matrizes de caracteres com terminação nula geralmente conhecidas como cadeias de caracteres C.
 
-- Objetos de classe de modelo, do tipo `basic_string`, que lidam com todos os argumentos de modelo do tipo `char`.
+- Objetos de classe de modelo, do tipo `basic_string`, que lidam com todos os **char**-como argumentos de modelo.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nome de tipo|Descrição|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Um tipo que descreve uma especialização da classe modelo `basic_string` com elementos do tipo `char` como uma `string`.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Um tipo que descreve uma especialização da classe modelo `basic_string` com elementos do tipo `wchar_t` como uma `wstring`.|
+|[string](../standard-library/string-typedefs.md#string)|Um tipo que descreve uma especialização da classe de modelo `basic_string` com elementos do tipo **char** como um `string`.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Um tipo que descreve uma especialização da classe de modelo `basic_string` com elementos do tipo **wchar_t** como um `wstring`.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|Um tipo que descreve uma especialização da classe modelo `basic_string` com base em elementos do tipo `char16_t`.|
 |[u32string](../standard-library/string-typedefs.md#u32string)|Um tipo que descreve uma especialização da classe modelo `basic_string` com base em elementos do tipo `char32_t`.|
 
@@ -72,13 +72,13 @@ A linguagem C++ e a biblioteca C++ padrão dão suporte a dois tipos de cadeias 
 |||
 |-|-|
 |[swap](../standard-library/string-functions.md#swap)|Troca as matrizes de caracteres de duas cadeias de caracteres.|
-|[stod](../standard-library/string-functions.md#stod)|Converte uma sequência de caracteres em um `double.`|
-|[stof](../standard-library/string-functions.md#stof)|Converte uma sequência de caracteres em um `float`.|
+|[stod](../standard-library/string-functions.md#stod)|Converte uma sequência de caracteres em uma **duplas**.|
+|[stof](../standard-library/string-functions.md#stof)|Converte uma sequência de caracteres em uma **float**.|
 |[stoi](../standard-library/string-functions.md#stoi)|Converte uma sequência de caracteres em um número inteiro.|
-|[stold](../standard-library/string-functions.md#stold)|Converte uma sequência de caracteres em um `long double`.|
-|[stoll](../standard-library/string-functions.md#stoll)|Converte uma sequência de caracteres em um `long long`.|
-|[stoul](../standard-library/string-functions.md#stoul)|Converte uma sequência de caracteres em um `unsigned long`.|
-|[stoull](../standard-library/string-functions.md#stoull)|Converte uma sequência de caracteres em um `unsigned long long`.|
+|[stold](../standard-library/string-functions.md#stold)|Converte uma sequência de caracteres em uma **longo duplo**.|
+|[stoll](../standard-library/string-functions.md#stoll)|Converte uma sequência de caracteres em uma **long long**.|
+|[stoul](../standard-library/string-functions.md#stoul)|Converte uma sequência de caracteres em uma **unsigned long**.|
+|[stoull](../standard-library/string-functions.md#stoull)|Converte uma sequência de caracteres em uma **longo longo sem sinal**.|
 |[to_string](../standard-library/string-functions.md#to_string)|Converte um valor em uma `string`.|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|Converte um valor em uma `string` larga.|
 

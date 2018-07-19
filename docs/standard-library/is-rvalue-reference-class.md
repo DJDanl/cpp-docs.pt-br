@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b8645e9ac8a8d3e8f40590105df234b4ef55bac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: acba0f78df8cc537aecd5d2fc33380e4674e5721
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857058"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956915"
 ---
 # <a name="isrvaluereference-class"></a>Classe is_rvalue_reference
 
@@ -37,11 +37,11 @@ struct is_rvalue_reference;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo de consulta.
+*Ty* o tipo de consulta.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo `Ty` for uma [referência rvalue](../cpp/rvalue-reference-declarator-amp-amp.md).
+Uma instância deste predicado de tipo será verdadeira se o tipo *Ty* é um [referência de rvalue](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="requirements"></a>Requisitos
 

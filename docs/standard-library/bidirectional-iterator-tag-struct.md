@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 108397f6c3c3c088839230f2b48b505300149345
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a04265a68a03edc9f957161991d2ddd91a8e6096
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844387"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958173"
 ---
 # <a name="bidirectionaliteratortag-struct"></a>Struct bidirectional_iterator_tag
 
-Uma classe que fornece um tipo de retorno para a função **iterator_category** que representa um iterador bidirecional.
+Uma classe que fornece um tipo de retorno para `iterator_category` função que representa um iterador bidirecional.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,7 +38,7 @@ struct bidirectional_iterator_tag    : public forward_iterator_tag {};
 
 As classes de marca de categoria são usadas como marcas de compilação para seleção de algoritmos. A função de modelo precisa encontrar a categoria mais específica de seu argumento iterador para que ela possa usar o algoritmo mais eficiente no tempo de compilação. Para cada iterador do tipo `Iterator`, `iterator_traits`< `Iterator`>:: **iterator_category** deve ser definido para ser a marcação de categoria mais específica possível que descreva o comportamento do iterador.
 
-O tipo é o mesmo que **iterator**\< **Iter**>:: **iterator_category** quando **Iter** descreve um objeto que pode servir como um iterador bidirecional.
+O tipo é o mesmo que **iterador** \< **Iter**>:: **iterator_category** quando `Iter` descreve um objeto que pode servir como um bidirecional iterador.
 
 ## <a name="example"></a>Exemplo
 

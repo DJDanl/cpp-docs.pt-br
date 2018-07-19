@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1958c83ef5a0eec5f3c7f5873451edd3839146be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35b5b87944f2b0f9ce78adbe42b59d92b98a6e5a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373189"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885829"
 ---
 # <a name="toolbar-control-styles"></a>Estilos de controle da ToolBar
 [Classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) tem um conjunto de sinalizadores de estilo que determinam a aparência e comportamento do botão. Você pode definir uma combinação desses sinalizadores chamando [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). Este tópico lista os valores de sinalizador de estilo e seus significados.  
@@ -31,7 +31,7 @@ ms.locfileid: "33373189"
  Botão de ação padrão (padrão).  
   
  TBBS_CHECKBOX  
- caixa de seleção.  
+ Caixa de seleção.  
   
  TBBS_CHECKGROUP  
  O início de um grupo de caixas de seleção.  
@@ -45,7 +45,7 @@ ms.locfileid: "33373189"
  Os valores a seguir representam o status atual do controle:  
   
  TBBS_CHECKED  
- Caixa de seleção é marcada.  
+ Caixa de seleção está marcada.  
   
  TBBS_DISABLED  
  Controle está desabilitado.  
@@ -59,12 +59,12 @@ ms.locfileid: "33373189"
  O valor a seguir altera o layout do botão na barra de ferramentas:  
   
  TBBS_BREAK  
- Coloca o item em uma nova linha ou em uma nova coluna sem separação de colunas.  
+ Coloca o item em uma nova linha ou em uma nova coluna sem separar colunas.  
   
 ## <a name="remarks"></a>Comentários  
- O estilo atual é armazenado em [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). Não defina um novo valor `m_nStyle` diretamente, pois algumas classes derivadas executam processamento adicional quando você chamar `SetStyles`.  
+ O estilo atual é armazenado no [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). Não defina um novo valor `m_nStyle` diretamente, porque algumas classes derivadas realizar processamento adicional quando você chamar `SetStyles`.  
   
- O Gerenciador de visual determina a aparência dos botões em cada estado. Consulte [Gerenciador de visualização](../../mfc/visualization-manager.md) para obter mais informações.  
+ O Gerenciador visual determina a aparência dos botões em cada estado. Ver [Gerenciador de visualização](../../mfc/visualization-manager.md) para obter mais informações.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxtoolbarbutton.h  

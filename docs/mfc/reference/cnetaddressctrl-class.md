@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e80b74262a05548d9aede80df44d204b759b84da
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: c58090351829f6a12ae90d56e8985bf615966f65
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038510"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852257"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl Class
-O `CNetAddressCtrl` classe representa o controle de endereço de rede, que pode ser usado para entrada e validar o formato de IPv4, IPv6 e nomeados endereços DNS.  
+O `CNetAddressCtrl` classe representa o controle de endereço de rede, que você pode usar a entrada e validar o formato de IPv4, IPv6 e endereços DNS nomeados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,26 +61,26 @@ class CNetAddressCtrl : public CEdit
 |[CNetAddressCtrl::Create](#create)|Cria um controle de endereço de rede com estilos especificados e a anexa ao atual `CNetAddressCtrl` objeto.|  
 |[CNetAddressCtrl::CreateEx](#createex)|Cria um controle de endereço de rede com estilos estendidos especificados e a anexa ao atual `CNetAddressCtrl` objeto.|  
 |[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)|Exibe uma dica de balão do erro quando o usuário insere um endereço de rede sem suporte no controle de endereço de rede atual.|  
-|[CNetAddressCtrl::GetAddress](#getaddress)|Recupera uma representação validada e analisada do endereço de rede associado ao controle de endereço de rede atual.|  
+|[CNetAddressCtrl::GetAddress](#getaddress)|Recupera uma representação analisada e validada do endereço de rede associado ao controle de endereço de rede atual.|  
 |[CNetAddressCtrl::GetAllowType](#getallowtype)|Recupera o tipo de endereço de rede que pode dar suporte a controle de endereço de rede atual.|  
 |[CNetAddressCtrl::SetAllowType](#setallowtype)|Define o tipo de endereço de rede que pode dar suporte a controle de endereço de rede atual.|  
   
 ## <a name="remarks"></a>Comentários  
- O controle de endereço de rede verifica se o formato do endereço, que o usuário insere está correto. O controle não se conecta, na verdade, para o endereço de rede. O [CNetAddressCtrl::SetAllowType](#setallowtype) método Especifica um ou mais tipos de endereço que o [CNetAddressCtrl::GetAddress](#getaddress) método pode analisar e verificar. Um endereço pode ser na forma de um IPv4, IPv6 ou endereço nomeado para um servidor, a rede, o host ou o destino da mensagem de difusão. Se o formato do endereço estiver incorreto, você pode usar o [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) método para exibir uma caixa de mensagem InfoDica graficamente aponta para a caixa de texto do controle de endereço de rede e exibe um predefinidas mensagem de erro.  
+ O controle de endereço de rede verifica se o formato do endereço que o usuário insere está correto. O controle não realmente se conectar ao endereço da rede. O [CNetAddressCtrl::SetAllowType](#setallowtype) método Especifica um ou mais tipos de endereço que o [CNetAddressCtrl::GetAddress](#getaddress) método pode analisar e verificar. Um endereço pode ser na forma de um IPv4, IPv6 ou endereço nomeado para um servidor, a rede, o host ou o destino da mensagem de difusão. Se o formato do endereço estiver incorreto, você pode usar o [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) método para exibir uma caixa de mensagem InfoDica que aponta para a caixa de texto do controle de endereço de rede graficamente e exibe um modelo predefinido mensagem de erro.  
   
- O `CNetAddressCtrl` classe é derivada do [CEdit](../../mfc/reference/cedit-class.md) classe. Consequentemente, o controle de endereço de rede fornece acesso a todas as mensagens de controle de edição de Windows.  
+ O `CNetAddressCtrl` classe é derivada de [CEdit](../../mfc/reference/cedit-class.md) classe. Consequentemente, o controle de endereço de rede fornece acesso a todas as mensagens de controle de edição de Windows.  
   
- A figura a seguir mostra uma caixa de diálogo que contém um controle de endereço de rede. O texto caixa (1) para o controle de endereço de rede contém um endereço de rede inválido. A mensagem de InfoDica (2) será exibida se o endereço de rede é inválido.  
+ A figura abaixo mostra uma caixa de diálogo que contém um controle de endereço de rede. O texto caixa (1) para o controle de endereço de rede contém um endereço de rede inválido. A mensagem de InfoDica (2) é exibida se o endereço de rede é inválido.  
   
  ![Caixa de diálogo com um controle de endereço de rede e uma InfoDica. ] (../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir é uma parte de uma caixa de diálogo que valida um endereço de rede. Manipuladores de eventos para três botões de opção especifica que o endereço de rede pode ser um dos três tipos de endereço. O usuário insere um endereço na caixa de texto de controle de rede, em seguida, pressiona um botão para validar o endereço. Se o endereço é válido, será exibida uma mensagem de êxito; Caso contrário, a mensagem de erro predefinidos InfoDica é exibida.  
+ O exemplo de código a seguir é uma parte de uma caixa de diálogo que valida um endereço de rede. Os manipuladores de eventos para três botões de opção especificam que o endereço de rede pode ser um dos três tipos de endereço. O usuário insere um endereço na caixa de texto do controle de rede e, em seguida, pressiona um botão para validar o endereço. Se o endereço é válido, uma mensagem de êxito será exibida; Caso contrário, é exibida a mensagem de erro predefinidos InfoDica.  
   
  [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_1.cpp)]  
   
 ## <a name="example"></a>Exemplo  
- O seguinte exemplo de código do arquivo de cabeçalho de caixa de diálogo define o [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) e [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) variáveis que são exigidos pelo [CNetAddressCtrl::GetAddress](#getaddress)método.  
+ O seguinte exemplo de código do arquivo de cabeçalho da caixa de diálogo define a [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) e [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) variáveis que são exigidas pelo [CNetAddressCtrl::GetAddress](#getaddress)método.  
   
  [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]  
   
@@ -96,11 +96,11 @@ class CNetAddressCtrl : public CEdit
  `CNetAddressCtrl`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxcmn.h  
+ **Cabeçalho:** afxcmn. h  
   
- Essa classe é suportada no [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] e posterior.  
+ Essa classe é compatível com [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] e versões posteriores.  
   
- Requisitos adicionais para esta classe são descritos em [criar requisitos para Vista controles comuns do Windows](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
+ Requisitos adicionais para esta classe são descritos em [compilar requisitos para o Windows Vista controles comuns](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
 ##  <a name="cnetaddressctrl"></a>  CNetAddressCtrl::CNetAddressCtrl  
  Constrói um objeto `CNetAddressCtrl`.  
@@ -127,13 +127,13 @@ virtual BOOL Create(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *dwStyle*|Uma combinação bit a bit de estilos a ser aplicada ao controle. Para obter mais informações, consulte [Editar estilos](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
+|[in] *dwStyle*|Uma combinação bit a bit de estilos a serem aplicados ao controle. Para obter mais informações, consulte [Editar estilos](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
 |[in] *rect*|Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle.|  
 |[in] *pParentWnd*|Um ponteiro não nulo para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle.|  
 |[in] *nID*|A ID do controle.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true` Se esse método for bem-sucedida; Caso contrário, `false`.  
+ TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
   
 ##  <a name="createex"></a>  CNetAddressCtrl::CreateEx  
  Cria um controle de endereço de rede com estilos estendidos especificados e a anexa ao atual `CNetAddressCtrl` objeto.  
@@ -151,17 +151,17 @@ virtual BOOL CreateEx(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *dwExStyle*|Uma combinação bit a bit (ou) de estilos estendidos a serem aplicados ao controle. Para obter mais informações, consulte o *dwExStyle* parâmetro o [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) função.|  
-|[in] *dwStyle*|Uma combinação bit a bit (ou) de estilos a ser aplicada ao controle. Para obter mais informações, consulte [Editar estilos](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
+|[in] *dwExStyle*|Uma combinação bit a bit (OR) dos estilos estendidos para ser aplicado ao controle. Para obter mais informações, consulte o *dwExStyle* parâmetro do [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) função.|  
+|[in] *dwStyle*|Uma combinação bit a bit (OR) de estilos a serem aplicados ao controle. Para obter mais informações, consulte [Editar estilos](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
 |[in] *rect*|Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle.|  
 |[in] *pParentWnd*|Um ponteiro não nulo para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle.|  
 |[in] *nID*|A ID do controle.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true` Se esse método for bem-sucedida; Caso contrário, `false`.  
+ TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
   
 ##  <a name="displayerrortip"></a>  CNetAddressCtrl::DisplayErrorTip  
- Exibe uma mensagem de erro na dica de balão é associada ao controle de endereço de rede atual.  
+ Exibe uma mensagem de erro na dica de balão que está associada com o controle de endereço de rede atual.  
   
 ```  
 HRESULT DisplayErrorTip();
@@ -173,10 +173,10 @@ HRESULT DisplayErrorTip();
 ### <a name="remarks"></a>Comentários  
  Use o [CNetAddressCtrl::SetAllowType](#setallowtype) método para especificar os tipos de endereços que pode dar suporte a controle de endereço de rede atual. Use o [CNetAddressCtrl::GetAddress](#getaddress) método para validar e analisar o endereço de rede que o usuário insere. Use o [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) método para exibir uma InfoDica de mensagem de erro se o [CNetAddressCtrl::GetAddress](#getaddress) método for bem-sucedido.  
   
- Esta mensagem invoca o [NetAddr_DisplayErrorTip](http://msdn.microsoft.com/library/windows/desktop/bb774314) macro, que é descrita no SDK do Windows. Macro envia o `NCM_DISPLAYERRORTIP` mensagem.  
+ Essa mensagem invoca o [NetAddr_DisplayErrorTip](http://msdn.microsoft.com/library/windows/desktop/bb774314) macro, que é descrita no SDK do Windows. Essa macro envia o `NCM_DISPLAYERRORTIP` mensagem.  
   
 ##  <a name="getaddress"></a>  CNetAddressCtrl::GetAddress  
- Recupera uma representação validada e analisada do endereço de rede que está associado com o controle de endereço de rede atual.  
+ Recupera uma representação analisada e validada do endereço de rede que está associado com o controle de endereço de rede atual.  
   
 ```  
 HRESULT GetAddress(PNC_ADDRESS pAddress) const;  
@@ -186,17 +186,17 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[out no] *pAddress*|Ponteiro para um [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) estrutura.  Definir o *pAddrInfo* membro dessa estrutura para o endereço de um [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) antes de chamar o método GetAddress da estrutura.|  
+|[no, out] *pAddress*|Ponteiro para um [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) estrutura.  Defina as *pAddrInfo* membro dessa estrutura para o endereço de uma [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) estrutura antes de chamar o método GetAddress.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- O valor `S_OK` se esse método for bem-sucedida; caso contrário, um código de erro COM. Para obter mais informações sobre possíveis códigos de erro, consulte a seção do valor de retorno do [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) macro.  
+ O valor S_OK se esse método for bem-sucedida; Caso contrário, um código de erro COM. Para obter mais informações sobre possíveis códigos de erro, consulte a seção de retornar o valor da [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) macro.  
   
 ### <a name="remarks"></a>Comentários  
  Se esse método for bem-sucedida, o [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) estrutura contém informações adicionais sobre o endereço de rede.  
   
- Use o [CNetAddressCtrl::SetAllowType](#setallowtype) método para especificar os tipos de endereços que pode dar suporte a controle de endereço de rede atual. Use o [CNetAddressCtrl::GetAddress](#getaddress) método para validar e analisar o endereço de rede que o usuário insere. Use o [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) método para exibir uma InfoDica de mensagem de erro se o [CNetAddressCtrl::GetAddress](#getaddress) método for bem-sucedido.  
+ Use o [CNetAddressCtrl::SetAllowType](#setallowtype) método para especificar os tipos de endereços pode dar suporte a controle de endereço de rede atual. Use o [CNetAddressCtrl::GetAddress](#getaddress) método para validar e analisar o endereço de rede que o usuário insere. Use o [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) método para exibir uma InfoDica de mensagem de erro se o [CNetAddressCtrl::GetAddress](#getaddress) método for bem-sucedido.  
   
- Este método chama o [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) macro, que é descrita no SDK do Windows. Macro envia o `NCM_GETADDRESS` mensagem.  
+ Este método invoca o [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) macro, que é descrita no SDK do Windows. Essa macro envia a mensagem NCM_GETADDRESS.  
   
 ##  <a name="getallowtype"></a>  CNetAddressCtrl::GetAllowType  
  Recupera o tipo de endereço de rede que pode dar suporte a controle de endereço de rede atual.  
@@ -206,10 +206,10 @@ DWORD GetAllowType() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Uma combinação bit a bit (ou) de sinalizadores que especifica os tipos de endereços de controle de endereço de rede pode dar suporte. Para obter mais informações, consulte [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).  
+ Uma combinação bit a bit (OR) de sinalizadores que especifica os tipos de endereços de controle de endereço de rede pode dar suporte. Para obter mais informações, consulte [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).  
   
 ### <a name="remarks"></a>Comentários  
- Esta mensagem invoca o [NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318) macro, que é descrita no SDK do Windows. Macro envia a mensagem NCM_GETALLOWTYPE.  
+ Essa mensagem invoca o [NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318) macro, que é descrita no SDK do Windows. Essa macro envia a mensagem NCM_GETALLOWTYPE.  
   
 ##  <a name="setallowtype"></a>  CNetAddressCtrl::SetAllowType  
  Define o tipo de endereço de rede que pode dar suporte a controle de endereço de rede atual.  
@@ -222,17 +222,17 @@ HRESULT SetAllowType(DWORD dwAddrMask);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *dwAddrMask*|Uma combinação bit a bit (ou) de sinalizadores que especifica os tipos de endereços de controle de endereço de rede pode dar suporte. Para obter mais informações, consulte [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).|  
+|[in] *dwAddrMask*|Uma combinação bit a bit (OR) de sinalizadores que especifica os tipos de endereços de controle de endereço de rede pode dar suporte. Para obter mais informações, consulte [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).|  
   
 ### <a name="return-value"></a>Valor de retorno  
- `S_OK` Se esse método for bem-sucedida; Caso contrário, um código de erro COM.  
+ S_OK se esse método for bem-sucedida; Caso contrário, um código de erro COM.  
   
 ### <a name="remarks"></a>Comentários  
  Use o [CNetAddressCtrl::SetAllowType](#setallowtype) método para especificar os tipos de endereços que pode dar suporte a controle de endereço de rede atual. Use o [CNetAddressCtrl::GetAddress](#getaddress) método para validar e analisar o endereço de rede que o usuário insere. Use o [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) método para exibir uma InfoDica de mensagem de erro se o [CNetAddressCtrl::GetAddress](#getaddress) método for bem-sucedido.  
   
- Esta mensagem invoca o [NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320) macro, que é descrita no SDK do Windows. Macro envia a mensagem NCM_SETALLOWTYPE.  
+ Essa mensagem invoca o [NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320) macro, que é descrita no SDK do Windows. Essa macro envia a mensagem NCM_SETALLOWTYPE.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CNetAddressCtrl](../../mfc/reference/cnetaddressctrl-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe CEdit](../../mfc/reference/cedit-class.md)

@@ -96,17 +96,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb5745d5c4ccc495cd508df10f0d36e3729ecf13
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4a47efc1018f42cbd9f421f1d53566aa134addd6
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336833"
 ---
 # <a name="cdocksite-class"></a>Classe CDockSite
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
- Fornece funcionalidade para organizar os painéis que derivam de [CPane classe](../../mfc/reference/cpane-class.md) em conjuntos de linhas.  
+ Fornece a funcionalidade para organizar os painéis derivados de [classe CPane](../../mfc/reference/cpane-class.md) em conjuntos de linhas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -146,10 +146,10 @@ class CDockSite: public CBasePane
 |[CDockSite::OnSetWindowPos](#onsetwindowpos)||  
 |[CDockSite::OnShowRow](#onshowrow)||  
 |[CDockSite::OnSizeParent](#onsizeparent)||  
-|[CDockSite::PaneFromPoint](#panefrompoint)|Retorna um painel que está encaixado no site de encaixe no ponto especificado pelo parâmetro fornecido.|  
-|[CDockSite::DockPaneLeftOf](#dockpaneleftof)|Encaixa um painel à esquerda do outro painel.|  
-|[CDockSite::FindPaneByID](#findpanebyid)|Retorna o painel que é identificado pela ID especificada.|  
-|[CDockSite::GetPaneList](#getpanelist)|Retorna uma lista de painéis são encaixados no local de encaixe.|  
+|[CDockSite::PaneFromPoint](#panefrompoint)|Retorna um painel que está encaixado no local de encaixe no ponto especificado pelo parâmetro fornecido.|  
+|[CDockSite::DockPaneLeftOf](#dockpaneleftof)|Encaixa um painel à esquerda de outro painel.|  
+|[CDockSite::FindPaneByID](#findpanebyid)|Retorna o painel que é identificado pela ID determinada.|  
+|[CDockSite::GetPaneList](#getpanelist)|Retorna uma lista de painéis que são encaixadas no local de encaixe.|  
 |[CDockSite::RectSideFromPoint](#rectsidefrompoint)||  
 |[CDockSite::RemovePane](#removepane)||  
 |[CDockSite::RemoveRow](#removerow)||  
@@ -162,12 +162,12 @@ class CDockSite: public CBasePane
 |[CDockSite::SwapRows](#swaprows)||  
   
 ## <a name="remarks"></a>Comentários  
- Cria a estrutura `CDockSite` objetos automaticamente quando você chama [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Janelas de encaixe do site são posicionadas na borda da área do cliente na janela do quadro principal.  
+ A estrutura cria `CDockSite` objetos automaticamente quando você chama [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Encaixar janelas de site são posicionadas na borda da área de cliente na janela do quadro principal.  
   
- Você normalmente não precisa chamar os serviços fornecidos pelo site de encaixe porque [classe CWinAppEx é](../../mfc/reference/cframewndex-class.md) trata esses serviços.  
+ Você normalmente não precisa chamar os serviços fornecidos pelo local de encaixe, porque [classe CFrameWndEx](../../mfc/reference/cframewndex-class.md) lida com esses serviços.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como criar um objeto de `CDockSite` classe.  
+ O exemplo a seguir demonstra como criar um objeto do `CDockSite` classe.  
   
  [!code-cpp[NVC_MFC_RibbonApp#27](../../mfc/reference/codesnippet/cpp/cdocksite-class_1.cpp)]  
   
@@ -317,14 +317,14 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWnd*  
+ [in] *Apropriei*  
  [in] *dockMethod*  
  [in] *lpRect*  
   
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="dockpaneleftof"></a>  CDockSite::DockPaneLeftOf  
- Encaixa um painel à esquerda do outro painel.  
+ Encaixa um painel à esquerda de outro painel.  
   
 ```  
 virtual BOOL DockPaneLeftOf(
@@ -340,7 +340,7 @@ virtual BOOL DockPaneLeftOf(
  Um ponteiro para o painel de destino.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o painel está encaixado com êxito; Caso contrário, `FALSE`.  
+ TRUE se o painel estiver encaixado com êxito; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -364,10 +364,10 @@ CPane* FindPaneByID(UINT nID);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *nID*  
- A ID de comando do painel a ser localizado.  
+ A ID de comando do painel a ser localizada.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o painel com a ID de comando especificado, ou `NULL` se o painel não foi encontrado.  
+ Um ponteiro para o painel com o ID de comando especificada ou nulo se o painel não for encontrado.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -417,7 +417,7 @@ const CObList& GetDockSiteRowsList() const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="getpanelist"></a>  CDockSite::GetPaneList  
- Retorna uma lista de painéis são encaixados no site de encaixe.  
+ Retorna uma lista de painéis que são encaixadas no local de encaixe.  
   
 ```  
 const CObList& GetPaneList() const;  
@@ -501,7 +501,7 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWnd*  
+ [in] *Apropriei*  
  [in] *nFlags*  
  [in] *ptOffset*  
   
@@ -566,7 +566,7 @@ virtual void OnSizeParent(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *rectAvailable*  
- [in] *nSide*  
+ [in] *Xplorando o*  
  [in] *bExpand*  
  [in] *nOffset*  
   
@@ -607,7 +607,7 @@ virtual void OnShowRow(
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="panefrompoint"></a>  CDockSite::PaneFromPoint  
- Retorna um painel que está encaixado no site de encaixe no ponto especificado pelo parâmetro fornecido.  
+ Retorna um painel que está encaixado no local de encaixe no ponto especificado pelo parâmetro fornecido.  
   
 ```  
 virtual CPane* PaneFromPoint(CPoint pt);
@@ -618,7 +618,7 @@ virtual CPane* PaneFromPoint(CPoint pt);
  Um ponto em coordenadas da tela, para o painel recuperar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o painel é localizado no ponto especificado ou `NULL` se nenhum painel estava presente no ponto especificado.  
+ Um ponteiro para o painel, localizado no ponto especificado ou nulo se nenhum painel estava presente no ponto especificado.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -649,7 +649,7 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWnd*  
+ [in] *Apropriei*  
  [in] *dockMethod*  
   
 ### <a name="remarks"></a>Comentários  
@@ -742,22 +742,22 @@ virtual BOOL ShowPane(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] [out] *pBar*  
- Um ponteiro para o painel a ser mostrado ou oculto.  
+ Um ponteiro para o painel para ser mostrado ou ocultado.  
   
  [in] *bMostrar*  
- `TRUE` para especificar que o painel deve ser exibido; `FALSE` para especificar que o painel deve ser ocultada.  
+ TRUE para especificar que o painel deve ser exibido; FALSO para especificar que o painel deve ser ocultada.  
   
  [in] *bDelay*  
- `TRUE` para especificar que o layout do painel deve ser atrasado até que o painel é exibido; Caso contrário, `FALSE`.  
+ TRUE para especificar que o layout do painel deve ser atrasado até que o painel é exibido; Caso contrário, FALSE.  
   
  [in] *bActivate*  
  Este parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o painel foi mostrado ou ocultado com êxito. `FALSE` Se o painel especificado não pertence a este site de encaixe.  
+ TRUE se o painel foi mostrado ou ocultado com êxito. FALSE se o painel especificado não pertence a este site de encaixe.  
   
 ### <a name="remarks"></a>Comentários  
- Chame esse método para mostrar ou ocultar painéis encaixados. Normalmente, você não precisa chamar `CDockSite::ShowPane` diretamente, porque ele é chamado pela janela do quadro do pai ou pelo painel de base.  
+ Chame esse método para mostrar ou ocultar painéis encaixados. Normalmente, você não precisa chamar `CDockSite::ShowPane` diretamente, porque ele é chamado pela janela de quadro pai ou pelo painel de base.  
   
 ##  <a name="showrow"></a>  CDockSite::ShowRow  
 
@@ -792,6 +792,6 @@ void SwapRows(
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CBasePane](../../mfc/reference/cbasepane-class.md)

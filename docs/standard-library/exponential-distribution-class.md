@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f324eaea0f84767d174bb109a8c1cfff7abfb50
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e40c06d2dc95366e154f4299dda0087c42698312
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850061"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960190"
 ---
 # <a name="exponentialdistribution-class"></a>Classe exponential_distribution
 
@@ -77,13 +77,13 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType* o tipo de resultado de ponto flutuante, o padrão será a `double`. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType* padrão é o tipo de resultado de ponto flutuante **duplo**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 *URNG* O mecanismo gerador de números aleatórios. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-A classe do modelo descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou o tipo `double` se nenhum for fornecido, distribuído de acordo com a Distribuição Exponencial. A tabela a seguir contém links para artigos sobre cada um dos membros.
+A classe de modelo descreve uma distribuição que produz valores de um integral especificado pelo usuário tipo ou tipo **duplas** caso nenhum seja fornecido, distribuído de acordo com a distribuição exponencial. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -191,9 +191,9 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*lambda* o `lambda` parâmetro da distribuição.
+*lambda* o `lambda` parâmetro de distribuição.
 
-*parâmetro* o pacote de parâmetros usado para construir a distribuição.
+*parm* o pacote de parâmetro usado para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
@@ -220,9 +220,9 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*lambda* o `lambda` parâmetro da distribuição.
+*lambda* o `lambda` parâmetro de distribuição.
 
-*direito* o `param_type` objeto a ser comparado a este.
+*à direita* o `param_type` objeto a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários
 

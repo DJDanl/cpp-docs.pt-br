@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19ab7e05b4e27a3b00576339d0b60b37bdba4a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53601afdd562f29ccd4bce9db76811e610940b7a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374338"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339365"
 ---
 # <a name="linger-structure"></a>Estrutura de LINGER
-O `LINGER` estrutura é usada para manipular o **SO_LINGER** e **SO_DONTLINGER** opções de `CAsyncSocket::GetSockOpt`.  
+O `LINGER` estrutura é usada para manipular as opções de SO_LINGER e SO_DONTLINGER `CAsyncSocket::GetSockOpt`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,10 +36,10 @@ struct linger {
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Definindo o **SO_DONTLINGER** opção impede que o bloqueio na função de membro **fechar** enquanto aguarda não enviados dados a serem enviados. A definição dessa opção é equivalente à configuração **SO_LINGER** com **l_onoff** definido como 0.  
+ Definindo a opção SO_DONTLINGER impede que o bloqueio na função de membro `Close` enquanto aguarda unsent dados a serem enviados. Essa opção é equivalente a definir SO_LINGER com `l_onoff` definido como 0.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Winsock2  
+ **Cabeçalho:** winsock2.h  
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   

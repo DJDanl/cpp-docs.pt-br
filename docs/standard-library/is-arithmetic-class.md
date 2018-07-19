@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 161551747455bae1347e5059ec3afffd2649294c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e5f7a4d5ad1d7991e69a5092333974ec3a8ade07
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845291"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956616"
 ---
 # <a name="isarithmetic-class"></a>Classe is_arithmetic
 
@@ -37,11 +37,11 @@ struct is_arithmetic;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo de consulta.
+*Ty* o tipo de consulta.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo `Ty` for um tipo aritmético, ou seja, um tipo integral ou um tipo de ponto flutuante ou uma forma `cv-qualified` de algum deles; caso contrário, será falsa.
+Uma instância do predicado de tipo será verdadeira se o tipo *Ty* é um tipo aritmético, ou seja, um tipo integral ou flutuante tipo de ponto ou um `cv-qualified` forma de um deles, caso contrário, será falsa.
 
 ## <a name="example"></a>Exemplo
 

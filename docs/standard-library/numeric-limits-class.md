@@ -80,12 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73c8d98157e81f087bf382c3733a2ade909349a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a14d5012e1db8dec0f1aa6c39d8764232169dec2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862774"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954871"
 ---
 # <a name="numericlimits-class"></a>Classe numeric_limits
 
@@ -100,13 +100,13 @@ class numeric_limits
 
 ### <a name="parameters"></a>Parâmetros
 
-`Type` O tipo de dados do elemento fundamental cujas propriedades estão sendo testados ou consultadas ou definidas.
+*Tipo* o tipo de dados do elemento fundamental cujas propriedades estão sendo testadas ou consultadas ou definidas.
 
 ## <a name="remarks"></a>Comentários
 
-O cabeçalho define as especializações explícitas para os tipos `wchar_t`, `bool`, `char`, `signed char`, `unsigned char`, `short`, `unsigned short`, `int`, `unsigned int`, `long`, `unsigned long`, `float`, `double`, `long double`**,** `long long`, `unsigned long long`, `char16_t` e `char32_t`. Para essas especializações explícitas, o membro [numeric_limits::is_specialized](#is_specialized) é `true` e todos os membros relevantes têm valores significativos. O programa pode fornecer especializações explícitas adicionais. A maioria das funções membro da classe descreve ou testa possíveis implementações de `float`.
+O cabeçalho define especializações explícitas para os tipos **wchar_t**, **bool**, **char**, **assinado char**, **sem sinal char**, **curto**, **unsigned short**, **int**, **int sem sinal**, **longa**, **unsigned long**, **float**, **double**, **long double * * *,** **long long**, **longo longo sem sinal**, `char16_t`, e `char32_t`. Para essas especializações explícitas, o membro [numeric_limits:: is_specialized](#is_specialized) é **verdadeiro**, e todos os membros relevantes têm valores significativos. O programa pode fornecer especializações explícitas adicionais. A maioria das funções de membro da classe descreve ou testa possíveis implementações de **float**.
 
-Para uma especialização arbitrária, nenhum membro tem valores significativos. Um objeto membro que não tem um valor significativo armazena zero (ou `false`) e retorna uma função membro que não retorna um valor significativo `Type(0)`.
+Para uma especialização arbitrária, nenhum membro tem valores significativos. Um objeto de membro que não tem um valor significativo armazena zero (ou **falsos**) e retorna uma função de membro que não retorna um valor significativo `Type(0)`.
 
 ### <a name="static-functions-and-constants"></a>Constantes e funções estáticas
 
@@ -165,9 +165,9 @@ O menor valor desnormalizado diferente de zero.
 
 ### <a name="remarks"></a>Comentários
 
-`long double` é o mesmo que **double** para o compilador C++.
+**Long double** é o mesmo que **duplo** para o compilador do C++.
 
-A função retornará o valor mínimo para o tipo, que é o mesmo que [min](#min) se [has_denorm](#has_denorm) não for igual a **denorm_present**.
+A função retorna o valor mínimo para o tipo, que é o mesmo como [min](#min) se [has_denorm](#has_denorm) não é igual a `denorm_present`.
 
 ### <a name="example"></a>Exemplo
 
@@ -364,7 +364,7 @@ Um valor de enumeração do tipo **const**`float_denorm_style`, indicando se o t
 
 ### <a name="remarks"></a>Comentários
 
-Os repositórios do membro **denorm_present** para um tipo de ponto flutuante com valores desnormalizados, efetivamente um número variável de bits exponenciais.
+A membro armazena `denorm_present` para um tipo de ponto flutuante desnormalizado tem valores, eficaz um número variável de bits exponenciais.
 
 ### <a name="example"></a>Exemplo
 
@@ -1010,7 +1010,7 @@ Retorna o valor finito mais negativo.
 
 ### <a name="remarks"></a>Comentários
 
-Retorna o valor mais negativo finito para o tipo (que normalmente é `min()` para tipos de inteiro e `-max()` para tipos de ponto flutuante). O valor de retorno será significativo se `is_bounded` for `true`.
+Retorna o valor finito mais negativo para o tipo (que é normalmente `min()` para tipos de inteiro e `-max()` para tipos de ponto flutuante). O valor retornado será significativo se `is_bounded` está **verdadeiro**.
 
 ## <a name="max"></a>  numeric_limits::max
 
@@ -1026,7 +1026,7 @@ O valor máximo finito para um tipo.
 
 ### <a name="remarks"></a>Comentários
 
-O valor máximo finito é INT_MAX para o tipo `int` e FLT_MAX para o tipo **float**. O valor retornado será significativo se [is_bounded](#is_bounded) for **true**.
+O valor máximo finito é INT_MAX para o tipo **int** e FLT_MAX para o tipo **float**. O valor retornado será significativo se [is_bounded](#is_bounded) for **true**.
 
 ### <a name="example"></a>Exemplo
 
@@ -1176,7 +1176,7 @@ O valor normalizado mínimo para o tipo.
 
 ### <a name="remarks"></a>Comentários
 
-O valor normalizado mínimo é INT_MIN para o tipo `int` e FLT_MIN para o tipo `float`. O valor retornado será significativo se [is_bounded](#is_bounded) for `true` ou se [is_signed](#is_signed) for `false`.
+O valor normalizado mínimo é INT_MIN para o tipo **int** e FLT_MIN para o tipo **float**. O valor retornado será significativo se [is_bounded](#is_bounded) é **verdadeiro** ou se [is_signed](#is_signed) é **false**.
 
 ### <a name="example"></a>Exemplo
 
@@ -1535,7 +1535,7 @@ static const bool tinyness_before = false;
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o tipo puder detectar valores pequenos antes do arredondamento; `false` se não puder.
+**True** se o tipo puder detectar valores pequenos antes do arredondamento; **falsos** se não for possível.
 
 ### <a name="remarks"></a>Comentários
 

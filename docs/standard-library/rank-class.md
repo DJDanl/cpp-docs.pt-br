@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be250d2908522ac85902563d64bf57ca7cde88a0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 615da57a092a9cbdc1933ed57adbbaed6afdcf65
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853148"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960591"
 ---
 # <a name="rank-class"></a>Classe rank
 
@@ -37,11 +37,11 @@ struct rank;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo de consulta.
+*Ty* o tipo de consulta.
 
 ## <a name="remarks"></a>Comentários
 
-A consulta de tipo contém o valor do número de dimensões do tipo de matriz `Ty` ou 0 se `Ty` não for um tipo de matriz.
+A consulta de tipo contém o valor do número de dimensões do tipo de matriz *Ty*, ou 0 se *Ty* não é um tipo de matriz.
 
 ## <a name="example"></a>Exemplo
 

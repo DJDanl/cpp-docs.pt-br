@@ -1,7 +1,7 @@
 ---
-title: Compilador (nível 4) de aviso C4690 | Microsoft Docs
+title: Compilador aviso (nível 4) C4690 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/03/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,24 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c8285fd3763b93c8a320a6cb984168b88d2e9ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04fb68bdab762f0f541849fad1568caff836b623
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293615"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853316"
 ---
-# <a name="compiler-warning-level-4-c4690"></a>Compilador C4690 de aviso (nível 4)
-[emitidl (pop)]: mais ativações do que envios  
-  
- O [emitidl](../../windows/emitidl.md) atributo foi exibido mais uma vez que ele foi enviado.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C4690.  
-  
-```  
-// C4690.cpp  
-// compile with: /c /W4  
-[emitidl(pop)];   // C4690  
-class x {};  
+# <a name="compiler-warning-level-4-c4690"></a>Compilador aviso (nível 4) C4690
+
+> \[ emitidl (pop)]: mais ativações do que envios por push
+
+## <a name="remarks"></a>Comentários
+
+O [emitidl](../../windows/emitidl.md) atributo foi aparecido mais uma vez que ela foi enviada por push.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C4690. Para corrigir esse problema, verifique se que o atributo é aparecido exatamente como quantas vezes ela é enviada por push.
+
+```cpp
+// C4690.cpp
+// compile with: /c /W4
+[emitidl(pop)];   // C4690
+class x {};
 ```

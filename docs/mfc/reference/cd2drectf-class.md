@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7dc518832dd84bf5ca91765211f96934ea0b4f0
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 1f96adf519eb710d412465a9db4cbd7313f91f41
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338266"
 ---
 # <a name="cd2drectf-class"></a>Classe CD2DRectF
 Um wrapper para `D2D1_RECT_F`.  
@@ -42,13 +42,13 @@ class CD2DRectF : public D2D1_RECT_F;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CD2DRectF::CD2DRectF](#cd2drectf)|Sobrecarregado. Constrói um `CD2DRectF` de objeto `D2D1_RECT_F` objeto.|  
+|[CD2DRectF::CD2DRectF](#cd2drectf)|Sobrecarregado. Constrói uma `CD2DRectF` do objeto de `D2D1_RECT_F` objeto.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CD2DRectF::IsNull](#isnull)|Retorna um **booliano** valor que indica se uma expressão não contém dados válidos ( **nulo**).|  
+|[CD2DRectF::IsNull](#isnull)|Retorna um **boolean** valor que indica se uma expressão não contém dados válidos (nulo).|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -65,7 +65,7 @@ class CD2DRectF : public D2D1_RECT_F;
  **Cabeçalho:** afxrendertarget.h  
   
 ##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF  
- Constrói um objeto CD2DRectF do objeto CRect.  
+ Constrói um objeto CD2DRectF objeto CRect.  
   
 ```  
 CD2DRectF(const CRect& rect);  
@@ -91,7 +91,7 @@ CD2DRectF(
  coordenada superior do código-fonte  
   
  *baterão*  
- fonte de coordenada direita  
+ origem de coordenada direita  
   
  *fBottom*  
  coordenada inferior de origem  
@@ -104,10 +104,10 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- TRUE se a parte superior do retângulo, esquerdo, inferior e valores corretos são todos iguais a 0; Caso contrário, FALSE.  
+ TRUE se a parte superior, esquerda, inferior e valores corretos do retângulo são todas iguais a 0; Caso contrário, FALSE.  
   
 ##  <a name="operator_crect"></a>  CD2DRectF::Operator CRect  
- Converte CD2DRectF CRect objeto.  
+ Converte CD2DRectF objeto CRect.  
   
 ```  
 operator CRect();

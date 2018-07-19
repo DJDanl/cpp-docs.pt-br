@@ -16,44 +16,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d67b2a7b9769acd7d6e596e4fcdf1aec30bbf74
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4cd2f2473249271285d6b8812dac1b924e5a172
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357210"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848529"
 ---
 # <a name="iunknown-implementation-classes"></a>Classes de implementação de IUnknown
-As classes a seguir implementam **IUnknown** e métodos relacionados:  
+As seguintes classes implementam `IUnknown` e métodos relacionados:  
   
--   [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) gerencia objetos agregados e agregados de contagem de referência. Permite que você especifique um modelo de threading.  
+-   [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) gerencia a contagem de referências para objetos agregados e não agregados. Permite que você especifique um modelo de threading.  
   
--   [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) gerencia objetos agregados e agregados de contagem de referência. Usa o padrão de threading de modelo do servidor.  
+-   [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) gerencia a contagem de referências para objetos agregados e não agregados. Usa o padrão de modelo do servidor de threading.  
   
--   [CComAggObject](../atl/reference/ccomaggobject-class.md) implementa **IUnknown** para um objeto agregado.  
+-   [CComAggObject](../atl/reference/ccomaggobject-class.md) implementa `IUnknown` para um objeto agregado.  
   
--   [CComObject](../atl/reference/ccomobject-class.md) implementa **IUnknown** para um objeto agregado.  
+-   [CComObject](../atl/reference/ccomobject-class.md) implementa `IUnknown` para um objeto não agregado.  
   
--   [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementa **IUnknown** para objetos agregados e agregados. Usando `CComPolyObject` evita ter dois `CComAggObject` e `CComObject` em seu módulo. Um único `CComPolyObject` casos agregados e agregados alças do objeto.  
+-   [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementa `IUnknown` para objetos agregados e não agregados. Usando o `CComPolyObject` evita a necessidade de ambos `CComAggObject` e `CComObject` em seu módulo. Um único `CComPolyObject` objeto lida com casos de agregados e não agregados.  
   
--   [CComObjectNoLock](../atl/reference/ccomobjectnolock-class.md) implementa **IUnknown** para um objeto agregado, sem modificar o número de bloqueios do módulo.  
+-   [CComObjectNoLock](../atl/reference/ccomobjectnolock-class.md) implementa `IUnknown` para um objeto não agregado, sem modificar a contagem de bloqueios do módulo.  
   
--   [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implementa **IUnknown** para uma interface destacável.  
+-   [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implementa `IUnknown` para uma interface destacáveis.  
   
--   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementa **IUnknown** para uma interface destacável "cache".  
+-   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementa `IUnknown` para uma interface destacáveis "cache".  
   
--   [CComContainedObject](../atl/reference/ccomcontainedobject-class.md) implementa **IUnknown** para o objeto interno de uma agregação ou uma interface destacável.  
+-   [CComContainedObject](../atl/reference/ccomcontainedobject-class.md) implementa `IUnknown` para o objeto interno de uma agregação ou uma interface destacáveis.  
   
--   [CComObjectGlobal](../atl/reference/ccomobjectglobal-class.md) gerencia uma contagem de referência no módulo para garantir que o objeto não será excluída.  
+-   [CComObjectGlobal](../atl/reference/ccomobjectglobal-class.md) gerencia uma contagem de referência sobre o módulo para garantir que seu objeto não será excluída.  
   
--   [CComObjectStack](../atl/reference/ccomobjectstack-class.md) cria um objeto COM temporária, usando uma implementação esqueleto de **IUnknown**.  
+-   [CComObjectStack](../atl/reference/ccomobjectstack-class.md) cria um objeto COM temporária, usando uma implementação de esqueleto da `IUnknown`.  
   
 ## <a name="related-articles"></a>Artigos relacionados  
  [Princípios básicos de objetos COM da ATL](../atl/fundamentals-of-atl-com-objects.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../atl/atl-class-overview.md)   
- [Macros de fábrica de classe e de agregação](../atl/reference/aggregation-and-class-factory-macros.md)   
+ [Macros de classe de fábrica e agregação](../atl/reference/aggregation-and-class-factory-macros.md)   
  [Macros de mapa COM](../atl/reference/com-map-macros.md)   
  [Funções globais de mapa COM](../atl/reference/com-map-global-functions.md)
 

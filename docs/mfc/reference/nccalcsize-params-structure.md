@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07db612cb6dbde0dd762cf709ac6040bbd836c4b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 095b66af9dab08e3d8fad040c43e2eaf8d2beb81
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335637"
 ---
 # <a name="nccalcsizeparams-structure"></a>Estrutura NCCALCSIZE_PARAMS
-O `NCCALCSIZE_PARAMS` estrutura contém informações que um aplicativo pode usar durante o processamento de `WM_NCCALCSIZE` mensagem para calcular o tamanho, posição e conteúdo válido da área cliente de uma janela.  
+O `NCCALCSIZE_PARAMS` estrutura contém informações que um aplicativo pode usar ao processar a mensagem WM_NCCALCSIZE para calcular o tamanho, posição e conteúdo válido da área de cliente de uma janela.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +37,13 @@ typedef struct tagNCCALCSIZE_PARAMS {
   
 #### <a name="parameters"></a>Parâmetros  
  *rgrc*  
- Especifica uma matriz de retângulos. O primeiro contém novas coordenadas de uma janela que tenha sido movido ou redimensionado. O segundo contém as coordenadas da janela antes que ele foi movido ou redimensionado. A terceira contém as coordenadas da área cliente de uma janela antes que ele foi movido ou redimensionado. Se a janela é uma janela filho, as coordenadas são relativas à área do cliente da janela pai. Se a janela é uma janela de nível superior, as coordenadas são em relação à tela.  
+ Especifica uma matriz de retângulos. O primeiro contém as novas coordenadas de uma janela que tenha sido movida ou redimensionada. O segundo contém as coordenadas da janela antes que ela foi movida ou redimensionada. A terceira contém as coordenadas da área de cliente de uma janela antes que ela foi movida ou redimensionada. Se a janela é uma janela filho, as coordenadas são em relação à área de cliente da janela pai. Se a janela é uma janela de nível superior, as coordenadas são em relação à tela.  
   
  *lppos*  
- Aponta para um [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) estrutura que contém os valores de tamanho e posição especificados na operação que causou a janela a ser movido ou redimensionado.  
+ Aponta para um [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) estrutura que contém os valores de tamanho e posição especificados na operação que causou a janela a ser movida ou redimensionada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** WinUser  
+ **Cabeçalho:** WinUser. h  
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   

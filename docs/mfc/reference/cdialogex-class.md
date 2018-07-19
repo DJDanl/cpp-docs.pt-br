@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff365134a9b952b92211418c03d147a65077c66e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 5d941b112047dc8f90a8cdc4686e422f028b6d7e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335952"
 ---
 # <a name="cdialogex-class"></a>Classe CDialogEx
-O `CDialogEx` classe especifica a cor do plano de fundo e a imagem de plano de fundo de uma caixa de diálogo.  
+O `CDialogEx` classe especifica a cor de plano de fundo e a imagem de plano de fundo de uma caixa de diálogo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,15 +51,15 @@ class CDialogEx : public CDialog
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CDialogEx::SetBackgroundColor](#setbackgroundcolor)|Define a cor de plano de fundo da caixa de diálogo.|  
+|[CDialogEx::SetBackgroundColor](#setbackgroundcolor)|Define a cor do plano de fundo da caixa de diálogo.|  
 |[CDialogEx::SetBackgroundImage](#setbackgroundimage)|Define a imagem de plano de fundo da caixa de diálogo.|  
   
 ## <a name="remarks"></a>Comentários  
- Para usar o `CDialogEx` classe, derive sua classe de caixa de diálogo do `CDialogEx` classe o `CDialog` classe.  
+ Para usar o `CDialogEx` classe, derive sua classe de caixa de diálogo do `CDialogEx` classe, em vez do `CDialog` classe.  
   
- Imagens da caixa de diálogo são armazenadas em um arquivo de recurso. A estrutura automaticamente exclui qualquer imagem que é carregada do arquivo de recurso. Para excluir a imagem de plano de fundo atual de programaticamente, chame o [CDialogEx::SetBackgroundImage](#setbackgroundimage) método ou implemente um `OnDestroy` manipulador de eventos. Quando você chama o [CDialogEx::SetBackgroundImage](#setbackgroundimage) método, passe um `HBITMAP` parâmetro como o identificador da imagem. O `CDialogEx` objeto será apropriar-se da imagem e excluí-lo se o `m_bAutoDestroyBmp` sinalizador é `TRUE`.  
+ Imagens de caixa de diálogo são armazenadas em um arquivo de recurso. O framework exclui automaticamente qualquer imagem que é carregada do arquivo de recurso. Para excluir programaticamente a imagem de plano de fundo atual, chame o [CDialogEx::SetBackgroundImage](#setbackgroundimage) método ou implementar um `OnDestroy` manipulador de eventos. Quando você chama o [CDialogEx::SetBackgroundImage](#setbackgroundimage) método, passe um `HBITMAP` parâmetro como a alça da imagem. O `CDialogEx` objeto será apropriar-se de que a imagem e excluí-lo se o `m_bAutoDestroyBmp` sinalizador é `TRUE`.  
   
- Um `CDialogEx` objeto pode ser um pai de um [CMFCPopupMenu classe](../../mfc/reference/cmfcpopupmenu-class.md) objeto. O [CMFCPopupMenu classe](../../mfc/reference/cmfcpopupmenu-class.md) objeto chamadas a `CDialogEx::SetActiveMenu` método quando o [CMFCPopupMenu classe](../../mfc/reference/cmfcpopupmenu-class.md) objeto é aberta. Depois disso, o `CDialogEx` objeto trata qualquer evento de menu até que o [CMFCPopupMenu classe](../../mfc/reference/cmfcpopupmenu-class.md) objeto está fechado.  
+ Um `CDialogEx` objeto pode ser um pai de um [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) objeto. O [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) chamadas do objeto de `CDialogEx::SetActiveMenu` método quando o [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) objeto é aberta. Depois disso, o `CDialogEx` objeto manipula qualquer evento de menu até que o [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) objeto está fechado.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -97,17 +97,17 @@ CDialogEx(
  O nome do recurso de um modelo de caixa de diálogo.  
   
  [in] *pParent*  
- Um ponteiro para a janela pai. O valor padrão é `NULL`.  
+ Um ponteiro para a janela pai. O valor padrão é NULL.  
   
  [in] *pParentWnd*  
- Um ponteiro para a janela pai. O valor padrão é `NULL`.  
+ Um ponteiro para a janela pai. O valor padrão é NULL.  
   
 ### <a name="return-value"></a>Valor de retorno  
   
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="setbackgroundcolor"></a>  CDialogEx::SetBackgroundColor  
- Define a cor de plano de fundo da caixa de diálogo.  
+ Define a cor do plano de fundo da caixa de diálogo.  
   
 ```  
 void SetBackgroundColor(
@@ -120,7 +120,7 @@ void SetBackgroundColor(
  Um valor de cor RGB.  
   
  [in] *bRepaint*  
- `TRUE` Para atualizar imediatamente a tela. Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
+ TRUE para atualizar imediatamente a tela; Caso contrário, FALSE. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -149,22 +149,22 @@ BOOL SetBackgroundImage(
  A ID de recurso da imagem de plano de fundo.  
   
  [in] *local*  
- Uma da `CDialogEx::BackgroundLocation` valores que especificam o local da imagem. Os valores válidos incluem BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT e BACKGR_BOTTOMRIGHT. O valor padrão é BACKGR_TILE.  
+ Um do `CDialogEx::BackgroundLocation` valores que especificam o local da imagem. Os valores válidos incluem BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT e BACKGR_BOTTOMRIGHT. O valor padrão é BACKGR_TILE.  
   
  [in] *bAutoDestroy*  
- `TRUE` para destruir automaticamente a imagem de plano de fundo; Caso contrário, `FALSE`.  
+ TRUE para destruir automaticamente a imagem de plano de fundo; Caso contrário, FALSE.  
   
  [in] *bRepaint*  
- `TRUE` redesenhar imediatamente a caixa de diálogo; Caso contrário, `FALSE`.  
+ TRUE para redesenhar imediatamente a caixa de diálogo; Caso contrário, FALSE.  
   
 ### <a name="return-value"></a>Valor de retorno  
- No segundo método de sobrecarga sintaxe, `TRUE` se o método for bem-sucedida; caso contrário, `FALSE`.  
+ No segundo método de sobrecarga sintaxe, TRUE se o método for bem-sucedida; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- A imagem que você especifica não é estendida para caber na área de cliente de caixa de diálogo.  
+ A imagem que você especificar não é alongada para caber na área de cliente de caixa de diálogo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)   
  [Classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)

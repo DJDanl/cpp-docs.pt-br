@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2081053f406d9985d722da7d4cd9f3dad56f061c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042076"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848730"
 ---
 # <a name="cmfcpropertypage-class"></a>Classe CMFCPropertyPage
 O `CMFCPropertyPage` classe oferece suporte a exibição de menus pop-up em uma página de propriedades.  
@@ -48,14 +48,14 @@ class CMFCPropertyPage : public CPropertyPage
 |Nome|Descrição|  
 |----------|-----------------|  
 |`CMFCPropertyPage::CreateObject`|Usado pelo framework para criar uma instância dinâmica desse tipo de classe.|  
-|`CMFCPropertyPage::GetThisClass`|Usado pelo framework para obter um ponteiro para o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto associado esse tipo de classe.|  
-|`CMFCPropertyPage::OnSetActive`|Essa função de membro é chamada pelo framework quando a página é escolhida pelo usuário e torna-se a página ativa. (Substitui [CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|  
-|`CMFCPropertyPage::PreTranslateMessage`|Converte as mensagens de janela antes de serem distribuídos para o [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows. Para obter mais informações e sintaxe de método, consulte [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Substitui `CPropertyPage::PreTranslateMessage`.)|  
+|`CMFCPropertyPage::GetThisClass`|Usado pelo framework para obter um ponteiro para o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está associado com esse tipo de classe.|  
+|`CMFCPropertyPage::OnSetActive`|Essa função membro é chamada pelo framework quando a página é escolhida pelo usuário e torna-se a página ativa. (Substitui [CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|  
+|`CMFCPropertyPage::PreTranslateMessage`|Converte as mensagens da janela antes de serem expedidas para o [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows. Para obter mais informações e a sintaxe de método, consulte [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Substitui `CPropertyPage::PreTranslateMessage`.)|  
   
 ## <a name="remarks"></a>Comentários  
- O `CMFCPropertyPage` classe representa as páginas individuais de uma folha de propriedades, também conhecido como uma caixa de diálogo de guia.  
+ O `CMFCPropertyPage` classe representa páginas individuais de uma folha de propriedades, também conhecido como uma caixa de diálogo de guia.  
   
- Use o `CMFCPropertyPage` classe junto com o [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) classe. Para usar os menus em uma página de propriedades, substitua todas as ocorrências de `CPropertyPage` classe com o `CMFCPropertyPage` classe.  
+ Use o `CMFCPropertyPage` classe junto com o [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) classe. Para usar menus em uma página de propriedades, substitua todas as ocorrências de `CPropertyPage` classe com o `CMFCPropertyPage` classe.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -89,13 +89,13 @@ CMFCPropertyPage(
   
 ### <a name="parameters"></a>Parâmetros  
  *nIDTemplate*  
- ID do recurso de modelo para esta página.  
+ ID de recurso do modelo para essa página.  
   
  *nIDCaption*  
- ID do recurso do rótulo para colocar na guia para esta página. Se for 0, o nome é obtido do modelo de caixa de diálogo para essa página. O valor padrão é 0.  
+ ID de recurso do rótulo para colocar na guia para esta página. Se for 0, o nome é obtido do modelo de caixa de diálogo para essa página. O valor padrão é 0.  
   
  *lpszTemplateName*  
- Aponta para o nome do modelo desta página. Não pode ser `NULL`.  
+ Aponta para o nome do modelo para essa página. Não pode ser NULL.  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -103,6 +103,6 @@ CMFCPropertyPage(
  Para obter mais informações sobre os parâmetros do construtor, consulte [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)

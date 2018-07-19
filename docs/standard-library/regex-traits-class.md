@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d6eb69787d20343e8ed289311dba02a55e85592
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451557"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960925"
 ---
 # <a name="regextraits-class"></a>Classe regex_traits
 
@@ -92,11 +92,11 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-`Elem` O tipo de elemento de caractere para descrever.
+*Elem* o tipo de elemento de caractere para descrever.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve várias características da expressão regular para o tipo `Elem`. A classe de modelo [Classe basic_regex](../standard-library/basic-regex-class.md) usa essas informações para manipular elementos do tipo `Elem`.
+A classe de modelo descreve várias características de expressão regular para o tipo *Elem*. A classe de modelo [classe basic_regex](../standard-library/basic-regex-class.md) usa essas informações para manipular elementos do tipo *Elem*.
 
 Cada objeto `regex_traits` contém um objeto do tipo `regex_traits::locale` que é usado por algumas de suas funções membro. A localidade padrão é uma cópia de `regex_traits::locale()`. A função membro `imbue` substitui o objeto de localidade e a função de membro `getloc` retorna uma cópia do objeto de localidade.
 
@@ -365,11 +365,11 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parâmetros
 
-`loc` O objeto de localidade para armazenar.
+*Loc* para armazenar o objeto de localidade.
 
 ### <a name="remarks"></a>Comentários
 
-As função membro copia `loc` para o objeto `locale` armazenado e retorna uma cópia do valor anterior do objeto `locale` armazenado.
+A função membro copia *loc* para armazenado `locale` do objeto e retorna uma cópia do valor anterior armazenado `locale` objeto.
 
 ### <a name="example"></a>Exemplo
 
@@ -452,13 +452,13 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`ch` O elemento para teste.
+*CH* elemento a ser testado.
 
-`cls` As classes para testar.
+*CLS* as classes de teste.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro retornará true somente se o caractere `ch` estiver na classe de caracteres designada por `cls`.
+A função membro retornará true somente se o caractere *ch* é na classe de caracteres designado pelo *cls*.
 
 ### <a name="example"></a>Exemplo
 
@@ -541,7 +541,7 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Parâmetros
 
-`str`
+*str*
 
 A sequência terminada em nulo.
 
@@ -714,9 +714,9 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`first` Início da sequência a ser procurada.
+*primeiro* início da sequência a ser pesquisado.
 
-`last` Término da sequência a ser procurada.
+*última* fim da sequência para pesquisar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -808,9 +808,9 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`first` Início da sequência a ser procurada.
+*primeiro* início da sequência a ser pesquisado.
 
-`last` Término da sequência a ser procurada.
+*última* fim da sequência para pesquisar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1149,9 +1149,9 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`first` Início da sequência de transformação.
+*primeiro* início da sequência a ser transformada.
 
-`last` Final da sequência de transformação.
+*última* fim da sequência a ser transformado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1239,9 +1239,9 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`first` Início da sequência de transformação.
+*primeiro* início da sequência a ser transformada.
 
-`last` Final da sequência de transformação.
+*última* fim da sequência a ser transformado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1328,7 +1328,7 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`ch` O elemento para converter.
+*CH* elemento a ser convertido.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1415,7 +1415,7 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`ch` O elemento para converter.
+*CH* elemento a ser convertido.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1502,13 +1502,13 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`ch` O elemento para converter.
+*CH* elemento a ser convertido.
 
-`radix` A base para usar aritmética.
+*fracionário* a base para usar aritmética.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna o valor representado pelo caractere `ch` na base de `radix` ou -1 se `ch` não for um dígito válido na base `radix`. A função será chamada apenas com um argumento `radix` de 8, 10 ou 16.
+A função membro retorna o valor representado pelo caractere *ch* na base de *fracionário*, ou -1 se *ch* não é um dígito válido na base de *fracionário*. A função será chamada apenas com um *fracionário* argumento de 8, 10 ou 16.
 
 ### <a name="example"></a>Exemplo
 

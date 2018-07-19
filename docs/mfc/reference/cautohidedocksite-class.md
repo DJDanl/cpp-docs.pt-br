@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0792601ae773cf9abc8bb44218eb7395ff68da77
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f36d6231cfce86314be082a77a39034b619741ad
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336937"
 ---
 # <a name="cautohidedocksite-class"></a>Classe CAutoHideDockSite
-O `CAutoHideDockSite` estende o [CDockSite classe](../../mfc/reference/cdocksite-class.md) implementar ocultar automaticamente encaixar painéis.  
+O `CAutoHideDockSite` estende o [classe CDockSite](../../mfc/reference/cdocksite-class.md) implementar painéis de encaixe de ocultação automática.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,25 +64,25 @@ class CAutoHideDockSite : public CDockSite
 |-|-|  
 |Nome|Descrição|  
 |`CAutoHideDockSite::AllowShowOnPaneMenu`|Indica se o `CAutoHideDockSite` é mostrado no menu do painel.|  
-|[CAutoHideDockSite::CanAcceptPane](#canacceptpane)|Determina se um objeto de painel base é derivado de [CMFCAutoHideBar classe](../../mfc/reference/cmfcautohidebar-class.md).|  
+|[CAutoHideDockSite::CanAcceptPane](#canacceptpane)|Determina se um objeto de painel base é derivado de [classe CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md).|  
 |[CAutoHideDockSite::DockPane](#dockpane)|Encaixa um painel a esta `CAuotHideDockSite` objeto.|  
-|[CAutoHideDockSite::GetAlignRect](#getalignrect)|Recupera o tamanho do site encaixe em coordenadas da tela.|  
-|[CAutoHideDockSite::RepositionPanes](#repositionpanes)|Redesenha o painel no `CAutoHideDockSite` com as margens global e o espaçamento do botão.|  
+|[CAutoHideDockSite::GetAlignRect](#getalignrect)|Recupera o tamanho do site de encaixe em coordenadas da tela.|  
+|[CAutoHideDockSite::RepositionPanes](#repositionpanes)|Redesenha o painel no `CAutoHideDockSite` com as margens globais e o espaçamento do botão.|  
 |[CAutoHideDockSite::SetOffsetLeft](#setoffsetleft)|Define a margem no lado esquerdo da barra de encaixe.|  
 |[CAutoHideDockSite::SetOffsetRight](#setoffsetright)|Define a margem no lado direito da barra de encaixe.|  
-|[CAutoHideDockSite::UnSetAutoHideMode](#unsetautohidemode)|Chamadas [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) para objetos de `CAutoHideDockSite`.|  
+|[CAutoHideDockSite::UnSetAutoHideMode](#unsetautohidemode)|Chamadas [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) para objetos no `CAutoHideDockSite`.|  
   
 ### <a name="data-members"></a>Membros de Dados  
   
 |||  
 |-|-|  
 |Nome|Descrição|  
-|[CAutoHideDockSite::m_nExtraSpace](#m_nextraspace)|Define o tamanho do espaço entre as barras de ferramentas e a borda da barra de encaixe. Este espaço é medido a partir da borda esquerda ou a borda superior, dependendo do alinhamento para o espaço de encaixe.|  
+|[CAutoHideDockSite::m_nExtraSpace](#m_nextraspace)|Define o tamanho do espaço entre as barras de ferramentas e a borda da barra de encaixe. Esse espaço é medido desde a borda esquerda ou à borda superior, dependendo do alinhamento para o espaço de encaixe.|  
   
 ## <a name="remarks"></a>Comentários  
- Quando você chama [CFrameWndEx::EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes), o framework cria automaticamente um `CAutoHideDockSite` objeto. Na maioria dos casos, você não deve ter que criar uma instância ou usar essa classe diretamente.  
+ Quando você chama [CFrameWndEx::EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes), o framework cria automaticamente um `CAutoHideDockSite` objeto. Na maioria dos casos, você não deve instanciar ou usar essa classe diretamente.  
   
- A barra de encaixe é a diferença entre o lado esquerdo do painel de encaixe e à esquerda do [CMFCAutoHideButton classe](../../mfc/reference/cmfcautohidebutton-class.md).  
+ A barra de encaixe é a lacuna entre o lado esquerdo do painel de encaixe e lado esquerdo do [classe CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -96,7 +96,7 @@ class CAutoHideDockSite : public CDockSite
  [CDockSite](../../mfc/reference/cdocksite-class.md)  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como recuperar um `CAutoHideDockSite` de objeto um `CMFCAutoHideBar` objeto e como definir as margens esquerdas e direita da barra de encaixe.  
+ O exemplo a seguir demonstra como recuperar um `CAutoHideDockSite` do objeto de um `CMFCAutoHideBar` objeto e como definir as margens esquerdas e direita da barra de encaixe.  
   
  [!code-cpp[NVC_MFC_RibbonApp#29](../../mfc/reference/codesnippet/cpp/cautohidedocksite-class_1.cpp)]  
   
@@ -104,7 +104,7 @@ class CAutoHideDockSite : public CDockSite
  **Cabeçalho:** afxautohidedocksite.h  
   
 ##  <a name="canacceptpane"></a>  CAutoHideDockSite::CanAcceptPane  
- Determina se um painel de base é um [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) do objeto ou derivado de `CMFCAutoHideBar`.  
+ Determina se um painel de base é uma [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) do objeto ou dele derivado `CMFCAutoHideBar`.  
   
 ```  
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;  
@@ -118,7 +118,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 |[in] *pBar*|O painel de base que a estrutura de teste.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se *pBar* é derivado de `CMFCAutoHideBar`; `FALSE` caso contrário.  
+ TRUE se *pBar* é derivado de `CMFCAutoHideBar`; FALSE caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Se um objeto de painel base é derivado de `CMFCAutoHideBar`, ele pode conter um `CAutoHideDockSite`.  
@@ -138,17 +138,17 @@ virtual void DockPane(
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *pWnd*|O painel que se encaixa a estrutura.|  
+|[in] *Apropriei*|O painel que encaixa o framework.|  
 |[in] *dockMethod*|Opções para o painel de encaixe.|  
 |[in] *lpRect*|Um retângulo que especifica os limites para o painel encaixado.|  
   
 ### <a name="remarks"></a>Comentários  
  A implementação padrão não usa o parâmetro *dockMethod*, que é fornecido para uso futuro.  
   
- Se *lpRect* é `NULL`, o framework coloca o painel no local padrão no site de encaixe. Se o site de encaixe é horizontal, o local padrão é à esquerda do local de encaixe. Caso contrário, o local padrão é na parte superior do site de encaixe.  
+ Se *lpRect* for NULL, o framework coloca o painel no local padrão no site de encaixe. Se o local de encaixe é horizontal, o local padrão é na extremidade esquerda do local de encaixe. Caso contrário, o local padrão é na parte superior do local de encaixe.  
   
 ##  <a name="getalignrect"></a>  CAutoHideDockSite::GetAlignRect  
- Recupera o tamanho do site encaixe em coordenadas da tela.  
+ Recupera o tamanho do site de encaixe em coordenadas da tela.  
   
 ```  
 void GetAlignRect(CRect& rect) const;  
@@ -159,20 +159,20 @@ void GetAlignRect(CRect& rect) const;
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *rect*|Uma referência a um retângulo. O método armazena o tamanho do site encaixe neste retângulo.|  
+|[in] *rect*|Uma referência a um retângulo. O método armazena o tamanho do site encaixar nesse retângulo.|  
   
 ### <a name="remarks"></a>Comentários  
- O retângulo é ajustado para as margens de deslocamento para que eles não são incluídos.  
+ O retângulo é ajustado para as margens de deslocamento para que eles não estão incluídos.  
   
 ##  <a name="m_nextraspace"></a>  CAutoHideDockSite::m_nExtraSpace  
- O tamanho do espaço entre as bordas do [CAutoHideDockSite classe](../../mfc/reference/cautohidedocksite-class.md) e [CMFCAutoHideBar classe](../../mfc/reference/cmfcautohidebar-class.md) objetos.  
+ O tamanho do espaço entre as bordas do [classe CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) e o [classe CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) objetos.  
   
 ```  
 static int m_nExtraSpace;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Quando um `CMFCAutoHideBar` está encaixada em um `CAutoHideDockSite`, ela não deve ocupa o encaixe todo site. Essa variável global controla o espaço extra entre a borda esquerda ou superior do `CMFCAutoHideBar` e correspondente `CAutoHideDockSite` borda. Se a borda superior ou esquerda é usada depende do alinhamento atual.  
+ Quando um `CMFCAutoHideBar` estiver encaixada em um `CAutoHideDockSite`, ele não deve ocupar o local de encaixe inteira. Essa variável global controla o espaço extra entre a borda esquerda ou superior do `CMFCAutoHideBar` e o correspondente `CAutoHideDockSite` edge. Se a borda superior ou esquerda é usada depende do alinhamento atual.  
   
 ##  <a name="setoffsetleft"></a>  CAutoHideDockSite::SetOffsetLeft  
  Define a margem no lado esquerdo da barra de encaixe.  
@@ -183,7 +183,7 @@ void SetOffsetLeft(int nOffset);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *nOffset*  
- O deslocamento de novo.  
+ O novo deslocamento.  
   
 ### <a name="remarks"></a>Comentários  
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) objetos são posicionados na estaticamente o `CAutoHideDockSite` objeto. Isso significa que o usuário não pode alterar manualmente o local do `CMFCAutoHideBar` objetos. O `SetOffsetLeft` método controla o espaçamento entre o lado esquerdo do mais à esquerda `CMFCAutoHideBar` e o lado esquerdo do `CAutoHideDockSite`.  
@@ -197,13 +197,13 @@ void SetOffsetRight(int nOffset);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *nOffset*  
- O deslocamento de novo.  
+ O novo deslocamento.  
   
 ### <a name="remarks"></a>Comentários  
- [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) objetos são posicionados na estaticamente o `CAutoHideDockSite` objeto. Isso significa que o usuário não pode alterar manualmente o local do `CMFCAutoHideBar` objetos. O `SetOffsetRight` método controla o espaçamento entre o lado direito do mais à direita `CMFCAutoHideBar` e à direita do `CAutoHideDockSite`.  
+ [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) objetos são posicionados na estaticamente o `CAutoHideDockSite` objeto. Isso significa que o usuário não pode alterar manualmente o local do `CMFCAutoHideBar` objetos. O `SetOffsetRight` método controla o espaçamento entre o lado direito da extrema direita `CMFCAutoHideBar` e à direita do `CAutoHideDockSite`.  
   
 ##  <a name="repositionpanes"></a>  CAutoHideDockSite::RepositionPanes  
- Redesenha os painéis no [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md).  
+ Redesenha os painéis na [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md).  
   
 ```  
 virtual void RepositionPanes(CRect& rectNewClientArea);
@@ -217,7 +217,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 |[in] *rectNewClientArea*|Um valor reservado.|  
   
 ### <a name="remarks"></a>Comentários  
- A implementação padrão não usa *rectNewClientArea*. Ele redesenha os painéis com as margens de barra de ferramentas global e espaçamento do botão.  
+ A implementação padrão não usa *rectNewClientArea*. Ele redesenha os painéis com as margens de barra de ferramentas global e o espaçamento do botão.  
   
 ##  <a name="unsetautohidemode"></a>  CAutoHideDockSite::UnSetAutoHideMode  
  Chamadas [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) para objetos no site de encaixe.  
@@ -231,12 +231,12 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *pAutoHideToolbar*|Um ponteiro para um [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) painel objeto localizado no `CAutoHideDockSite`.|  
+|[in] *pAutoHideToolbar*|Um ponteiro para um [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) painel de objeto localizado no `CAutoHideDockSite`.|  
   
 ### <a name="remarks"></a>Comentários  
- Esse método de pesquisa para a linha que contém *pAutoHideToolbar*. Ele chama `CMFCAutoHideBar.UnSetAutoHideMode` para todos o `CMFCAutoHideBar` objetos nessa linha. Se *pAutoHideToolbar* não foi encontrado ou é `NULL`, este método chama `CMFCAutoHideBar.UnSetAutoHideMode` para todos os o `CMFCAutoHideBar` objetos o `CAutoHideDockSite`.  
+ Esse método pesquisará a linha que contém *pAutoHideToolbar*. Ele chama `CMFCAutoHideBar.UnSetAutoHideMode` para todos os `CMFCAutoHideBar` objetos nessa linha. Se *pAutoHideToolbar* não for encontrado ou é NULL, esse método chama `CMFCAutoHideBar.UnSetAutoHideMode` para todos os o `CMFCAutoHideBar` objetos no `CAutoHideDockSite`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CDockSite](../../mfc/reference/cdocksite-class.md)

@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b8a79978528493e02ac5a272dafe8da6fdc1d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ae2e44ba51a878d293ad5b497a1638cc9d7dc76
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360437"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848477"
 ---
 # <a name="running-the-program-as-a-local-server"></a>Executar o programa como um servidor Local
-Se executar o programa como um serviço é inconveniente, você poderá alterar temporariamente o registro para que o programa é executado como um servidor de local normal. Simplesmente renomear o `LocalService` valor em sua AppID `_LocalService` e verifique se o `LocalServer32` chave em sua CLSID está definida corretamente. (Observe que usando DCOMCNFG para especificar que seu aplicativo deve ser executado em um computador diferente renomeia o `LocalServer32` chave para `_LocalServer32`.) Executar o programa como um servidor local leva alguns segundos mais na inicialização porque a chamada para **StartServiceCtrlDispatcher** na `CAtlServiceModuleT::Start` leva alguns segundos antes de falhar.  
+Se executar o programa como um serviço é inconveniente, você poderá alterar temporariamente o registro para que o programa é executado como um servidor de local normal. Simplesmente renomear o `LocalService` valor sob sua AppID `_LocalService` e certifique-se a `LocalServer32` chave em sua CLSID está definida corretamente. (Observe que usando DCOMCNFG para especificar que seu aplicativo deve ser executado em um computador diferente renomeia seu `LocalServer32` chave `_LocalServer32`.) Executar o programa como um servidor local leva mais alguns segundos na inicialização porque a chamada para `StartServiceCtrlDispatcher` em `CAtlServiceModuleT::Start` leva alguns segundos antes de falhar.  
   
 ## <a name="see-also"></a>Consulte também  
  [Dicas de depuração](../atl/debugging-tips.md)

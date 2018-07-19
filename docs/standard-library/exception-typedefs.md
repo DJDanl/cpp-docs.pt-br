@@ -8,12 +8,12 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: 68f95407fe22c7e8b70426e555f46eb0a4c80338
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1c32311109ee19056c0a73d922ab1a965e3fbbb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846253"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954119"
 ---
 # <a name="ltexceptiongt-typedefs"></a>Typedefs &lt;exception&gt;
 
@@ -37,7 +37,7 @@ Use um objeto `exception_ptr` para fazer referência à exceção atual ou a uma
 
 Quando você declara uma variável `exception_ptr`, ela não é associada a nenhuma exceção. Isto é, o campo de referência de exceção é NULL. Esse objeto `exception_ptr` é chamado de *null exception_ptr*.
 
-Use a função `current_exception` ou `make_exception_ptr` para atribuir uma exceção a um objeto `exception_ptr`. Quando você atribui uma exceção a uma variável `exception_ptr`, o campo de referência de exceção da variável aponta para uma cópia da exceção. Se não houver memória suficiente para copiar a exceção, o campo de referência de exceção apontará para uma cópia de uma exceção [std::bad_alloc](../standard-library/bad-alloc-class.md). Se a função `current_exception` ou `make_exception_ptr` não puder copiar a exceção por qualquer outro motivo, a função chamará a função CRT **terminate** para encerrar o processo atual.
+Use a função `current_exception` ou `make_exception_ptr` para atribuir uma exceção a um objeto `exception_ptr`. Quando você atribui uma exceção a uma variável `exception_ptr`, o campo de referência de exceção da variável aponta para uma cópia da exceção. Se não houver memória suficiente para copiar a exceção, o campo de referência de exceção apontará para uma cópia de uma exceção [std::bad_alloc](../standard-library/bad-alloc-class.md). Se o `current_exception` ou `make_exception_ptr` função não é possível copiar a exceção por qualquer outro motivo, a função chamará o `terminate` função CRT para encerrar o processo atual.
 
 Apesar do nome, um objeto `exception_ptr` não é, em si, um ponteiro. Ele não obedece à semântica do ponteiro e não pode ser usado com o acesso do membro do ponteiro (`->`) ou operadores (*) de indireção. O objeto `exception_ptr` não tem membros de dados públicos ou funções de membro.
 

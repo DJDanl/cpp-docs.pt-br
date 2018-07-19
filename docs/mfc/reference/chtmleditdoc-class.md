@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86d8cf9b3011865fac58515fb3429a363dd5946f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0d6d8f5f8fa3867e1a9e38dc6bf919d57ead72de
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335598"
 ---
 # <a name="chtmleditdoc-class"></a>Classe CHtmlEditDoc
-Com [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), fornece a funcionalidade da plataforma de edição de WebBrowser dentro do contexto da arquitetura do modo de exibição de documentos do MFC.  
+Com o [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), fornece a funcionalidade da plataforma de edição WebBrowser no contexto da arquitetura de exibição de documento do MFC.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,7 +69,7 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
  **Cabeçalho:** afxhtml.h  
   
 ##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc  
- Constrói um **CHtmlEditDoc** objeto.  
+ Constrói um objeto `CHtmlEditDoc`.  
   
 ```  
 CHtmlEditDoc();
@@ -83,7 +83,7 @@ virtual CHtmlEditView* GetView() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna um ponteiro para o documento **CHtmlEditView** objeto.  
+ Retorna um ponteiro para o documento `CHtmlEditView` objeto.  
   
 ##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified  
  Retorna se o controle WebBrowser de associados do modo de exibição contém um documento que foi modificado pelo usuário.  
@@ -104,7 +104,7 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
  A URL para abrir.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna **TRUE** em caso de sucesso, **FALSE** em caso de falha.  
+ Retorna verdadeiro em caso de êxito, FALSE em caso de falha.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de HTMLEdit](../../visual-cpp-samples.md)   

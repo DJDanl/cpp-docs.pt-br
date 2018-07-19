@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a67b1e405f1e3be472f9b9b3b5ebe00be3fb8a5d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 40907720965647e076c6b516f1c2de9f1d3f9edb
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041039"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850554"
 ---
 # <a name="colechangeicondialog-class"></a>Classe COleChangeIconDialog
-Usado para a caixa de diálogo OLE alterar ícone.  
+Usado para a caixa de diálogo Alterar ícone do OLE.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +56,7 @@ class COleChangeIconDialog : public COleDialog
 |----------|-----------------|  
 |[COleChangeIconDialog::DoChangeIcon](#dochangeicon)|Executa a alteração especificada na caixa de diálogo.|  
 |[COleChangeIconDialog::DoModal](#domodal)|Exibe a caixa de diálogo OLE 2 alterar ícone.|  
-|[COleChangeIconDialog::GetIconicMetafile](#geticonicmetafile)|Obtém um identificador para o metarquivo associado ao ícone formulário deste item.|  
+|[COleChangeIconDialog::GetIconicMetafile](#geticonicmetafile)|Obtém um identificador para o metarquivo associado ao formulário icônico deste item.|  
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
   
@@ -65,7 +65,7 @@ class COleChangeIconDialog : public COleDialog
 |[COleChangeIconDialog::m_ci](#m_ci)|Uma estrutura que controla o comportamento da caixa de diálogo.|  
   
 ## <a name="remarks"></a>Comentários  
- Criar um objeto da classe `COleChangeIconDialog` quando você deseja chamar essa caixa de diálogo. Após um `COleChangeIconDialog` objeto foi construído, você pode usar o [m_ci](#m_ci) estrutura para inicializar os valores ou os estados de controles da caixa de diálogo. O `m_ci` estrutura é do tipo **OLEUICHANGEICON**. Para obter mais informações sobre como usar essa classe de caixa de diálogo, consulte o [DoModal](#domodal) função de membro.  
+ Criar um objeto da classe `COleChangeIconDialog` quando você deseja chamar essa caixa de diálogo. Depois de um `COleChangeIconDialog` objeto foi construído, você pode usar o [m_ci](#m_ci) estrutura para inicializar os valores ou os estados dos controles na caixa de diálogo. O `m_ci` estrutura é do tipo OLEUICHANGEICON. Para obter mais informações sobre como usar essa classe de caixa de diálogo, consulte a [DoModal](#domodal) função de membro.  
   
  Para obter mais informações, consulte o [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) estrutura no SDK do Windows.  
   
@@ -104,20 +104,20 @@ explicit COleChangeIconDialog(
  Aponta para o item a ser convertido.  
   
  *dwFlags*  
- Sinalizador de criação, que contém qualquer número de valores a seguir combinadas que usam o bit a bit- ou o operador:  
+ Sinalizador de criação, que contém qualquer número de valores a seguir combinadas que usam o bit a bit- ou operador:  
   
-- **CIF_SELECTCURRENT** Especifica que o botão de opção atual será selecionado inicialmente quando a caixa de diálogo é chamada. Esse é o padrão.  
+- CIF_SELECTCURRENT Especifica que o botão de opção atual será inicialmente selecionado quando a caixa de diálogo é chamada. Esse é o padrão.  
   
-- **CIF_SELECTDEFAULT** Especifica que o botão de opção padrão será selecionado inicialmente quando a caixa de diálogo é chamada.  
+- CIF_SELECTDEFAULT Especifica que o botão de rádio padrão será inicialmente selecionado quando a caixa de diálogo é chamada.  
   
-- **CIF_SELECTFROMFILE** Especifica que o botão de opção de arquivo será selecionado inicialmente quando a caixa de diálogo é chamada.  
+- CIF_SELECTFROMFILE Especifica que o botão de opção de arquivo serão selecionadas inicialmente quando a caixa de diálogo é chamada.  
   
-- **CIF_SHOWHELP** Especifica que o botão de Ajuda será exibido quando a caixa de diálogo é chamada.  
+- CIF_SHOWHELP Especifica que o botão de Ajuda será exibido quando a caixa de diálogo é chamada.  
   
-- **CIF_USEICONEXE** Especifica que o ícone deve ser extraído do executável especificado no **szIconExe** campo de [m_ci](#m_ci) em vez de recuperada do tipo. Isso é útil para incorporar ou vincular a arquivos OLE não.  
+- CIF_USEICONEXE Especifica que o ícone deve ser extraído do executável especificado na `szIconExe` campo de [m_ci](#m_ci) em vez de recuperada do tipo. Isso é útil para incorporação ou vinculação de arquivos não são OLE.  
   
  *pParentWnd*  
- Aponta para o objeto de janela pai ou o proprietário (do tipo `CWnd`) ao qual pertence o objeto de caixa de diálogo. Se for **nulo**, a janela pai da caixa de diálogo será definida para a janela principal do aplicativo.  
+ Aponta para o objeto de janela pai ou proprietária (do tipo `CWnd`) ao qual pertence o objeto de caixa de diálogo. Se for NULL, a janela pai da caixa de diálogo será definida para a janela principal do aplicativo.  
   
 ### <a name="remarks"></a>Comentários  
  Para exibir a caixa de diálogo, chame o [DoModal](#domodal) função.  
@@ -125,7 +125,7 @@ explicit COleChangeIconDialog(
  Para obter mais informações, consulte o [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) estrutura no SDK do Windows.  
   
 ##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
- Chamar essa função para alterar o ícone que representa o item selecionado na caixa de diálogo após [DoModal](#domodal) retorna **IDOK**.  
+ Chame essa função para alterar o ícone que representa o item para aquele selecionado na caixa de diálogo após [DoModal](#domodal) retorna IDOK.  
   
 ```  
 BOOL DoChangeIcon(COleClientItem* pItem);
@@ -133,13 +133,13 @@ BOOL DoChangeIcon(COleClientItem* pItem);
   
 ### <a name="parameters"></a>Parâmetros  
  *pItem*  
- Aponta para o item cujo ícone está sendo alterado.  
+ Aponta para o item cujo ícone está mudando.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a alteração for bem-sucedida; Caso contrário, 0.  
   
 ##  <a name="domodal"></a>  COleChangeIconDialog::DoModal  
- Chame essa função para exibir a caixa de diálogo OLE alterar ícone.  
+ Chame essa função para exibir a caixa de diálogo Alterar ícone do OLE.  
   
 ```  
 virtual INT_PTR DoModal();
@@ -148,40 +148,40 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>Valor de retorno  
  Status de conclusão para a caixa de diálogo. Um dos seguintes valores:  
   
-- **IDOK** se a caixa de diálogo foi exibida com êxito.  
+- IDOK se a caixa de diálogo foi exibida com êxito.  
   
-- **IDCANCEL** se o usuário cancelou a caixa de diálogo.  
+- IDCANCEL se o usuário cancelou a caixa de diálogo.  
   
-- **IDABORT** se ocorreu um erro. Se **IDABORT** é retornado, chame o `COleDialog::GetLastError` a função de membro para obter mais informações sobre o tipo de erro que ocorreu. Para obter uma lista de possíveis erros, consulte o [OleUIChangeIcon](http://msdn.microsoft.com/library/windows/desktop/ms688307) função no SDK do Windows.  
+- IDABORT se ocorreu um erro. Se IDABORT for retornado, chame o `COleDialog::GetLastError` a função de membro para obter mais informações sobre o tipo de erro que ocorreu. Para obter uma lista de possíveis erros, consulte o [OleUIChangeIcon](http://msdn.microsoft.com/library/windows/desktop/ms688307) função no SDK do Windows.  
   
 ### <a name="remarks"></a>Comentários  
  Se você quiser inicializar os vários controles de caixa de diálogo definindo membros do [m_ci](#m_ci) estrutura, você deve fazer isso antes de chamar `DoModal`, mas depois que o objeto de caixa de diálogo é construído.  
   
- Se `DoModal` retorna **IDOK**, você pode chamar outro membro funções para recuperar as configurações ou informações que foi inseridas pelo usuário na caixa de diálogo.  
+ Se `DoModal` retorna IDOK, você pode chamar outro membro funções para recuperar as configurações ou informações que era inseridas pelo usuário na caixa de diálogo.  
   
 ##  <a name="geticonicmetafile"></a>  COleChangeIconDialog::GetIconicMetafile  
- Chame essa função para obter um identificador para o meta-arquivo que contém o aspecto de ícone do item selecionado.  
+ Chame essa função para obter um identificador para o metarquivo que contém o aspecto icônico do item selecionado.  
   
 ```  
 HGLOBAL GetIconicMetafile() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- O identificador para o meta-arquivo que contém o ícone aspecto do ícone de novo, se a caixa de diálogo foi ignorada, escolhendo **Okey**; caso contrário, o ícone que estava antes da caixa de diálogo foi exibida.  
+ O identificador para o metarquivo que contém o aspecto icônico do novo ícone, se a caixa de diálogo foi ignorada, escolhendo **Okey**; caso contrário, o ícone de como ele estava antes da caixa de diálogo foi exibida.  
   
 ##  <a name="m_ci"></a>  COleChangeIconDialog::m_ci  
- Estrutura do tipo **OLEUICHANGEICON** usado para controlar o comportamento da caixa de diálogo Alterar ícone.  
+ Estrutura do tipo OLEUICHANGEICON usado para controlar o comportamento da caixa de diálogo Alterar ícone.  
   
 ```  
 OLEUICHANGEICON m_ci;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Membros dessa estrutura podem ser modificados diretamente ou através de funções de membro.  
+ Os membros dessa estrutura podem ser modificados diretamente ou através de funções de membro.  
   
  Para obter mais informações, consulte o [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) estrutura no SDK do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe COleDialog](../../mfc/reference/coledialog-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe COleDialog](../../mfc/reference/coledialog-class.md)

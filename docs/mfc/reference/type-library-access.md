@@ -16,27 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb81a8aa7d9262992da29a2d93cf770fad754316
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: afba5d2c2d0cd0b84e12cbd13cedba473b535587
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373205"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885891"
 ---
 # <a name="type-library-access"></a>Acesso à biblioteca de tipos
-Bibliotecas de tipo expõem as interfaces de um controle OLE para outros aplicativos com reconhecimento de OLE. Cada controle OLE deve ter uma biblioteca de tipo, se uma ou mais interfaces devem ser expostos.  
+Bibliotecas de tipos expõem as interfaces de um controle OLE para outros aplicativos com reconhecimento de OLE. Cada controle OLE deve ter uma biblioteca de tipos, se uma ou mais interfaces devem ser expostos.  
   
- As seguintes macros permitem um controle OLE fornecer acesso a sua própria biblioteca de tipos:  
+ As macros a seguir permitem que um controle OLE fornecer acesso a sua própria biblioteca de tipos:  
   
 ### <a name="type-library-access"></a>Acesso à biblioteca de tipos  
   
 |||  
 |-|-|  
-|[DECLARE_OLETYPELIB](#declare_oletypelib)|Declara um `GetTypeLib` função membro de um controle OLE (deve ser usado na declaração da classe).|  
-|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implementa um `GetTypeLib` função membro de um controle OLE (deve ser usado na implementação de classe).|  
+|[DECLARE_OLETYPELIB](#declare_oletypelib)|Declara um `GetTypeLib` função de membro de um controle OLE (deve ser usado na declaração de classe).|  
+|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implementa um `GetTypeLib` função de membro de um controle OLE (deve ser usada na implementação da classe).|  
   
 ##  <a name="declare_oletypelib"></a>  DECLARE_OLETYPELIB  
- Declara o `GetTypeLib` a função de membro da classe do controle.  
+ Declara o `GetTypeLib` função de membro de sua classe de controle.  
   
 ```   
 DECLARE_OLETYPELIB(class_name)   
@@ -66,14 +66,14 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
  *tlid*  
  O número de identificação da biblioteca de tipos.  
   
- `wVerMajor`  
+ *wVerMajor*  
  O número de versão principal da biblioteca de tipo.  
   
- `wVerMinor`  
+ *wVerMinor*  
  O número de versão secundária da biblioteca de tipo.  
   
 ### <a name="remarks"></a>Comentários  
- Esta macro deve aparecer no arquivo de implementação para qualquer classe de controle que usa o `DECLARE_OLETYPELIB` macro.  
+ Essa macro deve aparecer no arquivo de implementação para qualquer classe de controle que usa a macro DECLARE_OLETYPELIB.  
 
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdisp.h  

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 127e1d4d39a79350dc050e1b9fb7636bce63c156
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c5c47f91a3e029175d40bd1a762fb6e6ff527ee7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850620"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955808"
 ---
 # <a name="gslice-class"></a>Classe gslice
 
@@ -39,9 +39,9 @@ A classe armazena os parâmetros que caracterizam a um objeto do tipo [gslice_ar
 
 - Um índice inicial.
 
-- Um vetor de tamanho da classe **valarray<size_t>**.
+- Um vetor de tamanho da classe `valarray<size_t>`.
 
-- Um vetor de distância da classe **valarray<size_t>**.
+- Um vetor de distância da classe `valarray<size_t>`.
 
 Os dois vetores devem ter o mesmo tamanho.
 
@@ -84,19 +84,19 @@ gslice(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_StartIndex` O índice de valarray do primeiro elemento no subconjunto.
+*_StartIndex* o índice de valarray do primeiro elemento no subconjunto.
 
-`_LenArray` Uma matriz que especifica o número de elementos em cada fatia do gráfico.
+*_LenArray* uma matriz que especifica o número de elementos em cada fatia.
 
-`_IncArray` Uma matriz que especifica a distância em cada fatia do gráfico.
+*_IncArray* uma matriz que especifica a distância em cada fatia.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O construtor padrão armazena zero para o índice inicial e vetores de comprimento zero para os vetores de comprimento e distância. O segundo construtor armazena `_StartIndex` para o índice inicial, `_LenArray` para a matriz de tamanho e `_IncArray` para a matriz de distância.
+O construtor padrão armazena zero para o índice inicial e vetores de comprimento zero para os vetores de comprimento e distância. O segundo construtor armazena *_StartIndex* para o índice inicial, *_LenArray* para a matriz de comprimento, e *_IncArray* para a matriz de distância.
 
 ### <a name="remarks"></a>Comentários
 
-**gslice** define um subconjunto de um valarray que consiste em várias fatias do valarray, cada uma iniciada com o mesmo elemento especificado. A capacidade de usar matrizes para definir várias fatias é a única diferença entre `gslice` e [slice::slice](../standard-library/slice-class.md#slice). A primeira fatia tem um primeiro elemento com um índice de `_StartIndex`, um número de elementos especificado pelo primeiro elemento de `_LenArray` e uma distância fornecida pelo primeiro elemento de `_IncArray`. O conjunto seguinte de fatias ortogonais tem os primeiros elementos fornecidos pela primeira fatia. O segundo elemento de `_LenArray` especifica o número de elementos. A distância é fornecida pelo segundo elemento de `_IncArray`. Uma terceira dimensão de fatias usaria os elementos da matriz bidimensional como elementos iniciais e continuaria da mesma forma
+**gslice** define um subconjunto de um valarray que consiste em várias fatias do valarray, cada uma iniciada com o mesmo elemento especificado. A capacidade de usar matrizes para definir várias fatias é a única diferença entre `gslice` e [slice::slice](../standard-library/slice-class.md#slice). A primeira fatia tem um primeiro elemento com um índice de *_StartIndex*, um número de elementos especificado pelo primeiro elemento da *_LenArray*e uma distância fornecida pelo primeiro elemento da *_IncArray* . O conjunto seguinte de fatias ortogonais tem os primeiros elementos fornecidos pela primeira fatia. O segundo elemento da *_LenArray* Especifica o número de elementos. A distância é fornecida pelo segundo elemento da *_IncArray*. Uma terceira dimensão de fatias usaria os elementos da matriz bidimensional como elementos iniciais e continuaria da mesma forma
 
 ### <a name="example"></a>Exemplo
 

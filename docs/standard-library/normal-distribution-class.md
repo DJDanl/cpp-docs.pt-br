@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9c6e71b0872b19ea063d9cc0ff2615ef4362ac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4c92b24dbd5ccfbd308cb1b52dee7347f1df1e4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855754"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959849"
 ---
 # <a name="normaldistribution-class"></a>Classe normal_distribution
 
@@ -81,18 +81,18 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType* o tipo de resultado de ponto flutuante, o padrão será a `double`. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType* padrão é o tipo de resultado de ponto flutuante **duplo**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou um tipo `double` caso nenhum seja fornecido, distribuído de acordo com a distribuição Normal. A tabela a seguir contém links para artigos sobre cada um dos membros.
+A classe de modelo descreve uma distribuição que produz valores de um integral especificado pelo usuário tipo ou tipo **duplas** caso nenhum seja fornecido, distribuído de acordo com a distribuição Normal. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-As funções de propriedade `mean()` e `stddev()` retornam os valores para os parâmetros de distribuição armazenados `mean` e `stddev`, respectivamente.
+As funções de propriedade `mean()` e `stddev()` retornar os valores para os parâmetros de distribuição armazenados *significam* e *stddev* , respectivamente.
 
 O membro da propriedade `param()` define ou retorna o pacote de parâmetros de distribuição armazenado `param_type`.
 
@@ -208,11 +208,11 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*significa* o `mean` parâmetro da distribuição.
+*significam* o `mean` parâmetro de distribuição.
 
-*StdDev* o `stddev` parâmetro da distribuição.
+*StdDev* o `stddev` parâmetro de distribuição.
 
-*parâmetro* a estrutura de parâmetro usada para construir a distribuição.
+*parm* a estrutura de parâmetro usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
@@ -239,11 +239,11 @@ struct param_type {
 ```
 ### <a name="parameters"></a>Parâmetros
 
-*significa* o `mean` parâmetro da distribuição.
+*significam* o `mean` parâmetro de distribuição.
 
-*StdDev* o `stddev` parâmetro da distribuição.
+*StdDev* o `stddev` parâmetro de distribuição.
 
-*direito* o `param_type` estrutura usada para comparar.
+*à direita* o `param_type` estrutura usada para comparar.
 
 ### <a name="remarks"></a>Comentários
 

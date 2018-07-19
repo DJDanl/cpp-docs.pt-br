@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78f2c1843602c1c1db6b05a16bbea0aceec70df2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a32963ebb6bfbfcb1063e8eda678693bec872e79
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337278"
 ---
 # <a name="cdraglistbox-class"></a>Classe CDragListBox
-Além de fornecer a funcionalidade de uma caixa de lista do Windows, o `CDragListBox` classe permite que o usuário mover itens da caixa de lista, como nomes de arquivo, na caixa de listagem.  
+Além de fornecer a funcionalidade de uma caixa de listagem do Windows, o `CDragListBox` classe permite que o usuário mova itens de caixa de lista, como nomes de arquivo, dentro da caixa de lista.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,7 +58,7 @@ class CDragListBox : public CListBox
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CDragListBox::BeginDrag](#begindrag)|Chamado pelo framework quando uma operação de arrastar inicia.|  
+|[CDragListBox::BeginDrag](#begindrag)|Chamado pelo framework quando uma operação de arrastar for iniciado.|  
 |[CDragListBox::CancelDrag](#canceldrag)|Chamado pelo framework quando uma operação de arrastar foi cancelada.|  
 |[CDragListBox::Dragging](#dragging)|Chamado pelo framework durante uma operação de arrastar.|  
 |[CDragListBox::DrawInsert](#drawinsert)|Desenha o guia de inserção da caixa de listagem de arrastar.|  
@@ -66,13 +66,13 @@ class CDragListBox : public CListBox
 |[CDragListBox::ItemFromPt](#itemfrompt)|Retorna as coordenadas do item que está sendo arrastado.|  
   
 ## <a name="remarks"></a>Comentários  
- Caixas de listagem com esse recurso permitem aos usuários classificar os itens em uma lista de forma que é mais útil para eles. Por padrão, a caixa de listagem moverá o item para o novo local na lista. No entanto, `CDragListBox` objetos podem ser personalizados para copiar itens em vez de movê-los.  
+ Caixas de listagem com esse recurso permitem aos usuários solicitar os itens em uma lista de maneira que for mais útil para eles. Por padrão, a caixa de listagem será mover o item para o novo local na lista. No entanto, `CDragListBox` objetos podem ser personalizados para copiar itens em vez de movê-los.  
   
- O controle de lista associado a `CDragListBox` classe não deve ter o **LBS_SORT** ou **LBS_MULTIPLESELECT** estilo. Para obter uma descrição dos estilos de caixa de lista, consulte [estilos de caixa de listagem](../../mfc/reference/styles-used-by-mfc.md#list-box-styles).  
+ O controle de caixa de listagem associado com o `CDragListBox` classe não deve ter o LBS_SORT ou o estilo LBS_MULTIPLESELECT. Para obter uma descrição dos estilos de caixa de lista, consulte [estilos de caixa de listagem](../../mfc/reference/styles-used-by-mfc.md#list-box-styles).  
   
- Para usar uma caixa de listagem de arrastar em uma caixa de diálogo existente do seu aplicativo, adicione um controle de caixa de listagem para o modelo de caixa de diálogo usando o editor de caixa de diálogo e, em seguida, atribuir uma variável de membro (categoria `Control` e o tipo de variável `CDragListBox`) correspondente à caixa de listagem o modelo de caixa de diálogo de controle.  
+ Para usar uma caixa de listagem de arrastar em uma caixa de diálogo existente do seu aplicativo, adicione um controle de caixa de listagem ao seu modelo de caixa de diálogo usando o editor de caixa de diálogo e, em seguida, atribuir uma variável de membro (da categoria `Control` e o tipo de variável `CDragListBox`) correspondente à caixa de listagem controle em seu modelo de caixa de diálogo.  
   
- Para obter mais informações sobre como atribuir controles a variáveis de membro, consulte [atalho para definir variáveis de membro para controles de caixa de diálogo](../../windows/defining-member-variables-for-dialog-controls.md).  
+ Para obter mais informações sobre como atribuir controles para variáveis de membro, consulte [atalho para definir variáveis de membro para controles de caixa de diálogo](../../windows/defining-member-variables-for-dialog-controls.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -86,10 +86,10 @@ class CDragListBox : public CListBox
  `CDragListBox`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxcmn.h  
+ **Cabeçalho:** afxcmn. h  
   
 ##  <a name="begindrag"></a>  CDragListBox::BeginDrag  
- Chamado pelo framework quando ocorre um evento que pode começar uma operação de arrastar, como pressionar o botão esquerdo do mouse.  
+ Chamado pela estrutura de quando ocorre um evento que poderia começar uma operação de arrastar, como pressionar o botão esquerdo do mouse.  
   
 ```  
 virtual BOOL BeginDrag(CPoint pt);
@@ -100,10 +100,10 @@ virtual BOOL BeginDrag(CPoint pt);
  Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contém as coordenadas do item que está sendo arrastado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se arrastando for permitida, caso contrário, 0.  
+ Diferente de zero se arrastar for permitido, caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Substitua essa função se você deseja controlar o que acontece quando uma operação de arrastar inicia. A implementação padrão de captura o mouse e permanece em modo de arraste até que o usuário clica no botão esquerdo ou direito do mouse ou pressiona ESC, momento em que a operação de arrastar seja cancelada.  
+ Substitua essa função se você quiser controlar o que acontece quando começa uma operação de arrastar. A implementação padrão captura o mouse e permanece no modo arrastar até que o usuário clica no botão esquerdo ou direito do mouse ou pressiona ESC, momento em que a operação de arrastar seja cancelada.  
   
 ##  <a name="canceldrag"></a>  CDragListBox::CancelDrag  
  Chamado pelo framework quando uma operação de arrastar foi cancelada.  
@@ -117,7 +117,7 @@ virtual void CancelDrag(CPoint pt);
  Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contém as coordenadas do item que está sendo arrastado.  
   
 ### <a name="remarks"></a>Comentários  
- Substitua essa função para manipular qualquer processamento especial para o controle de caixa de listagem.  
+ Substitua essa função para lidar com qualquer processamento especial para o controle de caixa de listagem.  
   
 ##  <a name="cdraglistbox"></a>  CDragListBox::CDragListBox  
  Constrói um objeto `CDragListBox`.  
@@ -127,7 +127,7 @@ CDragListBox();
 ```  
   
 ##  <a name="dragging"></a>  CDragListBox::Dragging  
- Chamado pelo framework quando um item de caixa de listagem é arrastado dentro de `CDragListBox` objeto.  
+ Chamado pelo framework quando um item de caixa de listagem está sendo arrastado dentro a `CDragListBox` objeto.  
   
 ```  
 virtual UINT Dragging(CPoint pt);
@@ -135,19 +135,19 @@ virtual UINT Dragging(CPoint pt);
   
 ### <a name="parameters"></a>Parâmetros  
  *pt*  
- Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contém x e y tela coordenadas do cursor.  
+ Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contém x e y coordenadas do cursor de tela.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A ID de recurso do cursor a ser exibido. Os seguintes valores são possíveis:  
   
-- `DL_COPYCURSOR` Indica que o item será copiado.  
+- DL_COPYCURSOR indica que o item será copiado.  
   
-- `DL_MOVECURSOR` Indica que o item será movido.  
+- DL_MOVECURSOR indica que o item será movido.  
   
-- `DL_STOPCURSOR` Indica que o destino atual não é aceitável.  
+- DL_STOPCURSOR indica que o destino de soltar atual não é aceitável.  
   
 ### <a name="remarks"></a>Comentários  
- Retorna o comportamento padrão `DL_MOVECURSOR`. Substitua essa função se desejar fornecer funcionalidade adicional.  
+ O comportamento padrão retorna DL_MOVECURSOR. Substitua essa função para fornecer funcionalidade adicional.  
   
 ##  <a name="drawinsert"></a>  CDragListBox::DrawInsert  
  Chamado pelo framework para desenhar o guia de inserção antes do item com índice indicado.  
@@ -158,13 +158,13 @@ virtual void DrawInsert(int nItem);
   
 ### <a name="parameters"></a>Parâmetros  
  *nItem*  
- Índice de base zero do ponto de inserção.  
+ Índice baseado em zero do ponto de inserção.  
   
 ### <a name="remarks"></a>Comentários  
  Um valor de - 1 limpa o guia de inserção. Substitua essa função para modificar a aparência ou o comportamento do guia de inserção.  
   
 ##  <a name="dropped"></a>  CDragListBox::Dropped  
- Chamado pelo framework quando um item é removido em uma `CDragListBox` objeto.  
+ Chamado pelo framework quando um item é removido dentro de um `CDragListBox` objeto.  
   
 ```  
 virtual void Dropped(
@@ -174,16 +174,16 @@ virtual void Dropped(
   
 ### <a name="parameters"></a>Parâmetros  
  *nSrcIndex*  
- Especifica o índice de base zero da cadeia de caracteres descartada.  
+ Especifica o índice baseado em zero da cadeia de caracteres descartada.  
   
  *pt*  
- Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contém as coordenadas do site drop.  
+ Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contém as coordenadas do site de destino.  
   
 ### <a name="remarks"></a>Comentários  
- O comportamento padrão copia o item de caixa de listagem e seus dados para o novo local e, em seguida, exclui o item original. Substitua essa função para personalizar o comportamento padrão, como a habilitação de cópias dos itens de caixa de lista para ser arrastado para outros locais dentro da lista.  
+ O comportamento padrão copia o item de caixa de listagem e seus dados para o novo local e, em seguida, exclui o item original. Substitua essa função para personalizar o comportamento padrão, como a habilitação de cópias dos itens de caixa de lista a ser arrastado para outros locais dentro da lista.  
   
 ##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
- Chamada para essa função para recuperar o índice com base em zero do item de caixa de listagem localizada em *pt*.  
+ Chamada para essa função para recuperar o índice baseado em zero do item de caixa de lista localizada em *pt*.  
   
 ```  
 int ItemFromPt(
@@ -193,16 +193,16 @@ int ItemFromPt(
   
 ### <a name="parameters"></a>Parâmetros  
  *pt*  
- Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contém as coordenadas de um ponto dentro da caixa de lista.  
+ Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contém as coordenadas de um ponto dentro da caixa de listagem.  
   
  *bAutoScroll*  
  Diferente de zero se a rolagem é permitida, caso contrário, 0.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Índice de base zero do item da caixa de lista de arrastar.  
+ Índice baseado em zero do item de caixa de lista arrastar.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo MFC TSTCON](../../visual-cpp-samples.md)   
  [Classe CListBox](../../mfc/reference/clistbox-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe CListBox](../../mfc/reference/clistbox-class.md)

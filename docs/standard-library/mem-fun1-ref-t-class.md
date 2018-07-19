@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d354e469b6b6a19d51ecedbc7f2106c21e82dab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 327fc58cdfdc21711b992891e6fabe7872c48d26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852358"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960824"
 ---
 # <a name="memfun1reft-class"></a>Classe mem_fun1_ref_t
 
-Uma classe de adaptador que permite que uma função membro **non_const** que usa um único argumento seja chamada como um objeto de função binária quando inicializada com um argumento de referência.
+Uma classe de adaptador que permite uma `non_const` função de membro que usa um único argumento seja chamada como um objeto de função binária quando inicializado com um argumento de referência.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -44,11 +44,11 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Pm` Um ponteiro para a função de membro da classe **tipo** a ser convertido em um objeto de função.
+*_Pm* um ponteiro para a função de membro da classe `Type` a ser convertido em um objeto de função.
 
-`left` O objeto que o `_Pm` membro de função é chamado em.
+*à esquerda* o objeto que o *_Pm* função de membro é chamada em.
 
-`right` O argumento que está sendo fornecido ao `_Pm`.
+*à direita* argumento que está sendo fornecido para *_Pm*.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -56,7 +56,7 @@ Uma função binária adaptável.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo armazena uma cópia de `_Pm`, que deve ser um ponteiro para uma função membro da classe **Type**, em um objeto de membro privado. Define a função de membro `operator()` como retornando ( **esquerdo**.\* `_Pm`) ( **direita**).
+A classe de modelo armazena uma cópia dos *_Pm*, que deve ser um ponteiro para uma função de membro de classe `Type`, em um objeto de membro privado. Ela define sua função de membro `operator()` como de retorno ( **esquerdo**.\* `_Pm`) ( **direito**).
 
 ## <a name="example"></a>Exemplo
 

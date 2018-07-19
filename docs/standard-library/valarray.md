@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 578dd43f747eddbf37f76c41a2fa35df8edca658
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98ee264d019e89ef3fbdf299a58c972ad895caed
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862151"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954793"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -66,8 +66,8 @@ Essas classes de modelo e funções são latitudes incomuns permitidas por razõ
 |-|-|
 |[operator!=](../standard-library/valarray-operators.md#op_neq)|Testa se os elementos correspondentes de duas valarrays de tamanhos iguais são diferentes ou se todos os elementos de uma valarray são diferentes de um valor especificado do tipo de elemento da valarray.|
 |[operator%](../standard-library/valarray-operators.md#op_mod)|Obtém o resto da divisão dos elementos correspondentes de duas valarrays de tamanhos iguais, da divisão de uma valarray por um valor especificado do tipo de elemento da valarray ou da divisão de um valor especificado por uma valarray.|
-|[operator&](../standard-library/valarray-operators.md#op_amp)|Obtém o **AND** bit a bit entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento.|
-|[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|Obtém o **AND** lógico entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento da valarray.|
+|[operator&](../standard-library/valarray-operators.md#op_amp)|Obtém o `AND` bit a bit entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento.|
+|[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|Obtém o `AND` lógico entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento da valarray.|
 |[operator>](../standard-library/valarray-operators.md#op_gt)|Testa se os elementos de uma valarray são maiores que os elementos de uma valarray de tamanho igual ou se todos os elementos de uma valarray são maiores ou menores que um valor especificado do tipo de elemento da valarray.|
 |[operator>=](../standard-library/valarray-operators.md#op_gt_eq)|Testa se os elementos de uma valarray são maiores ou iguais aos elementos de uma valarray de tamanho igual ou se todos os elementos de uma valarray são maiores, menores ou iguais a um valor especificado.|
 |[operator>>](../standard-library/valarray-operators.md#op_gt_gt)|Desloca para a direita os bits de cada elemento de uma valarray por um número especificado de posições ou por um valor elemento a elemento especificado por uma segunda valarray.|
@@ -93,13 +93,13 @@ Essas classes de modelo e funções são latitudes incomuns permitidas por razõ
 |[Classe mask_array](../standard-library/mask-array-class.md)|Uma classe de modelo interno e auxiliar, que dá suporte para objetos que são subconjuntos dos valarrays pai, especificados com uma expressão booliana, ao fornecer operações entre as matrizes de subconjunto.|
 |[Classe slice](../standard-library/slice-class.md)|Uma classe de utilitário para valarray usada para definir subconjuntos unidimensionais, parecidos com um vetor de uma valarray.|
 |[Classe slice_array](../standard-library/slice-array-class.md)|Uma classe de modelo auxiliar interna, que dá suporte a objetos de fatia fornecendo operações entre matrizes de subconjunto definidas pela fatia de um valarray.|
-|[Classe valarray](../standard-library/valarray-class.md)|A classe de modelo descreve um objeto que controla uma sequência de elementos do tipo **Type** armazenados como uma matriz, projetada para executar operações matemáticas em alta velocidade e otimizada para o desempenho computacional.|
+|[Classe valarray](../standard-library/valarray-class.md)|A classe de modelo descreve um objeto que controla uma sequência de elementos do tipo `Type` que são armazenados como uma matriz e projetado para executar operações matemáticas em alta velocidade, otimizadas para desempenho computacional.|
 
 ### <a name="specializations"></a>Especializações
 
 |||
 |-|-|
-|[Classe valarray\<bool>](../standard-library/valarray-bool-class.md)|Uma versão especializada da classe de modelo valarray\<**Type**> para elementos do tipo `bool`.|
+|[Classe valarray\<bool>](../standard-library/valarray-bool-class.md)|Uma versão especializada da valarray de classe de modelo\<**tipo**> para elementos do tipo **bool**.|
 
 ## <a name="see-also"></a>Consulte também
 

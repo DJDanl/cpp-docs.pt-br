@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03cd10d3efac16521cf826f3d9081ec533b9abec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5817d44657fa429bdce19f8641255d7db630eac7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861773"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954858"
 ---
 # <a name="weakptr-class"></a>Classe weak_ptr
 
@@ -77,7 +77,8 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo controlado pelo ponteiro fraco.
+*Ty*  
+ O tipo controlado pelo ponteiro fraco.
 
 ## <a name="remarks"></a>Comentários
 
@@ -104,7 +105,7 @@ Um ciclo ocorre quando dois ou mais recursos controlados por objetos `shared_ptr
 |[element_type](#element_type)|O tipo do elemento.|
 |[expired](#expired)|Testa se a propriedade expirou.|
 |[lock](#lock)|Obtém a propriedade exclusiva de um recurso.|
-|[owner_before](#owner_before)|Retorna `true` se esse `weak_ptr` é ordenado antes (ou menor que) o ponteiro fornecido.|
+|[owner_before](#owner_before)|Retorna **verdadeira** se este `weak_ptr` é ordenado antes (ou menor que) ponteiro fornecido.|
 |[reset](#reset)|Libera o recurso possuído.|
 |[swap](#swap)|Troca dois objetos `weak_ptr`.|
 |[use_count](#use_count)|Conta o número de objetos `shared_ptr` designados.|
@@ -168,7 +169,7 @@ bool expired() const;
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retornará `true` se `*this` expirar, caso contrário, `false`.
+A função membro retorna **verdadeira** se `*this` tiver expirado, caso contrário **false**.
 
 ### <a name="example"></a>Exemplo
 
@@ -226,7 +227,7 @@ shared_ptr<Ty> lock() const;
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro retorna um objeto shared_ptr vazio se `*this` expirou; caso contrário, ele retorna um [classe shared_ptr](../standard-library/shared-ptr-class.md)\<Ty > objeto que possui o recurso que `*this` aponta para.
+A função membro retorna um objeto shared_ptr vazio se `*this` tiver expirado; caso contrário, retornará um [classe shared_ptr](../standard-library/shared-ptr-class.md)\<Ty > objeto que possui o recurso que `*this` aponta.
 
 ### <a name="example"></a>Exemplo
 
@@ -289,11 +290,14 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Other` O tipo controlado pelo ponteiro argumento compartilhados/fraca.
+*Outros*  
+ O tipo controlado pelo ponteiro compartilhado/fraco do argumento.
 
-`wp` O ponteiro fraco para copiar.
+*wp*  
+ O ponteiro fraco a ser copiado.
 
-`sp` O ponteiro compartilhado para copiar.
+*SP*  
+ O ponteiro compartilhado a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -333,7 +337,7 @@ int main()
 
 ## <a name="owner_before"></a> owner_before
 
-Retorna `true` se esse `weak_ptr` é ordenado antes (ou menor que) o ponteiro fornecido.
+Retorna **verdadeira** se este `weak_ptr` é ordenado antes (ou menor que) ponteiro fornecido.
 
 ```cpp
 template <class Other>
@@ -345,11 +349,12 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parâmetros
 
-`ptr` Um `lvalue` referência como um `shared_ptr` ou `weak_ptr`.
+*ptr*  
+ Uma referência de `lvalue` a um `shared_ptr` ou um `weak_ptr`.
 
 ### <a name="remarks"></a>Comentários
 
-Retorna a função de membro de modelo `true` se `*this` é `ordered before` `ptr`.
+A função de membro de modelo retorna **verdadeira** se `*this` é `ordered before` `ptr`.
 
 ## <a name="reset"></a> reset
 
@@ -404,11 +409,12 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>Parâmetros
 
-`wp` O ponteiro fraco para troca.
+*wp*  
+ O ponteiro fraco pelo qual deve ser trocado.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro deixa o recurso originalmente apontado por `*this` e subsequentemente apontado por `wp` e o recurso originalmente apontado por `wp` subsequentemente apontado por `*this`. A função não altera as contagens de referências dos dois recursos e ela não gera nenhuma exceção.
+A função membro deixa o recurso originalmente apontado por `*this` subsequentemente apontado por *wp*e o recurso originalmente apontado por *wp* subsequentemente apontado por `*this`. A função não altera as contagens de referências dos dois recursos e ela não gera nenhuma exceção.
 
 ### <a name="example"></a>Exemplo
 
@@ -523,11 +529,14 @@ weak_ptr(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Other` O tipo controlado pelo ponteiro argumento compartilhados/fraca.
+*Outros*  
+ O tipo controlado pelo ponteiro compartilhado/fraco do argumento.
 
-`wp` O ponteiro fraco para copiar.
+*wp*  
+ O ponteiro fraco a ser copiado.
 
-`sp` O ponteiro compartilhado para copiar.
+*SP*  
+ O ponteiro compartilhado a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 

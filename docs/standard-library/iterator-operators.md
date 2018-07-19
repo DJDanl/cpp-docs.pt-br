@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 411fcf8969ba13c4f50360c3db151f0801fd5a28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7dcd064216a9c1f1ba3f014b0f418b18b61193f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862043"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954689"
 ---
 # <a name="ltiteratorgt-operators"></a>Operadores &lt;iterator&gt;
 
@@ -53,9 +53,9 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um objeto do tipo **iterador**.
+*à esquerda* um objeto do tipo `iterator`.
 
-`right` Um objeto do tipo **iterador**.
+*à direita* um objeto do tipo `iterator`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -155,19 +155,19 @@ bool operator==(
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um objeto do iterador de tipo.
+*à esquerda* um objeto de iterador do tipo.
 
-`right` Um objeto do iterador de tipo.
+*à direita* um objeto de iterador do tipo.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se os objetos de iterador forem iguais, `false` se eles não forem iguais.
+**True** se os objetos de iterador forem iguais; **falsos** se os objetos de iterador não forem iguais.
 
 ### <a name="remarks"></a>Comentários
 
 Um objeto de iterador será igual a outro se eles lidarem com os mesmos elementos em um contêiner. Se dois iteradores apontarem para elementos diferentes em um contêiner, então eles não serão iguais.
 
-Os primeiros dois operadores de modelo retornam true somente se `left` e `right` armazenarem o mesmo iterador. Os terceiro operador de modelo retorna true somente se `left` e `right` armazenarem o mesmo ponteiro de fluxo. O quarto operador de modelo retorna ` left.equal ( right)`.
+Os primeiros dois operadores de modelo retornam true somente se os dois *esquerdo* e *direita* armazenarem o mesmo iterador. O terceiro operador de modelo retorna true somente se *esquerdo* e *direita* armazenar o mesmo ponteiro de fluxo. O quarto operador de modelo retorna ` left.equal ( right)`.
 
 ### <a name="example"></a>Exemplo
 
@@ -242,9 +242,9 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um objeto do tipo **iterador**.
+*à esquerda* um objeto do tipo `iterator`.
 
-`right` Um objeto do tipo **iterador**.
+*à direita* um objeto do tipo `iterator`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -331,9 +331,9 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um objeto do iterador de tipo.
+*à esquerda* um objeto de iterador do tipo.
 
-`right` Um objeto do iterador de tipo.
+*à direita* um objeto de iterador do tipo.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -424,9 +424,9 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um objeto do iterador de tipo.
+*à esquerda* um objeto de iterador do tipo.
 
-`right` Um objeto do iterador de tipo.
+*à direita* um objeto de iterador do tipo.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -511,9 +511,9 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um objeto do iterador de tipo.
+*à esquerda* um objeto de iterador do tipo.
 
-`right` Um objeto do iterador de tipo.
+*à direita* um objeto de iterador do tipo.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -613,13 +613,13 @@ operator+(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Off` O número de posições que o move_iterator const ou const reverse_iterator é deslocada.
+*Off* o número de posições na constante move_iterator ou constante reverse_iterator será deslocado.
 
-`right` O iterador para ser deslocados.
+*à direita* o iterador a ser deslocado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna a soma `right` + `_Off`.
+Retorna a soma *certa* + *off*.
 
 ### <a name="example"></a>Exemplo
 
@@ -688,9 +688,9 @@ Tdiff operator-(
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um iterador.
+*à esquerda* um iterador.
 
-`right` Um iterador.
+*à direita* um iterador.
 
 ### <a name="return-value"></a>Valor de retorno
 

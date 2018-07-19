@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3250bd3a80c46345b7b83c524f6aa084ea0b3c11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c2346ed8a7d9cc2359c0bdf984b52993a13b05a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848405"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956876"
 ---
 # <a name="chartraits-struct"></a>Struct char_traits
 
@@ -57,11 +57,11 @@ struct char_traits;
 
 ### <a name="parameters"></a>Parâmetros
 
-`CharType` O tipo de dados do elemento.
+*CharType* o tipo de dados do elemento.
 
 ## <a name="remarks"></a>Comentários
 
-A struct de modelo descreve várias características de caractere para o tipo **CharType**. A classe de modelo [basic_string](../standard-library/basic-string-class.md), bem como várias classes de modelo iostream, incluindo [basic_ios](../standard-library/basic-ios-class.md), usam essas informações para manipular elementos do tipo **CharType**. Esse tipo de elemento não deve exigir construção ou destruição explícita. Ele deve fornecer um construtor padrão, um construtor de cópia e um operador de atribuição com a semântica esperada. Uma cópia bit a bit deve ter o mesmo efeito que uma atribuição. Nenhuma das funções membro da struct char_traits pode gerar exceções.
+O struct de modelo descreve várias características de caractere para o tipo `CharType`. A classe de modelo [basic_string](../standard-library/basic-string-class.md) , bem como várias classes de modelo iostream, incluindo [basic_ios](../standard-library/basic-ios-class.md), use essas informações para manipular elementos do tipo `CharType`. Esse tipo de elemento não deve exigir construção ou destruição explícita. Ele deve fornecer um construtor padrão, um construtor de cópia e um operador de atribuição com a semântica esperada. Uma cópia bit a bit deve ter o mesmo efeito que uma atribuição. Nenhuma das funções membro da struct char_traits pode gerar exceções.
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -114,17 +114,17 @@ static char_type *assign(char_type* strTo,
 
 ### <a name="parameters"></a>Parâmetros
 
-**_** *CharFrom* o caractere cujo valor será atribuído.
+**_** *CharFrom* o caractere cujo valor deve ser atribuída.
 
 *_CharTo* o elemento que será atribuído o valor do caractere.
 
-* strTo * a matriz de cadeia de caracteres ou caracteres cujos elementos inicias devem ser atribuídos valores de caractere.
+* strTo * a matriz de cadeia de caracteres ou caractere cujos elementos iniciais devem ser atribuídos valores de caractere.
 
-`_Num` O número de elementos que vai ser atribuídos valores.
+*_Num* o número de elementos que serão atribuídos valores.
 
 ### <a name="return-value"></a>Valor de retorno
 
-A segunda função membro retorna um ponteiro para a cadeia de caracteres a cujos primeiros `_Num` elementos foram atribuídos valores de *_CharFrom*.
+A segunda função membro retorna um ponteiro para a cadeia de caracteres cujo primeiro *_Num* elementos foram atribuídos valores de *charfrom*.
 
 ### <a name="example"></a>Exemplo
 
@@ -177,7 +177,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo do parâmetro de modelo **CharType**.
+O tipo é um sinônimo do parâmetro de modelo `CharType`.
 
 ### <a name="example"></a>Exemplo
 
@@ -195,11 +195,11 @@ static int compare(const char_type* str1,
 
 ### <a name="parameters"></a>Parâmetros
 
-* str1 * a primeira de duas cadeias de caracteres a ser comparado ao outro.
+* str1 * a primeira das duas cadeias de caracteres a serem comparadas entre si.
 
-* str2 * a segunda de duas cadeias de caracteres a ser comparado ao outro.
+* str2 * a segunda das duas cadeias de caracteres a serem comparadas entre si.
 
-`_Num` O número de elementos em cadeias de caracteres a ser comparado.
+*_Num* o número de elementos nas cadeias de caracteres a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -258,11 +258,11 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>Parâmetros
 
-`_To` O elemento no início da matriz de cadeia de caracteres ou caractere direcionado para receber a copiado sequência de caracteres.
+*Dese_jo* o elemento no início da matriz de cadeia de caracteres ou caractere direcionado para receber a sequência de caracteres copiada.
 
-`_From` O elemento no início da matriz de cadeia de caracteres ou um caractere de origem a serem copiados.
+*_From* o elemento no início da matriz de cadeia de caracteres ou caractere de origem a ser copiado.
 
-`_Num` O número de elementos a serem copiados.
+*_Num* o número de elementos a serem copiados.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -317,13 +317,13 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-`dest` A matriz de cadeia de caracteres ou caractere direcionada para receber a copiado sequência de caracteres.
+*dest* a matriz de cadeia de caracteres ou caractere direcionado para receber a sequência de caracteres copiada.
 
-`dest_size` O tamanho de `dest`. Se `char_type` for `char`, esse tamanho estará em bytes. Se `char_type` for `wchar_t`, esse tamanho estará em palavras.
+*dest_size* o tamanho de *dest*. Se `char_type` está **char**, esse tamanho estará em bytes. Se `char_type` está **wchar_t**, esse tamanho estará em palavras.
 
-`_From` A cadeia de caracteres ou o caractere de matriz de origem a serem copiados.
+*_From* a matriz de cadeia de caracteres ou caractere de origem a ser copiado.
 
-`count` O número de elementos a serem copiados.
+*Contagem de* o número de elementos a serem copiados.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -378,9 +378,9 @@ O caractere EOF.
 
 ### <a name="remarks"></a>Comentários
 
-Um valor que representa o fim do arquivo (como `EOF` ou `WEOF`).
+Um valor que representa o fim do arquivo (como EOF ou WEOF).
 
-Os padrão C++ determina que esse valor não deve corresponder a um valor `char_type` válido. O compilador do Visual C++ impõe essa restrição para o tipo `char`, mas não para o tipo `wchar_t`. O exemplo abaixo demonstra isso.
+Os padrão C++ determina que esse valor não deve corresponder a um valor `char_type` válido. O compilador do Visual C++ impõe essa restrição para o tipo **char**, mas não para o tipo **wchar_t**. O exemplo abaixo demonstra isso.
 
 ### <a name="example"></a>Exemplo
 
@@ -425,9 +425,9 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Ch1` O primeiro de dois caracteres a ser testada para fins de igualdade.
+*_Ch1* o primeiro de dois caracteres a serem testados quanto à igualdade.
 
-`_Ch2` O segundo de dois caracteres a ser testada para fins de igualdade.
+*_Ch2* o segundo de dois caracteres a ser testado quanto à igualdade.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -483,9 +483,9 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Ch1` O primeiro dos dois caracteres a ser testada para fins de igualdade como **int_type**s.
+*_Ch1* o primeiro dos dois caracteres a serem testados quanto à igualdade como `int_type`s.
 
-`_Ch2` O segundo de dois caracteres a ser testada para fins de igualdade como `int_type`s.
+*_Ch2* o segundo dos dois caracteres a ser testado quanto à igualdade como `int_type`s.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -568,11 +568,11 @@ static const char_type* find(const char_type* str,
 
 ### <a name="parameters"></a>Parâmetros
 
-`str` O primeiro caractere na cadeia de caracteres a ser pesquisada.
+*STR* o primeiro caractere na cadeia de caracteres a ser pesquisado.
 
-`_Num` O número de posições, contando a partir do primeiro no intervalo a ser pesquisada.
+*_Num* o número de posições, contando da primeira, no intervalo a ser pesquisado.
 
-`_Ch` O caractere a ser pesquisado no intervalo.
+*CH* o caractere a ser pesquisado no intervalo.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -630,7 +630,7 @@ typedef long int_type;
 
 ### <a name="remarks"></a>Comentários
 
-Deve ser possível fazer a conversão de tipo de um valor do tipo **CharType** para `int_type` e, em seguida, de volta para **CharType** sem alterar o valor original.
+Deve ser possível para um valor do tipo de conversão de tipo `CharType` à `int_type` , em seguida, voltar ao `CharType` sem alterar o valor original.
 
 ### <a name="example"></a>Exemplo
 
@@ -646,7 +646,7 @@ static size_t length(const char_type* str);
 
 ### <a name="parameters"></a>Parâmetros
 
-`str` A cadeia de C cujo comprimento é a ser medido.
+*STR* a cadeia de caracteres C cujo tamanho a ser medido.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -688,9 +688,9 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Ch1` O primeiro de dois caracteres a ser testado para menor.
+*_Ch1* o primeiro de dois caracteres a serem testados para menor que.
 
-`_Ch2` O segundo de dois caracteres a ser testado para menor.
+*_Ch2* o segundo de dois caracteres a serem testados para menor que.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -749,15 +749,15 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>Parâmetros
 
-`_To` O elemento no início da matriz de cadeia de caracteres ou caractere direcionado para receber a copiado sequência de caracteres.
+*Dese_jo* o elemento no início da matriz de cadeia de caracteres ou caractere direcionado para receber a sequência de caracteres copiada.
 
-`_From` O elemento no início da matriz de cadeia de caracteres ou um caractere de origem a serem copiados.
+*_From* o elemento no início da matriz de cadeia de caracteres ou caractere de origem a ser copiado.
 
-`_Num` O número de elementos a serem copiados da cadeia de caracteres de origem.
+*_Num* o número de elementos a serem copiados da cadeia de caracteres de origem.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O primeiro elemento `_To` copiado para a matriz de caracteres ou cadeia de caracteres destinada a receber a sequência de caracteres copiada.
+O primeiro elemento *dese_jo* copiados para a matriz de cadeia de caracteres ou caractere direcionada para receber a sequência de caracteres copiada.
 
 ### <a name="remarks"></a>Comentários
 
@@ -823,17 +823,17 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-`dest` O elemento no início da matriz de cadeia de caracteres ou caractere direcionado para receber a copiado sequência de caracteres.
+*dest* o elemento no início da matriz de cadeia de caracteres ou caractere direcionado para receber a sequência de caracteres copiada.
 
-`dest_size` O tamanho de `dest`. Se `char_type` for `char`, então isso estará em bytes. Se `char_type` for `wchar_t`, então isso estará em palavras.
+*dest_size* o tamanho de *dest*. Se `char_type` está **char**, então isso estará em bytes. Se `char_type` está **wchar_t**, então isso estará em palavras.
 
-`_From` O elemento no início da matriz de cadeia de caracteres ou um caractere de origem a serem copiados.
+*_From* o elemento no início da matriz de cadeia de caracteres ou caractere de origem a ser copiado.
 
-`count` O número de elementos a serem copiados da cadeia de caracteres de origem.
+*Contagem de* o número de elementos a serem copiados da cadeia de caracteres de origem.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O primeiro elemento `dest` copiado para a matriz de caracteres ou cadeia de caracteres destinada a receber a sequência de caracteres copiada.
+O primeiro elemento *dest* copiados para a matriz de cadeia de caracteres ou caractere direcionada para receber a sequência de caracteres copiada.
 
 ### <a name="remarks"></a>Comentários
 
@@ -895,11 +895,11 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Ch` O caractere representado como um `int_type` a ser testado para se ele é o caractere EOF ou não.
+*CH* o caractere representado como um `int_type` a ser testado para que seja o caractere EOF ou não.
 
 ### <a name="return-value"></a>Valor de retorno
 
-A representação `int_type` do caractere testado, se o **int_type** do caractere não for igual ao do caractere EOF.
+O `int_type` representação do caractere testado, se o `int_type` do caractere não for igual do caractere EOF.
 
 Se o valor `int_type` do caractere for igual ao valor do EOF `int_type`, então **false**.
 
@@ -1002,13 +1002,13 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Ch` O `int_type` caractere representado como um `char_type`.
+*CH* as `int_type` caractere a ser representado como um `char_type`.
 
 ### <a name="return-value"></a>Valor de retorno
 
 O caractere `char_type` que corresponde ao caractere `int_type`.
 
-Um valor de `_Ch` que não pode ser representado como tal produz um resultado não especificado.
+Um valor de *CH* que não pode ser representado como tal produz um resultado não especificado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1107,7 +1107,7 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Ch` O `char_type` caractere representado como um `int_type`.
+*CH* as `char_type` caractere a ser representado como um `int_type`.
 
 ### <a name="return-value"></a>Valor de retorno
 

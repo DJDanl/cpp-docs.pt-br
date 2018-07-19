@@ -1,5 +1,5 @@
 ---
-title: Classes e funções geradas pelo Assistente de DLL MFC | Microsoft Docs
+title: Classes e funções geradas pelo Assistente de DLL do MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,23 +19,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda791b5b064ff40e0df0a411e0a4e90e7e2c91a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd1b1d65148a951ba78e0408ab590a2c979648f7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339573"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>Classes e funções geradas pelo Assistente de DLL MFC
-O código gerado pelo Assistente de DLL MFC depende do tipo de DLL que você está criando e as opções que você selecionou. O Assistente de DLL MFC gera o mesmo código para as duas formas de DLLs normais do MFC.  
+O código gerado pelo Assistente de DLL MFC depende do tipo de DLL que você está criando e opções que você selecionou. O Assistente de DLL do MFC gera o mesmo código para as duas formas de DLLs MFC regulares.  
   
 |Tipo de DLL|Opção|Classes|Funções|  
 |-----------------|------------|-------------|---------------|  
 |[Extensão](../../build/extension-dlls-overview.md)|Nenhum|Nenhum|`DllMain`|  
-|[Regular](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Nenhum|Aplicativos de classe derivam de `CWinApp`|Nenhum|  
-|[Regular](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Automação|Aplicativos de classe derivam de `CWinApp`|**DllGetClassObjectDllCanUnloadNowDllRegisterServer**|  
+|[Regular](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Nenhum|Classe de aplicativo derivada `CWinApp`|Nenhum|  
+|[Regular](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Automação|Classe de aplicativo derivada `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|  
 |[Extensão](../../build/extension-dlls-overview.md)|Soquetes de janela|Nenhum|`DllMain`|  
-|[Regular](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Soquetes de janela|Aplicativos de classe derivam de `CWinApp`|`InitInstance` contém a chamada para `AfxSocketInit`|  
+|[Regular](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Soquetes de janela|Classe de aplicativo derivada `CWinApp`|`InitInstance` contém a chamada para `AfxSocketInit`|  
   
 ## <a name="see-also"></a>Consulte também  
  [Assistente de DLL do MFC](../../mfc/reference/mfc-dll-wizard.md)

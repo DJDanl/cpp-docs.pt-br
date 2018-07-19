@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ee9beb54dd241c6987b79db238f033f3d169497
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8801c41b23ab2c33e4c4e2df9cde8155c1eefafb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861669"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957762"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
@@ -82,8 +82,8 @@ void swap (
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`left`|Referência para um objeto `sstream`.|
-|`right`|Referência para um objeto `sstream`.|
+|*left*|Referência para um objeto `sstream`.|
+|*right*|Referência para um objeto `sstream`.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -93,14 +93,14 @@ Objetos do tipo `char *` podem usar a funcionalidade em [\<strstream>](../standa
 
 |Nome de tipo|Descrição|
 |-|-|
-|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|Cria um tipo `basic_istringstream` especializadas em um parâmetro do modelo `char`.|
-|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|Cria um tipo `basic_ostringstream` especializadas em um parâmetro do modelo `char`.|
-|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|Cria um tipo `basic_stringbuf` especializadas em um parâmetro do modelo `char`.|
-|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|Cria um tipo `basic_stringstream` especializadas em um parâmetro do modelo `char`.|
-|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|Cria um tipo `basic_istringstream` especializadas em um parâmetro do modelo `wchar_t`.|
-|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|Cria um tipo `basic_ostringstream` especializadas em um parâmetro do modelo `wchar_t`.|
-|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|Cria um tipo `basic_stringbuf` especializadas em um parâmetro do modelo `wchar_t`.|
-|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|Cria um tipo `basic_stringstream` especializadas em um parâmetro do modelo `wchar_t`.|
+|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|Cria um tipo `basic_istringstream` especializado em uma **char** parâmetro de modelo.|
+|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|Cria um tipo `basic_ostringstream` especializado em uma **char** parâmetro de modelo.|
+|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|Cria um tipo `basic_stringbuf` especializado em uma **char** parâmetro de modelo.|
+|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|Cria um tipo `basic_stringstream` especializado em uma **char** parâmetro de modelo.|
+|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|Cria um tipo `basic_istringstream` especializado em uma **wchar_t** parâmetro de modelo.|
+|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|Cria um tipo `basic_ostringstream` especializado em uma **wchar_t** parâmetro de modelo.|
+|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|Cria um tipo `basic_stringbuf` especializado em uma **wchar_t** parâmetro de modelo.|
+|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|Cria um tipo `basic_stringstream` especializado em uma **wchar_t** parâmetro de modelo.|
 
 ### <a name="manipulators"></a>Manipuladores
 
@@ -112,10 +112,10 @@ Objetos do tipo `char *` podem usar a funcionalidade em [\<strstream>](../standa
 
 |Classe|Descrição|
 |-|-|
-|[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|Descreve um buffer de fluxo que controla a transmissão de elementos do tipo **Elem**, cujas características dos caracteres são determinadas pela classe **Tr**, para e de uma sequência de elementos armazenados em um objeto de matriz.|
-|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Descreve um objeto que controla a extração de elementos e objetos codificados de um buffer de fluxo da classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, com elementos do tipo **Elem**, cujas características de caractere são determinadas pela classe **Tr** e cujos elementos são alocados por um alocador de classe `Alloc`.|
-|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Descreve um objeto que controla a inserção de elementos e objetos codificados em um buffer de fluxo da classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, com elementos do tipo **Elem**, cujas características de caractere são determinadas pela classe **Tr** e cujos elementos são alocados por um alocador de classe `Alloc`.|
-|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Descreve um objeto que controla a inserção e extração de elementos e objetos codificados em usando buffer de fluxo da classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, com elementos do tipo **Elem**, cujas características de caractere são determinadas pela classe **Tr** e cujos elementos são alocados por um alocador de classe `Alloc`.|
+|[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|Descreve um buffer de fluxo que controla a transmissão de elementos do tipo `Elem`, cujas características de caractere são determinadas pela classe `Tr`, para e de uma sequência de elementos armazenados em um objeto de matriz.|
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Descreve um objeto que controla a extração de elementos e objetos codificados de um buffer de fluxo da classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, com elementos do tipo `Elem`, cujas características de caractere são determinadas pela classe `Tr`, e cujos elementos são alocados por um alocador de classe `Alloc`.|
+|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Descreve um objeto que controla a inserção de elementos e objetos codificados em um buffer de fluxo da classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, com elementos do tipo `Elem`, cujas características de caractere são determinadas pela classe `Tr`, e cujos elementos são alocados por um alocador de classe `Alloc`.|
+|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Descreve um objeto que controla a inserção e extração de elementos e objetos codificados usando um buffer de fluxo da classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, com elementos do tipo `Elem`, cujas características de caractere são determinadas pela classe `Tr`, e cujos elementos são alocados por um alocador de classe `Alloc`.|
 
 ## <a name="requirements"></a>Requisitos
 

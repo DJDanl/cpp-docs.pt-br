@@ -1,5 +1,5 @@
 ---
-title: Alterando a fábrica de classe padrão e o modelo de agregação | Microsoft Docs
+title: Alterando a fábrica de classes padrão e o modelo de agregação | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,17 +22,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce64f2162aa0d5cdf5bcf5e16b56b6989fcaf1ee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db2e684565589eb736b135db3460ed8b83d382b1
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355233"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850872"
 ---
-# <a name="changing-the-default-class-factory-and-aggregation-model"></a>Alterando a fábrica de classe padrão e o modelo de agregação
-ATL usa [CComCoClass](../atl/reference/ccomcoclass-class.md) para definir o modelo padrão de fábrica e agregação de classe para seu objeto. `CComCoClass` Especifica as dois macros seguintes:  
+# <a name="changing-the-default-class-factory-and-aggregation-model"></a>Alterando a fábrica de classes padrão e o modelo de agregação
+Usa o ATL [CComCoClass](../atl/reference/ccomcoclass-class.md) para definir o modelo padrão de fábrica e agregação de classe para seu objeto. `CComCoClass` Especifica as duas macros a seguir:  
   
--   [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory) declara a fábrica de classe para ser [CComClassFactory](../atl/reference/ccomclassfactory-class.md).  
+-   [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory) declara a fábrica de classes para ser [CComClassFactory](../atl/reference/ccomclassfactory-class.md).  
   
 -   [DECLARE_AGGREGATABLE](reference/aggregation-and-class-factory-macros.md#declare_aggregatable) declara que o objeto pode ser agregado.  
   
@@ -42,9 +42,9 @@ ATL usa [CComCoClass](../atl/reference/ccomcoclass-class.md) para definir o mode
   
  Duas outras macros que definem uma fábrica de classes são [DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) e [DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton).  
   
- ATL também usa o `typedef` mecanismo para implementar o comportamento padrão. Por exemplo, o `DECLARE_AGGREGATABLE` macro usa `typedef` para definir um tipo chamado **_CreatorClass**, que, em seguida, é referenciado em ATL. Observe que em uma classe derivada, uma `typedef` usando o mesmo nome que a classe base `typedef` resulta em ATL usando sua definição e substituindo o comportamento padrão.  
+ ATL também usa o **typedef** mecanismo para implementar o comportamento padrão. Por exemplo, usa a macro DECLARE_AGGREGATABLE **typedef** para definir um tipo chamado `_CreatorClass`, que é referenciado em todo o ATL. Observe que, em uma classe derivada, uma **typedef** usando o mesmo nome como a classe base **typedef** resulta em ATL usando sua definição e substituindo o comportamento padrão.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceitos básicos de objetos COM de ATL](../atl/fundamentals-of-atl-com-objects.md)   
+ [Conceitos básicos de objetos COM da ATL](../atl/fundamentals-of-atl-com-objects.md)   
  [Macros de fábrica de classes e agregação](../atl/reference/aggregation-and-class-factory-macros.md)
 

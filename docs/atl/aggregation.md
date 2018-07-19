@@ -15,21 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 760a595274ba7a1901138cc0cceceddf97122725
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2457d6e94677c43985cadf8ca49a176a82566b6a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353957"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37847863"
 ---
 # <a name="aggregation"></a>Agregação
-Há ocasiões quando deseja que o implementador de um objeto para aproveitar os serviços oferecidos por outro objeto pré-compiladas. Além disso, ele gostaria que este segundo objeto a ser exibido como uma parte natural do primeiro. COM alcança ambas essas metas por meio de contenção e de agregação.  
+Há vezes quando o implementador de um objeto gostaria de aproveitar os serviços oferecidos pelo predefinidas, de outro objeto. Além disso, ele gostaria que este segundo objeto a ser exibido como uma parte natural do primeiro. COM atinge ambas essas metas por meio de agregação e confinamento.  
   
- Agregação significa que o objeto de contêiner (externo) cria o objeto de (interno) independente como parte de seu processo de criação e as interfaces do objeto interna são expostas pelo externa. Um objeto permite automaticamente para ser agregáveis ou não. Se estiver, ele deve seguir algumas regras de agregação para funcionar corretamente.  
+ Agregação significa que o objeto de recipiente (externo) cria o objeto de (interno) independente como parte do processo de criação e as interfaces do objeto interno são expostas pelo externo. Um objeto permite que seja agregável, ou não. Se for, ele deve seguir algumas regras de agregação para funcionar corretamente.  
   
- Primeiramente, todos os **IUnknown** chamadas de método no objeto independente devem delegar para o objeto contido.  
+ Basicamente, tudo `IUnknown` chamadas de método no objeto independente devem delegar para o objeto recipiente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Introdução ao COM](../atl/introduction-to-com.md)   
+ [Introdução a COM](../atl/introduction-to-com.md)   
  [Reutilizando objetos](http://msdn.microsoft.com/library/windows/desktop/ms678443)
 

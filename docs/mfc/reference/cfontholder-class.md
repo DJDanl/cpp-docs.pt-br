@@ -36,15 +36,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba6e85500f87c1ea88c46418d1f6b698a2d10976
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 3c110c0addfe14ed8ba9018345eb1f4e61fd5182
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338593"
 ---
 # <a name="cfontholder-class"></a>Classe CFontHolder
-Implementa a propriedade Font estoque e encapsula a funcionalidade de um objeto de fonte do Windows e o `IFont` interface.  
+Implementa a propriedade de fonte de estoque e encapsula a funcionalidade de um objeto de fonte do Windows e o `IFont` interface.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,14 +64,14 @@ class CFontHolder
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CFontHolder::GetDisplayString](#getdisplaystring)|Recupera a cadeia de caracteres exibida no navegador de propriedade do recipiente.|  
+|[CFontHolder::GetDisplayString](#getdisplaystring)|Recupera a cadeia de caracteres exibida no navegador de propriedade de um contêiner.|  
 |[CFontHolder::GetFontDispatch](#getfontdispatch)|Retorna a fonte `IDispatch` interface.|  
-|[CFontHolder::GetFontHandle](#getfonthandle)|Retorna um identificador para uma fonte do Windows.|  
-|[CFontHolder::InitializeFont](#initializefont)|Inicializa uma `CFontHolder` objeto.|  
-|[CFontHolder::QueryTextMetrics](#querytextmetrics)|Recupera as informações da fonte relacionados.|  
-|[CFontHolder::ReleaseFont](#releasefont)|Desconecta o `CFontHolder` de objeto o `IFont` e `IFontNotification` interfaces.|  
+|[CFontHolder::GetFontHandle](#getfonthandle)|Retorna um identificador para uma fonte de Windows.|  
+|[CFontHolder::InitializeFont](#initializefont)|Inicializa um `CFontHolder` objeto.|  
+|[CFontHolder::QueryTextMetrics](#querytextmetrics)|Recupera informações para a fonte relacionada.|  
+|[CFontHolder::ReleaseFont](#releasefont)|Desconecta o `CFontHolder` de objeto de `IFont` e `IFontNotification` interfaces.|  
 |[CFontHolder::Select](#select)|Seleciona um recurso de fonte em um contexto de dispositivo.|  
-|[CFontHolder::SetFont](#setfont)|Conecta-se a `CFontHolder` o objeto para um `IFont` interface.|  
+|[CFontHolder::SetFont](#setfont)|Conecta-se a `CFontHolder` do objeto para um `IFont` interface.|  
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
   
@@ -82,7 +82,7 @@ class CFontHolder
 ## <a name="remarks"></a>Comentários  
  `CFontHolder` não tem uma classe base.  
   
- Use essa classe para implementar propriedades de fonte personalizada para seu controle. Para obter informações sobre como criar essas propriedades, consulte o artigo [controles ActiveX: usando fontes](../../mfc/mfc-activex-controls-using-fonts.md).  
+ Use essa classe para implementar propriedades de fonte personalizado para seu controle. Para obter informações sobre como criar essas propriedades, consulte o artigo [controles ActiveX: usando fontes](../../mfc/mfc-activex-controls-using-fonts.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `CFontHolder`  
@@ -105,15 +105,15 @@ explicit CFontHolder(LPPROPERTYNOTIFYSINK pNotify);
  Você deve chamar `InitializeFont` para inicializar o objeto resultante antes de usá-lo.  
   
 ##  <a name="getdisplaystring"></a>  CFontHolder::GetDisplayString  
- Recupera uma cadeia de caracteres que pode ser exibida no navegador de propriedade do recipiente.  
+ Recupera uma cadeia de caracteres que pode ser exibida no navegador de propriedade de um contêiner.  
   
 ```  
 BOOL GetDisplayString(CString& strValue);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *StrValue*  
- Referência para o [CString](../../atl-mfc-shared/reference/cstringt-class.md) que é manter a cadeia de caracteres de exibição.  
+ *strValue*  
+ Referência para o [CString](../../atl-mfc-shared/reference/cstringt-class.md) que é armazenar a cadeia de caracteres de exibição.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a cadeia de caracteres é recuperada com êxito. Caso contrário, 0.  
@@ -126,13 +126,13 @@ LPFONTDISP GetFontDispatch();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o `CFontHolder` do objeto `IFontDisp` interface. Observe que a função que chama `GetFontDispatch` deve chamar `IUnknown::Release` nesse ponteiro de interface quando fazê-lo.  
+ Um ponteiro para o `CFontHolder` do objeto `IFontDisp` interface. Observe que a função que chama `GetFontDispatch` deve chamar `IUnknown::Release` nesse ponteiro de interface quando termina de usá-lo.  
   
 ### <a name="remarks"></a>Comentários  
- Chamar `InitializeFont` antes de chamar `GetFontDispatch`.  
+ Chame `InitializeFont` antes de chamar `GetFontDispatch`.  
   
 ##  <a name="getfonthandle"></a>  CFontHolder::GetFontHandle  
- Chame essa função para obter um identificador para uma fonte do Windows.  
+ Chame essa função para obter um identificador para uma fonte de Windows.  
   
 ```  
 HFONT GetFontHandle();
@@ -148,20 +148,20 @@ HFONT GetFontHandle(
  Altura, em unidades lógicas, do retângulo no qual o controle é desenhado.  
   
  *cyHimetric*  
- Altura, em `MM_HIMETRIC` unidades do controle.  
+ Altura, em unidades de MM_HIMETRIC do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um identificador para o objeto de fonte; Caso contrário, **nulo**.  
+ Um identificador para o objeto de fonte; Caso contrário, nulo.  
   
 ### <a name="remarks"></a>Comentários  
- A taxa de *cyLogical* e *cyHimetric* é usada para calcular o tamanho de exibição correta, em unidades lógicas, para que o tamanho do ponto da fonte é expresso em `MM_HIMETRIC` unidades:  
+ A proporção da *cyLogical* e *cyHimetric* é usada para calcular o tamanho de exibição correta, em unidades lógicas, para o tamanho da fonte ponto expressada em unidades de MM_HIMETRIC:  
   
  Exibir tamanho = ( *cyLogical* / *cyHimetric*) X tamanho da fonte  
   
- A versão sem parâmetros retorna um identificador para uma fonte corretamente o tamanho da tela.  
+ A versão sem parâmetros retorna um identificador para uma fonte dimensionada corretamente para a tela.  
   
 ##  <a name="initializefont"></a>  CFontHolder::InitializeFont  
- Inicializa uma `CFontHolder` objeto.  
+ Inicializa um `CFontHolder` objeto.  
   
 ```  
 void InitializeFont(
@@ -174,14 +174,14 @@ void InitializeFont(
  Ponteiro para uma estrutura de descrição da fonte ( [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)) que especifica as características da fonte.  
   
  *pFontDispAmbient*  
- Ponteiro para a propriedade fonte de ambiente do contêiner.  
+ Ponteiro para a propriedade da fonte de ambiente do contêiner.  
   
 ### <a name="remarks"></a>Comentários  
- Se *pFontDispAmbient* não é **nulo**, o `CFontHolder` objeto está conectado a um clone do `IFont` interface usada pela propriedade fonte de ambiente do contêiner.  
+ Se *pFontDispAmbient* não for nulo, o `CFontHolder` objeto está conectado a um clone do `IFont` interface usada pela propriedade da fonte de ambiente do contêiner.  
   
- Se *pFontDispAmbient* é **nulo**, um novo objeto de fonte é criado a partir da descrição da fonte apontada pelo *pFontDesc* ou, se *pFontDesc*é **nulo**, uma descrição padrão.  
+ Se *pFontDispAmbient* é nulo, uma nova fonte de objeto é criado a partir da descrição da fonte apontada por *pFontDesc* ou, se *pFontDesc* for NULL, padrão Descrição.  
   
- Chamar essa função depois de construir um `CFontHolder` objeto.  
+ Chame essa função após construir um `CFontHolder` objeto.  
   
 ##  <a name="m_pfont"></a>  CFontHolder::m_pFont  
  Um ponteiro para o `CFontHolder` do objeto `IFont` interface.  
@@ -202,14 +202,14 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
  Um ponteiro para um [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) estrutura que receberá as informações.  
   
 ##  <a name="releasefont"></a>  CFontHolder::ReleaseFont  
- Essa função desconecta o `CFontHolder` do objeto de seu `IFont` interface.  
+ Essa função se desconecta o `CFontHolder` do objeto de seu `IFont` interface.  
   
 ```  
 void ReleaseFont();
 ```  
   
 ##  <a name="select"></a>  CFontHolder::Select  
- Chame essa função para selecionar a fonte do controle no contexto de dispositivo especificado.  
+ Chame essa função para selecionar a fonte do seu controle no contexto de dispositivo especificado.  
   
 ```  
 CFont* Select(
@@ -226,16 +226,16 @@ CFont* Select(
  Altura, em unidades lógicas, do retângulo no qual o controle é desenhado.  
   
  *cyHimetric*  
- Altura, em `MM_HIMETRIC` unidades do controle.  
+ Altura, em unidades de MM_HIMETRIC do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para a fonte que está sendo substituído.  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [GetFontHandle](#getfonthandle) para uma discussão sobre o *cyLogical* e *cyHimetric* parâmetros.  
+ Ver [GetFontHandle](#getfonthandle) para uma discussão sobre o *cyLogical* e *cyHimetric* parâmetros.  
   
 ##  <a name="setfont"></a>  CFontHolder::SetFont  
- Libera qualquer fonte existente e se conecta a `CFontHolder` o objeto para um `IFont` interface.  
+ Libera qualquer fonte existente e conecta-se a `CFontHolder` do objeto para um `IFont` interface.  
   
 ```  
 void SetFont(LPFONT pNewFont);
@@ -246,5 +246,5 @@ void SetFont(LPFONT pNewFont);
  Ponteiro para o novo `IFont` interface.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe CPropExchange](../../mfc/reference/cpropexchange-class.md)

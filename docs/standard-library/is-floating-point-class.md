@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63129ad04e2e74cdae9c590c76e1910e95117431
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52bc5ff0fe53dc89f932bf62dc98f7c8a03a725f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844426"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956999"
 ---
 # <a name="isfloatingpoint-class"></a>Classe is_floating_point
 
@@ -37,13 +37,13 @@ struct is_floating_point;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo de consulta.
+*Ty* o tipo de consulta.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo `Ty` for um tipo de ponto flutuante ou uma forma `cv-qualified` de um tipo de ponto flutuante; caso contrário, será falsa.
+Uma instância do predicado de tipo será verdadeira se o tipo *Ty* é flutuante tipo de ponto ou um `cv-qualified` digite de forma de um ponto flutuante, caso contrário, será falsa.
 
-Um tipo de ponto flutuante é um entre `float`, `double` ou `long double`.
+Um tipo de ponto flutuante é um dos **float**, **duplo**, ou **longo duplo**.
 
 ## <a name="example"></a>Exemplo
 

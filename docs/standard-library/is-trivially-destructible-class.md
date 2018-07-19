@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89215ac3d7b1035ef4326d73b21d540aada5fba6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0e2fb16ad96ba102295981b9f9d56fda810ddff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857809"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961052"
 ---
 # <a name="istriviallydestructible-class"></a>Classe is_trivially_destructible
 
@@ -37,11 +37,11 @@ struct is_trivially_destructible;
 
 ### <a name="parameters"></a>Parâmetros
 
-`T` O tipo de consulta.
+*T* o tipo de consulta.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo `T` for um tipo destrutível e se o compilador tiver conhecimento de que o destruidor não usa operações não triviais. Caso contrário, será falsa.
+Uma instância do predicado de tipo será verdadeira se o tipo *T* é um tipo destrutível e o destruidor é conhecido para o compilador para usar operações não triviais. Caso contrário, será falsa.
 
 ## <a name="requirements"></a>Requisitos
 

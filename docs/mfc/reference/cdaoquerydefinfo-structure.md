@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a31928bc98b8b2fd403f1db40c040357c388b104
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6fe098472eb31f0bd9b185adfa6793f7061a35ac
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338728"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>Estrutura CDaoQueryDefInfo
-O `CDaoQueryDefInfo` estrutura contém informações sobre um objeto querydef definida para os objetos de acesso de dados (DAO).  
+O `CDaoQueryDefInfo` estrutura contém informações sobre um objeto querydef definida para objetos de acesso de dados (DAO).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,67 +46,67 @@ struct CDaoQueryDefInfo
   
 #### <a name="parameters"></a>Parâmetros  
  *m_strName*  
- Nomes de objeto querydef exclusivamente. Para obter mais informações, consulte o tópico "Propriedade de nome" na Ajuda do DAO. Chamar [CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname) para recuperar esta propriedade diretamente.  
+ Nomes de objeto querydef exclusivamente. Para obter mais informações, consulte o tópico "Propriedade de nome" na Ajuda do DAO. Chame [CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname) para recuperar essa propriedade diretamente.  
   
  *m_nType*  
  Um valor que indica o tipo de operacional de um objeto querydef. O valor pode ser um dos seguintes:  
   
-- **dbQSelect** selecione — a consulta Selecionar registros.  
+- `dbQSelect` Selecione — a consulta seleciona os registros.  
   
-- **dbQAction** ação — a consulta se move ou altera os dados, mas não retorna registros.  
+- `dbQAction` Ação — a consulta se move ou altera os dados, mas não retorna registros.  
   
-- **dbQCrosstab** tabela de referência cruzada, a consulta retorna dados em um formato de planilha.  
+- `dbQCrosstab` Tabela de referência cruzada — a consulta retorna dados em um formato de planilha.  
   
-- **dbQDelete** excluir — a consulta exclui um conjunto de linhas especificados.  
+- `dbQDelete` Excluir — a consulta exclui um conjunto de linhas especificados.  
   
-- **dbQUpdate** atualização — um conjunto de registros a consulta é alterada.  
+- `dbQUpdate` Atualização — a consulta é alterada a um conjunto de registros.  
   
-- **dbQAppend** acrescentar — a consulta adiciona novos registros ao final de uma tabela ou consulta.  
+- `dbQAppend` De acréscimo — a consulta adiciona novos registros ao final de uma tabela ou consulta.  
   
-- **dbQMakeTable** criar tabela, a consulta cria uma nova tabela de um conjunto de registros.  
+- `dbQMakeTable` Criar tabela — a consulta cria uma nova tabela de um conjunto de registros.  
   
-- **dbQDDL** definição de dados, a consulta afeta a estrutura de tabelas ou suas partes.  
+- `dbQDDL` Definição de dados — a consulta afeta a estrutura de tabelas ou suas partes.  
   
-- **dbQSQLPassThrough** passagem — a instrução SQL é passada diretamente para o banco de dados back-end, sem processamento intermediário.  
+- `dbQSQLPassThrough` Passagem — a instrução SQL é passada diretamente para o back-end de banco de dados, sem processamento intermediário.  
   
-- **dbQSetOperation** união, a consulta cria um objeto de conjunto de registros do tipo de instantâneo que contém dados de registros de todos os especificados em duas ou mais tabelas com registros duplicados removidos. Para incluir as duplicatas, adicione a palavra-chave **todos os** na instrução de SQL do querydef.  
+- `dbQSetOperation` A consulta de união — cria um objeto de conjunto de registros do tipo de instantâneo que contém dados de registros de todos os especificados em duas ou mais tabelas com registros duplicados removidos. Para incluir as duplicatas, adicione a palavra-chave **todos os** na instrução de SQL do querydef.  
   
-- **dbQSPTBulk** usado com **dbQSQLPassThrough** para especificar uma consulta que não retorna registros.  
+- `dbQSPTBulk` Usado com `dbQSQLPassThrough` para especificar uma consulta que não retorna registros.  
   
 > [!NOTE]
->  Para criar uma consulta de passagem, você não definir a **dbQSQLPassThrough** constante. Isso é definido automaticamente pelo mecanismo de banco de dados Microsoft Jet quando você cria um objeto querydef e defina a propriedade de conexão.  
+>  Para criar uma consulta de passagem, você não definir o `dbQSQLPassThrough` constante. Isso é definido automaticamente pelo mecanismo de banco de dados Microsoft Jet, quando você cria um objeto querydef e define a propriedade Connect.  
   
  Para obter mais informações, consulte o tópico "Propriedade do tipo" na Ajuda do DAO.  
   
  *m_dateCreated*  
- A data e hora que QueryDef foi criado. Para recuperar diretamente a data querydef foi criada, chame o [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) função de membro a `CDaoTableDef` objeto associado à tabela. Consulte os comentários abaixo para obter mais informações. Também consulte o tópico "Propriedades DateCreated e LastUpdated" na Ajuda do DAO.  
+ A data e hora que QueryDef foi criado. Para recuperar diretamente a data querydef foi criado, chame o [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) função de membro do `CDaoTableDef` objeto associado à tabela. Consulte os comentários abaixo para obter mais informações. Também consulte o tópico "Propriedades DateCreated e LastUpdated" na Ajuda do DAO.  
   
  *m_dateLastUpdated*  
- A data e hora da alteração mais recente feita para querydef. Para recuperar diretamente a data da última atualização de tabela, chame o [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) a função de membro de querydef. Consulte os comentários abaixo para obter mais informações. E consulte o tópico "Propriedades DateCreated e LastUpdated" na Ajuda do DAO.  
+ A data e hora da alteração mais recente feita querydef. Para recuperar diretamente a data em que a tabela foi atualizada pela última vez, chame o [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) a função de membro de querydef. Consulte os comentários abaixo para obter mais informações. E consulte o tópico "Propriedades DateCreated e LastUpdated" na Ajuda do DAO.  
   
  *m_bUpdatable*  
- Indica se podem ser feitas alterações para um objeto querydef. Se essa propriedade for **TRUE**, querydef é atualizável; caso contrário, não é. Atualizável significa a que definição de consulta do objeto pode ser alterada. A propriedade atualizável de um objeto querydef é definida como **TRUE** se a definição de consulta pode ser atualizada, mesmo que o conjunto de registros resultante não é atualizável. Para recuperar esta propriedade diretamente, chame o querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate) função de membro. Para obter mais informações, consulte o tópico "Propriedade atualizável" na Ajuda do DAO.  
+ Indica se as alterações podem ser feitas a um objeto querydef. Se essa propriedade for TRUE, querydef é atualizável; Caso contrário, ele não é. Atualizável significa que a definição de consulta do objeto pode ser alterada. A propriedade atualizável de um objeto querydef é definida como TRUE se a definição de consulta pode ser atualizada, mesmo se o conjunto de registros resultante não é atualizável. Para recuperar essa propriedade diretamente, chame o querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate) função de membro. Para obter mais informações, consulte o tópico "Propriedade atualizável" na Ajuda do DAO.  
   
  *m_bReturnsRecords*  
- Indica se uma consulta de passagem para um banco de dados externo retorna registros. Se essa propriedade for **TRUE**, a consulta retorna registros. Para recuperar diretamente essa propriedade, chame [CDaoQueryDef::GetReturnsRecords](../../mfc/reference/cdaoquerydef-class.md#getreturnsrecords). Nem todas as consultas de passagem de SQL para bancos de dados externos retornam registros. Por exemplo, um SQL **atualização** instrução atualiza os registros sem retornar registros, enquanto um SQL **selecione** instrução retornar registros. Para obter mais informações, consulte o tópico "Propriedade ReturnsRecords" na Ajuda do DAO.  
+ Indica se uma consulta de passagem para um banco de dados externo retorna registros. Se essa propriedade for TRUE, a consulta retorna registros. Para recuperar diretamente essa propriedade, chame [CDaoQueryDef::GetReturnsRecords](../../mfc/reference/cdaoquerydef-class.md#getreturnsrecords). Nem todas as consultas de passagem de SQL para bancos de dados externos retornam registros. Por exemplo, um SQL **atualização** instrução atualiza registros sem retornar registros, enquanto um SQL **selecione** instrução retornar registros. Para obter mais informações, consulte o tópico "Propriedade ReturnsRecords" na Ajuda do DAO.  
   
  *m_strSQL*  
- A instrução SQL que define a consulta executada por um objeto querydef. A propriedade SQL contém a instrução SQL que determina como os registros são selecionados, agrupados e classificados quando você executar a consulta. Você pode usar a consulta para selecionar registros a serem incluídos em um objeto de conjunto de registros do tipo dynaset ou instantâneo. Você também pode definir consultas em massa para modificar os dados sem retornar registros. Você pode recuperar o valor dessa propriedade chamando o querydef [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql) função de membro.  
+ A instrução SQL que define a consulta executada por um objeto querydef. A propriedade SQL contém a instrução SQL que determina como registros são selecionados, agrupados e classificados quando você executa a consulta. Você pode usar a consulta para selecionar registros a serem incluídos em um objeto de conjunto de registros do tipo dynaset ou instantâneo. Você também pode definir consultas em massa para modificar os dados sem retornar registros. Você pode recuperar o valor dessa propriedade chamando o querydef [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql) função de membro.  
   
  *m_strConnect*  
- Fornece informações sobre a origem de um banco de dados usado em uma consulta de passagem. Essas informações assumem a forma de uma cadeia de caracteres de conexão. Para obter mais informações sobre conexão cadeias de caracteres e para obter informações sobre como recuperar o valor dessa propriedade diretamente, consulte o [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) função de membro.  
+ Fornece informações sobre a origem de um banco de dados usado em uma consulta de passagem. Essas informações assumem a forma de uma cadeia de caracteres de conexão. Para obter mais informações sobre o connect cadeias de caracteres e para obter informações sobre como recuperar o valor dessa propriedade diretamente, consulte o [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) função de membro.  
   
  *m_nODBCTimeout*  
- O número de segundos que o mecanismo de banco de dados Microsoft Jet aguarda antes de um erro de tempo limite ocorre quando uma consulta é executada em um banco de dados ODBC. Quando você estiver usando um banco de dados ODBC, como o Microsoft SQL Server, pode haver atrasos devido à rede tráfego ou ao uso intenso do servidor ODBC. Em vez de esperar indefinidamente, você pode especificar quanto tempo o Microsoft Jet aguarda antes de ele produz um erro. O valor de tempo limite padrão é 60 segundos. Você pode recuperar o valor dessa propriedade chamando o querydef [GetODBCTimeout](../../mfc/reference/cdaoquerydef-class.md#getodbctimeout) função de membro. Para obter mais informações, consulte o tópico "Propriedade ODBCTimeout" na Ajuda do DAO.  
+ O número de segundos que o mecanismo de banco de dados Microsoft Jet aguarda antes de um erro de tempo limite ocorre quando uma consulta é executada em um banco de dados ODBC. Quando você estiver usando um banco de dados ODBC, como o Microsoft SQL Server, pode haver atrasos devido ao uso de tráfego ou com uso intenso de rede do servidor ODBC. Em vez de esperar indefinidamente, você pode especificar quanto tempo o mecanismo Microsoft Jet aguarda antes de produzir um erro. O valor de tempo limite padrão é 60 segundos. Você pode recuperar o valor dessa propriedade chamando o querydef [GetODBCTimeout](../../mfc/reference/cdaoquerydef-class.md#getodbctimeout) função de membro. Para obter mais informações, consulte o tópico "Propriedade ODBCTimeout" na Ajuda do DAO.  
   
 ## <a name="remarks"></a>Comentários  
- Querydef é um objeto da classe [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). As referências para o primário, secundário e todos os acima indicam como as informações são retornadas pelo [GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) a função de membro na classe `CDaoDatabase`.  
+ Querydef é um objeto da classe [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). As referências ao primário, secundário e todos acima indicam como as informações são retornadas pela [GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) função de membro na classe `CDaoDatabase`.  
   
- As informações recuperadas pelo [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) função de membro é armazenada em um `CDaoQueryDefInfo` estrutura. Chamar `GetQueryDefInfo` para o objeto de banco de dados cuja coleção QueryDefs objeto querydef é armazenado. `CDaoQueryDefInfo` também define uma `Dump` cria a função de membro na depuração. Você pode usar `Dump` para despejar o conteúdo de um `CDaoQueryDefInfo` objeto. Classe `CDaoDatabase` também fornece funções de membro para acessar todas as propriedades retornadas em diretamente um `CDaoQueryDefInfo` do objeto, portanto você provavelmente raramente precisa chamar `GetQueryDefInfo`.  
+ As informações recuperadas pelo [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) função de membro é armazenada em um `CDaoQueryDefInfo` estrutura. Chamar `GetQueryDefInfo` para o objeto de banco de dados cuja coleção QueryDefs o objeto querydef é armazenado. `CDaoQueryDefInfo` também define um `Dump` compilações de função de membro na depuração. Você pode usar `Dump` para despejar o conteúdo de um `CDaoQueryDefInfo` objeto. Classe `CDaoDatabase` também fornece funções de membro para acessar diretamente todas as propriedades retornadas em uma `CDaoQueryDefInfo` do objeto, portanto, você provavelmente raramente precisará chamar `GetQueryDefInfo`.  
   
- Quando você adicionar um novo campo ou o objeto parameter à coleção de campos ou parâmetros de um objeto querydef, uma exceção é gerada se o banco de dados subjacente não suporta o tipo de dados especificado para o novo objeto.  
+ Quando você acrescentar um novo campo ou um objeto parameter à coleção de campos ou parâmetros de um objeto querydef, uma exceção é lançada se o banco de dados subjacente não dá suporte para o tipo de dados especificado para o novo objeto.  
   
- As configurações de data e hora são derivadas do computador no qual o querydef foi criado ou atualizado pela última vez. Em um ambiente multiusuário, os usuários devem obter essas configurações diretamente do servidor de arquivos usando o **net tempo** comando para evitar discrepâncias nas configurações de propriedade DateCreated e LastUpdated.  
+ As configurações de data e hora são derivadas do computador no qual o querydef foi criado ou atualizado pela última vez. Em um ambiente multiusuário, os usuários devem obter essas configurações diretamente do servidor de arquivos usando o **net tempo** comando para evitar discrepâncias nas configurações das propriedades DateCreated e LastUpdated.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdao.h  

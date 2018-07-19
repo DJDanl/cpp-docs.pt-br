@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe60a849cb1b14420ab83af77362ddda433884a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956580"
 ---
 # <a name="references-c"></a>Referências (C++)
-Uma referência, como um ponteiro, armazena o endereço de um objeto que está localizado em outro lugar na memória. Ao contrário de um ponteiro, uma referência depois que ele é inicializado não pode ser feita se referir a um objeto diferente ou definido como null. Há dois tipos de referências: referências lvalue que se referem a uma nomeada referências variável e rvalue que se referem a um [objeto temporário](../cpp/temporary-objects.md). A & operador significa uma referência lvalue e a & & operador significa uma referência rvalue ou uma referência universal (rvalue ou lvalue), dependendo do contexto.  
+Uma referência, como um ponteiro, armazena o endereço de um objeto que está localizado em outro lugar na memória. Ao contrário de um ponteiro, uma referência depois que ela é inicializada não pode ser feita se referir a um objeto diferente ou definido como null. Há dois tipos de referências: referências lvalue que se referem a uma referência de variável e rvalue nomeado que se referem a um [objeto temporário](../cpp/temporary-objects.md). A & operador significa uma referência de lvalue e a & & operador significa uma referência rvalue ou uma referência universal (um lvalue ou rvalue), dependendo do contexto.  
   
  As referências podem ser declaradas usando a seguinte sintaxe:  
   
@@ -48,7 +49,7 @@ Uma referência, como um ponteiro, armazena o endereço de um objeto que está l
   
 -   Um especificador de classe de armazenamento opcional.  
   
--   Opcional **const** e/ou `volatile` qualificadores.  
+-   Opcional **const** e/ou **volátil** qualificadores.  
   
 -   O especificador de tipo: o nome de um tipo.  
   
@@ -58,24 +59,24 @@ Uma referência, como um ponteiro, armazena o endereço de um objeto que está l
   
 -   A & operador ou & & operador.  
   
--   Opcional **const** e/ou `volatile` qualificadores.  
+-   Opcional **const** e/ou **volátil** qualificadores.  
   
 -   O identificador.  
   
  3. Um inicializador opcional.  
   
- Os formulários de declaradores mais complexos para ponteiros para funções e matrizes também se aplicam a referências a matrizes e funções, consulte [ponteiros](../cpp/pointers-cpp.md) e [declaradores](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
+ Os formulários de declarador mais complexos para ponteiros para matrizes e funções também se aplicam a referências a matrizes e funções, consulte [ponteiros](../cpp/pointers-cpp.md).  
   
  Vários declaradores e inicializadores podem aparecer em uma lista separada por vírgulas após um único especificador de declaração. Por exemplo:  
   
-```  
+```cpp 
 int &i;   
 int &i, &j;   
 ```  
   
  As referências, os ponteiros e os objetos podem ser declarados juntos:  
   
-```  
+```cpp 
 int &ref, *ptr, k;   
 ```  
   
@@ -85,7 +86,7 @@ int &ref, *ptr, k;
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // references.cpp  
 #include <stdio.h>  
 struct S {  

@@ -36,15 +36,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24981d2544c2b3e2c8be6a3307829f8a1e1c29ad
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: eec19c574d9555fdfefaedd1b5ac05d896d15152
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040214"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850755"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Classe CMFCRibbonProgressBar
-Implementa um controle que indica visualmente o andamento de uma operação demorada.  
+Implementa um controle que indica visualmente o progresso de uma operação demorada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,10 +64,10 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CMFCRibbonProgressBar::GetPos](#getpos)|Retorna o progresso atual.|  
+|[CMFCRibbonProgressBar::GetPos](#getpos)|Retorna o andamento atual.|  
 |[CMFCRibbonProgressBar::GetRangeMax](#getrangemax)|Retorna o valor máximo do intervalo atual.|  
 |[CMFCRibbonProgressBar::GetRangeMin](#getrangemin)|Retorna o valor mínimo do intervalo atual.|  
-|[CMFCRibbonProgressBar::GetRegularSize](#getregularsize)|Retorna o tamanho normal do elemento de faixa de opções. (Substitui [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
+|[CMFCRibbonProgressBar::GetRegularSize](#getregularsize)|Retorna o tamanho regular do elemento da faixa de opções. (Substitui [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
 |[CMFCRibbonProgressBar::IsInfiniteMode](#isinfinitemode)|Especifica se a barra de progresso está funcionando no modo de infinito.|  
 |[CMFCRibbonProgressBar::OnDraw](#ondraw)|Chamado pelo framework para desenhar o elemento de faixa de opções. (Substitui [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|  
 |[CMFCRibbonProgressBar::SetInfiniteMode](#setinfinitemode)|Define a barra de progresso para funcionar no modo de infinito.|  
@@ -78,7 +78,7 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
  Um `CMFCRibbonProgressBar` pode operar em dois modos: regular e infinito. No modo normal, a barra de progresso é preenchida da esquerda para a direita e para quando alcança o valor máximo. No modo de infinito, a barra de progresso é preenchida repetidamente do valor mínimo para o valor máximo. Você pode usar o modo de infinito para indicar que uma operação está em andamento, mas que o tempo de conclusão é desconhecido.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar vários métodos no `CMFCRibbonProgressBar` classe. O exemplo mostra como definir a barra de progresso para funcionar no modo de infinito (onde o tempo de conclusão de uma operação é desconhecido), defina os valores mínimos e máximo para a barra de progresso e definir a posição atual da barra de progresso. Este trecho de código é parte do [exemplo de demonstração do MS Office 2007](../../visual-cpp-samples.md).  
+ O exemplo a seguir demonstra como usar vários métodos no `CMFCRibbonProgressBar` classe. O exemplo mostra como definir a barra de progresso para funcionar no modo de infinito (onde o tempo de conclusão de uma operação é desconhecido), defina os valores mínimos e máximo para a barra de progresso e definir a posição atual da barra de progresso. Este trecho de código faz parte de [amostra de demonstração do MS Office 2007](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]  
   
@@ -93,7 +93,7 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
  **Cabeçalho:** afxRibbonProgressBar.h  
   
 ##  <a name="cmfcribbonprogressbar"></a>  CMFCRibbonProgressBar::CMFCRibbonProgressBar  
- Cria e inicializa um [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) objeto.  
+ Constrói e inicializa um [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) objeto.  
   
 ```  
 CMFCRibbonProgressBar();
@@ -126,7 +126,7 @@ int GetPos () const;
  Um valor que representa a posição atual da barra de progresso.  
   
 ### <a name="remarks"></a>Comentários  
- O intervalo que está sendo definido deve estar dentro do intervalo especificado pelo [CMFCRibbonProgressBar::SetRange](#setrange) método.  
+ O intervalo que está sendo definido deve ser dentro do intervalo especificado o [CMFCRibbonProgressBar::SetRange](#setrange) método.  
   
 ##  <a name="getrangemax"></a>  CMFCRibbonProgressBar::GetRangeMax  
  Retorna a barra de progresso atual do valor máximo.  
@@ -141,7 +141,7 @@ int GetRangeMax() const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="getrangemin"></a>  CMFCRibbonProgressBar::GetRangeMin  
- Retorna a barra de progresso atual do valor mínimo do intervalo.  
+ Retorna a barra de progresso atual do valor de intervalo mínimo.  
   
 ```  
 int GetRangeMin() const;  
@@ -172,10 +172,10 @@ BOOL IsInfiniteMode() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se a barra de progresso está no modo de infinito; Caso contrário, `FALSE`.  
+ TRUE se a barra de progresso está no modo de infinito; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- No modo de infinito, a barra de progresso é preenchido repetidamente do valor mínimo para o valor máximo. Você pode usar o modo de infinito para indicar que uma operação está em andamento, mas que o tempo de conclusão é desconhecido.  
+ No modo de infinito, a barra de progresso são ocupa repetidamente, do valor mínimo para o valor máximo. Você pode usar o modo de infinito para indicar que uma operação está em andamento, mas que o tempo de conclusão é desconhecido.  
   
 ##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -198,10 +198,10 @@ void SetInfiniteMode(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *bSet*  
- `TRUE` para especificar que a barra de progresso é no modo de infinito. Caso contrário, `FALSE`.  
+ TRUE para especificar que a barra de progresso é no modo de infinito. Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- Geralmente, se a barra de progresso está no modo de infinito, o usuário está informando que uma operação está em andamento, mas que o tempo de conclusão é desconhecido. Portanto, a barra de progresso preenche repetidamente do valor mínimo para o valor máximo.  
+ Normalmente, se a barra de progresso está no modo de infinito, o usuário está informando que uma operação está em andamento, mas que o tempo de conclusão é desconhecido. Portanto, a barra de progresso preenche repetidamente do valor mínimo para o valor máximo.  
   
 ##  <a name="setpos"></a>  CMFCRibbonProgressBar::SetPos  
  Define a posição atual da barra de progresso.  
@@ -214,13 +214,13 @@ void SetPos(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *nPos*  
- Especifica a posição em que a barra de progresso é definida.  
+ Especifica a posição na qual a barra de progresso está definida.  
   
  [in] *bRedraw*  
  Especifica se a barra de progresso deve ser redesenhada.  
   
 ### <a name="remarks"></a>Comentários  
- O intervalo que está sendo definido deve estar dentro do intervalo especificado pelo [CMFCRibbonProgressBar::SetRange](#setrange) método.  
+ O intervalo que está sendo definido deve ser dentro do intervalo especificado o [CMFCRibbonProgressBar::SetRange](#setrange) método.  
   
 ##  <a name="setrange"></a>  CMFCRibbonProgressBar::SetRange  
  Define os valores mínimos e máximo para a barra de progresso.  
@@ -232,17 +232,17 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nMin*  
+ [in] *Nmín*  
  Especifica o valor mínimo do intervalo.  
   
- [in] *nMax*  
+ [in] *Nmáx*  
  Especifica o valor máximo do intervalo.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para definir o intervalo da barra de progresso, definindo os valores mínimo e máximo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)   
  [Classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)

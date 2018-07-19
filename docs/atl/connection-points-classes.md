@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c0d75c101bb23b3e7b788e607e325c18d729c81
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d458fb5805b99c8dcc5cc25abc9f85f88f08e92
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355073"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957640"
 ---
 # <a name="connection-points-classes"></a>Classes de pontos de Conexão
 As classes a seguir fornecem suporte para pontos de conexão:  
@@ -37,11 +37,11 @@ As classes a seguir fornecem suporte para pontos de conexão:
   
 -   [CComUnkArray](../atl/reference/ccomunkarray-class.md) gerencia um número fixo de conexões entre um ponto de conexão e seus coletores.  
   
--   [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md) notifica o coletor do cliente que são propriedade de um objeto foi alterado ou está prestes a ser alterada.  
+-   [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md) notifica o coletor de um cliente que a propriedade de um objeto foi alterado ou está prestes a ser alterada.  
   
--   [IDispEventImpl](../atl/reference/idispeventimpl-class.md) fornece suporte para pontos de conexão para um objeto COM da ATL. Esses pontos de conexão são mapeados com um mapa de coletor de eventos, que é fornecido pelo seu objeto COM.  
+-   [IDispEventImpl](../atl/reference/idispeventimpl-class.md) fornece suporte para pontos de conexão para um objeto COM ATL. Esses pontos de conexão são mapeados com um mapa de coletor de eventos, que é fornecido pelo seu objeto COM.  
   
--   [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) funciona em conjunto com o coletor de eventos do mapa em sua classe para eventos de rota para a função de manipulador adequado.  
+-   [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) trabalha em conjunto com o coletor de eventos do mapa em sua classe para eventos de rota para a função de manipulador apropriado.  
   
 ## <a name="related-articles"></a>Artigos relacionados  
  [Pontos de conexão](../atl/atl-connection-points.md)  

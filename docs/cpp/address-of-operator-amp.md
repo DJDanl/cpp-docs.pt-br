@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df243cac3b48a120345760f814a97b77667c770f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 144e770a90427d12d79a18c346d74140d07c5c5c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958579"
 ---
 # <a name="address-of-operator-amp"></a>Operador address-of: &amp;
 ## <a name="syntax"></a>Sintaxe  
@@ -32,20 +33,20 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O operador unário de endereço (**&**) usa o endereço do seu operando. O operando do operador de endereço pode ser um designador de função ou um l-value que designa um objeto que não é um campo de bits.  
+ O operador unário address-of (**&**) usa o endereço de seu operando. O operando do operador address-of pode ser um designador de função ou um valor l que designa um objeto que não é um campo de bits.  
   
  O operador address-of pode ser aplicado somente a variáveis com tipos fundamentais, de estrutura, classe ou união que são declarados no nível de escopo do arquivo, ou a referências de matriz subscrita. Nessas expressões, uma expressão constante que não inclui o operador address-of pode ser adicionada ou subtraída da expressão address-of.  
   
- Quando aplicado a funções ou valores l, o resultado da expressão será um tipo de ponteiro (um valor r) derivado do tipo do operando. Por exemplo, se o operando for do tipo `char`, o resultado da expressão será do tipo de ponteiro para `char`. O operador address-of, aplicado a **const** ou `volatile` objetos, que é avaliada como **const** `type` **\*** ou `volatile` `type` **\***, onde `type` é o tipo do objeto original.  
+ Quando aplicado a funções ou valores l, o resultado da expressão será um tipo de ponteiro (um valor r) derivado do tipo do operando. Por exemplo, se o operando for do tipo **char**, o resultado da expressão é do tipo ponteiro para **char**. O operador address-of, aplicado a **const** ou **volátil** objetos, será avaliada como **tipo const \***  ou **tipo volátil \*** , onde **tipo** é o tipo do objeto original.  
   
- Quando o operador address-of é aplicado a um [nome qualificado](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df), o resultado depende se o *nome qualificado* Especifica um membro estático. Nesse caso, o resultado é um ponteiro para o tipo especificado na declaração do membro. Se o membro não é estático, o resultado é um ponteiro para o membro *nome* da classe indicada pelo *nome qualificado de classe*. (Consulte [expressões primárias](../cpp/primary-expressions.md) para saber mais sobre *nome qualificado de classe*.) O seguinte fragmento de código mostra como o resultado difere, dependendo se o membro for estática:  
+ Quando o operador address-of é aplicado a um nome qualificado, o resultado depende se o *nome qualificado* Especifica um membro estático. Nesse caso, o resultado é um ponteiro para o tipo especificado na declaração do membro. Se o membro não é estático, o resultado é um ponteiro para o membro *nome* da classe indicada por *qualified-class-name*. (Consulte [expressões primárias](../cpp/primary-expressions.md) para obter mais informações sobre *qualified-class-name*.) O seguinte fragmento de código mostra como o resultado difere, dependendo se o membro for estática:  
   
-```  
+```cpp 
 // expre_Address_Of_Operator.cpp  
 // C2440 expected  
 class PTM {  
 public:  
-           int   iValue;  
+    int iValue;  
     static float fValue;  
 };  
   
@@ -58,13 +59,13 @@ int main() {
   
  Neste exemplo, a expressão `&PTM::fValue` gera o tipo `float *` em vez do tipo `float PTM::*` porque `fValue` é um membro estático.  
   
- O endereço de uma função sobrecarregada pode ser obtido somente quando está claro que versão da função está sendo referenciada. Consulte [sobrecarga de função](function-overloading.md) para obter informações sobre como obter o endereço de uma determinada função sobrecarregada.  
+ O endereço de uma função sobrecarregada pode ser obtido somente quando está claro que versão da função está sendo referenciada. Ver [sobrecarregamento de função](function-overloading.md) para obter informações sobre como obter o endereço de uma determinada função sobrecarregada.  
   
  Aplicar o operador address-of a um tipo de referência fornece o mesmo resultado que aplicar o operador ao objeto ao qual a referência está associada. Por exemplo:  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // expre_Address_Of_Operator2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -87,7 +88,7 @@ int main() {
   
  O exemplo a seguir usa o operador address-of para passar um argumento de ponteiro para uma função:  
   
-```  
+```cpp 
 // expre_Address_Of_Operator3.cpp  
 // compile with: /EHsc  
 // Demonstrate address-of operator &  
@@ -114,6 +115,6 @@ int main() {
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões com operadores unários](../cpp/expressions-with-unary-operators.md)   
- [Operadores C++ internos, precedência e capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores C++ internos, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Declarador de referência lvalue: &](../cpp/lvalue-reference-declarator-amp.md)   
  [Operadores de indireção e address-of](../c-language/indirection-and-address-of-operators.md)

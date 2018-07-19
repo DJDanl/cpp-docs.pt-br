@@ -1,5 +1,5 @@
 ---
-title: Estrutura BITMAP | Microsoft Docs
+title: Estrutura de BITMAP | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339339"
 ---
 # <a name="bitmap-structure"></a>Estrutura BITMAP
 O **BITMAP** estrutura define a altura, largura, formato de cor e valores de bit de um bitmap lógico **.**  
@@ -42,22 +42,22 @@ typedef struct tagBITMAP {  /* bm */
   
 #### <a name="parameters"></a>Parâmetros  
  *bmType*  
- Especifica o tipo de bitmap. Para bitmaps lógico, esse membro deve ser 0.  
+ Especifica o tipo de bitmap. Para bitmaps de lógica, esse membro deve ser 0.  
   
  *bmWidth*  
- Especifica a largura de bitmap em pixels. A largura deve ser maior que 0.  
+ Especifica a largura do bitmap em pixels. A largura deve ser maior que 0.  
   
  *bmHeight*  
  Especifica a altura do bitmap em linhas de varredura. A altura deve ser maior que 0.  
   
  *bmWidthBytes*  
- Especifica o número de bytes em cada linha de varredura. Esse valor deve ser um número par, pois a interface gráfica de dispositivo (GDI) pressupõe que os valores de bit de um bitmap formam uma matriz de inteiros (2 bytes). Em outras palavras, *bmWidthBytes* \* 8 deve ser o próximo múltiplo de 16 maior que ou igual ao valor obtido quando o *bmWidth* membro é multiplicado pelo *bmBitsPixel*  membro.  
+ Especifica o número de bytes em cada linha de varredura. Esse valor deve ser um número par, pois a graphics device interface (GDI) pressupõe que os valores de bit de um bitmap formam uma matriz de valores de (2 bytes) de inteiros. Em outras palavras, *bmWidthBytes* \* 8 deve ser o próximo múltiplo de 16 maior que ou igual ao valor obtido quando o *bmWidth* membro é multiplicado pela *bmBitsPixel*  membro.  
   
  *bmPlanes*  
  Especifica o número de planos de cores no bitmap.  
   
  *bmBitsPixel*  
- Especifica o número de bits de cor adjacentes em cada plano necessário para definir um pixel.  
+ Especifica o número de bits adjacentes de cor em cada plano necessário para definir um pixel.  
   
  *bmBits*  
  Aponta para o local dos valores de bit do bitmap. O *bmBits* membro deve ser um ponteiro longo para uma matriz de valores de 1 byte.  
@@ -81,9 +81,9 @@ typedef struct tagBITMAP {  /* bm */
   
  `Scan n-1`  
   
- Os pixels em um dispositivo monocromático são black ou em branco. Se o bit correspondente no bitmap for 1, o pixel é ativado (branco). Se o bit correspondente no bitmap for 0, o pixel está desativado (preto).  
+ Os pixels em um dispositivo monocromático são ambos preto ou branco. Se o bit correspondente no bitmap é 1, o pixel é ativado (branco). Se o bit correspondente no bitmap for 0, o pixel é desativado (preto).  
   
- Todos os dispositivos oferecem suporte a bitmaps que têm o **RC_BITBLT** bit é definido **RASTERCAPS** índice da [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) função de membro.  
+ Todos os dispositivos dão suporte a bitmaps que possuem o conjunto de bits de RC_BITBLT no índice de RASTERCAPS a [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) função de membro.  
   
  Cada dispositivo tem seu próprio formato de cor exclusiva. Para transferir um bitmap de um dispositivo para outro, use o [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) e [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funções do Windows.  
   

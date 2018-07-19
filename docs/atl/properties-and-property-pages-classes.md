@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0bb0a23ca0d0c67be86db49c92b6782dd71eee1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 027eb9c91b03501560c7001a2688d7e494154bce
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355001"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953794"
 ---
 # <a name="properties-and-property-pages-classes"></a>Propriedades e Classes de páginas de propriedade
-As classes a seguir oferecem suporte a propriedades e páginas de propriedades:  
+As classes a seguir dão suporte a propriedades e páginas de propriedades:  
   
 -   [CComDispatchDriver](../atl/reference/atl-typedefs.md#ccomdispatchdriver) recupera ou define as propriedades de um objeto por meio de um `IDispatch` ponteiro.  
   
@@ -34,9 +34,9 @@ As classes a seguir oferecem suporte a propriedades e páginas de propriedades:
   
 -   [IPerPropertyBrowsingImpl](../atl/reference/iperpropertybrowsingimpl-class.md) acessa as informações nas páginas de propriedades de um objeto.  
   
--   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) armazena propriedades de um objeto em um recipiente de propriedades fornecido pelo cliente.  
+-   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) armazena propriedades de um objeto em um recipiente fornecido pelo cliente.  
   
--   [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md) gerencia uma página de propriedades específica dentro de uma folha de propriedades.  
+-   [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md) gerencia uma página de propriedade específica dentro de uma folha de propriedades.  
   
 -   [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md) semelhante ao `IPropertyPageImpl`, mas também permite que um cliente selecionar uma propriedade específica em uma página de propriedades.  
   

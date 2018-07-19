@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 671311b0788438d7b92dad9d9137e28cbb88df60
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f97ddd87194d9cf7cce0b5fcd898b6a9f391d908
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363276"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879375"
 ---
 # <a name="cw2cwex-class"></a>Classe CW2CWEX
-Essa classe é usada pelas macros de conversão de cadeia de caracteres `CW2CTEX` e `CT2CWEX`e o typedef `CW2W`.  
+Essa classe é usada pelas macros de conversão de cadeia de caracteres CW2CTEX CT2CWEX e typedef CW2W.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,8 +40,8 @@ class CW2CWEX
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `t_nBufferLength`  
- O tamanho do buffer usado no processo de conversão. O comprimento padrão é 128 bytes.  
+ *t_nBufferLength*  
+ O tamanho do buffer usado no processo de tradução. O comprimento padrão é 128 bytes.  
   
 ## <a name="members"></a>Membros  
   
@@ -65,27 +65,27 @@ class CW2CWEX
 |[CW2CWEX::m_psz](#m_psz)|O membro de dados que armazena a cadeia de caracteres de origem.|  
   
 ## <a name="remarks"></a>Comentários  
- A menos que a funcionalidade adicional for necessária, use `CW2CTEX`, `CT2CWEX`, ou `CW2W` em seu código.  
+ A menos que a funcionalidade adicional for necessária, use CW2CTEX, CT2CWEX ou CW2W em seu código.  
   
- Esta classe é seguro usar em loops e não de estouro de pilha. Por padrão, as classes de conversão de ATL e macros usam página de código ANSI do thread atual para a conversão.  
+ Essa classe é seguro usar em loops e não estouram a pilha. Por padrão, as macros e classes de conversão ATL usam página de código ANSI do thread atual para a conversão.  
   
- As seguintes macros baseiam-se esta classe:  
+ As macros a seguir se baseiam nessa classe:  
   
-- `CW2CTEX`  
+- CW2CTEX  
   
-- `CT2CWEX`  
+- CT2CWEX  
   
- Typedef seguir baseia-se essa classe:  
+ O typedef seguir baseia-se nessa classe:  
   
-- `CW2W`  
+- CW2W  
   
- Para uma discussão sobre essas macros de conversão de texto, consulte [ATL e MFC Macros de conversão de cadeia de caracteres](string-conversion-macros.md).  
+ Para uma discussão sobre essas macros de conversão de texto, consulte [ATL e Macros de conversão de cadeia de caracteres MFC](string-conversion-macros.md).  
   
 ## <a name="example"></a>Exemplo  
- Consulte [ATL e MFC Macros de conversão de cadeia de caracteres](string-conversion-macros.md) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.  
+ Ver [ATL e Macros de conversão de cadeia de caracteres MFC](string-conversion-macros.md) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlconv.h  
+ **Cabeçalho:** Atlconv. h  
   
 ##  <a name="cw2cwex"></a>  CW2CWEX::CW2CWEX  
  O construtor.  
@@ -96,14 +96,14 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `psz`  
+ *psz*  
  A cadeia de caracteres de texto a ser convertido.  
   
- `nCodePage`  
+ *nCodePage*  
  A página de código. Não usado nessa classe.  
   
 ### <a name="remarks"></a>Comentários  
- Aloca o buffer usado no processo de conversão.  
+ Aloca um buffer usado no processo de tradução.  
   
 ##  <a name="dtor"></a>  CW2CWEX:: ~ CW2CWEX  
  O destruidor.  
@@ -130,7 +130,7 @@ operator LPCWSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna a cadeia de caracteres de texto como tipo **LPCWSTR.**  
+ Retorna a cadeia de caracteres de texto enquanto digita LPCWSTR.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CA2AEX](../../atl/reference/ca2aex-class.md)   

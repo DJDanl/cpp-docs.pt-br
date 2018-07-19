@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11d9d45a8bf9d2eff7f4fa8d006299045a21c116
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6238aeada530a8fc33fc98b79cba969353796ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843113"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953082"
 ---
 # <a name="allocatorsuballoc-class"></a>Classe allocator_suballoc
 
-Descreve um objeto que gerencia a alocação e a liberação de armazenamento para objetos do tipo `Type` usando um cache do tipo [cache_suballoc](../standard-library/cache-suballoc-class.md).
+Descreve um objeto que gerencia a alocação de armazenamento e a liberação de objetos do tipo *tipo* usando um cache do tipo [cache_suballoc](../standard-library/cache-suballoc-class.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,11 +39,11 @@ class allocator_suballoc;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`Type`|O tipo dos elementos alocados pelo alocador.|
+|*Tipo*|O tipo dos elementos alocados pelo alocador.|
 
 ## <a name="remarks"></a>Comentários
 
-A macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) passa essa classe como o parâmetro `name` na instrução a seguir: `ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
+O [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) macro passa essa classe como o *nome* parâmetro na instrução a seguir: `ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
 
 ## <a name="requirements"></a>Requisitos
 

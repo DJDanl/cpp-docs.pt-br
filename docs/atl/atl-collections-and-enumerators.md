@@ -17,38 +17,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 537d7e8b7264beddc68805ab8b8dec2ce7883859
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9837b42148062bdd2c44855c129f085ca47cdec0
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356772"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848788"
 ---
 # <a name="atl-collections-and-enumerators"></a>Coleções e enumeradores ATL
 Um `collection` é um objeto COM que fornece uma interface que permite o acesso a um grupo de itens de dados (dados brutos ou outros objetos). Uma interface que segue os padrões para fornecer acesso a um grupo de objetos é conhecido como um *interface de coleção*.  
   
- No mínimo, interfaces de coleção devem fornecer um **contagem** propriedade que retorna o número de itens na coleção, um **Item** propriedade que retorna um item da coleção com base em um índice e um `_NewEnum` propriedade que retorna um enumerador para a coleção. Opcionalmente, as interfaces de coleção podem fornecer **adicionar** e **remover** métodos para permitir que os itens a serem inseridos ou removidos da coleção e um **limpar** método para remover todos os itens.  
+ No mínimo, as interfaces de coleção devem fornecer um `Count` propriedade que retorna o número de itens na coleção, um `Item` propriedade que retorna um item da coleção com base em um índice, e um `_NewEnum` propriedade que retorna um enumerador para a coleção. Opcionalmente, as interfaces de coleção podem fornecer `Add` e `Remove` métodos para permitir que os itens a ser inserida ou excluída da coleção e um `Clear` método para remover todos os itens.  
   
- Um `enumerator` é um objeto COM que fornece uma interface para iteração por meio de itens em uma coleção. Interfaces de enumerador fornecem acesso de série para os elementos de uma coleção por meio de quatro métodos necessários: `Next`, **ignorar**, **redefinir**, e `Clone`.  
+ Um `enumerator` é um objeto COM que fornece uma interface para iterar pelos itens em uma coleção. Interfaces de enumerador fornecem acesso serial para os elementos de uma coleção por meio de quatro métodos necessários: `Next`, `Skip`, `Reset`, e `Clone`.  
   
- Você pode aprender mais sobre as interfaces de enumerador, leia sobre o típico (mas inteiramente imaginário) [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx) interface.  
+ Você pode aprender mais sobre interfaces de enumerador lendo sobre o típico (mas inteiramente imaginária) [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx) interface.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Classes de coleção e enumerador da ATL](../atl/atl-collection-and-enumerator-classes.md)  
- Brevemente descreve e fornece links para as classes ATL que ajudarão você a implementam coleções e enumeradores.  
+ Descreve rapidamente e fornece links para as classes ATL que ajudarão você a implementam coleções e enumeradores.  
   
  [Princípios de design para interfaces de coleção e enumerador](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
- Descreve os princípios de design diferentes em cada tipo de interface.  
+ Discute os princípios de design diferentes por trás de cada tipo de interface.  
   
  [Implementando uma coleção baseada na biblioteca padrão C++](../atl/implementing-an-stl-based-collection.md)  
- Um exemplo estendido que orienta a implementação de um conjunto de biblioteca padrão C++.  
+ Um exemplo estendido que orienta você durante a implementação de uma coleção baseada na biblioteca padrão C++.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [ATL](../atl/active-template-library-atl-concepts.md)  
  Fornece links para tópicos conceituais sobre como programar usando o Active Template Library.  
   
  [Exemplo de ATLCollections](../visual-cpp-samples.md)  
- Um exemplo que demonstra o uso de `ICollectionOnSTLImpl` e `CComEnumOnSTL`e a implementação de classes de política personalizada de cópia.  
+ Um exemplo que demonstra o uso de `ICollectionOnSTLImpl` e `CComEnumOnSTL`e a implementação das classes de política de cópia personalizada.  
   
 ## <a name="see-also"></a>Consulte também  
  [Conceitos](../atl/active-template-library-atl-concepts.md)

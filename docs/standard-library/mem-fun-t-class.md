@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32aceae204f50d98e84f1286042854e725917623
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27182d6c1b2f3c37353f653235449982e921d692
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852540"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956382"
 ---
 # <a name="memfunt-class"></a>Classe mem_fun_t
 
-Uma classe de adaptador que permite que uma função membro **non_const** que não usa argumentos seja chamada como um objeto de função unária quando inicializada com um argumento de ponteiro.
+Uma classe de adaptador que permite uma `non_const` função de membro que não usa argumentos seja chamada como um objeto de função unária quando inicializado com um argumento de ponteiro.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -41,9 +41,9 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Pm` Um ponteiro para a função de membro da classe **tipo** a ser convertido em um objeto de função.
+*_Pm* um ponteiro para a função de membro da classe `Type` a ser convertido em um objeto de função.
 
-`_Pleft` O objeto que o `_Pm` membro de função é chamado em.
+*Pleft* o objeto que o *_Pm* função de membro é chamada em.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -51,7 +51,7 @@ Uma função unária adaptável.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo armazena uma cópia de `_Pm`, que deve ser um ponteiro para uma função membro da classe **Type**, em um objeto de membro privado. Ela define sua função membro `operator()` como de retorno (`_Pleft`->* `_Pm`)( ).
+A classe de modelo armazena uma cópia dos *_Pm*, que deve ser um ponteiro para uma função de membro de classe `Type`, em um objeto de membro privado. Ela define sua função membro `operator()` como de retorno (`_Pleft`->* `_Pm`)( ).
 
 ## <a name="example"></a>Exemplo
 

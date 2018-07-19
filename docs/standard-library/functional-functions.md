@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14e656d77247984ba3306d6efff78e6cca713cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9033ba128714edde2593a09fbfb46f9f65d195ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848369"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957445"
 ---
 # <a name="ltfunctionalgt-functions"></a>Funções &lt;funcionais&gt;
 
@@ -70,19 +70,19 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Fty` O tipo do objeto a ser chamada.
+*Fty* o tipo de objeto a ser chamado.
 
-`TN` O tipo de Nth chamar argumento.
+*TN* o tipo do enésimo argumento de chamada.
 
-`fn` O objeto a ser chamada.
+*Fn* objeto a ser chamado.
 
-`tN` O argumento de chamada enésimo.
+*tN* o enésimo argumento de chamada.
 
 ### <a name="remarks"></a>Comentários
 
 Os tipos `Fty, T1, T2, ..., TN` devem ser construíveis de cópias e `INVOKE(fn, t1, ..., tN)` deve ser uma expressão válida para alguns valores de `w1, w2, ..., wN`.
 
-A primeira função de modelo retorna um wrapper de chamada de encaminhamento `g` com um tipo de resultado fraco. O efeito de `g(u1, u2, ..., uM)` é `INVOKE(f, v1, v2, ..., vN, ` [result_of](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, onde `cv` é os qualificadores de VC de `g` e os valores e tipos dos argumentos associados `v1, v2, ..., vN` são determinados como especificado abaixo. É possível usá-lo para associar argumentos a um objeto que pode ser chamado e criar um objeto que pode ser chamado com uma lista de argumentos personalizada.
+A primeira função de modelo retorna um wrapper de chamada de encaminhamento `g` com um tipo de resultado fraco. O efeito `g(u1, u2, ..., uM)` está `INVOKE(f, v1, v2, ..., vN, ` [result_of](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, onde `cv` são os qualificadores cv de `g` e os valores e tipos dos argumentos associados `v1, v2, ..., vN` são determinados como especificado abaixo. É possível usá-lo para associar argumentos a um objeto que pode ser chamado e criar um objeto que pode ser chamado com uma lista de argumentos personalizada.
 
 A segunda função de modelo retorna um wrapper de chamada de encaminhamento `g` com um tipo aninhado `result_type`, que é sinônimo de `Ret`. O efeito de `g(u1, u2, ..., uM)` é `INVOKE(f, v1, v2, ..., vN, Ret)`, em que `cv` são os qualificadores cv de `g` e os valores e tipos dos argumentos associados `v1, v2, ..., vN` são determinados conforme especificado abaixo. É possível usá-lo para associar argumentos a um objeto que pode ser chamado e criar um objeto que pode ser chamado com uma lista de argumentos personalizada e um tipo de retorno especificado.
 
@@ -90,7 +90,7 @@ Os valores dos argumentos associados `v1, v2, ..., vN` e seus tipos corresponden
 
 se `ti` for do tipo `reference_wrapper<T>`, o argumento `vi` será `ti.get()` e seu tipo `Vi` será `T&`;
 
-se o valor de `std::is_bind_expression<Ti>::value` for `true`, o argumento `vi` será `ti(u1, u2, ..., uM)` e seu tipo `Vi` será `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`;
+Se o valor de `std::is_bind_expression<Ti>::value` está **verdadeira** o argumento `vi` é `ti(u1, u2, ..., uM)` e seu tipo `Vi` é `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`;
 
 se o valor `j` de `std::is_placeholder<Ti>::value` não for zero, o argumento `vi` será `uj` e seu tipo `Vi` será `Uj&`;
 
@@ -165,19 +165,19 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
 
 ### <a name="parameters"></a>Parâmetros
 
-`func` O objeto de função binário a ser convertido em um objeto de função unário.
+*Func* o objeto de função binária a ser convertido em um objeto de função unária.
 
-`left` O valor para o qual o primeiro argumento do objeto de função binário a ser associado.
+*à esquerda* o valor ao qual o primeiro argumento do objeto de função binária deve ser associado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O objeto de função unário resultante da associação o primeiro argumento do objeto de função binário para o valor `left`.
+O objeto de função unária que resulta da associação o primeiro argumento do objeto de função binária ao valor *esquerdo*.
 
 ### <a name="remarks"></a>Comentários
 
 Associadores de função são um tipo de adaptador de função e, como retornam objetos de função, eles podem ser usados em determinados tipos de composição de função para construir expressões mais complicadas e avançadas.
 
-Se `func` for um objeto do tipo `Operation` e `c` for uma constante, `bind1st` (`func`, `c`) será equivalente ao construtor de classe [binder1st](../standard-library/binder1st-class.md) `binder1st`< `Operation`> ( `func`, `c`) e será mais conveniente.
+Se *func* é um objeto do tipo `Operation` e `c` é uma constante, então `bind1st` ( `func`, `c`) é equivalente ao [binder1st](../standard-library/binder1st-class.md) construtor de classe `binder1st` <  `Operation`> ( `func`, `c`) e é mais conveniente.
 
 ### <a name="example"></a>Exemplo
 
@@ -257,19 +257,19 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`func` O objeto de função binário a ser convertido em um objeto de função unário.
+*Func* o objeto de função binária a ser convertido em um objeto de função unária.
 
-`right` O valor para o qual o segundo argumento do objeto de função binário a ser associado.
+*à direita* o valor ao qual o segundo argumento do objeto de função binária deve ser associado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O objeto de função unário resultante da associação o segundo argumento do objeto de função binário para o valor `right`.
+O objeto de função unária que resulta da associação do segundo argumento do objeto de função binária ao valor *certa*.
 
 ### <a name="remarks"></a>Comentários
 
 Associadores de função são um tipo de adaptador de função e, como retornam objetos de função, eles podem ser usados em determinados tipos de composição de função para construir expressões mais complicadas e avançadas.
 
-Se `func` for um objeto do tipo **Operation** e `c` for uma constante, `bind2nd` (`func`, `c`) será equivalente ao construtor de classe [binder2nd](../standard-library/binder2nd-class.md) **binder2nd\<Operation>** (`func`, `c`) e será mais conveniente.
+Se *func* é um objeto do tipo `Operation` e `c` é uma constante, então `bind2nd` ( `func`, `c` ) é equivalente ao [binder2nd](../standard-library/binder2nd-class.md) construtor de classe **binder2nd\<operação >** ( `func`, `c` ) e mais conveniente.
 
 ### <a name="example"></a>Exemplo
 
@@ -362,11 +362,11 @@ struct bit_and<void>
 
 ### <a name="parameters"></a>Parâmetros
 
-`Type`, `T`, `U` Qualquer tipo que oferece suporte a um `operator&` que usa operandos dos tipos especificados ou inferidos.
+*Tipo de*, *T*, *U* qualquer tipo que dá suporte a um `operator&` que usa operandos dos tipos especificados ou inferidos.
 
-`Left` O operando da esquerda da operação AND bit a bit. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `T`.
+*Esquerda* o operando esquerdo da operação AND bit a bit. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *T*.
 
-`Right` O operando direito da operação AND bit a bit. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `U`.
+*Direita* o operando direito da operação AND bit a bit. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *U*.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -398,9 +398,9 @@ struct bit_not<void>
 
 ### <a name="parameters"></a>Parâmetros
 
-`Type` Um tipo que oferece suporte a um unário `operator~`.
+*Tipo de* um tipo que dá suporte a um unário `operator~`.
 
-`Right` O operando da operação de complemento bit a bit. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito de um argumento de referência lvalue e rvalue do tipo inferido `Type`.
+*Direita* o operando da operação de complemento bit a bit. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de um argumento de referência lvalue e rvalue do tipo inferido perfeito *tipo*.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -412,7 +412,7 @@ O functor `bit_not` é restrito a tipos integrais para os tipos de dados básico
 
 ## <a name="bit_or"></a>  bit_or
 
-Um objeto de função predefinido que executa a operação bit a bit OR (`operator|`) em seus argumentos.
+Um objeto de função predefinido que executa a operação OR bit a bit (`operator|`) em seus argumentos.
 
 ```cpp
 template <class Type = void>
@@ -434,11 +434,11 @@ struct bit_or<void>
 
 ### <a name="parameters"></a>Parâmetros
 
-`Type`, `T`, `U` Qualquer tipo que oferece suporte a um `operator|` que usa operandos dos tipos especificados ou inferidos.
+*Tipo de*, *T*, *U* qualquer tipo que dá suporte a um `operator|` que usa operandos dos tipos especificados ou inferidos.
 
-`Left` O operando da esquerda da operação OR bit a bit. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `T`.
+*Esquerda* o operando esquerdo da operação OR bit a bit. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *T*.
 
-`Right` O operando direito da operação OR bit a bit. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `U`.
+*Direita* o operando direito da operação OR bit a bit. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *U*.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -472,11 +472,11 @@ struct bit_xor<void>
 
 ### <a name="parameters"></a>Parâmetros
 
-`Type`, `T`, `U` Qualquer tipo que oferece suporte a um `operator^` que usa operandos dos tipos especificados ou inferidos.
+*Tipo de*, *T*, *U* qualquer tipo que dá suporte a um `operator^` que usa operandos dos tipos especificados ou inferidos.
 
-`Left` O operando da esquerda da operação XOR bit a bit. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `T`.
+*Esquerda* o operando esquerdo da operação XOR bit a bit. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *T*.
 
-`Right` O operando direito da operação XOR bit a bit. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `U`.
+*Direita* o operando direito da operação XOR bit a bit. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *U*.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -500,9 +500,9 @@ reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo do argumento quebrar.
+*Ty* o tipo de argumento a ser encapsulado.
 
-`arg` O argumento quebrar.
+*arg* argumento a ser encapsulado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -552,17 +552,17 @@ unspecified mem_fn(Ret Ty::*pm);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ret` O tipo de retorno da função encapsulada.
+*RET* o tipo de retorno da função encapsulada.
 
-`Ty` O tipo de ponteiro de função de membro.
+*Ty* o tipo de ponteiro de função de membro.
 
 ### <a name="remarks"></a>Comentários
 
 A função de modelo retorna um wrapper de chamada simples `cw`, com um tipo de resultado fraco, de forma que a expressão `cw(t, a2, ..., aN)` é equivalente a `INVOKE(pm, t, a2, ..., aN)`. Ela não gera nenhuma exceção.
 
-O wrapper de chamada retornado é derivado de `std::unary_function<cv Ty*, Ret>` (assim, definindo o tipo aninhado `result_type` como sinônimo de `Ret` e o tipo aninhado `argument_type` como sinônimo de `cv Ty*`) somente se o tipo `Ty` for uma função de ponteiro para membro com um qualificador cv `cv` que não utiliza argumentos.
+O wrapper de chamada retornado é derivado de `std::unary_function<cv Ty*, Ret>` (assim, definindo o tipo aninhado `result_type` como sinônimo de um *Ret* e o tipo aninhado `argument_type` como um sinônimo para `cv Ty*`) somente se o tipo  *Ty* é um ponteiro para função de membro com o qualificador cv `cv` que não usa argumentos.
 
-O wrapper de chamada retornado é derivado de `std::binary_function<cv Ty*, T2, Ret>` (assim, definindo o tipo aninhado `result_type` como sinônimo de `Ret`, o tipo aninhado `first argument_type` como sinônimo de `cv Ty*` e o tipo aninhado `second argument_type` como sinônimo de `T2`) somente se o tipo `Ty` for uma função de ponteiro para membro com o qualificador cv `cv` que não utiliza um argumento, do tipo `T2`.
+O wrapper de chamada retornado é derivado de `std::binary_function<cv Ty*, T2, Ret>` (assim, definindo o tipo aninhado `result_type` como sinônimo de um *Ret*, o tipo aninhado `first argument_type` como um sinônimo para `cv Ty*`e o tipo aninhado `second argument_type`como um sinônimo de `T2`) somente se o tipo *Ty* é um ponteiro para função de membro com o qualificador cv `cv` que usa um argumento do tipo `T2`.
 
 ### <a name="example"></a>Exemplo
 
@@ -623,7 +623,7 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg) const);
 
 ### <a name="parameters"></a>Parâmetros
 
-`pmem` Um ponteiro para a função de membro da classe **tipo** a ser convertido em um objeto de função.
+*pmem* um ponteiro para a função de membro da classe `Type` a ser convertido em um objeto de função.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -709,11 +709,11 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pmem)(Arg) cons
 
 ### <a name="parameters"></a>Parâmetros
 
-`pmem` Um ponteiro para a função de membro da classe `Type` a ser convertido em um objeto de função.
+*pmem* um ponteiro para a função de membro da classe `Type` a ser convertido em um objeto de função.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um objeto de função `const` ou `non_const` do tipo `mem_fun_ref_t` ou `mem_fun1_ref_t`.
+Um **const** ou `non_const` objeto de função do tipo `mem_fun_ref_t` ou `mem_fun1_ref_t`.
 
 ### <a name="example"></a>Exemplo
 
@@ -804,7 +804,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 
 ### <a name="parameters"></a>Parâmetros
 
-`pred` O predicado unário deve ser negado.
+*Pred* o predicado unário a ser negada.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -875,7 +875,7 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="parameters"></a>Parâmetros
 
-`func` O predicado binário para deve ser negado.
+*Func* o predicado binário a ser negada.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -953,7 +953,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 ### <a name="parameters"></a>Parâmetros
 
-`pfunc` O ponteiro de função do unário ou binário a ser convertido em uma função adaptável.
+*pfunc* o ponteiro de função unária ou binária a ser convertido em uma função adaptável.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1072,11 +1072,11 @@ void swap(function<Fty>& f1, function<Fty>& f2);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Fty` O tipo controlado pelos objetos de função.
+*Fty* o tipo controlado pelos objetos de função.
 
-`f1` O primeiro objeto de função.
+*F1* o primeiro objeto de função.
 
-`f2` O segundo objeto de função.
+*F2* o segundo objeto de função.
 
 ### <a name="remarks"></a>Comentários
 

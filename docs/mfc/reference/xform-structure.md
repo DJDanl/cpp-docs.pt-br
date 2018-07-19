@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1c3a8abd39f7f190f36a18e7691475d951cab8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6084882bed6690269fbb926f394159491d22978a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379480"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885878"
 ---
 # <a name="xform-structure"></a>Estrutura XFORM
 O `XFORM` estrutura tem a seguinte forma:  
@@ -40,14 +40,14 @@ typedef struct  tagXFORM {  /* xfrm */
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O `XFORM` estrutura Especifica um espaço de mundo para transformação do espaço da página. O **eDx** e **eDy** membros especificar os componentes de tradução horizontal e vertical, respectivamente. A tabela a seguir mostra como os outros membros são usados, dependendo da operação:  
+ O `XFORM` estrutura Especifica um espaço de mundo para transformação de espaço da página. O `eDx` e `eDy` membros especificam os componentes de translação horizontal e vertical, respectivamente. A tabela a seguir mostra como os outros membros são usados, dependendo da operação:  
   
 |Operação|eM11|eM12|eM21|eM22|  
 |---------------|----------|----------|----------|----------|  
 |`Rotation`|Cosseno do ângulo de rotação|Seno do ângulo de rotação|Negativo seno do ângulo de rotação|Cosseno do ângulo de rotação|  
-|**dimensionamento**|Componente de escala horizontal|nada|nada|Componente de escala vertical|  
-|**Distorcer**|nada|Constante proporção horizontal|Constante proporção vertical|nada|  
-|**Reflexão**|Componente de reflexão horizontal|nada|nada|Componente de reflexão vertical|  
+|`Scaling`|Componente de colocação em escala horizontal|nada|nada|Componente de colocação em escala vertical|  
+|`Shear`|nada|Constante proporção horizontal|Constante proporção vertical|nada|  
+|`Reflection`|Componente de reflexão horizontal|nada|nada|Componente de reflexão vertical|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** wingdi  

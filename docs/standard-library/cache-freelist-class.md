@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8478490914a6f9049cd54ec78c8de8a1e519f36f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3d3902d900e0dad5ec3e335e9c3424d58ee2674
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845668"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960411"
 ---
 # <a name="cachefreelist-class"></a>Classe cache_freelist
 
@@ -42,14 +42,14 @@ class cache_freelist
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`Sz`|O número de elementos na matriz a serem alocados.|
-|`Max`|A classe max que representa o tamanho máximo da lista livre. Isso pode ser [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) ou [max_variable_size](../standard-library/max-variable-size-class.md).|
+|*SZ*|O número de elementos na matriz a serem alocados.|
+|*Max*|A classe max que representa o tamanho máximo da lista livre. Isso pode ser [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) ou [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo cache_freelist mantém uma lista livre de blocos de memória do tamanho `Sz`. Quando a lista livre estiver cheia, ele usará `operator delete` para desalocar blocos de memória. Quando a lista livre estiver vazia, ela usará `operator new` para alocar novos blocos de memória. O tamanho máximo da lista livre é determinado pela classe de classe máxima passado no parâmetro `Max`.
+A classe de modelo cache_freelist mantém uma lista livre de blocos de memória de tamanho *Sz*. Quando a lista livre estiver cheia, ele usa **operador delete** desalocar memória bloqueia. Quando a lista livre estiver vazia, ele usa **operador new** para alocar novos blocos de memória. O tamanho máximo da lista livre é determinado pela classe classe max passada a *máx* parâmetro.
 
-Cada bloco de memória contém `Sz` bytes de memória utilizável e os dados que `operator new` e `operator delete` exigem.
+Cada bloco de memória contém *Sz* bytes de memória utilizável e os dados que **operador new** e **operador delete** exigem.
 
 ### <a name="constructors"></a>Construtores
 
@@ -82,7 +82,7 @@ void *allocate(std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`count`|O número de elementos na matriz a serem alocados.|
+|*count*|O número de elementos na matriz a serem alocados.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -112,8 +112,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`ptr`|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
-|`count`|O número de objetos a serem desalocados do armazenamento.|
+|*ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
+|*count*|O número de objetos a serem desalocados do armazenamento.|
 
 ### <a name="remarks"></a>Comentários
 

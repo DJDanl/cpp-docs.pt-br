@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 217be53a78a65a0f617438127b922b20c950853d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d90b188b99f4f0711635cc47c03383617b9046e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371153"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886005"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Conversão de tipo de objetos de classe MFC
-Macros de conversão de tipo fornecem uma maneira de converter um determinado ponteiro para um ponteiro que aponta para um objeto de classe específica, com ou sem verificar se a conversão é legal.  
+Macros de conversão de tipo fornecem uma maneira de converter um ponteiro especificado para um ponteiro que aponta para um objeto de classe específica, com ou sem verificar se a conversão é legal.  
   
  A tabela a seguir lista as macros de conversão de tipo do MFC.  
   
@@ -36,30 +36,30 @@ Macros de conversão de tipo fornecem uma maneira de converter um determinado po
   
 |||  
 |-|-|  
-|[DYNAMIC_DOWNCAST](#dynamic_downcast)|Converte um ponteiro para um ponteiro para um objeto de classe ao verificar se a conversão é legal.|  
-|[STATIC_DOWNCAST](#static_downcast)|Converte um ponteiro para um objeto de uma classe para um ponteiro de um tipo relacionado. Em uma compilação de depuração, faz com que um **ASSERT** se o objeto não é um "tipo de" o tipo de destino.|  
+|[DYNAMIC_DOWNCAST](#dynamic_downcast)|Converte um ponteiro para um ponteiro para um objeto da classe durante a verificação para ver se a conversão é legal.|  
+|[STATIC_DOWNCAST](#static_downcast)|Converte um ponteiro para um objeto de uma classe em um ponteiro de um tipo relacionado. Em uma compilação de depuração faz com que uma declaração se o objeto não é um "tipo de" o tipo de destino.|  
   
 ##  <a name="dynamic_downcast"></a>  DYNAMIC_DOWNCAST  
- Fornece uma maneira útil de converter um ponteiro para um ponteiro para um objeto de classe ao verificar se a conversão é legal.  
+ Fornece uma maneira útil para converter um ponteiro para um ponteiro para um objeto da classe durante a verificação para ver se a conversão é legal.  
   
 ```   
 DYNAMIC_DOWNCAST(class, pointer)  
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `class`  
+ *class*  
  O nome de uma classe.  
   
- `pointer`  
- Um ponteiro para ser convertido em um ponteiro para um objeto do tipo `class`.  
+ *pointer*  
+ Um ponteiro para ser convertido em um ponteiro para um objeto do tipo *classe*.  
   
 ### <a name="remarks"></a>Comentários  
- A macro será convertido a `pointer` um ponteiro para um objeto de parâmetro a `class` tipo do parâmetro.  
+ A macro será convertido a *ponteiro* parâmetro em um ponteiro para um objeto do *classe* tipo do parâmetro.  
   
- Se o objeto referenciado pelo ponteiro é um "tipo de" classe identificado, a macro retorna o ponteiro apropriado. Se não for uma conversão legal, a macro retorna **nulo**.  
+ Se o objeto referenciado pelo ponteiro é um "tipo de" classe identificado, a macro retorna o ponteiro apropriado. Se não for uma conversão legal, a macro retorna NULL.  
   
 ##  <a name="static_downcast"></a>  STATIC_DOWNCAST  
- Conversões *pobject* para um ponteiro para um *class_name* objeto.  
+ Conversões *pobject* em um ponteiro para um *class_name* objeto.  
   
 ```   
 STATIC_DOWNCAST(class_name, pobject)   
@@ -67,21 +67,21 @@ STATIC_DOWNCAST(class_name, pobject)
   
 ### <a name="parameters"></a>Parâmetros  
  *class_name*  
- O nome da classe que está sendo convertido em.  
+ O nome da classe que está sendo convertido.  
   
  *pobject*  
- O ponteiro para ser convertido em um ponteiro para um *class_name* objeto.  
+ O ponteiro a ser convertido em um ponteiro para um *class_name* objeto.  
   
 ### <a name="remarks"></a>Comentários  
- *pobject* devem ser **nulo**, ou apontar para um objeto de uma classe que deriva diretamente ou indiretamente, de *class_name*. Em compilações de seu aplicativo com o **Debug** símbolo do pré-processador definido, a macro será **ASSERT** se *pobject* não é **nulo**, ou Se ele aponta para um objeto que não é um "tipo de" da classe especificada no *class_name* parâmetro (consulte [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). Não- **Debug** compilações, a macro executa a conversão sem nenhuma verificação de tipo.  
+ *pobject* deve ser NULL ou apontar para um objeto de uma classe que deriva diretamente ou indiretamente, de *class_name*. Em compilações do seu aplicativo com o símbolo do pré-processador debug definido, a macro DECLARARÁ se *pobject* não for nulo, ou se ele apontar para um objeto que não é um "tipo de" da classe especificada no *class_name*parâmetro (consulte [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). Em não - **Debug** compilações, a macro executa a conversão sem nenhuma verificação de tipo.  
   
- A classe especificada no *class_name* parâmetro deve ser derivado de `CObject` e deve usar o `DECLARE_DYNAMIC` e `IMPLEMENT_DYNAMIC`, o `DECLARE_DYNCREATE` e `IMPLEMENT_DYNCREATE`, ou o `DECLARE_SERIAL` e `IMPLEMENT_SERIAL`macros conforme explicado no artigo [classe CObject: derivando uma classe de CObject](../../mfc/deriving-a-class-from-cobject.md).  
+ A classe especificada na *class_name* parâmetro deve ser derivado de `CObject` e deve usar o DECLARE_DYNAMIC e IMPLEMENT_DYNAMIC, o DECLARE_DYNCREATE e IMPLEMENT_DYNCREATE, ou o DECLARE_SERIAL e IMPLEMENT_ Macros SERIAL como explicado no artigo [classe CObject: derivando uma classe de CObject](../../mfc/deriving-a-class-from-cobject.md).  
   
- Por exemplo, você pode converter um ponteiro para `CMyDoc`, chamado `pMyDoc`, com um ponteiro para **CDocument** usando esta expressão:  
+ Por exemplo, você pode converter um ponteiro para `CMyDoc`, chamado `pMyDoc`, em um ponteiro para `CDocument` usando esta expressão:  
   
  [!code-cpp[NVC_MFCDocView#197](../../mfc/codesnippet/cpp/type-casting-of-mfc-class-objects_1.cpp)]  
   
- Se `pMyDoc` não aponta para um objeto derivado direta ou indiretamente de **CDocument**, a macro será **ASSERT**.  
+ Se `pMyDoc` não aponta para um objeto derivado direta ou indiretamente de `CDocument`, DECLARARÁ a macro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)

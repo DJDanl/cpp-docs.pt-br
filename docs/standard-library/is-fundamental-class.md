@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e210af223ffe6d3b8e0766adaaf539f0bb97f73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63b2c11b7a5a8d48e3fe068807b641489c6aa323
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844361"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957354"
 ---
 # <a name="isfundamental-class"></a>Classe is_fundamental
 
@@ -37,11 +37,11 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Ty` O tipo de consulta.
+*Ty* o tipo de consulta.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo `Ty` for um tipo fundamental, ou seja, `void`, um tipo integral, um tipo de ponto flutuante ou uma forma `cv-qualified` de algum deles; caso contrário, será falsa.
+Uma instância do predicado de tipo será verdadeira se o tipo *Ty* é um tipo fundamental, ou seja, **void**, um tipo integral, um flutuante tipo de ponto ou um `cv-qualified` forma de um deles, caso contrário, será falsa.
 
 ## <a name="example"></a>Exemplo
 

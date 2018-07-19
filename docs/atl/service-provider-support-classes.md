@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19dc0b9b22c35f29da43d17ecd3d6e53d23e562f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1bb3d3436e9e5b1ad20c314817372ab632581f3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361597"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957883"
 ---
 # <a name="service-provider-support-classes"></a>Classes de suporte do provedor de serviço
-A seguinte classe fornece suporte para provedores de serviços:  
+A seguinte classe oferece suporte para provedores de serviço:  
   
 -   [IServiceProviderImpl](../atl/reference/iserviceproviderimpl-class.md) localiza um serviço especificado pelo seu GUID e retorna o ponteiro de interface para a interface solicitada no serviço.  
   

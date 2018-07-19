@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d6c93bfc6525840343c64b8cd804ddb65f68dd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d259040ec5f4d7f1148b9a782479b6db8617602
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860262"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954624"
 ---
 # <a name="rawstorageiterator-class"></a>Classe raw_storage_iterator
 
@@ -40,13 +40,13 @@ class raw_storage_iterator
 
 ### <a name="parameters"></a>Parâmetros
 
-`OutputIterator` Especifica o iterador de saída para o objeto que está sendo armazenado.
+*OutputIterator* Especifica o iterador de saída para o objeto que está sendo armazenado.
 
-*Tipo de* o tipo de objeto para o qual o armazenamento é alocado.
+*Tipo* o tipo de objeto para o qual o armazenamento é alocado.
 
 ## <a name="remarks"></a>Comentários
 
-A classe descreve um iterador de saída que constrói objetos do tipo **Type** na sequência gerada. Um objeto da classe `raw_storage_iterator`\< **ForwardIterator**, **Type**> acessa o armazenamento por meio de um objeto de iterador de avanço, da classe **ForwardIterator**, especificada ao construir o objeto. Para um primeiro objeto da classe **ForwardIterator**, a expressão **&\*first** deve designar o armazenamento não construído para o próximo objeto (do tipo **Type**) na sequência gerada.
+A classe descreve um iterador de saída que constrói objetos do tipo `Type` na sequência gerada. Um objeto da classe `raw_storage_iterator` \< **ForwardIterator**, **tipo**> acessa o armazenamento por meio de um objeto de iterador de avanço, da classe `ForwardIterator`, que você especifica quando você Construa o objeto. Para um objeto de primeira classe `ForwardIterator`, a expressão  **& \*primeiro** deve designar o armazenamento para o próximo objeto (do tipo `Type`) na sequência gerada.
 
 Essa classe de adaptador é usada quando é necessário separar a alocação de memória e a construção de objetos. O `raw_storage_iterator` pode ser usado para copiar objetos no armazenamento não inicializado, tal como memória alocada usando a função `malloc`.
 
@@ -89,7 +89,7 @@ typedef Type element_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo do parâmetro de modelo de classe raw_storage_iterator **Type**.
+O tipo é um sinônimo do parâmetro de modelo de classe raw_storage_iterator `Type`.
 
 ## <a name="iter_type"></a>  raw_storage_iterator::iter_type
 
@@ -101,7 +101,7 @@ typedef ForwardIterator iter_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo do parâmetro de modelo **ForwardIterator**.
+O tipo é um sinônimo do parâmetro de modelo `ForwardIterator`.
 
 ## <a name="op_star"></a>  raw_storage_iterator::operator*
 
@@ -117,7 +117,7 @@ Uma referência ao iterador de armazenamento bruto
 
 ### <a name="remarks"></a>Comentários
 
-Os requisitos para um **ForwardIterator** que o iterador de armazenamento bruto deve satisfazer exigem somente que a expressão \* *ii* = *t* seja válida e que ela não diga nada sobre o **operator** ou `operator=` por conta própria. Os operadores de membro nesta implementação retornam **\*this**, de modo que [operator=](#op_eq)( **constType**&) pode executar o repositório real em uma expressão, como \* *ptr* = `val`.
+Os requisitos para um `ForwardIterator` são que o raw iterador de armazenamento deve satisfazer exigem somente que a expressão \* *ii* = *t* seja válida e que ela não diz nada sobre o **operador** ou o `operator=` por conta própria. Os operadores de membro nesta implementação retorna  **\*isso**, de modo que [operador =](#op_eq)(**constType**&) pode executar o repositório real em uma expressão como \* *ptr* = `val`.
 
 ### <a name="example"></a>Exemplo
 
@@ -181,7 +181,7 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 
 ### <a name="parameters"></a>Parâmetros
 
-`val` O valor do objeto do tipo **tipo** a ser inserido na memória.
+`val` O valor do objeto do tipo `Type` a ser inserido na memória.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -189,7 +189,7 @@ O operador insere `val` na memória e, em seguida, retorna uma referência ao it
 
 ### <a name="remarks"></a>Comentários
 
-Os requisitos para um estado **ForwardIterator** que o iterador de armazenamento bruto deve satisfazer exigem somente que a expressão \* *ii* = *t* seja válida e que ela não diga nada sobre o **operator** ou `operator=` por conta própria. Esses operadores de membros retornam **\*this**.
+Os requisitos para um `ForwardIterator` estado que o iterador de armazenamento bruto deve satisfazer exigem somente que a expressão \* *ii* = *t* seja válida e que ela não diz nada sobre o **operador** ou o `operator=` por conta própria. Esses operadores de membros retornam **\*this**.
 
 O operador de atribuição constrói o próximo objeto na sequência da saída usando o valor de iterador armazenado primeiro, avaliando a expressão de novo posicionamento **new** ( ( `void` \*)&\* **first**) **Type**( `val`).
 
@@ -258,13 +258,13 @@ Um iterador de armazenamento bruto ou uma referência a um iterador de armazenam
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro operador eventualmente tenta extrair e armazenar um objeto do tipo **CharType** do fluxo de entrada associado. O segundo operador faz uma cópia do objeto, incrementa o objeto e, em seguida, retorna a cópia.
+O primeiro operador eventualmente tenta extrair e armazenar um objeto do tipo `CharType` do fluxo de entrada associado. O segundo operador faz uma cópia do objeto, incrementa o objeto e, em seguida, retorna a cópia.
 
 O primeiro operador pré-incremento incrementa o objeto de iterador de saída armazenado e retorna **\*this**.
 
 O segundo operador pós-incremento faz uma cópia de **\*this**, incrementa o objeto de iterador de saída e retorna a cópia.
 
-O construtor armazena **first** como o objeto de iterador de saída.
+O construtor armazena `first` como o objeto de iterador de saída.
 
 ### <a name="example"></a>Exemplo
 
@@ -308,7 +308,7 @@ explicit raw_storage_iterator(ForwardIterator first);
 
 ### <a name="parameters"></a>Parâmetros
 
-`first` O iterador de avanço é subjacentes a `raw_storage_iterator` do objeto sendo construído.
+*primeira* o iterador de avanço sustentar a `raw_storage_iterator` do objeto que está sendo construído.
 
 ### <a name="example"></a>Exemplo
 

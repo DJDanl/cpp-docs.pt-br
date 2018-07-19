@@ -7,12 +7,12 @@ f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-ms.openlocfilehash: 356c98ce5c93d1e05a583fc30c4758c5d15d7529
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5795d146714c6eb00902518347138a98574679a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858153"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960642"
 ---
 # <a name="ltlimitsgt-enums"></a>Enumerações &lt;limits&gt;
 
@@ -35,11 +35,11 @@ enum float_denorm_style {
 
 A enumeração retornará:
 
-- **denorm_indeterminate** se a presença ou ausência de formas desnormalizadas não puder ser determinada no momento da conversão.
+- `denorm_indeterminate` Se a presença ou ausência de formas desnormalizadas não puder ser determinada em tempo de tradução.
 
-- **denorm_absent** se formas desnormalizadas estiverem ausentes.
+- `denorm_absent` Se formas desnormalizadas estiverem ausentes.
 
-- **denorm_present** se formas desnormalizadas estiverem presentes.
+- `denorm_present` Se formas desnormalizadas estiverem presentes.
 
 ### <a name="example"></a>Exemplo
 
@@ -62,15 +62,15 @@ enum float_round_style {
 
 A enumeração retornará:
 
-- **round_indeterminate** se o método de arredondamento não puder ser determinado.
+- `round_indeterminate` Se o método de arredondamento não puder ser determinado.
 
-- **round_toward_zero** se o arredondamento for feito em direção a zero.
+- `round_toward_zero` Se o arredondamento em direção a zero.
 
-- **round_to_nearest** se o arredondamento for feito para o inteiro mais próximo.
+- `round_to_nearest` Se o arredondamento para o inteiro mais próximo.
 
-- **round_toward_infinity** se o arredondamento for feito se distanciando de zero.
+- `round_toward_infinity` Se o arredondamento diferente de zero.
 
-- **round_toward_neg_infinity** se o arredondamento for feito para o inteiro mais negativo.
+- `round_toward_neg_infinity` Se o arredondamento para o inteiro mais negativo.
 
 ### <a name="example"></a>Exemplo
 

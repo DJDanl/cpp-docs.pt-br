@@ -1,5 +1,5 @@
 ---
-title: Adicionando um objeto ATL simples | Microsoft Docs
+title: Adição de um objeto Simple da ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,35 +18,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 229866620826581214d5fb0395fa2bdf4f0c8574
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cedb2da5ede01f4efee81ed4336d8a1ad4178997
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357050"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956187"
 ---
-# <a name="adding-an-atl-simple-object"></a>Adicionar um objeto Simple de ATL
-Para adicionar um objeto ATL (Active Template Library) para seu projeto, o projeto deve ter sido criado como um aplicativo ATL ou como um aplicativo MFC que contém suporte ATL. Você pode usar o [Assistente de projeto de ATL](../../atl/reference/atl-project-wizard.md) para criar um aplicativo ATL, ou [adicionar um objeto ATL ao seu aplicativo do MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar o suporte ATL para um aplicativo do MFC.  
+# <a name="adding-an-atl-simple-object"></a>Adição de um objeto Simple da ATL
+Para adicionar um objeto ATL (Active Template Library) ao seu projeto, seu projeto deve ter sido criado como um aplicativo ATL ou como um aplicativo do MFC que contém suporte ATL. Use o [Assistente de Projeto ATL](../../atl/reference/atl-project-wizard.md) para criar um aplicativo ATL ou [Adicionar um objeto ATL ao aplicativo MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar o suporte à ATL para um aplicativo MFC.  
   
- Você pode definir interfaces COM para o novo objeto ATL ao primeiro criá-lo ou adicioná-los posteriormente usando o [implementar Interface](../../ide/implement-interface-wizard.md) comando no menu de atalho de modo de exibição de classe.  
+ Você pode definir interfaces COM para seu novo objeto ATL ao primeiro criá-lo ou adicioná-los posteriormente usando o [implementar Interface](../../ide/implement-interface-wizard.md) comando no menu de atalho do modo de exibição de classe.  
   
-### <a name="to-add-an-atl-simple-object-to-your-atl-com-project"></a>Para adicionar um objeto ATL simples ao seu projeto COM da ATL  
+### <a name="to-add-an-atl-simple-object-to-your-atl-com-project"></a>Para adicionar um objeto simple da ATL ao seu projeto de ATL COM  
   
-1.  No **Solution Explorer** ou [exibição de classe](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), clique no nome do projeto ao qual você deseja adicionar o objeto ATL simples.  
+1.  Em ambos **Gerenciador de soluções** ou [exibição de classe](/visualstudio/ide/viewing-the-structure-of-code), clique no nome do projeto ao qual você deseja adicionar objeto ATL simples.  
   
-2.  No menu de atalho, clique em **adicionar**e, em seguida, clique em **Adicionar classe**.  
+2.  No menu de atalho, clique em **Adicionar** e, em seguida, em **Adicionar Classe**.  
   
-3.  No [Adicionar classe](../../ide/add-class-dialog-box.md) caixa de diálogo, no painel modelos, clique em **objeto ATL simples**e, em seguida, clique em **abrir** para exibir o [Assistente de objeto ATL simples](../../atl/reference/atl-simple-object-wizard.md).  
+3.  No [Add Class](../../ide/add-class-dialog-box.md) caixa de diálogo, no painel modelos, clique em **ATL Simple Object**e, em seguida, clique em **abrir** para exibir o [ATL Simple Object Wizard](../../atl/reference/atl-simple-object-wizard.md).  
   
-4.  Defina opções adicionais para o seu projeto no [opções](../../atl/reference/options-atl-simple-object-wizard.md) página do Assistente de objeto ATL simples.  
+4.  Definir opções adicionais para seu projeto na [opções](../../atl/reference/options-atl-simple-object-wizard.md) página do assistente ATL Simple Object.  
   
 5.  Clique em **concluir** para adicionar o objeto ao seu projeto.  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)   
  [Adicionando uma nova Interface em um projeto ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
- [Adição de pontos de Conexão a um objeto](../../atl/adding-connection-points-to-an-object.md)   
+ [Adicionando pontos de Conexão a um objeto](../../atl/adding-connection-points-to-an-object.md)   
  [Adicionando um método](../../ide/adding-a-method-visual-cpp.md)   
- [Classe do MFC](../../mfc/reference/adding-an-mfc-class.md)   
+ [Classe MFC](../../mfc/reference/adding-an-mfc-class.md)   
  [Adicionando uma classe do C++ genérica](../../ide/adding-a-generic-cpp-class.md)
 

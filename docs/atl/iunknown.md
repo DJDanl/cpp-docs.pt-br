@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c02018ee3cefb1b98c2df850d44578cf3a092c64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d832d2978bf9db82b290d77b236fea1c9bcada58
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355833"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953036"
 ---
 # <a name="iunknown"></a>IUnknown
-[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) é a interface base de outra interface COM.  Essa interface define três métodos: [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521), [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), e [versão](http://msdn.microsoft.com/library/windows/desktop/ms682317). [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) permite que um usuário de interface solicitar que o objeto para um ponteiro para outro de suas interfaces. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [versão](http://msdn.microsoft.com/library/windows/desktop/ms682317) implementar a interface de contagem de referência.  
+[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) é a interface base de todas as outras interfaces COM.  Essa interface define três métodos: [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521), [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), e [versão](http://msdn.microsoft.com/library/windows/desktop/ms682317). [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) permite que um usuário da interface peça o objeto de um ponteiro para outro de suas interfaces. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [versão](http://msdn.microsoft.com/library/windows/desktop/ms682317) implementar a interface de contagem de referência.  
   
 ## <a name="see-also"></a>Consulte também  
- [Introdução ao COM](../atl/introduction-to-com.md)   
- [IUnknown e herança de Interface](http://msdn.microsoft.com/library/windows/desktop/ms692713)
+ [Introdução a COM](../atl/introduction-to-com.md)   
+ [IUnknown e herança da Interface](http://msdn.microsoft.com/library/windows/desktop/ms692713)
 

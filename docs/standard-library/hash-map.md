@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e3948e8697825af6cdd785117647943b33bac0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: caae1a52c36c5d21e55e90a821b280f2face7ede
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850047"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959768"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -51,7 +51,7 @@ Define as classes de modelo do contêiner hash_map e hash_multimap e seus modelo
 
 |Classe|Descrição|
 |-|-|
-|[Classe hash_compare](hash-compare-class.md)|Descreve um objeto que pode ser usado por qualquer um dos contêineres associativos de hash — hash_map, hash_multimap, hash_set ou hash_multiset — como um objeto de parâmetro **Traits** padrão para ordenar e fazer o hash dos elementos que eles contêm.|
+|[Classe hash_compare](hash-compare-class.md)|Descreve um objeto que pode ser usado por qualquer um dos contêineres associativos de hash — hash_map, hash_multimap, hash_set ou hash_multiset — como um padrão `Traits` objeto de parâmetro para ordenar e fazer o hash dos elementos que eles contêm.|
 |[Classe value_compare](value-compare-class.md)|Fornece um objeto de função que pode comparar os elementos de um hash_map comparando os valores de suas chaves para determinar sua ordem relativa no hash_map.|
 |[Classe hash_map](hash-map-class.md)|Usado para o armazenamento e a recuperação rápida de dados de uma coleção em que cada elemento é um par que tem uma chave de classificação cujo valor é único, bem como um valor de dados associado.|
 |[Classe hash_multimap](hash-multimap-class.md)|Usado para o armazenamento e a recuperação rápida de dados de uma coleção em que cada elemento é um par que tem uma chave de classificação cujo valor não precisa ser único e ser um valor de dados associado.|
@@ -65,5 +65,5 @@ Define as classes de modelo do contêiner hash_map e hash_multimap e seus modelo
 ## <a name="see-also"></a>Consulte também
 
 [Referência de arquivos de cabeçalho](cpp-standard-library-header-files.md)
-[segurança de threads na biblioteca padrão C++](thread-safety-in-the-cpp-standard-library.md)
+[Thread-Safe na biblioteca padrão C++](thread-safety-in-the-cpp-standard-library.md)
 [referência da biblioteca padrão C++](cpp-standard-library-reference.md)

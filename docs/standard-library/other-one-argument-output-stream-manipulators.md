@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cd9c9f643b6766dfca4f008f14c9d470a5bcc34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30523a7db07dba1359af59c9fcc988feb0e4ec18
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853317"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953820"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Outros Manipuladores de Fluxo de Saída de um Argumento
 
-O exemplo a seguir usa uma classe `money`, que é um tipo `long`. O manipulador `setpic` anexa uma cadeia de caracteres de “imagem” de formatação à classe que pode ser usada pelo operador de inserção de fluxo sobrecarregado da classe `money`. A cadeia de caracteres de imagem é armazenada como uma variável estática na classe `money` em vez de como membro de dados de uma classe de fluxo, portanto não é necessário derivar uma nova classe de fluxo de saída.
+O exemplo a seguir usa uma classe `money`, que é um **longo** tipo. O manipulador `setpic` anexa uma cadeia de caracteres de “imagem” de formatação à classe que pode ser usada pelo operador de inserção de fluxo sobrecarregado da classe `money`. A cadeia de caracteres de imagem é armazenada como uma variável estática na classe `money` em vez de como membro de dados de uma classe de fluxo, portanto não é necessário derivar uma nova classe de fluxo de saída.
 
 ## <a name="example"></a>Exemplo
 

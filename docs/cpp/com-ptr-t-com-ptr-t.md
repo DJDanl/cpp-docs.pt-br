@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d47cfc48a7d73ca1159c4a1862281c01c16cc11
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413928"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939065"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Seção específica da Microsoft**  
@@ -143,32 +143,32 @@ explicit _com_ptr_t(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `pInterface`  
+ *pInterface*  
  Um ponteiro de interface bruto.  
   
- `fAddRef`  
- Se **true**, `AddRef` é chamado para incrementar a contagem de referência do ponteiro de interface encapsulado.  
+ *faddref=false&lt;1}*  
+ Se for TRUE, `AddRef` é chamado para aumentar a contagem de referência de ponteiro de interface encapsulado.  
   
  *CP*  
  Um objeto `_com_ptr_t`.  
   
- `p`  
+ *p*  
  Um ponteiro de interface bruto, sendo seu tipo diferente do tipo de ponteiro inteligente desse objeto `_com_ptr_t`.  
   
  *varSrc*  
  Um objeto `_variant_t`.  
   
- `clsid`  
- O **CLSID** de coclass.  
+ *clsid*  
+ O `CLSID` de coclass.  
   
- `dwClsContext`  
+ *dwClsContext*  
  Contexto para execução do código executável.  
   
  *lpcStr*  
- Uma cadeia de caracteres multibyte que mantém a um **CLSID** (começando com "**{**") ou um **ProgID**.  
+ Uma cadeia de caracteres multibyte que contém um `CLSID` (começando com "**{**") ou um `ProgID`.  
   
- `pOuter`  
- Externo desconhecido para [agregação](http://msdn.microsoft.com/library/windows/desktop/ms686558).  
+ *pOuter*  
+ O externo desconhecido para [agregação](http://msdn.microsoft.com/library/windows/desktop/ms686558).  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

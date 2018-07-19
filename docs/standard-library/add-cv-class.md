@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9825b690336acc8e93b0d404cc8335e5b27404b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b138424f3394c940307b422f590648c661d037d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840583"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958137"
 ---
 # <a name="addcv-class"></a>Classe add_cv
 
-Cria o tipo const volátil do tipo.
+Faz **const volátil** tipo de tipo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,11 +40,11 @@ using add_cv_t = typename add_cv<T>::type;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T* digite para modificar.
+*T* para modificar o tipo.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do tipo modificado `add_cv<T>` tem um typedef do membro `type` equivalente a *T* modificado por [add_volatile](../standard-library/add-volatile-class.md) e [add_const](../standard-library/add-const-class.md), a menos que *T* já tenha os qualificadores cv, seja uma referência ou uma função.
+Uma instância do tipo modificado `add_cv<T>` tem uma `type` membro **typedef** equivalente a *T* modificado por [add_volatile](../standard-library/add-volatile-class.md) e [ add_const](../standard-library/add-const-class.md), a menos que *T* já tem os qualificadores cv, é uma referência ou é uma função.
 
 O tipo auxiliar `add_cv_t<T>` é um atalho para acessar o typedef `type` do membro `add_cv<T>`.
 

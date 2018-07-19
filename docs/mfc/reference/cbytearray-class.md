@@ -52,15 +52,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fa82ea58cfd5d64f6aa825fe08264cdd17c1985
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 22e138b586070a0e47ffa399d2c76d086fd4b951
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335848"
 ---
 # <a name="cbytearray-class"></a>Classe CByteArray
-Oferece suporte a dinâmicos matrizes de bytes.  
+Dá suporte a matrizes dinâmicas de bytes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,7 +69,7 @@ class CByteArray : public CObject
 ```  
   
 ## <a name="members"></a>Membros  
- As funções de membro de `CByteArray` são semelhantes às funções de membro da classe [CObArray](../../mfc/reference/cobarray-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CObArray` para obter a função específica de membro. Sempre que você vê um `CObject` ponteiro como um parâmetro de função ou o valor de retorno, substitua um **bytes**.  
+ As funções membro da `CByteArray` são semelhantes às funções de membro da classe [CObArray](../../mfc/reference/cobarray-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CObArray` para obter a função específica de membro. Ao ver um `CObject` ponteiro como um parâmetro de função ou um valor de retorno, substitua um BYTE.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -90,11 +90,11 @@ class CByteArray : public CObject
 |[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Inclui um elemento ao final da matriz; aumenta a matriz quando necessário.|  
 |[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Acrescenta outra matriz à matriz; aumenta a matriz quando necessário.|  
 |[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|Copia outra matriz à matriz; aumenta a matriz quando necessário.|  
-|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Retorna uma referência temporária para os bytes dentro da matriz.|  
+|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Retorna uma referência temporária para o byte dentro da matriz.|  
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libera toda memória não usada acima do limite superior atual.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Retorna o valor a um determinado índice.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Obtém o número de elementos nesta matriz.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Permite acesso aos elementos na matriz. Pode ser **nulo**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Permite acesso aos elementos na matriz. Pode ser NULL.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Obtém o número de elementos nesta matriz.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Retorna o maior índice válido.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Insere um elemento (ou todos os elementos em outra matriz) em um índice especificado.|  
@@ -112,12 +112,12 @@ class CByteArray : public CObject
 |[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Define ou obtém o elemento no índice especificado.|  
   
 ## <a name="remarks"></a>Comentários  
- `CByteArray` incorpora a macro IMPLEMENT_SERIAL para dar suporte à serialização e despejo de seus elementos. Se uma matriz de bytes é armazenada para um arquivo, com a inserção sobrecarregada ( **<<**) operador ou com o `Serialize` função de membro, cada elemento é, por sua vez, serializado.  
+ `CByteArray` incorpora a macro IMPLEMENT_SERIAL para dar suporte à serialização e despejo de seus elementos. Se uma matriz de bytes é armazenada em um arquivo, com a inserção sobrecarregada ( **<<**) operador ou com o `Serialize` função de membro, cada elemento é, por sua vez, serializado.  
   
 > [!NOTE]
 >  Antes de usar uma matriz, utilize `SetSize` para estabelecer seu tamanho e alocar memória para ela. Se `SetSize` não for utilizado, incluir elementos à matriz fará com que ela seja frequentemente realocada e copiada. Realocações e cópias frequentes são ineficientes e podem fragmentar a memória.  
   
- Se você precisar depurar saída dos elementos individuais da matriz, você deve definir a profundidade do `CDumpContext` objeto como 1 ou maior.  
+ Se você precisa depurar a saída de elementos individuais na matriz, você deve definir a profundidade do `CDumpContext` objeto a ser 1 ou maior.  
   
  Para obter mais informações sobre como usar `CByteArray`, consulte o artigo [coleções](../../mfc/collections.md).  
   
@@ -127,9 +127,9 @@ class CByteArray : public CObject
  `CByteArray`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxcoll.h  
+ **Cabeçalho:** & amp;lt;1}afxcoll.h  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CObject](../../mfc/reference/cobject-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe CObArray](../../mfc/reference/cobarray-class.md)

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c5c5bdc1e944483071f0f1dcd53c3bc93eb6ed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e540d6fe4c00772af01b187d24efae18fd62357f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842931"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957552"
 ---
 # <a name="isnothrowcopyassignable-class"></a>Classe is_nothrow_copy_assignable
 
@@ -36,11 +36,11 @@ struct is_nothrow_copy_assignable;
 
 ### <a name="parameters"></a>Parâmetros
 
-`T` O tipo de consulta.
+*T* o tipo de consulta.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira para um tipo que pode ser referenciado `T` em que `is_nothrow_assignable<T&, const T&>` for verdadeiro; caso contrário, será falsa.
+Uma instância do predicado de tipo se aplica a um tipo pode ser referenciado *T* onde `is_nothrow_assignable<T&, const T&>` contém true; caso contrário, será falsa.
 
 ## <a name="requirements"></a>Requisitos
 

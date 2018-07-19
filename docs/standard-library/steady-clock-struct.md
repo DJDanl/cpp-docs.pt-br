@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5445379597c4fefcd657303a05c33b6509d54d2e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 53f4deb0bfe9439011f75cd22d0d52b74dae9c1f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569892"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959719"
 ---
 # <a name="steadyclock-struct"></a>Struct steady_clock
 
-Representa um *constante* relógio.
+Representa uma *constante* relógio.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,7 +33,7 @@ struct steady_clock;
 
 ## <a name="remarks"></a>Comentários
 
-No Windows, `steady_clock` encapsula o `QueryPerformanceCounter` função.
+No Windows, `steady_clock` encapsula a `QueryPerformanceCounter` função.
 
 Um relógio será *monotônico* se o valor retornado por uma primeira chamada a `now` for sempre menor ou igual ao valor retornado por uma chamada posterior a `now`. Um relógio será *estável* se ele for *monotônico* e se o tempo entre os tiques do relógio for constante.
 
@@ -43,22 +43,22 @@ Um relógio será *monotônico* se o valor retornado por uma primeira chamada a 
 
 |Nome|Descrição|
 |----------|-----------------|
-|`steady_clock::duration`|Um sinônimo para `nanoseconds`, definido em \<chrono >.|
-|`steady_clock::period`|Um sinônimo para `nano`, definido em \<taxa >.|
-|`steady_clock::rep`|Um sinônimo para **longo** **longo**, o tipo que é usado para representar o número de tiques do relógio na instanciação independente de `duration`.|
+|`steady_clock::duration`|Um sinônimo de `nanoseconds`, definida em \<chrono >.|
+|`steady_clock::period`|Um sinônimo de `nano`, definida em \<taxa >.|
+|`steady_clock::rep`|Um sinônimo de **longo** **longo**, o tipo que é usado para representar o número de tiques do relógio na instanciação independente de `duration`.|
 |`steady_clock::time_point`|Um sinônimo de `chrono::time_point<steady_clock>`.|
 
 ## <a name="public-functions"></a>Funções públicas
 
 |Função|Descrição|
 |--------------|-----------------|
-|`now`|Retorna a hora atual como uma `time_point` valor.|
+|`now`|Retorna a hora atual como um `time_point` valor.|
 
 ## <a name="public-constants"></a>Constantes públicas
 
 |Nome|Descrição|
 |----------|-----------------|
-|`steady_clock::is_steady`|Contém `true`. Um `steady_clock` é *steady*.|
+|`steady_clock::is_steady`|Mantém **verdadeira**. Um `steady_clock` é *steady*.|
 
 ## <a name="requirements"></a>Requisitos
 

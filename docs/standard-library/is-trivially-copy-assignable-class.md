@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c36808d375dd774286c3663a02fdc308cc4b2790
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f7c4c748d7328f534aebfb2133c72635bbdc36f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857500"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953960"
 ---
 # <a name="istriviallycopyassignable-class"></a>Classe is_trivially_copy_assignable
 
@@ -36,13 +36,13 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Parâmetros
 
-`T` O tipo de consulta.
+*T* o tipo de consulta.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo `T` for uma classe que tem um operador de atribuição de cópia trivial; caso contrário, será falsa.
+Uma instância do predicado de tipo será verdadeira se o tipo *T* é uma classe que tem um cópia trivial operador de atribuição, caso contrário, será falsa.
 
-Um construtor de atribuição para uma classe `T` será trivial se for implicitamente fornecido, a classe `T` não tiver funções virtuais, a classe `T` não tiver bases virtuais, as classes de todos os membros de dados não estáticos de tipo de classe tiverem operadores de atribuição triviais e as classes de todos os membros de dados não estáticos de matriz de tipo de classe tiverem operadores de atribuição trivial.
+Um construtor de atribuição para uma classe *T* será trivial se for implicitamente fornecido, a classe *T* não tiver funções virtuais, a classe *T* não tiver bases virtuais, as classes de todos os membros de dados não estáticos do tipo de classe tiverem operadores de atribuição triviais e as classes de todos os membros de dados não estáticos da matriz de tipo de classe tiverem operadores de atribuição trivial.
 
 ## <a name="requirements"></a>Requisitos
 

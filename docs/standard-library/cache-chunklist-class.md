@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71b6a45dbdb882cc666c72296938f970bba52ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 808340df89bb548fee57604f25409c117933cc4e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844940"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953254"
 ---
 # <a name="cachechunklist-class"></a>Classe cache_chunklist
 
@@ -42,13 +42,13 @@ class cache_chunklist
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`Sz`|O número de elementos na matriz a serem alocados.|
+|*SZ*|O número de elementos na matriz a serem alocados.|
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe de modelo usa `operator new` para alocar partes de memória bruta, subalocando blocos para alocar armazenamento para um bloco de memória quando necessário; ela armazena os blocos de memória desalocados em uma lista livre separada para cada parte e usar `operator delete` para desalocar uma parte quando nenhum dos seus blocos de memória está em uso.
+Essa classe de modelo usa **operador new** para alocar partes de memória bruta, Subalocando blocos para alocar armazenamento para um bloco de memória quando necessário; ele armazena os blocos de memória desalocados em uma lista livre separada para cada parte e usa **operador delete** para desalocar uma parte quando nenhum dos seus blocos de memória está em uso.
 
-Cada bloco de memória contém `Sz` bytes de memória utilizável e um ponteiro para a parte à qual pertence. Cada parte contém `Nelts` blocos de memória, três ponteiros, int e os dados que `operator new` e `operator delete` exigem.
+Cada bloco de memória contém *Sz* bytes de memória utilizável e um ponteiro para a parte à qual ele pertence. Cada parte contém `Nelts` blocos de memória, três ponteiros, int e os dados que **operador new** e **operador delete** exigem.
 
 ### <a name="constructors"></a>Construtores
 
@@ -81,7 +81,7 @@ void *allocate(std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`count`|O número de elementos na matriz a serem alocados.|
+|*count*|O número de elementos na matriz a serem alocados.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -111,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`ptr`|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
-|`count`|O número de objetos a serem desalocados do armazenamento.|
+|*ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
+|*count*|O número de objetos a serem desalocados do armazenamento.|
 
 ### <a name="remarks"></a>Comentários
 

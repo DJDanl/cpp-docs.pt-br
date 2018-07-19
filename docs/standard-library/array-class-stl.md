@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99b7416339350ae7e5f8d342974a750584acdd73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf54b113e5eb3750d02b887945345880dca94775
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848931"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960037"
 ---
 # <a name="array-class-c-standard-library"></a>Classe array (Biblioteca padrão C++)
 
@@ -202,7 +202,7 @@ array(const array& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*direita* objeto ou o intervalo a ser inserido.
+*à direita* objeto ou intervalo a ser inserido.
 
 ### <a name="remarks"></a>Comentários
 
@@ -257,11 +257,11 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-`val` O valor a ser atribuído.
+*Val* o valor a atribuir.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro substitui a sequência controlada por `*this` por uma repetição de elementos `N` de valor `val`.
+A função membro substitui a sequência controlada por `*this` com uma repetição de `N` elementos de valor *val*.
 
 ### <a name="example"></a>Exemplo
 
@@ -313,11 +313,11 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`off` Posição do elemento para acessar.
+*desativar* posição do elemento para acessar.
 
 ### <a name="remarks"></a>Comentários
 
-As funções membro retornam uma referência ao elemento da sequência controlada na posição `off`. Se a posição for inválida, a função lançará um objeto da classe `out_of_range`.
+As funções membro retornam uma referência ao elemento da sequência controlada na posição *desativar*. Se a posição for inválida, a função lançará um objeto da classe `out_of_range`.
 
 ### <a name="example"></a>Exemplo
 
@@ -444,7 +444,7 @@ int main()
 
 ## <a name="cbegin"></a>  array::cbegin
 
-Retorna um iterador `const` que trata o primeiro elemento no intervalo.
+Retorna um **const** iterador que trata o primeiro elemento no intervalo.
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -452,13 +452,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um iterador de acesso aleatório `const` que aponta o primeiro elemento do intervalo ou o local logo após o fim de um intervalo vazio (para um intervalo vazio, `cbegin() == cend()`).
+Um **const** iterador de acesso aleatório que aponta para o primeiro elemento do intervalo ou o local logo após o final de um intervalo vazio (para um intervalo vazio, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Comentários
 
 Com o valor de retorno `cbegin`, os elementos do intervalo não podem ser modificados.
 
-Você pode usar essa função membro no lugar da função membro `begin()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. No exemplo, considere `Container` como um contêiner modificável (não `const`) de qualquer tipo, que dá suporte para `begin()` e `cbegin()`.
+Você pode usar essa função membro no lugar da função membro `begin()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. No exemplo, considere `Container` seja um modificáveis (não - **const**) o contêiner de qualquer tipo que dá suporte à `begin()` e `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -470,7 +470,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  array::cend
 
-Retorna um iterador `const` que trata o local logo após o último elemento em um intervalo.
+Retorna um **const** iterador que trata o local logo após o último elemento em um intervalo.
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -484,7 +484,7 @@ Um iterador de acesso aleatório que aponta para além do fim do intervalo.
 
 `cend` é usado para testar se um iterador passou do fim de seu intervalo.
 
-Você pode usar essa função membro no lugar da função membro `end()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. No exemplo, considere `Container` como um contêiner modificável (não `const`) de qualquer tipo, que dá suporte para `end()` e `cend()`.
+Você pode usar essa função membro no lugar da função membro `end()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. No exemplo, considere `Container` seja um modificáveis (não - **const**) o contêiner de qualquer tipo que dá suporte à `end()` e `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -983,7 +983,7 @@ void fill(const Type& val);
 
 |Parâmetro|Descrição|
 |-|-|
-|`val`|O valor do elemento sendo inserido na matriz.|
+|*Val*|O valor do elemento sendo inserido na matriz.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -1173,13 +1173,13 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`off` Posição do elemento para acessar.
+*desativar* posição do elemento para acessar.
 
 ### <a name="remarks"></a>Comentários
 
-As funções membro retornam uma referência ao elemento da sequência controlada na posição `off`. Se a posição for inválida, o comportamento será indefinido.
+As funções membro retornam uma referência ao elemento da sequência controlada na posição *desativar*. Se a posição for inválida, o comportamento será indefinido.
 
-Também há uma função [get](array-functions.md#get) não membro disponível para obter uma referência a um elemento de um `array`.
+Também há um não-membro [Obtenha](array-functions.md#get) função disponível para obter uma referência a um elemento de uma **matriz**.
 
 ### <a name="example"></a>Exemplo
 
@@ -1225,11 +1225,11 @@ array <Value>%  operator=(array <Value>% right);
 
 ### <a name="parameters"></a>Parâmetros
 
-Contêiner direita para copiar.
+*à direita* contêiner a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 
-O operador membro atribui cada elemento de `right` ao elemento correspondente da sequência controlada e, em seguida, retorna `*this`. Você pode usá-lo para substituir a sequência controlada por uma cópia da sequência controlada em `right`.
+O operador de membro atribui cada elemento de *certa* ao elemento correspondente da sequência controlada, em seguida, retorna `*this`. Você pode usá-lo para substituir a sequência controlada por uma cópia da sequência controlada no *certa*.
 
 ### <a name="example"></a>Exemplo
 
@@ -1602,13 +1602,13 @@ void swap(array& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` Matriz para trocar conteúdo com.
+*à direita* matriz a trocar conteúdo com.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro troca as sequências controladas entre `*this` e `right`. Realiza uma série de atribuições de elemento e chamadas do construtor proporcionais a `N`.
+A função membro troca as sequências controladas entre `*this` e *direito*. Realiza uma série de atribuições de elemento e chamadas do construtor proporcionais a `N`.
 
-Também há uma função [swap](array-functions.md#swap) não membro disponível para trocar duas instâncias do `array`.
+Também há um não-membro [permuta](array-functions.md#swap) função disponível para trocar duas **matriz** instâncias.
 
 ### <a name="example"></a>Exemplo
 

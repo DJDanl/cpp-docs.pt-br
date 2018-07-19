@@ -18,20 +18,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 197e9d538b51ec69c0d2b2ab5dd7395f98bee7e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355339"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958485"
 ---
 # <a name="class-factories-classes"></a>Classes de fábricas de classe
-As classes a seguir implementam ou dar suporte a uma fábrica de classes:  
+As seguintes classes implementam ou dar suporte a uma fábrica de classes:  
   
--   [CComClassFactory](../atl/reference/ccomclassfactory-class.md) fornece uma fábrica de classe padrão para a criação do objeto.  
+-   [CComClassFactory](../atl/reference/ccomclassfactory-class.md) fornece uma fábrica de classes padrão para a criação do objeto.  
   
 -   [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) controla a criação de objeto por meio de uma licença.  
   
--   [CComClassFactoryAutoThread](../atl/reference/ccomclassfactoryautothread-class.md) permite que os objetos a serem criados em vários apartments pool de thread.  
+-   [CComClassFactoryAutoThread](../atl/reference/ccomclassfactoryautothread-class.md) permite que os objetos a serem criados em vários apartments com pool de thread.  
   
 -   [CComClassFactorySingleton](../atl/reference/ccomclassfactorysingleton-class.md) cria um único objeto.  
   

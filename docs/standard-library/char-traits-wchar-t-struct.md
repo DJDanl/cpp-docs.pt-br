@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a117a7f9299591d971ecbfdd0a681b008937da33
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7d8b87b51bfeef68ef8bfe22c8e7e201929aa3f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847927"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957068"
 ---
 # <a name="chartraitsltwchartgt-struct"></a>Struct char_traits&lt;wchar_t&gt;
 
-Uma classe que é uma especialização da struct de modelo **char_traits\<CharType>** para um elemento do tipo `wchar_t`.
+Uma classe que é uma especialização da struct de modelo **char_traits\<CharType >** a um elemento do tipo **wchar_t**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,7 +37,7 @@ struct char_traits<wchar_t>;
 
 ## <a name="remarks"></a>Comentários
 
-A especialização permite que a struct aproveite funções de biblioteca que manipulam objetos desse tipo `wchar_t`.
+A especialização permite que a struct aproveite funções de biblioteca que manipulam objetos desse tipo de **wchar_t**.
 
 ## <a name="requirements"></a>Requisitos
 

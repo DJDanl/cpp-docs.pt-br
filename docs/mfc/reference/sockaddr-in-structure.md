@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeb9e61f94ddd5f41ff3de26728c1fbe155f809d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e5ec6ebf4329ff03c75240dc7cec93e9ba46331
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373632"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885732"
 ---
 # <a name="sockaddrin-structure"></a>Estrutura SOCKADDR_IN
-Na família de endereço da Internet, o `SOCKADDR_IN` estrutura é usada pelo Windows Sockets para especificar um endereço de ponto de extremidade local ou remoto ao qual se conectar a um soquete.  
+Na família de endereços da Internet, o `SOCKADDR_IN` estrutura é usada pelos soquetes do Windows para especificar um endereço de ponto de extremidade local ou remoto ao qual se conectar a um soquete.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ struct in_addr sin_addr;
   
 #### <a name="parameters"></a>Parâmetros  
  *sin_family*  
- Família de endereços (deve ser **AF_INET**).  
+ Família de endereços (deve ser AF_INET).  
   
  *sin_port*  
  Porta do IP.  
@@ -51,9 +51,9 @@ struct in_addr sin_addr;
  Preenchimento para fazer o mesmo tamanho que a estrutura `SOCKADDR`.  
   
 ## <a name="remarks"></a>Comentários  
- Este é o formulário do `SOCKADDR` estrutura específicas para a família de endereços da Internet e pode ser convertido em `SOCKADDR`.  
+ Essa é a forma do `SOCKADDR` estruturar específicas para a família de endereços de Internet e pode ser convertido em `SOCKADDR`.  
   
- O componente de endereço IP dessa estrutura é do tipo **IN_ADDR**. O **IN_ADDR** estrutura é definida no arquivo de cabeçalho do Windows Sockets WINSOCK. H da seguinte maneira:  
+ O componente de endereço IP dessa estrutura é do tipo `IN_ADDR`. O `IN_ADDR` estrutura é definida no arquivo de cabeçalho WINSOCK do Windows Sockets. H da seguinte maneira:  
   
 ```  
 struct in_addr {
@@ -70,7 +70,7 @@ struct in_addr {
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Winsock2  
+ **Cabeçalho:** winsock2.h  
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   

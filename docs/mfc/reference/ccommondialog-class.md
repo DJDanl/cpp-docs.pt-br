@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53f53bdb19c6f40d73179b600051ecfaf6b69c94
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d6821b7a33339b2a143778172caa7a4a22cb101e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335909"
 ---
 # <a name="ccommondialog-class"></a>Classe CCommonDialog
-A classe base para classes que encapsulam funcionalidades de caixas de diálogo comuns da Windows.  
+A classe base para classes que encapsulam funcionalidade das caixas de diálogo comuns da Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ class CCommonDialog : public CDialog
 |[CCommonDialog::CCommonDialog](#ccommondialog)|Constrói um objeto `CCommonDialog`.|  
   
 ## <a name="remarks"></a>Comentários  
- As classes a seguir encapsulam a funcionalidade de caixas de diálogo comuns da Windows:  
+ As seguintes classes de encapsulam a funcionalidade das caixas de diálogo comuns do Windows:  
   
 - [CFileDialog](../../mfc/reference/cfiledialog-class.md)  
   
@@ -73,7 +73,7 @@ class CCommonDialog : public CDialog
  `CCommonDialog`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxdlgs.h  
+ **Cabeçalho:** afxdlgs. h  
   
 ##  <a name="ccommondialog"></a>  CCommonDialog::CCommonDialog  
  Constrói um objeto `CCommonDialog`.  
@@ -84,14 +84,14 @@ explicit CCommonDialog(CWnd* pParentWnd);
   
 ### <a name="parameters"></a>Parâmetros  
  *pParentWnd*  
- Aponta para o objeto de janela pai ou o proprietário (do tipo [CWnd](../../mfc/reference/cwnd-class.md)) ao qual pertence o objeto de caixa de diálogo. Se for **nulo**, janela de pai do objeto de caixa de diálogo é definida como a janela principal do aplicativo.  
+ Aponta para o objeto de janela pai ou proprietária (do tipo [CWnd](../../mfc/reference/cwnd-class.md)) ao qual pertence o objeto de caixa de diálogo. Se for NULL, a janela do pai do objeto de caixa de diálogo é definida como a janela principal do aplicativo.  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) para obter informações completas.  
+ Ver [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) para obter informações completas.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CDialog](../../mfc/reference/cdialog-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe CFileDialog](../../mfc/reference/cfiledialog-class.md)   
  [Classe CFontDialog](../../mfc/reference/cfontdialog-class.md)   
  [Classe CColorDialog](../../mfc/reference/ccolordialog-class.md)   

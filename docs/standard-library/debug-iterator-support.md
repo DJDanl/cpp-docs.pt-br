@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9153d5e85540c50e11e096c33c474f1344d3ad2f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 237ce1e956cd05f21a34d0b2b159ba104167ca37
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846201"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959586"
 ---
 # <a name="debug-iterator-support"></a>Suporte a Iterador de Depuração
 
@@ -155,7 +155,7 @@ Observe que esse exemplo usa a expressão lambda `[] (int& elem) { elem *= 2; }`
 
 ## <a name="example"></a>Exemplo
 
-Verificações do iterador de depuração também fazem com que uma variável do iterador declarada em um loop `for` fique fora do escopo ao término do escopo do loop `for`.
+Verificações do iterador de depuração também fazem com que uma variável do iterador declarada em um **para** loop fique fora do escopo quando o **para** término do escopo de loop.
 
 ```cpp
 // iterator_debugging_4.cpp

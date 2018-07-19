@@ -1,5 +1,5 @@
 ---
-title: Função CAtlServiceModuleT::ServiceMain | Microsoft Docs
+title: 'Função catlservicemodulet:: Servicemain | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9936090793890b1e33f0d5e29787d65f378afa84
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9dff3fa3f3ed20406955570f2ad72531f4e44f11
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355568"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848115"
 ---
-# <a name="catlservicemoduletservicemain-function"></a>Função CAtlServiceModuleT::ServiceMain
+# <a name="catlservicemoduletservicemain-function"></a>Função catlservicemodulet:: Servicemain
 O Gerenciador de controle de serviços (SCM) chama `ServiceMain` quando você abre o aplicativo de painel de controle de serviços, selecione o serviço e clique em **iniciar**.  
   
- Após o SCM chama `ServiceMain`, um serviço deve fornecer o SCM uma função de manipulador. Esta função permite que o SCM obter o status do serviço e passar as instruções específicas (como pausar ou parar). O SCM obtém essa função quando o serviço passa **_Handler** para a função de API do Win32, [RegisterServiceCtrlHandler](http://msdn.microsoft.com/library/windows/desktop/ms685054). (**_Handler** é uma função de membro estático que chama a função de membro não estático [manipulador](../atl/reference/catlservicemodulet-class.md#handler).)  
+ Depois do SCM chama `ServiceMain`, um serviço deve fornecer o SCM uma função de manipulador. Essa função permite que o SCM obter o status do serviço e passar as instruções específicas (como pausar ou parar). O SCM obtém essa função quando o serviço passa `_Handler` para a função de API do Win32, [RegisterServiceCtrlHandler](http://msdn.microsoft.com/library/windows/desktop/ms685054). (`_Handler` é uma função de membro estático que chama a função de membro não estático [manipulador](../atl/reference/catlservicemodulet-class.md#handler).)  
   
- Na inicialização, um serviço também deve informar o SCM do seu status atual. Ele faz isso passando **SERVICE_START_PENDING** para a função de API do Win32, [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241).  
+ Na inicialização, um serviço também deve informar o SCM de seu status atual. Ele faz isso passando SERVICE_START_PENDING para a função de API do Win32, [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241).  
   
- `ServiceMain` em seguida, chama `CAtlExeModuleT::InitializeCom`, que chama a função de API do Win32 [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279). Por padrão, `InitializeCom` passa o **COINIT_MULTITHREADED** sinalizador para a função. Esse sinalizador indica que o programa deve ser um servidor free-thread.  
+ `ServiceMain` em seguida, chama `CAtlExeModuleT::InitializeCom`, que chama a função de API do Win32 [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279). Por padrão, `InitializeCom` passa o sinalizador COINIT_MULTITHREADED para a função. Esse sinalizador indica que o programa deve ser um servidor de thread livre.  
   
- Agora, `CAtlServiceModuleT::Run` é chamado para executar o trabalho principal do serviço. **Executar** continuarão sendo executadas até que o serviço está parado.  
+ Agora, `CAtlServiceModuleT::Run` é chamado para executar o trabalho principal do serviço. `Run` continua sendo executado até que o serviço está parado.  
   
 ## <a name="see-also"></a>Consulte também  
  [Serviços](../atl/atl-services.md)   
- [CAtlServiceModuleT::ServiceMain](../atl/reference/catlservicemodulet-class.md#servicemain)
+ [Catlservicemodulet:: Servicemain](../atl/reference/catlservicemodulet-class.md#servicemain)
 

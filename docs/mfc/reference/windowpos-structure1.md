@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4abd236998f37f0d719f41827d05a17fde56fde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db51e8f9924d69406989b3a9ac12b45f0e55e870
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379288"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885956"
 ---
 # <a name="windowpos-structure1"></a>Estrutura WINDOWPOS 1
 O `WINDOWPOS` estrutura contém informações sobre o tamanho e a posição de uma janela.  
@@ -45,7 +45,7 @@ typedef struct tagWINDOWPOS { /* wp */
  Identifica a janela.  
   
  *hwndInsertAfter*  
- Identifica a janela ao qual esta janela é colocada.  
+ Identifica a janela atrás da qual esta janela é colocada.  
   
  *x*  
  Especifica a posição da borda esquerda da janela.  
@@ -53,43 +53,43 @@ typedef struct tagWINDOWPOS { /* wp */
  *y*  
  Especifica a posição da borda direita da janela.  
   
- `cx`  
+ *CX*  
  Especifica a largura da janela, em pixels.  
   
- `cy`  
+ *Cy*  
  Especifica a altura da janela, em pixels.  
   
- `flags`  
+ *flags*  
  Especifica as opções de posicionamento de janela. Esse membro pode ser um dos seguintes valores:  
   
-- **SWP_DRAWFRAME** desenha um quadro (definido na descrição de classe para a janela) em torno de janela. A janela recebe um `WM_NCCALCSIZE` mensagem.  
+- SWP_DRAWFRAME desenha um quadro (definido na descrição da classe da janela) ao redor da janela. A janela recebe uma mensagem WM_NCCALCSIZE.  
   
-- **SWP_FRAMECHANGED** envia um `WM_NCCALCSIZE` de mensagem para a janela, mesmo se o tamanho da janela não está sendo alterado. Se este sinalizador não for especificado, `WM_NCCALCSIZE` só é enviado quando o tamanho da janela está sendo alterado.  
+- Um WM_NCCALCSIZE SWP_FRAMECHANGED envia mensagens para a janela, mesmo se o tamanho da janela não está sendo alterado. Se este sinalizador não for especificado, WM_NCCALCSIZE é enviada somente quando o tamanho da janela está sendo alterado.  
   
-- **SWP_HIDEWINDOW** oculta a janela.  
+- SWP_HIDEWINDOW oculta a janela.  
   
-- `SWP_NOACTIVATE` Não ative a janela.  
+- SWP_NOACTIVATE não ativa a janela.  
   
-- **SWP_NOCOPYBITS** descartará todo o conteúdo da área do cliente. Se este sinalizador não for especificado, o conteúdo válido da área do cliente é salvas e copiado de volta para a área cliente depois que a janela é dimensionada ou reposicioná-los.  
+- SWP_NOCOPYBITS descartará todo o conteúdo da área de cliente. Se este sinalizador não for especificado, o conteúdo válido da área de cliente é salvos e copiado de volta para a área de cliente depois que a janela é dimensionada ou reposicionada.  
   
-- `SWP_NOMOVE` Retém a posição atual (ignora o **x** e **y** membros).  
+- SWP_NOMOVE retém a posição atual (ignora a `x` e `y` membros).  
   
-- **SWP_NOOWNERZORDER** não altera a posição da janela do proprietário na ordem Z.  
+- SWP_NOOWNERZORDER não altera a posição da janela do proprietário na ordem Z.  
   
-- `SWP_NOSIZE` Mantém o tamanho atual (ignora o **cx** e **cy** membros).  
+- Tamanho atual SWP_NOSIZE retém (ignora a `cx` e `cy` membros).  
   
-- **SWP_NOREDRAW** não atualiza as alterações.  
+- SWP_NOREDRAW não atualiza as alterações.  
   
-- **SWP_NOREPOSITION** igual **SWP_NOOWNERZORDER**.  
+- SWP_NOREPOSITION mesmo que SWP_NOOWNERZORDER.  
   
-- **SWP_NOSENDCHANGING** impede que a janela de recebimento de `WM_WINDOWPOSCHANGING` mensagem.  
+- SWP_NOSENDCHANGING impede que a janela de recebimento da mensagem WM_WINDOWPOSCHANGING.  
   
-- `SWP_NOZORDER` Retém a ordenação atual (ignora o **hwndInsertAfter** membro).  
+- Retém SWP_NOZORDER ordenação atual (ignora a `hwndInsertAfter` membro).  
   
-- **SWP_SHOWWINDOW** exibe a janela.  
+- SWP_SHOWWINDOW exibe a janela.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** WinUser  
+ **Cabeçalho:** WinUser. h  
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   

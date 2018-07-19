@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ca4d5a88b14f32064e473bd129fcd0f8ddd7898
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0519373a46e1c25feda7a3130b420c565a96eece
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339537"
 ---
 # <a name="chtmleditview-class"></a>Classe CHtmlEditView
-Fornece a funcionalidade da plataforma de edição de WebBrowser dentro do contexto de arquitetura de documento/exibição do MFC.  
+Fornece a funcionalidade da plataforma de edição WebBrowser no contexto da arquitetura de documento/exibição do MFC.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CHtmlEditView::Create](#create)|Cria um novo objeto de janela.|  
-|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|Retorna o **IHTMLDocument2** interface no documento atual.|  
+|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|Retorna o `IHTMLDocument2` interface no documento atual.|  
 |[CHtmlEditView::GetStartDocument](#getstartdocument)|Recupera o nome do documento padrão para esta exibição.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
@@ -101,31 +101,31 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parâmetros  
  *lpszClassName*  
- Aponta para uma cadeia de caracteres terminada em nulo que nomeia a classe do Windows. O nome da classe pode ser qualquer nome registrado com o [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função global ou **RegisterClass** função do Windows. Se **nulo**, usa o padrão predefinido [CFrameWnd](../../mfc/reference/cframewnd-class.md) atributos.  
+ Aponta para uma cadeia de caracteres terminada em nulo que nomeia a classe Windows. O nome de classe pode ser qualquer nome registrado com o [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função global ou o `RegisterClass` função do Windows. Se for NULL, usa o padrão predefinido [CFrameWnd](../../mfc/reference/cframewnd-class.md) atributos.  
   
  *lpszWindowName*  
- Aponta para uma cadeia de caracteres terminada em nulo que representa o nome da janela.  
+ Aponta para uma cadeia de caracteres com terminação nula que representa o nome da janela.  
   
  *dwStyle*  
- Especifica os atributos de estilo de janela. Por padrão, o **WS_VISIBLE** e **WS_CHILD** estilos do Windows são definidos.  
+ Especifica os atributos de estilo de janela. Por padrão, os estilos WS_VISIBLE e WS_CHILD Windows são definidos.  
   
  *Rect*  
- Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura especificando o tamanho e a posição da janela. O *rectDefault* valor permite que o Windows especificar o tamanho e a posição da nova janela.  
+ Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) especificando o tamanho e posição da janela de estrutura. O *rectDefault* valor permite que o Windows especificar o tamanho e posição da nova janela.  
   
  *pParentWnd*  
  Um ponteiro para a janela pai do controle.  
   
  *nID*  
- O número de identificação do modo de exibição. Por padrão, definido como **AFX_IDW_PANE_FIRST**.  
+ O número de identificação do modo de exibição. Por padrão, definido como AFX_IDW_PANE_FIRST.  
   
  *pContext*  
- Um ponteiro para um [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). **NULO** por padrão.  
+ Um ponteiro para um [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). NULL por padrão.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método também chamará o WebBrowser independente **navegar** método para carregar um documento padrão (consulte [CHtmlEditView::GetStartDocument](#getstartdocument)).  
+ Esse método também chamará o WebBrowser independente `Navigate` método para carregar um documento padrão (consulte [CHtmlEditView::GetStartDocument](#getstartdocument)).  
   
 ##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument  
- Retorna o **IHTMLDocument2** interface no documento atual.  
+ Retorna o `IHTMLDocument2` interface no documento atual.  
   
 ```  
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;  

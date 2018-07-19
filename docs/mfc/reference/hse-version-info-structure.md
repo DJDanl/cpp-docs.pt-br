@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acdf63e062aab1407daee461e22f00f5d3c59cee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daf1565c2fe2d7a4620f83b765671fea80502102
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335809"
 ---
 # <a name="hseversioninfo-structure"></a>Estrutura HSE_VERSION_INFO
-Essa estrutura é apontada pelo `pVer` parâmetro o `CHttpServer::GetExtensionVersion` função de membro. Ele fornece o número de versão do ISA e uma descrição textual do ISA.  
+Essa estrutura é apontada pelo *objasperror* parâmetro no `CHttpServer::GetExtensionVersion` função de membro. Ele fornece o número de versão do ISA e uma descrição de texto do ISA.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +37,7 @@ typedef struct _HSE_VERSION_INFO {
   
 #### <a name="parameters"></a>Parâmetros  
  *dwExtensionVersion*  
- O número de versão do ISA.  
+ O número de versão dos ISA.  
   
  *lpszExtensionDesc*  
  Texto de descrição do ISA. A implementação padrão fornece o texto do espaço reservado; substituir `CHttpServer::GetExtensionVersion` para fornecer sua própria descrição.  

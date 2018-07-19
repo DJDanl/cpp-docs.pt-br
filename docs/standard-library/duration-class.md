@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe02890ce8d8dcde099f4b91b23c770b2e36c96d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847940"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956860"
 ---
 # <a name="duration-class"></a>Classe duration
 
@@ -60,7 +60,7 @@ O argumento de modelo `Rep` descreve o tipo que é usado para manter o número d
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Duração](#duration)|Constrói um objeto `duration`.|
+|[duração](#duration)|Constrói um objeto `duration`.|
 
 ### <a name="public-methods"></a>Métodos Públicos
 
@@ -120,25 +120,25 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Rep2` Um tipo aritmético para representar o número de tiques.
+*Rep2* um tipo aritmético para representar o número de tiques.
 
-`Period2` Um `std::ratio` especialização de modelo para representar o período de escala em unidades de segundos.
+*Period2* um `std::ratio` especialização de modelo para representar o período de tiques em unidades de segundos.
 
-`R` O número de tiques do período padrão.
+*R* o número de tiques de período padrão.
 
-`Dur` O número de tiques do período especificado pelo `Period2`.
+*Dur* o número de tiques do período especificado por *Period2*.
 
 ### <a name="remarks"></a>Comentários
 
 O construtor padrão constrói um objeto que não foi inicializado. A inicialização de valor usando chaves vazias inicializa um objeto que representa um intervalo de tempo de zero tique do relógio.
 
-O segundo, um construtor de argumento do modelo, constrói um objeto que representa um intervalo de tempo de `R` tiques de relógio usando um período padrão de `std::ratio<1>`. Para evitar o arredondamento de contagens de tique, é um erro construir um objeto de duração de um tipo de representação `Rep2` que pode ser tratado como um tipo de ponto flutuante quando `duration::rep` não pode ser tratado como um tipo de ponto flutuante.
+O segundo, o argumento de modelo de um construtor constrói um objeto que representa um intervalo de tempo *R* tiques de relógio usando um período padrão de `std::ratio<1>`. Para evitar o arredondamento de contagens de tique, é um erro construir um objeto de duração de um tipo de representação *Rep2* que pode ser tratado como um ponto flutuante de tipo quando `duration::rep` não pode ser tratado como um tipo de ponto flutuante.
 
-O terceiro, dois construtores de argumento de modelo, constrói um objeto que representa um intervalo de tempo cujo tamanho é o intervalo de tempo especificado por `Dur`. Para evitar o truncamento de contagens de tique, é um erro construir um objeto de duração de outro objeto de duração cujo tipo é *incomensurável* com o tipo de destino.
+O terceiro construtor de argumento de modelo duas constrói um objeto que representa um intervalo de tempo cujo tamanho é o intervalo de tempo especificado por *Dur*. Para evitar o truncamento de contagens de tique, é um erro construir um objeto de duração de outro objeto de duração cujo tipo é *incomensurável* com o tipo de destino.
 
 Um tipo de duração `D1` é *incomensurável* com outro tipo de duração `D2` se `D2` não puder ser tratado como um tipo de ponto flutuante e [ratio_divide\<D1::period, D2::period>::type::den](../standard-library/ratio.md) não for 1.
 
-A menos que `Rep2` seja implicitamente conversível em `rep` e for `treat_as_floating_point<rep>`*verdadeiro* ou `treat_as_floating_point<Rep2>`*falso*, o segundo construtor não participará da resolução de sobrecarga. Para obter mais informações, consulte [<type_traits>](../standard-library/type-traits.md).
+A menos que *Rep2* é implicitamente conversível para `rep` e qualquer um dos `treat_as_floating_point<rep>` *se aplica* ou `treat_as_floating_point<Rep2>` *será falsa*, o segundo construtor não participará na resolução de sobrecarga. Para obter mais informações, consulte [<type_traits>](../standard-library/type-traits.md).
 
 A menos que nenhum estouro seja induzido na conversão e for `treat_as_floating_point<rep>`*verdadeiro* ou `ratio_divide<Period2, period>::den` for igual a 1 e `treat_as_floating_point<Rep2>`*falso*, o terceiro construtor não participará da resolução de sobrecarga. Para obter mais informações, consulte [<type_traits>](../standard-library/type-traits.md).
 
@@ -202,7 +202,7 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Div` Para o primeiro método, `Div` representa uma contagem em escala. Para o segundo método, `Div` é um objeto `duration` que contém uma contagem de tiques.
+*Div* para o primeiro método, *Div* representa uma contagem de tiques. Para o segundo método, *Div* é um `duration` objeto que contém uma contagem de tiques.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -218,7 +218,7 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Mult` Um valor do tipo especificado pelo `duration::rep`.
+*MULT* um valor do tipo especificado pelo `duration::rep`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -234,7 +234,7 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Div` Um valor do tipo especificado pelo `duration::rep`.
+*Div* um valor do tipo especificado pelo `duration::rep`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -274,7 +274,7 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Dur` Um `duration` objeto.
+*Dur* um `duration` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -290,7 +290,7 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Dur` Um `duration` objeto.
+*Dur* um `duration` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -314,7 +314,7 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Div` O divisor, que é um objeto de duração ou um valor que representa as contagens em escala.
+*Div* o divisor, que é um objeto de duração ou um valor que representa as contagens em escala.
 
 ### <a name="remarks"></a>Comentários
 

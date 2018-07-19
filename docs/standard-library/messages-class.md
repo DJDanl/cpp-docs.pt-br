@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ffc59d3425f403fb1dca43f70876cfbfb5d3dd9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b7b604fd58c3f320b62c022e6b5d1749c1f3a87
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861955"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954884"
 ---
 # <a name="messages-class"></a>Classe messages
 
@@ -54,7 +54,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parâmetros
 
-`CharType` O tipo usado dentro de um programa para codificar caracteres em uma localidade.
+*CharType* o tipo usado em um programa para codificar caracteres em uma localidade.
 
 ## <a name="remarks"></a>Comentários
 
@@ -114,7 +114,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Catval` O catálogo a ser fechado.
+*Catval* o catálogo a ser fechado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -130,11 +130,11 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Catval` O catálogo a ser fechado.
+*Catval* o catálogo a ser fechado.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro protegido fecha o catálogo de mensagens `_Catval`, que deve ter sido aberto por uma chamada anterior para [do_open](#do_open).
+A função membro protegido fecha o catálogo de mensagens *catval*, que deve ter sido aberto por uma chamada anterior a [do_open](#do_open).
 
 *_Catval* deve ser obtido de um catálogo aberto anteriormente que não está fechado.
 
@@ -156,21 +156,21 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Catval` O valor de identificação que especifica o catálogo de mensagem a ser pesquisada.
+*Catval* o valor de identificação que especifica o catálogo de mensagens a ser pesquisado.
 
-`_Set` O primeiro identificado usado para localizar uma mensagem em um catálogo de mensagem.
+*Definir* o primeiro identificado usado para localizar uma mensagem em um catálogo de mensagens.
 
-`_Message` O segundo identificado usado para localizar uma mensagem em um catálogo de mensagem.
+*Mensagem* o segundo identificado usado para localizar uma mensagem em um catálogo de mensagens.
 
-`_Dfault` A cadeia de caracteres a ser retornado em caso de falha.
+*_Dfault* a cadeia de caracteres a ser retornado em caso de falha.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Ele retorna uma cópia do `_Dfault` em caso de falha. Caso contrário, ela retorna uma cópia da sequência de mensagem especificada.
+Ele retorna uma cópia do *_Dfault* em caso de falha. Caso contrário, ela retorna uma cópia da sequência de mensagem especificada.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro protegida tenta obter uma sequência de mensagens do catálogo de mensagens `_Catval`. Ela pode fazer uso de `_Set`, `_Message` e `_Dfault` dessa forma.
+A função membro protegida tenta obter uma sequência de mensagem do catálogo de mensagens *catval*. Ela pode fazer uso de *definir*, *Message*, e *_Dfault* ao fazer isso.
 
 ### <a name="example"></a>Exemplo
 
@@ -188,9 +188,9 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Catname` O nome do catálogo a ser pesquisada.
+*_Catname* o nome do catálogo a ser pesquisado.
 
-`_Loc` A localidade que está sendo procurada no catálogo.
+*_Loc* a localidade que está sendo pesquisada no catálogo.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -198,7 +198,7 @@ Ele retorna um valor que compara menor que zero na falha. Caso contrário, o val
 
 ### <a name="remarks"></a>Comentários
 
-A função membro protegida tenta abrir um catálogo de mensagens cujo nome é `_Catname`. Ela pode fazer uso da localidade `_Loc` dessa forma
+A função membro protegida tenta abrir um catálogo de mensagens cujo nome é *_Catname*. Ela pode fazer uso da localidade *_Loc* ao fazer isso
 
 O valor retornado deve ser usado como o argumento em uma chamada posterior para [close](#close).
 
@@ -220,17 +220,17 @@ string_type get(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Catval` O valor de identificação que especifica o catálogo de mensagem a ser pesquisada.
+*Catval* o valor de identificação que especifica o catálogo de mensagens a ser pesquisado.
 
-`_Set` O primeiro identificado usado para localizar uma mensagem em um catálogo de mensagem.
+*Definir* o primeiro identificado usado para localizar uma mensagem em um catálogo de mensagens.
 
-`_Message` O segundo identificado usado para localizar uma mensagem em um catálogo de mensagem.
+*Mensagem* o segundo identificado usado para localizar uma mensagem em um catálogo de mensagens.
 
-`_Dfault` A cadeia de caracteres a ser retornado em caso de falha.
+*_Dfault* a cadeia de caracteres a ser retornado em caso de falha.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Ele retorna uma cópia do `_Dfault` em caso de falha. Caso contrário, ela retorna uma cópia da sequência de mensagem especificada.
+Ele retorna uma cópia do *_Dfault* em caso de falha. Caso contrário, ela retorna uma cópia da sequência de mensagem especificada.
 
 ### <a name="remarks"></a>Comentários
 
@@ -251,19 +251,19 @@ protected: messages(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Refs` Valor inteiro usado para especificar o tipo de gerenciamento de memória para o objeto.
+*_Refs* valor inteiro usado para especificar o tipo de gerenciamento de memória para o objeto.
 
-`_Locname` O nome da localidade.
+*_Locname* o nome da localidade.
 
 ### <a name="remarks"></a>Comentários
 
-Os valores possíveis para o parâmetro `_Refs` e sua significância são:
+Os valores possíveis para o *_Refs* parâmetro e sua significância são:
 
 - 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
 - 1: o tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: esses valores não são definidos.
+- \> 1: esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 
@@ -281,9 +281,9 @@ catalog open(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Catname` O nome do catálogo a ser pesquisada.
+*_Catname* o nome do catálogo a ser pesquisado.
 
-`_Loc` A localidade que está sendo procurada no catálogo.
+*_Loc* a localidade que está sendo pesquisada no catálogo.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -295,7 +295,7 @@ A função membro retorna [do_open](#do_open)( `_Catname`, `_Loc`).
 
 ## <a name="string_type"></a>  messages::string_type
 
-Um tipo que descreve uma cadeia de caracteres do tipo `basic_string` que contém caracteres do tipo **CharType**.
+Um tipo que descreve uma cadeia de caracteres do tipo `basic_string` que contém caracteres do tipo `CharType`.
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;

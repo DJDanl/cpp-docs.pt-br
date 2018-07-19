@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcbd0f17392c69b09d6f9f3c8123dfcf8b543fa4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f53732fee62906da19a5771c8598cce51fc6331
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852345"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953740"
 ---
 # <a name="lockguard-class"></a>Classe lock_guard
 
@@ -70,13 +70,13 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Mtx` Um *mutex tipo* objeto.
+*Mtx* um *tipo mutex* objeto.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor constrói um objeto do tipo `lock_guard` e bloqueia `Mtx`. Se `Mtx` não for um mutex recursivo, deve ser desbloqueado quando esse construtor for chamado.
+O primeiro construtor constrói um objeto do tipo `lock_guard` e bloqueios *Mtx*. Se *Mtx* não é um mutex recursivo, ele deve ser desbloqueado quando esse construtor é chamado.
 
-O segundo construtor não bloqueia `Mtx`. `Mtx` deve ser bloqueado quando esse construtor for chamado. O construtor não lança exceções.
+O segundo construtor não bloqueia *Mtx*. *Mtx* deve ser bloqueado quando esse construtor é chamado. O construtor não lança exceções.
 
 ## <a name="dtorlock_guard_destructor"></a>  Destruidor lock_guard::~lock_guard
 

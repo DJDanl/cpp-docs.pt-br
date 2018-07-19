@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27f5585ec334a4179b76579c5216c8c30013ca97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 784551b090f7c0c73b96b846fcc8d74017cc1e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355132"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850635"
 ---
 # <a name="commandhandler"></a>CommandHandler
-`CommandHandler` é a função identificada pelo parâmetro do terceiro o `COMMAND_HANDLER` macro em seu mapa de mensagem.  
+`CommandHandler` a função é identificada pelo terceiro parâmetro da macro COMMAND_HANDLER no seu mapa de mensagem.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,17 +40,17 @@ ms.locfileid: "32355132"
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `wNotifyCode`  
+ *wNotifyCode*  
  O código de notificação.  
   
  *wID*  
- O identificador do item de menu, o controle ou o acelerador.  
+ O identificador do controle, item de menu ou acelerador.  
   
  *hWndCtl*  
  Um identificador para um controle de janela.  
   
- `bHandled`  
- Os conjuntos de mapa de mensagem `bHandled` para **TRUE** antes de `CommandHandler` é chamado. Se `CommandHandler` não totalmente processa a mensagem, ele deve ser definido `bHandled` para **FALSE** para indicar que a mensagem precisa de processamento adicional.  
+ *bHandled*  
+ Os conjuntos de mapa de mensagem *bHandled* como TRUE antes `CommandHandler` é chamado. Se `CommandHandler` não consegue tratar por completo a mensagem, ela deverá definir *bHandled* como FALSE para indicar que a mensagem precisa de processamento adicional.  
   
 ## <a name="return-value"></a>Valor de retorno  
  O resultado do processamento de mensagens. 0 se for bem-sucedido.  
@@ -60,6 +60,6 @@ ms.locfileid: "32355132"
   
 ## <a name="see-also"></a>Consulte também  
  [Implementando uma janela](../atl/implementing-a-window.md)   
- [Mapas de mensagem](../atl/message-maps-atl.md)   
+ [Mapas de Mensagens](../atl/message-maps-atl.md)   
  [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
 

@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5df4f70d069c2d77cf828665986c892281ba27cd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354627"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956677"
 ---
 # <a name="class-information-classes"></a>Classes de informações de classe
-A seguinte classe fornece suporte para recuperar informações de classe:  
+A classe a seguir fornece suporte para recuperar informações de classe:  
   
--   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) fornece acesso a informações de tipo. Recupera o IID de saída para o conjunto de eventos padrão do objeto.  
+-   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) fornece acesso para informações de tipo. Recupera o IID de saída para o conjunto de eventos do objeto padrão.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../atl/atl-class-overview.md)

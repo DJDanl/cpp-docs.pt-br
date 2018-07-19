@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce8b4fde6668fe7901ecf75c153765302c6d770e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 974cee757708b9f7b1e48ea3bec3c4af98ced558
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854792"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957641"
 ---
 # <a name="maxvariablesize-class"></a>Classe max_variable_size
 
@@ -77,11 +77,11 @@ void allocated(std::size_t _Nx = 1);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`_Nx`|O valor do incremento.|
+|*_Nx*|O valor do incremento.|
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro adiciona `_Nx` ao valor armazenado `_Nallocs`. Essa função membro é chamada após cada chamada bem-sucedida por `cache_freelist::allocate` ao operador `new`. O argumento `_Nx` é o número de blocos de memória na parte alocada pelo operador `new`.
+Essa função membro adicionará *_Nx* ao valor armazenado `_Nallocs`. Essa função de membro é chamada após cada chamada bem-sucedida por `cache_freelist::allocate` ao operador **nova**. O argumento *_Nx* é o número de blocos de memória na parte alocada pelo operador **novos**.
 
 ## <a name="deallocated"></a>  max_variable_size::deallocated
 
@@ -95,11 +95,11 @@ void deallocated(std::size_t _Nx = 1);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`_Nx`|O valor do incremento.|
+|*_Nx*|O valor do incremento.|
 
 ### <a name="remarks"></a>Comentários
 
-A função membro subtrai `_Nx` do valor armazenado `_Nallocs`. Essa função membro é chamada após cada chamada por `cache_freelist::deallocate` ao operador `delete`. O argumento `_Nx` é o número de blocos de memória na parte desalocada pelo operador `delete`.
+A função membro subtrai *_Nx* do valor armazenado `_Nallocs`. Essa função de membro é chamada após cada chamada por `cache_freelist::deallocate` ao operador **excluir**. O argumento *_Nx* é o número de blocos de memória na parte desalocada pelo operador **excluir**.
 
 ## <a name="full"></a>  max_variable_size::full
 
@@ -111,11 +111,11 @@ bool full();
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se `_Nallocs / 16 + 16 <= _Nblocks`.
+**Verdadeiro** se `_Nallocs / 16 + 16 <= _Nblocks`.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro é chamada por `cache_freelist::deallocate`. Se a chamada retornar `true`, `deallocate` colocará o bloco de memória na lista livre, se ele retornar false, `deallocate` chamará o operador `delete` para desalocar o bloco.
+Essa função membro é chamada por `cache_freelist::deallocate`. Se a chamada retornar **verdadeira**, `deallocate` coloca o bloco de memória na lista livre; se ele retornar false, `deallocate` chamará o operador **excluir** para desalocar o bloco.
 
 ## <a name="max_variable_size"></a>  max_variable_size::max_variable_size
 

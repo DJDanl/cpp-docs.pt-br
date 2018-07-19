@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5b164fda27775a7b3fb272d8718c31815cb1ca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd3342e7c64a13761830073cd3ed82b627b8c407
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358809"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879290"
 ---
 # <a name="cheapptrlist-class"></a>Classe CHeapPtrList
 Essa classe fornece métodos úteis ao construir uma lista de ponteiros de pilha.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,11 +41,11 @@ class CHeapPtrList
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `E`  
+ *E*  
  O tipo de objeto a ser armazenado na classe da coleção.  
   
- `Allocator`  
- A classe de alocação de memória a ser usado. O padrão é [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
+ *Alocador*  
+ A classe de alocação de memória para usar. O padrão é [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
   
 ## <a name="members"></a>Membros  
   
@@ -56,7 +56,7 @@ class CHeapPtrList
 |[CHeapPtrList::CHeapPtrList](#cheapptrlist)|O construtor.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe fornece um construtor e deriva de métodos de [CAtlList](../../atl/reference/catllist-class.md) e [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) para facilitar a criação de um objeto de classe de coleção ponteiros de pilha de armazenamento.  
+ Essa classe fornece um construtor e deriva de métodos de [CAtlList](../../atl/reference/catllist-class.md) e [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) para ajudar na criação de um objeto de classe de coleção armazenar ponteiros de pilha.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CAtlList](../../atl/reference/catllist-class.md)  
@@ -74,11 +74,11 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nBlockSize`  
+ *nBlockSize*  
  O tamanho do bloco.  
   
 ### <a name="remarks"></a>Comentários  
- O tamanho do bloco é uma medida da quantidade de memória alocada quando um novo elemento é necessário. Tamanhos de bloco maiores reduzem as chamadas para rotinas de alocação de memória, mas usam mais recursos.  
+ O tamanho do bloco é uma medida da quantidade de memória alocada quando um novo elemento é necessário. Tamanhos de bloco maiores reduzem chamadas para rotinas de alocação de memória, mas usam mais recursos.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CAtlList](../../atl/reference/catllist-class.md)   

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c39f006cee8c62c22f3caf7e2c10ee9a0c1d03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0c137183e396255d0a9f9d3c304273eda320c72
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864922"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955888"
 ---
 # <a name="recursivemutex-class"></a>Classe recursive_mutex
 
@@ -106,11 +106,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o método obtiver a propriedade do `mutex` com êxito ou se o thread de chamada já possui o `mutex`; caso contrário, `false`.
+**Verdadeiro** se o método obtiver a propriedade com êxito o `mutex` ou se o thread de chamada já possui o `mutex**; otherwise, **false`.
 
 ### <a name="remarks"></a>Comentários
 
-Se o thread de chamada já possui o `mutex`, a função retorna `true` imediatamente e o bloqueio anterior permanece em vigor.
+Se o thread de chamada já possui o `mutex`, a função retorna imediatamente **verdadeiro**, e o bloqueio anterior permanece em vigor.
 
 ## <a name="unlock"></a>  unlock
 

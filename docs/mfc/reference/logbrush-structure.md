@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e02c156619e4ca36d268870c70ba783c41a352d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 15b904a07eb668a59a269741973424aa30e15877
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336400"
 ---
 # <a name="logbrush-structure"></a>Estrutura LOGBRUSH
 O `LOGBRUSH` estrutura define o estilo, cor e padrão de um pincel físico. Ele é usado pelo Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) e [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) funções.  
@@ -37,49 +37,49 @@ typedef struct tag LOGBRUSH { /* lb */
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `lbStyle`  
+ *lbStyle*  
  Especifica o estilo de pincel. O `lbStyle` membro deve ser um dos seguintes estilos:  
   
-- **BS_DIBPATTERN** um pincel de padrão definido por uma especificação de bitmap independente de dispositivo (DIB). Se `lbStyle` é **BS_DIBPATTERN**, o **lbHatch** membro contém um identificador para DIB compactado.  
+- Pincel de padrão BS_DIBPATTERN um definido por um bitmap independente de dispositivo especificação (DIB). Se *lbStyle* é BS_DIBPATTERN, o `lbHatch` membro contém um identificador para um DIB compactado.  
   
-- **BS_DIBPATTERNPT** um pincel de padrão definido por uma especificação de bitmap independente de dispositivo (DIB). Se `lbStyle` é **BS_DIBPATTERNPT**, o **lbHatch** membro contém um ponteiro para um DIB compactado.  
+- Pincel de padrão BS_DIBPATTERNPT um definido por um bitmap independente de dispositivo especificação (DIB). Se *lbStyle* é BS_DIBPATTERNPT, o `lbHatch` membro contém um ponteiro para um DIB compactado.  
   
-- **BS_HATCHED** Hatched pincel.  
+- Pincel BS_HATCHED Hatched.  
   
-- **BS_HOLLOW** vazio pincel.  
+- Pincel BS_HOLLOW vazado.  
   
-- **BS_NULL** igual **BS_HOLLOW**.  
+- BS_NULL mesmo que BS_HOLLOW.  
   
-- **BS_PATTERN** padrão de pincel definido por um bitmap de memória.  
+- Pincel padrão BS_PATTERN definido por um bitmap de memória.  
   
-- **BS_SOLID** pincel sólido.  
+- Pincel BS_SOLID sólida.  
   
- `lbColor`  
- Especifica a cor na qual o pincel será desenhado. Se `lbStyle` é o **BS_HOLLOW** ou **BS_PATTERN** estilo, **lbColor** será ignorado. Se `lbStyle` é **BS_DIBPATTERN** ou **BS_DIBPATTERNBT**, a palavra de ordem inferior de **lbColor** Especifica se o **bmiColors**membros a [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) estrutura contêm explícito vermelho, verde, azul valores RGB () ou índices para a paleta lógica realizada no momento. O **lbColor** membro deve ser um dos seguintes valores:  
+ *lbColor*  
+ Especifica a cor em que o pincel deve ser desenhada. Se *lbStyle* é o estilo de BS_HOLLOW ou BS_PATTERN *lbColor* será ignorado. Se *lbStyle* é BS_DIBPATTERN ou BS_DIBPATTERNBT, a palavra de ordem baixa *lbColor* Especifica se o `bmiColors` membros do [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) estrutura contêm explícito vermelho, verde, azul valores (RGB) ou índices para a paleta lógica realizada no momento. O `lbColor` membro deve ser um dos seguintes valores:  
   
-- **DIB_PAL_COLORS** a tabela de cores consiste em uma matriz de índices de 16 bits na paleta de lógica realizada no momento.  
+- DIB_PAL_COLORS a tabela de cores consiste em uma matriz de índices de 16 bits na paleta lógica realizada no momento.  
   
-- **DIB_RGB_COLORS** a tabela de cores contém valores literais de RGB.  
+- A tabela de cores DIB_RGB_COLORS contém valores RGB literais.  
   
  *lbHatch*  
- Especifica um estilo de hachura. O significado depende do estilo de pincel definido pelo `lbStyle`. Se `lbStyle` é **BS_DIBPATTERN**, o **lbHatch** membro contém um identificador para DIB compactado. Se `lbStyle` é **BS_DIBPATTERNPT**, o **lbHatch** membro contém um ponteiro para um DIB compactado. Se `lbStyle` é **BS_HATCHED**, o **lbHatch** membro Especifica a orientação das linhas usadas para criar a hachura. Pode ser um dos seguintes valores:  
+ Especifica um estilo de hachura. O significado depende do estilo de pincel definido pela *lbStyle*. Se *lbStyle* é BS_DIBPATTERN, o `lbHatch` membro contém um identificador para um DIB compactado. Se *lbStyle* é BS_DIBPATTERNPT, o `lbHatch` membro contém um ponteiro para um DIB compactado. Se *lbStyle* é BS_HATCHED, o `lbHatch` membro Especifica a orientação das linhas usadas para criar a hachura. Ele pode ser um dos seguintes valores:  
   
-- `HS_BDIAGONAL` Um compartimento de 45 graus para cima, à esquerda para direita  
+- Hachura de para cima e da esquerda para direita de 45 graus de um do HS_BDIAGONAL  
   
-- `HS_CROSS` Hachura horizontal e vertical  
+- HS_CROSS Horizontal e vertical hachura  
   
-- `HS_DIAGCROSS` Hachura de 45 graus  
+- Hachura de 45 graus HS_DIAGCROSS  
   
-- `HS_FDIAGONAL` Um compartimento de 45 graus para baixo, esquerda para direita  
+- Hachura de para baixo, esquerda para a direita de 45 graus de um do HS_FDIAGONAL  
   
-- `HS_HORIZONTAL` Hachura horizontal  
+- Hachura Horizontal HS_HORIZONTAL  
   
-- `HS_VERTICAL` Hachura vertical  
+- Hachura Vertical HS_VERTICAL  
   
- Se `lbStyle` é **BS_PATTERN**, **lbHatch** é um identificador para o bitmap que define o padrão. Se `lbStyle` é **BS_SOLID** ou **BS_HOLLOW**, **lbHatch** será ignorado.  
+ Se *lbStyle* é BS_PATTERN, *lbHatch* é um identificador para o bitmap que define o padrão. Se *lbStyle* é BS_SOLID ou BS_HOLLOW, *lbHatch* será ignorado.  
   
 ## <a name="remarks"></a>Comentários  
- Embora **lbColor** controla a cor de primeiro plano de um pincel de hachura de [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode) e [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) funções controlam a cor de plano de fundo.  
+ Embora *lbColor* controla a cor de primeiro plano de um pincel de hachura, o [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode) e [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) funções controlam a cor do plano de fundo.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** wingdi  

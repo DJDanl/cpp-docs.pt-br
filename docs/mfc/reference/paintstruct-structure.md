@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfeddfd1ebf0c5c2247b27a0c69a8a6ef33e7766
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75a3db6c6beb18afe2303b464fcab290b2e132fc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338204"
 ---
 # <a name="paintstruct-structure"></a>Estrutura PAINTSTRUCT
-O `PAINTSTRUCT` estrutura contém informações que podem ser usadas para pintar a área cliente de uma janela.  
+O `PAINTSTRUCT` estrutura contém informações que podem ser usadas para pintar a área de cliente de uma janela.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,13 +41,13 @@ typedef struct tagPAINTSTRUCT {
   
 #### <a name="parameters"></a>Parâmetros  
  *hDC*  
- Identifica o contexto de exibição a ser usada para pintura.  
+ Identifica o contexto de exibição a ser usado para pintura.  
   
  *fErase*  
- Especifica se o plano de fundo deve ser redesenhado. Não é 0 se o aplicativo deve redesenhar o plano de fundo. O aplicativo é responsável por desenhar o plano de fundo se uma classe de janela do Windows é criada sem um pincel de plano de fundo (consulte a descrição do **hbrBackground** membro o [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estrutura no SDK do Windows).  
+ Especifica se o plano de fundo precisa ser redesenhado. Não é 0 se o aplicativo deve redesenhar a tela de fundo. O aplicativo é responsável por desenhar a tela de fundo se uma classe de janela do Windows é criada sem um pincel de plano de fundo (consulte a descrição do `hbrBackground` membro do [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estrutura no SDK do Windows).  
   
  *rcPaint*  
- Especifica a parte superior esquerda e inferior direita cantos do retângulo na qual a pintura é solicitada.  
+ Especifica o canto superior esquerdo e inferior direita cantos do retângulo no qual a pintura é solicitada.  
   
  *fRestore*  
  Membro reservado. Ele é usado internamente pelo Windows.  
@@ -56,10 +56,10 @@ typedef struct tagPAINTSTRUCT {
  Membro reservado. Ele é usado internamente pelo Windows.  
   
  *rgbReserved [16]*  
- Membro reservado. Um bloco reservado de memória usado internamente pelo Windows.  
+ Membro reservado. Um bloco reservado de memória usada internamente pelo Windows.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** WinUser  
+ **Cabeçalho:** WinUser. h  
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   

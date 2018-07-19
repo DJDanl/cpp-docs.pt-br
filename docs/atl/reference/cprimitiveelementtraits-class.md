@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bec944c4b9a505cc817dbe7aa3ce09a317954f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2219be699e879afb6ec19ad84acc50f18d93a9a9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359137"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885803"
 ---
 # <a name="cprimitiveelementtraits-class"></a>Classe CPrimitiveElementTraits
-Essa classe fornece métodos padrão e funções para uma classe de coleção composta de tipos de dados primitivos.  
+Essa classe fornece métodos padrão e funções para uma classe de coleção é composta de tipos de dados primitivos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,8 +37,8 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
- O tipo de dados a ser armazenado no objeto de classe de coleção.  
+ *T*  
+ O tipo de dados a serem armazenados no objeto de classe de coleção.  
   
 ## <a name="members"></a>Membros  
   
@@ -46,11 +46,11 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|O tipo de dados a ser usado para a adição de elementos para o objeto de classe de coleção.|  
-|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|O tipo de dados a ser usado para recuperar os elementos do objeto de classe de coleção.|  
+|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|O tipo de dados a ser usado para adicionar elementos ao objeto de classe da coleção.|  
+|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|O tipo de dados a ser usado para recuperar os elementos do objeto de classe da coleção.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe fornece métodos para mover, copiar, comparar e armazenados em um objeto de classe de coleção de elementos de tipo de dados primitivos de hash e funções estáticas padrão.  
+ Essa classe fornece métodos para mover, copiar, comparar e hash armazenados em um objeto de classe de coleção de elementos de tipo de dados primitivos e funções estáticas do padrão.  
   
  Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl-collection-classes.md).  
   
@@ -69,14 +69,14 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
  **Cabeçalho:** atlcoll.h  
   
 ##  <a name="inargtype"></a>  CPrimitiveElementTraits::INARGTYPE  
- O tipo de dados a ser usado para a adição de elementos para o objeto de classe de coleção.  
+ O tipo de dados a ser usado para adicionar elementos ao objeto de classe da coleção.  
   
 ```
 typedef T INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CPrimitiveElementTraits::OUTARGTYPE  
- O tipo de dados a ser usado para recuperar os elementos do objeto de classe de coleção.  
+ O tipo de dados a ser usado para recuperar os elementos do objeto de classe da coleção.  
   
 ```
 typedef T& OUTARGTYPE;

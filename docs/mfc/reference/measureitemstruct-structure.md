@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff015fdaf9e37d919459cadc8e4c35c4b795b3f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcf4bd41d00f6999b4158f0884c39e7a16d10bcc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336953"
 ---
 # <a name="measureitemstruct-structure"></a>Estrutura MEASUREITEMSTRUCT
-O `MEASUREITEMSTRUCT` estrutura informa as janelas de dimensões de um item de menu ou controle de desenho proprietário.  
+O `MEASUREITEMSTRUCT` estrutura informa ao Windows das dimensões de um item de menu ou controle desenhado pelo proprietário.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,31 +40,31 @@ typedef struct tagMEASUREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `CtlType`  
- Contém o tipo de controle. Os valores para os tipos de controle são da seguinte maneira:  
+ *CtlType*  
+ Contém o tipo de controle. Os valores para tipos de controle são da seguinte maneira:  
   
-- **ODT_COMBOBOX** caixa de combinação do desenho proprietário  
+- Caixa de combinação do desenho proprietário ODT_COMBOBOX  
   
-- **ODT_LISTBOX** caixa de listagem do desenho proprietário  
+- Caixa de listagem do desenho proprietário ODT_LISTBOX  
   
-- **ODT_MENU** menu de desenho proprietário  
+- Menus de desenho proprietário ODT_MENU  
   
- `CtlID`  
- Contém a ID de controle de botão, caixa de listagem ou caixa de combinação. Esse membro não é usado para um menu.  
+ *CtlID*  
+ Contém a ID de controle para uma caixa de combinação, caixa de listagem ou botão. Esse membro não é usado para um menu.  
   
- `itemID`  
- Contém a ID do item de menu para um menu ou a ID de item de caixa de listagem para uma caixa de combinação de altura variável ou a caixa de listagem. Esse membro não é usado para uma caixa de combinação de altura fixa ou uma caixa de listagem ou para um botão.  
+ *itemID*  
+ Contém a ID de item de menu para um menu ou a ID de item de caixa de listagem para uma caixa de combinação de altura variável ou a caixa de listagem. Esse membro não é usado para uma caixa de combinação de altura fixa ou uma caixa de listagem ou para um botão.  
   
  *itemWidth*  
- Especifica a largura de um item de menu. O proprietário do item de menu de desenho proprietário deve preencher este membro antes de retornar a mensagem.  
+ Especifica a largura de um item de menu. O proprietário do item de menu de desenho do proprietário deve preencher esse membro antes de retornar a mensagem.  
   
  *itemHeight*  
- Especifica a altura de um item individual em um menu ou uma caixa de listagem. Antes de retornar a mensagem, o proprietário da caixa de combinação do desenho proprietário, caixa de listagem ou item de menu deve preencher este membro. A altura máxima de um item de caixa de listagem é 255.  
+ Especifica a altura de um item individual em uma caixa de listagem ou um menu. Antes de retornar a mensagem, o proprietário da caixa de combinação do desenho proprietário, caixa de listagem ou item de menu deve preencher esse membro. A altura máxima de um item de caixa de listagem é 255.  
   
- `itemData`  
- Para uma caixa de combinação ou caixa de listagem, esse membro contém o valor passado para a caixa de lista por um dos seguintes:  
+ *itemData*  
+ Para uma caixa de combinação ou caixa de listagem, esse membro contém o valor que foi passado para a caixa de listagem por um dos seguintes:  
   
-- [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
+- [CComboBox:: AddString](../../mfc/reference/ccombobox-class.md#addstring)  
   
 - [CComboBox::InsertString](../../mfc/reference/ccombobox-class.md#insertstring)  
   
@@ -80,10 +80,10 @@ typedef struct tagMEASUREITEMSTRUCT {
   
 - [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
- Isso permite que o Windows processar a interação do usuário com o controle corretamente. Falha ao preencher os membros adequados a `MEASUREITEMSTRUCT` estrutura fará com que uma operação inadequada do controle.  
+ Isso permite que o Windows processar a interação do usuário com o controle corretamente. Falha ao preencher os membros adequados no `MEASUREITEMSTRUCT` estrutura fará com que uma operação inadequada do controle.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** WinUser  
+ **Cabeçalho:** WinUser. h  
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   

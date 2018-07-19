@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8acde4167d9115180282b26f93cc2629c9f72638
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 409b9593d0c4d853e325502f4cc47c57a81c6264
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841922"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959174"
 ---
 # <a name="ltdequegt-functions"></a>Funções &lt;deque&gt;
 
@@ -35,9 +35,9 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um objeto do tipo `deque`.
+*à esquerda* um objeto do tipo `deque`.
 
-`right` Um objeto do tipo `deque`.
+*à direita* um objeto do tipo `deque`.
 
 ### <a name="example"></a>Exemplo
 

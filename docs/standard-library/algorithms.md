@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c67a509c17558c7b388aa288612d73ea26062ec0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5338ddeb802d13d100e5e3026152793f866c90f6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846656"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961019"
 ---
 # <a name="algorithms"></a>Algoritmos
 
@@ -43,7 +43,7 @@ As descrições das funções do modelo de algoritmo empregam várias frases abr
 
 - Expressões como *X* - *Y*, em que *X* e *Y* podem ser iteradores diferentes dos iteradores de acesso aleatório, são usadas no sentido matemático. A função não avaliará necessariamente o operador **-** se precisar determinar esse valor. O mesmo também vale para expressões como *X* + *N* e *X* - *N*, em que *N* é do tipo inteiro.
 
-Vários algoritmos usam um predicado que executa uma comparação de pares, como com `operator==`, para produzir um resultado `bool`. A função de predicado `operator==` ou qualquer substituição dela, não deve alterar nenhum de seus operandos. Ela deverá produzir o mesmo resultado `bool` sempre que for avaliada e deverá produzir o mesmo resultado se uma cópia de um dos operandos for substituída pelo operando.
+Vários algoritmos usam um predicado que executa uma comparação de paridade, como com `operator==`, para produzir uma **bool** resultado. A função de predicado `operator==` ou qualquer substituição dela, não deve alterar nenhum de seus operandos. Ele deverá produzir o mesmo **bool** resultam sempre que ela é avaliada e deverá produzir o mesmo resultado se uma cópia de qualquer um dos operandos for substituída pelo operando.
 
 Vários algoritmos usam um predicado que deve impor uma ordenação fraca estrita aos pares de elementos de uma sequência. Para o predicado `pr`(*X*, *Y*):
 
@@ -53,11 +53,11 @@ Vários algoritmos usam um predicado que deve impor uma ordenação fraca estrit
 
 - Ordenação significa que `pr`(*X*, *Y*) && `pr`(*Y*, Z) implica `pr`(*X*, Z).
 
-Alguns desses algoritmos usam implicitamente o predicado *X* \< *Y*. Outros predicados que normalmente atendem ao requisito de ordenação fraca estrita são *X* > *Y*, **less**(*X*, *Y*) e `greater`(*X*, *Y*). No entanto, observe que predicados como *X* \<= *Y* e *X* >= *Y* não atendem a esse requisito.
+Alguns desses algoritmos usam implicitamente o predicado *X* \< *Y*. Outros predicados que normalmente satisfazem a requisito de ordenação fraca estrita são *X* > *Y*, `less`(*X*, *Y*), e `greater`(*X*, *Y*). No entanto, observe que predicados como *X* \<= *Y* e *X* >= *Y* não atendem a esse requisito.
 
-Uma sequência de elementos designados por iteradores no intervalo [`First`, `Last`) será uma sequência ordenada pelo operador**<** se, para cada *N* no intervalo [0, `Last` - `First`) e para cada *M* no intervalo (N, `Last` - `First`) o predicado !(\*(`First` + *M*) < \*(*First* + *N*)) for true. (Observe que os elementos são classificados em ordem crescente). A função de predicado **operator<** ou qualquer substituição dela, não deve alterar nenhum de seus operandos. Ela deverá produzir o mesmo resultado `bool` sempre que for avaliada e deverá produzir o mesmo resultado se uma cópia de um dos operandos for substituída pelo operando. Além disso, ela deve impor uma ordenação fraca estrita aos operandos que compara.
+Uma sequência de elementos designados por iteradores no intervalo [`First`, `Last`) será uma sequência ordenada pelo operador**<** se, para cada *N* no intervalo [0, `Last` - `First`) e para cada *M* no intervalo (N, `Last` - `First`) o predicado !(\*(`First` + *M*) < \*(*First* + *N*)) for true. (Observe que os elementos são classificados em ordem crescente). A função de predicado `operator<` ou qualquer substituição dela, não deve alterar nenhum de seus operandos. Ela deverá produzir o mesmo resultado `bool` sempre que for avaliada e deverá produzir o mesmo resultado se uma cópia de um dos operandos for substituída pelo operando. Além disso, ela deve impor uma ordenação fraca estrita aos operandos que compara.
 
-Uma sequência de elementos designados por iteradores no intervalo [`First`, `Last`) será um heap ordenado por **operator<** se, para cada *N* no intervalo [1, `Last` - `First`) o predicado !(\*`First` < \*(`First` + *N*)) for true. (O primeiro elemento é o maior). Sua estrutura interna é conhecida apenas para as funções de modelo [make_heap](../standard-library/algorithm-functions.md#make_heap), [pop_heap](../standard-library/algorithm-functions.md#pop_heap), e [push_heap](../standard-library/algorithm-functions.md#push_heap). Assim como acontece com uma sequência ordenada, a função de predicado **operator<** ou qualquer substituição dela, não deve alterar nenhum de seus operandos e deve impor uma ordenação fraca estrita aos operandos que compara. Ela deverá produzir o mesmo resultado `bool` sempre que for avaliada e deverá produzir o mesmo resultado se uma cópia de um dos operandos for substituída pelo operando.
+Uma sequência de elementos designados por iteradores no intervalo [`First`, `Last`) é um heap ordenado por `operator<` se, para cada *N* no intervalo [1, `Last`  -  `First`) a predicado! (\*`First` < \*(`First` + *N*)) é true. (O primeiro elemento é o maior). Sua estrutura interna é conhecida apenas para as funções de modelo [make_heap](../standard-library/algorithm-functions.md#make_heap), [pop_heap](../standard-library/algorithm-functions.md#pop_heap), e [push_heap](../standard-library/algorithm-functions.md#push_heap). Assim como acontece com uma sequência ordenada, a função de predicado `operator<`, ou qualquer substituição dela, não deve alterar nenhum de seus operandos e deve impor uma ordenação fraca estrita aos operandos que compara. Ele deverá produzir o mesmo **bool** resultam sempre que ela é avaliada e deverá produzir o mesmo resultado se uma cópia de qualquer um dos operandos for substituída pelo operando.
 
 Os algoritmos da Biblioteca Padrão do C++ estão localizados nos arquivos de cabeçalho [\<algorithm>](../standard-library/algorithm.md) e [\<numeric>](../standard-library/numeric.md).
 

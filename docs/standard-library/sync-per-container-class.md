@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af1db124d7fa73a9483d2c77f0a1e78349224023
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d511eb29c081cfbb85770b35e31aab927b2480b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864510"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957115"
 ---
 # <a name="syncpercontainer-class"></a>Classe sync_per_container
 
@@ -40,7 +40,7 @@ class sync_per_container
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`Cache`|O tipo de cache associado ao filtro de sincronização. Pode ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Cache*|O tipo de cache associado ao filtro de sincronização. Pode ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ### <a name="member-functions"></a>Funções de membro
 
@@ -66,12 +66,12 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`Cache`|O objeto de cache do filtro de sincronização.|
-|`Other`|O objeto de cache a ser comparado quanto à igualdade.|
+|*Cache*|O objeto de cache do filtro de sincronização.|
+|*Outros*|O objeto de cache a ser comparado quanto à igualdade.|
 
 ### <a name="return-value"></a>Valor de retorno
 
-A função membro sempre retorna `false`.
+A função membro sempre retorna **falsos**.
 
 ### <a name="remarks"></a>Comentários
 

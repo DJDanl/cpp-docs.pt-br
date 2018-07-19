@@ -33,12 +33,12 @@ helpviewer_keywords:
 - std::thread [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfcb554b374d035e85d53d769d04317e52e4193b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47afdbd5e4a5045ec5f91f8f766b45d3d547ba3e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861117"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958199"
 ---
 # <a name="thread-class"></a>Classe thread
 
@@ -52,7 +52,7 @@ class thread;
 
 ## <a name="remarks"></a>Comentários
 
-É possível usar um objeto `thread` para observar e gerenciar um thread de execução em um aplicativo. Um objeto de thread criado usando o construtor padrão não é associado a nenhum thread de execução. Um objeto de thread construído usando um objeto que pode ser chamado cria um novo thread de execução e chama o objeto que pode ser chamado nesse thread. Os objetos de thread podem ser movidos, mas não copiados. Portanto, um thread de execução pode ser associado apenas a um objeto de thread.
+Você pode usar um **thread** objeto para observar e gerenciar um thread de execução dentro de um aplicativo. Um objeto de thread criado usando o construtor padrão não é associado a nenhum thread de execução. Um objeto de thread construído usando um objeto que pode ser chamado cria um novo thread de execução e chama o objeto que pode ser chamado nesse thread. Os objetos de thread podem ser movidos, mas não copiados. Portanto, um thread de execução pode ser associado apenas a um objeto de thread.
 
 Cada thread de execução tem um identificador exclusivo do tipo `thread::id`. A função `this_thread::get_id` retorna o identificador do thread de chamada. A função membro `thread::get_id` retorna o identificador do thread gerenciado por um objeto de thread. Para um objeto de thread construído por padrão, o método `thread::get_id` retorna um objeto que tem um valor que é igual para todos os objetos de thread construídos por padrão e diferente do valor retornado por `this_thread::get_id` para qualquer thread de execução que poderá ser unido no momento da chamada.
 
@@ -68,25 +68,25 @@ Cada thread de execução tem um identificador exclusivo do tipo `thread::id`. A
 
 |Nome|Descrição|
 |----------|-----------------|
-|[thread](#thread)|Constrói um objeto `thread`.|
+|[thread](#thread)|Constrói uma **thread** objeto.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[detach](#detach)|Desanexa o thread associado do objeto `thread`.|
+|[detach](#detach)|Desanexa o thread associado a partir de **thread** objeto.|
 |[get_id](#get_id)|Retorna o identificador exclusivo do thread associado.|
 |[hardware_concurrency](#hardware_concurrency)|Estático. Retorna uma estimativa do número de contextos de thread de hardware.|
 |[join](#join)|Bloqueia até que o thread associado seja concluído.|
 |[joinable](#joinable)|Especifica se o thread associado permite junções.|
 |[native_handle](#native_handle)|Retorna o tipo específico à implementação que representa o identificador de thread.|
-|[swap](#swap)|Troca o estado do objeto por um objeto `thread` especificado.|
+|[swap](#swap)|Alterna o estado do objeto com especificado **thread** objeto.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[thread::operator=](#op_eq)|Associa um thread ao objeto `thread` atual.|
+|[thread::operator=](#op_eq)|Associa um thread atual **thread** objeto.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -172,7 +172,7 @@ bool joinable() const noexcept;
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o thread associado *permitir junções*; caso contrário, `false`.
+**Verdadeiro** se o thread associado *permite junções*; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -200,7 +200,8 @@ thread& operator=(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Other` Um `thread` objeto.
+*Outros*  
+ Um **thread** objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -214,7 +215,7 @@ Depois que a associação é feita, `Other` é definido com um estado construíd
 
 ## <a name="swap"></a>  thread::swap
 
-Troca o estado do objeto pelo estado de um objeto `thread` especificado.
+Alterna o estado do objeto com do especificado **thread** objeto.
 
 ```cpp
 void swap(thread& Other) noexcept;
@@ -222,11 +223,12 @@ void swap(thread& Other) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Other` Um `thread` objeto.
+*Outros*  
+ Um **thread** objeto.
 
 ## <a name="thread"></a>  Construtor thread::thread
 
-Constrói um objeto `thread`.
+Constrói uma **thread** objeto.
 
 ```cpp
 thread() noexcept;
@@ -238,17 +240,20 @@ thread(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-`F` Uma função definida pelo aplicativo a ser executado pelo thread.
+*F*  
+ Uma função definida pelo aplicativo a ser executada pelo thread.
 
-`A` Uma lista de argumentos a serem passados para `F`.
+*A*  
+ Uma lista de argumentos a serem passados para *F*.
 
-`Other` Um existente `thread` objeto.
+*Outros*  
+ Um existente **thread** objeto.
 
 ### <a name="remarks"></a>Comentários
 
 O primeiro construtor constrói um objeto que não está associado a nenhum thread de execução. O valor retornado por uma chamada a `get_id` do objeto construído é `thread::id()`.
 
-O segundo construtor constrói um objeto que está associado a um novo thread de execução e executa a pseudofunção `INVOKE` definida em [\<functional>](../standard-library/functional.md). Se não houver recursos suficientes disponíveis para iniciar um novo thread, a função gerará um objeto [system_error](../standard-library/system-error-class.md) que tem um código de erro `resource_unavailable_try_again`. Se a chamada a `F` for encerrada com uma exceção não capturada, [terminate](../standard-library/exception-functions.md#terminate) será chamado.
+O segundo construtor constrói um objeto que está associado a um novo thread de execução e executa a pseudofunção `INVOKE` definida em [\<functional>](../standard-library/functional.md). Se não houver recursos suficientes disponíveis para iniciar um novo thread, a função gerará um objeto [system_error](../standard-library/system-error-class.md) que tem um código de erro `resource_unavailable_try_again`. Se a chamada para *F* termina com uma exceção não percebida, [encerrar](../standard-library/exception-functions.md#terminate) é chamado.
 
 O terceiro construtor constrói um objeto que está associado ao thread associado a `Other`. `Other` é então definido com um estado construído por padrão.
 

@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7030fdcb59166c0e70a7b2c2471273c913fe459
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b75016c6c783ae19d8e0f6739adaa34b8da977db
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338431"
 ---
 # <a name="clongbinary-class"></a>Classe CLongBinary
-Simplifica o trabalho com objetos de dados binários muito grandes (geralmente chamado de BLOBs ou "objetos binários grandes") em um banco de dados.  
+Simplifica o trabalho com dados binários muito grandes objetos (geralmente chamados de BLOBs ou "objetos binários grandes") em um banco de dados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,17 +49,17 @@ class CLongBinary : public CObject
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CLongBinary::m_dwDataLength](#m_dwdatalength)|Contém o tamanho real em bytes do objeto de dados cujo identificador é armazenado em `m_hData`.|  
-|[CLongBinary::m_hData](#m_hdata)|Contém um Windows `HGLOBAL` identificador para o objeto de imagem real.|  
+|[CLongBinary::m_hData](#m_hdata)|Contém um identificador de HGLOBAL do Windows para o objeto de imagem real.|  
   
 ## <a name="remarks"></a>Comentários  
- Por exemplo, um campo de registro em uma tabela do SQL pode conter um bitmap que representa uma imagem. Um `CLongBinary` objeto armazena esse tipo de objeto e mantém o controle de seu tamanho.  
+ Por exemplo, um campo de registro em uma tabela SQL pode conter um bitmap que representa uma imagem. Um `CLongBinary` objeto armazena esse objeto e mantém o controle de seu tamanho.  
   
 > [!NOTE]
->  Em geral, é melhor prática agora usar [CByteArray](../../mfc/reference/cbytearray-class.md) em conjunto com o [DFX_Binary](record-field-exchange-functions.md#dfx_binary) função. Você ainda pode usar `CLongBinary`, mas em geral `CByteArray` oferece mais funcionalidade sob Win32, porque não há não seja a limitação de tamanho encontrada com 16 bits `CByteArray`. Essa recomendação se aplica a programação com objetos de acesso de dados (DAO), bem como conectividade aberta de banco de dados (ODBC).  
+>  Em geral, é uma prática recomendada agora usam [CByteArray](../../mfc/reference/cbytearray-class.md) em conjunto com o [DFX_Binary](record-field-exchange-functions.md#dfx_binary) função. Você ainda pode usar `CLongBinary`, mas em geral `CByteArray` fornece mais funcionalidade em Win32, já que não há não mais a limitação de tamanho encontrada com 16 bits `CByteArray`. Esse conselho se aplica a programação com objetos de acesso a dados (DAO), bem como conectividade aberta de banco de dados (ODBC).  
   
- Para usar um `CLongBinary` objeto, declare um membro de dados do campo do tipo `CLongBinary` em sua classe de conjunto de registros. Esse membro será um membro incorporado da classe de conjunto de registros e será construído quando o conjunto de registros é construído. Após o `CLongBinary` objeto for construído, o mecanismo de troca (RFX) campos de registro carrega o objeto de dados de um campo no registro atual na fonte de dados e armazena-o novamente para o registro quando o registro é atualizado. RFX as consultas a fonte de dados para o tamanho do objeto binário grande, aloca armazenamento para ela (por meio de `CLongBinary` do objeto `m_hData` membro de dados) e armazena um `HGLOBAL` identificador para os dados em `m_hData`. RFX também armazena o tamanho real do objeto de dados no `m_dwDataLength` membro de dados. Trabalhar com os dados no objeto por meio de `m_hData`, usando as mesmas técnicas que normalmente usaria para manipular os dados armazenados em um Windows `HGLOBAL` tratar.  
+ Para usar um `CLongBinary` objeto, declarar um membro de dados do campo de tipo `CLongBinary` em sua classe de conjunto de registros. Esse membro será um membro inserido da classe de conjunto de registros e será criado quando o conjunto de registros é construído. Após o `CLongBinary` objeto é construído, o mecanismo do exchange (RFX) de campos de registro carrega o objeto de dados de um campo no registro atual na fonte de dados e armazena-o novamente para o registro quando o registro é atualizado. RFX consulta a fonte de dados para o tamanho do objeto binário grande, aloca armazenamento para ele (via o `CLongBinary` do objeto `m_hData` membro de dados) e armazena um `HGLOBAL` tratar-se aos dados no `m_hData`. RFX também armazena o tamanho real do objeto de dados no `m_dwDataLength` membro de dados. Trabalhar com os dados no objeto por meio `m_hData`, usando as mesmas técnicas que você normalmente usaria para manipular os dados armazenados em um Windows `HGLOBAL` manipular.  
   
- Quando você destruir o conjunto de registros, o item inserido `CLongBinary` objeto também é destruído e seu destruidor desaloca o `HGLOBAL` identificador de dados.  
+ Quando você destruir seu conjunto de registros, o embedded `CLongBinary` objeto também é destruído e seu destruidor desaloca a `HGLOBAL` identificador de dados.  
   
  Para obter mais informações sobre objetos grandes e o uso de `CLongBinary`, consulte os artigos [conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md) e [conjunto de registros: Trabalhando com itens de dados grandes (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).  
   
@@ -79,7 +79,7 @@ CLongBinary();
 ```  
   
 ##  <a name="m_dwdatalength"></a>  CLongBinary::m_dwDataLength  
- Armazena o tamanho real em bytes dos dados armazenados no `HGLOBAL` tratar no `m_hData`.  
+ Armazena o tamanho real em bytes dos dados armazenados no identificador de HGLOBAL em `m_hData`.  
   
 ```  
 SQLULEN m_dwDataLength;  
@@ -89,7 +89,7 @@ SQLULEN m_dwDataLength;
  Esse tamanho pode ser menor que o tamanho do bloco de memória alocado para os dados. Chame o Win32 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593) função para obter o tamanho alocado.  
   
 ##  <a name="m_hdata"></a>  CLongBinary::m_hData  
- Armazena um Windows `HGLOBAL` lidar com os dados reais de objeto binário grande.  
+ Armazena um identificador do Windows HGLOBAL para os dados reais de objeto binário grande.  
   
 ```  
 HGLOBAL m_hData;  
@@ -97,5 +97,5 @@ HGLOBAL m_hData;
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CObject](../../mfc/reference/cobject-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe CRecordset](../../mfc/reference/crecordset-class.md)

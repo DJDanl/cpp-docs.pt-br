@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b604a4c9a2fc11a9c7274d0e29ab98acfd260907
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47fabb7120cc13eeca38bc9d06428f686fc9f1b9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912648"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955560"
 ---
 # <a name="istriviallyassignable-class"></a>Classe is_trivially_assignable
 
@@ -43,7 +43,7 @@ O tipo de objeto que fornece o valor.
 
 ## <a name="remarks"></a>Comentários
 
-A expressão `declval<To>() = declval<From>()` deve ser bem formada e o compilador deve ter o conhecimento de que ela não requer operações não triviais. `From` e `To` devem ser tipos completos, `void` ou matrizes de limite desconhecido.
+A expressão `declval<To>() = declval<From>()` deve ser bem formada e o compilador deve ter o conhecimento de que ela não requer operações não triviais. Ambos `From` e `To` devem ser tipos completos, **void**, ou matrizes de limite desconhecido.
 
 ## <a name="requirements"></a>Requisitos
 

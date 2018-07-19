@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9407c98183fa923a58ca2939e8c534cd56dc8ef7
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4f2bf81c2e69290feb9f9afd054286c10e42d0be
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338747"
 ---
 # <a name="ccontextmenumanager-class"></a>Classe CContextMenuManager
-O `CContextMenuManager` objeto gerencia menus de atalho, também conhecido como menus de contexto.  
+O `CContextMenuManager` objeto gerencia menus de atalho, também conhecidos como menus de contexto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -70,25 +70,25 @@ class CContextMenuManager : public CObject
 |[CContextMenuManager::AddMenu](#addmenu)|Adiciona um novo menu de atalho.|  
 |[CContextMenuManager::GetMenuById](#getmenubyid)|Retorna um identificador para o menu associado com a ID de recurso fornecido.|  
 |[CContextMenuManager::GetMenuByName](#getmenubyname)|Retorna um identificador para o menu que corresponde ao nome fornecido do menu.|  
-|[CContextMenuManager::GetMenuNames](#getmenunames)|Retorna uma lista de nomes de menu.|  
+|[CContextMenuManager::GetMenuNames](#getmenunames)|Retorna uma lista de nomes de menus.|  
 |[CContextMenuManager::LoadState](#loadstate)|Carrega os menus de atalho armazenados no registro do Windows.|  
 |[CContextMenuManager::ResetState](#resetstate)|Limpa os menus de atalho do Gerenciador do menu de contexto.|  
 |[CContextMenuManager::SaveState](#savestate)|Salva os menus de atalho para o registro do Windows.|  
-|[CContextMenuManager::SetDontCloseActiveMenu](#setdontcloseactivemenu)|Controla se o `CContextMenuManager` fecha o menu de atalho ativo quando ele mostra um novo menu de atalho.|  
+|[CContextMenuManager::SetDontCloseActiveMenu](#setdontcloseactivemenu)|Controles se o `CContextMenuManager` fecha o menu de atalho do Active Directory quando ele mostra um novo menu de atalho.|  
 |[CContextMenuManager::ShowPopupMenu](#showpopupmenu)|Exibe o menu de atalho especificado.|  
 |[CContextMenuManager::TrackPopupMenu](#trackpopupmenu)|Exibe o menu de atalho especificado. Retorna o índice do comando de menu selecionado.|  
   
 ## <a name="remarks"></a>Comentários  
- `CContextMenuManager` gerencia os menus de atalho e torna-se de que eles tenham uma aparência consistente.  
+ `CContextMenuManager` gerencia menus de atalho e torna-se de que eles têm uma aparência consistente.  
   
  Você não deve criar um `CContextMenuManager` objeto manualmente. A estrutura do seu aplicativo cria o `CContextMenuManager` objeto. No entanto, você deve chamar [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) quando seu aplicativo é inicializado. Depois de inicializar o Gerenciador de contexto, use o método [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager) para obter um ponteiro para o Gerenciador de contexto para o seu aplicativo.  
   
- Você pode criar menus de atalho em tempo de execução chamando `AddMenu`. Se você quiser mostrar o menu sem primeiro receber entrada do usuário, chame `ShowPopupMenu`. `TrackPopupMenu` é usado quando você deseja criar um menu e aguardar a entrada do usuário. `TrackPopupMenu` Retorna o índice do comando selecionado ou 0 se o usuário foi encerrado sem selecionar qualquer coisa.  
+ Você pode criar menus de atalho em tempo de execução chamando `AddMenu`. Se você quiser mostrar o menu sem primeiro receber entrada do usuário, chame `ShowPopupMenu`. `TrackPopupMenu` é usado quando você deseja criar um menu e aguarda a entrada do usuário. `TrackPopupMenu` Retorna o índice do comando selecionado ou 0 se o usuário saiu sem selecionar nada.  
   
  O `CContextMenuManager` também pode salvar e carregar seu estado para o registro do Windows.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como adicionar um menu uma `CContextMenuManager` e como não fechar o menu pop-up ativo quando o `CContextMenuManager` objeto exibe um novo menu pop-up. Este trecho de código é parte do [exemplo páginas personalizadas](../../visual-cpp-samples.md).  
+ O exemplo a seguir demonstra como adicionar um menu a um `CContextMenuManager` objeto e como fechar um menu pop-up do Active Directory quando o `CContextMenuManager` objeto exibe um novo menu pop-up. Este trecho de código é parte do [exemplo de páginas personalizadas](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]  
   
@@ -119,19 +119,19 @@ BOOL AddMenu(
  Uma ID de recurso para uma cadeia de caracteres que contém o nome para o novo menu.  
   
  [in] *uiMenuResId*  
- A ID de recurso de menu.  
+ A ID do recurso de menu.  
   
  [in] *lpszName*  
  Uma cadeia de caracteres que contém o nome para o novo menu.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o método teve êxito; 0 se o método falhar.  
+ Diferente de zero se o método foi bem-sucedida; 0 se o método falhar.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método falhar se *uiMenuResId* é inválido ou se outro menu com o mesmo nome já está no `CContextMenuManager`.  
   
 ##  <a name="ccontextmenumanager"></a>  CContextMenuManager::CContextMenuManager  
- Constrói um [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) objeto.  
+ Constrói uma [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) objeto.  
   
 ```  
 CContextMenuManager();
@@ -141,7 +141,7 @@ CContextMenuManager();
  Na maioria dos casos, você não deve criar um `CContextMenuManager` manualmente. A estrutura do seu aplicativo cria o `CContextMenuManager` objeto. Você deve chamar [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) durante a inicialização do seu aplicativo. Para obter um ponteiro para o Gerenciador de contexto, chame [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager).  
   
 ##  <a name="getmenubyid"></a>  CContextMenuManager::GetMenuById  
- Retorna um identificador para o menu associado a uma ID de recurso especificado.  
+ Retorna um identificador para o menu associado a uma ID de recurso determinado.  
   
 ```  
 HMENU GetMenuById(UINT nMenuResId) const;  
@@ -149,10 +149,10 @@ HMENU GetMenuById(UINT nMenuResId) const;
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *nMenuResId*  
- A ID de recurso do menu.  
+ A ID de recurso para o menu.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um identificador para o menu associado ou `NULL` se o menu não foi encontrado.  
+ Um identificador para o menu associado ou `NULL` se o menu não for encontrado.  
   
 ##  <a name="getmenubyname"></a>  CContextMenuManager::GetMenuByName  
  Retorna um identificador para um menu específico.  
@@ -168,13 +168,13 @@ HMENU GetMenuByName(
  Uma cadeia de caracteres que contém o nome do menu para recuperar.  
   
  [out] *puiOrigResID*  
- Um ponteiro para um `UINT`. Este parâmetro contém a ID de recurso do menu especificado, se encontrado.  
+ Um ponteiro para um UINT. Este parâmetro contém a ID de recurso de menu especificado, se encontrado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um identificador para o menu que corresponde ao nome especificado pelo *lpszName*. `NULL` Se não há nenhum menu chamado *lpszName*.  
+ Um identificador para o menu que corresponde ao nome que foi especificado por *lpszName*. NULL se não há nenhum menu chamado *lpszName*.  
   
 ### <a name="remarks"></a>Comentários  
- Se esse método localiza um menu que corresponde a *lpszName*, `GetMenuByName` armazena a ID de recurso de menu no parâmetro *puiOrigResID*.  
+ Se esse método localiza um menu que corresponde ao *lpszName*, `GetMenuByName` armazena a ID de recurso de menu no parâmetro *puiOrigResID*.  
   
 ##  <a name="getmenunames"></a>  CContextMenuManager::GetMenuNames  
  Retorna a lista de nomes de menu adicionado para o [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).  
@@ -188,7 +188,7 @@ void GetMenuNames(CStringList& listOfNames) const;
  Uma referência a um [CStringList](../../mfc/reference/cstringlist-class.md) parâmetro. Esse método grava a lista de nomes de menu para esse parâmetro.  
   
 ##  <a name="loadstate"></a>  CContextMenuManager::LoadState  
- Carrega as informações associadas a [CContextMenuManager classe](../../mfc/reference/ccontextmenumanager-class.md) do registro do Windows.  
+ Carrega as informações associadas com o [classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) do registro do Windows.  
   
 ```  
 virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
@@ -199,28 +199,28 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
  Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o método for bem-sucedida; Caso contrário, 0.  
+ Diferente de zero se o método for bem-sucedido; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- O *lpszProfileName* parâmetro não é o caminho absoluto para uma entrada de registro. É um caminho relativo que é adicionado ao final da chave do registro padrão para seu aplicativo. Para obter ou definir a chave de registro padrão, use os métodos [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) e [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) respectivamente.  
+ O *lpszProfileName* parâmetro não é o caminho absoluto para uma entrada de registro. É um caminho relativo que é adicionado ao final da chave do registro padrão para seu aplicativo. Para obter ou definir a chave do registro padrão, use os métodos [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) e [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) , respectivamente.  
   
  Use o método [CContextMenuManager::SaveState](#savestate) para salvar os menus de atalho para o registro.  
   
 ##  <a name="resetstate"></a>  CContextMenuManager::ResetState  
- Limpa todos os itens nos menus de atalho associados a [CContextMenuManager classe](../../mfc/reference/ccontextmenumanager-class.md).  
+ Limpa todos os itens nos menus de atalho associados a [classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).  
   
 ```  
 virtual BOOL ResetState();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o método for bem-sucedida; `FALSE` se ocorrer uma falha.  
+ TRUE se o método for bem-sucedido; FALSO se ocorrer uma falha.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método limpa os menus pop-up e os remove do `CContextMenuManager`.  
+ Esse método limpa os menus pop-up e remove-las a partir de `CContextMenuManager`.  
   
 ##  <a name="savestate"></a>  CContextMenuManager::SaveState  
- Salva informações associadas a [CContextMenuManager classe](../../mfc/reference/ccontextmenumanager-class.md) no registro do Windows.  
+ Salva as informações associadas com o [classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) no registro do Windows.  
   
 ```  
 virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
@@ -231,15 +231,15 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
  Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o método for bem-sucedida; Caso contrário, 0.  
+ Diferente de zero se o método for bem-sucedido; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- O *lpszProfileName* parâmetro não é o caminho absoluto para uma entrada de registro. É um caminho relativo que é adicionado ao final da chave do registro padrão para seu aplicativo. Para obter ou definir a chave de registro padrão, use os métodos [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) e [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) respectivamente.  
+ O *lpszProfileName* parâmetro não é o caminho absoluto para uma entrada de registro. É um caminho relativo que é adicionado ao final da chave do registro padrão para seu aplicativo. Para obter ou definir a chave do registro padrão, use os métodos [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) e [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) , respectivamente.  
   
  Use o método [CContextMenuManager::LoadState](#loadstate) para carregar os menus de atalho do registro.  
   
 ##  <a name="setdontcloseactivemenu"></a>  CContextMenuManager::SetDontCloseActiveMenu  
- Controla se o [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) fecha o menu pop-up ativo quando ele for exibido um novo menu pop-up.  
+ Controles se o [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) fecha o menu pop-up ativo quando ele exibe um novo menu pop-up.  
   
 ```  
 void SetDontCloseActiveMenu (BOOL bSet = TRUE);
@@ -247,10 +247,10 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *bSet*  
- Um parâmetro booleano que controla se fechar o menu pop-up ativo. Um valor de `TRUE` indica o menu pop-up ativo não está fechado. `FALSE` indica que o menu pop-up ativo é fechado.  
+ Um parâmetro booliano que controla se deve fechar o menu pop-up do Active Directory. Um valor TRUE indica que o menu pop-up do Active Directory não está fechado. FALSE indica que o Active Directory menu pop-up é fechado.  
   
 ### <a name="remarks"></a>Comentários  
- Por padrão, o `CContextMenuManager` fecha um menu pop-up ativado.  
+ Por padrão, o `CContextMenuManager` fecha um menu pop-up do Active Directory.  
   
 ##  <a name="showpopupmenu"></a>  CContextMenuManager::ShowPopupMenu  
  Exibe o menu de atalho especificado.  
@@ -277,10 +277,10 @@ virtual CMFCPopupMenu* ShowPopupMenu(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *uiMenuResId*  
- A ID de recurso de menu que esse método será exibido.  
+ A ID de recurso do menu que esse método será exibido.  
   
  [in] *x*  
- O deslocamento do menu de atalho nas coordenadas do cliente de horizontal.  
+ Horizontal de deslocamento para o menu de atalho nas coordenadas do cliente.  
   
  [in] *y*  
  O deslocamento vertical do menu de atalho nas coordenadas do cliente  
@@ -289,7 +289,7 @@ virtual CMFCPopupMenu* ShowPopupMenu(
  Um ponteiro para a janela pai do menu de atalho.  
   
  [in] *bOwnMessage*  
- Um parâmetro booliano que indica como as mensagens são roteadas. Se *bOwnMessage* é `FALSE`, roteamento padrão do MFC é usado. Caso contrário, *pWndOwner* recebe as mensagens.  
+ Um parâmetro booliano que indica como as mensagens são roteadas. Se *bOwnMessage* é FALSE, o padrão MFC roteamento é usado. Caso contrário, *pWndOwner* recebe as mensagens.  
   
  [in] *hmenuPopup*  
  O identificador do menu que esse método será exibido.  
@@ -298,15 +298,15 @@ virtual CMFCPopupMenu* ShowPopupMenu(
  Um parâmetro booliano que indica se o menu será destruído automaticamente.  
   
  [in] *bRightAlign*  
- Um parâmetro booliano que indica como os itens de menu são alinhados. Se *bRightAlign* é `TRUE`, o menu está alinhado à direita de ordem de leitura da direita para esquerda.  
+ Um parâmetro booliano que indica como os itens de menu são alinhados. Se *bRightAlign* for TRUE, o menu é alinhado à direita para a ordem de leitura da direita para esquerda.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A sobrecarga do método primeiro retorna zero se o método mostra o menu com êxito; Caso contrário, 0. A segunda sobrecarga do método retorna um ponteiro para [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) se o menu de atalho exibe corretamente; caso contrário, `NULL`.  
+ A primeira sobrecarga de método retorna diferente de zero se o método mostra o menu com êxito; Caso contrário, 0. A segunda sobrecarga do método retorna um ponteiro para [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) se os vídeos do menu de atalho corretamente; caso contrário, nulo.  
   
 ### <a name="remarks"></a>Comentários  
- O método é semelhante a este método [CContextMenuManager::TrackPopupMenu](#trackpopupmenu) em que ambos os métodos de exibem um menu de atalho. No entanto, `TrackPopupMenu` retorna o índice do comando de menu selecionado.  
+ Esse método é semelhante ao método [CContextMenuManager::TrackPopupMenu](#trackpopupmenu) em que ambos os métodos de exibem um menu de atalho. No entanto, `TrackPopupMenu` retorna o índice do comando de menu selecionado.  
   
- Se o parâmetro *bAutoDestroy* é `FALSE`, você deve manualmente chamar o herdadas `DestroyMenu` método para liberar recursos de memória. A implementação padrão de `ShowPopupMenu` não usa o parâmetro *bAutoDestroy*. Ele é fornecido para uso futuro, ou para classes personalizadas derivadas de `CContextMenuManager` classe.  
+ Se o parâmetro *bAutoDestroy* é FALSE, você deve chamar manualmente o herdadas `DestroyMenu` método para liberar recursos de memória. A implementação padrão de `ShowPopupMenu` não usa o parâmetro *bAutoDestroy*. Ele é fornecido para uso futuro ou para classes personalizadas que deriva de `CContextMenuManager` classe.  
   
 ##  <a name="trackpopupmenu"></a>  CContextMenuManager::TrackPopupMenu  
  Exibe o menu de atalho especificado e retorna o índice do comando de menu de atalho selecionado.  
@@ -322,27 +322,27 @@ virtual UINT TrackPopupMenu(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *hmenuPopup*  
- O identificador do menu de atalho que exibe esse método.  
+ O identificador do menu de atalho que esse método exibe.  
   
  [in] *x*  
- O deslocamento do menu de atalho nas coordenadas do cliente de horizontal.  
+ Horizontal de deslocamento para o menu de atalho nas coordenadas do cliente.  
   
  [in] *y*  
- O deslocamento do menu de atalho nas coordenadas do cliente de vertical.  
+ O deslocamento do menu de atalho nas coordenadas de cliente do vertical.  
   
  [in] *pWndOwner*  
  Um ponteiro para a janela pai do menu de atalho.  
   
  [in] *bRightAlign*  
- Um parâmetro booliano que indica como os itens de menu são alinhados. Se *bRightAlign* é `TRUE`, o menu está alinhado à direita de ordem de leitura da direita para esquerda. Se *bRightAlign* é `FALSE`, o menu está alinhado à esquerda para a ordem de leitura da esquerda para a direita.  
+ Um parâmetro booliano que indica como os itens de menu são alinhados. Se *bRightAlign* for TRUE, o menu é alinhado à direita para a ordem de leitura da direita para esquerda. Se *bRightAlign* é FALSE, o menu é alinhado à esquerda para a ordem de leitura da esquerda para a direita.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A ID de comando de menu do comando que o usuário escolhe; 0 se o usuário fechar o menu de atalho sem selecionar um comando de menu.  
+ A ID de comando de menu do comando escolhido pelo usuário; 0 se o usuário fechar o menu de atalho sem selecionar um comando de menu.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método funciona como uma chamada restrita para exibir um menu de atalho. O aplicativo não continuará a seguinte linha no código até que o usuário fecha o menu de atalho ou seleciona um comando. Um método alternativo que você pode usar para exibir um menu de atalho é [CContextMenuManager::ShowPopupMenu](#showpopupmenu). Esse método não é uma chamada restrita e não retornará a ID do comando selecionado.  
+ Esse método funciona como uma chamada modal para exibir um menu de atalho. O aplicativo não continuará para a seguinte linha no código até que o usuário fecha o menu de atalho ou seleciona um comando. É um método alternativo que você pode usar para exibir um menu de atalho [CContextMenuManager::ShowPopupMenu](#showpopupmenu). Esse método não é uma chamada modal e não retornará a ID do comando selecionado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CWinAppEx](../../mfc/reference/cwinappex-class.md)

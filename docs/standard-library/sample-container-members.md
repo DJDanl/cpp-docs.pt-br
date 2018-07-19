@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c844416151874714aa86a2ffe9762949c6a62a3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33a251b2b9bf9b010367a88a4c9f566a73acb544
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856092"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956775"
 ---
 # <a name="sample-container-members"></a>Exemplos de Membros de Recipiente
 
@@ -40,7 +40,7 @@ ms.locfileid: "33856092"
 |[reference](../standard-library/container-class-reference.md)|Descreve um objeto que pode servir como uma referência para um elemento da sequência controlada.|
 |[reverse_iterator](../standard-library/container-class-reverse-iterator.md)|Descreve um objeto que pode servir como um iterador inverso para a sequência controlada.|
 |[size_type](../standard-library/container-class-size-type.md)|Descreve um objeto que pode representar o tamanho de uma sequência controlada.|
-|[value_type](../standard-library/container-class-value-type.md)|Age como um sinônimo do parâmetro de modelo **Ty**.|
+|[value_type](../standard-library/container-class-value-type.md)|Age como um sinônimo do parâmetro de modelo `Ty`.|
 
 ## <a name="member-functions"></a>Funções membro
 

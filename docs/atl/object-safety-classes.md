@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f46d7297f1f66ac1eccb08fba1dff2a897d54e2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69caa94136268ef29258b11b324dbda86e3cf270
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355614"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953698"
 ---
-# <a name="object-safety-classes"></a>Classes de objeto de segurança
-A seguinte classe fornece suporte para segurança do objeto:  
+# <a name="object-safety-classes"></a>Classes de segurança de objeto
+A seguinte classe oferece suporte para segurança do objeto:  
   
--   [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md) permite que um objeto sejam marcados como seguros para inicialização ou seguros para script.  
+-   [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md) permite que um objeto a ser marcado como seguro para inicialização ou seguros para script.  
   
 ## <a name="related-articles"></a>Artigos relacionados  
  [Tutorial da ATL](../atl/active-template-library-atl-tutorial.md)  

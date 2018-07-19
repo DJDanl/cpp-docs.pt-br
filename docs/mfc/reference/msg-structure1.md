@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41dbbcdd3404705a9ac7c6c7969a9ebeeb0238f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fe629c2f279b6b258f4824229490f7b72b4ce4d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338806"
 ---
 # <a name="msg-structure1"></a>Estrutura MSG 1
 O `MSG` estrutura contém informações sobre a mensagem da fila de mensagens do thread.  
@@ -43,23 +43,23 @@ typedef struct tagMSG {     // msg
  *HWND*  
  Identifica a janela cujo procedimento de janela recebe a mensagem.  
   
- `message`  
+ *message*  
  Especifica o número da mensagem.  
   
- `wParam`  
- Especifica informações adicionais sobre a mensagem. O significado exato depende do valor da **mensagem** membro.  
+ *wParam*  
+ Especifica informações adicionais sobre a mensagem. O significado exato depende do valor do membro `message`.  
   
- `lParam`  
- Especifica informações adicionais sobre a mensagem. O significado exato depende do valor da **mensagem** membro.  
+ *lParam*  
+ Especifica informações adicionais sobre a mensagem. O significado exato depende do valor do membro `message`.  
   
- `time`  
+ *time*  
  Especifica a hora em que a mensagem foi postada.  
   
- `pt`  
+ *pt*  
  Especifica a posição do cursor, em coordenadas da tela, quando a mensagem foi postada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** WinUser  
+ **Cabeçalho:** WinUser. h  
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)

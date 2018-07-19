@@ -1,5 +1,5 @@
 ---
-title: Vinculando a CRT em seu projeto ATL | Microsoft Docs
+title: Vinculando ao CRT em seu projeto ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,27 +22,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec0d93f8770ebbd893491c0e8b8eed239396e00a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fad8209c680a782bd9800215e1e0affc7e2a98c8
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356377"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852491"
 ---
-# <a name="linking-to-the-crt-in-your-atl-project"></a>Vinculando a CRT em seu projeto ATL
-O [bibliotecas em tempo de execução C](../c-runtime-library/crt-library-features.md) (CRT) fornece muitas funções úteis que podem facilitar programação muito durante o desenvolvimento de ATL. Todos os projetos ATL vincule à biblioteca CRT. Você pode ver as vantagens e desvantagens de vinculação de método em [benefícios e as vantagens e desvantagens do método usado para vincular CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md).  
+# <a name="linking-to-the-crt-in-your-atl-project"></a>Vinculando ao CRT em seu projeto ATL
+O [bibliotecas de tempo de execução C](../c-runtime-library/crt-library-features.md) (CRT) fornece muitas funções úteis que podem facilitar a programação muito durante o desenvolvimento de ATL. Todos os projetos ATL vincular à biblioteca do CRT. Você pode ver as vantagens e desvantagens de vinculação de método na [vantagens e desvantagens do método usado para vincular ao CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md).  
   
-## <a name="effects-of-linking-to-the-crt-on-your-program-image"></a>Efeitos de vinculação para CRT em sua imagem de programa  
- Se você vincular estaticamente CRT, código do CRT é colocado em sua imagem executável e não é necessário ter a DLL do CRT presente em um sistema para executar sua imagem. Se você vincular dinamicamente CRT, referências ao código na DLL do CRT são colocadas em sua imagem, mas não o próprio código. Em ordem para a imagem ser executado em um determinado sistema, a DLL do CRT deve estar presente no sistema. Mesmo quando você dinamicamente vincular CRT, você pode achar que alguns códigos podem ser vinculados estaticamente (por exemplo, **DllMainCRTStartup**).  
+## <a name="effects-of-linking-to-the-crt-on-your-program-image"></a>Efeitos de vincular ao CRT em sua imagem de programa  
+ Se você vincular estaticamente ao CRT, o código do CRT é colocado em sua imagem executável e não é necessário ter a DLL do CRT presentes em um sistema para executar sua imagem. Se você vincular dinamicamente ao CRT, as referências ao código na DLL do CRT são colocadas em sua imagem, mas não o próprio código. Para que sua imagem ser executado em um determinado sistema, a DLL do CRT deve estar presente no sistema. Até mesmo quando você vincula dinamicamente ao CRT, você pode achar que alguns códigos podem ser vinculados estaticamente (por exemplo, `DllMainCRTStartup`).  
   
- Quando você vincular sua imagem, explícita ou implicitamente especifique um ponto de entrada que o sistema operacional chamará depois de carregar a imagem. Para uma DLL, o ponto de entrada padrão é **DllMainCRTStartup**. Para um executável, ele é **WinMainCRTStartup**. Você pode substituir o padrão com a opção de vinculador /ENTRY. CRT fornece uma implementação de **DllMainCRTStartup**, **WinMainCRTStartup**, e **wWinMainCRTStartup** (o ponto de entrada Unicode para um EXE). Esses pontos de entrada fornecido CRT chamar construtores em objetos globais e inicializar outras estruturas de dados que são usadas por algumas funções de CRT. Esse código de inicialização adiciona cerca de 25K à imagem se ele está vinculado estaticamente. Se ele estiver vinculado dinamicamente, a maioria do código é na DLL, para que o tamanho da imagem fique pequeno.  
+ Quando você vincula sua imagem, você explicitamente ou implicitamente especificar um ponto de entrada que o sistema operacional irá chamar depois de carregar a imagem. Para uma DLL, o ponto de entrada padrão é `DllMainCRTStartup`. Para que um EXE, ele é `WinMainCRTStartup`. Você pode substituir o padrão com a opção de vinculador /ENTRY. A CRT fornece uma implementação para `DllMainCRTStartup`, `WinMainCRTStartup`, e `wWinMainCRTStartup` (o ponto de entrada Unicode para que um EXE). Esses pontos de entrada fornecidos pelo CRT chamar construtores em objetos globais e inicializar outras estruturas de dados que são usadas por algumas funções de CRT. Esse código de inicialização adiciona cerca de 25 mil à sua imagem se ele está vinculado estaticamente. Se ele está vinculado dinamicamente, a maioria do código é na DLL, para que o tamanho da imagem permaneça pequeno.  
   
  Para obter mais informações, consulte o tópico de vinculador [/ENTRY (símbolo de ponto de entrada)](../build/reference/entry-entry-point-symbol.md).  
   
 ## <a name="optimization-options"></a>Opções de otimização  
- Usando a opção de vinculador /OPT: NOWIN98 pode reduzir ainda mais um controle ATL padrão por 10 mil, às custas do aumento de tempo em sistemas Windows 98 de carregamento. Para obter mais informações sobre opções de vinculação, consulte [/OPÇ (otimizações)](../build/reference/opt-optimizations.md).  
+ Usando a opção de vinculador/OPT:NOWIN98 pode reduzir ainda mais um controle ATL padrão por 10 mil, às custas de maior ao carregar o tempo em sistemas Windows 98. Para obter mais informações sobre opções de vinculação, consulte [/OPT (otimizações)](../build/reference/opt-optimizations.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Programando com código ATL e C Run-Time](../atl/programming-with-atl-and-c-run-time-code.md)   
+ [Programando com código de tempo de execução de C e ATL](../atl/programming-with-atl-and-c-run-time-code.md)   
  [Comportamento de DLLs e da biblioteca em tempo de execução do Visual C++](../build/run-time-library-behavior.md)
 

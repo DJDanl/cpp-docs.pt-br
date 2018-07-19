@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37e5e2ceff83704632a77ef0fb1eedecaa9e678b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 140bdea373442e1e987ce30c2421057b9355796b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847189"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954012"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -48,7 +48,7 @@ Um estado assíncrono associado ficará *pronto* somente se seu provedor assínc
 
 A função de modelo `async` e as classes de modelo `promise` e `packaged_task` são provedores assíncronos. As classes de modelo `future` e `shared_future` descrevem objetos de retorno assíncronos.
 
-Cada uma das classes de modelo `promise`, `future` e `shared_future` tem uma especialização para o tipo `void` e uma especialização parcial para armazenar e recuperar um valor por referência. Essas especializações diferem do modelo primário somente quanto às assinaturas e à semântica das funções que armazenam e recuperam o valor retornado.
+Cada uma das classes de modelo `promise`, `future`, e `shared_future` tem uma especialização para o tipo **void** e uma especialização parcial para armazenar e recuperar um valor por referência. Essas especializações diferem do modelo primário somente quanto às assinaturas e à semântica das funções que armazenam e recuperam o valor retornado.
 
 As classes de modelo `future` e `shared_future` nunca bloqueiam seus destruidores, exceto em um caso que é preservado para compatibilidade com versões anteriores: diferente de todos os outros futures, para um `future` — ou para o último `shared_future` — anexado a uma tarefa iniciada com `std::async`, o destruidor é bloqueado se a tarefa não tiver sido concluída, ou seja, ele é bloqueado se o thread ainda não tiver chamado `.get()` ou `.wait()` e a tarefa ainda estiver em execução. A observação de usabilidade a seguir foi adicionada à descrição de `std::async` no padrão de rascunho: "[Observação: se um future obtido de std::async for movido para fora do escopo local, outro código que usa o future deve estar ciente de que o destruidor do future pode ser bloqueado para que o estado compartilhado fique pronto. — final da observação]". Em todos os outros casos, os destruidores `future` e `shared_future` são obrigatórios e é garantido que eles nunca são bloqueados.
 

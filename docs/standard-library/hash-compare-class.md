@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb1e42bf61c1fa70ee74063cd6857d842ee87de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92dce97754eccc8cd4f618db3ac3e23574fb54ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846487"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956562"
 ---
 # <a name="hashcompare-class"></a>Classe hash_compare
 
@@ -33,15 +33,15 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
 
 ## <a name="remarks"></a>Comentários
 
-Cada contêiner associativo de hash armazena um objeto de características de hash do tipo **Traits** (um parâmetro de modelo). Você pode derivar uma classe de uma especialização de hash_compare para substituir seletivamente determinadas funções e objetos ou pode fornecer sua própria versão dessa classe se atender a certos requisitos mínimos. Especificamente, para um objeto hash_comp do tipo **hash_compare\<Key, Traits>**, o seguinte comportamento é necessário para os contêineres acima:
+Cada contêiner associativo de hash armazena um objeto de características de hash do tipo `Traits` (um parâmetro de modelo). Você pode derivar uma classe de uma especialização de hash_compare para substituir seletivamente determinadas funções e objetos ou pode fornecer sua própria versão dessa classe se atender a certos requisitos mínimos. Especificamente, para um objeto hash_comp do tipo `hash_compare<Key, Traits>`, o seguinte comportamento é necessária para os contêineres acima:
 
-- Para todos os valores `key` do tipo **Key**, a chamada **hash_comp**(`key`) serve como uma função de hash, que produz uma distribuição de valores do tipo **size_t**. A função fornecida por hash_compare retorna `key`.
+- Para todos os valores `key` do tipo `Key`, a chamada **hash_comp**(`key`) serve como uma função de hash, que produz uma distribuição de valores do tipo `size_t`. A função fornecida por hash_compare retorna `key`.
 
-- Para qualquer valor `key1` do tipo **Key** que precede `key2` na sequência e tem o mesmo valor de hash (valor retornado pela função de hash), **hash_comp**(`key2`, `key1`) é falso. A função deve impor um ordenamento total de valores do tipo **Key**. A função fornecida por hash_compare retorna *comp*( `key2`, `key1`) `,`, em que *comp* é um objeto armazenado do tipo **Traits** que você pode especificar quando constrói o objeto hash_comp. Para o tipo de parâmetro **Traits** padrão **less\<Key>**, o valor das chaves de classificação nunca diminui.
+- Para qualquer valor de `key1` do tipo `Key` que precede `key2` na sequência e tem o mesmo (valor retornado pela função de hash), o valor de hash **hash_comp**(`key2`, `key1`) é false. A função deve impor um ordenamento total de valores do tipo `Key`. A função fornecida por hash_compare retorna *comp*(`key2`, `key1`) `,` onde *comp* é um objeto armazenado do tipo `Traits` que você pode especificar quando você constrói o objeto hash_comp. Para o padrão `Traits` tipo de parâmetro `less<Key>`, chaves de classificação nunca diminui no valor.
 
-- A constante inteira **bucket_size** especifica o número médio de elementos por "bucket" (entrada de tabela de hash) que o contêiner deve tentar não ultrapassar. Ela deve ser maior que zero. O valor fornecido por hash_compare é 4.
+- A constante inteira `bucket_size` Especifica o número médio de elementos por "bucket" (entrada de tabela de hash) que o contêiner deve tentar não deve exceder. Ela deve ser maior que zero. O valor fornecido por hash_compare é 4.
 
-- A constante inteira **min_buckets** especifica o número mínimo de buckets a serem mantidos na tabela de hash. Ela deve ser uma potência de dois e maior que zero. O valor fornecido por hash_compare é 8.
+- A constante inteira `min_buckets` Especifica o número mínimo de buckets a serem mantidos na tabela de hash. Ela deve ser uma potência de dois e maior que zero. O valor fornecido por hash_compare é 8.
 
 ## <a name="example"></a>Exemplo
 

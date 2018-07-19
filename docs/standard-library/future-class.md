@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31490578b1f1d9b6028b3fa2cdcc5769d3a53935
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 77b3c96d2c579b9fa3081ad7223ac254a727a88b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847553"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956632"
 ---
 # <a name="future-class"></a>Classe future
 
@@ -94,13 +94,13 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Other` Um `future` objeto.
+*Outros* um `future` objeto.
 
 ### <a name="remarks"></a>Comentários
 
 O primeiro construtor cria um objeto `future` que não tem nenhum estado assíncrono associado.
 
-O segundo construtor cria um objeto `future` e transfere o estado assíncrono associado de `Other`. `Other` não tem mais um estado assíncrono associado.
+O segundo construtor cria um `future` do objeto e transfere o estado assíncrono associado de *outros*. *Outros* não tem mais um estado assíncrono associado.
 
 ## <a name="get"></a>  future::get
 
@@ -120,7 +120,7 @@ Antes de recuperar o resultado, este método bloqueia o thread atual até que o 
 
 Para a especialização parcial `future<Ty&>`, o valor armazenado será efetivamente uma referência ao objeto que foi passado para o provedor assíncrono como o valor retornado.
 
-Como não existe nenhum valor armazenado para a especialização `future<void>`, o método retorna `void`.
+Porque não existe nenhum valor armazenado para a especialização `future<void>`, o método retornará **void**.
 
 Em outras especializações, o método move seu valor retornado do valor armazenado. Portanto, chame este método apenas uma vez.
 
@@ -134,7 +134,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Right` Um `future` objeto.
+*À direita* um `future` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -142,7 +142,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="remarks"></a>Comentários
 
-Após a transferência, `Right` não tem mais um estado assíncrono associado.
+Após a transferência *direita* não tem mais um estado assíncrono associado.
 
 ## <a name="share"></a>  future::share
 
@@ -166,7 +166,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o objeto tiver um estado assíncrono associado; caso contrário, `false`.
+**Verdadeiro** se o objeto tiver um estado assíncrono associado; caso contrário, **falso**.
 
 ## <a name="wait"></a>  future::wait
 
@@ -191,7 +191,7 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Rel_time` Um [chrono::duration](../standard-library/duration-class.md) objeto que especifica um intervalo de tempo máximo que os blocos de thread.
+*Rel_time* um [chrono:: Duration](../standard-library/duration-class.md) objeto que especifica um intervalo de tempo máximo que o thread bloqueia.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -212,7 +212,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>Parâmetros
 
-`Abs_time` Um [chrono::time_point](../standard-library/time-point-class.md) objeto que especifica uma hora após o qual o thread pode desbloquear.
+*Abs_time* um [chrono:: time_point](../standard-library/time-point-class.md) objeto que especifica uma hora após o qual o thread pode ser desbloqueado.
 
 ### <a name="return-value"></a>Valor de retorno
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ada34aae858d8e29b119fa08d363a0c26013567
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51da4a44f99c83ba34ec035e77173946d2327fe9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414577"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953357"
 ---
 # <a name="expressions-c"></a>Expressões (C++)
 Esta seção descreve as expressões C++. As expressões são sequências de operadores e operandos usadas em uma ou mais das seguintes finalidades:  
@@ -34,7 +34,7 @@ Esta seção descreve as expressões C++. As expressões são sequências de ope
   
 -   [Expressões primárias](../cpp/primary-expressions.md)  
   
--   [Operador de resolução do escopo](../cpp/scope-resolution-operator.md)  
+-   [Operador de resolução de escopo](../cpp/scope-resolution-operator.md)  
   
 -   [Expressões pós-fixadas](../cpp/postfix-expressions.md)  
   
@@ -45,8 +45,6 @@ Esta seção descreve as expressões C++. As expressões são sequências de ope
 -   [Operador condicional](../cpp/conditional-operator-q.md)  
   
 -   [Expressões constantes](../cpp/cpp-constant-expressions.md)  
-  
--   [Expressões com conversões de tipo explícito](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)  
   
 -   [Operadores de conversão](../cpp/casting-operators.md)  
   

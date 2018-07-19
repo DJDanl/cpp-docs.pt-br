@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4af90e9354e7d443cb50acbafaa1468c99c12c85
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 5f9ed49115a82f6e032404b862b8eca0ad922a34
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040906"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853063"
 ---
 # <a name="colebusydialog-class"></a>Classe COleBusyDialog
-Usado para as caixas de diálogo OLE servidor não está respondendo ou servidor ocupado.  
+Usado para as caixas de diálogo OLE servidor não respondendo ou servidor ocupado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,13 +59,13 @@ class COleBusyDialog : public COleDialog
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[COleBusyDialog::m_bz](#m_bz)|Estrutura do tipo **OLEUIBUSY** que controla o comportamento da caixa de diálogo.|  
+|[COleBusyDialog::m_bz](#m_bz)|Estrutura do tipo OLEUIBUSY que controla o comportamento da caixa de diálogo.|  
   
 ## <a name="remarks"></a>Comentários  
- Criar um objeto da classe `COleBusyDialog` quando quiser chamar essas caixas de diálogo. Após um `COleBusyDialog` objeto foi construído, você pode usar o [m_bz](#m_bz) estrutura para inicializar os valores ou os estados de controles da caixa de diálogo. O `m_bz` estrutura é do tipo **OLEUIBUSY**. Para obter mais informações sobre como usar essa classe de caixa de diálogo, consulte o [DoModal](#domodal) função de membro.  
+ Criar um objeto da classe `COleBusyDialog` quando você deseja chamar essas caixas de diálogo. Depois de um `COleBusyDialog` objeto foi construído, você pode usar o [m_bz](#m_bz) estrutura para inicializar os valores ou os estados dos controles na caixa de diálogo. O `m_bz` estrutura é do tipo OLEUIBUSY. Para obter mais informações sobre como usar essa classe de caixa de diálogo, consulte a [DoModal](#domodal) função de membro.  
   
 > [!NOTE]
->  Código gerado pelo Assistente de contêiner do aplicativo usa essa classe.  
+>  Código do contêiner gerado pelo Assistente de aplicativo usa essa classe.  
   
  Para obter mais informações, consulte o [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) estrutura no SDK do Windows.  
   
@@ -105,19 +105,19 @@ explicit COleBusyDialog(
  Identificador para a tarefa do servidor está ocupada.  
   
  *bNotResponding*  
- Se **TRUE**, chame a caixa de diálogo não está respondendo em vez da caixa de diálogo servidor ocupado. O texto na caixa de diálogo não está respondendo é ligeiramente diferente da frase na caixa de diálogo servidor ocupado e o botão Cancelar está desabilitado.  
+ Se for TRUE, chame a caixa de diálogo não está respondendo em vez da caixa de diálogo servidor ocupado. O texto na caixa de diálogo não está respondendo é ligeiramente diferente do que o texto na caixa de diálogo servidor ocupado e o botão Cancelar está desabilitado.  
   
  *dwFlags*  
  Sinalizador de criação. Pode conter zero ou mais dos seguintes valores combinados com o operador OR bit a bit:  
   
-- **BZ_DISABLECANCELBUTTON** desabilitar o botão Cancelar ao chamar a caixa de diálogo.  
+- BZ_DISABLECANCELBUTTON desabilitar o botão Cancelar ao chamar a caixa de diálogo.  
   
-- **BZ_DISABLESWITCHTOBUTTON** desabilitar o botão de opção para ao chamar a caixa de diálogo.  
+- BZ_DISABLESWITCHTOBUTTON desabilitar o botão Alternar para ao chamar a caixa de diálogo.  
   
-- **BZ_DISABLERETRYBUTTON** desabilitar o botão de repetição ao chamar a caixa de diálogo.  
+- BZ_DISABLERETRYBUTTON desabilitar o botão de repetição ao chamar a caixa de diálogo.  
   
  *pParentWnd*  
- Aponta para o objeto de janela pai ou o proprietário (do tipo `CWnd`) ao qual pertence o objeto de caixa de diálogo. Se for **nulo**, a janela pai do objeto de caixa de diálogo é definida como a janela principal do aplicativo.  
+ Aponta para o objeto de janela pai ou proprietária (do tipo `CWnd`) ao qual pertence o objeto de caixa de diálogo. Se for NULL, a janela pai do objeto de caixa de diálogo é definida para a janela principal do aplicativo.  
   
 ### <a name="remarks"></a>Comentários  
  Para exibir a caixa de diálogo, chame [DoModal](#domodal).  
@@ -125,7 +125,7 @@ explicit COleBusyDialog(
  Para obter mais informações, consulte o [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) estrutura no SDK do Windows.  
   
 ##  <a name="domodal"></a>  COleBusyDialog::DoModal  
- Chame essa função para exibir a caixa de diálogo OLE servidor ocupado ou o servidor não está respondendo.  
+ Chame essa função para exibir a caixa de diálogo OLE servidor ocupado ou servidor não está respondendo.  
   
 ```  
 virtual INT_PTR DoModal();
@@ -134,16 +134,16 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>Valor de retorno  
  Status de conclusão para a caixa de diálogo. Um dos seguintes valores:  
   
-- **IDOK** se a caixa de diálogo foi exibida com êxito.  
+- IDOK se a caixa de diálogo foi exibida com êxito.  
   
-- **IDCANCEL** se o usuário cancelou a caixa de diálogo.  
+- IDCANCEL se o usuário cancelou a caixa de diálogo.  
   
-- **IDABORT** se ocorreu um erro. Se **IDABORT** é retornado, chame o `COleDialog::GetLastError` a função de membro para obter mais informações sobre o tipo de erro que ocorreu. Para obter uma lista de possíveis erros, consulte o [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) função no SDK do Windows.  
+- IDABORT se ocorreu um erro. Se IDABORT for retornado, chame o `COleDialog::GetLastError` a função de membro para obter mais informações sobre o tipo de erro que ocorreu. Para obter uma lista de possíveis erros, consulte o [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) função no SDK do Windows.  
   
 ### <a name="remarks"></a>Comentários  
  Se você quiser inicializar os vários controles de caixa de diálogo definindo membros do [m_bz](#m_bz) estrutura, você deve fazer isso antes de chamar `DoModal`, mas depois que o objeto de caixa de diálogo é construído.  
   
- Se `DoModal` retorna **IDOK**, você pode chamar outro membro funções para recuperar as configurações ou informações que foi inseridas pelo usuário na caixa de diálogo.  
+ Se `DoModal` retorna IDOK, você pode chamar outro membro funções para recuperar as configurações ou informações que era inseridas pelo usuário na caixa de diálogo.  
   
 ##  <a name="getselectiontype"></a>  COleBusyDialog::GetSelectionType  
  Chame essa função para obter o tipo de seleção escolhido pelo usuário na caixa de diálogo servidor ocupado.  
@@ -156,7 +156,7 @@ UINT GetSelectionType() const;
  Tipo de seleção feita.  
   
 ### <a name="remarks"></a>Comentários  
- Os valores de tipo de retorno são especificados pelo **seleção** tipo de enumeração declarado no `COleBusyDialog` classe.  
+ Os valores de tipo de retorno são especificados pela `Selection` tipo de enumeração declarado no `COleBusyDialog` classe.  
   
 ```  
 enum Selection {
@@ -168,25 +168,25 @@ enum Selection {
   
  Execute as breves descrições desses valores:  
   
-- **COleBusyDialog::switchTo** alternar para o botão foi pressionado.  
+- `COleBusyDialog::switchTo` Alternar para o botão foi pressionado.  
   
-- **COleBusyDialog::retry** foi pressionado o botão de repetição.  
+- `COleBusyDialog::retry` Botão de repetição foi pressionado.  
   
-- **COleBusyDialog::callUnblocked** chamada para ativar o servidor agora está desbloqueado.  
+- `COleBusyDialog::callUnblocked` Chamada para ativar o servidor agora está desbloqueado.  
   
 ##  <a name="m_bz"></a>  COleBusyDialog::m_bz  
- Estrutura do tipo **OLEUIBUSY** usado para controlar o comportamento da caixa de diálogo servidor ocupado.  
+ Estrutura do tipo OLEUIBUSY usado para controlar o comportamento da caixa de diálogo servidor ocupado.  
   
 ```  
 OLEUIBUSY m_bz;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Membros dessa estrutura podem ser modificados diretamente ou por meio de funções de membro.  
+ Os membros dessa estrutura podem ser modificados diretamente ou por meio de funções de membro.  
   
  Para obter mais informações, consulte o [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) estrutura no SDK do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe COleDialog](../../mfc/reference/coledialog-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe COleDialog](../../mfc/reference/coledialog-class.md)

@@ -18,20 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78d032bd6de104808600de97d20d2727f896e8e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7acfbfc29be7a2f6a091291e05fa55b49a5e112c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361571"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960398"
 ---
 # <a name="registry-support-classes"></a>Classes de suporte do registro
-A seguinte classe fornece suporte de registro:  
+A classe a seguir fornece suporte de registro:  
   
 -   [CRegKey](../atl/reference/cregkey-class.md) contém métodos para manipular valores no registro do sistema.  
   
 ## <a name="related-articles"></a>Artigos relacionados  
- [O componente de registro ATL (Registrar)](../atl/atl-registry-component-registrar.md)  
+ [O componente de registro ATL (registrador)](../atl/atl-registry-component-registrar.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../atl/atl-class-overview.md)   

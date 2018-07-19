@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e3bbd026a00306fb2d8e69df94fd9c0c913039
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7676f38e52734fa2f0ce8ecbc9b268be1939f6dc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953389"
 ---
 # <a name="goto-statement-c"></a>Instrução goto (C++)
-A instrução `goto` transfere o controle incondicionalmente para a instrução rotulada pelo identificador especificado.  
+O **goto** incondicionalmente transfere o controle para a instrução rotulada pelo identificador especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,16 +35,16 @@ goto identifier;
 ## <a name="remarks"></a>Comentários  
  A instrução rotulada designada por `identifier` deve estar na função atual. Todos os nomes de `identifier` são membros de um namespace interno e, portanto, não interferem em outros identificadores.  
   
- Os rótulos de instrução são significativos apenas para uma instrução `goto`; caso contrário, são ignorados. Os rótulos não podem ser redeclarados.  
+ Rótulo de uma instrução é significante somente para um **goto** instrução; caso contrário, os rótulos de instrução são ignorados. Os rótulos não podem ser redeclarados.  
   
- É um bom estilo de programação usar as instruções `break`, `continue` e `return` em vez da instrução `goto` sempre que possível. No entanto, como a instrução `break` sai apenas de um nível de um loop, você pode ter que usar uma instrução `goto` para sair de um loop profundamente aninhado.  
+ É um bom programação estilo a ser usado o **quebra**, **continuar**, e **retornar** instruções em vez do **goto** instrução sempre que é possível. No entanto, porque o **quebra** instrução sai de apenas um nível de um loop, você talvez precise usar um **goto** instrução para sair de um loop profundamente aninhado.  
   
- Para obter mais informações sobre rótulos e o `goto` instrução, consulte [instruções rotuladas](../cpp/labeled-statements.md) e [usando rótulos com a instrução goto](http://msdn.microsoft.com/en-us/6cd7c31a-9822-4241-8566-f79f51be48fe).  
+ Para obter mais informações sobre rótulos e o **goto** instrução, consulte [instruções rotuladas](../cpp/labeled-statements.md).  
   
 ## <a name="example"></a>Exemplo  
- Neste exemplo, um `goto` instrução transfere o controle para o ponto de rotulado `stop` quando `i` é igual a 3.  
+ Neste exemplo, uma **goto** transfere o controle para o ponto rotulado `stop` quando `i` é igual a 3.  
   
-```  
+```cpp  
 // goto_statement.cpp  
 #include <stdio.h>  
 int main()  

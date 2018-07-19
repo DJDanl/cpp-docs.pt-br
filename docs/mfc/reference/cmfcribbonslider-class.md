@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06575c4d014f72ddbae63ea5f02c3081b4228e1d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 307b7f769035a9ddb84a3d0e51e0ff6d8a016472
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037717"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850846"
 ---
 # <a name="cmfcribbonslider-class"></a>Classe CMFCRibbonSlider
-O `CMFCRibbonSlider` classe implementa um controle deslizante que você pode adicionar uma barra de faixa de opções ou na barra de status da faixa de opções. O controle deslizante de faixa de opções se parece com os controles deslizantes de zoom que aparecem em aplicativos do Office 2007.  
+O `CMFCRibbonSlider` classe implementa um controle deslizante que você pode adicionar uma barra de faixa de opções ou na barra de status da faixa de opções. O controle deslizante da faixa de opções lembra os controles deslizantes que aparecem nos aplicativos do Office 2007.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +62,7 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CMFCRibbonSlider::CMFCRibbonSlider](#cmfcribbonslider)|Cria e inicializa um controle deslizante de faixa de opções.|  
+|[CMFCRibbonSlider::CMFCRibbonSlider](#cmfcribbonslider)|Constrói e inicializa um controle deslizante de faixa de opções.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -71,9 +71,9 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
 |[CMFCRibbonSlider::GetPos](#getpos)|Retorna a posição atual do controle deslizante.|  
 |[CMFCRibbonSlider::GetRangeMax](#getrangemax)|Retorna o valor máximo do controle deslizante.|  
 |[CMFCRibbonSlider::GetRangeMin](#getrangemin)|Retorna o valor mínimo do controle deslizante.|  
-|[CMFCRibbonSlider::GetRegularSize](#getregularsize)|Retorna o tamanho normal do elemento de faixa de opções. (Substitui [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
+|[CMFCRibbonSlider::GetRegularSize](#getregularsize)|Retorna o tamanho regular do elemento da faixa de opções. (Substitui [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
 |[CMFCRibbonSlider::GetZoomIncrement](#getzoomincrement)|Retorna o tamanho do incremento de zoom para o controle deslizante.|  
-|[CMFCRibbonSlider::HasZoomButtons](#haszoombuttons)|Especifica se o controle deslizante tem os botões de zoom.|  
+|[CMFCRibbonSlider::HasZoomButtons](#haszoombuttons)|Especifica se o controle deslizante tem botões de zoom.|  
 |[CMFCRibbonSlider::OnDraw](#ondraw)|Chamado pelo framework para desenhar o elemento de faixa de opções. (Substitui [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|  
 |[CMFCRibbonSlider::SetPos](#setpos)|Define a posição atual do controle deslizante.|  
 |[CMFCRibbonSlider::SetRange](#setrange)|Especifica o intervalo do controle deslizante, definindo os valores mínimo e máximo.|  
@@ -83,12 +83,12 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
 ## <a name="remarks"></a>Comentários  
  Você pode usar o `SetRange` método para configurar o intervalo de incrementos de zoom para o controle deslizante. Você pode definir a posição atual do controle deslizante usando o `SetPos` método.  
   
- Você pode exibir botões de zoom circular à esquerda e direita do controle deslizante, usando o `SetZoomButtons` método. Por padrão, o controle deslizante é horizontal, botão zoom à esquerda exibe um sinal de menos e o botão de zoom à direita exibe um sinal de adição.  
+ Você pode exibir botões de zoom circular à esquerda e direita do controle deslizante, usando o `SetZoomButtons` método. Por padrão, o controle deslizante é horizontal, o botão de zoom à esquerda exibe um sinal de subtração e o botão de zoom à direita exibe um sinal de adição.  
   
- O `SetZoomIncrement` método define o incremento para adicionar ou subtrair a partir da posição atual quando um usuário clica nos botões de zoom.  
+ O `SetZoomIncrement` método define o incremento para adicionar ou subtrair da posição atual quando um usuário clica nos botões de zoom.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar vários métodos no `CMFCRibbonSlider` classe para definir as propriedades do controle deslizante. O exemplo mostra como construir um `CMFCRibbonSlider` do objeto, exibir botões de zoom, defina a posição atual do controle deslizante e definir o intervalo de valores para o controle deslizante.  
+ O exemplo a seguir demonstra como usar vários métodos no `CMFCRibbonSlider` classe para definir as propriedades do controle deslizante. O exemplo mostra como construir um `CMFCRibbonSlider` do objeto, exibir botões de zoom, definir a posição atual do controle deslizante e defina o intervalo de valores para o controle deslizante.  
   
  [!code-cpp[NVC_MFC_RibbonApp#12](../../mfc/reference/codesnippet/cpp/cmfcribbonslider-class_1.cpp)]  
   
@@ -103,7 +103,7 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
  **Cabeçalho:** afxribbonslider.h  
   
 ##  <a name="cmfcribbonslider"></a>  CMFCRibbonSlider::CMFCRibbonSlider  
- Construa um controle deslizante de faixa de opções.  
+ Construa um controle deslizante da faixa de opções.  
   
 ```  
 CMFCRibbonSlider(
@@ -119,7 +119,7 @@ CMFCRibbonSlider(
  Largura do controle deslizante em pixels.  
   
 ### <a name="remarks"></a>Comentários  
- Constrói um seletor de faixa de opções é *nWidth* pixels de largura na categoria de painel em que o controle deslizante é adicionado. Por padrão, o controle deslizante é horizontal.  
+ Constrói um controle deslizante da faixa de opções que está *nWidth* pixels de largura da categoria do painel em que o controle deslizante é adicionado. Por padrão, o controle deslizante é horizontal.  
   
 ##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos  
  Retorna a posição atual do controle deslizante.  
@@ -132,24 +132,24 @@ int GetPos() const;
  A posição atual do controle deslizante, que é uma posição relativa ao início do controle deslizante.  
   
 ##  <a name="getrangemax"></a>  CMFCRibbonSlider::GetRangeMax  
- Obtém o incremento máximo do controle deslizante que o controle deslizante de tráfego o controle deslizante.  
+ Obtém o incremento máximo do controle deslizante que o controle deslizante pode viajar no controle deslizante.  
   
 ```  
 int GetRangeMax() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- O incremento máximo do controle deslizante que o controle deslizante de tráfego o controle deslizante.  
+ O incremento máximo do controle deslizante que o controle deslizante pode viajar no controle deslizante.  
   
 ##  <a name="getrangemin"></a>  CMFCRibbonSlider::GetRangeMin  
- Retorna o menor incremento pode percorrer o controle deslizante no controle deslizante.  
+ Retorna o menor incremento que o controle deslizante pode viajar no controle deslizante.  
   
 ```  
 int GetRangeMin() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- O incremento mínimo que o controle deslizante de tráfego o controle deslizante.  
+ O incremento mínimo que o controle deslizante pode viajar no controle deslizante.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSlider::GetRegularSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -166,7 +166,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="getzoomincrement"></a>  CMFCRibbonSlider::GetZoomIncrement  
- Obtenha o incremento de zoom para o controle deslizante.  
+ Obter o incremento de zoom para o controle deslizante.  
   
 ```  
 int GetZoomIncrement() const;  
@@ -176,14 +176,14 @@ int GetZoomIncrement() const;
  O incremento de zoom para o controle deslizante.  
   
 ##  <a name="haszoombuttons"></a>  CMFCRibbonSlider::HasZoomButtons  
- Especifica se o controle deslizante tem os botões de zoom.  
+ Especifica se o controle deslizante tem botões de zoom.  
   
 ```  
 BOOL HasZoomButtons() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o controle deslizante tem os botões de zoom; `FALSE` caso contrário.  
+ TRUE se o controle deslizante tem botões de zoom; FALSE caso contrário.  
   
 ##  <a name="ondraw"></a>  CMFCRibbonSlider::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -211,7 +211,7 @@ void SetPos(
  Especifica a posição a ser definido para o controle deslizante. A posição é relativo ao início do controle deslizante.  
   
  [in] *bRedraw*  
- Se `TRUE`, o controle deslizante irá redesenhado.  
+ Se for TRUE, o controle deslizante será redesenhado.  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
  Defina o intervalo de valores para o controle deslizante.  
@@ -223,17 +223,17 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nMin*  
+ [in] *Nmín*  
  Especifica o valor mínimo do controle deslizante.  
   
- [in] *nMax*  
+ [in] *Nmáx*  
  Especifica o valor máximo do controle deslizante.  
   
 ### <a name="remarks"></a>Comentários  
  Especifica o intervalo de valores para o controle deslizante, definindo os valores mínimo e máximo.  
   
 ##  <a name="setzoombuttons"></a>  CMFCRibbonSlider::SetZoomButtons  
- Exibir ou ocultar os botões de zoom.  
+ Exibir ou ocultar botões de zoom.  
   
 ```  
 void SetZoomButtons(BOOL bSet=TRUE);
@@ -241,7 +241,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  [in]. *bSet*  
- `TRUE` Para exibir botões de zoom; `FALSE` para ocultá-las.  
+ TRUE para exibir os botões de zoom; FALSO para ocultá-los.  
   
 ##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement  
  Defina o incremento de zoom para o controle deslizante.  
@@ -255,6 +255,6 @@ void SetZoomIncrement(int nZoomIncrement);
  Especifica o incremento de zoom do controle deslizante.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)

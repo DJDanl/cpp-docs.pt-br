@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b32112fbad516b2550da0cc48cb6c287583d396c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 086b0b1d17d32a747802a8c1df783fb6a20a560e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339768"
 ---
 # <a name="icommandtarget-interface"></a>Interface ICommandTarget
-Fornece um controle de usuário com uma interface para receber comandos de um objeto de origem de comando.  
+Fornece um controle de usuário com uma interface para receber comandos de um objeto de fonte de comando.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,11 +43,11 @@ interface class ICommandTarget
 |[ICommandTarget::Initialize](#initialize)|Inicializa o objeto de destino do comando.|  
   
 ## <a name="remarks"></a>Comentários  
- Quando você hospeda um controle de usuário em uma exibição MFC, [CWinFormsView](../../mfc/reference/cwinformsview-class.md) comandos de rotas e atualização de comando mensagens de interface do usuário para o controle de usuário para permitir que ele trate comandos MFC (por exemplo, itens de menu do quadro e botões de barra de ferramentas). Implementando `ICommandTarget`, você concede o controle de usuário, uma referência para o [ICommandSource](../../mfc/reference/icommandsource-interface.md) objeto.  
+ Ao hospedar um controle de usuário em uma exibição do MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) comandos de rotas e atualização de comando mensagens de interface do usuário para o controle de usuário para permitir a manipulação de comandos MFC (por exemplo, itens de menu do quadro e botões da barra de ferramentas). Implementando `ICommandTarget`, você dar o controle de usuário, uma referência para o [ICommandSource](../../mfc/reference/icommandsource-interface.md) objeto.  
   
- Consulte [como: Adicionar roteamento de comando para o controle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para obter um exemplo de como usar `ICommandTarget`.  
+ Ver [como: Adicionar roteamento de comando para o controle do Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para obter um exemplo de como usar `ICommandTarget`.  
   
- Para obter mais informações sobre como usar formulários do Windows, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ Para obter mais informações sobre como usar o Windows Forms, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxwinforms.h (definido no assembly atlmfc\lib\mfcmifc80.dll)  
@@ -60,16 +60,16 @@ void Initialize(ICommandSource^ cmdSource);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `cmdSource`  
- Um identificador para o objeto de origem de comando.  
+ *cmdSource*  
+ Um identificador para o objeto de fonte de comando.  
   
 ### <a name="remarks"></a>Comentários  
- Quando você hospeda um controle de usuário em uma exibição MFC, CWinFormsView roteia comandos e mensagens de interface do usuário do comando de atualização para o controle de usuário para permitir que ele lidar com comandos do MFC.  
+ Ao hospedar um controle de usuário em uma exibição do MFC, CWinFormsView roteia comandos e mensagens de interface do usuário do comando de atualização para o controle de usuário para permitir a manipulação de comandos MFC.  
   
- Esse método inicializa o objeto de destino do comando e a associa a cmdSource de objeto de origem de comando especificado. Ele deve ser chamado na implementação de classe do controle do usuário. Na inicialização, você deve registrar manipuladores de comandos com o objeto de origem de comando por chamada ICommandSource::AddCommandHandler na implementação de inicialização. Consulte como: Adicionar roteamento de comando para o controle dos Windows Forms para obter um exemplo de como usar a inicialização para fazer isso.  
+ Esse método inicializa o objeto de destino do comando e associa-o a cmdSource de objeto de origem do comando especificado. Ele deve ser chamado na implementação de classe do controle de usuário. Na inicialização, você deve registrar manipuladores de comandos com o objeto de fonte de comando por chamada ICommandSource::AddCommandHandler na implementação de inicialização. Consulte como: Adicionar roteamento de comando para o controle de formulários do Windows para obter um exemplo de como usar a inicialização para fazer isso.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: adicionar comandos de controle de formulários do roteamento para o Windows](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
+ [Como: Adicionar comando de controle de formulários do roteamento para o Windows](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
  [Interface ICommandSource](../../mfc/reference/icommandsource-interface.md)
 
 

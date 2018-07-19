@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ac125b068de5111a2b98800956c12a0c979737f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f27162b1dfc96b4797184b3fefc1ad8ecc464f55
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859658"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954988"
 ---
 # <a name="sharedfuture-class"></a>Classe shared_future
 
@@ -102,7 +102,7 @@ Antes de recuperar o resultado, este método bloqueia o thread atual até que o 
 
 Para a especialização parcial `shared_future<Ty&>`, o valor armazenado será efetivamente uma referência ao objeto que foi passado para o *provedor assíncrono* como o valor retornado.
 
-Como não existe nenhum valor armazenado para a especialização `shared_future<void>`, o método retorna `void`.
+Porque não existe nenhum valor armazenado para a especialização `shared_future<void>`, o método retornará **void**.
 
 ## <a name="op_eq"></a>  shared_future::operator=
 
@@ -115,7 +115,7 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Right` Um `shared_future` objeto.
+*À direita* um `shared_future` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -123,9 +123,9 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="remarks"></a>Comentários
 
-Para o primeiro operador, `Right` não tem mais um estado assíncrono associado após a operação.
+Para o primeiro operador, *direita* não tem mais um estado assíncrono associado após a operação.
 
-Para o segundo método, `Right` mantém seu estado assíncrono associado.
+Para o segundo método, *direita* mantém seu estado assíncrono associado.
 
 ## <a name="shared_future"></a> Construtor shared_future::shared_future
 
@@ -140,15 +140,15 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Right` Um [futuros](../standard-library/future-class.md) ou `shared_future` objeto.
+*À direita* um [futuros](../standard-library/future-class.md) ou `shared_future` objeto.
 
 ### <a name="remarks"></a>Comentários
 
 O primeiro construtor cria um objeto `shared_future` que não tem nenhum *estado assíncrono associado*.
 
-O segundo e terceiro construtores criam um objeto `shared_future` e transferem o estado assíncrono associado de `Right`. `Right` não tem mais um estado assíncrono associado.
+Os segundo e terceiro construtores criam um `shared_future` do objeto e transferir o estado assíncrono associado de *direita*. *Direita* não tem mais um estado assíncrono associado.
 
-O quarto construtor cria um objeto `shared_future` que tem o mesmo estado assíncrono associado que `Right`.
+O quarto construtor cria um `shared_future` objeto que tem o mesmo estado assíncrono associado que *direita*.
 
 ## <a name="valid"></a>  shared_future:: valid
 
@@ -160,7 +160,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o objeto tiver um estado assíncrono associado; caso contrário, `false`.
+**Verdadeiro** se o objeto tiver um estado assíncrono associado; caso contrário, **falso**.
 
 ## <a name="wait"></a>  shared_future:: wait
 
@@ -186,7 +186,7 @@ future_status wait_for(
 
 ### <a name="parameters"></a>Parâmetros
 
-`Rel_time` Um [chrono::duration](../standard-library/duration-class.md) objeto que especifica um intervalo de tempo máximo que os blocos de thread.
+*Rel_time* um [chrono:: Duration](../standard-library/duration-class.md) objeto que especifica um intervalo de tempo máximo que o thread bloqueia.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -208,7 +208,7 @@ future_status wait_until(
 
 ### <a name="parameters"></a>Parâmetros
 
-`Abs_time` Um [chrono::time_point](../standard-library/time-point-class.md) objeto que especifica uma hora após o qual o thread pode desbloquear.
+*Abs_time* um [chrono:: time_point](../standard-library/time-point-class.md) objeto que especifica uma hora após o qual o thread pode ser desbloqueado.
 
 ### <a name="return-value"></a>Valor de retorno
 

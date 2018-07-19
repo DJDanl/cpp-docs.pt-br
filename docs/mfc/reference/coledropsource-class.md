@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3f601c2b15f5f117f77b1f916027107708e8f19
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 41e79ac918c1a549c7972d5feccf4f470473f98c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038211"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852907"
 ---
 # <a name="coledropsource-class"></a>Classe COleDropSource
-Permite que os dados ser arrastado para um destino de soltar.  
+Permite que os dados sejam arrastados para um destino de soltar.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,12 +54,12 @@ class COleDropSource : public CCmdTarget
 |----------|-----------------|  
 |[COleDropSource::GiveFeedback](#givefeedback)|Altera o cursor durante uma operação de arrastar e soltar.|  
 |[COleDropSource::OnBeginDrag](#onbegindrag)|Lida com a captura do mouse durante uma operação de arrastar e soltar.|  
-|[COleDropSource::QueryContinueDrag](#querycontinuedrag)|Verifica se arrastando deve continuar.|  
+|[COleDropSource::QueryContinueDrag](#querycontinuedrag)|Verifica se arrastar deve continuar.|  
   
 ## <a name="remarks"></a>Comentários  
  O [COleDropTarget](../../mfc/reference/coledroptarget-class.md) classe manipula a parte receptora da operação de arrastar e soltar. O `COleDropSource` objeto é responsável por determinar quando começa uma operação de arrastar, fornecendo comentários durante a operação de arrastar e determinar quando a operação de arrastar termina.  
   
- Para usar um `COleDropSource` de objeto, basta chamar o construtor. Isso simplifica o processo de determinar quais eventos, como um clique do mouse, iniciar uma operação de arrastar usando [COleDataSource::DoDragDrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem::DoDragDrop](../../mfc/reference/coleclientitem-class.md#dodragdrop), ou [ COleServerItem::DoDragDrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) função. Essas funções criará uma `COleDropSource` objeto para você. Você pode querer modificar o comportamento padrão da `COleDropSource` funções substituíveis. Essas funções de membro serão chamadas nos momentos apropriados do Framework.  
+ Para usar um `COleDropSource` de objeto, basta chamar o construtor. Isso simplifica o processo de determinar quais eventos, como um clique do mouse, iniciar uma operação de arrastar usando [COleDataSource::DoDragDrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem::DoDragDrop](../../mfc/reference/coleclientitem-class.md#dodragdrop), ou [ COleServerItem::DoDragDrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) função. Essas funções criará um `COleDropSource` objeto para você. Você talvez queira modificar o comportamento padrão do `COleDropSource` funções substituíveis. Essas funções de membro serão chamadas nos momentos apropriados pela estrutura.  
   
  Para obter mais informações sobre operações de arrastar e soltar usando OLE, consulte o artigo [arrastar e soltar (OLE)](../../mfc/drag-and-drop-ole.md).  
   
@@ -91,45 +91,45 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
   
 ### <a name="parameters"></a>Parâmetros  
  *dropEffect*  
- O efeito que você deseja exibir para o usuário, que geralmente indica o que aconteceria se uma queda ocorreu neste ponto com os dados selecionados. Normalmente, este é o valor retornado pela chamada mais recente para [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) ou [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Pode ser uma ou mais das seguintes opções:  
+ O efeito que você deseja exibir para o usuário, geralmente indicando o que aconteceria se uma operação de soltar ocorresse neste ponto com os dados selecionados. Normalmente, esse é o valor retornado pela chamada a mais recente [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) ou [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Ele pode ser um ou mais das seguintes opções:  
   
-- `DROPEFFECT_NONE` Um descarte não será permitido.  
+- DROPEFFECT_NONE uma operação de soltar não teria permissão.  
   
-- `DROPEFFECT_COPY` Uma operação de cópia deve ser executada.  
+- DROPEFFECT_COPY seria realizada uma operação de cópia.  
   
-- `DROPEFFECT_MOVE` Uma operação de movimentação deve ser executada.  
+- DROPEFFECT_MOVE seria realizada uma operação de movimentação.  
   
-- `DROPEFFECT_LINK` Um link de dados descartados para os dados originais seja estabelecido.  
+- Link de um DROPEFFECT_LINK dos dados soltos para os dados originais seja estabelecido.  
   
-- `DROPEFFECT_SCROLL` Uma operação de arrastar rolagem está prestes a ocorrer ou está ocorrendo no destino.  
+- Operação de rolagem de arrastar de um DROPEFFECT_SCROLL está prestes a ocorrer ou está ocorrendo no destino.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna **DRAGDROP_S_USEDEFAULTCURSORS** se arrastando estiver em andamento, **NOERROR** se não for.  
+ Retorna DRAGDROP_S_USEDEFAULTCURSORS se arrastando está em andamento, NOERROR se não for.  
   
 ### <a name="remarks"></a>Comentários  
- Substitua esta função para fornecer comentários ao usuário sobre o que aconteceria se uma queda ocorreu neste momento. A implementação padrão usa os cursores de padrão OLE. Para obter mais informações sobre operações de arrastar e soltar usando OLE, consulte o artigo [arrastar e soltar (OLE)](../../mfc/drag-and-drop-ole.md).  
+ Substitua essa função para fornecer comentários ao usuário sobre o que aconteceria se uma operação de soltar ocorrer neste ponto. A implementação padrão usa os cursores padrão OLE. Para obter mais informações sobre operações de arrastar e soltar usando OLE, consulte o artigo [arrastar e soltar (OLE)](../../mfc/drag-and-drop-ole.md).  
   
  Para obter mais informações, consulte [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723), [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129), e [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) no SDK do Windows.  
   
 ##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
- Chamado pelo framework quando ocorre um evento que pode começar uma operação de arrastar, como pressionar o botão esquerdo do mouse.  
+ Chamado pela estrutura de quando ocorre um evento que poderia começar uma operação de arrastar, como pressionar o botão esquerdo do mouse.  
   
 ```  
 virtual BOOL OnBeginDrag(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *pWnd*  
+ *Apropriei*  
  Aponta para a janela que contém os dados selecionados.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se arrastando for permitida, caso contrário, 0.  
+ Diferente de zero se arrastar for permitido, caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Substitua essa função se você quiser modificar o modo como o processo de arrastar é iniciado. A implementação padrão de captura o mouse e permanece em modo de arraste até que o usuário clica no botão esquerdo ou direito do mouse ou atinge ESC, momento em que ele libera o mouse.  
+ Substitua essa função se você quiser modificar a forma como o processo de arrastar é iniciado. A implementação padrão captura o mouse e permanece no modo arrastar até que o usuário clica no botão esquerdo ou direito do mouse ou pressiona ESC, momento em que ele libera o mouse.  
   
 ##  <a name="querycontinuedrag"></a>  COleDropSource::QueryContinueDrag  
- Depois de arrastar iniciada, essa função é chamada repetidamente pela estrutura até que a operação de arrastar seja cancelada ou concluída.  
+ Depois de arrastar começou, essa função é chamada repetidamente pela estrutura até que a operação de arrastar seja cancelada ou concluída.  
   
 ```  
 virtual SCODE QueryContinueDrag(
@@ -142,17 +142,17 @@ virtual SCODE QueryContinueDrag(
  Indica se a tecla ESC foi pressionada desde a última chamada para `COleDropSource::QueryContinueDrag`.  
   
  *dwKeyState*  
- Contém o estado das teclas modificadoras do teclado. Esta é uma combinação de qualquer número das seguintes opções: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, e **MK_RBUTTON**.  
+ Contém o estado das teclas modificadoras do teclado. Isso é uma combinação de qualquer número das seguintes opções: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.  
   
 ### <a name="return-value"></a>Valor de retorno  
- **DRAGDROP_S_CANCEL** se a tecla ESC ou o botão direito é pressionado ou botão esquerdo é gerado antes de arrastar inicia. **DRAGDROP_S_DROP** se ocorrer uma operação de soltar. Caso contrário, `S_OK`.  
+ DRAGDROP_S_CANCEL se a tecla ESC ou o botão direito é pressionado ou botão esquerdo é gerado antes de arrastar é iniciado. DRAGDROP_S_DROP se ocorrer uma operação de soltar. Caso contrário S_OK.  
   
 ### <a name="remarks"></a>Comentários  
- Substituir que essa função se desejar alterar o ponto no qual arrastando será cancelada ou um descarte ocorre.  
+ Substituir que essa função se você quiser alterar o ponto no qual arrastando é cancelada ou uma operação de soltar ocorre.  
   
- A implementação padrão inicia o descarte ou cancela a operação de arrastar da seguinte maneira. Cancela uma operação de arrastar quando a tecla ESC ou o botão direito do mouse é pressionado. Ele inicia uma operação de soltar quando o botão esquerdo do mouse é gerado depois de arrastar foi iniciado. Caso contrário, retornará `S_OK` e não executa nenhuma outra operação.  
+ A implementação padrão inicia a operação de soltar ou cancela a operação de arrastar da seguinte maneira. Cancela uma operação de arrastar quando a tecla ESC ou o botão direito do mouse é pressionado. Ele inicia uma operação de soltar quando o botão esquerdo do mouse é gerado depois de arrastar foi iniciada. Caso contrário, ele retorna S_OK e não executa nenhuma outra operação.  
   
- Como essa função é chamada com frequência, ele deve ser otimizado tanto quanto possível.  
+ Porque essa função é chamada com frequência, ele deve ser otimizado tanto quanto possível.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo MFC HIERSVR](../../visual-cpp-samples.md)   

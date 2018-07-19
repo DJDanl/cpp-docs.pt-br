@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa8bf42d255cfb582989d1376aa3479559e9309
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89576f96c50e62220e56050834b141e1f2ac6e08
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361323"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955378"
 ---
 # <a name="collection-classes"></a>Classes de coleção
-As classes a seguir fornecem suporte para matrizes, listas, mapas e também métodos de características para ajudar com acesso de elemento e comparações.  
+As classes a seguir dão suporte para matrizes, listas, mapas e também os métodos de características para ajudar com comparações e acesso de elemento.  
   
--   [CAtlArray](../atl/reference/catlarray-class.md) esta classe implementa um objeto de matriz.  
+-   [CAtlArray](../atl/reference/catlarray-class.md) essa classe implementa um objeto de matriz.  
   
 -   [CAtlList](../atl/reference/catllist-class.md) essa classe fornece métodos para criar e gerenciar um objeto de lista.  
   
@@ -32,21 +32,21 @@ As classes a seguir fornecem suporte para matrizes, listas, mapas e também mét
   
 -   [CAutoPtrArray](../atl/reference/cautoptrarray-class.md) essa classe fornece métodos úteis ao construir uma matriz de ponteiros inteligentes.  
   
--   [CAutoPtrElementTraits](../atl/reference/cautoptrelementtraits-class.md) essa classe fornece métodos, funções estáticas e typedefs útil ao criar coleções de ponteiros inteligentes.  
+-   [CAutoPtrElementTraits](../atl/reference/cautoptrelementtraits-class.md) essa classe fornece métodos, funções estáticas e definições de tipo útil durante a criação de coleções de ponteiros inteligentes.  
   
 -   [CAutoPtrList](../atl/reference/cautoptrlist-class.md) essa classe fornece métodos úteis ao construir uma lista de ponteiros inteligentes.  
   
--   [CAutoVectorPtrElementTraits](../atl/reference/cautovectorptrelementtraits-class.md) essa classe fornece métodos, funções estáticas, e typedefs útil ao criar coleções de ponteiros inteligentes usando vector novas e excluir operadores.  
+-   [CAutoVectorPtrElementTraits](../atl/reference/cautovectorptrelementtraits-class.md) essa classe fornece métodos, funções estáticas, e definições de tipo útil durante a criação de coleções de ponteiros inteligentes usando o vetor novo e excluir operadores.  
   
--   [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) essa classe fornece métodos, funções estáticas, e ponteiros de interface de typedefs útil ao criar coleções de COM.  
+-   [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) essa classe fornece métodos, funções estáticas, e definições de tipo útil durante a criação de coleções de COM ponteiros de interface.  
   
--   [CComSafeArray](../atl/reference/ccomsafearray-class.md) essa classe é um wrapper para o [tipo de dados de SAFEARRAY](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) estrutura.  
+-   [CComSafeArray](../atl/reference/ccomsafearray-class.md) essa classe é um wrapper para o [tipo de dados do SAFEARRAY](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) estrutura.  
   
--   [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) essa classe é um wrapper para um [SAFEARRAYBOUND](http://msdn.microsoft.com/en-us/303a9bdb-71d6-4f14-8747-84cf84936c6d) estrutura.  
+-   [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) essa classe é um wrapper para um [SAFEARRAYBOUND](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) estrutura.  
   
--   [CComUnkArray](../atl/reference/ccomunkarray-class.md) armazena essa classe **IUnknown** ponteiros e foi projetado para ser usado como um parâmetro para o [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) classe de modelo.  
+-   [CComUnkArray](../atl/reference/ccomunkarray-class.md) essa classe armazena **IUnknown** ponteiros e foi projetado para ser usado como um parâmetro para o [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) classe de modelo.  
   
--   [CDefaultCharTraits](../atl/reference/cdefaultchartraits-class.md) essa classe fornece duas funções estáticas para conversão de caracteres entre maiusculas e minúsculas.  
+-   [CDefaultCharTraits](../atl/reference/cdefaultchartraits-class.md) essa classe fornece duas funções estáticas para converter os caracteres entre maiusculas e minúsculas.  
   
 -   [CDefaultCompareTraits](../atl/reference/cdefaultcomparetraits-class.md) essa classe fornece funções de comparação de elemento de padrão.  
   
@@ -56,9 +56,9 @@ As classes a seguir fornecem suporte para matrizes, listas, mapas e também mét
   
 -   [CElementTraits](../atl/reference/celementtraits-class.md) essa classe é usada pelas classes de coleção para fornecer funções e métodos para mover, copiar, comparação e operações de hashing.  
   
--   [CElementTraitsBase](../atl/reference/celementtraitsbase-class.md) essa classe fornece métodos de cópia e mover para uma classe de coleção de padrão.  
+-   [CElementTraitsBase](../atl/reference/celementtraitsbase-class.md) essa classe fornece métodos de cópia e movimentação de uma classe de coleção de padrão.  
   
--   [CHeapPtrElementTraits](../atl/reference/cheapptrelementtraits-class.md) essa classe fornece métodos, funções estáticas e typedefs útil ao criar coleções de ponteiros de pilha.  
+-   [CHeapPtrElementTraits](../atl/reference/cheapptrelementtraits-class.md) essa classe fornece métodos, funções estáticas e definições de tipo útil durante a criação de coleções de ponteiros de pilha.  
   
 -   [CHeapPtrList](../atl/reference/cheapptrlist-class.md) essa classe fornece métodos úteis ao construir uma lista de ponteiros de pilha.  
   
@@ -66,29 +66,29 @@ As classes a seguir fornecem suporte para matrizes, listas, mapas e também mét
   
 -   [CInterfaceList](../atl/reference/cinterfacelist-class.md) essa classe fornece métodos úteis ao construir uma lista de ponteiros de interface COM.  
   
--   [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) essa classe fornece métodos padrão e funções para uma classe de coleção composta de tipos de dados primitivos.  
+-   [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) essa classe fornece métodos padrão e funções para uma classe de coleção é composta de tipos de dados primitivos.  
   
--   [CRBMap](../atl/reference/crbmap-class.md) essa classe representa uma estrutura de mapeamento, usando uma árvore binária vermelho-preto.  
+-   [CRBMap](../atl/reference/crbmap-class.md) essa classe representa uma estrutura de mapeamento, usando uma árvore binária de vermelho / preto.  
   
--   [CRBMultiMap](../atl/reference/crbmultimap-class.md) essa classe representa uma estrutura de mapeamento que permite que cada chave a ser associado a mais de um valor, usando uma árvore binária vermelho-preto.  
+-   [CRBMultiMap](../atl/reference/crbmultimap-class.md) essa classe representa uma estrutura de mapeamento que permite que cada chave a ser associado a mais de um valor, usando uma árvore binária de vermelho / preto.  
   
--   [CRBTree](../atl/reference/crbtree-class.md) essa classe fornece métodos para criação e uso de uma árvore de vermelho-preto.  
+-   [CRBTree](../atl/reference/crbtree-class.md) essa classe fornece métodos para criar e utilizar uma árvore vermelho / preto.  
   
 -   [CSimpleArray](../atl/reference/csimplearray-class.md) essa classe fornece métodos para gerenciar uma matriz simples.  
   
--   [CSimpleArrayEqualHelper](../atl/reference/csimplearrayequalhelper-class.md) essa classe é um auxiliar de [CSimpleArray](../atl/reference/csimplearray-class.md) classe.  
+-   [CSimpleArrayEqualHelper](../atl/reference/csimplearrayequalhelper-class.md) essa classe é um auxiliar para o [CSimpleArray](../atl/reference/csimplearray-class.md) classe.  
   
--   [CSimpleArrayEqualHelperFalse](../atl/reference/csimplearrayequalhelperfalse-class.md) essa classe é um auxiliar de [CSimpleArray](../atl/reference/csimplearray-class.md) classe.  
+-   [CSimpleArrayEqualHelperFalse](../atl/reference/csimplearrayequalhelperfalse-class.md) essa classe é um auxiliar para o [CSimpleArray](../atl/reference/csimplearray-class.md) classe.  
   
 -   [CSimpleMap](../atl/reference/csimplemap-class.md) essa classe fornece suporte para uma matriz de mapeamento simples.  
   
--   [CSimpleMapEqualHelper](../atl/reference/csimplemapequalhelper-class.md) essa classe é um auxiliar de [CSimpleMap](../atl/reference/csimplemap-class.md) classe.  
+-   [CSimpleMapEqualHelper](../atl/reference/csimplemapequalhelper-class.md) essa classe é um auxiliar para o [CSimpleMap](../atl/reference/csimplemap-class.md) classe.  
   
--   [CSimpleMapEqualHelperFalse](../atl/reference/csimplemapequalhelperfalse-class.md) essa classe é um auxiliar de [CSimpleMap](../atl/reference/csimplemap-class.md) classe.  
+-   [CSimpleMapEqualHelperFalse](../atl/reference/csimplemapequalhelperfalse-class.md) essa classe é um auxiliar para o [CSimpleMap](../atl/reference/csimplemap-class.md) classe.  
   
--   [CStringElementTraits](../atl/reference/cstringelementtraits-class.md) essa classe fornece funções estáticas usadas pelas classes de coleção armazenar `CString` objetos.  
+-   [CStringElementTraits](../atl/reference/cstringelementtraits-class.md) essa classe fornece funções estáticas usadas pelas classes de coleção armazenando `CString` objetos.  
   
--   [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md) essa classe fornece funções estáticas relacionadas a cadeias de caracteres armazenadas em objetos de classe de coleção. Ele é semelhante a [CStringElementTraits](../atl/reference/cstringelementtraits-class.md), mas executa comparações em maiusculas e minúsculas.  
+-   [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md) essa classe fornece funções estáticas relacionadas a cadeias de caracteres armazenadas em objetos de classe de coleção. Ele é semelhante ao [CStringElementTraits](../atl/reference/cstringelementtraits-class.md), mas executa comparações de maiusculas e minúsculas.  
   
 -   [CStringRefElementTraits](../atl/reference/cstringrefelementtraits-class.md) essa classe fornece funções estáticas relacionadas a cadeias de caracteres armazenadas em objetos de classe de coleção. Os objetos de cadeia de caracteres são tratados como referências.  
   

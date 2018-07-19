@@ -118,12 +118,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 818d6fad62ec4d506215a82f2faa1e3aa58d1654
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aec1d5291526360157b4e1a0b5b4eff9ae9fd454
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849035"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956445"
 ---
 # <a name="iosbase-class"></a>Classe ios_base
 
@@ -135,13 +135,13 @@ Um objeto da classe ios_base armazena informações de formatação, que consist
 
 - Uma máscara de exceção em um objeto do tipo [iostate](#iostate).
 
-- Uma largura de campo em um objeto do tipo `int`.
+- Uma largura de campo em um objeto do tipo **int**.
 
-- Uma precisão de exibição em um objeto do tipo `int`.
+- Uma precisão de exibição em um objeto do tipo **int**.
 
-- Um objeto de localidade em um objeto do tipo **locale**.
+- Um objeto de localidade em um objeto do tipo `locale`.
 
-- Duas matrizes extensíveis, com elementos do tipo **long** e ponteiro `void`.
+- Duas matrizes extensíveis, com elementos do tipo **longo** e **void** ponteiro.
 
 Um objeto da classe ios_base também armazena informações de estado de fluxo, em um objeto do tipo [iostate](#iostate), e uma pilha de retorno de chamada.
 
@@ -178,7 +178,7 @@ Um objeto da classe ios_base também armazena informações de estado de fluxo, 
 |[basefield](#fmtflags)|Um bitmask definido como `dec` &#124; `hex` &#124; `oct`.|
 |[beg](#seekdir)|Especifica a busca relativa ao início de uma sequência.|
 |[binary](#openmode)|Especifica que um arquivo deve ser lido como um fluxo binário, em vez de um fluxo de texto.|
-|[boolalpha](#fmtflags)|Especifica a inserção ou extração de objetos do tipo `bool` como nomes (como `true` e `false`), e não como valores numéricos.|
+|[boolalpha](#fmtflags)|Especifica a inserção ou extração de objetos do tipo **bool** como nomes (como **verdadeiro** e **false**) em vez de valores numéricos.|
 |[cur](#seekdir)|Especifica a busca em relação à posição atual dentro de uma sequência.|
 |[dec](#fmtflags)|Especifica a inserção ou extração de valores inteiros em formato decimal.|
 |[end](#seekdir)|Especifica a busca relativa ao final de uma sequência.|
@@ -249,11 +249,11 @@ enum event {
 
 O tipo é um tipo enumerado que descreve um objeto que pode armazenar o evento de retorno de chamada usado como argumento para uma função registrada com [register_callback](#register_callback). Os valores de eventos distintos são:
 
-- **copyfmt_event**, para identificar um retorno de chamada que ocorre próximo ao final de uma chamada para [copyfmt](../standard-library/basic-ios-class.md#copyfmt), logo antes da [máscara de exceção](../standard-library/ios-base-class.md) ser copiada.
+- `copyfmt_event`, para identificar um retorno de chamada que ocorre próximo ao final de uma chamada para [copyfmt](../standard-library/basic-ios-class.md#copyfmt), logo antes de [máscara de exceção](../standard-library/ios-base-class.md) é copiado.
 
-- **erase_event**, para identificar um retorno de chamada que ocorre no início de uma chamada para [copyfmt](../standard-library/basic-ios-class.md#copyfmt), ou no início de uma chamada para o destruidor para **\*this**.
+- `erase_event`, para identificar um retorno de chamada que ocorre no início de uma chamada para [copyfmt](../standard-library/basic-ios-class.md#copyfmt), ou no início de uma chamada para o destruidor para  **\*isso**.
 
-- **imbue_event**, para identificar um retorno de chamada que ocorre no final de uma chamada para [imbue](#imbue), logo antes da função ser retornada.
+- `imbue_event`, para identificar um retorno de chamada que ocorre no final de uma chamada para [imbue](#imbue), antes da função retorna.
 
 ### <a name="example"></a>Exemplo
 
@@ -272,11 +272,11 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_E* o [evento](#event).
+*_E* as [evento](#event).
 
-`_Base` O fluxo no qual o evento foi chamado.
+*Base* o fluxo no qual o evento foi chamado.
 
-*Eu _* um número definido pelo usuário.
+*i* um número definido pelo usuário.
 
 ### <a name="remarks"></a>Comentários
 
@@ -349,7 +349,7 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>Parâmetros
 
-`fmtfl` O novo `fmtflags` configuração.
+*fmtfl* o novo `fmtflags` configuração.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -359,7 +359,7 @@ A configuração `fmtflags` anterior ou atual.
 
 Consulte [ios_base::fmtflags](#fmtflags) para obter uma lista dos sinalizadores.
 
-A primeira função membro retorna os sinalizadores de formato armazenados. A segunda função membro armazena `fmtfl` nos sinalizadores de formato e retorna seu valor armazenado anterior.
+A primeira função membro retorna os sinalizadores de formato armazenados. O segunda função membro armazena *fmtfl* no sinalizadores de formato e retorna seu valor armazenado anterior.
 
 ### <a name="example"></a>Exemplo
 
@@ -433,7 +433,7 @@ O tipo é um tipo de bitmask que descreve um objeto que pode armazenar sinalizad
 
 - `right`, para preencher uma largura de campo, conforme necessário, inserindo caracteres de preenchimento no início de um campo gerado (justificação à direita).
 
-- `boolalpha`, para inserir ou extrair objetos do tipo `bool` como nomes (como `true` e `false`), e não como valores numéricos.
+- `boolalpha`, para inserir ou extrair objetos do tipo **bool** como nomes (como **verdadeiro** e **false**) em vez de valores numéricos.
 
 - `fixed`, para inserir valores de ponto flutuante no formato de ponto fixo (sem nenhum campo expoente).
 
@@ -499,7 +499,7 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Loc` A nova configuração de localidade.
+*_Loc* a nova configuração de localidade.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -507,7 +507,7 @@ A localidade anterior.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro armazena `_Loc` no objeto de localidade e, em seguida, relata o evento de retorno de chamada e `imbue_event`. Ela retorna o valor armazenado anterior.
+A função membro armazena *_Loc* no objeto de localidade e, em seguida, relata o evento de retorno de chamada e `imbue_event`. Ela retorna o valor armazenado anterior.
 
 ### <a name="example"></a>Exemplo
 
@@ -563,7 +563,7 @@ O tipo é um tipo de bitmask que descreve um objeto que pode armazenar informaç
 
 - `failbit`, para registrar uma falha ao extrair um campo válido de um fluxo.
 
-Além disso, um valor útil é `goodbit`, em que nenhum dos bits mencionados anteriormente são definidos (`goodbit` deverá ser zero).
+Além disso, é um valor útil `goodbit`, em que nenhum dos bits mencionados anteriormente são definidos (`goodbit` é garantido que seja zero).
 
 ## <a name="iword"></a>  ios_base::iword
 
@@ -575,13 +575,13 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>Parâmetros
 
-`idx` O índice do valor para armazenar como um `iword`.
+*IDX* o índice do valor a ser armazenado como um `iword`.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro retorna uma referência ao elemento `idx` da matriz extensível com elementos do tipo **long**. Todos os elementos estão efetivamente presentes e inicialmente armazenam o valor zero. A referência retornada é inválida após a chamada seguinte para `iword` para o objeto, após o objeto ser alterado por uma chamada para **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt), ou após o objeto ser destruído.
+A função membro retorna uma referência ao elemento *idx* da matriz extensível com elementos do tipo **longo**. Todos os elementos estão efetivamente presentes e inicialmente armazenam o valor zero. A referência retornada é inválida após a chamada seguinte para `iword` para o objeto, após o objeto ser alterado por uma chamada para **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt), ou após o objeto ser destruído.
 
-Se `idx` for negativo ou se um armazenamento exclusivo não estiver disponível para o elemento, a função chamará [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** e retornará uma referência que pode não ser exclusiva.
+Se *idx* for negativo ou se o armazenamento exclusivo não estiver disponível para o elemento, a função chamará [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** e retorna uma referência que pode não ser exclusiva.
 
 Para obter um índice exclusivo, para uso em todos os objetos do tipo `ios_base`, chame [xalloc](#xalloc).
 
@@ -609,17 +609,17 @@ public:
 
 O tipo é um `bitmask type` que descreve um objeto que pode armazenar o modo de abertura de vários objetos iostreams. Os valores de sinalizador (elementos) distintos são:
 
-- **app**, para buscar até o final de um fluxo antes de cada inserção.
+- `app`, para buscar até o final de um fluxo antes de cada inserção.
 
-- **ate**, para buscar até o final de um fluxo quando seu objeto de controle é criado.
+- `ate`, para buscar até o final de um fluxo quando seu objeto de controle é criado.
 
-- **binary**, para ler um arquivo como um fluxo binário, e não como um fluxo de texto.
+- `binary`, para ler um arquivo como um fluxo binário, em vez de um fluxo de texto.
 
-- **in**, para permitir a extração de um fluxo.
+- `in`, para permitir a extração de um fluxo.
 
-- **out**, para permitir a inserção em um fluxo.
+- `out`, para permitir a inserção em um fluxo.
 
-- **trunc**, para excluir o conteúdo de um arquivo existente quando seu objeto de controle é criado.
+- `trunc`, para excluir o conteúdo de um arquivo existente quando seu objeto de controle é criado.
 
 ### <a name="example"></a>Exemplo
 
@@ -649,7 +649,7 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` Um objeto do tipo `ios_base`.
+*à direita* um objeto do tipo `ios_base`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -672,11 +672,11 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Prec` O número de dígitos significativos para exibir ou o número de dígitos após o ponto decimal em notação fixa.
+*_Prec* o número de dígitos significativos para exibir ou o número de dígitos após o ponto decimal em notação fixa.
 
 ### <a name="return-value"></a>Valor de retorno
 
-A primeira função membro retorna a [precisão de exibição](../standard-library/ios-base-class.md) armazenada. A segunda função membro armazena `_Prec` na precisão de exibição e retorna seu valor armazenado anterior.
+A primeira função membro retorna a [precisão de exibição](../standard-library/ios-base-class.md) armazenada. O segunda função membro armazena *_Prec* na precisão de exibição e retorna seu valor armazenado anterior.
 
 ### <a name="remarks"></a>Comentários
 
@@ -716,11 +716,11 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Idx` O índice do valor para armazenar como um `pword`.
+*IDX* o índice do valor a ser armazenado como um `pword`.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro retorna uma referência ao elemento _ *Idx* da matriz extensível com elementos do tipo ponteiro `void`. Todos os elementos estão efetivamente presentes e, inicialmente, armazenam o ponteiro nulo. A referência retornada é inválida após a chamada seguinte para `pword` para o objeto, após o objeto ser alterado por uma chamada para **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt), ou após o objeto ser destruído.
+A função membro retorna uma referência ao elemento _ *Idx* da matriz extensível com elementos do tipo **void** ponteiro. Todos os elementos estão efetivamente presentes e, inicialmente, armazenam o ponteiro nulo. A referência retornada é inválida após a chamada seguinte para `pword` para o objeto, após o objeto ser alterado por uma chamada para **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt), ou após o objeto ser destruído.
 
 Se _ *Idx* for negativo ou se um armazenamento exclusivo não estiver disponível para o elemento, a função chamará [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** e retornará uma referência que pode não ser exclusiva.
 
@@ -741,13 +741,13 @@ void register_callback(
 
 ### <a name="parameters"></a>Parâmetros
 
-`pfn` Ponteiro para a função de retorno de chamada.
+*pfn* ponteiro para a função de retorno de chamada.
 
-`idx` Um número definido pelo usuário.
+*IDX* um número definido pelo usuário.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro envia o par `{pfn, idx}` para a pilha de retorno de chamada armazenado [pilha de retorno de chamada](../standard-library/ios-base-class.md). Quando um evento de retorno de chamada **ev** for relatado, as funções são chamadas, na ordem inversa de registro, pela expressão `(*pfn)(ev, *this, idx)`.
+A função de membro envia por push o par `{pfn, idx}` para a pilha de retorno de chamada armazenada [pilha de retorno de chamada](../standard-library/ios-base-class.md). Quando um evento de retorno de chamada **ev** relatado, as funções são chamadas na ordem inversa do registro, pela expressão `(*pfn)(ev, *this, idx)`.
 
 ### <a name="example"></a>Exemplo
 
@@ -857,11 +857,11 @@ namespace std {
 
 O tipo é um tipo enumerado que descreve um objeto que pode armazenar o modo de busca usado como um argumento para as funções de membro de várias classes iostream. Os valores de sinalizador distintos são:
 
-- **beg**, para buscar (alterar a posição de leitura ou gravação atual) com relação ao início de uma sequência (matriz, fluxo ou arquivo).
+- `beg`, para buscar (alterar a leitura atual ou posição de gravação) em relação ao início de uma sequência (matriz, fluxo ou arquivo).
 
-- **cur**, para buscar em relação à posição atual dentro de uma sequência.
+- `cur`, para buscar em relação à posição atual dentro de uma sequência.
 
-- **end**, para buscar em relação ao final de uma sequência.
+- `end`, para buscar em relação ao final de uma sequência.
 
 ### <a name="example"></a>Exemplo
 
@@ -901,9 +901,9 @@ fmtflags setf(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Mask` Os sinalizadores para ativar.
+*_Mask* os sinalizadores para ativar.
 
-*_Unset* os sinalizadores para desativar.
+*Unset* os sinalizadores para desativar.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -949,7 +949,7 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Sync` Se todos os fluxos estão em sincronizado com **stdio**.
+*_Sync* se todos os fluxos estão em sincronizado com `stdio`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -957,7 +957,7 @@ static bool sync_with_stdio(
 
 ### <a name="remarks"></a>Comentários
 
-    The static member function stores a **stdio** sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores `_Sync` in the **stdio** sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.
+    The static member function stores a `stdio` sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores *_Sync* in the `stdio` sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.
 
 ## <a name="unsetf"></a> ios_base::unsetf
 
@@ -971,7 +971,7 @@ void unsetf(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Mask` Os sinalizadores que você deseja desativar.
+*_Mask* os sinalizadores que você deseja desativar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -994,7 +994,7 @@ streamsize width(
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Wide` O tamanho desejado do fluxo de saída.
+*_Wide* o tamanho desejado do fluxo de saída.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1002,7 +1002,7 @@ streamsize width(
 
 ### <a name="remarks"></a>Comentários
 
-    The first member function returns the stored field width. The second member function stores `_Wide` in the field width and returns its previous stored value.
+    The first member function returns the stored field width. The second member function stores *_Wide* in the field width and returns its previous stored value.
 
 ### <a name="example"></a>Exemplo
 

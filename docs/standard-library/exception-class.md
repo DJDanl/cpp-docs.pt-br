@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff6bc46fb8776de5f93b623b98f87513e710c603
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec1cfe2be7f6a2172b6624f15cb3dcde4f0ba3c2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843100"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957012"
 ---
 # <a name="exception-class"></a>Classe exception
 
@@ -46,7 +46,7 @@ class exception {
 
 Especificamente, essa classe base é a raiz das classes de exceção padrão definidas em [\<stdexcept>](../standard-library/stdexcept.md). O valor da cadeia de caracteres C retornado por `what` é deixado como não especificado pelo construtor padrão, mas pode ser definido por construtores para determinadas classes derivadas como uma cadeia de caracteres C definida pela implementação. Nenhuma das funções de membro lança exceções.
 
-O parâmetro `int` permite que você especifique que a memória não deve ser alocada. O valor de `int` é ignorado.
+O **int** parâmetro permite que você especifique que a memória não deve ser alocada. O valor de **int** será ignorado.
 
 > [!NOTE]
 > Os construtores `exception(const char* const &message)` e `exception(const char* const &message, int)` são extensões da Microsoft à biblioteca padrão C++.

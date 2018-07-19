@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 149d255dd82d0dff2d2ddb1101b38bf05c69673a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a53b865d054948d9ee22acbfbec0b6ddf807ec0c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861910"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954754"
 ---
 # <a name="priorityqueue-class"></a>Classe priority_queue
 
@@ -50,17 +50,17 @@ class priority_queue
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo* o elemento tipo de dados a ser armazenado na priority_queue.
+*Tipo* tipo de dados do elemento a ser armazenado no priority_queue.
 
-`Container` O tipo do contêiner subjacente usado para implementar o priority_queue.
+*Contêiner* o tipo de contêiner subjacente usado para implementar o priority_queue.
 
 *Comparar* o tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no priority_queue. Esse argumento é opcional e o predicado binário **menos***\<*** typename** *contêiner ***:: value_type*** >* é o valor padrão.
 
 ## <a name="remarks"></a>Comentários
 
-Os elementos da classe **Type** estipulados no primeiro parâmetro de modelo de um objeto de fila são sinônimo de [value_type](#value_type) e devem corresponder ao tipo de elemento na classe de contêiner subjacente **Container** estipulada pelo segundo parâmetro de modelo. O **Type** deve ser atribuível, para que seja possível copiar objetos desse tipo e atribuir valores a variáveis desse tipo.
+Os elementos da classe `Type` estipulados no primeiro modelo de parâmetro de um objeto de fila são sinônimo [value_type](#value_type) e deve corresponder ao tipo de elemento na classe de contêiner subjacente `Container` estipulado pela segundo parâmetro de modelo. O `Type` deve ser atribuível, para que seja possível copiar objetos desse tipo e atribuir valores às variáveis desse tipo.
 
-O priority_queue ordena a sequência que controla chamando um objeto de função armazenado da classe **Traits**. De modo geral, os elementos precisam ser simplesmente menores que os comparáveis para estabelecer essa ordem: desse modo, considerando dois elementos, pode ser determinado que, ou eles são equivalentes (no sentido de que nenhum deles é menor que o outro), ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes. Fazendo uma observação mais técnica, a função de comparação é um predicado binário que induz a uma ordenação fraca restrita no sentido matemático padrão.
+O priority_queue ordena a sequência que controla chamando um objeto de função armazenado da classe `Traits`. De modo geral, os elementos precisam ser simplesmente menores que os comparáveis para estabelecer essa ordem: desse modo, considerando dois elementos, pode ser determinado que, ou eles são equivalentes (no sentido de que nenhum deles é menor que o outro), ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes. Fazendo uma observação mais técnica, a função de comparação é um predicado binário que induz a uma ordenação fraca restrita no sentido matemático padrão.
 
 As classes de contêiner subjacentes adequadas para priority_queue incluem a [Classe deque](../standard-library/deque-class.md) e a [Classe vector](../standard-library/vector-class.md) padrão ou qualquer outro contêiner de sequência que dá suporte às operações de `front`, `push_back` e `pop_back`, e um iterador de acesso aleatório. A classe de contêiner subjacente é encapsulada dentro do adaptador do contêiner, que expõe apenas o conjunto limitado de funções membro de contêiner de sequência como uma interface pública.
 
@@ -249,23 +249,23 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 
 ### <a name="parameters"></a>Parâmetros
 
-*comp _* a função de comparação de tipo **constTraits** usado para ordenar os elementos no priority_queue, que assume a função do contêiner base compare.
+*_ comp* a função de comparação do tipo **constTraits** usada para ordenar os elementos no priority_queue, cujo padrão é a função de comparação do contêiner base.
 
-`_Cont` O contêiner de base do qual o priority_queue construído é para ser uma cópia.
+*_Cont* contêiner base do qual o priority_queue construído será uma cópia.
 
-`right` O priority_queue do qual o conjunto construído é para ser uma cópia.
+*à direita* priority_queue da qual o conjunto criado é uma cópia.
 
-`first` A posição do primeiro elemento no intervalo de elementos a serem copiados.
+*primeiro* a posição do primeiro elemento no intervalo de elementos a serem copiados.
 
-`last` A posição do primeiro elemento além do intervalo de elementos a serem copiados.
+*última* a posição do primeiro elemento além do intervalo de elementos a serem copiados.
 
 ### <a name="remarks"></a>Comentários
 
-Cada um dos três primeiros construtores especificam um priority_queue inicial vazio, o segundo também especifica o tipo da função de comparação ( `comp`) a ser usada para estabelecer a ordem dos elementos e a terceira especifica explicitamente o `container_type` ( `_Cont`) a ser usado. A palavra-chave **explicit** suprime determinados tipos de conversão automática de tipo.
+Cada um dos primeiros três construtores Especifica um priority_queue inicial vazio, o segundo também especifica o tipo de função de comparação (`comp`) a ser usado para estabelecer a ordem dos elementos e o terceiro explicitamente especificando as `container_type`(`_Cont`) a ser usado. A palavra-chave **explicit** suprime determinados tipos de conversão automática de tipo.
 
-O quarto construtor especifica uma cópia da priority_queue `right`.
+O quarto construtor Especifica uma cópia da priority_queue *certa*.
 
-Os três últimos construtores copiar do intervalo [* primeira, última *) de um contêiner e usar os valores para inicializar um priority_queue com o aumento explicitness para especificar o tipo de função de comparação da classe **características** e `container_type`.
+Os três últimos construtores copiam o intervalo [* first, last *) de um contêiner e use os valores para inicializar um priority_queue cada vez mais explícito ao especificar o tipo de função de comparação da classe **Traits** e `container_type`.
 
 ### <a name="example"></a>Exemplo
 
@@ -388,7 +388,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-`val` Os elementos adicionados à parte superior do priority_queue.
+*Val* o elemento adicionado à parte superior do priority_queue.
 
 ### <a name="remarks"></a>Comentários
 
@@ -493,7 +493,7 @@ const_reference top() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Uma referência ao elemento maior, conforme determinado pela função **Traits**, objeto do priority_queue.
+Uma referência ao elemento maior, conforme determinado pelo `Traits` função, o objeto do priority_queue.
 
 ### <a name="remarks"></a>Comentários
 

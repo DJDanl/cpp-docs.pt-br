@@ -14,19 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a4927657bd0a4944e62493134c041011c142051
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 919d62d967df4e41b5a25e953202352305b50d02
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841455"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958160"
 ---
 # <a name="container-classvaluetype"></a>Classe de Contêiner::value_type
 
 > [!NOTE]
 > Este tópico faz parte da documentação do Visual C++ como um exemplo não funcional de contêineres usados na Biblioteca Padrão C++. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
 
-Age como um sinônimo do parâmetro de modelo **Ty**.
+Age como um sinônimo do parâmetro de modelo *Ty*.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,7 +37,7 @@ typedef T4 value_type;
 
 ## <a name="remarks"></a>Comentários
 
-Descrito aqui como um sinônimo para o tipo não especificado **T4** (normalmente, **Alloc::value_type**).
+Ele é descrito aqui como um sinônimo para o tipo não especificado `T4` (normalmente `Alloc::value_type`).
 
 ## <a name="see-also"></a>Consulte também
 

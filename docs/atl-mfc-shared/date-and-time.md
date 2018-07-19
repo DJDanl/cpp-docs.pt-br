@@ -17,21 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79af7c468da642f44cc01229da304ab33e1ea1e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 643347915e97f1c803047f91b72311c5642e6eef
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355555"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879553"
 ---
 # <a name="date-and-time"></a>Data e Hora
 MFC dá suporte a várias maneiras diferentes de trabalhar com datas e horas. Elas incluem:  
   
--   Classes de tempo de uso geral. O [CTime](../atl-mfc-shared/reference/ctime-class.md) e [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) classes encapsulam a maioria das funcionalidades associadas à biblioteca de tempo padrão ANSI, que é declarada no momento. H.  
+-   Classes de tempo de uso geral. O [CTime](../atl-mfc-shared/reference/ctime-class.md) e [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) classes encapsulam a maioria das funcionalidades associadas com a biblioteca em tempo padrão ANSI, que é declarada no tempo. H.  
   
--   Suporte para o relógio do sistema. Com MFC versão 3.0, foi adicionado suporte para `CTime` para Win32 `SYSTEMTIME` e `FILETIME` tipos de dados.  
+-   Suporte para o relógio do sistema. Com o MFC versão 3.0, foi adicionado suporte para `CTime` do Win32 `SYSTEMTIME` e `FILETIME` tipos de dados.  
   
--   Suporte para a automação [tipo de dados data](../atl-mfc-shared/date-type.md). **DATA** valores dá suporte a data, hora e data/hora. O [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) e [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classes encapsulam essa funcionalidade. Elas funcionam com o [COleVariant](../mfc/reference/colevariant-class.md) classe usando o suporte de automação.  
+-   Suporte para a automação [tipo de dados DATE](../atl-mfc-shared/date-type.md). Data dá suporte a data, hora e valores de data/hora. O [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) e [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classes encapsulam essa funcionalidade. Eles funcionam com o [COleVariant](../mfc/reference/colevariant-class.md) classe usando o suporte de automação.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
   

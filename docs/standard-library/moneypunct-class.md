@@ -56,16 +56,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28acc1eb2f2ed265d20507d2b47efa657c2d1bb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ed808d8b28071978e89d873d0af9735167e4dbf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862501"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957503"
 ---
 # <a name="moneypunct-class"></a>Classe moneypunct
 
-A classe de modelo que descreve um objeto que pode funcionar como uma faceta de localidade para descrever as sequências do tipo `CharType` usadas para representar um campo de entrada monetário ou um campo de saída monetário. Se o parâmetro de modelo `Intl` for `true`, as convenções internacionais serão observadas.
+A classe de modelo descreve um objeto que pode servir como uma faceta de localidade para descrever as sequências do tipo *CharType* usado para representar um campo de entrada monetário ou um campo de saída monetário. Se o parâmetro de modelo *Intl* é *verdadeiro*, as convenções internacionais serão observadas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -76,15 +76,15 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parâmetros
 
-`CharType` O tipo usado dentro de um programa para codificar caracteres.
+*CharType* o tipo usado em um programa para codificar caracteres.
 
-`Intl` Um sinalizador que especifica se as convenções internacionais devem ser observadas.
+*Intl* um sinalizador que especifica se as convenções internacionais devem ser observadas.
 
 ## <a name="remarks"></a>Comentários
 
 Como qualquer faceta de localidade, a ID de objeto estático tem um valor armazenado inicial de zero. A primeira tentativa de acessar seu valor armazenado armazena um valor positivo exclusivo na **id.**
 
-O objeto estático const intl armazena o valor do parâmetro de modelo **Intl**.
+O objeto estático const intl armazena o valor do parâmetro de modelo *Intl*.
 
 ### <a name="constructors"></a>Construtores
 
@@ -285,7 +285,7 @@ Uma regra específica de localidade para determinar como os dígitos são agrupa
 
 ### <a name="example"></a>Exemplo
 
-Veja o exemplo de [grouping](#grouping), em que a função membro virtual é chamada por **grouping**.
+Veja o exemplo de [agrupando](#grouping), em que a função membro virtual é chamada `grouping`.
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -297,19 +297,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-A função membro virtual protegida retorna uma regra específica de localidade para determinar como gerar o campo de saída monetário para um valor negativo. Cada um dos quatro elementos de **pattern::field** pode ter os valores:
+A função membro virtual protegida retorna uma regra específica de localidade para determinar como gerar o campo de saída monetário para um valor negativo. Cada um dos quatro elementos de `pattern::field` pode ter os valores:
 
-- **none** para corresponder a zero ou mais espaços ou gerar nada.
+- `none` para corresponder a zero ou mais espaços ou gerar nada.
 
-- **sign** para corresponder ou gerar um sinal positivo ou negativo.
+- `sign` para corresponder ou gerar um sinal positivo ou negativo.
 
-- **space** para corresponder a zero ou mais espaços ou gerar um espaço.
+- `space` para corresponder a zero ou mais espaços ou gerar um espaço.
 
-- **symbol** para corresponder ou gerar um símbolo de moeda.
+- `symbol` para corresponder ou gerar um símbolo de moeda.
 
-- **value** para corresponder ou gerar um valor monetário.
+- `value` para corresponder ou gerar um valor monetário.
 
-Os componentes de um campo de saída monetário são gerados e os componentes de um campo de entrada monetário são correspondidos na ordem em que esses elementos aparecem em **pattern::field**. Cada um dos valores **sign**, **symbol**, **value** e **none** ou **space** deve aparecer exatamente uma vez. O valor **none** não devem aparecer primeiro. O valor space não **deve** não devem aparecer primeiro ou por último. Se **Intl** for true, a ordem será **symbol**, **sign**, **none** e **value**.
+Componentes de um campo de saída monetário são gerados e componentes de um campo de entrada monetário são correspondidos na ordem em que esses elementos aparecem no `pattern::field`. Cada um dos valores `sign`, `symbol`, `value`e ambos `none` ou `space` deve aparecer exatamente uma vez. O valor `none` não devem aparecer primeiro. O valor space não **deve** não devem aparecer primeiro ou por último. Se `Intl` for true, a ordem é `symbol`, `sign`, `none`, em seguida, `value`.
 
 A versão de modelo `moneypunct`\< **CharType**, **Intl**> retorna `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
@@ -531,17 +531,17 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Refs` Valor inteiro usado para especificar o tipo de gerenciamento de memória para o objeto.
+*_Refs* valor inteiro usado para especificar o tipo de gerenciamento de memória para o objeto.
 
 ### <a name="remarks"></a>Comentários
 
-Os valores possíveis para o parâmetro `_Refs` e sua significância são:
+Os valores possíveis para o *_Refs* parâmetro e sua significância são:
 
 - 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
 - 1: o tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: esses valores não são definidos.
+- \> 1: esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 

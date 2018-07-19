@@ -20,30 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71871eae42fc720481852be1e60c934f941858c6
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 6607f70a18734310d184c5cdd05d1e87f1b82d35
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078150"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852329"
 ---
 # <a name="collection-class-helpers"></a>Auxiliares da classe de coleção
-As classes de coleção `CMap`, `CList`, e `CArray` usar funções de modelo auxiliar globais para esses fins de comparação, cópia e serializando elementos. Como parte de sua implementação de classes com base em `CMap`, `CList`, e `CArray`, você deve substituir essas funções conforme necessário com as versões de acordo com o tipo de dados armazenados em seu mapa, lista ou matriz. Para obter informações sobre substituição de funções auxiliares, como `SerializeElements`, consulte o artigo [coleções: como fazer uma coleção fortemente tipada](../../mfc/how-to-make-a-type-safe-collection.md). Observe que `ConstructElements` e `DestructElements` foram preteridos.  
+As classes de coleção `CMap`, `CList`, e `CArray` usar funções auxiliares global com modelo para esses fins, como comparação, copiando e serializando elementos. Como parte de sua implementação de classes com base na `CMap`, `CList`, e `CArray`, você deve substituir essas funções conforme necessário com as versões adaptadas para o tipo de dados armazenados no seu mapa, lista ou matriz. Para obter informações sobre substituição de funções auxiliares, como `SerializeElements`, consulte o artigo [coleções: como fazer uma coleção fortemente tipada](../../mfc/how-to-make-a-type-safe-collection.md). Observe que `ConstructElements` e `DestructElements` foram preteridos.  
   
- A biblioteca Microsoft Foundation Class fornece as seguintes funções globais no afxtempl.h para ajudá-lo a personalizar suas classes de coleção:  
+ A biblioteca Microsoft Foundation Class fornece as seguintes funções globais na afxtempl.h para ajudá-lo a personalizar suas classes de coleção:  
   
 ### <a name="collection-class-helpers"></a>Auxiliares da classe de coleção  
   
 |||  
 |-|-|  
-|[CompareElements](#compareelements)|Indica se os elementos são os mesmos.|  
-|[CopyElements](#copyelements)|Elementos de cópias de um array para outro.|  
-|[DumpElements](#dumpelements)|Fornece a saída de diagnóstica orientada por fluxo.|  
+|[CompareElements](#compareelements)|Indica se os elementos são iguais.|  
+|[CopyElements](#copyelements)|Copia os elementos de uma matriz para outra.|  
+|[DumpElements](#dumpelements)|Fornece a saída de diagnóstico orientada por fluxo.|  
 |[HashKey](#hashkey)|Calcula uma chave de hash.|  
 |[SerializeElements](#serializeelements)|Armazena ou recupera os elementos de ou para um arquivo morto.|  
   
 ##  <a name="compareelements"></a>  CompareElements  
- Chamado diretamente por [CList::Find] (clist class.md not_found.md # #clist__find e indiretamente por [cmap__lookup](cmap-class.md#lookup) e [cmap__operator &#91; &#93; ](cmap-class.md#operator_at).  
+ Chamado diretamente pelo [CList::Find] (clist class.md not_found.md # #clist__find e indiretamente [cmap__lookup](cmap-class.md#lookup) e [cmap__operator &#91; &#93; ](cmap-class.md#operator_at).  
   
 ```   
 template<class TYPE, class ARG_TYPE>  
@@ -54,7 +54,7 @@ CompareElements(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *TIPO DE*  
+ *TIPO*  
  O tipo do primeiro elemento a ser comparado.  
   
  *pElement1*  
@@ -67,20 +67,20 @@ CompareElements(
  Ponteiro para o segundo elemento a ser comparado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o objeto apontado pela *pElement1* é igual ao objeto apontado pelo *pElement2*; caso contrário, 0.  
+ Diferente de zero se o objeto apontado por *pElement1* é igual ao objeto apontado por *pElement2*; caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- O `CMap` chama o uso de `CMap` parâmetros de modelo *chave* e `ARG_KEY`.  
+ O `CMap` chama o uso de `CMap` parâmetros de modelo *chave* e *ARG_KEY*.  
   
- A implementação padrão retorna o resultado da comparação de  *\*pElement1* e  *\*pElement2*. Substitua essa função para que ele se compara os elementos de uma maneira que seja apropriado para seu aplicativo.  
+ A implementação padrão retorna o resultado da comparação do  *\*pElement1* e  *\*pElement2*. Substitua essa função para que ele compara os elementos de uma maneira que é apropriado para seu aplicativo.  
   
- A linguagem C++ define o operador de comparação ( `==`) para tipos simples ( **char**, **int**, **float**, e assim por diante), mas não define um operador de comparação classes e estruturas. Se você quiser usar `CompareElements` ou para criar uma instância de uma das classes de coleção que usa, você deve definir o operador de comparação ou sobrecarregar `CompareElements` com uma versão que retorna os valores apropriados.  
+ A linguagem C++ define o operador de comparação ( `==`) para tipos simples (**char**, **int**, **float**e assim por diante), mas não definem um operador de comparação classes e estruturas. Se você quiser usar `CompareElements` ou para instanciar uma das classes de coleção que usa-o, você deve definir o operador de comparação ou sobrecarregar `CompareElements` com uma versão que retorna os valores apropriados.  
   
 ### <a name="requirements"></a>Requisitos  
    **Cabeçalho:** afxtempl.h   
   
 ##  <a name="copyelements"></a>  CopyElements  
- Essa função é chamada diretamente por [CArray::Append](carray-class.md#append) e [CArray::Copy](carray-class.md#copy).  
+ Essa função é chamada diretamente pelo [CArray::Append](carray-class.md#append) e [CArray::Copy](carray-class.md#copy).  
   
 ```   
 template<class TYPE>  
@@ -91,28 +91,28 @@ void AFXAPI CopyElements(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *TIPO DE*  
- Parâmetro de modelo especificando o tipo de elementos a serem copiados.  
+ *TIPO*  
+ Parâmetro de modelo especificando o tipo dos elementos a serem copiados.  
   
  *pDest*  
- Ponteiro para o destino onde os elementos serão copiados.  
+ Ponteiro para o destino no qual os elementos serão copiados.  
   
  *pSrc*  
- Ponteiro para a fonte dos elementos a serem copiados.  
+ Ponteiro para a origem dos elementos a serem copiados.  
   
  *nCount*  
  Número de elementos a serem copiados.  
   
 ### <a name="remarks"></a>Comentários  
- A implementação padrão usa o operador de atribuição simples ( **=** ) para executar a operação de cópia. Se o tipo que está sendo copiado não tiver um operador sobrecarregado =, em seguida, a implementação padrão realiza uma cópia de bit a bit.  
+ A implementação padrão usa o operador de atribuição simples ( **=** ) para executar a operação de cópia. Se o tipo que está sendo copiado não tem um operador sobrecarregado =, em seguida, a implementação padrão executa uma cópia bit a bit.  
   
- Para obter informações sobre como implementar essa e outras funções de auxiliar, consulte o artigo [coleções: como fazer uma coleção fortemente tipada](../how-to-make-a-type-safe-collection.md).  
+ Para obter informações sobre como implementar essas e outras funções de auxiliar, consulte o artigo [coleções: como fazer uma coleção fortemente tipada](../how-to-make-a-type-safe-collection.md).  
   
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxtempl.h  
   
 ##  <a name="dumpelements"></a>  DumpElements  
- Fornece a saída de diagnóstica orientada por fluxo em formato de texto para os elementos da sua coleção quando é substituído.  
+ Fornece saída de diagnóstico orientada por fluxo na forma de texto para os elementos de sua coleção quando é substituído.  
   
 ```   
 template<class TYPE>  
@@ -124,21 +124,21 @@ void  AFXAPI DumpElements(
   
 ### <a name="parameters"></a>Parâmetros  
  *dc*  
- Despejo de contexto para elementos de despejo.  
+ Contexto para despejar os elementos de despejo.  
   
- *TIPO DE*  
+ *TIPO*  
  Especifica o tipo dos elementos de parâmetro de modelo.  
   
  *pElements*  
- Ponteiro para os elementos para ser despejados.  
+ Ponteiro para os elementos a ser despejado.  
   
  *nCount*  
- Número de elementos a ser despejados.  
+ Número de elementos a ser despejado.  
   
 ### <a name="remarks"></a>Comentários  
- O `CArray::Dump`, `CList::Dump`, e `CMap::Dump` funções chamá-lo se a profundidade do despejo for maior que 0.  
+ O `CArray::Dump`, `CList::Dump`, e `CMap::Dump` funções chamá-lo se a profundidade do despejo é maior que 0.  
   
- A implementação padrão não fará nada. Se os elementos de sua coleção são derivados de `CObject`, sua substituição normalmente irá iterar por meio de elementos da coleção, chamando `Dump` para cada elemento por sua vez.  
+ A implementação padrão não faz nada. Se os elementos de sua coleção derivam `CObject`, sua substituição normalmente irá iterar os elementos da coleção, chamando `Dump` para cada elemento, por sua vez.  
   
 
 ### <a name="requirements"></a>Requisitos  
@@ -163,9 +163,9 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
  Valor de hash da chave.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função é chamada diretamente por [CMap::RemoveKey](cmap-class.md#removekey) e indiretamente por [CMap::Lookup](cmap-class.md#lookup) e [CMap::Operator &#91; &#93; ](cmap-class.md#operator_at).
+ Essa função é chamada diretamente pelo [CMap::RemoveKey](cmap-class.md#removekey) e indiretamente [CMap::Lookup](cmap-class.md#lookup) e [CMap::Operator &#91; &#93; ](cmap-class.md#operator_at).
   
- A implementação padrão cria um valor de hash com a mudança *chave* direita por quatro posições. Substitua essa função para que ele retorna valores de hash apropriado para seu aplicativo.  
+ A implementação padrão cria um valor de hash com a mudança *chave* direita em quatro posições. Substitua essa função para que ele retorna valores de hash apropriada para seu aplicativo.  
   
 ### <a name="example"></a>Exemplo
  ```cpp  
@@ -181,7 +181,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
   **Cabeçalho** afxtempl.h 
   
 ##  <a name="serializeelements"></a>  SerializeElements  
- [CArray](carray-class.md), [CList](clist-class.md), e [CMap](cmap-class.md) chamar esta função para serializar os elementos.  
+ [CArray](carray-class.md), [CList](clist-class.md), e [CMap](cmap-class.md) chame essa função para serializar os elementos.  
   
 ```   
 template<class TYPE>  
@@ -189,11 +189,11 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *TIPO DE*  
+ *TIPO*  
  Especifica o tipo dos elementos de parâmetro de modelo.  
   
  *ar*  
- Um objeto de arquivo morto para arquivar para ou do.  
+ Um objeto de arquivo morto para arquivar ou para.  
   
  *pElements*  
  Ponteiro para os elementos que estão sendo arquivados.  
@@ -202,12 +202,12 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
  Número de elementos que estão sendo arquivadas  
   
 ### <a name="remarks"></a>Comentários  
- A implementação padrão não tem um bit a bit de leitura ou gravação.  
+ A implementação do padrão faz um bit a bit de leitura ou gravação.  
   
- Para obter informações sobre como implementar essa e outras funções de auxiliar, consulte o artigo [coleções: como fazer uma coleção fortemente tipada](../how-to-make-a-type-safe-collection.md).  
+ Para obter informações sobre como implementar essas e outras funções de auxiliar, consulte o artigo [coleções: como fazer uma coleção fortemente tipada](../how-to-make-a-type-safe-collection.md).  
   
 ### <a name="example"></a>Exemplo  
- Consulte o exemplo no artigo [coleções: como fazer uma coleção fortemente tipada](../how-to-make-a-type-safe-collection.md).  
+ Veja o exemplo neste artigo [coleções: como fazer uma coleção fortemente tipada](../how-to-make-a-type-safe-collection.md).  
  
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxtempl.h 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ede515f0b8bc95d454fec48c6c6bd2109c43ce74
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: c1723e93320129fae232bb850caa123d1638a37b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040188"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853076"
 ---
 # <a name="codbcfieldinfo-structure"></a>Estrutura CODBCFieldInfo
 O `CODBCFieldInfo` estrutura contém informações sobre os campos em uma fonte de dados ODBC.  
@@ -45,7 +45,7 @@ struct CODBCFieldInfo
  O nome do campo.  
   
  *m_nSQLType*  
- O tipo de dados SQL do campo. Isso pode ser um tipo de dados SQL ODBC ou um tipo de dados SQL específico do driver. Para obter uma lista de tipos de dados ODBC SQL válidos, consulte "Tipos de dados SQL" no SDK do Windows. Para obter informações sobre tipos de dados SQL específico do driver, consulte a documentação do driver.  
+ O tipo de dados SQL do campo. Isso pode ser um tipo de dados SQL ODBC ou um tipo de dados SQL específica do driver. Para obter uma lista dos tipos de dados SQL ODBC válidos, consulte "Tipos de dados SQL" no SDK do Windows. Para obter informações sobre tipos de dados SQL específico do driver, consulte a documentação do driver.  
   
  *m_nPrecision*  
  A precisão máxima do campo. Para obter detalhes, consulte "Precisão, escala, comprimento e tamanho de exibição" no SDK do Windows.  
@@ -54,13 +54,13 @@ struct CODBCFieldInfo
  A escala do campo. Para obter detalhes, consulte "Precisão, escala, comprimento e tamanho de exibição" no SDK do Windows.  
   
  *m_nNullability*  
- Se o campo aceita um valor nulo. Isso pode ser um dos dois valores: **SQL_NULLABLE** se o campo aceita valores nulos, ou **SQL_NO_NULLS** se o campo não aceita valores Null.  
+ Se o campo aceita um valor Null. Isso pode ser um dos dois valores: SQL_NULLABLE se o campo aceita valores nulos, SQL_NO_NULLS se o campo não aceita valores nulos ou.  
   
 ## <a name="remarks"></a>Comentários  
  Para recuperar essas informações, chame [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo).  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxdb.h  
+ **Cabeçalho:** afxdb. h  
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   

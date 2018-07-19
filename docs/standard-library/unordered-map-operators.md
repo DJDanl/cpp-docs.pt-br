@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: 69a53ae6b54248f5b9938e2c9137a24f441c061d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a43528b270571a9994187711e2a21ca5a0e1f096
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859346"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958897"
 ---
 # <a name="ltunorderedmapgt-operators"></a>Operadores &lt;unordered_map&gt;
 
@@ -32,13 +32,15 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um objeto do tipo `unordered_map`.
+*left*  
+ Um objeto do tipo `unordered_map`.
 
-`right` Um objeto do tipo `unordered_map`.
+*right*  
+ Um objeto do tipo `unordered_map`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se os unordered_maps forem diferentes; `false` se forem iguais.
+**True** se os unordered_maps forem iguais; **falsos** se eles forem iguais.
 
 ### <a name="remarks"></a>Comentários
 
@@ -95,13 +97,15 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um objeto do tipo `unordered_map`.
+*left*  
+ Um objeto do tipo `unordered_map`.
 
-`right` Um objeto do tipo `unordered_map`.
+*right*  
+ Um objeto do tipo `unordered_map`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se os unordered_maps forem iguais; `false` se forem diferentes.
+**True** se os unordered_maps forem iguais; **falsos** se eles não forem iguais.
 
 ### <a name="remarks"></a>Comentários
 
@@ -158,13 +162,15 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um objeto do tipo `unordered_multimap`.
+*left*  
+ Um objeto do tipo `unordered_multimap`.
 
-`right` Um objeto do tipo `unordered_multimap`.
+*right*  
+ Um objeto do tipo `unordered_multimap`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se os unordered_multimaps não forem iguais; `false` se forem iguais.
+**True** se os unordered_multimaps não forem iguais; **falsos** se eles forem iguais.
 
 ### <a name="remarks"></a>Comentários
 
@@ -222,13 +228,15 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Parâmetros
 
-`left` Um objeto do tipo `unordered_multimap`.
+*left*  
+ Um objeto do tipo `unordered_multimap`.
 
-`right` Um objeto do tipo `unordered_multimap`.
+*right*  
+ Um objeto do tipo `unordered_multimap`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se os unordered_multimaps forem iguais; `false` se forem diferentes.
+**True** se os unordered_multimaps forem iguais; **falsos** se eles não forem iguais.
 
 ### <a name="remarks"></a>Comentários
 

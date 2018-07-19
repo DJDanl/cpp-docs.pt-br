@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 757a5eb526bc8d4294a64cbdc9645e72285162ce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f73559503ad427c9b7eb513d4164d3348c652948
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857253"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954741"
 ---
 # <a name="istriviallyconstructible-class"></a>Classe is_trivially_constructible
 
@@ -37,13 +37,13 @@ struct is_trivially_constructible;
 
 ### <a name="parameters"></a>Parâmetros
 
-`T` O tipo de consulta.
+*T* o tipo de consulta.
 
-`Args` Tipos de argumento para corresponder em um construtor de `T`.
+*Args* os tipos de argumento para corresponder a um construtor de *T*.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo `T` puder ser construído de forma trivial usando os tipos de argumento em `Args`; caso contrário, será falsa. O tipo `T` poderá ser construído de forma trivial se a definição da variável `T t(std::declval<Args>()...);` estiver bem formada e não chamar operações não triviais. `T` e todos os tipos em `Args` devem ser tipos completos, `void` ou matrizes de limite desconhecido.
+Uma instância do predicado de tipo será verdadeira se o tipo *T* é trivialmente construível usando os tipos de argumento na *Args*, caso contrário, será falsa. Tipo de *T* trivialmente pode ser construído se a definição da variável `T t(std::declval<Args>()...);` está bem formado e é conhecido para chamar operações não triviais. Ambos *T* e todos os tipos *Args* devem ser tipos completos, **void**, ou matrizes de limite desconhecido.
 
 ## <a name="requirements"></a>Requisitos
 

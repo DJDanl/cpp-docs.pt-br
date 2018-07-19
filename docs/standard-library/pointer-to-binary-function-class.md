@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39549a277a203d9daa894f48437224caf50a0521
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b632fabe8f596d46a0423d670ff57bb12de93cd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853372"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953450"
 ---
 # <a name="pointertobinaryfunction-class"></a>Classe pointer_to_binary_function
 
@@ -44,19 +44,19 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-`pfunc` A função binária a ser convertido.
+*pfunc* a função binária a ser convertido.
 
-`left` À esquerda do objeto que o  *\*pfunc* for chamado.
+*à esquerda* à esquerda do objeto que o  *\*pfunc* é chamado.
 
-`right` À direita do objeto que o  *\*pfunc* for chamado.
+*à direita* à direita do objeto que o  *\*pfunc* é chamado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-A classe de modelo armazena uma cópia de **pfunc**. Ela define sua função membro `operator()` como de retorno (\* **pfunc**)(_ *Left*, \_ *Right*).
+A classe de modelo armazena uma cópia de `pfunc`. Ela define sua função membro `operator()` como de retorno (\* **pfunc**)(_ *Left*, \_ *Right*).
 
 ## <a name="remarks"></a>Comentários
 
-Um ponteiro de função binária é um objeto de função e pode ser passado para qualquer algoritmo da Biblioteca Padrão C++ que esperar uma função binária como parâmetro, mas não é adaptável. Para usá-lo com um adaptador, como ao associar um valor a ele ou usá-lo com um negador, ele deve receber os tipos aninhados **first_argument_type**, **second_argument_type** e **result_type** que possibilitam essa adaptação. A conversão por `pointer_to_binary_function` permite que os adaptadores de função funcionem com ponteiros de função binária.
+Um ponteiro de função binária é um objeto de função e pode ser passado para qualquer algoritmo da Biblioteca Padrão C++ que esperar uma função binária como parâmetro, mas não é adaptável. Para usá-lo com um adaptador, como associar um valor a ele ou usá-lo com um negador, ele deve ser fornecido com os tipos aninhados `first_argument_type`, `second_argument_type`, e `result_type` que possibilitam essa adaptação. A conversão por `pointer_to_binary_function` permite que os adaptadores de função funcionem com ponteiros de função binária.
 
 ## <a name="example"></a>Exemplo
 

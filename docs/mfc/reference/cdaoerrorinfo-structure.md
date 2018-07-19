@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c11ebaa7d315d09cea40b4ddc94d5afff498bf7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 787e9d5ac860e283d6eacc0f22b790a6196485f4
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335562"
 ---
 # <a name="cdaoerrorinfo-structure"></a>Estrutura CDaoErrorInfo
-O `CDaoErrorInfo` estrutura contém informações sobre um objeto de erro definida para os objetos de acesso de dados (DAO).  
+O `CDaoErrorInfo` estrutura contém informações sobre um objeto de erro definida para objetos de acesso de dados (DAO).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,26 +42,26 @@ struct CDaoErrorInfo
   
 #### <a name="parameters"></a>Parâmetros  
  *m_lErrorCode*  
- Um código de erro numérico DAO. Consulte o tópico "Dados acesso erros interceptáveis" na Ajuda do DAO.  
+ Um código de erro numérico do DAO. Consulte o tópico "Dados acesso erros interceptáveis" na Ajuda do DAO.  
   
  *m_strSource*  
- O nome do objeto ou aplicativo que originalmente gerou o erro. A propriedade Source Especifica uma expressão de cadeia de caracteres que representa o objeto que originalmente gerou o erro; a expressão é normalmente o nome da classe do objeto. Para obter detalhes, consulte o tópico "Propriedade Source" na Ajuda do DAO.  
+ O nome do objeto ou aplicativo que originalmente gerou o erro. A propriedade de origem Especifica uma expressão de cadeia de caracteres que representa o objeto que originalmente gerou o erro; a expressão é normalmente o nome da classe do objeto. Para obter detalhes, consulte o tópico "Propriedade do código-fonte" na Ajuda do DAO.  
   
  *m_strDescription*  
  Uma cadeia de caracteres descritiva associada a um erro. Para obter detalhes, consulte o tópico "Propriedade Description" na Ajuda do DAO.  
   
  *m_strHelpFile*  
- Um caminho totalmente qualificado para um arquivo de Ajuda do Microsoft Windows. Para obter detalhes, consulte o tópico "HelpContext, propriedades do arquivo de Ajuda" na Ajuda do DAO.  
+ Um caminho totalmente qualificado para um arquivo de Ajuda do Microsoft Windows. Para obter detalhes, consulte o tópico "Propriedades HelpContext, HelpFile" na Ajuda do DAO.  
   
  *m_lHelpContext*  
- Uma ID de contexto para um tópico em um arquivo de Ajuda do Microsoft Windows. Para obter detalhes, consulte o tópico "HelpContext, propriedades do arquivo de Ajuda" na Ajuda do DAO.  
+ Uma ID de contexto para um tópico em um arquivo de Ajuda do Microsoft Windows. Para obter detalhes, consulte o tópico "Propriedades HelpContext, HelpFile" na Ajuda do DAO.  
   
 ## <a name="remarks"></a>Comentários  
- MFC não encapsula os objetos de erro DAO em uma classe. Em vez disso, o [CDaoException](../../mfc/reference/cdaoexception-class.md) classe fornece uma interface para acessar a coleção de erros contida no DAO **DBEngine** objeto, o objeto que contém todos os espaços de trabalho. Quando uma operação DAO MFC gera um `CDaoException` do objeto que você capture, MFC preenche uma `CDaoErrorInfo` estrutura e armazena o objeto de exceção [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) membro. (Se você optar por chamar DAO diretamente, você deve chamar o objeto de exceção [GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) função de membro para preencher `m_pErrorInfo`.)  
+ MFC não encapsula os objetos de erro DAO em uma classe. Em vez disso, o [CDaoException](../../mfc/reference/cdaoexception-class.md) classe fornece uma interface para acessar a coleção de erros contida no DAO `DBEngine` objeto, o objeto que também contém todos os espaços de trabalho. Quando uma operação de MFC DAO gera uma `CDaoException` do objeto que você capturar, MFC preenche uma `CDaoErrorInfo` estrutura e o armazena no objeto de exceção [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) membro. (Se você optar por chamar diretamente o DAO, você deve chamar o objeto de exceção [GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) função de membro por conta própria para preencher `m_pErrorInfo`.)  
   
- Para obter mais informações sobre o tratamento de erros DAO, consulte o artigo [exceções: exceções de banco de dados](../../mfc/exceptions-database-exceptions.md). Para obter informações relacionadas, consulte o tópico "Objeto de erro" na Ajuda do DAO.  
+ Para obter mais informações sobre tratamento de erros do DAO, consulte o artigo [exceções: exceções de banco de dados](../../mfc/exceptions-database-exceptions.md). Para obter informações relacionadas, consulte o tópico "Objeto de erro" na Ajuda do DAO.  
   
- As informações recuperadas pelo [CDaoException::GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) função de membro é armazenada em um `CDaoErrorInfo` estrutura. Examine o [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) membro de dados de um `CDaoException` objeto catch em um manipulador de exceção ou chamada `GetErrorInfo` de um `CDaoException` objeto que você criar explicitamente para verificar erros que possam ter ocorreu durante uma chamada direta às interfaces DAO. `CDaoErrorInfo` também define uma `Dump` cria a função de membro na depuração. Você pode usar `Dump` para despejar o conteúdo de um `CDaoErrorInfo` objeto.  
+ As informações recuperadas pelo [CDaoException::GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) função de membro é armazenada em um `CDaoErrorInfo` estrutura. Examine a [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) membro de dados de uma `CDaoException` objeto catch em um manipulador de exceção ou chamada `GetErrorInfo` de um `CDaoException` objeto que você criar explicitamente para verificar os erros que podem ter durante uma chamada direta para as interfaces DAO. `CDaoErrorInfo` também define um `Dump` compilações de função de membro na depuração. Você pode usar `Dump` para despejar o conteúdo de um `CDaoErrorInfo` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdao.h  

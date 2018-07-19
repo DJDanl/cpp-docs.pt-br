@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2279eb951888a1b323455f3e8a2545cc1b1d7f2d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 68a8c96983443f39f05004493d0393f51f7ee19e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359789"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959950"
 ---
 # <a name="site-information-classes"></a>Classes de informações do site
-As classes a seguir permitem a um objeto para se comunicar com seu site:  
+As classes a seguir permitem que um objeto para se comunicar com seu site:  
   
 -   [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md) recupera e define um ponteiro para o site de um objeto. Usado para objetos que não são controles.  
   

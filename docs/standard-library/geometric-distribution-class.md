@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8d68723573d3a11565ae32f07bf8899661097c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8468cb290b6845050943159aaa69b9cd000d2bc7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846864"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960288"
 ---
 # <a name="geometricdistribution-class"></a>Classe geometric_distribution
 
@@ -76,7 +76,7 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*IntType* o tipo de resultado de inteiro, o padrão será a `int`. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*IntType* padrão é o tipo de resultado inteiro **int**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 *URNG* O mecanismo gerador de números aleatórios uniformes. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
@@ -228,9 +228,9 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*p* o `p` parâmetro da distribuição.
+*p* o `p` parâmetro de distribuição.
 
-*parâmetro* a estrutura de parâmetro usada para construir a distribuição.
+*parm* a estrutura de parâmetro usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
@@ -257,9 +257,9 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*p* o `p` parâmetro da distribuição.
+*p* o `p` parâmetro de distribuição.
 
-*direito* o `param_type` instância para comparar isso.
+*à direita* o `param_type` instância a ser comparada com isto.
 
 ### <a name="remarks"></a>Comentários
 

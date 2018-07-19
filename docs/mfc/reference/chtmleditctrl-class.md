@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1226f99d01d933e1754d301756aee6a12620e6a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 4cc8cdc389edc8abbc424ec8277f759e7f3d81bb
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338562"
 ---
 # <a name="chtmleditctrl-class"></a>Classe CHtmlEditCtrl
-Fornece a funcionalidade do controle ActiveX do WebBrowser em uma janela do MFC.  
+Fornece a funcionalidade do controle WebBrowser ActiveX em uma janela MFC.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,11 +54,11 @@ class CHtmlEditCtrl: public CWnd,
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CHtmlEditCtrl::Create](#create)|Cria um controle WebBrowser ActiveX e anexa-o para o `CHtmlEditCtrl` objeto. Essa função automaticamente coloca o controle WebBrowser ActiveX no modo de edição.|  
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Recupera o [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interface no documento atualmente carregados no controle do WebBrowser independente.|  
-|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Recupera a URL para um documento padrão para carregar no controle do WebBrowser independente.|  
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Recupera o [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interface no documento atualmente carregado no controle WebBrowser independente.|  
+|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Recupera a URL para um documento padrão a ser carregado no controle WebBrowser independente.|  
   
 ## <a name="remarks"></a>Comentários  
- O WebBrowser hospedado controle é colocado automaticamente em modo de edição depois que ele é criado.  
+ Modo de edição WebBrowser hospedado controle é colocado automaticamente em após sua criação.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -82,7 +82,7 @@ CHtmlEditCtrl();
 ```  
   
 ##  <a name="create"></a>  CHtmlEditCtrl::Create  
- Cria um controle WebBrowser ActiveX e anexa-o para o `CHtmlEditCtrl` objeto. O WebBrowser ActiveX automaticamente navega para um documento padrão de controle e, em seguida, é colocado no modo de edição por essa função.  
+ Cria um controle WebBrowser ActiveX e anexa-o para o `CHtmlEditCtrl` objeto. O WebBrowser ActiveX controle automaticamente navega para um documento padrão e, em seguida, é colocado no modo de edição por essa função.  
   
 ```  
 virtual BOOL Create(
@@ -105,19 +105,19 @@ virtual BOOL Create(
  Especifica o tamanho e a posição do controle.  
   
  *pParentWnd*  
- Especifica a janela pai do controle. Ele não deve ser **nulo**.  
+ Especifica a janela pai do controle. Ele não deve ser NULL.  
   
  *nID*  
- Especifica a identificação. do controle  
+ Especifica a ID. do controle  
   
  *pContext*  
  Esse parâmetro não está em uso.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna **TRUE** em caso de sucesso, **FALSE** em caso de falha.  
+ Retorna verdadeiro em caso de êxito, FALSE em caso de falha.  
   
 ##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument  
- Recupera o [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interface no documento atualmente carregados no controle do WebBrowser independente  
+ Recupera o [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interface no documento atualmente carregado no controle WebBrowser independente  
   
 ```  
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;  
@@ -128,7 +128,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  A interface de documento.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  
- Recupera a URL para um documento padrão para carregar no controle do WebBrowser independente.  
+ Recupera a URL para um documento padrão a ser carregado no controle WebBrowser independente.  
   
 ```  
 virtual LPCTSTR GetStartDocument();

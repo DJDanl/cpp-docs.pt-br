@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36b2d78bb3f1ffaefa67a062c6498c195d46336f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ac06722b675af5e8ac8d4136cc2938ac772befc9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042489"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848577"
 ---
 # <a name="cmfcribbonlabel-class"></a>Classe CMFCRibbonLabel
 Implementa um rótulo de texto não clicável para uma faixa de opções.  
@@ -42,7 +42,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Cria e inicializa um `CMFCRibbonLabel` objeto com a cadeia de caracteres de texto especificado.|  
+|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Constrói e inicializa um `CMFCRibbonLabel` objeto com a cadeia de caracteres de texto especificado.|  
 |`CMFCRibbonLabel::~CMFCRibbonLabel`|Destruidor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
@@ -50,8 +50,8 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 |Nome|Descrição|  
 |----------|-----------------|  
 |`CMFCRibbonLabel::CreateObject`|Usado pelo framework para criar uma instância dinâmica desse tipo de classe.|  
-|`CMFCRibbonLabel::GetThisClass`|Usado pelo framework para obter um ponteiro para o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto associado esse tipo de classe.|  
-|[CMFCRibbonLabel::SetACCData](#setaccdata)|Determina os dados de acessibilidade para o elemento de rótulo de faixa de opções atual. (Substitui [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
+|`CMFCRibbonLabel::GetThisClass`|Usado pelo framework para obter um ponteiro para o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está associado com esse tipo de classe.|  
+|[CMFCRibbonLabel::SetACCData](#setaccdata)|Determina os dados de acessibilidade para o elemento de rótulo da faixa de opções atual. (Substitui [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
   
 ### <a name="remarks"></a>Comentários  
  Depois de criar um rótulo de faixa de opções, adicioná-lo a um painel chamando [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
@@ -71,7 +71,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
  **Cabeçalho:** afxRibbonLabel.h  
   
 ##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
- Cria e inicializa um [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) objeto que exibe a cadeia de caracteres de texto especificado.  
+ Constrói e inicializa um [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) objeto que exibe a cadeia de caracteres de texto especificado.  
   
 ```  
 CMFCRibbonLabel(
@@ -84,10 +84,10 @@ CMFCRibbonLabel(
  O texto a ser exibido no rótulo.  
   
  [in] *bIsMultiLine*  
- `TRUE` para especificar que o rótulo é um rótulo de várias linha; Caso contrário, `FALSE`.  
+ TRUE para especificar que o rótulo é um rótulo de várias linha; Caso contrário, FALSE.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
- Determina os dados de acessibilidade para o elemento de rótulo de faixa de opções atual.  
+ Determina os dados de acessibilidade para o elemento de rótulo da faixa de opções atual.  
   
 ```  
 virtual BOOL SetACCData(
@@ -103,9 +103,9 @@ virtual BOOL SetACCData(
  Um objeto do tipo `CAccessibilityData` que é preenchida com os dados de acessibilidade do rótulo da faixa de opções atual.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o *dados* parâmetro estava com êxito preenchida com os dados de acessibilidade do rótulo da faixa de opções atual; caso contrário, `FALSE`.  
+ TRUE se o *dados* parâmetro estava com êxito preenchida com os dados de acessibilidade do rótulo da faixa de opções atual; caso contrário, FALSE.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)

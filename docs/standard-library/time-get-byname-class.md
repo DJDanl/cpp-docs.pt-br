@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c1e7c0992822f8f0a47011a873f99a17b2095d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 43bce47084065e10da418ff652f070f41bb79278
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854448"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955614"
 ---
 # <a name="timegetbyname-class"></a>Classe time_get_byname
 
@@ -50,13 +50,15 @@ protected:
 
 ### <a name="parameters"></a>Parâmetros
 
-`_Locname` Uma localidade nomeada.
+*_Locname*  
+ Uma localidade nomeada.
 
-`_Refs` Uma contagem de referência inicial.
+*_Refs*  
+ Uma contagem de referência inicial.
 
 ## <a name="requirements"></a>Requisitos
 
-Seu comportamento é determinado pela localidade nomeada `_Locname`. Cada construtor inicializa seu objeto base com [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`).
+Seu comportamento é determinado pela localidade nomeada *_Locname*. Cada construtor inicializa seu objeto base com [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`).
 
 ## <a name="requirements"></a>Requisitos
 

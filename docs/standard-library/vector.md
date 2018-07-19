@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fc8fb21afe1f024e4e5418d3cc706f654946de6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e49fcc87c4c074494164a085e01581077bbfe118
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857630"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953856"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -83,13 +83,17 @@ void swap (
 
 ### <a name="parameters"></a>Parâmetros
 
-Digite o parâmetro de modelo para o tipo de dados armazenados no vetor.
+*Tipo*  
+ O parâmetro de modelo do tipo de dados armazenados no vetor.
 
-O parâmetro de modelo para o objeto de alocador armazenado responsável por desalocação e alocação de memória do alocador.
+*Alocador*  
+ O parâmetro de modelo do objeto allocator armazenado responsável pela alocação e desalocação de memória.
 
-`left` O primeiro vetor (à esquerda) em uma operação de comparação
+*left*  
+ O primeiro vetor (à esquerda) em uma operação de comparação
 
-`right` O segundo vetor (à direita) em uma operação de comparação.
+*right*  
+ O segundo vetor (à direita) em uma operação de comparação.
 
 ### <a name="operators"></a>Operadores
 

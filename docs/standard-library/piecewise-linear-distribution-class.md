@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b516478c72e92f63b898cc43aa4838ab72733a05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b475f497509249a29eb466c1a353111661b744e6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858949"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959466"
 ---
 # <a name="piecewiselineardistribution-class"></a>Classe piecewise_linear_distribution
 
@@ -90,7 +90,7 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-`RealType` O ponto flutuante tipo de resultado, o padrão é `double`. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType* o tipo de resultado, o padrão é ponto flutuante **duplo**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -264,7 +264,7 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 *firstW* um iterador de entrada do primeiro elemento no intervalo de pesos.
 
-*intervalos* um [lista_de_inicializadores](../cpp/initializers.md) com os intervalos da distribuição.
+*intervalos* uma [initializer_list](../cpp/initializers.md) com os intervalos da distribuição.
 
 *Contagem de* o número de elementos no intervalo de distribuição.
 
@@ -272,9 +272,9 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 *xMax* o valor mais alto no intervalo de distribuição. Deve ser maior que *xmin*.
 
-*weightfunc* o objeto que representa a função de probabilidade da distribuição. Deve ser possível converter o valor retornado e o parâmetro em `double`.
+*weightfunc* o objeto que representa a função de probabilidade da distribuição. O parâmetro e o valor de retorno devem ser conversíveis em **duplas**.
 
-*parâmetro* a estrutura de parâmetro usada para construir a distribuição.
+*parm* a estrutura de parâmetro usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
@@ -290,7 +290,7 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```
 
-constrói um objeto de distribuição com intervalos de iteradores sobre a sequência [`firstI`, `lastI`) e uma sequência de peso correspondente começando em `firstW`.
+constrói um objeto de distribuição com intervalos de iteradores sobre a sequência [ `firstI`, `lastI`) e uma de peso correspondente começando de sequência *firstW*.
 
 O construtor da lista do inicializador
 
@@ -301,7 +301,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-constrói um objeto de distribuição com intervalos da lista do inicializador `intervals` e pesos gerados da função `weightfunc`.
+constrói um objeto de distribuição com intervalos da lista do inicializador *intervalos* e pesos gerados da função *weightfunc*.
 
 O construtor definido como
 
@@ -314,7 +314,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-constrói um objeto de distribuição com intervalos `count` distribuídos uniformemente por [`xmin,xmax`], atribuindo a cada intervalo pesos de acordo com a função `weightfunc` e `weightfunc` deve aceitar um parâmetro e ter um valor retornado, sendo que ambos podem ser convertidos em `double`. **Pré-condição:**`xmin < xmax`.
+constrói um objeto de distribuição com *contagem* intervalos distribuídos uniformemente por [ `xmin,xmax`], atribuindo a cada intervalo pesos de acordo com a função *weightfunc*, e  *weightfunc* deve aceitar um parâmetro e ter um valor de retorno, sendo que ambos são conversíveis para `double`. **Pré-condição:**`xmin < xmax`.
 
 O construtor definido como
 
@@ -322,7 +322,7 @@ O construtor definido como
 explicit piecewise_linear_distribution(const param_type& parm);
 ```
 
-constrói um objeto de distribuição usando `parm` como estrutura de parâmetro armazenada.
+constrói um objeto de distribuição usando *parm* como a estrutura de parâmetro armazenada.
 
 ## <a name="param_type"></a>  piecewise_linear_distribution::param_type
 

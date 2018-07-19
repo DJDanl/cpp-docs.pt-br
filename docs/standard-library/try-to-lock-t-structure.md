@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a093c42ef5783f5b838b2cdecdc9a70c3b2d56
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1650f3afe243b238b2854d77c2c3736422b809b2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853268"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952915"
 ---
 # <a name="trytolockt-structure"></a>Estrutura try_to_lock_t
 
-Representa uma `struct` que define um objeto [try_to_lock](../standard-library/mutex-functions.md#try_to_lock). Usado para selecionar um dos construtores sobrecarregados de [unique_lock](../standard-library/unique-lock-class.md).
+Representa uma **struct** que define um [try_to_lock](../standard-library/mutex-functions.md#try_to_lock) objeto. Usado para selecionar um dos construtores sobrecarregados de [unique_lock](../standard-library/unique-lock-class.md).
 
 ## <a name="syntax"></a>Sintaxe
 

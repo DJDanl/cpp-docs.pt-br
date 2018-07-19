@@ -52,15 +52,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab3416c0c4e659ce94f7dc4376ea2d7a1fd4c32
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: c2325f95ebcd002c5a80c50316cbbf208052b78b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078020"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851285"
 ---
 # <a name="cptrarray-class"></a>Classe CPtrArray
-Oferece suporte a matrizes de ponteiros void.  
+Dá suporte a matrizes de ponteiros nulos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,7 +69,7 @@ class CPtrArray : public CObject
 ```  
   
 ## <a name="members"></a>Membros  
- As funções de membro de `CPtrArray` são semelhantes às funções de membro da classe [CObArray](../../mfc/reference/cobarray-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CObArray` para obter a função específica de membro. Sempre que você vê um `CObject` ponteiro como um parâmetro de função ou o valor de retorno, substitua um ponteiro para **void**.  
+ As funções membro da `CPtrArray` são semelhantes às funções de membro da classe [CObArray](../../mfc/reference/cobarray-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CObArray` para obter a função específica de membro. Onde quer que você vê uma `CObject` ponteiro como um parâmetro de função ou um valor de retorno, substitua um ponteiro para **void**.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -112,14 +112,14 @@ class CPtrArray : public CObject
 |[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Define ou obtém o elemento no índice especificado.|  
   
 ## <a name="remarks"></a>Comentários  
- `CPtrArray` incorpora o `IMPLEMENT_DYNAMIC` macro para dar suporte ao acesso de tipo de tempo de execução e despejo para um `CDumpContext` objeto. Se você precisar de um despejo de ponteiro individual de elementos da matriz, você deve definir a profundidade do contexto de despejo para 1 ou superior.  
+ `CPtrArray` incorpora a macro IMPLEMENT_DYNAMIC para dar suporte a acesso de tipo de tempo de execução e despejo para um `CDumpContext` objeto. Se você precisar de um despejo de elementos de matriz de ponteiro individual, você deve definir a profundidade do contexto de despejo para 1 ou maior.  
   
 > [!NOTE]
 >  Antes de usar uma matriz, utilize `SetSize` para estabelecer seu tamanho e alocar memória para ela. Se `SetSize` não for utilizado, incluir elementos à matriz fará com que ela seja frequentemente realocada e copiada. Realocações e cópias frequentes são ineficientes e podem fragmentar a memória.  
   
  Matrizes de ponteiro não podem ser serializados.  
   
- Quando uma matriz de ponteiro é excluída, ou quando seus elementos são removidos, somente os ponteiros são removidos, não as entidades que fazem referência.  
+ Quando um ponteiro de matriz é excluído, ou quando seus elementos são removidos, somente os ponteiros são removidos, não as entidades que fazem referência.  
   
  Para obter mais informações sobre como usar `CPtrArray`, consulte o artigo [coleções](../../mfc/collections.md).  
   
@@ -129,9 +129,9 @@ class CPtrArray : public CObject
  `CPtrArray`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxcoll.h  
+ **Cabeçalho:** & amp;lt;1}afxcoll.h  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CObject](../../mfc/reference/cobject-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe CObArray](../../mfc/reference/cobarray-class.md)

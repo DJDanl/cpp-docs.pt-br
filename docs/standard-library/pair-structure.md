@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0be002676860acb4f55d989416114ec23ce809
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ad86773fdc78f3cb8d5219ce14919a035755f3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854425"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955326"
 ---
 # <a name="pair-structure"></a>Estrutura pair
 
@@ -54,25 +54,25 @@ struct pair
 
 ### <a name="parameters"></a>Parâmetros
 
-`Val1` Valor Inicializando o primeiro elemento da `pair`.
+*Val1* valor que inicializa o primeiro elemento da `pair`.
 
-`Val2` Valor Inicializando o segundo elemento do `pair`.
+*Val2* valor que inicializa o segundo elemento da `pair`.
 
-`Right` Um par de cujos valores serão usados para inicializar os elementos de outro par.
+*Direita* um par cujos valores devem ser usados para inicializar os elementos de outro par.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O primeiro construtor (padrão) inicializa o primeiro elemento do par para o padrão do tipo **T1** e o segundo elemento para o padrão do tipo **T2**.
+O primeiro construtor (padrão) inicializa o primeiro elemento do par para o padrão do tipo `T1` e o segundo elemento para o padrão do tipo `T2`.
 
-O segundo construtor inicializa o primeiro elemento do par para `Val1` e o segundo para *Val2.*
+O segundo construtor inicializa o primeiro elemento do par para *Val1* e o segundo para *Val2.*
 
 O terceiro construtor (modelo) inicializa o primeiro elemento do par para `Right`. **primeiro** e segundo para `Right`. **second**.
 
-O quarto construtor inicializa o primeiro elemento do par para `Val1` e o segundo para *Val2* usando o [Declarador de Referência Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+O quarto construtor inicializa o primeiro elemento do par para *Val1* e o segundo para *Val2* usando [Declarador de referência Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="remarks"></a>Comentários
 
-A estrutura de modelo armazena um par de objetos do tipo **T1** e **T2**, respectivamente. O tipo **first_type** é o mesmo que o parâmetro de modelo **T1** e o tipo **second_type** é o mesmo que o parâmetro de modelo **T2**. **T1** e **T2** precisam fornecer apenas um construtor padrão, um construtor de argumento único e um destruidor. Todos os membros do tipo `pair` são públicos, pois o tipo é declarado como um `struct` em vez de como uma **classe**. Os dois usos mais comuns para um par são como tipos de retorno para funções que retornam dois valores e como elementos para as classes de contêiner associativo [Classe map](../standard-library/map-class.md) e [Classe multimap](../standard-library/multimap-class.md) que têm uma chave e um tipo de valor associado a cada elemento. O segundo atende aos requisitos de um contêiner de par associativo e tem um tipo de valor do formulário `pair`< **const**`key_type`, `mapped_type`>.
+O struct de modelo armazena um par de objetos do tipo `T1` e `T2`, respectivamente. O tipo `first_type` é o mesmo que o parâmetro de modelo `T1` e o tipo `second_type` é o mesmo que o parâmetro de modelo `T2`. `T1` e `T2` precisam fornecer apenas um construtor padrão, um construtor de argumento único e um destruidor. Todos os membros do tipo `pair` são públicos, pois o tipo é declarado como um `struct` em vez de como uma **classe**. Os dois usos mais comuns para um par são como tipos de retorno para funções que retornam dois valores e como elementos para as classes de contêiner associativo [Classe map](../standard-library/map-class.md) e [Classe multimap](../standard-library/multimap-class.md) que têm uma chave e um tipo de valor associado a cada elemento. O segundo atende aos requisitos de um contêiner de par associativo e tem um tipo de valor do formulário `pair`< **const**`key_type`, `mapped_type`>.
 
 ## <a name="example"></a>Exemplo
 

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e88eb810c252e4963a5f189d7f90e5aca531cf7
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d8c79981b41bf7b74cb1aa44b98b44e0b5acbc90
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337915"
 ---
 # <a name="cdbvariant-class"></a>Classe CDBVariant
 Representa um tipo de dados variant para as classes MFC ODBC.  
@@ -78,7 +78,7 @@ class CDBVariant
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CDBVariant::m_dwType](#m_dwtype)|Contém o tipo de dados do valor armazenado atualmente. Digite `DWORD` no terminal integrado.|  
+|[CDBVariant::m_dwType](#m_dwtype)|Contém o tipo de dados do valor armazenado no momento. Digite `DWORD` no terminal integrado.|  
   
 ### <a name="public-union-members"></a>Membros públicos de união  
   
@@ -86,7 +86,7 @@ class CDBVariant
 |----------|-----------------|  
 |[CDBVariant::m_boolVal](#m_boolval)|Contém um valor do tipo **BOOL**.|  
 |[CDBVariant::m_chVal](#m_chval)|Contém um valor do tipo **unsigned char**.|  
-|[CDBVariant::m_dblVal](#m_dblval)|Contém um valor do tipo **duplo**.|  
+|[CDBVariant::m_dblVal](#m_dblval)|Contém um valor do tipo **duplas**.|  
 |[CDBVariant::m_fltVal](#m_fltval)|Contém um valor do tipo **float**.|  
 |[CDBVariant::m_iVal](#m_ival)|Contém um valor do tipo **curto**.|  
 |[CDBVariant::m_lVal](#m_lval)|Contém um valor do tipo **longo**.|  
@@ -99,15 +99,15 @@ class CDBVariant
 ## <a name="remarks"></a>Comentários  
  `CDBVariant` não tem uma classe base.  
   
- `CDBVariant` é semelhante a [COleVariant](../../mfc/reference/colevariant-class.md); no entanto, `CDBVariant` não usa OLE. `CDBVariant` permite que você armazene um valor sem se preocupar com o tipo de dados do valor. `CDBVariant` Controla o tipo de dados do valor atual, que é armazenado em uma união.  
+ `CDBVariant` é semelhante à [COleVariant](../../mfc/reference/colevariant-class.md); no entanto, `CDBVariant` não usa o OLE. `CDBVariant` permite que você armazene um valor sem se preocupar sobre o tipo de dados do valor. `CDBVariant` Controla o tipo de dados do valor atual, que é armazenado em uma união.  
   
- Classe [CRecordset](../../mfc/reference/crecordset-class.md) utiliza `CDBVariant` objetos em três funções de membro: `GetFieldValue`, `GetBookmark`, e `SetBookmark`. Por exemplo, `GetFieldValue` permite que você dinamicamente buscar dados em uma coluna. Porque o tipo de dados da coluna não pode ser conhecido em tempo de execução `GetFieldValue` usa um `CDBVariant` objeto para armazenar os dados da coluna.  
+ Classe [CRecordset](../../mfc/reference/crecordset-class.md) utiliza `CDBVariant` objetos em três funções de membro: `GetFieldValue`, `GetBookmark`, e `SetBookmark`. Por exemplo, `GetFieldValue` permite que você busque dinamicamente os dados em uma coluna. Porque o tipo de dados da coluna não pode ser conhecido no tempo de execução `GetFieldValue` usa um `CDBVariant` objeto para armazenar os dados da coluna.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `CDBVariant`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxdb.h  
+ **Cabeçalho:** afxdb. h  
   
 ##  <a name="cdbvariant"></a>  CDBVariant::CDBVariant  
  Cria um valor nulo `CDBVariant` objeto.  
@@ -117,109 +117,109 @@ CDBVariant();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Conjuntos de [m_dwType](#m_dwtype) membro de dados para **DBVT_NULL**.  
+ Define o [m_dwType](#m_dwtype) membro de dados para DBVT_NULL.  
   
 ##  <a name="clear"></a>  CDBVariant::Clear  
- Chamar essa função de membro para limpar o `CDBVariant` objeto.  
+ Chame essa função de membro para limpar o `CDBVariant` objeto.  
   
 ```  
 void Clear();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Se o valor de [m_dwType](#m_dwtype) é membro de dados **DBVT_DATE**, **DBVT_STRING**, ou **DBVT_BINARY**, `Clear` libera a memória associados ao membro de ponteiro de união. `Clear` define `m_dwType` para **DBVT_NULL**.  
+ Se o valor de [m_dwType](#m_dwtype) membro de dados é DBVT_DATE, DBVT_STRING ou DBVT_BINARY, `Clear` libera a memória associada com o membro do ponteiro de união. `Clear` define `m_dwType` para DBVT_NULL.  
   
  O `CDBVariant` chamadas de destruidor `Clear`.  
   
 ##  <a name="m_boolval"></a>  CDBVariant::m_boolVal  
- Armazena um valor do tipo **BOOL**.  
+ Armazena um valor do tipo BOOL.  
   
 ### <a name="remarks"></a>Comentários  
- O **m_boolVal** membro de dados pertence a uma união. Antes de acessar **m_boolVal**, verifique primeiro o valor de [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como **DBVT_BOOL**, em seguida, **m_boolVal** conterá um valor válido; caso contrário, acessando **m_boolVal** produzirá resultados não confiáveis.  
+ O `m_boolVal` membro de dados pertence a uma união. Antes de acessar `m_boolVal`, verifique primeiro o valor da [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como DBVT_BOOL, em seguida, `m_boolVal` conterá um valor válido; caso contrário, acessando `m_boolVal` produzirá resultados não confiáveis.  
   
 ##  <a name="m_chval"></a>  CDBVariant::m_chVal  
- Armazena um valor do tipo `unsigned char`.  
+ Armazena um valor do tipo **unsigned char**.  
   
 ### <a name="remarks"></a>Comentários  
- O **m_chVal** membro de dados pertence a uma união. Antes de acessar **m_chVal**, verifique primeiro o valor de [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como **DBVT_UCHAR**, em seguida, **m_chVal** contém um valor válido; caso contrário, acessando **m_chVal** produzirá resultados não confiáveis.  
+ O `m_chVal` membro de dados pertence a uma união. Antes de acessar `m_chVal`, verifique primeiro o valor da [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como DBVT_UCHAR, em seguida, `m_chVal` contém um valor válido; caso contrário, acessando `m_chVal` produzirá resultados não confiáveis.  
   
 ##  <a name="m_dblval"></a>  CDBVariant::m_dblVal  
- Armazena um valor do tipo **duplo**.  
+ Armazena um valor do tipo **duplas**.  
   
 ### <a name="remarks"></a>Comentários  
- O **m_dblVal** membro de dados pertence a uma união. Antes de acessar **m_dblVal**, verifique primeiro o valor de [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como **DBVT_DOUBLE**, em seguida, **m_dblVal** contém um valor válido; caso contrário, acessando **m_dblVal** produzirá resultados não confiáveis.  
+ O `m_dblVal` membro de dados pertence a uma união. Antes de acessar `m_dblVal`, verifique primeiro o valor da [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como DBVT_DOUBLE, em seguida, `m_dblVal` contém um valor válido; caso contrário, acessando `m_dblVal` produzirá resultados não confiáveis.  
   
 ##  <a name="m_dwtype"></a>  CDBVariant::m_dwType  
- Este membro de dados contém o tipo de dados para o valor que está armazenado atualmente no `CDBVariant` membro de dados de união do objeto.  
+ Este membro de dados contém o tipo de dados para o valor armazenado atualmente no `CDBVariant` membro de união de dados do objeto.  
   
 ### <a name="remarks"></a>Comentários  
- Antes de acessar esta união, você deve verificar o valor de `m_dwType` para determinar qual membro de dados de união deve acessar. A tabela a seguir lista os possíveis valores para `m_dwType` e o membro de dados de união correspondente.  
+ Antes de acessar esta união, você deve verificar o valor de `m_dwType` para determinar qual membro de dados de união para acessar. A tabela a seguir lista os possíveis valores para `m_dwType` e o membro de dados de união correspondente.  
   
 |m_dwType|Membro de dados de união|  
 |---------------|-----------------------|  
-|**DBVT_NULL**|Nenhum membro de união é válido para o acesso.|  
-|**DBVT_BOOL**|[m_boolVal](#m_boolval)|  
-|**DBVT_UCHAR**|[m_chVal](#m_chval)|  
-|**DBVT_SHORT**|[m_iVal](#m_ival)|  
-|**DBVT_LONG**|[m_lVal](#m_lval)|  
-|**DBVT_SINGLE**|[m_fltVal](#m_fltval)|  
-|**DBVT_DOUBLE**|[m_dblVal](#m_dblval)|  
-|**DBVT_DATE**|[m_pdate](#m_pdate)|  
-|**DBVT_STRING**|[m_pstring](#m_pstring)|  
-|**DBVT_BINARY**|[m_pbinary](#m_pbinary)|  
-|**DBVT_ASTRING**|[m_pstringA](#m_pstringa)|  
-|**DBVT_WSTRING**|[m_pstringW](#m_pstringw)|  
+|DBVT_NULL|Nenhum membro de união é válido para o acesso.|  
+|DBVT_BOOL|[m_boolVal](#m_boolval)|  
+|DBVT_UCHAR|[m_chVal](#m_chval)|  
+|DBVT_SHORT|[m_iVal](#m_ival)|  
+|DBVT_LONG|[m_lVal](#m_lval)|  
+|DBVT_SINGLE|[m_fltVal](#m_fltval)|  
+|DBVT_DOUBLE|[m_dblVal](#m_dblval)|  
+|DBVT_DATE|[m_pdate](#m_pdate)|  
+|DBVT_STRING|[m_pstring](#m_pstring)|  
+|DBVT_BINARY|[m_pbinary](#m_pbinary)|  
+|DBVT_ASTRING|[m_pstringA](#m_pstringa)|  
+|DBVT_WSTRING|[m_pstringW](#m_pstringw)|  
   
 ##  <a name="m_fltval"></a>  CDBVariant::m_fltVal  
  Armazena um valor do tipo **float**.  
   
 ### <a name="remarks"></a>Comentários  
- O **m_fltVal** membro de dados pertence a uma união. Antes de acessar **m_fltVal**, verifique primeiro o valor de [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como **DBVT_SINGLE**, em seguida, **m_fltVal** contém um valor válido; caso contrário, acessando **m_fltVal** produzirá resultados não confiáveis.  
+ O `m_fltVal` membro de dados pertence a uma união. Antes de acessar `m_fltVal`, verifique primeiro o valor da [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como DBVT_SINGLE, em seguida, `m_fltVal` contém um valor válido; caso contrário, acessando `m_fltVal` produzirá resultados não confiáveis.  
   
 ##  <a name="m_ival"></a>  CDBVariant::m_iVal  
  Armazena um valor do tipo **curto**.  
   
 ### <a name="remarks"></a>Comentários  
- O **m_iVal** membro de dados pertence a uma união. Antes de acessar **m_iVal**, verifique primeiro o valor de [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como **DBVT_SHORT**, em seguida, **m_iVal** contém um valor válido; caso contrário, acessando **m_iVal** produzirá resultados não confiáveis.  
+ O `m_iVal` membro de dados pertence a uma união. Antes de acessar `m_iVal`, verifique primeiro o valor da [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como DBVT_SHORT, em seguida, `m_iVal` contém um valor válido; caso contrário, acessando `m_iVal` produzirá resultados não confiáveis.  
   
 ##  <a name="m_lval"></a>  CDBVariant::m_lVal  
  Armazena um valor do tipo **longo**.  
   
 ### <a name="remarks"></a>Comentários  
- O **m_lVal** membro de dados pertence a uma união. Antes de acessar **m_lVal**, verifique primeiro o valor de [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como **DBVT_LONG**, em seguida, **m_lVal** contém um valor válido; caso contrário, acessando **m_lVal** produzirá resultados não confiáveis.  
+ O `m_lVal` membro de dados pertence a uma união. Antes de acessar `m_lVal`, verifique primeiro o valor da [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como DBVT_LONG, em seguida, `m_lVal` contém um valor válido; caso contrário, acessando `m_lVal` produzirá resultados não confiáveis.  
   
 ##  <a name="m_pbinary"></a>  CDBVariant::m_pbinary  
  Armazena um ponteiro para um objeto do tipo [CLongBinary](../../mfc/reference/clongbinary-class.md).  
   
 ### <a name="remarks"></a>Comentários  
- O **m_pbinary** membro de dados pertence a uma união. Antes de acessar **m_pbinary**, verifique primeiro o valor de [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como **DBVT_BINARY**, em seguida, **m_pbinary** contém um ponteiro válido; caso contrário, acessando **m_pbinary** produzirá resultados não confiáveis.  
+ O `m_pbinary` membro de dados pertence a uma união. Antes de acessar `m_pbinary`, verifique primeiro o valor da [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como DBVT_BINARY, em seguida, `m_pbinary` contém um ponteiro válido; caso contrário, acessando `m_pbinary` produzirá resultados não confiáveis.  
   
 ##  <a name="m_pdate"></a>  CDBVariant::m_pdate  
- Armazena um ponteiro para um objeto do tipo **TIMESTAMP_STRUCT**.  
+ Armazena um ponteiro para um objeto do tipo TIMESTAMP_STRUCT.  
   
 ### <a name="remarks"></a>Comentários  
- O **m_pdate** membro de dados pertence a uma união. Antes de acessar **m_pdate**, verifique primeiro o valor de [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como **DBVT_DATE**, em seguida, **m_pdate** contém um ponteiro válido; caso contrário, acessando **m_pdate** produzirá resultados não confiáveis.  
+ O `m_pdate` membro de dados pertence a uma união. Antes de acessar `m_pdate`, verifique primeiro o valor da [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como DBVT_DATE, em seguida, `m_pdate` contém um ponteiro válido; caso contrário, acessando `m_pdate` produzirá resultados não confiáveis.  
   
- Para obter mais informações sobre o **TIMESTAMP_STRUCT** tipo de dados, consulte o tópico [tipos de dados C](https://msdn.microsoft.com/library/ms714556.aspx) no Apêndice D do *referência do programador de ODBC* no SDK do Windows.  
+ Para obter mais informações sobre o tipo de dados TIMESTAMP_STRUCT, consulte o tópico [tipos de dados C](https://msdn.microsoft.com/library/ms714556.aspx) no Apêndice D do *referência do programador de ODBC* no SDK do Windows.  
   
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring  
  Armazena um ponteiro para um objeto do tipo [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
   
 ### <a name="remarks"></a>Comentários  
- O **m_pstring** membro de dados pertence a uma união. Antes de acessar **m_pstring**, verifique primeiro o valor de [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como **DBVT_STRING**, em seguida, **m_pstring** contém um ponteiro válido; caso contrário, acessando **m_pstring** produzirá resultados não confiáveis.  
+ O `m_pstring` membro de dados pertence a uma união. Antes de acessar `m_pstring`, verifique primeiro o valor da [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como DBVT_STRING, em seguida, `m_pstring` contém um ponteiro válido; caso contrário, acessando `m_pstring` produzirá resultados não confiáveis.  
   
 ##  <a name="m_pstringa"></a>  CDBVariant::m_pstringA  
  Armazena um ponteiro para um ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto.  
   
 ### <a name="remarks"></a>Comentários  
- O **m_pstringA** membro de dados pertence a uma união. Antes de acessar **m_pstringA**, verifique primeiro o valor de [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como **DBVT_ASTRING**, em seguida, **m_pstringA** contém um ponteiro válido; caso contrário, acessando **m_pstringA** produzirá resultados não confiáveis.  
+ O `m_pstringA` membro de dados pertence a uma união. Antes de acessar `m_pstringA`, verifique primeiro o valor da [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como DBVT_ASTRING, em seguida, `m_pstringA` contém um ponteiro válido; caso contrário, acessando `m_pstringA` produzirá resultados não confiáveis.  
   
 ##  <a name="m_pstringw"></a>  CDBVariant::m_pstringW  
  Armazena um ponteiro para uma ampla [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto.  
   
 ### <a name="remarks"></a>Comentários  
- O **m_pstringW** membro de dados pertence a uma união. Antes de acessar **m_pstringW**, verifique primeiro o valor de [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como **DBVT_WSTRING**, em seguida, **m_pstringW** contém um ponteiro válido; caso contrário, acessando **m_pstringW** produzirá resultados não confiáveis.  
+ O `m_pstringW` membro de dados pertence a uma união. Antes de acessar `m_pstringW`, verifique primeiro o valor da [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como DBVT_WSTRING, em seguida, `m_pstringW` contém um ponteiro válido; caso contrário, acessando `m_pstringW` produzirá resultados não confiáveis.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe CRecordset](../../mfc/reference/crecordset-class.md)

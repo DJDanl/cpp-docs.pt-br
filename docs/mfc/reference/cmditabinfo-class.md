@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b3676db7cedbca1fe831e44c9ff7cf018360adc
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 37522cc2eaaa57abd5c3c7a0986532bb47d73f5e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336449"
 ---
 # <a name="cmditabinfo-class"></a>Classe CMDITabInfo
-O `CMDITabInfo` classe é usada para passar parâmetros para [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) método. Conjunto de membros dessa classe para controlar o comportamento de MDI grupos com guias.  
+O `CMDITabInfo` classe é usada para passar parâmetros para [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) método. Grupos de conjunto de membros dessa classe para controlar o comportamento de MDI com guias.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -73,13 +73,13 @@ class CMDITabInfo
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CMDITabInfo::m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|Especifica se um **fechar** botão é exibido no rótulo da guia ativa.|  
-|[CMDITabInfo::m_bAutoColor](#m_bautocolor)|Especifica se a cor das guias MDI.|  
-|[CMDITabInfo::m_bDocumentMenu](#m_bdocumentmenu)|Especifica se o grupo de guias exibe um menu pop-up que mostra uma lista de documentos abertos ou exibe os botões de rolagem.|  
-|[CMDITabInfo::m_bEnableTabSwap](#m_benabletabswap)|Especifica se o usuário pode trocar as posições das guias arrastando.|  
+|[CMDITabInfo::m_bAutoColor](#m_bautocolor)|Especifica se as guias MDI de cores.|  
+|[CMDITabInfo::m_bDocumentMenu](#m_bdocumentmenu)|Especifica se o grupo de guias exibe um menu pop-up que mostra uma lista de documentos abertos ou exibe botões de rolagem.|  
+|[CMDITabInfo::m_bEnableTabSwap](#m_benabletabswap)|Especifica se o usuário pode trocar as posições das guias, arrastando.|  
 |[CMDITabInfo::m_bFlatFrame](#m_bflatframe)|Especifica se as guias têm um quadro simples.|  
 |[CMDITabInfo::m_bTabCloseButton](#m_btabclosebutton)|Especifica se o rótulo de cada guia exibe uma **fechar** botão.|  
 |[CMDITabInfo::m_bTabCustomTooltips](#m_btabcustomtooltips)|Especifica se as dicas de ferramenta personalizadas estão habilitadas.|  
-|[CMDITabInfo::m_bTabIcons](#m_btabicons)|Especifica se deseja exibir ícones em guias MDI.|  
+|[CMDITabInfo::m_bTabIcons](#m_btabicons)|Especifica se deve exibir ícones nas guias MDI.|  
 |[CMDITabInfo::m_nTabBorderSize](#m_ntabbordersize)|Especifica o tamanho da borda de cada janela de guia.|  
 |[CMDITabInfo::m_style](#m_style)|Especifica o estilo dos rótulos de guia.|  
 |[CMDITabInfo::m_tabLocation](#m_tablocation)|Especifica se os rótulos de guias estão localizados na parte superior ou inferior da página.|  
@@ -88,7 +88,7 @@ class CMDITabInfo
  Essa classe especifica os parâmetros dos grupos de guia MDI que cria a estrutura.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como definir os valores das variáveis de membro de vários em `CMDITabInfo` classe.  
+ O exemplo a seguir demonstra como definir os valores das diversas variáveis de membro em `CMDITabInfo` classe.  
   
  [!code-cpp[NVC_MFC_MDITab#1](../../mfc/reference/codesnippet/cpp/cmditabinfo-class_1.cpp)]  
   
@@ -106,7 +106,7 @@ BOOL m_bActiveTabCloseButton;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Se `TRUE`, o rótulo da guia active exibirá um **fechar** botão. O **fechar** botão será removido do canto superior direito da área da guia. Caso contrário, o rótulo da guia ativa não exibirá um **fechar** botão. O **fechar** botão será exibido no canto superior direito da área da guia.  
+ Se for TRUE, o rótulo da guia Active Directory exibirá um **fechar** botão. O **fechar** botão será removido do canto superior direito da área da guia. Caso contrário, o rótulo da guia Active Directory não exibirá um **fechar** botão. O **fechar** botão será exibido no canto superior direito da área da guia.  
   
 ##  <a name="m_bautocolor"></a>  CMDITabInfo::m_bAutoColor  
  Especifica se cada guia MDI tem sua própria cor.  
@@ -116,7 +116,7 @@ BOOL m_bAutoColor;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Se `TRUE`, cada guia terá sua própria cor. O conjunto de cores é gerenciado pela biblioteca do MFC. Caso contrário, as guias são exibidas em branco. O valor padrão é `FALSE`.  
+ Se for TRUE, cada guia terá sua própria cor. O conjunto de cores é gerenciado pela biblioteca do MFC. Caso contrário, as guias são exibidas em branco. O valor padrão é FALSE.  
   
 ##  <a name="m_bdocumentmenu"></a>  CMDITabInfo::m_bDocumentMenu  
  Especifica se cada guia exibe um menu pop-up que mostra uma lista de documentos abertos na borda direita da área da guia.  
@@ -126,17 +126,17 @@ BOOL m_bDocumentMenu;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Se `TRUE`, o windows de cada guia exibe um menu pop-up que mostra uma lista de documentos abertos na borda direita da área de guia; Caso contrário, a janela de guia exibe botões de rolagem na borda direita da área da guia. O valor padrão é `FALSE`.  
+ Se for TRUE, o windows de cada guia exibe um menu pop-up que mostra uma lista de documentos abertos na borda direita da área da guia; Caso contrário, a janela de guia exibe botões de rolagem na borda direita da área da guia. O valor padrão é FALSE.  
   
 ##  <a name="m_benabletabswap"></a>  CMDITabInfo::m_bEnableTabSwap  
- Especifica se o usuário pode trocar as posições das guias arrastando.  
+ Especifica se o usuário pode trocar as posições das guias, arrastando.  
   
 ```  
 BOOL m_bEnableTabSwap;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Se `TRUE`, o usuário pode alterar as posições de guias arrastando as guias. Caso contrário, o usuário não pode alterar as posições de guias. O valor padrão é `TRUE`.  
+ Se for TRUE, o usuário pode alterar as posições de guias, arrastando as guias. Caso contrário, o usuário não pode alterar as posições de guias. O valor padrão é TRUE.  
   
 ##  <a name="m_bflatframe"></a>  CMDITabInfo::m_bFlatFrame  
  Especifica se cada janela de guia tem um quadro simples.  
@@ -153,27 +153,27 @@ BOOL m_bTabCloseButton;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Se `TRUE`, cada janela de guia exibe o **fechar** botão no canto direito da guia. Caso contrário, o **fechar** botão não é exibido. O valor padrão é `TRUE`.  
+ Se for TRUE, cada janela de guia exibe as **fechar** botão na borda direita da guia. Caso contrário, o **fechar** botão não é exibido. O valor padrão é TRUE.  
   
 ##  <a name="m_btabcustomtooltips"></a>  CMDITabInfo::m_bTabCustomTooltips  
- Especifica se as guias exibem dicas de ferramenta.  
+ Especifica se as guias exibem as dicas de ferramenta.  
   
 ```  
 BOOL m_bTabCustomTooltips;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Se `TRUE`, o aplicativo envia uma `AFX_WM_ON_GET_TAB_TOOLTIP` mensagem para o quadro principal. Você pode manipular esta mensagem usando o `ON_REGISTERED_MESSAGE` macro.  
+ Se for TRUE, o aplicativo envia uma mensagem AFX_WM_ON_GET_TAB_TOOLTIP para o quadro principal. Você pode manipular essa mensagem usando a macro ON_REGISTERED_MESSAGE.  
   
 ##  <a name="m_btabicons"></a>  CMDITabInfo::m_bTabIcons  
- Especifica se deseja exibir ícones em guias MDI.  
+ Especifica se deve exibir ícones nas guias MDI.  
   
 ```  
 BOOL m_bTabIcons;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Se `TRUE`, ícones são exibidos em cada guia MDI. Caso contrário, os ícones não são exibidos nas guias. O valor padrão é `FALSE`.  
+ Se for TRUE, os ícones são exibidos em cada guia MDI. Caso contrário, os ícones não são exibidos nas guias. O valor padrão é FALSE.  
   
 ##  <a name="m_ntabbordersize"></a>  CMDITabInfo::m_nTabBorderSize  
  Especifica o tamanho da borda, em pixels, de cada janela de guia.  
@@ -193,25 +193,25 @@ CMFCTabCtrl::Style m_style
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Especifique um dos seguintes estilos para os rótulos do guia:  
+ Especifique um dos seguintes estilos para os rótulos de guia:  
   
- `STYLE_3D`  
+ STYLE_3D  
  Estilo 3D.  
   
- `STYLE_3D_ONENOTE`  
- Microsoft OneNote estilo.  
+ STYLE_3D_ONENOTE  
+ Estilo do Microsoft OneNote.  
   
- `STYLE_3D_VS2005`  
+ STYLE_3D_VS2005  
  Estilo do Microsoft Visual Studio 2005.  
   
- `STYLE_3D_SCROLLED`  
+ STYLE_3D_SCROLLED  
  Estilo 3D com rótulos de guia do retângulo.  
   
- `STYLE_FLAT_SHARED_HORZ_SCROLL`  
+ STYLE_FLAT_SHARED_HORZ_SCROLL  
  Estilo simples com a barra de rolagem horizontal compartilhado.  
   
- `STYLE_3D_ROUNDED_SCROLL`  
- Estilo 3D com rótulos de guia round.  
+ STYLE_3D_ROUNDED_SCROLL  
+ Estilo 3D com rótulos de guia redonda.  
   
 ##  <a name="m_tablocation"></a>  CMDITabInfo::m_tabLocation  
  Especifica se os rótulos de guias estão localizados na parte superior ou inferior da página.  
@@ -221,14 +221,14 @@ CMFCTabCtrl::Location m_tabLocation;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Se aplicam às guias um dos sinalizadores de local a seguir:  
+ Se aplicam às guias de um dos seguintes sinalizadores de local:  
   
 -   LOCATION_BOTTOM: os rótulos de guias estão localizados na parte inferior da página.  
   
 -   LOCATION_TOP: os rótulos de guias estão localizados na parte superior da página  
   
 ##  <a name="serialize"></a>  CMDITabInfo::Serialize  
- Lê ou grava este objeto a partir de um arquivo ou para um arquivo.  
+ Lê ou grava este objeto de um arquivo ou para um arquivo morto.  
   
 ```  
 void Serialize(CArchive& ar);
@@ -241,5 +241,5 @@ void Serialize(CArchive& ar);
 ## <a name="see-also"></a>Consulte também  
  [Classe CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)   
  [Grupos com guias MDI](../../mfc/mdi-tabbed-groups.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8887c9735b91c43e9dc43140df792841eecef5ed
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 0fedf6ad90af670a462b0ccac23cc599a1a13e26
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336352"
 ---
 # <a name="cdaorelationinfo-structure"></a>Estrutura CDaoRelationInfo
 O `CDaoRelationInfo` estrutura contém informações sobre uma relação definida entre os campos de duas tabelas em um [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objeto.  
@@ -52,24 +52,24 @@ struct CDaoRelationInfo
  Nomeia a tabela primária da relação.  
   
  *m_strForeignTable*  
- Nomes de tabela externa na relação. Uma tabela externa é uma tabela usada para conter chaves estrangeiras. Em geral, você deve usar uma tabela externa para estabelecer ou impor a integridade referencial. A tabela externa normalmente está no lado muitos de uma relação um-para-muitos. Exemplos de tabelas externas incluem tabelas que contêm códigos do American estados ou províncias canadenses ou pedidos de clientes.  
+ Nomes de tabela externa na relação. Uma tabela externa é uma tabela usada para conter chaves estrangeiras. Em geral, você deve usar uma tabela externa para estabelecer ou impor a integridade referencial. A tabela externa normalmente está no lado muitos de uma relação um-para-muitos. Exemplos de tabelas externas incluem tabelas que contêm códigos para o American estados ou províncias canadenses ou pedidos de clientes.  
   
  *m_lAttributes*  
  Contém informações sobre o tipo de relação. O valor desse membro pode ser qualquer um dos seguintes:  
   
-- **dbRelationUnique** relação é um para um.  
+- `dbRelationUnique` Relação é-para-um.  
   
-- **dbRelationDontEnforce** relação não é imposta (não há integridade referencial).  
+- `dbRelationDontEnforce` Relação não é imposta (não há integridade referencial).  
   
-- **dbRelationInherited** relação existe em um banco de dados não-circulantes que contém as duas tabelas anexadas.  
+- `dbRelationInherited` Existe uma relação em um banco de dados não atual que contém as duas tabelas anexadas.  
   
-- **dbRelationLeft** a relação é uma associação à esquerda. Uma junção externa esquerda inclui todos os registros da primeira (à esquerda) de duas tabelas, mesmo se não houver nenhum valores correspondentes para os registros da segunda tabela (direita).  
+- `dbRelationLeft` A relação é uma associação à esquerda. Uma junção externa esquerda inclui todos os registros da primeira (esquerda) de duas tabelas, mesmo se não existem valores correspondentes para registros da segunda tabela (direita).  
   
-- **dbRelationRight** a relação é uma associação à direita. Uma junção externa direita inclui todos os registros da segunda (direita) de duas tabelas, mesmo se não houver nenhum valores correspondentes para os registros da primeira tabela (esquerda).  
+- `dbRelationRight` A relação é a junção à direita. Uma junção externa direita inclui todos os registros da segunda (direita) de duas tabelas, mesmo se não existem valores correspondentes para os registros na primeira tabela (esquerda).  
   
-- **dbRelationUpdateCascade** atualizações ocorrerão em cascata.  
+- `dbRelationUpdateCascade` As atualizações ocorrerão em cascata.  
   
-- **dbRelationDeleteCascade** exclusões ocorrerão em cascata.  
+- `dbRelationDeleteCascade` Exclusões ocorrerão em cascata.  
   
 *m_pFieldInfos*  
  Um ponteiro para uma matriz de [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) estruturas. A matriz contém um objeto para cada campo na relação. O `m_nFields` membro de dados fornece uma contagem dos elementos da matriz.  
@@ -78,11 +78,11 @@ struct CDaoRelationInfo
  O número de `CDaoRelationFieldInfo` objetos no `m_pFieldInfos` membro de dados.  
   
 ## <a name="remarks"></a>Comentários  
- As referências a primária e secundária acima indicam como as informações são retornadas pelo [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) a função de membro na classe `CDaoDatabase`.  
+ As referências a primária e secundária acima indicam como as informações são retornadas pela [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) função de membro na classe `CDaoDatabase`.  
   
- Objetos de relação não são representados por uma classe do MFC. Em vez disso, o objeto DAO subjacente de um objeto MFC a `CDaoDatabase` classe mantém uma coleção de objetos de relação: `CDaoDatabase` fornece funções de membro para acessar alguns itens individuais de informações de relação, ou você podem acessá-los todos de uma vez com um `CDaoRelationInfo` objeto chamando o `GetRelationInfo` a função de membro do objeto de banco de dados que contêm.  
+ Objetos de relação não são representados por uma classe do MFC. Em vez disso, o objeto DAO subjacente de um objeto MFC do `CDaoDatabase` classe mantém uma coleção de objetos de relação: `CDaoDatabase` fontes de funções de membro para acessar alguns itens individuais de informações de relação, ou você podem acessá-los todos de uma vez com um `CDaoRelationInfo` objeto chamando o `GetRelationInfo` a função de membro do objeto recipiente do banco de dados.  
   
- As informações recuperadas pelo [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) função de membro é armazenada em um `CDaoRelationInfo` estrutura. `CDaoRelationInfo` também define uma `Dump` cria a função de membro na depuração. Você pode usar `Dump` para despejar o conteúdo de um `CDaoRelationInfo` objeto.  
+ As informações recuperadas pelo [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) função de membro é armazenada em um `CDaoRelationInfo` estrutura. `CDaoRelationInfo` também define um `Dump` compilações de função de membro na depuração. Você pode usar `Dump` para despejar o conteúdo de um `CDaoRelationInfo` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdao.h  

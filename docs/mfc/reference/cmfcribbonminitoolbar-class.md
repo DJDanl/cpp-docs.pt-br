@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d97e3e993571392893533be220e243b045b81e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041730"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852881"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Classe CMFCRibbonMiniToolBar
-Implementa uma barra de ferramentas contextuais pop-up.  
+Implementa uma barra de ferramentas pop-up contextual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,17 +56,17 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 |Nome|Descrição|  
 |----------|-----------------|  
 |`CMFCRibbonMiniToolBar::CreateObject`|Usado pelo framework para criar uma instância dinâmica desse tipo de classe.|  
-|`CMFCRibbonMiniToolBar::GetThisClass`|Usado pelo framework para obter um ponteiro para o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto associado esse tipo de classe.|  
+|`CMFCRibbonMiniToolBar::GetThisClass`|Usado pelo framework para obter um ponteiro para o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está associado com esse tipo de classe.|  
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||  
 |[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(Substitui `CMFCPopupMenu::IsRibbonMiniToolBar`.)|  
 |[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|Define a lista de comandos a ser exibido na barra de ferramentas.|  
-|[CMFCRibbonMiniToolBar::Show](#show)|A Minibarra de ferramentas exibe as coordenadas de tela especificado.|  
+|[CMFCRibbonMiniToolBar::Show](#show)|Exibe a Minibarra de ferramentas em coordenadas da tela especificadas.|  
 |[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|Exibe a Minibarra de ferramentas junto com um menu de contexto.|  
   
 ## <a name="remarks"></a>Comentários  
- A Minibarra de ferramentas normalmente é exibida depois que o usuário seleciona um objeto em um documento. Por exemplo, após o usuário selecionar um bloco de texto de programa de processamento de uma palavra, o aplicativo exibe uma Minibarra de ferramentas que contém os comandos de formatação de texto.  
+ A Minibarra de ferramentas normalmente é exibida depois que o usuário seleciona um objeto em um documento. Por exemplo, depois que o usuário seleciona um bloco de texto de programa de processamento de uma palavra, o aplicativo exibe uma Minibarra de ferramentas que contém os comandos de formatação de texto.  
   
- A Minibarra de ferramentas se tornará transparente quando o ponteiro do mouse está fora dos limites da Minibarra de ferramentas.  
+ A Minibarra de ferramentas se torna transparente quando o ponteiro do mouse está fora dos limites da Minibarra de ferramentas.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -99,21 +99,21 @@ void SetCommands(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *pRibbonBar*  
- A barra de faixa de opções que pesquisa a Minibarra de ferramentas para os botões a serem exibidos.  
+ A barra de faixa de opções que a Minibarra de ferramentas de pesquisa para os botões Exibir.  
   
  [in] *lstCommands*  
- A lista de comandos a ser exibido na barra de ferramentas mini. Todas as categorias de faixa de opções são pesquisadas para encontrar os botões associados.  
+ A lista de comandos a ser exibido na Minibarra de ferramentas. Todas as categorias de faixa de opções são pesquisadas para localizar os botões associados.  
   
 ### <a name="remarks"></a>Comentários  
- Use esta função para definir a lista de comandos a serem exibidos no Minibarra de ferramentas.  
+ Use essa função para definir a lista de comandos a serem exibidos no Minibarra de ferramentas.  
   
 ### <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar o `SetCommands` método o `CMFCRibbonMiniToolBar` classe. Este trecho de código é parte do [exemplo de demonstração do MS Office 2007](../../visual-cpp-samples.md).  
+ O exemplo a seguir demonstra como usar o `SetCommands` método da `CMFCRibbonMiniToolBar` classe. Este trecho de código faz parte de [amostra de demonstração do MS Office 2007](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
 ##  <a name="show"></a>  CMFCRibbonMiniToolBar::Show  
- A Minibarra de ferramentas exibe as coordenadas de tela especificado.  
+ Exibe a Minibarra de ferramentas em coordenadas da tela especificadas.  
   
 ```  
 BOOL Show(
@@ -123,13 +123,13 @@ BOOL Show(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *x*  
- Especifica a posição horizontal da barra de ferramentas mini em coordenadas da tela.  
+ Especifica a posição horizontal da Minibarra de ferramentas em coordenadas da tela.  
   
  [in] *y*  
- Especifica a posição vertical da barra de ferramentas mini em coordenadas da tela.  
+ Especifica a posição vertical da Minibarra de ferramentas em coordenadas da tela.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se a Minibarra de ferramentas foi exibida com êxito; Caso contrário, `FALSE`.  
+ VERDADEIRO se a Minibarra de ferramentas foi exibido com êxito; Caso contrário, FALSE.  
   
 ##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu  
  Exibe a Minibarra de ferramentas junto com um menu de contexto.  
@@ -153,13 +153,13 @@ BOOL ShowWithContextMenu(
  Especifica a ID de recurso do menu de contexto para exibir.  
   
  [in] *pWndOwner*  
- Identifica a janela que recebe mensagens no menu de contexto.  
+ Identifica a janela que recebe mensagens do menu de contexto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o menu de contexto foi exibido com êxito; Caso contrário, `FALSE`.  
+ VERDADEIRO se o menu de contexto foi exibido com êxito; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- Use esta função para exibir uma Minibarra de ferramentas que tem um menu de contexto. O menu de contexto é posicionadas 15 pixels abaixo a Minibarra de ferramentas.  
+ Use essa função para exibir uma Minibarra de ferramentas que tem um menu de contexto. O menu de contexto é posicionadas 15 pixels abaixo a Minibarra de ferramentas.  
   
 ##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -184,5 +184,5 @@ virtual BOOL IsRibbonMiniToolBar() const;
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)

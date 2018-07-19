@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccf17eb39d71d444db9154fb06991be42c34a70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6bd4a7827ec5223297f3ec3195724b62d4dc72c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857370"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955300"
 ---
 # <a name="subtractwithcarryengine-class"></a>Classe subtract_with_carry_engine
 
@@ -46,13 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parâmetros
 
-`UIntType` O tipo de resultado de inteiro não assinado. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*UIntType*  
+ O tipo de resultado inteiro sem sinal. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
-`W` **Tamanho do Word**. Tamanho de cada palavra da sequência de estado, em bits. **Pré-condição**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*  
+ **Tamanho da palavra**. Tamanho de cada palavra da sequência de estado, em bits. **Pré-condição**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-`S` **Intervalo curto**. Número de valores inteiros. **Pré-condição**: `0 < S < R`
+*S*  
+ **Curto retardo**. Número de valores inteiros. **Pré-condição**: `0 < S < R`
 
-`R` **Tempo de retardo**. Determina a recorrência na série gerada.
+*R*  
+ **Longo retardo**. Determina a recorrência na série gerada.
 
 ## <a name="members"></a>Membros
 
@@ -68,7 +72,7 @@ Para obter mais informações sobre membros do mecanismo, consulte [\<random>](.
 
 A classe de modelo `substract_with_carry_engine` é uma melhoria em relação a [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Nenhum desses mecanismos é tão rápido nem apresenta resultados de qualidade tão altos quanto o [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Esse mecanismo produz valores de um tipo integral sem sinal especificado pelo usuário usando a relação de recorrência (*ponto final*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, em que `cy(i)` terá o valor `1` se `x(i - S) - x(i - R) - cy(i - 1) < 0`; caso contrário, `0` e `M` terão o valor `2`<sup>W</sup>. O estado do mecanismo é um indicador de transferência mais `R` valores. Esses valores são formados pelos últimos valores `R` retornados se `operator()` tiver sido chamado pelo menos `R` vezes; caso contrário, são formados pelos valores `N` que foram retornados e os últimos valores de `R - N` da semente.
+Esse mecanismo produz valores de um tipo integral sem sinal especificado pelo usuário usando a relação de recorrência (*ponto final*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, em que `cy(i)` terá o valor `1` se `x(i - S) - x(i - R) - cy(i - 1) < 0`; caso contrário, `0` e `M` terão o valor `2`<sup>W</sup>. O estado do mecanismo é uma realização indicador de adição *R* valores. Esses valores consistem em último *R* valores retornado se `operator()` tiver sido chamado pelo menos *R* vezes, caso contrário, o `N` valores que foram retornados e o último `R - N` valores de semente.
 
 O argumento de modelo `UIntType` deve ser grande o suficiente para manter valores até `M - 1`.
 

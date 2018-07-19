@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fd2bfdfc2a55dc1723fb72ab8de64a46c3c612f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d20a887c5fa056ef697b087fdaf91b94702d0c0f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846071"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953228"
 ---
 # <a name="bernoullidistribution-class"></a>Classe bernoulli_distribution
 
@@ -80,7 +80,7 @@ public:
 
 ## <a name="remarks"></a>Comentários
 
-A classe descreve uma distribuição que produz valores do tipo `bool`, distribuídos de acordo com a função de probabilidade discreta de distribuição Bernoulli. A tabela a seguir contém links para artigos sobre cada um dos membros.
+A classe descreve uma distribuição que produz valores de tipo **bool**, distribuídos de acordo com a função de probabilidade discreta distribuição Bernoulli. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -178,9 +178,9 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*p* armazenado `p` parâmetro da distribuição.
+*p* armazenado `p` parâmetro de distribuição.
 
-*parâmetro* o `param_type` estrutura usada para construir a distribuição.
+*parm* o `param_type` estrutura usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
@@ -194,13 +194,13 @@ O segundo construtor cria um objeto cujos parâmetros armazenados são inicializ
 
 Contém os parâmetros da distribuição.
 
-struct param_type {typedef bernoulli_distribution distribution_type; param_type (duas vezes p = 0,5); clique duas vezes p() const;
+struct param_type {typedef distribution_type de bernoulli_distribution; param_type (duas vezes p = 0,5); clique duas vezes p() const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Parâmetros
 
-*p* armazenado `p` parâmetro da distribuição.
+*p* armazenado `p` parâmetro de distribuição.
 
 ### <a name="remarks"></a>Comentários
 

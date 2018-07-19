@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff0c41993a450e74b468b747776368bae6ad848
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862868"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957516"
 ---
 # <a name="sharedptr-class"></a>Classe shared_ptr
 
@@ -165,7 +165,7 @@ Vários threads podem ler e gravar simultaneamente objetos `shared_ptr` diferent
 
 |Operador|Descrição|
 |-|-|
-|[bool shared_ptr](#op_bool)|Testa se um recurso possuído existe.|
+|[shared_ptr:: Operator bool](#op_bool)|Testa se um recurso possuído existe.|
 |[shared_ptr::operator*](#op_star)|Obtém o valor designado.|
 |[shared_ptr::operator=](#op_eq)|Substitui o recurso possuído.|
 |[shared_ptr::operator-&gt;](#op_arrow)|Obtém um ponteiro para o valor designado.|
@@ -251,7 +251,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="op_bool"></a>  bool shared_ptr
+## <a name="op_bool"></a>  shared_ptr:: Operator bool
 
 Testa se um recurso possuído existe.
 
@@ -261,7 +261,7 @@ explicit operator bool() const noexcept;
 
 ### <a name="remarks"></a>Comentários
 
-O operador retornará um valor de `true` quando `get() != nullptr`, caso contrário, `false`.
+O operador retorna um valor de **verdadeira** quando `get() != nullptr`; caso contrário, **false**.
 
 ### <a name="example"></a>Exemplo
 
@@ -351,9 +351,9 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Parâmetros
 
-`sp` O ponteiro compartilhado para copiar.
+*SP* o ponteiro compartilhado a ser copiado.
 
-`ap` O ponteiro de automática para copiar.
+*Pacífico Asiático* o ponteiro automático para copiar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -441,11 +441,11 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parâmetros
 
-`ptr` Um `lvalue` referência como um `shared_ptr` ou `weak_ptr`.
+*PTR* uma `lvalue` referência de para um `shared_ptr` ou um `weak_ptr`.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro de modelo retorna true se `*this` é `ordered before` `ptr`.
+A função de membro de modelo retorna true se `*this` está `ordered before` `ptr`.
 
 ## <a name="reset"></a>  shared_ptr::reset
 
@@ -466,17 +466,17 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>Parâmetros
 
-`Other` O tipo controlado pelo ponteiro de argumento.
+*Outros* o tipo controlado pelo ponteiro de argumento.
 
-`D` O tipo de deleter.
+*1!d* o tipo do agente de exclusão.
 
-`ptr` O ponteiro para copiar.
+*PTR* o ponteiro para copiar.
 
-`dtor` Deleter para copiar.
+*dtor* o agente de exclusão a copiar.
 
-`A` O tipo do alocador.
+*Um* o tipo do alocador.
 
-`alloc` O alocador para copiar.
+*alocação* o alocador a copiar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -581,23 +581,23 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>Parâmetros
 
-`Other` O tipo controlado pelo ponteiro de argumento.
+*Outros* o tipo controlado pelo ponteiro de argumento.
 
-`ptr` O ponteiro para copiar.
+*PTR* o ponteiro para copiar.
 
-`D` O tipo de deleter.
+*1!d* o tipo do agente de exclusão.
 
-`A` O tipo do alocador.
+*Um* o tipo do alocador.
 
-`dtor` Deleter.
+*dtor* o agente de exclusão.
 
-`ator` O alocador.
+*ator* o alocador.
 
-`sp` O ponteiro inteligente para copiar.
+*SP* o ponteiro inteligente a copiar.
 
-`wp` O ponteiro fraco.
+*WP* o ponteiro fraco.
 
-`ap` O ponteiro de automática para copiar.
+*Pacífico Asiático* o ponteiro automático para copiar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -722,11 +722,11 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Parâmetros
 
-`sp` O ponteiro compartilhado para troca.
+*SP* o ponteiro compartilhado com o qual trocar.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro deixa o recurso originalmente possuído por `*this` e subsequentemente possuído por `sp` e o recurso originalmente possuído por `sp` subsequentemente possuído por `*this`. A função não altera as contagens de referências dos dois recursos e ela não gera nenhuma exceção.
+A função membro deixa o recurso originalmente possuído por `*this` subsequentemente possuído por *sp*e o recurso originalmente possuído por *sp* subsequentemente possuído por `*this`. A função não altera as contagens de referências dos dois recursos e ela não gera nenhuma exceção.
 
 ### <a name="example"></a>Exemplo
 
@@ -792,7 +792,7 @@ bool unique() const;
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna `true` se nenhum outro objeto `shared_ptr` possui o recurso que pertence a `*this`, caso contrário, `false`.
+A função membro retorna **verdadeira** se nenhuma outra `shared_ptr` objeto possui o recurso que pertence a `*this`, caso contrário **false**.
 
 ### <a name="example"></a>Exemplo
 

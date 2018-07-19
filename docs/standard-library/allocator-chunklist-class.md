@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaa7b01fe4008089cb8a773fc866d62a269ae717
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20e601608b1a6b0f076040c10e027f7dc78db17a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850503"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955352"
 ---
 # <a name="allocatorchunklist-class"></a>Classe allocator_chunklist
 
@@ -40,11 +40,11 @@ class allocator_chunklist;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|`Type`|O tipo dos elementos alocados pelo alocador.|
+|*Tipo*|O tipo dos elementos alocados pelo alocador.|
 
 ## <a name="remarks"></a>Comentários
 
-A macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) passa essa classe como o parâmetro `name` na instrução a seguir: `ALLOCATOR_DECL(CACHE_CHUNKLIST, SYNC_DEFAULT, allocator_chunklist);`
+O [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) macro passa essa classe como o *nome* parâmetro na instrução a seguir: `ALLOCATOR_DECL(CACHE_CHUNKLIST, SYNC_DEFAULT, allocator_chunklist);`
 
 ## <a name="requirements"></a>Requisitos
 

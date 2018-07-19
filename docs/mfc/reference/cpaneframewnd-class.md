@@ -142,17 +142,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c17c81fb39d4397c58b4baba7124de2bda646db7
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 3e25fda2f6d30ea13882ae3b40875fb3d4ec61c7
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079688"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854116"
 ---
 # <a name="cpaneframewnd-class"></a>Classe CPaneFrameWnd
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
- Implementa uma janela do minique quadro contém um painel. O painel preenche a área de cliente da janela.  
+ Implementa uma janela com minimoldura que contém um painel. O painel preenche a área de cliente da janela.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -168,52 +168,52 @@ class CPaneFrameWnd : public CWnd
 |----------|-----------------|  
 |[CPaneFrameWnd::AddPane](#addpane)|Adiciona um painel.|  
 |[CPaneFrameWnd::AddRemovePaneFromGlobalList](#addremovepanefromgloballist)|Adiciona ou remove um painel da lista global.|  
-|[CPaneFrameWnd::AdjustLayout](#adjustlayout)|Ajusta o layout da janela do quadro simplificado.|  
+|[CPaneFrameWnd::AdjustLayout](#adjustlayout)|Ajusta o layout da janela com minimoldura.|  
 |[CPaneFrameWnd::AdjustPaneFrames](#adjustpaneframes)||  
-|[CPaneFrameWnd::CalcBorderSize](#calcbordersize)|Calcula o tamanho das bordas para uma janela do quadro simplificado.|  
+|[CPaneFrameWnd::CalcBorderSize](#calcbordersize)|Calcula o tamanho das bordas para uma janela com minimoldura.|  
 |[CPaneFrameWnd::CalcExpectedDockedRect](#calcexpecteddockedrect)|Calcule o retângulo esperado de uma janela encaixada.|  
-|[CPaneFrameWnd::CanBeAttached](#canbeattached)|Determina se o painel atual pode ser encaixado outra janela do painel ou quadro.|  
-|[CPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|Determina se a janela do minipode quadro ser encaixada em um painel.|  
+|[CPaneFrameWnd::CanBeAttached](#canbeattached)|Determina se o painel atual pode ser encaixado para outra janela do painel ou quadro.|  
+|[CPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|Determina se a janela com minimoldura pode ser encaixada para um painel.|  
 |[CPaneFrameWnd::CheckGripperVisibility](#checkgrippervisibility)||  
 |[CPaneFrameWnd::ConvertToTabbedDocument](#converttotabbeddocument)|Converte o painel em um documento com guias.|  
-|[CPaneFrameWnd::Create](#create)|Cria uma janela do quadro simplificado e anexa-o para o `CPaneFrameWnd` objeto.|  
-|[CPaneFrameWnd::CreateEx](#createex)|Cria uma janela do quadro simplificado e anexa-o para o `CPaneFrameWnd` objeto.|  
+|[CPaneFrameWnd::Create](#create)|Cria uma janela com minimoldura e anexa-o para o `CPaneFrameWnd` objeto.|  
+|[CPaneFrameWnd::CreateEx](#createex)|Cria uma janela com minimoldura e anexa-o para o `CPaneFrameWnd` objeto.|  
 |[CPaneFrameWnd::DockPane](#dockpane)|Encaixa o painel.|  
-|[CPaneFrameWnd::FindFloatingPaneByID](#findfloatingpanebyid)|Localiza um painel com a ID do controle especificado na lista global dos painéis flutuantes.|  
-|[CPaneFrameWnd::FrameFromPoint](#framefrompoint)|Localiza a janela do minique quadro contém um ponto fornecido pelo usuário.|  
-|[CPaneFrameWnd::GetCaptionHeight](#getcaptionheight)|Retorna a altura da legenda da janela do mini quadro.|  
-|[CPaneFrameWnd::GetCaptionRect](#getcaptionrect)|Calcula o retângulo delimitador de uma legenda de janela do quadro simplificado.|  
+|[CPaneFrameWnd::FindFloatingPaneByID](#findfloatingpanebyid)|Localiza um painel com a ID do controle especificado na lista global de painéis flutuantes.|  
+|[CPaneFrameWnd::FrameFromPoint](#framefrompoint)|Localiza a janela com minimoldura que contém um ponto fornecido pelo usuário.|  
+|[CPaneFrameWnd::GetCaptionHeight](#getcaptionheight)|Retorna a altura da legenda de janela com minimoldura.|  
+|[CPaneFrameWnd::GetCaptionRect](#getcaptionrect)|Calcula o retângulo delimitador de uma legenda de janela com minimoldura.|  
 |[CPaneFrameWnd::GetCaptionText](#getcaptiontext)|Retorna o texto da legenda.|  
 |[CPaneFrameWnd::GetDockingManager](#getdockingmanager)||  
 |[CPaneFrameWnd::GetDockingMode](#getdockingmode)|Retorna o modo de encaixe.|  
-|[CPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|Retorna o primeiro painel visível que está contido em uma janela do mini quadro.|  
+|[CPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|Retorna o primeiro painel visível que está contido em uma janela com minimoldura.|  
 |[CPaneFrameWnd::GetHotPoint](#gethotpoint)||  
-|[CPaneFrameWnd::GetPane](#getpane)|Retorna um painel que está contido na janela do quadro simplificado.|  
-|[CPaneFrameWnd::GetPaneCount](#getpanecount)|Retorna o número de painéis que estão contidos em uma janela do quadro simplificado.|  
+|[CPaneFrameWnd::GetPane](#getpane)|Retorna um painel que está contido na janela com minimoldura.|  
+|[CPaneFrameWnd::GetPaneCount](#getpanecount)|Retorna o número de painéis que estão contidos em uma janela com minimoldura.|  
 |[CPaneFrameWnd::GetParent](#getparent)||  
 |[CPaneFrameWnd::GetPinState](#getpinstate)||  
 |[CPaneFrameWnd::GetRecentFloatingRect](#getrecentfloatingrect)||  
-|[CPaneFrameWnd::GetVisiblePaneCount](#getvisiblepanecount)|Retorna o número de painéis visíveis que estão contidos em uma janela do quadro simplificado.|  
-|[CPaneFrameWnd::HitTest](#hittest)|Determina qual parte de uma janela do miniestá quadro em um determinado ponto.|  
+|[CPaneFrameWnd::GetVisiblePaneCount](#getvisiblepanecount)|Retorna o número de painéis visíveis que estão contidos em uma janela com minimoldura.|  
+|[CPaneFrameWnd::HitTest](#hittest)|Determina qual parte de uma janela com minimoldura está em um determinado ponto.|  
 |[CPaneFrameWnd::IsCaptured](#iscaptured)||  
 |[CPaneFrameWnd::IsDelayShow](#isdelayshow)||  
-|[CPaneFrameWnd::IsRollDown](#isrolldown)|Determina se uma janela do minideve quadro ser substituída para baixo.|  
-|[CPaneFrameWnd::IsRollUp](#isrollup)|Determina se uma janela do minideve quadro ser acumulada.|  
-|[CPaneFrameWnd::KillDockingTimer](#killdockingtimer)|Interrompe o timer de encaixe.|  
+|[CPaneFrameWnd::IsRollDown](#isrolldown)|Determina se uma janela com minimoldura deve ser substituída para baixo.|  
+|[CPaneFrameWnd::IsRollUp](#isrollup)|Determina se uma janela com minimoldura deve ser acumulada.|  
+|[CPaneFrameWnd::KillDockingTimer](#killdockingtimer)|Interrompe o temporizador de encaixe.|  
 |[CPaneFrameWnd::LoadState](#loadstate)|Carrega o estado do painel do registro.|  
-|[CPaneFrameWnd::OnBeforeDock](#onbeforedock)|Determina se é possível de encaixe.|  
-|[CPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|Encaixa a janela do quadro mini na sua posição mais recente.|  
-|[CPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|Interrompe o timer de pacote cumulativo de atualizações.|  
-|[CPaneFrameWnd::OnMovePane](#onmovepane)|Move a janela do quadro simplificado por um deslocamento especificado.|  
+|[CPaneFrameWnd::OnBeforeDock](#onbeforedock)|Determina se é possível encaixar.|  
+|[CPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|Encaixa a janela com minimoldura na sua posição mais recente.|  
+|[CPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|Interrompe o temporizador de pacote cumulativo de atualizações.|  
+|[CPaneFrameWnd::OnMovePane](#onmovepane)|Move a janela com minimoldura por um deslocamento especificado.|  
 |[CPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|Ajusta o layout de um painel independente.|  
 |[CPaneFrameWnd::OnSetRollUpTimer](#onsetrolluptimer)|Define o temporizador de pacote cumulativo de atualizações.|  
-|[CPaneFrameWnd::OnShowPane](#onshowpane)|Chamado pelo framework quando um painel na janela do minié quadro ocultado ou exibido.|  
-|[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|Retorna um painel se ele contém um ponto fornecido pelo usuário dentro de uma janela do quadro simplificado.|  
+|[CPaneFrameWnd::OnShowPane](#onshowpane)|Chamado pelo framework quando um painel da janela com minimoldura é ocultado ou exibido.|  
+|[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|Retorna um painel se ele contiver um ponto fornecido pelo usuário dentro de uma janela com minimoldura.|  
 |[CPaneFrameWnd::Pin](#pin)||  
-|`CPaneFrameWnd::PreTranslateMessage`|Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para converter as mensagens de janela antes de serem distribuídos para o [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows.|  
-|[CPaneFrameWnd::RedrawAll](#redrawall)|Redesenha todas as janelas de quadro simplificado.|  
-|[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Chamado pelo framework para remover painéis não válido.|  
-|[CPaneFrameWnd::RemovePane](#removepane)|Remove um painel da janela do quadro simplificado.|  
+|`CPaneFrameWnd::PreTranslateMessage`|Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para converter as mensagens da janela antes de serem expedidas para o [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows.|  
+|[CPaneFrameWnd::RedrawAll](#redrawall)|Redesenha a todas as janelas com minimoldura.|  
+|[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Chamado pelo framework para remover os painéis não válido.|  
+|[CPaneFrameWnd::RemovePane](#removepane)|Remove um painel de janela com minimoldura.|  
 |[CPaneFrameWnd::ReplacePane](#replacepane)|Substitui um painel com outra.|  
 |[CPaneFrameWnd::SaveState](#savestate)|Salva o estado do painel no registro.|  
 |`CPaneFrameWnd::Serialize`|Lê ou grava este objeto de ou para um arquivo morto.|  
@@ -224,8 +224,8 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::SetDockState](#setdockstate)|Define o estado de encaixe.|  
 |[CPaneFrameWnd::SetHotPoint](#sethotpoint)||  
 |[CPaneFrameWnd::SetPreDockState](#setpredockstate)|Chamado pelo framework para definir o estado predocking.|  
-|[CPaneFrameWnd::SizeToContent](#sizetocontent)|Ajusta o tamanho de uma janela do quadro simplificado para que seja equivalente de tamanho para um painel independente.|  
-|[CPaneFrameWnd::StartTearOff](#starttearoff)|Lágrimas um menu.|  
+|[CPaneFrameWnd::SizeToContent](#sizetocontent)|Ajusta o tamanho de uma janela com minimoldura para que ele seja equivalente de tamanho para um painel independente.|  
+|[CPaneFrameWnd::StartTearOff](#starttearoff)|Lágrimas um cardápio.|  
 |[CPaneFrameWnd::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||  
 |[CPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)||  
   
@@ -233,23 +233,23 @@ class CPaneFrameWnd : public CWnd
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CPaneFrameWnd::OnCheckRollState](#oncheckrollstate)|Determina se uma janela do minideve quadro ser substituída para cima ou para baixo.|  
-|[CPaneFrameWnd::OnDrawBorder](#ondrawborder)|Desenha as bordas de uma janela do quadro simplificado.|  
+|[CPaneFrameWnd::OnCheckRollState](#oncheckrollstate)|Determina se uma janela com minimoldura deve ser substituída para cima ou para baixo.|  
+|[CPaneFrameWnd::OnDrawBorder](#ondrawborder)|Desenha as bordas de uma janela com minimoldura.|  
   
 ### <a name="data-members"></a>Membros de Dados  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|Especifica se deve registrar a classe de janela com o `CS_SAVEBITS` estilo de classe.|  
+|[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|Especifica se deve registrar a classe de janela com o estilo de classe CS_SAVEBITS.|  
   
 ## <a name="remarks"></a>Comentários  
- O framework cria automaticamente um `CPaneFrameWnd` quando um painel é alternado do estado encaixado em um estado flutuante do objeto.  
+ O framework cria automaticamente um `CPaneFrameWnd` objeto quando um painel é alternado de um estado de ancoramento para o estado flutuante.  
   
- Uma janela do minipode quadro ser arrastada com seu conteúdo visível (imediata de encaixe) ou usando um retângulo de arrastar (encaixe padrão). O modo de encaixe do painel do contêiner do quadro mini determina que o miniquadro do arrastar o comportamento. Para obter mais informações, consulte [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).  
+ Uma janela com minimoldura pode ser arrastada com seu conteúdo visível (imediata de ancoragem) ou usando um retângulo de arrastar (de encaixe padrão). O modo de encaixe do painel de contêiner do quadro mini determina que o miniquadro do arrastando o comportamento. Para obter mais informações, consulte [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).  
   
- Uma janela do miniexibe quadro botões na legenda de acordo com o estilo de painel independente. Se o painel pode ser fechado ( [CBasePane::CanBeClosed](../../mfc/reference/cbasepane-class.md#canbeclosed)), ele exibe um botão Fechar. Se o painel tem o `AFX_CBRS_AUTO_ROLLUP` estilo, ele exibe um pin.  
+ Uma janela com minimoldura exibe botões na legenda de acordo com o estilo de painel independente. Se o painel pode ser fechado ( [CBasePane::CanBeClosed](../../mfc/reference/cbasepane-class.md#canbeclosed)), ele exibe um botão Fechar. Se o painel tem o estilo AFX_CBRS_AUTO_ROLLUP, ele exibirá um pin.  
   
- Se você derivar uma classe de `CPaneFrameWnd`, você deve informar o framework como criá-la. Crie a classe substituindo [CPane::CreateDefaultMiniframe](../../mfc/reference/cpane-class.md#createdefaultminiframe), ou defina o `CPane::m_pMiniFrameRTC` para que ele aponte para as informações de classe de tempo de execução para a sua classe de membro.  
+ Se você derivar uma classe de `CPaneFrameWnd`, você deve dizer à estrutura como criá-la. Crie a classe, substituindo [CPane::CreateDefaultMiniframe](../../mfc/reference/cpane-class.md#createdefaultminiframe), ou defina o `CPane::m_pMiniFrameRTC` para que ele aponte para as informações de classe de tempo de execução para a sua classe de membro.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -271,7 +271,7 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWnd*  
+ [in] *Apropriei*  
  O painel para adicionar.  
   
 ##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList  
@@ -284,17 +284,17 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWnd*  
+ [in] *Apropriei*  
  O painel para adicionar ou remover.  
   
  [in] *bAdicionar*  
  Se diferente de zero, adicione o painel. Se for 0, remova o painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o método teve êxito; Caso contrário, 0.  
+ Diferente de zero se o método foi bem-sucedida; Caso contrário, 0.  
   
 ##  <a name="adjustlayout"></a>  CPaneFrameWnd::AdjustLayout  
- Ajusta o layout da janela do quadro simplificado.  
+ Ajusta o layout da janela com minimoldura.  
   
 ```  
 virtual void AdjustLayout();
@@ -321,7 +321,7 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
  Contém o tamanho, em pixels, da borda da janela de miniquadros.  
   
 ### <a name="remarks"></a>Comentários  
- Este método é chamado pelo framework para calcular o tamanho da borda de uma janela de miniquadros. O tamanho retornado depende se uma janela de miniquadros contém uma barra de ferramentas ou uma [CDockablePane](../../mfc/reference/cdockablepane-class.md).  
+ Esse método é chamado pelo framework para calcular o tamanho da borda de uma janela de miniquadros. O tamanho retornado depende se uma janela de miniquadros contém uma barra de ferramentas ou uma [CDockablePane](../../mfc/reference/cdockablepane-class.md).  
   
 ##  <a name="calcexpecteddockedrect"></a>  CPaneFrameWnd::CalcExpectedDockedRect  
  Calcule o retângulo esperado de uma janela encaixada.  
@@ -346,26 +346,26 @@ virtual void CalcExpectedDockedRect(
  O retângulo calculado.  
   
  [out] *bDrawTab*  
- Se `TRUE`, desenhar uma guia. Se `FALSE`, não desenhar uma guia.  
+ Se for TRUE, desenhe uma guia. Se for FALSE, não desenhe uma guia.  
   
  [out] *ppTargetBar*  
  Um ponteiro para o painel de destino.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método calcula o retângulo que uma janela poderia ocupar se um usuário arrastar a janela para o ponto especificado por *ptMouse* e encaixado ele existe.  
+ Esse método calcula o retângulo que uma janela deve ocupar se um usuário arrastava a janela para o ponto especificado por *ptMouse* e encaixados-lo lá.  
   
 ##  <a name="canbeattached"></a>  CPaneFrameWnd::CanBeAttached  
- Determina se o painel atual pode ser encaixado outra janela do painel ou quadro.  
+ Determina se o painel atual pode ser encaixado para outra janela do painel ou quadro.  
   
 ```  
 virtual BOOL CanBeAttached() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o painel pode ser encaixado outra janela do painel ou quadro; Caso contrário, `FALSE`.  
+ TRUE se o painel pode ser encaixado para outra janela do painel ou quadro; Caso contrário, FALSE.  
   
 ##  <a name="canbedockedtopane"></a>  CPaneFrameWnd::CanBeDockedToPane  
- Determina se a janela do minipode quadro ser encaixada em um painel.  
+ Determina se a janela com minimoldura pode ser encaixada para um painel.  
   
 ```  
 virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;  
@@ -376,7 +376,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
  Um painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o minipode quadro ser encaixado *pDockingBar*; caso contrário, 0.  
+ Diferente de zero se o minipode quadro de ser encaixado às *pDockingBar*; caso contrário, 0.  
   
 ##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility  
 
@@ -417,16 +417,16 @@ virtual BOOL Create(
  Especifica o tamanho inicial e a posição da janela de miniquadros.  
   
  [in] [out] *pParentWnd*  
- Especifica o quadro pai da janela de miniquadros. Esse valor não deve ser `NULL`.  
+ Especifica o quadro pai da janela de miniquadros. Esse valor não deve ser NULL.  
   
  [in] [out] *pContext*  
  Especifica o contexto definido pelo usuário.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se a janela foi criada com êxito; Caso contrário, `FALSE`.  
+ TRUE se a janela foi criada com êxito; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- Uma janela de miniquadros é criada em duas etapas. Primeiro, o framework cria um `CPaneFrameWnd` objeto. Em segundo lugar, ele chama `Create` para criar a janela de miniquadros do Windows e anexá-lo para o `CPaneFrameWnd` objeto.  
+ Uma janela de miniquadros é criada em duas etapas. Primeiro, o framework cria uma `CPaneFrameWnd` objeto. Em segundo lugar, ele chama `Create` para criar a janela de miniquadros do Windows e anexá-lo para o `CPaneFrameWnd` objeto.  
   
 ##  <a name="createex"></a>  CPaneFrameWnd::CreateEx  
  Cria uma janela de miniquadros e anexa-o para o [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) objeto.  
@@ -455,16 +455,16 @@ virtual BOOL CreateEx(
  Especifica o tamanho inicial e a posição da janela de miniquadros.  
   
  [in] [out] *pParentWnd*  
- Especifica o quadro pai da janela de miniquadros. Esse valor não deve ser `NULL`.  
+ Especifica o quadro pai da janela de miniquadros. Esse valor não deve ser NULL.  
   
  [in] [out] *pContext*  
  Especifica o contexto definido pelo usuário.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se a janela foi criada com êxito; Caso contrário, `FALSE`.  
+ TRUE se a janela foi criada com êxito; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- Uma janela de miniquadros é criada em duas etapas. Primeiro, o framework cria um `CPaneFrameWnd` objeto. Em segundo lugar, ele chama `Create` para criar a janela de miniquadros do Windows e anexá-lo para o `CPaneFrameWnd` objeto.  
+ Uma janela de miniquadros é criada em duas etapas. Primeiro, o framework cria uma `CPaneFrameWnd` objeto. Em segundo lugar, ele chama `Create` para criar a janela de miniquadros do Windows e anexá-lo para o `CPaneFrameWnd` objeto.  
   
 ##  <a name="dockpane"></a>  CPaneFrameWnd::DockPane  
  Encaixa o painel.  
@@ -475,13 +475,13 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
   
 ### <a name="parameters"></a>Parâmetros  
  [out] *bWasDocked*  
- `TRUE` Se o painel já foi encaixado; Caso contrário, `FALSE`.  
+ TRUE se o painel já foi encaixado; Caso contrário, FALSE.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Se a operação foi bem-sucedida, o `CDockablePane` que o painel foi encaixado como; caso contrário, `NULL`.  
+ Se a operação foi bem-sucedida, o `CDockablePane` que o painel foi ancorada à; caso contrário, NULL.  
   
 ##  <a name="findfloatingpanebyid"></a>  CPaneFrameWnd::FindFloatingPaneByID  
- Localiza um painel com a ID do controle especificado na lista global dos painéis flutuantes.  
+ Localiza um painel com a ID do controle especificado na lista global de painéis flutuantes.  
   
 ```  
 static CBasePane* FindFloatingPaneByID(UINT nID);
@@ -492,10 +492,10 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
  Representa a ID de controle do painel para localizar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O painel com a ID do controle especificado; Caso contrário, `NULL`, se nenhum painel tem a ID do controle especificado.  
+ O painel com a ID do controle especificado; Caso contrário, nulo, se nenhum painel tem a ID do controle especificado.  
   
 ##  <a name="framefrompoint"></a>  CPaneFrameWnd::FrameFromPoint  
- Localiza a janela do minique quadro contém o ponto especificado.  
+ Localiza a janela com minimoldura que contém o ponto especificado.  
   
 ```  
 static CPaneFrameWnd* __stdcall FrameFromPoint(
@@ -510,32 +510,32 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
  O ponto em coordenadas da tela.  
   
  [in] *nSensitivity*  
- A área de pesquisa da janela do miniaumente quadro esse tamanho. Uma janela do minisatisfaz quadro os critérios de pesquisa se determinado ponto estiver na área de trabalho maior.  
+ Aumente a área de pesquisa da janela com minimoldura, esse tamanho. Uma janela com minimoldura satisfaz os critérios de pesquisa se o determinado ponto está na área de aumento.  
   
  [in] *pFrameToExclude*  
- Especifica uma janela do minipara quadro excluir da pesquisa.  
+ Especifica uma janela com minimoldura para excluir da pesquisa.  
   
  [in] *bFloatMultiOnly*  
- Se `TRUE`, pesquisar somente janelas com minique moldura têm o `CBRS_FLOAT_MULTI` estilo. Se `FALSE`, pesquisar todas as janelas de quadro simplificado.  
+ Se verdadeiro, pesquise somente o windows com minimoldura que têm o estilo CBRS_FLOAT_MULTI. Se for FALSE, pesquise todas as janelas com minimoldura.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para a janela do minique quadro contém *pt*; caso contrário, `NULL`.  
+ Um ponteiro para a janela com minimoldura que contém *pt*; caso contrário, NULL.  
   
 ##  <a name="getcaptionheight"></a>  CPaneFrameWnd::GetCaptionHeight  
- Retorna a altura da legenda da janela do mini quadro.  
+ Retorna a altura da legenda de janela com minimoldura.  
   
 ```  
 virtual int GetCaptionHeight() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- A altura, em pixels, da janela do quadro simplificado.  
+ A altura, em pixels, da janela com minimoldura.  
   
 ### <a name="remarks"></a>Comentários  
- Chame este método para determinar a altura de uma janela do quadro simplificado. Por padrão, a altura é definida como `SM_CYSMCAPTION`. Para obter mais informações, consulte [função GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385).  
+ Chame esse método para determinar a altura de uma janela com minimoldura. Por padrão, a altura é definida como SM_CYSMCAPTION. Para obter mais informações, consulte [função GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385).  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
- Calcula o retângulo delimitador de uma legenda de janela do quadro simplificado.  
+ Calcula o retângulo delimitador de uma legenda de janela com minimoldura.  
   
 ```  
 virtual void GetCaptionRect(CRect& rectCaption) const;  
@@ -543,10 +543,10 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
   
 ### <a name="parameters"></a>Parâmetros  
  [out] *rectCaption*  
- Contém o tamanho e a posição da legenda da janela do quadro simplificado, em coordenadas da tela.  
+ Contém o tamanho e posição da legenda de janela com minimoldura, em coordenadas da tela.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método é chamado pelo framework para calcular o retângulo delimitador de uma legenda de janela do quadro simplificado.  
+ Esse método é chamado pelo framework para calcular o retângulo delimitador de uma legenda de janela com minimoldura.  
   
 ##  <a name="getcaptiontext"></a>  CPaneFrameWnd::GetCaptionText  
  Retorna o texto da legenda.  
@@ -556,10 +556,10 @@ virtual CString GetCaptionText();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- O texto da legenda da janela do quadro simplificado.  
+ O texto da legenda da janela com minimoldura.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método é chamado pelo framework quando ele exibe o texto da legenda.  
+ Este método é chamado pelo framework quando ele exibe o texto da legenda.  
   
 ##  <a name="getdockingmanager"></a>  CPaneFrameWnd::GetDockingManager  
 
@@ -582,21 +582,21 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 ### <a name="return-value"></a>Valor de retorno  
  O modo de encaixe. Um dos seguintes valores:  
   
-- `DT_STANDARD`  
+- DT_STANDARD  
   
-- `DT_IMMEDIATE`  
+- DT_IMMEDIATE  
   
-- `DT_SMART`  
+- DT_SMART  
   
 ##  <a name="getfirstvisiblepane"></a>  CPaneFrameWnd::GetFirstVisiblePane  
- Retorna o primeiro painel visível que está contido em uma janela do mini quadro.  
+ Retorna o primeiro painel visível que está contido em uma janela com minimoldura.  
   
 ```  
 virtual CWnd* GetFirstVisiblePane() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- O primeiro painel na janela do quadro simplificado, ou `NULL` se a janela do miniquadro não contém nenhum painéis.  
+ O primeiro painel de janela com minimoldura ou nulo se a janela com minimoldura não contém nenhum painéis.  
   
 ##  <a name="gethotpoint"></a>  CPaneFrameWnd::GetHotPoint  
 
@@ -610,26 +610,26 @@ CPoint GetHotPoint() const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="getpane"></a>  CPaneFrameWnd::GetPane  
- Retorna um painel que está contido na janela do quadro simplificado.  
+ Retorna um painel que está contido na janela com minimoldura.  
   
 ```  
 virtual CWnd* GetPane() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- O painel que está contido no quadro simplificado, ou `NULL` se a janela do miniquadro não contém nenhum painéis.  
+ O painel que está contido no quadro mini, ou NULL se a janela com minimoldura não contém nenhum painéis.  
   
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="getpanecount"></a>  CPaneFrameWnd::GetPaneCount  
- Retorna o número de painéis que estão contidos em uma janela do quadro simplificado.  
+ Retorna o número de painéis que estão contidos em uma janela com minimoldura.  
   
 ```  
 virtual int GetPaneCount() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- O número de painéis na janela do quadro simplificado. Esse valor pode ser zero.  
+ O número de painéis da janela com minimoldura. Esse valor pode ser zero.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -667,7 +667,7 @@ CRect GetRecentFloatingRect() const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="getvisiblepanecount"></a>  CPaneFrameWnd::GetVisiblePaneCount  
- Retorna o número de painéis visíveis que estão contidos em uma janela do quadro simplificado.  
+ Retorna o número de painéis visíveis que estão contidos em uma janela com minimoldura.  
   
 ```  
 virtual int GetVisiblePaneCount() const;  
@@ -679,7 +679,7 @@ virtual int GetVisiblePaneCount() const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="hittest"></a>  CPaneFrameWnd::HitTest  
- Determina qual parte de uma janela do miniestá quadro em um determinado ponto.  
+ Determina qual parte de uma janela com minimoldura está em um determinado ponto.  
   
 ```  
 virtual LRESULT HitTest(
@@ -689,27 +689,27 @@ virtual LRESULT HitTest(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *ponto*  
- O ponto de teste.  
+ Ponto a ser testado.  
   
  [in] *bDetectCaption*  
- Se `TRUE`, verifique o ponto em relação a legenda. Se `FALSE`, ignorar a legenda.  
+ Se for TRUE, verifique o ponto em relação a legenda. Se for FALSE, ignore a legenda.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um dos seguintes valores:  
   
 |Valor|Significado|  
 |-----------|-------------|  
-|`HTNOWHERE`|O ponto está fora da janela do quadro simplificado.|  
-|`HTCLIENT`|É o ponto na área do cliente.|  
-|`HTCAPTION`|É o ponto na legenda.|  
-|`HTTOP`|O ponto é na parte superior.|  
-|`HTTOPLEFT`|O ponto é na parte superior esquerda.|  
-|`HTTOPRIGHT`|É o ponto no canto superior direito.|  
-|`HTLEFT`|É o ponto à esquerda.|  
-|`HTRIGHT`|É o ponto à direita.|  
-|`HTBOTTOM`|O ponto é na parte inferior.|  
-|`HTBOTTOMLEFT`|O ponto é na parte inferior esquerda.|  
-|`HTBOTTOMRIGHT`|O ponto é na parte inferior direita.|  
+|HTNOWHERE|O ponto está fora da janela com minimoldura.|  
+|HTCLIENT|É o ponto na área de cliente.|  
+|HTCAPTION|O ponto está na legenda.|  
+|HTTOP|O ponto é na parte superior.|  
+|HTTOPLEFT|O ponto está no canto superior esquerdo.|  
+|HTTOPRIGHT|O ponto está no canto superior direito.|  
+|HTLEFT|É o ponto à esquerda.|  
+|HTRIGHT|É o ponto à direita.|  
+|HTBOTTOM|O ponto está na parte inferior.|  
+|HTBOTTOMLEFT|O ponto está no canto inferior esquerdo.|  
+|HTBOTTOMRIGHT|O ponto está no canto inferior direito.|  
   
 ##  <a name="iscaptured"></a>  CPaneFrameWnd::IsCaptured  
 
@@ -734,37 +734,37 @@ BOOL IsDelayShow() const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="isrolldown"></a>  CPaneFrameWnd::IsRollDown  
- Determina se uma janela do minideve quadro ser substituída para baixo.  
+ Determina se uma janela com minimoldura deve ser substituída para baixo.  
   
 ```  
 virtual BOOL IsRollDown() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se a janela do minideve quadro ser revertida para baixo; Caso contrário, `FALSE`.  
+ TRUE se a janela com minimoldura deve ser revertida para baixo; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- Este método é chamado pelo framework para determinar se uma janela do minideve quadro ser substituída para baixo. O recurso do pacote cumulativo de atualizações/rolldown está habilitado para uma janela do minise quadro ele contém pelo menos um painel que tenha o `AFX_CBRS_AUTO_ROLLUP` sinalizador. Esse sinalizador é definido quando um painel é criado. Para obter mais informações, consulte [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
+ Esse método é chamado pelo framework para determinar se uma janela com minimoldura deve ser substituída para baixo. O recurso de pacote cumulativo de atualizações/rolldown está habilitado para uma janela com minimoldura se ela contiver pelo menos um painel que tem o sinalizador AFX_CBRS_AUTO_ROLLUP. Este sinalizador é definido quando um painel é criado. Para obter mais informações, consulte [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
   
- Por padrão, o framework verifica se o ponteiro do mouse está dentro do retângulo delimitador de janela do minipara quadro determinar se a janela deve ser revertida para baixo. Você pode substituir esse comportamento em uma classe derivada.  
+ Por padrão, a estrutura verifica se o ponteiro do mouse está dentro do retângulo delimitador de janela com minimoldura para determinar se a janela deve ser revertida para baixo. Você pode substituir esse comportamento em uma classe derivada.  
   
 ##  <a name="isrollup"></a>  CPaneFrameWnd::IsRollUp  
- Determina se uma janela do minideve quadro ser acumulada.  
+ Determina se uma janela com minimoldura deve ser acumulada.  
   
 ```  
 virtual BOOL IsRollUp() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se a janela do minideve quadro ser revertida. Caso contrário, `FALSE`.  
+ TRUE se a janela com minimoldura deve ser acumulada; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- Este método é chamado pelo framework para determinar se uma janela do minideve quadro ser acumulada. O recurso do pacote cumulativo de atualizações/rolldown está habilitado para uma janela do minise quadro ele contém pelo menos um painel que tenha o `AFX_CBRS_AUTO_ROLLUP` sinalizador. Esse sinalizador é definido quando um painel é criado. Para obter mais informações, consulte [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
+ Esse método é chamado pelo framework para determinar se uma janela com minimoldura deve ser acumulada. O recurso de pacote cumulativo de atualizações/rolldown está habilitado para uma janela com minimoldura se ela contiver pelo menos um painel que tem o sinalizador AFX_CBRS_AUTO_ROLLUP. Este sinalizador é definido quando um painel é criado. Para obter mais informações, consulte [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
   
- Por padrão, o framework verifica se o ponteiro do mouse está dentro do retângulo delimitador de janela do minipara quadro determinar se a janela tem que ser acumulados. Você pode substituir esse comportamento em uma classe derivada.  
+ Por padrão, a estrutura verifica se o ponteiro do mouse está dentro do retângulo delimitador de janela com minimoldura para determinar se a janela deve ser acumulados. Você pode substituir esse comportamento em uma classe derivada.  
   
 ##  <a name="killdockingtimer"></a>  CPaneFrameWnd::KillDockingTimer  
- Interrompe o timer de encaixe.  
+ Interrompe o temporizador de encaixe.  
   
 ```  
 void KillDockingTimer();
@@ -787,49 +787,49 @@ virtual BOOL LoadState(
  A ID do painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o estado do painel foi carregado com êxito; Caso contrário, `FALSE`.  
+ TRUE se o estado do painel foi carregado com êxito; Caso contrário, FALSE.  
   
 ##  <a name="m_busesavebits"></a>  CPaneFrameWnd::m_bUseSaveBits  
- Especifica se deve registrar a classe de janela que tem o `CS_SAVEBITS` estilo de classe.  
+ Especifica se deve registrar a classe de janela que tem o estilo de classe CS_SAVEBITS.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bUseSaveBits;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Definir este membro estático `TRUE` para registrar a classe de janela do minique quadro tem o `CS_SAVEBITS` estilo. Isso pode ajudar a reduzir a cintilação quando um usuário arrasta a janela do quadro simplificado.  
+ Defina este membro estático para True para registrar a classe de janela com minimoldura que tem o estilo CS_SAVEBITS. Isso pode ajudar a reduzir a cintilação quando um usuário arrasta a janela com minimoldura.  
   
 ##  <a name="onbeforedock"></a>  CPaneFrameWnd::OnBeforeDock  
- Determina se é possível de encaixe.  
+ Determina se é possível encaixar.  
   
 ```  
 virtual BOOL OnBeforeDock();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o encaixe é executado. Caso contrário, `FALSE`.  
+ TRUE se encaixe é possível; Caso contrário, FALSE.  
   
 ##  <a name="oncheckrollstate"></a>  CPaneFrameWnd::OnCheckRollState  
- Determina se uma janela do minideve quadro ser substituída para cima ou para baixo.  
+ Determina se uma janela com minimoldura deve ser substituída para cima ou para baixo.  
   
 ```  
 virtual void OnCheckRollState();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Este método é chamado pelo framework para determinar se uma janela do minideve quadro ser substituída para cima ou para baixo.  
+ Esse método é chamado pelo framework para determinar se uma janela com minimoldura deve ser substituída para cima ou para baixo.  
   
- Por padrão, o framework chama [CPaneFrameWnd::IsRollUp](#isrollup) e [CPaneFrameWnd::IsRollDown](#isrolldown) e apenas se estende ou restaura a janela do quadro simplificado. Você pode substituir esse método em uma classe derivada para usar um efeito visual diferente.  
+ Por padrão, o framework chama [CPaneFrameWnd::IsRollUp](#isrollup) e [CPaneFrameWnd::IsRollDown](#isrolldown) apenas alonga ou restaura a janela com minimoldura. Você pode substituir esse método em uma classe derivada para usar outro efeito visual.  
   
 ##  <a name="ondocktorecentpos"></a>  CPaneFrameWnd::OnDockToRecentPos  
- Encaixa a janela do quadro mini na sua posição mais recente.  
+ Encaixa a janela com minimoldura na sua posição mais recente.  
   
 ```  
 virtual void OnDockToRecentPos();
 ```  
   
 ##  <a name="ondrawborder"></a>  CPaneFrameWnd::OnDrawBorder  
- Desenha as bordas de uma janela do quadro simplificado.  
+ Desenha as bordas de uma janela com minimoldura.  
   
 ```  
 virtual void OnDrawBorder(CDC* pDC);
@@ -840,17 +840,17 @@ virtual void OnDrawBorder(CDC* pDC);
  O contexto de dispositivo usado para desenhar a borda.  
   
 ### <a name="remarks"></a>Comentários  
- Este método é chamado pelo framework para desenhar as bordas da janela do quadro simplificado.  
+ Esse método é chamado pelo framework para desenhar as bordas da janela com minimoldura.  
   
 ##  <a name="onkillrolluptimer"></a>  CPaneFrameWnd::OnKillRollUpTimer  
- Interrompe o timer de pacote cumulativo de atualizações.  
+ Interrompe o temporizador de pacote cumulativo de atualizações.  
   
 ```  
 virtual void OnKillRollUpTimer();
 ```  
   
 ##  <a name="onmovepane"></a>  CPaneFrameWnd::OnMovePane  
- Move a janela do quadro simplificado por um deslocamento especificado.  
+ Move a janela com minimoldura por um deslocamento especificado.  
   
 ```  
 virtual void OnMovePane(
@@ -863,19 +863,19 @@ virtual void OnMovePane(
  Um ponteiro para um painel (ignorado).  
   
  [in] *ptOffset*  
- O deslocamento pela qual mover o painel.  
+ O deslocamento pelo qual mover o painel.  
   
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
- Ajusta o layout de um painel dentro de uma janela do quadro simplificado.  
+ Ajusta o layout de um painel de dentro de uma janela com minimoldura.  
   
 ```  
 virtual void OnPaneRecalcLayout();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O framework chama este método quando ele deve ajustar o layout de um painel dentro da janela do quadro simplificado.  
+ O framework chama esse método quando ele deve ajustar o layout de um painel dentro da janela com minimoldura.  
   
- Por padrão, o painel está posicionado para cobrir a área de cliente completa a minijanela de quadros.  
+ Por padrão, o painel está posicionado para cobrir a área de cliente completa da janela com minimoldura.  
   
 ##  <a name="onsetrolluptimer"></a>  CPaneFrameWnd::OnSetRollUpTimer  
  Define o temporizador de pacote cumulativo de atualizações.  
@@ -885,7 +885,7 @@ virtual void OnSetRollUpTimer();
 ```  
   
 ##  <a name="onshowpane"></a>  CPaneFrameWnd::OnShowPane  
- Chamado pelo framework quando um painel na janela do minié quadro ocultado ou exibido.  
+ Chamado pelo framework quando um painel da janela com minimoldura é ocultado ou exibido.  
   
 ```  
 virtual void OnShowPane(
@@ -898,10 +898,10 @@ virtual void OnShowPane(
  O painel que está sendo mostrado ou oculto.  
   
  [in] *bMostrar*  
- `TRUE` Se o painel está sendo exibido; `FALSE` se o painel está sendo ocultado.  
+ TRUE se o painel está sendo mostrado; FALSE se o painel está sendo ocultado.  
   
 ### <a name="remarks"></a>Comentários  
- Chamado pelo framework quando um painel na janela do quadro mini é mostrado ou oculto. A implementação padrão não fará nada.  
+ Chamado pelo framework quando um painel da janela com minimoldura é mostrado ou oculto. A implementação padrão não faz nada.  
   
 ##  <a name="pin"></a>  CPaneFrameWnd::Pin  
 
@@ -916,7 +916,7 @@ void Pin(BOOL bPin = TRUE);
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="panefrompoint"></a>  CPaneFrameWnd::PaneFromPoint  
- Retorna um painel se ele contém um ponto fornecido pelo usuário dentro de uma janela do quadro simplificado.  
+ Retorna um painel se ele contiver um ponto fornecido pelo usuário dentro de uma janela com minimoldura.  
   
 ```  
 virtual CBasePane* PaneFromPoint(
@@ -933,33 +933,33 @@ virtual CBasePane* PaneFromPoint(
  Este parâmetro não é usado.  
   
  [in] *bCheckVisibility*  
- `TRUE` para especificar que somente os painéis visíveis devem ser retornados; Caso contrário, `FALSE`.  
+ TRUE para especificar que apenas os painéis visíveis devem ser retornados; Caso contrário, FALSE.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O painel que o usuário clicou, ou `NULL` se nenhum painel existe nesse local.  
+ O painel que o usuário clicou ou nulo se nenhum painel existir nesse local.  
   
 ### <a name="remarks"></a>Comentários  
- Chame este método para obter um painel que contém o ponto especificado.  
+ Chame esse método para obter um painel que contém o ponto especificado.  
   
 ##  <a name="redrawall"></a>  CPaneFrameWnd::RedrawAll  
- Redesenha todas as janelas de quadro simplificado.  
+ Redesenha a todas as janelas com minimoldura.  
   
 ```  
 static void RedrawAll();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Este método atualizará todas as janelas de minichamando quadro [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) para cada janela.  
+ Esse método atualiza todas as janelas de minichamando quadro [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) para cada janela.  
   
 ##  <a name="removenonvalidpanes"></a>  CPaneFrameWnd::RemoveNonValidPanes  
- Chamado pelo framework para remover painéis não válido.  
+ Chamado pelo framework para remover os painéis não válido.  
   
 ```  
 virtual void RemoveNonValidPanes();
 ```  
   
 ##  <a name="removepane"></a>  CPaneFrameWnd::RemovePane  
- Remove um painel da janela do quadro simplificado.  
+ Remove um painel de janela com minimoldura.  
   
 ```  
 virtual void RemovePane(
@@ -969,17 +969,17 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWnd*  
- Um ponteiro para o painel para remover.  
+ [in] *Apropriei*  
+ Um ponteiro para o painel a ser removido.  
   
  [in] *bDestroy*  
- Especifica o que acontece com a janela do quadro simplificado. Se *bDestroy* é `TRUE`, este método destrói a janela do mini-quadro imediatamente. Se for `FALSE`, este método destrói a janela do quadro mini após um determinado intervalo.  
+ Especifica o que acontece com a janela com minimoldura. Se *bDestroy* for TRUE, este método destrói a janela com minimoldura imediatamente. Se for FALSE, este método destrói a janela com minimoldura após um certo atraso.  
   
  [in] *bNoDelayedDestroy*  
- Se `TRUE`, atrasada destruição está desabilitada. Se `FALSE`, atrasada destruição está habilitada.  
+ Se for TRUE, a destruição atrasada está desabilitada. Se for FALSE, a destruição atrasada está habilitada.  
   
 ### <a name="remarks"></a>Comentários  
- A estrutura pode destruir janelas com mini-moldura imediatamente ou após um determinado intervalo. Se você deseja atrasar a destruição de janelas com moldura simplificado, passar `FALSE` no *bNoDelayedDestroy* parâmetro. Destruição atrasada ocorre quando o framework processa o `AFX_WM_CHECKEMPTYMINIFRAME` mensagem.  
+ A estrutura pode destruir janelas com mini-moldura imediatamente ou após um certo atraso. Se você deseja atrasar a destruição de janelas com moldura mini, passe FALSE na *bNoDelayedDestroy* parâmetro. A destruição atrasada ocorre quando o framework processa a mensagem AFX_WM_CHECKEMPTYMINIFRAME.  
   
 ##  <a name="replacepane"></a>  CPaneFrameWnd::ReplacePane  
  Substitui um painel com outra.  
@@ -1014,7 +1014,7 @@ virtual BOOL SaveState(
  A ID do painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se o estado do painel foi salvo com êxito; Caso contrário, `FALSE`.  
+ TRUE se o estado do painel foi salvo com êxito; Caso contrário, FALSE.  
   
 ##  <a name="setcaptionbuttons"></a>  CPaneFrameWnd::SetCaptionButtons  
  Conjuntos de botões de legenda.  
@@ -1025,15 +1025,15 @@ virtual void SetCaptionButtons(DWORD dwButtons);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *dwButtons*  
- Combinação de OR bit a bit dos valores a seguir:  
+ Combinação OR bit a bit dos valores a seguir:  
   
-- `AFX_CAPTION_BTN_CLOSE`  
+- AFX_CAPTION_BTN_CLOSE  
   
-- `AFX_CAPTION_BTN_PIN`  
+- AFX_CAPTION_BTN_PIN  
   
-- `AFX_CAPTION_BTN_MENU`  
+- AFX_CAPTION_BTN_MENU  
   
-- `AFX_CAPTION_BTN_CUSTOMIZE`  
+- AFX_CAPTION_BTN_CUSTOMIZE  
   
 ##  <a name="setdelayshow"></a>  CPaneFrameWnd::SetDelayShow  
 
@@ -1107,33 +1107,33 @@ virtual BOOL SetPreDockState(
  [in] *preDockState*  
  Valores possíveis:  
   
-- `PDS_NOTHING`,  
+- PDS_NOTHING,  
   
-- `PDS_DOCK_REGULAR`,  
+- PDS_DOCK_REGULAR,  
   
-- `PDS_DOCK_TO_TAB`  
+- PDS_DOCK_TO_TAB  
   
  [in] *pBarToDock*  
- Um ponteiro para encaixar o painel.  
+ Um ponteiro para o painel de encaixe.  
   
  [in] *dockMethod*  
  O método de encaixe. (Esse parâmetro é ignorado).  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` Se a janela do quadro mini é desencaixada; `FALSE` se ela estiver encaixada.  
+ TRUE se a janela com minimoldura estiver desencaixada; FALSE se ela estiver encaixada.  
   
 ##  <a name="sizetocontent"></a>  CPaneFrameWnd::SizeToContent  
- Ajusta o tamanho de uma janela do quadro simplificado para que é equivalente a um painel independente.  
+ Ajusta o tamanho de uma janela com minimoldura para que ele é equivalente a um painel independente.  
   
 ```  
 virtual void SizeToContent();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Chame esse método para ajustar o tamanho de uma janela do quadro simplificado para o tamanho de um painel independente.  
+ Chame esse método para ajustar o tamanho de uma janela com minimoldura para o tamanho de um painel independente.  
   
 ##  <a name="starttearoff"></a>  CPaneFrameWnd::StartTearOff  
- Lágrimas um menu.  
+ Lágrimas um cardápio.  
   
 ```  
 BOOL StartTearOff(CMFCPopu* pMenu);
@@ -1144,7 +1144,7 @@ BOOL StartTearOff(CMFCPopu* pMenu);
  Um ponteiro para um menu.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `TRUE` se o método foi bem-sucedido; caso contrário, `FALSE`.  
+ TRUE se o método foi bem-sucedida; Caso contrário, FALSE.  
   
 ##  <a name="storerecentdocksiteinfo"></a>  CPaneFrameWnd::StoreRecentDockSiteInfo  
 
@@ -1174,6 +1174,6 @@ virtual void StoreRecentTabRelatedInfo(
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CWnd](../../mfc/reference/cwnd-class.md)

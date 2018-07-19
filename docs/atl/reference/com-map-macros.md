@@ -17,23 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74f8903d81a126a6647bc43018f8422296ddf970
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00c15bf8567456254c8a338ed395a726fcbe8c9b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358417"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879303"
 ---
 # <a name="com-map-macros"></a>Macros de mapa COM
-Essas macros definem mapas de interface COM.  
+Essas macros definem os mapas de interface COM.  
   
 |||  
 |-|-|  
-|[BEGIN_COM_MAP](#begin_com_map)|Marca o início das entradas do mapa de interface COM.|  
-|[END_COM_MAP](#end_com_map)|Marca o fim das entradas do mapa de interface COM.|  
+|[BEGIN_COM_MAP](#begin_com_map)|Marca o início das entradas de mapa de interface COM.|  
+|[END_COM_MAP](#end_com_map)|Marca o fim das entradas de mapa de interface COM.|  
 
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlcom.h  
+ **Cabeçalho:** atlcom  
    
 ##  <a name="begin_com_map"></a>  BEGIN_COM_MAP  
  O mapa COM é o mecanismo que expõe interfaces em um objeto para um cliente por meio de `QueryInterface`.  
@@ -44,14 +44,14 @@ BEGIN_COM_MAP(x)
   
 ### <a name="parameters"></a>Parâmetros  
  *x*  
- [in] O nome do objeto de classe que você está expondo interfaces no.  
+ [in] O nome do objeto da classe em que são expor interfaces.  
   
 ### <a name="remarks"></a>Comentários  
- [CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) retorna apenas os ponteiros para as interfaces no mapa de COM. Iniciar o mapa de interface com o `BEGIN_COM_MAP` macro, adicione entradas para cada uma das suas interfaces com o [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) macro ou uma de suas variantes e conclua o mapa com o [END_COM_MAP](#end_com_map) macro.  
+ [CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) retorna apenas os ponteiros para as interfaces no mapa COM. Inicie seu mapa de interface com a macro BEGIN_COM_MAP, adicione entradas para cada uma das suas interfaces com o [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) macro ou uma de suas variantes e concluir o mapa com as [END_COM_MAP](#end_com_map) macro.  
 
   
 ### <a name="example"></a>Exemplo  
- Da ATL [PAGER](../../visual-cpp-samples.md) exemplo:  
+ Do ATL [PAGER](../../visual-cpp-samples.md) exemplo:  
   
  [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
   

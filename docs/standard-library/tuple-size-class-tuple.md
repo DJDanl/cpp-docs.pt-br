@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7249aad5e130e805aae73bdbfba7f9c4f78ad4fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c03c47502fdd9309b3d6553c3f46f9685d4eaa9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853977"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958260"
 ---
 # <a name="tuplesize-class"></a>Classe tuple_size;
 
@@ -66,23 +66,29 @@ template <class Tuple>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tupla* o tipo de tupla.
+*Tuple*  
+O tipo da tupla.
 
-*Elem* o tipo dos elementos da matriz.
+*Elem*  
+O tipo dos elementos da matriz.
 
-*Tamanho* o tamanho da matriz.
+*Size*  
+O tamanho da matriz.
 
-*T1* o tipo do primeiro membro do par.
+*T1*  
+O tipo do primeiro membro do par.
 
-*T2* o tipo do segundo membro do par.
+*T2*  
+O tipo do segundo membro do par.
 
-*Tipos de* os tipos de elementos de tupla.
+*Tipos*  
+Os tipos dos elementos da tupla.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo tem um membro `value` que é uma expressão constante integral cujo valor é a extensão do tipo de tupla `Tuple`.
+A classe de modelo tem um membro `value` que é uma expressão constante integral cujo valor é a extensão do tipo de tupla *tupla*.
 
-A especialização de modelo para matrizes tem um membro `value` que é uma expressão constante integral cujo valor é `Size`, que é o tamanho da matriz.
+A especialização de modelo para matrizes tem um membro `value` que é uma expressão constante integral cujo valor é *tamanho*, que é o tamanho da matriz.
 
 A especialização de modelo para par tem um membro `value` que é uma expressão constante integral cujo valor é 2.
 
@@ -116,7 +122,7 @@ int main()
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<tupla > **cabeçalho:** \<matriz > (para especialização de matriz) **cabeçalho:** \<utilitário > (para especialização par)
+**Cabeçalho:** \<tuple > **cabeçalho:** \<array > (para especialização de matriz) **cabeçalho:** \<utilitário > (para especialização de par)
 
 **Namespace:** std
 

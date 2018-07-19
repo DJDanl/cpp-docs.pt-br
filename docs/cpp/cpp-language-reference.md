@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25315121d3004601914c5b8872b496e57acec99f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c3886e710d0262068848304d9f2419c835b67c2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417193"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954187"
 ---
 # <a name="c-language-reference"></a>Referência da linguagem C++
-Esta referência explica a linguagem de programação C++ conforme implementada no Microsoft Visual C++. A organização é baseada em *o Manual de referência do C++ anotado* Margaret Ellis e Bjarne Stroustrup e no padrão de internacional do C++ ANSI/ISO (ISO/IEC FDIS 14882). As implementações específicas da Microsoft de recursos da linguagem C++ são incluídas.  
+Esta referência explica a linguagem de programação C++ conforme implementada no Microsoft Visual C++. A organização se baseia *The Annotated C++ Reference Manual* Margaret Ellis e Bjarne Stroustrup e no padrão de internacional de C++ ANSI/ISO (ISO/IEC FDIS 14882). As implementações específicas da Microsoft de recursos da linguagem C++ são incluídas.  
 
-Para obter uma visão geral das práticas de programação C++ moderna, consulte [bem-vindo de volta ao C++](welcome-back-to-cpp-modern-cpp.md).
+Para uma visão geral das práticas de programação do C++ moderno, consulte [bem-vindo de volta ao C++](welcome-back-to-cpp-modern-cpp.md).
   
  Consulte as tabelas a seguir para localizar rapidamente uma palavra-chave ou um operador:  
   
@@ -46,7 +46,7 @@ Para obter uma visão geral das práticas de programação C++ moderna, consulte
  [Conversões padrão](../cpp/standard-conversions.md)  
  Conversões de tipo entre tipos internos ou "fundamentais". Além disso, conversões aritméticas e conversões entre ponteiro, referência e tipos de ponteiro a membro.  
   
- [Operadores, a precedência e a capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
+ [Operadores, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
  Os operadores em C++.  
   
  [Expressões](../cpp/expressions-cpp.md)  
@@ -61,26 +61,23 @@ Para obter uma visão geral das práticas de programação C++ moderna, consulte
  [Declarações e definições](declarations-and-definitions-cpp.md)  
  Especificadores de classe de armazenamento, definições de função, inicializações, enumerações, classe, struct e declarações de união e typedef. Além disso, funções embutidas, palavra-chave const, namespaces.  
   
- [Declaradores](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)  
- A parte de uma instrução de declaração que nomeia um objeto, um tipo ou uma função. Declaradores abstratos, nomes de tipo, inicializadores, declarações de função e definições, matrizes, referências.  
-  
  [Classes, estruturas e uniões](../cpp/classes-and-structs-cpp.md)  
- Introdução a classes, estruturas e uniões. Além disso, funções de membro, funções de membro especiais, membros de dados, campos de bits, esse ponteiro, classes aninhadas.  
+ Introdução a classes, estruturas e uniões. Além disso, funções de membro, funções de membro especial, os membros de dados, campos de bits, esse ponteiro, classes aninhadas.  
   
  [Classes derivadas](../cpp/inheritance-cpp.md)  
- Herança única e múltipla, funções virtuais, várias classes base, classes abstratas e regras de escopo. Além disso, a super e \_interface palavras-chave.  
+ Herança única e múltipla, funções virtuais, várias classes base, classes abstratas e regras de escopo. Além disso, o Super e \_interface as palavras-chave.  
   
  [Controle de acesso de membro](../cpp/member-access-control-cpp.md)  
  Controle de acesso a membros de classe: palavras-chave public, private e protected Funções e classes amigas.  
   
  [Sobrecarga](operator-overloading.md)  
- Operadores sobrecarregados, regras de sobrecarga de operador.  
+ Operadores sobrecarregados, regras para sobrecarga de operador.  
   
  [Tratamento de Exceção](../cpp/exception-handling-in-visual-cpp.md)  
  Tratamento de exceções C++, SEH (manipulação de exceção estruturada), palavras-chave usadas na escrita de instruções de tratamento de exceções.  
   
  [Asserção e mensagens fornecidas pelo usuário](../cpp/assertion-and-user-supplied-messages-cpp.md)  
- Diretiva `#error`, palavra-chave `static_assert`, macro `assert`.  
+ `#error` diretiva, o **static_assert** palavra-chave, o `assert` macro.  
   
  [Modelos](../cpp/templates-cpp.md)  
  Especificações de modelo, modelos de função, modelos de classe, palavra-chave typename, modelos versus macros, modelos e ponteiros inteligentes.  
@@ -89,7 +86,7 @@ Para obter uma visão geral das práticas de programação C++ moderna, consulte
  Eventos de declaração e manipuladores de eventos.  
   
  [Modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md)  
- Modificadores específicos do Microsoft C++. Memória de endereçamento, chamar convenções, funções naked, atributos de classe de armazenamento ( declspec) estendidos \__w64.  
+ Modificadores específicos do Microsoft C++. Memória de endereçamento, convenções de chamada, as funções naked, atributos de classe de armazenamento ( declspec), estendidos \__w64.  
   
  [Assembler embutido](../assembler/inline/inline-assembler.md)  
  Usando a linguagem assembly e C++ em blocos __asm.  

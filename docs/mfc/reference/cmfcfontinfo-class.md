@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27858b6dad2744965e85bcd8287ba62cbf5b60c0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 23ff2d857938881f1c3d9f02a1d8465a5a4e97c7
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038586"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852406"
 ---
 # <a name="cmfcfontinfo-class"></a>Classe CMFCFontInfo
 O `CMFCFontInfo` classe descreve o nome e outros atributos de uma fonte.  
@@ -69,10 +69,10 @@ class CMFCFontInfo : public CObject
 |[CMFCFontInfo::m_strScript](#m_strscript)|O nome de um conjunto de caracteres (script) associado com a fonte.|  
   
 ## <a name="remarks"></a>Comentários  
- Você pode anexar um `CMFCFontInfo` objeto para um item do [CMFCToolBarFontComboBox classe](../../mfc/reference/cmfctoolbarfontcombobox-class.md) classe. Chamar o [CMFCToolBarFontComboBox::GetFontDesc](../../mfc/reference/cmfctoolbarfontcombobox-class.md#getfontdesc) método para recuperar um ponteiro para um `CMFCFontInfo` objeto.  
+ Você pode anexar um `CMFCFontInfo` objeto a um item do [classe CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) classe. Chame o [CMFCToolBarFontComboBox::GetFontDesc](../../mfc/reference/cmfctoolbarfontcombobox-class.md#getfontdesc) método para recuperar um ponteiro para um `CMFCFontInfo` objeto.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar vários membros do `CMFCFontInfo` classe. O exemplo demonstra como obter um `CMFCFontInfo` de objeto um `CMFCRibbonFontComboBox`e como acessar suas variáveis locais. Este exemplo é parte do [exemplo de demonstração de 2007 MSOffice](../../visual-cpp-samples.md).  
+ O exemplo a seguir demonstra como usar vários membros do `CMFCFontInfo` classe. O exemplo demonstra como obter um `CMFCFontInfo` do objeto de um `CMFCRibbonFontComboBox`e como acessar suas variáveis locais. Este exemplo é parte do [amostra de demonstração de 2007 MSOffice](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#6](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]  
   
@@ -95,27 +95,27 @@ CMFCFontInfo(const CMFCFontInfo& src);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *lpszName*  
- O nome da fonte. Para obter mais informações, consulte o `lfFaceName` membro o [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estrutura.  
+ O nome da fonte. Para obter mais informações, consulte o `lfFaceName` membro a [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estrutura.  
   
  [in] *lpszScript*  
  O nome do script (conjunto de caracteres) da fonte.  
   
  [in] *nCharSet*  
- Um valor que especifica o conjunto de caracteres (script) da fonte. Para obter mais informações, consulte o `lfCharSet` membro o [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estrutura.  
+ Um valor que especifica o conjunto de caracteres (script) da fonte. Para obter mais informações, consulte o `lfCharSet` membro a [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estrutura.  
   
  [in] *nPitchAndFamily*  
- Um valor que especifica a densidade e a família da fonte. Para obter mais informações, consulte o `lfPitchAndFamily` membro o [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estrutura.  
+ Um valor que especifica a densidade e a família da fonte. Para obter mais informações, consulte o `lfPitchAndFamily` membro a [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estrutura.  
   
  [in] *nType*  
- Um valor que especifica o tipo de fonte. Esse parâmetro pode ser uma combinação bit a bit (ou) de DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE.  
+ Um valor que especifica o tipo de fonte. Esse parâmetro pode ser uma combinação bit a bit (OR) de DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE.  
   
  [in] *src*  
- Um existente `CMFCFontInfo` objeto cujos membros são usados para construir esse `CMFCFontInfo` objeto.  
+ Um existente `CMFCFontInfo` objeto cujos membros são usados para construir este `CMFCFontInfo` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
   
 ### <a name="remarks"></a>Comentários  
- Esta documentação usa os termos *do conjunto de caracteres* e *script* alternadamente. Um *script*, que é também conhecido como um sistema de escrita, é uma coleção de regras para gravar esses caracteres em um ou mais idiomas e caracteres. O conjunto de caracteres inclui o alfabeto e pontuação usados no script. Por exemplo, scripts latinos é usado para inglês como ela é falada nos Estados Unidos e seu alfabeto inclui os caracteres de À Z. O `lfCharSet` membro o [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estrutura Especifica um conjunto de caracteres. Por exemplo, o valor `ANSI_CHARSET` Especifica o [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] conjunto de caracteres, que inclui o alfabeto de script latino.  
+ Esta documentação usa os termos *conjunto de caracteres* e *script* alternadamente. Um *script*, que é também conhecido como um sistema de escrita, é uma coleção de regras para escrever esses caracteres em um ou mais idiomas e caracteres. A coleção de caracteres inclui o alfabeto e pontuação usados no script. Por exemplo, o script latino é usado para inglês conforme ele é falado nos Estados Unidos, e seu alfabeto inclui os caracteres de À Z. O `lfCharSet` membro a [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estrutura Especifica um conjunto de caracteres. Por exemplo, o valor ANSI_CHARSET Especifica o [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] conjunto de caracteres, que inclui o alfabeto de script latino.  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  Recupera os nomes concatenados de uma fonte e seu caractere de conjunto (script).  
@@ -128,7 +128,7 @@ CString GetFullName() const;
  Uma cadeia de caracteres que contém o nome da fonte e o script.  
   
 ### <a name="remarks"></a>Comentários  
- Use esse método para obter o nome completo da fonte. Por exemplo, se o nome da fonte é `Arial` e o script da fonte é `Cyrillic`, esse método retorna "Arial (cirílico)".  
+ Use esse método para obter o nome completo da fonte. Por exemplo, se for o nome da fonte **Arial** e é o script da fonte **cirílico**, esse método retorna "Arial (cirílico)".  
   
 ##  <a name="m_ncharset"></a>  CMFCFontInfo::m_nCharSet  
  Um valor que especifica o conjunto de caracteres (script) associado com a fonte.  
@@ -138,17 +138,17 @@ const BYTE m_nCharSet;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações, consulte o *nCharSet* parâmetro o [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) construtor.  
+ Para obter mais informações, consulte o *nCharSet* parâmetro do [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) construtor.  
   
 ##  <a name="m_npitchandfamily"></a>  CMFCFontInfo::m_nPitchAndFamily  
- Um valor que especifica a densidade (tamanho de ponto) e (por exemplo, serif, sans-serif e monospace) família da fonte.  
+ Um valor que especifica a densidade (tamanho de ponto) e a família (por exemplo, serif, sans-serif e com espaçamento uniforme) da fonte.  
   
 ```  
 const BYTE m_nPitchAndFamily;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações, consulte o *nPitchAndFamily* parâmetro o [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) construtor.  
+ Para obter mais informações, consulte o *nPitchAndFamily* parâmetro do [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) construtor.  
   
 ##  <a name="m_ntype"></a>  CMFCFontInfo::m_nType  
  Um valor que especifica o tipo da fonte.  
@@ -158,7 +158,7 @@ const int m_nType;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações, consulte o *nType* parâmetro o [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) construtor.  
+ Para obter mais informações, consulte o *nType* parâmetro do [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) construtor.  
   
 ##  <a name="m_strname"></a>  CMFCFontInfo::m_strName  
  O nome da fonte: por exemplo, **Arial**.  
@@ -168,7 +168,7 @@ const CString m_strName;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações, consulte o *lpszName* parâmetro o [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) construtor.  
+ Para obter mais informações, consulte o *lpszName* parâmetro do [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) construtor.  
   
 ##  <a name="m_strscript"></a>  CMFCFontInfo::m_strScript  
  O nome de um conjunto de caracteres (script) associado com a fonte.  
@@ -178,10 +178,10 @@ const CString m_strScript;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações, consulte o *lpszScript* parâmetro o [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) construtor.  
+ Para obter mais informações, consulte o *lpszScript* parâmetro do [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) construtor.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)   
  [Classe CMFCToolBarFontSizeComboBox](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)

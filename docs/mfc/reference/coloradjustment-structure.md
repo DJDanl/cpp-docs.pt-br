@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb4cba5ef2eafa27a26c945f8754eb1a0ab0315
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 03c5346a59ea52ca6b2428652d5da69aacf6ea5b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37077949"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849079"
 ---
 # <a name="coloradjustment-structure"></a>Estrutura COLORADJUSTMENT
-O `COLORADJUSTMENT` estrutura define os valores de ajuste de cor usados pelo Windows `StretchBlt` e `StretchDIBits` funções quando o `StretchBlt` modo é **meio tom**.  
+O `COLORADJUSTMENT` estrutura define os valores de ajuste de cor usados pelo Windows `StretchBlt` e `StretchDIBits` funções quando o `StretchBlt` modo é o meio-tom.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,67 +50,67 @@ typedef struct  tagCOLORADJUSTMENT {    /* ca */
  Especifica o tamanho da estrutura em bytes.  
   
  *caFlags*  
- Especifica como a imagem de saída deve ser preparada. Esse membro pode ser definido como **nulo** ou qualquer combinação dos valores a seguir:  
+ Especifica como a imagem de saída deve ser preparada. Esse membro pode ser definido como nulo ou qualquer combinação dos valores a seguir:  
   
-- **CA_NEGATIVE** Especifica que o negativo da imagem original deve ser exibido.  
+- CA_NEGATIVE Especifica que o negativo da imagem original deve ser exibido.  
   
-- **CA_LOG_FILTER** Especifica que uma função logarítmica deve ser aplicada para a densidade final das cores de saída. Isso aumentará o contraste de cor quando a luminosidade é baixa.  
+- CA_LOG_FILTER Especifica que uma função logarítmica deve ser aplicada a densidade final das cores de saída. Isso aumentará o contraste de cores quando a luminosidade é baixa.  
   
  *caIlluminantIndex*  
- Especifica a luminosidade da fonte de luz sob a qual o objeto de imagem é exibido. Esse membro pode ser definido como um dos valores a seguir:  
+ Especifica a luminosidade da fonte de luz sob a qual o objeto de imagem é exibido. Esse membro pode ser definido como um dos seguintes valores:  
   
-- **ILLUMINANT_EQUAL_ENERGY**  
+- ILLUMINANT_EQUAL_ENERGY  
   
-- **ILLUMINANT_A**  
+- ILLUMINANT_A  
   
-- **ILLUMINANT_B**  
+- ILLUMINANT_B  
   
-- **ILLUMINANT_C**  
+- ILLUMINANT_C  
   
-- **ILLUMINANT_D50**  
+- ILLUMINANT_D50  
   
-- **ILLUMINANT_D55**  
+- ILLUMINANT_D55  
   
-- **ILLUMINANT_D65**  
+- ILLUMINANT_D65  
   
-- **ILLUMINANT_D75**  
+- ILLUMINANT_D75  
   
-- **ILLUMINANT_F2**  
+- ILLUMINANT_F2  
   
-- **ILLUMINANT_TURNGSTEN**  
+- ILLUMINANT_TURNGSTEN  
   
-- **ILLUMINANT_DAYLIGHT**  
+- ILLUMINANT_DAYLIGHT  
   
-- **ILLUMINANT_FLUORESCENT**  
+- ILLUMINANT_FLUORESCENT  
   
-- **ILLUMINANT_NTSC**  
+- ILLUMINANT_NTSC  
   
  *caRedGamma*  
- Especifica o valor de correção gama enésimo energia para o primário vermelho das cores do código-fonte. O valor deve ser no intervalo de 2.500 a 65.000. Um valor de 10.000 não significa nenhuma correção gama.  
+ Especifica o valor de correção gama enésimo energia para o primário vermelho das cores do código-fonte. O valor deve estar no intervalo entre 2.500 e 65.000. Um valor de 10.000 não significa nenhuma correção gama.  
   
  *caGreenGamma*  
- Especifica o valor de correção gama power enésimo para verde primário das cores do código-fonte. O valor deve ser no intervalo de 2.500 a 65.000. Um valor de 10.000 não significa nenhuma correção gama.  
+ Especifica o valor de correção gama enésimo energia para o primário verde das cores do código-fonte. O valor deve estar no intervalo entre 2.500 e 65.000. Um valor de 10.000 não significa nenhuma correção gama.  
   
  *caBlueGamma*  
- Especifica o valor de correção gama enésimo energia para o primário azul das cores do código-fonte. O valor deve ser no intervalo de 2.500 a 65.000. Um valor de 10.000 não significa nenhuma correção gama.  
+ Especifica o valor de correção gama enésimo energia para a cor azul primária das cores do código-fonte. O valor deve estar no intervalo entre 2.500 e 65.000. Um valor de 10.000 não significa nenhuma correção gama.  
   
  *caReferenceBlack*  
- Especifica a referência preta para as cores de fonte. As cores mais escuras que isso são tratadas como preto. O valor deve estar no intervalo de 0 a 4.000.  
+ Especifica a referência de preta para as cores de origem. Todas as cores mais escuras que isso são tratadas como preto. O valor deve estar no intervalo de 0 a 4.000.  
   
  *caReferenceWhite*  
- Especifica a referência de branca para as cores de fonte. As cores mais claras que isso são tratadas como branco. O valor deve ser no intervalo de 6.000 a 10.000.  
+ Especifica a referência de branca para as cores de origem. Todas as cores mais claras que isso são tratadas como em branco. O valor deve estar no intervalo de 6.000 a 10.000.  
   
  *caContrast*  
- Especifica a quantidade de contraste a ser aplicado ao objeto de origem. O valor deve ser no intervalo de 100 a 100. Um valor de 0 não significa que nenhum ajuste de contraste.  
+ Especifica a quantidade de contraste a ser aplicado ao objeto de origem. O valor deve estar no intervalo entre -100 e 100. Um valor de 0 significa que nenhum ajuste de contraste.  
   
  *caBrightness*  
- Especifica o valor de brilho a ser aplicado ao objeto de origem. O valor deve ser no intervalo de 100 a 100. Um valor de 0 não significa que nenhum ajuste de brilho.  
+ Especifica a quantidade de brilho a ser aplicado ao objeto de origem. O valor deve estar no intervalo entre -100 e 100. Um valor de 0 significa que nenhum ajuste de brilho.  
   
  *caColorfulness*  
- Especifica a quantidade de colorfulness a ser aplicado ao objeto de origem. O valor deve ser no intervalo de 100 a 100. Um valor de 0 não significa que nenhum ajuste de colorfulness.  
+ Especifica a quantidade de colorfulness a ser aplicado ao objeto de origem. O valor deve estar no intervalo entre -100 e 100. Um valor de 0 significa que nenhum ajuste colorfulness.  
   
  *caRedGreenTint*  
- Especifica a quantidade de ajuste de tom de vermelho ou verde a ser aplicado ao objeto de origem. O valor deve ser no intervalo de 100 a 100. Números positivos deve ajustar para vermelho e ajuste os números negativos para verde. 0 não significa que nenhum ajuste de tom.  
+ Especifica a quantidade de ajuste de tom de vermelho ou verde a ser aplicado ao objeto de origem. O valor deve estar no intervalo entre -100 e 100. Números positivos seriam ajustado para vermelho e ajuste os números negativos para verde. 0 significa que nenhum ajuste de tonalidade.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** wingdi  

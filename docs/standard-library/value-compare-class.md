@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594f3aaa45638ff2ab5d184a771070d87dbeb0bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f46153400744b4a6d0350b97fa7158ea9f69c34
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856577"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957102"
 ---
 # <a name="valuecompare-class"></a>Classe value_compare
 
@@ -49,7 +49,7 @@ protected:
 
 ## <a name="remarks"></a>Comentários
 
-Os critérios de comparação fornecidos por value_compare entre **value_types** de elementos inteiros contidos por um hash_map são induzidos de uma comparação entre as chaves dos respectivos elementos pela construção da classe auxiliar. O operador da função membro usa o objeto **comp** do tipo `key_compare` armazenado no objeto da função fornecido por value_compare para comparar os componentes da chave de classificação de dois elementos.
+Os critérios de comparação fornecidos por value_compare entre `value_types` de elementos inteiros contidos por um hash_map são induzidos de uma comparação entre as chaves dos respectivos elementos pela construção da classe auxiliar. O operador da função membro usa o objeto `comp` do tipo `key_compare` armazenado no objeto de função fornecido por value_compare para comparar os componentes da chave de classificação de dois elementos.
 
 Para hash_sets e hash_multisets, que são contêineres simples nos quais os valores de chave são idênticos aos valores dos elementos, value_compare é equivalente a `key_compare`; para hash_maps e hash_multimaps eles não são, uma vez que o valor dos elementos do tipo `pair` não é idêntico ao valor da chave do elemento.
 

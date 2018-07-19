@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c13dcadc87c23e288c7f8c8a7f5bc9752aae5db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b385d822c2f58d26938b3300207a790dc1193060
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853645"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953017"
 ---
 # <a name="resultof-class"></a>Classe result_of
 
@@ -48,13 +48,13 @@ template<class T>
 
 ### <a name="parameters"></a>Parâmetros
 
-`Fn` O tipo que pode ser chamado para consulta.
+*Fn* o tipo callable para consulta.
 
-`ArgTypes` Os tipos de lista de argumentos para o tipo que pode ser chamado para consulta.
+*ArgTypes* os tipos de lista de argumentos para o tipo callable para consulta.
 
 ## <a name="remarks"></a>Comentários
 
-Use este modelo para determinar no tempo de compilação o tipo de resultado de `Fn`(`ArgTypes`), em que `Fn` é um tipo callable, referência à função ou a referência ao tipo callable, invocada usando uma lista de argumentos de tipos em `ArgTypes`. O membro `type` da classe de modelo nomeia o tipo de resultado de `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` se a expressão não avaliada `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` está bem formada. Caso contrário, a classe de modelo não terá nenhum membro `type`. O tipo `Fn` e todos os tipos de pacote de parâmetros `ArgTypes` devem ser tipos completos, `void` ou matrizes de associação desconhecida.
+Use este modelo para determinar no tempo de compilação o tipo de resultado `Fn`(`ArgTypes`), onde *Fn* é um tipo callable, referência à função ou referência ao tipo callable, invocada usando uma lista dos tipos de argumentos na  *ArgTypes*. O membro `type` da classe de modelo nomeia o tipo de resultado de `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` se a expressão não avaliada `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` está bem formada. Caso contrário, a classe de modelo não terá nenhum membro `type`. O tipo *Fn* e todos os tipos de pacote de parâmetros *ArgTypes* devem ser tipos completos, **void**, ou matrizes de limite desconhecido.
 
 ## <a name="requirements"></a>Requisitos
 

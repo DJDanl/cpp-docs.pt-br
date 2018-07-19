@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de2f28feb775cd6e37116ea7c27691397d2dfce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 662c4915753cc49534fa9f489eb61504907744c4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844270"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954702"
 ---
 # <a name="basiciostream-class"></a>Classe basic_iostream
 
@@ -85,9 +85,9 @@ basic_iostream();
 
 ### <a name="parameters"></a>Parâmetros
 
-`strbuf` Um existente `basic_streambuf` objeto.
+*strbuf* existente `basic_streambuf` objeto.
 
-`right` Um existente `basic_iostream` que é usado para criar um novo objeto `basic_iostream`.
+*à direita* existente `basic_iostream` que é usado para construir um novo objeto `basic_iostream`.
 
 ### <a name="remarks"></a>Comentários
 
@@ -105,11 +105,11 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` Um `rvalue` referência a um `basic_iostream` objeto atribuir do.
+*à direita* uma `rvalue` fazem referência a um `basic_iostream` objeto atribuir do.
 
 ### <a name="remarks"></a>Comentários
 
-As chamadas de operador de membro `swap(right)`.
+A operador de membro chama `swap(right)`.
 
 ## <a name="swap"></a>  basic_iostream::swap
 
@@ -121,11 +121,11 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-`right` O `basic_iostream` objeto alternar.
+*à direita* o `basic_iostream` objeto trocar.
 
 ### <a name="remarks"></a>Comentários
 
-As chamadas de função de membro `swap(right)`.
+A função membro chama `swap(right)`.
 
 ## <a name="see-also"></a>Consulte também
 
