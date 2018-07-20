@@ -1,7 +1,7 @@
 ---
 title: Especificador de classe de armazenamento externa | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,69 +18,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08a578514aaf6de4132bd856900b0ec31d31835c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 365f4cf424ee51c493859e1d79f733b2cfcf331c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388722"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964178"
 ---
 # <a name="extern-storage-class-specifier"></a>Especificador de classe de armazenamento externa
-Uma variável declarada com o especificador de classe de armazenamento `extern` é uma referência a uma variável com o mesmo nome definida no nível externo de qualquer um dos arquivos de origem do programa. A declaração interna de `extern` é usada para tornar a definição de variável de nível externo visível dentro do bloco. A menos que seja declarado de outra forma no nível externo, uma variável declarada com a palavra-chave `extern` é visível somente no bloco em que é declarada.  
+
+Uma variável declarada com o especificador de classe de armazenamento **extern** é uma referência a uma variável com o mesmo nome definido em outro arquivo de origem. Ela é usada para tornar visível a definição da variável de nível externo. Uma variável declarada como **extern** não tem nenhum armazenamento alocado para si mesma; é apenas um nome. 
   
 ## <a name="example"></a>Exemplo  
  Este exemplo ilustra declarações de nível interno e externo:  
   
-```  
-// extern_StorageClassSpecified.c  
+```c  
+
+// Source1.c  
+
+int i = 1;
+
+
+// Source2. c
+
 #include <stdio.h>  
-  
-void other( void );  
-  
-int main()  
-{  
-    // Reference to i, defined below:   
-    extern int i;  
-  
-    // Initial value is zero; a is visible only within main:   
-    static int a;  
-  
-    // b is stored in a register, if possible:   
-    register int b = 0;  
-  
-    // Default storage class is auto:   
-    int c = 0;  
-  
-    // Values printed are 1, 0, 0, 0:   
-    printf_s( "%d\n%d\n%d\n%d\n", i, a, b, c );  
-    other();  
-    return;  
-}  
-  
-int i = 1;  
-  
-void other( void )  
-{  
+
+// Refers to the i that is defined in Source1.c:   
+extern int i;
+
+void func(void);
+
+int main()
+{
+    // Prints 1:   
+    printf_s("%d\n", i);
+    func();
+    return;
+}
+
+void func(void)
+{
     // Address of global i assigned to pointer variable:  
-    static int *external_i = &i;  
-  
-    // i is redefined; global i no longer visible:   
-    int i = 16;  
-  
-    // This a is visible only within the other function:   
-    static int a = 2;  
-  
-    a += 2;  
-    // Values printed are 16, 4, and 1:  
-    printf_s( "%d\n%d\n%d\n", i, a, *external_i );  
-}  
+    static int *external_i = &i;
+
+    // This definition of i hides the global i in Source.c:   
+    int i = 16;
+
+    // Prints 16, 1:  
+    printf_s("%d\n%d\n", i, *external_i);
+}
 ```  
   
- Nesse exemplo, a variável `i` é definida no nível externo com o valor inicial 1. Uma declaração de `extern` na função `main` é usada para declarar uma referência à variável `i` de nível externo. A variável **static** `a` é inicializada como 0 por padrão, já que o inicializador é omitido. A chamada para `printf` imprime os valores 1, 0, 0 e 0.  
-  
- Na função `other`, o endereço da variável global `i` é usado para inicializar a variável de ponteiro **static** `external_i`. Isso funciona porque a variável global tem tempo de vida **static**, ou seja, seu endereço não é alterado durante a execução do programa. Em seguida, a variável `i` é redefinida como uma variável local com valor inicial 16. Essa redefinição não afeta o valor da variável `i` de nível externo, que é ocultada pelo uso do respectivo nome para a variável local. O valor da `i` global agora é acessível apenas indiretamente dentro desse bloco, por meio do ponteiro `external_i`. A tentativa de atribuir o endereço da variável **auto** `i` a um ponteiro não funciona, pois ela pode ser diferente cada vez que se entra no bloco. A variável `a` é declarada como uma variável **static** e inicializada como 2. Essa variável `a` não entra em conflito com a variável `a` em `main`, pois as variáveis **static** no nível interno são visíveis apenas dentro do bloco em que são declaradas.  
-  
- A variável `a` é aumentada em 2, dando 4 como resultado. Se a função `other` fosse chamada novamente no mesmo programa, o valor inicial de `a` seria 4. As variáveis **static** internas mantêm seus valores quando o programa sai do bloco em que elas são declaradas e depois torna a entrar nele.  
+ Neste exemplo, a variável `i` é definida em Source1.c com um valor inicial de 1. Uma declaração **extern** em Source2.c torna 'i' visível nesse arquivo. 
+
+ Na função `func`, o endereço da variável global `i` é usado para inicializar a variável de ponteiro **static** `external_i`. Isso funciona porque a variável global tem tempo de vida **static**, ou seja, seu endereço não é alterado durante a execução do programa. Em seguida, uma variável `i` é definida dentro do escopo de `func` como uma variável local com o valor inicial 16. Essa definição não afeta o valor da variável `i` de nível externo, que é ocultada pelo uso do respectivo nome para a variável local. O valor de `i` global agora está acessível apenas através do ponteiro `external_i`.   
   
 ## <a name="see-also"></a>Consulte também  
  [Especificadores de classe de armazenamento para declarações de nível interno](../c-language/storage-class-specifiers-for-internal-level-declarations.md)
