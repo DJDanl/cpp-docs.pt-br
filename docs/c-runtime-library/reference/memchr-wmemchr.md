@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2ba300275f0154e84f7d2ced21b0893bbe3d85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43c76ae09f491ff163391f0ee46564af7bb629fe
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401679"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181166"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -92,20 +92,20 @@ O número de caracteres a serem verificados.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, retorna um ponteiro para o primeiro local de *c* na *buffer*. Caso contrário, ele retorna **nulo**.
+Se for bem-sucedido, retorna um ponteiro para o primeiro local da *c* na *buffer*. Caso contrário, ele retornará NULL.
 
 ## <a name="remarks"></a>Comentários
 
-**memchr** e **wmemchr** procurar a primeira ocorrência de *c* na primeira *contagem* bytes de *buffer*. É interrompido quando encontra *c* ou quando ele verificou a primeira *contagem* bytes.
+`memchr` e `wmemchr` procurar a primeira ocorrência do *c* no primeiro *contagem* bytes de *buffer*. Ele para quando encontra *c* ou quando tiver verificado os primeiros *contagem* bytes.
 
-Em C, essas funções usam um * * const * * ponteiro para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga de colocar um ponteiro para * * const * * retorna um ponteiro para **const **; a versão que usa um ponteiro para não -** const * * retorna um ponteiro para não -** const **. A macro _CRT_CONST_CORRECT_OVERLOADS é definido se o **const * * e não-** const * * versões dessas funções estão disponíveis. Se você precisar não**const * * comportamento para ambos os overloadsin C++ C++, defina o símbolo _CONST_RETURN.
+Em C, essas funções usam um **const** ponteiro para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga de colocar um ponteiro para **const** retorna um ponteiro para **const**; a versão que usa um ponteiro para não**const** retorna um ponteiro para não -**const** . _CRT_CONST_CORRECT_OVERLOADS a macro é definida se ambos os **const** e não-**const** versões dessas funções estão disponíveis. Se você precisar de não**const** comportamento para ambas as sobrecargas de C++ no C++, defina o símbolo const_return.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**memchr**|\<memory.h> ou \<string.h>|
-|**wmemchr**|\<wchar.h>|
+|`memchr`|\<memory.h> ou \<string.h>|
+|`wmemchr`|\<wchar.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -54,18 +54,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbb937cfdce7ed933c637cb48d370515134b66dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ea5ed6c4441ebd98462562ac9405d6f8c115c61
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415703"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181088"
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 Retorna um ponteiro para a primeira ocorrência de uma cadeia de caracteres de pesquisa em uma cadeia de caracteres.
 
 > [!IMPORTANT]
-> **mbsstr** e **mbsstr_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbsstr` e `_mbsstr_l` não podem ser usados em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -136,33 +136,33 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um ponteiro para a primeira ocorrência de *strSearch* na *str*, ou **nulo** se *strSearch* não aparecer na *str* . Se *strSearch* aponta para uma cadeia de caracteres de comprimento zero, a função retorna *str*.
+Retorna um ponteiro para a primeira ocorrência de *strSearch* na *str*, ou nulo se *strSearch* não aparecer na *str*. Se *strSearch* aponta para uma cadeia de caracteres de comprimento zero, a função retorna *str*.
 
 ## <a name="remarks"></a>Comentários
 
-O **strstr** função retorna um ponteiro para a primeira ocorrência de *strSearch* na *str*. A pesquisa não inclui os caracteres nulo de terminação. **wcsstr** é a versão de caractere largo de **strstr** e **mbsstr** é a versão de caracteres multibyte. O valor de retorno e argumentos **wcsstr** são caracteres largos cadeias de caracteres; desses **mbsstr** são cadeias de caracteres multibyte. **mbsstr** valida seus parâmetros. Se *str* ou *strSearch* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução é permitida para continuar, **mbsstr** define **errno** para **EINVAL** e retornará 0. **strstr** e **wcsstr** não validar seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
+O `strstr` função retorna um ponteiro para a primeira ocorrência do *strSearch* na *str*. A pesquisa não inclui os caracteres nulo de terminação. `wcsstr` é a versão de caractere largo de `strstr` e `_mbsstr` é a versão de caracteres multibyte. Os argumentos e o valor retornado de `wcsstr` são cadeias de caracteres largos; aqueles de `_mbsstr` são cadeias de caracteres multibyte. `_mbsstr` valida seus parâmetros. Se *str* ou *strSearch* for NULL, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, `_mbsstr` define `errno` EINVAL e retornará 0. `strstr` e `wcsstr` não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
 
 > [!IMPORTANT]
 > Essas funções podem incorrer uma ameaça de um problema de estouro de buffer. Problemas de estouro de buffer podem ser usados para atacar um sistema pois eles podem permitir a execução de código arbitrário, que pode causar uma injustificada elevação de privilégio. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).
 
-Em C, essas funções usam um * * const * * ponteiro para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga que usa um ponteiro para * * const * * retorna um ponteiro para **const **; a versão que usa um ponteiro para não -** const * * retorna um ponteiro para não -** const **. A macro **_CRT_CONST_CORRECT_OVERLOADS** é definido se o **const * * e não-** const * * versões dessas funções estão disponíveis. Se você precisar não**const * * comportamento para as sobrecargas de C++, defina o símbolo **_CONST_RETURN**.
+Em C, essas funções usam um **const** ponteiro para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga que usa um ponteiro para **const** retorna um ponteiro para **const**; a versão que usa um ponteiro para não**const** retorna um ponteiro para não - **Const**. _CRT_CONST_CORRECT_OVERLOADS a macro é definida se ambos os **const** e não-**const** versões dessas funções estão disponíveis. Se você precisar de não**const** comportamento para as sobrecargas de C++, defina o símbolo const_return.
 
-O valor de saída é afetado pela configuração de localidade de categoria de **LC_CTYPE**; para obter mais informações, consulte [setlocale, wsetlocale](setlocale-wsetlocale.md). As versões dessas funções que não têm o **_l** o uso de sufixo a localidade atual para este comportamento dependente de localidade, as versões que têm o **_l** sufixo são idênticos, exceto que, em vez disso, eles usam o parâmetro de localidade que é transmitido. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração de categoria da localidade do LC_CTYPE; Para obter mais informações, consulte [setlocale, wsetlocale](setlocale-wsetlocale.md). As versões dessas funções que não têm o **l** sufixo usam a localidade atual desse comportamento dependente da localidade; as versões que têm o **l** sufixo são idênticas, exceto pelo fato de que usam o parâmetro de localidade informado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsstr**|**strstr**|**_mbsstr**|**wcsstr**|
-|**n/d**|**n/d**|**_mbsstr_l**|**n/d**|
+|`_tcsstr`|`strstr`|`_mbsstr`|`wcsstr`|
+|**n/d**|**n/d**|`_mbsstr_l`|**n/d**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**strstr**|\<string.h>|
-|**wcsstr**|\<string.h> ou \<wchar.h>|
-|**mbsstr**, **mbsstr_l**|\<mbstring.h>|
+|`strstr`|\<string.h>|
+|`wcsstr`|\<string.h> ou \<wchar.h>|
+|`_mbsstr`, `_mbsstr_l`|\<mbstring.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

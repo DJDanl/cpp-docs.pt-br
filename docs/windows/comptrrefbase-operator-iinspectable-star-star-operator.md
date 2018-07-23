@@ -1,5 +1,5 @@
 ---
-title: Operador IInspectable * * Comptrrefbase | Microsoft Docs
+title: 'Comptrrefbase:: Operator IInspectable * * operador | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e337f6bbc92718c839fc2bd12c9df9f0caa5d5aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c23ba7ba476b44b44f48b76119776e2f2cb188e
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883453"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181140"
 ---
-# <a name="comptrrefbaseoperator-iinspectable-operator"></a>ComPtrRefBase::operator Operador IInspectable**
+# <a name="comptrrefbaseoperator-iinspectable-operator"></a>Comptrrefbase:: Operator IInspectable\* \* operador
 
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,9 +36,9 @@ operator IInspectable**() const;
 
 ## <a name="remarks"></a>Comentários
 
-Converte atual [PTR _](../windows/comptrrefbase-ptr-data-member.md) membro de dados para um ponteiro-para-um-ponteiro-para a interface IInspectable.
+Converte o atual [PTR _](../windows/comptrrefbase-ptr-data-member.md) membro de dados para um ponteiro-para-um-ponteiro-para a interface IInspectable.
 
-Um erro é emitido se o ComPtrRefBase atual não deriva de IInspectable.
+Um erro será emitido se o atual ComPtrRefBase não deriva de IInspectable.
 
 Essa conversão está disponível somente se **&#95; &#95;WRL_CLASSIC_COM&#95; &#95;** está definido.
 

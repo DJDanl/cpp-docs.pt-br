@@ -7,22 +7,41 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - CAccessorBase
+- CAccessorBase.Close
+- CAccessorBase::Close
+- GetHAccessor
+- CAccessorBase::GetHAccessor
+- CAccessorBase.GetHAccessor
+- CAccessorBase::GetNumAccessors
+- GetNumAccessors
+- CAccessorBase.GetNumAccessors
+- IsAutoAccessor
+- CAccessorBase.IsAutoAccessor
+- CAccessorBase::IsAutoAccessor
+- CAccessorBase::ReleaseAccessors
+- CAccessorBase.ReleaseAccessors
+- ReleaseAccessors
 dev_langs:
 - C++
 helpviewer_keywords:
 - CAccessorBase class
+- Close method
+- GetHAccessor method
+- GetNumAccessors method
+- IsAutoAccessor method
+- ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f598f49d279085b23e0bd3b94c48620363b5a816
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99f6be0815572b88f7c46406262ed21eaefdb77d
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090790"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181192"
 ---
 # <a name="caccessorbase-class"></a>Classe CAccessorBase
 Todos os acessadores nos modelos OLE DB derivam dessa classe. `CAccessorBase` permite que um conjunto de linhas gerenciar vários acessadores. Ele também fornece uma associação de parâmetros e colunas de saída.  
@@ -39,15 +58,93 @@ Todos os acessadores nos modelos OLE DB derivam dessa classe. `CAccessorBase` pe
   
 |||  
 |-|-|  
-|[Fechar](../../data/oledb/caccessorbase-close.md)|Fecha os acessadores.|  
-|[GetHAccessor](../../data/oledb/caccessorbase-gethaccessor.md)|Recupera o identificador do acessador.|  
-|[GetNumAccessors](../../data/oledb/caccessorbase-getnumaccessors.md)|Recupera o número de acessadores criado pela classe.|  
-|[IsAutoAccessor](../../data/oledb/caccessorbase-isautoaccessor.md)|Testa se o acessador especificado é um autoaccessor.|  
-|[ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md)|Libera os acessadores.|  
-  
+|[Fechar](#close)|Fecha os acessadores.|  
+|[GetHAccessor](#geth)|Recupera o identificador do acessador.|  
+|[GetNumAccessors](#getnum)|Recupera o número de acessadores criado pela classe.|  
+|[IsAutoAccessor](#isauto)|Testa se o acessador especificado é um autoaccessor.|  
+|[ReleaseAccessors](#release)|Libera os acessadores.|  
+
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atldbcli.h  
+
+## <a name="close"></a> Caccessorbase:: Close
+Fecha os acessadores.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+void Close();  
+  
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Você deve chamar [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) primeiro.  
+
+## <a name="geth"></a> Caccessorbase:: Gethaccessor
+Recupera o identificador do acessador de um acessador especificado.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      HACCESSOR GetHAccessor(ULONG nAccessor) const;  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *nAccessor*  
+ [in] O número de deslocamento zero do acessador.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Identificador do acessador.  
+
+## <a name="getnum"></a> Caccessorbase:: Getnumaccessors
+Recupera o número de acessadores criado pela classe.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+ULONG GetNumAccessors() const;  
+  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ O número de acessadores criado pela classe.  
+
+## <a name="isauto"></a> Caccessorbase:: Isautoaccessor
+Retorna true se os dados são recuperados do acessador automaticamente durante uma operação de movimentação.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      bool IsAutoAccessor(ULONG nAccessor) const;  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *nAccessor*  
+ [in] O número de deslocamento zero do acessador.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Retorna **verdadeira** se o acessador é uma autoaccessor. Caso contrário, retornará **falsos**.  
+
+## <a name="release"></a> Caccessorbase:: Releaseaccessors
+Libera os acessadores criados pela classe.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+HRESULT ReleaseAccessors(IUnknown* pUnk);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *pUnk*  
+ [in] Um ponteiro para um `IUnknown` interface para o objeto COM para o qual foram criados os acessadores.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um HRESULT padrão.  
+  
+### <a name="remarks"></a>Comentários  
+ Chamado a partir [caccessorrowset:: Close](../../data/oledb/caccessorrowset-close.md). 
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+ [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [Classe CAccessorBase](../../data/oledb/caccessorbase-class.md)
