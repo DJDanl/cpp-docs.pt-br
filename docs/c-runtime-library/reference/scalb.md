@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a465ca74af72a5114eac949439ab8493f89bcb39
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b6e20c6395337113088aa51d8ba75744421922
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406258"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207514"
 ---
 # <a name="scalb-scalbf"></a>scalb, _scalbf
 
@@ -71,13 +71,13 @@ Expoente inteiro longo.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retornará um valor exponencial se for bem-sucedido. No estouro (dependendo do sinal de *x*), **scalb** retorna + /- **HUGE_VAL**; o **errno** variável é definida como  **ERANGE**.
+Retornará um valor exponencial se for bem-sucedido. No estouro (dependendo do sinal de *x*), **scalb** retorna + /- **HUGE_VAL**; a **errno** variável é definida como  **ERANGE**.
 
 Para obter mais informações sobre este e outros códigos retornados, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **scalb** função calcula o valor de *x* * 2<sup>*exp*</sup>.
+O **scalb** função calcula o valor de *x* \* 2<sup>*exp*</sup>.
 
 ## <a name="requirements"></a>Requisitos
 

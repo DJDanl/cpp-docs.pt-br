@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49329d97343cfd210a93879961b0492454be9efa
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5a65008b01262ad6252e9942444a4e80602d4292
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954767"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208631"
 ---
 # <a name="ctype-class"></a>Classe ctype
 
@@ -275,7 +275,7 @@ Um ponteiro para o primeiro caractere em um intervalo que corresponde a uma más
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro protegida retorna o menor ponteiro `ptr` no intervalo [ `first`, `last`) para o qual [do_is](#do_is)( `maskVal`, * `ptr`) é verdadeiro.
+A função membro protegida retorna o menor ponteiro `ptr` no intervalo [ `first`, `last`) para o qual [do_is](#do_is)( `maskVal`, \* `ptr`) é true.
 
 ### <a name="example"></a>Exemplo
 
@@ -306,7 +306,7 @@ Um ponteiro para o primeiro caractere em um intervalo que não corresponde a uma
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro protegida retorna o menor ponteiro `ptr` no intervalo [ `first`, `last`) para o qual [do_is](#do_is)( `maskVal`, * `ptr`) é falso.
+A função membro protegida retorna o menor ponteiro `ptr` no intervalo [ `first`, `last`) para o qual [do_is](#do_is)( `maskVal`, \* `ptr`) é false.
 
 ### <a name="example"></a>Exemplo
 

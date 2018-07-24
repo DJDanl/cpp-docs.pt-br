@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79d9492588688c7dd7e7fa754e4a4f0b0f892d05
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d905c8208bef98d584d3052c242de1ac127a4830
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027934"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209294"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funções &lt;algorithm&gt;
 
@@ -2705,7 +2705,7 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="remarks"></a>Comentários
 
-`swap` deve ser usado preferencialmente em vez de i **ter_swap**, que foi incluído no Padrão C++ para manter a compatibilidade com versões anteriores. Se `Fit1` e `Fit2` forem iteradores de avanço, `iter_swap` (`Fit1`, `Fit2`), será equivalente a `swap` (* `Fit1`, \* `Fit2`).
+`swap` deve ser usado preferencialmente em vez de i **ter_swap**, que foi incluído no Padrão C++ para manter a compatibilidade com versões anteriores. Se `Fit1` e `Fit2` forem iteradores de avanço, em seguida, `iter_swap` ( `Fit1`, `Fit2` ), é equivalente a `swap` ( \* `Fit1`, \* `Fit2` ).
 
 Os tipos de valor dos iteradores de avanço de entrada devem ter o mesmo valor.
 

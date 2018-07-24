@@ -9,57 +9,175 @@ f1_keywords:
 - CDBPropSet
 - ATL.CDBPropSet
 - ATL::CDBPropSet
+- CDBPropSet::AddProperty
+- CDBPropSet.AddProperty
+- AddProperty
+- ATL::CDBPropSet::AddProperty
+- ATL.CDBPropSet.AddProperty
+- CDBPropSet.CDBPropSet
+- CDBPropSet::CDBPropSet
+- ATL::CDBPropSet::CDBPropSet
+- ATL.CDBPropSet.CDBPropSet
+- CDBPropSet.operator=
+- ATL::CDBPropSet::operator=
+- ATL.CDBPropSet.operator=
+- CDBPropSet::operator=
+- ATL.CDBPropSet.SetGUID
+- CDBPropSet.SetGUID
+- ATL::CDBPropSet::SetGUID
+- SetGUID
+- CDBPropSet::SetGUID
 dev_langs:
 - C++
 helpviewer_keywords:
 - CDBPropSet class
+- AddProperty method
+- CDBPropSet class, constructor
+- operator =, property sets
+- = operator, with OLE DB templates
+- operator=, property sets
+- SetGUID method
+- AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d75715ed0dc65fbbf5b581bfea48816e5bd00ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e8415fdac405f0a639b03cc90a710214d2c8d0c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096321"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207832"
 ---
 # <a name="cdbpropset-class"></a>Classe CDBPropSet
-Herda o **DBPROPSET** estrutura e adiciona um construtor que inicializa os campos de chave, bem como a `AddProperty` método de acesso.  
+Herda de `DBPROPSET` estruturar e adiciona um construtor que inicializa os campos de chave, bem como a `AddProperty` método de acesso.  
   
 ## <a name="syntax"></a>Sintaxe
 
 ```cpp
 class CDBPropSet : public tagDBPROPSET  
 ```  
-  
+
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h  
+
 ## <a name="members"></a>Membros  
   
 ### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[AddProperty](../../data/oledb/cdbpropset-addproperty.md)|Adiciona uma propriedade para o conjunto de propriedades.|  
-|[CDBPropSet](../../data/oledb/cdbpropset-cdbpropset.md)|Construtor.|  
-|[SetGUID](../../data/oledb/cdbpropset-setguid.md)|Conjuntos de **guidPropertySet** campo o **DBPROPSET** estrutura.|  
+|[AddProperty](#addproperty)|Adiciona uma propriedade ao conjunto de propriedades.|  
+|[CDBPropSet](#cdbpropset)|Construtor.|  
+|[SetGUID](#setguid)|Define o `guidPropertySet` campo do `DBPROPSET` estrutura.|  
   
 ### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[operador =](../../data/oledb/cdbpropset-operator-equal.md)|Atribui o conteúdo de uma propriedade definida para outro.|  
+|[operador =](#op_equal)|Atribui o conteúdo de uma propriedade definida para outro.|  
   
 ## <a name="remarks"></a>Comentários  
- Uso de provedores e consumidores de OLE DB **DBPROPSET** estruturas para transmitir matrizes de `DBPROP` estruturas. Cada `DBPROP` estrutura representa uma única propriedade que pode ser definida.  
+ Uso de consumidores e provedores OLE DB `DBPROPSET` passar matrizes de estruturas de `DBPROP` estruturas. Cada `DBPROP` estrutura representa uma única propriedade que pode ser definida.  
+
+## <a name="addproperty"></a> Cdbpropset:: AddProperty
+Adiciona uma propriedade ao conjunto de propriedades.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldbcli.h  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+bool AddProperty(DWORD dwPropertyID,   
+   constVARIANT& var,   
+   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
+   LPCSTR szValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
+   LPCWSTR szValue,DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
+   bool bValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
+   BYTE bValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,  
+   short nValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,  
+   long nValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,  
+   float fltValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,  
+   double dblValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
+   CY cyValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *dwPropertyID*  
+ [in] A ID da propriedade a ser adicionado. Usado para inicializar o `dwPropertyID` do `DBPROP` adicionada ao conjunto de propriedades de estrutura.  
+  
+ *var*  
+ [in] Uma variante usada para inicializar o valor da propriedade para o `DBPROP` adicionada ao conjunto de propriedades de estrutura.  
+  
+ *szValue*  
+ [in] Uma cadeia de caracteres usada para inicializar o valor da propriedade para o `DBPROP` adicionada ao conjunto de propriedades de estrutura.  
+  
+ *bValue*  
+ [in] Um `BYTE` ou um valor booliano usado para inicializar o valor da propriedade para o `DBPROP` adicionada ao conjunto de propriedades de estrutura.  
+  
+ *Nvalor*  
+ [in] Um valor inteiro usado para inicializar o valor da propriedade para o `DBPROP` adicionada ao conjunto de propriedades de estrutura.  
+  
+ *fltValue*  
+ [in] Um valor de ponto flutuante usado para inicializar o valor da propriedade para o `DBPROP` adicionada ao conjunto de propriedades de estrutura.  
+  
+ *dblValue*  
+ [in] Um valor de ponto flutuante de precisão dupla usado para inicializar o valor da propriedade para o `DBPROP` adicionada ao conjunto de propriedades de estrutura.  
+  
+ *cyValue*  
+ [in] Um valor de moeda CY usado para inicializar o valor da propriedade para o `DBPROP` adicionada ao conjunto de propriedades de estrutura.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ **True** se a propriedade foi adicionada com êxito. Caso contrário, **falsos**. 
+
+## <a name="cdbpropset"></a> Cdbpropset:: Cdbpropset
+O construtor. Inicializa o `rgProperties`, `cProperties`, e `guidPropertySet` campos dos [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) estrutura.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      CDBPropSet(const GUID& guid);  
+
+CDBPropSet(const CDBPropSet& propset);  
+
+CDBPropSet();  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *guid*  
+ [in] Um GUID usado para inicializar o `guidPropertySet` campo.  
+  
+ *propset*  
+ [in] Outro `CDBPropSet` objeto para a construção da cópia.  
+
+## <a name="setguid"></a> Cdbpropset:: Setguid
+Define o `guidPropertySet` campo o `DBPROPSET` estrutura.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      void SetGUID(const GUID& guid) throw();  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *guid*  
+ [in] Um GUID usado para definir a `guidPropertySet` campo do [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) estrutura.  
+  
+### <a name="remarks"></a>Comentários  
+ Este campo pode ser definido [construtor](../../data/oledb/cdbpropset-cdbpropset.md) também.  
+
+## <a name="op_equal"></a> Cdbpropset:: Operator =
+Atribui o conteúdo de uma propriedade definida como outro conjunto de propriedades.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      CDBPropSet& operator =(CDBPropSet& propset) throw();  
+```  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [Classe CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)   
- [Estrutura DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx)   
- [Estrutura DBPROP](https://msdn.microsoft.com/en-us/library/ms717970.aspx)
+ [Estrutura DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)   
+ [Estrutura DBPROP](https://msdn.microsoft.com/library/ms717970.aspx)

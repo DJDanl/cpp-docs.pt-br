@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a4d3e663c0cb8d80d3b154f23082d88b446b6f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942088"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208543"
 ---
 # <a name="string-and-character-literals--c"></a>Cadeia de caracteres e literais de caracteres (C++)
 C++ oferece suporte a vários tipos de cadeia de caracteres e caracteres e fornece modos para expressar valores literais de cada um desses tipos. No seu código-fonte, é possível expressar o conteúdo de seu literais de caracteres e cadeia de caracteres usando um conjunto de caracteres. Nomes de caracteres universais e caracteres de escape permitem expressar qualquer cadeia de caracteres usando apenas o conjunto de caracteres de origem básicos. Uma cadeia de caracteres bruta literal permite que você evite usar caracteres de escape e pode ser usada para expressar todos os tipos de literais de cadeia de caracteres. Você também pode criar literais de std:: String sem ter que executar etapas de conversão ou extra construção.  
@@ -310,7 +310,7 @@ const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);  
 ```  
   
- Observe que `strlen()` e `wcslen()` não incluem o tamanho do caractere nulo de terminação, cujo tamanho é igual ao tamanho do elemento do tipo cadeia de caracteres: um byte em uma cadeia de caracteres char *, dois bytes em wchar_t\* ou char16_t\* cadeias de caracteres e quatro bytes em char32_t\* cadeias de caracteres.  
+ Observe que `strlen()` e `wcslen()` não incluem o tamanho do caractere nulo de terminação, cujo tamanho é igual ao tamanho do elemento do tipo cadeia de caracteres: um byte em um char\* cadeia de caracteres, dois bytes em wchar_t\* ou char16_t\*cadeias de caracteres e quatro bytes no char32_t\* cadeias de caracteres.  
   
  O comprimento máximo de uma literal de cadeia de caracteres é de 65535 bytes. Esse limite se aplica às literais de cadeias de caracteres estreitas e largas.  
   
@@ -380,7 +380,7 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 ```  
   
 ### <a name="string-literals-with-universal-character-names"></a>Literais de cadeia de caracteres com nomes de caracteres universais  
- Literais de cadeia de caracteres nativo (não bruto) podem usar nomes de caracteres universais para representar qualquer caractere, desde que o nome de caractere universal pode ser codificado como um ou mais caracteres no tipo de cadeia de caracteres.  Por exemplo, um nome de caractere universal que representa um caractere estendido não pode ser codificado em uma cadeia de caracteres estreita usando a página de código ANSI, mas ela pode ser codificada em cadeias de caracteres estreitas em algumas páginas de código multibyte em cadeias de caracteres UTF-8 ou em uma cadeia de caracteres largo. No c++11, suporte a Unicode é estendido pelo * char16_t e char32_t\* tipos de cadeia de caracteres:  
+ Literais de cadeia de caracteres nativo (não bruto) podem usar nomes de caracteres universais para representar qualquer caractere, desde que o nome de caractere universal pode ser codificado como um ou mais caracteres no tipo de cadeia de caracteres.  Por exemplo, um nome de caractere universal que representa um caractere estendido não pode ser codificado em uma cadeia de caracteres estreita usando a página de código ANSI, mas ela pode ser codificada em cadeias de caracteres estreitas em algumas páginas de código multibyte em cadeias de caracteres UTF-8 ou em uma cadeia de caracteres largo. No c++11, suporte a Unicode é estendido pelo char16_t\* e char32_t\* tipos de cadeia de caracteres:  
   
 ```cpp  
 // ASCII smiling face  

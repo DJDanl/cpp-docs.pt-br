@@ -9,31 +9,59 @@ f1_keywords:
 - CDBPropIDSet
 - ATL.CDBPropIDSet
 - ATL::CDBPropIDSet
+- CDBPropIDSet.AddPropertyID
+- CDBPropIDSet::AddPropertyID
+- AddPropertyID
+- ATL.CDBPropIDSet.AddPropertyID
+- ATL::CDBPropIDSet::AddPropertyID
+- ATL::CDBPropIDSet::CDBPropIDSet
+- CDBPropIDSet
+- CDBPropIDSet.CDBPropIDSet
+- CDBPropIDSet::CDBPropIDSet
+- ATL.CDBPropIDSet.CDBPropIDSet
+- CDBPropIDSet.operator=
+- ATL.CDBPropIDSet.operator=
+- ATL::CDBPropIDSet::operator=
+- CDBPropIDSet::operator=
+- CDBPropIDSet.SetGUID
+- ATL::CDBPropIDSet::SetGUID
+- SetGUID
+- ATL.CDBPropIDSet.SetGUID
+- CDBPropIDSet::SetGUID
 dev_langs:
 - C++
 helpviewer_keywords:
 - CDBPropIDSet class
+- AddPropertyID method
+- CDBPropIDSet class, constructor
+- operator =, property sets
+- = operator, with OLE DB templates
+- operator=, property sets
+- SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 67bfd11a46d8e0c852c1881ff8874b7fbd817164
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e77b92822ac82a4fbea06fe354952c9dbd79378
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096945"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207579"
 ---
 # <a name="cdbpropidset-class"></a>Classe CDBPropIDSet
-Herda o **DBPROPIDSET** estrutura e adiciona um construtor que inicializa os campos de chave, bem como a [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) método de acesso.  
+Herda de `DBPROPIDSET` estruturar e adiciona um construtor que inicializa os campos de chave, bem como a [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) método de acesso.  
   
 ## <a name="syntax"></a>Sintaxe
 
 ```cpp
 class CDBPropIDSet : public tagDBPROPIDSET  
 ```  
+
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldbcli.h
   
 ## <a name="members"></a>Membros  
   
@@ -41,22 +69,77 @@ class CDBPropIDSet : public tagDBPROPIDSET
   
 |||  
 |-|-|  
-|[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)|Adiciona uma propriedade para a propriedade ID definida.|  
-|[CDBPropIDSet](../../data/oledb/cdbpropidset-cdbpropidset.md)|Construtor.|  
-|[SetGUID](../../data/oledb/cdbpropidset-setguid.md)|Define o GUID da ID de propriedade do conjunto.|  
+|[AddPropertyID](#addpropertyid)|Adiciona uma propriedade para a propriedade ID definida.|  
+|[CDBPropIDSet](#cdbpropidset)|Construtor.|  
+|[SetGUID](#setguid)|Define o GUID da ID da propriedade do conjunto.|  
   
 ### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[operador =](../../data/oledb/cdbpropidset-operator-equal.md)|Atribui o conteúdo da ID de propriedade de um conjunto para outro.|  
+|[operador =](#op_equal)|Atribui o conteúdo da ID de uma propriedade de conjunto para outro.|  
   
 ## <a name="remarks"></a>Comentários  
- Uso de consumidores do OLE DB **DBPROPIDSET** estruturas para passar uma matriz de IDs de propriedade para a qual o consumidor deseja obter informações de propriedade. As propriedades identificadas em uma única [DBPROPIDSET](https://msdn.microsoft.com/en-us/library/ms717981.aspx) estrutura pertencem ao conjunto de uma propriedade.  
+ OLE DB que os consumidores usam `DBPROPIDSET` estruturas para passar uma matriz de IDs de propriedade para a qual o consumidor deseja obter informações de propriedade. As propriedades identificadas em uma única [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) estrutura pertencem ao conjunto de uma propriedade.  
+
+## <a name="addpropertyid"></a> Cdbpropidset:: Addpropertyid
+Adiciona uma ID de propriedade para a propriedade ID definida.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldbcli.h  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      bool AddPropertyID(DBPROPID propid) throw();  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *PROPID*  
+ [in] A ID de propriedade a ser adicionado à ID de propriedade definida.  
+
+## <a name="cdbpropidset"></a> Cdbpropidset:: Cdbpropidset
+O construtor. Inicializa o `rgProperties`, `cProperties`e (opcionalmente) `guidPropertySet` campos dos [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) estrutura.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      CDBPropIDSet(const GUID& guid);  
+
+CDBPropIDSet(const CDBPropIDSet& propidset);  
+
+CDBPropIDSet();  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *guid*  
+ [in] Um GUID usado para inicializar o `guidPropertySet` campo.  
+  
+ *propidset*  
+ [in] Outro `CDBPropIDSet` objeto para a construção da cópia.  
+
+## <a name="setguid"></a> Cdbpropidset:: Setguid
+Define o campo GUID no `DBPROPIDSET` estrutura.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      void SetGUID(const GUID& guid) throw();  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *guid*  
+ [in] Um GUID usado para definir a `guidPropertySet` campo do [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) estrutura.  
+  
+### <a name="remarks"></a>Comentários  
+ Este campo pode ser definido [construtor](../../data/oledb/cdbpropidset-cdbpropidset.md) também. Chame essa função se você usar o construtor padrão para essa classe.  
+
+## <a name="op_equal"></a> Cdbpropidset:: Operator =
+Atribui o conteúdo da ID de uma propriedade definida como outro conjunto de propriedade de ID.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();  
+```  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

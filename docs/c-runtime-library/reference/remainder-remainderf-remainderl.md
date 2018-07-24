@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f277292f413e09b9c41a87cd82e438e0e1e883a8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 96d87a213029ab33e4d3c0269c4e7ba41e1aed43
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406661"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209411"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -71,13 +71,13 @@ O denominador.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O restante de ponto flutuante de *x* / *y*. Se o valor de *y* é 0.0, **restante** retorna um NaN silenciosa. Para obter informações sobre a representação de um NaN silenciosa, o **printf** família, consulte [printf, printf_l, and wprintf, wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+O restante do ponto flutuante *x* / *y*. Se o valor de *y* é 0.0, **restante** retorna um NaN silencioso. Para obter informações sobre a representação de um NaN silencioso pela **printf** família, consulte [printf, printf_l, wprintf, wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **restante** funções calculam o restante de ponto flutuante *r* de *x* / *y* , de modo que *x*   =  *n* * *y* + *r*, onde *n*é o número inteiro mais próximo valor para *x* / *y* e *n*é o mesmo sempre que &#124; *n*  -  *x* / *y* &#124; = 1/2. Quando *r* = 0, *r* tem o mesmo sinal *x*.
+O **restante** funções calculam o restante de ponto flutuante *r* dos *x* / *y* que *x*   =  *n* \* *y* + *r*, onde *n*é o número inteiro mais próximo em valor para *x* / *y* e *n*é o mesmo sempre que &#124; *n*  -  *x* / *y* &#124; = 1/2. Quando *r* = 0, *r* tem o mesmo sinal *x*.
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **restante** que levar e retornar **float** ou **longo** **duplo** valores. Em um programa C, **restante** sempre leva dois **duplo** argumentos e retorna um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **restante** que usam e retornam **float** ou **longo** **double** valores. Em um programa do C **restante** sempre pega dois **duplo** argumentos e retorna um **double**.
 
 ## <a name="requirements"></a>Requisitos
 

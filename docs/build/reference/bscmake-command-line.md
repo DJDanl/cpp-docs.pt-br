@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7866d2960acdd89c3015470ef3971307ba162cd3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b79f7e7c181112877c795f3601e8211e70403563
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369491"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207741"
 ---
 # <a name="bscmake-command-line"></a>Linha de comando BSCMAKE
 Para executar BSCMAKE, use a seguinte sintaxe de linha de comando:  
@@ -28,15 +28,15 @@ Para executar BSCMAKE, use a seguinte sintaxe de linha de comando:
 BSCMAKE [options] sbrfiles  
 ```  
   
- Opções podem aparecer somente no `options` campo na linha de comando.  
+ As opções podem aparecer somente no `options` campo na linha de comando.  
   
- O *sbrfiles* campo especifica um ou mais arquivos. SBR criados por um compilador ou assembler. Separe os nomes dos arquivos. SBR com tabulações ou espaços. Você deve especificar a extensão. Não há nenhum padrão. Você pode especificar um caminho com o nome de arquivo e você pode usar o sistema operacional curingas (* e?).  
+ O *sbrfiles* campo especifica um ou mais arquivos. SBR criados por um compilador ou montador. Separe os nomes dos arquivos. SBR com espaços ou tabulações. Você deve especificar a extensão; Não há nenhum padrão. Você pode especificar um caminho com o nome do arquivo, e você pode usar caracteres curinga do sistema operacional (\* e?).  
   
- Durante uma compilação incremental, você pode especificar novos arquivos. SBR que não fazem parte da compilação original. Se desejar que todas as colaborações permaneça no arquivo de informações de procura, você deve especificar todos os arquivos. SBR (incluindo arquivos truncados) que foram usados originalmente para criar o arquivo. bsc. Se você omitir um arquivo. SBR, contribuição desse arquivo para o arquivo de informações de procura é removida.  
+ Durante uma compilação incremental, você pode especificar novos arquivos. SBR que não faziam parte da compilação original. Se você quiser que todas as contribuições para permanecer no arquivo de informações de procura, você deve especificar todos os arquivos. SBR (incluindo arquivos truncados) que foram originalmente usados para criar o arquivo. bsc. Se você omitir um arquivo. SBR, contribuição do arquivo para o arquivo de informações de procura é removida.  
   
- Não especifique um arquivo. SBR truncados para uma compilação completa. Uma compilação completa exige contribuições de todos os arquivos. SBR especificado. Antes de executar uma compilação completa, recompile o projeto e criar um novo arquivo. SBR para cada arquivo vazio.  
+ Não especifique um arquivo. SBR truncados para uma compilação completa. Uma compilação completa exige contribuições de todos os arquivos. SBR especificado. Antes de executar uma compilação completa, recompile o projeto e crie um novo arquivo. SBR para cada arquivo vazio.  
   
- O comando a seguir executa BSCMAKE para criar um arquivo chamado MAIN.bsc de três arquivos. SBR:  
+ O comando a seguir executa BSCMAKE para criar um arquivo chamado MAIN.bsc dos três arquivos. SBR:  
   
 ```  
 BSCMAKE main.sbr file1.sbr file2.sbr  

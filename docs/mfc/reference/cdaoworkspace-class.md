@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa0067e3054972ccc60253bb7205dc7a4f1fe4bd
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7e6210f8c1b1fd1bd19efb74ca68c7a1bed3f7f1
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337441"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209125"
 ---
 # <a name="cdaoworkspace-class"></a>Classe CDaoWorkspace
 Gerencia uma sessão de banco de dados nomeado e protegido por senha de logon para fazer logoff, por um único usuário.  
@@ -745,7 +745,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
 ### <a name="parameters"></a>Parâmetros  
  *lpszDefaultUser*  
- O nome de usuário padrão. Um nome de usuário pode ter de 1 a 20 caracteres e incluir caracteres alfabéticos, caracteres acentuados, números, espaços e símbolos, exceto para: "(aspas), / (barra), \ (barra invertida), \[ \] (parênteses): (dois-pontos), &#124; ( barra vertical) \< (menos-sinal), > (maior-sinal), + (sinal de adição) = (sinal de igual), (ponto e vírgula), (vírgula) (ponto de interrogação), * (asterisco), levando espaços e caracteres de controle (ASCII 00 para 31 ASCII). Para obter informações relacionadas, consulte o tópico "Propriedade do nome de usuário" na Ajuda do DAO.  
+ O nome de usuário padrão. Um nome de usuário pode ter de 1 a 20 caracteres e incluir caracteres alfabéticos, caracteres acentuados, números, espaços e símbolos, exceto para: "(aspas), / (barra), \ (barra invertida), \[ \] (parênteses): (dois-pontos), &#124; ( barra vertical) \< (menos-sinal), > (maior-sinal), + (sinal de adição) = (sinal de igual), (ponto e vírgula), (vírgula) (ponto de interrogação), \* (asterisco), levando espaços e caracteres de controle (ASCII 00 para 31 ASCII). Para obter informações relacionadas, consulte o tópico "Propriedade do nome de usuário" na Ajuda do DAO.  
   
 ### <a name="remarks"></a>Comentários  
  O nome de usuário padrão que você definir se aplica a novos espaços de trabalho que você criar após a chamada. Quando você cria espaços de trabalho subsequentes, você precisa especificar um nome de usuário na [criar](#create) chamar.  

@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f6cc8cc10c026c5ecd621657c556da883c187f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c473b5cb6822df07f4972ff2c964c828b14b5966
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399030"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207527"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -82,13 +82,13 @@ Valores de ponto flutuante.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**fmod** retorna o resto de ponto flutuante de *x* / *y*. Se o valor de *y* é 0.0, **fmod** retorna um NaN silenciosa. Para obter informações sobre representação de um NaN silenciosa, o **printf** família, consulte [printf](printf-printf-l-wprintf-wprintf-l.md).
+**fmod** retorna o restante do ponto flutuante *x* / *y*. Se o valor de *y* é 0.0, **fmod** retorna um NaN silencioso. Para obter informações sobre a representação de um NaN silencioso pela **printf** família, consulte [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **fmod** função calcula o restante de ponto flutuante *f* de *x* / *y* , de modo que *x*  =  *i* * *y* + *f*, onde *i* é um inteiro, *f* tem o mesmo sinal *x*e o valor absoluto de *f* é menor que o valor absoluto de *y*.
+O **fmod** função calcula o restante do ponto flutuante *f* dos *x* / *y* que *x*  =  *eu* \* *y* + *f*, onde *eu* é um inteiro, *f* tem o mesmo sinal *x*e o valor absoluto do *f* é menor que o valor absoluto do *y*.
 
-O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **fmod** que levar e retornar **float** e **longo** **duplo** valores. Em um programa C, **fmod** sempre leva dois **duplo** argumentos e retorna um **duplo**.
+C++ permite sobrecargas, portanto, é possível chamar sobrecargas de **fmod** que usam e retornam **float** e **longo** **double** valores. Em um programa do C **fmod** sempre pega dois **duplo** argumentos e retorna um **double**.
 
 ## <a name="requirements"></a>Requisitos
 

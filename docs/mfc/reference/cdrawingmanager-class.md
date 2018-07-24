@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b5970f9d0ea6e3b0c7ed4715c8ff9c3578dc00
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337415"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209164"
 ---
 # <a name="cdrawingmanager-class"></a>Classe CDrawingManager
 O `CDrawingManager` classe implementa os algoritmos de desenho complexos.  
@@ -932,7 +932,7 @@ static COLORREF __stdcall SmartMixColors(
 ### <a name="remarks"></a>Comentários  
  Esse método falhará com um erro se o *k1* ou *k2* é menor que zero. Se ambos os parâmetros são definidos como 0, o método retorna `RGB(0, 0, 0)`.  
   
- A proporção ponderada é calculada com a seguinte fórmula: (color1 * k1 + cor2 \* k2) /(k1 + k2). Depois que a proporção ponderada é determinada, o método calcula a luminosidade da cor misto. Ele, em seguida, multiplica a luminosidade por *dblLumRatio*. Se o valor for maior que 1.0, o método define a luminosidade da cor misto para o novo valor. Caso contrário, a luminosidade é definida como 1.0.  
+ A proporção ponderada é calculada com a seguinte fórmula: (color1 \* k1 + cor2 \* k2) /(k1 + k2). Depois que a proporção ponderada é determinada, o método calcula a luminosidade da cor misto. Ele, em seguida, multiplica a luminosidade por *dblLumRatio*. Se o valor for maior que 1.0, o método define a luminosidade da cor misto para o novo valor. Caso contrário, a luminosidade é definida como 1.0.  
   
 ##  <a name="drawrotated"></a>  CDrawingManager::DrawRotated  
  Uma fonte de conteúdo do controlador de domínio dentro do retângulo determinado gira 90 graus.  

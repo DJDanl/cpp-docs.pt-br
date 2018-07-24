@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0756875a799aacaf7308c406d98cbbf3a9a2a2
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2047938e25ed235d04b7a851a21a44090194660a
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027960"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209112"
 ---
 # <a name="arm-exception-handling"></a>Tratamento de exceção ARM
 
@@ -248,25 +248,25 @@ A tabela a seguir mostra o mapeamento de códigos de desenrolamento para opcodes
 
 |Byte 1|Byte 2|Byte 3|Byte 4|Tamanho de opcode|Explicação|
 |------------|------------|------------|------------|------------|-----------------|
-|00-7F||||16|`add   sp,sp,#X`<br /><br /> em que X é (Código e 0x7F) * 4|
+|00-7F||||16|`add   sp,sp,#X`<br /><br /> em que X é (código e 0x7F) \* 4|
 |80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> em que LR será exibido se Código e 0x2000 e r0-r12 forem exibidos se o bit correspondente for configurado em Código e 0x1FFF|
 |C0-CF||||16|`mov   sp,rX`<br /><br /> em que X é Código e 0x0F|
 |D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> em que X é (Código e 0x03) + 4 e LR será exibido se Código e 0x04|
 |D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> em que X é (Código e 0x03) + 8 e LR será exibido se Código e 0x04|
 |E0-E7||||32|`vpop  {d8-dX}`<br /><br /> em que X é (Código e 0x07) + 8|
-|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> em que X é (Código e 0x03FF) * 4|
+|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> em que X é (código e 0x03FF) \* 4|
 |EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> em que LR será exibido se Código e 0x0100 e r0-r7 forem exibidos se o bit correspondente for configurado em Código e 0x00FF|
 |EE|00-0F|||16|Específico da Microsoft|
 |EE|10-FF|||16|Disponível|
-|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> em que X é (Código e 0x000F) * 4|
+|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> em que X é (código e 0x000F) \* 4|
 |EF|10-FF|||32|Disponível|
 |F0-F4||||-|Disponível|
 |F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> em que S é (Código e 0x00F0) >> 4 e E é Código e 0x000F|
 |F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> em que S é ((Código e 0x00F0) >> 4) + 16 e E é (Código e 0x000F) + 16|
-|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> em que X é (Código e 0x00FFFF) * 4|
-|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> em que X é (Código e 0x00FFFFFF) * 4|
-|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> em que X é (Código e 0x00FFFF) * 4|
-|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> em que X é (Código e 0x00FFFFFF) * 4|
+|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> em que X é (código e 0x00FFFF) \* 4|
+|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> em que X é (código e 0x00FFFFFF) \* 4|
+|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> em que X é (código e 0x00FFFF) \* 4|
+|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> em que X é (código e 0x00FFFFFF) \* 4|
 |FB||||16|nop (16 bits)|
 |FC||||32|nop (32 bits)|
 |FD||||16|end + nop de 16 bits no epílogo|
@@ -751,3 +751,4 @@ Function:
 
 [Visão geral das convenções ARM ABI](../build/overview-of-arm-abi-conventions.md)  
 [Problemas de migração ARM do Visual C++ comuns](../build/common-visual-cpp-arm-migration-issues.md)  
+

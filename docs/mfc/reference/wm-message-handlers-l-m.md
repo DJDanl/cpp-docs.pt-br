@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2697ed09043cb14e57b5f62aad9b9a660446e84a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f9b60c83c17b87c59afc0d79cca7ad6e91619a9
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379594"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207540"
 ---
 # <a name="wm-message-handlers-l---m"></a>Manipuladores de mensagens WM_: L - M
 As seguintes entradas de mapa à esquerda correspondem aos protótipos de função à direita:  
@@ -61,23 +61,23 @@ As seguintes entradas de mapa à esquerda correspondem aos protótipos de funç�
 |ON_WM_MBUTTONDBLCLK()|void afx_msg [OnMButtonDblClk](../../mfc/reference/cwnd-class.md#onmbuttondblclk)(UINT, CPoint);|  
 |ON_WM_MBUTTONDOWN()|void afx_msg [OnMButtonDown](../../mfc/reference/cwnd-class.md#onmbuttondown)(UINT, CPoint);|  
 |ON_WM_MBUTTONUP()|void afx_msg [OnMButtonUp](../../mfc/reference/cwnd-class.md#onmbuttonup)(UINT, CPoint);|  
-|ON_WM_MDIACTIVATE()|void afx_msg [OnMDIActivate](../../mfc/reference/cwnd-class.md#onmdiactivate)(BOOL, CWnd * CWnd\*);|  
+|ON_WM_MDIACTIVATE()|void afx_msg [OnMDIActivate](../../mfc/reference/cwnd-class.md#onmdiactivate)(BOOL, CWnd\*, CWnd\*);|  
 |ON_WM_MEASUREITEM()|void afx_msg [OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)(LPMEASUREITEMSTRUCT);|  
-|ON_WM_MENUCHAR()|afx_msg LONGA [OnMenuChar](../../mfc/reference/cwnd-class.md#onmenuchar)(UINT, UINT, CMenu *);|  
-|ON_WM_MENUDRAG()|afx_msg UINT [OnMenuDrag](../../mfc/reference/cwnd-class.md#onmenudrag)(UINT, CMenu *);|  
-|ON_WM_MENUGETOBJECT()|afx_msg UINT [OnMenuGetObject](../../mfc/reference/cwnd-class.md#onmenugetobject)(MENUGETOBJECTINFO *);|  
-|ON_WM_MENURBUTTONUP()|void afx_msg [OnMenuRButtonUp](../../mfc/reference/cwnd-class.md#onmenurbuttonup)(UINT, CMenu *);|  
+|ON_WM_MENUCHAR()|afx_msg LONGA [OnMenuChar](../../mfc/reference/cwnd-class.md#onmenuchar)(UINT, UINT, CMenu\*);|  
+|ON_WM_MENUDRAG()|afx_msg UINT [OnMenuDrag](../../mfc/reference/cwnd-class.md#onmenudrag)(UINT, CMenu\*);|  
+|ON_WM_MENUGETOBJECT()|afx_msg UINT [OnMenuGetObject](../../mfc/reference/cwnd-class.md#onmenugetobject)(MENUGETOBJECTINFO\*);|  
+|ON_WM_MENURBUTTONUP()|void afx_msg [OnMenuRButtonUp](../../mfc/reference/cwnd-class.md#onmenurbuttonup)(UINT, CMenu\*);|  
 |ON_WM_MENUSELECT()|void afx_msg [OnMenuSelect](../../mfc/reference/cwnd-class.md#onmenuselect)(UINT, UINT, HMENU);|  
-|ON_WM_MOUSEACTIVATE()|int afx_msg [OnMouseActivate](../../mfc/reference/cwnd-class.md#onmouseactivate)(CWnd *, UINT, UINT);|  
+|ON_WM_MOUSEACTIVATE()|int afx_msg [OnMouseActivate](../../mfc/reference/cwnd-class.md#onmouseactivate)(CWnd\*, UINT, UINT);|  
 |ON_WM_MOUSEHOVER()|void afx_msg [OnMouseHover](../../mfc/reference/cwnd-class.md#onmousehover)(UINT, CPoint);|  
-|ON_WM_MOUSEHWHEEL()|void afx_msg [OnMouseHWheel](../../mfc/reference/cwnd-class.md#onmousehwheel)(UINT, short, CPoint);|  
-|ON_WM_MOUSELEAVE()|void afx_msg [OnMouseLeave](../../mfc/reference/cwnd-class.md#onmouseleave)();|  
+|ON_WM_MOUSEHWHEEL()|void afx_msg [OnMouseHWheel](../../mfc/reference/cwnd-class.md#onmousehwheel)(UINT, curto, CPoint);|  
+|ON_WM_MOUSELEAVE()|void afx_msg [onmouseleave foi](../../mfc/reference/cwnd-class.md#onmouseleave)();|  
 |ON_WM_MOUSEMOVE()|void afx_msg [OnMouseMove](../../mfc/reference/cwnd-class.md#onmousemove)(UINT, CPoint);|  
-|ON_WM_MOUSEWHEEL()|afx_msg BOOL [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)(UINT, short, CPoint);|  
+|ON_WM_MOUSEWHEEL()|afx_msg BOOL [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)(UINT, curto, CPoint);|  
 |ON_WM_MOVE()|void afx_msg [OnMove](../../mfc/reference/cwnd-class.md#onmove)(int, int);|  
 |ON_WM_MOVING()|void afx_msg [OnMoving](../../mfc/reference/cwnd-class.md#onmoving)(UINT, LPRECT);|  
   
 ## <a name="see-also"></a>Consulte também  
- [Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)   
+ [Mapas de Mensagens](../../mfc/reference/message-maps-mfc.md)   
  [Manipuladores para mensagens WM_](../../mfc/reference/handlers-for-wm-messages.md)
 

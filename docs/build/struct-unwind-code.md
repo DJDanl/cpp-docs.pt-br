@@ -12,80 +12,80 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 068acacf88e9ac968b34c26bf76657fd33adf4f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 919568b5b1f7feba403a4bdbc838f69ca5da70e5
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390093"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207768"
 ---
 # <a name="struct-unwindcode"></a>struct UNWIND_CODE
-A matriz de código de desenrolamento é usada para registrar a sequência de operações no prólogo que afetam os registros não volátil e RSP. Cada item de código tem o seguinte formato:  
+A matriz de código de desenrolamento é usada para registrar a sequência de operações no prólogo que afetam os registros não voláteis e RSP. Cada item de código tem o seguinte formato:  
   
 |||  
 |-|-|  
-|UBYTE|Deslocamento de prólogo|  
-|UBYTE: 4|Código de operação de liberação|  
+|UBYTE|Deslocamento no prólogo|  
+|UBYTE: 4|Código de operação de desenrolamento|  
 |UBYTE: 4|Informações de operação|  
   
  A matriz é classificada por ordem decrescente de deslocamento no prólogo.  
   
- **Deslocamento de prólogo**  
- Deslocamento do início do prólogo do final da instrução que executa essa operação, além de 1 (ou seja, o deslocamento do início da próxima instrução).  
+ **Deslocamento no prólogo**  
+ Deslocamento do início do prólogo do fim da instrução que executa esta operação, além de 1 (ou seja, o deslocamento do início da próxima instrução).  
   
- **Código de operação de liberação**  
- Observação: Certos códigos de operação exige um deslocamento não assinado com um valor no quadro de pilha local. Esse deslocamento é desde o início (endereço mais baixo) da alocação da pilha fixa. Se o campo quadro registrar o UNWIND_INFO for zero, esse deslocamento é from RSP. Se o campo de registrar o quadro for diferente de zero, isso é o deslocamento de onde RSP foi localizado quando o registro FP foi estabelecido. Isso equivale a reg FP menos o deslocamento do registro FP (16 * o quadro dimensionado e registrar o deslocamento no UNWIND_INFO). Se um registro FP for usado, em seguida, qualquer código de desenrolamento fazer um deslocamento deve ser usado somente depois que o registro FP é estabelecido no prólogo.  
+ **Código de operação de desenrolamento**  
+ Observação: Determinados códigos de operação exige um deslocamento não assinado com um valor no quadro de pilha local. Esse deslocamento é desde o início (endereço mais baixo) da alocação de pilha fixa. Se o campo quadro registrar o UNWIND_INFO for zero, esse deslocamento é from RSP. Se o campo de registrar o quadro for diferente de zero, este é o deslocamento a partir de onde RSP estava localizado quando o reg FP foi estabelecido. Isso é igual ao reg FP menos o deslocamento de reg FP (16 \* o quadro dimensionado e registrar o deslocamento no UNWIND_INFO). Se for usado um registro FP, em seguida, qualquer código de desenrolamento levando um deslocamento deve ser usado somente depois que o reg FP é estabelecido no prólogo.  
   
- Para todos os opcodes exceto UWOP_SAVE_XMM128 e UWOP_SAVE_XMM128_FAR, o deslocamento pode ser sempre um múltiplo de 8, porque todos os valores de pilha de interesse são armazenados em limites de 8 bytes (a pilha em si é sempre alinhado de 16 bytes). Para códigos de operação que assumem um deslocamento curto (menos de 512K), o final USHORT em nós para este código mantém o deslocamento dividido por 8. Para códigos de operação que assumem um deslocamento longo (512K < = < 4GB de deslocamento), os dois nós USHORT finais para o código de armazenar o deslocamento (em formato little-endian).  
+ Para todos os opcodes, exceto UWOP_SAVE_XMM128 e UWOP_SAVE_XMM128_FAR, o deslocamento será sempre ser um múltiplo de 8, porque todos os valores de pilha de interesse são armazenados em limites de 8 bytes (a pilha em si é sempre alinhado de 16 bytes). Para códigos de operação que assumem um deslocamento curto (menos de 512K), o final USHORT em nós para este código mantém o deslocamento dividido por 8. Para códigos de operação que assumem um deslocamento longo (512K < = < 4GB de deslocamento), os dois nós USHORT finais para que esse código mantêm o deslocamento (no formato little-endian).  
   
- Para os opcodes UWOP_SAVE_XMM128 e UWOP_SAVE_XMM128_FAR, o deslocamento pode ser sempre um múltiplo de 16, desde que todas as operações de XMM de 128 bits devem ocorrer na memória de 16 bytes alinhada. Portanto, um fator de escala de 16 é usado para UWOP_SAVE_XMM128, permitindo que os deslocamentos de menos de 1 milhão.  
+ Para os opcodes UWOP_SAVE_XMM128 e UWOP_SAVE_XMM128_FAR, o deslocamento sempre será um múltiplo de 16, já que todas as operações MMX de 128 bits devem ocorrer em memória de 16 bytes alinhada. Portanto, um fator de escala de 16 é usado para UWOP_SAVE_XMM128, permitindo que os deslocamentos de menos de 1M.  
   
- O código de operação de liberação é um dos seguintes:  
+ O código de operação de desenrolamento é um dos seguintes:  
   
  UWOP_PUSH_NONVOL (0) 1 nó  
   
- Enviar um registro inteiro não volátil, diminuindo RSP por 8. As informações de operação são o número do registro. Observe que, devido as restrições em epilogs, códigos de desenrolamento UWOP_PUSH_NONVOL devem aparecer primeiras no prólogo e de maneira correspondente, da última na matriz de código de desenrolamento. Essa ordenação relativa aplica-se a todos os outros códigos de desenrolamento exceto UWOP_PUSH_MACHFRAME.  
+ Enviar por push um registro inteiro não volátil, diminuindo RSP por 8. As informações de operação são o número do registro. Observe que, devido a restrições no epílogos, códigos de desenrolamento UWOP_PUSH_NONVOL devem aparecer primeiros no prólogo e do mesmo modo, a última na matriz de código de desenrolamento. Essa ordenação relativa aplica-se a todos os outros códigos de desenrolamento, exceto UWOP_PUSH_MACHFRAME.  
   
  UWOP_ALLOC_LARGE (1) 2 ou 3 nós  
   
- Aloca uma área de grande porte na pilha. Há duas formas. Se as informações de operação for igual a 0, o tamanho da alocação dividido por 8 é registrado no slot de Avançar, permitindo que uma alocação de até 512 K - 8. Se as informações de operação é igual a 1, o tamanho de escala da alocação é registrado nos próximos dois slots no formato little-endian, permitindo que as alocações de até 4GB - 8.  
+ Aloca uma área de grande porte na pilha. Há duas formas. Se as informações de operação for igual a 0 e, em seguida, o tamanho da alocação dividido por 8 é registrado no slot de Avançar, permitindo que uma alocação até 512 K - 8. Se as informações de operação é igual a 1, o tamanho de fora de escala da alocação é registrado nos próximos dois slots no formato little-endian, permitindo que as alocações de até 4GB - 8.  
   
  UWOP_ALLOC_SMALL (2) 1 nó  
   
- Aloca uma área de pequeno porte na pilha. O tamanho da alocação é o campo de informações de operação * 8 + 8, permitindo que as alocações de 8 a 128 bytes.  
+ Aloca uma área de pequeno porte na pilha. O tamanho da alocação é o campo de informações de operação \* 8 + 8, permitindo que as alocações de 8 a 128 bytes.  
   
- O código de desenrolamento para alocação de pilha sempre deve usar a mais curta possível codificação:  
+ O código de desenrolamento para uma alocação de pilha sempre deve usar a mais curta possível codificação:  
   
 |||  
 |-|-|  
 |**Tamanho de alocação**|**Código de desenrolamento**|  
 |8 a 128 bytes|UWOP_ALLOC_SMALL|  
 |136 para 512K - 8 bytes|UWOP_ALLOC_LARGE, informações de operação = 0|  
-|512K a 4G - 8 bytes|UWOP_ALLOC_LARGE, informações de operação = 1|  
+|G 512K para 4 – 8 bytes|UWOP_ALLOC_LARGE, informações de operação = 1|  
   
  UWOP_SET_FPREG (3) 1 nó  
   
- Estabelece o registro de ponteiro de quadro, definindo o registro para alguns deslocamento do RSP atual. O deslocamento é igual ao registrar o quadro deslocamento (escala) campo o UNWIND_INFO * 16, permitindo que os deslocamentos de 0 a 240. O uso de um deslocamento permite estabelecer um ponteiro de quadro que aponta para o meio da alocação da pilha fixa, ajudando a densidade de código, permitindo que acessa mais usar formulários de instrução curto. Observe que o campo de informações de operação é reservado e não deve ser usado.  
+ Estabelece o registro de ponteiro de quadro, definindo o registro para alguns deslocamento do RSP atual. O deslocamento é igual ao registrar o quadro deslocamento (escala) campo no UNWIND_INFO \* 16, permitindo que os deslocamentos de 0 a 240. O uso de um deslocamento permite estabelecer um ponteiro de quadro que aponta para o meio da alocação de pilha fixa, ajudando a densidade do código, permitindo que mais acessos a usar formulários de instrução curto. Observe que o campo de informações de operação é reservado e não deve ser usado.  
   
  UWOP_SAVE_NONVOL (4) 2 nós  
   
- Salve um registro não volátil inteiro na pilha usando um MOV em vez de um envio por PUSH. Isso é usado principalmente para shrink-wrapping, onde um registro não volátil é salvo na pilha em uma posição que antes era alocada. As informações de operação são o número do registro. O deslocamento de pilha expandida por 8 é registrado nos próximos desenrolar o slot de código de operação, conforme descrito na observação acima.  
+ Salve um registro não volátil inteiros na pilha usando uma MOV em vez de um envio por PUSH. Isso é usado principalmente para wrapping, onde um registro não volátil é salvo para a pilha em uma posição que foi alocada anteriormente. As informações de operação são o número do registro. O deslocamento de pilha dimensionado-by-8 é registrado nos próximos slot de código de operação de desenrolamento, conforme descrito na observação acima.  
   
  UWOP_SAVE_NONVOL_FAR (5) 3 nós  
   
- Salve um registro não volátil inteiro na pilha com um deslocamento de tempo, usando um MOV em vez de um envio por PUSH. Isso é usado principalmente para shrink-wrapping, onde um registro não volátil é salvo na pilha em uma posição que antes era alocada. As informações de operação são o número do registro. O deslocamento de pilha fora de escala é registrado nos próximos dois desenrolar slots de código de operação, conforme descrito na observação acima.  
+ Salvar um registro não volátil inteiro na pilha com um deslocamento de tempo, usando um MOV em vez de um envio por PUSH. Isso é usado principalmente para wrapping, onde um registro não volátil é salvo para a pilha em uma posição que foi alocada anteriormente. As informações de operação são o número do registro. O deslocamento de pilha fora de escala é registrado nos próximos dois slots de código de operação de desenrolamento, conforme descrito na observação acima.  
   
  UWOP_SAVE_XMM128 (8) 2 nós  
   
- Salve todos os 128 bits de um não volátil XMM registrar na pilha. As informações de operação são o número do registro. O deslocamento de pilha expandida-por-16 é registrado no slot de Avançar.  
+ Salve todos os 128 bits de um não-volátil XMM registrar na pilha. As informações de operação são o número do registro. O deslocamento de pilha dimensionado por 16 é registrado no slot de Avançar.  
   
  UWOP_SAVE_XMM128_FAR (9) 3 nós  
   
- Salve todos os 128 bits de um não volátil XMM registrar na pilha com um deslocamento de tempo. As informações de operação são o número do registro. O deslocamento de pilha fora de escala é registrado nos próximos dois slots.  
+ Salve todos os 128 bits de um não-volátil XMM registrar na pilha com um deslocamento de tempo. As informações de operação são o número do registro. O deslocamento de pilha fora de escala é registrado nos próximos dois slots.  
   
  UWOP_PUSH_MACHFRAME (10) 1 nó  
   
- Enviar por push um quadro de máquina.  Isso é usado para registrar o efeito de uma exceção ou interrupção de hardware. Há duas formas. Se as informações de operação for igual a 0, o seguinte foi pressionado na pilha:  
+ Enviar por push um quadro de máquina.  Isso é usado para registrar o efeito de uma exceção ou interrupção de hardware. Há duas formas. Se as informações de operação é igual a 0, o seguinte foi enviado na pilha:  
   
 |||  
 |-|-|  
@@ -95,7 +95,7 @@ A matriz de código de desenrolamento é usada para registrar a sequência de op
 |RSP + 8|CS|  
 |RSP|RIP|  
   
- Se as informações de operação for igual a 1, em seguida, em vez disso, foi introduzido o seguinte:  
+ Se as informações de operação é igual a 1, em seguida, em vez disso, foi introduzido o seguinte:  
   
 |||  
 |-|-|  
@@ -106,26 +106,26 @@ A matriz de código de desenrolamento é usada para registrar a sequência de op
 |RSP + 8|RIP|  
 |RSP|Código de erro|  
   
- Esse código de desenrolamento sempre aparecerá no prólogo fictício, que, na verdade, nunca é executado, mas em vez disso, aparece antes do ponto de entrada real de uma rotina de interrupção e existe somente para fornecer um local para simular o envio por push de um quadro de máquina. UWOP_PUSH_MACHFRAME registra simulação, que indica que a máquina conceitualmente foi feito o seguinte:  
+ Esse código de desenrolamento sempre serão exibidas em um prólogo fictício, que, na verdade, nunca é executado, mas em vez disso, é exibido antes do ponto de entrada real de uma rotina de interrupção e existe somente para fornecer um local para simular o envio por push de um quadro de máquina. UWOP_PUSH_MACHFRAME registra essa simulação, que indica que a máquina conceitualmente tem feito o seguinte:  
   
- Pop RIP endereço de retorno da parte superior da pilha em *Temp*  
+ Pop-RIP endereço de retorno da parte superior da pilha em *Temp*  
   
- SS de envio  
+ SS de envio por push  
   
- Enviar por push antiga RSP  
+ Enviar por push RSP antigo  
   
  Enviar por push EFLAGS  
   
- Enviar por push CS  
+ Enviar por push do CS  
   
  Enviar por push *Temp*  
   
  Enviar por push o código de erro (se as informações de operações é igual a 1)  
   
- O simulada diminui de operação de UWOP_PUSH_MACHFRAME RSP em 40 (informações de operações é igual a 0) ou 48 (informações de operações é igual a 1).  
+ Diminui de operação UWOP_PUSH_MACHFRAME o simulado RSP em 40 (informações de operações é igual a 0) ou 48 (informações de operações é igual a 1).  
   
  **Informações de operação**  
- O significado desses 4 bits variam de acordo com o código de operação. Para codificar um registro de uso geral (inteiro), o seguinte mapeamento é usado:  
+ O significado desses bits 4 depende do código da operação. Para codificar um registro de uso geral (inteiro), o seguinte mapeamento é usado:  
   
 |||  
 |-|-|  

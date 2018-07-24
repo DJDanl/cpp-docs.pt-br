@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe5866c3e945d55722a4cf8530c543b0e8ca5163
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942149"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208556"
 ---
 # <a name="overview-of-declarators"></a>Visão geral dos declaradores
 Declaradores são os componentes de uma declaração que especificam nomes de objetos ou funções. Os declaradores também especificam se o objeto nomeado é ou não um objeto, um ponteiro, uma referência ou uma matriz.  Quando os declaradores não especificam o tipo de base, eles modificam as informações de tipo no tipo básico para especificar tipos derivados, como ponteiros, referências e matrizes.  Aplicado a funções, o declarador trabalha com o especificador de tipo para especificar completamente o tipo de retorno de uma função para ser um objeto, ponteiro ou referência. (Especificadores, abordados em [declarações e definições](declarations-and-definitions-cpp.md), transmitem propriedades como o armazenamento e o tipo de classe. Os modificadores, abordados nesta seção e, na [modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md), modificam declaradores.) A figura a seguir mostra uma declaração completa de `MyFunction`, e chama os componentes da declaração.  
@@ -127,7 +127,7 @@ int i, *j, f(int k);  // int, pointer to int, function returning int
 int* i, f(int k);  // pointer to int, function returning int (not int*)  
 ```  
   
- pode se parecer com a declaração de um **int** ponteiro e uma função que retorna `int*`, mas não é.  Isso é porque * faz parte do declarador para `i`, e não faz parte do declarador para `f`.  
+ pode se parecer com a declaração de um **int** ponteiro e uma função que retorna `int*`, mas não é.  Isso ocorre porque o \* faz parte do declarador para `i`, que não faz parte do declarador para `f`.  
   
  **Simplificando a sintaxe do declarator com typedef**  
   
@@ -175,8 +175,8 @@ int a, *b, c[5], **d, &e=a;
   
 - e *operador de ponteiro* é um dos:  
   
-  - * [qualificadores cv]  
-  - & [qualificadores cv]:: especificador aninhados de nome * [qualificadores cv]  
+  - \* [qualificadores cv]  
+  - & [qualificadores cv]:: especificador aninhados de nome \* [qualificadores cv]  
 
   
  Como um declarador pode conter declaradores, é possível criar os tipos derivados mais complexos, como matrizes de ponteiros, funções que retornam matrizes de ponteiros de função, usando as regras acima.  Para formar cada etapa da construções, comece com o identificador que representa o tipo de dados base e aplique a regra de sintaxe acima com a expressão anterior como `declarator`.  A ordem que você aplica as regras de sintaxe deve ser contrária à forma que a expressão é indicada em inglês.  Se aplicar a *operador de ponteiro* regra de sintaxe em uma expressão de matriz ou função, use parênteses se você quiser que um ponteiro para a matriz ou função, como a última linha na tabela a seguir.  
@@ -190,4 +190,4 @@ int a, *b, c[5], **d, &e=a;
 |matriz de 10|`(*i)[10]`|4|  
 |ponteiro para|`*((*i)[10])`|6 e depois 5|  
   
- Quando vários modificadores de ponteiro, referência, matriz ou função são usados, os declaradores podem se tornar bem complicados.  O tópico [Interpretando declaradores mais complexos](../c-language/interpreting-more-complex-declarators.md) descreve como ler a sintaxe de declarador mais complexa.  O tópico é aplicável para C e C++, embora em C++, em qualquer lugar a * é usado para indicar um ponteiro, um nome qualificado, como MyClass::\* pode ser usada para especificar um ponteiro para um membro de uma classe.
+ Quando vários modificadores de ponteiro, referência, matriz ou função são usados, os declaradores podem se tornar bem complicados.  O tópico [Interpretando declaradores mais complexos](../c-language/interpreting-more-complex-declarators.md) descreve como ler a sintaxe de declarador mais complexa.  O tópico é aplicável para C e C++, embora em C++, em qualquer lugar de \* é usado para indicar um ponteiro, um nome qualificado, como MyClass::\* pode ser usada para especificar um ponteiro para um membro de uma classe.

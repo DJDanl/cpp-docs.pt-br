@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c516932eb8d50fb8c9fdbe6f8c48a3f590b1ffb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 279fb5f7c400a3c7160a9dc66c6cfce7ccaf2bc4
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408478"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208491"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -57,7 +57,7 @@ int setvbuf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
 *buffer*<br/>
@@ -73,20 +73,20 @@ O tamanho do buffer, em bytes. Intervalo permitido: 2 < = *tamanho* < = INT_MAX 
 
 Retorna 0 se for bem-sucedido.
 
-Se *fluxo* é **nulo**, ou se *modo* ou *tamanho* é não dentro de uma alteração válida, o manipulador de parâmetro inválido é invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, esta função retornará -1 e conjuntos de **errno** para **EINVAL**.
+Se *stream* é **nulo**, ou se *modo* ou *tamanho* é não dentro de uma alteração válida, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará -1 e definirá **errno** à **EINVAL**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **setvbuf** função permite que o programa controlar os dois buffer e tamanho do buffer *fluxo*. *fluxo* devem se referir a um arquivo aberto que não passou por uma operação de e/s desde que ela foi aberta. A matriz apontada pelo *buffer* é usado como o buffer, a menos que ele seja **nulo**, caso em que **setvbuf** utiliza um buffer alocado automaticamente de comprimento  *tamanho*bytes de e/2 * 2.
+O **setvbuf** função permite que o programa controle o buffer e o tamanho do buffer para *fluxo*. *fluxo* deve se referir a um arquivo aberto que não passou por uma operação de e/s desde que ela foi aberta. A matriz apontada por *buffer* é usado como o buffer, a menos que ele seja **nulo**, caso em que **setvbuf** usa um buffer alocado automaticamente de comprimento  *tamanho*/2 \* 2 bytes.
 
 O modo deve ser **iofbf**, **iolbf**, ou **ionbf**. Se *modo* é **iofbf** ou **iolbf**, em seguida, *tamanho* é usado como o tamanho do buffer. Se *modo* é **ionbf**, o fluxo é sem buffer e *tamanho* e *buffer* são ignorados. Os valores para *modo* e seus significados são:
 
 |*modo* valor|Significado|
 |-|-|
 **IOFBF**|Buffer completo; ou seja, *buffer* é usado como o buffer e *tamanho* é usado como o tamanho do buffer. Se *buffer* é **nulo**, um buffer alocado automaticamente *tamanho* bytes de comprimento é usado.
-**IOLBF**|Para alguns sistemas, isso fornece buffer em linha. No entanto, para Win32, o comportamento é o mesmo que **iofbf** -buffer completo.
+**IOLBF**|Para alguns sistemas, isso fornece buffer em linha. No entanto, para Win32, o comportamento é igual a **iofbf** -buffer completo.
 **IONBF**|Nenhum buffer é usado, independentemente de *buffer* ou *tamanho*.
 
 ## <a name="requirements"></a>Requisitos

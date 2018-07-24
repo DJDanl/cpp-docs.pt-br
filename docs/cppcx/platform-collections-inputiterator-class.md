@@ -1,5 +1,5 @@
 ---
-title: Classe Platform::Collections::InputIterator | Microsoft Docs
+title: '{1&gt;classe Platform::Collections::inputiterator&lt;1} | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -15,15 +15,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7188cba0655e2ca89f82b60ffe9ee4b8ce94633a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fbd80f649b27bcb3af720871d6d1378f5fe220c8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089085"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208478"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Classe Platform::Collections::InputIterator
-Fornece um InputIterator da biblioteca de modelos padrão para coleções derivadas do tempo de execução do Windows.  
+Fornece um InputIterator da biblioteca de modelo padrão para coleções derivadas o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -88,7 +88,7 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
   
 
 
-## <a name="operator-arrow"></a>  Inputiterator:: Operator -&gt; operador
+## <a name="operator-arrow"></a>  Operador inputiterator:: -&gt; operador
 Recupera o endereço do elemento especificado pelo InputIterator atual.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -102,7 +102,7 @@ pointer operator->() const;
   
 
 
-## <a name="operator-dereference"></a>  Operador inputiterator:: Operator *
+## <a name="operator-dereference"></a>  Operador inputiterator::\* operador
 Recupera uma referência ao elemento especificado pelo InputIterator atual.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -116,7 +116,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>  Inputiterator:: Operator = = operador
+## <a name="operator-equality"></a>  Operador inputiterator:: Operator = =
 Indica se o InputIterator atual é igual a um InputIterator especificado.  
   
 ### <a name="syntax"></a>Sintaxe  

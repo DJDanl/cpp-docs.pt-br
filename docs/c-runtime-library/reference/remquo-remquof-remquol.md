@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d2bcb774d7ebe7e71c3877af326177bbf8d7160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 480bf65d61581866fe447c9563a267d08d17c838
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406996"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207647"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -69,18 +69,18 @@ O numerador.
 *denom*<br/>
 O denominador.
 
-*atual*<br/>
+*quo*<br/>
 Um ponteiro para um inteiro para armazenar um valor que tem o sinal e magnitude aproximada do quociente.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**remquo** retorna o resto de ponto flutuante de *x* / *y*. Se o valor de *y* é 0.0, **remquo** retorna um NaN silenciosa. Para obter informações sobre a representação de um NaN silenciosa, o **printf** família, consulte [printf, printf_l, and wprintf, wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**remquo** retorna o restante do ponto flutuante *x* / *y*. Se o valor de *y* é 0.0, **remquo** retorna um NaN silencioso. Para obter informações sobre a representação de um NaN silencioso pela **printf** família, consulte [printf, printf_l, wprintf, wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **remquo** função calcula o restante de ponto flutuante *f* de *x* / *y* , de modo que *x*   =  *i* * *y* + *f*, onde *i* é um número inteiro , *f* tem o mesmo sinal *x*e o valor absoluto de *f* é menor que o valor absoluto de *y*.
+O **remquo** função calcula o restante do ponto flutuante *f* dos *x* / *y* que *x*   =  *eu* \* *y* + *f*, onde *eu* é um número inteiro , *f* tem o mesmo sinal *x*e o valor absoluto do *f* é menor que o valor absoluto do *y*.
 
-O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **remquo** que levar e retornar **float** ou **longo** **duplo** valores. Em um programa C, **remquo** sempre leva dois **duplo** argumentos e retorna um **duplo**.
+C++ permite sobrecargas, portanto, é possível chamar sobrecargas de **remquo** que usam e retornam **float** ou **longo** **double** valores. Em um programa do C **remquo** sempre pega dois **duplo** argumentos e retorna um **double**.
 
 ## <a name="requirements"></a>Requisitos
 

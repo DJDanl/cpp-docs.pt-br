@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7abcfcfe6aec722fa3540ad974017ab47e6cf71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885445"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209216"
 ---
 # <a name="ccomptrbase-class"></a>Classe CComPtrBase
 Essa classe fornece uma base para classes de ponteiro inteligente usando memória COM base em rotinas.  
@@ -77,7 +77,7 @@ class CComPtrBase
 |[CComPtrBase::operator T *](#operator_t_star)|O operador cast.|  
 |[CComPtrBase::operator!](#operator_not)|O operador NOT.|  
 |[CComPtrBase::operator &](#operator_amp)|A & operador.|  
-|[CComPtrBase::operator *](#operator_star)|O * operador.|  
+|[CComPtrBase::operator *](#operator_star)|O operador \*.|  
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|O menor-que o operador.|  
 |[CComPtrBase::operator = =](#operator_eq_eq)|O operador de igualdade.|  
 |[CComPtrBase::operator ->](#operator_ptr)|O operador de membros do ponteiro.|  
@@ -246,8 +246,8 @@ T** operator&() throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o endereço do objeto apontado pelo `CComPtrBase` objeto.  
   
-##  <a name="operator_star"></a>  CComPtrBase::operator *  
- O * operador.  
+##  <a name="operator_star"></a>  CComPtrBase::operator \*  
+ O operador \*.  
   
 ```
 T& operator*() const throw();
@@ -300,7 +300,7 @@ bool operator<(T* pT) const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna VERDADEIRO se o ponteiro gerenciado pelo objeto atual é menor que o ponteiro para o qual está sendo comparado.  
   
-##  <a name="operator_t_star"></a>  CComPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*  
  O operador cast.  
   
 ```  

@@ -12,29 +12,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daff070700c37734e6239514d196f02ee1351c00
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e91f762a6f340d4fe0dcc513dea850b977e0524c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695360"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208722"
 ---
 # <a name="graphics-c-amp"></a>Elementos gráficos (C++ AMP)
-C++ AMP contém várias APIs no [Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) namespace que você pode usar para acessar o suporte de textura na GPU. Alguns cenários comuns são:  
+C++ AMP contém várias APIs na [Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) namespace que você pode usar para acessar o suporte de textura em GPUs. Alguns cenários comuns são:  
   
--   Você pode usar o [textura](../../parallel/amp/reference/texture-class.md) classe como um contêiner de dados para a computação e exploração de *localidade espacial* do cache de textura e layouts de hardware da GPU. Localidade espacial é a propriedade de elementos de dados estar fisicamente próximos uns dos outros.  
+-   Você pode usar o [textura](../../parallel/amp/reference/texture-class.md) classe como um contêiner de dados para a computação e explorar o *localidade espacial* do cache de textura e layouts de hardware da GPU. Localidade espacial é a propriedade dos elementos de dados que estão fisicamente perto uns dos outros.  
   
--   O tempo de execução fornece interoperabilidade eficiente com sombreadores de computação não. Pixel, vértice, mosaico e sombreadores convexa frequentemente consumirem ou produzem texturas que você pode usar em seus cálculos C++ AMP.  
+-   O tempo de execução fornece uma interoperabilidade eficiente com shaders não computados. Pixel, o vértice, o mosaico e shaders de casca frequentemente consomem ou geram texturas que você pode usar em seus cálculos de C++ AMP.  
   
--   Gráficos de APIs em C++ AMP fornecem modos alternativos de acessar sub palavras buffers compactados. Texturas com formatos que representam *texels* (elementos de textura) que são compostos de 8 bits ou escalares de 16 bits permitem acesso a esse armazenamento de dados compactado.  
+-   Os gráficos APIs no C++ AMP fornecem maneiras alternativas para acessar buffers empacotados em sub-palavras do word inferior. As texturas que possuem os formatos que representam *texels* (elementos de textura) que são compostos de 8 bits ou 16 bits escalares permitem o acesso ao armazenamento de dados empacotado.  
   
-## <a name="the-norm-and-unorm-types"></a>Os tipos normais e unorm  
- O `norm` e `unorm` tipos são tipos escalares que limitam o intervalo de `float` valores; isso é conhecido como *fixação*. Esses tipos podem ser construídos explicitamente de outros tipos escalares. Na conversão, o valor é primeiro convertido em `float` e, em seguida, é fixado à região de respectivos é permitido pela norma [-1,0, 1,0] ou unorm [0,0, 1,0]. Retorna a projeção de + /-infinito + /-1. A projeção de NaN não está definida. Um modelo pode ser construído implicitamente em um unorm e não há nenhuma perda de dados. O operador de conversão implícita em float é definido nesses tipos. Operadores binários definidos entre esses tipos e outros tipos escalares internos, como `float` e `int`: +, -, *, /, = =,! =, >, \<, > =, < =. Também há suporte para os operadores de atribuição composta: + =,-=, \*= / =. O operador unário de negação (-) está definido para tipos de modelo.  
+## <a name="the-norm-and-unorm-types"></a>Os tipos norm e unorm  
+ O `norm` e `unorm` tipos são tipos escalares que limitam o intervalo de `float` valores; isso é conhecido como *fixação*. Esses tipos podem ser explicitamente construídos de outros tipos escalares. Na conversão, o valor é primeiro convertido em `float` e comprimido na região respectiva que é permitida por norm [-1,0, 1,0] ou unorm [0,0, 1,0]. Conversão de + /-infinito retorna + /-1. Conversão de NaN é indefinida. Uma norma pode ser implicitamente construída a partir de um unorm, e não há nenhuma perda de dados. O operador de conversão implícita para flutuante é definido nesses tipos. Operadores binários são definidos entre esses tipos e outros tipos internos escalares, como `float` e `int`: +, -, \*, /, = =,! =, >, \<, > =, < =. Os operadores de atribuição composta também são suportados: + =, -=, \*=, / =. O operador unário de negação (-) é definido para tipos norm.  
   
 ## <a name="short-vector-library"></a>Biblioteca de vetor curto  
- A biblioteca de vetor curto fornece algumas das funcionalidades de [tipo Vector](http://go.microsoft.com/fwlink/p/?linkid=248500) que é definido em HLSL e é normalmente usado para definir texels. Um vetor curto é uma estrutura de dados que contém os valores de uma a quatro do mesmo tipo. Os tipos suportados são `double`, `float`, `int`, `norm`, `uint`, e `unorm`. Os nomes de tipo são mostrados na tabela a seguir. Para cada tipo, há também um correspondente `typedef` que não tem um sublinhado no nome. Os tipos que têm os sublinhados estão no [Namespace Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Os tipos que não possuem os sublinhados estão no [Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) para que eles são claramente separados tipos fundamentais nomeado da mesma forma como `__int8` e `__int16`.  
+ A biblioteca de vetor curto fornece algumas das funcionalidades do [tipo de vetor](http://go.microsoft.com/fwlink/p/?linkid=248500) que é definido em HLSL e é normalmente usado para definir texels. Um vetor curto é uma estrutura de dados que contém um dos quatro valores do mesmo tipo. Os tipos suportados são `double`, `float`, `int`, `norm`, `uint`, e `unorm`. Os nomes de tipo são mostrados na tabela a seguir. Para cada tipo, há também um correspondente `typedef` que não tem um caractere de sublinhado no nome. Os tipos que têm sublinhados estão na [Namespace Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Os tipos que não têm sublinhados estão na [Namespace Concurrency::graphics::direct3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) para que eles sejam claramente separados dos tipos fundamentais com nomes semelhantes, como `__int8` e `__int16`.  
   
-||Comprimento 2|Tamanho 3|Tamanho 4|  
+||Comprimento 2|Comprimento de 3|Comprimento de 4|  
 |-|--------------|--------------|--------------|  
 |double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|  
 |float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|  
@@ -44,39 +44,39 @@ C++ AMP contém várias APIs no [Concurrency:: Graphics](../../parallel/amp/refe
 |unorm|unorm_2<br /><br /> unorm2|unorm_3<br /><br /> unorm3|unorm_4<br /><br /> unorm4|  
   
 ### <a name="operators"></a>Operadores  
- Se um operador estiver definido entre dois vetores curtos, em seguida, ele também é definido entre um vetor de curto e um valor escalar. Além disso, um deles deve ser verdadeiro:  
+ Se um operador definido entre dois vetores curtos, em seguida, ele também é definido entre um vetor curto e um escalar. Além disso, uma destas opções deve ser verdadeira:  
   
--   Tipo de escalar deve ser o mesmo tipo de elemento do vetor curto.  
+-   O tipo de escalar deve ser o mesmo tipo de elemento do vetor curto.  
   
--   Tipo de escalar pode ser convertido implicitamente para o tipo de elemento de vetor usando apenas uma conversão definida pelo usuário.  
+-   O tipo de escalar pode ser convertido implicitamente para o tipo de elemento vetorial usando apenas uma conversão definida pelo usuário.  
   
- A operação é executada component-wise entre cada componente do vetor de curto e o escalar. Aqui estão os operadores válidos:  
+ A operação é executada no componente inteiro entre cada componente do vetor curto e o escalar. Aqui estão os operadores válidos:  
   
 |Tipo de operador|Tipos válidos|  
 |-------------------|-----------------|  
-|Operadores binários|Válido em todos os tipos: +, -, *, /,<br /><br /> Válido em tipos inteiros: %, ^, &#124;, &, <\<, >><br /><br /> Os dois vetores devem ter o mesmo tamanho e o resultado é um vetor do mesmo tamanho.|  
+|Operadores binários|Válido em todos os tipos: +, -, \*, /,<br /><br /> Válido em tipos de inteiros: %, ^, &#124;, &, <\<, >><br /><br /> Os dois vetores devem ter o mesmo tamanho e o resultado é um vetor do mesmo tamanho.|  
 |Operadores relacionais|Válido em todos os tipos: = = e! =|  
-|Operador de atribuição composta|Válido em todos os tipos: + =,-=, * = / =<br /><br /> Válido em tipos inteiros: % =, ^ = &#124;= &, =, <\<= >> =|  
+|Operador de atribuição composta|Válido em todos os tipos: + =, -=, \*=, / =<br /><br /> Válido em tipos de inteiros: % =, ^ =, &#124;=, &, =, <\<=, >> =|  
 |Operadores de incremento e decremento|Válido em todos os tipos: + +, -<br /><br /> Prefixo e sufixo são válidos.|  
 |Bit a bit operador (~)|Válido em tipos de inteiros.|  
-|Unário - operador|Válido em todos os tipos exceto `unorm` e `uint`.|  
+|Unário – operador|Válido em todos os tipos exceto `unorm` e `uint`.|  
   
-### <a name="swizzling-expressions"></a>Expressões swizzling  
- A biblioteca de vetor curto oferece suporte a `vector_type.identifier` construção de acessador para acessar os componentes de um vetor de curto. O `identifier`, que é conhecida como uma *expressão swizzling*, especifica os componentes do vetor. A expressão pode ser um valor de l ou uma r. Caracteres individuais do identificador podem ser: x, y, z e w; ou r, g, b e um. "x" e "r" significa que o componente de zero-ésimo, "y" e componente de média primeiro "g" e assim por diante. (Observe que "x" e "r" não podem ser usados o mesmo identificador.) Portanto, "rgba" e "xyzw" retornará o mesmo resultado. Acessadores de componentes simples como "x" e "y" é tipos de valor escalar. Acessadores de vários componentes são tipos de vetor curto. Por exemplo, se você construir um `int_4` vetor chamado `fourInts` e tem os valores 2, 4, 6 e 8, em seguida, `fourInts.y` retorna o inteiro de 4 e `fourInts.rg` retorna um `int_2` objeto que tem os valores 2 e 4.  
+### <a name="swizzling-expressions"></a>Expressões de swizzling  
+ A biblioteca de vetor pequeno oferece suporte a `vector_type.identifier` acessador de construção para acessar os componentes de um vetor curto. O `identifier`, que é conhecido como um *expressão swizzling*, especifica os componentes do vetor. A expressão pode ser um l-value ou um valor r. Os caracteres individuais no identificador podem ser: x, y, z e w; ou r, g, b e um. "x" e "r" significam o componente zero, "y" e componente de média, o primeiro "g" e assim por diante. (Observe que "x" e "r" não podem ser usados no mesmo identificador). Portanto, "rgba" e "xyzw" retornam o mesmo resultado. Assessores de um componente como "x" e "y" é tipos de valor escalar. Assessores de vários componentes são tipos de vetor curto. Por exemplo, se você construir um `int_4` vetor que é denominado `fourInts` e tem os valores 2, 4, 6 e 8, em seguida, `fourInts.y` retorna o inteiro 4 e `fourInts.rg` retorna um `int_2` objeto que tem os valores 2 e 4.  
   
 ## <a name="texture-classes"></a>Classes de textura  
- Muitos GPUs tem hardware e caches que são otimizados para buscar pixels e texels e renderizar imagens e texturas. O [textura\<T, N >](../../parallel/amp/reference/texture-class.md) classe, que é uma classe de contêiner para objetos texel, expõe a funcionalidade de textura dessas GPUs. Um texel pode ser:  
+ Muitas GPUs têm hardware e os caches que são otimizados para buscar pixels e texels e processar imagens e texturas. O [textura\<T, N >](../../parallel/amp/reference/texture-class.md) classe, que é uma classe de contêiner para objetos de texel, expõe a funcionalidade de textura dessas GPUs. Um texel pode ser:  
   
--   Um `int`, `uint`, `float`, `double`, `norm`, ou `unorm` escalar.  
+-   Uma `int`, `uint`, `float`, `double`, `norm`, ou `unorm` escalares.  
   
 -   Um vetor curto que tem dois ou quatro componentes. A única exceção é `double_4`, que não é permitido.  
   
- O `texture` objeto pode ter uma classificação de 1, 2 ou 3. O `texture` objeto pode ser capturado somente por referência em lambda de uma chamada para `parallel_for_each`. A textura é armazenada na GPU como objetos de textura Direct3D. Para obter mais informações sobre texturas e texels em Direct3D, consulte [Introdução ao texturas Direct3D 11](http://go.microsoft.com/fwlink/p/?linkid=248502).  
+ O `texture` objeto pode ter uma classificação 1, 2 ou 3. O `texture` objeto pode ser capturado somente por referência no método de uma chamada para `parallel_for_each`. A textura é armazenada na GPU como objetos de textura do Direct3D. Para obter mais informações sobre as texturas e texels em Direct3D, consulte [Introdução às texturas em Direct3D 11](http://go.microsoft.com/fwlink/p/?linkid=248502).  
   
- O tipo de texel usado pode ser um dos vários formatos de textura que são usados na programação de elementos gráficos. Por exemplo, um formato RGBA poderia usar 32 bits, com 8 bits cada para R, G, B e elementos escalar. O hardware de textura de uma placa gráfica pode acessar os elementos individuais com base no formato. Por exemplo, se você estiver usando o formato RGBA, o hardware de textura pode extrair cada elemento de 8 bits em um formulário de 32 bits. No C++ AMP, você pode definir os bits por elemento escalar o texel para que você pode acessar automaticamente os elementos individuais escalares no código sem o uso de deslocamento de bit.  
+ O tipo de texel que você usar pode ser um dos muitos formatos de textura que são usados na programação de elementos gráficos. Por exemplo, um formato de RGBA pode usar 32 bits, com 8 bits cada para o R, G, B e dos elementos escalares. O hardware de textura de uma placa gráfica pode acessar os elementos individuais com base no formato. Por exemplo, se você estiver usando o formato de RGBA, o hardware de textura pode extrair cada elemento de 8 bits em um formulário de 32 bits. No C++ AMP, você pode definir os bits por elemento escalar do seu texel para que você pode automaticamente acessar elementos individuais escalares no código sem usar o deslocamento de bit.  
   
 ### <a name="instantiating-texture-objects"></a>Instanciando objetos de textura  
- Você pode declarar um objeto de textura sem a inicialização. O exemplo de código a seguir declara vários objetos de textura.  
+ Você pode declarar um objeto de textura sem inicialização. O exemplo de código a seguir declara vários objetos de textura.  
   
 ```cpp  
 #include <amp.h>  
@@ -101,7 +101,7 @@ void declareTextures() {
   
 ```  
   
- Você também pode usar um construtor para declarar e inicializar uma `texture` objeto. O exemplo de código a seguir cria um `texture` objeto a partir de um vetor de `float_4` objetos. Os bits por elemento escalar é definido como o padrão. Você não pode usar este construtor com `norm`, `unorm`, ou os vetores curtos de `norm` e `unorm`, porque eles não têm um padrão, o bits por elemento escalar.  
+ Você também pode usar um construtor para declarar e inicializar uma `texture` objeto. O exemplo de código a seguir instancia um `texture` objeto a partir de um vetor de `float_4` objetos. Os bits por elemento escalar é definido como o padrão. Não é possível usar esse construtor com `norm`, `unorm`, ou vetores curtos de `norm` e `unorm`, porque eles não têm um padrão de bits por elemento escalar.  
   
 ```cpp  
 #include <amp.h>  
@@ -122,7 +122,7 @@ texture<int_4, 2> aTexture(768, 1024, texels.begin(), texels.end());
 }  
 ```  
   
- Você também pode declarar e inicializar uma `texture` objeto usando uma sobrecarga de construtor que usa um ponteiro para os dados de origem, o tamanho da fonte de dados em bytes e os bits por elemento escalar.  
+ Você também pode declarar e inicializar uma `texture` objeto usando uma sobrecarga de construtor que usa um ponteiro para a fonte de dados, o tamanho da fonte de dados em bytes e os bits por elemento escalar.  
   
 ```cpp  
 void createTextureWithBPC() { // Create the source data.  
@@ -136,18 +136,18 @@ void createTextureWithBPC() { // Create the source data.
 }  
 ```  
   
- Texturas nesses exemplos são criadas no modo de exibição padrão do acelerador padrão. Você pode usar outras sobrecargas do construtor, se você quiser especificar um `accelerator_view` objeto. Você não pode criar um objeto de textura um acelerador de CPU.  
+ As texturas nesses exemplos são criadas no modo de exibição padrão do acelerador padrão. Você pode usar outras sobrecargas do construtor, se você quiser especificar um `accelerator_view` objeto. Você não pode criar um objeto de textura em um acelerador CPU.  
   
- Há limites para o tamanho de cada dimensão do `texture` do objeto, como mostrado na tabela a seguir. Um erro de tempo de execução será gerado se você exceder os limites.  
+ Há limites no tamanho de cada dimensão do `texture` do objeto, conforme mostrado na tabela a seguir. Um erro de tempo de execução é gerado se você exceder os limites.  
   
-|Textura|Limite de tamanho por dimensão|  
+|Textura|Limitação de tamanho por dimensão|  
 |-------------|---------------------|  
 |textura\<T, 1 >|16384|  
 |textura\<T, 2 >|16384|  
 |textura\<T, 3 >|2048|  
   
 ### <a name="reading-from-texture-objects"></a>Leitura de objetos de textura  
- Você pode ler de um `texture` objeto usando [Texture:: Operator\[\]](reference/texture-class.md#operator_at), [textura:: Operator () operador](reference/texture-class.md#operator_call), ou [Texture:: Get método](reference/texture-class.md#get). Os dois operadores retornam um valor, não uma referência. Portanto, você não pode gravar uma `texture` objeto usando `texture::operator\[\]`.  
+ Você pode ler de um `texture` objeto por meio [Texture:: Operator\[\]](reference/texture-class.md#operator_at), [textura:: Operator () operador](reference/texture-class.md#operator_call), ou [Texture:: Get método](reference/texture-class.md#get). Os dois operadores retornam um valor, não uma referência. Portanto, você não pode gravar em um `texture` objeto usando `texture::operator\[\]`.  
   
 ```cpp  
 void readTexture() {  
@@ -182,7 +182,7 @@ void readTexture() {
  
 ```  
   
- O exemplo de código a seguir demonstra como armazenar canais de textura em um vetor de curto e, em seguida, acessar os elementos individuais de escalares como propriedades do vetor curto.  
+ O exemplo de código a seguir demonstra como armazenar os canais de textura em um vetor curto e, em seguida, acessar os elementos individuais escalares como propriedades do vetor curto.  
   
 ```cpp  
 void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int (32-bit) represents four 8-bit scalar elements(r,g,b,a values).  
@@ -219,22 +219,22 @@ void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int 
 |int_3, uint_3|32|  
 |float, float_2, float_4|16, 32|  
 |float_3|32|  
-|duplo, double_2|64|  
-|norma, norm_2, norm_4<br /><br /> unorm, unorm_2, unorm, 4|8, 16|  
+|Double, double_2|64|  
+|NORM, norm_2, norm_4<br /><br /> unorm, unorm_2, unorm, 4|8, 16|  
   
-### <a name="writing-to-texture-objects"></a>Gravar em objetos de textura  
- Use o [Texture:: set](reference/texture-class.md#set) método gravar `texture` objetos. Um objeto de textura pode ser somente leitura ou leitura/gravação. Para um objeto de textura ser legível e gravável, as seguintes condições devem ser verdadeiras:  
+### <a name="writing-to-texture-objects"></a>Gravando em objetos de textura  
+ Use o [Texture:: set](reference/texture-class.md#set) método para gravar `texture` objetos. Um objeto de textura pode ser somente leitura ou leitura/gravação. Para um objeto de textura seja legível e gravável, as seguintes condições devem ser verdadeiras:  
 
   
--   T tem apenas um componente de escalar. (Vetores curtos não são permitidos).  
+-   T tem apenas um componente escalar. (Vetores curtos não são permitidos).  
   
 -   T não é `double`, `norm`, ou `unorm`.  
   
 -   O `texture::bits_per_scalar_element` propriedade é 32.  
   
- Se todas as três não forem verdadeiras, o `texture` objeto é somente leitura. As primeiras duas condições são verificadas durante a compilação. Um erro de compilação será gerado se você tiver um código que tenta gravar um `readonly` objeto textura. A condição de `texture::bits_per_scalar_element` é detectado em tempo de execução e o tempo de execução gera o [unsupported_feature](../../parallel/amp/reference/unsupported-feature-class.md) exceção se você tentar gravar uma readonly `texture` objeto.  
+ Se todos os três não forem verdadeiros, então o `texture` objeto é somente leitura. As duas primeiras condições são verificadas durante a compilação. Um erro de compilação será gerado se você tiver um código que tenta gravar em um `readonly` objeto de textura. A condição para `texture::bits_per_scalar_element` é detectado em tempo de execução e o tempo de execução gera a [unsupported_feature](../../parallel/amp/reference/unsupported-feature-class.md) exceção se você tentar gravar um somente leitura `texture` objeto.  
   
- O exemplo de código a seguir grava os valores para um objeto de textura.  
+ O exemplo de código a seguir grava valores em um objeto de textura.  
   
 ```cpp  
 void writeTexture() {  
@@ -251,7 +251,7 @@ void writeTexture() {
 ```  
   
 ### <a name="copying-texture-objects"></a>Copiando objetos de textura  
- Você pode copiar entre objetos de textura usando o [cópia](reference/concurrency-namespace-functions-amp.md#copy) função ou o [copy_async](reference/concurrency-namespace-functions-amp.md#copy_async) de função, conforme mostrado no exemplo de código a seguir.  
+ Você pode copiar entre os objetos de textura usando o [cópia](reference/concurrency-namespace-functions-amp.md#copy) função ou o [copy_async](reference/concurrency-namespace-functions-amp.md#copy_async) de função, conforme mostrado no exemplo de código a seguir.  
   
 ```cpp  
 void copyHostArrayToTexture() { // Copy from source array to texture object by using the copy function.  
@@ -278,24 +278,24 @@ void copyHostArrayToTexture() { // Copy from source array to texture object by u
  
 ```  
   
- Você também pode copiar de uma textura para outro usando o [Texture:: copy_to](reference/texture-class.md#copy_to) método. As duas texturas podem estar em accelerator_views diferentes. Quando você copia para uma `writeonly_texture_view` do objeto, os dados são copiados para o subjacente `texture` objeto. Os bits por elemento escalar e a extensão devem ser o mesmo na origem e destino `texture` objetos. Se esses requisitos não forem atendidos, o tempo de execução lança uma exceção.  
+ Você também pode copiar de uma textura para outra usando o [Texture:: copy_to](reference/texture-class.md#copy_to) método. As duas texturas podem estar em accelerator_views diferentes. Quando você copia para um `writeonly_texture_view` do objeto, os dados são copiados para subjacente `texture` objeto. Os bits por elemento escalar e a extensão devem ser a mesma na origem e destino `texture` objetos. Se esses requisitos não forem atendidos, o tempo de execução gera uma exceção.  
 
   
 ## <a name="texture-view-classes"></a>Classes de exibição de textura  
- C++ AMP apresenta o [classe texture_view](../../parallel/amp/reference/texture-view-class.md) em [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)]. Suportam a exibições de textura os mesmos tipos de texel e classificações como o [classe texture](../../parallel/amp/reference/texture-class.md), mas ao contrário de texturas, fornecem acesso aos recursos de hardware adicional, como amostragem de textura e mipmaps. Exibições de textura oferecem suporte a acesso somente leitura, somente gravação e leitura / gravação aos dados subjacentes de textura.  
+ C++ AMP introduz o [classe texture_view](../../parallel/amp/reference/texture-view-class.md) em [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)]. Exibições de textura suportam os mesmos tipos e ordens que o [classe texture](../../parallel/amp/reference/texture-class.md), mas diferentemente de texturas, eles fornecem acesso aos recursos de hardware adicionais como amostragem de textura e mapas MIP. Exibições de textura suportam acesso somente leitura, somente gravação e leitura / gravação aos dados subjacentes de textura.  
   
--   Acesso somente leitura é fornecido pelo `texture_view<const T, N>` especialização de modelo, que dá suporte a elementos que têm 1, 2 ou 4 componentes, textura amostragem e dinâmico acesso a uma variedade de mipmap níveis são determinadas quando o modo de exibição é instanciado.  
+-   Acesso somente leitura é fornecido pela `texture_view<const T, N>` textura de especialização de modelo, que dá suporte a elementos que têm 1, 2 ou 4 componentes, amostragem e dinâmico acesso a uma variedade de mipmaps que são determinados quando a exibição é instanciada.  
   
--   Acesso somente gravação é fornecido pela classe de modelo não especializado `texture_view<T, N>`, que oferece suporte a elementos que têm componentes de 2 ou 4 e podem acessar um nível de mipmap que determina quando o modo de exibição é instanciado. Ele não oferece suporte a amostragem.  
+-   O acesso somente gravação é fornecido pela classe de modelo não especializado `texture_view<T, N>`, que oferece suporte a elementos que têm 2 ou 4 componentes e podem acessar um nível de mipmap que é determinado quando o modo de exibição é instanciado. Ele não oferece suporte à amostragem.  
   
--   Acesso de leitura / gravação é fornecido pela classe de modelo não especializado `texture_view<T, N>`, que, como texturas, oferece suporte a elementos que têm apenas um componente; o modo de exibição pode acessar um nível de mipmap que determina quando ele é instanciado. Ele não oferece suporte a amostragem.  
+-   Acesso de leitura / gravação é fornecido pela classe de modelo não especializado `texture_view<T, N>`, que, como as texturas, dá suporte a elementos que têm apenas um componente; o modo de exibição pode acessar um nível de mipmap que é determinado quando ela é instanciada. Ele não oferece suporte à amostragem.  
   
- Exibições de textura são análogas às exibições de matriz, mas não fornecem a funcionalidade de gerenciamento e a movimentação de dados automática que o [classe array_view](../../parallel/amp/reference/array-view-class.md) fornece em relação a [classe array](../../parallel/amp/reference/array-class.md). Um `texture_view` só podem ser acessados no modo de exibição accelerator onde residem os dados subjacentes de textura.  
+ Exibições de textura são análogas a exibições de matriz, mas não fornecem a funcionalidade de gerenciamento e a movimentação de dados automática que o [classe array_view](../../parallel/amp/reference/array-view-class.md) fornece em relação a [classe array](../../parallel/amp/reference/array-class.md). Um `texture_view` só pode ser acessado no modo de exibição de acelerador onde residem os dados subjacentes de textura.  
   
 ### <a name="writeonlytextureview-deprecated"></a>writeonly_texture_view preterido  
- Para [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)], C++ AMP apresenta um melhor suporte para recursos de textura de hardware, como amostragem e mipmaps, que pode não ser compatível com o [classe writeonly_texture_view](../../parallel/amp/reference/writeonly-texture-view-class.md). Recentemente introduzido `texture_view` classe suporta um subconjunto da funcionalidade do `writeonly_texture_view`; como resultado, `writeonly_texture_view` foi preterido.  
+ Para [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)], C++ AMP apresenta melhor suporte para recursos de textura de hardware, como amostragem e mipmaps, que não pôde ser compatível com o [classe writeonly_texture_view](../../parallel/amp/reference/writeonly-texture-view-class.md). A recém-lançada `texture_view` classe dá suporte a um superconjunto da funcionalidade no `writeonly_texture_view`; assim, `writeonly_texture_view` foi preterido.  
   
- É recomendável — pelo menos para o novo código — que você use `texture_view` a funcionalidade de acesso que foram anteriormente fornecida pelo `writeonly_texture_view`. Compare os seguir dois exemplos de código que gravar em um objeto de textura que tem dois componentes (int_2). Observe que em ambos os casos, o modo de exibição, `wo_tv4`, devem ser capturados pelo valor da expressão lambda. Aqui está o exemplo que usa o novo `texture_view` classe:  
+ É recomendável — pelo menos para o novo código — que você usa `texture_view` para acessar a funcionalidade que foi fornecida anteriormente por `writeonly_texture_view`. Compare os dois exemplos a seguir que gravam em um objeto de textura que tem dois componentes (int_2). Observe que em ambos os casos, o modo de exibição, `wo_tv4`, devem ser capturadas por valor na expressão lambda. Aqui está o exemplo que usa o novo `texture_view` classe:  
   
 ```cpp  
 void write2ComponentTexture() {  
@@ -327,12 +327,12 @@ void write2ComponentTexture() {
 }  
 ```  
   
- Como você pode ver, os dois exemplos de código são praticamente idênticos quando tudo o que você está fazendo está gravando o nível de mipmap primário. Se você usou `writeonly_texture_view` em código existente e você não estiver planejando aprimorar a que o código, você não precisa alterá-la. No entanto, se você estiver pensando sobre como colocar esse código para a frente, sugerimos que você reescreva-lo para uso `texture_view` porque os aprimoramentos nele oferecem suporte a novos recursos de textura de hardware. Leia mais para obter mais informações sobre esses novos recursos.  
+ Como você pode ver, os dois exemplos de código são quase idênticos quando tudo o que você está fazendo está gravando o nível de mipmap primário. Se você usou `writeonly_texture_view` no código existente e você não estiver planejando aprimorar que código, você não precisa alterá-la. No entanto, se você está pensando que o código para a frente, sugerimos que você reescreva para usar `texture_view` porque os aprimoramentos nele suportam os novos recursos de textura de hardware. Continue lendo para obter mais informações sobre esses novos recursos.  
   
- Para obter mais informações sobre a substituição de `writeonly_texture_view`, consulte [visão geral do projeto de modo de exibição da textura no C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) na programação paralela no blog de código nativo.  
+ Para obter mais informações sobre a substituição do `writeonly_texture_view`, consulte [visão geral do Design de exibição de textura no C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) sobre o blog programação paralela em código nativo.  
   
 ### <a name="instantiating-texture-view-objects"></a>Instanciando objetos de exibição de textura  
- Declarando um `texture_view` é semelhante ao declarar um `array_view` que está associado com um `array`. O exemplo de código a seguir declara vários `texture` objetos e `texture_view` objetos que estão associados eles.  
+ Declarando uma `texture_view` é semelhante a declarar uma `array_view` que está associado com um `array`. O exemplo de código a seguir declara vários `texture` objetos e `texture_view` objetos que estão associados com eles.  
   
 ```  
 #include <amp.h>  
@@ -359,19 +359,19 @@ void declareTextureViews()
 }  
 ```  
   
- Observe como uma textura exibir cujo tipo de elemento é não constante e tem um componente é leitura / gravação, mas uma exibição de textura, cujo tipo de elemento é não constante, mas tem mais de um componenent são somente gravação. Exibições de textura dos tipos de elemento constantes são sempre somente leitura, mas se o tipo de elemento é não constante, em seguida, o número de componentes no elemento determina se é leitura / gravação (1 componente) ou somente gravação (vários componentes).  
+ Observe que como uma textura exibir cujo tipo de elemento é não const e tem um componente é leitura / gravação, mas um modo de exibição de textura cujo tipo de elemento é não const mas tem mais de um componente são somente gravação. As exibições de textura de tipos de elemento constantes sempre são somente leitura, mas se o tipo de elemento é não const, em seguida, o número de componentes no elemento determina se é leitura / gravação (1 componente) ou somente gravação (vários componentes).  
   
- O tipo de elemento de um `texture_view`— seu qualidade de const e também o número de componentes tem — também desempenha uma função para determinar se o modo de exibição dá suporte à amostragem de textura, e como os níveis de mipmap podem ser acessados:  
+ O tipo de elemento de um `texture_view`— seu característica const e também o número de componentes que ele tem — também exerce um papel na determinação se a exibição dá suporte a amostragem de textura, e como os níveis de mipmap podem ser acessados:  
   
 |Tipo|Componentes|Ler|Write|Amostragem|Acesso de Mipmap|  
 |----------|----------------|----------|-----------|--------------|-------------------|  
-|texture_view\<const T, N >|1, 2, 4|Sim|Nenhum (1)|Sim|Sim, indexáveis. Intervalo é determinado na instanciação.|  
-|Texture_view\<T, N >|1<br /><br /> 2, 4|Sim<br /><br /> Não (2)|Sim<br /><br /> Sim|Nenhum (1)<br /><br /> Nenhum (1)|Sim, um nível. Nível é determinado na instanciação.<br /><br /> Sim, um nível. Nível é determinado na instanciação.|  
+|texture_view\<const T, N >|1, 2, 4|Sim|Não (1)|Sim|Sim, indexável. Intervalo é determinado na instanciação.|  
+|Texture_view\<T, N >|1<br /><br /> 2, 4|Sim<br /><br /> Não (2)|Sim<br /><br /> Sim|Não (1)<br /><br /> Não (1)|Sim, um nível. Nível é determinado na instanciação.<br /><br /> Sim, um nível. Nível é determinado na instanciação.|  
   
- Esta tabela, você pode ver que as exibições de textura somente leitura dão suporte total aos novos recursos em troca de não conseguir gravar no modo de exibição. Exibições de textura gravável são limitadas em que eles podem acessar apenas um nível de mipmap. Modos de exibição de leitura-gravação textura são ainda mais especializados que gravável, porque eles adicionar o requisito de que o tipo de elemento da exibição de textura tem apenas um componente. Observe que amostragem não há suporte para modos de exibição de textura gravável porque é uma operação orientados para leitura.  
+ Nesta tabela, você pode ver que as exibições de textura somente leitura suportam totalmente os novos recursos em troca de não poder gravar no modo de exibição. Visualizações modificáveis de textura são limitadas e só podem acessar um nível de mipmap. Modos de exibição de leitura-gravação da textura são mais especializados que as de gravação, porque adicionam os requisitos que o tipo de elemento de exibição de textura tem somente um componente. Observe que amostragem não é suportada para visualizações modificáveis de textura porque é uma operação orientada à leitura.  
   
 ### <a name="reading-from-texture-view-objects"></a>Leitura de objetos de exibição de textura  
- Lendo dados de textura sem exemplo não deverão através de uma exibição de textura é como ler a textura em si, exceto que texturas são capturadas por referência, enquanto as exibições de textura são capturadas pelo valor. Demonstram os seguir dois exemplos de código; primeiro, usando `texture` somente:  
+ Ler dados textura não provados através de uma exibição de textura é como ler a partir da própria textura, exceto que as texturas são capturadas por referência, enquanto as exibições de textura são capturadas por valor. Os seguintes exemplos de código demonstram; primeiro, usando `texture` somente:  
   
 ```  
 void write2ComponentTexture() {  
@@ -385,7 +385,7 @@ void write2ComponentTexture() {
 }  
 ```  
   
- E aqui está o mesmo exemplo, mas agora usa o `texture_view` classe:  
+ E aqui está o mesmo exemplo, exceto que ele agora usa o `texture_view` classe:  
   
 ```  
 void write2ComponentTexture() {  
@@ -400,16 +400,16 @@ void write2ComponentTexture() {
 
 }  
 ```  
- Modos de exibição cujos elementos são baseados em tipos de ponto flutuante de textura — por exemplo, float, float_2 ou float_4 — também pode ser leitura por meio de amostragem de textura para aproveitar o suporte de hardware para diversos modos de filtragem e modos de endereçamento. C++ AMP dá suporte a dois modos de filtragem que são mais comuns em cenários de computação — ponto-filtragem (vizinho mais próximo) e linear-(média ponderada) — e quatro modos de endereçamento — encapsulados, espelhado, fixado e borda. Para obter mais informações sobre modos de endereçamento, consulte [enumeração address_mode](reference/concurrency-graphics-namespace-enums.md#address_mode).  
+ Exibições cujos elementos são baseados em tipos de ponto flutuante de textura — por exemplo, float, float_2 ou float_4 — também pode ser leitura por meio de amostragem de textura para tirar proveito do suporte de hardware para vários modos de filtragem e modos de endereçamento. C++ AMP oferece suporte os dois modos de filtragem que são mais comuns em cenários de computação — filtragem de ponto (vizinho mais próximo) e filtragem linear (média ponderada) — e quatro modos de endereçamento, encapsulado, espelhado, restrito e borda. Para obter mais informações sobre modos endereçando, consulte [enumeração address_mode](reference/concurrency-graphics-namespace-enums.md#address_mode).  
   
- Além dos modos de C++ AMP oferece suporte diretamente, você pode acessar outros modos de filtragem e modos de endereçamento da plataforma subjacente, usando as APIs de interoperabilidade para adotar uma amostra de textura que foi criada por meio de APIs da plataforma diretamente. Por exemplo, Direct3D oferece suporte a outros modos de filtragem, como anisotrópico e se aplicam a um modo de endereçamento diferente para cada dimensão de uma textura. Você pode criar uma amostra de textura cujas coordenadas são encapsuladas verticalmente, espelhadas horizontalmente e de amostra com anisotrópico usando as APIs do Direct3D e, em seguida, aproveitar a amostra no código do C++ AMP usando o `make_sampler` API de interoperabilidade. Para obter mais informações, consulte [amostragem de textura no C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx) na programação paralela no blog de código nativo.  
+ Além dos modos de C++ AMP oferece suporte diretamente, você pode acessar outros modos de filtragem e modos endereçando da plataforma subjacente, usando as APIs de interoperabilidade para adotar uma amostra de textura que foi criada por meio de APIs da plataforma diretamente. Por exemplo, Direct3D suporta outros modos de filtragem, como filtro anisotrópico e pode aplicar um modo de endereçamento diferente para cada dimensão de uma textura. Você poderia criar uma amostra de textura cujas coordenadas são envolvidas verticalmente, espelhadas horizontalmente e amostradas com filtro anisotrópico usando APIs do Direct3D e, em seguida, aproveitar a amostra do seu código C++ AMP usando o `make_sampler` API de interoperabilidade. Para obter mais informações, consulte [amostragem de textura no C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx) sobre o blog programação paralela em código nativo.  
   
- Exibições de textura também dão suporte a leitura de mipmaps. Modos de exibição somente leitura de textura (aqueles que têm um tipo de elemento const) oferecem mais flexibilidade porque um intervalo de mip-níveis que é determinado na instanciação pode ser exemplificado dinamicamente, e como os elementos que têm 1, 2 ou 4 componentes têm suporte. Exibições de textura de leitura / gravação que tenham elementos que têm um componente também oferecem suporte a mipmaps, mas apenas de um nível que é determinado na instanciação. Para obter mais informações, consulte [textura com Mipmaps](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) na programação paralela no blog de código nativo.  
+ As exibições de textura também dão suporte a mipmaps de leitura. Exibições de textura somente leitura (aqueles que têm um tipo de elemento const) oferecem maior flexibilidade como um intervalo de-níveis de mip determinada na instanciação podem ser provada e elementos que têm 1, 2 ou 4 componentes têm suporte. Modos de exibição de leitura-gravação da textura que tem elementos que têm um componente também dão suporte a mipmaps mas somente de um nível que é determinado na instanciação. Para obter mais informações, consulte [textura com Mipmaps](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) sobre o blog programação paralela em código nativo.  
   
-### <a name="writing-to-texture-view-objects"></a>Gravar em objetos de exibição de textura  
- Use o [texture_view:: Get método](reference/texture-view-class.md#get) gravar subjacente `texture` por meio de `texture_view` objeto. Uma exibição de textura pode ser somente leitura, leitura / gravação ou somente gravação. Para uma exibição de textura para ser gravável, ele deverá ter um tipo de elemento que é não constante; para uma exibição de textura ser legível e gravável, seu tipo de elemento também deve ter apenas um componente. Caso contrário, o modo de exibição de textura é somente leitura. Você pode apenas um mipmap nível de acesso de uma textura simultaneamente através de uma exibição de textura, e o nível é especificado quando o modo de exibição é instanciado.  
+### <a name="writing-to-texture-view-objects"></a>Gravando em objetos de exibição de textura  
+ Use o [texture_view:: Get método](reference/texture-view-class.md#get) gravar subjacente `texture` por meio do `texture_view` objeto. Uma exibição de textura pode ser somente leitura, leitura / gravação ou somente gravação. Para um modo de exibição de textura para que sejam graváveis, ele deve ter um tipo de elemento é não const; para uma exibição de textura seja legível e gravável, seu tipo de elemento também deve ter apenas um componente. Caso contrário, o modo de exibição de textura é somente leitura. Você pode apenas acesso um nível de mipmap de uma textura em uma hora por meio de um modo de exibição de textura, e o nível é especificado quando a exibição é instanciada.  
   
- Este exemplo mostra como gravar em nível de mipmap detalhadas de segundo mais de uma textura que tem 4 níveis de mipmap. O nível de mipmap mais detalhado é 0.  
+ Este exemplo mostra como gravar em nível de segundo-mipmap mais detalhado de uma textura que tem 4 níveis de mipmap. O nível de mipmap mais detalhado é o nível 0.  
   
 ```  
 // Create a texture that has 4 mipmap levels : 16x16, 8x8, 4x4, 2x2  
@@ -429,7 +429,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
   
 ## <a name="interoperability"></a>Interoperabilidade  
 
- O tempo de execução C++ AMP dá suporte a interoperabilidade entre `texture<T,1>` e [ID3D11Texture1D interface](http://go.microsoft.com/fwlink/p/?linkId=248503), entre `texture<T,2>` e [ID3D11Texture2D interface](http://go.microsoft.com/fwlink/p/?linkId=255317)e entre `texture<T,3>`e [ID3D11Texture3D interface](http://go.microsoft.com/fwlink/p/?linkId=255377). O [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) leva um `texture` objeto e retorna um `IUnknown` interface. O [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) leva um `IUnknown` interface e um `accelerator_view` objeto e retorna um `texture` objeto.  
+ O tempo de execução C++ AMP oferece suporte à interoperabilidade entre `texture<T,1>` e o [interface ID3D11Texture1D](http://go.microsoft.com/fwlink/p/?linkId=248503), entre `texture<T,2>` e o [ID3D11Texture2D interface](http://go.microsoft.com/fwlink/p/?linkId=255317)e entre `texture<T,3>`e o [ID3D11Texture3D interface](http://go.microsoft.com/fwlink/p/?linkId=255377). O [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) leva um `texture` objeto e retorna um `IUnknown` interface. O [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) leva um `IUnknown` interface e uma `accelerator_view` objeto e retorna um `texture` objeto.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe double_2](../../parallel/amp/reference/double-2-class.md)   

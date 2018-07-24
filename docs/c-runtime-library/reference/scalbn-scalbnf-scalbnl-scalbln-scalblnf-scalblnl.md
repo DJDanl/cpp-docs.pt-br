@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f3d4945ef339f5166bdd07bc8d5615b161d266
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3bcaebf6578bfb4168d17131989b9b200a7ef8f9
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407071"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209450"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -112,15 +112,15 @@ Expoente inteiro.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **scalbn** funções retornam o valor de *x* * **FLT_RADIX**<sup>exp</sup> quando tem êxito. No estouro (dependendo do sinal de *x*), **scalbn** retorna + /- **HUGE_VAL**; o **errno** valor é definido como **ERANGE** .
+O **scalbn** funções retornam o valor de *x* \* **FLT_RADIX**<sup>exp</sup> quando obtiver êxito. No estouro (dependendo do sinal de *x*), **scalbn** retorna + /- **HUGE_VAL**; a **errno** valor é definido como **ERANGE** .
 
-Para obter mais informações sobre **errno** e erro possíveis valores de retorno, consulte [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obter mais informações sobre **errno** e de erro possíveis valores de retorno, consulte [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-**FLT_RADIX** é definido em \<float. h > como a base de ponto flutuante nativo; em sistemas de binário, ela tem um valor de 2, e **scalbn** é equivalente a [ldexp](ldexp.md).
+**FLT_RADIX** é definida no \<float. h > como a base de ponto flutuante nativo; em sistemas binários, tem um valor de 2, e **scalbn** é equivalente a [ldexp](ldexp.md).
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **scalbn** e **scalbln** que levar e retornar **float** ou **longo** **duplo** tipos. Em um programa C, **scalbn** sempre leva um **duplo** e um **int** e retorna um **duplo**, e **scalbln**sempre leva um **duplo** e um **longo** e retorna um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **scalbn** e **scalbln** que tomam e retornam **float** ou **longo** **duplas** tipos. Em um programa C, **scalbn** sempre usa um **duplo** e um **int** e retorna um **double**, e **scalbln**sempre usa um **duplas** e uma **longo** e retorna um **double**.
 
 ## <a name="requirements"></a>Requisitos
 

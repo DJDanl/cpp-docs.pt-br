@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9292e4d5ff9bf0f6f829c14dd0ee11e77a641d2d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 05bae03a94eac7a783f4ccb7248c8699729a006d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027648"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208683"
 ---
 # <a name="ccmdtarget-class"></a>Classe CCmdTarget
 A classe base para a arquitetura de mapa de mensagem da biblioteca Microsoft Foundation Class.  
@@ -326,7 +326,7 @@ HRESULT GetTypeInfoOfGuid(
  Ponteiro para um ponteiro para o `ITypeInfo` interface.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um HRESULT indicando o êxito ou falha da chamada. Se for bem-sucedido, * *ppTypeInfo* aponta para a interface de informações de tipo.  
+ Um HRESULT indicando o êxito ou falha da chamada. Se for bem-sucedido, \* *ppTypeInfo* aponta para a interface de informações de tipo.  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  Obtém um ponteiro para uma biblioteca de tipos.  
@@ -345,7 +345,7 @@ virtual HRESULT GetTypeLib(
  Um ponteiro para um ponteiro para o `ITypeLib` interface.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um HRESULT indicando o êxito ou falha da chamada. Se for bem-sucedido, * *ppTypeLib* aponta para a interface da biblioteca de tipo.  
+ Um HRESULT indicando o êxito ou falha da chamada. Se for bem-sucedido, \* *ppTypeLib* aponta para a interface da biblioteca de tipo.  
   
 ### <a name="remarks"></a>Comentários  
  As classes derivadas devem substituir essa função de membro (se não for substituído, `GetTypeLib` retorna TYPE_E_CANTLOADLIBRARY). Use o [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) macro, que também implementa `GetTypeInfoCount` e `GetTypeLibCache`.  
@@ -437,10 +437,10 @@ virtual BOOL OnCmdMsg(
   
 |*nCode* valor|*pExtra* valor|  
 |-------------------|--------------------|  
-|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)*|  
-|CN_EVENT|AFX_EVENT *|  
-|CN_UPDATE_COMMAND_UI|CCmdUI *|  
-|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)*|  
+|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|  
+|CN_EVENT|AFX_EVENT\*|  
+|CN_UPDATE_COMMAND_UI|CCmdUI\*|  
+|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)\*|  
 |CN_OLE_UNREGISTER|NULL|  
   
 ### <a name="example"></a>Exemplo  

@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 012315e11ccf2dbe63e32c6208487f324ef29289
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ead91ce542ce547f9453f52455dc76d61045b87
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401407"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208409"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -90,13 +90,13 @@ Expoente inteiro.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **ldexp** funções retornam o valor de *x* * 2<sup>*exp* </sup> se for bem-sucedido. No estouro e, dependendo do sinal de *x*, **ldexp** retorna + /- **HUGE_VAL**; o **errno** valor é definido como **ERANGE** .
+O **ldexp** funções retornam o valor de *x* \* 2<sup>*exp* </sup> se for bem-sucedido. No estouro e dependendo do sinal de *x*, **ldexp** retorna + /- **HUGE_VAL**; a **errno** valor é definido como **ERANGE** .
 
-Para obter mais informações sobre **errno** e erro possíveis valores de retorno, consulte [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obter mais informações sobre **errno** e de erro possíveis valores de retorno, consulte [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ldexp** que usam **float** ou **longo** **duplo** tipos. Em um programa C, **ldexp** sempre leva um **duplo** e um **int** e retorna um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **ldexp** que utilizam **float** ou **longo** **double** tipos. Em um programa C, **ldexp** sempre usa um **duplo** e um **int** e retorna um **double**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 308254fded0ac38a794233fb3f4eacd4d7d6fd19
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963518"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207913"
 ---
 # <a name="ostreamiterator-class"></a>Classe ostream_iterator
 
@@ -68,9 +68,9 @@ A classe ostream_iterator deve atender aos requisitos de um iterador de saída. 
 
 |Operador|Descrição|
 |-|-|
-|[operator*](#op_star)|Operador de desreferenciamento usado para implementar a expressão do iterador de saída * `i` = `x`.|
+|[operator*](#op_star)|Operador de desreferenciamento usado para implementar a expressão do iterador de saída \* `i`  =  `x`.|
 |[operator++](#op_add_add)|Um operador de incremento não funcional que retorna uma `ostream_iterator` para o mesmo objeto que foi tratado antes de a operação ser chamada.|
-|[operator=](#op_eq)|O operador de atribuição usado para implementar a expressão do iterador de saída * `i` = `x` para gravação em um fluxo de saída.|
+|[operator=](#op_eq)|Operador de atribuição usado para implementar a expressão do iterador de saída \* `i`  =  `x` para gravar em um fluxo de saída.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -228,7 +228,7 @@ Elements written to output stream:
 
 ## <a name="op_eq"></a>  ostream_iterator::operator=
 
-O operador de atribuição usado para implementar a expressão output_iterator * `i` = `x` para gravação em um fluxo de saída.
+Operador de atribuição usado para implementar a expressão output_iterator \* `i`  =  `x` para gravar em um fluxo de saída.
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
@@ -244,7 +244,7 @@ O operador insere *val* no fluxo de saída associado ao objeto, seguido pelo del
 
 ### <a name="remarks"></a>Comentários
 
-Os requisitos para um iterador de saída que `ostream_iterator` deve satisfazer exigem somente que a expressão * `ii` = `t` seja válida e que ela não diga nada sobre o operator ou operator= por conta própria. Esse operador de membro retorna `*this`.
+Os requisitos para um iterador de saída que o `ostream_iterator` deve satisfazer exigem somente que a expressão \* `ii`  =  `t` seja válida e não diz nada sobre o operador ou o operador = por conta própria. Esse operador de membro retorna `*this`.
 
 ### <a name="example"></a>Exemplo
 

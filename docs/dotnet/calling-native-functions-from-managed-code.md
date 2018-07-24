@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c0d7e69c95790122f44dc59d06f2843afbddfb2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3b8b266d44f9109a346160a1b2493f8644be839
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112037"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207592"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Chamando funções nativas a partir do código gerenciado
-O common language runtime fornece serviços de invocação de plataforma, ou PInvoke, que permite código gerenciado para chamar funções de estilo C em nativo bibliotecas de vínculo dinâmico (DLLs). Os mesmos dados de empacotamento são usados para interoperabilidade COM o tempo de execução e para o mecanismo de "Simplesmente funciona" ou IJW.  
+O common language runtime fornece serviços de invocação de plataforma, ou PInvoke, que permite que código gerenciado chame funções de estilo C em nativas bibliotecas de vínculo dinâmico (DLLs). Os mesmo empacotamento de dados são usados para a interoperabilidade COM o tempo de execução e para o mecanismo IJW, ou "Simplesmente funciona".  
   
  Para obter mais informações, consulte:  
   
@@ -38,13 +38,13 @@ O common language runtime fornece serviços de invocação de plataforma, ou PIn
   
 -   [Um olhar detalhado sobre invocação de plataforma](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
- Os exemplos nesta seção ilustram apenas como `PInvoke` pode ser usado. `PInvoke` pode simplificar o marshaling de dados personalizados, porque você fornecer informações de marshaling declarativamente em atributos em vez de gravar o código de marshaling de procedimento.  
+ Os exemplos nesta seção só ilustram como `PInvoke` pode ser usado. `PInvoke` pode simplificar o empacotamento de dados personalizados porque você fornece informações de empacotamento declarativamente em atributos em vez de escrever o código procedural.  
   
 > [!NOTE]
->  A biblioteca de marshaling fornece uma maneira alternativa de realizar marshaling de dados entre ambientes nativos e gerenciados de forma otimizada. Consulte [visão geral de Marshaling no C++](../dotnet/overview-of-marshaling-in-cpp.md) para obter mais informações sobre a biblioteca de marshaling. A biblioteca de marshaling é usada somente para dados e não para funções.  
+>  A biblioteca de marshaling fornece uma maneira alternativa de realizar marshaling de dados entre ambientes nativos e gerenciados de forma otimizada. Ver [visão geral de Marshaling no C++](../dotnet/overview-of-marshaling-in-cpp.md) para obter mais informações sobre a biblioteca de marshaling. A biblioteca de marshaling é útil somente para dados e não para funções.  
   
 ## <a name="pinvoke-and-the-dllimport-attribute"></a>PInvoke e o atributo DllImport  
- O exemplo a seguir mostra o uso de `PInvoke` em um programa do Visual C++. Coloca a função nativa é definido em Msvcrt. O atributo DllImport é usado para a declaração de coloca.  
+ O exemplo a seguir mostra o uso de `PInvoke` em um programa do Visual C++. A função nativa puts é definida em Msvcrt. dll. O atributo DllImport é usado para a declaração de puts.  
   
 ```  
 // platform_invocation_services.cpp  
@@ -61,7 +61,7 @@ int main() {
 }  
 ```  
   
- O exemplo a seguir é equivalente ao exemplo anterior, mas usa IJW.  
+ O exemplo a seguir é equivalente ao exemplo anterior, mas usa o IJW.  
   
 ```  
 // platform_invocation_services_2.cpp  
@@ -82,25 +82,25 @@ int main() {
   
 ### <a name="advantages-of-ijw"></a>Vantagens de IJW  
   
--   Não é necessário gravar `DLLImport` atributo declarações para as APIs não gerenciadas que usa o programa. Inclua apenas o arquivo de cabeçalho e um link com a biblioteca de importação.  
+-   Não é necessário gravar `DLLImport` declarações para as APIs não gerenciadas que usa o programa de atributo. Apenas inclua o arquivo de cabeçalho e o link com a biblioteca de importação.  
   
--   O mecanismo IJW é ligeiramente mais rápido (por exemplo, os stubs IJW não necessário verificar se há a necessidade de pin ou copiar itens de dados porque isso é feito explicitamente pelo desenvolvedor).  
+-   O mecanismo do IJW é ligeiramente mais rápido (por exemplo, os modelos do IJW não é necessário verificar se há a necessidade de fixar ou copiar itens de dados porque isso é feito explicitamente pelo desenvolvedor).  
   
--   Ele ilustra claramente os problemas de desempenho. Nesse caso, o fato de que você estiver convertendo de uma cadeia de caracteres Unicode uma cadeia de caracteres ANSI e que você tem uma alocação de memória e a desalocação. Nesse caso, um desenvolvedor escrever o código usando IJW seria perceber que a chamada `_putws` e usando `PtrToStringChars` seria melhor desempenho.  
+-   Ele ilustra claramente problemas de desempenho. Nesse caso, o fato de você está traduzindo a partir de uma cadeia de caracteres Unicode para uma cadeia de caracteres ANSI e que você tem uma alocação de memória e desalocação. Nesse caso, um desenvolvedor escreve o código usando IJW perceberia que chamar `_putws` e usando `PtrToStringChars` seria melhor para o desempenho.  
   
--   Se você chamar muitas APIs não gerenciadas usando os mesmos dados, empacotamento, uma vez e transmitindo a cópia empacotada é muito mais eficiente que marshaling novamente cada vez.  
+-   Se você chamar várias APIs não gerenciadas usando os mesmos dados, empacotá-las uma vez e passar a cópia empacotada é muito mais eficiente do que reempacotar todas as vezes.  
   
 ### <a name="disadvantages-of-ijw"></a>Desvantagens de IJW  
   
 -   Marshaling deve ser especificado explicitamente no código, em vez de por atributos (que geralmente têm padrões apropriados).  
   
--   O código de marshaling é embutidos, onde ele é mais invasivo no fluxo da lógica do aplicativo.  
+-   O código de empacotamento é embutido, onde é mais invasivo no fluxo da lógica do aplicativo.  
   
--   Como as APIs de empacotamento explícitas retornam `IntPtr` tipos para a portabilidade de 32 bits para 64 bits, você deve usar extra `ToPointer` chamadas.  
+-   Como as APIs de marshaling explícitas retornam `IntPtr` tipos para fins de portabilidade de 32 bits para 64 bits, você deve usar extra `ToPointer` chamadas.  
   
- O método específico exposto pelo C++ é o método mais eficiente, explícito, às custas de alguma complexidade adicional.  
+ O método específico exposto pelo C++ é o método mais eficiente e explícito, às custas de alguma complexidade adicional.  
   
- Se o aplicativo usa principalmente os tipos de dados não gerenciados, ou se ele chama mais APIs não gerenciadas de APIs do .NET Framework, é recomendável que você use o recurso IJW. Para chamar uma API não gerenciada ocasional em um aplicativo gerenciado principalmente, a opção é mais sutil.  
+ Se o aplicativo usa principalmente os tipos de dados não gerenciados ou se ele chamar mais APIs não gerenciadas que APIs do .NET Framework, recomendamos que você use o recurso IJW. Para chamar uma API não gerenciada casual em um aplicativo basicamente gerenciado, a opção é mais sutil.  
   
 ## <a name="pinvoke-with-windows-apis"></a>PInvoke com APIs do Windows  
  PInvoke é conveniente para chamar funções no Windows.  
@@ -123,25 +123,25 @@ int main() {
 }  
 ```  
   
- A saída é uma caixa de mensagem que tem o título do teste de PInvoke e contém o texto Olá, mundo!.  
+ A saída é uma caixa de mensagem que tem o teste de PInvoke do título e contém o texto Olá, mundo!.  
   
- As informações de marshaling também são usadas por PInvoke para pesquisar funções na DLL. Na User32. dll não é de fato nenhuma função MessageBox, mas CharSet = CharSet::Ansi habilita PInvoke para usar MessageBoxA, a versão de ANSI em vez de MessageBoxW, que é a versão de Unicode. Em geral, é recomendável que você use Unicode versões de APIs não gerenciadas, porque isso elimina a tradução sobrecarga de formato nativo Unicode de objetos de cadeia de caracteres do .NET Framework para ANSI.  
+ As informações de marshaling também são usadas por PInvoke para pesquisar funções na DLL. No User32. dll não existe na verdade nenhuma função MessageBox, mas CharSet = charset:: ANSI permite PInvoke a usar MessageBoxA, a versão ANSI, em vez de MessageBoxW, que é a versão Unicode. Em geral, é recomendável que você use versões Unicode dessas APIs não gerenciadas porque isso elimina a sobrecarga de tradução do formato nativo Unicode de objetos de cadeia de caracteres do .NET Framework para ANSI.  
   
 ## <a name="when-not-to-use-pinvoke"></a>Quando não usar PInvoke  
- Usando PInvoke não é apropriada para todas as funções de estilo C em DLLs. Por exemplo, suponha que exista é uma função MakeSpecial em mylib.dll declarada como se segue:  
+ Usando PInvoke não é apropriado para todas as funções de estilo C em DLLs. Por exemplo, suponha que haja é uma função MakeSpecial em myLib. dll declarada da seguinte maneira:  
   
  `char * MakeSpecial(char * pszString);`  
   
- Se usarmos PInvoke em um aplicativo do Visual C++, podemos pode escrever algo semelhante ao seguinte:  
+ Se usarmos PInvoke em um aplicativo do Visual C++, nós podemos escrever algo semelhante ao seguinte:  
   
  `[DllImport("mylib")]`  
   
  `extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);`  
   
- A dificuldade aqui é que não é possível excluir a memória não gerenciada cadeia de caracteres retornada por MakeSpecial. Outras funções chamadas por meio de PInvoke retornam um ponteiro para um buffer interno que não precisa ser desalocada pelo usuário. Nesse caso, usando o recurso IJW é a escolha óbvia.  
+ A dificuldade aqui é que nós não podemos excluir a memória para a cadeia de caracteres não gerenciada retornada por MakeSpecial. Outras funções chamadas por meio do PInvoke retornam um ponteiro para um buffer interno que não precisa ser desalocada pelo usuário. Nesse caso, usando o recurso IJW é a opção óbvia.  
   
 ## <a name="limitations-of-pinvoke"></a>Limitações de PInvoke  
- Você não pode retornar o mesmo ponteiro exato de uma função nativa que levou como um parâmetro. Se uma função nativa retorna o ponteiro que foi empacotado para ele por PInvoke, podem causar corrupção de memória e de exceções.  
+ Você não pode retornar o mesmo ponteiro exato de uma função nativa que você recebe como um parâmetro. Se uma função nativa retorna o ponteiro que foi empacotado a ela pelo PInvoke, corrupção de memória e exceções podem surgir.  
   
 ```  
 __declspec(dllexport)  
@@ -150,7 +150,7 @@ char* fstringA(char* param) {
 }  
 ```  
   
- O exemplo a seguir apresenta esse problema e, mesmo que o programa pode parecer dar saída correta, a saída é proveniente de memória que tinha sido liberada.  
+ O exemplo a seguir exibe este problema e, mesmo que o programa aparentemente ofereça a entrada correta, a saída está vindo da memória que foi liberada.  
   
 ```  
 // platform_invocation_services_5.cpp  
@@ -173,14 +173,14 @@ int main() {
 }  
 ```  
   
-## <a name="marshaling-arguments"></a>Argumentos de empacotamento  
- Com `PInvoke`, nenhum processo de empacotamento é necessária entre gerenciado e tipos primitivos de C++ nativo com o mesmo formulário. Por exemplo, nenhum processo de empacotamento é necessário entre Int32 e int ou entre duas vezes e clique duas vezes.  
+## <a name="marshaling-arguments"></a>Argumentos marshaling  
+ Com `PInvoke`, nenhum empacotamento é necessário entre gerenciados e tipos primitivos de nativos de C++ com o mesmo formulário. Por exemplo, nenhum marshaling é necessário entre Int32 e int ou entre Double e double.  
   
- No entanto, você deve realizar marshaling de tipos que não têm o mesmo formulário. Isso inclui tipos de char, string e struct. A tabela a seguir mostra os mapeamentos usados pelo empacotador para vários tipos:  
+ No entanto, você deve realizar marshaling de tipos que não têm o mesmo formulário. Isso inclui tipos char, string e struct. A tabela a seguir mostra os mapeamentos usados pelo empacotador para vários tipos:  
   
-|wtypes.h|Visual C++|Visual C++ com /clr|Common Language Runtime|  
+|wtypes. h|Visual C++|Visual C++ com /clr|Common Language Runtime|  
 |--------------|------------------|-----------------------------|-----------------------------|  
-|IDENTIFICADOR|void *|void *|IntPtr, UIntPtr|  
+|IDENTIFICADOR|void \*|void \*|IntPtr, UIntPtr|  
 |BYTE|unsigned char|unsigned char|Byte|  
 |CURTO|short|short|Int16|  
 |WORD|unsigned short|unsigned short|UInt16|  
@@ -191,20 +191,20 @@ int main() {
 |DWORD|unsigned long|unsigned long|UInt32|  
 |ULONG|unsigned long|unsigned long|UInt32|  
 |CHAR|char|char|Char|  
-|LPCSTR|char *|String ^ [in], StringBuilder ^ [no, out]|String ^ [in], StringBuilder ^ [no, out]|  
-|LPCSTR|Const char *|String ^|Cadeia de Caracteres|  
-|LPWSTR|wchar_t *|String ^ [in], StringBuilder ^ [no, out]|String ^ [in], StringBuilder ^ [no, out]|  
-|LPCWSTR|wchar_t const *|String ^|Cadeia de Caracteres|  
+|LPCSTR|Char \*|Cadeia de caracteres ^ [in], StringBuilder ^ [no, out]|Cadeia de caracteres ^ [in], StringBuilder ^ [no, out]|  
+|LPCSTR|Const char \*|Cadeia de caracteres ^|Cadeia de Caracteres|  
+|LPWSTR|wchar_t \*|Cadeia de caracteres ^ [in], StringBuilder ^ [no, out]|Cadeia de caracteres ^ [in], StringBuilder ^ [no, out]|  
+|LPCWSTR|Const wchar_t \*|Cadeia de caracteres ^|Cadeia de Caracteres|  
 |FLOAT|float|float|Simples|  
-|DUPLO|double|double|Duplo|  
+|DUPLA|double|double|Duplo|  
   
- O marshaler fixa automaticamente a memória alocada no heap do tempo de execução, se seu endereço é passado para uma função não gerenciada. Fixando impede que o coletor de lixo mover o bloco de memória alocado durante a compactação.  
+ O empacotador fixará automaticamente a memória alocada no heap de tempo de execução se seu endereço for passado para uma função não gerenciada. A fixação impede que o coletor de lixo mover o bloco de memória alocado durante a compactação.  
   
- No exemplo mostrado anteriormente neste tópico, o parâmetro de conjunto de caracteres de DllImport Especifica como gerenciadas cadeias de caracteres devem ser empacotados; Nesse caso, eles devem ser empacotados em cadeias de caracteres ANSI para o lado nativo.  
+ No exemplo mostrado anteriormente neste tópico, o parâmetro de CharSet do DllImport Especifica cadeias de caracteres gerenciadas como deve ser empacotado; Nesse caso, eles devem ser empacotados para cadeias de caracteres ANSI para o lado nativo.  
   
- Você pode especificar informações de marshaling para argumentos individuais de uma função nativa usando o atributo MarshalAs. Há várias opções para realizar marshaling de uma cadeia de caracteres * argumento: BStr, ANSIBStr, TBStr, LPStr, LPWStr e LPTStr. O padrão é LPStr.  
+ Você pode especificar informações de marshaling para argumentos individuais de uma função nativa usando o atributo MarshalAs. Há várias opções de marshaling de uma cadeia de caracteres \* argumento: BStr, ANSIBStr, TBStr, LPStr, LPWStr e LPTStr. O padrão é LPStr.  
   
- Neste exemplo, a cadeia de caracteres é empacotada como uma cadeia de caracteres de Unicode de dois bytes, LPWStr. A saída é a primeira letra de Hello World! como o segundo byte da cadeia de caracteres empacotado é nulo e coloca interpreta como o marcador de fim da cadeia de caracteres.  
+ Neste exemplo, a cadeia de caracteres é empacotada como uma cadeia de caracteres de Unicode de dois bytes, LPWStr. A saída é a primeira letra de Hello World! porque o segundo byte de cadeia de caracteres empacotada é nulo e coloca interpreta isso como o marcador de fim da cadeia de caracteres.  
   
 ```  
 // platform_invocation_services_3.cpp  
@@ -223,12 +223,12 @@ int main() {
   
  O atributo MarshalAs está no namespace System::Runtime::InteropServices. O atributo pode ser usado com outros tipos de dados como matrizes.  
   
- Conforme mencionado anteriormente no tópico, a biblioteca de marshaling fornece um método de novo e otimizado de marshaling de dados entre ambientes gerenciados e nativos. Para obter mais informações, consulte [visão geral de Marshaling no C++](../dotnet/overview-of-marshaling-in-cpp.md).  
+ Conforme mencionado anteriormente no tópico, a biblioteca de marshaling fornece um método novo e otimizado de marshaling dos dados entre ambientes nativos e gerenciados. Para obter mais informações, consulte [visão geral de Marshaling no C++](../dotnet/overview-of-marshaling-in-cpp.md).  
   
 ## <a name="performance-considerations"></a>Considerações sobre desempenho  
- PInvoke tem uma sobrecarga de entre 10 e 30 x86 instruções por chamada. Esse custo fixo, além de empacotamento cria uma sobrecarga adicional. Não há nenhum custo marshaling entre tipos blittable que têm a mesma representação em código gerenciado e não gerenciado. Por exemplo, não há nenhum custo para converter entre int e Int32.  
+ PInvoke tem uma sobrecarga entre 10 e 30 x86 instruções por chamada. Além desse custo fixo, marshaling cria uma sobrecarga adicional. Não há nenhum custo de marshaling entre tipos blittable que têm a mesma representação em código gerenciado e não gerenciado. Por exemplo, não há nenhum custo para converter entre int e Int32.  
   
- Para obter melhor desempenho, tem menos chamadas PInvoke empacotar o máximo de dados possível, em vez de chamadas mais que empacotar menos dados por chamada.  
+ Para obter melhor desempenho, ter menos chamadas de PInvoke que empacotar a quantidade de dados possível, em vez de mais chamadas que menos dados por chamada de marshaling.  
   
 ## <a name="see-also"></a>Consulte também  
  [Interoperabilidade entre .NET e nativo](../dotnet/native-and-dotnet-interoperability.md)

@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66f0dc8469d1d70b2697df1fe120f10142d90dbe
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3c906a9a9b781f742f525688b77d5f58da16bb10
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688122"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208127"
 ---
 # <a name="264-atomic-construct"></a>2.6.4 Constructo atomic
-O `atomic` diretiva garante que um local de memória específica é atualizado atomicamente, em vez de expô-lo para a possibilidade de várias simultâneas de gravação de threads. A sintaxe da `atomic` diretiva é da seguinte maneira:  
+O `atomic` diretiva garante que um local específico da memória é atualizado atomicamente, em vez de expô-lo para a possibilidade de várias simultâneas gravando segmentos. A sintaxe do `atomic` diretiva é da seguinte maneira:  
   
 ```  
 #pragma omp atomic new-lineexpression-stmt  
 ```  
   
- A instrução de expressão deve ter uma das seguintes formas:  
+ A instrução da expressão deve ter uma das seguintes formas:  
   
  *x binop*= *expr*  
   
@@ -38,21 +38,21 @@ O `atomic` diretiva garante que um local de memória específica é atualizado a
   
  --x  
   
- As expressões anteriores:  
+ Nas expressões anteriores:  
   
 -   *x* é uma expressão de lvalue com tipo escalar.  
   
--   *Expr* é uma expressão com um tipo escalar, e ele não faz referência o objeto designado pelo *x*.  
+-   *Expr* é uma expressão com um tipo escalar, e ele não faz referência a objeto designado pelo *x*.  
   
--   `binop` não é um operador sobrecarregado e é um dos +, *, -, /, &, ^, &#124;, <\<, ou >>.  
+-   `binop` não é um operador sobrecarregado e é um dos +, \*, -, /, &, ^, &#124;, <\<, ou >>.  
   
- Embora seja definido pela implementação se uma implementação substitui todos os `atomic` diretivas com **crítico** diretivas que têm o mesmo exclusivo *nome*, o `atomic` diretiva permite melhor otimização. Instruções de hardware geralmente estão disponíveis que pode executar a atualização atômica com a menor sobrecarga.  
+ Embora seja definido pela implementação se uma implementação substitui todos os `atomic` diretivas com **críticas** diretivas que têm o mesmo exclusivo *nome*, o `atomic` diretiva permite melhor otimização. Instruções de hardware geralmente estão disponíveis que podem executar a atualização atômica com menos sobrecarga.  
   
- Somente o carregamento e o armazenamento do objeto designado pelo *x* são atômicas; a avaliação de *expr* não é atômica. Para evitar condições de corrida, todas as atualizações do local em paralelo devem ser protegidas com o `atomic` diretiva, exceto aqueles que são conhecidos como livre de condições de corrida.  
+ Somente o carregamento e o armazenamento de objeto designado pelo *x* são atômicas; avaliação de *expr* não é atômica. Para evitar condições de corrida, todas as atualizações do local em paralelo devem ser protegidas com o `atomic` diretiva, exceto aqueles que são conhecidos por estar livres de condições de corrida.  
   
  Restrições para o `atomic` diretiva são da seguinte maneira:  
   
--   Todas as referências atômicas para o local de armazenamento x em todo o programa deve ter um tipo compatível.  
+-   Todas as referências atômicas para o local de armazenamento em todo o programa x devem ter um tipo compatível.  
   
 ## <a name="examples"></a>Exemplos:  
   
