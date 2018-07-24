@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef91c42d0787dac371d324eece1527e5366c89c3
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 98c8bd78f465054e4d86a1bd16450aba9a0d8258
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271390"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209047"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novidades do Visual C++ de 2003 até 2015
 
@@ -1494,7 +1494,7 @@ O compilador Microsoft Visual C++ é compatível com esses recursos de linguagem
 - Modelos de alias.
 - Funções excluídas.
 - NSDMIs (inicializadores de membros de dados não estáticos).
-- Funções usadas como padrão. *
+- Funções usadas como padrão. \*
 - Oferece suporte a estes recursos de idioma ISO C99:
 - _Bool
 - Literais compostos.
