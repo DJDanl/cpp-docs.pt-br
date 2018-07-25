@@ -7,25 +7,31 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - CDynamicStringAccessor
+- CDynamicStringAccessor.GetString
+- CDynamicStringAccessor::GetString
+- CDynamicStringAccessor::SetString
+- CDynamicStringAccessor.SetString
 dev_langs:
 - C++
 helpviewer_keywords:
 - CDynamicStringAccessor class
+- GetString method
+- SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1b8888bdac7d605ce1832ef7074955fab4893b33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd497c59bcdbaba2afc1571cf7509887a44bcd59
+ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097592"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233432"
 ---
 # <a name="cdynamicstringaccessor-class"></a>Classe CDynamicStringAccessor
-Permite que você acesse uma fonte de dados quando você não possui conhecimento do esquema do banco de dados (estrutura do banco de dados).  
+Permite que você acesse uma fonte de dados quando você não tem nenhum conhecimento sobre o esquema de banco de dados (estrutura de base do banco de dados).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,33 +39,96 @@ Permite que você acesse uma fonte de dados quando você não possui conheciment
       template< typename BaseType, DBTYPEENUM OleDbType >  
 class CDynamicStringAccessorT : public CDynamicAccessor  
 ```  
+
   
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho**: atldbcli.h 
+
 ## <a name="members"></a>Membros  
   
 ### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)|Recupera os dados da coluna especificada como uma cadeia de caracteres.|  
-|[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)|Define os dados da coluna especificada como uma cadeia de caracteres.|  
+|[GetString](#getstring)|Recupera os dados da coluna especificada como uma cadeia de caracteres.|  
+|[SetString](#setstring)|Define os dados da coluna especificada como uma cadeia de caracteres.|  
   
 ## <a name="remarks"></a>Comentários  
- Enquanto [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) solicita os dados no formato nativo, o provedor relatado `CDynamicStringAccessor` solicita que o provedor de buscar todos os dados acessados a partir do repositório de dados como dados de cadeia de caracteres. Isso é especialmente útil para tarefas simples que não exigem o cálculo de valores no repositório de dados, como exibir ou imprimir o conteúdo do repositório de dados.  
+ Embora [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) solicita dados no formato nativo relatado pelo provedor, `CDynamicStringAccessor` solicita que o provedor de buscar todos os dados acessados do armazenamento de dados como dados de cadeia de caracteres. Isso é especialmente útil para tarefas simples que não exigem o cálculo dos valores no repositório de dados, como exibir ou imprimir o conteúdo do repositório de dados.  
   
- O tipo nativo dos dados da coluna no repositório de dados não é importante; como o provedor pode suportar a conversão de dados, ele fornecerá os dados no formato de cadeia de caracteres. Se o provedor não oferece suporte para a conversão de tipo de dados nativo para uma cadeia de caracteres (que não é comum), a chamada de solicitação retornará o valor de sucesso **DB_S_ERRORSOCCURED**, e o status para a coluna correspondente será indicar um problema de conversão com **DBSTATUS_E_CANTCONVERTVALUE**.  
+ Não importa o tipo nativo dos dados da coluna no armazenamento de dados; desde que o provedor pode dar suporte a conversão de dados, ele fornecerá os dados no formato de cadeia de caracteres. Se o provedor não der suporte a conversão de tipo de dados nativo para uma cadeia de caracteres (que não é comum), chamada de solicitação retornará o valor de sucesso DB_S_ERRORSOCCURED, e o status para a coluna correspondente será indicar um problema de conversão com DBSTATUS_E_CANTCONVERTVALUE.  
   
  Use `CDynamicStringAccessor` métodos para obter informações de coluna. Você pode usar essas informações de coluna para criar um acessador dinamicamente em tempo de execução.  
   
- As informações de coluna são armazenadas em um buffer criadas e gerenciadas por essa classe. Obter dados do buffer usando [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md), ou armazená-lo para o buffer usando [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).  
+ As informações de coluna são armazenadas em um buffer criadas e gerenciadas por esta classe. Obter dados de buffer usando [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md), ou armazená-lo para o buffer usando [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).  
   
  Para obter uma discussão e exemplos de como usar as classes de acessador dinâmico, consulte [usando acessadores dinâmicos](../../data/oledb/using-dynamic-accessors.md).  
+
+## <a name="getstring"></a> Cdynamicstringaccessor:: GetString
+Recupera os dados da coluna especificada como uma cadeia de caracteres.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho**: atldbcli.h  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      BaseType* GetString(DBORDINAL nColumn) const throw();  
+
+BaseType* GetString(const CHAR* pColumnName) const throw();  
+
+BaseType* GetString(const WCHAR* pColumnName) const throw();  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *nColumn*  
+ [in] O número da coluna. Os números de coluna começam com 1. Um valor de 0 refere-se para a coluna de indicador, se houver.  
+  
+ *pColumnName*  
+ [in] Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um ponteiro para o valor de cadeia de caracteres recuperados da coluna especificada. O valor é do tipo `BaseType`, que estará **CHAR** ou **WCHAR** dependendo se Unicode é definida ou não. Retorna NULL se a coluna especificada não for encontrada.  
+  
+### <a name="remarks"></a>Comentários  
+ O segundo substituir formulário usa o nome da coluna como uma cadeia de caracteres ANSI. O terceiro substituir formulário usa o nome da coluna como uma cadeia de caracteres Unicode.  
+ 
+## <a name="setstring"></a> Cdynamicstringaccessor:: Setstring
+Define os dados da coluna especificada como uma cadeia de caracteres.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+HRESULT SetString(DBORDINAL nColumn,  
+  BaseType* data) throw();  
+
+
+HRESULT SetString(const CHAR* pColumnName,  
+   BaseType* data) throw();  
+
+
+HRESULT SetString(const WCHAR* pColumnName,  
+   BaseType* data) throw();  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *nColumn*  
+ [in] O número da coluna. Os números de coluna começam com 1. O valor especial de 0 refere-se para a coluna de indicador, se houver.  
+  
+ *pColumnName*  
+ [in] Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.  
+  
+ *data*  
+ [in] Um ponteiro para os dados de cadeia de caracteres a ser gravado para a coluna especificada.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um ponteiro para o valor de cadeia de caracteres para o qual definir a coluna especificada. O valor é do tipo `BaseType`, que estará **CHAR** ou **WCHAR** dependendo se Unicode é definida ou não.  
+  
+### <a name="remarks"></a>Comentários  
+ O segundo substituir o formulário usa o nome da coluna como uma cadeia de caracteres ANSI e o terceiro substituir o formulário usa o nome da coluna como uma cadeia de caracteres Unicode.  
+  
+ Se _SECURE_ATL for definido para ter um valor diferente de zero, uma falha de asserção de tempo de execução será gerada se a entrada *dados* cadeia for maior que o comprimento máximo permitido da coluna de dados referenciado. Caso contrário, a cadeia de caracteres de entrada será truncada se ele for maior que o comprimento máximo permitido.  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [Classe CAccessor](../../data/oledb/caccessor-class.md)   
  [Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)   
  [Classe CManualAccessor](../../data/oledb/cmanualaccessor-class.md)   

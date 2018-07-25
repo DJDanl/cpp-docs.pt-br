@@ -9,31 +9,46 @@ f1_keywords:
 - ATL::CXMLAccessor
 - CXMLAccessor
 - ATL.CXMLAccessor
+- ATL.CXMLAccessor.GetXMLColumnData
+- CXMLAccessor::GetXMLColumnData
+- CXMLAccessor.GetXMLColumnData
+- ATL::CXMLAccessor::GetXMLColumnData
+- GetXMLColumnData
+- ATL::CXMLAccessor::GetXMLRowData
+- ATL.CXMLAccessor.GetXMLRowData
+- CXMLAccessor::GetXMLRowData
+- CXMLAccessor.GetXMLRowData
+- GetXMLRowData
 dev_langs:
 - C++
 helpviewer_keywords:
 - CXMLAccessor class
+- GetXMLColumnData method
+- GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 916e9dbe4e142192e4e716f57f97d5bd6865c709
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f25d02b5b8b86a70f63dc2b0ca8d2ba9cb60066b
+ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102902"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233406"
 ---
 # <a name="cxmlaccessor-class"></a>Classe CXMLAccessor
-Permite que você acesse fontes de dados como dados de cadeia de caracteres quando você não possui conhecimento do esquema do repositório de dados (estrutura subjacente).  
+Permite que você acessar fontes de dados como dados de cadeia de caracteres quando você não possui conhecimento do esquema do repositório de dados (estrutura subjacente).  
   
 ## <a name="syntax"></a>Sintaxe
 
 ```cpp
 class CXMLAccessor : public CDynamicStringAccessorW  
 ```  
+
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho**: atldbcli.h  
   
 ## <a name="members"></a>Membros  
   
@@ -41,25 +56,76 @@ class CXMLAccessor : public CDynamicStringAccessorW
   
 |||  
 |-|-|  
-|[GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)|Recupera as informações de coluna.|  
-|[GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)|Recupera todo o conteúdo de uma tabela por linhas.|  
+|[GetXMLColumnData](#getxmlcolumndata)|Recupera as informações de coluna.|  
+|[GetXMLRowData](#getxmlrowdata)|Recupera todo o conteúdo de uma tabela por linhas.|  
   
 ## <a name="remarks"></a>Comentários  
- No entanto, `CXMLAccessor` difere `CDynamicStringAccessorW` em que ele converte todos os dados acessados do armazenamento de dados como XML formatado dados (marcados). Isso é especialmente útil para a saída para páginas de Web com reconhecimento de XML. Os nomes de marca XML corresponderá mais próximo possível nomes de coluna do repositório de dados.  
+ No entanto, `CXMLAccessor` difere `CDynamicStringAccessorW` em que ele converte todos os dados acessados do armazenamento de dados como XML formatado (marcados) dados. Isso é especialmente útil para a saída para páginas de Web com suporte a XML. Os nomes de marca XML corresponderá a nomes de coluna do repositório de dados mais próximo possível.  
   
  Use `CDynamicAccessor` métodos para obter informações de coluna. Você pode usar essas informações de coluna para criar um acessador dinamicamente em tempo de execução.  
   
- As informações de coluna são armazenadas em um buffer criadas e gerenciadas por essa classe. Obter informações de coluna usando [GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md) ou obter dados de coluna por linhas usando [GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md).  
+ As informações de coluna são armazenadas em um buffer criadas e gerenciadas por esta classe. Obter informações de coluna usando [GetXMLColumnData](#getxmlcolumndata) ou obter dados de coluna por linhas usando [GetXMLRowData](#getxmlrowdata).  
   
 ## <a name="example"></a>Exemplo  
  [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]  
+
+## <a name="getxmlcolumndata"></a> Cxmlaccessor:: Getxmlcolumndata
+Recupera as informações de tipo de coluna de uma tabela como dados de cadeia de caracteres formatada em XML, por coluna.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho**: atldbcli.h  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *strOutput*  
+ [out] Uma referência para um buffer de cadeia de caracteres que contém as informações de tipo de coluna a ser recuperado. A cadeia de caracteres é formatada com nomes de marca XML que correspondem aos nomes de coluna do repositório de dados.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um dos valores HRESULT padrão.  
+  
+### <a name="remarks"></a>Comentários  
+ O exemplo a seguir mostra como as informações de tipo de coluna são formatadas em XML. `type` Especifica o tipo de dados da coluna. Observe que os tipos de dados são baseados em tipos de dados OLE DB, não aquelas do banco de dados que está sendo acessado.  
+  
+ `<columninfo>`  
+  
+ `<column type = I2/> ColumnName`  
+  
+ `</columninfo>` 
+
+## <a name="getxmlrowdata"></a> Cxmlaccessor:: Getxmlrowdata
+Recupera todo o conteúdo de uma tabela como dados de cadeia de caracteres formatada em XML, por linha.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+HRESULT GetXMLRowData(CSimpleStringW& strOutput,   
+   bool bAppend = false) throw();  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *strOutput*  
+ [out] Uma referência a um buffer que contém os dados da tabela a ser recuperado. Os dados são formatados como dados de cadeia de caracteres com os nomes de marca XML que correspondem aos nomes de coluna do repositório de dados.  
+  
+ *bAppend*  
+ [in] Um valor booliano que especifica se deve acrescentar uma cadeia de caracteres ao final dos dados de saída.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um dos valores HRESULT padrão.  
+  
+### <a name="remarks"></a>Comentários  
+ O exemplo a seguir mostra como os dados da linha são formatados em XML. `DATA` abaixo representa os dados da linha. Use mover métodos para mover para a linha desejada.  
+  
+ `<row>`  
+  
+ `<column name>DATA</column name>`  
+  
+ `</row>`   
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [Classe CAccessor](../../data/oledb/caccessor-class.md)   
  [Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)   
  [Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)   
