@@ -1,7 +1,8 @@
 ---
-title: Implantar, executar e depurar o projeto do Linux | Microsoft Docs
+title: Implantar, executar e depurar seu projeto Linux em C++ no Visual Studio | Microsoft Docs
+description: Descreve como compilar, executar e depurar o código no destino remoto de dentro de um projeto do Linux em C++ no Visual Studio.
 ms.custom: ''
-ms.date: 11/06/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,16 +13,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: b3f3742f8a63bf93f5686143daeea23ba13255be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57f8aea7d3ff3ddfd28beff6647dc16885d972e3
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338049"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207673"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Implantar, executar e depurar o projeto do Linux
 
-Depois de criar um projeto do Linux e conectar-se a ele usando o [Gerenciador de Conexões do Linux](../linux/connect-to-your-remote-linux-computer.md), você poderá executar e depurar o projeto. Você compilará, executará e depurará o código no destino remoto.
+Depois de criar um projeto do Linux em C++ no Visual Studio e se conectar a ele usando o [Gerenciador de Conexões do Linux](../linux/connect-to-your-remote-linux-computer.md), você pode executá-lo e depurá-lo. Você compilará, executará e depurará o código no destino remoto.
 
 Há várias maneiras de interagir com o projeto do Linux e depurá-lo.
 

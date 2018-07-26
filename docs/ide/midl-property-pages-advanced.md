@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330798"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207754"
 ---
 # <a name="midl-property-pages-advanced"></a>Páginas de propriedade MIDL: avançado
 A página de propriedades **Avançado** na pasta **MIDL** especifica as seguintes opções do compilador MIDL:  
@@ -48,7 +48,7 @@ A página de propriedades **Avançado** na pasta **MIDL** especifica as seguinte
   
 -   Verificar Dados Stub ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Validar Parâmetros ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
+-   Validar Parâmetros ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
   
 -   Alinhamento de Membro do Struct ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
   

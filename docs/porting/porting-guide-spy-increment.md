@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 28c99f5f45aba2c77b84dce63ea200fb33b76f84
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848772"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208803"
 ---
 # <a name="porting-guide-spy"></a>Guia de portabilidade: Spy++
 Este estudo de caso de portabilidade foi projetado para dar a você uma ideia de como é um projeto típico de portabilidade, dos tipos de problemas que você pode encontrar e algumas dicas gerais e truques para resolver problemas de portabilidade. Ele não foi projetado para ser um guia definitivo de portabilidade, uma vez que a experiência de portar um projeto depende muito das especificidades do código.  
@@ -195,7 +195,7 @@ MOUT << _T(" chUser:'") << chUser
   
 ```  
   
- A macro `MOUT` resolve para *g_pmout, que é um objeto do tipo `mstream`. A classe mstream é derivada da classe de cadeia de caracteres de saída padrão, `std::basic_ostream<TCHAR>.`. No entanto, com _T em torno do literal de cadeia de caracteres, que colocamos em preparação para a conversão para Unicode, a resolução de sobrecarga para o operador << falha com a seguinte mensagem de erro:  
+ A macro `MOUT` é resolvida para \*g_pmout, que é um objeto do tipo `mstream`. A classe mstream é derivada da classe de cadeia de caracteres de saída padrão, `std::basic_ostream<TCHAR>.`. No entanto, com _T em torno do literal de cadeia de caracteres, que colocamos em preparação para a conversão para Unicode, a resolução de sobrecarga para o operador << falha com a seguinte mensagem de erro:  
   
 ```Output  
 1>winmsgs.cpp(4612): error C2666: 'mstream::operator <<': 2 overloads have similar conversions

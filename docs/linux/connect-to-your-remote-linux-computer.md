@@ -1,7 +1,8 @@
 ---
-title: Conectar-se ao computador Linux remoto | Microsoft Docs
+title: Conectar-se ao computador Linux remoto no Visual Studio | Microsoft Docs
+description: Como se conectar a um computador Linux remoto de dentro de um projeto do Visual Studio C++.
 ms.custom: ''
-ms.date: 11/06/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,16 +13,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: dd7f73a01b3b0941144ff59a683a9e42467f5a18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329316"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207660"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Conectar-se ao computador Linux remoto
 
-Durante o build, o código do Linux é copiado para o seu computador Linux remoto e compilado nesse sistema de acordo com as configurações escolhidas no Visual Studio.  Para configurar essa conexão remota:
+Ao compilar um projeto Linux em C++ no Visual Studio, o código do Linux é copiado para o seu computador Linux remoto e então compilado com base nas configurações do Visual Studio. Para configurar essa conexão remota:
 
 1. Compile o projeto pela primeira vez ou crie manualmente uma nova entrada selecionando **Ferramentas > Opções** e, em seguida, abra o nó **Plataforma Cruzada > Gerenciador de Conexão** clique no botão **Adicionar**.
 
