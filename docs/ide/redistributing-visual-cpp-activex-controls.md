@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b770bbacca06c6edfb3b9b4eda53fc7be8a7ae0
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: dc319c2da652cd1c43f23c13456b32f978595199
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33331013"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207951"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Redistribuindo controles ActiveX do Visual C++
 O Visual C++ 6.0 fornece controles ActiveX que você pode usar em aplicativos que redistribuirá em seguida. Esses controles não estão mais incluídos no Visual C++. De acordo com os contratos de licença do Visual C++ 6.0, você pode redistribuir esses controles com aplicativos desenvolvidos no Visual C++.  
@@ -34,11 +34,11 @@ O Visual C++ 6.0 fornece controles ActiveX que você pode usar em aplicativos qu
   
 -   Asycfilt.dll  
   
--   Comcat.dll *  
+-   Comcat.dll \*  
   
--   Oleaut32.dll *  
+-   Oleaut32.dll \*  
   
--   Olepro32.dll *  
+-   Olepro32.dll \*  
   
 -   Stdole2.tlb  
   
