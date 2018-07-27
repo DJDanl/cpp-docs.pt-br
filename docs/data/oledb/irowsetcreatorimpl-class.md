@@ -11,25 +11,34 @@ f1_keywords:
 - ATL::IRowsetCreatorImpl<T>
 - ATL.IRowsetCreatorImpl<T>
 - IRowsetCreatorImpl
+- IRowsetCreatorImpl.SetSite
+- IRowsetCreatorImpl<T>::SetSite
+- IRowsetCreatorImpl::SetSite
+- SetSite
+- ATL.IRowsetCreatorImpl.SetSite
+- ATL::IRowsetCreatorImpl<T>::SetSite
+- ATL::IRowsetCreatorImpl::SetSite
+- ATL.IRowsetCreatorImpl<T>.SetSite
 dev_langs:
 - C++
 helpviewer_keywords:
 - IRowsetCreatorImpl class
+- SetSite method
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0492994193130ffa6a547691490b4da1ae557c8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8d43c0824b2f4783b9a09782360940fb1327d99
+ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102131"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39322053"
 ---
 # <a name="irowsetcreatorimpl-class"></a>Classe IRowsetCreatorImpl
-Executa as mesmas funções `IObjectWithSite` , mas também permite que as propriedades de OLE DB **DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS**.  
+Executa as mesmas funções como `IObjectWithSite` , mas também permite que as propriedades de OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`.  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,9 +48,12 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
    : public IObjectWithSiteImpl< T >  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T`  
- Uma classe derivada de **IRowsetCreator**.  
+### <a name="parameters"></a>Parâmetros  
+ *T*  
+ Uma classe derivada de `IRowsetCreator`.  
+
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
 ## <a name="members"></a>Membros  
   
@@ -49,14 +61,30 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
   
 |||  
 |-|-|  
-|[SetSite](../../data/oledb/irowsetcreatorimpl-setsite.md)|Define o local que contém o objeto de conjunto de linhas.|  
+|[SetSite](#setsite)|Define o site que contém o objeto de conjunto de linhas.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe herda de [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) e substituições [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). Quando um objeto de comando ou uma sessão do provedor cria um conjunto de linhas, ele chama `QueryInterface` no objeto de conjunto de linhas procurando `IObjectWithSite` e chamadas `SetSite` passando o objeto de conjunto de linhas **IUnkown** interface como a interface de site.  
+ Essa classe herda de [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) e substitui [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). Quando um objeto de comando ou sessão do provedor cria um conjunto de linhas, ele chama `QueryInterface` no objeto de conjunto de linhas procurando `IObjectWithSite` e chama `SetSite` passando o objeto de conjunto de linhas `IUnkown` interface como a interface de site.  
+
+## <a name="setsite"></a> Irowsetcreatorimpl:: SetSite
+Define o site que contém o objeto de conjunto de linhas. Para obter mais informações, consulte [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869).  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldb.h  
+### <a name="syntax"></a>Sintaxe  
   
+```cpp
+      STDMETHOD(SetSite )(IUnknown* pCreator);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *pCreator*  
+ [in] Ponteiro para o `IUnknown` ponteiro de interface do site Gerenciando o objeto de conjunto de linhas.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um HRESULT padrão.  
+  
+### <a name="remarks"></a>Comentários  
+ Além disso, `IRowsetCreatorImpl::SetSite` permite que o OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` propriedades. 
+
 ## <a name="see-also"></a>Consulte também  
  [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
