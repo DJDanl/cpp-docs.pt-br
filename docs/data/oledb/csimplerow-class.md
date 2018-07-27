@@ -9,55 +9,154 @@ f1_keywords:
 - CSimpleRow
 - ATL::CSimpleRow
 - ATL.CSimpleRow
+- CSimpleRow::AddRefRow
+- AddRefRow
+- ATL.CSimpleRow.AddRefRow
+- ATL::CSimpleRow::AddRefRow
+- CSimpleRow.AddRefRow
+- CSimpleRow.Compare
+- CSimpleRow::Compare
+- CSimpleRow
+- ATL::CSimpleRow::CSimpleRow
+- CSimpleRow.CSimpleRow
+- ATL.CSimpleRow.CSimpleRow
+- CSimpleRow::CSimpleRow
+- ATL::CSimpleRow::ReleaseRow
+- CSimpleRow::ReleaseRow
+- ReleaseRow
+- CSimpleRow.ReleaseRow
+- ATL.CSimpleRow.ReleaseRow
+- CSimpleRow.m_dwRef
+- CSimpleRow::m_dwRef
+- CSimpleRow::m_iRowset
+- CSimpleRow.m_iRowset
 dev_langs:
 - C++
 helpviewer_keywords:
 - CSimpleRow class
+- AddRefRow method
+- Compare method
+- CSimpleRow class, constructor
+- ReleaseRow method
+- m_dwRef
+- m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 68f1983eaad36494892c9a18dcb2dbebe2da1f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f37390b4ab5db4cb3b519c801052c4b02102af6
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33099557"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269790"
 ---
 # <a name="csimplerow-class"></a>Classe CSimpleRow
-Fornece uma implementação padrão para o identificador de linha, que é usado no [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) classe.  
+Fornece uma implementação padrão para o identificador de linha, que é usado na [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) classe.  
   
 ## <a name="syntax"></a>Sintaxe
 
 ```cpp
 class CSimpleRow  
 ```  
-  
+
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
+
 ## <a name="members"></a>Membros  
   
 ### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[AddRefRow](../../data/oledb/csimplerow-addrefrow.md)|Adiciona uma contagem de referência em um identificador de linha existente.|  
-|[Compare](../../data/oledb/csimplerow-compare.md)|Compara duas linhas para ver se elas se referem à mesma instância de linha.|  
-|[CSimpleRow](../../data/oledb/csimplerow-csimplerow.md)|O construtor.|  
-|[ReleaseRow](../../data/oledb/csimplerow-releaserow.md)|Libera linhas.|  
+|[AddRefRow](#addrefrow)|Adiciona uma contagem de referência em um identificador de linha existente.|  
+|[Compare](#compare)|Compara duas linhas para ver se eles se referem à mesma instância de linha.|  
+|[CSimpleRow](#csimplerow)|O construtor.|  
+|[ReleaseRow](#releaserow)|Libera linhas.|  
   
 ### <a name="data-members"></a>Membros de Dados  
   
 |||  
 |-|-|  
-|[m_dwRef](../../data/oledb/csimplerow-m-dwref.md)|Contagem de referência para um identificador de linha existente.|  
-|[m_iRowset](../../data/oledb/csimplerow-m-irowset.md)|Um índice no conjunto de linhas que representa o cursor.|  
+|[m_dwRef](#dwref)|Contagem de referência deve ser um identificador de linha existente.|  
+|[m_iRowset](#irowset)|Um índice ao conjunto de linhas que representa o cursor.|  
   
 ## <a name="remarks"></a>Comentários  
- Um identificador de linha é logicamente uma marca exclusiva para uma linha de resultado. `IRowsetImpl` cria um novo `CSimpleRow` para cada linha solicitada em [irowsetimpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` também pode ser substituído por sua própria implementação da alça da linha, que é um argumento de modelo padrão para `IRowsetImpl`. O único requisito para substituir essa classe é para que a classe de substituição fornece um construtor que aceita um único parâmetro do tipo **longo**.  
+ Um identificador de linha é logicamente uma marca exclusiva para uma linha de resultado. `IRowsetImpl` cria um novo `CSimpleRow` para todas as linhas solicitadas no [irowsetimpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` também pode ser substituído por sua própria implementação da alça da linha, pois é um argumento de modelo padrão para `IRowsetImpl`. O único requisito para substituir essa classe é ter a classe de substituição a fornecer um construtor que aceita um único parâmetro do tipo **longo**.  
+
+## <a name="addrefrow"></a> Csimplerow:: Addrefrow
+Adiciona uma contagem de referência para um identificador de linha existente em uma forma thread-safe.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldb.h  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+DWORD AddRefRow();  
+  
+```  
+
+## <a name="compare"></a> Csimplerow:: Compare
+Compara duas linhas para ver se eles se referem à mesma instância de linha.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+HRESULT Compare(CSimpleRow* pRow);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *pRow*  
+ Um ponteiro para um `CSimpleRow` objeto.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um valor HRESULT, geralmente S_OK, indicando que as duas linhas são a mesma instância de linha ou S_FALSE, indicando as duas linhas são diferentes. Ver [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/library/ms719629.aspx) na *referência do programador DB OLE* para outro possíveis valores de retorno. 
+
+## <a name="csimplerow"></a> Csimplerow:: Csimplerow
+O construtor.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      CSimpleRow(DBCOUNTITEM iRowsetCur);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *iRowsetCur*  
+ [in] Índice ao conjunto de linhas atual.  
+  
+### <a name="remarks"></a>Comentários  
+ Conjuntos [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) à *iRowsetCur*. 
+
+## <a name="releaserow"></a> Csimplerow:: Releaserow
+Libera linhas em uma forma thread-safe.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+DWORD ReleaseRow();  
+  
+```  
+
+## <a name="dwref"></a> Csimplerow:: M_dwref
+Contagem de referência deve ser um identificador de linha existente.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+DWORD m_dwRef;  
+  
+```  
+
+## <a name="irowset"></a> Csimplerow:: M_irowset
+Índice para o conjunto de linhas que representa o cursor.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+KeyType m_iRowset;  
+  
+```  
   
 ## <a name="see-also"></a>Consulte também  
  [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

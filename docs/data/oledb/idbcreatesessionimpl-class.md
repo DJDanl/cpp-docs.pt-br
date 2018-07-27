@@ -9,25 +9,29 @@ f1_keywords:
 - IDBCreateSessionImpl
 - ATL.IDBCreateSessionImpl
 - ATL::IDBCreateSessionImpl
+- IDBCreateSessionImpl::CreateSession
+- IDBCreateSessionImpl.CreateSession
+- CreateSession
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDBCreateSessionImpl class
+- CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3e027faa11ec7c2a2b6c8d29ef99fe95419a7594
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02701b03de074823da3cc7fcd229056195fd9a85
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33100259"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269453"
 ---
 # <a name="idbcreatesessionimpl-class"></a>Classe IDBCreateSessionImpl
-Fornece uma implementação para o [IDBCreateSession](https://msdn.microsoft.com/en-us/library/ms724076.aspx) interface.  
+Fornece uma implementação para o [IDBCreateSession](https://msdn.microsoft.com/library/ms724076.aspx) interface.  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,12 +41,15 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
    : public IDBCreateSession  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T`  
- SUA CLASSE DERIVADA DE  
+### <a name="parameters"></a>Parâmetros  
+ *T*  
+ SUA CLASSE, DERIVADA DE  
   
- `SessionClass`  
+ *SessionClass*  
  O objeto de sessão.  
+
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h 
   
 ## <a name="members"></a>Membros  
   
@@ -50,13 +57,24 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
   
 |||  
 |-|-|  
-|[CreateSession](../../data/oledb/idbcreatesessionimpl-createsession.md)|Cria uma nova sessão do objeto de origem de dados e retorna a interface solicitada a sessão recém-criada.|  
+|[CreateSession](#createsession)|Cria uma nova sessão do objeto de fonte de dados e retorna a interface solicitada a sessão recém-criada.|  
   
 ## <a name="remarks"></a>Comentários  
  Uma interface obrigatória em objetos de fonte de dados.  
+
+## <a name="createsession"></a> Idbcreatesessionimpl:: CreateSession
+Cria uma nova sessão do objeto de fonte de dados e retorna a interface solicitada a sessão recém-criada.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldb.h  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      STDMETHOD(CreateSession)(IUnknown * pUnkOuter,   
+   REFIID riid,   
+   IUnknown ** ppDBSession);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ Ver [idbcreatesession::](https://msdn.microsoft.com/library/ms714942.aspx) na *referência do programador do OLE DB*.   
   
 ## <a name="see-also"></a>Consulte também  
  [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

@@ -7,25 +7,41 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - ICommandText
+- GetCommandText
+- ICommandTextImpl.GetCommandText
+- ICommandTextImpl::GetCommandText
+- ATL::ICommandTextImpl::m_strCommandText
+- ICommandTextImpl<T>::m_strCommandText
+- m_strCommandText
+- ICommandTextImpl.m_strCommandText
+- ICommandTextImpl::m_strCommandText
+- ATL::ICommandTextImpl<T>::m_strCommandText
+- ATL.ICommandTextImpl.m_strCommandText
+- ICommandTextImpl.SetCommandText
+- ICommandTextImpl::SetCommandText
+- SetCommandText
 dev_langs:
 - C++
 helpviewer_keywords:
 - ICommandText class
+- GetCommandText method
+- m_strCommandText
+- SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f49326dba4868ad490dc1a7122eed68271bdfa15
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2223958f2f5dbacb7c86bf2735c1de3a85d9d488
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33100194"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269485"
 ---
 # <a name="icommandtextimpl-class"></a>Classe ICommandTextImpl
-Fornece uma implementação para o [ICommandText](https://msdn.microsoft.com/en-us/library/ms714914.aspx) interface.  
+Fornece uma implementação para o [ICommandText](https://msdn.microsoft.com/library/ms714914.aspx) interface.  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -35,9 +51,12 @@ class ATL_NO_VTABLE ICommandTextImpl
    : public ICommandImpl<T, ICommandText>  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T`  
- O comando de classe derivada de **ICommandTextImpl**.  
+### <a name="parameters"></a>Parâmetros  
+ *T*  
+ A classe de comando derivada de **ICommandTextImpl**. 
+
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** altdb.h  
   
 ## <a name="members"></a>Membros  
   
@@ -45,20 +64,53 @@ class ATL_NO_VTABLE ICommandTextImpl
   
 |||  
 |-|-|  
-|[GetCommandText](../../data/oledb/icommandtextimpl-getcommandtext.md)|Retorna o texto de comandos definidos pela última chamada para [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|  
-|[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)|Define o texto de comando, substituindo o texto do comando existente.|  
+|[GetCommandText](#getcommandtext)|Retorna o comando de texto definido pela última chamada para [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|  
+|[SetCommandText](#setcommandtext)|Define o texto de comando, substituindo o texto de comando existente.|  
   
 ### <a name="data-members"></a>Membros de Dados  
   
 |||  
 |-|-|  
-|[m_strCommandText](../../data/oledb/icommandtextimpl-m-strcommandtext.md)|Armazena o texto do comando.|  
+|[m_strCommandText](#strcommandtext)|Armazena o texto do comando.|  
   
 ## <a name="remarks"></a>Comentários  
  Uma interface obrigatória em comandos.  
+ 
+## <a name="getcommandtext"></a> Icommandtextimpl:: Getcommandtext
+Retorna o comando de texto definido pela última chamada para [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** altdb.h  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      STDMETHOD(GetCommandText)(GUID * pguidDialect,   
+   LPOLESTR * ppwszCommand);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ Ver [ICommandText::GetCommandText](https://msdn.microsoft.com/library/ms709825.aspx) na *referência do programador do OLE DB*. O *pguidDialect* parâmetro é ignorado por padrão.  
+
+## <a name="setcommandtext"></a> Icommandtextimpl:: SetCommandText
+Define o texto de comando, substituindo o texto de comando existente.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      STDMETHOD(SetCommandText)(REFGUID rguidDialect,   
+   LPCOLESTR pwszCommand);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ Ver [ICommandText:: SetCommandText](https://msdn.microsoft.com/library/ms709757.aspx) na *referência do programador do OLE DB*. 
+
+## <a name="strcommandtext"></a> Icommandtextimpl:: M_strcommandtext
+Armazena a cadeia de caracteres de texto de comando.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+CComBSTR m_strCommandText;  
+  
+```  
   
 ## <a name="see-also"></a>Consulte também  
  [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

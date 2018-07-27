@@ -9,27 +9,49 @@ f1_keywords:
 - ATL::IRowsetChangeImpl
 - IRowsetChangeImpl
 - ATL.IRowsetChangeImpl
+- ATL.IRowsetChangeImpl.DeleteRows
+- ATL::IRowsetChangeImpl::DeleteRows
+- IRowsetChangeImpl.DeleteRows
+- DeleteRows
+- IRowsetChangeImpl::DeleteRows
+- ATL.IRowsetChangeImpl.InsertRow
+- InsertRow
+- IRowsetChangeImpl.InsertRow
+- ATL::IRowsetChangeImpl::InsertRow
+- IRowsetChangeImpl::InsertRow
+- SetData
+- IRowsetChangeImpl::SetData
+- ATL.IRowsetChangeImpl.SetData
+- IRowsetChangeImpl.SetData
+- ATL::IRowsetChangeImpl::SetData
+- IRowsetChangeImpl::FlushData
+- IRowsetChangeImpl.FlushData
+- FlushData
 dev_langs:
 - C++
 helpviewer_keywords:
 - providers, updatable
 - updatable providers, immediate update
 - IRowsetChangeImpl class
+- DeleteRows method
+- InsertRow method
+- SetData method
+- FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 11435cd1372147efb14aed78448d889fd60dc5a0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70c9d1b5bc4952b0a56d8e136bc7b817a1e1b1c9
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106022"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269764"
 ---
 # <a name="irowsetchangeimpl-class"></a>Classe IRowsetChangeImpl
-A implementação de modelos OLE DB do [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) interface na especificação do OLE DB.  
+A implementação de modelos OLE DB do [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) interface na especificação do OLE DB.  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,21 +65,24 @@ template <
 class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T`  
+### <a name="parameters"></a>Parâmetros  
+ *T*  
  Uma classe derivada de `IRowsetChangeImpl`.  
   
- `Storage`  
+ *Armazenamento*  
  O registro do usuário.  
   
- `BaseInterface`  
- A classe base para a interface, como `IRowsetChange`.  
+ *BaseInterface*  
+ A classe base para a interface, tais como `IRowsetChange`.  
   
- `RowClass`  
+ *RowClass*  
  A unidade de armazenamento para o identificador de linha.  
   
- `MapClass`  
+ *MapClass*  
  A unidade de armazenamento para todos os identificadores de linha mantidos pelo provedor.  
+
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
   
 ## <a name="members"></a>Membros  
   
@@ -65,20 +90,20 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
   
 |||  
 |-|-|  
-|[DeleteRows](../../data/oledb/irowsetchangeimpl-deleterows.md)|Exclui linhas do conjunto de linhas.|  
-|[InsertRow](../../data/oledb/irowsetchangeimpl-insertrow.md)|Insere uma linha no conjunto de linhas.|  
-|[SetData](../../data/oledb/irowsetchangeimpl-setdata.md)|Define valores de dados em uma ou mais colunas.|  
+|[DeleteRows](#deleterows)|Exclui linhas do conjunto de linhas.|  
+|[InsertRow](#insertrow)|Insere uma linha no conjunto de linhas.|  
+|[SetData](#setdata)|Define valores de dados em uma ou mais colunas.|  
   
 ### <a name="implementation-method-callback"></a>Método de implementação (retorno de chamada)  
   
 |||  
 |-|-|  
-|[FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md)|Overidden pelo provedor para confirmar seu repositório de dados.|  
+|[FlushData](#flushdata)|Ponto pelo provedor para confirmar dados para seu repositório.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa interface é responsável pelas operações de gravação imediata para um repositório de dados. "Imediata" significa que quando o usuário final (pessoa usando o consumidor) faz as alterações, essas alterações são transmitidas imediatamente para os dados armazena (e não pode ser desfeita).  
+ Essa interface é responsável por operações de gravação de imediato para um armazenamento de dados. "Imediatas" significa que quando o usuário final (a pessoa que usa o consumidor) faz qualquer alteração, essas alterações são transmitidas imediatamente para os dados armazena (e não pode ser desfeita).  
   
- `IRowsetChangeImpl` implementa o OLE DB `IRowsetChange` interface, que permite atualização de valores de colunas em linhas existentes, excluindo linhas e inserir novas linhas.  
+ `IRowsetChangeImpl` implementa o OLE DB `IRowsetChange` interface, que permite atualização dos valores das colunas em linhas existentes, a exclusão de linhas e inserindo novas linhas.  
   
  A implementação de modelos OLE DB dá suporte a todos os métodos de base (`SetData`, `InsertRow`, e `DeleteRows`).  
   
@@ -87,12 +112,73 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
   
 -   [Criando um provedor atualizável](../../data/oledb/creating-an-updatable-provider.md)  
   
--   Capítulo 6 a *referência do programador de OLE DB*  
+-   Capítulo 6 a *referência do programador do OLE DB*  
   
 -   Consulte também como o `RUpdateRowset` classe é usada no exemplo UpdatePV  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldb.h  
+## <a name="deleterows"></a> Irowsetchangeimpl:: DeleteRows
+Exclui linhas do conjunto de linhas.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,  
+   DBCOUNTITEM cRows,  
+   const HROW rghRows[],  
+   DBROWSTATUS rgRowStatus[]);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ Ver [IRowsetChange:: DeleteRows](https://msdn.microsoft.com/library/ms724362.aspx) na *referência do programador do OLE DB*. 
+
+## <a name="insertrow"></a> Irowsetchangeimpl:: Insertrow
+Cria e inicializa uma nova linha no conjunto de linhas.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,  
+   HACCESSOR hAccessor,  
+   void* pData,  
+   HROW* phRow);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ Ver [IRowsetChange:: Insertrow](https://msdn.microsoft.com/library/ms716921.aspx) na *referência do programador do OLE DB*. 
+
+## <a name="setdata"></a> Irowsetchangeimpl:: SetData
+Define valores de dados em uma ou mais colunas.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      STDMETHOD (SetData )(HROW hRow,  
+   HACCESSOR hAccessor,  
+   void* pSrcData);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ Ver [IRowsetChange:: SetData](https://msdn.microsoft.com/library/ms721232.aspx) na *referência do programador do OLE DB*. 
+
+## <a name="flushdata"></a> Irowsetchangeimpl:: Flushdata
+Ponto pelo provedor para confirmar dados para seu repositório.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+HRESULT FlushData(HROW hRowToFlush,  
+   HACCESSOR hAccessorToFlush);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *hRowToFlush*  
+ [in] Identificador para as linhas de dados. O tipo dessa linha é determinado a partir de *RowClass* argumento de modelo da `IRowsetImpl` classe (`CSimpleRow` por padrão).  
+  
+ *hAccessorToFlush*  
+ [in] Identificador para o acessador, que contém informações de associação e informações de tipo em seu `PROVIDER_MAP` (consulte [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)).  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um HRESULT padrão.  
   
 ## <a name="see-also"></a>Consulte também  
  [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

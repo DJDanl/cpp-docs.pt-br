@@ -7,25 +7,56 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - IAccessorImpl
+- ATL.IAccessorImpl.IAccessorImpl
+- ATL::IAccessorImpl::IAccessorImpl
+- IAccessorImpl::IAccessorImpl
+- IAccessorImpl.IAccessorImpl
+- IAccessorImpl
+- ATL::IAccessorImpl::AddRefAccessor
+- AddRefAccessor
+- IAccessorImpl::AddRefAccessor
+- IAccessorImpl.AddRefAccessor
+- ATL.IAccessorImpl.AddRefAccessor
+- IAccessorImpl::CreateAccessor
+- CreateAccessor
+- ATL::IAccessorImpl::CreateAccessor
+- IAccessorImpl.CreateAccessor
+- ATL.IAccessorImpl.CreateAccessor
+- IAccessorImpl.GetBindings
+- ATL::IAccessorImpl::GetBindings
+- IAccessorImpl::GetBindings
+- GetBindings
+- ATL.IAccessorImpl.GetBindings
+- ReleaseAccessor
+- IAccessorImpl::ReleaseAccessor
+- ATL.IAccessorImpl.ReleaseAccessor
+- ATL::IAccessorImpl::ReleaseAccessor
+- IAccessorImpl.ReleaseAccessor
 dev_langs:
 - C++
 helpviewer_keywords:
 - IAccessorImpl class
+- IAccessorImpl class, constructor
+- IAccessorImpl constructor
+- AddRefAccessor method
+- CreateAccessor method
+- GetBindings method
+- ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d62deeb487fded5895bbd47332a0f8a6ad7bbce6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ac22d8ee45209ad6a20dcb34a75c06dd9b80b58
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102518"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269882"
 ---
 # <a name="iaccessorimpl-class"></a>Classe IAccessorImpl
-Fornece uma implementação de [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) interface.  
+Fornece uma implementação de [IAccessor](https://msdn.microsoft.com/library/ms719672.aspx) interface.  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,38 +67,106 @@ template <class T,
 class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T`  
+### <a name="parameters"></a>Parâmetros  
+ *T*  
  Sua classe de objeto do conjunto de linhas ou de comando.  
   
- `BindType`  
- Unidade de armazenamento de informações de associação. O padrão é o **ATLBINDINGS** estrutura (consulte atldb.h).  
+ *BindType*  
+ Unidade de armazenamento de informações de associação. O padrão é o `ATLBINDINGS` estrutura (consulte atldb.h).  
   
- `BindingVector`  
- Unidade de armazenamento de informações de coluna. O padrão é [CAtlMap](../../atl/reference/catlmap-class.md) onde o elemento chave é um **HACCESSOR** valor e o elemento de valor é um ponteiro para um `BindType` estrutura.  
+ *BindingVector*  
+ Unidade de armazenamento para informações de coluna. O padrão é [CAtlMap](../../atl/reference/catlmap-class.md) onde o elemento-chave é um valor HACCESSOR e o elemento de valor é um ponteiro para um `BindType` estrutura.  
   
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atldb.h  
+
 ## <a name="members"></a>Membros  
   
 ### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)|O construtor.|  
+|[IAccessorImpl](#iaccessorimpl)|O construtor.|  
   
 ### <a name="interface-methods"></a>Métodos de interface  
   
 |||  
 |-|-|  
-|[AddRefAccessor](../../data/oledb/iaccessorimpl-addrefaccessor.md)|Adiciona uma contagem de referência a acessador existente.|  
-|[CreateAccessor](../../data/oledb/iaccessorimpl-createaccessor.md)|Cria um acessador de um conjunto de associações.|  
-|[GetBindings](../../data/oledb/iaccessorimpl-getbindings.md)|Retorna as associações em um acessador.|  
-|[ReleaseAccessor](../../data/oledb/iaccessorimpl-releaseaccessor.md)|Libera um acessador.|  
+|[AddRefAccessor](#addrefaccessor)|Adiciona uma contagem de referência a acessador existente.|  
+|[CreateAccessor](#createaccessor)|Cria um acessador de um conjunto de associações.|  
+|[GetBindings](#getbindings)|Retorna as associações em um acessador.|  
+|[ReleaseAccessor](#releaseaccessor)|Libera um acessador.|  
   
 ## <a name="remarks"></a>Comentários  
- Isso é obrigatório em conjuntos de linhas e comandos. OLE DB requer provedores implementar um **HACCESSOR**, que é uma marca para uma matriz de [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) estruturas. **HACCESSOR**s fornecidos pelo `IAccessorImpl` são endereços do `BindType` estruturas. Por padrão, `BindType` é definido como um **ATLBINDINGS** na `IAccessorImpl`da definição do modelo. `BindType` Fornece um mecanismo usado pelo `IAccessorImpl` para controlar o número de elementos no seu **DBBINDING** , bem como os sinalizadores de contagem e o acessador de uma referência de matriz.  
+ Isso é obrigatório em conjuntos de linhas e comandos. OLE DB exige que os provedores implementar um HACCESSOR, que é uma marca para uma matriz de [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) estruturas. HACCESSORs fornecidos pelo `IAccessorImpl` são os endereços do `BindType` estruturas. Por padrão, `BindType` é definido como um `ATLBINDINGS` no `IAccessorImpl`da definição de modelo. `BindType` Fornece um mecanismo usado pelo `IAccessorImpl` para controlar o número de elementos no seu `DBBINDING` , bem como um sinalizadores de acessador e contagem de referência de matriz.  
+
+## <a name="iaccessorimpl"></a> Iaccessorimpl:: Iaccessorimpl
+O construtor.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldb.h  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+IAccessorImpl();  
+  
+```  
+
+## <a name="addrefaccessor"></a> Iaccessorimpl:: Addrefaccessor
+Adiciona uma contagem de referência a acessador existente.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,  
+   DBREFCOUNT* pcRefCount);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ Ver [IAccessor::AddRefAccessor](https://msdn.microsoft.com/library/ms714978.aspx) na *referência do programador do OLE DB*.
+
+## <a name="createaccessor"></a> Iaccessorimpl:: CreateAccessor
+Cria um acessador de um conjunto de associações.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,  
+   DBCOUNTITEM cBindings,  
+   const DBBINDING rgBindings[],  
+   DBLENGTH cbRowSize,  
+   HACCESSOR* phAccessor,  
+   DBBINDSTATUS rgStatus[]);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ Ver [IAccessor:: CreateAccessor](https://msdn.microsoft.com/library/ms720969.aspx) na *referência do programador do OLE DB*.  
+
+## <a name="getbindings"></a> Iaccessorimpl:: Getbindings
+Retorna as associações de colunas básico do consumidor em um acessador.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      STDMETHOD(GetBindings)(HACCESSOR hAccessor,  
+   DBACCESSORFLAGS* pdwAccessorFlags,  
+   DBCOUNTITEM* pcBindings,  
+   DBBINDING** prgBindings);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ Ver [IAccessor::GetBindings](https://msdn.microsoft.com/library/ms721253.aspx) na *referência do programador do OLE DB*. 
+
+## <a name="releaseaccessor"></a> Iaccessorimpl:: Releaseaccessor
+Libera um acessador.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```cpp
+      STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,  
+   DBREFCOUNT* pcRefCount);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ Ver [IAccessor:: Releaseaccessor](https://msdn.microsoft.com/library/ms719717.aspx) na *referência do programador do OLE DB*.
   
 ## <a name="see-also"></a>Consulte também  
  [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
