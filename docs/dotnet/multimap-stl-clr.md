@@ -107,15 +107,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 693d4f8b8f0e7271a4c1f7df9931e0a85e57c332
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 0dcbab8f6ced483c54b7eb3efed68efacd60c858
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079714"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376216"
 ---
 # <a name="multimap-stlclr"></a>multimapa (STL/CLR)
-A classe de modelo descreve um objeto que controla uma sequência de comprimento variável de elementos que tenha acesso bidirecional. Você usa o contêiner `multimap` para gerenciar uma sequência de elementos como uma árvore equilibrada (quase) ordenada de nós, cada armazenamento de um elemento. Um elemento consiste em uma chave, para ordenar a sequência e um valor mapeado, o que vai ao longo da simultaneamente.  
+A classe de modelo descreve um objeto que controla uma sequência de comprimento variado de elementos que tem acesso bidirecional. Você pode usar o contêiner `multimap` para gerenciar uma sequência de elementos como uma árvore ordenada (quase) com balanceamento de nós, cada armazenar um elemento. Um elemento consiste em uma chave, para ordenar a sequência e um valor mapeado, o que vai ao longo da simultaneamente.  
   
  Na descrição abaixo, `GValue` é o mesmo que:  
   
@@ -123,13 +123,13 @@ A classe de modelo descreve um objeto que controla uma sequência de comprimento
   
  em que:  
   
- `GKey` é o mesmo que `Key` , a menos que o último é um tipo de referência, caso em que é `Key^`  
+ `GKey` é o mesmo que *chave* , a menos que o último é um tipo ref, nesse caso, ele é `Key^`  
   
- `GMapped` é o mesmo que `Mapped` , a menos que o último é um tipo de referência, caso em que é `Mapped^`  
+ `GMapped` é o mesmo que *mapeada* , a menos que o último é um tipo ref, nesse caso, ele é `Mapped^`  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     ref class multimap  
@@ -145,10 +145,10 @@ template<typename Key,
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- Chave  
+ *Chave*  
  O tipo do componente principal de um elemento na sequência controlada.  
   
- Mapeado  
+ *Mapeado*  
  O tipo do componente adicional de um elemento na sequência controlada.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -163,33 +163,33 @@ template<typename Key,
 |[multimap::const_iterator (STL/CLR)](#const_iterator)|O tipo de um iterador de constante para a sequência controlada.|  
 |[multimap::const_reference (STL/CLR)](#const_reference)|O tipo de uma referência de constante para um elemento.|  
 |[multimap::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|O tipo de um iterador reverso de constante para a sequência controlada.|  
-|[multimap::difference_type (STL/CLR)](#difference_type)|O tipo de uma distância (possivelmente assinado) entre dois elementos.|  
+|[multimap::difference_type (STL/CLR)](#difference_type)|O tipo de uma distância (possivelmente com sinal) entre dois elementos.|  
 |[multimap::generic_container (STL/CLR)](#generic_container)|O tipo da interface genérica para o contêiner.|  
 |[multimap::generic_iterator (STL/CLR)](#generic_iterator)|O tipo de um iterador para a interface genérica para o contêiner.|  
 |[multimap::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|O tipo de um iterador inverso para a interface genérica para o contêiner.|  
 |[multimap::generic_value (STL/CLR)](#generic_value)|O tipo de um elemento para a interface genérica para o contêiner.|  
 |[multimap::iterator (STL/CLR)](#iterator)|O tipo de um iterador para a sequência controlada.|  
-|[multimap::key_compare (STL/CLR)](#key_compare)|O representante de ordenação para duas chaves.|  
+|[multimap::key_compare (STL/CLR)](#key_compare)|O delegado de ordenação para duas chaves.|  
 |[multimap::key_type (STL/CLR)](#key_type)|O tipo de uma chave de classificação.|  
 |[multimap::mapped_type (STL/CLR)](#mapped_type)|O tipo do valor mapeado associado a cada chave.|  
 |[multimap::reference (STL/CLR)](#reference)|O tipo de uma referência para um elemento.|  
 |[multimap::reverse_iterator (STL/CLR)](#reverse_iterator)|O tipo de um iterador inverso para a sequência controlada.|  
-|[multimap::size_type (STL/CLR)](#size_type)|O tipo de uma distância (negativo) entre dois elementos.|  
-|[multimap::value_compare (STL/CLR)](#value_compare)|O representante de ordenação para dois valores de elemento.|  
+|[multimap::size_type (STL/CLR)](#size_type)|O tipo de uma distância (positivo) entre dois elementos.|  
+|[multimap::value_compare (STL/CLR)](#value_compare)|O delegado de ordenação para dois valores de elemento.|  
 |[multimap::value_type (STL/CLR)](#value_type)|O tipo de um elemento.|  
   
 |Função membro|Descrição|  
 |---------------------|-----------------|  
 |[multimap::begin (STL/CLR)](#begin)|Designa o início da sequência controlada.|  
 |[multimap::clear (STL/CLR)](#clear)|Remove todos os elementos.|  
-|[multimap::count (STL/CLR)](#count)|Contagens de elementos de correspondência de uma chave especificada.|  
+|[multimap::count (STL/CLR)](#count)|Contagens de elementos que correspondem a uma chave especificada.|  
 |[multimap::empty (STL/CLR)](#empty)|Testa se nenhum elemento está presente.|  
 |[multimap::end (STL/CLR)](#end)|Designa o fim da sequência controlada.|  
 |[multimap::equal_range (STL/CLR)](#equal_range)|Localiza o intervalo que corresponde a uma chave especificada.|  
 |[multimap::erase (STL/CLR)](#erase)|Remove os elementos em posições especificadas.|  
 |[multimap::find (STL/CLR)](#find)|Localiza um elemento que corresponde a uma chave especificada.|  
 |[multimap::insert (STL/CLR)](#insert)|Adiciona elementos.|  
-|[multimap::key_comp (STL/CLR)](#key_comp)|Copia o delegado de ordenação de duas chaves.|  
+|[multimap::key_comp (STL/CLR)](#key_comp)|Copia o delegado de ordenação para duas chaves.|  
 |[multimap::lower_bound (STL/CLR)](#lower_bound)|Localiza o início do intervalo que corresponde a uma chave especificada.|  
 |[multimap::make_value (STL/CLR)](#make_value)|Constrói um objeto de valor.|  
 |[multimap::multimap (STL/CLR)](#multimap)|Constrói um objeto contêiner.|  
@@ -197,9 +197,9 @@ template<typename Key,
 |[multimap::rend (STL/CLR)](#rend)|Designa o fim da sequência controlada invertida.|  
 |[multimap::size (STL/CLR)](#size)|Conta o número de elementos.|  
 |[multimap::swap (STL/CLR)](#swap)|Alterna o conteúdo de dois contêineres.|  
-|[multimap::to_array (STL/CLR)](#to_array)|Copia uma nova matriz sequência controlada.|  
+|[multimap::to_array (STL/CLR)](#to_array)|Copia a sequência controlada para uma nova matriz.|  
 |[multimap::upper_bound (STL/CLR)](#upper_bound)|Localiza o final do intervalo que corresponde a uma chave especificada.|  
-|[multimap::value_comp (STL/CLR)](#value_comp)|Copia o delegado de ordenação de dois valores de elemento.|  
+|[multimap::value_comp (STL/CLR)](#value_comp)|Copia o delegado de ordenação para dois valores de elemento.|  
   
 |Operador|Descrição|  
 |--------------|-----------------|  
@@ -216,38 +216,38 @@ template<typename Key,
 |Interface|Descrição|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Duplicar um objeto.|  
-|<xref:System.Collections.IEnumerable>|Sequência de elementos.|  
+|<xref:System.Collections.IEnumerable>|Por meio de elementos de sequência.|  
 |<xref:System.Collections.ICollection>|Manter o grupo de elementos.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Sequência de elementos com tipo.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Por meio de elementos com tipo de sequência.|  
 |<xref:System.Collections.Generic.ICollection%601>|Manter o grupo de elementos com tipo.|  
-|ITree\<chave, valor >|Manter contêiner genérico.|  
+|ITree\<da chave, valor >|Manter o contêiner genérico.|  
   
 ## <a name="remarks"></a>Comentários  
- O objeto aloca e libera o armazenamento para a sequência em que ele controla como os nós individuais. Ele insere elementos em uma árvore equilibrada (quase) que mantém ordenada alterando os links entre nós nunca copiando o conteúdo de um nó para outro. Isso significa que você pode inserir e remover elementos livremente, sem prejudicar elementos restantes.  
+ O objeto aloca e libera armazenamento para a sequência que controla como os nós individuais. Insere elementos em uma árvore balanceada (quase) que mantém ordenada alterando os links entre nós nunca copiando o conteúdo de um nó para outro. Isso significa que você pode inserir e remover elementos livremente sem prejudicar os elementos restantes.  
   
- O objeto classifica a sequência controla chamando um objeto de representante armazenado do tipo [multimap:: key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md). Você pode especificar o objeto do representante armazenado quando você construir o multimap; Se você não especificar nenhum objeto do representante, o padrão é a comparação `operator<(key_type, key_type)`. Acessar esse objeto armazenado chamando a função de membro [multimap:: key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`.  
+ O objeto ordena a sequência que controla chamando um objeto armazenado de delegado do tipo [multimap:: key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md). Você pode especificar o objeto armazenado delegado ao construir o multimap; Se você não especificar nenhum objeto delegado, o padrão é a comparação `operator<(key_type, key_type)`. Acessar esse objeto armazenado chamando a função de membro [multimap:: key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`.  
   
- Esse é um objeto de representante deve impor uma ordenação fraca estrita nas chaves do tipo [multimap:: key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md). Isso significa que, para qualquer duas chaves `X` e `Y`:  
+ Um objeto delegado deve impor uma ordenação fraca estrita nas chaves do tipo [multimap:: key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md). Isso significa que, para qualquer duas chaves `X` e `Y`:  
   
- `key_comp()(X, Y)` Retorna o mesmo Boolean resultar em cada chamada.  
+ `key_comp()(X, Y)` Retorna o mesmo valor de booliano resultar em cada chamada.  
   
- Se `key_comp()(X, Y)` for true, então `key_comp()(Y, X)` deve ser false.  
+ Se `key_comp()(X, Y)` for true, em seguida, `key_comp()(Y, X)` deve ser falsa.  
   
- Se `key_comp()(X, Y)` for true, em seguida, `X` deve ser ordenados antes `Y`.  
+ Se `key_comp()(X, Y)` for true, então `X` deve ser ordenado antes `Y`.  
   
- Se `!key_comp()(X, Y) && !key_comp()(Y, X)` for true, em seguida, `X` e `Y` são deve ter ordenação equivalente.  
+ Se `!key_comp()(X, Y) && !key_comp()(Y, X)` for true, então `X` e `Y` são considerados como tendo uma ordenação equivalente.  
   
- Para qualquer elemento `X` que precede `Y` na sequência controlada, `key_comp()(Y, X)` é false. (Para o objeto do representante padrão, as chaves nunca diminuir em valor.) Ao contrário de classe de modelo [mapa (STL/CLR)](../dotnet/map-stl-clr.md), um objeto da classe de modelo `multimap` não requer que as chaves para todos os elementos sejam exclusivas. (Duas ou mais teclas podem ter ordenação equivalente).  
+ Para qualquer elemento `X` que precede `Y` na sequência controlada, `key_comp()(Y, X)` é false. (Para o objeto de delegado padrão, as chaves nunca diminui no valor.) Diferentemente da classe de modelo [map (STL/CLR)](../dotnet/map-stl-clr.md), um objeto da classe de modelo `multimap` não requer que as chaves para todos os elementos sejam exclusivas. (Duas ou mais teclas podem ter uma ordenação equivalente).  
   
- Cada elemento contém uma chave e um valor mapeado. A sequência é representada de forma que permita a pesquisa, inserção e remoção de um elemento arbitrário com um número de operações proporcionais de logaritmo do número de elementos na sequência (logarítmica tempo). Além disso, inserir um elemento não invalida iteradores, e remover um elemento invalida apenas os iteradores que apontam o elemento removido.  
+ Cada elemento contém uma chave separada e um valor mapeado. A sequência é representada em forma a permitir pesquisa, inserção e remoção de um elemento arbitrário com um número de operações proporcionais ao logaritmo do número de elementos na sequência (tempo logarítmico). Além disso, inserir um elemento não invalida iteradores, e remover um elemento invalida apenas os iteradores que apontam o elemento removido.  
   
- Um multimap dá suporte a iteradores bidirecional, que significa que você pode depurar a elementos adjacentes recebe um iterador que designa um elemento na sequência controlada. Um nó de cabeçalho especial corresponde para o iterador retornado por [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`. Você pode diminuir este iterador para alcançar o último elemento na sequência controlada, se presente. Você pode aumentar um iterador multimap para alcançar o nó principal e, em seguida, comparará igual a `end()`. Mas você não pode cancelar o iterador retornado por `end()`.  
+ Um multimap dá suporte a iteradores bidirecionais, que significa que você pode passar para elementos adjacentes, dado um iterador que designa um elemento na sequência controlada. Um nó de cabeçalho especial corresponde ao iterador retornado por [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`. Você pode diminuir este iterador para alcançar o último elemento na sequência controlada, se estiver presente. Você pode incrementar um iterador multimap para alcançar o nó principal e, em seguida, compare igual a `end()`. Mas você não é possível desreferenciar o iterador retornado por `end()`.  
   
- Observe que você não pode se referir a um elemento multimap diretamente considerando sua posição numérica - que requer um iterador de acesso aleatório.  
+ Observe que você não pode se referir a um elemento do multimap diretamente, dado sua posição numérica – o que exige um iterador de acesso aleatório.  
   
- Um iterador multimap armazena um identificador para o nó multimap associado, que por sua vez, armazena um identificador para o contêiner associado. Você pode usar iteradores apenas com os objetos de contêiner associado. Um iterador multimap permanece válido desde que seu nó multimap associado está associado a vários alguns mapeamentos. Além disso, um iterador válido é dereferencable - você pode usá-lo para acessar ou alterar o valor do elemento ele designa – desde que ele não é igual a `end()`.  
+ Um iterador multimap armazena um identificador para o nó associado multimap, que por sua vez armazena um identificador para o contêiner associado. Você pode usar iteradores somente com seus objetos de contêiner associado. Um iterador multimap permanece válido desde que o nó multimap associado está associado com alguns multimap. Além disso, um iterador válido é dereferencable – você pode usá-lo para acessar ou alterar o valor do elemento que ele designa – desde que não é igual a `end()`.  
   
- Apagar ou remover um elemento chama o destruidor para seu valor armazenado. Destruir o contêiner apaga todos os elementos. Assim, um contêiner cujo tipo de elemento é uma classe ref garante que nenhum elemento duram mais tempo o contêiner. No entanto, observe que um contêiner de identificadores não `not` destruir seus elementos.  
+ Apagando ou remover um elemento chama o destruidor para seu valor armazenado. Destruir o contêiner apaga todos os elementos. Portanto, um contêiner cujo tipo de elemento é uma classe ref garante que nenhum elemento sobreviver além do contêiner. No entanto, observe que um contêiner de identificadores não *não* destruir seus elementos.  
   
 ## <a name="members"></a>Membros
 
@@ -256,12 +256,12 @@ Designa o início da sequência controlada.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 iterator begin();  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A função de membro retorna um iterador bidirecional que designa o primeiro elemento da sequência controlada ou logo após o fim de uma sequência vazia. Você pode usá-lo para obter um iterador que designa o `current` pode alterá-início da sequência controlada, mas seu status se altera o comprimento da sequência controlada.  
+ A função membro retorna um iterador bidirecional que designa o primeiro elemento da sequência controlada ou logo após o fim de uma sequência vazia. Você pode usá-lo para obter um iterador que designa o `current` início da sequência controlada, mas seu status pode alterar se o comprimento da sequência controlada for alterado.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -292,7 +292,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -306,12 +305,12 @@ Remove todos os elementos.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 void clear();  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A função de membro efetivamente chama [multimap:: Erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md) `(` [multimap:: Begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md) `(),` [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `())`. Você pode usá-lo para garantir que a sequência controlada está vazia.  
+ A função membro chama efetivamente [multimap:: Erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md) `(` [multimap:: Begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md) `(),` [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `())`. Você pode usá-lo para garantir que a sequência controlada vazia.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -348,7 +347,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -363,12 +361,12 @@ O tipo de um iterador de constante para a sequência controlada.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef T2 const_iterator;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo descreve um objeto do tipo especificado `T2` que pode servir como um iterador de constante bidirecional para a sequência controlada.  
+ O tipo descreve um objeto do tipo não especificado `T2` que pode servir como um iterador bidirecional constante para a sequência controlada.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -392,7 +390,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -404,12 +401,12 @@ O tipo de uma referência de constante para um elemento.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo descreve uma referência constante a um elemento.  
+ O tipo descreve uma referência constante para um elemento.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -436,7 +433,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -448,12 +444,12 @@ O tipo de um iterador reverso de constante para a sequência controlada.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef T4 const_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo descreve um objeto do tipo especificado `T4` que pode servir como um constante iterador inverso para sequência controlada.  
+ O tipo descreve um objeto do tipo não especificado `T4` que pode servir como um iterador inverso constante para a sequência controlada.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -477,7 +473,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -489,16 +484,16 @@ Localiza o número de elementos que correspondem a uma chave especificada.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 size_type count(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- key  
+ *key*  
  O valor chave a ser pesquisado.  
   
 ### <a name="remarks"></a>Comentários  
- A função de membro retorna o número de elementos na sequência controlada que têm uma ordenação equivalente com `key`. Usado para determinar o número de elementos que estão na sequência controlada no momento e que correspondem a uma chave especificada.  
+ A função membro retorna o número de elementos na sequência controlada que tenha ordem equivalente com *chave*. Usado para determinar o número de elementos que estão na sequência controlada no momento e que correspondem a uma chave especificada.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -525,7 +520,6 @@ int main()
     System::Console::WriteLine("count(L'C') = {0}", c1.count(L'C'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -536,16 +530,16 @@ count(L'C') = 0
 ```  
 
 ## <a name="difference_type"></a> multimap:: difference_type (STL/CLR)
-Os tipos de uma distância assinado entre dois elementos.  
+Os tipos de uma distância com sinal entre dois elementos.  
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo descreve uma contagem de elementos possivelmente negativo.  
+ O tipo descreve uma contagem de elemento possivelmente negativo.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -580,7 +574,6 @@ int main()
     System::Console::WriteLine("begin()-end() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -594,12 +587,12 @@ Testa se nenhum elemento está presente.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A função membro retorna verdadeiro para uma sequência controlada vazia. É equivalente a [multimap:: Size (STL/CLR)](../dotnet/multimap-size-stl-clr.md)`() == 0`. Você pode usá-lo para testar se a vários mapeamentos está vazio.  
+ A função membro retorna verdadeiro para uma sequência controlada vazia. É equivalente a [multimap:: Size (STL/CLR)](../dotnet/multimap-size-stl-clr.md)`() == 0`. Você pode usá-lo para testar se o multimap estiver vazio.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -629,7 +622,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -645,12 +637,12 @@ Designa o fim da sequência controlada.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 iterator end();  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A função de membro retorna um iterador bidirecional que aponta logo após o fim da sequência controlada. Você pode usá-lo para obter um iterador que designa o fim da sequência controlada; seu status alteração não se altera o comprimento da sequência controlada.  
+ A função membro retorna um iterador bidirecional que aponta para logo após o fim da sequência controlada. Você pode usá-lo para obter um iterador que designa o fim da sequência controlada; seu status alteração não se o comprimento da sequência controlada for alterado.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -683,7 +675,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -697,12 +688,12 @@ Localiza o intervalo que corresponde a uma chave especificada.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 pair_iter_iter equal_range(key_type _Keyval);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `_Keyval`  
+ *Keyval*  
  O valor chave a ser pesquisado.  
   
 ### <a name="remarks"></a>Comentários  
@@ -742,7 +733,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -756,33 +746,33 @@ Remove os elementos em posições especificadas.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 bool erase(key_type key)  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Primeiro  
+ *first*  
  Início do intervalo a ser apagado.  
   
- key  
+ *key*  
  Valor de chave para apagar.  
   
- last  
+ *last*  
  Fim do intervalo a ser apagado.  
   
- onde  
- Elemento apagar.  
+ *where*  
+ Elemento a ser apagado.  
   
 ### <a name="remarks"></a>Comentários  
- A primeira função de membro remove o elemento de sequência controlada apontada pelo `where`e retorna um iterador que designa o primeiro elemento restantes além do elemento removido, ou [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `()` se esse elemento não existe. Você pode usá-lo para remover um único elemento.  
+ A primeira função membro remove o elemento da sequência controlada apontada por *onde*e retorna um iterador que designa o primeiro elemento restante além do elemento removido, ou [multimap:: end (STL / CLR)](../dotnet/multimap-end-stl-clr.md) `()` se não houver tal elemento. Você pode usá-lo para remover um único elemento.  
   
- A segunda função de membro remove os elementos da sequência controlada no intervalo [`first`, `last`) e retorna um iterador que designa o primeiro elemento restantes além de quaisquer elementos removidos, ou `end()` se esse elemento não existe. Você pode usá-lo para remover a zero ou mais elementos contíguos.  
+ A segunda função membro remove os elementos da sequência controlada no intervalo [`first`, `last`) e retorna um iterador que designa o primeiro elemento restante além de todos os elementos removidos ou `end()` se esse elemento não existe... Você pode usá-lo para remover a zero ou mais elementos contíguos.  
   
- A terceira função do membro remove um elemento de sequência controlada cuja chave tem ordenação equivalente para `key`e retorna uma contagem do número de elementos removidos. Você pode usá-lo para remover e contagem de todos os elementos que correspondem a uma chave especificada.  
+ A terceira função membro remove qualquer elemento da sequência controlada cuja chave tem ordenação equivalente ao *chave*e retorna uma contagem do número de elementos removidos. Você pode usá-lo para remover e contagem de todos os elementos que correspondem a uma chave especificada.  
   
- A eliminação de cada elemento demora proporcional de logaritmo do número de elementos na sequência controlada.  
+ A eliminação de cada elemento leva tempo proporcional ao logaritmo do número de elementos na sequência controlada.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -829,7 +819,6 @@ int main()
     System::Console::WriteLine("erase(L'e') = {0}", c1.erase(L'e'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -847,16 +836,16 @@ Localiza um elemento que corresponde a uma chave especificada.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 iterator find(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- key  
+ *key*  
  O valor chave a ser pesquisado.  
   
 ### <a name="remarks"></a>Comentários  
- Se pelo menos um elemento na sequência controlada tem ordenação equivalente com `key`, a função de membro retorna um iterador designar um desses elementos; caso contrário, ele retorna [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `()`. Você pode usá-lo para localizar um elemento no momento na sequência controlada que corresponde a uma chave especificada.  
+ Se pelo menos um elemento na sequência controlada que tenha ordem equivalente com *chave*, a função membro retorna um iterador que designa um desses elementos; caso contrário, retornará [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `()`. Você pode usá-lo para localizar um elemento no momento na sequência controlada que corresponde a uma chave especificada.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -889,7 +878,6 @@ int main()
         L'C', c1.find(L'C') != c1.end());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -904,14 +892,14 @@ O tipo da interface genérica para o contêiner.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::  
     ITree<GKey, GValue>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo descreve a interface genérica para esta classe de contêiner do modelo.  
+ O tipo descreve a interface genérica para essa classe de contêiner do modelo.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -952,7 +940,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -967,14 +954,14 @@ O tipo de um iterador para uso com a interface genérica para o contêiner.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ContainerBidirectionalIterator<generic_value>  
     generic_iterator;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo descreve um iterador genérico que pode ser usado com a interface genérica para esta classe de contêiner do modelo.  
+ O tipo descreve um iterador genérico que pode ser usado com a interface genérica para essa classe de contêiner do modelo.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1009,7 +996,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1023,14 +1009,14 @@ O tipo de um iterador inverso para uso com a interface genérica para o contêin
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseRandomAccessIterator<generic_value>  
     generic_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo descreve um iterador inverso genérico que pode ser usado com a interface genérica para esta classe de contêiner do modelo.  
+ O tipo descreve um iterador inverso genérico que pode ser usado com a interface genérica para essa classe de contêiner do modelo.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1064,7 +1050,6 @@ int main()
     System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1078,12 +1063,12 @@ O tipo de um elemento para uso com a interface genérica para o contêiner.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo descreve um objeto do tipo `GValue` que descreve o valor do elemento armazenados para uso com a interface genérica para esta classe de contêiner do modelo.  
+ O tipo descreve um objeto do tipo `GValue` que descreve o valor de elemento armazenado para uso com a interface genérica para essa classe de contêiner do modelo.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1117,7 +1102,6 @@ int main()
     System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1131,7 +1115,7 @@ Adiciona elementos.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 iterator insert(value_type val);  
 iterator insert(iterator where, value_type val);  
 template<typename InIter>  
@@ -1140,33 +1124,33 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Primeiro  
+ *first*  
  Início do intervalo a ser inserido.  
   
- last  
- Fim do intervalo a ser inserido.  
+ *last*  
+ Fim do intervalo a inserir.  
   
- direita  
- Enumeração para inserir.  
+ *right*  
+ Enumeração a ser inserido.  
   
- Val  
+ *Val*  
  Valor da chave a ser inserido.  
   
- onde  
- Onde no contêiner para inserir (dica).  
+ *where*  
+ Onde no contêiner a ser inserido (dica).  
   
 ### <a name="remarks"></a>Comentários  
- Cada uma das funções membro insere uma sequência especificada por operandos restantes.  
+ Cada uma das funções de membro insere uma sequência especificada pelos operandos restantes.  
   
- A primeira função de membro insere um elemento com o valor `val`e retorna um iterador que designa o elemento recentemente inserido. Você pode usá-lo para inserir um único elemento.  
+ A primeira função membro insere um elemento com o valor *val*e retorna um iterador que designa o elemento recém-inserido. Você pode usá-lo para inserir um único elemento.  
   
- A segunda função de membro insere um elemento com o valor `val`usando `where` como uma dica (para melhorar o desempenho) e retorna um iterador que designa o elemento recentemente inserido. Você pode usá-lo para inserir um único elemento que pode ser adjacente a um elemento que você sabe.  
+ A segunda função membro insere um elemento com o valor *val*, usando *onde* como uma dica (para melhorar o desempenho) e retorna um iterador que designa o elemento recém-inserido. Você pode usá-lo para inserir um único elemento que pode ser adjacente a um elemento que você sabe.  
   
- A terceira função do membro insere a sequência [`first`, `last`). Você pode usá-lo para inserir zero ou mais elementos copiados de outra sequência.  
+ A terceira função membro insere a sequência [`first`, `last`). Você pode usá-lo para inserir a zero ou mais elementos copiados de outra sequência.  
   
- A função de membro quarta insere a sequência designada pelo `right`. Você pode usá-lo para inserir uma sequência descrita por um enumerador.  
+ A quarta função membro insere a sequência designada pela *certa*. Você pode usá-lo para inserir uma sequência descrita por um enumerador.  
   
- Cada inserção de elemento demora proporcional de logaritmo do número de elementos na sequência controlada. Inserção pode ocorrer em tempo de constante amortizado, no entanto, considerando uma dica que designa um elemento adjacente ao ponto de inserção.  
+ Inserção de cada elemento leva tempo proporcional ao logaritmo do número de elementos na sequência controlada. Inserção poderá ocorrer em tempo constante amortizado, no entanto, dada uma dica que designa um elemento adjacente ao ponto de inserção.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1228,7 +1212,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1247,12 +1230,12 @@ O tipo de um iterador para a sequência controlada.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef T1 iterator;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo descreve um objeto do tipo especificado `T1` que pode servir como um iterador bidirecional para a sequência controlada.  
+ O tipo descreve um objeto do tipo não especificado `T1` que pode servir como um iterador bidirecional para a sequência controlada.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1276,7 +1259,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1284,16 +1266,16 @@ int main()
 ```  
 
 ## <a name="key_comp"></a> multimap:: key_comp (STL/CLR)
-Copia o delegado de ordenação de duas chaves.  
+Copia o delegado de ordenação para duas chaves.  
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 key_compare^key_comp();  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A função de membro retorna o delegado de classificação usado para ordenar a sequência controlada. Use-o para comparar duas chaves.  
+ A função membro retorna o delegado de ordenação usado para ordenar a sequência controlada. Use-o para comparar duas chaves.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1328,7 +1310,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1342,17 +1323,17 @@ compare(L'b', L'a') = True
 ```  
 
 ## <a name="key_compare"></a> multimap:: key_compare (STL/CLR)
-O representante de ordenação para duas chaves.  
+O delegado de ordenação para duas chaves.  
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
     key_compare;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo é um sinônimo para o representante que determina a ordem de seus argumentos de chave.  
+ O tipo é um sinônimo para o delegado que determina a ordem dos argumentos de chave.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1387,7 +1368,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1405,12 +1385,12 @@ O tipo de uma chave de classificação.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef Key key_type;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo é um sinônimo do parâmetro de modelo `Key`.  
+ O tipo é um sinônimo do parâmetro de modelo *chave*.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1437,7 +1417,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1449,16 +1428,16 @@ Localiza o início do intervalo que corresponde a uma chave especificada.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 iterator lower_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- key  
+ *key*  
  O valor chave a ser pesquisado.  
   
 ### <a name="remarks"></a>Comentários  
- A função de membro determina o primeiro elemento `X` na sequência controlada que tem o equivalente a ordenação para `key`. Se esse elemento não existe, ele retorna [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; caso contrário, ele retorna um iterador que designa `X`. Você pode usá-lo para localizar o início de uma sequência de elementos no momento na sequência controlada que correspondem a uma chave especificada.  
+ A função membro determina o primeiro elemento `X` na sequência controlada que tenha ordem equivalente a *chave*. Se esse elemento não existe, ele retornará [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; caso contrário, ele retorna um iterador que designa `X`. Você pode usá-lo para localizar o início de uma sequência de elementos no momento na sequência controlada que correspondem a uma chave especificada.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1491,7 +1470,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1506,19 +1484,19 @@ Constrói um objeto de valor.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 static value_type make_value(key_type key, mapped_type mapped);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- key  
- Valor da chave a ser usado.  
+ *key*  
+ Valor de chave a ser usado.  
   
- mapeado  
- Valor mapeado para pesquisar.  
+ *Mapeado*  
+ Valor mapeado a ser pesquisado.  
   
 ### <a name="remarks"></a>Comentários  
- A função de membro retorna um `value_type` objeto cuja chave `key` e cujo valor mapeado é `mapped`. Você pode usá-lo para compor um objeto adequado para uso com várias outras funções de membro.  
+ A função membro retorna um `value_type` objeto cuja chave está *chave* e cujo valor mapeado é *mapeado*. Você pode usá-lo para compor um objeto adequado para uso com várias outras funções de membro.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1541,7 +1519,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1553,12 +1530,12 @@ O tipo de um valor mapeado associado a cada chave.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef Mapped mapped_type;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo é um sinônimo do parâmetro de modelo `Mapped`.  
+ O tipo é um sinônimo do parâmetro de modelo *mapeada*.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1585,7 +1562,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1597,7 +1573,7 @@ Constrói um objeto contêiner.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 multimap();  
 explicit multimap(key_compare^ pred);  
 multimap(multimap<Key, Mapped>% right);  
@@ -1613,16 +1589,16 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Primeiro  
+ *first*  
  Início do intervalo a ser inserido.  
   
- last  
- Fim do intervalo a ser inserido.  
+ *last*  
+ Fim do intervalo a inserir.  
   
- Pred  
- Ordenação de predicado para sequência controlada.  
+ *Pred*  
+ Ordenação de predicado para a sequência controlada.  
   
- direita  
+ *right*  
  Objeto ou intervalo a inserir.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1630,49 +1606,49 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
   
  `multimap();`  
   
- inicializa a sequência controlada com nenhum elemento com o padrão de ordenação predicado `key_compare()`. Você pode usá-lo para especificar uma inicial controlada sequência vazia, com o padrão de ordenação de predicado.  
+ inicializa a sequência controlada com nenhum elemento com o padrão de predicado de ordenação `key_compare()`. Você pode usá-lo para especificar uma sequência controlada inicial vazia, com o padrão de predicado de ordenação.  
   
  O construtor:  
   
  `explicit multimap(key_compare^ pred);`  
   
- inicializa a sequência controlada com nenhum elemento, com o predicado ordenação `pred`. Você pode usá-lo para especificar uma inicial controlada sequência vazia, com o predicado de ordenação especificado.  
+ inicializa a sequência controlada com nenhum elemento, com o predicado de ordenação *pred*. Você pode usá-lo para especificar uma sequência controlada inicial vazia, com o predicado de ordenação especificado.  
   
  O construtor:  
   
  `multimap(multimap<Key, Mapped>% right);`  
   
- inicializa a sequência controlada com a sequência [`right.begin()`, `right.end()`), com o padrão de ordenação de predicado. Você pode usá-lo para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto multimap `right`, com o padrão de ordenação de predicado.  
+ inicializa a sequência controlada com a sequência [`right.begin()`, `right.end()`), com o padrão de predicado de ordenação. Você pode usá-lo para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto multimap *certa*, com o padrão de predicado de ordenação.  
   
  O construtor:  
   
  `multimap(multimap<Key, Mapped>^ right);`  
   
- inicializa a sequência controlada com a sequência [`right->begin()`, `right->end()`), com o padrão de ordenação de predicado. Você pode usá-lo para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto multimap `right`, com o padrão de ordenação de predicado.  
+ inicializa a sequência controlada com a sequência [`right->begin()`, `right->end()`), com o padrão de predicado de ordenação. Você pode usá-lo para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto multimap *certa*, com o padrão de predicado de ordenação.  
   
  O construtor:  
   
  `template<typename InIter> multimap(InIter first, InIter last);`  
   
- inicializa a sequência controlada com a sequência [`first`, `last`), com o padrão de ordenação de predicado. Você pode usá-lo para fazer uma cópia de outra sequência, de sequência controlada com o padrão de ordenação de predicado.  
+ inicializa a sequência controlada com a sequência [`first`, `last`), com o padrão de predicado de ordenação. Você pode usá-lo para tornar a sequência controlada uma cópia de outra sequência, com o padrão de predicado de ordenação.  
   
  O construtor:  
   
  `template<typename InIter> multimap(InIter first, InIter last, key_compare^ pred);`  
   
- inicializa a sequência controlada com a sequência [`first`, `last`), com o predicado ordenação `pred`. Você pode usá-lo para fazer uma cópia de outra sequência, com o predicado especificado de ordenação de sequência controlada.  
+ inicializa a sequência controlada com a sequência [`first`, `last`), com o predicado de ordenação *pred*. Você pode usá-lo para fazer uma cópia de outra sequência, com o predicado de ordenação especificado a sequência controlada.  
   
  O construtor:  
   
  `multimap(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- inicializa a sequência controlada com a sequência designada pelo enumerador `right`, com o padrão de ordenação de predicado. Você pode usá-lo para fazer uma cópia de outra sequência descrita por um enumerador, com o padrão de ordenação de predicado de sequência controlada.  
+ inicializa a sequência controlada com a sequência designada pelo enumerador *certa*, com o padrão de predicado de ordenação. Você pode usá-lo para fazer uma cópia de outra sequência descrita por um enumerador, com o padrão de predicado de ordenação de sequência controlada.  
   
  O construtor:  
   
  `multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- inicializa a sequência controlada com a sequência designada pelo enumerador `right`, com o predicado ordenação `pred`. Você pode usá-lo para fazer uma cópia de outra sequência descrita por um enumerador, com o predicado especificado de ordenação de sequência controlada.  
+ inicializa a sequência controlada com a sequência designada pelo enumerador *certa*, com o predicado de ordenação *pred*. Você pode usá-lo para fazer uma cópia de outra sequência descrita por um enumerador, com o predicado de ordenação especificado a sequência controlada.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1747,7 +1723,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1768,16 +1743,16 @@ Substitui a sequência controlada.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 multimap<Key, Mapped>% operator=(multimap<Key, Mapped>% right);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- direita  
+ *right*  
  O contêiner a ser copiado.  
   
 ### <a name="remarks"></a>Comentários  
- As cópias de operador de membro `right` para o objeto, em seguida, retorna `*this`. Você pode usá-lo para substituir a sequência controlada por uma cópia da sequência controlada em `right`.  
+ As cópias de operador de membro *certa* ao objeto, em seguida, retorna `*this`. Você pode usá-lo para substituir a sequência controlada por uma cópia da sequência controlada no *certa*.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1807,8 +1782,7 @@ int main()
         System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    } 
 ```  
   
 ```Output  
@@ -1821,12 +1795,12 @@ Designa o início da sequência controlada invertida.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 reverse_iterator rbegin();  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A função de membro retorna um iterador inverso que designa o último elemento da sequência controlada ou logo após o início de uma sequência vazia. Portanto, ele designa o `beginning` da sequência inversa. Você pode usá-lo para obter um iterador que designa o `current` pode alterá-início da sequência controlada visto na ordem inversa, mas seu status se altera o comprimento da sequência controlada.  
+ A função membro retorna um iterador inverso que designa o último elemento da sequência controlada ou logo após o início de uma sequência vazia. Portanto, ele designa o `beginning` da sequência inversa. Você pode usá-lo para obter um iterador que designa o `current` início da sequência controlada visto na ordem inversa, mas seu status pode alterar se o comprimento da sequência controlada for alterado.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1857,7 +1831,6 @@ int main()
         rit->first, rit->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1871,7 +1844,7 @@ O tipo de uma referência para um elemento.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
@@ -1903,7 +1876,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1915,12 +1887,12 @@ Designa o fim da sequência controlada invertida.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 reverse_iterator rend();  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A função de membro retorna um iterador inverso que aponta logo após o início da sequência controlada. Portanto, ele designa o `end` da sequência inversa. Você pode usá-lo para obter um iterador que designa o `current` final da sequência controlada visto na ordem inversa, mas seu status pode alterar se altera o comprimento da sequência controlada.  
+ A função membro retorna um iterador inverso que aponta logo após o início da sequência controlada. Portanto, ele designa o `end` da sequência inversa. Você pode usá-lo para obter um iterador que designa o `current` final da sequência controlada visto na ordem inversa, mas seu status pode alterar se o comprimento da sequência controlada for alterado.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1953,7 +1925,6 @@ int main()
         rit->first, rit->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1967,12 +1938,12 @@ O tipo de um iterador inverso para a sequência controlada.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef T3 reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo descreve um objeto do tipo especificado `T3` que pode servir como um iterador inverso para sequência controlada.  
+ O tipo descreve um objeto do tipo não especificado `T3` que pode servir como um iterador inverso para a sequência controlada.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1996,7 +1967,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2008,12 +1978,12 @@ Conta o número de elementos.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A função membro retorna o comprimento da sequência controlada. Você pode usá-lo para determinar o número de elementos no momento na sequência controlada. Se você se preocupa se a sequência tem tamanho diferente de zero, consulte [multimap:: Empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)`()`.  
+ A função membro retorna o comprimento da sequência controlada. Você pode usá-lo para determinar o número de elementos que estão na sequência controlada. Se você se preocupa se a sequência tem tamanho diferente de zero, consulte [multimap:: Empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)`()`.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -2045,7 +2015,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2055,16 +2024,16 @@ size() = 2 after adding 2
 ```  
 
 ## <a name="size_type"></a> multimap:: size_type (STL/CLR)
-O tipo de uma distância assinado entre dois elemento.  
+O tipo de uma distância com sinal entre dois elementos.  
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo descreve uma contagem de elementos não-negativo.  
+ O tipo descreve uma contagem de elemento não negativo.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -2093,7 +2062,6 @@ int main()
     System::Console::WriteLine("end()-begin() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2106,16 +2074,16 @@ Alterna o conteúdo de dois contêineres.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 void swap(multimap<Key, Mapped>% right);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- direita  
+ *right*  
  Contêiner com o qual trocar conteúdos.  
   
 ### <a name="remarks"></a>Comentários  
- A função membro troca as sequências controladas entre `this` e `right`. Isso é feito no tempo constante e ele não lança exceções. Você pode usá-lo como uma maneira rápida de trocar o conteúdo de dois contêineres.  
+ A função membro troca as sequências controladas entre `this` e *direito*. Ele faz isso em tempo constante e não gera exceções. Você pode usá-lo como uma maneira rápida para trocar o conteúdo de dois contêineres.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -2157,7 +2125,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2168,16 +2135,16 @@ int main()
 ```  
 
 ## <a name="to_array"></a> multimap::to_array (STL/CLR)
-Copia uma nova matriz sequência controlada.  
+Copia a sequência controlada para uma nova matriz.  
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 cli::array<value_type>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A função de membro retorna uma matriz que contém a sequência controlada. Você pode usá-lo para obter uma cópia da sequência controlada no formulário de matriz.  
+ A função membro retorna uma matriz que contém a sequência controlada. Você pode usá-lo para obter uma cópia da sequência controlada em forma de matriz.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -2208,7 +2175,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2221,16 +2187,16 @@ Localiza o final do intervalo que corresponde a uma chave especificada.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 iterator upper_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- key  
+ *key*  
  O valor chave a ser pesquisado.  
   
 ### <a name="remarks"></a>Comentários  
- A função de membro determina o último elemento `X` na sequência controlada que tem o equivalente a ordenação para `key`. Se esse elemento não existe, ou se `X` é o último elemento na sequência controlada, ele retorna [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; caso contrário, ele retorna um iterador que designa o primeiro elemento além `X`. Você pode usá-lo para localizar o final de uma sequência de elementos no momento na sequência controlada que correspondem a uma chave especificada.  
+ A função membro determina o último elemento `X` na sequência controlada que tenha ordem equivalente a *chave*. Se esse elemento não existir ou se `X` é o último elemento na sequência controlada, ele retornará [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; caso contrário, ele retorna um iterador que designa o primeiro elemento após `X`. Você pode usá-lo para localizar o final de uma sequência de elementos no momento na sequência controlada que correspondem a uma chave especificada.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -2263,7 +2229,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2274,16 +2239,16 @@ upper_bound(L'x')==end() = True
 ```  
 
 ## <a name="value_comp"></a> multimap:: value_comp (STL/CLR)
-Copia o delegado de ordenação de dois valores de elemento.  
+Copia o delegado de ordenação para dois valores de elemento.  
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 value_compare^ value_comp();  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A função de membro retorna o delegado de classificação usado para ordenar a sequência controlada. Você pode usá-lo para comparar dois valores de elemento.  
+ A função membro retorna o delegado de ordenação usado para ordenar a sequência controlada. Você pode usá-lo para comparar dois valores de elemento.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -2310,7 +2275,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2320,17 +2284,17 @@ compare([L'b', 2], [L'a', 1]) = False
 ```  
 
 ## <a name="value_compare"></a> multimap::value_compare (STL/CLR)
-O representante de ordenação para dois valores de elemento.  
+O delegado de ordenação para dois valores de elemento.  
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo é um sinônimo para o representante que determina a ordem de seus argumentos de valor.  
+ O tipo é um sinônimo para o delegado que determina a ordem de seus argumentos de valor.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -2357,7 +2321,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2371,7 +2334,7 @@ O tipo de um elemento.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 typedef generic_value value_type;  
 ```  
   
@@ -2402,7 +2365,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2410,11 +2372,11 @@ int main()
 ```  
 
 ## <a name="op_neq"></a> operador! = (multimap) (STL/CLR)
-Lista de comparação não é igual.  
+Lista de comparação de diferença.  
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator!=(multimap<Key, Mapped>% left,  
@@ -2422,14 +2384,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- esquerda  
+ *left*  
  Contêiner esquerdo a comparar.  
   
- direita  
+ *right*  
  Contêiner direito a comparar.  
   
 ### <a name="remarks"></a>Comentários  
- Retorna a função de operador `!(left == right)`. Você pode usá-lo para testar se `left` não for ordenado igual `right` quando os dois multimaps estão em comparação com o elemento pelo elemento.  
+ Retorna a função de operador `!(left == right)`. Usá-lo para testar se *esquerdo* não for ordenado igual *direita* quando dois multimaps são comparado elemento por elemento.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -2468,7 +2430,6 @@ int main()
         c1 != c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2479,11 +2440,11 @@ int main()
 ```  
 
 ## <a name="op_lt"></a> operador&lt; (multimapa) (STL/CLR)
-Lista menor de comparação.  
+Lista inferior a comparação.  
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator<(multimap<Key, Mapped>% left,  
@@ -2491,14 +2452,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- esquerda  
+ *left*  
  Contêiner esquerdo a comparar.  
   
- direita  
+ *right*  
  Contêiner direito a comparar.  
   
 ### <a name="remarks"></a>Comentários  
- O operador função retornará true se, para a posição mais baixa `i` para o qual `!(right[i] < left[i])` é verdade que também `left[i] < right[i]`. Caso contrário, retornará `left->size() < right->size()` usá-lo para testar se `left` são ordenados antes `right` quando os dois multimaps estão em comparação com o elemento pelo elemento.  
+ O operador função retornará true se, para a posição mais baixa `i` para o qual `!(right[i] < left[i])` é verdade também que `left[i] < right[i]`. Caso contrário, retornará `left->size() < right->size()` usá-lo para testar se *esquerdo* é ordenado antes *direita* quando dois multimaps são comparado elemento por elemento.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -2537,7 +2498,6 @@ int main()
         c1 < c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2548,11 +2508,11 @@ int main()
 ```  
 
 ## <a name="op_lteq"></a> operador&lt;= (multimap) (STL/CLR)
-Lista menor ou igual comparação.  
+Listar menor ou igual comparação.  
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator<=(multimap<Key, Mapped>% left,  
@@ -2560,14 +2520,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- esquerda  
+ *left*  
  Contêiner esquerdo a comparar.  
   
- direita  
+ *right*  
  Contêiner direito a comparar.  
   
 ### <a name="remarks"></a>Comentários  
- Retorna a função de operador `!(right < left)`. Você pode usá-lo para testar se `left` não for ordenado após `right` quando os dois multimaps estão em comparação com o elemento pelo elemento.  
+ Retorna a função de operador `!(right < left)`. Usá-lo para testar se *esquerdo* não for ordenado após *direita* quando dois multimaps são comparado elemento por elemento.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -2606,7 +2566,6 @@ int main()
         c2 <= c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2616,12 +2575,12 @@ int main()
 [a b d] <= [a b c] is False  
 ```  
 
-## <a name="op_eq"></a> operador = = (multimap) (STL/CLR)
-Lista de comparação igual.  
+## <a name="op_eq"></a> operador = = (multimapa) (STL/CLR)
+Comparação de igualdade de lista.  
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator==(multimap<Key, Mapped>% left,  
@@ -2629,14 +2588,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- esquerda  
+ *left*  
  Contêiner esquerdo a comparar.  
   
- direita  
+ *right*  
  Contêiner direito a comparar.  
   
 ### <a name="remarks"></a>Comentários  
- A função de operador retorna true somente se as sequências controlados por `left` e `right` ter o mesmo comprimento e, para cada posição `i`, `left[i] ==` `right[i]`. Você pode usá-lo para testar se `left` é ordenado igual `right` quando os dois multimaps estão em comparação com o elemento pelo elemento.  
+ A função de operador retornará true somente se as sequências controladas por *esquerdo* e *à direita* têm o mesmo tamanho e, para cada posição `i`, `left[i] ==` `right[i]`. Usá-lo para testar se *esquerdo* é ordenada igual *direita* quando dois multimaps são comparado elemento por elemento.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -2675,7 +2634,6 @@ int main()
         c1 == c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2686,11 +2644,11 @@ int main()
 ```  
 
 ## <a name="op_gt"></a> operador&gt; (multimapa) (STL/CLR)
-Lista maior que a comparação.  
+Lista de comparação de maior que.  
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator>(multimap<Key, Mapped>% left,  
@@ -2698,14 +2656,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- esquerda  
+ *left*  
  Contêiner esquerdo a comparar.  
   
- direita  
+ *right*  
  Contêiner direito a comparar.  
   
 ### <a name="remarks"></a>Comentários  
- Retorna a função de operador `right` `<` `left`. Você pode usá-lo para testar se `left` é solicitada após `right` quando os dois multimaps estão em comparação com o elemento pelo elemento.  
+ Retorna a função de operador `right` `<` `left`. Usá-lo para testar se *esquerdo* é ordenada após *direita* quando dois multimaps são comparado elemento por elemento.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -2744,7 +2702,6 @@ int main()
         c2 > c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2755,11 +2712,11 @@ int main()
 ```  
 
 ## <a name="op_gteq"></a> operador&gt;= (multimap) (STL/CLR)
-Lista maior que ou igual a comparação.  
+Listar maior que ou igual a comparação.  
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator>=(multimap<Key, Mapped>% left,  
@@ -2767,14 +2724,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- esquerda  
+ *left*  
  Contêiner esquerdo a comparar.  
   
- direita  
+ *right*  
  Contêiner direito a comparar.  
   
 ### <a name="remarks"></a>Comentários  
- Retorna a função de operador `!(left` `<` `right)`. Você pode usá-lo para testar se `left` não for ordenado antes `right` quando os dois multimaps estão em comparação com o elemento pelo elemento.  
+ Retorna a função de operador `!(left` `<` `right)`. Usá-lo para testar se *esquerdo* não for ordenado antes *direita* quando dois multimaps são comparado elemento por elemento.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -2813,7 +2770,6 @@ int main()
         c1 >= c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
