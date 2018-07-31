@@ -43,12 +43,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 986626fa391971ce342f8d80b9e3e7f8ec979b63
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: 0cb4531f1a86d61b72363669d0f722f8dcf204d3
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322170"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338383"
 ---
 # <a name="irowsetlocateimpl-class"></a>Classe IRowsetLocateImpl
 Implementa o OLE DB [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx) interface, que busca linhas arbitrárias em um conjunto de linhas.  
@@ -128,7 +128,7 @@ Compara dois indicadores.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD (Compare )(HCHAPTER /* hReserved */,  
+STDMETHOD (Compare )(HCHAPTER /* hReserved */,  
    DBBKMARK cbBookmark1,  
    const BYTE* pBookmark1,  
    DBBKMARK cbBookmark2,  
@@ -158,7 +158,7 @@ Busca linhas começando com a linha especificada por um deslocamento de um indic
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,  
+STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,  
    HCHAPTER hReserved2,  
    DBBKMARK cbBookmark,  
    const BYTE* pBookmark,  
@@ -182,7 +182,7 @@ Busca de uma ou mais linhas que correspondem aos indicadores especificados.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,  
+STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const DBBKMARK rgcbBookmarks[],  
    const BYTE* rgpBookmarks,  
@@ -205,7 +205,7 @@ Retorna o hash valores para os indicadores especificados.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD (Hash )(HCHAPTER /* hReserved */,  
+STDMETHOD (Hash )(HCHAPTER /* hReserved */,  
    DBBKMARK cbBookmarks,  
    const DBBKMARK* rgcbBookmarks[],  
    const BYTE* rgpBookmarks[],  
@@ -226,7 +226,6 @@ Uma matriz de indicadores.
   
 ```cpp
 CAtlArray<DBROWCOUNT> m_rgBookmarks;  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
