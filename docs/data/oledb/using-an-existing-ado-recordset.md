@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36c74ec0d17c296707334930736d0cf237ecfe7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be948293947d4f007d151e4a89e0ff87fc897bbd
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103558"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338932"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Usando um conjunto de registros ADO existente
-Para criar modelos de consumidor OLE DB e Active Data Objects (ADO), use o ADO para abrir um conjunto de registros (correspondente a um conjunto de linhas em que os modelos de consumidor de banco de dados OLE). Quando você tiver um conjunto de registros, faça o seguinte para conectar a um conjunto de linhas do OLE DB:  
+Para combinar modelos de consumidor OLE DB e o Active Directory Data Objects (ADO), use o ADO para abrir um conjunto de registros (correspondente a um conjunto de linhas em que os modelos de consumidor de banco de dados OLE). Quando você tem um conjunto de registros, faça o seguinte para se conectar a um conjunto de linhas do OLE DB:  
   
-1.  Chamar `QueryInterface` para o `IRowset` e `IAccessor` ponteiros.  
+1.  Chame `QueryInterface` para o `IRowset` e `IAccessor` ponteiros.  
   
-    ```  
+    ```cpp  
     IRowset* lpRowset = NULL;  
     IAccessor* lpAccessor = NULL;  
     lpUnk->QueryInterface(IID_IRowset, (void**)&lpRowset);  
@@ -37,11 +37,11 @@ Para criar modelos de consumidor OLE DB e Active Data Objects (ADO), use o ADO p
     ```  
   
     > [!NOTE]
-    >  *lpUnk* aponta para o **IUnknown** objeto do conjunto de registros ADO.  
+    >  *lpUnk* aponta para o `IUnknown` objeto do conjunto de registros ADO.  
   
-2.  Anexe o conjunto de linhas e o acessador para suas classes de modelo de consumidor OLE DB apropriados.  
+2.  Anexe o conjunto de linhas e o acessador às suas classes de modelo de consumidor OLE DB apropriados.  
   
-    ```  
+    ```cpp  
     CRowset rs;  
     CAccessor accessor;  
   

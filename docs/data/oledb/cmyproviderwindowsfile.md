@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8f0ba90bdcbaa4255757ee31015d0f6986862916
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f18f5a524cbfbfa7f17dfd3964c68329bc8a042
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097920"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338500"
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
-O assistente cria uma classe para conter uma linha de dados. Nesse caso, ele é chamado `CMyProviderWindowsFile`. O código a seguir para `CMyProviderWindowsFile` é gerado pelo assistente e lista todos os arquivos em um diretório usando o **WIN32_FIND_DATA** estrutura. `CMyProviderWindowsFile` herda o **WIN32_FIND_DATA** estrutura:  
+O assistente cria uma classe para conter uma linha de dados. Nesse caso, ele é chamado `CMyProviderWindowsFile`. O código a seguir para `CMyProviderWindowsFile` é gerado pelo assistente e lista todos os arquivos em um diretório usando o `WIN32_FIND_DATA` estrutura. `CMyProviderWindowsFile` herda o `WIN32_FIND_DATA` estrutura:  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
@@ -46,9 +46,9 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- `CMyProviderWindowsFile` é chamado de [classe de registro de usuário](../../data/oledb/user-record.md) porque ele contém também um mapa que descreve as colunas no conjunto de linhas do provedor. O mapa de coluna do provedor contém uma entrada para cada campo no conjunto de linhas usando as macros PROVIDER_COLUMN_ENTRY. As macros especificar nome de coluna ordinal e deslocamento para uma entrada de estrutura. As entradas de coluna do provedor no código acima contêm deslocamentos para a **WIN32_FIND_DATA** estrutura. Quando o consumidor chama **IRowset:: GetData**, os dados são transferidos em um buffer de contíguo. Em vez de fazer a fazer aritmética de ponteiro, o mapa permite que você especifique um membro de dados.  
+ `CMyProviderWindowsFile` é chamado de [classe de registro de usuário](../../data/oledb/user-record.md) porque ele também contém um mapa que descreve as colunas no conjunto de linhas do provedor. O mapa de coluna do provedor contém uma entrada para cada campo no conjunto de linhas usando as macros PROVIDER_COLUMN_ENTRY. As macros especificam nome de coluna ordinal e deslocamento para uma entrada de estrutura. As entradas de coluna do provedor no código acima contém deslocamentos no `WIN32_FIND_DATA` estrutura. Quando o consumidor chama `IRowset::GetData`, os dados são transferidos em um buffer contíguo. Em vez de fazer a fazer aritmética de ponteiro, o mapa permite que você especifique um membro de dados.  
   
- O `CMyProviderRowset` classe também contém o `Execute` método. `Execute` é o que realmente lê os dados da fonte de nativo. O código a seguir mostra o Assistente gerou `Execute` método. A função usa o Win32 **FindFirstFile** e `FindNextFile` APIs para recuperar informações sobre os arquivos no diretório e colocá-los em instâncias de `CMyProviderWindowsFile` classe.  
+ O `CMyProviderRowset` classe também contém o `Execute` método. `Execute` é o que realmente lê os dados da fonte de nativo. O código a seguir mostra o Assistente gerou `Execute` método. A função usa o Win32 `FindFirstFile` e `FindNextFile` APIs para recuperar informações sobre os arquivos no diretório e colocá-los em instâncias do `CMyProviderWindowsFile` classe.  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
@@ -81,9 +81,9 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }  
 ```  
   
- Para pesquisar o diretório é representado por `m_strCommandText`; isso contém o texto representado pelo `ICommandText` interface no objeto de comando. Se nenhuma pasta for especificada, ele usa o diretório atual.  
+ O diretório a ser pesquisado é representado por `m_strCommandText`; isso contém o texto representado pelo `ICommandText` interface no objeto de comando. Se nenhum diretório for especificado, ele usa o diretório atual.  
   
- O método cria uma entrada para cada arquivo (correspondente a uma linha) e o coloca no **m_rgRowData** membro de dados. O `CRowsetImpl` classe define o **m_rgRowData** membro de dados. Os dados nessa matriz representa a tabela inteira e são usados em modelos.  
+ O método cria uma entrada para cada arquivo (correspondente a uma linha) e o coloca no `m_rgRowData` membro de dados. O `CRowsetImpl` classe define o `m_rgRowData` membro de dados. Os dados nessa matriz representa a tabela inteira e são usados em todo os modelos.  
   
 ## <a name="see-also"></a>Consulte também  
  [Arquivos gerados pelo Assistente do Provedor](../../data/oledb/provider-wizard-generated-files.md)

@@ -16,22 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 700a959742fafd4478659ff08821b043aff8bc14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d5015a69c01982398dcb661fc7ea86232dde7f2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111966"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340978"
 ---
 # <a name="using-dynamic-accessors"></a>Usando acessadores dinâmicos
 
-Acessadores dinâmicos permitem que você acesse uma fonte de dados quando você não possui conhecimento do esquema do banco de dados (estrutura subjacente). A biblioteca de modelos OLE DB fornece várias classes para ajudá-lo a fazer isso.
+Acessadores dinâmicos permitem que você acesse uma fonte de dados quando você não tem nenhum conhecimento sobre o esquema de banco de dados (estrutura subjacente). A biblioteca de modelos OLE DB fornece várias classes para ajudá-lo a fazer isso.
 
 O [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) exemplo mostra como usar as classes de acessador dinâmico para obter informações de coluna e criar dinamicamente os acessadores.
 
 ## <a name="using-cdynamicaccessor"></a>Usando CDynamicAccessor
 
-[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) permite que você acesse uma fonte de dados quando você não possui conhecimento do esquema do banco de dados (estrutura do banco de dados). `CDynamicAccessor` métodos de obter informações de coluna como nomes de coluna, contagem e tipo de dados. Você pode usar essas informações de coluna para criar um acessador dinamicamente em tempo de execução. As informações de coluna são armazenadas em um buffer que é criado e gerenciado por esta classe. Obter dados do buffer usando o [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md) método.
+[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) permite que você acesse uma fonte de dados quando você não tem nenhum conhecimento sobre o esquema de banco de dados (estrutura de base do banco de dados). `CDynamicAccessor` métodos de obter informações de coluna como nomes de coluna, a contagem e o tipo de dados. Você pode usar essas informações de coluna para criar um acessador dinamicamente em tempo de execução. As informações de coluna são armazenadas em um buffer que é criado e gerenciado por essa classe. Obter dados de buffer usando o [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md) método.
 
 ## <a name="example"></a>Exemplo
 
@@ -103,9 +103,9 @@ int main(int argc, char* argv[] )
 
 ## <a name="using-cdynamicstringaccessor"></a>Usando CDynamicStringAccessor
 
-[CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md) funciona como [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), exceto em um aspecto importante. Enquanto `CDynamicAccessor` solicita os dados no formato nativo, o provedor relatado `CDynamicStringAccessor` solicita que o provedor de buscar todos os dados acessados a partir do repositório de dados como dados de cadeia de caracteres. Isso é especialmente útil para tarefas simples que não exigem o cálculo de valores no repositório de dados, como exibir ou imprimir o conteúdo do repositório de dados.
+[CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md) funciona como [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), exceto em um aspecto importante. Embora `CDynamicAccessor` solicita dados no formato nativo relatado pelo provedor, `CDynamicStringAccessor` solicita que o provedor de buscar todos os dados acessados do armazenamento de dados como dados de cadeia de caracteres. Isso é especialmente útil para tarefas simples que não exigem o cálculo dos valores no repositório de dados, como exibir ou imprimir o conteúdo do repositório de dados.
 
-Use `CDynamicStringAccessor` métodos para obter informações de coluna. Você pode usar essas informações de coluna para criar um acessador dinamicamente em tempo de execução. As informações de coluna são armazenadas em um buffer criadas e gerenciadas por essa classe. Obter dados do buffer usando [cdynamicstringaccessor:: GetString](../../data/oledb/cdynamicstringaccessor-getstring.md) ou armazená-lo para o buffer usando [cdynamicstringaccessor:: Setstring](../../data/oledb/cdynamicstringaccessor-setstring.md).
+Use `CDynamicStringAccessor` métodos para obter informações de coluna. Você pode usar essas informações de coluna para criar um acessador dinamicamente em tempo de execução. As informações de coluna são armazenadas em um buffer criadas e gerenciadas por esta classe. Obter dados de buffer usando [cdynamicstringaccessor:: GetString](../../data/oledb/cdynamicstringaccessor-getstring.md) ou armazená-lo para o buffer usando [cdynamicstringaccessor:: Setstring](../../data/oledb/cdynamicstringaccessor-setstring.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -165,11 +165,11 @@ int main(int argc, char* argv[] )
 
 ## <a name="using-cdynamicparameteraccessor"></a>Usando CDynamicParameterAccessor
 
-[CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) é semelhante a [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), exceto que `CDynamicParameterAccessor` obtém informações de parâmetro a ser definido chamando o [ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters) interface. O provedor deve oferecer suporte `ICommandWithParameters` para o consumidor usar essa classe.
+[CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) é semelhante ao [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), exceto pelo fato `CDynamicParameterAccessor` obtém informações de parâmetro a ser definido chamando o [ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters) interface. O provedor deve oferecer suporte `ICommandWithParameters` para o consumidor usar essa classe.
 
-As informações de parâmetro são armazenadas em um buffer criadas e gerenciadas por essa classe. Obter dados de parâmetro do buffer usando [cdynamicparameteraccessor:: Getparam](../../data/oledb/cdynamicparameteraccessor-getparam.md) e [cdynamicparameteraccessor:: Getparamtype](../../data/oledb/cdynamicparameteraccessor-getparamtype.md).
+As informações de parâmetro são armazenadas em um buffer criadas e gerenciadas por esta classe. Obter dados de parâmetro do buffer usando [cdynamicparameteraccessor:: Getparam](../../data/oledb/cdynamicparameteraccessor-getparam.md) e [cdynamicparameteraccessor:: Getparamtype](../../data/oledb/cdynamicparameteraccessor-getparamtype.md).
 
-Para obter um exemplo que demonstram como usar essa classe para executar um procedimento armazenado do SQL Server e obter os valores de parâmetro de saída, consulte o [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) código de exemplo do [VCSamples Microsoft](https://github.com/Microsoft/VCSamples) repositório no GitHub.
+Para obter um exemplo que demonstra como usar essa classe para executar um procedimento armazenado do SQL Server e obter os valores de parâmetro de saída, consulte o [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) códigos de exemplo de [VCSamples Microsoft](https://github.com/Microsoft/VCSamples) repositório do GitHub.
 
 ## <a name="see-also"></a>Consulte também
 

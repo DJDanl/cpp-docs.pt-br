@@ -17,28 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: de6931db1ef8048e6f376447307beebed67aa56a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a729497fe24fb0c08734e45d360965f5d22880c4
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090442"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339432"
 ---
 # <a name="open-database-connectivity-odbc"></a>Conectividade de banco de dados aberto (ODBC)
-A biblioteca MFC (Microsoft Foundation Classes) fornece classes para programar com ODBC (Conectividade Aberta de Banco de Dados). A partir do Visual Studio 2015 e ODBC do SQL Server 2012 é a melhor maneira de se conectar a fontes de dados do SQL.
+A biblioteca MFC (Microsoft Foundation Classes) fornece classes para programar com ODBC (Conectividade Aberta de Banco de Dados). A partir do Visual Studio 2015 e o ODBC do SQL Server 2012 é a maneira preferencial para se conectar a fontes de dados SQL.
   
- Para obter mais informações sobre como usar a API ODBC sem MFC, consulte o [conectividade aberta de banco de dados (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK no MSDN.  
+ Para obter mais informações sobre como usar a API do ODBC sem MFC, consulte o [conectividade aberta de banco de dados (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) SDK no MSDN.  
   
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [ODBC](odbc-basics.md)— conectividade aberta de banco de dados standard e API  
+-   [ODBC](odbc-basics.md)— o padrão de conectividade aberta de banco de dados e a API  
   
--   [Quais MFC suporte é fornecido](odbc-and-mfc.md) para programação de ODBC  
+-   [O MFC suporte é fornecido pelo](odbc-and-mfc.md) para programação de ODBC  
   
 -   [Quais Drivers ODBC estão disponíveis](odbc-driver-list.md)  
   
--   [Conectando-se a fontes de dados ODBC](data-source-managing-connections-odbc.md)  
+-   [Conectar-se a fontes de dados ODBC](data-source-managing-connections-odbc.md)  
   
 -   [Registrar troca de campos (RFX)](record-field-exchange-rfx.md) entre um banco de dados e um objeto de conjunto de registros  
   
@@ -48,26 +48,26 @@ A biblioteca MFC (Microsoft Foundation Classes) fornece classes para programar c
   
 -   [Transações de banco de dados](transaction-odbc.md)  
   
--   [Determinando o esquema da fonte de dados ODBC](data-source-determining-the-schema-of-the-data-source-odbc.md) em tempo de execução  
+-   [Determinando o esquema de uma fonte de dados ODBC](data-source-determining-the-schema-of-the-data-source-odbc.md) em tempo de execução  
   
 -   [Configurando programaticamente uma fonte de dados ODBC](data-source-programmatically-configuring-an-odbc-data-source.md)  
   
 -   [Criando uma tabela programaticamente em uma fonte de dados ODBC](data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)  
   
--   [Recuperando registros em massa](recordset-fetching-records-in-bulk-odbc.md)  
+-   [Buscando registros em massa](recordset-fetching-records-in-bulk-odbc.md)  
   
 -   [Personalizando a instrução de SQL do meu conjunto de registros](sql-customizing-your-recordsets-sql-statement-odbc.md)  
   
--   [Chamadas SQL diretas de fazer](sql-making-direct-sql-calls-odbc.md)  
+-   [Fazendo chamadas SQL diretas](sql-making-direct-sql-calls-odbc.md)  
   
--   [Fazer chamadas diretas para a API de ODBC](odbc-calling-odbc-api-functions-directly.md)  
+-   [Fazendo chamadas diretas para a API do ODBC](odbc-calling-odbc-api-functions-directly.md)  
   
 -   [Como funcionam as classes de banco de dados com a arquitetura de documento/exibição do MFC?](working-with-documents-and-views.md)  
   
 -   [Lista de drivers ODBC](odbc-driver-list.md)  
   
 ## <a name="odbc-database-tasks"></a>Tarefas de banco de dados ODBC  
- Essas tarefas são baseadas em MFC [ODBC](odbc-basics.md) classes. Para obter mais informações sobre como usar a API ODBC sem MFC, consulte o [conectividade aberta de banco de dados (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK.  
+ Essas tarefas se baseiam no MFC [ODBC](odbc-basics.md) classes. Para obter mais informações sobre como usar a API do ODBC sem MFC, consulte o [conectividade aberta de banco de dados (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) SDK.  
   
 -   [Instalar e começar a trabalhar com ODBC](installing-and-getting-started-with-odbc.md)  
   

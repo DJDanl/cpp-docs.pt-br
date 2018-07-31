@@ -1,5 +1,5 @@
 ---
-title: Manipuladores de comando para registro de rolagem (MFC acesso a dados) | Microsoft Docs
+title: Manipuladores de comando para rolagem de registro (acesso de dados MFC) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 03dec2e3eff0f61db5f4c8b7573400a589615b02
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef2b57bd37441b9a35c26ab36fcf3cb15cd0d878
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089373"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340322"
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>Manipuladores de comandos para rolagem de registro (Acesso a dados MFC)
-O [CRecordView](../mfc/reference/crecordview-class.md) classe fornece um comando de padrão de tratamento para os seguintes comandos padrão:  
+O [CRecordView](../mfc/reference/crecordview-class.md) classe fornece padrão manipulação de comando para os seguintes comandos:  
   
--   **ID_RECORD_MOVE_FIRST**  
+-   ID_RECORD_MOVE_FIRST  
   
--   **ID_RECORD_MOVE_LAST**  
+-   ID_RECORD_MOVE_LAST  
   
--   **ID_RECORD_MOVE_NEXT**  
+-   ID_RECORD_MOVE_NEXT  
   
--   **ID_RECORD_MOVE_PREV**  
+-   ID_RECORD_MOVE_PREV  
   
- O `OnMove` função membro fornece tratamento de todos os quatro comandos, mover de registro para registro de comando de padrão. Como esses comandos são emitidos, RFX (ou DFX) carrega o novo registro nos campos do conjunto de registros e DDX move os valores para os controles do formulário de registro. Para obter informações sobre RFX, consulte [troca de campos de registro (RFX)](../data/odbc/record-field-exchange-rfx.md).  
+ O `OnMove` função de membro fornece manipulação para todos os quatro comandos, que move de um registro para o registro de comando padrão. Como esses comandos são emitidos, RFX (ou DFX) carrega o novo registro nos campos do conjunto de registros e DDX move os valores para os controles do formulário de registro. Para obter informações sobre RFX, consulte [Exchange RFX (Record Field)](../data/odbc/record-field-exchange-rfx.md).  
   
 > [!NOTE]
 >  Certifique-se de usar essas IDs de comando padrão para os objetos de interface de usuário associados com os comandos de navegação de registro padrão.  
   
 ## <a name="see-also"></a>Consulte também  
- [Suporte de navegação em uma exibição de registro](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+ [Suporte à navegação em uma exibição de registro](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)

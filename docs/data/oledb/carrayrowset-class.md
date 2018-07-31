@@ -54,12 +54,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3b367fc74fdbb03a6e5193f3fc9be08f74111a09
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: b7975c91631df24ab12858677a770c38dc0f6411
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207481"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338906"
 ---
 # <a name="carrayrowset-class"></a>Classe CArrayRowset
 Elementos de acessos de um conjunto de linhas usando a sintaxe de matriz.  
@@ -68,8 +68,8 @@ Elementos de acessos de um conjunto de linhas usando a sintaxe de matriz.
 
 ```cpp
 template < class TAccessor >  
-class CArrayRowset :   
-   public CVirtualBuffer <TAccessor>,   
+class CArrayRowset : 
+   public CVirtualBuffer <TAccessor>, 
    protected CBulkRowset <TAccessor>  
 ```  
   
@@ -107,7 +107,7 @@ Cria um novo objeto `CArrayRowset`.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      CArrayRowset(int nMax = 100000);  
+CArrayRowset(int nMax = 100000);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -121,7 +121,6 @@ Lê o conjunto de linhas inteiro na memória, criando uma imagem ou um instantâ
   
 ```cpp
 HRESULT Snapshot() throw();  
-  
 ```  
 
 ## <a name="operator"></a> Carrayrowset:: Operator
@@ -130,8 +129,7 @@ Fornece sintaxe de matriz para acessar uma linha no conjunto de linhas.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      TAccessor  
-      & operator[](int nrow);  
+TAccessor & operator[](int nrow);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -154,7 +152,6 @@ Contém o número de linhas no conjunto de linhas que já tiverem sido lidos.
   
 ```cpp
 ULONG m_nRowsRead;  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte também  

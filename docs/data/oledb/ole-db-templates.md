@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3133341b3dffa27cb5a6cec60ab58254fbe12dea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af146c37490d86a839f717d387c4072fbd649a87
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109567"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339429"
 ---
 # <a name="ole-db-templates"></a>Modelos de banco de dados OLE
-Os modelos OLE DB facilitam o acesso de dados OLE DB. Visual C++ fornece classes de modelo que implementam muitas das interfaces de OLE DB usadas com frequência. Você pode usar os modelos de consumidor do Visual C++ para escrever um aplicativo de cliente (consumidor) do OLE DB e os modelos de provedor para escrever um aplicativo de servidor (provedor).  
+Os modelos OLE DB facilitam o acesso a dados do OLE DB. O Visual C++ fornece as classes de modelo que implementam muitas das interfaces do OLE DB comumente usadas. Você pode usar os modelos de consumidor do Visual C++ para escrever um aplicativo de cliente (consumidor) do OLE DB e os modelos de provedor para gravar um aplicativo de servidor (provedor).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)  
+ [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)  
  Fornece links para as classes de OLE DB consumidor modelo listadas por uso.  
   
  [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)  
@@ -36,33 +36,33 @@ Os modelos OLE DB facilitam o acesso de dados OLE DB. Visual C++ fornece classes
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Visão geral da programação do OLE DB](../../data/oledb/ole-db-programming-overview.md)  
- Descreve as novidades do OLE DB e aborda o acesso a dados Universal em OLE DB.  
+ Descreve as novidades do OLE DB e discute o acesso a dados Universal no OLE DB.  
   
- [Referência do programador de OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx)  
+ [Referência do programador do OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)  
  Fornece links para a documentação do SDK do Windows no OLE DB.  
   
  [Exemplos de modelos OLE DB](../../visual-cpp-samples.md)  
- Fornece links para exemplos de modelos OLE DB que mostram como usar o OLE DB em seus projetos.  
+ Fornece links para os exemplos de modelos OLE DB que mostram como usar o OLE DB em seus projetos.  
   
- [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)  
- Discute o material conceitual sobre os modelos de consumidor de banco de dados OLE.  
+ [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)  
+ Discute o material conceitual sobre o OLE DB modelos de consumidor.  
   
  [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)  
  Discute o material conceitual sobre os modelos do provedor de banco de dados OLE.  
   
  [Criando um consumidor do OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)  
- Descreve como criar um consumidor de modelos OLE DB com ou sem o ATL OLE DB Assistente de consumidor.  
+ Descreve como criar um consumidor de modelos OLE DB, com ou sem o ATL OLE DB Assistente de consumidor.  
   
  [Criando um provedor somente leitura simples](../../data/oledb/creating-a-simple-read-only-provider.md)  
  Descreve como criar um provedor somente leitura simples que lê um par de cadeias de caracteres.  
   
  [Criando um provedor atualizável](../../data/oledb/creating-an-updatable-provider.md)  
- Descreve Criando provedores que podem gravar no armazenamento de dados.  
+ Descreve os provedores de criação que podem gravar no armazenamento de dados.  
   
  [Atributos de consumidor do OLE DB](../../windows/ole-db-consumer-attributes.md)  
- Discute uma interface simplificada para injetar código com base em OLE DB consumidor modelos para criação de trabalho consumidores OLE DB.  
+ Discute uma interface simplificada para injetar código com base em OLE DB consumidor modelos para criação de consumidores do OLE DB de trabalho.  
   
- [Referência de biblioteca (ATL) do modelo ativo](../../atl/atl-com-desktop-components.md)  
+ [Referência do Active Template Library (ATL)](../../atl/atl-com-desktop-components.md)  
  Fornece material de referência para a biblioteca ATL, um conjunto de classes com base em C++ que simplificam a programação de objetos COM.  
   
  [Depuração](/visualstudio/debugger/debugging-in-visual-studio)  

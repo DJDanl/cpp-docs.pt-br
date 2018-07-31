@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fd84b6f9451e924fac9e3630df38719c83ff583a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28150a39042305ab96c4dba7746c0b79dbec9509
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33107933"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340450"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Determinando dinamicamente colunas retornadas ao consumidor
-As macros PROVIDER_COLUMN_ENTRY manipular normalmente o **icolumnsinfo:: Getcolumnsinfo** chamar. No entanto, como um consumidor pode optar por usar indicadores, o provedor deve ser capaz de alterar as colunas retornadas dependendo se o consumidor solicita um indicador.  
+As macros PROVIDER_COLUMN_ENTRY lidar normalmente com o `IColumnsInfo::GetColumnsInfo` chamar. No entanto, como um consumidor pode optar por usar indicadores, o provedor deve ser capaz de alterar as colunas retornadas, dependendo se o consumidor solicita um indicador.  
   
- Para lidar com o **icolumnsinfo:: Getcolumnsinfo** chamar, exclua o PROVIDER_COLUMN_MAP, que define uma função `GetColumnInfo`, do `CAgentMan` usuário gravada em myproviderrs. H e substituí-lo com a definição para seu próprio `GetColumnInfo` função:  
+ Para lidar com o `IColumnsInfo::GetColumnsInfo` chamar, exclua o PROVIDER_COLUMN_MAP, que define uma função `GetColumnInfo`, da `CAgentMan` usuário gravar em myproviderrs. H e substituí-lo com a definição para seu próprio `GetColumnInfo` função:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -49,11 +49,11 @@ public:
 };  
 ```  
   
- Em seguida, implementar a `GetColumnInfo` funcionar em MyProviderRS.cpp, conforme mostrado no código a seguir.  
+ Em seguida, implementar o `GetColumnInfo` funcionar em MyProviderRS.cpp, conforme mostrado no código a seguir.  
   
- `GetColumnInfo` verifica primeiro se a propriedade do OLE DB **DBPROP_BOOKMARKS** está definido. Para obter a propriedade `GetColumnInfo` usa um ponteiro (`pRowset`) para o objeto de conjunto de linhas. O `pThis` ponteiro representa a classe que criou o conjunto de linhas, que é a classe em que o mapa de propriedade é armazenado. `GetColumnInfo` typecasts o `pThis` ponteiro para um `RMyProviderRowset` ponteiro.  
+ `GetColumnInfo` verifica primeiro se a propriedade do OLE DB `DBPROP_BOOKMARKS` está definido. Para obter a propriedade `GetColumnInfo` usa um ponteiro (`pRowset`) para o objeto de conjunto de linhas. O `pThis` ponteiro representa a classe que criou o conjunto de linhas, que é a classe em que o mapa de propriedade é armazenado. `GetColumnInfo` typecasts a `pThis` ponteiro para um `RMyProviderRowset` ponteiro.  
   
- Para verificar a **DBPROP_BOOKMARKS** propriedade `GetColumnInfo` usa o `IRowsetInfo` interface, que pode ser obtido chamando `QueryInterface` no `pRowset` interface. Como alternativa, você pode usar uma ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) método em vez disso.  
+ Para verificar se há o `DBPROP_BOOKMARKS` propriedade, `GetColumnInfo` usa o `IRowsetInfo` interface, que pode ser obtido chamando `QueryInterface` sobre o `pRowset` interface. Como alternativa, você pode usar uma ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) método em vez disso.  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////  
@@ -114,7 +114,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 }  
 ```  
   
- Este exemplo usa uma matriz estática para conter as informações de coluna. Se o consumidor não deseja que a coluna de indicador, uma entrada na matriz é usada. Para lidar com as informações, você cria duas macros de matriz: ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX aceita um parâmetro extra, `flags`, que é necessário se você designar uma coluna de indicador.  
+ Este exemplo usa uma matriz estática para conter as informações de coluna. Se o consumidor não deseja que a coluna de indicador, uma entrada na matriz é não utilizada. Para lidar com as informações, você cria duas macros a matriz: ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX aceita um parâmetro extra, `flags`, que é necessário se você designar uma coluna de indicador.  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -147,13 +147,13 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
   
  No `GetColumnInfo` função, a macro de indicador é usada da seguinte forma:  
   
-```  
+```cpp  
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),  
    DBTYPE_BYTES, 0, 0, GUID_NULL, CAgentMan, dwBookmark,   
    DBCOLUMNFLAGS_ISBOOKMARK)  
 ```  
   
- Você agora pode compilar e executar o provedor aprimorado. Para testar o provedor, modifique o consumidor de teste, conforme descrito na [implementando um consumidor simples](../../data/oledb/implementing-a-simple-consumer.md). Execute o consumidor de teste com o provedor. Verifique se que o consumidor de teste recupera as cadeias de caracteres corretas do provedor quando você clica o **executar** no botão o **testar consumidor** caixa de diálogo.  
+ Agora você pode compilar e executar o provedor aprimorado. Para testar o provedor, modifique o consumidor de teste, conforme descrito na [implementando um consumidor simples](../../data/oledb/implementing-a-simple-consumer.md). Execute o consumidor de teste com o provedor. Verifique se que o consumidor de teste recupera as cadeias de caracteres apropriadas do provedor quando você clica o **executar** botão na **testar consumidor** caixa de diálogo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Aprimorando o provedor somente leitura simples](../../data/oledb/enhancing-the-simple-read-only-provider.md)

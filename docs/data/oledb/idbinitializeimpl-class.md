@@ -50,12 +50,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 69c7f92110312d4ae8cff427d1081853290919e9
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 756ced3e2e1eef48023831329751477d07d7cfec
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269918"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336482"
 ---
 # <a name="idbinitializeimpl-class"></a>Classe IDBInitializeImpl
 Fornece uma implementação para o [IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx) interface.  
@@ -106,7 +106,6 @@ O construtor.
   
 ```cpp
 IDBInitializeImpl();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -118,7 +117,7 @@ Inicializa o objeto de fonte de dados, Preparando seu suporte de propriedade.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD(Initialize)(void);  
+STDMETHOD(Initialize)(void);  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -130,7 +129,7 @@ Coloca os dados de objeto em um estado não inicializado da fonte ao liberar os 
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD(Uninitialize)(void);  
+STDMETHOD(Uninitialize)(void);  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -143,13 +142,12 @@ Sinalizadores de fonte de dados.
   
 ```cpp
 DWORD m_dwStatus;  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
  Esses sinalizadores especificam ou indicam o status de vários atributos para o objeto de fonte de dados. Contém um ou mais dos seguintes **enum** valores:  
   
-```  
+```cpp  
 enum DATASOURCE_FLAGS {  
     DSF_MASK_INIT     = 0xFFFFF00F,  
     DSF_PERSIST_DIRTY = 0x00000001,  
@@ -169,10 +167,7 @@ Um ponteiro para objeto de implementação para obter informações de proprieda
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-CUtlPropInfo<  
-T  
->* m_pCUtlPropInfo;  
-  
+CUtlPropInfo< T >* m_pCUtlPropInfo;  
 ```  
   
 ## <a name="see-also"></a>Consulte também  

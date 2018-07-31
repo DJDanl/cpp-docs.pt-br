@@ -22,37 +22,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 309c81e8d370b61ba3a44d9253cda4fa9b84b6cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb3f2f63d60cd5120479a66eea1fe6bdee91b8ac
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094758"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338201"
 ---
 # <a name="snapshot"></a>Instantâneo
-Um instantâneo é um conjunto de registros que reflete uma exibição estática dos dados que existia no momento em que o instantâneo foi criado. Quando você abre o instantâneo e move para todos os registros, o conjunto de registros que ele contém e seus valores não são alteradas até que você recria o instantâneo chamando **Requery**.  
+Um instantâneo é um conjunto de registros que reflete uma exibição estática dos dados conforme ele existia no momento em que o instantâneo foi criado. Quando você abre o instantâneo e move para todos os registros, o conjunto de registros que ele contém e seus valores não mudam até que você recria o instantâneo chamando `Requery`.  
   
 > [!NOTE]
->  Este tópico se aplica às classes MFC ODBC. Se você estiver usando as classes DAO MFC em vez de classes MFC ODBC, consulte [CDaoRecordset::Open](../../mfc/reference/cdaorecordset-class.md#open) para obter uma descrição do conjunto de registros do tipo de instantâneo.  
+>  Este tópico se aplica às classes ODBC do MFC. Se você estiver usando as classes MFC DAO, em vez das classes MFC ODBC, consulte [2&gt;cdaorecordset::Open&lt;2](../../mfc/reference/cdaorecordset-class.md#open) para obter uma descrição de conjuntos de registros do tipo de instantâneo.  
   
- Você pode criar instantâneos atualizáveis ou somente leitura com as classes de banco de dados. Ao contrário de dynaset, um instantâneo atualizável não reflete as alterações para gravar valores feitos por outros usuários, mas refletir atualizações e exclusões feitas por seu programa. Registros adicionados a um instantâneo não se tornarão visíveis para o instantâneo até que você chame **Requery**.  
+ Você pode criar instantâneos atualizáveis ou somente leitura com as classes de banco de dados. Ao contrário de dynaset, um instantâneo atualizável não reflete as alterações para gravar valores feitas por outros usuários, mas ele reflete as atualizações e exclusões feitas pelo seu programa. Registros adicionados a um instantâneo não se tornarão visíveis para o instantâneo até que você chame `Requery`.  
   
 > [!TIP]
->  Um instantâneo é um cursor estático do ODBC. Cursores estáticos não têm, na verdade, uma linha de dados até que você rola para esse registro. Para garantir que todos os registros são recuperados imediatamente, você pode rolar até o final do seu conjunto de registros e, em seguida, role até o primeiro registro que você deseja ver. No entanto, observe que rolar até o final envolve sobrecarga extra e pode reduzir o desempenho.  
+>  Um instantâneo é um cursor estático do ODBC. Cursores estáticos não obter uma linha de dados, na verdade, até que você rola para esse registro. Para garantir que todos os registros são recuperados imediatamente, você pode rolar até o final do seu conjunto de registros e, em seguida, role até o primeiro registro que você deseja ver. No entanto, observe que a rolagem até o final envolve a sobrecarga extra e pode reduzir o desempenho.  
   
- Os instantâneos são mais valiosos quando precisar que os dados permaneçam fixo durante as operações, como quando você está gerando um relatório ou executar cálculos. Mesmo assim, o fonte de dados pode divergir consideravelmente do seu instantâneo, então você pode querer recriá-lo em vez.  
+ Instantâneos são mais eficientes quando você precisa que os dados permaneçam fixos durante suas operações, como quando você estiver gerando um relatório ou executar cálculos. Mesmo assim, a fonte de dados pode divirjam consideravelmente o instantâneo, portanto, você talvez queira recriá-lo de tempos em tempos.  
   
- Suporte a instantâneo baseia-se a biblioteca de cursores ODBC, que fornece os cursores estáticos e posicionar atualizações (necessárias para a capacidade de atualização) para qualquer driver de nível 1. A biblioteca de cursores DLL deve ser carregada na memória para esse suporte. Quando você cria um `CDatabase` objeto e chame seu `OpenEx` função de membro, você deve especificar o **CDatabase::useCursorLib** opção do `dwOptions` parâmetro. Se você chamar o **abrir** função de membro, a biblioteca de cursores é carregada por padrão. Se você estiver usando dynasets em vez de instantâneos, você não deseja fazer com que a biblioteca de cursor a ser carregado.  
+ Suporte a instantâneo baseia-se a biblioteca de cursores ODBC, que fornece os cursores estáticos e posicionar atualizações (necessárias para a capacidade de atualização) para qualquer driver de nível 1. A DLL da biblioteca de cursor deve ser carregado na memória para esse suporte. Quando você constrói uma `CDatabase` objeto e chame seu `OpenEx` função de membro, você deve especificar o `CDatabase::useCursorLib` opção do *dwOptions* parâmetro. Se você chamar o `Open` função de membro, a biblioteca de cursores é carregada por padrão. Se você estiver usando dynasets em vez de instantâneos, você não deseja fazer com que a biblioteca de cursores a ser carregado.  
   
- Instantâneos estão disponíveis somente se a biblioteca de cursores ODBC foi carregada quando o `CDatabase` objeto foi construído ou o driver ODBC que você está usando dá suporte a Cursores estáticos.  
+ Instantâneos estão disponíveis apenas se a biblioteca de cursores ODBC foi carregada quando o `CDatabase` objeto foi construído ou o driver ODBC que você está usando dá suporte a Cursores estáticos.  
   
 > [!NOTE]
 >  Para alguns drivers ODBC, os instantâneos (Cursores estáticos) podem não ser atualizáveis. Verifique a documentação do driver para tipos de cursor com suporte e os tipos de simultaneidade, que eles oferecem suporte. Para garantir que os instantâneos atualizáveis, certifique-se de carregar a biblioteca de cursores na memória quando você cria um `CDatabase` objeto. Para obter mais informações, consulte [ODBC: A biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
 > [!NOTE]
->  Se você quiser usar instantâneos e dynasets, você deve baseá-los em dois `CDatabase` objetos (duas conexões diferentes).  
+>  Se você quiser usar instantâneos e dynasets, você deve baseá-los em dois diferentes `CDatabase` objetos (duas conexões diferentes).  
   
- Para obter mais informações sobre o compartilhamento de instantâneos de propriedades com todos os conjuntos de registros, consulte [conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md). Para obter mais informações sobre ODBC e instantâneos, incluindo a biblioteca de cursores ODBC, consulte [ODBC](../../data/odbc/odbc-basics.md).  
+ Para obter mais informações sobre o compartilhamento de instantâneos de propriedades com todos os conjuntos de registros, consulte [conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md). Para obter mais informações sobre o ODBC e instantâneos, incluindo a biblioteca de cursores ODBC, consulte [ODBC](../../data/odbc/odbc-basics.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)

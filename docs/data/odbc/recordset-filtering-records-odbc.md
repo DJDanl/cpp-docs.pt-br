@@ -19,23 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4b4860726fa77d7b852290d8ea4680fe1bbbd86f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1196bc41022a3202a55ad1ba5c208b8a8fdbbcc5
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091797"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340606"
 ---
 # <a name="recordset-filtering-records-odbc"></a>Conjunto de registros: filtrando registros (ODBC)
-Este tópico se aplica às classes MFC ODBC.  
+Este tópico se aplica às classes ODBC do MFC.  
   
- Este tópico explica como filtrar um conjunto de registros para que ele seleciona apenas um subconjunto específico de registros disponíveis. Por exemplo, você talvez queira selecionar apenas as seções de classe para um curso específico, como MATH101. Um filtro é uma condição de pesquisa definida pelo conteúdo de um SQL **onde** cláusula. Quando a estrutura acrescenta à instrução de SQL do conjunto de registros, o **onde** cláusula restringe a seleção.  
+ Este tópico explica como filtrar um conjunto de registros para que ele seleciona apenas um subconjunto específico de registros disponíveis. Por exemplo, você talvez queira selecionar apenas as seções de classe para um curso específico, como MATH101. Um filtro é um critério de pesquisa definido pelo conteúdo de um SQL **onde** cláusula. Quando o framework acrescenta à instrução de SQL do conjunto de registros, o **onde** cláusula restringe a seleção.  
   
- Você deve estabelecer o filtro de um objeto conjunto de registros depois de construir o objeto, mas antes de chamar seus **abrir** função de membro (ou antes de chamar o **Requery** função de membro para um conjunto de registros existente objeto cujo **abrir** função membro foi chamada anteriormente).  
+ Você deve estabelecer o filtro do conjunto de registros de um objeto depois de construir o objeto, mas antes de chamar seus `Open` função de membro (ou antes de chamar o `Requery` função de membro para um conjunto de registros existente do objeto cuja `Open` tem de função de membro foi chamado anteriormente).  
   
-#### <a name="to-specify-a-filter-for-a-recordset-object"></a>Para especificar um filtro para um objeto de conjunto de registros  
+#### <a name="to-specify-a-filter-for-a-recordset-object"></a>Para especificar um filtro para um objeto recordset  
   
-1.  Criar um novo objeto de conjunto de registros (ou preparar para chamar **Requery** para um objeto existente).  
+1.  Criar um novo objeto de conjunto de registros (ou se prepare para chamar `Requery` para um objeto existente).  
   
 2.  Definir o valor do objeto [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) membro de dados.  
   
@@ -52,19 +52,19 @@ Este tópico se aplica às classes MFC ODBC.
     ```  
   
     > [!NOTE]
-    >  A cadeia de caracteres literal "MATH101" é mostrada com aspas acima. Na especificação do ODBC SQL, aspas simples são usadas para denotar uma literal de cadeia de caracteres. Verifique a documentação do driver ODBC para os requisitos de cotação de DBMS nessa situação. Essa sintaxe também é discutida mais perto do final deste tópico.  
+    >  A cadeia de caracteres literal "MATH101" é mostrada com aspas simples acima. Na especificação do ODBC SQL, aspas simples são usadas para indicar um literal de cadeia de caracteres. Verifique a documentação do driver ODBC para os requisitos de aspas do DBMS nessa situação. Essa sintaxe também é discutido mais perto do final deste tópico.  
   
-3.  Defina qualquer outra opção que você precisa, como ordem de classificação, o modo de bloqueio ou parâmetros. Especificar um parâmetro é especialmente útil. Para obter informações sobre parametrização seu filtro, consulte [conjunto de registros: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
+3.  Defina quaisquer outras opções que você precisa, como ordem de classificação, o modo de bloqueio ou parâmetros. Especificando um parâmetro é especialmente útil. Para obter informações sobre a parametrização de seu filtro, consulte [conjunto de registros: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
   
-4.  Chamar **abrir** para o novo objeto (ou **Requery** para um objeto aberto anteriormente).  
-  
-> [!TIP]
->  Usando parâmetros em seu filtro potencialmente é o método mais eficiente para recuperação de registros.  
+4.  Chame `Open` para o novo objeto (ou `Requery` para um objeto aberto anteriormente).  
   
 > [!TIP]
->  Os filtros de conjunto de registros são úteis para [unindo](../../data/odbc/recordset-performing-a-join-odbc.md) tabelas e para o uso de [parâmetros](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) com base nas informações obtidas ou calculados em tempo de execução.  
+>  Usar parâmetros em seu filtro potencialmente é o método mais eficiente para recuperação de registros.  
   
- O conjunto de registros seleciona somente os registros que atendem à condição de pesquisa especificado. Por exemplo especificar o filtro de curso descrito acima (supondo que uma variável `strCourseID` definido no momento, por exemplo, como "MATH101"), faça o seguinte:  
+> [!TIP]
+>  Filtros de conjunto de registros são úteis para [unindo](../../data/odbc/recordset-performing-a-join-odbc.md) tabelas e para usar [parâmetros](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) com base nas informações obtidas ou calculados em tempo de execução.  
+  
+ O conjunto de registros seleciona somente os registros que atendem à condição de pesquisa especificado. Por exemplo especificar o filtro de curso descrita acima (supondo que uma variável `strCourseID` definido no momento, por exemplo, para "MATH101"), faça o seguinte:  
   
 ```  
 // Using the recordset pointed to by m_pSet  
@@ -86,16 +86,16 @@ if ( m_pSet->Open( CRecordset::snapshot, NULL, CRecordset::readOnly ) )
 m_strFilter = "StudentID = '100'";   // correct  
 ```  
   
- Observe o uso de caracteres de aspas simples. Se você definir a cadeia de caracteres de filtro diretamente, a cadeia de caracteres de filtro é **não**:  
+ Observe o uso de caracteres de aspas simples; Se você definir a cadeia de caracteres de filtro diretamente, a cadeia de caracteres de filtro é **não**:  
   
 ```  
 m_strFilter = "StudentID = 100";   // incorrect for some drivers  
 ```  
   
- A cotação mostrado acima está de acordo com a especificação de ODBC, mas alguns DBMSs podem exigir outros caracteres de aspas. Para obter mais informações, consulte [SQL: SQL instrução (ODBC do Personalizando seu conjunto de registros)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).  
+ A delimitação mostrado acima está em conformidade com a especificação de ODBC, mas alguns DBMSs podem exigir outros caracteres de aspas. Para obter mais informações, consulte [SQL: SQL instrução (ODBC Personalizando seu conjunto de registros)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).  
   
 > [!NOTE]
->  Se você optar por substituir a cadeia de caracteres do conjunto de registros padrão SQL passando sua própria cadeia de caracteres SQL para **abrir**, você não deve definir um filtro se sua cadeia de caracteres personalizada tiver um **onde** cláusula. Para obter mais informações sobre como substituir o padrão SQL, consulte [SQL: SQL instrução (ODBC do Personalizando seu conjunto de registros)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).  
+>  Se você optar por substituir a cadeia de caracteres do conjunto de registros padrão SQL passando sua própria cadeia de caracteres SQL para `Open`, você não deve definir um filtro se sua cadeia de caracteres personalizada tem uma **onde** cláusula. Para obter mais informações sobre como substituir o padrão SQL, consulte [SQL: SQL instrução (ODBC Personalizando seu conjunto de registros)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)   

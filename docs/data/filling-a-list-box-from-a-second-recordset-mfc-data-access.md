@@ -1,5 +1,5 @@
 ---
-title: Preenchendo uma caixa de listagem de um segundo conjunto de registros (MFC acesso a dados) | Microsoft Docs
+title: Preenchendo uma caixa de listagem de um segundo conjunto de registros (acesso a dados MFC) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed294527b4335459ab6d0658d9f57a5cb64a8fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e980f42384052e0ab4fbd0f98889509c41accf0b
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090634"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339764"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Preenchendo uma caixa de listagem de um segundo conjunto de registros (Acesso a dados MFC)
 Por padrão, uma exibição do registro está associada a objeto de um conjunto de registros único, cujos campos são mapeados para os controles de exibição do registro. Às vezes, convém colocar um controle de caixa de listagem ou caixa de combinação na exibição do registro e preenchê-lo com valores de um segundo objeto do conjunto de registros. O usuário pode usar a caixa de listagem para selecionar uma nova categoria de informações a serem exibidas na exibição do registro. Este tópico explica como e quando fazer isso.  
@@ -38,17 +38,17 @@ Por padrão, uma exibição do registro está associada a objeto de um conjunto 
   
 #### <a name="to-fill-a-combo-box-or-list-box-from-a-second-recordset"></a>Para preencher uma caixa de combinação ou caixa de listagem de um segundo conjunto de registros  
   
-1.  Criar o objeto de conjunto de registros ([CRecordset](../mfc/reference/crecordset-class.md).  
+1.  Criar o objeto recordset ([CRecordset](../mfc/reference/crecordset-class.md).  
   
 2.  Obter um ponteiro para o [CComboBox](../mfc/reference/ccombobox-class.md) objeto para o controle de caixa de combinação.  
   
 3.  Esvazie a caixa de combinação de qualquer conteúdo anterior.  
   
-4.  Percorrer todos os registros no conjunto de registros, chamando [CComboBox::AddString](../mfc/reference/ccombobox-class.md#addstring) para cada cadeia de caracteres do registro atual que você deseja adicionar à caixa de combinação.  
+4.  Percorra todos os registros no conjunto de registros, chamando [CComboBox:: AddString](../mfc/reference/ccombobox-class.md#addstring) para cada cadeia de caracteres do registro atual que você deseja adicionar à caixa de combinação.  
   
 5.  Inicialize a seleção na caixa de combinação.  
   
-```  
+```cpp  
 void CSectionForm::OnInitialUpdate()  
 {  
     // ...  

@@ -1,5 +1,5 @@
 ---
-title: 'Transação: Como transações afetam atualizações (ODBC) | Microsoft Docs'
+title: 'Transação: Como as transações afetam atualizações (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,46 +19,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 549f8495ca3a088ec4314cd26318d19f9a5a3176
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e540b68b820234ee6d30295b40c7e0f4cb7c806d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097998"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338584"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transação: como as transações afetam atualizações (ODBC)
-Atualizações para o [fonte de dados](../../data/odbc/data-source-odbc.md) gerenciados durante as transações com o uso de um buffer de edição (o mesmo método usado fora de transações). Os membros de um conjunto de registros de dados de campo coletivamente servem como um buffer de edição que contém o registro atual, o conjunto de registros faz backup temporariamente durante uma `AddNew` ou **editar**. Durante uma **excluir** operação, o registro atual não é feita em uma transação. Para obter mais informações sobre como atualizações armazenam o registro atual e o buffer de edição, consulte [conjunto de registros: como conjuntos de registros atualização registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
+Atualizações para o [fonte de dados](../../data/odbc/data-source-odbc.md) são gerenciados durante as transações com o uso de um buffer de edição (o mesmo método usado fora de transações). Os membros de dados do campo de um conjunto de registros coletivamente servem como um buffer de edição que contém o registro atual, o que o conjunto de registros faz backup temporariamente durante um `AddNew` ou `Edit`. Durante um `Delete` operação, o registro atual não é feita em uma transação. Para obter mais informações sobre como atualizações de armazenam o registro atual e o buffer de edição, consulte [conjunto de registros: como conjuntos de registros atualizam registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
 > [!NOTE]
->  Se você tiver implementado a busca de linhas em massa, você não pode chamar `AddNew`, **editar**, ou **excluir**. Em vez disso, você deve escrever suas próprias funções para executar atualizações para a fonte de dados. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Se você tiver implementado a busca de linhas em massa, você não pode chamar `AddNew`, `Edit`, ou `Delete`. Em vez disso, você deve escrever suas próprias funções para executar atualizações à fonte de dados. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Durante as transações, `AddNew`, **editar**, e **excluir** operações podem ser confirmadas ou revertidas. Os efeitos de **CommitTrans** e **reversão** pode causar a não ser restaurado para o buffer de editar o registro atual. Para certificar-se de que o registro atual é restaurado corretamente, é importante entender como o **CommitTrans** e **reversão** funções membro de `CDatabase` funcionam com as funções de atualização de `CRecordset`.  
+ Durante as transações, `AddNew`, `Edit`, e `Delete` operações podem ser confirmadas ou revertidas. Os efeitos das `CommitTrans` e `Rollback` pode fazer com que o registro atual a não ser restaurado para o buffer de edição. Para certificar-se de que o registro atual é restaurado corretamente, é importante entender como o `CommitTrans` e `Rollback` funções de membro `CDatabase` funcionam com as funções de atualização de `CRecordset`.  
   
 ##  <a name="_core_how_committrans_affects_updates"></a> Como CommitTrans afeta as atualizações  
- A tabela a seguir explica os efeitos de **CommitTrans** em transações.  
+ A tabela a seguir explica os efeitos da `CommitTrans` em transações.  
   
 ### <a name="how-committrans-affects-updates"></a>Como CommitTrans afeta as atualizações  
   
 |Operação|Status da fonte de dados|  
 |---------------|---------------------------|  
-|`AddNew` e **atualização**e, em seguida, **CommitTrans**|Novo registro são adicionadas à fonte de dados.|  
-|`AddNew` (sem **atualização**) e, em seguida, **CommitTrans**|Novo registro é perdido. Registro não é adicionado à fonte de dados.|  
-|**Editar** e **atualização**e, em seguida, **CommitTrans**|Edições confirmadas a fonte de dados.|  
-|**Editar** (sem **atualização**) e, em seguida, **CommitTrans**|Edições de registro são perdidas. Registro permanece inalterado na fonte de dados.|  
-|**Excluir** , em seguida, **CommitTrans**|Registros excluídos da fonte de dados.|  
+|`AddNew` e `Update`e, em seguida, `CommitTrans`|Novo registro são adicionados à fonte de dados.|  
+|`AddNew` (sem `Update`) e, em seguida, `CommitTrans`|Novo registro é perdido. Registro não é adicionado à fonte de dados.|  
+|`Edit` e `Update`e, em seguida, `CommitTrans`|O compromisso de fonte de dados de edições.|  
+|`Edit` (sem `Update`) e, em seguida, `CommitTrans`|Edições para o registro serão perdidas. Registro permanece inalterado na fonte de dados.|  
+|`Delete` Em seguida `CommitTrans`|Registros excluídos da fonte de dados.|  
   
-##  <a name="_core_how_rollback_affects_updates"></a> Como reverter afeta transações  
- A tabela a seguir explica os efeitos de **reversão** em transações.  
+##  <a name="_core_how_rollback_affects_updates"></a> Como afeta a reversão de transações  
+ A tabela a seguir explica os efeitos da `Rollback` em transações.  
   
-### <a name="how-rollback-affects-transactions"></a>Como reverter afeta transações  
+### <a name="how-rollback-affects-transactions"></a>Como afeta a reversão de transações  
   
-|Operação|Status de registro atual|Você deve também|Status da fonte de dados|  
+|Operação|Status de registro atual|Também é necessário|Status da fonte de dados|  
 |---------------|------------------------------|-------------------|---------------------------|  
-|`AddNew` e **atualização**, em seguida, **reversão**|Conteúdo do registro atual é armazenado temporariamente para liberar espaço para o novo registro. Novo registro é inserido no buffer de edição. Depois de **atualização** é chamado, atual registro for restaurado para o buffer de edição.||Além da fonte de dados feita por **atualização** é revertida.|  
-|`AddNew` (sem **atualização**), em seguida, **reversão**|Conteúdo do registro atual é armazenado temporariamente para liberar espaço para o novo registro. Editar o buffer contém o novo registro.|Chamar `AddNew` novamente para restaurar o buffer de edição para um registro novo e vazio. Ou chamar **mover**(0) para restaurar os valores antigos para o buffer de edição.|Porque **atualização** não foi chamado, nenhuma alteração feita à fonte de dados.|  
-|**Editar** e **atualização**, em seguida, **reversão**|Uma versão não editada do registro atual é armazenada temporariamente. Edições são feitas para o conteúdo do buffer de edição. Depois de **atualização** é chamado, o não editados versão do registro é armazenado temporariamente ainda.|*Dynaset*: role fora do registro atual e novamente para restaurar a versão não editada do registro para o buffer de edição.<br /><br /> *Instantâneo*: chamar **Requery** para atualizar o conjunto de registros da fonte de dados.|Altera a fonte de dados feita por **atualização** são revertidas.|  
-|**Editar** (sem **atualização**), em seguida, **reversão**|Uma versão não editada do registro atual é armazenada temporariamente. Edições são feitas para o conteúdo do buffer de edição.|Chamar **editar** novamente para restaurar a versão não editada do registro para o buffer de edição.|Porque **atualização** não foi chamado, nenhuma alteração feita à fonte de dados.|  
-|**Excluir** , em seguida, **reversão**|Conteúdo do registro atual é excluído.|Chamar **Requery** para restaurar o conteúdo do registro atual da fonte de dados.|A exclusão de dados de fonte de dados é revertida.|  
+|`AddNew` e `Update`, em seguida, `Rollback`|Conteúdo do registro atual é armazenado temporariamente para liberar espaço para o novo registro. Novo registro é inserido no buffer de edição. Depois de `Update` é chamado, o atual registro é restaurado para o buffer de edição.||Adição a fonte de dados feita por `Update` é invertida.|  
+|`AddNew` (sem `Update`), em seguida, `Rollback`|Conteúdo do registro atual é armazenado temporariamente para liberar espaço para o novo registro. Editar o buffer contém o novo registro.|Chamar `AddNew` novamente para restaurar o buffer de edição para um registro de novo, vazio. Ou ligue para `Move`(0) para restaurar os valores antigos para o buffer de edição.|Porque `Update` não foi chamado, não houve alterações feitas à fonte de dados.|  
+|`Edit` e `Update`, em seguida, `Rollback`|Uma versão não editada do registro atual é armazenada temporariamente. Edições são feitas para o conteúdo do buffer de edição. Depois de `Update` é chamado, a não editado versão do registro é armazenado ainda temporariamente.|*Dynaset*: role fora do registro atual e voltando para restaurar a versão não editada do registro para o buffer de edição.<br /><br /> *Instantâneo*: chamar `Requery` para atualizar o conjunto de registros da fonte de dados.|Altera a fonte de dados feita por `Update` são revertidas.|  
+|`Edit` (sem `Update`), em seguida, `Rollback`|Uma versão não editada do registro atual é armazenada temporariamente. Edições são feitas para o conteúdo do buffer de edição.|Chamar `Edit` novamente para restaurar a versão não editado do registro para o buffer de edição.|Porque `Update` não foi chamado, não houve alterações feitas à fonte de dados.|  
+|`Delete` Em seguida `Rollback`|Conteúdo do registro atual é excluído.|Chamar `Requery` para restaurar o conteúdo do registro atual da fonte de dados.|Exclusão de dados da fonte de dados é revertida.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Transação (ODBC)](../../data/odbc/transaction-odbc.md)   

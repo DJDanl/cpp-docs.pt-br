@@ -1,5 +1,5 @@
 ---
-title: Trabalhando com modelos de consumidor OLE DB | Microsoft Docs
+title: Trabalhando com modelos de consumidor do OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9118732b1c52934b0d914340e592dfa0eac5da18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d172d3b390c2c4ebedaf5ad934a95fc25e206c7
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108254"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340050"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Trabalhando com modelos de consumidor de banco de dados OLE
-Os tópicos a seguir fornecem alguns exemplos de como usar o OLE DB modelos de consumidor em cenários comuns:  
+Os seguintes tópicos fornecem alguns exemplos de como usar o OLE DB modelos de consumidor em cenários comuns:  
   
 -   [Simplificando o acesso a dados com atributos de banco de dados](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
   
@@ -62,11 +62,11 @@ Os tópicos a seguir fornecem alguns exemplos de como usar o OLE DB modelos de c
   
  Você também pode encontrar exemplos de como usar o OLE DB modelos de consumidor nos exemplos a seguir:  
   
--   [CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
+-   [CatDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
   
--   [DBViewer](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)  
+-   [DBViewer](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)  
   
--   [MultiRead](http://msdn.microsoft.com/en-us/21459014-4409-413c-b826-a41f0413be61)  
+-   [MultiRead](http://msdn.microsoft.com/21459014-4409-413c-b826-a41f0413be61)  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+ [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

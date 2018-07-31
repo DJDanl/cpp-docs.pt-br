@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ef8331142550424641b00742d302caedc2974a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94202eab788d376abf80866beafe74c52180474f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088109"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336571"
 ---
 # <a name="mfc-database-classes"></a>Classes de banco de dados MFC 
 > [!NOTE]
 >  A Microsoft recomenda usar o ODBC por meio do Microsoft ODBC Driver 13 (ou posterior) para o SQL Server para novos projetos. Não há suporte para o DAO.    
 
  Para mais informações, consulte os seguintes tópicos:  
--   [Roteiro das tecnologias de acesso a dados](https://msdn.microsoft.com/en-us/library/ms810810.aspx) 
+-   [Roteiro das tecnologias de acesso a dados](https://msdn.microsoft.com/library/ms810810.aspx) 
 
--   [ODBC Driver 13.1 para SQL Server lançadas](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) Microsoft ODBC Driver 13 para SQL Server deve ser usado para criar novos aplicativos ou aprimorar aplicativos existentes que precisam aproveitar os novos recursos do SQL Server 2016.
+-   [Driver ODBC 13.1 para SQL Server lançados](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) Microsoft ODBC Driver 13 for SQL Server deve ser usado para criar novos aplicativos ou aprimorar aplicativos existentes que precisam aproveitar os novos recursos do SQL Server 2016.
   
 -   [ODBC e MFC](../data/odbc/odbc-and-mfc.md)  
   

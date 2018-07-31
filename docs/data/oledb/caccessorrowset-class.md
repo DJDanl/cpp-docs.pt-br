@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9f869a901885b064ef4ddbbfddc23b246455a39
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: edc18dcb83b2dda63fd5cfb5c56c3c95baa72df0
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181179"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340723"
 ---
 # <a name="caccessorrowset-class"></a>Classe CAccessorRowset
 Encapsula um conjunto de linhas e de seus acessadores associados em uma única classe.  
@@ -55,7 +55,7 @@ Encapsula um conjunto de linhas e de seus acessadores associados em uma única c
 
 ```cpp
 template <class TAccessor = CNoAccessor, 
-          template <typename T> class TRowset = CRowset>  
+   template <typename T> class TRowset = CRowset>  
 class CAccessorRowset : public TAccessor, public TRowset<TAccessor>  
 ```  
   
@@ -79,7 +79,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|Construtor.|  
 |[Fechar](#close)|Fecha o conjunto de linhas e qualquer acessadores.|  
 |[FreeRecordMemory](#freerecordmemory)|Libera quaisquer colunas no registro atual que precise ser liberada.|  
-|[GetColumnInfo](#getcolumninfo)|Implementa [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx).|  
+|[GetColumnInfo](#getcolumninfo)|Implementa [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx).|  
   
 ## <a name="remarks"></a>Comentários  
  Classe `TAccessor` gerencia o acessador. Classe *TRowset* gerencia o conjunto de linhas.  
@@ -91,7 +91,6 @@ Cria as associações, se você tiver especificado `bBind` como **falsos** na [c
   
 ```cpp
 HRESULT Bind();  
-  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -104,7 +103,6 @@ Inicializa o objeto `CAccessorRowset`.
   
 ```cpp
 CAccessorRowset();  
-  
 ```  
 
 ## <a name="close"></a> Caccessorrowset:: Close
@@ -114,7 +112,6 @@ Libera qualquer acessadores Active Directory e o conjunto de linhas.
   
 ```cpp
 void Close();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -127,7 +124,6 @@ Libera quaisquer colunas no registro atual que precise ser liberada.
   
 ```cpp
 void FreeRecordMemory();  
-  
 ```  
 
 ## <a name="getcolumninfo"></a> Caccessorrowset:: Getcolumninfo
@@ -136,16 +132,16 @@ Obtém informações de coluna do conjunto de linhas aberto.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-HRESULT GetColumnInfo(DBORDINAL* pulColumns,  
-   DBCOLUMNINFO** ppColumnInfo,  
-   LPOLESTR* ppStrings) const;  
-
-HRESULT GetColumnInfo(DBORDINAL* pColumns,  
+HRESULT GetColumnInfo(DBORDINAL* pulColumns, 
+   DBCOLUMNINFO** ppColumnInfo, 
+   LPOLESTR* ppStrings) const; 
+    
+HRESULT GetColumnInfo(DBORDINAL* pColumns, 
    DBCOLUMNINFO** ppColumnInfo);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) na *referência do programador do OLE DB*.  
+ Ver [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx) na *referência do programador do OLE DB*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um HRESULT padrão.  
@@ -153,7 +149,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ### <a name="remarks"></a>Comentários  
  O usuário deve liberar o buffer de cadeia de caracteres e informações de coluna retornada. Use a segunda versão desse método, quando você usa [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) e precisar substituir as associações.  
   
- Para obter mais informações, consulte [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) na *referência do programador DB OLE*.  
+ Para obter mais informações, consulte [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx) na *referência do programador DB OLE*.  
   
 ## <a name="see-also"></a>Consulte também  
  [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

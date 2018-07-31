@@ -55,12 +55,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0a219024c56bd1b976682c7262d84ce26bce0930
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 5bab5334cec33a84abe6b28dc40bd57bf8da432b
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208605"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337470"
 ---
 # <a name="cdberrorinfo-class"></a>Classe CDBErrorInfo
 Fornece suporte para processamento de erro OLE DB usando o OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) interface.  
@@ -143,7 +143,7 @@ Chamadas [IErrorRecords::GetBasicErrorInfo](https://msdn.microsoft.com/library/m
   
 ```cpp
 HRESULT GetBasicErrorInfo(ULONG ulRecordNum,   
-  ERRORINFO* pErrorInfo) const throw();  
+   ERRORINFO* pErrorInfo) const throw();  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -191,7 +191,7 @@ Chamadas [IErrorRecords::GetErrorParameters](https://msdn.microsoft.com/library/
   
 ```cpp
 HRESULT GetErrorParameters(ULONG ulRecordNum,   
-  DISPPARAMS* pdispparams) const throw();  
+   DISPPARAMS* pdispparams) const throw();  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -209,7 +209,6 @@ Obtém os registros de erro para o objeto especificado.
 HRESULT GetErrorRecords(IUnknown* pUnk,   
    const IID& iid,   
    ULONG* pcRecords) throw();  
-
 
 HRESULT GetErrorRecords(ULONG* pcRecords) throw();  
 ```  

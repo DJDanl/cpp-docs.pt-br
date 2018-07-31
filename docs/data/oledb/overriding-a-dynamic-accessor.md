@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9309180b05a6d91e6749f80c7a7b717b1bc57526
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1d6d3277f27c20f7b1c002590fd26e1e2f08eb7
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33107851"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340024"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Substituindo um acessador dinâmico
-Quando você usa um acessador dinâmico como `CDynamicAccessor`, o comando **abrir** método cria um acessador para você automaticamente, com base nas informações de coluna do conjunto de linhas aberto. Você pode substituir o acessador dinâmico para controlar exatamente como as colunas associadas.  
+Quando você usa um acessador dinâmico, como `CDynamicAccessor`, o comando `Open` método cria um acessador para você automaticamente, com base nas informações de coluna do conjunto de linhas aberto. Você pode substituir o acessador dinâmico para controlar exatamente como as colunas são associadas.  
   
- Para substituir o acessador dinâmico, passar **false** como o último parâmetro para o `CCommand::Open` método. Isso impede que **abrir** de criar um acessador automaticamente. Em seguida, você pode chamar `GetColumnInfo` e chame `AddBindEntry` para cada coluna que você deseja vincular. O código a seguir mostra como fazer isso:  
+ Para substituir o acessador dinâmico, passe **falsos** como o último parâmetro para o `CCommand::Open` método. Isso impede que `Open` desde a criação de um acessador automaticamente. Em seguida, você pode chamar `GetColumnInfo` e chamar `AddBindEntry` para cada coluna que você deseja associar. O código a seguir mostra como fazer isso:  
   
-```  
+```cpp  
 USES_CONVERSION;  
 double   dblProductID;  
   

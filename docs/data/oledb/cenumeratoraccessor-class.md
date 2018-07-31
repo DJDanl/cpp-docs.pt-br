@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6275b07cd06c82d2b9531c3b206b81eedef10db
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 0836a09adac92300a8438a0433fda874e78bcb25
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233408"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339211"
 ---
 # <a name="cenumeratoraccessor-class"></a>Classe CEnumeratorAccessor
 Usado pelo [CEnumerator](../../data/oledb/cenumerator-class.md) para acessar os dados do conjunto de linhas do enumerador.  
@@ -89,7 +89,6 @@ Uma variável que indica se o enumerador é um enumerador pai, se a linha é um 
   
 ```cpp
 VARIANT_BOOL m_bIsParent;  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -102,7 +101,6 @@ Uma variável que indica se a linha descreve uma fonte de dados ou um enumerador
   
 ```cpp
 USHORT m_nType;  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -115,7 +113,6 @@ A descrição da fonte de dados ou enumerador.
   
 ```cpp
 WCHAR m_szDescription[129];  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -128,7 +125,6 @@ O nome da fonte de dados ou enumerador.
   
 ```cpp
 WCHAR m_szName[129];  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -141,7 +137,6 @@ Cadeia de caracteres para passar para [IParseDisplayName](http://msdn.microsoft.
   
 ```cpp
 WCHAR m_szParseName[129];  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  

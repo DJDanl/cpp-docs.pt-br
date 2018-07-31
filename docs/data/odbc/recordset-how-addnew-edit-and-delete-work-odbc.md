@@ -28,141 +28,141 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e3d9dc82f4ea31557c4ec330b9737579021a8d35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52b469a53d48dcde8c28c0a0c984598875684778
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094124"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338308"
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Conjunto de registros: como AddNew, editar e excluir trabalho (ODBC)
-Este tópico se aplica às classes MFC ODBC.  
+Este tópico se aplica às classes ODBC do MFC.  
   
- Este tópico explica como o `AddNew`, **editar**, e **excluir** funções membro de classe `CRecordset` de trabalho. Os tópicos abordados incluem:  
+ Este tópico explica como o `AddNew`, `Edit`, e `Delete` funções de membro de classe `CRecordset` funcione. Os tópicos abordados incluem:  
   
--   [Como adicionar registros funciona](#_core_adding_a_record)  
+-   [Como a adição de registros funciona](#_core_adding_a_record)  
   
 -   [Visibilidade de registros adicionados](#_core_visibility_of_added_records)  
   
 -   [Como funciona a edição de registros](#_core_editing_an_existing_record)  
   
--   [Como excluir registros funciona](#_core_deleting_a_record)  
+-   [Como a exclusão de registros funciona](#_core_deleting_a_record)  
   
 > [!NOTE]
->  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa busca não foi implementada. Se você estiver usando a busca de linhas em massa, consulte [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. Se você estiver usando a busca de linhas em massa, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Como um suplemento, talvez você queira ler [registrar troca de campos: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), que descreve a função correspondente de RFX em operações de atualização.  
+ Como um suplemento, você talvez queira ler [troca de campos do registro: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), que descreve a função correspondente do RFX em operações de atualização.  
   
 ##  <a name="_core_adding_a_record"></a> Adicionar um registro  
 
- Adicionar um novo registro para um conjunto de registros envolve chamando o conjunto de registros [AddNew](../../mfc/reference/crecordset-class.md#addnew) função de membro, definir os valores campo do registro novo membros de dados e, em seguida, chamar o [atualização](../../mfc/reference/crecordset-class.md#update) função de membro para gravação o registro para a fonte de dados.  
+ Adicionar um novo registro para um conjunto de registros envolve chamar o conjunto de registros [AddNew](../../mfc/reference/crecordset-class.md#addnew) função de membro, definindo os valores de membros de dados de campo do novo registro e, em seguida, chamar o [atualização](../../mfc/reference/crecordset-class.md#update) função de membro para gravar o registro para a fonte de dados.  
   
- Como uma pré-condição para chamar `AddNew`, o conjunto de registros deve não ter sido aberto como somente leitura. O `CanUpdate` e `CanAppend` funções de membro permite que você determine essas condições.  
+ Como uma pré-condição para chamar `AddNew`, o conjunto de registros deve não ter sido aberto como somente leitura. O `CanUpdate` e `CanAppend` funções de membro permitem determinar essas condições.  
   
  Quando você chama `AddNew`:  
   
--   O registro no buffer de edição é armazenado, seu conteúdo pode ser restaurado se a operação foi cancelada.  
+-   O registro no buffer de edição é armazenado, seu conteúdo pode ser restaurado se a operação for cancelada.  
   
--   Os membros de dados do campo são sinalizados portanto, é possível detectar alterações em-los mais tarde. Os dados também são membros do campo Limpar (inalterados) e definido como um valor nulo.  
+-   Os membros de dados de campo são sinalizados para que seja possível detectar alterações em-los mais tarde. Os dados também são membros do campo Limpar (inalterada) e definido como um valor nulo.  
   
  Depois de chamar `AddNew`, o buffer de edição representa um novo, vazio registro, pronto para ser preenchido com valores. Para fazer isso, você definir manualmente os valores, atribuindo a eles. Em vez de especificar um valor de dados reais de um campo, você pode chamar `SetFieldNull` para especificar o valor Null.  
   
- Para confirmar suas alterações, você deve chamar **atualização**. Quando você chama **atualização** para o novo registro:  
+ Para confirmar suas alterações, você deve chamar `Update`. Quando você chama `Update` para o novo registro:  
   
--   Se o driver ODBC oferece suporte a **:: SQLSetPos** função de API de ODBC MFC usa a função para adicionar o registro na fonte de dados. Com **:: SQLSetPos**, MFC pode adicionar um registro com mais eficiência porque ele não tem que criar e processar uma instrução SQL.  
+-   Se o driver ODBC dá suporte a `::SQLSetPos` função de API do ODBC, o MFC usa a função para adicionar o registro na fonte de dados. Com `::SQLSetPos`, MFC pode adicionar um registro com mais eficiência porque ele não precisa construir e processar uma instrução SQL.  
   
--   Se **:: SQLSetPos** não pode ser usado, MFC faz o seguinte:  
+-   Se `::SQLSetPos` não pode ser usado, o MFC faz o seguinte:  
   
-    1.  Se nenhuma alteração for detectada, **atualização** não faz nada e retornará 0.  
+    1.  Se nenhuma alteração seja detectada, `Update` não faz nada e retornará 0.  
   
-    2.  Se houver alterações, **atualização** constrói um SQL **inserir** instrução. As colunas representadas por todos os membros de dados do campo sujas são listadas no **inserir** instrução. Para forçar uma coluna a ser incluído, chame o [SetFieldDirty](../../mfc/reference/crecordset-class.md#setfielddirty) função de membro:  
+    2.  Se houver alterações, `Update` constrói um SQL **inserir** instrução. As colunas representadas por todos os membros de dados de campo sujas são listadas na **inserir** instrução. Para forçar uma coluna a ser incluído, chame o [SetFieldDirty](../../mfc/reference/crecordset-class.md#setfielddirty) função de membro:  
   
         ```  
         SetFieldDirty( &m_dataMember, TRUE );  
         ```  
   
-    3.  **Atualização** confirma o novo registro — o **inserir** instrução é executada e o registro é confirmado para a tabela na fonte de dados (e o conjunto de registros, se não um instantâneo), a menos que uma transação está em andamento.  
+    3.  `Update` confirma o novo registro — o **inserir** instrução é executada e o registro é confirmado para a tabela na fonte de dados (e o conjunto de registros, se não um instantâneo), a menos que uma transação está em andamento.  
   
-    4.  O registro armazenado será restaurado para o buffer de edição. O registro atual antes do `AddNew` chamada é atual novamente, independentemente se o **inserir** instrução foi executada com êxito.  
-  
-    > [!TIP]
-    >  Para obter controle total de um novo registro, usar a seguinte abordagem: definir os valores de todos os campos que têm valores e, em seguida, defina explicitamente todos os campos que serão sempre Null chamando `SetFieldNull` com um ponteiro para o campo e o parâmetro **TRUE**  (o padrão). Se você deseja garantir que um campo não é gravado para a fonte de dados, chamada `SetFieldDirty` com um ponteiro para o campo e o parâmetro **FALSE**e não modifique o valor do campo. Para determinar se um campo pode ser Null, chame `IsFieldNullable`.  
+    4.  O registro armazenado é restaurado para o buffer de edição. O registro que foi atual antes do `AddNew` chamada é atual novamente, independentemente se o **inserir** instrução foi executada com êxito.  
   
     > [!TIP]
-    >  Para detectar quando o valor de alterar membros de dados do conjunto de registros, MFC usa um **PSEUDO_NULL** valor apropriado para cada tipo de dados que você pode armazenar em um conjunto de registros. Se você deve definir explicitamente um campo o **PSEUDO_NULL** valor e o campo já acontece seja marcado como Null, você também deve chamar `SetFieldNull`, passando o endereço do campo no primeiro parâmetro e **FALSE**no segundo parâmetro.  
+    >  Para obter um controle de um novo registro, usar a seguinte abordagem: definir os valores de todos os campos que têm valores e, em seguida, defina explicitamente todos os campos que serão sempre Null chamando `SetFieldNull` com um ponteiro para o campo e o parâmetro TRUE (padrão). Se você quiser garantir que um campo não é gravado para a fonte de dados, chamada `SetFieldDirty` com um ponteiro para o campo e o parâmetro como FALSE e não modifique o valor do campo. Para determinar se um campo pode ser Null, chamar `IsFieldNullable`.  
+  
+    > [!TIP]
+    >  Para detectar quando o valor de alterar os membros de dados do conjunto de registros, o MFC usa um valor PSEUDO_NULL apropriado para cada tipo de dados que você pode armazenar em um conjunto de registros. Se você deve definir explicitamente um campo para o valor PSEUDO_NULL e o campo já acontece para ser marcados como Null, você também deve chamar `SetFieldNull`, passando o endereço do campo no primeiro parâmetro e FALSE no segundo parâmetro.  
   
 ##  <a name="_core_visibility_of_added_records"></a> Visibilidade de registros adicionados  
- Quando um registro adicional é visível para o conjunto de registros? Registros adicionados às vezes aparecem e, às vezes, não são visíveis, dependendo de duas coisas:  
+ Quando um registro adicionado é visível para o conjunto de registros? Registros adicionados às vezes aparecem e algumas vezes não são visíveis, dependendo das duas coisas:  
   
--   O driver que é capaz de.  
+-   O que o driver é capaz de.  
   
--   O que a estrutura pode aproveitar.  
+-   O que o framework pode aproveitar.  
   
- Se o driver ODBC oferece suporte a **:: SQLSetPos** função de API de ODBC MFC usa a função para adicionar registros. Com **:: SQLSetPos**, adicionados registros são visíveis para qualquer conjunto de registros do MFC atualizável. Sem suporte para a função, adicionados registros não são visíveis, e você deve chamar **Requery** para vê-los. Usando **:: SQLSetPos** também é mais eficiente.  
+ Se o driver ODBC dá suporte a `::SQLSetPos` função de API do ODBC, o MFC usa a função para adicionar registros. Com `::SQLSetPos`, adicionados registros são visíveis para qualquer conjunto de registros atualizável do MFC. Sem suporte para a função, adicionada registros não são visíveis, e você deve chamar `Requery` para vê-los. Usando `::SQLSetPos` também é mais eficiente.  
   
-##  <a name="_core_editing_an_existing_record"></a> Edição de um registro existente  
- Editar um registro existente em um conjunto de registros envolve a rolagem para o registro, chamando o conjunto de registros [editar](../../mfc/reference/crecordset-class.md#edit) função de membro, definir os valores campo do registro novo membros de dados e, em seguida, chamar o [atualizar](../../mfc/reference/crecordset-class.md#update)função de membro para gravar o registro alterado para a fonte de dados.  
+##  <a name="_core_editing_an_existing_record"></a> Editando um registro existente  
+ A edição de um registro existente em um conjunto de registros envolve a rolagem para o registro, o conjunto de registros de chamada [edite](../../mfc/reference/crecordset-class.md#edit) função de membro, definindo os valores de membros de dados de campo do novo registro e, em seguida, chamar o [atualizar](../../mfc/reference/crecordset-class.md#update)função de membro para gravar o registro alterado para a fonte de dados.  
   
- Como uma pré-condição para chamar **editar**, o conjunto de registros deve ser atualizável e em um registro. O `CanUpdate` e `IsDeleted` funções de membro permite que você determine essas condições. O registro atual também deve não já ter sido excluído, e deve haver registros no conjunto de registros (ambos `IsBOF` e `IsEOF` retornam 0).  
+ Como uma pré-condição para chamar `Edit`, o conjunto de registros deve ser atualizável e em um registro. O `CanUpdate` e `IsDeleted` funções de membro permitem determinar essas condições. O registro atual também não já tenham sido excluído, e deve haver registros no conjunto de registros (ambos `IsBOF` e `IsEOF` retornam 0).  
   
- Quando você chama **editar**, o registro no buffer de edição (o registro atual) é armazenado. Os valores do registro armazenado posteriormente são usados para detectar se todos os campos foram alterados.  
+ Quando você chama `Edit`, o registro no buffer de edição (o registro atual) é armazenado. Os valores do registro armazenado posteriormente são usados para detectar se todos os campos foram alterados.  
   
- Depois de chamar **editar**, o buffer de edição ainda representa o registro atual, mas agora está pronto para aceitar as alterações para os membros de dados do campo. Para alterar o registro, você definir manualmente os valores de quaisquer membros de dados de campo que você deseja editar. Em vez de especificar um valor de dados reais de um campo, você pode chamar `SetFieldNull` para especificar o valor Null. Para confirmar suas alterações, chame **atualização**.  
+ Depois de chamar `Edit`, o buffer de edição ainda representa o registro atual, mas agora está pronto para aceitar as alterações para os membros de dados do campo. Para alterar o registro, você definir manualmente os valores de quaisquer membros de dados de campo que você deseja editar. Em vez de especificar um valor de dados reais de um campo, você pode chamar `SetFieldNull` para especificar o valor Null. Para confirmar suas alterações, chame `Update`.  
   
 > [!TIP]
->  Para tirar proveito do `AddNew` ou **editar** modo, chamada **mover** com o parâmetro **AFX_MOVE_REFRESH**.  
+>  Para tirar proveito do `AddNew` ou `Edit` modo, chame `Move` com o parâmetro *AFX_MOVE_REFRESH*.  
   
- Como uma pré-condição para chamar **atualização**, o conjunto de registros não pode estar vazio e o registro atual não tenham sido excluído. `IsBOF`, `IsEOF`, e `IsDeleted` todos devem retornar 0.  
+ Como uma pré-condição para chamar `Update`, o conjunto de registros não pode estar vazio e o registro atual não tenham sido excluído. `IsBOF`, `IsEOF`, e `IsDeleted` devem todas retornar 0.  
   
- Quando você chama **atualização** do Registro editado:  
+ Quando você chama `Update` para o registro editado:  
   
--   Se o driver ODBC oferece suporte a **:: SQLSetPos** função de API de ODBC MFC usa a função para atualizar o registro na fonte de dados. Com **:: SQLSetPos**, o driver compara seu buffer de edição com o registro correspondente no servidor, atualizar o registro no servidor se os dois são diferentes. Com **:: SQLSetPos**, MFC pode atualizar um registro com mais eficiência porque ele não tem que criar e processar uma instrução SQL.  
+-   Se o driver ODBC dá suporte a `::SQLSetPos` função de API do ODBC, o MFC usa a função para atualizar o registro na fonte de dados. Com `::SQLSetPos`, o driver comparará seu buffer de edição com o registro correspondente no servidor, atualizando o registro no servidor se os dois forem diferentes. Com `::SQLSetPos`, MFC pode atualizar um registro com mais eficiência porque ele não precisa construir e processar uma instrução SQL.  
   
      -ou-  
   
--   Se **:: SQLSetPos** não pode ser usado, MFC faz o seguinte:  
+-   Se `::SQLSetPos` não pode ser usado, o MFC faz o seguinte:  
   
-    1.  Se não houve nenhuma alteração, **atualização** não faz nada e retornará 0.  
+    1.  Se não houve nenhuma alteração `Update` não faz nada e retornará 0.  
   
-    2.  Se houver alterações, **atualização** constrói um SQL **atualização** instrução. As colunas listadas no **atualização** instrução são com base nos membros de dados de campo que foram alterados.  
+    2.  Se houver alterações, `Update` constrói um SQL **atualização** instrução. As colunas listadas na **atualização** instrução se baseiam os membros de dados de campo que foram alterados.  
   
-    3.  **Atualização** confirma as alterações — executa o **atualização** instrução — e o registro é alterado na fonte de dados, mas não confirmada se uma transação está em andamento (consulte [transação: realizando uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) para obter informações sobre como a transação afeta a atualização). ODBC mantém uma cópia do registro, também será alterado.  
+    3.  `Update` confirma as alterações — executa o **atualização** instrução — e o registro é alterado na fonte de dados, mas não confirmada se uma transação está em andamento (consulte [transação: realizando uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) para obter informações sobre como a transação afeta a atualização). ODBC mantém uma cópia do registro, que também será alterado.  
   
-    4.  Ao contrário do processo para `AddNew`, o **editar** processo não restaura o registro armazenado. O registro editado permanece no local como o registro atual.  
+    4.  Ao contrário do processo para `AddNew`, o `Edit` processo não restaura o registro armazenado. O registro editado permanece em vigor, como o registro atual.  
   
     > [!CAUTION]
-    >  Quando você se prepara para atualizar um conjunto de registros chamando **atualizar**, lembre-se que o conjunto de registros inclui todas as colunas que compõem a chave primária da tabela (ou todas as colunas de qualquer exclusivo de índice na tabela ou colunas suficientes para exclusivamente identificar a linha). Em alguns casos, a estrutura pode usar somente as colunas selecionadas em seu conjunto de registros para identificar qual registro na tabela para atualizar. Sem todas as colunas necessárias, vários registros poderão ser atualizados na tabela. Nesse caso, o framework lança exceções ao chamar **atualização**.  
+    >  Quando você se preparar para atualizar um conjunto de registros chamando `Update`, tome cuidado que seu conjunto de registros inclui todas as colunas que compõem a chave primária da tabela (ou todas as colunas de qualquer índice exclusivo na tabela ou colunas suficientes para identificar exclusivamente a linha). Em alguns casos, o framework pode usar somente as colunas selecionadas no seu conjunto de registros para identificar qual registro na tabela a ser atualizada. Sem todas as colunas necessárias, vários registros podem ser atualizados na tabela. Nesse caso, o framework lança exceções ao chamar `Update`.  
   
     > [!TIP]
-    >  Se você chamar `AddNew` ou **editar** depois de ter chamado a qualquer função anteriormente, mas antes de chamar **atualização**, o buffer de edição é atualizado com o registro armazenado, substituindo o registro de novo ou editado no progresso. Esse comportamento fornece uma maneira para anular uma `AddNew` ou **editar** e iniciar uma nova: se você determinar que o registro em andamento está com defeito, simplesmente chamar **editar** ou `AddNew` novamente.  
+    >  Se você chamar `AddNew` ou `Edit` depois de ter chamado a qualquer função anteriormente, mas antes de chamar `Update`, o buffer de edição é atualizado com o registro armazenado, substituindo o registro novo ou editado em andamento. Esse comportamento oferece uma maneira para anular uma `AddNew` ou `Edit` e iniciar uma nova: se você determinar que o registro em andamento está com defeito, simplesmente chame `Edit` ou `AddNew` novamente.  
   
 ##  <a name="_core_deleting_a_record"></a> Excluindo um registro  
- Excluir um registro de um conjunto de registros envolve a rolagem para o registro e chamando o conjunto de registros [excluir](../../mfc/reference/crecordset-class.md#delete) função de membro. Ao contrário de `AddNew` e **editar**, **excluir** não requer uma chamada correspondente para **atualização**.  
+ Excluir um registro de um conjunto de registros envolve a rolagem para o registro e o conjunto de registros de chamada [excluir](../../mfc/reference/crecordset-class.md#delete) função de membro. Diferentemente `AddNew` e `Edit`, `Delete` não requer uma chamada correspondente para `Update`.  
   
- Como uma pré-condição para chamar **excluir**, o conjunto de registros deve ser atualizável e ele deve estar em um registro. O `CanUpdate`, `IsBOF`, `IsEOF`, e `IsDeleted` funções de membro permite que você determine essas condições.  
+ Como uma pré-condição para chamar `Delete`, o conjunto de registros deve ser atualizável e ele deve estar em um registro. O `CanUpdate`, `IsBOF`, `IsEOF`, e `IsDeleted` funções de membro permitem determinar essas condições.  
   
- Quando você chama **excluir**:  
+ Quando você chama `Delete`:  
   
--   Se o driver ODBC oferece suporte a **:: SQLSetPos** função de API de ODBC MFC usa a função para excluir o registro na fonte de dados. Usando **:: SQLSetPos** é geralmente mais eficiente do que usando o SQL.  
+-   Se o driver ODBC dá suporte a `::SQLSetPos` função de API do ODBC, o MFC usa a função para excluir o registro na fonte de dados. Usando `::SQLSetPos` é geralmente mais eficiente do que usando o SQL.  
   
      -ou-  
   
--   Se **:: SQLSetPos** não pode ser usado, MFC faz o seguinte:  
+-   Se `::SQLSetPos` não pode ser usado, o MFC faz o seguinte:  
   
-    1.  O registro atual no buffer de edição não é feito como em `AddNew` e **editar**.  
+    1.  O registro atual no buffer de edição não é feito como na `AddNew` e `Edit`.  
   
-    2.  **Excluir** constrói um SQL **excluir** instrução que remove o registro.  
+    2.  `Delete` constrói um SQL **excluir** instrução que remove o registro.  
   
-         O registro atual no buffer de edição não é armazenado como em `AddNew` e **editar**.  
+         O registro atual no buffer de edição não é armazenado como na `AddNew` e `Edit`.  
   
-    3.  **Excluir** confirma a exclusão — executa o **excluir** instrução. O registro é marcado como excluído na fonte de dados e, se o registro é um instantâneo, no ODBC.  
+    3.  `Delete` confirma a exclusão — executa o **excluir** instrução. O registro é marcado como excluído na fonte de dados e, se o registro é um instantâneo, no ODBC.  
   
     4.  Os valores do registro excluído ainda estão em membros de dados de campo do conjunto de registros, mas os membros de dados do campo marcado como Null e o conjunto de registros `IsDeleted` função membro retorna um valor diferente de zero.  
   
     > [!NOTE]
-    >  Depois de excluir um registro, você deve rolar para outro registro para preencher novamente o buffer de edição com os novos dados do registro. Erro ao chamar **excluir** novamente ou chamar **editar**.  
+    >  Depois de excluir um registro, você deve rolar para outro registro para preencher novamente o buffer de edição com os novos dados do registro. É um erro ao chamar `Delete` novamente ou chamar `Edit`.  
   
- Para obter informações sobre as instruções SQL usado em operações de atualização, consulte [SQL](../../data/odbc/sql.md).  
+ Para obter informações sobre instruções SQL usada em operações de atualização, consulte [SQL](../../data/odbc/sql.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)   

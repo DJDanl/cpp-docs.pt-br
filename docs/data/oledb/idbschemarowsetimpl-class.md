@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d8146a5c0c4dd9d3e58733f080f7b4ad7d670247
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: eaea6922f7755295535c0e81d6b9023a10c1317a
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269567"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339608"
 ---
 # <a name="idbschemarowsetimpl-class"></a>Classe IDBSchemaRowsetImpl
 Fornece implementação para conjuntos de linhas de esquema.  
@@ -181,7 +181,7 @@ Especifica quais restrições você oferece suporte em um conjunto de linhas de 
   
 ```cpp
 void SetRestrictions(ULONG cRestrictions,  
-  GUID* /* rguidSchema */,  
+   GUID* /* rguidSchema */,  
    ULONG* rgRestrictions);  
 ```  
   
@@ -212,7 +212,7 @@ Retorna um conjunto de linhas de esquema.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD (GetRowset)(IUnknown *pUnkOuter,  
+STDMETHOD (GetRowset)(IUnknown *pUnkOuter,  
    REFGUID rguidSchema,  
    ULONG cRestrictions,  
    const VARIANT rgRestrictions[],  
@@ -258,7 +258,7 @@ Retorna uma lista de conjuntos de linhas de esquema acessível pelos [idbschemar
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD (GetSchema s )(ULONG * pcSchemas,  
+STDMETHOD (GetSchema s )(ULONG * pcSchemas,  
    GUID ** prgSchemas,  
    ULONG** prgRest);  
 ```  

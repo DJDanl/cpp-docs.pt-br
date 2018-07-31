@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ee82a780690c6d5eba7b30debdc592a26ef2cbcc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 236fd1809fa012262f3a98f0f1856f3bbff6b454
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105898"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340858"
 ---
 # <a name="using-manual-accessors"></a>Usando acessadores manuais
-Há quatro tarefas a serem realizadas ao manipular um comando desconhecido:  
+Há quatro coisas a fazer ao lidar com um comando desconhecido:  
   
 -   Determinar os parâmetros  
   
@@ -33,27 +33,27 @@ Há quatro tarefas a serem realizadas ao manipular um comando desconhecido:
   
 -   Determinar as colunas de saída  
   
--   Verificar se há vários conjuntos de linhas de retorno  
+-   Verificar se há vários conjuntos de linhas de retornados  
   
  Para fazer isso com o OLE DB modelos de consumidor, use o `CManualAccessor` de classe e siga estas etapas:  
   
-1.  Abra um `CCommand` do objeto com `CManualAccessor` como um parâmetro de modelo.  
+1.  Abra uma `CCommand` do objeto com `CManualAccessor` como um parâmetro de modelo.  
   
-    ```  
+    ```cpp  
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;  
     ```  
   
-2.  Consultar a sessão para o **IDBSchemaRowset** interface e usar o conjunto de linhas de parâmetros de procedimento. Se o **IDBSchemaRowset** interface não estiver disponível, consultar o `ICommandWithParameters` interface. Chamar `GetParameterInfo` para obter informações. Se nenhuma interface estiver disponível, você pode presumir que não existem parâmetros.  
+2.  Consultar a sessão para o `IDBSchemaRowset` de interface e usar o conjunto de linhas de parâmetros de procedimento. Se o `IDBSchemaRowset` interface não estiver disponível, consultar o `ICommandWithParameters` interface. Chamar `GetParameterInfo` para obter informações. Se nenhuma interface estiver disponível, você pode presumir que não existem parâmetros.  
   
 3.  Para cada parâmetro, chame `AddParameterEntry` para adicionar os parâmetros e defini-las.  
   
-4.  Abra o conjunto de linhas, mas definir o parâmetro de associação para **false**.  
+4.  Abra o conjunto de linhas, mas defina o parâmetro de associação como **falsos**.  
   
 5.  Chamar `GetColumnInfo` para recuperar as colunas de saída. Use `AddBindEntry` para adicionar a coluna de saída para a associação.  
   
 6.  Chamar `GetNextResult` para determinar se mais conjuntos de linhas estão disponíveis. Repita as etapas 2 a 5.  
   
- Para obter um exemplo de um acessador manual, consulte **CDBListView::CallProcedure** no [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) exemplo.  
+ Para obter um exemplo de um acessador manual, consulte `CDBListView::CallProcedure` no [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) exemplo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando acessadores](../../data/oledb/using-accessors.md)

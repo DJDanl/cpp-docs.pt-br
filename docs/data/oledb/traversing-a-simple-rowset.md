@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a29d7a226d12f9c464d91ec356ae8a1a02091f1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102945"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336648"
 ---
 # <a name="traversing-a-simple-rowset"></a>Percorrendo um conjunto de linhas simples
-O exemplo a seguir mostra um acesso de banco de dados rápida e fácil que não envolvem comandos. O seguinte código de cliente, em um projeto de ATL, recupera os registros de uma tabela chamada *artistas* no Microsoft Access de banco de dados usando o provedor Microsoft OLE DB para ODBC. O código cria um [CTable](../../data/oledb/ctable-class.md) objeto de tabela com um acessador com base na classe de registro de usuário `CArtists`. Abre uma conexão, abre uma sessão em que a conexão e abre a tabela na sessão.  
+O exemplo a seguir mostra um acesso de banco de dados rápida e fácil que envolvem comandos. O seguinte código de consumidor, em um projeto ATL, recupera os registros de uma tabela chamada *artistas* no Microsoft Access de banco de dados usando o Microsoft OLE DB Provider para ODBC. O código cria uma [CTable](../../data/oledb/ctable-class.md) objeto de tabela com um acessador com base na classe de registro de usuário `CArtists`. Ele abre uma conexão, abre uma sessão em que a conexão e abre a tabela na sessão.  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -53,9 +53,9 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- O registro de usuário, `CArtists`, tem esta aparência:  
+ O registro do usuário, `CArtists`, semelhante ao seguinte:  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

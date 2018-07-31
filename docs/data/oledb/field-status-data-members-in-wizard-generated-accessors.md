@@ -1,5 +1,5 @@
 ---
-title: Campo de membros de dados de Status em acessadores gerados por assistente | Microsoft Docs
+title: Membros de dados de Status em acessadores gerados pelo Assistente de campo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3f1017c3decacfee223f0e0f89267b192208fe7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 829dbcc78e7d415de1745a8bd0cceb1f8c475ce0
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104393"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336434"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Membros de dados do status de campo em acessadores gerados por assistente
-Quando você usar o Assistente de ATL OLE DB consumidor para criar um consumidor, o assistente gera um membro de dados na classe de registro de usuário para cada campo que você especificar em seu mapa de coluna. Cada membro de dados é do tipo `DWORD` e contém um valor de status correspondentes ao seu respectivo campo.  
+Quando você usa o ATL OLE DB consumidor Wizard para criar um consumidor, o assistente gera um membro de dados na classe de registro de usuário de cada campo que você especificar no seu mapa de coluna. Cada membro de dados é do tipo `DWORD` e contém um valor de status correspondente ao seu respectivo campo.  
   
- Por exemplo, para um membro de dados *m_OwnerID*, o assistente gera um membro de dados adicionais para o status de campo (*dwOwnerIDStatus*) e outra para o tamanho do campo (*dwOwnerIDLength*). Ela também gera um mapa de coluna com `COLUMN_ENTRY_LENGTH_STATUS` entradas.  
+ Por exemplo, para um membro de dados *m_OwnerID*, o assistente gera um membro de dados adicionais para o status de campo (*dwOwnerIDStatus*) e outra para o tamanho do campo (*dwOwnerIDLength*). Ele também gera um mapa de coluna com entradas COLUMN_ENTRY_LENGTH_STATUS.  
   
  Isso é mostrado no código a seguir:  
   
-```  
+```cpp  
 [db_source("insert connection string")]  
 [db_command(" \  
    SELECT \  
@@ -79,24 +79,24 @@ END_COLUMN_MAP()
 ```  
   
 > [!NOTE]
->  Se você modificar a classe de registro de usuário ou gravar seu próprio cliente, as variáveis de dados devem vir antes das variáveis de status e comprimento.  
+>  Se você modificar a classe de registro de usuário ou escrever seu próprios consumidor, as variáveis de dados devem vir antes das variáveis de status e o comprimento.  
   
- Você pode usar os valores de status para fins de depuração. Se o código gerado pelo Assistente de ATL OLE DB consumidor gera erros de compilação como **DB_S_ERRORSOCCURRED** ou **DB_E_ERRORSOCCURRED**, você deve primeiro examinar os valores atuais de status de campo membros de dados. Aqueles que têm valores diferentes de zero correspondem às colunas incorretas.  
+ Você pode usar os valores de status para fins de depuração. Se o código gerado pelo Assistente de ATL OLE DB consumidor gera erros de compilação como DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED, primeiro você deve examinar os valores atuais dos membros de dados de status de campo. Aqueles que têm valores diferentes de zero correspondem às colunas incorretas.  
   
- Você também pode usar os valores de status para definir um valor NULL para um determinado campo. Isso ajuda a casos em que você deseja diferenciar um valor de campo como NULL em vez de zero. Cabe a você decidir se NULL é um valor válido ou um valor especial e decidir como seu aplicativo deve tratá-la. OLE DB define **DBSTATUS_S_ISNULL** como o meio correto de especificar um valor NULL de genérico. Se o consumidor lê os dados e o valor for nulo, o campo de status é definido como **DBSTATUS_S_ISNULL**. Se o consumidor deseja definir um valor NULL, o consumidor define o valor de status **DBSTATUS_S_ISNULL** antes de chamar o provedor.  
+ Você também pode usar os valores de status para definir um valor NULL para um determinado campo. Isso ajuda você em casos em que você deseja distinguir um valor de campo como NULL em vez de zero. Cabe a você decidir se NULL é um valor válido ou um valor especial e decidir como seu aplicativo deve tratá-la. OLE DB define DBSTATUS_S_ISNULL como o meio correto de especificar um valor nulo genérico. Se o consumidor lê os dados e o valor for nulo, o campo de status é definido como DBSTATUS_S_ISNULL. Se o consumidor deseja definir um valor NULL, o consumidor define o valor de status como DBSTATUS_S_ISNULL antes de chamar o provedor.  
   
- Em seguida, abra o OLEDB e procurar **DBSTATUSENUM**. Em seguida, você pode corresponder o valor numérico do status diferente de zero em relação a **DBSTATUSENUM** valores de enumeração. Se o nome de enumeração não é suficiente para informar o que há de errado, consulte o tópico "Status" na seção "Valores de dados de associação" o [guia do programador do DB OLE](http://go.microsoft.com/fwlink/p/?linkid=121548). Este tópico contém tabelas de valores de status usados ao obter ou definir dados. Para obter informações sobre valores de comprimento, consulte o tópico "Comprimento" na mesma seção.  
+ Em seguida, abra o OLEDB e pesquise por `DBSTATUSENUM`. Em seguida, você pode corresponder o valor numérico do status diferente de zero em relação a `DBSTATUSENUM` valores de enumeração. Se o nome da enumeração não é suficiente para dizer o que está errado, consulte o tópico "Status" na seção "Valores de dados de associação" de [guia do programador do DB OLE](http://go.microsoft.com/fwlink/p/?linkid=121548). Este tópico contém tabelas de valores de status usados ao obter ou definir os dados. Para obter informações sobre valores de comprimento, consulte o tópico "Comprimento" na mesma seção.  
   
-## <a name="retrieving-the-length-or-status-of-a-column"></a>Recuperando o Status de uma coluna ou o comprimento  
- Você pode recuperar o status de uma coluna ou o comprimento de uma coluna de comprimento variável (para verificar se há **DBSTATUS_S_ISNULL**, por exemplo):  
+## <a name="retrieving-the-length-or-status-of-a-column"></a>Recuperando o Status de uma coluna ou de comprimento  
+ Você pode recuperar o status de uma coluna (para verificar se há DBSTATUS_S_ISNULL, por exemplo) ou o comprimento de uma coluna de comprimento variável:  
   
--   Para obter o comprimento, use o `COLUMN_ENTRY_LENGTH` macro.  
+-   Para obter o comprimento, use a macro COLUMN_ENTRY_LENGTH.  
   
--   Para obter o status, use o `COLUMN_ENTRY_STATUS` macro.  
+-   Para obter o status, use a macro COLUMN_ENTRY_STATUS.  
   
--   Para obter ambos, use `COLUMN_ENTRY_LENGTH_STATUS`, conforme mostrado abaixo.  
+-   Para obter ambos, use COLUMN_ENTRY_LENGTH_STATUS, conforme mostrado abaixo.  
   
-```  
+```cpp  
 class CProducts  
 {  
 public:  
@@ -123,7 +123,7 @@ while (product.MoveNext() == S_OK)
 }  
 ```  
   
- Quando você usa `CDynamicAccessor`, o comprimento e o status associados para você automaticamente. Para recuperar os valores de comprimento e o status, use o `GetLength` e **GetStatus** funções de membro.  
+ Quando você usa `CDynamicAccessor`, o comprimento e o status associados para você automaticamente. Para recuperar os valores de comprimento e o status, use o `GetLength` e `GetStatus` funções de membro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhando com modelos de consumidor do OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

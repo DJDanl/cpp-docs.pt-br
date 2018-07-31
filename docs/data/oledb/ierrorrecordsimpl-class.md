@@ -76,12 +76,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a4f12bd935e7dedf46e531d46e2ec91084059e9d
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 7339b345ad63f59a2db24251c06b80774305ab00
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269680"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338113"
 ---
 # <a name="ierrorrecordsimpl-class"></a>Classe IErrorRecordsImpl
 Implementa o OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) interface, adicionar registros a e recuperar registros de um membro de dados ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) do tipo **CAtlArray <** `RecordClass`**>**.  
@@ -138,7 +138,7 @@ Obtém a cadeia de caracteres de descrição de erro de um registro de erro.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
+LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -154,7 +154,7 @@ Obtém o GUID de erro de um registro de erro.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      REFGUID GetErrorGUID(ERRORINFO& rCurError);  
+REFGUID GetErrorGUID(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -170,7 +170,7 @@ Obtém a ID de contexto de ajuda de um registro de erro.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
+DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -186,7 +186,7 @@ Obtém o nome do caminho do arquivo de ajuda de um registro de erro.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
+LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -202,7 +202,7 @@ Obtém o código-fonte que causou o erro de um registro de erro.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
+LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -218,7 +218,7 @@ Adiciona um registro para o objeto de erro OLE DB.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
+STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
    DWORD dwLookupID,  
    DISPPARAMS *pdispparams,  
    IUnknown *punkCustomError,  
@@ -234,7 +234,7 @@ Retorna informações básicas sobre o erro, como o código de retorno e o núme
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
+STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
    ERRORINFO *pErrorInfo);  
 ```  
   
@@ -247,7 +247,7 @@ Retorna um ponteiro para uma interface em um objeto de erro personalizada.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
+STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
    REFIID riid,  
    IUnknown **ppObject);  
 ```  
@@ -261,7 +261,7 @@ Retorna um [IErrorInfo](https://msdn.microsoft.com/library/ms718112.aspx) pontei
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
+STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
    LCID lcid,  
    IErrorInfo **ppErrorInfo);  
 ```  
@@ -275,7 +275,7 @@ Retorna os parâmetros de erro.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
+STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
    DISPPARAMS *pdispparams);  
 ```  
   
@@ -288,7 +288,7 @@ Retorna o número de registros no objeto de registro de OLE DB.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
+STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -300,10 +300,7 @@ Uma matriz de registros de erro.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-CAtlArray<  
-RecordClass  
-> m_rgErrors;  
-  
+CAtlArray< RecordClass > m_rgErrors;  
 ```  
   
 ## <a name="see-also"></a>Consulte também  

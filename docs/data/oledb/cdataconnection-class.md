@@ -76,12 +76,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eafb9c3eb9c8d76ee0c714b6b7c7c2f4e9e7eef1
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 64e7973c1a818b51173fd4f44458266c10053710
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207796"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338253"
 ---
 # <a name="cdataconnection-class"></a>Classe CDataConnection
 Gerencia a conexão com a fonte de dados.  
@@ -133,8 +133,7 @@ Cria uma instância e inicializa um `CDataConnection` objeto.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      CDataConnection();   
-
+CDataConnection();   
 CDataConnection(const CDataConnection &ds);  
 ```  
   
@@ -153,7 +152,7 @@ Cria uma cópia de uma conexão de dados existente.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      CDataConnection& Copy(const CDataConnection & ds) throw();  
+CDataConnection& Copy(const CDataConnection & ds) throw();  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -202,7 +201,6 @@ Determina se a sessão atual está aberta ou não.
   
 ```cpp
 operator BOOL() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -215,7 +213,6 @@ Determina se a sessão atual está aberta ou não.
   
 ```cpp
 operator bool() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -228,7 +225,6 @@ Retorna uma referência ao independente `CDataSource` objeto.
   
 ```cpp
 operator const CDataSource&() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -248,7 +244,6 @@ Retorna um ponteiro para o independente `CDataSource` objeto.
   
 ```cpp
 operator const CDataSource*() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -263,7 +258,6 @@ Retorna uma referência ao independente `CSession` objeto.
   
 ```cpp
 operator const CSession&();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -283,7 +277,6 @@ Retorna um ponteiro para o independente `CSession` objeto.
   
 ```cpp
 operator const CSession*() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  

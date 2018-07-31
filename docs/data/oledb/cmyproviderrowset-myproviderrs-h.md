@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7bfd7c927342790fee3be2b5a7d48bccba3ea168
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 936c8fe849e2eb92b8eb46170fc3e67842ad6beb
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097335"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338844"
 ---
 # <a name="cmyproviderrowset-myproviderrsh"></a>CMyProviderRowset (MyProviderRS.H)
 O assistente gera uma entrada para o objeto de conjunto de linhas. Nesse caso, ele é chamado `CMyProviderRowset`. O `CMyProviderRowset` classe herda de uma classe de provedor do OLE DB chamada `CRowsetImpl`, que implementa todas as interfaces necessárias para o objeto de conjunto de linhas. O código a seguir mostra a cadeia de herança para `CRowsetImpl`:  
   
-```  
+```cpp  
 template <class T, class Storage, class CreatorClass,   
    class ArrayType = CAtlArray<Storage>>  
 class CMyRowsetImpl:  
@@ -37,13 +37,13 @@ class CMyRowsetImpl:
       CSimpleRow, IRowsetLocateImpl< T >>  
 ```  
   
- `CRowsetImpl` também usa o `IAccessor` e `IColumnsInfo` interfaces. Ele usa essas interfaces para campos nas tabelas de saída. A classe também fornece uma implementação de **IRowsetIdentity**, que permite que o consumidor determinar se duas linhas são idênticas. O `IRowsetInfo` interface implementa propriedades para o objeto de conjunto de linhas. O **IConvertType** interface permite que o provedor resolver as diferenças entre os tipos de dados solicitados pelo consumidor e aqueles usado pelo provedor.  
+ `CRowsetImpl` também usa o `IAccessor` e `IColumnsInfo` interfaces. Ele usa essas interfaces para campos de saída nas tabelas. A classe também fornece uma implementação para `IRowsetIdentity`, que permite que o consumidor determinar se duas linhas são idênticas. O `IRowsetInfo` interface implementa propriedades para o objeto de conjunto de linhas. O `IConvertType` interface permite que o provedor para resolver as diferenças entre tipos de dados solicitados pelo consumidor quanto os usados pelo provedor.  
   
- O `IRowset` interface realmente lida com a recuperação de dados. O consumidor chama um método chamado primeiro `GetNextRows` para retornar um identificador para uma linha, conhecida como uma **HROW**. O consumidor chama **IRowset:: GetData** com que **HROW** para recuperar os dados solicitados.  
+ O `IRowset` interface realmente lida com a recuperação de dados. Primeiro, o consumidor chama um método chamado `GetNextRows` para retornar um identificador para uma linha, conhecida como um `HROW`. O consumidor, em seguida, chama `IRowset::GetData` com que `HROW` para recuperar os dados solicitados.  
   
- `CRowsetImpl` também leva vários parâmetros de modelo. Esses parâmetros permitem que você determine como o `CRowsetImpl` classe manipula dados. O `ArrayType` argumento permite que você determine qual mecanismo de armazenamento é usado para armazenar os dados da linha. O **RowClass** parâmetro especifica qual classe contém um **HROW**.  
+ `CRowsetImpl` também pega vários parâmetros de modelo. Esses parâmetros permitem que você determine como o `CRowsetImpl` classe lida com os dados. O `ArrayType` argumento permite que você determine qual mecanismo de armazenamento é usado para armazenar os dados da linha. O *RowClass* parâmetro especifica qual classe contém um `HROW`.  
   
- O **RowsetInterface** parâmetro permite que você use também o `IRowsetLocate` ou `IRowsetScroll` interface. O `IRowsetLocate` e `IRowsetScroll` interfaces ambos herdam `IRowset`. Portanto, os modelos de provedor do OLE DB devem fornecer um tratamento especial para essas interfaces. Se você quiser usar uma dessas interfaces, você precisa usar esse parâmetro.  
+ O *RowsetInterface* parâmetro permite que você também usar o `IRowsetLocate` ou `IRowsetScroll` interface. O `IRowsetLocate` e `IRowsetScroll` interfaces ambos herdam `IRowset`. Portanto, os modelos de provedor do OLE DB devem fornecer um tratamento especial para essas interfaces. Se você quiser usar qualquer uma dessas interfaces, você precisará usar esse parâmetro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Arquivos gerados pelo Assistente do Provedor](../../data/oledb/provider-wizard-generated-files.md)

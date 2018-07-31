@@ -19,48 +19,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a3157f416cf6fb7e0fd3b5ad4797b83de218c9ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d043045823806453d509e91e61284fadd5326d23
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091567"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340710"
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>Conjunto de registros: repetindo consulta a um conjunto de registros (ODBC)
-Este tópico se aplica às classes MFC ODBC.  
+Este tópico se aplica às classes ODBC do MFC.  
   
- Este tópico explica como você pode usar um objeto de conjunto de registros para repetir a (ou seja, atualizar) em si do banco de dados e talvez você queira fazer isso com o [Requery](../../mfc/reference/crecordset-class.md#requery) função de membro.  
+ Este tópico explica como você pode usar um objeto recordset para repetir a (ou seja, atualizar) em si do banco de dados e você talvez queira fazer isso com o [Requery](../../mfc/reference/crecordset-class.md#requery) função de membro.  
   
- As razões principais para repetir a consulta de um conjunto de registros são:  
+ Os principais motivos para repetindo consulta a um conjunto de registros são:  
   
--   Coloque o conjunto de registros atualizado com relação aos registros adicionados por você ou por outros usuários e os registros excluídos por outros usuários (os que excluir já são refletidos no conjunto de registros).  
+-   Traga o conjunto de registros atualizado em relação a registros adicionados por você ou por outros usuários e registros excluídos por outros usuários (aqueles que excluir já são refletidas no conjunto de registros).  
   
 -   Atualize o conjunto de registros com base na alteração de valores de parâmetro.  
   
-##  <a name="_core_bringing_the_recordset_up_to_date"></a> Colocando o backup do conjunto de registros para data  
- Frequentemente, você deve repetir o objeto de conjunto de registros para colocá-lo atualizado. Em um ambiente de banco de dados multiusuário, outros usuários podem fazer alterações aos dados durante a vida do seu conjunto de registros. Para obter mais informações sobre quando o conjunto de registros reflete as alterações feitas por outros usuários e quando o conjunto de registros de outros usuários reflete suas alterações, consulte [conjunto de registros: como conjuntos de registros atualização registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) e [Dynaset](../../data/odbc/dynaset.md).  
+##  <a name="_core_bringing_the_recordset_up_to_date"></a> Trazendo o conjunto de registros de cima para data  
+ Com frequência, você desejará requery seu objeto de conjunto de registros para colocá-lo atualizado. Em um ambiente de banco de dados multiusuário, outros usuários podem fazer alterações aos dados durante o ciclo de vida de seu conjunto de registros. Para obter mais informações sobre quando o seu conjunto de registros reflete as alterações feitas por outros usuários e quando os conjuntos de registros de outros usuários refletem suas alterações, consulte [conjunto de registros: como conjuntos de registros atualizam registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) e [Dynaset](../../data/odbc/dynaset.md).  
   
-##  <a name="_core_requerying_based_on_new_parameters"></a> Repetir a consulta com base em parâmetros de novo  
- Outro frequentes — e igualmente importante — o uso de [Requery](../../mfc/reference/crecordset-class.md#requery) é selecionar um novo conjunto de registros com base nas alterações de valores de parâmetro.  
+##  <a name="_core_requerying_based_on_new_parameters"></a> Repetir a consulta com base em novos parâmetros  
+ Outro frequentes — e igualmente importante — uso de [Requery](../../mfc/reference/crecordset-class.md#requery) é selecionar um novo conjunto de registros com base na alteração de valores de parâmetro.  
   
 > [!TIP]
->  Velocidade de consulta é provavelmente significativamente mais rápida se você chamar **Requery** com alterando os valores de parâmetro que se você chamar **abrir** novamente.  
+>  Velocidade de consulta é provavelmente significativamente mais rápida se você chamar `Requery` com a alteração de valores de parâmetro que se você chamar `Open` novamente.  
   
-##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> Repetir a consulta Dynasets vs. Instantâneos  
- Porque dynasets destinam-se para apresentar um conjunto de registros com os dados atualizados dinâmicos, você deseja repetir dynasets geralmente se você quiser refletir adições de outros usuários. Instantâneos, por outro lado, são úteis porque você pode contar com segurança em seu conteúdo estático enquanto você preparar relatórios, calcular totais e assim por diante. Ainda assim, às vezes, convém repetir um instantâneo também. Em um ambiente multiusuário, dados de instantâneo podem perder a sincronização com a fonte de dados que outros usuários alterarem o banco de dados.  
+##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> Repetindo consulta Dynasets vs. Instantâneos  
+ Como dynasets destinam-se para apresentar um conjunto de registros dinâmicos dados atualizados, convém requery dynasets geralmente se quiser refletir adições de outros usuários. Instantâneos, por outro lado, são úteis porque é possível confiar tranquilamente em seu conteúdo estático enquanto você preparar relatórios, calcular totais e assim por diante. Ainda assim, às vezes, convém repetir um instantâneo também. Em um ambiente multiusuário, dados de instantâneo podem perder a sincronização com a fonte de dados à medida que outros usuários alteram o banco de dados.  
   
-#### <a name="to-requery-a-recordset-object"></a>Para repetir a consulta de um objeto de conjunto de registros  
+#### <a name="to-requery-a-recordset-object"></a>Para repetir a consulta de um objeto recordset  
   
-1.  Chamar o [Requery](../../mfc/reference/crecordset-class.md#requery) função de membro do objeto.  
+1.  Chame o [Requery](../../mfc/reference/crecordset-class.md#requery) função de membro do objeto.  
   
  Como alternativa, você pode fechar e reabrir o conjunto de registros original. Em ambos os casos, o novo conjunto de registros representa o estado atual da fonte de dados.  
   
- Para obter um exemplo, consulte [exibições de registro: preenchimento de uma caixa de listagem de um segundo conjunto de registros](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).  
+ Por exemplo, consulte [exibições de registro: preenchendo uma caixa de listagem de um segundo conjunto de registros](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).  
   
 > [!TIP]
->  Para otimizar o **Requery** desempenho, evite alterar o conjunto de registros [filtro](../../data/odbc/recordset-filtering-records-odbc.md) ou [classificação](../../data/odbc/recordset-sorting-records-odbc.md). Alterar somente o valor do parâmetro antes de chamar **Requery**.  
+>  Para otimizar `Requery` desempenho, evite alterar o conjunto de registros [filtro](../../data/odbc/recordset-filtering-records-odbc.md) ou [classificação](../../data/odbc/recordset-sorting-records-odbc.md). Alterar apenas o valor do parâmetro antes de chamar `Requery`.  
   
- Se o **Requery** chamada falhar, você poderá repetir a chamada; caso contrário, o aplicativo deve ser encerrado normalmente. Uma chamada para **Requery** ou **abrir** pode falhar por qualquer um dos vários motivos. Talvez ocorre um erro de rede; ou, durante a chamada, depois que os dados existentes são liberados, mas antes que os novos dados são obtidos, outro usuário pode obter acesso exclusivo. ou a tabela da qual depende de seu conjunto de registros pode ser excluída.  
+ Se o `Requery` chamar falhar, você pode repetir a chamada; caso contrário, seu aplicativo é encerrado normalmente. Uma chamada para `Requery` ou `Open` pode falhar por vários motivos. Talvez ocorre um erro de rede; ou, durante a chamada, após os dados existentes são liberados, mas antes dos novos dados são obtidos, outro usuário pode obter acesso exclusivo. ou a tabela da qual depende de seu conjunto de registros pode ser excluída.  
   
 ## <a name="see-also"></a>Consulte também  
  [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)   

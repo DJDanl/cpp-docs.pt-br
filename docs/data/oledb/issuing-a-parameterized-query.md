@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b377df31e9166ee5288d37b0843944a3b2eb6bc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02ce5cbfdc6c5305ab356fc32993b6bdd34f1fac
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104569"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339530"
 ---
 # <a name="issuing-a-parameterized-query"></a>Emitindo uma consulta parametrizada
-O exemplo a seguir emite uma consulta parametrizada simple que recupera os registros com um campo de idade (que é maior que 30) de uma tabela em um banco de dados do Microsoft Access. Para dar suporte o parâmetro, o registro de usuário deve ter um mapa adicional. O código a seguir, em um projeto ATL, usa o `CCommand` classe o `CTable` classe usada no exemplo anterior, [percorrendo um conjunto de linhas simples](../../data/oledb/traversing-a-simple-rowset.md).  
+O exemplo a seguir emite uma simple consulta parametrizada que recupera os registros com um campo de idade (que é maior que 30) de uma tabela em um banco de dados do Microsoft Access. Para dar suporte o parâmetro, o registro de usuário deve ter um mapa adicional. O código a seguir, em um projeto ATL, usa o `CCommand` classe, em vez do `CTable` classe usada no exemplo anterior, [percorrendo um conjunto de linhas simples](../../data/oledb/traversing-a-simple-rowset.md).  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -51,9 +51,9 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- O registro de usuário, `CArtists`, tem esta aparência:  
+ O registro do usuário, `CArtists`, semelhante ao seguinte:  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

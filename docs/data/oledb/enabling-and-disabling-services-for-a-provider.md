@@ -16,23 +16,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ef36e35234aa4878e30e70748a5b2ba2975c38dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36cb39b467cb413cdf74bef52430cf8caf746199
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33099726"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340684"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>Habilitando e desabilitando serviços para um provedor
-Serviços de OLE DB individuais podem ser habilitados ou desabilitados por padrão para todos os aplicativos que acessam um único provedor. Isso é feito adicionando uma **OLEDB_SERVICES** entrada do registro sob o provedor do CLSID, com um `DWORD` valor que especifica os serviços para habilitar ou desabilitar, conforme mostrado na tabela a seguir.  
+Serviços de OLE DB individuais podem ser habilitados ou desabilitados por padrão para todos os aplicativos que acessam um único provedor. Isso é feito adicionando uma entrada de registro OLEDB_SERVICES sob o CLSID do provedor, com um `DWORD` valor que especifica os serviços para habilitar ou desabilitar, conforme mostrado na tabela a seguir.  
   
 |Serviços padrão habilitados|Valor de palavra-chave|  
 |------------------------------|-------------------|  
 |Todos os serviços (padrão)|0xFFFFFFFF|  
-|Tudo, exceto o pool e AutoEnlistment|0xFFFFFFFE|  
-|Tudo, exceto Cursor do cliente|0xfffffffb|  
-|Todos exceto pool, AutoEnlistment e o Cursor do cliente|0xfffffff0|  
-|Nenhum serviço|0x00000000|  
+|Todos, exceto de Pooling e AutoEnlistment|0xFFFFFFFE|  
+|Todos, exceto o Cursor do cliente|0xfffffffb|  
+|Todos exceto Pooling, AutoEnlistment e Cursor do cliente|0xfffffff0|  
+|Não há serviços|0x00000000|  
 |Nenhuma agregação, todos os serviços desabilitados|\<chave ausente >|  
   
 ## <a name="see-also"></a>Consulte também  

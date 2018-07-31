@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 59793d206f8b53d57347070cbfccd6d98ff2c005
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: 6cd6ec4bcee26c1e2fb558670c69d0130808c933
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321949"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338334"
 ---
 # <a name="irowsetimpl-class"></a>Classe IRowsetImpl
 Fornece uma implementação da interface `IRowset`.  
@@ -177,7 +177,7 @@ Adiciona uma contagem de referência em um identificador de linha existente.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,  
+STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBREFCOUNT rgRefCounts[],  
    DBROWSTATUS rgRowStatus[]);  
@@ -193,7 +193,7 @@ Um método auxiliar chamado pelo [GetNextRows](../../data/oledb/irowsetimpl-getn
   
 ```cpp
 HRESULT CreateRow(DBROWOFFSET lRowsOffset,  
-  DBCOUNTITEM& cRowsObtained,  
+   DBCOUNTITEM& cRowsObtained,  
    HROW* rgRows);  
 ```  
   
@@ -216,7 +216,7 @@ Recupera dados da cópia do conjunto de linhas da linha.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD(GetData )(HROW hRow,  
+STDMETHOD(GetData )(HROW hRow,  
    HACCESSOR hAccessor,  
    void* pDstData);  
 ```  
@@ -239,7 +239,7 @@ Retorna os sinalizadores de status DBSTATUS para o campo especificado.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      virtual DBSTATUS GetDBStatus(RowClass* currentRow,  
+virtual DBSTATUS GetDBStatus(RowClass* currentRow,  
    ATLCOLUMNINFO* columnNames);  
 ```  
   
@@ -259,7 +259,7 @@ Busca linhas sequencialmente, lembrando da posição anterior.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD(GetNextRows )(HCHAPTER hReserved,  
+STDMETHOD(GetNextRows )(HCHAPTER hReserved,  
    DBROWOFFSET lRowsOffset,  
    DBROWCOUNT cRows,  
    DBCOUNTITEM* pcRowsObtained,  
@@ -276,7 +276,6 @@ O construtor.
   
 ```cpp
 IRowsetImpl();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -307,7 +306,7 @@ Libera linhas.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,  
+STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBROWOPTIONS rgRowOptions[],  
    DBREFCOUNT rgRefCounts[],  
@@ -323,7 +322,7 @@ Reposiciona a próxima posição de busca para sua posição inicial; ou seja, s
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);  
+STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -338,7 +337,7 @@ Define os sinalizadores de status DBSTATUS para o campo especificado.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,  
+virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,  
    RowClass* currentRow,  
    ATLCOLUMNINFO* columnInfo);  
 ```  
@@ -366,7 +365,6 @@ Indica se um provedor dá suporte à busca com versões anteriores.
   
 ```cpp
 unsigned m_bCanFetchBack:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -379,7 +377,6 @@ Indica se um provedor pode ter sua rolagem do cursor com versões anteriores.
   
 ```cpp
 unsigned  m_bCanScrollBack:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -392,7 +389,6 @@ Um sinalizador de bit usado para determinar se a posição do cursor é definida
   
 ```cpp
 unsigned m_bReset:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -405,7 +401,6 @@ Um índice ao conjunto de linhas, que representa o cursor.
   
 ```cpp
 DBROWOFFSET m_iRowset;  
-  
 ```  
 
 ## <a name="rgrowhandles"></a> Irowsetimpl:: M_rgrowhandles
@@ -414,9 +409,7 @@ Um mapa de identificadores de linha contidos no momento pelo provedor em respost
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-MapClass  
- m_rgRowHandles;  
-  
+MapClass m_rgRowHandles;  
 ```  
   
 ### <a name="remarks"></a>Comentários  

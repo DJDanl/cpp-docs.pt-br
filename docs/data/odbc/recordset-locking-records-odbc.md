@@ -21,33 +21,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1fcef3233e4c2035cc481128d81723dad03fb18b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 344f567ab014fc854dcb44eebadcd7346af8e851
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092130"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339978"
 ---
 # <a name="recordset-locking-records-odbc"></a>Conjunto de registros: bloqueando registros (ODBC)
-Este tópico se aplica às classes MFC ODBC.  
+Este tópico se aplica às classes ODBC do MFC.  
   
  Este tópico explica:  
   
--   [Os tipos de bloqueio de registro disponível](#_core_record.2d.locking_modes).  
+-   [Os tipos de bloqueio de registros disponíveis](#_core_record.2d.locking_modes).  
   
--   [Como bloquear registros de registros durante as atualizações](#_core_locking_records_in_your_recordset).  
+-   [Como bloquear registros em seu conjunto de registros durante as atualizações](#_core_locking_records_in_your_recordset).  
   
- Quando você usa um conjunto de registros para atualizar um registro na fonte de dados, seu aplicativo pode bloquear o registro para que nenhum outro usuário possa atualizar o registro ao mesmo tempo. O estado de um registro atualizado por dois usuários ao mesmo tempo é indefinido, a menos que o sistema pode garantir que dois usuários não é possível atualizar um registro simultaneamente.  
+ Quando você usa um conjunto de registros para atualizar um registro na fonte de dados, seu aplicativo pode bloquear o registro para que nenhum outro usuário possa atualizar o registro ao mesmo tempo. O estado de um registro atualizado por dois usuários ao mesmo tempo é indefinido, a menos que o sistema pode garantir que dois usuários não é possível atualizar um registro ao mesmo tempo.  
   
 > [!NOTE]
->  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa busca não foi implementada. Se você tiver implementado a busca de linhas em massa, algumas informações não se aplicam. Por exemplo, você não pode chamar o **editar** e **atualização** funções de membro. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. Se você tiver implementado a busca de linhas em massa, algumas informações não se aplica. Por exemplo, você não pode chamar o `Edit` e `Update` funções de membro. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="_core_record.2d.locking_modes"></a> Modos de bloqueio de registro  
- As classes de banco de dados fornecem dois [modos de bloqueio de registro](../../mfc/reference/crecordset-class.md#setlockingmode):  
+##  <a name="_core_record.2d.locking_modes"></a> Modos de bloqueio de registros  
+ As classes de banco de dados fornecem dois [modos de bloqueio de registros](../../mfc/reference/crecordset-class.md#setlockingmode):  
   
--   Otimista de bloqueio (o padrão)  
+-   Otimista de bloqueio (padrão)  
   
--   bloqueio pessimista  
+-   Bloqueio pessimista  
   
  Atualizando um registro ocorre em três etapas:  
   
@@ -57,19 +57,19 @@ Este tópico se aplica às classes MFC ODBC.
   
 3.  Encerrar a operação — e normalmente confirmar a atualização — chamando o [atualizar](../../mfc/reference/crecordset-class.md#update) função de membro.  
   
- Bloqueio otimista bloqueia o registro na fonte de dados somente durante o **atualização** chamar. Se você usar o bloqueio otimista em um ambiente multiusuário, o aplicativo deve tratar uma **atualização** condição de falha. Pessimista bloqueia o registro tão logo você chamar **editar** e não liberá-lo até que você chamada **atualização** (falhas são indicadas por meio de `CDBException` mecanismo, não por um valor de **FALSE** retornado por **atualização**). Bloqueio pessimista tem uma penalidade de desempenho potencial para outros usuários, porque o acesso simultâneo ao mesmo registro talvez precise aguardar até a conclusão do seu aplicativo **atualização** processo.  
+ Bloqueio otimista bloqueia o registro na fonte de dados somente durante o `Update` chamar. Se você usar o bloqueio otimista em um ambiente multiusuário, o aplicativo deve tratar um `Update` condição de falha. Bloqueio pessimista bloqueia o registro, assim que você chame `Edit` e não liberá-lo até que você chamada `Update` (falhas são indicadas por meio das `CDBException` mecanismo, não por um valor FALSE retornado por `Update`). Bloqueio pessimista tem uma penalidade de desempenho potencial para outros usuários, porque o acesso simultâneo ao mesmo registro talvez seja necessário esperar até a conclusão do seu aplicativo `Update` processo.  
   
-##  <a name="_core_locking_records_in_your_recordset"></a> Registros de bloqueio de registros  
- Se você quiser alterar um objeto de conjunto de registros [modo de bloqueio](#_core_record.2d.locking_modes) do padrão, você deve alterar o modo antes de chamar **editar**.  
+##  <a name="_core_locking_records_in_your_recordset"></a> Bloqueio de registros no seu conjunto de registros  
+ Se você quiser alterar um objeto de conjunto de registros [modo de bloqueio](#_core_record.2d.locking_modes) do padrão, você deve alterar o modo antes de chamar `Edit`.  
   
-#### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>Para alterar o modo de bloqueio atual para o conjunto de registros  
+#### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>Para alterar o modo de bloqueio atual para seu conjunto de registros  
   
-1.  Chamar o [SetLockingMode](../../mfc/reference/crecordset-class.md#setlockingmode) função de membro, especificando o **CRecordset::pessimistic** ou **CRecordset::optimistic**.  
+1.  Chame o [SetLockingMode](../../mfc/reference/crecordset-class.md#setlockingmode) função de membro, especificando a `CRecordset::pessimistic` ou `CRecordset::optimistic`.  
   
- O novo modo de bloqueio permanece em vigor até que você alterá-lo novamente, ou o conjunto de registros é fechado.  
+ O novo modo de bloqueio permanecerá em vigor até você alterá-lo novamente ou o conjunto de registros é fechado.  
   
 > [!NOTE]
->  Drivers ODBC relativamente poucas atualmente suportam pessimista.  
+>  Drivers ODBC de relativamente poucas atualmente suporte para bloqueio pessimista.  
   
 ## <a name="see-also"></a>Consulte também  
  [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)   

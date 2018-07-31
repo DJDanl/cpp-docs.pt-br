@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7bb39b910eae797f360513954ad0c32d5e99bb86
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 167cf817074a992fae5492ba387ea8a3589a10ec
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089279"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337223"
 ---
 # <a name="recordset-adding-records-in-bulk-odbc"></a>Conjunto de registros: adicionando registros em massa (ODBC)
-Este tópico se aplica às classes MFC ODBC.  
+Este tópico se aplica às classes ODBC do MFC.  
   
- O MFC [CRecordset](../../mfc/reference/crecordset-class.md) classe tem uma nova otimização que melhora a eficiência durante a adição de novos registros em massa para uma tabela.  
+ O MFC [CRecordset](../../mfc/reference/crecordset-class.md) classe tem uma nova otimização que melhora a eficiência ao adicionar novos registros em massa para uma tabela.  
   
 > [!NOTE]
->  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa busca não foi implementada. Se você estiver usando a busca de linhas em massa, consulte [conjunto de registros: busca de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. Se você estiver usando a busca de linhas em massa, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Uma nova opção para o **dwOptions** parâmetro para o [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) função de membro, **optimizeBulkAdd**, melhora o desempenho quando você está adicionando vários registros consecutivamente sem chamar **Requery** ou **fechar**. Somente os campos que são sujos antes do primeiro **atualização** chamada são marcados como sujos para subsequentes `AddNew` / **atualização** chamadas.  
+ Uma nova opção para o *dwOptions* parâmetro para o [{1&gt;crecordset::Open&lt;1](../../mfc/reference/crecordset-class.md#open) função de membro, `optimizeBulkAdd`, melhora o desempenho quando você está adicionando vários registros consecutivamente sem chamar `Requery` ou `Close`. Somente os campos que são sujos antes do primeiro `Update` chamada são marcados como sujos para subsequentes `AddNew` / `Update` chamadas.  
   
- Se você estiver usando as classes de banco de dados para aproveitar o **:: SQLSetPos** API ODBC de função para adicionar, editar e excluir registros, essa otimização é necessário.  
+ Se você estiver usando as classes de banco de dados para aproveitar o `::SQLSetPos` função ODBC API para adicionar, editar, e exclusão de registros, essa otimização é desnecessária.  
   
- Se a biblioteca de cursores ODBC é carregada ou o driver ODBC não oferece suporte à adição, edição e exclusão por meio de **:: SQLSetPos**, essa otimização deve aumentar em massa adicionar o desempenho. Para ativar essa otimização, defina o **dwOptions** parâmetro o **abrir** chamada para o conjunto de registros para o seguinte:  
+ Se a biblioteca de cursores ODBC é carregada ou o driver ODBC não oferece suporte à adição, edição e exclusão por meio de `::SQLSetPos`, essa otimização deve melhorar em massa adicionar de desempenho. Para ativar essa otimização, defina as *dwOptions* parâmetro no `Open` chamar para seu conjunto de registros para o seguinte:  
   
 ```  
 appendOnly | optimizeBulkAdd  

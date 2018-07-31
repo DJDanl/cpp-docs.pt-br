@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 073ddbea18e728ffb6777ff16c86bfa4695e05cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3aa9b10b53f4b520ed6d42932ba3e73f11077fdc
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33110155"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337054"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Lendo cadeias de caracteres no provedor de banco de dados OLE
-O `RMyProviderRowset::Execute` função abre um arquivo e lê cadeias de caracteres. O consumidor transmite o nome do arquivo para o provedor chamando [ICommandText:: SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx). O provedor recebe o nome do arquivo e o armazena na variável de membro `m_szCommandText`. `Execute` lê o nome de arquivo `m_szCommandText`. Se o nome do arquivo é inválido ou não estiver disponível, o arquivo `Execute` retornará um erro. Caso contrário, ele abre o arquivo e chamadas `fgets` para recuperar as cadeias de caracteres. Para cada conjunto de cadeias de caracteres-leituras, `Execute` cria uma instância de registro do usuário (`CAgentMan`) e o coloca em uma matriz.  
+O `RMyProviderRowset::Execute` função abre um arquivo e lê as cadeias de caracteres. O consumidor transmite o nome do arquivo para o provedor, chamando [ICommandText:: SetCommandText](https://msdn.microsoft.com/library/ms709757.aspx). O provedor recebe o nome do arquivo e o armazena na variável de membro `m_szCommandText`. `Execute` lê o nome do arquivo de `m_szCommandText`. Se o nome do arquivo é inválido ou não estiver disponível, o arquivo `Execute` retornará um erro. Caso contrário, ele abre o arquivo e chama `fgets` para recuperar as cadeias de caracteres. Para cada conjunto de cadeias de caracteres-leituras, `Execute` cria uma instância de registro do usuário (`CAgentMan`) e o coloca em uma matriz.  
   
- Se o arquivo não pode ser aberto, `Execute` deve retornar **DB_E_NOTABLE**. Se ele retorna **E_FAIL** em vez disso, o provedor não funcionará com vários consumidores e não passará o OLE DB [testes de conformidade](../../data/oledb/testing-your-provider.md).  
+ Se o arquivo não pode ser aberto, `Execute` deve retornar DB_E_NOTABLE. Se ele retornar E_FAIL em vez disso, o provedor não funcionará com muitos consumidores e não passa do OLE DB [testes de conformidade](../../data/oledb/testing-your-provider.md).  
   
 ## <a name="example"></a>Exemplo  
   

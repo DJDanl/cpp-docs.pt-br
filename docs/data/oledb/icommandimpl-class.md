@@ -63,12 +63,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18174281baf76b383b56b10e86e2659279037b6c
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 07453e3040594332857ba75455b1847a3914fdd2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269593"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337788"
 ---
 # <a name="icommandimpl-class"></a>Classe ICommandImpl
 Fornece implementação para o [ICommand](https://msdn.microsoft.com/library/ms709737.aspx) interface.  
@@ -121,7 +121,6 @@ Cancela a execução do comando atual.
   
 ```cpp
 STDMETHOD(Cancel)();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -134,7 +133,6 @@ Cancela a execução do comando atual.
   
 ```cpp
 HRESULT CancelExecution();  
-  
 ```  
 
 ## <a name="createrowset"></a> Icommandimpl:: Createrowset
@@ -143,8 +141,7 @@ Chamado pelo [Execute](../../data/oledb/icommandimpl-execute.md) para criar um �
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      template template <class RowsetClass  
-      >  
+template template <class RowsetClass>  
 HRESULT CreateRowset(IUnknown* pUnkOuter,  
    REFIID riid,  
    DBPARAMS* pParams,  
@@ -210,7 +207,7 @@ Retorna um ponteiro de interface para a sessão que criou o comando.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD (GetDBSession) (REFIID riid,  
+STDMETHOD (GetDBSession) (REFIID riid,  
    IUnknown** ppSession);  
 ```  
   
@@ -227,7 +224,6 @@ O construtor.
   
 ```cpp
 ICommandImpl();  
-  
 ```  
 
 ## <a name="bcancel"></a> Icommandimpl:: M_bcancel
@@ -237,7 +233,6 @@ Indica se o comando é cancelado.
   
 ```cpp
 unsigned m_bCancel:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -250,7 +245,6 @@ Indica se o comando pode ser cancelado durante a execução.
   
 ```cpp
 unsigned m_bCancelWhenExecuting:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -263,7 +257,6 @@ Indica se o comando está em execução.
   
 ```cpp
 unsigned m_bIsExecuting:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  

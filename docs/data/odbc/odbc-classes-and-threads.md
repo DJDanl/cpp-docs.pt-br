@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dedd1f03bf14e0513f9f76a1e292b9180e4d60db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a7b78284b1fc0bd952928952c24c61423396eb2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090582"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341043"
 ---
 # <a name="odbc-classes-and-threads"></a>Classes e threads ODBC
-A partir do MFC 4.2, há suporte multithread para as classes MFC ODBC. No entanto, observe que MFC não fornece suporte multithread para as classes DAO.  
+Começando com o MFC 4.2, não há suporte de multithreading para as classes MFC ODBC. No entanto, observe que o MFC não fornece suporte de multithreading para as classes DAO.  
   
- O suporte multithread para as classes ODBC tem algumas limitações. Porque essas classes encapsula a API de ODBC, eles são restritos para o suporte a multithreading dos componentes no qual eles são criados. Por exemplo, muitos drivers ODBC não são thread-safe; Portanto, as classes MFC ODBC não são thread-safe se você usá-los com um desses drivers. Você deve verificar se o seu driver específico é thread-safe.  
+ O suporte de multithreading para as classes ODBC tem algumas limitações. Porque essas classes envolvem a API do ODBC, eles são restritos ao multithreading suporte dos componentes nos quais eles são criados. Por exemplo, muitos drivers ODBC não são thread-safe; Portanto, as classes MFC ODBC não são thread-safe se usá-los com um desses drivers. Você deve verificar se o seu driver específico é thread-safe.  
   
- Ao criar um aplicativo multithread, você deve ter muito cuidado ao usando vários threads para manipular o mesmo objeto. Por exemplo, usando a mesma `CRecordset` objeto em dois threads pode causar problemas ao recuperar dados, uma operação de busca em um thread pode substituir os dados buscados no thread de. É um uso mais comum de classes ODBC MFC em threads separados para compartilhar um aberto `CDatabase` objeto entre threads para usar a mesma conexão ODBC, com um separado `CRecordset` objeto em cada thread. Observe que você não deve transmitir um não aberta `CDatabase` o objeto para um `CRecordset` objeto em outro thread.  
+ Ao criar um aplicativo multi-threaded, você deve ter muito cuidado com usando vários threads para manipular o mesmo objeto. Por exemplo, usando a mesma `CRecordset` objeto em dois threads pode causar problemas ao recuperar dados; uma operação de busca em um thread pode substituir os dados buscados o outro thread. Um uso mais comum das classes ODBC do MFC em threads separados é compartilhar um aberto `CDatabase` objeto entre threads para usar a mesma conexão do ODBC, com um separado `CRecordset` objeto em cada thread. Observe que você não deve passar um não abertos `CDatabase` do objeto para um `CRecordset` objeto em outro thread.  
   
 > [!NOTE]
->  Se você deve ter vários threads manipular o mesmo objeto, você deve implementar os mecanismos de sincronização apropriado, como seções críticas. Esteja ciente que certas operações, como **abrir**, não estão protegidos. Você deve certificar-se de que essas operações não serão chamadas simultaneamente de threads separados.  
+>  Se você precisar ter vários threads manipular o mesmo objeto, você deve implementar os mecanismos de sincronização apropriado, como seções críticas. Esteja ciente que certas operações, como `Open`, não estão protegidos. Você deve ter certeza de que essas operações não serão chamadas simultaneamente de threads separados.  
   
- Para obter mais informações sobre como criar aplicativos multithread, consulte [Multithreading tópicos](../../parallel/multithreading-support-for-older-code-visual-cpp.md).  
+ Para obter mais informações sobre a criação de aplicativos multi-threaded, consulte [tópicos de Multithreading](../../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   

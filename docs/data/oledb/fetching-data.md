@@ -18,23 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ab03da7c303552a715c6766af7829e74025866ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dca3cc2d51f0e165e9b17d9fe630752a427590f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101195"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339150"
 ---
 # <a name="fetching-data"></a>Recuperando dados
-Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você pode buscar dados. Dependendo do tipo de acessador que você está usando, talvez seja necessário associar colunas.  
+Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você pode buscar dados. Dependendo do tipo de acessador que você está usando, você precisará associar colunas.  
   
 ### <a name="to-fetch-data"></a>Para buscar dados  
   
-1.  Abra o conjunto de linhas usando apropriada **abrir** comando.  
+1.  Abra o conjunto de linhas usando apropriado **abrir** comando.  
   
-2.  Se você estiver usando `CManualAccessor`, associar as colunas de saída, se você ainda não tiver feito isso. Para associar as colunas, chame `GetColumnInfo`e, em seguida, crie um acessador com associações, conforme mostrado no exemplo a seguir:  
+2.  Se você estiver usando `CManualAccessor`, associar as colunas de saída, se você ainda não fez isso. Para associar as colunas, chame `GetColumnInfo`e, em seguida, crie um acessador com as associações, conforme mostrado no exemplo a seguir:  
   
-    ```  
+    ```cpp  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
     // Get the column information  
     ULONG ulColumns       = 0;  
@@ -51,7 +51,7 @@ Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você
   
 3.  Gravar um `while` loop para recuperar os dados. No loop, chame `MoveNext` para avançar o cursor e testar o valor de retorno com S_OK, conforme mostrado no exemplo a seguir:  
   
-    ```  
+    ```cpp  
     while (rs.MoveNext() == S_OK)  
     {  
         // Add code to fetch data here  
@@ -63,7 +63,7 @@ Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você
   
     -   Se você usar o [CAccessor](../../data/oledb/caccessor-class.md) classe, você deve ter um registro de usuário que contém membros de dados. Você pode acessar seus dados usando os membros de dados, conforme mostrado no exemplo a seguir:  
   
-        ```  
+        ```cpp  
         while (rs.MoveNext() == S_OK)  
         {  
             // Use the data members directly. In this case, m_nFooID  
@@ -73,9 +73,9 @@ Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você
         }  
         ```  
   
-    -   Se você usar o `CDynamicAccessor` ou `CDynamicParameterAccessor` classe, você pode buscar dados usando as funções acessa `GetValue` e `GetColumn`, conforme mostrado no exemplo a seguir. Se você quiser determinar o tipo de dados você está usando, use `GetType`.  
+    -   Se você usar o `CDynamicAccessor` ou `CDynamicParameterAccessor` classe, você pode buscar dados usando as funções de acesso `GetValue` e `GetColumn`, conforme mostrado no exemplo a seguir. Se você quiser determinar o tipo de dados você está usando, use `GetType`.  
   
-        ```  
+        ```cpp  
         while (rs.MoveNext() == S_OK)  
         {  
             // Use the dynamic accessor functions to retrieve your data.  
@@ -88,9 +88,9 @@ Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você
         }  
         ```  
   
-    -   Se você usar `CManualAccessor`, você deve especificar seus próprios membros de dados, associá-las e acessá-los diretamente, conforme mostrado no exemplo a seguir:  
+    -   Se você usar `CManualAccessor`, você deve especificar seus próprios membros de dados, ligá-los e acessá-los diretamente, conforme mostrado no exemplo a seguir:  
   
-        ```  
+        ```cpp  
         while (rs.MoveNext() == S_OK)  
         {  
             // Use the data members you specified in the calls to  

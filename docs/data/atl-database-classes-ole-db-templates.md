@@ -17,33 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fabced79232d17807d252da9dac5b066ddf69f25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 083ac7485ce2056ab97ca32142be3e88094573f9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089046"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337879"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Classes de banco de dados ATL (modelos de banco de dados OLE)
-A Microsoft fornece várias implementações de OLE DB, um conjunto de interfaces que fornecem acesso uniforme a dados em informações de várias fontes e formatos.  OLE DB foi oficialmente preterido; Esta documentação é para desenvolvedores que estão mantendo o código herdado. Novos aplicativos devem usar o ODBC para se conectar a fontes de dados do SQL.
+A Microsoft fornece várias implementações do OLE DB, um conjunto de interfaces que fornecem acesso uniforme a dados em várias fontes de informação e formatos.  OLE DB foi oficialmente preterido; Esta documentação é para desenvolvedores que estiver mantendo o código herdado. Novos aplicativos devem usar ODBC para se conectar a fontes de dados SQL.
   
- Os modelos OLE DB são modelos de C++ em ATL que facilitam o uso, fornecendo as classes que implementam a muitas das interfaces de OLE DB usadas de tecnologia de banco de dados OLE DB.  
+ Os modelos OLE DB são modelos de C++ em ATL que facilitam a tecnologia de banco de dados OLE DB usar, fornecendo classes que implementam muitas das interfaces do OLE DB comumente usadas.  
   
  Essa biblioteca de modelo contém duas partes:  
   
--   [Modelos de consumidor OLE DB](../data/oledb/ole-db-consumer-templates-cpp.md) usadas para implementar um aplicativo de cliente (consumidor) do OLE DB.  
+-   [Modelos de consumidor OLE DB](../data/oledb/ole-db-consumer-templates-cpp.md) usado para implementar um aplicativo de cliente (consumidor) do OLE DB.  
   
--   [Modelos de provedor do OLE DB](../data/oledb/ole-db-provider-templates-cpp.md) usadas para implementar um aplicativo de servidor (provedor) do OLE DB.  
+-   [Modelos de provedor OLE DB](../data/oledb/ole-db-provider-templates-cpp.md) usado para implementar um aplicativo de servidor (provedor) do OLE DB.  
   
- Além disso, o [atributos de consumidor OLE DB](../windows/ole-db-consumer-attributes.md) fornecem uma maneira conveniente de criar os consumidores do OLE DB. Os atributos de OLE DB injetar código com base nos modelos de consumidor OLE DB para criar os consumidores OLE DB do trabalho.  
+ Além disso, o [atributos de consumidor do OLE DB](../windows/ole-db-consumer-attributes.md) fornecem uma maneira conveniente de criar os consumidores do OLE DB. Os atributos de OLE DB injetam código com base nos modelos de consumidor OLE DB para criar os consumidores OLE DB do trabalho.  
   
- Observe que a biblioteca do MFC contém uma classe, [COleDBRecordView](../mfc/reference/coledbrecordview-class.md), que exibe os registros do banco de dados em controles. A exibição é um modo de exibição de formulário conectado diretamente a um `CRowset` objeto e, em seguida, exibe os campos do `CRowset` objeto nos controles do modelo de caixa de diálogo.  
+ Observe que a biblioteca do MFC contém uma classe, [COleDBRecordView](../mfc/reference/coledbrecordview-class.md), que exibe os registros do banco de dados em controles. A exibição é um modo de exibição de formulário conectado diretamente a um `CRowset` do objeto e exibe os campos do `CRowset` objeto nos controles do modelo de caixa de diálogo.  
   
  Para obter mais informações, consulte [OLE DB de programação](../data/oledb/ole-db-programming.md) e [guia do programador do DB OLE](http://go.microsoft.com/fwlink/p/?linkid=121548).  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando um consumidor do OLE DB](../data/oledb/creating-an-ole-db-consumer.md)   
  [Criando um provedor do OLE DB](../data/oledb/creating-an-ole-db-provider.md)   
- [Referência de modelos de consumidor OLE DB](../data/oledb/ole-db-consumer-templates-reference.md)   
+ [Referência de modelos de consumidor do OLE DB](../data/oledb/ole-db-consumer-templates-reference.md)   
  [Referência de modelos de provedor do OLE DB](../data/oledb/ole-db-provider-templates-reference.md)   
- [Exemplos de modelos OLE DB](http://msdn.microsoft.com/en-us/08958863-0b5f-41ad-ae99-fca7440c553c)
+ [Exemplos de modelos OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)

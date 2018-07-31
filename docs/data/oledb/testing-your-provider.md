@@ -17,21 +17,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c35b1391e5b8cbfb073255b3680b0376d19ae040
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 906156a24cfb58697ff4dd95e922f5ee326fd07d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104783"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339722"
 ---
 # <a name="testing-your-provider"></a>Testando o provedor
-Antes de liberar um provedor, você deve executar os testes a seguir, na ordem indicada. Esses testes Certifique-se de que as funções de provedor corretamente para a maioria dos usuários em potencial.  
+Antes de liberar um provedor, você deve executar os testes a seguir, na ordem indicada. Esses testes garantem que as funções de provedor corretamente para a maioria dos usuários em potencial.  
   
-1.  Testar o provedor usando um [consumidor](../../data/oledb/creating-an-ole-db-consumer.md) aplicativo escrito com os modelos de consumidor OLE DB. O consumidor de teste deve cobrir todas as áreas funcionais do provedor (todo o código que você tenha adicionado ou modificado).  
+1.  Teste-o usando um [consumidor](../../data/oledb/creating-an-ole-db-consumer.md) aplicativo escrito com os modelos de consumidor do OLE DB. O consumidor de teste deve cobrir todas as áreas funcionais do seu provedor (todo o código que você tenha adicionado ou modificado).  
   
-2.  Teste o provedor usando um aplicativo cliente escrito com o ADO. A maioria dos desenvolvedores (especialmente desenvolvedores do Microsoft Visual Basic e c# Microsoft) usam ADO ou ADO.NET para aplicativos de consumidor. O consumidor de teste deve cobrir todas as áreas funcionais do provedor. Para obter um exemplo de um aplicativo de consumidor de ADO, consulte [exemplos de código ADO no Microsoft Visual Basic](https://msdn.microsoft.com/en-us/library/ms807514.aspx).  
+2.  Teste-o usando um aplicativo de consumidor escrito com o ADO. A maioria dos desenvolvedores (especialmente desenvolvedores Microsoft Visual Basic e c# Microsoft) usam o ADO ou ADO.NET para aplicativos de consumidor. O consumidor de teste deve cobrir todas as áreas funcionais do seu provedor. Para obter um exemplo de um aplicativo de consumidor do ADO, consulte [exemplos de código ADO no Microsoft Visual Basic](https://msdn.microsoft.com/library/ms807514.aspx).  
   
-3.  Execute os testes de conformidade de banco de dados OLE (inclusive testes de conformidade de ADO) para garantir que seu provedor atende o nível padrão de 0 para provedores OLE DB. (Para obter uma explicação de nível 0, pesquise "OLE DB nível 0 testes de conformidade" em [guia do programador do DB OLE](http://go.microsoft.com/fwlink/p/?linkid=121548). Esses testes e a documentação associada são incluídos com o Visual C++ no SDK de acesso a dados. Esses testes também ajudam a garantir que o provedor é executado bem quando agregados por outros [provedores de serviços](../../data/oledb/ole-db-resource-pooling-and-services.md) e são especialmente úteis se você modificar ou adiciona propriedades. Para obter mais informações sobre os testes de conformidade, consulte o arquivo Leiame para o SDK de acesso de dados, que está localizado em um dos CDs do Visual Studio.  
+3.  Execute os testes de conformidade com OLE DB (incluindo testes de conformidade do ADO) garantir que seu provedor satisfaça o nível padrão de 0 para provedores OLE DB. (Para obter uma explicação de nível 0, pesquise por "OLE DB nível 0 testes de conformidade" em [guia do programador do DB OLE](http://go.microsoft.com/fwlink/p/?linkid=121548). Esses testes e a documentação associada são incluídos com o Visual C++ no SDK de acesso a dados. Esses testes também ajudam a garantir que seu provedor seja executado bem quando agregados por outros [provedores de serviço](../../data/oledb/ole-db-resource-pooling-and-services.md) e são especialmente úteis se você modificar ou adicionar propriedades. Para obter mais informações sobre os testes de conformidade, consulte o arquivo Leiame para o SDK de acesso de dados, que está localizado em um dos CDs do Visual Studio.  
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhando com modelos de provedor do OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

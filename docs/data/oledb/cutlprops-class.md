@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c0eab382a236033cc137b4c5f5bd6b32fc93c6a1
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 661ac13acd1d8eac0ecde9af9fa08875b99153e3
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269664"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336974"
 ---
 # <a name="cutlprops-class"></a>Classe CUtlProps
 Implementa as propriedades para uma variedade de interfaces de propriedade do OLE DB (por exemplo, `IDBProperties`, `IDBProperties`, e `IRowsetInfo`).  
@@ -90,7 +90,7 @@ Obtém uma propriedade de um conjunto de propriedades.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,  
+OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,  
    DBPROPID dwPropId,  
    VARIANT* pvValue);  
 ```  
@@ -114,7 +114,7 @@ Usado para validar um valor antes de definir uma propriedade.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,  
+virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,  
    DBPROP* pDBProp);  
 ```  
   
@@ -137,7 +137,7 @@ Trata solicitações para uma interface opcional quando um consumidor chama um m
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);  
+virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -169,7 +169,7 @@ Chamado depois de definir uma propriedade para lidar com propriedades encadeadas
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,  
+virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,  
    DBPROP* pDBProp);  
 ```  
   

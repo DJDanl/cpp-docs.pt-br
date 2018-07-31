@@ -29,44 +29,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e665369f292a646353d1a180661982ce4c902665
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a143badef2aec500b12d176e10c0a5eaf06b2cf4
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111709"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339357"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Simplificando acesso a dados com atributos de banco de dados
 Este tópico demonstra o uso de atributos de banco de dados para simplificar as operações de banco de dados.  
   
- De maneira simples de acessar informações de um banco de dados é criar uma classe de comando (ou tabela) e uma classe de registro de usuário para uma tabela específica no banco de dados. Os atributos de banco de dados simplificam algumas das declarações do modelo que você tinha anteriormente para fazer.  
+ A maneira básica de acessar informações de um banco de dados é criar uma classe de comando (ou tabela) e uma classe de registro de usuário para uma tabela específica no banco de dados. Os atributos de banco de dados simplificam algumas das declarações do modelo que você anteriormente tinha de fazer.  
   
- Para demonstrar o uso de atributos de banco de dados, as seções a seguir mostram dois tabela equivalente e declarações de classe do registro de usuário: o primeiro usa atributos e o segundo usa modelos OLE DB. Esse código de declaração normalmente é colocado em um arquivo de cabeçalho chamado para o objeto de tabela ou comando, por exemplo, Authors.h.  
+ Para demonstrar o uso de atributos de banco de dados, as seções a seguir mostram dois tabela equivalente e declarações de classe de registro de usuário: o primeiro usa atributos e o segundo usa modelos OLE DB. Esse código de declaração normalmente é colocado em um arquivo de cabeçalho chamado para o objeto de tabela ou comando, por exemplo, Authors.h.  
   
- Comparando os dois arquivos, você pode ver como é simples é usar atributos. Entre as diferenças são:  
+ Comparando os dois arquivos, você pode ver como é muito mais simples é usar os atributos. Entre as diferenças são:  
   
--   Usando atributos, você só precisa declarar uma classe: `CAuthors`, enquanto os modelos é necessário declarar dois: `CAuthorsNoAttrAccessor` e `CAuthorsNoAttr`.  
+-   Usando atributos, você só precisa declarar uma classe: `CAuthors`, enquanto com modelos é necessário declarar dois: `CAuthorsNoAttrAccessor` e `CAuthorsNoAttr`.  
   
--   O `db_source` chamada na versão atribuída é equivalente a `OpenDataSource()` chamar na declaração do modelo.  
+-   O `db_source` chamada na versão atribuída é equivalente ao `OpenDataSource()` chamar na declaração de modelo.  
   
--   O **db_table** chamada na versão atribuída é equivalente à declaração de modelo a seguir:  
+-   O `db_table` chamada em que a versão atribuída é equivalente à declaração de modelo a seguir:  
   
     ```  
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
--   O **db_column** chamadas na versão atribuída são equivalentes ao mapa de coluna (consulte `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) na declaração do modelo.  
+-   O `db_column` chamadas na versão atribuída são equivalentes ao mapa de coluna (consulte `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) na declaração de modelo.  
   
- Os atributos injetar uma declaração de classe do registro de usuário para você. A classe de registro de usuário é equivalente a `CAuthorsNoAttrAccessor` na declaração de modelo. Se sua classe de tabela é `CAuthors`, a classe de registro de usuário injetado é nomeada `CAuthorsAccessor`, e você só pode exibir sua declaração de código injetado. Para obter mais informações, consulte "Attribute-Injected Classes de registro de usuário" em [registros de usuário](../../data/oledb/user-records.md).  
+ Os atributos de injetam uma declaração de classe de registro de usuário para você. A classe de registro de usuário é equivalente a `CAuthorsNoAttrAccessor` na declaração de modelo. Se sua classe de tabela é `CAuthors`, a classe de registro do usuário injetada é chamada `CAuthorsAccessor`, e você só pode exibir sua declaração em código injetado. Para obter mais informações, consulte "Attribute-Injected Classes de registro de usuário" em [registros de usuário](../../data/oledb/user-records.md).  
   
- Observe que tanto o atributo e o código de modelo, você deve definir as propriedades de conjunto de linhas usando `CDBPropSet::AddProperty`.  
+ Observe que tanto o atribuído e o código de modelo, você deve definir as propriedades do conjunto de linhas usando `CDBPropSet::AddProperty`.  
   
- Para obter informações sobre os atributos discutidos neste tópico, consulte [OLE DB consumidor atributos](../../windows/ole-db-consumer-attributes.md).  
+ Para obter informações sobre os atributos discutidos neste tópico, consulte [OLE DB atributos do consumidor](../../windows/ole-db-consumer-attributes.md).  
   
-## <a name="table-and-accessor-declaration-using-attributes"></a>Tabela e a declaração de acessador usando atributos  
- O código a seguir chama `db_source` e **db_table** na classe de tabela. `db_source` Especifica a fonte de dados e a conexão a ser usado. **db_table** insere o código de modelo apropriado para declarar uma classe de tabela. **db_column** especificar o mapa de coluna e inserir a declaração do acessador. Você pode usar atributos de consumidor OLE DB em qualquer projeto que oferece suporte ATL.  
+## <a name="table-and-accessor-declaration-using-attributes"></a>Tabela e a declaração do acessador usando atributos  
+ O código a seguir chama `db_source` e `db_table` na classe da tabela. `db_source` Especifica a fonte de dados e a conexão a ser usado. `db_table` injeta o código de modelo apropriado para declarar uma classe de tabela. `db_column` especificar o mapa de coluna e inserir a declaração do acessador. Você pode usar atributos de consumidor do OLE DB em qualquer projeto que dá suporte a ATL.  
   
- Esta é a declaração de tabela e acessador usando atributos:  
+ Aqui está a declaração de tabela e o acessador usando atributos:  
   
 ```cpp
 //////////////////////////////////////////////////////////////////////  
@@ -101,8 +101,8 @@ public:
 };  
 ```  
   
-## <a name="table-and-accessor-declaration-using-templates"></a>Tabela e usando modelos de declaração de acessador  
- Esta é a declaração de tabela e acessador usando modelos.  
+## <a name="table-and-accessor-declaration-using-templates"></a>Tabela e a declaração do acessador usando modelos  
+ Aqui está a declaração de tabela e o acessador usando modelos.  
   
 ```cpp
 //////////////////////////////////////////////////////////////////////  
@@ -208,4 +208,4 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
   
 ## <a name="see-also"></a>Consulte também  
  [Atributos de consumidor do OLE DB](../../windows/ole-db-consumer-attributes.md)   
- [Explicações passo a passo de atributos](http://msdn.microsoft.com/en-us/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)
+ [Instruções passo a passo de atributos](http://msdn.microsoft.com/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)

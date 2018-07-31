@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2223958f2f5dbacb7c86bf2735c1de3a85d9d488
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 2b54d0db22181089a8470c540ccd72f85c717fbe
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269485"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340287"
 ---
 # <a name="icommandtextimpl-class"></a>Classe ICommandTextImpl
 Fornece uma implementação para o [ICommandText](https://msdn.microsoft.com/library/ms714914.aspx) interface.  
@@ -53,7 +53,7 @@ class ATL_NO_VTABLE ICommandTextImpl
   
 ### <a name="parameters"></a>Parâmetros  
  *T*  
- A classe de comando derivada de **ICommandTextImpl**. 
+ A classe de comando derivada de `ICommandTextImpl`. 
 
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** altdb.h  
@@ -82,7 +82,7 @@ Retorna o comando de texto definido pela última chamada para [SetCommandText](.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD(GetCommandText)(GUID * pguidDialect,   
+STDMETHOD(GetCommandText)(GUID * pguidDialect,   
    LPOLESTR * ppwszCommand);  
 ```  
   
@@ -95,7 +95,7 @@ Define o texto de comando, substituindo o texto de comando existente.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD(SetCommandText)(REFGUID rguidDialect,   
+STDMETHOD(SetCommandText)(REFGUID rguidDialect,   
    LPCOLESTR pwszCommand);  
 ```  
   
@@ -109,7 +109,6 @@ Armazena a cadeia de caracteres de texto de comando.
   
 ```cpp
 CComBSTR m_strCommandText;  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte também  

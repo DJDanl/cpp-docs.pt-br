@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36965ac33fc0a563951c0c0dfdce60d9d0e4f55b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec2a52949754e6b19730d5ef025f958d517f6fd0
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106538"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341030"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Fazendo referência a uma propriedade no provedor
-Localize o grupo de propriedades e a ID de propriedade para a propriedade que você deseja. Para obter mais informações, consulte [propriedades OLE DB](https://msdn.microsoft.com/en-us/library/ms722734.aspx) no *referência do programador de DB OLE*.  
+Localize o grupo de propriedades e a ID de propriedade para a propriedade desejada. Para obter mais informações, consulte [propriedades do OLE DB](https://msdn.microsoft.com/library/ms722734.aspx) na *referência do programador DB OLE*.  
   
- O exemplo a seguir pressupõe que você está tentando obter uma propriedade do conjunto de linhas. O código para usar o comando ou a sessão é semelhante, mas usa uma interface diferente.  
+ O exemplo a seguir pressupõe que você está tentando obter uma propriedade do conjunto de linhas. O código para usar a sessão ou o comando é semelhante, mas usa uma interface diferente.  
   
- Criar um [CDBPropSet](../../data/oledb/cdbpropset-class.md) usando o grupo de propriedades como o parâmetro para o construtor do objeto. Por exemplo:  
+ Criar uma [CDBPropSet](../../data/oledb/cdbpropset-class.md) usando o grupo de propriedades como o parâmetro para o construtor do objeto. Por exemplo:  
   
-```  
+```cpp  
 CDBPropSet propset(DBPROPSET_ROWSET);  
 ```  
   
- Chamar [AddProperty](../../data/oledb/cdbpropset-addproperty.md), passando a ID de propriedade e um valor a ser atribuído à propriedade. O tipo do valor depende da propriedade que você está usando.  
+ Chame [AddProperty](../../data/oledb/cdbpropset-addproperty.md), passando a ID de propriedade e um valor a ser atribuído à propriedade. O tipo do valor depende da propriedade que você está usando.  
   
-```  
+```cpp  
 CDBPropSet propset(DBPROPSET_ROWSET);  
 
 propset.AddProperty(DBPROP_IRowsetChange, true);  
@@ -45,9 +45,9 @@ propset.AddProperty(DBPROP_IRowsetChange, true);
 propset.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_INSERT | DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_DELETE);  
 ```  
   
- Use o `IRowset` interface para chamar **GetProperties**. Passe a propriedade definida como um parâmetro. Aqui está o código final:  
+ Use o `IRowset` interface para chamar `GetProperties`. Passe a propriedade definida como um parâmetro. Aqui está o código final:  
   
-```  
+```cpp  
 CAgentRowset<CMyProviderCommand>* pRowset = (CAgentRowset<CMyProviderCommand>*) pThis;  
   
 CComQIPtr<IRowsetInfo, &IID_IRowsetInfo> spRowsetProps = pRowset;  

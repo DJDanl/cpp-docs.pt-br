@@ -43,12 +43,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 70c9d1b5bc4952b0a56d8e136bc7b817a1e1b1c9
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 0f77f9a33b0cf51ea54d16f89e86ea914640f627
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269764"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339592"
 ---
 # <a name="irowsetchangeimpl-class"></a>Classe IRowsetChangeImpl
 A implementação de modelos OLE DB do [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) interface na especificação do OLE DB.  
@@ -122,7 +122,7 @@ Exclui linhas do conjunto de linhas.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,  
+STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBROWSTATUS rgRowStatus[]);  
@@ -137,7 +137,7 @@ Cria e inicializa uma nova linha no conjunto de linhas.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,  
+STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,  
    HACCESSOR hAccessor,  
    void* pData,  
    HROW* phRow);  
@@ -152,7 +152,7 @@ Define valores de dados em uma ou mais colunas.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      STDMETHOD (SetData )(HROW hRow,  
+STDMETHOD (SetData )(HROW hRow,  
    HACCESSOR hAccessor,  
    void* pSrcData);  
 ```  

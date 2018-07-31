@@ -1,5 +1,5 @@
 ---
-title: Registre o código de exibição criado pelo Assistente de aplicativo (MFC acesso a dados) | Microsoft Docs
+title: Registre o código criado pelo Assistente de aplicativo (acesso a dados MFC) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 15355d156b3c85c8f99ba638b30f831da96686af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32d969ae0c54e529c53ff35f7d6c84421e848d6c
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33107097"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339097"
 ---
 # <a name="record-view-code-created-by-application-wizard--mfc-data-access"></a>Código criado pelo assistente de aplicativo (Acesso a dados MFC)
-O [Assistente de aplicativo MFC](../mfc/reference/database-support-mfc-application-wizard.md) substitui o modo de exibição `OnInitialUpdate` e `OnGetRecordset` funções de membro. Depois que a estrutura cria a janela do quadro, o documento e a exibição, ela chama `OnInitialUpdate` para inicializar a exibição. `OnInitialUpdate` obtém um ponteiro para o conjunto de registros do documento. Uma chamada para a classe base [CView::OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) função abre o conjunto de registros. O código a seguir mostra esse processo para uma `CRecordView`:  
+O [Assistente de aplicativo MFC](../mfc/reference/database-support-mfc-application-wizard.md) substitui o modo de exibição `OnInitialUpdate` e `OnGetRecordset` funções de membro. Depois que a estrutura cria a janela do quadro, o documento e a exibição, ela chama `OnInitialUpdate` para inicializar a exibição. `OnInitialUpdate` obtém um ponteiro para o conjunto de registros do documento. Uma chamada para a classe base [cview:: Oninitialupdate](../mfc/reference/cview-class.md#oninitialupdate) função abre o conjunto de registros. O código a seguir mostra esse processo para um `CRecordView`:  
   
-```  
+```cpp  
 void CSectionForm::OnInitialUpdate()  
 {  
    m_pSet = &GetDocument()->m_sectionSet;  
@@ -35,10 +35,10 @@ void CSectionForm::OnInitialUpdate()
 }  
 ```  
   
- Quando o conjunto de registros é aberto, ele seleciona os registros. [CRecordset::Open](../mfc/reference/crecordset-class.md#open) torna o primeiro registro, o registro atual e DDX move dados de membros de dados de campo do conjunto de registros para o correspondente controles de formulário no modo de exibição. Para obter mais informações sobre RFX, consulte [troca de campos de registro (RFX)](../data/odbc/record-field-exchange-rfx.md). Para obter mais informações sobre DDX, consulte [troca de dados de caixa de diálogo e validação](../mfc/dialog-data-exchange-and-validation.md). Para obter informações sobre o processo de criação de documento/exibição, consulte [usando as Classes para escrever aplicativos para Windows](../mfc/using-the-classes-to-write-applications-for-windows.md).  
+ Quando o conjunto de registros é aberto, ele seleciona os registros. [{1&gt;crecordset::Open&lt;1](../mfc/reference/crecordset-class.md#open) torna o primeiro registro o registro atual e o DDX move dados de membros de dados de campo do conjunto de registros para os respectivos controles de formulário no modo de exibição. Para obter mais informações sobre RFX, consulte [Exchange RFX (Record Field)](../data/odbc/record-field-exchange-rfx.md). Para obter mais informações sobre DDX, consulte [troca de dados de caixa de diálogo e validação](../mfc/dialog-data-exchange-and-validation.md). Para obter informações sobre o processo de criação de documento/exibição, consulte [usando as Classes para escrever aplicativos para Windows](../mfc/using-the-classes-to-write-applications-for-windows.md).  
   
 > [!NOTE]
->  Você deve dar aos usuários finais a capacidade de atualizar os controles de exibição de registro a partir do conjunto de registros. Sem esse recurso, se um usuário alterar o valor de um controle com um valor inválido, o usuário pode ficar permanentemente preso no registro atual. Para atualizar os controles, você deve chamar o `CWnd` função de membro [UpdateData](../mfc/reference/cwnd-class.md#updatedata) com um parâmetro de **FALSE**.  
+>  Você deve dar aos usuários finais a capacidade de atualizar os controles de exibição de registro a partir do conjunto de registros. Sem esse recurso, se um usuário alterar o valor de um controle com um valor inválido, o usuário pode ficar permanentemente preso no registro atual. Para atualizar os controles, você chama o `CWnd` função de membro [UpdateData](../mfc/reference/cwnd-class.md#updatedata) com um parâmetro de FALSE.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando uma exibição de registro](../data/using-a-record-view-mfc-data-access.md)

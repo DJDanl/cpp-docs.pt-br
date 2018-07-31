@@ -36,12 +36,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 99f6be0815572b88f7c46406262ed21eaefdb77d
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: 18199a700cbc5065d987a57cc076a5d0cf670577
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181192"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340658"
 ---
 # <a name="caccessorbase-class"></a>Classe CAccessorBase
 Todos os acessadores nos modelos OLE DB derivam dessa classe. `CAccessorBase` permite que um conjunto de linhas gerenciar vários acessadores. Ele também fornece uma associação de parâmetros e colunas de saída.  
@@ -74,7 +74,6 @@ Fecha os acessadores.
   
 ```cpp
 void Close();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
@@ -86,7 +85,7 @@ Recupera o identificador do acessador de um acessador especificado.
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      HACCESSOR GetHAccessor(ULONG nAccessor) const;  
+HACCESSOR GetHAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -103,7 +102,6 @@ Recupera o número de acessadores criado pela classe.
   
 ```cpp
 ULONG GetNumAccessors() const;  
-  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -115,7 +113,7 @@ Retorna true se os dados são recuperados do acessador automaticamente durante u
 ### <a name="syntax"></a>Sintaxe  
   
 ```cpp
-      bool IsAutoAccessor(ULONG nAccessor) const;  
+bool IsAutoAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 420e863fcd5d4c666bf8e9a25a2f0f53e726c871
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dcd166e205f35133fe2c466175e07ea82970e31f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105199"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339269"
 ---
 # <a name="retrieving-a-blob"></a>Recuperando um BLOB
-Você pode recuperar um objeto binário grande (BLOB) de várias maneiras. Você pode usar **DBTYPE_BYTES** para recuperar o BLOB como uma sequência de bytes ou usar uma interface como `ISequentialStream`. Para obter mais informações, consulte [BLOBS e objetos OLE](https://msdn.microsoft.com/en-us/library/ms711511.aspx) no *referência do programador de DB OLE*.  
+Você pode recuperar um objeto binário grande (BLOB) de várias maneiras. Você pode usar `DBTYPE_BYTES` para recuperar o BLOB como uma sequência de bytes ou usar uma interface como `ISequentialStream`. Para obter mais informações, consulte [BLOBS e objetos OLE](https://msdn.microsoft.com/library/ms711511.aspx) na *referência do programador DB OLE*.  
   
- O código a seguir mostra como recuperar um BLOB usando `ISequentialStream`. A macro [BLOB_ENTRY](../../data/oledb/blob-entry.md) permite que você especifique a interface e os sinalizadores usados para a interface. Depois de abrir a tabela, o código chama **leitura** repetidamente em `ISequentialStream` para ler os bytes do BLOB. O código chama **versão** de descartar o ponteiro de interface antes de chamar `MoveNext` para obter o próximo registro.  
+ O código a seguir mostra como recuperar um BLOB usando `ISequentialStream`. A macro [BLOB_ENTRY](../../data/oledb/blob-entry.md) permite que você especifique a interface e os sinalizadores usados para a interface. Depois de abrir a tabela, o código chama `Read` repetidamente em `ISequentialStream` para ler os bytes do BLOB. O código chama `Release` descartar o ponteiro de interface antes de chamar `MoveNext` para obter o próximo registro.  
   
-```  
+```cpp  
 class CCategories  
 {  
 public:  
@@ -57,7 +57,7 @@ while (categories.MoveNext() == S_OK)
 }  
 ```  
   
- Para obter mais informações sobre as macros que manipulam dados BLOB, consulte "Macros de mapa de coluna" [Macros e funções globais para modelos OLE DB consumidor](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
+ Para obter mais informações sobre as macros que lidam com dados BLOB, consulte "Macros de mapa de coluna" na [Macros e funções globais para OLE DB modelos de consumidor](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando acessadores](../../data/oledb/using-accessors.md)   

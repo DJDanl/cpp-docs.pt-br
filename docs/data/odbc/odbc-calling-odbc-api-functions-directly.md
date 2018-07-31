@@ -23,35 +23,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 55b95c5dd48631f9c724aebd163ce948c3469850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 386bc03234ccb29b293a413944f221189f466c80
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089706"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336589"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: chamando funções de API ODBC diretamente
-As classes de banco de dados fornecem uma interface simples para um [fonte de dados](../../data/odbc/data-source-odbc.md) que o ODBC. Como resultado, as classes não encapsulam a API de ODBC. Para qualquer funcionalidade que fica fora a capacidade das classes, você deve chamar funções API ODBC diretamente. Por exemplo, você deve chamar as funções de catálogo ODBC (**:: SQLColumns**, **:: SQLProcedures**, **:: SQLTables**e outros) diretamente.  
+As classes de banco de dados fornecem uma interface mais simples para um [fonte de dados](../../data/odbc/data-source-odbc.md) que o ODBC. Como resultado, as classes não encapsulam toda a API de ODBC. Para qualquer funcionalidade que está fora as capacidades das classes, você deve chamar funções API ODBC diretamente. Por exemplo, você deve chamar as funções de catálogo ODBC (`::SQLColumns`, `::SQLProcedures`, `::SQLTables`e outros) diretamente.  
   
 > [!NOTE]
 >  Fontes de dados ODBC são acessíveis por meio de classes MFC ODBC, conforme descrito neste tópico, ou as classes de objeto de acesso a dados MFC (DAO).  
   
- Para chamar uma função de API ODBC diretamente, você deve executar as mesmas etapas que necessárias se você estava fazendo as chamadas sem a estrutura. Eles são etapas:  
+ Para chamar uma função de API ODBC diretamente, você deve levar as mesmas etapas que você levaria se você estava fazendo as chamadas sem a estrutura. Eles são etapas:  
   
--   Alocar armazenamento para a chamada retorna resultados.  
+-   Alocar armazenamento para todos os resultados que do retorno da chamada.  
   
--   Passar um ODBC **HDBC** ou **HSTMT** tratar, dependendo da assinatura de parâmetro da função. Use o [AFXGetHENV](../../mfc/reference/database-macros-and-globals.md#afxgethenv) macro para recuperar o identificador do ODBC.  
+-   Passar um ODBC `HDBC` ou `HSTMT` tratar, dependendo da assinatura do parâmetro da função. Use o [AFXGetHENV](../../mfc/reference/database-macros-and-globals.md#afxgethenv) macro para recuperar o identificador ODBC.  
   
-     Variáveis de membro **CDatabase::m_hdbc** e **CRecordset::m_hstmt** estão disponíveis para que você não precisa alocar e inicializar esses por conta própria.  
+     Variáveis de membro `CDatabase::m_hdbc` e `CRecordset::m_hstmt` estão disponíveis para que você não precisa alocar e inicializar esses por conta própria.  
   
--   Talvez chame funções adicionais do ODBC para preparar-se ou acompanhar a chamada principal.  
+-   Talvez, chame funções adicionais do ODBC para se preparar para ou execute a chamada principal.  
   
--   Desalocar armazenamento quando terminar.  
+-   Desalocar o armazenamento ao concluir.  
   
- Para obter mais informações sobre essas etapas, consulte o [conectividade aberta de banco de dados (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK na documentação do MSDN.  
+ Para obter mais informações sobre essas etapas, consulte a [conectividade aberta de banco de dados (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) SDK na documentação do MSDN.  
   
- Além dessas etapas, você precisa realizar etapas adicionais para verificar os valores de retorno de função, certifique-se de que o programa não está aguardando uma chamada assíncrona para concluir e assim por diante. Você pode simplificar essas últimas etapas usando o `AFX_SQL_ASYNC` e `AFX_SQL_SYNC` macros. Para obter mais informações, consulte [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md) no *referência MFC*.  
+ Além dessas etapas, você precisa executar etapas adicionais para verificar os valores de retorno de função, certifique-se de que seu programa não está aguardando uma chamada assíncrona para concluir e assim por diante. Você pode simplificar essas últimas etapas, usando as macros AFX_SQL_ASYNC e AFX_SQL_SYNC. Para obter mais informações, consulte [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md) na *referência da MFC*.  
 
-  
 ## <a name="see-also"></a>Consulte também  
  [Noções básicas de ODBC](../../data/odbc/odbc-basics.md)

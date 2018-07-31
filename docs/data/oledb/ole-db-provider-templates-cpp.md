@@ -18,53 +18,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a331e72433ca25d280d35edfd33a56402675aea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 204abfb28ed58051f27f62b522ed0b02a0a78585
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112739"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339569"
 ---
 # <a name="ole-db-provider-templates-c"></a>Modelos de provedor de banco de dados OLE (C++)
-OLE DB é uma parte importante da estratégia de acesso a dados Universal Microsoft. O design de banco de dados OLE permite acesso a dados de alto desempenho de qualquer fonte de dados. Dados de tabela são visíveis através do OLE DB, independentemente se ela veio de um banco de dados. A flexibilidade lhe oferecem uma enorme quantidade de energia.  
+OLE DB é uma parte importante da estratégia de acesso de dados Universal da Microsoft. O design de OLE DB permite que o acesso a dados de alto desempenho de qualquer fonte de dados. Quaisquer dados tabulares são visíveis através do OLE DB, independentemente se ela veio de um banco de dados. A flexibilidade oferece uma enorme quantidade de energia.  
   
- Conforme explicado em [consumidores do OLE DB e provedores de](../../data/oledb/ole-db-consumers-and-providers.md), o conceito de consumidores e provedores do OLE DB usa. O consumidor faz solicitações de dados. o provedor retorna dados em um formato de tabela para o consumidor. De uma perspectiva de programação, a mais importante implicação desse modelo é que o provedor deve implementar qualquer chamada que o consumidor pode fazer.  
+ Conforme explicado em [consumidores do OLE DB e provedores](../../data/oledb/ole-db-consumers-and-providers.md), OLE DB usa o conceito de consumidores e provedores. O consumidor faz as solicitações de dados; o provedor retorna dados em um formato tabular para o consumidor. De uma perspectiva de programação, a implicação mais importante desse modelo é que o provedor deve implementar qualquer chamada que o consumidor pode fazer.  
   
 ## <a name="what-is-a-provider"></a>O que é um provedor?  
- Um provedor OLE DB é um conjunto de objetos COM que atender a chamadas de interface de um objeto do consumidor, a transferência de dados em um formato tabular de uma fonte durável (chamada de um repositório de dados) para o consumidor.  
+ Um provedor OLE DB é um conjunto de objetos COM que atender a chamadas de interface de um objeto do consumidor, a transferência de dados em um formato tabular de uma fonte durável (chamada de um armazenamento de dados) para o consumidor.  
   
- Provedores podem ser simples ou complexa. O provedor pode dar suporte a uma quantidade mínima de funcionalidade ou um provedor de qualidade de produção completo implementando interfaces mais. Um provedor pode retornar uma tabela, permitem que o cliente determinar o formato de tabela e executar operações em que os dados.  
+ Provedores podem ser simples ou complexos. O provedor pode dar suporte a uma quantidade mínima de funcionalidade ou um provedor de qualidade de produção completa ao implementar mais interfaces. Um provedor pode retornar uma tabela, permitem que o cliente determinar o formato da tabela e executar operações em que os dados.  
   
- Cada provedor implementa um conjunto padrão de objetos para lidar com solicitações do cliente, com significado padrão que o consumidor OLE DB pode acessar dados de qualquer provedor, independentemente do idioma (como C++ e básica).  
+ Cada provedor implementa um conjunto padrão de objetos COM ao lidar com solicitações do cliente, com significado padrão que qualquer consumidor do OLE DB pode acessar dados em qualquer provedor, independentemente da linguagem (como C++ e básico).  
   
- Cada objeto COM contém várias interfaces, alguns dos quais são necessários e alguns dos quais são opcionais. Ao implementar as interfaces obrigatórias, um provedor garante um nível mínimo de funcionalidade (chamada conformidade) que qualquer cliente deve ser capaz de usar. Um provedor pode implementar interfaces opcionais para fornecer funcionalidade adicional. [O OLE DB Provider arquitetura de modelo](../../data/oledb/ole-db-provider-template-architecture.md) descreve essas interfaces em detalhes. O cliente sempre deve chamar `QueryInterface` para determinar se um provedor oferece suporte a uma determinada interface.  
+ Cada objeto COM contém várias interfaces, algumas das quais são necessárias e alguns dos quais são opcionais. Implementando as interfaces obrigatórias, um provedor garante um nível mínimo de funcionalidade (chamada conformidade) que qualquer cliente deve ser capaz de usar. Um provedor pode implementar interfaces opcionais para fornecer funcionalidade adicional. [O OLE DB modelo de arquitetura de provedor](../../data/oledb/ole-db-provider-template-architecture.md) descreve essas interfaces em detalhes. O cliente sempre deve chamar `QueryInterface` para determinar se um provedor dá suporte a uma determinada interface.  
   
 ## <a name="ole-db-specification-level-support"></a>Suporte de nível de especificação do OLE DB  
- Os modelos de provedor do OLE DB oferecer suporte a especificação de versão 2.7 OLE DB. Usando os modelos de provedor do OLE DB, você pode implementar um provedor compatível com o nível 0. O exemplo de provedor, por exemplo, usa os modelos para implementar um servidor de comando non-MS-DOS que executa o comando DIR para consultar o sistema de arquivos. O exemplo de provedor retorna as informações do diretório em um conjunto de linhas, que é o mecanismo de banco de dados OLE padrão para retornar dados tabulares.  
+ Os modelos de provedor do OLE DB oferecer suporte a especificação de versão 2.7 do OLE DB. Usando os modelos de provedor do OLE DB, você pode implementar um provedor de conformidade de nível 0. O exemplo de provedor, por exemplo, usa os modelos para implementar um servidor de comando non-MS-DOS que executa o comando DIR para consultar o sistema de arquivos. O exemplo de provedor retorna as informações de diretório em um conjunto de linhas, que é o mecanismo de banco de dados OLE padrão para retornar dados tabulares.  
   
- O tipo mais simples de provedor com suporte os modelos OLE DB é um provedor somente leitura com nenhum comando. Provedores de comandos também são compatíveis, pois são recurso marcando e leitura/gravação. Você pode implementar um provedor de leitura/gravação ao escrever código adicional. Transações e conjuntos de linhas dinâmicos não são suportadas pela versão atual, mas você pode adicioná-los se desejar.  
+ O tipo mais simples de provedor com suporte pelos modelos OLE DB é um provedor somente leitura com nenhum comando. Provedores de comandos também têm suporte, conforme são a capacidade de uso de indicadores e leitura/gravação. Você pode implementar um provedor de leitura/gravação ao escrever código adicional. Transações e conjuntos de linhas dinâmicos não são suportadas pela versão atual, mas você pode adicioná-los se desejar.  
   
-## <a name="when-do-you-need-to-create-an-ole-db-provider"></a>Quando você precisa criar um provedor OLE DB?  
- Você sempre precisa criar seu próprio provedor; A Microsoft fornece vários provedores predefinidos e padrão no **propriedades de vínculo de dados** caixa de diálogo no Visual C++. É o principal motivo para criar um provedor OLE DB para se beneficiar da estratégia de acesso a dados Universal. Algumas das vantagens de fazer, portanto, são:  
+## <a name="when-do-you-need-to-create-an-ole-db-provider"></a>Quando você precisa criar um provedor do OLE DB?  
+ Você sempre precisa criar seu próprio provedor; A Microsoft fornece vários provedores predefinidos e padrão na **propriedades de vínculo de dados** caixa de diálogo no Visual C++. É o principal motivo para criar um provedor OLE DB para se beneficiar da estratégia de acesso a dados Universal. Portanto, algumas das vantagens de fazer são:  
   
--   Acessando dados através de qualquer linguagem como C++, Basic e Visual Basic Scripting Edition. Ele permite que os programadores diferentes em sua organização para acessar os mesmos dados da mesma maneira, independentemente da linguagem em que eles usam.  
+-   Acessando dados através de qualquer linguagem como C++, Basic e Visual Basic Scripting Edition. Ele permite que os programadores diferentes em sua organização para acessar os mesmos dados da mesma forma, independentemente de qual idioma em que eles usam.  
   
--   Expondo seus dados para outros dados de fontes como o SQL Server, o Excel e o acesso. Isso pode ser muito útil se você quiser transferir dados entre formatos diferentes.  
+-   Expondo seus dados para outros dados de fontes, como o SQL Server, Excel e Access. Isso pode ser muito útil se você quiser transferir dados entre diferentes formatos.  
   
--   Participar de operações de fonte de dados entre (heterogêneos). Isso pode ser uma maneira muito eficiente de data warehouse. Usando provedores OLE DB, você pode manter os dados em seu formato nativo e ainda é possível acessá-lo em uma operação simple.  
+-   Participar de operações de fonte de dados entre (heterogêneos). Isso pode ser uma maneira muito eficiente de data warehouse. Por meio de provedores de OLE DB, você pode manter os dados em seu formato nativo e ainda ser capaz de acessá-lo em uma operação simple.  
   
--   Adicionando recursos adicionais para seus dados, como o processamento de consulta.  
+-   Adicionando recursos adicionais aos seus dados, como o processamento de consulta.  
   
--   Aumentando o desempenho de acesso aos dados por meio do controle como ele é manipulado.  
+-   Aumentando o desempenho de acesso aos dados controlando como ele é manipulado.  
   
--   Aumentar a robustez. Se você tiver um formato de dados proprietários que apenas um programador pode acessar, estão em risco. Usando provedores OLE DB, você pode abrir esse formato proprietário para todas as suas programadores.  
+-   Aumentar a robustez. Se você tiver um formato de dados proprietários que apenas um programador pode acessar, estão em risco. Usando provedores OLE DB, você pode abrir esse formato proprietário para todos os seus programadores.  
   
 ## <a name="read-only-and-updatable-providers"></a>Provedores atualizáveis e somente leitura  
- Provedores podem variar muito em complexidade e funcionalidade. É útil categorizar provedores em provedores somente leitura e atualizável:  
+ Provedores podem variar muito em complexidade e a funcionalidade. É útil categorizar os provedores em provedores de somente leitura e atualizável:  
   
--   Visual C++ 6.0 tem suporte apenas a provedores somente leitura. [Criando um provedor OLE DB](../../data/oledb/creating-an-ole-db-provider.md) discute como criar um provedor somente leitura.  
-  
--   Provedores atualizáveis, o que podem ser atualizada pela linguagem Visual C++ (gravar) no repositório de dados. Para obter informações sobre provedores atualizáveis, consulte [criando um provedor atualizável](../../data/oledb/creating-an-updatable-provider.md); o [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) é um exemplo de um provedor atualizável.  
+-   Visual C++ 6.0 tem suporte somente os provedores de somente leitura. [Criando um provedor OLE DB](../../data/oledb/creating-an-ole-db-provider.md) discute como criar um provedor somente leitura.  
+-   Visual C++ oferece suporte a provedores atualizáveis, o que podem atualizar (gravar) o repositório de dados. Para obter informações sobre os provedores atualizáveis, consulte [criando um provedor atualizável](../../data/oledb/creating-an-updatable-provider.md); o [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f) é um exemplo de um provedor atualizável.  
   
  Para obter mais informações, consulte:  
   
@@ -76,5 +75,5 @@ OLE DB é uma parte importante da estratégia de acesso a dados Universal Micros
   
 ## <a name="see-also"></a>Consulte também  
  [Acesso a dados](../data-access-in-cpp.md)   
- [Documentação do SDK do OLE DB](https://msdn.microsoft.com/en-us/library/ms722784.aspx)   
- [Referência do programador de OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx)
+ [Documentação do SDK do OLE DB](https://msdn.microsoft.com/library/ms722784.aspx)   
+ [Referência do programador do OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)

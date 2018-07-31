@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cbcd69168b70e8d85bf2b90c3f456f79cd1c228c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e9ee36d2300ed1e86c1f867012ed54c85692f5bd
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954578"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340632"
 ---
 # <a name="creating-an-updatable-provider"></a>Criando um provedor atualizável
 
@@ -30,7 +30,7 @@ Visual C++ oferece suporte a provedores atualizáveis ou os provedores que podem
   
  Este tópico pressupõe que você está começando com um provedor viável. Há duas etapas para criar um provedor atualizável. Primeiro você deve decidir como o provedor será fazer alterações ao repositório de dados; Especificamente, se as alterações devem ser feito imediatamente ou adiada até que um comando update é emitido. A seção "[tornando provedores atualizáveis](#vchowmakingprovidersupdatable)" descreve as alterações e configurações que você precisa fazer no código do provedor.  
   
- Em seguida, você deve verificar se que seu provedor contém toda a funcionalidade para dar suporte a qualquer coisa que o consumidor pode solicitar dele. Se o consumidor deseja atualizar o armazenamento de dados, o provedor deve conter código que persiste os dados para o armazenamento de dados. Por exemplo, você pode usar a biblioteca de tempo de execução do C ou o MFC para realizar operações em sua fonte de dados. A seção "[escrevendo para a fonte de dados](#vchowwritingtothedatasource)" descreve como gravar na fonte de dados, lidar com `NULL` e valores padrão e definir sinalizadores de coluna.  
+ Em seguida, você deve verificar se que seu provedor contém toda a funcionalidade para dar suporte a qualquer coisa que o consumidor pode solicitar dele. Se o consumidor deseja atualizar o armazenamento de dados, o provedor deve conter código que persiste os dados para o armazenamento de dados. Por exemplo, você pode usar a biblioteca de tempo de execução do C ou o MFC para realizar operações em sua fonte de dados. A seção "[escrevendo para a fonte de dados](#vchowwritingtothedatasource)" descreve como gravar na fonte de dados, lidar com valores nulos e padrão e definir sinalizadores de coluna.  
   
 > [!NOTE]
 >  UpdatePV é um exemplo de um provedor atualizável. UpdatePV é o mesmo que MyProv, mas com suporte atualizável.  
@@ -55,7 +55,7 @@ Visual C++ oferece suporte a provedores atualizáveis ou os provedores que podem
   
      Adicionar `IRowsetChangeImpl` para sua cadeia de herança usando este formato:  
   
-    ```  
+    ```cpp  
     IRowsetChangeImpl< rowset-name, storage-name >  
     ```  
   
@@ -65,7 +65,7 @@ Visual C++ oferece suporte a provedores atualizáveis ou os provedores que podem
   
      Adicionar `IRowsetUpdate` para sua cadeia de herança usando este formato:  
   
-    ```  
+    ```cpp  
     IRowsetUpdateImpl< rowset-name, storage>  
     ```  
   
@@ -88,7 +88,7 @@ Visual C++ oferece suporte a provedores atualizáveis ou os provedores que podem
   
 4.  Em seu mapa de conjunto de propriedade, você também deve incluir todas as configurações a seguir conforme elas aparecem abaixo:  
   
-    ```  
+    ```cpp  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
       DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)  
     PROPERTY_INFO_ENTRY_VALUE(CHANGEINSERTEDROWS, VARIANT_TRUE)  
