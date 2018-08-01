@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a791615f7fd91a7ccfcda45b23fc524ebd9b6400
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4673101d41b896ed3fc19aa1998aa9329064b41
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409061"
 ---
 # <a name="property-c"></a>property (C++)
 **Seção específica da Microsoft**  
@@ -31,18 +32,17 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
    __declspec( property( get=get_func_name ) ) declarator  
    __declspec( property( put=put_func_name ) ) declarator  
    __declspec( property( get=get_func_name, put=put_func_name ) ) declarator  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Quando o compilador vê um membro de dados declarado com esse atributo à direita de um operador de seleção de membro ("**.**"ou"**->**"), ele converte a operação para um **obter** ou **colocar** função, dependendo se essa expressão é um l-value ou um r. Mais complicado contextos, como "`+=`", é executada uma reescrita fazendo ambos **obter** e **colocar**.  
+ Quando o compilador vê um membro de dados declarado com esse atributo à direita de um operador de seleção de membro ("**.**"ou"**->**"), ele converte a operação de um `get` ou `put` função, dependendo se essa expressão for um l-value ou um valor r. Nos contextos mais complicados, como "`+=`", uma regravação é executada fazendo `get` e `put`.  
   
  Esse atributo também pode ser usado na declaração de uma matriz vazia em uma definição de classe ou estrutura. Por exemplo:  
   
-```  
+```cpp 
 __declspec(property(get=GetX, put=PutX)) int x[];  
 ```  
   
@@ -52,7 +52,7 @@ __declspec(property(get=GetX, put=PutX)) int x[];
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // declspec_property.cpp  
 struct S {  
    int i;  

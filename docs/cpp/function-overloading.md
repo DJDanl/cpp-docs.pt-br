@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1506870ff0b5bb2aea55874d32f62b1da63c7302
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f57ae6a7d084a497ec41c9b66b314ad1fdb3e7fc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942163"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406565"
 ---
 # <a name="function-overloading"></a>Sobrecarga de função
 O C++ permite a especificação de mais de uma função do mesmo nome no mesmo escopo. Eles são chamados *sobrecarregados* funções. Funções sobrecarregadas permitem que você fornecer a semântica diferente para uma função, dependendo dos tipos e do número de argumentos. 
@@ -163,7 +163,7 @@ F1 = Add( F2, 23 );
   
  A instrução anterior compila dois conjuntos:  
   
-|Conjunto 1: Funções candidatas que têm o primeiro argumento do tipo fração|Conjunto 2: Funções candidatas cujo segundo argumento pode ser convertido no tipo int|  
+|Conjunto 1: Funções candidatas que têm o primeiro argumento do tipo fração|Conjunto 2: Release Candidate funções cujo segundo argumento pode ser convertido em tipo **int**|  
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |Variant 1|Variant 1 (**int** pode ser convertido em **longo** usando uma conversão padrão)|  
 |Variante 3||  
@@ -178,7 +178,7 @@ F1 = Add( 3, 6 );
   
  A chamada de função anterior compila os seguintes conjuntos:  
   
-|Conjunto 1: Funções candidatas que têm o primeiro argumento do tipo int|Conjunto 2: Funções candidatas que têm o segundo argumento do tipo int|  
+|Conjunto 1: Candidato funções que têm primeiro argumento do tipo **int**|Conjunto 2: Release Candidate funções que têm segundo argumento do tipo **int**|  
 |---------------------------------------------------------------------|----------------------------------------------------------------------|  
 |Variant 2 (**int** pode ser convertido em **longo** usando uma conversão padrão)|Variant 1 (**int** pode ser convertido em **longo** usando uma conversão padrão)|  
   
@@ -282,7 +282,7 @@ volatile Over&
   
 3.  Correspondência usando conversões padrão. Qualquer sequência não classificada como correspondência exata ou correspondência usando promoções que contém somente conversões padrão e conversões triviais é classificada como correspondência usando conversões padrão. Nessa categoria, as seguintes regras são aplicadas:  
   
-    -   Conversão de um ponteiro para uma classe derivada, em um ponteiro para uma classe base direta ou indireta é preferível à conversão em **void \***  ou **const void \*** .  
+    -   Conversão de um ponteiro para uma classe derivada, em um ponteiro para uma classe base direta ou indireta é preferível à conversão em `void *` ou `const void *`.  
   
     -   A conversão de um ponteiro em uma classe derivada, em um ponteiro em uma classe base gera uma correspondência melhor quanto mais próxima a classe base estiver de uma classe base direta. Suponhamos que a hierarquia de classes seja a ilustrada na figura a seguir.  
   
@@ -439,7 +439,6 @@ int main()
     auto v2 = C().get_data(); // get the original. prints "rvalue"
     return 0;
 }
-
 ```
   
 ## <a name="restrictions-on-overloading"></a>Restrições de sobrecarga  
@@ -466,7 +465,7 @@ int main()
     void Print( PSTR szToPrint );  
     ```  
   
-     As duas funções anteriores têm listas de argumento idênticas. `PSTR` é um sinônimo do tipo **char \*** . No escopo do membro, esse código gera um erro.  
+     As duas funções anteriores têm listas de argumento idênticas. `PSTR` é um sinônimo do tipo `char *`. No escopo do membro, esse código gera um erro.  
   
 -   Os tipos enumerados são tipos distintos e podem ser usados para distinguir as funções sobrecarregadas.  
   
@@ -573,8 +572,5 @@ double Account::Deposit( double dAmount, char *szPassword )
 }  
 ```
 
-
-
-  
 ## <a name="see-also"></a>Consulte também  
  [Funções (C++)](../cpp/functions-cpp.md)

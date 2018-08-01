@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f904fa11195c27f8e08856ef391d0ba8adbedece
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f722d1c4e8fc3d534403c2d18713e64dc2069011
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939670"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404893"
 ---
 # <a name="comerrorsource"></a>_com_error::Source
 **Seção específica da Microsoft**  
@@ -31,13 +31,11 @@ ms.locfileid: "37939670"
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 _bstr_t Source() const;  
-  
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna o resultado da `IErrorInfo::GetSource` para o `IErrorInfo` registrado no `_com_error` objeto. O BSTR resultante é encapsulado em um objeto `_bstr_t`. Se nenhum `IErrorInfo` é registrado, ele retornará um `_bstr_t`.  
+ Retorna o resultado da `IErrorInfo::GetSource` para o `IErrorInfo` registrado no `_com_error` objeto. O `BSTR` resultante é encapsulado em um objeto `_bstr_t`. Se nenhum `IErrorInfo` é registrado, ele retornará um `_bstr_t`.  
   
 ## <a name="remarks"></a>Comentários  
  Qualquer falha ao chamar o `IErrorInfo::GetSource` método é ignorado.  

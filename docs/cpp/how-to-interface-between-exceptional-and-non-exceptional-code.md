@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74805c7ecd4b4ecef71d8ac1358fd6c2014e27d5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e6c3217360f504d2433551d6ad624a378f4403af
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940112"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407966"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Como realizar a interface entre códigos excepcional e não excepcional
 Este artigo descreve como implementar o tratamento de exceções consistente em um módulo de C++ e também como converter bidirecionalmente essas exceções em códigos de erro nos limites da exceção.  
@@ -161,7 +161,6 @@ int main ( int argc, char* argv[] )
         cout.copyfmt(state); // restore previous formatting  
     }  
 }  
-  
 ```  
   
 ## <a name="calling-exceptional-code-from-non-exceptional-code"></a>Chamando código excepcional de código não excepcional  
@@ -194,7 +193,6 @@ BOOL DiffFiles2(const string& file1, const string& file2)
     }   
     return FALSE;   
 }  
-  
 ```  
   
  Quando você converte de exceções para códigos de erro, um problema potencial é que os códigos de erro frequentemente não contêm a riqueza de informações que uma exceção pode armazenar. Para resolver isso, você pode fornecer um **catch** bloco para cada tipo de exceção específica que pode ser gerado e executar o log para registrar os detalhes da exceção antes que ele é convertido em um código de erro. Essa abordagem poderá criar muitas repetições de código se várias funções usarem o mesmo conjunto de **catch** blocos. Uma boa maneira de evitar a repetição de código é refatorar esses blocos em uma função particular de utilitário que implementa o **tente** e **catch** bloqueia e aceita um objeto de função é invocado no **tente** bloco. Em cada função pública, passe o código para a função de utilitário como uma expressão lambda.  
@@ -217,7 +215,6 @@ bool Win32ExceptionBoundary(Func&& f)
     }   
     return false;   
 }  
-  
 ```  
   
  O exemplo a seguir mostra como escrever a expressão lambda que define o functor. Quando um funtor é definido como "embutido" usando uma expressão lambda, geralmente é mais fácil de ler do que seria se tivesse sido escrito como um objeto de função nomeada.  
@@ -237,7 +234,6 @@ bool DiffFiles3(const string& file1, const string& file2)
         return true;   
     });   
 }  
-  
 ```  
   
  Para obter mais informações sobre expressões lambda, consulte [Expressões lambda](../cpp/lambda-expressions-in-cpp.md).  

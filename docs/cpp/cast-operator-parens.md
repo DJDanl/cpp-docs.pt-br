@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ef2d370f4344e4a66c70989582da8d7ac7d5186
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8e7f9c723f605a4f66d5e2bdbb4c39f50645b58b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408741"
 ---
 # <a name="cast-operator-"></a>Operador cast: ()
 Uma conversão de tipo fornece um método para conversão explícita do tipo de um objeto em uma situação específica.  
@@ -27,9 +28,7 @@ Uma conversão de tipo fornece um método para conversão explícita do tipo de 
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      unary-expression  
-( type-name ) cast-expression  
+unary-expression ( type-name ) cast-expression  
 ```  
   
 ## <a name="remarks"></a>Comentários  
@@ -39,7 +38,7 @@ Uma conversão de tipo fornece um método para conversão explícita do tipo de 
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // expre_CastOperator.cpp  
 // compile with: /EHsc  
 // Demonstrate cast operator  
@@ -59,7 +58,7 @@ int main()
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // expre_CastOperator2.cpp  
 // The following sample shows how to define and use a cast operator.   
 #include <string.h>  
@@ -129,7 +128,7 @@ Raw Bytes after cast:   Exciting
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões com operadores unários](../cpp/expressions-with-unary-operators.md)   
- [Operadores C++ internos, precedência e capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores C++ internos, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operador de conversão de tipo explícito:)](../cpp/explicit-type-conversion-operator-parens.md)   
  [Operadores de conversão](../cpp/casting-operators.md)   
  [Operadores cast](../c-language/cast-operators.md)

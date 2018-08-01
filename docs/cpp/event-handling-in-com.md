@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f60a0a8a53d77c2d8aa111ce812bf64ab11c4910
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a4fddaa53aed54fd33afee9205fcc9a3819f1b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942153"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406861"
 ---
 # <a name="event-handling-in-com"></a>Tratamento de eventos em COM
 Manipulação de eventos COM, você configura um receptor de origem e o evento de eventos usando o [event_source](../windows/event-source.md) e [event_receiver](../windows/event-receiver.md) atributos, respectivamente, especificando `type` = `com`. Esses atributos injetam o código apropriado para interfaces personalizadas, duais e de expedição a fim de permitir que as classes às quais são aplicados acionem eventos e manipulem eventos por meio de pontos de conexão COM.  
   
 ## <a name="declaring-events"></a>Declarando eventos  
- Em uma classe de origem do evento, use o [Event](../cpp/event.md) palavra-chave em uma declaração de interface para declarar os métodos dessa interface como eventos. Os eventos dessa interface são acionados quando você os chama como métodos da interface. Métodos em interfaces de evento podem ter zero ou mais parâmetros (que deve ser `in` parâmetros). O tipo de retorno pode ser void ou qualquer tipo integral.  
+ Em uma classe de origem do evento, use o [Event](../cpp/event.md) palavra-chave em uma declaração de interface para declarar os métodos dessa interface como eventos. Os eventos dessa interface são acionados quando você os chama como métodos da interface. Métodos em interfaces de evento podem ter zero ou mais parâmetros (que deve ser *em* parâmetros). O tipo de retorno pode ser void ou qualquer tipo integral.  
   
 ## <a name="defining-event-handlers"></a>Definindo manipuladores de eventos  
  Em uma classe de receptor de evento, você define manipuladores de eventos, que são métodos com assinaturas (tipos de retorno, convenções de chamada e argumentos) que correspondem ao evento que eles manipularão. Para eventos COM, as convenções de chamada não precisam ter correspondência; ver [eventos COM dependentes do Layout](#vcconeventhandlingincomanchorlayoutdependentcomevents) abaixo para obter detalhes.  

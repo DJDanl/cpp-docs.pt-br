@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc5ec18eec5be6ee0cc696768be65cd62b74bdc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 546006fcf1c559317b4afff424976db8109442e7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392777"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404746"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -66,21 +66,21 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
+*x*  
 Valor de ponto flutuante.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **acosh** funções retornam o cosseno inverso hyberbolic (arco cosseno hiperbólico) de *x*. Essas funções são válidas sobre o domínio *x* ≥ 1. Se *x* é menor que 1, **errno** é definido como **EDOM** e o resultado é um NaN silenciosa. Se *x* é um NaN silencioso, indefinido, ou infinito, o mesmo valor é retornado.
+O **acosh** funções retornam o cosseno hiperbólico inverso (arcosseno hiperbólico) de *x*. Essas funções são válidas no domínio *x* ≥ 1. Se *x* é menor que 1 `errno` é definido como `EDOM` e o resultado será um NaN silencioso. Se *x* é um NaN silencioso, indefinido, ou infinito, o mesmo valor é retornado.
 
-|Entrada|Exceção SEH|**matherr** exceção|
+|Entrada|Exceção SEH|Exceção `_matherr`|
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|nenhum|nenhum|
 |*x* < 1|nenhum|nenhum|
 
 ## <a name="remarks"></a>Comentários
 
-Quando você usar C++, você pode chamar sobrecargas de **acosh** que levar e retornar **float** ou **longo** **duplo** valores. Em um programa C, **acosh** sempre usa e retorna **duplo**.
+Ao usar o C++, é possível chamar sobrecargas de **acosh** que usam e retornam **float** ou **longo** **double** valores. Em um programa do C **acosh** sempre usa e retorna **duplo**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -120,9 +120,9 @@ acosh( 1.324609 ) = 0.785398
 
 ## <a name="see-also"></a>Consulte também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
-[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
-[cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>
-[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)<br/>
-[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)<br/>
+[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)  
+[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)  
+[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)  
+[cosh, coshf, coshl](cosh-coshf-coshl.md)  
+[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)  
+[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)  

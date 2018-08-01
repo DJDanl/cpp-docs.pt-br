@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8aca9422c4798cd798d048ce42443c4f38bd170
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 677d3dcab98b9bff8df7a49ba584900bd0b72925
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942225"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407212"
 ---
 # <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
 **Seção específica da Microsoft**  
@@ -31,7 +31,6 @@ ms.locfileid: "37942225"
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 HRESULT CreateInstance(  
    const CLSID& rclsid,  
    IUnknown* pOuter=NULL,  
@@ -68,7 +67,7 @@ HRESULT CreateInstance(
 ## <a name="remarks"></a>Comentários  
  Essas funções membro chamam `CoCreateInstance` para criar um novo objeto COM e, em seguida, buscam o tipo de interface desse ponteiro inteligente. O ponteiro resultante é encapsulado nesse objeto `_com_ptr_t`. `Release` é chamado para diminuir a contagem de referência para o ponteiro anteriormente encapsulado. Essa rotina retorna o HRESULT para indicar êxito ou falha.  
   
--   **CreateInstance (***rclsid* **,***dwClsContext***)** cria uma nova instância em execução de um objeto dado um `CLSID`.        
+-   **CreateInstance (***rclsid* **,***dwClsContext***)** cria uma nova instância em execução de um objeto dado um `CLSID`.  
   
 -   **CreateInstance (***clsidString* **,***dwClsContext***)** cria uma nova instância em execução de um objeto dado um Cadeia de caracteres Unicode que contém um `CLSID` (começando com "**{**") ou um `ProgID`.        
   

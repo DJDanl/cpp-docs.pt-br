@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4318d7913b180c3fbadcf9d655e402c9b0ad7ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: dd26c8b9fd044c9f6372ef0a680fbc770620e43d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408981"
 ---
 # <a name="assignment-operators"></a>Operadores de atribuição
 ## <a name="syntax"></a>Sintaxe  
@@ -61,8 +62,8 @@ assignment-operator : one of
 ## <a name="remarks"></a>Comentários  
  Os operadores de atribuição armazenam um valor no objeto designado pelo operando à esquerda. Há três tipos de operações de atribuição: 
 
-1. atribuição simples, no qual o valor do segundo operando é armazenado no objeto especificado pelo primeiro operando. 1. atribuição composta na qual uma operação bit a bit, shift ou aritmética é executada antes de armazenar o resultado.
-1. quais recursos são transferidos sem copiar mova atribuição (para tipos de classe).
+1. atribuição simples, no qual o valor do segundo operando é armazenado no objeto especificado pelo primeiro operando. 1. atribuição composta, em que uma operação bit a bit, shift ou aritmética é realizada antes de armazenar o resultado.
+1. Mova a atribuição (para tipos de classe) em quais recursos são transferidos sem copiar.
 
 
 Todos os operadores de atribuição na tabela a seguir, exceto o = e & & = operadores são operadores de atribuição composta.  
@@ -82,7 +83,7 @@ Todos os operadores de atribuição na tabela a seguir, exceto o = e & & = opera
 |**&=**|Obtém o bit a bit AND do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando.|  
 |**^=**|Obtém o bit a bit exclusivo OR do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando.|  
 |**\|=**|Obtém o bit a bit inclusivo OR do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando.|
-|**&&=**| Mova o operador de atribuição (para tipos de classe somente). Se o segundo operando é um rvalue mover seus recursos para o primeiro operando (sem copiá-los). Consulte [construtores de mover e mova operadores de atribuição](move-constructors-and-move-assignment-operators-cpp.md) para obter mais informações.|
+|**&&=**| Operador de atribuição de movimentação (para tipos de classe apenas). Se o segundo operando for um rvalue, mova seus recursos para o primeiro operando (sem copiá-los). Ver [construtores Move e operadores de atribuição de movimentação](move-constructors-and-move-assignment-operators-cpp.md) para obter mais informações.|
   
  **Palavras-chave do operador**  
   
@@ -94,11 +95,11 @@ Todos os operadores de atribuição na tabela a seguir, exceto o = e & & = opera
 |**\|=**|`or_eq`|  
 |**^=**|`xor_eq`|  
   
- Há duas maneiras para acessar essas palavras-chave de operador em seus programas: incluem o arquivo de cabeçalho `iso646.h`, ou de compilação com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção de compilador (desabilitar extensões de linguagem).  
+ Há duas maneiras para acessar essas palavras-chave de operador em seus programas: incluir o arquivo de cabeçalho `iso646.h`, ou compilando com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção do compilador (desabilitar extensões de linguagem).  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // expre_Assignment_Operators.cpp  
 // compile with: /EHsc  
 // Demonstrate assignment operators  
@@ -129,7 +130,7 @@ int main() {
   
  Um objeto de qualquer classe derivada exclusiva de uma classe base pode ser atribuída a um objeto da classe base. O contrário não é válido porque existe uma conversão implícita da classe derivada para a classe base, mas não da classe base para a classe derivada. Por exemplo:  
   
-```  
+```cpp 
 // expre_SimpleAssignment.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -160,14 +161,14 @@ int main()
   
  Para objetos de tipo classe, a atribuição é diferente de inicialização. Para ilustrar como a atribuição e a inicialização podem ser diferentes, considere o código  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B = A;  
 ```  
   
  O código anterior mostra um inicializador; ele chama o construtor de `UserType2` que usa um argumento do tipo `UserType1`. Dado o código  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B;  
   
@@ -176,7 +177,7 @@ B = A;
   
  a instrução de atribuição  
   
-```  
+```cpp 
 B = A;   
 ```  
   
@@ -189,11 +190,11 @@ B = A;
 -   Chamar um construtor `UserType2::UserType2`, desde que essa construtor exista, que usa um argumento `UserType1` e copia o resultado.  
   
 ## <a name="compound-assignment"></a>Atribuição composta  
- Os operadores de atribuição composta, mostrados na tabela [operadores de atribuição](../cpp/assignment-operators.md), são especificados no formulário *e1* `op` =  *e2*, onde *e1* é um l-value pode ser modificado não é do tipo const e *e2* é um dos seguintes:  
+ Os operadores de atribuição composta, mostrados na tabela [operadores de atribuição](../cpp/assignment-operators.md), são especificadas no formulário *e1* `op` =  *e2*, onde *e1* é um l-value modificável não é do tipo const e *e2* é um dos seguintes:  
   
 -   Um tipo aritmético  
   
--   Um ponteiro se `op` é + ou -  
+-   Um ponteiro, se `op` é + ou -  
   
  O *e1* `op` =  *e2* formulário se comporta como *e1* *= e1* `op` *e2*, mas *e1* é avaliada apenas uma vez.  
   
@@ -206,5 +207,5 @@ B = A;
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)   
- [Operadores C++ internos, precedência e capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores C++ internos, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operadores de atribuição C](../c-language/c-assignment-operators.md)

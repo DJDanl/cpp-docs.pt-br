@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656785fab5e5ffc8a6fa13711d2964f43cdc7d87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 94c97eaa987163aa35a3f763a1d56c2e6db6050c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393141"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405208"
 ---
 # <a name="alignedmalloc"></a>_aligned_malloc
 
@@ -55,23 +55,23 @@ void * _aligned_malloc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*size*<br/>
+*size*  
 Tamanho da alocação de memória solicitada.
 
-*alignment*<br/>
+*alignment*  
 O valor de alinhamento, que deve ser um inteiro elevado à segunda potência.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para o bloco de memória que foi alocado ou **nulo** se a operação falhou. O ponteiro é um múltiplo de *alinhamento*.
+Um ponteiro para o bloco de memória que foi alocado ou nulo se a operação falhou. O ponteiro é um múltiplo de *alinhamento*.
 
 ## <a name="remarks"></a>Comentários
 
-**aligned_malloc** baseia-se em [malloc](malloc.md).
+**aligned_malloc** se baseia [malloc](malloc.md).
 
-**aligned_malloc** está marcado como `__declspec(noalias)` e `__declspec(restrict)`, que significa que a função é garantia de não modificar variáveis globais e que o ponteiro retornado não é um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
+**aligned_malloc** está marcada `__declspec(noalias)` e `__declspec(restrict)`, o que significa que a função não é garantido que modifica variáveis globais e que o ponteiro retornado não é um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
 
-Esta função define **errno** para **ENOMEM** se a alocação de memória falhou ou se o tamanho solicitado é maior que **heap_maxreq**. Para obter mais informações sobre **errno**, consulte [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Além disso, **aligned_malloc** valida seus parâmetros. Se *alinhamento* não é uma potência de 2 ou *tamanho* for zero, essa função invoca o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essa função retorna **nulo** e define **errno** para **EINVAL**.
+Essa função define `errno` como `ENOMEM` se a alocação da memória tiver falhado ou se o tamanho solicitado for maior que `_HEAP_MAXREQ`. Para obter mais informações sobre `errno`, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Além disso, **aligned_malloc** valida seus parâmetros. Se *alinhamento* não for uma potência de 2 ou *tamanho* for zero, essa função invocará o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará NULL e definirá `errno` para `EINVAL`.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -163,4 +163,4 @@ This pointer, 3280891, is offset by 5 on alignment of 16
 
 ## <a name="see-also"></a>Consulte também
 
-[Alinhamento de dados](../../c-runtime-library/data-alignment.md)<br/>
+[Alinhamento de dados](../../c-runtime-library/data-alignment.md)  

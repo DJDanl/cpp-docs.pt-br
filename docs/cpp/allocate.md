@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a253d1b539d1f3d2648cba5fa41b6d1cfbc955
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 82ce0af801b77a9566bd6395a9f03b05f41676d7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408761"
 ---
 # <a name="allocate"></a>allocate
 **Seção específica da Microsoft**  
@@ -31,13 +32,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-
    __declspec(allocate("segname")) declarator  
-
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O nome *segname* devem ser declarados usando um dos pragmas a seguir:  
+ O nome *segname* deve ser declarado usando um dos seguintes pragmas:  
   
 -   [code_seg](../preprocessor/code-seg.md)  
   
@@ -51,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // allocate.cpp  
 #pragma section("mycode", read)  
 __declspec(allocate("mycode"))  int i = 0;  

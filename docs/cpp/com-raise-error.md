@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f38a0d97b90f1512e5f16b3bd147bda3e0614e4f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 54cb2183bccc45446cd68b8d5d6d2753f571009b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942229"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408083"
 ---
 # <a name="comraiseerror"></a>_com_raise_error
 **Seção específica da Microsoft**  
@@ -31,7 +31,6 @@ ms.locfileid: "37942229"
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 void __stdcall _com_raise_error(  
    HRESULT hr,  
    IErrorInfo* perrinfo = 0  
@@ -46,11 +45,11 @@ void __stdcall _com_raise_error(
  Objeto `IErrorInfo`.  
   
 ## <a name="remarks"></a>Comentários  
- `_com_raise_error`, que é definido em \<comdef >, pode ser substituído por uma versão escrito pelo usuário do mesmo nome e protótipo. Isso poderia ser feito se você quisesse usar `#import`, mas não quisesse usar ao tratamento de exceções do C++. Nesse caso, uma versão de usuário do `_com_raise_error` pode decidir fazer um `longjmp` ou exibir uma caixa de mensagem e ser interrompido. No entanto, a versão do usuário não deve retornar, pois o código de suporte do compilador COM não espera que ela retorne.  
+ **com_raise_error**, que é definido em \<comdef >, pode ser substituído por uma versão escrito pelo usuário do mesmo nome e protótipo. Isso poderia ser feito se você quisesse usar `#import`, mas não quisesse usar ao tratamento de exceções do C++. Nesse caso, uma versão de usuário do **com_raise_error** pode decidir fazer um `longjmp` ou exibir uma caixa de mensagem e ser interrompido. No entanto, a versão do usuário não deve retornar, pois o código de suporte do compilador COM não espera que ela retorne.  
   
  Você também pode usar [set_com_error_handler](../cpp/set-com-error-handler.md) para substituir a função de tratamento de erros padrão.  
   
- Por padrão, `_com_raise_error` é definido da seguinte forma:  
+ Por padrão, **com_raise_error** é definido da seguinte maneira:  
   
 ```cpp  
 void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {  

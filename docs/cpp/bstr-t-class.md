@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ed9c32a204bdef726a5ace88d811d2eeeb2c53
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: f7cb3d05997cfe3d803f522962ed9e7382269bd3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027242"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404919"
 ---
 # <a name="bstrt-class"></a>Classe _bstr_t
 **Seção específica da Microsoft**  
   
- Um `_bstr_t` encapsula o objeto de [tipo de dados BSTR](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228). A classe gerencia a alocação de recursos e a desalocação por meio de chamadas de função `SysAllocString` e `SysFreeString` e outros `BSTR` APIs quando apropriado. A classe `_bstr_t` usa contagem de referências para evitar sobrecarga excessiva.  
+ Um `_bstr_t` encapsula o objeto de [tipo de dados BSTR](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228). A classe gerencia a alocação de recursos e a desalocação por meio de chamadas de função `SysAllocString` e `SysFreeString` e outros `BSTR` APIs quando apropriado. O **bstr_t** classe usa a contagem de referências para evitar sobrecarga excessiva.  
   
 ### <a name="construction"></a>Construção  
   

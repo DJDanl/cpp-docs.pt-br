@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af1220cbb6b872ebd0370cfa526aba47338e70e6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 33ed35d02547acdbc9a08928a6e698c3e039d745
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028145"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405565"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Operadores de construtores de movimento e de atribuição de movimento (C++)
 Este tópico descreve como gravar um *construtor de movimentação* e um operador de atribuição de movimentação para a classe C++. Um construtor de movimentação permite que os recursos pertencentes a um objeto rvalue a ser movido para um lvalue sem copiar. Para obter mais informações sobre a semântica de movimentação, consulte [Declarador de referência Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
@@ -250,7 +250,7 @@ int main()
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```Output  
 In MemoryBlock(size_t). length = 25.  
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.  
 In ~MemoryBlock(). length = 0.  
@@ -273,7 +273,7 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  Antes do Visual Studio 2010, este exemplo produziu a saída a seguir:  
   
-```  
+```Output  
 In MemoryBlock(size_t). length = 25.  
 In MemoryBlock(const MemoryBlock&). length = 25. Copying resource.  
 In ~MemoryBlock(). length = 25. Deleting resource.  
@@ -304,7 +304,6 @@ In ~MemoryBlock(). length = 75. Deleting resource.
  Se você fornecer um construtor de movimentação e um operador de atribuição de movimentação de sua classe, poderá eliminar o código supérfluo escrevendo o construtor de movimentação para chamar o operador de atribuição de movimentação. O exemplo a seguir mostra uma versão revisada do construtor de movimentação que chama o operador de atribuição de movimentação:  
   
 ```cpp
-  
 // Move constructor.  
 MemoryBlock(MemoryBlock&& other)  
    : _data(nullptr)  

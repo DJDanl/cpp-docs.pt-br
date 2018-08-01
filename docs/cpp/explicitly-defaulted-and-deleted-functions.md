@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be96658d5e2920f480747e484f60bed5c16f09c1
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 887ab1e29cf2a0eab656cc6d1b4587252871d328
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942240"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402816"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Funções explicitamente usadas como padrão e excluídas
 No C++11, as funções usadas como padrão e excluídas proporcionam controle explícito sobre se as funções de membro especial serão geradas automaticamente. As funções excluídas também oferecem uma linguagem simples para impedir que promoções de tipos problemáticos ocorram em argumentos para funções de todos os tipos — funções de membro especial, funções de membro normal e funções de não membro — que, de outra forma, causariam uma chamada de função indesejada.  
@@ -145,5 +145,4 @@ template < typename T >
 void call_with_true_double_only(T) =delete; //prevent call through type promotion of any T to double from succeeding.  
   
 void call_with_true_double_only(double param) { return; } // also define for const double, double&, etc. as needed.  
-  
 ```

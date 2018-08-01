@@ -18,23 +18,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ab09d5aadb489208b2e7591c2bf0f60ab836da4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15e872faab5beee296e4543c8404141428345842
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417594"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402397"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Especificações de exceção (lançar, noexcept) (C++)
 
-Especificações de exceção são um recurso de linguagem C++ que indicam a intenção do programador sobre os tipos de exceção que pode ser propagada por uma função. Você pode especificar que uma função pode não ser encerrado ou por uma exceção usando uma *especificação de exceção*. O compilador pode usar essas informações para otimizar a chamadas para a função e encerrar o programa se uma exceção inesperada ignora a função. 
+Especificações de exceção são um recurso da linguagem C++ que indicam a intenção do programador sobre os tipos de exceção que podem ser propagadas por uma função. Você pode especificar que uma função pode ou não pode sair por uma exceção usando uma *especificação de exceção*. O compilador pode usar essas informações para otimizar as chamadas para a função e encerrar o programa se uma exceção inesperada ignora a função. 
 
-Antes de C++ 17 havia dois tipos de especificação de exceção. O *noexcept especificação* era nova no C++ 11. Especifica se o conjunto de exceções potenciais que podem escapar a função está vazio. O *especificação de exceção dinâmico*, ou `throw(optional_type_list)` especificação foi preterido no C++ 11 e removido em C++ 17, exceto para `throw()`, que é um alias para `noexcept(true)`. Essa especificação de exceção foi projetada para fornecer informações de resumo sobre quais exceções podem ser geradas fora de uma função, mas na prática, ele foi encontrado para ser problemático. Uma especificação de exceção dinâmico que revelar um pouco úteis foi o incondicional `throw()` especificação. Por exemplo, a declaração da função:
+Antes do c++17, havia dois tipos de especificação de exceção. O *especificação noexcept* era nova no c++11. Especifica se o conjunto de exceções possíveis que podem escapar a função está vazio. O *especificação de exceção dinâmica*, ou `throw(optional_type_list)` especificação, foi preterido no c++11 e removidos em c++17, exceto para `throw()`, que é um alias para `noexcept(true)`. Essa especificação de exceção foi projetada para fornecer informações de resumo sobre quais exceções podem ser lançadas fora de uma função, mas na prática foi encontrado para ser um problema. Uma especificação de exceção dinâmica que provou ser um pouco útil era a incondicional `throw()` especificação. Por exemplo, a declaração de função:
 
 ```cpp
 void MyFunction(int i) throw();
 ```
-informa o compilador que a função não lança exceções. No entanto, em **/std:c + + 14** modo, isso poderá resultar em comportamento inesperado se a função gera uma exceção. Portanto, é recomendável usar o [noexcept](../cpp/noexcept-cpp.md) operador em vez de acima:
+informa o compilador que a função não lança exceções. No entanto, no **/std: c + + 14** modo isso pode resultar em comportamento indefinido se a função gera uma exceção. Portanto, é recomendável usar o [noexcept](../cpp/noexcept-cpp.md) operador em vez daquele acima:
 
 ```cpp
 void MyFunction(int i) noexcept;
@@ -43,24 +43,24 @@ A tabela a seguir resume a implementação do Microsoft Visual C++ de especifica
 
 |Especificação de exceção|Significado|
 |-----------------------------|-------------|
-|`noexcept`<br>`noexcept(true)`<br>`throw()`|A função não gera uma exceção. Em [/std:c + + 14](../build/reference/std-specify-language-standard-version.md) modo (o que é o padrão), `noexcept` e `noexcept(true)` são equivalentes. Quando uma exceção é gerada de uma função que é declarada `noexcept` ou `noexcept(true)`, [std::terminate](../standard-library/exception-functions.md#terminate) é invocado. Quando uma exceção é gerada de uma função declarada como `throw()` na **/std:c + + 14** modo, o resultado é um comportamento indefinido. Nenhuma função específica é invocada. Isso é uma divergência de C + + 14 padrão, que são necessários para invocar o compilador [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br> **Visual Studio 2017 versão posterior e 15.5**: em **/std:c + + 17** modo, `noexcept`, `noexcept(true)`, e `throw()` são todas equivalentes. Em **/std:c + + 17** modo, `throw()` é um alias para `noexcept(true)`. Em **/std:c + + 17** modo, quando uma exceção é gerada de uma função declarada com qualquer uma dessas especificações [std::terminate](../standard-library/exception-functions.md#terminate) é invocado de acordo com o padrão C++ 17.|
-|`noexcept(false)`<br/>`throw(...)`<br/>Não há especificação|A função pode lançar uma exceção de qualquer tipo.|
-|`throw(type)`| (**C + + 14 e anteriores**) a função pode lançar uma exceção do tipo `type`. O compilador aceita a sintaxe, mas o interpretará como `noexcept(false)`. Em **/std:c + + 17** modo, o compilador emite o aviso C5040.|
+|`noexcept`<br>`noexcept(true)`<br>`throw()`|A função não gera uma exceção. Na [/std: c + + 14](../build/reference/std-specify-language-standard-version.md) modo (o que é o padrão), `noexcept` e `noexcept(true)` são equivalentes. Quando uma exceção é lançada de uma função que é declarada `noexcept` ou `noexcept(true)`, [std:: Terminate](../standard-library/exception-functions.md#terminate) é invocado. Quando uma exceção é lançada de uma função declarada como `throw()` na **/std: c + + 14** modo, o resultado é um comportamento indefinido. Nenhuma função específica é invocada. Isso é uma divergência em relação a c++14 standard, que exigia que o compilador para invocar [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br> **Visual Studio 2017 versão 15.5 e posterior**: no **/std: c + + 17** modo, `noexcept`, `noexcept(true)`, e `throw()` são todas equivalentes. Na **/std: c + + 17** modo `throw()` é um alias para `noexcept(true)`. Na **/std:c++17 + + 17** modo, quando uma exceção é lançada de uma função declarada com qualquer uma dessas especificações [std:: Terminate](../standard-library/exception-functions.md#terminate) é invocado conforme solicitado pelo C++ 17 standard.|
+|`noexcept(false)`<br/>`throw(...)`<br/>Não há especificação|A função pode gerar uma exceção de qualquer tipo.|
+|`throw(type)`| (**C + + 14 e versões anteriores**) a função pode gerar uma exceção do tipo `type`. O compilador aceita a sintaxe, mas o interpretará como `noexcept(false)`. Na **/std: c + + 17** modo, o compilador emite aviso C5040.|
 
-Se o tratamento de exceção é usado em um aplicativo, deve haver uma função na pilha de chamadas identificadores geradas exceções antes de sair do escopo externo de uma função marcados `noexcept`, `noexcept(true)`, ou `throw()`. Se todas as funções chamadas entre o que lança uma exceção e o que lida com a exceção são especificados como `noexcept`, `noexcept(true)` (ou `throw()` na **/std:c + + 17** modo), o programa é encerrado quando o função noexcept propaga a exceção.
+Se a manipulação de exceção é usada em um aplicativo, deve haver uma função na pilha de chamadas que manipula exceções antes de sair do escopo externo de uma função marcada `noexcept`, `noexcept(true)`, ou `throw()`. Se todas as funções chamadas entre a que lança uma exceção e aquela que lida com a exceção são especificados como `noexcept`, `noexcept(true)` (ou `throw()` no **/std: c + + 17** modo), o programa é encerrado quando o função noexcept propaga a exceção.
 
 O comportamento de exceção de uma função depende dos seguintes fatores:
 
-- Qual [modo de compilação padrão do idioma](../build/reference/std-specify-language-standard-version.md) está definido.
+- Qual [modo de compilação padrão de linguagem](../build/reference/std-specify-language-standard-version.md) está definido.
 - Se você estiver compilando a função em C ou C++.
 
-- Qual [/EH](../build/reference/eh-exception-handling-model.md) opção de compilador que você usa.
+- Qual [/EH](../build/reference/eh-exception-handling-model.md) opção de compilador que você usar.
 
 - Se a especificação de exceção for determinada explicitamente.
 
-As especificações explícitas de exceção não são permitidas em funções C. Uma função C não deve para lançar exceções em **/EHsc**e pode gerar exceções estruturadas em **/EHs**, **/EHa**, ou **/EHac**.
+As especificações explícitas de exceção não são permitidas em funções C. Uma função C é presumido como não lançam exceções em **/EHsc**e pode lançar exceções estruturadas sob **/EHs**, **/EHa**, ou **/EHac**.
 
-A tabela a seguir resume se uma função C++ potencialmente pode gerar em várias opções de tratamento de exceção do compilador:
+A tabela a seguir resume se uma função C++ pode potencialmente gerar sob várias opções de tratamento de exceções do compilador:
 
 |Função|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
@@ -138,5 +138,5 @@ in handler
 ```
 
 ## <a name="see-also"></a>Consulte também
-
- [Try, throw e catch instruções (C++)](../cpp/try-throw-and-catch-statements-cpp.md) [tratamento de exceção de C++](../cpp/cpp-exception-handling.md)
+ [Instruções try, throw e catch (C++)](../cpp/try-throw-and-catch-statements-cpp.md)  
+ [Tratamento de exceções em C++](../cpp/cpp-exception-handling.md)

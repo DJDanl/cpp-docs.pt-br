@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17eb18438f4b39c7f07d144dad2c16db2f49553b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52e1dcd3ab6697a2d4643389d1a70cda86b04f80
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409570"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403570"
 ---
 # <a name="basic-concepts--c"></a>Conceitos básicos (C++)
 Esta seção explica os conceitos que são essenciais para entender o C++. Os programadores de linguagem C conhecerão muitos desses conceitos, mas há algumas diferenças sutis que podem causar resultados inesperados de programa. Os seguintes tópicos estão incluídos:  
@@ -28,11 +28,11 @@ Esta seção explica os conceitos que são essenciais para entender o C++. Os pr
   
 -   [Escopo de um objeto C++ ou uma função](../cpp/scope-visual-cpp.md)  
   
--   [Regras de vinculação e definições do programa](../cpp/program-and-linkage-cpp.md)  
+-   [Regras de definição e a vinculação do programa](../cpp/program-and-linkage-cpp.md)  
   
--   [Início e término](../cpp/startup-and-termination-cpp.md)  
+-   [Inicialização e encerramento](../cpp/startup-and-termination-cpp.md)  
   
--   [Valores L e r](../cpp/lvalues-and-rvalues-visual-cpp.md)  
+-   [L-values e r-values](../cpp/lvalues-and-rvalues-visual-cpp.md)  
   
 -   [Objetos temporários](../cpp/temporary-objects.md)  
   

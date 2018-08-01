@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79588c700201a8b59053af3e0007216bfc8f4aec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9a9011912b0c187d9aa9e75dd9e484c4688e3c0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419122"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405903"
 ---
 # <a name="lexical-conventions"></a>Convenções lexicais
 Esta seção apresenta os elementos fundamentais de um programa em C++. Você usa esses elementos, chamados de "elementos léxicos" ou "tokens", para construir instruções, definições, declarações etc. que são usadas para construir programas completos. Os elementos léxicos a seguir são abordados nesta seção:
@@ -38,12 +38,12 @@ Esta seção apresenta os elementos fundamentais de um programa em C++. Você us
 
 - [Pontuadores](../cpp/punctuators-cpp.md)
 
-- [Numéricos, boolianos e literais de ponteiro](../cpp/numeric-boolean-and-pointer-literals-cpp.md)
+- [Numérico, booliano e literais de ponteiro](../cpp/numeric-boolean-and-pointer-literals-cpp.md)
 
 - [Literais de cadeia de caracteres e de caracteres](../cpp/string-and-character-literals-cpp.md)
 
 - [Literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md)
 
 ## <a name="see-also"></a>Consulte também
-- [Referência da linguagem C++](../cpp/cpp-language-reference.md)
-- [Programa e ligação](program-and-linkage-cpp.md)
+ [Referência da linguagem C++](../cpp/cpp-language-reference.md)  
+ [Programa e ligação](program-and-linkage-cpp.md)

@@ -12,29 +12,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f39fe0cf3706a67e2aa42aa89de5914808e9cec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9031bea449968e22212c241b8418b505710cca8d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409131"
 ---
 # <a name="alignment-c-declarations"></a>Alinhamento (declarações C++)
-Um dos recursos de nível inferior do C++ é a capacidade de especificar o alinhamento preciso de objetos na memória para tirar o máximo proveito de uma arquitetura de hardware específico. Por padrão, o compilador alinha os membros de classe e struct em seu valor de tamanho: bool e char está alinhados um limites de um byte, short em dois bytes, int em quatro bytes, long longos, double, long double oito bytes. Na maioria dos cenários, você nunca precisa se preocupar com alinhamento porque o alinhamento padrão já é ideal. Em alguns casos, no entanto, você pode obter melhorias significativas de desempenho ou economia de memória, especificando um alinhamento personalizado para suas estruturas de dados. Antes do Visual Studio 2015, você pode usar o alignof de palavras-chave específicas da Microsoft e declspec(alignas) para especificar um alinhamento maior do que o padrão. Iniciando no Visual Studio 2015, você deve usar as C++ 11 palavras-chave padrão [alignof e alignas](../cpp/alignof-and-alignas-cpp.md) para a portabilidade de código máximo. As novas palavras-chave se comportam da mesma forma nos bastidores, como as extensões específicas da Microsoft e a documentação para as extensões também se aplica às novas palavras-chave. Consulte [alignof operador](../cpp/alignof-operator.md) e [alinhar](../cpp/align-cpp.md) para obter mais informações. O padrão C++ não especificar o comportamento de empacotamento de alinhamento em limites de menores do que o padrão do compilador para a plataforma de destino, para que você ainda precisa usar o Microsoft #pragma [pacote](../preprocessor/pack.md) nesse caso.  
+Um dos recursos do C++ baixo nível é a capacidade de especificar o alinhamento preciso dos objetos na memória para tirar o máximo proveito de uma arquitetura de hardware específico. Por padrão, o compilador alinha os membros de classe e struct no seu valor de tamanho: bool e char é alinhadas um dos limites de um byte, short em dois bytes, int em quatro bytes, long longos, double, long double em oito bytes. Na maioria dos cenários, você nunca precisará se preocupar com alinhamento porque o alinhamento padrão já é ideal. Em alguns casos, no entanto, você pode obter melhorias significativas de desempenho ou economia de memória, especificando um alinhamento personalizado para suas estruturas de dados. Antes do Visual Studio 2015, você pode usar o alignof de palavras-chave específicas da Microsoft e declspec(alignas) para especificar um alinhamento maior do que o padrão. Iniciando no Visual Studio 2015, você deve usar as C + + 11 palavras-chave padrão [alignof e alignas](../cpp/alignof-and-alignas-cpp.md) para fins de portabilidade de código máximo. As novas palavras-chave se comportam da mesma forma nos bastidores, como as extensões específicas da Microsoft, e a documentação para as extensões também se aplica às novas palavras-chave. Ver [operador de alignof](../cpp/alignof-operator.md) e [alinhar](../cpp/align-cpp.md) para obter mais informações. O padrão C++ não especifica o comportamento de empacotamento para o alinhamento em limites de menores do que o padrão do compilador para a plataforma de destino, portanto, você ainda precisará usar o Microsoft #pragma [pack](../preprocessor/pack.md) nesse caso.  
   
- A biblioteca padrão C++ fornece o [classe aligned_storage](../standard-library/aligned-storage-class.md) para alocar memória para estruturas de dados com alinhamentos personalizados e o [classe aligned_union](../standard-library/aligned-union-class.md) para especificar o alinhamento de uniões com não trivial construtores ou destrutores.  
+ A biblioteca padrão C++ fornece as [classe aligned_storage](../standard-library/aligned-storage-class.md) para alocar memória para estruturas de dados com alinhamentos personalizados e o [classe aligned_union](../standard-library/aligned-union-class.md) para especificar o alinhamento para uniões com construtores triviais ou destruidores.  
   
 ## <a name="about-alignment"></a>Sobre o alinhamento  
- Alinhamento é uma propriedade de um endereço de memória, expressada como o endereço numérico módulo uma potência de 2. Por exemplo, o endereço 0x0001103F módulo 4 é 3; Esse endereço deve ser alinhado a 4n + 3, onde 4 indica escolhida potência de 2. O alinhamento de um endereço depende a escolhido potência de dois. O mesmo endereço módulo 8 é 7. Um endereço deve ser alinhado a X se seu alinhamento é Xn + 0.  
+ Alinhamento é uma propriedade de um endereço de memória, expressada como o endereço numérico de módulo uma potência de 2. Por exemplo, o endereço 0x0001103F módulo 4 é 3; Esse endereço deve ser alinhado a 4n + 3, em que 4 indica a escolhido potência de 2. O alinhamento de um endereço depende a escolhido potência de dois. O mesmo endereço de módulo 8 é 7. Um endereço deve ser alinhado a X se seu alinhamento é Xn + 0.  
   
- CPUs executam instruções que operam nos dados armazenados na memória e os dados são identificados por seus endereços de memória. Além de seu endereço, uma única referência também tem um tamanho. Uma referência é chamada naturalmente alinhada se seu endereço é alinhado ao seu tamanho e desalinhados caso contrário. Por exemplo, uma referência de ponto flutuante de 8 bytes naturalmente é alinhada se o endereço usado para identificá-lo é alinhado em 8.  
+ CPUs executam instruções que operam em dados armazenados na memória e os dados são identificados por seus endereços na memória. Além de seu endereço, um único datum também tem um tamanho. Uma referência é chamada alinhada naturalmente se seu endereço é alinhado ao seu tamanho e desalinhados caso contrário. Por exemplo, uma referência de ponto flutuante de 8 bytes é alinhada naturalmente se o endereço usado para identificá-lo é alinhado para 8.  
   
- Tratamento de compilador de dados alignmentDevice compiladores tentar alocar dados de uma maneira que impede que o desalinhamento de dados.  
+ Tratamento de compilador de dados alignmentDevice compiladores tentativa para alocar dados de uma maneira que impede que o desalinhamento de dados.  
   
- Para tipos de dados simples, o compilador atribui endereços que sejam múltiplos de tamanho em bytes do tipo de dados. Assim, o compilador atribui endereços para variáveis do tipo longo que sejam múltiplos de quatro, definindo os parte inferior dois bits do endereço a zero.  
+ Para tipos de dados simples, o compilador atribui endereços que sejam múltiplos do tamanho em bytes do tipo de dados. Assim, o compilador atribui endereços a variáveis do tipo long que sejam múltiplos de quatro, definindo os parte inferior dois bits do endereço como zero.  
   
- Além disso, o compilador preenche estruturas de forma que naturalmente Alinha cada elemento da estrutura. Considere o x_ da estrutura de estrutura no exemplo de código a seguir:  
+ Além disso, o compilador acrescenta estruturas de forma que naturalmente alinha-se cada elemento da estrutura. Considere o x_ struct de estrutura no exemplo de código a seguir:  
   
-```  
+```cpp 
 struct x_  
 {  
    char a;     // 1 byte  
@@ -45,11 +46,11 @@ struct x_
   
 ```  
   
- O compilador preenche essa estrutura para impor o alinhamento naturalmente.  
+ O compilador acrescenta essa estrutura para impor o alinhamento naturalmente.  
   
  O exemplo de código a seguir mostra como o compilador coloca a estrutura preenchida na cópia de memória:  
   
-```  
+```cpp 
 // Shows the actual memory layout  
 struct x_  
 {  
@@ -60,16 +61,15 @@ struct x_
    char d;           // 1 byte  
    char _pad1[1];    // padding to make sizeof(x_) multiple of 4  
 }  
-  
 ```  
   
-1.  As duas declarações de retorno sizeof(struct x_) como 12 bytes.  
+1.  As duas declarações retornam sizeof(struct x_) como 12 bytes.  
   
 2.  A segunda declaração inclui dois elementos de preenchimento:  
   
 3.  char _pad0 [3] para alinhar o membro de b int em um limite de quatro bytes  
   
-4.  char _pad1 [1] para alinhar os elementos da matriz da estrutura de estrutura x barra [3];  
+4.  char _pad1 [1] para alinhar os elementos da matriz do struct de estrutura x barra [3];  
   
 5.  O preenchimento alinha os elementos da barra [3], de forma que permita o acesso natural.  
   
@@ -98,8 +98,7 @@ adr offset   element
 0x0020   short c;  
 0x0022   char d;  
 0x0023   char _pad1[1];  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Alinhamento da estrutura de dados](http://en.wikipedia.org/wiki/Data_structure_alignment)
+ [Alinhamento de estrutura de dados](http://en.wikipedia.org/wiki/Data_structure_alignment)

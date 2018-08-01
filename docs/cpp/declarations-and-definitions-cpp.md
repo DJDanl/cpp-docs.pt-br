@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66371ead4c2070769b45bf5b181677431936c84
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 895a2e3a78c425511f978454d07cf9574f7d8337
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942250"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403713"
 ---
 # <a name="declarations-and-definitions-c"></a>Declarações e definições (C++)
 As declarações introduzem nomes em um programa, por exemplo, os nomes de variáveis, namespaces, funções e classes. As declarações também especificam informações de tipo, bem como outras características do objeto que está sendo declarado. Um nome deve ser declarado antes que ele pode ser usado; em C++ o ponto no qual um nome é declarado determina se ele está visível para o compilador. Você não pode se referir a uma função ou classe que é declarado em algum momento posterior na unidade de compilação; Você pode usar *declarações de encaminhamento* para contornar essa limitação.  
@@ -61,7 +61,6 @@ public:
  Estas são algumas declarações que não são definições:  
   
 ```cpp 
-  
 extern int i;  
 char *strchr( const char *Str, const char Target );  
 ```  

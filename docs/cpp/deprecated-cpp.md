@@ -1,5 +1,5 @@
 ---
-title: obsoleto (C++) | Microsoft Docs
+title: preterido (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2017
 ms.technology:
@@ -17,29 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ec2506b406166ac5316de4724db27a6cd7ffcc1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3efc793e5030fa86c3bd1214ef4b8b408361a4ef
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409081"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
-Este tópico é sobre específicos do Microsoft preterido declspec declaração. Para obter informações sobre o C++ 14 `[[deprecated]]` atributo e orientações sobre quando usar esse atributo versus o declspec específicas da Microsoft ou pragma, consulte [atributos padrão do C++](attributes.md).
+Este tópico é sobre específicos da Microsoft preterido declspec declaração. Para obter informações sobre o c++14 `[[deprecated]]` atributo e diretrizes sobre quando usar esse atributo versus o declspec específico da Microsoft ou o pragma, consulte [atributos padrão do C++](attributes.md).
 
- Com as exceções indicadas abaixo, o **preterido** declaração oferece a mesma funcionalidade que o [preterido](../preprocessor/deprecated-c-cpp.md) pragma:  
+ Com as exceções indicadas abaixo, o **preterido** declaração oferece a mesma funcionalidade que o [preterida](../preprocessor/deprecated-c-cpp.md) pragma:  
   
--   O **preterido** declaração permite que você especifique formas específicas de sobrecargas de função como preterido, enquanto que o formulário de pragma se aplica a todas as formas sobrecarregadas de um nome de função.  
+-   O **preterido** declaração permite especificar formatos específicos de sobrecargas de função como preteridos, enquanto que o formato do pragma se aplica a todos os formatos sobrecarregados de um nome de função.  
   
 -   O **preterido** declaração permite que você especifique uma mensagem que será exibido no tempo de compilação. O texto da mensagem pode ser de uma macro.  
   
--   Macros só podem ser marcadas como preteridos com o **preterido** pragma.  
+-   Macros podem ser marcadas como preteridas com o **preterido** pragma.  
   
- Se o compilador encontra o uso de um identificador preterido ou o padrão [ `[[deprecated]]` ](attributes.md) atributo, um [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) aviso é gerado.  
+ Se o compilador encontra o uso de um identificador preterido ou a standard [ `[[deprecated]]` ](attributes.md) atributo, uma [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) aviso é gerado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como marcar funções como preteridas e como especificar uma mensagem que será exibida no tempo de compilação, quando a função preterida for usada.  
   
-```  
+```cpp 
 // deprecated.cpp  
 // compile with: /W3  
 #define MY_TEXT "function is deprecated"  
@@ -59,7 +60,7 @@ int main() {
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como marcar classes como preteridas e como especificar uma mensagem que será exibida no tempo de compilação, quando a classe preterida for usada.  
   
-```  
+```cpp 
 // deprecate_class.cpp  
 // compile with: /W3  
 struct __declspec(deprecated) X {  

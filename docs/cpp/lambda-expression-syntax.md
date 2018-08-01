@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff66cb2efd1f095fee18e6db428b9f29c9f7812
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: cae12ecefebe81bf73ffdbc32c0ce253e726dda2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37938935"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405036"
 ---
 # <a name="lambda-expression-syntax"></a>Sintaxe da expressão lambda
 Esse artigo demonstra a sintaxe e os elementos estruturais das expressões lambda. Para obter uma descrição das expressões lambda, consulte [expressões Lambda](../cpp/lambda-expressions-in-cpp.md).  
@@ -84,16 +84,15 @@ int main()
 8 is even  
 9 is odd  
 There are 4 even numbers in the vector.  
-  
 ```  
   
 ### <a name="comments"></a>Comentários  
  No exemplo, o terceiro argumento para o **for_each** função é uma expressão lambda. A parte `[&evenCount]` especifica a cláusula capture da expressão, `(int n)` especifica a lista de parâmetros e a parte restante especifica o corpo da expressão.  
   
 ## <a name="example-2-using-a-function-object"></a>Exemplo 2: Usando um objeto de função  
- Às vezes, uma lambda seria muito pesada para se estender muito além do exemplo anterior. O exemplo a seguir usa um objeto de função em vez de uma lambda, junto com o **for_each** função, para produzir os mesmos resultados do exemplo 1. Os dois exemplos armazenam a contagem de números pares em um objeto `vector`. Para manter o estado da operação, a classe `FunctorClass` armazena a variável `m_evenCount` por referência como uma variável de membro. Para executar a operação, `FunctorClass` implementa o operador da chamada de função, `operator()`. O compilador do Visual C++ gerencia o código que é comparável em tamanho e desempenho ao código da lambda no Exemplo 1. Para um problema básico como o deste artigo, o design da lambda mais simples é provavelmente melhor do que o design do objeto de função. No entanto, se achar que a funcionalidade pode exigir expansão significativa no futuro, use um design de objeto de função, assim, a manutenção do código será mais fácil.  
+ Às vezes, uma lambda seria muito pesada para se estender muito além do exemplo anterior. O exemplo a seguir usa um objeto de função em vez de uma lambda, junto com o **for_each** função, para produzir os mesmos resultados do exemplo 1. Os dois exemplos armazenam a contagem de números pares em um objeto `vector`. Para manter o estado da operação, a classe `FunctorClass` armazena a variável `m_evenCount` por referência como uma variável de membro. Para executar a operação `FunctorClass` implementa o operador de chamada de função **Operator ()**. O compilador do Visual C++ gerencia o código que é comparável em tamanho e desempenho ao código da lambda no Exemplo 1. Para um problema básico como o deste artigo, o design da lambda mais simples é provavelmente melhor do que o design do objeto de função. No entanto, se achar que a funcionalidade pode exigir expansão significativa no futuro, use um design de objeto de função, assim, a manutenção do código será mais fácil.  
   
- Para obter mais informações sobre o `operator()`, consulte [chamada de função](../cpp/function-call-cpp.md). Para obter mais informações sobre o **for_each** , consulte [for_each](../standard-library/algorithm-functions.md#for_each).  
+ Para obter mais informações sobre o **Operator ()**, consulte [chamada de função](../cpp/function-call-cpp.md). Para obter mais informações sobre o **for_each** , consulte [for_each](../standard-library/algorithm-functions.md#for_each).  
   
 ### <a name="code"></a>Código  
   
@@ -150,7 +149,6 @@ int main()
     cout << "There are " << evenCount  
         << " even numbers in the vector." << endl;  
 }  
-  
 ```  
   
 ## <a name="output"></a>Saída  
@@ -166,7 +164,6 @@ int main()
 8 is even  
 9 is odd  
 There are 4 even numbers in the vector.  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte também  

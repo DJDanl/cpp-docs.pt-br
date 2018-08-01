@@ -14,17 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4acfbb5a0790dec6f7b5770832cc6b09f69a28d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e5679ce718c564ee40fb07b676756ef79344a99
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408015"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403616"
 ---
 # <a name="abort-function"></a>Função abort
 
-O **anular** função, também é declarada no arquivo de inclusão padrão \<stdlib.h >, encerra um programa C++. A diferença entre **sair** e **anular** é que **sair** permite o processamento de término do tempo de execução C++ ocorra (objeto global destruidores serão chamados), enquanto **anular** o programa é encerrado imediatamente. Para obter mais informações, consulte [anular](../c-runtime-library/reference/abort.md) no *referência da biblioteca de tempo de execução*.
+O **anular** função, também declarada no arquivo de inclusão padrão \<stdlib. h >, encerra um programa C++. A diferença entre `exit` e **anular** é que `exit` permite que o processamento de encerramento do tempo de execução C++ ocorra (objeto global serão chamados destruidores), enquanto que **anular** Encerra o programa imediatamente. Para obter mais informações, consulte [anular](../c-runtime-library/reference/abort.md) na *referência de biblioteca de tempo de execução*.
 
 ## <a name="see-also"></a>Consulte também
-
 [Término do programa](../cpp/program-termination.md)

@@ -1,5 +1,5 @@
 ---
-title: Recursos (RAII) de objetos próprios | Microsoft Docs
+title: Objetos de recursos próprios (RAII) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd3f1df54e5b5881ed15efeb98a6e6070f400a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 265eccc4c1a9f51a03e5a84433a9f7e9cc6d6a92
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419922"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402130"
 ---
 # <a name="objects-own-resources-raii"></a>Recursos de objetos próprios (RAII)
 Certifique-se de que os objetos próprios recursos. Esse princípio é também conhecido como "aquisição de recurso é inicialização" ou "RAII".  
   
 ## <a name="example"></a>Exemplo  
- Passe todos os objetos "new" como um argumento de construtor para outro objeto nomeado que o possui (quase sempre unique_ptr).  
+ Passe todos os objetos "novo" como um argumento de construtor para outro objeto nomeado que o possui (quase sempre unique_ptr).  
   
 ```cpp  
 void f() {  
@@ -34,7 +34,7 @@ void f() {
   // automatic exception safety, as if "finally { p->dispose(); x.w.dispose(); }"  
 ```  
   
- Passe sempre imediatamente qualquer novo recurso para outro objeto que ele pertence.  
+ Ocorrem sempre imediatamente passe qualquer novo recurso para outro objeto que ele pertence.  
   
 ```cpp  
 void g() {  
@@ -45,6 +45,6 @@ void g() {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Bem-vindo novamente para C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [Bem-vindo ao C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Referência da linguagem C++](../cpp/cpp-language-reference.md)   
  [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)

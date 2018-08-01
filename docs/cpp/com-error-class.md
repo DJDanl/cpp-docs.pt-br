@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d59782b62ddfb51601505be6d12f01ce14cd4f1
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 60fc445d51cfa72a6c72984ff19b877d916ded53
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026628"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407755"
 ---
 # <a name="comerror-class"></a>Classe _com_error
 **Seção específica da Microsoft**  
   
- Um objeto `_com_error` representa uma condição de exceção detectada pelas funções de wrapper para tratamento de erros nos arquivos de cabeçalho gerados a partir da biblioteca de tipos ou por uma das classes de suporte COM. O `_com_error` classe encapsula o código de erro HRESULT e associados `IErrorInfo Interface` objeto.  
+ Um **com_error** objeto representa uma condição de exceção detectada pelas funções de wrapper de tratamento de erros nos arquivos de cabeçalho gerados a partir da biblioteca de tipos ou por uma das classes de suporte COM. O **com_error** classe encapsula o código de erro HRESULT e associados `IErrorInfo Interface` objeto.  
   
 ### <a name="construction"></a>Construção  
   
 |||  
 |-|-|  
-|[_com_error](../cpp/com-error-com-error.md)|Constrói um objeto `_com_error`.|  
+|[_com_error](../cpp/com-error-com-error.md)|Constrói uma **com_error** objeto.|  
   
 ### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[operador =](../cpp/com-error-operator-equal.md)|Atribui um objeto `_com_error` existente a outro.|  
+|[operador =](../cpp/com-error-operator-equal.md)|Atribui um existente **com_error** objeto para outro.|  
   
 ### <a name="extractor-functions"></a>Funções de extrator  
   
@@ -62,7 +62,7 @@ ms.locfileid: "39026628"
   
 |||  
 |-|-|  
-|[ErrorMessage](../cpp/com-error-errormessage.md)|Recupera a mensagem de cadeia de caracteres para o HRESULT armazenado no objeto `_com_error`.|  
+|[ErrorMessage](../cpp/com-error-errormessage.md)|Recupera a mensagem de cadeia de caracteres para o HRESULT armazenado na **com_error** objeto.|  
   
 ### <a name="exepinfowcode-to-hresult-mappers"></a>Mapeadores de ExepInfo.wCode para HRESULT  
   

@@ -14,16 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beac75a8a27fc4638b541228330e83e7b665fbcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70b1e0e6ef1294ff23952816db6f468022609f4f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419817"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408369"
 ---
 # <a name="microsoft-extensions"></a>Extensões da Microsoft
 *instrução ASM*:  
- **ASM***assembly instrução* **;** aceitar    
+ **ASM***instrução de assembly* **;** aceitar    
   
  **ASM {***lista de instruções de assembly***};** aceitar      
   
@@ -33,9 +33,9 @@ ms.locfileid: "32419817"
  *instrução de assembly* **;** *lista de instruções de assembly* **;** aceitar  
   
  *lista de modificador MS*:  
- *MS-modificador ms modificador lista*aceitar  
+ *MS-modifier ms-modificador-list*otimizado  
   
- *modificador de MS*:  
+ *MS-modifier*:  
  **__cdecl**  
   
  **__fastcall**  
@@ -44,14 +44,14 @@ ms.locfileid: "32419817"
   
  **syscall** (reservado para implementações futuras)  
   
- **__oldcall** (reservado para implementações futuras)  
+ **{1&gt;__oldcall&lt;1** (reservado para implementações futuras)  
   
  **unaligned** (reservado para implementações futuras)  
   
- *modificador com base*  
+ *modificador com base em*  
   
  *modificador com base em*:  
- **based (** *texto com base em* **)**  
+ **based (** *tipo com base em* **)**  
   
  *texto com base em*:  
  *name*  

@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8533012a921cbfb2861bcc7e1c5f2a6de81aadd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a139efed1fadd8f7b821363b7cb9cdbf97c9a29
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409181"
 ---
 # <a name="comma-operator-"></a>Operador de vírgula: ,
 Permite agrupar duas instruções onde uma é esperado.  
@@ -28,7 +29,6 @@ Permite agrupar duas instruções onde uma é esperado.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 expression , expression  
 ```  
   
@@ -45,7 +45,7 @@ expression , expression
   
  Onde a vírgula é geralmente usada como separador (por exemplo, nos argumentos reais para funções ou inicializadores agregados), o operador vírgula e seus operandos devem ser colocados entre parênteses. Por exemplo:  
   
-```  
+```cpp 
 func_one( x, y + 2, z );  
 func_two( (x--, y + 2), z );  
 ```  
@@ -54,7 +54,7 @@ func_two( (x--, y + 2), z );
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp 
 // cpp_comma_operator.cpp  
 #include <stdio.h>  
 int main () {  
@@ -74,5 +74,5 @@ int main () {
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)   
- [Operadores C++ internos, precedência e capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores C++ internos, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operador de avaliação sequencial](../c-language/sequential-evaluation-operator.md)

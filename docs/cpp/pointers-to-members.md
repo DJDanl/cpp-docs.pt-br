@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc84a0190430caea9592bf4eb8e47ad5bc1f6ce
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942322"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407774"
 ---
 # <a name="pointers-to-members"></a>Ponteiros para membros
 As declarações dos ponteiros para os membros são casos especiais de declarações do ponteiro.  Elas são declaradas usando a seguinte sequência:  
@@ -79,7 +79,7 @@ int main()
 }  
 ```  
   
- No exemplo anterior, `pwCaption` é um ponteiro para qualquer membro da classe `Window` que tem o tipo **char\***. O tipo de `pwCaption` é `char * Window::* `. O fragmento de código a seguir declara ponteiros para as funções de membro `SetCaption` e `GetCaption`.  
+ No exemplo anterior, `pwCaption` é um ponteiro para qualquer membro da classe `Window` que tem o tipo `char*`. O tipo de `pwCaption` é `char * Window::* `. O fragmento de código a seguir declara ponteiros para as funções de membro `SetCaption` e `GetCaption`.  
   
 ```cpp 
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
@@ -103,7 +103,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
   
  A diferença entre o **.\***  e **-> \*** operadores (os operadores de ponteiro para membro) é que o **.\***  operador seleciona membros dado um objeto ou uma referência de objeto, enquanto a **-> \*** operador seleciona membros por meio de um ponteiro. (Para obter mais informações sobre esses operadores, consulte [expressões com operadores de ponteiro para membro](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
- O resultado dos operadores de ponteiro para membro é o tipo do membro — nesse caso, **char \*** .  
+ O resultado dos operadores de ponteiro para membro é o tipo do membro — nesse caso, `char *`.  
   
  O fragmento de código a seguir invoca as funções do membro `GetCaption` e `SetCaption` usando ponteiros para os membros:  
   
@@ -174,6 +174,3 @@ int main()
 //Output: Print function for class Base  
 Print function for class Derived  
 ```  
-  
-## <a name="see-also"></a>Consulte também  
- 

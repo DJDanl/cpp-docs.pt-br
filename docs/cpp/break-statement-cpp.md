@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00a1122dffac0bdb61ba3799ce78ed3403e6d478
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 30910f6850fc3728ee101ab0662638fdebcd3775
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942236"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405438"
 ---
 # <a name="break-statement-c"></a>Instrução break (C++)
 O **quebra** instrução finaliza a execução do delimitador mais próximo loop ou instrução condicional, na qual ele aparece. O controle passa para a instrução que segue o encerramento da instrução, se houver.  

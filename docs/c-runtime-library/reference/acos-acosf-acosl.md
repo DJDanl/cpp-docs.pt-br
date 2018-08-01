@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664c3555602dfc16ce811b065e0d38f8fe93e733
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5384d4e97ebb4f3f6152278e916c02bb350090ea
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392764"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401932"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -67,24 +67,24 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*<br/>
-Um valor entre -1 e 1, usada calcular o arco cosseno (o cosseno inverso).
+*x*  
+O valor entre -1 e 1, para o qual calcular o arco cosseno (o cosseno inverso).
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **acos** função retorna o arco cosseno de *x* no intervalo de 0 a radianos π.
+O **acos** função retorna o arco cosseno *x* no intervalo de 0 a radianos π.
 
-Por padrão, se *x* é menor que -1 ou maior que 1, **acos** retorna um indefinido.
+Por padrão, se *x* é menor que -1 ou maior que 1, **acos** retornará um indefinido.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**INVÁLIDO**|**DOMAIN**|
-|± QNAN,IND|nenhum|**DOMAIN**|
-|&#124;x&#124;>1|**INVÁLIDO**|**DOMAIN**|
+|± ∞|INVALID|_DOMAIN|
+|± QNAN,IND|nenhum|_DOMAIN|
+|&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **acos** que levar e retornar **float** e **longo** **duplo** tipos. Em um programa C, **acos** sempre usa e retorna um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **acos** que usam e retornam **float** e **longo** **double** tipos. Em um programa do C **acos** sempre usa e retorna um **duplo**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -94,7 +94,7 @@ Como o C++ permite sobrecarga, você pode chamar sobrecargas de **acos** que lev
 
 ## <a name="example"></a>Exemplo
 
-Este programa solicita um valor no intervalo de –1 a 1. Valores de entrada fora desse intervalo produzem **Domain** mensagens de erro. Se um valor válido for inserido, o programa imprimirá o arco seno e o arco cosseno desse valor.
+Este programa solicita um valor no intervalo de –1 a 1. Valores de entrada fora desse intervalo produzem mensagens de erro de `_DOMAIN`. Se um valor válido for inserido, o programa imprimirá o arco seno e o arco cosseno desse valor.
 
 ```C
 // crt_asincos.c
@@ -144,10 +144,10 @@ Arccosine of 0.000000 = 1.570796
 
 ## <a name="see-also"></a>Consulte também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[asin, asinf, asinl](asin-asinf-asinl.md)<br/>
-[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
-[_matherr](matherr.md)<br/>
-[sin, sinf, sinl](sin-sinf-sinl.md)<br/>
-[tan, tanf, tanl](tan-tanf-tanl.md)<br/>
+[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)  
+[asin, asinf, asinl](asin-asinf-asinl.md)  
+[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)  
+[cos, cosf, cosl](cos-cosf-cosl.md)  
+[_matherr](matherr.md)  
+[sin, sinf, sinl](sin-sinf-sinl.md)  
+[tan, tanf, tanl](tan-tanf-tanl.md)  

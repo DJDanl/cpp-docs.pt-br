@@ -18,20 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d826ba5a2252ba11a0b9206a0555c7a022a9382c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4921a6de3072ef402ba355714ddd67328c3a3541
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942299"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406826"
 ---
 # <a name="logical-and-operator-ampamp"></a>Operador AND lógico: &amp;&amp;
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 expression && expression  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
@@ -77,5 +75,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Operadores C++ internos precedência e associatividade](cpp-built-in-operators-precedence-and-associativity.md) [operadores C++ internos, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores C++ internos precedência e associatividade](cpp-built-in-operators-precedence-and-associativity.md)  
+ [Operadores C++ internos, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operadores lógicos C](../c-language/c-logical-operators.md)

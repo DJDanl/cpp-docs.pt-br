@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb343431a52df9fae32bb17f3303738c04385cf5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 0e9e3d7f16e40d41774dd1def89ef9bdd0ba1c82
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942144"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404591"
 ---
 # <a name="comptrt-class"></a>Classe _com_ptr_t
 **Seção específica da Microsoft**  
   
- Um objeto `_com_ptr_t` encapsula um ponteiro da interface COM e é chamado de ponteiro “inteligente”. Essa classe de modelo gerencia a alocação de recursos e a desalocação por meio de chamadas de função para o `IUnknown` funções de membro: `QueryInterface`, `AddRef`, e `Release`.  
+ Um **com_ptr_t** objeto encapsula um ponteiro de interface COM e é chamado de ponteiro "inteligente". Essa classe de modelo gerencia a alocação de recursos e a desalocação por meio de chamadas de função para o `IUnknown` funções de membro: `QueryInterface`, `AddRef`, e `Release`.  
   
- Um ponteiro inteligente é geralmente referenciado pela definição typedef fornecida pela macro com_smartptr_typedef. Essa macro usa um nome de interface e o IID e declara uma especialização de `_com_ptr_t` com o nome da interface mais um sufixo de `Ptr`. Por exemplo:  
+ Um ponteiro inteligente é geralmente referenciado pela definição typedef fornecida pela macro com_smartptr_typedef. Essa macro usa um nome de interface e o IID e declara uma especialização da **com_ptr_t** com o nome da interface mais um sufixo de `Ptr`. Por exemplo:  
   
 ```cpp 
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
 ```  
   
- declara o `_com_ptr_t` especialização `IMyInterfacePtr`.  
+ declara o **com_ptr_t** especialização `IMyInterfacePtr`.  
   
  Um conjunto de [modelos de função](../cpp/relational-function-templates.md), não os membros desse modelo de classe, oferece suporte a comparações com um ponteiro inteligente à direita do operador de comparação.  
   
@@ -42,7 +42,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Constrói um objeto `_com_ptr_t`.|  
+|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Constrói uma **com_ptr_t** objeto.|  
   
 ### <a name="low-level-operations"></a>Operações de nível baixo  
   
@@ -61,7 +61,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[operador =](../cpp/com-ptr-t-operator-equal.md)|Atribui um novo valor a um objeto `_com_ptr_t` existente.|  
+|[operador =](../cpp/com-ptr-t-operator-equal.md)|Atribui um novo valor a um existente **com_ptr_t** objeto.|  
 |[operadores = =,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Comparar o objeto de ponteiro inteligente com outro ponteiro inteligente, o ponteiro de interface bruto ou NULL.|  
 |[Extratores](../cpp/com-ptr-t-extractors.md)|Extrai o ponteiro de interface COM encapsulado.|  
   

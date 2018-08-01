@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c95a67df03f62279b7b9c46ef41b6cafe7ff3df1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940648"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408145"
 ---
 # <a name="override-specifier"></a>substituir especificador
 Você pode usar o **substituir** palavra-chave para designar as funções que substituem uma função virtual em uma classe base membro.  
@@ -27,7 +27,6 @@ Você pode usar o **substituir** palavra-chave para designar as funções que su
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 function-declaration override;  
 ```  
   
@@ -56,9 +55,7 @@ class DerivedClass: public BaseClass
     virtual void funcC(double = 0.0); // DerivedClass::funcC(double) has a different  
                                       // parameter type than BaseClass::funcC(int), so  
                                       // DerivedClass::funcC(double) is a new member function  
-  
 };  
-  
 ```  
   
  Quando você usa **substituir**, o compilador gera erros em vez de criar silenciosamente novo membro de funções.  
@@ -86,7 +83,6 @@ class DerivedClass: public BaseClass
     void funcD() override; // compiler error: DerivedClass::funcD() does not   
                            // override the non-virtual BaseClass::funcD()  
 };  
-  
 ```  
   
  Para especificar que as funções não podem ser substituídas e que as classes não podem ser herdadas, use o [final](../cpp/final-specifier.md) palavra-chave.  
@@ -94,4 +90,3 @@ class DerivedClass: public BaseClass
 ## <a name="see-also"></a>Consulte também  
  [Especificador final](../cpp/final-specifier.md)   
  [Palavras-chave](../cpp/keywords-cpp.md)   
- 

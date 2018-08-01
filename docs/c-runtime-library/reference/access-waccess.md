@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 775d0b699c6ac9664bae8cd0e6e28438ef019e69
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ada1377efea8bd05dea1fd59dbbe6cd4495e6ea2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393737"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404636"
 ---
 # <a name="access-waccess"></a>_access, _waccess
 
@@ -67,27 +67,27 @@ int _waccess(
 
 ### <a name="parameters"></a>Parâmetros
 
-*path*<br/>
+*path*  
 Caminho do arquivo ou do diretório.
 
-*modo*<br/>
+*modo*  
 Atributo de leitura/gravação.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada função retorna 0 se o arquivo tem o modo determinado. A função retornará -1 se o arquivo não existe ou não tem o modo determinado; Nesse caso, **errno** é definido como mostrado na tabela a seguir.
+Cada função retorna 0 se o arquivo tem o modo determinado. A função retornará -1 se o arquivo nomeado não existe ou não tem o modo determinado. Nesse caso, `errno` é definida conforme mostrado na tabela a seguir.
 
 |||
 |-|-|
-**EACCES**|Acesso negado: a configuração de permissão do arquivo não permite o acesso especificado.
-**ENOENT**|Nome ou caminho do arquivo não encontrado.
-**EINVAL**|Parâmetro inválido.
+`EACCES`|Acesso negado: a configuração de permissão do arquivo não permite o acesso especificado.
+`ENOENT`|Nome ou caminho do arquivo não encontrado.
+`EINVAL`|Parâmetro inválido.
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Quando usado com arquivos, o **Access** função determina se o arquivo ou diretório especificado existe e se tem os atributos especificados pelo valor de *modo*. Quando usado com diretórios, **Access** somente determina se o diretório especificado existe; no Windows 2000 e posterior sistemas operacionais, todos os diretórios leram e acesso de gravação.
+Quando usado com arquivos, o **Access** função determina se o arquivo ou diretório especificado existe e tem os atributos especificados pelo valor de *modo*. Quando usado com diretórios **Access** determina apenas se o diretório especificado existe; no Windows 2000 e posterior sistemas operacionais, todos os diretórios leram e acesso de gravação.
 
 |*modo* valor|Verifica o arquivo quanto a|
 |------------------|---------------------|
@@ -100,13 +100,13 @@ Essa função apenas verifica se os arquivos e diretórios são somente leitura 
 
 **waccess** é uma versão de caractere largo de **Access**; o *caminho* argumento **waccess** é uma cadeia de caracteres largos. **waccess** e **Access** se comportam de forma idêntica caso contrário.
 
-Essa função valida seus parâmetros. Se *caminho* é **nulo** ou *modo* não especificar um modo válido, o manipulador de parâmetro inválido é invocado, conforme descrito em [devalidaçãodeparâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função define **errno** para **EINVAL** e retorna -1.
+Essa função valida seus parâmetros. Se *caminho* for NULL ou *modo* não especifica um modo válido, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função definirá `errno` como `EINVAL` e retornará –1.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**taccess**|**_access**|**_access**|**_waccess**|
+|`_taccess`|**_access**|**_access**|**_waccess**|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -117,7 +117,7 @@ Essa função valida seus parâmetros. Se *caminho* é **nulo** ou *modo* não e
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir usa **Access** para verificar se o arquivo chamado crt_ACCESS. C para ver se ele existe e se a gravação é permitida.
+O exemplo a seguir usa **Access** para verificar o arquivo nomeado crt_ACCESS. C para ver se ele existe e se a gravação é permitida.
 
 ```C
 // crt_access.c
@@ -151,8 +151,8 @@ File crt_ACCESS.C does not have write permission.
 
 ## <a name="see-also"></a>Consulte também
 
-[Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
-[_chmod, _wchmod](chmod-wchmod.md)<br/>
-[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
-[_open, _wopen](open-wopen.md)<br/>
-[Funções _stat, _wstat](stat-functions.md)<br/>
+[Manipulação de Arquivos](../../c-runtime-library/file-handling.md)  
+[_chmod, _wchmod](chmod-wchmod.md)  
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)  
+[_open, _wopen](open-wopen.md)  
+[Funções _stat, _wstat](stat-functions.md)  

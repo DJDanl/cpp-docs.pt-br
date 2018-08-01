@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d08ac1375fa383543eaafb5b3ce49cd2bbfbc4da
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ce4272ecfee4b3d02d8bf79f7816200a392c9735
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941074"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404818"
 ---
 # <a name="exit-function"></a>Função exit
-O `exit` função, declarada no arquivo de inclusão padrão \<stdlib. h >, encerra um programa C++.  
+O **saia** função, declarada no arquivo de inclusão padrão \<stdlib. h >, encerra um programa C++.  
   
- O valor fornecido como um argumento para `exit` é retornado para o sistema operacional como código retorno de código ou sair do programa. Por convenção, um código de retorno de zero indica que o programa foi encerrado com êxito.  
+ O valor fornecido como um argumento para **sair** é retornado para o sistema operacional como código retorno de código ou sair do programa. Por convenção, um código de retorno de zero indica que o programa foi encerrado com êxito.  
   
 > [!NOTE]
 >  Você pode usar as constantes EXIT_FAILURE e EXIT_SUCCESS, definido em \<stdlib. h >, para indicar êxito ou falha do programa.  
   
- Emitir uma **retornar** instrução from a `main` função é equivalente a chamar o `exit` função com o valor de retorno como seu argumento.  
+ Emitir uma **retornar** instrução from a `main` função é equivalente a chamar o **sair** função com o valor de retorno como seu argumento.  
   
  Para obter mais informações, consulte [saia](../c-runtime-library/reference/exit-exit-exit.md) na *referência de biblioteca de tempo de execução*.  
   

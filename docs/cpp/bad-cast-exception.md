@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50995ff1d5eb730bf6593679194d32d5300b9d7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8a37ae011ec2f06a505063678f481e6e41696c86
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942114"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401361"
 ---
 # <a name="badcast-exception"></a>Exceção bad_cast
-A exceção `bad_cast` é lançada pelo operador `dynamic_cast` como resultado de uma conversão em um tipo de referência que falhou.  
+O **bad_cast** exceção é lançada pela **dynamic_cast** operador como o resultado de uma falha na conversão em um tipo de referência.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ catch (bad_cast)
 ```  
   
 ## <a name="remarks"></a>Comentários  
- A interface de `bad_cast` é:  
+ A interface para **bad_cast** é:  
   
 ```cpp 
 class bad_cast : public exception {  
@@ -47,7 +47,7 @@ public:
 };  
 ```  
   
- O código a seguir contém um exemplo de `dynamic_cast` com falha que lança a exceção `bad_cast`.  
+ O código a seguir contém um exemplo de uma falha na **dynamic_cast** que gera a **bad_cast** exceção.  
   
 ```cpp 
 // expre_bad_cast_Exception.cpp  
@@ -78,7 +78,7 @@ int main() {
 }  
 ```  
   
- A exceção é lançada porque o objeto que está sendo convertido (uma forma) não é derivado do tipo convertido especificado (círculo). Para evitar a exceção, adicione estas declarações a **principal**:  
+ A exceção é lançada porque o objeto que está sendo convertido (uma forma) não é derivado do tipo convertido especificado (círculo). Para evitar a exceção, adicione estas declarações a `main`:  
   
 ```cpp 
 Circle circle_instance;  

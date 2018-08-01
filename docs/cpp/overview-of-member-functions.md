@@ -17,20 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b34be19c5fe67c087579e3d1cf0643d5afd71dc5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 21de116740161a965bd4790eff751d10cf878b79
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409111"
 ---
 # <a name="overview-of-member-functions"></a>Visão geral das funções de membro
-As funções membro são estáticas ou não estáticas. O comportamento de funções de membro estático é diferente de outras funções de membro porque funções membro static tem implícita não **isso** argumento. Funções de membro não estático têm um **isso** ponteiro. As funções membro, sejam elas estáticas ou não estáticas, podem ser definidas dentro ou fora da declaração da classe.  
+As funções membro são estáticas ou não estáticas. O comportamento das funções membro estáticas é diferente de outras funções de membro porque as funções membro estáticas não têm nenhum **isso** argumento. Funções de membro não estáticas têm um **isso** ponteiro. As funções membro, sejam elas estáticas ou não estáticas, podem ser definidas dentro ou fora da declaração da classe.  
   
- Se uma função membro for definida dentro de uma declaração de classe, ela será tratada como uma função embutida, e não há necessidade de qualificar o nome da função com o nome da sua classe. Embora as funções definidas dentro de declarações de classe já são tratadas como funções embutidas, você pode usar o **embutido** palavra-chave para o código do documento.  
+ Se uma função membro for definida dentro de uma declaração de classe, ela será tratada como uma função embutida, e não há necessidade de qualificar o nome da função com o nome da sua classe. Embora as funções definidas dentro de declarações de classe já sejam tratadas como funções embutidas, você pode usar o **embutido** palavra-chave para documentar o código.  
   
  Este é um exemplo de declaração de uma função dentro de uma declaração de classe:  
   
-```  
+```cpp 
 // overview_of_member_functions1.cpp  
 class Account  
 {  
@@ -51,11 +52,11 @@ int main()
 }  
 ```  
   
- Se a definição da função um membro está fora da declaração de classe, ele é tratado como uma função embutida somente se ele é declarado explicitamente como **embutido**. Além disso, o nome da função na definição deve ser qualificado com o nome da sua classe usando o operador de resolução de escopo (`::`).  
+ Se a definição de uma função de membro estiver fora da declaração de classe, ele é tratado como uma função embutida somente se ele for declarado explicitamente como **embutido**. Além disso, o nome da função na definição deve ser qualificado com o nome da sua classe usando o operador de resolução de escopo (`::`).  
   
  O exemplo a seguir é idêntico à declaração de classe `Account`anterior, com exceção da função `Deposit`, que é definida fora de declaração da classe:  
   
-```  
+```cpp 
 // overview_of_member_functions2.cpp  
 class Account  
 {  
@@ -81,4 +82,3 @@ int main()
 >  Embora as funções membro possam ser definidas dentro de uma declaração de classe ou separadamente, nenhuma função membro pode ser adicionada a uma classe depois que a classe é definida.  
   
  As classes que contêm funções membro podem ter muitas declarações, mas as próprias funções membro devem ter apenas uma definição em um programa. Várias definições geram uma mensagem de erro em tempo de vinculação. Se uma classe contiver definições de função embutidas, as definições de função devem ser idênticas para observar a regra de "uma definição".  
-  

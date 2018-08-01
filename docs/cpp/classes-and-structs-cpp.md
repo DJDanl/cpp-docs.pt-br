@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88836d93d6ce3ba4dff817c7b470e87f48f61b14
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ffd822aa59af9c703d00f8fc195fe4eeb91ce833
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954171"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405464"
 ---
 # <a name="classes-and-structs-c"></a>Classes e structs (C++)
 Esta seção apresenta as estruturas e classes do C++. As duas construções são idênticas em C++, exceto em structs a acessibilidade padrão é pública, enquanto em classes, o padrão é particular.  

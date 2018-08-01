@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d27ff977bf3e4132f7782c0ffcb85bebefd42d68
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 91fded4380875515da81b87c5ffd74665df01b21
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961435"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408021"
 ---
 # <a name="event-handling"></a>Tratamento de Evento
 Manipulação de eventos é suportada principalmente para classes COM (classes C++ que implementam objetos COM, normalmente usando classes ATL ou o [coclass](../windows/coclass.md) atributo).  Para obter mais informações, consulte [manipulação de eventos em COM](../cpp/event-handling-in-com.md).  

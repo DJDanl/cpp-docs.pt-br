@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ce233b4ffa33873b752ebc409fb8570856acbff
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b3c4592255c56aae6bc4d959757164fd9c11f2a5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940193"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407803"
 ---
 # <a name="algorithms-modern-c"></a>Algoritmos (C++ moderno)
 Para a programação do C++ moderna, é recomendável que você use os algoritmos de [biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md). Aqui estão alguns exemplos importantes:  
@@ -69,14 +69,14 @@ auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 ### <a name="range-based-for-loops"></a>Baseado em intervalo para loops  
  Baseado em intervalo **para** loop é um 11 idioma recurso, não é um algoritmo de biblioteca padrão C++. Mas ele merece ser mencionado neste debate sobre loops. Baseado em intervalo **para** loops são uma extensão das **para** palavra-chave e fornecem uma maneira conveniente e eficiente para gravar loops que iterar sobre um intervalo de valores. Contêineres da biblioteca padrão C++, cadeias de caracteres e matrizes já estão prontos para baseado em intervalo **para** loops. Para habilitar essa nova sintaxe de iteração para seu tipo definido pelo usuário, adicione o suporte a seguir:  
   
--   Um **começar** método que retorna um iterador para o início da estrutura e um **final** método que retorna um iterador para o final da estrutura.  
+-   Um `begin` método que retorna um iterador para o início da estrutura e um `end` método que retorna um iterador para o final da estrutura.  
   
 -   Suporte no iterador para esses métodos: * * operador * **operador! =**, e **operator + +** (versão de prefixo).  
   
  Esses métodos podem ser membros ou funções autônomas.  
   
 ## <a name="random-numbers"></a>Números aleatórios  
- Não é segredo que o CRT antigo **rand ()** função possui várias falhas, que foi discutidas em detalhes na comunidade do C++. No C++ moderno, você não precisa lidar com esses defeitos — nem precisa inventar seu próprio gerador de números aleatórios distribuído uniformemente — porque as ferramentas para criá-los de forma rápida e fácil estão disponíveis na biblioteca C++ padrão, conforme mostrado na [ \<random >](../standard-library/random.md).  
+ Não é segredo que o CRT antigo `rand()` função possui várias falhas, que foi discutidas em detalhes na comunidade do C++. No C++ moderno, você não precisa lidar com esses defeitos — nem precisa inventar seu próprio gerador de números aleatórios distribuído uniformemente — porque as ferramentas para criá-los de forma rápida e fácil estão disponíveis na biblioteca C++ padrão, conforme mostrado na [ \<random >](../standard-library/random.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Bem-vindo ao C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   

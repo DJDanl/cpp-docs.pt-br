@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a21b7dd00aa0bb0894da4cc13cf0f6f40078ee1b
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c2204e69ee6df64a08e3f5cf03191ad1e7e0535
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941821"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402455"
 ---
 # <a name="compiler-com-support"></a>Suporte para COM do compilador
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
@@ -28,7 +28,7 @@ ms.locfileid: "37941821"
   
  Usando o [diretiva de pré-processador #import](../preprocessor/hash-import-directive-cpp.md), o compilador pode ler uma biblioteca de tipos e convert-lo em um arquivo de cabeçalho de C++ que descreve o COM interfaces como classes. Um conjunto de atributos de `#import` está disponível para o usuário controlar o conteúdo referente aos arquivos resultantes de cabeçalho de biblioteca de tipos.  
   
- Você pode usar o [declspec](../cpp/declspec.md) atributo estendido [uuid](../cpp/uuid-cpp.md) para atribuir um identificador global exclusivo (GUID) para um objeto COM. A palavra-chave [uuidof](../cpp/uuidof-operator.md) pode ser usado para extrair o GUID associado a um objeto COM. Outra `__declspec` atributo, [propriedade](../cpp/property-cpp.md), pode ser usado para especificar o **obter** e **definir** métodos para um membro de dados de um objeto COM.  
+ Você pode usar o [declspec](../cpp/declspec.md) atributo estendido [uuid](../cpp/uuid-cpp.md) para atribuir um identificador global exclusivo (GUID) para um objeto COM. A palavra-chave [uuidof](../cpp/uuidof-operator.md) pode ser usado para extrair o GUID associado a um objeto COM. Outra **declspec** atributo [propriedade](../cpp/property-cpp.md), pode ser usado para especificar o `get` e `set` métodos para um membro de dados de um objeto COM.  
   
  Um conjunto de classes e funções globais do COM suporte é fornecido para dar suporte a `VARIANT` e `BSTR` tipos, implementar ponteiros inteligentes e encapsular o objeto de erro lançado por `_com_raise_error`:  
   

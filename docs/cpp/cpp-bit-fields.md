@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dcfd93d1529844c7e5b72d61a6f1fd87d6dd3a7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 9bc13eb70dd2efc479cef7185ee0cdfa147ec507
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940430"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408034"
 ---
 # <a name="c-bit-fields"></a>Campos de bit C++
 
@@ -94,5 +94,4 @@ A lista a seguir detalha as operações erradas em campos de bits:
 - Inicializando um não -**const** referência com um campo de bits.
 
 ## <a name="see-also"></a>Consulte também
-
-- [Classes e Structs](../cpp/classes-and-structs-cpp.md)
+ [Classes e Structs](../cpp/classes-and-structs-cpp.md)

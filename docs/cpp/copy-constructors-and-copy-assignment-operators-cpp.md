@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5b1843331afc6fa686446e7b3d7515d8701b9cf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 24f9e4e5b3d157f23c18d46f2857b29e6960e82e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026205"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405750"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Operadores de construtores de cópia e de atribuição de cópia (C++)
 > [!NOTE]
@@ -94,4 +94,3 @@ int main()
  As implicações são semelhantes às do construtor de cópia. Quando o tipo de argumento não é **const**, a atribuição de uma **const** objeto gera um erro. O inverso não é verdadeiro: se um **const** valor é atribuído a um valor que não seja **const**, a atribuição será bem-sucedida.  
   
  Para obter mais informações sobre operadores de atribuição sobrecarregados, consulte [atribuição](../cpp/assignment.md).  
-  

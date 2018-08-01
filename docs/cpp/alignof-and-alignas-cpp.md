@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e2988d1260cac91e2614765aba8ae1b9be9b922
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c10821f7e71c928fa749c2b85bd076cb9af6d04a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407974"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402410"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof e alignas (C++)
-O `alignas` especificador de tipo é um modo padrão do C++ portáteis, para especificar um alinhamento personalizado de variáveis e tipos definidos pelo usuário. O `alignof` operador da mesma forma é uma forma padrão portátil para obter o alinhamento de um tipo especificado ou variável.  
+O **alignas** especificador de tipo é uma maneira padrão de C++ portáteis, para especificar um alinhamento personalizado de variáveis e tipos definidos pelo usuário. O **alignof** operador da mesma forma é uma maneira padrão e portátil para obter o alinhamento de uma variável ou um tipo especificado.  
   
 ## <a name="example"></a>Exemplo  
- Você pode usar `alignas` em uma classe com traçado ou union, ou em membros individuais. Quando vários `alignas` especificadores forem encontrados, o compilador escolherá aquele mais rígido, (aquele com o maior valor).  
+ Você pode usar **alignas** em uma classe, ignorada ou união, ou em membros individuais. Quando vários **alignas** especificadores forem encontrados, o compilador escolherá aquela mais rígida, (aquele com o maior valor).  
   
 ```cpp  
 // alignas_alignof.cpp

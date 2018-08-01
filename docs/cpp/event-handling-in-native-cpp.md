@@ -14,16 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b233c8329119753e5753e19fd641c6bea5d8e42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b58bf010be4b05d8c9f024954b51e8cdb176cd4d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414175"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405776"
 ---
 # <a name="event-handling-in-native-c"></a>Tratamento de eventos em C++ nativo
 
-Manipulação de eventos de C++ nativo, você configura um receptor de origem e de eventos do evento usando o [event_source](../windows/event-source.md) e [event_receiver](../windows/event-receiver.md) atributos, respectivamente, especificando `type` = `native`. Esses atributos as permitem que as classes às quais eles são aplicados disparem eventos e manipulem eventos em um contexto nativo, e não de COM.
+Manipulação de eventos de C++ nativa, você configura um receptor de origem e o evento de eventos usando o [event_source](../windows/event-source.md) e [event_receiver](../windows/event-receiver.md) atributos, respectivamente, especificando `type` = `native`. Esses atributos as permitem que as classes às quais eles são aplicados disparem eventos e manipulem eventos em um contexto nativo, e não de COM.
 
 ## <a name="declaring-events"></a>Declarando eventos
 
@@ -35,7 +35,7 @@ Em uma classe de receptor de evento, você define manipuladores de eventos, que 
   
 ## <a name="hooking-event-handlers-to-events"></a>Vinculando manipuladores de eventos a eventos  
 
-Também em uma classe de receptor de evento, use a função intrínseca [hook](../cpp/hook.md) para associar eventos com manipuladores de eventos e [unhook](../cpp/unhook.md) ao dissociar a eventos de manipuladores de eventos. Você pode vincular diversos eventos a um manipulador ou vincular diversos manipuladores a um evento.  
+Também em uma classe de receptor de evento, use a função intrínseca [hook](../cpp/hook.md) para associar eventos a manipuladores de eventos e [unhook](../cpp/unhook.md) para desassociar eventos de manipuladores de eventos. Você pode vincular diversos eventos a um manipulador ou vincular diversos manipuladores a um evento.  
   
 ## <a name="firing-events"></a>Acionando eventos  
 
@@ -99,6 +99,4 @@ MyHandler1 was called with value 123.
 ```  
   
 ## <a name="see-also"></a>Consulte também
-
-[Manipulação de eventos](../cpp/event-handling.md)  
-
+ [Manipulação de eventos](../cpp/event-handling.md)  

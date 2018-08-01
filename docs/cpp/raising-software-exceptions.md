@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1ea4abadc3b751b8bad9f9521462d510c5227
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3eb98f0b66090a9c9e5f09b0cde3e3f94a6c0248
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942305"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405182"
 ---
 # <a name="raising-software-exceptions"></a>Acionando exceções de software
 Algumas das origens mais comuns de erros do programa não são sinalizadas como exceções pelo sistema. Por exemplo, se você tenta alocar um bloco de memória, mas não há memória suficiente, o tempo de execução ou a função de API não geram uma exceção, mas retornam um código de erro.  
@@ -60,7 +60,7 @@ Algumas das origens mais comuns de erros do programa não são sinalizadas como 
 #define STATUS_FILE_BAD_FORMAT        0xE0000002  
 ```  
   
- Depois que você tiver definido um código de exceção, poderá usá-lo para gerar uma exceção. Por exemplo, o seguinte código gera a exceção STATUS_INSUFFICIENT_MEM em resposta a um problema de alocação de memória:  
+ Depois que você tiver definido um código de exceção, poderá usá-lo para gerar uma exceção. Por exemplo, o código a seguir gera o `STATUS_INSUFFICIENT_MEM` exceção em resposta a um problema de alocação de memória:  
   
 ```cpp 
 lpstr = _malloc( nBufferSize );  

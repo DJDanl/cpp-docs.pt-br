@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce9ed1669d3157327f161643320f20ec5787e17d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7818836406677aa1613c757a1d688cc93ca33045
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415680"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405088"
 ---
 # <a name="class-templates"></a>Modelos de classe
 Este tópico descreve as regras que são específicas para modelos de classe do C++.  
@@ -81,11 +81,10 @@ void X<T>::mf(const U &u)
 int main()  
 {  
 }  
-  
 ```  
   
 ## <a name="nested-class-templates"></a>Modelos de classe aninhados  
- Os modelos podem ser definidos dentro de classes ou de modelos de classe. Nesse caso, eles são chamados de modelos de membro. Os modelos de membro que são classes são chamados de modelos de classe aninhados. Modelos de membro que são funções são discutidos em [modelos de função de membro](../cpp/member-function-templates.md).  
+ Os modelos podem ser definidos dentro de classes ou de modelos de classe. Nesse caso, eles são chamados de modelos de membro. Os modelos de membro que são classes são chamados de modelos de classe aninhados. Modelos de membro são funções são discutidos [modelos de função de membro](../cpp/member-function-templates.md).  
   
  Os modelos de classe aninhados são declarados como modelos de classe dentro do escopo da classe externa. Eles podem ser definidos dentro ou fora da classe delimitadora.  
   

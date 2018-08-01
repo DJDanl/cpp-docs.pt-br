@@ -18,27 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0771f5e93ba473c9ae1101996e8276bec4cd432a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55718522bdbf618fb656eedc5c6afd59bfcaca08
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409001"
 ---
 # <a name="badtypeid-exception"></a>Exceção bad_typeid
-O `bad_typeid` exceção é lançada pelo [operador typeid](../cpp/typeid-operator.md) quando o operando `typeid` é um ponteiro NULL.  
+O **bad_typeid** exceção é lançada pela [operador typeid](../cpp/typeid-operator.md) quando o operando **typeid** é um ponteiro nulo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      catch (bad_typeid)  
+catch (bad_typeid)  
    statement  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- A interface de `bad_typeid` é:  
+ A interface para **bad_typeid** é:  
   
-```  
+```cpp 
 class bad_typeid : public exception  
 {  
 public:  
@@ -48,9 +48,9 @@ public:
 };  
 ```  
   
- O exemplo a seguir mostra o operador `typeid` lançando uma exceção `bad_typeid`.  
+ A exemplo a seguir mostra a **typeid** operador lançando uma **bad_typeid** exceção.  
   
-```  
+```cpp 
 // expre_bad_typeid.cpp  
 // compile with: /EHsc /GR  
 #include <typeinfo.h>  
@@ -78,7 +78,7 @@ catch (bad_typeid){
   
 ## <a name="output"></a>Saída  
   
-```  
+```Output 
 Object is NULL  
 ```  
   

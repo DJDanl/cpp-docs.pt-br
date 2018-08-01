@@ -12,22 +12,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f611a898018cee5edc031be1db2fd35af8857e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2e80c4bd86cd4c7400e3937fcb8d164fe6b14106
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420149"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404649"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl para encapsulamento do tempo de compilação (C++ moderno)
-O *pimpl idioma* é uma técnica de C++ moderna para ocultar a implementação, para minimizar o acoplamento e separe interfaces. Pimpl é abreviação de "o ponteiro para implementação." Você pode já estar familiarizado com o conceito, mas sabe por outros nomes como idioma gato Cheshire ou Firewall do compilador.  
+O *pimpl idiom* é uma técnica de C++ moderna para ocultar a implementação, para minimizar o acoplamento e separar interfaces. Pimpl é "ponteiro para a implementação de" curto para. Você já pode estar familiarizado com o conceito, mas o conheça por outros nomes como gato Cheshire ou Firewall de compilador de linguagem.  
   
 ## <a name="why-use-pimpl"></a>Por que usar pimpl?  
- Aqui está como o idioma pimpl pode melhorar o ciclo de vida de desenvolvimento de software:  
+ Aqui está como a linguagem pimpl pode melhorar o ciclo de vida de desenvolvimento de software:  
   
--   Minimização de dependências de compilação.  
+-   Minimização das dependências de compilação.  
   
--   Separação de interface e implementação.  
+-   Separação da interface e implementação.  
   
 -   Portabilidade.  
   
@@ -40,10 +40,9 @@ class my_class {
 private:  
    class impl; unique_ptr<impl> pimpl; // opaque type here  
 };  
-  
 ```  
   
- O idioma pimpl evita cascatas de recriação e layouts de objeto frágil. Ele é adequado para tipos conhecidos (transitivamente).  
+ A linguagem pimpl evita cascatas de recompilação e layouts de objeto frágil. Ele é adequado para tipos populares (temporariamente).  
   
 ## <a name="pimpl-implementation"></a>Implementação de Pimpl  
  Definir o `impl` classe no arquivo. cpp.  
@@ -61,9 +60,9 @@ my_class::my_class(): pimpl( new impl )
 ```  
   
 ## <a name="best-practices"></a>Práticas recomendadas  
- Considere a possibilidade de adicionar suporte para não gerar especialização de troca.  
+ Considere a possibilidade de adicionar suporte para a especialização de troca de não lançamento.  
   
 ## <a name="see-also"></a>Consulte também  
- [Bem-vindo novamente para C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [Bem-vindo ao C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Referência da linguagem C++](../cpp/cpp-language-reference.md)   
  [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)

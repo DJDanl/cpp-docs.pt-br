@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fcfda308ed3a5723b32729e7986a7063e9928fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9f9ee05b55a0945d18e78dc67df5653c06c8a1bc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409365"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404376"
 ---
 # <a name="calling-example-function-prototype-and-call"></a>Exemplo de chamada: protótipo de função e chamada
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
@@ -45,7 +45,7 @@ void    MyFunc( char c, short s, int i, double f )
 MyFunc ('x', 12, 8192, 2.7183);  
 ```  
   
- Para obter mais informações, consulte [resultados de exemplo chamada](../cpp/results-of-calling-example.md).  
+ Para obter mais informações, consulte [resultados do exemplo de chamada](../cpp/results-of-calling-example.md).  
   
 **Fim da seção específica da Microsoft**  
   

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a2aad184a1f388df6f7a6941aa9e5f302f35b12
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: d0b74909e048789662800569f8d996747fb8cadf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38102892"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403031"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Como criar e usar instâncias shared_ptr
 O `shared_ptr` tipo é um ponteiro inteligente na biblioteca padrão C++ que foi projetado para cenários em que mais de um proprietário pode ter que gerenciar o tempo de vida do objeto na memória. Depois de inicializar uma `shared_ptr` copiá-lo, passá-lo pelo valor em argumentos de função e atribuí-la a outro `shared_ptr` instâncias. Todas as instâncias de apontar para o mesmo objeto e compartilhar o acesso a um "bloco de controle" que incrementa e decrementa a contagem de referência sempre que um novo `shared_ptr` é adicionado, sai do escopo ou é redefinido. Quando a contagem de referência atinge zero, o bloco de controle exclui o recurso de memória e ela mesma.  

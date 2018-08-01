@@ -22,18 +22,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d2a6188cf9d8c8283a6c03a2ca6c701e28baf0d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 922103e808541e2829350749a04d6004ba36577f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419840"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403414"
 ---
 # <a name="obsolete-calling-conventions"></a>Convenções de chamada obsoletas
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
  O **Pascal**, **Fortran**, e **syscall** convenções de chamada não têm mais suporte. Você pode emular a funcionalidade delas usando uma das convenções de chamada com suporte e as opções do vinculador apropriadas.  
   
- \<Windows. h > agora oferece suporte a **WINAPI** macro, que pode ser convertido para a convenção de chamada apropriada para o destino. Use **WINAPI** em que você usou anteriormente **PASCAL** ou **__far \__pascal**.  
+ \<Windows. h > agora é compatível com a macro WINAPI, que se traduz a convenção de chamada apropriada para o destino. Usar WINAPI onde você usava PASCAL ou **__far \__pascal**.  
   
 **Fim da seção específica da Microsoft**  
   

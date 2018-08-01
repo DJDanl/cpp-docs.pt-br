@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9938e8bb2128def7d5f507acb111de854dfd4977
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 931f9d7cc17afe974837c8a622b82c124ef6be57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942075"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407011"
 ---
 # <a name="friend-c"></a>friend (C++)
 Em algumas circunstâncias, é mais conveniente conceder acesso no nível do membro para as funções que não são membros de uma classe ou a todos os membros em uma classe separada. Somente o implementador de classe pode declarar quem são seus amigos. Uma classe ou função não pode declarar em si como um amigo de qualquer classe. Em uma definição de classe, use o **amigo** palavra-chave e o nome de uma função de membro não ou outra classe para conceder acesso aos membros particulares e protegidos da sua classe. Em uma definição de modelo, um parâmetro de tipo pode ser declarado como um amigo.  
@@ -59,7 +59,7 @@ friend class F;
 friend F;  
 ```  
   
- O primeiro formulário introduz uma nova classe F se nenhuma classe existente com esse nome foi encontrado no namespace mais interno.  **C++11**: O segundo formulário não introduz uma nova classe; ele pode ser usado quando a classe já foi declarada e deve ser usada ao declarar um typedef como um amigo ou um parâmetro de tipo de modelo.  
+ O primeiro formulário introduz uma nova classe F se nenhuma classe existente com esse nome foi encontrado no namespace mais interno. **C++11**: O segundo formulário não introduz uma nova classe; ele pode ser usado quando a classe já foi declarada e deve ser usada ao declarar um typedef como um amigo ou um parâmetro de tipo de modelo.  
   
  Use `class friend F` quando o tipo referenciado não ainda foi declarado:  
   

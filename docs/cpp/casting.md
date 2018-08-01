@@ -1,5 +1,5 @@
 ---
-title: Conversão | Microsoft Docs
+title: Convertendo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07abd7c6a6a5c646dade15299fe6cfe78d9ff1d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c7dfe18c65fcde7cbfa0ea2121234f2896a2723
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411722"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405013"
 ---
 # <a name="casting"></a>Conversão
 A linguagem C++ estabelece que se uma classe é derivada de uma classe base que contém funções virtuais, um ponteiro para esse tipo de classe base pode ser usado para chamar as implementações das funções virtuais que residem no objeto de classe derivada. Uma classe que contém funções virtuais é às vezes chamada de "classe polimórfica".  
@@ -44,7 +44,7 @@ Classe C com subobjeto B e subobjeto A
   
  Usando as informações de tipo de tempo de execução, é possível verificar se um ponteiro aponta realmente para um objeto completo e pode ser convertido seguramente para apontar para outro objeto em sua hierarquia. O [dynamic_cast](../cpp/dynamic-cast-operator.md) operador pode ser usado para fazer esses tipos de conversões. Também executa a verificação de tempo de execução necessária para tornar a operação segura.  
   
- Para conversão de tipos nonpolymorphic, você pode usar o [static_cast](../cpp/static-cast-operator.md) operador (Este tópico explica a diferença entre as conversões de conversão estáticos e dinâmicos, e quando é apropriado usar cada).  
+ Para conversão de tipos não polimórficos, você pode usar o [static_cast](../cpp/static-cast-operator.md) operador (Este tópico explica a diferença entre conversões estáticas e dinâmicas, e quando é apropriado usar cada um).  
   
  Esta seção abrange os seguintes tópicos:  
   

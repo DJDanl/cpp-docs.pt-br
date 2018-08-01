@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6021de0e012797b811fa032547f2b95142176cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b1a878fe1c18889c1abfef995786ffcc9a267981
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942242"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404048"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operadores de incremento e de decremento pós-fixados: ++ e --
 ## <a name="syntax"></a>Sintaxe  
@@ -46,7 +46,7 @@ postfix-expression --
 i++;  
 ```  
   
- O efeito de aplicar o operador de incremento de sufixo (`++`) é que o valor do operando é gerado por uma unidade do tipo apropriado. Da mesma forma, o efeito de aplicar o operador de decremento de sufixo (**--**) é que o valor do operando é diminuído em uma unidade do tipo apropriado.  
+ O efeito de aplicar o operador de incremento de sufixo (**++**) é que o valor do operando é gerado por uma unidade do tipo apropriado. Da mesma forma, o efeito de aplicar o operador de decremento de sufixo (**--**) é que o valor do operando é diminuído em uma unidade do tipo apropriado.  
   
  É importante observar que um sufixo incremento ou decremento expressão é avaliada como o valor da expressão *anteriores ao* aplicação do respectivo operador. A operação de incremento ou decremento ocorre *depois de* o operando é avaliado. Esse problema surge apenas quando a operação de incremento ou decremento de sufixo ocorre no contexto de uma expressão maior.  
   

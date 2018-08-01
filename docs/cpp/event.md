@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abfda38c6c35c3e7172b187c89fa78bed5ee7616
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 74b79edb24396896a6c8a50965081e9466720ca4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942243"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407819"
 ---
 # <a name="event"></a>__event
 Declara um evento.  
@@ -31,7 +31,6 @@ Declara um evento.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 __event method-declarator;  
 __event __interface interface-specifier;  
 __event member-declarator;  
@@ -67,7 +66,7 @@ __event HRESULT OnClick(int* b, char* s);
  Ver [manipulação de eventos em C++ nativo](../cpp/event-handling-in-native-cpp.md) para código de exemplo.  
   
 ## <a name="com-events"></a>Eventos COM  
- Os eventos COM são interfaces. Os parâmetros de um método em uma interface de origem do evento devem ser `in` parâmetros (mas isso não é rigorosamente imposto), porque um `out` parâmetro não é útil para o multicasting. Será emitido um aviso de nível 1, se você usar um `out` parâmetro.  
+ Os eventos COM são interfaces. Os parâmetros de um método em uma interface de origem do evento devem ser *na* parâmetros (mas isso não é rigorosamente imposto), porque um *out* parâmetro não é útil para o multicasting. Será emitido um aviso de nível 1, se você usar um *out* parâmetro.  
   
  O tipo de retorno normalmente é o HRESULT ou **void**, mas pode ser qualquer tipo integral, incluindo **enum**. Quando um evento usa um tipo de retorno integral e um manipulador de eventos retorna uma condição de erro, nesse caso, o evento sendo gerado aborta as chamadas para outros delegados. Observe que o compilador marcará automaticamente uma interface de origem do evento como um [origem](../windows/source-cpp.md) no IDL gerado.  
   

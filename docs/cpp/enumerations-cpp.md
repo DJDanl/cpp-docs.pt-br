@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75344e8fef933b493177f812b06edd3c187046f6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48f9328ef6a862ffc8888b99b16764978b0005c2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942343"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406247"
 ---
 # <a name="enumerations-c"></a>Enumerações (C++)
 Uma enumeração é um tipo definido pelo usuário que consiste em um conjunto de constantes integrais nomeadas que são conhecidas como enumeradores.  
@@ -98,12 +98,11 @@ namespace CardGame_NonScoped
   
 ```cpp  
 enum Suit { Diamonds = 1, Hearts, Clubs, Spades };  
-  
 ```  
   
  O enumerador `Diamonds` recebe o valor `1`. Os enumeradores subsequentes, se não recebem um valor explícito, recebem o valor do enumerador anterior mais um. No exemplo anterior, `Hearts` teria o valor 2, `Clubs` teria 3 e assim por diante.  
   
- Cada enumerador é tratado como uma constante e deve ter um nome exclusivo no escopo onde `enum` é definido (para enums sem escopo) ou dentro do enum em si (para enums com escopo). Os valores dados para os nomes não devem ser exclusivos. Por exemplo, se a declaração de um enum sem escopo `Suit` for esta:  
+ Cada enumerador é tratado como uma constante e deve ter um nome exclusivo dentro do escopo em que o **enum** é definido (para enums sem escopo) ou dentro de **enum** em si (para enums com escopo). Os valores dados para os nomes não devem ser exclusivos. Por exemplo, se a declaração de um enum sem escopo `Suit` for esta:  
   
 ```cpp  
 enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };  
@@ -119,7 +118,6 @@ enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
 int account_num = 135692;  
 Suit hand;  
 hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'  
-  
 ```  
   
  Uma conversão é necessária para converter um **int** para um enumerador com escopo ou fora do escopo. No entanto, você pode promover um enumerador para um valor inteiro sem uma conversão.  
@@ -147,7 +145,6 @@ namespace ScopedEnumConversions
         account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'  
         account_num = static_cast<int>(Suit::Hearts); // OK  
 }  
-  
 ```  
   
  Observe que a linha `hand = account_num;` ainda causa o erro que ocorre com enums sem escopo, como mostrado anteriormente. É permitido com uma conversão explícita. No entanto, com enums com escopo, a conversão tentada na próxima instrução, `account_num = Suit::Hearts;`, não é mais permitida sem uma conversão explícita. 

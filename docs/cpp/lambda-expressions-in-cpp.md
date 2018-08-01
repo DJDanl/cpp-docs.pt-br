@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8457371ef266c5628e225eff8f05328190e52d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c7b6d49ae82048d5223eea385f1503c28a990ed
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941961"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402959"
 ---
 # <a name="lambda-expressions-in-c"></a>Expressões lambda em C++
 No C++ 11 e posterior, uma expressão lambda — geralmente chamado de um *lambda*— é uma maneira conveniente de definir um objeto de função anônima (um *fechamento*) à direita no local onde ele é invocado ou passado como um argumento para uma função. Normalmente, lambdas são usados para encapsular algumas linhas de código que são passadas para algoritmos ou métodos assíncronos. Este artigo define o que são as lambdas, as compara a outras técnicas de programação, descreve suas vantagens e fornece um exemplo básico.  
@@ -46,7 +46,6 @@ void abssort(float* x, unsigned n) {
         } // end of lambda expression  
     );  
 }  
-  
 ```  
   
  Esta ilustração mostra as partes de uma lambda:  
@@ -107,7 +106,7 @@ void f(Args... args) {
 }  
 ```  
   
- Para usar expressões lambda no corpo de um método de classe, passe o `this` ponteiro para a cláusula de captura para fornecer acesso aos membros de dados e métodos da classe delimitadora. 
+ Para usar expressões lambda no corpo de um método de classe, passe o **isso** ponteiro para a cláusula de captura para fornecer acesso aos membros de dados e métodos da classe delimitadora. 
  
 **Visual Studio 2017 versão 15.3 e posterior** (disponíveis com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): O **isso** ponteiro pode ser capturado por valor, especificando `*this` na cláusula de captura. Captura por valor significa que toda *fechamento*, que é o objeto de função anônima que encapulates a expressão lambda, que é copiada para cada site de chamada em que o lambda é invocado. Captura por valor é útil quando o lambda será executado em operações assíncronas ou paralelas, especialmente em determinadas arquiteturas de hardware, como NUMA. 
 
@@ -141,8 +140,7 @@ pNums = make_unique<vector<int>>(nums);
 auto y = [] (int first, int second)  
 {  
     return first + second;  
-};  
-  
+};   
 ```  
   
  Na **C++ 14**, se o tipo de parâmetro for genérico, você pode usar a palavra-chave auto como o especificador de tipo. Isso informa ao compilador para criar o operador de chamada de função como um modelo. Cada instância de auto, uma lista de parâmetros é equivalente a um parâmetro de tipo diferente.  
@@ -340,7 +338,6 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
     {
         return [n] { return n + 1; }();
     }
-
 ``` 
 Um lambda é implicitamente `constexpr` se seu resultado satisfaz os requisitos de um `constexpr` função:
 ```cpp

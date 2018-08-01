@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4562fcb738cc7f692c1bffe1b4b06e413392dd60
-ms.sourcegitcommit: ee9fb774e82dfbda1dfaeb197aed36b97e408978
+ms.openlocfilehash: eed34b3c356b36c824e22739697b7967575792f6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34755765"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402644"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Como criar e usar instâncias unique_ptr
-Um [unique_ptr](../standard-library/unique-ptr-class.md) não compartilha o ponteiro. Ele não pode ser copiado para outro `unique_ptr`, passado por valor para uma função ou usado em qualquer algoritmo de biblioteca padrão C++ que requer cópias a serem feitas. Um `unique_ptr` só pode ser movido. Isso significa que a propriedade do recurso de memória é transferida para outro `unique_ptr` e que o `unique_ptr` original não a possui mais. É recomendável que você restrinja um objeto a um proprietário, porque a propriedade múltipla adiciona complexidade à lógica do programa. Portanto, quando você precisar de um ponteiro inteligente para um objeto C++ simples, usar `unique_ptr`, e quando você cria um `unique_ptr`, use o [make_unique](../standard-library/memory-functions.md#make_unique) função auxiliar.  
+Um [unique_ptr](../standard-library/unique-ptr-class.md) não compartilha seu ponteiro. Ele não pode ser copiado para outro `unique_ptr`, passado por valor para uma função ou usado em qualquer algoritmo da biblioteca padrão C++ que exija que cópias sejam feitas. Um `unique_ptr` só pode ser movido. Isso significa que a propriedade do recurso de memória é transferida para outro `unique_ptr` e que o `unique_ptr` original não a possui mais. É recomendável que você restrinja um objeto a um proprietário, porque a propriedade múltipla adiciona complexidade à lógica do programa. Portanto, quando você precisa de um ponteiro inteligente para um objeto C++ simples, use `unique_ptr`, e quando você construir um `unique_ptr`, use o [make_unique](../standard-library/memory-functions.md#make_unique) função auxiliar.  
   
  O diagrama a seguir ilustra a transferência de propriedade entre duas instâncias de `unique_ptr`.  
   
- ![Movendo a propriedade de uma única&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
+ ![Movendo a propriedade de um único&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
   
- `unique_ptr` é definido no `<memory>` cabeçalho na biblioteca C++ padrão. Ele é tão eficiente quanto um ponteiro bruto e pode ser usado em contêineres de biblioteca padrão C++. A adição de `unique_ptr` instâncias aos contêineres de biblioteca padrão C++ é eficiente porque o construtor de movimento do `unique_ptr` elimina a necessidade de uma operação de cópia.  
+ `unique_ptr` é definido no `<memory>` cabeçalho na biblioteca padrão C++. Ele é exatamente tão eficiente quanto um ponteiro bruto e pode ser usado em contêineres da biblioteca padrão C++. A adição de `unique_ptr` instâncias para contêineres da biblioteca padrão C++ é eficiente porque o construtor de movimentação do `unique_ptr` elimina a necessidade de uma operação de cópia.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como criar instâncias de `unique_ptr` e passá-las entre as funções.  
@@ -48,7 +48,7 @@ Um [unique_ptr](../standard-library/unique-ptr-class.md) não compartilha o pont
  [!code-cpp[stl_smart_pointers#212](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_3.cpp)]  
   
 ## <a name="example"></a>Exemplo  
- Você pode usar [make_unique](../standard-library/memory-functions.md#make_unique) para criar um `unique_ptr` em uma matriz, mas você não pode usar `make_unique` para inicializar os elementos da matriz.  
+ Você pode usar [make_unique](../standard-library/memory-functions.md#make_unique) para criar um `unique_ptr` em uma matriz, mas não é possível usar `make_unique` para inicializar os elementos da matriz.  
   
  [!code-cpp[stl_smart_pointers#213](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_4.cpp)]  
   

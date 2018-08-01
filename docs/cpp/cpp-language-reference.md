@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c3886e710d0262068848304d9f2419c835b67c2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: df532fca3c1ecbb19126a8692377517d240bd2f8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954187"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408210"
 ---
 # <a name="c-language-reference"></a>Referência da linguagem C++
 Esta referência explica a linguagem de programação C++ conforme implementada no Microsoft Visual C++. A organização se baseia *The Annotated C++ Reference Manual* Margaret Ellis e Bjarne Stroustrup e no padrão de internacional de C++ ANSI/ISO (ISO/IEC FDIS 14882). As implementações específicas da Microsoft de recursos da linguagem C++ são incluídas.  
@@ -59,16 +59,16 @@ Para uma visão geral das práticas de programação do C++ moderno, consulte [b
  Expressão, nulo, composto, seleção, iteração, salto e instruções de declaração.  
   
  [Declarações e definições](declarations-and-definitions-cpp.md)  
- Especificadores de classe de armazenamento, definições de função, inicializações, enumerações, classe, struct e declarações de união e typedef. Além disso, funções embutidas, palavra-chave const, namespaces.  
+ Especificadores de classe de armazenamento, definições de função, inicializações, enumerações **classe**, **struct**, e **união** declarações, e **typedef**  declarações. Além disso, **embutido** funções, **const** palavra-chave, namespaces.  
   
  [Classes, estruturas e uniões](../cpp/classes-and-structs-cpp.md)  
- Introdução a classes, estruturas e uniões. Além disso, funções de membro, funções de membro especial, os membros de dados, campos de bits, esse ponteiro, classes aninhadas.  
+ Introdução a classes, estruturas e uniões. Além disso, funções de membro, funções de membro especial, membros de dados, campos de bits, **isso** ponteiro, classes aninhadas.  
   
  [Classes derivadas](../cpp/inheritance-cpp.md)  
- Herança única e múltipla, funções virtuais, várias classes base, classes abstratas e regras de escopo. Além disso, o Super e \_interface as palavras-chave.  
+ Herança única e múltipla, **virtual** funções, várias classes base, **abstrata** classes, regras de escopo. Além disso, o **super** e **interface** palavras-chave.  
   
  [Controle de acesso de membro](../cpp/member-access-control-cpp.md)  
- Controle de acesso a membros de classe: palavras-chave public, private e protected Funções e classes amigas.  
+ Controlando o acesso a membros de classe: **pública**, **privada**, e **protegido** palavras-chave. Funções e classes amigas.  
   
  [Sobrecarga](operator-overloading.md)  
  Operadores sobrecarregados, regras para sobrecarga de operador.  
@@ -80,16 +80,16 @@ Para uma visão geral das práticas de programação do C++ moderno, consulte [b
  `#error` diretiva, o **static_assert** palavra-chave, o `assert` macro.  
   
  [Modelos](../cpp/templates-cpp.md)  
- Especificações de modelo, modelos de função, modelos de classe, palavra-chave typename, modelos versus macros, modelos e ponteiros inteligentes.  
+ Especificações de modelo, modelos de função, modelos de classe **typename** palavra-chave, modelos versus macros, modelos e ponteiros inteligentes.  
   
  [Manipulação de eventos](../cpp/event-handling.md)  
  Eventos de declaração e manipuladores de eventos.  
   
  [Modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md)  
- Modificadores específicos do Microsoft C++. Memória de endereçamento, convenções de chamada, as funções naked, atributos de classe de armazenamento ( declspec), estendidos \__w64.  
+ Modificadores específicos do Microsoft C++. Memória de endereçamento, convenções de chamada, **naked** funções, atributos de classe de armazenamento estendidos (**declspec**), **__w64**.  
   
  [Assembler embutido](../assembler/inline/inline-assembler.md)  
- Usando a linguagem assembly e C++ em blocos __asm.  
+ Usando a linguagem de assembly e C++ no **ASM** blocos.  
   
  [Suporte para COM do compilador](../cpp/compiler-com-support.md)  
  Uma referência a classes específicas da Microsoft e funções globais usadas para oferecer suporte a tipos COM.  

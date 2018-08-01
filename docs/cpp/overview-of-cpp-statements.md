@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2858807816178115dd34c05d6c88c3dd6fecdee3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 426709857447d972365aa034059bcd34305d6d40
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421741"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402504"
 ---
 # <a name="overview-of-c-statements"></a>Visão geral de instruções C++
 As instruções C++ são executadas sequencialmente, exceto quando uma instrução de expressão, uma instrução de seleção, uma instrução de iteração ou uma instrução de salto modificam especificamente essa sequência.  
@@ -27,7 +27,6 @@ As instruções C++ são executadas sequencialmente, exceto quando uma instruç�
  As instruções podem ter os seguintes tipos:  
   
 ```  
-  
 labeled-statement  
 expression-statement  
 compound-statement  
@@ -36,10 +35,9 @@ iteration-statement
 jump-statement  
 declaration-statement  
 try-throw-catch  
-  
 ```  
   
- Na maioria dos casos, a sintaxe de instrução de C++ é idêntica de ANSI C. A principal diferença entre os dois é que, em C, declarações são permitidos apenas no início de um bloco; C++ adiciona o *-declaração*, que efetivamente remove essa restrição. Isso permite que você apresente variáveis em um ponto no programa onde um valor de inicialização pré-computado pode ser calculado.  
+ Na maioria dos casos, a sintaxe da instrução C++ é idêntica de ANSI C. A principal diferença entre os dois é que em C, declarações são permitidas apenas no início de um bloco; C++ adiciona o *instrução de declaração*, que remove efetivamente esta restrição. Isso permite que você apresente variáveis em um ponto no programa onde um valor de inicialização pré-computado pode ser calculado.  
   
  Declarar variáveis dentro de blocos também permite que você controle com precisão o escopo e o tempo de vida das variáveis.  
   

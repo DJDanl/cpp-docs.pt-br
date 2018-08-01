@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8823935ee2f871cdc033aec23f05fc108244e8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c85de0f147d0cfed873a091d17c46e56bf5758a9
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408791"
 ---
 # <a name="compound-statements-blocks"></a>Instruções compostas (blocos)
 Uma instrução composta consiste em zero ou mais instruções entre chaves (**{}**). Uma instrução composta pode ser usada em qualquer lugar em que uma instrução é esperada. As instruções compostas são comumente chamadas de "blocos".  
@@ -30,14 +31,13 @@ Uma instrução composta consiste em zero ou mais instruções entre chaves (**{
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 { [ statement-list ] }  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O exemplo a seguir usa uma instrução composta como o *instrução* parte do **se** instrução (consulte [if instrução](../cpp/if-else-statement-cpp.md) para obter detalhes sobre a sintaxe):  
+ O exemplo a seguir usa uma instrução composta, como o *instrução* fazem parte do **se** instrução (consulte [if instrução](../cpp/if-else-statement-cpp.md) para obter detalhes sobre a sintaxe):  
   
-```  
+```cpp 
 if( Amount > 100 )  
 {  
     cout << "Amount was too large to handle\n";  
@@ -50,7 +50,7 @@ else
 ```  
   
 > [!NOTE]
->  Como uma declaração de uma instrução, uma declaração pode ser uma das instruções no *lista de instruções*. Portanto, os nomes declarados em uma instrução composta, mas não declarados explicitamente como estáticos, têm escopo e vida útil locais (para objetos). Consulte [escopo](../cpp/scope-visual-cpp.md) para obter detalhes sobre o tratamento de nomes com escopo local.  
+>  Como uma declaração de uma instrução, uma declaração pode ser uma das instruções na *lista de instruções*. Portanto, os nomes declarados em uma instrução composta, mas não declarados explicitamente como estáticos, têm escopo e vida útil locais (para objetos). Ver [escopo](../cpp/scope-visual-cpp.md) para obter detalhes sobre o tratamento de nomes com escopo local.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral das instruções C++](../cpp/overview-of-cpp-statements.md)

@@ -1,5 +1,5 @@
 ---
-title: Analisando argumentos de linha de comando C++ | Microsoft Docs
+title: Analisando argumentos de linha de comando do C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147461584f1a978be55502d783bc527b5632d20f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eca85baea71052525d70c90ac521ef5fa95a5118
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409201"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analisando argumentos de linha de comando C++
 **Seção específica da Microsoft**  
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 -   O caractere de acento circunflexo (^) não é reconhecido como um caractere de escape ou um delimitador. O caractere é completamente tratado pelo analisador de linha de comando no sistema operacional antes de ser passada para a matriz `argv` no programa.  
   
--   Uma cadeia de caracteres entre aspas duplas ("*cadeia de caracteres*") é interpretada como um único argumento, independentemente do espaço em branco contido. Uma cadeia de caracteres entre aspas pode ser inserida em um argumento.  
+-   Uma cadeia de caracteres cercada por aspas duplas ("*cadeia de caracteres*") é interpretado como um único argumento, independentemente do espaço em branco contido. Uma cadeia de caracteres entre aspas pode ser inserida em um argumento.  
   
 -   Aspas duplas precedidas por uma barra invertida (\\") são interpretados como um caractere literal de aspas duplas (").  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="example"></a>Exemplo  
  O programa a seguir demonstra como argumentos de linha de comando são passados:  
   
-```  
+```cpp 
 // command_line_arguments.cpp  
 // compile with: /EHsc  
 #include <iostream>  

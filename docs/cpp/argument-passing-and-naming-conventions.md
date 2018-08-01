@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43aa3430b641f6333c6c35d618f9e9de123b7390
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e1a6a8e837a44a966f262f581db04f1589233c8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413480"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404035"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Passagem de argumento e convenções de nomenclatura
 **Seção específica da Microsoft**  
@@ -44,7 +44,7 @@ ms.locfileid: "32413480"
   
  Para obter informações sobre como definir seu próprio código de prólogo e epílogo de função, consulte [chamadas de função Naked](../cpp/naked-function-calls.md).  
   
- Para obter informações sobre o padrão de convenções de chamada no código que plataformas de destino x64, consulte [visão geral do x64 convenções de chamada](../build/overview-of-x64-calling-conventions.md). Para obter informações sobre problemas de convenção de chamada no código que tem como alvo plataformas ARM, consulte [Visual C++ ARM migração problemas](../build/common-visual-cpp-arm-migration-issues.md).  
+ Para obter informações sobre o padrão de convenções de chamada no código que plataformas x64, consulte [visão geral do x64 convenções de chamada](../build/overview-of-x64-calling-conventions.md). Para obter informações sobre problemas de convenção de chamada no código que se destina a plataformas ARM, consulte [problemas comuns na Visual C++ ARM migração](../build/common-visual-cpp-arm-migration-issues.md).  
   
  As seguintes convenções de chamada são suportadas pelo compilador visual do C/C++.  
   
@@ -54,10 +54,10 @@ ms.locfileid: "32413480"
 |[__clrcall](../cpp/clrcall.md)|N/D|Carrega parâmetros na pilha de expressões CLR em ordem (da esquerda para a direita).|  
 |[__stdcall](../cpp/stdcall.md)|Receptor|Empurra parâmetros para a pilha, em ordem inversa (direita para a esquerda)|  
 |[__fastcall](../cpp/fastcall.md)|Receptor|Armazenado em registros, em seguida, empurrado para a pilha|  
-|[__thiscall](../cpp/thiscall.md)|Receptor|Enviado por push na pilha; **isso** ponteiro armazenado em ECX|  
+|[__thiscall](../cpp/thiscall.md)|Receptor|Empurrado na pilha; **isso** ponteiro armazenado no ECX|  
 |[__vectorcall](../cpp/vectorcall.md)|Receptor|Armazenado em registros e depois empurrado na pilha na ordem inversa (da direita para a esquerda)|  
   
- Para obter informações relacionadas, consulte [obsoletos convenções de chamada](../cpp/obsolete-calling-conventions.md).  
+ Para obter informações relacionadas, consulte [convenções de chamada obsoletas](../cpp/obsolete-calling-conventions.md).  
   
  **Fim da seção específica da Microsoft**  
   

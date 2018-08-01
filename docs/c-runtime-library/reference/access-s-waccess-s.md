@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c269951eacfc2f7a5d40c8fad1e4fb67cc1d2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 82390f7afe45b48539fb5c33130900ef75cf1967
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392085"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403297"
 ---
 # <a name="accesss-waccesss"></a>_access_s, _waccess_s
 
@@ -66,27 +66,27 @@ errno_t _waccess_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*path*<br/>
+*path*  
 Caminho do arquivo ou do diretório.
 
-*modo*<br/>
+*modo*  
 Configuração de permissão.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada função retorna 0 se o arquivo tem o modo determinado. A função retorna um código de erro se o arquivo nomeado não existe ou não está acessível no modo determinado. Nesse caso, a função retorna um código de erro do conjunto da seguinte maneira e também define **errno** com o mesmo valor.
+Cada função retorna 0 se o arquivo tem o modo determinado. A função retorna um código de erro se o arquivo nomeado não existe ou não está acessível no modo determinado. Nesse caso, a função retorna um código de erro do conjunto da seguinte maneira e também define `errno` com o mesmo valor.
 
 |Valor errno|Condição|
 |-|-|
-**EACCES**|Acesso negado. A configuração de permissão do arquivo não permite o acesso especificado.
-**ENOENT**|Nome ou caminho do arquivo não encontrado.
-**EINVAL**|Parâmetro inválido.
+`EACCES`|Acesso negado. A configuração de permissão do arquivo não permite o acesso especificado.
+`ENOENT`|Nome ou caminho do arquivo não encontrado.
+`EINVAL`|Parâmetro inválido.
 
 Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Quando usado com arquivos, o **access_s** função determina se o arquivo especificado existe e pode ser acessado como especificado pelo valor de *modo*. Quando usado com diretórios, **access_s** somente determina se o diretório especificado existe. No Windows 2000 e sistemas operacionais posteriores, todos os diretórios de tem lido em acesso de gravação.
+Quando usado com arquivos, o **access_s** função determina se o arquivo especificado existe e pode ser acessado como especificado pelo valor da *modo*. Quando usado com diretórios **access_s** determina apenas se o diretório especificado existe. No Windows 2000 e sistemas operacionais posteriores, todos os diretórios leram em acesso de gravação.
 
 |valor do modo|Verifica o arquivo quanto a|
 |----------------|---------------------|
@@ -95,17 +95,17 @@ Quando usado com arquivos, o **access_s** função determina se o arquivo especi
 |04|Permissão de leitura.|
 |06|Permissão de leitura e gravação.|
 
-A permissão para ler ou gravar o arquivo não é suficiente para garantir a capacidade de abrir um arquivo. Por exemplo, se um arquivo está bloqueado por outro processo, ele pode não ser acessado, embora **access_s** retornará 0.
+A permissão para ler ou gravar o arquivo não é suficiente para garantir a capacidade de abrir um arquivo. Por exemplo, se um arquivo estiver bloqueado por outro processo, ele pode não ser acessível, embora **access_s** retornará 0.
 
-**waccess_s** é uma versão de caractere largo de **access_s**, onde o *caminho* argumento **waccess_s** é uma cadeia de caracteres largos. Caso contrário, **waccess_s** e **access_s** se comportam de forma idêntica.
+**waccess_s** é uma versão de caractere largo de **access_s**, em que o *caminho* argumento **waccess_s** é uma cadeia de caracteres largos. Caso contrário, **waccess_s** e **access_s** se comportam de forma idêntica.
 
-Essas funções validam seus parâmetros. Se *caminho* é **nulo** ou *modo* não especificar um modo válido, o manipulador de parâmetro inválido é invocado, conforme descrito em [devalidaçãodeparâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retornar **EINVAL**.
+Essas funções validam seus parâmetros. Se *caminho* for NULL ou *modo* não especifica um modo válido, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão `errno` como `EINVAL` e retornarão `EINVAL`.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**taccess_s**|**_access_s**|**_access_s**|**_waccess_s**|
+|`_taccess_s`|**_access_s**|**_access_s**|**_waccess_s**|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -116,7 +116,7 @@ Essas funções validam seus parâmetros. Se *caminho* é **nulo** ou *modo* nã
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo usa **access_s** para verificar se o arquivo chamado crt_access_s.c para ver se ele existe e se a gravação é permitida.
+Este exemplo usa **access_s** para verificar o arquivo nomeado crt_access_s para ver se ele existe e se a gravação é permitida.
 
 ```C
 // crt_access_s.c
@@ -160,9 +160,9 @@ File crt_access_s.c does not have write permission.
 
 ## <a name="see-also"></a>Consulte também
 
-[Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
-[_access, _waccess](access-waccess.md)<br/>
-[_chmod, _wchmod](chmod-wchmod.md)<br/>
-[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
-[_open, _wopen](open-wopen.md)<br/>
-[Funções _stat, _wstat](stat-functions.md)<br/>
+[Manipulação de Arquivos](../../c-runtime-library/file-handling.md)  
+[_access, _waccess](access-waccess.md)  
+[_chmod, _wchmod](chmod-wchmod.md)  
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)  
+[_open, _wopen](open-wopen.md)  
+[Funções _stat, _wstat](stat-functions.md)  

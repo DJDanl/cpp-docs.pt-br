@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9301d4fdb09c63b7dc8e875e2b03a4990acec054
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 78808ba4ce8d54ecc8e88516ae5f9b2521f50979
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941152"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403973"
 ---
 # <a name="expressions-with-unary-operators"></a>Expressões com operadores unários
 Os operadores unários atuam somente em um operando em uma expressão. Os operadores unários são os seguintes:  

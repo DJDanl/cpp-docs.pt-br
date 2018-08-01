@@ -15,18 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eacd447d27f3dd8bd2d2d88e6d975cdb29a82026
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1ecb15cfc34ec518f46474497a3577a51b00c4e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408951"
 ---
 # <a name="initializing-arrays"></a>Inicializando matrizes
 Se a classe tiver um construtor, as matrizes dessa classe serão iniciadas por um construtor. Se houver menos itens na lista de inicializadores do que elementos na matriz, o construtor padrão será usado para os elementos restantes. Se nenhum construtor padrão for definido para a classe, a lista de inicializadores deverá estar completa – ou seja, deve haver um inicializador para cada elemento na matriz.  
   
  Considere a classe `Point` que define dois construtores:  
   
-```  
+```cpp 
 // initializing_arrays1.cpp  
 class Point  
 {  
@@ -51,9 +52,9 @@ int main()
   
  O primeiro elemento de `aPoint` é construído usando o construtor `Point( int, int )`; os dois elementos restantes são construídos com o construtor padrão.  
   
- Matrizes de membro estático (se **const** ou não) pode ser inicializado em suas definições (fora da declaração de classe). Por exemplo:  
+ Matrizes de membros estáticos (se **const** ou não) podem ser inicializadas em suas definições (fora da declaração de classe). Por exemplo:  
   
-```  
+```cpp 
 // initializing_arrays2.cpp  
 class WindowColors  
 {  
@@ -68,4 +69,3 @@ int main()
 {  
 }  
 ```  
-  

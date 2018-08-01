@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208556"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404932"
 ---
 # <a name="overview-of-declarators"></a>Visão geral dos declaradores
 Declaradores são os componentes de uma declaração que especificam nomes de objetos ou funções. Os declaradores também especificam se o objeto nomeado é ou não um objeto, um ponteiro, uma referência ou uma matriz.  Quando os declaradores não especificam o tipo de base, eles modificam as informações de tipo no tipo básico para especificar tipos derivados, como ponteiros, referências e matrizes.  Aplicado a funções, o declarador trabalha com o especificador de tipo para especificar completamente o tipo de retorno de uma função para ser um objeto, ponteiro ou referência. (Especificadores, abordados em [declarações e definições](declarations-and-definitions-cpp.md), transmitem propriedades como o armazenamento e o tipo de classe. Os modificadores, abordados nesta seção e, na [modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md), modificam declaradores.) A figura a seguir mostra uma declaração completa de `MyFunction`, e chama os componentes da declaração.  
@@ -172,13 +172,11 @@ int a, *b, c[5], **d, &e=a;
   - Declarador de operador de ponteiro   
   - (declarador)  
 
-  
 - e *operador de ponteiro* é um dos:  
   
   - \* [qualificadores cv]  
   - & [qualificadores cv]:: especificador aninhados de nome \* [qualificadores cv]  
 
-  
  Como um declarador pode conter declaradores, é possível criar os tipos derivados mais complexos, como matrizes de ponteiros, funções que retornam matrizes de ponteiros de função, usando as regras acima.  Para formar cada etapa da construções, comece com o identificador que representa o tipo de dados base e aplique a regra de sintaxe acima com a expressão anterior como `declarator`.  A ordem que você aplica as regras de sintaxe deve ser contrária à forma que a expressão é indicada em inglês.  Se aplicar a *operador de ponteiro* regra de sintaxe em uma expressão de matriz ou função, use parênteses se você quiser que um ponteiro para a matriz ou função, como a última linha na tabela a seguir.  
   
  O exemplo a seguir mostra a construção de “ponteiro para uma matriz de 10 ponteiros para int”.  

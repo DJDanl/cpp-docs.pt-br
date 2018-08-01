@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fccba0fe09c6e2fcc636d478824c7dfcc699d653
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 365f9196f3d482098c29bf4b04610120ecbbeec4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941545"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406036"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Vida útil do objeto e gerenciamento de recursos (C++ moderno)
 Ao contrário de linguagens gerenciadas, C++ não tem a coleta de lixo (GC), que libera automaticamente os recursos de memória não-mais-usado como um programa é executado. No C++, o gerenciamento de recursos está diretamente relacionado ao tempo de vida do objeto. Este documento descreve os fatores que afetam o tempo de vida do objeto em C++ e como gerenciá-lo.  
@@ -42,7 +42,6 @@ auto p = make_shared<widget>(); // no leak, and exception safe
 p->draw();   
   
 } // no delete required, out-of-scope triggers smart pointer destructor  
-  
 ```  
   
  Use `unique_ptr` para a propriedade exclusiva, por exemplo, no *pimpl* linguagem. (Consulte [Pimpl para encapsulamento do tempo de compilação](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Fazer uma `unique_ptr` o principal alvo dos explícitos **nova** expressões.  
@@ -61,7 +60,6 @@ class node {
   ...  
 };  
 node::node() : parent(...) { children.emplace_back(new node(...) ); }  
-  
 ```  
   
  Quando a otimização de desempenho for necessária, você talvez precise usar *bem encapsulado* possui ponteiros e chamadas explícitas para excluir. Um exemplo é quando você implementa sua própria estrutura de dados de nível baixo.  

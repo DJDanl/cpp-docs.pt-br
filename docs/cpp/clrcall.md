@@ -16,36 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4012eac44f376ccdeeb57227e562c672f6ba7ffe
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 27564ce9c3cf795d7999745e82c733092bccd719
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704575"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401851"
 ---
 # <a name="clrcall"></a>__clrcall
 
 **Seção específica da Microsoft**
 
-Especifica que uma função só pode ser chamada de um código gerenciado.  Use `__clrcall` para todas as funções virtuais que serão chamadas somente a partir do código gerenciado. No entanto, essa convenção de chamada não pode ser usada para as funções que serão chamadas a partir do código nativo.
+Especifica que uma função só pode ser chamada de um código gerenciado.  Use **clrcall** para todas as funções virtuais que serão chamadas apenas do código gerenciado. No entanto, essa convenção de chamada não pode ser usada para as funções que serão chamadas a partir do código nativo.
 
-Use `__clrcall` para melhorar o desempenho ao chamar a partir de uma função gerenciada em uma função gerenciada virtual ou a partir da função gerenciada para a função gerenciada pelo ponteiro.
+Use **clrcall** para melhorar o desempenho ao chamar a partir de uma função gerenciada para uma função gerenciada virtual ou função gerenciada para a função gerenciada pelo ponteiro.
 
-Os pontos de entrada são funções separadas geradas pelo compilador. Se uma função tem pontos de entrada nativos e gerenciados, um deles será a função real com a implementação da função. Outra função será uma função separada (uma conversão) que chamará a função real e deixará Common Language Runtime executar PInvoke. Ao marcar uma função como `__clrcall`, você indica que a implementação da função deverá ser MSIL e que a função nativa do ponto de entrada não será gerada.
+Os pontos de entrada são funções separadas geradas pelo compilador. Se uma função tem pontos de entrada nativos e gerenciados, um deles será a função real com a implementação da função. Outra função será uma função separada (uma conversão) que chamará a função real e deixará Common Language Runtime executar PInvoke. Ao marcar uma função como **clrcall**, indicam a implementação da função deverá ser MSIL e que a função de ponto de entrada nativo não será gerada.
 
-Ao colocar o endereço de uma função nativa se `__clrcall` se não for especificado, o compilador usará o ponto de entrada nativo. `__clrcall` indica que a função é gerenciada e que não há necessidade de passar pela transição de gerenciada a nativa. Nesse caso, o compilador usa o ponto de entrada gerenciado.
+Ao colocar o endereço de uma função nativa se **clrcall** não for especificado, o compilador usa o ponto de entrada nativo. **clrcall** indica que a função é gerenciada e não há nenhuma necessidade de passar pela transição de gerenciada a nativa. Nesse caso, o compilador usa o ponto de entrada gerenciado.
 
-Quando **/clr** (não **/clr: pure** ou **/CLR: safe**) é usado e `__clrcall` não é usado, pegar o endereço de uma função sempre retorna o endereço da entrada nativo ponto de função. Quando `__clrcall` é usado, a função nativa do ponto de entrada não é criada. Assim, você obtém o endereço da função gerenciada, não uma função de conversão do ponto de entrada. Para obter mais informações, consulte [dupla](../dotnet/double-thunking-cpp.md). O **/clr: pure** e **/CLR: safe** opções do compilador são substituídas no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+Quando `/clr` (não `/clr:pure` ou `/clr:safe`) é usado e **clrcall** não é usado, colocar o endereço de uma função sempre retorna o endereço da função de ponto de entrada nativo. Quando **clrcall** é usado, a função de ponto de entrada nativo não for criada, para que você obtenha o endereço da função gerenciada, não uma função de conversão de ponto de entrada. Para obter mais informações, consulte [dupla](../dotnet/double-thunking-cpp.md). O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-[/CLR (common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) significa que todas as funções e os ponteiros de função são `__clrcall` e o compilador não permitirá que uma função dentro de compiland seja marcado como algo diferente de `__clrcall`. Quando **/clr: pure** for usado, `__clrcall` só pode ser especificada em ponteiros de função e declarações externas.
+[/CLR (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md) significa que todas as funções e ponteiros de função são **clrcall** e o compilador não permitirá que uma função dentro de compiland seja marcada como algo que não seja **clrcall**. Quando **/clr: pure** for usado, **clrcall** só pode ser especificado em ponteiros de função e declarações externas.
 
-Você pode chamar diretamente `__clrcall` funções de código C++ existente que foi compilado usando **/clr** desde que essa função tem uma implementação de MSIL. `__clrcall` funções não podem ser chamadas diretamente de funções que têm asm embutido e chamar intrinisics específicos de CPU, por exemplo, mesmo que essas funções são compiladas com **/clr**.
+Você pode chamar diretamente **clrcall** funções de código C++ existente que foi compilado usando **/clr** desde que essa função tem uma implementação de MSIL. **clrcall** funções não podem ser chamadas diretamente de funções que têm asm e chamam intrinisics específico da CPU, por exemplo, mesmo se essas funções forem compilados com `/clr`.
 
-os ponteiros da função`__clrcall` devem ser usados somente no domínio de aplicativo no qual foram criados.  Em vez de transmitir ponteiros da função `__clrcall` pelos domínios de aplicativo, use <xref:System.CrossAppDomainDelegate>. Para obter mais informações, consulte [domínios do aplicativo e do Visual C++](../dotnet/application-domains-and-visual-cpp.md).
+**clrcall** ponteiros de função somente devem ser usadas no domínio do aplicativo no qual eles foram criados.  Em vez de passar **clrcall** ponteiros de função em domínios de aplicativo, use <xref:System.CrossAppDomainDelegate>. Para obter mais informações, consulte [domínios de aplicativo e do Visual C++](../dotnet/application-domains-and-visual-cpp.md).
 
 ## <a name="example"></a>Exemplo
 
-Quando uma função é declarada com `__clrcall`, o código é gerado quando necessário; por exemplo, quando a função é chamada.
+Observe que, quando uma função é declarada com **clrcall**, código será gerado quando necessário; por exemplo, quando função é chamada.
 
 ```cpp
 // clrcall2.cpp
@@ -103,6 +103,5 @@ int main() {
 ```
 
 ## <a name="see-also"></a>Consulte também
-
-- [Convenções de passagem e nomenclatura de argumentos](../cpp/argument-passing-and-naming-conventions.md)
-- [Palavras-chave](../cpp/keywords-cpp.md)
+ [Convenções de passagem e nomenclatura de argumentos](../cpp/argument-passing-and-naming-conventions.md)  
+ [Palavras-chave](../cpp/keywords-cpp.md)

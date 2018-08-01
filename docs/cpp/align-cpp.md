@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a83adda5acc51bd7e2d85e907d84e62a70d5cb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1e591ad979d6c995fd5559b22a826766b02d50dd
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940722"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405864"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -50,7 +50,7 @@ O compilador não garante nem tenta preservar o atributo de alinhamento de dados
 
 Não é possível especificar o alinhamento dos parâmetros da função. Quando os dados que têm um atributo de alinhamento são passados pelo valor na pilha, seu alinhamento é controlado pela convenção de chamada. Se o alinhamento de dados for importante na função chamada, copie o parâmetro na memória alinhada corretamente antes de usar.
 
-Sem `__declspec(align(#))`, o compilador geralmente alinha os dados em limites naturais com base no processador de destino e o tamanho dos dados, até os limites de 4 bytes em processadores de 32 bits e os limites de 8 bytes em processadores de 64 bits. Os dados nas classes ou estruturas são alinhados na classe ou estrutura no mínimo de seu alinhamento natural e a configuração atual da compactação (de #pragma **pack** ou o **/Zp** opção de compilador).
+Sem `__declspec(align(#))`, o compilador geralmente alinha os dados em limites naturais com base no processador de destino e o tamanho dos dados, até os limites de 4 bytes em processadores de 32 bits e os limites de 8 bytes em processadores de 64 bits. Os dados nas classes ou estruturas são alinhados dentro da classe ou da estrutura no mínimo de seu alinhamento natural e da configuração atual da compactação (de #pragma `pack` ou da opção de compilador `/Zp`).
 
 Este exemplo mostra o uso de `__declspec(align(#))`:
 
@@ -179,7 +179,7 @@ void fn() {
 }
 ```
 
-O alinhamento, se a memória tiver sido alocada no heap, depende de qual função de alocação é chamada.  Por exemplo, se você usar **malloc**, o resultado depende do tamanho do operando. Se *arg* > = 8, a memória retornada será alinhada em 8 bytes. Se *arg* < 8, o alinhamento da memória retornada será a primeira potência de 2 menor que *arg*. Por exemplo, se você usar malloc (7), o alinhamento será de 4 bytes.
+O alinhamento, se a memória tiver sido alocada no heap, depende de qual função de alocação é chamada.  Por exemplo, se você usar `malloc`, o resultado dependerá do tamanho do operando. Se *arg* > = 8, a memória retornada será alinhada em 8 bytes. Se *arg* < 8, o alinhamento da memória retornada será a primeira potência de 2 menor que *arg*. Por exemplo, se você usar malloc (7), o alinhamento será de 4 bytes.
 
 ##  <a name="vclrf_declspecaligntypedef"></a> Definindo novos tipos com __declspec(align(#))
 
@@ -219,9 +219,9 @@ __declspec(thread) struct S9 a;
 
 ##  <a name="vclrfhowalignworkswithdatapacking"></a> Como alinhar trabalhos com compactação de dados
 
-O **/Zp** opção de compilador e o **pack** pragma têm o efeito de compactar dados para membros de união e estrutura. Este exemplo mostra como **/Zp** e `__declspec(align(#))` funcionam em conjunto:
+O `/Zp` opção de compilador e o `pack` pragma têm o efeito de compactar dados para membros de união e estrutura. Este exemplo mostra como `/Zp` e `__declspec(align(#))` funcionam em conjunto:
 
-```c[[]]
+```cpp
 struct S {
    char a;
    short b;
@@ -232,7 +232,7 @@ struct S {
 };
 ```
 
-A tabela a seguir lista o deslocamento de cada membro em uma variedade de **/Zp** (ou #pragma **pack**) valores, mostrando como os dois interagem.
+A tabela a seguir lista o deslocamento de cada membro em diversos valores `/Zp` (ou #pragma `pack`), mostrando como os dois interagem.
 
 |Variável|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|
@@ -251,7 +251,6 @@ O deslocamento de um objeto baseia-se no deslocamento do objeto anterior e na co
 **Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
-
 [__declspec](../cpp/declspec.md)  
 [Visão geral das convenções ARM ABI](../build/overview-of-arm-abi-conventions.md)  
 [Visão geral de convenções de chamada de x64](../build/overview-of-x64-calling-conventions.md)  

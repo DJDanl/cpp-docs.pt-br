@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622f48138404425723c226dde52c8621580d0131
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 1f8786af730567155ca865440e612bb983e2bea8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451700"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402972"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -56,29 +56,29 @@ void * _aligned_malloc_dbg(
 
 ### <a name="parameters"></a>Parâmetros
 
-*size*<br/>
+*size*  
 Tamanho da alocação de memória solicitada.
 
-*alignment*<br/>
+*alignment*  
 O valor de alinhamento, que deve ser um inteiro elevado à segunda potência.
 
-*filename*<br/>
-Ponteiro para o nome do arquivo de origem que a operação de alocação solicitada ou **nulo**.
+*filename*  
+Ponteiro para o nome do arquivo de origem que solicitou a operação de alocação ou NULL.
 
-*linenumber*<br/>
-Número no arquivo de origem em que a operação de alocação foi solicitada da linha ou **nulo**.
+*linenumber*  
+Número de linha no arquivo de origem em que a operação de alocação foi solicitada ou NULL.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para o bloco de memória que foi alocado ou **nulo** se a operação falhou.
+Um ponteiro para o bloco de memória que foi alocado ou nulo se a operação falhou.
 
 ## <a name="remarks"></a>Comentários
 
-**aligned_malloc_dbg** é uma versão de depuração de [aligned_malloc](aligned-malloc.md) função. Quando [Debug](../../c-runtime-library/debug.md) não está definida, cada chamada para **aligned_malloc_dbg** é reduzido para uma chamada para **aligned_malloc**. Ambos **aligned_malloc** e **aligned_malloc_dbg** alocar um bloco de memória no heap de base, mas **aligned_malloc_dbg** oferece vários recursos de depuração: buffers em ambos os lados da parte do usuário do bloco para testar perdas, e *filename*/*linenumber* informações para determinar a origem de solicitações de alocação.
+**aligned_malloc_dbg** é uma versão de depuração de [aligned_malloc](aligned-malloc.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **aligned_malloc_dbg** é reduzida a uma chamada para `_aligned_malloc`. Ambos `_aligned_malloc` e **aligned_malloc_dbg** alocar um bloco de memória no heap de base, mas **aligned_malloc_dbg** oferece vários recursos de depuração: buffers nos dois lados da parte do usuário a bloco para testar se há perdas, e *filename*/*linenumber* informações para determinar a origem das solicitações de alocação.
 
-**aligned_malloc_dbg** aloca o bloco de memória com um pouco mais espaço do que o solicitado *tamanho*. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. Quando um bloco é alocado, a parte do usuário do bloco é preenchida com o valor 0xCD e cada um dos buffers de substituição é preenchido com 0xFD.
+**aligned_malloc_dbg** aloca o bloco de memória com um pouco mais de espaço que o solicitado *tamanho*. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. Quando um bloco é alocado, a parte do usuário do bloco é preenchida com o valor 0xCD e cada um dos buffers de substituição é preenchido com 0xFD.
 
-**aligned_malloc_dbg** define **errno** para **ENOMEM** se a falha de alocação de memória ou se excede a quantidade de memória necessária (incluindo a sobrecarga mencionada anteriormente) **_ HEAP_MAXREQ**. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Além disso, **aligned_malloc_dbg** valida seus parâmetros. Se *alinhamento* não é uma potência de 2 ou *tamanho* for zero, essa função invoca o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essa função retorna **nulo** e define **errno** para **EINVAL**.
+**aligned_malloc_dbg** define `errno` à `ENOMEM` se uma alocação de memória falhar ou se a quantidade de memória necessária (incluindo a sobrecarga mencionada anteriormente) exceder `_HEAP_MAXREQ`. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Além disso, **aligned_malloc_dbg** valida seus parâmetros. Se *alinhamento* não for uma potência de 2 ou *tamanho* for zero, essa função invocará o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará NULL e definirá `errno` para `EINVAL`.
 
 Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre os tipos de blocos de alocação e como eles são usados, consulte [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipos de blocos no heap de depuração). Para obter informações sobre as diferenças entre chamar uma função de heap padrão e sua versão de depuração em um build de depuração de um aplicativo, consulte [Versões de depuração das funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
@@ -96,4 +96,4 @@ Somente versões de depuração de [bibliotecas de tempo de execução C](../../
 
 ## <a name="see-also"></a>Consulte também
 
-[Rotinas de depuração](../../c-runtime-library/debug-routines.md)<br/>
+[Rotinas de depuração](../../c-runtime-library/debug-routines.md)  

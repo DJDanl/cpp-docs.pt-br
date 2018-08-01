@@ -1,5 +1,5 @@
 ---
-title: Limpando recursos | Microsoft Docs
+title: Limpeza de recursos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,27 +19,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 960e19400ae1d00108d57eb85d3df01ebf1dbc33
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c7c589f5ac6baef0ef4420d997fa6497f4e03d5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408731"
 ---
 # <a name="cleaning-up-resources"></a>Limpando recursos
-Durante a execução do manipulador de término, talvez você não saiba quais recursos foram realmente alocados antes que o manipulador de término seja chamado. É possível que o bloco de instruções `__try` tenha sido interrompido antes que todos os recursos tenham sido alocados e, assim, nem todos os recursos tenham sido abertos.  
+Durante a execução do manipulador de término, talvez você não saiba quais recursos foram realmente alocados antes que o manipulador de término seja chamado. É possível que o **Try** bloco de instrução foi interrompido antes que todos os recursos alocados, para que nem todos os recursos que foram abertos.  
   
  Portanto, para garantir, você deve verificar quais recursos estão realmente abertos antes de continuar com a limpeza da manipulação de término. Um procedimento recomendado é fazer o seguinte:  
   
 1.  Inicialize os identificadores como NULL.  
   
-2.  No bloco de instruções `__try`, aloque recursos. Os identificadores são definidos como valores positivos conforme o recurso é alocado.  
+2.  No **Try** instrução bloquear, aloque recursos. Os identificadores são definidos como valores positivos conforme o recurso é alocado.  
   
-3.  No bloco de instruções `__finally`, libere cada recurso cuja variável handle ou flag correspondente seja diferente de zero ou não NULL.  
+3.  No **Finally** bloco de instrução, libere cada recurso cuja correspondente variável handle ou flag é diferente de zero ou not NULL.  
   
 ## <a name="example"></a>Exemplo  
- Por exemplo, o código a seguir usa um manipulador de término para fechar três arquivos e um bloco de memória que foram alocados no bloco de instruções `__try`. Antes de limpar um recurso, o código primeiro verifica se o recurso foi alocado.  
+ Por exemplo, o código a seguir usa um manipulador de término para fechar três arquivos e um bloco de memória que foram alocados na **Try** bloco de instrução. Antes de limpar um recurso, o código primeiro verifica se o recurso foi alocado.  
   
-```  
+```cpp 
 // exceptions_Cleaning_up_Resources.cpp  
 #include <stdlib.h>  
 #include <malloc.h>  

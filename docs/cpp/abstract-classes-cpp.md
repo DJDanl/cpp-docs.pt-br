@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73c1d560f0e2adfbecb72fe9df96d981d0bb93af
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 610e98e15e4e7bd20802d39a70354a20076ce1a5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957942"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407901"
 ---
 # <a name="abstract-classes-c"></a>Classes abstratas (C++)
 
@@ -97,5 +97,4 @@ Quando o objeto apontado por `pDerived` é excluído, o destruidor da classe `de
 > No exemplo anterior, a função virtual pura `base::~base` é chamada implicitamente de `derived::~derived`. Também é possível chamar funções virtuais puras explicitamente usando um nome de função de membro totalmente qualificado.
 
 ## <a name="see-also"></a>Consulte também
-
-- [Herança](../cpp/inheritance-cpp.md)
+[Herança](../cpp/inheritance-cpp.md)  

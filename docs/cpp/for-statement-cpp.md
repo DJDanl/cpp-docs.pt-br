@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b38b608d1d254d304c7182d5063f870e2bbfcffe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: feb14056e3054cdf0e802b16ce9ff20f67da43fe
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940813"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401568"
 ---
 # <a name="for-statement-c"></a>Instrução for (C++)
 Executa uma instrução repetidamente até que a condição se torne falsa. Para obter informações sobre baseado em intervalo para a instrução, consulte [de instrução (C++) baseado em intervalo](../cpp/range-based-for-statement-cpp.md).  
@@ -137,9 +137,9 @@ for (int i = 0 ; i < 5 ; i++) {
   
  Por padrão, sob [/Ze](../build/reference/za-ze-disable-language-extensions.md), uma variável declarada em um **para** loop permanece no escopo até que o **para** término do escopo delimitador do loop.  
   
- [/ZC: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) habilita o comportamento padrão de variáveis declaradas em loops for sem precisar especificar /za.  
+ [/ZC: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) habilita o comportamento padrão de variáveis declaradas em loops for sem a necessidade de especificar `/Za`.  
   
- Também é possível usar as diferenças de escopo a **para** loop para declarar variáveis novamente em /Ze da seguinte maneira:  
+ Também é possível usar as diferenças de escopo a **para** loop para declarar variáveis novamente em `/Ze` da seguinte maneira:  
   
 ```cpp  
 // for_statement5.cpp  

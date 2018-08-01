@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46cf9c937453894ed37ad434ad94609d0744be24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66ccd54c4abb1d8d9761d5ded88beba76bfae043
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410795"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401348"
 ---
 # <a name="floating-point-coprocessor-and-calling-conventions"></a>Coprocessador de ponto flutuante e convenções de chamada
-Se você estiver escrevendo assembly rotinas para flutuante coprocessador de ponto, você deve preservar flutuante aponte a palavra de controle e limpar a pilha de coprocessador, a menos que você estiver retornando um **float** ou **duplo** valor (que a função deve retornar em ST(0)).  
+Se você estiver escrevendo assembly rotinas para flutuante coprocessador de ponto, você deve preservar flutuante palavra de controle de ponto e limpar a pilha do coprocessador a menos que você está retornando um **float** ou **duplo** valor (que sua função deve retornar no ST(0)).  
   
 ## <a name="see-also"></a>Consulte também  
  [Convenções de chamada](../cpp/calling-conventions.md)

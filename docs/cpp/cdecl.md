@@ -16,31 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d07c34c11037132b9f9695ec889bb681c7f43951
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c0a9e4db3e1fcbd24358d6dedd2d4ada80672c2a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414487"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406540"
 ---
 # <a name="cdecl"></a>__cdecl
 **Seção específica da Microsoft**  
   
- `__cdecl` é uma convenção de chamada padrão para programas em C e C++. Porque a pilha é limpos pelo chamador, ele pode fazer **vararg** funções. O `__cdecl` convenção de chamada cria executáveis maior que [stdcall](../cpp/stdcall.md), porque requer que cada chamada de função para incluir o código de limpeza de pilha. A lista a seguir mostra a implementação dessa convenção de chamada.  
+ **cdecl** é o padrão de convenção de chamada para programas em C e C++. Porque a pilha é limpa pelo chamador, ele pode fazer `vararg` funções. O **cdecl** convenção de chamada cria executáveis maiores do que [stdcall](../cpp/stdcall.md)porque requer que cada chamada de função para incluir o código de limpeza de pilha. A lista a seguir mostra a implementação dessa convenção de chamada.  
   
 |Elemento|Implementação|  
 |-------------|--------------------|  
 |Ordem de passagem de argumentos|Da direita para a esquerda.|  
 |Responsabilidade de manutenção de pilha|A função de chamada remove os argumentos da pilha.|  
-|Convenção de decoração de nome|O caractere de sublinhado (_) é antecedido pelos nomes, exceto quando \_cdecl funções que usam o vínculo a C são exportadas.|  
+|Convenção de decoração de nome|O caractere de sublinhado (_) é prefixado para nomes, exceto quando \_funções cdecl que usam vínculos do C são exportadas.|  
 |Convenção de conversão de maiúsculas/minúsculas|Nenhuma conversão de maiúsculas/minúsculas é realizada.|  
   
 > [!NOTE]
 >  Para obter informações relacionadas, consulte [nomes decorados](../build/reference/decorated-names.md).  
   
- Coloque o modificador `__cdecl` antes do nome de uma variável ou função. Como o C, nomeação e convenções de chamada são o padrão, o único momento em que você deve usar `__cdecl` x86 código é quando você tiver especificado o **/Gv** (vectorcall) **/Gz** (stdcall), ou  **/GR** opção de compilador (fastcall). O [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) força de opção de compilador o `__cdecl` convenção de chamada.  
+ Coloque o **cdecl** modificador antes de uma variável ou um nome de função. Como a convenções de chamada e nomenclatura de C são padrão, o único momento em que você deve usar **cdecl** em código x86 é quando você tiver especificado o `/Gv` (vectorcall), `/Gz` (stdcall) ou `/Gr` (fastcall) opção de compilador. O [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) forças de opção de compilador o **cdecl** convenção de chamada.  
   
- Em processadores ARM e x64, `__cdecl` é aceito, mas normalmente é ignorado pelo compilador. Por convenção no ARM e x64, os argumentos são passados nos registros quando possível, e os argumentos subsequentes são passados na pilha. Em x64 de código, use `__cdecl` para substituir o **/Gv** opção de compilador e use a convenção de chamada x64 padrão.  
+ No ARM e x64 processadores **cdecl** é aceito, mas normalmente é ignorado pelo compilador. Por convenção no ARM e x64, os argumentos são passados nos registros quando possível, e os argumentos subsequentes são passados na pilha. No x64 de código, use **cdecl** para substituir o **/Gv** opção do compilador e use a convenção de chamada x64 padrão.  
   
  Para funções de classe não estáticas, se a função for definida como fora da linha, o modificador da convenção de chamada não precisará ser especificado na definição fora da linha. Ou seja, para métodos de membro de classe não estática, a convenção de chamada especificada durante a declaração é assumida no ponto de definição. Dada esta definição de classe:  
   

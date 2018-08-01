@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89fc0f122f0859e6fc891ddfccd4bc99e7034bfe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 313e4602c06c1baf090ed7a66c51b308a3f6f586
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942347"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402744"
 ---
 # <a name="additive-operators--and--"></a>Operadores aditivos: + e -
 ## <a name="syntax"></a>Sintaxe  
@@ -115,7 +115,7 @@ for( int i = 0; i < 10; ++i )
 >  O código do formato `pIntArray = pIntArray + 1` raramente é encontrado em programas C++; para executar um incremento, estes formatos são preferíveis: `pIntArray++` ou `pIntArray += 1`.  
   
 ## <a name="pointer-subtraction"></a>Subtração de ponteiro  
- Se ambos os operandos forem ponteiros, o resultado da subtração será a diferença (em elementos de matriz) entre os operandos. A expressão de subtração gera um resultado integral com sinal do tipo **ptrdiff_t** (definidas no arquivo de inclusão padrão \<stddef. h >).  
+ Se ambos os operandos forem ponteiros, o resultado da subtração será a diferença (em elementos de matriz) entre os operandos. A expressão de subtração gera um resultado integral com sinal do tipo `ptrdiff_t` (definido no arquivo de inclusão padrão \<stddef. h >).  
   
  Um dos operandos pode ser do tipo integral, desde que seja o segundo operando. O resultado da subtração é do mesmo tipo do ponteiro original. O valor da subtração é um ponteiro para o (*n* - *eu*) º elemento da matriz, onde *n* é o elemento apontado pelo ponteiro original e *eu* é o valor integral do segundo operando.  
   

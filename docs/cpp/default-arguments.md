@@ -1,5 +1,5 @@
 ---
-title: Padrão de argumentos | Microsoft Docs
+title: Argumentos padrão | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,16 +20,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1113108f711eccbce9be96852f7f7f28e537c9d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ddcd094ae828272744060cea5604865d17562890
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409191"
 ---
 # <a name="default-arguments"></a>Argumentos padrão
-Em muitos casos, as funções têm os argumentos que são usados com tão raramente que um valor padrão bastaria. Para resolver isso, a facilidade do argumento padrão permite especificar apenas os argumentos de uma função que são significativos em uma determinada chamada. Para ilustrar esse conceito, considere o exemplo apresentado [sobrecarga de função](../cpp/function-overloading.md).  
+Em muitos casos, as funções têm os argumentos que são usados com tão raramente que um valor padrão bastaria. Para resolver isso, a facilidade do argumento padrão permite especificar apenas os argumentos de uma função que são significativos em uma determinada chamada. Para ilustrar esse conceito, considere o exemplo apresentado [sobrecarregamento de função](../cpp/function-overloading.md).  
   
-```  
+```cpp 
 // Prototype three print functions.  
 int print( char *s );                  // Print a string.  
 int print( double dvalue );            // Print a double.  
@@ -39,16 +40,16 @@ int print( double dvalue, int prec );  // Print a double with a
   
  Em muitos aplicativos, uma opção razoável pode ser fornecida para `prec`, eliminando a necessidade de duas funções:  
   
-```  
+```cpp 
 // Prototype two print functions.  
 int print( char *s );                    // Print a string.  
 int print( double dvalue, int prec=2 );  // Print a double with a  
 //  given precision.  
 ```  
   
- A implementação do `print` função é alterada ligeiramente para refletir o fato de que apenas uma função existe para o tipo **duplo**:  
+ A implementação do `print` função é alterada ligeiramente para refletir o fato de que apenas uma dessas funções existe para o tipo **duplo**:  
   
-```  
+```cpp 
 // default_arguments.cpp  
 // compile with: /EHsc /c  
   
@@ -81,7 +82,7 @@ int print( double dvalue, int prec ) {
   
  Para invocar a nova função `print`, use o código a seguir:  
   
-```  
+```cpp 
 print( d );    // Precision of 2 supplied by default argument.  
 print( d, 0 ); // Override default argument to achieve other  
 //  results.  
@@ -91,13 +92,13 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   Os argumentos padrão são usados somente em chamadas de função onde os argumentos à direita são omitidos — devem ser os últimos argumentos. Dessa forma, o código a seguir é ilegal:  
   
-    ```  
+    ```cpp 
     int print( double dvalue = 0.0, int prec );  
     ```  
   
 -   Um argumento padrão não pode ser redefinido nas declarações posteriores mesmo se a redefinição for idêntica ao original. Portanto, o código a seguir gera um erro:  
   
-    ```  
+    ```cpp 
     // Prototype for print function.  
     int print( double dvalue, int prec = 2 );  
   
@@ -116,9 +117,6 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   Os argumentos padrão podem ser fornecidos para ponteiros para as funções. Por exemplo:  
   
-    ```  
+    ```cpp 
     int (*pShowIntVal)( int i = 0 );  
     ```  
-  
-## <a name="see-also"></a>Consulte também  
- 

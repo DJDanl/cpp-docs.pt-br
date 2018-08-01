@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ee32e9c94f9bd9d1da4e3d3beaf9bfa0039b8cf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939065"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403820"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Seção específica da Microsoft**  
   
- Constrói um objeto `_com_ptr_t`.  
+ Constrói uma **com_ptr_t** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -150,10 +150,10 @@ explicit _com_ptr_t(
  Se for TRUE, `AddRef` é chamado para aumentar a contagem de referência de ponteiro de interface encapsulado.  
   
  *CP*  
- Um objeto `_com_ptr_t`.  
+ Um **com_ptr_t** objeto.  
   
  *p*  
- Um ponteiro de interface bruto, sendo seu tipo diferente do tipo de ponteiro inteligente desse objeto `_com_ptr_t`.  
+ Um ponteiro de interface bruto, sendo seu tipo diferente do tipo de ponteiro inteligente desse **com_ptr_t** objeto.  
   
  *varSrc*  
  Um objeto `_variant_t`.  

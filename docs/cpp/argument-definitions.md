@@ -18,18 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a401caad212978372bcb02b412fa8a9648b7170
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 044c5df5ae0a51912893ccf306a5c93afceb7ab3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942354"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407582"
 ---
 # <a name="argument-definitions"></a>Definições de argumento
 Os argumentos do protótipo  
   
 ```cpp 
-  
 int main( int argc, char* argv[], char* envp[]);
 int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);  
 ```  
@@ -45,16 +44,16 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  O primeiro argumento de linha de comando é sempre `argv` **[1]** e o último é `argv` **[** `argc` - 1 **]**.  
   
 > [!NOTE]
->  Por convenção, `argv`**[0]** é o comando com que o programa é invocado.  No entanto, é possível gerar um processo usando [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) e, se você usar o primeiro e segundo argumentos (`lpApplicationName` e `lpCommandLine`), `argv` **[0]** pode não ser o nome do executável; Use [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) para recuperar o nome do executável e o caminho totalmente qualificado.  
+>  Por convenção, `argv`**[0]** é o comando com que o programa é invocado.  No entanto, é possível gerar um processo usando [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) e, se você usar o primeiro e segundo argumentos (*lpApplicationName* e *lpCommandLine*), `argv` **[0]** talvez não seja o executável nome; use [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) para recuperar o nome do executável e o caminho totalmente qualificado.  
   
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
  *envp*  
- O *envp* matriz, que é uma extensão comum em muitos sistemas UNIX, é usada no Microsoft C++. Trata-se de uma matriz de cadeias de caracteres que representam as variáveis definidas no ambiente do usuário. Essa matriz é encerrada por uma entrada NULL. Ela pode ser declarada como uma matriz de ponteiros para **char (char** \*envp []**)** ou como um ponteiro para ponteiros para **char (char** \* \* envp **)**. Se seu programa usa **wmain** em vez de **principal**, use o **wchar_t** em vez de **char**. O bloco de ambiente passado para **principal** e **wmain** é uma cópia "congelada" do ambiente atual. Se você alterar subsequentemente o ambiente por meio de uma chamada para **putenv** ou `_wputenv`, o ambiente atual (conforme retornado por `getenv` / `_wgetenv` e o `_environ` /  `_wenviron` variável) será alteração, mas o bloco apontado por envp não será alterado. Ver [Personalizando o processamento de linha de comando](../cpp/customizing-cpp-command-line-processing.md) para obter informações sobre como suprimir o processamento de ambiente. Esse argumento é compatível com ANSI em C, mas não em C++.  
+ O *envp* matriz, que é uma extensão comum em muitos sistemas UNIX, é usada no Microsoft C++. Trata-se de uma matriz de cadeias de caracteres que representam as variáveis definidas no ambiente do usuário. Essa matriz é encerrada por uma entrada NULL. Ela pode ser declarada como uma matriz de ponteiros para **char (char** \*envp []**)** ou como um ponteiro para ponteiros para **char (char** \* \* envp **)**. Se seu programa usa `wmain` em vez de `main`, use o `wchar_t` em vez de **char**. O bloco de ambiente passado para `main` e `wmain` é uma cópia "congelada" do ambiente atual. Se você alterar subsequentemente o ambiente por meio de uma chamada para `putenv` ou `_wputenv`, o ambiente atual (conforme retornado por `getenv` / `_wgetenv` e o `_environ` /  `_wenviron` variável) será alteração, mas o bloco apontado por envp não será alterado. Ver [Personalizando o processamento de linha de comando](../cpp/customizing-cpp-command-line-processing.md) para obter informações sobre como suprimir o processamento de ambiente. Esse argumento é compatível com ANSI em C, mas não em C++.  
   
 **Fim da seção específica da Microsoft**  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o *argc*, *argv*, e *envp* argumentos a serem **principal**:  
+ O exemplo a seguir mostra como usar o *argc*, *argv*, e *envp* argumentos para `main`:  
   
 ```cpp 
 // argument_definitions.cpp  

@@ -17,28 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a8a734eae486ca5e88009301b13d71b21473d9f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1c5da56c3c85c17bcd2cd91f9fa5a5f8399e9528
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939250"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404269"
 ---
 # <a name="comptrtrelease"></a>_com_ptr_t::Release
 **Seção específica da Microsoft**  
   
- Chamadas a `Release` função de membro de `IUnknown` no ponteiro de interface encapsulado.  
+ Chamadas a **Release** função de membro de `IUnknown` no ponteiro de interface encapsulado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 void Release( );  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Chamadas `IUnknown::Release` no ponteiro de interface encapsulado, gerando um erro E_POINTER caso esse ponteiro de interface seja NULL.  
+ Chamadas `IUnknown::Release` no ponteiro de interface encapsulado, gerando um `E_POINTER` erro se o ponteiro da interface é NULL.  
   
  **Fim da seção específica da Microsoft**  
   

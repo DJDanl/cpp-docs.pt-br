@@ -16,22 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1278ab84ea8888b34290c9738e0eb88a4485e99c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: db1f512b10bdedffa5b6978b735c881dc21370ce
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942221"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406696"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 **Seção específica da Microsoft**  
   
- Converte um `BSTR` de valor para um **char \*** .  
+ Converte um valor `BSTR` em uma `char *`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 char* __stdcall ConvertBSTRToString(BSTR pSrc);  
 ```  
   
@@ -40,7 +39,7 @@ char* __stdcall ConvertBSTRToString(BSTR pSrc);
  Uma variável BSTR.  
   
 ## <a name="remarks"></a>Comentários  
- `ConvertBSTRToString` aloca uma cadeia de caracteres que você deve excluir.  
+ **ConvertBSTRToString** aloca uma cadeia de caracteres que você deve excluir.  
   
 ## <a name="example"></a>Exemplo  
   

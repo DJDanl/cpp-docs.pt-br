@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37df4146b23404463ec869e00a8cf5298b7acf5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 45dc0dfe85e7693cdea9c6e469ff347d75c13d57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940999"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402940"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Reticências e modelos variadic
 Este artigo mostra como usar reticências (`...`) com modelos variadic de C++. As reticências tiveram muitos usos em C e C++. Eles incluem listas de argumentos variáveis para funções. A função `printf()` da Biblioteca em Tempo de Execução C é um dos exemplos mais conhecidos.  
@@ -47,7 +47,7 @@ template<typename ... Arguments> class classname;
   
  Observe que este artigo usa a convenção que é mostrada no primeiro exemplo (as reticências estão anexadas a `typename`).  
   
- Nos exemplos anteriores, `Arguments` é um pacote de parâmetros. A classe `classname` pode aceitar um número variável de argumentos, como nestes exemplos:  
+ Nos exemplos anteriores, *argumentos* é um pacote de parâmetros. A classe `classname` pode aceitar um número variável de argumentos, como nestes exemplos:  
   
 ```cpp  
 template<typename... Arguments> class vtclass;  
@@ -56,14 +56,12 @@ vtclass< > vtinstance1;
 vtclass<int> vtinstance2;  
 vtclass<float, bool> vtinstance3;  
 vtclass<long, std::vector<int>, std::string> vtinstance4;  
-  
 ```  
   
  Ao usar uma definição de classe de modelo variadic, você também pode requisitar pelo menos um parâmetro:  
   
 ```cpp  
 template <typename First, typename... Rest> class classname;  
-  
 ```  
   
  Aqui está um exemplo básico de *função de modelo variadic* sintaxe:  
@@ -72,7 +70,7 @@ template <typename First, typename... Rest> class classname;
 template <typename... Arguments> returntype functionname(Arguments... args);  
 ```  
   
- O `Arguments` pacote de parâmetros, em seguida, é expandido para uso, conforme mostrado na próxima seção, **Noções básicas sobre modelos de variadic**.  
+ O *argumentos* pacote de parâmetros, em seguida, é expandido para uso, conforme mostrado na próxima seção, **Noções básicas sobre modelos de variadic**.  
   
  Outras formas de sintaxe de função de modelo variadic são possíveis, incluindo, mas não limitado a, esses exemplos:  
   
@@ -86,14 +84,12 @@ template <typename... Arguments> returntype functionname(Arguments*... args);
   
 ```cpp  
 template <typename... Arguments> returntype functionname(const Arguments&... args);  
-  
 ```  
   
  Tal como as definições de classe de modelo variadic, você pode criar funções que exigem ao menos um parâmetro:  
   
 ```cpp  
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);  
-  
 ```  
   
  Os modelos Variadic usam o operador `sizeof...()` (não relacionado ao operador mais antigo `sizeof()`):  
@@ -108,7 +104,6 @@ void tfunc(const Arguments&... args)
   
     helper_func(xobj, args...);  
 }  
-  
 ```  
   
 ## <a name="more-about-ellipsis-placement"></a>Mais sobre o posicionamento das reticências  
@@ -160,13 +155,11 @@ int main()
     print(100, 200, 300);  
     print("first", 2, "third", 3.14159);  
 }  
-  
 ```  
   
 ## <a name="output"></a>Saída  
   
-```  
-  
+```Output  
 1  
 10, 20  
 100, 200, 300  
@@ -175,4 +168,3 @@ first, 2, third, 3.14159
   
 > [!NOTE]
 >  A maioria das implementações que incorporam funções de modelo variadic usa recursão de alguma forma, mas é ligeiramente diferente da recursão tradicional.  A recursão tradicional envolve uma função chamando a mesmo usando a mesma assinatura. (Ela pode ser sobrecarregada ou personalizada, mas a mesma assinatura é escolhida sempre.) A recursão variadic envolve chamar um modelo de função variadic usando números diferentes (quase sempre diminuindo) de argumentos, e assim carimbando uma assinatura diferente todas as vezes. Um “caso base” ainda é necessário, mas a natureza de recursão é diferente.  
-  

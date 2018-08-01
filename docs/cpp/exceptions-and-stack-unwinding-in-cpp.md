@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32558413dd0dc6f7288493067d7373a14e520e29
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1cefb6ba2fe076714b420024ec09464fd928b63d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942324"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406380"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Exceções e desenrolamento da pilha em C++
 No mecanismo de exceção do C++, o controle move-se da instrução throw para a primeira instrução catch que pode manipular o tipo lançado. Quando a instrução catch é atingida, todas as variáveis automáticas que estão no escopo entre o throw e instruções catch são destruídas em um processo conhecido como *desenrolamento de pilha*. No desenrolamento de pilha, a execução ocorre da seguinte maneiro:  
@@ -114,5 +114,4 @@ int main()
     Exiting main.  
   
 */  
-  
 ```  

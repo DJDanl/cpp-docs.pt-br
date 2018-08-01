@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61531ad8471a7409a42fdd2d55b27a82d08ba340
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e5f4a05c193ec471c0b8dd11d34961a46ead7660
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941022"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406208"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Asserção e mensagens fornecidas pelo usuário (C++)
 Os C++ linguagem dá suporte a três tratamento de erro mecanismos que ajudam você a depurar seu aplicativo: o [diretiva #error](../preprocessor/hash-error-directive-c-cpp.md), o [static_assert](../cpp/static-assert.md) palavra-chave e o [assert Macro, Assert, _ wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) macro. Todos os três mecanismos emitem mensagens de erro e dois também testam asserções de software. Uma asserção de software especifica uma condição que você espera ser verdadeira (true) em um ponto específico de seu programa. Se uma asserção de tempo de compilação falhar, o compilador emite uma mensagem de diagnóstico e um erro de compilação. Se uma asserção de tempo de execução falhar, o sistema operacional emite uma mensagem de diagnóstico e fecha seu aplicativo.  

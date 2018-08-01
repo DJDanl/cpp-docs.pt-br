@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 178c75efa84ebc7d27c19feb81e81314dc4c5bd7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a445e9c435f9e077899a2a473dc5862f98a36bf4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942253"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405513"
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Numérico, booliano e literais de ponteiro (C++)
 Um literal é um elemento de programa que representa diretamente a um valor. Este artigo aborda os literais do tipo inteiro, ponto flutuante, booleanos e ponteiro. Para obter informações sobre a cadeia de caracteres literais, consulte [cadeia de caracteres e literais de caracteres (C++)](../cpp/string-and-character-literals-cpp.md). Você também pode definir seus próprios literais com base em qualquer uma dessas categorias; Para obter mais informações, consulte [literais definidos pelo usuário (C++)](../cpp/user-defined-literals-cpp.md)  
@@ -33,7 +33,6 @@ const int answer = 42; // integer literal
 double d = sin(108.87);     //floating point literal passed to sin function  
 bool b = true;              // boolean literal  
 MyClass* mc = nullptr;      // pointer literal  
-  
 ```  
   
  Às vezes, é importante indicar ao compilador como interpretar um literal ou tipo específico para dar a ele. Você pode fazer isso por meio do acréscimo prefixos ou sufixos para o literal. Por exemplo, o prefixo 0 x instrui o compilador a interpretar o número que vem a seguir como um valor hexadecimal, por exemplo 0x35. O sufixo MPLETO instrui o compilador a tratar o valor como um **longo longo sem sinal** tipo, como no 5894345ULL. Consulte as seções a seguir para obter uma lista de prefixos e sufixos para cada tipo de literal.  
@@ -129,7 +128,6 @@ void func( long double );
  Um literal binário pode ser especificado pelo uso do `0B` ou `0b` prefixo, seguido por uma sequência de 1 e 0:  
   
 ```cpp 
-  
 auto x = 0B001101 ; // int  
 auto y = 0b000001 ; // int  
 ```  
@@ -140,7 +138,6 @@ auto y = 0b000001 ; // int
 ```cpp 
 if (num < 100)  
     return "Success";  
-  
 ```  
   
  No exemplo anterior, talvez seja melhor usar uma constante nomeada que transmite um significado claro, por exemplo "MAXIMUM_ERROR_THRESHOLD". E se o valor de retorno "Success" é visto pelos usuários finais, em seguida, ele pode ser melhor usar uma constante de cadeia de caracteres nomeadas que pode ser armazenada em um único local em um arquivo de onde ele possa ser localizado em outros idiomas. Usando constantes nomeadas ajuda a outras pessoas, bem como para entender a intenção do código.  

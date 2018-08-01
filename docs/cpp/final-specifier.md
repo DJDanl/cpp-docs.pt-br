@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594bc432cb12b63c76172b06ee078d5b0f72de55
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f28ae7b7cb8bdcf335757c58d5e744974f4c7cad
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942121"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405951"
 ---
 # <a name="final-specifier"></a>especificador final
 Você pode usar o **final** palavra-chave para designar funções virtuais que não podem ser substituídas em uma classe derivada. Também é possível usá-la para designar classes que não podem ser herdadas.  
@@ -29,7 +29,6 @@ Você pode usar o **final** palavra-chave para designar funções virtuais que n
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 function-declaration final;  
 class class-name final base-classes  
 ```  

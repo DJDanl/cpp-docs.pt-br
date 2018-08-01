@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7e7a64b1dfc30d1827da614f67a5b47bd42218
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 80058aa22de10088c3901d0c129635288bf880b5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942157"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403450"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Regras gerais para sobrecarga de operador
 As seguintes regras restringem o modo como os operadores sobrecarregados são implementados. No entanto, eles não se aplicam para o [novos](../cpp/new-operator-cpp.md) e [excluir](../cpp/delete-operator-cpp.md) operadores, que são cobertos separadamente.  
@@ -59,7 +59,7 @@ As seguintes regras restringem o modo como os operadores sobrecarregados são im
   
 -   Os operadores sobrecarregados não podem ter argumentos padrão.  
   
--   Todos os operadores sobrecarregados, exceto a atribuição (`operator=`), são herdados por classes derivadas.  
+-   Todos os operadores sobrecarregados, exceto atribuição (**operador =**) são herdadas por classes derivadas.  
   
 -   O primeiro argumento para operadores sobrecarregados da função membro sempre é do tipo de classe do objeto para o qual o operador é invocado (a classe na qual o operador é declarado, ou uma classe derivada dessa classe.) Nenhuma conversão é fornecida para o primeiro argumento.  
   
@@ -72,7 +72,7 @@ var++;
 ++var;  
 ```  
   
- Essa identidade não pode ser confiável para os tipos da classe que sobrecarregam os operadores. Além disso, alguns dos requisitos implícitos no uso desses operadores para tipos básicos são relaxados para operadores sobrecarregados. Por exemplo, o operador de adição/atribuição, `+=`, requer que o operando esquerdo seja um l-value quando aplicado aos tipos básicos; não há nenhum requisito tal quando o operador está sobrecarregado.  
+ Essa identidade não pode ser confiável para os tipos da classe que sobrecarregam os operadores. Além disso, alguns dos requisitos implícitos no uso desses operadores para tipos básicos são relaxados para operadores sobrecarregados. Por exemplo, o operador de adição/atribuição **+=**, requer que o operando esquerdo seja um l-value quando aplicado aos tipos básicos; não há nenhum requisito tal quando o operador está sobrecarregado.  
   
 > [!NOTE]
 > Para consistência, geralmente é melhor seguir o modelo dos tipos internos ao definir operadores sobrecarregados. Se a semântica de um operador sobrecarregado for significativamente diferentes do de seu significado em outros contextos, ela pode ser mais confusa do que útil.  

@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc426bbbc28e6eb3b7e6e4a0fa9fab7e74f62093
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b783ee6e4a5ea511a26068ffb89fcc09236f20b1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391747"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408122"
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
 
@@ -76,24 +76,24 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>Parâmetros
 
-*n*<br/>
+*n*  
 Valor numérico.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **abs**, **laboratórios**, **llabs** e **abs64** funções retornam o valor absoluto do parâmetro *n*. Nenhum erro é retornado.
+O **abs**, **laboratórios**, **llabs** e **_abs64** funções retornam o valor absoluto do parâmetro *n*. Nenhum erro é retornado.
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **abs** que levar e retornar **longo**, **longo** **longo**,  **float**, **duplo**, e **longo** **duplo** valores. Essas sobrecargas são definidas no cabeçalho \<cmath>. Em um programa C, **abs** sempre usa e retorna um int.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **abs** que usam e retornam **longo**, **longo** **longo**,  **float**, **duplo**, e **longo** **double** valores. Essas sobrecargas são definidas no cabeçalho \<cmath>. Em um programa do C **abs** sempre usa e retorna um **int**.
 
-**Microsoft Specific**: porque o intervalo de inteiros negativos que pode ser representado por meio de qualquer tipo integral é maior que o intervalo de números inteiros positivos que pode ser representado por meio desse tipo, é possível fornecer um argumento para eles funções que não podem ser convertidas. Se o valor absoluto do argumento não pode ser representado pelo tipo de retorno, o **abs** funções retornam o valor do argumento inalterado. Especificamente, `abs(INT_MIN)` retorna **INT_MIN**, `labs(LONG_MIN)` retorna **LONG_MIN**, `llabs(LLONG_MIN)` retorna **LLONG_MIN**, e `_abs64(_I64_MIN)` Retorna **_I64_MIN**. Isso significa que o **abs** funções não podem ser usadas para garantir um valor positivo.
+**Microsoft Specific**: como o intervalo de inteiros negativos que podem ser representados usando qualquer tipo integral é maior que o intervalo de inteiros positivos que podem ser representados usando esse tipo, é possível fornecer um argumento para eles funções que não podem ser convertidas. Se o valor absoluto do argumento não puder ser representado pelo tipo de retorno, o **abs** funções retornam o valor do argumento inalterado. Especificamente, `abs(INT_MIN)` retorna `INT_MIN`, `labs(LONG_MIN)` retorna `LONG_MIN`, `llabs(LLONG_MIN)` retorna `LLONG_MIN` e `_abs64(_I64_MIN)` retorna `_I64_MIN`. Isso significa que o **abs** funções não podem ser usadas para garantir um valor positivo.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho C necessário|Cabeçalho C++ necessário|
 |-------------|-----------------------|---------------------------|
-|**Abs**, **laboratórios**, **llabs**|\<math.h> ou \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> ou \<math.h>|
+|**Abs**, **labs**, **llabs**|\<math.h> ou \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> ou \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> ou \<stdlib.h>|
 
 Para usar as versões sobrecarregadas **abs** em C++, você deve incluir o \<cmath > cabeçalho.
@@ -157,8 +157,8 @@ _abs64(_I64_MIN) returns 0x8000000000000000
 
 ## <a name="see-also"></a>Consulte também
 
-[Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[_cabs](cabs.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
-[imaxabs](imaxabs.md)<br/>
+[Conversão de Dados](../../c-runtime-library/data-conversion.md)  
+[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)  
+[_cabs](cabs.md)  
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)  
+[imaxabs](imaxabs.md)  

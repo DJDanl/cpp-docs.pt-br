@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 144e770a90427d12d79a18c346d74140d07c5c5c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8acd615cb2f05e62019f5076a423ae0f8218815a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958579"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406000"
 ---
 # <a name="address-of-operator-amp"></a>Operador address-of: &amp;
 ## <a name="syntax"></a>Sintaxe  
@@ -37,7 +37,7 @@ ms.locfileid: "38958579"
   
  O operador address-of pode ser aplicado somente a variáveis com tipos fundamentais, de estrutura, classe ou união que são declarados no nível de escopo do arquivo, ou a referências de matriz subscrita. Nessas expressões, uma expressão constante que não inclui o operador address-of pode ser adicionada ou subtraída da expressão address-of.  
   
- Quando aplicado a funções ou valores l, o resultado da expressão será um tipo de ponteiro (um valor r) derivado do tipo do operando. Por exemplo, se o operando for do tipo **char**, o resultado da expressão é do tipo ponteiro para **char**. O operador address-of, aplicado a **const** ou **volátil** objetos, será avaliada como **tipo const \***  ou **tipo volátil \*** , onde **tipo** é o tipo do objeto original.  
+ Quando aplicado a funções ou valores l, o resultado da expressão será um tipo de ponteiro (um valor r) derivado do tipo do operando. Por exemplo, se o operando for do tipo **char**, o resultado da expressão é do tipo ponteiro para **char**. O operador address-of, aplicado a **const** ou **volátil** objetos, será avaliada como `const type *` ou `volatile type *`, onde **tipo** é o tipo do original objeto.  
   
  Quando o operador address-of é aplicado a um nome qualificado, o resultado depende se o *nome qualificado* Especifica um membro estático. Nesse caso, o resultado é um ponteiro para o tipo especificado na declaração do membro. Se o membro não é estático, o resultado é um ponteiro para o membro *nome* da classe indicada por *qualified-class-name*. (Consulte [expressões primárias](../cpp/primary-expressions.md) para obter mais informações sobre *qualified-class-name*.) O seguinte fragmento de código mostra como o resultado difere, dependendo se o membro for estática:  
   
@@ -82,7 +82,7 @@ int main() {
   
 ## <a name="output"></a>Saída  
   
-```  
+```Output  
 &d equals &rd  
 ```  
   
@@ -109,7 +109,7 @@ int main() {
   
 ## <a name="output"></a>Saída  
   
-```  
+```Output  
 25  
 ```  
   

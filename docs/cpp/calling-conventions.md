@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9e65dfd7f7cff25debd8eb0d00a7e3bb0397692
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4a8b77985a06a3898c525500b8a23eab9b54f87
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410886"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407339"
 ---
 # <a name="calling-conventions"></a>Convenções de chamada
 O compilador Visual C/C++ fornece várias convenções diferentes para chamar funções internas e externos. Entender essas abordagens diferentes pode ajudar a depurar seu programa e a vincular seu código a rotinas de linguagem de assembly.  
@@ -30,7 +30,7 @@ O compilador Visual C/C++ fornece várias convenções diferentes para chamar fu
   
 ## <a name="topics-in-this-section"></a>Tópicos desta seção  
   
--   [Transmissão de argumentos e convenções de nomenclatura](../cpp/argument-passing-and-naming-conventions.md) (`__cdecl`, `__stdcall`, `__fastcall`e outros)  
+-   [Passagem de argumento e convenções de nomenclatura](../cpp/argument-passing-and-naming-conventions.md) (`__cdecl`, `__stdcall`, `__fastcall`e outros)  
   
 -   [Exemplo de chamada: protótipo de função e chamada](../cpp/calling-example-function-prototype-and-call.md)  
   

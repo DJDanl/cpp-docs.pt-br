@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7334fdc420c096c42360dd6b75fc400b8b34f3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1369614cfd20d39fee3f2c2dd1ca7436ae742d2b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941792"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405373"
 ---
 # <a name="nonstandard-behavior"></a>Comportamento não padrão
 As seções a seguir listam alguns dos locais em que a implementação de C++ do Visual C++ não cumpre o padrão C++. Os números de seção fornecidos abaixo se referem aos números da seção no padrão C++ 11 (ISO/IEC 14882:2011(E)).  
@@ -67,7 +67,6 @@ int main() {
     g('c');  
 }  
 // Output: f(char)  
-  
 ```  
   
 ## <a name="function-exception-specifiers"></a>Especificadores de exceção de função  
@@ -81,7 +80,7 @@ void g() throw();    // parsed and used
  Para obter mais informações sobre especificações de exceção, consulte [especificações de exceção](../cpp/exception-specifications-throw-cpp.md).  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- O padrão C++ declara que [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) não deve corresponder a um válido `char_type` valor. O compilador do Visual C++ impõe essa restrição para o tipo **char**, mas não para o tipo `wchar_t`. Isso não está em conformidade com o requisito da Tabela 62, na seção 12.1.1 da especificação ISO do C++. O exemplo abaixo demonstra isso.  
+ O padrão C++ declara que [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) não deve corresponder a um válido `char_type` valor. O compilador do Visual C++ impõe essa restrição para o tipo **char**, mas não para o tipo **wchar_t**. Isso não está em conformidade com o requisito da Tabela 62, na seção 12.1.1 da especificação ISO do C++. O exemplo abaixo demonstra isso.  
   
 ```cpp  
 #include <iostream>  

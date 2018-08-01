@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f749f8cd43588eea8476c2746134b706737b6f5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3f6f0017bcc4e26802093f449742f9a2cfb137b8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966929"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406777"
 ---
 # <a name="explicit-type-conversion-operator-"></a>Operador de conversão de tipo explícito: ()
 O C++ permite a conversão de tipos explícita usando uma sintaxe semelhante à sintaxe de chamada de função.  
@@ -108,15 +108,12 @@ d = float( i );
  As conversões de tipos explícitas também podem ser especificadas usando a sintaxe em estilo "cast". O exemplo anterior, reescrito usando a sintaxe "cast", fica assim:  
   
 ```cpp
-
 d = (float)i;  
-
 ```  
   
  As conversões em estilo "cast" e em estilo de função têm os mesmos resultados na conversão de valores únicos. Porém, na sintaxe em estilo de função, você pode especificar mais de um argumento para a conversão. Essa diferença é importante para os tipos definidos pelo usuário. Considere uma classe `Point` e as respectivas conversões:  
   
 ```cpp
-
 struct Point  
 {  
     Point( short x, short y ) { _x = x; _y = y; }  
@@ -125,7 +122,6 @@ struct Point
 };  
 ...  
 Point pt = Point( 3, 10 );  
-
 ```
   
  O exemplo anterior, que usa a conversão em estilo de função, mostra como converter dois valores (um para *x* e outra para *y*) para o tipo definido pelo usuário `Point`.  

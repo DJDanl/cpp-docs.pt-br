@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2de180d58c31f4bd6c8b15eb69076b99f8b57b0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5db832a7c6c380e43fcf5edb3f36ce1a1bf692e6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942275"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404711"
 ---
 # <a name="do-while-statement-c"></a>Instrução do-while (C++)
 Executa um *instrução* repetidamente até que a condição de término especificada (o *expressão*) é avaliada como zero.  

@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c214ed18e5afec51f52514abdd73e0e5b658635a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb9ce8012db8617afc7af3183bd7439ddeb8fab7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419653"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402345"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>Portabilidade em limites ABI (C++ moderno)
-Use tipos suficientemente portáteis e convenções nos limites da interface binária. Um "tipo portátil" é um tipo interno de C ou uma estrutura que contém apenas os tipos internos de C. Tipos de classe só podem ser usados quando o chamador e o receptor concordarem com layout, chamando convenção, etc. Isso é possível somente quando ambos são compiladas com o mesmo compilador e as configurações do compilador.  
+Use tipos suficientemente portáteis e convenções nos limites da interface binária. Um "tipo portátil" é um tipo interno de C ou um struct que contém apenas os tipos internos de C. Tipos de classe só podem ser usados quando o chamador e o receptor concordarem sobre layout, convenção de chamada etc. Isso é possível apenas quando ambas são compiladas com o mesmo compilador e as configurações do compilador.  
   
-## <a name="how-to-flatten-a-class-for-c-portability"></a>Como mesclar uma classe para a portabilidade de C  
- Quando os chamadores podem ser compilados com outro compilador/idioma, "mesclar" para um **extern "C"** API com uma convenção de chamada específica:  
+## <a name="how-to-flatten-a-class-for-c-portability"></a>Como mesclar uma classe para fins de portabilidade de C  
+ Quando os chamadores podem ser compilados com outro compilador/idioma, em seguida, "mesclar" para um **extern "C"** API com uma convenção de chamada específica:  
   
 ```cpp  
 // class widget {  
@@ -40,6 +40,6 @@ extern "C" {        // functions using explicit "this"
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Bem-vindo novamente para C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [Bem-vindo ao C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Referência da linguagem C++](../cpp/cpp-language-reference.md)   
  [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)

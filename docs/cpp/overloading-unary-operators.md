@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f20268e9d67ed59e52f3716e9203dadd2a2715d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c00f9d40fedd084afa2da6e2e7bfaf0ee831b3a9
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941685"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401874"
 ---
 # <a name="overloading-unary-operators"></a>Operadores unários de sobrecarga
 Os operadores unários que podem ser sobrecarregados são os seguintes:  

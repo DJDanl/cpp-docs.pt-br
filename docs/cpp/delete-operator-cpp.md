@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ad061dc2be090abbcfbc147f1ea5fbddb8ae6a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f4f563a424fd5a019b2094f931236f4af6f0ecb4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942148"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407722"
 ---
 # <a name="delete-operator-c"></a>Operador delete (C++)
 Desaloca um bloco de memória.  
@@ -101,4 +101,3 @@ int main()
  [Expressões com operadores unários](../cpp/expressions-with-unary-operators.md)   
  [Palavras-chave](../cpp/keywords-cpp.md)   
  [Operadores new e delete](../cpp/new-and-delete-operators.md)   
- 

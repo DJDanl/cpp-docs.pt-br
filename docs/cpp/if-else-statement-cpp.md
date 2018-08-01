@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42174837f0f60f9a4e3ba9f19702210d6d34ccca
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 15748249a39813edc4446fa25511d20361b0706c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942119"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405104"
 ---
 # <a name="if-else-statement-c"></a>Instrução if-else (C++)
 Controla a ramificação condicional. As instruções na *bloco if* são executados somente se o *expressão if* é avaliada como um valor diferente de zero (ou TRUE). Se o valor de *expressão* for diferente de zero *instrução1* e quaisquer outras instruções no bloco são executadas e o-bloco else, se presente, será ignorado. Se o valor de *expressão* for zero, em seguida, o bloco de if é ignorado e o-bloco else, se presente, é executado. São expressões que são avaliadas como diferente de zero
@@ -36,7 +36,6 @@ Controla a ramificação condicional. As instruções na *bloco if* são executa
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 if ( expression )  
 {
    statement1;
@@ -131,7 +130,6 @@ int main()
 #include <string>
 #include <algorithm>
 
-
 using namespace std;
 
 map<int, string> m;
@@ -159,13 +157,11 @@ int main()
         shared_flag = false;
     }
 
-
     string s{ "if" };
     if (auto keywords = { "if", "for", "while" }; any_of(keywords.begin(), keywords.end(), [&s](const char* kw) { return s == kw; }))
     {
         cout << "Error! Token must not be a keyword\n";
     }
-
 }
 ```
 
@@ -196,8 +192,6 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-  
- 
 ## <a name="see-also"></a>Consulte também  
  [Instruções de seleção](../cpp/selection-statements-cpp.md)   
  [Palavras-chave](../cpp/keywords-cpp.md)   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3ed5cee9d3742410c4316b0eb8c3c80b2f41353
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1b546e58b8a761660386c568c533ee2930871491
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942344"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403866"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>Sobrecarga dos operadores de incremento e decremento (C++)
 Os operadores de incremento e decremento formam uma categoria especial porque há duas variantes de cada um:  
@@ -133,7 +133,7 @@ int main()
 }  
 ```  
   
- Não há nenhuma outra sintaxe para usar os operadores de incremento ou decremento para passar esses valores que não seja a invocação explícita, conforme mostrado no código acima. Uma maneira mais simples de implementar essa funcionalidade é sobrecarregar o operador de adição/atribuição (`+=`).  
+ Não há nenhuma outra sintaxe para usar os operadores de incremento ou decremento para passar esses valores que não seja a invocação explícita, conforme mostrado no código acima. Uma maneira mais simples de implementar essa funcionalidade é sobrecarregar o operador de adição/atribuição (**+=**).  
   
 ## <a name="see-also"></a>Consulte também  
  [Sobrecarga de Operador](../cpp/operator-overloading.md)

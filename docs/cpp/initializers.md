@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7a94ee7df512262c58d7a90e3dbf461270b5d4c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 79deaacbb00638c690d052668f60d9d072a2060d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939853"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408158"
 ---
 # <a name="initializers"></a>Inicializadores
 Um inicializador especifica o valor inicial de uma variável. Você pode inicializar variáveis nestes contextos:  
@@ -46,7 +46,6 @@ Um inicializador especifica o valor inicial de uma variável. Você pode inicial
     ```cpp  
     Point get_new_point(int x, int y) { return { x, y }; }  
     Point get_new_point(int x, int y) { return Point{ x, y }; }  
-  
     ```  
   
  Os inicializadores podem usar estes formatos:  
@@ -93,7 +92,7 @@ Um inicializador especifica o valor inicial de uma variável. Você pode inicial
   
 -   As variáveis char são inicializadas para `'\0'`.  
   
--   Os ponteiros são inicializados como `nullptr`.  
+-   Os ponteiros são inicializados para **nullptr**.  
   
 -   Matrizes [POD](../standard-library/is-pod-class.md) classes, estruturas e uniões têm seus membros inicializados como um valor igual a zero.  
   
@@ -214,7 +213,6 @@ int main() {
     int a{};     // value of a is 0  
     double b{};  // value of b is 0.00000000000000000  
 }  
-  
 ```  
   
 ### <a name="copy-initialization"></a>Inicialização de cópia  
@@ -533,4 +531,3 @@ Gráfico de decisão para a inicialização de tipos de referência
   
 ### <a name="initialization-of-external-variables"></a>Inicialização de variáveis externas  
  Declarações de variáveis automáticas, estáticas e externas podem conter inicializadores. No entanto, as declarações de variáveis externas podem conter inicializadores apenas se as variáveis não são declaradas como **extern**.
-  

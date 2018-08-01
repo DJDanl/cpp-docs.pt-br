@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b7f4e2c25d7ead3399020221c1e0e9633557d24
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 68eff54ff2465706f5a7459b7c6c21d87c7a1b7f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942101"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402309"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Considerações para escrever o código de prólogo/epílogo
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
- Antes de escrever suas próprias sequências de código de prólogo e epílogo, é importante entender como o registro de ativação é apresentado. Também é útil saber como usar o símbolo local_size.  
+ Antes de escrever suas próprias sequências de código de prólogo e epílogo, é importante entender como o registro de ativação é apresentado. Também é útil saber como usar o `__LOCAL_SIZE` símbolo.  
   
 ##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Layout de quadro de pilha  
  Este exemplo mostra o código padrão do prólogo que pode aparecer em uma função de 32 bits:  
@@ -51,16 +51,16 @@ ret                       ; Return from function
  A pilha sempre vai para baixo (dos endereços de memória mais altos para os mais baixos). O ponteiro de base (`ebp`) aponta para o valor enviados por push de `ebp`. A área de locais começa em `ebp-4`. Para acessar variáveis locais, calcule um deslocamento de `ebp` subtraindo o valor apropriado de `ebp`.  
   
 ##  <a name="_pluslang___local_size"></a> LOCAL_SIZE  
- O compilador fornece um símbolo, local_size, para uso no bloco embutido do assembler do código de prólogo da função. Esse símbolo é usado para alocar espaço para as variáveis locais no quadro da pilha no código personalizado de prólogo.  
+ O compilador fornece um símbolo, `__LOCAL_SIZE`, para uso no bloco embutido do assembler do código de prólogo da função. Esse símbolo é usado para alocar espaço para as variáveis locais no quadro da pilha no código personalizado de prólogo.  
   
- O compilador determina o valor de local_size. Seu valor é o número total de bytes de todas as variáveis locais definidas pelo usuário e variáveis temporárias geradas pelo compilador. Local_size pode ser usado apenas como um operando imediato; ele não pode ser usado em uma expressão. Você não deve alterar ou redefinir o valor desse símbolo. Por exemplo:  
+ O compilador determina o valor de `__LOCAL_SIZE`. Seu valor é o número total de bytes de todas as variáveis locais definidas pelo usuário e variáveis temporárias geradas pelo compilador. `__LOCAL_SIZE` pode ser usado apenas como um operando imediato; ele não pode ser usado em uma expressão. Você não deve alterar ou redefinir o valor desse símbolo. Por exemplo:  
   
 ```  
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay  
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error  
 ```  
   
- O exemplo a seguir de uma função naked que contém personalizado de prólogo e sequências de epílogo usa o símbolo local_size na sequência de prólogo:  
+ O exemplo a seguir de uma função naked que contém personalizado de prólogo e epílogo sequências usa o `__LOCAL_SIZE` símbolo na sequência de prólogo:  
   
 ```  
 // the__local_size_symbol.cpp  

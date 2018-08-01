@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dafb3c41bd490e7c123e1aefe9ccaa04a4e6b233
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b9c17c0abbd8286d05423ac52abc2e2109253f6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942244"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404617"
 ---
 # <a name="exception-handling-differences"></a>Diferenças de tratamento de exceções
 A principal diferença entre o tratamento de exceções estruturado e tratamento de exceções C++ é que as ofertas de modelo em tipos de tratamento de exceções de C++, enquanto o C modelo de tratamento de exceções estruturado lida com exceções de um tipo — especificamente,  **int sem sinal**. Ou seja, as exceções de C são identificadas por um valor inteiro sem sinal, enquanto as exceções de C++ são identificadas pelo tipo de dados. Quando uma exceção é gerada em C, cada manipulador possível executa um filtro que examina o contexto da exceção de C e determine se aceitará a exceção, a transmitirá para algum outro manipulador, ou a ignorará. Quando uma exceção é gerada em C++, ela pode ser de qualquer tipo.  
@@ -87,7 +87,6 @@ public:
       return nSE;  
    }  
 };  
-  
 ```  
   
  Para usar essa classe, você instala uma função personalizada de tradução da exceção de C, chamada pelo mecanismo interno de tratamento de exceções sempre que uma exceção de C é lançada. Dentro de sua função de conversão, você pode gerar qualquer exceção digitada (talvez uma `SE_Exception` tipo ou um tipo de classe derivado `SE_Exception`) que pode ser capturada por um C++ correspondente apropriado **catch** manipulador. A função de tradução só pode retornar, o que indica que ela não conseguiu tratar a exceção. Se a própria função de conversão gera uma exceção de C [encerrar](../c-runtime-library/reference/terminate-crt.md) é chamado.  

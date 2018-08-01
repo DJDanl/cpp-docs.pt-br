@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bba2bef20cbe5820d2a7feaae5743f151aea9da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a111d2ea3e8e5503754b0d9c0c1a4f69170a41c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417462"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401753"
 ---
 # <a name="floating-limits"></a>Limites flutuantes
 **Seção específica da Microsoft**  
@@ -38,12 +38,12 @@ ms.locfileid: "32417462"
 |FLT_DIG DBL_DIG LDBL_DIG|Número de dígitos, q, de modo que um número de ponto flutuante com dígitos decimais de q possam ser arredondados em uma representação de ponto flutuante e de volta sem perda de precisão.|6 15 15|  
 |FLT_EPSILON DBL_EPSILON LDBL_EPSILON|O menor número positivo x, de modo que x + 1,0 não é igual a 1,0.|1.192092896e-07F 2.2204460492503131e-016 2.2204460492503131e-016|  
 |FLT_GUARD||0|  
-|FLT_MANT_DIG DBL_MANT_DIG LDBL_MANT_DIG|Número de dígitos na raiz especificada por FLT_RADIX em significando de ponto flutuante. A base é 2; Portanto, esses valores especificam bits.|24 53 53|  
-|FLT_MAX DBL_MAX LDBL_MAX|Número máximo de ponto flutuante representável.|3.402823466e+38F 1.7976931348623158e+308 1.7976931348623158e+308|  
-|FLT_MAX_10_EXP DBL_MAX_10_EXP LDBL_MAX_10_EXP|Inteiro máximo, de modo que 10 gerado para esse número é um número de ponto flutuante representável.|38 308 308|  
+|FLT_MANT_DIG DBL_MANT_DIG LDBL_MANT_DIG|Número de dígitos na raiz especificada por FLT_RADIX em significando de ponto flutuante. A raiz é 2; Portanto, esses valores especificam bits.|24 53 53|  
+|FLT_MAX DBL_MAX LDBL_MAX|Número de ponto flutuante representável máximo.|3.402823466e+38F 1.7976931348623158e+308 1.7976931348623158e+308|  
+|FLT_MAX_10_EXP DBL_MAX_10_EXP LDBL_MAX_10_EXP|Inteiro máximo, de modo que 10 gerados para esse número é um número de ponto flutuante representável.|38 308 308|  
 |FLT_MAX_EXP DBL_MAX_EXP LDBL_MAX_EXP|Inteiro máximo de modo que FLT_RADIX gerado para esse número seja um número de ponto flutuante representável.|128 1024 1024|  
 |FLT_MIN DBL_MIN LDBL_MIN|Valor positivo mínimo.|1.175494351e-38F 2.2250738585072014e-308 2.2250738585072014e-308|  
-|FLT_MIN_10_EXP DBL_MIN_10_EXP LDBL_MIN_10_EXP|Mínimo inteiro negativo, de modo que 10 gerado para esse número é um número de ponto flutuante representável.|-37<br /><br /> -307<br /><br /> -307|  
+|FLT_MIN_10_EXP DBL_MIN_10_EXP LDBL_MIN_10_EXP|Inteiro negativo mínimo, de modo que 10 gerados para esse número é um número de ponto flutuante representável.|-37<br /><br /> -307<br /><br /> -307|  
 |FLT_MIN_EXP DBL_MIN_EXP LDBL_MIN_EXP|Inteiro negativo mínimo de modo que FLT_RADIX gerado para esse número seja um número de ponto flutuante representável.|-125<br /><br /> -1021<br /><br /> -1021|  
 |FLT_NORMALIZE||0|  
 |FLT_RADIX _DBL_RADIX _LDBL_RADIX|Raiz de representação do expoente.|2 2 2|  

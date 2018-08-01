@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdece555ea58f0a1321258405fa76ba02cf12efa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9b266d167b34c1c773d79ea92813a310eb18441
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408961"
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>Operadores de ponteiro para membro:. * e -&gt;*
 ## <a name="syntax"></a>Sintaxe  
@@ -36,9 +37,9 @@ expression ->* expression
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Os operadores de ponteiro para membro,. * e ->\*, retornar o valor de um membro de classe específica para o objeto especificado no lado esquerdo da expressão.  O lado direito deve especificar um membro da classe.  O exemplo a seguir mostra como usar estes operadores:  
+ Os operadores de ponteiro para membro. * e ->\*, retornar o valor de um membro de classe específica para o objeto especificado no lado esquerdo da expressão.  O lado direito deve especificar um membro da classe.  O exemplo a seguir mostra como usar estes operadores:  
   
-```  
+```cpp 
 // expre_Expressions_with_Pointer_Member_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -78,7 +79,7 @@ int main() {
   
 ## <a name="output"></a>Saída  
   
-```  
+```Output  
 m_func1  
 m_func1  
 1  
@@ -89,16 +90,16 @@ m_func1
   
  O operador binário .* combina seu primeiro operando, que deve ser um objeto de tipo de classe, com o segundo operando, que deve ser um tipo de ponteiro para membro.  
   
- O operador binário -> * combina seu primeiro operando, que deve ser um ponteiro para um objeto do tipo de classe, com seu segundo operando deve ser um tipo de ponteiro-para-membro.  
+ O operador binário -> * combina seu primeiro operando, que deve ser um ponteiro para um objeto do tipo de classe, com o segundo operando deve ser um tipo de ponteiro para membro.  
   
  Em uma expressão que contém o operador .*, o primeiro operando deve ser do tipo de classe, e é acessível para, do ponteiro para o membro especificado no segundo operando ou de um tipo acessível derivado de maneira não ambígua de e acessíveis a essa classe.  
   
- Em uma expressão que contém o-> * operador, o primeiro operando deve ser do tipo "ponteiro para o tipo de classe" do tipo especificado no segundo operando, ou ele deve ser de um tipo de maneira não ambígua derivado de classe.  
+ Em uma expressão que contém o-> * operador, o primeiro operando deve ser do tipo "ponteiro para o tipo de classe" do tipo especificado no segundo operando, ou ele deve ser de um tipo de maneira não ambígua derivado dessa classe.  
   
 ## <a name="example"></a>Exemplo  
  Considere as seguintes classes e fragmento de programa:  
   
-```  
+```cpp 
 // expre_Expressions_with_Pointer_Member_Operators2.cpp  
 // C2440 expected  
 class BaseClass {  
@@ -141,4 +142,3 @@ int main() {
   
 ## <a name="see-also"></a>Consulte também  
  [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-

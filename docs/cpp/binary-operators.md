@@ -1,7 +1,7 @@
 ---
 title: Operadores binários | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/14/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -16,66 +16,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b930c548ea411beb03255d694f2423903053288
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b76250926ab89c14dfa26f0df3bb5571c1dae10
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408811"
 ---
 # <a name="binary-operators"></a>Operadores binários
-A tabela a seguir mostra uma lista de operadores que podem ser sobrecarregados.  
-  
-### <a name="redefinable-binary-operators"></a>Operadores binários redefiníveis  
-  
-|Operador|Nome|  
-|--------------|----------|  
-|**,**|Vírgula|  
-|`!=`|Desigualdade|  
-|`%`|Módulo|  
-|`%=`|Módulo/atribuição|  
-|**&**|AND bit a bit|  
-|**&&**|AND lógico|  
-|**&=**|Atribuição AND bit a bit|  
-|**\***|Multiplicação|  
-|**\*=**|Atribuição/multiplicação|  
-|**+**|Adição|  
-|`+=`|Atribuição/adição|  
-|**-**|Subtração|  
-|**-=**|Subtração/atribuição|  
-|**->**|Seleção de membro|  
-|**->\***|Seleção de ponteiro para membro|  
-|**/**|Divisão|  
-|`/=`|Divisão/atribuição|  
-|**<**|Menor que|  
-|**<<**|Shift esquerda|  
-|**<<=**|Deslocamento para a esquerda/atribuição|  
-|**<=**|Menor ou igual a|  
-|**=**|Atribuição|  
-|`==`|Igualdade|  
-|**>**|Maior que|  
-|**>=**|Maior ou igual a|  
-|**>>**|Shift direita|  
-|**>>=**|Deslocamento para direita/atribuição|  
-|**^**|OR exclusivo|  
-|`^=`|Atribuição OR exclusivo|  
-|**&#124;**|OR inclusivo de bit a bit|  
-|`&#124;=`|OR inclusivo bit a bit/atribuição|  
-|`&#124;&#124;`|OR lógico|  
-  
- Para declarar uma função de operador binário como um membro não estático, você deve declará-la na forma:  
-  
- *tipo ret* **operador**`op`**(** `arg` **)**  
-  
- onde *tipo ret* é o tipo de retorno, `op` é um dos operadores listados na tabela anterior, e `arg` é um argumento de qualquer tipo.  
-  
- Para declarar uma função de operador binário como uma função global, você deve declará-la na forma:  
-  
- *tipo ret* **operador**`op`**(** `arg1` **,** `arg2` **)**  
-  
- onde *tipo ret* e `op` são conforme descrito para funções de operador de membro e `arg1` e `arg2` são argumentos. Ao menos um dos argumentos deve ser do tipo da classe.  
-  
+
+A tabela a seguir mostra uma lista de operadores que podem ser sobrecarregados.
+
+## <a name="redefinable-binary-operators"></a>Operadores binários redefiníveis
+
+|Operador|Nome|
+|--------------|----------|
+|**,**|Vírgula|
+|**\!=**|Desigualdade|
+|**%**|Módulo|
+|**%=**|Módulo/atribuição|
+|**&**|AND bit a bit|
+|**&&**|AND lógico|
+|**&=**|Atribuição AND bit a bit|
+|**&#42;**|Multiplicação|
+|**&#42;=**|Atribuição/multiplicação|
+|**+**|Adição|
+|**+=**|Atribuição/adição|
+|**-**|Subtração|
+|**-=**|Subtração/atribuição|
+|**->**|Seleção de membro|
+|**->&#42;**|Seleção de ponteiro para membro|
+|**/**|Divisão|
+|**/=**|Divisão/atribuição|
+|**<**|Menor que|
+|**<<**|Shift esquerda|
+|**<<=**|Deslocamento para a esquerda/atribuição|
+|**<=**|Menor ou igual a|
+|**=**|Atribuição|
+|**==**|Igualdade|
+|**>**|Maior que|
+|**>=**|Maior ou igual a|
+|**>>**|Shift direita|
+|**>>=**|Deslocamento para direita/atribuição|
+|**^**|OR exclusivo|
+|**^=**|Atribuição OR exclusivo|
+|**&#124;**|OR inclusivo de bit a bit|
+|**&#124;=**|OR inclusivo bit a bit/atribuição|
+|**&#124;&#124;**|OR lógico|
+
+Para declarar uma função de operador binário como um membro não estático, você deve declará-la na forma:
+
+> *RET-type* **operador** *op* **(** *arg* **)**
+
+em que *ret-type* é o tipo de retorno *op* é um dos operadores listados na tabela anterior, e *arg* é um argumento de qualquer tipo.
+
+Para declarar uma função de operador binário como uma função global, você deve declará-la na forma:
+
+> *RET-type* **operador** *op* **(** _arg1_**,** _arg2_ **)**
+
+em que *ret-type* e *op* são descritos para funções de operador de membro e *arg1* e *arg2* são argumentos. Ao menos um dos argumentos deve ser do tipo da classe.
+
 > [!NOTE]
->  Não há nenhuma restrição quanto aos tipos de retorno dos operadores binários; no entanto, a maioria dos operadores binários definidos pelo usuário retornam um tipo de classe ou uma referência a um tipo de classe.  
-  
-## <a name="see-also"></a>Consulte também  
+> Não há nenhuma restrição quanto aos tipos de retorno dos operadores binários; no entanto, a maioria dos operadores binários definidos pelo usuário retornam um tipo de classe ou uma referência a um tipo de classe.
+
+## <a name="see-also"></a>Consulte também
  [Sobrecarga de Operador](../cpp/operator-overloading.md)

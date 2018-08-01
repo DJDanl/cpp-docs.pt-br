@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e35eda35a7d2474826ce151292121be224955420
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8b6a56a0a1dce5d07007898dec486d0e3b080c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410727"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407683"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>Especialização explícita de modelos de função
 Com um modelo de função, você pode definir o comportamento especial para um tipo específico fornecendo uma especialização explícita (substituição) do modelo da função para esse tipo. Por exemplo:  
@@ -32,7 +32,7 @@ Com um modelo de função, você pode definir o comportamento especial para um t
 template<> void MySwap(double a, double b);  
 ```  
   
- Esta declaração permite que você defina uma função diferente para **duplo** variáveis. Assim como as funções de não template, conversões de tipo padrão (como promover uma variável do tipo **float** para **duplo**) são aplicadas.  
+ Esta declaração permite que você defina uma função diferente para **duplas** variáveis. Assim como as funções de não template, conversões de tipo padrão (como a promoção de uma variável do tipo **float** à **duplo**) são aplicadas.  
   
 ## <a name="example"></a>Exemplo  
   

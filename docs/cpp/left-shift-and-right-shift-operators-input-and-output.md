@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f38b5ec30626f73ab3681f674fb39c5492eb49
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 50a177468795ae0e288910fa51192d9cc9a24502
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939722"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403148"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operadores de deslocamento de deslocamento à esquerda e direita (&gt; &gt; e &lt; &lt;)
 Os operadores shift bit a bit são o operador de deslocamento à direita (>>), que move os bits da *shift-Expression&lt;2}{3&gt;Additive* para a direita e o operador de deslocamento à esquerda (<<), que move os bits de *shift-expression* à esquerda. <sup>1</sup>  
@@ -66,7 +66,6 @@ int main() {
     bitset<16> bitset3{short3};  
     cout << bitset3 << endl;  // 0000000000010000  
 }  
-  
 ```  
   
  Se você deslocar um número com sinal para a esquerda de forma que o bit de sinal seja afetado, o resultado será indefinido. O exemplo a seguir mostra o que acontece no Visual C++ quando 1 bit é deslocado para a esquerda na posição de bit de sinal.  

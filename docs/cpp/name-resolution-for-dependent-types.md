@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c31a609345408727d53abd314e30bd523526833c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6421c634fb6d27bf79ea0ead9f0b6b8f5829f19
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419905"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402680"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Resolução de nome para tipos dependentes
-Use **typename** para nomes qualificados em definições de modelo para informar ao compilador que o nome qualificado determinado identifica um tipo. Para obter mais informações, consulte [typename](../cpp/typename.md).  
+Use **typename** para nomes qualificados em definições de modelo para dizer ao compilador que o nome qualificado fornecido identifica um tipo. Para obter mais informações, consulte [typename](../cpp/typename.md).  
   
 ```cpp  
 // template_name_resolution1.cpp  
@@ -49,7 +49,7 @@ int main()
 Name resolved by using typename keyword.  
 ```  
   
- Pesquisa de nome para nomes de dependente examina os nomes do contexto da definição de modelo — no exemplo a seguir, neste contexto encontraria `myFunction(char)`— e o contexto de instanciação de modelo. No exemplo a seguir, o modelo é instanciado no principal; Portanto, o `MyNamespace::myFunction` é visível a partir do ponto de instanciação e é escolhida como a melhor correspondência. Se `MyNamespace::myFunction` fosse renomeado, `myFunction(char)` seria chamado.  
+ Pesquisa de nome para nomes dependentes examina nomes do contexto da definição de modelo — no exemplo a seguir, esse contexto encontraria `myFunction(char)`— e o contexto de instanciação de modelo. No exemplo a seguir, o modelo é instanciado em main; Portanto, o `MyNamespace::myFunction` é visível do ponto de instanciação e é escolhido como a melhor correspondência. Se `MyNamespace::myFunction` fosse renomeado, `myFunction(char)` seria chamado.  
   
  Todos os nomes são resolvidos como se fossem nomes dependentes. Entretanto, recomendamos que você use nomes totalmente qualificados se houver qualquer conflito possível.  
   
@@ -93,12 +93,12 @@ int main()
   
 ### <a name="output"></a>Saída  
   
-```  
+```Output  
 Int MyNamespace::myFunction  
 ```  
   
 ### <a name="template-disambiguation"></a>Desambiguação de modelo  
- O [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] impõem as regras do padrão C++98/03/11 para a desambiguação com a palavra-chave “template”. No exemplo a seguir, o Visual C++ 2010 aceite as linhas não está em conformidade e as linhas estão em conformidade.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] aceita apenas as linhas estão em conformidade.  
+ O [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] impõem as regras do padrão C++98/03/11 para a desambiguação com a palavra-chave “template”. No exemplo a seguir, o Visual C++ 2010 aceitaria aceitaria as linhas e as linhas em conformidade.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] aceita apenas as linhas em conformidade.  
   
 ```cpp  
 #include <iostream>  

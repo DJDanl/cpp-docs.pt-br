@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ef6bf658cd290e23be59eb7d26a6b0d353b52c6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2d112e7ca192e56ede21d06e7ff17a775d661d01
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941766"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405224"
 ---
 # <a name="identifiers-c"></a>Identificadores (C++)
 Um identificador é uma sequência de caracteres usados para denotar:  
@@ -81,7 +81,7 @@ N O P Q R S T U V W X Y Z
   
  O sinal de cifrão `$` é um identificador válido de caractere no Visual C++. Visual C++ também permite que você use os caracteres reais representados pelos intervalos permitidos de nomes de caracteres universais em identificadores. Para usar esses caracteres, você deve salvar o arquivo usando um arquivo de codificação de página de código que inclui-los.  Este exemplo mostra como ambos os caracteres estendidos e nomes de caracteres universais podem ser usados alternadamente em seu código.  
   
-```  
+```cpp  
 // extended_identifier.cpp  
 // In Visual Studio, use File, Advanced Save Options to set  
 // the file encoding to Unicode codepage 1200  

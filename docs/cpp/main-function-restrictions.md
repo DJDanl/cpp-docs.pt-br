@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3114f1ef379495f36f4231dbad6fd41ac145bcfe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 981d4c8c0ef30993811e5dbb6fd0a112a6447011
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941740"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406488"
 ---
 # <a name="main-function-restrictions"></a>Restrições da função main
-Várias restrições se aplicam para o `main` função que não se aplicam a quaisquer outras funções do C++. O `main` função:  
+Várias restrições se aplicam para o **principal** função que não se aplicam a quaisquer outras funções do C++. O **principal** função:  
   
 -   Não pode ser sobrecarregado (consulte [sobrecarregamento de função](function-overloading.md)).  
   

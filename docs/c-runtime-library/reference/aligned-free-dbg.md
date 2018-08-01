@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c7eb281ecc7a7175614c5c72c54c7267cf55e8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 23e76c5fc4881f0689bf83ee96acd2a7cce8c948
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393453"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401555"
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
 
@@ -57,11 +57,11 @@ void _aligned_free_dbg(
 
 ## <a name="remarks"></a>Comentários
 
-O **aligned_free_dbg** função é uma versão de depuração de [aligned_free](aligned-free.md) função. Quando [Debug](../../c-runtime-library/debug.md) não está definida, cada chamada para **aligned_free_dbg** é reduzido para uma chamada para **aligned_free**. Ambos **aligned_free** e **aligned_free_dbg** liberar um bloco de memória no heap de base, mas **aligned_free_dbg** acomoda um recurso de depuração: a capacidade de manter liberada blocos de lista vinculada do heap para simular condições de memória insuficiente.
+O **aligned_free_dbg** função é uma versão de depuração de [aligned_free](aligned-free.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **aligned_free_dbg** é reduzida a uma chamada para `_aligned_free`. Ambos `_aligned_free` e **aligned_free_dbg** liberam um bloco de memória no heap de base, mas **aligned_free_dbg** acomoda um recurso de depuração: a capacidade de manter liberados blocos na lista vinculada do heap para Simule condições de memória insuficiente.
 
-**aligned_free_dbg** executa uma verificação de validade em todos os arquivos especificados e locais de bloco antes de executar a operação livre. O aplicativo não deve fornecer essas informações. Ao liberar um bloco de memória, o gerenciador de heap de depuração verifica automaticamente a integridade dos buffers nos dois lados da parte do usuário e emite um relatório de erro se tiver ocorrido substituição. Se o **crtdbg_delay_free_mem_df** campo de bits de [crtdbgflag](../../c-runtime-library/crtdbgflag.md) sinalizador é definido, o bloco livre é preenchido com o valor 0xDD, atribuído a **free_block** bloquear tipo, e mantidos em lista vinculada do heap de blocos de memória.
+**aligned_free_dbg** realiza uma verificação de validade em todos os arquivos especificados e locais de bloco antes de executar a operação livre. O aplicativo não deve fornecer essas informações. Ao liberar um bloco de memória, o gerenciador de heap de depuração verifica automaticamente a integridade dos buffers nos dois lados da parte do usuário e emite um relatório de erro se tiver ocorrido substituição. Se o crtdbg_delay_free_mem_df de campo de bits de [crtdbgflag](../../c-runtime-library/crtdbgflag.md) sinalizador estiver definido, o bloco liberado é preenchido com o valor 0xDD, atribuído o tipo de bloco free_block e mantido na lista vinculada do heap de blocos de memória.
 
-Se ocorrer um erro na liberação de memória, **errno** é definida com informações do sistema operacional da natureza da falha. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Se ocorrer um erro ao liberar a memória, o `errno` é definido com informações do sistema operacional sobre a natureza da falha. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre os tipos de blocos de alocação e como eles são usados, consulte [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipos de blocos no heap de depuração). Para obter informações sobre as diferenças entre chamar uma função de heap padrão e sua versão de depuração em um build de depuração de um aplicativo, consulte [Versões de depuração das funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
@@ -75,4 +75,4 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 ## <a name="see-also"></a>Consulte também
 
-[Rotinas de depuração](../../c-runtime-library/debug-routines.md)<br/>
+[Rotinas de depuração](../../c-runtime-library/debug-routines.md)  

@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fceb9ce3433a4255619a6c7bac4e952b15ac04d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 343aa01d9f8e7b3146976fe046c6b2d7473ca1ec
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941282"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407241"
 ---
 # <a name="decltype--c"></a>decltype (C++)
-O especificador de tipo `decltype` produz o tipo de uma expressão especificada. O `decltype` especificador de tipo junto com o [palavra-chave auto](../cpp/auto-cpp.md), é útil principalmente para desenvolvedores que escrevem bibliotecas de modelos. Use **automática** e `decltype` para declarar uma função de modelo cujo retorno tipo depende dos tipos de seus argumentos de modelo. Ou, use **automática** e `decltype` para declarar uma função de modelo que encapsula uma chamada para outra função e, em seguida, retorna o tipo de retorno da função encapsulada.  
+O **decltype** especificador de tipo produz o tipo de uma expressão especificada. O **decltype** especificador de tipo junto com o [palavra-chave auto](../cpp/auto-cpp.md), é útil principalmente para desenvolvedores que escrevem bibliotecas de modelos. Use **automática** e **decltype** para declarar uma função de modelo cujo retorno tipo depende dos tipos de seus argumentos de modelo. Ou, use **automática** e **decltype** para declarar uma função de modelo que encapsula uma chamada para outra função e, em seguida, retorna o tipo de retorno da função encapsulada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +45,7 @@ decltype( expression )
  O tipo dos *expressão* parâmetro.  
   
 ## <a name="remarks"></a>Comentários  
- O especificador de tipo `decltype` tem suporte no Visual C++ 2010 e em versões posteriores, e pode ser usado com código nativo ou gerenciado. `decltype(auto)` (C + + 14) tem suporte no Visual Studio 2015 e posterior.  
+ O **decltype** especificador de tipo é suportado no Visual C++ 2010 ou versões posteriores e pode ser usado com código nativo ou gerenciado. `decltype(auto)` (C + + 14) tem suporte no Visual Studio 2015 e posterior.  
   
  O compilador usa as regras a seguir para determinar o tipo dos *expressão* parâmetro.  
   
@@ -55,7 +55,7 @@ decltype( expression )
   
 -   Se o *expressão* parâmetro é um [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` é o tipo de *expressão*. Se o *expressão* parâmetro é um [lvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` é um [referência de lvalue](../cpp/lvalue-reference-declarator-amp.md) para o tipo do *expressão*.  
   
- O exemplo de código a seguir demonstra alguns usos do especificador de tipo `decltype`. Primeiro, suponha que você tenha codificado as instruções a seguir.  
+ O exemplo de código a seguir demonstra alguns usos do **decltype** especificador de tipo. Primeiro, suponha que você tenha codificado as instruções a seguir.  
   
 ```cpp  
 int var;  
@@ -64,7 +64,7 @@ struct A { double x; }
 const A* a = new A();  
 ```  
   
- Depois, examine os tipos que são retornados pelas quatro instruções `decltype` na tabela a seguir.  
+ Em seguida, examine os tipos que são retornados pelas quatro **decltype** instruções na tabela a seguir.  
   
 |Instrução|Tipo|Observações|  
 |---------------|----------|-----------|  
@@ -76,16 +76,16 @@ const A* a = new A();
 ## <a name="decltype-and-auto"></a>Decltype e auto  
  No C++ 14, você pode usar `decltype(auto)` com nenhum tipo de retorno à direita para declarar uma função de modelo cujo tipo de retorno depende dos tipos de seus argumentos de modelo.  
   
- No C++ 11, você pode usar o `decltype` especificador em um tipo de retorno à direita, de tipo junto com o **automática** palavra-chave, para declarar uma função de modelo cujo tipo de retorno depende dos tipos de seus argumentos de modelo. Por exemplo, considere o exemplo de código a seguir, no qual o tipo de retorno da função de modelo depende dos tipos dos argumentos de modelo. No exemplo de código, o *desconhecido* espaço reservado que indica que o tipo de retorno não pode ser especificado.  
+ No C++ 11, você pode usar o **decltype** especificador em um tipo de retorno à direita, de tipo junto com o **automático** palavra-chave, para declarar uma função de modelo cujo tipo de retorno depende dos tipos de seu modelo argumentos. Por exemplo, considere o exemplo de código a seguir, no qual o tipo de retorno da função de modelo depende dos tipos dos argumentos de modelo. No exemplo de código, o *desconhecido* espaço reservado que indica que o tipo de retorno não pode ser especificado.  
   
 ```cpp  
 template<typename T, typename U>  
 UNKNOWN func(T&& t, U&& u){ return t + u; };   
 ```  
   
- A introdução do especificador de tipo `decltype` permite que um desenvolvedor obtenha o tipo da expressão que a função de modelo retorna. Use o *sintaxe de declaração de função alternativa* que é mostrado posteriormente, o **automática** palavra-chave e o `decltype` digite especificador para declarar um *com especificação tardia* tipo de retorno. O tipo de retorno com especificação tardia é determinado quando a declaração é compilada, não quando ela é codificada.  
+ A introdução do **decltype** especificador de tipo permite que um desenvolvedor obter o tipo da expressão que retorna a função de modelo. Use o *sintaxe de declaração de função alternativa* que é mostrado posteriormente, o **automática** palavra-chave e o **decltype** digite especificador para declarar um  *com especificação tardia* tipo de retorno. O tipo de retorno com especificação tardia é determinado quando a declaração é compilada, não quando ela é codificada.  
   
- O protótipo a seguir ilustra a sintaxe de uma declaração de função alternativa. Observe que o **const** e **volátil** qualificadores e o **lançar** [especificação de exceção](../cpp/exception-specifications-throw-cpp.md) são opcionais. O *function_body* espaço reservado representa uma instrução composta que especifica que a função faz. Como uma melhor prática de codificação, o *expressão* espaço reservado na `decltype` instrução deve corresponder à expressão especificada pelo **retornar** instrução, se houver, no *function_body* .  
+ O protótipo a seguir ilustra a sintaxe de uma declaração de função alternativa. Observe que o **const** e **volátil** qualificadores e o **lançar** [especificação de exceção](../cpp/exception-specifications-throw-cpp.md) são opcionais. O *function_body* espaço reservado representa uma instrução composta que especifica que a função faz. Como uma melhor prática de codificação, o *expressão* espaço reservado na **decltype** instrução deve corresponder à expressão especificada pelo **retornar** instrução, se houver, em que o *function_body*.  
   
  **auto** *function_name* **(** *parâmetros*<sub>aceitar</sub> **)**  **Const**<sub>opt</sub> **volátil**<sub>aceitação</sub> **->** **decltype (** *expressão* **)** **lançar**<sub>aceitar</sub> **{** *function_body* **};**  
   
@@ -101,16 +101,15 @@ auto myFunc(T&& t, U&& u) -> decltype (forward<T>(t) + forward<U>(u))
 template<typename T, typename U>  
 decltype(auto) myFunc(T&& t, U&& u)   
         { return forward<T>(t) + forward<U>(u); };  
-  
 ```  
   
 ## <a name="decltype-and-forwarding-functions-c11"></a>Decltype e funções de encaminhamento (c++11)  
  As funções de encaminhamento encapsulam chamadas para outras funções. Considere um modelo de função que encaminha seus argumentos, ou os resultados de uma expressão que envolve esses argumentos, para outra função. Além disso, a função de encaminhamento retorna o resultado da chamada para a outra função. Nesse cenário, o tipo de retorno da função de encaminhamento deve ser igual ao tipo de retorno da função encapsulada.  
   
- Nesse cenário, você não pode escrever uma expressão de tipo apropriada sem o especificador de tipo `decltype`. O especificador de tipo `decltype` habilita funções genéricas de encaminhamento porque não perde informações necessárias sobre se uma função retorna (ou não) um tipo de referência. Para obter um exemplo de código de uma função de encaminhamento, consulte o exemplo anterior da função de modelo `myFunc`.  
+ Nesse cenário, você não pode gravar uma expressão de tipo apropriada sem o **decltype** especificador de tipo. O **decltype** especificador de tipo habilita funções genéricas de encaminhamento porque não perde informações necessárias sobre se uma função retorna um tipo de referência. Para obter um exemplo de código de uma função de encaminhamento, consulte o exemplo anterior da função de modelo `myFunc`.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir declara o tipo de retorno com especificação tardia da função de modelo `Plus()`. A função `Plus` processa seus dois operandos com a sobrecarga `operator+`. Consequentemente, a interpretação do operador de adição (+) e do tipo de retorno da função `Plus` depende dos tipos dos argumentos de função.  
+ O exemplo de código a seguir declara o tipo de retorno com especificação tardia da função de modelo `Plus()`. O `Plus` função processa seus dois operandos com o **operator +** de sobrecarga. Consequentemente, a interpretação do operador de adição (+) e do tipo de retorno da função `Plus` depende dos tipos dos argumentos de função.  
   
 ```cpp  
 // decltype_1.cpp  
@@ -210,4 +209,3 @@ static_assert(test2, "PASS2");
  Visual C++ 2010 ou versões posteriores.  
   
  `decltype(auto)` requer o Visual Studio 2015 ou posterior.  
-  

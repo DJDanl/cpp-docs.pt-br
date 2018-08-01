@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85e7a752630b391d09140fa7552a452b3d2b751a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a2c3e28d4d69265c86e3c88d07de460558b3f71b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409351"
 ---
 # <a name="function-call-c"></a>Chamada de função (C++)
 O operador de chamada de função, invocado usando parênteses, é um operador binário.  
@@ -33,7 +34,6 @@ O operador de chamada de função, invocado usando parênteses, é um operador b
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 primary-expression ( expression-list )  
 ```  
   
@@ -42,14 +42,14 @@ primary-expression ( expression-list )
   
  O operador de chamada de função, quando sobrecarregado, não modifica o modo como as funções são chamadas; modifica o modo como o operador deve ser interpretado quando aplicado aos objetos de um tipo de classe. Por exemplo, o código a seguir normalmente não teria sentido:  
   
-```  
+```cpp 
 Point pt;  
 pt( 3, 2 );  
 ```  
   
  Entretanto, com um operador de chamada de função sobrecarregado apropriado, essa sintaxe pode ser usada para deslocar a coordenada `x` 3 unidades e a coordenada `y` 2 unidades. O código a seguir mostra essa definição:  
   
-```  
+```cpp 
 // function_call.cpp  
 class Point  
 {  

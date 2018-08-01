@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bda87a0241e61cfc3fa26d4829f0504b784e8ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7b333d42f5e5e309ffa17e8c267dcb22ec30e6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409441"
 ---
 # <a name="explicit-overrides-c"></a>Substituições Explícitas (C++)
 **Seção específica da Microsoft**  
   
- Se a mesma função virtual declarada em dois ou mais [interfaces](../cpp/interface.md) e se uma classe é derivada dessas interfaces, você pode substituir explicitamente cada função virtual.  
+ Se a mesma função virtual é declarada em duas ou mais [interfaces](../cpp/interface.md) e se uma classe for derivada dessas interfaces, você pode substituir explicitamente cada função virtual.  
   
  Para obter informações sobre explícita substituem em código gerenciado usando a nova sintaxe gerenciada, consulte [substituições explícitas](../windows/explicit-overrides-cpp-component-extensions.md).  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir ilustra como usar as substituições explícitas:  
   
-```  
+```cpp 
 // deriv_ExplicitOverrides.cpp  
 // compile with: /GR  
 extern "C" int printf_s(const char *, ...);  

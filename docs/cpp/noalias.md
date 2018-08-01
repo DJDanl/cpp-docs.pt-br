@@ -17,30 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cbb5c1b4162f3326aade092c7e20ca42a825d13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56ee12f65ff9efe9f3b048d061b80aef691eb0f2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420112"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404389"
 ---
 # <a name="noalias"></a>noalias
 
 **Seção específica da Microsoft**
 
-`noalias` significa que uma chamada de função não modificar ou referência de estado global visível e modifica somente a memória apontada *diretamente* por parâmetros de ponteiro (primeiro nível referências indiretas).
+**noalias** significa que uma chamada de função não modifica nem referenciar o estado global visível e modifica somente a memória apontada *diretamente* pelos parâmetros de ponteiro (indireções de primeiro nível).
 
-Se uma função é anotada como `noalias`, o otimizador pode assumir que, além dos parâmetros em si, somente as indireções de primeiro nível dos parâmetros do ponteiro são referenciadas ou modificadas na função. O estado global visível é o conjunto de todos os dados que não estão definidos ou referenciados fora do escopo da compilação, e o endereço não é pego. O escopo de compilação é todos os arquivos de origem ([/LTCG (geração de código Link-time)](../build/reference/ltcg-link-time-code-generation.md) compilações) ou um único arquivo de origem (não -**/LTCG** criar).
+Se uma função é anotada como **noalias**, o otimizador pode assumir que, além dos parâmetros em si, indireções de primeiro nível apenas dos parâmetros do ponteiro são referenciadas ou modificadas na função. O estado global visível é o conjunto de todos os dados que não estão definidos ou referenciados fora do escopo da compilação, e o endereço não é pego. O escopo da compilação é todos os arquivos de origem ([/LTCG (geração de código Link-time)](../build/reference/ltcg-link-time-code-generation.md) compilações) ou um único arquivo de origem (não -**/LTCG** compilar).
 
-O `noalias` anotação se aplica apenas dentro do corpo da função anotado. Marcação de uma função como `__declspec(noalias)` não afeta a alias de ponteiros retornado pela função.
+O **noalias** anotação se aplica somente dentro do corpo da função anotado. Marcar uma função como **__declspec(noalias)** não afeta a suavização de ponteiros retornados pela função.
 
 Para outra anotação que pode afetar o alias, consulte [__declspec(restrict)](../cpp/restrict.md).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra o uso de `__declspec(noalias)`.
+O exemplo a seguir demonstra o uso de **__declspec(noalias)**.
 
-Quando a função `multiply` que acessa memória é anotada `__declspec(noalias)`, ele informa ao compilador que essa função não modifique o estado global, exceto por meio dos ponteiros na sua lista de parâmetros.
+Quando a função `multiply` que os acessos de memória é anotada **__declspec(noalias)**, ele informa ao compilador que essa função não modifica o estado global exceto por ponteiros na sua lista de parâmetros.
 
 ```C
 // declspec_noalias.c
@@ -109,7 +109,6 @@ int main()
 ```
 
 ## <a name="see-also"></a>Consulte também
-
-[__declspec](../cpp/declspec.md)  
-[Palavras-chave](../cpp/keywords-cpp.md)  
-[__declspec(restrict)](../cpp/restrict.md)  
+ [__declspec](../cpp/declspec.md)  
+ [Palavras-chave](../cpp/keywords-cpp.md)  
+ [__declspec(restrict)](../cpp/restrict.md)  

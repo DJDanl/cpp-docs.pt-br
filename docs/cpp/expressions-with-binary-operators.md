@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84738fa2c99e658d4e05dc45a9f942218964eb68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7e7b426d3bc4f0913422f508279db9727f6e1f8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414670"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406813"
 ---
 # <a name="expressions-with-binary-operators"></a>Expressões com operadores binários
 Os operadores binários atuam em dois operandos em uma expressão. Os operadores binários são:  
   
--   [Operadores de multiplicação](../cpp/multiplicative-operators-and-the-modulus-operator.md)  
+-   [Operadores multiplicativos](../cpp/multiplicative-operators-and-the-modulus-operator.md)  
   
     -   Multiplicação (*)  
   
@@ -64,9 +64,9 @@ Os operadores binários atuam em dois operandos em uma expressão. Os operadores
   
     -   [AND bit a bit (&)](../cpp/bitwise-and-operator-amp.md)  
   
-    -   [Bit a bit OR exclusivo (^)](../cpp/bitwise-exclusive-or-operator-hat.md)  
+    -   [Bit a bit exclusivo OR (^)](../cpp/bitwise-exclusive-or-operator-hat.md)  
   
-    -   [Bit a bit OR inclusivo (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+    -   [Bit a bit inclusivo OR (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
   
 -   Operadores lógicos  
   
@@ -88,7 +88,7 @@ Os operadores binários atuam em dois operandos em uma expressão. Os operadores
   
     -   Atribuição de módulo (%=)  
   
-    -   À esquerda de atribuição (<\<=)  
+    -   Atribuição de shift esquerda (<\<=)  
   
     -   Atribuição de shift direita (>>=)  
   
@@ -96,9 +96,9 @@ Os operadores binários atuam em dois operandos em uma expressão. Os operadores
   
     -   Atribuição OR exclusivo de bit a bit (^=)  
   
-    -   Bit a bit inclusiva atribuição de OR (&#124;=)  
+    -   Bit a bit atribuição OR inclusivo (&#124;=)  
   
--   [Operador de vírgula](../cpp/comma-operator.md) (,)  
+-   [Operador vírgula](../cpp/comma-operator.md) (,)  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de expressões](../cpp/types-of-expressions.md)

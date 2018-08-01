@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93a399f922d79c073cc6471ebe702d8ef7fcd842
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d55a2102299957a40cd9f742f91868ee2b5b849b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940635"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407670"
 ---
 # <a name="data-type-ranges"></a>Intervalos de tipos de dados
 Os compiladores de 32 bits e 64 bits do Visual C++ reconhecem os tipos na tabela mais adiante neste artigo.  
@@ -77,33 +77,33 @@ Os compiladores de 32 bits e 64 bits do Visual C++ reconhecem os tipos na tabela
   
 |Nome do tipo|Bytes|Outros nomes|Intervalo de valores|  
 |---------------|-----------|-----------------|---------------------|  
-|int|4|signed|-2.147.483.648 a 2.147.483.647|  
-|unsigned int|4|sem sinal|0 a 4.294.967.295|  
-|__int8|1|char|-128 a 127|  
-|unsigned __int8|1|unsigned char|0 a 255|  
-|__int16|2|short, short int, signed short int|-32.768 a 32.767|  
-|unsigned __int16|2|unsigned short, unsigned short int|0 a 65.535|  
-|__int32|4|signed, signed int, int|-2.147.483.648 a 2.147.483.647|  
-|unsigned __int32|4|unsigned, unsigned int|0 a 4.294.967.295|  
-|__int64|8|long long, signed long long|-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|  
-|unsigned __int64|8|unsigned long long|0 a 18.446.744.073.709.551.615|  
-|bool|1|nenhum|false ou true|  
-|char|1|nenhum|-128 a 127 por padrão<br /><br /> 0 a 255 quando compilado usando [/J](../build/reference/j-default-char-type-is-unsigned.md)|  
-|signed char|1|nenhum|-128 a 127|  
-|unsigned char|1|nenhum|0 a 255|  
-|short|2|short int, signed short int|-32.768 a 32.767|  
-|unsigned short|2|unsigned short int|0 a 65.535|  
-|long|4|long int, signed long int|-2.147.483.648 a 2.147.483.647|  
-|unsigned long|4|unsigned long int|0 a 4.294.967.295|  
-|long long|8|none (mas equivalente a __int64)|-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|  
-|unsigned long long|8|none (mas equivalente a unsigned __int64)|0 a 18.446.744.073.709.551.615|  
-|enum|varia|nenhum| |  
-|float|4|nenhum|3.4E +/- 38 (7 dígitos)|  
-|double|8|nenhum|1.7E +/- 308 (15 dígitos)|  
-|long double|igual a double|nenhum|Igual a double|  
-|wchar_t|2|__wchar_t|0 a 65.535|  
+|**int**|4|**signed**|-2.147.483.648 a 2.147.483.647|  
+|**unsigned int**|4|**unsigned**|0 a 4.294.967.295|  
+|**__int8**|1|**char**|-128 a 127|  
+|**__int8 sem sinal**|1|**unsigned char**|0 a 255|  
+|**__int16**|2|**curto**, **short int**, **assinado int curto**|-32.768 a 32.767|  
+|**__int16 sem sinal**|2|**unsigned short**, **unsigned int curto**|0 a 65.535|  
+|**__int32**|4|**assinado**, **assinado int**, **int**|-2.147.483.648 a 2.147.483.647|  
+|**__int32 sem sinal**|4|**sem sinal**, **int sem sinal**|0 a 4.294.967.295|  
+|**__int64**|8|**longo longo**, **assinado longo longo**|-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|  
+|**unsigned __int64**|8|**longo longo sem sinal**|0 a 18.446.744.073.709.551.615|  
+|**bool**|1|nenhum|**False** ou **true**|  
+|**char**|1|nenhum|-128 a 127 por padrão<br /><br /> 0 a 255 quando compilado usando [/J](../build/reference/j-default-char-type-is-unsigned.md)|  
+|**char assinada**|1|nenhum|-128 a 127|  
+|**unsigned char**|1|nenhum|0 a 255|  
+|**short**|2|**int curto**, **assinado int curto**|-32.768 a 32.767|  
+|**unsigned short**|2|**unsigned short int**|0 a 65.535|  
+|**long**|4|**Long int**, **assinado long int**|-2.147.483.648 a 2.147.483.647|  
+|**unsigned long**|4|**unsigned long int**|0 a 4.294.967.295|  
+|**long long**|8|None (mas equivalente a **__int64**)|-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|  
+|**longo longo sem sinal**|8|None (mas equivalente a **unsigned __int64**)|0 a 18.446.744.073.709.551.615|  
+|**enum**|varia|nenhum| |  
+|**float**|4|nenhum|3.4E +/- 38 (7 dígitos)|  
+|**double**|8|nenhum|1.7E +/- 308 (15 dígitos)|  
+|**long double**|mesmo que **duplo**|nenhum|Mesmo que **duplo**|  
+|**wchar_t**|2|**wchar_t**|0 a 65.535|  
   
- Dependendo de como é usada, uma variável de `__wchar_t` designa um tipo de caractere largo ou um tipo de caractere multibyte. Use o prefixo `L` antes de uma constante de caractere ou de cadeia de caracteres para designar a constante de tipo de caractere largo.  
+ Dependendo de como ele é usado, uma variável de **wchar_t** designa um tipo de caractere largo ou o tipo de caractere multibyte. Use o prefixo `L` antes de uma constante de caractere ou de cadeia de caracteres para designar a constante de tipo de caractere largo.  
   
  **assinado** e **não assinados** são os modificadores que você pode usar com qualquer tipo integral exceto **bool**. Observe que **char**, **assinado char**, e **unsigned char** são três tipos distintos para fins de mecanismos como sobrecarga e modelos.  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a46e7d314281bd19773a5c86e70a63f3c93e14
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 25172bc44c21fcb11ec3f7c77224d3214e21c5f2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940311"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404604"
 ---
 # <a name="functions-c"></a>Funções (C++)
 
@@ -82,7 +82,7 @@ As partes necessárias de uma declaração de função são:
 
 Partes opcionais de uma declaração de função são:
 
-1. **constexpr**, que indica que o valor de retorno da função é um valor constante pode ser calculado em tempo de compilação.
+1. `constexpr`, que indica que o valor de retorno da função é um valor constante pode ser calculado em tempo de compilação.
 
     ```cpp
     constexpr float exp(float x, int n)
@@ -114,7 +114,7 @@ Partes opcionais de uma declaração de função são:
 
      Para obter mais informações, consulte [funções embutidas](../cpp/inline-functions-cpp.md).
 
-1. Um **noexcept** expressão, que especifica se a função pode gerar uma exceção. No exemplo a seguir, a função não gera uma exceção se o `is_pod` expressão é avaliada como **verdadeiro**.
+1. Um `noexcept` expressão, que especifica se a função pode gerar uma exceção. No exemplo a seguir, a função não gera uma exceção se o `is_pod` expressão é avaliada como **verdadeiro**.
 
     ```cpp
     #include <type_traits>
@@ -127,7 +127,7 @@ Partes opcionais de uma declaração de função são:
 
 1. (Somente para funções de membro) Os qualificadores cv, que especifica se a função é **const** ou **volátil**.
 
-1. (Somente para funções de membro) **virtual**, **substituir**, ou **final**. **virtual** Especifica que uma função pode ser substituída em uma classe derivada. **substituir** significa que uma função em uma classe derivada é uma função virtual de substituição. **final** classe derivada de significa que uma função não pode ser substituída em qualquer ainda mais. Para obter mais informações, consulte [funções virtuais](../cpp/virtual-functions.md).
+1. (Somente para funções de membro) **virtual**, `override`, ou `final`. **virtual** Especifica que uma função pode ser substituída em uma classe derivada. `override` significa que uma função em uma classe derivada é uma função virtual de substituição. `final` significa que uma função não pode ser substituída ainda mais em qualquer classe derivada. Para obter mais informações, consulte [funções virtuais](../cpp/virtual-functions.md).
 
 1. (somente para funções de membro) **estático** aplicado a um membro da função significa que a função não está associada com qualquer instância de objeto da classe.
 
@@ -170,7 +170,7 @@ As variáveis declaradas dentro do corpo são chamadas de variáveis locais ou v
 
 Você pode declarar uma função de membro como **const** para especificar que a função não tem permissão para alterar os valores de todos os membros de dados na classe. Ao declarar uma função de membro como **const**, você ajuda o compilador imponha *exatidão de const*. Se alguém por engano tenta modificar o objeto usando uma função declarada como **const**, será gerado um erro do compilador. Para obter mais informações, consulte [const](const-cpp.md).
 
-Declarar uma função como **constexpr** quando o valor que ele produz pode possivelmente ser determinada no tempo de compilação. Uma função constexpr geralmente é executada mais rapidamente do que uma função regular. Para obter mais informações, consulte [constexpr](constexpr-cpp.md).
+Declarar uma função como `constexpr` quando o valor que ele produz pode possivelmente ser determinada no tempo de compilação. Uma função constexpr geralmente é executada mais rapidamente do que uma função regular. Para obter mais informações, consulte [constexpr](constexpr-cpp.md).
 
 ## <a name="function-templates"></a>Modelos de função
 
@@ -269,11 +269,11 @@ Quando **automática** é usado em conjunto com um tipo de retorno à direita, e
 
 Uma variável que é declarada dentro de um corpo de função é chamada uma *variável local* ou simplesmente *local*. Locais de não-estático visíveis apenas dentro do corpo de função e, se eles são declarados na pilha saem do escopo quando a função for encerrada. Quando você construir uma variável local e retorná-la por valor, o compilador normalmente pode executar a otimização de valor de retorno para evitar operações de cópia desnecessárias. Se você retornar uma variável local por referência, o compilador emitirá um aviso, pois qualquer tentativa de usar essa referência pelo chamador ocorrerá depois que o local foi destruído.
 
-No C++ uma variável local pode ser declarada como estática. A variável só é visível dentro do corpo de função, mas existe uma única cópia da variável para todas as instâncias da função. Objetos estáticos locais são destruídos durante o término especificado por **atexit**. Se um objeto estático não foi construído porque o fluxo de programa do controle ignorou a declaração dele, nenhuma tentativa de destruição de objeto será feita.
+No C++ uma variável local pode ser declarada como estática. A variável só é visível dentro do corpo de função, mas existe uma única cópia da variável para todas as instâncias da função. Os objetos estáticos locais são destruídos durante o término especificado por `atexit`. Se um objeto estático não foi construído porque o fluxo de programa do controle ignorou a declaração dele, nenhuma tentativa de destruição de objeto será feita.
 
 ##  <a name="type_deduction"></a> Dedução de tipo em tipos de retorno (c++14)
 
-No C++ 14, você pode usar **automática** para instruir o compilador a inferir o tipo de retorno do corpo da função sem ter que fornecer um tipo de retorno à direita. Observe que **automática** sempre deduz a um retorno de por valor. Use **auto & &** para instruir o compilador a deduzir uma referência.
+No C++ 14, você pode usar **automática** para instruir o compilador a inferir o tipo de retorno do corpo da função sem ter que fornecer um tipo de retorno à direita. Observe que **automática** sempre deduz a um retorno de por valor. Use `auto&&` para instruir o compilador a deduzir uma referência.
 
 Neste exemplo, **automática** será deduzido como uma cópia do valor não constante da soma do lhs e rhs.
 
@@ -435,10 +435,9 @@ int (*myFunction(char* s))(int);
 A declaração anterior é equivalente à declaração que usa typedef acima.
 
 ## <a name="see-also"></a>Consulte também
-
-- [Sobrecarga de função](../cpp/function-overloading.md)
-- [Funções com listas de argumentos variáveis](../cpp/functions-with-variable-argument-lists-cpp.md)
-- [Funções explicitamente usadas como padrão e excluídas](../cpp/explicitly-defaulted-and-deleted-functions.md)
-- [Pesquisa de nome dependente de argumento (Koenig) em funções](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
-- [Argumentos padrão](../cpp/default-arguments.md)
-- [Funções Embutidas](../cpp/inline-functions-cpp.md)
+ [Sobrecarga de função](../cpp/function-overloading.md)  
+ [Funções com listas de argumentos variáveis](../cpp/functions-with-variable-argument-lists-cpp.md)  
+ [Funções explicitamente usadas como padrão e excluídas](../cpp/explicitly-defaulted-and-deleted-functions.md)  
+ [Pesquisa de nome dependente de argumento (Koenig) em funções](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)  
+ [Argumentos padrão](../cpp/default-arguments.md)  
+ [Funções Embutidas](../cpp/inline-functions-cpp.md)
