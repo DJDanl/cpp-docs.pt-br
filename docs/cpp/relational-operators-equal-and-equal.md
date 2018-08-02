@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56372764c70498aec4ccf7b23fc7d074d1df179e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 393cb0b23ca67877a18d2148af76c8de59d29f30
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942231"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465552"
 ---
 # <a name="relational-operators-lt-gt-lt-and-gt"></a>Operadores relacionais: &lt;, &gt;, &lt;=, e &gt;=
 ## <a name="syntax"></a>Sintaxe  
@@ -81,21 +81,21 @@ int main() {
  As conversões aritméticas usuais abordadas [conversões padrão](standard-conversions.md) são aplicadas aos operandos de tipos aritméticos.  
   
 ## <a name="comparing-pointers"></a>Comparando ponteiros  
- Quando dois ponteiros para objetos do mesmo tipo são comparados, o resultado é determinado pelo local dos objetos apontados no espaço de endereço do programa. Os ponteiros também podem ser comparados a uma expressão constante que é avaliada como 0 ou a um ponteiro do tipo nulo *. Se uma comparação de ponteiros é feita em relação a um ponteiro de tipo void \*, o outro ponteiro é implicitamente convertido para o tipo void \*. Então, a comparação será feita.  
+ Quando dois ponteiros para objetos do mesmo tipo são comparados, o resultado é determinado pelo local dos objetos apontados no espaço de endereço do programa. Ponteiros também podem ser comparados a uma expressão constante que é avaliada como 0 ou um ponteiro de tipo `void *`. Se uma comparação de ponteiros é feita em relação a um ponteiro de tipo `void *`, o outro ponteiro é implicitamente convertido para o tipo `void *`. Então, a comparação será feita.  
   
  Dois ponteiros de tipos diferentes não podem ser comparados, a menos que:  
   
 -   Um tipo é um tipo de classe derivado de outro tipo.  
   
--   Pelo menos um dos ponteiros é convertido explicitamente (conversão) no tipo nulo *. (O outro ponteiro é implicitamente convertido para o tipo void \* para a conversão.)  
+-   Pelo menos um dos ponteiros é convertido explicitamente (conversão) no tipo `void *`. (O outro ponteiro é implicitamente convertido para o tipo `void *` para a conversão.)  
   
  Dois ponteiros do mesmo tipo que apontam para o mesmo objeto são obrigatoriamente comparados como iguais. Se dois ponteiros para membros não estáticos de um objeto são comparados, as seguintes regras se aplicam:  
   
--   Se o tipo de classe não é uma união, e se os dois membros não são separados por um *especificador de acesso*, como público, protegido ou particular, o ponteiro para o membro declarado por último será comparado maior que o ponteiro para o membro declarado anteriormente.  
+-   Se o tipo de classe não é um **união**, e se os dois membros não são separados por uma *especificador de acesso*, como **público**, **protegido**, ou **privada**, o ponteiro para o membro declarado por último será comparado maior que o ponteiro para o membro declarado anteriormente.  
   
 -   Se os dois membros são separados por um *especificador de acesso*, os resultados são indefinidos.  
   
--   Se o tipo de classe for uma união, os ponteiros para membros de dados diferentes nessa união serão comparados como iguais.  
+-   Se o tipo de classe for um **união**, ponteiros para membros de dados diferentes em que **união** comparados igualmente.  
   
  Se dois ponteiros apontarem para elementos da mesma matriz ou para o elemento além do final da matriz, o ponteiro para o objeto com o subscrito mais alto será comparado como superior. A comparação dos ponteiros é garantida como válida somente quando os ponteiros se referem a objetos na mesma matriz ou ao local após o término da matriz.  
   

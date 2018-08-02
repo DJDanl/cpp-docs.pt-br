@@ -1,5 +1,5 @@
 ---
-title: 'Método: Getaddressof | Microsoft Docs'
+title: 'Método comptr:: Getaddressof | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2da8e134c4ba1ec01a6694cd886d44b14c6cac8c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e11cd204c2c89c7fca9a824450d6136eb65520db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870231"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461178"
 ---
 # <a name="comptrgetaddressof-method"></a>Método ComPtr::GetAddressOf
-Recupera o endereço do [PTR _](../windows/comptr-ptr-data-member.md) membro de dados, que contém um ponteiro para a interface representado por esse ComPtr.  
+Recupera o endereço do [PTR _](../windows/comptr-ptr-data-member.md) membro de dados, que contém um ponteiro para a interface representado por esse **ComPtr**.  
   
 ## <a name="syntax"></a>Sintaxe  
   

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 150169442aa68395b4dc8a4f4c74951e877f18f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a68189c461453dc72585ff4034df5ba69bb41bd5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863719"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464870"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>Enumeração AsyncStatusInternal
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,22 +34,22 @@ enum AsyncStatusInternal;
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Especifica um mapeamento entre enumerações internos para o estado das operações assíncronas e o **Windows::Foundation::AsyncStatus** enumeração.  
+ Especifica um mapeamento entre enumerações internos para o estado das operações assíncronas e o `Windows::Foundation::AsyncStatus` enumeração.  
   
 ## <a name="members"></a>Membros  
- `_Created`  
+ *Criados*  
  Equivalente a:: Windows::Foundation::AsyncStatus:: criado  
   
- `_Started`  
- Equivalente a:: Windows::Foundation::AsyncStatus:: Introdução  
+ *_Started*  
+ Equivalente a:: Windows::Foundation::AsyncStatus:: iniciado  
   
- `_Completed`  
+ *_Completed*  
  Equivalente a:: Windows::Foundation::AsyncStatus:: concluída  
   
- `_Cancelled`  
+ *_Cancelled*  
  Equivalente a:: Windows::Foundation::AsyncStatus:: cancelada  
   
- `_Error`  
+ *Erro*  
  Equivalente a:: Windows::Foundation::AsyncStatus::Error  
   
 ## <a name="requirements"></a>Requisitos  

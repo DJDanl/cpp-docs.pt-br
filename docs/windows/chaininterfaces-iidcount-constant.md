@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5327b706fb6b461d7bbe449df5482c8f0c485ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6d089e9639d83150e501b32577de94fc43b516c1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859996"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463935"
 ---
 # <a name="chaininterfacesiidcount-constant"></a>Constante ChainInterfaces::IidCount
-O número total de IDs contidos nas interfaces de especificados pelos parâmetros de modelo de interface `I0` por meio de `I9`.  
+O número total de IDs contidas nas interfaces especificadas pelos parâmetros de modelo de interface *I0* por meio *I9*.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +37,10 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
  O número total de identificadores de interface.  
   
 ## <a name="remarks"></a>Comentários  
- Parâmetros de modelo `I0` e `I1` são necessários e os parâmetros `I2` por meio de `I9` são opcionais. A contagem IID de cada interface normalmente é 1.  
+ Parâmetros de modelo *I0* e *I1* são necessários e os parâmetros *I2* por meio de *I9* são opcionais. A contagem IID de cada interface normalmente é 1.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL  
   

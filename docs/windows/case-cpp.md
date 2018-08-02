@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30d665861688054a4f6b7491f449014afe646c71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6567650d719b56bb320f1b40eae285322bcab364
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860951"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464305"
 ---
 # <a name="case-c"></a>case (C++)
 Usado com o [switch_type](../windows/switch-type.md) atributo em uma **união**.  
@@ -30,8 +30,7 @@ Usado com o [switch_type](../windows/switch-type.md) atributo em uma **união**.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ case(  
+[ case(  
    value  
 ) ]  
 ```  
@@ -54,9 +53,9 @@ Usado com o [switch_type](../windows/switch-type.md) atributo em uma **união**.
  O **caso** atributo C++ tem a mesma funcionalidade que o **caso** atributo MIDL. Esse atributo é usado apenas com o [switch_type](../windows/switch-type.md) atributo.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir mostra um uso de **caso** atributo:  
+ O código a seguir mostra um uso do **caso** atributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_case.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -75,13 +74,13 @@ struct SizedValue2 {
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|Membro de um **classe** ou `struct`|  
+|**Aplica-se a**|Membro de um **classe** ou **struct**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 816c71d2c14b373e63de2b2c8725eb87b40d91e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2ec20dca7bb0a37adae576a8b5a9adfad027b21
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870309"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465809"
 ---
 # <a name="comptrrefbaseoperator-iunknown-operator"></a>ComPtrRefBase::operator IUnknown** Operador
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,9 +34,9 @@ operator IUnknown**() const;
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Converte atual [PTR _](../windows/comptrrefbase-ptr-data-member.md) membro de dados para um ponteiro-para-um-ponteiro-para a interface IUnknown.  
+ Converte o atual [PTR _](../windows/comptrrefbase-ptr-data-member.md) membro de dados para um ponteiro-para-um-ponteiro-para o `IUnknown` interface.  
   
- Um erro é emitido se o ComPtrRefBase atual não deriva de IUnknown.  
+ Um erro será emitido se o atual **ComPtrRefBase** não deriva de `IUnknown`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

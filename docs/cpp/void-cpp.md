@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81dd7717940bb6f78063b0fba64dd5d7f8cad583
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: dbb46302c2ae8834ab9a2a626a3bfb77c41996a2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942239"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461472"
 ---
 # <a name="void-c"></a>void (C++)
 Quando usado como um tipo de retorno de função, o **void** palavra-chave especifica que a função não retorna um valor. Quando usado para a lista de parâmetros de uma função, um item nulo especifica que a função não usa parâmetros. Quando usado em declaração de um ponteiro nulo, especifica que o ponteiro é “universal”.  
   
- Se for do tipo de um ponteiro **void \*** , o ponteiro pode apontar para qualquer variável que não é declarado com o **const** ou **voláteis** palavra-chave. Um ponteiro nulo não pode ter a referência removida a menos que seja convertido para outro tipo. Um ponteiro nulo pode ser convertido em outro tipo de ponteiro de dados.  
+ Se for do tipo de um ponteiro `void *`, o ponteiro pode apontar para qualquer variável que não é declarado com o **const** ou **volátil** palavra-chave. Um ponteiro nulo não pode ter a referência removida a menos que seja convertido para outro tipo. Um ponteiro nulo pode ser convertido em outro tipo de ponteiro de dados.  
   
  Um ponteiro nulo pode apontar para uma função, mas não para um membro da classe em C++.  
   

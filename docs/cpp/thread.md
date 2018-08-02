@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f268dd12ca0eca55cbc91bffe5daccbc23ef4dbe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 148e42a79ef7c20b7b35c3ec570212574782c1f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940144"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462086"
 ---
 # <a name="thread"></a>thread
 
 **Seção específica da Microsoft**
 
-O **thread** modificador de classe de armazenamento estendido é usado para declarar uma variável local de thread. Para o portable equivalente no C++ 11 e posterior, use o [thread_local](../cpp/storage-classes-cpp.md#thread_local) especificador de classe de armazenamento para código portátil. No Windows `thread_local` é implementado com `__declspec(thread)`.
+O **thread** modificador de classe de armazenamento estendido é usado para declarar uma variável local de thread. Para o portable equivalente no C++ 11 e posterior, use o [thread_local](../cpp/storage-classes-cpp.md#thread_local) especificador de classe de armazenamento para código portátil. No Windows `thread_local` é implementado com **__declspec(thread)**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -96,7 +96,6 @@ Além disso, você deve observar estas diretrizes ao declarar variáveis e objet
 **Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
-
-[__declspec](../cpp/declspec.md)  
-[Palavras-chave](../cpp/keywords-cpp.md)  
-[TLS (armazenamento local de thread)](../parallel/thread-local-storage-tls.md)  
+ [__declspec](../cpp/declspec.md)  
+ [Palavras-chave](../cpp/keywords-cpp.md)  
+ [TLS (armazenamento local de thread)](../parallel/thread-local-storage-tls.md)  

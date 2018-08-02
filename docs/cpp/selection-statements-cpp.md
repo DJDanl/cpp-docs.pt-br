@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f72e3c8145b2909495e53645af8ba500a102ebc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 10e1d9d6a86b4379575c100316ef8e9832bad6d8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421267"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464422"
 ---
 # <a name="selection-statements-c"></a>Instruções de seleção (C++)
-As instruções de seleção do C++, [se](../cpp/if-else-statement-cpp.md) e [alternar](../cpp/switch-statement-cpp.md), fornecem um meio para executar condicionalmente seções de código.  
+As instruções de seleção C++, [se](../cpp/if-else-statement-cpp.md) e [alternar](../cpp/switch-statement-cpp.md), fornecem um meio para executar condicionalmente, as seções de código.  
   
- O [if_exists](../cpp/if-exists-statement.md) e [if_not_exists](../cpp/if-not-exists-statement.md) instruções permitem condicionalmente incluir código dependendo da existência de um símbolo.  
+ O [if_exists](../cpp/if-exists-statement.md) e [if_not_exists](../cpp/if-not-exists-statement.md) instruções permitem que você inclua o código dependendo da existência de um símbolo condicionalmente.  
   
  Consulte os tópicos individuais sobre a sintaxe para cada instrução.  
   

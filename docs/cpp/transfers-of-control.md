@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bec66d25be2cb56c75f42f60af2ccd5e3f759ad
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e773a0188eb3450ab1a13a24fc556fa8e8c4f874
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942336"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464263"
 ---
 # <a name="transfers-of-control"></a>Transferências de controle
 Você pode usar o **goto** instrução ou um **caso** rotular em um **alternar** instrução para especificar um programa que crie ramificações após um inicializador. Esse código é inválido, a menos que a declaração que contém o inicializador esteja em um bloco delimitado pelo bloco em que a instrução de salto ocorre.  
@@ -60,4 +60,3 @@ int main()
  No exemplo anterior, o **goto** instrução tenta transferir o controle após a inicialização de `i`. No entanto, se `i` tivesse sido declarado, mas não inicializado, a transferência seria válida.  
   
  Os objetos `total` e `ch`, declarada no bloco que serve como o *instrução* da **enquanto** instrução, são destruídos quando esse bloco é fechado usando a  **quebra** instrução.  
-  

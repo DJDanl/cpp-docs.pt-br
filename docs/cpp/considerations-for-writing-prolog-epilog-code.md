@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68eff54ff2465706f5a7459b7c6c21d87c7a1b7f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b581a57db7e66d1547ffd90509c62353d78d478b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402309"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464105"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Considerações para escrever o código de prólogo/epílogo
-## <a name="microsoft-specific"></a>Específico da Microsoft  
+ **Seção específica da Microsoft**  
  Antes de escrever suas próprias sequências de código de prólogo e epílogo, é importante entender como o registro de ativação é apresentado. Também é útil saber como usar o `__LOCAL_SIZE` símbolo.  
   
 ##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Layout de quadro de pilha  

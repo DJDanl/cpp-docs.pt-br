@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a55aca3abe95d189c40c7571db39fc48edf5f4cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c278c39908312f76a8b62a529beaed884c07a81d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942238"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461514"
 ---
 # <a name="subscripting"></a>Subscrito
 O operador subscrito (**[]**), como o operador de chamada de função, é considerado um operador binário. O operador subscrito deve ser uma função de membro não estático que usa um único argumento. Este argumento ou pode ser de qualquer tipo e designa o subscrito de matriz desejado.  
@@ -98,9 +98,9 @@ Element: [10] = 10
 ```  
   
 ## <a name="comments"></a>Comentários  
- Quando `i` atinge 10 no programa anterior, `operator[]` detecta que um subscrito fora dos limites está sendo usado e emite uma mensagem de erro.  
+ Quando `i` atinge 10 no programa anterior, **operator []** detecta que um Subscrito fora dos limites está sendo usado e emite uma mensagem de erro.  
   
- Observe que a função `operator[]` retorna um tipo de referência. Isso a torna um l-value, permitindo usar as expressões subscritas em ambos os lados dos operadores de atribuição.  
+ Observe que a função **operator []** retorna um tipo de referência. Isso a torna um l-value, permitindo usar as expressões subscritas em ambos os lados dos operadores de atribuição.  
   
 ## <a name="see-also"></a>Consulte também  
  [Sobrecarga de Operador](../cpp/operator-overloading.md)

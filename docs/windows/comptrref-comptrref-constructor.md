@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d738d6d00a3ca4c344bcea37b09db7e9c494b50b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24844588a18f269ee6f3a19286e6755b11b1c6bf
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870653"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463626"
 ---
 # <a name="comptrrefcomptrref-constructor"></a>Construtor ComPtrRef::ComPtrRef
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,11 +36,11 @@ ComPtrRef(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `ptr`  
- O valor subjacente de outro objeto ComPtrRef.  
+ *ptr*  
+ O valor subjacente de outro **ComPtrRef** objeto.  
   
 ## <a name="remarks"></a>Comentários  
- Inicializa uma nova instância da classe ComPtrRef do ponteiro especificado para outro objeto ComPtrRef.  
+ Inicializa uma nova instância dos **ComPtrRef** classe a partir o ponteiro especificado para outro **ComPtrRef** objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

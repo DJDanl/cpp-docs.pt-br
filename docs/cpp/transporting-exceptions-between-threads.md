@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99f2d785e9f7ab7fa91f51d22299ebab0f39197e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a36aaddd5540fc9259178ba1686960c488b4d246
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942062"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462291"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transportando exceções entre threads
 
@@ -265,7 +265,6 @@ exception_ptr 1: Caught a  myException exception.
 **Cabeçalho:** \<exception>
 
 ## <a name="see-also"></a>Consulte também
-
-- [Tratamento de Exceção](../cpp/exception-handling-in-visual-cpp.md)
-- [/EH (modelo de tratamento de exceções)](../build/reference/eh-exception-handling-model.md)
-- [/clr (compilação do Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)
+ [Tratamento de Exceção](../cpp/exception-handling-in-visual-cpp.md)  
+ [/EH (modelo de tratamento de exceções)](../build/reference/eh-exception-handling-model.md)  
+ [/clr (compilação do Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

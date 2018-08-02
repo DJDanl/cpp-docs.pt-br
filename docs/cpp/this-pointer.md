@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d150d2419885c2f0273e376fd58750417ced6756
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f63b2d129e0eb6e9986942e4286eb1728d4be797
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942224"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462213"
 ---
 # <a name="this-pointer"></a>Ponteiro this
 O **isso** ponteiro for um ponteiro acessível somente dentro de funções de membro não estáticas de uma **classe**, **struct**, ou **união** tipo. Ele aponta para o objeto para o qual a função de membro é chamada. As funções membro estáticas não têm uma **isso** ponteiro.  
@@ -31,7 +31,6 @@ O **isso** ponteiro for um ponteiro acessível somente dentro de funções de me
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 this   
 this->member-identifier  
 ```  
@@ -201,4 +200,3 @@ int main()
   
 ## <a name="see-also"></a>Consulte também  
  [Palavras-chave](../cpp/keywords-cpp.md)   
- 

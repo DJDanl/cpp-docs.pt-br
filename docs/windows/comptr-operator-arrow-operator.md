@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cb3571207f328ad044ffd3f2f9b83bcebc7677e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ff18dee2b8d951ab9233e92478eb967e4a02eb9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870179"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464292"
 ---
 # <a name="comptroperator-gt-operator"></a>Comptr:: Operator -&gt; operador
 Recupera um ponteiro para o tipo especificado pelo parâmetro de modelo atual.  
@@ -37,7 +37,7 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
  Ponteiro para o tipo especificado pelo nome do tipo de modelo atual.  
   
 ## <a name="remarks"></a>Comentários  
- Essa função auxiliar remove sobrecarga desnecessária causada usando a macro STDMETHOD. Essa função faz IUnknown tipos privados em vez de virtual.  
+ Essa função auxiliar remove causada pelo uso a macro STDMETHOD uma sobrecarga desnecessária. Essa função faz `IUnknown` tipos **privada** em vez de **virtual**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

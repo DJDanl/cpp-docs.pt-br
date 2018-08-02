@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c9dbd5d7296edaed9e850e6453f1b1b593ddba9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92add8f79abd3aac7c11142fa67ea3b4bcd237d5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863381"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466196"
 ---
 # <a name="asyncbase-class"></a>Classe AsyncBase
 Implementa a máquina de estado assíncrona do tempo de execução do Windows.  
@@ -30,7 +30,6 @@ Implementa a máquina de estado assíncrona do tempo de execução do Windows.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 template <  
    typename TComplete,  
    typename TProgress = Details::Nil,  
@@ -46,14 +45,14 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `TComplete`  
- Um manipulador de eventos que é chamado quando uma operação assíncrona é concluída.  
+ *TComplete*  
+ Um manipulador de eventos é chamado quando uma operação assíncrona é concluída.  
   
- `TProgress`  
- Um manipulador de eventos que é chamado quando uma operação assíncrona em execução relata o progresso atual da operação.  
+ *TProgress*  
+ Um manipulador de eventos é chamado quando uma operação assíncrona em execução relata o progresso atual da operação.  
   
- `resultType`  
- Uma da [AsyncResultType](../windows/asyncresulttype-enumeration.md) valores de enumeração. Por padrão, SingleResult.  
+ *resultType*  
+ Um dos [AsyncResultType](../windows/asyncresulttype-enumeration.md) valores de enumeração. Por padrão, SingleResult.  
   
 ## <a name="members"></a>Membros  
   
@@ -61,7 +60,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor AsyncBase::AsyncBase](../windows/asyncbase-asyncbase-constructor.md)|Inicializa uma instância da classe AsyncBase.|  
+|[Construtor AsyncBase::AsyncBase](../windows/asyncbase-asyncbase-constructor.md)|Inicializa uma instância das **AsyncBase** classe.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -85,9 +84,9 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método AsyncBase::CheckValidStateForDelegateCall](../windows/asyncbase-checkvalidstatefordelegatecall-method.md)|Testa se o delegado propriedades podem ser modificadas no estado atual assíncrono.|  
-|[Método AsyncBase::CheckValidStateForResultsCall](../windows/asyncbase-checkvalidstateforresultscall-method.md)|Verifica se os resultados de uma operação assíncrona podem ser coletados no estado atual assíncrono.|  
-|[Método AsyncBase::ContinueAsyncOperation](../windows/asyncbase-continueasyncoperation-method.md)|Determina se a operação assíncrona deve continuar o processamento ou deve parar.|  
+|[Método AsyncBase::CheckValidStateForDelegateCall](../windows/asyncbase-checkvalidstatefordelegatecall-method.md)|Testa se as propriedades de delegado podem ser modificadas no estado assíncrono atual.|  
+|[Método AsyncBase::CheckValidStateForResultsCall](../windows/asyncbase-checkvalidstateforresultscall-method.md)|Testa se os resultados de uma operação assíncrona que podem ser coletados no estado assíncrono atual.|  
+|[Método AsyncBase::ContinueAsyncOperation](../windows/asyncbase-continueasyncoperation-method.md)|Determina se a operação assíncrona devam continuar o processamento ou deve parar.|  
 |[Método AsyncBase::CurrentStatus](../windows/asyncbase-currentstatus-method.md)|Recupera o status da operação assíncrona atual.|  
 |[Método AsyncBase::ErrorCode](../windows/asyncbase-errorcode-method.md)|Recupera o código de erro para a operação assíncrona atual.|  
 |[Método AsyncBase::OnCancel](../windows/asyncbase-oncancel-method.md)|Quando substituído em uma classe derivada, cancela uma operação assíncrona.|  

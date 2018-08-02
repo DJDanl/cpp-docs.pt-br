@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aca26e156bbb6a883ed6d55a6a01da128982c127
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0171c8cf836c95afecb74cf1909688bbbe030db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856967"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466365"
 ---
 # <a name="appobject"></a>appobject
-Identifica o coclass como um objeto de aplicativo, que está associado um aplicativo completo .exe e indica que as funções e propriedades da coclass globalmente disponíveis neste [biblioteca de tipos](../mfc/automation-clients-using-type-libraries.md).  
+Identifica a coclass como um objeto de aplicativo, que é associado a um aplicativo completo .exe e indica que as funções e propriedades da coclass estão globalmente disponíveis neste [biblioteca de tipos](../mfc/automation-clients-using-type-libraries.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [appobject]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
@@ -41,7 +39,7 @@ Identifica o coclass como um objeto de aplicativo, que está associado um aplica
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra uma definição de classe simples precedida por um bloco de atributo que inclui **appobject**:  
   
-```  
+```cpp  
 // cpp_attr_ref_appobject.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -58,13 +56,13 @@ class A : public ICustom {
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|**class**, `struct`|  
+|**Aplica-se a**|**classe**, **struct**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|**coclass**|  
+|**Atributos obrigatórios**|`coclass`|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f1bae2c503f4e5f0c887a46956248184ece9a1e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e2e7b2301ae4dd38a40bdf4583e963e55a8b12d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857318"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461387"
 ---
 # <a name="activationfactorycallback-function"></a>Função ActivationFactoryCallback
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,19 +37,19 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `activationId`  
+ *activationId*  
  Identificador para uma cadeia de caracteres que especifica um nome de classe de tempo de execução.  
   
- `ppFactory`  
- Quando essa operação for concluída, um alocador de ativação que corresponde ao parâmetro `activationId`.  
+ *ppFactory*  
+ Quando essa operação for concluída, um alocador de ativação que corresponde ao parâmetro *activationId*.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, o HRESULT que descreve a falha. Falha provável HRESULTs são CLASS_E_CLASSNOTAVAILABLE e E_INVALIDARG.  
+ S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha. HRESULTs de falha provavelmente são CLASS_E_CLASSNOTAVAILABLE e E_INVALIDARG.  
   
 ## <a name="remarks"></a>Comentários  
  Obtém o alocador de ativação para a ID de ativação especificado.  
   
- O tempo de execução do Windows chama essa função de retorno de chamada para solicitar um objeto especificado por seu nome de classe de tempo de execução.  
+ O tempo de execução do Windows chama essa função de retorno de chamada para solicitar um objeto especificado pelo seu nome de classe de tempo de execução.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  

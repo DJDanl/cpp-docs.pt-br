@@ -1,5 +1,5 @@
 ---
-title: 'Método Chaininterfaces: | Microsoft Docs'
+title: 'Método chaininterfaces:: Verify | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c83479434a936f32fb0f7367d8cd02c6676c74e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a845ea047682fda97ae581f4daad26775241ddf8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860688"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466833"
 ---
 # <a name="chaininterfacesverify-method"></a>Método ChainInterfaces::Verify
-Verifica se cada interface definidos pelos parâmetros de modelo `I0` por meio de `I9` herda de IUnknown e/ou IInspectable que `I0` herda de `I1` por meio de `I9`.  
+Verifica se cada interface definido pelos parâmetros de modelo *I0* por meio *I9* herda de IUnknown e/ou IInspectable e que *I0* herda *I1* por meio *I9*.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,13 +34,13 @@ WRL_NOTHROW __forceinline static void Verify();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Se a operação de verificação falhar, um `static_assert` emite uma mensagem de erro que descreve a falha.  
+ Se a operação de verificação falhar, uma **static_assert** emite uma mensagem de erro que descreve a falha.  
   
 ## <a name="remarks"></a>Comentários  
- Parâmetros de modelo `I0` e `I1` são necessários e os parâmetros `I2` por meio de `I9` são opcionais.  
+ Parâmetros de modelo *I0* e *I1* são necessários e os parâmetros *I2* por meio de *I9* são opcionais.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL  
   

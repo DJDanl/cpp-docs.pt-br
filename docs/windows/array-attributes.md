@@ -15,21 +15,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad5a054d6b1cf680998dc5eb073fafc8d351e298
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac37f1b5b5df8f39e584b8e5476af81a4b09ecff
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854461"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464331"
 ---
 # <a name="array-attributes"></a>Atributos de matriz
-Os atributos a seguir se aplica a matrizes ou **SAFEARRAY**s.  
+Os atributos a seguir se aplicam a matrizes ou `SAFEARRAY`s.  
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|[library_block](../windows/library-block.md)|Coloca uma construção dentro do bloco de biblioteca do arquivo. idl.|  
+|[library_block](../windows/library-block.md)|Coloca uma construção de dentro do bloco de biblioteca do arquivo. idl.|  
 |[satype](../windows/satype.md)|Especifica o tipo de dados da estrutura de SAFEARRAY.|  
-|[string](../windows/string-cpp.md)|Indica que o unidimensional `char`, `wchar_t`, **bytes** (ou equivalente) array ou ponteiro para essa matriz deve ser tratado como uma cadeia de caracteres.|  
+|[string](../windows/string-cpp.md)|Indica que o unidimensional **char**, **wchar_t**, **bytes** (ou equivalente) matriz ou o ponteiro para essa matriz deve ser tratado como uma cadeia de caracteres.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Atributos por uso](../windows/attributes-by-usage.md)

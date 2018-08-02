@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Operator = = operador | Microsoft Docs'
+title: 'Operador comptrref:: Operator = = | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b7cc1d89a0e113164530245467afd94becdc1e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 606059712e60ba181998155b55ae02ba8b27c4da
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880763"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463948"
 ---
 # <a name="comptrrefoperator-operator"></a>Operador ComPtrRef::operator==
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,18 +55,18 @@ bool operator==(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `a`  
+ *a*  
  Uma referência a um objeto ComPtrRef.  
   
- `b`  
+ *b*  
  Uma referência a outro objeto ComPtrRef ou um ponteiro para um tipo anônimo (`void*`).  
   
 ## <a name="return-value"></a>Valor de retorno  
- O primeiro produz operador `true` se objeto `a` é igual ao objeto `b`; caso contrário, `false`.  
+ A primeira produz do operador **verdadeira** se objeto *um* é igual ao objeto *b*; caso contrário, **false**.  
   
- Os operadores de segundo e terceiro yield `true` se objeto `a` é igual a `nullptr`; caso contrário, `false`.  
+ Os operadores de segundo e terceiro yield **verdadeira** se objeto *um* é igual a **nullptr**; caso contrário, **false**.  
   
- Os quarto e quinto operadores geram `true` se objeto `a` é igual ao objeto `b`; caso contrário, `false`.  
+ Os quarto e quintas operadores produzem **verdadeira** se objeto *um* é igual ao objeto *b*; caso contrário, **false**.  
   
 ## <a name="remarks"></a>Comentários  
  Indica se dois objetos ComPtrRef são iguais.  

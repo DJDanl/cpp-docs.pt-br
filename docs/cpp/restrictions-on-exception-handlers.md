@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13971ede3aef6d223b1c631c4a28f8bf190e7174
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8775f752a541d2a250e9c1c5a0c325b684335988
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37938777"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464594"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Restrições em manipuladores de exceção
 A principal limitação usando manipuladores de exceção no código é que você não pode usar um **goto** instrução para ir diretamente para um **Try** bloco de instrução. Em vez disso, você deve digitar o bloco de instruções por meio do fluxo de controle normal. Você pode ir de um **Try** instrução bloquear e aninhar manipuladores de exceção como quiser.  

@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 58eb96e3a0268d3ba70b60d9c315e935e19485f3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7412968069963679db769cc2ce68169e7a8799b9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858114"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462063"
 ---
 # <a name="agileeventsource-class"></a>Classe AgileEventSource
 
-Representa um evento que é gerado por um componente agile, que é um componente que pode ser acessado de qualquer thread. Herda de [EventSource](eventsource-class.md) e substitui o `Add` função membro com um parâmetro de tipo adicionais para especificar opções chamar o evento agile.
+Representa um evento que é gerado por um componente do agile, que é um componente que pode ser acessado de qualquer thread. Herda de [EventSource](eventsource-class.md) e substitui o `Add` função membro com um parâmetro de tipo adicionais para especificar opções chamar o evento agile.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,16 +37,16 @@ class AgileEventSource
 ```
 
 ## <a name="parameters"></a>Parâmetros  
- `TDelegateInterface`  
+ *TDelegateInterface*  
 
  A interface para um delegado que representa um manipulador de eventos.
 
- `TEventSourceOptions`  
- Um [InvokeModeOptions](invokemodeoptions-structure.md) estrutura cujo campo invokeMode é definido como `InvokeMode::StopOnFirstError` ou `InvokeMode::FireAll`.
+ *TEventSourceOptions*  
+ Uma [InvokeModeOptions](invokemodeoptions-structure.md) estrutura cujo campo invokeMode é definido como `InvokeMode::StopOnFirstError` ou `InvokeMode::FireAll`.
 
 ## <a name="remarks"></a>Comentários
 
-A maioria dos componentes em tempo de execução do Windows são componentes agile. Para obter mais informações, consulte [de Threading e Marshaling (C + + CX)](../cppcx/threading-and-marshaling-c-cx.md).
+A grande maioria dos componentes em tempo de execução do Windows são componentes agile. Para obter mais informações, consulte [Threading e Marshaling (C + + c++ /CX)](../cppcx/threading-and-marshaling-c-cx.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -54,7 +54,7 @@ A maioria dos componentes em tempo de execução do Windows são componentes agi
 
 ## <a name="requirements"></a>Requisitos
 
- **Cabeçalho:** event.h
+ **Cabeçalho:** Event. h
 
  **Namespace:** Microsoft::WRL
 
@@ -64,11 +64,11 @@ A maioria dos componentes em tempo de execução do Windows são componentes agi
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Método AgileEventSource::Add](#add)|Anexa o manipulador de eventos agile representado pela interface delegado especificado para o conjunto de manipuladores de eventos para o objeto AgileEventSource atual.|
+|[Método AgileEventSource::Add](#add)|Acrescenta o manipulador de eventos agile representado pela interface delegado especificado ao conjunto de manipuladores de eventos para o objeto AgileEventSource atual.|
 
 ## <a name="add"></a> Método AgileEventSource::Add
 
-Acrescenta o manipulador de eventos representado pela interface delegado especificado para o conjunto de manipuladores de eventos para o atual [EventSource](eventsource-class.md) objeto.
+Acrescenta o manipulador de eventos representado pela interface delegado especificado ao conjunto de manipuladores de eventos para o atual [EventSource](eventsource-class.md) objeto.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -81,17 +81,16 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Parâmetros
 
-*delegateInterface*
+*delegateInterface*  
+A interface para um objeto delegado, que representa um manipulador de eventos.
 
-A interface para um objeto de representante, que representa um manipulador de eventos.
-
-*token* quando a operação for concluída, um identificador que representa o evento. Use esse token como o parâmetro para o método Remove para descartar o manipulador de eventos.
+*token*  
+Quando essa operação for concluída, um identificador que representa o evento. Use esse token como o parâmetro para o método Remove () para descartar o manipulador de eventos.
 
 ### <a name="return-value"></a>Valor de retorno
 
-S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.
+S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
 
 
 ## <a name="see-also"></a>Consulte também
-
  [Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

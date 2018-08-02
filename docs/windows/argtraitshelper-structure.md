@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6205d69962d70d9da76c932fdd8b3f66f491ebc9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bb8dfeff0e1f3e659e0d3c6514904df39286c45
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857695"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466631"
 ---
 # <a name="argtraitshelper-structure"></a>Estrutura ArgTraitsHelper
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,11 +35,11 @@ struct ArgTraitsHelper;
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `TDelegateInterface`  
+ *TDelegateInterface*  
  Uma interface de delegado.  
   
 ## <a name="remarks"></a>Comentários  
- Ajuda a define as características comuns dos argumentos do delegado.  
+ Ajuda a definir as características comuns de argumentos do delegado.  
   
 ## <a name="members"></a>Membros  
   
@@ -54,13 +54,13 @@ struct ArgTraitsHelper;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Constante ArgTraitsHelper::args](../windows/argtraitshelper-args-constant.md)|Ajuda a [argtraits:: args](../windows/argtraits-args-constant.md) manter a contagem do número de parâmetros no método Invoke de uma interface de delegado.|  
+|[Constante ArgTraitsHelper::args](../windows/argtraitshelper-args-constant.md)|Ajuda [argtraits:: args](../windows/argtraits-args-constant.md) manter a contagem do número de parâmetros `Invoke` método da interface de um delegado.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `ArgTraitsHelper`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

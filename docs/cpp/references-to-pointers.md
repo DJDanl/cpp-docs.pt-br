@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9cfec6642604fb495051d44d816d4a3370e9a8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3de0974608f313a497dfb93d357995e7cc578e4d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467824"
 ---
 # <a name="references-to-pointers"></a>Referências a ponteiros
 As referências para ponteiros podem ser declaradas de forma semelhante às referências para objetos. Declarar uma referência a um ponteiro gera um valor modificável que é usado como um ponteiro normal.  
@@ -28,7 +29,7 @@ As referências para ponteiros podem ser declaradas de forma semelhante às refe
   
  As funções `Add1` e `Add2` são funcionalmente equivalentes (embora não sejam chamadas da mesma maneira). A diferença é que `Add1` usa valores de indireção double, enquanto `Add2` usa a conveniência de uma referência para um ponteiro.  
   
-```  
+```cpp 
 // references_to_pointers.cpp  
 // compile with: /EHsc  
   

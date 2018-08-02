@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f4de54cbbe978534a42dcb9cbfa677eb1597aa5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 82bb280036bf8ad1886d2943c3ec3e546c2eaff2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939130"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466170"
 ---
 # <a name="wildcard-expansion"></a>Expansão de curinga
 ## <a name="microsoft-specific"></a>Específico da Microsoft  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d995c8e35ed35d4581d8eec8b74fda1ebbca6519
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d22112e3478e17e8ed9688749c83cf1c3997d7e3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880790"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465094"
 ---
 # <a name="comptrptr-data-member"></a>Membro de dados ComPtr::ptr_
-Contém um ponteiro para a interface que está associado e gerenciado por este ComPtr.  
+Contém um ponteiro para a interface que está associado e gerenciada por esse **ComPtr**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +34,7 @@ InterfaceType *ptr_;
 ```  
   
 ## <a name="remarks"></a>Comentários  
- `ptr_` é um membro de dados protegidos e internos.  
+ **PTR _** é um membro de dados interno, protegido.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

@@ -13,15 +13,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5efd641e5c908e5f1c4d4a3cdb78cd146b634f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a4ec737c3f24899e50220c3e862283b88a826b9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883154"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461158"
 ---
 # <a name="comptroperator-microsoftwrldetailsbooltype-operator"></a>ComPtr::operator Microsoft::WRL::Details::BoolType Operador
-Indica se há ou não uma ComPtr está gerenciando o tempo de vida do objeto de uma interface.  
+Indica se um **ComPtr** está gerenciando o tempo de vida do objeto de uma interface.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -30,7 +30,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se uma interface está associada este ComPtr, o endereço do [boolstruct::](../windows/boolstruct-member-data-member.md) membro de dados; caso contrário, `nullptr`.  
+ Se uma interface é associada a este **ComPtr**, o endereço do [boolstruct::](../windows/boolstruct-member-data-member.md) membro de dados; caso contrário, **nullptr**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

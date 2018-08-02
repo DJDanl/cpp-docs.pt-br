@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68707ea7e00665d12165c7838b1a2ad3440f944d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860860"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465864"
 ---
 # <a name="callas"></a>call_as
 Permite que um [local](../windows/local-cpp.md) função a ser mapeada para uma função remota para que quando a função remota é chamada, a função local é invocada.  
@@ -30,8 +30,7 @@ Permite que um [local](../windows/local-cpp.md) função a ser mapeada para uma 
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ call_as(  
+[ call_as(  
    function  
 ) ]  
 ```  
@@ -46,7 +45,7 @@ Permite que um [local](../windows/local-cpp.md) função a ser mapeada para uma 
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra como você pode usar **call_as** para mapear uma função nonremotable (**f1**) para uma função remota (**Remf1**):  
   
-```  
+```cpp  
 // cpp_attr_ref_call_as.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -60,13 +59,13 @@ __interface IMInterface {
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Método de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

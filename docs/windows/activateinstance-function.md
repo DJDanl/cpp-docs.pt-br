@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0bf945dd8225ca3c153d7f497ded6b83ebd022d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 413bf73d5aeaef2c210be89f3c6f4ca3a4254ba4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855569"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461965"
 ---
 # <a name="activateinstance-function"></a>Função ActivateInstance
-Registra e recupera uma instância de um tipo especificado definido em uma ID de classe especificada.  
+Registra e recupera uma instância de um tipo especificado definido em uma ID de classe especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,14 +39,14 @@ inline HRESULT ActivateInstance(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
+ *T*  
  Um tipo para ativar.  
   
- `activatableClassId`  
- O nome da ID de classe que define o parâmetro `T`.  
+ *activatableClassId*  
+ A ID da classe que define o parâmetro *T*.  
   
- `instance`  
- Quando essa operação for concluída, uma referência a uma instância de `T`.  
+ *instância*  
+ Quando essa operação for concluída, uma referência a uma instância do *T*.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se bem-sucedido; Caso contrário, um erro HRESULT que indica a causa do erro.  

@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2450b5d473d1caadae171516cf337479bfd5d603
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0a4c15946862a66c0d4d830f590230763ce3e6f9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881875"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461816"
 ---
 # <a name="comptroperator-operator"></a>Operador ComPtr::operator!=
-Indica se dois objetos ComPtr não são iguais.  
+Indica se dois **ComPtr** objetos não forem iguais.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,20 +42,19 @@ bool operator!=(
    decltype(__nullptr),  
    const ComPtr<T>& a  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `a`  
- Uma referência a um objeto ComPtr.  
+ *a*  
+ Uma referência a um **ComPtr** objeto.  
   
- `b`  
- Uma referência a outro objeto ComPtr.  
+ *b*  
+ Uma referência a outro **ComPtr** objeto.  
   
 ## <a name="return-value"></a>Valor de retorno  
- O primeiro produz operador `true` se objeto `a` não é igual ao objeto `b`; caso contrário, `false`.  
+ A primeira produz do operador **verdadeira** se objeto *um* não é igual ao objeto *b*; caso contrário, **false**.  
   
- Os operadores de segundo e terceiro yield `true` se objeto `a` não é igual a `nullptr`; caso contrário, `false`.  
+ Os operadores de segundo e terceiro yield **verdadeira** se objeto *um* não é igual a **nullptr**; caso contrário, **false**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

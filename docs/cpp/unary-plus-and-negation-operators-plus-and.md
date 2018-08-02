@@ -21,18 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa500288ec4982ca4e1d304fac2cd577d58f4207
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 06e7f6bd089866619d82798bb220580e8a11b04b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942342"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460887"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>Operadores unários de adição e de negação: + e -
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 + cast-expression  
 - cast-expression  
 ```  

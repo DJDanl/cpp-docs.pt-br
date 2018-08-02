@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4066db37de8a993802970784f09141352fef028
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fac3a845ea7c512f5a7ccffdabdf67ce26029ff8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871195"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466157"
 ---
 # <a name="comptroperator-operator"></a>Operador ComPtr::operator=
-Atribui um valor para o ComPtr atual.  
+Atribui um valor para a atual **ComPtr**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,29 +57,29 @@ WRL_NOTHROW ComPtr& operator=(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `U`  
+ *U*  
  Uma classe.  
   
- `other`  
- Uma referência a um tipo ou ComPtr outro ponteiro, referência ou rvalue.  
+ *other*  
+ Um ponteiro, referência ou referência rvalue para um tipo ou de outro **ComPtr**.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Uma referência para o ComPtr atual.  
+ Uma referência ao atual **ComPtr**.  
   
 ## <a name="remarks"></a>Comentários  
- A primeira versão desse operador atribui um valor vazio para o ComPtr atual.  
+ A primeira versão deste operador atribui um valor vazio para a atual **ComPtr**.  
   
- Na segunda versão, se o ponteiro de interface de atribuição não é o mesmo que o ponteiro de interface ComPtr atual, o segundo ponteiro de interface é atribuído a ComPtr atual.  
+ Na segunda versão, se o ponteiro de interface de atribuição não é o mesmo que o atual **ComPtr** ponteiro de interface, o segundo ponteiro de interface é atribuído ao atual **ComPtr**.  
   
- Na terceira versão, o ponteiro de interface de atribuição é atribuído para o ComPtr atual.  
+ A terceira versão, o ponteiro de interface atribuir é atribuído ao atual **ComPtr**.  
   
- Na quarta versão, se o ponteiro de interface do valor de atribuição não é o mesmo que o ponteiro de interface ComPtr atual, o segundo ponteiro de interface é atribuído a ComPtr atual.  
+ Na quarta versão, se o ponteiro de interface do valor de atribuição não é o mesmo que o atual **ComPtr** ponteiro de interface, o segundo ponteiro de interface é atribuído ao atual **ComPtr**.  
   
- A versão do quinto é um operador de cópia; uma referência a um ComPtr é atribuída para o ComPtr atual.  
+ A quinta versão é um operador de cópia; uma referência a um **ComPtr** é atribuído à atual **ComPtr**.  
   
- A versão do sexto é um operador de cópia que usa mover semântica; uma referência de rvalue para um ComPtr se qualquer tipo é estático convertido e, em seguida, atribuído para o ComPtr atual.  
+ A versão do sexta é um operador de cópia que usa semântica; uma referência rvalue para um **ComPtr** se qualquer tipo for estático, converter e, em seguida, é atribuído ao atual **ComPtr**.  
   
- A versão do sétima é um operador de cópia que usa mover semântica; uma referência de rvalue para um ComPtr do tipo `U` é estático, em seguida, converter e atribuído ao ComPtr atual.  
+ A versão do sétima é um operador de cópia que usa semântica; uma referência rvalue para um **ComPtr** do tipo *U* é estático convertido, em seguida e atribuído a atual **ComPtr**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

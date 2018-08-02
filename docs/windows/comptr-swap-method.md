@@ -1,5 +1,5 @@
 ---
-title: 'Método Comptr: | Microsoft Docs'
+title: 'Método comptr:: swap | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 45bc87ec63088fe8f44411a8e86438ebab706e3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fff9e812a6946dd15de5b2d33f57358d02246dab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883479"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462473"
 ---
 # <a name="comptrswap-method"></a>Método ComPtr::Swap
-Troca a interface gerenciada por ComPtr o atual com a interface gerenciada pelo ComPtr especificado.  
+Troca a interface gerenciada pelo atual **ComPtr** com a interface gerenciada pelo especificado **ComPtr**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,8 +40,8 @@ void Swap(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `r`  
- Um ComPtr.  
+ *r*  
+ Um **ComPtr**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

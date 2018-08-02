@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb594eb10e8068d5f5b3ed124d5e77b48ced728e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6c08edff8237462cbc2c55dc5541e3da663ed0a3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942116"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461107"
 ---
 # <a name="return-statement-in-program-termination-c"></a>Instrução return no término do programa (C++)
-Emitir uma `return` instrução from **principal** é funcionalmente equivalente a chamar o **sair** função. Considere o exemplo a seguir:  
+Emitir uma **retornar** instrução from `main` é funcionalmente equivalente a chamar o `exit` função. Considere o exemplo a seguir:  
   
 ```cpp 
 // return_statement.cpp  
@@ -36,7 +36,7 @@ int main()
 }  
 ```  
   
- O **saia** e **retornar** instruções no exemplo anterior são funcionalmente idênticas. No entanto, o C++ requer que funções que têm tipos de retorno diferente de **void** retornam um valor. O **retornar** instrução permite que você retorne um valor de `main`.  
+ O `exit` e **retornar** instruções no exemplo anterior são funcionalmente idênticas. No entanto, o C++ requer que funções que têm tipos de retorno diferente de **void** retornam um valor. O **retornar** instrução permite que você retorne um valor de `main`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Término do programa](../cpp/program-termination.md)

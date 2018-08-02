@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d5a6e7389215452177add30b587004c312aeae1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ebe71706ce1091ee21fc6fbd63e65b201c096b5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883548"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462918"
 ---
 # <a name="comptrrefoperator-operator"></a>Operador ComPtrRef::operator!=
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,21 +55,21 @@ bool operator!=(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `a`  
- Uma referência a um objeto ComPtrRef.  
+ *a*  
+ Uma referência a um **ComPtrRef** objeto.  
   
- `b`  
- Uma referência a outro objeto ComPtrRef ou um ponteiro para um objeto anônimo (`void*`).  
+ *b*  
+ Uma referência a outro **ComPtrRef** objeto ou um ponteiro para um objeto anônimo (`void*`).  
   
 ## <a name="return-value"></a>Valor de retorno  
- O primeiro produz operador `true` se objeto `a` não é igual ao objeto `b`; caso contrário, `false`.  
+ A primeira produz do operador **verdadeira** se objeto *um* não é igual ao objeto *b*; caso contrário, **false**.  
   
- Os operadores de segundo e terceiro yield `true` se objeto `a` não é igual a `nullptr`; caso contrário, `false`.  
+ Os operadores de segundo e terceiro yield **verdadeira** se objeto *um* não é igual a **nullptr**; caso contrário, **false**.  
   
- Os quarto e quinto operadores geram `true` se objeto `a` não é igual ao objeto `b`; caso contrário, `false`.  
+ Os operadores de quarto e quintas yield **verdadeira** se objeto *um* não é igual ao objeto *b*; caso contrário, **false**.  
   
 ## <a name="remarks"></a>Comentários  
- Indica se dois objetos ComPtrRef não são iguais.  
+ Indica se dois **ComPtrRef** objetos não forem iguais.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

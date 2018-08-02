@@ -18,29 +18,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a86aead2c3c84cf6d28dd3807d9dec224770785
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: baff146be956b2e116cbbe90fe6ecb9187d55f3f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883988"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464357"
 ---
 # <a name="creating-an-empty-windows-desktop-application"></a>Criando um aplicativo de área de trabalho do Windows vazio
-### <a name="to-create-an-empty-windows-desktop-application"></a>Para criar um aplicativo de área de trabalho do Windows vazio  
+### <a name="to-create-an-empty-windows-desktop-application"></a>Para criar um aplicativo da área de trabalho do Windows vazio  
   
-1.  Do **arquivo** menu, selecione **novo, projeto**.  
+1.  No menu **Arquivo**, selecione **Novo** > **Projeto**.  
   
-2.  No painel esquerdo do **novo projeto** caixa de diálogo, clique em **Win32** e no painel central, selecione **aplicativo do Console Win32**.  
+2.  No painel esquerdo do **novo projeto** caixa de diálogo, clique em **Win32** e, no painel central, selecione **aplicativo de Console Win32**.  
   
 3.  Insira um nome para seu novo projeto, um caminho para o diretório do projeto e, em seguida, clique em **Okey**.  
   
-4.  No [Assistente de aplicativo Win32](../windows/win32-application-wizard.md), clique no **configurações de aplicativo** página. Selecione o **tipo de aplicativo** você deseja criar com seu arquivo de código fonte e, em seguida, selecione o **projeto vazio** caixa de seleção em **opções adicionais**.  
+4.  No [Assistente de aplicativo Win32](../windows/win32-application-wizard.md), clique no **configurações do aplicativo** página. Selecione o **tipo de aplicativo** você deseja criar com o seu arquivo de código fonte e, em seguida, selecione o **projeto vazio** caixa de seleção sob **opções adicionais**.  
   
 5.  Clique em **OK**.  
   
- O projeto aparece na **Solution Explorer** com três diretórios para conter os arquivos de origem, arquivos de cabeçalho e arquivos de recurso.  
+ O projeto aparece na **Gerenciador de soluções** com três diretórios para conter os arquivos de origem, arquivos de cabeçalho e arquivos de recurso.  
   
  Em seguida, você pode [adicionar arquivos ao seu projeto do Visual C++ vazio](../windows/adding-files-to-an-empty-win32-applications.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Implantando aplicativos](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Implantando aplicativos](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

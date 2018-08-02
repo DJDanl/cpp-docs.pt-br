@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95d08573515bee89fd86d6b37e3982dde2b29978
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff853fce39b2052b82df921bf6743b0db361408c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870467"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461319"
 ---
 # <a name="createclassfactory-function"></a>Função CreateClassFactory
 Cria uma fábrica que produz instâncias da classe especificada.  
@@ -37,27 +37,26 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
    REFIID riid,   
    _Outptr_ IUnknown **ppFactory  
 ) throw();  
-  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `flags`  
+ *flags*  
  Uma combinação de um ou mais [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valores de enumeração.  
   
- `entry`  
- Ponteiro para um [CreatorMap](../windows/creatormap-structure.md) que contém informações de inicialização e o registro sobre parâmetro `riid`.  
+ *entry*  
+ Ponteiro para um [CreatorMap](../windows/creatormap-structure.md) que contém informações de registro e inicialização sobre o parâmetro *riid*.  
   
- `riid`  
+ *riid*  
  Referência a uma ID de interface.  
   
- `ppFactory`  
+ *ppFactory*  
  Se essa operação for concluída com êxito, um ponteiro para uma fábrica de classes.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.  
+ S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.  
   
 ## <a name="remarks"></a>Comentários  
- Um erro de asserção é emitido se o parâmetro de modelo `Factory` não deriva da interface IClassFactory.  
+ Um erro de asserção será emitido se o parâmetro de modelo *fábrica* não deriva da interface `IClassFactory`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  

@@ -1,5 +1,5 @@
 ---
-title: Restrições em tipo genérico parâmetros (C + + CLI) | Microsoft Docs
+title: Restrições em genérica de parâmetros de tipo (C + + / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,48 +18,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c9787eb87ab701d067762a436d92b2fba3fabcbb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33829d868eb90cde7259a482b8fc80f9cd6fd677
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883336"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465292"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Restrições em parâmetros de tipo genérico (C++/CLI)
-Em declarações de método ou tipo genérico, você pode qualificar um parâmetro de tipo com restrições. Uma restrição é um requisito que devem satisfazer os tipos usados como argumentos de tipo. Por exemplo, uma restrição pode ser que o argumento de tipo deve implementar uma determinada interface ou herdar de uma classe específica.  
+Em declarações de método ou tipo genérico, você pode qualificar um parâmetro de tipo com restrições. Uma restrição é um requisito que tipos usados como argumentos de tipo devem satisfazer. Por exemplo, uma restrição pode ser que o argumento de tipo deve implementar uma interface de determinados ou herdar de uma classe específica.  
   
- Restrições são opcionais. não especificar uma restrição em um parâmetro é equivalente a restringir esse parâmetro para <xref:System.Object>.  
+ Restrições são opcionais. não especificar uma restrição em um parâmetro é equivalente a esse parâmetro para a restrição <xref:System.Object>.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 where type-parameter: constraint list  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
  *parâmetro de tipo*  
- Um dos parâmetros de tipo a ser restringido.  
+ Um dos parâmetros de tipo, a ser restringido.  
   
  *lista de restrições*  
- *lista de restrições* é uma lista separada por vírgulas de especificações de restrição. A lista pode incluir as interfaces a serem implementadas pelo parâmetro de tipo.  
+ *lista de restrições* é uma lista separada por vírgulas das especificações de restrição. A lista pode incluir as interfaces a serem implementadas pelo parâmetro de tipo.  
   
- A lista também pode incluir uma classe. Para o argumento de tipo satisfazer uma restrição de classe base, devem ser da mesma classe que a restrição ou derivam da restrição.  
+ A lista também pode incluir uma classe. Para o argumento de tipo satisfazer uma restrição de classe base, ele deve ser da mesma classe que a restrição ou derivar de restrição.  
   
- Você também pode especificar `gcnew()` para indicar o argumento de tipo deve ter um construtor público sem parâmetros; ou `ref class` para indicar o argumento de tipo deve ser um tipo de referência, incluindo qualquer classe, interface, delegado ou tipo de matriz; ou `value class` para indica que o argumento de tipo deve ser um tipo de valor. Qualquer valor de tipo, exceto Nullable\<T > pode ser especificado.  
+ Você também pode especificar `gcnew()` para indicar o argumento de tipo deve ter um construtor público sem parâmetros; ou **classe ref** para indicar o tipo de argumento deve ser um tipo de referência, incluindo qualquer classe, interface, delegado ou matriz tipo; ou **classe de valor** para indicar o tipo de argumento deve ser um tipo de valor. Qualquer valor de tipo, exceto permite valor nulo\<T > pode ser especificado.  
   
- Você também pode especificar um parâmetro genérico como uma restrição. O argumento de tipo fornecido para o tipo que são a restrição deve ser ou derivar do tipo de restrição. Isso é chamado de uma restrição de tipo naked.  
+ Você também pode especificar um parâmetro genérico como uma restrição. O argumento de tipo fornecido para o tipo que são a restrição deve ser ou derivar do tipo de restrição. Isso é chamado uma restrição de tipo naked.  
   
 ## <a name="remarks"></a>Comentários  
- A cláusula de restrição consiste **onde** seguido por um parâmetro de tipo, dois-pontos (**:**) e a restrição, que especifica a natureza da restrição no parâmetro de tipo. **onde** é uma palavra-chave contextual; consulte [sensível ao contexto palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md) para obter mais informações. Separe vários **onde** cláusulas com um espaço.  
+ A cláusula de restrição consiste **onde** seguido de um parâmetro de tipo, dois-pontos (**:**) e a restrição, que especifica a natureza da restrição no parâmetro de tipo. **em que** é uma palavra-chave contextual, consulte [contextual as palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md) para obter mais informações. Separe vários **onde** cláusulas com um espaço.  
   
- Restrições são aplicadas para o tipo de parâmetros para colocar as limitações nos tipos que podem ser usados como argumentos para um tipo genérico ou método.  
+ Restrições são aplicadas aos parâmetros para colocar as limitações nos tipos que podem ser usados como argumentos para um tipo genérico ou método de tipo.  
   
- Restrições de classe e interface especificar que os tipos de argumento devem ser ou herdar de uma classe especificada ou implementar uma interface especificada.  
+ Restrições de classe e interface especificam que os tipos de argumento devem ser ou herdar de uma classe especificada ou implementar uma interface especificada.  
   
- A aplicação de restrições a um tipo genérico ou método permite que o código no tipo ou método para tirar proveito dos recursos conhecidos dos tipos restritos. Por exemplo, você pode declarar uma classe genérica, de modo que o parâmetro de tipo implementa o **IComparable\<T >** interface:  
+ A aplicação de restrições para um tipo genérico ou método permite que o código em que tipo ou método para tirar proveito dos recursos conhecidos dos tipos de restritos. Por exemplo, você pode declarar uma classe genérica, de modo que o parâmetro de tipo implementa o `IComparable<T>` interface:  
   
-```  
+```cpp  
 // generics_constraints_1.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -68,17 +67,17 @@ where T : IComparable<T>
 ref class List {};  
 ```  
   
- Essa restrição requer um argumento de tipo para `T` implementa `IComparable<T>` em tempo de compilação. Ele também permite que os métodos de interface, como **CompareTo**, para ser chamado. Nenhuma conversão é necessária em uma instância do parâmetro de tipo para chamar métodos de interface.  
+ Essa restrição requer que um argumento de tipo usado para `T` implementa `IComparable<T>` em tempo de compilação. Ele também permite que os métodos de interface, tais como `CompareTo`, para ser chamado. Nenhuma conversão é necessária em uma instância do parâmetro de tipo para chamar métodos de interface.  
   
- Métodos estáticos na classe de argumento de tipo não podem ser chamados por meio do parâmetro de tipo; eles podem ser chamados por meio de tipo nomeado real.  
+ Métodos estáticos na classe do argumento de tipo não podem ser chamados por meio do parâmetro de tipo; eles podem ser chamados somente por meio do tipo nomeado real.  
   
- Uma restrição não pode ser um tipo de valor, incluindo tipos internos, como `int` ou **duplo**. Como tipos de valor não podem ter classes derivadas, apenas uma classe nunca ser capaz de satisfazer a restrição. Nesse caso, pode ser reescrita genérica com o parâmetro de tipo substituído pelo tipo de valor específico.  
+ Uma restrição não pode ser um tipo de valor, incluindo tipos internos, como **int** ou **duplo**. Uma vez que os tipos de valor não podem ter as classes derivadas, apenas uma classe nunca seria capaz de satisfazer a restrição. Nesse caso, o genérico pode ser reescrito com o parâmetro de tipo substituído pelo tipo de valor específico.  
   
- Restrições são necessárias em alguns casos, desde que o compilador não permitirá o uso de métodos ou outros recursos de um tipo desconhecido, a menos que as restrições implicam que o tipo desconhecido oferece suporte a métodos ou interfaces.  
+ Restrições são necessárias em alguns casos, pois o compilador não permitirá o uso de métodos ou outros recursos de um tipo desconhecido, a menos que as restrições implicam que o tipo desconhecido oferece suporte a métodos ou interfaces.  
   
  Várias restrições para o mesmo parâmetro de tipo podem ser especificadas em uma lista separada por vírgulas  
   
-```  
+```cpp  
 // generics_constraints_2.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -90,7 +89,7 @@ ref class List {};
   
  Com vários parâmetros de tipo, use um **onde** cláusula para cada parâmetro de tipo. Por exemplo:  
   
-```  
+```cpp  
 // generics_constraints_3.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -102,15 +101,15 @@ generic <typename K, typename V>
 ref class Dictionary {};  
 ```  
   
- Para resumir, use restrições no seu código de acordo com as regras a seguir:  
+ Para resumir, use restrições em seu código de acordo com as regras a seguir:  
   
--   Se várias restrições são listadas, as restrições podem ser listadas em qualquer ordem.  
+-   Se várias restrições estão listadas, as restrições podem estar listadas em qualquer ordem.  
   
--   Restrições também podem ser tipos de classe, como classes base abstratas. No entanto, as restrições não podem ser tipos de valor ou classes lacradas.  
+-   Restrições também podem ser tipos de classe, como classes base abstratas. No entanto, as restrições não podem ser tipos de valor ou classes sealed.  
   
 -   As restrições não podem ser parâmetros de tipo, mas eles podem envolver os parâmetros de tipo em um tipo construído aberto. Por exemplo:  
   
-    ```  
+    ```cpp  
     // generics_constraints_4.cpp  
     // compile with: /c /clr  
     generic <typename T>  
@@ -122,9 +121,9 @@ ref class Dictionary {};
     ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra o uso de restrições para chamar os métodos de instância em parâmetros de tipo.  
+ O exemplo a seguir demonstra como usar restrições para chamar métodos de instância em parâmetros de tipo.  
   
-```  
+```cpp  
 // generics_constraints_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -183,13 +182,13 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- Quando um parâmetro de tipo genérico é usado como uma restrição, ele é chamado uma restrição de tipo naked. Restrições de tipo naked são úteis quando uma função membro com seu próprio parâmetro de tipo precisa restringir esse parâmetro para o parâmetro de tipo do tipo recipiente.  
+ Quando um parâmetro de tipo genérico é usado como uma restrição, ele é chamado uma restrição de tipo naked. Restrições de tipo naked são úteis quando uma função de membro com seu próprio parâmetro de tipo precisa restringir esse parâmetro para o parâmetro de tipo do tipo recipiente.  
   
- No exemplo a seguir, T é uma restrição de tipo naked no contexto do método Add.  
+ No exemplo a seguir `T` é uma restrição de tipo naked no contexto do `Add` método.  
   
- Restrições de tipo naked também podem ser usadas em definições de classe genérica. A utilidade de restrições de tipo naked com classes genéricas será limitada porque o compilador pode assumir nada sobre uma restrição de tipo naked exceto que deriva de <xref:System.Object>. Use restrições de tipo naked em classes genéricas em cenários em que você deseja impor uma relação de herança entre os dois parâmetros de tipo.  
+ Restrições de tipo naked também podem ser usadas em definições de classe genérica. A utilidade das restrições de tipo naked com as classes genéricas é limitada, pois o compilador pode presumir nada sobre uma restrição de tipo naked, exceto que ele deriva <xref:System.Object>. Use restrições de tipo naked em classes genéricas em cenários em que você deseja impor uma relação de herança entre dois parâmetros de tipo.  
   
-```  
+```cpp  
 // generics_constraints_6.cpp  
 // compile with: /clr /c  
 generic <class T>  

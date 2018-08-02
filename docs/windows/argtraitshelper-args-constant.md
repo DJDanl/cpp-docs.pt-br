@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff6ef465206ce1fac50b63dad0bed60a9c57b700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 09480168f842adbcbd9e1c50056a9d16278bccc4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855049"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465825"
 ---
 # <a name="argtraitshelperargs-constant"></a>Constante ArgTraitsHelper::args
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,10 +34,10 @@ static const int args = Traits::args;
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Ajuda a [argtraitshelper:: args](../windows/argtraitshelper-args-constant.md) manter a contagem do número de parâmetros no método Invoke de uma interface de delegado.  
+ Ajuda [argtraitshelper:: args](../windows/argtraitshelper-args-constant.md) manter a contagem do número de parâmetros `Invoke` método da interface de um delegado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

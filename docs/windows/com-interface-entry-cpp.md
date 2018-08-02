@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0fb7de1987d77f19e04f867aac68cbcc67c1f1e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd6cc88ba01d7cfc5d7d5712ddeaaef0418bb12a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863446"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462778"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
-Adiciona uma entrada de interface para o mapa COM da classe de destino.  
+Adiciona uma entrada de interface do mapa COM da classe de destino.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-     [ com_interface_entry(   
+[ com_interface_entry(   
   com_interface_entry  
 ) ]  
 ```  
@@ -41,11 +40,11 @@ Adiciona uma entrada de interface para o mapa COM da classe de destino.
  Uma cadeia de caracteres que contém o texto real da entrada. Para obter uma lista de valores possíveis, consulte [COM_INTERFACE_ENTRY Macros](../atl/reference/com-interface-entry-macros.md).  
   
 ## <a name="remarks"></a>Comentários  
- O `com_interface_entry` atributo C++ insere o conteúdo unabridged de uma cadeia de caracteres no mapa de interface COM do objeto de destino. Se o atributo é aplicado uma vez para o objeto de destino, a entrada é inserida no início do mapa de interface existente. Se o atributo é aplicado repetidamente o mesmo objeto de destino, as entradas serão inseridas no início do mapa de interface na ordem em que são recebidos.  
+ O **com_interface_entry** atributo C++ insere o conteúdo unabridged de uma cadeia de caracteres para o mapa de interface COM do objeto de destino. Se o atributo é aplicado de uma vez para o objeto de destino, a entrada será inserida no início do mapa de interface existente. Se o atributo é aplicado várias vezes ao mesmo objeto de destino, as entradas são inseridas no início do mapa de interface na ordem em que elas são recebidas.  
   
- Este atributo requer que o [coclass](../windows/coclass.md), [progid](../windows/progid.md), ou [vi_progid](../windows/vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicados ao mesmo elemento. Se qualquer atributo único for usado, os outros dois são aplicados automaticamente. Por exemplo, se **progid** é aplicado, **vi_progid** e **coclass** também são aplicadas.  
+ Este atributo exige que o [coclass](../windows/coclass.md), [progid](../windows/progid.md), ou [vi_progid](../windows/vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicadas ao mesmo elemento. Se qualquer atributo único for usado, os outros dois são aplicados automaticamente. Por exemplo, se `progid` for aplicada, `vi_progid` e `coclass` também são aplicadas.  
   
- Como o primeiro uso de `com_interface_entry` faz com que a nova interface a ser inserido no início do mapa de interface, ele deve ser um dos seguintes tipos de COM_INTERFACE_ENTRY:  
+ Porque o primeiro uso **com_interface_entry** faz com que a nova interface a ser inserido no início do mapa de interface, ele deve ser um dos seguintes tipos de COM_INTERFACE_ENTRY:  
   
 -   COM_INTERFACE_ENTRY  
   
@@ -55,9 +54,9 @@ Adiciona uma entrada de interface para o mapa COM da classe de destino.
   
 -   COM_INTERFACE_ENTRY2_IID  
   
- Usos adicionais de `com_interface_entry` atributo pode usar todos os tipos COM_INTERFACE_ENTRY.  
+ Usos adicionais a **com_interface_entry** atributo pode usar todos os COM_INTERFACE_ENTRY tipos suportados.  
   
- Essa restrição é necessária porque ATL usa a primeira entrada no mapa de interface como a identidade **IUnknown**; portanto, a entrada deve ser uma interface válida. Por exemplo, o exemplo de código a seguir é inválido porque a primeira entrada no mapa de interface não especifica uma interface COM real.  
+ Essa restrição é necessária porque o ATL usa a primeira entrada no mapa de interface como a identidade `IUnknown`; portanto, a entrada deve ser uma interface válida. Por exemplo, o exemplo de código a seguir é inválido porque a primeira entrada no mapa de interface não especifica uma interface COM real.  
   
 ```  
 [ coclass, com_interface_entry =  
@@ -69,9 +68,9 @@ Adiciona uma entrada de interface para o mapa COM da classe de destino.
 ```  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir adiciona duas entradas para o mapa de interface COM existentes de **CMyBaseClass**. A primeira é uma interface padrão, e o segundo oculta o **IDebugTest** interface.  
+ O código a seguir adiciona duas entradas para o mapa de interface COM existente de `CMyBaseClass`. A primeira é uma interface padrão e o segundo oculta o `IDebugTest` interface.  
   
-```  
+```cpp  
 // cpp_attr_ref_com_interface_entry.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -99,7 +98,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };  
 ```  
   
- O mapa de objeto COM resultante para **CMyBaseClass** é o seguinte:  
+ O mapa de objeto COM resultante para `CMyBaseClass` é da seguinte maneira:  
   
 ```  
 BEGIN_COM_MAP(CMyClass)  
@@ -114,13 +113,13 @@ END_COM_MAP()
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|**class**, `struct`|  
+|**Aplica-se a**|**classe**, **struct**|  
 |**Repetível**|Sim|  
-|**Atributos necessários.**|Um ou mais dos seguintes: **coclass**, **progid**, ou **vi_progid**.|  
+|**Atributos obrigatórios**|Um ou mais dos seguintes: **coclass**, **progid**, ou **vi_progid**.|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

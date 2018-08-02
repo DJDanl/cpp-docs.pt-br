@@ -1,5 +1,5 @@
 ---
-title: 'Método ClassFactory: | Microsoft Docs'
+title: 'Método ClassFactory:: Lockserver | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e09a795688c7e2b31771126f9e4036ddfbd8e4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 654ef60c924a14e861971c651899c8baea0300ef
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860314"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462700"
 ---
 # <a name="classfactorylockserver-method"></a>Método ClassFactory::LockServer
-Aumenta ou diminui o número de base de objetos que são controlados pelo objeto ClassFactory atual.  
+Aumenta ou diminui o número de subjacente objetos que são controladas pelo atual **ClassFactory** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,8 +36,8 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `fLock`  
- `true` para incrementar o número de objetos rastreados. `false` para diminuir o número de objetos rastreados.  
+ *Usam*  
+ **True** para incrementar o número de objetos rastreados. **False** para diminuir o número de objetos rastreadas.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se bem-sucedido; Caso contrário, E_FAIL.  

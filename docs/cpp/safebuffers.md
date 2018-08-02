@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbfc9317b5ed7c63e9c70b081c3f241b86a65e5f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b41646dbde21f68c2cc23dfbcf977d9f5ad06c1e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467834"
 ---
 # <a name="safebuffers"></a>safebuffers
 **Seção específica da Microsoft**  
@@ -35,26 +36,26 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O **/GS** opção de compilador faz com que o compilador testar saturações de buffer inserindo verificações de segurança na pilha. Os tipos de estruturas de dados que estão qualificados para verificações de segurança descritos em [/GS (verificação de segurança do Buffer)](../build/reference/gs-buffer-security-check.md). Para obter mais informações sobre a detecção de estouro de buffer, consulte [compilador verifica em profundidade de segurança](http://go.microsoft.com/fwlink/p/?linkid=7260) no site do MSDN.  
+ O **/GS** opção de compilador faz o compilador teste excesso de buffer inserindo verificações de segurança na pilha. Os tipos de estruturas de dados que são elegíveis para verificações de segurança são descritos em [/GS (Buffer Security Check)](../build/reference/gs-buffer-security-check.md). Para obter mais informações sobre a detecção de estouro de buffer, consulte [compilador verificações de segurança detalhadas](http://go.microsoft.com/fwlink/p/?linkid=7260) no site do MSDN.  
   
- Uma análise de código manual por especialista ou uma análise externa pode determinar que a função está protegida contra o excesso de buffer. Nesse caso, você pode suprimir as verificações de segurança para uma função, aplicando o `__declspec(safebuffers)` palavra-chave para a declaração da função.  
+ Uma análise de código manual por especialista ou uma análise externa pode determinar que a função está protegida contra o excesso de buffer. Nesse caso, você pode suprimir as verificações de segurança para uma função aplicando o **__declspec(safebuffers)** palavra-chave para a declaração da função.  
   
 > [!CAUTION]
 >  As verificações de segurança do buffer fornecem a proteção de segurança importante e têm uma influência insignificante no desempenho. Portanto, recomendamos que você não suprime, exceto em casos raros em que o desempenho de uma função for um problema crítico e a função é comprovadamente segura.  
   
 ## <a name="inline-functions"></a>Funções embutidas  
- Um *principal função* pode usar um [inlining](inline-functions-cpp.md) palavra-chave para inserir uma cópia de um *função secundária*. Se o `__declspec(safebuffers)` palavra-chave é aplicada a uma função, a detecção de estouro de buffer é suprimida para essa função. No entanto, inlining afeta o `__declspec(safebuffers)` palavra-chave das seguintes maneiras.  
+ Um *a função principal* pode usar um [inlining](inline-functions-cpp.md) palavra-chave para inserir uma cópia de um *função secundária*. Se o **__declspec(safebuffers)** palavra-chave é aplicado a uma função, a detecção de estouro de buffer será suprimida para essa função. No entanto, inlining afeta a **__declspec(safebuffers)** palavra-chave das seguintes maneiras.  
   
- Suponha que o **/GS** opção de compilador é especificada para ambas as funções, mas a principal função especifica o `__declspec(safebuffers)` palavra-chave. As estruturas de dados na função secundária a tornam elegível para verificações de segurança, e a função não suprime essas verificações. Nesse caso:  
+ Suponha que o **/GS** opção de compilador é especificada para ambas as funções, mas a função primária Especifica a **__declspec(safebuffers)** palavra-chave. As estruturas de dados na função secundária a tornam elegível para verificações de segurança, e a função não suprime essas verificações. Nesse caso:  
   
--   Especifique o [forceinline](inline-functions-cpp.md) palavra-chave na função secundária para forçar o compilador embutido funcionar independentemente otimizações do compilador.  
+-   Especifique o [forceinline](inline-functions-cpp.md) palavra-chave na função secundária para forçar o compilador a embutir essa função independentemente das otimizações do compilador.  
   
--   Porque a função secundária está qualificada para verificações de segurança, verificações de segurança também são aplicadas para a função primária, mesmo que ele especifica o `__declspec(safebuffers)` palavra-chave.  
+-   Como a função secundária é elegível para verificações de segurança, verificações de segurança também são aplicadas à função primária, mesmo que ele especifica o **__declspec(safebuffers)** palavra-chave.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir mostra como usar o `__declspec(safebuffers)` palavra-chave.  
+ O código a seguir mostra como usar o **__declspec(safebuffers)** palavra-chave.  
   
-```  
+```cpp 
 // compile with: /c /GS  
 typedef struct {  
     int x[20];  

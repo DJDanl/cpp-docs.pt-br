@@ -1,5 +1,5 @@
 ---
-title: 'Método Activationfactory: | Microsoft Docs'
+title: 'Método activationfactory:: Release | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2617df132f31d63379a3bd27a49409b1599a090
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e3f05576b4122acd21f7a535172a1facd562ed4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854831"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466381"
 ---
 # <a name="activationfactoryrelease-method"></a>Método ActivationFactory::Release
-Diminui a contagem de referência do objeto ActivationFactory atual.  
+Diminui a contagem de referência do atual **ActivationFactory** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +37,7 @@ STDMETHOD_(
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, o HRESULT que descreve a falha.  
+ S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  

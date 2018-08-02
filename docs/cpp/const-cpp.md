@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73e030ede8305db4ea05826f0ce7704420ac0400
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d9c3e42cf2dad7e227636582baa4deabcfc05bc1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403395"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466537"
 ---
 # <a name="const-c"></a>const (C++)
 Ao modificar uma declaração de dados, o **const** palavra-chave especifica que o objeto ou uma variável não é modificável.  
@@ -169,7 +169,7 @@ extern "C" const int x=10;
   
 -   [volatile](../cpp/volatile-cpp.md)  
   
--   [#define](../preprocessor/hash-define-directive-c-cpp.md).  
+-   [#define](../preprocessor/hash-define-directive-c-cpp.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Palavras-chave](../cpp/keywords-cpp.md)

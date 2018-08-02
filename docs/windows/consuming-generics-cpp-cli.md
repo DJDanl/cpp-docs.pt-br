@@ -1,5 +1,5 @@
 ---
-title: Consumindo genéricos (C + + CLI) | Microsoft Docs
+title: Consumindo genéricos (C + + / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 286d032a3ae01bf146d25583bff18ef94e6cccd6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8282079099b0b67b144f768a69f724e39305385
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870813"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460485"
 ---
 # <a name="consuming-generics-ccli"></a>Consumindo genéricos (C++/CLI)
-Genéricos criados em uma linguagem .NET podem ser usados em outras linguagens .NET. Ao contrário de modelos, um genérico em um assembly compilado ainda permanece genérico. Assim, um pode criar uma instância de tipo genérico em um assembly diferente e até mesmo em um idioma diferente do assembly no qual o tipo genérico foi definido.  
+Genéricos criados em uma linguagem .NET podem ser usados em outras linguagens .NET. Ao contrário dos modelos, um genérico em um assembly compilado ainda permanece genérico. Assim, um pode criar uma instância de tipo genérico em um assembly diferente e até mesmo em um idioma diferente do assembly no qual o tipo genérico foi definido.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -32,7 +32,7 @@ Genéricos criados em uma linguagem .NET podem ser usados em outras linguagens .
   
 ### <a name="code"></a>Código  
   
-```  
+```cs  
 // consuming_generics_from_other_NET_languages.cs  
 // compile with: /target:library  
 // a C# program  
@@ -91,11 +91,11 @@ public class CircularList<ItemType> {
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- Este exemplo utiliza o assembly criado no c#.  
+ Este exemplo consome o assembly criado no c#.  
   
 ### <a name="code"></a>Código  
   
-```  
+```cpp  
 // consuming_generics_from_other_NET_languages_2.cpp  
 // compile with: /clr  
 #using <consuming_generics_from_other_NET_languages.dll>  

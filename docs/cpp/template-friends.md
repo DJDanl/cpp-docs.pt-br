@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c5217b1860affd05f433c6a3bf944afeb6c13f9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97447189419bad8d3ad6f2026a7ee5f701ebca04
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422118"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466950"
 ---
 # <a name="template-friends"></a>Amigos de modelo
 
 Modelos de classe podem ter [amigos](friend-cpp.md). Uma classe ou um modelo de classe, uma função ou um modelo de função podem ser amigas (friends) de uma classe de modelo. Friends também podem ser especializações de um modelo de classe ou modelo de função, mas não especializações parciais.  
   
-**C++ 11**: um parâmetro de tipo pode ser declarado como um amigo usando o formulário `friend T;`.  
+**C++ 11**: um parâmetro de tipo pode ser declarado como um amigo, usando o formulário `friend T;`.  
   
 ```cpp
 template <typename T>  
@@ -261,5 +261,4 @@ a
 ```  
   
 ## <a name="see-also"></a>Consulte também  
-
-[Argumentos padrão](../cpp/default-arguments.md)
+ [Argumentos padrão](../cpp/default-arguments.md)

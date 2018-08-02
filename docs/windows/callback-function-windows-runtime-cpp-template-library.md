@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27d89f60f27c71cec0f158375805e3e8487fd7a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92cb3dd6d21f2ca7e4a119d110510d91085f38da
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860847"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461486"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Função de retorno da chamada (Biblioteca em Tempo de Execução C++ do Windows Runtime )
 Cria um objeto cuja função de membro é um método de retorno de chamada.  
@@ -199,59 +199,59 @@ ComPtr<TDelegateInterface> Callback(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `TDelegateInterface`  
- Um parâmetro de modelo que especifica a interface do delegado para chamar quando ocorre um evento.  
+ *TDelegateInterface*  
+ Um parâmetro de modelo que especifica a interface do representante a ser chamado quando ocorre um evento.  
   
- `TCallback`  
+ *TCallback*  
  Um parâmetro de modelo que especifica o tipo de um objeto que representa um objeto e sua função de membro de retorno de chamada.  
   
- `TCallbackObject`  
+ *TCallbackObject*  
  Um parâmetro de modelo que especifica o objeto cuja função de membro é o método a ser chamado quando ocorre um evento.  
   
- `TArg1`  
- Um parâmetro de modelo que especifica o tipo do primeiro argumento de método de retorno de chamada.  
+ *DynamicSite<Targ1*  
+ Um parâmetro de modelo que especifica o tipo do primeiro argumento do método de retorno de chamada.  
   
- `TArg2`  
- Um parâmetro de modelo que especifica o tipo do segundo argumento de método de retorno de chamada.  
+ *TArg2*  
+ Um parâmetro de modelo que especifica o tipo do segundo argumento do método de retorno de chamada.  
   
- `TArg3`  
+ *TArg3*  
  Um parâmetro de modelo que especifica o tipo do terceiro argumento de método de retorno de chamada.  
   
- `TArg4`  
- Um parâmetro de modelo que especifica o tipo do quarto argumento de método de retorno de chamada.  
+ *TArg4*  
+ Um parâmetro de modelo que especifica o tipo do quarto argumento do método de retorno de chamada.  
   
- `TArg5`  
- Um parâmetro de modelo que especifica o tipo do quinto argumento de método de retorno de chamada.  
+ *TArg5*  
+ Um parâmetro de modelo que especifica o tipo do quinto argumento do método de retorno de chamada.  
   
- `TArg6`  
- Um parâmetro de modelo que especifica o tipo do sexto argumento de método de retorno de chamada.  
+ *TArg6*  
+ Um parâmetro de modelo que especifica o tipo do sexto argumento do método de retorno de chamada.  
   
- `TArg7`  
- Um parâmetro de modelo que especifica o tipo do sétimo argumento de método de retorno de chamada.  
+ *TArg7*  
+ Um parâmetro de modelo que especifica o tipo do sétimo argumento do método de retorno de chamada.  
   
- `TArg8`  
- Um parâmetro de modelo que especifica o tipo do argumento de método de retorno de chamada oitavo.  
+ *TArg8*  
+ Um parâmetro de modelo que especifica o tipo do argumento do método de retorno de chamada oitava.  
   
- `TArg9`  
- Um parâmetro de modelo que especifica o tipo do argumento de método de retorno de chamada nono.  
+ *TArg9*  
+ Um parâmetro de modelo que especifica o tipo do nono argumento do método de retorno de chamada.  
   
- `callback`  
+ *retorno de chamada*  
  Um objeto que representa o objeto de retorno de chamada e sua função de membro.  
   
- `object`  
+ *object*  
  O objeto cuja função de membro é chamada quando ocorre um evento.  
   
- `method`  
- A função de membro a ser chamada quando ocorre um evento.  
+ *Método*  
+ A função de membro ser chamada quando ocorre um evento.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Um objeto cuja função de membro é o método de retorno de chamada especificada.  
+ Um objeto cuja função de membro é o método de retorno de chamada especificados.  
   
 ## <a name="remarks"></a>Comentários  
- A base de um objeto de representante deve ser IUnknown, não IInspectable.  
+ A base de um objeto delegado deve ser `IUnknown`, e não `IInspectable`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Método: Getonprogress | Microsoft Docs'
+title: 'Método asyncbase:: Getonprogress | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83af39180da819349e95051c57dc137835db87bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e88509a77c58266c56290b84adfd1e7c143da2ef
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859534"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465070"
 ---
 # <a name="asyncbasegetonprogress-method"></a>Método AsyncBase::GetOnProgress
 Copia o endereço do manipulador de eventos de andamento atual para a variável especificada.  
@@ -36,8 +36,8 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `progressHandler`  
- O local em que o endereço do manipulador de eventos de andamento atual será armazenado.  
+ *progressHandler*  
+ O local em que o endereço do manipulador de eventos de andamento atual é armazenado.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se bem-sucedido; Caso contrário, E_ILLEGAL_METHOD_CALL.  

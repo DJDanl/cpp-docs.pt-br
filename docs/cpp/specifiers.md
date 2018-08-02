@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d437b70148fdaba4c8eb4d7aa855e7d75f6f2487
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3d9898dc6b918643aa8ca4ace34ce2e716344c57
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953739"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463483"
 ---
 # <a name="specifiers"></a>Especificadores
 Este tópico descreve o *decl-specifiers* componente (especificadores de declaração) de uma [declaração](declarations-and-definitions-cpp.md).  
@@ -53,7 +53,7 @@ Este tópico descreve o *decl-specifiers* componente (especificadores de declara
  Porque **assinados**, **unsigned**, **longo**, e **curto** implicam **int**, um  **TypeDef** nomeie a seguir um destas palavras-chave será considerado como um membro do *declarator-list,* não é do *decl-specifiers*.  
   
 > [!NOTE]
->  Como um nome pode ser declarado novamente, sua interpretação está sujeita à declaração mais recente no escopo atual. A nova declaração pode afetar a forma como os nomes são interpretados pelo compilador, principalmente os nomes de `typedef`.  
+>  Como um nome pode ser declarado novamente, sua interpretação está sujeita à declaração mais recente no escopo atual. Nova declaração pode afetar como nomes são interpretados pelo compilador, especialmente **typedef** nomes.  
   
 ## <a name="see-also"></a>Consulte também  
  [Declarações e definições](declarations-and-definitions-cpp.md)

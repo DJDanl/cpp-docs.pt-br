@@ -1,5 +1,5 @@
 ---
-title: Conversão do estilo C com - clr (C + + CLI) | Microsoft Docs
+title: Conversões de estilo C com - clr (C + + / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384aa6d1d7a4329f52157f1d002dcda2feb5cb8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ffb2e5a7276925c5f03d06a909803d001532f35
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860392"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464578"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Conversões de Estilo C-Style com /clr (C++/CLI)
 O tópico a seguir se aplica somente a Common Language Runtime.  
   
- Quando usado com tipos CLR, o compilador tenta mapear C-style convertido em um as conversões listadas abaixo, na seguinte ordem:  
+ Quando usado com tipos CLR, o compilador tenta mapear o C-style convertido em um das conversões listadas abaixo, na seguinte ordem:  
   
 1.  const_cast  
   
@@ -37,14 +37,14 @@ O tópico a seguir se aplica somente a Common Language Runtime.
   
 5.  static_cast além de const_cast  
   
- Se nenhum as conversões listadas acima é válido e se o tipo da expressão e o tipo de destino são tipos de referência do CLR, conversão C-style é mapeado para uma verificação de tempo de execução (instrução de MSIL castclass). Caso contrário, uma conversão C-style é considerada inválida e o compilador emite um erro.  
+ Se nenhum das conversões listadas acima é válido e se o tipo da expressão e o tipo de destino são tipos de referência do CLR, conversão C-style é mapeado para uma verificação de tempo de execução (instrução de MSIL castclass). Caso contrário, uma conversão C-style é considerada inválida e o compilador emitirá um erro.  
   
 ## <a name="remarks"></a>Comentários  
- Uma conversão C-style não é recomendada. Ao compilar com [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md), use [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
+ Não é recomendável uma conversão C-style. Ao compilar com [/clr (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md), use [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
   
- O exemplo a seguir mostra um C-style cast que mapeia para um `const_cast`.  
+ O exemplo a seguir mostra um estilo C conversão que mapeia para um **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -56,9 +56,9 @@ int main() {
 }  
 ```  
   
- O exemplo a seguir mostra um C-style cast que mapeia para um `safe_cast`.  
+ O exemplo a seguir mostra um estilo C conversão que mapeia para um **safe_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -68,9 +68,9 @@ int main() {
 }  
 ```  
   
- O exemplo a seguir mostra um C-style cast que mapeia para um `safe_cast` mais `const_cast`.  
+ O exemplo a seguir mostra um estilo C conversão que mapeia para um **safe_cast** plus **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -89,9 +89,9 @@ int main() {
 }  
 ```  
   
- O exemplo a seguir mostra um C-style cast que mapeia para um `static_cast`.  
+ O exemplo a seguir mostra um estilo C conversão que mapeia para um **static_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -110,9 +110,9 @@ int main() {
 }  
 ```  
   
- O exemplo a seguir mostra um C-style cast que mapeia para um `static_cast` mais `const_cast`.  
+ O exemplo a seguir mostra um estilo C conversão que mapeia para um **static_cast** plus **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -131,9 +131,9 @@ int main() {
 }  
 ```  
   
- O exemplo a seguir mostra um C-style cast que mapeia para uma verificação de tempo de execução.  
+ O exemplo a seguir mostra um estilo C conversão que mapeia para uma verificação de tempo de execução.  
   
-```  
+```cpp  
 // cstyle_casts_6.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -152,9 +152,9 @@ int main() {
 }  
 ```  
   
- O exemplo a seguir mostra um inválido C-style cast, que faz com que o compilador para emitir um erro.  
+ O exemplo a seguir mostra um inválido C-style cast, o que faz com que o compilador para emitir um erro.  
   
-```  
+```cpp  
 // cstyle_casts_7.cpp  
 // compile with: /clr  
 using namespace System;  

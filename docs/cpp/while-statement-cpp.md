@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc826b588f133abb93c9942e7907dd8b0fce9574
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5e226fdf4f8978172a187e1bfa8d53655ce368f5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942152"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463295"
 ---
 # <a name="while-statement-c"></a>Instrução while (C++)
 Executa *instrução* repetidamente até que *expressão* for avaliada como zero.  
@@ -30,7 +30,6 @@ Executa *instrução* repetidamente até que *expressão* for avaliada como zero
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 while ( expression )  
    statement  
 ```  

@@ -1,5 +1,5 @@
 ---
-title: 'Método Comptr: | Microsoft Docs'
+title: 'Método comptr:: Internalrelease | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 375a44d3f541e5eb5e01c328093d831cfe158717
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5d8dfc618ba8871a06da6ddd9d1754bc1543654d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881712"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462460"
 ---
 # <a name="comptrinternalrelease-method"></a>Método ComPtr::InternalRelease
-Executa uma operação COM versão na interface associado a este ComPtr.  
+Executa uma operação de lançamento COM na interface associado a este **ComPtr**.  
   
 ## <a name="syntax"></a>Sintaxe  
   

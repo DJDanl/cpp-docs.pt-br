@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b37d87d5380b9d4dac69cee702654285461ead6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7222d7021665a76c7e087033f5152d2836008caa
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871621"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460926"
 ---
 # <a name="custom-c"></a>custom (C++)
 Define os metadados de um objeto na biblioteca de tipos.  
@@ -30,8 +30,7 @@ Define os metadados de um objeto na biblioteca de tipos.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ custom(  
+[ custom(  
    uuid,   
    value  
 ) ];  
@@ -51,13 +50,13 @@ Define os metadados de um objeto na biblioteca de tipos.
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|Não-COM `interface`, **classe**, `enum`s, `idl_module` métodos, membros de interface, parâmetros de interface, `typedef`s, **união**s, `struct`s|  
+|**Aplica-se a**|Não-COM **interface**, **classe**, **enum**s, `idl_module` métodos, os membros da interface, parâmetros de interface **typedef**s, **união**s, **struct**s|  
 |**Repetível**|Sim|  
-|**Atributos necessários.**|**coclass** (quando usado em classe)|  
+|**Atributos obrigatórios**|**coclass** (quando usado na classe)|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

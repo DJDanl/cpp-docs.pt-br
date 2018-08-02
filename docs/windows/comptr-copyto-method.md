@@ -1,5 +1,5 @@
 ---
-title: 'Método Comptr: | Microsoft Docs'
+title: 'Método comptr:: CopyTo | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 680c1278ca2b17c7ea35e72946fb5d5030c5e7c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 724803fbbf04bd697dfc85f6576ed5706d708eae
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870865"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464435"
 ---
 # <a name="comptrcopyto-method"></a>Método ComPtr::CopyTo
-Cópias da interface atual ou especificada associado a este ComPtr ao ponteiro especificado.  
+Copia a interface atual ou especificada associada a este **ComPtr** para o ponteiro especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,24 +46,24 @@ HRESULT CopyTo(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `U`  
+ *U*  
  O nome de um tipo.  
   
- `ptr`  
+ *ptr*  
  Quando essa operação for concluída, um ponteiro para a interface solicitada.  
   
- `riid`  
+ *riid*  
  Uma ID de interface.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, o HRESULT que indica por que a operação de QueryInterface implícita falhou.  
+ S_OK se bem-sucedido; Caso contrário, um HRESULT que indica por que o implícita `QueryInterface` Falha na operação.  
   
 ## <a name="remarks"></a>Comentários  
- A primeira função retorna uma cópia de um ponteiro para a interface associada a este ComPtr. Essa função sempre retorna S_OK.  
+ A primeira função retorna uma cópia de um ponteiro para a interface associada a este **ComPtr**. Esta função sempre retorna S_OK.  
   
- A segunda função executa uma operação de QueryInterface na interface associado a este ComPtr para a interface especificada pelo `riid` parâmetro.  
+ A segunda função executa um `QueryInterface` operação na interface associado a este **ComPtr** para a interface especificada pelo *riid* parâmetro.  
   
- A terceira função executa uma operação de QueryInterface na interface associado a este ComPtr para a interface subjacente do `U` parâmetro.  
+ A terceira função executa um `QueryInterface` operação na interface associado a este **ComPtr** para a interface subjacente dos *U* parâmetro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 039d210e9a204c485e2f44c39ea87b4d35089d88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a51b7095ec654c4ebb393c9a83d1e30fb52ce019
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854818"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462619"
 ---
 # <a name="asweak-function"></a>Função AsWeak
 Recupera uma referência fraca a uma instância especificada.  
@@ -38,14 +38,14 @@ HRESULT AsWeak(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
- Um ponteiro para o tipo de parâmetro `p`.  
+ *T*  
+ Um ponteiro para o tipo do parâmetro *p*.  
   
- `p`  
+ *p*  
  Uma instância de um tipo.  
   
- `pWeak`  
- Quando essa operação for concluída, um ponteiro para uma referência fraca a parâmetro `p`.  
+ *pWeak*  
+ Quando essa operação for concluída, um ponteiro para uma referência fraca ao parâmetro *p*.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK, se essa operação for bem-sucedida; Caso contrário, um erro HRESULT que indica a causa da falha.  

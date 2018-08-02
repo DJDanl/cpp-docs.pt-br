@@ -1,5 +1,5 @@
 ---
-title: 'Método Asyncbase: | Microsoft Docs'
+title: 'Método asyncbase:: Close | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f3f36656b9316fb6ad980349a836fad31c3a9a0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9d0798a6ef593e388ce7867ee9a55763be9ae890
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860789"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463353"
 ---
 # <a name="asyncbaseclose-method"></a>Método AsyncBase::Close
 Fecha a operação assíncrona.  
@@ -39,7 +39,7 @@ STDMETHOD(
  S_OK se a operação fecha ou já está fechado; Caso contrário, E_ILLEGAL_STATE_CHANGE.  
   
 ## <a name="remarks"></a>Comentários  
- Close () é uma implementação padrão de IAsyncInfo::Close e não executa nenhum trabalho real. Para fechar, na verdade, uma operação assíncrona, substitua o método virtual puro de OnClose().  
+ **Close ()** é uma implementação padrão de `IAsyncInfo::Close`, e não faz nenhum trabalho real. Para realmente fechar uma operação assíncrona, substituir o `OnClose()` método virtual puro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** async.h  

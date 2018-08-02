@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b27f6f7f56604976bb1004594fc7c0ac6fdc923
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be1a94215bb13d02970462ee2e8dcb19df1ff05f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422807"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464214"
 ---
 # <a name="templates-and-name-resolution"></a>Modelos e resolução de nome
 
@@ -84,5 +84,4 @@ Em definições de modelo, há três tipos de nomes.
  As expressões dependentes de tipo e de valor são expressões que envolvem variáveis que são dependentes de tipo ou de valor. Essas expressões podem ter a semântica diferente, dependendo dos parâmetros usados para o modelo.  
   
 ## <a name="see-also"></a>Consulte também
-
  [Modelos](../cpp/templates-cpp.md)

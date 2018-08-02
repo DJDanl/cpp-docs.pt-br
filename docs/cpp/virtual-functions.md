@@ -16,20 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d1fc04a09e48ac50f6f27d4ffd3e01dbd3dac8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54444200b9a38c427a8192d1c16e6835712ff1f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467914"
 ---
 # <a name="virtual-functions"></a>Funções virtuais
 Uma função virtual é uma função membro que espera-se que seja redefinida em classes derivadas. Quando você faz referência um objeto da classe derivada usando um ponteiro ou uma referência à classe base, pode chamar uma função virtual para esse objeto e executar a versão da classe derivada da função.  
   
  As funções virtuais asseguram que a função correta seja chamada para um objeto, independentemente da expressão usada para fazer a chamada de função.  
   
- Suponha que uma classe base contém uma função declarada como [virtual](../cpp/virtual-cpp.md) e uma classe derivada define a mesma função. A função a partir da classe derivada é chamada para objetos da classe derivada, mesmo se ela for chamada usando um ponteiro ou uma referência à classe base. O exemplo a seguir mostra uma classe base que fornece uma implementação da função de `PrintBalance` e de duas classes derivadas  
+ Suponha que uma classe base contém uma função declarada como [virtual](../cpp/virtual-cpp.md) e uma classe derivada defina a mesma função. A função a partir da classe derivada é chamada para objetos da classe derivada, mesmo se ela for chamada usando um ponteiro ou uma referência à classe base. O exemplo a seguir mostra uma classe base que fornece uma implementação da função de `PrintBalance` e de duas classes derivadas  
   
-```  
+```cpp 
 // deriv_VirtualFunctions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -85,7 +86,7 @@ int main() {
   
  O exemplo a seguir mostra como as funções virtuais e não virtuais se comportam quando chamadas por ponteiros:  
   
-```  
+```cpp 
 // deriv_VirtualFunctions2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -140,7 +141,7 @@ int main() {
   
 ### <a name="output"></a>Saída  
   
-```  
+```Output  
 Derived::NameOf  
 Invoked by Base  
 Derived::NameOf  
@@ -149,15 +150,15 @@ Invoked by Derived
   
  Observe que, independentemente da função `NameOf` ser chamada por um ponteiro para `Base` ou um ponteiro para `Derived`, ela chama a função para `Derived`. Ela chama a função para `Derived` porque `NameOf` é uma função virtual, e `pBase` e `pDerived` apontam para um objeto do tipo `Derived`.  
   
- Porque funções virtuais são chamadas apenas para objetos de tipos de classe, você não pode declarar globais ou estáticas funções como **virtual**.  
+ Como funções virtuais são chamadas apenas para objetos de tipos de classe, você não pode declarar funções globais ou estáticas como **virtual**.  
   
- O **virtual** palavra-chave pode ser usada ao declarar a substituição funciona em uma classe derivada, mas não é necessário; substituições de funções virtuais sempre são virtuais.  
+ O **virtual** palavra-chave pode ser usada ao declarar funções substitutas em uma classe derivada, mas é desnecessária; as substituições de funções virtuais são sempre virtuais.  
   
- Funções virtuais em uma classe base devem ser definidas, a menos que eles são declarados usando o *especificador puro*. (Para obter mais informações sobre funções virtuais puras, consulte [Classes abstratas](../cpp/abstract-classes-cpp.md).)  
+ Funções virtuais em uma classe base devem ser definidas, a menos que elas são declaradas usando o *especificador puro*. (Para obter mais informações sobre funções virtuais puras, consulte [Classes abstratas](../cpp/abstract-classes-cpp.md).)  
   
  O mecanismo de chamada de funções virtuais pode ser suprimido ao qualificar explicitamente o nome da função usando o operador scope-resolution (`::`). Veja o exemplo anterior que envolve a classe `Account`. Para chamar `PrintBalance` na classe base, use um código como este:  
   
-```  
+```cpp 
 CheckingAccount *pChecking = new CheckingAccount( 100.00 );  
   
 pChecking->Account::PrintBalance();  //  Explicit qualification.  
@@ -168,4 +169,3 @@ pAccount->Account::PrintBalance();   //  Explicit qualification.
 ```  
   
  As duas chamadas a `PrintBalance` no exemplo anterior suprimem o mecanismo de chamada de função virtual.  
-  

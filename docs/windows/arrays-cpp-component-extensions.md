@@ -23,21 +23,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a17649402fa6ebe9c98d768badcf36e5700f5b75
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21a1dd4f26db41f7e32f3f76fd3b4c82e513397a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862716"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461683"
 ---
 # <a name="arrays-c-component-extensions"></a>Matrizes (Extensões de Componentes C++)
-O `Platform::Array<T>` tipo no C + + CX, ou o `array` palavra-chave em C + + CLI, declara uma matriz de um tipo especificado e o valor inicial.  
+O `Platform::Array<T>` tipo no C + + c++ /CLI CX, ou o **matriz** palavra-chave no C + + c++ CLI, declara uma matriz de um tipo especificado e o valor inicial.  
   
 ## <a name="all-platforms"></a>Todas as Plataformas  
- A matriz deve ser declarada usando o modificador handle-to-object (^) depois do colchete (>) na declaração.  
+ A matriz deve ser declarada usando o modificador handle-to-object (^) após o colchete angular de fechamento (>) na declaração.  
  O número de elementos da matriz não é parte do tipo. Uma variável de matriz pode se referir a matrizes de tamanhos diferentes.  
   
- Ao contrário de C++ padrão, subscrito não é um sinônimo para aritmética de ponteiro e não é comutativa.  
+ Ao contrário do C++ padrão, o subscrito não é um sinônimo de aritmética de ponteiro e não é comutativo.  
   
  Para obter mais informações sobre matrizes, consulte:  
   
@@ -46,11 +46,11 @@ O `Platform::Array<T>` tipo no C + + CX, ou o `array` palavra-chave em C + + CLI
 -   [Listas de argumentos variáveis (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
- Matrizes são membros de `Platform` namespace. Matrizes podem ser apenas unidimensionais.  
+ Matrizes são membros do `Platform` namespace. Matrizes podem ser apenas unidimensionais.  
   
 ### <a name="syntax"></a>Sintaxe  
   
- O primeiro exemplo da sintaxe usa o `ref new` palavra-chave agregação para alocar uma matriz. O segundo exemplo declara uma matriz de local.  
+ O primeiro exemplo da sintaxe usa o **ref novo** agregação palavra-chave para alocar uma matriz. O segundo exemplo declara uma matriz local.  
   
 ```  
 [qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
@@ -61,26 +61,26 @@ O `Platform::Array<T>` tipo no C + + CX, ou o `array` palavra-chave em C + + CLI
 ```  
   
  *qualificadores* [opcional]  
- Um ou mais desses especificadores de classe de armazenamento: [mutável](../cpp/mutable-data-members-cpp.md), [volátil](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [estático](../cpp/static-members-cpp.md).  
+ Um ou mais destes especificadores de classe de armazenamento: [mutável](../cpp/mutable-data-members-cpp.md), [volátil](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [estático](../cpp/static-members-cpp.md).  
   
- `array-type`  
- O tipo de variável de matriz. Os tipos válidos são classes de Windows Runtime e tipos fundamentais, classes ref e estruturas, classes de valor e structs e ponteiros nativos (`type*`).  
+ *tipo de matriz*  
+ O tipo de variável de matriz. Os tipos válidos são classes de tempo de execução do Windows e tipos fundamentais, classes de referência e estruturas, classes de valor e structs e ponteiros nativos (`type*`).  
   
- `rank` [opcional]  
+ *classificação* [opcional]  
  O número de dimensões da matriz. Deve ser 1.  
   
- `identifier`  
- O nome da variável de matriz.  
+ *identifier*  
+ O nome da variável da matriz.  
   
- `initialization-type`  
- O tipo de valores que inicializar a matriz. Normalmente, `array-type` e `initialization-type` são do mesmo tipo. No entanto, os tipos podem ser diferentes se houver uma conversão de `initialization-type` para `array-type`— por exemplo, se `initialization-type` é derivado de `array-type`.  
+ *tipo de inicialização*  
+ O tipo dos valores que inicializar a matriz. Normalmente, *tipo de matriz* e *tipo de inicialização* são do mesmo tipo. No entanto, os tipos podem ser diferentes se há uma conversão de *tipo de inicialização* para *tipo de matriz*— por exemplo, se *tipo de inicialização* deriva *tipo de matriz*.  
   
- `initialization-list` [opcional]  
- Uma lista delimitada por vírgulas de valores de chaves que inicializar os elementos da matriz. Por exemplo, se `rank-size-list` foram `(3)`, que declara uma matriz unidimensional de 3 elementos, `initialization list` poderia ser `{1,2,3}`.  
+ *lista de inicialização* [opcional]  
+ Uma lista delimitada por vírgulas de valores entre colchetes que inicializar os elementos da matriz. Por exemplo, se *lista de tamanhos de classificação* foram `(3)`, que declara uma matriz unidimensional de elementos de 3 *lista de inicialização* poderia ser `{1,2,3}`.  
   
 ### <a name="remarks"></a>Comentários  
   
- Você pode detectar no tempo de compilação se um tipo é uma matriz contado por referência com `__is_ref_array(type)`. Para obter mais informações, consulte [suporte para características do tipo de compilador](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Você pode detectar no tempo de compilação se um tipo é uma matriz de contagem de referência com `__is_ref_array(type)`. Para obter mais informações, consulte [suporte do compilador para características de tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ### <a name="requirements"></a>Requisitos  
  Opção do compilador: **/ZW**  
@@ -104,7 +104,7 @@ int main() {
   
 ### <a name="syntax"></a>Sintaxe  
   
- O primeiro exemplo da sintaxe usa o `gcnew` palavra-chave para alocar uma matriz. O segundo exemplo declara uma matriz de local.  
+ O primeiro exemplo da sintaxe usa o **gcnew** palavra-chave para alocar uma matriz. O segundo exemplo declara uma matriz local.  
   
 ```  
 [qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
@@ -115,47 +115,47 @@ int main() {
 ```  
   
  *qualificadores* [opcional]  
- Um ou mais desses especificadores de classe de armazenamento: [mutável](../cpp/mutable-data-members-cpp.md), [volátil](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [estático](../cpp/static-members-cpp.md).  
+ Um ou mais destes especificadores de classe de armazenamento: [mutável](../cpp/mutable-data-members-cpp.md), [volátil](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [estático](../cpp/static-members-cpp.md).  
   
- `array-type`  
- O tipo de variável de matriz. Os tipos válidos são classes de Windows Runtime e tipos fundamentais, classes e estruturas, classes de valor e estruturas ref, ponteiros nativos (`type*`) e tipos nativos do POD (plain dados antigos).  
+ *tipo de matriz*  
+ O tipo de variável de matriz. Os tipos válidos são classes de tempo de execução do Windows e tipos fundamentais, classes e structs, classes de valor e estruturas ref, ponteiros nativos (`type*`) e tipos nativos do POD (dados antigos simples).  
   
- `rank` [opcional]  
- O número de dimensões da matriz. O padrão é 1. o máximo é 32. Cada dimensão da matriz é uma matriz.  
+ *classificação* [opcional]  
+ O número de dimensões da matriz. O padrão é 1; o máximo é 32. Cada dimensão da matriz em si é uma matriz.  
   
- `identifier`  
- O nome da variável de matriz.  
+ *identifier*  
+ O nome da variável da matriz.  
   
- `initialization-type`  
- O tipo de valores que inicializar a matriz. Normalmente, `array-type` e `initialization-type` são do mesmo tipo. No entanto, os tipos podem ser diferentes se houver uma conversão de `initialization-type` para `array-type`— por exemplo, se `initialization-type` é derivado de `array-type`.  
+ *tipo de inicialização*  
+ O tipo dos valores que inicializar a matriz. Normalmente, *tipo de matriz* e *tipo de inicialização* são do mesmo tipo. No entanto, os tipos podem ser diferentes se há uma conversão de *tipo de inicialização* para *tipo de matriz*— por exemplo, se *tipo de inicialização* deriva *tipo de matriz*.  
   
- `rank-size-list`  
- Uma lista delimitada por vírgulas de tamanho de cada dimensão da matriz. Como alternativa, se o `initialization-list` parâmetro for especificado, o compilador pode deduzir o tamanho de cada dimensão e `rank-size-list` pode ser omitido. 
+ *lista de tamanho de classificação*  
+ Uma lista delimitada por vírgula do tamanho de cada dimensão da matriz. Como alternativa, se o *lista de inicialização* parâmetro for especificado, o compilador pode deduzir o tamanho de cada dimensão e *lista de tamanhos de classificação* pode ser omitido. 
   
- `initialization-list` [opcional]  
- Uma lista delimitada por vírgulas de valores de chaves que inicializar os elementos da matriz. Ou uma lista delimitada por vírgulas de aninhados *lista de inicialização* itens que inicializar os elementos em uma matriz multidimensional.  
+ *lista de inicialização* [opcional]  
+ Uma lista delimitada por vírgulas de valores entre colchetes que inicializar os elementos da matriz. Ou uma lista delimitada por vírgulas de aninhados *lista de inicialização* itens que inicializar os elementos em uma matriz multidimensional.  
   
- Por exemplo, se `rank-size-list` foram `(3)`, que declara uma matriz unidimensional de 3 elementos, `initialization list` poderia ser `{1,2,3}`. Se `rank-size-list` foram `(3,2,4)`, que declara uma matriz tridimensional de 3 elementos na primeira dimensão, 2 elementos na segunda e 4 elementos no terceiro, `initialization-list` poderia ser `{{1,2,3},{0,0},{-5,10,-21,99}}`.)  
+ Por exemplo, se *lista de tamanhos de classificação* foram `(3)`, que declara uma matriz unidimensional de elementos de 3 *lista de inicialização* poderia ser `{1,2,3}`. Se *lista de tamanhos de classificação* foram `(3,2,4)`, que declara uma matriz tridimensional de 3 elementos na primeira dimensão, 2 elementos no segundo e 4 elementos, o terceiro, *lista de inicialização* poderia ser `{{1,2,3},{0,0},{-5,10,-21,99}}`.)  
   
 ### <a name="remarks"></a>Comentários  
   
  `array` está no [plataforma, padrão e cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) namespace.  
   
- Como o C++ padrão, os índices de uma matriz são baseadas em zero, e uma matriz é subscrito usando colchetes ([]). Ao contrário de C++ padrão, os índices de uma matriz multidimensional são especificados em uma lista de índices para cada dimensão em vez de um conjunto de operadores de colchete ([]) para cada dimensão. Por exemplo, *identificador*[*index1*, *index2*] em vez de *identificador*[*index1*] [ *index2*].  
+ Como o C++ padrão, os índices de uma matriz são baseados em zero e uma matriz é Subscrita usando colchetes ([]). Ao contrário do C++ padrão, os índices de uma matriz multidimensional são especificados em uma lista de índices para cada dimensão, em vez de um conjunto de operadores de colchete ([]) para cada dimensão. Por exemplo, *identificador*[*index1*, *index2*], em vez de *identificador*[*index1*] [ *index2*].  
   
- Todas as matrizes gerenciadas herdam de `System::Array`. Qualquer método ou propriedade de `System::Array` pode ser aplicado diretamente à variável de matriz.  
+ Todas as matrizes gerenciadas herdam `System::Array`. Qualquer método ou propriedade de `System::Array` podem ser aplicadas diretamente a variável de matriz.  
   
- Quando você alocar uma matriz cujo tipo de elemento é o ponteiro-para uma classe gerenciada, os elementos são inicializados para 0.  
+ Quando você aloca uma matriz cujo tipo de elemento é o ponteiro-para uma classe gerenciada, os elementos são inicializados para 0.  
   
- Quando você alocar uma matriz cujo tipo de elemento é um tipo de valor `V`, o construtor padrão para `V` é aplicada a cada elemento da matriz. Para obter mais informações, consulte [equivalentes do .NET Framework para tipos nativos do C++ (C + + CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).  
+ Quando você aloca uma matriz cujo tipo de elemento é um tipo de valor `V`, o construtor padrão para `V` é aplicada a cada elemento da matriz. Para obter mais informações, consulte [equivalentes do .NET Framework para tipos nativos do C++ (C + + / CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).  
   
- Em tempo de compilação, você pode detectar se um tipo é uma matriz de tempo de execução (CLR) de linguagem comum com `__is_ref_array(type)`. Para obter mais informações, consulte [suporte para características do tipo de compilador](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Em tempo de compilação, você pode detectar se um tipo é uma matriz de runtime (CLR) de linguagem comum com `__is_ref_array(type)`. Para obter mais informações, consulte [suporte do compilador para características de tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ### <a name="requirements"></a>Requisitos  
  Opção de compilador: **/clr**  
   
 ### <a name="examples"></a>Exemplos  
- O exemplo a seguir cria uma matriz unidimensional que tem 100 elementos e uma matriz tridimensional com 3 elementos na primeira dimensão, 5 elementos na segunda e 6 elementos no terceiro.  
+ O exemplo a seguir cria uma matriz unidimensional que tem 100 elementos e uma matriz tridimensional que tem 6 elementos na terceira, 5 elementos no segundo e 3 elementos na primeira dimensão.  
   
 ```cpp  
 // clr_array.cpp  

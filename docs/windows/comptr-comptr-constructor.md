@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3a632c96c39ccd40f008556287af95944530cdc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d08eb264ff3b4fc2f0170d6aee742ff29611613e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871169"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465364"
 ---
 # <a name="comptrcomptr-constructor"></a>Construtor ComPtr::ComPtr
-Inicializa uma nova instância da classe ComPtr. Sobrecargas fornecem construtores padrão, copiar, mover e conversão.  
+Inicializa uma nova instância dos **ComPtr** classe. Sobrecargas fornecem construtores padrão, copiar, mover e conversão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,22 +59,22 @@ WRL_NOTHROW ComPtr(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `U`  
- O tipo do parâmetro `other`.  
+ *U*  
+ O tipo dos *outros* parâmetro.  
   
- `other`  
- Um objeto do tipo `U`.  
+ *other*  
+ Um objeto do tipo *U*.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 ## <a name="remarks"></a>Comentários  
- O primeiro construtor é o construtor padrão, que implictly cria um objeto vazio. Especifica o segundo construtor [nullptr ](../windows/nullptr-cpp-component-extensions.md), que cria explicitamente um objeto vazio.  
+ O primeiro construtor é o construtor padrão, quais implícita cria um objeto vazio. Especifica o segundo construtor [nullptr](../windows/nullptr-cpp-component-extensions.md), que cria explicitamente um objeto vazio.  
   
  O terceiro construtor cria um objeto do objeto especificado por um ponteiro.  
   
- Os quarto e quinto construtores são construtores de cópia. O quinto construtor copia um objeto que é conversível para o tipo atual.  
+ Os construtores quarto e quintas são construtores de cópia. O quinto construtor copia um objeto se ele for conversível para o tipo atual.  
   
- Os sexto e o sétimo construtores são construtores de movimento. O sétimo construtor move um objeto se ele é convertido para o tipo atual.  
+ Os sexto e sétimo construtores são construtores de movimentação. O sétimo construtor move um objeto se ele for conversível para o tipo atual.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

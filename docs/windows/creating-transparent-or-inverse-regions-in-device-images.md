@@ -30,45 +30,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70fd2411eefba495478baaf5fb20fe7a27031001
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c8ebecf984254175a15075e8d8a4125f9fc5ec17
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882544"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462528"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Criando regiões transparentes ou inversas em imagens de dispositivo (editor de imagens para ícones)
-No [editor de imagem](../windows/image-editor-for-icons.md), a imagem de ícone ou cursor inicial possui um atributo transparente. Embora as imagens de ícone e cursor são retangulares, muitos não são exibidos isso porque partes da imagem são transparentes; mostra a imagem subjacente na tela por meio do ícone ou cursor. Quando você arrasta um ícone, partes da imagem podem aparecer em uma cor invertida. Você cria esse efeito, definindo as cores de tela e inversa no [janela cores](../windows/colors-window-image-editor-for-icons.md).  
+No [editor de imagens](../windows/image-editor-for-icons.md), a imagem de ícone ou cursor inicial tem um atributo transparente. Embora as imagens de ícone e cursor são retangulares, muitos não aparecem isso porque partes da imagem são transparentes; mostra a imagem subjacente na tela por meio do ícone ou cursor. Quando você arrasta um ícone, partes da imagem podem aparecer em uma cor invertida. Criar esse efeito, definindo a cor da tela e as cores invertidas na [janela de cores](../windows/colors-window-image-editor-for-icons.md).  
   
- As cores de tela e o inverso é aplicar a ícones e cursores em forma e cor da imagem derivada ou designar Inverter regiões. As cores indicam partes da imagem que possui os atributos. Você pode alterar as cores que representam os atributos de cor da tela e o inverso de cor na edição. Essas alterações não afetam a aparência do ícone ou cursor em seu aplicativo.  
+ As cores da tela e o inverso é aplicar a ícones e cursores da forma e a imagem derivada de cor ou designarem Inverter regiões. As cores indicam partes da imagem que possui os atributos. Você pode alterar as cores que representam os atributos de cor da tela e cor inverso no modo de edição. Essas alterações não afetam a aparência do ícone ou cursor em seu aplicativo.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### <a name="to-create-transparent-or-inverse-regions"></a>Para criar as regiões transparentes ou inversas  
+### <a name="to-create-transparent-or-inverse-regions"></a>Para criar regiões transparentes ou inversas  
   
-1.  No **cores** janela, clique no **cor da tela** seletor ou **inverso cor** seletor.  
+1.  No **cores** janela, clique no **cor da tela** seletor ou o **inverso cor** seletor.  
   
 2.  Aplique a tela ou cores invertidas em sua imagem usando uma ferramenta de desenho. Para obter mais informações sobre ferramentas de desenho, consulte [usando uma ferramenta de desenho](using-a-drawing-tool-image-editor-for-icons.md).  
   
 ### <a name="to-change-the-screen-or-inverse-color"></a>Para alterar a cor da tela ou inverso  
   
-1.  Selecione o **cor da tela** seletor ou **inverso cor** seletor.  
+1.  Selecione o **cores da tela** seletor ou o **inverso cor** seletor.  
   
-2.  Escolha uma cor no **cores** paleta no **cores** janela.  
+2.  Escolha uma cor na **cores** paleta na **cores** janela.  
   
-     A cor complementar é automaticamente designada para o seletor de outros.  
+     A cor complementar é automaticamente designada para o seletor de outro.  
   
     > [!TIP]
-    >  Se você clicar duas vezes no seletor de cores da tela ou inverso cor, o [caixa de diálogo Seletor de cor personalizada](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) é exibida.  
+    >  Se você clicar duas vezes no seletor de cores da tela ou cor inverso, o [caixa de diálogo do seletor de cores personalizada](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) é exibida.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisitos  
+## <a name="requirements"></a>Requisitos  
   
  Nenhum  
   
 ## <a name="see-also"></a>Consulte também  
  [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Ícones e cursores: recursos de imagem para exibir dispositivos](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-

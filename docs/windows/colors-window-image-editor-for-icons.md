@@ -26,36 +26,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a327fd99028bf8e1a6d7724a515f264aa04a4e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ee53735c84d586aa41cd4a1c5d3e8a70051c88e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860366"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460965"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Janela Cores (editor de imagens para ícones)
-A janela cores tem duas partes:  
+O **cores** janela tem duas partes:  
   
-1.  A paleta de cores, que é uma matriz de amostras de cor que representam as cores que você pode usar. Você pode clicar em exemplos para selecionar as cores de primeiro plano e em segundo plano quando você estiver usando as ferramentas de gráficos.  
+1.  O **paleta de cores**, que é uma matriz de amostras de cores que representam as cores que você pode usar. Você pode clicar nos exemplos para selecionar cores de primeiro e segundo plano quando você estiver usando as ferramentas de gráficos.  
   
-2.  O indicador de cor, que mostra as cores de primeiro e segundo plano e os seletores de cor da tela e o inverso.  
+2.  O **indicador de cor**, que mostra as cores de primeiro e segundo plano e os seletores de cor da tela e o inverso.  
   
      ![Janela de cores](../windows/media/vccolorswindow.gif "vcColorsWindow")  
 Janela Cores  
   
 > [!NOTE]
->  O **cores de tela** e **cor inverso** ferramentas estão disponíveis apenas para ícones e cursores.  
+>  O **cor da tela** e **cor inverso** ferramentas só estão disponíveis para os ícones e cursores.  
   
- Você pode usar a janela de cores com o [barra de ferramentas do Editor de imagem](../windows/toolbar-image-editor-for-icons.md).  
-  
-
+ Você pode usar a janela de cores com o [barra de ferramentas do Editor de imagens](../windows/toolbar-image-editor-for-icons.md).  
   
 ## <a name="requirements"></a>Requisitos  
  Nenhum  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibindo ou ocultando a janela de cores](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)   
+ [Exibindo ou ocultando a janela cores](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)   
  [Criando regiões transparentes ou inversas em imagens de dispositivo](../windows/creating-transparent-or-inverse-regions-in-device-images.md)   
  [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Caixa de diálogo Seletor de cor personalizada](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)   
+ [Caixa de diálogo do seletor de cor personalizada](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)   
  [Editor de imagens para ícones](../windows/image-editor-for-icons.md)

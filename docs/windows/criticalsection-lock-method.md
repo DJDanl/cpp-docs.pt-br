@@ -1,5 +1,5 @@
 ---
-title: 'Método CriticalSection: | Microsoft Docs'
+title: 'Método CriticalSection:: Lock | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c873494a702802b8ead3dab9cac28557664f618
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a4fee4991459ddbab0ac370f025776529a6bd1e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871319"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464542"
 ---
 # <a name="criticalsectionlock-method"></a>Método CriticalSection::Lock
-Esperas de propriedade do objeto especificado de seção crítica. A função retorna quando o thread de chamada é concedido a propriedade.  
+Aguarda até que propriedade do objeto especificado de seção crítica. A função retorna quando o thread de chamada é concedido a propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,17 +38,17 @@ SyncLock Lock();
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `cs`  
+ *cs*  
  Um objeto de seção crítica especificado pelo usuário.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Um objeto de bloqueio que pode ser usado para desbloquear a seção crítica atual.  
   
 ## <a name="remarks"></a>Comentários  
- A primeira **bloqueio** function afeta o objeto atual da seção crítica. A segunda **bloqueio** function afeta uma seção crítica especificado pelo usuário.  
+ A primeira **bloqueio** function afeta o objeto atual de seção crítica. A segunda **bloqueio** function afeta uma seção crítica especificado pelo usuário.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Método Asyncbase: | Microsoft Docs'
+title: 'Método asyncbase:: Get_id | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6720348692e92e05922bde1100e42c24a866933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ea5efa31a3ebff3c86800a023e3525589952c2fc
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859794"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464708"
 ---
 # <a name="asyncbasegetid-method"></a>Método AsyncBase::get_Id
 Recupera o identificador da operação assíncrona.  
@@ -36,14 +36,14 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `id`  
- O local em que o identificador a ser armazenado.  
+ *id*  
+ O local em que o identificador deve ser armazenado.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se bem-sucedido; Caso contrário, E_ILLEGAL_METHOD_CALL.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método implementa IAsyncInfo::get_Id.  
+ Esse método implementa `IAsyncInfo::get_Id`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** async.h  

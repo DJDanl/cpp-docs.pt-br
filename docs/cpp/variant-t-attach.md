@@ -19,31 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42c275d085434cc8077a0629429c7c0e1cbbfcc3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 567a3387e79244443b784549d6223a14f78103ce
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942309"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464672"
 ---
 # <a name="varianttattach"></a>_variant_t::Attach
 **Seção específica da Microsoft**  
   
- Anexa uma `VARIANT` do objeto para o `_variant_t` objeto.  
+ Anexa uma `VARIANT` do objeto para o **variant_t** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 void Attach(VARIANT& varSrc);  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
  *varSrc*  
- Um `VARIANT` o objeto a ser anexado a este `_variant_t` objeto.  
+ Um `VARIANT` o objeto a ser anexado a este **variant_t** objeto.  
   
 ## <a name="remarks"></a>Comentários  
- Se apropria do `VARIANT` , encapsulando-lo. Essa função de membro libera qualquer encapsulado existente `VARIANT`, em seguida, copia fornecido `VARIANT`e define seu `VARTYPE` como VT_EMPTY para garantir que seus recursos só podem ser liberados pelo `_variant_t` destruidor.  
+ Se apropria do `VARIANT` , encapsulando-lo. Essa função de membro libera qualquer encapsulado existente `VARIANT`, em seguida, copia fornecido `VARIANT`e define seu `VARTYPE` como VT_EMPTY para garantir que seus recursos só podem ser liberados pelo **variant_t** destruidor.  
   
  **Fim da seção específica da Microsoft**  
   

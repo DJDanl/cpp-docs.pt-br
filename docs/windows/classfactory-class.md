@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6294634652ffc6a53a577ccd75c348ed63c502e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 97c07b5cf97578c49da9d4a72b5a232b559ec0ab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858387"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463860"
 ---
 # <a name="classfactory-class"></a>Classe ClassFactory
-Implementa a funcionalidade básica da interface IClassFactory.  
+Implementa a funcionalidade básica do `IClassFactory` interface.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,19 +46,19 @@ class ClassFactory : public Details::RuntimeClass<
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `I0`  
- A interface de zero.  
+ *I0*  
+ A interface inicial.  
   
- `I1`  
+ *I1*  
  A primeira interface.  
   
- `I2`  
+ *I2*  
  A segunda interface.  
   
 ## <a name="remarks"></a>Comentários  
- Utilizar `ClassFactory` para fornecer uma implementação de fábrica definido pelo usuário.  
+ Utilizar `ClassFactory` para fornecer uma implementação de fábrica definidos pelo usuário.  
   
- O padrão de programação a seguir demonstra como usar o [implementa](../windows/implements-structure.md) para especificar mais de três interfaces em uma fábrica de classe.  
+ O padrão de programação a seguir demonstra como usar o [implementa](../windows/implements-structure.md) estrutura para especificar mais de três interfaces em uma fábrica de classes.  
   
  `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`  
   
@@ -75,7 +75,7 @@ class ClassFactory : public Details::RuntimeClass<
 |Nome|Descrição|  
 |----------|-----------------|  
 |[Método ClassFactory::AddRef](../windows/classfactory-addref-method.md)|Incrementa a contagem de referência para o objeto ClassFactory atual.|  
-|[Método ClassFactory::LockServer](../windows/classfactory-lockserver-method.md)|Aumenta ou diminui o número de base de objetos que são controlados pelo objeto ClassFactory atual.|  
+|[Método ClassFactory::LockServer](../windows/classfactory-lockserver-method.md)|Aumenta ou diminui o número de subjacente objetos que são controlados pelo objeto ClassFactory atual.|  
 |[Método ClassFactory::QueryInterface](../windows/classfactory-queryinterface-method.md)|Recupera um ponteiro para a interface especificada pelo parâmetro.|  
 |[Método ClassFactory::Release](../windows/classfactory-release-method.md)|Diminui a contagem de referência para o objeto ClassFactory atual.|  
   

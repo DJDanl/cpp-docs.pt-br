@@ -1,5 +1,5 @@
 ---
-title: 'Método Activationfactory: | Microsoft Docs'
+title: 'Método activationfactory:: Getruntimeclassname | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6db270c88b4335be48016ff2b8bdcf2b5e3951cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db26591bc4d0f1912c968c331266200baeea9917
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854870"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463662"
 ---
 # <a name="activationfactorygetruntimeclassname-method"></a>Método ActivationFactory::GetRuntimeClassName
-Obtém o nome de classe de tempo de execução do objeto que instancia o ActivationFactory atual.  
+Obtém o nome de classe de tempo de execução do objeto que o atual **ActivationFactory** cria uma instância.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `runtimeName`  
- Quando a operação for concluída, um identificador para uma cadeia de caracteres que contém o nome da classe de tempo de execução do objeto que instancia o ActivationFactory atual.  
+ *runtimeName*  
+ Quando essa operação for concluída, um identificador para uma cadeia de caracteres que contém o nome de classe de tempo de execução do objeto que o atual **ActivationFactory** cria uma instância.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, o HRESULT que descreve a falha.  
+ S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  

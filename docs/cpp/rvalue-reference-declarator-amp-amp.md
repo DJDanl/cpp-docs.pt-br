@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21d1c1ad928ef61573271263a9a1112e944e2472
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e4fb22334e809215f5f00b7d06170f6a018e3312
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942245"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462382"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Declarador de referência Rvalue: &amp;&amp;
 Contém uma referência a uma expressão rvalue.  
@@ -29,7 +29,6 @@ Contém uma referência a uma expressão rvalue.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 type-id && cast-expression  
 ```  
   
@@ -41,7 +40,7 @@ type-id && cast-expression
 ## <a name="move-semantics"></a>Semântica de movimentação  
  A implementação de dar suporte a referências de Rvalue *semântica de movimentação*, que pode aumentar significativamente o desempenho de seus aplicativos. A semântica de movimentação permite que você escreva códigos que transfiram recursos (como a memória dinamicamente alocada) de um objeto para outro. A semântica de movimentação funciona porque permite que recursos sejam transferidos de objetos temporários que não podem ser referenciados em outro lugar no programa.  
   
- Para implementar a semântica de movimentação, você normalmente fornece um *construtor de movimentação,* e, opcionalmente, um operador de atribuição de movimentação (`operator=`), à sua classe. As operações de cópia e atribuição cujas origens são rvalues aproveitam automaticamente as vantagens da semântica de movimentação. Diferente do construtor de cópia padrão, o compilador não fornece um construtor de movimentação padrão. Para obter mais informações sobre como escrever um construtor de movimento e como usá-lo em seu aplicativo, consulte [construtores Move e operadores de atribuição Move (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
+ Para implementar a semântica de movimentação, você normalmente fornece um *construtor de movimentação,* e, opcionalmente, um operador de atribuição de movimentação (**operador =**), à sua classe. As operações de cópia e atribuição cujas origens são rvalues aproveitam automaticamente as vantagens da semântica de movimentação. Diferente do construtor de cópia padrão, o compilador não fornece um construtor de movimentação padrão. Para obter mais informações sobre como escrever um construtor de movimento e como usá-lo em seu aplicativo, consulte [construtores Move e operadores de atribuição Move (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
   
  Você também pode sobrecarregar as funções e operadores comuns para aproveitar a semântica de movimentação. Visual C++ 2010 introduz a semântica de movimentação na biblioteca padrão C++. Por exemplo, a classe `string` implementa as operações que executam a semântica de movimentação. Considere o exemplo a seguir, que concatena várias cadeias de caracteres e imprime o resultado:  
   
@@ -59,7 +58,7 @@ int main()
 }  
 ```  
   
- Antes do Visual C++ 2010, cada chamada para `operator+` aloca e retorna um novo temporário `string` objeto (um rvalue). `operator+` não pode acrescentar uma cadeia de caracteres a outra porque não sabe se as cadeias de caracteres de origem são lvalues ou rvalues. Se as cadeias de caracteres de origem forem lvalues, poderão ser referenciadas em outro local do programa e, portanto, não devem ser modificadas. Usando referências de rvalue, `operator+` pode ser alterado para receber os rvalues, que não podem ser referenciados em outro lugar no programa. Portanto, `operator+` agora pode acrescentar uma cadeia de caracteres à outra. Isso pode reduzir significativamente o número de alocações de memória dinâmica que a classe `string` deve executar. Para obter mais informações sobre o `string` classe, consulte [classe basic_string](../standard-library/basic-string-class.md).  
+ Antes do Visual C++ 2010, cada chamada para **operador +** aloca e retorna um novo temporário `string` objeto (um rvalue). **operador +** não é possível acrescentar uma cadeia de caracteres para o outro, porque ele não sabe se as cadeias de caracteres de origem são lvalues ou rvalues. Se as cadeias de caracteres de origem forem lvalues, poderão ser referenciadas em outro local do programa e, portanto, não devem ser modificadas. Usando referências de rvalue **operador +** pode ser modificado para receber os rvalues, que não podem ser referenciadas em outro lugar no programa. Portanto, **operador +** agora pode acrescentar uma cadeia de caracteres para outra. Isso pode reduzir significativamente o número de alocações de memória dinâmica que a classe `string` deve executar. Para obter mais informações sobre o `string` classe, consulte [classe basic_string](../standard-library/basic-string-class.md).  
   
  A semântica de movimentação também ajuda quando o compilador não pode usar a Otimização de Valor de Retorno (RVO) ou a Otimização de Valor de Retorno (NRVO). Nesses casos, o compilador chama o construtor de movimentação caso o tipo o defina. Para obter mais informações sobre a otimização de valor de retorno de chamada, consulte [denominada otimização de valor de retorno no Visual C++ 2005](http://go.microsoft.com/fwlink/p/?linkid=131571).  
   

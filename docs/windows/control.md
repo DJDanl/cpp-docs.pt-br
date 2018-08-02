@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8e80736ca84b551f197cc475aed4c7b54b9bf52
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93ffba61c9e0edaf3d127a7ddfb12b098ae484ca
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870826"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466481"
 ---
 # <a name="control"></a>Controle 
 Especifica que o tipo definido pelo usuário é um controle.  
@@ -30,17 +30,15 @@ Especifica que o tipo definido pelo usuário é um controle.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [control]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O **controle** atributo implica o [coclass](../windows/coclass.md) atributo. O **controle** atributo C++ tem a mesma funcionalidade que o [controle](http://msdn.microsoft.com/library/windows/desktop/aa366764) atributo MIDL.  
+ O **controle** atributo implica a [coclass](../windows/coclass.md) atributo. O **controle** atributo C++ tem a mesma funcionalidade que o [controle](http://msdn.microsoft.com/library/windows/desktop/aa366764) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_control.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -57,13 +55,13 @@ class CTest : public ICustom {};
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|**class**, `struct`|  
+|**Aplica-se a**|**classe**, **struct**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

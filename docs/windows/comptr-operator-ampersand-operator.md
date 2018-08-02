@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bfe8cf9091d888c33420f53f584ca5509d80527
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0afff1699a4c7a3a14f07967cfb5ba5727ba0320
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872400"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461556"
 ---
 # <a name="comptroperatoramp-operator"></a>Comptr:: Operator&amp; operador
-Libera a interface associada a esta `ComPtr` de objeto e, em seguida, recupera o endereço do `ComPtr` objeto.  
+Libera a interface associada a este **ComPtr** do objeto e, em seguida, recupera o endereço da **ComPtr** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,10 +36,10 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Uma referência fraca a atual `ComPtr`.  
+ Uma referência fraca ao atual **ComPtr**.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método difere [: Getaddressof](../windows/comptr-getaddressof-method.md) em que esse método libera uma referência para o ponteiro de interface. Use `ComPtr::GetAddressOf` quando você exigir o endereço do ponteiro de interface, mas não deseja liberar essa interface.  
+ Esse método difere [comptr:: Getaddressof](../windows/comptr-getaddressof-method.md) em que esse método libera uma referência para o ponteiro de interface. Use `ComPtr::GetAddressOf` quando você exigir o endereço do ponteiro da interface, mas não deseja liberar essa interface.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

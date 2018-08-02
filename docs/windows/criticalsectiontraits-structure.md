@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5534173d594b8fc09ceca8ec44a1c1223bc550b2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b10d130190308520771e37e97d34238f75670ad
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870545"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466677"
 ---
 # <a name="criticalsectiontraits-structure"></a>Estrutura CriticalSectionTraits
-É o especialista de um objeto CriticalSection para dar suporte a uma seção crítica inválida ou uma função para liberar uma seção crítica.  
+É o especialista de um objeto de seção crítica para dar suporte a uma seção crítica inválida ou uma função para liberar uma seção crítica.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,20 +39,20 @@ struct CriticalSectionTraits;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|`Type`|Um `typedef` que define um ponteiro para uma seção crítica. `Type` é definido como `typedef CRITICAL_SECTION* Type;`.|  
+|`Type`|Um **typedef** que define um ponteiro para uma seção crítica. `Type` é definido como `typedef CRITICAL_SECTION* Type;`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método CriticalSectionTraits::GetInvalidValue](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Um modelo CriticalSection é especializada para que o modelo sempre é inválido.|  
-|[Método CriticalSectionTraits::Unlock](../windows/criticalsectiontraits-unlock-method.md)|Um modelo CriticalSection é especializada para que ele dá suporte à propriedade liberar do objeto especificado de seção crítica.|  
+|[Método CriticalSectionTraits::GetInvalidValue](../windows/criticalsectiontraits-getinvalidvalue-method.md)|É especialista um `CriticalSection` modelo para que o modelo sempre é inválido.|  
+|[Método CriticalSectionTraits::Unlock](../windows/criticalsectiontraits-unlock-method.md)|É especialista um `CriticalSection` modelo para que ele dá suporte a liberar propriedade do objeto especificado de seção crítica.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `CriticalSectionTraits`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   

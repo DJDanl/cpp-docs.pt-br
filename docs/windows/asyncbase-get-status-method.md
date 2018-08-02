@@ -1,5 +1,5 @@
 ---
-title: 'Método Asyncbase: | Microsoft Docs'
+title: 'Método asyncbase:: Get_status | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46854ddfd6891efa2f205649d4b6410cc401e7fb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1590d07a7b37e7dd3abf09377a03734299cb124c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863355"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460952"
 ---
 # <a name="asyncbasegetstatus-method"></a>Método AsyncBase::get_Status
 Recupera um valor que indica o status da operação assíncrona.  
@@ -36,14 +36,14 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `status`  
- O local em que o status a ser armazenado. Para obter mais informações, consulte a enumeração Windows::Foundation::AsyncStatus.  
+ *status*  
+ O local em que o status deve ser armazenado. Para obter mais informações, consulte a enumeração Windows::Foundation::AsyncStatus.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se bem-sucedido; Caso contrário, E_ILLEGAL_METHOD_CALL.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método implementa IAsyncInfo::get_Status.  
+ Esse método implementa `IAsyncInfo::get_Status`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** async.h  

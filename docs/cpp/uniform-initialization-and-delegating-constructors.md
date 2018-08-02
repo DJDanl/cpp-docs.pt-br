@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 26b4cbfb798e47b1add5b1d46c2ea1adb538898b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939826"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465962"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Inicialização uniforme e delegação de construtores
 No C++ moderno, você pode usar *chave de inicialização* para qualquer tipo, sem o sinal de igual. Além disso, você pode usar construtores de delegação para simplificar o seu código quando você tem vários construtores que executam um trabalho semelhante.  
@@ -50,7 +50,6 @@ int main()
     class_a c3{ "yy", 4.4 };  
     class_a c3_1("zz", 5.5);  
 }  
-  
 ```  
   
  Se uma classe tiver construtores não padrão, a ordem na qual classe membros aparecem no inicializador de chave é a ordem na qual os parâmetros correspondentes são exibidos no construtor, não a ordem na qual os membros são declarados (assim como acontece com `class_a` no exemplo anterior). Caso contrário, se o tipo não tem nenhum construtor declarado, a ordem na qual os membros são exibidos no inicializador de chave é o mesmo que a ordem na qual eles são declarados; Nesse caso, você pode inicializar o máximo de membros públicos como desejar, mas não é possível ignorar qualquer membro. O exemplo a seguir mostra a ordem em que é usada na inicialização da chave quando não há nenhum construtor declarado:  
@@ -97,7 +96,6 @@ int main()
 class_d* cf = new class_d{4.5};  
 kr->add_d({ 4.5 });  
 return { 4.5 };  
-  
 ```  
   
 ## <a name="initializerlist-constructors"></a>initializer_list construtores  
@@ -117,7 +115,6 @@ initializer_list<int> ilist1{ 5, 6, 7 };
 initializer_list<int> ilist2( ilist1 );  
 if (ilist1.begin() == ilist2.begin())  
     cout << "yes" << endl; // expect "yes"  
-  
 ```  
   
  As classes de contêiner da biblioteca padrão e também `string`, `wstring`, e `regex`, têm `initializer_list` construtores. Os exemplos a seguir mostram como chave de inicialização com esses construtores:  
@@ -178,7 +175,6 @@ int main() {
   
     class_c c1{ 1, 3, 2 };  
 }  
-  
 ```  
   
  Conforme você percorre o exemplo anterior, observe que o construtor `class_c(int, int, int)` primeiro chama o construtor `class_c(int, int)`, que por sua vez chama `class_c(int)`. Cada um dos construtores executa apenas o trabalho que não é executado pelos outros construtores.  
@@ -201,7 +197,6 @@ public:
     double m_double{ 1.0 };  
     string m_string;  
 };  
-  
 ```  
   
  O exemplo a seguir mostra o uso de inicializadores de membro de dados não estáticos. Observe que, se um construtor também inicializa um determinado membro de dados, o inicializador de membro é substituído:  

@@ -1,5 +1,5 @@
 ---
-title: 'Método CriticalSection: | Microsoft Docs'
+title: 'Método CriticalSection:: IsValid | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d004fd43a6cad78df62a19e5b703867a990861f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: add94320728ad21d07a1953f14ac911883580982
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870368"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461230"
 ---
 # <a name="criticalsectionisvalid-method"></a>Método CriticalSection::IsValid
 Indica se a seção crítica atual é válida.  
@@ -34,10 +34,10 @@ bool IsValid() const;
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Por padrão, sempre retorna `true`.  
+ Por padrão, sempre retorna **verdadeira**.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

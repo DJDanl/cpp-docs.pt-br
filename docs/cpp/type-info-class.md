@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4f4a2ac9be9dc68320e5121bc86e5a4280807
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 00939b514c243f673baf7f0997f1ca3860251626
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941035"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462645"
 ---
 # <a name="typeinfo-class"></a>Classe type_info
-O `type_info` classe descreve as informações de tipo geradas no programa pelo compilador. Os objetos dessa classe armazenam efetivamente um ponteiro para um nome do tipo. O `type_info` classe também armazena um valor codificado adequado para comparar dois tipos para igualdade ou ordem de agrupamento. As regras e a sequência de agrupamento de codificação para tipos não são especificados e podem ser diferentes entre os programas.  
+O **type_info** classe descreve as informações de tipo geradas no programa pelo compilador. Os objetos dessa classe armazenam efetivamente um ponteiro para um nome do tipo. O **type_info** classe também armazena um valor codificado adequado para comparar dois tipos para igualdade ou ordem de agrupamento. As regras e a sequência de agrupamento de codificação para tipos não são especificados e podem ser diferentes entre os programas.  
   
- O `<typeinfo>` arquivo de cabeçalho deve ser incluído para usar o `type_info` classe. A interface para o `type_info` classe é:  
+ O `<typeinfo>` arquivo de cabeçalho deve ser incluído para usar o **type_info** classe. A interface para o **type_info** classe é:  
   
 ```cpp
 class type_info {  
@@ -42,11 +42,11 @@ public:
 };  
 ```  
   
- Você não pode instanciar objetos do `type_info` classe diretamente, pois a classe tem apenas um construtor de cópia particular. A única maneira de construir (temporário) `type_info` objeto é usar o [typeid](../cpp/typeid-operator.md) operador. Como o operador de atribuição também é particular, você não pode copiar ou atribuir objetos da classe `type_info`.  
+ Você não pode instanciar objetos do **type_info** classe diretamente, pois a classe tem apenas um construtor de cópia particular. A única maneira de construir (temporário) **type_info** objeto é usar o [typeid](../cpp/typeid-operator.md) operador. Como o operador de atribuição também é particular, você não pode copiar ou atribuir objetos da classe **type_info**.  
   
- `type_info::hash_code` define uma função de hash adequada para mapear valores do tipo `typeinfo` para uma distribuição de valores de índice.  
+ `type_info::hash_code` define uma função de hash adequada para mapear valores do tipo **typeinfo** para uma distribuição de valores de índice.  
   
- Os operadores `==` e `!=` pode ser usado para comparar quanto à igualdade e desigualdade com outros `type_info` objetos, respectivamente.  
+ Os operadores `==` e `!=` pode ser usado para comparar quanto à igualdade e desigualdade com outros **type_info** objetos, respectivamente.  
   
  Não há nenhum link entre a ordem de agrupamento de tipos e relações de herança. Use o `type_info::before` a função de membro para determinar a sequência de agrupamento de tipos. Não há nenhuma garantia de que `type_info::before` gerará o mesmo resultado em programas diferentes ou mesmo em execuções diferentes do mesmo programa. Dessa maneira `type_info::before` é semelhante ao endereço de `(&)` operador.  
   

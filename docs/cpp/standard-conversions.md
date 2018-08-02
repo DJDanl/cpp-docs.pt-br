@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e08daba1e80523e7992f52ec353826bb53417682
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1365e950077a65150d8f71fd640f69d1750068c9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028353"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462304"
 ---
 # <a name="standard-conversions"></a>Conversões padrão
 A linguagem C++ define conversões entre seus tipos básicos. Ela também define conversões para o ponteiro, referência e tipos derivados de ponteiro ao membro. Essas conversões são chamadas de “conversões padrão”. (Para obter mais informações sobre tipos, tipos padrão e tipos derivados, consulte [tipos](http://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -95,7 +95,6 @@ long_num2 = int_num * long_num2;
  Os objetos de tipos integrais com sinal podem ser convertidos nos tipos sem sinal correspondentes. Quando essas conversões ocorrem, o padrão de bits real não se altera; porém, a interpretação dos dados é alterada. Considere este código:  
   
 ```cpp 
-  
 #include <iostream>  
   
 using namespace std;  
@@ -107,7 +106,6 @@ int main()
     cout << (u = i) << "\n";  
 }  
 // Output: 65533  
-  
 ```  
   
  No exemplo anterior, uma **1&gt;signed**, `i`, é definido e inicializado como um número negativo. A expressão `(u = i)` faz com que `i` a ser convertido em um **unsigned short** antes de atribuição para `u`.  
@@ -163,7 +161,6 @@ cout << (float)1E300 << endl;
  O código a seguir ilustra as regras de conversão descritas na tabela:  
   
 ```cpp 
-  
 double dVal;  
 float fVal;  
 int iVal;  
@@ -249,12 +246,12 @@ int main()
  O ponteiro `pA` é do tipo `A *`, o que pode ser interpretado como “ponteiro para um objeto do tipo `A`”. Os membros `bObject` `(`tais como `BComponent` e `BMemberFunc`) são exclusivos ao tipo `B` e, portanto, não estão acessíveis por meio de `pA`. O ponteiro `pA` permite acesso somente às características (funções membro e dados) do objeto que são definidas na classe `A`.  
   
 ### <a name="pointer-to-function"></a>Ponteiro para função  
- Um ponteiro para uma função pode ser convertido no tipo **void \*** , se tipo **void \***  é grande o suficiente para reter esse ponteiro.  
+ Um ponteiro para uma função pode ser convertido no tipo `void *`, se tipo `void *` é grande o suficiente para reter esse ponteiro.  
   
 ### <a name="pointer-to-void"></a>Ponteiro para void  
  Ponteiros para o tipo **void** podem ser convertidos em ponteiros para qualquer outro tipo, mas apenas com uma conversão de tipo explícito (ao contrário do C). (Consulte [expressões com conversões de tipo explícitas](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) para obter mais informações sobre conversões de tipo.) Um ponteiro para qualquer tipo pode ser convertido implicitamente em um ponteiro para o tipo **void**. Um ponteiro para um objeto incompleto de um tipo pode ser convertido em um ponteiro para **void** (implicitamente) e vice-versa (explicitamente). O resultado dessa conversão é igual ao valor do ponteiro original. Um objeto é considerado incompleto se for declarado, mas informações disponíveis o suficiente para determinar seu tamanho ou a classe base.  
   
- Um ponteiro para qualquer objeto que não esteja **const** ou **volátil** pode ser convertido implicitamente em um ponteiro de tipo **void \*** .  
+ Um ponteiro para qualquer objeto que não esteja **const** ou **volátil** pode ser convertido implicitamente em um ponteiro de tipo `void *`.  
   
 ### <a name="const-and-volatile-pointers"></a>ponteiros const e volatile  
  C++ não fornece uma conversão padrão de um **const** ou **volátil** tipo para um tipo que não seja **const** ou **volátil**. No entanto, qualquer tipo de conversão pode ser especificado usando as conversões de tipos explícitas (inclusive as conversões que não são seguras).  

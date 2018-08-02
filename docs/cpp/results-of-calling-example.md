@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e7b022925e22f021a2ddad1b3b9ef52924b25a3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 9c49457aecb93b16ffb294f88e4f6643826492e2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939101"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465681"
 ---
 # <a name="results-of-calling-example"></a>Resultados do exemplo de chamada
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
@@ -32,7 +32,7 @@ ms.locfileid: "37939101"
  O nome decorado de função C é “_MyFunc”.  
   
  ![Convenção de chamada CDECL](../cpp/media/vc37i01.gif "vc37I01")  
-A convenção de chamada __cdecl  
+O **cdecl** convenção de chamada  
   
 ## <a name="stdcall-and-thiscall"></a>__stdcall e thiscall  
  O nome decorado C (**stdcall**) é "_MyFunc@20." O nome decorado C++ é proprietário.  

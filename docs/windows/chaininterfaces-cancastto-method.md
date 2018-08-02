@@ -1,5 +1,5 @@
 ---
-title: 'Método Chaininterfaces: | Microsoft Docs'
+title: 'Método chaininterfaces:: Cancastto | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2286c347fbd68f34fac807e80facca0a0286aa6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5839edd90f61f9f4aa96ea1d921d2179660be554
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860288"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461204"
 ---
 # <a name="chaininterfacescancastto-method"></a>Método ChainInterfaces::CanCastTo
-Indica se a ID de interface especificado pode ser convertida em cada uma das especializações definidas pelos parâmetros de modelo não padrão.  
+Indica se a ID de interface especificado pode ser convertida em cada um dos especializações definidas pelos parâmetros de modelo não padrão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,17 +37,17 @@ __forceinline bool CanCastTo(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `riid`  
+ *riid*  
  Uma ID de interface.  
   
- `ppv`  
+ *ppv*  
  Um ponteiro para a última ID de interface que foi convertido com êxito.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` Se todas as operações de conversão for bem-sucedida; Caso contrário, `false`.  
+ **Verdadeiro** se todas as operações de conversão for bem-sucedida; caso contrário, **falso**.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL  
   

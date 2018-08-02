@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c41e2cf0765c036715377038357d587a755196f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5040319bee3fa74319bb30ca45ff11f2f5d72720
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942351"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465926"
 ---
 # <a name="user-defined-type-conversions-c"></a>Conversões de tipo definido pelo usuário (C++)
 Um *conversão* produz um novo valor de algum tipo de um valor de um tipo diferente. *Conversões padrão* são criados sobre a linguagem C++ e o suporte de seus tipos internos e você pode criar *conversões definidas pelo usuário* para realizar conversões para, de ou entre tipos definidos pelo usuário.  
@@ -79,7 +79,7 @@ Um *conversão* produz um novo valor de algum tipo de um valor de um tipo difere
   
  O **explícita** palavra-chave pode ser aplicada para construtores de conversão desde c++98 e funções de conversão desde c++11. As seções a seguir contêm mais informações sobre como usar o **explícita** palavra-chave.  
   
-##  <a name="ConvCTOR"></a> Construtores de conversão  
+## <a name="ConvCTOR"></a> Construtores de conversão  
  Os construtores de conversão definem conversões de tipos internos ou definidos pelo usuário para um tipo definido pelo usuário. O exemplo a seguir demonstra um construtor de conversão que converte do tipo interno **duplas** para um tipo definido pelo usuário `Money`.  
   
 ```cpp 
@@ -181,7 +181,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << balance << std::endl;  
 }  
-  
 ```  
   
  Observe que a variável de membro `amount` se torna privada e que a função de tipo de uma conversão pública **duplo** é introduzida apenas para retornar o valor de `amount`. Na função `display_balance`, uma conversão implícita ocorre quando o valor de `balance` é transmitido para saída padrão usando o operador de inserção de fluxo `<<`. Como Nenhum operador de inserção de fluxo é definido para o tipo definido pelo usuário `Money`, mas há um para o tipo interno **duplo**, o compilador pode usar a função de conversão de `Money` para **duplo** para atender o operador de inserção de fluxo.  
@@ -226,8 +225,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << (double)balance << std::endl;  
 }  
-  
 ```  
   
  Aqui a função de conversão **operador double** foi feita explícita e uma conversão explícita para o tipo **duplo** foi introduzida na função `display_balance` para realizar a conversão. Se essa conversão for omitida, o compilador será incapaz de localizar um operador de inserção de fluxo adequado `<<` de tipo `Money` e poderá ocorrer um erro.  
-  

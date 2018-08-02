@@ -1,5 +1,5 @@
 ---
-title: 'Método Activationfactory: | Microsoft Docs'
+title: 'Método activationfactory:: QueryInterface | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d93a2f61e92172c94fef2406fc6caa2de71ab8e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c825e7e67844fc094e4cf9ce775152d334664d5a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854496"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465240"
 ---
 # <a name="activationfactoryqueryinterface-method"></a>Método ActivationFactory::QueryInterface
 Recupera um ponteiro para a interface especificada.  
@@ -36,14 +36,14 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `riid`  
+ *riid*  
  Uma ID de interface.  
   
- `ppvObject`  
- Quando essa operação for concluída, um ponteiro para a interface especificada pelo parâmetro `riid`.  
+ *ppvObject*  
+ Quando essa operação for concluída, um ponteiro para a interface especificada pelo parâmetro *riid*.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, o HRESULT que descreve a falha.  
+ S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  

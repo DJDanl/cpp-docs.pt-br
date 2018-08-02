@@ -1,5 +1,5 @@
 ---
-title: 'Método Chaininterfaces: | Microsoft Docs'
+title: 'Método chaininterfaces:: Fillarraywithiid | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e6283b86b8e225771f259df9b5377fffa3667fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bd9f899457c3a6045d7a5525c9fb560e23f10d3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855936"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461030"
 ---
 # <a name="chaininterfacesfillarraywithiid-method"></a>Método ChainInterfaces::FillArrayWithIid
-Armazena a ID de interface definida pelo `I0` parâmetro do modelo em um local especificado em um conjunto especificado de IDs de interface.  
+Armazena a ID de interface definida pelo *I0* parâmetro de modelo em um local especificado em uma matriz especificada de IDs de interface.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,14 +37,14 @@ __forceinline static void FillArrayWithIid(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `index`  
- Ponteiro para um valor de índice para o `iids` matriz.  
+ *index*  
+ Ponteiro para um valor de índice para o *iids* matriz.  
   
- `iids`  
+ *IIDs*  
  Uma matriz de IDs de interface.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL  
   

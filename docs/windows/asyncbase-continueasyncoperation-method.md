@@ -1,5 +1,5 @@
 ---
-title: 'Método: Continueasyncoperation | Microsoft Docs'
+title: 'Método asyncbase:: Continueasyncoperation | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: caf7cd1cbee97761c6877ec6ab3a51ea956cbfd1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7b5d2b10b571a3517beab98eaa839d5c7fd86c2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859586"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460827"
 ---
 # <a name="asyncbasecontinueasyncoperation-method"></a>Método AsyncBase::ContinueAsyncOperation
-Determina se a operação assíncrona deve continuar o processamento ou deve parar.  
+Determina se a operação assíncrona devam continuar o processamento ou deve parar.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +34,7 @@ inline bool ContinueAsyncOperation();
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` Se o estado atual da operação assíncrona é *iniciado*, que significa que a operação deve continuar. Caso contrário, `false`, que significa que a operação deve parar.  
+ **Verdadeiro** se o estado atual da operação assíncrona for *iniciado*, que significa que a operação deve continuar. Caso contrário, **falsos**, que significa que a operação deve parar.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** async.h  

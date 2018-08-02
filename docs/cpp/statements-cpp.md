@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3d3c8f5d9f08c4dce370d49dc5a43bbc45b479e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 87e2e48a7d923811e2c696f0ec8bee72e8327a13
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025751"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464396"
 ---
 # <a name="statements-c"></a>Instruções (C++)
 As instruções em C++ são os elementos do programa que controlam como e em que ordem os objetos são manipulados. Esta seção inclui:  

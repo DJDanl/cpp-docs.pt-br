@@ -1,5 +1,5 @@
 ---
-title: 'Método Asyncbase: | Microsoft Docs'
+title: 'Método asyncbase:: currentStatus | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75b9a07fd88caa9db7f2f145069b0d8857b79fe9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 316dfea16aa129dcaff42424bef46305d2dd56b4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859684"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461423"
 ---
 # <a name="asyncbasecurrentstatus-method"></a>Método AsyncBase::CurrentStatus
 Recupera o status da operação assíncrona atual.  
@@ -36,7 +36,7 @@ inline void CurrentStatus(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `status`  
+ *status*  
  O local em que essa operação armazena o status atual.  
   
 ## <a name="remarks"></a>Comentários  

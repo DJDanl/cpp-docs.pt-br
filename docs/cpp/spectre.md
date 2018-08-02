@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 153ff690b975ecb442c260fcebce73acd32d03fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a51d47764ea4515fcbc2cb3b7aa37fd341cd130e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422404"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463223"
 ---
 # <a name="spectre"></a>spectre
 
 **Seção específica da Microsoft**
 
-Informa ao compilador para não inserir instruções de barreira de execução especulativa Spectre variante 1 para uma função.
+Informa o compilador não inserir instruções de barreira de execução especulativa Spectre variante 1 para uma função.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,12 +37,12 @@ Informa ao compilador para não inserir instruções de barreira de execução e
 
 ## <a name="remarks"></a>Comentários
 
-O [/Qspectre](../build/reference/qspectre.md) opção de compilador faz com que o compilador para inserir instruções de barreira de execução especulativa onde análise indica que existe uma vulnerabilidade de segurança Spectre variante 1. As instruções específicas emitidas dependem do processador. Enquanto essas instruções devem ter um impacto mínimo sobre o tamanho do código ou desempenho, pode haver casos em que seu código não é afetado pela vulnerabilidade e requer que o desempenho máximo.
+O [/Qspectre](../build/reference/qspectre.md) opção de compilador faz com que o compilador a inserir instruções de barreira de execução especulativa onde análise indica que há uma vulnerabilidade de segurança de variante 1 do Spectre. As instruções específicas emitidas dependem do processador. E essas instruções devem ter um impacto mínimo sobre o tamanho do código ou desempenho, pode haver casos em que seu código não é afetado pela vulnerabilidade e exige que o desempenho máximo.
 
-Análise de um especialista pode determinar que uma função é segura de um defeito de bypass Spectre variante 1 limites seleção. Nesse caso, você pode suprimir a geração de código de atenuação dentro de uma função aplicando `__declspec(spectre(nomitigation))` para a declaração da função.
+Análise de um especialista pode determinar que uma função está protegida contra um defeito de bypass de seleção do Spectre variante 1 dos limites. Nesse caso, você pode suprimir a geração de código de mitigação dentro de uma função aplicando `__declspec(spectre(nomitigation))` à declaração da função.
 
 > [!CAUTION]
-> O **/Qspectre** instruções de barreira de execução especulativa fornecer proteção de segurança importantes e ter um efeito mínimo sobre o desempenho. Portanto, recomendamos que você não suprime, exceto em casos raros em que o desempenho de uma função for um problema crítico e a função é comprovadamente segura.
+> O **/Qspectre** instruções de barreira de execução especulativa fornecer proteção de segurança importante e ter uma influência insignificante no desempenho. Portanto, recomendamos que você não suprime, exceto em casos raros em que o desempenho de uma função for um problema crítico e a função é comprovadamente segura.
 
 ## <a name="example"></a>Exemplo
 
@@ -66,7 +66,6 @@ int main() {
 **Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
-
-[__declspec](../cpp/declspec.md)  
-[Palavras-chave](../cpp/keywords-cpp.md)  
-[/Qspectre](../build/reference/qspectre.md)  
+ [__declspec](../cpp/declspec.md)  
+ [Palavras-chave](../cpp/keywords-cpp.md)  
+ [/Qspectre](../build/reference/qspectre.md)  

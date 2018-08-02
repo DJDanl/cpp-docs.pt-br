@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14386e737d136b91f8864eeaa182038b62df72e0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942164"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464156"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Seção específica da Microsoft**  
@@ -32,7 +32,6 @@ ms.locfileid: "37942164"
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 _variant_t( ) throw( );  
   
 _variant_t(  
@@ -200,7 +199,7 @@ _variant_t(
  Uma **int sem sinal** valor a ser copiado no novo `_variant_t` objeto.  
   
  *i8Src*  
- Um _**int64** valor a ser copiado no novo `_variant_t` objeto.  
+ Uma **__int64** valor a ser copiado no novo `_variant_t` objeto.  
   
  *ui8Src*  
  Uma **unsigned __int64** valor a ser copiado no novo `_variant_t` objeto.  
@@ -215,7 +214,7 @@ _variant_t(
   
 -   **{1&gt;_variant_t ( variant_t &***1&gt;Operator=(&lt;1}{2&gt;var_t_src&lt;2}{3&gt;)&lt;3***)** constrói uma `_variant_t` objeto de outro `_variant_t` objeto.     O tipo de variante é mantido.  
   
--   **{1&gt;_variant_t (VARIANT &***1&gt;Operator=(&lt;1}{2&gt;varsrc&lt;2}{3&gt;)&lt;3* **, bool**`fCopy`**)** constrói um `_variant_t` objeto de uma já existente `VARIANT` objeto.       Se `fCopy` está **falsos**, o **VARIANT** objeto é anexado ao novo objeto sem fazer uma cópia.  
+-   **{1&gt;_variant_t (VARIANT &***1&gt;Operator=(&lt;1}{2&gt;varsrc&lt;2}{3&gt;)&lt;3* **, bool**`fCopy`**)** constrói um `_variant_t` objeto de uma já existente `VARIANT` objeto.       Se *fCopy* é **falso**, o **VARIANT** objeto é anexado ao novo objeto sem fazer uma cópia.  
   
 -   **{1&gt;_variant_t (curto***1&gt;Operator=(&lt;1}{2&gt;SSRC&lt;2}{3&gt;)&lt;3* **, VARTYPE**`vtSrc`**= VT_I2)** constrói um `_variant_t` objeto do tipo VT_I2 ou VT_BOOL de um **curto** valor inteiro.       Qualquer outro `VARTYPE` resulta em um erro E_INVALIDARG.  
   

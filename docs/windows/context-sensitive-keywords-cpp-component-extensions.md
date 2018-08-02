@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871517"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466118"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Palavras-chave Contextuais (Extensões de Componentes C++)
 *Palavras-chave contextuais* são elementos de linguagem que são reconhecidos apenas em contextos específicos. Fora do contexto específico, uma palavra-chave contextual pode ser um símbolo definido pelo usuário.  
@@ -46,7 +46,7 @@ ms.locfileid: "33871517"
   
 -   `internal`   
   
--   [Literal](../windows/literal-cpp-component-extensions.md)  
+-   [literal](../windows/literal-cpp-component-extensions.md)  
   
 -   [override](../windows/override-cpp-component-extensions.md)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "33871517"
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
  **Comentários**  
   
- (Não há nenhum comentários específicos de plataforma para esse recurso).  
+ (Não há nenhum comentário específico da plataforma para esse recurso.)  
   
 ### <a name="requirements"></a>Requisitos  
  Opção do compilador: **/ZW**  
@@ -69,7 +69,7 @@ ms.locfileid: "33871517"
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  **Comentários**  
   
- (Não há nenhum comentários específicos de plataforma para esse recurso).  
+ (Não há nenhum comentário específico da plataforma para esse recurso.)  
   
 ### <a name="requirements"></a>Requisitos  
  Opção de compilador: **/clr**  
@@ -77,9 +77,9 @@ ms.locfileid: "33871517"
 ### <a name="examples"></a>Exemplos  
  **Exemplo**  
   
- O exemplo de código a seguir mostra que o contexto apropriado, o `property` palavra-chave contextual que pode ser usado para definir uma propriedade e uma variável.  
+ O exemplo de código a seguir mostra que o contexto apropriado, o **propriedade** palavra-chave contextual pode ser usado para definir uma propriedade e uma variável.  
   
-```  
+```cpp  
 // context_sensitive_keywords.cpp  
 // compile with: /clr  
 public ref class C {  

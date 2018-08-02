@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d8f0c5b2feda3b62dfb17902a281c7e71bd32f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57f6e841326339f78d24fa8affea5e74ae5b8d74
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882323"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465377"
 ---
 # <a name="creatormapfactorycreator-data-member"></a>Membro de dados CreatorMap::factoryCreator
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,20 +38,20 @@ HRESULT (*factoryCreator)(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
- `currentflags`  
- Uma da [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) enumeradores.  
+ *currentflags*  
+ Um dos [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) enumeradores.  
   
- `entry`  
+ *entry*  
  Um CreatorMap.  
   
- `iidClassFactory`  
+ *iidClassFactory*  
  A ID de interface de uma fábrica de classes.  
   
- `factory`  
+ *fábrica*  
  Quando a operação for concluída, o endereço de uma fábrica de classes.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.  
+ S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.  
   
 ## <a name="remarks"></a>Comentários  
  Cria uma fábrica para o CreatorMap especificado.  

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d16d95cc246ad7ef0fe9f03c20e2652fe81aad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb06c23e17f16bdf33fe469327351105d6a4571c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421816"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461043"
 ---
 # <a name="writing-an-exception-handler"></a>Escrevendo um manipulador de exceção
 Normalmente, os manipuladores de exceções são usados para responder a erros específicos. Você pode usar a sintaxe de manipulação de exceções para filtrar todas as exceções que não sejam aquelas que você sabe tratar. Outras exceções devem ser passadas para outros manipuladores (possivelmente na biblioteca em tempo de execução ou no sistema operacional) criados para procurar essas exceções específicas.  
@@ -29,7 +29,7 @@ Normalmente, os manipuladores de exceções são usados para responder a erros e
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
   
--   [Try-except instrução](../cpp/try-except-statement.md)  
+-   [A instrução try-except de instrução](../cpp/try-except-statement.md)  
   
 -   [Escrevendo um filtro de exceção](../cpp/writing-an-exception-filter.md)  
   

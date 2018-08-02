@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 674be7ebd819b48cfdf22376565f2bea90787330
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48c9962c7a0798b9c3fd4d5d9e1af223d41ac552
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939203"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460862"
 ---
 # <a name="unions"></a>Uniões
 Um **união** é um tipo definido pelo usuário na qual todos os membros compartilham o mesmo local da memória. Isso significa que qualquer dado momento uma união pode conter não mais de um objeto da lista de membros. Isso também significa que, independentemente de quantos membros de uma união tem, ela sempre usa apenas memória suficiente para armazenar o membro maior.  
@@ -35,7 +35,7 @@ Um **união** é um tipo definido pelo usuário na qual todos os membros compart
 union [name]  { member-list };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *name*  
  O nome do tipo dado à união.  
   
@@ -149,7 +149,6 @@ void Initialize()
     second.wind = { 204,1418859354, 14, 27 };  
     inputs.push(second);  
 }  
-  
 ```  
   
  No exemplo anterior, observe que a união na estrutura de entrada não tem nome. Isso é uma união anônima e seus membros podem ser acessados como se fossem membros diretos do struct. Para obter mais informações sobre unions anônimas, consulte a seção a seguir.  
@@ -603,7 +602,6 @@ private:
         WindData wind;  
     };  
 };  
-  
 ```  
   
  Uniões não é possível armazenar referências. Uniões não dão suporte a herança, portanto uma união em si não pode ser usada como uma classe base, herda de outra classe ou ter funções virtuais.  
@@ -633,7 +631,6 @@ int main()
  10  
  3.141600  
 */  
-  
 ```  
   
  A união `NumericType` é organizada na memória (conceitualmente) conforme mostrado na figura a seguir.  
@@ -654,7 +651,7 @@ Além das restrições para uniões nomeadas, uniões anônimas estão sujeitos 
   
 -   Eles também devem ser declarados como **estático** se declaradas no escopo de namespace ou arquivo.  
   
--   Podem ter somente membros públicos; os membros particulares e protegidos em uniões anônimas geram erros.  
+-   Eles podem ter apenas **pública** membros; **privados** e **protegido** membros em uniões anônimas geram erros.  
   
 -   Eles não podem ter funções de membro.  
   

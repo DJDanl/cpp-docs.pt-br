@@ -1,35 +1,35 @@
 ---
-title: Trivial, layout padrão, POD e tipos de literal | Microsoft Docs
+title: Trivial, layout padrão, o POD e tipos de literal | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.topic: language-reference
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
-ms.openlocfilehash: 7a80db109df1d9aa25f471312a9ff7103b90df7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 33b24c20c93f9bf0160536f5d6149c073c6ca7a5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424845"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464007"
 ---
-# <a name="trivial-standard-layout-pod-and-literal-types"></a>Trivial, layout padrão, POD e tipos literais
+# <a name="trivial-standard-layout-pod-and-literal-types"></a>Trivial, layout padrão, o POD e tipos de literal
 
-O termo *layout* refere-se ao modo como os membros de um objeto de class, struct ou tipo de união são organizados na memória. Em alguns casos, o layout é bem definido pela especificação de linguagem. Mas, quando uma classe ou estrutura contém alguns recursos de linguagem C++, como classes base virtuais, funções virtuais, membros com controle de acesso diferentes, em seguida, o compilador está livre para escolher um layout. Esse layout pode variar dependendo de quais otimizações estão sendo executadas e em muitos casos objeto talvez não ainda ocupam uma área contígua de memória. Por exemplo, se uma classe possui funções virtual, todas as instâncias dessa classe podem compartilhar uma tabela de função virtual único. Esses tipos de claro são muito úteis, mas também possuem limitações. Como o layout é indefinido não pode ser passados para programas escritos em outras linguagens, como C, e porque eles podem ser não-contíguo que eles não podem ser confiável copiados com funções de nível baixo rápida, como `memcopy` ou serializado em uma rede.
+O termo *layout* se refere a como os membros de um objeto de classe, struct ou tipo de união são organizados na memória. Em alguns casos, o layout é bem definido pela especificação de linguagem. Mas, quando uma classe ou struct contém determinados recursos da linguagem C++, como classes base virtuais, funções virtuais, os membros com controle de acesso diferentes, em seguida, o compilador é livre para escolher um layout. Esse layout pode variar, dependendo de quais otimizações estão sendo executadas e em muitos casos objeto pode não mesmo ocupar uma área contígua da memória. Por exemplo, se uma classe tem funções virtuais, todas as instâncias dessa classe podem compartilhar uma tabela de função virtual único. Esses tipos são obviamente muito útil, mas eles também têm limitações. Como o layout é indefinido não podem ser passados para os programas escritos em outras linguagens, como C, e porque eles podem ser não contíguos que eles não podem ser confiável copiados com funções de nível inferior rápido como `memcopy` ou serializado em uma rede.
 
- Para habilitar compiladores, bem como programas C++ e metaprograms de raciocinar sobre a adequação de qualquer tipo determinado para operações que dependem de um layout específico de memória, C++ 14 introduziu três categorias de simples classes e estruturas: *trivial*, *layout padrão*, e *POD* ou Plain Old Data. A biblioteca padrão tem os modelos de função `is_trivial<T>`, `is_standard_layout<T>` e `is_pod<T>` que determinam se um determinado tipo pertence a uma determinada categoria.
+ Para habilitar metaprograms raciocinar sobre a adequação de qualquer tipo para operações que dependem de um layout de memória específica, bem como programas do C++ e compiladores, C + + 14 introduziu três categorias de classes simples e estruturas: *trivial*, *layout padrão*, e *POD* ou dados antigos simples. A biblioteca padrão tem os modelos de função `is_trivial<T>`, `is_standard_layout<T>` e `is_pod<T>` que determinam se um determinado tipo pertence a uma determinada categoria.
 
-## <a name="trivial-types"></a>Tipos simples
+## <a name="trivial-types"></a>Tipos triviais
 
- Quando uma classe ou estrutura em C++ foi fornecida pelo compilador ou padronizados explicitamente funções de membro especiais, em seguida, ele é um tipo simples. Ele ocupa uma área de memória contígua. Ele pode ter membros com especificadores de acesso diferentes. Em C++, o compilador está livre para escolher como ordenar os membros nessa situação. Portanto, você pode memcopy esses objetos, mas confiável não pode usá-los de um programa em C. Um tipo simples T pode ser copiado para uma matriz de caractere ou caracteres não assinados e com segurança copiado de volta para uma variável de T. Observe que, devido aos requisitos de alinhamento, pode haver bytes de preenchimento entre os membros de tipo.
+ Quando uma classe ou struct em C++ tem fornecido pelo compilador ou usada como padrão explicitamente funções de membro especial, em seguida, ele é um tipo trivial. Ele ocupa uma área de memória contígua. Ele pode ter membros com especificadores de acesso diferentes. No C++, o compilador é livre para escolher como ordenar os membros nessa situação. Portanto, você pode memcopy esses objetos, mas confiável não é possível consumi-los de um programa em C. Um tipo trivial T pode ser copiado para uma matriz de char ou unsigned char e com segurança copiado novamente para uma variável T. Observe que, devido aos requisitos de alinhamento, pode haver bytes de preenchimento entre os membros de tipo.
 
- Tipos simples tem um construtor padrão trivial, o construtor de cópia trivial, o operador de atribuição de cópia trivial e o destruidor trivial. Em cada caso, *trivial* significa que o construtor/operador/destruidor não é fornecido pelo usuário e pertence a uma classe que tem
+ Tipos triviais tem um construtor padrão trivial, o construtor de cópia trivial, o operador de atribuição triviais de cópia e o destruidor trivial. Em cada caso, *trivial* significa que o construtor/operador/destruidor não é fornecido pelo usuário e pertence a uma classe que tem
 
-- Não há funções virtuais ou classes de base virtuais
+- Não há funções virtuais ou classes base virtuais,
 
-- Nenhuma classe base com um correspondente não trivial construtor/operador/destruidor
+- Nenhuma classe base com um correspondente não triviais construtor/operador/destruidor
 
-- Não há membros de dados do tipo de classe com um correspondente não trivial construtor/operador/destruidor
+- Nenhum membro de dados do tipo de classe com um correspondente não triviais construtor/operador/destruidor
 
-Os exemplos a seguir mostram os tipos simples. Em Trivial2, a presença de `Trivial2(int a, int b)` construtor requer que você forneça um construtor padrão. O tipo para a qualificação trivial, você deve explicitamente padrão esse construtor.
+Os exemplos a seguir mostram os tipos triviais. No Trivial2, a presença do `Trivial2(int a, int b)` construtor requer que você forneça um construtor padrão. Para o tipo ser qualificado como trivial, você deve explicitamente que um construtor padrão.
 
 ```cpp
 struct Trivial
@@ -47,28 +47,27 @@ struct Trivial2
    private:
    int j;   // Different access control
 };
-
 ```
 
 ## <a name="standard-layout-types"></a>Tipos de layout padrão
 
- Quando uma classe ou estrutura não tem alguns recursos de linguagem C++, como funções virtuais que não são encontrados na linguagem C, e todos os membros têm o mesmo controle de acesso, ele é um tipo de layout padrão. É capaz de memcopy e o layout é suficientemente definido que podem ser consumido por programas C. Tipos de layout padrão podem ter funções membro especiais definidas pelo usuário. Além disso, os tipos de layout padrão têm as seguintes características:
+ Quando uma classe ou struct não contém determinados recursos da linguagem C++, como funções virtuais que não são encontrados na linguagem C, e todos os membros têm o mesmo controle de acesso, ele é um tipo de layout padrão. Ele é capaz de memcopy e o layout é suficientemente definido que pode ser consumido por programas C. Tipos de layout padrão podem ter funções de membro especiais definidas pelo usuário. Além disso, os tipos de layout padrão tem as seguintes características:
 
-- Não há funções virtuais ou classes de base virtuais
+- Não há funções virtuais ou classes base virtuais
 
-- todos os membros de dados estáticos não têm o mesmo controle de acesso
+- todos os membros de dados não estáticos têm o mesmo controle de acesso
 
-- todos os membros não estáticos de tipo de classe são layout padrão
+- todos os membros não estáticos do tipo de classe são o layout padrão
 
-- todas as classes base são layout padrão
+- as classes base são o layout padrão
 
-- não tem nenhuma classe base do mesmo tipo como o primeiro membro de dados não estáticos.
+- tem sem classes base do mesmo tipo como o primeiro membro de dados não estáticos.
 
 - atende a uma das seguintes condições:
 
-  - Nenhum membro de dados não estático na classe mais derivada e não mais de uma classe base com membros de dados não estático, ou
+  - Nenhum membro de dados não estáticos na classe mais derivada e não mais de uma classe base com membros de dados não estáticos, ou
 
-  - não tem nenhuma classe base com membros de dados não estático
+  - não tem nenhuma classe base com membros de dados não estáticos
 
 O código a seguir mostra um exemplo de um tipo de layout padrão:
 
@@ -80,10 +79,9 @@ struct SL
    int j;
    SL(int a, int b) : i(a), j(b) {} // User-defined constructor OK
 };
-
 ```
 
- Os últimos dois requisitos talvez podem ser ilustrados melhor com o código. No exemplo a seguir, embora Base é layout padrão, `Derived` não é o layout padrão porque equipe de TI (a classe mais derivada) e `Base` ter membros de dados não estático:
+ Os dois últimos requisitos talvez podem ser melhor ilustrados pelo código. No exemplo a seguir, embora Base é layout padrão, `Derived` não é o layout padrão porque ambos os it (a classe mais derivada) e `Base` ter membros de dados não estáticos:
 
 ```cpp
 struct Base
@@ -101,7 +99,7 @@ struct Derived : public Base
 
 ```
 
- Neste exemplo `Derived` é o layout padrão porque `Base` não tem nenhum membro de dados não estático:
+ Neste exemplo `Derived` é o layout padrão porque `Base` não tem nenhum membro de dados não estáticos:
 
 ```cpp
 struct Base
@@ -117,15 +115,15 @@ struct Derived : public Base
 };
 ```
 
- Derivado também seriam layout padrão se `Base` tinha os membros de dados e `Derived` tinha apenas as funções de membro.
+ Derivado também seria layout padrão se `Base` tinha os membros de dados e `Derived` tinha apenas as funções de membro.
 
 ## <a name="pod-types"></a>Tipos POD
 
- Quando uma classe ou estrutura é trivial e layout padrão, é um tipo POD (Plain Old Data). O layout de memória dos tipos POD, portanto, é contíguo e cada membro tem um endereço mais alto que o membro que foi declarado antes, para que o byte por byte copia e binário e/s podem ser executadas nesses tipos.  Tipos escalares como int também são tipos POD. Tipos de POD classes podem ter apenas tipos POD como membros de dados não estáticos.
+ Quando uma classe ou struct é trivial e layout padrão, ele é um tipo POD (dados antigos simples). O layout da memória dos tipos POD, portanto, é contíguo e cada membro tem um endereço mais alto do que o membro que foi declarado antes dele, para que copia de byte por byte e o binário e/s podem ser executadas nesses tipos.  Tipos escalares, como int também são tipos POD. Tipos POD que são classes podem ter apenas tipos POD como membros de dados não estáticos.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra as distinções entre trivial, standard-layout e POD tipos:
+O exemplo a seguir mostra as distinções entre o layout de padrão trivial, e tipos POD:
 
 ```cpp
 #include <type_traits>
@@ -186,19 +184,17 @@ int main()
 
    return 0;
 }
-
 ```
 
 ## <a name="literal_types"></a> Tipos literais
 
-Um tipo literal é uma cujo layout pode ser determinado em tempo de compilação. Esses são os tipos de literal:
+Um tipo de literal é aquele cujo layout pode ser determinado em tempo de compilação. A seguir está os tipos de literais:
 
 - void
 - tipos escalares
 - referências
-- Matrizes de void, escalar tipos ou faz referência
-- Uma classe que tenha um destruidor trivial e um ou mais construtores de constexpr que não são mover ou copiar construtores. Além disso, todas as suas classes base e membros de dados não estáticos devem ser tipos de literal e não volátil.
+- Matrizes de void, tipos escalares ou faz referência
+- Uma classe que tem um destruidor trivial e um ou mais construtores de constexpr que não são movidos ou construtores de cópia. Além disso, todos os seus membros de dados não estáticos e classes base devem ser tipos de literais e não volátil.
 
 ## <a name="see-also"></a>Consulte também
-
  [Conceitos básicos](../cpp/basic-concepts-cpp.md)
