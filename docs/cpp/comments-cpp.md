@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a412c2b4dd87bc3e8e3e1b77a524d2a5925aaf60
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a819c435135d2ee9c310f8fd4a5628d2d9d0acb1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405052"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466807"
 ---
 # <a name="comments-c"></a>Comentários (C++)
 Um comentário é um texto que o compilador ignora, mas que é útil para os programadores. Normalmente, os comentários são usados para fazer anotações no código para fins de referência futura. O compilador os trata como espaço em branco. Você pode usar comentários em testes para tornar certas linhas de código inativo; No entanto, `#if` / `#endif` diretivas de pré-processador funcionam melhor para isso porque você pode envolver o código que contém comentários, mas não é possível aninhar comentários.  
   
- Em C++, um comentário é escrito de uma das seguintes maneiras:  
+Em C++, um comentário é escrito de uma das seguintes maneiras:  
   
 -   Usando os caracteres `/*` (barra, asterisco), seguidos por qualquer sequência de caracteres (inclusive novas linhas), seguidos pelos caracteres `*/`. Essa sintaxe é a mesma do ANSI C.  
   

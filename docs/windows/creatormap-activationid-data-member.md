@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c4ff889f808eda00e5b2ce426cd800678b4829f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70a331bbbf34a623b02e9d8bc9aa0b80fbee2216
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881790"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467125"
 ---
 # <a name="creatormapactivationid-data-member"></a>Membro de dados CreatorMap::activationId
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,11 +37,11 @@ union {
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
- `clsid`  
+ *clsid*  
  Uma ID de interface.  
   
- `getRuntimeName`  
- Uma função que recupera o nome de tempo de execução do Windows de um objeto.  
+ *getRuntimeName*  
+ Uma função que recupera o nome do tempo de execução do Windows de um objeto.  
   
 ## <a name="remarks"></a>Comentários  
  Representa uma ID de objeto é identificada por uma ID de classe do COM clássico ou um nome de tempo de execução do Windows.  

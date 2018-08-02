@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d86c80d169cb6d9794f163290c30bf1b2563588b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 866159a4b3cbacae8b7ad09154fb93707fe4baac
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870891"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467346"
 ---
 # <a name="criticalsectioncriticalsection-constructor"></a>Construtor CriticalSection::CriticalSection
-Inicializa um objeto de sincronização que é semelhante a um objeto mutex, mas pode ser usado por apenas os segmentos de um único processo.  
+Inicializa um objeto de sincronização que é semelhante a um objeto de mutex, mas pode ser usado por apenas os threads de um único processo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,14 +36,14 @@ explicit CriticalSection(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `spincount`  
+ *spincount*  
  A contagem de rotação para o objeto de seção crítica. O valor padrão é 0.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter mais informações sobre seções críticas e spincounts, consulte o **InitializeCriticalSectionAndSpinCount** função na seção de sincronização da documentação do API do Windows.  
+ Para obter mais informações sobre as seções críticas e spincounts, consulte o `InitializeCriticalSectionAndSpinCount` funcionar a **sincronização** seção da documentação de API do Windows.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

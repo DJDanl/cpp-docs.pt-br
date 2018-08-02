@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ce9beccabd06e4182e05e4a1e447db189986ef2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c472ba45042711fc12f3dad07184a393f894e78
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871143"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466771"
 ---
 # <a name="creatormapfactorycache-data-member"></a>Membro de dados CreatorMap::factoryCache
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +34,7 @@ FactoryCache* factoryCache;
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Armazena o ponteiro para o cache de fábrica para o CreatorMap.  
+ Armazena o ponteiro para o cache de fábrica para o **CreatorMap**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  

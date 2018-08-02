@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3efc793e5030fa86c3bd1214ef4b8b408361a4ef
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 77748cd69a3424bb4b2e209a0a447d39eae25147
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409081"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466898"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
 Este tópico é sobre específicos da Microsoft preterido declspec declaração. Para obter informações sobre o c++14 `[[deprecated]]` atributo e diretrizes sobre quando usar esse atributo versus o declspec específico da Microsoft ou o pragma, consulte [atributos padrão do C++](attributes.md).
 
- Com as exceções indicadas abaixo, o **preterido** declaração oferece a mesma funcionalidade que o [preterida](../preprocessor/deprecated-c-cpp.md) pragma:  
+Com as exceções indicadas abaixo, o **preterido** declaração oferece a mesma funcionalidade que o [preterida](../preprocessor/deprecated-c-cpp.md) pragma:  
   
 -   O **preterido** declaração permite especificar formatos específicos de sobrecargas de função como preteridos, enquanto que o formato do pragma se aplica a todos os formatos sobrecarregados de um nome de função.  
   

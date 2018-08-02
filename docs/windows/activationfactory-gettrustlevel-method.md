@@ -1,5 +1,5 @@
 ---
-title: 'Método Activationfactory: | Microsoft Docs'
+title: 'Método activationfactory:: Gettrustlevel | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e4dfbfbc146663722eba1302b27e96812d684f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af3ec58afd69f3fde6e2eb67969f1dad8848c5de
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854383"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466716"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>Método ActivationFactory::GetTrustLevel
-Obtém o nível de confiança do objeto que instancia o ActivationFactory atual.  
+Obtém o nível de confiança do objeto que o atual **ActivationFactory** cria uma instância.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `trustLvl`  
- Quando essa operação for concluída, o nível de confiança da classe de tempo de execução que instancia o ActivationFactory.  
+ *trustLvl*  
+ Quando essa operação for concluída, o nível de confiança do tempo de execução de classe que o **ActivationFactory** cria uma instância.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, um erro de asserção é emitido e `trustLvl` é definido como FullTrust.  
+ S_OK se bem-sucedido; Caso contrário, um erro de asserção é emitido e *trustLvl* é definido como FullTrust.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  

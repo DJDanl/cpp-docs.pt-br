@@ -1,5 +1,5 @@
 ---
-title: 'Método: Putonprogress | Microsoft Docs'
+title: 'Método asyncbase:: Putonprogress | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c12709bdcac615937c938468bcf0e2daca437675
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a9460664ed58cf39f7b295e1406649ad1d66ca9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859781"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467411"
 ---
 # <a name="asyncbaseputonprogress-method"></a>Método AsyncBase::PutOnProgress
 Define o endereço do manipulador de eventos de andamento para o valor especificado.  
@@ -36,8 +36,8 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `progressHandler`  
- O endereço para o qual o manipulador de eventos de andamento está definido.  
+ *progressHandler*  
+ O endereço ao qual o manipulador de eventos de andamento é definido.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se bem-sucedido; Caso contrário, E_ILLEGAL_METHOD_CALL.  

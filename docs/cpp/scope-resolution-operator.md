@@ -1,5 +1,5 @@
 ---
-title: 'Operador de resolução do escopo::: | Microsoft Docs'
+title: 'Operador de resolução de escopo::: | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7caea3a32c0bb983518f7610918c78c8c31c63a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baf3678d204042bdea5e892a6e89d041b5091f38
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420913"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467073"
 ---
 # <a name="scope-resolution-operator-"></a>Operador de resolução do escopo: ::
-O operador de resolução do escopo `::` é utilizado para identificar e remover ambiguidades de identificadores usados em escopos diferentes. Para obter mais informações sobre escopo, consulte [escopo](../cpp/scope-visual-cpp.md).  
+O operador de resolução de escopo **::** é usado para identificar e resolver a ambiguidade de identificadores usados em escopos diferentes. Para obter mais informações sobre escopo, consulte [escopo](../cpp/scope-visual-cpp.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,9 +62,7 @@ int main() {
     // A class name used to disambiguate  
     NamespaceA::ClassA a1;  
     a1.x = 2;  
-  
 }  
-  
 ```  
   
  Um operador de resolução do escopo sem um qualificador de escopo refere-se ao namespace global.  
@@ -101,7 +99,6 @@ namespace NamespaceB {
   
 namespace NamespaceC{  
     using namespace B;  
-  
 }  
 int main() {  
     NamespaceB::ClassB c_b;  
@@ -110,7 +107,6 @@ int main() {
     c_b.x = 3;  
     c_c.x = 4;  
 }  
-  
 ```  
   
  Você pode usar cadeias de operadores de resolução do escopo. No exemplo a seguir, `NamespaceD::NamespaceD1` identifica o namespace aninhado `NamespaceD1` e `NamespaceE::ClassE::ClassE1` identifica a classe aninhada `ClassE1`.  
@@ -123,7 +119,6 @@ namespace NamespaceD{
 }  
   
 namespace NamespaceE{  
-  
     class ClassE{  
     public:  
         class ClassE1{  
@@ -138,7 +133,6 @@ int main() {
     NamespaceE::ClassE::ClassE1 e1;  
     e1.x = 7  ;  
 }  
-  
 ```  
   
 ## <a name="with-static-members"></a>Com membros estáticos  
@@ -158,11 +152,10 @@ int main() {
     int gx1 = ClassG::x;  
     int gx2 = ClassG::get_x();   
 }  
-  
 ```  
   
 ## <a name="with-scoped-enumerations"></a>Com enumerações de escopo  
- O operador de resolução de escopo também é usado com os valores de uma enumeração com escopo [declarações de enumeração](../cpp/enumerations-cpp.md), conforme mostrado no exemplo a seguir:  
+ O operador de resolução do escopo também é usado com os valores de uma enumeração com escopo [declarações de enumeração](../cpp/enumerations-cpp.md), conforme mostrado no exemplo a seguir:  
   
 ```cpp  
 enum class EnumA{  
@@ -172,12 +165,10 @@ enum class EnumA{
 };  
   
 int main() {  
-  
     EnumA enum_value = EnumA::First;  
 }  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Operadores C++ internos, precedência e capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores C++ internos, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Namespaces](../cpp/namespaces-cpp.md)   

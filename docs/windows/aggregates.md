@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19dea3b078f894931002d186b20c1ffb85bb763b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6f931c6930a2c7e4a71e73b7998564432bcbd967
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857981"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466924"
 ---
 # <a name="aggregates"></a>aggregates
 Indica que o objeto agrega o objeto especificado pelo CLSID.  
@@ -33,28 +33,27 @@ Indica que o objeto agrega o objeto especificado pelo CLSID.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ aggregates(  
+[ aggregates(  
    clsid,  
    variable_name  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `clsid`  
+ *clsid*  
  Especifica o CLSID do objeto agregável.  
   
- `variable_name`  
- O nome da variável que deve ser inserido. Essa variável contém o **IUnknown** do objeto que está sendo agregado.  
+ *variable_name*  
+ O nome da variável que deve ser inserido. Essa variável contém o `IUnknown` do objeto que está sendo agregado.  
   
 ## <a name="remarks"></a>Comentários  
- Quando aplicado a um objeto, o **agregações** atributo C++ implementa um wrapper externo para o objeto que está sendo agregado (especificada por `clsid`).  
+ Quando aplicado a um objeto, o **agregações** atributo C++ implementa um wrapper externo para o objeto que está sendo agregado (especificado por `clsid`).  
   
- Este atributo requer que o [coclass](../windows/coclass.md), [progid](../windows/progid.md), ou [vi_progid](../windows/vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicados ao mesmo elemento. Se qualquer atributo único for usado, os outros dois são aplicados automaticamente. Por exemplo, se **progid** é aplicado, **vi_progid** e **coclass** também são aplicadas.  
+ Este atributo exige que o [coclass](../windows/coclass.md), [progid](../windows/progid.md), ou [vi_progid](../windows/vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicadas ao mesmo elemento. Se qualquer atributo único for usado, os outros dois são aplicados automaticamente. Por exemplo, se `progid` for aplicada, `vi_progid` e `coclass` também são aplicadas.  
   
  **Projetos ATL**  
   
- Se esse atributo for usado em um projeto que usa ATL, altera o comportamento do atributo. Primeiro, a seguinte entrada é adicionada ao mapa COM do objeto de destino:  
+ Se esse atributo for usado em um projeto que usa ATL, altera o comportamento do atributo. Em primeiro lugar, a seguinte entrada é adicionada ao mapa de COM do objeto de destino:  
   
 ```  
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)  
@@ -64,7 +63,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_aggregates.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -91,13 +90,13 @@ struct CObject : IObject
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|**class**, `struct`|  
+|**Aplica-se a**|**classe**, **struct**|  
 |**Repetível**|Sim|  
-|**Atributos necessários.**|Um ou mais dos seguintes: **coclass**, **progid**, ou **vi_progid**.|  
+|**Atributos obrigatórios**|Um ou mais das seguintes opções: `coclass`, `progid`, ou `vi_progid`.|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
@@ -107,6 +106,5 @@ struct CObject : IObject
  [Atributos de classe](../windows/class-attributes.md)   
  [TypeDef, Enum, Union e Struct atributos](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Agregação](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
- [agregável](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
+ [Agregável](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
  [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)   
- 

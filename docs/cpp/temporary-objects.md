@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d914b668140f1cbf372e29bcdd4f4b526397fb9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3a34fa07431892493e12a6f38603965da1dbc824
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942132"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466849"
 ---
 # <a name="temporary-objects"></a>Objetos temporários
 Em alguns casos, é necessário que o compilador crie objetos temporários. Esses objetos temporários podem ser criados pelos seguintes motivos:  
@@ -54,4 +54,3 @@ Em alguns casos, é necessário que o compilador crie objetos temporários. Esse
 |------------------------------|-----------------------|  
 |Resultado da avaliação de expressão|Todos os temporaries criados como resultado da avaliação da expressão são destruídos no final da instrução de expressão (ou seja, em que o ponto e vírgula), ou no final das expressões de controle para **para**, **se**, **enquanto**, **fazer**, e **alternar** instruções.|  
 |Inicializando **const** referências|Se um inicializador não for um valor l do mesmo tipo da referência que está sendo inicializada, um temporário do tipo de objeto subjacente será criada e inicializada com a expressão de inicialização. Esse objeto temporário será destruído imediatamente depois que o objeto de referência ao qual está associado é destruído.|  
-  

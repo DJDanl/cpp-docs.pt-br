@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857b10e206e5a4a3208086e5b7b1455f58bc40a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c76aee3ce1e56f60e966094bb2d634269cd5e3a9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856899"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466742"
 ---
 # <a name="asyncuuid"></a>async_uuid
-Especifica o UUID que instrui o compilador MIDL para definir versões síncronas e assíncronas de uma interface COM.  
+Especifica o UUID que direciona o compilador MIDL para definir versões síncronas e assíncronas de uma interface COM.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [async_uuid (  
+[async_uuid (  
    uuid  
 )]  
 ```  
@@ -45,7 +44,7 @@ Especifica o UUID que instrui o compilador MIDL para definir versões síncronas
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_async_uuid.cpp  
 // compile with: /LD  
 #include <Windows.h>  
@@ -59,14 +58,14 @@ __interface ICustom {
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|`interface`|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
-|**Atributos inválidos**|**duplo**, **dispinterface**|  
+|**Atributos obrigatórios**|Nenhum|  
+|**Atributos inválidos**|**dupla**, **dispinterface**|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   

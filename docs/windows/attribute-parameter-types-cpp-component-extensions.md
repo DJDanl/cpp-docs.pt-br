@@ -1,5 +1,5 @@
 ---
-title: Tipos de parâmetro (extensões de componentes C++) de atributo | Microsoft Docs
+title: Atributo de tipos de parâmetro (extensões de componentes C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64da24a9811046672c317c24bba5332bf09303f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 79d89eec82725b28bdbe43f08ac2c05cdb889f6e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860301"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466963"
 ---
 # <a name="attribute-parameter-types--c-component-extensions"></a>Tipos de Parâmetro de Atributo (Extensões de Componentes C++)
 Valores passados para atributos devem ser conhecidos para o compilador em tempo de compilação.  Parâmetros de atributo podem ser dos seguintes tipos:  
   
--   `bool`  
+-   **bool**  
   
--   `char`, `unsigned char`  
+-   **char**, **unsigned char**  
   
--   `short`, `unsigned short`  
+-   **short**, **unsigned short**  
   
--   `int`, `unsigned int`  
+-   **int**, **int sem sinal**  
   
--   `long`, `unsigned long`  
+-   **longo**, **unsigned long**  
   
--   `__int64`, `unsigned __int64`  
+-   **__int64**, **__int64 sem sinal**  
   
--   `float`, `double`  
+-   **float**, **duplo**  
   
--   `wchar_t`  
+-   **wchar_t**  
   
 -   `char*` ou `wchar_t*` ou `System::String*`  
   
@@ -47,13 +47,13 @@ Valores passados para atributos devem ser conhecidos para o compilador em tempo 
   
 -   `System::Object ^`  
   
--   `enum`  
+-   **enum**  
   
 ## <a name="example"></a>Exemplo  
   
 ### <a name="code"></a>Código  
   
-```  
+```cpp  
 // attribute_parameter_types.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -81,7 +81,7 @@ ref struct MyStruct {
   
 ### <a name="code"></a>Código  
   
-```  
+```cpp  
 // extending_metadata_c.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -114,7 +114,7 @@ ref class ClassD {};   // Positional and named
   
 ### <a name="code"></a>Código  
   
-```  
+```cpp  
 // extending_metadata_d.cpp  
 // compile with: /clr /c  
 using namespace System;  

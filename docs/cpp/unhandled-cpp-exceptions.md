@@ -1,5 +1,5 @@
 ---
-title: Exceções C++ sem tratamento | Microsoft Docs
+title: Exceções de C++ sem tratamento | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db763ce602531b15e840013a6dd235b3fba4007e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2e2162034b3e9ff93ebccca0f7eb53299b19c648
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467974"
 ---
 # <a name="unhandled-c-exceptions"></a>Exceções C++ não tratadas
-Se um manipulador correspondente (ou botão de reticências **catch** manipulador) não pode ser encontrado para a exceção atual, predefinida `terminate` é chamada de função de tempo de execução. (Você também pode chamar explicitamente `terminate` em qualquer um dos manipuladores.) A ação padrão de `terminate` é chamar `abort`. Se você quiser que `terminate` chame outra função em seu programa antes de sair do aplicativo, chame a função `set_terminate` com o nome da função a ser chamada como seu único argumento. Você pode chamar `set_terminate` em qualquer momento do programa. O `terminate` rotina sempre chama a função last fornecida como um argumento para `set_terminate`.  
+Se um manipulador correspondente (ou botão de reticências **catch** manipulador) não pode ser encontrado para a exceção atual, predefinida `terminate` tempo de execução de função é chamado. (Você também pode chamar explicitamente `terminate` em qualquer um dos manipuladores.) A ação padrão de `terminate` é chamar `abort`. Se você quiser que `terminate` chame outra função em seu programa antes de sair do aplicativo, chame a função `set_terminate` com o nome da função a ser chamada como seu único argumento. Você pode chamar `set_terminate` em qualquer momento do programa. O `terminate` rotina sempre chama a função last especificada como um argumento para `set_terminate`.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera uma exceção `char *`, mas não contém um manipulador designado para capturar exceções de tipo `char *`. A chamada para `set_terminate` instrui `terminate` a chamar `term_func`.  
   
-```  
+```cpp 
 // exceptions_Unhandled_Exceptions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -55,7 +56,7 @@ int main() {
   
 ## <a name="output"></a>Saída  
   
-```  
+```Output  
 term_func was called by terminate.  
 ```  
   
