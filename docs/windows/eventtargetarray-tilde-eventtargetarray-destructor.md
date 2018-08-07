@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98f18c94a3e18a8e01e6ec58eddd8da702e4d97d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e2d817b803bb26c70390aa6f91c62ce5c28867
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871787"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571093"
 ---
 # <a name="eventtargetarrayeventtargetarray-destructor"></a>Destruidor EventTargetArray::~EventTargetArray
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,10 +34,10 @@ Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente 
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Deinitializes atual `EventTargetArray` classe.  
+ Realiza o desligamento atual **EventTargetArray** classe.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

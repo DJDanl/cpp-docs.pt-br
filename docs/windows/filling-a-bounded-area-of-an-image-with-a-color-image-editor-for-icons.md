@@ -18,32 +18,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f70decbfd0de1a31024482806594ca3c2b12aa8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ae915dbcd9e2190f33e29e236170951fcec3d01
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880563"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569866"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Preenchendo uma área limitada de uma imagem com uma cor (editor de imagens para ícones)
-O editor de imagem fornece o **preencher** colocados de ferramenta para o preenchimento de qualquer área da imagem com a cor de desenho atual ou a cor de plano de fundo atual.  
+O editor de imagens fornece o **preencher** colocados de ferramenta para o preenchimento de qualquer área de imagem com a cor de desenho atual ou a cor de plano de fundo atual.  
   
 > [!TIP]
->  Dicas de ferramenta exibida quando você passar o cursor sobre um botão de barra de ferramentas. Estas dicas podem ajudá-lo a identificar a função de cada botão.  
+>  Dicas de ferramenta aparecem quando você passa o cursor sobre um botão de barra de ferramentas. Estas dicas podem ajudá-lo a identificar a função de cada botão.  
   
 ### <a name="to-use-the-fill-tool"></a>Para usar a ferramenta de preenchimento  
   
-1.  No **Editor de imagem** barra de ferramentas (ou o **imagem** menu **ferramentas** comando), clique no **preencher** ferramenta.  
+1.  Sobre o **Editor de imagens** barra de ferramentas (ou o **imagem** menu, **ferramentas** comando), clique no **preencher** ferramenta.  
   
-2.  Se necessário, escolha as cores de desenho: no [paleta de cores](../windows/colors-window-image-editor-for-icons.md), clique no botão esquerdo do mouse para selecionar uma cor de primeiro plano ou o botão direito do mouse para selecionar uma cor de plano de fundo.  
+2.  Se necessário, escolha as cores de desenho: na [paleta de cores](../windows/colors-window-image-editor-for-icons.md), clique no botão esquerdo do mouse para selecionar uma cor de primeiro plano ou o botão direito do mouse para selecionar uma cor de plano de fundo.  
   
 3.  Mover o **preenchimento** ferramenta para a área que você deseja preencher.  
   
 4.  Clique no botão esquerdo ou direito do mouse para preencher com a cor de primeiro plano ou a cor do plano de fundo, respectivamente.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisitos  
+## <a name="requirements"></a>Requisitos  
   
  Nenhum  
   

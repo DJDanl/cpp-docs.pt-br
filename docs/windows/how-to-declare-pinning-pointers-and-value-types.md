@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40187b7da9083ddaa5342e4bdfeba556fb900e7b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57c6ed79f9ecb74533a7ffaf2861af8bee9e257a
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880378"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569749"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>Como declarar ponteiros de fixação e tipos de valor
-Um tipo de valor pode ser convertido implicitamente. Você pode, em seguida, declarar um ponteiro de fixação para o objeto de tipo de valor em si e use um **pin_ptr** para o tipo de valor Demarcado.  
+Um tipo de valor pode ser convertido implicitamente. Você pode então declarar um ponteiro de fixação para o objeto de tipo de valor em si e use uma **pin_ptr** para o tipo de valor Demarcado.  
   
 ## <a name="example"></a>Exemplo  
   
 ### <a name="code"></a>Código  
   
-```  
+```cpp  
 // pin_ptr_value.cpp  
 // compile with: /clr  
 value struct V {  
@@ -50,7 +50,7 @@ int main() {
   
 ### <a name="output"></a>Saída  
   
-```  
+```Output  
 8  
 7  
 7  

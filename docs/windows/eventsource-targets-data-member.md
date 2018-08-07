@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a35992a5579bf852323f4c01396fab56542f40cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e8782d66683d0a242e5321e8e3a0c8ab24b6f358
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871738"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568843"
 ---
 # <a name="eventsourcetargets-data-member"></a>Membro de dados EventSource::targets_
 Uma matriz de um ou mais manipuladores de eventos.  
@@ -34,10 +34,10 @@ ComPtr<Details::EventTargetArray> targets_;
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Quando ocorre o evento que é representado pelo objeto EventSource atual, os manipuladores de eventos são chamados.  
+ Quando o evento que é representado por atual **EventSource** objeto ocorre, os manipuladores de eventos são chamados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL
  

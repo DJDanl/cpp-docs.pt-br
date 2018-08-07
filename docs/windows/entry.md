@@ -17,44 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db90390be5313ddbea1103105f47b55fe9e23d62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 933fc1db2a890fedd9d725c49bbeb6c363e2f4c8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872309"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569632"
 ---
 # <a name="entry"></a>entry
-Especifica uma função exportada ou uma constante em um módulo, identificando o ponto de entrada na DLL.  
+Especifica uma constante ou uma função exportada em um módulo, identificando o ponto de entrada na DLL.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ entry(  
+[ entry(  
    id  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `id`  
+ *id*  
  A ID do ponto de entrada.  
   
 ## <a name="remarks"></a>Comentários  
  O **entrada** atributo C++ tem a mesma funcionalidade que o [entrada](http://msdn.microsoft.com/library/windows/desktop/aa366815) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- Consulte o exemplo para [idl_module](../windows/idl-module.md) para um exemplo de uso de **entrada**.  
+ Veja o exemplo de [idl_module](../windows/idl-module.md) para um exemplo de uso de **entrada**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Atributo `idl_module`|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  

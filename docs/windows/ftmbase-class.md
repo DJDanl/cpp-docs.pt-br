@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38f30c497fc8640b1f88f4ffb3fc6f14bed55a3e
-ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
+ms.openlocfilehash: ed3e9b9e66f673a3d86ded7b3d576e1203db9595
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814346"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570555"
 ---
 # <a name="ftmbase-class"></a>Classe FtmBase
-Representa um objeto de empacotamento de segmentação livre.  
+Representa um objeto livre de marshaler.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 class FtmBase : public Microsoft::WRL::Implements<  
    Microsoft::WRL::RuntimeClassFlags<WinRtClassicComMix>,   
    Microsoft::WRL::CloakedIid<IMarshal> >;  
@@ -45,25 +44,25 @@ class FtmBase : public Microsoft::WRL::Implements<
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor FtmBase::FtmBase](../windows/ftmbase-ftmbase-constructor.md)|Inicializa uma nova instância da classe FtmBase.|  
+|[Construtor FtmBase::FtmBase](../windows/ftmbase-ftmbase-constructor.md)|Inicializa uma nova instância dos **FtmBase** classe.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
 |[Método FtmBase::CreateGlobalInterfaceTable](../windows/ftmbase-createglobalinterfacetable-method.md)|Cria uma tabela de interface global (GIT).|  
-|[Método FtmBase::DisconnectObject](../windows/ftmbase-disconnectobject-method.md)|Forçar libera todas as conexões externas para um objeto. Servidor do objeto chama a implementação do objeto do método antes de desligar.|  
-|[Método FtmBase::GetMarshalSizeMax](../windows/ftmbase-getmarshalsizemax-method.md)|Obter o limite superior no número de bytes necessários para realizar marshaling do ponteiro de interface especificado no objeto especificado.|  
-|[Método FtmBase::GetUnmarshalClass](../windows/ftmbase-getunmarshalclass-method.md)|Obtém o CLSID COM usa para localizar a DLL que contém o código para o proxy correspondente. COM carrega dessa DLL para criar uma instância não inicializada do proxy.|  
-|[Método FtmBase::MarshalInterface](../windows/ftmbase-marshalinterface-method.md)|Grava em um fluxo de dados necessários para inicializar um objeto de proxy em algum processo do cliente.|  
-|[Método FtmBase::ReleaseMarshalData](../windows/ftmbase-releasemarshaldata-method.md)|Destrói um pacote de dados empacotado.|  
-|[Método FtmBase::UnmarshalInterface](../windows/ftmbase-unmarshalinterface-method.md)|Inicializa um proxy criado recentemente e retorna um ponteiro de interface de proxy.|  
+|[Método FtmBase::DisconnectObject](../windows/ftmbase-disconnectobject-method.md)|Libera forçadamente todas as conexões externas para um objeto. Servidor do objeto chama a implementação do objeto desse método antes de desligar.|  
+|[Método FtmBase::GetMarshalSizeMax](../windows/ftmbase-getmarshalsizemax-method.md)|Obtenha o limite superior no número de bytes necessários para realizar marshaling do ponteiro de interface especificado no objeto especificado.|  
+|[Método FtmBase::GetUnmarshalClass](../windows/ftmbase-getunmarshalclass-method.md)|Obtém o CLSID que COM usa para localizar a DLL que contém o código para o proxy correspondente. COM carrega essa DLL para criar uma instância não inicializada do proxy.|  
+|[Método FtmBase::MarshalInterface](../windows/ftmbase-marshalinterface-method.md)|Grava os dados necessários para inicializar um objeto de proxy em algum processo do cliente em um fluxo.|  
+|[Método FtmBase::ReleaseMarshalData](../windows/ftmbase-releasemarshaldata-method.md)|Destrói um pacote de dados com marshaling.|  
+|[Método FtmBase::UnmarshalInterface](../windows/ftmbase-unmarshalinterface-method.md)|Inicializa um proxy recém-criado e retorna um ponteiro de interface para esse proxy.|  
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Membro de dados FtmBase::marshaller_](../windows/ftmbase-marshaller-data-member.md)|Contém uma referência para o marshaler livre de threads.|  
+|[Membro de dados FtmBase::marshaller_](../windows/ftmbase-marshaller-data-member.md)|Contém uma referência para o marshaler livre.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `FtmBase`  

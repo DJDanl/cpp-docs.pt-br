@@ -15,23 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb322f83163a9faf3314990baabbd0a34f1a67ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc55ab1dad4ee9ba088aaae92f76e58b29683b29
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881163"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569798"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Operador Handle to Object (^) (Extensões de Componentes C++)
-O *tratar declarador* (`^`, ou "hat"), modifica o tipo [especificador](../cpp/overview-of-declarators.md) significa que o objeto declarado deve ser excluído automaticamente quando o sistema determina que o objeto é não é mais acessível.  
+O *manipular declarador* (`^`, pronunciado "hat"), modifica o tipo [especificador](../cpp/overview-of-declarators.md) para significar que o objeto declarado deve ser excluído automaticamente quando o sistema determina que o objeto é não é mais acessível.  
   
 ## <a name="accessing-the-declared-object"></a>Acessando o objeto declarado  
- Uma variável declarada com o identificador declarador se comporta como um ponteiro para o objeto. No entanto, o variável aponta para o objeto inteiro, não pode apontar para um membro do objeto e não dá suporte a aritmética de ponteiro. Use o operador de indireção (`*`) para acessar o objeto e o operador de acesso de membro de seta (`->`) para acessar um membro do objeto.  
+ Uma variável que é declarada com o declarator se comporta como um ponteiro para o objeto. No entanto, o variável aponta para o objeto inteiro, não pode apontar para um membro do objeto, e não oferece suporte a aritmética de ponteiro. Use o operador de indireção (`*`) para acessar o objeto e o operador de acesso de membro de seta (`->`) para acessar um membro do objeto.  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
- O compilador usa o COM *contagem de referência* mecanismo para determinar se o objeto não está mais sendo usado e pode ser excluído. Isso é possível porque um objeto que é derivado de uma interface de tempo de execução do Windows é realmente um objeto COM. A contagem de referência é incrementada quando o objeto é criado ou copiado e reduzido quando o objeto é definido como null ou sai do escopo. Se a contagem de referência chegar a zero, o objeto é automaticamente e imediatamente excluído.  
+ O compilador usa o COM *contagem de referência* mecanismo para determinar se o objeto não está sendo usado e pode ser excluído. Isso é possível porque um objeto que é derivado de uma interface de tempo de execução do Windows é realmente um objeto COM. A contagem de referência é incrementada quando o objeto é criado ou copiado e diminuído quando o objeto é definido como nulo ou sai do escopo. Se a contagem de referência chegar a zero, o objeto é automaticamente e imediatamente excluído.  
   
- A vantagem de declarador o identificador é que, em COM você deve gerenciar explicitamente a contagem de referência para um objeto, que é um processo propenso entediante e erro. Ou seja, para incrementar e decrementar a contagem de referência, você deve chamar os métodos de AddRef e Release () do objeto. No entanto, se você declarar um objeto com o declarador de identificador, o compilador do Visual C++ gera código que se ajusta automaticamente a contagem de referência.  
+ A vantagem do declarator é que, no COM é necessário gerenciar explicitamente a contagem de referência para um objeto, que é um processo propenso entediante e erro. Ou seja, para incrementar e reduzir a contagem de referência, você deve chamar os métodos do objeto AddRef e Release (). No entanto, se você declarar um objeto com o declarator, o compilador do Visual C++ gera o código que ajusta automaticamente a contagem de referência.  
   
  Para obter informações sobre como criar uma instância de um objeto, consulte [ref novo](../windows/ref-new-gcnew-cpp-component-extensions.md).  
   
@@ -39,20 +39,20 @@ O *tratar declarador* (`^`, ou "hat"), modifica o tipo [especificador](../cpp/ov
  Opção do compilador: **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- O sistema usa o CLR *coletor de lixo* mecanismo para determinar se o objeto não está mais sendo usado e pode ser excluído. O common language runtime mantém uma pilha em que ele aloca objetos e referências gerenciado usa (variáveis) em seu programa indicam o local dos objetos no heap. Quando um objeto não é mais usado, a memória ocupado por ele no heap será liberada. Periodicamente, o coletor de lixo compacta heap para melhor uso de memória liberada. A compactação de heap pode mover objetos no heap, o que invalida o locais referenciado por referências gerenciadas. No entanto, o coletor de lixo está ciente do local de todas as referências gerenciadas e os atualiza automaticamente para indicar o local atual dos objetos no heap.  
+ O sistema usa o CLR *coletor de lixo* mecanismo para determinar se o objeto não está sendo usado e pode ser excluído. O common language runtime mantém uma heap em que atribui objetos, e usa referências gerenciadas (variáveis) em seu programa indicam o local dos objetos no heap. Quando um objeto não é mais usado, a memória ocupada pelo mesmo na heap é liberada. Periodicamente, o coletor de lixo compacta a heap para melhorar o uso da memória liberada. Compactar a heap poderá mover os objetos na heap, o que invalida o locais referenciado por referências gerenciadas. No entanto, o coletor de lixo está ciente do local de todas as referências gerenciadas e as atualiza automaticamente para indicar o local atual dos objetos no heap.  
   
- Como ponteiros nativos do C++ (`*`) e referências (`&`) não são gerenciadas referências, o coletor de lixo não pode atualizar automaticamente os endereços que eles apontem para. Para resolver esse problema, use o declarador de identificador para especificar uma variável que o coletor de lixo está ciente de e pode atualizar automaticamente.  
+ Como ponteiros nativos do C++ (`*`) e as referências (`&`) são referências não gerenciadas, o coletor de lixo não pode atualizar automaticamente os endereços que eles apontem para. Para resolver esse problema, use o declarator para especificar uma variável que o coletor de lixo está ciente e pode ser atualizada automaticamente.  
   
- No Visual C++ 2002 e 2003 do Visual C++, `__gc *` foi usado para declarar um objeto no heap gerenciado.  O `^` substitui `__gc *` na nova sintaxe.  
+ No Visual C++ 2002 e Visual C++ 2003, `__gc *` foi usado para declarar um objeto no heap gerenciado.  O `^` substitui `__gc *` na nova sintaxe.  
   
  Para obter mais informações, consulte [como: declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).  
   
 ### <a name="examples"></a>Exemplos  
  **Exemplo**  
   
- Este exemplo mostra como criar uma instância de um tipo de referência no heap gerenciado.  Este exemplo também mostra que você pode inicializar um identificador com outra, resultando em duas referências para o mesmo objeto no heap gerenciado, coletados como lixo. Observe que atribuir [nullptr](../windows/nullptr-cpp-component-extensions.md) um identificador não marca o objeto para coleta de lixo.  
+ Este exemplo mostra como criar uma instância de um tipo de referência na heap gerenciada.  Este exemplo também mostra que você pode inicializar um identificador com outro, resultando em duas referências ao mesmo objeto na heap gerenciada, coleta de lixo. Observe que atribuir [nullptr](../windows/nullptr-cpp-component-extensions.md) a uma alça não marca o objeto para coleta de lixo.  
   
-```  
+```cpp  
 // mcppv2_handle.cpp  
 // compile with: /clr  
 ref class MyClass {  
@@ -86,9 +86,9 @@ int main() {
   
  **Exemplo**  
   
- O exemplo a seguir mostra como declarar um identificador para um objeto no heap gerenciado, onde o tipo de objeto é um tipo de valor Demarcado. O exemplo também mostra como obter o tipo de valor do objeto Demarcado.  
+ O exemplo a seguir mostra como declarar um identificador para um objeto na heap gerenciada, onde o tipo de objeto é um tipo de valor Demarcado. O exemplo também mostra como obter o tipo de valor do objeto convertido.  
   
-```  
+```cpp  
 // mcppv2_handle_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -120,9 +120,9 @@ Not a boxed int
   
  **Exemplo**  
   
- Este exemplo mostra que o idioma C++ comuns de usar um ponteiro void * para apontar para um objeto arbitrário é substituído pelo objeto ^, que pode conter um identificador para qualquer classe de referência. Ele também mostra que todos os tipos, como matrizes e delegados, podem ser convertidos em um identificador de objeto.  
+ Este exemplo mostra que a linguagem C++ comuns de usar um ponteiro void * para apontar para um objeto arbitrário foi substituída por Object ^, que pode conter um identificador para qualquer classe de referência. Ele também mostra que todos os tipos, como matrizes e representantes, podem ser convertidos em um identificador de objeto.  
   
-```  
+```cpp  
 // mcppv2_handle_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -169,9 +169,9 @@ Type is MyDel
   
  **Exemplo**  
   
- Este exemplo mostra que um identificador de referência pode ser cancelado e que um membro pode ser acessado por meio de um identificador desreferenciado.  
+ Este exemplo mostra que um identificador pode ser desreferenciado e que um membro pode ser acessado por meio de um identificador desreferenciado.  
   
-```  
+```cpp  
 // mcppv2_handle_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -219,9 +219,9 @@ Cannot access array element 11, size is 10
   
  **Exemplo**  
   
- Este exemplo mostra que uma referência nativa (`&`) não é possível associar um `int` membro de um tipo gerenciado, como o `int` podem ser armazenados no heap lixo coletado e referências nativo não acompanham os movimentos de objeto no heap gerenciado. A correção é usar uma variável local ou para alterar `&` para `%`, tornando-a como uma referência de rastreamento.  
+ Este exemplo mostra que uma referência nativa (`&`) não é possível associar a uma `int` membro de um tipo gerenciado, como o `int` pode ser armazenado na heap do lixo coletado e referências nativas não acompanham o movimento do objeto no heap gerenciado. A correção é usar uma variável local ou para alterar `&` para `%`, tornando-o uma referência de rastreamento.  
   
-```  
+```cpp  
 // mcppv2_handle_5.cpp  
 // compile with: /clr  
 ref struct A {  
@@ -242,8 +242,8 @@ int main() {
 ```  
   
 ### <a name="requirements"></a>Requisitos  
- Opção de compilador: **/clr**  
+ Opção do compilador: `/clr`  
   
 ## <a name="see-also"></a>Consulte também  
  [Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)   
- [Operador de referência de rastreamento](../windows/tracking-reference-operator-cpp-component-extensions.md)
+ [Operador de referência de acompanhamento](../windows/tracking-reference-operator-cpp-component-extensions.md)

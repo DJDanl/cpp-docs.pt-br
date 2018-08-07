@@ -1,5 +1,5 @@
 ---
-title: 'Método EventSource: | Microsoft Docs'
+title: 'Método EventSource:: Add | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92af8746b4d2b5ba2f379cc8660b5345b2c5f175
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 90750f965768d5ecda40e074f9a136407613d2d2
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873232"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570372"
 ---
 # <a name="eventsourceadd-method"></a>Método EventSource::Add
-Anexa o manipulador de eventos representado pela interface delegado especificado para o conjunto de manipuladores de eventos para o objeto de EventSource atual.  
+Acrescenta o manipulador de eventos representado pela interface delegado especificado ao conjunto de manipuladores de eventos para o atual **EventSource** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,18 +36,18 @@ HRESULT Add(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `delegateInterface`  
- A interface para um objeto de representante, que representa um manipulador de eventos.  
+### <a name="parameters"></a>Parâmetros  
+ *delegateInterface*  
+ A interface para um objeto delegado, que representa um manipulador de eventos.  
   
- `token`  
- Quando essa operação for concluída, um identificador que representa o evento. Usar esse token como parâmetro para o [remove](../windows/eventsource-remove-method.md) método para descartar o manipulador de eventos.  
+ *token*  
+ Quando essa operação for concluída, um identificador que representa o evento. Usar esse token como o parâmetro para o [remove ()](../windows/eventsource-remove-method.md) método para descartar o manipulador de eventos.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.  
+ S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL
  

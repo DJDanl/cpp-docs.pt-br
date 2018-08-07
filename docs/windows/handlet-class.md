@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a596bf1e086ac7b1a1a72c3504ce4f41844ba4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87a8718971a2da008b03dca1e9653d8454115adb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876144"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570591"
 ---
 # <a name="handlet-class"></a>Classe HandleT
 Representa um identificador para um objeto.  
@@ -36,9 +36,9 @@ template <
 class HandleT;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `HandleTraits`  
- Uma instância do [HandleTraits](../windows/handletraits-structure.md) estrutura que define as características de um identificador.  
+### <a name="parameters"></a>Parâmetros  
+ *HandleTraits*  
+ Uma instância das [HandleTraits](../windows/handletraits-structure.md) estrutura que define as características comuns de um identificador.  
   
 ## <a name="members"></a>Membros  
   
@@ -52,42 +52,42 @@ class HandleT;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor HandleT::HandleT](../windows/handlet-handlet-constructor.md)|Inicializa uma nova instância da classe HandleT.|  
-|[Destruidor HandleT::~HandleT](../windows/handlet-tilde-handlet-destructor.md)|Deinitializes uma instância da classe HandleT.|  
+|[Construtor HandleT::HandleT](../windows/handlet-handlet-constructor.md)|Inicializa uma nova instância dos **HandleT** classe.|  
+|[Destruidor HandleT::~HandleT](../windows/handlet-tilde-handlet-destructor.md)|Realiza o desligamento de uma instância das **HandleT** classe.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método HandleT::Attach](../windows/handlet-attach-method.md)|Associa o identificador especificado ao objeto HandleT atual.|  
-|[Método HandleT::Close](../windows/handlet-close-method.md)|Fecha o objeto HandleT atual.|  
-|[Método HandleT::Detach](../windows/handlet-detach-method.md)|Desassocia o objeto HandleT atual de seu identificador subjacente.|  
+|[Método HandleT::Attach](../windows/handlet-attach-method.md)|Associa o identificador especificado com o atual **HandleT** objeto.|  
+|[Método HandleT::Close](../windows/handlet-close-method.md)|Fecha o atual **HandleT** objeto.|  
+|[Método HandleT::Detach](../windows/handlet-detach-method.md)|Desassocia o atual **HandleT** objeto a partir de seu identificador subjacente.|  
 |[Método HandleT::Get](../windows/handlet-get-method.md)|Obtém o valor do identificador subjacente.|  
-|[Método HandleT::IsValid](../windows/handlet-isvalid-method.md)|Indica se o objeto HandleT atual representa um identificador.|  
+|[Método HandleT::IsValid](../windows/handlet-isvalid-method.md)|Indica se o atual **HandleT** objeto representa um identificador.|  
   
 ### <a name="protected-methods"></a>Métodos Protegidos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método HandleT::InternalClose](../windows/handlet-internalclose-method.md)|Fecha o objeto HandleT atual.|  
+|[Método HandleT::InternalClose](../windows/handlet-internalclose-method.md)|Fecha o atual **HandleT** objeto.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Operador HandleT::operator=](../windows/handlet-operator-assign-operator.md)|Move o valor do objeto HandleT especificado para o objeto HandleT atual.|  
+|[Operador HandleT::operator=](../windows/handlet-operator-assign-operator.md)|Move o valor de especificado **HandleT** objeto atual **HandleT** objeto.|  
   
 ### <a name="protected-data-members"></a>Membros de dados protegidos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Membro de dados HandleT::handle_](../windows/handlet-handle-data-member.md)|Contém o identificador que é representado pelo objeto HandleT.|  
+|[Membro de dados HandleT::handle_](../windows/handlet-handle-data-member.md)|Contém o identificador que é representado pela **HandleT** objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `HandleT`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

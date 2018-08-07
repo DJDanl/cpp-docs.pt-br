@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0caad909803a0f73987f3e1132920b0948d8d1b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f8126d4a31863ab556295946ffc170fc49f7d98
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881891"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569505"
 ---
 # <a name="handlethandlet-constructor"></a>Construtor HandleT::HandleT
-Inicializa uma nova instância da classe HandleT.  
+Inicializa uma nova instância dos **HandleT** classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,15 +40,15 @@ HandleT(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `h`  
+### <a name="parameters"></a>Parâmetros  
+ *h*  
  Um identificador.  
   
 ## <a name="remarks"></a>Comentários  
- O primeiro construtor inicializa um objeto de HandleT que não é um identificador válido para um objeto. O segundo construtor cria um novo objeto de HandleT do parâmetro `h`.  
+ O primeiro construtor inicializa um **HandleT** objeto que não é um identificador válido para um objeto. O segundo construtor cria um novo **HandleT** objeto de parâmetro *h*.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

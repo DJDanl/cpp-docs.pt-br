@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4873e2a0ccd3b6e3b3c274203e952552d220bb85
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 80fcd19d07387bd8f9a7c2a8107f0d84a07f8540
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871899"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568975"
 ---
 # <a name="handlethandle-data-member"></a>Membro de dados HandleT::handle_
-Contém o identificador que é representado pelo objeto HandleT.  
+Contém o identificador que é representado pela **HandleT** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +34,7 @@ typename HandleTraits::Type handle_;
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

@@ -1,5 +1,5 @@
 ---
-title: origem do evento | Microsoft Docs
+title: EVENT_SOURCE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7e7e287d68bac0fe69417fe21df27ed3231cce6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e44b5757ea7b9e469275688443ba7ed1e3810571
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879366"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571383"
 ---
 # <a name="eventsource"></a>origem do evento
 Cria uma origem de evento.  
@@ -35,16 +35,15 @@ Cria uma origem de evento.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ event_source(  
+[ event_source(  
    type,  
    optimize=[speed | size],  
    decorate=[true | false]  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `type`  
+### <a name="parameters"></a>Parâmetros  
+ *type*  
  Uma enumeração de um dos seguintes valores:  
   
 -   `native` para código C/C++ não gerenciado (padrão para classes não gerenciadas).  
@@ -57,29 +56,29 @@ Cria uma origem de evento.
     #include <atlcom.h>  
     ```  
   
- **optimize**  
- Quando `type` é **nativo**, você pode especificar **otimizar = tamanho**, para indicar que há 4 bytes de armazenamento (mínimo) para todos os eventos em uma classe ou **otimizar = velocidade** (o padrão) para indicar que há 4 * bytes (número de eventos) de armazenamento.  
+ *optimize*  
+ Quando *tipo* é `native`, você pode especificar `optimize=size`, para indicar que há 4 bytes de armazenamento (mínimo) para todos os eventos em uma classe ou `optimize=speed` (o padrão) para indicar que há 4 * bytes (n º de eventos) de armazenamento.  
   
- **Decore**  
- Quando `type` é **nativo**, você pode especificar **decorar = false**, para indicar que o nome expandido no arquivo mesclado (. mrg) não deve incluir o nome da classe delimitador. [/FX](../build/reference/fx-merge-injected-code.md) permite a geração de arquivos. mrg. **Decore = false**, que é o padrão, o que resulta em nomes de tipo totalmente qualificado no arquivo mesclado.  
+ *Decore*  
+ Quando *tipo* é `native`, você pode especificar `decorate=false`, para indicar que o nome expandido no arquivo mesclado (. mrg) não deve incluir o nome da classe delimitadora. [/FX](../build/reference/fx-merge-injected-code.md) permite gerar arquivos. mrg. `decorate=false`, que é o padrão, o que resulta em nomes de tipo totalmente qualificado no arquivo mesclado.  
   
 ## <a name="remarks"></a>Comentários  
- O **event_source** atributo C++ Especifica que a classe ou estrutura ao qual ela é aplicada será uma fonte de evento.  
+ O **event_source** atributo C++ Especifica que a classe ou estrutura à qual ela é aplicada estejam uma origem do evento.  
   
- **origem do evento** é usada em conjunto com o [event_receiver](../windows/event-receiver.md) atributo e o [Event](../cpp/event.md) palavra-chave. Use **event_receiver** criar receptores de evento. Use `__event` em métodos dentro da fonte de evento para especificar os métodos de eventos.  
+ **EVENT_SOURCE** é usado em conjunto com o [event_receiver](../windows/event-receiver.md) atributo e o [Event](../cpp/event.md) palavra-chave. Use `event_receiver` para criar receptores de evento. Use **Event** nos métodos dentro da fonte de evento para especificar esses métodos como eventos.  
   
 > [!NOTE]
 >  Uma classe ou um struct modelo não podem conter eventos.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|**class**, `struct`|  
+|**Aplica-se a**|**classe**, **struct**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|**coclass** quando `type` = **com**|  
+|**Atributos obrigatórios**|**coclass** quando `type`=`com`|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  

@@ -18,28 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da74cce5f41c3399fb102180cfdfe8c1215c8bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7e2476111ad5c0aaaeb5bed6fe8e806b4930071
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877560"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571510"
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>Como melhorar o desempenho com genéricos (Visual C++)
-Com genéricos, você pode criar com base em um parâmetro de tipo de código reutilizável. O tipo real do parâmetro de tipo é adiado até que a chamada pelo código do cliente. Para obter mais informações sobre genéricos, consulte [genéricos](../windows/generics-cpp-component-extensions.md).  
+Com genéricos, você pode criar códigos reutilizáveis, com base em um parâmetro de tipo. O tipo real do parâmetro de tipo é adiado até que a chamada pelo código do cliente. Para obter mais informações sobre os genéricos, consulte [genéricos](../windows/generics-cpp-component-extensions.md).  
   
  Este artigo discutirá como genéricos podem ajudar a aumentar o desempenho de um aplicativo que usa coleções.  
   
 ## <a name="example"></a>Exemplo  
- O .NET Framework vem com muitas classes de coleção no <xref:System.Collections?displayProperty=fullName> namespace. A maioria dessas coleções operar em objetos do tipo <xref:System.Object?displayProperty=fullName>. Isso permite que a coleções armazenar qualquer tipo, desde que todos os tipos do .NET Framework, mesmo em tipos de valor derivam <xref:System.Object?displayProperty=fullName>. No entanto, há duas desvantagens dessa abordagem.  
+ O .NET Framework vem com muitas classes de coleção no <xref:System.Collections?displayProperty=fullName> namespace. A maioria dessas coleções opera em objetos do tipo <xref:System.Object?displayProperty=fullName>. Isso permite que a coleções armazenar qualquer tipo, desde que todos os tipos no .NET Framework, até mesmo em tipos de valor derivam <xref:System.Object?displayProperty=fullName>. No entanto, há duas desvantagens nessa abordagem.  
   
- Primeiro, se a coleção está armazenando os tipos de valor como inteiros, o valor deve ser boxed antes de serem adicionados à coleção e desencaixotado quando o valor é recuperado da coleção. Essas são operações caras.  
+ Primeiro, se a coleção está armazenando os tipos de valores como inteiros, o valor deve ser boxed antes de serem adicionados à coleção e unboxed quando o valor é recuperado da coleção. Essas são operações caras.  
   
- Segundo, não há nenhuma maneira de controlar quais tipos podem ser adicionados a uma coleção. É permitido adicionar um número inteiro e uma cadeia de caracteres para a mesma coleção, mesmo que esse é provavelmente não o pretendido. Portanto, em ordem para que seu código seja de tipo seguro, é necessário que verificar se o tipo recuperado da coleção é realmente o que era esperado.  
+ Em segundo lugar, não há nenhuma maneira de controlar quais tipos podem ser adicionados a uma coleção. É permitido adicionar um número inteiro e uma cadeia de caracteres na mesma coleção, mesmo que esse é provavelmente não é o pretendido. Portanto, para o seu código seja fortemente tipado que, é necessário que verificar se o tipo recuperado da coleção é realmente o que era esperado.  
   
- O exemplo de código a seguir mostra as duas principais desvantagens das coleções do .NET Framework antes de genéricos.  
+ O exemplo de código a seguir mostra as duas principais desvantagens das coleções do .NET Framework anterior aos genéricos.  
   
-```  
+```cpp  
 // perf_pre_generics.cpp  
 // compile with: /clr  
   
@@ -87,11 +87,11 @@ Popped an int: 7
 ```  
   
 ## <a name="example"></a>Exemplo  
- O novo <xref:System.Collections.Generic?displayProperty=fullName> namespace contém muitas das coleções mesmo encontradas no <xref:System.Collections?displayProperty=fullName> namespace, mas eles foram modificadas para aceitar parâmetros de tipo genérico. Isso elimina as duas desvantagens coleções não genéricas: a conversão boxing e unboxing de tipos de valor e a incapacidade de especificar os tipos a ser armazenado nas coleções. Operações em duas coleções são idênticas; elas diferem apenas em como eles são instanciados.  
+ O novo <xref:System.Collections.Generic?displayProperty=fullName> namespace contém muitas das mesmas coleções encontradas no <xref:System.Collections?displayProperty=fullName> namespace, mas eles foram modificadas para aceitar parâmetros de tipo genérico. Isso elimina duas desvantagens de coleções não genéricas: a conversão boxing e unboxing de tipos de valor e a incapacidade de especificar os tipos a ser armazenado nas coleções. Operações em duas coleções são idênticas; elas diferem apenas em como eles são instanciados.  
   
- Compare o exemplo descrito acima com este exemplo que usa um genérico <xref:System.Collections.Generic.Stack%601> coleção. Em grandes coleções que são acessadas com frequência, o desempenho deste exemplo pode ser significativamente maior do que o exemplo anterior.  
+ Compare o exemplo escrito acima com este exemplo que usa um genérico <xref:System.Collections.Generic.Stack%601> coleção. Em grandes coleções que são acessadas com frequência, o desempenho deste exemplo será significativamente maior do que o exemplo anterior.  
   
-```  
+```cpp  
 // perf_post_generics.cpp  
 // compile with: /clr  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Método: Invokeall | Microsoft Docs'
+title: 'Método EventSource:: Invokeall | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00bce09f9e081bb0cd5c01115b05e4d3268d7293
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04a31c7d080ff4fbfae094e07ab02d912966f4b1
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882609"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570641"
 ---
 # <a name="eventsourceinvokeall-method"></a>Método EventSource::InvokeAll
-Chama cada manipulador de eventos associado atual [EventSource](../windows/eventsource-class.md) usando os argumentos e tipos de argumento especificados do objeto.  
+Chama cada manipulador de eventos associado ao atual [EventSource](../windows/eventsource-class.md) usando os argumentos e tipos de argumento especificados do objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -183,69 +183,69 @@ void InvokeAll(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T0`  
- O tipo de argumento do manipulador de evento de zero.  
+### <a name="parameters"></a>Parâmetros  
+ *T0*  
+ O tipo de argumento do manipulador de evento inicial.  
   
- `T1`  
- O tipo do primeiro argumento de manipulador de eventos.  
+ *T1*  
+ O tipo do primeiro argumento do manipulador de eventos.  
   
- `T2`  
- O tipo do segundo argumento de manipulador de eventos.  
+ *T2*  
+ O tipo do segundo argumento do manipulador de eventos.  
   
- `T3`  
+ *T3*  
  O tipo do terceiro argumento de manipulador de eventos.  
   
- `T4`  
+ *T4*  
  O tipo do quarto argumento de manipulador de eventos.  
   
- `T5`  
- O tipo do quinto argumento de manipulador de eventos.  
+ *T5*  
+ O tipo do quinto argumento do manipulador de eventos.  
   
- `T6`  
- O tipo do sexto argumento de manipulador de eventos.  
+ *T6*  
+ O tipo do sexto argumento do manipulador de eventos.  
   
- `T7`  
- O tipo do sétimo argumento de manipulador de eventos.  
+ *T7*  
+ O tipo do sétimo argumento do manipulador de eventos.  
   
- `T8`  
- O tipo de argumento do manipulador de evento oitavo.  
+ *T8*  
+ O tipo de argumento do manipulador de evento oitava.  
   
- `T9`  
- O tipo do argumento nono de manipulador de eventos.  
+ *T9*  
+ O tipo do nono argumento do manipulador de eventos.  
   
- `arg0`  
- O argumento de manipulador de eventos de zero.  
+ *arg0*  
+ O argumento do manipulador de evento inicial.  
   
- `arg1`  
+ *arg1*  
  O primeiro argumento de manipulador de eventos.  
   
- `arg2`  
+ *Arg2*  
  O segundo argumento de manipulador de eventos.  
   
- `arg3`  
+ *arg3*  
  O terceiro argumento de manipulador de eventos.  
   
- `arg4`  
+ *Arg4*  
  O quarto argumento de manipulador de eventos.  
   
- `arg5`  
+ *arg5*  
  O quinto argumento de manipulador de eventos.  
   
- `arg6`  
+ *arg6*  
  O sexto argumento de manipulador de eventos.  
   
- `arg7`  
+ *arg7*  
  O sétimo argumento de manipulador de eventos.  
   
- `arg8`  
- O argumento do manipulador de eventos oitavo.  
+ *arg8*  
+ O argumento de manipulador de eventos do oitavo.  
   
- `arg9`  
+ *arg9*  
  O nono argumento de manipulador de eventos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL
  

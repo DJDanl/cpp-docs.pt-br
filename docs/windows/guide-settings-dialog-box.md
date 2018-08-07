@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7d89a4a7bf0e3a8c9452c5f9d87832b8b31deb6e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 265c6c1931b0e48399039e507be45c73c710142d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875871"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568885"
 ---
 # <a name="guide-settings-dialog-box"></a>Caixa de diálogo Configurações da Guia
 ## <a name="layout-guides"></a>Guias de layout  
@@ -40,24 +40,24 @@ ms.locfileid: "33875871"
   
  **Réguas e guias**  
   
- Quando habilitada, adiciona réguas para as ferramentas de layout; guias podem ser colocados em réguas. Os guias de padrão são as margens, o que podem ser movidas, arrastando. Clique em réguas para colocar uma guia. Controles de "ajustar" às guias quando os controles são movidos acima ou próximo a eles. Controles também se movem com um guia quando eles estão conectados a ele. Quando um controle está anexado a um guia em cada lado e um guia é movida, o controle é redimensionado.  
+ Quando habilitado, adiciona réguas para as ferramentas de layout; guias podem ser colocados nas réguas. Os guias padrão são as margens, que podem ser movidas, arrastando. Clique nas réguas para colocar uma guia. Controles de "ajustará" aos guias de quando os controles são movidos pela ou ao lado deles. Controles também são movidos com um guia depois que eles estão conectados a ele. Quando um controle está anexado a uma guia em cada lado e um guia é movido, o controle é redimensionado.  
   
  **Grade**  
   
- Cria uma grade de layout. Novos controles automaticamente serão alinhado à grade.  
+ Cria uma grade de layout. Novos controles são alinhados automaticamente à grade.  
   
 ## <a name="grid-spacing"></a>Espaçamento da grade  
  Exibe as configurações para o espaçamento da grade em unidades de caixa de diálogo (DLUs).  
   
  **Largura: DLUs**  
   
- Define a largura da grade de layout em DLUs. Um DLU horizontal é a largura média da fonte de caixa de diálogo dividida em quatro.  
+ Define a largura da grade de layout em DLUs. Um DLU horizontal é a largura da média da fonte de caixa de diálogo dividida por quatro.  
   
  **Altura: DLUs**  
   
- Define a altura da grade de layout em DLUs. Um DLU vertical é a altura média da fonte de caixa de diálogo dividida por 8.  
+ Define a altura da grade de layout em DLUs. Um DLU vertical é a média altura da fonte de caixa de diálogo dividida por oito.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  
@@ -65,4 +65,3 @@ ms.locfileid: "33875871"
 ## <a name="see-also"></a>Consulte também  
  [Modificando a grade de Layout](../windows/modifying-the-layout-grid.md)   
  [Estados do Editor de Caixa de Diálogo (guias e grades)](../windows/dialog-editor-states-guides-and-grids.md)
-

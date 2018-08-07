@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce7cf5c8e92e7fd6e6e10d7bef0519b1ced4cf62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c7ce3c5b76dfa8602a46e947d1e8925ec2bf14c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880668"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569437"
 ---
 # <a name="dbparam"></a>db_param
 Associa a variável de membro especificado com um parâmetro de entrada ou saído e delimita a variável.  
@@ -30,8 +30,7 @@ Associa a variável de membro especificado com um parâmetro de entrada ou saíd
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ db_param(   
+[ db_param(   
    ordinal,   
    paramtype="DBPARAMIO_INPUT",   
    dbtype,   
@@ -43,48 +42,48 @@ Associa a variável de membro especificado com um parâmetro de entrada ou saíd
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `ordinal`  
- O número da coluna (**DBCOLUMNINFO** ordinal) correspondente a um campo no conjunto de linhas para o qual associar dados.  
+ *Ordinal*  
+ O número da coluna (ordinal DBCOLUMNINFO) correspondente a um campo no conjunto de linhas à qual associar dados.  
   
  *paramtype* (opcional)  
- O tipo a ser definido para o parâmetro. Provedores oferecem suporte apenas tipos de e/s parâmetros que são suportados pela fonte de dados subjacente. O tipo é uma combinação de um ou mais **DBPARAMIOENUM** valores:  
+ O tipo a ser definido para o parâmetro. Provedores dão suporte a apenas tipos de e/s parâmetros que têm suporte pela fonte de dados subjacente. O tipo é uma combinação de um ou mais valores DBPARAMIOENUM:  
   
--   **DBPARAMIO_INPUT** um parâmetro de entrada.  
+-   DBPARAMIO_INPUT um parâmetro de entrada.  
   
--   **DBPARAMIO_OUTPUT** um parâmetro de saída.  
+-   DBPARAMIO_OUTPUT um parâmetro de saída.  
   
--   **DBPARAMIO_NOTPARAM** o acessador não tem parâmetros. Configuração **eParamIO** para esse valor na linha acessadores lembra ao usuário que parâmetros são ignorados.  
+-   DBPARAMIO_NOTPARAM o acessador não tem parâmetros. Definindo `eParamIO` para esse valor na linha acessadores lembra ao usuário que os parâmetros são ignorados.  
   
  *DbType* (opcional)  
- OLE DB [indicador de tipo](https://msdn.microsoft.com/en-us/library/ms711251.aspx) para a entrada da coluna.  
+ Um banco de dados OLE [indicador de tipo](https://msdn.microsoft.com/library/ms711251.aspx) para a entrada de coluna.  
   
  *precisão* (opcional)  
- A precisão a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição do **bPrecision** elemento o [estrutura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ A precisão a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bPrecision` elemento o [estrutura DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *escala* (opcional)  
- A escala a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição do **bScale** elemento o [estrutura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ A escala a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bScale` elemento o [estrutura DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *status* (opcional)  
- Uma variável de membro usada para manter o status dessa coluna. O status indica se o valor da coluna é um valor de dados ou algum outro valor, como **nulo**. Para obter os valores possíveis, consulte [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx) no *referência do programador de DB OLE*.  
+ Uma variável de membro usada para manter o status dessa coluna. O status indica se o valor da coluna é um valor de dados ou algum outro valor, como nulo. Para os valores possíveis, consulte [Status](https://msdn.microsoft.com/library/ms722617.aspx) na *referência do programador DB OLE*.  
   
  *comprimento* (opcional)  
  Uma variável de membro usada para manter o tamanho da coluna em bytes.  
   
 ## <a name="remarks"></a>Comentários  
- **db_param** define os parâmetros que você pode usar comandos; portanto você usá-lo com **db_command**. Por exemplo, você pode usar **db_param** para associar parâmetros em consultas SQL ou procedimentos armazenados. Parâmetros em um procedimento armazenado são indicados pelos pontos de interrogação (?), e você deve associar os membros de dados na ordem em que os parâmetros aparecem.  
+ **db_param** define os parâmetros que você pode usar nos comandos; portanto, usá-lo com `db_command`. Por exemplo, você pode usar **db_param** para associar parâmetros em consultas SQL ou procedimentos armazenados. Parâmetros em um procedimento armazenado são indicados por pontos de interrogação (?), e você deve associar os membros de dados na ordem em que os parâmetros aparecem.  
   
- **db_param** delimita os dados de membro que podem participar de OLE DB `ICommandWithParameters`-com base em associação. Ele define o tipo de parâmetro (entrada ou saída), tipo de OLE DB, precisão, escala, status e comprimento para o parâmetro especificado. Esse atributo insere as macros de consumidor OLE DB BEGIN_PARAM_MAP... END_PARAM_MAP. Cada membro que você marca com o **db_param** atributo ocupará uma entrada no mapa na forma de um COLUMN_ENTRY.  
+ **db_param** delimita os dados de membro que podem participar de OLE DB `ICommandWithParameters`-com base em associação. Ele define o tipo de parâmetro (entrada ou saída), tipo de OLE DB, precisão, escala, status e comprimento para o parâmetro especificado. Esse atributo insere as macros de consumidor do OLE DB BEGIN_PARAM_MAP... END_PARAM_MAP. Cada membro marcar com o **db_param** atributo ocupa uma entrada no mapa na forma de um COLUMN_ENTRY.  
   
- **db_param** é usada em conjunto com o o [db_table](../windows/db-table.md) ou [db_command](../windows/db-command.md) atributos.  
+ **db_param** é usado em conjunto com qualquer um de [db_table](../windows/db-table.md) ou [db_command](../windows/db-command.md) atributos.  
   
- Quando o provedor de atributo do consumidor aplica esse atributo a uma classe, o compilador irá renomear a classe \_ *YourClassName*acessador, onde *YourClassName* é o nome atribuído a classe e o compilador também criará uma classe chamada *YourClassName*, que é derivado de \_ *YourClassName*acessador.  No modo de exibição de classe, você verá as classes.  
+ Quando o provedor do consumidor de atributo se aplica a esse atributo a uma classe, o compilador renomeará a classe \_ *YourClassName*acessador, onde *YourClassName* é o nome que você deu a classe e o compilador também criará uma classe chamada *YourClassName*, que é derivada de \_ *YourClassName*acessador.  No modo de exibição de classe, você verá as duas classes.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir cria uma classe de comando com base no procedimento SalesbyYear armazenado no banco de dados Northwind. Associa o primeiro parâmetro no procedimento armazenado com o `m_RETURN_VALUE` variável e define como um parâmetro de saída. Associa os dois últimos parâmetros (entrados) com `m_Beginning_Date` e `m_Ending_Date`.  
+ O exemplo a seguir cria uma classe de comando com base no procedimento SalesbyYear armazenado no banco de dados Northwind. Associa o primeiro parâmetro no procedimento armazenado com o `m_RETURN_VALUE` variável e a define como um parâmetro de saída. Associa os últimos dois parâmetros (entrados) com `m_Beginning_Date` e `m_Ending_Date`.  
   
  O exemplo a seguir associa o `nOutput` variável com um parâmetro de saída.  
   
-```  
+```cpp  
 // db_param.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -120,13 +119,13 @@ struct CSalesbyYear {
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|**classe**, `struct`, membro, o método, o local|  
+|**Aplica-se a**|**classe**, **struct**, membro, o método, o local|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

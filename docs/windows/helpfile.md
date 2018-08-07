@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 926d0fec27bf323f559ad2fe0dffbd4208b1bf2a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4f25a8f3d5cc76d1b2b8d9a3d9996449f449466
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876183"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570441"
 ---
 # <a name="helpfile"></a>helpfile
 Define o nome do arquivo de ajuda para uma biblioteca de tipos.  
@@ -30,13 +30,12 @@ Define o nome do arquivo de ajuda para uma biblioteca de tipos.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ helpfile(  
+[ helpfile(  
    "filename"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *filename*  
  O nome do arquivo que contém os tópicos da Ajuda.  
   
@@ -44,17 +43,17 @@ Define o nome do arquivo de ajuda para uma biblioteca de tipos.
  O **helpfile** atributo C++ tem a mesma funcionalidade que o [helpfile](http://msdn.microsoft.com/library/windows/desktop/aa366853) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- Consulte o exemplo para [módulo](../windows/module-cpp.md) para obter um exemplo de como usar **helpfile**.  
+ Veja o exemplo de [módulo](../windows/module-cpp.md) para obter um exemplo de como usar **helpfile**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|`interface`, `typedef`, **classe**, método, propriedade|  
+|**Aplica-se a**|**interface**, **typedef**, **classe**, método, **propriedade**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  

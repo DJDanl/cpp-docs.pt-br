@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a63e7ddbf2528b78eac7761bbcf4891f31cc886
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de0f68ee3e27f2ac3a7f87e64489a05a16dcdc91
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882622"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571406"
 ---
 # <a name="eventevent-constructor-windows-runtime-c-template-library"></a>Construtor Event::Event (Biblioteca em Tempo de Execução C++ do Windows Runtime )
 Inicializa uma nova instância da classe de evento.  
@@ -37,11 +37,11 @@ WRL_NOTHROW Event(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `h`  
- Identificador para um evento. Por padrão, `h` é inicializado como `nullptr`.  
+ *h*  
+ Manipular um evento. Por padrão, *h* é inicializado como **nullptr**.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

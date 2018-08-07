@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb2599beb7b5cadda1a26592a2ab5ca63c609fc2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4778b5abb363f7d769fe8872b1d180c2a2cd701
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881244"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568917"
 ---
 # <a name="handlethandlet-destructor"></a>Destruidor HandleT::~HandleT
-Deinitializes uma instância da classe HandleT.  
+Realiza o desligamento de uma instância das **HandleT** classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +34,7 @@ Deinitializes uma instância da classe HandleT.
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

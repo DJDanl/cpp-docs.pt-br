@@ -1,5 +1,5 @@
 ---
-title: 'Como: declarar e usar ponteiros internos e matrizes gerenciadas (C + + CLI) | Microsoft Docs'
+title: 'Como: declarar e usar ponteiros internos e matrizes gerenciadas (C + + / CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 457cec66aaabb01b9c10ccc66a8f9594312195b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c02849bc3d1b45ecb6de89e103c51311af31b3c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875299"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569837"
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Como declarar e usar ponteiros internos e matrizes gerenciadas (C++/CLI)
-Os seguintes C + + exemplo CLI mostra como declarar e usar um ponteiro interior em uma matriz.  
+Os seguintes C + c++ /CLI exemplo de CLI mostra como declarar e usar um ponteiro interior em uma matriz.  
   
 > [!IMPORTANT]
->  Este recurso de idioma é suportado pelo **/clr** opção de compilador, mas não pelo **/ZW** opção de compilador.  
+>  Dá suporte a esse recurso de idioma a `/clr` opção de compilador, mas não pelo `/ZW` opção de compilador.  
   
 ## <a name="example"></a>Exemplo  
   
 ### <a name="code"></a>Código  
   
-```  
+```cpp  
 // interior_ptr_arrays.cpp  
 // compile with: /clr  
 #define SIZE 10  
@@ -59,7 +59,7 @@ int main() {
   
 ### <a name="output"></a>Saída  
   
-```  
+```Output  
 1st element in arr holds: 1  
 ipi points to memory address whose value is: 1  
 after incrementing ipi, it points to memory address whose value is: 2  

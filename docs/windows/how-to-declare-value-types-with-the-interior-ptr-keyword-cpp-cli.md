@@ -1,5 +1,5 @@
 ---
-title: 'Como: declarar tipos de valor com a palavra-chave interior_ptr (C + + CLI) | Microsoft Docs'
+title: 'Como: declarar tipos de valor com a palavra-chave interior_ptr (C++ c++ CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6015d5a61589b8ed2d38b6491392fd42e4f38ef1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38cbfb171e218f70d45e5ef2e6e850d791803611
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879471"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571182"
 ---
 # <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Como declarar tipos de valores com a palavra-chave interior_ptr (C++/CLI)
-Um `interior_ptr` pode ser usado com um tipo de valor.  
+Uma **interior_ptr** pode ser usado com um tipo de valor.  
   
 > [!IMPORTANT]
->  Este recurso de idioma é suportado pelo **/clr** opção de compilador, mas não pelo **/ZW** opção de compilador.  
+>  Dá suporte a esse recurso de idioma a `/clr` opção de compilador, mas não pelo `/ZW` opção de compilador.  
   
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- Os seguintes C + + CLI exemplo mostra como usar um `interior_ptr` com um tipo de valor.  
+ Os seguintes C + c++ /CLI exemplo de CLI mostra como usar um **interior_ptr** com um tipo de valor.  
   
 ### <a name="code"></a>Código  
   
-```  
+```cpp  
 // interior_ptr_value_types.cpp  
 // compile with: /clr  
 value struct V {  
@@ -66,7 +66,7 @@ int main() {
   
 ### <a name="output"></a>Saída  
   
-```  
+```Output  
 1  
 2  
 2  
@@ -78,13 +78,13 @@ int main() {
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- Em um tipo de valor, o `this` ponteiro é avaliada como um interior_ptr.  
+ Em um tipo de valor, o **isso** ponteiro é avaliada como um interior_ptr.  
   
- No corpo de uma função de membro não estático de um tipo de valor `V`, `this` é uma expressão do tipo `interior_ptr<V>` cujo valor é o endereço do objeto para o qual a função é chamada.  
+ No corpo de uma função de membro não estático de um tipo de valor `V`, **isso** é uma expressão do tipo `interior_ptr<V>` cujo valor é o endereço do objeto para o qual a função é chamada.  
   
 ### <a name="code"></a>Código  
   
-```  
+```cpp  
 // interior_ptr_value_types_this.cpp  
 // compile with: /clr /LD  
 value struct V {  
@@ -101,11 +101,11 @@ value struct V {
 ### <a name="description"></a>Descrição  
  O exemplo a seguir mostra como usar o operador address-of com membros estáticos.  
   
- O endereço de um membro de tipo estático do Visual C++ produz um ponteiro nativo.  O endereço de um membro de tipo de valor estático é um ponteiro gerenciado porque o membro de tipo de valor é alocado no heap do tempo de execução e pode ser movido pelo coletor de lixo.  
+ O endereço de um membro de tipo estático do Visual C++ gera um ponteiro nativo.  O endereço de um membro de tipo de valor estático é um ponteiro gerenciado porque o membro de tipo de valor é alocado no heap de tempo de execução e pode ser movido pelo coletor de lixo.  
   
 ### <a name="code"></a>Código  
   
-```  
+```cpp  
 // interior_ptr_value_static.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -131,7 +131,7 @@ int main() {
   
 ### <a name="output"></a>Saída  
   
-```  
+```Output 
 22  
 23  
 hello  

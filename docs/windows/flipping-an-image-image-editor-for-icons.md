@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4332e1de44682dbd37b67c71bdcc4c107c98a3da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0cb6c655bdc8da5341a28449a25796ad59e453b4
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873895"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569424"
 ---
 # <a name="flipping-an-image-image-editor-for-icons"></a>Invertendo uma imagem (editor de imagens para ícones)
 Você pode inverter ou girar uma imagem para:  
@@ -31,30 +31,29 @@ Você pode inverter ou girar uma imagem para:
   
 -   Ative a imagem de cabeça para baixo.  
   
--   Gire 90 graus de imagem à direita por vez.  
+-   Gire a imagem à direita 90 graus por vez.  
   
-### <a name="to-flip-the-image-horizontally-mirror-image"></a>Para inverter a imagem horizontalmente (espelho)  
+### <a name="to-flip-the-image-horizontally-mirror-image"></a>Para inverter a imagem horizontalmente (imagem espelhada)  
   
-1.  Do **imagem** menu, escolha **Inverter horizontalmente**.  
+1.  Dos **imagem** menu, escolha **Inverter horizontalmente**.  
   
-### <a name="to-flip-the-image-vertically-turn-upside-down"></a>Para inverter a imagem verticalmente (Ativar cabeça para baixo)  
+### <a name="to-flip-the-image-vertically-turn-upside-down"></a>Para inverter a imagem verticalmente (virar cabeça para baixo)  
   
-1.  Do **imagem** menu, escolha **Inverter verticalmente**.  
+1.  Dos **imagem** menu, escolha **Inverter verticalmente**.  
   
 ### <a name="to-rotate-the-image-90-degrees"></a>Para girar a imagem 90 graus  
   
-1.  Do **imagem** menu, escolha **Girar 90 graus**.  
+1.  Dos **imagem** menu, escolha **Girar 90 graus**.  
   
     > [!NOTE]
-    >  Você também pode usar o [teclas de aceleração (atalho)](../windows/accelerator-keys-image-editor-for-icons.md) para esses comandos ou acessar os comandos no menu de atalho (clique fora da imagem no editor de imagem).  
+    >  Você também pode usar o [teclas de aceleração (atalho)](../windows/accelerator-keys-image-editor-for-icons.md) para esses comandos ou acessar os comandos no menu de atalho (clique fora da imagem enquanto estiver no editor de imagem).  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisitos  
+## <a name="requirements"></a>Requisitos  
   
  Nenhum  
   
 ## <a name="see-also"></a>Consulte também  
  [Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Editor de imagens para ícones](../windows/image-editor-for-icons.md)
-

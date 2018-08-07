@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1a4bf31ff44c74362e21e8888630273fcc049e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2cbb5be3603f79a7df1cb330ca06775357666854
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881332"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570305"
 ---
 # <a name="getactivationfactory-function"></a>Função GetActivationFactory
 Recupera um alocador de ativação para o tipo especificado pelo parâmetro de modelo.  
@@ -39,18 +39,18 @@ inline HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T`  
- Um parâmetro de modelo que especifica o tipo do alocador de ativação.  
+### <a name="parameters"></a>Parâmetros  
+ *T*  
+ Um parâmetro de modelo que especifica o tipo de alocador de ativação.  
   
- `activatableClassId`  
- O nome da classe que pode gerar o alocador de ativação.  
+ *activatableClassId*  
+ O nome da classe que o alocador de ativação pode produzir.  
   
- `factory`  
- Quando essa operação for concluída, uma referência para o alocador de ativação para o tipo `T`.  
+ *fábrica*  
+ Quando essa operação for concluída, uma referência para o alocador de ativação para o tipo *T*.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, um erro HRESULT que indica o motivo pelo qual esta operação falhou.  
+ S_OK se bem-sucedido; Caso contrário, um erro HRESULT que indica por que esta operação falhou.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

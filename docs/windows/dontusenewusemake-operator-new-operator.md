@@ -1,5 +1,5 @@
 ---
-title: 'Operador new dontusenewusemake:: Operator | Microsoft Docs'
+title: 'Operador new de dontusenewusemake:: Operator | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9785ea27c79ff0a118ff3697a22804c520b265ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 59354062dded7792dca1cd84683bba64f6a64aa0
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873674"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571419"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>DontUseNewUseMake::operator Operador new
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,20 +37,20 @@ void* operator new(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `__unnamed0`  
- Um parâmetro não nomeado que especifica o número de bytes de memória a ser alocada.  
+ *__unnamed0*  
+ Um parâmetro não nomeado que especifica o número de bytes de memória para alocar.  
   
- `placement`  
- O tipo a ser alocada.  
+ *placement*  
+ O tipo a ser alocado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Fornece uma maneira de passar argumentos adicionais se você sobrecarregar o operador `new`.  
+ Fornece uma maneira de passar argumentos adicionais se você sobrecarregar o operador **novo**.  
   
 ## <a name="remarks"></a>Comentários  
- Sobrecargas de operador `new` e impede que ele seja usado em RuntimeClass.  
+ Sobrecarrega o operador **novos** e impede que ele seja usado no `RuntimeClass`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

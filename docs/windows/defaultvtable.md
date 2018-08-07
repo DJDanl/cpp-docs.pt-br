@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb853e10b1745151c12f1855f841a21c2a7e126b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83949616f204ae37b42b91b03d69d8d803a1582f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882531"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569658"
 ---
 # <a name="defaultvtable"></a>defaultvtable
-Define uma interface de interface vtable padrão para um objeto COM.  
+Define uma interface como a interface de vtable padrão para um objeto COM.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ defaultvtable(  
+[ defaultvtable(  
    interface  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `interface`  
- A interface designada que você deseja ter a vtable padrão para o objeto COM.  
+ *interface*  
+ A interface designada que você deseja ter vtable padrão para o objeto COM.  
   
 ## <a name="remarks"></a>Comentários  
  O **defaultvtable** atributo C++ tem a mesma funcionalidade que o [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir mostra os atributos em uma classe que use **defaultvtable** para especificar uma interface padrão:  
+ O código a seguir mostra os atributos em uma classe que usam **defaultvtable** para especificar uma interface padrão:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvtable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -74,13 +73,13 @@ class CMyC3 : public IMyI3 {};
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|**class**, `struct`|  
+|**Aplica-se a**|**classe**, **struct**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|**coclass**|  
+|**Atributos obrigatórios**|**coclass**|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  

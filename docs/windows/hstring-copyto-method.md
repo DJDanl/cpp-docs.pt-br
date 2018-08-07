@@ -1,5 +1,5 @@
 ---
-title: 'Método Hstring: | Microsoft Docs'
+title: 'Método hstring:: CopyTo | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,34 +13,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b44974faf5fc1f068d28d7febe3ed2a266f4869e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65d8e259b74bcdffbf11c6c96172d918f9db1b50
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874766"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570867"
 ---
 # <a name="hstringcopyto-method"></a>Método HString::CopyTo
-Copia o HString atual objeto para um objeto HSTRING.  
+Copia o atual **HString** objeto para um objeto HSTRING.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 HRESULT CopyTo(  
    _Out_ HSTRING *str  
    ) const throw();  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `str`  
- HSTRING que recebe a cópia.  
+ *str*  
+ O HSTRING que recebe a cópia.  
   
 ## <a name="remarks"></a>Comentários  
  Este método chama o [WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx) função.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

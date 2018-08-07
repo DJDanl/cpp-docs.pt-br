@@ -1,5 +1,5 @@
 ---
-title: Exceção tratamento (extensões de componentes C++) | Microsoft Docs
+title: Tratamento de exceção (extensões de componentes C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,38 +21,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b6dcf8e844fbb2e8e133dc5dc6f0b98a3166ac6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 526ac2f916eb239aee938522f331cf221138f5fa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877729"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568648"
 ---
 # <a name="exception-handling--c-component-extensions"></a>Tratamento de Exceção (Extensões de Componentes C++)
-Os aplicativos compilados com o **/ZW** opção de compilador ou **/clr** opção de compilador que usam *exceções* para tratar erros inesperados durante a execução do programa. Os tópicos a seguir abordam a manipulação de exceções em qualquer C + + CX ou C + + aplicativos CLI.  
+Aplicativos compilados com o `/ZW` opção de compilador ou `/clr` opção de compilador ambos usam *exceções* para lidar com erros inesperados durante a execução do programa. Os tópicos a seguir discutem o tratamento de exceções em qualquer um dos C + + c++ /CLI CX ou C + + c++ /CLI aplicativos CLI.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Conceitos básicos do uso de exceções gerenciadas](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
- Descreve Lançando exceções e usando `try` / `catch` blocos.  
+ Descreve Lançando exceções e usando **tente**/**catch** blocos.  
   
  [Diferenças no comportamento em /CLR de tratamento de exceções](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
- Discute as diferenças no comportamento padrão de tratamento de exceções C++.  
+ Discute as diferenças do comportamento padrão de tratamento de exceções C++.  
   
  [finally](../dotnet/finally.md)  
  Discute como usar a palavra-chave finally.  
   
  [Como definir e instalar um manipulador de exceção global](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
- Demonstra como sem tratamento de exceções podem ser capturados.  
+ Demonstra como sem tratamento de exceções podem ser capturadas.  
   
  [Como capturar exceções em código nativo lançadas pela MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)  
- Descreve como capturar exceções de CLR e C++ em código nativo.  
+ Discute como capturar exceções de CLR e C++ em código nativo.  
   
  [Como definir e instalar um manipulador de exceção global](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
- Demonstra como capturar exceções não tratadas tudo.  
+ Demonstra como capturar exceções não tratadas.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Tratamento de Exceção](../cpp/exception-handling-in-visual-cpp.md)  
- Descreve a manipulação de exceções em C++.  
+ Descreve o tratamento de exceções em C++.  
   
 ## <a name="see-also"></a>Consulte também  
  [Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)

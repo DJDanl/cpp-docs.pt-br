@@ -1,5 +1,5 @@
 ---
-title: 'Como: adicionar suporte MFC para arquivos de Script de recurso | Microsoft Docs'
+title: 'Como: adicionar suporte MFC aos arquivos de Script de recurso | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,43 +20,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50c0493e630c2b141da1fced6964ffc514c761d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7237366daeaa71ba423aa069bb634b1b9f6bc667
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879790"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569736"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>Como adicionar suporte MFC a arquivos de script de recurso
-Normalmente, quando você cria um aplicativo do MFC para Windows usando o [Assistente de aplicativo MFC](../mfc/reference/mfc-application-wizard.md), o assistente gera um conjunto básico de arquivos (incluindo um arquivo de script (. rc) de recurso) que contém os principais recursos do Microsoft Foundation classes (MFC). No entanto, se você estiver editando um arquivo. RC para um aplicativo do Windows que não seja baseado em MFC, os seguintes recursos específicos para a estrutura do MFC não estão disponíveis:  
+Normalmente, quando você cria um aplicativo MFC para Windows usando o [Assistente de aplicativo MFC](../mfc/reference/mfc-application-wizard.md), o assistente gera um conjunto básico de arquivos (incluindo um arquivo de script (. rc) do recurso) que contém os principais recursos do Microsoft Foundation classes (MFC). No entanto, se você estiver editando um arquivo. RC para um aplicativo do Windows que não é baseado no MFC, os seguintes recursos específicos da estrutura MFC não estão disponíveis:  
   
--   Assistentes de código MFC (anteriormente chamado de "[ClassWizard MFC](http://msdn.microsoft.com/en-us/98dc2434-ba93-4e0b-b084-1a4bc26cdf1e)")  
+-   Assistentes de código MFC (anteriormente chamado de "[MFC ClassWizard](http://msdn.microsoft.com/98dc2434-ba93-4e0b-b084-1a4bc26cdf1e)")  
   
 -   Cadeias de caracteres de prompt do menu  
   
--   Listar conteúdo de controles de caixa de combinação  
+-   Listar o conteúdo para controles de caixa de combinação  
   
 -   Hospedagem de controles ActiveX  
   
- No entanto, você pode adicionar suporte MFC a arquivos. rc existentes que não possuem.  
+ No entanto, você pode adicionar suporte MFC aos arquivos. rc existentes que não têm.  
   
-### <a name="to-add-mfc-support-to-rc-files"></a>Para adicionar suporte MFC a arquivos. rc  
+### <a name="to-add-mfc-support-to-rc-files"></a>Para adicionar suporte MFC aos arquivos. rc  
   
 1.  Abra o arquivo de script de recurso.  
   
     > [!NOTE]
-    >  Se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+    >  Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Em [exibição recursos](../windows/resource-view-window.md), realce a pasta de recursos (por exemplo, MFC.rc).  
+2.  Na [exibição de recurso](../windows/resource-view-window.md), realce a pasta de recursos (por exemplo, RC).  
   
-3.  No [janela propriedades](/visualstudio/ide/reference/properties-window), defina o **modo MFC** propriedade **True**.  
+3.  No [janela de propriedades](/visualstudio/ide/reference/properties-window), defina o **modo MFC** propriedade a ser **verdadeiro**.  
   
     > [!NOTE]
-    >  Além de definir esse sinalizador, o arquivo. rc deve fazer parte de um projeto MFC. Por exemplo, apenas configurando **modo MFC** para **True** em um arquivo. rc Win32 projeto não oferece os recursos do MFC.  
+    >  Além de definir esse sinalizador, o arquivo. rc deve fazer parte de um projeto MFC. Por exemplo, apenas configurando **modo MFC** à **verdadeiro** em um arquivo. rc em Win32 project não dará os recursos do MFC.  
   
-
-  
- **Requisitos**  
+## <a name="requirements"></a>Requisitos  
   
  MFC  
   

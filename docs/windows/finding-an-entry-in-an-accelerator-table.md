@@ -16,28 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 53cafe8533eac024f07482563ba2c24183963978
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 45f02bff270c7049e6207d797ed2d2ca5ae339f2
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873203"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571370"
 ---
 # <a name="finding-an-entry-in-an-accelerator-table"></a>Localizando uma entrada em uma tabela de aceleradores
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>Para localizar uma entrada em uma tabela de aceleradores aberto  
   
-1.  Abra a tabela de teclas aceleradoras clicando duas vezes em seu ícone no [exibição recursos](../windows/resource-view-window.md).  
+1.  Abra a tabela de aceleradores clicando duas vezes em seu ícone no [exibição de recurso](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+    >  Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
 2.  Clique em um cabeçalho de coluna para classificar o conteúdo da coluna em ordem alfabética. Por exemplo, clique em **ID** para exibir todas as IDs em sua tabela de aceleradores em ordem alfabética.  
   
- Você pode examinar a lista e localize a entrada.  
+ Você pode, em seguida, examine a lista e localize a entrada.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.*  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*.  
   
- **Requisitos**  
+## <a name="requirements"></a>Requisitos  
   
  Win32  
   

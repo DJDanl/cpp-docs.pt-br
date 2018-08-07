@@ -1,5 +1,5 @@
 ---
-title: 'Método Ftmbase: | Microsoft Docs'
+title: 'Método ftmbase:: Marshalinterface | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc22b83aee62b03ec5e664d08440b00718325272
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff0c1a5e41dfe46f2d88aeeb3093dbc9ee4d4005
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874610"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570051"
 ---
 # <a name="ftmbasemarshalinterface-method"></a>Método FtmBase::MarshalInterface
-Grava em um fluxo de dados necessários para inicializar um objeto de proxy em algum processo do cliente.  
+Grava os dados necessários para inicializar um objeto de proxy em algum processo do cliente em um fluxo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,28 +40,28 @@ STDMETHODIMP MarshalInterface(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `pStm`  
- Ponteiro para o fluxo a ser usado durante o empacotamento.  
+### <a name="parameters"></a>Parâmetros  
+ *pStm*  
+ Ponteiro para o fluxo a ser usado durante o marshaling.  
   
- `riid`  
- Referência ao identificador da interface a ser empacotado. Esta interface deve ser derivada da interface IUnknown.  
+ *riid*  
+ Referência ao identificador da interface a ser empacotado. Essa interface deve ser derivada de `IUnknown` interface.  
   
- `pv`  
+ *VP*  
  Ponteiro para o ponteiro de interface para ser empacotado; pode ser NULL se o chamador não tem um ponteiro para a interface desejada.  
   
- `dwDestContext`  
- Contexto de destino onde a interface especificada é para ser desempacotada.  
+ *dwDestContext*  
+ Contexto de destino onde a interface especificada deve ser desempacotada.  
   
  Especifique um ou mais valores de enumeração MSHCTX.  
   
- Unmarshaling pode ocorrer em outro apartment do processo atual (MSHCTX_INPROC) ou em outro processo no mesmo computador que o processo atual (MSHCTX_LOCAL).  
+ Unmarshaling pode ocorrer em outra apartment do processo atual (MSHCTX_INPROC) ou em outro processo no mesmo computador que o processo atual (MSHCTX_LOCAL).  
   
- `pvDestContext`  
+ *pvDestContext*  
  Reservado para uso futuro; deve ser zero.  
   
- `mshlflags`  
- Especifica se os dados a ser empacotado deve ser transmitido para o processo do cliente — o caso típico — ou gravados em uma tabela global, onde ela pode ser recuperada por vários clientes.  
+ *mshlflags*  
+ Especifica se os dados a ser empacotado deve ser transmitido de volta para o processo do cliente — o caso comum — ou gravados em uma tabela global, onde ela pode ser recuperada por vários clientes.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK  

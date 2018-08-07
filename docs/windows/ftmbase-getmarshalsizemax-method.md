@@ -1,5 +1,5 @@
 ---
-title: 'Método Ftmbase: | Microsoft Docs'
+title: 'Método ftmbase:: Getmarshalsizemax | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a298e63bc67dadf33a5e653d0eecf165a530d82
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c39c313f06bb4dd1f4dbc095df159a38625e9db8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873788"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570208"
 ---
 # <a name="ftmbasegetmarshalsizemax-method"></a>Método FtmBase::GetMarshalSizeMax
-Obter o limite superior no número de bytes necessários para realizar marshaling do ponteiro de interface especificado no objeto especificado.  
+Obtenha o limite superior no número de bytes necessários para realizar marshaling do ponteiro de interface especificado no objeto especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,27 +40,27 @@ STDMETHODIMP GetMarshalSizeMax(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `riid`  
+### <a name="parameters"></a>Parâmetros  
+ *riid*  
  Referência ao identificador da interface a ser empacotado.  
   
- `pv`  
+ *VP*  
  Ponteiro de interface para ser empacotado; pode ser NULL.  
   
- `dwDestContext`  
- Contexto de destino onde a interface especificada é para ser desempacotada.  
+ *dwDestContext*  
+ Contexto de destino onde a interface especificada deve ser desempacotada.  
   
  Especifique um ou mais valores de enumeração MSHCTX.  
   
- Atualmente, o unmarshaling pode ocorrer em outro apartment do processo atual (MSHCTX_INPROC) ou em outro processo no mesmo computador que o processo atual (MSHCTX_LOCAL).  
+ Atualmente, o unmarshaling pode ocorrer em outra apartment do processo atual (MSHCTX_INPROC) ou em outro processo no mesmo computador que o processo atual (MSHCTX_LOCAL).  
   
- `pvDestContext`  
+ *pvDestContext*  
  Reservado para uso futuro; deve ser NULL.  
   
- `mshlflags`  
- Sinalizador que indica se os dados a ser empacotado são a serem transmitidos para o processo do cliente — o caso típico — ou gravados em uma tabela global, onde ela pode ser recuperada por vários clientes. Especifique um ou mais valores de enumeração MSHLFLAGS.  
+ *mshlflags*  
+ Sinalizador que indica se os dados a ser empacotado deve ser transmitido de volta para o processo do cliente — o caso comum — ou gravados em uma tabela global, onde ela pode ser recuperada por vários clientes. Especifique um ou mais valores de enumeração MSHLFLAGS.  
   
- `pSize`  
+ *pSize*  
  Quando essa operação for concluída, ponteiro para o limite superior na quantidade de dados a serem gravados no fluxo de marshaling.  
   
 ## <a name="return-value"></a>Valor de retorno  

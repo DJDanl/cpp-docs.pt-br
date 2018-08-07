@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da53f10932ffc0696d567bc1140e3e92a609e2c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04317a516b94ae5fc70b61cd3ae33269ad437dce
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870904"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569879"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 Usada para otimização de código do Visual Basic.  
@@ -30,9 +30,7 @@ Usada para otimização de código do Visual Basic.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [defaultcollelem]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
@@ -41,7 +39,7 @@ Usada para otimização de código do Visual Basic.
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra um método de interface usando o **defaultcollelem** atributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultcollelem.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -58,13 +56,13 @@ __interface IMyForm
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Método de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  

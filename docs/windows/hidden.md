@@ -1,5 +1,5 @@
 ---
-title: oculta | Microsoft Docs
+title: oculto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 444994f046b58fbd54dcd3982836bb7fc4d53ed1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e813ce223bad48aab3807bb01e042190d28aef74
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879679"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568664"
 ---
 # <a name="hidden"></a>oculto
 Indica que o item existe, mas não deve ser exibido em um navegador orientado ao usuário.  
@@ -30,26 +30,24 @@ Indica que o item existe, mas não deve ser exibido em um navegador orientado ao
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [hidden]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O **oculta** atributo C++ tem a mesma funcionalidade que o [oculta](http://msdn.microsoft.com/library/windows/desktop/aa366861) atributo MIDL.  
+ O **ocultos** atributo C++ tem a mesma funcionalidade que o [oculto](http://msdn.microsoft.com/library/windows/desktop/aa366861) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- Consulte o exemplo para [associável](../windows/bindable.md) para obter um exemplo de como usar **oculto**.  
+ Veja o exemplo de [associável](../windows/bindable.md) para obter um exemplo de como usar **oculto**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|`interface`, **classe**, `struct`, método, propriedade|  
+|**Aplica-se a**|**interface**, **classe**, **struct**, método, propriedade|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|**coclass** (quando aplicado a **classe** ou `struct`)|  
+|**Atributos obrigatórios**|**coclass** (quando aplicado a **classe** ou **struct**)|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  

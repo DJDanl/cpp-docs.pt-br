@@ -1,5 +1,5 @@
 ---
-title: 'Método EventSource: | Microsoft Docs'
+title: 'Método EventSource:: remove | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbf0480252fca342b8a690e93f92ae14ca5e84c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9dd026158a2bbc76e7a3e195bc5346f65821f2b7
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874376"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569489"
 ---
 # <a name="eventsourceremove-method"></a>Método EventSource::Remove
-Exclui o manipulador de eventos representado pelo token de registro de evento especificado da coleção de manipuladores de eventos associados ao objeto de EventSource atual.  
+Exclui o manipulador de eventos, representado pelo token de registro de evento especificado do conjunto de manipuladores de eventos associados ao atual **EventSource** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,18 +35,18 @@ HRESULT Remove(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `token`  
- Um identificador que representa um manipulador de eventos. Esse token foi retornado quando o manipulador de eventos foi registrado pelo [Add](../windows/eventsource-add-method.md) método.  
+### <a name="parameters"></a>Parâmetros  
+ *token*  
+ Um identificador que representa um manipulador de eventos. Esse token foi retornado quando o manipulador de eventos foi registrado pela [Add ()](../windows/eventsource-add-method.md) método.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.  
+ S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter mais informações sobre a estrutura EventRegistrationToken, consulte o tópico de estrutura Windows::Foundation::EventRegistrationToken na documentação de referência do tempo de execução do Windows.  
+ Para obter mais informações sobre a estrutura EventRegistrationToken, consulte o `Windows::Foundation::EventRegistrationToken` tópico de estrutura na documentação de referência do tempo de execução do Windows.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL
  

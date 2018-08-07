@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fbfd12ea513044f1062e60f5c73f5089683f043d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 831c9a524f8120c855382d198a5f53ac312cada6
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872709"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569782"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>Construtor EventTargetArray::EventTargetArray
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,9 +36,9 @@ EventTargetArray(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `hr`  
- Após operações de construtor, parâmetro `hr` indica se a alocação de matriz teve êxito ou falha. A tabela a seguir lista os possíveis valores para `hr`.  
+### <a name="parameters"></a>Parâmetros  
+ *hr*  
+ Depois de operações esse construtor, parâmetro *hr* indica se a alocação da matriz foi bem-sucedida ou falhou. A tabela a seguir lista os possíveis valores para *hr*.  
   
  S_OK  
  A operação foi bem-sucedida.  
@@ -47,18 +47,18 @@ EventTargetArray(
  Não foi possível alocar memória para a matriz.  
   
  S_FALSE  
- Parâmetro `items` é menor ou igual a zero.  
+ Parâmetro *itens* é menor ou igual a zero.  
   
- `items`  
+ *Itens*  
  O número de elementos da matriz para alocar.  
   
 ## <a name="remarks"></a>Comentários  
- Inicializa uma nova instância da classe EventTargetArray.  
+ Inicializa uma nova instância dos **EventTargetArray** classe.  
   
- EventTargetArray é usada para manter uma matriz de manipuladores de eventos em um objeto de EventSource.  
+ **EventTargetArray** é usado para manter uma matriz de manipuladores de eventos em um `EventSource` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 10f398e83650dc63c002801ac999816e48f7bdd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874282"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569208"
 ---
 # <a name="dispinterface"></a>dispinterface
 Coloca uma interface no arquivo. idl como uma interface de expedição.  
@@ -30,15 +30,13 @@ Coloca uma interface no arquivo. idl como uma interface de expedição.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [dispinterface]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
  Quando o **dispinterface** atributo C++ precede uma interface, ele faz com que a interface a ser colocado dentro do bloco de biblioteca no arquivo. idl gerado.  
   
- A menos que você especifique uma classe base, uma interface de Despache será derivado `IDispatch`. Você deve especificar um [id](../windows/id.md) para os membros de uma interface de expedição.  
+ A menos que você especifique uma classe base, uma interface de expedição será derivado `IDispatch`. Você deve especificar um [id](../windows/id.md) para os membros de uma interface de expedição.  
   
  O exemplo de uso de [dispinterface](http://msdn.microsoft.com/library/windows/desktop/aa366802) na documentação do MIDL:  
   
@@ -50,18 +48,18 @@ dispinterface helloPro
  não é válido para o **dispinterface** atributo.  
   
 ## <a name="example"></a>Exemplo  
- Consulte o exemplo para [associável](../windows/bindable.md) para obter um exemplo de como usar **dispinterface**.  
+ Veja o exemplo de [associável](../windows/bindable.md) para obter um exemplo de como usar **dispinterface**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|`interface`|  
+|**Aplica-se a**|**interface**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
-|**Atributos inválidos**|**duplo**, **objeto**, **oleautomation**, `local`, **ms_union**|  
+|**Atributos obrigatórios**|Nenhum|  
+|**Atributos inválidos**|**dupla**, **objeto**, **oleautomation**, `local`, **ms_union**|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   

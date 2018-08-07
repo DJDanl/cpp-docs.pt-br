@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d3da41ff7fd145889ec799bb2f8ebe99aed36934
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a523d6ba8679bf7d0bdf98563b86946e16e7bfca
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871117"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571292"
 ---
 # <a name="eventoperator-operator"></a>Operador Event::operator=
-Atribui a referência de evento especificada para a instância atual do evento.  
+Atribui especificado **evento** referência atual **evento** instância.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,14 +36,14 @@ WRL_NOTHROW Event& operator=(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `h`  
- Uma referência rvalue a uma instância do evento.  
+ *h*  
+ Uma referência rvalue para um **evento** instância.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Um ponteiro para a instância atual do evento.  
+ Um ponteiro para o atual **evento** instância.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

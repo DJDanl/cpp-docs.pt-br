@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35ab2472ac9e46b620ca735d06b23806126871e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20c651c6e671c7c4895fc7dba85d16fdeb998ad5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879627"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570695"
 ---
 # <a name="dbcolumn"></a>db_column
-Associa uma coluna especificada em uma variável no conjunto de linhas.  
+Associa uma coluna especificada para uma variável no conjunto de linhas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ db_column(   
+[ db_column(   
    ordinal,   
    dbtype,   
    precision,   
@@ -42,8 +41,8 @@ Associa uma coluna especificada em uma variável no conjunto de linhas.
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `ordinal`  
- O número de coluna ordinal (**DBCOLUMNINFO** ordinal) ou o nome de coluna (cadeia de caracteres ANSI ou Unicode) correspondente a um campo no conjunto de linhas para o qual associar dados. Se você usar números, você pode ignorar ordinais consecutivos (por exemplo: 1, 2, 3, 5). O nome pode conter espaços, se o provedor OLE DB que você use dá suporte a ele. Por exemplo, você pode usar qualquer um dos seguintes formatos:  
+ *Ordinal*  
+ O número de coluna ordinal (`DBCOLUMNINFO` ordinal) ou o nome de coluna (cadeia de caracteres ANSI ou Unicode) corresponde a um campo no conjunto de linhas à qual associar dados. Se você usar números, você pode ignorar ordinais consecutivos (por exemplo: 1, 2, 3, 5). O nome pode conter espaços, se o provedor OLE DB que você use suportá-lo. Por exemplo, você pode usar qualquer um dos seguintes formatos:  
   
 ```  
 [db_column("2")] TCHAR szCity[30];  
@@ -51,33 +50,33 @@ Associa uma coluna especificada em uma variável no conjunto de linhas.
 ```  
   
  *DbType* (opcional)  
- OLE DB [indicador de tipo](https://msdn.microsoft.com/en-us/library/ms711251.aspx) para a entrada da coluna.  
+ Um banco de dados OLE [indicador de tipo](https://msdn.microsoft.com/library/ms711251.aspx) para a entrada de coluna.  
   
  *precisão* (opcional)  
- A precisão a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição do `bPrecision` elemento o [estrutura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ A precisão a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição dos `bPrecision` elemento o [estrutura DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *escala* (opcional)  
- A escala a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição do `bScale` elemento o [estrutura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ A escala a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bScale` elemento o [estrutura DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *status* (opcional)  
- Uma variável de membro usada para manter o status dessa coluna. O status indica se o valor da coluna é um valor de dados ou algum outro valor, como **nulo**. Para obter os valores possíveis, consulte [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx) no *referência do programador de DB OLE*.  
+ Uma variável de membro usada para manter o status dessa coluna. O status indica se o valor da coluna é um valor de dados ou algum outro valor, como nulo. Para os valores possíveis, consulte [Status](https://msdn.microsoft.com/library/ms722617.aspx) na *referência do programador DB OLE*.  
   
  *comprimento* (opcional)  
  Uma variável de membro usada para manter o tamanho da coluna em bytes.  
   
 ## <a name="remarks"></a>Comentários  
- **db_column** associa a coluna especificada em uma variável no conjunto de linhas. Ele delimita os dados de membro que podem participar de OLE DB `IAccessor`-com base em associação. Esse atributo define o mapa de coluna normalmente definido usando as macros de consumidor OLE DB [BEGIN_COLUMN_MAP](../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../data/oledb/end-column-map.md), e [COLUMN_ENTRY](../data/oledb/column-entry.md). Esses manipulam o OLE DB [estrutura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) para associar a coluna especificada. Cada membro que você marca com o **db_column** atributo ocupará uma entrada no mapa de coluna na forma de uma entrada de coluna. Portanto, você chama esse atributo onde você deve colocar o mapa de coluna, ou seja, a classe de comando ou uma tabela.  
+ **db_column** associa a coluna da tabela especificada a uma variável no conjunto de linhas. Delimita os dados de membro que podem participar de OLE DB `IAccessor`-com base em associação. Este atributo define o mapa de coluna normalmente é definido usando as macros de consumidor do OLE DB [BEGIN_COLUMN_MAP](../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../data/oledb/end-column-map.md), e [COLUMN_ENTRY](../data/oledb/column-entry.md). Eles manipulam o OLE DB [estrutura DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) para associar a coluna especificada. Cada membro marcar com o **db_column** atributo ocupa uma entrada no mapa de coluna na forma de uma entrada de coluna. Portanto, chamar este atributo em que você colocaria o mapa de coluna, ou seja, na classe de comando ou tabela.  
   
- Use **db_column** em conjunto com o o [db_table](../windows/db-table.md) ou [db_command](../windows/db-command.md) atributos.  
+ Use **db_column** em conjunto com qualquer um os [db_table](../windows/db-table.md) ou [db_command](../windows/db-command.md) atributos.  
   
- Quando o provedor de atributo do consumidor aplica esse atributo a uma classe, o compilador irá renomear a classe \_ *YourClassName*acessador, onde *YourClassName* é o nome atribuído a classe e o compilador também criará uma classe chamada *YourClassName*, que é derivado de \_ *YourClassName*acessador.  No modo de exibição de classe, você verá as classes.  
+ Quando o provedor do consumidor de atributo se aplica a esse atributo a uma classe, o compilador renomeará a classe \_ *YourClassName*acessador, onde *YourClassName* é o nome que você deu a classe e o compilador também criará uma classe chamada *YourClassName*, que é derivada de \_ *YourClassName*acessador.  No modo de exibição de classe, você verá as duas classes.  
   
- Para obter exemplos desse atributo usado em um aplicativo, consulte os exemplos [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409), e [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
+ Para obter exemplos desse atributo usado em um aplicativo, consulte os exemplos [AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409), e [MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo associa uma coluna em uma tabela para um **longo** membro de dados e especifica os campos de comprimento e status.  
+ Este exemplo associa uma coluna em uma tabela para uma **longo** membro de dados e especifica os campos de status e o comprimento.  
   
-```  
+```cpp  
 // db_column_1.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -94,9 +93,9 @@ class CProducts {
 ```  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo associa quatro colunas para um **longo**, uma cadeia de caracteres, um carimbo de hora e um **DB_NUMERIC** inteiro, nessa ordem.  
+ Este exemplo associa quatro colunas para um **longo**, uma cadeia de caracteres, um carimbo de hora e um `DB_NUMERIC` inteiro, nessa ordem.  
   
-```  
+```cpp  
 // db_column_2.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -114,13 +113,13 @@ class CProducts {
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|**classe**, `struct`, membro, método|  
+|**Aplica-se a**|**classe**, **struct**, membro, método|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

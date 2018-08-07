@@ -1,5 +1,5 @@
 ---
-title: 'Método Handlenulltraits: | Microsoft Docs'
+title: 'Método handlenulltraits:: Close | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1319b6a75f92e057975d0f8d2c7e2753df47141
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3bc6e7adfa99e2ce25c9913309b5c5bd486bee0
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873164"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569395"
 ---
 # <a name="handlenulltraitsclose-method"></a>Método HANDLENullTraits::Close
 Fecha o identificador especificado.  
@@ -35,15 +35,15 @@ inline static bool Close(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `h`  
+### <a name="parameters"></a>Parâmetros  
+ *h*  
  O identificador para fechar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- **True** se tratar `h` fechada com êxito; caso contrário, **false**.  
+ **Verdadeiro** se tratar *h* fechado com êxito; caso contrário, **false**.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   

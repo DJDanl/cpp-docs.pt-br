@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1fec2f00c40b833cc9a65db1db58920543aa90d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 82a9bc4000919d2bbe2b8598351d3fe6a4730ba9
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873372"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569024"
 ---
 # <a name="enableif-structure"></a>Estrutura EnableIf
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,14 +43,14 @@ struct EnableIf<true, T>;
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
+ *T*  
  Um tipo.  
   
- `b`  
- Uma expressão booleana.  
+ *b*  
+ Uma expressão booliana.  
   
 ## <a name="remarks"></a>Comentários  
- Define um membro de dados do tipo especificado pelo parâmetro de modelo segundo se o primeiro parâmetro de modelo for avaliada como `true`.  
+ Define um membro de dados do tipo especificado pelo segundo parâmetro de modelo se o primeiro parâmetro de modelo é avaliado como **verdadeira**.  
   
 ## <a name="members"></a>Membros  
   
@@ -58,7 +58,7 @@ struct EnableIf<true, T>;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|`type`|Se o parâmetro de modelo `b` é avaliada como `true`, especialização parcial define o membro de dados `type` ser do tipo `T`.|  
+|`type`|Se o parâmetro de modelo *b* é avaliada como **verdadeiro**, a especialização parcial define o membro de dados `type` ser do tipo `T`.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `EnableIf`  

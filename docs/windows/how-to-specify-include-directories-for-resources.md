@@ -17,28 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9778f774464e8da003a535e3c4dba0aef6ed24cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db09d29f0049152f734ada8a78c510e4424d8dd3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875273"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569534"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Como especificar diretórios de inclusão para recursos
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>Para especificar diretórios de inclusão para um arquivo .rc específico  
   
-1.  O arquivo. rc no Gerenciador de soluções e selecione **propriedades** no menu de atalho.  
+1.  Clique com botão direito no arquivo. rc no Gerenciador de soluções e selecione **propriedades** no menu de atalho.  
   
-2.  No **páginas de propriedade** caixa de diálogo, clique no **recursos** nó no painel esquerdo, em seguida, especifique adicionais incluem diretórios o **diretórios de inclusão adicionais** propriedade.  
+2.  No **páginas de propriedades** caixa de diálogo, clique o **recursos** nó no painel esquerdo, em seguida, especificar diretórios de inclusão adicionais a **diretórios de inclusão adicionais** propriedade.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no guia do desenvolvedor do .NET Framework. Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos para propriedades, consulte [passo a passo: usando recursos para localização com o ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no guia do desenvolvedor do .NET Framework. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos a propriedades, consulte [passo a passo: usando recursos para localização com o ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Requisitos**  
+## <a name="requirements"></a>Requisitos  
   
  Win32  
   
 ## <a name="see-also"></a>Consulte também  
- [Recursos incluem a caixa de diálogo](../windows/resource-includes-dialog-box.md)   
+ [Caixa de diálogo recurso inclui](../windows/resource-includes-dialog-box.md)   
  [TN035: Usando vários arquivos de recurso e arquivos de cabeçalho com o Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)   
  [Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)   
  [Arquivos de recurso](../windows/resource-files-visual-studio.md)   

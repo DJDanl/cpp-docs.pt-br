@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70399b15081de89d8da49268c8d62d3ad390858d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "38954975"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571432"
 ---
 # <a name="dbcommand"></a>db_command
 Cria um comando OLE DB.  
@@ -133,7 +133,7 @@ Se *bulk_fetch* é menor que um `SetRows` retornará zero.
 ## <a name="remarks"></a>Comentários  
 **db_command** cria um [CCommand](../data/oledb/ccommand-class.md) objeto, que é usado por um consumidor OLE DB para executar um comando.  
   
-Você pode usar **db_command** com escopo de classe ou função; a principal diferença é o escopo do `CCommand` objeto. Com o escopo da função, dados, como associações de encerrar no final da função. Usos de escopo de classe e função envolvem a OLE DB consumidor classe de modelo **CCommand\<>**, mas os argumentos de modelo são diferentes para os casos de função e de classe. No caso de função, as associações serão feitas para um **acessador** que abrange variáveis locais, enquanto o uso da classe irá inferir um `CAccessor`-derivado da classe como o argumento. Quando usado como um atributo de classe **db_command** funciona em conjunto com **db_column**.  
+Você pode usar **db_command** com escopo de classe ou função; a principal diferença é o escopo do `CCommand` objeto. Com o escopo da função, dados, como associações de encerrar no final da função. Usos de escopo de classe e função envolvem a OLE DB consumidor classe de modelo `CCommand<>`, mas os argumentos de modelo são diferentes para os casos de função e de classe. No caso de função, as associações serão feitas para um **acessador** que abrange variáveis locais, enquanto o uso da classe irá inferir um `CAccessor`-derivado da classe como o argumento. Quando usado como um atributo de classe **db_command** funciona em conjunto com **db_column**.  
   
 **db_command** pode ser usado para executar comandos que não retornam um conjunto de resultados.  
   

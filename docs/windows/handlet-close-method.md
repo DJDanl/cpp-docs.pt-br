@@ -1,5 +1,5 @@
 ---
-title: 'Método Handlet: | Microsoft Docs'
+title: 'Método handlet:: Close | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f0c1e47420106651cfe0526d6d212e9819a72ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 69f3f2c756d158954676f6fc42941b1b80f4345e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873245"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569912"
 ---
 # <a name="handletclose-method"></a>Método HandleT::Close
-Fecha o objeto HandleT atual.  
+Fecha o atual **HandleT** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,12 +34,12 @@ void Close();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O identificador subjacente a HandleT atual é fechado e o HandleT é definido para o estado inválido.  
+ O identificador subjacente ao atual **HandleT** for fechada e o **HandleT** é definido como o estado inválido.  
   
- Se o identificador não fechar corretamente, uma exceção será gerada no thread de chamada.  
+ Se o identificador não fechar corretamente, uma exceção é gerada no thread de chamada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

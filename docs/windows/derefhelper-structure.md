@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad7af9f507a29531b14ff75aa97e0aee327db380
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70031553e6a0585dc9f86df336ec2199cd7660ea
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871361"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571329"
 ---
 # <a name="derefhelper-structure"></a>Estrutura DerefHelper
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,11 +42,11 @@ struct DerefHelper<T*>;
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
+ *T*  
  Um parâmetro de modelo.  
   
 ## <a name="remarks"></a>Comentários  
- Representar um ponteiro desreferenciado para o `T*` parâmetro do modelo.  
+ Representar um ponteiro cancelado para o `T*` parâmetro de modelo.  
   
  DerefHelper é usado em uma expressão, como: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.  
   
@@ -56,7 +56,7 @@ struct DerefHelper<T*>;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|`DerefType`|Identificador para o parâmetro de modelo desreferenciado `T*`.|  
+|`DerefType`|Identificador para o parâmetro de modelo cancelada `T*`.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `DerefHelper`  

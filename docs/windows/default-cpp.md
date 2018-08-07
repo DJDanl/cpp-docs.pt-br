@@ -19,21 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb701b91fc1e076dcf4e6540bf8bcaf6141ec6c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f2e9587d3fa9bc9d8472c348e92555b5bbb4bb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872959"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570851"
 ---
 # <a name="default-c"></a>default (C++)
-Indica que o personalizado ou dispinterface definidos em uma coclass representa a interface de programação padrão.  
+Indica que o personalizado ou dispinterface definido dentro de uma coclass representa a interface de programação padrão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ default(  
+[ default(  
    interface1,  
    interface2  
 ) ]  
@@ -46,7 +45,7 @@ Indica que o personalizado ou dispinterface definidos em uma coclass representa 
  Se nenhuma interface padrão for especificado, a primeira ocorrência de uma interface nonsource é usada como o padrão.  
   
  *Interface2*(opcional)  
- A interface de origem padrão. Você também deve especificar essa interface com o [fonte](../windows/source-cpp.md) atributo.  
+ A interface de origem padrão. Você também deve especificar essa interface com o [origem](../windows/source-cpp.md) atributo.  
   
  Se nenhuma interface de origem padrão for especificado, a primeira interface de origem é usada como o padrão.  
   
@@ -54,9 +53,9 @@ Indica que o personalizado ou dispinterface definidos em uma coclass representa 
  O **padrão** atributo C++ tem a mesma funcionalidade que o [padrão](http://msdn.microsoft.com/library/windows/desktop/aa366787) atributo MIDL. O **padrão** atributo também é usado com o [caso](../windows/case-cpp.md) atributo.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir mostra como **padrão** é usado na definição de uma coclass para especificar **ICustomDispatch** como a interface de programação padrão:  
+ O seguinte código mostra como **padrão** é usado na definição de uma coclass para especificar `ICustomDispatch` como a interface de programação padrão:  
   
-```  
+```cpp  
 // cpp_attr_ref_default.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -105,17 +104,17 @@ int main() {
 }  
 ```  
   
- O [fonte](../windows/source-cpp.md) atributo também apresenta um exemplo de como usar **padrão**.  
+ O [fonte](../windows/source-cpp.md) atributo também tem um exemplo de como usar **padrão**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|**classe**, `struct`, membro de dados|  
+|**Aplica-se a**|**classe**, **struct**, membro de dados|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|**coclass** (quando aplicado a **classe** ou `struct`)|  
+|**Atributos obrigatórios**|**coclass** (quando aplicado a **classe** ou **struct**)|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  

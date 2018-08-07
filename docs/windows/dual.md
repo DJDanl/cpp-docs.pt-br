@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 460e3f5316bc4b4509e563fda2354106164b3b1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b52359d1f50f5ea3bad4075432fd8ae0e468d2df
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872374"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571012"
 ---
 # <a name="dual"></a>dual
 Coloca uma interface no arquivo. idl como uma interface dupla.  
@@ -30,9 +30,7 @@ Coloca uma interface no arquivo. idl como uma interface dupla.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [dual]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
@@ -41,7 +39,7 @@ Coloca uma interface no arquivo. idl como uma interface dupla.
 ## <a name="example"></a>Exemplo  
  O código a seguir é um bloco de atributo que usa **dual** antes de uma definição de interface:  
   
-```  
+```cpp  
 // cpp_attr_ref_dual.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -75,13 +73,13 @@ __interface IStatic : IDispatch
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|`interface`|  
+|**Aplica-se a**|**interface**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|**dispinterface**|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb3c2131331521dab1b8264b696206d953762851
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b58aa072af5ff96093f9999d212f8b19ff0571c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873102"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569811"
 ---
 # <a name="eventsourcetargetspointerlock-data-member"></a>Membro de dados EventSource::targetsPointerLock_
-Sincroniza o acesso a membros de dados internos, mesmo quando os manipuladores de eventos para essa EventSource estão sendo adicionados, removidos ou invocado.  
+Sincroniza o acesso a membros de dados internos, mesmo durante a manipuladores de eventos para este **EventSource** estão sendo adicionados, removidos ou invocado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +34,7 @@ Wrappers::SRWLock targetsPointerLock_;
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL
  

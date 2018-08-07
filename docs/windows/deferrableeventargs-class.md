@@ -13,15 +13,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 15be5c26e5d4e976eaba7b6b24e1bf4f62c53aca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72f5ee2beca3a3985258b12cea9091665eb74cfa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872084"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571256"
 ---
 # <a name="deferrableeventargs-class"></a>Classe DeferrableEventArgs
-Uma classe de modelo usada para os tipos de argumento do evento para adiamentos.  
+Uma classe de modelo usada para os tipos de argumento de evento para adiamentos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,15 +31,14 @@ typename TEventArgsInterface,
 typename TEventArgsClass  
 >  
 class DeferrableEventArgs : public TEventArgsInterface  
-  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `TEventArgsInterface`  
+ *TEventArgsInterface*  
  O tipo de interface que declara os argumentos para um evento adiado.  
   
- `TEventArgsClass`  
- A classe que implementa `TEventArgsInterface`.  
+ *TEventArgsClass*  
+ A classe que implementa *TEventArgsInterface*.  
   
 ## <a name="members"></a>Membros  
   
@@ -51,12 +50,12 @@ class DeferrableEventArgs : public TEventArgsInterface
 |[Método DeferrableEventArgs::InvokeAllFinished](../windows/deferrableeventargs-invokeallfinished-method.md)|Chamado para indicar que todo o processamento para manipular um evento adiado foi concluída.|  
   
 ## <a name="remarks"></a>Comentários  
- As instâncias dessa classe são passadas para manipuladores de eventos para eventos adiados. Os parâmetros de modelo representam uma interface que define os detalhes dos argumentos do evento para um tipo específico de evento adiado e uma classe que implementa essa interface.  
+ As instâncias dessa classe são passadas para manipuladores de eventos para eventos adiados. Os parâmetros de modelo representam uma interface que define os detalhes dos argumentos do evento para um tipo específico de evento adiado e uma classe que implementa a interface.  
   
- A classe é exibido como o primeiro argumento para um manipulador de eventos para um evento adiado. Você pode chamar o [GetDeferral](../windows/deferrableeventargs-getdeferral-method.md) método para obter o [adiamento](http://go.microsoft.com/fwlink/p/?linkid=526520) objeto do qual você pode obter todas as informações sobre o evento adiado. Depois de concluir a manipulação de eventos, você deve chamar Complete no objeto de adiamento. Em seguida, você deve chamar [InvokeAllFinished](../windows/deferrableeventargs-invokeallfinished-method.md) no final do método do manipulador de eventos, que garante que a conclusão de adiada todos os eventos é comunicada corretamente.  
+ A classe é exibido como o primeiro argumento para um manipulador de eventos para um evento adiado. Você pode chamar o [GetDeferral](../windows/deferrableeventargs-getdeferral-method.md) método para obter o [adiamento](http://go.microsoft.com/fwlink/p/?linkid=526520) objeto do qual você pode obter todas as informações sobre o evento adiada. Depois de concluir a manipulação de eventos, você deve chamar Complete no objeto de adiamento. Em seguida, você deve chamar [InvokeAllFinished](../windows/deferrableeventargs-invokeallfinished-method.md) no final do método do manipulador de eventos, que garante que a conclusão de adiada todos os eventos é comunicada corretamente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL  
   

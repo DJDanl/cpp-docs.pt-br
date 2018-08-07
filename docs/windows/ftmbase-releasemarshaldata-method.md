@@ -1,5 +1,5 @@
 ---
-title: 'Método Ftmbase: | Microsoft Docs'
+title: 'Método ftmbase:: Releasemarshaldata | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d56bc92e11d458a1872975f5a81a19c96566d59
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6c536d3708141250c6e0ab19cacb22fe989dc236
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873645"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568752"
 ---
 # <a name="ftmbasereleasemarshaldata-method"></a>Método FtmBase::ReleaseMarshalData
-Destrói um pacote de dados empacotado.  
+Destrói um pacote de dados com marshaling.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,11 +36,11 @@ STDMETHODIMP ReleaseMarshalData(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `pStm`  
- Ponteiro para um fluxo que contém o pacote de dados a serem destruídos.  
+ *pStm*  
+ Ponteiro para um fluxo que contém o pacote de dados a ser destruído.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.  
+ S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** ftm.h  

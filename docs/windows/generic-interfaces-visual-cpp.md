@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e16a2ab8a1ee0c9255f394d033bda2a7afc2b7e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 428004d3390b95c700c53fd157b62a1b3fbe3d0b
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878691"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571169"
 ---
 # <a name="generic-interfaces-visual-c"></a>Interfaces genéricas (Visual C++)
-As restrições que se aplicam a parâmetros de tipo em classes são os mesmos que se aplicam a parâmetros de tipo em interfaces (consulte [Classes genéricas (C + + CLI)](../windows/generic-classes-cpp-cli.md)).  
+As restrições que se aplicam aos parâmetros de tipo em classes são iguais aos que se aplicam aos parâmetros de tipo em interfaces (consulte [Classes genéricas (C + + / CLI)](../windows/generic-classes-cpp-cli.md)).  
   
- As regras que controlam a sobrecarga de função são as mesmas para funções dentro de classes genéricas ou interfaces genéricas.  
+ As regras que controlam o sobrecarregamento de função são as mesmas para funções dentro de classes genéricas ou interfaces genéricas.  
   
- Implementações de membro de interface explícita trabalhar com tipos de interface construída da mesma forma que com os tipos de interface simples (consulte os exemplos a seguir).  
+ Implementações de membros de interface explícita trabalham com tipos de interface construído da mesma forma que com tipos de interface simples (consulte os exemplos a seguir).  
   
  Para obter mais informações sobre interfaces, consulte [classe de interface](../windows/interface-class-cpp-component-extensions.md).  
   
@@ -41,25 +41,25 @@ As restrições que se aplicam a parâmetros de tipo em classes são os mesmos q
   
 ## <a name="remarks"></a>Comentários  
  *atributos* (opcional)  
- Informações adicionais de declarativas. Para obter mais informações sobre atributos e classes de atributos, consulte atributos.  
+ Informações declarativas adicionais. Para obter mais informações sobre atributos e classes de atributos, consulte atributos.  
   
  *chave de classe*  
  **classe** ou **typename**  
   
- `type-parameter-identifier(s)`  
+ *tipo-parâmetro-identificador (es)*  
  Lista de identificadores separados por vírgulas.  
   
- `type-parameter-constraints-clauses`  
- Utiliza o formato especificado no [restrições em parâmetros de tipo genérico (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ *tipo de parâmetro-restrições cláusulas*  
+ Assume o formato especificado no [restrições em parâmetros de tipo genéricos (C + + c++ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
  *modificadores de acessibilidade* (opcional)  
- Modificadores de acessibilidade (por exemplo, **pública, privada**).  
+ Modificadores de acessibilidade (por exemplo, **público, privado**).  
   
  *identifier*  
  O nome da interface.  
   
- *lista de base* (opcional)  
- Uma lista que contém um ou mais explícitas interfaces base separados por vírgulas.  
+ *Base de dados de lista* (opcional)  
+ Uma lista que contém um ou mais interfaces base explícitas separadas por vírgulas.  
   
  *corpo de interface*  
  Declarações de membros de interface.  
@@ -70,7 +70,7 @@ As restrições que se aplicam a parâmetros de tipo em classes são os mesmos q
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como declarar e criar uma interface genérica. No exemplo, a interface genérica `IList<ItemType>` é declarada. Em seguida, é implementado por duas classes genéricas, `List1<ItemType>` e `List2<ItemType>`, com implementações diferentes.  
   
-```  
+```cpp  
 // generic_interface.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -244,9 +244,9 @@ List2
 ```  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo declara uma interface genérica, `IMyGenIface`e não genérica de duas interfaces, `IMySpecializedInt` e `ImySpecializedString`, que especializar `IMyGenIface`. As duas interfaces especializadas, em seguida, são implementadas por duas classes, `MyIntClass` e `MyStringClass`. O exemplo mostra como especializar interfaces genéricas, instanciar interfaces genéricas e não genéricas e chamar os membros implementados explicitamente nas interfaces.  
+ Este exemplo declara uma interface genérica, `IMyGenIface`e duas interfaces não genéricas, `IMySpecializedInt` e `ImySpecializedString`, que são especializados `IMyGenIface`. As duas interfaces especializadas, em seguida, são implementadas por duas classes, `MyIntClass` e `MyStringClass`. O exemplo mostra como especializar interfaces genéricas, instanciar interfaces genéricas e não genéricas e chamar os membros explicitamente implementados nas interfaces.  
   
-```  
+```cpp  
 // generic_interface2.cpp  
 // compile with: /clr  
 // Specializing and implementing generic interfaces.  

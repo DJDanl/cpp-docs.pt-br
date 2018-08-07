@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4461004a1681d9095449c51fb9cb3973d5017693
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2757589509e4a2b091c5057ef2065866a8829494
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881303"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570415"
 ---
 # <a name="eventtargetarray-class"></a>Classe EventTargetArray
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
 ## <a name="remarks"></a>Comentários  
  Representa uma matriz de manipuladores de eventos.  
   
- Os manipuladores de eventos que são associados com um [EventSource](../windows/eventsource-class.md) objeto são armazenados em um membro de dados EventTargetArray protegido.  
+ Os manipuladores de eventos que são associados com um [EventSource](../windows/eventsource-class.md) objeto são armazenadas em uma planilha protegida **EventTargetArray** membro de dados.  
   
 ## <a name="members"></a>Membros  
   
@@ -44,23 +44,23 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor EventTargetArray::EventTargetArray](../windows/eventtargetarray-eventtargetarray-constructor.md)|Inicializa uma nova instância da classe EventTargetArray.|  
-|[Destruidor EventTargetArray::~EventTargetArray](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Deinitializes classe EventTargetArray atual.|  
+|[Construtor EventTargetArray::EventTargetArray](../windows/eventtargetarray-eventtargetarray-constructor.md)|Inicializa uma nova instância dos **EventTargetArray** classe.|  
+|[Destruidor EventTargetArray::~EventTargetArray](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Realiza o desligamento atual **EventTargetArray** classe.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método EventTargetArray::AddTail](../windows/eventtargetarray-addtail-method.md)|Anexa o manipulador de eventos especificado ao final da matriz interna de manipuladores de eventos.|  
+|[Método EventTargetArray::AddTail](../windows/eventtargetarray-addtail-method.md)|Acrescenta o manipulador de eventos especificado ao final da matriz interna de manipuladores de eventos.|  
 |[Método EventTargetArray::Begin](../windows/eventtargetarray-begin-method.md)|Obtém o endereço do primeiro elemento da matriz interna de manipuladores de eventos.|  
 |[Método EventTargetArray::End](../windows/eventtargetarray-end-method.md)|Obtém o endereço do último elemento da matriz interna de manipuladores de eventos.|  
-|[Método EventTargetArray::Length](../windows/eventtargetarray-length-method.md)|Obtém o número atual de elementos da matriz interna de manipuladores de eventos.|  
+|[Método EventTargetArray::Length](../windows/eventtargetarray-length-method.md)|Obtém o número atual de elementos na matriz interna de manipuladores de eventos.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `EventTargetArray`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

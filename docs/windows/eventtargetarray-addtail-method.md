@@ -1,5 +1,5 @@
 ---
-title: 'Método Eventtargetarray: | Microsoft Docs'
+title: 'Método eventtargetarray:: Addtail | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bc56e13c8d07841ceb1f341228d7a963fda2dd8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b469adedebda2beb64c531c82d10f90cc4114742
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872277"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570168"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>Método EventTargetArray::AddTail
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,17 +35,17 @@ void AddTail(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `element`  
- Ponteiro para o manipulador de eventos para anexar.  
+### <a name="parameters"></a>Parâmetros  
+ *Elemento*  
+ Ponteiro para o manipulador de eventos para acrescentar.  
   
 ## <a name="remarks"></a>Comentários  
- Anexa o manipulador de eventos especificado ao final da matriz interna de manipuladores de eventos.  
+ Acrescenta o manipulador de eventos especificado ao final da matriz interna de manipuladores de eventos.  
   
- AddTail() destina-se a ser usado internamente pelo somente a classe EventSource.  
+ **AddTail()** se destina a ser usado internamente pelo apenas o `EventSource` classe.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

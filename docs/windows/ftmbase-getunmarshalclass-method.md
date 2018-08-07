@@ -1,5 +1,5 @@
 ---
-title: 'Método Ftmbase: | Microsoft Docs'
+title: 'Método ftmbase:: Getunmarshalclass | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09afd9f977dbc779eb1dc10e9553d2ca88538fcc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 329d43227aa131728db72086f99cb86797a5e1e3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873297"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571146"
 ---
 # <a name="ftmbasegetunmarshalclass-method"></a>Método FtmBase::GetUnmarshalClass
-Obtém o CLSID COM usa para localizar a DLL que contém o código para o proxy correspondente. COM carrega dessa DLL para criar uma instância não inicializada do proxy.  
+Obtém o CLSID que COM usa para localizar a DLL que contém o código para o proxy correspondente. COM carrega essa DLL para criar uma instância não inicializada do proxy.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,27 +40,27 @@ STDMETHODIMP GetUnmarshalClass(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `riid`  
+### <a name="parameters"></a>Parâmetros  
+ *riid*  
  Referência ao identificador da interface a ser empacotado.  
   
- `pv`  
- Ponteiro para a interface para ser empacotado; pode ser NULL se o chamador não tem um ponteiro para a interface desejada.  
+ *VP*  
+ Ponteiro para a interface a ser empacotado; pode ser NULL se o chamador não tem um ponteiro para a interface desejada.  
   
- `dwDestContext`  
- Contexto de destino onde a interface especificada é para ser desempacotada.  
+ *dwDestContext*  
+ Contexto de destino onde a interface especificada deve ser desempacotada.  
   
  Especifique um ou mais valores de enumeração MSHCTX.  
   
- Unmarshaling pode ocorrer em outro apartment do processo atual (MSHCTX_INPROC) ou em outro processo no mesmo computador que o processo atual (MSHCTX_LOCAL).  
+ Unmarshaling pode ocorrer em outra apartment do processo atual (MSHCTX_INPROC) ou em outro processo no mesmo computador que o processo atual (MSHCTX_LOCAL).  
   
- `pvDestContext`  
+ *pvDestContext*  
  Reservado para uso futuro; deve ser NULL.  
   
- `mshlflags`  
+ *mshlflags*  
  Quando essa operação for concluída, ponteiro para o CLSID para ser usado para criar um proxy no processo de cliente.  
   
- `pCid`  
+ *pCid*  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se bem-sucedido; Caso contrário, S_FALSE.  

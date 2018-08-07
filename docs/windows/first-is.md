@@ -17,26 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8292dfb329d5e5db15f8329cbdead443215bbee8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8d11fdaf451ba1e77c997f49726cd9b86f66172f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875000"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569257"
 ---
 # <a name="firstis"></a>first_is
-Especifica o índice do primeiro elemento de matriz a ser transmitido.  
+Especifica o índice do primeiro elemento da matriz a ser transmitido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ first_is(  
+[ first_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *Expressão*  
  Uma ou mais expressões de linguagem C. Slots de argumentos vazia são permitidos.  
   
@@ -46,7 +45,7 @@ Especifica o índice do primeiro elemento de matriz a ser transmitido.
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra várias maneiras para especificar uma seção em uma matriz:  
   
-```  
+```cpp  
 // cpp_attr_ref_first_is.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -68,13 +67,13 @@ requestedit] HRESULT get_I([out, retval]long *i);
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|Campo em `struct` ou **união**, a interface de parâmetro, o método de interface|  
+|**Aplica-se a**|Campo do **struct** ou **união**, a interface do parâmetro, o método de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  

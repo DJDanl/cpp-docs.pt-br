@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c838f057d9c5e59193d0578fe8aa871b1b75ee9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11ec7cf883fe8c9454cf538efc0835b9c77b1f92
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873411"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569980"
 ---
 # <a name="defaultvalue"></a>defaultvalue
-Permite a especificação de um valor padrão para um parâmetro opcional com tipo.  
+Permite a especificação de um valor padrão para um parâmetro opcional tipado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [ defaultvalue= value ]  
 ```  
   
@@ -44,7 +43,7 @@ Permite a especificação de um valor padrão para um parâmetro opcional com ti
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra um método de interface usando o **defaultvalue** atributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvalue.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -68,13 +67,13 @@ __interface IFireTabCtrl : IDispatch {
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Parâmetro de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  

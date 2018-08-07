@@ -1,5 +1,5 @@
 ---
-title: 'Método EventSource: | Microsoft Docs'
+title: 'Método EventSource:: GetSize | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60c52c711c85caa64c289937f39fe50ec18e1839
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e38bd233c302d0a2bd054a1cbf2efb301089a003
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33886994"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569660"
 ---
 # <a name="eventsourcegetsize-method"></a>Método EventSource::GetSize
-Recupera o número de manipuladores de eventos associados ao objeto de EventSource atual  
+Recupera o número de manipuladores de eventos associados ao atual **EventSource** objeto  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,10 +34,10 @@ size_t GetSize() const;
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- O número de manipuladores de eventos [targets _](../windows/eventsource-targets-data-member.md).  
+ O número de manipuladores de eventos em [targets _](../windows/eventsource-targets-data-member.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL  
   

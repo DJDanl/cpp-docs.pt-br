@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc2b6b88f9cfc095dfa6b2648dd81820b3454a1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf329199541ad0075044633d49d6ab654146b5e7
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873736"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570958"
 ---
 # <a name="eventtraits-structure"></a>Estrutura EventTraits
-Define as características de um identificador de classe de evento.  
+Define as características de um `Event` identificador de classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +41,7 @@ struct EventTraits : HANDLENullTraits;
  `EventTraits`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   

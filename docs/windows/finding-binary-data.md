@@ -21,19 +21,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 815975ac693885842d2e4b2287e14957abe8375f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee50f78c4fcc39561fbd94ef3a0af28746cfbaa9
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873557"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568680"
 ---
 # <a name="finding-binary-data"></a>Localizando dados binários
-Você pode procurar cadeias de caracteres ASCII ou bytes hexadecimais. Por exemplo, para localizar "Hello", você pode procurar por uma a cadeia de caracteres "Hello" ou "48 65 6C 6F de C 6" (o equivalente hexadecimal).  
+Você pode procurar cadeias de caracteres ASCII ou bytes hexadecimais. Por exemplo, para localizar o "Hello", você pode pesquisar a cadeia de caracteres "Hello" ou para "48 65 6C 6F de C 6" (o equivalente hexadecimal).  
   
 ### <a name="to-find-binary-data"></a>Para localizar dados binários  
   
-1.  Do **editar** menu, clique em [localizar](/visualstudio/ide/reference/find-command).  
+1.  Dos **edite** menu, clique em [localizar](/visualstudio/ide/reference/find-command).  
   
 2.  No **localizar** caixa, selecione uma cadeia de caracteres de pesquisa anterior na lista suspensa ou digite os dados que você deseja localizar.  
   
@@ -41,12 +41,11 @@ Você pode procurar cadeias de caracteres ASCII ou bytes hexadecimais. Por exemp
   
 4.  Clique em **Localizar próximo**.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisitos  
+## <a name="requirements"></a>Requisitos  
   
  Nenhum  
   
 ## <a name="see-also"></a>Consulte também  
  [Editor binário](binary-editor.md)
-

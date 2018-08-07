@@ -1,5 +1,5 @@
 ---
-title: 'Método Ftmbase: | Microsoft Docs'
+title: 'Método ftmbase:: Unmarshalinterface | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 964ce5cc33b51c54446874522317814279cdd960
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7b34f1af7734fa22db3a9f296bc021917356f8a
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877713"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570022"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>Método FtmBase::UnmarshalInterface
-Inicializa um proxy criado recentemente e retorna um ponteiro de interface de proxy.  
+Inicializa um proxy recém-criado e retorna um ponteiro de interface para esse proxy.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,17 +38,17 @@ STDMETHODIMP UnmarshalInterface(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `pStm`  
- Ponteiro para o fluxo do qual o ponteiro de interface é realizar unmarshaling.  
+ *pStm*  
+ Ponteiro para o fluxo do qual o ponteiro de interface deve ser desempacotada.  
   
- `riid`  
+ *riid*  
  Referência ao identificador da interface a ser desempacotada.  
   
- `ppv`  
- Quando essa operação for concluída, o endereço de uma variável de ponteiro que recebe o ponteiro de interface solicitado na `riid`. Se essa operação for bem-sucedida, *`ppv` contém o ponteiro de interface solicitada da interface a ser desempacotada.  
+ *ppv*  
+ Quando essa operação for concluída, o endereço de uma variável de ponteiro que recebe o ponteiro de interface solicitado no *riid*. Se essa operação for bem-sucedida, **ppv* contém o ponteiro da interface a ser desempacotada de interface solicitada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, E_NOINTERFACE ou E_FAIL.  
+ S_OK se bem-sucedido; Caso contrário, E_FAIL ou E_NOINTERFACE.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** ftm.h  
