@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db8f315c0589ceb7cd9411873152fe644985818e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9066a9cd8985b132c1fbd9f6a97bcd0654003d2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876885"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604497"
 ---
 # <a name="isbaseofstrict-structure"></a>Estrutura IsBaseOfStrict
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,17 +42,17 @@ template <
 struct IsBaseOfStrict<Base, Base>;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `Base`  
+### <a name="parameters"></a>Parâmetros  
+ *Base de dados de*  
  O tipo base.  
   
- `Derived`  
+ *Derivado*  
  O tipo derivado.  
   
 ## <a name="remarks"></a>Comentários  
  Testa se um tipo é a base de outro.  
   
- O primeiro modelo testa se um tipo é derivado de um tipo base, que pode produzir **true** ou **false**. O segundo modelo testa se um tipo é derivado de si mesma, que sempre produz **false**.  
+ O primeiro modelo testa se um tipo é derivado de um tipo base, que pode produzir **verdadeira** ou **falso**. O segundo modelo testa se um tipo é derivado de si mesma, que sempre produz **falsos**.  
   
 ## <a name="members"></a>Membros  
   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef98cd3ac446c41143fc8e1f3f5a731f05ab3c45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87c3e84c0547751b03fba616df7c3f9bdd4dc06e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875988"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604324"
 ---
 # <a name="ptr"></a>ptr
 Designa um ponteiro como um ponteiro completo.  
@@ -30,26 +30,24 @@ Designa um ponteiro como um ponteiro completo.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [ptr]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
  O **ptr** atributo C++ tem a mesma funcionalidade que o [ptr](http://msdn.microsoft.com/library/windows/desktop/aa367149) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- Consulte o exemplo para [defaultvalue](../windows/defaultvalue.md) para uso do exemplo **ptr**.  
+ Veja o exemplo de [defaultvalue](../windows/defaultvalue.md) para uso do exemplo **ptr**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|Parâmetro de interface, método de interface `typedef`|  
+|**Aplica-se a**|Parâmetro de interface, o método de interface, **typedef**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c0bf7ecd989b51a17c853c6d2986db204c3ce34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d6f17f44e520018f82dc82abe88427a2410d68e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888715"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606345"
 ---
 # <a name="retval"></a>retval
 Designa o parâmetro que recebe o valor de retorno do membro.  
@@ -30,28 +30,26 @@ Designa o parâmetro que recebe o valor de retorno do membro.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [retval]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
  O **retval** atributo C++ tem a mesma funcionalidade que o [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) atributo MIDL.  
   
- **retval** devem aparecer no último argumento na declaração da função.  
+ **retval** deve aparecer no último argumento na declaração da função.  
   
 ## <a name="example"></a>Exemplo  
- Consulte o exemplo para [associável](../windows/bindable.md) para uso do exemplo **retval**.  
+ Veja o exemplo de [associável](../windows/bindable.md) para uso do exemplo **retval**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|Parâmetro de interface, método de interface|  
+|**Aplica-se a**|Parâmetro de interface, o método de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|**out**|  
+|**Atributos obrigatórios**|**out**|  
 |**Atributos inválidos**|**in**|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

@@ -27,20 +27,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b4b56d1f329aee29c37b15590729074d305f04d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dc9a9f35793b010f4cea227ed629543c82b2ce87
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879868"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605276"
 ---
 # <a name="resource-files-visual-studio"></a>Arquivos de recurso (Visual Studio)
 > [!NOTE]
->  Este material se aplica a aplicativos de área de trabalho do Windows. Para obter informações sobre recursos em aplicativos de plataforma Universal do Windows, consulte [definindo recursos do aplicativo](http://msdn.microsoft.com/en-us/476ea844-632c-4467-9ce3-966be1350dd4).  
+>  Este material se aplica a aplicativos de área de trabalho do Windows. Para obter informações sobre recursos em aplicativos da plataforma Universal do Windows, consulte [definindo recursos do aplicativo](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).  
 >   
-> Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+> Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
 >  
-> Como projetos em linguagens de programação .NET não usa arquivos de script de recurso, você deve abrir os recursos de **Gerenciador de soluções**. Você pode usar o [editor de imagem](../windows/image-editor-for-icons.md) e [editor binário](binary-editor.md) para trabalhar com arquivos de recursos em projetos gerenciados. Todos os recursos gerenciados que você deseja editar devem ser recursos vinculados. Os editores de recursos do Visual Studio não oferecem suporte à edição de recursos inseridos.  
+> Como projetos em linguagens de programação .NET usa arquivos de script de recurso, você deve abrir seus recursos do **Gerenciador de soluções**. Você pode usar o [editor de imagens](../windows/image-editor-for-icons.md) e o [editor binário](binary-editor.md) para trabalhar com arquivos de recursos em projetos gerenciados. Todos os recursos gerenciados que você deseja editar devem ser recursos vinculados. Os editores de recursos do Visual Studio não oferecem suporte à edição de recursos inseridos.  
   
  O termo "arquivo de recurso" pode se referir a um número de tipos de arquivo, incluindo:  
   
@@ -50,9 +50,9 @@ ms.locfileid: "33879868"
   
 -   Um recurso individual existente como um arquivo autônomo, como um arquivo de bitmap, ícone ou cursor que é chamado de um arquivo. rc.  
   
--   Um arquivo de cabeçalho gerado pelo ambiente de desenvolvimento, por exemplo Resource.h, que é chamado de um arquivo. rc.  
+-   Um arquivo de cabeçalho gerado pelo ambiente de desenvolvimento, por exemplo Resource. h, que é chamado de um arquivo. rc.  
   
- Recursos também podem ser encontrados em [outros tipos de arquivo](../windows/editable-file-types-for-resources.md) como arquivos. res,. dll e .exe. Você pode trabalhar com recursos e arquivos de recurso de dentro de seu projeto e com aqueles que não fazem parte do projeto atual. Você também pode trabalhar com arquivos de recursos que não foram criados no ambiente de desenvolvimento do Visual Studio. Por exemplo, você pode:  
+ Recursos também podem ser encontrados em [outros tipos de arquivo](../windows/editable-file-types-for-resources.md) como arquivos .exe,. dll e. res. Você pode trabalhar com recursos e arquivos de recurso de dentro de seu projeto e com aqueles que não fazem parte do projeto atual. Você também pode trabalhar com arquivos de recurso que não foram criados no ambiente de desenvolvimento do Visual Studio. Por exemplo, você pode:  
   
 -   Trabalhar com arquivos de recursos aninhados e incluídas condicionalmente.  
   
@@ -62,17 +62,17 @@ ms.locfileid: "33879868"
   
 -   Inclua compartilhados ou somente leitura identificadores (símbolos) que não podem ser modificados pelo ambiente de desenvolvimento.  
   
--   Inclua recursos em seu arquivo executável (.exe) que não exigem a edição (ou que você não deseja ser editado) durante o projeto atual, como os recursos que são compartilhados entre vários projetos.  
+-   Inclua recursos em seu arquivo executável (.exe) que não exigem a edição (ou que você não deseja ser editados) durante o seu projeto atual, como recursos que são compartilhados entre vários projetos.  
   
 -   Inclua tipos de recursos não suportados pelo ambiente de desenvolvimento.  
   
  Esta seção abrange:  
   
--   [Criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md)  
+-   [Criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md)  
   
--   [Criando um novo recurso](../windows/how-to-create-a-resource.md)  
+-   [Criar um novo recurso](../windows/how-to-create-a-resource.md)  
   
--   [Exibindo recursos em um arquivo de Script de recurso](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
+-   [Exibir recursos em um arquivo de Script de recurso](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
   
 -   [Abrir um arquivo de Script de recurso no formato de texto](../windows/how-to-open-a-resource-script-file-in-text-format.md)  
   
@@ -95,4 +95,3 @@ ms.locfileid: "33879868"
  [Editores de recursos](../windows/resource-editors.md)   
  [Trabalhando com arquivos de recurso](../windows/working-with-resource-files.md)   
  [Menus e outros recursos](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-

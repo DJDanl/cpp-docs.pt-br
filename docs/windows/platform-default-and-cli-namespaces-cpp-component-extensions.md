@@ -1,5 +1,5 @@
 ---
-title: Plataforma, padrão e cli Namespaces (extensões de componentes C++) | Microsoft Docs
+title: Plataforma padrão, Namespaces e cli (extensões de componentes C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,37 +19,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b466a94aba9f19907a5438a8b8e623d65aa0ac2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bf7219b4e57c82beeace1545c10b643470c9aca
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880729"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603544"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Namespaces Plataforma, padrão e cli (Extensões de Componentes C++)
-Um namespace qualifica os nomes dos elementos da linguagem para que os nomes não entrem em conflito com nomes idênticos em outras áreas do código-fonte. Por exemplo, uma colisão de nomes pode impedir que o compilador reconhecer [sensível ao contexto palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md). Os namespaces são usados pelo compilador, mas não preservados no assembly compilado.  
+Um namespace qualifica os nomes dos elementos da linguagem para que os nomes não entrem em conflito com nomes idênticos em outras áreas do código-fonte. Por exemplo, uma colisão de nomes pode impedir o compilador reconhecer [contextual as palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md). Os namespaces são usados pelo compilador, mas não preservados no assembly compilado.  
   
 ## <a name="all-runtimes"></a>Todos os Tempos de Execução  
- O Visual C++ fornece um namespace padrão para seu projeto quando o projeto é criado. Você pode renomear manualmente o namespace, embora em tempo de execução do Windows, o nome do arquivo. winmd deve corresponder ao nome do namespace raiz.  
+ O Visual C++ fornece um namespace padrão para seu projeto quando o projeto é criado. Você pode renomear manualmente o namespace, embora no tempo de execução do Windows, o nome do arquivo. winmd deve corresponder ao nome do namespace raiz.  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
- Para obter mais informações, consulte [espaços para nome e tipo de visibilidade (C + + CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx).  
+ Para obter mais informações, consulte [Namespaces e visibilidade de tipos (C + + c++ /CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx).  
   
 ### <a name="requirements"></a>Requisitos  
- Opção do compilador: **/ZW**  
+ Opção do compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Sintaxe**  
+### <a name="syntax"></a>Sintaxe  
   
 ```  
 using namespace cli;  
 ```  
   
- **Comentários**  
+### <a name="remarks"></a>Comentários  
   
- C + + CLI oferece suporte a `cli` namespace. Ao compilar com **/clr**, o `using` instrução na seção de sintaxe é inferida.  
+ O C + + c++ CLI é compatível com o **cli** namespace. Ao compilar com `/clr`, o **usando** instrução na seção de sintaxe é implícita.  
   
- Os seguintes recursos de linguagem estão no namespace `cli`:  
+ Os seguintes recursos de linguagem estão na **cli** namespace:  
   
 -   [Matrizes](../windows/arrays-cpp-component-extensions.md)  
   
@@ -60,14 +60,13 @@ using namespace cli;
 -   [Safe_cast](../windows/safe-cast-cpp-component-extensions.md)  
   
 ### <a name="requirements"></a>Requisitos  
- Opção de compilador: **/clr**  
+ Opção do compilador: `/clr`  
   
 ### <a name="examples"></a>Exemplos  
- **Exemplo**  
   
- O exemplo de código a seguir demonstra que é possível usar um símbolo no namespace `cli` como um símbolo definido pelo usuário em seu código.  No entanto, assim que tiver feito isso, você terá que qualificar explícita ou implicitamente suas referências para o elemento de linguagem `cli` de mesmo nome.  
+ O exemplo de código a seguir demonstra o que é possível usar um símbolo na **cli** namespace como um símbolo definido pelo usuário em seu código.  No entanto, depois de você ter feito isso, você terá qualificar explícita ou implicitamente suas referências para o **cli** elemento de linguagem do mesmo nome.  
   
-```  
+```cpp  
 // cli_namespace.cpp  
 // compile with: /clr  
 using namespace cli;  

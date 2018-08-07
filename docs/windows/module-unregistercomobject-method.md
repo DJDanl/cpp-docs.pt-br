@@ -1,5 +1,5 @@
 ---
-title: 'Método: unregistercomobject | Microsoft Docs'
+title: 'Método Module:: unregistercomobject | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4cc44d88f59e18f2c1644e9b27a9214ad32962
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c19e7b5388438b8c3c2359672360e4a2ee3001a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881930"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602624"
 ---
 # <a name="moduleunregistercomobject-method"></a>Método Module::UnregisterCOMObject
-Cancela o registro de um ou mais objetos COM, que impede que outros aplicativos se conectam a eles.  
+Cancela o registro de um ou mais objetos COM, que impede que outros aplicativos se conectem a eles.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,18 +36,18 @@ virtual HRESULT UnregisterCOMObject(
    unsigned int count  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `serverName`  
- (Não utilizado)  
+### <a name="parameters"></a>Parâmetros  
+ *ServerName*  
+ (Não usado)  
   
- `cookies`  
- Uma matriz de ponteiros para valores que identificam os objetos de classe para cancelar seu registro. A matriz foi criada por meio de [RegisterCOMObject](../windows/module-registercomobject-method.md) método.  
+ *Cookies*  
+ Uma matriz de ponteiros para valores que identificam os objetos de classe para cancelar o registro. A matriz foi criada por meio de [RegisterCOMObject](../windows/module-registercomobject-method.md) método.  
   
- `count`  
+ *count*  
  O número de classes para cancelar o registro.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se essa operação for bem-sucedida; Caso contrário, um erro HRESULT que indica o motivo da falha da operação.  
+ S_OK se essa operação for bem-sucedida; Caso contrário, um erro HRESULT que indica o motivo pelo qual a operação falhou.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  

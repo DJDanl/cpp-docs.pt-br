@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfee0c0cd7ff7bd7f4525a291184f08f1e2898e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b298bcab4c2b3547f2b285fe21d4967f4696fb9d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878730"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605052"
 ---
 # <a name="modulebase-class"></a>Classe ModuleBase
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,21 +42,21 @@ class ModuleBase;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor ModuleBase::ModuleBase](../windows/modulebase-modulebase-constructor.md)|Inicializa uma instância da classe de módulo.|  
-|[Destruidor ModuleBase::~ModuleBase](../windows/modulebase-tilde-modulebase-destructor.md)|Deinitializes a instância atual da classe de módulo.|  
+|[Construtor ModuleBase::ModuleBase](../windows/modulebase-modulebase-constructor.md)|Inicializa uma instância da classe `Module`.|  
+|[Destruidor ModuleBase::~ModuleBase](../windows/modulebase-tilde-modulebase-destructor.md)|A instância atual do realiza o desligamento de `Module` classe.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método ModuleBase::DecrementObjectCount](../windows/modulebase-decrementobjectcount-method.md)|Quando implementada, diminui o número de objetos rastreados pelo módulo.|  
-|[Método ModuleBase::IncrementObjectCount](../windows/modulebase-incrementobjectcount-method.md)|Quando implementada, incrementa o número de objetos rastreados pelo módulo.|  
+|[Método ModuleBase::DecrementObjectCount](../windows/modulebase-decrementobjectcount-method.md)|Quando implementado, diminui o número de objetos rastreados pelo módulo.|  
+|[Método ModuleBase::IncrementObjectCount](../windows/modulebase-incrementobjectcount-method.md)|Quando implementado, incrementa o número de objetos controlados pelo módulo.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `ModuleBase`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

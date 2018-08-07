@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb752c02eb200e952cf247684675ebd377eeaaa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a7bdd285ed74c7792a34cfe99e0a900d42d6bc26
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877362"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604584"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 Indica que um membro de interface não deve ser exibido em um navegador de propriedade.  
@@ -30,9 +30,7 @@ Indica que um membro de interface não deve ser exibido em um navegador de propr
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [nonbrowsable]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
@@ -40,7 +38,7 @@ Indica que um membro de interface não deve ser exibido em um navegador de propr
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_nonbrowsable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -56,13 +54,13 @@ __interface IMyI
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Método de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

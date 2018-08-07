@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8844a4770d0a4746c9d9de32a593d0770dcc9a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878506"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606508"
 ---
 # <a name="idlquote"></a>idl_quote
-Permite que você use as construções de IDL não tem suporte na versão atual do Visual C++ e que eles passam para o arquivo. idl gerado.  
+Permite que você use construções IDL que não têm suporte na versão atual do Visual C++ e fazer com que eles passam para o arquivo. idl gerado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ idl_quote(  
+[ idl_quote(  
    text  
 ) ]  
 ```  
@@ -41,12 +40,12 @@ Permite que você use as construções de IDL não tem suporte na versão atual 
  O nome do atributo que você pretende que o compilador do Visual C++ para passar para o arquivo. idl gerado sem retornar um erro do compilador.  
   
 ## <a name="remarks"></a>Comentários  
- Se o **idl_quote** atributo C++ é usado como um atributo autônomo (com um ponto e vírgula após o colchete de fechamento), em seguida, *texto* é colocado no arquivo. idl mesclado como está. Se **idl_quote** é usada em um símbolo, *texto* é colocado dentro do bloco de atributo para esse símbolo.  
+ Se o **idl_quote** atributo de C++ é usado como um atributo autônomo (com um ponto e vírgula após o colchete de fechamento), em seguida, *texto* é colocado no arquivo. idl mesclado como está. Se **idl_quote** é usado em um símbolo *texto* é colocado dentro do bloco de atributo para esse símbolo.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir mostra como você pode especificar um atributo sem suporte (usando **em**, que tem suporte) e como definir e usar uma construção de IDL não definido:  
+ O código a seguir mostra como você pode especificar um atributo sem suporte (usando **em**, que tem suporte) e como definir e usar uma construção de IDL indefinido:  
   
-```  
+```cpp  
 // cpp_attr_ref_idl_quote.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -79,17 +78,17 @@ __interface IStatic{
 };  
 ```  
   
- Este código faz com que MYFLOT e MYDUB e *texto* entrada será colocado no arquivo. idl gerado. O *nome* parâmetro força *texto* para ser colocado antes de qualquer coisa que faz referência a *nome* no arquivo. idl gerado. O *dependências* parâmetro força as definições de lista de dependência para ser colocado antes de *texto* no arquivo. idl gerado.  
+ Esse código faz com que MYFLOT e MYDUB e o *texto* entrada a ser colocado no arquivo. idl gerado. O *nome* parâmetro força *texto* a ser colocado antes de qualquer coisa que faz referência *nome* no arquivo. idl gerado. O *dependências* parâmetro força as definições de lista de dependência a ser colocado antes *texto* no arquivo. idl gerado.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Em qualquer lugar|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4f1bbfaff595ad7594f96e0ac20d29ea4ccfdbe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91e8242d028d25e9e6783506db014e3dceda32ec
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888486"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605731"
 ---
 # <a name="runtimeclassruntimeclass-constructor"></a>Construtor RuntimeClass::RuntimeClass
-Inicializa a instância atual da classe RuntimeClass.  
+Inicializa a instância atual do **RuntimeClass** classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +34,7 @@ RuntimeClass();
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL  
   

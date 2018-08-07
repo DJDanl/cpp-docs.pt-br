@@ -1,5 +1,5 @@
 ---
-title: 'Método: registerwinrtobject | Microsoft Docs'
+title: 'Método Module:: registerwinrtobject | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 097bf70ebd280d9494ff70ea1d80f53615f3d898
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42ec736126e2381b00542bf71afca0b9db187df7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874948"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603751"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Método Module::RegisterWinRTObject
-Registra um ou mais objetos de tempo de execução do Windows para que outros aplicativos possam se conectar a eles.  
+Registra um ou mais objetos de tempo de execução do Windows para que outros aplicativos podem se conectar a eles.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,21 +36,21 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
    unsigned int count)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `serverName`  
+### <a name="parameters"></a>Parâmetros  
+ *ServerName*  
  Um nome que especifica um subconjunto de objetos afetados por essa operação.  
   
- `activatableClassIds`  
+ *activatableClassIds*  
  Uma matriz de ativáveis CLSIDs para registrar.  
   
- `cookie`  
- Um valor que identifica os objetos de classe que foram registrados. Esse valor é usado posteriormente para revogar o registro.  
+ *Cookie*  
+ Um valor que identifica os objetos de classe que foram registrados. Esse valor é usado posteriormente para revoga o registro.  
   
- `count`  
+ *count*  
  O número de objetos para registrar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, um erro HRESULT como CO_E_OBJISREG que indica o motivo da falha da operação.  
+ S_OK se bem-sucedido; Caso contrário, um erro HRESULT, como CO_E_OBJISREG que indica o motivo pelo qual a operação falhou.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  

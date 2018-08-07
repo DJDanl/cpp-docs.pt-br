@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b18d33b962c277347e74819e5ff34f3562821f45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c9d82f38e44f1d0c9562982da109a8deffa4fbff
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875884"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608924"
 ---
 # <a name="modulebasemodulebase-constructor"></a>Construtor ModuleBase::ModuleBase
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,10 +34,10 @@ ModuleBase();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Inicializa uma instância da classe de módulo.  
+ Inicializa uma instância da classe `Module`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

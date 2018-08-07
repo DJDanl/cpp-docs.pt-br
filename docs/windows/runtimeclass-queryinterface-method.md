@@ -1,5 +1,5 @@
 ---
-title: 'Método Runtimeclass: | Microsoft Docs'
+title: 'Método runtimeclass:: QueryInterface | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 84f5183d0273abfc23834099c07987dca6b3da7f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15f611a9fe361e401e1884cb1794f8d1ef1f5591
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892099"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603531"
 ---
 # <a name="runtimeclassqueryinterface-method"></a>Método RuntimeClass::QueryInterface
 Recupera um ponteiro para a ID de interface especificado.  
@@ -30,7 +30,6 @@ Recupera um ponteiro para a ID de interface especificado.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 STDMETHOD(  
    QueryInterface  
 )  
@@ -38,18 +37,18 @@ STDMETHOD(
    _Deref_out_ void **ppvObject);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `riid`  
+### <a name="parameters"></a>Parâmetros  
+ *riid*  
  Uma ID de interface.  
   
- `ppvObject`  
- Quando este opereation for concluído, um ponteiro para a interface especificada pelo `riid` parâmetro.  
+ *ppvObject*  
+ Quando este opereation for concluída, um ponteiro para a interface especificada pelo *riid* parâmetro.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.  
+ S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL  
   

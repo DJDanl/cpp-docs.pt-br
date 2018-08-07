@@ -1,5 +1,5 @@
 ---
-title: 'Método mutex: | Microsoft Docs'
+title: 'Método mutex:: Lock | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37044dbd884c4e38c70677bf9a8fa0a51fda0a88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c96ef497331fecf8125c51a7b8bd669ec758927
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880866"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603518"
 ---
 # <a name="mutexlock-method"></a>Método Mutex::Lock
-Aguarda até que o objeto atual ou o objeto de Mutex associado com o identificador especificado, libera o mutex ou o intervalo de tempo limite especificado tiver decorrido.  
+Aguarda até que o objeto atual, ou o **Mutex** objeto associado ao identificador especificado, versões mutex ou o intervalo de tempo limite especificado tiver decorrido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,17 +40,17 @@ static SyncLock Lock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `milliseconds`  
- O intervalo de tempo limite, em milissegundos. O valor padrão é infinito, o que espera indefinidamente.  
+### <a name="parameters"></a>Parâmetros  
+ *milissegundos*  
+ O intervalo de tempo limite em milissegundos. O valor padrão é infinito, o que espera indefinidamente.  
   
- `h`  
- O identificador de um objeto Mutex.  
+ *h*  
+ O identificador de um **Mutex** objeto.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers
  

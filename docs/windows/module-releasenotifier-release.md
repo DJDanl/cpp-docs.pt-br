@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfc64a64a0fc08d417117e46bc7537a4e2ebf4ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f68e51de101ad8ef7adfb4d9ad061a66071ef48
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877041"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605425"
 ---
 # <a name="modulereleasenotifierrelease"></a>Module::ReleaseNotifier::Release
-Exclui o objeto Module atual se o objeto foi criado com um parâmetro de `true`.  
+Exclui o atual **releasenotifier** se o objeto for construído com um parâmetro de objeto **verdadeiro**.  
   
 ## <a name="syntax"></a>Sintaxe  
   

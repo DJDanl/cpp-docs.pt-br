@@ -1,5 +1,5 @@
 ---
-title: Selecionando cores de plano de fundo (Editor de imagens para ícones) ou em primeiro plano | Microsoft Docs
+title: Selecionando cores de plano de fundo (Editor de imagens para ícones) ou primeiro plano | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: acd86e9a1d48465df4656b4b0cb8247712f4e12d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 108447dc3e18be84bf2875c49adb600ed9636dc4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888640"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605542"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Selecionando cores em primeiro plano ou segundo plano (editor de imagens para ícones)
-Exceto para o **borracha**, ferramentas no **Editor de imagem** desenho de barra de ferramentas com a atual cor de primeiro plano ou segundo plano quando você pressiona o botão esquerdo ou direito do mouse, respectivamente.  
+Exceto para o **borracha**, ferramentas na **Editor de imagens** desenho de barra de ferramentas com a atual cor de primeiro plano ou segundo plano quando você pressiona o botão esquerdo ou direito do mouse, respectivamente.  
   
 ### <a name="to-select-a-foreground-color"></a>Para selecionar uma cor de primeiro plano  
   
-1.  Com o botão esquerdo do mouse, clique na cor desejada no [paleta de cores](../windows/colors-window-image-editor-for-icons.md).  
+1.  Com o botão esquerdo do mouse, clique na cor desejada na [paleta de cores](../windows/colors-window-image-editor-for-icons.md).  
   
 ### <a name="to-select-a-background-color"></a>Para selecionar uma cor de plano de fundo  
   
-1.  Com o botão direito do mouse, clique na cor desejada no **cores** paleta.  
+1.  Com o botão direito do mouse, clique na cor desejada na **cores** paleta.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.*  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*.  
   
- Requisitos  
+## <a name="requirements"></a>Requisitos  
   
  Nenhum  
   

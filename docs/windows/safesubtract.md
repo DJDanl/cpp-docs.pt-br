@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 300959fe64d280ff3e2c19fd579e8f447a2402eb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 190b93fc9b3cfb299784d0c352c2f7e5bff25db4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889202"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606137"
 ---
 # <a name="safesubtract"></a>SafeSubtract
-Subtrai dois números de forma que protege contra estouro.  
+Subtrai dois números de uma maneira que proteja contra estouro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,34 +38,34 @@ inline bool SafeSubtract (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- [in] `t`  
- O primeiro número de subtração. Isso deve ser do tipo T.  
+### <a name="parameters"></a>Parâmetros  
+ [in] *t*  
+ O primeiro número na subtração. Isso deve ser do tipo `T`.  
   
- [in] `u`  
- O número para subtrair de `t`. Isso deve ser do tipo u  
+ [in] *u*  
+ O número para subtrair de *t*. Isso deve ser do tipo `U`.  
   
- [out] `result`  
- O parâmetro onde `SafeSubtract` armazena o resultado.  
+ [out] *resultado*  
+ O parâmetro em que **SafeSubtract** armazena o resultado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` Se nenhum erro ocorrer; `false` se ocorrer um erro.  
+ **True** se nenhum erro ocorrer; **falsos** se ocorrer um erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método é parte de [biblioteca SafeInt](../windows/safeint-library.md) e foi projetado para uma operação de subtração único sem criar uma instância do [classe SafeInt](../windows/safeint-class.md).  
+ Esse método é parte da [biblioteca SafeInt](../windows/safeint-library.md) e é projetado para uma operação de subtração único sem criar uma instância das [classe SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Este método só deve ser usado quando uma operação matemática único deve ser protegida. Se houver várias operações, você deve usar o `SafeInt` classe em vez de chamar as funções autônomas individuais.  
+>  Esse método só deve ser usado quando uma operação matemática única deve ser protegida. Se houver várias operações, você deve usar o `SafeInt` classe em vez de chamar as funções individuais de autônomas.  
   
- Para obter mais informações sobre os tipos de modelo T e U, consulte [funções SafeInt](../windows/safeint-functions.md).  
+ Para obter mais informações sobre os tipos de modelo `T` e `U`, consulte [funções SafeInt](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** safeint.h  
+ **Cabeçalho:** safeint  
   
  **Namespace:** Microsoft::Utilities  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções (SafeInt)](../windows/safeint-functions.md)   
- [Biblioteca de SafeInt](../windows/safeint-library.md)   
+ [Funções SafeInt](../windows/safeint-functions.md)   
+ [Biblioteca SafeInt](../windows/safeint-library.md)   
  [Classe SafeInt](../windows/safeint-class.md)   
  [SafeAdd](../windows/safeadd.md)

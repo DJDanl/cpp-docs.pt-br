@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27d3ab799f9a71e6386d63106d72b72b7eec24ed
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 719522a37c989b388a811348759d1fff34c373a9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882583"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605353"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator== Operador (Microsoft::WRL)
 Operador de igualdade para [ComPtr](../windows/comptr-class.md) e [ComPtrRef](../windows/comptrref-class.md) objetos.  
@@ -62,15 +62,15 @@ WRL_NOTHROW bool operator==(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `a`  
+### <a name="parameters"></a>Parâmetros  
+ *a*  
  O objeto à esquerda.  
   
- `b`  
+ *b*  
  O objeto à direita.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` se os objetos forem iguais; caso contrário, `false`.  
+ **Verdadeiro** se os objetos forem iguais; caso contrário, **falso**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

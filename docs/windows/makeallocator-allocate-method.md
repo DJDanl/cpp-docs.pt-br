@@ -1,5 +1,5 @@
 ---
-title: 'Método Makeallocator: | Microsoft Docs'
+title: 'Método makeallocator:: allocate | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0e8d387dea7687ad61d85f975d58aa47489266d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06f8db4c713feb69e0037d10879383411ea07007
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876209"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606257"
 ---
 # <a name="makeallocatorallocate-method"></a>Método MakeAllocator::Allocate
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,17 +34,17 @@ __forceinline void* Allocate();
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, um ponteiro para a memória alocada; Caso contrário, `nullptr`.  
+ Se for bem-sucedido, um ponteiro para a memória alocada; Caso contrário, **nullptr**.  
   
 ## <a name="remarks"></a>Comentários  
- Aloca memória e o associa ao objeto MakeAllocator atual.  
+ Aloca memória e o associa ao atual **MakeAllocator** objeto.  
   
- O tamanho da memória alocada é o tamanho do tipo especificado pelo parâmetro de modelo MakeAllocator atual.  
+ O tamanho da memória alocada é o tamanho do tipo especificado pelo atual **MakeAllocator** parâmetro de modelo.  
   
- Um desenvolvedor precisa substituir apenas o método Allocate() para implementar um modelo de alocação de memória diferentes.  
+ Um desenvolvedor precisar substituir apenas a **Allocate()** método para implementar um modelo de alocação de memória diferentes.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

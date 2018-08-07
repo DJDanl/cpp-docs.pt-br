@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cef979ae284a303b120df7d14ae71f311498423
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 508c9a5d34fa8e9c4fa339e9917ae069874159ad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882336"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608372"
 ---
 # <a name="iidppvargshelper-function"></a>Função IID_PPV_ARGS_Helper
 Verifica se o tipo do argumento especificado deriva o `IUnknown` interface.  
   
 > [!IMPORTANT]
->  Essa especialização de modelo dá suporte à infraestrutura do WRL e não se destina a ser usado diretamente no seu código. Use [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) em vez disso.  
+>  Essa especialização de modelo oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código. Use [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) em vez disso.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,20 +40,20 @@ void** IID_PPV_ARGS_Helper(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
- O tipo de argumento `pp`.  
+ *T*  
+ O tipo do argumento *pp*.  
   
- `pp`  
+ *PP*  
  Um ponteiro duplamente indireta.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Argumento `pp` convertido para um ponteiro-para-um-ponteiro para `void`.  
+ Argumento *pp* convertido para um ponteiro-para-um-ponteiro à **void**.  
   
 ## <a name="remarks"></a>Comentários  
- Um erro de tempo de compilação será gerado se o parâmetro de modelo `T` não deriva de `IUnknown`.  
+ Um erro de tempo de compilação será gerado se o parâmetro de modelo *T* não deriva de `IUnknown`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência (biblioteca de tempo de execução do Windows)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)
+ [Referência (biblioteca de tempo de execução do Windows)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)

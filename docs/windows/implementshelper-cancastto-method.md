@@ -1,5 +1,5 @@
 ---
-title: 'Método Implementshelper: | Microsoft Docs'
+title: 'Método implementshelper:: Cancastto | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6de971f2de2421a2d7987dab30ba73fa2d225b15
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a60f2e45e276592c7c1223526cd002bdc6e79013
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876547"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605466"
 ---
 # <a name="implementshelpercancastto-method"></a>Método ImplementsHelper::CanCastTo
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 HRESULT CanCastTo(  
    REFIID riid,  
    _Deref_out_ void **ppv  
@@ -42,24 +41,24 @@ HRESULT CanCastTo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `riid`  
+### <a name="parameters"></a>Parâmetros  
+ *riid*  
  Referência a uma ID de interface.  
   
- `ppv`  
- Se essa operação for bem-sucedida, um ponteiro para a interface especificada pela `riid` ou `iid`.  
+ *ppv*  
+ Se essa operação for bem-sucedida, um ponteiro para a interface especificada por *riid* ou *iid*.  
   
- `iid`  
+ *IID*  
  Referência a uma ID de interface.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.  
+ S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.  
   
 ## <a name="remarks"></a>Comentários  
  Obtém um ponteiro para a ID de interface especificado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8da1a3c839add5d056674896b5a3c6a32145924f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d058919d0906b458c6c4e81d65c9438c95a22b85
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876765"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607297"
 ---
 # <a name="move-function"></a>Função Move
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,15 +36,15 @@ inline typename RemoveReference<T>::Type&& Move(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T`  
+### <a name="parameters"></a>Parâmetros  
+ *T*  
  O tipo do argumento.  
   
- `arg`  
+ *arg*  
  Um argumento para mover.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Parâmetro `arg` após características de referência ou referência de rvalue, se houver, foi removido.  
+ Parâmetro *arg* após características de referência ou uma referência de rvalue, se houver, foram removidos.  
   
 ## <a name="remarks"></a>Comentários  
  Move o argumento especificado de um local para outro.  

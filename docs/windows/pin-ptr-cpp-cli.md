@@ -1,5 +1,5 @@
 ---
-title: pin_ptr (C + + CLI) | Microsoft Docs
+title: pin_ptr (C + + / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,24 +20,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: afc99a352e0bde7918cab460293ff23061377551
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a87dadfd4787e4bd0100efb8fe7ffe2b1e7a8899
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880160"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607846"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 Declara um *ponteiro de fixação*, que é usado apenas com o common language runtime.  
   
 ## <a name="all-runtimes"></a>Todos os Tempos de Execução  
- (Não há nenhum comentários para esse recurso de idioma que se aplicam a todos os tempos de execução).  
+ (Não há nenhum comentário sobre este recurso de linguagem que se aplicam a todos os tempos de execução.)  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
- (Esse recurso de idioma não é suportado no Windows Runtime.)  
+ (Esse recurso de linguagem é sem suporte em tempo de execução do Windows.)  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
- Um *ponteiro de fixação* é um ponteiro interior que impede que o objeto apontado movam no heap coletado como lixo. Ou seja, o valor de um ponteiro de fixação não é alterado pelo common language runtime. Isso é necessário quando você passa o endereço de uma classe gerenciada para uma função não gerenciada para que o endereço não será alterado inesperadamente durante a resolução da chamada de função não gerenciada.  
+ Um *ponteiro de fixação* é um ponteiro interior que impedem o objeto apontado da mudança no heap coletado como lixo. Ou seja, o valor de um ponteiro de fixação não é alterado pelo common language runtime. Isso é necessário quando você passa o endereço de uma classe gerenciada para uma função não gerenciada para que o endereço não será alterado inesperadamente durante a resolução da chamada de função não gerenciada.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -47,37 +47,37 @@ Declara um *ponteiro de fixação*, que é usado apenas com o common language ru
   
 ### <a name="parameters"></a>Parâmetros  
  *cv_qualifier*  
- `const` ou `volatile` qualificadores. Por padrão, é um ponteiro de fixação `volatile`. Ela é redundante, mas não um erro para declarar um ponteiro de fixação `volatile`.  
+ **Const** ou **volátil** qualificadores. Por padrão, é um ponteiro de fixação **volátil**. Ela é redundante, mas não um erro declarar um ponteiro de fixação **volátil**.  
   
  *type*  
- O tipo de `initializer`.  
+ O tipo de *inicializador*.  
   
  *var*  
- O nome do `pin_ptr` variável.  
+ O nome da **pin_ptr** variável.  
   
  *initializer*  
- Um membro de um tipo de referência, o elemento de uma matriz gerenciada, ou qualquer outro objeto que você pode atribuir a um ponteiro nativo.  
+ Um membro de um tipo de referência, o elemento de uma matriz gerenciada ou qualquer outro objeto que você pode atribuir a um ponteiro nativo.  
   
 ### <a name="remarks"></a>Comentários  
- Um `pin_ptr` representa um subconjunto da funcionalidade de um ponteiro nativo. Portanto, qualquer coisa que pode ser atribuído a um ponteiro nativo também pode ser atribuída a um `pin_ptr`. Um ponteiro interior tem permissão para executar o mesmo conjunto de operações, como ponteiros nativos, incluindo a comparação e a aritmética de ponteiro.  
+ Um **pin_ptr** representa um superconjunto da funcionalidade de um ponteiro nativo. Portanto, tudo o que pode ser atribuído a um ponteiro nativo também pode ser atribuído a um **pin_ptr**. Um ponteiro interior tem permissão para executar o mesmo conjunto de operações como ponteiros nativos, incluindo a comparação e aritmética de ponteiro.  
   
- Um objeto ou subsistema de uma classe gerenciada podem ser fixados, caso em que o common language runtime não moverá-lo durante a coleta de lixo. O principal uso é transmitir um ponteiro para dados gerenciados como um parâmetro real de uma chamada de função não gerenciada. Durante um ciclo de coleta, o tempo de execução irá inspecionar os metadados criados para o ponteiro de fixação e não será movido para o item que ele aponte para.  
+ Um objeto ou subobjeto de uma classe gerenciada pode ser fixado, caso em que o common language runtime não moverá-lo durante a coleta de lixo. O principal uso é passar um ponteiro para dados gerenciados como um parâmetro real de uma chamada de função não gerenciada. Durante um ciclo de coleta, o tempo de execução inspecionará os metadados criados para o ponteiro de fixação e não será movido para o item que ele aponta.  
   
- A fixação de um objeto também fixa seus campos de valor; Isto é, campos de primitivo ou valor de tipo. No entanto, os campos são declarados pelo manipulador de acompanhamento (`%`) não está fixado.  
+ A fixação de um objeto também fixa seus campos de valor; ou seja, campos de primitivo ou valor de tipo. No entanto, os campos são declarados com o identificador de acompanhamento (`%`) não são fixos.  
   
  A fixação de um Subobjeto definido em um objeto gerenciado tem o efeito de fixar o objeto inteiro.  
   
  Se o ponteiro de fixação é reatribuído para apontar para um novo valor, a instância anterior apontada não é mais considerada fixado.  
   
- Um objeto é fixado apenas enquanto um `pin_ptr` aponta para ela. O objeto não é fixado quando o ponteiro de fixação sai do escopo ou é definido como [nullptr](../windows/nullptr-cpp-component-extensions.md). Após o `pin_ptr` sai do escopo, o objeto que foi fixado pode ser movidos no heap pelo coletor de lixo. Qualquer ponteiros nativos que apontarão para o objeto não serão atualizados e desalocar referenciar um deles pode gerar uma exceção irrecuperável.  
+ Um objeto é fixado apenas enquanto um **pin_ptr** aponta para ela. O objeto não está fixado quando seu ponteiro de fixação sair do escopo ou é definido como [nullptr](../windows/nullptr-cpp-component-extensions.md). Após o **pin_ptr** sai do escopo, o objeto que foi fixado pode ser movido no heap pelo coletor de lixo. Todos os ponteiros nativos apontarão para o objeto não serão atualizados e cancelando a referência um deles poderia gerar uma exceção irrecuperável.  
   
- Se nenhum ponteiros de fixação apontam para o objeto (todos os ponteiros de fixação deu fora do escopo, reatribuídos para apontar para outros objetos ou foram atribuídos [nullptr](../windows/nullptr-cpp-component-extensions.md)), o objeto é garantia de não ser fixado.  
+ Se nenhum ponteiro de fixação aponta para o objeto (todos os ponteiros de fixação deu fora do escopo, reatribuídos para apontar para outros objetos ou foram atribuídos [nullptr](../windows/nullptr-cpp-component-extensions.md)), o objeto não é garantido que ser fixado.  
   
  Um ponteiro de fixação pode apontar para um identificador de referência, tipo de valor ou identificador de tipo demarcado, membro de um tipo gerenciado ou um elemento de uma matriz gerenciada. Ele não pode apontar para um tipo de referência.  
   
- Obter o endereço de um `pin_ptr` que aponta para um objeto nativo faz com que um comportamento indefinido.  
+ Obter o endereço de uma **pin_ptr** aponta para um objeto nativo causa um comportamento indefinido.  
   
- Ponteiros de fixação só podem ser declarados como variáveis locais não-estático na pilha.  
+ Ponteiros de fixação só podem ser declarados como não-estático variáveis locais na pilha.  
   
  Ponteiros de fixação não podem ser usados como:  
   
@@ -89,21 +89,20 @@ Declara um *ponteiro de fixação*, que é usado apenas com o common language ru
   
 -   o tipo de destino de uma conversão.  
   
- `pin_ptr` está no `cli` namespace. Para obter mais informações, consulte [plataforma, padrão e cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
+ **pin_ptr** está no `cli` namespace. Para obter mais informações, consulte [plataforma, padrão e cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
   
- Para obter mais informações sobre ponteiros internos, consulte [interior_ptr (C + + CLI)](../windows/interior-ptr-cpp-cli.md).  
+ Para obter mais informações sobre ponteiros internos, consulte [interior_ptr (C++ c++ CLI)](../windows/interior-ptr-cpp-cli.md).  
   
- Para obter mais informações sobre como fixar ponteiros, consulte [como: Fixar ponteiros e matrizes](../windows/how-to-pin-pointers-and-arrays.md) e [como: declarar ponteiros de fixação e tipos de valor](../windows/how-to-declare-pinning-pointers-and-value-types.md).  
+ Para obter mais informações sobre ponteiros de fixação, consulte [como: Fixar ponteiros e matrizes](../windows/how-to-pin-pointers-and-arrays.md) e [como: declarar ponteiros de fixação e tipos de valor](../windows/how-to-declare-pinning-pointers-and-value-types.md).  
   
 ### <a name="requirements"></a>Requisitos  
- Opção de compilador: **/clr**  
+ Opção do compilador: `/clr`  
   
 ### <a name="examples"></a>Exemplos  
- **Exemplo**  
   
- O exemplo a seguir usa `pin_ptr` para restringir a posição do primeiro elemento de uma matriz.  
+ O exemplo a seguir usa **pin_ptr** para restringir a posição do primeiro elemento de uma matriz.  
   
-```  
+```cpp  
 // pin_ptr_1.cpp  
 // compile with: /clr   
 using namespace System;  
@@ -153,11 +152,9 @@ int main() {
 45  
 ```  
   
- **Exemplo**  
+ O exemplo a seguir mostra que um ponteiro interior pode ser convertido em um ponteiro de fixação e que o tipo de retorno do operador address-of (`&`) é um ponteiro interior quando o operando é no heap gerenciado.  
   
- O exemplo a seguir mostra que um ponteiro interior pode ser convertido em um ponteiro de fixação e que o tipo de retorno do operador address-of (`&`) é um ponteiro interior quando o operando for no heap gerenciado.  
-  
-```  
+```cpp  
 // pin_ptr_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -191,11 +188,9 @@ int main() {
 1  
 ```  
   
- **Exemplo**  
-  
  O exemplo a seguir mostra que um ponteiro de fixação pode ser convertido em outro tipo.  
   
-```  
+```cpp  
 // pin_ptr_3.cpp  
 // compile with: /clr  
 using namespace System;  

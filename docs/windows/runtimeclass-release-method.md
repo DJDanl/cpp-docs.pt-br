@@ -1,5 +1,5 @@
 ---
-title: 'Método Runtimeclass: | Microsoft Docs'
+title: 'Método runtimeclass:: Release | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d07e941f3f8ee0d7df2df14216fa60ef3a2a706
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c1f9500abc1c92ea5f9aca64e379adfdcf84a44
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888790"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607518"
 ---
 # <a name="runtimeclassrelease-method"></a>Método RuntimeClass::Release
-Executa uma operação de liberação COM no objeto RuntimeClass atual.  
+Executa uma operação de lançamento COM atuais **RuntimeClass** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +37,13 @@ STDMETHOD_(
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.  
+ S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.  
   
 ## <a name="remarks"></a>Comentários  
- Se a contagem de referência se torna zero, o objeto RuntimeClass será excluído.  
+ Se a contagem de referência se torna zero, o **RuntimeClass** objeto é excluído.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL  
   

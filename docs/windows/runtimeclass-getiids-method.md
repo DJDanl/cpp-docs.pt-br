@@ -1,5 +1,5 @@
 ---
-title: 'Método: Getiids | Microsoft Docs'
+title: 'Método runtimeclass:: Getiids | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c309c97b9c9ce057ca67ab4b5d729c61d803ea5a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87f51d39bf1ff8c7d4271797dcaa23278ac2e747
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888382"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608437"
 ---
 # <a name="runtimeclassgetiids-method"></a>Método RuntimeClass::GetIids
-Obtém uma matriz que contém a interface implementadas IDs do objeto RuntimeClass atual.  
+Obtém uma matriz que contém a interface implementadas pelo atual de IDs **RuntimeClass** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,18 +37,18 @@ STDMETHOD(
    _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `iidCount`  
- Quando essa operação for concluída, o número total de elementos na matriz `iids`.  
+### <a name="parameters"></a>Parâmetros  
+ *iidCount*  
+ Quando essa operação for concluída, o número total de elementos na matriz *iids*.  
   
- `iids`  
+ *IIDs*  
  Quando essa operação for concluída, um ponteiro para uma matriz de IDs de interface.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se bem-sucedido; Caso contrário, E_OUTOFMEMORY.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL  
   

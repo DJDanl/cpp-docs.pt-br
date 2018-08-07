@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Operator&lt; operador | Microsoft Docs'
+title: Operador hstring::&lt; operador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fae7195f048cd680be513bd54b635e2e1e9bbf7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de7ffb304a8b2f1567ed5510c276c454903ec930
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875104"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608398"
 ---
-# <a name="hstringoperatorlt-operator"></a>Hstring:: Operator&lt; operador
+# <a name="hstringoperatorlt-operator"></a>Operador hstring::&lt; operador
 Indica se o primeiro parâmetro é menor do que o segundo parâmetro.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -31,21 +31,20 @@ Indica se o primeiro parâmetro é menor do que o segundo parâmetro.
 inline bool operator<(  
     const HString& lhs,   
     const HString& rhs) throw()  
-  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `lhs`  
- O primeiro parâmetro para comparar. `lhs` pode ser uma referência a um HString.  
+ *LHS*  
+ O primeiro parâmetro a ser comparado. *LHS* pode ser uma referência a um **HString**.  
   
- `rhs`  
- O segundo parâmetro para comparar. `rhs` pode ser uma referência a um HString.  
+ *rhs*  
+ O segundo parâmetro a ser comparado. *rhs* pode ser uma referência a um **HString**.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` Se o `lhs` parâmetro é menor do que o `rhs` parâmetro; caso contrário, `false`.  
+ **Verdadeiro** se o *lhs* parâmetro é menor do que o *rhs* parâmetro; caso contrário, **false**.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

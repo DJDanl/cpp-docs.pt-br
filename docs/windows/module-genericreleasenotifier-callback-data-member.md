@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6f7c430fcd75033e10e0a23d9d0ab78675653bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ad301ba081ad063ff58ebf7a749b0d32371d05b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880665"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605026"
 ---
 # <a name="modulegenericreleasenotifiercallback-data-member"></a>Membro de dados Module::GenericReleaseNotifier::callback_
-Mantém o lambda, functor ou manipulador de eventos de ponteiro para função associado ao objeto genericreleasenotifier atual.  
+Mantém o lambda, functor ou manipulador de eventos de ponteiro para função associados ao atual `Module::GenericReleaseNotifier` objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   

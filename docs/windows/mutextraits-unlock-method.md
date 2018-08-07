@@ -1,5 +1,5 @@
 ---
-title: 'Método Mutextraits: | Microsoft Docs'
+title: 'Método mutextraits:: Unlock | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11e4655c69e5ecb83cebf1225384c54c96be695b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1925755ca663ba82526fb8b8dae626165f1e4862
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880355"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606677"
 ---
 # <a name="mutextraitsunlock-method"></a>Método MutexTraits::Unlock
 Libera o controle exclusivo de um recurso compartilhado.  
@@ -35,14 +35,14 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `h`  
+### <a name="parameters"></a>Parâmetros  
+ *h*  
  Identificador para um objeto mutex.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   

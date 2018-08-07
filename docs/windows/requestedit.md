@@ -17,39 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d741494d33cba7b1d19e2ce081bad35eaaf283e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a9b0102ad6ba7b11ea2f0c738983385ffda632ca
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878249"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606469"
 ---
 # <a name="requestedit"></a>requestedit
-Indica que a propriedade oferece suporte a **OnRequestEdit** notificação.  
+Indica que a propriedade oferece suporte a `OnRequestEdit` notificação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [requestedit]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
  O **requestedit** atributo C++ tem a mesma funcionalidade que o [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- Consulte o exemplo para [associável](../windows/bindable.md) para uso do exemplo **requestedit**.  
+ Veja o exemplo de [associável](../windows/bindable.md) para uso do exemplo **requestedit**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Método de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

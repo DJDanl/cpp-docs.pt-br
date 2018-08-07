@@ -15,42 +15,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7189909f3cff84d2bb1a767e4ddeda817bcd6128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32452b4fd44aed2bc399165b3184d974f22d90b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879777"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607005"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>novo (novo slot em vtable) (Extensões de Componentes C++)
-O `new` palavra-chave indica que um membro virtual receberá um novo slot em de vtable.  
+O **novo** palavra-chave indica que um membro virtual obterá um novo slot em vtable.  
   
 ## <a name="all-runtimes"></a>Todos os Tempos de Execução  
- (Não há nenhum comentários para esse recurso de idioma que se aplicam a todos os tempos de execução).  
+ (Não há nenhum comentário sobre este recurso de linguagem que se aplicam a todos os tempos de execução.)  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
  Não tem suporte em tempo de execução do Windows.  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Comentários**  
+### <a name="remarks"></a>Comentários  
   
- Em um **/clr** compilação, `new` indica que um membro virtual receberá um novo slot no vtable; se a função não substituir um método de classe base.  
+ Em um `/clr` compilação, **nova** indica que um membro virtual obterá um novo slot em vtable; que a função não substitui um método de classe base.  
   
- `new` faz com que o modificador newslot a serem adicionadas ao nível de integridade para a função.  Para obter mais informações sobre newslot, consulte:  
+ **novo** faz com que o modificador newslot a ser adicionado ao IL para a função.  Para obter mais informações sobre novo slot, consulte:  
   
--   [Método MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
+-   [Método MethodInfo. Getbasedefinition](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   
--   [Enumeração MethodAttributes](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
+-   [Enumeração de MethodAttributes](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)  
   
 ### <a name="requirements"></a>Requisitos  
- Opção de compilador: **/clr**  
+ Opção do compilador: `/clr`  
   
 ### <a name="examples"></a>Exemplos  
- **Exemplo**  
   
- O exemplo a seguir mostra o efeito de `new`.  
+ O exemplo a seguir mostra o efeito **novo**.  
   
-```  
+```cpp  
 // newslot.cpp  
 // compile with: /clr  
 ref class C {  

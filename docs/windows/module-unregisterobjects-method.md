@@ -1,5 +1,5 @@
 ---
-title: 'Método: unregisterobjects | Microsoft Docs'
+title: 'Método Module:: unregisterobjects | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b711338c436eda3e64d9b51ef0d3137975d834a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb477b2d5c0a6eabf1e3304c0cadcb34d3910fe5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874113"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607434"
 ---
 # <a name="moduleunregisterobjects-method"></a>Método Module::UnregisterObjects
-Cancela o registro de objetos no módulo especificado para que outros aplicativos não podem se conectar a eles.  
+Cancela o registro os objetos no módulo especificado para que outros aplicativos não podem se conectar a eles.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,11 +35,11 @@ HRESULT UnregisterObjects(
    const wchar_t* serverName);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `module`  
+### <a name="parameters"></a>Parâmetros  
+ *módulo*  
  Ponteiro para um módulo.  
   
- `serverName`  
+ *ServerName*  
  Um nome qualificado que especifica um subconjunto de objetos afetados por essa operação.  
   
 ## <a name="return-value"></a>Valor de retorno  

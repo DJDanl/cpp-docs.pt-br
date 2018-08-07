@@ -17,40 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0605220b9eecce3ba042ddd0b46abd63a06c9dea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 679b019c15d72586b5ca186e0b54c9a9172db53a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882947"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608450"
 ---
 # <a name="propput"></a>propput
-Especifica uma função de configuração de propriedade.  
+Especifica uma função de definição de propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [propput]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
  O **propput** atributo C++ tem a mesma funcionalidade que o [propput](http://msdn.microsoft.com/library/windows/desktop/aa367146) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- Consulte o exemplo para [associável](../windows/bindable.md) para uso do exemplo **propput**.  
+ Veja o exemplo de [associável](../windows/bindable.md) para uso do exemplo **propput**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Método|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
-|**Atributos inválidos**|**propget**, **propputref**|  
+|**Atributos obrigatórios**|Nenhum|  
+|**Atributos inválidos**|`propget`, `propputref`|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   

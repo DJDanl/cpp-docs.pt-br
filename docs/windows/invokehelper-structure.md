@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b612530c1a29588cd837b2cdbeef37faf84c8b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2975cd066dd15f9179b2e1f0f3fc72084c9c573b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880401"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604262"
 ---
 # <a name="invokehelper-structure"></a>Estrutura InvokeHelper
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -88,16 +88,16 @@ template<
 struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `TDelegateInterface`  
- `TCallback`  
+### <a name="parameters"></a>Parâmetros  
+ *TDelegateInterface*  
+ *TCallback*  
  O tipo da função de manipulador de eventos.  
   
- `argCount`  
- O número de argumentos em uma especialização de InvokeHelper.  
+ *argCount*  
+ O número de argumentos em uma **InvokeHelper** especialização.  
   
 ## <a name="remarks"></a>Comentários  
- Fornece uma implementação do método Invoke () com base no número especificado e tipo dos argumentos.  
+ Fornece uma implementação do `Invoke()` método com base no tipo de argumentos e o número especificado.  
   
 ## <a name="members"></a>Membros  
   
@@ -105,13 +105,13 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|`Traits`|Um sinônimo para a classe que define o tipo de cada argumento do manipulador de eventos.|  
+|`Traits`|Um sinônimo para a classe que define o tipo de cada argumento de manipulador de eventos.|  
   
 ### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor InvokeHelper::InvokeHelper](../windows/invokehelper-invokehelper-constructor.md)|Inicializa uma nova instância da classe InvokeHelper.|  
+|[Construtor InvokeHelper::InvokeHelper](../windows/invokehelper-invokehelper-constructor.md)|Inicializa uma nova instância dos **InvokeHelper** classe.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -129,7 +129,7 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
  `InvokeHelper`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

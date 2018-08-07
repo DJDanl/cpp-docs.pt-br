@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7d915d53b246c98372ce8647e35fb996e9a7c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66e195480814fe7ebf228b180ac5999d1ab92bab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875741"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603796"
 ---
 # <a name="licensed"></a>licensed
-Indica que o objeto COM a qual ele se aplica é licenciado e deve ser instanciado usando **IClassFactory2**.  
+Indica que o objeto COM para o qual ele se aplica é licenciado e deve ser instanciado usando `IClassFactory2`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [licensed]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
@@ -40,7 +38,7 @@ Indica que o objeto COM a qual ele se aplica é licenciado e deve ser instanciad
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_licensed.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -61,13 +59,13 @@ public:
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|**class**, `struct`|  
+|**Aplica-se a**|**classe**, **struct**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|**coclass**|  
+|**Atributos obrigatórios**|`coclass`|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  

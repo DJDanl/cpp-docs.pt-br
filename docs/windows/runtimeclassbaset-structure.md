@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ea147ebddff03401f6151bcdc44d96efb233f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec10faf9733bbff3fb271b5465ee70a338c37898
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888977"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604987"
 ---
 # <a name="runtimeclassbaset-structure"></a>Estrutura RuntimeClassBaseT
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,8 +34,8 @@ template <
 friend struct Details::RuntimeClassBaseT;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `RuntimeClassTypeT`  
+### <a name="parameters"></a>Parâmetros  
+ *RuntimeClassTypeT*  
  Um campo de sinalizadores que especifica um ou mais [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) enumeradores.  
   
 ## <a name="remarks"></a>Comentários  
@@ -47,10 +47,10 @@ friend struct Details::RuntimeClassBaseT;
  `RuntimeClassBaseT`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência (biblioteca de tempo de execução do Windows)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [Referência (biblioteca de tempo de execução do Windows)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)   
  [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

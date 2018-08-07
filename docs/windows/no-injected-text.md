@@ -17,41 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74336ffaa5e1f9f1990acedf1669526c9152b82b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1b629f805cf07736dd7988cac6afb857a23b5e5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880342"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603414"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
-Impede que o compilador injeção de código como resultado do uso do atributo.  
+Impede que o compilador injetando código como resultado do uso do atributo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ no_injected_text(  
+[ no_injected_text(  
    boolean  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `boolean`(opcional)  
- **True** não se desejar que nenhum código injetado, **false** para permitir que o código a ser inserida. **True** é o padrão.  
+ *booliano* (opcional)  
+ **Verdadeiro** se você não quiser que nenhum código injetado, **falso** para permitir que o código injetado. **True** é o padrão.  
   
 ## <a name="remarks"></a>Comentários  
- O uso mais comum dos **no_injected_text** atributo C++ é o [/Fx](../build/reference/fx-merge-injected-code.md) opção de compilador, que insere o **no_injected_text** atributo para o arquivo. mrg.  
+ O uso mais comum do **no_injected_text** atributo C++ é a [/Fx](../build/reference/fx-merge-injected-code.md) opção de compilador, que insere os **no_injected_text** atributo no arquivo. mrg.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Em qualquer lugar|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

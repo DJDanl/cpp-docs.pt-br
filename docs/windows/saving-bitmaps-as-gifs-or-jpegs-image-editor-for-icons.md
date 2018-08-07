@@ -26,40 +26,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aed35f50e8cb874cea833439150b717034244b95
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a87087b4ef51c016a5165f0d997824f174ca06c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890172"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608151"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Salvando bitmaps como GIFs ou JPEGs (editor de imagens para ícones)
-Quando você cria um bitmap, a imagem é criada no formato de bitmap (bmp). No entanto, você pode, salve a imagem como GIF ou JPEG ou em outros formatos de gráfico.  
+Quando você cria um bitmap, a imagem é criada no formato de bitmap (. bmp). No entanto, você pode, salve a imagem como GIF ou JPEG ou em outros formatos de gráfico.  
   
 > [!NOTE]
 >  Esse processo não se aplica a ícones e cursores.  
   
 ### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>Para criar e salvar um bitmap como um. gif ou JPEG  
   
-1.  Do **arquivo** menu, escolha **abrir**, em seguida, clique em **arquivo**.  
+1.  Do **arquivo** menu, escolha **aberto**, em seguida, clique em **arquivo**.  
   
-2.  No **caixa de diálogo do novo arquivo**, clique no **Visual C++** pasta, em seguida, selecione **arquivo de Bitmap (bmp)** no **modelos** caixa e clique em  **Abra**.  
+2.  No **caixa de diálogo Novo arquivo**, clique no **Visual C++** pasta, em seguida, selecione **arquivo de Bitmap (. bmp)** no **modelos** caixa e clique em  **Abra**.  
   
-     O bitmap é aberto no **imagem** editor.  
+     O bitmap é aberto na **imagem** editor.  
   
-3.  Fazer alterações em seu novo bitmap conforme necessário.  
+3.  Faça alterações em seu novo bitmap, conforme necessário.  
   
-4.  Com o bitmap ainda aberto no **imagem** editor, clique em **salvar *filename*. bmp como** no **arquivo** menu.  
+4.  Com o bitmap ainda aberto na **imagem** editor, clique em **salvar *filename*bmp como** no **arquivo** menu.  
   
-5.  No **salvar arquivo como** caixa de diálogo caixa, digite o nome que você deseja dar o arquivo e a extensão que indica o formato de arquivo desejado no **nome de arquivo** caixa. Por exemplo, myfile.gif.  
+5.  No **salvar arquivo como** caixa de diálogo, digite o nome que você deseja dar o arquivo e a extensão que indica o formato de arquivo que você deseja na **nome do arquivo** caixa. Por exemplo, myfile.gif.  
   
-     **Observação** você deve criar ou abrir o bitmap fora do seu projeto para salvá-lo como outro formato de arquivo. Se você criar ou abri-lo em seu projeto, o **Salvar como** comando não estará disponível. Para obter mais informações, consulte [exibir recursos em um recurso de Script arquivo fora de um projeto (autônomo)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
+     **Observação** você deve criar ou abrir o bitmap fora do seu projeto para salvá-lo como outro formato de arquivo. Se você criar ou abri-lo em seu projeto, o **Salvar como** comando estará disponível. Para obter mais informações, consulte [exibir recursos em um recurso de Script arquivo externa de um projeto (autônomo)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
 6.  Clique em **Salvar**.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="see-also"></a>Consulte também  
  [Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Editor de imagens para ícones](../windows/image-editor-for-icons.md)
-

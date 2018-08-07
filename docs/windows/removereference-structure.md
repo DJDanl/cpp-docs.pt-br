@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 126394e3a63016eccf1f5451d032753bb8f81da8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3152cf46460dbeb8f5c8adfd5a7550f97eaca98
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881257"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602698"
 ---
 # <a name="removereference-structure"></a>Estrutura RemoveReference
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,12 +38,12 @@ template<class T>
 struct RemoveReference<T&&>;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T`  
+### <a name="parameters"></a>Parâmetros  
+ *T*  
  Uma classe.  
   
 ## <a name="remarks"></a>Comentários  
- Retira a característica de referência ou referência de rvalue do parâmetro de modelo da classe especificada.  
+ Retira a característica de referência ou uma referência de rvalue do parâmetro de modelo de classe especificada.  
   
 ## <a name="members"></a>Membros  
   
@@ -51,7 +51,7 @@ struct RemoveReference<T&&>;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|`Type`|Sinônimo de parâmetro do modelo de classe.|  
+|`Type`|Sinônimo do parâmetro de modelo de classe.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `RemoveReference`  

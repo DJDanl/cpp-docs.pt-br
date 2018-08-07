@@ -16,29 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed0c35f779749ca434feeb4ca1aef4e49e8a711f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5734874fb77907d021a360d84c17d054b223741c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877957"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605490"
 ---
 # <a name="removing-space-between-buttons-on-a-toolbar"></a>Removendo o espaço entre botões em uma barra de ferramentas
 O procedimento a seguir mostra como remover um espaço entre botões em uma barra de ferramentas.  
   
 ### <a name="to-remove-a-space-between-buttons-on-a-toolbar"></a>Para remover um espaço entre botões em uma barra de ferramentas  
   
-1.  Arraste o botão em um lado do espaço para o botão no outro lado do espaço até que ele se sobrepõe ao botão Avançar sobre na metade.  
+1.  Arraste o botão em um lado do espaço para o botão do outro lado do espaço até que ele se sobrepõe no botão Avançar sobre na metade.  
   
-     Se não há nenhum espaço no lado do botão que você estiver arrastando longe do e arrastar o botão mais de metade após o botão adjacente, o editor de barra de ferramentas também insere um espaço no lado oposto do botão que você estiver arrastando.  
+     Se não há nenhum espaço no lado do botão que você está arrastando longe do e arrastar o botão metade após o botão adjacente, o editor de barra de ferramentas também insere um espaço no lado oposto do botão que você está arrastando.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisitos  
+## <a name="requirements"></a>Requisitos  
   
- MFC ou do ATL  
+ MFC ou ATL  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando, movendo e editando botões da barra de ferramentas](../windows/creating-moving-and-editing-toolbar-buttons.md)   
  [Editor de barra de ferramentas](../windows/toolbar-editor.md)
-

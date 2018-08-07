@@ -17,33 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87933b214dfe91f1c9f7db88127ef83da5b7201c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b4f4e6d7c3941b1e90e0c49d113afe02dfcd491
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876560"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604418"
 ---
 # <a name="readonly-c"></a>readonly (C++)
-Impede a atribuição a um membro de dados.  
+Proíbe a atribuição a um membro de dados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [readonly]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
  O **readonly** atributo C++ tem a mesma funcionalidade que o [readonly](http://msdn.microsoft.com/library/windows/desktop/aa367152) atributo MIDL.  
   
- Se você deseja proibir a modificação de um parâmetro de método, use o [na](../windows/in-cpp.md) atributo.  
+ Se você quiser impedir a modificação de um parâmetro de método, em seguida, use o [em](../windows/in-cpp.md) atributo.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir mostra um uso de **readonly** atributo:  
+ O código a seguir mostra um uso do **readonly** atributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_readonly.cpp  
 // compile with: /LD  
 [idl_quote("midl_pragma warning(disable:2461)")];  
@@ -59,13 +57,13 @@ __interface IFireTabCtrl
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Método de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

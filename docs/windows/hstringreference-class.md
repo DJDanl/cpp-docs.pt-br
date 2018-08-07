@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90e94471fe114eafec91a19ddad5d47ce39a8de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14ad6e511baa4c7b61a2205311bfb9ea4322a5b1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879549"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605094"
 ---
 # <a name="hstringreference-class"></a>Classe HStringReference
 Representa um HSTRING que é criado a partir de uma cadeia de caracteres existente.  
@@ -32,7 +32,7 @@ class HStringReference;
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O tempo de vida do buffer em HSTRING o novo backup não é gerenciado pelo Windows Runtime. O chamador aloca uma cadeia de caracteres de origem no quadro de pilha para evitar uma alocação de heap e para eliminar o risco de vazamento de memória. Além disso, o chamador deve garantir a cadeia de caracteres de origem permanece inalterada durante o tempo de vida do HSTRING anexado. Para obter mais informações, consulte [WindowsCreateStringReference função](http://msdn.microsoft.com/en-us/0361bb7e-da49-4289-a93e-de7aab8712ac).  
+ O tempo de vida do buffer de backup no novo HSTRING não é gerenciado pelo tempo de execução do Windows. O chamador aloca uma cadeia de caracteres de origem no quadro da pilha para evitar uma alocação de heap e eliminar o risco de perda de memória. Além disso, o chamador deve garantir que a cadeia de caracteres de origem permaneça inalterada durante a vida útil do HSTRING anexado. Para obter mais informações, consulte [WindowsCreateStringReference função](http://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac).  
   
 ## <a name="members"></a>Membros  
   
@@ -40,20 +40,20 @@ class HStringReference;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor HStringReference::HStringReference](../windows/hstringreference-hstringreference-constructor.md)|Inicializa uma nova instância da classe HStringReference.|  
+|[Construtor HStringReference::HStringReference](../windows/hstringreference-hstringreference-constructor.md)|Inicializa uma nova instância dos **HStringReference** classe.|  
   
 ### <a name="members"></a>Membros  
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|[Método HStringReference::CopyTo](../windows/hstringreference-copyto-method.md)|Copia o HStringReference atual objeto para um objeto HSTRING.|  
-|[Método HStringReference::Get](../windows/hstringreference-get-method.md)|Recupera o valor do identificador HSTRING subjacente.|  
+|[Método HStringReference::CopyTo](../windows/hstringreference-copyto-method.md)|Copia o atual **HStringReference** objeto para um objeto HSTRING.|  
+|[Método HStringReference::Get](../windows/hstringreference-get-method.md)|Recupera o valor do identificador subjacente de HSTRING.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Operador HStringReference::Operator=](../windows/hstringreference-operator-assign-operator.md)|Move o valor de outro objeto HStringReference ao objeto HStringReference atual.|  
+|[Operador HStringReference::Operator=](../windows/hstringreference-operator-assign-operator.md)|Move o valor de outro **HStringReference** objeto atual **HStringReference** objeto.|  
 |[Operador HStringReference::Operator==](../windows/hstringreference-operator-equality-operator.md)|Indica se os dois parâmetros são iguais.|  
 |[Operador HStringReference::Operator!=](../windows/hstringreference-operator-inequality-operator.md)|Indica se os dois parâmetros não são iguais.|  
   
@@ -61,7 +61,7 @@ class HStringReference;
  `HStringReference`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

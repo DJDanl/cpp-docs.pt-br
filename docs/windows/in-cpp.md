@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cb730163b9048005d3af64bb42ae9113681d52b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6c09ae7e750a6372dd622f251a3b512e4ea67ef4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874012"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606430"
 ---
 # <a name="in-c"></a>in (C++)
 Indica que um parâmetro deve ser passado do procedimento de chamada para o procedimento chamado.  
@@ -30,26 +30,24 @@ Indica que um parâmetro deve ser passado do procedimento de chamada para o proc
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [in]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O **na** atributo C++ tem a mesma funcionalidade que o [na](http://msdn.microsoft.com/library/windows/desktop/aa367051) atributo MIDL.  
+ O **na** atributo C++ tem a mesma funcionalidade que o [em](http://msdn.microsoft.com/library/windows/desktop/aa367051) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- Consulte [associável](../windows/bindable.md) para obter um exemplo de como usar **em**.  
+ Ver [associável](../windows/bindable.md) para obter um exemplo de como usar **em**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|Parâmetro de interface, método de interface|  
+|**Aplica-se a**|Parâmetro de interface, o método de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|**retval**|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

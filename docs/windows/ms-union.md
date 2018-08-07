@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a377995149fda8efd565c30caff9b7791748ed79
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c20b795231cad936f30ef329f015b6ff691aa0d3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882031"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606693"
 ---
 # <a name="msunion"></a>ms_union
 Controla o alinhamento de representação de dados de rede de uniões nonencapsulated.  
@@ -30,18 +30,16 @@ Controla o alinhamento de representação de dados de rede de uniões nonencapsu
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [ms_union]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
  O **ms_union** atributo C++ tem a mesma funcionalidade que o [ms_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir mostra a colocação do **ms_union**:  
+ O código a seguir mostra o posicionamento das **ms_union**:  
   
-```  
+```cpp  
 // cpp_attr_ref_ms_union.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -66,14 +64,14 @@ __interface IFireTabCtrl {
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|Nonencapsulated uniões|  
+|**Aplica-se a**|Uniões nonencapsulated|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
-|**Atributos inválidos**|**dispinterface**|  
+|**Atributos obrigatórios**|Nenhum|  
+|**Atributos inválidos**|`dispinterface`|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb7782e44fc8598ca3b806ef922f8d0840765e28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a7549371ba4648f8fcce03a98a021c8027c676e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876450"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605188"
 ---
 # <a name="mutexmutex-constructor"></a>Construtor Mutex::Mutex
-Inicializa uma nova instância da classe Mutex.  
+Inicializa uma nova instância dos **Mutex** classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,15 +39,15 @@ Mutex(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `h`  
- Um identificador ou uma referência de rvalue para um identificador, um objeto Mutex.  
+### <a name="parameters"></a>Parâmetros  
+ *h*  
+ Um identificador ou uma referência de rvalue a um identificador para um **Mutex** objeto.  
   
 ## <a name="remarks"></a>Comentários  
- O primeiro construtor inicializa um objeto Mutex do identificador especificado. O segundo construtor inicializa um objeto Mutex do identificador especificado e move a propriedade do mutex ao objeto Mutex atual.  
+ O primeiro construtor inicializa um **Mutex** objeto do identificador especificado. O segundo construtor inicializa um **Mutex** objeto de identificador especificado e, em seguida, move o propriedade do mutex para atual **Mutex** objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers
  

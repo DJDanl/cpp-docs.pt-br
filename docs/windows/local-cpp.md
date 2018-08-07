@@ -17,40 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17a57ad56402b345aa64e4e4fd02bc57dd7f0321
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: efa937c1eaabb23fe5a360444f8c2105b735b260
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877911"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604194"
 ---
 # <a name="local-c"></a>local (C++)
-Quando usado no cabeçalho da interface, permite que você use o compilador MIDL como um gerador de cabeçalho. Quando usada em uma função individual, designa um procedimento de local para o qual nenhuma stubs são gerados.  
+Quando usado no cabeçalho da interface, permite que você use o compilador MIDL como um gerador de cabeçalho. Quando usado em uma função individual, designa um procedimento de local para o qual nenhuma stubs são gerados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [local]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O `local` atributo C++ tem a mesma funcionalidade que o [local](http://msdn.microsoft.com/library/windows/desktop/aa367071) atributo MIDL.  
+ O **local** atributo C++ tem a mesma funcionalidade que o [local](http://msdn.microsoft.com/library/windows/desktop/aa367071) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- Consulte [call_as](../windows/call-as.md) para obter um exemplo de como usar `local`.  
+ Ver [call_as](../windows/call-as.md) para obter um exemplo de como usar **local**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|`interface`, método de interface|  
+|**Aplica-se a**|**interface**, método de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
-|**Atributos inválidos**|**dispinterface**|  
+|**Atributos obrigatórios**|Nenhum|  
+|**Atributos inválidos**|`dispinterface`|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   

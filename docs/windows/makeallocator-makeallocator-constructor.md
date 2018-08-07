@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b9095daa4ff1dca77c78c11ac41d8747d889d32
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06e12754594fe2f155be9502c2059fb6ba5f84e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874935"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608203"
 ---
 # <a name="makeallocatormakeallocator-constructor"></a>Construtor MakeAllocator::MakeAllocator
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,10 +34,10 @@ MakeAllocator();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Inicializa uma nova instância da classe MakeAllocator.  
+ Inicializa uma nova instância dos **MakeAllocator** classe.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce7715553e17e49ef3c169145abfb49816f6d6dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1e4ac8898b48c4b64d0b12b945ab45b1c5f1436
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891331"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606150"
 ---
 # <a name="safeint-class"></a>Classe SafeInt
-Estende os primitivos de inteiro para ajudar a impedir o estouro de inteiro e permite comparar os diferentes tipos de inteiros.  
+Estende os primitivos de inteiro para ajudar a evitar o estouro de inteiro e permite que você compare os diferentes tipos de inteiros.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,19 +34,19 @@ template<typename T, typename E = _SAFEINT_DEFAULT_ERROR_POLICY>
 class SafeInt;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
   
 |Modelo|Descrição|  
 |--------------|-----------------|  
-|T|O tipo de número inteiro ou o parâmetro booliano que `SafeInt` substitui.|  
+|T|O tipo de inteiro ou o parâmetro booliano que **SafeInt** substitui.|  
 |E|Um tipo de dados enumerado que define o política de tratamento de erros.|  
-|U|O tipo de número inteiro ou um parâmetro booliano para o secundário operando.|  
+|U|O tipo de inteiro ou um parâmetro booliano para o secundário operando.|  
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] rhs|Um parâmetro de entrada que representa o valor à direita do operador em várias funções autônomos.|  
-|[in],|Um parâmetro de entrada que representa o valor à direita do operador em várias funções autônomos.|  
-|[in] bits|Um parâmetro de entrada que representa o valor à direita do operador em várias funções autônomos.|  
+|[in] *rhs*|Um parâmetro de entrada que representa o valor à direita do operador em várias funções autônomas.|  
+|[in] *eu*|Um parâmetro de entrada que representa o valor à direita do operador em várias funções autônomas.|  
+|[in] *bits*|Um parâmetro de entrada que representa o valor à direita do operador em várias funções autônomas.|  
   
 ## <a name="members"></a>Membros  
   
@@ -166,22 +166,22 @@ class SafeInt;
 |&#124;=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (SafeInt<U, E> rhs) throw()`|  
   
 ## <a name="remarks"></a>Comentários  
- O `SafeInt` classe protege contra estouro de inteiro em operações matemáticas. Por exemplo, considere a adição de dois inteiros de 8 bits: uma tem um valor de 200 e o segundo tem um valor de 100. A operação matemática correta seria 200 + 100 = 300. No entanto, devido ao limite de número inteiro de 8 bits, o bit superior serão perdido e o compilador retorna 44 (300-2<sup>8</sup>) como o resultado. Qualquer operação que depende da equação matemática irá gerar um comportamento inesperado.  
+ O **SafeInt** classe protege contra estouro de inteiro em operações matemáticas. Por exemplo, considere a adição de dois inteiros de 8 bits: uma tem um valor de 200 e o segundo tem um valor de 100. A operação matemática correta seria 200 + 100 = 300. No entanto, devido ao limite de inteiro de 8 bits, o bit superior serão perdido e o compilador retorna 44 (2 de 300<sup>8</sup>) como o resultado. Qualquer operação que depende desta equação matemática irá gerar um comportamento inesperado.  
   
- O `SafeInt` classe verifica se ocorre um estouro aritmético ou se o código tenta fazer uma divisão por zero. Em ambos os casos, a classe chama o manipulador de erro para avisar o programa do problema potencial.  
+ O **SafeInt** classe verifica se ocorre um estouro aritmético, ou se o código tenta dividir por zero. Em ambos os casos, a classe chama o manipulador de erro para avisar o programa do problema potencial.  
   
- Essa classe também permite que você compare dois tipos diferentes de inteiros como eles são `SafeInt` objetos. Normalmente, quando você executa uma comparação, primeiro você deve converter os números para ser do mesmo tipo. Converter um número em outro tipo geralmente exige verificações para certificar-se de que não há nenhuma perda de dados.  
+ Essa classe também permite comparar dois tipos diferentes de inteiros, desde que elas sejam **SafeInt** objetos. Normalmente, quando você executa uma comparação, você deve primeiro converter os números para ser do mesmo tipo. Um número em outro tipo de conversão geralmente exige verificações para certificar-se de que não haja nenhuma perda de dados.  
   
- A tabela de operadores neste tópico lista os operadores matemáticos e comparação com suporte a `SafeInt` classe. Operadores matemáticos mais retornam um `SafeInt` objeto do tipo `T`.  
+ A tabela de operadores neste tópico lista os operadores matemáticos e comparação com suporte a **SafeInt** classe. Operadores matemáticos mais retornam um **SafeInt** objeto do tipo `T`.  
   
- Operações de comparação entre um `SafeInt` e um tipo integral pode ser executado em qualquer direção. Por exemplo, `SafeInt<int>(x) < y` e `y> SafeInt<int>(x)` são válidos e retornará o mesmo resultado.  
+ Operações de comparação entre um **SafeInt** e um tipo integral pode ser executado em qualquer direção. Por exemplo, ambos `SafeInt<int>(x) < y` e `y> SafeInt<int>(x)` são válidos e retornará o mesmo resultado.  
   
- Muitos operadores binários não dão suporte a diferentes `SafeInt` tipos. Um exemplo disso é o `&` operador. `SafeInt<T, E> & int` há suporte, mas `SafeInt<T, E> & SafeInt<U, E>` não é. No segundo exemplo, o compilador não souber o tipo de parâmetro a retornar. Uma solução para esse problema é converter o segundo parâmetro para o tipo base. Usando os mesmos parâmetros, isso pode ser feito com `SafeInt<T, E> & (U)SafeInt<U, E>`.  
+ Muitos operadores binários não permitem o uso de duas diferentes **SafeInt** tipos. Um exemplo disso é o `&` operador. `SafeInt<T, E> & int` é suportado, mas `SafeInt<T, E> & SafeInt<U, E>` não é. No último exemplo, o compilador não sabe que tipo de parâmetro para retornar. Uma solução para esse problema é converter o segundo parâmetro para o tipo de base. Usando os mesmos parâmetros, isso pode ser feito com `SafeInt<T, E> & (U)SafeInt<U, E>`.  
   
 > [!NOTE]
->  Para todas as operações bit a bit, os dois parâmetros diferentes devem ter o mesmo tamanho. Se os tamanhos forem diferentes, o compilador gerará um [ASSERT](../mfc/reference/diagnostic-services.md#assert) exceção. Os resultados dessa operação não podem ser garantidos sejam precisos. Para resolver esse problema, converta o parâmetro menor até que ele é o mesmo tamanho que o parâmetro maior.  
+>  Para todas as operações bit a bit, os dois parâmetros diferentes devem ser do mesmo tamanho. Se os tamanhos forem diferentes, o compilador gerará um [ASSERT](../mfc/reference/diagnostic-services.md#assert) exceção. Os resultados dessa operação não podem ser garantidos para ser preciso. Para resolver esse problema, converta o parâmetro menor até que ele é o mesmo tamanho que o parâmetro maior.  
   
- Operadores shift, deslocamento de bits maior do que existe para o tipo de modelo lançará uma exceção de declaração. Isso não terá efeito no modo de liberação. Misturar os dois tipos de parâmetros de SafeInt é possível para os operadores shift porque o tipo de retorno é o mesmo que o tipo original. O número à direita do operador só indica o número de bits para deslocar.  
+ Para os operadores shift, a mudança de bits maior do que existe para o tipo de modelo lançará uma exceção de ASSERT. Isso não terá efeito no modo de versão. Misturar os dois tipos de parâmetros de SafeInt é possível para os operadores shift porque o tipo de retorno é o mesmo que o tipo original. O número à direita do operador só indica o número de bits a deslocar.  
   
  Quando você executa uma comparação lógica com um objeto SafeInt, a comparação é estritamente aritmética. Por exemplo, considere essas expressões:  
   
@@ -189,9 +189,9 @@ class SafeInt;
   
 -   `((uint)~0) > -1`  
   
- A primeira instrução resolve para `true`, mas a segunda instrução resolve para `false`. A negação bit a bit 0 é 0xFFFFFFFF. Na segunda instrução, o operador de comparação padrão compara 0xFFFFFFFF para 0xFFFFFFFF e considera que elas são iguais. O operador de comparação para o `SafeInt` classe percebe que o segundo parâmetro for negativo, enquanto o primeiro parâmetro não está assinado. Portanto, embora a representação de bits é idêntica, o `SafeInt` operador lógico reconhece que o inteiro sem sinal é maior do que -1.  
+ A primeira instrução resolve para **verdadeira**, mas a segunda instrução resolve para **falso**. A negação bit a bit 0 é 0xFFFFFFFF. Na segunda instrução, o operador de comparação padrão compara 0xFFFFFFFF para 0xFFFFFFFF e as considera iguais. O operador de comparação para o **SafeInt** classe percebe que o segundo parâmetro é negativo, enquanto o primeiro parâmetro é não assinado. Portanto, embora a representação de bits é idêntica, o **SafeInt** operador lógico reconhece que o inteiro sem sinal é maior do que -1.  
   
- Tenha cuidado ao usar o `SafeInt` classe junto com o `?:` operador ternário. Considere a seguinte linha de código.  
+ Tenha cuidado ao usar o **SafeInt** classe junto com o `?:` operador ternário. Considere a seguinte linha de código.  
   
 ```  
 Int x = flag ? SafeInt<unsigned int>(y) : -1;  
@@ -203,29 +203,29 @@ Int x = flag ? SafeInt<unsigned int>(y) : -1;
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);  
 ```  
   
- Se `flag` é `false`, o compilador gera uma exceção em vez de atribuir o valor de -1 para `x`. Portanto, para evitar esse comportamento, o código correto a ser usado é a linha a seguir.  
+ Se `flag` está **falsos**, o compilador gera uma exceção em vez de atribuir o valor de -1 para `x`. Portanto, para evitar esse comportamento, o código correto para usar é a linha a seguir.  
   
 ```  
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;  
 ```  
   
- `T` e `U` podem ser atribuídos a um tipo booliano, tipo de caractere ou tipo inteiro. O inteiro tipos podem ser assinados ou não assinados e qualquer tamanho de 8 bits para 64 bits.  
+ `T` e `U` pode ser atribuído um tipo booliano, o tipo de caractere ou tipo de inteiro. O inteiro de tipos podem ser com ou sem sinal e qualquer tamanho de 8 bits para 64 bits.  
   
 > [!NOTE]
->  Embora o `SafeInt` classe aceita qualquer tipo de número inteiro, ele executa com mais eficiência com tipos não assinados.  
+>  Embora o **SafeInt** classe aceita qualquer tipo de inteiro, ele será executado com mais eficiência com tipos não assinados.  
   
- `E` é o mecanismo de tratamento de erros que `SafeInt` usa. Dois mecanismos de tratamento de erro são fornecidos com a biblioteca de SafeInt. A política padrão é `SafeIntErrorPolicy_SafeIntException`, que gera um [classe SafeIntException](../windows/safeintexception-class.md) exceção quando ocorre um erro. A outra política é `SafeIntErrorPolicy_InvalidParameter`, que interrompe o programa se ocorrer um erro.  
+ `E` é o mecanismo de tratamento de erro que **SafeInt** usa. Dois mecanismos de tratamento de erro são fornecidos com a biblioteca de SafeInt. A política padrão é `SafeIntErrorPolicy_SafeIntException`, que lança uma [classe SafeIntException](../windows/safeintexception-class.md) exceção quando ocorre um erro. A outra diretiva é `SafeIntErrorPolicy_InvalidParameter`, que interrompe o programa se ocorrer um erro.  
   
- Há duas opções para personalizar a política de erro. A primeira opção é definir o parâmetro `E` quando você cria um `SafeInt`. Use essa opção quando desejar alterar o tratamento de erro política para apenas um `SafeInt`. A outra opção é definir `_SAFEINT_DEFAULT_ERROR_POLICY` seja sua classe personalizada de tratamento de erros antes de incluir o `SafeInt` biblioteca. Use essa opção quando você deseja alterar o política para todas as instâncias de tratamento de erros padrão a `SafeInt` classe em seu código.  
+ Há duas opções para personalizar a política de erro. A primeira opção é definir o parâmetro `E` quando você cria um **SafeInt**. Use essa opção quando você deseja alterar o política de tratamento para apenas um **SafeInt**. A outra opção é definir safeint_default_error_policy para ser a sua classe personalizada de tratamento de erros antes de incluir a **SafeInt** biblioteca. Use essa opção quando você deseja alterar o política para todas as instâncias de tratamento de erro padrão de **SafeInt** classe em seu código.  
   
 > [!NOTE]
->  Uma classe personalizada que manipula erros da biblioteca de SafeInt não deve retornar o controle para o código que chamou o manipulador de erro. Depois que o manipulador de erro é chamado, o resultado da `SafeInt` operação não pode ser confiável.  
+>  Uma classe personalizada que manipula erros da biblioteca de SafeInt não deve retornar o controle para o código que chamou o manipulador de erro. Depois que o manipulador de erro é chamado, o resultado do **SafeInt** operação não pode ser confiável.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** safeint.h  
+ **Cabeçalho:** safeint  
   
- **Namespace:** msl::utilities  
+ **Namespace:** MSL:: Utilities  
   
 ## <a name="see-also"></a>Consulte também  
- [Biblioteca de SafeInt](../windows/safeint-library.md)   
+ [Biblioteca SafeInt](../windows/safeint-library.md)   
  [Classe SafeIntException](../windows/safeintexception-class.md)

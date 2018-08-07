@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1d688d4ebca5d2cc01901f5fe1afaa4536b71bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f79b4e53947e0e87fb70211ca40bc54f4500855f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892872"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602766"
 ---
 # <a name="restricted"></a>restricted
 Especifica que um membro de um módulo, interface ou dispinterface não pode ser chamado arbitrariamente.  
@@ -30,15 +30,14 @@ Especifica que um membro de um módulo, interface ou dispinterface não pode ser
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ restricted(  
+[ restricted(  
    interfaces  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `interfaces`  
- Uma ou mais interfaces que não podem ser chamados arbitrariamente em um objeto COM. Esse parâmetro só é válido quando aplicado a uma classe.  
+### <a name="parameters"></a>Parâmetros  
+ *interfaces*  
+ Uma ou mais interfaces que não podem ser chamadas arbitrariamente em um objeto COM. Esse parâmetro só é válido quando aplicado a uma classe.  
   
 ## <a name="remarks"></a>Comentários  
  O **restrito** atributo C++ tem a mesma funcionalidade que o [restrito](http://msdn.microsoft.com/library/windows/desktop/aa367157) atributo MIDL.  
@@ -46,7 +45,7 @@ Especifica que um membro de um módulo, interface ou dispinterface não pode ser
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra como usar o **restrito** atributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_restricted.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -71,13 +70,13 @@ class c : public a, public b
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|Método de interface `interface`, **classe**, `struct`|  
+|**Aplica-se a**|Método, de interface **interface**, **classe**, **struct**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|**coclass** (quando aplicado a **classe** ou `struct`)|  
+|**Atributos obrigatórios**|**coclass** (quando aplicado a **classe** ou **struct**)|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

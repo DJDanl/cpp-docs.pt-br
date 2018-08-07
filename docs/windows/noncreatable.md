@@ -1,5 +1,5 @@
 ---
-title: noncreatable | Microsoft Docs
+title: não passível de criação | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4055d541fa60c714262a64466734bc2b2323775b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4881d0e2bc1379f5c4cafa17f485707bca315783
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877817"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607937"
 ---
 # <a name="noncreatable"></a>noncreatable
 Define um objeto que não pode ser instanciado por si só.  
@@ -30,19 +30,17 @@ Define um objeto que não pode ser instanciado por si só.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [noncreatable]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O **noncreatable** atributo C++ tem a mesma funcionalidade que o [noncreatable](http://msdn.microsoft.com/library/windows/desktop/aa367118) atributo MIDL e é passada para o gerado automaticamente. Arquivo IDL pelo compilador.  
+ O **noncreatable** atributo C++ tem a mesma funcionalidade que o [noncreatable](http://msdn.microsoft.com/library/windows/desktop/aa367118) atributo MIDL e é passado para o gerado automaticamente. Arquivo IDL pelo compilador.  
   
- Quando esse atributo é usado em um projeto que usa ATL, altera o comportamento do atributo. Além do comportamento acima, o atributo também injeta o [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) macro. Esta macro indica a ATL que o objeto não pode ser criado externamente.  
+ Quando esse atributo é usado dentro de um projeto que usa ATL, altera o comportamento do atributo. Além do comportamento acima, o atributo também injeta a [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) macro. Essa macro indica ao ATL que o objeto não pode ser criado externamente.  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_noncreatable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -62,13 +60,13 @@ class CMyClass : public A
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|**class**, `struct`|  
+|**Aplica-se a**|**classe**, **struct**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|**coclass**|  
+|**Atributos obrigatórios**|**coclass**|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

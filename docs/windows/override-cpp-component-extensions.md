@@ -16,29 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6818256aafc64702e5423a5560c251e6d46750fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 855f2c18423fd6c1ca708034214e6f5c7048d6d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878873"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605555"
 ---
 # <a name="override--c-component-extensions"></a>substituir (Extensões de Componentes C++)
-O `override` palavra-chave contextual indica que um membro de um tipo substitui uma classe base ou um membro de interface base.  
+O **substituir** palavra-chave contextual indica que um membro de um tipo substitui uma classe base ou um membro de interface base.  
   
 ## <a name="remarks"></a>Comentários  
- O `override` palavra-chave é válido durante a compilação de destinos nativo (opção de compilador padrão), os destinos de tempo de execução do Windows (**/ZW** opção de compilador), ou destinos de tempo de execução de linguagem comum (**/clr** compilador opção).  
+ O **substituir** palavra-chave é válido ao compilar para destinos nativos (opção do compilador padrão), as metas de tempo de execução do Windows (`/ZW` opção de compilador), ou destinos de tempo de execução de linguagem comum (`/clr` opção de compilador).  
   
  Para obter mais informações sobre especificadores de substituição, consulte [especificador de substituição](../cpp/override-specifier.md) e [especificadores de substituição e compilações nativas](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
- Para obter mais informações sobre palavras-chave contextuais, consulte [sensível ao contexto palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ Para obter mais informações sobre palavras-chave contextuais, consulte [contextual as palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
 ## <a name="examples"></a>Exemplos  
- **Exemplo**  
   
- O exemplo de código a seguir mostra que `override` também pode ser usado em compilações nativas.  
+ O exemplo de código a seguir mostra que **substituir** também podem ser usados em compilações nativas.  
   
-```cpp#  
+```cpp  
 // override_keyword_1.cpp  
 // compile with: /c  
 struct I1 {  
@@ -50,11 +49,11 @@ struct X : public I1 {
 };  
 ```  
   
- **Exemplo**  
+### <a name="example"></a>Exemplo
+
+ O exemplo de código a seguir mostra que **substituir** pode ser usado em compilações de tempo de execução do Windows.  
   
- O exemplo de código a seguir mostra que `override` pode ser usado em compilações de tempo de execução do Windows.  
-  
-```cpp#  
+```cpp 
 // override_keyword_2.cpp  
 // compile with: /ZW /c  
 ref struct I1 {  
@@ -66,15 +65,15 @@ ref struct X : public I1 {
 };  
 ```  
   
- **Requisitos**  
+#### <a name="requirements"></a>Requisitos  
   
- Opção do compilador: **/ZW**  
+ Opção do compilador: `/ZW`  
+    
+### <a name="example"></a>Exemplo
+
+ O exemplo de código a seguir mostra que **substituir** pode ser usado em compilações de tempo de execução de linguagem comum.  
   
- **Exemplo**  
-  
- O exemplo de código a seguir mostra que `override` pode ser usado em compilações de tempo de execução de linguagem comum.  
-  
-```cpp#  
+```cpp  
 // override_keyword_3.cpp  
 // compile with: /clr /c  
 ref struct I1 {  
@@ -86,9 +85,9 @@ ref struct X : public I1 {
 };  
 ```  
   
- **Requisitos**  
+#### <a name="requirements"></a>Requisitos  
   
- Opção de compilador: **/clr**  
+ Opção do compilador: `/clr`  
   
 ## <a name="see-also"></a>Consulte também  
  [Especificador de substituição](../cpp/override-specifier.md)   

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ce9ad8ba8659fb26c7303ff5efe236535e14d8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0929ac466a5f09a0ee2401111b40a969aaf7193d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877183"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606807"
 ---
 # <a name="modulemethodreleasenotifiermethod-data-member"></a>Membro de dados Module::MethodReleaseNotifier::method_
-Contém um ponteiro para o manipulador de eventos para o objeto methodreleasenotifier atual.  
+Contém um ponteiro para o manipulador de eventos para o atual **methodreleasenotifier** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   

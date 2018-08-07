@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52acf2f0b9936903b4359e21e23ae50c95d2f31a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 267ef2d9e1b24028016831e050385997ac0037e6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876729"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604834"
 ---
 # <a name="interfacelist-structure"></a>Estrutura InterfaceList
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,11 +37,11 @@ template <
 struct InterfaceList;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T`  
+### <a name="parameters"></a>Parâmetros  
+ *T*  
  Um nome de interface; a primeira interface na lista recursiva.  
   
- `U`  
+ *U*  
  Um nome de interface; as interfaces restantes na lista recursiva.  
   
 ## <a name="remarks"></a>Comentários  
@@ -53,14 +53,14 @@ struct InterfaceList;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|`FirstT`|Sinônimo de parâmetro de modelo `T`.|  
-|`RestT`|Sinônimo de parâmetro de modelo `U`.|  
+|`FirstT`|Sinônimo do parâmetro de modelo *T*.|  
+|`RestT`|Sinônimo do parâmetro de modelo *U*.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `InterfaceList`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

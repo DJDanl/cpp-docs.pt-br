@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb005bc3cbf411a7d5b5ddbfa44cd6aecf802105
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 69775303c5a12f82ef2a31cc61112af4b14d3aad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879536"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606163"
 ---
 # <a name="removeiunknown-class"></a>Classe RemoveIUnknown
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,14 +39,14 @@ template <
 class RemoveIUnknown : public T;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T`  
+### <a name="parameters"></a>Parâmetros  
+ *T*  
  Uma classe.  
   
 ## <a name="remarks"></a>Comentários  
- Faz com que um tipo que é equivalente a uma `IUnknown`-baseado em tipo, mas possui não virtuais `QueryInterface`, `AddRef`, e `Release` funções de membro.  
+ Cria um tipo que é equivalente a um `IUnknown`-tipo com base, mas tem não virtuais `QueryInterface`, `AddRef`, e `Release` funções de membro.  
   
- Por padrão, os métodos de fornecem virtual `QueryInterface`, `AddRef`e métodos de versão. No entanto, `ComPtr` não requer a sobrecarga de métodos virtuais. `RemoveIUnknown` elimina essa sobrecarga fornecendo particular, não virtuais `QueryInterface`, `AddRef`, e `Release` métodos.  
+ Por padrão, os métodos fornecem virtual `QueryInterface`, `AddRef`, e `Release` métodos. No entanto, `ComPtr` não requer a sobrecarga de métodos virtuais. `RemoveIUnknown` elimina essa sobrecarga, fornecendo privado e não virtuais `QueryInterface`, `AddRef`, e `Release` métodos.  
   
 ## <a name="members"></a>Membros  
   
@@ -54,7 +54,7 @@ class RemoveIUnknown : public T;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|`ReturnType`|Um sinônimo para um tipo que é equivalente ao parâmetro de modelo `T` , mas tem membros de IUnknown.|  
+|`ReturnType`|Um sinônimo para um tipo que é equivalente ao parâmetro de modelo *T* , mas tem não virtuais `IUnknown` membros.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `T`  

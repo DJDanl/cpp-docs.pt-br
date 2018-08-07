@@ -1,5 +1,5 @@
 ---
-title: Substituir especificadores (extensões de componentes C++) | Microsoft Docs
+title: Especificadores de substituição (extensões de componentes C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4eb610157d1d56c00b48e98086137351e9fd43a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f84379e57dc5730227726d28c6947d0274b615c5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882756"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603908"
 ---
 # <a name="override-specifiers--c-component-extensions"></a>Especificadores de Substituição (Extensões de Componentes C++)
-*Especificadores de substituição* modificar como herdadas de tipos e membros de tipos herdados se comportam em tipos derivados.  
+*Especificadores de substituição* modificar herdados como tipos e membros de tipos herdados se comportam em tipos derivados.  
   
 ## <a name="all-runtimes"></a>Todos os Tempos de Execução  
- **Comentários**  
+### <a name="remarks"></a>Comentários  
   
  Para obter mais informações sobre especificadores de substituição, consulte:  
   
@@ -41,21 +41,21 @@ ms.locfileid: "33882756"
   
 -   [Especificadores de substituição e compilações nativas](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)  
   
- `abstract` e `sealed` também são válidos em declarações de tipo, em que elas não atuam como especificadores de substituição.  
+ **abstrato** e **lacrado** também são válidos em declarações de tipo, onde não atuam como especificadores de substituição.  
   
- Para obter informações sobre como substituir explicitamente funções da classe base, consulte [substituições explícitas](../windows/explicit-overrides-cpp-component-extensions.md).  
+ Para obter informações sobre como substituir explicitamente funções de classe base, consulte [substituições explícitas](../windows/explicit-overrides-cpp-component-extensions.md).  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
- (Não há nenhum comentários para esse recurso de idioma que se aplicam somente no tempo de execução do Windows).  
+ (Não há nenhum comentário sobre este recurso de linguagem que se aplicam a apenas o tempo de execução do Windows.)  
   
 ### <a name="requirements"></a>Requisitos  
- Opção do compilador: **/ZW**  
+ Opção do compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
- (Não há nenhum comentários para esse recurso de idioma que se aplicam a apenas o common language runtime).  
+ (Não há nenhum comentário sobre este recurso de linguagem que se aplicam a apenas o common language runtime.)  
   
 ### <a name="requirements"></a>Requisitos  
- Opção de compilador: **/clr**  
+ Opção do compilador: `/clr`  
   
 ## <a name="see-also"></a>Consulte também  
  [Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)

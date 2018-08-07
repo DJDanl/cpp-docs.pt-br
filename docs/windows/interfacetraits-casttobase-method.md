@@ -1,5 +1,5 @@
 ---
-title: 'Método: Casttobase | Microsoft Docs'
+title: 'Método interfacetraits:: Casttobase | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cd8fa2106ac3792c0352aa40ea34b049c1e5ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4f284514472796f22d176325a0223848a827c85c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878519"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606443"
 ---
 # <a name="interfacetraitscasttobase-method"></a>Método InterfaceTraits::CastToBase
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,12 +36,12 @@ static __forceinline Base* CastToBase(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T`  
- O tipo de parâmetro `ptr`.  
+### <a name="parameters"></a>Parâmetros  
+ *T*  
+ O tipo do parâmetro *ptr*.  
   
- `ptr`  
- Ponteiro para um tipo `T`.  
+ *ptr*  
+ Ponteiro para um tipo *T*.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Um ponteiro para `Base`.  
@@ -49,10 +49,10 @@ static __forceinline Base* CastToBase(
 ## <a name="remarks"></a>Comentários  
  Converte o ponteiro especificado para um ponteiro para `Base`.  
   
- Para obter mais informações sobre `Base`, consulte a seção de Typedefs públicos em [estrutura InterfaceTraits](../windows/interfacetraits-structure.md).  
+ Para obter mais informações sobre `Base`, consulte a seção Typedefs públicos [estrutura InterfaceTraits](../windows/interfacetraits-structure.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

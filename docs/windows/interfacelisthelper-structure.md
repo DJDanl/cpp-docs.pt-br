@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ad091114d6be6f35f1a0341961dc5122840ace8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91012112cebf6fe33858df8904691944a810f69a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878041"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608125"
 ---
 # <a name="interfacelisthelper-structure"></a>Estrutura InterfaceListHelper
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,41 +50,41 @@ template <
 struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T0`  
+### <a name="parameters"></a>Parâmetros  
+ *T0*  
  Parâmetro de modelo 0, que é necessário.  
   
- `T1`  
+ *T1*  
  Parâmetro de modelo 1, que, por padrão, não é especificado.  
   
- `T2`  
+ *T2*  
  Parâmetro de modelo 2, que, por padrão, não é especificado. O terceiro parâmetro de modelo.  
   
- `T3`  
+ *T3*  
  Parâmetro de modelo 3, que, por padrão, não é especificado.  
   
- `T4`  
+ *T4*  
  Parâmetro de modelo 4, que, por padrão, não é especificado.  
   
- `T5`  
+ *T5*  
  Parâmetro de modelo 5, que, por padrão, não é especificado.  
   
- `T6`  
+ *T6*  
  Parâmetro de modelo 6, que, por padrão, não é especificado.  
   
- `T7`  
+ *T7*  
  Parâmetro de modelo 7, que, por padrão, não é especificado.  
   
- `T8`  
+ *T8*  
  Parâmetro de modelo 8, que, por padrão, não é especificado.  
   
- `T9`  
+ *T9*  
  Parâmetro de modelo 9, que, por padrão, não é especificado.  
   
 ## <a name="remarks"></a>Comentários  
- Cria um tipo InterfaceList recursivamente aplicar os argumentos de parâmetro do modelo especificado.  
+ Cria um `InterfaceList` tipo por recursivamente aplicando os argumentos de parâmetro de modelo especificado.  
   
- O modelo InterfaceListHelper usa o parâmetro de modelo `T0` para definir os primeiros dados de membro em uma estrutura InterfaceList e recursivamente aplica o modelo de InterfaceListHelper para quaisquer parâmetros de modelo restantes. InterfaceListHelper é interrompido quando não existem parâmetros modelo restantes.  
+ O **InterfaceListHelper** modelo usa o parâmetro de modelo *T0* para definir o primeiro membro de dados em um `InterfaceList` estrutura e, em seguida, recursivamente se aplica a  **InterfaceListHelper** modelo para quaisquer parâmetros restantes do modelo. **InterfaceListHelper** para quando não houver nenhum parâmetro de modelo restantes.  
   
 ## <a name="members"></a>Membros  
   
@@ -98,7 +98,7 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
  `InterfaceListHelper`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b763131fe91e2df2385f2c06bcba8bc759d695a1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5fbf0b3c9db19e839d6832415cfd8ed6eb9b93a2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882700"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604112"
 ---
 # <a name="property--c-component-extensions"></a>propriedade (Extensões de Componentes C++)
 Declara um *propriedade*, que é uma função de membro que se comporta e é acessada como um membro de dados ou um elemento de matriz.  
@@ -32,17 +32,17 @@ Declara um *propriedade*, que é uma função de membro que se comporta e é ace
  Você pode declarar um dos seguintes tipos de propriedades.  
   
  *propriedade simples*  
- Por padrão, cria um *acessador set* que atribui o valor da propriedade, um *acessador get* que recupera o valor da propriedade e um membro de dados particulares geradas pelo compilador que contém o valor da propriedade.  
+ Por padrão, cria uma *acessador set* que atribui o valor da propriedade, um *acessador get* que recupera o valor da propriedade e um membro de dados particulares geradas pelo compilador que contém o valor da propriedade.  
   
- *bloco de propriedade*  
- Use para criar get definido pelo usuário e/ou definir acessadores. A propriedade é leitura/gravação se get e acessadores set são definidas, somente leitura se somente o acessador get é definido e somente gravação se apenas o acessador set é definido.  
+ *bloco Property*  
+ Use isto para criar get definidas pelo usuário e/ou definir acessadores. A propriedade é leitura/gravação se ambos os get e acessadores set são definidas, somente leitura se somente o acessador get é definido e somente gravação se apenas o acessador set é definido.  
   
  Você deve declarar explicitamente um membro de dados para conter o valor da propriedade.  
   
  *propriedade indexada*  
- Um bloco property que você pode usar para obter e definir um valor de propriedade que é especificado por um ou mais índices.  
+ Um bloco de propriedade que você pode usar para obter e definir um valor da propriedade que é especificado por um ou mais índices.  
   
- Você pode criar uma propriedade indexada que tem o nome de uma propriedade definida pelo usuário ou um *padrão* nome da propriedade. O nome de uma propriedade de índice padrão é o nome da classe na qual a propriedade está definida. Para declarar uma propriedade padrão, especifique o `default` palavra-chave em vez de um nome de propriedade.  
+ Você pode criar uma propriedade indexada que tem um nome de uma propriedade definida pelo usuário ou um *padrão* nome da propriedade. O nome de uma propriedade de índice padrão é o nome da classe na qual a propriedade está definida. Para declarar uma propriedade padrão, especifique o **padrão** palavra-chave, em vez de um nome de propriedade.  
   
  Você deve declarar explicitamente um membro de dados para conter o valor da propriedade. Para uma propriedade indexada, o membro de dados normalmente é uma matriz ou uma coleção.  
   
@@ -68,37 +68,37 @@ property type default[index_list] {
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `type`  
+ *type*  
  O tipo de dados do valor da propriedade e, consequentemente, a própria propriedade.  
   
- `property_name`  
+ *property_name*  
  O nome da propriedade.  
   
- `access-modifier`  
- Um qualificador de acesso. Qualificadores válidos são `static` e `virtual`.  
+ *modificador de acesso*  
+ Um qualificador de acesso. Qualificadores válidos são **estáticos** e **virtual**.  
   
- Get ou set acessadores não precisam concordar com o `virtual` qualificador, mas eles devem concordar com o `static` qualificador.  
+ Get ou acessadores set não precisam concordar com o **virtual** qualificador, mas eles devem concordar com os **estático** qualificador.  
   
- `inheritance-modifier`  
- Um qualificador de herança. Qualificadores válidos são `abstract` e `sealed`.  
+ *modificador de herança*  
+ Um qualificador de herança. Qualificadores válidos são **abstrata** e **lacrado**.  
   
- `index_list`  
- Uma lista delimitada por vírgulas de um ou mais índices. Cada índice consiste em um tipo de índice e um identificador opcional que pode ser usado no corpo do método de propriedade.  
+ *index_list*  
+ Uma lista delimitada por vírgula de um ou mais índices. Cada índice consiste em um tipo de índice e um identificador opcional que pode ser usado no corpo do método de propriedade.  
   
- `value`  
- O valor a ser atribuído à propriedade em uma operação de definição ou recuperar em uma operação get.  
+ *value*  
+ O valor a ser atribuído à propriedade em uma operação definida, ou recuperar em uma operação get.  
   
- `property_body`  
- O corpo do método de propriedade do acessador set ou get. O `property_body` pode usar o `index_list` para acessar o membro de dados de propriedade subjacente, ou como parâmetros de processamento definidas pelo usuário.  
+ *property_body*  
+ O corpo do método de propriedade do acessador set ou get. O *property_body* pode usar o *index_list* para acessar o membro de dados da propriedade subjacente, ou como parâmetros em processamento definidas pelo usuário.  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
- Para obter mais informações, consulte [propriedades (C + + CX)](http://msdn.microsoft.com/library/windows/apps/hh755807.aspx).  
+ Para obter mais informações, consulte [propriedades (C + + c++ /CX)](http://msdn.microsoft.com/library/windows/apps/hh755807.aspx).  
   
 ### <a name="requirements"></a>Requisitos  
- Opção do compilador: **/ZW**  
+ Opção do compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Sintaxe**  
+### <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 modifier property type property_name;
@@ -115,66 +115,66 @@ modifier property type default[index];
 }  
 ```  
   
- **Parâmetros**  
+### <a name="parameters"></a>Parâmetros  
   
  *Modificador*  
- Um modificador que pode ser usado em uma declaração de propriedade ou um método acessador get/set. Os valores possíveis são `static` e `virtual`.  
+ Um modificador que pode ser usado em uma declaração de propriedade ou um método de acessador get/set. Os valores possíveis são **estáticos** e **virtual**.  
   
  *type*  
  O tipo do valor que é representado pela propriedade.  
   
  *property_name*  
- Parâmetros para o método raise; deve corresponder à assinatura do delegado.  
+ Parâmetro (s) para o método raise; deve corresponder à assinatura do delegado.  
   
  *index_list*  
- Uma lista delimitada por vírgulas de um ou mais índices, especificado no início entre colchetes (operador subscript, ([])). Para cada índice, especifique um tipo e, opcionalmente, um identificador que pode ser usado no corpo do método de propriedade.  
+ Uma lista delimitada por vírgula de um ou mais índices, especificado colchetes (o operador subscrito, ([])). Para cada índice, especifique um tipo e, opcionalmente, um identificador que pode ser usado no corpo do método de propriedade.  
   
- **Comentários**  
+### <a name="remarks"></a>Comentários  
   
- O primeiro exemplo de sintaxe mostra uma *propriedade simples*, implicitamente, que declara tanto um `set` e `get` método. O compilador cria automaticamente um campo particular para armazenar o valor da propriedade.  
+ O primeiro exemplo de sintaxe mostra uma *propriedade simples*, que declara implicitamente tanto uma `set` e `get` método. O compilador cria automaticamente um campo particular para armazenar o valor da propriedade.  
   
- O segundo exemplo de sintaxe mostra uma *bloco property*, que declara tanto explicitamente um `set` e `get` método.  
+ O segundo exemplo de sintaxe mostra uma *bloco property*, que declara explicitamente tanto uma `set` e `get` método.  
   
- O terceiro exemplo de sintaxe mostra que um cliente definido *propriedade index*. Uma propriedade de índice usa parâmetros além do valor a ser definido ou recuperado. Você deve especificar um nome para a propriedade. Diferentemente de uma propriedade simple, o `set` e/ou `get` métodos de uma propriedade de índice devem ser definidos explicitamente, e você deve especificar um nome para a propriedade.  
+ O terceiro exemplo de sintaxe mostra um cliente definido *propriedade index*. Uma propriedade de índice usa parâmetros além do valor a ser definido ou recuperado. Você deve especificar um nome para a propriedade. Ao contrário de uma propriedade simples, o `set` e/ou `get` métodos de uma propriedade de índice devem ser definidos explicitamente, e você deve especificar um nome para a propriedade.  
   
- O quarto exemplo de sintaxe mostra uma *padrão* propriedade, que fornece acesso de matriz para uma instância do tipo. A palavra-chave `default`, serve apenas para especificar uma propriedade padrão. O nome da propriedade padrão é o nome do tipo no qual a propriedade está definida.  
+ O exemplo de sintaxe a quarto mostra uma *padrão* propriedade, que fornece acesso de matriz a uma instância do tipo. A palavra-chave **padrão**, serve apenas para especificar uma propriedade padrão. O nome da propriedade padrão é o nome do tipo no qual a propriedade é definida.  
   
- O `property` palavra-chave pode aparecer em uma classe, interface ou tipo de valor. Uma propriedade pode ter uma função get (somente leitura), uma função de conjunto (somente gravação) ou ambos (leitura-gravação).  
+ O **propriedade** palavra-chave pode aparecer em uma classe, interface ou tipo de valor. Uma propriedade pode ter uma função get (somente leitura), uma função de conjunto (somente gravação) ou ambos (leitura-gravação).  
   
  Um nome de propriedade não pode corresponder ao nome da classe gerenciada que o contém. O tipo de retorno da função getter deve corresponder ao tipo do último parâmetro de uma função setter correspondente.  
   
- Para o código de cliente, uma propriedade tem a aparência de um membro de dados comum e pode ser gravada ou ler usando a mesma sintaxe como um membro de dados.  
+ Ao código do cliente, uma propriedade tem a aparência de um membro de dados comum e pode ser gravada ou lido do, usando a mesma sintaxe como um membro de dados.  
   
- Get e set métodos não precisam concordar com o `virtual` modificador.  
+ Get e conjunto de métodos não precisam concordar com os **virtual** modificador.  
   
- A acessibilidade de get e o método de conjunto pode ser diferente.  
+ A acessibilidade de get e método set pode diferir.  
   
- A definição de um método de propriedade pode aparecer fora do corpo de classe, como um método comum.  
+ A definição de um método de propriedade pode aparecer fora do corpo de classe, assim como um método comum.  
   
- Get e o método de definição para uma propriedade devem concordar com o **estático** modificador.  
+ Get e o método set para uma propriedade deverão concordar com os **estático** modificador.  
   
- Uma propriedade é escalar se seu get e o conjunto de métodos ajustar a descrição a seguir:  
+ Uma propriedade é escalar se seu get e métodos definidos se adaptam a descrição a seguir:  
   
 -   O método get não tem parâmetros e tem o tipo de retorno `T`.  
   
--   O método de conjunto tem um parâmetro de tipo `T`e o tipo de retorno **void**.  
+-   O método set tem um parâmetro do tipo `T`e o tipo de retorno **void**.  
   
  Deve haver apenas uma propriedade escalar declarada em um escopo com o mesmo identificador. Propriedades escalares não podem ser sobrecarregadas.  
   
- Quando um membro de dados da propriedade é declarado, o compilador insere um membro de dados — também conhecido como "armazenamento de backup" — na classe. No entanto, o nome do membro de dados é de um formulário, de modo que você não pode referenciar o membro na fonte, como se fosse um membro de dados reais da classe que contém. Use ildasm.exe para exibir os metadados para o tipo e ver o nome gerado pelo compilador para armazenamento de backup da propriedade.  
+ Quando um membro de dados de propriedade é declarado, o compilador injeta um membro de dados — também conhecido como "armazenamento de backup" — na classe. No entanto, o nome do membro de dados é de um formulário, de modo que você não pode referenciar o membro na fonte, como se fosse um membro de dados reais da classe recipiente. Use ildasm.exe para exibir os metadados para seu tipo e ver o nome gerado pelo compilador para o repositório de backup da propriedade.  
   
- Acessibilidade diferente é permitida para os métodos acessadores em um bloco de propriedade.  Ou seja, o método de conjunto pode ser público e o método get pode ser particular.  No entanto, é um erro para um método de acessador para ter uma acessibilidade menos restritiva do que está na declaração da propriedade.  
+ Acessibilidade diferente é permitida para os métodos acessadores em um bloco de propriedade.  Ou seja, o método set pode ser público e o método get pode ser privado.  No entanto, é um erro para um método de acessador para ter uma acessibilidade menos restritiva do que está na declaração da propriedade em si.  
   
- `property` é uma palavra-chave contextual.  Para obter mais informações, consulte [sensível ao contexto palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ **propriedade** é uma palavra-chave contextual.  Para obter mais informações, consulte [contextual as palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
   
 ### <a name="requirements"></a>Requisitos  
- Opção de compilador: **/clr**  
+ Opção do compilador: `/clr`  
   
 ### <a name="examples"></a>Exemplos  
- O exemplo a seguir mostra a declaração e uso de um membro de dados de propriedade e um bloco property.  Ele também mostra que um acessador de propriedade pode ser definido fora da classe.  
+ O exemplo a seguir mostra a declaração e uso de um membro de dados de propriedade e um bloco de propriedade.  Ele também mostra que um acessador de propriedade pode ser definido fora de classe.  
   
-```  
+```cpp  
 // mcppv2_property.cpp  
 // compile with: /clr  
 using namespace System;  

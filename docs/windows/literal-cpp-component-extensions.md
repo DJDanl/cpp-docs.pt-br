@@ -18,46 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6871f02a1c37def05b6450e7ffad18f6fa45b461
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 78dda3c52192b0d2755bdc8f8944eb0e1443e7af
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879351"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604168"
 ---
 # <a name="literal-c-component-extensions"></a>literal (Extensões de Componentes C++)
-Uma variável (membro de dados) é marcada como `literal` em uma **/clr** compilação é o equivalente nativo um `static const` variável.  
+Uma variável (membro de dados) marcado como **literal** em um **/clr** a compilação é o equivalente nativo de uma **const estático** variável.  
   
 ## <a name="all-platforms"></a>Todas as Plataformas  
- **Comentários**  
+### <a name="remarks"></a>Comentários 
   
- (Não há nenhum comentários para esse recurso de idioma que se aplicam a todos os tempos de execução).  
+ (Não há nenhum comentário sobre este recurso de linguagem que se aplicam a todos os tempos de execução.)  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
- **Comentários**  
+### <a name="remarks"></a>Comentários 
   
- (Não há nenhum comentários para esse recurso de idioma que se aplicam somente no tempo de execução do Windows).  
+ (Não há nenhum comentário sobre este recurso de linguagem que se aplicam a apenas o tempo de execução do Windows.)  
   
 ### <a name="requirements"></a>Requisitos  
- Opção do compilador: **/ZW**  
+ Opção do compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
   
 ## <a name="remarks"></a>Comentários  
- Um membro de dados marcado como `literal` devem ser inicializados quando declarados e o valor deve ser uma constante integral, enum ou tipo de cadeia de caracteres. Conversão do tipo da expressão de inicialização para o tipo do estático const-membro de dados não deve exigir uma conversão definida pelo usuário.  
+ Um membro de dados marcado como **literal** devem ser inicializados quando declarados e o valor deve ser uma constante integral, enum ou tipo de cadeia de caracteres. Conversão do tipo da expressão de inicialização para o tipo do const dados-membro estático não deve exigir uma conversão definida pelo usuário.  
   
- Nenhuma memória é alocada para o campo literal em tempo de execução; o compilador só insere seu valor nos metadados para a classe.  
+ Nenhuma memória é alocada para o campo literal em tempo de execução; o compilador insere apenas seu valor nos metadados para a classe.  
   
- Uma variável marcada `static const` não estarão disponíveis nos metadados para outros compiladores.  
+ Uma variável marcados **const estático** não estarão disponíveis nos metadados para outros compiladores.  
   
- Para obter mais informações, consulte [estático](../cpp/storage-classes-cpp.md) e [const](../cpp/const-cpp.md).  
+ Para obter mais informações, consulte [estáticos](../cpp/storage-classes-cpp.md) e [const](../cpp/const-cpp.md).  
   
- `literal` é uma palavra-chave contextual. Consulte [sensível ao contexto palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md) para obter mais informações.  
+ **literal** é uma palavra-chave contextual. Ver [contextual as palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md) para obter mais informações.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo mostra que uma `literal` variável implica `static`.  
+ Este exemplo mostra que um **literal** variável implica **estático**.  
   
-```  
+```cpp  
 // mcppv2_literal.cpp  
 // compile with: /clr  
 ref struct X {  
@@ -70,9 +70,9 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra o efeito da literal em metadados:  
+ O exemplo a seguir mostra o efeito das literal nos metadados:  
   
-```  
+```cpp  
 // mcppv2_literal2.cpp  
 // compile with: /clr /LD  
 public ref struct A {  
@@ -81,7 +81,7 @@ public ref struct A {
 };  
 ```  
   
- Observe a diferença nos metadados do `sc` e `lit`: o `modopt` diretiva é aplicada a `sc`, que significa que ela pode ser ignorado por outros compiladores.  
+ Observe a diferença nos metadados para `sc` e `lit`: o `modopt` diretiva é aplicada a `sc`, que significa que ele pode ser ignorado por outros compiladores.  
   
 ```  
 .field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)  
@@ -92,9 +92,9 @@ public ref struct A {
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir, criado em c#, faz referência o metadados criado no exemplo anterior e mostra o efeito das `literal` e `static const` variáveis:  
+ O exemplo a seguir, criado no c#, faz referência o metadados criado no exemplo anterior e mostra o efeito das **literal** e **const estático** variáveis:  
   
-```  
+```cs  
 // mcppv2_literal3.cs  
 // compile with: /reference:mcppv2_literal2.dll  
 // A C# program  
@@ -124,7 +124,7 @@ class B {
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- Opção de compilador: **/clr**  
+ Opção do compilador: `/clr`  
   
 ## <a name="see-also"></a>Consulte também  
  [Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)

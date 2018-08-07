@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52dd1920ad32719e4fbff5a0138e737367d97ff4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc770ce418f458109ab2b047a5bb0f7e006ae499
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877664"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603579"
 ---
 # <a name="issame-structure"></a>Estrutura IsSame
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,11 +41,11 @@ template <
 struct IsSame<T1, T1>;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T1`  
+### <a name="parameters"></a>Parâmetros  
+ *T1*  
  Um tipo.  
   
- `T2`  
+ *T2*  
  Outro tipo.  
   
 ## <a name="remarks"></a>Comentários  

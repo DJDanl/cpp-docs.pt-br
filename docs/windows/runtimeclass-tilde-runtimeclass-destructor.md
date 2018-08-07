@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b48ead21adc8b641840727af236c3c6e58efee9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13f537a9f5f6a66107a381324ccef1a6bef2ff32
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892183"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608023"
 ---
 # <a name="runtimeclassruntimeclass-destructor"></a>Destruidor RuntimeClass::~RuntimeClass
-Deinitializes a instância atual da classe RuntimeClass.  
+Realiza o desligamento da instância atual do **RuntimeClass** classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +34,7 @@ virtual ~RuntimeClass();
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL  
   

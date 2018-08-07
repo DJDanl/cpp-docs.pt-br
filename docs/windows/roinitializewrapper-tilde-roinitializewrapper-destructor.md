@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29683e68f1f5aadcd477cdc717b03a648c5cccc7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c6eaeb044cf3e169bf5927a2fec948cc8d4294c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891994"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606270"
 ---
 # <a name="roinitializewrapperroinitializewrapper-destructor"></a>Destruidor RoInitializeWrapper::~RoInitializeWrapper
-Uninitializes o tempo de execução do Windows.  
+Encerra o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,10 +32,10 @@ Uninitializes o tempo de execução do Windows.
 ```  
   
 ## <a name="remarks"></a>Comentários  
- A classe RoInitializeWrapper invoca Windows::Foundation::Uninitialize().  
+ O **RoInitializeWrapper** classe invoca `Windows::Foundation::Uninitialize()`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

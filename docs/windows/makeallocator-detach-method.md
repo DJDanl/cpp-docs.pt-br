@@ -1,5 +1,5 @@
 ---
-title: 'Método Makeallocator: | Microsoft Docs'
+title: 'Método makeallocator:: Detach | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50afca04492c29aa526f7a004c6e0f725022e9ba
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a269b7cbab3bba180dfc389075346db3c60e8bf0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876963"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603362"
 ---
 # <a name="makeallocatordetach-method"></a>Método MakeAllocator::Detach
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,12 +34,12 @@ __forceinline void Detach();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Desassocia a memória alocada pelo [alocar](../windows/makeallocator-allocate-method.md) método do objeto MakeAllocator atual.  
+ Desassocia a memória alocada pelo [Allocate](../windows/makeallocator-allocate-method.md) método atuais **MakeAllocator** objeto.  
   
- Se você chamar Detach(), você é responsável por excluir a fornecida pelo método de alocação de memória.  
+ Se você chamar **Detach()**, você é responsável pela exclusão da memória fornecida pelo `Allocate` método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

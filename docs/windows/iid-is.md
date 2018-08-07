@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9ef3a14211e223b9902dc9843639d217ceaf1b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f0dd12df088d8fc55cc4f1a8eaf71bcbb7d4e93
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877996"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603284"
 ---
 # <a name="iidis"></a>iid_is
-Especifica o IID da interface COM aponta para um ponteiro de interface.  
+Especifica o IID da interface COM apontado por um ponteiro de interface.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ iid_is(  
+[ iid_is(  
    "expression"  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
  *Expressão*  
- Uma expressão de linguagem C que especifica uma IID de uma interface COM apontada por um ponteiro de interface.  
+ Uma expressão de linguagem C que especifica uma IID de uma interface COM apontado por um ponteiro de interface.  
   
 ## <a name="remarks"></a>Comentários  
  O **iid_is** atributo C++ tem a mesma funcionalidade que o [iid_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) atributo MIDL.  
@@ -46,7 +45,7 @@ Especifica o IID da interface COM aponta para um ponteiro de interface.
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra o uso de **iid_is**:  
   
-```  
+```cpp  
 // cpp_attr_ref_iid_is.cpp  
 // compile with: /LD  
 #include "wtypes.h"  
@@ -63,13 +62,13 @@ __interface IFireTabCtrl : IDispatch
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|Parâmetro de interface, o membro de dados|  
+|**Aplica-se a**|Parâmetro de interface, membro de dados|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  

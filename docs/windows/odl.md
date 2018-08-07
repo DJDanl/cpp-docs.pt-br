@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 559d149cfbe2fac7a5d648d56cb4e34d427cedc8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 984731d85bafe3c0e6bb0d8f6092800019b40663
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877690"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608180"
 ---
 # <a name="odl"></a>odl
-Identifica uma interface como uma interface de linguagem de descrição do objeto (ODL). Não exige que o compilador MIDL o **odl** atributo; ele é reconhecido somente para compatibilidade com arquivos. odl mais antigos.  
+Identifica uma interface como uma interface de linguagem de descrição do objeto (ODL). O compilador MIDL não requer o **odl** atributo; ele é reconhecido somente para compatibilidade com os arquivos. odl mais antigos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [odl]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
@@ -40,7 +38,7 @@ Identifica uma interface como uma interface de linguagem de descrição do objet
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_odl.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -62,13 +60,13 @@ public:
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|`interface`|  
+|**Aplica-se a**|**interface**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

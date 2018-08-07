@@ -1,5 +1,5 @@
 ---
-title: 'Método: GetClassObject | Microsoft Docs'
+title: 'Método Module:: GetClassObject | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9205b04fc27e1c6e0e6133a08c3c2f69ffdfc314
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63ff6c63702cda709f4431d9c7e5be5a4bdb8449
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878532"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602647"
 ---
 # <a name="modulegetclassobject-method"></a>Método Module::GetClassObject
-Recupera um cache de fábricas de classe.  
+Recupera um cache de fábricas de classes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,23 +38,23 @@ Recupera um cache de fábricas de classe.
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `clsid`  
+### <a name="parameters"></a>Parâmetros  
+ *clsid*  
  ID de classe.  
   
- `riid`  
+ *riid*  
  ID de interface que você solicitar.  
   
- `ppv`  
+ *ppv*  
  Ponteiro para o objeto retornado.  
   
- `serverName`  
- O nome do servidor especificado no `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, ou `ActivatableClass` macro; ou `nullptr` para obter o nome do servidor padrão.  
+ *ServerName*  
+ O nome do servidor que é especificado em ambos os `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, ou `ActivatableClass` macro; ou **nullptr** para obter o nome do servidor padrão.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 ## <a name="remarks"></a>Comentários  
- Use este método somente para COM, não o tempo de execução do Windows. Esse método expõe métodos de IClassFactory somente.  
+ Use esse método somente para COM, não o tempo de execução do Windows. Esse método expõe apenas `IClassFactory` métodos.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac5f0e81a7d29d89e32735224afed67f3d9c9101
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8c7ab6dcfa4a085facf835343404de3ed4998a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877924"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603436"
 ---
 # <a name="range-c"></a>range (C++)
 Especifica um intervalo de valores permitidos para argumentos ou campos cujos valores são definidos em tempo de execução.  
@@ -30,8 +30,7 @@ Especifica um intervalo de valores permitidos para argumentos ou campos cujos va
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ range(  
+[ range(  
    low,   
    high  
 ) ]  
@@ -39,7 +38,7 @@ Especifica um intervalo de valores permitidos para argumentos ou campos cujos va
   
 #### <a name="parameters"></a>Parâmetros  
  *low*  
- O valor do intervalo inferior.  
+ O valor baixo do intervalo.  
   
  *high*  
  O valor de intervalo alto.  
@@ -49,7 +48,7 @@ Especifica um intervalo de valores permitidos para argumentos ou campos cujos va
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_range.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -65,13 +64,13 @@ __interface ICustom {
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Método de interface, o parâmetro de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

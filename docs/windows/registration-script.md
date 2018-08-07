@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d4385dd12fccafb154a637dd5260764667d3887a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 50029cea9e5bd7bf3a5032a2190fc71d4e893b5f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878717"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607667"
 ---
 # <a name="registrationscript"></a>registration_script
 Executa o script de registro personalizado especificado.  
@@ -30,25 +30,24 @@ Executa o script de registro personalizado especificado.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ registration_script(   
+[ registration_script(   
    script   
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Script*  
- O caminho completo para um arquivo de script (. rgs) do registro personalizada. Um valor de **nenhum**, como `script = "none"`, indica que o coclass não tem nenhum requisito de registro.  
+ *script*  
+ O caminho completo para um arquivo de script (. rgs) de registro personalizado. Um valor de **none**, como `script = "none"`, indica que a coclass não tem nenhum requisito de registro.  
   
 ## <a name="remarks"></a>Comentários  
- O **registration_script** atributo C++ executa o script de registro personalizado especificado por **script**. Se esse atributo não for especificado, um arquivo. rgs padrão (que contém informações para registrar o componente) será usado. Para obter mais informações sobre arquivos. rgs, consulte [o componente de registro ATL (Registrar)](../atl/atl-registry-component-registrar.md).  
+ O **registration_script** atributo C++ executa o script de registro personalizado especificado por *script*. Se esse atributo não for especificado, um arquivo. rgs padrão (que contém informações para registrar o componente) será usado. Para obter mais informações sobre arquivos. rgs, consulte [o componente de registro ATL (registrador)](../atl/atl-registry-component-registrar.md).  
   
- Este atributo requer que o [coclass](../windows/coclass.md), [progid](../windows/progid.md), ou [vi_progid](../windows/vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicados ao mesmo elemento.  
+ Este atributo exige que o [coclass](../windows/coclass.md), [progid](../windows/progid.md), ou [vi_progid](../windows/vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicadas ao mesmo elemento.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir especifica que o componente tem um script de registro chamado cpp_attr_ref_registration_script.rgs.  
   
-```  
+```cpp  
 // cpp_attr_ref_registration_script.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -69,13 +68,13 @@ class CMyClass:public IFace {};
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|**class**, `struct`|  
+|**Aplica-se a**|**classe**, **struct**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Um ou mais dos seguintes: **coclass**, **progid**, ou **vi_progid**.|  
+|**Atributos obrigatórios**|Um ou mais das seguintes opções: `coclass`, `progid`, ou `vi_progid`.|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

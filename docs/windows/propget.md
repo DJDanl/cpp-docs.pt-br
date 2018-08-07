@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 339cb03b645e3aff0a6bb806e431c7be274340d8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3552a8c64260345b6a956878c459182089e1af0f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881849"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607541"
 ---
 # <a name="propget"></a>propget
 Especifica uma função de acessador de propriedade.  
@@ -30,27 +30,25 @@ Especifica uma função de acessador de propriedade.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [propget]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
  O **propget** atributo C++ tem a mesma funcionalidade que o [propget](http://msdn.microsoft.com/library/windows/desktop/aa367145) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- Consulte o exemplo para [associável](../windows/bindable.md) para uso do exemplo **propget**.  
+ Veja o exemplo de [associável](../windows/bindable.md) para uso do exemplo **propget**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Método|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
-|**Atributos inválidos**|**propput**, **propputref**|  
+|**Atributos obrigatórios**|Nenhum|  
+|**Atributos inválidos**|`propput`, `propputref`|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   

@@ -17,39 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b23ff91a67962ec36cf6a9c2f5ebbf8122ab73c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9a3d102050da84f7dcbc8714a4c04b46cf3f5a1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876807"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606118"
 ---
 # <a name="out-c"></a>out (C++)
-Identifica os parâmetros de ponteiro retornados do procedimento chamado para o procedimento de chamada (do servidor para o cliente).  
+Identifica os parâmetros de ponteiro que são retornados do procedimento chamado ao procedimento de chamada (do servidor para o cliente).  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [out]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O **out** atributo C++ tem a mesma funcionalidade que o [out](http://msdn.microsoft.com/library/windows/desktop/aa367136) atributo MIDL.  
+ O **horizontalmente** atributo C++ tem a mesma funcionalidade que o [out](http://msdn.microsoft.com/library/windows/desktop/aa367136) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- Consulte o exemplo para [associável](../windows/bindable.md) para uso do exemplo **out**.  
+ Veja o exemplo de [associável](../windows/bindable.md) para uso do exemplo **out**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Parâmetro de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

@@ -1,5 +1,5 @@
 ---
-title: Janela de exibição do recurso | Microsoft Docs
+title: Janela de exibição de recursos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,36 +18,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b207bfa9236b4e0de1f01f98cc7e83124048a3a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf2c5cb434b07c9323594448a25da7251010bbad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877378"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608303"
 ---
 # <a name="resource-view-window"></a>Janela Exibição de Recurso
 > [!NOTE]
->  Não tem suporte em edições Express.  
+>  Não tem suporte nas edições Express.  
   
- Recurso exibe os arquivos de recursos incluídos em seus projetos. Expandir a pasta superior (por exemplo, Project1.rc) mostra os tipos de recurso dentro desse arquivo. rc. Cada tipo de recurso de expansão mostra os recursos individuais desse tipo.  
+ Modo de exibição de recursos exibe os arquivos de recursos incluídos em seus projetos. Expandir a pasta superior (por exemplo, Project1.rc) mostra os tipos de recurso dentro desse arquivo. rc. Expandir cada tipo de recurso mostra os recursos individuais desse tipo.  
   
 > [!NOTE]
->  Se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+>  Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
 > [!TIP]
->  Clique na janela de exibição de recursos para iniciar um menu de atalho de comandos. Você também pode clicar duas vezes na barra de título para encaixar ou desencaixar a janela. Clicando duas vezes na barra de título fornece comandos adicionais que permitem que você controle o comportamento da janela. Para obter mais informações, consulte [gerenciamento do Windows](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
+>  Você pode com o botão direito na janela de exibição de recurso para iniciar um menu de atalho de comandos. Você também pode clicar duas vezes na barra de título para encaixar ou desencaixar a janela. Clicando duas vezes na barra de título fornece comandos adicionais que permitem que você controle o comportamento da janela. Para obter mais informações, consulte [Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
-#### <a name="to-open-the-resource-view-window"></a>Para abrir a janela de exibição de recursos  
+#### <a name="to-open-the-resource-view-window"></a>Para abrir a janela de exibição de recurso  
   
-1.  Clique em **exibição recursos** no **exibição** menu.  
+1.  Clique em **exibição de recurso** sobre o **exibição** menu.  
   
      \- ou -  
   
-2.  Pressione **CTRL + SHIFT + E**.  
+2.  Pressione **Ctrl**+**Shift**+**E**.  
   
-
-  
-### <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  

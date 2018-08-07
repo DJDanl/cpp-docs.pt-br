@@ -17,32 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb07c7f53e27e380ba5775369611299cad0f60d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b0683220710a62c8583fa95fbfe3221ae93307eb
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875052"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603930"
 ---
 # <a name="modulegenericreleasenotifiergenericreleasenotifier-constructor"></a>Construtor Module::GenericReleaseNotifier::GenericReleaseNotifier
-Inicializa uma nova instância da classe genericreleasenotifier.  
+Inicializa uma nova instância dos **genericreleasenotifier** classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      GenericReleaseNotifier(  
+GenericReleaseNotifier(  
    T callback,   
    bool release  
 ) throw() : ReleaseNotifier(release), callback_(callback);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `callback`  
+### <a name="parameters"></a>Parâmetros  
+ *retorno de chamada*  
  Um lambda, functor ou manipulador de eventos de ponteiro para função que pode ser chamado com o operador de parênteses (`()`).  
   
- `release`  
- Especifique `true` para habilitar a chamada subjacente [Module:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) método; caso contrário, especifique `false`.  
+ *release*  
+ Especificar **verdadeira** para habilitar a chamada subjacente [Module:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) método; caso contrário, especifique **false**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  

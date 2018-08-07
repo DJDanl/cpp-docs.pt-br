@@ -1,5 +1,5 @@
 ---
-title: Biblioteca de SafeInt | Microsoft Docs
+title: Biblioteca SafeInt | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,23 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25090eefe4f07181490f650ea4d14add9fc6ac75
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16ec0ad37202acbae8b33f270cef15547edd77b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892046"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604181"
 ---
 # <a name="safeint-library"></a>Biblioteca de SafeInt
-A biblioteca de SafeInt ajuda a impedir o estouro de inteiro que pode ocorrer quando o aplicativo executa operações matemáticas.  
+O **SafeInt** biblioteca de ajuda a impedir estouros de inteiro que podem resultar quando o aplicativo executa operações matemáticas.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
 |Seção|Descrição|  
 |-------------|-----------------|  
-|[Classe SafeInt](../windows/safeint-class.md)|Essa classe protege contra estouro de inteiro.|  
-|[Funções SafeInt](../windows/safeint-functions.md)|Funções que podem ser usadas sem criar um `SafeInt` objeto.|  
-|[Classe SafeIntException](../windows/safeintexception-class.md)|Uma classe de exceções relacionadas para o `SafeInt` classe.|  
+|[Classe SafeInt](../windows/safeint-class.md)|Essa classe protege contra estouros de inteiro.|  
+|[Funções SafeInt](../windows/safeint-functions.md)|Funções que podem ser usadas sem criar uma **SafeInt** objeto.|  
+|[Classe SafeIntException](../windows/safeintexception-class.md)|Uma classe de exceções relacionadas para o **SafeInt** classe.|  
   
 ## <a name="related-sections"></a>Seções relacionadas  
   

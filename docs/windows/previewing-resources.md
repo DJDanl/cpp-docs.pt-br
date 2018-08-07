@@ -1,5 +1,5 @@
 ---
-title: Recursos de visualização | Microsoft Docs
+title: Visualizando recursos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32d0082d050ceb391a4346e2a4a38ff71c3cf2a3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ff41dd0aad30382eb5229679054a74526652737
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878665"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605013"
 ---
 # <a name="previewing-resources"></a>Visualizando recursos
-Visualizar seus recursos permite que você exibir recursos gráficos sem abri-los. Visualizando também é útil para executáveis depois que você tenha compilado-los porque os identificadores de recurso Alterar para números. Como esses identificadores numéricos geralmente não fornecem informações suficientes, visualizar os recursos ajuda a identificá-los rapidamente.  
+Visualizando seus recursos permite que você exiba recursos gráficos sem abri-los. Visualização também é útil para executáveis depois que você tenha compilado-los porque os identificadores de recurso Alterar para números. Pois esses identificadores numéricos geralmente não fornecem informações suficientes, visualizando os recursos ajuda a identificar rapidamente-los.  
   
- Você pode visualizar o layout visual dos seguintes tipos de recurso:  
+ Você pode visualizar o layout visual dos tipos de recursos a seguir:  
   
 -   Bitmap  
   
@@ -44,29 +44,28 @@ Visualizar seus recursos permite que você exibir recursos gráficos sem abri-lo
   
 -   Barra de ferramentas  
   
- A função de visualização não se aplica a recursos de aceleração, manifesto, tabela de cadeia de caracteres e informações de versão.  
+ A função de visualização do visual não se aplica aos recursos do acelerador, manifesto, tabela de cadeia de caracteres e informações de versão.  
   
-### <a name="to-preview-resources"></a>Para visualizar recursos  
+### <a name="to-preview-resources"></a>Para visualizar os recursos  
   
-1.  Em [exibição recursos](../windows/resource-view-window.md) ou em uma janela de documento, selecione o recurso, por exemplo, IDD_ABOUTBOX.  
+1.  Na [exibição de recurso](../windows/resource-view-window.md) ou uma janela de documento, selecione o recurso, por exemplo, IDD_ABOUTBOX.  
   
-     **Observação** se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+     **Observação** se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  No [janela propriedades](/visualstudio/ide/reference/properties-window), clique no **páginas de propriedade** botão.  
+2.  No [janela de propriedades](/visualstudio/ide/reference/properties-window), clique no **páginas de propriedade** botão.  
   
      \- ou -  
   
-3.  Sobre o **exibição** menu, clique em **páginas de propriedade**.  
+3.  Sobre o **modo de exibição** menu, clique em **páginas de propriedade**.  
   
-     A página de propriedades para o recurso é aberto, exibindo uma visualização do recurso. Você pode, em seguida, use a cima e para as teclas de direção para navegar o controle de árvore na exibição de recursos ou a janela do documento. A página de propriedades serão permaneça aberta e mostrar qualquer recurso que tem o foco e é capaz de ser visualizado.  
+     A página de propriedades para o recurso é aberto exibindo uma visualização desse recurso. Você pode use cima e para baixo as teclas de direção para navegar o controle de árvore no modo de exibição de recursos ou na janela de documento. A página de propriedades será permanecer aberta e mostrará a qualquer recurso que tem o foco e é capaz de ser visualizado.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Requisitos**  
+## <a name="requirements"></a>Requisitos 
   
  Win32  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: abrir um arquivo de Script de recurso fora de um projeto (autônomo)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
+ [Como abrir um arquivo de script de recurso fora de um projeto (autônomo)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
  [Editores de recursos](../windows/resource-editors.md)
-

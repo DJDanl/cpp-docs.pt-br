@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ecbf0b77feef7abeb67f8d0dc300da067d1f2da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0dc23a9c90fc2112d67180ceae86ebde0e057b06
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880909"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607800"
 ---
 # <a name="implements-structure"></a>Implementa estrutura
-Implementa QueryInterface e GetIid para interfaces especificadas.  
+Implementa `QueryInterface` e `GetIid` para interfaces especificadas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,44 +58,44 @@ template <
 struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : Details::ImplementsHelper<RuntimeClassFlags<flags>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT>, Details::ImplementsBase;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `I0`  
- A ID de interface de zero. (Obrigatório)  
+### <a name="parameters"></a>Parâmetros  
+ *I0*  
+ A ID de interface inicial. (Obrigatório)  
   
- `I1`  
+ *I1*  
  A primeira ID de interface. (Opcional)  
   
- `I2`  
+ *I2*  
  A segunda ID de interface. (Opcional)  
   
- `I3`  
- O terceiro ID de interface. (Opcional)  
+ *I3*  
+ A terceira ID de interface. (Opcional)  
   
- `I4`  
- O quarto ID de interface. (Opcional)  
+ *I4*  
+ A quarta ID de interface. (Opcional)  
   
- `I5`  
- O quinto ID de interface. (Opcional)  
+ *I5*  
+ A quinta ID de interface. (Opcional)  
   
- `I6`  
- O sexto ID de interface. (Opcional)  
+ *I6*  
+ A sexta ID de interface. (Opcional)  
   
- `I7`  
- O sétimo ID de interface. (Opcional)  
+ *I7*  
+ A sétima ID de interface. (Opcional)  
   
- `I8`  
- A ID de interface oitavo. (Opcional)  
+ *I8*  
+ A ID de interface do oitavo. (Opcional)  
   
- `I9`  
- O nono ID de interface. (Opcional)  
+ *I9*  
+ A nona ID de interface. (Opcional)  
   
- `flags`  
+ *flags*  
  Sinalizadores de configuração para a classe. Um ou mais [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) enumerações que são especificadas em uma [RuntimeClassFlags](../windows/runtimeclassflags-structure.md) estrutura.  
   
 ## <a name="remarks"></a>Comentários  
- Deriva da lista de interfaces especificadas e implementa os modelos de auxiliar para QueryInterface e GetIid.  
+ Deriva da lista de interfaces especificadas e implementa os modelos de auxiliar para `QueryInterface` e `GetIid`.  
   
- Cada `I0` por meio de `I9` parâmetro interface deve derivar de um IUnknown, IInspectable, ou o [ChainInterfaces](../windows/chaininterfaces-structure.md) modelo. O `flags` parâmetro determina se o suporte é gerado para IUnknown ou IInspectable.  
+ Cada *I0* por meio *I9* parâmetro interface deve derivar do `IUnknown`, `IInspectable`, ou o [ChainInterfaces](../windows/chaininterfaces-structure.md) modelo. O *sinalizadores* parâmetro determina se o suporte é gerado para `IUnknown` ou `IInspectable`.  
   
 ## <a name="members"></a>Membros  
   
@@ -110,8 +110,8 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 |Nome|Descrição|  
 |----------|-----------------|  
 |[Método Implements::CanCastTo](../windows/implements-cancastto-method.md)|Obtém um ponteiro para a interface especificada.|  
-|[Método Implements::CastToUnknown](../windows/implements-casttounknown-method.md)|Obtém um ponteiro para a interface IUnknown subjacente.|  
-|[Método Implements::FillArrayWithIid](../windows/implements-fillarraywithiid-method.md)|Insere a ID de interface especificada pelo parâmetro de modelo atual do zero para o elemento da matriz especificada.|  
+|[Método Implements::CastToUnknown](../windows/implements-casttounknown-method.md)|Obtém um ponteiro para subjacente `IUnknown` interface.|  
+|[Método Implements::FillArrayWithIid](../windows/implements-fillarraywithiid-method.md)|Insere a ID de interface especificada pelo parâmetro de modelo inicial atual para o elemento da matriz especificada.|  
   
 ### <a name="protected-constants"></a>Constantes protegidos  
   
@@ -133,7 +133,7 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
  `Implements`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL  
   

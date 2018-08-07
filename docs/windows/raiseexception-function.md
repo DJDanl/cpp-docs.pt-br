@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2af97ac13386db450318f4d1f384517a8dd77baf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e93b7281b079918641bf36ebcd72968a98eb95ec
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882177"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602660"
 ---
 # <a name="raiseexception-function"></a>Função RaiseException
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,17 +35,17 @@ inline void __declspec(noreturn)   RaiseException(
       DWORD dwExceptionFlags = EXCEPTION_NONCONTINUABLE);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `hr`  
+### <a name="parameters"></a>Parâmetros  
+ *hr*  
  O código de exceção da exceção que está sendo gerado; ou seja, o HRESULT de uma operação com falha.  
   
- `dwExceptionFlags`  
- Um sinalizador que indica uma exceção noncontinuable (valor de sinalizador é diferente de zero) ou a exceção de continuidade (o valor do sinalizador será zero). Por padrão, a exceção é não continuável.  
+ *dwExceptionFlags*  
+ Um sinalizador que indica uma exceção noncontinuable (o valor do sinalizador é diferente de zero) ou a exceção de continuidade (o valor do sinalizador é zero). Por padrão, a exceção é não continuável.  
   
 ## <a name="remarks"></a>Comentários  
  Gera uma exceção no thread de chamada.  
   
- Para obter mais informações, consulte o Windows **RaiseException** função.  
+ Para obter mais informações, consulte o Windows `RaiseException` função.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** internal.h  

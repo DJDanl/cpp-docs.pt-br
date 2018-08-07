@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd3ea56386cadc638fd0234993ef6a8a0f5eb2be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2de0d40a4b506da2cec36719b8fa2fe9c22108d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881823"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604207"
 ---
 # <a name="operatorlt-operator-microsoftwrl"></a>operador&lt; operador (Microsoft:: wrl)
 Determina se o endereço de um objeto é menor que outro.  
@@ -34,15 +34,15 @@ template<class T, class U>
 bool operator<(const Details::ComPtrRef<ComPtr<T>>& a, const Details::ComPtrRef<ComPtr<U>>& b) throw();  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `a`  
+### <a name="parameters"></a>Parâmetros  
+ *a*  
  O objeto à esquerda.  
   
- `b`  
+ *b*  
  O objeto à direita.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` Se o endereço do `a` é menor que o endereço do `b`; caso contrário, `false`.  
+ **Verdadeiro** se o endereço de *um* é menor que o endereço do *b*; caso contrário, **false**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

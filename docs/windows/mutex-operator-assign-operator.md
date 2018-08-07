@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8791d3c947206be399f475bb8c895b2b5e032133
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 837c8ed508b713f790d1a6a56310705a00f12b3f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875481"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602740"
 ---
 # <a name="mutexoperator-operator"></a>Operador Mutex::operator=
-Atribui (move) o Mutex especificado do objeto para o objeto de Mutex atual.  
+Atribui (se move) especificado **Mutex** objeto atual **Mutex** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,18 +35,18 @@ Mutex& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `h`  
- Uma referência rvalue para um objeto Mutex.  
+### <a name="parameters"></a>Parâmetros  
+ *h*  
+ Uma referência rvalue para um **Mutex** objeto.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Uma referência ao objeto Mutex atual.  
+ Uma referência ao atual **Mutex** objeto.  
   
 ## <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte o **mover semântica** seção [Declarador de referência Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers
  

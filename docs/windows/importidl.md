@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5284c631813271f5682343c74cff693d1ea785e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd930ef70e5bb2b87c584c1d821cdf4528580a31
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877469"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607177"
 ---
 # <a name="importidl"></a>importidl
 Insere o arquivo. idl especificado no arquivo. idl gerado.  
@@ -30,24 +30,23 @@ Insere o arquivo. idl especificado no arquivo. idl gerado.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ importidl(  
+[ importidl(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `idl_file`  
+### <a name="parameters"></a>Parâmetros  
+ *idl_file*  
  Identifica o nome do arquivo. IDL que você deseja mesclar com o arquivo. IDL que será gerado para o seu aplicativo.  
   
 ## <a name="remarks"></a>Comentários  
- O **importidl** atributo C++ coloca a seção fora do bloco de biblioteca (em `idl_file`) no arquivo de IDL gerado do programa e a seção da biblioteca (em `idl_file`) na seção de biblioteca do seu programa arquivo. idl gerado.  
+ O **importidl** atributo C++ coloca a seção fora do bloco de biblioteca (no *idl_file*) no arquivo de IDL gerado do seu programa e a seção da biblioteca (em *idl_file*) para a biblioteca de seção do seu programa gerado o arquivo. idl.  
   
- Você talvez queira usar **importidl**, por exemplo, se você quiser usar um arquivo. idl codificado manualmente com o arquivo. idl gerado.  
+ Você talvez queira usar **importidl**, por exemplo, se você quiser usar um arquivo. idl de mão-codificados com seu arquivo. idl gerado.  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_importidl.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -56,13 +55,13 @@ Insere o arquivo. idl especificado no arquivo. idl gerado.
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Em qualquer lugar|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
@@ -70,7 +69,7 @@ Insere o arquivo. idl especificado no arquivo. idl gerado.
 ## <a name="see-also"></a>Consulte também  
  [Atributos de compilador](../windows/compiler-attributes.md)   
  [Atributos autônomos](../windows/stand-alone-attributes.md)   
- [Importação](../windows/import.md)   
+ [Importar](../windows/import.md)   
  [importlib](../windows/importlib.md)   
  [Incluir](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   

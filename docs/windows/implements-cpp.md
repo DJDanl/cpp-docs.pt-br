@@ -17,51 +17,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 118487d533e8f4701f52804ebbe1e669d29fc4cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0fe0c8919eb1959dab426c3c0db47f227c51b66
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880664"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606456"
 ---
 # <a name="implements-c"></a>implements (C++)
-Especifica as interfaces de expedição são forçadas ao ser membros da coclass IDL.  
+Especifica as interfaces de distribuição que são forçadas para serem membros da coclass IDL.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ implements(   
+[ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
 )]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- **interfaces**  
- Lista das interfaces que será membro da coclass IDL de separada de uma vírgula. É um método abreviado para especificar uma única interface **implementa (***interface_name***)**.  
+### <a name="parameters"></a>Parâmetros  
+ *interfaces*  
+ Lista das interfaces que será um membro da coclass IDL separados por uma vírgula. É um método abreviado para especificar uma única interface **implementa (***interface_name***)**.  
   
- **dispinterfaces**  
- Uma separada por vírgulas lista da dispinterface será membro da coclass IDL. É um método abreviado para especificar um único dispinterface **implementa (dispinterfaces** * = dispinterface_name ***)**.  
+ *dispinterfaces*  
+ Lista da dispinterface que será um membro da coclass IDL separados por uma vírgula. É um método abreviado para especificar um único dispinterface **implementa (dispinterfaces** * = dispinterface_name ***)**.  
   
 ## <a name="remarks"></a>Comentários  
- Por padrão, somente COM interfaces que são classes base da coclass são adicionados em coclass IDL. **implementa** permite que você force a outras interfaces que serão membros de coclass IDL.  
+ Por padrão, apenas-interfaces COM que são classes base da coclass são adicionados na coclass de IDL. **implementa** permite que você force a outras interfaces sejam membros de coclass IDL.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|**class**, `struct`|  
+|**Aplica-se a**|**classe**, **struct**|  
 |**Repetível**|Sim|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir está em três partes: um arquivo. idl e seu arquivo. h associado e um arquivo C++.  
+ O exemplo a seguir é realizada em três partes: um arquivo. idl e seu arquivo. h associado e um arquivo C++.  
   
  Suponha que o seguinte arquivo. idl, que estará disponível para o compilador.  
   
@@ -115,7 +114,7 @@ library odod
 ## <a name="example"></a>Exemplo  
  E o seguinte arquivo. h, que também precisa estar disponível para o compilador.  
   
-```  
+```cpp  
 // attr_implements.h  
 // this ALWAYS GENERATED file contains definitions for the interfaces  
   
@@ -430,9 +429,9 @@ CBar;
 ```  
   
 ## <a name="example"></a>Exemplo  
- O seguinte programa, sem implementa, IBar1, IBar2 e é. não. não será em coclass de IDL gerado.  
+ O seguinte programa sem implementa `IBar1`, `IBar2`, e `ISna` não estará no `coclass` no IDL gerado.  
   
-```  
+```cpp  
 // attr_implements.cpp  
 // compile with: /LD /link /idlout:out.idl  
 #define _ATL_ATTRIBUTES 1  

@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 922f7f74771125aed0122c408ef902da2569e5c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a02e20f2b87afc312c24683417f808d636c2757f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873765"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608950"
 ---
 # <a name="inspectableclass-macro"></a>Macro InspectableClass
-Define o nível de confiança e de nome de classe em tempo de execução.  
+Define o nível de confiança e o nome de classe do tempo de execução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,18 +33,18 @@ InspectableClass(
    trustLevel)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `runtimeClassName`  
- O nome completo textual da classe de tempo de execução.  
+### <a name="parameters"></a>Parâmetros  
+ *runtimeClassName*  
+ O nome textual completo da classe de tempo de execução.  
   
- `trustLevel`  
- Uma da [TrustLevel](http://msdn.microsoft.com/library/br224625.aspx) valores enumerados.  
+ *trustLevel*  
+ Um dos [TrustLevel](http://msdn.microsoft.com/library/br224625.aspx) valores enumerados.  
   
 ## <a name="remarks"></a>Comentários  
- O `InspectableClass` macro pode ser usada somente com tipos de tempo de execução do Windows.  
+ O **InspectableClass** macro pode ser usada somente com tipos de tempo de execução do Windows.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL  
   

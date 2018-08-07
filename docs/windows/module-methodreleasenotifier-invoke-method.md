@@ -1,5 +1,5 @@
 ---
-title: 'Methodreleasenotifier:: método Invoke | Microsoft Docs'
+title: 'Module:: methodreleasenotifier:: invocar método | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fcfb3be07ff9d57b6837b956f821260f12a0f4af
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3823b752cb45d50230f399f38edca446429cbbf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875702"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607865"
 ---
 # <a name="modulemethodreleasenotifierinvoke-method"></a>Método Module::MethodReleaseNotifier::Invoke
-Chama o manipulador de eventos associado ao objeto methodreleasenotifier atual.  
+Chama o manipulador de eventos associado ao atual **methodreleasenotifier** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   

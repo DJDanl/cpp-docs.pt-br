@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7678f9e3092bdc6e9d5839085044708b0d400533
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6618d5fc219e5f4e6533eb4d31cf7cd14fc4b1d5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874844"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602543"
 ---
 # <a name="invokehelperinvokehelper-constructor"></a>Construtor InvokeHelper::InvokeHelper
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,17 +35,17 @@ explicit InvokeHelper(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `callback`  
+### <a name="parameters"></a>Parâmetros  
+ *retorno de chamada*  
  Um manipulador de eventos.  
   
 ## <a name="remarks"></a>Comentários  
- Inicializa uma nova instância da classe InvokeHelper.  
+ Inicializa uma nova instância dos **InvokeHelper** classe.  
   
- O `TCallback` modelo parâmetro especifica o tipo do manipulador de eventos.  
+ O `TCallback` parâmetro de modelo especifica o tipo de manipulador de eventos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

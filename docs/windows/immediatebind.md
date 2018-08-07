@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ee885c138bec9c7fea9adcc3d48b5b23e33a2ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a9979ec16009de680facdc6e8fc22b3d3cdccc3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876258"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603038"
 ---
 # <a name="immediatebind"></a>immediatebind
 Indica que o banco de dados será notificado imediatamente de todas as alterações a uma propriedade de um objeto de associação de dados.  
@@ -30,26 +30,24 @@ Indica que o banco de dados será notificado imediatamente de todas as alteraç�
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [immediatebind]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
  O **immediatebind** atributo C++ tem a mesma funcionalidade que o [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- Consulte [associável](../windows/bindable.md) para obter um exemplo de como usar **immediatebind**.  
+ Ver [associável](../windows/bindable.md) para obter um exemplo de como usar **immediatebind**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Método de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  

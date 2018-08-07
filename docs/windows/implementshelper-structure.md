@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 58f27e418946987633f771bc8d2c3224bc2cd7fd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5e5da95e6cfb276704b5cd6150e4abc2921a5701
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875933"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605611"
 ---
 # <a name="implementshelper-structure"></a>Estrutura ImplementsHelper
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,20 +38,20 @@ template <
 friend struct Details::ImplementsHelper;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `RuntimeClassFlagsT`  
+### <a name="parameters"></a>Parâmetros  
+ *RuntimeClassFlagsT*  
  Um campo de sinalizadores que especifica um ou mais [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) enumeradores.  
   
- `ILst`  
+ *ILst*  
  Uma lista de IDs de interface.  
   
- `IsDelegateToClass`  
- Especifique `true` se a instância atual do implementa é uma classe base da primeira ID de interface em `ILst`; caso contrário, `false`.  
+ *IsDelegateToClass*  
+ Especificar **verdadeira** se a instância atual do `Implements` é uma classe base da primeira ID de interface no *ILst*; caso contrário, **false**.  
   
 ## <a name="remarks"></a>Comentários  
  Ajuda a implementar o [implementa](../windows/implements-structure.md) estrutura.  
   
- Este modelo percorre uma lista de interfaces e os adiciona como classes base e informações necessárias para habilitar QueryInterface.  
+ Esse modelo percorre uma lista de interfaces e os adiciona como classes base e como as informações necessárias para habilitar o QueryInterface.  
   
 ## <a name="members"></a>Membros  
   
@@ -59,10 +59,10 @@ friend struct Details::ImplementsHelper;
  `ImplementsHelper`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência (biblioteca de tempo de execução do Windows)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [Referência (biblioteca de tempo de execução do Windows)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)   
  [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

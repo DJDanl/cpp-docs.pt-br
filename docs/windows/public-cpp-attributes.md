@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d798d828dd252ce8b5f3f49d5a9aaf525acc986
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 071aed04c73702bdb63f19154353794bae34f8fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881725"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603598"
 ---
 # <a name="public-c-attributes"></a>public (atributos C++)
-Garante que um typedef para ir para a biblioteca de tipo mesmo que não é referenciado de dentro do arquivo. idl.  
+Garante que um typedef entra em biblioteca de tipos, mesmo se ele não é referenciado de dentro do arquivo. idl.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [public]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O **pública** atributo C++ tem a mesma funcionalidade que o [pública](http://msdn.microsoft.com/library/windows/desktop/aa367150) atributo MIDL.  
+ O **pública** atributo C++ tem a mesma funcionalidade que o [público](http://msdn.microsoft.com/library/windows/desktop/aa367150) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra como usar o **pública** atributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_public.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -57,13 +55,13 @@ __interface IFireTabCtrl : IDispatch
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|`typedef`|  
+|**Aplica-se a**|**typedef**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

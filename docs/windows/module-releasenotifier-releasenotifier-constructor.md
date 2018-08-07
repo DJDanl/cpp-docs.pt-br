@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbf21e1abc88c0fac0b9d20653fdb45c3706466d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93dca0500971f0bcfdefd017457e02bf6a033660
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882463"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608463"
 ---
 # <a name="modulereleasenotifierreleasenotifier-constructor"></a>Construtor Module::ReleaseNotifier::ReleaseNotifier
-Inicializa uma nova instância da classe releasenotifier.  
+Inicializa uma nova instância dos **releasenotifier** classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,9 +33,9 @@ Inicializa uma nova instância da classe releasenotifier.
 ReleaseNotifier(bool release) throw();  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `release`  
- `true` Excluir esta instância quando o método Release é chamado; `false` não excluir esta instância.  
+### <a name="parameters"></a>Parâmetros  
+ *release*  
+ **Verdadeiro** para excluir essa instância quando o `Release` método é chamado; **falsos** não excluir esta instância.  
   
 ## <a name="exceptions"></a>Exceções  
   

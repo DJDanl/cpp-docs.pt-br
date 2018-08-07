@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74fc15d10818d14467b866ec37c9e353348ce882
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e35c0b9c448ce9b7aeb6e5f14627e82274a72a41
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877025"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604467"
 ---
 # <a name="hstringoperator-operator"></a>Operador HString::Operator!=
 Indica se os dois parâmetros não são iguais.  
@@ -45,17 +45,17 @@ inline bool operator!=( const HString& lhs,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `lhs`  
- O primeiro parâmetro para comparar. `lhs` pode ser um objeto HString ou HStringReference ou um identificador HSTRING.  
+ *LHS*  
+ O primeiro parâmetro a ser comparado. *LHS* pode ser uma **HString** ou `HStringReference` objeto ou um identificador de HSTRING.  
   
- `rhs`  
- O segundo parâmetro para comparar.`rhs` pode ser um objeto HString ou HStringReference ou um identificador HSTRING.  
+ *rhs*  
+ O segundo parâmetro a ser comparado. *rhs* pode ser um **HString** ou `HStringReference` objeto ou um identificador de HSTRING.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` se os parâmetros `lhs` e `rhs` não forem iguais; caso contrário, `false`.  
+ **Verdadeiro** se o *lhs* e *rhs* parâmetros não forem iguais; caso contrário, **false**.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

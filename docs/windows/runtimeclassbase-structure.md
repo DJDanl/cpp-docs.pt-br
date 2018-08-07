@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d80f475cf8a50dcb084ca6e953842e91c55e4502
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b272c733dab71e615a46cb4af25609c560bdbfef
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888377"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602673"
 ---
 # <a name="runtimeclassbase-structure"></a>Estrutura RuntimeClassBase
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,15 +32,15 @@ struct RuntimeClassBase;
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Usado para detectar RuntimeClass no [fazer](../windows/make-function.md) função.  
+ Usado para detectar `RuntimeClass` no [tornar](../windows/make-function.md) função.  
   
- RuntimeClassBase é uma estrutura vazia.  
+ **RuntimeClassBase** é uma estrutura vazia.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `RuntimeClassBase`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

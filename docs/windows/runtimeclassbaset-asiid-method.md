@@ -1,5 +1,5 @@
 ---
-title: 'Método Runtimeclassbaset: | Microsoft Docs'
+title: 'Método runtimeclassbaset:: Asiid | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35d218666f785685e95d737574ff44e276ce84b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1174db6702fc68b01f60491ef203265bbd6f4c14
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892124"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607421"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>Método RuntimeClassBaseT::AsIID
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,27 +38,27 @@ __forceinline static HRESULT AsIID(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T`  
- Um tipo que implementa a ID de interface especificada pelo parâmetro `riid`.  
+### <a name="parameters"></a>Parâmetros  
+ *T*  
+ Um tipo que implementa a interface ID especificado pelo parâmetro *riid*.  
   
- `implements`  
- Uma variável do tipo especificado pelo parâmetro de modelo `T`.  
+ *Implementa*  
+ Uma variável do tipo especificado pelo parâmetro de modelo *T*.  
   
- `riid`  
+ *riid*  
  A ID de interface para recuperar.  
   
- `ppvObject`  
- Se essa operação for bem-sucedida, um ponteiro-para-um-ponteiro para a interface especificada pelo parâmetro `riid`.  
+ *ppvObject*  
+ Se essa operação for bem-sucedida, um ponteiro-para-um-ponteiro para a interface especificada pelo parâmetro *riid*.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, o HRESULT que descreve o erro.  
+ S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve o erro.  
   
 ## <a name="remarks"></a>Comentários  
  Recupera um ponteiro para a ID de interface especificado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

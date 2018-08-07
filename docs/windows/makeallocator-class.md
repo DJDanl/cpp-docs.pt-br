@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38724e6371f5c0ae508fc18e4bc75dc2287dbe19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c87f1191bc90cd2aec9207f3a4657349c9859bf4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878054"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605913"
 ---
 # <a name="makeallocator-class"></a>Classe MakeAllocator
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 template<  
    typename T,  
    bool hasWeakReferenceSupport =   
@@ -44,19 +43,19 @@ template<typename T>
 class MakeAllocator<T, true>;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T`  
+### <a name="parameters"></a>Parâmetros  
+ *T*  
  O nome de um tipo.  
   
- `hasWeakReferenceSupport`  
- `true` para alocar memória para um objeto que oferece suporte a referências fracas; `false` ao alocar memória para um objeto que não oferece suporte a referências fracas.  
+ *hasWeakReferenceSupport*  
+ **True** alocar memória para um objeto que dá suporte a referências fracas; **falsos** alocar memória para um objeto que não dá suporte a referências fracas.  
   
 ## <a name="remarks"></a>Comentários  
- Aloca memória para uma classe ativável, com ou sem suporte de referência fraca.  
+ Aloca memória para uma classe ativável, com ou sem suporte fraco de referência.  
   
- Substitua a classe MakeAllocator para implementar um modelo de alocação de memória definido pelo usuário.  
+ Substituir a **MakeAllocator** classe para implementar um modelo de alocação de memória definido pelo usuário.  
   
- MakeAllocator normalmente é usado para impedir vazamentos de memória se gera um objeto durante a construção.  
+ **MakeAllocator** normalmente é usado para evitar vazamentos de memória, se um objeto gera durante a construção.  
   
 ## <a name="members"></a>Membros  
   
@@ -64,21 +63,21 @@ class MakeAllocator<T, true>;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor MakeAllocator::MakeAllocator](../windows/makeallocator-makeallocator-constructor.md)|Inicializa uma nova instância da classe MakeAllocator.|  
-|[Destruidor MakeAllocator::~MakeAllocator](../windows/makeallocator-tilde-makeallocator-destructor.md)|Deinitializes a instância atual da classe MakeAllocator.|  
+|[Construtor MakeAllocator::MakeAllocator](../windows/makeallocator-makeallocator-constructor.md)|Inicializa uma nova instância dos **MakeAllocator** classe.|  
+|[Destruidor MakeAllocator::~MakeAllocator](../windows/makeallocator-tilde-makeallocator-destructor.md)|Realiza o desligamento da instância atual do **MakeAllocator** classe.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método MakeAllocator::Allocate](../windows/makeallocator-allocate-method.md)|Aloca memória e o associa ao objeto MakeAllocator atual.|  
-|[Método MakeAllocator::Detach](../windows/makeallocator-detach-method.md)|Desassocia a memória alocada pelo [alocar](../windows/makeallocator-allocate-method.md) método do objeto MakeAllocator atual.|  
+|[Método MakeAllocator::Allocate](../windows/makeallocator-allocate-method.md)|Aloca memória e o associa ao atual **MakeAllocator** objeto.|  
+|[Método MakeAllocator::Detach](../windows/makeallocator-detach-method.md)|Desassocia a memória alocada pelo [Allocate](../windows/makeallocator-allocate-method.md) método atuais **MakeAllocator** objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `MakeAllocator`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

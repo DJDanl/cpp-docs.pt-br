@@ -19,15 +19,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef3c1d11c0f814699ca1492f7ec1fb49c43c3d76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 744bf034572745cd88a35f47a1ca2da03e900fd8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892170"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606651"
 ---
 # <a name="safeintexceptionsafeintexception"></a>SafeIntException::SafeIntException
-Cria um objeto `SafeIntException`.  
+Cria uma **SafeIntException** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,12 +39,12 @@ SafeIntException(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- [in] `code`  
- Um valor de dados enumerados que descreve o erro que ocorreu.  
+### <a name="parameters"></a>Parâmetros  
+ [in] *código*  
+ Um valor de dados enumerado que descreve o erro que ocorreu.  
   
 ## <a name="remarks"></a>Comentários  
- Os valores possíveis para `code` são definidos no arquivo Safeint.h. Para sua conveniência, os possíveis valores também são listados aqui.  
+ Os valores possíveis para *código* são definidos no arquivo safeint. Para sua conveniência, os possíveis valores também são listados aqui.  
   
 -   `SafeIntNoError`  
   
@@ -53,11 +53,11 @@ SafeIntException(
 -   `SafeIntDivideByZero`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** safeint.h  
+ **Cabeçalho:** safeint  
   
- **Namespace:** msl::utilities  
+ **Namespace:** MSL:: Utilities  
   
 ## <a name="see-also"></a>Consulte também  
- [Biblioteca de SafeInt](../windows/safeint-library.md)   
+ [Biblioteca SafeInt](../windows/safeint-library.md)   
  [Classe SafeIntException](../windows/safeintexception-class.md)   
  [Classe SafeInt](../windows/safeint-class.md)

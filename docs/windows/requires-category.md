@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a6822773292fd651eaae3be5c00fb2b693a80a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ddcfe01ec5bd838a84ddad351f43802a8142b44
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882310"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606095"
 ---
 # <a name="requirescategory"></a>requires_category
 Especifica as categorias de componente necessário da classe de destino.  
@@ -30,8 +30,7 @@ Especifica as categorias de componente necessário da classe de destino.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-     [ requires_category(   
+[ requires_category(   
   requires_category  
 ) ]  
 ```  
@@ -43,12 +42,12 @@ Especifica as categorias de componente necessário da classe de destino.
 ## <a name="remarks"></a>Comentários  
  O **requires_category** atributo C++ especifica as categorias de componentes necessárias para a classe de destino. Para obter mais informações, consulte [REQUIRED_CATEGORY](../atl/reference/category-macros.md#required_category).  
   
- Este atributo requer que o [coclass](../windows/coclass.md), [progid](../windows/progid.md), ou [vi_progid](../windows/vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicados ao mesmo elemento.  
+ Este atributo exige que o [coclass](../windows/coclass.md), [progid](../windows/progid.md), ou [vi_progid](../windows/vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicadas ao mesmo elemento.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir exige que o objeto implementar a categoria de controle.  
+ O código a seguir requer que o objeto implementar a categoria de controle.  
   
-```  
+```cpp  
 // cpp_attr_ref_requires_category.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -64,13 +63,13 @@ class CMyClass {};
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|**class**, `struct`|  
+|**Aplica-se a**|**classe**, **struct**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Um ou mais dos seguintes: **coclass**, **progid**, ou **vi_progid**.|  
+|**Atributos obrigatórios**|Um ou mais das seguintes opções: `coclass`, `progid`, ou `vi_progid`.|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

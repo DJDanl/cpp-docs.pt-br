@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a9e9674dd8ac5aa7d444a77df66c1aff4a70299
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd9c3dbbcbffff32f7c1611b6b49ee19ada7e52c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878405"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606768"
 ---
-# <a name="mutex-class1"></a>Mutex Class1
+# <a name="mutex-class1"></a>mutex Class1
 Representa um objeto de sincronização que controla exclusivamente um recurso compartilhado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,31 +39,31 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|**SyncLock**|Um sinônimo para uma classe que dá suporte a bloqueios síncronos.|  
+|`SyncLock`|Um sinônimo para uma classe que dá suporte a bloqueios síncronos.|  
   
 ### <a name="public-constructor"></a>Construtor público  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor Mutex::Mutex](../windows/mutex-mutex-constructor.md)|Inicializa uma nova instância da classe Mutex.|  
+|[Construtor Mutex::Mutex](../windows/mutex-mutex-constructor.md)|Inicializa uma nova instância dos **Mutex** classe.|  
   
 ### <a name="public-members"></a>Membros públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Mutex::Lock](../windows/mutex-lock-method.md)|Aguarda até que o objeto atual ou o objeto de Mutex associado com o identificador especificado, libera o mutex ou o intervalo de tempo limite especificado tiver decorrido.|  
+|[Método Mutex::Lock](../windows/mutex-lock-method.md)|Aguarda até que o objeto atual, ou o **Mutex** objeto associado ao identificador especificado, versões mutex ou o intervalo de tempo limite especificado tiver decorrido.|  
   
 ### <a name="public-operator"></a>Operador público  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Operador Mutex::operator=](../windows/mutex-operator-assign-operator.md)|Atribui (move) o Mutex especificado do objeto para o objeto de Mutex atual.|  
+|[Operador Mutex::operator=](../windows/mutex-operator-assign-operator.md)|Atribui (se move) especificado **Mutex** objeto atual **Mutex** objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `Mutex`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

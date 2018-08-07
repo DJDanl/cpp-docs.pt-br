@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5626e370dbeac9339dd603781e96f64377308899
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6aae190e20776c252b7f40651d5c0bdb13111dab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879432"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606244"
 ---
 # <a name="menu-editor"></a>Editor de menu
-Menus permitem organizar os comandos de forma lógica e fácil de localizar. Com o editor de Menu, você pode criar e editar menus trabalhando diretamente com uma barra de menu que se assemelhe no seu aplicativo concluído.  
+Menus permitem organizar os comandos de forma lógica e fácil de encontrar. Com o editor de Menu, você pode criar e editar menus ao trabalhar diretamente com uma barra de menus que se assemelha do seu aplicativo concluído.  
   
- Para projetos do Visual C++, você pode usar o editor de Menu para:  
+Para projetos do Visual C++, você pode usar o editor de Menu para:  
   
 -   [Criar Menus](../windows/creating-a-menu.md)  
   
@@ -38,15 +38,15 @@ Menus permitem organizar os comandos de forma lógica e fácil de localizar. Com
   
 -   [Criar um comando de Menu](../windows/adding-commands-to-a-menu.md)  
   
--   [Criar um Menu de Submenu](../windows/creating-a-submenu.md)  
+-   [Criar um Menu do Submenu](../windows/creating-a-submenu.md)  
   
--   [Selecione os Menus e comandos de Menu](../windows/selecting-multiple-menus-or-menu-commands.md)  
+-   [Selecionar Menus e comandos de Menu](../windows/selecting-multiple-menus-or-menu-commands.md)  
   
--   [Mover e copiar Menus e comandos de Menu](../windows/moving-and-copying-menus-and-menu-commands.md)  
+-   [Mover e copiar os Menus e comandos de Menu](../windows/moving-and-copying-menus-and-menu-commands.md)  
   
 -   [Criar Menus pop-up](../windows/creating-pop-up-menus.md)  
   
--   [Conecte-se a um Menu pop-up para seu aplicativo](../windows/connecting-a-pop-up-menu-to-your-application.md)  
+-   [Conectar-se a um Menu pop-up para seu aplicativo](../windows/connecting-a-pop-up-menu-to-your-application.md)  
   
 -   [Exibir um recurso de Menu como um Menu pop-up](../windows/viewing-a-menu-as-a-pop-up-menu.md)  
   
@@ -59,12 +59,12 @@ Menus permitem organizar os comandos de forma lógica e fácil de localizar. Com
 -   [Alterar propriedades do comando de Menu](../windows/menu-command-properties.md)  
   
     > [!TIP]
-    >  Ao usar o editor de Menu, em muitos casos, você pode clicar o botão direito do mouse para exibir um menu pop-up de comandos usados com frequência. Os comandos disponíveis dependem de que o ponteiro está apontando.  
+    >  Ao usar o editor de Menu, em muitos casos, você pode clicar no botão direito do mouse para exibir um menu pop-up de comandos usados com frequência. Os comandos disponíveis dependem do que o ponteiro estiver apontando para.  
   
     > [!NOTE]
-    >  Para programas do Microsoft Foundation Class Library (MFC) e programas ATL, você pode usar assistentes de código para ligar comandos de menu ao código. Para obter mais informações, consulte [adicionando um evento](../ide/adding-an-event-visual-cpp.md).  
+    >  Para programas de biblioteca do Microsoft Foundation Class (MFC) e programas ATL, você pode usar assistentes de código para ligar comandos de menu ao código. Para obter mais informações, consulte [adicionando um evento](../ide/adding-an-event-visual-cpp.md).  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  
@@ -75,4 +75,3 @@ Menus permitem organizar os comandos de forma lógica e fácil de localizar. Com
  [Objetos de Interface do usuário e IDs de comando](../mfc/user-interface-objects-and-command-ids.md)   
  [Menus](../mfc/menus-mfc.md)   
  [Menus](http://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)
-

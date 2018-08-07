@@ -1,5 +1,5 @@
 ---
-title: Identifier (c + + CLI) | Microsoft Docs
+title: Identifier (c + + / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,41 +18,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a96363fcfbc753e727c6cbb6a5efbbb5606b6c40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877677"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603339"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
-Habilita o uso de palavras-chave do Visual C++ como identificadores.  
+Permite o uso de palavras-chave do Visual C++ como identificadores.  
   
 ## <a name="all-platforms"></a>Todas as Plataformas  
-**Sintaxe**  
+### <a name="syntax"></a>Sintaxe  
   
 ```  
 __identifier(  
 Visual_C++_keyword  
 )  
-  
 ```  
   
-**Comentários**  
+### <a name="remarks"></a>Comentários  
   
-Usar o `__identifier` palavra-chave para identificadores que não são palavras-chave é permitida, mas altamente recomendado como uma questão de estilo.  
+Usar o **Identifier** palavra-chave para identificadores que não são palavras-chave é permitida, mas altamente recomendado como uma questão de estilo.  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
   
 ### <a name="requirements"></a>Requisitos  
- Opção do compilador: **/ZW**  
+ Opção do compilador: `/ZW`  
   
 ### <a name="examples"></a>Exemplos  
  **Exemplo**  
   
- No exemplo a seguir, uma classe chamada `template` é criado em c# e distribuídos como uma DLL. No programa de Visual C++ que usa o `template` classe, o `__identifier` palavra-chave oculta o fato de que `template` é uma palavra-chave C++ padrão.  
+ No exemplo a seguir, uma classe chamada `template` é criado em c# e distribuído como uma DLL. No programa Visual C++ que usa o `template` classe, o **Identifier** palavra-chave oculta o fato de que **modelo** é uma palavra-chave C++ padrão.  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -60,7 +59,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /ZW  
 #using <identifier_template.dll>  
@@ -71,19 +70,18 @@ int main() {
 ```  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Comentários**  
+### <a name="remarks"></a>Comentários  
   
- O `__identifier` palavra-chave é válido com o **/clr** opção de compilador.  
+ O **Identifier** palavra-chave é válida com o `/clr` opção de compilador.  
   
 ### <a name="requirements"></a>Requisitos  
- Opção de compilador: **/clr**  
+ Opção do compilador: `/clr`  
   
 ### <a name="examples"></a>Exemplos  
- **Exemplo**  
   
- No exemplo a seguir, uma classe chamada `template` é criado em c# e distribuídos como uma DLL. No programa de Visual C++ que usa o `template` classe, o `__identifier` palavra-chave oculta o fato de que `template` é uma palavra-chave C++ padrão.  
+ No exemplo a seguir, uma classe chamada `template` é criado em c# e distribuído como uma DLL. No programa Visual C++ que usa o `template` classe, o **Identifier** palavra-chave oculta o fato de que **modelo** é uma palavra-chave C++ padrão.  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -91,7 +89,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /clr  
 #using <identifier_template.dll>  

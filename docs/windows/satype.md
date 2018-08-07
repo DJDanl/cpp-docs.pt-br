@@ -17,49 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a77021cbcf6622701a1025ef33000196ba7bb6d9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a5376e0e830654c15dc31522b07ed53af4492bf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888676"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603388"
 ---
 # <a name="satype"></a>satype
-Especifica o tipo de dados de **SAFEARRAY** estrutura.  
+Especifica o tipo de dados a `SAFEARRAY` estrutura.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ satype(  
+[ satype(  
    data_type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *data_type*  
- O tipo de dados para o **SAFEARRAY** estrutura de dados que está sendo passada como um parâmetro para um método de interface.  
+ O tipo de dados para o `SAFEARRAY` estrutura de dados que está sendo passada como um parâmetro para um método de interface.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|Parâmetro de interface, método de interface|  
+|**Aplica-se a**|Parâmetro de interface, o método de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
 ## <a name="remarks"></a>Comentários  
- O **satype** atributo C++ Especifica o tipo de dados de **SAFEARRAY**.  
+ O **satype** atributo C++ Especifica o tipo de dados a `SAFEARRAY`.  
   
 > [!NOTE]
->  Um nível de erro é descartado do **SAFEARRAY** ponteiro no arquivo. idl gerado a partir de como ele é declarado no arquivo. cpp.  
+>  Um nível de indireção é descartado do `SAFEARRAY` ponteiro no arquivo. idl gerado a partir de como ele é declarado no arquivo. cpp.  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_satype.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

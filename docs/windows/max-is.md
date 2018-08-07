@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 697eff3264c7e4a627086b072ae45b3c7ffedac2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3fae7ee95255d72d2799a5913821606f770e2b3b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878964"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608424"
 ---
 # <a name="maxis"></a>max_is
 Designa o valor máximo para um índice de matriz válida.  
@@ -30,8 +30,7 @@ Designa o valor máximo para um índice de matriz válida.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ max_is(  
+[ max_is(  
    "expression"  
 ) ]  
 ```  
@@ -45,19 +44,19 @@ Designa o valor máximo para um índice de matriz válida.
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|Campo em `struct` ou **união**, a interface de parâmetro, o método de interface|  
+|**Aplica-se a**|Campo do **struct** ou **união**, a interface do parâmetro, o método de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|**size_is**|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   
 ## <a name="example"></a>Exemplo  
- Consulte [first_is](../windows/first-is.md) para obter um exemplo de como especificar uma seção de uma matriz.  
+ Ver [first_is](../windows/first-is.md) para obter um exemplo de como especificar uma seção de uma matriz.  
   
 ## <a name="see-also"></a>Consulte também  
  [Atributos IDL](../windows/idl-attributes.md)   

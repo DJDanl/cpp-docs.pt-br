@@ -1,5 +1,5 @@
 ---
-title: 'Método Interfacetraits: | Microsoft Docs'
+title: 'Método interfacetraits:: Cancastto | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,49 +17,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2a0a37f4ef9fa8f2aa92405b4b2c01d99386555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: df603fe8d4c063c014118caf89a74a40e73cbe5b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879575"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607823"
 ---
 # <a name="interfacetraitscancastto-method"></a>Método InterfaceTraits::CanCastTo
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 template<typename T>  
 static __forceinline bool CanCastTo(  
    _In_ T* ptr,  
    REFIID riid,  
    _Deref_out_ void **ppv  
 );  
-  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `ptr`  
+### <a name="parameters"></a>Parâmetros  
+ *ptr*  
  O nome de um ponteiro para um tipo.  
   
- `riid`  
- A ID de interface de `Base`.  
+ *riid*  
+ A ID de interface do `Base`.  
   
- `ppv`  
- Se essa operação for bem-sucedida, `ppv` aponta para a interface especificada pelo `Base`. Caso contrário, `ppv` é definido como `nullptr`.  
+ *ppv*  
+ Se essa operação for bem-sucedida, *ppv* aponta para a interface especificada pelo `Base`. Caso contrário, *ppv* é definido como **nullptr**.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` Se essa operação for bem-sucedida e `ptr` é convertido para um ponteiro para `Base`; caso contrário, `false` .  
+ **Verdadeiro** se essa operação for bem-sucedida e *ptr* é convertido em um ponteiro para `Base`; caso contrário, **false** .  
   
 ## <a name="remarks"></a>Comentários  
  Indica se o ponteiro especificado pode ser convertido em um ponteiro para `Base`.  
   
- Para obter mais informações sobre `Base`, consulte a seção de Typedefs públicos em [estrutura InterfaceTraits](../windows/interfacetraits-structure.md).  
+ Para obter mais informações sobre `Base`, consulte o **Typedefs públicos** seção [estrutura InterfaceTraits](../windows/interfacetraits-structure.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

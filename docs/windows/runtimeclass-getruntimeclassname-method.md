@@ -1,5 +1,5 @@
 ---
-title: 'Método Runtimeclass: | Microsoft Docs'
+title: 'Método runtimeclass:: Getruntimeclassname | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cfe3cc4a8a304bbd04fde9e6c38e2b9170e2e73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7706a16a860cf554068dd3416e7c1f8b1fcea311
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892433"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608768"
 ---
 # <a name="runtimeclassgetruntimeclassname-method"></a>Método RuntimeClass::GetRuntimeClassName
 
-Obtém o nome de classe de tempo de execução do objeto RuntimeClass atual.
+Obtém o nome de classe de tempo de execução do atual **RuntimeClass** objeto.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,11 +39,11 @@ STDMETHOD( GetRuntimeClassName )(
 ### <a name="parameters"></a>Parâmetros
 
 *runtimeName*  
-Quando a operação for concluída, o nome de classe de tempo de execução.
+Quando essa operação for concluída, o nome de classe de tempo de execução.
 
 ## <a name="return-value"></a>Valor de retorno
 
-S_OK se bem-sucedido; Caso contrário, o HRESULT que indica o erro.
+S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
 
 ## <a name="remarks"></a>Comentários
 
@@ -51,10 +51,9 @@ Um erro de asserção é emitido se &#95; &#95;WRL_STRICT&#95; &#95; ou &#95; &#
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** implements.h
+**Cabeçalho:** Implements. h
 
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Consulte também
-
-[Classe RuntimeClass](../windows/runtimeclass-class.md)
+ [Classe RuntimeClass](../windows/runtimeclass-class.md)

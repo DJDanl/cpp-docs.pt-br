@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4bebe74ae855cf303f09dd8798fcceec0df455b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cbdb6a312d6658fc880aa43ffc1205378d3935e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877586"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607644"
 ---
 # <a name="makeandinitialize-function"></a>Função MakeAndInitialize
 Inicializa a classe de tempo de execução do Windows especificada. Use esta função para criar uma instância de um componente que é definido no mesmo módulo.  
@@ -40,72 +40,72 @@ typename TArg8,
 typename TArg9> HRESULT MakeAndInitialize(_Outptr_result_nullonfailure_ I** ppvObject, TArg1 &&arg1, TArg2 &&arg2, TArg3 &&arg3, TArg4 &&arg4, TArg5 &&arg5, TArg6 &&arg6, TArg7 &&arg7, TArg8 &&arg8, TArg9 &&arg9) throw()  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T`  
+### <a name="parameters"></a>Parâmetros  
+ *T*  
  Uma classe especificada pelo usuário que herda de `WRL::RuntimeClass`.  
   
- `TArg1`  
- Tipo de argumento 1 que é passado para a classe de tempo de execução especificado.  
+ *DynamicSite<Targ1*  
+ Tipo de argumento 1, o que é passado para a classe de tempo de execução especificado.  
   
- `TArg2`  
+ *TArg2*  
  Tipo de argumento 2 que é passado para a classe de tempo de execução especificado.  
   
- `TArg3`  
+ *TArg3*  
  Tipo de argumento 3 que é passado para a classe de tempo de execução especificado.  
   
- `TArg4`  
+ *TArg4*  
  Tipo de argumento 4 que é passado para a classe de tempo de execução especificado.  
   
- `TArg5`  
- Tipo de argumento 5 é passado para a classe de tempo de execução especificado.  
+ *TArg5*  
+ Tipo de argumento 5, o que é passado para a classe de tempo de execução especificado.  
   
- `TArg6`  
- Tipo de argumento 6 que é passado para a classe de tempo de execução especificado.  
+ *TArg6*  
+ Tipo de argumento 6, o que é passado para a classe de tempo de execução especificado.  
   
- `TArg7`  
- Tipo de argumento 7 que é passado para a classe de tempo de execução especificado.  
+ *TArg7*  
+ Tipo de argumento 7, o que é passado para a classe de tempo de execução especificado.  
   
- `TArg8`  
- Tipo de argumento 8 que é passado para a classe de tempo de execução especificado.  
+ *TArg8*  
+ Tipo de argumento 8, o que é passado para a classe de tempo de execução especificado.  
   
- `TArg9`  
+ *TArg9*  
  Tipo de argumento 9 que é passado para a classe de tempo de execução especificado.  
   
- `arg1`  
+ *arg1*  
  Argumento 1 que é passado para a classe de tempo de execução especificado.  
   
- `arg2`  
+ *Arg2*  
  Argumento 2 que é passado para a classe de tempo de execução especificado.  
   
- `arg3`  
+ *arg3*  
  Argumento 3 que é passado para a classe de tempo de execução especificado.  
   
- `arg4`  
+ *Arg4*  
  Argumento de 4 que é passado para a classe de tempo de execução especificado.  
   
- `arg5`  
+ *arg5*  
  Argumento 5 que é passado para a classe de tempo de execução especificado.  
   
- `arg6`  
+ *arg6*  
  Argumento 6 que é passado para a classe de tempo de execução especificado.  
   
- `arg7`  
+ *arg7*  
  Argumento 7 que é passado para a classe de tempo de execução especificado.  
   
- `arg8`  
+ *arg8*  
  Argumento 8 que é passado para a classe de tempo de execução especificado.  
   
- `arg9`  
+ *arg9*  
  Argumento 9 que é passado para a classe de tempo de execução especificado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Um valor `HRESULT`.  
+ Um valor HRESULT.  
   
 ## <a name="remarks"></a>Comentários  
- Consulte [como: instanciar componentes WRL diretamente](../windows/how-to-instantiate-wrl-components-directly.md) para conhecer as diferenças entre esta função e [Microsoft::WRL::Make](../windows/make-function.md)e para obter um exemplo.  
+ Ver [como: instanciar componentes WRL diretamente](../windows/how-to-instantiate-wrl-components-directly.md) para saber as diferenças entre essa função e [Microsoft::WRL::Make](../windows/make-function.md)e para obter um exemplo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

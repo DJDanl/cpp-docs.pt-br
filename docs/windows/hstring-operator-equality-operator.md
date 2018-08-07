@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Operator = = operador | Microsoft Docs'
+title: 'Operador hstring:: Operator = = | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5386636a348fdf7162e9b6d63f0e6dbc109bd655
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c21e9f79673cc888f8661803a8cc4bb9053870c4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876534"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604558"
 ---
 # <a name="hstringoperator-operator"></a>Operador HString::Operator==
 Indica se os dois parâmetros são iguais.  
@@ -47,21 +47,20 @@ inline bool operator==(
 inline bool operator==(  
                  const HString& lhs,   
                  const HSTRING& rhs) throw()  
-  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `lhs`  
- O primeiro parâmetro para comparar. `lhs` pode ser um objeto HString ou HStringReference ou um identificador HSTRING.  
+### <a name="parameters"></a>Parâmetros  
+ *LHS*  
+ O primeiro parâmetro a ser comparado. *LHS* pode ser uma **HString** ou `HStringReference` objeto ou um identificador de HSTRING.  
   
- `rhs`  
- O segundo parâmetro para comparar.`rhs` pode ser um objeto HString ou HStringReference ou um identificador HSTRING.  
+ *rhs*  
+ O segundo parâmetro a ser comparado. *rhs* pode ser um **HString** ou `HStringReference` objeto ou um identificador de HSTRING.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` se os parâmetros `lhs` e `rhs` forem iguais; caso contrário, `false`.  
+ **Verdadeiro** se o *lhs* e *rhs* parâmetros forem iguais; caso contrário, **false**.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3ba58e08bac36d905fbf874546d7791f2aa3fcb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e850c90ef873e64352ace64ff680cd93474a4a1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882002"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606417"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Classe Module::GenericReleaseNotifier
 Invoca um manipulador de eventos quando o último objeto no módulo atual é liberado. O manipulador de eventos é especificado em um lambda, functor ou ponteiro para função.  
@@ -34,9 +34,9 @@ template<typename T>
 class GenericReleaseNotifier : public ReleaseNotifier;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T`  
- O tipo do membro de dados que contém o local do manipulador de eventos.  
+### <a name="parameters"></a>Parâmetros  
+ *T*  
+ O tipo de membro de dados que contém o local do manipulador de eventos.  
   
 ## <a name="members"></a>Membros  
   
@@ -44,19 +44,19 @@ class GenericReleaseNotifier : public ReleaseNotifier;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor Module::GenericReleaseNotifier::GenericReleaseNotifier](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Inicializa uma nova instância da classe genericreleasenotifier.|  
+|[Construtor Module::GenericReleaseNotifier::GenericReleaseNotifier](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Inicializa uma nova instância dos **genericreleasenotifier** classe.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Module::GenericReleaseNotifier::Invoke](../windows/module-genericreleasenotifier-invoke-method.md)|Chama o manipulador de eventos associado ao objeto genericreleasenotifier atual.|  
+|[Método Module::GenericReleaseNotifier::Invoke](../windows/module-genericreleasenotifier-invoke-method.md)|Chama o manipulador de eventos associado ao atual **genericreleasenotifier** objeto.|  
   
 ### <a name="protected-data-members"></a>Membros de dados protegidos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Membro de dados Module::GenericReleaseNotifier::callback_](../windows/module-genericreleasenotifier-callback-data-member.md)|Mantém o lambda, functor ou manipulador de eventos de ponteiro para função associado ao objeto genericreleasenotifier atual.|  
+|[Membro de dados Module::GenericReleaseNotifier::callback_](../windows/module-genericreleasenotifier-callback-data-member.md)|Mantém o lambda, functor ou manipulador de eventos de ponteiro para função associados ao atual **genericreleasenotifier** objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `ReleaseNotifier`  

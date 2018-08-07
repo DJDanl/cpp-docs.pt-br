@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64f2af40c671760bb8d4e667c209598c46b24665
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 193f0d16b03991e24cb16a90b3310512f6e86054
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889194"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604382"
 ---
 # <a name="roinitializewrapperroinitializewrapper-constructor"></a>Construtor RoInitializeWrapper::RoInitializeWrapper
-Inicializa uma nova instância da classe RoInitializeWrapper.  
+Inicializa uma nova instância dos **RoInitializeWrapper** classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,15 +31,15 @@ Inicializa uma nova instância da classe RoInitializeWrapper.
 RoInitializeWrapper(   RO_INIT_TYPE flags)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `flags`  
+### <a name="parameters"></a>Parâmetros  
+ *flags*  
  Uma das enumerações RO_INIT_TYPE, que especifica o suporte fornecido pelo tempo de execução do Windows.  
   
 ## <a name="remarks"></a>Comentários  
- A classe RoInitializeWrapper invoca Windows::Foundation::Initialize (*sinalizadores*).  
+ O **RoInitializeWrapper** classe invoca `Windows::Foundation::Initialize(flags)`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

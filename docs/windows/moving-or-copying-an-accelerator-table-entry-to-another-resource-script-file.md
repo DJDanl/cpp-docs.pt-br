@@ -1,5 +1,5 @@
 ---
-title: Mover ou copiar uma entrada de tabela de aceleradores para outro arquivo de Script de recurso | Microsoft Docs
+title: Movendo ou copiando uma entrada de tabela de aceleradores para outro arquivo de Script de recurso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,35 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b14e20770b89bb6863eb5fa8d7743bd3cf2efa9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e975ab71e4556c236ecd2e92f2d11a949a68ba5a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877898"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608046"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>Movendo ou copiando uma entrada da tabela de aceleradores para outro arquivo de script de recurso
 ### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Para mover ou copiar uma entrada de tabela de aceleradores para outro arquivo de script de recurso  
   
-1.  Abra as tabelas de teclas aceleradoras em ambos os arquivos de script de recurso.  
+1.  Abra as tabelas de aceleradores em ambos os arquivos de script de recurso.  
   
     > [!NOTE]
-    >  Se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+    >  Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
 2.  Selecione a entrada que você deseja mover.  
   
-3.  Do **editar** menu, escolha **cópia** ou **Recortar**.  
+3.  Dos **edite** menu, escolha **cópia** ou **Recortar**.  
   
 4.  Selecione uma entrada no arquivo de script de recurso de destino.  
   
-5.  Do **editar** menu, escolha **colar**.  
+5.  Dos **edite** menu, escolha **colar**.  
   
     > [!NOTE]
     >  Você também pode usar as teclas de atalho para copiar e colar.  
   
-
-  
- **Requisitos**  
+## <a name="requirements"></a>Requisitos  
   
  Win32  
   

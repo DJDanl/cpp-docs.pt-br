@@ -1,5 +1,5 @@
 ---
-title: 'Módulo:: ~ módulo destruidor | Microsoft Docs'
+title: 'Módulo:: ~ Module destruidor | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a85f5a483b329525d44688c61ac57df8d3b2ef1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6f6c27924788be435a9388c1f8e3d24560a4279e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881358"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604311"
 ---
 # <a name="modulemodule-destructor"></a>Destruidor Module::~Module
-Deinitializes a instância atual da classe de módulo.  
+Realiza o desligamento da instância atual do **módulo** classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   

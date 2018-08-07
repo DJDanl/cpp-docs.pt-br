@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb260114a8010d441f0556cf2a21734c0ac23cca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 12346ffa30b3e309dcb845117f311cd4a63b9ad9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881420"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603604"
 ---
 # <a name="nil-structure"></a>Estrutura Nil
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,13 +34,13 @@ struct Nil;
 ## <a name="remarks"></a>Comentários  
  Usado para indicar um parâmetro de modelo não especificado, opcional.  
   
- Nil é uma estrutura vazia.  
+ **Nil** é uma estrutura vazia.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `Nil`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

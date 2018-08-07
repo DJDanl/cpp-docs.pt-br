@@ -1,5 +1,5 @@
 ---
-title: Escolhendo uma cor de uma imagem a ser usada em qualquer lugar (Editor de imagens para ícones) | Microsoft Docs
+title: Escolhendo uma cor na imagem para uso em outro lugar (Editor de imagens para ícones) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,33 +21,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c8c946d0343c45ca5223f9bf976a94b67c70a2b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30656ca7271b91adf50fed5bbc4f8dfd3c6c6acb
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877404"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608807"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Escolhendo uma cor na imagem a ser usada em qualquer lugar (editor de imagens para ícones)
-O **selecionar cor**, ou recebimento de cor, ferramenta faz com que todas as cores na imagem a cor de primeiro plano atual ou a cor de plano de fundo, dependendo se você pressionar à esquerda ou o botão direito do mouse. Para cancelar o **selecionar cor** ferramenta, escolher outra ferramenta.  
+O **selecionar cor**, ou seleção de cor, ferramenta faz com qualquer cor na imagem a cor de primeiro plano atual ou a cor do plano de fundo, dependendo se você pressionar a esquerda ou para o botão direito do mouse. Para cancelar a **selecionar cor** de ferramentas, escolha outra ferramenta.  
   
 > [!TIP]
->  Dicas de ferramenta exibida quando você passar o cursor sobre um botão de barra de ferramentas. Estas dicas podem ajudá-lo a identificar a função de cada botão.  
+>  Dicas de ferramenta aparecem quando você passa o cursor sobre um botão de barra de ferramentas. Estas dicas podem ajudá-lo a identificar a função de cada botão.  
   
 ### <a name="to-pick-up-a-color"></a>Para selecionar uma cor  
   
-1.  No **Editor de imagem** barra de ferramentas (ou o **imagem** menu, **ferramentas** comando), clique no **selecionar cor** ferramenta.  
+1.  Sobre o **Editor de imagens** barra de ferramentas (ou do **imagem** menu, **ferramentas** comando), clique no **selecionar cor** ferramenta.  
   
-2.  Selecione a cor que você deseja acompanhar da imagem.  
+2.  Selecione a cor que você deseja acompanhar a partir da imagem.  
   
     > [!NOTE]
-    >  Depois que você selecionar uma cor, o editor de imagem reativa a ferramenta usada mais recentemente.  
+    >  Depois que você selecionar uma cor, o editor de imagens reativa a ferramenta usada mais recentemente.  
   
-3.  Desenhe usando o botão esquerdo do mouse para a cor de primeiro plano ou o botão direito do mouse para a cor de plano de fundo.  
+3.  Desenhe usando o botão esquerdo do mouse para a cor de primeiro plano ou o botão direito do mouse para a cor do plano de fundo.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisitos  
+## <a name="requirements"></a>Requisitos  
   
  Nenhum  
   

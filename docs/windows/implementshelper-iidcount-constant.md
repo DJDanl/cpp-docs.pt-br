@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa63cfa765d54d20b943aa3a4aabf3dc51a16984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f08564088d00df332db43f207284dae9fc99109
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873996"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604249"
 ---
 # <a name="implementshelperiidcount-constant"></a>Constante ImplementsHelper::IidCount
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 static const unsigned long IidCount;  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Contém o número de IDs de interface implementada no objeto implementa atual.  
+ Contém o número de IDs de interface implementada no atual `Implements` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

@@ -20,25 +20,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d4a8d5260b721bf829c73f587ccd691db5543e40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c8a7a57b263fc3db1fa7f021c1a6f4e09c0f8f7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892768"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605663"
 ---
 # <a name="selecting-controls"></a>Selecionando controles
-Selecionar controles para tamanho, alinhar, mover, copiar, ou excluí-las e, em seguida, executar a operação desejada. Na maioria dos casos, você precisa selecionar mais de um controle para usar as ferramentas de dimensionamento e alinhamento de [barra de ferramentas do Editor de caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
+Selecione controles para tamanho, alinhar, mover, copiar, ou excluí-los e, em seguida, executar a operação desejada. Na maioria dos casos, você precisa selecionar mais de um controle para usar as ferramentas de dimensionamento e o alinhamento a [barra de ferramentas do Editor de caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
   
- Quando um controle é selecionado, ele tem uma borda sombreada ao redor dele com sólido (ativo) ou vazios (inativo) pequena "alças de dimensionamento" quadrados que aparecem na borda de seleção. Quando vários controles estiverem selecionados, o controle dominante tem alças de dimensionamento sólida; todos os outros controles selecionados têm alças de dimensionamento vazio.  
+ Quando um controle for selecionado, ele tem uma borda sombreada em torno dele com sólida (ativa) ou vazios (inativo) "alças de dimensionamento" pequenos quadrados que aparecem na borda de seleção. Quando vários controles estiverem selecionados, o controle dominante tem alças de dimensionamento sólida; todos os outros controles selecionados tem alças de dimensionamento vazado.  
   
- Quando você estiver dimensionando ou alinhar vários controles, o editor de caixa de diálogo usa "controle dominante" para determinar como os outros controles são dimensionados ou alinhados. Por padrão, o controle dominante é o primeiro controle selecionado.  
+ Quando você está redimensionando ou alinhar vários controles, o editor de caixa de diálogo usa o "controle dominante" para determinar como os outros controles são dimensionados ou alinhados. Por padrão, o controle dominante é o primeiro controle selecionado.  
   
 -   [Selecionando vários controles](../windows/selecting-multiple-controls.md)  
   
 -   [Especificando o controle dominante](../windows/specifying-the-dominant-control.md)  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  
@@ -46,4 +46,3 @@ Selecionar controles para tamanho, alinhar, mover, copiar, ou excluí-las e, em 
 ## <a name="see-also"></a>Consulte também  
  [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
-

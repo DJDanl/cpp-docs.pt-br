@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91540ca3fff03f1f0a449413c2d1ca72781c70f1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8e48b6f8ec4a985bfa7fa5b8d0069e472df86e8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875221"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605984"
 ---
 # <a name="modulemethodreleasenotifiermethodreleasenotifier-constructor"></a>Construtor Module::MethodReleaseNotifier::MethodReleaseNotifier
-Inicializa uma nova instância da classe methodreleasenotifier.  
+Inicializa uma nova instância dos **methodreleasenotifier** classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 MethodReleaseNotifier(  
    _In_ T* object,   
    _In_ void (T::* method)(),   
@@ -39,15 +38,15 @@ MethodReleaseNotifier(
             method_(method);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `object`  
+### <a name="parameters"></a>Parâmetros  
+ *object*  
  Um objeto cuja função de membro é um manipulador de eventos.  
   
- `method`  
- A função de membro do parâmetro `object` que é o manipulador de eventos.  
+ *Método*  
+ A função de membro do parâmetro *objeto* que é o manipulador de eventos.  
   
- `release`  
- Especifique `true` para habilitar a chamada subjacente [Module:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) método; caso contrário, especifique `false`.  
+ *release*  
+ Especificar **verdadeira** para habilitar a chamada subjacente [Module:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) método; caso contrário, especifique **false**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  

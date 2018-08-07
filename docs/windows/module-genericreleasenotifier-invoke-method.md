@@ -1,5 +1,5 @@
 ---
-title: 'Genericreleasenotifier:: método Invoke | Microsoft Docs'
+title: 'Module:: genericreleasenotifier:: invocar método | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1cb6ce12105d9e752a85b1252739ef37b5664780
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ce08cdb1cfcba5e63c94904af965f504f30a8e4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875325"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606404"
 ---
 # <a name="modulegenericreleasenotifierinvoke-method"></a>Método Module::GenericReleaseNotifier::Invoke
-Chama o manipulador de eventos associado ao objeto genericreleasenotifier atual.  
+Chama o manipulador de eventos associado ao atual **genericreleasenotifier** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   

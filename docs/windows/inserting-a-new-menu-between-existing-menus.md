@@ -16,25 +16,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73a4b243823d14cd3015a7d92f7ba52a08dc68d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b7b3fefbbe402babcb5291a2c9073a311a2e6451
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876326"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607102"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus"></a>Inserindo um novo menu entre menus existentes
 ### <a name="to-insert-a-new-menu-between-existing-menus"></a>Para inserir um novo menu entre menus existentes  
   
-1.  Selecione um nome de menu e pressione existentes a **inserir** chave. O **Novo Item** caixa é inserida antes do item selecionado.  
+1.  Selecione um existente nome do menu e pressione a **inserir** chave. O **Novo Item** caixa é inserida antes do item selecionado.  
   
      \- ou -  
   
-2.  Na barra de menus de atalho e escolha **Inserir nova** no menu de atalho.  
+2.  Clique com botão direito na barra de menus e escolha **Inserir novo** no menu de atalho.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.*  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*.  
   
- Requisitos  
+## <a name="requirements"></a>Requisitos  
   
  Win32  
   

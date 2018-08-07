@@ -17,33 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87cdbf66676ed2a3e6054006270b39ad80325857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f670da3ad4858f3c09903f2ed3ec6aa58268180
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881595"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608489"
 ---
 # <a name="nonextensible"></a>nonextensible
-Especifica que o `IDispatch` implementação inclui apenas as propriedades e métodos listados na descrição de interface e não podem ser estendidos com membros adicionais em tempo de execução.  
+Especifica que o `IDispatch` implementação inclui apenas as propriedades e os métodos listados na descrição da interface e não podem ser estendidos com membros adicionais em tempo de execução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [nonextensible]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
  O **nonextensible** atributo C++ tem a mesma funcionalidade que o [nonextensible](http://msdn.microsoft.com/library/windows/desktop/aa367120) atributo MIDL.  
   
- O uso de **nonextensible** também requer o [oleautomation](../windows/oleautomation.md) atributo.  
+ Uso de **nonextensible** também requer o [oleautomation](../windows/oleautomation.md) atributo.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra um uso de **nonextensible** atributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_nonextensible.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -60,13 +58,13 @@ __interface IFireTabCtrl
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|`interface`|  
+|**Aplica-se a**|**interface**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|**duplo** e **oleautomation**, ou **dispinterface**|  
+|**Atributos obrigatórios**|`dual` e `oleautomation`, ou `dispinterface`|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

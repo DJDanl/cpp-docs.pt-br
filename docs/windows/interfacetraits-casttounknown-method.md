@@ -1,5 +1,5 @@
 ---
-title: 'Método Interfacetraits: | Microsoft Docs'
+title: 'Método interfacetraits:: Casttounknown | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2fdc46f57f834c3e8217049574ea504aae16f03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad2c0a438eee870ac86301f0a56ef525eb53d8c8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878119"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608645"
 ---
 # <a name="interfacetraitscasttounknown-method"></a>Método InterfaceTraits::CastToUnknown
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,23 +36,23 @@ static __forceinline IUnknown* CastToUnknown(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `T`  
- O tipo de parâmetro `ptr`.  
+### <a name="parameters"></a>Parâmetros  
+ *T*  
+ O tipo do parâmetro *ptr*.  
   
- `ptr`  
- Ponteiro para o tipo `T`.  
+ *ptr*  
+ Ponteiro para o tipo *T*.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Ponteiro para o IUnknown do qual `Base` é derivado.  
   
 ## <a name="remarks"></a>Comentários  
- Converte o ponteiro especificado para um ponteiro IUnknown.  
+ Converte o ponteiro especificado para um ponteiro para `IUnknown`.  
   
- Para obter mais informações sobre `Base`, consulte a seção de Typedefs públicos em [estrutura InterfaceTraits](../windows/interfacetraits-structure.md).  
+ Para obter mais informações sobre `Base`, consulte a seção Typedefs públicos [estrutura InterfaceTraits](../windows/interfacetraits-structure.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

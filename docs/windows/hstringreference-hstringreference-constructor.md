@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc88ea32d4384b36559a4a10da0a5975345bf0d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7dce8c6fca14ad26665bf4868681234374c20f85
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876001"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608138"
 ---
 # <a name="hstringreferencehstringreference-constructor"></a>Construtor HStringReference::HStringReference
-Inicializa uma nova instância da classe HStringReference.  
+Inicializa uma nova instância dos **HStringReference** classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,28 +38,28 @@ HStringReference(wchar_t const (&str)[ sizeDest],
 HStringReference(HStringReference&& other) throw();  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `sizeDest`  
- Um parâmetro de modelo que especifica o tamanho do buffer de HStringReference de destino.  
+### <a name="parameters"></a>Parâmetros  
+ *sizeDest*  
+ Um parâmetro de modelo que especifica o tamanho do destino **HStringReference** buffer.  
   
- `str`  
+ *str*  
  Uma referência a uma cadeia de caracteres largos.  
   
- `len`  
- O comprimento máximo do `str` buffer de parâmetro a ser usado nesta operação. Se o `len` parâmetro não for especificado, todo o `str` parâmetro é usado. Se `len` é maior do que `sizeDest`, `len` é definido como `sizeDest`-1.  
+ *Len*  
+ O comprimento máximo do *str* buffer de parâmetro a ser usado nesta operação. Se o *len* parâmetro não for especificado, todo o *str* parâmetro é usado. Se *len* é maior que *sizeDest*, *len* é definido como *sizeDest*-1.  
   
- `other`  
- Outro objeto HStringReference.  
+ *other*  
+ Outra **HStringReference** objeto.  
   
 ## <a name="remarks"></a>Comentários  
- O primeiro construtor inicializa um novo objeto de HStringReference o mesmo tamanho do parâmetro `str`.  
+ O primeiro construtor inicializa uma nova **HStringReference** objeto do mesmo tamanho como parâmetro *str*.  
   
- A segundo inicializa construtor HStringReference um novo objeto que o specifeid tamanho pelo parâmetro `len`.  
+ O segundo construtor inicializa uma nova **HStringReference** do objeto que o specifeid tamanho pelo parâmetro *len*.  
   
- O terceiro construtor inicializa um novo objeto de HStringReference para o valor da `other` parâmetro e, em seguida, destrói o `other` parâmetro.  
+ O terceiro construtor inicializa uma nova **HStringReference** objeto para o valor da *outras* parâmetro e, em seguida, destrói o *outros* parâmetro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

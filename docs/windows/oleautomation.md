@@ -17,39 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8093a36199eeddf2a96ae0830c56ac0acde51cfe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e8c7ea92e914543d80b199ef9d52435eb7116d9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882284"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608001"
 ---
 # <a name="oleautomation"></a>oleautomation
-Indica que uma interface compatível com automação.  
+Indica que uma interface é compatível com a automação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [oleautomation]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
  O **oleautomation** atributo C++ tem a mesma funcionalidade que o [oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- Consulte os exemplos de [defaultvalue](../windows/defaultvalue.md) e [nonextensible](../windows/nonextensible.md) para uso do exemplo **oleautomation**.  
+ Consulte os exemplos para [defaultvalue](../windows/defaultvalue.md) e [nonextensible](../windows/nonextensible.md) para uso do exemplo **oleautomation**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|`interface`|  
+|**Aplica-se a**|**interface**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|**dispinterface**|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

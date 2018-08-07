@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0264fbd8df7f1dec5d20b40a67299cb4502b72aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c5698a85e17a8dbcb483dcd5468289df8afadcc
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892664"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605039"
 ---
 # <a name="safedivide"></a>SafeDivide
-Divide dois números de forma que protege contra a divisão por zero.  
+Divide dois números de uma maneira que protege contra a divisão por zero.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,35 +38,35 @@ inline bool SafeDivide (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- [in] `t`  
+### <a name="parameters"></a>Parâmetros  
+ [in] *t*  
  O divisor. Isso deve ser do tipo T.  
   
- [in] `u`  
+ [in] *u*  
  O dividendo. Isso deve ser do tipo u  
   
- [out] `result`  
- O parâmetro onde `SafeDivide` armazena o resultado.  
+ [out] *resultado*  
+ O parâmetro em que **SafeDivide** armazena o resultado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` Se nenhum erro ocorrer; `false` se ocorrer um erro.  
+ **True** se nenhum erro ocorrer; **falsos** se ocorrer um erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método é parte de [biblioteca SafeInt](../windows/safeint-library.md) e foi projetado para uma operação de divisão única sem criar uma instância do [classe SafeInt](../windows/safeint-class.md).  
+ Esse método é parte da [biblioteca SafeInt](../windows/safeint-library.md) e é projetado para uma operação de divisão única sem criar uma instância das [classe SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Este método só deve ser usado quando uma operação matemática único deve ser protegida. Se houver várias operações, você deve usar o `SafeInt` classe em vez de chamar as funções autônomas individuais.  
+>  Esse método só deve ser usado quando uma operação matemática única deve ser protegida. Se houver várias operações, você deve usar o `SafeInt` classe em vez de chamar as funções individuais de autônomas.  
   
  Para obter mais informações sobre os tipos de modelo T e U, consulte [funções SafeInt](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** safeint.h  
+ **Cabeçalho:** safeint  
   
  **Namespace:** Microsoft::Utilities  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções (SafeInt)](../windows/safeint-functions.md)   
- [Biblioteca de SafeInt](../windows/safeint-library.md)   
+ [Funções SafeInt](../windows/safeint-functions.md)   
+ [Biblioteca SafeInt](../windows/safeint-library.md)   
  [Classe SafeInt](../windows/safeint-class.md)   
  [SafeModulus](../windows/safemodulus.md)   
  [SafeMultiply](../windows/safemultiply.md)
