@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce7925fd15a7a332dbfb18e2a22dc104783300b7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3dc93b6dc6d6a5fbf6bcd8899793e07bd6446de1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882505"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604350"
 ---
 # <a name="module-c"></a>module (C++)
 Define o bloco de biblioteca no arquivo. idl.  
@@ -30,8 +30,7 @@ Define o bloco de biblioteca no arquivo. idl.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ module (  
+[ module (  
    type=dll,  
    name=string,  
    version=1.0,  
@@ -50,104 +49,104 @@ Define o bloco de biblioteca no arquivo. idl.
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- ***tipo*** (opcional)  
- Pode ser um dos seguintes:  
+### <a name="parameters"></a>Parâmetros  
+ *tipo* (opcional)  
+ Pode ser uma das seguintes opções:  
   
--   **dll** adiciona funções e classes que permitem a DLL resultante funcionar como um servidor de COM no processo. Este é o valor padrão.  
+-   `dll` Adiciona funções e classes que permitem que a DLL resultante funcionar como um servidor de COM em processo. Este é o valor padrão.  
   
--   **exe** adiciona funções e classes que permitem resultante executável funcionar como um limite de COM do servidor de processo.  
+-   `exe` Adiciona funções e classes que permitem resultante executável para funcionarem como um limite de servidor COM de processo.  
   
--   **serviço** adiciona funções e classes que permitem resultante executável para funcionar como um serviço NT.  
+-   `service` Adiciona funções e classes que permitem resultante executável para funcionarem como um serviço NT.  
   
--   **não especificado** desabilita a injeção de código de ATL relacionada ao atributo de módulo: funções de ponto de injeção de classe de módulo ATL, instância global _ atlmodule e entrada.  Não desabilite a injeção de código de ATL devido a outros atributos no projeto.  
+-   `unspecified` Desabilita a injeção de código de ATL relacionado ao atributo de módulo: funções de ponto a injeção de classe de módulo ATL, _AtlModule de instância global e entrada. Não desabilite a injeção de código de ATL devido a outros atributos no projeto.  
   
- ***nome*** (opcional)  
+ *nome* (opcional)  
  O nome do bloco de biblioteca.  
   
- ***versão*** (opcional)  
+ *versão* (opcional)  
  O número de versão que você deseja atribuir ao bloco de biblioteca. O valor padrão é 1.0.  
   
- `uuid`  
- A ID exclusiva para a biblioteca. Se você omitir esse parâmetro, uma ID será gerada automaticamente para a biblioteca. Talvez você precise recuperar o *uuid* de seu bloco de biblioteca, você pode fazer usando o identificador **uuidof (***libraryname***)**.  
+ *uuid*  
+ A ID exclusiva para a biblioteca. Se você omitir esse parâmetro, uma ID será gerada automaticamente para a biblioteca. Talvez você precise recuperar o *uuid* de seu bloco de biblioteca, que pode ser feito usando o identificador **uuidof (***libraryname***)**.  
   
- **lcid**  
- O parâmetro de localização. Consulte [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) para obter mais informações.  
+ *lcid*  
+ O parâmetro de localização. Ver [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) para obter mais informações.  
   
- **controle** (opcional)  
- Especifica que todos os coclasses na biblioteca de controles.  
+ *controle* (opcional)  
+ Especifica que todas as coclasses na biblioteca de controles.  
   
- **helpstring**  
+ *helpstring*  
  Especifica a biblioteca de tipos.  
   
- ***helpstringdll*** (opcional)  
- Define o nome do arquivo. dll para usar para executar uma pesquisa de cadeia de caracteres do documento. Consulte [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) para obter mais informações.  
+ *helpstringdll* (opcional)  
+ Define o nome do arquivo. dll para usar para executar uma pesquisa de cadeia de caracteres do documento. Ver [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) para obter mais informações.  
   
- **arquivo de Ajuda** (opcional)  
- O nome do arquivo de ajuda para a biblioteca de tipos.  
+ *HelpFile* (opcional)  
+ O nome do arquivo de Ajuda da biblioteca de tipos.  
   
- **HelpContext** (opcional)  
+ *HelpContext* (opcional)  
  A identificação de ajuda para esta biblioteca de tipos.  
   
- **helpstringcontext** (opcional)  
- Consulte [helpstringcontext](../windows/helpstringcontext.md) para obter mais informações.  
+ *helpstringcontext* (opcional)  
+ Ver [helpstringcontext](../windows/helpstringcontext.md) para obter mais informações.  
   
- **oculta** (opcional)  
- Impede que a biblioteca inteira seja exibido. Esse uso é destinado ao uso com controles. Hosts precisam criar uma nova biblioteca de tipos que encapsula o controle com as propriedades estendidas. Consulte o [oculta](http://msdn.microsoft.com/library/windows/desktop/aa366861) atributo MIDL para obter mais informações.  
+ *oculto* (opcional)  
+ Impede que a biblioteca inteira seja exibido. Esse uso destina-se para uso com controles. Hosts precisam criar uma nova biblioteca de tipo que encapsula o controle com propriedades estendidas. Consulte a [ocultos](http://msdn.microsoft.com/library/windows/desktop/aa366861) atributo MIDL para obter mais informações.  
   
- **restrito** (opcional)  
- Membros da biblioteca não podem ser chamados arbitrariamente. Consulte o [restrito](http://msdn.microsoft.com/library/windows/desktop/aa367157) atributo MIDL para obter mais informações.  
+ *restrito* (opcional)  
+ Membros da biblioteca não podem ser chamados arbitrariamente. Consulte a [restrito](http://msdn.microsoft.com/library/windows/desktop/aa367157) atributo MIDL para obter mais informações.  
   
- ***personalizado*** (opcional)  
- Um ou mais atributos; Isso é semelhante de [personalizado](../windows/custom-cpp.md) atributo. O primeiro parâmetro para `custom` é o GUID do atributo. Por exemplo:  
+ *personalizado* (opcional)  
+ Um ou mais atributos; Isso é semelhante a [personalizado](../windows/custom-cpp.md) atributo. O primeiro parâmetro para *personalizado* é o GUID do atributo. Por exemplo:  
   
 ```  
 [module(custom={guid,1}, custom={guid1,2})]  
 ```  
   
- **resource_name**  
- A ID de recurso de cadeia de caracteres do arquivo. rgs usado para registrar a ID de aplicativo de DLL, executável ou de serviço. Quando o módulo é do tipo serviço, esse argumento é usado também para obter a ID da cadeia de caracteres que contém o nome do serviço.  
+ *resource_name*  
+ A ID de recurso de cadeia de caracteres do arquivo. rgs usado para registrar a ID do aplicativo da DLL, executável ou de serviço. Quando o módulo é do tipo serviço, esse argumento também é usado para obter a ID da cadeia de caracteres que contém o nome do serviço.  
   
 > [!NOTE]
 >  O arquivo. rgs e a cadeia de caracteres que contém o nome do serviço devem conter o mesmo valor numérico.  
   
 ## <a name="remarks"></a>Comentários  
- A menos que você especifique o **restrito** parâmetro [emitidl](../windows/emitidl.md), **módulo** é necessária em qualquer programa que usa atributos de C++.  
+ A menos que você especifique o *restrito* parâmetro [emitidl](../windows/emitidl.md), **módulo** é necessária em qualquer programa que usa atributos de C++.  
   
- Um bloco de biblioteca será criado se, além de **módulo** atributo, código-fonte também usa [dispinterface](../windows/dispinterface.md), [dual](../windows/dual.md), [objeto](../windows/object-cpp.md), ou um atributo que implica [coclass](../windows/coclass.md).  
+ Um bloco de biblioteca será criado se, além de **módulo** atributo, código-fonte também usa [dispinterface](../windows/dispinterface.md), [duplo](../windows/dual.md), [objeto](../windows/object-cpp.md), ou um atributo que implica [coclass](../windows/coclass.md).  
   
- Um bloco de biblioteca é permitido em um arquivo. idl. Várias entradas de módulo no código-fonte serão mescladas com os valores de parâmetro mais recentes sendo implementados.  
+ Um bloco de biblioteca é permitido em um arquivo. idl. Várias entradas do módulo no código-fonte serão mescladas com os valores de parâmetro mais recentes que está sendo implementados.  
   
- Se esse atributo for usado em um projeto que usa ATL, altera o comportamento do atributo. Além do comportamento acima, o atributo também insere um objeto global (chamado **_AtlModule**) do tipo correto e código de suporte adicionais. Se o atributo for autônomo, ele insere uma classe derivada do tipo de módulo correto. Se o atributo é aplicado a uma classe, ele adiciona uma classe base do tipo de módulo correto. O tipo correto é determinado pelo valor da `type` parâmetro:  
+ Se esse atributo for usado em um projeto que usa ATL, altera o comportamento do atributo. Além do comportamento acima, o atributo também insere um objeto global (chamado `_AtlModule`) do tipo correto e código de suporte adicionais. Se o atributo for autônomo, ele insere uma classe derivada do tipo de módulo correto. Se o atributo é aplicado a uma classe, ele adiciona uma classe base do tipo de módulo correto. O tipo correto é determinado pelo valor de *tipo* parâmetro:  
   
 -   `type` = **DLL**  
   
-     [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) é usada como a classe base e a entrada DLL padrão pontos necessários para um servidor COM. Esses pontos de entrada são [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583), [DllRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms691457), [DllCanUnloadNow](http://msdn.microsoft.com/library/windows/desktop/ms690368), e [ DllGetClassObject](http://msdn.microsoft.com/library/windows/desktop/dd797891).  
+     [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) é usado como a classe base e a entrada DLL padrão pontos necessários para um servidor COM. Esses pontos de entrada são [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583), [DllRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms691457), [DllCanUnloadNow](http://msdn.microsoft.com/library/windows/desktop/ms690368), e [ DllGetClassObject](http://msdn.microsoft.com/library/windows/desktop/dd797891).  
   
--   `type` = **Exe**  
+-   `type` = **exe**  
   
-     [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) é usada como a classe base e o ponto de entrada executável padrão [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).  
+     [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) é usado como a classe base e o ponto de entrada executável padrão [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).  
   
 -   `type` = **Serviço**  
   
-     [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) é usada como a classe base e o ponto de entrada executável padrão [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).  
+     [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) é usado como a classe base e o ponto de entrada executável padrão [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).  
   
--   `type` = **Não especificado**  
+-   `type` = **não especificado**  
   
-     Desabilita a injeção de código de ATL relacionada ao atributo de módulo.  
+     Desabilita a injeção de código de ATL relacionado ao atributo de módulo.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra como criar um bloco de biblioteca no arquivo. idl gerado.  
   
-```  
+```cpp  
 // cpp_attr_ref_module1.cpp  
 // compile with: /LD  
 [module(name="MyLibrary", version="1.2", helpfile="MyHelpFile")];  
 ```  
   
- O código a seguir mostra o que você pode fornecer sua própria implementação de uma função que aparecem no código que foi inserido como resultado do uso **módulo**. Consulte [/Fx](../build/reference/fx-merge-injected-code.md) para obter mais informações sobre a exibição de código injetado. Para substituir uma das funções inseridas pelo **módulo** de atributo, faça uma classe que conterá a implementação da função e fazer a **módulo** atributo se aplicam a essa classe.  
+ O código a seguir mostra que você pode fornecer sua própria implementação de uma função que apareceria no código que foi inserido como resultado do uso **módulo**. Ver [/Fx](../build/reference/fx-merge-injected-code.md) para obter mais informações sobre como exibir o código injetado. Para substituir uma das funções inseridas pela **módulo** atributo, tornar uma classe que conterá a implementação da função e verifique o **módulo** atributo se aplica a essa classe.  
   
-```  
+```cpp  
 // cpp_attr_ref_module2.cpp  
 // compile with: /LD /link /OPT:NOREF  
 #include <atlbase.h>  
@@ -172,13 +171,13 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Em qualquer lugar|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
