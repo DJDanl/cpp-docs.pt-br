@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63c28a18723ad1dc39669ee5a367c870451c9943
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e2d42a108d461e3f0238612171b3445e28138194
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651753"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019609"
 ---
 # <a name="swap-function-windows-runtime-c-template-library"></a>Função de troca (Biblioteca em Tempo de Execução C++ do Windows Runtime )
 Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 WRL_NOTHROW inline void Swap(  
    _Inout_ T& left,  
    _Inout_ T& right  

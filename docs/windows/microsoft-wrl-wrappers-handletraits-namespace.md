@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b114d067249e78d7fb935e473cc3cc952c76fe02
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c83b921aabeee34b583c8f771190ecf60edccb59
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878028"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015805"
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Namespace Microsoft::WRL::Wrappers::HandleTraits
 Descreve as características dos tipos comuns de recursos com base no identificador.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Wrappers::HandleTraits;  
 ```  
   
@@ -39,18 +39,18 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Estrutura CriticalSectionTraits](../windows/criticalsectiontraits-structure.md)|Especializada um `CriticalSection` objeto para dar suporte a uma seção crítica inválida ou uma função para liberar uma seção crítica.|  
+|[Estrutura CriticalSectionTraits](../windows/criticalsectiontraits-structure.md)|É especialista um `CriticalSection` objeto para dar suporte a uma seção crítica inválida ou uma função para liberar uma seção crítica.|  
 |[Estrutura EventTraits](../windows/eventtraits-structure.md)|Define as características de um `Event` identificador de classe.|  
 |[Estrutura FileHandleTraits](../windows/filehandletraits-structure.md)|Define as características de um identificador de arquivo.|  
-|[Estrutura HANDLENullTraits](../windows/handlenulltraits-structure.md)|Define as características de um identificador não inicializado.|  
-|[Estrutura HANDLETraits](../windows/handletraits-structure.md)|Define as características de um identificador.|  
-|[Estrutura MutexTraits](../windows/mutextraits-structure.md)|Define as características do [Mutex](../windows/mutex-class1.md) classe.|  
-|[Estrutura SemaphoreTraits](../windows/semaphoretraits-structure.md)|Define as características de um objeto de semáforo.|  
+|[Estrutura HANDLENullTraits](../windows/handlenulltraits-structure.md)|Define as características comuns de um identificador não inicializado.|  
+|[Estrutura HANDLETraits](../windows/handletraits-structure.md)|Define as características comuns de um identificador.|  
+|[Estrutura MutexTraits](../windows/mutextraits-structure.md)|Define as características comuns do [Mutex](../windows/mutex-class1.md) classe.|  
+|[Estrutura SemaphoreTraits](../windows/semaphoretraits-structure.md)|Define as características comuns de um objeto de sinal.|  
 |[Estrutura SRWLockExclusiveTraits](../windows/srwlockexclusivetraits-structure.md)|Descreve características comuns do `SRWLock` classe no modo de bloqueio exclusivo.|  
 |[Estrutura SRWLockSharedTraits](../windows/srwlocksharedtraits-structure.md)|Descreve características comuns do `SRWLock` classe no modo de bloqueio compartilhado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

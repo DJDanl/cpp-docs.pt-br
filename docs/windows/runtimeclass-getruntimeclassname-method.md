@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7706a16a860cf554068dd3416e7c1f8b1fcea311
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 126133c5e542414f1fb38635e1cb14314bc55d52
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608768"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020389"
 ---
 # <a name="runtimeclassgetruntimeclassname-method"></a>Método RuntimeClass::GetRuntimeClassName
 
@@ -37,7 +37,6 @@ STDMETHOD( GetRuntimeClassName )(
 ```
 
 ### <a name="parameters"></a>Parâmetros
-
 *runtimeName*  
 Quando essa operação for concluída, o nome de classe de tempo de execução.
 
@@ -47,7 +46,7 @@ S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
 
 ## <a name="remarks"></a>Comentários
 
-Um erro de asserção é emitido se &#95; &#95;WRL_STRICT&#95; &#95; ou &#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95; não está definido.
+Um erro de asserção é emitido se `__WRL_STRICT__` ou `__WRL_FORCE_INSPECTABLE_CLASS_MACRO__` não está definido.
 
 ## <a name="requirements"></a>Requisitos
 

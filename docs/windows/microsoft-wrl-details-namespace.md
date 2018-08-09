@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49256b556eddb1feadbfd01b298aba62ad1a51ee
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9effc65b150c68a5191712b364c80ad42dd276ad
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604220"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012122"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Namespace Microsoft::WRL::Details
 Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Details;  
 ```  
   
@@ -50,7 +50,7 @@ namespace Microsoft::WRL::Details;
 |----------|-----------------|  
 |[Estrutura ArgTraits](../windows/argtraits-structure.md)|Declara um delegado especificado de interface e uma função de membro anônimo que tem um número especificado de parâmetros.|  
 |[Estrutura ArgTraitsHelper](../windows/argtraitshelper-structure.md)|Ajuda a definir as características comuns de argumentos do delegado.|  
-|[Estrutura BoolStruct](../windows/boolstruct-structure.md)|Define se um ComPtr está gerenciando o tempo de vida do objeto de uma interface. BoolStruct é usado internamente pelo [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operador.|  
+|[Estrutura BoolStruct](../windows/boolstruct-structure.md)|Define se um `ComPtr` está gerenciando o tempo de vida do objeto de uma interface. `BoolStruct` é usado internamente pelo [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operador.|  
 |[Estrutura CreatorMap](../windows/creatormap-structure.md)|Contém informações sobre como inicializar, registrar e cancelar o registro de objetos.|  
 |[Estrutura DerefHelper](../windows/derefhelper-structure.md)|Representar um ponteiro cancelado para o `T*` parâmetro de modelo.|  
 |[Estrutura EnableIf](../windows/enableif-structure.md)|Define um membro de dados do tipo especificado pelo segundo parâmetro de modelo se o primeiro parâmetro de modelo é avaliado como **verdadeira**.|  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e77c29df5fa86ccdf88a6962577cd8c70e45e2ee
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 1842202ea0873889f79848230c91c3ccded7f25b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651360"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016659"
 ---
 # <a name="switchis"></a>switch_is
 Especifica a expressão ou um identificador que atua como o discriminador de união que seleciona o membro de união.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [switch_is]  
 ```  
   

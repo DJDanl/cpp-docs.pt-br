@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1e1ecfb118fb391cf392b411a4664513972ed42
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5ec69b663b2a866701c2587d3913d23310aaf997
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642519"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013256"
 ---
 # <a name="transmitas"></a>transmit_as
 Instrui o compilador para associar um tipo apresentado que manipulam a aplicativos cliente e servidor, com um tipo transmitido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [ transmit_as(  
    type  
 ) ]  

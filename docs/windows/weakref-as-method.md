@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 938c7c796bf88d4ea1e49f1f59d274b5017aa7de
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7dd0dca806c1568d88c20eec6a7ac63e5fb242fb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649296"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020350"
 ---
 # <a name="weakrefas-method"></a>Método WeakRef::As
 Define especificado `ComPtr` parâmetro de ponteiro para representar a interface especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* ptr  

@@ -19,46 +19,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59ee6ce257609c4761e43630a66de9cb9b996269
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30852b22c9ff4cc74c8f0c57b3a5ed9d79a34838
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892329"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011442"
 ---
 # <a name="symbol-name-restrictions"></a>Restrições de nome do símbolo
 As restrições em nomes de símbolos são da seguinte maneira:  
   
--   Todos os [símbolos](../windows/symbols-resource-identifiers.md) devem ser exclusivos dentro do escopo do aplicativo. Isso impede que as definições de símbolo conflitantes nos arquivos de cabeçalho.  
+-   Todos os [símbolos](../windows/symbols-resource-identifiers.md) deve ser exclusivo dentro do escopo do aplicativo. Isso impede que as definições conflitantes do símbolo nos arquivos de cabeçalho.  
   
--   Caracteres válidos para um nome de símbolo incluem A-Z, a-z, 0-9 e sublinhados (_).  
+-   Caracteres válidos para um nome de símbolo incluem A-Z, a-z, 0 a 9 e sublinhados (_).  
   
 -   Nomes de símbolo não podem começar com um número e são limitados a 247 caracteres.  
   
 -   Nomes de símbolo não podem conter espaços.  
   
--   Nomes de símbolos não diferenciam maiusculas de minúsculas, mas no caso da primeira definição de símbolo é preservado. O arquivo de cabeçalho que define os símbolos é usado pelo compilador de recurso e editor e programas C++ para fazer referência a recursos definidos em um arquivo de recurso. Para os dois nomes de símbolos que diferem somente no caso, o programa do C++ verá dois símbolos separados enquanto o editor/compilador de recurso verá ambos os nomes de como fazer referência a um único símbolo.  
+-   Nomes de símbolos não diferenciam maiusculas de minúsculas, mas no caso da primeira definição de símbolo é preservado. O arquivo de cabeçalho que define os símbolos é usado pelo compilador/editor de recursos e programas do C++ para fazer referência a recursos definidos em um arquivo de recurso. Dois nomes de símbolo que diferem apenas em maiusculas, o programa de C++ verá dois símbolos separados, enquanto o compilador/editor de recurso verá os dois nomes como uma referência a um único símbolo.  
   
     > [!NOTE]
-    >  Se você não seguir o esquema de nome de símbolo padrão (ID*_[keyword]) descritas abaixo, e seu nome de símbolo é o mesmo como uma palavra-chave conhecida para o compilador de script de recurso, tentar criar o arquivo de script de recurso resultará em erro aparentemente aleatório geração, que é difícil diagnosticar. Para evitar isso, seguir o esquema de nomenclatura padrão.  
+    >  Se você não seguir o esquema de nome de símbolo padrão (ID*_[keyword]) descritas abaixo, e seu nome de símbolo, por acaso, é o mesmo como uma palavra-chave conhecida do compilador do script de recurso, tentar criar o arquivo de script de recurso resulta em erro aparentemente aleatório geração que é difícil de diagnosticar. Para evitar isso, seguem o esquema de nomenclatura padrão.  
   
  Nomes de símbolos têm prefixos descritivos que indicam o tipo de recurso ou objeto que eles representam. Esses prefixos descritivos começam com a ID da combinação de texto. O Microsoft Foundation Class Library (MFC) usa as convenções de nomenclatura de símbolo mostradas na tabela a seguir.  
   
 |Categoria|Prefixo|Use|  
 |--------------|------------|---------|  
-|Recursos|IDR IDD _ IDC _ IDI_ IDB_|Acelerador de menu (e recursos associados ou personalizados) a caixa de diálogo Bitmap de ícone de Cursor|  
+|Recursos|IDR IDD _ IDC IDI_ IDB_|Acelerador ou menu (e recursos associados ou personalizados) caixa de diálogo Bitmap do ícone de Cursor|  
 |Itens de menu|ID _|Item de menu|  
 |Comandos|ID _|Comando|  
-|Controles e janelas filho|IDC _|Controle|  
+|Controles e janelas filho|IDC|Controle|  
 |Cadeias de caracteres|IDS _|Cadeia de caracteres na tabela de cadeia de caracteres|  
 |MFC|AFX_|Reservado para símbolos predefinidos do MFC|  
-  
-
   
 ## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  
  [Alterando um símbolo ou um nome de símbolo (ID)](../windows/changing-a-symbol-or-symbol-name-id.md)   
- [Restrições de valor do símbolo](../windows/symbol-value-restrictions.md)   
+ [Restrições de valor de símbolo](../windows/symbol-value-restrictions.md)   
  [IDs de símbolos predefinidos](../windows/predefined-symbol-ids.md)

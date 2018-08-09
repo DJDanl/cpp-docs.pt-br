@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd0d02edc586697e42e4733df478a7ae394e0f
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 937afdb400fff6f0944d8690412257cb66a9c25c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034774"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017991"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Como: usar o Windows 10 SDK em um aplicativo de área de trabalho do Windows
 Quando você cria um projeto de área de trabalho clássico do Windows no Visual Studio 2017, ele é configurado por padrão para compilar com a versão do SDK do Windows 10 foi instalado quando a carga de trabalho de área de trabalho do C++ foi instalada ou atualizado pela última vez. Esta versão do SDK do Windows é compatível com o Windows 7 e posterior. Ver [usando os cabeçalhos do Windows](/windows/desktop/WinProg/using-the-windows-headers) para obter mais informações sobre destinados a versões específicas do Windows.
@@ -31,7 +31,6 @@ Se você quiser direcionar uma versão anterior do SDK, você pode abrir **proje
   
 1.  Verifique se que o SDK do Windows 10 está instalado. SDK do Windows 10 é instalado como parte dos **desenvolvimento para Desktop com C++** carga de trabalho. Uma versão autônoma está disponível em [Downloads e ferramentas para Windows 10](https://developer.microsoft.com/windows/downloads).
 
-  
 2.  Abra o menu de atalho do nó do projeto e escolha **redirecionar SDK versão**.  
   
      ![Redirecionar a versão do SDK](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
@@ -52,7 +51,7 @@ Se você quiser direcionar uma versão anterior do SDK, você pode abrir **proje
   
      ![Versão da plataforma de destino](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   
-     Esta ação altera os valores das macros de projeto que incluem caminhos para arquivos de biblioteca e arquivos de cabeçalho. Para ver o que mudou, na seção de diretórios do Visual C++ da caixa de diálogo Propriedades do projeto, escolha uma das propriedades, como os diretórios de inclusão, optar por abrir a lista suspensa e escolha \<Editar >. O **diretórios de inclusão** caixa de diálogo é exibida.  
+     Esta ação altera os valores das macros de projeto que incluem caminhos para arquivos de biblioteca e arquivos de cabeçalho. Para ver o que mudou na **diretórios do Visual C++** seção o **propriedades do projeto** caixa de diálogo, escolha uma das propriedades, como o **diretórios de inclusão**, optar por Abra a lista suspensa e escolha \<Editar >. O **diretórios de inclusão** caixa de diálogo é exibida.  
   
      ![Incluir caixa de diálogo de diretórios](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   
@@ -66,7 +65,7 @@ Se você quiser direcionar uma versão anterior do SDK, você pode abrir **proje
   
 1.  Abra o menu de atalho do nó do projeto e escolha **redirecionar SDK versão**.  
   
-2.  Na lista suspensa de versão da plataforma de destino, escolha 8.1.  
+2.  No **versão da plataforma de destino** dropdown, escolha **8.1**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Aplicativos da área de trabalho do Windows (Visual C++)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)

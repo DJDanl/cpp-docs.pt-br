@@ -23,19 +23,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 752989b33bd0b017233ea4a105d2ad36ca2290f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f74f8fe3e5b637869af7b03bb2eaf5e13df9550
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875546"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020155"
 ---
 # <a name="microsoftwrlwrappersdetails-namespace"></a>Namespace Microsoft::WRL::Wrappers::Details
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Wrappers::Details;  
 ```  
   
@@ -45,8 +45,8 @@ namespace Microsoft::WRL::Wrappers::Details;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Classe SyncLockT](../windows/synclockt-class.md)|Representa um tipo que pode levar exclusivo ou compartilhado a propriedade de um recurso.|  
-|[Classe SyncLockWithStatusT](../windows/synclockwithstatust-class.md)|Representa um tipo que pode levar exclusivo ou compartilhado a propriedade de um recurso.|  
+|[Classe SyncLockT](../windows/synclockt-class.md)|Representa um tipo que pode levar exclusivo ou a propriedade compartilhada de um recurso.|  
+|[Classe SyncLockWithStatusT](../windows/synclockwithstatust-class.md)|Representa um tipo que pode levar exclusivo ou a propriedade compartilhada de um recurso.|  
   
 ### <a name="methods"></a>Métodos  
   
@@ -55,7 +55,7 @@ namespace Microsoft::WRL::Wrappers::Details;
 |[Método CompareStringOrdinal](../windows/comparestringordinal-method.md)|Compara dois especificado `HSTRING` objetos e retorna um inteiro que indica sua posição relativa em uma ordem de classificação.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::Details  
   

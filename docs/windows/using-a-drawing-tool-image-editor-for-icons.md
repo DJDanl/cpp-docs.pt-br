@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8345829e5d561ead3be0052770e022f704eabc3b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fde195d465116f2fa3055d5981c2c465c4bf31ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646118"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019458"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>Usando uma ferramenta de desenho (editor de imagens para ícones)
-O editor de imagens do freehand desenhar e apagar todos funcionam da mesma forma de ferramentas: selecione a ferramenta e, se necessário, [selecionar cores de primeiro plano e plano de fundo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) e opções de tamanho e forma. Você, em seguida, mova o ponteiro para a imagem e clique ou arraste para desenhar e apagar.  
+O **imagem** do freehand desenhar e apagar todos funcionam da mesma forma de ferramentas editor: selecione a ferramenta e, se necessário, [selecionar cores de primeiro plano e plano de fundo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) e opções de tamanho e forma. Você, em seguida, mova o ponteiro para a imagem e clique ou arraste para desenhar e apagar.  
   
  Quando você seleciona os **borracha** ferramenta, **pincel** ferramenta, ou **spray** ferramenta, o seletor de opção exibe opções da ferramenta.  
   

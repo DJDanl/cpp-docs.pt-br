@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bf7219b4e57c82beeace1545c10b643470c9aca
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c63ce7dc5dcd326de426c4e4738a11e24f93161c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603544"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015527"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Namespaces Plataforma, padrão e cli (Extensões de Componentes C++)
 Um namespace qualifica os nomes dos elementos da linguagem para que os nomes não entrem em conflito com nomes idênticos em outras áreas do código-fonte. Por exemplo, uma colisão de nomes pode impedir o compilador reconhecer [contextual as palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md). Os namespaces são usados pelo compilador, mas não preservados no assembly compilado.  
@@ -41,7 +41,7 @@ Um namespace qualifica os nomes dos elementos da linguagem para que os nomes nã
 ## <a name="common-language-runtime"></a>Common Language Runtime 
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 using namespace cli;  
 ```  
   

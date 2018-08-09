@@ -1,5 +1,5 @@
 ---
-title: Novo &lt;dispositivo&gt; imagem da caixa de diálogo de tipo (Editor de imagens para ícones) | Microsoft Docs
+title: Novos &lt;dispositivo&gt; caixa de diálogo (Editor de imagens para ícones) do tipo de imagem | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 966066be4dbbce5586860dd3bb6c99893094b6ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 579a74e24f0abb2af13f96a0e5171dada249c0cf
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879614"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019280"
 ---
-# <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Novo &lt;dispositivo&gt; imagem da caixa de diálogo de tipo (Editor de imagens para ícones)
-Permite que você crie uma nova imagem de dispositivo de um tipo especificado. Para abrir o **novo \<dispositivo > imagem** caixa de diálogo, clique em **novo tipo de imagem** no **imagem** menu.  
+# <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Novos &lt;dispositivo&gt; imagem da caixa de diálogo de tipo (Editor de imagens para ícones)
+Permite que você crie uma nova imagem de dispositivo de um tipo especificado. Para abrir o **New \<dispositivo > imagem** caixa de diálogo, clique em **novo tipo de imagem** sobre a **imagem** menu.  
   
- **Tipo de imagem de destino**  
- Lista os tipos de imagens disponíveis. Selecione o tipo de imagem que você deseja abrir:  
+### <a name="target-image-type"></a>Tipo de imagem de destino  
+ Lista os tipos de imagem disponível. Selecione o tipo de imagem que você deseja abrir:  
   
 ||||  
 |-|-|-|  
-|-16 x 16, 16 cores|-48 x 48, 16 cores|-96 x 96, 16 cores|  
-|-16 x 16, 256 cores|-48 x 48, 256 cores|-96 x 96, 256 cores|  
-|-16 x 16, monocromática|-48 x 48, monocromática|-96 x 96, monocromática|  
-|-32 x 32, 16 cores|-64 x64, 16 cores||  
-|-32 x 32, 256 cores|-64 x64, 256 cores||  
-|-32 x 32, monocromática|-64 x64, monocromática||  
+|– 16 x 16, 16 cores|-48 x 48, 16 cores|-96 x 96, 16 cores|  
+|– 16 x 16, 256 cores|-48 x 48, 256 cores|-96 x 96, 256 cores|  
+|– 16 x 16, monocromo|-48 x 48, monocromo|-96 x 96, monocromo|  
+|-32 x 32, 16 cores|-64 x 64, 16 cores||  
+|-32 x 32, 256 cores|-64 x 64, 256 cores||  
+|-32 x 32, monocromo|-64 x 64, monocromo||  
   
 > [!NOTE]
->  As imagens existentes não serão exibidas nessa lista.  
+>  Todas as imagens existentes não serão exibidas nessa lista.  
   
- **Personalizado**  
+### <a name="custom"></a>Personalizado  
  Abre o [caixa de diálogo imagem personalizada](custom-image-dialog-box-image-editor-for-icons.md) no qual você pode criar uma nova imagem com um tamanho personalizado e o número de cores.  
   
 ## <a name="requirements"></a>Requisitos  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93ced38ca30a2fd4a61bb3a3664967416fcaf599
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c21bb7cf58c3c397237768942d60f79958f3278a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603482"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013555"
 ---
 # <a name="include-c"></a>include (C++)
 Especifica um ou mais arquivos de cabeçalho a serem incluídos no arquivo. idl gerado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [ include(  
    header_file  
 ) ];  
@@ -45,7 +45,7 @@ Especifica um ou mais arquivos de cabeçalho a serem incluídos no arquivo. idl 
  O **incluem** atributo C++ tem a mesma funcionalidade que o [incluem](http://msdn.microsoft.com/library/windows/desktop/aa367052) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir mostra um exemplo de como usar **incluem**. Neste exemplo, o arquivo include.h contém apenas um #include instrução.  
+ O código a seguir mostra um exemplo de como usar **incluem**. Neste exemplo, o arquivo include.h contém apenas um `#include` instrução.  
   
 ```cpp  
 // cpp_attr_ref_include.cpp  

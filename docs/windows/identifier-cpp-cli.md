@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 14b68f573452d9ab8894027fd4d83c0b89f2ddf1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603339"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018355"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 Permite o uso de palavras-chave do Visual C++ como identificadores.  
@@ -31,7 +31,7 @@ Permite o uso de palavras-chave do Visual C++ como identificadores.
 ## <a name="all-platforms"></a>Todas as Plataformas  
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 __identifier(  
 Visual_C++_keyword  
 )  
@@ -49,7 +49,7 @@ Usar o **Identifier** palavra-chave para identificadores que não são palavras-
 ### <a name="examples"></a>Exemplos  
  **Exemplo**  
   
- No exemplo a seguir, uma classe chamada `template` é criado em c# e distribuído como uma DLL. No programa Visual C++ que usa o `template` classe, o **Identifier** palavra-chave oculta o fato de que **modelo** é uma palavra-chave C++ padrão.  
+ No exemplo a seguir, uma classe chamada **modelo** é criado em c# e distribuído como uma DLL. No programa Visual C++ que usa o **modelo** classe, o **Identifier** palavra-chave oculta o fato de que **modelo** é uma palavra-chave C++ padrão.  
   
 ```cs  
 // identifier_template.cs  
@@ -79,7 +79,7 @@ int main() {
   
 ### <a name="examples"></a>Exemplos  
   
- No exemplo a seguir, uma classe chamada `template` é criado em c# e distribuído como uma DLL. No programa Visual C++ que usa o `template` classe, o **Identifier** palavra-chave oculta o fato de que **modelo** é uma palavra-chave C++ padrão.  
+ No exemplo a seguir, uma classe chamada **modelo** é criado em c# e distribuído como uma DLL. No programa Visual C++ que usa o **modelo** classe, o **Identifier** palavra-chave oculta o fato de que **modelo** é uma palavra-chave C++ padrão.  
   
 ```cs  
 // identifier_template.cs  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa666c1a5de2962a4479b355966c1e8282f2989b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9667a3660f46db0a61991545108d66bf0cac9f38
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878275"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017790"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Namespace Microsoft::WRL::Wrappers
-Define os tipos de wrapper de inicialização de é de aquisição de recursos (RAII) que simplificam o gerenciamento de tempo de vida de objetos, cadeias de caracteres e identificadores.  
+Define os tipos de wrapper de recurso aquisição é a inicialização (RAII) que simplificam o gerenciamento de tempo de vida de objetos, cadeias de caracteres e identificadores.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Wrappers;  
 ```  
   
@@ -48,15 +48,15 @@ namespace Microsoft::WRL::Wrappers;
 |[Classe CriticalSection](../windows/criticalsection-class.md)|Representa um objeto de seção crítica.|  
 |[Classe Event (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](../windows/event-class-windows-runtime-cpp-template-library.md)|Representa um evento.|  
 |[Classe HandleT](../windows/handlet-class.md)|Representa um identificador para um objeto.|  
-|[Classe HString](../windows/hstring-class.md)|Fornece suporte para manipulação de identificadores HSTRING.|  
+|[Classe HString](../windows/hstring-class.md)|Fornece suporte para manipular identificadores de HSTRING.|  
 |[Classe HStringReference](../windows/hstringreference-class.md)|Representa um HSTRING que é criado a partir de uma cadeia de caracteres existente.|  
 |[Classe Mutex](../windows/mutex-class1.md)|Representa um objeto de sincronização que controla exclusivamente um recurso compartilhado.|  
 |[Classe RoInitializeWrapper](../windows/roinitializewrapper-class.md)|Inicializa o tempo de execução do Windows.|  
 |[Classe Semaphore](../windows/semaphore-class.md)|Representa um objeto de sincronização que controla um recurso compartilhado que pode dar suporte a um número limitado de usuários.|  
-|[Classe SRWLock](../windows/srwlock-class.md)|Representa um bloqueio de leitor/gravador.|  
+|[Classe SRWLock](../windows/srwlock-class.md)|Representa um bloqueio de leitor/gravador reduzido.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

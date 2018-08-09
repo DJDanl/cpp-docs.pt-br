@@ -1,5 +1,5 @@
 ---
-title: 'Método Hstring: | Microsoft Docs'
+title: 'Método hstring:: Get | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea2b36c6fd5ccfd8fa0429448fb3b7045762a461
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 67a8bf626d2e3f26a2f182f2e1f099f14d29b779
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881231"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013334"
 ---
 # <a name="hstringget-method"></a>Método HString::Get
-Recupera o valor do identificador HSTRING subjacente.  
+Recupera o valor do identificador subjacente de HSTRING.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HSTRING Get() const throw()  
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- O valor do identificador subjacente HSTRING  
+ O valor do identificador subjacente de HSTRING  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

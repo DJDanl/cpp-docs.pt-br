@@ -15,25 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20a05bf603b874d260c95c010e6f0e8312b35649
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 157512ee556126291427c3db6578788a477505a6
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570983"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016373"
 ---
 # <a name="hstringattach-method"></a>Método HString::Attach
 Associa a especificada **HString** objeto com o atual **HString** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 void Attach(  
        HSTRING hstr  
        ) throw()  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *HSTR*  
  Um existente **HString** objeto.  
   

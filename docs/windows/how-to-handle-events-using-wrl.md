@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 287fe57868f1550e2f778bd9122d0d350011084e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: eada53c74c967c4df093e094a611a726ef79d99d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570627"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012528"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>Como manipular eventos com WRL
 Este documento mostra como usar a biblioteca de modelos do Windows em tempo de execução C++ (WRL) para assinar e manipular os eventos de um objeto de tempo de execução do Windows.  
@@ -35,7 +35,7 @@ Este documento mostra como usar a biblioteca de modelos do Windows em tempo de e
   
      [!code-cpp[wrl-consume-event#2](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_1.cpp)]  
   
-     Windows.Devices.Enumeration.h declara os tipos que são necessárias para enumerar os dispositivos.  
+     `Windows.Devices.Enumeration.h` declara os tipos que são necessárias para enumerar os dispositivos.  
   
      É recomendável que você utilize o `using namespace` diretiva em seu arquivo. cpp para tornar o código mais legível.  
   
@@ -90,7 +90,7 @@ Este documento mostra como usar a biblioteca de modelos do Windows em tempo de e
  [!code-cpp[wrl-consume-event#1](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_10.cpp)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Para compilar o código, copiá-lo e, em seguida, cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `wrl-consume-events.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.  
+ Para compilar o código, copiá-lo e, em seguida, cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `wrl-consume-events.cpp` e, em seguida, execute o seguinte comando um **Prompt de comando do Visual Studio** janela.  
   
  `cl.exe wrl-consume-events.cpp runtimeobject.lib`  
   

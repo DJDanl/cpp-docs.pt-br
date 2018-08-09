@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e5d7144f7e2a6fa3bf6937a377ccad0a711f746
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 011cf954a0b111e46afcaf6e55a54914075864db
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647054"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014556"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 Informa ao chamador que se houver um erro ao chamar essa função, em seguida, o chamador pode, em seguida, chamar `GetLastError` para recuperar o código de erro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [usesgetlasterror]  
 ```  
   

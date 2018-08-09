@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6aae190e20776c252b7f40651d5c0bdb13111dab
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 21e6d35a555ecff327bcd4b68318c17da194cb41
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606244"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018329"
 ---
 # <a name="menu-editor"></a>Editor de menu
-Menus permitem organizar os comandos de forma lógica e fácil de encontrar. Com o editor de Menu, você pode criar e editar menus ao trabalhar diretamente com uma barra de menus que se assemelha do seu aplicativo concluído.  
+Menus permitem organizar os comandos de forma lógica e fácil de encontrar. Com o **Menu** editor, você pode criar e editar menus ao trabalhar diretamente com uma barra de menus que se assemelha do seu aplicativo concluído.  
   
-Para projetos do Visual C++, você pode usar o editor de Menu para:  
+Para projetos do Visual C++, você pode usar o **Menu** editor para:  
   
 -   [Criar Menus](../windows/creating-a-menu.md)  
   
@@ -59,10 +59,10 @@ Para projetos do Visual C++, você pode usar o editor de Menu para:
 -   [Alterar propriedades do comando de Menu](../windows/menu-command-properties.md)  
   
     > [!TIP]
-    >  Ao usar o editor de Menu, em muitos casos, você pode clicar no botão direito do mouse para exibir um menu pop-up de comandos usados com frequência. Os comandos disponíveis dependem do que o ponteiro estiver apontando para.  
+    >  Ao usar o **Menu** editor, em muitos casos, você pode clicar no botão direito do mouse para exibir um menu pop-up de comandos usados com frequência. Os comandos disponíveis dependem do que o ponteiro estiver apontando para.  
   
     > [!NOTE]
-    >  Para programas de biblioteca do Microsoft Foundation Class (MFC) e programas ATL, você pode usar assistentes de código para ligar comandos de menu ao código. Para obter mais informações, consulte [adicionando um evento](../ide/adding-an-event-visual-cpp.md).  
+    >  Para programas de biblioteca do Microsoft Foundation Class (MFC) e programas ATL, você pode usar **assistentes de código** conectem os comandos de menu ao código. Para obter mais informações, consulte [adicionando um evento](../ide/adding-an-event-visual-cpp.md).  
   
  Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   

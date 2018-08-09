@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3646e13818297b636a888e1ad00c998a120e8379
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 13c0ded165e7c1510f0112d9b3b9e93f2e356775
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643654"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015584"
 ---
 # <a name="semaphoresemaphore-constructor"></a>Construtor Semaphore::Semaphore
 Inicializa uma nova instância dos **semáforo** classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 explicit Semaphore(  
    HANDLE h  
 );  

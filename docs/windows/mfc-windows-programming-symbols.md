@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c4091853274d04d27eb060655650a071ea64d4c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f91622e4d795b7c85cdf6f304ed6a76dd5a9364
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882687"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012775"
 ---
 # <a name="mfc-windows-programming-symbols"></a>Símbolos de programação do Windows MFC
-Esses símbolos também são parte dos arquivos de suporte do MFC, mas eles oferecem suporte a ações e funções de aplicativo do Windows padrão. Esses símbolos são usados principalmente com menus. Quando você estiver trabalhando com menus no Editor de Menu, esses símbolos aparecerá na janela de propriedade associados a comandos de menu comuns. Por exemplo, se seu aplicativo tiver um menu de arquivo com um comando de saída, esse comando será associado com o símbolo ID_APP_EXIT no [janela propriedades](/visualstudio/ide/reference/properties-window).  
+Esses símbolos também são parte dos arquivos de suporte do MFC, mas eles oferecem suporte a ações e funções de aplicativo do Windows padrão. Esses símbolos são usados principalmente com menus. Quando você estiver trabalhando com menus na **Editor de Menu**, esses símbolos aparecerá na **janela propriedade** associados aos comandos de menu comuns. Por exemplo, se seu aplicativo tiver um **arquivo** menu com um **sair** de comando, que o comando será associado com o símbolo ID_APP_EXIT no [janela propriedades](/visualstudio/ide/reference/properties-window).  
   
 ||||  
 |-|-|-|  

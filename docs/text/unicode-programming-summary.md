@@ -15,39 +15,39 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a378d46c517dfc0fbb5857ad54bc31f4c34287b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65db0889b36cafa4b3942b7834229d1a7d9f5783
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859671"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010354"
 ---
 # <a name="unicode-programming-summary"></a>Resumo de programação Unicode
 Para aproveitar o suporte de tempo de execução MFC e C para Unicode, você precisa:  
   
--   Definir **Unicode**.  
+-   Definir `_UNICODE`.  
   
-     Definir o símbolo **Unicode** antes de criar seu programa.  
+     Defina o símbolo `_UNICODE` antes de compilar seu programa.  
   
 -   Especifique o ponto de entrada.  
   
-     Sobre o **saída** página da pasta vinculador do projeto [páginas de propriedade](../ide/property-pages-visual-cpp.md) caixa de diálogo caixa, defina o símbolo de ponto de entrada **wWinMainCRTStartup**.  
+     No **saída** página do **vinculador** pasta do projeto [páginas de propriedades](../ide/property-pages-visual-cpp.md) caixa de diálogo, defina o **ponto de entrada** símbolo a ser `wWinMainCRTStartup`.  
   
 -   Use tipos e funções de tempo de execução portátil.  
   
-     Use as funções apropriadas do tempo de execução C para manipulação de cadeia de caracteres Unicode. Você pode usar o **wcs** família de funções, mas você talvez prefira totalmente portátil (internacionalmente ativado) **TCHAR** macros. Essas macros são prefixadas com **_tcs**; eles substituem, um para um, para o **str** família de funções. Essas funções são descritas detalhadamente no [internacionalização](../c-runtime-library/internationalization.md) seção o *referência da biblioteca de tempo de execução*. Para obter mais informações, consulte [mapeamentos de texto genéricos em TCHAR. h](../text/generic-text-mappings-in-tchar-h.md).  
+     Use as funções de tempo de execução C apropriadas para manipulação de cadeia de caracteres Unicode. Você pode usar o `wcs` família de funções, mas você talvez prefira totalmente portátil (internacionalmente habilitado) `_TCHAR` macros. Essas macros são prefixadas com `_tcs`; eles substituem, um para um, para o `str` família de funções. Essas funções são descritas detalhadamente na [internacionalização](../c-runtime-library/internationalization.md) seção o *referência de biblioteca de tempo de execução*. Para obter mais informações, consulte [mapeamentos de texto genéricos em TCHAR. h](../text/generic-text-mappings-in-tchar-h.md).  
   
-     Use **TCHAR** e os tipos de dados portátil relacionados descritos na [suporte para Unicode](../text/support-for-unicode.md).  
+     Use `_TCHAR` e os tipos de dados portáteis relacionados descritos [suporte para Unicode](../text/support-for-unicode.md).  
   
--   Lidar corretamente com cadeias de caracteres literais.  
+-   Tratar corretamente cadeias de caracteres literais.  
   
-     O compilador do Visual C++ interpreta a cadeia de caracteres literal codificada como:  
+     O compilador do Visual C++ interpreta uma cadeia de caracteres literal, codificada como:  
   
     ```  
     L"this is a literal string"  
     ```  
   
-     como uma cadeia de caracteres Unicode. Você pode usar o mesmo prefixo de caracteres literal. Use o **t** macro codificar cadeias de caracteres literais genericamente, para que eles são compilados como cadeias de caracteres Unicode em Unicode ou como cadeias de caracteres ANSI (incluindo MBCS) sem Unicode. Por exemplo, em vez de:  
+     para indicar uma cadeia de caracteres Unicode. Você pode usar o mesmo prefixo para caracteres literais. Use o `_T` macro codificar cadeias de caracteres literais genericamente, portanto, eles são compilados como cadeias de caracteres Unicode em Unicode ou ANSI cadeias de caracteres (incluindo MBCS) sem Unicode. Por exemplo, em vez de:  
   
     ```  
     pWnd->SetWindowText( "Hello" );  
@@ -59,20 +59,20 @@ Para aproveitar o suporte de tempo de execução MFC e C para Unicode, você pre
     pWnd->SetWindowText( _T("Hello") );  
     ```  
   
-     Com **Unicode** definido, **t** converte a cadeia de caracteres literal para o formulário de prefixo L; caso contrário, **t** converte a cadeia de caracteres sem o prefixo L.  
+     Com o `_UNICODE` definidos, `_T` converte a cadeia de caracteres literal para o formulário com o prefixo L; caso contrário, `_T` converte a cadeia de caracteres sem o prefixo L.  
   
     > [!TIP]
-    >  O **t** macro é idêntica de `_TEXT` macro.  
+    >  O `_T` macro é idêntica de `_TEXT` macro.  
   
--   Tenha cuidado passando os comprimentos de cadeia de caracteres para funções.  
+-   Tenha cuidado passar comprimentos de cadeia de caracteres para funções.  
   
-     Algumas funções deseja que o número de caracteres em uma cadeia de caracteres; outros deseja que o número de bytes. Por exemplo, se **Unicode** for definida, a seguinte chamada para um `CArchive` objeto não funcionará (`str` é um `CString`):  
+     Algumas funções deseja que o número de caracteres em uma cadeia de caracteres; outros preferem o número de bytes. Por exemplo, se `_UNICODE` for definida, a seguinte chamada para um `CArchive` objeto não funcionará (`str` é um `CString`):  
   
     ```  
     archive.Write( str, str.GetLength( ) );    // invalid  
     ```  
   
-     Em um aplicativo de Unicode, o comprimento fornece o número de caracteres, mas não o número correto de bytes, porque cada caractere é de 2 bytes de largura. Em vez disso, você deve usar:  
+     Em um aplicativo Unicode, o comprimento fornece o número de caracteres, mas não o número correto de bytes, porque cada caractere é 2 bytes de largura. Em vez disso, você deve usar:  
   
     ```  
     archive.Write( str, str.GetLength( ) * sizeof( _TCHAR ) );    // valid  
@@ -80,25 +80,25 @@ Para aproveitar o suporte de tempo de execução MFC e C para Unicode, você pre
   
      que especifica o número correto de bytes a serem gravados.  
   
-     No entanto, as funções de membro MFC que são orientadas a caracteres, em vez de orientado a bytes, funcionarão sem ela extra de codificação:  
+     No entanto, as funções de membro MFC que são orientadas a caracteres, em vez de orientado a bytes, funcionam sem essa codificação extra:  
   
     ```  
     pDC->TextOut( str, str.GetLength( ) );  
     ```  
   
-     `CDC::TextOut` Obtém um número de caracteres, não é um número de bytes.  
+     `CDC::TextOut` usa um número de caracteres, não é um número de bytes.  
   
 -   Use [fopen_s, wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) para abrir arquivos Unicode.  
   
- Para resumir, MFC e a biblioteca de tempo de execução fornecem o seguinte suporte para programação Unicode:  
+ Para resumir, MFC e a biblioteca de tempo de execução fornecem o seguinte suporte de programação de Unicode:  
   
--   Exceto para funções de membro de classe de banco de dados, todas as funções MFC são habilitados para Unicode, incluindo `CString`. `CString` também fornece funções de conversão Unicode/ANSI.  
+-   Exceto para funções de membro de classe de banco de dados, todas as funções MFC são habilitados para Unicode, incluindo `CString`. `CString` também fornece funções de conversão de Unicode/ANSI.  
   
--   A biblioteca de tempo de execução fornece versões Unicode de todas as funções de manipulação de cadeia de caracteres. (A biblioteca de tempo de execução também fornece versões portátil adequadas para Unicode ou MBCS. Estes são os **_tcs** macros.)  
+-   A biblioteca de tempo de execução fornece versões Unicode de todas as funções de manipulação de cadeia de caracteres. (A biblioteca de tempo de execução também fornece versões portáveis adequadas para Unicode ou MBCS. Esses são os `_tcs` macros.)  
   
--   TCHAR. h fornece tipos de dados portátil e **t** macro para a conversão de caracteres e cadeias de caracteres literais. Para obter mais informações, consulte [mapeamentos de texto genéricos em TCHAR. h](../text/generic-text-mappings-in-tchar-h.md).  
+-   TCHAR. h fornece tipos de dados portáteis e o `_T` macro para converter cadeias de caracteres literais e caracteres. Para obter mais informações, consulte [mapeamentos de texto genéricos em TCHAR. h](../text/generic-text-mappings-in-tchar-h.md).  
   
--   A biblioteca de tempo de execução fornece uma versão de caractere largo de **principal**. Use **wmain** para tornar seu aplicativo com reconhecimento de Unicode.  
+-   A biblioteca de tempo de execução fornece uma versão de caractere largo de `main`. Use `wmain` para tornar seu aplicativo com reconhecimento de Unicode.  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte para Unicode](../text/support-for-unicode.md)

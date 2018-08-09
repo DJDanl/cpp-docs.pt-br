@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a0ed67c85cbd42985448ef9eb1806931d1c294f
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e16a00d83f7917cf21f114b2a80fa1ad55a90875
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015618"
 ---
 # <a name="security-best-practices-for-c"></a>Práticas recomendadas de segurança para C++
 
@@ -54,14 +55,14 @@ Este artigo contém informações sobre ferramentas e práticas de segurança. E
  A biblioteca em tempo de execução C (CRT) foi aumentada para incluir versões seguras das funções que oferecem risco de segurança — por exemplo, a função de cópia de cadeia de caracteres de `strcpy` não verificada. Como as versões anteriores e não seguras dessas funções estão preteridas, elas causam avisos de tempo de compilação. É recomendável usar as versões seguras dessas funções de CRT em vez de suprimir os avisos de compilação. Para obter mais informações, consulte [Recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md).  
   
 ## <a name="safeint-library"></a>Biblioteca de SafeInt  
- [Biblioteca de SafeInt](../windows/safeint-library.md) ajuda a evitar o estouro de inteiro e outros erros exploráveis que podem ocorrer quando o aplicativo executa operações matemáticas. O `SafeInt` biblioteca inclui o [classe SafeInt](../windows/safeint-class.md), o [classe SafeIntException](../windows/safeintexception-class.md)e várias [funções SafeInt](../windows/safeint-functions.md).  
+ [Biblioteca SafeInt](../windows/safeint-library.md) ajuda a impedir estouros de inteiro e outros erros exploráveis que podem ocorrer quando o aplicativo executa operações matemáticas. O `SafeInt` biblioteca inclui o [classe SafeInt](../windows/safeint-class.md), o [classe SafeIntException](../windows/safeintexception-class.md)e várias [funções SafeInt](../windows/safeint-functions.md).  
   
- A classe de `SafeInt` protege contra explorações de estouro de inteiro e de divisão por zero. Você pode usá-la para tratar comparações entre valores de tipos diferentes. I fornece duas políticas de tratamento de erro. A política padrão é que a classe `SafeInt` lance uma exceção da classe `SafeIntException` para relatar por que uma operação matemática não pode ser concluída. A segunda política é que a classe `SafeInt` interrompa a execução do programa. Você também pode definir uma política personalizada.  
+ A classe de `SafeInt` protege contra explorações de estouro de inteiro e de divisão por zero. Você pode usá-la para tratar comparações entre valores de tipos diferentes. Ele fornece duas políticas de tratamento de erro. A política padrão é que a classe `SafeInt` lance uma exceção da classe `SafeIntException` para relatar por que uma operação matemática não pode ser concluída. A segunda política é que a classe `SafeInt` interrompa a execução do programa. Você também pode definir uma política personalizada.  
   
  Cada função de `SafeInt` protege uma operação matemática contra um erro explorável. Você pode usar dois tipos diferentes de parâmetros sem convertê-los no mesmo tipo. Para proteger várias operações matemáticas, use a classe `SafeInt`.  
   
 ## <a name="checked-iterators"></a>Iteradores verificados  
- Um iterador verificado impõe limites do contêiner. Por padrão, quando um iterador verificado está fora dos limites, ele gera uma exceção e finaliza a execução do programa. Um iterador check fornece outros níveis de resposta que dependem de valores que são atribuídos para pré-processador define como  **\_seguro\_SCL\_lança** e  **\_ITERADOR\_depurar\_nível**. Por exemplo, no  **\_ITERADOR\_depurar\_LEVEL = 2**, um iterador check fornece exatidão abrangente verificações no modo de depuração, que ficam disponível usando declarações. Para obter mais informações, consulte [iteradores](../standard-library/checked-iterators.md) e [ \_ITERADOR\_depurar\_nível](../standard-library/iterator-debug-level.md).  
+ Um iterador verificado impõe limites do contêiner. Por padrão, quando um iterador verificado está fora dos limites, ele gera uma exceção e finaliza a execução do programa. Um iterador verificado fornece outros níveis de resposta que dependem de valores que são atribuídos para pré-processador como define  **\_SECURE\_SCL\_lança** e  **\_ITERADOR\_depurar\_nível**. Por exemplo, no  **\_ITERADOR\_DEBUG\_LEVEL = 2**, um iterador verificado fornece verificações da correção abrangente no modo de depuração, que são disponibilizadas por meio declara. Para obter mais informações, consulte [iteradores verificados](../standard-library/checked-iterators.md) e [ \_ITERADOR\_depurar\_nível](../standard-library/iterator-debug-level.md).  
   
 ## <a name="code-analysis-for-managed-code"></a>Análise de código para código gerenciado  
  A análise de código para código gerenciado, também conhecida como FxCop, verifica a conformidade dos assemblies de acordo com as diretrizes de design do .NET Framework. O FxCop analisa o código e os metadados de cada assembly para verificar se há falhas nestas áreas:  
@@ -93,13 +94,13 @@ Este artigo contém informações sobre ferramentas e práticas de segurança. E
   
 
 ## <a name="windows-user-accounts"></a>Contas de usuário do Windows  
- O uso de contas de usuário do Windows que pertencem ao grupo Administradores expõe os desenvolvedores e — por extensão — os clientes a riscos de segurança. Para obter mais informações, consulte [executando como um membro do grupo de usuários](running-as-a-member-of-the-users-group.md) e [como User Account Control (UAC) afeta seu aplicativo](how-user-account-control-uac-affects-your-application.md).
+ O uso de contas de usuário do Windows que pertencem ao grupo Administradores expõe os desenvolvedores e — por extensão — os clientes a riscos de segurança. Para obter mais informações, consulte [em execução como um membro do grupo de usuários](running-as-a-member-of-the-users-group.md) e [como User Account Control (UAC) afeta o seu aplicativo](how-user-account-control-uac-affects-your-application.md).
 
-## <a name="guidance-for-speculative-execution-side-channels"></a>Diretrizes para especulativo canais do lado de execução
+## <a name="guidance-for-speculative-execution-side-channels"></a>Diretrizes para canais do lado de execução especulativa
 
-Para obter informações sobre como identificar e atenuar as vulnerabilidades de hardware de canal execução especulativa lado no software de C++, consulte [diretrizes para desenvolvedores C++ para especulativo execução lado canais](developer-guidance-speculative-execution.md).
+Para obter informações sobre como identificar e atenuar vulnerabilidades de hardware de canal de lado de execução especulativa no software de C++, consulte [diretrizes para desenvolvedores de C++ para canais do lado de execução especulativo](developer-guidance-speculative-execution.md).
 
 ## <a name="see-also"></a>Consulte também  
-- <xref:System.Security>   
-- [Segurança](/dotnet/standard/security/index)   
-- [Como o UAC (Controle de Conta de Usuário) afeta o aplicativo](how-user-account-control-uac-affects-your-application.md)
+<xref:System.Security>   
+[Segurança](/dotnet/standard/security/index)   
+[Como o UAC (Controle de Conta de Usuário) afeta o aplicativo](how-user-account-control-uac-affects-your-application.md)

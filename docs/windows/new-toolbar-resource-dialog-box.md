@@ -17,22 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2024e9ea69bed58f679456bae6f0c566de6b99f9
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 33c63357f0816fbf0d89058d4151ea5785f6f35a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604099"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015014"
 ---
 # <a name="new-toolbar-resource-dialog-box"></a>Caixa de diálogo Novo Recurso da Barra de Ferramentas
-A caixa de diálogo novo recurso da barra de ferramentas permite que você especifique a largura e altura dos botões que você está adicionando a um recurso da barra de ferramentas. O padrão é 16 × 15 pixels.  
+O **novos recursos da barra de ferramentas** caixa de diálogo permite que você especifique a largura e altura dos botões que você está adicionando a um recurso da barra de ferramentas. O padrão é 16 × 15 pixels.  
   
  Um bitmap que é usado para criar uma barra de ferramentas tem uma largura máxima de 2048. Portanto, se você definir a **largura do botão** para 512, você só pode ter quatro botões. Se você definir a largura como 513, você só pode ter três botões.  
   
- **Largura do botão**  
+### <a name="button-width"></a>Largura do botão  
  Fornece um espaço para que você insira a largura para os botões de barra de ferramentas que você está convertendo de um recurso de bitmap para um recurso da barra de ferramentas. As imagens são cortadas para a largura e altura especificadas e as cores são ajustadas para usar cores da barra de ferramentas padrão (16 cores).  
   
- **Altura do botão**  
+### <a name="button-height"></a>Altura do botão  
  Fornece um espaço para que você insira a altura dos botões de barra de ferramentas que você está convertendo de um recurso de bitmap para um recurso da barra de ferramentas. As imagens são cortadas para a largura e altura especificadas e as cores são ajustadas para usar cores da barra de ferramentas padrão (16 cores).  
   
  Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  

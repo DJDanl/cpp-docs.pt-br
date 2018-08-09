@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ddcfe01ec5bd838a84ddad351f43802a8142b44
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2e2fd0863608f7e48d8ee2b296d1e1e76de6e541
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606095"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018475"
 ---
 # <a name="requirescategory"></a>requires_category
 Especifica as categorias de componente necessário da classe de destino.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [ requires_category(   
   requires_category  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *requires_category*  
  A ID da categoria necessária.  
   

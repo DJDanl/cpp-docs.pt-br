@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 51aec80ee24d96cf08d55778e108492d16ecfcc9
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: ed742d3762232846b2cac189978ea07c140b65f2
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606179"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012651"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (Extensões de Componentes C++)
 O **ref novos** palavra-chave agregação aloca uma instância de um tipo que é quando o objeto se torna inacessível e que retorna um identificador de coleta de lixo ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) para o objeto alocado.  
@@ -86,8 +86,6 @@ int main()
     return 0;  
 }  
 ```  
-  
- **Saída**  
   
 ```Output  
 32  

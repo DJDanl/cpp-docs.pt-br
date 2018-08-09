@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cbb36012d9a249669e3029c79dcf9c35bcdfc7a4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606508"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011572"
 ---
 # <a name="idlquote"></a>idl_quote
 Permite que você use construções IDL que não têm suporte na versão atual do Visual C++ e fazer com que eles passam para o arquivo. idl gerado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [ idl_quote(  
    text  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *text*  
  O nome do atributo que você pretende que o compilador do Visual C++ para passar para o arquivo. idl gerado sem retornar um erro do compilador.  
   
@@ -78,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- Esse código faz com que MYFLOT e MYDUB e o *texto* entrada a ser colocado no arquivo. idl gerado. O *nome* parâmetro força *texto* a ser colocado antes de qualquer coisa que faz referência *nome* no arquivo. idl gerado. O *dependências* parâmetro força as definições de lista de dependência a ser colocado antes *texto* no arquivo. idl gerado.  
+ Esse código causa `MYFLOT` e `MYDUB` e o *texto* entrada a ser colocado no arquivo. idl gerado. O *nome* parâmetro força *texto* a ser colocado antes de qualquer coisa que faz referência *nome* no arquivo. idl gerado. O *dependências* parâmetro força as definições de lista de dependência a ser colocado antes *texto* no arquivo. idl gerado.  
   
 ## <a name="requirements"></a>Requisitos  
   

@@ -16,15 +16,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13d01460e7ed9cb95d92303d82ea136803737331
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9bb362be360986371200c8cde292b3fff5acd7cd
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854646"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020181"
 ---
 # <a name="buffer-overflow"></a>Estouro de buffer
-Diversos tamanhos de caractere podem causar problemas quando caracteres são colocados em um buffer. Considere o código a seguir, que copia caracteres de uma cadeia de caracteres, `sz`, em um buffer, `rgch`:  
+Variados tamanhos de caractere podem causar problemas quando você coloca caracteres em um buffer. Considere o código a seguir, que copia caracteres de uma cadeia de caracteres, `sz`, em um buffer, `rgch`:  
   
 ```  
 cb = 0;  
@@ -32,7 +32,7 @@ while( cb < sizeof( rgch ) )
     rgch[ cb++ ] = *sz++;  
 ```  
   
- A pergunta é: foi o último byte copiado de um byte inicial? O exemplo a seguir não resolve o problema porque ele pode potencialmente estourar o buffer:  
+ A pergunta é: foi o último byte copiado de um byte inicial? A seguir não resolve o problema porque ele pode potencialmente estourar o buffer:  
   
 ```  
 cb = 0;  
@@ -44,7 +44,7 @@ while( cb < sizeof( rgch ) )
 }  
 ```  
   
- O `_mbccpy` chamada tenta realizar a ação correta — copie o caractere completo, se ele é de 1 ou 2 bytes. Mas ela não leva em consideração que o último caractere copiado pode não caber no buffer se o caractere for 2 bytes de largura. A solução correta é:  
+ O `_mbccpy` chamada tenta fazer a coisa correta — copiar o caractere completo, se ele é 1 ou 2 bytes. Mas ela não leva em consideração que o último caractere copiado pode não caber no buffer se o caractere é 2 bytes de largura. A solução correta é:  
   
 ```  
 cb = 0;  
@@ -56,7 +56,7 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }  
 ```  
   
- Esse código de testes de estouro de buffer possíveis no loop de teste, usando `_mbclen` para testar o tamanho do caractere atual apontado pelo `sz`. Fazendo uma chamada para o `_mbsnbcpy` função, você pode substituir o código de `while` loop com uma única linha de código. Por exemplo:  
+ Esse código testa estouro de buffer possível no loop de teste, usando `_mbclen` para testar o tamanho do caractere atual apontado pelo `sz`. Fazendo uma chamada para o `_mbsnbcpy` função, você pode substituir o código em de **enquanto** loop com uma única linha de código. Por exemplo:  
   
 ```  
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );  

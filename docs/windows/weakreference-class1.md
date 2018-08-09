@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71de341be0cb482a49cbf35ddd34e414be8afde4
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 78b9a62838508c2e97bdd04f56778a622343e6f1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645536"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012284"
 ---
 # <a name="weakreference-class1"></a>WeakReference Class1
 Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 class WeakReference;  
 ```  
   

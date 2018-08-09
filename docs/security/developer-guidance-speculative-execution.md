@@ -18,20 +18,20 @@ author: mamillmsft
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c355924ce1f264ce63e02f5fda948a62675e675
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: abf51432e5803de001610da07d97d5bad1796085
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38102459"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018839"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Diretrizes para desenvolvedores de C++ para canais do lado de execução especulativa
 
-Este artigo contém diretrizes para desenvolvedores para ajudá-lo a identificar e atenuar a execução especulativa lado canal hardware as vulnerabilidades no software de C++. Essas vulnerabilidades podem revelar informações confidenciais entre limites de confiança e podem afetar o software que é executado em processadores que dão suporte à execução especulativa, fora de ordem de instruções. Essa classe de vulnerabilidades foi primeiro descrito em janeiro de 2018 e plano de fundo adicional e diretrizes que podem ser encontradas no [comunicado de segurança da Microsoft](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002).
+Este artigo contém diretrizes para desenvolvedores para ajudá-lo a identificar e atenuar a execução especulativa lado canal hardware as vulnerabilidades no software de C++. Essas vulnerabilidades podem revelar informações confidenciais entre limites de confiança e podem afetar o software que é executado em processadores que dão suporte à execução especulativa, fora de ordem de instruções. Essa classe de vulnerabilidades foi primeiro descrito em janeiro de 2018 e plano de fundo adicional e diretrizes que podem ser encontradas no [comunicado de segurança da Microsoft](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002).
 
 A orientação fornecida por este artigo está relacionada às classes de vulnerabilidades representadas por:
 
-1. CVE-2017-5753, também conhecido como variante Spectre 1. Essa classe de vulnerabilidade de hardware está relacionado aos canais de lado que podem surgir devido a execução especulativa que ocorre como resultado um misprediction ramificação condicional. O compilador do Visual C++ no Visual Studio 2017 (começando com a versão 15.5.5) inclui suporte para o `/Qspectre` switch que fornece uma redução do tempo de compilação para um conjunto limitado de padrões de codificação potencialmente vulnerável relacionados para CVE 2017-5753. A documentação para o [/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) sinalizador fornece mais informações sobre o seu uso e efeitos. 
+1. CVE-2017-5753, também conhecido como variante Spectre 1. Essa classe de vulnerabilidade de hardware está relacionado aos canais de lado que podem surgir devido a execução especulativa que ocorre como resultado um misprediction ramificação condicional. O compilador do Visual C++ no Visual Studio 2017 (começando com a versão 15.5.5) inclui suporte para o `/Qspectre` switch que fornece uma redução do tempo de compilação para um conjunto limitado de padrões de codificação potencialmente vulnerável relacionados para CVE 2017-5753. A documentação para o [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) sinalizador fornece mais informações sobre o seu uso e efeitos. 
 
 2. CVE-2018-3639, também conhecido como [especulativa Store Bypass (SSB)](https://aka.ms/sescsrdssb). Essa classe de vulnerabilidade de hardware está relacionado aos canais de lado que podem surgir devido à execução especulativa de uma carga à frente de um repositório dependente como resultado um misprediction de acesso de memória.
 
@@ -184,7 +184,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-Observe que ambos os exemplos envolvem modificação especulativa de ponteiros de branch indireta alocada na pilha. É possível que a modificação especulativa também pode ocorrer para variáveis globais, a memória alocada no heap e até mesma memória somente leitura em algumas CPUs. Para a memória alocada na pilha, o compilador do Visual C++ já toma medidas para tornar mais difícil modificar forma especulativa destinos de ramificação indireta alocada na pilha, como a reordenação de variáveis locais, de modo que os buffers serão colocadas adjacentes para um cookie de segurança como parte dos [/GS](https://docs.microsoft.com/en-us/cpp/build/reference/gs-buffer-security-check) recurso de segurança do compilador.
+Observe que ambos os exemplos envolvem modificação especulativa de ponteiros de branch indireta alocada na pilha. É possível que a modificação especulativa também pode ocorrer para variáveis globais, a memória alocada no heap e até mesma memória somente leitura em algumas CPUs. Para a memória alocada na pilha, o compilador do Visual C++ já toma medidas para tornar mais difícil modificar forma especulativa destinos de ramificação indireta alocada na pilha, como a reordenação de variáveis locais, de modo que os buffers serão colocadas adjacentes para um cookie de segurança como parte dos [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) recurso de segurança do compilador.
 
 ## <a name="speculative-type-confusion"></a>Confusão de tipo especulativo
 
@@ -368,6 +368,6 @@ Outra técnica que pode ser usada para atenuar as vulnerabilidades de canal late
 
 ## <a name="see-also"></a>Consulte também
 
-[Orientações para atenuar as vulnerabilidades de canal lateral de execução especulativa](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)
+[Orientações para atenuar as vulnerabilidades de canal lateral de execução especulativa](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)
 
 [Atenuar as vulnerabilidades de execução especulativa lado canal hardware](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

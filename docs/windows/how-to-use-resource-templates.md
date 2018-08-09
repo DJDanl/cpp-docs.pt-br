@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da0d33c51fa50c7291eaa6421e9b857cd6f82d36
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b0a123c336df3f47550f8bb825a621eff53a8cb5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569450"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015540"
 ---
 # <a name="how-to-use-resource-templates"></a>Como usar modelos de recurso
 Um modelo de recurso é um recurso personalizado que você salvou como um arquivo. rct. Um modelo de recursos, em seguida, pode servir como um ponto de partida para a criação de outros recursos. Modelos de recursos economizar tempo no desenvolvimento de recursos adicionais ou grupos de recursos que compartilha recursos, como controles padrão e outros elementos repetidos. Por exemplo, talvez você queira incluir um botão de Ajuda e o ícone de um logotipo da empresa em várias caixas de diálogo. Para fazer tão rapidamente, criar um novo modelo de caixa de diálogo e personalizá-lo com o logotipo e o botão Ajuda.  
@@ -46,7 +46,7 @@ Um modelo de recurso é um recurso personalizado que você salvou como um arquiv
   
 4.  Forneça um nome e local para o novo arquivo. rct e clique em **aberto**.  
   
-5.  O novo arquivo. rct é adicionado ao seu projeto e é exibido no Gerenciador de soluções sob a **recursos** pasta.  
+5.  O novo arquivo. rct é adicionado ao seu projeto e aparece na **Gerenciador de soluções** sob o **recursos** pasta.  
   
      Você pode agora duas vezes no arquivo. rct para abri-lo em uma janela de documento, e em seguida, adicionar recursos a ele (o arquivo na janela do documento com o botão direito e escolha **adicionar recurso** no menu de atalho). Em seguida, você pode personalizar esses recursos e salve o arquivo. rct.  
   
@@ -76,7 +76,6 @@ Um modelo de recurso é um recurso personalizado que você salvou como um arquiv
  Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*.  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  

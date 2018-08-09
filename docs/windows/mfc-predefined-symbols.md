@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd65b4294443de9f367ecc5a4ea64b524aabb4a2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 068fcf9e4cfb45bb3d20d54df69d5b4bceb7cd53
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882054"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018488"
 ---
 # <a name="mfc-predefined-symbols"></a>Símbolos predefinidos MFC
-Projetos MFC sempre incluem vários arquivos de cabeçalho que dão suporte ao windows. Eles são adicionados por meio de #include instruções no arquivo de Stdafx. H:  
+Projetos MFC sempre incluem vários arquivos de cabeçalho que dão suporte ao windows. Elas são adicionadas por meio `#include` instruções o `StdAfx.h` arquivo:  
   
-```  
+```cpp  
 #include <afxwin.h>      //MFC core and standard components  
 #include <afxext.h>      //MFC extensions  
 #include <afxdisp.h      //MFC automation classes  
@@ -186,7 +186,7 @@ Projetos MFC sempre incluem vários arquivos de cabeçalho que dão suporte ao w
 |AFX_IDS_INVALID_DATETIMESPAN|AFX_IDS_ITALIC|  
 |AFX_IDS_LINKSOURCE_FORMAT|AFX_IDS_MANUAL|  
 |AFX_IDS_MDICHILD|AFX_IDS_MEMORY_EXCEPTION|  
-|AFX_IDS_METAFILE_FORMAT|AFX_IDS_MINI-FONTE|  
+|AFX_IDS_METAFILE_FORMAT|FONTE AFX_IDS_MINI|  
 |AFX_IDS_NOT_DOCOBJECT|EXCEÇÃO AFX_IDS_NOT_SUPPORTED_|  
 |AFX_IDS_OBJ_TITLE_INPLACE|AFX_IDS_OBJECT_MENUITEM|  
 |AFX_IDS_OCC_SCALEUNITS_PIXELS|AFX_IDS_ONEPAGE|  
@@ -221,5 +221,5 @@ Projetos MFC sempre incluem vários arquivos de cabeçalho que dão suporte ao w
  MFC  
   
 ## <a name="see-also"></a>Consulte também  
- [IDs de símbolo predefinido](../windows/predefined-symbol-ids.md)   
+ [IDs de símbolos predefinidos](../windows/predefined-symbol-ids.md)   
  [Símbolos: identificadores de recursos](../windows/symbols-resource-identifiers.md)

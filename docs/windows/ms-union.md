@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c20b795231cad936f30ef329f015b6ff691aa0d3
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 52e91e8084b1f055002aba7c2f544002d31feffc
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606693"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020233"
 ---
 # <a name="msunion"></a>ms_union
 Controla o alinhamento de representação de dados de rede de uniões nonencapsulated.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [ms_union]  
 ```  
   

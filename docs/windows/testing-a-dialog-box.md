@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf9e5e24e77a14b3baf86c1b83d653dd833ebbbb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 307b5ffeeaa21b4cb90779a9d516229bf2ab3167
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652063"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019672"
 ---
 # <a name="testing-a-dialog-box"></a>Testando uma caixa de diálogo
 Quando você estiver criando uma caixa de diálogo, você pode simular e testar seu comportamento de tempo de execução sem compilar seu programa. Nesse modo, você pode:  
@@ -42,7 +42,7 @@ Quando você estiver criando uma caixa de diálogo, você pode simular e testar 
   
 ### <a name="to-test-a-dialog-box"></a>Para testar uma caixa de diálogo  
   
-1.  Quando o editor de caixa de diálogo é a janela ativa, na barra de menus, escolha **formato**, **caixa de diálogo de teste**.  
+1.  Quando o **caixa de diálogo** editor é a janela ativa, na barra de menus, escolha **formato** > **caixa de diálogo de teste**.  
   
 2.  Para encerrar a simulação, pressione **Esc**, ou basta escolher o **fechar** botão na caixa de diálogo que você está testando.  
   

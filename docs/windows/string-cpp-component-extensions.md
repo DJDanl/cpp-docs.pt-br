@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c60edae6e4eaf7cef3841a1ac03dea414f298b6a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9d7717c8449dd1a9271878aa51571180b85584d1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645987"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017910"
 ---
 # <a name="string--c-component-extensions"></a>Cadeia de caracteres (Extensões de Componentes C++)
 O compilador de Visual C++ oferece suporte ao *cadeias de caracteres*, que são objetos que representam o texto como uma sequência de caracteres. Visual C++ oferece suporte a variáveis de cadeia de caracteres, cujo valor é implícito, e literais, cujo valor é uma cadeia de caracteres entre aspas explícita.  
@@ -135,8 +135,6 @@ int main() {
 }  
 ```  
   
- **Saída**  
-  
 ```Output  
 abcdef  
   
@@ -213,8 +211,6 @@ int main() {
 }  
 ```  
   
- **Saída**  
-  
 ```Output  
 overloaded +(String ^ a, String ^ b)   
   
@@ -265,8 +261,6 @@ int main() {
    func3("string" + "string");   // returns System::String  
 }  
 ```  
-  
- **Saída**  
   
 ```Output  
 char *  

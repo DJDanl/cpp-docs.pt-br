@@ -21,29 +21,29 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e4d7b067daedcbc5ce065c096e561dbf932ac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a3b8a47e70efa3268ae9b36eda311d267be2ded
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856590"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018923"
 ---
 # <a name="internationalization-strategies"></a>Estratégias de internacionalização
-Dependendo dos sistemas operacionais de destino e mercados, você tem várias estratégias de internacionalização:  
+Dependendo de seus sistemas operacionais de destino e os mercados, você tem várias estratégias de internacionalização:  
   
 -   Seu aplicativo usa o Unicode.  
   
-     Você usa a funcionalidade específica do Unicode e todos os caracteres são 16 bits de largura (embora você pode usar caracteres ANSI em algumas partes do seu programa para fins especiais). A biblioteca de tempo de execução do C fornece tipos de dados, funções e macros para programação somente Unicode. MFC é totalmente habilitado para Unicode.  
+     Você usa funcionalidade específica do Unicode e todos os caracteres são 16 bits de largura (embora você pode usar caracteres ANSI em algumas partes do seu programa para fins especiais). A biblioteca de tempo de execução C fornece os tipos de funções, macros e dados para programação somente Unicode. O MFC é totalmente habilitado para Unicode.  
   
--   Seu aplicativo usa MBCS e pode ser executado em qualquer plataforma Win32.  
+-   Seu aplicativo usa MBCS e pode ser executado em qualquer plataforma de Win32.  
   
-     Você usar a funcionalidade específica de MBCS. Cadeias de caracteres podem conter caracteres de byte único, caracteres de byte duplo ou ambos. A biblioteca de tempo de execução do C fornece tipos de dados, funções e macros para programação de MBCS. MFC é totalmente habilitado MBCS.  
+     Você usar a funcionalidade específica do MBCS. Cadeias de caracteres podem conter caracteres de byte único, os caracteres de byte duplo ou ambos. A biblioteca de tempo de execução C fornece os tipos de funções, macros e dados para programação de MBCS. O MFC é totalmente habilitado MBCS.  
   
--   O código-fonte para o seu aplicativo é gravado para portabilidade completa — através da recompilação com o símbolo **Unicode** ou o símbolo **MBCS** definido, você pode gerar versões que usam um. Para obter mais informações, consulte [mapeamentos de texto genéricos em TCHAR. h](../text/generic-text-mappings-in-tchar-h.md).  
+-   O código-fonte para o seu aplicativo é escrito para portabilidade completa — por meio da recompilação com o símbolo `_UNICODE` ou o símbolo `_MBCS` definido, você pode produzir as versões que usam qualquer um. Para obter mais informações, consulte [mapeamentos de texto genéricos em TCHAR. h](../text/generic-text-mappings-in-tchar-h.md).  
   
-     Use o totalmente portáteis C Runtime funções, macros e tipos de dados. Flexibilidade do MFC oferece suporte a um dos seguintes métodos.  
+     Use o totalmente portáteis C Runtime funções, macros e tipos de dados. Flexibilidade do MFC dá suporte a qualquer uma dessas estratégias.  
   
- O restante desses tópicos se concentrar em escrever código totalmente portáteis que você pode criar como Unicode ou MBCS.  
+ O restante desses tópicos se concentrar em escrever código totalmente portáteis que podem ser compilados como Unicode ou MBCS.  
   
 ## <a name="see-also"></a>Consulte também  
  [Unicode e MBCS](../text/unicode-and-mbcs.md)   

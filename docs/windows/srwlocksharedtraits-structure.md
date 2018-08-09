@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c606a1a7d32a02442e767a31543a76a4dccf295e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: db9a16671be21b2df7a4ce4f9d87a8b66e097e33
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652468"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020142"
 ---
 # <a name="srwlocksharedtraits-structure"></a>Estrutura SRWLockSharedTraits
 Descreve características comuns do `SRWLock` classe no modo de bloqueio compartilhado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 struct SRWLockSharedTraits;  
 ```  
   

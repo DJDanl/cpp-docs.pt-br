@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 508c9a5d34fa8e9c4fa339e9917ae069874159ad
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 351e0755f786e69da1dea6a925b7afc7cb6d6bf1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608372"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011634"
 ---
 # <a name="iidppvargshelper-function"></a>Função IID_PPV_ARGS_Helper
 Verifica se o tipo do argumento especificado deriva o `IUnknown` interface.  
@@ -32,14 +32,14 @@ Verifica se o tipo do argumento especificado deriva o `IUnknown` interface.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 template<typename T>  
 void** IID_PPV_ARGS_Helper(  
    _Inout_ Microsoft::WRL::Details::ComPtrRef<T> pp  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *T*  
  O tipo do argumento *pp*.  
   

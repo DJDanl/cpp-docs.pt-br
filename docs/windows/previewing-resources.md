@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ff41dd0aad30382eb5229679054a74526652737
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8393988bf6d831c8b9718d6685785d523303f3fa
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605013"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016399"
 ---
 # <a name="previewing-resources"></a>Visualizando recursos
 Visualizando seus recursos permite que você exiba recursos gráficos sem abri-los. Visualização também é útil para executáveis depois que você tenha compilado-los porque os identificadores de recurso Alterar para números. Pois esses identificadores numéricos geralmente não fornecem informações suficientes, visualizando os recursos ajuda a identificar rapidamente-los.  
@@ -48,9 +48,10 @@ Visualizando seus recursos permite que você exiba recursos gráficos sem abri-l
   
 ### <a name="to-preview-resources"></a>Para visualizar os recursos  
   
-1.  Na [exibição de recurso](../windows/resource-view-window.md) ou uma janela de documento, selecione o recurso, por exemplo, IDD_ABOUTBOX.  
+1.  Na [exibição de recurso](../windows/resource-view-window.md) ou uma janela de documento, selecione o recurso, por exemplo, **IDD_ABOUTBOX**.  
   
-     **Observação** se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+     > [!NOTE]
+     > Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
 2.  No [janela de propriedades](/visualstudio/ide/reference/properties-window), clique no **páginas de propriedade** botão.  
   
@@ -58,12 +59,11 @@ Visualizando seus recursos permite que você exiba recursos gráficos sem abri-l
   
 3.  Sobre o **modo de exibição** menu, clique em **páginas de propriedade**.  
   
-     A página de propriedades para o recurso é aberto exibindo uma visualização desse recurso. Você pode use cima e para baixo as teclas de direção para navegar o controle de árvore no modo de exibição de recursos ou na janela de documento. A página de propriedades será permanecer aberta e mostrará a qualquer recurso que tem o foco e é capaz de ser visualizado.  
+     O **página de propriedades** para o recurso será aberta exibindo uma visualização desse recurso. Em seguida, você pode usar o **para cima** e **para baixo** teclas de direção para navegar na árvore de controle na **exibição de recurso** ou a janela do documento. O **página de propriedades** será permanecer aberta e mostrará a qualquer recurso que tem o foco e é capaz de ser visualizado.  
   
  Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos 
-  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  

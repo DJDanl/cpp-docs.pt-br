@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 436ceb757f9cce5e1436b13f2d32a331295f4bf6
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9eeaacf95040f0f7e2ee435a7fbed2c173076315
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608606"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014907"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Incluindo símbolos compartilhados (somente leitura) ou calculados
 Na primeira vez em que o ambiente de desenvolvimento lê um arquivo de recurso criado por outro aplicativo, ele marca todos os arquivos de cabeçalho incluídos como somente leitura. Posteriormente, você pode usar o [caixa de diálogo recurso inclui](../windows/resource-includes-dialog-box.md) para adicionar arquivos de cabeçalho de símbolo somente leitura adicionais.  
@@ -37,7 +37,7 @@ Na primeira vez em que o ambiente de desenvolvimento lê um arquivo de recurso c
   
  Você também pode usar arquivos de símbolo incluídos quando você tiver recursos existentes com as definições de símbolo que usam expressões em vez de inteiros simples para definir o valor de símbolo. Por exemplo:  
   
-```  
+```cpp  
 #define   IDC_CONTROL1 2100  
 #define   IDC_CONTROL2 (IDC_CONTROL1+1)  
 ```  
@@ -60,9 +60,9 @@ Na primeira vez em que o ambiente de desenvolvimento lê um arquivo de recurso c
     > [!NOTE]
     >  Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  No **diretivas de símbolo somente leitura** caixa, use o **#include** diretiva do compilador para especificar o arquivo onde você deseja que os símbolos somente leitura sejam mantidos.  
+2.  No **diretivas de símbolo somente leitura** caixa, use o `#include` diretiva do compilador para especificar o arquivo onde você deseja que os símbolos somente leitura sejam mantidos.  
   
-     Não chame o arquivo Resource. h, já que é o nome de arquivo normalmente usado pelo arquivo de cabeçalho de símbolo principal.  
+     Não chame o arquivo `Resource.h`, já que é o nome de arquivo normalmente usado pelo arquivo de cabeçalho de símbolo principal.  
   
     > [!NOTE]
     >  **Importante** o que você digita na caixa de diretivas de símbolo somente leitura está incluído no arquivo de recurso exatamente conforme você o digita. Certifique-se de que você digitou não contém erros de ortografia ou de sintaxe.  
@@ -76,7 +76,6 @@ Na primeira vez em que o ambiente de desenvolvimento lê um arquivo de recurso c
 4.  Clique em **OK**.  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  

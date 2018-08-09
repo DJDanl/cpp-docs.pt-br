@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 993031604469aa09608f936f260869a3b53dbc9c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 674a7dced019926e6ea07b41641eb42db70c45a0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652764"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013474"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>Método SRWLock::TryLockExclusive
 Tenta adquirir um **SRWLock** objeto no modo exclusivo para o atual ou especificada **SRWLock** objeto. Se a chamada for bem-sucedida, o thread de chamada assume a propriedade do bloqueio.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 SyncLockExclusive TryLockExclusive();  
   
 static SyncLockExclusive TryLockExclusive(  

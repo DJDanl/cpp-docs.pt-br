@@ -17,21 +17,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa7f1a88627cc3547e6d6f4028de4abef73bf181
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a197be0032c4ad42574418a153bba079366e396
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890419"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015905"
 ---
 # <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>Caixa de diálogo Fonte da Ferramenta de Texto (editor de imagens para ícones)
-Especifica as configurações de fonte, quando você usar o [caixa de diálogo Ferramenta de texto](../windows/text-tool-dialog-box-image-editor-for-icons.md) do [Editor de imagem](../windows/image-editor-for-icons.md).  
+Especifica as configurações de fonte quando você usar o [caixa de diálogo Ferramenta de texto](../windows/text-tool-dialog-box-image-editor-for-icons.md) da [Editor de imagens](../windows/image-editor-for-icons.md).  
   
- Use essa caixa de diálogo:  
+ Use essa caixa de diálogo para:  
   
--   [Alterar a fonte do texto em uma imagem](../windows/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)  
+-   [Alterando a fonte do texto em uma imagem](../windows/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)  
   
- Para acessar essa caixa de diálogo, clique o **fonte** botão na caixa de diálogo Ferramenta de texto.  
+ Para acessar essa caixa de diálogo, clique o **Font** botão na **ferramenta texto** caixa de diálogo.  
   
  **Fonte**  
  Lista as fontes disponíveis.  
@@ -53,4 +53,3 @@ Especifica as configurações de fonte, quando você usar o [caixa de diálogo F
   
 ## <a name="see-also"></a>Consulte também  
  [Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)
-

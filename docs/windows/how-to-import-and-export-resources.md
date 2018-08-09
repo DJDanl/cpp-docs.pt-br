@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49cdee9cfed3b5694fcea899b9250c5f9dd214b7
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: e912e2aaae53fa0c7f9e506ce70128238bf15a78
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570474"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018410"
 ---
 # <a name="how-to-import-and-export-resources"></a>Como importar e exportar recursos
 Você pode importar recursos gráficos (bitmaps, ícones, cursores e barras de ferramentas), arquivos HTML e recursos personalizados para uso no Visual C++. Você pode exportar os mesmos tipos de arquivos de um projeto do Visual C++ para separar os arquivos que podem ser usados fora do ambiente de desenvolvimento.  
@@ -64,7 +64,6 @@ Você pode importar recursos gráficos (bitmaps, ícones, cursores e barras de f
 4.  Navegue até a pasta onde deseja salvar o arquivo e clique em **exportar**.  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  

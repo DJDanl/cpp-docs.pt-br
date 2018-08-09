@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6fe449842cc019520a3d73528db05a26b17dcd99
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641454"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011556"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime e Modelos Gerenciados (Extensões de Componentes C++)
 Modelos permitem que você defina um protótipo de um tempo de execução do Windows ou o tipo common language runtime e, em seguida, criar uma instância de variações desse tipo por meio de parâmetros de tipo de modelo diferente.  
@@ -44,7 +44,7 @@ Modelos permitem que você defina um protótipo de um tempo de execução do Win
   
 ### <a name="examples"></a>Exemplos  
   
- É possível criar uma instância de um tipo genérico com um parâmetro de modelo do tipo gerenciado, mas você não pode instanciar um modelo gerenciado com um parâmetro de modelo de tipo genérico.  Isso ocorre porque os tipos genéricos são resolvidos em tempo de execução.  Para obter mais informações, consulte [genéricos e modelos (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
+ É possível criar uma instância de um tipo genérico com um parâmetro de modelo do tipo gerenciado, mas você não pode instanciar um modelo gerenciado com um parâmetro de modelo de tipo genérico. Isso ocorre porque os tipos genéricos são resolvidos em tempo de execução. Para obter mais informações, consulte [genéricos e modelos (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
   
 ```cpp  
 // managed_templates.cpp  
@@ -77,7 +77,7 @@ template<class T> public ref class R {
 };  
 ```  
   
- Você não pode acessar modelos definidos em um assembly referenciado com C + + / sintaxe de linguagem da CLI, mas você pode usar a reflexão.  Se um modelo não é instanciado, ele não é emitido nos metadados.  Se um modelo é instanciado, apenas as funções de membro referenciado serão exibido nos metadados.  
+ Você não pode acessar modelos definidos em um assembly referenciado com C + + / sintaxe de linguagem da CLI, mas você pode usar a reflexão. Se um modelo não é instanciado, ele não é emitido nos metadados. Se um modelo é instanciado, apenas as funções de membro referenciado serão exibido nos metadados.  
   
 ```cpp  
 // managed_templates_3.cpp  

@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a9360a7b0ce0596e9fb1bffb71864526cf92e5c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e73b11ae5a29289c44bf762082397dd4ed4f826
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875013"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016685"
 ---
 # <a name="moduleobjectcount-data-member"></a>Membro de dados Module::objectCount_
-Mantém o controle das classes quantos foram criados com o [fazer](../windows/make-function.md) função.  
+Mantém o controle de quantas classes foram criadas com o [tornar](../windows/make-function.md) função.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 volatile long objectCount_;  
 ```  
   

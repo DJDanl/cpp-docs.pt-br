@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed35392180d0531133413a54ca2190ed65519546
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 8da6d316050120e6eaac31b12998e5dbf0f3a012
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570568"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020259"
 ---
 # <a name="how-to-create-a-resource-script-file"></a>Como criar um arquivo de script de recurso
 > [!NOTE]
->  O Editor de recurso não está disponível nas edições Express.  
+>  O **Editor de recurso** não está disponível nas edições Express.  
 >   
 >  Este material se aplica a aplicativos de área de trabalho do Windows. Projetos em linguagens .NET não usem arquivos de script de recurso. Ver [arquivos de recurso](../windows/resource-files-visual-studio.md), para obter mais informações.  
   
 ### <a name="to-create-a-new-resource-script-rc-file"></a>Para criar um novo arquivo de script (. rc) do recurso  
   
-1.  Colocar o foco na sua pasta de projeto existente no **Gerenciador de soluções**, por exemplo, "MyProject."  
+1.  Colocar o foco na sua pasta de projeto existente no **Gerenciador de soluções**, por exemplo, `MyProject`.  
   
     > [!NOTE]
-    >  Não confunda a pasta do projeto com a pasta de solução no Gerenciador de soluções. Se você colocar o foco a **solução** pasta, suas escolhas no **Adicionar Novo Item** caixa de diálogo (na etapa 3) será diferente.  
+    >  Não confunda a pasta do projeto com a pasta da solução no **Gerenciador de soluções**. Se você colocar o foco a **solução** pasta, suas escolhas no **Adicionar Novo Item** caixa de diálogo (na etapa 3) será diferente.  
   
-2.  Sobre o **Project** menu, clique em **Adicionar Novo Item**.  
+2.  No menu **Projeto**, clique em **Adicionar Novo Item**.  
   
 3.  No **Adicionar Novo Item** caixa de diálogo, clique o **Visual C++** pasta, em seguida, escolha **arquivo de recurso (. rc)** no painel direito.  
   
@@ -48,10 +48,8 @@ ms.locfileid: "39570568"
 > [!NOTE]
 >  Você só pode adicionar um script de recurso (arquivo. rc) a um projeto existente que é carregado no IDE do Visual Studio. Você não pode criar um arquivo. rc autônomo (fora do projeto um). [Modelos de recursos](../windows/how-to-use-resource-templates.md) (arquivos. rct) podem ser criados a qualquer momento.
 
-
-## <a name="requirements"></a>Requisitos  
-  
-Win32  
+## <a name="requirements"></a>Requisitos    
+ Win32  
   
 ## <a name="see-also"></a>Consulte também  
  [Arquivos de recurso](../windows/resource-files-visual-studio.md)   

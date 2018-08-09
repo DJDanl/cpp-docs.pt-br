@@ -1,5 +1,5 @@
 ---
-title: Suporte MBCS no Visual C++ | Microsoft Docs
+title: Suporte a MBCS no Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,40 +32,40 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41d075edb01fc139660d8e72a7fe53f03ee9e80b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d00495f95b3c67e4a6fc3613b949b8ae2946bd6
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865830"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010380"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Suporte de MBCS no Visual C++
-Quando executado em uma versão do Windows habilitada MBCS, o sistema de desenvolvimento do Visual C++ (incluindo as ferramentas de editor, o depurador e a linha de comando de código fonte integrado) está habilitado para MBCS, com exceção da janela de memória.  
+Quando executado em uma versão do Windows habilitada MBCS, o sistema de desenvolvimento do Visual C++ (incluindo as ferramentas de editor, depurador e linha de comando de código do código-fonte integrado) está habilitado para MBCS, com exceção da janela de memória.  
   
- A janela de memória não interpreta os bytes de dados como caracteres MBCS, mesmo que ele pode interpretá-las como caracteres ANSI ou Unicode. Caracteres ANSI são sempre 1 bytes de tamanho e caracteres Unicode 2 bytes de tamanho. Com MBCS, caracteres podem ser 1 ou 2 bytes de tamanho e a interpretação depende de qual página de código está em uso. Por isso, é difícil para a janela de memória exibir com segurança caracteres MBCS. A janela de memória não é possível saber quais byte é o início de um caractere. O desenvolvedor pode exibir os valores de bytes na janela de memória e pesquisar o valor nas tabelas para determinar a representação de caractere. Isso é possível porque o desenvolvedor sabe o endereço inicial de uma cadeia de caracteres com base no código-fonte.  
+ A janela de memória não interpreta os bytes de dados como caracteres MBCS, mesmo que ele pode interpretá-los como caracteres ANSI ou Unicode. Caracteres ANSI são sempre 1 byte de tamanho e caracteres Unicode têm tamanho de 2 bytes. Com o MBCS, os caracteres podem ser 1 ou 2 bytes de tamanho e sua interpretação depende de qual página de código está em uso. Por isso, é difícil para a janela de memória exibir com confiança caracteres MBCS. A janela de memória não pode saber quais byte é o início de um caractere. O desenvolvedor pode exibir os valores de bytes na janela de memória e pesquisar o valor nas tabelas para determinar a representação de caracteres. Isso é possível porque o desenvolvedor sabe o endereço inicial de uma cadeia de caracteres com base no código-fonte.  
   
- Visual C++ aceita caracteres de byte duplo, independentemente de onde ele é apropriado fazer isso. Isso inclui nomes de caminhos e nomes de arquivo nas caixas de diálogo e entradas de texto no editor de recursos do Visual C++ (por exemplo, texto estático no editor de caixa de diálogo) e entradas de texto estático no editor de ícone. Além disso, o pré-processador reconhece algumas diretivas de byte duplo — por exemplo, arquivo nomes em `#include` instruções e como argumentos para o **code_seg** e **data_seg** pragmas. No editor de código fonte, caracteres de byte duplo em comentários e literais de cadeia de caracteres forem aceitas, embora não estejam em elementos de linguagem C/C++ (como nomes de variável).  
+ Visual C++ aceita caracteres de byte duplo, onde for apropriado para isso. Isso inclui nomes de caminhos e nomes de arquivo nas caixas de diálogo e as entradas de texto no editor de recursos do Visual C++ (por exemplo, texto estático no editor de caixa de diálogo) e entradas de texto estático no editor de ícone. Além disso, o pré-processador reconhece algumas diretivas de byte duplo — por exemplo, arquivo nomes na `#include` instruções e como argumentos para o `code_seg` e `data_seg` pragmas. No editor de código fonte, são aceitos caracteres de byte duplo em comentários e literais de cadeia de caracteres, embora não estejam em elementos de linguagem C/C++ (como nomes de variáveis).  
   
-##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> Suporte para Editor de método de entrada (IME)  
- Aplicativos escritos para mercados do Leste Asiático que usam MBCS (por exemplo, Japão) normalmente suportam o IME do Windows para inserir os dois caracteres de byte único e duplo. O ambiente de desenvolvimento do Visual C++ contém suporte completo para o IME. Para obter mais informações, consulte [exemplo IME: demonstra como modo de IME do controle e implementar IME nível 3](http://msdn.microsoft.com/en-us/87ebdf65-cef0-451d-a6fc-d5fb64178b14).  
+##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> Suporte para o Editor de método de entrada (IME)  
+ Aplicativos escritos para mercados do Leste Asiático que usam MBCS (por exemplo, Japão) normalmente o IME do Windows de suporte para a inserção de ambos os caracteres de byte único e duplo. O ambiente de desenvolvimento do Visual C++ contém suporte completo para o IME. Para obter mais informações, consulte [exemplo de IME: demonstra como implementar IME nível 3 e de modo do IME do controle](http://msdn.microsoft.com/87ebdf65-cef0-451d-a6fc-d5fb64178b14).  
   
- Teclados japonês diretamente não dão suporte a caracteres de Kanji. O IME converte uma cadeia fonética, inserida em um os outros japonês alfabetos (Romaji, Katakana e Hiragana) em suas representações Kanji possíveis. Caso haja ambiguidade, você pode selecionar várias alternativas. Quando você tiver selecionado o caractere Kanji pretendido, o IME passa dois `WM_CHAR` mensagens para o aplicativo de controle.  
+ Os teclados japoneses não suportam diretamente caracteres Kanji. O IME converterá uma cadeia de caracteres fonética inserida em uma dos alfabetos outros japonês (Romaji, Katakana ou Hiragana) em suas representações de Kanji possíveis. Caso haja ambiguidade, você pode selecionar entre várias alternativas. Quando você tiver selecionado o caractere de Kanji pretendido, o IME passa dois `WM_CHAR` mensagens para o aplicativo de controle.  
   
- O IME ativado por ALT +\` combinação de teclas, aparece como um conjunto de botões (um indicador) e uma janela de conversão. O aplicativo posiciona a janela no ponto de inserção de texto. O aplicativo deve tratar `WM_MOVE` e `WM_SIZE` mensagens por reposicionar a janela de conversão de acordo com o novo local ou o tamanho da janela de destino.  
+ O IME, ativado por ALT +\` combinação de teclas, aparece como um conjunto de botões (um indicador) e uma janela de conversão. O aplicativo posiciona a janela no ponto de inserção de texto. O aplicativo deve tratar `WM_MOVE` e `WM_SIZE` mensagens pelo reposicionamento a janela de conversão em conformidade com o novo local ou o tamanho da janela de destino.  
   
- Se você quiser que os usuários do seu aplicativo para ter a capacidade de inserir caracteres de Kanji, o aplicativo deve tratar mensagens de IME do Windows. Para obter mais informações sobre programação de IME, consulte [IME](https://msdn.microsoft.com/en-us/library/ms776145.aspx).  
+ Se você quiser que os usuários do seu aplicativo para ter a capacidade de inserir caracteres Kanji, o aplicativo deve tratar as mensagens do IME do Windows. Para obter mais informações sobre a programação do IME, consulte [IME](https://msdn.microsoft.com/library/ms776145.aspx).  
   
-## <a name="visual-c-debugger"></a>Depurador Visual C++  
+## <a name="visual-c-debugger"></a>Depurador do Visual C++  
  O depurador do Visual C++ fornece a capacidade de definir pontos de interrupção em mensagens IME. Além disso, a janela de memória pode exibir caracteres de byte duplo.  
   
 ## <a name="command-line-tools"></a>Ferramentas de linha de comando  
- As ferramentas de linha de comando do Visual C++, incluindo o compilador NMAKE e o compilador de recurso (RC. EXE), são habilitados para MBCS. Você pode usar a opção de /c do compilador de recurso para alterar a página de código padrão durante a compilação de recursos do aplicativo.  
+ As ferramentas de linha de comando do Visual C++, incluindo o compilador, NMAKE e o compilador de recursos (RC. EXE), são habilitados para MBCS. Você pode usar a opção de /c do compilador de recurso para alterar a página de código padrão durante a compilação de recursos de seu aplicativo.  
   
  Para alterar a localidade padrão em tempo de compilação do código fonte, use [#pragma setlocale](../preprocessor/setlocale.md).  
   
 ## <a name="graphical-tools"></a>Ferramentas gráficas  
- As ferramentas baseadas no Windows do Visual C++, como Spy + + e o recurso de edição de ferramentas, dão suporte total a cadeias de caracteres do IME.  
+ As ferramentas baseadas em Windows do Visual C++, como o Spy + + e o recurso de edição de ferramentas, suportam completo a cadeias de caracteres do IME.  
   
 ## <a name="see-also"></a>Consulte também  
- [Suporte a conjuntos de caracteres Multibyte (MBCSs)](../text/support-for-multibyte-character-sets-mbcss.md)   
+ [Suporte para conjuntos de caracteres Multibyte (MBCSs)](../text/support-for-multibyte-character-sets-mbcss.md)   
  [Dicas de programação do MBCS](../text/mbcs-programming-tips.md)

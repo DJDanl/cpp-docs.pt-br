@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 23881f2065276aa7ae7b6ee95b5449abb07dd2de
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 58b537a29a042f2227f3c2c121a320532d52877c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641947"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016360"
 ---
 # <a name="srwlock-class"></a>Classe SRWLock
 Representa um bloqueio de leitor/gravador reduzido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 class SRWLock;  
 ```  
   

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 77a6049216137da56cc79cc6f28f1f7591015a33
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 7a8705f6c1ed1030f1beeb7c2302f0d629c5d17d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604512"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012187"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Visão geral de programação do Windows no C++
 
@@ -39,7 +39,7 @@ Você pode escrever aplicativos UWP no C + + c++ /CLI CX, um dialeto do C++, voc
 
    Essa categoria também inclui usando C++ para componentes principais e código computacional no contexto do servidor e de programação em nuvem. Às vezes, o código de alto desempenho a essência de um servidor ou aplicativo em nuvem é escrito em C++ para maximizar o desempenho. Você pode compilar esse código em uma DLL e usá-lo no c# ou Visual Basic.
 
-- **Aplicativos do .NET framework**. A maioria dos aplicativos do .NET Framework são escritos em c# ou Visual Basic, mas você também pode C + + c++ CLI (a opção de compilador /clr no Visual C++). É recomendável usar C + + c++ CLI para uma camada de interoperabilidade mínimo em um aplicativo maior que inclui o código gerenciado e nativo.
+- **Aplicativos do .NET framework**. A maioria dos aplicativos do .NET Framework são escritos em c# ou Visual Basic, mas você também pode C + + c++ CLI (o `/clr` opção de compilador no Visual C++). É recomendável usar C + + c++ CLI para uma camada de interoperabilidade mínimo em um aplicativo maior que inclui o código gerenciado e nativo.
 
 ##  <a name="BK_WindowsUniversal"></a> Aplicativos universais do Windows
 

@@ -17,29 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e4a9c624f6f9e06108aa25930a2b035cbed685ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d6d767a77b68ad8585da711861d942abbe6b686
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876339"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013487"
 ---
 # <a name="invokehelpercallback-data-member"></a>Membro de dados InvokeHelper::callback_
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 TCallback callback_;  
 ```  
   
 ## <a name="remarks"></a>Comentários  
  Representa o manipulador de eventos para chamar quando ocorre um evento.  
   
- O `TCallback` modelo parâmetro especifica o tipo do manipulador de eventos.  
+ O `TCallback` parâmetro de modelo especifica o tipo de manipulador de eventos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

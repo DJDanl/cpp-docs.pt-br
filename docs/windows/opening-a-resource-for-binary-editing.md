@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428c62db8f1444f497d6fede7affea34560b4b0e
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 26d1b0ae8923835b0ce06c7312fa185693c6586e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605949"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014501"
 ---
 # <a name="opening-a-resource-for-binary-editing"></a>Abrindo um recurso para edição binária
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Para abrir um recurso de área de trabalho do Windows para edição binária  
@@ -36,7 +36,7 @@ ms.locfileid: "39605949"
 2.  O recurso com o botão direito e clique em **abrir dados binários** no menu de atalho.  
   
     > [!NOTE]
-    >  Se você usar o [exibição de recurso](../windows/resource-view-window.md) janela para abrir um recurso com um formato que o Visual Studio não reconhece (como RCDATA ou um recurso personalizado), o recurso é aberta automaticamente no editor binário.  
+    >  Se você usar o [exibição de recurso](../windows/resource-view-window.md) janela para abrir um recurso com um formato que o Visual Studio não reconhece (como RCDATA ou um recurso personalizado), o recurso é aberta automaticamente na **binário** editor.  
   
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>Para abrir um recurso gerenciado para edição binária  
   
@@ -58,10 +58,9 @@ Dados binários para uma caixa de diálogo exibida no Editor binário
  Apenas determinados valores ASCII são representados no editor binário (0x20 por meio de 0x7E). Caracteres estendidos são exibidos como pontos na seção de valor ASCII do editor binário (painel direito). Os caracteres "imprimíveis" são valores ASCII 32 a 126.  
   
 > [!NOTE]
->  Se você quiser usar o editor binário em um recurso já está sendo editado em outra janela do editor, feche a janela do editor primeiro.  
+>  Se você quiser usar o **binário** editor em um recurso já está sendo editado em outra janela do editor, feche a janela do editor primeiro.  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Nenhum  
   
 ## <a name="see-also"></a>Consulte também  

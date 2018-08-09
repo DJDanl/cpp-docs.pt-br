@@ -20,27 +20,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41494e8b88f41c4c842e95e9f8a9f5da0247739f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9c972f4038da4b4ed1d52fee0b8029b6f48ff3bb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605637"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013867"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>Redimensionando uma imagem (editor de imagens para ícones)
-O comportamento do editor de imagem ao redimensionar uma imagem depende do fato de ter sido [selecionados](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) a imagem inteira ou apenas uma parte dele.  
+O comportamento do **imagem** editor ao redimensionar uma imagem depende do fato de ter sido [selecionado](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) a imagem inteira ou apenas uma parte dele.  
   
- Quando a seleção inclui apenas a parte da imagem, o editor de imagens reduz a seleção excluindo linhas ou colunas de pixels e preenchendo as regiões vazias com a cor de plano de fundo atual, ou ela se estende a seleção duplicando linhas ou colunas de pixels.  
+ Quando a seleção inclui apenas a parte da imagem, o **imagem** editor reduz a seleção de exclusão de linhas ou colunas de pixels e preenchendo as regiões vazias com a cor de plano de fundo atual, ou que ele se estende a seleção por Duplicar linhas ou colunas de pixels.  
   
- Quando a seleção inclui toda a imagem, o editor de imagens tanto é reduzido e alonga a imagem, ou corta e estende-o.  
+ Quando a seleção inclui toda a imagem, o **imagem** editor seja é reduzido e alonga a imagem, ou corta e estende-o.  
   
- Há dois mecanismos para redimensionar uma imagem: as alças de dimensionamento e o [janela de propriedades](/visualstudio/ide/reference/properties-window). Você pode arrastar as alças de dimensionamento para alterar o tamanho de todos ou parte de uma imagem. Alças de dimensionamento que você pode arrastar são sólidas. Você não pode arrastar as alças que estão vazios. Você pode usar a janela de propriedades para redimensionar a imagem inteira, não é uma parte selecionada.  
+ Há dois mecanismos para redimensionar uma imagem: as alças de dimensionamento e o [janela de propriedades](/visualstudio/ide/reference/properties-window). Você pode arrastar as alças de dimensionamento para alterar o tamanho de todos ou parte de uma imagem. Alças de dimensionamento que você pode arrastar são sólidas. Você não pode arrastar as alças que estão vazios. Você pode usar o **propriedades** somente, de janela para redimensionar toda a imagem não é uma parte selecionada.  
   
  ![Alças de dimensionamento em um bitmap](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
 Alças de dimensionamento  
   
 > [!NOTE]
->  Se você tem a opção de bloco de grade selecionada na [caixa de diálogo de configurações da grade](../windows/grid-settings-dialog-box-image-editor-for-icons.md), redimensionamento, em seguida, se ajusta para a próxima linha de grade lado a lado. Se apenas a grade de pixels a opção é selecionada (a configuração padrão), redimensionamento de snaps de pixel para a próxima disponível.  
+>  Se você tiver o **grade lado a lado** opção selecionada na [caixa de diálogo de configurações da grade](../windows/grid-settings-dialog-box-image-editor-for-icons.md), redimensionamento, em seguida, se ajusta para a próxima linha de grade lado a lado. Se apenas a **grade de pixels** opção é selecionada (a configuração padrão), redimensionamento de snaps de pixel para a próxima disponível.  
   
 -   [Redimensionando uma imagem inteira](../windows/resizing-an-entire-image-image-editor-for-icons.md)  
   

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1850507b9d00ab717a2602d4e230968f5222f077
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fd5f7bb72e1107fe561acef4d6cc3f3ecb87ed59
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604275"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016850"
 ---
 # <a name="method-attributes"></a>Atributos de método
 Os atributos a seguir se aplicam aos métodos em uma classe, coclass ou interface.  
@@ -39,8 +39,8 @@ Os atributos a seguir se aplicam aos métodos em uma classe, coclass ou interfac
 |[defaultbind](../windows/defaultbind.md)|Indica a única propriedade associável que melhor representa o objeto.|  
 |[defaultcollelem](../windows/defaultcollelem.md)|Usada para otimização de código do Visual Basic.|  
 |[displaybind](../windows/displaybind.md)|Indica uma propriedade que deve ser exibida para o usuário como associável.|  
-|[helpcontext](../windows/helpcontext.md)|Especifica uma ID de contexto que permite que usuários exibir informações sobre esse elemento no arquivo de Ajuda.|  
-|[helpfile](../windows/helpfile.md)|Define o nome do arquivo de ajuda para uma biblioteca de tipos.|  
+|[helpcontext](../windows/helpcontext.md)|Especifica uma ID de contexto que permite que usuários exibir informações sobre este elemento na **ajudar** arquivo.|  
+|[helpfile](../windows/helpfile.md)|Define o nome da **ajudar** arquivo para uma biblioteca de tipos.|  
 |[helpstring](../windows/helpstring.md)|Especifica uma cadeia de caracteres que é usada para descrever o elemento ao qual ela se aplica.|  
 |[helpstringcontext](../windows/helpstringcontext.md)|Especifica a ID do tópico da Ajuda em um arquivo. hlp ou. chm.|  
 |[helpstringdll](../windows/helpstringdll.md)|Especifica o nome da DLL a usar para executar a pesquisa de cadeia de caracteres do documento (localização).|  

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30656ca7271b91adf50fed5bbc4f8dfd3c6c6acb
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8d4573dfddd8287bb52f919f5fbceb0485b0911d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608807"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015112"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Escolhendo uma cor na imagem a ser usada em qualquer lugar (editor de imagens para ícones)
 O **selecionar cor**, ou seleção de cor, ferramenta faz com qualquer cor na imagem a cor de primeiro plano atual ou a cor do plano de fundo, dependendo se você pressionar a esquerda ou para o botão direito do mouse. Para cancelar a **selecionar cor** de ferramentas, escolha outra ferramenta.  
@@ -41,14 +41,13 @@ O **selecionar cor**, ou seleção de cor, ferramenta faz com qualquer cor na im
 2.  Selecione a cor que você deseja acompanhar a partir da imagem.  
   
     > [!NOTE]
-    >  Depois que você selecionar uma cor, o editor de imagens reativa a ferramenta usada mais recentemente.  
+    >  Depois que você selecionar uma cor, o **imagem** ferramenta do editor reativa usadas mais recentemente.  
   
 3.  Desenhe usando o botão esquerdo do mouse para a cor de primeiro plano ou o botão direito do mouse para a cor do plano de fundo.  
   
  Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Nenhum  
   
 ## <a name="see-also"></a>Consulte também  

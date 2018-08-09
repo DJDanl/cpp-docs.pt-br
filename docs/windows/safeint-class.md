@@ -17,19 +17,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1e4ac8898b48c4b64d0b12b945ab45b1c5f1436
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a575538d2527aba25d62dff1a8ba4d89402f5cfb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606150"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019326"
 ---
 # <a name="safeint-class"></a>Classe SafeInt
 Estende os primitivos de inteiro para ajudar a evitar o estouro de inteiro e permite que você compare os diferentes tipos de inteiros.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 template<typename T, typename E = _SAFEINT_DEFAULT_ERROR_POLICY>  
 class SafeInt;  
 ```  
@@ -193,19 +193,19 @@ class SafeInt;
   
  Tenha cuidado ao usar o **SafeInt** classe junto com o `?:` operador ternário. Considere a seguinte linha de código.  
   
-```  
+```cpp  
 Int x = flag ? SafeInt<unsigned int>(y) : -1;  
 ```  
   
  O compilador converte para isso:  
   
-```  
+```cpp  
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);  
 ```  
   
  Se `flag` está **falsos**, o compilador gera uma exceção em vez de atribuir o valor de -1 para `x`. Portanto, para evitar esse comportamento, o código correto para usar é a linha a seguir.  
   
-```  
+```cpp  
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;  
 ```  
   

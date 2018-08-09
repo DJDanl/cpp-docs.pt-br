@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3152cf46460dbeb8f5c8adfd5a7550f97eaca98
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 90b0c414994740cb080205c58fb4d7d7dbfefa84
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39602698"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011914"
 ---
 # <a name="removereference-structure"></a>Estrutura RemoveReference
 Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 template<class T>  
 struct RemoveReference;  
 template<class T>  

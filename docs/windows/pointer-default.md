@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 562bc3ebd0c80423eb94d2bc328f72aed8e67985
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 98e3b9e78f46b14dfeca18a8e69538111d3ba219
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604379"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010309"
 ---
 # <a name="pointerdefault"></a>pointer_default
 Especifica o atributo de ponteiro padrão para todos os ponteiros, exceto ponteiros de nível superior que aparecem em listas de parâmetros.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [ pointer_default(  
    value  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *value*  
  Um valor que descreve o tipo de ponteiro: **ptr**, **ref**, ou **exclusivo**.  
   

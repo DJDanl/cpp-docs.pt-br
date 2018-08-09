@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de7ffb304a8b2f1567ed5510c276c454903ec930
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 1bdc6d54a6c9b60036d7434edec960715db304e2
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608398"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017676"
 ---
 # <a name="hstringoperatorlt-operator"></a>Operador hstring::&lt; operador
 Indica se o primeiro parâmetro é menor do que o segundo parâmetro.  
@@ -33,7 +33,7 @@ inline bool operator<(
     const HString& rhs) throw()  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *LHS*  
  O primeiro parâmetro a ser comparado. *LHS* pode ser uma referência a um **HString**.  
   

@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50029cea9e5bd7bf3a5032a2190fc71d4e893b5f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 95926c7e65210b7eaf366c0fe2a9df44fa9661d7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607667"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016672"
 ---
 # <a name="registrationscript"></a>registration_script
 Executa o script de registro personalizado especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [ registration_script(   
    script   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *script*  
  O caminho completo para um arquivo de script (. rgs) de registro personalizado. Um valor de **none**, como `script = "none"`, indica que a coclass não tem nenhum requisito de registro.  
   

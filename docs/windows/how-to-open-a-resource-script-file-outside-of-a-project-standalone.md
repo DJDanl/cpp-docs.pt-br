@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70cba5145f64fd88d1d6f1c4a68ac4c0730968cc
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4a976e4b6c6b2fb89dfab362b13000d2e7d4327b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570370"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013402"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>Como abrir o arquivo de script do recurso fora de um projeto (autônomo)
 Você pode exibir recursos em um arquivo. rc sem a necessidade de abrir um projeto. O arquivo. RC será aberto em uma janela de documento em vez de abertura na [exibição de recurso](../windows/resource-view-window.md) janela (como quando o arquivo é aberto dentro de um projeto).  
@@ -46,13 +46,13 @@ Você pode exibir recursos em um arquivo. rc sem a necessidade de abrir um proje
   
 ### <a name="to-open-multiple-rc-files-outside-a-project"></a>Para abrir vários arquivos. rc fora de um projeto  
   
-1.  Abra ambos os arquivos de recurso autônomos. Por exemplo, abra Source1.rc e Source2.rc.  
+1.  Abra ambos os arquivos de recurso autônomos. Por exemplo, abra `Source1.rc` e `Source2.rc`.  
   
     1.  Do **arquivo** menu, escolha **aberto**, em seguida, clique em **arquivo**.  
   
-    2.  No **abrir arquivo** diálogo caixa, navegue até o primeiro arquivo de script de recurso que deseja abrir (Source1.rc), realce o arquivo e clique em **abrir**.  
+    2.  No **abrir arquivo** diálogo caixa, navegue até o primeiro arquivo de script de recurso que deseja abrir (`Source1.rc`), realce o arquivo e clique em **abrir**.  
   
-    3.  Repita a etapa anterior para abrir o segundo arquivo. RC (Source2.rc).  
+    3.  Repita a etapa anterior para abrir o segundo arquivo. RC (`Source2.rc`).  
   
          Os arquivos. rc agora estão abertos em janelas de documentos separada.  
   

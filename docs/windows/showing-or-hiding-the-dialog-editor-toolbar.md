@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 862498b012955c3b77a13b37ae07bbee66dd8dfa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a8a19de393e7451f045d840552127743f87e00ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651399"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019167"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>Mostrando ou ocultando a barra de ferramentas Editor de Caixa de Diálogo
-Quando você abre o editor de caixa de diálogo, a barra de ferramentas do Editor de caixa de diálogo aparece automaticamente na parte superior da sua solução.  
+Quando você abre o **caixa de diálogo** editor, o **Editor de caixa de diálogo** barra de ferramentas aparece automaticamente na parte superior da sua solução.  
   
 ### <a name="dialog-editor-toolbar"></a>Barra de ferramentas do Editor de caixa de diálogo  
   
@@ -40,9 +40,9 @@ Quando você abre o editor de caixa de diálogo, a barra de ferramentas do Edito
 |![Botão de centro Vertical](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![Botão de alternância de grade](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Ativar/Desativar Grade|  
 |![Botão de centro Horizontal](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Horizontal|![Botão de guias de alternância](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Ativar/desativar guias|  
   
- A barra de ferramentas do Editor de caixa de diálogo contém botões para organizar o layout dos controles na caixa de diálogo, por exemplo, tamanho e alinhamento. Botões de barra de ferramentas do Editor de caixa de diálogo correspondem aos comandos no menu Formatar. Para obter detalhes, consulte [teclas de aceleração para o Editor de caixa de diálogo](../windows/accelerator-keys-for-the-dialog-editor.md).  
+ O **Editor de caixa de diálogo** barra de ferramentas contém botões para organizar o layout dos controles na caixa de diálogo, por exemplo tamanho e alinhamento. **Editor de caixa de diálogo** botões da barra de ferramentas correspondem aos comandos na **formato** menu. Para obter detalhes, consulte [teclas de aceleração para o Editor de caixa de diálogo](../windows/accelerator-keys-for-the-dialog-editor.md).  
   
- Quando você estiver no editor de caixa de diálogo, você pode alternar a exibição da barra de ferramentas do Editor de caixa de diálogo, selecionando-o na lista de barras de ferramentas disponíveis e windows.  
+ Quando você está no **caixa de diálogo** editor, você pode alternar a exibição da **Editor de caixa de diálogo** barra de ferramentas, selecionando-o na lista de barras de ferramentas disponíveis e windows.  
   
 ### <a name="to-show-or-hide-the-dialog-editor-toolbar"></a>Para mostrar ou ocultar a barra de ferramentas do editor de caixa de diálogo  
   

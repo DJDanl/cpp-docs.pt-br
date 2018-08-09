@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9a3d102050da84f7dcbc8714a4c04b46cf3f5a1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: f83314de19548c93afa43feced8b2a877af00738
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606118"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019047"
 ---
 # <a name="out-c"></a>out (C++)
 Identifica os parâmetros de ponteiro que são retornados do procedimento chamado ao procedimento de chamada (do servidor para o cliente).  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [out]  
 ```  
   

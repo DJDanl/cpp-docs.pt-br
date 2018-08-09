@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b71581687ec69a4aff85f649e85ebfe10c0a844f
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 81b3a166215f7731a43333e230621072d760260c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650463"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013526"
 ---
 # <a name="chaininterfacesverify-method"></a>Método ChainInterfaces::Verify
 Verifica se cada interface definido pelos parâmetros de modelo *I0* por meio *I9* herda `IUnknown` e/ou `IInspectable`e que *I0* herda de *I1* por meio *I9*.  
@@ -35,8 +35,7 @@ WRL_NOTHROW __forceinline static void Verify();
   
 ## <a name="remarks"></a>Comentários  
  Se a operação de verificação falhar, uma **static_assert** emite uma mensagem de erro que descreve a falha.  
-  
-## <a name="remarks"></a>Comentários  
+
  Parâmetros de modelo *I0* e *I1* são necessários e os parâmetros *I2* por meio de *I9* são opcionais.  
   
 ## <a name="requirements"></a>Requisitos  

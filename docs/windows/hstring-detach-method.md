@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bfd4390cdc786836b08e77b4ee699e44cc42618
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 21bfc0516fdcdf3287c5ce2a0203038e88cd290f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569720"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015541"
 ---
 # <a name="hstringdetach-method"></a>Método HString::Detach
 Desassocia especificado **HString** objeto do valor subjacente.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HSTRING Detach() throw()  
 ```  
   

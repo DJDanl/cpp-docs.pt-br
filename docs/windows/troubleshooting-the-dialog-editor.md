@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e7b7accec826bc6c52ab9c6f677ce980f40c6f20
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 242881100dfd9a27946bcbe74d449d078c373852
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648614"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011098"
 ---
 # <a name="troubleshooting-the-dialog-editor"></a>Solucionando problemas do Editor de Caixa de Diálogo
-Abaixo estão alguns problemas dos quais você deve estar ciente ao trabalhar no editor de caixa de diálogo.  
+Abaixo estão alguns problemas dos quais você deve estar ciente ao trabalhar na **caixa de diálogo** editor.  
   
 -   [Adicionar controles a uma caixa de diálogo faz com que ela deixe de funcionar](../windows/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md)  
   

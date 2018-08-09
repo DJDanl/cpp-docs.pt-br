@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9941f2b1bce67fb09c69db6278de94c102f88473
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0076445f21bcbad5ca7028c088cddfdbdcacf8cd
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604863"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013695"
 ---
 # <a name="make-function"></a>Função Make
 Inicializa a classe de tempo de execução do Windows especificada. Use esta função para criar uma instância de um componente que é definido no mesmo módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 template <  
    typename T,  
    typename TArg1,  

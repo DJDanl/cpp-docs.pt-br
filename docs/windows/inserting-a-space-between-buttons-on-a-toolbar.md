@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 056d20420484b29bd66827607432ebe2d6543c52
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 985dbf5ca03af3edae0ecf25796690059868ffc1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607352"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019530"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>Inserindo um espaço entre botões em uma barra de ferramentas
 Em geral, para inserir um espaço entre botões, simplesmente arraste-os dos outros na barra de ferramentas. Para remover espaço, arraste-os em direção uns aos outros.  
@@ -41,7 +41,6 @@ Em geral, para inserir um espaço entre botões, simplesmente arraste-os dos out
  Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
-  
  MFC ou ATL  
   
 ## <a name="see-also"></a>Consulte também  

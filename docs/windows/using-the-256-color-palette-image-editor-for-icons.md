@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be817ac4bddcc169ab2ecb3a9106e9594642e2f0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0287d27d975ce93e88a7a4b70a683188901ca958
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645146"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011810"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>Usando a paleta de 256 cores (editor de imagens para ícones)
-Para desenhar com uma seleção da paleta de 256 cores, você precisa selecionar as cores da paleta de cores na [janela de cores](../windows/colors-window-image-editor-for-icons.md).  
+Para desenhar com uma seleção da paleta de 256 cores, você precisará selecionar as cores do **cores** paleta na [janela cores](../windows/colors-window-image-editor-for-icons.md).  
   
 ### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Para escolher uma cor da paleta de 256 cores de ícones grandes  
   
@@ -36,7 +36,7 @@ Para desenhar com uma seleção da paleta de 256 cores, você precisa selecionar
   
 2.  Escolha uma cor de 256 cores exibidas nos **cores** paleta na **cores** janela.  
   
-     A cor selecionada se tornará a cor atual na paleta de cores na **cores** janela.  
+     A cor selecionada se tornará a cor atual na **cores** paleta na **cores** janela.  
   
     > [!NOTE]
     >  A paleta inicial usada para imagens de 256 cores corresponde a paleta retornada pelo `CreateHalftonePalette` API do Windows. Todos os ícones destinados para o shell do Windows devem usar essa paleta para evitar a cintilação durante a realização da paleta.  

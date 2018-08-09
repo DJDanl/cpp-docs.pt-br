@@ -26,22 +26,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384db46d495b342d40dd4f7588583c5b6048810c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9c00d4da36df4672c8e701c0a41c88e5014eeae8
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604610"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017828"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Ícones e cursores: recursos de imagem para exibir dispositivos (editor de imagens para ícones)
-Ícones e cursores são os recursos gráficos que podem conter várias imagens em tamanhos diferentes e esquemas para diferentes tipos de dispositivos de exibição de cores. Além disso, um cursor tem um "ponto de acesso", o local do Windows usa para acompanhar sua posição. Ícones e cursores são criados e editados usando o editor de imagens, assim como bitmaps e outras imagens.  
+Ícones e cursores são os recursos gráficos que podem conter várias imagens em tamanhos diferentes e esquemas para diferentes tipos de dispositivos de exibição de cores. Além disso, um cursor tem um "ponto de acesso", o local do Windows usa para acompanhar sua posição. Ícones e cursores são criados e editados usando o **imagem** editor, assim como bitmaps e outras imagens.  
   
- Quando você cria um novo ícone ou cursor, o editor de imagens primeiro cria uma imagem de um tipo padrão. Inicialmente, a imagem é preenchida com a cor da tela (transparente). Se a imagem é um cursor, o ponto de acesso é inicialmente o canto superior esquerdo (coordenadas 0,0).  
+ Quando você cria um novo ícone ou cursor, o **imagem** editor primeiro cria uma imagem de um tipo padrão. Inicialmente, a imagem é preenchida com a cor da tela (transparente). Se a imagem é um cursor, o ponto de acesso é inicialmente o canto superior esquerdo (coordenadas 0,0).  
   
- Por padrão, o editor de imagens dá suporte à criação de imagens adicionais para os dispositivos mostrados na tabela a seguir. Você pode criar imagens para outros dispositivos, digitando parâmetros de largura, altura e contagem de cor para o [caixa de diálogo imagem personalizada](custom-image-dialog-box-image-editor-for-icons.md).  
+ Por padrão, o **imagem** editor dá suporte à criação de imagens adicionais para os dispositivos mostrados na tabela a seguir. Você pode criar imagens para outros dispositivos, digitando parâmetros de largura, altura e contagem de cor para o [caixa de diálogo imagem personalizada](custom-image-dialog-box-image-editor-for-icons.md).  
   
 > [!NOTE]
->  Usando o Editor de Imagens, você pode exibir imagens de 32 bits, mas não pode editá-las.  
+>  Usando o **Editor de imagens**, você pode exibir imagens de 32 bits, mas você não pode editá-los.  
   
 |Cor|Largura (pixels)|Altura (pixels)|  
 |-----------|----------------------|-----------------------|  

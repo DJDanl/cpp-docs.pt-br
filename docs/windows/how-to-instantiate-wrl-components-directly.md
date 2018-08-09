@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40904f8379d1a11d26c29af2340fa4adb24f12e0
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 133f0f4ee4efed71c530c7e9e8c367c7d2031433
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568810"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013269"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>Como instanciar componentes WRL diretamente
 Saiba como usar a biblioteca de modelos do Windows em tempo de execução C++ (WRL)[Microsoft::WRL::Make](../windows/make-function.md) e [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) funções para criar uma instância de um componente do módulo que Define a ele.  
@@ -34,13 +34,13 @@ Para saber como usar a biblioteca de modelos de C++ de tempo de execução do Wi
   
 ### <a name="to-create-and-instantiate-a-basic-logger-component"></a>Para criar e instanciar um componente básico do agente de log  
   
-1.  No Visual Studio, crie uma **aplicativo do Console Win32** projeto. Nomeie o projeto, por exemplo, `WRLLogger`.  
+1.  No Visual Studio, crie uma **aplicativo do Console Win32** projeto. Nomeie o projeto, por exemplo, *WRLLogger*.  
   
 2.  Adicionar um **arquivo Midl (. idl)** do arquivo ao projeto, nomeie o arquivo `ILogger.idl`e, em seguida, adicione este código:  
   
      [!code-cpp[wrl-logger-make#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_1.idl)]  
   
-3.  Use o código a seguir para substituir o conteúdo de WRLLogger.cpp.  
+3.  Use o seguinte código para substituir o conteúdo de `WRLLogger.cpp`.  
   
      [!code-cpp[wrl-logger-make#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_2.cpp)]  
   
@@ -50,7 +50,7 @@ Para saber como usar a biblioteca de modelos de C++ de tempo de execução do Wi
   
      [!code-cpp[wrl-logger-makeandinitialize#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_3.cpp)]  
   
-2.  Use o seguinte código para substituir a definição de `wmain`. Essa versão usa o `MakeAndInitialize` para instanciar o `CConsoleWriter` objeto e verifica o `HRESULT` resultado.  
+2.  Use o seguinte código para substituir a definição de `wmain`. Essa versão usa `MakeAndInitialize` para instanciar o `CConsoleWriter` do objeto e verifica o resultado HRESULT.  
   
      [!code-cpp[wrl-logger-makeandinitialize#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_4.cpp)]  
   

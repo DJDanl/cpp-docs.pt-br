@@ -1,5 +1,5 @@
 ---
-title: Predefinidos IDs de símbolo | Microsoft Docs
+title: Predefinidas IDs de símbolo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c28d5d3d04bc48e7c79d634406d40292d869e36
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b459fbf77b75a61350fd1aa69c00749ceb1afc4c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876417"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017234"
 ---
 # <a name="predefined-symbol-ids"></a>IDs de símbolo predefinido
-Quando você iniciar um novo projeto, dependendo do tipo de projeto, algumas IDs de símbolo são predefinidos para seu uso. Essas IDs de símbolo oferecem suporte a várias bibliotecas e tipos de projeto, como o MFC. Eles representam as tarefas comuns que normalmente são incluídas em qualquer aplicativo ou ações de itens de hardware, como uma impressora ou mouse.  
+Quando você começar um novo projeto, dependendo do tipo de projeto, algumas IDs de símbolo são predefinidos para seu uso. Essas IDs de símbolo dão suporte a várias bibliotecas e tipos de projeto, como o MFC. Eles representam tarefas comuns que normalmente são incluídas em qualquer aplicativo ou ações de itens de hardware, como um mouse ou uma impressora.  
   
- Essas IDs de símbolo tornam-se importante ao trabalhar com recursos. Eles estão disponíveis quando você editar tabelas de teclas aceleradoras; algumas delas já estão associadas a teclas virtuais. Eles também estão disponíveis para você por meio de [janela propriedades](/visualstudio/ide/reference/properties-window). Você pode atribuir qualquer uma das IDs de símbolo predefinido para novos recursos, ou você pode atribuir teclas de aceleração a eles e a funcionalidade associada com o símbolo que ID automaticamente associa a combinação de teclas.  
+ Essas IDs de símbolo se tornam importantes ao trabalhar com recursos. Eles estão disponíveis quando você edita as tabelas de aceleradores; Alguns deles já estão associados às chaves virtuais. Eles também estão disponíveis para você por meio de [janela de propriedades](/visualstudio/ide/reference/properties-window). Você pode atribuir qualquer uma das IDs do símbolo predefinido para novos recursos, ou você pode atribuir teclas de aceleração a eles e a funcionalidade associada com o símbolo de que ID automaticamente associa a combinação de teclas.  
   
  Essas bibliotecas têm predefinidos símbolos que serão exibido como parte do projeto:  
   
@@ -39,10 +39,8 @@ Quando você iniciar um novo projeto, dependendo do tipo de projeto, algumas IDs
     > [!NOTE]
     >  Símbolos predefinidos são sempre somente leitura.  
   
-
-  
 ## <a name="requirements"></a>Requisitos  
- Win32, do MFC ou do ATL  
+ Win32, MFC ou ATL  
   
 ## <a name="see-also"></a>Consulte também  
  [Símbolos: identificadores de recursos](../windows/symbols-resource-identifiers.md)

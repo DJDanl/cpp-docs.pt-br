@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d33cbd46903a37bf42e417a100d26c9b706058c0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: de57e03b1e3a150ab96cb72996b48200b153de1c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645932"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016701"
 ---
 # <a name="terminatemap-function"></a>Função TerminateMap
 Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 inline bool TerminateMap(  
    _In_ ModuleBase *module,   
    _In_opt_z_ const wchar_t *serverName,   

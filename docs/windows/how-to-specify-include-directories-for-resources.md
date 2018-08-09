@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db09d29f0049152f734ada8a78c510e4424d8dd3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b7444ccf4f3a03036a5363024d0794f67b6a1ad6
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569534"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018852"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Como especificar diretórios de inclusão para recursos
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>Para especificar diretórios de inclusão para um arquivo .rc específico  
@@ -34,7 +34,6 @@ ms.locfileid: "39569534"
  Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no guia do desenvolvedor do .NET Framework. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos a propriedades, consulte [passo a passo: usando recursos para localização com o ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba13f3d561b4f7bbd57a7678fcfbea26e09a9984
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: d80a5189e25542b344d5506ac1f69dfbec5514af
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569369"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012541"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>Como fixar ponteiros e matrizes
 A fixação de um Subobjeto definido em um objeto gerenciado tem o efeito de fixar o objeto inteiro.  Por exemplo, se qualquer elemento de uma matriz é fixado, toda a matriz também é fixada. Não existem extensões para o idioma para declarar uma matriz fixada. Para fixar uma matriz, declare um ponteiro de fixação para seu tipo de elemento e fixar um de seus elementos.  
@@ -49,8 +49,6 @@ int main() {
                          // will not move during call  
 }  
 ```  
-  
-### <a name="output"></a>Saída  
   
 ```Output  
 ++  

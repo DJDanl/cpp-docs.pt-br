@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fd2160a2e9eef9165aea835d093978fec35e5fd
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 42629df8eeda1bbd2bda2057dfee619b52928cba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608261"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015574"
 ---
 # <a name="selecting-multiple-controls"></a>Selecionando vários controles
 ### <a name="to-select-multiple-controls"></a>Para selecionar vários controles  
@@ -47,7 +47,7 @@ ms.locfileid: "39608261"
 1.  Com um grupo de controles selecionados, mantenha pressionada a **Shift** da chave e clique no controle que você deseja remover ou adicionar a seleção existente.  
   
     > [!NOTE]
-    >  Mantendo a tecla CTRL pressionada e clicando em um controle dentro de uma seleção fará que controlam o controle dominante nessa seleção. Para obter mais informações, consulte [especificando o controle dominante](../windows/specifying-the-dominant-control.md).  
+    >  Manter pressionada a **Ctrl** chave e clicar em um controle dentro de uma seleção farão com que controlam o controle dominante nessa seleção. Para obter mais informações, consulte [especificando o controle dominante](../windows/specifying-the-dominant-control.md).  
   
  Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   

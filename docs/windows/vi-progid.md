@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96843c9d977b15d7fe2c645c8f655cd59a42e401
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a812317f66df3c0b1a330808a58753abb890765c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642036"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014046"
 ---
 # <a name="viprogid"></a>vi_progid
 Especifica uma forma independente de versão do ProgID.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [ vi_progid(  
    name  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *name*  
  O ProgID independente de versão que representa o objeto.  
   

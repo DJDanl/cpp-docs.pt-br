@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 480baaf12c332f0a293374fe2317110eb186cbdf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6db5f5eb080f9d802090dda61afd296bc4e6dc3b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648978"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015037"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Passo a passo: Criando um aplicativo UWP usando WRL e Media Foundation
 Saiba como usar a biblioteca de modelos do Windows em tempo de execução C++ (WRL) para criar um aplicativo de plataforma Universal do Windows (UWP) que usa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
@@ -59,17 +59,17 @@ Saiba como usar a biblioteca de modelos do Windows em tempo de execução C++ (W
   
 ### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>Transformar o componente para usar a WRL para criar a escala de cinza do Media Foundation  
   
-1.  No Visual Studio, crie uma **solução em branco** projeto. Nomeie o projeto, por exemplo, `MediaCapture`.  
+1.  No Visual Studio, crie uma **solução em branco** projeto. Nomeie o projeto, por exemplo, *MediaCapture*.  
   
-2.  Adicionar um **DLL (Universal Windows)** projeto à solução. Nomeie o projeto, por exemplo, `GrayscaleTransform`.  
+2.  Adicionar um **DLL (Universal Windows)** projeto à solução. Nomeie o projeto, por exemplo, *GrayscaleTransform*.  
   
-3.  Adicionar um **arquivo Midl (. idl)** arquivo ao projeto. Nomeie o arquivo, por exemplo, `GrayscaleTransform.idl`.  
+3.  Adicionar um **arquivo Midl (. idl)** arquivo ao projeto. Nomeie o arquivo, por exemplo, *GrayscaleTransform.idl*.  
   
 4.  Adicione este código ao GrayscaleTransform.idl.  
   
      [!code-cpp[wrl-media-capture#1](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_1.idl)]  
   
-5.  Use o código a seguir para substituir o conteúdo de pch. h.  
+5.  Use o seguinte código para substituir o conteúdo de `pch.h`.  
   
      [!code-cpp[wrl-media-capture#2](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_2.h)]  
   
@@ -77,9 +77,9 @@ Saiba como usar a biblioteca de modelos do Windows em tempo de execução C++ (W
   
      [!code-cpp[wrl-media-capture#3](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_3.h)]  
   
-7.  GrayscaleTransform.h não é usado neste exemplo. Você pode removê-lo do projeto, se você quiser.  
+7.  `GrayscaleTransform.h` não é usado neste exemplo. Você pode removê-lo do projeto, se você quiser.  
   
-8.  Use o código a seguir para substituir o conteúdo de GrayscaleTransform.cpp.  
+8.  Use o seguinte código para substituir o conteúdo de `GrayscaleTransform.cpp`.  
   
      [!code-cpp[wrl-media-capture#4](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_4.cpp)]  
   
@@ -92,7 +92,7 @@ Saiba como usar a biblioteca de modelos do Windows em tempo de execução C++ (W
        DllGetClassObject                   PRIVATE
    ```   
   
-10. Use o código a seguir para substituir o conteúdo de DllMain. cpp.  
+10. Use o seguinte código para substituir o conteúdo de `dllmain.cpp`.  
   
      [!code-cpp[wrl-media-capture#6](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_6.cpp)]  
   
@@ -106,21 +106,21 @@ Saiba como usar a biblioteca de modelos do Windows em tempo de execução C++ (W
   
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Para usar a WRL o componente personalizado do Media Foundation de um aplicativo c#  
   
-1.  Adicione um novo **c# aplicativo em branco (XAML)** do projeto para o `MediaCapture` solução. Nomeie o projeto, por exemplo, `MediaCapture`.  
+1.  Adicione um novo **c# aplicativo em branco (XAML)** do projeto para o `MediaCapture` solução. Nomeie o projeto, por exemplo, *MediaCapture*.  
   
 2.  No **MediaCapture** do projeto, adicione uma referência para o `GrayscaleTransform` projeto. Para saber como, consulte [como: Adicionar ou remover referências usando o Gerenciador de referências](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager).  
   
-3.  Em Package. appxmanifest, sobre o **capacidades** guia, selecione **microfone** e **Webcam**. Os dois recursos são necessários para capturar fotos de webcam.  
+3.  No `Package.appxmanifest`diante de **funcionalidades** guia, selecione **microfone** e **Webcam**. Os dois recursos são necessários para capturar fotos de webcam.  
   
-4.  Em MainPage. XAML, adicione este código para a raiz [grade](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) elemento:  
+4.  Na `MainPage.xaml`, adicione este código para a raiz [grade](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) elemento:  
   
      [!code-xml[wrl-media-capture#7](../windows/codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]  
   
-5.  Use o seguinte código para substituir o conteúdo de MainPage.xaml.cs.  
+5.  Use o seguinte código para substituir o conteúdo de `MainPage.xaml.cs`.  
   
      [!code-cs[wrl-media-capture#8](../windows/codesnippet/CSharp/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_8.cs)]  
   
- A ilustração a seguir mostra o aplicativo MediaCapture.  
+ A ilustração a seguir mostra o `MediaCapture app`.  
   
  ![Aplicativo MediaCapture capturando uma foto](../windows/media/wrl_media_capture.png "WRL_Media_Capture")  
   

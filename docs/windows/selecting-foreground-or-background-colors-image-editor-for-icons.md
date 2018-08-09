@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 108447dc3e18be84bf2875c49adb600ed9636dc4
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: e9dc6b75cfa408ececeb533fcd75dbad0f124fda
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605542"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018823"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Selecionando cores em primeiro plano ou segundo plano (editor de imagens para ícones)
 Exceto para o **borracha**, ferramentas na **Editor de imagens** desenho de barra de ferramentas com a atual cor de primeiro plano ou segundo plano quando você pressiona o botão esquerdo ou direito do mouse, respectivamente.  
@@ -39,7 +39,6 @@ Exceto para o **borracha**, ferramentas na **Editor de imagens** desenho de barr
  Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*.  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Nenhum  
   
 ## <a name="see-also"></a>Consulte também  

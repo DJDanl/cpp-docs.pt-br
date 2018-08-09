@@ -1,5 +1,5 @@
 ---
-title: 'Releasenotifier:: método Invoke | Microsoft Docs'
+title: 'Module:: releasenotifier:: invocar método | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eb51d59d2f7f1adc934332cbfa5fead56bbef0a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 48e488188ed040d29ef70f273991d1df9cf1d63e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876196"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014595"
 ---
 # <a name="modulereleasenotifierinvoke-method"></a>Método Module::ReleaseNotifier::Invoke
-Quando implementada, chama um manipulador de eventos quando o último objeto em um módulo é liberado.  
+Quando implementado, chama um manipulador de eventos quando o último objeto em um módulo é liberado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 virtual void Invoke() = 0;  
 ```  
   

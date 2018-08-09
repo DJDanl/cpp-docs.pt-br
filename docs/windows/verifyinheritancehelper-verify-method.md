@@ -1,5 +1,5 @@
 ---
-title: 'Método Verifyinheritancehelper: | Microsoft Docs'
+title: 'Método verifyinheritancehelper:: Verify | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 879f5fa117f0f2bc444243f540925d64a2b824b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04bf01b5fad5a9fec579e347497a28b5e8abb861
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889869"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018810"
 ---
 # <a name="verifyinheritancehelperverify-method"></a>Método VerifyInheritanceHelper::Verify
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 static void Verify();  
 ```  
   
 ## <a name="remarks"></a>Comentários  
  Testa as duas interfaces especificadas pelos parâmetros de modelo atual e determina se uma interface é derivada da outra.  
   
- Um erro é emitido se uma interface não é derivada de outro.  
+ Um erro será emitido se uma interface não é derivada de outro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

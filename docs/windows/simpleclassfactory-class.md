@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21b52876cb2a6c7bbf110a06cdfb29abdf1930d6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c490e21717e44ec3e772c01f84a0f5adb08471fd
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641815"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012489"
 ---
 # <a name="simpleclassfactory-class"></a>Classe SimpleClassFactory
 Fornece um mecanismo fundamental para criar uma classe base.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 template<typename Base>  
 class SimpleClassFactory : public ClassFactory<>;  
 ```  

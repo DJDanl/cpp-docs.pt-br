@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d36355c9f64f9f5c827ef8c4d5b3cb6a77d17b65
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 831f1fbcb2da205fa08286a1fbbbf414e66075d4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876830"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019924"
 ---
 # <a name="moduletype-enumeration"></a>Enumeração ModuleType
-Especifica se um módulo deve dar suporte a um servidor em processo ou fora de processo.  
+Especifica se um módulo deve dar suporte a um servidor em processo ou um servidor fora do processo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 enum ModuleType;  
 ```  
   
@@ -40,8 +40,8 @@ enum ModuleType;
 |Nome|Descrição|  
 |----------|-----------------|  
 |`InProc`|Um servidor em processo.|  
-|`OutOfProc`|Um servidor fora do processo.|  
-|`DisableCaching`|Desative o mecanismo de cache no módulo.|  
+|`OutOfProc`|Um servidor de out-of-process.|  
+|`DisableCaching`|Desabilite o mecanismo de cache no módulo.|  
 |`InProcDisableCaching`|Combinação de `InProc` e `DisableCaching`.|  
 |`OutOfProcDisableCaching`|Combinação de `OutOfProc` e `DisableCaching`.|  
   

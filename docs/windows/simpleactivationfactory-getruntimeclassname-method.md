@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c6c6731c4c7787f3d81a4e67eac2861a46bfe1a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9c8bc1962e946a48b6ebebaf072e4cb32559a6de
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644402"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014702"
 ---
 # <a name="simpleactivationfactorygetruntimeclassname-method"></a>Método SimpleActivationFactory::GetRuntimeClassName
 
@@ -35,7 +35,6 @@ STDMETHOD( GetRuntimeClassName )(
 ```
 
 ### <a name="parameters"></a>Parâmetros
-
 *runtimeName*  
 Quando essa operação for concluída, o nome de classe de tempo de execução.
 
@@ -45,7 +44,7 @@ S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
 
 ## <a name="remarks"></a>Comentários
 
-Se &#95; &#95;WRL_STRICT&#95; &#95; é definido, um erro de asserção será emitido se a classe especificada pelo `Base` parâmetro de modelo de classe não é derivado da [RuntimeClass](../windows/runtimeclass-class.md), ou não está configurada com o WinRt ou WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valor de enumeração.
+Se `__WRL_STRICT__` é definido, um erro de asserção será emitido se a classe especificada pelo `Base` parâmetro de modelo de classe não é derivado de [RuntimeClass](../windows/runtimeclass-class.md), ou não está configurada com o WinRt ou WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valor de enumeração.
 
 ## <a name="requirements"></a>Requisitos
 

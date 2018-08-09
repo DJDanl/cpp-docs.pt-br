@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf2c5cb434b07c9323594448a25da7251010bbad
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8b936b1014c2dd6640f64ca929628f6f0a74dc79
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608303"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012323"
 ---
 # <a name="resource-view-window"></a>Janela Exibição de Recurso
 > [!NOTE]
@@ -35,9 +35,9 @@ ms.locfileid: "39608303"
 >  Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
 > [!TIP]
->  Você pode com o botão direito na janela de exibição de recurso para iniciar um menu de atalho de comandos. Você também pode clicar duas vezes na barra de título para encaixar ou desencaixar a janela. Clicando duas vezes na barra de título fornece comandos adicionais que permitem que você controle o comportamento da janela. Para obter mais informações, consulte [Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
+>  Clique duas vezes no **exibição de recurso** janela para iniciar um menu de atalho de comandos. Você também pode clicar duas vezes na barra de título para encaixar ou desencaixar a janela. Clicando duas vezes na barra de título fornece comandos adicionais que permitem que você controle o comportamento da janela. Para obter mais informações, consulte [Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
-#### <a name="to-open-the-resource-view-window"></a>Para abrir a janela de exibição de recurso  
+### <a name="to-open-the-resource-view-window"></a>Para abrir a janela de exibição de recurso  
   
 1.  Clique em **exibição de recurso** sobre o **exibição** menu.  
   

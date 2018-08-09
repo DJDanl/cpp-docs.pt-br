@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 170d688988576d3cbc9c454eb84603f9660120a8
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 345171742f979e488c6a4bb48cf1b57e4bb2f164
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571214"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018104"
 ---
 # <a name="how-to-open-a-resource-script-file-in-text-format"></a>Como abrir o arquivo de script do recurso no formato de texto
 Pode haver ocasiões quando desejar exibir o conteúdo do arquivo de script (. rc) do recurso do seu projeto sem abrir um recurso, como uma caixa de diálogo dentro do seu editor de recurso específico. Por exemplo, você talvez queira procurar uma cadeia de caracteres em todas as caixas de diálogo no arquivo de recurso sem precisar abrir cada um deles separadamente.  
@@ -35,7 +35,7 @@ Pode haver ocasiões quando desejar exibir o conteúdo do arquivo de script (. r
  Você pode facilmente abrir o arquivo de recurso no formato de texto para exibir todos os recursos que ele contém e executem operações globais com suporte a [editor de texto](http://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1).  
   
 > [!NOTE]
->  Os editores de recursos não leem diretamente os arquivos. rc ou Resource. h. O compilador de recurso compila-os em arquivos de .aps, que são consumidos pelos editores de recursos. Esse arquivo é uma etapa de compilação e armazena apenas dados simbólicos. Como com um normal de processo de compilação, as informações que não seja simbólicas (por exemplo, comentários) são descartadas durante o processo de compilação. Sempre que o arquivo .aps obtém fora de sincronia com o arquivo. RC, o arquivo. rc for gerado novamente (por exemplo, quando você salva, o editor de recurso substitui o arquivo. RC e o arquivo Resource h). Todas as alterações para os próprios recursos permanecerão incorporadas no arquivo. RC, mas comentários sempre serão perdidos depois que o arquivo. RC é substituído. Para obter informações sobre como preservar comentários, consulte [incluindo recursos em tempo de compilação](../windows/how-to-include-resources-at-compile-time.md).  
+>  Os editores de recursos não ler diretamente. rc ou `resource.h` arquivos. O compilador de recurso compila-os em arquivos de .aps, que são consumidos pelos editores de recursos. Esse arquivo é uma etapa de compilação e armazena apenas dados simbólicos. Como com um normal de processo de compilação, as informações que não seja simbólicas (por exemplo, comentários) são descartadas durante o processo de compilação. Sempre que o arquivo .aps obtém fora de sincronia com o arquivo. RC, o arquivo. rc for gerado novamente (por exemplo, quando você salva, o editor de recurso substitui o arquivo. RC e o arquivo Resource h). Todas as alterações para os próprios recursos permanecerão incorporadas no arquivo. RC, mas comentários sempre serão perdidos depois que o arquivo. RC é substituído. Para obter informações sobre como preservar comentários, consulte [incluindo recursos em tempo de compilação](../windows/how-to-include-resources-at-compile-time.md).  
   
 ### <a name="to-open-a-resource-script-file-as-text"></a>Para abrir um arquivo de script de recurso como texto  
   
@@ -51,7 +51,7 @@ Pode haver ocasiões quando desejar exibir o conteúdo do arquivo de script (. r
   
 6.  Dos **abrir como** lista suspensa, selecione **texto**.  
   
-     O recurso é aberto no editor de código-fonte.  
+     O recurso é aberto na **código-fonte** editor.  
   
  \- ou -  
   
@@ -60,7 +60,6 @@ Pode haver ocasiões quando desejar exibir o conteúdo do arquivo de script (. r
 2.  No menu de atalho, escolha **abrir com...** , em seguida, selecione **Editor de código-fonte (texto)**.  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  

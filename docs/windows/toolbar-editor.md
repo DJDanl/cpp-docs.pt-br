@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe9c73a09e2a0f220ee4454baefb07b7e65fcafa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 505b97d1b3883568fc85795898f16f9821d8b930
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641641"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011722"
 ---
 # <a name="toolbar-editor"></a>Editor de Barra de Ferramentas
-O editor de barra de ferramentas permite que você criar recursos de barra de ferramentas e converter os bitmaps para os recursos da barra de ferramentas. O editor de barra de ferramentas usa uma exibição gráfica para mostrar uma barra de ferramentas e botões que se assemelhem como eles aparecerão em um aplicativo concluído.  
+O **barra de ferramentas** editor permite que você criar recursos de barra de ferramentas e converter os bitmaps para os recursos da barra de ferramentas. O **barra de ferramentas** editor usa uma exibição gráfica para mostrar uma barra de ferramentas e botões que se assemelhem como eles aparecerão em um aplicativo concluído.  
   
- Com o editor de barra de ferramentas, você pode:  
+ Com o **barra de ferramentas** editor, você pode:  
   
 -   [Criar novas barras de ferramentas e botões](../windows/creating-new-toolbars.md)  
   
@@ -40,12 +40,12 @@ O editor de barra de ferramentas permite que você criar recursos de barra de fe
   
 -   [Criar dicas de ferramenta](../windows/creating-a-tool-tip-for-a-toolbar-button.md)  
   
- A janela do editor de barra de ferramentas mostra dois modos de exibição de uma imagem de botão, o mesmo que a janela do editor de imagem. Uma barra de divisão separa os dois painéis. Você pode arrastar a barra de divisão de um lado para o outro para alterar o tamanho relativo dos painéis. O painel ativo exibe uma borda de seleção. Acima de dois modos de exibição da imagem é a barra de ferramentas do assunto.  
+ O **barra de ferramentas** janela do editor mostra dois modos de exibição de uma imagem de botão, o mesmo que a janela do editor de imagem. Uma barra de divisão separa os dois painéis. Você pode arrastar a barra de divisão de um lado para o outro para alterar o tamanho relativo dos painéis. O painel ativo exibe uma borda de seleção. Acima de dois modos de exibição da imagem é a barra de ferramentas do assunto.  
   
  ![Barra de ferramentas do Editor](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
 Editor de Barra de Ferramentas  
   
- O editor de barra de ferramentas é semelhante ao editor de imagem na funcionalidade. Os itens de menu, ferramentas gráficas e grade de bitmap são os mesmos no editor de imagem. Há um comando de menu no menu de imagem para que você possa alternar entre o editor de barra de ferramentas e o editor de imagens. Para obter mais informações sobre como usar a barra de ferramentas de gráficos, a paleta de cores ou o menu de imagem, consulte [Editor de imagens](../windows/image-editor-for-icons.md).  
+ O **barra de ferramentas** editor é semelhante ao **imagem** editor na funcionalidade. Os itens de menu, ferramentas gráficas e grade de bitmap são iguais do **imagem** editor. Há um comando de menu na **imagem** menu para permitir que você alterne entre a **barra de ferramentas** editor e o **imagem** editor. Para obter mais informações sobre como usar o **gráficos** barra de ferramentas **cores** paleta, ou **imagem** menu, consulte [Editor de imagens](../windows/image-editor-for-icons.md).  
   
  Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
