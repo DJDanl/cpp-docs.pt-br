@@ -1,5 +1,5 @@
 ---
-title: Conectando um Menu pop-up para seu aplicativo | Microsoft Docs
+title: Conectando um Menu pop-up ao aplicativo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 533fc4eea9299d51183a91febb371ff8142e0a7b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5bfe5c4dba3dc8e86eb9a47a6e163af94872b933
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879523"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641256"
 ---
 # <a name="connecting-a-pop-up-menu-to-your-application"></a>Conectando um menu pop-up ao aplicativo
 ### <a name="to-connect-a-pop-up-menu-to-your-application"></a>Para se conectar a um menu pop-up para seu aplicativo  
@@ -32,7 +32,7 @@ ms.locfileid: "33879523"
   
 2.  Adicione o seguinte código para o manipulador de mensagens:  
   
-    ```  
+    ```cpp  
     CMenu menu;  
     VERIFY(menu.LoadMenu(IDR_MENU1));  
     CMenu* pPopup = menu.GetSubMenu(0);  
@@ -41,12 +41,9 @@ ms.locfileid: "33879523"
     ```  
   
     > [!NOTE]
-    >  O [CPoint](../atl-mfc-shared/reference/cpoint-class.md) **passado pela mensagem manipulador é em coordenadas da tela.**  
+    >  O [CPoint](../atl-mfc-shared/reference/cpoint-class.md) passados pela mensagem manipulador está em coordenadas da tela.  
   
-
-  
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos  
  MFC  
   
 ## <a name="see-also"></a>Consulte também  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba7efc595be55b807cd3f044269db0debcb72407
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 88252e6bf4a5b7cad1ee6fcd0580d29f1bf5981a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891692"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641816"
 ---
 # <a name="weakref-class"></a>Classe WeakRef
-Representa um *referência fraca* que pode ser usado por somente o Windows Runtime, COM. não clássico Uma referência fraca representa um objeto que pode ou não pode ser acessado.  
+Representa uma *referência fraca* que pode ser usado pelo apenas Windows Runtime, com clássico não. Uma referência fraca representa um objeto que pode ou não ser acessível.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,11 +34,11 @@ class WeakRef : public ComPtr<IWeakReference>
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Um objeto WeakRef mantém um *referência forte*, que é associado um objeto e pode ser válido ou inválido. Chame o método As() ou AsIID() para obter uma referência forte. Quando a referência forte é válida, ele pode acessar o objeto associado. Quando a referência forte é inválida (`nullptr`), o objeto associado está inacessível.  
+ Um **WeakRef** objeto mantém uma *referência forte*, que é associado um objeto e pode ser válido ou inválido. Chame o `As()` ou `AsIID()` método para obter uma referência forte. Quando a referência forte é válida, ele pode acessar o objeto associado. Quando a referência forte é inválida (**nullptr**), o objeto associado está inacessível.  
   
- Um objeto de WeakRef normalmente é usado para representar um objeto cuja existência é controlada por um aplicativo ou thread externo. Por exemplo, criar um objeto de WeakRef de uma referência a um objeto de arquivo. Enquanto o arquivo estiver aberto, a referência forte é válida. Mas, se o arquivo for fechado, a referência forte torna-se inválido.  
+ Um **WeakRef** objeto normalmente é usado para representar um objeto cuja existência é controlada por um aplicativo ou thread externo. Por exemplo, construir uma **WeakRef** objeto a partir de uma referência a um objeto de arquivo. Enquanto o arquivo estiver aberto, a referência forte é válida. Mas, se o arquivo é fechado, a referência forte se torna inválida.  
   
- Observe que há uma alteração de comportamento no [como](../windows/weakref-as-method.md), [AsIID](../windows/weakref-asiid-method.md) e [CopyTo](../windows/weakref-copyto-method.md) métodos no SDK do Windows 10. Anteriormente, depois de chamar qualquer um desses métodos, você pode verificar o WeakRef para `nullptr` para determinar se uma referência forte foi obtida de com êxito, como no código a seguir:  
+ Observe que há uma alteração de comportamento na [como](../windows/weakref-as-method.md), [AsIID](../windows/weakref-asiid-method.md) e [CopyTo](../windows/weakref-copyto-method.md) métodos no SDK do Windows 10. Anteriormente, depois de chamar qualquer um desses métodos, você pode verificar o WeakRef para **nullptr** para determinar se uma referência forte foi obtida de com êxito, como no código a seguir:  
   
 ```cpp  
 WeakRef wr;  
@@ -55,17 +55,15 @@ if(wr == nullptr)
 {  
     wprintf(L"Couldn’t get strong ref!");  
 }  
-  
 ```  
   
- O código acima não funciona ao usar o SDK do Windows 10 (ou posterior). Em vez disso, verifique o ponteiro foi passado para `nullptr`.  
+ O código acima não funciona ao usar o SDK do Windows 10 (ou posterior). Em vez disso, verifique o ponteiro que foi passado para **nullptr**.  
   
 ```cpp  
 if (strongRef == nullptr)  
 {  
     wprintf(L"Couldn't get strong ref!");  
- }  
-  
+}  
 ```  
   
 ## <a name="members"></a>Membros  
@@ -74,22 +72,22 @@ if (strongRef == nullptr)
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor WeakRef::WeakRef](../windows/weakref-weakref-constructor.md)|Inicializa uma nova instância da classe WeakRef.|  
-|[Destruidor WeakRef::~WeakRef](../windows/weakref-tilde-weakref-destructor.md)|Deinitializes a instância atual da classe WeakRef.|  
+|[Construtor WeakRef::WeakRef](../windows/weakref-weakref-constructor.md)|Inicializa uma nova instância dos **WeakRef** classe.|  
+|[Destruidor WeakRef::~WeakRef](../windows/weakref-tilde-weakref-destructor.md)|Realiza o desligamento da instância atual do **WeakRef** classe.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método WeakRef::As](../windows/weakref-as-method.md)|Define o parâmetro de ponteiro ComPtr especificado para representar a interface especificada.|  
-|[Método WeakRef::AsIID](../windows/weakref-asiid-method.md)|Define o parâmetro de ponteiro ComPtr especificado para representar a ID de interface especificado.|  
+|[Método WeakRef::As](../windows/weakref-as-method.md)|Define especificado `ComPtr` parâmetro de ponteiro para representar a interface especificada.|  
+|[Método WeakRef::AsIID](../windows/weakref-asiid-method.md)|Define especificado `ComPtr` parâmetro de ponteiro para representar a ID de interface especificado.|  
 |[Método WeakRef::CopyTo](../windows/weakref-copyto-method.md)|Atribui um ponteiro para uma interface, se disponível, para a variável de ponteiro especificado.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Operador WeakRef::operator&](../windows/weakref-operator-ampersand-operator.md)|Retorna um objeto ComPtrRef que representa o objeto WeakRef atual.|  
+|[Operador WeakRef::operator&](../windows/weakref-operator-ampersand-operator.md)|Retorna um `ComPtrRef` objeto que representa o atual **WeakRef** objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `ComPtr`  

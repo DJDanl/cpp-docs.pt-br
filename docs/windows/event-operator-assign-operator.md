@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a523d6ba8679bf7d0bdf98563b86946e16e7bfca
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2aaea1c1c0a036b7c6ba26a9f5df94a72e9ea582
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571292"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641789"
 ---
 # <a name="eventoperator-operator"></a>Operador Event::operator=
 Atribui especificado **evento** referência atual **evento** instância.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 WRL_NOTHROW Event& operator=(  
    _Inout_ Event&& h  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *h*  
  Uma referência rvalue para um **evento** instância.  
   

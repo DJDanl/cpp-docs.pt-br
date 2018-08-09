@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7f414189c60946264ce49c5d6065d91d92b8bd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d468913dcca511702deeb77b08306dd0256d6091
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890246"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641243"
 ---
 # <a name="verifyinterfacehelper-structure"></a>Estrutura VerifyInterfaceHelper
-Oferece suporte à infraestrutura de biblioteca de modelos C++ do Windows em tempo de execução e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura de biblioteca de modelos de C++ de tempo de execução do Windows e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,14 +42,14 @@ template <
 struct VerifyInterfaceHelper<false, I>;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `I`  
+### <a name="parameters"></a>Parâmetros  
+ *I*  
  Uma interface para verificar.  
   
- `isWinRTInterface`  
+ *isWinRTInterface*  
   
 ## <a name="remarks"></a>Comentários  
- Verifica se a interface especificada pelo parâmetro de modelo atende a certos requisitos.  
+ Verifica se a interface especificada pelo parâmetro de modelo atende a determinados requisitos.  
   
 ## <a name="members"></a>Membros  
   
@@ -63,7 +63,7 @@ struct VerifyInterfaceHelper<false, I>;
  `VerifyInterfaceHelper`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

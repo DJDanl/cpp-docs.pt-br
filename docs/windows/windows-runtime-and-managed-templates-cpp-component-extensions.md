@@ -15,37 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9053b101428ac26e96446d9c6756ec5de35e06c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891357"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641454"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime e Modelos Gerenciados (Extensões de Componentes C++)
-Os modelos permitem que você defina um protótipo de um tempo de execução do Windows ou um tipo common language runtime e, em seguida, criar uma instância de variações desse tipo usando parâmetros de tipo de modelo diferente.  
+Modelos permitem que você defina um protótipo de um tempo de execução do Windows ou o tipo common language runtime e, em seguida, criar uma instância de variações desse tipo por meio de parâmetros de tipo de modelo diferente.  
   
 ## <a name="all-runtimes"></a>Todos os Tempos de Execução  
- Você pode criar modelos de tipos de valor ou referência.  Para obter mais informações sobre como criar tipos de valor ou referência, consulte [Classes e estruturas](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Você pode criar modelos de tipos de valor ou referência.  Para obter mais informações sobre como criar tipos de valor ou referência, consulte [Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
  Para obter mais informações sobre modelos de classe C++ padrão, consulte [modelos de classe](../cpp/class-templates.md).  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
- (Não há nenhum comentários para esse recurso de idioma que se aplicam somente no tempo de execução do Windows).  
+ (Não há nenhum comentário sobre este recurso de linguagem que se aplicam a apenas o tempo de execução do Windows.)  
   
 ### <a name="requirements"></a>Requisitos  
- Opção do compilador: **/ZW**  
+ Opção do compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  Existem algumas limitações para a criação de modelos de classe de tipos gerenciados que são demonstrados nos exemplos de código a seguir.  
   
 ### <a name="requirements"></a>Requisitos  
- Opção de compilador: **/clr**  
+ Opção do compilador: `/clr`  
   
 ### <a name="examples"></a>Exemplos  
- **Exemplo**  
   
- É possível criar uma instância de um tipo genérico com um parâmetro de modelo de tipo gerenciado, mas não é possível instanciar um modelo gerenciado com um parâmetro de modelo de tipo genérico.  Isso ocorre porque tipos genéricos são resolvidos em tempo de execução.  Para obter mais informações, consulte [genéricos e modelos (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
+ É possível criar uma instância de um tipo genérico com um parâmetro de modelo do tipo gerenciado, mas você não pode instanciar um modelo gerenciado com um parâmetro de modelo de tipo genérico.  Isso ocorre porque os tipos genéricos são resolvidos em tempo de execução.  Para obter mais informações, consulte [genéricos e modelos (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
   
 ```cpp  
 // managed_templates.cpp  
@@ -67,9 +66,7 @@ ref class R {
 };  
 ```  
   
- **Exemplo**  
-  
- Um tipo genérico ou função não pode ser aninhada em um modelo gerenciado.  
+ Um tipo genérico ou uma função não pode ser aninhada em um modelo gerenciado.  
   
 ```cpp  
 // managed_templates_2.cpp  
@@ -80,9 +77,7 @@ template<class T> public ref class R {
 };  
 ```  
   
- **Exemplo**  
-  
- Você não pode acessar modelos definidos em um assembly referenciado com C + + sintaxe de linguagem CLI, mas você pode usar reflexão.  Se um modelo não é instanciado, ele não é emitido nos metadados.  Se um modelo é instanciado, somente as funções de membro referenciado serão exibido nos metadados.  
+ Você não pode acessar modelos definidos em um assembly referenciado com C + + / sintaxe de linguagem da CLI, mas você pode usar a reflexão.  Se um modelo não é instanciado, ele não é emitido nos metadados.  Se um modelo é instanciado, apenas as funções de membro referenciado serão exibido nos metadados.  
   
 ```cpp  
 // managed_templates_3.cpp  
@@ -112,9 +107,7 @@ int main() {
 }  
 ```  
   
- **Exemplo**  
-  
- Você pode alterar o modificador gerenciado de uma classe em uma especialização parcial ou especialização explícita de um modelo de classe.  
+ Você pode alterar o modificador gerenciado de uma classe em uma especialização parcial ou uma especialização explícita de um modelo de classe.  
   
 ```cpp  
 // managed_templates_4.cpp  
@@ -139,7 +132,6 @@ interface class A<T%> {};
 // native class  
 template <>  
 class A <int> {};  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte também  

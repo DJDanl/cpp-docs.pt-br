@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5da07f5328f6ff75f778e44ffafd3722e0cdfca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d00370014767d7b29de5f1efa592fd999af3d0bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882557"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641386"
 ---
 # <a name="criticalsectioncs-data-member"></a>Membro de dados CriticalSection::cs_
 Declara um membro de dados da seção crítica.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 CRITICAL_SECTION cs_;  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Este membro de dados é protegido.  
+ Este membro de dados está protegido.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

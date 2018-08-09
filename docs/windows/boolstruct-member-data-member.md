@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f01f2c642686c1cf7c01fe9322e06f165d5ada9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14c78a92ac66ee998e11f7101a6a8306be73862a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859807"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641109"
 ---
 # <a name="boolstructmember-data-member"></a>Membro de dados BoolStruct::Member
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 int Member;  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Especifica que um [ComPtr](../windows/comptr-class.md) é ou não, é gerenciar a vida útil de objeto de uma interface.  
+ Especifica que um [ComPtr](../windows/comptr-class.md) é ou não, é gerenciar o tempo de vida do objeto de uma interface.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** internal.h  

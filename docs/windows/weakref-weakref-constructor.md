@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae70dabdd86fedf82c26c0c7d9a09d842e2310e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eafbddea6ae651d74d8f33be8efa58c25a8a0d3d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891041"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641467"
 ---
 # <a name="weakrefweakref-constructor"></a>Construtor WeakRef::WeakRef
-Inicializa uma nova instância da classe WeakRef.  
+Inicializa uma nova instância dos **WeakRef** classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,12 +52,12 @@ WeakRef(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `ptr`  
- Um ponteiro, referência ou referência de rvalue para um objeto existente que inicializa o objeto WeakRef atual.  
+### <a name="parameters"></a>Parâmetros  
+ *ptr*  
+ Um ponteiro, referência ou referência rvalue a um objeto existente que inicializa o atual **WeakRef** objeto.  
   
 ## <a name="remarks"></a>Comentários  
- O primeiro construtor inicializa um objeto WeakRef vazio. O segundo construtor inicializa um objeto de WeakRef de um ponteiro para a interface IWeakReference. O terceiro construtor inicializa um objeto de WeakRef de uma referência a um ComPtr\<IWeakReference > objeto. Os quarto e quinto construtores inicializa um objeto de WeakRef de outro objeto WeakRef.  
+ O primeiro construtor inicializa vazia **WeakRef** objeto. O segundo construtor inicializa um **WeakRef** objeto de um ponteiro para o `IWeakReference` interface. O terceiro construtor inicializa um **WeakRef** objeto a partir de uma referência a um `ComPtr<IWeakReference>` objeto. O quartos e quintas construtores inicializam um **WeakRef** objeto de outro **WeakRef** objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  
