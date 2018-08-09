@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed3e9b9e66f673a3d86ded7b3d576e1203db9595
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 662e40dd7e111b976be105129861b8ea26e5d0d9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570555"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646170"
 ---
 # <a name="ftmbase-class"></a>Classe FtmBase
 Representa um objeto livre de marshaler.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 class FtmBase : public Microsoft::WRL::Implements<  
    Microsoft::WRL::RuntimeClassFlags<WinRtClassicComMix>,   
    Microsoft::WRL::CloakedIid<IMarshal> >;  

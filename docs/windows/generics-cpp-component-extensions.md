@@ -18,21 +18,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 968ccdc38906f2b9c279821cb34d166d03211562
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b22a12dca79bc3cc5c505120f64b318e454e526e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878106"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643443"
 ---
 # <a name="generics--c-component-extensions"></a>Genéricos (Extensões de Componentes C++)
-Genéricos são com parâmetros de tipos e métodos. Nesta seção, saber quais recursos genéricos têm suporte pelo common language runtime e o tempo de execução do Windows e que têm suporte apenas a common language runtime. Além disso, descubra como criar seus próprios métodos e tipos genéricos no Visual C++ e como usar tipos genéricos criados em uma linguagem do .NET Framework no Visual C++. Por fim, esta seção fornece uma comparação dos modelos de C++ e genéricos.  
+Genéricos são métodos e tipos parametrizados. Nesta seção, saiba quais recursos genéricos forem compatíveis com o tempo de execução do Windows e o common language runtime e que são suportados por apenas o common language runtime. Além disso, saiba como criar seus próprios métodos e tipos genéricos no Visual C++ e como usar tipos genéricos criados em uma linguagem .NET Framework no Visual C++. Por fim, esta seção fornece uma comparação de modelos C++ e genéricos.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- **Suporte para o tempo de execução do Windows e o Common Language Runtime**  
+### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Com suporte pelo tempo de execução do Windows e o Common Language Runtime 
   
  [Visão geral de genéricos no Visual C++](../windows/overview-of-generics-in-visual-cpp.md)  
- Informações sobre genéricos são motivação para o recurso de idioma, definições de termos usados para descrever genéricos e informações sobre o uso de tipos de referência e tipos de valor como parâmetros de tipo para genéricos.  
+ São informações sobre os genéricos, a motivação para o recurso de linguagem, as definições dos termos usados para descrever os genéricos e informações sobre o uso de tipos de referência e tipos de valor como parâmetros de tipo genéricos.  
   
  [Interfaces genéricas (Visual C++)](../windows/generic-interfaces-visual-cpp.md)  
  Informações sobre como definir e usar interfaces genéricas.  
@@ -44,15 +44,15 @@ Genéricos são com parâmetros de tipos e métodos. Nesta seção, saber quais 
  Informações sobre como usar restrições em tipos genéricos.  
   
  [Consumindo genéricos (C++/CLI)](../windows/consuming-generics-cpp-cli.md)  
- Informações sobre como usar genéricos definidos em assemblies do .NET, possivelmente criados em outros idiomas, no Visual C++.  
+ Informações sobre como usar genéricos definidos em assemblies do .NET, possivelmente criados em outras linguagens, no Visual C++.  
   
  [Genéricos e modelos (Visual C++)](../windows/generics-and-templates-visual-cpp.md)  
- Uma comparação de genéricos e modelos, quando para cada uso e como combiná-las útil.  
+ Uma comparação dos modelos, quando a cada uso e como combiná-los utilmente e genéricos.  
   
- **Suporte a Common Language Runtime**  
+### <a name="supported-by-the-common-language-runtime"></a>Com suporte pelo Common Language Runtime
   
  [Funções genéricas (C++/CLI)](../windows/generic-functions-cpp-cli.md)  
- Informações sobre como definir e usando métodos e funções genéricas.  
+ Informações sobre como definir e usar métodos e funções genéricas.  
   
  [Classes genéricas (C++/CLI)](../windows/generic-classes-cpp-cli.md)  
  Informações sobre como definir e usar classes genéricas.  

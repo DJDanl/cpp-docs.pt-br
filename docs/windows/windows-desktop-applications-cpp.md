@@ -1,5 +1,5 @@
 ---
-title: Aplicativos de área de trabalho do Windows (C++) | Microsoft Docs
+title: Aplicativos da área de trabalho do Windows (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9e24921a2a33ab31a9a5e6b7c3a33dbfec6c47e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f78fa02b991fbdf7c18457a8018ea46b0c240585
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890677"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647951"
 ---
-# <a name="windows-desktop-applications-c"></a>Aplicativos de área de trabalho do Windows (C++)
-Esta seção discute como criar aplicativos de área de trabalho do C++ que são executados em uma janela.  
+# <a name="windows-desktop-applications-c"></a>Aplicativos da área de trabalho do Windows (C++)
+Esta seção discute como criar aplicativos da área de trabalho do C++ que são executados em uma janela.  
+
 > [!TIP]  
-> Para Windows 10, você pode usar o conversor de aplicativo de área de trabalho para empacotar o aplicativo de área de trabalho existente para implantação por meio da Microsoft Store. Para obter mais informações, consulte [Usando o tempo de execução do Visual C++ em projeto Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) e [Traga seu aplicativo da área de trabalho para a UWP (Plataforma Universal do Windows) com a Ponte de Desktop](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
+> Para Windows 10, você pode usar o Desktop App Converter para empacotar o aplicativo de área de trabalho existente para implantação por meio do Microsoft Store. Para obter mais informações, consulte [Usando o tempo de execução do Visual C++ em projeto Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) e [Traga seu aplicativo da área de trabalho para a UWP (Plataforma Universal do Windows) com a Ponte de Desktop](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).
   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Esses tópicos supõem que você entender os conceitos básicos da linguagem C++.  
+ Este tópico pressupõe que você conheça os princípios básicos da linguagem C++.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -47,4 +48,3 @@ Esta seção discute como criar aplicativos de área de trabalho do C++ que são
   
 ## <a name="see-also"></a>Consulte também  
  [Visual C++ no Visual Studio](../visual-cpp-in-visual-studio.md)
-

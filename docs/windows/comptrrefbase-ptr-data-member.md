@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d45181e5db5fe16b6eada23ba8d6c72193fe3ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ff52245f518158c3ca5c44c6af88307d9a55ab4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883561"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644837"
 ---
 # <a name="comptrrefbaseptr-data-member"></a>Membro de dados ComPtrRefBase::ptr_
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 T* ptr_;  
 ```  
   
@@ -37,7 +37,7 @@ T* ptr_;
  Ponteiro para o tipo especificado pelo parâmetro de modelo atual.  
   
 ## <a name="remarks"></a>Comentários  
- `ptr_` é o membro de dados protegidos.  
+ **PTR _** é o membro de dados protegidos.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

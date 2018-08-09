@@ -1,5 +1,5 @@
 ---
-title: 'Método: Lockshared | Microsoft Docs'
+title: 'Método SRWLOCK:: Lockshared | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fccc72814ca5c4fff417e0b6221ef0f3c045a5bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8dfc50ae0732471f8cb91b2c380d4c4772350f47
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33895743"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652120"
 ---
 # <a name="srwlocklockshared-method"></a>Método SRWLock::LockShared
-Obtém um objeto SRWLock no modo compartilhado.  
+Adquire uma **SRWLock** objeto no modo compartilhado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,15 +37,15 @@ static SyncLockShared LockShared(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `lock`  
- Ponteiro para um objeto SRWLock.  
+### <a name="parameters"></a>Parâmetros  
+ *lock*  
+ Ponteiro para um **SRWLock** objeto.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Um objeto SRWLock no modo compartilhado.  
+ Uma **SRWLock** objeto no modo compartilhado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

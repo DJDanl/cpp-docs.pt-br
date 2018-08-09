@@ -1,5 +1,5 @@
 ---
-title: 'Método Srwlocksharedtraits: | Microsoft Docs'
+title: 'Método srwlocksharedtraits:: Getinvalidvalue | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8738d537aaa7cf4c257b95d1093e28441e828c9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ab88d2853f62932177858adb6bea3c991059f6f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890770"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650225"
 ---
 # <a name="srwlocksharedtraitsgetinvalidvalue-method"></a>Método SRWLockSharedTraits::GetInvalidValue
-Recupera um objeto de SRWLockSharedTraits que sempre é inválido.  
+Recupera uma **SRWLockSharedTraits** objeto sempre é inválido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,10 +34,10 @@ inline static Type GetInvalidValue();
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Um identificador para um objeto SRWLockSharedTraits.  
+ Um identificador para um **SRWLockSharedTraits** objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   

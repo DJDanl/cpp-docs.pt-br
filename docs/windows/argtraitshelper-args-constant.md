@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09480168f842adbcbd9e1c50056a9d16278bccc4
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 49ee69015837d27f7445db9f765739fc1d28152c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465825"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642868"
 ---
 # <a name="argtraitshelperargs-constant"></a>Constante ArgTraitsHelper::args
 Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 static const int args = Traits::args;  
 ```  
   

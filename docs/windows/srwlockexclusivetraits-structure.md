@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b5d56c4e0c31b56e5bdc92a9d209b58cd15ffb1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49f1f50b3fa9e34da8831c1cec138b6aefec27a5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889271"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649267"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>Estrutura SRWLockExclusiveTraits
-Descreve características comuns da classe SRWLock no modo de bloqueio exclusivo.  
+Descreve características comuns do `SRWLock` classe no modo de bloqueio exclusivo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,14 +45,14 @@ struct SRWLockExclusiveTraits;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método SRWLockExclusiveTraits::GetInvalidValue](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|Recupera um objeto de SRWLockExclusiveTraits que sempre é inválido.|  
-|[Método SRWLockExclusiveTraits::Unlock](../windows/srwlockexclusivetraits-unlock-method.md)|Libera o controle exclusivo do objeto SRWLock especificado.|  
+|[Método SRWLockExclusiveTraits::GetInvalidValue](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|Recupera uma **SRWLockExclusiveTraits** objeto sempre é inválido.|  
+|[Método SRWLockExclusiveTraits::Unlock](../windows/srwlockexclusivetraits-unlock-method.md)|Libera o controle exclusivo do especificado `SRWLock` objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `SRWLockExclusiveTraits`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   

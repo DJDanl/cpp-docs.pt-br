@@ -26,15 +26,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e94945212b9a7215397a1179432e87178d236b42
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: a2aacfcda168b3abdb5d46826a0351f85a4b3d48
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571279"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645390"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Personalizando ou alterando cores (editor de imagens para ícones)
-O editor de imagens [paleta de cores](../windows/colors-window-image-editor-for-icons.md) exibe inicialmente 16 cores padrão. Além de cores exibidas, você pode criar suas próprias cores personalizadas. Em seguida, você pode [salvar e carregar uma paleta de cores personalizada](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
+O **imagem** do editor [paleta de cores](../windows/colors-window-image-editor-for-icons.md) exibe inicialmente 16 cores padrão. Além de cores exibidas, você pode criar suas próprias cores personalizadas. Em seguida, você pode [salvar e carregar uma paleta de cores personalizada](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
   
 ### <a name="to-change-colors-on-the-colors-palette"></a>Para alterar as cores na paleta de cores  
   
@@ -51,7 +51,6 @@ O editor de imagens [paleta de cores](../windows/colors-window-image-editor-for-
 5.  Clique em **Okey** para adicionar a nova cor.  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Nenhum  
   
 ## <a name="see-also"></a>Consulte também  

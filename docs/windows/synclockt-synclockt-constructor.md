@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3353df1a73821a2009aeba2367f1892b06aba5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ceaafd6230e6497ed2b7636ad5070141546cb8d6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889832"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648159"
 ---
 # <a name="synclocktsynclockt-constructor"></a>Construtor SyncLockT::SyncLockT
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,20 +39,20 @@ explicit SyncLockT(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `other`  
- Uma referência rvalue a outro objeto SyncLockT.  
+### <a name="parameters"></a>Parâmetros  
+ *other*  
+ Uma referência rvalue para outro **SyncLockT** objeto.  
   
- `sync`  
- Uma referência a outro objeto SyncLockWithStatusT.  
+ *sync*  
+ Uma referência a outro `SyncLockWithStatusT` objeto.  
   
 ## <a name="remarks"></a>Comentários  
- Inicializa uma nova instância da classe SyncLockT.  
+ Inicializa uma nova instância dos **SyncLockT** classe.  
   
- O primeiro construtor inicializa o objeto SyncLockT atual de outro objeto SyncLockT especificado pelo parâmetro `other`e, em seguida, invalida o outro objeto SyncLockT. É o segundo construtor `protected`e inicializa o objeto SyncLockT atual para um estado inválido.  
+ O primeiro construtor inicializa o atual **SyncLockT** objeto de outro **SyncLockT** objeto especificado pelo parâmetro *outros*e, em seguida, invalida as outras  **SyncLockT** objeto. É o segundo construtor **protegidos**e a inicializa atual **SyncLockT** objeto para um estado inválido.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::Details  
   

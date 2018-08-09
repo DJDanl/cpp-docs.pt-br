@@ -19,23 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40f79bc6afe47bfed92d096dace59ef97eed68e1
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2429b86ad872ea310d690187c7283b8498ece3f5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568872"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645120"
 ---
 # <a name="generic-functions-ccli"></a>Funções genéricas (C++/CLI)
 Uma função genérica é uma função que é declarada com parâmetros de tipo. Quando chamado, os tipos reais são usados em vez dos parâmetros de tipo.  
   
 ## <a name="all-platforms"></a>Todas as Plataformas  
- **Comentários**  
+### <a name="remarks"></a>Comentários
   
  Esse recurso não se aplica a todas as plataformas.  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
- **Comentários**  
+### <a name="remarks"></a>Comentários
   
  Não há suporte para esse recurso no tempo de execução do Windows.  
   
@@ -47,7 +47,7 @@ Uma função genérica é uma função que é declarada com parâmetros de tipo.
   
 ### <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [attributes] [modifiers]  
 return-type identifier<type-parameter identifier(s)>  
 [type-parameter-constraints clauses]  
@@ -94,7 +94,6 @@ return-type identifier<type-parameter identifier(s)>
  Opção do compilador: `/clr`  
   
 ### <a name="examples"></a>Exemplos  
- **Exemplo**  
   
  O exemplo de código a seguir demonstra uma função genérica.  
   
@@ -129,8 +128,6 @@ int main() {
 }  
 ```  
   
- **Exemplo**  
-  
  Funções genéricas podem ser sobrecarregadas com base na assinatura ou arity, o número de parâmetros de tipo em uma função. Além disso, funções genéricas podem ser sobrecarregadas com funções de não-genérica de mesmo nome, desde que as funções diferem em alguns parâmetros de tipo. Por exemplo, as funções a seguir podem ser sobrecarregadas:  
   
 ```cpp  
@@ -146,8 +143,6 @@ ref struct MyClass {
    void MyMythod(int i) {}  
 };  
 ```  
-  
- **Exemplo**  
   
  O exemplo a seguir usa uma função genérica para localizar o primeiro elemento em uma matriz. Ele declara `MyClass`, que herda da classe base `MyBaseClass`. `MyClass` contém uma função genérica, `MyFunction`, que chama outra função genérica, `MyBaseClassFunction`, dentro da classe base. Na `main`, a função genérica, `MyFunction`, é chamado usando argumentos de tipo diferente.  
   
@@ -184,8 +179,6 @@ int main() {
    myObj->MyFunction<String^>("Hello generic functions!"));  
 }  
 ```  
-  
- **Saída**  
   
 ```Output  
 My function returned an int: 2003  

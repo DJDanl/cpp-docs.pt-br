@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8282079099b0b67b144f768a69f724e39305385
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cf1c7c0894eacc828a011c8c5f9fef8c2d78fba8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460485"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652507"
 ---
 # <a name="consuming-generics-ccli"></a>Consumindo genéricos (C++/CLI)
 Genéricos criados em uma linguagem .NET podem ser usados em outras linguagens .NET. Ao contrário dos modelos, um genérico em um assembly compilado ainda permanece genérico. Assim, um pode criar uma instância de tipo genérico em um assembly diferente e até mesmo em um idioma diferente do assembly no qual o tipo genérico foi definido.  
@@ -114,9 +114,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>Saída  
-  
-```  
+```Output  
 90  
 80  
 70  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c8221b405618b1879f4e4c865115a227eb09857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 125ffe998e7c3f225f72e3fb47df4ef3525c37f9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890094"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649042"
 ---
 # <a name="weakrefoperatoramp-operator"></a>Weakref:: Operator&amp; operador
-Retorna um objeto ComPtrRef que representa o objeto WeakRef atual.  
+Retorna um `ComPtrRef` objeto que representa o atual **WeakRef** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,10 +34,10 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Um objeto ComPtrRef que representa o objeto WeakRef atual.  
+ Um `ComPtrRef` objeto que representa o atual **WeakRef** objeto.  
   
 ## <a name="remarks"></a>Comentários  
- Este é um operador de auxiliar interno que não se destina a ser usada em seu código.  
+ Este é um operador auxiliar interno que não se destina a ser usado em seu código.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

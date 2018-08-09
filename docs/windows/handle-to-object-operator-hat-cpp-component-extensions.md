@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc55ab1dad4ee9ba088aaae92f76e58b29683b29
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b74f4ca4ab2940dde9dfc567b8fa45ea8f03279e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569798"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642764"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Operador Handle to Object (^) (Extensões de Componentes C++)
 O *manipular declarador* (`^`, pronunciado "hat"), modifica o tipo [especificador](../cpp/overview-of-declarators.md) para significar que o objeto declarado deve ser excluído automaticamente quando o sistema determina que o objeto é não é mais acessível.  
@@ -36,7 +36,7 @@ O *manipular declarador* (`^`, pronunciado "hat"), modifica o tipo [especificado
  Para obter informações sobre como criar uma instância de um objeto, consulte [ref novo](../windows/ref-new-gcnew-cpp-component-extensions.md).  
   
 ## <a name="requirements"></a>Requisitos  
- Opção do compilador: **/ZW**  
+ Opção do compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  O sistema usa o CLR *coletor de lixo* mecanismo para determinar se o objeto não está sendo usado e pode ser excluído. O common language runtime mantém uma heap em que atribui objetos, e usa referências gerenciadas (variáveis) em seu programa indicam o local dos objetos no heap. Quando um objeto não é mais usado, a memória ocupada pelo mesmo na heap é liberada. Periodicamente, o coletor de lixo compacta a heap para melhorar o uso da memória liberada. Compactar a heap poderá mover os objetos na heap, o que invalida o locais referenciado por referências gerenciadas. No entanto, o coletor de lixo está ciente do local de todas as referências gerenciadas e as atualiza automaticamente para indicar o local atual dos objetos no heap.  
@@ -48,7 +48,6 @@ O *manipular declarador* (`^`, pronunciado "hat"), modifica o tipo [especificado
  Para obter mais informações, consulte [como: declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).  
   
 ### <a name="examples"></a>Exemplos  
- **Exemplo**  
   
  Este exemplo mostra como criar uma instância de um tipo de referência na heap gerenciada.  Este exemplo também mostra que você pode inicializar um identificador com outro, resultando em duas referências ao mesmo objeto na heap gerenciada, coleta de lixo. Observe que atribuir [nullptr](../windows/nullptr-cpp-component-extensions.md) a uma alça não marca o objeto para coleta de lixo.  
   
@@ -77,14 +76,10 @@ int main() {
 }  
 ```  
   
- **Saída**  
-  
 ```Output  
 1  
 2  
 ```  
-  
- **Exemplo**  
   
  O exemplo a seguir mostra como declarar um identificador para um objeto na heap gerenciada, onde o tipo de objeto é um tipo de valor Demarcado. O exemplo também mostra como obter o tipo de valor do objeto convertido.  
   
@@ -109,18 +104,14 @@ int main() {
    int n = 100;  
    Test(n);  
 }  
-```  
-  
- **Saída**  
+```   
   
 ```Output  
 Not a boxed int  
 100  
 ```  
   
- **Exemplo**  
-  
- Este exemplo mostra que a linguagem C++ comuns de usar um ponteiro void * para apontar para um objeto arbitrário foi substituída por Object ^, que pode conter um identificador para qualquer classe de referência. Ele também mostra que todos os tipos, como matrizes e representantes, podem ser convertidos em um identificador de objeto.  
+ Este exemplo mostra que a linguagem C++ comuns do uso de um `void*` ponteiro para apontar para um objeto arbitrário é substituído pelo `Object^`, que pode conter um identificador para qualquer classe de referência. Ele também mostra que todos os tipos, como matrizes e representantes, podem ser convertidos em um identificador de objeto.  
   
 ```cpp  
 // mcppv2_handle_3.cpp  
@@ -157,8 +148,6 @@ int main() {
 }  
 ```  
   
- **Saída**  
-  
 ```Output  
 Type is System.Collections.ArrayList  
   
@@ -166,8 +155,6 @@ Type is System.Int32
   
 Type is MyDel  
 ```  
-  
- **Exemplo**  
   
  Este exemplo mostra que um identificador pode ser desreferenciado e que um membro pode ser acessado por meio de um identificador desreferenciado.  
   
@@ -209,17 +196,13 @@ int main() {
 }  
 ```  
   
- **Saída**  
-  
 ```Output  
 Array value: 7  
   
 Cannot access array element 11, size is 10  
 ```  
   
- **Exemplo**  
-  
- Este exemplo mostra que uma referência nativa (`&`) não é possível associar a uma `int` membro de um tipo gerenciado, como o `int` pode ser armazenado na heap do lixo coletado e referências nativas não acompanham o movimento do objeto no heap gerenciado. A correção é usar uma variável local ou para alterar `&` para `%`, tornando-o uma referência de rastreamento.  
+ Este exemplo mostra que uma referência nativa (`&`) não é possível associar a uma **int** membro de um tipo gerenciado, como o **int** pode ser armazenado na heap do lixo coletado e referências nativas não acompanham movimentação de objeto no heap gerenciado. A correção é usar uma variável local ou para alterar `&` para `%`, tornando-o uma referência de rastreamento.  
   
 ```cpp  
 // mcppv2_handle_5.cpp  

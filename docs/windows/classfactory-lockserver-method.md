@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 654ef60c924a14e861971c651899c8baea0300ef
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ee858346fdb70e136edfbc562c2dfffb1f63e462
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462700"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652364"
 ---
 # <a name="classfactorylockserver-method"></a>Método ClassFactory::LockServer
 Aumenta ou diminui o número de subjacente objetos que são controladas pelo atual **ClassFactory** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 STDMETHOD(  
    LockServer  
 )(BOOL fLock);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *Usam*  
  **True** para incrementar o número de objetos rastreados. **False** para diminuir o número de objetos rastreadas.  
   
@@ -43,7 +43,7 @@ STDMETHOD(
  S_OK se bem-sucedido; Caso contrário, E_FAIL.  
   
 ## <a name="remarks"></a>Comentários  
- ClassFactory mantém o controle de objetos em uma instância subjacente do [módulo](../windows/module-class.md) classe.  
+ **ClassFactory** mantém o controle de objetos em uma instância subjacente do [módulo](../windows/module-class.md) classe.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  

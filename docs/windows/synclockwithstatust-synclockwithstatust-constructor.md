@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f665866a43e45d6526aa33f17c05eacebdd84aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21ce2054cabf257594cb3fa376236b9a1e504a59
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891344"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647749"
 ---
 # <a name="synclockwithstatustsynclockwithstatust-constructor"></a>Construtor SyncLockWithStatusT::SyncLockWithStatusT
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,23 +40,23 @@ explicit SyncLockWithStatusT(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `other`  
- Uma referência rvalue a outro objeto SyncLockWithStatusT.  
+### <a name="parameters"></a>Parâmetros  
+ *other*  
+ Uma referência rvalue para outro **SyncLockWithStatusT** objeto.  
   
- `sync`  
- Uma referência a outro objeto SyncLockWithStatusT.  
+ *sync*  
+ Uma referência a outro **SyncLockWithStatusT** objeto.  
   
- `status`  
- O valor da [status_](../windows/synclockwithstatust-status-data-member.md) membro de dados a `other` parâmetro ou o `sync` parâmetro.  
+ *status*  
+ O valor da [status _](../windows/synclockwithstatust-status-data-member.md) membro de dados a *outras* parâmetro ou o *sincronização* parâmetro.  
   
 ## <a name="remarks"></a>Comentários  
- Inicializa uma nova instância da classe SyncLockWithStatusT.  
+ Inicializa uma nova instância dos **SyncLockWithStatusT** classe.  
   
- O primeiro construtor inicializa o objeto SyncLockWithStatusT atual de outro SyncLockWithStatusT especificado pelo parâmetro `other`e, em seguida, invalida o outro objeto SyncLockWithStatusT. É o segundo construtor `protected`e inicializa o objeto SyncLockWithStatusT atual para um estado inválido.  
+ O primeiro construtor inicializa o atual **SyncLockWithStatusT** objeto de outro **SyncLockWithStatusT** especificado pelo parâmetro *outros*e, em seguida, invalida a outra **SyncLockWithStatusT** objeto. É o segundo construtor **protegidos**e a inicializa atual **SyncLockWithStatusT** objeto para um estado inválido.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::Details  
   

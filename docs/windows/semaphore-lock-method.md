@@ -1,5 +1,5 @@
 ---
-title: 'Método Semaphore: | Microsoft Docs'
+title: 'Método Semaphore:: Lock | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80b4db212236da6c9fb320ff5a5e04f4e9f4a4c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 39f2fe48b1e7a1a7c6b875b988d861d5fb48698a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892469"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642140"
 ---
 # <a name="semaphorelock-method"></a>Método Semaphore::Lock
-Aguarda até que o objeto atual ou o objeto de semáforo associado com o identificador especificado, está no estado sinalizado ou o intervalo de tempo limite especificado tiver decorrido.  
+Aguarda até que o objeto atual, ou o **semáforo** objeto associado ao identificador especificado, estiver no estado sinalizado ou o intervalo de tempo limite especificado tenha decorrido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,21 +40,20 @@ static SyncLock Lock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `milliseconds`  
- O intervalo de tempo limite, em milissegundos. O valor padrão é infinito, o que espera indefinidamente.  
+### <a name="parameters"></a>Parâmetros  
+ *milissegundos*  
+ O intervalo de tempo limite em milissegundos. O valor padrão é infinito, o que espera indefinidamente.  
   
- `h`  
- Um identificador para um objeto de semáforo.  
+ *h*  
+ Um identificador para um **semáforo** objeto.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Um Details::SyncLockWithStatusT\<HandleTraits::SemaphoreTraits >  
+ Um `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
 ## <a name="see-also"></a>Consulte também  
-[Classe Semaphore](../windows/semaphore-class.md)
- 
+ [Classe Semaphore](../windows/semaphore-class.md)

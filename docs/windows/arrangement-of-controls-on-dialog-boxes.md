@@ -1,5 +1,5 @@
 ---
-title: Organização dos controles em caixas de diálogo | Microsoft Docs
+title: Organização de controles em caixas de diálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a449fef82b536cdea484a49a52fece86fac21604
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3414c6856619f602ec21297ebb330e060e98906b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858481"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645767"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>Organização de controles em caixas de diálogo
-O editor de caixa de diálogo fornece ferramentas de layout para alinham e dimensionar automaticamente os controles. Para a maioria das tarefas, você pode usar o [barra de ferramentas do Editor de caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Todos os comandos da barra de ferramentas Editor de caixa de diálogo também estão disponíveis no menu de formato e a maioria tem [teclas de atalho](../windows/accelerator-keys-for-the-dialog-editor.md).  
+O **caixa de diálogo** editor fornece ferramentas de layout que se alinham e dimensionar automaticamente os controles. Para a maioria das tarefas, você pode usar o [barra de ferramentas do Editor de caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Todos os **Editor de caixa de diálogo** comandos da barra de ferramentas também estão disponíveis na **formato** menu e a maioria tem [teclas de atalho](../windows/accelerator-keys-for-the-dialog-editor.md).  
   
- Muitos comandos de layout para caixas de diálogo estão disponíveis somente quando mais de um controle é selecionado. Você pode selecionar um único ou vários controles e quando mais de um controle é selecionado, a primeira alteração que você selecionar é, por padrão, o controle "dominante". Para obter informações sobre como selecionar controles e o controle dominante, consulte [selecionando controles](../windows/selecting-controls.md).  
+ Muitos comandos de layout para caixas de diálogo estão disponíveis somente quando mais de um controle é selecionado. Você pode selecionar um controle único ou vários controles, e quando mais de um controle é selecionado, a primeira é que você selecione é, por padrão, o controle "dominante". Para obter informações sobre a seleção de controles e o controle dominante, consulte [controles selecionando](../windows/selecting-controls.md).  
   
  O local, altura e largura do controle atual são exibidos no canto inferior direito da barra de status. Quando a caixa de diálogo inteira é selecionada, a barra de status exibe a posição da caixa de diálogo como um todo e sua altura e largura.  
   
@@ -45,7 +45,7 @@ O editor de caixa de diálogo fornece ferramentas de layout para alinham e dimen
   
 -   [Alterando a ordem de tabulação dos controles](../windows/changing-the-tab-order-of-controls.md)  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  
@@ -53,4 +53,3 @@ O editor de caixa de diálogo fornece ferramentas de layout para alinham e dimen
 ## <a name="see-also"></a>Consulte também  
  [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
-

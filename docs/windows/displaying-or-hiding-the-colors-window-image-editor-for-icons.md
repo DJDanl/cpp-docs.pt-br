@@ -18,21 +18,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0aed218fb12a1d115bbcd92f058ec72182864677
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6300b02fccad672eef19b387d595a42e4b94ef2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872036"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645104"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>Exibindo ou ocultando a janela Cores (editor de imagens para ícones)
 ### <a name="to-display-colors-window"></a>Para exibir a janela de cores  
   
-1.  Clique com botão direito em um **Editor de imagem** painel e escolha **Mostrar janela de cores** no menu de atalho.  
+1.  Clique com botão direito em um **Editor de imagens** painel e escolha **Mostrar janela de cores** no menu de atalho.  
   
      \- ou -  
   
-2.  Clique em **Mostrar janela de cores** no [menu imagem](../windows/image-menu-image-editor-for-icons.md).  
+2.  Clique em **Mostrar janela de cores** sobre o [menu imagem](../windows/image-menu-image-editor-for-icons.md).  
   
 ### <a name="to-hide-the-colors-window"></a>Para ocultar a janela de cores  
   
@@ -42,10 +42,9 @@ ms.locfileid: "33872036"
   
 -   Clique o **fechar** botão.  
   
- Requisitos  
-  
+## <a name="requirements"></a>Requisitos  
  Nenhum  
   
 ## <a name="see-also"></a>Consulte também  
- [Janela de cores](../windows/colors-window-image-editor-for-icons.md)   
+ [Janela cores](../windows/colors-window-image-editor-for-icons.md)   
  [Editor de imagens para ícones](../windows/image-editor-for-icons.md)

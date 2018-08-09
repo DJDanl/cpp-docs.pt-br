@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dc81eacdbadb971ab86f4cfde1353e89bbe1342
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 21f986e227e9daca58731d03c40d6dae5b0c0a80
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463821"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653034"
 ---
 # <a name="cppquote"></a>cpp_quote
 Emite a cadeia de caracteres especificada, sem os caracteres de aspas no arquivo. idl gerado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [ cpp_quote(  
    "statement"  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *statement*  
  Uma instrução C.  
   

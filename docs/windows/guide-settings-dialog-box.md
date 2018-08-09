@@ -23,37 +23,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 265c6c1931b0e48399039e507be45c73c710142d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 271a56881f2710a7fb7c18dadeb7c36d4d6a3232
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568885"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647990"
 ---
 # <a name="guide-settings-dialog-box"></a>Caixa de diálogo Configurações da Guia
 ## <a name="layout-guides"></a>Guias de layout  
  Exibe as configurações das guias de layout.  
   
- **Nenhum**  
+### <a name="none"></a>Nenhum  
   
  Oculta as ferramentas de layout.  
   
- **Réguas e guias**  
+### <a name="rulers-and-guides"></a>Réguas e guias  
   
  Quando habilitado, adiciona réguas para as ferramentas de layout; guias podem ser colocados nas réguas. Os guias padrão são as margens, que podem ser movidas, arrastando. Clique nas réguas para colocar uma guia. Controles de "ajustará" aos guias de quando os controles são movidos pela ou ao lado deles. Controles também são movidos com um guia depois que eles estão conectados a ele. Quando um controle está anexado a uma guia em cada lado e um guia é movido, o controle é redimensionado.  
   
- **Grade**  
+### <a name="grid"></a>Grade  
   
  Cria uma grade de layout. Novos controles são alinhados automaticamente à grade.  
   
 ## <a name="grid-spacing"></a>Espaçamento da grade  
  Exibe as configurações para o espaçamento da grade em unidades de caixa de diálogo (DLUs).  
   
- **Largura: DLUs**  
+### <a name="width-dlus"></a>Largura: DLUs  
   
  Define a largura da grade de layout em DLUs. Um DLU horizontal é a largura da média da fonte de caixa de diálogo dividida por quatro.  
   
- **Altura: DLUs**  
+### <a name="height-dlus"></a>Altura: DLUs 
   
  Define a altura da grade de layout em DLUs. Um DLU vertical é a média altura da fonte de caixa de diálogo dividida por oito.  
   

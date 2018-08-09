@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11d3229341ece1bbee0820a7e2320b8ef6b0381b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e17bada862cf2d7c5b86815ae140e298060ecb40
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870244"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648425"
 ---
 # <a name="editable-file-types-for-resources"></a>Tipos de arquivo editáveis para recursos
 Você pode abrir os seguintes tipos de arquivos e editar os recursos que eles contêm.  
@@ -33,13 +33,11 @@ Você pode abrir os seguintes tipos de arquivos e editar os recursos que eles co
 |---------------|-----------------|  
 |. rc|Arquivos de script de recurso.|  
 |. rct|Arquivos de modelo de recurso.|  
-|. res|Arquivos de recurso.|  
+|. res|Arquivos de recursos.|  
 |.resx|Arquivos de recurso gerenciado.|  
 |.exe|Arquivos executáveis.|  
 |. dll|Arquivos de biblioteca de vínculo dinâmico.|  
 |. bmp,. ico,. dib e. cur|Arquivos de bitmap, ícone, barra de ferramentas e cursor.|  
-  
-
   
 ## <a name="requirements"></a>Requisitos  
  Win32  

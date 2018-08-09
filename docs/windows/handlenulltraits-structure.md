@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4b7daa319b927d168d39f0981c00b5fbe92063c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e009b31f95f2cdf80231021c38848fbc30ce20d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877872"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645432"
 ---
 # <a name="handlenulltraits-structure"></a>Estrutura HANDLENullTraits
-Define as características de um identificador não inicializado.  
+Define as características comuns de um identificador não inicializado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 struct HANDLENullTraits;  
 ```  
   
@@ -52,7 +52,7 @@ struct HANDLENullTraits;
  `HANDLENullTraits`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   

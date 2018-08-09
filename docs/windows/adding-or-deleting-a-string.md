@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90a470aa5bb1b24ab2fe549f098a83c29e5d0828
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 93cf3eba3301b0ae000b9f461851b46be592a119
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464143"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650277"
 ---
 # <a name="adding-or-deleting-a-string"></a>Adicionando ou excluindo uma cadeia de caracteres
-Você pode inserir rapidamente novas entradas na tabela de cadeia de caracteres usando o editor de cadeia de caracteres. Novas cadeias de caracteres são colocadas no final da tabela e recebem o próximo identificador disponível. Você pode editar as propriedades de ID, o valor ou a legenda na [janela de propriedades](/visualstudio/ide/reference/properties-window) conforme necessário.  
+Você pode inserir rapidamente novas entradas para a tabela de cadeia de caracteres usando o **cadeia de caracteres** editor. Novas cadeias de caracteres são colocadas no final da tabela e recebem o próximo identificador disponível. Você pode editar, em seguida, o **ID**, **valor**, ou **legenda** propriedades no [janela propriedades](/visualstudio/ide/reference/properties-window) conforme necessário.  
   
- O editor de cadeia de caracteres torna-se de que você não usar uma ID que já está em uso. Se você selecionar uma ID já em uso, o editor de cadeia de caracteres irá notificá-lo e, em seguida, atribuir uma ID exclusiva genérica, por exemplo IDS_STRING58113.  
+ O **cadeia de caracteres** editor torna-se de que você não usar uma ID que já está em uso. Se você selecionar uma ID já em uso, o **cadeia de caracteres** editor de notificá-lo e, em seguida, atribuir uma ID exclusiva genérica, por exemplo `IDS_STRING58113`.  
   
 ### <a name="to-add-a-string-table-entry"></a>Para adicionar uma entrada de tabela de cadeia de caracteres  
   
@@ -64,10 +64,9 @@ Você pode inserir rapidamente novas entradas na tabela de cadeia de caracteres 
   
 -   Pressione a **excluir** chave.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados (aquelas que visam o common language runtime), consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos a propriedades, consulte [instruções passo a passo: Localizando Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Passo a passo: usando recursos para localização com o ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados (aquelas que visam o common language runtime), consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos a propriedades, consulte [instruções passo a passo: Localizando Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Passo a passo: usando recursos para localização com o ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  

@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ee53735c84d586aa41cd4a1c5d3e8a70051c88e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 23befed8800027553f69032a5f5cc32816396951
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460965"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648204"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Janela Cores (editor de imagens para ícones)
 O **cores** janela tem duas partes:  
@@ -46,7 +46,7 @@ Janela Cores
 > [!NOTE]
 >  O **cor da tela** e **cor inverso** ferramentas só estão disponíveis para os ícones e cursores.  
   
- Você pode usar a janela de cores com o [barra de ferramentas do Editor de imagens](../windows/toolbar-image-editor-for-icons.md).  
+ Você pode usar o **cores** janela com o [barra de ferramentas do Editor de imagens](../windows/toolbar-image-editor-for-icons.md).  
   
 ## <a name="requirements"></a>Requisitos  
  Nenhum  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4787fec0a6b4b9f55c500b66786372945d9a523
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d33cbd46903a37bf42e417a100d26c9b706058c0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890343"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645932"
 ---
 # <a name="terminatemap-function"></a>Função TerminateMap
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,21 +36,21 @@ inline bool TerminateMap(
     bool forceTerminate) throw()  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- `module`  
+### <a name="parameters"></a>Parâmetros  
+ *módulo*  
  Um [módulo](../windows/module-class.md).  
   
- `serverName`  
- O nome de um subconjunto de fábricas de classe no módulo especificado pelo parâmetro `module`.  
+ *ServerName*  
+ O nome de um subconjunto de fábricas de classe no módulo especificado pelo parâmetro *módulo*.  
   
- `forceTerminate`  
- `true` Para encerrar a classe fábricas independentemente de eles estão ativas; `false` não encerrar as fábricas de classe se qualquer fábrica estiver ativa.  
+ *forceTerminate*  
+ **True** para encerrar a classe fábricas, independentemente de eles estão ativos; **falsos** não encerrar as fábricas de classes se qualquer fábrica estiver ativa.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` Se todas as fábricas de classe foram finalizadas. Caso contrário, `false`.  
+ **Verdadeiro** se todas as fábricas de classes foram encerradas; caso contrário, **falso**.  
   
 ## <a name="remarks"></a>Comentários  
- Desliga as fábricas de classe no módulo especificado.  
+ Desliga as fábricas de classes no módulo especificado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  

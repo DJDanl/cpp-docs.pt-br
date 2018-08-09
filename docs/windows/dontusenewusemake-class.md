@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 351b38a002c470dcd3f53e8336e393f845fdb3cf
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 32418b163cb31f5eaf20c9d2b3ff3a4b585850dd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569563"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644093"
 ---
 # <a name="dontusenewusemake-class"></a>Classe DontUseNewUseMake
 Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 class DontUseNewUseMake;  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Impeça o uso de operador **novo** em RuntimeClass. Consequentemente, você deve usar o [tornar função](../windows/make-function.md) em vez disso.  
+ Impeça o uso de operador **novos** em `RuntimeClass`. Consequentemente, você deve usar o [tornar função](../windows/make-function.md) em vez disso.  
   
 ## <a name="members"></a>Membros  
   
@@ -42,7 +42,7 @@ class DontUseNewUseMake;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Operador DontUseNewUseMake::operator new](../windows/dontusenewusemake-operator-new-operator.md)|Sobrecarrega o operador **novo** e impede que ele seja usado em RuntimeClass.|  
+|[Operador DontUseNewUseMake::operator new](../windows/dontusenewusemake-operator-new-operator.md)|Sobrecarrega o operador **novos** e impede que ele seja usado no `RuntimeClass`.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `DontUseNewUseMake`  

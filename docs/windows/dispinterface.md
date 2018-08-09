@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 18308cc66e2a01aa5e0396f098096ee9d49416bf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569208"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644324"
 ---
 # <a name="dispinterface"></a>dispinterface
 Coloca uma interface no arquivo. idl como uma interface de expedição.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [dispinterface]  
 ```  
   
@@ -40,7 +40,7 @@ Coloca uma interface no arquivo. idl como uma interface de expedição.
   
  O exemplo de uso de [dispinterface](http://msdn.microsoft.com/library/windows/desktop/aa366802) na documentação do MIDL:  
   
-```  
+```cpp  
 dispinterface helloPro   
    { interface hello; };   
 ```  
@@ -59,7 +59,7 @@ dispinterface helloPro
 |**Aplica-se a**|**interface**|  
 |**Repetível**|Não|  
 |**Atributos obrigatórios**|Nenhum|  
-|**Atributos inválidos**|**dupla**, **objeto**, **oleautomation**, `local`, **ms_union**|  
+|**Atributos inválidos**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f7c1f02c3791e75d3f42db6a942f5b2055234517
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 7d15c4cd43dd74b6c699027be9841f5f4a610518
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570604"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646105"
 ---
 # <a name="dbsource"></a>db_source
 Cria uma conexão a uma fonte de dados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [ db_source(   
    db_source,   
    name,   
@@ -45,7 +45,7 @@ Cria uma conexão a uma fonte de dados.
  Quando você usa **db_source** em uma classe *nome* é uma instância de um objeto de fonte de dados que tem o **db_source** atributo aplicado a ele (consulte o exemplo 1). Quando você usa **db_source** embutido na implementação de um método *nome* é uma variável (local para o método) que pode ser usada para acessar os dados de origem (consulte o exemplo 2). Você passá-la *nome* para o *source_name* parâmetro do `db_command` para associar a fonte de dados com um comando.  
   
  *HRESULT* (opcional)  
- Identifica a variável que receberá o `HRESULT` desse comando de banco de dados. Se a variável não existir, ele será automaticamente injetado pelo atributo.  
+ Identifica a variável que receberá o HRESULT desse comando de banco de dados. Se a variável não existir, ele será automaticamente injetado pelo atributo.  
   
 ## <a name="remarks"></a>Comentários  
  **db_source** cria um [CDataSource](../data/oledb/cdatasource-class.md) e uma [CSession](../data/oledb/csession-class.md) objeto, que juntas representam uma conexão com uma fonte de dados do consumidor OLE DB.  

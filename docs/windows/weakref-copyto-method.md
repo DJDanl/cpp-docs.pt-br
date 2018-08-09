@@ -1,5 +1,5 @@
 ---
-title: 'Método Weakref: | Microsoft Docs'
+title: 'Método weakref:: CopyTo | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 817d984e995e7ac33ba80f978a282a8c0bac3e4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 90756dc8ff515a8c956778bf8c6392332a8f9ca9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890629"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652741"
 ---
 # <a name="weakrefcopyto-method"></a>Método WeakRef::CopyTo
 Atribui um ponteiro para uma interface, se disponível, para a variável de ponteiro especificado.  
@@ -45,23 +45,23 @@ HRESULT CopyTo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `U`  
- Uma interface IInspectable do ponteiro. Um erro é emitido se `U` não é derivado de IInspectable.  
+### <a name="parameters"></a>Parâmetros  
+ *U*  
+ Ponteiro um `IInspectable` interface. Um erro será emitido se *U* não é derivado de `IInspectable`.  
   
- `riid`  
- Uma ID de interface. Um erro é emitido se `riid` não é derivado de **IWeakReference**.  
+ *riid*  
+ Uma ID de interface. Um erro será emitido se *riid* não é derivado de `IWeakReference`.  
   
- `ptr`  
- Um ponteiro indireto duplamente IInspectable ou IWeakReference.  
+ *ptr*  
+ Um ponteiro indireto duplamente para `IInspectable` ou `IWeakReference`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, o HRESULT que descreve a falha. Para obter mais informações, consulte Comentários.  
+ S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha. Para obter mais informações, consulte **Comentários**.  
   
 ## <a name="remarks"></a>Comentários  
- Um valor de retorno de S_OK significa que essa operação foi bem-sucedida, mas não indica se a referência fraca foi resolvida para uma referência forte. Se for retornado S_OK, esse parâmetro de teste `p` é um forte referência; ou seja, o parâmetro `p` não é igual a `nullptr`.  
+ Um valor de retorno de S_OK significa que essa operação foi bem-sucedida, mas não indica se a referência fraca foi resolvida para uma referência forte. Se for retornado S_OK, esse parâmetro de teste *p* é uma ótima referência; ou seja, o parâmetro *p* não for igual a **nullptr**.  
   
- A partir do SDK do Windows 10, esse método não define a instância de WeakRef `nullptr` se não foi possível obter a referência fraca, portanto você deve evitar erro ao verificar o código que verifica a WeakRef para `nullptr`. Em vez disso, verifique `ptr` para `nullptr`.  
+ A partir do SDK do Windows 10, esse método não define o **WeakRef** instância **nullptr** se não foi possível obter a referência fraca, portanto, você deve evitar erro ao verificar o código que verifica o WeakRef para **nullptr**. Em vez disso, verifique *ptr* para **nullptr**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** client.h  

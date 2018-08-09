@@ -1,5 +1,5 @@
 ---
-title: 'Método Eventtargetarray: | Microsoft Docs'
+title: 'Método eventtargetarray:: end | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00827d42bb01263d6b4fd9b5aea3b0fc7f7c76e1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5e64cfcd0ad8a71a67815b592908d57725fef9f1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874259"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648640"
 ---
 # <a name="eventtargetarrayend-method"></a>Método EventTargetArray::End
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 ComPtr<IUnknown>* End();  
 ```  
   
@@ -40,7 +40,7 @@ ComPtr<IUnknown>* End();
  Obtém o endereço do último elemento da matriz interna de manipuladores de eventos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25287e642bd368470b207ed237f44ca70773064e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eee563a52a24d2b78157b640ae6e84217c03af64
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892521"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651272"
 ---
 # <a name="semaphoreoperator-operator"></a>Operador Semaphore::operator=
-Move o identificador especificado de um objeto de sinal para o objeto atual de semáforo.  
+Move o identificador especificado de uma **semáforo** objeto atual **semáforo** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,15 +35,15 @@ Semaphore& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `h`  
- Referência de Rvalue para um objeto de semáforo.  
+### <a name="parameters"></a>Parâmetros  
+ *h*  
+ Referência de Rvalue para um **semáforo** objeto.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Uma referência ao objeto atual de semáforo.  
+ Uma referência ao atual **semáforo** objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers
  

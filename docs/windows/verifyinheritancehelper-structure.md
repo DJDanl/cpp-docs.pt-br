@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d758f4b44990d1f03ff698f0740c2aa8491367a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a67e63748ee7650b2e99a6112f9725daf6cf13c6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889697"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652930"
 ---
 # <a name="verifyinheritancehelper-structure"></a>Estrutura VerifyInheritanceHelper
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,11 +41,11 @@ template <
 struct VerifyInheritanceHelper<I, Nil>;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `I`  
+### <a name="parameters"></a>Parâmetros  
+ *I*  
  Um tipo.  
   
- `Base`  
+ *Base de dados de*  
  Outro tipo.  
   
 ## <a name="remarks"></a>Comentários  
@@ -63,7 +63,7 @@ struct VerifyInheritanceHelper<I, Nil>;
  `VerifyInheritanceHelper`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebb492d576e82c276aeb1cb464a39b558040fdc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 826d296e4c11571151ff0cd3265465b4307d2d92
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890110"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643959"
 ---
 # <a name="unique-c"></a>unique (C++)
 Especifica um ponteiro exclusivo.  
@@ -30,26 +30,24 @@ Especifica um ponteiro exclusivo.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [unique]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O **exclusivo** atributo C++ tem a mesma funcionalidade que o [exclusivo](http://msdn.microsoft.com/library/windows/desktop/aa367294) atributo MIDL.  
+ O **exclusivos** atributo C++ tem a mesma funcionalidade que o [exclusivo](http://msdn.microsoft.com/library/windows/desktop/aa367294) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- Consulte o [ref](../windows/ref-cpp.md) exemplo para uso do exemplo **exclusivo**.  
+ Consulte a [ref](../windows/ref-cpp.md) exemplo para uso do exemplo **exclusivo**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|`typedef`, `struct`, **união**, a interface de parâmetro, o método de interface|  
+|**Aplica-se a**|**TypeDef**, **struct**, **união**, a interface do parâmetro, o método de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c54068d6938e217798c6fc17c9ece5c13ffcaa0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4488ca0e32bc9522e29028536efdcd5fea925301
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467359"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649979"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Adicionando, editando ou excluindo controles
-Usando o editor de caixa de diálogo, você pode adicionar, redimensionar, editar e excluir os controles em caixas de diálogo. Você também pode editar as propriedades de um controle, como sua ID, ou se é visível inicialmente no tempo de execução.  
+Usando o **caixa de diálogo** editor, você pode adicionar, redimensionar, editar e excluir os controles em caixas de diálogo. Você também pode editar as propriedades de um controle, como sua ID, ou se é visível inicialmente no tempo de execução.  
   
- Você pode usar o menu de atalho no editor de caixa de diálogo Adicionar rapidamente os controles ActiveX registrados para uma caixa de diálogo, e você pode adicionar controles ActiveX à caixa de ferramentas para acesso rápido (para obter mais informações, consulte [personalizar caixa de diálogo da caixa de ferramentas](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)).  
+ Você pode usar o menu de atalho a **caixa de diálogo** editor para adicionar rapidamente registrado controles ActiveX a uma caixa de diálogo, e você pode adicionar controles ActiveX para o **caixa de ferramentas** para acesso rápido (para obter mais informações, consulte [Personalizar caixa de diálogo da caixa de ferramentas](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)).  
   
 -   [Adicionar um controle a uma caixa de diálogo](adding-a-control-to-a-dialog-box.md)  
   
@@ -43,7 +43,7 @@ Usando o editor de caixa de diálogo, você pode adicionar, redimensionar, edita
   
 -   [Mostrar ou ocultar a janela da caixa de ferramentas](showing-or-hiding-the-dialog-editor-toolbar.md)  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  
@@ -52,4 +52,3 @@ Usando o editor de caixa de diálogo, você pode adicionar, redimensionar, edita
  [Controles em caixas de diálogo](controls-in-dialog-boxes.md)   
  [Adicionando manipuladores de eventos para controles de caixa de diálogo](adding-event-handlers-for-dialog-box-controls.md)   
  [Controles da caixa de diálogo e tipos de variável](../ide/dialog-box-controls-and-variable-types.md)
-

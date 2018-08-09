@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c2a1297fff3c4604ffb181a907b982f9d2e1de4
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: dd35674b61e61eead6118fdcc0aacccbafa6f3b4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570357"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649501"
 ---
 # <a name="delegate--c-component-extensions"></a>delegado (Extensões de Componentes C++)
 Declara um tipo que representa um ponteiro de função.  
@@ -68,7 +68,7 @@ delegate-type-identifier
  Use o *identificador de tipo de delegado* para declarar um evento com o mesmo protótipo como o delegado. Para obter mais informações, consulte [delegados (C + + c++ /CX)](../cppcx/delegates-c-cx.md).  
   
 ### <a name="requirements"></a>Requisitos  
- Opção do compilador: **/ZW**  
+ Opção do compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  O common language runtime dá suporte a delegados com a sintaxe a seguir.  
@@ -124,10 +124,9 @@ function_declaration
 -   [Delegados genéricos (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
   
 ### <a name="requirements"></a>Requisitos  
- Opção de compilador: **/clr**  
+ Opção do compilador: `/clr`  
   
 ### <a name="examples"></a>Exemplos  
- **Exemplo**  
   
  O exemplo a seguir mostra como declarar, inicializar e invocar representantes.  
   
@@ -187,8 +186,6 @@ int main () {
    StaticDelInst(11);  
 }  
 ```  
-  
- **Saída**  
   
 ```Output  
 in func1 8  

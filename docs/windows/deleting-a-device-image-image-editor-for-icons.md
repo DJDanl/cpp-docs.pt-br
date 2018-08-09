@@ -20,29 +20,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2922526827a4a812f31ebde209f118bd726f5b73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dd35697e6a46ae681286fd9601f7d8cdc022948e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881738"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649829"
 ---
 # <a name="deleting-a-device-image-image-editor-for-icons"></a>Excluindo a imagem de um dispositivo (editor de imagens para ícones)
 ### <a name="to-delete-a-device-image"></a>Para excluir uma imagem de dispositivo  
   
-1.  Enquanto a imagem do ícone é exibida no **imagem** editor, selecione **excluir a imagem de dispositivo** do **imagem** menu. Quando você excluir a última imagem do ícone no recurso, o recurso também é excluído.  
+1.  Enquanto a imagem do ícone é exibida na **imagem** editor, selecione **excluir imagem do dispositivo** do **imagem** menu. Quando você exclui a última imagem de ícone no recurso, o recurso também é excluído.  
   
     > [!NOTE]
-    >  Quando você pressiona a tecla DEL, as imagens e desenhada em um ícone de cores são excluídas, mas o ícone permanecerá; Agora você pode recriá-lo. Se você pressionar DEL por engano, você pode pressionar CTRL + Z para desfazer a ação.  
+    >  Quando você pressiona o **/DEL** chave, as imagens e cores que você desenhou em um ícone serão excluídas, mas o ícone permanecerá; agora é possível recriá-lo. Se você pressionar **/DEL** por engano, você pode pressionar **Ctrl**+**Z** desfazer a ação.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisitos  
-  
+## <a name="requirements"></a>Requisitos  
  Nenhum  
   
 ## <a name="see-also"></a>Consulte também  
  [Ícones e cursores: recursos de imagem para exibir dispositivos](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
  [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Ícones e cursores: recursos de imagem para exibir dispositivos](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-

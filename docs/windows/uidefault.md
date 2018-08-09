@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad24d6e874b1c2efd9b57118e20fe78bfa037bd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef4cfba786bd5c310a24727b59575b9eb45bd183
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890145"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651607"
 ---
 # <a name="uidefault"></a>uidefault
 Indica que o membro de informações de tipo é o membro padrão para exibição na interface do usuário.  
@@ -30,18 +30,16 @@ Indica que o membro de informações de tipo é o membro padrão para exibição
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [uidefault]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
  O **uidefault** atributo C++ tem a mesma funcionalidade que o [uidefault](http://msdn.microsoft.com/library/windows/desktop/aa367292) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir mostra um exemplo de **uidefault**:  
+ O código a seguir mostra um exemplo dos **uidefault**:  
   
-```  
+```cpp  
 // cpp_attr_ref_uidefault.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -60,13 +58,13 @@ __interface ICustom{
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Método de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

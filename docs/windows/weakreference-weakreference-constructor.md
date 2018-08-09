@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e60b23a0c63ce1415765dd1f94863540849f975
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c872b311e6fa7aa16d7118a13bc69ef2c7ef9cc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891055"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652643"
 ---
 # <a name="weakreferenceweakreference-constructor"></a>Construtor WeakReference::WeakReference
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,15 +34,14 @@ WeakReference();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Inicializa uma nova instância do [classe WeakReference](../windows/weakreference-class1.md).  
+ Inicializa uma nova instância dos [classe WeakReference](../windows/weakreference-class1.md).  
   
- O ponteiro de referência forte para o objeto WeakReference foi inicializado para `nullptr`, e a contagem de referência forte é inicializada como 1.  
+ O ponteiro de referência forte para o **WeakReference** objeto é inicializado como **nullptr**, e a contagem de referência forte é inicializada como 1.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Consulte também  
-    
  [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

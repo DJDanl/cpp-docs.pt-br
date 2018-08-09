@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bdcdc6557253f8be9c6ecb20300f2338ab35d07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef5a4453e0b7742a385815b5285b2aa04575eb75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889014"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645403"
 ---
 # <a name="string-c"></a>string (C++)
-Indica que o unidimensional `char`, `wchar_t`, **bytes** (ou equivalente) array ou ponteiro para essa matriz deve ser tratado como uma cadeia de caracteres.  
+Indica que o unidimensional **char**, **wchar_t**, `byte` (ou equivalente) matriz ou o ponteiro para essa matriz deve ser tratado como uma cadeia de caracteres.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [string]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
@@ -41,7 +39,7 @@ Indica que o unidimensional `char`, `wchar_t`, **bytes** (ou equivalente) array 
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra como usar **cadeia de caracteres** em uma interface e em um typedef:  
   
-```  
+```cpp  
 // cpp_attr_ref_string.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -56,13 +54,13 @@ __interface IFireTabCtrl
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|Matriz ou ponteiro para uma matriz, o parâmetro de interface, o método de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

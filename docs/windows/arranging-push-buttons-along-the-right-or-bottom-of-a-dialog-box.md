@@ -1,5 +1,5 @@
 ---
-title: Organizando botões de ação ao longo do direito ou inferior de uma caixa de diálogo | Microsoft Docs
+title: Organizando botões de ação ao longo da direita ou inferior de uma caixa de diálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,34 +18,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3bf0ccd8954884b5ed1907c752b013ab2a33840d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7df4b20677c8dbccacdbfa21cc798da1ed4bb511
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860236"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649215"
 ---
 # <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Organizando botões de ação ao longo da parte direita ou inferior de uma caixa de diálogo
-### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Para organizar os botões de ação ao longo do direito ou inferior de uma caixa de diálogo  
+### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Para organizar os botões de envio por push ao longo da direita ou inferior de uma caixa de diálogo  
   
-1.  Selecione um ou mais botões de ação.  
+1.  Selecione um ou mais botões de envio por push.  
   
-2.  Do **formato** menu, escolha **Organizar botões**e, em seguida, escolha uma das seguintes organizações:  
+2.  Dos **formato** menu, escolha **Organizar botões**e, em seguida, escolha uma das seguintes organizações:  
   
-    -   **Direita**: alinha os botões de ação ao longo da borda direita da caixa de diálogo.  
+    -   `Right`: alinha os botões de envio por push ao longo da borda direita da caixa de diálogo.  
   
-    -   **Inferior**: alinha os botões de ação ao longo da borda inferior da caixa de diálogo.  
+    -   `Bottom`: alinha os botões de envio por push ao longo da borda inferior da caixa de diálogo.  
   
-         Se você selecionar um controle que não seja um botão de ação, sua posição não será afetada.  
+         Se você selecionar um controle que não seja um botão de envio por push, sua posição não é afetada.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos
  Win32  
   
 ## <a name="see-also"></a>Consulte também  
- [Organização dos controles em caixas de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Organização de controles em caixas de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
-

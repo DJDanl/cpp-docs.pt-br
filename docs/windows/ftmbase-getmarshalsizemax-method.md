@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c39c313f06bb4dd1f4dbc095df159a38625e9db8
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: c7976d0ea22a0bf6f59b020f892d407c4721b9a7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570208"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652351"
 ---
 # <a name="ftmbasegetmarshalsizemax-method"></a>Método FtmBase::GetMarshalSizeMax
 Obtenha o limite superior no número de bytes necessários para realizar marshaling do ponteiro de interface especificado no objeto especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 STDMETHODIMP GetMarshalSizeMax(  
    __in REFIID riid,  
    __in_opt void *pv,  

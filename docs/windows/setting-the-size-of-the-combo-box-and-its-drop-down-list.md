@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ee46502fee6f37d926580863dfc91edb276a846
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6a22f67bdb0d9d88cd2bb448628734db30f75885
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889339"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643167"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Definindo o tamanho da caixa de combinação e a lista suspensa
 Quando você adicioná-lo à caixa de diálogo, você pode dimensionar uma caixa de combinação. Você também pode especificar o tamanho da caixa de listagem suspensa.  
@@ -32,7 +32,7 @@ Quando você adicioná-lo à caixa de diálogo, você pode dimensionar uma caixa
   
 1.  Selecione o controle de caixa de combinação na caixa de diálogo.  
   
-     Inicialmente, apenas as alças de dimensionamento esquerda e direita estão ativas.  
+     Inicialmente, apenas as alças de dimensionamento de direito e esquerdo estão ativos.  
   
 2.  Use as alças de dimensionamento para definir a largura da caixa de combinação.  
   
@@ -44,7 +44,7 @@ Quando você adicioná-lo à caixa de diálogo, você pode dimensionar uma caixa
   
      ![Seta em uma caixa de combinação em um projeto MFC](../mfc/media/vccomboboxarrow.gif "vcComboBoxArrow")  
   
-     A estrutura de tópicos do controle será alterado para mostrar o tamanho da caixa de combinação com a área de lista suspensa estendida.  
+     O contorno do controle muda para mostrar o tamanho da caixa de combinação com a área de lista suspensa estendida.  
   
 2.  Use a alça de dimensionamento inferior para alterar o tamanho inicial da área de lista suspensa.  
   
@@ -52,13 +52,12 @@ Quando você adicioná-lo à caixa de diálogo, você pode dimensionar uma caixa
   
 3.  Clique na seta suspensa novamente para fechar a parte da lista suspensa da caixa de combinação.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionando valores a um controle de caixa de combinação](../windows/adding-values-to-a-combo-box-control.md)   
  [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
-

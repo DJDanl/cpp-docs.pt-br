@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ebb476b0a8c384759c9d44101e7bac7083103b2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: fbe4837a347c78bb3b7c05094adf442b69fa2f39
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570760"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649485"
 ---
 # <a name="generics-and-templates-visual-c"></a>Genéricos e modelos (Visual C++)
 Genéricos e modelos são recursos de linguagem que oferecem suporte para tipos parametrizados. No entanto, eles são diferentes e têm diferentes usos. Este tópico fornece uma visão geral das muitas diferenças.  
@@ -51,7 +51,7 @@ Genéricos e modelos são recursos de linguagem que oferecem suporte para tipos 
   
 ## <a name="combining-templates-and-generics"></a>Genéricos e modelos de combinação  
   
--   A diferença básica em genéricos tem implicações para a criação de aplicativos que combinam modelos e genéricos. Por exemplo, suponha que você tenha uma classe de modelo que você deseja criar um invólucro genérico para expor esse modelo para outros idiomas como um elemento genérico. Você não pode ter das genérica leva um parâmetro de tipo que ele, em seguida, passa para o modelo, uma vez que o modelo precisa ter esse parâmetro de tipo em tempo de compilação, mas genérica não resolver o parâmetro de tipo até que o tempo de execução. Aninhamento de um modelo dentro de um genérico também não funcionará porque não há nenhuma maneira de expandir os modelos em tempo de compilação para tipos genéricos arbitrários que pode ser instanciada em tempo de execução.  
+A diferença básica em genéricos tem implicações para a criação de aplicativos que combinam modelos e genéricos. Por exemplo, suponha que você tenha uma classe de modelo que você deseja criar um invólucro genérico para expor esse modelo para outros idiomas como um elemento genérico. Você não pode ter das genérica leva um parâmetro de tipo que ele, em seguida, passa para o modelo, uma vez que o modelo precisa ter esse parâmetro de tipo em tempo de compilação, mas genérica não resolver o parâmetro de tipo até que o tempo de execução. Aninhamento de um modelo dentro de um genérico também não funcionará porque não há nenhuma maneira de expandir os modelos em tempo de compilação para tipos genéricos arbitrários que pode ser instanciada em tempo de execução.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -94,8 +94,6 @@ int main() {
    MyRef<int>^ mref = gcnew MyRef<int>(11);  
 }  
 ```  
-  
-### <a name="output"></a>Saída  
   
 ```Output  
 F  

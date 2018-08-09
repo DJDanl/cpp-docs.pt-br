@@ -1,5 +1,5 @@
 ---
-title: Criar um novo botão de barra de ferramentas | Microsoft Docs
+title: Criando um novo botão de barra de ferramentas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,55 +20,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d883fbb34fe45be2ad84860ea7564350346749f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f174bb24ef7782424b07ac681aed601a719cd6d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873021"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650976"
 ---
 # <a name="creating-a-new-toolbar-button"></a>Criando um novo botão da barra de ferramentas
 ### <a name="to-create-a-new-toolbar-button"></a>Para criar um novo botão de barra de ferramentas  
   
-1.  Em [exibição recursos](../windows/resource-view-window.md) expanda a pasta de recurso (por exemplo, Project1.rc).  
+1.  Na [exibição de recurso](../windows/resource-view-window.md) expanda a pasta de recurso (por exemplo, Project1.rc).  
   
     > [!NOTE]
-    >  Se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+    >  Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
 2.  Expanda o **barra de ferramentas** pasta e selecione uma barra de ferramentas para editar.  
   
-3.  Atribua uma ID para o botão em branco na extremidade direita da barra de ferramentas. Você pode fazer isso editando o **ID** propriedade o [janela propriedades](/visualstudio/ide/reference/properties-window). Por exemplo, convém fornecer um botão de barra de ferramentas a mesma ID como uma opção de menu. Nesse caso, use a caixa de listagem suspensa para selecionar o **ID** da opção de menu.  
+3.  Atribua uma ID para o botão em branco na extremidade direita da barra de ferramentas. Você pode fazer isso editando o **ID** propriedade no [janela propriedades](/visualstudio/ide/reference/properties-window). Por exemplo, você talvez queira dar a mesma ID de uma opção de menu a um botão de barra de ferramentas. Nesse caso, use a caixa de listagem suspensa para selecionar o **ID** da opção de menu.  
   
      -ou-  
   
-     Selecione o botão em branco na extremidade direita da barra de ferramentas (no painel de exibição da barra de ferramentas) e iniciar desenho. Uma ID de comando de botão padrão é atribuída (ID_BUTTON\<n >).  
+     Selecione o botão em branco na extremidade direita da barra de ferramentas (na **modo de exibição da barra de ferramentas** painel) e começar a desenhar. Uma ID de comando do botão padrão é atribuída (ID_BUTTON\<n >).  
   
- Você também pode copiar e colar uma imagem em uma barra de ferramentas como um novo botão.  
+ Você pode, também, copiar e colar uma imagem em uma barra de ferramentas, como um novo botão.  
   
-#### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Para adicionar uma imagem de uma barra de ferramentas, como um botão  
+### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Para adicionar uma imagem para uma barra de ferramentas, como um botão  
   
-1.  Em [exibição recursos](../windows/resource-view-window.md), abra a barra de ferramentas clicando duas vezes nele.  
+1.  Na [exibição de recurso](../windows/resource-view-window.md), abra a barra de ferramentas clicando duas vezes nele.  
   
 2.  Em seguida, abra a imagem que você deseja adicionar à barra de ferramentas.  
   
     > [!NOTE]
-    >  Se você abrir a imagem no Visual Studio, ele será aberto no editor de imagem. Você também pode abrir a imagem em outros programas de elementos gráficos.  
+    >  Se você abrir a imagem no Visual Studio, ele será aberto na **imagem** editor. Você também pode abrir a imagem em outros programas de elementos gráficos.  
   
-3.  Do **editar** menu, escolha **cópia**.  
+3.  Dos **edite** menu, escolha **cópia**.  
   
-4.  Alterne para a barra de ferramentas clicando na guia na parte superior da janela de origem.  
+4.  Alterne para sua barra de ferramentas clicando na guia na parte superior da janela de origem.  
   
-5.  Do **editar** menu, escolha **colar**.  
+5.  Dos **edite** menu, escolha **colar**.  
   
      A imagem será exibida na barra de ferramentas, como um novo botão.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Requisitos  
- MFC ou do ATL  
+## <a name="requirements"></a>Requisitos  
+ MFC ou ATL  
   
 ## <a name="see-also"></a>Consulte também  
- [Propriedades de botão da barra de ferramentas](../windows/toolbar-button-properties.md)   
+ [Propriedades do botão de barra de ferramentas](../windows/toolbar-button-properties.md)   
  [Criando, movendo e editando botões da barra de ferramentas](../windows/creating-moving-and-editing-toolbar-buttons.md)   
  [Editor de barra de ferramentas](../windows/toolbar-editor.md)
-

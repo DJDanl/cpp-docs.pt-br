@@ -1,5 +1,5 @@
 ---
-title: 'Método: Setunknown | Microsoft Docs'
+title: 'Método WeakReference:: Setunknown | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28b25645b21d3101e2f2b2004f02f29482320808
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2a46db38bf17b1af5ae748cf90689509d6d21b0d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891002"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647674"
 ---
 # <a name="weakreferencesetunknown-method"></a>Método WeakReference::SetUnknown
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,18 +35,18 @@ void SetUnknown(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `unk`  
+### <a name="parameters"></a>Parâmetros  
+ *UNK*  
  Um ponteiro para o `IUnknown` interface de um objeto.  
   
 ## <a name="remarks"></a>Comentários  
- Define a referência forte do atual `WeakReference` objeto para o ponteiro de interface especificado.  
+ Define a referência forte do atual **WeakReference** objeto para o ponteiro de interface especificado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Consulte também
-[Classe WeakReference](../windows/weakreference-class1.md)  
+ [Classe WeakReference](../windows/weakreference-class1.md)  
  [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

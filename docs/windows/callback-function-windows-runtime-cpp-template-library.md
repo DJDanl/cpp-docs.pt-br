@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92cb3dd6d21f2ca7e4a119d110510d91085f38da
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 799d0631ce29fcebd739f29232236e7cf87b74ac
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461486"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652569"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Função de retorno da chamada (Biblioteca em Tempo de Execução C++ do Windows Runtime )
 Cria um objeto cuja função de membro é um método de retorno de chamada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 template<  
    typename TDelegateInterface,  
    typename TCallback  
@@ -198,7 +198,7 @@ ComPtr<TDelegateInterface> Callback(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *TDelegateInterface*  
  Um parâmetro de modelo que especifica a interface do representante a ser chamado quando ocorre um evento.  
   

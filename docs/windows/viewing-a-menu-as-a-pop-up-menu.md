@@ -16,29 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c97eef61917fec0e068b25116b96b8dd7db41eb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05695e834ae244d276141185a913e8f35ef45922
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891004"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652195"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Exibindo um menu como um menu pop-up
-Normalmente, quando você estiver trabalhando no editor de Menu, um recurso de menu é exibido como uma barra de menus. No entanto, você pode ter recursos de menu que são adicionados à barra de menus do aplicativo enquanto o programa é executado.  
+Normalmente, quando você estiver trabalhando no editor de Menu, um recurso de menu é exibido como uma barra de menus. No entanto, você pode ter recursos de menu que são adicionados à barra de menus do aplicativo enquanto o programa está em execução.  
   
 ### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>Para exibir um recurso de menu como um menu pop-up  
   
-1.  O menu de atalho e escolha **exibição como pop-up** no menu de atalho.  
+1.  O menu de atalho e escolha **exibir como Popup** no menu de atalho.  
   
-     Isso é apenas uma preferência de exibição e não modificará o menu.  
+     Isso é apenas uma preferência de exibição e não modificará seu menu.  
   
     > [!NOTE]
-    >  Para voltar para o modo de exibição da barra de menus, clique em **exibição como pop-up** novamente (que remove a marca de seleção e retorna o modo de exibição da barra de menus).  
+    >  Para alterar de volta para o modo de exibição da barra de menus, clique em **exibir como Popup** novamente (que remove a marca de seleção e retorna o modo de exibição da barra de menus).  
   
-
-  
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  

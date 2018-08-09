@@ -17,29 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 947249b4a0a9bd2233d76671b1b5bf05c70337db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93de27e028d0665cccc3ba373b26524d911607a0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882934"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648191"
 ---
 # <a name="deleting-unassigned-symbols"></a>Excluindo símbolos não atribuídos
-### <a name="to-delete-an-unassigned-unused-symbol"></a>Para excluir um símbolo (não utilizado) não atribuído  
+### <a name="to-delete-an-unassigned-unused-symbol"></a>Para excluir um símbolo (não usado) não atribuído  
   
-1.  No [caixa de diálogo símbolos de recurso](../windows/resource-symbols-dialog-box.md), selecione o símbolo que você deseja excluir e clique em **excluir**.  
+1.  No [caixa de diálogo símbolos de recurso](../windows/resource-symbols-dialog-box.md), selecione o símbolo que você deseja excluir e, em seguida, clique em **excluir**.  
   
     > [!NOTE]
     >  Antes de excluir um símbolo não utilizado em um arquivo de recurso, verifique se que ele não é usado em outro lugar no programa ou pelos arquivos de recursos incluídos no tempo de compilação.  
   
-
-  
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  
  [Alterando símbolos não atribuídos](../windows/changing-unassigned-symbols.md)   
  [Restrições de nome de símbolo](../windows/symbol-name-restrictions.md)   
- [Restrições de valor do símbolo](../windows/symbol-value-restrictions.md)   
+ [Restrições de valor de símbolo](../windows/symbol-value-restrictions.md)   
  [IDs de símbolos predefinidos](../windows/predefined-symbol-ids.md)

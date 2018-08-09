@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92add8f79abd3aac7c11142fa67ea3b4bcd237d5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dcf5a095167e48a52405978a105cadaddfa870f2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466196"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647808"
 ---
 # <a name="asyncbase-class"></a>Classe AsyncBase
 Implementa a máquina de estado assíncrona do tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 template <  
    typename TComplete,  
    typename TProgress = Details::Nil,  
@@ -44,7 +44,7 @@ template <
 class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Implements<IAsyncInfo>;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *TComplete*  
  Um manipulador de eventos é chamado quando uma operação assíncrona é concluída.  
   
@@ -52,7 +52,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
  Um manipulador de eventos é chamado quando uma operação assíncrona em execução relata o progresso atual da operação.  
   
  *resultType*  
- Um dos [AsyncResultType](../windows/asyncresulttype-enumeration.md) valores de enumeração. Por padrão, SingleResult.  
+ Um dos [AsyncResultType](../windows/asyncresulttype-enumeration.md) valores de enumeração. Por padrão, `SingleResult`.  
   
 ## <a name="members"></a>Membros  
   

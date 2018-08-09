@@ -23,32 +23,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f9016e36ce6b081446a00136445fd7ebdd5a341
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 37e469b18af727bea29681b284fd123bcce64c93
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891653"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647414"
 ---
 # <a name="working-with-color-image-editor-for-icons"></a>Trabalhando com cor (editor de imagens para ícones)
-O editor de imagem contém muitos recursos que manipulam especificamente e personalizar as cores. Você pode definir uma cor de primeiro plano ou segundo plano, preencher as áreas associadas com a cor ou selecione uma cor em uma imagem para usar como a cor de primeiro plano ou segundo plano atual. Você pode usar ferramentas o [barra de ferramentas do Editor de imagem](../windows/toolbar-image-editor-for-icons.md) junto com a paleta de cores no [janela cores](../windows/colors-window-image-editor-for-icons.md) para criar imagens.  
+O **Editor de imagens** contém muitos recursos que especificamente a lidar com e personalizar as cores. Você pode definir uma cor de primeiro plano ou segundo plano, preencher as áreas limitadas com cor ou selecione uma cor em uma imagem para usar como a cor de primeiro plano ou segundo plano atual. Você pode usar ferramentas o [barra de ferramentas do Editor de imagens](../windows/toolbar-image-editor-for-icons.md) junto com a paleta de cores na [janela cores](../windows/colors-window-image-editor-for-icons.md) para criar imagens.  
   
- Todas as cores para imagens de 16 cores e monocromática são mostradas na paleta de cores na janela de cores. Além de 16 cores padrão, você pode criar suas próprias cores personalizadas. Alteração de qualquer uma das cores na paleta imediatamente alterará a cor correspondente na imagem.  
+ Todas as cores para imagens de 16 cores e monocromático são mostradas na **cores** paleta na **cores** janela. Além de 16 cores padrão, você pode criar suas próprias cores personalizadas. Alteração de qualquer uma das cores na paleta de alterar imediatamente a cor correspondente na imagem.  
   
- Ao trabalhar com ícone de 256 cores e cursor imagens, a propriedade de cores no [janela propriedades](/visualstudio/ide/reference/properties-window) é usado. Para obter mais informações, consulte [criando um ícone de 256 cores ou cursor](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md).  
+ Ao trabalhar com o ícone de 256 cores e imagens de cursor, o **cores** propriedade no [janela propriedades](/visualstudio/ide/reference/properties-window) é usado. Para obter mais informações, consulte [criando um ícone de 256 cores ou cursor](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md).  
   
 > [!NOTE]
->  Usando o Editor de Imagens, você pode exibir imagens de 32 bits, mas não pode editá-las.  
+>  Usando o **Editor de imagens**, você pode exibir imagens de 32 bits, mas você não pode editá-los.  
   
- Imagens coloridas True também podem ser criadas. No entanto, exemplos de cor true não aparecem na paleta completa na janela de cores. eles aparecem somente na área de indicador de cor do primeiro plano ou segundo plano. True cores são criadas usando o [caixa de diálogo Seletor de cor personalizada](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Para obter mais informações, consulte [personalizando ou alterando cores](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
+ True color imagens também podem ser criadas. No entanto, amostras de cores true não aparecem na paleta completa na **cores** janela; eles aparecem somente na área de indicador de cor do primeiro plano ou segundo plano. Cores True são criadas usando o [caixa de diálogo do seletor de cores personalizada](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Para obter mais informações, consulte [personalizando ou alterando cores](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
   
- Você pode salvar paletas de cores personalizadas no disco e recarregá-las conforme necessário. A paleta de cores usado mais recentemente é salva no registro e carregada automaticamente na próxima vez que você iniciar o Visual Studio.  
+ Você pode salvar paletas de cores personalizada no disco e recarregá-los conforme necessário. A paleta de cores usado mais recentemente é salva no registro e carregada automaticamente na próxima vez que iniciar o Visual Studio.  
   
 -   [Selecionando cores de plano de fundo ou primeiro plano](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)  
   
 -   [Preenchendo uma área limitada de uma imagem com uma cor](../windows/filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons.md)  
   
--   [Escolhendo uma cor de uma imagem a ser usada em qualquer lugar](../windows/picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons.md)  
+-   [Escolhendo uma cor na imagem para uso em outro lugar](../windows/picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons.md)  
   
 -   [Escolher um plano de fundo transparente ou opaco](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)  
   
@@ -58,13 +58,12 @@ O editor de imagem contém muitos recursos que manipulam especificamente e perso
   
 -   [Salvando e carregando paletas de cores diferentes](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)  
   
--   [Janela de cores](../windows/colors-window-image-editor-for-icons.md)  
+-   [Janela cores](../windows/colors-window-image-editor-for-icons.md)  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
  Nenhum  
   
 ## <a name="see-also"></a>Consulte também  
  [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)   
-

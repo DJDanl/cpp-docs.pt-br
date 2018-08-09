@@ -22,21 +22,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b548f48fc079fe26ae43c0553bef27f2348bad6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11631a2ac6a2c83cd667d14a490c57b1a191c1a7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873505"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642552"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>Criando e definindo guias e margens
-Se você estiver movendo controles, adicionando controles ou reorganizando um layout atual, guias podem ajudar você a alinhar controles com precisão em uma caixa de diálogo. Guias aparecem como linhas pontilhadas azuis na caixa de diálogo exibida no editor e setas correspondentes nas réguas (na parte superior e no lado esquerdo do editor de caixa de diálogo).  
+Se você estiver movendo controles, adicionando controles ou reorganizando um layout atual, guias de podem ajudar a alinhar controles com precisão dentro de uma caixa de diálogo. Guias são exibidas como azul pontilhada entre a caixa de diálogo exibida no editor e setas correspondentes nas réguas (na parte superior e o lado esquerdo dos **caixa de diálogo** editor).  
   
- Quando você cria uma caixa de diálogo, quatro margens são fornecidas. As margens são modificados guias, que aparecem como linhas pontilhadas azuis.  
+ Quando você cria uma caixa de diálogo, são fornecidas as quatro margens. As margens são modificadas guias, que aparecem como linhas pontilhadas azuis.  
   
 ### <a name="to-create-a-guide"></a>Para criar uma guia  
   
-1.  Dentro da régua, clique uma vez para criar uma guia. (Um clique cria uma nova guia; clicando duas vezes em inicia o [caixa de diálogo de configurações de guia](../windows/guide-settings-dialog-box.md) no qual você pode especificar configurações de guia.)  
+1.  Dentro da régua, clique uma vez para criar uma guia. (Um clique cria uma nova guia; clicar duas vezes em lançamentos a [guia de caixa de diálogo de configurações](../windows/guide-settings-dialog-box.md) na qual você pode especificar configurações do guia.)  
   
 ### <a name="to-set-a-guide"></a>Para definir um guia  
   
@@ -52,18 +52,17 @@ Se você estiver movendo controles, adicionando controles ou reorganizando um la
   
 -   Arraste a seta correspondente fora da régua.  
   
-#### <a name="to-move-margins"></a>Para mover as margens  
+### <a name="to-move-margins"></a>Para mover as margens  
   
 1.  Arraste a margem para a nova posição.  
   
-     Para fazer uma margem desaparecem, mova a margem para uma posição zero. Para reverter a margem, coloque o ponteiro sobre a margem posição zero e mover a margem para a posição.  
+     Para tornar uma margem desaparecer, mova a margem para uma posição zero. Para trazer de volta a margem, coloque o ponteiro sobre a margem posição zero e mover a margem para a posição.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  
  [Estados do Editor de caixa de diálogo (guias e grades)](../windows/dialog-editor-states-guides-and-grids.md)   
  [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)
-

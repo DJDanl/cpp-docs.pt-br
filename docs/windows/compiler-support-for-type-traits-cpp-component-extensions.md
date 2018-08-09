@@ -71,18 +71,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe1173b122e64f9b75af2f8186bf52b50003e5ab
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a88994133b65432566254fb77ddc35d5f2aab47b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463610"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644863"
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>Suporte para Compilador de Traços de Tipo (Extensões de Componentes C++)
 O oferece suporte ao compilador *características de tipo*, que indicam várias características de um tipo em tempo de compilação.  
   
 ## <a name="all-runtimes"></a>Todos os Tempos de Execução  
- **Comentários**  
+### <a name="remarks"></a>Comentários  
   
  Características de tipo são especialmente úteis para programadores que escrevem bibliotecas.  
   
@@ -92,9 +92,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__has_assign(``type``)`  
   
-     Retornará true se a plataforma ou tipo nativo tem um operador de atribuição de cópia.  
+     Retorna **verdadeira** se a plataforma ou tipo nativo tem um operador de atribuição de cópia.  
   
-    ```  
+    ```cpp  
     ref struct R {  
     void operator=(R% r) {}  
     };  
@@ -106,9 +106,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__has_copy(``type``)`  
   
-     Retorna VERDADEIRO se a plataforma ou tipo nativo tem um construtor de cópia.  
+     Retorna **verdadeira** se a plataforma ou tipo nativo tem um construtor de cópia.  
   
-    ```  
+    ```cpp  
     ref struct R {  
     R(R% r) {}  
     };  
@@ -120,9 +120,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__has_finalizer(``type``)`  
   
-     (Não há suportada no [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)].) Retorna VERDADEIRO se o tipo CLR tem um finalizador. Ver [destruidores e finalizadores em como: definir e consumir classes e estruturas (C + + c++ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) para obter mais informações.  
+     (Não há suportada no [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)].) Retorna **verdadeira** se o tipo CLR tem um finalizador. Ver [destruidores e finalizadores em como: definir e consumir classes e estruturas (C + + c++ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) para obter mais informações.  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref struct R {  
     ~R() {}  
@@ -137,9 +137,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__has_nothrow_assign(``type``)`  
   
-     Retorna VERDADEIRO se um operador de atribuição de cópia tem uma especificação de exceção vazio.  
+     Retorna **verdadeira** se um operador de atribuição de cópia tem uma especificação de exceção vazio.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     void operator=(S& r) throw() {}  
@@ -153,9 +153,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__has_nothrow_constructor(``type``)`  
   
-     Retornará true se o construtor padrão tem uma especificação de exceção vazio.  
+     Retorna **verdadeira** se o construtor padrão tem uma especificação de exceção vazio.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     S() throw() {}  
@@ -169,9 +169,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__has_nothrow_copy(``type``)`  
   
-     Retornará true se o construtor de cópia tem uma especificação de exceção vazio.  
+     Retorna **verdadeira** se o construtor de cópia tem uma especificação de exceção vazio.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     S(S& r) throw() {}  
@@ -185,9 +185,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__has_trivial_assign(``type``)`  
   
-     Retorna VERDADEIRO se o tipo tem um operador de atribuição trivial, gerado pelo compilador.  
+     Retorna **verdadeira** se o tipo tem um operador de atribuição trivial, gerado pelo compilador.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -199,9 +199,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__has_trivial_constructor(``type``)`  
   
-     Retorna VERDADEIRO se o tipo tem um construtor trivial, gerado pelo compilador.  
+     Retorna **verdadeira** se o tipo tem um construtor trivial, gerado pelo compilador.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -213,9 +213,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__has_trivial_copy(``type``)`  
   
-     Retorna VERDADEIRO se o tipo tem um construtor de cópia trivial, gerado pelo compilador.  
+     Retorna **verdadeira** se o tipo tem um construtor de cópia trivial, gerado pelo compilador.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -227,7 +227,7 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__has_trivial_destructor(``type``)`  
   
-     Retorna VERDADEIRO se o tipo tem um destruidor trivial, gerado pelo compilador.  
+     Retorna **verdadeira** se o tipo tem um destruidor trivial, gerado pelo compilador.  
   
     ``` cpp 
     // has_trivial_destructor.cpp  
@@ -242,7 +242,7 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__has_user_destructor(``type``)`  
   
-     Retornará true se a plataforma ou tipo nativo tem um destruidor declarado pelo usuário.  
+     Retorna **verdadeira** se a plataforma ou tipo nativo tem um destruidor declarado pelo usuário.  
   
     ```cpp
     // has_user_destructor.cpp  
@@ -259,7 +259,7 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__has_virtual_destructor(``type``)`  
   
-     Retorna VERDADEIRO se o tipo tem um destruidor virtual.  
+     Retorna **verdadeira** se o tipo tem um destruidor virtual.  
   
      `__has_virtual_destructor` também funciona em tipos de plataforma e qualquer destruidor definido pelo usuário em um tipo de plataforma é um destruidor virtual.  
   
@@ -278,7 +278,7 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__is_abstract(``type``)`  
   
-     Retorna VERDADEIRO se o tipo for um tipo abstrato. Para obter mais informações sobre tipos abstratos nativos, consulte [abstrata](../windows/abstract-cpp-component-extensions.md).  
+     Retorna **verdadeira** se o tipo for um tipo abstrato. Para obter mais informações sobre tipos abstratos nativos, consulte [abstrata](../windows/abstract-cpp-component-extensions.md).  
   
      `__is_abstract` também funciona para tipos de plataforma. Uma interface com pelo menos um membro é um tipo abstrato, assim como um tipo de referência pelo menos um membro abstrato. Para obter mais informações sobre tipos de plataforma abstratas, consulte [Classes abstratas](../cpp/abstract-classes-cpp.md)  
   
@@ -297,9 +297,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__is_base_of(``base``,``derived``)`  
   
-     Retornará true se o primeiro tipo é de uma classe base do segundo tipo, se ambos os tipos forem iguais.  
+     Retorna **verdadeira** se o primeiro tipo é uma classe base do segundo tipo, se ambos os tipos são iguais.  
   
-     `__is_base_of` também funciona em tipos de plataforma. Por exemplo, ele retornará true se o primeiro tipo é um [classe de interface](../windows/interface-class-cpp-component-extensions.md) e o segundo tipo implementa a interface.  
+     `__is_base_of` também funciona em tipos de plataforma. Por exemplo, ele retornará **verdadeira** se o primeiro tipo é um [classe de interface](../windows/interface-class-cpp-component-extensions.md) e o segundo tipo implementa a interface.  
   
     ```cpp
     // is_base_of.cpp  
@@ -318,9 +318,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__is_class(``type``)`  
   
-     Retorna VERDADEIRO se o tipo é uma classe nativa ou estrutura.  
+     Retorna **verdadeira** se o tipo é uma classe nativa ou estrutura.  
   
-    ```
+    ```cpp
     #include <stdio.h>  
     struct S {};  
   
@@ -332,9 +332,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__is_convertible_to(` `from` `,`  `to` `)`  
   
-     Retorna VERDADEIRO se o primeiro tipo pode ser convertido para o segundo tipo.  
+     Retorna **verdadeira** se o primeiro tipo pode ser convertido para o segundo tipo.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
     struct T : public S {};  
@@ -350,9 +350,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__is_delegate(``type``)`  
   
-     Retornará true se `type` é um delegado. Para obter mais informações, consulte [delegado (extensões de componentes C++)](../windows/delegate-cpp-component-extensions.md).  
+     Retorna **verdadeira** se `type` é um delegado. Para obter mais informações, consulte [delegado (extensões de componentes C++)](../windows/delegate-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     delegate void MyDel();  
     int main() {  
     System::Console::WriteLine(__is_delegate(MyDel));  
@@ -361,9 +361,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__is_empty(``type``)`  
   
-     Retorna VERDADEIRO se o tipo não tiver nenhum membro de dados de instância.  
+     Retorna **verdadeira** se o tipo não tiver nenhum membro de dados de instância.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     int Test() {}  
@@ -377,7 +377,7 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__is_enum(``type``)`  
   
-     Retorna VERDADEIRO se o tipo é uma enumeração nativa.  
+     Retorna **verdadeira** se o tipo é uma enumeração nativa.  
   
     ```cpp
     // is_enum.cpp  
@@ -399,7 +399,7 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__is_interface_class(``type``)`  
   
-     Retorna VERDADEIRO se passado a uma interface de plataforma. Para obter mais informações, consulte [classe de interface](../windows/interface-class-cpp-component-extensions.md).  
+     Retorna **verdadeira** se passado a uma interface de plataforma. Para obter mais informações, consulte [classe de interface](../windows/interface-class-cpp-component-extensions.md).  
   
     ```cpp
     // is_interface_class.cpp  
@@ -413,11 +413,11 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__is_pod(``type``)`  
   
-     Retorna VERDADEIRO se o tipo é uma classe ou união com nenhum construtor ou os membros não estáticos privados ou protegidos, sem classes base e sem funções virtuais. Consulte o C++ standard, seções 8.5.1/1, 9/4 e 3.9/10 para obter mais informações sobre PODs.  
+     Retorna **verdadeira** se o tipo é uma classe ou união com nenhum construtor ou os membros não estáticos privados ou protegidos, sem classes base e sem funções virtuais. Consulte o C++ standard, seções 8.5.1/1, 9/4 e 3.9/10 para obter mais informações sobre PODs.  
   
      `__is_pod` retornará false sobre tipos fundamentais.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -429,9 +429,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__is_polymorphic(``type``)`  
   
-     Retorna VERDADEIRO se um tipo nativo tem funções virtuais.  
+     Retorna **verdadeira** se um tipo nativo tem funções virtuais.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     virtual void Test(){}  
@@ -445,9 +445,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__is_ref_array(``type``)`  
   
-     Retorna VERDADEIRO se passado a uma matriz de plataforma. Para obter mais informações, consulte [matrizes](../windows/arrays-cpp-component-extensions.md).  
+     Retorna **verdadeira** se passado a uma matriz de plataforma. Para obter mais informações, consulte [matrizes](../windows/arrays-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     using namespace System;  
     int main() {  
     array<int>^ x = gcnew array<int>(10);  
@@ -457,9 +457,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__is_ref_class(``type``)`  
   
-     Retorna VERDADEIRO se passado a uma classe de referência. Para obter mais informações sobre tipos de referência definidos pelo usuário, consulte [Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Retorna **verdadeira** se passado a uma classe de referência. Para obter mais informações sobre tipos de referência definidos pelo usuário, consulte [Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref class R {};  
     int main() {  
@@ -470,9 +470,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__is_sealed(``type``)`  
   
-     Retorna VERDADEIRO se passado a uma plataforma ou tipo nativo marcado como sealed. Para obter mais informações, consulte [lacrado](../windows/sealed-cpp-component-extensions.md).  
+     Retorna **verdadeira** se passado a uma plataforma ou tipo nativo marcado como sealed. Para obter mais informações, consulte [lacrado](../windows/sealed-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     ref class R sealed{};  
     int main() {  
     System::Console::WriteLine(__is_sealed(R));  
@@ -481,9 +481,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__is_simple_value_class(``type``)`  
   
-     Retorna VERDADEIRO se passado de um tipo de valor que não contém nenhuma referência para o heap coletado como lixo. Para obter mais informações sobre tipos de valor definidos pelo usuário, consulte [Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Retorna **verdadeira** se passado a um tipo de valor que não contém nenhuma referência para o heap coletado como lixo. Para obter mais informações sobre tipos de valor definidos pelo usuário, consulte [Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref class R {};  
     value struct V {};  
@@ -499,9 +499,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__is_union(``type``)`  
   
-     Retorna VERDADEIRO se um tipo é uma união.  
+     Retorna **verdadeira** se um tipo é uma união.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     union A {  
     int i;  
@@ -516,9 +516,9 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
   
 -   `__is_value_class(``type``)`  
   
-     Retorna VERDADEIRO se passado a um tipo de valor. Para obter mais informações sobre tipos de valor definidos pelo usuário, consulte [Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Retorna **verdadeira** se passado a um tipo de valor. Para obter mais informações sobre tipos de valor definidos pelo usuário, consulte [Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     value struct V {};  
   
     int main() {  
@@ -527,25 +527,25 @@ O oferece suporte ao compilador *características de tipo*, que indicam várias 
     ```  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
- **Comentários**  
+### <a name="remarks"></a>Comentários  
   
  O `__has_finalizer(` *tipo* `)` característica de tipo não tem suporte porque esta plataforma não dá suporte para os finalizadores.  
   
 ### <a name="requirements"></a>Requisitos  
- Opção do compilador: **/ZW**  
+ Opção do compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Comentários**  
+### <a name="remarks"></a>Comentários  
   
  (Não há nenhum comentário específico da plataforma para esse recurso.)  
   
 ### <a name="requirements"></a>Requisitos  
- Opção de compilador: **/clr**  
+ Opção do compilador: `/clr`  
   
 ### <a name="examples"></a>Exemplos  
  **Exemplo**  
   
- O exemplo de código a seguir mostra como usar um modelo de classe para expor uma característica de tipo de compilador para um **/clr** compilação. Para obter mais informações, consulte [tempo de execução do Windows e modelos gerenciados](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
+ O exemplo de código a seguir mostra como usar um modelo de classe para expor uma característica de tipo de compilador para um `/clr` compilação. Para obter mais informações, consulte [tempo de execução do Windows e modelos gerenciados](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
   
 ```cpp  
 // compiler_type_traits.cpp  
@@ -566,8 +566,6 @@ int main () {
       Console::WriteLine("R is not a ref class");  
 }  
 ```  
-  
- **Saída**  
   
 ```Output  
 R is a ref class  

@@ -18,48 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad456d37252b40be72217e6cbc40a2a399bb34ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 862498b012955c3b77a13b37ae07bbee66dd8dfa
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891588"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651399"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>Mostrando ou ocultando a barra de ferramentas Editor de Caixa de Diálogo
-Quando você abre o editor de caixa de diálogo, a barra de ferramentas do Editor de caixa de diálogo é exibida automaticamente na parte superior da sua solução.  
+Quando você abre o editor de caixa de diálogo, a barra de ferramentas do Editor de caixa de diálogo aparece automaticamente na parte superior da sua solução.  
   
 ### <a name="dialog-editor-toolbar"></a>Barra de ferramentas do Editor de caixa de diálogo  
   
 |Ícone|Significado|Ícone|Significado|  
 |----------|-------------|----------|-------------|  
-|![Botão da caixa de diálogo de teste](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|Caixa de diálogo de teste|![Botão de espaço em](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|Em|  
-|![Alinhar à esquerda botão](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|Alinhar à esquerda|![Botão espaço para baixo](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|Abaixo|  
-|![Alinhar botão direitos](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|Alinhar os direitos|![Botão de mesma largura Verifique](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|Igualar largura|  
-|![Alinhar partes superiores botão](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|Alinhar as partes superiores|![Botão de mesma altura Verifique](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|Igualar altura|  
-|![Alinhar botão inferiores](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|Alinhar a parte inferior|![Botão de mesmo tamanho Verifique](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|Igualar tamanho|  
-|![Botão Vertical central](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![Um botão de alternância grade](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Ativar/Desativar Grade|  
-|![Botão Horizontal Center](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Horizontal|![Um botão de alternância guias](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Ativar/desativar guias|  
+|![Botão da caixa de diálogo de teste](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|Caixa de diálogo de teste|![Botão de espaço entre](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|Entre|  
+|![Alinhar botão esquerdas](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|Alinhar à esquerda|![Botão espaço para baixo](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|Abaixo|  
+|![Alinhar o botão de direitos](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|Alinhar os direitos|![Botão de mesma largura Make](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|Fazer a mesma largura|  
+|![Alinhar botão Tops](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|Alinhar partes superiores|![Botão de mesma altura Make](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|Mesma altura|  
+|![Botão inferior alinhar](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|Alinhar partes inferiores|![Botão de mesmo tamanho de marca](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|Igualar tamanho|  
+|![Botão de centro Vertical](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![Botão de alternância de grade](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Ativar/Desativar Grade|  
+|![Botão de centro Horizontal](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Horizontal|![Botão de guias de alternância](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Ativar/desativar guias|  
   
- A barra de ferramentas do Editor de caixa de diálogo contém botões para organizar o layout dos controles na caixa de diálogo, por exemplo, tamanho e alinhamento. Botões de barra de ferramentas do Editor de caixa de diálogo correspondem aos comandos do menu Formatar. Para obter detalhes, consulte [teclas de aceleração para o Editor de caixa de diálogo](../windows/accelerator-keys-for-the-dialog-editor.md).  
+ A barra de ferramentas do Editor de caixa de diálogo contém botões para organizar o layout dos controles na caixa de diálogo, por exemplo, tamanho e alinhamento. Botões de barra de ferramentas do Editor de caixa de diálogo correspondem aos comandos no menu Formatar. Para obter detalhes, consulte [teclas de aceleração para o Editor de caixa de diálogo](../windows/accelerator-keys-for-the-dialog-editor.md).  
   
- Quando você estiver no editor de caixa de diálogo, você pode alternar a exibição da barra de ferramentas do Editor de caixa de diálogo selecionando-o na lista de barras de ferramentas disponíveis e windows.  
+ Quando você estiver no editor de caixa de diálogo, você pode alternar a exibição da barra de ferramentas do Editor de caixa de diálogo, selecionando-o na lista de barras de ferramentas disponíveis e windows.  
   
 ### <a name="to-show-or-hide-the-dialog-editor-toolbar"></a>Para mostrar ou ocultar a barra de ferramentas do editor de caixa de diálogo  
   
-1.  No **exibição** menu clique **barras de ferramentas** , em seguida, escolha **Editor de caixa de diálogo** do submenu.  
+1.  Sobre o **exibição** menu, clique em **barras de ferramentas** , em seguida, escolha **Editor de caixa de diálogo** do submenu.  
   
     > [!NOTE]
-    >  A barra de ferramentas do Editor de caixa de diálogo é exibida por padrão quando você abrir um recurso de caixa de diálogo no editor de caixa de diálogo; No entanto, se você fechar explicitamente a barra de ferramentas, você precisará invocá-lo na próxima vez que você abrir um recurso de caixa de diálogo.  
+    >  O **Editor de caixa de diálogo** barra de ferramentas é exibida por padrão, quando você abre um recurso de caixa de diálogo no editor de caixa de diálogo; no entanto, se você fechar explicitamente a barra de ferramentas, você precisará invocá-lo na próxima vez que você abrir um recurso de caixa de diálogo.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisitos  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  
- [Organização dos controles em caixas de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Organização de controles em caixas de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Como: criar um recurso](../windows/how-to-create-a-resource.md)   
  [Arquivos de recurso](../windows/resource-files-visual-studio.md)   
  [Editor de caixa de diálogo](../windows/dialog-editor.md)
-

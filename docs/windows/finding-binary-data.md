@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee50f78c4fcc39561fbd94ef3a0af28746cfbaa9
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4a5b880e9b0425ecb0de5e59a29b216af174fa8e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568680"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652276"
 ---
 # <a name="finding-binary-data"></a>Localizando dados binários
 Você pode procurar cadeias de caracteres ASCII ou bytes hexadecimais. Por exemplo, para localizar o "Hello", você pode pesquisar a cadeia de caracteres "Hello" ou para "48 65 6C 6F de C 6" (o equivalente hexadecimal).  
@@ -44,7 +44,6 @@ Você pode procurar cadeias de caracteres ASCII ou bytes hexadecimais. Por exemp
  Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Nenhum  
   
 ## <a name="see-also"></a>Consulte também  

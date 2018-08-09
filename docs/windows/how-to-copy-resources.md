@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f29a115d20eca90b66a876bf1b5070052d90008d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: eb93f90b6d96d679b055893dc13adaa0d3c2e780
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570679"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642975"
 ---
 # <a name="how-to-copy-resources"></a>Como copiar recursos
 Você pode copiar recursos de um arquivo para outro sem alterá-los ou pode [alterar o idioma ou a condição de um recurso ao copiá-lo](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md).  
@@ -44,23 +44,23 @@ Você pode copiar recursos de um arquivo para outro sem alterá-los ou pode [alt
   
 1.  Abra ambos os arquivos de recurso autônomos (para obter mais informações, consulte [exibir recursos em um arquivo externa de um projeto de. rc](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Por exemplo, abra Source1.rc e Source2.rc.  
   
-2.  Dentro do primeiro arquivo. RC, clique no recurso que você deseja copiar. Por exemplo, no Source1.rc, clique em **IDD_DIALOG1**.  
+2.  Dentro do primeiro arquivo. RC, clique no recurso que você deseja copiar. Por exemplo, na `Source1.rc`, clique em **IDD_DIALOG1**.  
   
-3.  Mantenha a tecla CTRL pressionada e arraste o recurso para o segundo arquivo. rc. Por exemplo, arrastar **IDD_DIALOG1** de Source1.rc para Source2.rc.  
+3.  Mantenha a tecla CTRL pressionada e arraste o recurso para o segundo arquivo. rc. Por exemplo, arrastar **IDD_DIALOG1** partir `Source1.rc` para `Source2.rc`.  
   
     > [!NOTE]
-    >  Arrastando o recurso sem mantendo a tecla CTRL pressionada move o recurso em vez de copiá-lo.  
+    >  Arrastando o recurso sem manter pressionado a **Ctrl** tecla move o recurso em vez de copiá-lo.  
   
 ### <a name="to-copy-resources-using-copy-and-paste"></a>Para copiar recursos usando copiar e colar  
   
 1.  Abra ambos os arquivos de recurso autônomos (para obter mais informações, consulte [exibir recursos em um arquivo externa de um projeto de. rc](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Por exemplo, Source1.rc e Source2.rc.  
   
-2.  No arquivo de origem do qual você deseja copiar um recurso (por exemplo, Source1.rc), clique com botão direito a um recurso e escolha **cópia** no menu de atalho.  
+2.  No arquivo de origem do qual você deseja copiar um recurso (por exemplo, `Source1.rc`), um recurso com o botão direito e escolha **cópia** no menu de atalho.  
   
-3.  Clique no arquivo de recurso no qual você deseja colar o recurso (por exemplo, Source2.rc). Escolher **colar** no menu de atalho.  
+3.  Clique no arquivo de recurso no qual você deseja colar o recurso (por exemplo, `Source2.rc`). Escolher **colar** no menu de atalho.  
   
     > [!NOTE]
-    >  Você não pode arraste e solte, copiar, recortar ou colar entre os arquivos de recurso no projeto (modo de exibição de recurso) e arquivos. rc autônomo (aquelas abertos em janelas de documento). Você pode fazer isso em versões anteriores do produto.  
+    >  Não é possível arraste e solte, copiar, recortar ou colar entre os arquivos de recurso no projeto (**exibição de recurso**) e arquivos. rc autônomo (aquelas abertos em janelas de documento). Você pode fazer isso em versões anteriores do produto.  
   
     > [!NOTE]
     >  Para evitar conflitos com nomes de símbolos ou os valores no arquivo existente, Visual C++ pode alterar o valor de símbolo do recurso transferidos ou o nome do símbolo e o valor quando você os copia para o novo arquivo.  
@@ -68,7 +68,6 @@ Você pode copiar recursos de um arquivo para outro sem alterá-los ou pode [alt
  Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  

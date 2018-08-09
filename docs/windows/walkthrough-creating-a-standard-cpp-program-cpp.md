@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Criando um programa padrão do C++ (C++) | Microsoft Docs'
+title: 'Passo a passo: Criando um programa C++ padrão (C++) | Microsoft Docs'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -19,31 +19,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac1fac3c7f96c9f8d718efa54810f4155b1ddac5
-ms.sourcegitcommit: c0ffdff538eb961f786809eb547b35846190ee48
+ms.openlocfilehash: 0915f6f506b942a7ee52eec637c9ea6631339e79
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34800080"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643277"
 ---
-# <a name="walkthrough-creating-a-standard-c-program-c"></a>Passo a passo: Criando um programa padrão do C++ (C++)
-Você pode usar o Visual C++ no ambiente de desenvolvimento integrado (IDE) do Visual Studio para criar programas C++ padrão. Seguindo as etapas neste passo a passo, você pode criar um projeto, adicione um novo arquivo ao projeto, modifique o arquivo para adicionar o código C++ e, em seguida, compilar e executar o programa usando [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
+# <a name="walkthrough-creating-a-standard-c-program-c"></a>Passo a passo: Criando um programa C++ padrão (C++)
+Você pode usar o Visual C++ no ambiente de desenvolvimento integrado (IDE) do Visual Studio para criar programas em C++ padrão. Seguindo as etapas neste passo a passo, você pode criar um projeto, adicione um novo arquivo ao projeto, modifique o arquivo para adicionar o código C++ e, em seguida, compilar e executar o programa usando [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
   
- Você pode digitar o seu próprio programa C++ ou use um dos programas de exemplo. O programa de exemplo neste passo a passo é um aplicativo de console. Este aplicativo usa o `set` contêiner na biblioteca C++ padrão.  
+ Você pode digitar seu próprio programa C++ ou use um dos programas de exemplo. O programa de exemplo neste passo a passo é um aplicativo de console. Esse aplicativo usa o `set` contêiner na biblioteca padrão C++.  
   
- Visual C++ está em conformidade com o padrão de C++ de 2003, com estas exceções principais: pesquisa de nome de dois estágios, especificações de exceção e exportar. Além disso, o Visual C++ dá suporte a vários recursos C + + 0x, por exemplo, lambdas, auto, static_assert, referências a rvalue e modelos externo.  
+ Visual C++ está em conformidade com o padrão de C++ de 2003, com as seguintes exceções principais: pesquisa de nome de dois estágios, especificações de exceção e exportação. Além disso, o Visual C++ oferece suporte a vários recursos do c++0x, por exemplo, lambdas, auto, static_assert, referências de rvalue e modelos extern.  
   
 > [!NOTE]
->  Se a conformidade com o padrão é necessária, use o **/Za** opção de compilador desabilitar extensões da Microsoft para o padrão. Para obter mais informações, consulte [/Za, /Ze (desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md).  
+>  Se a conformidade com o padrão é necessária, use o `/Za` opção de compilador desabilitar extensões da Microsoft para o padrão. Para obter mais informações, consulte [/Za, /Ze (desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md).  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Para concluir este passo a passo, você deve compreender os fundamentos da linguagem C++.  
   
 ### <a name="to-create-a-project-and-add-a-source-file"></a>Para criar um projeto e adicionar um arquivo de origem  
   
-1.  Criar um projeto, basta apontar para **novo** no **arquivo** menu e, em seguida, clicando em **projeto**.  
+1.  Criar um projeto apontando para **New** sobre o **arquivo** menu e, em seguida, clicando em **projeto**.  
   
-2.  No **Visual C++** painel tipos de projeto, clique em **Windows Desktop**e, em seguida, clique em **aplicativo de Console do Windows**.  
+2.  No **Visual C++** painel de tipos de projeto, clique em **área de trabalho do Windows**e, em seguida, clique em **aplicativo de Console do Windows**.  
   
 3.  Digite um nome para o projeto.  
   
@@ -51,30 +51,30 @@ Você pode usar o Visual C++ no ambiente de desenvolvimento integrado (IDE) do V
   
      Clique em **OK** para criar o projeto.  
   
-4.  Se **Solution Explorer** não for exibido, no **exibição** menu, clique em **Gerenciador de soluções**.  
+4.  Se **Gerenciador de soluções** não aparecer, no **exibição** menu, clique em **Gerenciador de soluções**.  
   
-5.  Adicione um novo arquivo de origem para o projeto, da seguinte maneira.  
+5.  Adicione um novo arquivo de origem ao projeto, da seguinte maneira.  
   
-    1.  Em **Solution Explorer**, com o botão direito do **arquivos de origem** pasta, aponte para **adicionar**e, em seguida, clique em **Novo Item**.  
+    1.  No **Gerenciador de soluções**, clique com botão direito do **arquivos de origem** pasta, aponte para **adicionar**e, em seguida, clique em **Novo Item**.  
   
-    2.  No **código** nó, clique em **C++ arquivo (. cpp)**, digite um nome para o arquivo e, em seguida, clique em **adicionar**.  
+    2.  No **código** nó, clique em **arquivo do C++ (. cpp)**, digite um nome para o arquivo e, em seguida, clique em **adicionar**.  
   
-     O arquivo. cpp aparece na pasta de arquivos de origem em **Solution Explorer**, e o arquivo é aberto no editor do Visual Studio.  
+     O arquivo. cpp aparece na pasta de arquivos de origem no **Gerenciador de soluções**, e o arquivo é aberto no editor do Visual Studio.  
   
-6.  No arquivo no editor, digite um programa válido do C++ que usa a biblioteca padrão C++, ou copie um dos programas de exemplo e cole-o no arquivo.  
+6.  No arquivo no editor, digite um programa C++ válido que usa a biblioteca padrão C++, ou copie um dos programas de exemplo e cole-o no arquivo.  
   
 7.  Salve o arquivo.  
   
 8. No menu **Compilar**, clique em **Compilar Solução**.  
   
-     O **saída** janela exibe informações sobre o progresso da compilação, por exemplo, o local do log de compilação e uma mensagem que indica o status da compilação.  
+     O **saída** janela exibe informações sobre o andamento da compilação, por exemplo, o local do log de compilação e uma mensagem que indica o status da compilação.  
   
-9. Sobre o **depurar** menu, clique em **iniciar sem depuração**.  
+9. No menu **Depuração**, clique em **Iniciar sem Depurar**.  
   
-     Se você usou o programa de exemplo, uma janela de comando é exibida e mostra se determinados inteiros são encontrados no conjunto.  
+     Se você usou o programa de exemplo, uma janela de comando é exibida e mostra se determinados inteiros estão localizados no conjunto.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- **Anterior:** [Console aplicativos em Visual C++](../windows/console-applications-in-visual-cpp.md). **Em seguida:**[passo a passo: compilando um programa C++ nativo na linha de comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
+ **Anterior:** [Console aplicativos no Visual C++](../windows/console-applications-in-visual-cpp.md). **Em seguida:**[passo a passo: compilando um programa C++ nativo na linha de comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência da linguagem C++](../cpp/cpp-language-reference.md)   

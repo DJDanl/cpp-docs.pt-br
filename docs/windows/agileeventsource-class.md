@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7412968069963679db769cc2ce68169e7a8799b9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 90a2c582c2740846f90270fe9f45b96871329252
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462063"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642832"
 ---
 # <a name="agileeventsource-class"></a>Classe AgileEventSource
 
@@ -30,7 +30,7 @@ Representa um evento que é gerado por um componente do agile, que é um compone
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>>
 class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
@@ -38,7 +38,6 @@ class AgileEventSource
 
 ## <a name="parameters"></a>Parâmetros  
  *TDelegateInterface*  
-
  A interface para um delegado que representa um manipulador de eventos.
 
  *TEventSourceOptions*  
@@ -64,7 +63,7 @@ A grande maioria dos componentes em tempo de execução do Windows são componen
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Método AgileEventSource::Add](#add)|Acrescenta o manipulador de eventos agile representado pela interface delegado especificado ao conjunto de manipuladores de eventos para o objeto AgileEventSource atual.|
+|[Método AgileEventSource::Add](#add)|Acrescenta o manipulador de eventos agile representado pela interface delegado especificado ao conjunto de manipuladores de eventos para o atual **AgileEventSource** objeto.|
 
 ## <a name="add"></a> Método AgileEventSource::Add
 
@@ -85,7 +84,7 @@ HRESULT Add(
 A interface para um objeto delegado, que representa um manipulador de eventos.
 
 *token*  
-Quando essa operação for concluída, um identificador que representa o evento. Use esse token como o parâmetro para o método Remove () para descartar o manipulador de eventos.
+Quando essa operação for concluída, um identificador que representa o evento. Usar esse token como o parâmetro para o `Remove()` método para descartar o manipulador de eventos.
 
 ### <a name="return-value"></a>Valor de retorno
 

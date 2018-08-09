@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de0f68ee3e27f2ac3a7f87e64489a05a16dcdc91
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 8c2683d2e1875e7d68d27f7bde515b7a4ca70da0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571406"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649722"
 ---
 # <a name="eventevent-constructor-windows-runtime-c-template-library"></a>Construtor Event::Event (Biblioteca em Tempo de Execução C++ do Windows Runtime )
-Inicializa uma nova instância da classe de evento.  
+Inicializa uma nova instância dos **evento** classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 explicit Event(  
    HANDLE h = HandleT::Traits::GetInvalidValue()  
 );  
@@ -36,7 +36,7 @@ WRL_NOTHROW Event(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *h*  
  Manipular um evento. Por padrão, *h* é inicializado como **nullptr**.  
   

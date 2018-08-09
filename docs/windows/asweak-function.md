@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a51b7095ec654c4ebb393c9a83d1e30fb52ce019
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b0f4645a6008b954833bf282971a0d3912e1d598
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462619"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653138"
 ---
 # <a name="asweak-function"></a>Função AsWeak
 Recupera uma referência fraca a uma instância especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 template<typename T>  
 HRESULT AsWeak(  
    _In_ T* p,  
@@ -37,7 +37,7 @@ HRESULT AsWeak(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *T*  
  Um ponteiro para o tipo do parâmetro *p*.  
   

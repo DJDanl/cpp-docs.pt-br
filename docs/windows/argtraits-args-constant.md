@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6f0059d167b04c9a4b177d1851ad88133ef5cd3
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 03db2fd8853321e4a9320f2c17b05800b87e466c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466550"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652956"
 ---
 # <a name="argtraitsargs-constant"></a>Constante ArgTraits::args
 Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 static const int args = -1; ;  
 ```  
   
@@ -37,7 +37,7 @@ static const int args = -1; ;
  Mantém uma contagem do número de parâmetros `Invoke` método da interface de um delegado.  
   
 ## <a name="remarks"></a>Comentários  
- Quando `args` é igual a -1 indica que não pode haver nenhuma correspondência para o `Invoke` assinatura do método.  
+ Quando **args** igual a -1 indica que não pode haver nenhuma correspondência para o `Invoke` assinatura do método.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** Event. h  

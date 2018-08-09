@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b10d130190308520771e37e97d34238f75670ad
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 149cb7fba3d0754e47ac656c137af2d9bf759f1a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466677"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642185"
 ---
 # <a name="criticalsectiontraits-structure"></a>Estrutura CriticalSectionTraits
-É o especialista de um objeto de seção crítica para dar suporte a uma seção crítica inválida ou uma função para liberar uma seção crítica.  
+É especialista um `CriticalSection` objeto para dar suporte a uma seção crítica inválida ou uma função para liberar uma seção crítica.  
   
 ## <a name="syntax"></a>Sintaxe  
   

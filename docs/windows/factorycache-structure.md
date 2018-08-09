@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04356316b67f3c341fe1dd1821750fcd3136aa40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a09128bd334fc6e0987e39eaf51c19aadce34ea
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874025"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647541"
 ---
 # <a name="factorycache-structure"></a>Estrutura FactoryCache
-Oferece suporte à infraestrutura de biblioteca de modelos C++ do Windows em tempo de execução e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura de biblioteca de modelos de C++ de tempo de execução do Windows e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 struct FactoryCache;  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Contém o local de uma fábrica de classe e um valor que identifica um registrado wrt ou objeto de classe COM.  
+ Contém o local de uma fábrica de classes e um valor que identifica um registrado wrt ou objeto de classe COM.  
   
 ## <a name="members"></a>Membros  
   
@@ -42,7 +42,7 @@ struct FactoryCache;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Membro de dados FactoryCache::cookie](../windows/factorycache-cookie-data-member.md)|Contém um valor que identifica um objeto de classe de tempo de execução do Windows ou COM registrado e é posteriormente usado para cancelar o registro do objeto.|  
+|[Membro de dados FactoryCache::cookie](../windows/factorycache-cookie-data-member.md)|Contém um valor que identifica um objeto de classe de tempo de execução do Windows ou COM registrado e é usado posteriormente para cancelar o registro do objeto.|  
 |[Membro de dados FactoryCache::factory](../windows/factorycache-factory-data-member.md)|Aponta para uma fábrica de classes de tempo de execução do Windows ou COM.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  

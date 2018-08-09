@@ -16,33 +16,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68f6c7e9383527e3ba77d87d6d08ce5a3e1bcc8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8f3a72f8f9a71f54a997c4ba76d51aad6fb200a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880492"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648315"
 ---
 # <a name="deleting-an-entry-from-an-accelerator-table"></a>Excluindo uma entrada de uma tabela de aceleradores
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Para excluir uma entrada de uma tabela de aceleradores  
   
-1.  Abra a tabela de teclas aceleradoras clicando duas vezes em seu ícone no [exibição recursos](../windows/resource-view-window.md).  
+1.  Abra a tabela de aceleradores clicando duas vezes em seu ícone no [exibição de recurso](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+    >  Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Selecione a entrada que você deseja excluir. (Mantenha pressionada a **CTRL** ou **SHIFT** chave enquanto clica para selecionar várias entradas.)  
+2.  Selecione a entrada que você deseja excluir. (Mantenha pressionada a **Ctrl** ou **Shift** chave enquanto clica para selecionar várias entradas.)  
   
-3.  Clique com botão direito e escolha **excluir** no menu de atalho (ou selecione **excluir** do **editar** menu).  
+3.  Clique com botão direito e escolha **exclua** no menu de atalho (ou selecione **excluir** do **editar** menu).  
   
  \- ou -  
   
--   Pressione a tecla Delete.  
+-   Pressione a **excluir** chave.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.*  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*.  
   
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  

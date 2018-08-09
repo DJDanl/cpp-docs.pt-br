@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e68e2b729f8120a33b296fa485d145101b3d6e5b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a9fa20fc180d9b77f5d909ea06d12d69c1ef89d1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466703"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652679"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Extensões de componente para plataformas de tempo de execução
 Visual C++ fornece extensões de linguagem para ajudar você programe em plataformas de tempo de execução. Usando C + + c++ /CX, você pode programar aplicativos da plataforma Universal do Windows e componentes que são compilados para código nativo. Embora você possa criar aplicativos da plataforma Universal do Windows por meio da programação diretamente em relação a interfaces COM tempo de execução do Windows, usando C + + c++ /CLI CX, você pode trabalhar com construtores, exceções e outras linguagens de programação de C++ moderno. Para habilitar a programação de C++ em um ambiente de execução gerenciado na plataforma .NET, você pode usar C + + / CLI.  
   
- **Dois tempos de execução, um conjunto de extensões**  
+### <a name="two-runtimes-one-set-of-extensions"></a>Dois tempos de execução, um conjunto de extensões  
   
- C + + c++ /CX é um subconjunto do C + + c++ /CLI CLI. Para extensões que são comuns a C + + c++ /CLI CX e C + + / CLI, a semântica depende se você está visando o common language runtime (CLR) ou o tempo de execução do Windows. Para compilar seu aplicativo seja executado no tempo de execução do Windows, especifique a **/ZW** opção de compilador. Para compilá-lo para ser executado no CLR, especifique o **/clr** opção de compilador. Essas opções são definidas automaticamente quando você usa o Visual Studio para criar um projeto.  
+ C + + c++ /CX é um subconjunto do C + + c++ /CLI CLI. Para extensões que são comuns a C + + c++ /CLI CX e C + + / CLI, a semântica depende se você está visando o common language runtime (CLR) ou o tempo de execução do Windows. Para compilar seu aplicativo seja executado no tempo de execução do Windows, especifique o `/ZW` opção de compilador. Para compilá-lo para ser executado no CLR, especifique o `/clr` opção de compilador. Essas opções são definidas automaticamente quando você usa o Visual Studio para criar um projeto.  
   
  Para obter mais informações sobre como criar aplicativos da plataforma Universal do Windows em C++, consulte [aplicativos de roteiro para o Windows Runtime usando C++](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx).  
   
@@ -86,7 +86,7 @@ Visual C++ fornece extensões de linguagem para ajudar você programe em platafo
 |**nullptr**|Não|Indica que um identificador ou ponteiro não faz referência a um objeto.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>Construções de modelo  
- As seguintes construções de linguagem são implementadas como modelos, em vez de como as palavras-chave. Se você especificar o **/ZW** opção de compilador, eles são definidos na `lang` namespace. Se você especificar o **/clr** opção de compilador, eles são definidos na `cli` namespace.  
+ As seguintes construções de linguagem são implementadas como modelos, em vez de como as palavras-chave. Se você especificar o `/ZW` opção de compilador, eles são definidos na `lang` namespace. Se você especificar o `/clr` opção de compilador, eles são definidos na `cli` namespace.  
   
 |Palavra-chave|Finalidade|Referência|  
 |-------------|-------------|---------------|  

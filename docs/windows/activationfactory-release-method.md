@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e3f05576b4122acd21f7a535172a1facd562ed4
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 263ef9a62f2e010c059be9e26f15f04ea39eafe9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466381"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651204"
 ---
 # <a name="activationfactoryrelease-method"></a>Método ActivationFactory::Release
 Diminui a contagem de referência do atual **ActivationFactory** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 STDMETHOD_(  
    ULONG,  
    Release  

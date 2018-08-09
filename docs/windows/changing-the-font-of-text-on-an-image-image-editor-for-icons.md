@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16d01d634b44b4e6da425c40e011106021638305
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1a180a8923dd5a9e8cb257b12ee0d2ba09df8ed5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461732"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642988"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>Alterando a fonte de texto em uma imagem (editor de imagens para ícones)
 O procedimento a seguir é um exemplo de como:  
@@ -31,13 +31,13 @@ O procedimento a seguir é um exemplo de como:
   
 ### <a name="to-change-the-font-of-text-on-an-image"></a>Para alterar a fonte do texto em uma imagem  
   
-1.  Crie um aplicativo de formulários do Windows do C++. Para obter detalhes, consulte [criando um projeto de aplicativo do Windows](http://msdn.microsoft.com/b2f93fed-c635-4705-8d0e-cf079a264efa). O [modelo de aplicativo do Windows Forms](http://msdn.microsoft.com/1babdebf-ab3f-4a64-a608-98499a5b9cea) adiciona um arquivo chamado app.ico ao seu projeto por padrão.  
+1.  Crie um aplicativo de formulários do Windows do C++. Para obter detalhes, consulte [criando um projeto de aplicativo do Windows](http://msdn.microsoft.com/b2f93fed-c635-4705-8d0e-cf079a264efa). O [modelo de aplicativo do Windows Forms](http://msdn.microsoft.com/1babdebf-ab3f-4a64-a608-98499a5b9cea) adiciona um arquivo chamado `app.ico` ao seu projeto por padrão.  
   
-2.  No Gerenciador de soluções, clique duas vezes o arquivo app.ico. O [Editor de imagens](../windows/image-editor-for-icons.md) será aberta.  
+2.  Na **Gerenciador de soluções**, clique duas vezes em app.ico o arquivo. O [Editor de imagens](../windows/image-editor-for-icons.md) será aberta.  
   
 3.  Dos **imagem** menu, selecione **ferramentas** e, em seguida, selecione **ferramenta de texto**. O [caixa de diálogo Ferramenta de texto](../windows/text-tool-dialog-box-image-editor-for-icons.md) será exibida.  
   
-4.  No **ferramenta de texto** caixa de diálogo, digite `C++` na área de texto vazio. Esse texto será exibido em uma caixa redimensionável localizada no canto superior esquerdo do app.ico, no **Editor de imagens**.  
+4.  No **ferramenta de texto** caixa de diálogo, digite `C++` na área de texto vazio. Esse texto será exibido em uma caixa redimensionável localizada no canto superior esquerdo do `app.ico`, no **Editor de imagens**.  
   
 5.  No **Editor de imagens**, arraste a caixa redimensionável para o centro do app.ico, para melhorar a legibilidade do texto.  
   
@@ -51,7 +51,7 @@ O procedimento a seguir é um exemplo de como:
   
 10. Clique o **Okey** botão. O **da fonte de dados da ferramenta texto** caixa de diálogo será fechada e as novas configurações de fonte serão aplicada ao texto.  
   
-11. Clique no **feche** botão a **ferramenta texto** caixa de diálogo. A caixa ao redor do texto de redimensionável desaparecerá do Editor de imagens.  
+11. Clique no **feche** botão a **ferramenta texto** caixa de diálogo. A caixa ao redor do texto de redimensionável desaparecerá dos **Editor de imagens**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)   

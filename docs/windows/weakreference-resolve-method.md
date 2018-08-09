@@ -1,5 +1,5 @@
 ---
-title: 'Método WeakReference:: | Microsoft Docs'
+title: 'Método WeakReference:: resolve | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,46 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dccdf7554f8d102230bedc18231feb74625d621b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe78f8644768563507f98157ac859993776d7fe9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890467"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646196"
 ---
 # <a name="weakreferenceresolve-method"></a>Método WeakReference::Resolve
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 STDMETHOD(Resolve)  
    (REFIID riid,   
    _Deref_out_opt_ IInspectable **ppvObject  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `riid`  
+### <a name="parameters"></a>Parâmetros  
+ *riid*  
  Uma ID de interface.  
   
- `ppvObject`  
- Quando essa operação for concluída, uma cópia da referência forte atual se a contagem de referência forte é diferente de zero.  
+ *ppvObject*  
+ Quando essa operação for concluída, uma cópia da referência forte atual se a contagem de referência forte for diferente de zero.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
--   S_OK se essa operação for bem-sucedida e a contagem de referência forte é zero. O parâmetro `ppvObject` é definido como `nullptr`.  
+-   S_OK se essa operação for bem-sucedida e a contagem de referência forte é zero. O *ppvObject* parâmetro for definido como **nullptr**.  
   
--   S_OK se essa operação for bem-sucedida e a contagem de referência forte é diferente de zero. O `ppvObject` parâmetro for definido como a referência forte.  
+-   S_OK se essa operação for bem-sucedida e a contagem de referência forte é diferente de zero. O *ppvObject* parâmetro for definido como a referência forte.  
   
--   Caso contrário, o HRESULT que indica o motivo pelo qual esta operação falhou.  
+-   Caso contrário, um HRESULT que indica o motivo pelo qual esta operação falhou.  
   
 ## <a name="remarks"></a>Comentários  
- Define o ponteiro especificado para o valor de referência forte atual se a contagem de referência forte é diferente de zero.  
+ Define o ponteiro especificado para o valor atual de referência forte se a contagem de referência forte for diferente de zero.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

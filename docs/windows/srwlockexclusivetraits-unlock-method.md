@@ -1,5 +1,5 @@
 ---
-title: 'Método Srwlockexclusivetraits: | Microsoft Docs'
+title: 'Método srwlockexclusivetraits:: Unlock | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0babd7efcae7bbd91fd81362e7b0f612f177477f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1863acc925bf66aa10435f2dadd9d9d73a43300
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892583"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648016"
 ---
 # <a name="srwlockexclusivetraitsunlock-method"></a>Método SRWLockExclusiveTraits::Unlock
-Libera o controle exclusivo do objeto SRWLock especificado.  
+Libera o controle exclusivo do especificado `SRWLock` objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,12 +35,12 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `srwlock`  
- Identificador de um objeto de SRWLock.  
+### <a name="parameters"></a>Parâmetros  
+ *SRWLOCK*  
+ Identificador para um `SRWLock` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   

@@ -1,5 +1,5 @@
 ---
-title: Propriedade de chave do acelerador | Microsoft Docs
+title: Propriedade de chave de acelerador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,42 +15,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e4fc56384d666026f4cc7e21f9d8af9347046fd1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 36884376e5ff31754e4c53ef6602f6bfd129f4a4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857201"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650437"
 ---
 # <a name="accelerator-key-property"></a>Propriedade da tecla de aceleração
-As seguintes entradas legais para a propriedade de chave na tabela de teclas aceleradoras são:  
+As seguintes entradas legais para a propriedade de chave na tabela de aceleradores são:  
   
--   Um inteiro entre 0 e 255 no formato decimal. O valor determina se o valor é tratado como ANSI ou ASCII da seguinte maneira:  
+-   Um inteiro entre 0 e 255 no formato decimal. O valor determina se o valor é tratado como ASCII ou ANSI da seguinte maneira:  
   
-    -   Números de dígito sempre são interpretados como a chave correspondente, em vez de valores ASCII ou ANSI.  
+    -   Números de dígito único são sempre interpretados como a chave correspondente, em vez de valores ASCII ou ANSI.  
   
-    -   Valores de 1 a 26, quando precedido com zeros, são interpretados como ^ A-^ Z, que representa o valor ASCII das letras do alfabeto quando pressionada com a tecla CTRL pressionada.  
+    -   Valores de 1 a 26, quando precedido com zeros, são interpretados como ^ A até ^ Z, que representa o valor de ASCII das letras do alfabeto quando pressionado com o **Ctrl** tecla pressionada.  
   
-    -   Valores de 27-32 sempre são interpretados como valores de três dígitos decimais 027 ao 032.  
+    -   Valores de 27 32 sempre são interpretados como valores de três dígitos decimais 027 por meio de 032.  
   
-    -   Os valores do 033 a 255, precedido por um 0 ou não são interpretados como valores de ANSI.  
+    -   Os valores do 033 a 255, precedido por 0 ou não são interpretados como valores de ANSI.  
   
--   Um caractere único teclado. Letras maiusculas A - Z ou os números 0 - 9 podem ser ASCII ou valores de chave virtuais; qualquer outro caractere só é ASCII.  
+-   Um caractere de teclado único. Letras maiusculas A - Z ou os números 0 - 9 podem ser ASCII ou valores de chave virtuais; qualquer outro caractere só é ASCII.  
   
--   Um caractere único teclado no intervalo de A - Z (maiusculas somente), precedido por um sinal de intercalação (^) (por exemplo, ^ C). Isso insere o valor ASCII da chave quando ela estiver pressionada com a tecla CTRL pressionada.  
+-   Um caractere de teclado único no intervalo A - Z (apenas maiusculo), precedido por um acento circunflexo (^) (por exemplo, ^ C). Isso insere o valor de ASCII da chave quando ela estiver pressionada com a **Ctrl** tecla pressionada.  
   
     > [!NOTE]
-    >  Ao inserir um valor ASCII, as opções de propriedade de modificador são limitadas. A única chave de controle disponível para uso é a tecla ALT.  
+    >  Ao inserir um valor de ASCII, as opções de propriedade de modificador são limitadas. É a única chave de controle disponível para uso a **Alt** chave.  
   
--   Qualquer válido identificador de tecla virtual. A caixa de lista suspensa de chave na tabela de teclas aceleradoras contém uma lista de identificadores de chave virtuais padrão.  
+-   Qualquer válido identificador de chave virtual. A caixa de lista suspensa de chave na tabela de acelerador contém uma lista de identificadores de chave virtuais padrão.  
   
     > [!TIP]
-    >  Outra maneira de definir uma tecla aceleradora é uma entrada ou várias entradas na tabela de aceleradores de atalho, escolha **próxima chave digitada** no menu de atalho e, em seguida, pressione qualquer uma das chaves ou combinações de teclas no teclado. O **próxima chave digitada** comando também está disponível na **editar** menu.  
+    >  Outra maneira de definir uma tecla aceleradora é uma entrada ou várias entradas na tabela de aceleradores de direito, clique em **próxima chave digitada** no menu de atalho e, em seguida, pressione qualquer uma das chaves ou combinações de teclas no teclado. O **próxima chave digitada** comando também está disponível na **editar** menu.  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  
- [Definindo propriedades de acelerador](../windows/setting-accelerator-properties.md)   
+ [Configurando propriedades do acelerador](../windows/setting-accelerator-properties.md)   
  [Editando em uma tabela de aceleradores](../windows/editing-in-an-accelerator-table.md)   
  [Editor de aceleradores](../windows/accelerator-editor.md)

@@ -17,48 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b5d94a1e66043a83e2ffb2aa8c1d44d9cbd16cc
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2b18f4c38777076357170540e35fc5515025e126
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467190"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643001"
 ---
 # <a name="aggregatable"></a>aggregatable
 Indica que a classe oferece suporte à agregação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [ aggregatable(   
    value  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *valor* (opcional)  
  Um parâmetro para indicar quando o objeto COM pode ser agregado:  
   
--   **nunca** o objeto COM não pode ser agregado.  
+-   `never` O objeto COM não pode ser agregado.  
   
--   **permitido** o objeto COM pode ser criado diretamente ou eles podem ser agregados. Esse é o padrão.  
+-   `allowed` O objeto COM pode ser criado diretamente ou eles podem ser agregados. Esse é o padrão.  
   
--   **sempre** o objeto COM não pode ser criado diretamente e só podem ser agregado. Quando você chama `CoCreateInstance` para esse objeto, você deve especificar o objeto de agregação `IUnknown` interface (o controlando `IUnknown`).  
+-   `always` O objeto COM não pode ser criado diretamente e só pode ser agregado. Quando você chama `CoCreateInstance` para esse objeto, você deve especificar o objeto de agregação `IUnknown` interface (o controlando `IUnknown`).  
   
 ## <a name="remarks"></a>Comentários  
  O **agregável** atributo C++ tem a mesma funcionalidade que o [agregável](http://msdn.microsoft.com/library/windows/desktop/aa366721) atributo MIDL. Isso significa que o compilador passará a **agregável** por meio do atributo para o arquivo. idl gerado.  
   
  Este atributo exige que o [coclass](../windows/coclass.md), [progid](../windows/progid.md), ou [vi_progid](../windows/vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicadas ao mesmo elemento. Se qualquer atributo único for usado, os outros dois são aplicados automaticamente. Por exemplo, se `progid` for aplicada, `vi_progid` e `coclass` também são aplicadas.  
   
- **Projetos ATL**  
+### <a name="atl-projects"></a>Projetos ATL  
   
  Se esse atributo for usado em um projeto que usa ATL, altera o comportamento do atributo. Além do comportamento descrito anteriormente, o atributo também adiciona uma das macros de seguir para a classe de destino:  
   
 |Valor do parâmetro|Macro inserida|  
 |---------------------|--------------------|  
-|*Nunca*|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|  
-|*Permitido*|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
-|*Sempre*|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
+|`Never`|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|  
+|`Allowed`|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
+|`Always`|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
   
 ## <a name="example"></a>Exemplo  
   

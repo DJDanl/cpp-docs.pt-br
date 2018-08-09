@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a4fee4991459ddbab0ac370f025776529a6bd1e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ee66017edabf80349bf2960f7cb2ca2654c8c4cc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464542"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643573"
 ---
 # <a name="criticalsectionlock-method"></a>Método CriticalSection::Lock
 Aguarda até que propriedade do objeto especificado de seção crítica. A função retorna quando o thread de chamada é concedido a propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 SyncLock Lock();  
   
    static SyncLock Lock(  
@@ -37,7 +37,7 @@ SyncLock Lock();
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *cs*  
  Um objeto de seção crítica especificado pelo usuário.  
   

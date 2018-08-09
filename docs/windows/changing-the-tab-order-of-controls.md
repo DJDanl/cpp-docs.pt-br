@@ -20,68 +20,67 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33e6e9624e7e927860a184361d45f855f3a1e4f6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32368ca6731c53255587a2083c9fe685eb8fefd0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861539"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641841"
 ---
 # <a name="changing-the-tab-order-of-controls"></a>Alterando a ordem de guia dos controles
-A ordem de tabulação é a ordem na qual a tecla TAB move o foco de entrada de um controle para o próximo dentro de uma caixa de diálogo. Normalmente, a ordem de tabulação continua da esquerda para a direita e de cima para baixo na caixa de diálogo. Cada controle tem um **Tabstop** propriedade que determina se um controle recebe foco de entrada.  
+A ordem de tabulação é a ordem na qual o **guia** tecla move o foco de entrada de um controle para o próximo dentro de uma caixa de diálogo. Normalmente, a ordem de tabulação prossegue da esquerda para a direita e de cima para baixo em uma caixa de diálogo. Cada controle tem um **Tabstop** propriedade que determina se um controle recebe foco de entrada.  
   
 ### <a name="to-set-input-focus-for-a-control"></a>Para definir o foco de entrada para um controle  
   
-1.  No [janela propriedades](/visualstudio/ide/reference/properties-window), selecione **True** ou **False** no **Tabstop** propriedade.  
+1.  No [janela de propriedades](/visualstudio/ide/reference/properties-window), selecione **verdadeiro** ou **False** no **Tabstop** propriedade.  
   
- Controles mesmo que não tem a propriedade de parada de tabulação definida como True precisam ser parte da ordem de tabulação. Isso pode ser importante, por exemplo, quando você [definir chaves de acesso (mnemônico)](../windows/defining-mnemonics-access-keys.md) para controles que não têm legendas. Texto estático que contém uma chave de acesso para um controle relacionado deve preceder imediatamente o controle relacionado na ordem de tabulação.  
+ Até mesmo os controles que não têm o **Tabstop** propriedade definida como **verdadeiro** precisam fazer parte da ordem de tabulação. Isso pode ser importante, por exemplo, quando você [definir chaves de acesso (mnemônicos)](../windows/defining-mnemonics-access-keys.md) para controles que não têm legendas. Texto estático que contém uma chave de acesso para um controle relacionada deve preceder imediatamente o controle relacionado na ordem de tabulação.  
   
 > [!NOTE]
->  Se a caixa de diálogo contém controles sobrepostos, alterando a ordem de tabulação pode alterar o modo como os controles são exibidos. Controles que são fornecidos posteriormente na ordem de tabulação são sempre exibidos na parte superior de quaisquer controles sobrepostos que precedem-os na ordem de tabulação.  
+>  Se a caixa de diálogo contém controles sobrepostos, alterando a ordem de tabulação pode alterar a maneira como os controles são exibidos. Controles que acompanham a ordem de tabulação são sempre exibidos na parte superior de todos os controles sobrepostos que precedem-os na ordem de tabulação.  
   
-#### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Para exibir a ordem de tabulação para todos os controles em uma caixa de diálogo  
+### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Para exibir a ordem de tabulação para todos os controles em uma caixa de diálogo  
   
 1.  Sobre o **formato** menu, clique em **ordem de tabulação**.  
   
  \- ou -  
   
--   Pressione CTRL + D.  
+-   Pressione **Ctrl**+**1!d**.  
   
-#### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Para alterar a ordem de tabulação para todos os controles em uma caixa de diálogo  
+### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Para alterar a ordem de tabulação para todos os controles em uma caixa de diálogo  
   
 1.  Sobre o **formato** menu, clique em **ordem de tabulação**.  
   
      Um número no canto superior esquerdo de cada controle mostra seu lugar na ordem de tabulação atual.  
   
-2.  Defina a ordem de tabulação, clicando em cada controle na ordem em que você deseja que a tecla TAB para seguir.  
+2.  Definir a ordem de tabulação, clicando em cada controle na ordem em que você deseja que o **guia** chave a seguir.  
   
-3.  Pressione **ENTER** para sair **ordem de tabulação** modo.  
+3.  Pressione **Enter** para sair **ordem de tabulação** modo.  
   
     > [!TIP]
-    >  Depois que você entra no modo de ordem de tabulação, você pode pressionar ESC ou ENTER para desabilitar a capacidade de alterar a ordem de tabulação.  
+    >  Depois de digitar **ordem de tabulação** modo, você pode pressionar **Esc** ou **Enter** para desabilitar a capacidade de alterar a ordem de tabulação.  
   
-#### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>Para alterar a ordem de tabulação para dois ou mais controles  
+### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>Para alterar a ordem de tabulação para dois ou mais controles  
   
-1.  Do **formato** menu, escolha **ordem de tabulação**.  
+1.  Dos **formato** menu, escolha **ordem de tabulação**.  
   
-2.  Especifique onde a alteração na ordem será iniciado. Para fazer isso, mantenha pressionada a **CTRL** chave e clique no controle antes do um onde você deseja que a ordem alterada para começar.  
+2.  Especifique onde começará a alteração na ordem. Para fazer isso, mantenha pressionada a **Ctrl** da chave e clique no controle antes daquele onde você deseja que a ordem alterada para começar.  
   
-     Por exemplo, se você quiser alterar a ordem dos controles de 7 a 9, mantenha pressionada a tecla CTRL e selecione o controle 6 pela primeira vez.  
+     Por exemplo, se você quiser alterar a ordem dos controles `7` por meio `9`, mantenha pressionada **Ctrl**, em seguida, selecione o controle `6` primeiro.  
   
     > [!NOTE]
-    >  Para definir um controle específico para o número 1 (primeiro na ordem de tabulação), clique duas vezes no controle.  
+    >  Para definir um controle específico para número `1` (primeiro na ordem de tabulação), clique duas vezes no controle.  
   
-3.  Solte a tecla CTRL e clique em controles na ordem em que você deseja que a tecla TAB para seguir a partir desse ponto.  
+3.  Versão do **Ctrl** da chave, em seguida, clicar nos controles na ordem em que você deseja o **guia** chave a serem seguidos a partir desse ponto.  
   
-4.  Pressione **ENTER** para sair **ordem de tabulação** modo.  
+4.  Pressione **Enter** para sair **ordem de tabulação** modo.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  
- [Organização dos controles em caixas de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Organização de controles em caixas de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
-

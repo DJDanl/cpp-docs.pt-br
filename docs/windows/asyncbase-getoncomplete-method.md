@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 15a561924cad314d09209e205ac73430f6d8be01
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ffe517b75df4e1cdd8172279c12256db940f0980
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466566"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647031"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>Método AsyncBase::GetOnComplete
 Copia o endereço do manipulador de eventos de conclusão atual para a variável especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 STDMETHOD(  
    GetOnComplete  
 )(TComplete** completeHandler);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *completeHandler*  
  O local em que o endereço do manipulador de eventos de conclusão atual é armazenado.  
   

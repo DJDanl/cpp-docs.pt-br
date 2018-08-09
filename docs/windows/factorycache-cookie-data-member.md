@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27daf229da4c6707afcbf97f7ab8ce08cd8ce900
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f3636cdb2c30d08547fd9085141aa9283bdc85c7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874441"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652367"
 ---
 # <a name="factorycachecookie-data-member"></a>Membro de dados FactoryCache::cookie
-Oferece suporte à infraestrutura de biblioteca de modelos C++ do Windows em tempo de execução e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura de biblioteca de modelos de C++ de tempo de execução do Windows e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 union {   
    WINRT_REGISTRATION_COOKIE winrt;  
    DWORD com;   
@@ -37,7 +37,7 @@ union {
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Contém um valor que identifica um objeto de classe de tempo de execução do Windows ou COM registrado e é posteriormente usado para cancelar o registro do objeto.  
+ Contém um valor que identifica um objeto de classe de tempo de execução do Windows ou COM registrado e é usado posteriormente para cancelar o registro do objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** module.h  

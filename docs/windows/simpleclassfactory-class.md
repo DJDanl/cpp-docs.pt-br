@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: debb78ba4be2731b8cffce1133518b0b4a04f63d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21b52876cb2a6c7bbf110a06cdfb29abdf1930d6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892755"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641815"
 ---
 # <a name="simpleclassfactory-class"></a>Classe SimpleClassFactory
 Fornece um mecanismo fundamental para criar uma classe base.  
@@ -34,14 +34,14 @@ template<typename Base>
 class SimpleClassFactory : public ClassFactory<>;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `Base`  
+### <a name="parameters"></a>Parâmetros  
+ *Base de dados de*  
  Uma classe base.  
   
 ## <a name="remarks"></a>Comentários  
  A classe base deve fornecer um construtor padrão.  
   
- O exemplo de código a seguir demonstra como usar SimpleClassFactory com o [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) macro.  
+ O exemplo de código a seguir demonstra como usar **SimpleClassFactory** com o [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) macro.  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`  
   

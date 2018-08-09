@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e362ec513cb7cb14f5fd3abb8a028c6e0eab616b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466118"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644223"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Palavras-chave Contextuais (Extensões de Componentes C++)
 *Palavras-chave contextuais* são elementos de linguagem que são reconhecidos apenas em contextos específicos. Fora do contexto específico, uma palavra-chave contextual pode ser um símbolo definido pelo usuário.  
   
 ## <a name="all-runtimes"></a>Todos os Tempos de Execução  
- **Comentários**  
+### <a name="remarks"></a>Comentários
   
  A seguir está uma lista de palavras-chave contextuais:  
   
@@ -59,23 +59,22 @@ ms.locfileid: "39466118"
  Para fins de legibilidade, você talvez queira limitar o uso de palavras-chave contextuais como símbolos definidos pelo usuário.  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
- **Comentários**  
+### <a name="remarks"></a>Comentários  
   
  (Não há nenhum comentário específico da plataforma para esse recurso.)  
   
 ### <a name="requirements"></a>Requisitos  
- Opção do compilador: **/ZW**  
+ Opção do compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Comentários**  
+### <a name="remarks"></a>Comentários  
   
  (Não há nenhum comentário específico da plataforma para esse recurso.)  
   
 ### <a name="requirements"></a>Requisitos  
- Opção de compilador: **/clr**  
+ Opção do compilador: `/clr`  
   
 ### <a name="examples"></a>Exemplos  
- **Exemplo**  
   
  O exemplo de código a seguir mostra que o contexto apropriado, o **propriedade** palavra-chave contextual pode ser usado para definir uma propriedade e uma variável.  
   
@@ -99,8 +98,6 @@ int main() {
    System::Console::WriteLine(++property);  
 }  
 ```  
-  
- **Saída**  
   
 ```Output  
 100  

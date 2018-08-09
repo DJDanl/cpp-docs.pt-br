@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d10544a08fa6faebb1434cd00ca80ac30d4570a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 97ad430bc0ab5a268ff428189da5987b6c45907d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889830"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650785"
 ---
 # <a name="simpleactivationfactory-class"></a>Classe SimpleActivationFactory
-Fornece um mecanismo básico para criar um tempo de execução do Windows ou a classe de base COM clássico.  
+Fornece um mecanismo fundamental para criar um tempo de execução do Windows ou a classe base do COM clássico.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,8 +34,8 @@ template<typename Base>
 class SimpleActivationFactory : public ActivationFactory<>;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `Base`  
+### <a name="parameters"></a>Parâmetros  
+ *Base de dados de*  
  Uma classe base.  
   
 ## <a name="remarks"></a>Comentários  
@@ -52,8 +52,8 @@ class SimpleActivationFactory : public ActivationFactory<>;
 |Nome|Descrição|  
 |----------|-----------------|  
 |[Método SimpleActivationFactory::ActivateInstance](../windows/simpleactivationfactory-activateinstance-method.md)|Cria uma instância da interface especificada.|  
-|[Método SimpleActivationFactory::GetRuntimeClassName](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Obtém o nome de classe de tempo de execução de uma instância da classe especificada pelo `Base` parâmetro de modelo de classe.|  
-|[Método SimpleActivationFactory::GetTrustLevel](../windows/simpleactivationfactory-gettrustlevel-method.md)|Obtém o nível de confiança de uma instância da classe especificada o `Base` parâmetro de modelo de classe.|  
+|[Método SimpleActivationFactory::GetRuntimeClassName](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Obtém o nome de classe de tempo de execução de uma instância da classe especificada o *Base* parâmetro de modelo de classe.|  
+|[Método SimpleActivationFactory::GetTrustLevel](../windows/simpleactivationfactory-gettrustlevel-method.md)|Obtém o nível de confiança de uma instância da classe especificada o *Base* parâmetro de modelo de classe.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `I0`  

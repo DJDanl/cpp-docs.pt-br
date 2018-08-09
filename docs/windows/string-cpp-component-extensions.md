@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cfab95c400aad949f06a559fffbdb42993910bb7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c60edae6e4eaf7cef3841a1ac03dea414f298b6a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889216"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645987"
 ---
 # <a name="string--c-component-extensions"></a>Cadeia de caracteres (Extensões de Componentes C++)
-O suporte de compilador do Visual C++ *cadeias de caracteres*, que são objetos que representam o texto como uma cadeia de caracteres. Visual C++ dá suporte a variáveis de cadeia de caracteres, cujo valor é implícita, e literais, cujo valor é uma cadeia de caracteres entre aspas explícita.  
+O compilador de Visual C++ oferece suporte ao *cadeias de caracteres*, que são objetos que representam o texto como uma sequência de caracteres. Visual C++ oferece suporte a variáveis de cadeia de caracteres, cujo valor é implícito, e literais, cujo valor é uma cadeia de caracteres entre aspas explícita.  
   
 ## <a name="all-runtimes"></a>Todos os Tempos de Execução  
- O tempo de execução do Windows e o common language runtime representam cadeias de caracteres como objetos cuja memória alocada é gerenciada automaticamente. Ou seja, não é necessário descartar explicitamente a memória para uma cadeia de caracteres quando termina o vai de variável de cadeia de caracteres fora do escopo ou seu aplicativo. Para indicar que o tempo de vida de um objeto de cadeia de caracteres a serem gerenciados automaticamente, declare o tipo de cadeia de caracteres com o [handle-to-object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) modificador.  
+ O tempo de execução do Windows e o common language runtime representam cadeias de caracteres como objetos cuja memória alocada é gerenciada automaticamente. Ou seja, você não deve descartar explicitamente a memória para uma cadeia de caracteres quando termina o sai de variável de cadeia de caracteres do escopo ou seu aplicativo. Para indicar que o tempo de vida de um objeto de cadeia de caracteres deve ser gerenciado automaticamente, declare o tipo de cadeia de caracteres com o [handle-to-object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) modificador.  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
- A arquitetura de tempo de execução do Windows requer o Visual C++ implementar o `String` no tipo de dados a `Platform` namespace. Para sua conveniência, Visual C++ também fornece o `string` tipo de dados, que é um sinônimo para `Platform::String`, no `default` namespace.  
+ A arquitetura de tempo de execução do Windows requer o Visual C++ implementar o `String` tipo de dados no `Platform` namespace. Para sua conveniência, o Visual C++ também fornece o `string` tipo de dados, que é um sinônimo de `Platform::String`, no `default` namespace.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -41,36 +41,35 @@ using namespace default;
    Platform::String^ MyString1 = "The quick brown fox";  
    String^ MyString2 = "jumped over the lazy dog.";  
    String^ MyString3 = "Hello, world!";  
-  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações e exemplos sobre cadeias de caracteres, consulte [Platform:: String, std:: wstring e literais (plataforma)](http://msdn.microsoft.com/en-us/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
+ Para obter mais informações e exemplos sobre cadeias de caracteres, consulte [literais (plataforma), std:: wstring e Platform:: String](http://msdn.microsoft.com/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
   
 ### <a name="requirements"></a>Requisitos  
- Opção do compilador: **/ZW**  
+ Opção do compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
- Este tópico discute como o compilador do Visual C++ processa literais de cadeia de caracteres quando você executá-lo usando o **/clr** opção de compilador. Para usar **/clr**, você também deve usar o common language runtime (CLR), C + + sintaxe CLI e objetos gerenciados. Para obter mais informações sobre **/clr**, consulte [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).  
+ Este tópico discute como o compilador do Visual C++ processa os literais de cadeia de caracteres quando você executá-lo usando o `/clr` opção de compilador. Para usar `/clr`, você também deve usar o runtime de linguagem comum (CLR), C + + c++ /CLI sintaxe da CLI e objetos gerenciados. Para obter mais informações sobre `/clr`, consulte [/clr (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md).  
   
- Ao compilar com **/clr**, o compilador converterá literais de cadeia de caracteres em cadeias de caracteres do tipo <xref:System.String>. Para preservar a compatibilidade com versões anteriores com o código existente há são duas exceções a isso:  
+ Ao compilar com `/clr`, o compilador irá converter literais de cadeia de caracteres para cadeias de caracteres do tipo <xref:System.String>. Para preservar a compatibilidade com versões anteriores com o código existente há são duas exceções a isso:  
   
--   Tratamento de exceção. Quando uma cadeia de caracteres literal for lançada, o compilador detectará como uma cadeia de caracteres literal.  
+-   Manipulação de exceção. Quando um literal de cadeia de caracteres é gerada, o compilador irá capturá-la como um literal de cadeia de caracteres.  
   
--   Dedução do modelo. Quando uma literal de cadeia de caracteres é passada como um argumento de modelo, o compilador não converterá para um <xref:System.String>. Observe que os literais de cadeia de caracteres passados como um argumento genérico serão promovidos para <xref:System.String>.  
+-   Dedução de modelo. Quando um literal de cadeia de caracteres é passada como um argumento de modelo, o compilador não irá convertê-lo para um <xref:System.String>. Observe que os literais de cadeia de caracteres passados como um argumento genérico serão promovidos a <xref:System.String>.  
   
- O compilador também tem suporte interno para três operadores que você pode substituir para personalizar seu comportamento:  
+ O compilador também tem suporte interno para três operadores, que você pode substituir para personalizar seu comportamento:  
   
 -   System:: string ^ operador + (System:: String, System:: String);  
   
--   System:: string ^ operador + (System::Object, System:: String);  
+-   System:: string ^ operador + (System:: Object, System:: String);  
   
--   System:: string ^ operador + (System:: String, System::Object);  
+-   System:: string ^ operador + (System:: String, System:: Object);  
   
  Quando passado um <xref:System.String>, o compilador caixa, se necessário e, em seguida, concatenar o objeto (com ToString) com a cadeia de caracteres.  
   
 > [!NOTE]
->  O cursor ("^") indica que a variável declarada é um identificador para um C + + do objeto gerenciado de CLI.  
+>  O sinal de interpolação ("^") indica que a variável declarada é um identificador para um C + + c++ /CLI do objeto gerenciado de CLI.  
   
  Para obter mais informações, consulte [cadeia de caracteres e literais de caracteres](../cpp/string-and-character-literals-cpp.md).  
   
@@ -78,9 +77,8 @@ using namespace default;
  Opção de compilador: **/clr**  
   
 ### <a name="examples"></a>Exemplos  
- **Exemplo**  
   
- O exemplo de código a seguir demonstra a concatenação e comparação de cadeias de caracteres.  
+ O exemplo de código a seguir demonstra a concatenação e comparando cadeias de caracteres.  
   
 ```cpp  
 // string_operators.cpp  
@@ -169,9 +167,7 @@ abc
 n is empty  
 ```  
   
- **Exemplo**  
-  
- O exemplo a seguir mostra o que você pode sobrecarregar os operadores fornecidos pelo compilador e que o compilador encontra uma sobrecarga de função com base no <xref:System.String> tipo.  
+ O exemplo a seguir mostra que você pode sobrecarregar os operadores fornecidos pelo compilador e que o compilador encontrará uma sobrecarga de função com base no <xref:System.String> tipo.  
   
 ```cpp  
 // string_operators_2.cpp  
@@ -231,9 +227,7 @@ String ^ a
 const char * a  
 ```  
   
- **Exemplo**  
-  
- O exemplo a seguir mostra que o compilador faz distinção entre cadeias de caracteres nativas e <xref:System.String> cadeias de caracteres.  
+ O exemplo a seguir mostra que o compilador faz a distinção entre cadeias de caracteres nativas e <xref:System.String> cadeias de caracteres.  
   
 ```cpp  
 // string_operators_3.cpp  

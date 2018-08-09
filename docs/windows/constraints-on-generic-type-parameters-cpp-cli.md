@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33829d868eb90cde7259a482b8fc80f9cd6fd677
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: bee7bf263e3537811be1b992f463b7f1269863ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465292"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649777"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Restrições em parâmetros de tipo genérico (C++/CLI)
 Em declarações de método ou tipo genérico, você pode qualificar um parâmetro de tipo com restrições. Uma restrição é um requisito que tipos usados como argumentos de tipo devem satisfazer. Por exemplo, uma restrição pode ser que o argumento de tipo deve implementar uma interface de determinados ou herdar de uma classe específica.  
@@ -32,11 +32,11 @@ Em declarações de método ou tipo genérico, você pode qualificar um parâmet
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 where type-parameter: constraint list  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *parâmetro de tipo*  
  Um dos parâmetros de tipo, a ser restringido.  
   
@@ -45,7 +45,7 @@ where type-parameter: constraint list
   
  A lista também pode incluir uma classe. Para o argumento de tipo satisfazer uma restrição de classe base, ele deve ser da mesma classe que a restrição ou derivar de restrição.  
   
- Você também pode especificar `gcnew()` para indicar o argumento de tipo deve ter um construtor público sem parâmetros; ou **classe ref** para indicar o tipo de argumento deve ser um tipo de referência, incluindo qualquer classe, interface, delegado ou matriz tipo; ou **classe de valor** para indicar o tipo de argumento deve ser um tipo de valor. Qualquer valor de tipo, exceto permite valor nulo\<T > pode ser especificado.  
+ Você também pode especificar **gcnew()** para indicar o argumento de tipo deve ter um construtor público sem parâmetros; ou **classe ref** para indicar o argumento de tipo deve ser um tipo de referência, incluindo qualquer classe, interface, delegado ou tipo de matriz; ou **classe de valor** para indicar o tipo de argumento deve ser um tipo de valor. Qualquer valor de tipo, exceto permite valor nulo\<T > pode ser especificado.  
   
  Você também pode especificar um parâmetro genérico como uma restrição. O argumento de tipo fornecido para o tipo que são a restrição deve ser ou derivar do tipo de restrição. Isso é chamado uma restrição de tipo naked.  
   

@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64f588e67066fed690271aa7d78fcbe726c67177
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd203ee0413b60bc7aa713e7923fd4d69bde665e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860340"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642952"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>Enumeração CancelTransitionPolicy
-Indica como uma operação assíncrona do tentar fazer a transição para um estado terminal concluída ou erro se comportar em relação a um estado de cancelamento solicitado pelo cliente.  
+Indica como uma operação assíncrona de tentar fazer a transição para um estado terminal de concluído ou erro deve se comportar em relação a um estado cancelado solicitado pelo cliente.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 enum CancelTransitionPolicy;  
 ```  
   
@@ -41,8 +41,8 @@ enum CancelTransitionPolicy;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|`RemainCanceled`|Se a operação assíncrona está em um estado de cancelamento solicitado pelo cliente, isso indica que ele permanecerá no estado cancelado em vez de fazer a transição para um estado de erro ou terminal concluída.|  
-|`TransitionFromCanceled`|Se a operação assíncrona está em um estado de cancelamento solicitado pelo cliente, isso indica que estado deve fazer a transição do estado cancelado para o estado terminal de concluído ou erro, conforme determinado pela chamada que utiliza esse sinalizador.|  
+|`RemainCanceled`|Se a operação assíncrona está atualmente em um estado cancelado solicitado pelo cliente, isso indica que ele permanecerá no estado cancelado em vez de fazer a transição para um estado de erro ou de terminal concluída.|  
+|`TransitionFromCanceled`|Se a operação assíncrona está atualmente em um estado cancelado solicitado pelo cliente, isso indica que estado deve fazer a transição do estado cancelado para o estado terminal de concluído ou erro, conforme determinado pela chamada que utiliza esse sinalizador.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** async.h  

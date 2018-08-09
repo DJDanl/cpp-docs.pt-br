@@ -18,28 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 625b75a81773b45483c8b70c12530acfc9f75994
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e3ed2559457a7fd3231c625b285dea44f81da877
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856886"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646836"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Adicionando arquivos a aplicativos Win32 vazios
-### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>Para adicionar os arquivos para um aplicativo de área de trabalho do Windows vazio  
+### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>Para adicionar os arquivos para um aplicativo da área de trabalho do Windows vazio  
   
 1.  Selecione o diretório no **Gerenciador de soluções**.  
   
-2.  O nome do diretório, clique **adicionar** do menu de atalho e clique **Item existente**.  
+2.  O nome do diretório com o botão direito, clique em **Add** do menu de atalho e clique **Item existente**.  
   
 3.  No **caixa de diálogo Adicionar Item existente**, navegue até os arquivos que você deseja adicionar ao seu projeto.  
   
 4.  Clique em **OK**.  
   
- Para adicionar arquivos que não são fonte, cabeçalho ou arquivos de recursos ao seu projeto, clique com botão direito no nó da solução no Gerenciador de soluções e adicione os arquivos ao projeto da mesma maneira. Uma pasta diversos será criada para manter os outros arquivos no seu projeto.  
+ Para adicionar arquivos que não são código-fonte, cabeçalho ou arquivos de recurso ao seu projeto, clique com botão direito do **solução** nó no **Gerenciador de soluções** e adicione os arquivos ao projeto da mesma maneira. Um **Miscelânea** pasta será criada para manter os outros arquivos em seu projeto.  
   
 > [!NOTE]
->  Antes de compilar seu projeto, você precisará especificar opções de compilação para esses arquivos para que eles sejam incluídos corretamente em seu aplicativo concluído. Para obter mais informações, consulte [especificando as configurações de projeto com páginas de propriedade](../ide/property-pages-visual-cpp.md) e [Compilando um programa do C/C++](../build/building-c-cpp-programs.md).  
+>  Antes de compilar seu projeto, você precisará especificar opções de build para esses arquivos para que eles são incluídos corretamente em seu aplicativo concluído. Para obter mais informações, consulte [especificando as configurações de projeto com páginas de propriedades](../ide/property-pages-visual-cpp.md) e [criando um programa em C/C++](../build/building-c-cpp-programs.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando um aplicativo de área de trabalho do Windows vazio](../windows/creating-an-empty-windows-desktop-application.md)   

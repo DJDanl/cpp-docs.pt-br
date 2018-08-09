@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 724803fbbf04bd697dfc85f6576ed5706d708eae
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 5b387d52c9ab7b1d9033ce70d36e9f0aa5e5b33e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464435"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642923"
 ---
 # <a name="comptrcopyto-method"></a>Método ComPtr::CopyTo
 Copia a interface atual ou especificada associada a este **ComPtr** para o ponteiro especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT CopyTo(  
    _Deref_out_ InterfaceType** ptr  
 );  
@@ -45,7 +45,7 @@ HRESULT CopyTo(
 ) const;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *U*  
  O nome de um tipo.  
   

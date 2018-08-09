@@ -20,59 +20,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a879850c00957568065150b6c6fc1c801c049fa2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fa6b10f1d263db95bf6eb901e65a3111721d6226
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873141"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647967"
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>Criando um pincel personalizado (editor de imagens para ícones)
-Um pincel personalizado é uma parte retangular de uma imagem que você escolher e usar como pincéis predefinidos do editor de imagem. Todas as operações que você pode executar em uma seleção, você pode executar em um pincel personalizado também.  
+Um pincel personalizado é uma parte retangular de uma imagem que você pegue e usar como uma da **imagem** pincéis de prontas para uso do editor. Todas as operações que você pode executar em uma seleção, você pode executar em um pincel personalizado também.  
   
 ### <a name="to-create-a-custom-brush-from-a-portion-of-an-image"></a>Para criar um pincel personalizado de uma parte de uma imagem  
   
 1.  [Selecione a parte da imagem](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) que você deseja usar para um pincel.  
   
-2.  Mantendo o **SHIFT** tecla pressionada, clique na seleção e arraste-o pela imagem.  
+2.  Mantendo os **Shift** para baixo da chave, clique na seleção e arraste-o em toda a imagem.  
   
      \- ou -  
   
-3.  Do **imagem** menu, escolha **usar seleção como Pincel**.  
+3.  Dos **imagem** menu, escolha **usar seleção como Pincel**.  
   
-     Sua seleção se torna um pincel personalizado que distribui as cores na seleção através da imagem. Cópias da seleção deixadas ao longo do caminho de arrastar. Mais lenta você arrastar, mais cópias são feitas.  
+     Sua seleção torna-se um pincel personalizado que distribui as cores na seleção entre a imagem. Cópias da seleção são deixadas ao longo do caminho de arrastamento. Quanto mais lentamente do que você arrastar, são feitas as cópias mais.  
   
-     **Observação** clicar o **usar uma seleção como Pincel** sem primeiro selecionar uma parte da imagem usará a imagem inteira como um pincel. O resultado do uso de um pincel personalizado também dependem se você tiver selecionado um [plano de fundo opaco ou transparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
+     > [!NOTE]
+     > Clicar a **usar uma seleção como Pincel** sem primeiro selecionar uma parte da imagem usará a imagem inteira como um pincel. O resultado do uso de um pincel personalizado também dependem se você selecionou uma [plano de fundo opaca ou transparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
   
- Pixels em um pincel personalizado que correspondem a cor de plano de fundo atual são normalmente transparentes: eles não pintar a imagem existente. Você pode alterar esse comportamento para que os pixels da cor de plano de fundo pintar a imagem existente.  
+ Pixels em um pincel personalizado que correspondem à cor do plano de fundo atual são normalmente transparentes: eles não pinte sobre a imagem existente. Você pode alterar esse comportamento para que os pixels da cor de plano de fundo pinte sobre a imagem existente.  
   
- Você pode usar o pincel personalizado como um carimbo de data ou um estêncil para criar uma variedade de efeitos especiais.  
+ Você pode usar o pincel personalizado, como um carimbo de data / ou um estêncil para criar uma variedade de efeitos especiais.  
   
-#### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>Para desenhar formas de pincel personalizado na cor de plano de fundo  
+### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>Para desenhar formas de pincel personalizado na cor da tela de fundo  
   
-1.  [Selecione um plano de fundo transparente ou opaco](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
+1.  [Selecione um plano de fundo opaco ou transparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
   
-2.  [Definir a cor de plano de fundo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) para a cor na qual você deseja desenhar.  
+2.  [Definir a cor do plano de fundo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) para a cor em que você deseja desenhar.  
   
-3.  Posicione o pincel personalizado onde você deseja desenhar.  
+3.  Posicione o pincel personalizado no qual você deseja desenhar.  
   
-4.  Clique no botão direito do mouse. Nenhuma região opaco do pincel personalizado é desenhada na cor de plano de fundo.  
+4.  Clique no botão direito do mouse. Quaisquer regiões opacos do pincel personalizado são desenhadas na cor da tela de fundo.  
   
-#### <a name="to-double-or-halve-the-custom-brush-size"></a>Clique duas vezes ou dividir o tamanho de pincel personalizado  
+### <a name="to-double-or-halve-the-custom-brush-size"></a>Clique duas vezes ou reduz pela metade o tamanho do pincel personalizados  
   
-1.  Pressione o **sinal** (**+**) chave para dobrar o tamanho de pincel, ou o **sinal** (**-**) chave para dividir a ele .  
+1.  Pressione a **sinal de adição** (**+**) a chave para dobrar o tamanho do pincel, ou o **sinal de subtração** (**-**) chave para dividir a ele .  
   
-#### <a name="to-cancel-the-custom-brush"></a>Para cancelar o pincel personalizado  
+### <a name="to-cancel-the-custom-brush"></a>Para cancelar o pincel personalizado  
   
-1.  Pressione **ESC** ou escolha outra ferramenta de desenho.  
+1.  Pressione **Esc** ou escolha outra ferramenta de desenho.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos  
  Nenhum  
   
 ## <a name="see-also"></a>Consulte também  
  [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Editor de imagens para ícones](../windows/image-editor-for-icons.md)
-

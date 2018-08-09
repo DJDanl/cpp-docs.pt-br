@@ -19,23 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e2defbde7963c6e58cdfe3f4a25ea550ad88e5f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ca853e5dd44cd91edbae99cc51f88a41bdd4130
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882769"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648370"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>Desenhando linhas ou figuras fechadas (editor de imagens para ícones)
-Ferramentas do editor de imagem para desenhar linhas e figuras fechadas todos funcionam da mesma maneira: colocar o ponto de inserção em um ponto e arraste para outro. Para linhas, esses pontos são os pontos de extremidade. Para figuras fechadas, esses pontos são opostas vértices de um retângulo delimitador a figura.  
+Ferramentas do editor de imagens para desenhar linhas e de figuras fechadas todos funcionam da mesma forma: colocar o ponto de inserção em um ponto e arraste para outro. Para linhas, esses pontos são os pontos de extremidade. Para figuras fechadas, esses pontos são cantos opostos de um retângulo delimitador a figura.  
   
- Linhas são desenhadas em uma determinado pela seleção atual do pincel de largura e são enquadradas figuras são desenhadas em uma determinado pela seleção atual de largura de largura. Linhas e todas as imagens, tanto estruturado e preenchido, são desenhadas na cor de primeiro plano atual se você pressionar o botão esquerdo do mouse, ou na cor de plano de fundo atual se você pressionar o botão direito do mouse.  
+ Linhas são desenhadas em uma determinado pela seleção atual do pincel de largura e são enquadradas figuras são desenhadas em uma largura determinada pela seleção largura atual. Linhas e todas as figuras, enquadrados tanto preenchido, são desenhadas na cor de primeiro plano atual se você pressionar o botão esquerdo do mouse, ou na cor de plano de fundo atual se você pressionar o botão direito do mouse.  
   
 ### <a name="to-draw-a-line"></a>Para desenhar uma linha  
   
-1.  No [barra de ferramentas do Editor de imagem](../windows/toolbar-image-editor-for-icons.md) (ou o **imagem** menu, **ferramentas** comando), clique no **linha** ferramenta.  
+1.  Sobre o [barra de ferramentas do Editor de imagens](../windows/toolbar-image-editor-for-icons.md) (ou do **imagem** menu, **ferramentas** comando), clique no **linha** ferramenta.  
   
-2.  Se necessário, selecione um pincel e cores:  
+2.  Se necessário, selecione as cores e um pincel:  
   
     -   No [paleta de cores](../windows/colors-window-image-editor-for-icons.md), clique no botão esquerdo do mouse para selecionar uma cor de primeiro plano ou o botão direito do mouse para selecionar uma cor de plano de fundo.  
   
@@ -43,24 +43,23 @@ Ferramentas do editor de imagem para desenhar linhas e figuras fechadas todos fu
   
 3.  Coloque o ponteiro no ponto de partida da linha.  
   
-4.  Arraste para o ponto de extremidade da linha.  
+4.  Arraste o ponto de extremidade da linha.  
   
 ### <a name="to-draw-a-closed-figure"></a>Para desenhar uma figura fechada  
   
-1.  No **Editor de imagem** barra de ferramentas (ou o **imagem** menu, **ferramentas** comando), clique em um **desenho figura fechada** ferramenta.  
+1.  No **Editor de imagens** barra de ferramentas (ou do **imagem** menu, **ferramentas** comando), clique em um **figura fechada desenho** ferramenta.  
   
-     O **figura fechada desenho** ferramentas criam figuras conforme indicado em seus respectivos botões.  
+     O **fechado Figura desenho** ferramentas criam figuras conforme indicado em seus respectivos botões.  
   
-2.  Se necessário, selecione uma largura de linha e cores.  
+2.  Se necessário, selecione as cores e uma largura de linha.  
   
-3.  Mova o ponteiro para um dos cantos da área retangular na qual você deseja desenhar a figura.  
+3.  Mova o ponteiro para um canto da área retangular na qual você deseja desenhar a figura.  
   
 4.  Arraste o ponteiro para o canto diagonal oposto.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisitos  
-  
+## <a name="requirements"></a>Requisitos  
  Nenhum  
   
 ## <a name="see-also"></a>Consulte também  
@@ -68,4 +67,3 @@ Ferramentas do editor de imagem para desenhar linhas e figuras fechadas todos fu
  [Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Editor de imagens para ícones](../windows/image-editor-for-icons.md)   
  [Trabalhando com cor](../windows/working-with-color-image-editor-for-icons.md)
-

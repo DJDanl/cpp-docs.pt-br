@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0171c8cf836c95afecb74cf1909688bbbe030db
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 78cc02c4f4d39b2bcba4c79a07ec84b9657cb66b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466365"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651191"
 ---
 # <a name="appobject"></a>appobject
 Identifica a coclass como um objeto de aplicativo, que é associado a um aplicativo completo .exe e indica que as funções e propriedades da coclass estão globalmente disponíveis neste [biblioteca de tipos](../mfc/automation-clients-using-type-libraries.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [appobject]  
 ```  
   

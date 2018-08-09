@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bd9f899457c3a6045d7a5525c9fb560e23f10d3
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: c795a3a80c48e7fa976807ab3e261fc927d7e104
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461030"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644265"
 ---
 # <a name="chaininterfacesfillarraywithiid-method"></a>Método ChainInterfaces::FillArrayWithIid
 Armazena a ID de interface definida pelo *I0* parâmetro de modelo em um local especificado em uma matriz especificada de IDs de interface.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 __forceinline static void FillArrayWithIid(  
    _Inout_ unsigned long &index,  
    _In_ IID* iids  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *index*  
  Ponteiro para um valor de índice para o *iids* matriz.  
   

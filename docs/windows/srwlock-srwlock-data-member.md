@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 77b6d10e4343fd17c8bd65e232d29923214eff0c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf6e43c6e8672e8bd3b1f895658a1c16dbe77faa
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889094"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647486"
 ---
 # <a name="srwlocksrwlock-data-member"></a>Membro de dados SRWLock::SRWLock_
-Contém a variável subjacente de bloqueio para o objeto SRWLock atual.  
+Contém a variável subjacente de bloqueio atual **SRWLock** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +34,7 @@ SRWLOCK SRWLock_;
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

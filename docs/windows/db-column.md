@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20c651c6e671c7c4895fc7dba85d16fdeb998ad5
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: e5aa4c7279fcee6ffd7ca17bcf788bbef7737a9c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570695"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647512"
 ---
 # <a name="dbcolumn"></a>db_column
 Associa uma coluna especificada para uma variável no conjunto de linhas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [ db_column(   
    ordinal,   
    dbtype,   
@@ -44,7 +44,7 @@ Associa uma coluna especificada para uma variável no conjunto de linhas.
  *Ordinal*  
  O número de coluna ordinal (`DBCOLUMNINFO` ordinal) ou o nome de coluna (cadeia de caracteres ANSI ou Unicode) corresponde a um campo no conjunto de linhas à qual associar dados. Se você usar números, você pode ignorar ordinais consecutivos (por exemplo: 1, 2, 3, 5). O nome pode conter espaços, se o provedor OLE DB que você use suportá-lo. Por exemplo, você pode usar qualquer um dos seguintes formatos:  
   
-```  
+```cpp  
 [db_column("2")] TCHAR szCity[30];  
 [db_column(L"city_name")] TCHAR szCity[30];  
 ```  

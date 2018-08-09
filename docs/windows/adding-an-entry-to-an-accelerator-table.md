@@ -1,5 +1,5 @@
 ---
-title: Adicionando uma entrada para uma tabela de aceleradores | Microsoft Docs
+title: Adicionando uma entrada a uma tabela de aceleradores | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f3e00c8ba6523f6cc615e4a766ad9206560b5e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0c5e94913a705ac97407f82075ff9c83a12dd6b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855364"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642783"
 ---
 # <a name="adding-an-entry-to-an-accelerator-table"></a>Adicionando uma entrada a uma tabela de aceleradores
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>Para adicionar uma entrada para uma tabela de aceleradores  
   
-1.  Abra a tabela de teclas aceleradoras clicando duas vezes em seu ícone no [exibição recursos](../windows/resource-view-window.md).  
+1.  Abra a tabela de aceleradores clicando duas vezes em seu ícone no [exibição de recurso](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+    >  Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Clique dentro da tabela de teclas aceleradoras e escolha **novo Acelerador** do menu de atalho, ou clique na entrada de linha vazia na parte inferior da tabela.  
+2.  Clique dentro da tabela do acelerador e escolha **novo Acelerador** no menu de atalho, ou clique na entrada de linha vazia na parte inferior da tabela.  
   
-3.  Selecione um [ID](id-property.md) na lista suspensa na ID de caixa ou digite uma nova ID a **ID** caixa.  
+3.  Selecione um [identificação](id-property.md) na lista suspensa na ID de caixa ou digite uma nova ID no **ID** caixa.  
   
-4.  Tipo de [chave](../windows/accelerator-key-property.md) você deseja usar como um acelerador ou o botão direito do mouse e escolha **próxima chave digitada** no menu de atalho para definir uma combinação de teclas (o **próxima chave digitada** comando é também disponível no **editar** menu).  
+4.  Tipo de [chave](../windows/accelerator-key-property.md) você deseja usar como um acelerador ou o botão direito do mouse e escolha **próxima chave digitada** no menu de atalho para definir uma combinação de teclas (o **próxima chave digitada** comando é também disponível na **editar** menu).  
   
 5.  Alterar o [modificador](../windows/accelerator-modifier-property.md) e [tipo](../windows/accelerator-type-property.md), se necessário.  
   
 6.  Pressione **ENTER**.  
   
     > [!NOTE]
-    >  Verifique se todos os aceleradores que você definir são exclusivos. Você pode ter várias combinações de teclas atribuídas para a mesma ID sem efeito de preenchimento, por exemplo, CTRL + P e F8 podem ser atribuídos ao ID_PRINT. No entanto, ter uma combinação de teclas atribuído a mais de uma que ID não funcionarão bem, por exemplo, CTRL + Z atribuído a ID_SPELL_CHECK e ID_THESAURUS.  
+    >  Verifique se todos os aceleradores que você define são exclusivos. Você pode ter várias combinações de teclas atribuídas para a mesma ID com nenhum efeito mal, por exemplo, **Ctrl** + **P** e **F8** podem ser atribuídos ao ID_PRINT. No entanto, ter atribuída a mais de uma ID não funcionará bem, por exemplo, uma combinação de teclas **Ctrl** + **Z** atribuídas a ID_SPELL_CHECK e ID_THESAURUS.  
   
-
-  
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  

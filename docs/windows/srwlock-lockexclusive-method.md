@@ -1,5 +1,5 @@
 ---
-title: 'Método: Lockexclusive | Microsoft Docs'
+title: 'Método SRWLOCK:: Lockexclusive | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 36ae694365b58cb10666e5d8af67269b2c4f125c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a32fe0e66a8f61bc17e4512f63705635cd8b5263
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889365"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643670"
 ---
 # <a name="srwlocklockexclusive-method"></a>Método SRWLock::LockExclusive
-Obtém um objeto SRWLock em modo exclusivo.  
+Adquire uma **SRWLock** objeto no modo exclusivo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,15 +37,15 @@ static SyncLockExclusive LockExclusive(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `lock`  
- Ponteiro para um objeto SRWLock.  
+### <a name="parameters"></a>Parâmetros  
+ *lock*  
+ Ponteiro para um **SRWLock** objeto.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Um objeto SRWLock em modo exclusivo.  
+ Uma **SRWLock** objeto no modo exclusivo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

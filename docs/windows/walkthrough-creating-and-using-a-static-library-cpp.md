@@ -16,12 +16,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bcbf5747b667615c96ced3488e16f2a8fc0ef2d
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: ebcf09fd4fdda4269edec66f863b239e00e51e1d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034797"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652969"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Instruções passo a passo: criando e usando uma biblioteca estática (C++)
 Este passo a passo mostra como criar uma biblioteca estática (arquivo. lib) para uso com aplicativos do C++. Usando uma biblioteca estática é uma ótima maneira de reutilizar o código. Em vez de reimplementar as mesmas rotinas em todos os aplicativos que exige a funcionalidade, você grava uma vez em uma biblioteca estática e, em seguida, referenciá-lo a partir dos aplicativos. Código vinculado de uma biblioteca estática torna-se parte do seu aplicativo — você não precisa instalar outro arquivo para usar o código.  
@@ -43,15 +43,15 @@ Este passo a passo mostra como criar uma biblioteca estática (arquivo. lib) par
   
 ##  <a name="CreateLibProject"></a> Criando um projeto de biblioteca estática  
   
-#### <a name="to-create-a-static-library-project"></a>Para criar um projeto de biblioteca estática  
+### <a name="to-create-a-static-library-project"></a>Para criar um projeto de biblioteca estática  
   
-1.  Na barra de menus, escolha **Arquivo**, **Novo**, **Projeto**.  
+1.  Na barra de menus, selecione **Arquivo** > **Novo** > **Projeto**.  
   
 2. No painel esquerdo do **novo projeto** diálogo caixa, expanda **instalado, o Visual C++** e, em seguida, selecione **área de trabalho do Windows**.
   
 3. No painel central, selecione **Assistente de área de trabalho do Windows**.  
   
-4.  Especifique um nome para o projeto — por exemplo, **MathFuncsLib**— na **nome** caixa. Especifique um nome para a solução — por exemplo, **StaticLibrary**— na **nome da solução** caixa. Escolha o botão **OK**.  
+4.  Especifique um nome para o projeto — por exemplo, *MathFuncsLib*— na **nome** caixa. Especifique um nome para a solução — por exemplo, *StaticLibrary*— na **nome da solução** caixa. Escolha o botão **OK**.  
   
 5. Sob **tipo de aplicativo**, selecione a biblioteca estática (. lib).  
   
@@ -61,36 +61,36 @@ Este passo a passo mostra como criar uma biblioteca estática (arquivo. lib) par
  
 ##  <a name="AddClassToLib"></a> Adicionando uma classe à biblioteca estática  
   
-#### <a name="to-add-a-class-to-the-static-library"></a>Para adicionar uma classe à biblioteca estática  
+### <a name="to-add-a-class-to-the-static-library"></a>Para adicionar uma classe à biblioteca estática  
   
-1.  Para criar um arquivo de cabeçalho para uma nova classe, abra o menu de atalho para o **MathFuncsLib** project no **Gerenciador de soluções**e, em seguida, escolha **Add**, **Novo Item** . No **Adicionar Novo Item** caixa de diálogo, no painel esquerdo, em **Visual C++**, selecione **código**. No painel central, selecione **arquivo de cabeçalho (. h)**. Especifique um nome para o arquivo de cabeçalho — por exemplo, **Mathfuncslib**— e, em seguida, escolha o **Add** botão. Um arquivo de cabeçalho em branco é exibido.  
+1.  Para criar um arquivo de cabeçalho para uma nova classe, abra o menu de atalho para o **MathFuncsLib** project no **Gerenciador de soluções**e, em seguida, escolha **Add**, **Novo Item** . No **Adicionar Novo Item** caixa de diálogo, no painel esquerdo, em **Visual C++**, selecione **código**. No painel central, selecione **arquivo de cabeçalho (. h)**. Especifique um nome para o arquivo de cabeçalho — por exemplo, *Mathfuncslib*— e, em seguida, escolha o **Add** botão. Um arquivo de cabeçalho em branco é exibido.  
   
 2.  Adicione uma classe chamada **MyMathFuncs** para executar operações matemáticas comuns, como adição, subtração, multiplicação e divisão. O código deve ser parecido com este:  
   
      [!code-cpp[NVC_Walkthrough_Create_Static_Lib#100](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_1.h)]  
   
-3.  Para criar um arquivo de origem para a nova classe, abra o menu de atalho para o **MathFuncsLib** project no **Gerenciador de soluções**e, em seguida, escolha **Add**, **Novo Item** . No **Adicionar Novo Item** caixa de diálogo, no painel esquerdo, em **Visual C++**, selecione **código**. No painel central, selecione **arquivo C++ (. cpp)**. Especifique um nome para o arquivo de origem — por exemplo, **MathFuncsLib.cpp**— e, em seguida, escolha o **Add** botão. Um arquivo de origem em branco é exibido.  
+3.  Para criar um arquivo de origem para a nova classe, abra o menu de atalho para o **MathFuncsLib** project no **Gerenciador de soluções**e, em seguida, escolha **Add**, **Novo Item** . No **Adicionar Novo Item** caixa de diálogo, no painel esquerdo, em **Visual C++**, selecione **código**. No painel central, selecione **arquivo C++ (. cpp)**. Especifique um nome para o arquivo de origem — por exemplo, *MathFuncsLib.cpp*— e, em seguida, escolha o **Add** botão. Um arquivo de origem em branco é exibido.  
   
 4.  Use esse arquivo de origem para implementar a funcionalidade para **MyMathFuncs**. O código deve ser parecido com este:  
   
      [!code-cpp[NVC_Walkthrough_Create_Static_Lib#110](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_2.cpp)]  
   
-5.  Compilar a biblioteca estática selecionando **construir**, **compilar solução** na barra de menus. Isso cria uma biblioteca estática que pode ser usada por outros programas.  
+5.  Compilar a biblioteca estática selecionando **construir** > **compilar solução** na barra de menus. Isso cria uma biblioteca estática que pode ser usada por outros programas.  
   
     > [!NOTE]
-    >  Quando você compila na linha de comando do Visual Studio, você deve compilar o programa em duas etapas. Primeiro, execute **/c de cl /EHsc MathFuncsLib.cpp** para compilar o código e criar um arquivo de objeto que é denominado **Mathfuncslib**. (O **cl** comando chama o compilador, Cl.exe e o **/c** opção especifica compilar sem vincular. Para obter mais informações, consulte [/c (compilar sem vinculação)](../build/reference/c-compile-without-linking.md).) Segundo, executa **lib Mathfuncslib** para vincular o código e criar a biblioteca estática **Mathfuncslib**. (O **lib** comando chama o Gerenciador de biblioteca, Lib.exe. Para obter mais informações, consulte [referência de LIB](../build/reference/lib-reference.md).)  
+    >  Quando você compila na linha de comando do Visual Studio, você deve compilar o programa em duas etapas. Primeiro, execute `cl /c /EHsc MathFuncsLib.cpp` para compilar o código e criar um arquivo de objeto que é denominado **Mathfuncslib**. (O `cl` comando chama o compilador, Cl.exe e o `/c` opção especifica compilar sem vincular. Para obter mais informações, consulte [/c (compilar sem vinculação)](../build/reference/c-compile-without-linking.md).) Segundo, executa **lib Mathfuncslib** para vincular o código e criar a biblioteca estática **Mathfuncslib**. (O `lib` comando chama o Gerenciador de biblioteca, Lib.exe. Para obter mais informações, consulte [referência de LIB](../build/reference/lib-reference.md).)  
   
 ##  <a name="CreateAppToRefTheLib"></a> Criar um aplicativo de console C++ que faz referência à biblioteca estática  
   
-#### <a name="to-create-a-c-console-app-that-references-the-static-library"></a>Para criar um aplicativo de console C++ que faz referência à biblioteca estática  
+### <a name="to-create-a-c-console-app-that-references-the-static-library"></a>Para criar um aplicativo de console C++ que faz referência à biblioteca estática  
   
-1.  Na barra de menus, escolha **Arquivo**, **Novo**, **Projeto**.  
+1.  Na barra de menus, selecione **Arquivo** > **Novo** > **Projeto**.  
   
 2. No painel esquerdo do **novo projeto** diálogo caixa, expanda **instalado, o Visual C++** e, em seguida, selecione **área de trabalho do Windows**.  
 
 3. No painel central, selecione **Assistente de área de trabalho do Windows**.  
   
-4.  Especifique um nome para o projeto — por exemplo, **MyExecRefsLib**— na **nome** caixa. Na lista suspensa lista ao lado **Solution**, selecione **adicionar à solução**. Isso adiciona o novo projeto à solução que contém a biblioteca estática. Escolha o botão **OK**.  
+4.  Especifique um nome para o projeto — por exemplo, *MyExecRefsLib*— na **nome** caixa. Na lista suspensa lista ao lado **Solution**, selecione **adicionar à solução**. Isso adiciona o novo projeto à solução que contém a biblioteca estática. Escolha o botão **OK**.  
 5. Sob **tipo de aplicativo**, selecione **aplicativo de Console (.exe)**.
 
 6. Sob **opções de Additioal**, desmarque as **cabeçalho pré-compilado** caixa de seleção.
@@ -99,11 +99,11 @@ Este passo a passo mostra como criar uma biblioteca estática (arquivo. lib) par
   
 ##  <a name="UseLibInApp"></a> Usando a funcionalidade da biblioteca estática no aplicativo  
   
-#### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>Para usar a funcionalidade da biblioteca estática no aplicativo  
+### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>Para usar a funcionalidade da biblioteca estática no aplicativo  
   
 1.  Depois que você cria um aplicativo de console, o sistema cria um programa vazio para você. O nome do arquivo de origem será o mesmo que você escolheu anteriormente. Neste exemplo, ela é nomeada **myexecrefslib. cpp**.  
   
-2.  Antes de usar as rotinas de matemática na biblioteca estática, você deve fazer referência a ele. Para fazer isso, abra o menu de atalho para o projeto MyExecRefsLib **Gerenciador de soluções**e, em seguida, escolha **adicionar, referência**.  
+2.  Antes de usar as rotinas de matemática na biblioteca estática, você deve fazer referência a ele. Para fazer isso, abra o menu de atalho para o projeto MyExecRefsLib **Gerenciador de soluções**e, em seguida, escolha **Add** > **referência**.  
   
 3.  O **adicionar referência** caixa de diálogo lista as bibliotecas que você pode fazer referência. O **projetos** guia lista os projetos na solução atual e todas as bibliotecas que eles contêm. Sobre o **projetos** guia, selecione o **MathFuncsLib** caixa de seleção e, em seguida, escolha o **Okey** botão.  
   
@@ -115,15 +115,15 @@ Este passo a passo mostra como criar uma biblioteca estática (arquivo. lib) par
   
      [!code-cpp[NVC_Walkthrough_Create_Static_Lib#120](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_3.cpp)]  
   
-6.  Compile o executável escolhendo **construir**, **compilar solução** na barra de menus.  
+6.  Compile o executável escolhendo **construir** > **compilar solução** na barra de menus.  
   
 ##  <a name="RunApp"></a> Executando o aplicativo  
   
-#### <a name="to-run-the-app"></a>Para executar o aplicativo  
+### <a name="to-run-the-app"></a>Para executar o aplicativo  
   
 1.  Certifique-se de que **MyExecRefsLib** está selecionado como o projeto padrão, abrindo o menu de atalho **MyExecRefsLib** na **Gerenciador de soluções**e, em seguida, escolhendo  **Definir como projeto de inicialização**.  
   
-2.  Para executar o projeto, na barra de menus, escolha **Debug**, **Start Without Debugging**. O resultado deve ser semelhante a este:  
+2.  Para executar o projeto, na barra de menus, escolha **Debug** > **Start Without Debugging**. O resultado deve ser semelhante a este:  
   
     ```Output  
     a + b = 106.4  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a8924776249a3a919a03ca76b4562c39994d4f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2043ca568f36d7fc0eaaffbf940cabb423de5620
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463110"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647834"
 ---
 # <a name="coclass"></a>coclass
 Cria um objeto COM, que pode implementar uma interface COM.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [coclass]  
 ```  
   
@@ -78,7 +78,7 @@ Cria um objeto COM, que pode implementar uma interface COM.
   
 -   Uma [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto) macro é inserida no mapa COM.
   
- O nome da coclass gerado no arquivo. IDL para a classe terá o mesmo nome que a classe.  Por exemplo e se referindo ao exemplo a seguir, para acessar a ID de classe para uma coclass CMyClass, em um cliente por meio do arquivo de cabeçalho gerado pelo MIDL, use CLSID_CMyClass.  
+ O nome da coclass gerado no arquivo. IDL para a classe terá o mesmo nome que a classe.  Por exemplo e se referindo ao exemplo a seguir, para acessar a ID de classe para uma coclass `CMyClass`, em um cliente por meio do arquivo de cabeçalho gerado pelo MIDL, use `CLSID_CMyClass`.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra como usar o **coclass** atributo:  
@@ -99,7 +99,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};  
 ```  
   
- O exemplo a seguir mostra como substituir a implementação padrão de uma função que aparece no código injetado pela **coclass** atributo. Ver [/Fx](../build/reference/fx-merge-injected-code.md) para obter mais informações sobre como exibir o código injetado. Quaisquer interfaces que você pode usar para uma classe ou classes base será ser exibida no código injetado.   Além disso, se uma classe está incluída por padrão no código injetado e você especificar explicitamente essa classe como uma base para seu coclass, o provedor de atributo usará o formulário especificado no seu código.  
+ O exemplo a seguir mostra como substituir a implementação padrão de uma função que aparece no código injetado pela **coclass** atributo. Ver [/Fx](../build/reference/fx-merge-injected-code.md) para obter mais informações sobre como exibir o código injetado. Quaisquer interfaces que você pode usar para uma classe ou classes base será ser exibida no código injetado. Além disso, se uma classe está incluída por padrão no código injetado e você especificar explicitamente essa classe como uma base para seu coclass, o provedor de atributo usará o formulário especificado no seu código.  
   
 ```cpp  
 // cpp_attr_ref_coclass2.cpp  

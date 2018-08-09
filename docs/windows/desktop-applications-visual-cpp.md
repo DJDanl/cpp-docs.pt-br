@@ -13,12 +13,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4cd8e8c6e3b9626000a8bef3d86a89f5e122d611
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 22f90be7d89a006ccbfdfde2f4c2580a7b2a13de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571523"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643839"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplicativos da área de trabalho (Visual C++)
 Um *aplicativo de desktop* em C++ é um aplicativo nativo que pode acessar o conjunto completo de APIs do Windows e será executado em uma janela ou no console do sistema. Aplicativos da área de trabalho em C++ podem ser executados no Windows XP por meio do Windows 10 (embora o Windows XP não é mais oficialmente é suportado e há muitas APIs do Windows que foram introduzidos desde então).
@@ -26,11 +26,12 @@ Um *aplicativo de desktop* em C++ é um aplicativo nativo que pode acessar o con
 Um aplicativo da área de trabalho é diferente de um aplicativo de plataforma Universal do Windows (UWP), que pode ser executados em computadores que executam o Windows 10 e também no XBox, Windows Phone, Surface Hub e outros dispositivos. Para obter mais informações sobre a área de trabalho vs. Aplicativos UWP, consulte [escolha sua tecnologia](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
 
 
-**Ponte de desktop** no Windows 10, você pode empacotar seu aplicativo da área de trabalho existente ou um objeto COM como um aplicativo UWP e adicione UWP recursos como toque ou chamar APIs do moderno conjunto de API do Windows. Você também pode adicionar um aplicativo UWP a uma solução de área de trabalho no Visual Studio e o pacote-los juntos em um único pacote e usam as APIs do Windows para se comunicar entre eles.  
+### <a name="desktop-bridge"></a>Ponte de desktop
+No Windows 10, você pode empacotar seu aplicativo da área de trabalho existente ou um objeto COM como um aplicativo UWP e adicionar recursos UWP, como toque ou chamar as APIs do conjunto de API do Windows moderno. Você também pode adicionar um aplicativo UWP a uma solução de área de trabalho no Visual Studio e o pacote-los juntos em um único pacote e usam as APIs do Windows para se comunicar entre eles.  
    
 No Visual Studio 2017 versão 15.4 e posteriores, você pode criar um projeto de pacote de aplicativo do Windows para simplificar bastante o trabalho de empacotamento de aplicativo da área de trabalho existente. Algumas restrições se aplicam em relação a quais registro chama ou usa as APIs de seu aplicativo da área de trabalho, mas em muitos casos, você pode criar caminhos de código alternativo para obter funcionalidade semelhante durante a execução em um pacote do aplicativo. Para saber mais, veja [Ponte de Desktop](/windows-uwp/porting/desktop-to-uwp-root).  
   
- **Terminologia**  
+### <a name="terminology"></a>Terminologia  
   
 -   Um *Win32* aplicativo é um aplicativo da área de trabalho em C++ que pode fazer usar nativas de Windows [APIs de C do Windows e/ou APIs COM](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT e APIs da biblioteca padrão e 3ª bibliotecas de terceiros. Um aplicativo Win32 que é executado em uma janela exige que o desenvolvedor trabalhar explicitamente com mensagens do Windows dentro de uma função de procedimento do Windows. Apesar do nome, um aplicativo Win32 pode ser compilado como um (x86) 32 bits ou 64 bits (x64) binário. No IDE do Visual Studio, os termos x86 e o Win32 são sinônimos.  
   

@@ -16,32 +16,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 237eea6a468e983072ed300ff2a13f1cbc6ba363
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5a0b58e5adf95de44bbecb51cf56dbbfeaccacad
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861786"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648919"
 ---
 # <a name="changing-the-properties-of-a-resource"></a>Alterando as propriedades de um recurso
 ### <a name="to-edit-the-properties-of-a-resource"></a>Para editar as propriedades de um recurso  
   
-1.  Em [exibição recursos](../windows/resource-view-window.md), o recurso que você deseja editar e escolha de atalho **propriedades** no menu de atalho.  
+1.  No [exibição de recurso](../windows/resource-view-window.md), clique com botão direito do recurso que deseja editar e escolha **propriedades** no menu de atalho.  
   
-     **Observação** se o projeto já não contiver um arquivo. RC, consulte [criar um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
+     > [!NOTE] 
+     > Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  No [janela propriedades](/visualstudio/ide/reference/properties-window), alterar as propriedades do recurso.  
+2.  No [janela de propriedades](/visualstudio/ide/reference/properties-window), alterar as propriedades do recurso.  
   
-### <a name="to-undo-a-change-youve-made-to-the-properties-of-a-resource"></a>Para desfazer alterações feitas nas propriedades de um recurso  
+### <a name="to-undo-a-change-youve-made-to-the-properties-of-a-resource"></a>Para desfazer uma alteração que você fez para as propriedades de um recurso  
   
-1.  Verifique se que o recurso tem foco no modo de exibição de recursos.  
+1.  Verifique se o recurso tem o foco no **exibição de recurso**.  
   
-2.  Escolha **desfazer** do **editar** menu.  
+2.  Escolher **desfazer** da **editar** menu.  
   
-
-  
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos  
  Nenhum  
   
 ## <a name="see-also"></a>Consulte também  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c29316305983ac09714292bce20e992970cca4f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3bfd80e8c6f970fb55b681f193b4ce7c2c0df5a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890727"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648601"
 ---
 # <a name="weakreferenceweakreference-destructor"></a>Destruidor WeakReference::~WeakReference
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,10 +36,10 @@ virtual ~WeakReference();
 ## <a name="return-value"></a>Valor de retorno  
   
 ## <a name="remarks"></a>Comentários  
- Deinitializes a instância atual da classe WeakReference.  
+ Realiza o desligamento da instância atual do **WeakReference** classe.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

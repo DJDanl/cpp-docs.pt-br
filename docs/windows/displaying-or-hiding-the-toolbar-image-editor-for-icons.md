@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d00610d4366f76e07b6f62b5a65416bf37182e2a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04745cf4344175b37a9e91968861bfbf087fce33
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872982"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649758"
 ---
 # <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>Exibindo ou ocultando a barra de ferramentas (editor de imagens para ícones)
-Como muitas das ferramentas de desenho estão disponíveis no [teclado](../windows/accelerator-keys-image-editor-for-icons.md), às vezes é útil ocultar a barra de ferramentas do Editor de imagem.  
+Uma vez que muitas das ferramentas de desenho estão disponíveis na [teclado](../windows/accelerator-keys-image-editor-for-icons.md), às vezes é útil ocultar o **Editor de imagens** barra de ferramentas.  
   
-### <a name="to-display-or-hide-the-image-editor-toolbar"></a>Para exibir ou ocultar a barra de ferramentas do Editor de imagem  
+### <a name="to-display-or-hide-the-image-editor-toolbar"></a>Para exibir ou ocultar a barra de ferramentas do Editor de imagens  
   
-1.  No **exibição** menu clique **barras de ferramentas** , em seguida, escolha **Editor de imagem**.  
+1.  Sobre o **modo de exibição** menu, clique em **barras de ferramentas** , em seguida, escolha **Editor de imagens**.  
   
     > [!NOTE]
-    >  Elementos nessa barra de ferramentas serão exibida não está disponíveis quando um arquivo de imagem do projeto atual ou a solução não está aberta no Editor de imagem. Consulte [criando um ícone ou outra imagem](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), para obter informações sobre como adicionar arquivos de imagem para seus projetos.  
+    >  Elementos nessa barra de ferramentas serão exibida não está disponíveis quando um arquivo de imagem do projeto atual ou a solução não está aberto na **Editor de imagens**. Ver [criando um ícone ou outra imagem](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), para obter informações sobre como adicionar arquivos de imagem aos seus projetos.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisitos  
-  
+## <a name="requirements"></a>Requisitos  
  Nenhum  
   
 ## <a name="see-also"></a>Consulte também  
- [Janela de cores](../windows/colors-window-image-editor-for-icons.md)   
+ [Janela cores](../windows/colors-window-image-editor-for-icons.md)   
  [Barra de ferramentas](../windows/toolbar-image-editor-for-icons.md)   
  [Editor de imagens para ícones](../windows/image-editor-for-icons.md)
-

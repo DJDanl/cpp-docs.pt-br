@@ -1,5 +1,5 @@
 ---
-title: 'Método Synclockwithstatust: | Microsoft Docs'
+title: 'Método synclockwithstatust:: Islocked | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a564c4223b09d9295ff0ac3159e165944c4d885d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ebe723811efe62efa85a1cc2fa35736689306c7e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892547"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645627"
 ---
 # <a name="synclockwithstatustislocked-method"></a>Método SyncLockWithStatusT::IsLocked
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,13 +34,13 @@ bool IsLocked() const;
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Indica se o objeto SyncLockWithStatusT atual possui um recurso. ou seja, é o objeto SyncLockWithStatusT *bloqueado*.  
+ Indica se o atual **SyncLockWithStatusT** objeto possui um recurso, ou seja, o **SyncLockWithStatusT** objeto é *bloqueado*.  
   
 ## <a name="return-value"></a>Valor de retorno  
- **True** se o objeto SyncLockWithStatusT estiver bloqueada; caso contrário, **false**.  
+ **Verdadeiro** se o **SyncLockWithStatusT** objeto estiver bloqueada; caso contrário, **false**.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::Details  
   

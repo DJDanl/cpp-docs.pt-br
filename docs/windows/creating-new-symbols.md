@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2dd895f130161174d457b974e822b02b5ed7e8e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 76dec37ec908b40ed5cc6f32dd3d0c6bd3c149e4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872290"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642618"
 ---
 # <a name="creating-new-symbols"></a>Criando novos símbolos
-Quando você inicia um novo projeto, talvez seja conveniente para mapear os nomes de símbolo que é necessário antes de criar os recursos ao qual serão atribuídos.  
+Quando você inicia um novo projeto, talvez seja conveniente para mapear os nomes de símbolo que você precisa antes de criar os recursos ao qual serão atribuídos.  
   
 ### <a name="to-create-a-new-symbol-using-the-resource-symbols-dialog-box"></a>Para criar um novo símbolo usando a caixa de diálogo de símbolos de recurso  
   
-1.  No [caixa de diálogo símbolos de recurso](../windows/resource-symbols-dialog-box.md), escolha **novo**.  
+1.  No [caixa de diálogo símbolos de recurso](../windows/resource-symbols-dialog-box.md), escolha **New**.  
   
 2.  No **nome** , digite um nome de símbolo.  
   
@@ -40,14 +40,13 @@ Quando você inicia um novo projeto, talvez seja conveniente para mapear os nome
   
      No **valor** , digite um novo valor.  
   
-4.  Clique em **Okey** para adicionar o novo símbolo à lista de símbolo.  
+4.  Clique em **Okey** para adicionar o novo símbolo à lista de símbolos.  
   
- Se você digitar um nome de símbolo que já existe, uma caixa de mensagem é exibida informando que um símbolo com este nome já está definido. Você não pode definir dois ou mais símbolos com o mesmo nome, mas você pode definir símbolos diferentes com o mesmo valor numérico. Para obter mais informações, consulte [restrições de nome de símbolo](../windows/symbol-name-restrictions.md) e [restrições de valor do símbolo](../windows/symbol-value-restrictions.md).  
+ Se você digitar um nome de símbolo que já existe, uma caixa de mensagem será exibida, informando que um símbolo com este nome já está definido. Não é possível definir duas ou mais símbolos com o mesmo nome, mas você pode definir símbolos diferentes com o mesmo valor numérico. Para obter mais informações, consulte [restrições de nome de símbolo](../windows/symbol-name-restrictions.md) e [restrições de valor de símbolo](../windows/symbol-value-restrictions.md).  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acesso a recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos para propriedades, e [passo a passo: usando recursos para localização com o ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos a propriedades, e [passo a passo: usando recursos para localização com o ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- Requisitos  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0c4d5fc3101e7eb0e09f33c95cb0f73dd0d2b3d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1e1ecfb118fb391cf392b411a4664513972ed42
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890406"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642519"
 ---
 # <a name="transmitas"></a>transmit_as
 Instrui o compilador para associar um tipo apresentado que manipulam a aplicativos cliente e servidor, com um tipo transmitido.  
@@ -30,23 +30,22 @@ Instrui o compilador para associar um tipo apresentado que manipulam a aplicativ
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ transmit_as(  
+[ transmit_as(  
    type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `type`  
- Especifica o tipo de dados que é transmitido entre o cliente e servidor.  
+### <a name="parameters"></a>Parâmetros  
+ *type*  
+ Especifica o tipo de dados que é transmitido entre cliente e servidor.  
   
 ## <a name="remarks"></a>Comentários  
  O **transmit_as** atributo C++ tem a mesma funcionalidade que o [transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir mostra um uso de **transmit_as** atributo:  
+ O código a seguir mostra um uso do **transmit_as** atributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_transmit_as.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -76,13 +75,13 @@ struct _TREE_NODE_TYPE * right;
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|`typedef`|  
+|**Aplica-se a**|**typedef**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

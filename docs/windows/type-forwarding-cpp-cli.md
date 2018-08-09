@@ -1,5 +1,5 @@
 ---
-title: Encaminhamento de tipos (C + + CLI) | Microsoft Docs
+title: Encaminhamento de tipo (C + + / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9caa2e18a1ec851967857eb068797e092835f587
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 627b0a881795a963e3739accc351ee684b7b8232
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891082"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644928"
 ---
 # <a name="type-forwarding-ccli"></a>Encaminhamento de tipos (C++/CLI)
-*Encaminhamento de tipos* permite que você mova um tipo de um assembly (um assembly) em outro assembly (assembly B), de modo que não é necessário recompilar os clientes que utilizam o assembly A.  
+*Encaminhamento de tipo* permite que você mova um tipo de um assembly (assembly A) em outro assembly (assembly B), de modo que não é necessário recompilar os clientes que consomem o assembly A.  
   
 ## <a name="all-platforms"></a>Todas as Plataformas  
  Não há suporte para esse recurso em todos os tempos de execução.  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
- Não há suporte para esse recurso no Windows Runtime.  
+ Não há suporte para esse recurso no tempo de execução do Windows.  
   
 ### <a name="requirements"></a>Requisitos  
- Opção do compilador: **/ZW**  
+ Opção do compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  O exemplo de código a seguir demonstra como usar o encaminhamento de tipo.  
@@ -45,24 +45,24 @@ ms.locfileid: "33891082"
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `new`  
+ *new*  
  O assembly no qual você está movendo a definição de tipo.  
   
- `type`  
+ *type*  
  O tipo cuja definição que você está movendo em outro assembly.  
   
 ### <a name="remarks"></a>Comentários  
- Depois que um componente (assembly) fornecido e está sendo usado por aplicativos cliente, você pode usar encaminhamento para mover um tipo de componente (assembly) em outro assembly, enviar o componente atualizado (e todos os assemblies adicionais necessárias) de tipo e o cliente aplicativos ainda funcionarão sem ser recompilada.  
+ Depois que um componente (assembly) é fornecido e estiver sendo usado por aplicativos cliente, você pode usar tipo de encaminhamento para mover um tipo de componente (assembly) em outro assembly, envie o componente de atualização (e todos os assemblies adicionais necessários) e o cliente aplicativos ainda funcionará sem que está sendo recompilado.  
   
- Encaminhamento de tipo só funciona para componentes referenciados pelos aplicativos existentes. Quando você recria um aplicativo, deve haver as referências a assembly apropriadas para quaisquer tipos usados no aplicativo.  
+ Encaminhamento de tipo só funciona para componentes referenciados pelos aplicativos existentes. Quando você recria um aplicativo, deve haver as referências de assembly apropriados para alguns tipos usados no aplicativo.  
   
- Quando o encaminhamento de um tipo (A) de um assembly, você deve adicionar o `TypeForwardedTo` atributo de tipo, bem como uma referência de assembly. O assembly referenciado deve conter um dos seguintes:  
+ Ao encaminhar um tipo (tipo A) de um assembly, você deve adicionar o `TypeForwardedTo` atributo para esse tipo, bem como uma referência de assembly. O assembly que você faz referência deve conter um dos seguintes:  
   
--   A definição para a tipo.  
+-   A definição de tipo a.  
   
 -   Um `TypeForwardedTo` atributo para um tipo, bem como uma referência de assembly.  
   
- Exemplos de tipos que possam ser encaminhados incluem:  
+ Exemplos de tipos que podem ser encaminhados:  
   
 -   classes de referência  
   
@@ -78,17 +78,17 @@ ms.locfileid: "33891082"
   
 -   Tipos nativos  
   
--   Tipos aninhados (se você quiser encaminhar um tipo aninhado, encaminhe o tipo de delimitador)  
+-   Tipos aninhados (se você quiser encaminhar um tipo aninhado, você deve encaminhar o tipo delimitador)  
   
- Você pode encaminhar um tipo para um assembly criado em qualquer linguagem direcionar o common language runtime.  
+ Você pode encaminhar um tipo para um assembly criado em qualquer linguagem para o common language runtime.  
   
- Portanto, se um arquivo de código fonte que é usado para compilar o assembly. dll contém uma definição de tipo (`ref class MyClass`), e você deseja mover esse tipo de definição para o assembly b. dll, você deve:  
+ Portanto, se um arquivo de código fonte que é usado para compilar o assembly. dll contém uma definição de tipo (`ref class MyClass`), e você desejar mover esse tipo de definição para o assembly b. dll, seria:  
   
 1.  Mover o `MyClass` definição para um arquivo de código de origem usado para criar o b. dll de tipo.  
   
-2.  Compile o assembly b. dll  
+2.  Compilar o assembly b. dll  
   
-3.  Excluir o `MyClass` tipo de definição do código-fonte usada para criar o. dll e substituí-lo com o seguinte:  
+3.  Excluir o `MyClass` tipo de definição do código-fonte usado para compilar a dll e substituí-lo com o seguinte:  
   
     ```  
     #using "B.dll"  
@@ -97,7 +97,7 @@ ms.locfileid: "33891082"
   
 4.  Compile o assembly. dll.  
   
-5.  Use o. dll sem recompilar os aplicativos cliente.  
+5.  Use o DLL sem recompilar os aplicativos cliente.  
   
 ### <a name="requirements"></a>Requisitos  
- Opção de compilador: **/clr**
+ Opção do compilador: `/clr`

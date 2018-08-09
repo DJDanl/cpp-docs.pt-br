@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c825e7e67844fc094e4cf9ce775152d334664d5a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2a2ed2393f25dac416cf3b6dfd1b178190d368a6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465240"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647096"
 ---
 # <a name="activationfactoryqueryinterface-method"></a>Método ActivationFactory::QueryInterface
 Recupera um ponteiro para a interface especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 STDMETHOD(  
    QueryInterface  
 )(REFIID riid, _Deref_out_ void **ppvObject);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *riid*  
  Uma ID de interface.  
   

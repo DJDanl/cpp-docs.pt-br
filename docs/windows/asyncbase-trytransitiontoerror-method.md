@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc677304ae7ab61e6726366869e85f731cd92484
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 61b56472e490d95e22c1013595c5c088d2b58dcd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463201"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643024"
 ---
 # <a name="asyncbasetrytransitiontoerror-method"></a>Método AsyncBase::TryTransitionToError
 Indica se o código de erro especificado pode modificar o estado de erro interno.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 bool TryTransitionToError(  
    const HRESULT error  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *error*  
  Um erro HRESULT.  
   

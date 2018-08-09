@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e01ceee3b889a1755fe272366ab66b32a79ae6f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 276024be7b3d75edf308e43a08e4d2cbe9901c1e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462687"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652049"
 ---
 # <a name="classfactoryaddref-method"></a>Método ClassFactory::AddRef
 Incrementa a contagem de referência para o atual **ClassFactory** objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 STDMETHOD_(  
    ULONG,  
    AddRef  

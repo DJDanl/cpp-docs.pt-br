@@ -1,5 +1,5 @@
 ---
-title: Acessando informações de versão a partir do seu programa | Microsoft Docs
+title: Acessando informações de versão do programa | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,25 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8913e0dc33da1de2f240305ff19f5250e38b180
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 79520523ebeda2cb0260d1bc79d0b6b35d33aa23
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856265"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646953"
 ---
 # <a name="accessing-version-information-from-within-your-program"></a>Acessando informações de versão a partir do programa
-### <a name="to-access-version-information-from-within-your-program"></a>Para acessar informações de versão a partir do seu programa  
+### <a name="to-access-version-information-from-within-your-program"></a>Para acessar informações de versão do seu programa  
   
-1.  Se você quiser acessar as informações de versão no seu programa, use o [GetFileVersionInfo](http://msdn.microsoft.com/library/windows/desktop/ms647003.aspx) função e o [VerQueryValue](http://msdn.microsoft.com/library/windows/desktop/ms647464.aspx) função.  
+Se você quiser acessar as informações de versão do seu programa, use o [GetFileVersionInfo](http://msdn.microsoft.com/library/windows/desktop/ms647003.aspx) função e o [VerQueryValue](http://msdn.microsoft.com/library/windows/desktop/ms647464.aspx) função.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos
  Win32  
   
 ## <a name="see-also"></a>Consulte também  
  [Editor de informações de versão](../windows/version-information-editor.md)   
  [Informações de versão (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
-

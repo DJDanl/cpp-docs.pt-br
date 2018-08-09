@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e261227c5c34d203cdeda20a8d1409319f63be97
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53225576941afff3a94c3dd276feb980e2bd6562
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891903"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644850"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>Selecionando vários menus ou comandos de menu
-Você pode selecionar vários nomes de menus ou comandos de menu para executar operações em massa como excluir ou alterar as propriedades.  
+Você pode selecionar vários nomes de menus ou comandos de menu para executar operações em massa, como excluindo ou alterando as propriedades.  
   
 ### <a name="to-select-multiple-menu-commands"></a>Para selecionar vários comandos de menu  
   
-1.  Enquanto mantém pressionada a tecla CTRL pressionada, clique em menus ou comandos do submenu desejado.  
+1.  Enquanto mantém pressionada a **Ctrl** da chave, clique em menus ou comandos do submenu que você deseja.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.*  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*.  
   
- **Requisitos**  
+## <a name="requirements"></a>Requisitos  
   
  Win32  
   

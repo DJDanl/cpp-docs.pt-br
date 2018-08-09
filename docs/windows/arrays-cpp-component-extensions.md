@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21a1dd4f26db41f7e32f3f76fd3b4c82e513397a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 58ba6d598223e63f5b28adcaedad653ffc6f386a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461683"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645562"
 ---
 # <a name="arrays-c-component-extensions"></a>Matrizes (Extensões de Componentes C++)
 O `Platform::Array<T>` tipo no C + + c++ /CLI CX, ou o **matriz** palavra-chave no C + + c++ CLI, declara uma matriz de um tipo especificado e o valor inicial.  
@@ -52,7 +52,7 @@ O `Platform::Array<T>` tipo no C + + c++ /CLI CX, ou o **matriz** palavra-chave 
   
  O primeiro exemplo da sintaxe usa o **ref novo** agregação palavra-chave para alocar uma matriz. O segundo exemplo declara uma matriz local.  
   
-```  
+```cpp  
 [qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
     ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]  
   
@@ -83,7 +83,7 @@ O `Platform::Array<T>` tipo no C + + c++ /CLI CX, ou o **matriz** palavra-chave 
  Você pode detectar no tempo de compilação se um tipo é uma matriz de contagem de referência com `__is_ref_array(type)`. Para obter mais informações, consulte [suporte do compilador para características de tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ### <a name="requirements"></a>Requisitos  
- Opção do compilador: **/ZW**  
+ Opção do compilador: `/ZW`  
   
 ### <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma matriz unidimensional que tem 100 elementos.  
@@ -106,7 +106,7 @@ int main() {
   
  O primeiro exemplo da sintaxe usa o **gcnew** palavra-chave para alocar uma matriz. O segundo exemplo declara uma matriz local.  
   
-```  
+```cpp  
 [qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
     gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]  
   
@@ -139,7 +139,7 @@ int main() {
   
 ### <a name="remarks"></a>Comentários  
   
- `array` está no [plataforma, padrão e cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) namespace.  
+ **matriz** está no [plataforma, padrão e cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) namespace.  
   
  Como o C++ padrão, os índices de uma matriz são baseados em zero e uma matriz é Subscrita usando colchetes ([]). Ao contrário do C++ padrão, os índices de uma matriz multidimensional são especificados em uma lista de índices para cada dimensão, em vez de um conjunto de operadores de colchete ([]) para cada dimensão. Por exemplo, *identificador*[*index1*, *index2*], em vez de *identificador*[*index1*] [ *index2*].  
   
@@ -152,7 +152,7 @@ int main() {
  Em tempo de compilação, você pode detectar se um tipo é uma matriz de runtime (CLR) de linguagem comum com `__is_ref_array(type)`. Para obter mais informações, consulte [suporte do compilador para características de tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ### <a name="requirements"></a>Requisitos  
- Opção de compilador: **/clr**  
+ Opção do compilador: `/clr`  
   
 ### <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma matriz unidimensional que tem 100 elementos e uma matriz tridimensional que tem 6 elementos na terceira, 5 elementos no segundo e 3 elementos na primeira dimensão.  

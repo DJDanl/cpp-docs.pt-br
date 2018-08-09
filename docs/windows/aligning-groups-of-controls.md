@@ -15,44 +15,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 743176ed52004a37718ae69db3693dde07ca7391
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fac1c04f51b2e05213223ca3e20e4a4fcc3e54e3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858335"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651802"
 ---
 # <a name="aligning-groups-of-controls"></a>Alinhando grupos de controles
-O procedimento a seguir mostra como alinhar grupos de controles.  
+O procedimento a seguir mostra como alinhar os grupos de controles.  
   
-### <a name="to-align-groups-of-controls"></a>Para alinhar grupos de controles  
+### <a name="to-align-groups-of-controls"></a>Alinhar grupos de controles  
   
-1.  [Selecione os controles](../windows/selecting-multiple-controls.md) você deseja alinhar. Selecione o controle que você deseja o controle dominante pela primeira vez ou defini-lo para ser o controle dominante antes de executar o alinhamento ou comando de dimensionamento.  
+1.  [Selecione os controles](../windows/selecting-multiple-controls.md) você deseja alinhar. Certifique-se de selecionar o controle que você deseja ser o controle dominante pela primeira vez ou defini-lo para ser o controle dominante antes de executar o alinhamento ou comando de dimensionamento.  
   
      A posição final do grupo de controles depende a posição do controle dominante. Para obter mais informações sobre como selecionar o controle dominante, consulte [especificando o controle dominante](../windows/specifying-the-dominant-control.md).  
   
-2.  Do **formato** menu, escolha **alinhar**e, em seguida, escolha uma das alinhamentos a seguir:  
+2.  Dos **formato** menu, escolha **alinhar**e, em seguida, escolha uma das alinhamentos a seguir:  
   
-    -   **À esquerda**: alinha os controles selecionados ao longo de lado esquerdo.  
+    -   `Lefts`: alinha os controles selecionados ao longo dos lados esquerdos.  
   
-    -   **Centros de**: alinha os controles selecionados horizontalmente em pontos centrais.  
+    -   `Centers`: alinha os controles selecionados horizontalmente ao longo de seus pontos centrais.  
   
-    -   **Direitos**: alinha os controles selecionados ao longo de lado direito.  
+    -   `Rights`: alinha os controles selecionados ao longo dos lados direito.  
   
-    -   **Partes superiores**: alinha os controles selecionados pelas bordas superiores.  
+    -   `Tops`: alinha os controles selecionados ao longo de suas bordas na parte superior.  
   
-    -   **Meio**: alinha os controles selecionados verticalmente em seus pontos de intermediários.  
+    -   `Middles`: alinha os controles selecionados verticalmente ao longo de seus pontos intermediários.  
   
-    -   **Inferiores**: alinha os controles selecionados pelas bordas inferior.  
+    -   `Bottoms`: alinha os controles selecionados ao longo de suas bordas inferior.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisitos  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  
- [Organização dos controles em caixas de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Organização de controles em caixas de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
-

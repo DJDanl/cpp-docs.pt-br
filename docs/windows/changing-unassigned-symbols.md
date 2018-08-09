@@ -19,33 +19,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7510d8bb9f356620e77d862edab71d852fdec65b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ee2b3a437f2b36d34fe9232356b171757643509
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855377"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644980"
 ---
 # <a name="changing-unassigned-symbols"></a>Alterando símbolos não atribuídos
-Enquanto estiver conectado a [caixa de diálogo símbolos de recurso](../windows/resource-symbols-dialog-box.md), você pode editar ou excluir os símbolos existentes que já não estão atribuídos a um recurso ou objeto.  
+Enquanto estiver na [caixa de diálogo símbolos de recurso](../windows/resource-symbols-dialog-box.md), você pode editar ou excluir símbolos existentes que já não estão atribuídos a um recurso ou objeto.  
   
 ### <a name="to-change-an-unassigned-symbol"></a>Para alterar um símbolo não atribuído  
   
 1.  No **nome** caixa, selecione o símbolo não atribuído e clique em **alteração**.  
   
-2.  Editar o nome ou o valor nas caixas fornecidas no símbolo de **alterar símbolo** caixa de diálogo.  
+2.  Editar o nome do símbolo ou um valor nas caixas fornecidas na **alterar símbolo** caixa de diálogo.  
   
     > [!NOTE]
-    >  Para alterar um símbolo que *é* atribuído a um objeto ou um recurso, você deve usar o editor de recursos ou a janela Propriedades. Para obter mais informações, consulte [alterando um símbolo ou um nome de símbolo](../windows/changing-a-symbol-or-symbol-name-id.md).  
+    >  Para alterar um símbolo que *está* atribuído a um recurso ou objeto, você deve usar o editor de recursos ou **propriedades** janela. Para obter mais informações, consulte [alterando um símbolo ou um nome de símbolo](../windows/changing-a-symbol-or-symbol-name-id.md).  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.*  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*.  
   
- Requisitos  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibindo símbolos de recurso](../windows/viewing-resource-symbols.md)   
  [Restrições de nome de símbolo](../windows/symbol-name-restrictions.md)   
- [Restrições de valor do símbolo](../windows/symbol-value-restrictions.md)   
+ [Restrições de valor de símbolo](../windows/symbol-value-restrictions.md)   
  [IDs de símbolos predefinidos](../windows/predefined-symbol-ids.md)

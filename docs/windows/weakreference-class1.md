@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a44b992138371ff33a9059990a5ec3e93689c679
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 71de341be0cb482a49cbf35ddd34e414be8afde4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891640"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645536"
 ---
 # <a name="weakreference-class1"></a>WeakReference Class1
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,13 +34,13 @@ class WeakReference;
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Representa um *referência fraca* que pode ser usado com o tempo de execução do Windows ou o clássico com. Uma referência fraca representa um objeto que pode ou não pode ser acessado.  
+ Representa uma *referência fraca* que pode ser usado com o tempo de execução do Windows ou o com clássico. Uma referência fraca representa um objeto que pode ou não ser acessível.  
   
- Um `WeakReference` objeto mantém um *referência forte*, que é um ponteiro para um objeto e um *contagem de referência forte*, que é o número de cópias da referência de alta segurança que foram distribuídas por o método resolve. Enquanto a contagem de referência forte é diferente de zero, a referência forte é válida e o objeto está acessível. Quando a contagem de referência forte se torna zero, a referência forte é válida e o objeto está inacessível.  
+ Um **WeakReference** objeto mantém uma *referência forte*, que é um ponteiro para um objeto e uma *contagem de referência forte*, que é o número de cópias de forte referência que foram distribuídas pelo `Resolve()` método. Embora a contagem de referência forte é diferente de zero, a referência forte é válida e o objeto está acessível. Quando a contagem de referência forte se torna zero, a referência forte é inválida e o objeto está inacessível.  
   
- Um objeto WeakReference normalmente é usado para representar um objeto cuja existência é controlada por um aplicativo ou thread externo. Por exemplo, criar um objeto WeakReference de uma referência a um objeto de arquivo. Enquanto o arquivo estiver aberto, a referência forte é válida. Mas, se o arquivo for fechado, a referência forte torna-se inválido.  
+ Um **WeakReference** objeto normalmente é usado para representar um objeto cuja existência é controlada por um aplicativo ou thread externo. Por exemplo, construir uma **WeakReference** objeto a partir de uma referência a um objeto de arquivo. Enquanto o arquivo estiver aberto, a referência forte é válida. Mas, se o arquivo é fechado, a referência forte se torna inválida.  
   
- Os métodos de WeakReference são thread-safe.  
+ O **WeakReference** métodos são thread-safe.  
   
 ## <a name="members"></a>Membros  
   
@@ -48,23 +48,23 @@ class WeakReference;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor WeakReference::WeakReference](../windows/weakreference-weakreference-constructor.md)|Inicializa uma nova instância da classe WeakReference.|  
-|[Destruidor WeakReference::~WeakReference](../windows/weakreference-tilde-weakreference-destructor.md)|Deinitializes (destrói) a instância atual da classe WeakReference.|  
+|[Construtor WeakReference::WeakReference](../windows/weakreference-weakreference-constructor.md)|Inicializa uma nova instância dos **WeakReference** classe.|  
+|[Destruidor WeakReference::~WeakReference](../windows/weakreference-tilde-weakreference-destructor.md)|Realiza o desligamento (destrói) a instância atual do **WeakReference** classe.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método WeakReference::DecrementStrongReference](../windows/weakreference-decrementstrongreference-method.md)|Diminui a forte contagem de referência do objeto WeakReference atual.|  
-|[Método WeakReference::IncrementStrongReference](../windows/weakreference-incrementstrongreference-method.md)|Incrementa a contagem de referência forte do objeto WeakReference atual.|  
-|[Método WeakReference::Resolve](../windows/weakreference-resolve-method.md)|Define o ponteiro especificado para o valor de referência forte atual se a contagem de referência forte é diferente de zero.|  
-|[Método WeakReference::SetUnknown](../windows/weakreference-setunknown-method.md)|Define a referência forte do objeto WeakReference atual para o ponteiro de interface especificado.|  
+|[Método WeakReference::DecrementStrongReference](../windows/weakreference-decrementstrongreference-method.md)|Diminui a contagem de referência forte do atual **WeakReference** objeto.|  
+|[Método WeakReference::IncrementStrongReference](../windows/weakreference-incrementstrongreference-method.md)|Incrementa a contagem de referência forte do atual **WeakReference** objeto.|  
+|[Método WeakReference::Resolve](../windows/weakreference-resolve-method.md)|Define o ponteiro especificado para o valor atual de referência forte se a contagem de referência forte for diferente de zero.|  
+|[Método WeakReference::SetUnknown](../windows/weakreference-setunknown-method.md)|Define a referência forte do atual **WeakReference** objeto para o ponteiro de interface especificado.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `WeakReference`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+ **Cabeçalho:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

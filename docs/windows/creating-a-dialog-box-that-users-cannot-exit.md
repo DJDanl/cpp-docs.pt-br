@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc04c9ccfb0fdc74e57142bf746681411bbba495
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b176fbc4e420c08a2262b532cf1310ada56c978a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33884457"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644174"
 ---
 # <a name="creating-a-dialog-box-that-users-cannot-exit"></a>Criando uma caixa de diálogo da qual usuários não possam sair
 Você pode criar uma caixa de diálogo de tempo de execução que um usuário não pode sair. Esse tipo de caixa de diálogo é útil para logons e para bloqueios de documento ou aplicativo.  
   
-### <a name="to-create-a-dialog-box-that-a-user-cannot-exit"></a>Para criar uma caixa de diálogo que um usuário não pode sair  
+### <a name="to-create-a-dialog-box-that-a-user-cannot-exit"></a>Para criar uma caixa de diálogo que um usuário não possam sair  
   
-1.  No **propriedades** painel para a caixa de diálogo, defina o **Menu do sistema** propriedade **false**.  
+1.  No **propriedades** painel para a caixa de diálogo, defina as **Menu do sistema** propriedade a ser **false**.  
   
      Isso desabilita o menu de sistema de caixa de diálogo e **fechar** botão.  
   
-2.  No formulário de caixa de diálogo, exclua o **Cancelar** e **Okey** botões.  
+2.  No formulário de caixa de diálogo, exclua o **cancele** e **Okey** botões.  
   
-     Em tempo de execução, um usuário não pode sair da caixa de diálogo modal que tem as seguintes características.  
+     Em tempo de execução, um usuário não pode sair de uma caixa de diálogo modal que tem as seguintes características.  
   
- Para habilitar o teste desse tipo de caixa de diálogo, a função de caixa de diálogo de teste detecta quando ESC está pressionado. (ESC é também conhecido como a chave virtual VK_ESCAPE.) Independentemente de como a caixa de diálogo é projetada para se comportar em tempo de execução, você pode encerrá-lo no modo de teste pressionando ESC.  
+ Para habilitar o teste desse tipo de caixa de diálogo, a função de caixa de diálogo test detecta quando **Esc** é pressionado. (**Esc** também é conhecido como a chave de virtual VK_ESCAPE.) Não importa como a caixa de diálogo é projetada para se comportar em tempo de execução, você pode encerrá-lo no modo de teste pressionando **Esc**.  
   
 > [!NOTE]
->  Para aplicativos MFC, para criar uma caixa de diálogo que os usuários não possam sair, você deve substituir o comportamento padrão de `OnOK` e `OnCancel` porque, mesmo que você exclua os botões associados, a caixa de diálogo ainda pode ser descartada, pressionando ENTER ou ESC.  
+>  Para aplicativos do MFC para criar uma caixa de diálogo que os usuários não possam sair, você deve substituir o comportamento padrão do `OnOK` e `OnCancel` porque, mesmo se você excluir os botões associados, a caixa de diálogo ainda pode ser descartada, pressionando  **Insira** ou **Esc**.  
   
  Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index).  
   
@@ -51,4 +51,3 @@ Você pode criar uma caixa de diálogo de tempo de execução que um usuário n�
  [Como: criar um recurso](../windows/how-to-create-a-resource.md)   
  [Arquivos de recurso](../windows/resource-files-visual-studio.md)   
  [Editor de caixa de diálogo](../windows/dialog-editor.md)
-

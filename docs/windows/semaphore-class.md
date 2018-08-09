@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1219c2118f9cde18fe1909a2edd02d58a4be2341
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5101aba24cd8a0ed4f44587ffc4ad9e973099b8a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889463"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652630"
 ---
 # <a name="semaphore-class"></a>Classe Semaphore
 Representa um objeto de sincronização que controla um recurso compartilhado que pode dar suporte a um número limitado de usuários.  
@@ -30,7 +30,6 @@ Representa um objeto de sincronização que controla um recurso compartilhado qu
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>  
 ```  
   
@@ -46,7 +45,7 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor Semaphore::Semaphore](../windows/semaphore-semaphore-constructor.md)|Inicializa uma nova instância da classe de semáforo.|  
+|[Construtor Semaphore::Semaphore](../windows/semaphore-semaphore-constructor.md)|Inicializa uma nova instância dos **semáforo** classe.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -58,19 +57,19 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Semaphore::Lock](../windows/semaphore-lock-method.md)|Aguarda até que o objeto atual ou o objeto associado com o identificador especificado, está no estado sinalizado ou o intervalo de tempo limite especificado tiver decorrido.|  
+|[Método Semaphore::Lock](../windows/semaphore-lock-method.md)|Aguarda até que o objeto atual ou o objeto associado com o identificador especificado, estiver no estado sinalizado ou o intervalo de tempo limite especificado tenha decorrido.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Operador Semaphore::operator=](../windows/semaphore-operator-assign-operator.md)|Move o identificador especificado de um objeto de sinal para o objeto atual de semáforo.|  
+|[Operador Semaphore::operator=](../windows/semaphore-operator-assign-operator.md)|Move o identificador especificado de uma **semáforo** objeto atual **semáforo** objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `Semaphore`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   

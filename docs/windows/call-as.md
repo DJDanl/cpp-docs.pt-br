@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 73b51afda48fe0653767a40120cc6c0cdc0e831b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465864"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644941"
 ---
 # <a name="callas"></a>call_as
 Permite que um [local](../windows/local-cpp.md) função a ser mapeada para uma função remota para que quando a função remota é chamada, a função local é invocada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [ call_as(  
    function  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *function*  
  A função local que você deseja ser chamado quando uma função remota é invocada.  
   
@@ -43,7 +43,7 @@ Permite que um [local](../windows/local-cpp.md) função a ser mapeada para uma 
  O **call_as** atributo C++ tem a mesma funcionalidade que o [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir mostra como você pode usar **call_as** para mapear uma função nonremotable (**f1**) para uma função remota (**Remf1**):  
+ O código a seguir mostra como você pode usar **call_as** para mapear uma função nonremotable (`f1`) para uma função remota (`Remf1`):  
   
 ```cpp  
 // cpp_attr_ref_call_as.cpp  

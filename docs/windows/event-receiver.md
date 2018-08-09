@@ -23,26 +23,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b13acb5d637b4a733f2a2b9c66c8ded977c7847
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2b1b285437170c4059d5cd0d66d19188c99badd9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569928"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646780"
 ---
 # <a name="eventreceiver"></a>event_receiver
 Cria um receptor de eventos (coletor).  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 [ event_receiver(  
    type   
    [, layout_dependent=false]   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *type*  
  Uma enumeração de um dos seguintes valores:  
   
@@ -50,13 +50,13 @@ Cria um receptor de eventos (coletor).
   
 -   `com` para o código de COM. Esse valor requer que você inclua os arquivos de cabeçalho a seguir:  
   
-    ```  
+    ```cpp  
     #define _ATL_ATTRIBUTES  
     #include <atlbase.h>  
     #include <atlcom.h>  
     ```  
   
- **layout_dependent**  
+ *layout_dependent*  
  Especificar *layout_dependent* somente se `type` = **com**. *layout_dependent* é um valor booliano:  
   
 -   **True** significa que a assinatura dos delegados no receptor deve corresponder exatamente a aqueles aos quais estão vinculados no evento origem de evento. Os nomes de manipulador de receptor de evento devem corresponder aos nomes especificados na interface de origem do evento relevante. Você deve usar `coclass` quando *layout_dependent* é **true**. É um pouco mais eficiente para especificar **verdadeira**.  
@@ -81,7 +81,7 @@ Cria um receptor de eventos (coletor).
 |-|-|  
 |**Aplica-se a**|**classe**, **struct**|  
 |**Repetível**|Não|  
-|**Atributos obrigatórios**|**coclass** quando *layout_dependent*=**true**|  
+|**Atributos obrigatórios**|`coclass` Quando *layout_dependent*=**true**|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  

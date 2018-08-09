@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e05a1be5d84db52573d3c3235936ecf82dde5894
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6b27f45d3a9b9b308a56e1ac8f945969f8c49e2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892846"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643420"
 ---
 # <a name="synclockt-class"></a>Classe SyncLockT
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,14 +36,14 @@ template <
 class SyncLockT;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `SyncTraits`  
- O tipo que pode apropriar-se de um recurso.  
+### <a name="parameters"></a>Parâmetros  
+ *SyncTraits*  
+ O tipo que pode assumir a propriedade de um recurso.  
   
 ## <a name="remarks"></a>Comentários  
- Representa um tipo que pode levar exclusivo ou compartilhado a propriedade de um recurso.  
+ Representa um tipo que pode levar exclusivo ou a propriedade compartilhada de um recurso.  
   
- A classe SyncLockT é usada, por exemplo, para ajudar a implementar o [SRWLock](../windows/srwlock-class.md) classe.  
+ O **SyncLockT** classe é usada, por exemplo, para ajudar a implementar o [SRWLock](../windows/srwlock-class.md) classe.  
   
 ## <a name="members"></a>Membros  
   
@@ -51,33 +51,33 @@ class SyncLockT;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor SyncLockT::SyncLockT](../windows/synclockt-synclockt-constructor.md)|Inicializa uma nova instância da classe SyncLockT.|  
-|[Destruidor SyncLockT::~SyncLockT](../windows/synclockt-tilde-synclockt-destructor.md)|Deinitializes uma instância da classe SyncLockT.|  
+|[Construtor SyncLockT::SyncLockT](../windows/synclockt-synclockt-constructor.md)|Inicializa uma nova instância dos **SyncLockT** classe.|  
+|[Destruidor SyncLockT::~SyncLockT](../windows/synclockt-tilde-synclockt-destructor.md)|Realiza o desligamento de uma instância das **SyncLockT** classe.|  
   
 ### <a name="protected-constructors"></a>Construtores Protegidos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor SyncLockT::SyncLockT](../windows/synclockt-synclockt-constructor.md)|Inicializa uma nova instância da classe SyncLockT.|  
+|[Construtor SyncLockT::SyncLockT](../windows/synclockt-synclockt-constructor.md)|Inicializa uma nova instância dos **SyncLockT** classe.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método SyncLockT::IsLocked](../windows/synclockt-islocked-method.md)|Indica se o objeto SyncLockT atual possui um recurso. ou seja, é o objeto SyncLockT *bloqueado*.|  
-|[Método SyncLockT::Unlock](../windows/synclockt-unlock-method.md)|Libera o controle do recurso mantido pelo objeto SyncLockT atual, se houver.|  
+|[Método SyncLockT::IsLocked](../windows/synclockt-islocked-method.md)|Indica se o atual **SyncLockT** objeto possui um recurso, ou seja, o **SyncLockT** objeto é *bloqueado*.|  
+|[Método SyncLockT::Unlock](../windows/synclockt-unlock-method.md)|Libera o controle do recurso mantido por atual **SyncLockT** do objeto, se houver.|  
   
 ### <a name="protected-data-members"></a>Membros de dados protegidos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Membro de dados SyncLockT::sync_](../windows/synclockt-sync-data-member.md)|Contém o recurso subjacente representado pela classe SyncLockT.|  
+|[Membro de dados SyncLockT::sync_](../windows/synclockt-sync-data-member.md)|Contém o recurso subjacente representado pela **SyncLockT** classe.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `SyncLockT`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::Details  
   

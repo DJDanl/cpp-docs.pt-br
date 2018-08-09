@@ -17,45 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7f97bb82f3387e82be5bbf120db4fed9aaa092f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c6b5309d62db094bf706fe7d3d1bcec99c3ec9a9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889667"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645445"
 ---
 # <a name="sizeis"></a>size_is
-Especifique o tamanho da memória alocada para ponteiros de tamanhos, tamanho ponteiros para ponteiros de tamanhos e único ou matrizes multidimensionais.  
+Especifique o tamanho da memória alocada para ponteiros de tamanho, tamanho de ponteiros para ponteiros de tamanho e único ou matrizes multidimensionais.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ size_is(  
+[ size_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *Expressão*  
- O tamanho da memória alocada para ponteiros de tamanhos.  
+ O tamanho da memória alocada para ponteiros de tamanho.  
   
 ## <a name="remarks"></a>Comentários  
  O **size_is** atributo C++ tem a mesma funcionalidade que o [size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) atributo MIDL.  
   
 ## <a name="example"></a>Exemplo  
- Consulte o exemplo para [first_is](../windows/first-is.md) para obter um exemplo de como especificar uma seção de uma matriz.  
+ Veja o exemplo de [first_is](../windows/first-is.md) para obter um exemplo de como especificar uma seção de uma matriz.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|Campo em `struct` ou **união**, a interface de parâmetro, o método de interface|  
+|**Aplica-se a**|Campo do **struct** ou **união**, a interface do parâmetro, o método de interface|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
-|**Atributos inválidos**|**max_is**|  
+|**Atributos obrigatórios**|Nenhum|  
+|**Atributos inválidos**|`max_is`|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
   

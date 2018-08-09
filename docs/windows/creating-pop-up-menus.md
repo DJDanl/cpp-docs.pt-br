@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 218ed28a8b44100beead46ab13e04ad07d86c7e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4e58951fe214efda0002f3ea864e67d0ea35423c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871491"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648068"
 ---
 # <a name="creating-pop-up-menus"></a>Criando menus pop-up
-[Menus pop-up](../mfc/menus-mfc.md) comandos de exibição usado com frequência. Eles podem ser sensíveis ao contexto para o local do ponteiro. Usando os menus pop-up em seu aplicativo requer o próprio menu de criação e, em seguida, conectá-lo ao código do aplicativo.  
+[Menus pop-up](../mfc/menus-mfc.md) comandos de exibição usado com frequência. Eles podem ser sensíveis ao contexto para o local do ponteiro. Usando menus pop-up em seu aplicativo requer o próprio menu de criação e, em seguida, conectá-lo ao código do aplicativo.  
   
- Depois de criar o recurso de menu, o código do aplicativo precisa carregar o recurso de menu e usar [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) para fazer com que o menu seja exibido. Depois que o usuário foi descartado do menu pop-up clicando fora, ou clica em um comando, essa função retornará. Se o usuário escolhe um comando, essa mensagem de comando será enviada para a janela cujo identificador foi passado.  
+ Depois de criar o recurso de menu, o código do aplicativo precisa carregar o recurso de menu e usar [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) para fazer com que o menu seja exibido. Depois que o usuário foi descartado no menu pop-up clicando fora dele ou clicou em um comando, essa função retornará. Se o usuário escolhe um comando, essa mensagem de comando será enviada para a janela cujo identificador foi passado.  
   
 ### <a name="to-create-a-pop-up-menu"></a>Para criar um menu pop-up  
   
-1.  [Criar um menu](../windows/creating-a-menu.md) com um título vazio (não fornecer um **legenda**).  
+1.  [Criar um menu](../windows/creating-a-menu.md) com um título vazio (não fornecem uma **legenda**).  
   
-2.  [Adicionar um comando de menu para o novo menu](../windows/adding-commands-to-a-menu.md). Mover para o primeiro comando de menu abaixo do título de menu em branco (a legenda temporária diz tipo aqui). Digite um **legenda** e outras informações.  
+2.  [Adicionar um comando de menu ao menu novo](../windows/adding-commands-to-a-menu.md). Mover para o primeiro comando de menu abaixo do título de menu em branco (a legenda temporária diz `Type Here`). Digite um **legenda** e quaisquer outras informações.  
   
      Repita esse processo para quaisquer outros comandos de menu no menu pop-up.  
   
@@ -45,12 +45,9 @@ ms.locfileid: "33871491"
     > [!TIP]
     >  Para obter mais informações sobre como exibir o menu pop-up, consulte [exibindo um Menu como um Menu pop-up](../windows/viewing-a-menu-as-a-pop-up-menu.md).  
   
-
-  
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  
- [Conectando um Menu pop-up para seu aplicativo](../windows/connecting-a-pop-up-menu-to-your-application.md)   
+ [Conectando um Menu pop-up ao aplicativo](../windows/connecting-a-pop-up-menu-to-your-application.md)   
  [Editor de Menu](../windows/menu-editor.md)

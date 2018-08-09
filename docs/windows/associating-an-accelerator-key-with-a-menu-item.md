@@ -16,17 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f3d55fc13cb8fd989188c5796709c952903ce83d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ad3914fb5cd98b09d3b0bdfa5c4385106312d73
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854805"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651145"
 ---
 # <a name="associating-an-accelerator-key-with-a-menu-item"></a>Associando uma tecla de aceleração a um item de menu
-Muitas vezes, você deseja um item de menu e uma combinação de teclado para emitir o mesmo comando do programa. Você pode fazer isso atribuindo o mesmo identificador de recurso (ID) para o item de menu e uma entrada na tabela de Aceleradores do seu aplicativo. Você então editar a legenda do item de menu para mostrar o nome do acelerador. Para obter mais informações sobre itens de menu e teclas de aceleração, consulte [associar um Item de Menu com uma tecla aceleradora](../windows/associating-a-menu-command-with-an-accelerator-key.md).  
-  
-
+Muitas vezes, você deseja um item de menu e uma combinação de teclado para emitir o mesmo comando do programa. Você pode fazer isso atribuindo o mesmo identificador de recurso (ID) para o item de menu e uma entrada na tabela de Aceleradores do seu aplicativo. Você então editar a legenda do item de menu para mostrar o nome do acelerador. Para obter mais informações sobre itens de menu e teclas de aceleração, consulte [associando um Item de Menu uma tecla aceleradora](../windows/associating-a-menu-command-with-an-accelerator-key.md).  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  

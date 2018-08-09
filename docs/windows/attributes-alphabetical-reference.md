@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bbb461fe4e8cdabf7da9925323d9271a1047440
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cb7c8dc889a37ca52c527a65f68a84d81e9553cc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464883"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648172"
 ---
 # <a name="attributes-alphabetical-reference"></a>Referência alfabética de atributos
 Os seguintes atributos estão disponíveis no Visual C++.  
@@ -118,7 +118,7 @@ Os seguintes atributos estão disponíveis no Visual C++.
 |[satype](../windows/satype.md)|Especifica o tipo de dados a `SAFEARRAY`.|  
 |[size_is](../windows/size-is.md)|Especifica o tamanho da memória alocada para ponteiros de tamanho, tamanho de ponteiros para ponteiros de tamanho e único ou matrizes multidimensionais.|  
 |[source](../windows/source-cpp.md)|Indica que um membro de classe, propriedade ou método é uma origem de eventos.|  
-|[string](../windows/string-cpp.md)|Indica que o unidimensional **char**, **wchar_t**, **bytes**, ou equivalente matriz ou o ponteiro para essa matriz deve ser tratado como uma cadeia de caracteres.|  
+|[string](../windows/string-cpp.md)|Indica que o unidimensional **char**, **wchar_t**, `byte`, ou equivalente matriz ou o ponteiro para essa matriz deve ser tratado como uma cadeia de caracteres.|  
 |[support_error_info](../windows/support-error-info.md)|Dá suporte a relatórios de erros para o objeto de destino.|  
 |[switch_is](../windows/switch-is.md)|Especifica a expressão ou um identificador que atua como o discriminador de união que seleciona o membro de união.|  
 |[switch_type](../windows/switch-type.md)|Identifica o tipo da variável usada como o discriminador de união.|  

@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1de2bedf9a582d0adbb5b99c9e719327f3b8b90a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 32f75c838ea178b1313ab0bf9f005ff2a4c5d75b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465988"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652556"
 ---
 # <a name="comptrasiid-method"></a>Método ComPtr::AsIID
 Retorna um **ComPtr** objeto que representa a interface identificada pela ID da interface especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 WRL_NOTHROW HRESULT AsIID(  
    REFIID riid,  
    _Out_ ComPtr<IUnknown>* p  
 ) const;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *riid*  
  Uma ID de interface.  
   

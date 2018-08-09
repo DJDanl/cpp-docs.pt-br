@@ -21,17 +21,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb7da9e08d44435570180859c1614f7817595833
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40e0a13f9379200ee01e0279f9d069f1d58f3a60
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882570"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649416"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>Guia Editor de Caixa de Diálogo, caixa de ferramentas
-A guia Editor de caixa de diálogo aparece no [janela caixa de ferramentas](/visualstudio/ide/reference/toolbox) quando você estiver trabalhando no editor de caixa de diálogo. Para adicionar controles à sua caixa de diálogo Novo, arraste os controles da caixa de ferramentas para a caixa de diálogo que você está criando (para obter mais informações, consulte [adicionar um controle a uma caixa de diálogo](adding-a-control-to-a-dialog-box.md)). Em seguida, você pode mover os controles ou alterar seu tamanho e forma.  
+O **Editor de caixa de diálogo** guia é exibida na [janela caixa de ferramentas](/visualstudio/ide/reference/toolbox) quando você estiver trabalhando no **caixa de diálogo** editor. Para adicionar controles à sua nova caixa de diálogo, arraste os controles do **caixa de ferramentas** à caixa de diálogo que você está criando (para obter mais informações, consulte [adicionando um controle a uma caixa de diálogo](adding-a-control-to-a-dialog-box.md)). Em seguida, você pode mover os controles ou alterar seu tamanho e forma.  
   
- Os controles padrão disponíveis na caixa de ferramentas são:  
+ Os controles padrão disponíveis na **caixa de ferramentas** são:  
   
 -   [Controle de botão](../mfc/reference/cbutton-class.md)  
   
@@ -55,7 +55,7 @@ A guia Editor de caixa de diálogo aparece no [janela caixa de ferramentas](/vis
   
 -   [Controle de barra de rolagem](../mfc/reference/cscrollbar-class.md)  
   
- O [controles comuns do Windows](../mfc/controls-mfc.md) disponíveis na caixa de ferramentas fornecem maior funcionalidade em seu aplicativo. Entre elas estão:  
+ O [controles comuns do Windows](../mfc/controls-mfc.md) disponível na **caixa de ferramentas** fornecer funcionalidade aumentada em seu aplicativo. Entre elas estão:  
   
 -   [Controle deslizante](../mfc/slider-control-styles.md)  
   
@@ -83,15 +83,15 @@ A guia Editor de caixa de diálogo aparece no [janela caixa de ferramentas](/vis
   
 -   [Controle personalizado](custom-controls-in-the-dialog-editor.md)  
   
- Você pode adicionar controles personalizados à caixa de diálogo selecionando o **controle personalizado** ícone na caixa de ferramentas e arrastando-a para a caixa de diálogo. Para adicionar um controle Syslink, adicionar um controle personalizado e, em seguida, alterar o controle **classe** propriedade **Syslink**. Isso fará com que as propriedades atualizar e mostrar as propriedades de controle Syslink. Para obter informações sobre a classe de invólucro MFC, consulte [CLinkCtrl](../mfc/reference/clinkctrl-class.md).  
+ Você pode adicionar controles personalizados à caixa de diálogo, selecionando o **controle personalizado** ícone na **caixa de ferramentas** e arrastando-o para sua caixa de diálogo. Para adicionar um **Syslink** controlar, adicionar um controle personalizado e, em seguida, alterar o controle **classe** propriedade a ser **Syslink**. Isso fará com que as propriedades atualizar e mostrar o **Syslink** propriedades do controle. Para obter informações sobre a classe de wrapper do MFC, consulte [CLinkCtrl](../mfc/reference/clinkctrl-class.md).  
   
  Você também pode [adicionar controles ActiveX à sua caixa de diálogo](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
   
- Você também pode personalizar a janela da caixa de ferramentas para facilitar o uso. Para obter mais informações, consulte [Usando a caixa de ferramentas](/visualstudio/ide/using-the-toolbox).  
+ Você também pode personalizar o **caixa de ferramentas** janela para facilitar o uso. Para obter mais informações, consulte [Usando a caixa de ferramentas](/visualstudio/ide/using-the-toolbox).  
 
- Para obter mais informações sobre como usar o controle RichEdit 1.0 com MFC, consulte [usando o controle RichEdit 1.0 com MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
+ Para obter mais informações sobre como usar o **RichEdit 1.0** controle com o MFC, consulte [usando o controle RichEdit 1.0 com MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  
@@ -104,4 +104,3 @@ A guia Editor de caixa de diálogo aparece no [janela caixa de ferramentas](/vis
  [Exemplos de controle de edição avançada](../mfc/rich-edit-control-examples.md)   
  [Adicionando manipuladores de eventos para controles de caixa de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [Controles da caixa de diálogo e tipos de variável](../ide/dialog-box-controls-and-variable-types.md)
-

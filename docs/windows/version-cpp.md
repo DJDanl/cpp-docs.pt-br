@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43da63d75d3541915eba3e561ee08fe1048fa579
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c2d0c72ffbb805b526429562a5f39a09285b70f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890603"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642273"
 ---
 # <a name="version-c"></a>version (C++)
 Identifica uma versão específica entre várias versões de uma classe.  
@@ -31,31 +31,30 @@ Identifica uma versão específica entre várias versões de uma classe.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ version(  
+[ version(  
    "version"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *version*  
- O número de versão da coclass. Se não for especificado, 1.0 será colocado no arquivo. idl.  
+ O número de versão a `coclass`. Se não for especificado, 1.0 será colocado no arquivo. idl.  
   
 ## <a name="remarks"></a>Comentários  
  O **versão** atributo C++ tem a mesma funcionalidade que o [versão](http://msdn.microsoft.com/library/windows/desktop/aa367306) atributo MIDL e é passado para o arquivo. idl gerado.  
   
 ## <a name="example"></a>Exemplo  
- Consulte o [associável](../windows/bindable.md) exemplo para uso do exemplo **versão**.  
+ Consulte a [associável](../windows/bindable.md) exemplo para uso do exemplo **versão**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|**class**, `struct`|  
+|**Aplica-se a**|**classe**, **struct**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|**coclass**|  
+|**Atributos obrigatórios**|**coclass**|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

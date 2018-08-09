@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f16a10ef5119730fb492c4adb890aedcc09d3174
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7765ab5159f7cfd604f67b79a05fde8eaf57fad8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461527"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646699"
 ---
 # <a name="chaininterfaces-structure"></a>Estrutura ChainInterfaces
 Especifica as funções de verificação e de inicialização que podem ser aplicadas a um conjunto de IDs de interface.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 template <  
    typename I0,  
    typename I1,  
@@ -60,7 +60,7 @@ template <
 struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, I4, I5, I6, I7, I8, I9>;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  *I0*  
  (Obrigatório) Interface ID 0.  
   
@@ -106,8 +106,8 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método ChainInterfaces::CanCastTo](../windows/chaininterfaces-cancastto-method.md)|Indica se a ID de interface especificado pode ser convertida em cada um dos especializações definidas pelos parâmetros de modelo ChainInterface.|  
-|[Método ChainInterfaces::CastToUnknown](../windows/chaininterfaces-casttounknown-method.md)|Converte o ponteiro de interface do tipo definido pelos *I0* parâmetro de modelo para um ponteiro para IUnknown.|  
+|[Método ChainInterfaces::CanCastTo](../windows/chaininterfaces-cancastto-method.md)|Indica se a ID de interface especificado pode ser convertida em cada um dos especializações definidas pela **ChainInterface** parâmetros de modelo.|  
+|[Método ChainInterfaces::CastToUnknown](../windows/chaininterfaces-casttounknown-method.md)|Converte o ponteiro de interface do tipo definido pelos *I0* parâmetro de modelo para um ponteiro para `IUnknown`.|  
 |[Método ChainInterfaces::FillArrayWithIid](../windows/chaininterfaces-fillarraywithiid-method.md)|Armazena a ID de interface definida pelo *I0* parâmetro de modelo em um local especificado em uma matriz especificada de IDs de interface.|  
 |[Método ChainInterfaces::Verify](../windows/chaininterfaces-verify-method.md)|Verifica se cada interface definido pelos parâmetros de modelo *I0* por meio *I9* herda `IUnknown` e/ou `IInspectable`e que *I0* herda de *I1* por meio *I9*.|  
   

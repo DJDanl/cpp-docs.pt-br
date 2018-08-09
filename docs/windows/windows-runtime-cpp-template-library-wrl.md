@@ -13,95 +13,95 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40d2ecbcfcd4121727bfe34bf2ffd571722b8a68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 156177d2501ad299e1f40494777c07de0d0747b0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891617"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643586"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteca de Modelos C++ do Windows Runtime  (WRL)
 A WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows) é uma biblioteca de modelos que fornece uma maneira de baixo nível para criar e usar componente do Windows Runtime.
 
 > [!NOTE]
-> WRL agora é substituída pelo C + + WinRT, uma padrão C++ 17 idiomas projeção para APIs do Windows Runtime. C + + WinRT está disponível no SDK do Windows 10 versão 1803 em diante. C + + WinRT é implementada inteiramente em arquivos de cabeçalho e projetado para fornecer acesso de primeira classe para a API do Windows modernos.
+> WRL agora é substituída pelo C + + c++ /CLI WinRT, uma padrão C + + 17 projeção de linguagem para APIs do Windows Runtime. C + + c++ /CLI WinRT está disponível no SDK do Windows 10, versão 1803 em diante. C + + c++ /CLI WinRT é implementado inteiramente em arquivos de cabeçalho e projetado para fornecer acesso de primeira classe à moderna API do Windows.
 
-> Com C + + WinRT, você pode consumir e criar APIs de tempo de execução do Windows usando qualquer compilador de 17 compatível com os padrões C + +. C + + WinRT geralmente é melhor e produz binários menores do que qualquer outra opção de idioma para o tempo de execução do Windows. Continuaremos a dar suporte a C + + CX e WRL, mas altamente recomendável que os novos aplicativos usar C + + WinRT. Para obter mais informações, consulte [C + + WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).   
+> Com C + + c++ /CLI WinRT, você pode consumir e criar APIs do Windows Runtime usando qualquer compilador que 17 compatível com os padrões C + +. C + + c++ /CLI WinRT normalmente tem um desempenho melhor e produz binários menores do que qualquer outra opção de idioma para o tempo de execução do Windows. Continuaremos a dar suporte a C + + c++ /CLI CX e WRL, mas altamente recomendável que usem novos aplicativos C + + c++ /CLI WinRT. Para obter mais informações, consulte [C + + c++ /CLI WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).   
   
 ## <a name="benefits"></a>Benefícios  
- A biblioteca de modelos do Windows em tempo de execução C++ permite implementar mais facilmente e consumir componentes do modelo de objeto de componente (COM). Ele fornece técnicas de manutenção como contagem de referência gerenciar o tempo de vida de objetos e teste `HRESULT` valores para determinar se uma operação teve êxito ou falhou. Para poder usar a biblioteca de modelos do Windows em tempo de execução C++, você deve seguir atentamente essas regras e técnicas.  
+ A biblioteca de modelos de C++ de tempo de execução do Windows permite que você implementar com mais facilidade e consumir componentes do modelo de objeto de componente (COM). Ele fornece técnicas domésticas, como contagem de referência para gerenciar o tempo de vida de objetos e valores HRESULT para determinar se uma operação foi bem-sucedida ou falha de teste. Para poder usar a biblioteca de modelos C++ do Windows Runtime, você deve seguir cuidadosamente essas regras e técnicas.  
   
- C + + CX é uma maneira de alto nível, com base no idioma usar componentes de tempo de execução do Windows. Tanto a biblioteca de modelos C++ do Windows Runtime e C + + CX simplifica a criação de código para o tempo de execução do Windows executar tarefas de manutenção automaticamente em seu nome.  
+ O C + + c++ /CLI CX é uma maneira de alto nível, com base no idioma usar componentes de tempo de execução do Windows. Tanto a biblioteca de modelos de C++ do Windows Runtime e C + + c++ /CLI CX simplificam a escrita de código para o tempo de execução do Windows, automaticamente, executando tarefas de manutenção do sistema em seu nome.  
   
- A biblioteca de modelos C++ do Windows Runtime e C + + CX oferece benefícios diferentes. Aqui estão alguns motivos pelos quais você talvez queira usar a biblioteca de modelos do Windows em tempo de execução C++ em vez de C + + CX:  
+ A biblioteca de modelos de C++ do Windows Runtime e C + + c++ /CX oferece benefícios diferentes. Aqui estão alguns motivos, você talvez queira usar a biblioteca de modelos C++ do Windows Runtime em vez de C + + c++ /CX:  
   
--   Biblioteca de modelos C++ do Windows Runtime adiciona abstração pouco sobre o Windows Runtime aplicativo binário Interface (ABI), fornecendo a capacidade de controlar o código subjacente para melhor criar ou consumir APIs do Windows Runtime.  
+-   Biblioteca de modelos de C++ de tempo de execução do Windows adiciona uma pequena abstração sobre o Windows Runtime aplicativo ABI (Interface binária), dando a você a capacidade de controlar o código subjacente para melhor criar ou consumir APIs do Windows Runtime.  
   
--   C + + CX representa COM `HRESULT` valores como exceções. Se você acabou de herdar uma base de código que usa COM, ou um que não use exceções, talvez descubra que a biblioteca de modelos do Windows em tempo de execução C++ é uma forma mais natural para trabalhar com o tempo de execução do Windows porque você não precisa usar exceções.  
+-   C + + c++ /CX representa valores COM HRESULT como exceções. Se você herdou uma base de código que usa COM, ou um que não usa exceções, você pode achar que a biblioteca de modelos C++ do Windows Runtime é uma maneira mais natural para trabalhar com o tempo de execução do Windows, porque você não precisa usar exceções.  
   
     > [!NOTE]
-    >  Usa a biblioteca de modelos do Windows em tempo de execução C++ `HRESULT` valores e não gerar exceções. Além disso, a biblioteca de modelos do Windows em tempo de execução C++ usa ponteiros inteligentes e o padrão RAII para ajudar a garantir que os objetos são destruídos corretamente quando o código do aplicativo gera uma exceção. Para obter mais informações sobre como ponteiros inteligentes e RAII, consulte [ponteiros inteligentes](../cpp/smart-pointers-modern-cpp.md) e [objetos próprios recursos (RAII)](../cpp/objects-own-resources-raii.md).  
+    >  A biblioteca de modelos C++ do Windows Runtime usa valores HRESULT e não lança exceções. Além disso, a biblioteca de modelos C++ do Windows Runtime usa ponteiros inteligentes e o padrão RAII para ajudar a garantir que os objetos sejam destruídos corretamente quando o código do aplicativo gera uma exceção. Para obter mais informações sobre ponteiros inteligentes e RAII, consulte [ponteiros inteligentes](../cpp/smart-pointers-modern-cpp.md) e [recursos do objetos próprios (RAII)](../cpp/objects-own-resources-raii.md).  
   
--   A finalidade e o design da biblioteca de modelo do Windows Runtime C++ é inspirado por biblioteca de modelo ativa (ATL), a qual é um conjunto de classes C++ com base em modelo que simplifica a programação de objetos COM. Como biblioteca de modelos C++ do Windows Runtime usa C++ padrão para encapsular o tempo de execução do Windows, você pode mais facilmente porta e interagir com vários componentes COM existentes escritos em ATL no tempo de execução do Windows. Se você já souber ATL, você talvez descubra que a programação da biblioteca de modelos C++ do Windows em tempo de execução é mais fácil.  
+-   A finalidade e o design da biblioteca de modelo C++ do Windows Runtime inspirado pela biblioteca ATL (Active Template), que é um conjunto de classes C++ baseadas em modelos que simplifica a programação de objetos COM. Como biblioteca de modelos de C++ do Windows Runtime usa padrão do C++ para encapsular o tempo de execução do Windows, com mais facilidade a porta e interagir com vários componentes COM existentes escritos em ATL para o tempo de execução do Windows. Se você já conhecer o ATL, você pode achar que a programação da biblioteca de modelos de C++ de tempo de execução do Windows é mais fácil.  
   
 ## <a name="getting-started"></a>Guia de Introdução  
- Aqui estão alguns recursos que podem ajudá-lo a obter trabalhar com a biblioteca de modelos do Windows em tempo de execução C++ imediatamente.  
+ Aqui estão alguns recursos que podem ajudá-lo a começar a trabalhar com a biblioteca de modelos C++ do Windows Runtime imediatamente.  
   
- [Biblioteca de tempo de execução do Windows (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
- Neste vídeo do Channel 9, saiba mais sobre como a biblioteca de modelos do Windows em tempo de execução C++ ajuda a que escrever aplicativos do Windows UWP (plataforma Universal) e como criar e consumir componentes de tempo de execução do Windows.  
+ [A biblioteca de tempo de execução do Windows (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
+ Neste vídeo do Channel 9, saiba mais sobre como a biblioteca de modelos de C++ de tempo de execução do Windows ajuda a que escrever aplicativos da plataforma Universal do Windows (UWP) e como criar e consumir componentes de tempo de execução do Windows.  
   
  [Como: ativar e usar um componente de tempo de execução do Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
- Mostra como usar a biblioteca de modelos do Windows em tempo de execução C++ para inicializar o tempo de execução do Windows e ativar e usar um componente de tempo de execução do Windows.  
+ Mostra como usar a biblioteca de modelos C++ do Windows Runtime para inicializar o tempo de execução do Windows e ativar e usar um componente de tempo de execução do Windows.  
   
  [Como: executar operações assíncronas](../windows/how-to-complete-asynchronous-operations-using-wrl.md)  
- Mostra como usar a biblioteca de modelos do Windows em tempo de execução C++ para iniciar operações assíncronas e executar o trabalho quando as operações concluídas.  
+ Mostra como usar a biblioteca de modelos de C++ de tempo de execução do Windows para iniciar operações assíncronas e executar o trabalho quando as operações forem concluídas.  
   
  [Como: manipular eventos](../windows/how-to-handle-events-using-wrl.md)  
- Mostra como usar a biblioteca de modelos do Windows em tempo de execução C++ para assinar e tratar os eventos de um objeto de tempo de execução do Windows.  
+ Mostra como usar a biblioteca de modelos C++ do Windows Runtime para assinar e manipular os eventos de um objeto de tempo de execução do Windows.  
   
  [Passo a passo: criando um aplicativo UWP usando WRL e Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
- Saiba como criar um aplicativo UWP usa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
+ Saiba como criar um aplicativo UWP que usa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  [Como: criar um componente COM clássico](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
- Mostra como usar a biblioteca de modelos do Windows em tempo de execução C++ para criar um componente básico e uma maneira simples de registrar e consumir o componente COM de um aplicativo de área de trabalho.  
+ Mostra como usar a biblioteca de modelos C++ do Windows Runtime para criar um componente básico COM e uma maneira básica de registrar e consumir o componente COM de um aplicativo da área de trabalho.  
   
  [Como instanciar componentes da WRL diretamente](../windows/how-to-instantiate-wrl-components-directly.md)  
  Saiba como usar o [Microsoft::WRL::Make](../windows/make-function.md) e [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) funções para criar uma instância de um componente do módulo que o define.  
   
  [Como usar winmdidl.exe e midlrt.exe para criar arquivos .h com metadados do Windows](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)  
- Mostra como consumir componentes personalizados de Windows Runtime de WRL criando um arquivo IDL dos metadados. winmd.  
+ Mostra como consumir componentes personalizados de tempo de execução do Windows do WRL criando um arquivo IDL de metadados. winmd.  
   
  [Instruções passo a passo: conexão usando tarefas e solicitações HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
- Mostra como usar o [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) e [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfaces junto com as tarefas para enviar solicitações HTTP GET e POST para um serviço da web em um aplicativo UWP.  
+ Mostra como usar o [IXMLHTTPRequest2](http://msdn.microsoft.com/bbc11c4a-aecf-4d6d-8275-3e852e309908) e [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfaces junto com tarefas enviar solicitações HTTP GET e POST para um serviço web em um aplicativo UWP.  
   
  [Exemplo do Bing Maps Trip Optimizer](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
- Usa o `HttpRequest` classe definida em [passo a passo: conectando usando tarefas e solicitações HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) no contexto de um aplicativo UWP concluído.  
+ Usa o `HttpRequest` que é definido na classe [passo a passo: conectando usando tarefas e solicitações HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) no contexto de um aplicativo da UWP completo.  
   
- [Criando um componente de DLL de tempo de execução do Windows com o exemplo de C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
- Mostra como usar a biblioteca de modelos do Windows em tempo de execução C++ para criar um componente DLL do processo e consumi-lo em C + + CX, JavaScript e c#.  
+ [Criando um componente de DLL de tempo de execução do Windows com o exemplo do C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
+ Mostra como usar a biblioteca de modelos C++ do Windows Runtime para criar um componente DLL em processo e consumi-lo em C + + c++ /CX, JavaScript e c#.  
   
  [Exemplo do jogo marble maze DirectX](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)  
- Demonstra como usar a biblioteca de modelos do Windows em tempo de execução C++ para gerenciar o tempo de vida de componentes COM, como o DirectX e Media Foundation no contexto de um jogo 3D completo.  
+ Demonstra como usar a biblioteca de modelos de C++ de tempo de execução do Windows para gerenciar o tempo de vida de componentes COM, como o DirectX e Media Foundation no contexto de um jogo 3D completo.  
   
- [Enviar notificações de exemplo de aplicativos de área de trabalho](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)  
- Demonstra como usar a biblioteca de modelos do Windows em tempo de execução C++ para trabalhar com notificações de um aplicativo de área de trabalho.  
+ [Enviando notificações de brinde do exemplo de aplicativos da área de trabalho](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)  
+ Demonstra como usar a biblioteca de modelos C++ do Windows Runtime para trabalhar com notificações de brinde de um aplicativo da área de trabalho.  
   
-## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Biblioteca de modelos C++ do tempo de execução do Windows em comparação comparada ATL  
- Biblioteca de modelos C++ do Windows em tempo de execução é semelhante a biblioteca de modelo ativa (ATL) porque você pode usá-lo para criar pequena, rápidos objetos. Biblioteca de modelos C++ do Windows Runtime ATL compartilhar conceitos como a definição de objetos em módulos, registro explícito de interfaces e abra a criação de objetos usando fábricas. Você talvez esteja familiarizado com a biblioteca de modelos C++ do Windows Runtime se você estiver familiarizado com ATL.  
+## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Biblioteca de modelos C++ do tempo de execução do Windows em comparação comparada da ATL  
+ Biblioteca de modelos de C++ de tempo de execução do Windows se parece com a biblioteca de modelo ativa (ATL) porque você pode usá-lo para criar pequenos e rápidos objetos de COM. Biblioteca de modelos de C++ de tempo de execução do Windows e ATL também compartilham conceitos, como a definição de objetos em módulos, registro explícito de interfaces e abra a criação de objetos usando fábricas. Você pode se sentir confortável com a biblioteca de modelos de C++ de tempo de execução do Windows se você estiver familiarizado com o ATL.  
   
- Biblioteca de modelos C++ do Windows Runtime oferece suporte a funcionalidade COM que é necessária para aplicativos UWP. Portanto, ele difere de ATL porque ele omite o suporte direto para os recursos de COM, como:  
+ Biblioteca de modelos de C++ de tempo de execução do Windows oferece suporte à funcionalidade COM que é necessária para aplicativos UWP. Portanto, ele difere do ATL porque omite suporte direto para recursos COM tais como:  
   
 -   Agregação  
   
--   implementações de estoque  
+-   implementações fixas  
   
 -   interfaces duplas (`IDispatch`)  
   
--   interfaces de enumerador padrão  
+-   interfaces do enumerador padrão  
   
 -   pontos de conexão  
   
--   interfaces destacável  
+-   interfaces destacáveis  
   
 -   Inserção OLE  
   
@@ -110,39 +110,39 @@ A WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows) é uma bibli
 -   COM+  
   
 ## <a name="concepts"></a>Conceitos  
- Biblioteca de modelos C++ do Windows Runtime fornece tipos que representam alguns conceitos básicos. As seções a seguir descrevem esses tipos.  
+ Biblioteca de modelos de C++ de tempo de execução do Windows fornece tipos que representam alguns conceitos básicos. As seções a seguir descrevem esses tipos.  
   
 ### <a name="comptr"></a>ComPtr  
- [ComPtr](../windows/comptr-class.md) é um *ponteiro inteligente* tipo que representa a interface que é especificada pelo parâmetro de modelo. Use `ComPtr` para declarar uma variável que pode acessar os membros de um objeto que é derivado da interface. `ComPtr` automaticamente mantém uma contagem de referência para o ponteiro de interface subjacente e libera a interface quando a contagem de referência chega a zero.  
+ [ComPtr](../windows/comptr-class.md) é um *ponteiro inteligente* tipo que representa a interface que é especificada pelo parâmetro de modelo. Use `ComPtr` para declarar uma variável que pode acessar os membros de um objeto que é derivada da interface. `ComPtr` automaticamente mantém uma contagem de referência para o ponteiro de interface subjacente e libera a interface quando a contagem de referência chega a zero.  
   
 ### <a name="runtimeclass"></a>RuntimeClass  
- [RuntimeClass](../windows/runtimeclass-class.md) representa uma classe instanciada que herda de um conjunto de interfaces especificadas. Um `RuntimeClass` objeto puder fornecer uma combinação de suporte para uma ou mais interfaces COM tempo de execução do Windows ou uma referência fraca a um componente.  
+ [RuntimeClass](../windows/runtimeclass-class.md) representa uma classe instanciada que herda de um conjunto de interfaces especificadas. Um `RuntimeClass` objeto puder fornecer uma combinação de suporte para uma ou mais interfaces COM tempo de execução do Windows ou uma referência fraca em um componente.  
   
 ### <a name="module"></a>Módulo  
- [Módulo](../windows/module-class.md) representa uma coleção de objetos relacionados. Um `Module` objeto gerencia fábricas de classe, que criam objetos e o registro, que permite que os outros aplicativos usar um objeto.  
+ [Módulo](../windows/module-class.md) representa uma coleção de objetos relacionados. Um `Module` objeto gerencia as fábricas de classes, que criam objetos e o registro, que permite que outros aplicativos para usar um objeto.  
   
 ### <a name="callback"></a>retorno de chamada  
- O [retorno de chamada](../windows/callback-function-windows-runtime-cpp-template-library.md) função cria um objeto cuja função de membro é um manipulador de eventos (um método de retorno de chamada). Use o `Callback` função gravar operações assíncronas.  
+ O [retorno de chamada](../windows/callback-function-windows-runtime-cpp-template-library.md) função cria um objeto cuja função de membro é um manipulador de eventos (um método de retorno de chamada). Use o `Callback` função para gravar operações assíncronas.  
   
 ### <a name="eventsource"></a>EventSource  
- [EventSource](../windows/eventsource-class.md) é usado para gerenciar *delegar* manipuladores de eventos. Use a biblioteca de modelos C++ do Windows Runtime para implementar um delegado e usar `EventSource` para adicionar, remover e invocar delegados.  
+ [EventSource](../windows/eventsource-class.md) é usado para gerenciar *delegar* manipuladores de eventos. Use a biblioteca de modelos de C++ de tempo de execução do Windows para implementar um delegado e usar `EventSource` para adicionar, remover e invocar representantes.  
   
 ### <a name="asyncbase"></a>AsyncBase  
- [AsyncBase](../windows/asyncbase-class.md) fornece métodos virtuais que representam o modelo de programação assíncrono do tempo de execução do Windows. Substitua os membros dessa classe para criar uma classe personalizada que podem iniciar, parar ou verificar o progresso de uma operação assíncrona.  
+ [AsyncBase](../windows/asyncbase-class.md) fornece os métodos virtuais que representam o modelo de programação assíncrono do tempo de execução do Windows. Substitua os membros dessa classe para criar uma classe personalizada que podem iniciar, parar ou verificar o progresso de uma operação assíncrona.  
   
 ### <a name="ftmbase"></a>FtmBase  
- [FtmBase](../windows/ftmbase-class.md) representa um objeto de empacotamento de segmentação livre. `FtmBase` cria uma tabela de interface global (GIT) e ajuda a gerenciar objetos de proxy e de empacotamento.  
+ [FtmBase](../windows/ftmbase-class.md) representa um objeto livre de marshaler. `FtmBase` cria uma tabela de interface global (GIT) e ajuda a gerenciar objetos de empacotamento e de proxy.  
   
 ### <a name="weakref"></a>WeakRef  
- [WeakRef](../windows/weakref-class.md) é um tipo de ponteiro inteligente que representa um *referência fraca*, que faz referência a um objeto que pode ou não pode ser acessado. Um `WeakRef` objeto pode ser usado somente no tempo de execução do Windows e não por COM. clássico  
+ [WeakRef](../windows/weakref-class.md) é um tipo de ponteiro inteligente que representa uma *referência fraca*, que faz referência a um objeto que pode ou não ser acessível. Um `WeakRef` objeto pode ser usado apenas no tempo de execução do Windows e não com clássico.  
   
- Um `WeakRef` objeto normalmente representa um objeto cuja existência é controlada por um aplicativo ou thread externo. Por exemplo, um `WeakRef` objeto pode fazer referência a um objeto de arquivo. Quando o arquivo é aberto, o `WeakRef` é válido e o arquivo referenciado está acessível. Porém, quando o arquivo seja fechado, o `WeakRef` é inválido e o arquivo não está acessível.  
+ Um `WeakRef` objeto normalmente representa um objeto cuja existência é controlada por um aplicativo ou thread externo. Por exemplo, um `WeakRef` objeto pode fazer referência a um objeto de arquivo. Quando o arquivo está aberto, o `WeakRef` é válido e o arquivo referenciado está acessível. Mas quando o arquivo é fechado, o `WeakRef` é inválido e o arquivo não está acessível.  
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
 |||  
 |-|-|  
-|[APIs de chave por categoria](../windows/key-wrl-apis-by-category.md)|Realça principal biblioteca de modelos C++ do Windows Runtime tipos, funções e macros.|  
-|[Referência](../windows/wrl-reference.md)|Contém informações de referência para a biblioteca de modelos do Windows em tempo de execução C++.|  
-|[Referência rápida (tempo de execução do Windows e do Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Descreve brevemente C + + recursos CX que oferecem suporte à execução do Windows.|  
-|[Usando componentes de tempo de execução do Windows em Visual C++](http://go.microsoft.com/fwlink/p/?linkid=229155)|Mostra como usar C + c++ /CX para criar um componente básico do tempo de execução do Windows.|
+|[APIs de chave por categoria](../windows/key-wrl-apis-by-category.md)|Realça os tipos primários de biblioteca de modelos de C++ de tempo de execução do Windows, funções e as macros.|  
+|[Referência](../windows/wrl-reference.md)|Contém informações de referência para a biblioteca de modelos C++ do Windows Runtime.|  
+|[Referência rápida (tempo de execução do Windows e Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Descreve resumidamente a C + + / recursos CX que dão suporte ao tempo de execução do Windows.|  
+|[Usando componentes de tempo de execução do Windows no Visual C++](http://go.microsoft.com/fwlink/p/?linkid=229155)|Mostra como usar C + + c++ /CX para criar um componente básico do tempo de execução do Windows.|

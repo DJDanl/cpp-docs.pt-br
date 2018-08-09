@@ -17,36 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1870e1ee623d8495e9f19dd8f32ea9382070bc14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f79aa2683948d54f900c92304cdff29647819a74
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890171"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650590"
 ---
 # <a name="switchtype"></a>switch_type
-Identifica o tipo da variável usado como o discriminador de união.  
+Identifica o tipo da variável usada como o discriminador de união.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [switch_type(  
 type  
 }]  
-  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `type`  
+### <a name="parameters"></a>Parâmetros  
+ *type*  
  O tipo de comutador, pode ser um tipo de caractere, inteiro, booliano ou enumeração.  
   
 ## <a name="remarks"></a>Comentários  
  O **switch_type** atributo C++ tem a mesma funcionalidade que o [switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) atributo MIDL.  
   
- Não oferecem suporte a atributos C++ [encapsulado uniões](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Uniões nonencapsulated](http://msdn.microsoft.com/library/windows/desktop/aa367119) têm suporte apenas no seguinte formato:  
+ Atributos de C++ não oferecem suporte a [encapsulada uniões](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Uniões nonencapsulated](http://msdn.microsoft.com/library/windows/desktop/aa367119) têm suporte apenas no seguinte formato:  
   
-```  
+```cpp  
 // cpp_attr_ref_switch_type.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -64,17 +62,17 @@ struct SizedValue2 {
 ```  
   
 ## <a name="example"></a>Exemplo  
- Consulte o [caso](../windows/case-cpp.md) exemplo para uso do exemplo **switch_type**.  
+ Consulte a [caso](../windows/case-cpp.md) exemplo para uso do exemplo **switch_type**.  
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
-|**Aplica-se a**|`typedef`|  
+|**Aplica-se a**|**typedef**|  
 |**Repetível**|Não|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

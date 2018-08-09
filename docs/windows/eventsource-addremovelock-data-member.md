@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46763a6376a18ae469833c3eee6a0d5d9f15ee45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9d45ba6670d94ae1a58a1a46fab41dbb2ee6f1c6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872647"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646534"
 ---
 # <a name="eventsourceaddremovelock-data-member"></a>Membro de dados EventSource::addRemoveLock_
-Sincroniza o acesso para o [targets _](../windows/eventsource-targets-data-member.md) matriz durante a adição, remoção ou chamar manipuladores de eventos.  
+Sincroniza o acesso para o [targets _](../windows/eventsource-targets-data-member.md) matriz ao adicionar, remover ou invocar manipuladores de eventos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 Wrappers::SRWLock addRemoveLock_;  
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** event.h  
+ **Cabeçalho:** Event. h  
   
  **Namespace:** Microsoft::WRL
  

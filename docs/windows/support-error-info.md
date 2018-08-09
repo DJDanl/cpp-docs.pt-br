@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c366a379d15e50aabdc3c2157f57f85b6b5b33b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ddf76345234ba44b2634c04ee1e2899913ed2078
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889923"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653053"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 Implementa o suporte para retornar erros detalhados.  
@@ -30,25 +30,24 @@ Implementa o suporte para retornar erros detalhados.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      [ support_error_info(  
+[ support_error_info(  
    error_interface=uuid  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- **error_interface**  
- O identificador da implementação de interface **IErrorInfo**.  
+### <a name="parameters"></a>Parâmetros  
+ *error_interface*  
+ O identificador da implementação de interface `IErrorInfo`.  
   
 ## <a name="remarks"></a>Comentários  
- O **support_error_info** atributo C++ implementa o suporte para retornar erros detalhados, contextuais encontrados pelo objeto de destino para o cliente. Para o objeto dar suporte a erros, os métodos de **IErrorInfo** interface deve ser implementada pelo objeto. Para obter mais informações, consulte [suporte IDispatch e IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md).  
+ O **support_error_info** atributo C++ implementa o suporte para retorno de erros detalhados, contextuais encontrados pelo objeto de destino para o cliente. Para o objeto dar suporte a erros, os métodos do `IErrorInfo` interface deve ser implementada pelo objeto. Para obter mais informações, consulte [que dão suporte a IDispatch e IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md).  
   
- Esse atributo adiciona o [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) classe como uma classe base para o objeto de destino. Isso resulta em uma implementação padrão de **ISupportErrorInfo** e pode ser usado quando uma única interface gera erros em um objeto.  
+ Esse atributo adiciona o [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) classe como uma classe base para o objeto de destino. Isso resulta em uma implementação padrão de `ISupportErrorInfo` e pode ser usado quando uma única interface gera erros em um objeto.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir adiciona suporte padrão para o **ISupportErrorInfo** interface para o `CMyClass` objeto.  
+ O código a seguir adiciona o suporte padrão para o `ISupportErrorInfo` da interface para o `CMyClass` objeto.  
   
-```  
+```cpp  
 // cpp_attr_ref_support_error_info.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -70,13 +69,13 @@ class CMyClass
   
 ## <a name="requirements"></a>Requisitos  
   
-### <a name="attribute-context"></a>Contexto de atributo  
+### <a name="attribute-context"></a>Atributo de contexto  
   
 |||  
 |-|-|  
 |**Aplica-se a**|**class**|  
 |**Repetível**|Sim|  
-|**Atributos necessários.**|Nenhum|  
+|**Atributos obrigatórios**|Nenhum|  
 |**Atributos inválidos**|Nenhum|  
   
  Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  

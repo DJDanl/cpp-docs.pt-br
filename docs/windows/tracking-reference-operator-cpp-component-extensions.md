@@ -1,5 +1,5 @@
 ---
-title: Operador de referência (extensões de componentes C++) de controle | Microsoft Docs
+title: Acompanhamento de referência de operador (extensões de componentes C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c460174fad6a287acfd434b1589e73153aa0b121
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e645d39a6373362a33e4efd25019d43cad348bbc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890849"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651825"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>Operador de Referência de Acompanhamento (Extensões de Componentes C++)
-Um *a referência de rastreamento* (`%`) se comporta como uma referência de C++ comum (`&`) exceto que quando um objeto é atribuído a uma referência de rastreamento, a contagem de referência do objeto é incrementada.  
+Um *referência de rastreamento* (`%`) se comporta como uma referência comum do C++ (`&`), exceto que quando um objeto é atribuído a uma referência de rastreamento, a contagem de referência do objeto é incrementada.  
   
 ## <a name="all-platforms"></a>Todas as Plataformas  
  Uma referência de rastreamento tem as seguintes características.  
   
 -   Atribuição de um objeto para uma referência de rastreamento faz com que a contagem de referência do objeto a ser incrementado.  
   
--   Uma referência nativa (&) é o resultado quando você cancelar um *. Uma referência de rastreamento (%) é o resultado quando você cancelar um ^. Como você tem um % para um objeto, o objeto permanecerá ativo na memória.  
+-   Uma referência nativa (`&`) é o resultado quando você remove a referência um `*`. Uma referência de rastreamento (`%`) é o resultado quando você remove a referência um `^`. Desde que você tenha um `%` a um objeto, o objeto ficará ativo na memória.  
   
 -   O ponto final (`.`) o operador de acesso de membro é usado para acessar um membro do objeto.  
   
--   Referências de acompanhamento são válidas para tipos de valor e identificadores (por exemplo `String^`).  
+-   Referências de acompanhamento são válidas para identificadores e tipos de valor (por exemplo `String^`).  
   
--   Uma referência de rastreamento não pode ser atribuída um valor nulo ou `nullptr` valor. Uma referência de rastreamento pode ser reatribuída a outro objeto válido quantas vezes forem necessárias.  
+-   Uma referência de rastreamento não pode ser atribuída um valor nulo ou **nullptr** valor. Uma referência de rastreamento pode ser reatribuída a outro objeto válido quantas vezes forem necessárias.  
   
--   Uma referência de rastreamento não pode ser usada como o operador unário take endereço.  
+-   Uma referência de rastreamento não pode ser usada como um operador unário de tomada de endereço.  
   
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows  
- Uma referência de rastreamento se comporta como uma referência de C++ padrão, exceto que um % é contado por referência. O trecho a seguir mostra como converter entre % e ^ tipos:  
+ Uma referência de rastreamento se comporta como uma referência padrão do C++, exceto que um % é contado por referência. O trecho a seguir mostra como converter entre % e ^ tipos:  
   
 ```  
 Foo^ spFoo = ref new Foo();  
@@ -55,7 +55,6 @@ Foo^ spFoo2 = %srFoo;
  O exemplo a seguir mostra como passar um ^ para uma função que usa um %.  
   
 ```  
-  
 ref class Foo sealed {};  
   
     // internal or private  
@@ -72,24 +71,23 @@ ref class Foo sealed {};
 ```  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- Em C + + CLI, você pode usar uma referência de rastreamento para um identificador ao vincular a um objeto de um tipo CLR no heap coletado como lixo.  
+ No C + + / CLI, você pode usar uma referência de rastreamento a um identificador ao associar a um objeto de um tipo CLR na heap coletado como lixo.  
   
- No CLR, o valor de uma referência de rastreamento variável é atualizada automaticamente sempre que o coletor de lixo move o objeto referenciado.  
+ No CLR, o valor de uma referência de acompanhamento de variável é atualizada automaticamente sempre que o coletor de lixo move o objeto referenciado.  
   
- Uma referência de rastreamento pode ser declarada apenas na pilha. Uma referência de rastreamento não pode ser um membro de uma classe.  
+ Uma referência de rastreamento pode ser declarada somente na pilha. Uma referência de rastreamento não pode ser um membro de uma classe.  
   
- Não é possível ter uma referência de C++ nativo para um objeto no heap coletado como lixo.  
+ Não é possível ter uma referência de C++ nativa em um objeto no heap coletado como lixo.  
   
- Para obter mais informações sobre o controle de referências em C + + CLI, consulte:  
+ Para obter mais informações sobre referências de acompanhamento no C + + / CLI, consulte:  
   
 -   [Como usar referências de acompanhamento no C++/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
   
 ### <a name="examples"></a>Exemplos  
- **Exemplo**  
   
- O exemplo a seguir para C + + CLI mostra como usar uma referência de rastreamento com tipos nativos e gerenciados.  
+ O exemplo a seguir para C + + c++ CLI mostra como usar uma referência de rastreamento com tipos nativos e gerenciados.  
   
-```  
+```cpp  
 // tracking_reference_1.cpp  
 // compile with: /clr  
 ref class MyClass {  
@@ -123,14 +121,11 @@ int main() {
   
    delete[] pi;  
 }  
-  
 ```  
   
- **Exemplo**  
+ O exemplo a seguir para C + + c++ CLI mostra como associar uma referência de rastreamento para uma matriz.  
   
- O exemplo a seguir para C + + CLI mostra como associar uma referência de rastreamento para uma matriz.  
-  
-```  
+```cpp  
 // tracking_reference_2.cpp  
 // compile with: /clr  
 using namespace System;  

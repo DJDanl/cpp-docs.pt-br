@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03577dbf831c21ec9878a787d937d39b5e8bcd66
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20dc5eb7af4195c9861d09761da245cdd5d3217d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890095"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652208"
 ---
 # <a name="sizing-individual-controls"></a>Dimensionando controles individuais
-Use as alças de dimensionamento para redimensionar um controle. Quando o ponteiro está posicionado em uma alça de dimensionamento, ele muda de forma para indicar as instruções no qual o controle pode ser redimensionado. Alças de dimensionamento ativo são sólidas; Se uma alça de dimensionamento estiver vazia, o controle não pode ser redimensionado ao longo desse eixo.  
+Use as alças de dimensionamento para redimensionar um controle. Quando o ponteiro está posicionado em uma alça de dimensionamento, ele muda de forma para indicar as direções em que o controle pode ser redimensionado. Alças de dimensionamento do Active Directory são sólidas; Se uma alça de dimensionamento for vazia, o controle não pode ser redimensionado ao longo desse eixo.  
   
- Você também pode alterar o tamanho de um controle, ajuste o controle para guias ou margens ou movendo um ajustado guia longe outro e controle.  
+ Você também pode alterar o tamanho de um controle, ajuste o controle nas guias ou margens ou movendo um encaixada guia para longe do outro e controle.  
   
 ### <a name="to-size-a-control"></a>Para dimensionar um controle  
   
@@ -36,28 +36,26 @@ Use as alças de dimensionamento para redimensionar um controle. Quando o pontei
   
 2.  Arraste as alças de dimensionamento para alterar o tamanho do controle:  
   
-    -   Alças de dimensionamento na parte superior e lados alterar o tamanho horizontal ou vertical.  
+    -   Alças de dimensionamento na parte superior e os lados alteram o tamanho horizontal ou vertical.  
   
-    -   Alças de dimensionamento nos cantos alteram tamanho horizontal e vertical.  
+    -   Alças de dimensionamento nos cantos alteram o tamanho horizontal e vertical.  
   
     > [!TIP]
-    >  Você pode redimensionar a unidade de uma caixa de diálogo de controle (DLU) por vez, mantendo pressionada a tecla SHIFT e usando as teclas de seta para baixo à direita.  
+    >  Você pode redimensionar a unidade de uma caixa de diálogo de controle (DLU) por vez, mantendo pressionada a **Shift** chave e usando o **seta para a direita** e **seta para baixo** chaves.  
   
-### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>Para dimensionar automaticamente um controle para ajustar o texto dentro dele  
+### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>Para dimensionar automaticamente um controle para se ajustar ao texto dentro dele  
   
-1.  Escolha **tamanho ao conteúdo** do **formato** menu.  
+1.  Escolher **tamanho de conteúdo** da **formato** menu.  
   
  \- ou -  
   
--   Clique com botão direito do controle e escolha **tamanho ao conteúdo** no menu de atalho.  
+-   O controle com o botão direito e escolha **tamanho ao conteúdo** no menu de atalho.  
   
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no *guia do desenvolvedor do .NET Framework.* Para obter informações sobre como adicionar manualmente os arquivos de recurso para projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso para propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e localização de aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisitos  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Consulte também  
  [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
-

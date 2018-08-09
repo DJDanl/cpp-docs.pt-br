@@ -1,5 +1,5 @@
 ---
-title: 'Método Handletraits: | Microsoft Docs'
+title: 'Método handletraits:: Getinvalidvalue | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 190c327a404d19da86fdb86c32411a8ffeb06e7c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c4690daabd84b8127913af0a96d5b929ee986e77
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873492"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651227"
 ---
 # <a name="handletraitsgetinvalidvalue-method"></a>Método HANDLETraits::GetInvalidValue
 Representa um identificador inválido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 inline static HANDLE GetInvalidValue();  
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Sempre retorna INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE é definido pelo Windows.)  
+ Sempre retorna INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE é definido pelo Windows).  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   

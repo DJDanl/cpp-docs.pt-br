@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c91c677a18c66c875107f48c2e04ba45be88fb48
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87f32ce0583154deb2e3e5cd0afc77ce8728695d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892729"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646712"
 ---
 # <a name="synclocktsynclockt-destructor"></a>Destruidor SyncLockT::~SyncLockT
-Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente no seu código.  
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,12 +34,12 @@ Oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente 
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Deinitializes uma instância da classe SyncLockT.  
+ Realiza o desligamento de uma instância das **SyncLockT** classe.  
   
- Este destruidor também libera a instância atual do SyncLockT.  
+ Esse destruidor desbloqueia o atual **SyncLockT** instância.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers.h  
+ **Cabeçalho:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::Details  
   

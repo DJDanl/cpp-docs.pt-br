@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7fbf9b1e21492294f6e26fb743f611ac4f4685f0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e1acf443cfa1251649a33e55e81e03fb1b62e17a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460791"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648328"
 ---
 # <a name="comptrget-method"></a>Método ComPtr::Get
 Recupera um ponteiro para a interface que está associado a este **ComPtr**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 T* Get() const;  
 ```  
   
