@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ca7757c1b9a8ebf034f68b9a380c09d4a5b08f1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4f44d6e4db7e09033e9c3f05d94cbf5294b306a3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607018"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018276"
 ---
 # <a name="purpose-of-attributes"></a>Finalidade de atributos
 Atributos de estendem o C++ em direções no momento, não é possíveis sem quebrar a estrutura clássica do idioma. Atributos permitem que provedores (DLLs separadas) para estender a funcionalidade de idioma dinamicamente. O objetivo principal de atributos é simplificar a criação de componentes COM, além de aumentar o nível de produtividade do desenvolvedor de componentes. Atributos podem ser aplicados a praticamente qualquer constructo de C++, como classes, membros de dados ou funções de membro. Este é um realce de benefícios fornecidos por essa nova tecnologia:  
@@ -35,7 +35,7 @@ Atributos de estendem o C++ em direções no momento, não é possíveis sem que
   
  Por exemplo, para implementar um coletor de eventos simples para uma classe genérica do ATL, você pode aplicar a [event_receiver](../windows/event-receiver.md) atributo em uma classe específica como `CMyReceiver`. O `event_receiver` atributo, em seguida, é compilado pelo compilador Visual C++, que insere o código apropriado no arquivo de objeto.  
   
-```  
+```cpp  
 [event_receiver(com)]  
 class CMyReceiver   
 {  
