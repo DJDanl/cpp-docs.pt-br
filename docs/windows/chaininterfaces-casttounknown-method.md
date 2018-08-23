@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 45cc86c873e7c45a7352f0035b2fd16e312e7c6c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 96e7428e2263beb57eb73e024815000d61e75d5f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644440"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612551"
 ---
 # <a name="chaininterfacescasttounknown-method"></a>Método ChainInterfaces::CastToUnknown
-Converte o ponteiro de interface do tipo definido pelos *I0* parâmetro de modelo para um ponteiro para `IUnknown`.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-__forceinline IUnknown* CastToUnknown();  
-```  
-  
-## <a name="return-value"></a>Valor de retorno  
- Um ponteiro para `IUnknown`.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Implements. h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Estrutura ChainInterfaces](../windows/chaininterfaces-structure.md)
+
+Converte o ponteiro de interface do tipo definido pelos *I0* parâmetro de modelo para um ponteiro para `IUnknown`.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+## <a name="return-value"></a>Valor de retorno
+
+Um ponteiro para `IUnknown`.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** Implements. h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Estrutura ChainInterfaces](../windows/chaininterfaces-structure.md)

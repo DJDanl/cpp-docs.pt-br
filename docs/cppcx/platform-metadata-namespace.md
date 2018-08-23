@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Metadata Namespace
 ms.assetid: e3e114d8-a4b0-47f0-865a-9ce9d7212e86
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11dc54463207efade9a8ebb7179654d0b1e18909
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1a755314adec83e8853c2c29d9c9d9bb363575b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088018"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607800"
 ---
 # <a name="platformmetadata-namespace"></a>Namespace Platform::Metadata
 Este namespace contém atributos que modificam as declarações de tipos.  

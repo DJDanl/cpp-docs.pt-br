@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a2ed2393f25dac416cf3b6dfd1b178190d368a6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8783d30aa018e0b29705c4c6bdda3b9e2a47af4a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647096"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613226"
 ---
 # <a name="activationfactoryqueryinterface-method"></a>Método ActivationFactory::QueryInterface
-Recupera um ponteiro para a interface especificada.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-STDMETHOD(  
-   QueryInterface  
-)(REFIID riid, _Deref_out_ void **ppvObject);  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *riid*  
- Uma ID de interface.  
-  
- *ppvObject*  
- Quando essa operação for concluída, um ponteiro para a interface especificada pelo parâmetro *riid*.  
-  
-## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe ActivationFactory](../windows/activationfactory-class.md)
+
+Recupera um ponteiro para a interface especificada.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)(REFIID riid, _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*riid*  
+Uma ID de interface.
+
+*ppvObject*  
+Quando essa operação for concluída, um ponteiro para a interface especificada pelo parâmetro *riid*.
+
+## <a name="return-value"></a>Valor de retorno
+
+S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Classe ActivationFactory](../windows/activationfactory-class.md)

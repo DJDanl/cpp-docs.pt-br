@@ -1,20 +1,20 @@
 ---
-title: Obtendo ponteiros para buffers de dados (C + + CX) | Microsoft Docs
+title: Obtendo ponteiros para buffers de dados (C + + c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42f363cd3af602685890cb8957cf9978c88602a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87b95044c3a0b874d155b227db736c5e4b81f1b1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090543"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613024"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Obtendo ponteiros para buffers de dados (C++/CX)
 No Tempo de Execução do Windows, a interface [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) oferece meios baseados em transmissão de linguagem neutra para acessar buffers de dados. Em C++, você pode obter um ponteiro bruto para a matriz de bytes subjacente usando a interface IBufferByteAccess da Biblioteca em Tempo de Execução do Windows definida em robuffer.h. Usando essa abordagem, você pode modificar a matriz de bytes in-loco sem fazer cópias desnecessárias dos dados.  
@@ -56,11 +56,11 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
 ```  
   
 ## <a name="complete-example"></a>Exemplo completo  
- As etapas a seguir mostram como criar um aplicativo c# plataforma Universal do Windows que transmite um `WriteableBitmap` para uma DLL de componente do C++ Windows Runtime. O código C++ obtém um ponteiro para o buffer de pixels e executa uma simples modificação in-loco na imagem. Como alternativa, você pode criar o aplicativo cliente no Visual Basic, em JavaScript ou C++ em vez de C#. Se você usar C++, o componente DLL não será necessário; basta adicionar esses métodos diretamente à classe MainPage ou qualquer outra classe que você defina.  
+ As etapas a seguir mostram como criar um aplicativo c# Universal Windows Platform que passa um `WriteableBitmap` para uma DLL do componente de tempo de execução do C++ Windows. O código C++ obtém um ponteiro para o buffer de pixels e executa uma simples modificação in-loco na imagem. Como alternativa, você pode criar o aplicativo cliente no Visual Basic, em JavaScript ou C++ em vez de C#. Se você usar C++, o componente DLL não será necessário; basta adicionar esses métodos diretamente à classe MainPage ou qualquer outra classe que você defina.  
   
 #### <a name="create-the-client"></a>Criar o cliente  
   
-1.  Use o modelo de projeto de aplicativo em branco para criar um aplicativo c# plataforma Universal do Windows.  
+1.  Use o modelo de projeto de aplicativo em branco para criar um aplicativo c# Universal Windows Platform.  
   
 2.  Em MainPage.xaml  
   
@@ -134,7 +134,7 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
   
 #### <a name="create-the-c-component"></a>Criar o componente em C++  
   
-1.  Adicionar um novo componente de tempo de execução C++ Windows à solução existente e nomeie- `ImageManipCPP`. Adicione uma referência a ele no projeto C# clicando com o botão direito do mouse nesse projeto em **Gerenciador de Soluções** e selecionando **Adicionar**, **Referência**.  
+1.  Adicione um novo componente de tempo de execução do C++ Windows à solução existente e nomeie- `ImageManipCPP`. Adicione uma referência a ele no projeto C# clicando com o botão direito do mouse nesse projeto em **Gerenciador de Soluções** e selecionando **Adicionar**, **Referência**.  
   
 2.  Em Class1.h  
   

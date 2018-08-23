@@ -25,45 +25,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 960dcd17a1ff581db540aecfd536e9d2f2e98539
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 084b9a84f7a113458ca1cf76549b865d019216cc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645091"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613430"
 ---
 # <a name="defining-mnemonics-access-keys"></a>Definindo mnemônica (teclas de acesso)
-Normalmente, os usuários de teclado movem o foco de entrada de um controle para outro em uma caixa de diálogo com o **guia** e **seta** chaves. No entanto, você pode definir uma chave de acesso (um nome mnemônico ou fácil de lembrar) que permite aos usuários escolher um controle pressionando uma tecla única.  
-  
-### <a name="to-define-an-access-key-for-a-control-with-a-visible-caption-push-buttons-check-boxes-and-radio-buttons"></a>Para definir uma chave de acesso para um controle com uma legenda visível (botões de ação, caixas de seleção e botões de opção)  
-  
-1.  Selecione o controle na caixa de diálogo.  
-  
-2.  No [janela de propriedades](/visualstudio/ide/reference/properties-window), no **legenda** propriedade, digite um novo nome para o controle, digitando um e comercial (`&`) na frente da letra que você deseja como a chave de acesso para o controle. Por exemplo, `&Radio1`.  
-  
-3.  Pressione **ENTER**.  
-  
-     Um sublinhado será exibido na legenda exibida para indicar a chave de acesso, por exemplo, **R**adio1.  
-  
-### <a name="to-define-an-access-key-for-a-control-without-a-visible-caption"></a>Para definir uma chave de acesso para um controle sem uma legenda visível  
-  
-1.  Faça uma legenda para o controle, usando um **texto estático** no controlar a [caixa de ferramentas](/visualstudio/ide/reference/toolbox).  
-  
-2.  Na legenda de texto estático, digite um e comercial (`&`) na frente da letra que você deseja como a chave de acesso.  
-  
-3.  Verifique se o controle de texto estático que precede o controle rotula na ordem de tabulação.  
-  
- Todas as chaves de acesso dentro de uma caixa de diálogo devem ser exclusivas.  
-  
-### <a name="to-check-for-duplicate-access-keys"></a>Para verificar se há teclas de acesso duplicadas  
-  
-1.  Sobre o **formato** menu, clique em **Verificar mnemônicos**.  
-  
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Consulte também  
- [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
- [Controles](../mfc/controls-mfc.md)
+
+Normalmente, os usuários de teclado movem o foco de entrada de um controle para outro em uma caixa de diálogo com o **guia** e **seta** chaves. No entanto, você pode definir uma chave de acesso (um nome mnemônico ou fácil de lembrar) que permite aos usuários escolher um controle pressionando uma tecla única.
+
+### <a name="to-define-an-access-key-for-a-control-with-a-visible-caption-push-buttons-check-boxes-and-radio-buttons"></a>Para definir uma chave de acesso para um controle com uma legenda visível (botões de ação, caixas de seleção e botões de opção)
+
+1. Selecione o controle na caixa de diálogo.
+
+2. No [janela de propriedades](/visualstudio/ide/reference/properties-window), no **legenda** propriedade, digite um novo nome para o controle, digitando um e comercial (`&`) na frente da letra que você deseja como a chave de acesso para o controle. Por exemplo, `&Radio1`.
+
+3. Pressione **ENTER**.
+
+   Um sublinhado será exibido na legenda exibida para indicar a chave de acesso, por exemplo, **R**adio1.
+
+### <a name="to-define-an-access-key-for-a-control-without-a-visible-caption"></a>Para definir uma chave de acesso para um controle sem uma legenda visível
+
+1. Faça uma legenda para o controle, usando um **texto estático** no controlar a [caixa de ferramentas](/visualstudio/ide/reference/toolbox).
+
+2. Na legenda de texto estático, digite um e comercial (`&`) na frente da letra que você deseja como a chave de acesso.
+
+3. Verifique se o controle de texto estático que precede o controle rotula na ordem de tabulação.
+
+Todas as chaves de acesso dentro de uma caixa de diálogo devem ser exclusivas.
+
+### <a name="to-check-for-duplicate-access-keys"></a>Para verificar se há teclas de acesso duplicadas
+
+1. Sobre o **formato** menu, clique em **Verificar mnemônicos**.
+
+Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Consulte também
+
+[Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Controles](../mfc/controls-mfc.md)

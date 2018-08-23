@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dd035a3a11898230cb7f8a14db0b98ff1611120
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 389767cdbd09cb5a2139b9302fc25fe02fb8a056
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089159"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613453"
 ---
 # <a name="platformmtathreadattribute-class"></a>Classe Platform::MTAThreadAttribute
 Indica que o modelo de threading COM para um aplicativo é MTA (Multi-Threaded Apartment).  
@@ -42,7 +42,7 @@ public ref class MTAThreadAttribute sealed : Attribute
 |[1 de construtor MTAThreadAttribute](#ctor) construtor|Inicializa uma nova instância da classe.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
- O atributo MTAThreadAttribute herda de [classe Platform:: Object](../cppcx/platform-object-class.md). O MTAThreadAttribute também sobrecarrega ou tem os seguintes membros:  
+ O atributo MTAThreadAttribute herda [classe Platform:: Object](../cppcx/platform-object-class.md). O MTAThreadAttribute também sobrecarrega ou tem os seguintes membros:  
   
 |Nome|Descrição|  
 |----------|-----------------|  

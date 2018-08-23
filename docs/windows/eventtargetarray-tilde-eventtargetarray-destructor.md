@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f7faffafee4cf4a3528effa052ef8105cb9ebfed
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d6fc209158afc21872df869e81296b94159c5bc4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650661"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613554"
 ---
 # <a name="eventtargetarrayeventtargetarray-destructor"></a>Destruidor EventTargetArray::~EventTargetArray
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-~EventTargetArray();  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Realiza o desligamento atual **EventTargetArray** classe.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Event. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe EventTargetArray](../windows/eventtargetarray-class.md)   
- [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+~EventTargetArray();
+```
+
+## <a name="remarks"></a>Comentários
+
+Realiza o desligamento atual **EventTargetArray** classe.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** Event. h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Consulte também
+
+[Classe EventTargetArray](../windows/eventtargetarray-class.md)  
+[Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

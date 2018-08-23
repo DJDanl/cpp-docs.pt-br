@@ -21,32 +21,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93682f1a12e2fe2d5dfaf715a718563c35ecddde
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: db11dee47b51cf695a93489d4ab851be47c39144
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650450"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612652"
 ---
 # <a name="adding-version-information-for-another-language"></a>Adicionando informações de versão para outro idioma
-### <a name="to-add-version-information-for-another-language-new-info-block"></a>Para adicionar informações de versão para outro idioma (novo bloco de informações)  
-  
-1.  Abrir um recurso de informações de versão clicando duas vezes no [exibição de recurso](../windows/resource-view-window.md).  
-  
-    > [!NOTE]
-    >  Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Clique dentro da tabela de informações de versão e escolha **novo bloco de informações de versão** no menu de atalho.  
-  
-     Este comando adiciona um bloco de informações adicionais para o recurso de informações de versão atual e abre suas propriedades correspondentes na [janela de propriedades](/visualstudio/ide/reference/properties-window).  
-  
-3.  No **propriedades** janela, escolha o idioma apropriado e do conjunto para o novo bloco de caracteres.  
-  
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisitos 
- Win32  
-  
-## <a name="see-also"></a>Consulte também  
- [Editor de informações de versão](../windows/version-information-editor.md)   
- [Informações de versão (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
+
+### <a name="to-add-version-information-for-another-language-new-info-block"></a>Para adicionar informações de versão para outro idioma (novo bloco de informações)
+
+1. Abrir um recurso de informações de versão clicando duas vezes no [exibição de recurso](../windows/resource-view-window.md).
+
+   > [!NOTE]
+   > Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).
+
+2. Clique dentro da tabela de informações de versão e escolha **novo bloco de informações de versão** no menu de atalho.
+
+   Este comando adiciona um bloco de informações adicionais para o recurso de informações de versão atual e abre suas propriedades correspondentes na [janela de propriedades](/visualstudio/ide/reference/properties-window).
+
+3. No **propriedades** janela, escolha o idioma apropriado e do conjunto para o novo bloco de caracteres.
+
+Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Consulte também
+
+[Editor de informações de versão](../windows/version-information-editor.md)  
+[Informações de versão (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b54facc94be3f43b500e38371e0eba9e00d130a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a97d77f0b84366c83f09f6a6c72afe1bbb25dc6d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088148"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612123"
 ---
 # <a name="platformintptr-value-class"></a>Platform::classe de valor IntPtr
 Representa um ponteiro ou um identificador assinado e cujo tamanho é específico de plataforma (32 bits ou 64 bits).  
@@ -43,9 +43,9 @@ public value struct IntPtr
 |[IntPtr::ToInt32](#toint32)|Converte o IntPtr atual em um número inteiro de 32 bits.|  
   
 ### <a name="requirements"></a>Requisitos  
- **Suporte mínimo de cliente:** Windows 8  
+ **Mínimo de cliente com suporte:** Windows 8  
   
- **Suporte mínimo de servidor:** Windows Server 2012  
+ **Mínimo de servidor com suporte:** Windows Server 2012  
   
  **Namespace:** Platform  
   
@@ -90,7 +90,7 @@ static IntPtr::operator IntPtr( void* value1);   static IntPtr::operator IntPtr(
   
 
 
-## <a name="toint32"> </a> Método: Toint32
+## <a name="toint32"> </a> Método IntPtr::ToInt32
 Converte o IntPtr atual em um valor para um inteiro de 32 bits.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -104,4 +104,4 @@ int32 IntPtr::ToInt32();
   
   
 ## <a name="see-also"></a>Consulte também  
- [Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)
+ [Namespace Platform](../cppcx/platform-namespace-c-cx.md)

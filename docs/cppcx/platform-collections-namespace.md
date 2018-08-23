@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b4e38d6a051481b2b5f642c6b4de3c837f8fbfd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 171fdfe8e174d0d3b5d1c69e9aa5a777a3148ee0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088031"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612525"
 ---
 # <a name="platformcollections-namespace"></a>Namespace Platform::Collections
 
@@ -28,7 +28,7 @@ O namespace Platform:: Collections contém o `Map`, `MapView`, `Vector`, e `Vect
 
 Você pode construir um Platform::Collections::Vector com base em um [std::vector](../standard-library/vector-class.md) e um [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) com base em um [std::map](../standard-library/map-class.md).
 
-Além disso, o namespace Platform:: Collections fornece suporte para inserção e entrados iteradores, e `Vector` e `VectorView` iteradores.
+Além disso, o namespace Platform:: Collections fornece suporte para inserção e iteradores de entrada, e `Vector` e `VectorView` iteradores.
 
 Você deve incluir (`#include`) o cabeçalho Collection. h para usar os tipos no namespace Platform:: Collections.
 
@@ -56,7 +56,7 @@ Esse namespace contém os membros a seguir.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)
+[Namespace Platform](../cppcx/platform-namespace-c-cx.md)
 
 ### <a name="requirements"></a>Requisitos
 

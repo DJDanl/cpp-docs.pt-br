@@ -9,16 +9,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 8b89b21e-0d7b-4cc2-baa3-93b17c82945c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67d5a9df66678e7c5c40d1570fa6149ba3f28ff8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2f1e83c285274326be2501a8f9b006c8df05204
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089253"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613380"
 ---
 # <a name="platformivaluetype-interface"></a>Interface Platform::IValueType
 O`Platform::IValueType` é uma interface de infraestrutura que é implementada pelas classes de valor e structs de valor. Não deve ser usado explicitamente no código.  
@@ -30,4 +30,4 @@ interface class IValueType
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)
+ [Namespace Platform](../cppcx/platform-namespace-c-cx.md)

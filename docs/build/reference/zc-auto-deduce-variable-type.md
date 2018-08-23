@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caa64f64b75145c850c6f6393570dc3f9ba0b0d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b306a104b9f71d536684e62f6dda1cac45b1d9dd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379569"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612935"
 ---
 # <a name="zcauto-deduce-variable-type"></a>/Zc:auto (deduzir tipo variável)
 
-O **/ZC: auto [-]** opção de compilador informa ao compilador como usar o [palavra-chave auto](../../cpp/auto-keyword.md) para declarar variáveis. Se você especificar a opção padrão, **/ZC: auto**, o compilador deduz o tipo da variável declarada de sua expressão de inicialização. Se você especificar **/Zc:auto-**, o compilador aloca a variável para a classe de armazenamento automático.
+O **/ZC: auto [-]** opção de compilador informa ao compilador como usar o [palavra-chave auto](../../cpp/auto-keyword.md) para declarar variáveis. Se você especificar a opção padrão, **/ZC: auto**, o compilador deduzirá o tipo da variável declarada da expressão de inicialização. Se você especificar **/Zc:auto-**, o compilador alocará a variável de classe de armazenamento automática.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,17 +36,17 @@ O **/ZC: auto [-]** opção de compilador informa ao compilador como usar o [pal
 
 ## <a name="remarks"></a>Comentários
 
-O padrão C++ define um significado original e um significado revisado para a palavra-chave `auto`. Antes de [!INCLUDE[cpp_dev10_long](../../build/includes/cpp_dev10_long_md.md)], a palavra-chave declara uma variável na classe de armazenamento automático; ou seja, uma variável que tem um tempo de vida de local. Começando com [!INCLUDE[cpp_dev10_long](../../build/includes/cpp_dev10_long_md.md)], a palavra-chave deduz o tipo de uma variável da expressão de inicialização da declaração. Use o **/ZC: auto [-]** opção de compilador para informar ao compilador para usar o significado original ou revisado o `auto` palavra-chave. O **/ZC: auto** opção é ativada por padrão. O [/ permissivo-](permissive-standards-conformance.md) opção não altera a configuração padrão de **/ZC: auto**.
+O padrão C++ define um significado original e um significado revisado para a palavra-chave `auto`. Antes do Visual C++ 2010, a palavra-chave declara uma variável na classe de armazenamento automática; ou seja, uma variável que tem um tempo de vida local. Começando com o Visual C++ 2010, a palavra-chave deduz o tipo de uma variável da expressão de inicialização da declaração. Use o **/ZC: auto [-]** para informar ao compilador para usar o significado original ou revisado da opção do compilador o `auto` palavra-chave. O **/ZC: auto** opção permanece ativada por padrão. O [/permissive--](permissive-standards-conformance.md) opção não altera a configuração padrão de **/ZC: auto**.
 
-O compilador emite uma mensagem de diagnóstica apropriada se o uso do `auto` palavra-chave contradiz atual **/ZC: auto** opção de compilador. Para obter mais informações, consulte [palavra-chave auto](../../cpp/auto-keyword.md). Para obter mais informações sobre problemas de conformidade com o Visual C++, consulte [comportamento não padrão](../../cpp/nonstandard-behavior.md).
+O compilador emite uma mensagem de diagnóstico apropriada se o uso do `auto` palavra-chave contradiz atual **/ZC: auto** opção de compilador. Para obter mais informações, consulte [palavra-chave auto](../../cpp/auto-keyword.md). Para obter mais informações sobre problemas de conformidade com o Visual C++, consulte [comportamento não padrão](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Para definir essa opção do compilador no Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
 
-1. Adicionar **/ZC: auto** ou **/Zc:auto-** para o **opções adicionais:** painel.
+1. Adicione **/ZC: auto** ou **/Zc:auto-** para o **opções adicionais:** painel.
 
 ## <a name="see-also"></a>Consulte também
 

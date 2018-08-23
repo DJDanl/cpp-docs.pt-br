@@ -15,34 +15,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25e4bb6db6114f7d64522dfe145d51ffaabd476a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 403330097f1428ee0d7650f5931aef1621f61b11
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874201"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612595"
 ---
 # <a name="getmodulebase-function"></a>Função GetModuleBase
-Recupera um [ModuleBase](../windows/modulebase-class.md) ponteiro que permite para incrementar e decrementar a contagem de referência de um [RuntimeClass](../windows/runtimeclass-class.md) objeto.  
+Recupera uma [ModuleBase](../windows/modulebase-class.md) ponteiro que permite para incrementar e diminuir a contagem de referência de um [RuntimeClass](../windows/runtimeclass-class.md) objeto.
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Sintaxe
   
-```cpp  
+```cpp
 inline Details::ModuleBase* GetModuleBase() throw()  
-```  
+```
   
-## <a name="return-value"></a>Valor de retorno  
- Um ponteiro para um `ModuleBase` objeto.  
+## <a name="return-value"></a>Valor de retorno
+ Um ponteiro para um `ModuleBase` objeto.
   
-## <a name="remarks"></a>Comentários  
- Essa função é usada internamente para incrementar e decrementar contagens de referência de objeto.  
+## <a name="remarks"></a>Comentários
+ Essa função é usada internamente para incrementar e diminuir contagens de referência de objeto.
   
- Você pode usar essa função para controlar as contagens de referência chamando [: Incrementobjectcount](../windows/modulebase-incrementobjectcount-method.md) e [: Decrementobjectcount](../windows/modulebase-decrementobjectcount-method.md).  
+ Você pode usar essa função para controlar as contagens de referência chamando [modulebase:: Incrementobjectcount](../windows/modulebase-incrementobjectcount-method.md) e [modulebase:: Decrementobjectcount](../windows/modulebase-decrementobjectcount-method.md).
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** implements.h  
+## <a name="requirements"></a>Requisitos
+ **Cabeçalho:** Implements. h
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft::WRL
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
  [Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

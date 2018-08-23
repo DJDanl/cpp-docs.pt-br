@@ -1,5 +1,5 @@
 ---
-title: Classe Platform::Collections::UnorderedMapView | Microsoft Docs
+title: '{1&gt;classe Platform::Collections::unorderedmapview&lt;1} | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,16 +7,16 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6b1541eff80b6aac4d8d82bfb7ea6ceb977843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a2d8668f0ed5d58ce3b8028fb02d572bb04f8bc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092671"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613568"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Classe Platform::Collections::UnorderedMapView
 Representa uma exibição somente leitura em um *mapa*, que é uma coleção de pares chave-valor.  
@@ -42,7 +42,7 @@ ref class UnorderedMapView sealed;
  Um tipo que fornece um objeto de função que pode comparar a igualdade de dois valores de chave. Por padrão, [std:: equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>Comentários  
- UnorderedMapView é uma implementação concreta de C++ do [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) interface que é transmitida pela interface binária de aplicativo (ABI). Para obter mais informações, consulte [Coleções (C++/CX)](../cppcx/collections-c-cx.md).  
+ UnorderedMapView é uma implementação concreta de C++ do [3&gt;{4&gt;Windows::Foundation::Collections::imapview&lt;4}&lt;3}\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) interface que é transmitida pela interface binária de aplicativo (ABI). Para obter mais informações, consulte [Coleções (C++/CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Membros  
   
@@ -59,7 +59,7 @@ ref class UnorderedMapView sealed;
 |[UnorderedMapView::First](#first)|Retorna um iterador que é inicializado para o primeiro elemento na exibição do mapa.|  
 |[UnorderedMapView::HasKey](#haskey)|Determina se o UnorderedMapView atual contém a chave especificada.|  
 |[UnorderedMapView::Lookup](#lookup)|Recupera o elemento na chave especificada no objeto UnorderedMapView atual.|  
-|[Unorderedmapview](#size)|Retorna o número de elementos no objeto UnorderedMapView atual.|  
+|[Unorderedmapview:: Size](#size)|Retorna o número de elementos no objeto UnorderedMapView atual.|  
 |[UnorderedMapView::Split](#split)|Divide um objeto UnorderedMapView original em dois objetos UnorderedMapView.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
@@ -71,7 +71,7 @@ ref class UnorderedMapView sealed;
  **Namespace:** Platform::Collections  
 
 ## <a name="first"></a>  Método UnorderedMapView::First
-Retorna um iterador que especifica o primeiro [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento no mapa não ordenado.  
+Retorna um iterador que especifica o primeiro [ikeyvaluepair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento no mapa não ordenado.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -126,7 +126,7 @@ V Lookup(K key);
 
 
 ## <a name="size"></a>  Método UnorderedMapView::Size
-Retorna o número de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos em UnorderedMapView.  
+Retorna o número de [ikeyvaluepair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos em UnorderedMapView.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -221,10 +221,10 @@ UnorderedMapView(
  O typename de UnorderedMapView.  
   
  `H`  
- Um objeto de função que gera um valor de hash para uma chave. O padrão será a [std:: hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104) para os tipos que `std::hash` oferece suporte.  
+ Um objeto de função que gera um valor de hash para uma chave. O padrão é [std:: hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104) para os tipos que `std::hash` dá suporte.  
   
  `P`  
- Um tipo que fornece um objeto de função que pode comparar duas chaves para determinar sua igualdade. O padrão será a [std:: equal_to\<K >](../standard-library/equal-to-struct.md).  
+ Um tipo que fornece um objeto de função que pode comparar duas chaves para determinar sua igualdade. O padrão é [std:: equal_to\<K >](../standard-library/equal-to-struct.md).  
   
  `m`  
  Uma referência ou [Lvalues e Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) para um [std:: unordered_map](../standard-library/unordered-map-class.md) que é usado para inicializar UnorderedMapView.  
