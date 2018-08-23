@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 572724dcebbdb3921b26d6c688ff5d68d1392437
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78815ed42833c48074abbb4b0c0fa0203f8c35a1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088336"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597314"
 ---
 # <a name="platformiboxarray-interface"></a>Interface Platform::IBoxArray
 `IBoxArray` é o wrapper para arrays de tipos de valores que são transmitidos pela interface binária de aplicativo (ABI) ou armazenados em coleções de elementos `Platform::Object^` como aqueles em controles XAML.  
@@ -38,7 +38,7 @@ interface class IBoxArray
  O tipo do valor demarcado em cada elemento da matriz.  
   
 ### <a name="remarks"></a>Comentários  
- `IBoxArray` é o C + + nome CX para `Windows::Foundation::IReferenceArray`.  
+ `IBoxArray` é o C + + / nome CX para `Windows::Foundation::IReferenceArray`.  
   
 ### <a name="members"></a>Membros  
  A interface `IBoxArray` herda da interface `IValueType` . `IBoxArray` também tem estes membros:  
@@ -64,7 +64,7 @@ property T Value {T get();}
  Retorna o valor que foi originalmente armazenado neste objeto.  
   
 ### <a name="remarks"></a>Comentários  
- Para obter um exemplo, consulte [Boxing](../cppcx/boxing-c-cx.md).  
+ Por exemplo, consulte [conversão Boxing](../cppcx/boxing-c-cx.md).  
   
   
 ## <a name="see-also"></a>Consulte também  

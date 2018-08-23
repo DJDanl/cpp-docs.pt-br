@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - end Function
 ms.assetid: fb837bff-fc76-4bae-9096-facf0e03041c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 771d7e83024f9c258df1437ff902d638bffc8478
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec25b92ca9ce21f72ff2fb573aae316ef1c19eac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086415"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596644"
 ---
 # <a name="end-function"></a>Função end
 Retorna um iterador que aponta além do fim de uma coleção que é acessada pelo parâmetro de interface especificado.  
@@ -55,7 +55,7 @@ template <typename T>
  Uma coleção de vetor\<T > ou VectorView\<T > objetos que são acessados por um IVector\<T >, ou IVectorView\<T > interface.  
   
  `i`  
- Objetos de uma coleção de tempo de execução do Windows que são acessados por um IIterable\<T > interface.  
+ Objetos de uma coleção de arbitrários em tempo de execução do Windows que são acessados por um IIterable\<T > interface.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um iterador que aponta para além do fim da coleção.  
@@ -71,4 +71,4 @@ template <typename T>
  **Namespace:** Windows::Foundation::Collections  
   
 ## <a name="see-also"></a>Consulte também  
- [Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+ [Namespace Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)

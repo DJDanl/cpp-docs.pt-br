@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a59f1d677a3412f8f3edd016a9c719a8e221d6f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 373247627e8daae87bea18c66980a15e6662a208
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015566"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592477"
 ---
 # <a name="modulemethodreleasenotifiermethod-data-member"></a>Membro de dados Module::MethodReleaseNotifier::method_
-Contém um ponteiro para o manipulador de eventos para o atual **methodreleasenotifier** objeto.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-void (T::* method_)();  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe Module::MethodReleaseNotifier](../windows/module-methodreleasenotifier-class.md)
+
+Contém um ponteiro para o manipulador de eventos para o atual **methodreleasenotifier** objeto.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+void (T::* method_)();
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Classe Module::MethodReleaseNotifier](../windows/module-methodreleasenotifier-class.md)

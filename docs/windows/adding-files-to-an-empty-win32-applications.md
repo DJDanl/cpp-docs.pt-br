@@ -18,29 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1efde876cadd5a8620bef83c37a61b8b471dba8b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6a81caaf62154d8bdcf1c357da2cc156e2da21f3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019232"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594397"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Adicionando arquivos a aplicativos Win32 vazios
-### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>Para adicionar os arquivos para um aplicativo da área de trabalho do Windows vazio  
-  
-1.  Selecione o diretório no **Gerenciador de soluções**.  
-  
-2.  O nome do diretório com o botão direito, clique em **Add** do menu de atalho e clique **Item existente**.  
-  
-3.  No **caixa de diálogo Adicionar Item existente**, navegue até os arquivos que você deseja adicionar ao seu projeto.  
-  
-4.  Clique em **OK**.  
-  
- Para adicionar arquivos que não são código-fonte, cabeçalho ou arquivos de recurso ao seu projeto, clique com botão direito do **solução** nó no **Gerenciador de soluções** e adicione os arquivos ao projeto da mesma maneira. Um **Miscelânea** pasta será criada para manter os outros arquivos em seu projeto.  
-  
+
+### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>Para adicionar os arquivos para um aplicativo da área de trabalho do Windows vazio
+
+1. Selecione o diretório no **Gerenciador de soluções**.
+
+2. O nome do diretório com o botão direito, clique em **Add** do menu de atalho e clique **Item existente**.
+
+3. No **caixa de diálogo Adicionar Item existente**, navegue até os arquivos que você deseja adicionar ao seu projeto.
+
+4. Clique em **OK**.
+
+Para adicionar arquivos que não são código-fonte, cabeçalho ou arquivos de recurso ao seu projeto, clique com botão direito do **solução** nó no **Gerenciador de soluções** e adicione os arquivos ao projeto da mesma maneira. Um **Miscelânea** pasta será criada para manter os outros arquivos em seu projeto.
+
 > [!NOTE]
->  Antes de compilar seu projeto, você precisará especificar opções de build para esses arquivos para que eles são incluídos corretamente em seu aplicativo concluído. Para obter mais informações, consulte [especificando as configurações de projeto com páginas de propriedades](../ide/property-pages-visual-cpp.md) e [criando um programa em C/C++](../build/building-c-cpp-programs.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Criando um aplicativo de área de trabalho do Windows vazio](../windows/creating-an-empty-windows-desktop-application.md)   
- [Implantando aplicativos](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+> Antes de compilar seu projeto, você precisará especificar opções de build para esses arquivos para que eles são incluídos corretamente em seu aplicativo concluído. Para obter mais informações, consulte [especificando as configurações de projeto com páginas de propriedades](../ide/property-pages-visual-cpp.md) e [criando um programa em C/C++](../build/building-c-cpp-programs.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Criando um aplicativo da área de trabalho do Windows vazio](../windows/creating-an-empty-windows-desktop-application.md)  
+[Implantando aplicativos](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

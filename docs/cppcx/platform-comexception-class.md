@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79c7824a64fc9bfa4bef761e82505195835146ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f67088d7e40f60922fa2fe03993a280284cbf76e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090517"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596994"
 ---
 # <a name="platformcomexception-class"></a>Classe Platform::COMException
 Representa um ou mais erros COM que ocorrem durante a execução do aplicativo. COMException é a classe base para um conjunto de exceções padrão predefinidas.  
@@ -77,9 +77,9 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 |OutOfMemoryException|E_OUTOFMEMORY|Gerada quando a memória para concluir a operação é insuficiente.|  
   
 ### <a name="requirements"></a>Requisitos  
- **Suporte mínimo de cliente:** Windows 8  
+ **Mínimo de cliente com suporte:** Windows 8  
   
- **Suporte mínimo de servidor:** Windows Server 2012  
+ **Mínimo de servidor com suporte:** Windows Server 2012  
   
  **Namespace:** Platform  
   
@@ -129,4 +129,4 @@ public:property String^ Message {    String^ get();}
     
 
 ## <a name="see-also"></a>Consulte também  
- [Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)
+ [Namespace Platform](../cppcx/platform-namespace-c-cx.md)

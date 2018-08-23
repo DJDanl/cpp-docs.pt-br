@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 472cdaeec78c30d49f3160ac4d632eb95ef8e71a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 54c370029b4e6fc90d1f210164de7d7ecb22f3a5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641867"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595413"
 ---
 # <a name="comptrrefoperator-t-operator"></a>ComPtrRef::operator T* Operador
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-operator T*();  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Retorna o valor da [PTR _](../windows/comptrrefbase-ptr-data-member.md) membro de dados do atual **ComPtrRef** objeto.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** client.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe ComPtrRef](../windows/comptrref-class.md)   
- [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+operator T*();
+```
+
+## <a name="remarks"></a>Comentários
+
+Retorna o valor da [PTR _](../windows/comptrrefbase-ptr-data-member.md) membro de dados do atual **ComPtrRef** objeto.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** client.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Consulte também
+
+[Classe ComPtrRef](../windows/comptrref-class.md)  
+[Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

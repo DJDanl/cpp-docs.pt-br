@@ -14,16 +14,16 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afb7bd027fca215e1c10c111132ee881ad49548
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b63801ac98027f490463f36df23541993528d33b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018059"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596192"
 ---
 # <a name="international-enabling"></a>Habilitação internacional
 Código mais tradicional de C e C++ faz suposições sobre manipulação de caracteres e cadeia de caracteres que não funcionam bem para aplicativos internacionais. Embora o MFC e a biblioteca de tempo de execução suportam Unicode ou MBCS, ainda há trabalho a fazer. Para guiá-lo, esta seção explica o significado de "habilitação internacional" no Visual C++:  

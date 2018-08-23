@@ -17,45 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97c998f7e0814c5acae55dd3e9b747faed0242e1
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e6f720d0a918a22aee4a4cade6af1cb02a90e8d8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016217"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588863"
 ---
 # <a name="modulereleasenotifier-class"></a>Classe Module::ReleaseNotifier
-Invoca um manipulador de eventos quando o último objeto em um módulo é liberado.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-class ReleaseNotifier;  
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[Destruidor Module::ReleaseNotifier::~ReleaseNotifier](../windows/module-releasenotifier-tilde-releasenotifier-destructor.md)|Realiza o desligamento da instância atual do **releasenotifier** classe.|  
-|[Construtor Module::ReleaseNotifier::ReleaseNotifier](../windows/module-releasenotifier-releasenotifier-constructor.md)|Inicializa uma nova instância dos **releasenotifier** classe.|  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[Método Module::ReleaseNotifier::Invoke](../windows/module-releasenotifier-invoke-method.md)|Quando implementado, chama um manipulador de eventos quando o último objeto em um módulo é liberado.|  
-|[Module::ReleaseNotifier::Release](../windows/module-releasenotifier-release.md)|Exclui o atual **releasenotifier** se o objeto for construído com um parâmetro de objeto **verdadeiro**.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `ReleaseNotifier`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** module.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Consulte também
- [Classe Module](../windows/module-class.md)
+
+Invoca um manipulador de eventos quando o último objeto em um módulo é liberado.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+class ReleaseNotifier;
+```
+
+## <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[Destruidor Module::ReleaseNotifier::~ReleaseNotifier](../windows/module-releasenotifier-tilde-releasenotifier-destructor.md)|Realiza o desligamento da instância atual do **releasenotifier** classe.|
+|[Construtor Module::ReleaseNotifier::ReleaseNotifier](../windows/module-releasenotifier-releasenotifier-constructor.md)|Inicializa uma nova instância dos **releasenotifier** classe.|
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[Método Module::ReleaseNotifier::Invoke](../windows/module-releasenotifier-invoke-method.md)|Quando implementado, chama um manipulador de eventos quando o último objeto em um módulo é liberado.|
+|[Module::ReleaseNotifier::Release](../windows/module-releasenotifier-release.md)|Exclui o atual **releasenotifier** se o objeto for construído com um parâmetro de objeto **verdadeiro**.|
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`ReleaseNotifier`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+[Classe Module](../windows/module-class.md)

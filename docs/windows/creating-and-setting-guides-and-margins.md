@@ -22,47 +22,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11631a2ac6a2c83cd667d14a490c57b1a191c1a7
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2fedae08467243c0fe981b287e63f4e2e041d910
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642552"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589160"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>Criando e definindo guias e margens
-Se você estiver movendo controles, adicionando controles ou reorganizando um layout atual, guias de podem ajudar a alinhar controles com precisão dentro de uma caixa de diálogo. Guias são exibidas como azul pontilhada entre a caixa de diálogo exibida no editor e setas correspondentes nas réguas (na parte superior e o lado esquerdo dos **caixa de diálogo** editor).  
-  
- Quando você cria uma caixa de diálogo, são fornecidas as quatro margens. As margens são modificadas guias, que aparecem como linhas pontilhadas azuis.  
-  
-### <a name="to-create-a-guide"></a>Para criar uma guia  
-  
-1.  Dentro da régua, clique uma vez para criar uma guia. (Um clique cria uma nova guia; clicar duas vezes em lançamentos a [guia de caixa de diálogo de configurações](../windows/guide-settings-dialog-box.md) na qual você pode especificar configurações do guia.)  
-  
-### <a name="to-set-a-guide"></a>Para definir um guia  
-  
-1.  Na caixa de diálogo, clique na guia e arraste-o para uma nova posição. (Você também pode clicar na seta na régua à arraste a guia associada).  
-  
-     As coordenadas do guia são exibidas na barra de status na parte inferior da janela e na régua. Mova o ponteiro sobre a seta na régua para exibir a posição exata do guia.  
-  
-### <a name="to-delete-a-guide"></a>Para excluir uma guia  
-  
-1.  Arraste a guia fora da caixa de diálogo.  
-  
- \- ou -  
-  
--   Arraste a seta correspondente fora da régua.  
-  
-### <a name="to-move-margins"></a>Para mover as margens  
-  
-1.  Arraste a margem para a nova posição.  
-  
-     Para tornar uma margem desaparecer, mova a margem para uma posição zero. Para trazer de volta a margem, coloque o ponteiro sobre a margem posição zero e mover a margem para a posição.  
-  
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Consulte também  
- [Estados do Editor de caixa de diálogo (guias e grades)](../windows/dialog-editor-states-guides-and-grids.md)   
- [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)
+
+Se você estiver movendo controles, adicionando controles ou reorganizando um layout atual, guias de podem ajudar a alinhar controles com precisão dentro de uma caixa de diálogo. Guias são exibidas como azul pontilhada entre a caixa de diálogo exibida no editor e setas correspondentes nas réguas (na parte superior e o lado esquerdo dos **caixa de diálogo** editor).
+
+Quando você cria uma caixa de diálogo, são fornecidas as quatro margens. As margens são modificadas guias, que aparecem como linhas pontilhadas azuis.
+
+### <a name="to-create-a-guide"></a>Para criar uma guia
+
+1. Dentro da régua, clique uma vez para criar uma guia. (Um clique cria uma nova guia; clicar duas vezes em lançamentos a [guia de caixa de diálogo de configurações](../windows/guide-settings-dialog-box.md) na qual você pode especificar configurações do guia.)
+
+### <a name="to-set-a-guide"></a>Para definir um guia
+
+1. Na caixa de diálogo, clique na guia e arraste-o para uma nova posição. (Você também pode clicar na seta na régua à arraste a guia associada).
+
+   As coordenadas do guia são exibidas na barra de status na parte inferior da janela e na régua. Mova o ponteiro sobre a seta na régua para exibir a posição exata do guia.
+
+### <a name="to-delete-a-guide"></a>Para excluir uma guia
+
+1. Arraste a guia fora da caixa de diálogo.
+
+\- ou -
+
+- Arraste a seta correspondente fora da régua.
+
+### <a name="to-move-margins"></a>Para mover as margens
+
+1. Arraste a margem para a nova posição.
+
+   Para tornar uma margem desaparecer, mova a margem para uma posição zero. Para trazer de volta a margem, coloque o ponteiro sobre a margem posição zero e mover a margem para a posição.
+
+Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Consulte também
+
+[Estados do Editor de Caixa de Diálogo (guias e grades)](../windows/dialog-editor-states-guides-and-grids.md)  
+[Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)

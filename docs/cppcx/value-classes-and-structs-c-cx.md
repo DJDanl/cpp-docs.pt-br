@@ -1,5 +1,5 @@
 ---
-title: Classes e estruturas de valor (C + + CX) | Microsoft Docs
+title: Classes e estruturas de valor (C + + c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b623e706fae0dfd8fca6b9aaf217e76b27dbbda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 226198c35dc0b7e7e1c7fab4ce81fc4782b5ca38
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090706"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589050"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classes e estruturas de valor (C++/CX)
-Um *estrutura de valor* ou *classe de valor* é um compatível com o tempo de execução POD ("estrutura plain old data") do Windows. Ela tem um tamanho fixo e consiste somente em campos; diferentemente de uma classe ref, ela não tem propriedades.  
+Um *valor&lt;1* ou *classe de valor* é um Windows compatível com o tempo de execução POD ("estrutura plain old data"). Ela tem um tamanho fixo e consiste somente em campos; diferentemente de uma classe ref, ela não tem propriedades.  
   
  Os exemplos a seguir mostram como declarar e inicializar estruturas de valor.  
   
@@ -59,7 +59,7 @@ Um *estrutura de valor* ou *classe de valor* é um compatível com o tempo de ex
   
  Uma *classe de valor* é como uma `value struct` , exceto pelo fato de que seus campos devem receber acessibilidade pública explicitamente. É declarada com o uso da palavra-chave `value class` .  
   
- Uma classe de valor ou estrutura de valor pode conter como campos somente tipos numéricos fundamentais, classes enum, `Platform::String^`, ou [Platform:: ibox \<T > ^](../cppcx/platform-ibox-interface.md) onde T é uma classe de tipo ou enum numérico ou classe de valor ou estrutura. Um campo `IBox<T>^` pode ter o valor `nullptr`; é assim que o C++ implementa o conceito de *tipos que permitem valor nulo*.  
+ Uma estrutura de valor ou classe de valor pode conter como campos somente tipos numéricos fundamentais, classes enum, `Platform::String^`, ou [Platform:: ibox \<T > ^](../cppcx/platform-ibox-interface.md) onde T é uma classe de tipo ou de enumeração numérico ou a classe ou struct. Um campo `IBox<T>^` pode ter o valor `nullptr`; é assim que o C++ implementa o conceito de *tipos que permitem valor nulo*.  
   
  Uma classe ou uma estrutura de valor que contém um tipo `Platform::String^` ou `IBox<T>^` como membro não aceita `memcpy`.  
   

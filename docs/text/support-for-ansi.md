@@ -12,21 +12,21 @@ helpviewer_keywords:
 - ANSI [MFC]
 - MFC [C++], ANSI support
 ms.assetid: f98440ad-90fc-42f5-bf74-975cd793c49c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30e902cb00210ba3a6d566a5725b65dfdce3e43d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dde8693009cda20b59262034679aea1a73543401
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854224"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595656"
 ---
 # <a name="support-for-ansi"></a>Suporte para ANSI
-A maioria dos métodos e classes MFC suportam o conjunto de caracteres ANSI, embora a estrutura MFC como um todo é evoluindo gradualmente para suporte somente Unicode do conjunto de caracteres. Devido os aprimoramentos em andamento no [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] e controles comuns do Windows versão 6.1, suporte para vários métodos e classes de ANSI é substituída.  Para obter mais informações, consulte [preteridos ANSI APIs](../mfc/deprecated-ansi-apis.md) e [suporte para Unicode](../text/support-for-unicode.md).  
+A maioria dos métodos e classes MFC suportam o conjunto de caracteres ANSI, embora a estrutura MFC como um todo é gradualmente evoluindo para dar suporte a apenas o Unicode do conjunto de caracteres. Por causa dos aprimoramentos contínuos no Windows Vista e controles comuns do Windows versão 6.1, o suporte para vários métodos e classes de ANSI é preterido.  Para obter mais informações, consulte [preteridos ANSI APIs](../mfc/deprecated-ansi-apis.md) e [suporte para Unicode](../text/support-for-unicode.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Suporte a Unicode](../text/support-for-unicode.md)   
+ [Suporte para Unicode](../text/support-for-unicode.md)   
  [APIs ANSI preteridas](../mfc/deprecated-ansi-apis.md)   
  [Shell e versões de controles comuns](http://msdn.microsoft.com/library/windows/desktop/bb776779)

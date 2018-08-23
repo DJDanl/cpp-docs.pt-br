@@ -17,38 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 831f1fbcb2da205fa08286a1fbbbf414e66075d4
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: fe8d41aded38db7cde5316e04cfa1689845aa4e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019924"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595466"
 ---
 # <a name="moduletype-enumeration"></a>Enumeração ModuleType
-Especifica se um módulo deve dar suporte a um servidor em processo ou um servidor fora do processo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-enum ModuleType;  
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="values"></a>Valores  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|`InProc`|Um servidor em processo.|  
-|`OutOfProc`|Um servidor de out-of-process.|  
-|`DisableCaching`|Desabilite o mecanismo de cache no módulo.|  
-|`InProcDisableCaching`|Combinação de `InProc` e `DisableCaching`.|  
-|`OutOfProcDisableCaching`|Combinação de `OutOfProc` e `DisableCaching`.|  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+
+Especifica se um módulo deve dar suporte a um servidor em processo ou um servidor fora do processo.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+enum ModuleType;
+```
+
+## <a name="members"></a>Membros
+
+### <a name="values"></a>Valores
+
+|Nome|Descrição|
+|----------|-----------------|
+|`InProc`|Um servidor em processo.|
+|`OutOfProc`|Um servidor de out-of-process.|
+|`DisableCaching`|Desabilite o mecanismo de cache no módulo.|
+|`InProcDisableCaching`|Combinação de `InProc` e `DisableCaching`.|
+|`OutOfProcDisableCaching`|Combinação de `OutOfProc` e `DisableCaching`.|
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

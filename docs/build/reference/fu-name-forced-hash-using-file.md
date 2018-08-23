@@ -1,5 +1,5 @@
 ---
-title: '-/FU (nome forçado #using arquivo) | Microsoft Docs'
+title: '-FU (nome forçado #using arquivo) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c9a27d8c689b198bde47047969d38cf14b41c46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a92e8d30d2c15ac07bc5a6ff3e6438da46438674
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375669"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597495"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (nome forçado #usando arquivo)
-Uma opção de compilador que podem ser usados como uma alternativa para passar um nome de arquivo para [#using diretiva](../../preprocessor/hash-using-directive-cpp.md) no código-fonte.  
+Uma opção de compilador que você pode usar como uma alternativa ao passar um nome de arquivo para [# diretiva using](../../preprocessor/hash-using-directive-cpp.md) no código-fonte.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,19 +43,19 @@ Uma opção de compilador que podem ser usados como uma alternativa para passar 
 ## <a name="remarks"></a>Comentários  
  O comutador /FU leva apenas um nome de arquivo. Para especificar vários arquivos, use /FU com cada um deles.  
   
- Se você estiver usando [!INCLUDE[cppcli](../../build/reference/includes/cppcli_md.md)] e fazem referência a metadados para usar o [Friend Assemblies](../../dotnet/friend-assemblies-cpp.md) recurso, você não pode usar **/FU**. Você deve referenciar os metadados no código usando `#using`— junto com o `[as friend]` atributo. Assemblies amigáveis não são suportados em [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]).  
+ Se você estiver usando o C + + c++ CLI e fazem referência a metadados para usar o [Assemblies amigáveis](../../dotnet/friend-assemblies-cpp.md) recurso, não é possível usar **/FU**. Você deve referenciar os metadados no código usando `#using`— junto com o `[as friend]` atributo. Assemblies amigáveis não têm suporte em extensões de componentes do Visual C++ C + + c++ /CLI CX.  
   
- Para obter informações sobre como criar um assembly ou módulo para o common language runtime (CLR), consulte [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md). Para obter informações sobre como compilar [!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)], consulte [compilando aplicativos e bibliotecas](../../cppcx/building-apps-and-libraries-c-cx.md).  
+ Para obter informações sobre como criar um assembly ou módulo para o common language runtime (CLR), consulte [/clr (compilação de tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md). Para obter informações sobre como compilar no C + + c++ /CX, consulte [compilando aplicativos e bibliotecas](../../cppcx/building-apps-and-libraries-c-cx.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
 2.  Selecione o **C/C++** pasta.  
   
 3.  Selecione o **avançado** página de propriedades.  
   
-4.  Modificar o **forçar #using** propriedade.  
+4.  Modificar a **forçar #using** propriedade.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   

@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d7d2299dd1395e93f4cd88cbeaec6c0b9467308
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f552327156d9fc1abe5e921f3b59b1fb4132ff3d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092425"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596596"
 ---
 # <a name="platformagile-class"></a>Classe Platform::Agile
-Representa um objeto que tem um MashalingBehavior=Standard como um objeto Agile, que reduz a possibilidade de exceções de threading do tempo de execução. O `Agile<T>` permite que o objeto não Agile chame ou seja chamado do mesmo thread ou de um thread diferente. Para obter mais informações, consulte [de Threading e Marshaling](../cppcx/threading-and-marshaling-c-cx.md).  
+Representa um objeto que tem um MashalingBehavior=Standard como um objeto Agile, que reduz a possibilidade de exceções de threading do tempo de execução. O `Agile<T>` permite que o objeto não Agile chame ou seja chamado do mesmo thread ou de um thread diferente. Para obter mais informações, consulte [Threading e Marshaling](../cppcx/threading-and-marshaling-c-cx.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ class Agile;
  O typename para a classe não Agile.  
   
 ### <a name="remarks"></a>Comentários  
- A maioria das classes em tempo de execução do Windows é ágil. Um objeto Agile pode chamar ou ser chamado por um objeto em processo ou fora de processo no mesmo thread ou em um thread diferente. Se um objeto não for Agile, encapsule o objeto não Agile em um objeto `Agile<T>` , que seja Agile. Em seguida, pode-se realizar marshaling do objeto `Agile<T>` e o objeto não Agile subjacente pode ser usado.  
+ A maioria das classes no tempo de execução do Windows são ágeis. Um objeto Agile pode chamar ou ser chamado por um objeto em processo ou fora de processo no mesmo thread ou em um thread diferente. Se um objeto não for Agile, encapsule o objeto não Agile em um objeto `Agile<T>` , que seja Agile. Em seguida, pode-se realizar marshaling do objeto `Agile<T>` e o objeto não Agile subjacente pode ser usado.  
   
  A classe `Agile<T>` é uma classe do C++ nativa e padrão e requer o `agile.h`. Representa o *contexto*do objeto não Agile e do objeto Agile. O contexto especifica um modelo de threading e comportamento de marshaling de um objeto Agile. O sistema operacional usa o contexto para determinar como realizar marshaling de um objeto.  
   
@@ -77,9 +77,9 @@ class Agile;
  `Agile`  
   
 ### <a name="requirements"></a>Requisitos  
- **Suporte mínimo de cliente:** Windows 8  
+ **Mínimo de cliente com suporte:** Windows 8  
   
- **Suporte mínimo de servidor:** Windows Server 2012  
+ **Mínimo de servidor com suporte:** Windows Server 2012  
   
  **Namespace:** Platform  
   
@@ -125,7 +125,7 @@ Destrói a instância atual da classe Agile.
 ### <a name="remarks"></a>Comentários  
  Este destruidor também libera o objeto representado pelo objeto Agile atual.  
   
-## <a name="get"></a>   Método Agile:
+## <a name="get"></a>   Método Agile:: Get
 Retorna um identificador para o objeto representado pelo objeto Agile atual.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -141,7 +141,7 @@ Retorna um identificador para o objeto representado pelo objeto Agile atual.
   
  O tipo do valor retornado é, de fato, um tipo interno não revelado. Uma maneira conveniente de manter o valor retornado é atribuí-lo a uma variável que é declarada com o **automática** palavra-chave de dedução de tipo. Por exemplo, `auto x = myAgileTvariable->Get();`.  
   
-## <a name="getaddressof"></a>  Método getaddressof
+## <a name="getaddressof"></a>  Método Agile:: getaddressof
 Reinicializa o objeto Agile atual e retorna o endereço de um identificador para um objeto do tipo `T`.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -162,7 +162,7 @@ throw();
 ### <a name="remarks"></a>Comentários  
  Esta operação libera a representação atual de um objeto do tipo `T`, se houver; reinicializa membros de dados do objeto Agile; adquire o contexto de threading atual; e, em seguida, retorna o endereço de uma variável de objeto de identificador que pode representar um objeto não agile. Para fazer com que uma instância da classe Agile representar um objeto, use o operador de atribuição ([Agile:: Operator =](#operator-assign)) para atribuir o objeto para a instância da classe Agile.  
 
-## <a name="getaddressofforinout"></a>  Método getaddressofforinout
+## <a name="getaddressofforinout"></a>  Método Agile:: getaddressofforinout
 Retorna o endereço de um identificador para o objeto representado pelo objeto Agile atual.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -183,7 +183,7 @@ T^* GetAddressOfForInOut()  throw();
 ### <a name="remarks"></a>Comentários  
  Esta operação adquire o contexto de threading atual e retorna o endereço de um identificador para o objeto subjacente.  
 
-## <a name="release"></a>  Método Agile:
+## <a name="release"></a>  Método Agile:: Release
 Descarta o objeto e o contexto subjacentes do objeto Agile atual.  
   
 ## <a name="syntax"></a>Sintaxe  

@@ -1,36 +1,36 @@
 ---
-title: Tipos fundamentais (C + + CX) | Microsoft Docs
+title: Tipos fundamentais (C++ c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0da64edaa3f94ac9813408d936e3f83783e6b241
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e30e7ced4f4e761f7342811c533c1f361d0b1df
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098531"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597867"
 ---
 # <a name="fundamental-types-ccx"></a>Tipos fundamentais (C++/CX)
-Além de tipos C++ padrão internos, C + + CX dá suporte ao sistema de tipo é definido de acordo com a arquitetura de tempo de execução do Windows fornece definições de tipo para tipos de Windows Runtime fundamentais que são mapeados para tipos C++ padrão. C + + CX implementa booliano, caractere e os tipos numéricos fundamentais. Essas definições de tipo são definidas no namespace `default` , que nunca precisa ser especificado explicitamente. Além disso, C + + CX fornece wrappers e implementações concretas para determinados tipos de tempo de execução do Windows e as interfaces.  
+Além de tipos C++ padrão internos, C + + c++ /CX oferece suporte ao sistema de tipo que é definido pela arquitetura de tempo de execução do Windows, fornecendo definições de tipo para tipos de tempo de execução do Windows fundamentais que são mapeados para tipos C++ padrão... C + + c++ /CX implementa booliano, caractere e numéricos tipos fundamentais. Essas definições de tipo são definidas no namespace `default` , que nunca precisa ser especificado explicitamente. Além disso, C + + c++ /CLI CX fornece wrappers e implementações concretas para determinados tipos de tempo de execução do Windows e interfaces.  
   
 ## <a name="boolean-and-character-types"></a>Tipos de caractere e booliano  
  A tabela a seguir lista o valor booliano interno e os tipos de caracteres, bem como seus equivalentes padrão em C++.  
   
-|Namespace|C + + nome CX|Definição|Nome padrão do C++|Intervalo de valores|  
+|Namespace|C + + / nome do CX|Definição|Nome padrão do C++|Intervalo de valores|  
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|  
 |Plataforma|Boolean|Um valor Booliano de 8 bits.|bool|`true` (diferente de zero) e `false` (zero)|  
 |default|char16|Um valor não numérico de 16 bits que representa um ponto de código Unicode (UTF-16).|wchar_t<br /><br /> -ou-<br /><br /> L'c'|(Especificado pelo padrão Unicode)|  
   
 ## <a name="numeric-types"></a>Tipos numéricos  
- A tabela a seguir lista os tipos numéricos internos. Os tipos numéricos são declarados no namespace `default` e são definições de tipo para o tipo interno do C++ correspondente. Nem todos os tipos internos do C++ (longos, por exemplo) têm suporte em tempo de execução do Windows. Para obter consistência e clareza, é recomendável que você use C + + nome CX.  
+ A tabela a seguir lista os tipos numéricos internos. Os tipos numéricos são declarados no namespace `default` e são definições de tipo para o tipo interno do C++ correspondente. Nem todos os tipos internos do C++ (longos, por exemplo) têm suporte em tempo de execução do Windows. Para consistência e clareza, é recomendável que você use C + + / nome do CX.  
   
-|C + + nome CX|Definição|Nome padrão do C++|Intervalo de valores|  
+|C + + / nome do CX|Definição|Nome padrão do C++|Intervalo de valores|  
 |-----------------------------------------------------------------------|----------------|-------------------------|---------------------|  
 |int8|Um valor numérico com sinal de 8 bits.|signed char|-128 a 127|  
 |uint8|Um valor numérico sem sinal de 8 bits.|unsigned char|0 a 255|  
@@ -38,13 +38,13 @@ Além de tipos C++ padrão internos, C + + CX dá suporte ao sistema de tipo é 
 |uint16|Um inteiro de 16 bits sem sinal.|unsigned short|0 a 65 e 535|  
 |int32|Um inteiro com sinal de 32 bits.|int|-2.147.483.648 a 2.147.483.647|  
 |uint32|Um inteiro sem sinal de 32 bits.|unsigned int|0 a 4, 294, 967 e 295|  
-|int64|Um inteiro com sinal de 64 bits.|muito longa - ou - Int64|-9,223,372,036,854, 775,808 por meio de 9.223.372.036.854.775.807|  
-|uint64|Um inteiro sem sinal de 64 bits.|Int64 long long - ou - não assinados não assinados|0 a 18, 446, 744, 073, 709, 551 e 615|  
+|int64|Um inteiro com sinal de 64 bits.|long long - ou - __int64|-9,223,372,036,854, 775,808 por meio de 9.223.372.036.854.775.807|  
+|uint64|Um inteiro sem sinal de 64 bits.|unsigned __int64 long long - ou - sem sinal|0 a 18, 446, 744, 073, 709, 551 e 615|  
 |float32|Um número de ponto flutuante IEEE 754 de 32 bits.|float|3.4E +/- 38 (7 dígitos)|  
 |float64|Um número de ponto flutuante IEEE 754 de 64 bits.|double|1.7E +/- 308 (15 dígitos)|  
   
 ## <a name="windows-runtime-types"></a>Tipos de tempo de execução do Windows  
- A tabela a seguir lista alguns tipos adicionais que são definidos pela arquitetura de tempo de execução do Windows e são incorporados C + + CX. Object e String são tipos de referência. Os outros são tipos de valor. Todos esses tipos são declarados no namespace `Platform` . Para obter uma lista completa, veja [Platform namespace](../cppcx/platform-namespace-c-cx.md).  
+ A tabela a seguir lista alguns tipos adicionais que são definidos pela arquitetura de tempo de execução do Windows e são criados no C + + c++ /CLI CX. Object e String são tipos de referência. Os outros são tipos de valor. Todos esses tipos são declarados no namespace `Platform` . Para obter uma lista completa, veja [Platform namespace](../cppcx/platform-namespace-c-cx.md).  
   
 |Nome|Definição|  
 |----------|----------------|  

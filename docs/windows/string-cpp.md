@@ -17,55 +17,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 459f786863f7d10797008b87e276afb0c95e184a
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: eb3a57cec78c0ea02e16edd890d2a66362bfc011
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020080"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594863"
 ---
 # <a name="string-c"></a>string (C++)
-Indica que o unidimensional **char**, **wchar_t**, `byte` (ou equivalente) matriz ou o ponteiro para essa matriz deve ser tratado como uma cadeia de caracteres.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-[string]  
-```  
-  
-## <a name="remarks"></a>Comentários  
- O **cadeia de caracteres** atributo C++ tem a mesma funcionalidade que o [cadeia de caracteres](http://msdn.microsoft.com/library/windows/desktop/aa367270) atributo MIDL.  
-  
-## <a name="example"></a>Exemplo  
- O código a seguir mostra como usar **cadeia de caracteres** em uma interface e em um typedef:  
-  
-```cpp  
-// cpp_attr_ref_string.cpp  
-// compile with: /LD  
-#include "unknwn.h"  
-[module(name="ATLFIRELib")];  
-[export, string] typedef char a[21];  
-[dispinterface, restricted, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IFireTabCtrl  
-{  
-   [id(1)] HRESULT Method3([in, string] char *pC);  
-};  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Atributo de contexto  
-  
-|||  
-|-|-|  
-|**Aplica-se a**|Matriz ou ponteiro para uma matriz, o parâmetro de interface, o método de interface|  
-|**Repetível**|Não|  
-|**Atributos obrigatórios**|Nenhum|  
-|**Atributos inválidos**|Nenhum|  
-  
- Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos de matriz](../windows/array-attributes.md)   
- [export](../windows/export.md)   
+
+Indica que o unidimensional **char**, **wchar_t**, `byte` (ou equivalente) matriz ou o ponteiro para essa matriz deve ser tratado como uma cadeia de caracteres.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+[string]
+```
+
+## <a name="remarks"></a>Comentários
+
+O **cadeia de caracteres** atributo C++ tem a mesma funcionalidade que o [cadeia de caracteres](http://msdn.microsoft.com/library/windows/desktop/aa367270) atributo MIDL.
+
+## <a name="example"></a>Exemplo
+
+O código a seguir mostra como usar **cadeia de caracteres** em uma interface e em um typedef:
+
+```cpp
+// cpp_attr_ref_string.cpp
+// compile with: /LD
+#include "unknwn.h"
+[module(name="ATLFIRELib")];
+[export, string] typedef char a[21];
+[dispinterface, restricted, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IFireTabCtrl
+{
+   [id(1)] HRESULT Method3([in, string] char *pC);
+};
+```
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Atributo de contexto
+
+|||
+|-|-|
+|**Aplica-se a**|Matriz ou ponteiro para uma matriz, o parâmetro de interface, o método de interface|
+|**Repetível**|Não|
+|**Atributos obrigatórios**|Nenhum|
+|**Atributos inválidos**|Nenhum|
+
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Atributos de IDL](../windows/idl-attributes.md)  
+[Atributos de matriz](../windows/array-attributes.md)  
+[export](../windows/export.md)  

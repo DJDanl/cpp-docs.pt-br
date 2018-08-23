@@ -16,27 +16,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0404c11def5ac70c9020adc28309b7c12aa1cf67
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5d96c68f7800a0819ea150ab970a6a84e6ee8ee0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017467"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592026"
 ---
 # <a name="removing-space-between-buttons-on-a-toolbar"></a>Removendo o espaço entre botões em uma barra de ferramentas
-O procedimento a seguir mostra como remover um espaço entre botões em uma barra de ferramentas.  
-  
-### <a name="to-remove-a-space-between-buttons-on-a-toolbar"></a>Para remover um espaço entre botões em uma barra de ferramentas  
-  
-1.  Arraste o botão em um lado do espaço para o botão do outro lado do espaço até que ele se sobrepõe no botão Avançar sobre na metade.  
-  
-     Se não há nenhum espaço no lado do botão que você está arrastando longe do e arrastar o botão metade após o botão adjacente, o **barra de ferramentas** editor também insere um espaço no lado oposto do botão que você está arrastando.  
-  
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisitos  
- MFC ou ATL  
-  
-## <a name="see-also"></a>Consulte também  
- [Criando, movendo e editando botões da barra de ferramentas](../windows/creating-moving-and-editing-toolbar-buttons.md)   
- [Editor de barra de ferramentas](../windows/toolbar-editor.md)
+
+O procedimento a seguir mostra como remover um espaço entre botões em uma barra de ferramentas.
+
+### <a name="to-remove-a-space-between-buttons-on-a-toolbar"></a>Para remover um espaço entre botões em uma barra de ferramentas
+
+1. Arraste o botão em um lado do espaço para o botão do outro lado do espaço até que ele se sobrepõe no botão Avançar sobre na metade.
+
+   Se não há nenhum espaço no lado do botão que você está arrastando longe do e arrastar o botão metade após o botão adjacente, o **barra de ferramentas** editor também insere um espaço no lado oposto do botão que você está arrastando.
+
+Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisitos
+
+MFC ou ATL
+
+## <a name="see-also"></a>Consulte também
+
+[Criando, movendo e editando botões da barra de ferramentas](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Editor de barra de ferramentas](../windows/toolbar-editor.md)

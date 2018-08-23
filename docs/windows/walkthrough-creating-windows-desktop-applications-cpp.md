@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 397b5274c22acd3a136925495fa350c3aa40dece
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 724772c0057d5defc8bfa3e2207df85d3a207f31
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653203"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590288"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Passo a passo: Criar um aplicativo tradicional de área de trabalho do Windows (C++)
 
 Este passo a passo mostra como criar um aplicativo de área de trabalho tradicional do Windows no Visual Studio. O aplicativo de exemplo, você criará usa a API do Windows para exibir "Hello, área de trabalho do Windows!" em uma janela. Você pode usar o código que você desenvolve neste passo a passo como um padrão para criar outros aplicativos da área de trabalho do Windows.
 
-A API do Windows (também conhecido como a API do Win32, API de área de trabalho do Windows e API clássica do Windows) é uma estrutura de linguagem C com base para a criação de aplicativos do Windows. Ele já existe desde a década de 1980 e foi usado para criar aplicativos do Windows há décadas. Mais estruturas avançadas e mais fácil para programa foram criadas sobre essa API, como os .NET frameworks, ATL e MFC. Até mesmo os mais moderno código para aplicativos UWP e Store escrito em C + + c++ /CLI WinRT usa essa API abaixo. Para obter mais informações sobre a API do Windows, consulte [índice de API do Windows](https://msdn.microsoft.com/library/windows/desktop/ff818516.aspx). Há muitas maneiras de criar aplicativos do Windows, mas isso foi o primeiro.
+A API do Windows (também conhecido como a API do Win32, API de área de trabalho do Windows e API clássica do Windows) é uma estrutura de linguagem C com base para a criação de aplicativos do Windows. Ele já existe desde a década de 1980 e foi usado para criar aplicativos do Windows há décadas. Mais estruturas avançadas e mais fácil para programa foram criadas sobre essa API, como os .NET frameworks, ATL e MFC. Até mesmo os mais moderno código para aplicativos UWP e Store escrito em C + + c++ /CLI WinRT usa essa API abaixo. Para obter mais informações sobre a API do Windows, consulte [índice de API do Windows](/windows/desktop/apiindex/windows-api-list). Há muitas maneiras de criar aplicativos do Windows, mas isso foi o primeiro.
 
 > [!IMPORTANT]
 > Por questão de brevidade, algumas instruções de código são omitidas no texto. O [compilar o código](#build-the-code) seção no final deste documento mostra o código completo.
@@ -570,4 +570,5 @@ Como prometido, aqui está o código completo para o aplicativo em funcionamento
 Parabéns! Concluir este passo a passo e criado um aplicativo de área de trabalho tradicional do Windows.
 
 ## <a name="see-also"></a>Consulte também
- [Aplicativos de área de trabalho do Windows](../windows/windows-desktop-applications-cpp.md)
+
+[Aplicativos de área de trabalho do Windows](../windows/windows-desktop-applications-cpp.md)

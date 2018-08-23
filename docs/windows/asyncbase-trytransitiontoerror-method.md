@@ -17,38 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61b56472e490d95e22c1013595c5c088d2b58dcd
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 1244b87410a09996d946408ff77dbb552b339c85
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643024"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591148"
 ---
 # <a name="asyncbasetrytransitiontoerror-method"></a>Método AsyncBase::TryTransitionToError
-Indica se o código de erro especificado pode modificar o estado de erro interno.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-bool TryTransitionToError(  
-   const HRESULT error  
-);  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *error*  
- Um erro HRESULT.  
-  
-## <a name="return-value"></a>Valor de retorno  
- **Verdadeiro** se o estado de erro interno foi alterado; caso contrário, **falso**.  
-  
-## <a name="remarks"></a>Comentários  
- Esta operação modifica o estado de erro somente se o estado de erro já está definido como S_OK. Esta operação não tem efeito se o estado de erro já é um erro, cancelado, concluído ou fechada.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe AsyncBase](../windows/asyncbase-class.md)
+
+Indica se o código de erro especificado pode modificar o estado de erro interno.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+bool TryTransitionToError(
+   const HRESULT error
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*error*  
+Um erro HRESULT.
+
+## <a name="return-value"></a>Valor de retorno
+
+**Verdadeiro** se o estado de erro interno foi alterado; caso contrário, **falso**.
+
+## <a name="remarks"></a>Comentários
+
+Esta operação modifica o estado de erro somente se o estado de erro já está definido como S_OK. Esta operação não tem efeito se o estado de erro já é um erro, cancelado, concluído ou fechada.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Classe AsyncBase](../windows/asyncbase-class.md)

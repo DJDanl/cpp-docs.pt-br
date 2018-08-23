@@ -17,36 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13c0ded165e7c1510f0112d9b3b9e93f2e356775
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a585f052c42453f0eb9fe8a39a21a5561d4b00c3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015584"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598954"
 ---
 # <a name="semaphoresemaphore-constructor"></a>Construtor Semaphore::Semaphore
-Inicializa uma nova instância dos **semáforo** classe.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-explicit Semaphore(  
-   HANDLE h  
-);  
-  
-WRL_NOTHROW Semaphore(  
-   _Inout_ Semaphore&& h  
-);  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *h*  
- Um identificador ou uma referência rvalue para um **semáforo** objeto.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers
- 
- ## <a name="see-also"></a>Consulte também
- [Classe Semaphore](../windows/semaphore-class.md)
+
+Inicializa uma nova instância dos **semáforo** classe.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+explicit Semaphore(
+   HANDLE h
+);
+
+WRL_NOTHROW Semaphore(
+   _Inout_ Semaphore&& h
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*h*  
+Um identificador ou uma referência rvalue para um **semáforo** objeto.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Consulte também
+[Classe Semaphore](../windows/semaphore-class.md)

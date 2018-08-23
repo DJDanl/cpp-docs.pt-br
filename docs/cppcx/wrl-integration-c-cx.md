@@ -1,36 +1,36 @@
 ---
-title: Integração WRL (C + + CX) | Microsoft Docs
+title: Integração WRL (C++ c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddefed444c447fbfd300a656c36be45899177b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff2fc36582e6ffbff8f7608a5a26cc472687132e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090254"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598084"
 ---
 # <a name="wrl-integration-ccx"></a>Integração WRL (C++/CX)
 
-Você pode combinar livremente o código de WRL com [!INCLUDE[cppwrl](includes/cppwrl-md.md)] ([!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]) código. Na mesma unidade de tradução, você pode usar objetos declarados com WRL handle-to-object (`^`) notação e [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] ponteiro inteligente (`ComPtr<T>`) notação. No entanto, você deve tratar manualmente os valores de retorno, e [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] HRESULT exceções de WRL e códigos de erro.
+Você pode combinar livremente o código de WRL com código de biblioteca de modelos em C++ Windows Runtime (WRL). Na mesma unidade de tradução, você pode usar objetos declarados com WRL handle-to-object (`^`) notação e WRL inteligentes ponteiro (`ComPtr<T>`) notação. No entanto, você deve tratar manualmente os valores de retorno e códigos de erro HRESULT da WRL e exceções do WRL.
   
-## <a name="includecppwrlshortincludescppwrl-short-mdmd-development"></a>Desenvolvimento do[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] 
+## <a name="wrl-development"></a>Desenvolvimento de WRL
 
-Para obter mais informações sobre criação e consumo [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] componentes, consulte [biblioteca de modelo em C++ Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
+Para obter mais informações sobre criação e consumo de componentes da WRL, consulte [biblioteca de modelos em C++ Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 ### <a name="example"></a>Exemplo
 
-O trecho de código a seguir demonstra como usar WRL e [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] consumir [!INCLUDE[wrt](includes/wrt-md.md)] classes e examinar um arquivo de metadados.
+O trecho de código a seguir demonstra como usar a WRL e WRL para consumir classes de tempo de execução do Windows e examinar um arquivo de metadados.
 
-O exemplo é extraído de um trecho de código no Fórum de aplicativos do armazenamento de construção do Microsoft. O autor desse trecho de código oferece os seguintes avisos de isenção de responsabilidade e estipulações:
+O exemplo é tirado de um trecho de código no Fórum de aplicativos da Microsoft Store de construção. O autor desse trecho de código oferece os seguintes avisos de isenção de responsabilidade e estipulações:
 
-1. O C++ não fornece APIs específicas para refletir nos tipos [!INCLUDE[wrt](includes/wrt-md.md)] , mas os arquivos de metadados do Windows (.winmd) de um tipo são totalmente compatíveis com os arquivos de metadados CLR. O Windows fornece as novas APIs de descoberta de metadados (RoGetMetaDataFile) para acessar o arquivo .winmd de um determinado tipo. No entanto, essas APIs são de uso limitado para os desenvolvedores C++ porque você não pode instanciar uma classe.
+1. C++ não fornece APIs específicas para refletir nos tipos de tempo de execução do Windows, mas os arquivos de metadados do Windows (. winmd) para um tipo são totalmente compatíveis com os arquivos de metadados do CLR. O Windows fornece as novas APIs de descoberta de metadados (RoGetMetaDataFile) para acessar o arquivo .winmd de um determinado tipo. No entanto, essas APIs são de uso limitado para os desenvolvedores C++ porque você não pode instanciar uma classe.
 
 1. Após a compilação do código, você também precisará passar Runtimeobject.lib e Rometadata.lib ao Vinculador.
 

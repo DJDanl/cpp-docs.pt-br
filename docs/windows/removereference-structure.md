@@ -17,49 +17,55 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90b0c414994740cb080205c58fb4d7d7dbfefa84
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d73c9f99eec3fd3ec01d4ae5d41418c67cb472f9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011914"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597459"
 ---
 # <a name="removereference-structure"></a>Estrutura RemoveReference
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-template<class T>  
-struct RemoveReference;  
-template<class T>  
-struct RemoveReference<T&>;  
-template<class T>  
-struct RemoveReference<T&&>;  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *T*  
- Uma classe.  
-  
-## <a name="remarks"></a>Comentários  
- Retira a característica de referência ou uma referência de rvalue do parâmetro de modelo de classe especificada.  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-typedefs"></a>Typedefs públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|`Type`|Sinônimo do parâmetro de modelo de classe.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `RemoveReference`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** internal.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+template<class T>
+struct RemoveReference;
+template<class T>
+struct RemoveReference<T&>;
+template<class T>
+struct RemoveReference<T&&>;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*T*  
+Uma classe.
+
+## <a name="remarks"></a>Comentários
+
+Retira a característica de referência ou uma referência de rvalue do parâmetro de modelo de classe especificada.
+
+## <a name="members"></a>Membros
+
+### <a name="public-typedefs"></a>Typedefs públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|`Type`|Sinônimo do parâmetro de modelo de classe.|
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`RemoveReference`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** internal.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

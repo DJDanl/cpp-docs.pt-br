@@ -17,71 +17,77 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: adbc7b6bbeafff277f32170627d6804526900049
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 0820012c8c22de1287fcb09037212b870a4ff7bf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019011"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594792"
 ---
 # <a name="simpleactivationfactory-class"></a>Classe SimpleActivationFactory
-Fornece um mecanismo fundamental para criar um tempo de execução do Windows ou a classe base do COM clássico.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-template<typename Base>  
-class SimpleActivationFactory : public ActivationFactory<>;  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *Base de dados de*  
- Uma classe base.  
-  
-## <a name="remarks"></a>Comentários  
- A classe base deve fornecer um construtor padrão.  
-  
- O exemplo de código a seguir demonstra como usar SimpleActivationFactory com o [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) macro.  
-  
- `ActivatableClassWithFactoryEx(MyClass, SimpleActivationFactory, MyServerName);`  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-methods"></a>Métodos Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[Método SimpleActivationFactory::ActivateInstance](../windows/simpleactivationfactory-activateinstance-method.md)|Cria uma instância da interface especificada.|  
-|[Método SimpleActivationFactory::GetRuntimeClassName](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Obtém o nome de classe de tempo de execução de uma instância da classe especificada o *Base* parâmetro de modelo de classe.|  
-|[Método SimpleActivationFactory::GetTrustLevel](../windows/simpleactivationfactory-gettrustlevel-method.md)|Obtém o nível de confiança de uma instância da classe especificada o *Base* parâmetro de modelo de classe.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `I0`  
-  
- `ChainInterfaces`  
-  
- `I0`  
-  
- `RuntimeClassBase`  
-  
- `ImplementsHelper`  
-  
- `DontUseNewUseMake`  
-  
- `RuntimeClassFlags`  
-  
- `RuntimeClassBaseT`  
-  
- `RuntimeClass`  
-  
- `ActivationFactory`  
-  
- `SimpleActivationFactory`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+
+Fornece um mecanismo fundamental para criar um tempo de execução do Windows ou a classe base do COM clássico.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+template<typename Base>
+class SimpleActivationFactory : public ActivationFactory<>;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*Base de dados de*  
+Uma classe base.
+
+## <a name="remarks"></a>Comentários
+
+A classe base deve fornecer um construtor padrão.
+
+O exemplo de código a seguir demonstra como usar SimpleActivationFactory com o [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) macro.
+
+`ActivatableClassWithFactoryEx(MyClass, SimpleActivationFactory, MyServerName);`
+
+## <a name="members"></a>Membros
+
+### <a name="public-methods"></a>Métodos Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[Método SimpleActivationFactory::ActivateInstance](../windows/simpleactivationfactory-activateinstance-method.md)|Cria uma instância da interface especificada.|
+|[Método SimpleActivationFactory::GetRuntimeClassName](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Obtém o nome de classe de tempo de execução de uma instância da classe especificada o *Base* parâmetro de modelo de classe.|
+|[Método SimpleActivationFactory::GetTrustLevel](../windows/simpleactivationfactory-gettrustlevel-method.md)|Obtém o nível de confiança de uma instância da classe especificada o *Base* parâmetro de modelo de classe.|
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`I0`
+
+`ChainInterfaces`
+
+`I0`
+
+`RuntimeClassBase`
+
+`ImplementsHelper`
+
+`DontUseNewUseMake`
+
+`RuntimeClassFlags`
+
+`RuntimeClassBaseT`
+
+`RuntimeClass`
+
+`ActivationFactory`
+
+`SimpleActivationFactory`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

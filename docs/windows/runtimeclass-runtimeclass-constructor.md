@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29ea5b440885d914b7b933ca0761a1e5f50a2503
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 0394113fc2d47a97b14da2d9a4d4512351aa059c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015099"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591563"
 ---
 # <a name="runtimeclassruntimeclass-constructor"></a>Construtor RuntimeClass::RuntimeClass
-Inicializa a instância atual do **RuntimeClass** classe.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-RuntimeClass();  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Implements. h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe RuntimeClass](../windows/runtimeclass-class.md)
+
+Inicializa a instância atual do **RuntimeClass** classe.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+RuntimeClass();
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** Implements. h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Classe RuntimeClass](../windows/runtimeclass-class.md)

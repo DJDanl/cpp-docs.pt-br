@@ -17,78 +17,83 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7d15c4cd43dd74b6c699027be9841f5f4a610518
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 509395daef16e06c915190a80dc1b9c1c5e6494f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646105"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598043"
 ---
 # <a name="dbsource"></a>db_source
-Cria uma conexão a uma fonte de dados.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-[ db_source(   
-   db_source,   
-   name,   
-   hresult   
-) ]  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *db_source*  
- A cadeia de conexão usada para se conectar à fonte de dados. Para o formato da cadeia de caracteres de conexão, consulte [cadeias de caracteres de Conexão e Links de dados](https://msdn.microsoft.com/library/ms718376.aspx) no Microsoft Data Access Components (MDAC) do SDK.  
-  
- *nome* (opcional)  
- Quando você usa **db_source** em uma classe *nome* é uma instância de um objeto de fonte de dados que tem o **db_source** atributo aplicado a ele (consulte o exemplo 1). Quando você usa **db_source** embutido na implementação de um método *nome* é uma variável (local para o método) que pode ser usada para acessar os dados de origem (consulte o exemplo 2). Você passá-la *nome* para o *source_name* parâmetro do `db_command` para associar a fonte de dados com um comando.  
-  
- *HRESULT* (opcional)  
- Identifica a variável que receberá o HRESULT desse comando de banco de dados. Se a variável não existir, ele será automaticamente injetado pelo atributo.  
-  
-## <a name="remarks"></a>Comentários  
- **db_source** cria um [CDataSource](../data/oledb/cdatasource-class.md) e uma [CSession](../data/oledb/csession-class.md) objeto, que juntas representam uma conexão com uma fonte de dados do consumidor OLE DB.  
-  
- Quando você usa **db_source** em uma classe, o `CSession` objeto se torna um membro da classe.  
-  
- Quando você usa **db_source** em um método, o código injetado será executado dentro do escopo do método e o `CSession` objeto é criado como uma variável local.  
-  
- **db_source** adiciona propriedades da fonte de dados para uma classe ou dentro de um método. Ele é usado em conjunto com `db_command` (que utiliza o *db_source* *nome* parâmetro como seu *source_name* parâmetro).  
-  
- Quando o provedor do consumidor de atributo se aplica a esse atributo a uma classe, o compilador renomeará a classe \_ *YourClassName*acessador, onde *YourClassName* é o nome que você deu a classe e o compilador também criará uma classe chamada *YourClassName*, que é derivada de \_ *YourClassName*acessador.  No modo de exibição de classe, você verá as duas classes.  
-  
- Para obter um exemplo desse atributo usado em um aplicativo, consulte os exemplos [AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409) e [MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
-  
-## <a name="example"></a>Exemplo  
- Este exemplo chama **db_source** em uma classe para criar uma conexão à fonte de dados `ds` usando o banco de dados Northwind. `ds` é um identificador para a fonte de dados, que pode ser usado internamente para o `CMyCommand` classe.  
-  
-```cpp  
-// db_source_1.cpp  
-// compile with: /LD  
-#include <atlbase.h>  
-#include <atlplus.h>  
-#include <atldbcli.h>  
-  
-[  
-  db_source(L"my_connection_string", name="ds"),  
+
+Cria uma conexão a uma fonte de dados.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+[ db_source(
+   db_source,
+   name,
+   hresult
+) ]
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*db_source*  
+A cadeia de conexão usada para se conectar à fonte de dados. Para o formato da cadeia de caracteres de conexão, consulte [cadeias de caracteres de Conexão e Links de dados](/previous-versions/windows/desktop/ms718376\(v=vs.85\)) no Microsoft Data Access Components (MDAC) do SDK.
+
+*nome* (opcional)  
+Quando você usa **db_source** em uma classe *nome* é uma instância de um objeto de fonte de dados que tem o **db_source** atributo aplicado a ele (consulte o exemplo 1). Quando você usa **db_source** embutido na implementação de um método *nome* é uma variável (local para o método) que pode ser usada para acessar os dados de origem (consulte o exemplo 2). Você passá-la *nome* para o *source_name* parâmetro do `db_command` para associar a fonte de dados com um comando.
+
+*HRESULT* (opcional)  
+Identifica a variável que receberá o HRESULT desse comando de banco de dados. Se a variável não existir, ele será automaticamente injetado pelo atributo.
+
+## <a name="remarks"></a>Comentários
+
+**db_source** cria um [CDataSource](../data/oledb/cdatasource-class.md) e uma [CSession](../data/oledb/csession-class.md) objeto, que juntas representam uma conexão com uma fonte de dados do consumidor OLE DB.
+
+Quando você usa **db_source** em uma classe, o `CSession` objeto se torna um membro da classe.
+
+Quando você usa **db_source** em um método, o código injetado será executado dentro do escopo do método e o `CSession` objeto é criado como uma variável local.
+
+**db_source** adiciona propriedades da fonte de dados para uma classe ou dentro de um método. Ele é usado em conjunto com `db_command` (que utiliza o *db_source* *nome* parâmetro como seu *source_name* parâmetro).
+
+Quando o provedor do consumidor de atributo se aplica a esse atributo a uma classe, o compilador renomeará a classe \_ *YourClassName*acessador, onde *YourClassName* é o nome que você deu a classe e o compilador também criará uma classe chamada *YourClassName*, que é derivada de \_ *YourClassName*acessador.  No modo de exibição de classe, você verá as duas classes.
+
+Para obter um exemplo desse atributo usado em um aplicativo, consulte os exemplos [AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409) e [MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e).
+
+## <a name="example"></a>Exemplo
+
+Este exemplo chama **db_source** em uma classe para criar uma conexão à fonte de dados `ds` usando o banco de dados Northwind. `ds` é um identificador para a fonte de dados, que pode ser usado internamente para o `CMyCommand` classe.
+
+```cpp
+// db_source_1.cpp
+// compile with: /LD
+#include <atlbase.h>
+#include <atlplus.h>
+#include <atldbcli.h>
+
+[
+  db_source(L"my_connection_string", name="ds"),
   db_command(L"select * from Products")  
-]  
-class CMyCommand {};  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Atributo de contexto  
-  
-|||  
-|-|-|  
-|**Aplica-se a**|**classe**, **struct**, membro, o método, o local|  
-|**Repetível**|Não|  
-|**Atributos obrigatórios**|Nenhum|  
-|**Atributos inválidos**|Nenhum|  
-  
- Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Atributos de consumidor do OLE DB](../windows/ole-db-consumer-attributes.md)   
+]
+class CMyCommand {};
+```
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Atributo de contexto
+
+|||
+|-|-|
+|**Aplica-se a**|**classe**, **struct**, membro, o método, o local|
+|**Repetível**|Não|
+|**Atributos obrigatórios**|Nenhum|
+|**Atributos inválidos**|Nenhum|
+
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Atributos de consumidor do OLE DB](../windows/ole-db-consumer-attributes.md)  

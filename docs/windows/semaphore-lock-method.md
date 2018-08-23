@@ -17,43 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be7a2b7bbac8affd0bc668113cac30f4bed96a6b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 47925bcc647d253775e4dd61f6a7f5d5fb586dde
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017289"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599277"
 ---
 # <a name="semaphorelock-method"></a>Método Semaphore::Lock
-Aguarda até que o objeto atual, ou o **semáforo** objeto associado ao identificador especificado, estiver no estado sinalizado ou o intervalo de tempo limite especificado tenha decorrido.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-SyncLock Lock(  
-   DWORD milliseconds = INFINITE  
-);  
-  
-static SyncLock Lock(  
-   HANDLE h,  
-   DWORD milliseconds = INFINITE  
-);  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *milissegundos*  
- O intervalo de tempo limite em milissegundos. O valor padrão é infinito, o que espera indefinidamente.  
-  
- *h*  
- Um identificador para um **semáforo** objeto.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Um `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe Semaphore](../windows/semaphore-class.md)
+
+Aguarda até que o objeto atual, ou o **semáforo** objeto associado ao identificador especificado, estiver no estado sinalizado ou o intervalo de tempo limite especificado tenha decorrido.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+SyncLock Lock(
+   DWORD milliseconds = INFINITE
+);
+
+static SyncLock Lock(
+   HANDLE h,
+   DWORD milliseconds = INFINITE
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*milissegundos*  
+O intervalo de tempo limite em milissegundos. O valor padrão é infinito, o que espera indefinidamente.
+
+*h*  
+Um identificador para um **semáforo** objeto.
+
+## <a name="return-value"></a>Valor de retorno
+
+Um `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Consulte também
+
+[Classe Semaphore](../windows/semaphore-class.md)

@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80c744431fe7df32be705fcf91eef0a8691b8fa4
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d70a2c316f9e7994292f3dc29cef5bce993778ad
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015792"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595057"
 ---
 # <a name="synclockwithstatustislocked-method"></a>Método SyncLockWithStatusT::IsLocked
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-bool IsLocked() const;  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Indica se o atual **SyncLockWithStatusT** objeto possui um recurso, ou seja, o **SyncLockWithStatusT** objeto é *bloqueado*.  
-  
-## <a name="return-value"></a>Valor de retorno  
- **Verdadeiro** se o **SyncLockWithStatusT** objeto estiver bloqueada; caso contrário, **false**.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe SyncLockWithStatusT](../windows/synclockwithstatust-class.md)
+
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+bool IsLocked() const;
+```
+
+## <a name="remarks"></a>Comentários
+
+Indica se o atual **SyncLockWithStatusT** objeto possui um recurso, ou seja, o **SyncLockWithStatusT** objeto é *bloqueado*.
+
+## <a name="return-value"></a>Valor de retorno
+
+**Verdadeiro** se o **SyncLockWithStatusT** objeto estiver bloqueada; caso contrário, **false**.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Consulte também
+
+[Classe SyncLockWithStatusT](../windows/synclockwithstatust-class.md)

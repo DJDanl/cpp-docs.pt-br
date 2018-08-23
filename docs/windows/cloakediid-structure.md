@@ -17,39 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b766858d0f558b4fdff3a703c612ec07c038abf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 3a60d12adfade18c9989d1dc8609a38252d32073
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641914"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599092"
 ---
 # <a name="cloakediid-structure"></a>Estrutura CloakedIid
-Indica para o `RuntimeClass`, `Implements` e `ChainInterfaces` que a interface especificada não está acessível na lista de IID de modelos.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-template<typename T>  
-struct CloakedIid : T;  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- *T*  
- A interface que está oculto (encoberta).  
-  
-## <a name="remarks"></a>Comentários  
- A seguir está um exemplo de como **CloakedIid** é usado: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `T`  
-  
- `CloakedIid`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Implements. h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+
+Indica para o `RuntimeClass`, `Implements` e `ChainInterfaces` que a interface especificada não está acessível na lista de IID de modelos.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+template<typename T>
+struct CloakedIid : T;
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+*T*  
+A interface que está oculto (encoberta).
+
+## <a name="remarks"></a>Comentários
+
+A seguir está um exemplo de como **CloakedIid** é usado: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`T`
+
+`CloakedIid`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** Implements. h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

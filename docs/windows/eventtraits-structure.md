@@ -17,33 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f46f1bc6d03f7bf222edcd3d23def72edfcb11fa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 02f7670daea943669844081a8d956ef0539d656b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647567"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594330"
 ---
 # <a name="eventtraits-structure"></a>Estrutura EventTraits
-Define as características de um `Event` identificador de classe.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-struct EventTraits : HANDLENullTraits;  
-```  
-  
-## <a name="members"></a>Membros  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `HANDLENullTraits`  
-  
- `EventTraits`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+
+Define as características de um `Event` identificador de classe.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+struct EventTraits : HANDLENullTraits;
+```
+
+## <a name="members"></a>Membros
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`HANDLENullTraits`
+
+`EventTraits`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

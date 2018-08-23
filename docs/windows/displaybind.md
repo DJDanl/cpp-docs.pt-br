@@ -17,45 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fdd9efe3b60fa9dc53d1c63191e19657cb70d75
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a4beaeb35f23069c6ef8a5b411e7d83ecbe39f9e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641734"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595766"
 ---
 # <a name="displaybind"></a>displaybind
-Indica uma propriedade que deve ser exibida para o usuário como associável.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-[displaybind]  
-```  
-  
-## <a name="remarks"></a>Comentários  
- O **displaybind** atributo C++ tem a mesma funcionalidade que o [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) atributo MIDL.  
-  
-## <a name="example"></a>Exemplo  
- Veja o exemplo de [associável](../windows/bindable.md) para obter um exemplo de como usar **displaybind**.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Atributo de contexto  
-  
-|||  
-|-|-|  
-|**Aplica-se a**|Método de interface|  
-|**Repetível**|Não|  
-|**Atributos obrigatórios**|Nenhum|  
-|**Atributos inválidos**|Nenhum|  
-  
- Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos de método](../windows/method-attributes.md)   
- [Atributos de membro de dados](../windows/data-member-attributes.md)   
- [defaultbind](../windows/defaultbind.md)   
- [immediatebind](../windows/immediatebind.md)   
- [requestedit](../windows/requestedit.md)   
+
+Indica uma propriedade que deve ser exibida para o usuário como associável.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+[displaybind]
+```
+
+## <a name="remarks"></a>Comentários
+
+O **displaybind** atributo C++ tem a mesma funcionalidade que o [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) atributo MIDL.
+
+## <a name="example"></a>Exemplo
+
+Veja o exemplo de [associável](../windows/bindable.md) para obter um exemplo de como usar **displaybind**.
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Atributo de contexto
+
+|||
+|-|-|
+|**Aplica-se a**|Método de interface|
+|**Repetível**|Não|
+|**Atributos obrigatórios**|Nenhum|
+|**Atributos inválidos**|Nenhum|
+
+Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Atributos de IDL](../windows/idl-attributes.md)  
+[Atributos de método](../windows/method-attributes.md)  
+[Atributos de membro de dados](../windows/data-member-attributes.md)  
+[defaultbind](../windows/defaultbind.md)  
+[immediatebind](../windows/immediatebind.md)  
+[requestedit](../windows/requestedit.md)  

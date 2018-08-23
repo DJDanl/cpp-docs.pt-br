@@ -1,23 +1,23 @@
 ---
-title: Opções de compilador e vinculador (C + + CX) | Microsoft Docs
+title: Opções de compilador e vinculador (C + + c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e43418555722090c325c85bd4e77204640791b32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1597acfdf608d5e8801870fcebb43109c2eb803d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088474"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593786"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opções de compilador e vinculador (C++/CX)
-Uma variável de ambiente, C + + opções do vinculador e opções do compilador CX oferecem suporte à criação de aplicativos para o tempo de execução do Windows.  
+Uma variável de ambiente, C + + c++ /CLI opções do compilador CX e opções do vinculador dão suporte a compilação de aplicativos para o tempo de execução do Windows.  
   
 ## <a name="library-path"></a>Caminho da biblioteca  
  A variável de ambiente %LIBPATH% especifica o caminho padrão para procurar por arquivos .winmd.  
@@ -26,7 +26,7 @@ Uma variável de ambiente, C + + opções do vinculador e opções do compilador
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Permite que extensões de linguagem do Windows Runtime.<br /><br /> O parâmetro `nostdlib` impede que o compilador use o caminho de pesquisa padrão e predefinido para encontrar arquivos de assembly e .winmd.<br /><br /> A opção **/ZW** do compilador especifica implicitamente as opções do compilador:<br /><br /> -   **/Fi** vccorlib. h, que força a inclusão do arquivo de cabeçalho vccorlib. h que define vários tipos que são exigidos pelo compilador.<br />-   [/Fu](../build/reference/fu-name-forced-hash-using-file.md) winmd, que força a inclusão do arquivo de metadados do Windows que é fornecido pelo sistema operacional e define vários tipos no tempo de execução do Windows.<br />-   **/FU** Platform.winmd, que força a inclusão do arquivo de metadados Platform.winmd, que é fornecido pelo compilador e que define a maioria dos tipos na família Platform de namespaces.|  
+|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Habilita extensões de linguagem do tempo de execução do Windows.<br /><br /> O parâmetro `nostdlib` impede que o compilador use o caminho de pesquisa padrão e predefinido para encontrar arquivos de assembly e .winmd.<br /><br /> A opção **/ZW** do compilador especifica implicitamente as opções do compilador:<br /><br /> -   **/Fi** vccorlib. h, que força a inclusão do arquivo de cabeçalho vccorlib. h que define vários tipos que são necessários pelo compilador.<br />-   [/Fu](../build/reference/fu-name-forced-hash-using-file.md) winmd, que força a inclusão do arquivo de metadados do Windows que é fornecido pelo sistema operacional e define vários tipos em tempo de execução do Windows.<br />-   **/FU** Platform.winmd, que força a inclusão do arquivo de metadados Platform.winmd, que é fornecido pelo compilador e que define a maioria dos tipos na família Platform de namespaces.|  
 |[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|Adiciona um diretório, que é especificado pelo parâmetro *dir* , para o demarcador de pesquisa usado pelo compilador para encontrar arquivos de assembly e .winmd.|  
 |**/FU**  *Arquivo*|Força a inclusão do módulo especificado ou do arquivo .winmd. Ou seja, você não precisa especificar `#using` *arquivo* no seu código-fonte. O compilador força automaticamente a inclusão de seu próprio arquivo de metadados do Windows, Platform.winmd.|  
 |/D "WINAPI_FAMILY=2"|Cria uma definição que permite o uso de um subconjunto do SDK do Win32 é compatível com o tempo de execução do Windows.|  
@@ -43,7 +43,7 @@ Uma variável de ambiente, C + + opções do vinculador e opções do compilador
 |/WINMDKEYFILE:*nomedoarquivo*|Especifica uma chave ou um par de chaves para assinar o assembly. O parâmetro *filename* corresponde à chave usada para assinar o arquivo de metadados.|  
   
 ### <a name="remarks"></a>Comentários  
- Quando você usa o **/ZW**, o compilador é vinculado automaticamente à versão DLL do CRT (Tempo de Execução do C). Não é permitida a vinculação à versão da biblioteca estática, e qualquer uso de funções de CRT que não são permitidos em um aplicativo de plataforma Universal do Windows causará um erro de tempo de compilação.  
+ Quando você usa o **/ZW**, o compilador é vinculado automaticamente à versão DLL do CRT (Tempo de Execução do C). Vinculando a versão da biblioteca estática não é permitida, e qualquer uso de funções de CRT que não são permitidos em um aplicativo da plataforma Universal do Windows causará um erro de tempo de compilação.  
   
 ## <a name="see-also"></a>Consulte também  
  [Compilando aplicativos e bibliotecas](../cppcx/building-apps-and-libraries-c-cx.md)

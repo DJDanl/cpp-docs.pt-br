@@ -27,45 +27,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e912e2aaae53fa0c7f9e506ce70128238bf15a78
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 2d6e2c3a27204ffb6e1c23f158f1f3fdc93a792e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018410"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596965"
 ---
 # <a name="how-to-import-and-export-resources"></a>Como importar e exportar recursos
-Você pode importar recursos gráficos (bitmaps, ícones, cursores e barras de ferramentas), arquivos HTML e recursos personalizados para uso no Visual C++. Você pode exportar os mesmos tipos de arquivos de um projeto do Visual C++ para separar os arquivos que podem ser usados fora do ambiente de desenvolvimento.  
-  
+
+Você pode importar recursos gráficos (bitmaps, ícones, cursores e barras de ferramentas), arquivos HTML e recursos personalizados para uso no Visual C++. Você pode exportar os mesmos tipos de arquivos de um projeto do Visual C++ para separar os arquivos que podem ser usados fora do ambiente de desenvolvimento.
+
 > [!NOTE]
->  Tipos de recursos como aceleradores, caixas de diálogo e tabelas de cadeia de caracteres não podem ser importados ou exportados porque eles não são tipos de arquivo autônomo.  
-  
-### <a name="to-import-an-individual-resource-into-your-current-resource-file"></a>Para importar um recurso individual em seu arquivo de recurso atual  
-  
-1.  Na [exibição de recurso](../windows/resource-view-window.md), clique com botão direito no nó para o script de recurso (*. rc) ao qual você deseja adicionar um recurso de arquivo.  
-  
-2.  Clique em **importação** no menu de atalho.  
-  
-3.  Localize e selecione o nome do arquivo de bitmap (. bmp), o ícone (. ico), o cursor (. cur), arquivo Html (. htm) ou outro arquivo que você deseja importar.  
-  
-4.  Clique em **Okey** para adicionar o recurso para o arquivo selecionado no **recursos** modo de exibição.  
-  
-    > [!NOTE]
-    >  O processo de importação funcionar da mesma maneira, independentemente de qual recurso determinado tipo que você selecionou. O recurso importado é adicionado automaticamente para o nó correto para esse tipo de recurso.  
-  
-### <a name="to-export-a-bitmap-icon-or-cursor-as-a-separate-file-for-use-outside-of-visual-c"></a>Para exportar um bitmap, ícone ou cursor como um arquivo separado (para uso fora do Visual C++)  
-  
-1.  Na **recurso** exibir, clique no recurso que você deseja exportar.  
-  
-2.  Clique em **exportar** no menu de atalho.  
-  
-3.  No **Exportar recurso** caixa de diálogo caixa, aceite o nome do arquivo atual ou digite um novo.  
-  
-4.  Navegue até a pasta onde deseja salvar o arquivo e clique em **exportar**.  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Consulte também  
- [Arquivos de recurso](../windows/resource-files-visual-studio.md)   
- [Editores de recursos](../windows/resource-editors.md)
+> Tipos de recursos como aceleradores, caixas de diálogo e tabelas de cadeia de caracteres não podem ser importados ou exportados porque eles não são tipos de arquivo autônomo.
+
+### <a name="to-import-an-individual-resource-into-your-current-resource-file"></a>Para importar um recurso individual em seu arquivo de recurso atual
+
+1. Na [exibição de recurso](../windows/resource-view-window.md), clique com botão direito no nó para o script de recurso (*. rc) ao qual você deseja adicionar um recurso de arquivo.
+
+2. Clique em **importação** no menu de atalho.
+
+3. Localize e selecione o nome do arquivo de bitmap (. bmp), o ícone (. ico), o cursor (. cur), arquivo Html (. htm) ou outro arquivo que você deseja importar.
+
+4. Clique em **Okey** para adicionar o recurso para o arquivo selecionado no **recursos** modo de exibição.
+
+   > [!NOTE]
+   > O processo de importação funcionar da mesma maneira, independentemente de qual recurso determinado tipo que você selecionou. O recurso importado é adicionado automaticamente para o nó correto para esse tipo de recurso.
+
+### <a name="to-export-a-bitmap-icon-or-cursor-as-a-separate-file-for-use-outside-of-visual-c"></a>Para exportar um bitmap, ícone ou cursor como um arquivo separado (para uso fora do Visual C++)
+
+1. Na **recurso** exibir, clique no recurso que você deseja exportar.
+
+2. Clique em **exportar** no menu de atalho.
+
+3. No **Exportar recurso** caixa de diálogo caixa, aceite o nome do arquivo atual ou digite um novo.
+
+4. Navegue até a pasta onde deseja salvar o arquivo e clique em **exportar**.
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Consulte também
+
+[Arquivos de recurso](../windows/resource-files-visual-studio.md)  
+[Editores de recursos](../windows/resource-editors.md)

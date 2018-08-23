@@ -9,16 +9,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d5ac76ee-b568-4841-882f-738ed6fa4f1e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afb046b7e609b053d6dcd0b7d10d864b6194fe5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86d3a6b839b51f9398a2c2ab6b4942e0f728fed6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088122"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594779"
 ---
 # <a name="platformcollectionsdetails-namespace"></a>Namespace Platform::Collections::Details
 Esse namespace oferece suporte para a infraestrutura `Platform` e não deve ser usada diretamente a partir do seu código.  

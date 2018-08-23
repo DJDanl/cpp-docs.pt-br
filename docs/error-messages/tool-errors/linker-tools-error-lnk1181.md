@@ -1,7 +1,7 @@
 ---
 title: Ferramentas de vinculador LNK1181 erro | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/22/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 617678e5453acdafaf72875857b0e0f9b84a110a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3edd2f39848ea1db054dd4ceee8abf290dde7a74
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301353"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597656"
 ---
 # <a name="linker-tools-error-lnk1181"></a>Erro das Ferramentas de Vinculador LNK1181
 não é possível abrir o arquivo de entrada 'filename'  
@@ -30,15 +30,19 @@ não é possível abrir o arquivo de entrada 'filename'
   
  Algumas causas comuns para erro LNK1181 incluem:  
   
--   `filename` é referenciada como uma dependência adicional na linha de vinculador, mas o arquivo não existe.  
+-   `filename` é referenciado como uma dependência adicional na linha do vinculador, mas o arquivo não existe.  
   
--   Um **/LIBPATH** instrução que especifica o diretório que contém `filename` está ausente.  
+-   Um **/LIBPATH** declaração que especifica o diretório que contém `filename` está ausente.  
   
- Para resolver os problemas acima, certifique-se de todos os arquivos referenciados na linha de vinculador estão presentes no sistema.  Também verifique se há um **/LIBPATH** instrução para cada diretório que contém um arquivo dependente do vinculador.  
+ Para resolver os problemas acima, verifique se todos os arquivos referenciados na linha do vinculador estão presentes no sistema.  Também verifique se há um **/LIBPATH** instrução para cada diretório que contém um arquivo dependente do vinculador. 
+
+ Para obter mais informações, consulte [arquivos. lib como entrada de vinculador](../../build/reference/dot-lib-files-as-linker-input.md).
   
- Outra causa possível para LNK1181 é que um nome de arquivo longo com espaços incorporados não foi colocado entre aspas.  Nesse caso, o vinculador reconhece apenas um nome de arquivo até o primeiro espaço e, em seguida, suponha que uma extensão de arquivo. obj.  A solução para essa situação é colocar o nome de arquivo longos (nome do caminho e arquivo) entre aspas.  
+ Outra causa possível para LNK1181 é que um nome de arquivo longo com espaços incorporados não foi colocado entre aspas.  Nesse caso, o vinculador reconhecerá apenas um nome de arquivo até o primeiro espaço e, em seguida, suponha que uma extensão de arquivo. obj.  A solução para essa situação é para delimitar o nome de arquivo longos (nome de caminho e arquivo) entre aspas.  
+
+ Compilar com o [/P (pré-processar em um arquivo)](../../build/reference/p-preprocess-to-a-file.md) opção pode resultar em LNK1181 porque essa opção suprime a criação de arquivos. obj.
   
- Para obter mais informações, consulte [arquivos. lib como entrada de vinculador](../../build/reference/dot-lib-files-as-linker-input.md).  
+  
   
 ## <a name="see-also"></a>Consulte também  
  [/LIBPATH (Libpath adicional)](../../build/reference/libpath-additional-libpath.md)

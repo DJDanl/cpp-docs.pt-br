@@ -15,26 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94c27262e63ba1c428596dbac836e165c24d8538
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b518fc059e77420788be941ccc98035fb68aa0db
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605679"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592748"
 ---
 # <a name="roinitializewrapperhresult-operator"></a>Operador RoInitializeWrapper::HRESULT()
-Recupera o valor HRESULT produzido pela última **RoInitializeWrapper** construtor.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
+
+Recupera o valor HRESULT produzido pela última **RoInitializeWrapper** construtor.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
 operator HRESULT()  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe HandleT](../windows/handlet-class.md)
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Consulte também
+
+[Classe HandleT](../windows/handlet-class.md)

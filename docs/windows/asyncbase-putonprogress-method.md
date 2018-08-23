@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a99eee63496632b8f0918ee888e6a824424b757d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8b2bc46f916e4aaaedc74e8b6d94faafa1ead3b9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649884"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595481"
 ---
 # <a name="asyncbaseputonprogress-method"></a>Método AsyncBase::PutOnProgress
-Define o endereço do manipulador de eventos de andamento para o valor especificado.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-STDMETHOD(  
-   PutOnProgress  
-)(TProgress* progressHandler);  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *progressHandler*  
- O endereço ao qual o manipulador de eventos de andamento é definido.  
-  
-## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe AsyncBase](../windows/asyncbase-class.md)
+
+Define o endereço do manipulador de eventos de andamento para o valor especificado.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+STDMETHOD(
+   PutOnProgress
+)(TProgress* progressHandler);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*progressHandler*  
+O endereço ao qual o manipulador de eventos de andamento é definido.
+
+## <a name="return-value"></a>Valor de retorno
+
+S_OK se bem-sucedido; Caso contrário, E_ILLEGAL_METHOD_CALL.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Classe AsyncBase](../windows/asyncbase-class.md)

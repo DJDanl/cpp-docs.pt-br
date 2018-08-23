@@ -17,39 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 65e8576f069cce7d7aec2eae18ad577820ca93a4
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a13c5b48a7e242f47903fda038331fd126832dcf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644736"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592225"
 ---
 # <a name="eventsourceadd-method"></a>Método EventSource::Add
-Acrescenta o manipulador de eventos representado pela interface delegado especificado ao conjunto de manipuladores de eventos para o atual **EventSource** objeto.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-HRESULT Add(  
-   _In_ TDelegateInterface* delegateInterface,  
-   _Out_ EventRegistrationToken* token  
-);  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *delegateInterface*  
- A interface para um objeto delegado, que representa um manipulador de eventos.  
-  
- *token*  
- Quando essa operação for concluída, um identificador que representa o evento. Usar esse token como o parâmetro para o [remove ()](../windows/eventsource-remove-method.md) método para descartar o manipulador de eventos.  
-  
-## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Event. h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Consulte também
- [Classe EventSource](../windows/eventsource-class.md)
+
+Acrescenta o manipulador de eventos representado pela interface delegado especificado ao conjunto de manipuladores de eventos para o atual **EventSource** objeto.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+HRESULT Add(
+   _In_ TDelegateInterface* delegateInterface,
+   _Out_ EventRegistrationToken* token
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*delegateInterface*  
+A interface para um objeto delegado, que representa um manipulador de eventos.
+
+*token*  
+Quando essa operação for concluída, um identificador que representa o evento. Usar esse token como o parâmetro para o [remove ()](../windows/eventsource-remove-method.md) método para descartar o manipulador de eventos.
+
+## <a name="return-value"></a>Valor de retorno
+
+S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** Event. h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+[Classe EventSource](../windows/eventsource-class.md)

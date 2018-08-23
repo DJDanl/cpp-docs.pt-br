@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::NotImplementedException
 ms.assetid: 6da26cc2-dde8-4aea-aa85-67aac55cf97b
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ad78bb1eebd9bf5b1bc268fc64bb7c7c3c0818
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee6e30b4f55b5d87ee5b1f67d39d3cc96932f065
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088491"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597736"
 ---
 # <a name="platformnotimplementedexception-class"></a>Classe Platform::NotImplementedException
 Gerada quando um membro de interface não é implementado em um tipo derivado.  
@@ -36,9 +36,9 @@ public ref class NotImplementedException : COMException,    IException,    IPrin
  Para obter mais informações, consulte a classe [COMException](../cppcx/platform-comexception-class.md) .  
   
 ### <a name="requirements"></a>Requisitos  
- **Suporte mínimo de cliente:** Windows 8  
+ **Mínimo de cliente com suporte:** Windows 8  
   
- **Suporte mínimo de servidor:** Windows Server 2012  
+ **Mínimo de servidor com suporte:** Windows Server 2012  
   
  **Namespace:** Platform  
   

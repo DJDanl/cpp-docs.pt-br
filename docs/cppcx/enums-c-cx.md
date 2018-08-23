@@ -1,23 +1,23 @@
 ---
-title: Enumerações (C + + CX) | Microsoft Docs
+title: Enumerações (C++ c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c96fa4e7194e262eec0be4cf5f7467c163530bd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 725e2b9edb7ba2a84418e900ffb1aafe4c5064af
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087375"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593958"
 ---
 # <a name="enums-ccx"></a>Enums (C++/CX)
-C + + CX oferece suporte a `public enum class` palavra-chave, que é análoga a um C++ padrão `scoped  enum`. Quando você usa um enumerador que é declarado usando a palavra-chave `public enum class` , deve usar o identificador da enumeração para definir o escopo de cada valor de enumeração.  
+C + + c++ /CLI CX dá suporte a `public enum class` palavra-chave, que é análoga a um padrão do C++ `scoped  enum`. Quando você usa um enumerador que é declarado usando a palavra-chave `public enum class` , deve usar o identificador da enumeração para definir o escopo de cada valor de enumeração.  
   
 ### <a name="remarks"></a>Comentários  
  Uma `public enum class` que não tem um especificador de acesso, como `public`, é tratada como um [enum com escopo](../cpp/enumerations-cpp.md)C++ padrão.  

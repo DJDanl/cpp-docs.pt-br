@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::NullReferenceException
 ms.assetid: be202577-d898-4716-83cd-e3556fe8a241
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27e74ea7753ddb66a7daa8403874e803dca91f10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78d0cf9ec994d21845e1910b5affc9e3b5d74a8d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088070"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590321"
 ---
 # <a name="platformnullreferenceexception-class"></a>Classe Platform::NullReferenceException
 Gerada quando ocorre uma tentativa de cancelar a referência de um objeto de referência nula.  
@@ -36,9 +36,9 @@ public ref class NullReferenceException : COMException,    IException,    IPrint
  Para obter mais informações, consulte a classe [COMException](../cppcx/platform-comexception-class.md) .  
   
 ### <a name="requirements"></a>Requisitos  
- **Suporte mínimo de cliente:** Windows 8  
+ **Mínimo de cliente com suporte:** Windows 8  
   
- **Suporte mínimo de servidor:** Windows Server 2012  
+ **Mínimo de servidor com suporte:** Windows Server 2012  
   
  **Namespace:** Platform  
   

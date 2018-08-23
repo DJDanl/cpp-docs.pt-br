@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e4beb2f64448af585537347f0bf0bc7474f541c5
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7f0a609785b46c13f899961ceae1678b4cfbc026
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653164"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592885"
 ---
 # <a name="handlethandle-data-member"></a>Membro de dados HandleT::handle_
-Contém o identificador que é representado pela **HandleT** objeto.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-typename HandleTraits::Type handle_;  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe HandleT](../windows/handlet-class.md)
+
+Contém o identificador que é representado pela **HandleT** objeto.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+typename HandleTraits::Type handle_;
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Consulte também
+
+[Classe HandleT](../windows/handlet-class.md)

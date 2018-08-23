@@ -17,40 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b9fd147f0821e14e825b2a8c0e8d7ad35104fe9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: eeaaedeb4c3806af888f36e62c8fa8e54c47eb46
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653008"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595688"
 ---
 # <a name="creatormapactivationid-data-member"></a>Membro de dados CreatorMap::activationId
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-union {   
-   const IID* clsid;  
-   const wchar_t* (*getRuntimeName)();  
-} activationId;  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *clsid*  
- Uma ID de interface.  
-  
- *getRuntimeName*  
- Uma função que recupera o nome do tempo de execução do Windows de um objeto.  
-  
-## <a name="remarks"></a>Comentários  
- Representa uma ID de objeto é identificada por uma ID de classe do COM clássico ou um nome de tempo de execução do Windows.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** module.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Consulte também  
- [Estrutura CreatorMap](../windows/creatormap-structure.md)   
- [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+union {
+   const IID* clsid;
+   const wchar_t* (*getRuntimeName)();
+} activationId;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*clsid*  
+Uma ID de interface.
+
+*getRuntimeName*  
+Uma função que recupera o nome do tempo de execução do Windows de um objeto.
+
+## <a name="remarks"></a>Comentários
+
+Representa uma ID de objeto é identificada por uma ID de classe do COM clássico ou um nome de tempo de execução do Windows.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** module.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Consulte também
+
+[Estrutura CreatorMap](../windows/creatormap-structure.md)  
+[Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

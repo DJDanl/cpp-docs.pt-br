@@ -21,30 +21,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a5b880e9b0425ecb0de5e59a29b216af174fa8e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: aa37084a88f307757ff7a21f98d9bbc7d9f313ec
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652276"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591066"
 ---
 # <a name="finding-binary-data"></a>Localizando dados binários
-Você pode procurar cadeias de caracteres ASCII ou bytes hexadecimais. Por exemplo, para localizar o "Hello", você pode pesquisar a cadeia de caracteres "Hello" ou para "48 65 6C 6F de C 6" (o equivalente hexadecimal).  
-  
-### <a name="to-find-binary-data"></a>Para localizar dados binários  
-  
-1.  Dos **edite** menu, clique em [localizar](/visualstudio/ide/reference/find-command).  
-  
-2.  No **localizar** caixa, selecione uma cadeia de caracteres de pesquisa anterior na lista suspensa ou digite os dados que você deseja localizar.  
-  
-3.  Selecione qualquer uma da **localizar** opções.  
-  
-4.  Clique em **Localizar próximo**.  
-  
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisitos  
- Nenhum  
-  
-## <a name="see-also"></a>Consulte também  
- [Editor binário](binary-editor.md)
+
+Você pode procurar cadeias de caracteres ASCII ou bytes hexadecimais. Por exemplo, para localizar o "Hello", você pode pesquisar a cadeia de caracteres "Hello" ou para "48 65 6C 6F de C 6" (o equivalente hexadecimal).
+
+### <a name="to-find-binary-data"></a>Para localizar dados binários
+
+1. Dos **edite** menu, clique em [localizar](/visualstudio/ide/reference/find-command).
+
+2. No **localizar** caixa, selecione uma cadeia de caracteres de pesquisa anterior na lista suspensa ou digite os dados que você deseja localizar.
+
+3. Selecione qualquer uma da **localizar** opções.
+
+4. Clique em **Localizar próximo**.
+
+Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisitos
+
+Nenhum
+
+## <a name="see-also"></a>Consulte também
+
+[Editor binário](binary-editor.md)

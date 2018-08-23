@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd166f39f28f01d2d6b30dce81080ec1b76fcad0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d5c15b03682fa96287db29d1160932135cea0186
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018394"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589253"
 ---
 # <a name="modulegenericreleasenotifiercallback-data-member"></a>Membro de dados Module::GenericReleaseNotifier::callback_
-Mantém o lambda, functor ou manipulador de eventos de ponteiro para função associados ao atual `Module::GenericReleaseNotifier` objeto.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-T callback_;  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe Module::GenericReleaseNotifier](../windows/module-genericreleasenotifier-class.md)
+
+Mantém o lambda, functor ou manipulador de eventos de ponteiro para função associados ao atual `Module::GenericReleaseNotifier` objeto.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+T callback_;
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Classe Module::GenericReleaseNotifier](../windows/module-genericreleasenotifier-class.md)

@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14c78a92ac66ee998e11f7101a6a8306be73862a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 46e2a87515e2b129c31f68e31b3231eb1699e844
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641109"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591102"
 ---
 # <a name="boolstructmember-data-member"></a>Membro de dados BoolStruct::Member
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-int Member;  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Especifica que um [ComPtr](../windows/comptr-class.md) é ou não, é gerenciar o tempo de vida do objeto de uma interface.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** internal.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Consulte também  
- [Estrutura BoolStruct](../windows/boolstruct-structure.md)   
- [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+int Member;
+```
+
+## <a name="remarks"></a>Comentários
+
+Especifica que um [ComPtr](../windows/comptr-class.md) é ou não, é gerenciar o tempo de vida do objeto de uma interface.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** internal.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Consulte também
+
+[Estrutura BoolStruct](../windows/boolstruct-structure.md)  
+[Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

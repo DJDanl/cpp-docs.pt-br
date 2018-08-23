@@ -1,20 +1,20 @@
 ---
-title: Interfaces (C + + CX) | Microsoft Docs
+title: Interfaces (C + + c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6be3b207f6bd64685f7ec1d3f6d2271ec3b83f17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8ed06b84ec53cddac2d76488f7d1540a92c1d52
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090635"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592546"
 ---
 # <a name="interfaces-ccx"></a>Interfaces (C++/CX)
 Embora uma classe ref possa ser herdada de, no máximo, uma classe base concreta, ela pode implementar qualquer número de classes de interface. Uma classe de interface (ou estrutura de interface) em si pode herdar (ou exigir) várias classes de interface, pode sobrecarregar suas funções de membro e pode ter parâmetros de tipo.  
@@ -30,7 +30,7 @@ Embora uma classe ref possa ser herdada de, no máximo, uma classe base concreta
   
 -   Campos e membros estáticos não são permitidos.  
   
--   Tipos que são usados como propriedades, parâmetros de método ou valores de retorno podem somente ser tipos do tempo de execução do Windows; Isso inclui os tipos fundamentais e os tipos de classe enum.  
+-   Tipos que são usados como propriedades, parâmetros de método ou retornam valores só podem ser tipos de tempo de execução do Windows; Isso inclui os tipos fundamentais e os tipos de classe de enum.  
   
 ## <a name="declaration-and-usage"></a>Declaração e uso  
  O exemplo de código a seguir mostra como declarar uma interface. Observe que uma interface pode ser declarada como uma classe ou tipo de estrutura.  
@@ -63,7 +63,7 @@ Embora uma classe ref possa ser herdada de, no máximo, uma classe base concreta
  [!code-cpp[cx_interfaces#06](../cppcx/codesnippet/CPP/interfacestest/class1.h#06)]  
   
 ## <a name="generic-interfaces"></a>Interfaces genéricas  
- Em C + + CX, o `generic` palavra-chave é usada para representar um tipo de tempo de execução do Windows com parâmetros. Um tipo parametrizado é emitido nos metadados e pode ser consumido pelo código que está escrito em qualquer linguagem que ofereça suporte aos parâmetros de tipo. O tempo de execução do Windows define algumas interfaces genéricas — por exemplo, [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector)— mas não oferece suporte a criação de interfaces genéricas públicas definidas pelo usuário em C + + CX. No entanto, é possível criar interfaces genéricas privadas.  
+ No C + + c++ /CX, o `generic` palavra-chave é usada para representar um tipo de tempo de execução do Windows com parâmetros. Um tipo parametrizado é emitido nos metadados e pode ser consumido pelo código que está escrito em qualquer linguagem que ofereça suporte aos parâmetros de tipo. O tempo de execução do Windows define algumas interfaces genéricas — por exemplo, [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector)— mas não suporta a criação de interfaces genéricas públicas definidas pelo usuário no C + + c++ /CLI CX. No entanto, é possível criar interfaces genéricas privadas.  
   
  Aqui está como tipos de tempo de execução do Windows podem ser usados para criar uma interface genérica:  
   

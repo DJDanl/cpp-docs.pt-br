@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::AccessDeniedException
 ms.assetid: 6ae2155b-7b16-4587-8d2d-da05eab4c7e9
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4be26bfc87be55d36954429c64094cabd6a6cf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 808de08163f0f94e4c3d0064fced7cb81f83c931
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087608"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597930"
 ---
 # <a name="platformaccessdeniedexception-class"></a>Classe Platform::AccessDeniedException
 Lançada quando o acesso a um recurso é negado.  
@@ -36,9 +36,9 @@ public ref class AccessDeniedException : COMException,    IException,    IPrinta
  Se você receber essa exceção, primeiro verifique se solicitou o recurso apropriado e fez as declarações necessárias no manifesto de pacote no seu aplicativo. Para obter mais informações, consulte [COMException](../cppcx/platform-comexception-class.md) .  
   
 ### <a name="requirements"></a>Requisitos  
- **Suporte mínimo de cliente:** Windows 8  
+ **Mínimo de cliente com suporte:** Windows 8  
   
- **Suporte mínimo de servidor:** Windows Server 2012  
+ **Mínimo de servidor com suporte:** Windows Server 2012  
   
  **Namespace:** Platform  
   

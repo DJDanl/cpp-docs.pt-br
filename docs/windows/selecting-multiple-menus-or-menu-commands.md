@@ -17,24 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 02293fce154fa9c4c98c583de02e8967f4d3957b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a90aab0fae3edbb54dfdd9176ffe47a18ad1796a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020207"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596935"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>Selecionando vários menus ou comandos de menu
-Você pode selecionar vários nomes de menus ou comandos de menu para executar operações em massa, como excluindo ou alterando as propriedades.  
-  
-### <a name="to-select-multiple-menu-commands"></a>Para selecionar vários comandos de menu  
-  
-1.  Enquanto mantém pressionada a **Ctrl** da chave, clique em menus ou comandos do submenu que você deseja.  
-  
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*.  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Consulte também  
- [Editor de Menu](../windows/menu-editor.md)
+
+Você pode selecionar vários nomes de menus ou comandos de menu para executar operações em massa, como excluindo ou alterando as propriedades.
+
+### <a name="to-select-multiple-menu-commands"></a>Para selecionar vários comandos de menu
+
+1. Enquanto mantém pressionada a **Ctrl** da chave, clique em menus ou comandos do submenu que você deseja.
+
+Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*.
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Consulte também
+
+[Editor de Menu](../windows/menu-editor.md)

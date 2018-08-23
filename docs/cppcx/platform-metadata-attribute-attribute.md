@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Metadata::Attribute Attribute
 ms.assetid: 0e69727f-429b-4f7d-85c6-eea614f14dd7
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 001741f0d5d3370c7798b2f43944eae8208a9fc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba61baf4b95b33b59c365f110118e539a532ac14
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087771"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593760"
 ---
 # <a name="platformmetadataattribute-attribute"></a>Atributo Platform::Metadata::Attribute
 Representa a classe base de todos os atributos.  
@@ -37,9 +37,9 @@ public ref class Attribute abstract : Object
  [Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)  
   
 ### <a name="requirements"></a>Requisitos  
- **Suporte mínimo de cliente:** Windows 8  
+ **Mínimo de cliente com suporte:** Windows 8  
   
- **Suporte mínimo de servidor:** Windows Server 2012  
+ **Mínimo de servidor com suporte:** Windows Server 2012  
   
  **Namespace:** Platform::Metadata  
   

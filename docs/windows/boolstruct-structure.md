@@ -17,41 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14e3d81ca273bf96b4812f08a46904c9d521c5cf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c4981c7f82fe2c544bf907ac59d6e9ca22105cbd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650476"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592531"
 ---
 # <a name="boolstruct-structure"></a>Estrutura BoolStruct
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-struct BoolStruct;  
-```  
-  
-## <a name="remarks"></a>Comentários  
- O **BoolStruct** estrutura define se um `ComPtr` está gerenciando o tempo de vida do objeto de uma interface. **BoolStruct** é usado internamente pelo [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operador.  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-data-members"></a>Membros de Dados Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[Membro de dados BoolStruct::Member](../windows/boolstruct-member-data-member.md)|Especifica que um [ComPtr](../windows/comptr-class.md) é ou não, é gerenciar o tempo de vida do objeto de uma interface.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `BoolStruct`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** internal.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)   
- [Operador ComPtr::operator Microsoft::WRL::Details::BoolType](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)
+
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+struct BoolStruct;
+```
+
+## <a name="remarks"></a>Comentários
+
+O **BoolStruct** estrutura define se um `ComPtr` está gerenciando o tempo de vida do objeto de uma interface. **BoolStruct** é usado internamente pelo [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operador.
+
+## <a name="members"></a>Membros
+
+### <a name="public-data-members"></a>Membros de Dados Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[Membro de dados BoolStruct::Member](../windows/boolstruct-member-data-member.md)|Especifica que um [ComPtr](../windows/comptr-class.md) é ou não, é gerenciar o tempo de vida do objeto de uma interface.|
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`BoolStruct`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** internal.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)  
+[Operador ComPtr::operator Microsoft::WRL::Details::BoolType](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)

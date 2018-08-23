@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: edc4658ebf0519ef9d1792d62b303f423e658835
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8847083fe134c36f506e7080772b1e5f0e2a873c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643063"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590176"
 ---
 # <a name="activationfactorygetruntimeclassname-method"></a>Método ActivationFactory::GetRuntimeClassName
-Obtém o nome de classe de tempo de execução do objeto que o atual **ActivationFactory** cria uma instância.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-STDMETHOD(  
-   GetRuntimeClassName  
-)(_Out_ HSTRING* runtimeName);  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *runtimeName*  
- Quando essa operação for concluída, um identificador para uma cadeia de caracteres que contém o nome de classe de tempo de execução do objeto que o atual **ActivationFactory** cria uma instância.  
-  
-## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe ActivationFactory](../windows/activationfactory-class.md)
+
+Obtém o nome de classe de tempo de execução do objeto que o atual **ActivationFactory** cria uma instância.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+STDMETHOD(
+   GetRuntimeClassName
+)(_Out_ HSTRING* runtimeName);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*runtimeName*  
+Quando essa operação for concluída, um identificador para uma cadeia de caracteres que contém o nome de classe de tempo de execução do objeto que o atual **ActivationFactory** cria uma instância.
+
+## <a name="return-value"></a>Valor de retorno
+
+S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Classe ActivationFactory](../windows/activationfactory-class.md)

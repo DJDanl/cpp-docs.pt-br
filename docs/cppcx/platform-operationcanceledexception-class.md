@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::OperationCanceledException
 ms.assetid: 5351bc20-5408-423a-8169-f09acc8a3fbb
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d076f82acbf3dd7120feac70d13c3179f7471ccd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e937625530c6dc8576ce8e850a97d11ea24ca05
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088961"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592728"
 ---
 # <a name="platformoperationcanceledexception-class"></a>Classe Platform::OperationCanceledException
 Gerada quando uma operação é anulada.  
@@ -36,9 +36,9 @@ public ref class OperationCanceledException : COMException,    IException,    IP
  Para obter mais informações, consulte a classe [COMException](../cppcx/platform-comexception-class.md) .  
   
 ### <a name="requirements"></a>Requisitos  
- **Suporte mínimo de cliente:** Windows 8  
+ **Mínimo de cliente com suporte:** Windows 8  
   
- **Suporte mínimo de servidor:** Windows Server 2012  
+ **Mínimo de servidor com suporte:** Windows Server 2012  
   
  **Namespace:** Platform  
   

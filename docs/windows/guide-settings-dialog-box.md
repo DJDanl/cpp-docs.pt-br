@@ -23,45 +23,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 271a56881f2710a7fb7c18dadeb7c36d4d6a3232
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 3533d57aa8230feb4d0e6fcb8689e0210c61bbd8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647990"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595498"
 ---
 # <a name="guide-settings-dialog-box"></a>Caixa de diálogo Configurações da Guia
-## <a name="layout-guides"></a>Guias de layout  
- Exibe as configurações das guias de layout.  
-  
-### <a name="none"></a>Nenhum  
-  
- Oculta as ferramentas de layout.  
-  
-### <a name="rulers-and-guides"></a>Réguas e guias  
-  
- Quando habilitado, adiciona réguas para as ferramentas de layout; guias podem ser colocados nas réguas. Os guias padrão são as margens, que podem ser movidas, arrastando. Clique nas réguas para colocar uma guia. Controles de "ajustará" aos guias de quando os controles são movidos pela ou ao lado deles. Controles também são movidos com um guia depois que eles estão conectados a ele. Quando um controle está anexado a uma guia em cada lado e um guia é movido, o controle é redimensionado.  
-  
-### <a name="grid"></a>Grade  
-  
- Cria uma grade de layout. Novos controles são alinhados automaticamente à grade.  
-  
-## <a name="grid-spacing"></a>Espaçamento da grade  
- Exibe as configurações para o espaçamento da grade em unidades de caixa de diálogo (DLUs).  
-  
-### <a name="width-dlus"></a>Largura: DLUs  
-  
- Define a largura da grade de layout em DLUs. Um DLU horizontal é a largura da média da fonte de caixa de diálogo dividida por quatro.  
-  
-### <a name="height-dlus"></a>Altura: DLUs 
-  
- Define a altura da grade de layout em DLUs. Um DLU vertical é a média altura da fonte de caixa de diálogo dividida por oito.  
-  
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Consulte também  
- [Modificando a grade de Layout](../windows/modifying-the-layout-grid.md)   
- [Estados do Editor de Caixa de Diálogo (guias e grades)](../windows/dialog-editor-states-guides-and-grids.md)
+
+## <a name="layout-guides"></a>Guias de layout
+
+Exibe as configurações das guias de layout.
+
+### <a name="none"></a>Nenhum
+
+Oculta as ferramentas de layout.
+
+### <a name="rulers-and-guides"></a>Réguas e guias
+
+Quando habilitado, adiciona réguas para as ferramentas de layout; guias podem ser colocados nas réguas. Os guias padrão são as margens, que podem ser movidas, arrastando. Clique nas réguas para colocar uma guia. Controles de "ajustará" aos guias de quando os controles são movidos pela ou ao lado deles. Controles também são movidos com um guia depois que eles estão conectados a ele. Quando um controle está anexado a uma guia em cada lado e um guia é movido, o controle é redimensionado.
+
+### <a name="grid"></a>Grade
+
+Cria uma grade de layout. Novos controles são alinhados automaticamente à grade.
+
+## <a name="grid-spacing"></a>Espaçamento da grade
+
+Exibe as configurações para o espaçamento da grade em unidades de caixa de diálogo (DLUs).
+
+### <a name="width-dlus"></a>Largura: DLUs
+
+Define a largura da grade de layout em DLUs. Um DLU horizontal é a largura da média da fonte de caixa de diálogo dividida por quatro.
+
+### <a name="height-dlus"></a>Altura: DLUs
+
+Define a altura da grade de layout em DLUs. Um DLU vertical é a média altura da fonte de caixa de diálogo dividida por oito.
+
+Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Consulte também
+
+[Modificando a grade de layout](../windows/modifying-the-layout-grid.md)  
+[Estados do Editor de Caixa de Diálogo (guias e grades)](../windows/dialog-editor-states-guides-and-grids.md)

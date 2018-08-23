@@ -23,73 +23,77 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2b1b285437170c4059d5cd0d66d19188c99badd9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 23607eb9d59a5c860d89444205c675c95e2b907e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646780"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594063"
 ---
 # <a name="eventreceiver"></a>event_receiver
-Cria um receptor de eventos (coletor).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-[ event_receiver(  
-   type   
-   [, layout_dependent=false]   
-) ]  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *type*  
- Uma enumeração de um dos seguintes valores:  
-  
--   `native` para código C/C++ não gerenciado (padrão para classes nativas).  
-  
--   `com` para o código de COM. Esse valor requer que você inclua os arquivos de cabeçalho a seguir:  
-  
-    ```cpp  
-    #define _ATL_ATTRIBUTES  
-    #include <atlbase.h>  
-    #include <atlcom.h>  
-    ```  
-  
- *layout_dependent*  
- Especificar *layout_dependent* somente se `type` = **com**. *layout_dependent* é um valor booliano:  
-  
--   **True** significa que a assinatura dos delegados no receptor deve corresponder exatamente a aqueles aos quais estão vinculados no evento origem de evento. Os nomes de manipulador de receptor de evento devem corresponder aos nomes especificados na interface de origem do evento relevante. Você deve usar `coclass` quando *layout_dependent* é **true**. É um pouco mais eficiente para especificar **verdadeira**.  
-  
--   **False** (padrão) significa que a classe de armazenamento e a convenção de chamada (virtual, estático e outros) não têm que coincidir com o método de evento e os manipuladores; nem os nomes de manipulador precisa coincidir com os nomes de método de interface de origem do evento.  
-  
-## <a name="remarks"></a>Comentários  
- O **event_receiver** atributo de C++ Especifica que a classe ou estrutura à qual ela é aplicada será um receptor de eventos, usando o modelo de evento unificado do Visual C++.  
-  
- **event_receiver** é usado com o [event_source](../windows/event-source.md) atributo e o [hook](../cpp/hook.md) e [unhook](../cpp/unhook.md) palavras-chave. Use `event_source` para criar fontes de evento. Use **hook** dentro de métodos de um receptor evento para associar a métodos de receptor de eventos ("gancho") para os eventos de uma origem do evento. Use **unhook** para desassociá-los.  
-  
- *layout_dependent* só é especificado para os receptores de evento (`type`=**com**). O padrão para *layout_dependent* é **falso**.  
-  
+
+Cria um receptor de eventos (coletor).
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+[ event_receiver(
+   type
+   [, layout_dependent=false]
+) ]
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*type*  
+Uma enumeração de um dos seguintes valores:
+
+- `native` para código C/C++ não gerenciado (padrão para classes nativas).
+
+- `com` para o código de COM. Esse valor requer que você inclua os arquivos de cabeçalho a seguir:
+
+    ```cpp
+    #define _ATL_ATTRIBUTES
+    #include <atlbase.h>
+    #include <atlcom.h>
+    ```
+
+*layout_dependent*  
+Especificar *layout_dependent* somente se `type` = **com**. *layout_dependent* é um valor booliano:
+
+- **True** significa que a assinatura dos delegados no receptor deve corresponder exatamente a aqueles aos quais estão vinculados no evento origem de evento. Os nomes de manipulador de receptor de evento devem corresponder aos nomes especificados na interface de origem do evento relevante. Você deve usar `coclass` quando *layout_dependent* é **true**. É um pouco mais eficiente para especificar **verdadeira**.
+
+- **False** (padrão) significa que a classe de armazenamento e a convenção de chamada (virtual, estático e outros) não têm que coincidir com o método de evento e os manipuladores; nem os nomes de manipulador precisa coincidir com os nomes de método de interface de origem do evento.
+
+## <a name="remarks"></a>Comentários
+
+O **event_receiver** atributo de C++ Especifica que a classe ou estrutura à qual ela é aplicada será um receptor de eventos, usando o modelo de evento unificado do Visual C++.
+
+**event_receiver** é usado com o [event_source](../windows/event-source.md) atributo e o [hook](../cpp/hook.md) e [unhook](../cpp/unhook.md) palavras-chave. Use `event_source` para criar fontes de evento. Use **hook** dentro de métodos de um receptor evento para associar a métodos de receptor de eventos ("gancho") para os eventos de uma origem do evento. Use **unhook** para desassociá-los.
+
+*layout_dependent* só é especificado para os receptores de evento (`type`=**com**). O padrão para *layout_dependent* é **falso**.
+
 > [!NOTE]
->  Uma classe ou um struct modelo não podem conter eventos.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Atributo de contexto  
-  
-|||  
-|-|-|  
-|**Aplica-se a**|**classe**, **struct**|  
-|**Repetível**|Não|  
-|**Atributos obrigatórios**|`coclass` Quando *layout_dependent*=**true**|  
-|**Atributos inválidos**|Nenhum|  
-  
- Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Atributos de compilador](../windows/compiler-attributes.md)   
- [EVENT_SOURCE](../windows/event-source.md)   
- [Event](../cpp/event.md)   
- [hook](../cpp/hook.md)   
- [unhook](../cpp/unhook.md)   
- [Atributos de classe](../windows/class-attributes.md)   
+> Uma classe ou um struct modelo não podem conter eventos.
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Atributo de contexto
+
+|||
+|-|-|
+|**Aplica-se a**|**classe**, **struct**|
+|**Repetível**|Não|
+|**Atributos obrigatórios**|`coclass` Quando *layout_dependent*=**true**|
+|**Atributos inválidos**|Nenhum|
+
+Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Atributos de compilador](../windows/compiler-attributes.md)  
+[event_source](../windows/event-source.md)  
+[__event](../cpp/event.md)  
+[__hook](../cpp/hook.md)  
+[__unhook](../cpp/unhook.md)  
+[Atributos de classe](../windows/class-attributes.md)  
