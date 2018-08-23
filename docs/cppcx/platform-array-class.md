@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65c45265714f869de10bdfd450c2b1349d6b526b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: fa689035a6e95db7f9471d4972063ec35486e0cb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704666"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605879"
 ---
 # <a name="platformarray-class"></a>Classe Platform::Array
 Representa uma matriz unidimensional modificável, que pode ser recebida e transmitida pela interface binária de aplicativo (ABI).  
@@ -57,13 +57,13 @@ private ref class Array<TArg, 1> :
 ### <a name="remarks"></a>Comentários  
  A classe da matriz é fechada e não pode ser herdada.  
   
- O sistema de tipos do tempo de execução do Windows não oferece suporte para o conceito de matrizes denteadas e, portanto, você não pode passar um IVector < Platform:: array\<T >> como um parâmetro de método ou valor de retorno. Para passar uma matriz denteada ou uma sequência de sequências através da ABI, use `IVector<IVector<T>^>`.  
+ O sistema de tipo de tempo de execução do Windows não suporta o conceito de matrizes denteadas e, portanto, você não pode passar um IVector < Platform:: array\<T >> como um parâmetro de método ou valor de retorno. Para passar uma matriz denteada ou uma sequência de sequências através da ABI, use `IVector<IVector<T>^>`.  
   
  Para obter mais informações sobre quando e como usar Platform:: array, consulte [matriz e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).  
   
- O sistema de tipos do tempo de execução do Windows não oferece suporte para o conceito de matrizes denteadas e, portanto, você não pode passar um IVector < Platform:: array\<T >> como um parâmetro de método ou valor de retorno. Para passar uma matriz denteada ou uma sequência de sequências através da ABI, use `IVector<IVector<T>^>`.  
+ O sistema de tipo de tempo de execução do Windows não suporta o conceito de matrizes denteadas e, portanto, você não pode passar um IVector < Platform:: array\<T >> como um parâmetro de método ou valor de retorno. Para passar uma matriz denteada ou uma sequência de sequências através da ABI, use `IVector<IVector<T>^>`.  
   
- Essa classe é definida no cabeçalho vccorlib.h, que é incluído automaticamente pelo compilador. É visível no IntelliSense mas não no Pesquisador de objetos porque não é um tipo público definido em Platform. winmd.  
+ Essa classe é definida no cabeçalho vccorlib.h, que é incluído automaticamente pelo compilador. Ele é visível no IntelliSense mas não no Pesquisador de objetos porque ele não é um tipo público definido em Platform. winmd.  
   
 ### <a name="requirements"></a>Requisitos  
  Opção do compilador: **/ZW**  
@@ -92,7 +92,7 @@ Array(T* data, unsigned int size);
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações sobre como criar instâncias de Platform:: array, consulte [matriz e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
-## <a name="get"></a>  Método Array:
+## <a name="get"></a>  Método Array:: Get
 Recupera uma referência ao elemento de matriz no local do índice especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -103,7 +103,7 @@ T& get(unsigned int index)  const;
   
 #### <a name="parameters"></a>Parâmetros  
  `index`  
- Um índice com base zero que identifica um elemento na matriz. O índice mínimo é 0 e o máximo é o valor especificado pelo `size` parâmetro o [construtor Array](#ctor).  
+ Um índice com base zero que identifica um elemento na matriz. O índice mínimo é 0 e o índice máximo é o valor especificado pela `size` parâmetro na [construtor Array](#ctor).  
   
 ### <a name="return-value"></a>Valor de retorno  
  O elemento de matriz especificado pelo parâmetro `index`.  
@@ -121,5 +121,5 @@ property Array^ Value;
  Um identificador para a matriz atual.  
 
 ## <a name="see-also"></a>Consulte também  
- [Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)   
+ [Namespace Platform](../cppcx/platform-namespace-c-cx.md)   
  [Matriz e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

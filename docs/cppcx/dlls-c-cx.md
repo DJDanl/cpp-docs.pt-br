@@ -1,32 +1,32 @@
 ---
-title: DLLs (C + + CX) | Microsoft Docs
+title: DLLs (C + + c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/06/2018
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39c334c659980dccdca670ab91501f0e30c4e6d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ac06336e5ba80406157285ebe660080aff6e319
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088083"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609826"
 ---
 # <a name="dlls-ccx"></a>DLLs (C++/CX)
 
-Você pode usar o Visual Studio para criar uma DLL padrão do Win32 ou um DLL que pode ser consumido por aplicativos do Windows UWP (plataforma Universal) do componente de tempo de execução do Windows. Uma DLL padrão que foi criada usando uma versão do Visual Studio ou do compilador Visual C++ anterior ao Visual Studio 2012 pode não carregar corretamente em um aplicativo UWP e não pode passar no teste de verificação de aplicativo na Microsoft Store.
+Você pode usar o Visual Studio para criar uma DLL Win32 padrão ou um DLL que pode ser consumido por aplicativos de plataforma Universal do Windows (UWP) do componente de tempo de execução do Windows. Uma DLL padrão que foi criada usando uma versão do Visual Studio ou o compilador Visual C++ anterior ao Visual Studio 2012 pode não carregar corretamente em um aplicativo UWP e não pode passar o teste de verificação do aplicativo em que a Microsoft Store.
 
 ## <a name="windows-runtime-component-dlls"></a>DLLs de componentes de tempo de execução do Windows
 
-Em quase todos os casos, quando você deseja criar uma DLL para usar em um aplicativo UWP, criá-lo como um componente de tempo de execução do Windows usando o modelo de projeto do nome. Você pode criar um projeto de componente de tempo de execução do Windows para DLLs que tenham tipos públicos ou privados do Windows Runtime. Um componente de tempo de execução do Windows pode ser acessado em aplicativos que são escritos em qualquer linguagem compatível com o Windows Runtime. Por padrão, as configurações do compilador para um componente de tempo de execução do Windows projeto usar o **/ZW** alternar. Um arquivo .winmd deve ter o mesmo nome do namespace raiz. Por exemplo, uma classe denominada A.B.C.MyClass poderá ser instanciada somente se for definida em um arquivo de metadados denominado A.winmd ou A.B.winmd ou A.B.C.winmd. O nome da DLL não precisa coincidir com o nome do arquivo .winmd.
+Em quase todos os casos, quando você deseja criar uma DLL para usar em um aplicativo UWP, criá-lo como um componente de tempo de execução do Windows usando o modelo de projeto, esse nome. Você pode criar um projeto de componente de tempo de execução do Windows para DLLs que tenham tipos de tempo de execução do Windows públicos ou privados. Um componente de tempo de execução do Windows pode ser acessado em aplicativos que são escritos em qualquer linguagem compatível com o Windows Runtime. Por padrão, as configurações do compilador para um componente de tempo de execução do Windows projeto use a **/ZW** alternar. Um arquivo .winmd deve ter o mesmo nome do namespace raiz. Por exemplo, uma classe denominada A.B.C.MyClass poderá ser instanciada somente se for definida em um arquivo de metadados denominado A.winmd ou A.B.winmd ou A.B.C.winmd. O nome da DLL não precisa coincidir com o nome do arquivo .winmd.
 
 Para obter mais informações, consulte [Criando componentes do tempo de execução do Windows em C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
-### <a name="to-reference-a-third-party-windows-runtime-component-binary-in-your-project"></a>Para fazer referência a um componente de tempo de execução do Windows de terceiros binário em seu projeto
+### <a name="to-reference-a-third-party-windows-runtime-component-binary-in-your-project"></a>Para fazer referência a um componente de tempo de execução do Windows de terceiros binário no seu projeto
 
 1. Abra o menu de atalho do projeto que usará a DLL e escolha **Propriedades**. Na página **Propriedades Comuns** , escolha o botão **Adicionar Nova Referência** .
 
@@ -34,17 +34,17 @@ Para obter mais informações, consulte [Criando componentes do tempo de execuç
 
 ## <a name="standard-dlls"></a>DLLs padrão
 
-Você pode criar uma DLL padrão para o código C++ que não consuma ou produza tipos públicos do Windows Runtime e consumi-lo em um aplicativo UWP. Quando você quiser apenas migrar para uma DLL existente para compilar nesta versão do Visual Studio, mas não converter o código em um projeto de componente de tempo de execução do Windows, use o tipo de projeto de biblioteca de vínculo dinâmico (DLL). Quando você usa as etapas a seguir, a DLL será implantada juntamente com o executável de seu aplicativo no pacote .appx.
+Você pode criar uma DLL padrão para o código de C++ que não consomem ou geram tipos públicos do tempo de execução do Windows e consumi-lo em um aplicativo UWP. Quando você deseja apenas migrar de uma DLL existente para compilar nesta versão do Visual Studio, mas não converter o código em um projeto de componente de tempo de execução do Windows, use o tipo de projeto de biblioteca de vínculo dinâmico (DLL). Quando você usa as etapas a seguir, a DLL será implantada juntamente com o executável de seu aplicativo no pacote .appx.
 
 ### <a name="to-create-a-standard-dll-in-visual-studio"></a>Para criar uma DLL padrão no Visual Studio
 
-1. Na barra de menus, escolha **arquivo**, **novo**, **projeto**e, em seguida, selecione o **biblioteca de vínculo dinâmico (DLL)** modelo.
+1. Na barra de menus, escolha **arquivo**, **New**, **projeto**e, em seguida, selecione o **biblioteca de vínculo dinâmico (DLL)** modelo.
 
 1. Digite um nome para o projeto e escolha o botão **OK** .
 
 1. Adicione o código. Não se esqueça de usar `__declspec(dllexport)` para funções que você pretende exportar, por exemplo, `__declspec(dllexport) Add(int I, in j);`
 
-1. Adicionar `#include winapifamily.h` para incluir esse arquivo de cabeçalho do SDK do Windows para aplicativos UWP e defina a macro `WINAPI_FAMILY=WINAPI_PARTITION_APP`.
+1. Adicione `#include winapifamily.h` para incluir esse arquivo de cabeçalho do SDK do Windows para aplicativos UWP e defina a macro `WINAPI_FAMILY=WINAPI_PARTITION_APP`.
 
 ### <a name="to-reference-a-standard-dll-project-from-the-same-solution"></a>Para referenciar um projeto de DLL padrão da mesma solução
 
@@ -64,8 +64,8 @@ Você pode criar uma DLL padrão para o código C++ que não consuma ou produza 
 
 ### <a name="to-migrate-an-existing-win32-dll-for-uwp-app-compatibility"></a>Para migrar uma Win32 DLL existente para compatibilidade de aplicativo UWP
 
-1. Crie um projeto do tipo DLL (Universal do Windows) e adicione seu código-fonte existente a ele.
+1. Criar um projeto do tipo DLL (Universal Windows) e adicione seu código-fonte existente para ele.
 
-1. Adicionar `#include winapifamily.h` para incluir esse arquivo de cabeçalho do SDK do Windows para aplicativos UWP e defina a macro `WINAPI_FAMILY=WINAPI_PARTITION_APP`.
+1. Adicione `#include winapifamily.h` para incluir esse arquivo de cabeçalho do SDK do Windows para aplicativos UWP e defina a macro `WINAPI_FAMILY=WINAPI_PARTITION_APP`.
 
 1. Nos arquivos de código de origem, adicione uma instrução `#include` para o arquivo de cabeçalho de DLL, conforme necessário.

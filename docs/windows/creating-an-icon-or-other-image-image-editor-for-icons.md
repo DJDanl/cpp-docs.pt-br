@@ -23,50 +23,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b708d701bee433857f8d5f8379d74b92375340de
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: bab69a9f7e62161d95ebcf788a05f776af88f10f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651915"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607228"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>Criando um ícone ou outra imagem (editor de imagens para ícones)
-Você pode criar uma nova imagem (bitmap, ícone, cursor ou barra de ferramentas) e usar o editor de imagens para personalizar sua aparência. Você também pode criar um novo bitmap em conformidade com um [modelo](../windows/how-to-use-resource-templates.md).  
-  
-### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Para adicionar um novo recurso de imagem a um projeto de C++ não gerenciado  
-  
-1.  Na [exibição de recurso](../windows/resource-view-window.md), clique com botão direito seu arquivo. RC e escolha **inserir recurso** no menu de atalho. (Se você já tiver um recurso de imagem existente em seu arquivo. RC, como um cursor, você pode simplesmente com o botão direito do **Cursor** pasta e selecione **Cursor inserir** no menu de atalho.)  
-  
-    > [!NOTE]
-    > Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  No [caixa de diálogo Inserir recurso](../windows/add-resource-dialog-box.md), selecione o tipo de recurso de imagem que você deseja criar (**Bitmap**, por exemplo), em seguida, clique em **New**.  
-  
-     Se um sinal de adição (**+**) é exibido ao lado do tipo de recurso de imagem no **inserir recurso** caixa de diálogo, isso significa que os modelos de barra de ferramentas estão disponíveis. Clique no sinal de adição para expandir a lista de modelos, selecione um modelo e clique em **New**.  
-  
-### <a name="to-add-a-new-image-resource-to-a-project-in-a-net-programming-language"></a>Para adicionar um novo recurso de imagem a um projeto em uma linguagem de programação do .NET  
-  
-1.  Na **Gerenciador de soluções**, clique na pasta de projeto (por exemplo, `WindowsApplication1`).  
-  
-2.  No menu de atalho, clique em **Add**, em seguida, escolha **Adicionar Novo Item**.  
-  
-3.  No **categorias** painel, expanda o **itens de projeto locais** pasta, em seguida, escolha **recursos**.  
-  
-4.  No **modelos** painel, escolha o tipo de recurso que você deseja adicionar ao seu projeto.  
-  
-     O recurso é adicionado ao seu projeto no **Gerenciador de soluções** e o recurso é aberto na [editor de imagens](../windows/image-editor-for-icons.md). Agora você pode usar todas as ferramentas disponíveis no editor de imagem para modificar sua imagem. Para obter mais informações sobre como adicionar imagens a um projeto gerenciado, consulte [carregando uma imagem em tempo de Design](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms).  
-  
-    > [!NOTE]
-    >  Todos os recursos gerenciados que você deseja editar devem ser recursos vinculados. Os editores de recursos do Visual Studio não oferecem suporte à edição de recursos inseridos. Para obter mais informações, consulte [criando arquivos de recurso](/dotnet/framework/resources/creating-resource-files-for-desktop-apps) na *guia do desenvolvedor do .NET Framework*.  
-  
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisitos  
- Nenhum  
-  
-## <a name="see-also"></a>Consulte também  
- [Ícones e cursores: recursos de imagem para exibir dispositivos](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
- [Convertendo Bitmaps em barras de ferramentas](../windows/converting-bitmaps-to-toolbars.md)   
- [Criando novas barras de ferramentas](../windows/creating-new-toolbars.md)   
- [Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)   
- [Editor de imagens para ícones](../windows/image-editor-for-icons.md)
+
+Você pode criar uma nova imagem (bitmap, ícone, cursor ou barra de ferramentas) e usar o editor de imagens para personalizar sua aparência. Você também pode criar um novo bitmap em conformidade com um [modelo](../windows/how-to-use-resource-templates.md).
+
+### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Para adicionar um novo recurso de imagem a um projeto de C++ não gerenciado
+
+1. Na [exibição de recurso](../windows/resource-view-window.md), clique com botão direito seu arquivo. RC e escolha **inserir recurso** no menu de atalho. (Se você já tiver um recurso de imagem existente em seu arquivo. RC, como um cursor, você pode simplesmente com o botão direito do **Cursor** pasta e selecione **Cursor inserir** no menu de atalho.)
+
+   > [!NOTE]
+   > Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).
+
+2. No [caixa de diálogo Inserir recurso](../windows/add-resource-dialog-box.md), selecione o tipo de recurso de imagem que você deseja criar (**Bitmap**, por exemplo), em seguida, clique em **New**.
+
+   Se um sinal de adição (**+**) é exibido ao lado do tipo de recurso de imagem no **inserir recurso** caixa de diálogo, isso significa que os modelos de barra de ferramentas estão disponíveis. Clique no sinal de adição para expandir a lista de modelos, selecione um modelo e clique em **New**.
+
+### <a name="to-add-a-new-image-resource-to-a-project-in-a-net-programming-language"></a>Para adicionar um novo recurso de imagem a um projeto em uma linguagem de programação do .NET
+
+1. Na **Gerenciador de soluções**, clique na pasta de projeto (por exemplo, `WindowsApplication1`).
+
+2. No menu de atalho, clique em **Add**, em seguida, escolha **Adicionar Novo Item**.
+
+3. No **categorias** painel, expanda o **itens de projeto locais** pasta, em seguida, escolha **recursos**.
+
+4. No **modelos** painel, escolha o tipo de recurso que você deseja adicionar ao seu projeto.
+
+   O recurso é adicionado ao seu projeto no **Gerenciador de soluções** e o recurso é aberto na [editor de imagens](../windows/image-editor-for-icons.md). Agora você pode usar todas as ferramentas disponíveis no editor de imagem para modificar sua imagem. Para obter mais informações sobre como adicionar imagens a um projeto gerenciado, consulte [carregando uma imagem em tempo de Design](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms).
+
+   > [!NOTE]
+   > Todos os recursos gerenciados que você deseja editar devem ser recursos vinculados. Os editores de recursos do Visual Studio não oferecem suporte à edição de recursos inseridos. Para obter mais informações, consulte [criando arquivos de recurso](/dotnet/framework/resources/creating-resource-files-for-desktop-apps) na *guia do desenvolvedor do .NET Framework*.
+
+Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisitos
+
+Nenhum
+
+## <a name="see-also"></a>Consulte também
+
+[Ícones e cursores: recursos de imagem para exibir dispositivos](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
+[Convertendo bitmaps em barras de ferramentas](../windows/converting-bitmaps-to-toolbars.md)  
+[Criando novas barras de ferramentas](../windows/creating-new-toolbars.md)  
+[Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Editor de imagens para ícones](../windows/image-editor-for-icons.md)

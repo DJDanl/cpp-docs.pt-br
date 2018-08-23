@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2dce9b2ce59eb98c59c7a6cf04be52f3d439fdb0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ad7b007728d3de949fec678249edd56c7032d250
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642845"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605731"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Adicionando manipuladores de eventos para controles da caixa de diálogo
 
@@ -49,13 +49,13 @@ Para caixas de diálogo do projeto que já estão associadas uma classe, você p
 
    - BN_SETFOCUS
 
-    > [!NOTE]
-    > Como alternativa, selecione a caixa de diálogo e clique no **ControlEvents** botão para exibir a lista de eventos do Windows comuns para todos os controles na caixa de diálogo.
+   > [!NOTE]
+   > Como alternativa, selecione a caixa de diálogo e clique no **ControlEvents** botão para exibir a lista de eventos do Windows comuns para todos os controles na caixa de diálogo.
 
 3. No **propriedades** janela, clique na coluna direita ao lado para manipular o evento e, em seguida, selecione o nome do evento de notificação sugeridos (por exemplo, `OnBnClickedOK` manipula BN_CLICKED).
 
-    > [!NOTE]
-    > Como alternativa, você pode fornecer um nome de manipulador de eventos de sua escolha, em vez de selecionar o nome do manipulador de eventos padrão.
+   > [!NOTE]
+   > Como alternativa, você pode fornecer um nome de manipulador de eventos de sua escolha, em vez de selecionar o nome do manipulador de eventos padrão.
 
    Depois de selecionar o evento, o Visual Studio abre o **Editor de texto** e exibe o código do manipulador de eventos. Por exemplo, o código a seguir é adicionado para o padrão `OnBnClickedOK`:
 
@@ -71,14 +71,16 @@ Se você quiser adicionar o manipulador de eventos para uma classe diferente de 
 Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Requisitos
- Win32
+
+Win32
 
 ## <a name="see-also"></a>Consulte também
- [Eventos de controle padrão](../windows/default-control-events.md)  
- [Definindo variáveis de membro para controles de caixa de diálogo](../windows/defining-member-variables-for-dialog-controls.md)  
- [Controles da caixa de diálogo e tipos de variável](../ide/dialog-box-controls-and-variable-types.md)  
- [Adicionando uma classe](../ide/adding-a-class-visual-cpp.md)  
- [Adicionando uma função de membro](../ide/adding-a-member-function-visual-cpp.md)  
- [Adicionando uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)  
- [Substituindo uma função Virtual](../ide/overriding-a-virtual-function-visual-cpp.md)  
- [Manipulador de mensagens do MFC](../mfc/reference/adding-an-mfc-message-handler.md)  
+
+[Eventos de controle padrão](../windows/default-control-events.md)  
+[Definindo variáveis de membro para controles de caixa de diálogo](../windows/defining-member-variables-for-dialog-controls.md)  
+[Controles da caixa de diálogo e tipos de variável](../ide/dialog-box-controls-and-variable-types.md)  
+[Adicionando uma classe](../ide/adding-a-class-visual-cpp.md)  
+[Adicionando uma função de membro](../ide/adding-a-member-function-visual-cpp.md)  
+[Adicionando uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)  
+[Substituindo uma função Virtual](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[Manipulador de mensagens do MFC](../mfc/reference/adding-an-mfc-message-handler.md)  

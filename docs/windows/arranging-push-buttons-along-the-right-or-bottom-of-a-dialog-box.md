@@ -18,32 +18,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7df4b20677c8dbccacdbfa21cc798da1ed4bb511
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 71e44b8d4fef02101c7b8d8f5878aeaa22a5c528
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649215"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608717"
 ---
 # <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Organizando botões de ação ao longo da parte direita ou inferior de uma caixa de diálogo
-### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Para organizar os botões de envio por push ao longo da direita ou inferior de uma caixa de diálogo  
-  
-1.  Selecione um ou mais botões de envio por push.  
-  
-2.  Dos **formato** menu, escolha **Organizar botões**e, em seguida, escolha uma das seguintes organizações:  
-  
-    -   `Right`: alinha os botões de envio por push ao longo da borda direita da caixa de diálogo.  
-  
-    -   `Bottom`: alinha os botões de envio por push ao longo da borda inferior da caixa de diálogo.  
-  
-         Se você selecionar um controle que não seja um botão de envio por push, sua posição não é afetada.  
-  
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
+
+### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Para organizar os botões de envio por push ao longo da direita ou inferior de uma caixa de diálogo
+
+1. Selecione um ou mais botões de envio por push.
+
+2. Dos **formato** menu, escolha **Organizar botões**e, em seguida, escolha uma das seguintes organizações:
+
+   - `Right`: alinha os botões de envio por push ao longo da borda direita da caixa de diálogo.
+
+   - `Bottom`: alinha os botões de envio por push ao longo da borda inferior da caixa de diálogo.
+
+       Se você selecionar um controle que não seja um botão de envio por push, sua posição não é afetada.
+
+Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
+
 ## <a name="requirements"></a>Requisitos
- Win32  
-  
-## <a name="see-also"></a>Consulte também  
- [Organização de controles em caixas de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
- [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
- [Controles](../mfc/controls-mfc.md)
+
+Win32
+
+## <a name="see-also"></a>Consulte também
+
+[Organização de controles em caixas de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)  
+[Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Controles](../mfc/controls-mfc.md)

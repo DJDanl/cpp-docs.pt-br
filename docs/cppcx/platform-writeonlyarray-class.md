@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5c1f1f0260d4f1d1c4a6fb640b7cbf1e9d3f2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3871b6ad3aead88c32c906726f689d949eb945ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091481"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603340"
 ---
 # <a name="platformwriteonlyarray-class"></a>Classe Platform::WriteOnlyArray
 Representa uma matriz unidimensional que é usada como parâmetro de entrada quando o chamador passa uma matriz para o método para preenchimento.  
@@ -46,10 +46,10 @@ private ref class WriteOnlyArray<T, 1>
 |Nome|Descrição|  
 |----------|-----------------|  
 
-|[Writeonlyarray](#begin)| Um iterador que aponta para o primeiro elemento da matriz. |  
+|[Writeonlyarray:: Begin](#begin)| Um iterador que aponta para o primeiro elemento da matriz. |  
 |[Writeonlyarray:: data](#data)| Um ponteiro para o buffer de dados. |  
-|[Writeonlyarray](#end)| Um iterador que aponta para após o último elemento na matriz. |  
-|[Writeonlyarray:: Fastpass](#fastpass)| Indica se a matriz pode usar o mecanismo FastPass, que é uma otimização executada pelo sistema de forma transparente. Não use isso em seu código |  
+|[Writeonlyarray:: end](#end)| Um iterador que aponta para logo após o último elemento na matriz. |  
+|[Writeonlyarray:: Fastpass](#fastpass)| Indica se a matriz pode usar o mecanismo FastPass, que é uma otimização executada de forma transparente pelo sistema. Não use isso em seu código |  
 |[Writeonlyarray:: Length](#length)| Retorna o número de elementos na matriz. |  
 |[Writeonlyarray:: set](#set)| Define o elemento especificado para o valor especificado. |  
 
@@ -130,7 +130,7 @@ property bool FastPass{
   
 
 
-## <a name="get"></a>  Método Writeonlyarray:
+## <a name="get"></a>  Método writeonlyarray:: Get
 Retorna o elemento no índice especificado.  
   
 ### <a name="syntax"></a>Sintaxe  

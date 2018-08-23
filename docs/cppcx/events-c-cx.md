@@ -1,26 +1,26 @@
 ---
-title: Eventos (C + + CX) | Microsoft Docs
+title: Eventos (C + + c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98231f0803270a9e033529e163ff2cc23cdd64e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8465572cf5b921f56e357ae554ecdeaf9943b725
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089632"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606370"
 ---
 # <a name="events-ccx"></a>Eventos (C++/CX)
-Um tempo de execução Windows tipo pode declarar (isto é, publicar) eventos e o código de cliente no mesmo componente ou em outros componentes podem assinar esses eventos associando métodos chamados *manipuladores de eventos* com o evento. Vários manipuladores de eventos podem ser associados a um único evento. Quando o objeto de publicação gera o evento, ele faz com que todos os manipuladores de eventos sejam invocados. Dessa forma, uma classe assinante poderá executar qualquer ação personalizada que seja apropriada quando o editor gerar o evento. Um evento possui um tipo delegate que especifica a assinatura que todos os manipuladores de eventos devem ter para assinar o evento.  
+Um Windows tempo de execução do tipo pode declarar (isto é, publicar) eventos e o código de cliente no mesmo componente ou em outros componentes podem assinar esses eventos associando métodos chamados *manipuladores de eventos* com o evento. Vários manipuladores de eventos podem ser associados a um único evento. Quando o objeto de publicação gera o evento, ele faz com que todos os manipuladores de eventos sejam invocados. Dessa forma, uma classe assinante poderá executar qualquer ação personalizada que seja apropriada quando o editor gerar o evento. Um evento possui um tipo delegate que especifica a assinatura que todos os manipuladores de eventos devem ter para assinar o evento.  
   
 ## <a name="consuming-events-in-windows-components"></a>Consumindo eventos em componentes do Windows  
- Muitos componentes de tempo de execução do Windows expõem eventos. Por exemplo, um objeto LightSensor dispara um evento ReadingChanged quando o sensor relata um novo valor de luminescência. Ao usar um objeto LightSensor em seu programa, você pode definir um método que será chamado quando o evento ReadingChanged for acionado. O método pode fazer tudo o que você quiser fazer; o único requisito é que sua assinatura deve corresponder a assinatura do representante que é para obter mais informações sobre como criar um manipulador de eventos delegate e assinar um evento, consulte [delegados](../cppcx/delegates-c-cx.md).  
+ Muitos componentes em tempo de execução do Windows expõem eventos. Por exemplo, um objeto LightSensor dispara um evento ReadingChanged quando o sensor relata um novo valor de luminescência. Ao usar um objeto LightSensor em seu programa, você pode definir um método que será chamado quando o evento ReadingChanged for acionado. O método pode fazer tudo o que você deseja fazer. o único requisito é que sua assinatura deve corresponder à assinatura do delegado que é para obter mais informações sobre como criar um manipulador de eventos delegate e assinar um evento, consulte [delegados](../cppcx/delegates-c-cx.md).  
   
 ## <a name="creating-custom-events"></a>Criando eventos personalizados  
   

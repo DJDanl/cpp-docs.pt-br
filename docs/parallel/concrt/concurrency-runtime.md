@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be177574aa78080f3a950fb674adc0a8fab0b5c4
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: b39fb35b21721cb9b93741a74f62d749b6fb1051
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208383"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608261"
 ---
 # <a name="concurrency-runtime"></a>Tempo de Execução de Simultaneidade
 O tempo de execução de simultaneidade para C++ ajuda você a gravação robusta, escalonável e responsivos aplicativos paralelos. Ele aumenta o nível de abstração para que você não precise gerenciar os detalhes da infraestrutura que estão relacionados à simultaneidade. Também pode usá-lo para especificar o agendamento de políticas que atendem a qualidade das demandas de serviço de seus aplicativos. Use estes recursos para ajudá-lo a começar a trabalhar com o tempo de execução de simultaneidade.  
@@ -111,7 +111,7 @@ O tempo de execução de simultaneidade para C++ ajuda você a gravação robust
 |[Exemplos de código para o tempo de execução de simultaneidade e a biblioteca de padrões paralela no Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Fornece exemplos de aplicativos e utilitários que demonstram o tempo de execução de simultaneidade.|  
 |[Programação paralela no blog de código nativo](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fornece artigos de blog detalhadas adicionais sobre programação paralela em tempo de execução de simultaneidade.|  
 |[Computação paralela no Fórum do C++ e o código nativo](http://go.microsoft.com/fwlink/p/?linkid=183874)|Permite que você participe de discussões da comunidade sobre o tempo de execução de simultaneidade.|  
-|[Programação paralela](/dotnet/standard/parallel-programming/index)|Ensina você sobre o modelo de programação paralelo que está disponível na [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)].|  
+|[Programação paralela](/dotnet/standard/parallel-programming/index)|Ensina sobre o modelo de programação paralelo que está disponível no .NET Framework.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência](../../parallel/concrt/reference/reference-concurrency-runtime.md)

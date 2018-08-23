@@ -1,5 +1,5 @@
 ---
-title: Threading e Marshaling (C + + CX) | Microsoft Docs
+title: Threading e Marshaling (C++ c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60d96b46caea15b46e0d6300733efddb98a1b4da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09b9e008b586b1a312770d7cdfc43dc500932158
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093113"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611439"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Threading e marshaling (C++/CX)
-Na grande maioria dos casos, as instâncias de classes de tempo de execução do Windows, como os objetos C++ padrão, podem ser acessadas de qualquer thread. Essas classes são chamadas de "agile". No entanto, um pequeno número de classes de tempo de execução do Windows que acompanham o Windows não é Agile e deve ser mais consumido como objetos COM que os objetos C++ padrão. Não é necessário ser um especialista em COM para usar classes não agile, mas é preciso levar em consideração o modelo de threading da classe e seu comportamento de marshaling. Este artigo fornece informações básicas e orientação para os cenários raros em que é necessário consumir uma instância de uma classe não agile.  
+Na grande maioria dos casos, as instâncias de classes de tempo de execução do Windows, como objetos C++ padrão, podem ser acessadas de qualquer thread. Essas classes são chamadas de "agile". No entanto, um pequeno número de classes de tempo de execução do Windows que acompanham o Windows não é Agile e deve ser mais consumido como objetos COM que objetos C++ padrão. Não é necessário ser um especialista em COM para usar classes não agile, mas é preciso levar em consideração o modelo de threading da classe e seu comportamento de marshaling. Este artigo fornece informações básicas e orientação para os cenários raros em que é necessário consumir uma instância de uma classe não agile.  
   
 ## <a name="threading-model-and-marshaling-behavior"></a>Modelo de threading e comportamento de marshaling  
- Uma classe de tempo de execução do Windows pode dar suporte a acesso de thread simultâneo de várias maneiras, conforme indicado pelos dois atributos aplicados a ela:  
+ Uma classe de tempo de execução do Windows pode dar suporte a acesso de thread simultâneo de várias maneiras, conforme indicado pelos dois atributos aplicados a ele:  
   
 -   O atributo`ThreadingModel` pode ter um dos valores —STA, MTA ou Both, conforme definido pela enumeração `ThreadingModel` .  
   
@@ -34,8 +34,8 @@ Na grande maioria dos casos, as instâncias de classes de tempo de execução do
   
  O atributo `ThreadingModel` especifica onde a classe é carregada quando ativada: somente em um contexto de thread da interface de usuário (STA), somente em um contexto de thread de segundo plano (MTA) ou no contexto da thread que cria o objeto (Both). Os valores do atributo `MarshallingBehavior` fazem referência ao modo de comportamento do objeto em diversos contextos de threading. Na maioria dos casos, você não precisa entender esses valores detalhadamente.  Das classes fornecidas pela API do Windows, cerca de 90% têm `ThreadingModel`=Both e `MarshallingType`=Agile. Isso significa que podem manipular detalhes de threading de baixo nível de modo transparente e eficiente.   Quando você usa `ref new` para criar uma classe "agile", pode chamar métodos nela a partir do thread de aplicativo principal ou de um ou mais threads de trabalho.  Em outras palavras, você pode usar uma classe agile — quer ela tenha sido fornecida pelo Windows ou por um terceiro — de qualquer lugar no código. Você não tem que se preocupar com o modelo de threading ou o comportamento de marshaling da classe.  
   
-## <a name="consuming-windows-runtime-components"></a>Consumindo componentes do Windows Runtime  
- Quando você cria um aplicativo de plataforma Universal do Windows, você pode interagir com componentes agile e não agile. Quando você interage com componentes não agile, pode receber o aviso a seguir.  
+## <a name="consuming-windows-runtime-components"></a>Consumindo componentes do tempo de execução do Windows  
+ Quando você cria um aplicativo da plataforma Universal do Windows, você pode interagir com componentes agile e não agile. Quando você interage com componentes não agile, pode receber o aviso a seguir.  
   
 ### <a name="compiler-warning-when-consuming-non-agile-classes-c4451"></a>Aviso do compilador durante o consumo de classes não agile (C4451)  
  Por várias razões, algumas classes não podem ser agile. Se você estiver acessando instâncias de classes não agile, tanto de um thread de interface de usuário quanto de um thread de segundo plano, tome ainda mais cuidado para verificar o comportamento correto em tempo de execução. O compilador do Visual C++ emite avisos quando você instancia uma classe de tempo de execução não agile no seu aplicativo no escopo global ou declare um tipo não agile como um membro da classe em uma classe ref que é marcada como agile.  
@@ -70,7 +70,7 @@ ref class MyOptions
   
 -   A variável não agile é declarada no escopo da classe e há uma possibilidade de o código de consumo ocultar o ponteiro — ou seja, usá-lo em um apartment diferente, sem o marshaling correto.  
   
- Caso nenhuma dessas condições se aplique, você poderá marcar a classe continente como não agile. Em outras palavras, você deve diretamente armazenar objetos não agile apenas em classes não agile e manter objetos não agile via Platform:: Agile\<T > em classes agile.  
+ Caso nenhuma dessas condições se aplique, você poderá marcar a classe continente como não agile. Em outras palavras, você deve diretamente manter objetos não agile apenas em classes não agile e mantenha objetos não agile, via Platform:: Agile\<T > em classes agile.  
   
  O exemplo a seguir mostra como você pode utilizar o `Agile<T>` para poder ignorar o aviso com segurança.  
   
@@ -97,10 +97,10 @@ ref class MyOptions
   
  Observe que `Agile` não pode ser passado como um parâmetro ou um valor de retorno em uma classe ref. O método `Agile<T>::Get()` retorna um handle-to-object (^) que você pode passar na ABI (interface binária do aplicativo) em um método ou propriedade pública.  
   
- No Visual C++, quando você cria uma referência a uma classe de tempo de execução do Windows no processo que tem um comportamento marshaling de "None", o compilador emite o aviso C4451, mas não sugere que você considere o uso `Platform::Agile<T>`.  O compilador não pode oferecer nenhuma ajuda além desse aviso, portanto, é sua responsabilidade usar a classe corretamente e verificar se seu código chama componentes do STA somente do thread da interface do usuário e componentes MTA somente de um thread de segundo plano.  
+ No Visual C++, quando você cria uma referência a uma classe de tempo de execução do Windows em processamento que tenha um comportamento marshaling de "None", o compilador emite o aviso C4451, mas não sugere que você considere o uso `Platform::Agile<T>`.  O compilador não pode oferecer nenhuma ajuda além desse aviso, portanto, é sua responsabilidade usar a classe corretamente e verificar se seu código chama componentes do STA somente do thread da interface do usuário e componentes MTA somente de um thread de segundo plano.  
   
 ## <a name="authoring-agile-windows-runtime-components"></a>Criação de componentes de tempo de execução do Windows agile  
- Quando você define uma classe ref no C + + CX, ela é agile por padrão — ou seja, tem `ThreadingModel`= Both e `MarshallingType`= Agile.  Se você estiver usando as [!INCLUDE[cppwrl](../cppcx/includes/cppwrl-md.md)], poderá tornar sua classe agile derivando de `FtmBase`, que usa o `FreeThreadedMarshaller`.  Se você criar uma classe que tenha `ThreadingModel`=Both ou `ThreadingModel`=MTA, verifique se a classe é thread-safe. Para obter mais informações, veja [Criar e consumir objetos (WRL)](http://msdn.microsoft.com/en-us/d5e42216-e888-4f1f-865a-b5ccd0def73e).  
+ Quando você define uma classe ref no C + + c++ /CLI CX, ela é agile por padrão — ou seja, ele tem `ThreadingModel`= Both e `MarshallingType`= Agile.  Se você estiver usando a biblioteca de modelos C++ do Windows Runtime, você pode tornar sua classe agile derivando `FtmBase`, que usa o `FreeThreadedMarshaller`.  Se você criar uma classe que tenha `ThreadingModel`=Both ou `ThreadingModel`=MTA, verifique se a classe é thread-safe. Para obter mais informações, veja [Criar e consumir objetos (WRL)](http://msdn.microsoft.com/en-us/d5e42216-e888-4f1f-865a-b5ccd0def73e).  
   
  Você pode modificar o modelo de threading e o comportamento de marshaling de uma classe ref. No entanto, se você fizer alterações que tornem a classe não agile, deverá entender as implicações associadas a essas alterações.  
   
@@ -124,7 +124,7 @@ public ref class MySTAClass
   
 -   Os valores dos atributos `ThreadingModel` e `MarshallingBehavior` na classe derivada não coincidem aos da classe base.  
   
- Threading e marshaling informações necessárias por um componente de tempo de execução do Windows de terceiros é especificado nas informações de registro de manifesto do aplicativo para o componente. Recomendamos que você torne todos os componentes de tempo de execução do Windows agile. Isso assegura que o código de cliente possa chamar seu componente de qualquer thread no aplicativo e aprimora o desempenho dessas chamadas, pois elas são chamadas diretas que não têm marshaling. Se você criar uma classe dessa maneira, o código de cliente não terá que usar `Platform::Agile<T>` para consumir sua classe.  
+ O threading e marshaling informações necessárias por um componente de tempo de execução do Windows de terceiros é especificado nas informações de registro do manifesto do aplicativo para o componente. É recomendável que você faça todos os seus componentes de tempo de execução do Windows ágeis. Isso assegura que o código de cliente possa chamar seu componente de qualquer thread no aplicativo e aprimora o desempenho dessas chamadas, pois elas são chamadas diretas que não têm marshaling. Se você criar uma classe dessa maneira, o código de cliente não terá que usar `Platform::Agile<T>` para consumir sua classe.  
   
 ## <a name="see-also"></a>Consulte também  
  [ThreadingModel](http://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)   

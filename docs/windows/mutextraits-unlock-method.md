@@ -17,34 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9b9d448ae9b73c5a47cc93da41dbcba186fdce0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e5f87a0daa13d26775f105b36a1fc076270af705
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010704"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608248"
 ---
 # <a name="mutextraitsunlock-method"></a>Método MutexTraits::Unlock
-Libera o controle exclusivo de um recurso compartilhado.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-inline static void Unlock(  
-   _In_ Type h  
-);  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *h*  
- Identificador para um objeto mutex.  
-  
-## <a name="return-value"></a>Valor de retorno  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Consulte também  
- [Estrutura MutexTraits](../windows/mutextraits-structure.md)
+
+Libera o controle exclusivo de um recurso compartilhado.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+inline static void Unlock(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*h*  
+Identificador para um objeto mutex.
+
+## <a name="return-value"></a>Valor de retorno
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Consulte também
+
+[Estrutura MutexTraits](../windows/mutextraits-structure.md)

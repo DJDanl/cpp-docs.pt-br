@@ -1,5 +1,5 @@
 ---
-title: Classe Platform::Collections::MapView | Microsoft Docs
+title: '{1&gt;classe Platform::Collections::mapview&lt;1} | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b5000ad06e542aa4616a29150601b8d628fc097
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7abf07b24947a4c800b2b21f91fdf9840dd799d5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091525"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605465"
 ---
 # <a name="platformcollectionsmapview-class"></a>Classe Platform::Collections::MapView
 Representa uma exibição somente leitura em um *mapa*, que é uma coleção de pares chave-valor.  
@@ -48,10 +48,10 @@ ref class MapView sealed;
  O tipo de valor em pares chave-valor.  
   
  `C`  
- Um tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa em MapView. Por padrão, [STD\<K >](../standard-library/less-struct.md).  
+ Um tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa em MapView. Por padrão, [std:: Less\<K >](../standard-library/less-struct.md).  
   
 ### <a name="remarks"></a>Comentários  
- MapView é uma implementação concreta de C++ do [Windows::Foundation::Collections::IMapView \<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) interface que é transmitida pela interface binária de aplicativo (ABI). Para obter mais informações, consulte [Coleções (C++/CX)](../cppcx/collections-c-cx.md).  
+ MapView é uma implementação concreta de C++ do [3&gt;{4&gt;Windows::Foundation::Collections::imapview&lt;4}&lt;3} \<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) interface que é transmitida pela interface binária de aplicativo (ABI). Para obter mais informações, consulte [Coleções (C++/CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Membros  
   
@@ -67,8 +67,8 @@ ref class MapView sealed;
 |----------|-----------------|  
 |[MapView::First](#first)|Retorna um iterador que é inicializado para o primeiro elemento na exibição do mapa.|  
 |[MapView::HasKey](#haskey)|Determina se o MapView atual contém a chave especificada.|  
-|[Mapview](#lookup)|Recupera o elemento na chave especificada no objeto MapView atual.|  
-|[Mapview](#size)|Retorna o número de elementos no objeto MapView atual.|  
+|[Mapview:: Lookup](#lookup)|Recupera o elemento na chave especificada no objeto MapView atual.|  
+|[Mapview:: Size](#size)|Retorna o número de elementos no objeto MapView atual.|  
 |[MapView::Split](#split)|Divide um objeto MapView original em dois objetos MapView.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
@@ -80,7 +80,7 @@ ref class MapView sealed;
  **Namespace:** Platform::Collections  
 
 
-## <a name="first"></a> Método Mapview:
+## <a name="first"></a> Método mapview:: First
 Retorna um iterador que especifica o primeiro elemento na exibição de mapa.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -98,7 +98,7 @@ virtual Windows::Foundation::Collections::IIterator<
   
 
 
-## <a name="haskey"></a>  Método: Haskey
+## <a name="haskey"></a>  Método mapview:: Haskey
 Determina se o MapView atual contém a chave especificada.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -117,7 +117,7 @@ bool HasKey(K key);
   
 
 
-##  <a name="lookup"></a> Método Mapview:
+##  <a name="lookup"></a> Método mapview:: Lookup
 Recupera o valor do tipo V que está associado à chave especificada do tipo K.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -174,11 +174,11 @@ MapView(
  O iterador de entrada do primeiro elemento após um intervalo de elementos usados para inicializar o MapView atual.  
   
  il  
- Um [std:: initializer_list < STD\<K, V >>](../standard-library/initializer-list-class.md) cujos elementos serão inseridos em MapView.  
+ Um [std:: initializer_list < std:: Pair\<K, V >>](../standard-library/initializer-list-class.md) cujos elementos serão inseridos em MapView.  
 
 
 
-##  <a name="size"></a> Método Mapview:
+##  <a name="size"></a> Método mapview:: Size
 Retorna o número de elementos no objeto MapView atual.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -193,7 +193,7 @@ virtual property unsigned int Size;
   
 
 
-##  <a name="split"></a> Método Mapview:
+##  <a name="split"></a> Método mapview:: Split
 Divide o objeto MapView atual em dois objetos MapView. Este método é não operacional.  
   
 ### <a name="syntax"></a>Sintaxe  

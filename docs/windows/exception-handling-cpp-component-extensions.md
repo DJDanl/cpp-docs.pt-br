@@ -21,38 +21,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 526ac2f916eb239aee938522f331cf221138f5fa
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 566ed55df84accef0c3e5308e750a2684c36b91c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568648"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606787"
 ---
 # <a name="exception-handling--c-component-extensions"></a>Tratamento de Exceção (Extensões de Componentes C++)
-Aplicativos compilados com o `/ZW` opção de compilador ou `/clr` opção de compilador ambos usam *exceções* para lidar com erros inesperados durante a execução do programa. Os tópicos a seguir discutem o tratamento de exceções em qualquer um dos C + + c++ /CLI CX ou C + + c++ /CLI aplicativos CLI.  
-  
-## <a name="in-this-section"></a>Nesta seção  
- [Conceitos básicos do uso de exceções gerenciadas](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
- Descreve Lançando exceções e usando **tente**/**catch** blocos.  
-  
- [Diferenças no comportamento em /CLR de tratamento de exceções](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
- Discute as diferenças do comportamento padrão de tratamento de exceções C++.  
-  
- [finally](../dotnet/finally.md)  
- Discute como usar a palavra-chave finally.  
-  
- [Como definir e instalar um manipulador de exceção global](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
- Demonstra como sem tratamento de exceções podem ser capturadas.  
-  
- [Como capturar exceções em código nativo lançadas pela MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)  
- Discute como capturar exceções de CLR e C++ em código nativo.  
-  
- [Como definir e instalar um manipulador de exceção global](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
- Demonstra como capturar exceções não tratadas.  
-  
-## <a name="related-sections"></a>Seções relacionadas  
- [Tratamento de Exceção](../cpp/exception-handling-in-visual-cpp.md)  
- Descreve o tratamento de exceções em C++.  
-  
-## <a name="see-also"></a>Consulte também  
- [Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+
+Aplicativos compilados com o `/ZW` opção de compilador ou `/clr` opção de compilador ambos usam *exceções* para lidar com erros inesperados durante a execução do programa. Os tópicos a seguir discutem o tratamento de exceções em qualquer um dos C + + c++ /CLI CX ou C + + c++ /CLI aplicativos CLI.
+
+## <a name="in-this-section"></a>Nesta seção
+
+[Conceitos básicos do uso de exceções gerenciadas](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
+Descreve Lançando exceções e usando **tente**/**catch** blocos.
+
+[Diferenças no comportamento em /CLR de tratamento de exceções](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
+Discute as diferenças do comportamento padrão de tratamento de exceções C++.
+
+[finally](../dotnet/finally.md)  
+Discute como usar a palavra-chave finally.
+
+[Como definir e instalar um manipulador de exceção global](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+Demonstra como sem tratamento de exceções podem ser capturadas.
+
+[Como capturar exceções em código nativo lançadas pela MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)  
+Discute como capturar exceções de CLR e C++ em código nativo.
+
+[Como definir e instalar um manipulador de exceção global](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+Demonstra como capturar exceções não tratadas.
+
+## <a name="related-sections"></a>Seções relacionadas
+
+[Tratamento de Exceção](../cpp/exception-handling-in-visual-cpp.md)  
+Descreve o tratamento de exceções em C++.
+
+## <a name="see-also"></a>Consulte também
+
+[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)

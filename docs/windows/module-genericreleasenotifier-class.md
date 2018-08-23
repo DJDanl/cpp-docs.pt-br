@@ -17,56 +17,60 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba92e459ffb26ffc1bbb9239a843d628e7041d6d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: da35e2c257fef72ea75e05768960098111727359
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013513"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611619"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Classe Module::GenericReleaseNotifier
-Invoca um manipulador de eventos quando o último objeto no módulo atual é liberado. O manipulador de eventos é especificado em um lambda, functor ou ponteiro para função.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-template<typename T>  
-class GenericReleaseNotifier : public ReleaseNotifier;  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *T*  
- O tipo de membro de dados que contém o local do manipulador de eventos.  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[Construtor Module::GenericReleaseNotifier::GenericReleaseNotifier](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Inicializa uma nova instância dos **genericreleasenotifier** classe.|  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[Método Module::GenericReleaseNotifier::Invoke](../windows/module-genericreleasenotifier-invoke-method.md)|Chama o manipulador de eventos associado ao atual **genericreleasenotifier** objeto.|  
-  
-### <a name="protected-data-members"></a>Membros de dados protegidos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[Membro de dados Module::GenericReleaseNotifier::callback_](../windows/module-genericreleasenotifier-callback-data-member.md)|Mantém o lambda, functor ou manipulador de eventos de ponteiro para função associados ao atual **genericreleasenotifier** objeto.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `ReleaseNotifier`  
-  
- `GenericReleaseNotifier`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** module.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Consulte também
- [Classe Module](../windows/module-class.md)
+
+Invoca um manipulador de eventos quando o último objeto no módulo atual é liberado. O manipulador de eventos é especificado em um lambda, functor ou ponteiro para função.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+template<typename T>
+class GenericReleaseNotifier : public ReleaseNotifier;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*T*  
+O tipo de membro de dados que contém o local do manipulador de eventos.
+
+## <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[Construtor Module::GenericReleaseNotifier::GenericReleaseNotifier](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Inicializa uma nova instância dos **genericreleasenotifier** classe.|
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[Método Module::GenericReleaseNotifier::Invoke](../windows/module-genericreleasenotifier-invoke-method.md)|Chama o manipulador de eventos associado ao atual **genericreleasenotifier** objeto.|
+
+### <a name="protected-data-members"></a>Membros de dados protegidos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[Membro de dados Module::GenericReleaseNotifier::callback_](../windows/module-genericreleasenotifier-callback-data-member.md)|Mantém o lambda, functor ou manipulador de eventos de ponteiro para função associados ao atual **genericreleasenotifier** objeto.|
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`ReleaseNotifier`
+
+`GenericReleaseNotifier`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+[Classe Module](../windows/module-class.md)

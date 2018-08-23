@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Metadata::DefaultMemberAttribute Attribute
 ms.assetid: d8abda01-c257-4371-aec4-541d4825e0af
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2233dd96f483df632c7ff8cd5b1a7a051232c94d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62d531418e4729c34907cb65d446f89bfa60fb63
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087930"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608908"
 ---
 # <a name="platformmetadatadefaultmemberattribute-attribute"></a>Atributo Platform::Metadata::DefaultMemberAttribute
 Indica a função preferencial a ser invocada dentre várias funções sobrecarregadas possíveis.  
@@ -41,9 +41,9 @@ public ref class DefaultMember abstract : Attribute
  Aplique o atributo DefaultMember a um método que será consumido por um aplicativo JavaScript.  
   
 ### <a name="requirements"></a>Requisitos  
- **Suporte mínimo de cliente:** Windows 8  
+ **Mínimo de cliente com suporte:** Windows 8  
   
- **Suporte mínimo de servidor:** Windows Server 2012  
+ **Mínimo de servidor com suporte:** Windows Server 2012  
   
  **Namespace:** Platform::Metadata  
   

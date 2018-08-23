@@ -17,74 +17,80 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ff70348f2305a5c75515630a5b6b9e2937494b5
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fb26a6d7449dae4abe28be5687cea7d84ece7b8d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641272"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604837"
 ---
 # <a name="comptroperator-operator"></a>Operador ComPtr::operator=
-Atribui um valor para a atual **ComPtr**.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-WRL_NOTHROW ComPtr& operator=(  
+
+Atribui um valor para a atual **ComPtr**.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+WRL_NOTHROW ComPtr& operator=(
    decltype(__nullptr)  
-);  
-WRL_NOTHROW ComPtr& operator=(  
-   _In_opt_ T *other  
-);  
-template <typename U>  
-WRL_NOTHROW ComPtr& operator=(  
-   _In_opt_ U *other  
-);  
-WRL_NOTHROW ComPtr& operator=(  
-   const ComPtr &other  
-);  
-template<class U>  
-WRL_NOTHROW ComPtr& operator=(  
-   const ComPtr<U>& other  
-);  
-WRL_NOTHROW ComPtr& operator=(  
-   _Inout_ ComPtr &&other  
-);  
-template<class U>  
-WRL_NOTHROW ComPtr& operator=(  
-   _Inout_ ComPtr<U>&& other  
-);  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *U*  
- Uma classe.  
-  
- *other*  
- Um ponteiro, referência ou referência rvalue para um tipo ou de outro **ComPtr**.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Uma referência ao atual **ComPtr**.  
-  
-## <a name="remarks"></a>Comentários  
- A primeira versão deste operador atribui um valor vazio para a atual **ComPtr**.  
-  
- Na segunda versão, se o ponteiro de interface de atribuição não é o mesmo que o atual **ComPtr** ponteiro de interface, o segundo ponteiro de interface é atribuído ao atual **ComPtr**.  
-  
- A terceira versão, o ponteiro de interface atribuir é atribuído ao atual **ComPtr**.  
-  
- Na quarta versão, se o ponteiro de interface do valor de atribuição não é o mesmo que o atual **ComPtr** ponteiro de interface, o segundo ponteiro de interface é atribuído ao atual **ComPtr**.  
-  
- A quinta versão é um operador de cópia; uma referência a um **ComPtr** é atribuído à atual **ComPtr**.  
-  
- A versão do sexta é um operador de cópia que usa semântica; uma referência rvalue para um **ComPtr** se qualquer tipo for estático, converter e, em seguida, é atribuído ao atual **ComPtr**.  
-  
- A versão do sétima é um operador de cópia que usa semântica; uma referência rvalue para um **ComPtr** do tipo *U* é estático convertido, em seguida e atribuído a atual **ComPtr**.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe ComPtr](../windows/comptr-class.md)
+);
+WRL_NOTHROW ComPtr& operator=(
+   _In_opt_ T *other
+);
+template <typename U>
+WRL_NOTHROW ComPtr& operator=(
+   _In_opt_ U *other
+);
+WRL_NOTHROW ComPtr& operator=(
+   const ComPtr &other
+);
+template<class U>
+WRL_NOTHROW ComPtr& operator=(
+   const ComPtr<U>& other
+);
+WRL_NOTHROW ComPtr& operator=(
+   _Inout_ ComPtr &&other
+);
+template<class U>
+WRL_NOTHROW ComPtr& operator=(
+   _Inout_ ComPtr<U>&& other
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*U*  
+Uma classe.
+
+*other*  
+Um ponteiro, referência ou referência rvalue para um tipo ou de outro **ComPtr**.
+
+## <a name="return-value"></a>Valor de retorno
+
+Uma referência ao atual **ComPtr**.
+
+## <a name="remarks"></a>Comentários
+
+A primeira versão deste operador atribui um valor vazio para a atual **ComPtr**.
+
+Na segunda versão, se o ponteiro de interface de atribuição não é o mesmo que o atual **ComPtr** ponteiro de interface, o segundo ponteiro de interface é atribuído ao atual **ComPtr**.
+
+A terceira versão, o ponteiro de interface atribuir é atribuído ao atual **ComPtr**.
+
+Na quarta versão, se o ponteiro de interface do valor de atribuição não é o mesmo que o atual **ComPtr** ponteiro de interface, o segundo ponteiro de interface é atribuído ao atual **ComPtr**.
+
+A quinta versão é um operador de cópia; uma referência a um **ComPtr** é atribuído à atual **ComPtr**.
+
+A versão do sexta é um operador de cópia que usa semântica; uma referência rvalue para um **ComPtr** se qualquer tipo for estático, converter e, em seguida, é atribuído ao atual **ComPtr**.
+
+A versão do sétima é um operador de cópia que usa semântica; uma referência rvalue para um **ComPtr** do tipo *U* é estático convertido, em seguida e atribuído a atual **ComPtr**.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Classe ComPtr](../windows/comptr-class.md)

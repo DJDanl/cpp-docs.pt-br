@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - begin Function
 ms.assetid: 5a44fb33-e247-49fd-b7a1-4a5b42e9e1e4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c1a8c09e43613014b43ef4e3c075a54cdd90e08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4954e98c1e6f1da30e321aad0c0e37cc5c1ab994
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086506"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606526"
 ---
 # <a name="begin-function"></a>Função begin
 Retorna um iterador que aponta para o início de uma coleção que é acessada pelo parâmetro de interface especificado.  
@@ -55,7 +55,7 @@ template <typename T>
  Uma coleção de vetor\<T > ou VectorView\<T > objetos que são acessados por um IVector\<T > ou IVectorView\<T > interface.  
   
  `i`  
- Uma coleção de objetos arbitrários de tempo de execução do Windows que são acessados por um IIterable\<T > interface.  
+ Uma coleção de objetos arbitrários do tempo de execução do Windows que são acessados por um IIterable\<T > interface.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um iterador que aponta para o início da coleção.  
@@ -63,7 +63,7 @@ template <typename T>
 ### <a name="remarks"></a>Comentários  
  Os primeiros dois iteradores de retorno de funções do modelo e a terceira função do modelo retornam um iterador de entrada.  
   
- O objeto VectorIterator que é retornado por begin é um iterador proxy que armazena elementos do tipo VectorProxy\<T >. Entretanto, o objeto proxy quase nunca é visível ao código do usuário. Para obter mais informações, consulte [Coleções (C++/CX)](../cppcx/collections-c-cx.md).  
+ O objeto que é retornado por begin de VectorIterator é um iterador proxy que armazena elementos do tipo VectorProxy\<T >. Entretanto, o objeto proxy quase nunca é visível ao código do usuário. Para obter mais informações, consulte [Coleções (C++/CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** collection.h  
@@ -71,4 +71,4 @@ template <typename T>
  **Namespace:** Windows::Foundation::Collections  
   
 ## <a name="see-also"></a>Consulte também  
- [Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+ [Namespace Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)

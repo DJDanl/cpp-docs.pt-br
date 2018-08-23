@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2214067aae84d1c6aae0a93cf008463829fafda4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4089b786363f6b1bcbb50d08e16821efc186539a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886044"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609493"
 ---
 # <a name="cstringt-class"></a>Classe CStringT
 Essa classe representa um `CStringT` objeto.  
@@ -298,9 +298,9 @@ BSTR AllocSysString() const;
  Em programas MFC, uma [classe CMemoryException](../../mfc/reference/cmemoryexception-class.md) é lançada se houver memória insuficiente. Em programas ATL, uma [CAtlException](../../atl/reference/catlexception-class.md) é gerada. Essa função normalmente é usada para retornar cadeias de caracteres para a automação.  
   
 
- Normalmente, se essa cadeia de caracteres for passada para uma função COM como [in] parâmetro, em seguida, isso requer que o chamador liberar a cadeia de caracteres. Isso pode ser feito por meio [SysFreeString](https://msdn.microsoft.com/library/windows/desktop/ms221481.aspx), conforme descrito no SDK do Windows. Para obter mais informações, consulte [alocando e liberando memória para um BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).  
+ Normalmente, se essa cadeia de caracteres for passada para uma função COM como [in] parâmetro, em seguida, isso requer que o chamador liberar a cadeia de caracteres. Isso pode ser feito por meio [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring), conforme descrito no SDK do Windows. Para obter mais informações, consulte [alocando e liberando memória para um BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).  
   
- Para obter mais informações sobre as funções de alocação OLE no Windows, consulte [SysAllocString](https://msdn.microsoft.com/library/windows/desktop/ms221458.aspx) no SDK do Windows.  
+ Para obter mais informações sobre as funções de alocação OLE no Windows, consulte [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) no SDK do Windows.  
 
   
 ### <a name="example"></a>Exemplo  
@@ -552,7 +552,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 - `CStringT`( `const unsigned char*` `psz` ): Permite que você construa uma `CStringT` de um ponteiro **unsigned char**.  
   
 > [!NOTE]
->  Defina a macro _CSTRING_DISABLE_NARROW_WIDE_CONVERSION para desativar a conversão de cadeia de caracteres implícita entre [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] e [!INCLUDE[TLA#tla_unicode](../../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] cadeias de caracteres. A macro exclui os construtores de compilação que oferecem suporte à conversão.  
+>  Defina a macro _CSTRING_DISABLE_NARROW_WIDE_CONVERSION para desativar a conversão implícita de cadeia de caracteres entre cadeias de caracteres ANSI e Unicode. A macro exclui os construtores de compilação que oferecem suporte à conversão.  
   
  Observe que o *{1&gt;strsrc* parâmetro pode ser um `CStringT` ou `CThisSimpleString` objeto. Para `CStringT`, use uma das suas instanciações de padrão (`CString`, `CStringA`, ou `CStringW`); para `CThisSimpleString`, use um **isso** ponteiro. `CThisSimpleString` declara uma instância do [classe de CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md), que é uma classe de cadeia de caracteres menor com funcionalidade interna menor do que o `CStringT` classe.  
   

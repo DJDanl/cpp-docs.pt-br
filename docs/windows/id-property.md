@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebe701711de329d7b763b7bf3b3d3dbf1ce0ce93
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 89a6b3392491ad36a0b0c9d542ffac4738b7c0f6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881111"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605353"
 ---
 # <a name="id-property"></a>Propriedade da ID
-A propriedade ID faz referência a cada entrada da tabela de teclas aceleradoras no código do programa. Esse é o valor de comando que o programa será exibida quando um usuário pressiona a tecla aceleradora ou uma combinação de teclas. Para fazer um acelerador o mesmo que um item de menu, verifique suas IDs iguais (desde que a ID da tabela de Aceleradores é igual à ID do recurso de menu).  
+A propriedade de ID faz referência a cada entrada de tabela do acelerador no código do programa. Esse é o valor de comando que o programa receberá quando um usuário pressiona a tecla de atalho ou uma combinação de teclas. Para tornar um acelerador o mesmo que um item de menu, verifique suas IDs o mesmo (desde que a ID da tabela de Aceleradores é igual à ID do recurso de menu).
   
-## <a name="requirements"></a>Requisitos  
- Win32  
+## <a name="requirements"></a>Requisitos
+ Win32
   
-## <a name="see-also"></a>Consulte também  
- [Definindo propriedades de acelerador](../windows/setting-accelerator-properties.md)   
+## <a name="see-also"></a>Consulte também
+ [Configurando propriedades do acelerador](../windows/setting-accelerator-properties.md)  
  [Editor de aceleradores](../windows/accelerator-editor.md)

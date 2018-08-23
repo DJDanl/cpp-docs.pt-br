@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 650a2190e59b995962672deccdf202902f8a5b07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01ac7cfb1c53f0616431a33638bd04fdb586f557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875260"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609631"
 ---
 # <a name="module-attributes"></a>Atributos de módulo
-O seguinte atributo só pode ser aplicado para o [módulo](../windows/module-cpp.md) atributo.  
+O seguinte atributo só pode ser aplicado para o [módulo](../windows/module-cpp.md) atributo.
   
-|Atributo|Descrição|  
-|---------------|-----------------|  
-|[helpstringdll](../windows/helpstringdll.md)|Especifica o nome da DLL a ser usado para executar a pesquisa de cadeia de caracteres do documento (localização).|  
+|Atributo|Descrição|
+|---------------|-----------------|
+|[helpstringdll](../windows/helpstringdll.md)|Especifica o nome da DLL a usar para executar a pesquisa de cadeia de caracteres do documento (localização).|
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
  [Atributos por uso](../windows/attributes-by-usage.md)

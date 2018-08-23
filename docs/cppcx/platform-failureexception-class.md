@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::FailureException
 ms.assetid: 1729cd07-bfc2-448e-9db5-185d5cbf5b81
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1094810663ce0a0abf8234af386d7a8427472ced
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e644ec013b4beac6ebc4f7c774f926711dc1093e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088135"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609162"
 ---
 # <a name="platformfailureexception-class"></a>Classe Platform::FailureException
 Gerada quando a operação falhou. É o equivalente a E_FAIL HRESULT.  
@@ -36,9 +36,9 @@ public ref class FailureException : COMException,    IException,    IPrintable, 
  Para obter mais informações, consulte a classe [COMException](../cppcx/platform-comexception-class.md) .  
   
 ### <a name="requirements"></a>Requisitos  
- **Suporte mínimo de cliente:** Windows 8  
+ **Mínimo de cliente com suporte:** Windows 8  
   
- **Suporte mínimo de servidor:** Windows Server 2012  
+ **Mínimo de servidor com suporte:** Windows Server 2012  
   
  **Namespace:** Platform  
   

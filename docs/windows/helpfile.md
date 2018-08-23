@@ -17,52 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c2714c1418c5c9828322561ae1d7ca86dc6130a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 37309f9170a1fe78c7db802ca13cc81112be9cbb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647730"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607371"
 ---
 # <a name="helpfile"></a>helpfile
-Define o nome do arquivo de ajuda para uma biblioteca de tipos.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-[ helpfile(  
-   "filename"  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *filename*  
- O nome do arquivo que contém os tópicos da Ajuda.  
-  
-## <a name="remarks"></a>Comentários  
- O **helpfile** atributo C++ tem a mesma funcionalidade que o [helpfile](http://msdn.microsoft.com/library/windows/desktop/aa366853) atributo MIDL.  
-  
-## <a name="example"></a>Exemplo  
- Veja o exemplo de [módulo](../windows/module-cpp.md) para obter um exemplo de como usar **helpfile**.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Atributo de contexto  
-  
-|||  
-|-|-|  
-|**Aplica-se a**|**interface**, **typedef**, **classe**, método, **propriedade**|  
-|**Repetível**|Não|  
-|**Atributos obrigatórios**|Nenhum|  
-|**Atributos inválidos**|Nenhum|  
-  
- Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos de interface](../windows/interface-attributes.md)   
- [Atributos de classe](../windows/class-attributes.md)   
- [Atributos de método](../windows/method-attributes.md)   
- [TypeDef, Enum, Union e Struct atributos](../windows/typedef-enum-union-and-struct-attributes.md)   
- [HelpContext](../windows/helpcontext.md)   
- [helpstring](../windows/helpstring.md)   
+
+Define o nome do arquivo de ajuda para uma biblioteca de tipos.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+[ helpfile(
+   "filename"
+) ]
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*filename*  
+O nome do arquivo que contém os tópicos da Ajuda.
+
+## <a name="remarks"></a>Comentários
+
+O **helpfile** atributo C++ tem a mesma funcionalidade que o [helpfile](http://msdn.microsoft.com/library/windows/desktop/aa366853) atributo MIDL.
+
+## <a name="example"></a>Exemplo
+
+Veja o exemplo de [módulo](../windows/module-cpp.md) para obter um exemplo de como usar **helpfile**.
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Atributo de contexto
+
+|||
+|-|-|
+|**Aplica-se a**|**interface**, **typedef**, **classe**, método, **propriedade**|
+|**Repetível**|Não|
+|**Atributos obrigatórios**|Nenhum|
+|**Atributos inválidos**|Nenhum|
+
+Para obter mais informações, consulte [contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Atributos de IDL](../windows/idl-attributes.md)  
+[Atributos de interface](../windows/interface-attributes.md)  
+[Atributos de classe](../windows/class-attributes.md)  
+[Atributos de método](../windows/method-attributes.md)  
+[Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[helpcontext](../windows/helpcontext.md)  
+[helpstring](../windows/helpstring.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'Como: usar safe_cast em C + + CLI | Microsoft Docs'
+title: 'Como: usar safe_cast no c++ /CLI CLI | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0f695c45d5202f376a4ce4daf14c37a7fd9a1904
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd1582179a64327afda6a4dc16cde9588b19397f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136669"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607908"
 ---
 # <a name="how-to-use-safecast-in-ccli"></a>Como usar safe_cast em C++/CLI
-Este artigo mostra como usar safe_cast em C + + aplicativos CLI. Para obter informações sobre safe_cast em [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)], consulte [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
+Este artigo mostra como usar safe_cast no c++ /CLI aplicativos CLI. Para obter informações sobre safe_cast no C++ c++ /CX, consulte [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
   
 ## <a name="upcasting"></a>Upcasting  
- Uma elevação é uma conversão de um tipo derivado para uma de suas classes base. Essa conversão é segura e não requer uma notação de conversão explícita. O exemplo a seguir mostra como executar uma elevação, com `safe_cast` e sem ele.  
+ Um upcast é uma conversão de um tipo derivado para uma de suas classes base. Essa conversão é segura e não exige uma notação de conversão explícita. O exemplo a seguir mostra como executar uma elevação com `safe_cast` e sem ela.  
   
 ```cpp  
 // safe_upcast.cpp  
@@ -76,7 +76,7 @@ in B::Test2
 ```  
   
 ## <a name="downcasting"></a>Baixar  
- Um baixá-los é uma conversão de uma classe base para uma classe que é derivada da classe base.  Um downcast é segura somente se o objeto que é abordado em tempo de execução é realmente um objeto de classe derivada de endereçamento.  Ao contrário de `static_cast`, `safe_cast` executa uma verificação dinâmica e gera <xref:System.InvalidCastException> se a conversão falhar.  
+ Um downcast é uma conversão de uma classe base para uma classe que é derivada da classe base.  Um lançamento decrescente é seguro somente se o objeto que é abordado em tempo de execução, na verdade, trata um objeto de classe derivada.  Diferentemente `static_cast`, `safe_cast` executa uma verificação dinâmica e lança <xref:System.InvalidCastException> se a conversão falhar.  
   
 ```cpp  
 // safe_downcast.cpp  
@@ -128,7 +128,7 @@ in B::Test2()
 ```  
   
 ## <a name="safecast-with-user-defined-conversions"></a>Safe_cast com conversões definidas pelo usuário  
- O próximo exemplo mostra como você pode usar `safe_cast` para invocar conversões definidas pelo usuário.  
+ O próximo exemplo mostra como você pode usar `safe_cast` invocar conversões definidas pelo usuário.  
   
 ```cpp  
 // safe_cast_udc.cpp  
@@ -185,7 +185,7 @@ in operator V^(R^ r)
   
 ### <a name="boxing"></a>Boxing  
   
- Conversão boxing é definido como uma conversão inserida pelo compilador, definidas pelo usuário.  Portanto, você pode usar `safe_cast` caixa um valor no heap CLR.  
+ Conversão boxing é definido como uma conversão injetado pelo compilador, definidos pelo usuário.  Portanto, você pode usar `safe_cast` para um valor no heap CLR da caixa.  
   
  O exemplo a seguir mostra a conversão boxing com tipos de valor simples e definida pelo usuário.  Um `safe_cast` caixas de uma variável de tipo de valor que está na pilha de nativo para que ele pode ser atribuído a uma variável no heap coletado como lixo.  
   
@@ -248,9 +248,9 @@ int main() {
   
 ### <a name="unboxing"></a>Unboxing  
   
- Unboxing é definido como uma conversão inserida pelo compilador, definidas pelo usuário.  Portanto, você pode usar `safe_cast` para converter um valor no heap CLR.  
+ Conversão unboxing é definido como uma conversão injetado pelo compilador, definidos pelo usuário.  Portanto, você pode usar `safe_cast` para converter um valor no heap CLR.  
   
- Unboxing é uma conversão definida pelo usuário, mas ao contrário de boxing, unboxing deve ser explícita — ou seja, ele deve ser executado por um `static_cast`, C-style cast ou `safe_cast`; unboxing não pode ser executada implicitamente.  
+ Conversão unboxing é uma conversão definida pelo usuário, mas ao contrário de conversão boxing, conversão unboxing deve ser explícito — ou seja, ele deve ser executado por um `static_cast`, C-style cast, ou `safe_cast`; conversão unboxing não pode ser executada implicitamente.  
   
 ```cpp  
 // safe_cast_unboxing.cpp  
@@ -261,7 +261,7 @@ int main() {
 }  
 ```  
   
- O exemplo a seguir mostra unboxing com tipos primitivos e tipos de valor.  
+ O exemplo a seguir mostra o unboxing com tipos de valor e tipos primitivos.  
   
 ```cpp  
 // safe_cast_unboxing_2.cpp  
@@ -308,7 +308,7 @@ int main() {
 ```  
   
 ## <a name="safecast-and-generic-types"></a>Safe_cast e tipos genéricos  
- O próximo exemplo mostra como você pode usar `safe_cast` para executar um baixá-los com um tipo genérico.  
+ O próximo exemplo mostra como você pode usar `safe_cast` para executar um downcast com um tipo genérico.  
   
 ```cpp  
 // safe_cast_generic_types.cpp  

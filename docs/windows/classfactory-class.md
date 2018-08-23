@@ -17,94 +17,100 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c9a7caba7ccfb8f5764a1f460835ff540c838975
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0f033fc20fac656e6b9fcfa9ac822099ea929d62
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641035"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611799"
 ---
 # <a name="classfactory-class"></a>Classe ClassFactory
-Implementa a funcionalidade básica do `IClassFactory` interface.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-template <  
-   typename I0 = Details::Nil,  
-   typename I1 = Details::Nil,  
-   typename I2 = Details::Nil  
->  
-class ClassFactory : public Details::RuntimeClass<  
-   typename Details::InterfaceListHelper<IClassFactory,   
-   I0,   
-   I1,   
-   I2,   
-   Details::Nil>::TypeT,   
-   RuntimeClassFlags<ClassicCom | InhibitWeakReference>,   
-      false>;  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *I0*  
- A interface inicial.  
-  
- *I1*  
- A primeira interface.  
-  
- *I2*  
- A segunda interface.  
-  
-## <a name="remarks"></a>Comentários  
- Utilizar **ClassFactory** para fornecer uma implementação de fábrica definidos pelo usuário.  
-  
- O padrão de programação a seguir demonstra como usar o [implementa](../windows/implements-structure.md) estrutura para especificar mais de três interfaces em uma fábrica de classes.  
-  
- `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[Construtor ClassFactory::ClassFactory](../windows/classfactory-classfactory-constructor.md)||  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[Método ClassFactory::AddRef](../windows/classfactory-addref-method.md)|Incrementa a contagem de referência para o atual **ClassFactory** objeto.|  
-|[Método ClassFactory::LockServer](../windows/classfactory-lockserver-method.md)|Aumenta ou diminui o número de subjacente objetos que são controladas pelo atual **ClassFactory** objeto.|  
-|[Método ClassFactory::QueryInterface](../windows/classfactory-queryinterface-method.md)|Recupera um ponteiro para a interface especificada pelo parâmetro.|  
-|[Método ClassFactory::Release](../windows/classfactory-release-method.md)|Diminui a contagem de referência para o atual **ClassFactory** objeto.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `I0`  
-  
- `ChainInterfaces`  
-  
- `I0`  
-  
- `RuntimeClassBase`  
-  
- `ImplementsHelper`  
-  
- `DontUseNewUseMake`  
-  
- `RuntimeClassFlags`  
-  
- `RuntimeClassBaseT`  
-  
- `RuntimeClass`  
-  
- `ClassFactory`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace Microsoft:: wrl](../windows/microsoft-wrl-namespace.md)   
- [Enumeração RuntimeClassType](../windows/runtimeclasstype-enumeration.md)
+
+Implementa a funcionalidade básica do `IClassFactory` interface.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+template <
+   typename I0 = Details::Nil,
+   typename I1 = Details::Nil,
+   typename I2 = Details::Nil
+>
+class ClassFactory : public Details::RuntimeClass<
+   typename Details::InterfaceListHelper<IClassFactory,
+   I0,
+   I1,
+   I2,
+   Details::Nil>::TypeT,
+   RuntimeClassFlags<ClassicCom | InhibitWeakReference>,
+      false>;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*I0*  
+A interface inicial.
+
+*I1*  
+A primeira interface.
+
+*I2*  
+A segunda interface.
+
+## <a name="remarks"></a>Comentários
+
+Utilizar **ClassFactory** para fornecer uma implementação de fábrica definidos pelo usuário.
+
+O padrão de programação a seguir demonstra como usar o [implementa](../windows/implements-structure.md) estrutura para especificar mais de três interfaces em uma fábrica de classes.
+
+`struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`
+
+## <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[Construtor ClassFactory::ClassFactory](../windows/classfactory-classfactory-constructor.md)||
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[Método ClassFactory::AddRef](../windows/classfactory-addref-method.md)|Incrementa a contagem de referência para o atual **ClassFactory** objeto.|
+|[Método ClassFactory::LockServer](../windows/classfactory-lockserver-method.md)|Aumenta ou diminui o número de subjacente objetos que são controladas pelo atual **ClassFactory** objeto.|
+|[Método ClassFactory::QueryInterface](../windows/classfactory-queryinterface-method.md)|Recupera um ponteiro para a interface especificada pelo parâmetro.|
+|[Método ClassFactory::Release](../windows/classfactory-release-method.md)|Diminui a contagem de referência para o atual **ClassFactory** objeto.|
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`I0`
+
+`ChainInterfaces`
+
+`I0`
+
+`RuntimeClassBase`
+
+`ImplementsHelper`
+
+`DontUseNewUseMake`
+
+`RuntimeClassFlags`
+
+`RuntimeClassBaseT`
+
+`RuntimeClass`
+
+`ClassFactory`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)  
+[Enumeração RuntimeClassType](../windows/runtimeclasstype-enumeration.md)

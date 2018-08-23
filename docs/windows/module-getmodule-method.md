@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ddfd9008a89834c17642d8b83bb9f33405a342a0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 023cd09493605647e9a12052d4b92f799f2bea3d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010792"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611714"
 ---
 # <a name="modulegetmodule-method"></a>Método Module::GetModule
-Cria uma instância de um módulo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-static Module& GetModule();  
-WRL_NOTHROW static Module& GetModule();  
-```  
-  
-## <a name="return-value"></a>Valor de retorno  
- Uma referência a um módulo.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe Module](../windows/module-class.md)
+
+Cria uma instância de um módulo.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+static Module& GetModule();
+WRL_NOTHROW static Module& GetModule();
+```
+
+## <a name="return-value"></a>Valor de retorno
+
+Uma referência a um módulo.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Classe Module](../windows/module-class.md)

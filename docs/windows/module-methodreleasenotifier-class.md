@@ -17,57 +17,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80b2653128415cfd847db5b9592df116ffd0d470
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: cee634ab62e699b4de6af54a57b0fe3d6b5e9a40
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014306"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606602"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Classe Module::MethodReleaseNotifier
-Invoca um manipulador de eventos quando o último objeto no módulo atual é liberado. O manipulador de eventos é especificado por um objeto e seu membro de ponteiro ao método.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-template<typename T>  
-class MethodReleaseNotifier : public ReleaseNotifier;  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *T*  
- O tipo do objeto cuja função de membro é o manipulador de eventos.  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[Construtor Module::MethodReleaseNotifier::MethodReleaseNotifier](../windows/module-methodreleasenotifier-methodreleasenotifier-constructor.md)|Inicializa uma nova instância dos **methodreleasenotifier** classe.|  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[Método Module::MethodReleaseNotifier::Invoke](../windows/module-methodreleasenotifier-invoke-method.md)|Chama o manipulador de eventos associado ao atual **methodreleasenotifier** objeto.|  
-  
-### <a name="protected-data-members"></a>Membros de dados protegidos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[Membro de dados Module::MethodReleaseNotifier::method_](../windows/module-methodreleasenotifier-method-data-member.md)|Contém um ponteiro para o manipulador de eventos para o atual **methodreleasenotifier** objeto.|  
-|[Membro de dados Module::MethodReleaseNotifier::object_](../windows/module-methodreleasenotifier-object-data-member.md)|Contém um ponteiro para o objeto cuja função de membro é o manipulador de eventos para o atual **methodreleasenotifier** objeto.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `ReleaseNotifier`  
-  
- `MethodReleaseNotifier`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** module.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Consulte também
- [Classe Module](../windows/module-class.md)
+
+Invoca um manipulador de eventos quando o último objeto no módulo atual é liberado. O manipulador de eventos é especificado por um objeto e seu membro de ponteiro ao método.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+template<typename T>
+class MethodReleaseNotifier : public ReleaseNotifier;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*T*  
+O tipo do objeto cuja função de membro é o manipulador de eventos.
+
+## <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[Construtor Module::MethodReleaseNotifier::MethodReleaseNotifier](../windows/module-methodreleasenotifier-methodreleasenotifier-constructor.md)|Inicializa uma nova instância dos **methodreleasenotifier** classe.|
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[Método Module::MethodReleaseNotifier::Invoke](../windows/module-methodreleasenotifier-invoke-method.md)|Chama o manipulador de eventos associado ao atual **methodreleasenotifier** objeto.|
+
+### <a name="protected-data-members"></a>Membros de dados protegidos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[Membro de dados Module::MethodReleaseNotifier::method_](../windows/module-methodreleasenotifier-method-data-member.md)|Contém um ponteiro para o manipulador de eventos para o atual **methodreleasenotifier** objeto.|
+|[Membro de dados Module::MethodReleaseNotifier::object_](../windows/module-methodreleasenotifier-object-data-member.md)|Contém um ponteiro para o objeto cuja função de membro é o manipulador de eventos para o atual **methodreleasenotifier** objeto.|
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`ReleaseNotifier`
+
+`MethodReleaseNotifier`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+[Classe Module](../windows/module-class.md)

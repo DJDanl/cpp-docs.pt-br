@@ -17,45 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8522b3af527267706a2e2697b88049a38b0f092f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 95721a37865d7a129d9533b2b8aba7e45c912235
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017185"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611775"
 ---
 # <a name="in-c"></a>in (C++)
-Indica que um parâmetro deve ser passado do procedimento de chamada para o procedimento chamado.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-[in]  
-```  
-  
-## <a name="remarks"></a>Comentários  
- O **na** atributo C++ tem a mesma funcionalidade que o [em](http://msdn.microsoft.com/library/windows/desktop/aa367051) atributo MIDL.  
-  
-## <a name="example"></a>Exemplo  
- Ver [associável](../windows/bindable.md) para obter um exemplo de como usar **em**.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Atributo de contexto  
-  
-|||  
-|-|-|  
-|**Aplica-se a**|Parâmetro de interface, o método de interface|  
-|**Repetível**|Não|  
-|**Atributos obrigatórios**|Nenhum|  
-|**Atributos inválidos**|**retval**|  
-  
- Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos de parâmetro](../windows/parameter-attributes.md)   
- [Atributos de método](../windows/method-attributes.md)   
- [DefaultValue](../windows/defaultvalue.md)   
- [ID](../windows/id.md)   
- [out](../windows/out-cpp.md)   
+
+Indica que um parâmetro deve ser passado do procedimento de chamada para o procedimento chamado.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+[in]
+```
+
+## <a name="remarks"></a>Comentários
+
+O **na** atributo C++ tem a mesma funcionalidade que o [em](http://msdn.microsoft.com/library/windows/desktop/aa367051) atributo MIDL.
+
+## <a name="example"></a>Exemplo
+
+Ver [associável](../windows/bindable.md) para obter um exemplo de como usar **em**.
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Atributo de contexto
+
+|||
+|-|-|
+|**Aplica-se a**|Parâmetro de interface, o método de interface|
+|**Repetível**|Não|
+|**Atributos obrigatórios**|Nenhum|
+|**Atributos inválidos**|**retval**|
+
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Atributos de IDL](../windows/idl-attributes.md)  
+[Atributos de parâmetro](../windows/parameter-attributes.md)  
+[Atributos de método](../windows/method-attributes.md)  
+[defaultvalue](../windows/defaultvalue.md)  
+[id](../windows/id.md)  
+[out](../windows/out-cpp.md)  

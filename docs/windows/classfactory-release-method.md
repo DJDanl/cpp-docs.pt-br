@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 313492990113ad1a1d6037c4c08e1baa464676d8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e1af266d769b950324a1a4a9b8023b6b8e164038
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651032"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606029"
 ---
 # <a name="classfactoryrelease-method"></a>Método ClassFactory::Release
-Diminui a contagem de referência para o atual **ClassFactory** objeto.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-STDMETHOD_(  
-   ULONG,  
-   Release  
-)();  
-```  
-  
-## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe ClassFactory](../windows/classfactory-class.md)
+
+Diminui a contagem de referência para o atual **ClassFactory** objeto.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+## <a name="return-value"></a>Valor de retorno
+
+S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Classe ClassFactory](../windows/classfactory-class.md)

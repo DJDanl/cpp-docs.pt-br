@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7811bcc61d5390257b7cbee95e2c504d3e376298
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b1ef298dbc8c15dddafedd74c83476663328d42f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641135"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602654"
 ---
 # <a name="comptrrefgetaddressof-method"></a>Método ComPtrRef::GetAddressOf
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-InterfaceType* const * GetAddressOf() const;  
-```  
-  
-## <a name="return-value"></a>Valor de retorno  
- Endereço de um ponteiro para a interface representado pelo atual **ComPtrRef** objeto.  
-  
-## <a name="remarks"></a>Comentários  
- Recupera o endereço de um ponteiro para a interface representado pelo atual **ComPtrRef** objeto.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** client.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe ComPtrRef](../windows/comptrref-class.md)   
- [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+InterfaceType* const * GetAddressOf() const;
+```
+
+## <a name="return-value"></a>Valor de retorno
+
+Endereço de um ponteiro para a interface representado pelo atual **ComPtrRef** objeto.
+
+## <a name="remarks"></a>Comentários
+
+Recupera o endereço de um ponteiro para a interface representado pelo atual **ComPtrRef** objeto.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** client.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Consulte também
+
+[Classe ComPtrRef](../windows/comptrref-class.md)  
+[Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

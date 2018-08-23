@@ -21,51 +21,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3d0e20d8b2b88a7141672117d4c0b036682953e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2d0846d87273920f72598a1ea5bc4bd83d4c952d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641412"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599879"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>Agrupando botões de opção em uma caixa de diálogo
-Quando você adiciona botões de opção para uma caixa de diálogo, tratá-los como um grupo, definindo um **grupo** propriedade no **propriedades** janela para o primeiro botão no grupo. Então, aparecerá uma ID de controle para esse botão de opção na [Assistente para adição de variável de membro](../ide/add-member-variable-wizard.md), permitindo que você adicione uma variável de membro para o grupo de botões de opção.  
-  
- Você pode ter mais de um grupo de botões de opção em uma caixa de diálogo, e cada grupo deve ser adicionado usando o procedimento a seguir.  
-  
-### <a name="to-add-a-group-of-radio-buttons-to-a-dialog-box"></a>Para adicionar um grupo de botões de opção para uma caixa de diálogo  
-  
-1.  Selecione o controle de botão de opção na [janela caixa de ferramentas](/visualstudio/ide/reference/toolbox) e clique no local na caixa de diálogo onde você deseja colocar o controle.  
-  
-2.  Repita a etapa 1 para adicionar botões de opção quantas forem necessárias. Certifique-se de que os botões de opção no grupo são consecutivos na ordem de tabulação (para obter mais informações, consulte [alterando a ordem dos controles da guia](../windows/changing-the-tab-order-of-controls.md)).  
-  
-3.  No [janela de propriedades](/visualstudio/ide/reference/properties-window), defina o **grupo** propriedade do *primeiro* botão de opção na ordem de tabulação para **True**.  
-  
-     Alterando a **grupo** propriedade **verdadeiro** adiciona o estilo WS_GROUP a entrada do botão no objeto de caixa de diálogo do script de recurso e garante que um usuário pode selecionar apenas um botão de opção por vez no botão grupo (quando o usuário clica em um botão de opção, os outros no grupo estão desmarcados).  
-  
-    > [!NOTE]
-    >  Somente o primeiro botão de opção no grupo deve ter o **grupo** propriedade definida como **verdadeiro**. Se você tiver controles adicionais que não fazem parte do grupo de botões, defina as **grupo** propriedade do primeiro controle *que está fora do grupo* para **verdadeiro** também. Você pode identificar rapidamente o primeiro controle fora do grupo pressionando **Ctrl**+**1!d** para exibir a ordem de tabulação.  
-  
-### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Para adicionar uma variável de membro para o grupo de botões de opção  
-  
-1.  Clique com botão direito do controle de botão de rádio primeiro na ordem de tabulação (o controle dominante e aquele com o **grupo** propriedade definida como True).  
-  
-2.  Escolher **Adicionar variável** no menu de atalho.  
-  
-3.  No [assistente Adicionar variável de membro](../ide/add-member-variable-wizard.md), selecione o **variável de controle** caixa de seleção e, em seguida, selecione o **valor** botão de opção.  
-  
-4.  No **nome da variável** , digite um nome para a nova variável de membro.  
-  
-5.  No **tipo de variável** caixa de listagem, selecione **int** ou tipo `int`.  
-  
-6.  Agora você pode modificar seu código para especificar qual botão de opção deve aparecer selecionado. Por exemplo, `m_radioBox1 = 0;` seleciona o primeiro botão de opção no grupo.  
-  
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Consulte também  
- [Organização de controles em caixas de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
- [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
- [Controles](../mfc/controls-mfc.md)
+
+Quando você adiciona botões de opção para uma caixa de diálogo, tratá-los como um grupo, definindo um **grupo** propriedade no **propriedades** janela para o primeiro botão no grupo. Então, aparecerá uma ID de controle para esse botão de opção na [Assistente para adição de variável de membro](../ide/add-member-variable-wizard.md), permitindo que você adicione uma variável de membro para o grupo de botões de opção.
+
+Você pode ter mais de um grupo de botões de opção em uma caixa de diálogo, e cada grupo deve ser adicionado usando o procedimento a seguir.
+
+### <a name="to-add-a-group-of-radio-buttons-to-a-dialog-box"></a>Para adicionar um grupo de botões de opção para uma caixa de diálogo
+
+1. Selecione o controle de botão de opção na [janela caixa de ferramentas](/visualstudio/ide/reference/toolbox) e clique no local na caixa de diálogo onde você deseja colocar o controle.
+
+2. Repita a etapa 1 para adicionar botões de opção quantas forem necessárias. Certifique-se de que os botões de opção no grupo são consecutivos na ordem de tabulação (para obter mais informações, consulte [alterando a ordem dos controles da guia](../windows/changing-the-tab-order-of-controls.md)).
+
+3. No [janela de propriedades](/visualstudio/ide/reference/properties-window), defina o **grupo** propriedade do *primeiro* botão de opção na ordem de tabulação para **True**.
+
+   Alterando a **grupo** propriedade **verdadeiro** adiciona o estilo WS_GROUP a entrada do botão no objeto de caixa de diálogo do script de recurso e garante que um usuário pode selecionar apenas um botão de opção por vez no botão grupo (quando o usuário clica em um botão de opção, os outros no grupo estão desmarcados).
+
+   > [!NOTE]
+   > Somente o primeiro botão de opção no grupo deve ter o **grupo** propriedade definida como **verdadeiro**. Se você tiver controles adicionais que não fazem parte do grupo de botões, defina as **grupo** propriedade do primeiro controle *que está fora do grupo* para **verdadeiro** também. Você pode identificar rapidamente o primeiro controle fora do grupo pressionando **Ctrl**+**1!d** para exibir a ordem de tabulação.
+
+### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Para adicionar uma variável de membro para o grupo de botões de opção
+
+1. Clique com botão direito do controle de botão de rádio primeiro na ordem de tabulação (o controle dominante e aquele com o **grupo** propriedade definida como True).
+
+2. Escolher **Adicionar variável** no menu de atalho.
+
+3. No [assistente Adicionar variável de membro](../ide/add-member-variable-wizard.md), selecione o **variável de controle** caixa de seleção e, em seguida, selecione o **valor** botão de opção.
+
+4. No **nome da variável** , digite um nome para a nova variável de membro.
+
+5. No **tipo de variável** caixa de listagem, selecione **int** ou tipo `int`.
+
+6. Agora você pode modificar seu código para especificar qual botão de opção deve aparecer selecionado. Por exemplo, `m_radioBox1 = 0;` seleciona o primeiro botão de opção no grupo.
+
+Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Consulte também
+
+[Organização de controles em caixas de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)  
+[Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Controles](../mfc/controls-mfc.md)

@@ -18,45 +18,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1f5cee3bf827effc7c99dd66d7dc2898c9ad55f
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: dccf80feb4582610a4cfcc22ef0d658c2ce63fb2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645458"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599734"
 ---
 # <a name="defining-member-variables-for-dialog-controls"></a>Definindo variáveis de membro para controles da caixa de diálogo
-Para definir uma variável de membro de qualquer controle de caixa de diálogo, exceto os botões, você pode usar o método a seguir.  
-  
+
+Para definir uma variável de membro de qualquer controle de caixa de diálogo, exceto os botões, você pode usar o método a seguir.
+
 > [!NOTE]
->  Este artigo se aplica somente a controles de caixa de diálogo dentro de um projeto MFC. Projetos ATL devem usar o **novas mensagens do Windows e manipuladores de eventos** caixa de diálogo.  
-  
-### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Para definir uma variável de membro para um controle de caixa de diálogo (não-botão)  
-  
-1.  No [editor de caixa de diálogo](../windows/dialog-editor.md), selecione um controle.  
-  
-2.  Ao pressionar o **Ctrl** da chave, clique duas vezes o controle de caixa de diálogo.  
-  
-     O [assistente Adicionar variável de membro](../ide/add-member-variable-wizard.md) é exibida.  
-  
-3.  Digite as informações apropriadas na **Adicionar variável de membro** assistente. Para obter mais informações, consulte [troca de dados de caixa de diálogo](../mfc/dialog-data-exchange.md).  
-  
-4.  Clique em **Okey** para retornar para o **caixa de diálogo** editor.  
-  
-    > [!TIP]
-    >  Para saltar de qualquer controle de caixa de diálogo para seu manipulador existente, clique duas vezes no controle.  
-  
- Você também pode usar o **variáveis de membro** guia **MFC Class Wizard** para adicionar novas variáveis de membro para uma classe especificada e exibir os que já foi definido.  
-  
-## <a name="requirements"></a>Requisitos  
- MFC  
-  
-## <a name="see-also"></a>Consulte também  
- [Mapeando mensagens para funções](../mfc/reference/mapping-messages-to-functions.md)   
- [Adicionando funcionalidade com assistentes de código](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Assistente de classe MFC](../mfc/reference/mfc-class-wizard.md)   
- [Adicionando uma classe](../ide/adding-a-class-visual-cpp.md)   
- [Adicionando uma função de membro](../ide/adding-a-member-function-visual-cpp.md)   
- [Adicionando uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)   
- [Substituindo uma função virtual](../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Manipulador de mensagens do MFC](../mfc/reference/adding-an-mfc-message-handler.md)
+> Este artigo se aplica somente a controles de caixa de diálogo dentro de um projeto MFC. Projetos ATL devem usar o **novas mensagens do Windows e manipuladores de eventos** caixa de diálogo.
+
+### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Para definir uma variável de membro para um controle de caixa de diálogo (não-botão)
+
+1. No [editor de caixa de diálogo](../windows/dialog-editor.md), selecione um controle.
+
+2. Ao pressionar o **Ctrl** da chave, clique duas vezes o controle de caixa de diálogo.
+
+   O [assistente Adicionar variável de membro](../ide/add-member-variable-wizard.md) é exibida.
+
+3. Digite as informações apropriadas na **Adicionar variável de membro** assistente. Para obter mais informações, consulte [troca de dados de caixa de diálogo](../mfc/dialog-data-exchange.md).
+
+4. Clique em **Okey** para retornar para o **caixa de diálogo** editor.
+
+   > [!TIP]
+   > Para saltar de qualquer controle de caixa de diálogo para seu manipulador existente, clique duas vezes no controle.
+
+Você também pode usar o **variáveis de membro** guia **MFC Class Wizard** para adicionar novas variáveis de membro para uma classe especificada e exibir os que já foi definido.
+
+## <a name="requirements"></a>Requisitos
+
+MFC
+
+## <a name="see-also"></a>Consulte também
+
+[Mapeando mensagens para funções](../mfc/reference/mapping-messages-to-functions.md)  
+[Adicionando funcionalidade com assistentes de código](../ide/adding-functionality-with-code-wizards-cpp.md)  
+[Assistente de classe do MFC](../mfc/reference/mfc-class-wizard.md)  
+[Adicionando uma classe](../ide/adding-a-class-visual-cpp.md)  
+[Adicionando uma função de membro](../ide/adding-a-member-function-visual-cpp.md)  
+[Adicionando uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)  
+[Substituindo uma função Virtual](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[Manipulador de mensagens do MFC](../mfc/reference/adding-an-mfc-message-handler.md)

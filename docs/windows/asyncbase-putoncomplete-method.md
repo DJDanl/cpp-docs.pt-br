@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e982e6f053b207b1d57ed5c0df483a9d9ab778eb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c62119b87183fe6a60c0ed4d987cbd12788d8a0d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646966"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602680"
 ---
 # <a name="asyncbaseputoncomplete-method"></a>Método AsyncBase::PutOnComplete
-Define o endereço do manipulador de eventos de conclusão para o valor especificado.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-STDMETHOD(  
-   PutOnComplete  
-)(TComplete* completeHandler);  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *completeHandler*  
- O endereço ao qual o manipulador de eventos de conclusão é definido.  
-  
-## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe AsyncBase](../windows/asyncbase-class.md)
+
+Define o endereço do manipulador de eventos de conclusão para o valor especificado.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+STDMETHOD(
+   PutOnComplete
+)(TComplete* completeHandler);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*completeHandler*  
+O endereço ao qual o manipulador de eventos de conclusão é definido.
+
+## <a name="return-value"></a>Valor de retorno
+
+S_OK se bem-sucedido; Caso contrário, E_ILLEGAL_METHOD_CALL.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Classe AsyncBase](../windows/asyncbase-class.md)

@@ -18,47 +18,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ef27e86ae356ddc67555390b7e053daa8d32a09
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a46a2f9b18a45e7ea627488881b0289e733ddd7b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013347"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608961"
 ---
 # <a name="version-c"></a>version (C++)
-Identifica uma versão específica entre várias versões de uma classe.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-[ version(  
-   "version"  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *version*  
- O número de versão a `coclass`. Se não for especificado, 1.0 será colocado no arquivo. idl.  
-  
-## <a name="remarks"></a>Comentários  
- O **versão** atributo C++ tem a mesma funcionalidade que o [versão](http://msdn.microsoft.com/library/windows/desktop/aa367306) atributo MIDL e é passado para o arquivo. idl gerado.  
-  
-## <a name="example"></a>Exemplo  
- Consulte a [associável](../windows/bindable.md) exemplo para uso do exemplo **versão**.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Atributo de contexto  
-  
-|||  
-|-|-|  
-|**Aplica-se a**|**classe**, **struct**|  
-|**Repetível**|Não|  
-|**Atributos obrigatórios**|**coclass**|  
-|**Atributos inválidos**|Nenhum|  
-  
- Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Atributos de compilador](../windows/compiler-attributes.md)   
- [Atributos de classe](../windows/class-attributes.md)   
+
+Identifica uma versão específica entre várias versões de uma classe.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+[ version(
+   "version"
+) ]
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*version*  
+O número de versão a `coclass`. Se não for especificado, 1.0 será colocado no arquivo. idl.
+
+## <a name="remarks"></a>Comentários
+
+O **versão** atributo C++ tem a mesma funcionalidade que o [versão](http://msdn.microsoft.com/library/windows/desktop/aa367306) atributo MIDL e é passado para o arquivo. idl gerado.
+
+## <a name="example"></a>Exemplo
+
+Consulte a [associável](../windows/bindable.md) exemplo para uso do exemplo **versão**.
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Atributo de contexto
+
+|||
+|-|-|
+|**Aplica-se a**|**classe**, **struct**|
+|**Repetível**|Não|
+|**Atributos obrigatórios**|**coclass**|
+|**Atributos inválidos**|Nenhum|
+
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Atributos de compilador](../windows/compiler-attributes.md)  
+[Atributos de classe](../windows/class-attributes.md)  

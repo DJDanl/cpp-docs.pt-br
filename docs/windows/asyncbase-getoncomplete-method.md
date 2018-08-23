@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ffe517b75df4e1cdd8172279c12256db940f0980
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: eab2a577d0c7b31f833a8dcc0208f9939b729ad9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647031"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607463"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>Método AsyncBase::GetOnComplete
-Copia o endereço do manipulador de eventos de conclusão atual para a variável especificada.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-STDMETHOD(  
-   GetOnComplete  
-)(TComplete** completeHandler);  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *completeHandler*  
- O local em que o endereço do manipulador de eventos de conclusão atual é armazenado.  
-  
-## <a name="return-value"></a>Valor de retorno  
- S_OK se bem-sucedido; Caso contrário, E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe AsyncBase](../windows/asyncbase-class.md)
+
+Copia o endereço do manipulador de eventos de conclusão atual para a variável especificada.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+STDMETHOD(
+   GetOnComplete
+)(TComplete** completeHandler);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*completeHandler*  
+O local em que o endereço do manipulador de eventos de conclusão atual é armazenado.
+
+## <a name="return-value"></a>Valor de retorno
+
+S_OK se bem-sucedido; Caso contrário, E_ILLEGAL_METHOD_CALL.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Classe AsyncBase](../windows/asyncbase-class.md)

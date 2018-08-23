@@ -17,55 +17,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2b1dd40487a9d843fb81be1e0be65d76a86e1f9c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c8ac728c70b160b64b66ddc697c54e4c488320db
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013292"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607869"
 ---
 # <a name="verifyinterfacehelper-structure"></a>Estrutura VerifyInterfaceHelper
-Oferece suporte a infraestrutura de biblioteca de modelos de C++ de tempo de execução do Windows e não se destina a ser usado diretamente do seu código.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-template <  
-   bool isWinRTInterface,  
-   typename I  
->  
-struct VerifyInterfaceHelper;  
-  
-template <  
-   typename I  
->  
-struct VerifyInterfaceHelper<false, I>;  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *I*  
- Uma interface para verificar.  
-  
- *isWinRTInterface*  
-  
-## <a name="remarks"></a>Comentários  
- Verifica se a interface especificada pelo parâmetro de modelo atende a determinados requisitos.  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-methods"></a>Métodos Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[Método VerifyInterfaceHelper::Verify](../windows/verifyinterfacehelper-verify-method.md)||  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `VerifyInterfaceHelper`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Implements. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Oferece suporte a infraestrutura de biblioteca de modelos de C++ de tempo de execução do Windows e não se destina a ser usado diretamente do seu código.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+template <
+   bool isWinRTInterface,
+   typename I
+>
+struct VerifyInterfaceHelper;
+
+template <
+   typename I
+>
+struct VerifyInterfaceHelper<false, I>;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*I*  
+Uma interface para verificar.
+
+*isWinRTInterface*
+
+## <a name="remarks"></a>Comentários
+
+Verifica se a interface especificada pelo parâmetro de modelo atende a determinados requisitos.
+
+## <a name="members"></a>Membros
+
+### <a name="public-methods"></a>Métodos Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[Método VerifyInterfaceHelper::Verify](../windows/verifyinterfacehelper-verify-method.md)||
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`VerifyInterfaceHelper`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** Implements. h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Funções globais do identificador de segurança | Microsoft Docs
+title: Funções globais de identificador de segurança | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -47,18 +47,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 153436ab5d05d0355d85ca165b2bfba9ae86d534
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b567c56c8c4ca5c25fc870e91c8c608e17280557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365149"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610227"
 ---
-# <a name="security-identifier-global-functions"></a>Funções globais do identificador de segurança
-Essas funções retornam SID bem conhecido comuns de objetos.  
+# <a name="security-identifier-global-functions"></a>Funções globais de identificador de segurança
+Essas funções retornam objetos de SID bem conhecido comuns.  
   
 > [!IMPORTANT]
->  As funções listadas na tabela a seguir não podem ser usadas em aplicativos que são executados o tempo de execução do Windows.  
+>  As funções listadas na tabela a seguir não podem ser usadas em aplicativos executados no tempo de execução do Windows.  
   
 |||  
 |-|-|  
@@ -96,7 +96,7 @@ Essas funções retornam SID bem conhecido comuns de objetos.
 |[SIDs::World](#world)|Retorna o SID SECURITY_WORLD_RID.|  
 
 ### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlsecurity.h 
+ **Cabeçalho:** atlsecurity. h 
 
 ##  <a name="accountops"></a>  SIDs::AccountOps  
  Retorna o SID DOMAIN_ALIAS_RID_ACCOUNT_OPS.    
@@ -196,9 +196,9 @@ CSid NetworkService() throw(...);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Use NetworkService para permitir que o usuário NT AUTHORITY\NetworkService ler um objeto de segurança CPerfMon. NetworkService adiciona um SecurityAttribute ao código ATLServer que permitirá que a DLL de logon na conta NetworkService em [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] e sistema de operacional maior.  
+ Use o NetworkService para permitir que o usuário NT AUTHORITY\NetworkService ler um objeto de segurança CPerfMon. NetworkService adiciona um SecurityAttribute ao código ATLServer que permitirá que a DLL de logon na conta NetworkService no Windows XP Home Edition, Windows XP Professional, Windows Server 2003 e o sistema de operacional maior.  
   
- Quando os contadores de log personalizado são criados com a classe ATLServer CPerfMon no MMC Perfmon, os contadores podem não aparecer ao exibir o arquivo de log, embora eles sejam exibidos corretamente no modo de exibição em tempo real. Contadores de desempenho personalizados CPerfMon não tem as permissões necessárias para executar sob o serviço de "Logs e alertas de desempenho" (smlogsvc.exe) [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] (ou superior) sistemas operacionais. Esse serviço é executado sob a conta "NT AUTHORITY\NetworkService".  
+ Quando os contadores de log personalizado são criados com a classe ATLServer CPerfMon no MMC do Perfmon, os contadores podem não aparecer ao exibir o arquivo de log, embora eles sejam exibidos corretamente no modo de exibição em tempo real. Contadores de desempenho personalizados CPerfMon não tem as permissões necessárias para executar sob o serviço de "Logs e alertas de desempenho" (smlogsvc.exe) no Windows XP Home Edition, Windows XP Professional, Windows Server 2003 (ou posterior) de sistemas de operacionais. Esse serviço é executado sob a conta "NT AUTHORITY\NetworkService".  
   
 ##  <a name="null"></a>  SIDs::null  
  Retorna o SID SECURITY_NULL_RID.  

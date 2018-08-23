@@ -18,35 +18,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb15dbd56656c72bc0f96491d24fc43fb96de84c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f419f9c370c58c1e3ebf07d3b78f15499a072d4e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017806"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603492"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>Movendo ou copiando uma entrada da tabela de aceleradores para outro arquivo de script de recurso
-### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Para mover ou copiar uma entrada de tabela de aceleradores para outro arquivo de script de recurso  
-  
-1.  Abra as tabelas de aceleradores em ambos os arquivos de script de recurso.  
-  
-    > [!NOTE]
-    >  Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Selecione a entrada que você deseja mover.  
-  
-3.  Dos **edite** menu, escolha **cópia** ou **Recortar**.  
-  
-4.  Selecione uma entrada no arquivo de script de recurso de destino.  
-  
-5.  Dos **edite** menu, escolha **colar**.  
-  
-    > [!NOTE]
-    >  Você também pode usar as teclas de atalho para copiar e colar.  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Consulte também  
- [Editando tabelas de aceleradores](../windows/editing-accelerator-tables.md)   
- [Editor de aceleradores](../windows/accelerator-editor.md)
+
+### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Para mover ou copiar uma entrada de tabela de aceleradores para outro arquivo de script de recurso
+
+1. Abra as tabelas de aceleradores em ambos os arquivos de script de recurso.
+
+   > [!NOTE]
+   > Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).
+
+2. Selecione a entrada que você deseja mover.
+
+3. Dos **edite** menu, escolha **cópia** ou **Recortar**.
+
+4. Selecione uma entrada no arquivo de script de recurso de destino.
+
+5. Dos **edite** menu, escolha **colar**.
+
+   > [!NOTE]
+   > Você também pode usar as teclas de atalho para copiar e colar.
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Consulte também
+
+[Editando tabelas de aceleradores](../windows/editing-accelerator-tables.md)  
+[Editor de aceleradores](../windows/accelerator-editor.md)

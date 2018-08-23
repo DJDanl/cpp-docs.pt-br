@@ -18,35 +18,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d82e31e75cf0180670ebdbc875628fdefcef57bb
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 0ec2fea7b0aa320a40e70a56b9980d1993cee2fa
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014631"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610674"
 ---
 # <a name="windowsfoundation-namespace"></a>Namespace Windows::Foundation
-Habilita a funcionalidade fundamental do tempo de execução do Windows, como a criação de objeto e de fábrica.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-namespace Windows::Foundation;  
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="functions"></a>Funções  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[Função ActivateInstance](../windows/activateinstance-function.md)|Registra e recupera uma instância de um tipo especificado definido em uma ID de classe especificado.|  
-|[Função GetActivationFactory](../windows/getactivationfactory-function.md)|Recupera um alocador de ativação para o tipo especificado pelo parâmetro de modelo.|  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** client.h  
-  
- **Namespace:** Windows  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace do Windows](http://msdn.microsoft.com/45b08650-69cd-4f7f-a959-b7361476865c)
+
+Habilita a funcionalidade fundamental do tempo de execução do Windows, como a criação de objeto e de fábrica.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+namespace Windows::Foundation;
+```
+
+## <a name="members"></a>Membros
+
+### <a name="functions"></a>Funções
+
+|Nome|Descrição|
+|----------|-----------------|
+|[Função ActivateInstance](../windows/activateinstance-function.md)|Registra e recupera uma instância de um tipo especificado definido em uma ID de classe especificado.|
+|[Função GetActivationFactory](../windows/getactivationfactory-function.md)|Recupera um alocador de ativação para o tipo especificado pelo parâmetro de modelo.|
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** client.h
+
+**Namespace:** Windows
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace do Windows](http://msdn.microsoft.com/45b08650-69cd-4f7f-a959-b7361476865c)

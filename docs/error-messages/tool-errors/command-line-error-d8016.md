@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f9709da189403f2594d76751430d30554bffe5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c6ba57b7036aae652b9eb6d885f9105d8bf0826
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300612"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607597"
 ---
 # <a name="command-line-error-d8016"></a>Erro D8016 (linha de comando)
-Opções de linha de comando 'opção 1' e 'option2' são incompatíveis  
+Opções de linha de comando de 'opção 1' e 'option2' são incompatíveis  
   
  As opções de linha de comando não podem ser especificadas juntos.  
   
  Verifique as variáveis de ambiente, como CL, especificações de opção.  
   
- **/CLR** implica **/EHa**, e você não pode especificar qualquer outro **/EH** opção de compilador com **/clr**. Para obter mais informações, consulte [/clr (compilação de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
+ **/CLR** implica **/EHa**, e não é possível especificar qualquer outro **/EH** opção do compilador com **/clr**. Para obter mais informações, consulte [/clr (compilação de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
- Você pode obter D8016 depois de atualizar um [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] projeto 6.0: pode permitir que o processo do Assistente de atualização de projeto **/RTC** para cada arquivo de código fonte no projeto, que substitui o **/RTC** configuração para o projeto.  Para resolver, altere o **/RTC** definição para cada arquivo de código fonte no projeto para a configuração padrão, que significa que a configuração de projeto para **/RTC** entrará em vigor para cada arquivo.  
+ Você pode obter D8016 depois de atualizar um projeto do Visual C++ 6.0: pode permitir que o processo do Assistente de atualização de projeto **/RTC** para cada arquivo de código fonte no projeto, que substitui o **/RTC** configuração para o projeto.  Para resolver, altere o **/RTC** definição para cada arquivo de código fonte no projeto para a configuração padrão, que significa que a configuração de projeto para **/RTC** entrará em vigor para cada arquivo.  
   
- Consulte [/RTC (verificações de erro de tempo de execução)](../../build/reference/rtc-run-time-error-checks.md) para obter informações sobre como alterar o **/RTC** configuração de propriedade.
+ Ver [/RTC (verificações de erro em tempo de execução)](../../build/reference/rtc-run-time-error-checks.md) para obter informações sobre como alterar a **/RTC** configuração da propriedade.

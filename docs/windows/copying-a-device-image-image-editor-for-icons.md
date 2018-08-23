@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e842dcb70e6f4a4ec4751ed7f4f231b41af2d288
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 31ba668078d80b927d6a898d4700efe1e546ea1e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645653"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600091"
 ---
 # <a name="copying-a-device-image-image-editor-for-icons"></a>Copiando a imagem de um dispositivo (editor de imagens para ícones)
-### <a name="to-copy-a-device-image"></a>Para copiar uma imagem de dispositivo  
-  
-1.  Sobre o **imagem** menu, clique em **Abrir imagem do dispositivo** e selecione uma imagem da lista de imagens atual. Por exemplo, escolha 32 × 32, versão de 16 cores de um ícone.  
-  
-2.  Copie a imagem do ícone exibido no momento (**Ctrl**+**C**).  
-  
-3.  Abrir uma imagem diferente do ícone em outro **Editor de imagens** janela. Por exemplo, abra o 16 × 16, versão de 16 cores do ícone.  
-  
-4.  Cole a imagem de ícone (**Ctrl**+**V**) de um **Editor de imagens** janela para outra. Se você estiver colando um tamanho maior em um tamanho menor, você pode usar os identificadores de ícone para redimensionar a imagem.  
-  
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisitos  
- Nenhum  
-  
-## <a name="see-also"></a>Consulte também  
- [Ícones e cursores: recursos de imagem para exibir dispositivos](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
- [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)
+
+### <a name="to-copy-a-device-image"></a>Para copiar uma imagem de dispositivo
+
+1. Sobre o **imagem** menu, clique em **Abrir imagem do dispositivo** e selecione uma imagem da lista de imagens atual. Por exemplo, escolha 32 × 32, versão de 16 cores de um ícone.
+
+2. Copie a imagem do ícone exibido no momento (**Ctrl**+**C**).
+
+3. Abrir uma imagem diferente do ícone em outro **Editor de imagens** janela. Por exemplo, abra o 16 × 16, versão de 16 cores do ícone.
+
+4. Cole a imagem de ícone (**Ctrl**+**V**) de um **Editor de imagens** janela para outra. Se você estiver colando um tamanho maior em um tamanho menor, você pode usar os identificadores de ícone para redimensionar a imagem.
+
+Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisitos
+
+Nenhum
+
+## <a name="see-also"></a>Consulte também
+
+[Ícones e cursores: recursos de imagem para exibir dispositivos](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
+[Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)

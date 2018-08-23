@@ -20,43 +20,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 659c974fccec0e54dc42d6d1a5bdb019747f81ff
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 85f4930e1d0a84091686729bacccf6a62977de6f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647018"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608077"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>Como adicionar suporte MFC a arquivos de script de recurso
-Normalmente, quando você cria um aplicativo MFC para Windows usando o [Assistente de aplicativo MFC](../mfc/reference/mfc-application-wizard.md), o assistente gera um conjunto básico de arquivos (incluindo um arquivo de script (. rc) do recurso) que contém os principais recursos do Microsoft Foundation classes (MFC). No entanto, se você estiver editando um arquivo. RC para um aplicativo do Windows que não é baseado no MFC, os seguintes recursos específicos da estrutura MFC não estão disponíveis:  
-  
--   Assistentes de código MFC (anteriormente chamado de "[MFC ClassWizard](http://msdn.microsoft.com/98dc2434-ba93-4e0b-b084-1a4bc26cdf1e)")  
-  
--   Cadeias de caracteres de prompt do menu  
-  
--   Listar o conteúdo para controles de caixa de combinação  
-  
--   Hospedagem de controles ActiveX  
-  
- No entanto, você pode adicionar suporte MFC aos arquivos. rc existentes que não têm.  
-  
-### <a name="to-add-mfc-support-to-rc-files"></a>Para adicionar suporte MFC aos arquivos. rc  
-  
-1.  Abra o arquivo de script de recurso.  
-  
-    > [!NOTE]
-    >  Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Na [exibição de recurso](../windows/resource-view-window.md), realce a pasta de recursos (por exemplo, RC).  
-  
-3.  No [janela de propriedades](/visualstudio/ide/reference/properties-window), defina o **modo MFC** propriedade a ser **verdadeiro**.  
-  
-    > [!NOTE]
-    >  Além de definir esse sinalizador, o arquivo. rc deve fazer parte de um projeto MFC. Por exemplo, apenas configurando **modo MFC** à **verdadeiro** em um arquivo. rc em Win32 project não dará os recursos do MFC.  
-  
-## <a name="requirements"></a>Requisitos  
- MFC  
-  
-## <a name="see-also"></a>Consulte também  
- [Arquivos de recurso](../windows/resource-files-visual-studio.md)   
- [Editores de recursos](../windows/resource-editors.md)
+
+Normalmente, quando você cria um aplicativo MFC para Windows usando o [Assistente de aplicativo MFC](../mfc/reference/mfc-application-wizard.md), o assistente gera um conjunto básico de arquivos (incluindo um arquivo de script (. rc) do recurso) que contém os principais recursos do Microsoft Foundation classes (MFC). No entanto, se você estiver editando um arquivo. RC para um aplicativo do Windows que não é baseado no MFC, os seguintes recursos específicos da estrutura MFC não estão disponíveis:
+
+- Assistentes de código MFC (anteriormente chamado de "[MFC ClassWizard](http://msdn.microsoft.com/98dc2434-ba93-4e0b-b084-1a4bc26cdf1e)")
+
+- Cadeias de caracteres de prompt do menu
+
+- Listar o conteúdo para controles de caixa de combinação
+
+- Hospedagem de controles ActiveX
+
+No entanto, você pode adicionar suporte MFC aos arquivos. rc existentes que não têm.
+
+### <a name="to-add-mfc-support-to-rc-files"></a>Para adicionar suporte MFC aos arquivos. rc
+
+1. Abra o arquivo de script de recurso.
+
+   > [!NOTE]
+   > Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).
+
+2. Na [exibição de recurso](../windows/resource-view-window.md), realce a pasta de recursos (por exemplo, RC).
+
+3. No [janela de propriedades](/visualstudio/ide/reference/properties-window), defina o **modo MFC** propriedade a ser **verdadeiro**.
+
+   > [!NOTE]
+   > Além de definir esse sinalizador, o arquivo. rc deve fazer parte de um projeto MFC. Por exemplo, apenas configurando **modo MFC** à **verdadeiro** em um arquivo. rc em Win32 project não dará os recursos do MFC.
+
+## <a name="requirements"></a>Requisitos
+
+MFC
+
+## <a name="see-also"></a>Consulte também
+
+[Arquivos de recurso](../windows/resource-files-visual-studio.md)  
+[Editores de recursos](../windows/resource-editors.md)

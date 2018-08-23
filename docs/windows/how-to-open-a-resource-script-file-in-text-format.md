@@ -19,49 +19,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 345171742f979e488c6a4bb48cf1b57e4bb2f164
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5912d4bf38824c562055432f125cdc7e75192cc5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018104"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610801"
 ---
 # <a name="how-to-open-a-resource-script-file-in-text-format"></a>Como abrir o arquivo de script do recurso no formato de texto
-Pode haver ocasiões quando desejar exibir o conteúdo do arquivo de script (. rc) do recurso do seu projeto sem abrir um recurso, como uma caixa de diálogo dentro do seu editor de recurso específico. Por exemplo, você talvez queira procurar uma cadeia de caracteres em todas as caixas de diálogo no arquivo de recurso sem precisar abrir cada um deles separadamente.  
-  
+
+Pode haver ocasiões quando desejar exibir o conteúdo do arquivo de script (. rc) do recurso do seu projeto sem abrir um recurso, como uma caixa de diálogo dentro do seu editor de recurso específico. Por exemplo, você talvez queira procurar uma cadeia de caracteres em todas as caixas de diálogo no arquivo de recurso sem precisar abrir cada um deles separadamente.
+
 > [!NOTE]
->  Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).  
-  
- Você pode facilmente abrir o arquivo de recurso no formato de texto para exibir todos os recursos que ele contém e executem operações globais com suporte a [editor de texto](http://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1).  
-  
+> Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).
+
+Você pode facilmente abrir o arquivo de recurso no formato de texto para exibir todos os recursos que ele contém e executem operações globais com suporte a [editor de texto](http://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1).
+
 > [!NOTE]
->  Os editores de recursos não ler diretamente. rc ou `resource.h` arquivos. O compilador de recurso compila-os em arquivos de .aps, que são consumidos pelos editores de recursos. Esse arquivo é uma etapa de compilação e armazena apenas dados simbólicos. Como com um normal de processo de compilação, as informações que não seja simbólicas (por exemplo, comentários) são descartadas durante o processo de compilação. Sempre que o arquivo .aps obtém fora de sincronia com o arquivo. RC, o arquivo. rc for gerado novamente (por exemplo, quando você salva, o editor de recurso substitui o arquivo. RC e o arquivo Resource h). Todas as alterações para os próprios recursos permanecerão incorporadas no arquivo. RC, mas comentários sempre serão perdidos depois que o arquivo. RC é substituído. Para obter informações sobre como preservar comentários, consulte [incluindo recursos em tempo de compilação](../windows/how-to-include-resources-at-compile-time.md).  
-  
-### <a name="to-open-a-resource-script-file-as-text"></a>Para abrir um arquivo de script de recurso como texto  
-  
-1.  Do **arquivo** menu escolha **aberto**, em seguida, clique em **arquivo.**  
-  
-2.  No **abrir arquivo** caixa de diálogo, navegue até o arquivo de script de recurso que você deseja exibir no formato de texto.  
-  
-3.  Realce o arquivo e, em seguida, clique na seta suspensa na **abrir** botão (localizado à direita do botão).  
-  
-4.  Escolher **abrir com** no menu suspenso.  
-  
-5.  No **abrir com** caixa de diálogo, clique em **Editor de código-fonte (texto)**.  
-  
-6.  Dos **abrir como** lista suspensa, selecione **texto**.  
-  
-     O recurso é aberto na **código-fonte** editor.  
-  
- \- ou -  
-  
-1.  Na **Gerenciador de soluções**, clique com botão direito no arquivo. rc.  
-  
-2.  No menu de atalho, escolha **abrir com...** , em seguida, selecione **Editor de código-fonte (texto)**.  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Consulte também  
- [Arquivos de recurso](../windows/resource-files-visual-studio.md)   
- [Editores de recursos](../windows/resource-editors.md)
+> Os editores de recursos não ler diretamente. rc ou `resource.h` arquivos. O compilador de recurso compila-os em arquivos de .aps, que são consumidos pelos editores de recursos. Esse arquivo é uma etapa de compilação e armazena apenas dados simbólicos. Como com um normal de processo de compilação, as informações que não seja simbólicas (por exemplo, comentários) são descartadas durante o processo de compilação. Sempre que o arquivo .aps obtém fora de sincronia com o arquivo. RC, o arquivo. rc for gerado novamente (por exemplo, quando você salva, o editor de recurso substitui o arquivo. RC e o arquivo Resource h). Todas as alterações para os próprios recursos permanecerão incorporadas no arquivo. RC, mas comentários sempre serão perdidos depois que o arquivo. RC é substituído. Para obter informações sobre como preservar comentários, consulte [incluindo recursos em tempo de compilação](../windows/how-to-include-resources-at-compile-time.md).
+
+### <a name="to-open-a-resource-script-file-as-text"></a>Para abrir um arquivo de script de recurso como texto
+
+1. Do **arquivo** menu escolha **aberto**, em seguida, clique em **arquivo.**
+
+2. No **abrir arquivo** caixa de diálogo, navegue até o arquivo de script de recurso que você deseja exibir no formato de texto.
+
+3. Realce o arquivo e, em seguida, clique na seta suspensa na **abrir** botão (localizado à direita do botão).
+
+4. Escolher **abrir com** no menu suspenso.
+
+5. No **abrir com** caixa de diálogo, clique em **Editor de código-fonte (texto)**.
+
+6. Dos **abrir como** lista suspensa, selecione **texto**.
+
+   O recurso é aberto na **código-fonte** editor.
+
+\- ou -
+
+1. Na **Gerenciador de soluções**, clique com botão direito no arquivo. rc.
+
+2. No menu de atalho, escolha **abrir com...** , em seguida, selecione **Editor de código-fonte (texto)**.
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Consulte também
+
+[Arquivos de recurso](../windows/resource-files-visual-studio.md)  
+[Editores de recursos](../windows/resource-editors.md)

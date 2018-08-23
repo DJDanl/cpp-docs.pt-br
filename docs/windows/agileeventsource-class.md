@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90a2c582c2740846f90270fe9f45b96871329252
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 40259a559389e274b6aaaa67bb215249c96a97ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642832"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611026"
 ---
 # <a name="agileeventsource-class"></a>Classe AgileEventSource
 
@@ -36,12 +36,13 @@ class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
 ```
 
-## <a name="parameters"></a>Parâmetros  
- *TDelegateInterface*  
- A interface para um delegado que representa um manipulador de eventos.
+## <a name="parameters"></a>Parâmetros
 
- *TEventSourceOptions*  
- Uma [InvokeModeOptions](invokemodeoptions-structure.md) estrutura cujo campo invokeMode é definido como `InvokeMode::StopOnFirstError` ou `InvokeMode::FireAll`.
+*TDelegateInterface*  
+A interface para um delegado que representa um manipulador de eventos.
+
+*TEventSourceOptions*  
+Uma [InvokeModeOptions](invokemodeoptions-structure.md) estrutura cujo campo invokeMode é definido como `InvokeMode::StopOnFirstError` ou `InvokeMode::FireAll`.
 
 ## <a name="remarks"></a>Comentários
 
@@ -49,13 +50,14 @@ A grande maioria dos componentes em tempo de execução do Windows são componen
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
- `EventSource` `AgileEventSource`
+`EventSource`
+`AgileEventSource`
 
 ## <a name="requirements"></a>Requisitos
 
- **Cabeçalho:** Event. h
+**Cabeçalho:** Event. h
 
- **Namespace:** Microsoft::WRL
+**Namespace:** Microsoft::WRL
 
 ## <a name="members"></a>Membros
 
@@ -92,4 +94,5 @@ S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
 
 
 ## <a name="see-also"></a>Consulte também
- [Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+
+[Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

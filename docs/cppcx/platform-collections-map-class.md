@@ -1,5 +1,5 @@
 ---
-title: Classe Platform::Collections::Map | Microsoft Docs
+title: '{1&gt;classe Platform::Collections::Map&lt;1} | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6580ccb9ca19a575bac6a9fedbb4e8f16c7060ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6831369f6327b7cef38b1a4f15013f1e3ff4043
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093175"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608982"
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
@@ -53,7 +53,7 @@ ref class Map sealed;
 O tipo de valor em pares chave-valor.
 
 *C*  
-Um tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no Map. Por padrão, [STD\<K >](../standard-library/less-struct.md).
+Um tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no Map. Por padrão, [std:: Less\<K >](../standard-library/less-struct.md).
 
 *__is_valid_winrt_type()*  
 Uma função gerada pelo compilador que valida o tipo de *K* e *V* e fornece uma mensagem de erro amigável caso o tipo não pode ser armazenado no mapa.
@@ -72,7 +72,7 @@ Os tipos permitidos são:
 
 - classe de enum pública
 
-O mapa é basicamente um wrapper para [std::map](../standard-library/map-class.md). É uma implementação concreta de C++ do [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](http://go.microsoft.com/fwlink/p/?LinkId=262408) e [IObservableMap](http://msdn.microsoft.com/library/windows/apps/br226050.aspx) interfaces de tempo de execução do Windows de tipos que são transmitidos pelo público. Se você tentar usar um tipo `Platform::Collections::Map` em um parâmetro ou valor de retorno público, o erro do compilador C3986 será gerado. Você pode corrigir o erro alterando o tipo do valor do parâmetro ou retornado para [Windows::Foundation::Collections::IMap\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262408).
+O mapa é basicamente um wrapper para [std::map](../standard-library/map-class.md). É uma implementação concreta de C++ do [IMAP < ikeyvaluepair\<K, V >>](http://go.microsoft.com/fwlink/p/?LinkId=262408) e [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) interfaces de tempo de execução do Windows de tipos que são transmitidos pelas público. Se você tentar usar um tipo `Platform::Collections::Map` em um parâmetro ou valor de retorno público, o erro do compilador C3986 será gerado. Você pode corrigir o erro alterando o tipo do valor de parâmetro ou retornado para [IMAP\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262408).
 
 Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.md).
 
@@ -88,14 +88,14 @@ Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.m
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Map](#clear)|Remove todos os pares chave-valor do objeto Map atual.|
+|[Map:: Clear](#clear)|Remove todos os pares chave-valor do objeto Map atual.|
 |[Map::First](#first)|Retorna um iterador que especifica o primeiro elemento no mapa.|
 |[Map::GetView](#getview)|Retorna uma exibição somente leitura do Mapa atual; isto é, um [Platform::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md).|
 |[Map::HasKey](#haskey)|Determina se o Map atual contém a chave especificada.|
 |[Map::Insert](#insert)|Adiciona os pares chave-valor especificados ao objeto Map atual.|
-|[Map](#lookup)|Recupera o elemento na chave especificada no objeto Map atual.|
+|[Map:: Lookup](#lookup)|Recupera o elemento na chave especificada no objeto Map atual.|
 |[Map::Remove](#remove)|Exclui os pares chave-valor especificados do objeto Map atual.|
-|[Map](#size)|Retorna o número de elementos no objeto Map atual.|
+|[Map:: Size](#size)|Retorna o número de elementos no objeto Map atual.|
 
 ### <a name="events"></a>Eventos
 
@@ -114,7 +114,7 @@ Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.m
 
 **Namespace:** Platform::Collections
 
-## <a name="clear"></a>  Método Map:
+## <a name="clear"></a>  Método Map:: Clear
 
 Remove todos os pares chave-valor do objeto Map atual.
 
@@ -124,7 +124,7 @@ Remove todos os pares chave-valor do objeto Map atual.
 virtual void Clear();
 ```
 
-## <a name="first"></a>  Método Map:
+## <a name="first"></a>  Método Map:: First
 
 Retorna um iterador que especifica o primeiro elemento no mapa, ou `nullptr` se o mapa estiver vazio.
 
@@ -143,9 +143,9 @@ Um iterador que especifica o primeiro elemento no mapa.
 
 Uma maneira conveniente de manter o iterador retornado por First () é atribuir o valor de retorno a uma variável que é declarada com o **automática** palavra-chave de dedução de tipo. Por exemplo, `auto x = myMap->First();`.
 
-## <a name="getview"></a>  Método: GetView
+## <a name="getview"></a>  Método Map:: GetView
 
-Retorna uma exibição somente leitura do Map atual; ou seja, um [Platform::Collections::MapView classe](../cppcx/platform-collections-mapview-class.md), que implementa o [Windows::Foundation::Collections::IMapView\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) interface.
+Retorna uma exibição somente leitura do Map atual; ou seja, uma [Platform::Collections::mapview&lt;3](../cppcx/platform-collections-mapview-class.md), que implementa o [3&gt;{4&gt;Windows::Foundation::Collections::imapview&lt;4}&lt;3}\<K, V >] / uwp/api/Windows.Foundation.Collections.IMapView_K_V_) interface.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -157,7 +157,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Um objeto `MapView`.
 
-## <a name="haskey"></a>  Método haskey
+## <a name="haskey"></a>  Método Map:: haskey
 
 Determina se o Map atual contém a chave especificada.
 
@@ -176,7 +176,7 @@ A chave usada para localizar o elemento Map. O tipo de *chave* é o typename *K*
 
 `true` se a chave for encontrada; caso contrário, `false`.
 
-## <a name="insert"></a>  Método Map:
+## <a name="insert"></a>  Método Map:: Insert
 
 Adiciona os pares chave-valor especificados ao objeto Map atual.
 
@@ -196,9 +196,9 @@ A porção de valor do par chave-valor. O tipo de *valor* é o typename *V*.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se a chave de um elemento existente no Map atual corresponder *chave* e a parte de valor desse elemento é definida como *valor*. `false` Se nenhum elemento existente no Map atual corresponder *chave* e *chave* e *valor* parâmetros são colocados em um par chave-valor e, em seguida, adicionados ao Map atual.
+`true` Se a chave de um elemento existente no Map atual corresponder *chave* e a parte do valor desse elemento é definida como *valor*. `false` Se nenhum elemento existente no Map atual corresponder *chave* e o *chave* e *valor* parâmetros são colocados em um par chave-valor e, em seguida, adicionados ao Map atual.
 
-## <a name="lookup"></a>  Método Map:
+## <a name="lookup"></a>  Método Map:: Lookup
 
 Recupera o valor do tipo V que está associado à chave especificada do tipo K, se a chave existir.
 
@@ -219,7 +219,7 @@ O valor que é emparelhado com o *chave*. O tipo do valor de retorno é typename
 
 ### <a name="remarks"></a>Comentários
 
-Se a chave não existir, uma [Platform:: outofboundsexception](../cppcx/platform-outofboundsexception-class.md) é gerada.
+Se a chave não existir, em seguida, um [Platform:: outofboundsexception](../cppcx/platform-outofboundsexception-class.md) é gerada.
 
 ## <a name="ctor"></a>  Construtor Map:: Map
 
@@ -267,13 +267,13 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno
 
-Um [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/apps/br206644.aspx) que contém informações sobre o objeto que gerou o evento e o tipo de alteração que ocorreu. Consulte também [IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx) e [CollectionChange Enumeration](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+Um [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) que contém informações sobre o objeto que gerou o evento e o tipo de alteração que ocorreu. Consulte também [IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx) e [CollectionChange Enumeration](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
 
 ## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework
 
 Projeto de aplicativos de tempo de execução do Windows que usam c# ou Visual Basic IMap\<K, V > como IDictionary\<K, V >.
 
-## <a name="remove"></a>  Método Map:
+## <a name="remove"></a>  Método Map:: remove
 
 Exclui os pares chave-valor especificados do objeto Map atual.
 
@@ -288,9 +288,9 @@ virtual void Remove(K key);
 *key*  
 A porção de chave do par chave-valor. O tipo de *chave* é o typename *K*.
 
-## <a name="size"></a>  Método Map::
+## <a name="size"></a>  Método Map:: Size
 
-Retorna o número de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos no mapa.
+Retorna o número de [ikeyvaluepair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos no mapa.
 
 ### <a name="syntax"></a>Sintaxe
 

@@ -1,23 +1,23 @@
 ---
-title: Matriz e WriteOnlyArray (C + + CX) | Microsoft Docs
+title: Matriz e WriteOnlyArray (C++ c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47c26ef4058cc3116d964740a93f7395c300b92b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adad70bfa069a43382c06f60dea53bc2e53ff187
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089386"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606106"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Matriz e WriteOnlyArray (C++/CX)
-Você pode usar livremente matrizes regulares de estilo C ou [std:: array](../standard-library/array-class-stl.md) em C + + programa CX (embora [std:: Vector](../standard-library/vector-class.md) geralmente é uma opção melhor), mas em qualquer API publicada nos metadados, você deve converter uma matriz C-style ou vector para um [Platform:: array](../cppcx/platform-array-class.md) ou [Platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md) tipo dependendo de como ele está sendo usado. O tipo [Platform::Array](../cppcx/platform-array-class.md) não é tão eficiente nem tão poderoso quanto [std::vector](../standard-library/vector-class.md), assim, como uma diretriz geral, você deve evitar seu uso no código interno que executa muitas operações nos elementos da matriz.  
+Você pode usar livremente matrizes regulares de estilo C ou [std:: array](../standard-library/array-class-stl.md) no C + c++ /CLI programa CX (embora [std:: Vector](../standard-library/vector-class.md) costuma ser uma opção melhor), mas em qualquer API publicada nos metadados, você deve converter uma matriz C-style ou de vetor para uma [Platform:: array](../cppcx/platform-array-class.md) ou [Platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md) tipo, dependendo de como ele está sendo usado. O tipo [Platform::Array](../cppcx/platform-array-class.md) não é tão eficiente nem tão poderoso quanto [std::vector](../standard-library/vector-class.md), assim, como uma diretriz geral, você deve evitar seu uso no código interno que executa muitas operações nos elementos da matriz.  
   
  Os seguintes tipos de matriz podem ser passados pela ABI:  
   

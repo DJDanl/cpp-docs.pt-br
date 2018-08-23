@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4690daabd84b8127913af0a96d5b929ee986e77
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 82616b0fc8cda44ea501b87f6ac1c6e0eddbfb57
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651227"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609356"
 ---
 # <a name="handletraitsgetinvalidvalue-method"></a>Método HANDLETraits::GetInvalidValue
-Representa um identificador inválido.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-inline static HANDLE GetInvalidValue();  
-```  
-  
-## <a name="return-value"></a>Valor de retorno  
- Sempre retorna INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE é definido pelo Windows).  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Consulte também  
- [Estrutura HANDLETraits](../windows/handletraits-structure.md)
+
+Representa um identificador inválido.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+inline static HANDLE GetInvalidValue();
+```
+
+## <a name="return-value"></a>Valor de retorno
+
+Sempre retorna INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE é definido pelo Windows).
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Consulte também
+
+[Estrutura HANDLETraits](../windows/handletraits-structure.md)

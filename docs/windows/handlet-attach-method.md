@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42c5d28f688ec81eb89ea74cec54a80fa371721b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 80918d2ab783472b37a9739045fd7539a92bd3e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647138"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605626"
 ---
 # <a name="handletattach-method"></a>Método HandleT::Attach
-Associa o identificador especificado com o atual **HandleT** objeto.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-void Attach(  
-   typename HandleTraits::Type h  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- *h*  
- Um identificador.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe HandleT](../windows/handlet-class.md)
+
+Associa o identificador especificado com o atual **HandleT** objeto.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+void Attach(
+   typename HandleTraits::Type h
+);
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+*h*  
+Um identificador.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Consulte também
+
+[Classe HandleT](../windows/handlet-class.md)

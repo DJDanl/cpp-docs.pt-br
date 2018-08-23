@@ -17,36 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6adf747fd7612c2bcaa0964f91ecb585bbfbef0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1f127b8435f934e5cf203de2aaa6f2d0c3a58d13
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018046"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603064"
 ---
 # <a name="weakreferencesetunknown-method"></a>Método WeakReference::SetUnknown
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-void SetUnknown(  
-   _In_ IUnknown* unk  
-);  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *UNK*  
- Um ponteiro para o `IUnknown` interface de um objeto.  
-  
-## <a name="remarks"></a>Comentários  
- Define a referência forte do atual **WeakReference** objeto para o ponteiro de interface especificado.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Implements. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
+
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+void SetUnknown(
+   _In_ IUnknown* unk
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*UNK*  
+Um ponteiro para o `IUnknown` interface de um objeto.
+
+## <a name="remarks"></a>Comentários
+
+Define a referência forte do atual **WeakReference** objeto para o ponteiro de interface especificado.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** Implements. h
+
+**Namespace:** Microsoft::WRL::Details
+
 ## <a name="see-also"></a>Consulte também
- [Classe WeakReference](../windows/weakreference-class1.md)  
- [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+[Classe WeakReference](../windows/weakreference-class1.md)  
+[Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

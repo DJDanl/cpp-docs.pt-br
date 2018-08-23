@@ -1,5 +1,5 @@
 ---
-title: Atributo Platform::Metadata::FlagsAttribute | Microsoft Docs
+title: '{1&gt;Platform::Metadata::FlagsAttribute | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Metadata::FlagsAttribute Attribute
 ms.assetid: 56f4a191-cc81-4742-aff8-bd2219c0735c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b86c7502ce62f81d84a5ea43ecdd56186cfd5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a318b9608fdf57291444e7b6331e2c2c36f118b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087572"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609908"
 ---
 # <a name="platformmetadataflagsattribute-attribute"></a>Atributo Platform::Metadata::FlagsAttribute
 Indica que uma enumeração pode ser tratada como um campo de bits; isto é, um conjunto de sinalizadores.  
@@ -40,9 +40,9 @@ public ref class Flags abstract : Attribute
 ### <a name="remarks"></a>Comentários  
   
 ### <a name="requirements"></a>Requisitos  
- **Suporte mínimo de cliente:** Windows 8  
+ **Mínimo de cliente com suporte:** Windows 8  
   
- **Suporte mínimo de servidor:** Windows Server 2012  
+ **Mínimo de servidor com suporte:** Windows Server 2012  
   
  **Namespace:** Platform::Metadata  
   

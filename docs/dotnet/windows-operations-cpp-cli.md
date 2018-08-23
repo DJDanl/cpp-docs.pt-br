@@ -54,17 +54,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7a303e80b58207e555dbd9067982ee1e2c506bb3
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0f9566fb6e3117b10d0d6f4a2bccbe56fe33a28a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110015"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609343"
 ---
 # <a name="windows-operations-ccli"></a>Operações do Windows (C++/CLI)
-Demonstra várias tarefas específicas do Windows usando o [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
+Demonstra várias tarefas específicas do Windows usando o SDK do Windows.  
   
- Os tópicos a seguir demonstram várias operações do Windows executadas com o [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] usando o Visual C++.  
+ Os tópicos a seguir demonstram várias operações do Windows executadas com o SDK do Windows usando o Visual C++.  
 
 ## <a name="determine_shutdown"></a> Determinar se o desligamento foi iniciado
 O exemplo de código a seguir demonstra como determinar se o aplicativo ou o .NET Framework no momento está terminando. Isso é útil para acessar elementos estáticos no .NET Framework porque, durante o desligamento, essas construções são finalizadas pelo sistema e não podem ser usadas de forma confiável. Verificando o <xref:System.Environment.HasShutdownStarted%2A> propriedade primeiro, você pode evitar possíveis falhas não acessando esses elementos.  

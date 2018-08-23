@@ -17,75 +17,80 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ddccbc1fcecafe5ac924098a344cfb7592ce2116
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 109ca7b833791aa982e17335801e8fe1fc538987
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647821"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606630"
 ---
 # <a name="case-c"></a>case (C++)
-Usado com o [switch_type](../windows/switch-type.md) atributo em uma **união**.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-[ case(  
-   value  
-) ]  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- *value*  
- Um valor de entrada possíveis para o qual você deseja fornecer processamento. O tipo de **valor** pode ser um dos seguintes tipos:  
-  
--   `int`  
-  
--   `char`  
-  
--   `boolean`  
-  
--   `enum`  
-  
- ou um identificador desse tipo.  
-  
-## <a name="remarks"></a>Comentários  
- O **caso** atributo C++ tem a mesma funcionalidade que o **caso** atributo MIDL. Esse atributo é usado apenas com o [switch_type](../windows/switch-type.md) atributo.  
-  
-## <a name="example"></a>Exemplo  
- O código a seguir mostra um uso do **caso** atributo:  
-  
-```cpp  
-// cpp_attr_ref_case.cpp  
-// compile with: /LD  
-#include <unknwn.h>  
-[export]  
-struct SizedValue2 {  
-   [switch_type(char), switch_is(kind)] union {  
-      [case(1), string]  
-          wchar_t* wval;  
-      [default, string]  
-          char* val;  
-   };  
-    char kind;  
-};  
-[module(name="ATLFIRELib")];  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Atributo de contexto  
-  
-|||  
-|-|-|  
-|**Aplica-se a**|Membro de um **classe** ou **struct**|  
-|**Repetível**|Não|  
-|**Atributos obrigatórios**|Nenhum|  
-|**Atributos inválidos**|Nenhum|  
-  
- Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Atributos IDL](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union e Struct atributos](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Atributos de classe](../windows/class-attributes.md)   
+
+Usado com o [switch_type](../windows/switch-type.md) atributo em uma **união**.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+[ case(
+   value
+) ]
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+*value*  
+Um valor de entrada possíveis para o qual você deseja fornecer processamento. O tipo de **valor** pode ser um dos seguintes tipos:
+
+- `int`
+
+- `char`
+
+- `boolean`
+
+- `enum`
+
+ou um identificador desse tipo.
+
+## <a name="remarks"></a>Comentários
+
+O **caso** atributo C++ tem a mesma funcionalidade que o **caso** atributo MIDL. Esse atributo é usado apenas com o [switch_type](../windows/switch-type.md) atributo.
+
+## <a name="example"></a>Exemplo
+
+O código a seguir mostra um uso do **caso** atributo:
+
+```cpp
+// cpp_attr_ref_case.cpp
+// compile with: /LD
+#include <unknwn.h>
+[export]
+struct SizedValue2 {
+   [switch_type(char), switch_is(kind)] union {
+      [case(1), string]
+          wchar_t* wval;
+      [default, string]
+          char* val;
+   };
+    char kind;
+};
+[module(name="ATLFIRELib")];
+```
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Atributo de contexto
+
+|||
+|-|-|
+|**Aplica-se a**|Membro de um **classe** ou **struct**|
+|**Repetível**|Não|
+|**Atributos obrigatórios**|Nenhum|
+|**Atributos inválidos**|Nenhum|
+
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Atributos de IDL](../windows/idl-attributes.md)  
+[Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Atributos de classe](../windows/class-attributes.md)  

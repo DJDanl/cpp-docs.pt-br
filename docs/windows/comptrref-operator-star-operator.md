@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 229a5a61bfe28280f7bffcd92f9d9cebffa2415b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5bb6bc06f65f53f919197b5350db8aacc268013f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647154"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602953"
 ---
 # <a name="comptrrefoperator-operator"></a>Operador ComPtrRef::operator*
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-InterfaceType* operator *();  
-```  
-  
-## <a name="return-value"></a>Valor de retorno  
- Ponteiro para a interface representado pelo atual **ComPtrRef** objeto.  
-  
-## <a name="remarks"></a>Comentários  
- Recupera o ponteiro para a interface representado pelo atual **ComPtrRef** objeto.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** client.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe ComPtrRef](../windows/comptrref-class.md)   
- [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+InterfaceType* operator *();
+```
+
+## <a name="return-value"></a>Valor de retorno
+
+Ponteiro para a interface representado pelo atual **ComPtrRef** objeto.
+
+## <a name="remarks"></a>Comentários
+
+Recupera o ponteiro para a interface representado pelo atual **ComPtrRef** objeto.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** client.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Consulte também
+
+[Classe ComPtrRef](../windows/comptrref-class.md)  
+[Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
