@@ -17,90 +17,96 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a5d4380109c7eb858c2b0eaeeb9156e4003fc581
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b2336562abb82ae89bd2f6864d0678023a3ccf69
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012083"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600522"
 ---
 # <a name="interfacelisthelper-structure"></a>Estrutura InterfaceListHelper
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-template <  
-   typename T0,  
-   typename T1 = Nil,  
-   typename T2 = Nil,  
-   typename T3 = Nil,  
-   typename T4 = Nil,  
-   typename T5 = Nil,  
-   typename T6 = Nil,  
-   typename T7 = Nil,  
-   typename T8 = Nil,  
-   typename T9 = Nil  
->  
-struct InterfaceListHelper;  
-  
-template <  
-   typename T0  
->  
-struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *T0*  
- Parâmetro de modelo 0, que é necessário.  
-  
- *T1*  
- Parâmetro de modelo 1, que, por padrão, não é especificado.  
-  
- *T2*  
- Parâmetro de modelo 2, que, por padrão, não é especificado. O terceiro parâmetro de modelo.  
-  
- *T3*  
- Parâmetro de modelo 3, que, por padrão, não é especificado.  
-  
- *T4*  
- Parâmetro de modelo 4, que, por padrão, não é especificado.  
-  
- *T5*  
- Parâmetro de modelo 5, que, por padrão, não é especificado.  
-  
- *T6*  
- Parâmetro de modelo 6, que, por padrão, não é especificado.  
-  
- *T7*  
- Parâmetro de modelo 7, que, por padrão, não é especificado.  
-  
- *T8*  
- Parâmetro de modelo 8, que, por padrão, não é especificado.  
-  
- *T9*  
- Parâmetro de modelo 9, que, por padrão, não é especificado.  
-  
-## <a name="remarks"></a>Comentários  
- Cria um `InterfaceList` tipo por recursivamente aplicando os argumentos de parâmetro de modelo especificado.  
-  
- O **InterfaceListHelper** modelo usa o parâmetro de modelo *T0* para definir o primeiro membro de dados em um `InterfaceList` estrutura e, em seguida, recursivamente se aplica a  **InterfaceListHelper** modelo para quaisquer parâmetros restantes do modelo. **InterfaceListHelper** para quando não houver nenhum parâmetro de modelo restantes.  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-typedefs"></a>Typedefs públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|`TypeT`|Um sinônimo para o tipo de InterfaceList.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `InterfaceListHelper`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Implements. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+template <
+   typename T0,
+   typename T1 = Nil,
+   typename T2 = Nil,
+   typename T3 = Nil,
+   typename T4 = Nil,
+   typename T5 = Nil,
+   typename T6 = Nil,
+   typename T7 = Nil,
+   typename T8 = Nil,
+   typename T9 = Nil
+>
+struct InterfaceListHelper;
+
+template <
+   typename T0
+>
+struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*T0*  
+Parâmetro de modelo 0, que é necessário.
+
+*T1*  
+Parâmetro de modelo 1, que, por padrão, não é especificado.
+
+*T2*  
+Parâmetro de modelo 2, que, por padrão, não é especificado. O terceiro parâmetro de modelo.
+
+*T3*  
+Parâmetro de modelo 3, que, por padrão, não é especificado.
+
+*T4*  
+Parâmetro de modelo 4, que, por padrão, não é especificado.
+
+*T5*  
+Parâmetro de modelo 5, que, por padrão, não é especificado.
+
+*T6*  
+Parâmetro de modelo 6, que, por padrão, não é especificado.
+
+*T7*  
+Parâmetro de modelo 7, que, por padrão, não é especificado.
+
+*T8*  
+Parâmetro de modelo 8, que, por padrão, não é especificado.
+
+*T9*  
+Parâmetro de modelo 9, que, por padrão, não é especificado.
+
+## <a name="remarks"></a>Comentários
+
+Cria um `InterfaceList` tipo por recursivamente aplicando os argumentos de parâmetro de modelo especificado.
+
+O **InterfaceListHelper** modelo usa o parâmetro de modelo *T0* para definir o primeiro membro de dados em um `InterfaceList` estrutura e, em seguida, recursivamente se aplica a  **InterfaceListHelper** modelo para quaisquer parâmetros restantes do modelo. **InterfaceListHelper** para quando não houver nenhum parâmetro de modelo restantes.
+
+## <a name="members"></a>Membros
+
+### <a name="public-typedefs"></a>Typedefs públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|`TypeT`|Um sinônimo para o tipo de InterfaceList.|
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`InterfaceListHelper`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** Implements. h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

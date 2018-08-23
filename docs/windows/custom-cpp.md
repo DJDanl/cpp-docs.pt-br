@@ -17,55 +17,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c0f4f04adb9ddc847b1c22485d10512a9d684d0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: cb5a3ebbf3ecf1454745d507fc2f2b6f792768ac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651889"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600415"
 ---
 # <a name="custom-c"></a>custom (C++)
-Define os metadados de um objeto na biblioteca de tipos.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-[ custom(  
-   uuid,   
-   value  
-) ];  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *uuid*  
- Uma ID exclusiva.  
-  
- *value*  
- Um valor que pode ser colocado em uma variante.  
-  
-## <a name="remarks"></a>Comentários  
- O **personalizado** atributo C++ fará com que informações sejam colocados em biblioteca de tipos. Você precisará de uma ferramenta que lê o valor personalizado da biblioteca de tipos.  
-  
- O **personalizado** atributo tem a mesma funcionalidade que o [personalizado](http://msdn.microsoft.com/library/windows/desktop/aa366766) atributo MIDL.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Atributo de contexto  
-  
-|||  
-|-|-|  
-|**Aplica-se a**|Não-COM **interface**, **classe**, **enum**s, `idl_module` métodos, os membros da interface, parâmetros de interface **typedef**s, **união**s, **struct**s|  
-|**Repetível**|Sim|  
-|**Atributos obrigatórios**|**coclass** (quando usado na classe)|  
-|**Atributos inválidos**|Nenhum|  
-  
- Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos autônomos](../windows/stand-alone-attributes.md)   
- [TypeDef, Enum, Union e Struct atributos](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Atributos de parâmetro](../windows/parameter-attributes.md)   
- [Atributos de método](../windows/method-attributes.md)   
- [Atributos de classe](../windows/class-attributes.md)   
- [Atributos de interface](../windows/interface-attributes.md)   
+
+Define os metadados de um objeto na biblioteca de tipos.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+[ custom(
+   uuid,
+   value
+) ];
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*uuid*  
+Uma ID exclusiva.
+
+*value*  
+Um valor que pode ser colocado em uma variante.
+
+## <a name="remarks"></a>Comentários
+
+O **personalizado** atributo C++ fará com que informações sejam colocados em biblioteca de tipos. Você precisará de uma ferramenta que lê o valor personalizado da biblioteca de tipos.
+
+O **personalizado** atributo tem a mesma funcionalidade que o [personalizado](http://msdn.microsoft.com/library/windows/desktop/aa366766) atributo MIDL.
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Atributo de contexto
+
+|||
+|-|-|
+|**Aplica-se a**|Não-COM **interface**, **classe**, **enum**s, `idl_module` métodos, os membros da interface, parâmetros de interface **typedef**s, **união**s, **struct**s|
+|**Repetível**|Sim|
+|**Atributos obrigatórios**|**coclass** (quando usado na classe)|
+|**Atributos inválidos**|Nenhum|
+
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Atributos de IDL](../windows/idl-attributes.md)  
+[Atributos independentes](../windows/stand-alone-attributes.md)  
+[Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Atributos de parâmetro](../windows/parameter-attributes.md)  
+[Atributos de método](../windows/method-attributes.md)  
+[Atributos de classe](../windows/class-attributes.md)  
+[Atributos de interface](../windows/interface-attributes.md)  

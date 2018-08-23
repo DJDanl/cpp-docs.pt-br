@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5cba36256e6abe176c6f5785b49a105395a30ee7
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: cc4d2e542afcd72426cb3b0aba57b7d7cbabad06
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014176"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583638"
 ---
 # <a name="runtimeclassgetweakreference-method"></a>Método RuntimeClass::GetWeakReference
-Obtém um ponteiro para o objeto de referência fraca para a atual **RuntimeClass** objeto.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-STDMETHOD(  
-   GetWeakReference  
-)(_Deref_out_ IWeakReference **weakReference);  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *weakReference*  
- Quando essa operação for concluída, um ponteiro para um objeto de referência fraca.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Sempre S_OK.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Implements. h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe RuntimeClass](../windows/runtimeclass-class.md)
+
+Obtém um ponteiro para o objeto de referência fraca para a atual **RuntimeClass** objeto.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+STDMETHOD(
+   GetWeakReference
+)(_Deref_out_ IWeakReference **weakReference);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*weakReference*  
+Quando essa operação for concluída, um ponteiro para um objeto de referência fraca.
+
+## <a name="return-value"></a>Valor de retorno
+
+Sempre S_OK.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** Implements. h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Classe RuntimeClass](../windows/runtimeclass-class.md)

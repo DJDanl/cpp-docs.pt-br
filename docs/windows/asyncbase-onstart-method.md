@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71e661280c62be1a8335a8e84e30664c2f35a338
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 810ed8d285d0e169fef3352d57a6911082033381
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646855"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600696"
 ---
 # <a name="asyncbaseonstart-method"></a>Método AsyncBase::OnStart
-Quando substituído em uma classe derivada, inicia uma operação assíncrona.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-virtual void OnStart(  
-   void  
-) = 0;  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe AsyncBase](../windows/asyncbase-class.md)   
- [Método AsyncBase::OnStart](../windows/asyncbase-onstart-method.md)
+
+Quando substituído em uma classe derivada, inicia uma operação assíncrona.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+virtual void OnStart(
+   void
+) = 0;
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Classe AsyncBase](../windows/asyncbase-class.md)  
+[Método AsyncBase::OnStart](../windows/asyncbase-onstart-method.md)
