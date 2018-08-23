@@ -17,41 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 307b5ffeeaa21b4cb90779a9d516229bf2ab3167
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 94d08cc865b6388010dc07ef965f60edbf6796ac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019672"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587514"
 ---
 # <a name="testing-a-dialog-box"></a>Testando uma caixa de diálogo
-Quando você estiver criando uma caixa de diálogo, você pode simular e testar seu comportamento de tempo de execução sem compilar seu programa. Nesse modo, você pode:  
-  
--   Digite o texto, selecione nas listas de caixa de combinação, ativar ou desativar as opções e escolha os comandos.  
-  
--   Teste a ordem de tabulação.  
-  
--   Teste o agrupamento de controles como botões de opção e caixas de seleção.  
-  
--   Teste os atalhos de teclado para controles na caixa de diálogo.  
-  
-    > [!NOTE]
-    >  Conexões com o código de caixa de diálogo feito com assistentes não são incluídas na simulação.  
-  
- Quando você testa uma caixa de diálogo, ele normalmente é exibida em um local relativo à janela principal do programa. Se você tiver definido a caixa de diálogo **alinhamento absoluto** propriedade **verdadeiro**, a caixa de diálogo é exibida em uma posição relativa ao canto superior esquerdo da tela.  
-  
-### <a name="to-test-a-dialog-box"></a>Para testar uma caixa de diálogo  
-  
-1.  Quando o **caixa de diálogo** editor é a janela ativa, na barra de menus, escolha **formato** > **caixa de diálogo de teste**.  
-  
-2.  Para encerrar a simulação, pressione **Esc**, ou basta escolher o **fechar** botão na caixa de diálogo que você está testando.  
-  
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index).  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Consulte também  
- [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)   
- [Editor de caixa de diálogo](../windows/dialog-editor.md)   
- [Mostrando ou ocultando a barra de ferramentas do Editor de Caixa de Diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
+
+Quando você estiver criando uma caixa de diálogo, você pode simular e testar seu comportamento de tempo de execução sem compilar seu programa. Nesse modo, você pode:
+
+- Digite o texto, selecione nas listas de caixa de combinação, ativar ou desativar as opções e escolha os comandos.
+
+- Teste a ordem de tabulação.
+
+- Teste o agrupamento de controles como botões de opção e caixas de seleção.
+
+- Teste os atalhos de teclado para controles na caixa de diálogo.
+
+   > [!NOTE]
+   > Conexões com o código de caixa de diálogo feito com assistentes não são incluídas na simulação.
+
+Quando você testa uma caixa de diálogo, ele normalmente é exibida em um local relativo à janela principal do programa. Se você tiver definido a caixa de diálogo **alinhamento absoluto** propriedade **verdadeiro**, a caixa de diálogo é exibida em uma posição relativa ao canto superior esquerdo da tela.
+
+### <a name="to-test-a-dialog-box"></a>Para testar uma caixa de diálogo
+
+1. Quando o **caixa de diálogo** editor é a janela ativa, na barra de menus, escolha **formato** > **caixa de diálogo de teste**.
+
+2. Para encerrar a simulação, pressione **Esc**, ou basta escolher o **fechar** botão na caixa de diálogo que você está testando.
+
+Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index).
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Consulte também
+
+[Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Editor de caixa de diálogo](../windows/dialog-editor.md)  
+[Mostrando ou ocultando a barra de ferramentas do Editor de Caixa de Diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)

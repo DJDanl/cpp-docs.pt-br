@@ -17,44 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6543ada6840b292d6a7b981eefeab41642c42df
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 542ad92aa636c934e3250817931dd7f31d1fe85b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017926"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601597"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>Estrutura SRWLockExclusiveTraits
-Descreve características comuns do `SRWLock` classe no modo de bloqueio exclusivo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-struct SRWLockExclusiveTraits;  
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-typedefs"></a>Typedefs públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|`Type`|Sinônimo de um ponteiro para o [SRWLOCK](../windows/srwlock-class.md) classe.|  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[Método SRWLockExclusiveTraits::GetInvalidValue](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|Recupera uma **SRWLockExclusiveTraits** objeto sempre é inválido.|  
-|[Método SRWLockExclusiveTraits::Unlock](../windows/srwlockexclusivetraits-unlock-method.md)|Libera o controle exclusivo do especificado `SRWLock` objeto.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `SRWLockExclusiveTraits`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+
+Descreve características comuns do `SRWLock` classe no modo de bloqueio exclusivo.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+struct SRWLockExclusiveTraits;
+```
+
+## <a name="members"></a>Membros
+
+### <a name="public-typedefs"></a>Typedefs públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|`Type`|Sinônimo de um ponteiro para o [SRWLOCK](../windows/srwlock-class.md) classe.|
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[Método SRWLockExclusiveTraits::GetInvalidValue](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|Recupera uma **SRWLockExclusiveTraits** objeto sempre é inválido.|
+|[Método SRWLockExclusiveTraits::Unlock](../windows/srwlockexclusivetraits-unlock-method.md)|Libera o controle exclusivo do especificado `SRWLock` objeto.|
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`SRWLockExclusiveTraits`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

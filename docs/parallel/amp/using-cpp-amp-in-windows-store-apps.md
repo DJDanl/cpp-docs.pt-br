@@ -1,5 +1,5 @@
 ---
-title: Usando C++ AMP em aplicativos UWP | Microsoft Docs
+title: Usando o C++ AMP em aplicativos UWP | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,20 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5736c84f21535222de5659780968efd98e1467da
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3676bc8f2c4ecbd89f01fb9257c7306a66827548
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696143"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584010"
 ---
-# <a name="using-c-amp-in-uwp-apps"></a>Usando C++ AMP em aplicativos UWP
-Você pode usar C++ AMP (C++ Accelerated Massive Parallelism) em seu aplicativo do Windows UWP (plataforma Universal) para executar cálculos na GPU (unidade de processamento gráfico) ou outros Aceleradores computacionais. No entanto, C++ AMP não fornece APIs para trabalhar diretamente com os tipos de tempo de execução do Windows e o tempo de execução do Windows não fornece um wrapper para C++ AMP. Quando você usa os tipos de tempo de execução do Windows em seu código, incluindo aqueles que você criou por conta própria — você deve convertê-los em tipos compatíveis com C++ AMP.  
+# <a name="using-c-amp-in-uwp-apps"></a>Usando o C++ AMP em aplicativos UWP
+Você pode usar o C++ AMP (C++ Accelerated Massive Parallelism) em seu aplicativo da plataforma Universal do Windows (UWP) para executar cálculos em GPU (Graphics Processing Unit) ou outros Aceleradores computacionais. No entanto, o C++ AMP não fornece APIs para trabalhar diretamente com tipos de tempo de execução do Windows e o tempo de execução do Windows não fornece um wrapper para o C++ AMP. Quando você usa tipos de tempo de execução do Windows em seu código — incluindo aqueles que você mesmo criou — você deve converter os tipos que são compatíveis com o C++ AMP.  
   
 ## <a name="performance-considerations"></a>Considerações sobre desempenho  
- Se você estiver usando [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) para criar seu aplicativo do Windows UWP (plataforma Universal), é recomendável que você use tipos simples antigo-dados (POD) junto com o armazenamento de contíguo — por exemplo, `std::vector` ou matrizes de estilo C — para dados que serão usados com C++ AMP. Isso pode ajudá-lo a alcançar desempenho maior do que usando tipos não POD ou contêineres do Windows RT porque nenhum marshaling deve ocorrer.  
+ 
+Se você estiver usando extensões de componentes do Visual C++ C + + c++ /CX para criar seu aplicativo da plataforma Universal do Windows (UWP), é recomendável que você use tipos simples-dados antigos (POD) juntamente com o armazenamento contíguo — por exemplo, `std::vector` ou matrizes C-style — para dados que serão usado com o C++ AMP. Isso pode ajudá-lo a alcançar um desempenho mais alto do que usando tipos não POD ou contêineres do Windows RT porque nenhum empacotamento deve ocorrer.  
   
- Em um núcleo de C++ AMP, para acessar os dados que são armazenados dessa forma, basta encapsular o `std::vector` ou matriz de armazenamento em um `concurrency::array_view` e, em seguida, usar o modo de exibição de matriz em um `concurrency::parallel_for_each` loop:  
+Em um kernel do C++ AMP, para acessar os dados são armazenados dessa forma, basta encapsular a `std::vector` ou o armazenamento de matriz em um `concurrency::array_view` e, em seguida, usar a visualização de matriz em um `concurrency::parallel_for_each` loop:  
   
 ```cpp  
 // simple vector addition example  
@@ -46,22 +47,23 @@ concurrency::parallel_for_each(av0.extent, [=](concurrency::index<1> idx) restri
 ```  
   
 ## <a name="marshaling-windows-runtime-types"></a>Marshaling tipos de Tempo de Execução do Windows  
- Quando você trabalha com APIs do Windows Runtime, talvez você queira usar C++ AMP em dados que são armazenados em um contêiner de tempo de execução do Windows como um `Platform::Array<T>^` ou em tipos de dados complexos, como classes ou estruturas que são declaradas usando o `ref` palavra-chave ou o `value`</C4>palavra-chave. Nessas situações, você precisa realizar algum trabalho adicional para disponibilizar os dados para C++ AMP.  
+ 
+Quando você trabalha com APIs do Windows Runtime, você talvez queira usar o C++ AMP nos dados armazenados em um contêiner de tempo de execução do Windows, como um `Platform::Array<T>^` ou em tipos de dados complexos, como classes ou estruturas que são declaradas usando o **ref** palavra-chave ou o **valor** palavra-chave. Nessas situações, você precisa realizar algum trabalho extra para disponibilizar os dados para o C++ AMP.  
   
 ### <a name="platformarrayt-where-t-is-a-pod-type"></a>Platform:: array\<T > ^, onde T é um tipo POD  
- Quando você encontrar um `Platform::Array<T>^` e T é um tipo POD, você pode acessar o armazenamento subjacente apenas usando o `get` função de membro:  
+Quando você encontrar um `Platform::Array<T>^` e T é um tipo POD, você pode acessar o armazenamento subjacente apenas usando o `get` função de membro:  
   
 ```cpp  
 Platform::Array<float>^ arr; // Assume that this was returned by a Windows Runtime API  
 concurrency::array_view<float, 1> av(arr->Length, &arr->get(0));
 ```  
   
- Se T não é um tipo POD, use a técnica descrita na seção a seguir para usar os dados com C++ AMP.  
+Se T não é um tipo POD, use a técnica descrita na seção a seguir para usar os dados com o C++ AMP.  
   
 ### <a name="windows-runtime-types-ref-classes-and-value-classes"></a>Tipos de Tempo de Execução do Windows: classes ref e value  
- C++ AMP não dá suporte a tipos de dados complexos. Isso inclui tipos não POD e quaisquer tipos que são declarados usando o `ref` palavra-chave ou o `value` palavra-chave. Se um tipo sem suporte for usado em um `restrict(amp)` contexto, um erro de tempo de compilação é gerado.  
+C++ AMP não dá suporte a tipos de dados complexos. Isso inclui tipos não POD e quaisquer tipos que são declarados usando o **ref** palavra-chave ou o **valor** palavra-chave. Se um tipo sem suporte for usado em um `restrict(amp)` contexto, um erro de tempo de compilação é gerado.  
   
- Quando você encontrar um tipo sem suporte, você pode copiar partes interessantes de seus dados em um `concurrency::array` objeto. Além de tornar os dados disponíveis para C++ AMP consumir, essa abordagem de cópia manual também pode melhorar o desempenho, maximizando a localidade dos dados e garantindo que os dados que não possa ser utilizados não copiados para o acelerador. Você pode melhorar o desempenho ainda mais usando uma *preparo matriz*, que é uma forma especial de `concurrency::array` que fornece uma dica para o tempo de execução de AMP a matriz deve ser otimizada para transferência frequente entre ele e outras matrizes no acelerador especificado.  
+Quando você encontrar um tipo sem suporte, você pode copiar partes interessantes dos dados em um `concurrency::array` objeto. Além de disponibilizar os dados para o C++ AMP consumir, essa abordagem de cópia manual também pode melhorar o desempenho, maximizando a localidade dos dados e garantindo que os dados que não serão usados não sejam copiados para o acelerador. Você pode melhorar ainda mais o desempenho usando um *matriz de teste*, que é uma forma especial de `concurrency::array` que fornece uma dica para o tempo de execução de AMP que a matriz deve ser otimizada para a transferência frequente entre ela e outras matrizes no acelerador especificado.  
   
 ```cpp  
 // pixel_color.h  
@@ -119,6 +121,6 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar seu primeiro aplicativo UWP usando C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)   
- [Criando componentes de tempo de execução do Windows em C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
-
+ 
+[Criar seu primeiro aplicativo UWP usando C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)   
+[Criando componentes de tempo de execução do Windows em C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

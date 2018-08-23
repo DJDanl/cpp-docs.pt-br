@@ -19,35 +19,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bafa66a382566ed096f70c752c461d8f3e2ca85
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 615138b44ab9fdbbf94d4130428ba708697c2aee
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010283"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601842"
 ---
 # <a name="modifying-the-layout-grid"></a>Modificando a grade de layout
-Quando você estiver colocando ou Organizando controles em uma caixa de diálogo, você pode usar a grade de layout para um posicionamento mais preciso. Quando a grade é ativada, os controles aparecem para "ajustar-se às" as linhas pontilhadas da grade como se magnetizada. Você pode ativar e desativar a esse recurso de "Ajustar à grade" e alterar o tamanho das células da grade de layout.  
-  
-### <a name="to-turn-the-layout-grid-on-or-off"></a>Para ativar ou desativar a grade de layout  
-  
-1.  Dos **formato** menu, escolha **guia de configurações**.  
-  
-2.  No [guia de caixa de diálogo de configurações](../windows/guide-settings-dialog-box.md), marque ou desmarque as **grade** botão.  
-  
-     Você ainda pode controlar a grade no indivíduo **caixa de diálogo** janelas do editor usando o **ativar/desativar grade** botão o [barra de ferramentas do Editor de caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
-  
-### <a name="to-change-the-size-of-the-layout-grid"></a>Para alterar o tamanho da grade de layout  
-  
-1.  Dos **formato** menu, escolha **guia de configurações**.  
-  
-2.  No [caixa de diálogo de configurações de guia](../windows/guide-settings-dialog-box.md), digite a altura e largura DLUs para as células na grade. A largura ou altura mínima é 4 DLUs. Para obter mais informações sobre DLUs, consulte [organização de controles, nas caixas de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md).  
-  
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Consulte também  
- [Estados do Editor de caixa de diálogo (guias e grades)](../windows/dialog-editor-states-guides-and-grids.md)   
- [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)
+
+Quando você estiver colocando ou Organizando controles em uma caixa de diálogo, você pode usar a grade de layout para um posicionamento mais preciso. Quando a grade é ativada, os controles aparecem para "ajustar-se às" as linhas pontilhadas da grade como se magnetizada. Você pode ativar e desativar a esse recurso de "Ajustar à grade" e alterar o tamanho das células da grade de layout.
+
+### <a name="to-turn-the-layout-grid-on-or-off"></a>Para ativar ou desativar a grade de layout
+
+1. Dos **formato** menu, escolha **guia de configurações**.
+
+2. No [guia de caixa de diálogo de configurações](../windows/guide-settings-dialog-box.md), marque ou desmarque as **grade** botão.
+
+   Você ainda pode controlar a grade no indivíduo **caixa de diálogo** janelas do editor usando o **ativar/desativar grade** botão o [barra de ferramentas do Editor de caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+
+### <a name="to-change-the-size-of-the-layout-grid"></a>Para alterar o tamanho da grade de layout
+
+1. Dos **formato** menu, escolha **guia de configurações**.
+
+2. No [caixa de diálogo de configurações de guia](../windows/guide-settings-dialog-box.md), digite a altura e largura DLUs para as células na grade. A largura ou altura mínima é 4 DLUs. Para obter mais informações sobre DLUs, consulte [organização de controles, nas caixas de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md).
+
+Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Consulte também
+
+[Estados do Editor de Caixa de Diálogo (guias e grades)](../windows/dialog-editor-states-guides-and-grids.md)  
+[Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)

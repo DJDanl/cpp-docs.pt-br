@@ -18,46 +18,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b9aebf4e130c30e488ec348b67add5b600108991
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: bdcd101759b35490451bf46bd6e222db469a3fba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014215"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42581236"
 ---
 # <a name="win32-application-wizard"></a>Assistente de aplicativo Win32
-O Assistente de aplicativo do Visual C++ Win32 permite que você crie qualquer um dos quatro tipos de projetos (listados no título na tabela a seguir). Em cada caso, você pode especificar opções adicionais que são apropriadas para o tipo de projeto que você abrir. A tabela a seguir indica quais opções estão disponíveis para cada tipo de aplicativo.  
-  
-|Tipo de suporte|Aplicativo de console|Aplicativo executável (Windows)|Biblioteca de vínculo dinâmico|Biblioteca estática|  
-|---------------------|-------------------------|----------------------------------------|---------------------------|--------------------|  
-|**Projeto vazio**|Sim|Sim|Sim|Não|  
-|**Exportar símbolos**|Não|Não|Sim|Não|  
-|**Cabeçalho pré-compilado**|Não|Não|Não|Sim|  
-|**Suporte ATL**|Sim|Não|Não|Não|  
-|**Suporte do MFC**|Sim|Não|Não|Sim|  
-  
-## <a name="overview"></a>Visão geral  
- Esta página do assistente descreve as configurações do projeto atual para o aplicativo do Win32 que você está criando. Por padrão, as seguintes opções estão definidas:  
-  
--   O projeto é um aplicativo do Windows.  
-  
--   O projeto não está vazio.  
-  
--   O projeto não contém nenhum símbolo de exportação.  
-  
--   O projeto não usa um arquivo de cabeçalho pré-compilado (essa opção está disponível para projetos de biblioteca estática somente).  
-  
--   O projeto inclui suporte para MFC nem o ATL.  
-  
- Para alterar esses padrões, clique na guia [Configurações de Aplicativo](../windows/application-settings-win-32-project-wizard.md) na coluna à esquerda do assistente e faça as alterações desejadas.  
-  
- Depois de criar um aplicativo de desktop do Windows, você pode adicionar classes C++ genéricas usando o [genérico](../ide/generic-cpp-class-wizard.md) Assistente de código. Você pode adicionar outros itens, como arquivos HTML, arquivos de cabeçalho, recursos ou arquivos de texto.  
-  
+
+O Assistente de aplicativo do Visual C++ Win32 permite que você crie qualquer um dos quatro tipos de projetos (listados no título na tabela a seguir). Em cada caso, você pode especificar opções adicionais que são apropriadas para o tipo de projeto que você abrir. A tabela a seguir indica quais opções estão disponíveis para cada tipo de aplicativo.
+
+|Tipo de suporte|Aplicativo de console|Aplicativo executável (Windows)|Biblioteca de vínculo dinâmico|Biblioteca estática|
+|---------------------|-------------------------|----------------------------------------|---------------------------|--------------------|
+|**Projeto vazio**|Sim|Sim|Sim|Não|
+|**Exportar símbolos**|Não|Não|Sim|Não|
+|**Cabeçalho pré-compilado**|Não|Não|Não|Sim|
+|**Suporte ATL**|Sim|Não|Não|Não|
+|**Suporte do MFC**|Sim|Não|Não|Sim|
+
+## <a name="overview"></a>Visão geral
+
+Esta página do assistente descreve as configurações do projeto atual para o aplicativo do Win32 que você está criando. Por padrão, as seguintes opções estão definidas:
+
+- O projeto é um aplicativo do Windows.
+
+- O projeto não está vazio.
+
+- O projeto não contém nenhum símbolo de exportação.
+
+- O projeto não usa um arquivo de cabeçalho pré-compilado (essa opção está disponível para projetos de biblioteca estática somente).
+
+- O projeto inclui suporte para MFC nem o ATL.
+
+Para alterar esses padrões, clique na guia [Configurações de Aplicativo](../windows/application-settings-win-32-project-wizard.md) na coluna à esquerda do assistente e faça as alterações desejadas.
+
+Depois de criar um aplicativo de desktop do Windows, você pode adicionar classes C++ genéricas usando o [genérico](../ide/generic-cpp-class-wizard.md) Assistente de código. Você pode adicionar outros itens, como arquivos HTML, arquivos de cabeçalho, recursos ou arquivos de texto.
+
 > [!NOTE]
->  Não é possível adicionar classes da ATL, e você pode adicionar classes MFC somente para os tipos de aplicativo da área de trabalho do Windows que dão suporte a MFC (consulte a tabela anterior).  
-  
- Você pode exibir os arquivos que o assistente cria para seu projeto no **Gerenciador de soluções**. Para obter mais informações sobre os arquivos que o assistente cria para seu projeto, consulte o arquivo de projeto gerado, `ReadMe.txt`. Para obter mais informações sobre os tipos de arquivo [tipos de arquivo criados para projetos do Visual C++](../ide/file-types-created-for-visual-cpp-projects.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Criando um aplicativo de área de trabalho do Windows vazio](../windows/creating-an-empty-windows-desktop-application.md)   
- [Tipos de projeto do Visual C++](../ide/visual-cpp-project-types.md)
+> Não é possível adicionar classes da ATL, e você pode adicionar classes MFC somente para os tipos de aplicativo da área de trabalho do Windows que dão suporte a MFC (consulte a tabela anterior).
+
+Você pode exibir os arquivos que o assistente cria para seu projeto no **Gerenciador de soluções**. Para obter mais informações sobre os arquivos que o assistente cria para seu projeto, consulte o arquivo de projeto gerado, `ReadMe.txt`. Para obter mais informações sobre os tipos de arquivo [tipos de arquivo criados para projetos do Visual C++](../ide/file-types-created-for-visual-cpp-projects.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Criando um aplicativo da área de trabalho do Windows vazio](../windows/creating-an-empty-windows-desktop-application.md)  
+[Tipos de projeto do Visual C++](../ide/visual-cpp-project-types.md)

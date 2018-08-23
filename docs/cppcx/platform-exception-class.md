@@ -14,16 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5adab38c3dc09c533c4df90f313346b22f888c0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6774aa0d90e9903798cd2a77a480782b669fdc57
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091554"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586629"
 ---
 # <a name="platformexception-class"></a>Classe Platform::Exception
 Representa erros que ocorrem durante a execução do aplicativo. Classes de exceção personalizadas não podem ser derivadas de `Platform::Exception`. Se você precisar de uma exceção personalizada, poderá usar `Platform::COMException` e especificar um HRESULT específico de aplicativo.  
@@ -61,15 +61,15 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 |[Exception::Message](#message)|Uma mensagem que descreve a exceção. Esse valor é somente leitura e não pode ser modificado após a construção de `Exception` .|  
   
 ### <a name="requirements"></a>Requisitos  
- **Suporte mínimo de cliente:** Windows 8  
+ **Mínimo de cliente com suporte:** Windows 8  
   
- **Suporte mínimo de servidor:** Windows Server 2012  
+ **Mínimo de servidor com suporte:** Windows Server 2012  
   
  **Namespace:** Platform  
   
  **Metadados:** platform.winmd  
 
-## <a name="createexception"></a> Método Exception
+## <a name="createexception"></a> Método Exception:: createexception
 Cria uma Platform::Exception^ a partir de um valor HRESULT especificado.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -81,7 +81,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
   
 ### <a name="parameters"></a>Parâmetros  
  hr  
- Um valor HRESULT que você normalmente obtém de uma chamada para um método COM. Se o valor for 0, que é igual a S_OK, esse método lançará [Platform:: invalidargumentexception](../cppcx/platform-invalidargumentexception-class.md) porque os métodos com bem-sucedidos não deverão gerar exceções.  
+ Um valor HRESULT que você normalmente obtém de uma chamada para um método COM. Se o valor for 0, que é igual a S_OK, esse método gerará [Platform:: invalidargumentexception](../cppcx/platform-invalidargumentexception-class.md) porque os métodos COM bem-sucedidos não devem lançar exceções.  
   
  mensagem  
  Uma cadeia de caracteres que descreve o erro.  
@@ -92,7 +92,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
 ### <a name="remarks"></a>Comentários  
  Use esse método para criar uma exceção fora de um HRESULT que é retornado, por exemplo, a partir de uma chamada para um método de interface COM. Você pode usar a sobrecarga que utiliza um parâmetro String^ para fornecer uma mensagem personalizada.  
   
- É altamente recomendável usar CreateException para criar uma exceção fortemente tipada em vez de criar um [Platform:: COMException](../cppcx/platform-comexception-class.md) que simplesmente contenha o HRESULT.  
+ É altamente recomendável usar CreateException para criar uma exceção fortemente tipada em vez de criar uma [Platform:: COMException](../cppcx/platform-comexception-class.md) que simplesmente contenha o HRESULT.  
   
 
 
@@ -146,9 +146,9 @@ public:property String^ Message;
  Nas exceções originadas no Windows Runtime , essa é uma descrição do erro fornecida pelo sistema.  
   
 ### <a name="remarks"></a>Comentários  
- No Windows 8, essa propriedade é somente leitura porque as exceções nessa versão do Windows Runtime são transportadas pela ABI somente como HRESULTS. No Windows 8.1, as informações de exceção mais detalhadas são transportadas pela ABI, e você pode fornecer uma mensagem personalizada que outros componentes podem acessar programaticamente. Para obter mais informações, consulte [exceções (C + + CX)](../cppcx/exceptions-c-cx.md).  
+ No Windows 8, essa propriedade é somente leitura, porque as exceções nessa versão do Windows Runtime são transportadas pela ABI somente como HRESULTS. No Windows 8.1, as informações de exceção mais detalhadas são transportadas pela ABI, e você pode fornecer uma mensagem personalizada que outros componentes podem acessar programaticamente. Para obter mais informações, consulte [exceções (C + + c++ /CX)](../cppcx/exceptions-c-cx.md).  
   
 
   
 ## <a name="see-also"></a>Consulte também  
- [Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)
+ [Namespace Platform](../cppcx/platform-namespace-c-cx.md)

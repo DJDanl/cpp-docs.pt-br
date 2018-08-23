@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7fc6dc1df1d1e22032dbe7322b9a6ead8334ddc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19c302f08485b6db89ea2a6b66106244ed95b48c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091875"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601732"
 ---
 # <a name="platformobject-class"></a>Classe Platform::Object
 Fornece o comportamento comum para classes e estruturas ref em aplicativos de tempo de execução do Windows. Todas as instâncias de classe e estrutura ref podem ser convertidas implicitamente em Platform::Object^ e podem substituir o método virtual ToString.  
@@ -48,7 +48,7 @@ public ref class Object : Object
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[: Equals](#equals)|Determina se o objeto especificado é igual ao objeto atual.|  
+|[Object:: Equals](#equals)|Determina se o objeto especificado é igual ao objeto atual.|  
 |[Object::GetHashCode](#gethashcode)|Retorna o código hash para essa instância.|  
 |[Object::ReferenceEquals](#referenceequals)|Determina se as instâncias de Object especificadas são a mesma instância.|  
 |[ToString](#tostring)|Retorna uma cadeia de caracteres que representa o objeto atual. Pode ser substituído.|  
@@ -65,7 +65,7 @@ public ref class Object : Object
  **Namespace:** Platform  
 
   
-## <a name="equals"></a> Método: Equals
+## <a name="equals"></a> Método Object:: Equals
 Determina se o objeto especificado é igual ao objeto atual.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -86,7 +86,7 @@ bool Equals(
   
 
 
-## <a name="gethashcode"></a>  Método: GetHashCode
+## <a name="gethashcode"></a>  Método Object:: GetHashCode
 Retorna o valor de identidade `IUnknown`* para essa instância se for um objeto COM, ou um valor de hash calculado se não for um objeto COM.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -99,11 +99,11 @@ public:int GetHashCode()
  Valor numérico que identifica esse objeto de forma exclusiva.  
   
 ### <a name="remarks"></a>Comentários  
- Você pode usar GetHashCode para criar chaves para objetos em mapas. Você pode comparar códigos hash usando [: Equals](#equals). Se o caminho do código for extremamente crítico e `GetHashCode` e `Equals` não forem suficientemente rápidos, você poderá passar para a camada COM subjacente e fazer comparações do ponteiro `IUnknown` nativo.  
+ Você pode usar GetHashCode para criar chaves para objetos em mapas. Você pode comparar códigos hash usando [Object:: Equals](#equals). Se o caminho do código for extremamente crítico e `GetHashCode` e `Equals` não forem suficientemente rápidos, você poderá passar para a camada COM subjacente e fazer comparações do ponteiro `IUnknown` nativo.  
   
 
 
-## <a name="gettype"></a>  Método: GetType
+## <a name="gettype"></a>  Método Object:: GetType
 Retorna um [Platform:: Type](../cppcx/platform-type-class.md) objeto que descreve o tipo de tempo de execução de um objeto.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -117,9 +117,9 @@ Object::GetType()
  Um [Platform:: Type](../cppcx/platform-type-class.md) objeto que descreve o tipo de tempo de execução do objeto.  
   
 ### <a name="remarks"></a>Comentários  
- Estático [GetTypeCode](../cppcx/platform-type-class.md#gettypecode) pode ser usado para obter um [enumeração Platform:: TypeCode](../cppcx/platform-typecode-enumeration.md) valor que representa o tipo atual. Isso é mais útil para tipos internos. O código de tipo para qualquer classe ref além [Platform:: string](../cppcx/platform-string-class.md) é Object (1).  
+ Estático [Type:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) pode ser usado para obter uma [; enumeração Platform::TypeCode&lt;3](../cppcx/platform-typecode-enumeration.md) valor que representa o tipo atual. Isso é mais útil para tipos internos. O código de tipo para qualquer classe ref além [Platform:: string](../cppcx/platform-string-class.md) é Object (1).  
   
- O [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) classe é usada nas APIs do Windows como uma maneira independente de linguagem de transmitir informações de tipo entre os aplicativos e componentes do Windows. O T[classe Platform:: Type](../cppcx/platform-type-class.md) tem operadores para a conversão entre `Type` e `TypeName`.  
+ O [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) classe é usada nas APIs do Windows como uma maneira independente de linguagem de passar informações de tipo entre componentes do Windows e aplicativos. O T[classe Platform:: Type](../cppcx/platform-type-class.md) tem operadores para a conversão entre `Type` e `TypeName`.  
   
  Use o [typeid](../windows/typeid-cpp-component-extensions.md) operador para retornar um `Platform::Type` objeto para um nome de classe, por exemplo, ao navegar entre páginas XAML:  
   
@@ -129,8 +129,8 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
   
 ## <a name="see-also"></a>Consulte também  
  [Classe Platform:: Type](../cppcx/platform-type-class.md)   
- [Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)   
- [Tipo System] (.. /cppcx/Type-System-c-CX.MD
+ [Namespace Platform](../cppcx/platform-namespace-c-cx.md)   
+ [Tipo de sistema] (.. /cppcx/Type-System-c-CX.MD
   
 ## <a name="ctor"></a>  Construtor Object:: Object
 Inicializa uma nova instância da classe Object.  
@@ -141,7 +141,7 @@ Inicializa uma nova instância da classe Object.
 public:Object()  
 ```  
 
-## <a name="referenceequals"></a>  Método: ReferenceEquals
+## <a name="referenceequals"></a>  Método Object:: ReferenceEquals
 Determina se as instâncias de Object especificadas são a mesma instância.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -160,7 +160,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2)
 ### <a name="return-value"></a>Valor de retorno  
  `true` se os dois objetos forem iguais; caso contrário, `false`.  
  
-## <a name="tostring"></a>  Método Object:: ToString (C + + CX)
+## <a name="tostring"></a>  Método Object:: ToString (C++ c++ /CX)
 Retorna uma cadeia de caracteres que representa o objeto atual.  
   
 ### <a name="syntax"></a>Sintaxe  

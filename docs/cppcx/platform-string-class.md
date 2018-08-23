@@ -23,16 +23,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a7852140b26260b56bd4436c2ee4f7abd2300b3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094820"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587405"
 ---
 # <a name="platformstring-class"></a>Classe Platform::String
 Representa uma coleção sequencial de caracteres Unicode que é usada para representar o texto. Para obter mais informações e exemplos, consulte [cadeias de caracteres](../cppcx/strings-c-cx.md).  
@@ -81,7 +81,7 @@ public ref class String sealed : Object,
 |[String::Equals](#equals)|indica se o objeto especificado é igual ao objeto atual.|  
 |[String::GetHashCode](#gethashcode)|Retorna o código hash para essa instância.|  
 |[String::IsEmpty](#isempty)|Indica se o objeto String atual está vazio.|  
-|[String::IsFastPass](#isfastpass)|Indica se o objeto String atual está participando de uma operação de *passagem rápida* . Em uma operação de passagem rápida, a contagem de referência é suspensa.|  
+|[String::IsFastPass](#isfastpass)|Indica se o objeto String atual está participando de uma *passagem rápida* operação. Em uma operação de passagem rápida, a contagem de referência é suspensa.|  
 |[String::Length](#length)|Recupera o comprimento do objeto String atual.|  
 |[String::ToString](#tostring)|Retorna um objeto String cujo valor é igual ao da cadeia de caracteres atual.|  
   
@@ -99,16 +99,16 @@ public ref class String sealed : Object,
 |[String:: Operator < operador](#operator-less-than)|Indica se o valor de um objeto String é menor que o valor de um segundo objeto String.|  
   
 ### <a name="requirements"></a>Requisitos  
- **Suporte mínimo de cliente:** Windows 8  
+ **Mínimo de cliente com suporte:** Windows 8  
   
- **Suporte mínimo de servidor:** Windows Server 2012  
+ **Mínimo de servidor com suporte:** Windows Server 2012  
   
  **Namespace:** Platform  
   
  **Cabeçalho** vccorlib.h (incluído por padrão)  
 
  
-## <a name="begin"></a>  Método String:
+## <a name="begin"></a>  Método String:: begin
 Retorna um ponteiro para o início da cadeia de caracteres atual.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -152,7 +152,7 @@ int CompareOrdinal(
   
 
 
-## <a name="concat"></a>  Método: concat
+## <a name="concat"></a>  Método String:: concat
 Concatena os valores de dois objetos String.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -171,11 +171,11 @@ String^ Concat( String^ str1, String^ str2)
 ### <a name="return-value"></a>Valor de retorno  
  Um novo objeto String^ cujo valor é a concatenação dos valores de `str1` e `str2`.  
   
- Se `str1` é `null` e `str2` não for, `str1` será retornado. Se `str2` é `null` e `str1` não for, `str2` será retornado. Se `str1` e `str2` forem ambos `null`, a cadeia de caracteres vazia (L"") será retornada.  
+ Se `str1` está `null` e `str2` não for, `str1` será retornado. Se `str2` está `null` e `str1` não for, `str2` será retornado. Se `str1` e `str2` forem ambos `null`, a cadeia de caracteres vazia (L"") será retornada.  
   
 
 
-## <a name="data"></a>  Método String:
+## <a name="data"></a>  Método String:: data
 Retorna um ponteiro para o início do buffer de dados do objeto como uma matriz de estilo C de elementos `char16` (`wchar_t`).  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -188,11 +188,11 @@ const char16* Data()
  Um ponteiro para o início de uma `const char16` matriz de caracteres Unicode (`char16` é um typedef para `wchar_t`).  
   
 ### <a name="remarks"></a>Comentários  
- Use este método para converter de `Platform::String^` em `wchar_t*`. Quando o objeto `String` sai do escopo, não há mais garantia de que ponteiro Dados seja válido. Para armazenar os dados além do tempo de vida do original `String` de objeto, use [wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) para copiar a matriz na memória que você mesmo atribuiu.  
+ Use este método para converter de `Platform::String^` em `wchar_t*`. Quando o objeto `String` sai do escopo, não há mais garantia de que ponteiro Dados seja válido. Para armazenar os dados além do tempo de vida de original `String` do objeto, use [wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) para copiar a matriz na memória que você mesmo atribuiu.  
   
 
 
-## <a name="dispose"></a>  Método: Dispose
+## <a name="dispose"></a>  Método String:: Dispose
 Libera recursos.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -202,7 +202,7 @@ Libera recursos.
 virtual override void Dispose()  
 ```  
 
-## <a name="end"></a>  Método String:
+## <a name="end"></a>  Método String:: end
 Retorna um ponteiro após o fim da cadeia de caracteres atual.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -216,11 +216,11 @@ char16* End()
  Um ponteiro após o fim da cadeia de caracteres atual.  
   
 ### <a name="remarks"></a>Comentários  
- End () retorna Begin() + Length.  
+ End () retorna begin + Length.  
   
 
 
-## <a name="equals"></a>  Método: Equals
+## <a name="equals"></a>  Método String:: Equals
 Indica se a cadeia de caracteres especificada tem o mesmo valor que o objeto atual.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -241,11 +241,11 @@ bool String::Equals(String^ str);
  `true` se `str` for igual ao objeto atual; caso contrário, `false`.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método é equivalente a [: CompareOrdinal](#compareordinal). Na primeira sobrecarga, é esperado que o parâmetro `str` possa ser convertido em um objeto String^.  
+ Esse método é equivalente a [String:: CompareOrdinal](#compareordinal). Na primeira sobrecarga, é esperado que o parâmetro `str` possa ser convertido em um objeto String^.  
   
 
 
-## <a name="gethashcode"></a>  Método GetHashCode
+## <a name="gethashcode"></a>  Método String:: GetHashCode
 Retorna o código hash para essa instância.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -260,7 +260,7 @@ virtual override int GetHashCode()
   
 
 
-## <a name="isempty"></a>  Método: IsEmpty
+## <a name="isempty"></a>  Método String:: IsEmpty
 Indica se o objeto String atual está vazio.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -274,8 +274,8 @@ bool IsEmpty()
   
 
 
-## <a name="isfastpass"></a>  Método: isfastpass
-Indica se o objeto String atual está participando de uma operação de *passagem rápida* . Em uma operação de passagem rápida, a contagem de referência é suspensa.  
+## <a name="isfastpass"></a>  Método String:: isfastpass
+Indica se o objeto String atual está participando de uma *passagem rápida* operação. Em uma operação de passagem rápida, a contagem de referência é suspensa.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -291,7 +291,7 @@ bool IsFastPass();
   
 
 
-## <a name="length"></a>  Método String:
+## <a name="length"></a>  Método String:: Length
 Recupera o número de caracteres no objeto de cadeia de caracteres atual.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -311,7 +311,7 @@ String^ str = "Hello";
 int len = str->Length(); //len = 5  
 ```  
   
- A matriz de caracteres retornada pelo [string](#data) tem um caractere adicional, que é NULL de terminação ou '\0'. Esse caractere também tem dois bytes de tamanho.  
+ A matriz de caracteres retornada pela [String:: data](#data) tem um caractere adicional, que é o NULL de terminação ou '\0'. Esse caractere também tem dois bytes de tamanho.  
   
 
 
@@ -358,7 +358,7 @@ bool String::operator==( String^ str1, String^ str2)
  `true` se o conteúdo de `str1` for igual a `str2`; caso contrário, `false`.  
   
 ### <a name="remarks"></a>Comentários  
- Este operador é equivalente a [: CompareOrdinal](#compareordinal).  
+ Esse operador é equivalente a [String:: CompareOrdinal](#compareordinal).  
   
 
 
@@ -382,7 +382,7 @@ bool String::operator>( String^ str1, String^ str2)
  `true` se o valor de `str1` for maior que o valor de `str2`; caso contrário, `false`.  
   
 ### <a name="remarks"></a>Comentários  
- Esse operador é equivalente a chamar explicitamente [: CompareOrdinal](#compareordinal) e obter um resultado maior que zero.  
+ Esse operador é equivalente a chamar explicitamente [String:: CompareOrdinal](#compareordinal) e obter um resultado maior que zero.  
   
 
 
@@ -465,7 +465,7 @@ String(char16* s, unsigned int n)
  Um número que especifica o comprimento da cadeia de caracteres.  
   
 ### <a name="remarks"></a>Comentários  
- Se o desempenho for crítico e você controlar o tempo de vida da cadeia de caracteres de origem, você pode usar [Platform:: stringreference](../cppcx/platform-stringreference-class.md) no lugar da cadeia de caracteres.  
+ Se o desempenho for crítico e você controlar o tempo de vida da cadeia de caracteres de origem, você pode usar [stringreference](../cppcx/platform-stringreference-class.md) no lugar da cadeia de caracteres.  
 ### <a name="example"></a>Exemplo  
   
 ```cpp  
@@ -485,4 +485,4 @@ String^ String::ToString()
  Um objeto String cujo valor é igual ao da cadeia de caracteres atual.  
   
 ## <a name="see-also"></a>Consulte também  
- [Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)
+ [Namespace Platform](../cppcx/platform-namespace-c-cx.md)

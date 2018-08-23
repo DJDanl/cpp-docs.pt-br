@@ -17,57 +17,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 78cc02c4f4d39b2bcba4c79a07ec84b9657cb66b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0d9f8cab758728be6683a008ea18ad8448668605
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651191"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583602"
 ---
 # <a name="appobject"></a>appobject
-Identifica a coclass como um objeto de aplicativo, que é associado a um aplicativo completo .exe e indica que as funções e propriedades da coclass estão globalmente disponíveis neste [biblioteca de tipos](../mfc/automation-clients-using-type-libraries.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-[appobject]  
-```  
-  
-## <a name="remarks"></a>Comentários  
- O **appobject** atributo C++ tem a mesma funcionalidade que o [appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) atributo MIDL.  
-  
-## <a name="example"></a>Exemplo  
- O código a seguir mostra uma definição de classe simples precedida por um bloco de atributo que inclui **appobject**:  
-  
-```cpp  
-// cpp_attr_ref_appobject.cpp  
-// compile with: /LD  
-#include <windows.h>  
-[module(name="MyLib", uuid="f1ce17f0-a5df-4d26-95f6-0a122197ac5b")];  
-  
-[object, uuid="905de6db-7a12-45ab-9f8b-b39f5112f010"]  
-__interface ICustom {};  
-  
-[coclass, appobject,uuid="00395340-745f-4b69-bd58-e2921452b9fc"]  
-class A : public ICustom {  
-   int i;  
-};  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Atributo de contexto  
-  
-|||  
-|-|-|  
-|**Aplica-se a**|**classe**, **struct**|  
-|**Repetível**|Não|  
-|**Atributos obrigatórios**|`coclass`|  
-|**Atributos inválidos**|Nenhum|  
-  
- Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos de classe](../windows/class-attributes.md)   
- [Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)   
+
+Identifica a coclass como um objeto de aplicativo, que é associado a um aplicativo completo .exe e indica que as funções e propriedades da coclass estão globalmente disponíveis neste [biblioteca de tipos](../mfc/automation-clients-using-type-libraries.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+[appobject]
+```
+
+## <a name="remarks"></a>Comentários
+
+O **appobject** atributo C++ tem a mesma funcionalidade que o [appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) atributo MIDL.
+
+## <a name="example"></a>Exemplo
+
+O código a seguir mostra uma definição de classe simples precedida por um bloco de atributo que inclui **appobject**:
+
+```cpp
+// cpp_attr_ref_appobject.cpp
+// compile with: /LD
+#include <windows.h>
+[module(name="MyLib", uuid="f1ce17f0-a5df-4d26-95f6-0a122197ac5b")];
+
+[object, uuid="905de6db-7a12-45ab-9f8b-b39f5112f010"]
+__interface ICustom {};
+
+[coclass, appobject,uuid="00395340-745f-4b69-bd58-e2921452b9fc"]
+class A : public ICustom {
+   int i;
+};
+```
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Atributo de contexto
+
+|||
+|-|-|
+|**Aplica-se a**|**classe**, **struct**|
+|**Repetível**|Não|
+|**Atributos obrigatórios**|`coclass`|
+|**Atributos inválidos**|Nenhum|
+
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Atributos de IDL](../windows/idl-attributes.md)  
+[Atributos de classe](../windows/class-attributes.md)  
+[Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  

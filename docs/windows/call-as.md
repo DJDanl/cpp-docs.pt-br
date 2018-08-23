@@ -17,60 +17,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73b51afda48fe0653767a40120cc6c0cdc0e831b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b5fffe1490587e36d39a959f75796093cbc32a0f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644941"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601988"
 ---
 # <a name="callas"></a>call_as
-Permite que um [local](../windows/local-cpp.md) função a ser mapeada para uma função remota para que quando a função remota é chamada, a função local é invocada.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-[ call_as(  
-   function  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *function*  
- A função local que você deseja ser chamado quando uma função remota é invocada.  
-  
-## <a name="remarks"></a>Comentários  
- O **call_as** atributo C++ tem a mesma funcionalidade que o [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) atributo MIDL.  
-  
-## <a name="example"></a>Exemplo  
- O código a seguir mostra como você pode usar **call_as** para mapear uma função nonremotable (`f1`) para uma função remota (`Remf1`):  
-  
-```cpp  
-// cpp_attr_ref_call_as.cpp  
-// compile with: /LD  
-#include "unknwn.h"  
-[module(name="MyLib")];  
-[dual, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IMInterface {  
-   [local] HRESULT f1 ( int i );  
-   [call_as(f1)] HRESULT Remf1 ( int i );   
-};  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Atributo de contexto  
-  
-|||  
-|-|-|  
-|**Aplica-se a**|Método de interface|  
-|**Repetível**|Não|  
-|**Atributos obrigatórios**|Nenhum|  
-|**Atributos inválidos**|Nenhum|  
-  
- Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos de método](../windows/method-attributes.md)   
- [local](../windows/local-cpp.md)   
+
+Permite que um [local](../windows/local-cpp.md) função a ser mapeada para uma função remota para que quando a função remota é chamada, a função local é invocada.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+[ call_as(
+   function
+) ]
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*function*  
+A função local que você deseja ser chamado quando uma função remota é invocada.
+
+## <a name="remarks"></a>Comentários
+
+O **call_as** atributo C++ tem a mesma funcionalidade que o [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) atributo MIDL.
+
+## <a name="example"></a>Exemplo
+
+O código a seguir mostra como você pode usar **call_as** para mapear uma função nonremotable (`f1`) para uma função remota (`Remf1`):
+
+```cpp
+// cpp_attr_ref_call_as.cpp
+// compile with: /LD
+#include "unknwn.h"
+[module(name="MyLib")];
+[dual, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IMInterface {
+   [local] HRESULT f1 ( int i );
+   [call_as(f1)] HRESULT Remf1 ( int i );
+};
+```
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Atributo de contexto
+
+|||
+|-|-|
+|**Aplica-se a**|Método de interface|
+|**Repetível**|Não|
+|**Atributos obrigatórios**|Nenhum|
+|**Atributos inválidos**|Nenhum|
+
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Atributos de IDL](../windows/idl-attributes.md)  
+[Atributos de método](../windows/method-attributes.md)  
+[local](../windows/local-cpp.md)  

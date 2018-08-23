@@ -25,27 +25,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d87f95b456e3f99598f48e6ffa8ad29806aa168
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7909884a355ccad5e1bf9d18a38dd3e4690296ee
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862271"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587501"
 ---
 # <a name="building-an-attributed-program"></a>Compilando um programa atribuído
-Depois de você colocar atributos do Visual C++ em seu código-fonte, convém fazer com que o compilador do Visual C++ para produzir um arquivo. idl e biblioteca de tipo para você. Opções de vinculador a seguir ajudam a criar arquivos. tlb e. idl:  
-  
--   [/IDLOUT](../build/reference/idlout-name-midl-output-files.md)  
-  
--   [/IGNOREIDL](../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)  
-  
--   [/ MIDL](../build/reference/midl-specify-midl-command-line-options.md)  
-  
--   [/TLBOUT](../build/reference/tlbout-name-dot-tlb-file.md)  
-  
- Alguns projetos contêm vários arquivos. idl independentes. Eles são usados para produzir dois ou mais arquivos. tlb e, opcionalmente, associá-las no bloco de recurso. Esse cenário não é suportado atualmente no Visual C++.  
-  
- Além disso, o vinculador do Visual C++ mostrará todas as informações de atributo IDL relacionados em um único arquivo MIDL. Não haverá nenhuma maneira de gerar duas bibliotecas de tipo de um único projeto.  
-  
-## <a name="see-also"></a>Consulte também  
- [Conceitos](../windows/attributed-programming-concepts.md)
+
+Depois de você colocar atributos do Visual C++ em seu código-fonte, convém fazer com que o compilador do Visual C++ para produzir um arquivo de biblioteca e. IDL do tipo para você. As seguinte opções de vinculador ajudam você a criar arquivos. tlb e. idl:
+
+- [/IDLOUT](../build/reference/idlout-name-midl-output-files.md)
+
+- [/IGNOREIDL](../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
+
+- [/ MIDL](../build/reference/midl-specify-midl-command-line-options.md)
+
+- [/TLBOUT](../build/reference/tlbout-name-dot-tlb-file.md)
+
+Alguns projetos contêm vários arquivos. idl independentes. Eles são usados para produzir dois ou mais arquivos. tlb e, opcionalmente, associá-las no bloco de recurso. Esse cenário não é suportado no Visual C++.
+
+Além disso, o vinculador do Visual C++ produzirá todas as informações de atributo relacionados de IDL para um único arquivo MIDL. Não haverá nenhuma maneira de gerar duas bibliotecas de tipo de um único projeto.
+
+## <a name="see-also"></a>Consulte também
+
+[Conceitos](../windows/attributed-programming-concepts.md)

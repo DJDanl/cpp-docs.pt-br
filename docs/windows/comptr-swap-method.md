@@ -17,36 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38fee8186d19d38075abab3bb16e2fcaac59a362
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b983d30a06a872ae20afa130c3a42ef0df1b0846
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649871"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601380"
 ---
 # <a name="comptrswap-method"></a>Método ComPtr::Swap
-Troca a interface gerenciada pelo atual **ComPtr** com a interface gerenciada pelo especificado **ComPtr**.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-void Swap(  
-   _Inout_ ComPtr&& r  
-);  
-  
-void Swap(  
-   _Inout_ ComPtr& r  
-);  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *r*  
- Um **ComPtr**.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe ComPtr](../windows/comptr-class.md)
+
+Troca a interface gerenciada pelo atual **ComPtr** com a interface gerenciada pelo especificado **ComPtr**.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+void Swap(
+   _Inout_ ComPtr&& r
+);
+
+void Swap(
+   _Inout_ ComPtr& r
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*r*  
+Um **ComPtr**.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Consulte também
+
+[Classe ComPtr](../windows/comptr-class.md)

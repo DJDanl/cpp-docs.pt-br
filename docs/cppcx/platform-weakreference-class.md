@@ -7,16 +7,16 @@ ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8db5c855b6a377a0202183d48b8fd34e93b6072
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77cd035b6cf84b16f4f6d5d92f3dd247f1251509
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088372"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601555"
 ---
 # <a name="platformweakreference-class"></a>Classe Platform::WeakReference
 Representa uma referência fraca a uma instância de uma classe ref.  
@@ -66,7 +66,7 @@ WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A última sobrecarga na lista acima permite que você atribua uma classe ref a uma variável WeakReference. Nesse caso, a classe ref é rebaixada para [Platform](../cppcx/platform-object-class.md)^. Você restaura o tipo original posteriormente especificando-o como argumento para o parâmetro de tipo no [WeakReference\<T >](#resolve) função de membro.  
+ A última sobrecarga na lista acima permite que você atribua uma classe ref a uma variável WeakReference. Nesse caso, a classe ref é rebaixada para [Platform:: Object](../cppcx/platform-object-class.md)^. Restaurar o tipo original posteriormente especificando-o como o argumento para o parâmetro de tipo na [WeakReference:: resolve\<T >](#resolve) função de membro.  
   
 ## <a name="booltype"></a> WeakReference::operator BoolType
 Implementa o padrão de bool seguro para a classe WeakReference. Não deve ser chamada explicitamente em seu código.  
@@ -132,4 +132,4 @@ MyClass^ copy2 = wr.Resolve<MyClass>();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)
+ [Namespace Platform](../cppcx/platform-namespace-c-cx.md)

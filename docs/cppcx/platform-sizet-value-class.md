@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c69bf34a7965c098f6a656907071e0899b785b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f60349203ce55a927ffac3d095988e5198bedd87
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087728"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601915"
 ---
 # <a name="platformsizet-value-class"></a>Platform::classe de valor SizeT
 Representa o tamanho de um objeto. SizeT é um tipo de dados sem sinal.  
@@ -38,9 +38,9 @@ public ref class SizeT sealed : ValueType
 |[Construtor SizeT::SizeT](#ctor)|Inicializa uma nova instância da classe com o valor especificado.|  
   
 ### <a name="requirements"></a>Requisitos  
- **Suporte mínimo de cliente:** Windows 8  
+ **Mínimo de cliente com suporte:** Windows 8  
   
- **Suporte mínimo de servidor:** Windows Server 2012  
+ **Mínimo de servidor com suporte:** Windows Server 2012  
   
  **Namespace:** Platform  
   
@@ -64,4 +64,4 @@ SizeT( uint32 value1 );   SizeT( void* value2 );
   
   
 ## <a name="see-also"></a>Consulte também  
- [Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)
+ [Namespace Platform](../cppcx/platform-namespace-c-cx.md)
