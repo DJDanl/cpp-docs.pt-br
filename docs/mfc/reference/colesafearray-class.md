@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff18423aa981fc453850084bb2f315a5600cf6fd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
-ms.translationtype: HT
+ms.openlocfilehash: 68f2e8e199fb22295ebd1fd25bbd3332c63e03b6
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027632"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538400"
 ---
 # <a name="colesafearray-class"></a>Classe COleSafeArray
 Uma classe para trabalhar com matrizes de tipo arbitrário e dimensão.  
@@ -379,7 +379,7 @@ VARIANT Detach();
  Subjacente `VARIANT` o valor de `COleSafeArray` objeto.  
   
 ### <a name="remarks"></a>Comentários  
- A função desanexa os dados em uma matriz segura, definindo o [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) do objeto como VT_EMPTY. É responsabilidade do chamador liberar a matriz chamando a função do Windows [VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835).  
+ A função desanexa os dados em uma matriz segura, definindo o [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) do objeto como VT_EMPTY. É responsabilidade do chamador liberar a matriz chamando a função do Windows [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear).  
   
  Em erro, a função lançará um [COleException](../../mfc/reference/coleexception-class.md).  
   
@@ -607,7 +607,7 @@ void PutElement(
  Ponteiro para os dados para atribuir a matriz. VT_BSTR, VT_UNKNOWN e VT_DISPATCH tipos variantes são ponteiros e não exigem outro nível de indireção.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função chama automaticamente as funções do Windows [SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx) e [SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx) antes e depois de atribuir o elemento. Se o elemento de dados for uma cadeia de caracteres, objeto ou variante, a função copia-lo corretamente e se o elemento existente for uma cadeia de caracteres, objeto ou variante, será apagada corretamente.  
+ Essa função chama automaticamente as funções do Windows [SafeArrayLock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraylock) e [SafeArrayUnlock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock) antes e depois de atribuir o elemento. Se o elemento de dados for uma cadeia de caracteres, objeto ou variante, a função copia-lo corretamente e se o elemento existente for uma cadeia de caracteres, objeto ou variante, será apagada corretamente.  
   
  Observe que você pode ter vários bloqueios em uma matriz, portanto, você pode colocar elementos em uma matriz, enquanto a matriz está bloqueada por outras operações.  
   

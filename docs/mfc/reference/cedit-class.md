@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e1521c73f92bbb941b1060cb5cf2051ead88ffb
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
-ms.translationtype: HT
+ms.openlocfilehash: 45632fb870f1586453c2c591ef8edce23e625002
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339586"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539358"
 ---
 # <a name="cedit-class"></a>Classe CEdit
 Fornece a funcionalidade de um controle de edição do Windows.  
@@ -798,7 +798,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="return-value"></a>Valor de retorno  
  Para controles de edição de linha única, o valor de retorno é o comprimento, em TCHARs, do texto no controle de edição.  
   
- Para controles de edição de várias linhas, o valor de retorno é o comprimento, em TCHARs, da linha especificada pela *nLinha* parâmetro. Para [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] texto, o comprimento é o número de bytes na linha; para texto em Unicode, o comprimento é o número de caracteres na linha. O tamanho não inclui o caractere de retorno de carro no final da linha.  
+ Para controles de edição de várias linhas, o valor de retorno é o comprimento, em TCHARs, da linha especificada pela *nLinha* parâmetro. Para texto ANSI, o comprimento é o número de bytes na linha. para texto em Unicode, o comprimento é o número de caracteres na linha. O tamanho não inclui o caractere de retorno de carro no final da linha.  
   
  Se o *nLinha* parâmetro for maior que o número de caracteres no controle, o valor retornado será zero.  
   

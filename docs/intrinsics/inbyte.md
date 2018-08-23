@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad2e02d4e1bc1ee5d1694769b2ec217cd7acbaba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7a659c9ac452d9ff42bb37d049e5cf44ff2c261
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329823"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540369"
 ---
 # <a name="inbyte"></a>__inbyte
 **Seção específica da Microsoft**  
   
- Gera o `in` instrução, retornar um byte lido da porta especificada pelo `Port`.  
+ Gera o `in` instrução de retorno de um byte ler da porta especificada pelo `Port`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,15 +43,15 @@ unsigned char __inbyte(
  A porta leiam.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Os bytes de leitura da porta especificada.  
+ O byte lido da porta especificada.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__inbyte`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inbyte`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 **Fim da seção específica da Microsoft**  
   

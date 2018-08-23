@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: a63d72d9744928ca0871ed251cfaea254d0acb14
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041247"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539543"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Classe CMFCRibbonGalleryMenuButton
-Implementa um botão de menu de faixa de opções que contém as galerias de faixa de opções.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Implementa um botão de menu de faixa de opções que contém galerias de faixa de opções.  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
    
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +64,7 @@ class CMFCRibbonGalleryMenuButton : public CMFCToolBarMenuButton
 |[CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|(Substitui [CMFCToolBarMenuButton::IsEmptyMenuAllowed](../../mfc/reference/cmfctoolbarmenubutton-class.md#isemptymenuallowed).)|  
   
 ### <a name="remarks"></a>Comentários  
- Botão de menu Galeria é exibido como um menu pop-up com uma seta. Quando o usuário clica neste botão, uma galeria de imagens é exibida. Quando você construir um botão de menu da galeria, você deve especificar uma lista de imagens que contém essas imagens.  
+ O botão de menu de galeria é exibido como um menu pop-up com uma seta. Quando o usuário clicar nesse botão, uma galeria de imagens é exibida. Quando você constrói um botão de menu da galeria, você deve especificar uma lista de imagens que contém essas imagens.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como exibir uma galeria de marcadores em um botão de menu:  
@@ -113,7 +113,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="cmfcribbongallerymenubutton"></a>  CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton  
- Cria e inicializa um [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md) objeto.  
+ Constrói e inicializa um [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md) objeto.  
   
 ```  
 CMFCRibbonGalleryMenuButton(
@@ -133,10 +133,10 @@ CMFCRibbonGalleryMenuButton(
   
 ### <a name="parameters"></a>Parâmetros  
  *uiID*  
- A ID de comando do botão. Este é o valor enviado na mensagem WM_COMMAND quando o usuário clica neste botão.  
+ A ID de comando do botão. Esse é o valor enviado na mensagem WM_COMMAND quando o usuário clica nesse botão.  
   
  *iImage*  
- O índice da imagem a ser exibido com o botão de menu da Galeria. As imagens são armazenadas no *imagesPalette* parâmetro.  
+ O índice da imagem a ser exibida com o botão de menu de galeria. As imagens são armazenadas em do *imagesPalette* parâmetro.  
   
  *lpszText*  
  O texto a ser exibido no botão de menu.  
@@ -148,13 +148,13 @@ CMFCRibbonGalleryMenuButton(
  A ID de recurso da lista de imagens para as imagens para exibir na Galeria.  
   
  *cxPaletteImage*  
- Especifica a largura em pixels da imagem para exibir na Galeria.  
+ Especifica a largura em pixels da imagem a ser exibida na Galeria.  
   
 ### <a name="remarks"></a>Comentários  
- Botão de menu Galeria é exibido como um menu pop-up com uma seta. Quando o usuário clica neste botão, uma galeria de imagens é exibida.  
+ O botão de menu de galeria é exibido como um menu pop-up com uma seta. Quando o usuário clicar nesse botão, uma galeria de imagens é exibida.  
   
 ### <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar o construtor do `CMFCRibbonGalleryMenuButton` classe. Este trecho de código é parte do [exemplo de demonstração do MS Office 2007](../../visual-cpp-samples.md).  
+ O exemplo a seguir demonstra como usar o construtor do `CMFCRibbonGalleryMenuButton` classe. Este trecho de código faz parte de [amostra de demonstração do MS Office 2007](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]  
   
@@ -203,7 +203,7 @@ virtual BOOL IsEmptyMenuAllowed() const;
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)   
  [Classe CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)

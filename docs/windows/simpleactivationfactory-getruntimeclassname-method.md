@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c8bc1962e946a48b6ebebaf072e4cb32559a6de
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e66c6791a55debeb411fd6058d4bbe44cb6637e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014702"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575866"
 ---
 # <a name="simpleactivationfactorygetruntimeclassname-method"></a>Método SimpleActivationFactory::GetRuntimeClassName
 
@@ -35,6 +35,7 @@ STDMETHOD( GetRuntimeClassName )(
 ```
 
 ### <a name="parameters"></a>Parâmetros
+
 *runtimeName*  
 Quando essa operação for concluída, o nome de classe de tempo de execução.
 
@@ -53,4 +54,5 @@ Se `__WRL_STRICT__` é definido, um erro de asserção será emitido se a classe
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Consulte também
- [Classe SimpleActivationFactory](../windows/simpleactivationfactory-class.md)
+
+[Classe SimpleActivationFactory](../windows/simpleactivationfactory-class.md)

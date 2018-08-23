@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0a21847bb9363099fa64825b45a90003de053da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52c9440a0320bbc59e5d2552a53e13fae5e29f05
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369754"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571920"
 ---
 # <a name="predefined-rules"></a>Regras predefinidas
-Regras de inferência predefinidos usam macros de comando e opções de NMAKE fornecido.  
+Regras de inferência de tipos predefinidos usam macros de comando e as opções fornecidas pelo NMAKE.  
   
 |Regra|Comando|Padrão<br /><br /> ação|Lote<br /><br /> Regra|Plataforma nmake é executado em|  
 |----------|-------------|------------------------|--------------------|----------------------------|  
-|. asm.exe|$(AS) $(AFLAGS) $&LT;|$ ML <|no|x86|  
+|. asm.exe|$(AS) $(AFLAGS) $&LT;|ML $<|no|x86|  
 |. asm.obj|$(AS) $(AFLAGS) /c $<|ML /c $<|sim|x86|  
-|. asm.exe|$(AS) $(AFLAGS) $&LT;|$ ml64 <|no|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|. asm.obj|$(AS) $(AFLAGS) /c $<|ml64 /c $<|sim|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|. asm.exe|$(AS) $(AFLAGS) $&LT;|$ ml64 <|no|X64|  
+|. asm.obj|$(AS) $(AFLAGS) /c $<|ml64 /c $<|sim|X64|  
 |. c.exe|$(CC) $(CFLAGS) $&LT;|Cl $<|no|all|  
 |. c.obj|$(CC) $(CFLAGS) /c $<|Cl /c $<|sim|all|  
 |. cc.exe|$(CC) $(CFLAGS) $&LT;|Cl $<|no|all|  

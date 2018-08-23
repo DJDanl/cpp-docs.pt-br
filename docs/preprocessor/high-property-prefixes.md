@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7269301fed3892fbf4b7cf6427bacb82d9712ef7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ce21958dbb928a29debe21fb7cfaed4b9036141
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849383"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539929"
 ---
 # <a name="highpropertyprefixes"></a>high_property_prefixes
-**Específicas do C++**  
+**Específico do C++**  
   
- Especifica prefixos alternativos para três métodos da propriedade.  
+Especifica prefixos alternativos para três métodos da propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,21 +34,23 @@ ms.locfileid: "33849383"
 high_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `GetPrefix`  
- Prefixo a ser usado para o **propget** métodos.  
+### <a name="parameters"></a>Parâmetros  
+*GetPrefix*  
+Prefixo a ser usado para o `propget` métodos.  
   
- `PutPrefix`  
- Prefixo a ser usado para o **propput** métodos.  
+*PutPrefix*  
+Prefixo a ser usado para o `propput` métodos.  
   
- `PutRefPrefix`  
- Prefixo a ser usado para o **propputref** métodos.  
+*PutRefPrefix*  
+Prefixo a ser usado para o `propputref` métodos.  
   
 ## <a name="remarks"></a>Comentários  
- Por padrão, tratamento de erros de alto nível **propget**, **propput**, e **propputref** métodos são expostos pelas funções de membro nomeadas com prefixos **obter** , `Put`, e **PutRef**, respectivamente.  
+ 
+Por padrão, tratamento de erros de alto nível `propget`, `propput`, e `propputref` métodos expostos pela funções membro nomeadas com prefixos `Get`, `Put`, e `PutRef`, respectivamente.  
   
- **TÉRMINO específicas do C++**  
+**FIM de específico de C++**  
   
 ## <a name="see-also"></a>Consulte também  
- [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import diretiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

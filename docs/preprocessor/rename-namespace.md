@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51114787dde2f858a8409538083282ef292d599
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0876aed966db79b23d506bffd9247dd68d4a3935
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839385"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539149"
 ---
 # <a name="renamenamespace"></a>rename_namespace
-**Específicas do C++**  
+**Específico do C++**  
   
- Renomeia o namespace que contém o conteúdo da biblioteca de tipos.  
+Renomeia o namespace que contém o conteúdo da biblioteca de tipos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,17 +34,19 @@ ms.locfileid: "33839385"
 rename_namespace("NewName")  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `NewName`  
- O nome do novo namespace.  
+### <a name="parameters"></a>Parâmetros  
+*NewName*  
+O nome do novo namespace.  
   
 ## <a name="remarks"></a>Comentários  
- Ele usa um único argumento, *NewName*, que especifica o novo nome para o namespace.  
+ 
+Ele usa um único argumento, *NewName*, que especifica o novo nome para o namespace.  
   
- Para remover o namespace, use o [no_namespace](../preprocessor/no-namespace.md) atributo em vez disso.  
+Para remover o namespace, use o [no_namespace](../preprocessor/no-namespace.md) atributo em vez disso.  
   
- **TÉRMINO específicas do C++**  
+**FIM de específico de C++**  
   
 ## <a name="see-also"></a>Consulte também  
- [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import diretiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

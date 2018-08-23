@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 343dbc41743c825b7fb3624019817ec7c5f163fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db188764694c0c0c0b7a85c3653564d563f9cbd2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199048"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540141"
 ---
 # <a name="fatal-error-c1113"></a>Erro fatal C1113
-\#usando falhou em 'arquivo'  
+\#Using falhou em 'file'  
   
- Apenas um arquivo no formato Microsoft Intermediate Language (MSIL) pode ser passado para um [#using](../../preprocessor/hash-using-directive-cpp.md) diretiva. O [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opção de compilador permite que você crie um arquivo de saída do MSIL. Outros [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] idiomas também produzem arquivos MSIL.
+ Apenas um arquivo no formato Microsoft Intermediate Language (MSIL) pode ser passado para um [#using](../../preprocessor/hash-using-directive-cpp.md) diretiva. O [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opção de compilador permite que você crie um arquivo de saída do MSIL. Outras linguagens do Visual Studio também produzem arquivos MSIL.

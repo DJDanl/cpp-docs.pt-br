@@ -1083,54 +1083,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 02d0787ebb40379ac438880ab7a23aa36a0b0f56
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 25a68bb459122ea83d9be2491cb5fadaaf8a00c0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338292"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572804"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Classes Rowset do esquema e Typedef
 Um esquema é uma coleção de objetos de banco de dados que são de propriedade, ou ter sido criado por um determinado usuário. Um catálogo pode conter um ou mais esquemas, mas sempre deve conter um esquema chamado INFORMATION_SCHEMA, que contém os modos de exibição e domínios do esquema de informações. Informações de esquema no OLE DB são recuperadas usando conjuntos de linhas do esquema predefinido e incluem os tipos, tabelas, colunas, índices, exibições, asserções e restrições, estatísticas, conjuntos de caracteres, agrupamentos e domínios.  
   
  Conjuntos de linhas de esquema são conjuntos de linhas predefinidos que representam os metadados. Conjuntos de linhas de esquema são geralmente usados em programação dinâmica, em que a estrutura de banco de dados não é conhecida em tempo de compilação. Você pode usar esses conjuntos de linhas de esquema para obter informações sobre um banco de dados em tempo de execução.  
   
- Use as classes de typedef para instanciar os conjuntos de linhas de esquema. O typedef correspondente e classes rowset do esquema estão listadas abaixo. Você deve chamar [crestrictions:: Open](../../data/oledb/crestrictions-open.md) depois de ter criado uma instância do conjunto de linhas de esquema. Esse método retorna um conjunto de resultados com base em restrições que você especificar. Ver [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) para obter informações sobre colunas de restrição associadas a cada conjunto de linhas de esquema.  
+ Use as classes de typedef para instanciar os conjuntos de linhas de esquema. O typedef correspondente e classes rowset do esquema estão listadas abaixo. Você deve chamar [crestrictions:: Open](../../data/oledb/crestrictions-open.md) depois de ter criado uma instância do conjunto de linhas de esquema. Esse método retorna um conjunto de resultados com base em restrições que você especificar. Ver [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) para obter informações sobre colunas de restrição associadas a cada conjunto de linhas de esquema.  
   
  A tabela a seguir exibe cada OLE DB de linhas de esquema e correspondente classe typedef de modelos OLE DB e a classe de informações.  
   
 |Conjunto de linhas do esquema OLE DB|Classe TypeDef|Classe de informações|  
 |--------------------------|-------------------|----------------|  
-|[ASSERÇÕES](https://msdn.microsoft.com/library/ms719776.aspx)|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|  
-|[CATÁLOGOS](https://msdn.microsoft.com/library/ms721241.aspx)|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|  
-|[CHARACTER_SETS](https://msdn.microsoft.com/library/ms722638.aspx)|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|  
-|[AGRUPAMENTOS](https://msdn.microsoft.com/library/ms715783.aspx)|[CCollations](#collation)|[CCollationInfo](#collation)|  
-|[COLUMN_PRIVILEGES](https://msdn.microsoft.com/library/ms715800.aspx)|[CColumnPrivileges](#columnprivilege)|[CColumnPrivilegeInfo](#columnprivilege)|  
-|[COLUMNS](https://msdn.microsoft.com/library/ms723052.aspx)|[CColumns](#columns)|[CColumnsInfo](#columns)|  
-|[CONSTRAINT_COLUMN_USAGE](https://msdn.microsoft.com/library/ms724522.aspx)|[CConstraintColumnUsage](#constraintcolumnusage)|[CConstraintColumnUsageInfo](#constraintcolumnusage)|  
-|[CONSTRAINT_TABLE_USAGE](https://msdn.microsoft.com/library/ms713710.aspx)|[CConstraintTableUsage](#constrainttableusage)|[CConstraintTableUsageInfo](#constrainttableusage)|  
-|[CHECK_CONSTRAINTS](https://msdn.microsoft.com/library/ms712845.aspx)|[CCheckConstraints](#checkconstraint)|[CCheckConstraintInfo](#checkconstraint)|  
-|[COLUMN_DOMAIN_USAGE](https://msdn.microsoft.com/library/ms711240.aspx)|[CColumnDomainUsage](#columndomainusage)|[CColumnDomainUsageInfo](#columndomainusage)|  
-|[FOREIGN_KEYS](https://msdn.microsoft.com/library/ms711276.aspx)|[CForeignKeys](#foreignkeys)|[CForeignKeysInfo](#foreignkeys)|  
-|[ÍNDICES](https://msdn.microsoft.com/library/ms709712.aspx)|[CIndexes](#index)|[CIndexInfo](#index)|  
-|[KEY_COLUMN_USAGE](https://msdn.microsoft.com/library/ms712990.aspx)|[CKeyColumn](#keycolumn)|[CKeyColumnInfo](#keycolumn)|  
-|[PRIMARY_KEYS](https://msdn.microsoft.com/library/ms714362.aspx)|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|  
-|[PROCEDIMENTOS](https://msdn.microsoft.com/library/ms724021.aspx)|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|  
-|[PROCEDURE_COLUMNS](https://msdn.microsoft.com/library/ms723092.aspx)|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|  
-|[PROCEDURE_PARAMETERS](https://msdn.microsoft.com/library/ms713623.aspx)|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|  
-|[PROVIDER_TYPES](https://msdn.microsoft.com/library/ms709785.aspx)|[CProviderTypes](#provider)|[CProviderInfo](#provider)|  
-|[REFERENTIAL_CONSTRAINTS](https://msdn.microsoft.com/library/ms719737.aspx)|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|  
-|[SCHEMATA](https://msdn.microsoft.com/library/ms716887.aspx)|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|  
-|[SQL_LANGUAGES](https://msdn.microsoft.com/library/ms714374.aspx)|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|  
-|[ESTATÍSTICAS](https://msdn.microsoft.com/library/ms715957.aspx)|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|  
-|[TABLE_CONSTRAINTS](https://msdn.microsoft.com/library/ms715921.aspx)|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|  
-|[TABELAS](https://msdn.microsoft.com/library/ms716980.aspx)|[CTables](#table)|[CTableInfo](#table)|  
-|[TABLE_PRIVILEGES](https://msdn.microsoft.com/library/ms725428.aspx)|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|  
-|[TRADUÇÕES](https://msdn.microsoft.com/library/ms725365.aspx)|[CTranslations](#translation)|[CTranslationInfo](#translation)|  
-|[USAGE_PRIVILEGES](https://msdn.microsoft.com/library/ms722743.aspx)|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|  
-|[VIEW_COLUMN_USAGE](https://msdn.microsoft.com/library/ms714896.aspx)|[CViewColumnUsage](#viewcolumn)|[CViewColumnInfo](#viewcolumn)|  
-|[MODOS DE EXIBIÇÃO](https://msdn.microsoft.com/library/ms723122.aspx)|[CViews](#view)|[CViewInfo](#view)|  
-|[VIEW_TABLE_USAGE](https://msdn.microsoft.com/library/ms719727.aspx)|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|  
+|[ASSERÇÕES](/previous-versions/windows/desktop/ms719776\(v=vs.85\))|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|  
+|[CATÁLOGOS](/previous-versions/windows/desktop/ms721241\(v=vs.85\))|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|  
+|[CHARACTER_SETS](/previous-versions/windows/desktop/ms722638\(v=vs.85\))|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|  
+|[AGRUPAMENTOS](/previous-versions/windows/desktop/ms715783\(v=vs.85\))|[CCollations](#collation)|[CCollationInfo](#collation)|  
+|[COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800\(v=vs.85\))|[CColumnPrivileges](#columnprivilege)|[CColumnPrivilegeInfo](#columnprivilege)|  
+|[COLUMNS](/previous-versions/windows/desktop/ms723052\(v=vs.85\))|[CColumns](#columns)|[CColumnsInfo](#columns)|  
+|[CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522\(v=vs.85\))|[CConstraintColumnUsage](#constraintcolumnusage)|[CConstraintColumnUsageInfo](#constraintcolumnusage)|  
+|[CONSTRAINT_TABLE_USAGE](/previous-versions/windows/desktop/ms713710\(v=vs.85\))|[CConstraintTableUsage](#constrainttableusage)|[CConstraintTableUsageInfo](#constrainttableusage)|  
+|[CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845\(v=vs.85\))|[CCheckConstraints](#checkconstraint)|[CCheckConstraintInfo](#checkconstraint)|  
+|[COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240\(v=vs.85\))|[CColumnDomainUsage](#columndomainusage)|[CColumnDomainUsageInfo](#columndomainusage)|  
+|[FOREIGN_KEYS](/previous-versions/windows/desktop/ms711276\(v=vs.85\))|[CForeignKeys](#foreignkeys)|[CForeignKeysInfo](#foreignkeys)|  
+|[ÍNDICES](/previous-versions/windows/desktop/ms709712\(v=vs.85\))|[CIndexes](#index)|[CIndexInfo](#index)|  
+|[KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990\(v=vs.85\))|[CKeyColumn](#keycolumn)|[CKeyColumnInfo](#keycolumn)|  
+|[PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362\(v=vs.85\))|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|  
+|[PROCEDIMENTOS](/previous-versions/windows/desktop/ms724021\(v=vs.85\))|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|  
+|[PROCEDURE_COLUMNS](/previous-versions/windows/desktop/ms723092\(v=vs.85\))|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|  
+|[PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623\(v=vs.85\))|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|  
+|[PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785\(v=vs.85\))|[CProviderTypes](#provider)|[CProviderInfo](#provider)|  
+|[REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737\(v=vs.85\))|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|  
+|[SCHEMATA](/previous-versions/windows/desktop/ms716887\(v=vs.85\))|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|  
+|[SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374\(v=vs.85\))|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|  
+|[ESTATÍSTICAS](/previous-versions/windows/desktop/ms715957\(v=vs.85\))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|  
+|[TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921\(v=vs.85\))|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|  
+|[TABELAS](/previous-versions/windows/desktop/ms716980\(v=vs.85\))|[CTables](#table)|[CTableInfo](#table)|  
+|[TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428\(v=vs.85\))|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|  
+|[TRADUÇÕES](/previous-versions/windows/desktop/ms725365\(v=vs.85\))|[CTranslations](#translation)|[CTranslationInfo](#translation)|  
+|[USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743\(v=vs.85\))|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|  
+|[VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896\(v=vs.85\))|[CViewColumnUsage](#viewcolumn)|[CViewColumnInfo](#viewcolumn)|  
+|[MODOS DE EXIBIÇÃO](/previous-versions/windows/desktop/ms723122\(v=vs.85\))|[CViews](#view)|[CViewInfo](#view)|  
+|[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727\(v=vs.85\))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|  
   
 ## <a name="assertion"></a> CAssertions, CAssertionInfo
 Chame a classe de typedef `CAssertions` para implementar sua classe de parâmetro `CAssertionInfo`.  
@@ -1140,7 +1140,7 @@ Chame a classe de typedef `CAssertions` para implementar sua classe de parâmetr
   
  Essa classe identifica as asserções definidas no catálogo e pertencentes a um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe para `CAssertionInfo` e as OLE DB colunas correspondentes. Consulte [conjunto de linhas de ASSERÇÕES](https://msdn.microsoft.com/library/ms719776.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe para `CAssertionInfo` e as OLE DB colunas correspondentes. Consulte [conjunto de linhas de ASSERÇÕES](/previous-versions/windows/desktop/ms719776\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1159,7 +1159,7 @@ Chame a classe de typedef `CCatalogs` para implementar sua classe de parâmetro 
   
  Essa classe identifica os atributos físicos associados a catálogos acessíveis a partir do DBMS.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas de CATÁLOGOS](https://msdn.microsoft.com/library/ms721241.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas de CATÁLOGOS](/previous-versions/windows/desktop/ms721241\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1174,7 +1174,7 @@ Chame a classe de typedef `CCharacterSets` para implementar sua classe de parâm
   
  Essa classe identifica os conjuntos de caracteres definidos no catálogo acessíveis para um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Consulte [conjunto de linhas CHARACTER_SETS](https://msdn.microsoft.com/library/ms722638.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Consulte [conjunto de linhas CHARACTER_SETS](/previous-versions/windows/desktop/ms722638\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1195,7 +1195,7 @@ Chame a classe de typedef `CCheckConstraints` para implementar sua classe de par
   
  Essa classe identifica as restrições de verificação, definidas no catálogo, que são de propriedade de um determinado usuário. Uma restrição check Especifica os valores de dados ou formatos são aceitáveis em uma ou mais colunas em uma tabela.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Consulte [conjunto de linhas CHECK_CONSTRAINTS](https://msdn.microsoft.com/library/ms712845.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Consulte [conjunto de linhas CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1213,7 +1213,7 @@ Chame a classe de typedef `CCollations` para implementar sua classe de parâmetr
   
  Essa classe identifica os agrupamentos de caracteres, definidos no catálogo, que são acessíveis a um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas de AGRUPAMENTOS](https://msdn.microsoft.com/library/ms715783.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas de AGRUPAMENTOS](/previous-versions/windows/desktop/ms715783\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1233,7 +1233,7 @@ Chame a classe de typedef `CColumnDomainUsage` para implementar sua classe de pa
   
  Essa classe identifica as colunas definidas no catálogo, que são dependentes de um domínio definido no catálogo e pertencentes a um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas COLUMN_DOMAIN_USAGE](https://msdn.microsoft.com/library/ms711240.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1255,7 +1255,7 @@ Chame a classe de typedef `CColumnPrivileges` para implementar sua classe de par
   
  Essa classe identifica os privilégios em colunas de tabelas, definidas no catálogo, que estão disponíveis ou concedidos por um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas COLUMN_PRIVILEGES](https://msdn.microsoft.com/library/ms715800.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1278,7 +1278,7 @@ Chame a classe de typedef `CColumns` para implementar sua classe de parâmetro `
   
  Essa classe identifica as colunas de tabelas definidas no catálogo que são acessíveis para um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas COLUMNS](https://msdn.microsoft.com/library/ms723052.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas COLUMNS](/previous-versions/windows/desktop/ms723052\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1319,7 +1319,7 @@ Chame a classe de typedef `CConstraintColumnUsage` para implementar sua classe d
   
  Essa classe identifica as colunas usadas por restrições referenciais, restrições exclusivas, restrições de verificação e asserções definidas no catálogo e pertencentes a um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas CONSTRAINT_COLUMN_USAGE](https://msdn.microsoft.com/library/ms724522.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1341,7 +1341,7 @@ Chame a classe de typedef `CConstraintTableUsage` para implementar sua classe de
   
  Essa classe identifica as tabelas usadas por restrições referenciais, restrições exclusivas, restrições de verificação e asserções definidas no catálogo e pertencentes a um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas CONSTRAINT_TABLE_USAGE](https://msdn.microsoft.com/library/ms724522.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas CONSTRAINT_TABLE_USAGE](/previous-versions/windows/desktop/ms724522\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1360,7 +1360,7 @@ Chame a classe de typedef `CForeignKeys` para implementar sua classe de parâmet
   
  Essa classe identifica as colunas de chave estrangeiras definidas no catálogo por um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas FOREIGN_KEYS](https://msdn.microsoft.com/library/ms711276.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas FOREIGN_KEYS](/previous-versions/windows/desktop/ms711276\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1388,7 +1388,7 @@ Chame a classe de typedef `CIndexes` para implementar sua classe de parâmetro `
   
  Essa classe identifica os índices definidos no catálogo, que são de propriedade de um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas de ÍNDICES](https://msdn.microsoft.com/library/ms709712.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas de ÍNDICES](/previous-versions/windows/desktop/ms709712\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1425,7 +1425,7 @@ Chame a classe de typedef `CKeyColumns` para implementar sua classe de parâmetr
   
  Essa classe identifica as colunas definidas no catálogo, que são restringidas como chaves por um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas KEY_COLUMN_USAGE](https://msdn.microsoft.com/library/ms712990.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1448,7 +1448,7 @@ Chame a classe de typedef `CPrimaryKeys` para implementar sua classe de parâmet
   
  Essa classe identifica as colunas de chave primárias definidas no catálogo por um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas PRIMARY_KEYS](https://msdn.microsoft.com/library/ms714362.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1468,7 +1468,7 @@ Chame a classe de typedef `CProcedureColumns` para implementar sua classe de par
   
  Essa classe retorna informações sobre as colunas de conjuntos de linhas retornados por procedimentos.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Consulte [conjunto de linhas PROCEDURE_COLUMNS](https://msdn.microsoft.com/library/ms723092.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Consulte [conjunto de linhas PROCEDURE_COLUMNS](/previous-versions/windows/desktop/ms723092\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1497,7 +1497,7 @@ Chame a classe de typedef `CProcedureParameters` para implementar sua classe de 
   
  Essa classe retorna informações sobre os parâmetros e códigos de retorno de procedimentos.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas PROCEDURE_PARAMETERS](https://msdn.microsoft.com/library/ms713623.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1525,7 +1525,7 @@ Chame a classe de typedef `CProcedures` para implementar sua classe de parâmetr
   
  Essa classe identifica os procedimentos definidos no catálogo, que são de propriedade de um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas de procedimentos](https://msdn.microsoft.com/library/ms724021.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas de procedimentos](/previous-versions/windows/desktop/ms724021\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1544,7 +1544,7 @@ Chame a classe de typedef `CProviderTypes` para implementar sua classe de parâm
   
  Essa classe identifica os tipos de dados (base) suportados pelo provedor de dados.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas PROVIDER_TYPES](https://msdn.microsoft.com/library/ms709785.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1577,7 +1577,7 @@ Chame a classe de typedef `CReferentialConstraints` para implementar sua classe 
   
  Essa classe identifica as restrições referenciais, definidas no catálogo, que são de propriedade de um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas REFERENTIAL_CONSTRAINTS](https://msdn.microsoft.com/library/ms719737.aspx) no *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737\(v=vs.85\)) no *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1600,7 +1600,7 @@ Chame a classe de typedef `CSchemata` para implementar sua classe de parâmetro 
   
  Essa classe identifica os esquemas que pertencem a um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas de ESQUEMAS](https://msdn.microsoft.com/library/ms716887.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas de ESQUEMAS](/previous-versions/windows/desktop/ms716887\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1619,7 +1619,7 @@ Chame a classe de typedef `CSQLLanguages` para implementar sua classe de parâme
   
  Essa classe identifica os níveis de conformidade, opções e dialetos com suporte nos dados de processamento de implementação de SQL definidos no catálogo.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Consulte [conjunto de linhas SQL_LANGUAGES](https://msdn.microsoft.com/library/ms714374.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Consulte [conjunto de linhas SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1639,7 +1639,7 @@ Chame a classe de typedef `CStatistics` para implementar sua classe de parâmetr
   
  Essa classe identifica as estatísticas definidas no catálogo, que são de propriedade de um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas de estatísticas](https://msdn.microsoft.com/library/ms715957.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas de estatísticas](/previous-versions/windows/desktop/ms715957\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1656,7 +1656,7 @@ Chame a classe de typedef `CTableConstraints` para implementar sua classe de par
   
  Essa classe identifica as restrições de tabela, definidas no catálogo, que são de propriedade de um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas TABLE_CONSTRAINTS](https://msdn.microsoft.com/library/ms715921.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1679,7 +1679,7 @@ Chame a classe de typedef `CTablePrivileges` para implementar sua classe de par�
   
  Essa classe identifica as tabelas definidas no catálogo acessíveis para um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas TABLE_PRIVILEGES](https://msdn.microsoft.com/library/ms725428.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1699,7 +1699,7 @@ Chame a classe de typedef `CTables` para implementar sua classe de parâmetro `C
   
  Essa classe identifica os privilégios em tabelas, definidas no catálogo, que estão disponíveis para ou concedido por um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas TABLES](https://msdn.microsoft.com/library/ms716980.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas TABLES](/previous-versions/windows/desktop/ms716980\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1718,7 +1718,7 @@ Chame a classe de typedef `CTranslations` para implementar sua classe de parâme
   
  Essa classe identifica as traduções de caracteres definidas no catálogo acessíveis para um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas de traduções](https://msdn.microsoft.com/library/ms725365.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas de traduções](/previous-versions/windows/desktop/ms725365\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1740,7 +1740,7 @@ Chame a classe de typedef `CUsagePrivileges` para implementar sua classe de par�
   
  Essa classe identifica os privilégios USAGE nos objetos definidos no catálogo que estão disponíveis para ou concedido por um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Consulte [conjunto de linhas USAGE_PRIVILEGES](https://msdn.microsoft.com/library/ms722743.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Consulte [conjunto de linhas USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1761,7 +1761,7 @@ Chame a classe de typedef `CViewColumnUsage` para implementar sua classe de par�
   
  Essa classe identifica as colunas na qual exibir tabelas, definidas no catálogo e pertencentes a um determinado usuário, são dependentes.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas VIEW_COLUMN_USAGE](https://msdn.microsoft.com/library/ms714896.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1783,7 +1783,7 @@ Chame a classe de typedef `CViews` para implementar sua classe de parâmetro `CV
   
  Essa classe identifica as tabelas no qual exibir tabelas, definidas no catálogo e pertencentes a um determinado usuário, são dependentes.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [modos de exibição de conjunto de linhas](https://msdn.microsoft.com/library/ms723122.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [modos de exibição de conjunto de linhas](/previous-versions/windows/desktop/ms723122\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  
@@ -1803,7 +1803,7 @@ Chame a classe de typedef `CViewTableUsage` para implementar sua classe de parâ
   
  Essa classe identifica as tabelas exibidas, definidas no catálogo, que são acessíveis a um determinado usuário.  
   
- A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas de VIEW_TABLE_USAGE](https://msdn.microsoft.com/library/ms719727.aspx) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
+ A tabela a seguir lista os membros de dados de classe e suas OLE DB colunas correspondentes. Ver [conjunto de linhas de VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações sobre o esquema e as colunas.  
   
 |Membros de dados|Colunas de banco de dados OLE|  
 |------------------|--------------------|  

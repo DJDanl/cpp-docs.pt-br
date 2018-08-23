@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e8196b25b1507c92542faa6dd8ca59b4632d8f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3be04079de11642b2641260fdfe997d3fcb48d6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335907"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539156"
 ---
 # <a name="readmsr"></a>__readmsr
 **Seção específica da Microsoft**  
@@ -49,12 +49,12 @@ __int64 __readmsr(
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__readmsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readmsr`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- Essa função só está disponível no modo kernel, e a rotina só está disponível como um intrínseco.  
+ Essa função só está disponível no modo kernel e a rotina só está disponível como um intrínseco.  
   
  Para obter mais informações, consulte a documentação do AMD.  
   

@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fb3c0295b56f394fae97be7d14e3dccb5cd46b3
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853771"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539939"
 ---
 # <a name="cmfcmenubar-class"></a>Classe CMFCMenuBar
 Uma barra de menus que implementa o encaixe.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -439,7 +439,7 @@ void EnableHelpCombobox(
  A largura do botão da caixa de combinação em pixels.  
   
 ### <a name="remarks"></a>Comentários  
- O **ajudar** é semelhante a caixa de combinação a **ajudar** caixa de combinação na barra de menus do [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)].  
+ O **ajudar** caixa de combinação é semelhante a **ajudar a** caixa de combinação na barra de menus do Microsoft Word.  
   
  Quando você chama esse método com *uiID* definido como 0, esse método oculta a caixa de combinação. Caso contrário, esse método exibe a caixa de combinação automaticamente no lado direito da barra de menus. Depois de chamar esse método, chame [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) para obter um ponteiro para o inserido [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objeto.  
   

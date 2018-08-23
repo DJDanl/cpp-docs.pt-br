@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99d00b5e3b39f17203ba915d6b4344438803db88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e63ee47c98e898fe5cba1a24078029f6afe10b15
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327126"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539160"
 ---
 # <a name="stosd"></a>__stosd
 **Seção específica da Microsoft**  
@@ -48,18 +48,18 @@ void __stosd(
  Os dados a serem armazenados.  
   
  [in] `Count`  
- O comprimento do bloco de doublewords para gravação.  
+ O tamanho do bloco de palavras duplas para gravar.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__stosd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosd`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- O resultado é que o doubleword `Data` é gravado em um bloco de `Count` doublewords no local de memória apontado pela `Dest`.  
+ O resultado é que as palavras duplas `Data` é gravado em um bloco de `Count` palavras duplas no local da memória apontada por `Dest`.  
   
  Essa rotina só está disponível como função intrínseca.  
   

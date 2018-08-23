@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073c1303661aece3340f9ac84d37ccf23e29d556
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb3f563d94d2e7685c1a83e497b1db082f131842
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333356"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541719"
 ---
 # <a name="inwordstring"></a>__inwordstring
 **Seção específica da Microsoft**  
@@ -54,9 +54,9 @@ void __inwordstring(
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__inwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inwordstring`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  Essa rotina só está disponível como função intrínseca.  

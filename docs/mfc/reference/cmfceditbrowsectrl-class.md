@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d00488a7e9a87116317aec35c82b73b40077d8c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ec3bfc550843675673782ea92ff7fad6eae2967b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854002"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42543087"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Classe CMFCEditBrowseCtrl
 O `CMFCEditBrowseCtrl` classe dá suporte a controle de navegação de edição, que é uma caixa de texto editável que opcionalmente contém um botão de procura. Quando o usuário clica no botão Procurar, o controle executa uma ação personalizada ou exibe uma caixa de diálogo padrão que contém um navegador de arquivos ou um navegador de pasta.  
@@ -174,7 +174,7 @@ void EnableFileBrowseButton(
 ### <a name="remarks"></a>Comentários  
  Quando o controle de navegação de edição está em modo de procura de arquivo e o usuário clica no botão Procurar, o controle exibe a caixa de diálogo de seleção de arquivo padrão.  
   
- Para obter uma lista completa dos sinalizadores disponíveis, consulte [estrutura OPENFILENAME](https://msdn.microsoft.com/library/ms646839.aspx).  
+ Para obter uma lista completa dos sinalizadores disponíveis, consulte [estrutura OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna).  
   
 ##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton  
  Exibe o botão Procurar no controle de navegação de edição atual e o coloca no *Procurar pasta* modo.  

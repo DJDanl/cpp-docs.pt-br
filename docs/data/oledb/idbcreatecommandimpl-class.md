@@ -23,15 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6a2457ed01214750091bd9ec5a59c9aeac819357
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 8b67fc55a8af2bed554254732832cbd6486d2420
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336987"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572319"
 ---
 # <a name="idbcreatecommandimpl-class"></a>Classe IDBCreateCommandImpl
-Fornece uma implementação de [IDBCreateCommand](https://msdn.microsoft.com/library/ms711625.aspx) interface.  
+Fornece uma implementação de [IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\)) interface.  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -74,7 +74,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [idbcreatecommand:: CreateCommand](https://msdn.microsoft.com/library/ms709772.aspx) na *referência do programador do OLE DB*.  
+ Ver [idbcreatecommand:: CreateCommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\)) na *referência do programador do OLE DB*.  
   
  Alguns parâmetros correspondem aos *referência do programador DB OLE* parâmetros de nomes diferentes, que são descritos em `IDBCreateCommand::CreateCommand`:  
   

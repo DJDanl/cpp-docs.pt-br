@@ -46,12 +46,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 94f90e4c60e5669789caadaaa827b4c12f1f157f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d5d824529e80319d95e00b6a3831af90a9506a03
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339777"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573117"
 ---
 # <a name="csimplerow-class"></a>Classe CSimpleRow
 Fornece uma implementação padrão para o identificador de linha, que é usado na [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) classe.  
@@ -109,7 +109,7 @@ HRESULT Compare(CSimpleRow* pRow);
  Um ponteiro para um `CSimpleRow` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um valor HRESULT, geralmente S_OK, indicando que as duas linhas são a mesma instância de linha ou S_FALSE, indicando as duas linhas são diferentes. Ver [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/library/ms719629.aspx) na *referência do programador DB OLE* para outro possíveis valores de retorno. 
+ Um valor HRESULT, geralmente S_OK, indicando que as duas linhas são a mesma instância de linha ou S_FALSE, indicando as duas linhas são diferentes. Ver [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) na *referência do programador DB OLE* para outro possíveis valores de retorno. 
 
 ## <a name="csimplerow"></a> Csimplerow:: Csimplerow
 O construtor.  

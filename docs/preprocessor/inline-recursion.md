@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f81347c8286dfa1f0651af43bd3134565a22aade
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 222cb7151d975219d0e92bd1270778586e89b4d3
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849490"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538373"
 ---
 # <a name="inlinerecursion"></a>inline_recursion
 Controla a expansão embutida das chamadas de função diretas ou mutuamente recursivas.  
@@ -31,16 +31,17 @@ Controla a expansão embutida das chamadas de função diretas ou mutuamente rec
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 #pragma inline_recursion( [{on | off}] )  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Usar este pragma para funções de controle marcada como [embutido](../cpp/inline-functions-cpp.md) e [inline](../cpp/inline-functions-cpp.md) ou funções que o compilador é automaticamente expandido na opção /Ob2. Esse pragma uso requer uma [/Ob](../build/reference/ob-inline-function-expansion.md) configuração de opção de compilador de 1 ou 2. O estado padrão para `inline_recursion` é desativado. Este pragma entra em vigor na primeira chamada de função após o pragma ser percebido e não afeta a definição da função.  
+ 
+Use este pragma para controlar as funções marcado como [embutido](../cpp/inline-functions-cpp.md) e [inline](../cpp/inline-functions-cpp.md) ou funções que o compilador expandirá automaticamente sob o `/Ob2` opção. O uso desse pragma requer uma [/Ob](../build/reference/ob-inline-function-expansion.md) configuração da opção de compilador de 1 ou 2. O estado padrão para **inline_recursion** está desativado. Este pragma entra em vigor na primeira chamada de função após o pragma ser percebido e não afeta a definição da função.  
   
- O pragma `inline_recursion` controla como as funções recursivas são expandidas. Se `inline_recursion` está desativado e se uma chamada de função embutida chama a si mesma (direta ou indiretamente), a função será expandida apenas uma vez. Se `inline_recursion` está ativada, a função é expandida várias vezes até atingir o valor definido com o [inline_depth](../preprocessor/inline-depth.md) pragma, o valor padrão para funções recursivas que é definido pelo `inline_depth` pragma ou uma capacidade de limite .  
+O **inline_recursion** pragma controla como as funções recursivas são expandidas. Se **inline_recursion** está desativado e se uma função embutida chama a mesmo (direta ou indiretamente), a função será expandida apenas uma vez. Se **inline_recursion** estiver ativado, a função será expandida várias vezes até atingir o valor definido com o [inline_depth](../preprocessor/inline-depth.md) pragma, o valor padrão para as funções recursivas que é definido pela `inline_depth` pragma ou uma capacidade de limite.  
   
 ## <a name="see-also"></a>Consulte também  
- [Diretivas pragma e a palavra-chave pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [inline_depth](../preprocessor/inline-depth.md)   
- [/Ob (expansão de função embutida)](../build/reference/ob-inline-function-expansion.md)
+ 
+[Diretivas pragma e a palavra-chave pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[inline_depth](../preprocessor/inline-depth.md)   
+[/Ob (expansão de função embutida)](../build/reference/ob-inline-function-expansion.md)

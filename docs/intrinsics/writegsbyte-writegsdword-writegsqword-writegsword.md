@@ -22,17 +22,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c9eec7bb0da65bfd327726078766ab1befacbde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5ae6f47009600c87cb260246fca474592a5e9c6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328270"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538383"
 ---
 # <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 **Seção específica da Microsoft**  
   
- Grave memória para um local especificado por um deslocamento relativo ao início do segmento GS.  
+ Gravar a memória para um local especificado por um deslocamento relativo ao início do segmento GS.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ void __writegsqword(
   
 #### <a name="parameters"></a>Parâmetros  
  [in] `Offset`  
- O deslocamento do início do GS para gravar.  
+ O deslocamento do início de GS para gravar.  
   
  [in] `Data`  
  O valor a ser gravado.  
@@ -66,15 +66,15 @@ void __writegsqword(
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__writegsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__writegsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__writegsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__writegsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writegsbyte`|X64|  
+|`__writegsdword`|X64|  
+|`__writegsqword`|X64|  
+|`__writegsword`|X64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- Esses intrínsecos estão disponíveis no modo de kernel somente, e essas rotinas só estão disponíveis como intrínsecos.  
+ Esses intrínsecos estão disponíveis no modo de kernel apenas, e essas rotinas somente estão disponíveis como intrínsecos.  
   
 **Fim da seção específica da Microsoft**  
   

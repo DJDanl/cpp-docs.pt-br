@@ -33,15 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 37d53932a283ea047d748985a1da348d9346ce1e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 604b28147c6881c7b2d62c388c5402f12bb71c78
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336960"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572432"
 ---
 # <a name="cenumerator-class"></a>Classe CEnumerator
-Usa um objeto de enumerador OLE DB que expõe o [ISourcesRowset](https://msdn.microsoft.com/library/ms715969.aspx) interface para retornar um conjunto de linhas que descrevem todas as fontes de dados e enumeradores.  
+Usa um objeto de enumerador OLE DB que expõe o [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interface para retornar um conjunto de linhas que descrevem todas as fontes de dados e enumeradores.  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -83,7 +83,7 @@ bool Find(TCHAR* szSearchName) throw();
  **True** se o nome foi encontrado. Caso contrário, **falsos**.  
   
 ### <a name="remarks"></a>Comentários  
- Esse nome é mapeado para o `SOURCES_NAME` membro a [ISourcesRowset](https://msdn.microsoft.com/library/ms715969.aspx) interface.  
+ Esse nome é mapeado para o `SOURCES_NAME` membro a [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interface.  
   
 ## <a name="getmoniker"></a> Cenumerator:: Getmoniker
 Analisa o nome de exibição para extrair o componente da cadeia de caracteres que pode ser convertido em um identificador de origem.  
@@ -108,7 +108,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
  Um HRESULT padrão.  
 
 ## <a name="open"></a> Cenumerator:: Open
-Associa o identificador de origem para o enumerador, se for especificado, então recupera o conjunto de linhas para o enumerador chamando [ISourcesRowset:: Getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx).  
+Associa o identificador de origem para o enumerador, se for especificado, então recupera o conjunto de linhas para o enumerador chamando [ISourcesRowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)).  
   
 ### <a name="syntax"></a>Sintaxe  
   

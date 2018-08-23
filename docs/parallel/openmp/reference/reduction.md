@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e20ae1ad9c549aed176d26667d9bdc62a32b8dc7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d2b90ef2eeca60a305cd8836e09dc81940392d2c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692529"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42540362"
 ---
 # <a name="reduction"></a>reduction
-Especifica que uma ou mais variáveis que são particulares a cada thread são o assunto de uma operação de redução no final da região de dados paralelo.  
+Especifica que uma ou mais variáveis que são particulares para cada thread são o assunto de uma operação de redução no final da região paralela.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,10 +36,10 @@ reduction(operation:var)
  onde,  
   
  `operation`  
- O operador para a operação para executar nas variáveis (`var`) no final da região de dados paralelo.  
+ O operador para a operação para executar em variáveis (`var`) no final da região paralela.  
   
  `var`  
- Variáveis mais um no qual executar a redução de escalar. Se mais de uma variável for especificada, separe os nomes de variável com uma vírgula.  
+ Uma ou mais variáveis na qual executar a redução escalar. Se mais de uma variável for especificada, separe os nomes de variável com uma vírgula.  
   
 ## <a name="remarks"></a>Comentários  
  `reduction` aplica-se para as seguintes diretivas:  
@@ -127,10 +127,10 @@ int main( )
              "%d to %d, is %d\n", 1, 10, nSum);  
   
     if (bSucceed)  
-        printf_s("All of the the functions, func1 through "  
+        printf_s("All of the functions, func1 through "  
                  "func5 succeeded!\n");  
     else  
-        printf_s("One or more of the the functions, func1 "  
+        printf_s("One or more of the functions, func1 "  
                  "through func5 failed!\n");  
   
     if (nCount != NUM_THREADS)   
@@ -162,7 +162,7 @@ int main( )
 ```Output  
 The parallel section was executed 4 times in parallel.  
 The sum of the consecutive integers from 1 to 10, is 55  
-All of the the functions, func1 through func5 succeeded!  
+All of the functions, func1 through func5 succeeded!  
 ```  
   
 ## <a name="see-also"></a>Consulte também  

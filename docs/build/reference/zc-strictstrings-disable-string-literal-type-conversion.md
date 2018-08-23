@@ -1,5 +1,5 @@
 ---
-title: '/ZC: strictstrings (desativar conversão de tipo literal de cadeia de caracteres) | Microsoft Docs'
+title: '/ZC: strictstrings (desabilitar conversão de tipo literal de cadeia de caracteres) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7025a4bae2d4a7474cb366b041a3c62f3d7db819
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5055d7d1e7804512fa8f1a72bbdb27c483d6fdd3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379933"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42581133"
 ---
 # <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>/Zc:strictStrings (Desativar conversão de tipo literal de cadeia de caracteres)
 
@@ -38,9 +38,9 @@ Quando especificado, o compilador exige conformidade rígida com qualificação 
 
 ## <a name="remarks"></a>Comentários
 
-Se **/ZC: strictstrings** for especificado, o compilador aplica o C++ padrão `const` qualificações para literais de cadeia de caracteres, como o tipo ' array de `const char`' ou ' matriz de `const wchar_t`', dependendo da declaração. Os literais da cadeia de caracteres são imutáveis, e uma tentativa de modificar o conteúdo de um resulta em um erro de violação de acesso em tempo de execução. Você deve declarar um ponteiro da cadeia de caracteres como `const` para inicializá-lo usando um literal da cadeia de caracteres ou usar um `const_cast` explícito para inicializar um ponteiro não `const`. Por padrão, ou se **/Zc:strictStrings-** for especificado, o compilador não impõe o C++ padrão `const` qualificações inicializadas usando literais de cadeia de caracteres de ponteiros de cadeia de caracteres.
+Se **/ZC: strictstrings** for especificado, o compilador impõe o C++ padrão `const` qualificações para literais de cadeia de caracteres, como o tipo ' matriz de `const char`' ou ' matriz de `const wchar_t`', dependendo da declaração. Os literais da cadeia de caracteres são imutáveis, e uma tentativa de modificar o conteúdo de um resulta em um erro de violação de acesso em tempo de execução. Você deve declarar um ponteiro da cadeia de caracteres como `const` para inicializá-lo usando um literal da cadeia de caracteres ou usar um `const_cast` explícito para inicializar um ponteiro não `const`. Por padrão, ou se **/Zc:strictStrings-** for especificado, o compilador não impõe o C++ padrão `const` qualificações para ponteiros de cadeia de caracteres inicializados com literais de cadeia de caracteres.
 
-O **/ZC: strictstrings** opção está desativada por padrão. O [/ permissivo-](permissive-standards-conformance.md) opção de compilador implicitamente define esta opção, mas ele pode ser substituído usando **/Zc:strictStrings-**.
+O **/ZC: strictstrings** opção está desativada por padrão. O [/permissive--](permissive-standards-conformance.md) opção de compilador define implicitamente essa opção, mas ele pode ser substituído usando **/Zc:strictStrings-**.
 
 Use o **/ZC: strictstrings** opção para impedir que a compilação de código incorreto. Este exemplo mostra como um erro de declaração simples leva a uma falha em tempo de execução:
 
@@ -53,7 +53,7 @@ int main() {
 }
 ```
 
-Quando **/ZC: strictstrings** está habilitado, o mesmo código relata um erro na declaração de `str`.
+Quando **/ZC: strictstrings** é habilitada, o mesmo código relata um erro na declaração de `str`.
 
 ```cpp
 // strictStrings_on.cpp
@@ -68,17 +68,17 @@ int main() {
 Se você usar `auto` para declarar um ponteiro da cadeia de caracteres, o compilador criará a declaração do tipo de ponteiro `const` correta para você. Uma tentativa de modificar o conteúdo de um ponteiro `const` é relatada pelo compilador como um erro.
 
 > [!NOTE]
-> A biblioteca padrão C++ em [!INCLUDE[cpp_dev12_long](../../build/reference/includes/cpp_dev12_long_md.md)] não oferece suporte a **/ZC: strictstrings** compilações de opção de compilador na depuração. Se você vir várias [C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md) erros na criação de saída, isso pode ser a causa.
+> Biblioteca padrão C++ no Visual Studio 2013 não oferece suporte a **/ZC: strictstrings** compilações de opção do compilador na depuração. Se você vir diversos [C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md) erros na compilação de saída, isso pode ser a causa.
 
 Para obter mais informações sobre problemas de conformidade no Visual C++, consulte [comportamento não padrão](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
 
-1. Modificar o **opções adicionais** propriedade incluir **/ZC: strictstrings** e, em seguida, escolha **Okey**.
+1. Modificar a **opções adicionais** propriedade incluir **/ZC: strictstrings** e, em seguida, escolha **Okey**.
 
 ## <a name="see-also"></a>Consulte também
 

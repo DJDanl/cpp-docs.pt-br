@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d59949c031db6e33bbfb1ac56151c5bc57a972d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 097be395b26935b1c889a5ed542da3f544501ceb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326125"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543075"
 ---
 # <a name="writecr4"></a>__writecr4
 **Seção específica da Microsoft**  
   
- Grava o valor `Data` ao registro CR4.  
+ Grava o valor `Data` ao registro de CR4.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,15 +38,15 @@ void writecr4(
   
 #### <a name="parameters"></a>Parâmetros  
  [in] `Data`  
- O valor para gravar o registro de CR4.  
+ O valor a ser gravado para o registro de CR4.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__writecr4`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writecr4`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  Esse intrínseco só está disponível no modo kernel e a rotina só está disponível como um intrínseco.  

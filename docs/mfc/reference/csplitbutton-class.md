@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbced65aa76206d040ff1c13267fe9b7d3c69eca
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: d7fd35c351639d4b7b5f3b9dbbbce1c5e7cbcb79
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122781"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539753"
 ---
 # <a name="csplitbutton-class"></a>Classe CSplitButton
-O `CSplitButton` classe representa um controle de botão de divisão. O controle de botão de divisão executa um comportamento padrão quando um usuário clica a parte principal do botão e um menu suspenso é exibido quando um usuário clica na seta suspensa do botão.  
+O `CSplitButton` classe representa um controle de botão de divisão. O controle de botão de divisão executa um comportamento padrão quando um usuário clica na parte principal do botão e exibe um menu suspenso quando um usuário clica na seta suspensa do botão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,20 +53,20 @@ class CSplitButton : public CButton
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CSplitButton::Create](#create)|Cria um controle de botão de divisão com estilos especificados e a anexa ao atual `CSplitButton` objeto.|  
-|[CSplitButton::SetDropDownMenu](#setdropdownmenu)|Define o menu suspenso é exibido quando um usuário clica na seta do menu suspenso do controle de botão de divisão atual.|  
+|[CSplitButton::SetDropDownMenu](#setdropdownmenu)|Define o menu suspenso que é exibido quando um usuário clica na seta suspensa do controle de botão de divisão atual.|  
   
 ### <a name="protected-methods"></a>Métodos Protegidos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CSplitButton::OnDropDown](#ondropdown)|Lida com a notificação de BCN_DROPDOWN o sistema envia quando um usuário clica na seta do menu suspenso do controle de botão de divisão atual.|  
+|[CSplitButton::OnDropDown](#ondropdown)|Lida com a notificação BCN_DROPDOWN que o sistema envia quando um usuário clica na seta suspensa do controle de botão de divisão atual.|  
   
 ## <a name="remarks"></a>Comentários  
- O `CSplitButton` classe é derivada do [CButton](../../mfc/reference/cbutton-class.md) classe. O controle de botão de divisão é um controle de botão cujo estilo é BS_SPLITBUTTON. Ele exibe um menu personalizado quando um usuário clica na seta suspensa. Para obter mais informações, consulte os estilos BS_SPLITBUTTON e BS_DEFSPLITBUTTON [estilos de botão](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
+ O `CSplitButton` classe é derivada de [CButton](../../mfc/reference/cbutton-class.md) classe. O controle de botão de divisão é um controle de botão cujo estilo é BS_SPLITBUTTON. Ele exibe um menu personalizado quando um usuário clica na seta suspensa. Para obter mais informações, consulte os estilos BS_SPLITBUTTON e BS_DEFSPLITBUTTON no [estilos de botão](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
   
- A figura a seguir mostra uma caixa de diálogo que contém um controle de pager e um controle de botão de divisão (1). A seta suspensa (2) já foi clicado, e o submenu (3) é exibida.  
+ A figura abaixo mostra uma caixa de diálogo que contém um controle de paginação e um controle de botão de divisão (1). A seta suspensa (2) já foi clicado e o submenu (3) é exibida.  
   
- ![Caixa de diálogo com um controle splitbutton e pager. ] (../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
+ ![Caixa de diálogo com um controle splitbutton e pager. ](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -80,11 +80,11 @@ class CSplitButton : public CButton
  `CSplitButton`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxcmn.h  
+ **Cabeçalho:** afxcmn. h  
   
- Essa classe é suportada no [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] e posterior.  
+ Essa classe tem suporte no Windows Vista e posterior.  
   
- Requisitos adicionais para esta classe são descritos em [criar requisitos para Vista controles comuns do Windows](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
+ Requisitos adicionais para esta classe são descritos em [compilar requisitos para o Windows Vista controles comuns](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
 ##  <a name="create"></a>  CSplitButton::Create  
  Cria um controle de botão de divisão com estilos especificados e a anexa ao atual `CSplitButton` objeto.  
@@ -101,7 +101,7 @@ virtual BOOL Create(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *dwStyle*|Uma combinação bit a bit (ou) de estilos a ser aplicada ao controle. Para obter mais informações, consulte [estilos de botão](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
+|[in] *dwStyle*|Uma combinação bit a bit (OR) de estilos a serem aplicados ao controle. Para obter mais informações, consulte [estilos de botão](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
 |[in] *rect*|Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle.|  
 |[in] *pParentWnd*|Um ponteiro não nulo para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle.|  
 |[in] *nID*|A ID do controle.|  
@@ -110,7 +110,7 @@ virtual BOOL Create(
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
   
 ##  <a name="csplitbutton"></a>  CSplitButton::CSplitButton  
- Constrói um objeto `CSplitButton`. Os parâmetros do construtor especificar um submenu que é exibido quando um usuário clica na seta do menu suspenso do controle de botão de divisão.  
+ Constrói um objeto `CSplitButton`. Os parâmetros do construtor especificam um submenu que é exibido quando um usuário clica na seta suspensa do controle de botão de divisão.  
   
 ```  
 CSplitButton();
@@ -128,13 +128,13 @@ CSplitButton(CMenu* pMenu)
 |---------------|-----------------|  
 |[in] *nMenuId*|A ID de recurso da barra de menus.|  
 |[in] *nSubMenuId*|A ID de recurso de um submenu.|  
-|[in] *pMenu*|Um ponteiro para um [CMenu](../../mfc/reference/cmenu-class.md) objeto que especifica um submenu. O `CSplitButton` exclusões do objeto de `CMenu` objeto e seu HMENU associado quando o `CSplitButton` objeto sai do escopo.|  
+|[in] *pMenu*|Um ponteiro para um [CMenu](../../mfc/reference/cmenu-class.md) objeto que especifica um submenu. O `CSplitButton` exclusões de objeto de `CMenu` objeto e seu HMENU associado quando o `CSplitButton` objeto sai do escopo.|  
   
 ### <a name="remarks"></a>Comentários  
  Use o [CSplitButton::Create](#create) método para criar um controle de botão de divisão e anexá-lo para o `CSplitButton` objeto.  
   
 ##  <a name="ondropdown"></a>  CSplitButton::OnDropDown  
- Lida com a notificação de BCN_DROPDOWN o sistema envia quando um usuário clica na seta do menu suspenso do controle de botão de divisão atual.  
+ Lida com a notificação BCN_DROPDOWN que o sistema envia quando um usuário clica na seta suspensa do controle de botão de divisão atual.  
   
 ```  
 afx_msg void OnDropDown(
@@ -147,14 +147,14 @@ afx_msg void OnDropDown(
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
 |[in] *pNMHDR*|Ponteiro para um [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) estrutura que contém informações sobre o [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notificação.|  
-|[out] *pResult*|(Não usado; nenhum valor é retornado). Valor de retorno de [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notificação.|  
+|[out] *pResult*|(Não usado; nenhum valor será retornado). Retornar o valor de [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notificação.|  
   
 ### <a name="remarks"></a>Comentários  
- Quando o usuário clica na seta suspensa em um controle de botão de divisão, o sistema envia uma notificação de BCN_DROPDOWN mensagem, que o `OnDropDown` identificadores de método. No entanto, o `CSplitButton` objeto não encaminha a notificação BCN_DROPDOWN para o controle que contém o controle de botão de divisão. Consequentemente, contendo o controle não oferece suporte uma ação personalizada em resposta à notificação.  
+ Quando o usuário clica na seta suspensa em um controle de botão de divisão, o sistema envia uma notificação BCN_DROPDOWN da mensagem, que o `OnDropDown` identificadores de método. No entanto, o `CSplitButton` objeto não encaminha a notificação BCN_DROPDOWN para o controle que contém o controle de botão de divisão. Consequentemente, contendo o controle não pode dar suporte a uma ação personalizada em resposta à notificação.  
   
- Para implementar uma ação personalizada que dá suporte ao controle que o contém, use um [CButton](../../mfc/reference/cbutton-class.md) objeto com um estilo de BS_SPLITBUTTON em vez de um `CSplitButton` objeto. Em seguida, implemente um manipulador para a notificação BCN_DROPDOWN no `CButton` objeto. Para obter mais informações, consulte [estilos de botão](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
+ Para implementar uma ação personalizada que dá suporte ao controle que o contém, use uma [CButton](../../mfc/reference/cbutton-class.md) objeto com o estilo BS_SPLITBUTTON em vez de um `CSplitButton` objeto. Em seguida, implemente um manipulador para a notificação BCN_DROPDOWN no `CButton` objeto. Para obter mais informações, consulte [estilos de botão](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
   
- Para implementar uma ação personalizada que o botão de divisão próprio controle oferece suporte, use [reflexão de mensagem](../../mfc/tn062-message-reflection-for-windows-controls.md). Derive sua própria classe do `CSplitButton` de classe e denomine-, por exemplo, CMySplitButton. Em seguida, adicione o mapa de mensagem a seguir ao seu aplicativo para tratar a notificação BCN_DROPDOWN:  
+ Para implementar uma ação personalizada que o botão de divisão de controle em si dá suporte, use [reflexão de mensagem](../../mfc/tn062-message-reflection-for-windows-controls.md). Derivar sua própria classe a partir de `CSplitButton` classe e nomeie-o, por exemplo, CMySplitButton. Em seguida, adicione o mapa de mensagem a seguir ao seu aplicativo para manipular a notificação BCN_DROPDOWN:  
   
 ```  
 BEGIN_MESSAGE_MAP(CMySplitButton,
@@ -164,7 +164,7 @@ END_MESSAGE_MAP()
 ```  
   
 ##  <a name="setdropdownmenu"></a>  CSplitButton::SetDropDownMenu  
- Define o menu suspenso é exibido quando um usuário clica na seta do menu suspenso do controle de botão de divisão atual.  
+ Define o menu suspenso que é exibido quando um usuário clica na seta suspensa do controle de botão de divisão atual.  
   
 ```  
 void SetDropDownMenu(
@@ -180,21 +180,21 @@ void SetDropDownMenu(CMenu* pMenu);
 |---------------|-----------------|  
 |[in] *nMenuId*|A ID de recurso da barra de menus.|  
 |[in] *nSubMenuId*|A ID de recurso de um submenu.|  
-|[in] *pMenu*|Ponteiro para um [CMenu](../../mfc/reference/cmenu-class.md) objeto que especifica um submenu. O `CSplitButton` exclusões do objeto de `CMenu` objeto e seu HMENU associado quando o `CSplitButton` objeto sai do escopo.|  
+|[in] *pMenu*|Ponteiro para um [CMenu](../../mfc/reference/cmenu-class.md) objeto que especifica um submenu. O `CSplitButton` exclusões de objeto de `CMenu` objeto e seu HMENU associado quando o `CSplitButton` objeto sai do escopo.|  
   
 ### <a name="remarks"></a>Comentários  
- O *nMenuId* parâmetro identifica uma barra de menus, que é uma lista de itens da barra de menu. O *nSubMenuId* parâmetro é um número de índice baseado em zero que identifica um submenu, que é a lista suspensa dos itens de menu associado a cada item da barra de menu. Por exemplo, um aplicativo típico tem um menu que contém os itens da barra de menu, "File", "Editar" e "Ajuda". O item de barra de menu "Arquivo" tem um submenu que contém os itens de menu "Aberta", "Fechar" e "Exit". Quando você clicar na seta do menu suspenso do controle de botão de divisão, o controle exibe o submenu especificado, não a barra de menus.  
+ O *nMenuId* parâmetro identifica uma barra de menus, que é uma lista de itens da barra de menu horizontal. O *nSubMenuId* parâmetro é um número de índice baseado em zero que identifica um submenu, que é a lista suspensa de itens de menu associado com cada item da barra de menu. Por exemplo, um aplicativo típico tem um menu que contém os itens de barra de menu, "Arquivo", "Editar" e "Help". O item de barra de menu "Arquivo" tem um submenu que contém os itens de menu "Abrir", "Fechar" e "Exit". Quando a seta suspensa do controle de botão de divisão é clicada, o controle exibe o submenu especificado, não a barra de menus.  
   
- A figura a seguir mostra uma caixa de diálogo que contém um controle de pager e um controle de botão de divisão (1). A seta suspensa (2) já foi clicado, e o submenu (3) é exibida.  
+ A figura abaixo mostra uma caixa de diálogo que contém um controle de paginação e um controle de botão de divisão (1). A seta suspensa (2) já foi clicado e o submenu (3) é exibida.  
   
- ![Caixa de diálogo com um controle splitbutton e pager. ] (../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
+ ![Caixa de diálogo com um controle splitbutton e pager. ](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
   
 ### <a name="example"></a>Exemplo  
- A primeira instrução no exemplo de código a seguir demonstra o [CSplitButton::SetDropDownMenu](#setdropdownmenu) método. Nós criamos o menu com o recurso do Visual Studio editor, que é chamado automaticamente a ID de barra de menu, IDR_MENU1. O *nSubMenuId* parâmetro, que é zero, refere-se ao submenu somente da barra de menus.  
+ A primeira instrução no exemplo de código a seguir demonstra a [CSplitButton::SetDropDownMenu](#setdropdownmenu) método. Nós criamos o menu com o recurso do Visual Studio editor, que é chamado automaticamente a ID da barra de menus, IDR_MENU1. O *nSubMenuId* parâmetro, que é zero, refere-se para o submenu somente da barra de menus.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/csplitbutton-class_1.cpp)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CSplitButton](../../mfc/reference/csplitbutton-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe CButton](../../mfc/reference/cbutton-class.md)

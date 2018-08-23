@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c73d32b9300a5a581306d926688230660cd998b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70aa643d7d8f81cca0ff74a3016badd6551c11a0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330617"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544392"
 ---
 # <a name="outbyte"></a>__outbyte
 **Seção específica da Microsoft**  
@@ -43,15 +43,15 @@ void __outbyte(
  A porta para enviar os dados.  
   
  [in] `Data`  
- Os bytes a serem enviadas a porta especificada.  
+ O byte sejam enviadas a porta especificada.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__outbyte`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outbyte`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  Essa rotina só está disponível como função intrínseca.  

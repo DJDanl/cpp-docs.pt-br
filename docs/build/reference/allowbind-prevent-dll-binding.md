@@ -1,5 +1,5 @@
 ---
-title: -ALLOWBIND (evitar associação de DLL) | Microsoft Docs
+title: -ALLOWBIND (impedir associação da DLL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31968e27c46cb5ea220a4cfe19c36820c4cf8444
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a0bff9ec6502aab5787c492a15e008bc29926163
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369634"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572527"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (evitar associação de DLL)
 ```  
@@ -37,15 +37,15 @@ ms.locfileid: "32369634"
 ## <a name="remarks"></a>Comentários  
  /ALLOWBIND:NO define um bit no cabeçalho de uma DLL, o que indica ao Bind.exe que não é possível associar a imagem. Talvez você não queira que uma DLL seja vinculada caso ela tenha sido assinada digitalmente (a associação invalida a assinatura).  
   
- Você pode editar uma DLL existente para a funcionalidade /ALLOWBIND com o [/ALLOWBIND](../../build/reference/allowbind.md) opção do utilitário EDITBIN.  
+ Você pode editar uma DLL existente para a funcionalidade /ALLOWBIND com a [/ALLOWBIND](../../build/reference/allowbind.md) opção do utilitário EDITBIN.  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Expanda **propriedades de configuração**, **vinculador**e selecione **linha de comando**.  
+2.  Expandir **propriedades de configuração**, **vinculador**e selecione **linha de comando**.  
   
-3.  Digite `/ALLOWBIND:NO` em **opções adicionais**.  
+3.  Insira `/ALLOWBIND:NO` em **opções adicionais**.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   
@@ -54,5 +54,5 @@ ms.locfileid: "32369634"
 ## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
  [Opções do vinculador](../../build/reference/linker-options.md)   
- [Função BindImage](http://msdn.microsoft.com/library/windows/desktop/ms679278.aspx)   
- [Função BindImageEx](http://msdn.microsoft.com/library/windows/desktop/ms679279.aspx)
+ [Função BindImage](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)   
+ [Função BindImageEx](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)

@@ -1,7 +1,7 @@
 ---
 title: EXPORTAÇÕES | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c642a623e76a9e1344a90efd4f0a47ad195c553e
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322183"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42575451"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -49,11 +49,18 @@ EXPORTS
    func2=func1
 ```
 
-Se o nome exportado for de outro módulo, especifica o nome da exportação no DLL usando *other_module.exported_name*. Por exemplo, se o DLL exportar uma função `other_module.func1` e você desejar que os chamadores a utilizem como `func2`, especifique:
+Se o nome exportado for de algum outro módulo, especifica o nome da exportação no DLL usando *other_module.exported_name*. Por exemplo, se o DLL exportar uma função `other_module.func1` e você desejar que os chamadores a utilizem como `func2`, especifique:
 
 ```DEF
 EXPORTS
    func2=other_module.func1
+```
+
+Se o nome exportado for de outro módulo que exporta por ordinal, especifique a exportação 's ordinal na DLL usando *other_module. #ordinal_number*. Por exemplo, se sua DLL exporta uma função de outro módulo em que é ordinal 42, e você deseja que os chamadores para usá-la como `func2`, você especificaria:
+
+```DEF
+EXPORTS
+   func2=other_module.#42
 ```
 
 Como o compilador do Visual C++ usa decoração de nome para funções C++, você deve usar o nome decorado internal_name ou definir as funções exportadas usando extern "C" no código-fonte. O compilador também decora funções C que usam o [stdcall](../../cpp/stdcall.md) convenção com um prefixo de sublinhado (_) e um sufixo composto de chamada o sinal de arroba (@) seguido pelo número de bytes (em decimais) na lista de argumentos.  

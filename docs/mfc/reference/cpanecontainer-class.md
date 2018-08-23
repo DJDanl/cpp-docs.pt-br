@@ -130,17 +130,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de7cf11b6f328819a677d248647934619153fb7
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d69a5cefa1cb43ad4f6c585b3cb7f7e021ae9183
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079469"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538384"
 ---
 # <a name="cpanecontainer-class"></a>Classe CPaneContainer
-O `CPaneContainer` classe é um componente básico do modelo de encaixe implementado pelo MFC. Um objeto dessa classe armazena ponteiros para os dois painéis de encaixe ou duas instâncias do `CPaneContainer.` também armazena um ponteiro para a linha divisória que separa os painéis (ou os contêineres). Com aninhamento contêineres dentro de contêineres, a estrutura pode construir uma árvore binária que representa os layouts complexos de encaixe. A raiz da árvore binária é armazenada em um [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) objeto.  
+O `CPaneContainer` classe é um componente básico do modelo de encaixe implementado pelo MFC. Um objeto dessa classe armazena ponteiros para dois painéis de encaixe ou para duas instâncias de `CPaneContainer.` ele também armazena um ponteiro para o divisor que separa os painéis (ou contêineres). Ao aninhar contêineres dentro de contêineres, a estrutura pode compilar uma árvore binária que representa layouts complexos de encaixe. A raiz da árvore binária é armazenada em uma [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) objeto.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
  
 ## <a name="syntax"></a>Sintaxe  
   
@@ -218,10 +218,10 @@ class CPaneContainer : public CObject
 |[CPaneContainer::StretchPaneContainer](#stretchpanecontainer)||  
   
 ### <a name="remarks"></a>Comentários  
- `CPaneContainer` objetos são criados automaticamente pelo framework.  
+ `CPaneContainer` objetos são criados automaticamente pela estrutura.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como construir uma instância do `CPaneContainer` classe. Este trecho de código é parte do [exemplo Definir tamanho do painel](../../visual-cpp-samples.md).  
+ O exemplo a seguir demonstra como construir uma instância de `CPaneContainer` classe. Este trecho de código é parte do [exemplo de definir o tamanho do painel](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_1.h)]  
 [!code-cpp[NVC_MFC_SetPaneSize#1](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_2.cpp)]  
@@ -991,7 +991,7 @@ virtual int StretchPaneContainer(
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CObject](../../mfc/reference/cobject-class.md)   
  [Classe CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)

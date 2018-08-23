@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38577e59ea874dda99d57297fc8c921f444648c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c02cc55280202b9ce576dc1e771b3428837209c8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199479"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539560"
 ---
 # <a name="fatal-error-c1076"></a>Erro fatal C1076
 limite do compilador: limite do heap interno atingido; use /Zm para especificar um limite maior  
@@ -30,7 +30,7 @@ limite do compilador: limite do heap interno atingido; use /Zm para especificar 
   
  Para resolver esse erro:  
   
-1.  Use o [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opção para definir o limite de memória do compilador para o valor especificado no [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) mensagem de erro. Para obter mais informações que inclui definir esse valor no [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)], consulte a seção de comentários em [/Zm (especificar pré-compilado cabeçalho alocação de limite de memória)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).  
+1.  Use o [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opção de definir o limite de memória do compilador como o valor especificado na [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) mensagem de erro. Para obter mais informações sobre como definir esse valor no Visual Studio, consulte a seção comentários no [/Zm (especificar pré-compilado cabeçalho alocação de limite de memória)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).  
   
 2.  Se você estiver usando os compiladores hospedados de 32 bits em um sistema operacional de 64 bits, use os compiladores hospedados de 64 bits. Para obter mais informações, consulte [como: habilitar um 64-Bit Visual C++ conjunto de ferramentas na linha de comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).  
   
@@ -46,4 +46,4 @@ limite do compilador: limite do heap interno atingido; use /Zm para especificar 
   
 8.  Divida o arquivo atual em arquivos menores.  
   
- Se C1076 ocorre imediatamente depois do início da compilação, o valor especificado para **/Zm** provavelmente é muito alto para o programa. Reduzir a **/Zm** valor.
+ Se C1076 ocorrer imediatamente após o build é iniciado, o valor especificado para **/Zm** provavelmente é muito alto para o seu programa. Reduzir a **/Zm** valor.

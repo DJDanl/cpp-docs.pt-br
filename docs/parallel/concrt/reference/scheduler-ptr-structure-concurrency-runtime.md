@@ -1,5 +1,5 @@
 ---
-title: scheduler_ptr estrutura | Microsoft Docs
+title: Estrutura scheduler_ptr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 672e4a0dd5f66ab613dde8877915c799d6c4b2f4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 99c2ed2f8446b94d606c907f4d030c417e21fc01
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686978"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539734"
 ---
-# <a name="schedulerptr-structure"></a>scheduler_ptr estrutura
-Representa um ponteiro para um agendador. Esta classe existe para permitir a especificação de um tempo de vida compartilhada usando shared_ptr ou apenas uma referência simples ponteiro bruto.  
+# <a name="schedulerptr-structure"></a>Estrutura scheduler_ptr
+Representa um ponteiro para um agendador. Esta classe existe para permitir a especificação de um tempo de vida compartilhado usando o shared_ptr ou apenas uma referência simples usando o ponteiro bruto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,31 +40,31 @@ struct scheduler_ptr;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[scheduler_ptr::scheduler_ptr](#ctor)|Sobrecarregado. Cria um ponteiro de Agendador do shared_ptr para Agendador|  
+|[scheduler_ptr::scheduler_ptr](#ctor)|Sobrecarregado. Cria um ponteiro de Agendador de shared_ptr para Agendador|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[scheduler_ptr::get](#get)|Retorna o ponteiro bruto para o Agendador|  
+|[scheduler_ptr::get](#get)|Retorna o ponteiro bruto ao Agendador|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[scheduler_ptr:: Operator bool](#operator_bool)|Testar se o ponteiro do Agendador é não nulo|  
-|[scheduler_ptr::operator-&gt;](#operator_ptr)|Se comportam como um ponteiro|  
+|[scheduler_ptr:: Operator bool](#operator_bool)|Testar se o ponteiro de Agendador é não nulo|  
+|[scheduler_ptr::operator-&gt;](#operator_ptr)|Atua como um ponteiro|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `scheduler_ptr`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** pplinterface.h  
+ **Cabeçalho:** pplinterface. h  
   
  **Namespace:** simultaneidade  
   
-##  <a name="get"></a>  scheduler_ptr:: método Get  
- Retorna o ponteiro bruto para o Agendador  
+##  <a name="get"></a>  scheduler_ptr:: Get método  
+ Retorna o ponteiro bruto ao Agendador  
   
 ```
 scheduler_interface* get() const;
@@ -73,16 +73,16 @@ scheduler_interface* get() const;
 ### <a name="return-value"></a>Valor de retorno  
   
 ##  <a name="operator_bool"></a>  scheduler_ptr:: Operator bool   
- Testar se o ponteiro do Agendador é não nulo  
+ Testar se o ponteiro de Agendador é não nulo  
   
-' ' operador bool() const;
+' ' operador bool () const;
 ```  
   
 ##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;   
  Behave like a pointer  
   
 ```
-scheduler_interface * operador -> () const;
+scheduler_interface * operator -> () const;
 ```  
   
 ### Return Value  
@@ -93,7 +93,7 @@ scheduler_interface * operador -> () const;
 ```
 scheduler_ptr explícita (Agendador std:: shared_ptr < scheduler_interface >);
 
-scheduler_ptr explícita (_In_opt_ scheduler_interface * pScheduler);
+scheduler_ptr explícito (_In_opt_ scheduler_interface * pScheduler);
 ```  
   
 ### Parameters  

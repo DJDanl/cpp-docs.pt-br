@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ea6b9bdc57765b15128ebcc6f9a17bba2612e29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0385f2812c58b65102780780a1b7a548b2b08429
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328783"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538975"
 ---
 # <a name="mmstreamsi64x"></a>_mm_stream_si64x  
   
 **Seção específica da Microsoft**  
   
- Gera a instrução MOVNTI. Grava os dados `Source` para um local de memória especificado por `Dest`, sem polua caches.  
+ Gera a instrução de MOVNTI. Grava os dados `Source` para um local de memória especificado por `Dest`, sem poluir os caches.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,9 +51,9 @@ void _mm_stream_si64x(
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`_mm_stream_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_stream_si64x`|X64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
   

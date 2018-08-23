@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8c8868f83cb2e05a364b8977b014db5c02689c5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 318951b5216513c20cdb21ac4a4fcfff9c3e0ac7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886057"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540538"
 ---
 # <a name="styles-used-by-mfc"></a>Estilos usados pelo MFC  
   
@@ -232,15 +232,15 @@ A tabela a seguir lista os tipos de botão. Opcionalmente, você pode escolher u
 |BS_AUTOCHECKBOX|Cria um botão da caixa de seleção com dois estados: BST_CHECKED e BST_UNCHECKED. Clicando no botão envia uma notificação de BN_CLICKED à janela do proprietário e altera o estado do botão. Por padrão, o texto associado é exibido à direita da caixa de seleção. Para exibir texto à esquerda da caixa de seleção, use o estilo BS_LEFTTEXT ou BS_RIGHTBUTTON.|  
 |BS_AUTORADIOBUTTON|Cria um botão de opção com dois estados: BST_CHECKED e BST_UNCHECKED. Botões de opção são geralmente usados em grupos, com cada grupo tendo um máximo de uma opção marcada por vez. Clicando no botão envia uma notificação de BN_CLICKED à janela do proprietário, define o estado do botão de opção clicado como BST_CHECKED e define os estados de todos os outros botões de opção no grupo de botões para BST_UNCHECKED. Por padrão, o texto associado é exibido à direita do botão de opção. Para exibir texto à esquerda do botão de opção, use o estilo BS_LEFTTEXT ou BS_RIGHTBUTTON.|  
 |BS_CHECKBOX|Cria um botão da caixa de seleção com dois estados: BST_CHECKED e BST_UNCHECKED. Clicando no botão envia uma notificação de BN_CLICKED à janela do proprietário, mas não altera o estado do botão. Por padrão, o texto associado é exibido à direita da caixa de seleção. Para exibir texto à esquerda da caixa de seleção, use o estilo BS_LEFTTEXT ou BS_RIGHTBUTTON.|  
-|BS_COMMANDLINK|Cria um botão de link de comando. Um botão de link de comando é um botão de comando específico para [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] que exibe uma seta verde à esquerda do texto principal e uma nota abaixo do texto principal. Você pode definir o texto de Observação usando [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote).|  
-|BS_DEFCOMMANDLINK|Cria um botão de link de comando. Um botão de link de comando é um botão de comando específico para [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] que exibe uma seta verde à esquerda do texto principal e uma nota abaixo do texto principal. Você pode definir o texto de Observação usando [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote). Se o botão estiver em uma caixa de diálogo, pressionar a tecla ENTER envia uma notificação BN_CLICKED à caixa de diálogo mesmo quando o botão não tem o foco de entrada.|  
+|BS_COMMANDLINK|Cria um botão de link de comando. Um botão de link de comando é um botão de comando específico para o Windows Vista que exibe uma seta verde à esquerda do texto principal e uma nota abaixo do texto principal. Você pode definir o texto de Observação usando [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote).|  
+|BS_DEFCOMMANDLINK|Cria um botão de link de comando. Um botão de link de comando é um botão de comando específico para o Windows Vista que exibe uma seta verde à esquerda do texto principal e uma nota abaixo do texto principal. Você pode definir o texto de Observação usando [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote). Se o botão estiver em uma caixa de diálogo, pressionar a tecla ENTER envia uma notificação BN_CLICKED à caixa de diálogo mesmo quando o botão não tem o foco de entrada.|  
 |BS_DEFPUSHBUTTON|Cria um botão de comando que tem uma borda preta pesada. Se o botão estiver em uma caixa de diálogo, pressionar a tecla ENTER envia uma notificação BN_CLICKED à caixa de diálogo mesmo quando o botão não tem o foco de entrada.|  
-|BS_DEFSPLITBUTTON|Cria um botão de divisão. Um botão de divisão é um botão de comando específico para [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] que contém um botão adjacente a uma seta suspensa. Quando você clica no botão, o comando padrão é executado. Quando você clica na seta suspensa, é exibido um menu de comandos adicionais. Se o botão de divisão está em uma caixa de diálogo, pressionar a tecla ENTER envia uma notificação BN_CLICKED à caixa de diálogo mesmo quando o botão não tem o foco de entrada|  
+|BS_DEFSPLITBUTTON|Cria um botão de divisão. Um botão de divisão é um botão de comando específico para o Windows Vista que contém um botão adjacente a uma seta suspensa. Quando você clica no botão, o comando padrão é executado. Quando você clica na seta suspensa, é exibido um menu de comandos adicionais. Se o botão de divisão está em uma caixa de diálogo, pressionar a tecla ENTER envia uma notificação BN_CLICKED à caixa de diálogo mesmo quando o botão não tem o foco de entrada|  
 |BS_GROUPBOX|Cria um retângulo no qual outros botões podem ser agrupados. Texto associado a esse estilo é exibido no canto do canto superior esquerdo do retângulo.|  
 |BS_OWNERDRAW|Cria um botão desenhado pelo proprietário. A estrutura chama o `DrawItem` método quando um aspecto visual do botão foi alterado. Esse estilo deve ser definido quando você usa o `CBitmapButton` classe.|  
 |BS_PUSHBUTTON|Cria um botão de comando que envia uma notificação de BN_CLICKED à janela do proprietário quando o usuário clica no botão.|  
 |BS_RADIOBUTTON|Cria um botão de opção com dois estados: BST_CHECKED e BST_UNCHECKED. Botões de opção são geralmente usados em grupos, com cada grupo tendo um máximo de uma opção marcada por vez. Clicando no botão envia uma notificação de BN_CLICKED à janela do proprietário, mas não altera o estado de qualquer botão no grupo automaticamente. Por padrão, o texto associado é exibido à direita do botão de opção. Para exibir texto à esquerda do botão de opção, use o estilo BS_LEFTTEXT ou BS_RIGHTBUTTON.|  
-|BS_SPLITBUTTON|Cria um botão de divisão. Um botão de divisão é um botão de comando específico para [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] que contém um botão adjacente a uma seta suspensa. Quando você clica no botão, o comando padrão é executado. Quando você clica na seta suspensa, é exibido um menu de comandos adicionais.|  
+|BS_SPLITBUTTON|Cria um botão de divisão. Um botão de divisão é um botão de comando específico para o Windows Vista que contém um botão adjacente a uma seta suspensa. Quando você clica no botão, o comando padrão é executado. Quando você clica na seta suspensa, é exibido um menu de comandos adicionais.|  
 |BS_USERBUTTON|Obsoleto, mas oferecido para compatibilidade com versões de 16 bits do Windows. Aplicativos baseados em Win32 devem usar BS_OWNERDRAW.|  
   
 ### <a name="radio-button-and-check-box-styles"></a>Estilos de botão e a caixa de seleção do rádio  
@@ -498,7 +498,7 @@ Estilos de janela estendidos se aplicam a [classe CWnd](../../mfc/reference/cwnd
 |WS_EX_CONTEXTHELP|Inclui um ponto de interrogação na barra de título da janela. Quando o usuário clica no ponto de interrogação, o cursor muda para um ponto de interrogação com um ponteiro. Se o usuário clica em uma janela filho, a filha receberá uma mensagem WM_HELP.|  
 |WS_EX_CONTROLPARENT|Permite que o usuário navegue entre as janelas filho da janela usando a tecla TAB.|  
 |WS_EX_DLGMODALFRAME|Designa uma janela com uma borda dupla que (opcionalmente) pode ser criada com um título de barras ao especificar o sinalizador de estilo WS_CAPTION na *dwStyle* parâmetro.|  
-|WS_EX_LAYERED|A janela é uma [janela em camadas](http://msdn.microsoft.com/library/ms632599.aspx#layered). Esse estilo não pode ser usado se a janela tem um [estilo da classe](http://msdn.microsoft.com/library/ms633574.aspx#class_styles) de CS_OWNDC ou CS_CLASSDC. No entanto, [!INCLUDE[win8_first](../../mfc/reference/includes/win8_first_md.md)] dá suporte o estilo WS_EX_LAYERED para janelas filho, em que as versões anteriores do Windows dão suporte a ele somente para janelas de nível superior.|  
+|WS_EX_LAYERED|A janela é uma [janela em camadas](http://msdn.microsoft.com/library/ms632599.aspx#layered). Esse estilo não pode ser usado se a janela tem um [estilo da classe](http://msdn.microsoft.com/library/ms633574.aspx#class_styles) de CS_OWNDC ou CS_CLASSDC. No entanto, o Microsoft Windows 8 oferece suporte o estilo WS_EX_LAYERED para janelas filho, em que as versões anteriores do Windows dão suporte a ele somente para janelas de nível superior.|  
 |WS_EX_LEFT|Fornece propriedades genéricas alinhado à esquerda da janela. Esse é o padrão.|  
 |WS_EX_LEFTSCROLLBAR|Coloca uma barra de rolagem vertical à esquerda da área de cliente.|  
 |WS_EX_LTRREADING|Exibe o texto da janela esquerda para direita propriedades de ordem de leitura. Esse é o padrão.|  

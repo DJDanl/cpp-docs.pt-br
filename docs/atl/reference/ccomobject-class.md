@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89a909b715633488cff37fa87ea5950681e208cd
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4be126af9228312fa5fd4430e4f477f037d31df8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881835"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572125"
 ---
 # <a name="ccomobject-class"></a>Classe CComObject
 Essa classe implementa `IUnknown` para um objeto não agregado.  
@@ -112,7 +112,7 @@ CComObject();
 
   
 ##  <a name="createinstance"></a>  CComObject::CreateInstance  
- A função estática permite que você crie uma nova **CComObject <** `Base` **>** objeto, sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ A função estática permite que você crie uma nova **CComObject <** `Base` **>** objeto, sem a sobrecarga de [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);

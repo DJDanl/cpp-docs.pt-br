@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 386bc03234ccb29b293a413944f221189f466c80
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c0bd8ade91e2e543e8ccf1c0a9b04525b8d81b43
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336589"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573199"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: chamando funções de API ODBC diretamente
 As classes de banco de dados fornecem uma interface mais simples para um [fonte de dados](../../data/odbc/data-source-odbc.md) que o ODBC. Como resultado, as classes não encapsulam toda a API de ODBC. Para qualquer funcionalidade que está fora as capacidades das classes, você deve chamar funções API ODBC diretamente. Por exemplo, você deve chamar as funções de catálogo ODBC (`::SQLColumns`, `::SQLProcedures`, `::SQLTables`e outros) diretamente.  
@@ -48,7 +48,7 @@ As classes de banco de dados fornecem uma interface mais simples para um [fonte 
   
 -   Desalocar o armazenamento ao concluir.  
   
- Para obter mais informações sobre essas etapas, consulte a [conectividade aberta de banco de dados (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) SDK na documentação do MSDN.  
+ Para obter mais informações sobre essas etapas, consulte a [conectividade aberta de banco de dados (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) SDK na documentação do MSDN.  
   
  Além dessas etapas, você precisa executar etapas adicionais para verificar os valores de retorno de função, certifique-se de que seu programa não está aguardando uma chamada assíncrona para concluir e assim por diante. Você pode simplificar essas últimas etapas, usando as macros AFX_SQL_ASYNC e AFX_SQL_SYNC. Para obter mais informações, consulte [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md) na *referência da MFC*.  
 

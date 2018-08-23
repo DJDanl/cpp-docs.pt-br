@@ -1,5 +1,5 @@
 ---
-title: (X64) de tratamento de exceção | Microsoft Docs
+title: (X64) de tratamento de exceções | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7ae44d84ed8a0e04f93513db3a5431ebfd80abf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acfcf5f37e0b679faf0e35549cc705ccee216c02
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367180"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573015"
 ---
 # <a name="exception-handling-x64"></a>Tratamento de exceções (x64)
-Esta seção aborda o tratamento estruturado de exceções e o comportamento de tratamento de exceção de C++ de [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  
+Esta seção aborda o tratamento de exceções estruturado e comportamento em x64 de tratamento de exceções C++.  
   
 -   [Desenrolar dados para tratamento de exceção, suporte do depurador](../build/unwind-data-for-exception-handling-debugger-support.md)  
   
--   [O procedimento Desenrolado](../build/unwind-procedure.md)  
+-   [O procedimento de desenrolamento](../build/unwind-procedure.md)  
   
 -   [O identificador específico da linguagem](../build/language-specific-handler.md)  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc15e9eaf7068756aa4d945cf494156498af6f9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2a03e29ed5197d27b421135b1561f3edc88af596
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025978"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575439"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Assistente de consumidor OLE DB da ATL
 Este assistente define uma classe de consumidor do OLE DB com as associações de dados necessário para acessar a fonte de dados especificado por meio do provedor OLE DB especificado.  
@@ -33,7 +33,7 @@ Este assistente define uma classe de consumidor do OLE DB com as associações d
   
 ## <a name="uielement-list"></a>Lista UIElement  
 **Fonte de dados**  
-O **fonte de dados** botão permite que você defina a fonte de dados especificado usando o provedor OLE DB especificado. Quando você clica nesse botão, o **propriedades de vínculo de dados** caixa de diálogo é exibida. Para obter mais informações sobre a criação de cadeias de caracteres de conexão e o **propriedades de vínculo de dados** caixa de diálogo, consulte [visão geral da API de Link de dados](https://msdn.microsoft.com/library/ms718102.aspx) na documentação do SDK do Windows.  
+O **fonte de dados** botão permite que você defina a fonte de dados especificado usando o provedor OLE DB especificado. Quando você clica nesse botão, o **propriedades de vínculo de dados** caixa de diálogo é exibida. Para obter mais informações sobre a criação de cadeias de caracteres de conexão e o **propriedades de vínculo de dados** caixa de diálogo, consulte [visão geral da API de Link de dados](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) na documentação do SDK do Windows.  
   
 > [!NOTE]
 >  Em versões anteriores, Shift + clique a **fonte de dados** botão aberta uma caixa de diálogo Abrir arquivo para permitir que você selecione um arquivo de Link de dados (. udl). Não há suporte para essa funcionalidade.  
@@ -176,7 +176,7 @@ Clique em **Okey** para concluir. O **Selecionar objeto de banco de dados** caix
  Selecione esta opção se você quiser usar `CCommand` ou `db_command` para criar o comando e o acessador de comando declarações de classe. Essa é a seleção padrão.  
   
  **Suporte**  
- Marque as caixas de seleção para especificar os tipos de atualizações com suporte no consumidor (o padrão é none). Cada um dos seguintes definirá [DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx) e as entradas apropriadas para [DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx) no conjunto de propriedades mapa.  
+ Marque as caixas de seleção para especificar os tipos de atualizações com suporte no consumidor (o padrão é none). Cada um dos seguintes definirá [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\)) e as entradas apropriadas para [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\)) no conjunto de propriedades mapa.  
   
  **Alteração**  
  Especifica que o consumidor dão suporte a atualizações de dados de linha no conjunto de linhas.  
@@ -190,4 +190,4 @@ Clique em **Okey** para concluir. O **Selecionar objeto de banco de dados** caix
 ## <a name="see-also"></a>Consulte também  
  [Consumidor do OLE DB da ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
  [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Cadeias de caracteres de Conexão e Links de dados (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)
+ [Cadeias de caracteres de Conexão e Links de dados (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

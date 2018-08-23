@@ -54,17 +54,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598365e4a5439bc17baaed5e603f30c10c49bc1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 900200eb1894a4f7065a008aeada9b90e71c6fcd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337974"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575782"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>Funções intrínsecas _InterlockedIncrement
 **Seção específica da Microsoft**  
   
- Fornecer suporte intrínseco do compilador para Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedIncrement](http://msdn.microsoft.com/library/ms683614.aspx) função.  
+ Fornece suporte intrínseco ao compilador para o SDK do Windows Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement) função.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -118,7 +118,7 @@ __int64 _InterlockedIncrement64_nf(
   
 |Intrínseco|Arquitetura|Cabeçalho|  
 |---------------|------------------|------------|  
-|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, x64|\<intrin.h>|  
 |`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|  
   
 ## <a name="remarks"></a>Comentários  

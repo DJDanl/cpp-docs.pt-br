@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 115f5b3d7012ae3e9073d81e0c1005dcb513e045
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb4142b742ae6c2a758c2a2fb5e09c604959433f
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849334"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540356"
 ---
 # <a name="injectstatement"></a>inject_statement
-**Específicas do C++**  
+**Específico do C++**  
   
- Insere seu argumento como texto de origem no cabeçalho da biblioteca de tipos.  
+Insere seu argumento como texto de origem no cabeçalho da biblioteca de tipos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,15 +34,17 @@ ms.locfileid: "33849334"
 inject_statement("source_text")  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `source_text`  
- Texto de origem a ser inserido no arquivo de cabeçalho da biblioteca de tipos.  
+### <a name="parameters"></a>Parâmetros  
+*source_text*  
+Texto de origem a ser inserido no arquivo de cabeçalho da biblioteca de tipos.  
   
 ## <a name="remarks"></a>Comentários  
- O texto é colocado no início da declaração do namespace que envolve o conteúdo da biblioteca de tipos no arquivo de cabeçalho.  
+ 
+O texto é colocado no início da declaração do namespace que envolve o conteúdo da biblioteca de tipos no arquivo de cabeçalho.  
   
- **TÉRMINO específicas do C++**  
+**FIM de específico de C++**  
   
 ## <a name="see-also"></a>Consulte também  
- [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import diretiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

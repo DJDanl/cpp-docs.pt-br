@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8863f3a6c37693ec28f931c2af4cb0d299788daa
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 56297f53aa40741a506ea65761d151dcab98c421
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402657"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571644"
 ---
 # <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
 **Seção específica da Microsoft**  
@@ -38,7 +38,7 @@ BSTR& GetBSTR( );
  O início do `BSTR` encapsulado por `_bstr_t`.  
   
 ## <a name="remarks"></a>Comentários  
- **GetBSTR** afeta todos os `_bstr_t` objetos que compartilham um `BSTR`. Mais de um `_bstr_t` podem compartilhar uma `BSTR` por meio do uso do construtor de cópia e e **operador =**.  
+ **GetBSTR** afeta todos os `_bstr_t` objetos que compartilham um `BSTR`. Mais de um `_bstr_t` podem compartilhar uma `BSTR` por meio do uso do construtor de cópia e **operador =**.  
   
 ## <a name="example"></a>Exemplo  
  Ver [_bstr_t::Assign](../cpp/bstr-t-assign.md) para obter um exemplo de uso **GetBSTR**.  

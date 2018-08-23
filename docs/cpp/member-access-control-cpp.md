@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28f0cedbe20ebea21b3b10e5016605c1bce51383
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0b2cff8470ad11270d2f40abf3d03c708a9d6e87
+ms.sourcegitcommit: 9035b4df448583c195f54318e941284b632dc308
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407381"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571541"
 ---
 # <a name="member-access-control-c"></a>Controle de acesso a membro (C++)
 Controles de acesso permitem que você separe a [pública](../cpp/public-cpp.md) interface de uma classe da [privada](../cpp/private-cpp.md) detalhes de implementação e o [protegido](../cpp/protected-cpp.md) membros que são apenas para usam por classes derivadas. O especificador de acesso se aplica a todos os membros declarados depois dele até que o próximo especificador de acesso seja encontrado.  
@@ -80,28 +80,44 @@ protected:      // Declare protected function for derived classes only.
   
 ```cpp 
 // access_specifiers_for_base_classes.cpp  
-class BaseClass  
-{  
-public:  
-    int PublicFunc();    // Declare a public member.  
-protected:  
+class BaseClass
+{
+public:
+    int PublicFunc(); // Declare a public member.  
+protected:
     int ProtectedFunc(); // Declare a protected member.  
-private:  
-    int PrivateFunc();   // Declare a private member.  
-};  
-  
+private:
+    int PrivateFunc(); // Declare a private member.  
+};
+
 // Declare two classes derived from BaseClass.  
-class DerivedClass1 : public BaseClass  
-{  
-};  
-  
-class DerivedClass2 : private BaseClass  
-{  
-};  
-  
-int main()  
-{  
-}  
+class DerivedClass1 : public BaseClass
+{
+    void foo()
+    {
+        PublicFunc();
+        ProtectedFunc();
+        PrivateFunc(); // function is inaccessible
+    }
+};
+
+class DerivedClass2 : private BaseClass
+{
+    void foo()
+    {
+        PublicFunc();
+        ProtectedFunc();
+        PrivateFunc(); // function is inaccessible
+    }
+};
+
+int main()
+{
+    DerivedClass1 derived_class1;
+    DerivedClass2 derived_class2;
+    derived_class1.PublicFunc();
+    derived_class2.PublicFunc(); // function is inaccessible
+}
 ```  
   
  Em `DerivedClass1`, a função de membro `PublicFunc` é um membro público e `ProtectedFunc` é um membro protegido porque `BaseClass` é uma classe base pública. `PrivateFunc` é particular a `BaseClass`, e inacessível a quaisquer classes derivadas.  
@@ -228,5 +244,6 @@ Acesso ao longo dos caminhos de um gráfico de herança
   
  Na figura, um nome declarado na classe `VBase` é sempre acessado pela classe `RightPath`. O caminho à direita é mais acessível porque `RightPath` declara `VBase` como uma classe base pública, enquanto que `LeftPath` declara `VBase` como particular.  
   
+
 ## <a name="see-also"></a>Consulte também  
  [Referência da linguagem C++](../cpp/cpp-language-reference.md)

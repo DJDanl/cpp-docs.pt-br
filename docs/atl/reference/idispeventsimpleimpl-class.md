@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cea7c17b61f3576ed2a8f1a4daa894f5a30c8b4e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 7793262b60adbbacb2cf7b10245340790b26e805
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027281"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572528"
 ---
 # <a name="idispeventsimpleimpl-class"></a>Classe IDispEventSimpleImpl
 Essa classe fornece implementações do `IDispatch` métodos sem obter informações de tipo de uma biblioteca de tipos.  
@@ -189,7 +189,7 @@ STDMETHOD(GetIDsOfNames)(
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IDispatch::GetIDsOfNames](http://msdn.microsoft.com/6f6cf233-3481-436e-8d6a-51f93bf91619) no Windows SDK.  
+ Ver [IDispatch::GetIDsOfNames](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) no Windows SDK.  
   
 ##  <a name="gettypeinfo"></a>  IDispEventSimpleImpl::GetTypeInfo  
  Essa implementação do `IDispatch::GetTypeInfo` retornará E_NOTIMPL.  
@@ -202,7 +202,7 @@ STDMETHOD(GetTypeInfo)(
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IDispatch:: GetTypeInfo](http://msdn.microsoft.com/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) no Windows SDK.  
+ Ver [IDispatch:: GetTypeInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo) no Windows SDK.  
   
 ##  <a name="gettypeinfocount"></a>  IDispEventSimpleImpl::GetTypeInfoCount  
  Essa implementação do `IDispatch::GetTypeInfoCount` retornará E_NOTIMPL.  
@@ -212,7 +212,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/da876d53-cb8a-465c-a43e-c0eb272e2a12) no Windows SDK.  
+ Ver [IDispatch::GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) no Windows SDK.  
   
 ##  <a name="invoke"></a>  IDispEventSimpleImpl::Invoke  
  Essa implementação do `IDispatch::Invoke` chamadas os manipuladores de eventos no evento listado mapa coletor.  
@@ -230,7 +230,7 @@ STDMETHOD(Invoke)(
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IDispatch:: Invoke](http://msdn.microsoft.com/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
+ Ver [IDispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).  
   
 ##  <a name="unadvise"></a>  IDispEventSimpleImpl::Unadvise  
  Interrompe a conexão com a origem do evento representada por *pUnk*.  

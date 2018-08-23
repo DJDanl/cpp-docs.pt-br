@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2022f979205fed461f02e5886698d9455021a855
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fe616785c63602b5de9702cd3e6c7d80f9872fc
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912843"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42545714"
 ---
 # <a name="namedguids"></a>named_guids
-**Específicas do C++**  
+**Específico do C++**  
   
- Informa ao compilador para definir e inicializar variáveis de GUID em estilo antigo, do formulário **LIBID_MyLib**, **CLSID_MyCoClass**, **IID_MyInterface**, e **DIID _MyDispInterface**.  
+Informa ao compilador para definir e inicializar variáveis GUID no estilo antigo, do formulário `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`, e `DIID_MyDispInterface`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,8 +35,10 @@ named_guids
 ```  
   
 ## <a name="remarks"></a>Comentários  
- **TÉRMINO específicas do C++**  
+
+**FIM de específico de C++**  
   
 ## <a name="see-also"></a>Consulte também  
- [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import diretiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

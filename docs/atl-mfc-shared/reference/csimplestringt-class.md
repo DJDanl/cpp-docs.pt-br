@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da0cd0df9311d11b30c3ef42d8492c71cb78abb4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd96c7028f5f37d617c86e412fa238ccf141cb58
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883626"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42575437"
 ---
 # <a name="csimplestringt-class"></a>Classe de CSimpleStringT
 Essa classe representa um `CSimpleStringT` objeto.  
@@ -467,7 +467,7 @@ PXSTR GetBufferSetLength(int nLength);
   
  A memória de buffer é automaticamente liberada quando o `CSimpleStringT` objeto é destruído.  
   
- Se você controla o tamanho da cadeia de caracteres por conta própria, não não acrescente o caractere nulo de terminação. Você deve especificar o comprimento da cadeia de caracteres final ao liberar o buffer usando `ReleaseBuffer`. Se você acrescentar um caractere nulo de terminação ao chamar `ReleaseBuffer`, passe -1 (o padrão) para o comprimento `ReleaseBuffer`, e `ReleaseBuffer` executará um `strlen` no buffer para determinar seu comprimento.  
+ Se você controla o tamanho da cadeia de caracteres por conta própria, não acrescente o caractere nulo de terminação. Você deve especificar o comprimento da cadeia de caracteres final ao liberar o buffer usando `ReleaseBuffer`. Se você acrescentar um caractere nulo de terminação ao chamar `ReleaseBuffer`, passe -1 (o padrão) para o comprimento `ReleaseBuffer`, e `ReleaseBuffer` executará um `strlen` no buffer para determinar seu comprimento.  
   
  Para obter mais informações sobre a contagem de referência, consulte os seguintes artigos:  
   

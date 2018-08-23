@@ -170,16 +170,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b80dbc4383b18f3e8183ae06d2259398b5e1223
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 04217a03defcecf990a943d5d99f8370a966a5f7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852543"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540943"
 ---
 # <a name="cmfcpopupmenu-class"></a>Classe CMFCPopupMenu
 Implementa a funcionalidade de menu pop-up do Windows e a estende adicionando recursos, como menus destacáveis e dicas de ferramentas.
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.    
   
 ## <a name="syntax"></a>Sintaxe  
   

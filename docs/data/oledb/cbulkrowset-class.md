@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e741055950449ea07c719cf6cd4c33a34d6f43b3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337716"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571370"
 ---
 # <a name="cbulkrowset-class"></a>Classe CBulkRowset
 Busca e manipula as linhas para trabalhar em dados em massa recuperando vários identificadores de linha com uma única chamada.  
@@ -160,7 +160,7 @@ class CBulkRowset : public CRowset<TAccessor>
  [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
 
 ## <a name="addrefrows"></a> Cbulkrowset:: Addrefrows
-Chamadas [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx) para incrementar a contagem de referência para todas as linhas recuperadas no momento do conjunto de linhas em massa.  
+Chamadas [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) para incrementar a contagem de referência para todas as linhas recuperadas no momento do conjunto de linhas em massa.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -246,7 +246,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
  [in] A contagem do número de linhas de indicador para a linha de destino. Se *lSkip* for zero, a primeira linha buscada é a linha indicada. Se *lSkip* é 1, a primeira linha buscada é a linha após a linha indicada. Se *lSkip* é -1, a primeira linha buscada é a linha antes da linha indicada.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Ver [IRowset:: GetData](https://msdn.microsoft.com/library/ms716988.aspx) na *referência do programador do OLE DB*. 
+ Ver [IRowset:: GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) na *referência do programador do OLE DB*. 
 
 ## <a name="movetoratio"></a> Cbulkrowset:: Movetoratio
 Busca linhas a partir de uma posição fracionária no conjunto de linhas.  
@@ -273,10 +273,10 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
  `(nNumerator *  RowsetSize ) / nDenominator`  
   
- Onde `RowsetSize` é o tamanho do conjunto de linhas, medido em linhas. A precisão dessa fórmula depende do provedor específico. Para obter detalhes, consulte [irowsetscroll:: Getrowsatratio](https://msdn.microsoft.com/library/ms709602.aspx) na *referência do programador DB OLE*.   
+ Onde `RowsetSize` é o tamanho do conjunto de linhas, medido em linhas. A precisão dessa fórmula depende do provedor específico. Para obter detalhes, consulte [irowsetscroll:: Getrowsatratio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) na *referência do programador DB OLE*.   
 
 ## <a name="releaserows"></a> Cbulkrowset:: Releaserows
-Chamadas [IRowset:: Releaserows](https://msdn.microsoft.com/library/ms719771.aspx) para diminuir a contagem de referência para todas as linhas recuperadas no momento do conjunto de linhas em massa.  
+Chamadas [IRowset:: Releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) para diminuir a contagem de referência para todas as linhas recuperadas no momento do conjunto de linhas em massa.  
   
 ### <a name="syntax"></a>Sintaxe  
   

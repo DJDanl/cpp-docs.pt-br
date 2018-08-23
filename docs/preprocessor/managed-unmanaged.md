@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 316866ac047b607ec4c92d7c6d4f8ff233ed9a3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 908ed745e82b17dd688f062ac7021c6adf3f4851
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846370"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42544366"
 ---
 # <a name="managed-unmanaged"></a>gerenciado, não gerenciado
 Habilita o controle do nível da função para criar funções como gerenciadas ou o não gerenciadas.  
@@ -35,31 +35,31 @@ Habilita o controle do nível da função para criar funções como gerenciadas 
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      #pragma managed  
+#pragma managed  
 #pragma unmanaged  
 #pragma managed([push,] on | off)  
 #pragma managed(pop)  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O [/clr](../build/reference/clr-common-language-runtime-compilation.md) opção de compilador fornece controle de nível de módulo para compilação funções como gerenciados ou não gerenciados.  
+
+O [/clr](../build/reference/clr-common-language-runtime-compilation.md) opção de compilador fornece controle de nível de módulo para compilar funções ou como gerenciados ou não.  
   
- Uma função não gerenciada será criada para a plataforma nativa e a execução dessa parte do programa será passada para a plataforma nativa pelo Common Language Runtime.  
+Uma função não gerenciada será criada para a plataforma nativa e a execução dessa parte do programa será passada para a plataforma nativa pelo Common Language Runtime.  
   
- Funções são compiladas como gerenciado por padrão quando **/clr** é usado.  
+As funções são criadas como gerenciadas por padrão quando `/clr` é usado.  
   
- Ao aplicar essas pragmas:  
+Ao aplicar esses pragmas:  
   
--   Adicione o pragma que precede uma função mas não em um corpo da função.  
+- Adicione o pragma que precede uma função mas não em um corpo da função.  
   
--   Adicionar o pragma após `#include` instruções. Não use esses pragmas antes `#include` instruções.  
+- Adicione o pragma após `#include` instruções. Não use esses pragmas antes `#include` instruções.  
   
- O compilador ignora o `managed` e `unmanaged` pragmas se **/clr** não é usado na compilação.  
+O compilador ignora os **managed** e **não gerenciado** pragmas se `/clr` não é usado na compilação.  
   
- Quando uma função de modelo é instanciada, o estado de pragma no momento da definição do modelo determina se ela é gerenciada ou não gerenciada.  
+Quando uma função de modelo é instanciada, o estado de pragma no momento da definição do modelo determina se ela é gerenciada ou não gerenciada.  
   
- Para obter mais informações, consulte [inicialização de Assemblies mistos](../dotnet/initialization-of-mixed-assemblies.md).  
+Para obter mais informações, consulte [inicialização de Assemblies mistos](../dotnet/initialization-of-mixed-assemblies.md).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -98,4 +98,5 @@ In unmanaged function.
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

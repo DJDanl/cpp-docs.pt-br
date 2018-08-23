@@ -55,15 +55,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5bab5334cec33a84abe6b28dc40bd57bf8da432b
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: b7eaba589e729230c0392ac67eff2389d430f842
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337470"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573296"
 ---
 # <a name="cdberrorinfo-class"></a>Classe CDBErrorInfo
-Fornece suporte para processamento de erro OLE DB usando o OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) interface.  
+Fornece suporte para processamento de erro OLE DB usando o OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) interface.  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -81,10 +81,10 @@ class CDBErrorInfo
 |||  
 |-|-|  
 |[GetAllErrorInfo](#getallerrorinfo)|Retorna todas as informações de erro contidas em um registro de erro.|  
-|[GetBasicErrorInfo](#getbasicerrorinfo)|Chamadas [IErrorRecords::GetBasicErrorInfo](https://msdn.microsoft.com/library/ms723907.aspx) para retornar informações básicas sobre o erro especificado.|  
-|[GetCustomErrorObject](#getcustomerrorobject)|Chamadas [IErrorRecords::GetCustomErrorObject](https://msdn.microsoft.com/library/ms725417.aspx) para retornar um ponteiro para uma interface em um objeto de erro personalizada.|  
-|[GetErrorInfo](#geterrorinfo)|Chamadas [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/library/ms711230.aspx) para retornar um `IErrorInfo` ponteiro de interface para o registro especificado.|  
-|[GetErrorParameters](#geterrorparameters)|Chamadas [IErrorRecords::GetErrorParameters](https://msdn.microsoft.com/library/ms715793.aspx) para retornar os parâmetros de erro.|  
+|[GetBasicErrorInfo](#getbasicerrorinfo)|Chamadas [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\)) para retornar informações básicas sobre o erro especificado.|  
+|[GetCustomErrorObject](#getcustomerrorobject)|Chamadas [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\)) para retornar um ponteiro para uma interface em um objeto de erro personalizada.|  
+|[GetErrorInfo](#geterrorinfo)|Chamadas [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) para retornar um `IErrorInfo` ponteiro de interface para o registro especificado.|  
+|[GetErrorParameters](#geterrorparameters)|Chamadas [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\)) para retornar os parâmetros de erro.|  
 |[GetErrorRecords](#geterrorrecords)|Obtém os registros de erro para o objeto especificado.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -127,7 +127,7 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
  [out] Um ponteiro para uma cadeia de caracteres que contém o caminho para o arquivo de Ajuda que descreve o erro.  
   
 ### <a name="return-value"></a>Valor de retorno  
- S_OK se for bem-sucedido. Ver [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/library/ms711230.aspx) na *referência do programador DB OLE* para outros valores de retorno.  
+ S_OK se for bem-sucedido. Ver [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) na *referência do programador DB OLE* para outros valores de retorno.  
   
 ### <a name="remarks"></a>Comentários  
  O valor de saída *pbstrDescription* é obtida internamente chamando `IErrorInfo::GetDescription`, que define o valor como NULL se não há suporte para a localidade, ou se ambas as seguintes condições forem verdadeiras:  
@@ -137,7 +137,7 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
 2.  o valor de *lcid* é não é igual ao valor retornado por GetUserDefaultLCID. 
 
 ## <a name="getbasicerrorinfo"></a> Cdberrorinfo:: Getbasicerrorinfo
-Chamadas [IErrorRecords::GetBasicErrorInfo](https://msdn.microsoft.com/library/ms723907.aspx) para retornar informações básicas sobre o erro, como o código de retorno e o número de erro específico do provedor.  
+Chamadas [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\)) para retornar informações básicas sobre o erro, como o código de retorno e o número de erro específico do provedor.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -147,13 +147,13 @@ HRESULT GetBasicErrorInfo(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [IErrorRecords::GetBasicErrorInfo](https://msdn.microsoft.com/library/ms723907.aspx) na *referência do programador do OLE DB*.  
+ Ver [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\)) na *referência do programador do OLE DB*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um HRESULT padrão.  
 
 ## <a name="getcustomerrorobject"></a> Cdberrorinfo:: Getcustomerrorobject
-Chamadas [IErrorRecords::GetCustomErrorObject](https://msdn.microsoft.com/library/ms725417.aspx) para retornar um ponteiro para uma interface em um objeto de erro personalizada.  
+Chamadas [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\)) para retornar um ponteiro para uma interface em um objeto de erro personalizada.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -163,13 +163,13 @@ HRESULT GetCustomErrorObject(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [IErrorRecords::GetCustomErrorObject](https://msdn.microsoft.com/library/ms725417.aspx) na *referência do programador do OLE DB*.  
+ Ver [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\)) na *referência do programador do OLE DB*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um HRESULT padrão.  
 
 ## <a name="geterrorinfo"></a> Cdberrorinfo:: Geterrorinfo
-Chamadas [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/library/ms711230.aspx) para retornar uma [IErrorInfo](https://msdn.microsoft.com/library/ms718112.aspx) ponteiro de interface para o registro especificado.  
+Chamadas [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) para retornar uma [IErrorInfo](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) ponteiro de interface para o registro especificado.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -179,13 +179,13 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/library/ms711230.aspx) na *referência do programador do OLE DB*.  
+ Ver [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) na *referência do programador do OLE DB*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um HRESULT padrão.  
 
 ## <a name="geterrorparameters"></a> Cdberrorinfo:: Geterrorparameters
-Chamadas [IErrorRecords::GetErrorParameters](https://msdn.microsoft.com/library/ms715793.aspx) para retornar os parâmetros de erro.  
+Chamadas [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\)) para retornar os parâmetros de erro.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -195,7 +195,7 @@ HRESULT GetErrorParameters(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [IErrorRecords::GetErrorParameters](https://msdn.microsoft.com/library/ms715793.aspx) na *referência do programador do OLE DB*.  
+ Ver [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\)) na *referência do programador do OLE DB*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um HRESULT padrão.  

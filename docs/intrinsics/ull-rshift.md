@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5248792d04efca518fc425a144c692cd88cf8d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c834b3b2284a7a5ae660870b840d3275c985dc9e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333112"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544376"
 ---
 # <a name="ullrshift"></a>__ull_rshift
 **Seção específica da Microsoft**  
   
- em x64, desloca um valor de 64 bits especificado pelo primeiro parâmetro para a direita em um número de bits especificado pelo segundo parâmetro.  
+ no x64, desloca um valor de 64 bits especificado pelo primeiro parâmetro para a direita em um número de bits especificado pelo segundo parâmetro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,24 +40,24 @@ unsigned __int64 __ull_rshift(
   
 #### <a name="parameters"></a>Parâmetros  
  [in] `mask`  
- O valor de inteiro de 64 bits para deslocar para a direita.  
+ O valor de inteiro de 64 bits a deslocar para a direita.  
   
  [in] `nBit`  
- O número de bits para deslocar, módulo 32 em x86 e módulo 64 em x64.  
+ O número de bits a deslocar, 32 em x86 de módulo e módulo 64 em x64.  
   
 ## <a name="return-value"></a>Valor de retorno  
- A máscara é alterado em `nBit` bits.  
+ A máscara deslocados em `nBit` bits.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__ull_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ull_rshift`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- Se o segundo parâmetro é maior do que 31 x86 (63 em x64), esse número é obtido módulo 32 (64 em x64) para determinar o número de bits para deslocar. O `ull` indica o nome `unsigned long long (unsigned __int64)`.  
+ Se o segundo parâmetro é maior que 31 em x86 (63 em x64), esse número é tirado de módulo 32 (64 em x64) para determinar o número de bits a deslocar. O `ull` o nome indica `unsigned long long (unsigned __int64)`.  
   
 ## <a name="example"></a>Exemplo  
   

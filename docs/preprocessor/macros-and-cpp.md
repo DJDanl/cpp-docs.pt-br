@@ -15,28 +15,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 746b04113e4cb49716e0c1fa6dee69a250bded42
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d81fb8f8f41a57fc2bd1a87c6726b92756bf26b5
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849607"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538566"
 ---
 # <a name="macros-and-c"></a>Macros e C++
 C++ oferece recursos novos. Alguns deles substituem os oferecidos pelo pré-processador ANSI C. Esses novos recursos aprimoram a segurança do tipo e a previsibilidade da linguagem:  
   
--   No C++, objetos declarado como **const** podem ser usados em expressões de constante. Isso permite que os programas declarem as constantes que têm informações de tipo e valor e as enumerações que podem ser exibidas simbolicamente com o depurador. Usar a política de pré-processador `#define` para definir constantes não é um procedimento tão preciso. Nenhum armazenamento é alocado para um **const** , a menos que uma expressão que usa seu endereço encontra-se no programa do objeto.  
+- No C++, os objetos declarados como **const** pode ser usado em expressões de constante. Isso permite que os programas declarem as constantes que têm informações de tipo e valor e as enumerações que podem ser exibidas simbolicamente com o depurador. Usar a política de pré-processador `#define` para definir constantes não é um procedimento tão preciso. Nenhum armazenamento é alocado para um **const** do objeto, a menos que uma expressão que usa seu endereço for encontrada no programa.  
   
--   O recurso da função integrada C++ substitui macros de tipo de função. As vantagens de usar funções integradas sobre as macros são:  
+- O recurso da função integrada C++ substitui macros de tipo de função. As vantagens de usar funções integradas sobre as macros são:  
   
-    -   Segurança de tipo. As funções integradas estão sujeitas à mesma verificação de tipo que as funções normais. As macros não são do tipo seguro.  
+    - Segurança de tipo. As funções integradas estão sujeitas à mesma verificação de tipo que as funções normais. As macros não são do tipo seguro.  
   
-    -   Corrija a manipulação de argumentos que têm efeitos colaterais. As funções integradas avaliam as expressões fornecidas como argumentos antes de inserir o corpo da função. Portanto, não há nenhuma possibilidade de uma expressão com efeitos colaterais não seja segura.  
+    - Corrija a manipulação de argumentos que têm efeitos colaterais. As funções integradas avaliam as expressões fornecidas como argumentos antes de inserir o corpo da função. Portanto, não há nenhuma possibilidade de uma expressão com efeitos colaterais não seja segura.  
   
- Para obter mais informações sobre funções embutidas, consulte [inline, inline, \__forceinline](../cpp/inline-functions-cpp.md).  
+Para obter mais informações sobre as funções embutidas, consulte [inline, inline, \__forceinline](../cpp/inline-functions-cpp.md).  
   
- Para compatibilidade com versões anteriores, todas as instalações de pré-processadores que existiam em ANSI C e nas especificações anteriores do C++ são preservadas para o Microsoft C++.  
+Para compatibilidade com versões anteriores, todas as instalações de pré-processadores que existiam em ANSI C e nas especificações anteriores do C++ são preservadas para o Microsoft C++.  
   
 ## <a name="see-also"></a>Consulte também  
- [Macros predefinidas](../preprocessor/predefined-macros.md)   
- [Macros (C/C++)](../preprocessor/macros-c-cpp.md)
+ 
+[Macros predefinidas](../preprocessor/predefined-macros.md)   
+[Macros (C/C++)](../preprocessor/macros-c-cpp.md)

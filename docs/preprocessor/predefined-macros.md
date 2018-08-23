@@ -1,5 +1,5 @@
 ---
-title: Predefinidos Macros | Microsoft Docs
+title: Macros predefinidas | Microsoft Docs
 ms.custom: update_every_version
 ms.date: 04/30/2018
 ms.technology:
@@ -152,24 +152,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 692279d8c19f2a03dcd9388eb47a640dcb00658a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7c2419925896112eb235bcdfe77d9916373f0091
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32425238"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42545717"
 ---
 # <a name="predefined-macros"></a>Macros predefinidas
 
-O compilador do Visual C++ predefine determinadas macros de pré-processador, dependendo da linguagem (C ou C++), o destino de compilação e as opções de compilador escolhido.
+O compilador do Visual C++ predefine determinadas macros de pré-processador, dependendo do idioma (C ou C++), o destino de compilação e as opções do compilador escolhida.
 
-Visual C++ oferece suporte as macros de pré-processador predefinidas necessárias especificadas pelo padrão ANSI/ISO C99 e o C++ 14 padrão ISO. A implementação também oferece suporte a várias mais macros de pré-processador específicas da Microsoft. Algumas macros são definidas apenas para ambientes de desenvolvimento específico ou opções do compilador. A menos que indicado, as macros são definidas em uma unidade de conversão como se eles foram especificados como **/D** argumentos de opção de compilador. Quando definido, as macros são expandidas para os valores especificados no pré-processador antes da compilação. As macros predefinidas não usam argumentos e não podem ser redefinidas.
+Visual C++ oferece suporte as macros de pré-processador predefinidas necessárias especificadas pelo padrão ANSI/ISO C99 e ISO padrão c++14. A implementação também dá suporte a várias macros de pré-processador de específico da Microsoft mais. Algumas macros são definidas apenas para ambientes de compilação específica ou opções do compilador. A menos que indicado, as macros são definidas em toda uma unidade de conversão, como se eles foram especificados como **/D** argumentos de opção de compilador. Quando definido, as macros são expandidas para os valores especificados pelo pré-processador antes da compilação. Macros predefinidas não usam argumentos e não podem ser redefinidas.
 
-## <a name="standard-predefined-identifier"></a>Padrão de identificador predefinida
+## <a name="standard-predefined-identifier"></a>Padrão de identificador predefinido
 
-O compilador dá suporte a esse identificador predefinido especificado pelo C99 ISO e ISO C++ 11.
+O compilador dá suporte a esse identificador predefinido, especificado pelo ISO C99 e ISO c++11.
 
-- **&#95;&#95;Func&#95; &#95;**  o nome não qualificado e acrescido da função delimitador como um local de função `static const` matriz de `char`.
+- **&#95;&#95;Func&#95; &#95;**  o nome qualificado e não adornado da função como um local de função **const estático** matriz de **char**.
 
     ```cpp
     void example(){
@@ -177,39 +177,39 @@ O compilador dá suporte a esse identificador predefinido especificado pelo C99 
     } // prints "example"
     ```
 
-## <a name="standard-predefined-macros"></a>Macros predefinidas padrão
+## <a name="standard-predefined-macros"></a>Padrão de macros predefinidas
 
-O compilador dá suporte a essas macros predefinidas especificadas por C99 o ISO e ISO C++ 17 padrões.
+O compilador dá suporte a essas macros predefinidas especificadas pelo ISO C99 e ISO padrões do c++17.
 
 - **&#95;&#95;cplusplus** definido como um valor de literal de inteiro quando a unidade de tradução é compilada como C++. Caso contrário, indefinido.
 
-- **&#95;&#95;DATA&#95; &#95;**  a data de compilação do arquivo de origem atual. A data é uma cadeia de caracteres constante literal do formulário *Mmm dd aaaa*. O nome do mês *Mmm* é o mesmo que o nome do mês abreviado no datas geradas pela biblioteca de tempo de execução C [asctime](../c-runtime-library/reference/asctime-wasctime.md) função. O primeiro caractere da data *dd* é um espaço, se o valor for menor que 10. Essa macro é sempre definida.
+- **&#95;&#95;DATA&#95; &#95;**  a data de compilação do arquivo de origem atual. A data é uma cadeia de caracteres de tamanho constante literal do formulário *Mmm dd aaaa*. O nome do mês *Mmm* é o mesmo que o nome do mês abreviado no datas geradas pela biblioteca de tempo de execução do C [asctime](../c-runtime-library/reference/asctime-wasctime.md) função. O primeiro caractere da data *dd* é um espaço, se o valor for menor que 10. Essa macro é sempre definida.
 
-- **&#95;&#95;ARQUIVO&#95; &#95;**  o nome do arquivo de origem atual. **&#95;&#95;ARQUIVO&#95; &#95;**  se expande para uma cadeia de caracteres literal. Para garantir que o caminho completo para o arquivo é exibido, use [/FC (completo caminho do arquivo de código fonte no diagnóstico)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md). Essa macro é sempre definida.
+- **&#95;&#95;ARQUIVO&#95; &#95;**  o nome do arquivo de origem atual. **&#95;&#95;ARQUIVO&#95; &#95;**  expande para uma cadeia de caracteres literal. Para garantir que o caminho completo para o arquivo é exibido, use [/FC (caminho completo da fonte de código de arquivo no diagnóstico)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md). Essa macro é sempre definida.
 
-- **&#95;&#95;LINHA&#95; &#95;**  definido como o número de linha de número inteiro no arquivo de origem atual. O valor da **&#95; &#95;linha&#95; &#95;** macro pode ser alterada usando um `#line` diretiva. Essa macro é sempre definida.
+- **&#95;&#95;LINHA&#95; &#95;**  definido como o número de linha de número inteiro no arquivo de origem atual. O valor da **&#95; &#95;linha&#95; &#95;** macro pode ser alterada usando uma `#line` diretiva. Essa macro é sempre definida.
 
-- **&#95;&#95;STDC&#95; &#95;**  definido como 1, apenas quando compilado como C e se o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção de compilador é especificada. Caso contrário, indefinido.
+- **&#95;&#95;STDC&#95; &#95;**  definido como 1, apenas quando compilado como C e, se o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção de compilador é especificada. Caso contrário, indefinido.
 
-- **&#95;&#95;STDC&#95;hospedado&#95; &#95;**  definido como 1 se a implementação é um *hospedado implementação*, que oferece suporte a biblioteca inteira de padrão necessária. Caso contrário, é definido como 0.
+- **&#95;&#95;STDC&#95;HOSTED&#95; &#95;**  definido como 1 se a implementação é um *hospedado implementação*, um que ofereça suporte a biblioteca inteira de padrão necessária. Caso contrário, é definido como 0.
 
-- **&#95;&#95;STDCPP&#95;THREADS&#95; &#95;**  definido como 1 se e somente se um programa pode ter mais de um thread de execução e compilado como C++. Caso contrário, indefinido.
+- **&#95;&#95;STDCPP&#95;THREADS&#95; &#95;**  definido como 1 se e somente se um programa pode ter mais de um thread de execução e compilada como C++. Caso contrário, indefinido.
 
-- **&#95;&#95;TEMPO&#95; &#95;**  a hora da conversão da unidade de tradução pré-processados. O tempo é uma cadeia de caracteres literal do formulário *hh*, o mesmo que o tempo retornado pela biblioteca de tempo de execução do C [asctime](../c-runtime-library/reference/asctime-wasctime.md) função. Essa macro é sempre definida.
+- **&#95;&#95;TEMPO de&#95; &#95;**  o tempo de tradução de unidade de tradução pré-processado. O tempo é uma cadeia de caracteres literal do formulário *hh*, o mesmo que a hora retornada pela biblioteca em tempo de execução C [asctime](../c-runtime-library/reference/asctime-wasctime.md) função. Essa macro é sempre definida.
 
-## <a name="microsoft-specific-predefined-macros"></a>Macros predefinidas específicas da Microsoft
+## <a name="microsoft-specific-predefined-macros"></a>Macros predefinidas de específico da Microsoft
 
 Microsoft Visual C++ dá suporte a essas macros predefinidas adicionais.
 
-- **&#95;&#95;ATOM&#95; &#95;**  definido como 1 quando o [/favor:ATOM](../build/reference/favor-optimize-for-architecture-specifics.md) é definir a opção de compilador e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
+- **&#95;&#95;ATOM&#95; &#95;**  definido como 1 quando o [/favor:ATOM](../build/reference/favor-optimize-for-architecture-specifics.md) opção de compilador é definida e o alvo do compilador é x86 ou x64. Caso contrário, indefinido.
 
-- **&#95;&#95;AVX&#95; &#95;**  definido como 1 quando o [/arch: avx](../build/reference/arch-x86.md) ou [/arch: avx2](../build/reference/arch-x86.md) opções do compilador são definidas e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
+- **&#95;&#95;AVX&#95; &#95;**  definido como 1 quando o [/arch: avx](../build/reference/arch-x86.md) ou [/arch:avx2](../build/reference/arch-x86.md) opções do compilador são definidas e o alvo do compilador é x86 ou x64. Caso contrário, indefinido.
 
-- **&#95;&#95;AVX2&#95; &#95;**  definido como 1 quando o [/arch: avx2](../build/reference/arch-x86.md) é definir a opção de compilador e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
+- **&#95;&#95;AVX2&#95; &#95;**  definido como 1 quando o [/arch:avx2](../build/reference/arch-x86.md) opção de compilador é definida e o alvo do compilador é x86 ou x64. Caso contrário, indefinido.
 
-- **&#95;CHAR&#95;não ASSINADOS** definido como 1 se o padrão `char` tipo não está assinado. Isso é definido quando o [/J (char padrão é de tipo não assinado)](../build/reference/j-default-char-type-is-unsigned.md) é definir a opção de compilador. Caso contrário, indefinido.
+- **&#95;CHAR&#95;não assinado** definido como 1 se o padrão **char** tipo é não assinado. Isso é definido quando o [/J (char padrão não é do tipo assinado)](../build/reference/j-default-char-type-is-unsigned.md) é definir a opção de compilador. Caso contrário, indefinido.
 
-- **&#95;&#95;CLR&#95;VER** definido como um literal de inteiro que representa a versão do common language runtime usado quando o aplicativo foi compilado. O valor é codificado no formato `Mmmbbbbb`, onde `M` é a versão principal do tempo de execução, `mm` é a versão secundária do tempo de execução, e `bbbbb` é o número de compilação. **&#95;&#95;CLR&#95;VER** é definido se o [/clr](../build/reference/clr-common-language-runtime-compilation.md) opção de compilador está definida. Caso contrário, indefinido.
+- **&#95;&#95;CLR&#95;VIDOR** definido como um literal de inteiro que representa a versão do common language runtime usado quando o aplicativo foi compilado. O valor é codificado no formulário `Mmmbbbbb`, onde `M` é a versão principal do tempo de execução `mm` é a versão secundária do tempo de execução, e `bbbbb` é o número de compilação. **&#95;&#95;CLR&#95;VIDOR** está definido se o [/clr](../build/reference/clr-common-language-runtime-compilation.md) opção de compilador está definida. Caso contrário, indefinido.
 
     ```cpp
     // clr_ver.cpp
@@ -220,11 +220,11 @@ Microsoft Visual C++ dá suporte a essas macros predefinidas adicionais.
     }
     ```
 
-- **&#95;CONTROLE&#95;fluxo&#95;proteger** definido como 1 quando o [/Guard: CF (habilitar o controle de fluxo de proteção)](../build/reference/guard-enable-control-flow-guard.md) opção de compilador está definida. Caso contrário, indefinido.
+- **&#95;CONTROLE de&#95;fluxo&#95;proteger** definido como 1 quando o [/Guard: CF (Habilitar controle de fluxo de proteção)](../build/reference/guard-enable-control-flow-guard.md) é definir a opção de compilador. Caso contrário, indefinido.
 
-- **&#95;&#95;CONTADOR&#95; &#95;**  expande para um literal de inteiro que começa em 0 e é incrementada em 1 toda vez que ele é usado em um arquivo de origem ou incluídos cabeçalhos do arquivo de origem. **&#95;&#95;CONTADOR&#95; &#95;**  lembra seu estado quando você usar cabeçalhos pré-compilados. Essa macro é sempre definida.
+- **&#95;&#95;CONTADOR de&#95; &#95;**  expande para um inteiro literal que começa em 0 e é incrementado em 1 sempre que ele é usado em um arquivo de origem ou incluíam cabeçalhos do arquivo de origem. **&#95;&#95;CONTADOR de&#95; &#95;**  lembra seu estado quando você usar cabeçalhos pré-compilados. Essa macro é sempre definida.
 
-  Este exemplo usa `__COUNTER__` atribuir identificadores exclusivos para três objetos diferentes do mesmo tipo. O `exampleClass` construtor aceita um inteiro como um parâmetro. Em `main`, o aplicativo declara três objetos do tipo `exampleClass`usando `__COUNTER__` como o parâmetro do identificador exclusivo:
+  Este exemplo usa `__COUNTER__` para atribuir identificadores exclusivos para três objetos diferentes do mesmo tipo. O `exampleClass` construtor aceita um inteiro como um parâmetro. Na `main`, o aplicativo declara três objetos do tipo `exampleClass`, usando `__COUNTER__` como o parâmetro identificador exclusivo:
 
     ```cpp
     // macro__COUNTER__.cpp
@@ -266,7 +266,7 @@ Microsoft Visual C++ dá suporte a essas macros predefinidas adicionais.
     }
     ```
 
-- **&#95;&#95;cplusplus&#95;cli** definido como o valor de literal de inteiro 200406 quando compilado como C++ e um [/clr](../build/reference/clr-common-language-runtime-compilation.md) opção de compilador está definida. Caso contrário, indefinido. Quando definido,  **&#95; &#95;cplusplus&#95;cli** está em vigor em toda a unidade de tradução.
+- **&#95;&#95;cplusplus&#95;cli** definido como o valor de literal de inteiro 200406 quando compilada como C++ e um [/clr](../build/reference/clr-common-language-runtime-compilation.md) opção de compilador está definida. Caso contrário, indefinido. Quando definido,  **&#95; &#95;cplusplus&#95;cli** está em vigor em toda a unidade de tradução.
 
     ```cpp
     // cplusplus_cli.cpp
@@ -281,27 +281,27 @@ Microsoft Visual C++ dá suporte a essas macros predefinidas adicionais.
     }
     ```
 
-- **&#95;&#95;cplusplus&#95;winrt** definido como o valor de literal de inteiro 201009 quando compilado como C++ e o [/ZW (compilação de tempo de execução do Windows)](../build/reference/zw-windows-runtime-compilation.md) opção de compilador está definida. Caso contrário, indefinido.
+- **&#95;&#95;cplusplus&#95;winrt** definido como o valor de literal de inteiro 201009 quando compilada como C++ e o [/ZW (compilação de tempo de execução do Windows)](../build/reference/zw-windows-runtime-compilation.md) opção de compilador está definida. Caso contrário, indefinido.
 
 - **&#95;CPPRTTI** definido como 1 se o [/GR (Habilitar informações de tipo em tempo de execução)](../build/reference/gr-enable-run-time-type-information.md) é definir a opção de compilador. Caso contrário, indefinido.
 
-- **&#95;CPPUNWIND** definido como 1 se um ou mais o [/GX (habilitar tratamento de exceção)](../build/reference/gx-enable-exception-handling.md), [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md), ou [/EH (modelo de tratamento de exceção)](../build/reference/eh-exception-handling-model.md) opções do compilador são definidas. Caso contrário, indefinido.
+- **&#95;CPPUNWIND** definido como 1 se uma ou mais da [/GX (habilitar tratamento de exceções)](../build/reference/gx-enable-exception-handling.md), [/clr (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md), ou [/EH (modelo de tratamento de exceção)](../build/reference/eh-exception-handling-model.md) opções do compilador são definidas. Caso contrário, indefinido.
 
-- **&#95;Depurar** definido como 1 quando o [/LDd](../build/reference/md-mt-ld-use-run-time-library.md), [/MDd](../build/reference/md-mt-ld-use-run-time-library.md), ou [/MTd](../build/reference/md-mt-ld-use-run-time-library.md) opção de compilador está definida. Caso contrário, indefinido.
+- **&#95;Depurar** definido como 1 quando o [/LDd](../build/reference/md-mt-ld-use-run-time-library.md), [/MDd](../build/reference/md-mt-ld-use-run-time-library.md), ou [/MTd](../build/reference/md-mt-ld-use-run-time-library.md) é definir a opção de compilador. Caso contrário, indefinido.
 
-- **&#95;DLL** definido como 1 quando o [/MD](../build/reference/md-mt-ld-use-run-time-library.md) ou [/MDd](../build/reference/md-mt-ld-use-run-time-library.md) opção de compilador (DLL multithread) está definida. Caso contrário, indefinido.
+- **&#95;DLL** definido como 1 quando o [/MD](../build/reference/md-mt-ld-use-run-time-library.md) ou [/MDd](../build/reference/md-mt-ld-use-run-time-library.md) opção do compilador (Multithreaded DLL) está definida. Caso contrário, indefinido.
 
-- **&#95;&#95;FUNCDNAME&#95; &#95;**  definido como uma cadeia de caracteres literal que contém o [decorado nome](../build/reference/decorated-names.md) da função de delimitador. A macro é definida apenas dentro de uma função. O **&#95; &#95;FUNCDNAME&#95; &#95;** macro não será expandida se você usar o [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) ou [/p](../build/reference/p-preprocess-to-a-file.md) opção de compilador.
+- **&#95;&#95;FUNCDNAME&#95; &#95;**  definido como uma cadeia de caracteres literal que contém o [nome decorado](../build/reference/decorated-names.md) da função. A macro é definida apenas dentro de uma função. O **&#95; &#95;FUNCDNAME&#95; &#95;** macro não será expandida se você usar o [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) ou [p](../build/reference/p-preprocess-to-a-file.md) opção de compilador.
 
    Este exemplo usa o `__FUNCDNAME__`, `__FUNCSIG__`, e `__FUNCTION__` macros para exibir informações de função.
 
    [!code-cpp[NVC_Predefined_Macros_Examples#1](../preprocessor/codesnippet/CPP/predefined-macros_1.cpp)]
 
-- **&#95;&#95;FUNCSIG&#95; &#95;**  definido como uma cadeia de caracteres literal que contém a assinatura da função de delimitador. A macro é definida apenas dentro de uma função. O **&#95; &#95;FUNCSIG&#95; &#95;** macro não será expandida se você usar o [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) ou [/p](../build/reference/p-preprocess-to-a-file.md) opção de compilador. Quando compilado para um destino de 64 bits, a convenção de chamada é `__cdecl` por padrão. Para obter um exemplo de uso, consulte o `__FUNCDNAME__` macro.
+- **&#95;&#95;FUNCSIG&#95; &#95;**  definido como uma cadeia de caracteres literal que contém a assinatura da função. A macro é definida apenas dentro de uma função. O **&#95; &#95;FUNCSIG&#95; &#95;** macro não será expandida se você usar o [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) ou [p](../build/reference/p-preprocess-to-a-file.md) opção de compilador. Quando compilada para um destino de 64 bits, a convenção de chamada é `__cdecl` por padrão. Para obter um exemplo de uso, consulte o `__FUNCDNAME__` macro.
 
-- **&#95;&#95;FUNÇÃO&#95; &#95;**  definido como uma cadeia de caracteres literal que contém o nome não decorado da função de delimitador. A macro é definida apenas dentro de uma função. O **&#95; &#95;função&#95; &#95;** macro não será expandida se você usar o [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) ou [/p](../build/reference/p-preprocess-to-a-file.md) opção de compilador. Para obter um exemplo de uso, consulte o `__FUNCDNAME__` macro.
+- **&#95;&#95;FUNÇÃO&#95; &#95;**  definido como uma cadeia de caracteres literal que contém o nome não decorado da função. A macro é definida apenas dentro de uma função. O **&#95; &#95;função&#95; &#95;** macro não será expandida se você usar o [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) ou [p](../build/reference/p-preprocess-to-a-file.md) opção de compilador. Para obter um exemplo de uso, consulte o `__FUNCDNAME__` macro.
 
-- **&#95;INTEGRAL&#95;MAX&#95;BITS** definido como o valor de literal de inteiro 64, o tamanho máximo (em bits) para um tipo de vetor não integral. Essa macro é sempre definida.
+- **&#95;INTEGRAL&#95;MAX&#95;BITS** definidos como o valor de literal de inteiro 64, o tamanho máximo (em bits) para um tipo de integral não vetor. Essa macro é sempre definida.
 
    ```cpp
    // integral_max_bits.cpp
@@ -311,84 +311,84 @@ Microsoft Visual C++ dá suporte a essas macros predefinidas adicionais.
    }
    ```
 
-- **&#95;&#95;INTELLISENSE&#95; &#95;**  definido como passar 1 durante um compilador IntelliSense no Visual Studio IDE. Caso contrário, indefinido. Você pode usar essa macro para proteger o código, o compilador do IntelliSense não entender ou usá-lo para alternar entre a compilação e compilador do IntelliSense. Para obter mais informações, consulte [dicas de solução de problemas de lentidão IntelliSense](https://blogs.msdn.microsoft.com/vcblog/2011/03/29/troubleshooting-tips-for-intellisense-slowness/).
+- **&#95;&#95;INTELLISENSE&#95; &#95;**  definido como 1 durante um compilador IntelliSense passe no IDE do Visual Studio. Caso contrário, indefinido. Você pode usar essa macro para proteger o código, o compilador do IntelliSense não compreender ou usá-lo para alternar entre a compilação e o compilador do IntelliSense. Para obter mais informações, consulte [dicas de solução de problemas de lentidão de IntelliSense](https://blogs.msdn.microsoft.com/vcblog/2011/03/29/troubleshooting-tips-for-intellisense-slowness/).
 
-- **&#95;ISO&#95;volátil** definido como 1 se o [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) opção de compilador está definida. Caso contrário, indefinido.
+- **&#95;ISO&#95;volátil** definido como 1 se o [/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md) opção de compilador está definida. Caso contrário, indefinido.
 
 - **&#95;KERNEL&#95;modo** definido como 1 se o [/kernel (criar binário do modo Kernel)](../build/reference/kernel-create-kernel-mode-binary.md) opção de compilador está definida. Caso contrário, indefinido.
 
-- **&#95;M&#95;AMD64** definido como 100 para compilações do valor o literal de inteiro que processadores x64 de destino. Caso contrário, indefinido.
+- **&#95;M&#95;AMD64** definido como o literal inteiro valor 100 para compilações que processadores x64. Caso contrário, indefinido.
 
-- **&#95;M&#95;ARM** definido como o valor de literal de inteiro 7 para compilações que processadores ARM de destino. Caso contrário, indefinido.
+- **&#95;M&#95;ARM** definido como o valor de literal de inteiro 7 para compilações destinados a processadores ARM. Caso contrário, indefinido.
 
-- **&#95;M&#95;ARM&#95;ARMV7VE** definido como 1 quando o [/arch:ARMv7VE](../build/reference/arch-arm.md) opção de compilador está definida para compilações que processadores ARM de destino. Caso contrário, indefinido.
+- **&#95;M&#95;ARM&#95;ARMV7VE** definido como 1 quando o [arch:armv7ve](../build/reference/arch-arm.md) opção de compilador é definida para compilações destinados a processadores ARM. Caso contrário, indefinido.
 
 - **&#95;M&#95;ARM&#95;FP** definido como um valor de literal de inteiro que indica qual [/arch](../build/reference/arch-arm.md) opção de compilador foi definida, se o destino de compilação é um processador ARM. Caso contrário, indefinido.
 
-  - No intervalo 30 a 39 Se nenhum **/arch** ARM opção foi especificada, indicando que a arquitetura de padrão para ARM foi definido (`VFPv3`).
+  - No intervalo 30-39, se nenhum `/arch` ARM opção foi especificada, indicando a arquitetura padrão para ARM foi definido (`VFPv3`).
 
-  - No intervalo de 40 49 se **/arch:VFPv4** foi definido.
+  - No intervalo 40-49, se `/arch:VFPv4` foi definido.
 
-  - Consulte [/arch (ARM)](../build/reference/arch-arm.md) para obter mais informações.
+  - Ver [/arch (ARM)](../build/reference/arch-arm.md) para obter mais informações.
 
-- **&#95;M&#95;ARM64** definido como 1 para compilações que processadores ARM de 64 bits de destino. Caso contrário, indefinido.
+- **&#95;M&#95;ARM64** definido como 1 para compilações destinados a processadores ARM de 64 bits. Caso contrário, indefinido.
 
-- **&#95;M&#95;CEE** definido como 001 se qualquer [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) opção de compilador está definida. Caso contrário, indefinido.
+- **&#95;M&#95;CEE** definido como 001 se qualquer [/clr (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md) opção de compilador está definida. Caso contrário, indefinido.
 
-- **&#95;M&#95;CEE&#95;PURO** preteridos a partir do Visual Studio 2015. Definido como 001 se o [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md) é definir a opção de compilador. Caso contrário, indefinido.
+- **&#95;M&#95;CEE&#95;PURE** preterido a partir do Visual Studio 2015. Definido como 001 se o [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md) é definir a opção de compilador. Caso contrário, indefinido.
 
-- **&#95;M&#95;CEE&#95;seguro** preteridos a partir do Visual Studio 2015. Definido como 001 se o [/CLR: safe](../build/reference/clr-common-language-runtime-compilation.md) opção de compilador está definida. Caso contrário, indefinido.
+- **&#95;M&#95;CEE&#95;seguro** preterido a partir do Visual Studio 2015. Definido como 001 se o [/CLR: safe](../build/reference/clr-common-language-runtime-compilation.md) é definir a opção de compilador. Caso contrário, indefinido.
 
-- **&#95;M&#95;FP&#95;EXCEPT** definido como 1 se o [/fp: exceto](../build/reference/fp-specify-floating-point-behavior.md) ou [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md) opção de compilador está definida. Caso contrário, indefinido.
+- **&#95;M&#95;FP&#95;EXCEPT** definido como 1 se o [/fp: exceto](../build/reference/fp-specify-floating-point-behavior.md) ou [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md) opção do compilador está definida. Caso contrário, indefinido.
 
-- **&#95;M&#95;FP&#95;rápido** definido como 1 se o [Fast](../build/reference/fp-specify-floating-point-behavior.md) opção de compilador está definida. Caso contrário, indefinido.
+- **&#95;M&#95;FP&#95;rápido** definido como 1 se o [Fast](../build/reference/fp-specify-floating-point-behavior.md) opção do compilador está definida. Caso contrário, indefinido.
 
-- **&#95;M&#95;FP&#95;PRECISE** definido como 1 se o [/fp: preciso](../build/reference/fp-specify-floating-point-behavior.md) opção de compilador está definida. Caso contrário, indefinido.
+- **&#95;M&#95;FP&#95;PRECISE** definido como 1 se o [/fp: preciso](../build/reference/fp-specify-floating-point-behavior.md) opção do compilador está definida. Caso contrário, indefinido.
 
-- **&#95;M&#95;FP&#95;STRICT** definido como 1 se o [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md) opção de compilador está definida. Caso contrário, indefinido.
+- **&#95;M&#95;FP&#95;STRICT** definido como 1 se o [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md) opção do compilador está definida. Caso contrário, indefinido.
 
-- **&#95;M&#95;IX86** definido como o literal de inteiro valor 600 para compilações que processadores x86 de destino. Esta macro não está definida para x64 ou destinos de compilação do ARM.
+- **&#95;M&#95;IX86** definido como o literal inteiro valor 600 para compilações que processadores x86. Essa macro não está definida para x64 ou destinos de compilação do ARM.
 
-- **&#95;M&#95;IX86&#95;FP** definido como um valor de literal de inteiro que indica o [/arch](../build/reference/arch-arm.md) opção de compilador conjunto ou o padrão. Esta macro sempre é definida quando o destino de compilação é uma arquitetura x86 processador. Caso contrário, indefinido. Quando definido, o valor é:
+- **&#95;M&#95;IX86&#95;FP** definido como um valor de literal de inteiro que indica a [/arch](../build/reference/arch-arm.md) opção de compilador que era conjunto ou padrão. Essa macro é sempre definida quando o destino de compilação é x86 processador. Caso contrário, indefinido. Quando definido, o valor é:
 
-  - 0 se o **/arch:IA32** opção de compilador foi definida.
+  - 0 se o `/arch:IA32` opção do compilador foi definida.
 
-  - 1 se o **/arch:SSE** opção de compilador foi definida.
+  - 1 se o `/arch:SSE` opção do compilador foi definida.
 
-  - 2 se o **/arch: SSE2**, **/arch: avx** ou **/arch: avx2** opção de compilador foi definida. Esse valor é o padrão se um **/arch** opção de compilador não foi especificada. Quando **/arch: avx** for especificado, a macro **&#95; &#95;AVX&#95; &#95;** também está definido. Quando **/arch: avx2** for especificado, ambos **&#95; &#95;AVX&#95; &#95;** e **&#95; &#95;AVX2&#95; &#95;** também são definido.
+  - 2 se a `/arch:SSE2`, `/arch:AVX` ou `/arch:AVX2` opção do compilador foi definida. Esse valor é o padrão se um `/arch` opção de compilador não foi especificada. Quando `/arch:AVX` for especificado, a macro **&#95; &#95;AVX&#95; &#95;** também é definida. Quando `/arch:AVX2` for especificado, ambos **&#95; &#95;AVX&#95; &#95;** e **&#95; &#95;AVX2&#95; &#95;** também estão definidos.
 
-  - Consulte [/arch (x86)](../build/reference/arch-x86.md) para obter mais informações.
+  - Ver [/arch (x86)](../build/reference/arch-x86.md) para obter mais informações.
 
-- **&#95;M&#95;X64** definido como 100 para compilações do valor o literal de inteiro que processadores x64 de destino. Caso contrário, indefinido.
+- **&#95;M&#95;X64** definido como o literal inteiro valor 100 para compilações que processadores x64. Caso contrário, indefinido.
 
-- **&#95;GERENCIADO** definido como 1 quando o [/clr](../build/reference/clr-common-language-runtime-compilation.md) opção de compilador está definida. Caso contrário, indefinido.
+- **&#95;MANAGED** definido como 1 quando o [/clr](../build/reference/clr-common-language-runtime-compilation.md) é definir a opção de compilador. Caso contrário, indefinido.
 
-- **&#95;MSC&#95;BUILD** definido como um literal de inteiro que contém o elemento de número de revisão do número de versão do compilador. O número de revisão é o quarto elemento do número de versão delimitados. Por exemplo, se o número de versão do compilador Visual C++ é 15.00.20706.01, o  **&#95;MSC&#95;BUILD** macro é avaliado como 1. Essa macro é sempre definida.
+- **&#95;MSC&#95;COMPILAR** definido como um literal de inteiro que contém o elemento de número de revisão do número de versão do compilador. O número de revisão é o quarto elemento do número de versão delimitado por período. Por exemplo, se o número de versão do compilador Visual C++ for 15.00.20706.01, a  **&#95;MSC&#95;COMPILAR** macro é avaliada como 1. Essa macro é sempre definida.
 
-- **&#95;MSC&#95;extensões** definido como 1 se o [/Ze (habilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) opção de compilador for definida, que é o padrão. Caso contrário, indefinido.
+- **&#95;MSC&#95;extensões** definido como 1 se o [/Ze (habilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) opção de compilador for definida, o que é o padrão. Caso contrário, indefinido.
 
-- **&#95;MSC&#95;completo&#95;VER** definido como um literal de inteiro que codifica as principais, secundária e criar elementos de número do número de versão do compilador. O número principal é o primeiro elemento do número de versão delimitados, o número secundário é o segundo elemento e o número de compilação é o terceiro elemento. Por exemplo, se o número de versão do compilador Visual C++ é 15.00.20706.01, o  **&#95;MSC&#95;completo&#95;VER** macro é avaliada como 150020706. Insira **cl /?** na linha de comando para exibir o número da versão do compilador. Essa macro é sempre definida.
+- **&#95;MSC&#95;completo&#95;VIDOR** definido como um literal de inteiro que codifica as principais, secundária e criar o número de elementos do número de versão do compilador. O número principal é o primeiro elemento do número de versão delimitado por ponto, o número secundário é o segundo elemento e o número de compilação é o terceiro elemento. Por exemplo, se o número de versão do compilador Visual C++ for 15.00.20706.01, a  **&#95;MSC&#95;completo&#95;VIDOR** macro será avaliada em 150020706. Insira `cl /?` na linha de comando para exibir o número de versão do compilador. Essa macro é sempre definida.
 
-- **&#95;MSC&#95;VER** definido como um literal de inteiro que codifica os elementos principais e secundários número do número de versão do compilador. O número principal é o primeiro elemento do número de versão delimitada por ponto e o número secundário é o segundo elemento. Por exemplo, se o número de versão do compilador Visual C++ é 17.00.51106.1, o  **&#95;MSC&#95;VER** macro é avaliada como 1700. Insira **cl /?** na linha de comando para exibir o número da versão do compilador. Essa macro é sempre definida.
+- **&#95;MSC&#95;VIDOR** definido como um literal de inteiro que codifica os elementos de número principais e secundárias do número de versão do compilador. O número principal é o primeiro elemento do número de versão delimitado por ponto e o número secundário é o segundo elemento. Por exemplo, se o número de versão do compilador Visual C++ for 17.00.51106.1, a  **&#95;MSC&#95;VIDOR** macro será avaliada em 1700. Insira `cl /?` na linha de comando para exibir o número de versão do compilador. Essa macro é sempre definida.
 
-   |Versão do Visual Studio|&AMP;#95;MSC&AMP;#95;VER|
+   |Versão do Visual Studio|&AMP;#95;MSC&AMP;#95;VIDOR|
    |-|-|
    |Visual Studio 6.0|1200|
-   |O Visual Studio .NET 2002 (7.0)|1300|
-   |O Visual Studio .NET 2003 (7.1)|1310|
-   |O Visual Studio 2005 (8.0)|1400|
+   |Visual Studio .NET 2002 (7.0)|1300|
+   |Visual Studio .NET 2003 (7.1)|1310|
+   |Visual Studio 2005 (8.0)|1400|
    |O Visual Studio 2008 (9.0)|1500|
    |Visual Studio 2010 (10.0)|1600|
-   |O Visual Studio 2012 (11.0)|1700|
+   |Visual Studio 2012 (11.0)|1700|
    |Visual Studio 2013 (12.0)|1800|
    |Visual Studio 2015 (14.0)|1900|
-   |RTW de 2017 do Visual Studio (15.0)|1910|
+   |Visual Studio 2017 RTW (15.0)|1910|
    |Visual Studio 2017 versão 15.3|1911|
    |Visual Studio 2017 versão 15.5|1912|
    |Visual Studio 2017 versão 15.6|1913|
-   |Visual Studio 2017 versão 15,7|1914|
+   |Visual Studio 2017 versão 15.7|1914|
 
-   Para testar o compilador versões ou atualizações em uma determinada versão do Visual Studio ou depois, use o **>=** (maior ou igual a) o operador para comparar  **&#95;MSC&#95;VER** contra que conhecidos Versão. Se você tiver várias versões para comparar de maneira mutuamente exclusiva, é recomendável que solicitar nas comparações em ordem decrescente de número de versão. Por exemplo, este código verifica compiladores lançadas no Visual Studio 2015 e posteriores, e compiladores lançadas em ou após o Visual Studio 2013, em seguida, executa uma ação para todos os compiladores lançado antes do Visual Studio 2013:
+   Para testar versões do compilador ou atualizações em uma determinada versão do Visual Studio ou depois, use o **>=** operador (maior ou igual a) para comparar  **&#95;MSC&#95;VIDOR** contra que conhecidos Versão. Se você tiver várias versões para comparar de forma mutuamente exclusiva, é recomendável que você ordenar nas comparações em ordem decrescente de número de versão. Por exemplo, esse código verifica para compiladores lançados no Visual Studio 2015 e versões posteriores, em seguida, compiladores, lançados em ou após o Visual Studio 2013, em seguida, executa uma ação para todos os compiladores lançado antes do Visual Studio 2013:
 
    ```cpp
    #if _MSC_VER >= 1900
@@ -400,17 +400,17 @@ Microsoft Visual C++ dá suporte a essas macros predefinidas adicionais.
    #endif
    ```
 
-   Para obter mais informações, consulte [versão do compilador do Visual C++](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/) no Blog da equipe do Visual C++.
+   Para obter mais informações, consulte [versão do compilador Visual C++](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/) no Blog da equipe do Visual C++.
 
-- **&#95;MSVC&#95;LANG** definido como um literal de inteiro que especifica o padrão de linguagem C++ direcionado pelo compilador. Quando compilado c++, a macro é o valor de literal de inteiro 201402L se o [/std:c + + 14](../build/reference/std-specify-language-standard-version.md) é definir a opção de compilador, ou por padrão; é definido para 201703 L se o [/std:c + + 17](../build/reference/std-specify-language-standard-version.md) é definir a opção de compilador; e ele é definido como um não especificado, maior valor quando o [/std:c + + mais recente](../build/reference/std-specify-language-standard-version.md). Caso contrário, a macro será indefinida. O  **&#95;MSVC&#95;LANG** macro e [/std (especificar versão padrão do idioma)](../build/reference/std-specify-language-standard-version.md) opções do compilador são disponível a partir do Visual Studio 2015 atualização 3.
+- **&#95;MSVC&#95;LANG** definido como um literal de inteiro que especifica o padrão de linguagem C++ direcionado pelo compilador. Quando compilada como C++, a macro é o valor de literal de inteiro 201402L se o [/std:c++17 + + 14](../build/reference/std-specify-language-standard-version.md) é definir a opção de compilador ou por padrão; é definido para 201703 L se o [/std:c++17 + + 17](../build/reference/std-specify-language-standard-version.md) é definir a opção de compilador; e ele é definido como um não especificado, maior valor quando o [/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md). Caso contrário, a macro será indefinida. O  **&#95;MSVC&#95;LANG** macro e [/std (especificar versão de idioma padrão)](../build/reference/std-specify-language-standard-version.md) opções do compilador estão disponíveis no Visual Studio 2015 atualização 3.
 
-- **&#95;&#95;MSVC&#95;tempo de execução&#95;VERIFICA** definido como 1 quando um do [/RTC](../build/reference/rtc-run-time-error-checks.md) opções do compilador é definido. Caso contrário, indefinido.
+- **&#95;&#95;MSVC&#95;tempo de execução&#95;VERIFICA** definida como 1 quando um do [/RTC](../build/reference/rtc-run-time-error-checks.md) opções do compilador está definido. Caso contrário, indefinido.
 
-- **&#95;MT** definido como 1 quando [/MD ou /MDd](../build/reference/md-mt-ld-use-run-time-library.md) (DLL multithread) ou [/MT ou /MTd](../build/reference/md-mt-ld-use-run-time-library.md) (Multithreaded) for especificado. Caso contrário, indefinido.
+- **&#95;MT** definido como 1 quando [/MD ou /MDd](../build/reference/md-mt-ld-use-run-time-library.md) (Multithreaded DLL) ou [/MT ou /MTd](../build/reference/md-mt-ld-use-run-time-library.md) (Multithreaded) são especificados. Caso contrário, indefinido.
 
-- **&#95;NATIVO&#95;WCHAR&#95;T&#95;definidas** definido como 1 quando o [/ZC:](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) opção de compilador está definida. Caso contrário, indefinido.
+- **&#95;NATIVO&#95;WCHAR&#95;T&#95;definido pelo** definido como 1 quando o [/ZC: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) opção do compilador está definida. Caso contrário, indefinido.
 
-- **&#95;OPENMP** definido como um inteiro literal 200203, que representa a data da especificação OpenMP implementada pelo Visual C++, se o [/openmp (Habilitar suporte a OpenMP 2.0)](../build/reference/openmp-enable-openmp-2-0-support.md) é definir a opção de compilador. Caso contrário, indefinido.
+- **&#95;OPENMP** definido como inteiro literal 200203, que representa a data da especificação de OpenMP implementada pelo Visual C++, se o [/openmp (Habilitar suporte a OpenMP 2.0)](../build/reference/openmp-enable-openmp-2-0-support.md) é definir a opção de compilador. Caso contrário, indefinido.
 
    ```cpp
    // _OPENMP_dir.cpp
@@ -423,23 +423,23 @@ Microsoft Visual C++ dá suporte a essas macros predefinidas adicionais.
 
 - **&#95;PREFAST&#95;**  definido como 1 quando o [/ANALYZE](../build/reference/analyze-code-analysis.md) opção de compilador está definida. Caso contrário, indefinido.
 
-- **&#95;&#95;Carimbo de hora&#95; &#95;**  definido como uma cadeia de caracteres literal que contém a data e hora da última modificação do arquivo de origem atual, na forma abreviada, constante comprimento retornado pela biblioteca de tempo de execução do C [asctime](../c-runtime-library/reference/asctime-wasctime.md) funcionar, por exemplo, `Fri 19 Aug 13:32:58 2016`. Essa macro é sempre definida.
+- **&#95;&#95;TIMESTAMP&#95; &#95;**  definido como uma cadeia de caracteres literal que contém a data e hora da última modificação do arquivo de origem atual, na forma abreviada, constante comprimento retornado pela biblioteca em tempo de execução C [asctime](../c-runtime-library/reference/asctime-wasctime.md) funcionar, por exemplo, `Fri 19 Aug 13:32:58 2016`. Essa macro é sempre definida.
 
-- **&#95;VC&#95;/NODEFAULTLIB** definido como 1 quando o [/Zl (omitir a nome de biblioteca padrão)](../build/reference/zl-omit-default-library-name.md) opção de compilador está definida. Caso contrário, indefinido.
+- **&#95;VC&#95;/NODEFAULTLIB** definido como 1 quando o [/Zl (omitir nome da biblioteca padrão)](../build/reference/zl-omit-default-library-name.md) opção de compilador está definida. Caso contrário, indefinido.
 
-- **&#95;WCHAR&#95;T&#95;definidas** definido como 1 quando o padrão [/ZC:](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) opção de compilador está definida. O  **&#95;WCHAR&#95;T&#95;definidas** macro é definida, mas não tem nenhum valor se o **/Zc:wchar_t-** é definir a opção de compilador, e `wchar_t` é definido em um arquivo de cabeçalho do sistema incluídos no seu projeto. Caso contrário, indefinido.
+- **&#95;WCHAR&#95;T&#95;definidos** definido como 1 quando o padrão [/ZC: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) opção do compilador está definida. O  **&#95;WCHAR&#95;T&#95;definidas** macro é definida, mas não tem nenhum valor se a `/Zc:wchar_t-` é definir a opção de compilador, e **wchar_t** é definido em um arquivo de cabeçalho do sistema incluído no seu projeto. Caso contrário, indefinido.
 
-- **&#95;Win32** definidos como 1 quando o destino de compilação é ARM de 32 bits, 64 bits ARM, x86, ou x64. Caso contrário, indefinido.
+- **&#95;Win32** definidos como 1 quando o destino de compilação é ARM de 32 bits, 64-bit ARM, x86, ou x64. Caso contrário, indefinido.
 
-- **&#95;Win64** definido como 1 quando o destino de compilação é ARM de 64 bits ou x64. Caso contrário, indefinido.
+- **&#95;Win64** definida como 1 quando o destino de compilação é ARM de 64 bits ou x64. Caso contrário, indefinido.
 
-- **&#95;WINRT&#95;DLL** definido como 1 quando compilado como C++ e ambos [/ZW (compilação de tempo de execução do Windows)](../build/reference/zw-windows-runtime-compilation.md) e [/LD ou /LDd](../build/reference/md-mt-ld-use-run-time-library.md) opções do compilador são definidas. Caso contrário, indefinido.
+- **&#95;WINRT&#95;DLL** definido como 1 quando compilada como C++ e ambos [/ZW (compilação de tempo de execução do Windows)](../build/reference/zw-windows-runtime-compilation.md) e [/LD ou /LDd](../build/reference/md-mt-ld-use-run-time-library.md) opções do compilador são definidas. Caso contrário, indefinido.
 
- Macros de pré-processador usadas para determinar a versão da biblioteca ATL ou do MFC não são predefinidas pelo compilador. Essas macros são definidas nos cabeçalhos da biblioteca, para que eles não estão definidos em diretivas de pré-processador antes do cabeçalho necessário está incluído.
+ Macros de pré-processador usadas para determinar a versão da biblioteca MFC ou ATL não são predefinidas pelo compilador. Essas macros são definidas nos cabeçalhos da biblioteca, para que eles estão indefinidos em diretivas de pré-processador antes que o cabeçalho necessário está incluído.
 
-- **&#95;ATL&#95;VER** definido em \<atldef.h > como um literal de inteiro que codifica o número de versão do ATL.
+- **&#95;ATL&#95;VIDOR** definidos no \<atldef.h > como um literal de inteiro que codifica o número de versão do ATL.
 
-- **&#95;MFC&#95;VER** definido em \<afxver_.h > como um literal de inteiro que codifica o número de versão do MFC.
+- **&#95;MFC&#95;VIDOR** definidos no \<afxver_.h > como um literal de inteiro que codifica o número de versão do MFC.
 
 ## <a name="see-also"></a>Consulte também
 

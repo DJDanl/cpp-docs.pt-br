@@ -25,15 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5da668814888c11c5aaa0734be5ebc39b943778e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: eca3e25e1476023ef4b7192efd2ffbd4170e88ca
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337249"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572231"
 ---
 # <a name="isessionpropertiesimpl-class"></a>Classe ISessionPropertiesImpl
-Fornece uma implementação de [ISessionProperties](https://msdn.microsoft.com/library/ms713721.aspx) interface.  
+Fornece uma implementação de [ISessionProperties](/previous-versions/windows/desktop/ms713721\(v=vs.85\)) interface.  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -79,7 +79,7 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [ISessionProperties::GetProperties](https://msdn.microsoft.com/library/ms723643.aspx) na *referência do programador do OLE DB*. 
+ Ver [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643\(v=vs.85\)) na *referência do programador do OLE DB*. 
 
 ## <a name="setproperties"></a> Isessionpropertiesimpl:: SetProperties
 Define as propriedades no `DBPROPSET_SESSION` grupo de propriedades.  
@@ -92,7 +92,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [ISessionProperties::SetProperties](https://msdn.microsoft.com/library/ms714405.aspx) na *referência do programador do OLE DB*.  
+ Ver [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405\(v=vs.85\)) na *referência do programador do OLE DB*.  
   
 ## <a name="see-also"></a>Consulte também  
  [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

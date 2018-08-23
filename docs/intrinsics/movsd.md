@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 802e3845e72516e6dd0f09fd2a350a65565cd502
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 659da66ea74088247a9eb46ae25f9920050719a1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326918"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540741"
 ---
 # <a name="movsd"></a>__movsd
 **Seção específica da Microsoft**  
@@ -48,18 +48,18 @@ void __movsd(
  A origem da operação.  
   
  [in] `Count`  
- O número de doublewords para copiar.  
+ O número de palavras duplas para copiar.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__movsd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsd`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- O resultado é que a primeira `Count` doublewords apontada pelo `Source` são copiados para o `Dest` cadeia de caracteres.  
+ O resultado é que a primeira `Count` palavras duplas apontado por `Source` são copiados para o `Dest` cadeia de caracteres.  
   
  Essa rotina só está disponível como função intrínseca.  
   

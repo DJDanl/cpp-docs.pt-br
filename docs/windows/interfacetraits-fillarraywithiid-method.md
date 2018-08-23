@@ -17,44 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9851731635d940b878cf2012c8553773f485559b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 9fc4679d9e6d3a4fdfc112d8a8b471ceb2646ecc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017373"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583722"
 ---
 # <a name="interfacetraitsfillarraywithiid-method"></a>Método InterfaceTraits::FillArrayWithIid
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-__forceinline static void FillArrayWithIid(  
-   _Inout_ unsigned long &index,  
-   _In_ IID* iids  
-);  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *index*  
- Ponteiro para um campo que contém um valor de índice baseado em zero.  
-  
- *IIDs*  
- Uma matriz de IDs de interface.  
-  
-## <a name="remarks"></a>Comentários  
- Atribui a ID de interface do `Base` ao elemento de matriz especificado pelo argumento de índice.  
-  
- O nome dessa API, ao contrário do elemento de apenas uma matriz é modificado; não é a matriz inteira.  
-  
- Para obter mais informações sobre `Base`, consulte a seção Typedefs públicos [estrutura InterfaceTraits](../windows/interfacetraits-structure.md).  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Implements. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Consulte também  
- [Estrutura InterfaceTraits](../windows/interfacetraits-structure.md)   
- [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   _Inout_ unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*index*  
+Ponteiro para um campo que contém um valor de índice baseado em zero.
+
+*IIDs*  
+Uma matriz de IDs de interface.
+
+## <a name="remarks"></a>Comentários
+
+Atribui a ID de interface do `Base` ao elemento de matriz especificado pelo argumento de índice.
+
+O nome dessa API, ao contrário do elemento de apenas uma matriz é modificado; não é a matriz inteira.
+
+Para obter mais informações sobre `Base`, consulte a seção Typedefs públicos [estrutura InterfaceTraits](../windows/interfacetraits-structure.md).
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** Implements. h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Consulte também
+
+[Estrutura InterfaceTraits](../windows/interfacetraits-structure.md)  
+[Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

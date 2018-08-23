@@ -18,39 +18,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40b9382abc8ee0fa0c003964eebe75bc075e473
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a6c8d05d326e11ecfef4df8d22cbf2b8d92bd77
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849867"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541153"
 ---
 # <a name="inlinedepth"></a>inline_depth
-Especifica a profundidade da pesquisa heurística embutida, de modo que nenhuma função seja embutida se estiver em uma profundidade (no grafo de chamadas) maior que `n`.  
+Especifica a profundidade, da pesquisa heurística embutida, de modo que nenhuma função seja embutida se ele estiver em uma profundidade (no grafo de chamadas) maior que *n*.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 #pragma inline_depth( [n] )  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Esse pragma controla o inlining de funções assinaladas como [embutido](../cpp/inline-functions-cpp.md) e [inline](../cpp/inline-functions-cpp.md) ou embutida automaticamente na opção /Ob2.  
+ 
+Este pragma controla o processo de embutir das funções assinaladas [embutido](../cpp/inline-functions-cpp.md) e [inline](../cpp/inline-functions-cpp.md) ou embutidas automaticamente sob o `/Ob2` opção.  
   
- `n` pode ser um valor entre 0 e 255, onde 255 significa profundidade ilimitada no gráfico de chamadas, e zero inibe a expansão da tabela embutida.  Quando `n` não é especificado, o padrão (254) é usado.  
+*n* pode ser um valor entre 0 e 255, onde 255 significa profundidade ilimitada no grafo de chamadas, e zero inibe a expansão embutida.  Quando *n* não for especificado, o padrão (254) é usado.  
   
- O **inline_depth** pragma controla o número de vezes que uma série de chamadas de função pode ser expandida. Por exemplo, se a profundidade embutida for quatro, e se A chamar B e B chamar C, as três chamadas serão embutidas expandidas. No entanto, se a expansão embutida mais próxima for dois, somente A e B serão expandidos, e C permanecerá como uma chamada de função.  
+O **inline_depth** pragma controla o número de vezes que uma série de chamadas de função pode ser expandida. Por exemplo, se a profundidade embutida for quatro, e se A chamar B e B chamar C, as três chamadas serão embutidas expandidas. No entanto, se a expansão embutida mais próxima for dois, somente A e B serão expandidos, e C permanecerá como uma chamada de função.  
   
- Para usar esse pragma, você deve definir a opção do compilador /Ob para 1 ou 2. A profundidade definida com esse pragma entra em vigor na primeira chamada de função após o pragma.  
+Para usar esse pragma, você deve definir o `/Ob` opção do compilador para 1 ou 2. A profundidade definida com esse pragma entra em vigor na primeira chamada de função após o pragma.  
   
- A profundidade embutida pode ser diminuída durante a expansão, mas não pode ser aumentada. Se a profundidade de embutido é seis e durante a expansão do pré-processador encontra um **inline_depth** pragma com um valor de oito, a profundidade permanece seis.  
+A profundidade embutida pode ser diminuída durante a expansão, mas não pode ser aumentada. Se a profundidade embutida for seis e, durante a expansão, o pré-processador encontrar um **inline_depth** pragma com um valor de oito, a profundidade permanecerá seis.  
   
- O **inline_depth** pragma não tem nenhum efeito em funções marcado com `__forceinline`.  
+O **inline_depth** pragma não tem nenhum efeito em funções marcadas com `__forceinline`.  
   
 > [!NOTE]
->  As funções recursivas podem ser substituídas embutidas até a profundidade máxima de 16 chamadas.  
+> As funções recursivas podem ser substituídas embutidas até a profundidade máxima de 16 chamadas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Diretivas pragma e a palavra-chave pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [inline_recursion](../preprocessor/inline-recursion.md)
+ 
+[Diretivas pragma e a palavra-chave pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[inline_recursion](../preprocessor/inline-recursion.md)

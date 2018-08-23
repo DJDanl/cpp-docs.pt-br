@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b61fcd7875fd98e73c2d4cbd6502a98624daed5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55dc6492faea101df40c2901ced24321822f36e8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334617"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541526"
 ---
 # <a name="outbytestring"></a>__outbytestring
 **Seção específica da Microsoft**  
   
- Gera o `rep outsb` instrução, que envia o primeiro `Count` bytes de dados apontada por `Buffer` para a porta especificada pelo `Port`.  
+ Gera o `rep outsb` instrução, que envia o primeiro `Count` bytes de dados apontado por `Buffer` para a porta especificada pelo `Port`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,9 +54,9 @@ void __outbytestring(
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__outbytestring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outbytestring`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  Essa rotina só está disponível como função intrínseca.  

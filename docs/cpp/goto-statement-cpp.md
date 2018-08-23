@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9aae9429754dab8c539d7b94e70db72d33e4f13b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 38d022cb3b7f2672ffe7dba6a6d9d4952fa21616
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402566"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42573308"
 ---
 # <a name="goto-statement-c"></a>Instrução goto (C++)
 O **goto** incondicionalmente transfere o controle para a instrução rotulada pelo identificador especificado.  
@@ -36,6 +36,25 @@ goto identifier;
  A instrução rotulada designada por `identifier` deve estar na função atual. Todos os nomes de `identifier` são membros de um namespace interno e, portanto, não interferem em outros identificadores.  
   
  Rótulo de uma instrução é significante somente para um **goto** instrução; caso contrário, os rótulos de instrução são ignorados. Os rótulos não podem ser redeclarados.  
+
+Um **goto** instrução não tem permissão para transferir o controle para um local que ignora a inicialização de qualquer variável que está no escopo nesse local. O exemplo a seguir gera C2362:
+
+```cpp
+int goto_fn(bool b)
+{
+    if (!b)
+    {
+        goto exit;  // C2362
+    }
+    else
+    { /*...*/ }
+
+    int error_code = 42;
+
+exit:
+    return error_code;
+}
+```
   
  É um bom programação estilo a ser usado o **quebra**, **continuar**, e **retornar** instruções em vez do **goto** instrução sempre que é possível. No entanto, porque o **quebra** instrução sai de apenas um nível de um loop, você talvez precise usar um **goto** instrução para sair de um loop profundamente aninhado.  
   

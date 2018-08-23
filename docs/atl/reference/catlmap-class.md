@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00aa5276c0d79be570cf17986865066a466a326c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 304e350c9f37e29bfda8414a1c33c1211929872f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880827"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573111"
 ---
 # <a name="catlmap-class"></a>Classe CAtlMap
 Essa classe fornece métodos para criar e gerenciar um objeto de mapa.  
@@ -694,5 +694,5 @@ V  m_value;
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de letreiro](../../visual-cpp-samples.md)   
- [Exemplo de UpdatePV](../../visual-cpp-samples.md)   
+ [Exemplo de UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)   
  [Visão geral da classe](../../atl/atl-class-overview.md)

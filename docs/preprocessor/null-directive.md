@@ -17,23 +17,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496f22bcdc87a6772d0e0d9fc76d26f25d47adb2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd5b996f4a44ef0a310b2a8d76560f6123929472
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912973"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539730"
 ---
 # <a name="null-directive"></a>Diretiva nula
-A diretiva de pré-processador nulo é um único sinal numérico (**#**) sozinho em uma linha. Ele não tem efeito.  
+A diretiva de pré-processador nula é um único sinal numérico (**#**) em apenas uma linha. Ele não tem efeito.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 #  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)
+ 
+[Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)

@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72ed322c78723826615e1264642eb53f6f9eb14d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 825a63b38f443ce770739fe614ab6a4a44b8de39
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404068"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572904"
 ---
 # <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf, _fscanf_l, fwscanf, _fwscanf_l
 
@@ -90,7 +90,7 @@ int _fwscanf_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
 *format*<br/>
@@ -104,17 +104,17 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna o número de campos convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. Se ocorrer um erro ou se o final do fluxo de arquivo for atingido antes da primeira conversão, o valor de retorno é **EOF** para **fscanf** e **fwscanf**.
+Cada uma dessas funções retorna o número de campos convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. Se ocorrer um erro ou se o final do fluxo de arquivo for atingido antes da primeira conversão, o valor retornado será **EOF** para **fscanf** e **fwscanf**.
 
-Essas funções validam seus parâmetros. Se *fluxo* ou *formato* é um ponteiro nulo, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam **EOF** e defina **errno** para **EINVAL**.
+Essas funções validam seus parâmetros. Se *stream* ou *formato* é um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EOF** e defina **errno** para **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-O **fscanf** função lê dados da posição atual do *fluxo* em locais de fornecido pelo *argumento* (se houver). Cada *argumento* deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo na *formato*. *formato* controla a interpretação da entrada de campos e tem o mesmo formulário e funcionar como o *formato* argumento **scanf**; consulte [scanf](scanf-scanf-l-wscanf-wscanf-l.md) para um Descrição do *formato*.
+O **fscanf** função lê dados da posição atual do *fluxo* nos locais fornecidos por *argumento* (se houver). Cada *argumento* deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo em *formato*. *formato* controla a interpretação da entrada campos e tem o mesmo formato e função que o *formato* argumento **scanf**; consulte [scanf](scanf-scanf-l-wscanf-wscanf-l.md) para um Descrição da *formato*.
 
 **fwscanf** é uma versão de caractere largo de **fscanf**; o argumento de formato para **fwscanf** é uma cadeia de caracteres largos. Essas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. **fscanf** atualmente não dá suporte a entrada de um fluxo UNICODE.
 
-As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -123,7 +123,7 @@ As versões dessas funções com o **_l** sufixo são idênticas, exceto que ele
 |**ftscanf**|**fscanf**|**fscanf**|**fwscanf**|
 |**ftscanf_l**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
 
-Para obter mais informações, consulte [campos de especificação de formato - as funções scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+Para obter mais informações, consulte [campos de especificação de formato – funções scanf e Wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 ## <a name="requirements"></a>Requisitos
 

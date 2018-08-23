@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81feddd403c96d0b3f9402aaa744d0c79dbec21e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eee9c82487159b9233999d17ff36c4aad3ef6445
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340665"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539542"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 **Seção específica da Microsoft**  
@@ -42,8 +42,8 @@ unsigned char __vmx_vmread(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `Field`|O campo VMCS ler.|  
-|[in] `FieldValue`|Ler um ponteiro para o local para armazenar o valor do campo VMCS especificado pelo `Field` parâmetro.|  
+|[in] `Field`|O campo VMCS para ler.|  
+|[in] `FieldValue`|Ler de um ponteiro para o local para armazenar o valor do campo VMCS especificado pela `Field` parâmetro.|  
   
 ## <a name="return-value"></a>Valor de retorno  
   
@@ -54,15 +54,15 @@ unsigned char __vmx_vmread(
 |2|Falha na operação sem status disponível.|  
   
 ## <a name="remarks"></a>Comentários  
- O `__vmx_vmread` função é equivalente a `VMREAD` instrução da máquina. O valor de `Field` parâmetro é um índice de campo codificado que é descrito na documentação da Intel. Para obter mais informações, pesquise o documento, "Intel Virtualization Technical especificação para a arquitetura IA-32 Intel," documento número C97063-002, no [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) do site, em seguida, consulte o Apêndice C do documento .  
+ O `__vmx_vmread` função é equivalente ao `VMREAD` instruções de máquina. O valor da `Field` parâmetro é um índice de campo codificado que é descrito na documentação da Intel. Para obter mais informações, pesquise o documento, "Intel Virtualization Technical especificação para a arquitetura IA-32 Intel," documento número C97063-002, o [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) do site e, em seguida, consulte o Apêndice C do documento .  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__vmx_vmread`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmread`|X64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 **Fim da seção específica da Microsoft**  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4885cf6e5ddbff939e3f8e6401bd23661f13e275
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 9df970022ccc4f358864c3e3462ffea2b373cd00
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337402"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540759"
 ---
 # <a name="afxglobaldata-structure"></a>Estrutura AFX_GLOBAL_DATA
 O `AFX_GLOBAL_DATA` estrutura contém campos e métodos que são usados para gerenciar a estrutura ou personalizar a aparência e comportamento do seu aplicativo.  
@@ -69,7 +69,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|Detecta o estado atual da animação de menus e a recursos de ocultar automaticamente na barra de tarefas da área de trabalho.|  
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|Registra a classe de janela MFC especificada.|  
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|Libera as interfaces obtidas por meio de métodos GetITaskbarList e GetITaskbarList3.|  
-|[AFX_GLOBAL_DATA::resume](#resume)|Reinicializa a ponteiros de função interna que pode acessar os métodos que dão suporte ao Windows [temas e estilos visuais](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx).|  
+|[AFX_GLOBAL_DATA::resume](#resume)|Reinicializa a ponteiros de função interna que pode acessar os métodos que dão suporte ao Windows [temas e estilos visuais](/windows/desktop/Controls/visual-styles-overview).|  
 |[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Fornece uma maneira simples para chamar o Windows [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) método.|  
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|Cria a fonte lógica especificada.|  
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|Cria e inicializa um objeto de item do Shell de um nome de análise.|  

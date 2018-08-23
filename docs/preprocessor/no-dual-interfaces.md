@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8923adb4cf2e92d72bf656064c6de8fc66e2a91
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1e919e48b79c9fe98a7a33257ebd0f70061d788
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850776"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540357"
 ---
 # <a name="nodualinterfaces"></a>no_dual_interfaces
-**Específicas do C++**  
+**Específico do C++**  
   
- Altera o modo como o compilador gerenciar funções wrapper para métodos da interface dupla.  
+Altera o modo como o compilador gerenciar funções wrapper para métodos da interface dupla.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,10 +35,12 @@ no_dual_interfaces
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Normalmente, o wrapper chamará o método por meio da tabela de funções virtuais da interface. Com `no_dual_interfaces`, em vez disso, chama o wrapper **IDispatch:: Invoke** para invocar o método.  
+ 
+Normalmente, o wrapper chamará o método por meio da tabela de funções virtuais da interface. Com o **no_dual_interfaces**, o wrapper chama `IDispatch::Invoke` para invocar o método.  
   
- **TÉRMINO específicas do C++**  
+**FIM de específico de C++**  
   
 ## <a name="see-also"></a>Consulte também  
- [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import diretiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

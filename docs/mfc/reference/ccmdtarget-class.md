@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05bae03a94eac7a783f4ccb7248c8699729a006d
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: b6630ad9721b7a58e7da2660337660cc7916db01
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208683"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42544395"
 ---
 # <a name="ccmdtarget-class"></a>Classe CCmdTarget
 A classe base para a arquitetura de mapa de mensagem da biblioteca Microsoft Foundation Class.  
@@ -301,7 +301,7 @@ virtual UINT GetTypeInfoCount();
  O número de interfaces de informações de tipo.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função membro implementa basicamente [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/da876d53-cb8a-465c-a43e-c0eb272e2a12).  
+ Essa função membro implementa basicamente [IDispatch::GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount).  
   
  As classes derivadas devem substituir essa função para retornar o número de interfaces de informações de tipo fornecido (0 ou 1). Se não for substituído, `GetTypeInfoCount` retornará 0. Para substituir, use o [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) macro, que também implementa `GetTypeLib` e `GetTypeLibCache`.  
   

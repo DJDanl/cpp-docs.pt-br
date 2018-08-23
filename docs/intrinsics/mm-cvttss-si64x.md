@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fd8aebb3f9a4f0078c8174aa25b9abb9378f1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f70588ca17a2bde34de6a16b62b18fa6125b08c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333623"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540157"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 **Seção específica da Microsoft**  
   
- Emite x64 estendidos versão de Convert com número de ponto flutuante de precisão simples de truncamento em inteiro de 64 bits (`cvttss2si`) instrução.  
+ Emite x64 estendido versão de Convert com o número de ponto flutuante de precisão simples de truncamento em inteiro de 64 bits (`cvttss2si`) instrução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ __int64 _mm_cvttss_si64x(
   
 #### <a name="parameters"></a>Parâmetros  
  [in] `value`  
- Um `__m128` estrutura que contém valores de ponto flutuante de precisão simples.  
+ Um `__m128` estrutura que contém os valores de ponto flutuante de precisão simples.  
   
 ## <a name="return-value"></a>Valor de retorno  
  O resultado da conversão do primeiro valor de ponto flutuante para um inteiro de 64 bits.  
@@ -48,12 +48,12 @@ __int64 _mm_cvttss_si64x(
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`_mm_cvttss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_cvttss_si64x`|X64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- Difere intrínseca `_mm_cvtss_si64x` apenas se inexato conversões são truncados em direção a zero. Porque o `__m128` estrutura representa um registro XMM, a instrução gerada move os dados de um registro XMM na memória do sistema.  
+ O intrínseco difere do `_mm_cvtss_si64x` somente em que conversões inexatos são truncadas em direção a zero. Porque o `__m128` estrutura representa um registro de registros de MMX, a instrução gerada move dados de um registro de registros de MMX na memória do sistema.  
   
  Essa rotina só está disponível como função intrínseca.  
   

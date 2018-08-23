@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d2936a65023b32f994ed7260260476bc7b0457c2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ff8bacd14a6e8e99fb98d5e9c4ac3136fe1a1f0d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336404"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572915"
 ---
 # <a name="updating-rowsets"></a>Atualizando conjuntos de linhas
 É uma operação de banco de dados muito básico atualizar ou gravar dados para o armazenamento de dados. No OLE DB, o mecanismo de atualização é simple: seu aplicativo de consumidor define os valores dos membros de dados associados e, em seguida, grava esses valores no conjunto de linhas; o consumidor solicita que o provedor de atualizar o armazenamento de dados.  
   
- Os consumidores podem realizar os seguintes tipos de atualizações nos dados do conjunto de linhas: definindo valores de coluna dentro de uma linha, inserindo uma linha e exclusão de uma linha. Para executar essas operações, a classe de modelo de banco de dados OLE [CRowset](../../data/oledb/crowset-class.md) implementa a [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) de interface e substitui os seguintes métodos de interface:  
+ Os consumidores podem realizar os seguintes tipos de atualizações nos dados do conjunto de linhas: definindo valores de coluna dentro de uma linha, inserindo uma linha e exclusão de uma linha. Para executar essas operações, a classe de modelo de banco de dados OLE [CRowset](../../data/oledb/crowset-class.md) implementa a [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) de interface e substitui os seguintes métodos de interface:  
   
 -   [SetData](../../data/oledb/crowset-setdata.md) valores de coluna de alterações em uma linha de um conjunto de linhas; é equivalente ao comando SQL UPDATE.  
   
@@ -216,4 +216,4 @@ product.Update();                 // Update row 101 now
 ## <a name="see-also"></a>Consulte também  
  [Trabalhando com modelos de consumidor do OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)   
  [Classe CRowset](../../data/oledb/crowset-class.md)   
- [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx)
+ [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))

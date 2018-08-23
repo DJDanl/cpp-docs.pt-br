@@ -1,5 +1,5 @@
 ---
-title: Gramática do pré-processador | Microsoft Docs
+title: Gramática de pré-processador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,97 +16,98 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d14a3e00e18a2d3ac69dd472ac4056a379ada224
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1871d1b8281f4dd74733133ede70ed80430246b3
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843360"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538567"
 ---
 # <a name="preprocessor-grammar"></a>Gramática do pré-processador
 **#define**  *identifier* *token-string*opt  
   
- *#* **definir***identificador*[**(** *identificador*aceitação **,** *...*  **,** *identificador*aceitação **)**] *cadeia de caracteres de token*aceitar    
+*#* **definir***identificador*[**(** *identificador*aceitar **,** *...*  **,** *identificador*aceitar **)**] *cadeia de caracteres de token*otimizado    
   
- **defined(**  *identifier* **)**  
+**defined(**  *identifier* **)**  
   
- **defined**  *identifier*  
+**defined**  *identifier*  
   
- `#include` **"***path-spec***"**  
+`#include` **"***path-spec***"**  
   
- `#include` **\<***especificação de caminho***>**  
+`#include` **\<***especificação de caminho***>**  
   
- **#line**  *digit-sequence*  **"** *filename* **"** opt  
+**#line**  *digit-sequence*  **"** *filename* **"** opt  
   
- *#* **undef***identificador*   
+*#* **undef***identificador*   
   
- **#error**  *token-string*  
+**#error**  *token-string*  
   
- **#pragma**  *token-string*  
+**#pragma**  *token-string*  
   
- *condicional* :  
- *Se partes elif partes*aceitar*parte else*aceitar*linha endif*  
+*condicional* :  
+*Se-part elif-partes*opt*parte else*aceitar*Part&lt;3}{4&gt;opt&lt;4}{5&gt;endif-line&lt;5*  
   
- *Se partes* :  
- *if-linetext*  
+*Se parte* :  
+*if-linetext*  
   
- *Se-linha* :  
- **#if**  *constant-expression*  
+*if-line* :  
+**#if**  *constant-expression*  
   
- **#ifdef**  *identifier*  
+**#ifdef**  *identifier*  
   
- **#ifndef**  *identifier*  
+**#ifndef**  *identifier*  
   
- *partes elif* :  
- *texto da linha de elif*  
+*elif partes* :  
+*texto de linha elif*  
   
- *texto da linha de elif partes elif*  
+*texto de linha elif partes elif*  
   
- *linha elif* :  
- **#elif**  *constant-expression*  
+*linha elif* :  
+**#elif**  *constant-expression*  
   
- *parte Else* :  
- *else-linetext*  
+*outra parte* :  
+*else-linetext*  
   
- *outra linha* :  
- `#else`  
+*outra linha* :  
+`#else`  
   
- *linha endif* :  
- `#endif`  
+*linha endif* :  
+`#endif`  
   
- *sequência de dígitos* :  
- *digit*  
+*sequência de dígitos* :  
+*digit*  
   
- *digit-sequence digit*  
+*digit-sequence digit*  
   
- *Dígito* : um dos  
- **0 1 2 3 4 5 6 7 8 9**  
+*Dígito* : um dos  
+**0 1 2 3 4 5 6 7 8 9**  
   
- *cadeia de caracteres de token* :  
- Cadeia de caracteres de tokens  
+*cadeia de caracteres de token* :  
+Cadeia de caracteres de tokens  
   
- *token* :  
- *keyword*  
+*token* :  
+*keyword*  
   
- *identifier*  
+*identifier*  
   
- *constant*  
+*constant*  
   
- *operator*  
+*operator*  
   
- `punctuator`  
+`punctuator`  
   
- *nome de arquivo* :  
- Nome de arquivo válido do sistema operacional  
+*nome do arquivo* :  
+Nome de arquivo válido do sistema operacional  
   
- *especificação de caminho* :  
- Caminho de arquivo válido  
+*especificação de caminho* :  
+Caminho de arquivo válido  
   
- *texto* :  
- Qualquer sequência de texto  
+*texto* :  
+Qualquer sequência de texto  
   
 > [!NOTE]
->  Sem os terminais seguintes são expandidas no [convenções lexicais](../cpp/lexical-conventions.md) seção o *referência de linguagem C++*: `constant`, `constant` - *expressão* , *identificador*, *palavra-chave*, `operator`, e `punctuator`.  
+> Os seguintes não terminais são expandidos na [convenções lexicais](../cpp/lexical-conventions.md) seção o *referência da linguagem C++*: `constant`, `constant` - *expressão* , *identificador*, *palavra-chave*, `operator`, e `punctuator`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Resumo de gramática (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+ 
+[Resumo de gramática (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

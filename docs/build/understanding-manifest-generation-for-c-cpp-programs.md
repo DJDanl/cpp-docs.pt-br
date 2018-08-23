@@ -14,19 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb6a65c718b88e4072c0ddad19411bb8ea4ddcff
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40dbc61009cdfaa5621335cfb78dd10eae2138ca
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381618"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572619"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Noções básicas sobre geração de manifesto para programas do C/C++
-Um [manifesto](http://msdn.microsoft.com/library/aa375365) é um documento XML que pode ser um arquivo XML externo ou um recurso incorporado dentro de um aplicativo ou um assembly. O manifesto de um [aplicativo isolado](http://msdn.microsoft.com/library/aa375190) é usado para gerenciar os nomes e as versões de assemblies lado a lado compartilhados para que o aplicativo deve associar em tempo de execução. O manifesto de um assembly lado a lado especifica suas dependências em outros assemblies, versões, recursos e nomes.  
+Um [manifesto](http://msdn.microsoft.com/library/aa375365) é um documento XML que pode ser um arquivo XML externo ou um recurso incorporado dentro de um aplicativo ou um assembly. O manifesto de um [aplicativo isolado](http://msdn.microsoft.com/library/aa375190) é usado para gerenciar os nomes e versões de assemblies lado a lado a lado compartilhados aos quais o aplicativo deve associar em tempo de execução. O manifesto de um assembly lado a lado especifica suas dependências em nomes, versões, recursos e outros assemblies.  
   
- Há duas maneiras de criar um manifesto para um aplicativo isolado ou um assembly lado a lado. Primeiro, o autor do assembly pode criar manualmente um arquivo de manifesto seguindo as regras e requisitos de nomenclatura. Como alternativa, se um programa só depende de assemblies do Visual C++, como CRT, MFC, ATL ou outras pessoas, em seguida, um manifesto pode ser gerado automaticamente pelo vinculador.  
+ Há duas maneiras de criar um manifesto para um aplicativo isolado ou um assembly lado a lado. Primeiro, o autor do assembly pode criar manualmente um arquivo de manifesto seguindo regras e requisitos de nomenclatura. Como alternativa, se apenas um programa depende de assemblies do Visual C++, como o CRT, MFC, ATL ou outras pessoas, em seguida, um manifesto pode ser gerado automaticamente pelo vinculador.  
   
- Os cabeçalhos das bibliotecas do Visual C++ contêm informações de assembly, e quando as bibliotecas são incluídas no código do aplicativo, essas informações de assembly são usadas pelo vinculador para formar um manifesto para o binário final. O vinculador não insere o arquivo de manifesto dentro do binário e só pode gerar o manifesto como um arquivo externo. Ter um manifesto como um arquivo externo pode não funcionar para todos os cenários. Por exemplo, é recomendável que assemblies privados têm manifestos incorporados. Em compilações de linha de comando, como aquelas que usam nmake para compilar o código, um manifesto pode ser inserido usando a ferramenta de manifesto. Para obter mais informações, consulte [geração de manifesto na linha de comando](../build/manifest-generation-at-the-command-line.md). Ao compilar no [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], pode ser inserido um manifesto definindo uma propriedade para a ferramenta de manifesto a **propriedades do projeto** caixa de diálogo, consulte [geração de manifesto no Visual Studio](../build/manifest-generation-in-visual-studio.md).  
+ Os cabeçalhos de bibliotecas do Visual C++ contêm informações de assembly e, quando as bibliotecas são incluídas no código do aplicativo, essas informações de assembly são usadas pelo vinculador para formar um manifesto para o binário final. O vinculador não insere o arquivo de manifesto dentro do binário e só pode gerar o manifesto como um arquivo externo. Com um manifesto de um arquivo externo pode não funcionar para todos os cenários. Por exemplo, é recomendável que os assemblies particulares têm inseridos manifestos. Em builds de linha de comando, como aqueles que usam nmake para compilar o código, um manifesto pode ser inserido usando a ferramenta de manifesto. Para obter mais informações, consulte [geração de manifesto na linha de comando](../build/manifest-generation-at-the-command-line.md). Ao compilar no Visual Studio, um manifesto pode ser inserido, definindo uma propriedade para a ferramenta de manifesto na **propriedades do projeto** caixa de diálogo, consulte [geração de manifesto no Visual Studio](../build/manifest-generation-in-visual-studio.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Conceitos de aplicativos isolados e Assemblies lado a lado](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   

@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ffd955400b1b27efc192a7fe0df4ef31164cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00113372d86e488882c687afb56bd5e52bb74c21
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372673"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573021"
 ---
 # <a name="nmake-reference"></a>Referência a NMAKE
-O utilitário de manutenção do programa Microsoft (NMAKE. EXE) é uma ferramenta de linha de comando incluída no [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] que cria projetos baseados em comandos que estão contidos em um arquivo de descrição.  
+O utilitário de manutenção do programa da Microsoft (NMAKE. EXE) é uma ferramenta de linha de comando incluída no Visual Studio que compila projetos com base em comandos que estão contidos em um arquivo de descrição.  
   
- Para usar NMAKE, você deve executá-lo em uma janela de Prompt de comando do desenvolvedor. Uma janela de Prompt de comando do desenvolvedor tem as variáveis de ambiente definidas para as ferramentas, bibliotecas e incluir caminhos de arquivos necessários para compilar na linha de comando. Para obter detalhes sobre como abrir uma janela de Prompt de comando do desenvolvedor, consulte [código C/C++ compilar na linha de comando](../build/building-on-the-command-line.md).  
+ Para usar NMAKE, você deve executá-lo em uma janela de Prompt de comando do desenvolvedor. Uma janela de Prompt de comando do desenvolvedor tem as variáveis de ambiente definidas para as ferramentas, bibliotecas e incluir caminhos de arquivo necessários para compilar na linha de comando. Para obter detalhes sobre como abrir uma janela de Prompt de comando do desenvolvedor, consulte [código de compilação C/C++ na linha de comando](../build/building-on-the-command-line.md).  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
  [Executando NMAKE](../build/running-nmake.md)  
@@ -47,8 +47,8 @@ O utilitário de manutenção do programa Microsoft (NMAKE. EXE) é uma ferramen
  [Pré-processamento de makefile](../build/makefile-preprocessing.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Compilar o código C/C++ na linha de comando](../build/building-on-the-command-line.md)   
- [Ferramentas de compilação do C/C++](../build/reference/c-cpp-build-tools.md)   
+ [Compilar código C/C++ na linha de comando](../build/building-on-the-command-line.md)   
+ [Ferramentas de Build do C/C++](../build/reference/c-cpp-build-tools.md)   
  [Criando e gerenciando projetos do Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)   
  [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)   
  [Referência de build C/C++](../build/reference/c-cpp-building-reference.md)

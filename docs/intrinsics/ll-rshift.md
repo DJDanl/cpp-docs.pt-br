@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e086339c41f789323cb4aab386a96dae27a0eeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd8189f15f38d5d3008c1f20959573ca9d2337c9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324922"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539545"
 ---
 # <a name="llrshift"></a>__ll_rshift
 **Seção específica da Microsoft**  
@@ -41,24 +41,24 @@ __int64 __ll_rshift(
   
 #### <a name="parameters"></a>Parâmetros  
  [in] `Mask`  
- O valor de inteiro de 64 bits para deslocar para a direita.  
+ O valor de inteiro de 64 bits a deslocar para a direita.  
   
  [in] `nBit`  
- O número de bits para deslocar, módulo 64 em x64 e de módulo 32 em x86.  
+ O número de bits a deslocar, módulo 64 em x64 e de módulo 32 no x86.  
   
 ## <a name="return-value"></a>Valor de retorno  
- A máscara é alterado em `nBit` bits.  
+ A máscara deslocados em `nBit` bits.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__ll_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_rshift`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- Se o segundo parâmetro for maior que 64 em x64 (x86 de 32), esse número é obtido módulo 64 (x86 de 32) para determinar o número de bits para deslocar. O `ll` prefixo indica que esta é uma operação em `long long`, outro nome para `__int64`, o tipo integral assinado de 64 bits.  
+ Se o segundo parâmetro é maior que 64 em x64 (em x86 de 32), esse número é tirado módulo 64 (32 em x86) para determinar o número de bits a deslocar. O `ll` prefixo indica que esta é uma operação no `long long`, em outro nome para `__int64`, o tipo integral com sinal de 64 bits.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -93,7 +93,7 @@ fffffffffffffff0
  - 10  
 ```  
   
- **Observação** se `_ull_rshift` tiver sido usado, o MSB do valor deslocada à direita seria zero, para que o resultado desejado não poderia ter sido obtido no caso de um valor negativo.  
+ **Observação** se `_ull_rshift` tiver sido usado, o MSB do valor deslocados para a direita teria sido zero, portanto, o resultado desejado seria não ter sido obtido no caso de um valor negativo.  
   
 **Fim da seção específica da Microsoft**  
   

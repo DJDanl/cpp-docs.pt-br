@@ -15,20 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5918c7d91a3568799f361fcb42edb2e9c7b1445e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16549d6b7a80a8aa0f3f98cf9c7cd89c74058959
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850529"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541151"
 ---
 # <a name="variadic-macros"></a>Macros variadic
 Macros variadic são macros do tipo função que contêm um número variável de argumentos.  
   
 ## <a name="remarks"></a>Comentários  
- Para usar macros variadic, no botão de reticências pode ser especificado como o argumento formal final na definição da macro e o identificador de substituição `__VA_ARGS__` pode ser usado na definição de inserir os argumentos adicionais.  `__VA_ARGS__` é substituído por todos os argumentos que correspondem a reticências, incluindo vírgulas entre eles.  
+ 
+Para usar macros variadic, as reticências podem ser especificadas como o argumento formal final em uma definição de macro e o identificador de substituição `__VA_ARGS__` pode ser usado na definição de para inserir os argumentos extras.  `__VA_ARGS__` é substituído por todos os argumentos que correspondem às reticências, inclusive vírgulas entre elas.  
   
- O padrão C especifica que pelo menos um argumento deve ser passado às reticências, para assegurar que a macro não seja resolvida em uma expressão com uma vírgula à direita.  A implementação do Visual C++ suprimirá uma vírgula à direita se nenhum argumento for passado às reticências.  
+O padrão C especifica que pelo menos um argumento deve ser passado às reticências, para assegurar que a macro não seja resolvida em uma expressão com uma vírgula à direita.  A implementação do Visual C++ suprimirá uma vírgula à direita se nenhum argumento for passado às reticências.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -58,10 +59,8 @@ int main() {
                              // suppresses the trailing comma  
 }  
 ```  
-  
-## <a name="output"></a>Saída  
-  
-```  
+    
+```Output  
 here are some varargs1(1)  
 here are some varargs2(4)  
 here are some varargs3(5)  
@@ -70,4 +69,5 @@ error
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Macros (C/C++)](../preprocessor/macros-c-cpp.md)
+ 
+[Macros (C/C++)](../preprocessor/macros-c-cpp.md)

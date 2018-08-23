@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba4f0e06798bc6419f8db0471f19588039eb679a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d2da939fe52e41e122ecd4926e34fb9c4be735ae
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33905566"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540730"
 ---
 # <a name="error-directive-cc"></a>Diretiva #error (C/C++)
-A política `#error` emite uma mensagem de erro especificada pelo usuário em tempo de compilação e finaliza a compilação.  
+O **#error** diretiva emite uma mensagem de erro especificado pelo usuário em tempo de compilação e finaliza a compilação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,7 +35,8 @@ A política `#error` emite uma mensagem de erro especificada pelo usuário em te
 ```  
   
 ## <a name="remarks"></a>Comentários  
- A mensagem de erro que essa diretiva emite inclui o *cadeia de caracteres de token* parâmetro. O parâmetro `token-string` não está sujeito à expansão macro. Essa política é mais útil durante o pré-processamento para notificar o desenvolvedor de uma inconsistência do programa ou de uma violação de restrição. O exemplo a seguir demonstra o processamento do erro durante pré-processamento:  
+ 
+A mensagem de erro que esta política emite inclui o *token de cadeia de caracteres* parâmetro. O *token de cadeia de caracteres* parâmetro não está sujeito à expansão de macro. Essa política é mais útil durante o pré-processamento para notificar o desenvolvedor de uma inconsistência do programa ou de uma violação de restrição. O exemplo a seguir demonstra o processamento do erro durante pré-processamento:  
   
 ```  
 #if !defined(__cplusplus)  
@@ -44,4 +45,5 @@ A política `#error` emite uma mensagem de erro especificada pelo usuário em te
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)
+ 
+[Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)

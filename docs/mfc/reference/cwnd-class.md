@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97d8e923d89085161feb7dcec38d3b0e3972b96e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 317eae9ee404e603eaf37b2d512724c6b3d0c9f9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028415"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543085"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 Fornece a funcionalidade básica de todas as classes de janela em que a biblioteca Microsoft Foundation Class.  
@@ -2258,7 +2258,7 @@ virtual BOOL DestroyWindow();
   
  O `DestroyWindow` função de membro destrói também caixas de diálogo sem janela restrita criadas pelo [CDialog::Create](../../mfc/reference/cdialog-class.md#create).  
   
- Se o `CWnd` destruição é uma janela filho e não tem o [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) estilo conjunto, em seguida, o [WM_PARENTNOTIFY ](https://msdn.microsoft.com/library/ms632638.aspx) é enviada para o pai.  
+ Se o `CWnd` destruição é uma janela filho e não tem o [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) estilo conjunto, em seguida, o [WM_PARENTNOTIFY ](/previous-versions/windows/desktop/inputmsg/wm-parentnotify) é enviada para o pai.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCWindowing#87](../../mfc/reference/codesnippet/cpp/cwnd-class_26.cpp)]  
@@ -6613,7 +6613,7 @@ afx_msg void OnKeyDown(
   
 ### <a name="parameters"></a>Parâmetros  
  *nChar*  
- Especifica o código de tecla virtual da chave especificada. Para uma lista de códigos de tecla virtuais padrão, consulte WinUser. h  
+ Especifica o código de tecla virtual da chave especificada. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h  
   
  *nRepCnt*  
  Repita a contagem (o número de vezes que o pressionamento de tecla é repetido como resultado o usuário pressiona a tecla).  
@@ -6655,7 +6655,7 @@ afx_msg void OnKeyUp(
   
 ### <a name="parameters"></a>Parâmetros  
  *nChar*  
- Especifica o código de tecla virtual da chave especificada. Para uma lista de códigos de tecla virtuais padrão, consulte WinUser. h  
+ Especifica o código de tecla virtual da chave especificada. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h  
   
  *nRepCnt*  
  Repita a contagem (o número de vezes que o pressionamento de tecla é repetido como resultado o usuário pressiona a tecla).  
@@ -7780,7 +7780,7 @@ afx_msg void OnNcXButtonUp(
 >  Essa função membro é chamada pelo framework para permitir que seu aplicativo lidar com uma mensagem do Windows. Os parâmetros passados para a função refletem os parâmetros recebidos pelo framework quando a mensagem foi recebida. Se você chamar a implementação de classe base dessa função, o que a implementação usará os parâmetros passados originalmente com a mensagem e não os parâmetros que você fornecer para a função.  
   
 ##  <a name="onnextmenu"></a>  CWnd::OnNextMenu  
- O framework chama essa função de membro ao quando a tecla seta para direita ou esquerda é usada para alternar entre a barra de menus e o menu do sistema.  
+ O framework chama essa função membro, quando a tecla seta para direita ou esquerda é usada para alternar entre a barra de menus e o menu do sistema.  
   
 ```  
 afx_msg void OnNextMenu(
@@ -8260,7 +8260,7 @@ afx_msg void OnSessionChange(
 ### <a name="remarks"></a>Comentários  
  Esse método recebe o [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) notificação, que é descrita no SDK do Windows.  
   
- O *nSessionState* parâmetro especifica que uma sessão é conectada ou desconectada a partir do console ou um terminal remoto, um usuário efetuou logon ou logoff, uma sessão está bloqueada ou desbloqueada ou uma sessão foi alterado para o status de controle remoto. Para obter mais informações, consulte o *wParam* parâmetro da a [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) mensagem.  
+ O *nSessionState* parâmetro especifica que uma sessão é conectada ou desconectada a partir do console ou um terminal remoto, um usuário efetuou logon ou logoff, uma sessão está bloqueada ou desbloqueada ou uma sessão foi alterado para o status de controle remoto. Para obter mais informações, consulte o *wParam* parâmetro do [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) mensagem.  
   
 > [!NOTE]
 >  Essa função membro é chamada pelo framework para permitir que seu aplicativo lidar com uma mensagem do Windows. Os parâmetros passados para a função refletem os parâmetros recebidos pelo framework quando a mensagem foi recebida. Se você chamar a implementação de classe base dessa função, o que a implementação usará os parâmetros passados originalmente com a mensagem e não os parâmetros que você fornecer para a função.  
@@ -8561,7 +8561,7 @@ afx_msg void OnSysChar(
 |31|Especifica o estado de transição. O valor será 1 se a chave está sendo lançada ou será 0 se a chave está sendo pressionada.|  
   
 ### <a name="remarks"></a>Comentários  
- Especifica o código de tecla virtual da chave do menu de controle. (Para uma lista de códigos de tecla virtuais padrão, consulte WinUser. h)  
+ Especifica o código de tecla virtual da chave do menu de controle. (Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h)  
   
  Quando o código de contexto for 0, WM_SYSCHAR pode passar o [WM_SYSCHAR](http://msdn.microsoft.com/library/windows/desktop/ms646357) da mensagem para o [TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) função do Windows, o que irá tratá-la como se fosse uma mensagem de tecla normal em vez de um sistema tecla de caractere. Isso permite que as teclas de aceleração a ser usado com a janela ativa, mesmo se a janela ativa não tiver o foco de entrada.  
   
@@ -8694,7 +8694,7 @@ afx_msg void OnSysKeyDown(
   
 ### <a name="parameters"></a>Parâmetros  
  *nChar*  
- Especifica o código de tecla virtual da chave que está sendo pressionado. Para uma lista de códigos de tecla virtuais padrão, consulte WinUser. h  
+ Especifica o código de tecla virtual da chave que está sendo pressionado. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h  
   
  *nRepCnt*  
  Especifica a contagem de repetição.  
@@ -8738,7 +8738,7 @@ afx_msg void OnSysKeyUp(
   
 ### <a name="parameters"></a>Parâmetros  
  *nChar*  
- Especifica o código de tecla virtual da chave que está sendo pressionado. Para uma lista de códigos de tecla virtuais padrão, consulte WinUser. h  
+ Especifica o código de tecla virtual da chave que está sendo pressionado. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h  
   
  *nRepCnt*  
  Especifica a contagem de repetição.  
@@ -9038,7 +9038,7 @@ afx_msg int OnVKeyToItem(
   
 ### <a name="parameters"></a>Parâmetros  
  *nKey*  
- Especifica o código de tecla virtual da chave que o usuário pressionou. Para uma lista de códigos de tecla virtuais padrão, consulte WinUser. h  
+ Especifica o código de tecla virtual da chave que o usuário pressionou. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h  
   
  *pListBox*  
  Especifica um ponteiro para a caixa de listagem. O ponteiro pode ser temporário e não deve ser armazenado para uso posterior.  

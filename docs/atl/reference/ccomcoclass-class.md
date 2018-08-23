@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33caa14a0a406b380ba53eb8ed92cf939581f862
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 6043277eff17340cd57d0a6ee1bb8e84625f45b9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026952"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573110"
 ---
 # <a name="ccomcoclass-class"></a>Classe CComCoClass
 Essa classe fornece métodos para criar instâncias de uma classe e obter suas propriedades.  
@@ -95,7 +95,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  [out] O endereço de uma variável de ponteiro que recebe o ponteiro de interface solicitado, se a criação for bem-sucedida.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um valor padrão de HRESULT. Ver [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) no SDK do Windows para obter uma descrição dos possíveis valores de retorno.  
+ Um valor padrão de HRESULT. Ver [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) no SDK do Windows para obter uma descrição dos possíveis valores de retorno.  
   
 ### <a name="remarks"></a>Comentários  
  Use a primeira sobrecarga dessa função para a criação de objeto típico; Use a segunda sobrecarga quando você precisa agregar o objeto que está sendo criado.  
@@ -107,7 +107,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  Observe que a interface *Q* deve ter uma IID associada a ele que pode ser recuperada usando o [uuidof](../../cpp/uuidof-operator.md) operador.  
   
 ### <a name="example"></a>Exemplo  
- No exemplo a seguir `CDocument` é gerado pelo assistente ATL classe derivada de `CComCoClass` que implementa o `IDocument` interface. A classe está registrada no mapa de objetos com a macro OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO para que os clientes não é possível criar instâncias de documento usando [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615). `CApplication` é uma CoClass que fornece um método em uma das suas próprias interfaces COM para criar instâncias da classe do documento. O código a seguir mostra como é fácil criar instâncias da classe de documento usando o `CreateInstance` membro herdado da `CComCoClass` classe base.  
+ No exemplo a seguir `CDocument` é gerado pelo assistente ATL classe derivada de `CComCoClass` que implementa o `IDocument` interface. A classe está registrada no mapa de objetos com a macro OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO para que os clientes não é possível criar instâncias de documento usando [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance). `CApplication` é uma CoClass que fornece um método em uma das suas próprias interfaces COM para criar instâncias da classe do documento. O código a seguir mostra como é fácil criar instâncias da classe de documento usando o `CreateInstance` membro herdado da `CComCoClass` classe base.  
   
  [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   

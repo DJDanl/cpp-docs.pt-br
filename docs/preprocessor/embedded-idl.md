@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e0b594952e8e5be0a9be9c843877c8c4bb95eca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b41af8375249a48ac3a866af224370b19f071d28
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842710"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541516"
 ---
 # <a name="embeddedidl"></a>embedded_idl
-**Específicas do C++**  
+**Específico do C++**  
   
- Especifica que a biblioteca de tipos é gravada no arquivo .tlh com o código gerado pelo atributo preservado.  
+Especifica que a biblioteca de tipos é gravada no arquivo .tlh com o código gerado pelo atributo preservado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,17 +34,17 @@ ms.locfileid: "33842710"
 embedded_idl[("param")]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `param`  
- Pode ser um destes dois valores:  
+### <a name="parameters"></a>Parâmetros  
+*param*  
+Pode ser um destes dois valores:  
   
--   emitidl: informações de tipo importadas de typelib estarão presentes no IDL gerado para o projeto atribuído.  Esse é o padrão e entrará em vigor se você não especificar um parâmetro para `embedded_idl`.  
+- emitidl: informações de tipo importadas de typelib estarão presentes no IDL gerado para o projeto atribuído.  Esse é o padrão e entrará em vigor se você não especificar um parâmetro para `embedded_idl`.  
   
--   no_emitidl: informações de tipo importadas de typelib não estarão presentes no IDL gerado para o projeto atribuído.  
+- no_emitidl: informações de tipo importadas de typelib não estarão presentes no IDL gerado para o projeto atribuído.  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // import_embedded_idl.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -53,8 +53,10 @@ embedded_idl[("param")]
 ```  
   
 ## <a name="remarks"></a>Comentários  
- **TÉRMINO específicas do C++**  
+ 
+**FIM de específico de C++**  
   
 ## <a name="see-also"></a>Consulte também  
- [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import diretiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfc63cdd252e2acb23d8a6e842138d91e6c9b9c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3ca2c389b00126ff477b8e184d690afce07c484
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339989"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539361"
 ---
 # <a name="shiftleft128"></a>__shiftleft128
 **Seção específica da Microsoft**  
@@ -55,9 +55,9 @@ unsigned __int64 __shiftleft128(
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__shiftleft128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__shiftleft128`|X64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  O valor `Shift` é sempre módulo 64 para que, por exemplo, se você chamar, `__shiftleft128(1, 0, 64)`, a função deslocará os bits baixos `0` para a esquerda e retornará uma parte alta de `0` e não `1` como podia ser esperado.  

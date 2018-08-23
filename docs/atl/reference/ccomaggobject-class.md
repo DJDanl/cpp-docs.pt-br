@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5699f4c8c49bd35e85479572e1b49f8080415e65
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884987"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571742"
 ---
 # <a name="ccomaggobject-class"></a>Classe CComAggObject
 Essa classe implementa a [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interface para um objeto agregado. Por definição, um objeto agregado está contido dentro de um objeto externo. O `CComAggObject` classe é semelhante ao [classe CComObject](../../atl/reference/ccomobject-class.md), exceto que ele expõe uma interface que é diretamente acessível para clientes externos.  
@@ -63,7 +63,7 @@ class CComAggObject : public IUnknown,
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CComAggObject::AddRef](#addref)|Incrementa a contagem de referência no objeto agregado.|  
-|[CComAggObject::CreateInstance](#createinstance)|A função estática permite que você crie uma nova **CComAggObject <** `contained` **>** objeto sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComAggObject::CreateInstance](#createinstance)|A função estática permite que você crie uma nova **CComAggObject <** `contained` **>** objeto sem a sobrecarga de [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).|  
 |[CComAggObject::FinalConstruct](#finalconstruct)|Executa a inicialização final de `m_contained`.|  
 |[CComAggObject::FinalRelease](#finalrelease)|Executa a destruição de final de `m_contained`.|  
 |[CComAggObject::QueryInterface](#queryinterface)|Recupera um ponteiro para a interface solicitada.|  
@@ -129,7 +129,7 @@ CComAggObject(void* pv);
  Libera todos os recursos alocados, chamadas [FinalRelease](#finalrelease), e diminui a contagem de bloqueio de módulo.  
   
 ##  <a name="createinstance"></a>  CComAggObject::CreateInstance  
- A função estática permite que você crie uma nova **CComAggObject <** `contained` **>** objeto sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ A função estática permite que você crie uma nova **CComAggObject <** `contained` **>** objeto sem a sobrecarga de [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
 ```
 static HRESULT WINAPI CreateInstance(

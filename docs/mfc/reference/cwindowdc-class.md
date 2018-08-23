@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b757da27f2b4ae79a0192df0598f833b3d1e7b9
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: b692d974b5397d73f7e328330f71d8f9688be3e2
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121536"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42545742"
 ---
 # <a name="cwindowdc-class"></a>Classe CWindowDC
-Derivado de `CDC`.  
+Derivada de `CDC`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ class CWindowDC : public CDC
 |[CWindowDC::m_hWnd](#m_hwnd)|O HWND ao qual este `CWindowDC` está anexado.|  
   
 ## <a name="remarks"></a>Comentários  
- Chama a função do Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947\(v=vs.85\).aspx)em tempo de construção e [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920\(v=vs.85\).aspx) em tempo de destruição. Isso significa que um `CWindowDC` objeto acessa a área da tela inteira de um [CWnd](../../mfc/reference/cwnd-class.md) (áreas de cliente e não cliente).  
+ Chama a função do Windows [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)na ocasião da construção e [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) no tempo de destruição. Isso significa que um `CWindowDC` objeto acessa a área da tela inteira de um [CWnd](../../mfc/reference/cwnd-class.md) (áreas de cliente e não cliente).  
   
  Para obter mais informações sobre como usar `CWindowDC`, consulte [contextos de dispositivo](../../mfc/device-contexts.md).  
   
@@ -63,23 +63,23 @@ class CWindowDC : public CDC
  `CWindowDC`  
   
 ## <a name="requirements"></a>Requisitos  
- Cabeçalho: afxwin.h  
+ Cabeçalho: afxwin. h  
   
 ##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
- Constrói um `CWindowDC` que acessa a área da tela inteira (cliente e não cliente) do objeto de `CWnd` objeto apontada pelo *pWnd*.  
+ Constrói uma `CWindowDC` que acessa a área da tela inteira (cliente e não cliente) do objeto de `CWnd` objeto apontado por *Apropriei*.  
   
 ```  
 explicit CWindowDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *pWnd*  
- A janela cuja área cliente irá acessar o objeto de contexto de dispositivo.  
+ *Apropriei*  
+ A janela cuja área de cliente que acessará o objeto de contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentários  
  O construtor chama a função do Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947).  
   
- Uma exceção (do tipo `CResourceException`) é gerada se o Windows `GetWindowDC` chamada falhará. Um contexto de dispositivo pode não estar disponível se o Windows já alocado todos os seus contextos de dispositivo disponível. Seu aplicativo compete para os cinco comuns contextos de exibição disponíveis a qualquer momento no Windows.  
+ Uma exceção (do tipo `CResourceException`) será gerada se o Windows `GetWindowDC` chamar falhar. Um contexto de dispositivo pode não estar disponível se o Windows já alocado todos os seus contextos de dispositivo disponíveis. Seu aplicativo compete para os cinco comuns contextos de exibição disponíveis a qualquer momento determinado em Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
@@ -95,9 +95,9 @@ HWND m_hWnd;
  `m_hWnd` é uma variável protegida do tipo HWND.  
   
 ### <a name="example"></a>Exemplo  
-  Consulte o exemplo para [CWindowDC::CWindowDC](#cwindowdc).  
+  Veja o exemplo de [CWindowDC::CWindowDC](#cwindowdc).  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CDC](../../mfc/reference/cdc-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe CDC](../../mfc/reference/cdc-class.md)

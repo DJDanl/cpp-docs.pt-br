@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b87aeafd1b9c0c1a35e3f5d99ab5b9d76410b4d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec022fe2d317ec38bc1d9b06f459b9efc7818c92
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337711"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540366"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 **Seção específica da Microsoft**  
@@ -42,7 +42,7 @@ unsigned char __vmx_vmwrite(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `Field`|O campo VMCS para gravação.|  
+|[in] `Field`|O campo VMCS para gravar.|  
 |[in] `FieldValue`|O valor a ser gravado para o campo VMCS.|  
   
 ## <a name="return-value"></a>Valor de retorno  
@@ -56,15 +56,15 @@ unsigned char __vmx_vmwrite(
  Falha na operação sem status disponível.  
   
 ## <a name="remarks"></a>Comentários  
- O `__vmx_vmwrite` função é equivalente a `VMWRITE` instrução da máquina. O valor de `Field` parâmetro é um índice de campo codificado que é descrito na documentação da Intel. Para obter mais informações, pesquise o documento, "Intel Virtualization Technical especificação para a arquitetura IA-32 Intel," documento número C97063-002, no [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) do site e, em seguida, consulte o Apêndice C do que documento.  
+ O `__vmx_vmwrite` função é equivalente ao `VMWRITE` instruções de máquina. O valor da `Field` parâmetro é um índice de campo codificado que é descrito na documentação da Intel. Para obter mais informações, pesquise o documento, "Intel Virtualization Technical especificação para a arquitetura IA-32 Intel," documento número C97063-002, o [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) do site e, em seguida, consulte o Apêndice C do que documento.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__vmx_vmwrite`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmwrite`|X64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 **Fim da seção específica da Microsoft**  
   

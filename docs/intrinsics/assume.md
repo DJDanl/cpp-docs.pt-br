@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec83775a007e3a07582f218c5588ae4fe7909b20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38a3bb405fac71a651b37fd6d6098c0d0f0263b0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340561"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539541"
 ---
 # <a name="assume"></a>__assume
 **Seção específica da Microsoft**  
@@ -51,7 +51,7 @@ __assume(
   
  `__assume` não é um intrínseco verdadeiro. Ele não precisa ser declarado como uma função e não pode ser usado em uma diretiva `#pragma intrinsic`. Embora nenhum código seja gerado, o código gerado pelo otimizador é afetado.  
   
- Use `__assume` em uma [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) somente quando a declaração não é recuperável. Não use `__assume` em um assert para o qual você tem código de recuperação de erro subsequente porque o compilador pode otimizar o código de tratamento do erro.  
+ Use `__assume` em um [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) somente quando o assert não for recuperável. Não use `__assume` em um assert para o qual você tem código de recuperação de erro subsequente porque o compilador pode otimizar o código de tratamento do erro.  
   
  A instrução `__assume(0)` é um caso especial. Use `__assume(0)` para indicar um caminho de código que não pode ser alcançado. O exemplo a seguir mostra como usar `__assume(0)` para indicar que o caso de padrão de uma instrução switch não pode ser alcançado. Isso mostra o uso mais comum de `__assume(0)`.  
   
@@ -59,7 +59,7 @@ __assume(
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__assume`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__assume`|x86, ARM, x64|  
   
 ## <a name="example"></a>Exemplo  
   

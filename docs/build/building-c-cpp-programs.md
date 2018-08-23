@@ -1,5 +1,5 @@
 ---
-title: Compilando programas do C/C++ | Microsoft Docs
+title: Compilando programas C/C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2894c503dde89668bfb90b615c7b0966fe5fe2e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2fa07308d04d14395b0ca9773e2a0c81ed0c2bc2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360969"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573115"
 ---
 # <a name="building-cc-programs"></a>Compilando programas do C/C++
 
-Você pode compilar projetos do Visual C++ no Visual Studio ou na linha de comando. Usa o Visual Studio IDE [MSBuild](../build/msbuild-visual-cpp.md) para criar projetos e soluções. Na linha de comando, você pode usar o compilador C/C++ (cl.exe) e o vinculador (link.exe) para compilar projetos simples. Para criar projetos mais complexos na linha de comando, você pode usar o MSBuild ou [NMAKE](../build/nmake-reference.md). Para obter uma visão geral sobre como usar [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] para criar soluções e projetos, consulte [compilar e criar](/visualstudio/ide/compiling-and-building-in-visual-studio).  
+Você pode compilar projetos do Visual C++ no Visual Studio ou na linha de comando. O IDE do Visual Studio usa [MSBuild](../build/msbuild-visual-cpp.md) para compilar projetos e soluções. Na linha de comando, você pode usar o compilador C/C++ (cl.exe) e o vinculador (link.exe) para compilar projetos simples. Para compilar projetos mais complexos na linha de comando, você pode usar o MSBuild ou [NMAKE](../build/nmake-reference.md). Para obter uma visão geral sobre como usar o Visual Studio para compilar projetos e soluções, consulte [compilando e criando](/visualstudio/ide/compiling-and-building-in-visual-studio).  
   
 ## <a name="in-this-section"></a>Nesta seção  
 

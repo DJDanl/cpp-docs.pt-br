@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a36790eb1df098e6f663a30894c29a9ea14587b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 007b3be0fc26d9a011d961540f9dc4057498b137
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327197"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539540"
 ---
 # <a name="halt"></a>__halt
 **Seção específica da Microsoft**  
   
- Interrompe o microprocessador até que ocorra uma interrupção habilitada, uma interrupção não mascarável NMI () ou uma reinicialização.  
+ Interrompe o microprocessador até que ocorra uma interrupção habilitada, uma NMI (interrupção não Mascarável) ou uma redefinição.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,12 +40,12 @@ void __halt( void );
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__halt`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__halt`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- O `__halt` função é equivalente ao `HLT` instrução do computador e está disponível apenas no modo de kernel. Para obter mais informações, pesquise o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: referência de conjunto de instruções," no [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
+ O `__halt` função é equivalente ao `HLT` instruções de máquina e está disponível apenas no modo kernel. Para obter mais informações, pesquise o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: referência de conjunto de instruções," no [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
   
 **Fim da seção específica da Microsoft**  
   

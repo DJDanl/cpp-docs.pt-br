@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fab96a22dec9b4cf2914fa2c02dd973bcd7ace8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 598b95df8fd2f4dd2826fcfa1f59a7e2daa8d523
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329177"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539952"
 ---
 # <a name="writedr"></a>__writedr
 Grava o valor especificado para o registro de depuração especificado.  
@@ -35,21 +35,21 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
   
 #### <a name="parameters"></a>Parâmetros  
  [in] `DebugRegister`  
- Registrar um número de 0 a 7 que identifica a depuração.  
+ Registre-se um número de 0 a 7 que identifica a depuração.  
   
  [in] `DebugValue`  
- Registrar um valor a ser gravado para a depuração.  
+ Registre-se um valor a ser gravado para a depuração.  
   
 ## <a name="remarks"></a>Comentários  
- Esses intrínsecos estão disponíveis apenas no modo de kernel e as rotinas estão disponíveis apenas como intrínsecos.  
+ Esses intrínsecos estão disponíveis somente no modo kernel e as rotinas estão disponíveis apenas como intrínsecos.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__writedr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writedr`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 **Fim da seção específica da Microsoft**  
   

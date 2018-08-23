@@ -48,15 +48,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ec9e30112a9f0f5b54b84ccbbb61268e56d70d2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 73e0b7646da57af679e7b3cbec3b0bb72d4ea8b8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338773"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572234"
 ---
 # <a name="iaccessorimpl-class"></a>Classe IAccessorImpl
-Fornece uma implementação de [IAccessor](https://msdn.microsoft.com/library/ms719672.aspx) interface.  
+Fornece uma implementação de [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) interface.  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -98,7 +98,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 |[ReleaseAccessor](#releaseaccessor)|Libera um acessador.|  
   
 ## <a name="remarks"></a>Comentários  
- Isso é obrigatório em conjuntos de linhas e comandos. OLE DB exige que os provedores implementar um HACCESSOR, que é uma marca para uma matriz de [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) estruturas. HACCESSORs fornecidos pelo `IAccessorImpl` são os endereços do `BindType` estruturas. Por padrão, `BindType` é definido como um `ATLBINDINGS` no `IAccessorImpl`da definição de modelo. `BindType` Fornece um mecanismo usado pelo `IAccessorImpl` para controlar o número de elementos no seu `DBBINDING` , bem como um sinalizadores de acessador e contagem de referência de matriz.  
+ Isso é obrigatório em conjuntos de linhas e comandos. OLE DB exige que os provedores implementar um HACCESSOR, que é uma marca para uma matriz de [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) estruturas. HACCESSORs fornecidos pelo `IAccessorImpl` são os endereços do `BindType` estruturas. Por padrão, `BindType` é definido como um `ATLBINDINGS` no `IAccessorImpl`da definição de modelo. `BindType` Fornece um mecanismo usado pelo `IAccessorImpl` para controlar o número de elementos no seu `DBBINDING` , bem como um sinalizadores de acessador e contagem de referência de matriz.  
 
 ## <a name="iaccessorimpl"></a> Iaccessorimpl:: Iaccessorimpl
 O construtor.  
@@ -120,7 +120,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [IAccessor::AddRefAccessor](https://msdn.microsoft.com/library/ms714978.aspx) na *referência do programador do OLE DB*.
+ Ver [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\)) na *referência do programador do OLE DB*.
 
 ## <a name="createaccessor"></a> Iaccessorimpl:: CreateAccessor
 Cria um acessador de um conjunto de associações.  
@@ -137,7 +137,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [IAccessor:: CreateAccessor](https://msdn.microsoft.com/library/ms720969.aspx) na *referência do programador do OLE DB*.  
+ Ver [IAccessor:: CreateAccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\)) na *referência do programador do OLE DB*.  
 
 ## <a name="getbindings"></a> Iaccessorimpl:: Getbindings
 Retorna as associações de colunas básico do consumidor em um acessador.  
@@ -152,7 +152,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [IAccessor::GetBindings](https://msdn.microsoft.com/library/ms721253.aspx) na *referência do programador do OLE DB*. 
+ Ver [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\)) na *referência do programador do OLE DB*. 
 
 ## <a name="releaseaccessor"></a> Iaccessorimpl:: Releaseaccessor
 Libera um acessador.  
@@ -165,7 +165,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [IAccessor:: Releaseaccessor](https://msdn.microsoft.com/library/ms719717.aspx) na *referência do programador do OLE DB*.
+ Ver [IAccessor:: Releaseaccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\)) na *referência do programador do OLE DB*.
   
 ## <a name="see-also"></a>Consulte também  
  [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

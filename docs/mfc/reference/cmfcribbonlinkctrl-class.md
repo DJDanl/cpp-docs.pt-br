@@ -42,16 +42,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26837b4eda881bdf83e2f34f0c81a1b0e7034ffe
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 53e9396148a89a4778d7e12066a814f2065bbac6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851490"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538979"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Classe CMFCRibbonLinkCtrl
 Implementa um hiperlink que está posicionado em uma faixa de opções. O hiperlink abre uma página da Web quando você clica nele.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxe  
   

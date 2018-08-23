@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b9fd580d1ebabf4352104fe49f1d3c982a49e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3ce9091fe380f7d255dd321dbb9eb5ca7134b8d
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846357"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42544368"
 ---
 # <a name="message"></a>mensagem
 Envia uma literal de cadeia de caracteres para a saída padrão sem terminar a compilação.  
@@ -31,20 +31,20 @@ Envia uma literal de cadeia de caracteres para a saída padrão sem terminar a c
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 #pragma message( messagestring )  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Um uso típico de **mensagem** pragma é exibir mensagens informativas em tempo de compilação.  
+
+Um uso típico de **mensagem** pragma é exibir mensagens informativas em tempo de compilação.  
   
- O *messagestring* parâmetro pode ser uma macro que se expande para uma cadeia de caracteres literal, e você pode concatenar essas macros com literais de cadeia de caracteres em qualquer combinação.  
+O *messagestring* parâmetro pode ser uma macro que se expande para um literal de cadeia de caracteres, e você pode concatenar essas macros com literais de cadeia de caracteres em qualquer combinação.  
   
- Se você usar uma macro predefinida no **mensagem** pragma, a macro deve retornar uma cadeia de caracteres, caso contrário, será necessário converter a saída da macro em uma cadeia de caracteres.  
+Se você usar uma macro predefinida na **mensagem** pragma, a macro deverá retornar uma cadeia de caracteres, caso contrário, será necessário converter a saída da macro em uma cadeia de caracteres.  
   
- O fragmento de código a seguir usa o **mensagem** pragma para exibir mensagens durante a compilação:  
+O fragmento de código a seguir usa o **mensagem** pragma para exibir mensagens durante a compilação:  
   
-```  
+```cpp  
 // pragma_directives_message1.cpp  
 // compile with: /LD  
 #if _M_IX86 >= 500  
@@ -68,4 +68,5 @@ Envia uma literal de cadeia de caracteres para a saída padrão sem terminar a c
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

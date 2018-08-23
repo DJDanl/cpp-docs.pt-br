@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4788 | Microsoft Docs
+title: Compilador aviso (nível 1) C4788 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19a43fb9d79c63637b2bff9a27661a9f848ef6dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23e86de5ebab3f99c7d98e502e280b5defb51e10
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284193"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541718"
 ---
-# <a name="compiler-warning-level-1-c4788"></a>Compilador C4788 de aviso (nível 1)
-'Identificador': identificador foi truncado para 'número' caracteres  
+# <a name="compiler-warning-level-1-c4788"></a>Compilador aviso (nível 1) C4788
+'identifier': identificador foi truncado para caracteres 'number'  
   
- O compilador limita o tamanho máximo permitido para um nome de função. Quando o compilador gera funclets código EH/SEH, constitui o nome funclet acrescentando o nome da função com algum texto, por exemplo "__catch," "\__unwind", ou outra cadeia de caracteres.  
+ O compilador limita o comprimento máximo permitido para um nome de função. Quando o compilador gera funclets para código EH/SEH, faz o funclet nome acrescentando o nome da função com algum texto, por exemplo "__catch," "\__unwind", ou outra cadeia de caracteres.  
   
- O nome de funclet resultante pode ser muito longo, e o compilador irá truncar e gerar C4788.  
+ O nome de funclet resultante pode ser muito longo, e o compilador irá truncá-los e gerar C4788.  
   
- Para resolver este aviso, diminua o nome da função original. Se a função é um método ou função de modelo do C++, use um typedef para a parte do nome. Por exemplo:  
+ Para resolver este aviso, encurte o nome da função original. Se a função é um método ou função de modelo do C++, use um typedef para parte do nome. Por exemplo:  
   
 ```  
 C1<x, y, z<T>>::C2<a,b,c>::f  
@@ -43,4 +43,4 @@ typedef C1<x, y, z<T>>::C2<a,b,c> new_class ;
 new_class::f  
 ```  
   
- Este aviso ocorre apenas no [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] compilador.
+ Este aviso ocorre apenas no x64 compilador.

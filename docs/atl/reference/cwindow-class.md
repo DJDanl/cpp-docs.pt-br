@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a725ee9eb8d35ec947d21799c577243223f59ed4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a4f29cefa626928cb87ce7d72904a4b189113f05
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881260"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572706"
 ---
 # <a name="cwindow-class"></a>Classe CWindow
 Essa classe fornece métodos para manipular uma janela.  
@@ -976,7 +976,7 @@ DWORD GetHotKey() const throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- O código de tecla virtual e os modificadores a tecla de atalho associado à janela. Para obter uma lista dos possíveis modificadores, consulte [WM_GETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646278) no SDK do Windows. Para uma lista de códigos de tecla virtuais padrão, consulte WinUser. h.  
+ O código de tecla virtual e os modificadores a tecla de atalho associado à janela. Para obter uma lista dos possíveis modificadores, consulte [WM_GETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646278) no SDK do Windows. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h.  
   
 ##  <a name="geticon"></a>  CWindow::GetIcon  
  Recupera o identificador para o ícone da janela de grandes ou pequenos.  
@@ -2091,7 +2091,7 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
   
 ### <a name="parameters"></a>Parâmetros  
  *wVirtualKeyCode*  
- [in] O código de tecla virtual da tecla de atalho. Para uma lista de códigos de tecla virtuais padrão, consulte WinUser. h.  
+ [in] O código de tecla virtual da tecla de atalho. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h.  
   
  *wModifiers*  
  [in] Os modificadores da tecla de acesso. Para obter uma lista de valores possíveis, consulte WM_SETHOTKEY no SDK do Windows.  

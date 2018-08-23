@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d651546733f42b1a714ac7a39992fa2d392c8fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ec0150e63209728cf2f02c854fe03702b8a45b4
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839862"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539150"
 ---
 # <a name="tlbid"></a>tlbid
-**Específicas do C++**  
+**Específico do C++**  
   
- Permite carregar bibliotecas diferentes de biblioteca de tipos primárias.  
+Permite carregar bibliotecas diferentes de biblioteca de tipos primárias.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,27 +34,29 @@ ms.locfileid: "33839862"
 tlbid(number)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `number`  
- O número da biblioteca de tipos em `filename`.  
+### <a name="parameters"></a>Parâmetros  
+*número*  
+O número da biblioteca de tipos em `filename`.  
   
 ## <a name="remarks"></a>Comentários  
- Caso várias bibliotecas de tipos estejam compiladas em uma única DLL, é possível carregar bibliotecas que não sejam a biblioteca de tipos principal usando `tlbid`.  
+ 
+Se várias bibliotecas de tipos são criadas em uma única DLL, é possível carregar bibliotecas que não sejam a biblioteca de tipos principal usando **tlbid**.  
   
- Por exemplo:  
+Por exemplo:  
   
 ```  
 #import <MyResource.dll> tlbid(2)  
 ```  
   
- equivale a:  
+equivale a:  
   
 ```  
 LoadTypeLib("MyResource.dll\\2");  
 ```  
   
- **TÉRMINO específicas do C++**  
+**FIM de específico de C++**  
   
 ## <a name="see-also"></a>Consulte também  
- [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import diretiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

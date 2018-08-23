@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94cf50287c28fe530df939488c4e707d17aede03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 364ad39bfe47ff04c4a1eefb52b32ed4bddb7809
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327366"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538799"
 ---
 # <a name="lllshift"></a>__ll_lshift
 **Seção específica da Microsoft**  
@@ -41,26 +41,26 @@ unsigned __int64 __ll_lshift(
   
 #### <a name="parameters"></a>Parâmetros  
  [in] `Mask`  
- O valor inteiro de 64-bit shift esquerda.  
+ O valor de inteiro de 64 bits para deslocar para a esquerda.  
   
  [in] `nBit`  
  O número de bits a deslocar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- A máscara adiantadas esquerda por `nBit` bits.  
+ A máscara deslocados para a esquerda pelo `nBit` bits.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__ll_lshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_lshift`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- Se você compilar seu programa usando a arquitetura de 64 bits e `nBit` é maior do que 63, é o número de bits para deslocar `nBit` módulo 64. Se você compilar seu programa usando a arquitetura de 32 bits e `nBit` é maior do que 31, é o número de bits para deslocar `nBit` módulo 32.  
+ Se você compilar seu programa usando a arquitetura de 64 bits e `nBit` é maior do que 63, é o número de bits a deslocar `nBit` módulo 64. Se você compilar seu programa usando a arquitetura de 32 bits e `nBit` é maior do que 31, o número de bits a deslocar é `nBit` módulo 32.  
   
- O `ll` o nome indica que esta é uma operação em `long long` (`__int64`).  
+ O `ll` o nome indica que esta é uma operação no `long long` (`__int64`).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -89,7 +89,7 @@ int main()
 10000  
 ```  
   
- **Observação** não há nenhuma versão não assinada da operação de deslocamento para a esquerda. Isso ocorre porque `__ll_lshift` já usa um parâmetro de entrada não assinado. Ao contrário de deslocamento à direita, não há nenhuma dependência de entrada para o deslocamento à esquerda, porque o bit menos significativo no resultado é sempre definido como zero, independentemente do sinal do valor alterado.  
+ **Observação** há nenhuma versão sem sinal da operação de deslocamento à esquerda. Isso ocorre porque `__ll_lshift` já usa um parâmetro de entrada sem sinal. Ao contrário o deslocamento para a direita, não há nenhuma dependência de entrada para o deslocamento à esquerda, porque o bit menos significativo no resultado é sempre definido como zero, independentemente do sinal do valor deslocado.  
   
 **Fim da seção específica da Microsoft**  
   

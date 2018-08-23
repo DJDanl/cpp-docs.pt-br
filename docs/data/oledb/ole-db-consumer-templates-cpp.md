@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 636f98337cacdeddbdd42dd74e498c0fbd12e4f8
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 853277959a29103a5dcd1e01f709d739f7ce4289
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339393"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572626"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modelos de consumidor de banco de dados OLE (C++)
 O OLE DB modelos de consumidor dão suporte a especificação de versão 2.6 do OLE DB. (O OLE DB modelos de consumidor são testados no OLE DB 2.6, mas não dão suporte a todas as interfaces na especificação.) Os modelos de consumidor minimizar a quantidade de código que você deve escrever para implementar um consumidor OLE DB. Os modelos fornecem:  
@@ -34,7 +34,7 @@ O OLE DB modelos de consumidor dão suporte a especificação de versão 2.6 do 
   
 -   Tipos de dados de C/C++ nativos para programação de OLE DB.  
   
- Para usar os modelos OLE DB, você deve estar familiarizado com modelos de C++, COM e as interfaces do OLE DB. Se você não estiver familiarizado com o OLE DB, consulte [referência do programador DB OLE](https://msdn.microsoft.com/library/ms718124.aspx).  
+ Para usar os modelos OLE DB, você deve estar familiarizado com modelos de C++, COM e as interfaces do OLE DB. Se você não estiver familiarizado com o OLE DB, consulte [referência do programador DB OLE](/previous-versions/windows/desktop/ms718124\(v=vs.85\)).  
   
  Os modelos OLE DB oferecer suporte a modelo de objeto OLE DB existente em vez de adicionar um novo modelo de objeto. As classes de camada superior de OLE DB modelos de consumidor em paralelo os componentes definidos na especificação do OLE DB. O design dos modelos de consumidor de banco de dados OLE inclui recursos avançados como vários acessadores em um conjunto de linhas. O uso de modelos e herança múltipla torna a biblioteca de pequeno e flexível.  
   
@@ -68,5 +68,5 @@ O OLE DB modelos de consumidor dão suporte a especificação de versão 2.6 do 
 ## <a name="see-also"></a>Consulte também  
  [Programação OLE DB](../../data/oledb/ole-db-programming.md)   
  [Acesso a dados](../data-access-in-cpp.md)   
- [Documentação do SDK do OLE DB](https://msdn.microsoft.com/library/ms722784.aspx)   
- [Referência do programador do OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)
+ [Documentação do SDK do OLE DB](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
+ [Referência do programador do OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))

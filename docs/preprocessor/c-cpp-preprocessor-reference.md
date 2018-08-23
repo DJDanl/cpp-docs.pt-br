@@ -15,38 +15,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eea99138fe00b803bace6606532221a8d13da1f8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8271b1bca61ca05d1348261e1c579dc1c79fec1a
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849568"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42545716"
 ---
 # <a name="cc-preprocessor-reference"></a>Referência de pré-processador C/C++
-O *referência de pré-processador C/C++* explica o pré-processador como é implementado no Microsoft C/C++. O pré-processador executa operações preliminares em arquivos do C e C++ antes de serem passados para o compilador. É possível usar o pré-processador para compilar o código condicionalmente, inserir arquivos, especificar mensagens de erro de tempo de compilação e aplicar regras de máquina específicas para seções de código.  
+O *referência de pré-processador C/C++* explica o pré-processador como implementado no Microsoft C/C++. O pré-processador executa operações preliminares em arquivos do C e C++ antes de serem passados para o compilador. É possível usar o pré-processador para compilar o código condicionalmente, inserir arquivos, especificar mensagens de erro de tempo de compilação e aplicar regras de máquina específicas para seções de código.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)  
- Descreve as políticas, normalmente usadas para tornar os programas de origem fáceis de alterar e de compilar em ambientes de execução diferentes.  
+ 
+[Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)  
+Descreve as políticas, normalmente usadas para tornar os programas de origem fáceis de alterar e de compilar em ambientes de execução diferentes.  
   
- [Operadores de pré-processador](../preprocessor/preprocessor-operators.md)  
- Discute os quatro operadores específicos de pré-processadores usados no contexto da política `#define`.  
+[Operadores de pré-processador](../preprocessor/preprocessor-operators.md)  
+Discute os quatro operadores específicos de pré-processadores usados no contexto da política `#define`.  
   
- [Macros predefinidas](../preprocessor/predefined-macros.md)  
- Discute macros predefinidas conforme especificado por ANSI e Microsoft C++.  
+[Macros predefinidas](../preprocessor/predefined-macros.md)  
+Discute macros predefinidas conforme especificado por ANSI e Microsoft C++.  
   
- [Pragmas](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
- Discute pragmas, que proporcionam uma maneira para que cada compilador ofereça recursos específicos de máquinas e sistemas operacionais enquanto mantém a compatibilidade geral com as linguagens C e C++.  
+[Pragmas](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
+Discute pragmas, que proporcionam uma maneira para que cada compilador ofereça recursos específicos de máquinas e sistemas operacionais enquanto mantém a compatibilidade geral com as linguagens C e C++.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Referência da linguagem C++](../cpp/cpp-language-reference.md)  
- Fornece o material de referência para a implementação da Microsoft da linguagem C++.  
+ 
+[Referência da linguagem C++](../cpp/cpp-language-reference.md)  
+Fornece o material de referência para a implementação da Microsoft da linguagem C++.  
   
- [Referência da linguagem C](../c-language/c-language-reference.md)  
- Fornece o material de referência para a implementação da Microsoft da linguagem C.  
+[Referência da linguagem C](../c-language/c-language-reference.md)  
+Fornece o material de referência para a implementação da Microsoft da linguagem C.  
   
- [Compilando um programa do C/C++](../build/reference/c-cpp-building-reference.md)  
- Fornece links para tópicos que discutem opções de compilador e de vinculador.  
+[Criando um programa em C/C++](../build/reference/c-cpp-building-reference.md)  
+Fornece links para tópicos que discutem opções de compilador e de vinculador.  
   
- [Criando e gerenciando projetos do Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)  
- Descreve a interface do usuário no Visual Studio que permite especificar os diretórios que o sistema do projeto procurará para localizar arquivos para o seu projeto do C++.
+[Criando e gerenciando projetos do Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)  
+Descreve a interface do usuário no Visual Studio que permite especificar os diretórios que o sistema do projeto procurará para localizar arquivos para o seu projeto do C++.

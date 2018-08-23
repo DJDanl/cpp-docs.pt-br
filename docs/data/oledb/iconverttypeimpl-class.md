@@ -25,15 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 57ad4c5e9f119a7c9904376db4f77c35de4290f2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e176cc20dc3f6f13eb868133b99c0ce7e86d25c4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337122"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571543"
 ---
 # <a name="iconverttypeimpl-class"></a>Classe IConvertTypeImpl
-Fornece uma implementação de [IConvertType](https://msdn.microsoft.com/library/ms715926.aspx) interface.  
+Fornece uma implementação de [IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\)) interface.  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -73,7 +73,7 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [IConvertType::CanConvert](https://msdn.microsoft.com/library/ms711224.aspx) na *referência do programador do OLE DB*.  
+ Ver [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224\(v=vs.85\)) na *referência do programador do OLE DB*.  
   
 ### <a name="remarks"></a>Comentários  
  Usa a conversão de dados OLE DB em `MSADC.DLL`.  

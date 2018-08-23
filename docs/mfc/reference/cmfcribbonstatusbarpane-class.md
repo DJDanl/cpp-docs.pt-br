@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e42eceabcbe4e67e393b52b9dc3ab8e9ca7b280
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 55ef22eec84b4d7e5e4ea27abe611cf2d18f2a1b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853843"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540539"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Classe CMFCRibbonStatusBarPane
 O `CMFCRibbonStatusBarPane` classe implementa um elemento de faixa de opções que você pode adicionar a uma barra de status da faixa de opções.  
@@ -210,7 +210,7 @@ BOOL IsExtended() const;
  TRUE se o painel está na área estendida da barra de status. FALSE caso contrário.  
   
 ##  <a name="ondrawborder"></a>  CMFCRibbonStatusBarPane::OnDrawBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
 ```  
 virtual void OnDrawBorder(CDC*);
@@ -222,7 +222,7 @@ virtual void OnDrawBorder(CDC*);
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="onfillbackground"></a>  CMFCRibbonStatusBarPane::OnFillBackground  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
 ```  
 virtual COLORREF OnFillBackground(CDC* pDC);

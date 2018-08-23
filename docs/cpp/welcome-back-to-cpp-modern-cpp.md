@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4426f3d25681e3ee46bf4d5da615d185babb0f0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d626385523cb957b44589784c2e69539b5ed8fca
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462356"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572437"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Bem-vindo ao C++ (C++ moderno)
 A C++ é uma das linguagens de programação mais usadas do mundo e os programas bem escritos que a utilizam são rápidos e eficientes. Essa linguagem é mais flexível que as demais porque é possível usá-la para criar diversos aplicativos, desde jogos divertidos e envolventes a softwares científicos de alto desempenho, drivers de dispositivos, programas incorporados e aplicativos clientes do Windows. Há mais de 20 anos, C++ é usada para solucionar problemas como esses e de muitos outros tipos. Mas talvez você ainda não saiba que cada vez mais programadores C++ estão deixando a programação C para trás e usando a moderna linguagem C++ em seu lugar.  
@@ -107,7 +107,7 @@ void f()
   
  A C++ está passando por uma renovação porque a potência voltou a ser essencial. Linguagens como Java e C# são úteis quando a produtividade do programador é um aspecto importante. Contudo, elas têm suas limitações quando potência e desempenho são essenciais. Para obter alta eficiência e potência, principalmente em dispositivos com hardware limitado, não há páreo para a linguagem C++.  
   
- Além de a linhagem ser moderna, as ferramentas de desenvolvimento também são. Com o [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], todas as etapas do ciclo de desenvolvimento ficam robustas e eficientes. Ele conta com ferramentas de ALM (Gerenciamento de ciclo de vida de aplicativos), melhorias de IDE, como IntelliSense, mecanismos úteis para ferramentas, como XAML, e ferramentas de compilação, depuração e muitas outras.  
+ Além de a linhagem ser moderna, as ferramentas de desenvolvimento também são. Visual Studio faz todas as partes do ciclo de desenvolvimento robusto e eficiente. Ele conta com ferramentas de ALM (Gerenciamento de ciclo de vida de aplicativos), melhorias de IDE, como IntelliSense, mecanismos úteis para ferramentas, como XAML, e ferramentas de compilação, depuração e muitas outras.  
   
  Os artigos da documentação sobre esse assunto fornecem diretrizes de alto nível e melhores práticas para os recursos e as técnicas mais importantes para gravar programas C++ modernos.  
   

@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 373e9c1f8cc24ca4de4f0a78dd75011681c78056
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5a25e16439673f367cfe0bfe208dbc21a621b81
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327519"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540738"
 ---
 # <a name="invlpg"></a>__invlpg
 **Seção específica da Microsoft**  
   
- Gera x86 `invlpg` instrução, o que invalida o buffer à parte de conversão (TLB) para a página associada à memória apontada pela `Address`.  
+ Gera o x86 `invlpg` instrução, o que invalida o buffer de conversão à parte (TLB) para a página associada com a memória apontada por `Address`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,12 +46,12 @@ void __invlpg(
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__invlpg`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__invlpg`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- Intrínsecos `__invlpg` emite uma instrução privilegiada e está disponível apenas no modo de kernel com um nível de privilégio (CPL) de 0.  
+ O intrínseco `__invlpg` emite uma instrução privilegiada e só está disponível no modo de kernel com um nível de privilégio (CPL) igual a 0.  
   
  Essa rotina só está disponível como função intrínseca.  
   

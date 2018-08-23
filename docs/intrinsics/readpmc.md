@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73d98db19be60bd038965763a24b83ddd0016c9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5072f49728a4ea9b7a323d3837997dd3d767358
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333785"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538210"
 ---
 # <a name="readpmc"></a>__readpmc
 **Seção específica da Microsoft**  
   
- Gera o `rdpmc` instrução, que lê o desempenho de monitoramento do contador especificado pelo `counter`.  
+ Gera o `rdpmc` instrução, que lê o desempenho de monitoramento do contador especificado por `counter`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,12 +49,12 @@ unsigned __int64 __readpmc(
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__readpmc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readpmc`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- Nesse intrínseco está disponível no modo de kernel apenas e a rotina só está disponível como um intrínseco.  
+ Esse intrínseco está disponível no modo de kernel apenas e a rotina só está disponível como um intrínseco.  
   
 **Fim da seção específica da Microsoft**  
   

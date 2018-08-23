@@ -12,17 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b8651bea0b1ee9f54ec0af704d92feef0722368
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff2b99eedcdd81a96dc3091046a4f62ffe002509
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367973"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572320"
 ---
 # <a name="intrinsics-and-inline-assembly"></a>Intrínsecos e assembly embutido
-Uma das restrições para o [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] compilador é fazer com que não há suporte do assembler embutido. Isso significa que as funções que não pode ser gravada em C ou C++ em terá que ser escrito como sub-rotinas ou funções intrínsecas suportadas pelo compilador. Determinadas funções são confidenciais de desempenho e outros não. Funções de diferenciação de desempenho devem ser implementadas como funções intrínsecas.  
+Uma das restrições para o x64 compilador é fazer com que não há suporte de assembler embutido. Isso significa que funções que não pode ser gravada em C ou C++ será terá que ser escrito como sub-rotinas ou funções intrínsecas suportadas pelo compilador. Determinadas funções são dependentes do desempenho, enquanto outros não são. Funções de diferenciação de desempenho devem ser implementadas como funções intrínsecas.  
   
- Os intrínsecos suportados pelo compilador são descritos na [intrínsecos do compilador](../intrinsics/compiler-intrinsics.md).  
+ Os intrínsecos suportados pelo compilador são descritos em [intrínsecos do compilador](../intrinsics/compiler-intrinsics.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Convenções de software x64](../build/x64-software-conventions.md)

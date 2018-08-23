@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4114 | Microsoft Docs
+title: Compilador aviso (nível 1) C4114 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78402d4487eecde00c55ea5e0aad913d97226325
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9969f58b24defdb3dfa8a96437769d0b19e4569e
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283917"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540758"
 ---
-# <a name="compiler-warning-level-1-c4114"></a>Compilador C4114 de aviso (nível 1)
+# <a name="compiler-warning-level-1-c4114"></a>Compilador aviso (nível 1) C4114
 mesmo qualificador de tipo usado mais de uma vez  
   
- Uma declaração de tipo ou definição usa um qualificador de tipo (**const**, `volatile`, **assinado**, ou `unsigned`) mais de uma vez. Isso faz com que um aviso com extensões da Microsoft (/Ze) e um erro de compatibilidade de ANSI (/Za).  
+ Uma declaração de tipo ou definição usa um qualificador de tipo (**const**, **volátil**, **assinado**, ou **sem sinal**) mais de uma vez. Isso faz com que um aviso com extensões da Microsoft (/Ze) e um erro de compatibilidade com ANSI (/Za).  
   
  O exemplo a seguir gera C4114:  
   

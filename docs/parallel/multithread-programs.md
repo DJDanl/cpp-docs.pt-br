@@ -15,19 +15,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ece834bd6bf85daacbbaf50110e6e278da1ae099
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c87d6e6a308b4e5a4cc2b38599e13f59a414361b
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686926"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538773"
 ---
 # <a name="multithread-programs"></a>Programas multithread
-Um thread é basicamente um caminho de execução por meio de um programa. Também é a menor unidade de execução que a agenda de Win32. Um thread consiste em uma pilha, o estado de registros de CPU e uma entrada na lista de execução do Agendador de sistema. Cada thread compartilha os recursos de todos os do processo.  
+Um thread é basicamente um caminho de execução por meio de um programa. Também é a menor unidade de execução que a agenda de Win32. Um thread consiste em uma pilha, o estado de registros de CPU e uma entrada na lista de execução do Agendador de sistema. Cada thread compartilha recursos de todos os do processo.  
   
- Um processo consiste em um ou mais threads e o código, dados e outros recursos de um programa na memória. Recursos do programa típicos são arquivos abertos, semáforos e a memória alocada dinamicamente. Um programa é executado quando o Agendador de sistema dá a um dos seus threads de controle de execução. O Agendador determina quais segmentos devem ser executado e quando ele deve ser executado. Threads de prioridade mais baixa talvez seja necessário aguardar enquanto os threads de prioridade mais altos concluem suas tarefas. Em computadores multiprocessador, o Agendador pode mover segmentos individuais para processadores diferentes para balancear a carga de CPU.  
+Um processo consiste em um ou mais threads e o código, dados e outros recursos de um programa na memória. Recursos do programa típico são arquivos abertos, semáforos e memória alocada dinamicamente. Um programa é executado quando o Agendador do sistema dá a um de seus threads controle de execução. O Agendador determina quais segmentos devem ser executado e quando deve ser executado. Threads de prioridade mais baixa talvez seja necessário esperar enquanto os threads de prioridade mais alta concluam suas tarefas. Em máquinas com vários processadores, o Agendador pode mover threads individuais para processadores diferentes para balancear a carga de CPU.  
   
- Cada thread em um processo funciona de forma independente. A menos que você torná-las visíveis entre si, os threads executar individualmente e não estiver ciente de outros threads em um processo. Threads compartilhando recursos comuns, no entanto, devem coordenar o trabalho usando semáforos ou outro método de comunicação entre processos. Para obter mais informações sobre a sincronização de threads, consulte [escrevendo um programa Win32 multithread](../parallel/writing-a-multithreaded-win32-program.md).  
+Cada thread em um processo funciona de forma independente. A menos que você torná-las visíveis entre si, os threads executar individualmente e não estão cientes dos outros threads em um processo. Threads de compartilhamento de recursos comuns, no entanto, devem coordenar o trabalho deles usando semáforos ou outro método de comunicação entre processos. Para obter mais informações sobre a sincronização de threads, consulte [escrevendo um programa Win32 multithread](../parallel/writing-a-multithreaded-win32-program.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Multithreading com C e Win32](../parallel/multithreading-with-c-and-win32.md)
+
+[Multithreading com C e Win32](../parallel/multithreading-with-c-and-win32.md)

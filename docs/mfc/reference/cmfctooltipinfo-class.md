@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: babc490d63f6c7e1692877e53b4971fc85ec4c24
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0a8ec3a7898f846af85614dec75c10c5a0393e24
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850885"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544377"
 ---
 # <a name="cmfctooltipinfo-class"></a>Classe CMFCToolTipInfo
 Armazena informações sobre a aparência visual de dicas de ferramenta.  
@@ -222,7 +222,7 @@ BOOL m_bVislManagerTheme;
  Se `m_bVislManagerTheme` for TRUE, cada dica de ferramenta solicita um novo [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) do Gerenciador de visual do aplicativo antes que elas aparecem na tela e usa os valores nesse objeto para determinar sua aparência. Os outros membros da sua [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) são ignorados.  
   
 ##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator =  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
 ```  
 CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);

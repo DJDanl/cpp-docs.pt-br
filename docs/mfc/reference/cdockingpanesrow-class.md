@@ -100,17 +100,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42680d4cd79c5079703a94361403efd858ef80f2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 128334398b268c91ec7e6b938bcbd0d2e6e37dd0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955261"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538580"
 ---
 # <a name="cdockingpanesrow-class"></a>Classe CDockingPanesRow
-Gerencia uma lista de painéis que estão localizados na mesma horizontal ou vertical linha (coluna) de um site de encaixe.  
+Gerencia uma lista de painéis que estão localizados na mesma linha horizontal ou vertical (coluna) de um local de encaixe.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -177,7 +177,7 @@ class CDockingPanesRow : public CObject
  `CDockingPanesRow` objetos são criados internamente por objetos do site de encaixe.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como obter um `CDockingPanesRow` de objeto um `CMFCAutoHideBar` objeto.  
+ O exemplo a seguir demonstra como obter um `CDockingPanesRow` do objeto de um `CMFCAutoHideBar` objeto.  
   
  [!code-cpp[NVC_MFC_RibbonApp#26](../../mfc/reference/codesnippet/cpp/cdockingpanesrow-class_1.cpp)]  
   
@@ -224,7 +224,7 @@ virtual void AddPaneFromRow(
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="arrangepanes"></a>  CDockingPanesRow::ArrangePanes  
- Organiza encaixando painéis em uma linha de acordo com a margem especificada e espaçamento parâmetros.  
+ Organiza os painéis em uma linha de acordo com a margem especificada de encaixe e espaçamento de parâmetros.  
   
 ```  
 virtual void ArrangePanes(
@@ -240,7 +240,7 @@ virtual void ArrangePanes(
  Especifica o espaçamento, em pixels, entre os painéis.  
   
 ### <a name="remarks"></a>Comentários  
- Chame este método para organizar os painéis na linha em que eles serão encaixar. Depois de chamar esse método, você deve chamar `CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`.  
+ Chame esse método para organizar painéis na linha onde eles serão encaixado. Depois de chamar esse método, você deve chamar `CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`.  
   
 ##  <a name="calcfixedlayout"></a>  CDockingPanesRow::CalcFixedLayout  
 
@@ -673,7 +673,7 @@ virtual void RepositionPanes(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *rectNewParentBarArea*  
- [in] *nSide*  
+ [in] *Xplorando o*  
  [in] *bExpand*  
  [in] *nOffset*  
   
@@ -781,7 +781,7 @@ virtual void UpdateVisibleState(BOOL bDelay);
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CObject](../../mfc/reference/cobject-class.md)   
  [Classe CDockSite](../../mfc/reference/cdocksite-class.md)   

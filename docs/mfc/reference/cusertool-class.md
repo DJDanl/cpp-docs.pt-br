@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 925e93afae4682497263eb96832aa466c6034231
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 51933ac5aeb3c14a25b3989809aab2e09686b9a3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121310"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538579"
 ---
 # <a name="cusertool-class"></a>Classe CUserTool
-Uma ferramenta de usuário é um item de menu que executa um aplicativo externo. O **ferramentas** guia o **personalizar** caixa de diálogo ( [CMFCToolBarsCustomizeDialog classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) permite que o usuário para adicionar ferramentas de usuário e para especificar o nome, o comando, argumentos, e diretório inicial para cada ferramenta de usuário.  
+Uma ferramenta de usuário é um item de menu que executa um aplicativo externo. O **ferramentas** guia o **personalizar** caixa de diálogo ( [classe CMFCToolBarsCustomizeDialog](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) permite que o usuário adicione ferramentas de usuário e especifique o nome, o comando, argumentos, e diretório inicial para cada ferramenta de usuário.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -81,15 +81,15 @@ class CUserTool : public CObject
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CUserTool::m_strArguments](#m_strarguments)|Os argumentos de linha de comando para a ferramenta do usuário.|  
-|[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|O diretório inicial para a ferramenta do usuário.|  
+|[CUserTool::m_strArguments](#m_strarguments)|Os argumentos de linha de comando para a ferramenta de usuário.|  
+|[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|O diretório inicial para a ferramenta de usuário.|  
 |[CUserTool::m_strLabel](#m_strlabel)|O nome da ferramenta que é exibido no item de menu para a ferramenta.|  
   
 ## <a name="remarks"></a>Comentários  
- Para obter mais informações sobre como habilitar as ferramentas de usuário em seu aplicativo, consulte [CUserToolsManager classe](../../mfc/reference/cusertoolsmanager-class.md).  
+ Para obter mais informações sobre como habilitar as ferramentas de usuário em seu aplicativo, consulte [classe CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como criar uma ferramenta de um `CUserToolsManager` do objeto, defina o `m_strLabel` variável de membro e defina o aplicativo que executa a ferramenta de usuário. Este trecho de código é parte do [exemplo de demonstração do Visual Studio](../../visual-cpp-samples.md).  
+ O exemplo a seguir demonstra como criar uma ferramenta de um `CUserToolsManager` do objeto, defina o `m_strLabel` variável de membro e defina o aplicativo que executa a ferramenta de usuário. Este trecho de código faz parte do [amostra de demonstração do Visual Studio](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#35](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]  
   
@@ -102,7 +102,7 @@ class CUserTool : public CObject
  **Cabeçalho:** afxusertool.h  
   
 ##  <a name="copyicontoclipboard"></a>  CUserTool::CopyIconToClipboard  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
 ```  
 BOOL CopyIconToClipboard();
@@ -136,7 +136,7 @@ const CString& GetCommand() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Uma referência a `CString` objeto que contém o texto do comando associado com a ferramenta de usuário.  
+ Uma referência ao `CString` objeto que contém o texto do comando associado com a ferramenta de usuário.  
   
 ##  <a name="getcommandid"></a>  CUserTool::GetCommandId  
  Retorna a ID de comando da ferramenta de usuário.  
@@ -146,7 +146,7 @@ UINT GetCommandId() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- A ID de comando da ferramenta de usuário.  
+ A ID de comando da ferramenta usuário.  
   
 ##  <a name="invoke"></a>  CUserTool::Invoke  
  Executa o comando associado com a ferramenta de usuário.  
@@ -172,22 +172,22 @@ virtual HICON LoadDefaultIcon();
  Um identificador para o ícone carregado (HICON), ou nulo se o ícone padrão não pode ser carregado.  
   
 ### <a name="remarks"></a>Comentários  
- O framework chama este método quando não é possível carregar um ícone para uma ferramenta definida pelo usuário do arquivo executável da ferramenta.  
+ O framework chama esse método quando não é possível carregar um ícone para uma ferramenta definida pelo usuário a partir do arquivo executável da ferramenta.  
   
  Substitua este método para fornecer seu próprio ícone padrão da ferramenta.  
   
 ##  <a name="m_strarguments"></a>  CUserTool::m_strArguments  
- Os argumentos de linha de comando para a ferramenta do usuário.  
+ Os argumentos de linha de comando para a ferramenta de usuário.  
   
 ```  
 CString m_strArguments;  
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Essa cadeia de caracteres é passada para a ferramenta quando você chamar [CUserTool::Invoke](#invoke) ou quando um usuário clica o comando associado a essa ferramenta.  
+ Essa cadeia de caracteres é passada para a ferramenta quando você chama [CUserTool::Invoke](#invoke) ou quando um usuário clica o comando associado a essa ferramenta.  
   
 ##  <a name="m_strinitialdirectory"></a>  CUserTool::m_strInitialDirectory  
- Especifica o diretório inicial para a ferramenta do usuário.  
+ Especifica o diretório inicial para a ferramenta de usuário.  
   
 ```  
 CString m_strInitialDirectory;  
@@ -204,7 +204,7 @@ CString m_strLabel;
 ```  
   
 ##  <a name="serialize"></a>  CUserTool::Serialize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
 ```  
 virtual void Serialize(CArchive& ar);
@@ -227,7 +227,7 @@ void SetCommand(LPCTSTR lpszCmd);
  Especifica o novo aplicativo a ser associado com a ferramenta de usuário.  
   
 ### <a name="remarks"></a>Comentários  
- Chame este método para definir um novo aplicativo que executa a ferramenta de usuário. O método destrói o ícone antigo e carrega um novo ícone de determinado aplicativo. Se ele não é possível carregar um ícone do aplicativo, ele carrega o ícone padrão para uma ferramenta do usuário chamando [CUserTool::LoadDefaultIcon](#loaddefaulticon).  
+ Chame esse método para definir um novo aplicativo que executa a ferramenta de usuário. O método destrói o ícone antigo e carrega um novo ícone do aplicativo determinado. Se ele não é possível carregar um ícone do aplicativo, ele carrega o ícone padrão para uma ferramenta do usuário chamando [CUserTool::LoadDefaultIcon](#loaddefaulticon).  
   
 ##  <a name="settoolicon"></a>  CUserTool::SetToolIcon  
  Carrega o ícone para a ferramenta de usuário do aplicativo que usa a ferramenta.  
@@ -240,10 +240,10 @@ virtual HICON SetToolIcon();
  Um identificador para o ícone carregado.  
   
 ### <a name="remarks"></a>Comentários  
- Chame este método para carregar o ícone a ser exibido no item de menu. Este método pesquisa o ícone no arquivo executável que usa a ferramenta. Se ele não tem um ícone padrão, o ícone fornecidas pelo [CUserTool::LoadDefaultIcon](#loaddefaulticon) é usado em vez disso.  
+ Chame esse método para carregar o ícone a ser exibido no item de menu. Esse método pesquisará o ícone no arquivo executável que usa a ferramenta. Se ele não tem um ícone padrão, o ícone fornecido pelo [CUserTool::LoadDefaultIcon](#loaddefaulticon) é usado em vez disso.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CWinAppEx](../../mfc/reference/cwinappex-class.md)   
  [Classe CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)

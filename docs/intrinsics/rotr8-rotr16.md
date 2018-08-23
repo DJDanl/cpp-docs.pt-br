@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca8c9bddac3f9e1a34d9b1a430cb97da86c40865
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a667f857621c01900165f6e93de7f7bddc837915
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337217"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539356"
 ---
 # <a name="rotr8-rotr16"></a>_rotr8, _rotr16
 **Seção específica da Microsoft**  
@@ -57,10 +57,10 @@ unsigned short _rotr16(
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`_rotr8`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_rotr16`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_rotr8`|x86, ARM, x64|  
+|`_rotr16`|x86, ARM, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  Ao contrário de uma operação de deslocamento à direita, ao executar um giro à direita, os bits da extremidade baixa são movidos para as posições de bits de ordem alta.  

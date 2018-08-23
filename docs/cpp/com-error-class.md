@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60fc445d51cfa72a6c72984ff19b877d916ded53
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 08ba95eb0e1ffb619b6cdecfc8b410ff5a4b5534
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407755"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571650"
 ---
 # <a name="comerror-class"></a>Classe _com_error
 **Seção específica da Microsoft**  
@@ -80,4 +80,4 @@ ms.locfileid: "39407755"
   
 ## <a name="see-also"></a>Consulte também  
  [Classes de suporte COM do compilador](../cpp/compiler-com-support-classes.md)   
- [Interface IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)
+ [Interface IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)

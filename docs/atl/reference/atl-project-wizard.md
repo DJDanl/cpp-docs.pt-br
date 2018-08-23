@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80556b31650cc04e66b2ad6681d60eff2fa72d5f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d138f65e447594059dba5b536378ee004be77036
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025812"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573109"
 ---
 # <a name="atl-project-wizard"></a>ATL Project Wizard
 A biblioteca ATL (Active Template) é um conjunto de classes C++ baseadas em modelo que simplificam a criação de objetos pequenos e rápidos. A ATL Project Wizard cria um projeto com as estruturas para conter objetos COM.  
@@ -52,7 +52,7 @@ A biblioteca ATL (Active Template) é um conjunto de classes C++ baseadas em mod
   
 -   [Otimizar o compilador para um projeto ATL](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)  
   
- Você pode especificar as propriedades do projeto (por exemplo, [se deseja vincular estaticamente ao CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) na [propriedades do projeto](../../ide/general-property-page-project.md) página e você pode definir [configurações de build](/visualstudio/ide/understanding-build-configurations) para um Projeto ATL. Ver [usando projetos para compilar aplicativos](http://msdn.microsoft.com/3339fa90-bac2-4b95-8361-662a2e0e7dfe) para obter mais informações.  
+ Você pode especificar as propriedades do projeto (por exemplo, [se deseja vincular estaticamente ao CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) na [propriedades do projeto](../../ide/general-property-page-project.md) página e você pode definir [configurações de build](/visualstudio/ide/understanding-build-configurations) para um Projeto ATL.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando e gerenciando projetos do Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   

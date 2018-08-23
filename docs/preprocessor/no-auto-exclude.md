@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b0c8d28e1e9c7306c1a74db90177caf76ca95b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5cae3a52c3434317ee26292de13d3e0471d78998
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839516"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539729"
 ---
 # <a name="noautoexclude"></a>no_auto_exclude
-**Específicas do C++**  
+**Específico do C++**  
   
- Desabilita a exclusão automática.  
+Desabilita a exclusão automática.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,10 +35,12 @@ no_auto_exclude
 ```  
   
 ## <a name="remarks"></a>Comentários  
- As bibliotecas de tipos podem conter definições dos itens definidos em cabeçalhos do sistema ou em outras bibliotecas de tipos. `#import` tenta impedir vários erros de definição excluindo automaticamente esses itens. Quando isso for feito, [C4192 de aviso do compilador (nível 3)](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) será emitido para cada item a ser excluído. Você pode desabilitar essa exclusão automática usando esse atributo.  
+ 
+As bibliotecas de tipos podem conter definições dos itens definidos em cabeçalhos do sistema ou em outras bibliotecas de tipos. `#import` tenta impedir vários erros de definição excluindo automaticamente esses itens. Quando isso for feito, [aviso do compilador (nível 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) será emitido para cada item a ser excluído. Você pode desabilitar essa exclusão automática usando esse atributo.  
   
- **TÉRMINO específicas do C++**  
+**FIM de específico de C++**  
   
 ## <a name="see-also"></a>Consulte também  
- [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import diretiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

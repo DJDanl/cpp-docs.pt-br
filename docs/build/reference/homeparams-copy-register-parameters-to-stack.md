@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ffc9b37ebdcbb380186c7840f5ebd956708a2dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bfd6b8c77d972eb4606e7095bc5f733e7db16ea6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374392"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572708"
 ---
 # <a name="homeparams-copy-register-parameters-to-stack"></a>/homeparams (copiar parâmetros de registro para pilha)
 Força os parâmetros passados em registros a serem gravados em seus locais na pilha mediante a entrada da função.  
@@ -34,23 +34,23 @@ Força os parâmetros passados em registros a serem gravados em seus locais na p
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Esta opção do compilador se destina apenas aos compiladores [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] (nativos e de compilação cruzada).  
+ Essa opção do compilador é apenas para x64 compiladores (native e compilação cruzada).  
   
- Quando os parâmetros são passados em uma [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] compilação, convenções de chamada exigem stackspace para parâmetros, mesmo para os parâmetros passados em registros. Para obter mais informações, consulte [parâmetro passando](../../build/parameter-passing.md). No entanto, por padrão, em uma compilação de versão, os parâmetros de registro serão não gravados na pilha, no espaço que já é fornecido para os parâmetros. Isso torna difícil de depurar um build otimizado (versão) do seu programa.  
+ Quando os parâmetros são passados em x64 compilação, as convenções de chamada exigem stackspace para parâmetros, mesmo para os parâmetros passados em registros. Para obter mais informações, consulte [passagem de parâmetro](../../build/parameter-passing.md). No entanto, por padrão na compilação de versão, os parâmetros de registro serão não gravados para a pilha, no espaço do que já é fornecido para os parâmetros. Isso torna difícil de depurar uma compilação otimizada (versão) do seu programa.  
   
- Para uma versão de compilação, use **/homeparams** para garantir que você pode depurar seu aplicativo. **/homeparams** implica uma desvantagem de desempenho, porque ele requer um ciclo para carregar os parâmetros de registro na pilha.  
+ Para um build de versão, use **/homeparams** para garantir que você pode depurar seu aplicativo. **/homeparams** implica uma desvantagem de desempenho, porque ele requer um ciclo para carregar os parâmetros de registro na pilha.  
   
  Em uma compilação de depuração, a pilha sempre é preenchida com os parâmetros passados em registros.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
 2.  Clique o **C/C++** pasta.  
   
 3.  Clique o **linha de comando** página de propriedades.  
   
-4.  Digite a opção de compilador no **opções adicionais** caixa.  
+4.  Digite a opção de compilador na **opções adicionais** caixa.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   

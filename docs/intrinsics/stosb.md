@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d16c9ede6d815c2c697c1ed03dc10476f6dd3bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8e5cefd7ba2b4816bf7e204cd4b3f97ee86974a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324568"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545741"
 ---
 # <a name="stosb"></a>__stosb
 **Seção específica da Microsoft**  
@@ -48,15 +48,15 @@ void __stosb(
  Os dados a serem armazenados.  
   
  [in] `Count`  
- O comprimento do bloco de bytes a serem gravados.  
+ O tamanho do bloco de bytes a serem gravados.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__stosb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosb`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  O resultado é que o caractere `Data` é gravado em um bloco de `Count` bytes no `Dest` cadeia de caracteres.  

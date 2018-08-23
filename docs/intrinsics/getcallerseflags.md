@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f9cf2a0991b17cb980e60550f445b45c992fcbb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a22777479dc3653b2c4170f7621dc466b4eabef
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330268"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541176"
 ---
 # <a name="getcallerseflags"></a>__getcallerseflags
 **Seção específica da Microsoft**  
@@ -42,9 +42,9 @@ unsigned int __getcallerseflags(void);
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__getcallerseflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__getcallerseflags`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  Essa rotina só está disponível como função intrínseca.  

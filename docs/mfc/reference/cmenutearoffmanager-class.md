@@ -34,17 +34,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105c933ee36c9bbeb634d85963d9254f3b68ebe4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: b05c93bbdfd09bc28288b27a55520c5ac664b723
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041007"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543072"
 ---
 # <a name="cmenutearoffmanager-class"></a>Classe CMenuTearOffManager
-Gerencia destacável menus. Um menu destacável é um menu na barra de menus. O usuário pode remover um menu destacável da barra de menus, fazendo com que o menu destacável float.  
+Gerencia menus destacáveis. Um menu destacável é um menu na barra de menus. O usuário pode remover um menu destacável da barra de menus, fazendo com que o menu destacável fique flutuando.  
   
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
    
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,7 +66,7 @@ class CMenuTearOffManager : public CObject
 |----------|-----------------|  
 |[CMenuTearOffManager::Build](#build)||  
 |[CMenuTearOffManager::GetRegPath](#getregpath)||  
-|[CMenuTearOffManager::Initialize](#initialize)|Inicializa uma `CMenuTearOffManager` objeto.|  
+|[CMenuTearOffManager::Initialize](#initialize)|Inicializa um `CMenuTearOffManager` objeto.|  
 |[CMenuTearOffManager::IsDynamicID](#isdynamicid)||  
 |[CMenuTearOffManager::Parse](#parse)||  
 |[CMenuTearOffManager::Reset](#reset)||  
@@ -74,10 +74,10 @@ class CMenuTearOffManager : public CObject
 |[CMenuTearOffManager::SetupTearOffMenus](#setuptearoffmenus)||  
   
 ## <a name="remarks"></a>Comentários  
- Para usar os menus destacável em seu aplicativo, você deve ter uma `CMenuTearOffManager` objeto. Na maioria dos casos, você não cria ou inicializar um `CMenuTearOffManager` diretamente do objeto. Isso é manipulado para você quando você chama o [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) função.  
+ Para usar os menus destacáveis em seu aplicativo, você deve ter um `CMenuTearOffManager` objeto. Na maioria dos casos, você não criar ou inicializar um `CMenuTearOffManager` diretamente do objeto. Isso é feito para você quando você chama o [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) função.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como criar e inicializar uma `CMenuTearOffManager` objeto chamando o `CWinAppEX::EnableTearOffMenus` método. Este trecho de código é parte do [exemplo Word Pad](../../visual-cpp-samples.md).  
+ O exemplo a seguir demonstra como criar e inicializar uma `CMenuTearOffManager` objeto chamando o `CWinAppEX::EnableTearOffMenus` método. Este trecho de código é parte do [exemplo de Word Pad](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]  
   
@@ -105,14 +105,14 @@ void Build(
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="cmenutearoffmanager"></a>  CMenuTearOffManager::CMenuTearOffManager  
- Constrói um [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) objeto.  
+ Constrói uma [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) objeto.  
   
 ```  
 CMenuTearOffManager();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Na maioria dos casos, você não deve criar um `CMenuTearOffManager` manualmente. A estrutura do seu aplicativo cria o `CMenuTearOffManager` objeto quando você chamar [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).  
+ Na maioria dos casos, você não deve criar um `CMenuTearOffManager` manualmente. A estrutura do seu aplicativo cria o `CMenuTearOffManager` do objeto quando você chama [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).  
   
 ##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath  
 
@@ -126,7 +126,7 @@ LPCTSTR GetRegPath() const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="initialize"></a>  CMenuTearOffManager::Initialize  
- Inicializa um [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) objeto.  
+ Inicializa uma [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) objeto.  
   
 ```  
 BOOL Initialize(
@@ -137,7 +137,7 @@ BOOL Initialize(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *lpszRegEntry*  
- Uma cadeia de caracteres que contém o caminho de uma entrada de registro. Os aplicativos armazena as configurações de barras destacável na entrada do registro.  
+ Uma cadeia de caracteres que contém o caminho de uma entrada de registro. Seus aplicativos armazena as configurações de barras destacáveis nesta entrada de registro.  
   
  [in] *uiTearOffMenuFirst*  
  A primeira ID de menu para um menu destacável.  
@@ -146,10 +146,10 @@ BOOL Initialize(
  A última ID de menu para um menu destacável.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, 0.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- O intervalo de IDs de menu do *uiTearOffMenuFirst* para *uiTearOffMenuLast* deve ser um intervalo contínuo. O intervalo define o número de menus destacáveis que podem aparecer ao mesmo tempo no aplicativo.  
+ O intervalo de IDs de menu de *uiTearOffMenuFirst* à *uiTearOffMenuLast* deve ser um intervalo contínuo. O intervalo define o número de menus destacáveis que podem aparecer ao mesmo tempo no aplicativo.  
   
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 
@@ -219,6 +219,6 @@ void SetupTearOffMenus(HMENU hMenu);
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CWinAppEx](../../mfc/reference/cwinappex-class.md)

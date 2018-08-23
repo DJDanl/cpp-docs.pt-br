@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a632199dcc3318109a6b95f82d718ac3f26fa23
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 486a21506ea4b8c388dcf495f348987c3464ddc6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328377"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538385"
 ---
 # <a name="readcr3"></a>__readcr3
 **Seção específica da Microsoft**  
@@ -41,9 +41,9 @@ unsigned __int64 __readcr3(void);
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__readcr3`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readcr3`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  Esse intrínseco só está disponível no modo kernel e a rotina só está disponível como um intrínseco.  

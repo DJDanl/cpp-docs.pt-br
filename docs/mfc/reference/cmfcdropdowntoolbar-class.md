@@ -30,17 +30,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e12799f10fe86ef5dd556eac4e344aa972e2503
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 55abed046ddf1c770271a9cc5346b70a752d81a6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027304"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543074"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>Classe CMFCDropDownToolBar
 Uma barra de ferramentas que aparece quando o usuário pressiona e mantém um botão de barra de ferramentas de nível superior.  
   
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
 ## <a name="syntax"></a>Sintaxe  
   
 ```  

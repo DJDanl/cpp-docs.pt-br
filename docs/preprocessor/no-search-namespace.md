@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63cfb62bc6c047d0d3970e8f7fe51a716e50cb3c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c9a0198649e87cbe2f2639e647327de778c96bb8
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850236"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539532"
 ---
 # <a name="nosearchnamespace"></a>no_search_namespace
-**Específicas do C++**  
+**Específico do C++**  
   
- Tem a mesma funcionalidade que o [no_namespace](../preprocessor/no-namespace.md) de atributo, mas em bibliotecas de tipo que você usar a diretiva #import com o [auto_search](../preprocessor/auto-search.md) atributo.  
+Tem a mesma funcionalidade que o [no_namespace](../preprocessor/no-namespace.md) do atributo, mas é usado em bibliotecas de tipos que você usar o `#import` diretiva com o [auto_search](../preprocessor/auto-search.md) atributo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,8 +35,10 @@ no_search_namespace
 ```  
   
 ## <a name="remarks"></a>Comentários  
- **TÉRMINO específicas do C++**  
+ 
+**FIM de específico de C++**  
   
 ## <a name="see-also"></a>Consulte também  
- [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import diretiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

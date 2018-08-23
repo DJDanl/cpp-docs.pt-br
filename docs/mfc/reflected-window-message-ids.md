@@ -56,21 +56,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8746666c4b1eb48e4c54822f76328579b7ce8584
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 968a8560447b0bf8f74e94f8b492e1de7192df76
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928192"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539161"
 ---
 # <a name="reflected-window-message-ids"></a>IDs de mensagem da janela refletida
 Uma maneira rápida de criar um controle ActiveX ou outro controle especializado, é a subclasse uma janela. Para obter mais informações, consulte [controles ActiveX MFC: subclasses de um controle de Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
   
- Para impedir que o contêiner do controle o recebimento de mensagens de janela enviadas por um controle de Windows subclasse, [COleControl](../mfc/reference/colecontrol-class.md) cria uma janela de "reflector" para interceptar determinadas mensagens de janela e enviá-los para o controle. O controle, em seu procedimento de janela pode processar essas mensagens refletidas executando ações apropriadas para um controle ActiveX.  
+ Para impedir que o recebimento de mensagens de janela enviadas por um controle subclasse do Windows, o contêiner do controle [COleControl](../mfc/reference/colecontrol-class.md) cria uma janela de "reflector" para interceptar determinadas mensagens de janela e enviá-los de volta para o controle. O controle, em seu procedimento de janela pode processar essas mensagens refletidas executando ações apropriadas para um controle ActiveX.  
   
- A tabela a seguir mostra as mensagens que são interceptadas e as mensagens correspondentes que envia a janela reflector.  
+ A tabela a seguir mostra as mensagens que são interceptadas e as mensagens correspondentes que envia a janela do reflector.  
   
-|Mensagem enviada pelo controle|Mensagem refletida no controle|  
+|Mensagem enviada pelo controle|Mensagens refletidas ao controle|  
 |---------------------------------|--------------------------------------|  
 |[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)|OCM_COMMAND|  
 |[WM_CTLCOLORBTN](http://msdn.microsoft.com/library/windows/desktop/bb761849)|OCM_CTLCOLORBTN|  
@@ -85,13 +85,13 @@ Uma maneira rápida de criar um controle ActiveX ou outro controle especializado
 |[WM_VKEYTOITEM](http://msdn.microsoft.com/library/windows/desktop/bb761364)|OCM_VKEYTOITEM|  
 |[WM_CHARTOITEM](http://msdn.microsoft.com/library/windows/desktop/bb761358)|OCM_CHARTOITEM|  
 |[WM_COMPAREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775921)|OCM_COMPAREITEM|  
-|[WM_HSCROLL](http://msdn.microsoft.com/library/windows/desktop/bb787575)|OCM_HSCROLL|  
+|[MENSAGENS WM_HSCROLL](http://msdn.microsoft.com/library/windows/desktop/bb787575)|OCM_HSCROLL|  
 |[WM_VSCROLL](http://msdn.microsoft.com/library/windows/desktop/bb787577)|OCM_VSCROLL|  
-|[WM_PARENTNOTIFY](https://msdn.microsoft.com/library/ms632638.aspx)|OCM_PARENTNOTIFY|  
+|[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|  
 |[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)|OCM_NOTIFY|  
   
 > [!NOTE]
->  Se o controle é executado em um sistema Win32, há vários tipos de WM_CTLCOLOR\* mensagens pode receber. Para obter mais informações, consulte WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.  
+>  Se o controle for executado em um sistema Win32, há vários tipos de WM_CTLCOLOR\* mensagens pode receber. Para obter mais informações, consulte WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.  
   
 ## <a name="see-also"></a>Consulte também  
  [Controles ActiveX MFC: Subclasses de um controle do Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)   

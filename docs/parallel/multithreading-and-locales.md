@@ -17,34 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19cc3817faab71c209586ad952162229f846e0a7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0506c7f4efd288417c8fbdcd4784446651c362ac
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692848"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539933"
 ---
 # <a name="multithreading-and-locales"></a>Multithread e localidades
-A biblioteca de tempo de execução do C e a biblioteca padrão C++ oferecem suporte para alterar a localidade do seu programa. Este tópico aborda problemas que surgem ao usar a funcionalidade de localidade de ambas as bibliotecas em um aplicativo multithread.  
+A biblioteca de tempo de execução do C e a biblioteca padrão C++ fornecem suporte para a alteração da localidade do seu programa. Este tópico aborda problemas que ocorrem ao usar a funcionalidade de localidade de ambas as bibliotecas em um aplicativo multithreaded.  
   
 ## <a name="remarks"></a>Comentários  
- Com a biblioteca de tempo de execução do C, você pode criar aplicativos multithread usando o `_beginthread` e `_beginthreadex` funções. Este tópico aborda apenas aplicativos multithread criados usando estas funções. Para obter mais informações, consulte [beginthread, beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md).  
+
+Com a biblioteca de tempo de execução C, você pode criar aplicativos multithread usando o `_beginthread` e `_beginthreadex` funções. Este tópico aborda apenas a aplicativos multithread criados usando estas funções. Para obter mais informações, consulte [beginthread, beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md).  
   
- Para alterar a localidade usando a biblioteca de tempo de execução C, use o [setlocale](../preprocessor/setlocale.md) função. Nas versões anteriores do Visual C++, essa função sempre deve modificar a localidade em todo o aplicativo. Agora há suporte para definir a localidade em uma base por thread. Isso é feito usando o [configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) função. Para especificar que [setlocale](../preprocessor/setlocale.md) só deve alterar a localidade do thread atual, chamada `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` nesse thread. Por outro lado, chamar `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` fará com que esse thread para usar a localidade global e todas as chamadas de [setlocale](../preprocessor/setlocale.md) nesse thread irá alterar a localidade em todos os threads que não tenha habilitado explicitamente localidade por thread.  
+Para alterar a localidade usando a biblioteca de tempo de execução C, use o [setlocale](../preprocessor/setlocale.md) função. Nas versões anteriores do Visual C++, essa função sempre modificaria a localidade em todo o aplicativo. Agora há suporte para configuração de localidade por thread. Isso é feito usando o [configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) função. Para especificar que [setlocale](../preprocessor/setlocale.md) só deve alterar a localidade do thread atual, chamada `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` nesse thread. Por outro lado, chamando `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` fará com que esse thread para usam a localidade global e qualquer chamada para [setlocale](../preprocessor/setlocale.md) em que o thread irá alterar a localidade em todos os threads que não tenha habilitado explicitamente localidade por thread.  
   
- Para alterar a localidade usando a biblioteca de tempo de execução C++, use o [classe locale](../standard-library/locale-class.md). Chamando o [Locale:: global](../standard-library/locale-class.md#global) método, você alterar a localidade em cada thread que não tenha habilitado explicitamente localidade por thread. Para alterar a localidade em um único thread ou parte de um aplicativo, basta criar uma instância de um `locale` objeto no thread ou parte do código.  
+Para alterar a localidade usando a biblioteca de tempo de execução do C++, use o [classe locale](../standard-library/locale-class.md). Chamando o [Locale:: global](../standard-library/locale-class.md#global) método, você alterar a localidade em todos os threads que não tem habilitado explicitamente localidade por thread. Para alterar a localidade em um único thread ou a parte de um aplicativo, basta criar uma instância de um `locale` objeto nesse thread ou a parte do código.  
   
 > [!NOTE]
->  Chamando [Locale:: global](../standard-library/locale-class.md#global) altera a localidade para a biblioteca padrão C++ e a biblioteca de tempo de execução C. No entanto, chamar [setlocale](../preprocessor/setlocale.md) altera apenas a localidade para a biblioteca de tempo de execução C; a biblioteca padrão C++ não é afetado.  
+> Chamando [Locale:: global](../standard-library/locale-class.md#global) altera a localidade para a biblioteca padrão C++ e a biblioteca de tempo de execução C. No entanto, chamar [setlocale](../preprocessor/setlocale.md) só altera a localidade para a biblioteca de tempo de execução C; a biblioteca padrão C++ não é afetado.  
   
- Os exemplos a seguir mostram como usar o [setlocale](../preprocessor/setlocale.md) função, o [classe locale](../standard-library/locale-class.md)e o [configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) função para alterar a localidade de um aplicativo vários cenários diferentes.  
+Os exemplos a seguir mostram como usar o [setlocale](../preprocessor/setlocale.md) função, o [classe locale](../standard-library/locale-class.md)e o [configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) função para alterar a localidade de um aplicativo no vários cenários diferentes.  
   
 ## <a name="example"></a>Exemplo  
- Neste exemplo, o thread principal gera dois threads de filho. O primeiro thread, A, permite que a localidade por thread chamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. O thread de segundo, o Thread B, bem como o thread principal, não habilite a localidade por thread. Thread de um, em seguida, prossegue para alterar a localidade usando o [setlocale](../preprocessor/setlocale.md) função da biblioteca de tempo de execução do C.  
+ 
+Neste exemplo, o thread principal gera dois threads de filho. O primeiro thread, o Thread A, permite que a localidade por thread chamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. O segundo thread, o Thread B, bem como o thread principal, não habilite a localidade por thread. Thread de um, em seguida, prossegue para alterar a localidade usando o [setlocale](../preprocessor/setlocale.md) função da biblioteca em tempo de execução C.  
   
- Desde que o Thread A tem localidade por thread habilitada, somente as funções de biblioteca de tempo de execução C no início de Thread A usando a localidade "França". As funções de biblioteca de tempo de execução C no Thread B e no thread principal continuam a usar a localidade "C". Além disso, como [setlocale](../preprocessor/setlocale.md) não afeta a localidade de biblioteca padrão C++, todos os biblioteca padrão C++ objetos continuam a usar a localidade "C".  
+Uma vez que o Thread A possui uma localidade por thread habilitada, apenas as funções de biblioteca em tempo de execução C usando a localidade "francês" de início do Thread A. As funções de biblioteca em tempo de execução C no Thread B e no thread principal continuam a usar a localidade "C". Além disso, como [setlocale](../preprocessor/setlocale.md) não afeta a localidade da biblioteca padrão C++, todas as biblioteca padrão C++ objetos continuam a usar a localidade "C".  
   
-```  
+```cpp  
 // multithread_locale_1.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -138,11 +140,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>Exemplo  
- Neste exemplo, o thread principal gera dois threads de filho. O primeiro thread, A, permite que a localidade por thread chamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. O thread de segundo, o Thread B, bem como o thread principal, não habilite a localidade por thread. Thread de um, em seguida, prossegue para alterar a localidade usando o [Locale:: global](../standard-library/locale-class.md#global) método da biblioteca C++ padrão.  
+ 
+Neste exemplo, o thread principal gera dois threads de filho. O primeiro thread, o Thread A, permite que a localidade por thread chamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. O segundo thread, o Thread B, bem como o thread principal, não habilite a localidade por thread. Thread de um, em seguida, prossegue para alterar a localidade usando o [Locale:: global](../standard-library/locale-class.md#global) método da biblioteca padrão C++.  
   
- Desde que o Thread A tem localidade por thread habilitada, somente as funções de biblioteca de tempo de execução C no início de Thread A usando a localidade "França". As funções de biblioteca de tempo de execução C no Thread B e no thread principal continuam a usar a localidade "C". No entanto, como o [Locale:: global](../standard-library/locale-class.md#global) método altera a localidade "global", todos os objetos de biblioteca padrão C++ em todos os threads iniciar usando a localidade "França".  
+Uma vez que o Thread A possui uma localidade por thread habilitada, apenas as funções de biblioteca em tempo de execução C usando a localidade "francês" de início do Thread A. As funções de biblioteca em tempo de execução C no Thread B e no thread principal continuam a usar a localidade "C". No entanto, como o [Locale:: global](../standard-library/locale-class.md#global) método altera a localidade "global", todos os objetos de biblioteca padrão C++ em todos os threads começar a usar a localidade "França".  
   
-```  
+```cpp  
 // multithread_locale_2.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -236,11 +239,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>Exemplo  
- Neste exemplo, o thread principal gera dois threads de filho. O primeiro thread, A, permite que a localidade por thread chamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. O thread de segundo, o Thread B, bem como o thread principal, não habilite a localidade por thread. O thread B, em seguida, prossegue para alterar a localidade usando o [setlocale](../preprocessor/setlocale.md) função da biblioteca de tempo de execução do C.  
+ 
+Neste exemplo, o thread principal gera dois threads de filho. O primeiro thread, o Thread A, permite que a localidade por thread chamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. O segundo thread, o Thread B, bem como o thread principal, não habilite a localidade por thread. O thread B e em seguida, prossegue para alterar a localidade usando o [setlocale](../preprocessor/setlocale.md) função da biblioteca em tempo de execução C.  
   
- Desde que o Thread B não tiver habilitada a localidade por thread, as funções de biblioteca de tempo de execução C no Thread B e no thread principal iniciar usando a localidade "França". As funções de biblioteca de tempo de execução do C em continuar Thread A usar a localidade "C", porque o Thread A tem localidade por thread habilitada. Além disso, como [setlocale](../preprocessor/setlocale.md) não afeta a localidade de biblioteca padrão C++, todos os biblioteca padrão C++ objetos continuam a usar a localidade "C".  
+Uma vez que o Thread B não tiver a localidade por thread habilitada, as funções de biblioteca em tempo de execução C no Thread B e no thread principal iniciar usando a localidade "França". As funções de biblioteca em tempo de execução C em continuar Thread A usar a localidade "C", porque o Thread A tem localidade por thread habilitada. Além disso, como [setlocale](../preprocessor/setlocale.md) não afeta a localidade da biblioteca padrão C++, todas as biblioteca padrão C++ objetos continuam a usar a localidade "C".  
   
-```  
+```cpp  
 // multithread_locale_3.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -338,11 +342,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>Exemplo  
- Neste exemplo, o thread principal gera dois threads de filho. O primeiro thread, A, permite que a localidade por thread chamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. O thread de segundo, o Thread B, bem como o thread principal, não habilite a localidade por thread. O thread B, em seguida, prossegue para alterar a localidade usando o [Locale:: global](../standard-library/locale-class.md#global) método da biblioteca C++ padrão.  
+ 
+Neste exemplo, o thread principal gera dois threads de filho. O primeiro thread, o Thread A, permite que a localidade por thread chamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. O segundo thread, o Thread B, bem como o thread principal, não habilite a localidade por thread. O thread B e em seguida, prossegue para alterar a localidade usando o [Locale:: global](../standard-library/locale-class.md#global) método da biblioteca padrão C++.  
   
- Desde que o Thread B não tiver habilitada a localidade por thread, as funções de biblioteca de tempo de execução C no Thread B e no thread principal iniciar usando a localidade "França". As funções de biblioteca de tempo de execução do C em continuar Thread A usar a localidade "C", porque o Thread A tem localidade por thread habilitada. No entanto, como o [Locale:: global](../standard-library/locale-class.md#global) método altera a localidade "global", todos os objetos de biblioteca padrão C++ em todos os threads iniciar usando a localidade "França".  
+Uma vez que o Thread B não tiver a localidade por thread habilitada, as funções de biblioteca em tempo de execução C no Thread B e no thread principal iniciar usando a localidade "França". As funções de biblioteca em tempo de execução C em continuar Thread A usar a localidade "C", porque o Thread A tem localidade por thread habilitada. No entanto, como o [Locale:: global](../standard-library/locale-class.md#global) método altera a localidade "global", todos os objetos de biblioteca padrão C++ em todos os threads começar a usar a localidade "França".  
   
-```  
+```cpp  
 // multithread_locale_4.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -440,12 +445,13 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Suporte multithread para código anterior (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
- [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
- [setlocale](../preprocessor/setlocale.md)   
- [Internacionalização](../c-runtime-library/internationalization.md)   
- [Localidade](../c-runtime-library/locale.md)   
- [\<clocale >](../standard-library/clocale.md)   
- [\<locale>](../standard-library/locale.md)   
- [Classe locale](../standard-library/locale-class.md)
+
+[Suporte de multithreading para código anterior (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+[_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
+[_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
+[setlocale](../preprocessor/setlocale.md)   
+[Internacionalização](../c-runtime-library/internationalization.md)   
+[Localidade](../c-runtime-library/locale.md)   
+[\<clocale >](../standard-library/clocale.md)   
+[\<locale>](../standard-library/locale.md)   
+[Classe locale](../standard-library/locale-class.md)

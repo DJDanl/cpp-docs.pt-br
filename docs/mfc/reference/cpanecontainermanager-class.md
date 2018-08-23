@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c988f062fc870359a8f1ae1265fb91d02dbb3d
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: a3a0372d5892ec4b563275d0a5bb8f309cf6fc47
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079371"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544379"
 ---
 # <a name="cpanecontainermanager-class"></a>Classe CPaneContainerManager
-O `CPaneContainerManager` classe gerencia o armazenamento e a exibição de layout de encaixe atual.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+O `CPaneContainerManager` classe gerencia o armazenamento e a exibição de layout atual de encaixe.  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -191,12 +191,12 @@ class CPaneContainerManager : public CObject
 |[CPaneContainerManager::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||  
   
 ### <a name="remarks"></a>Comentários  
- A estrutura automaticamente cria instâncias de `CPaneContainerManager` objetos e os incorpora ou em [CPaneDivider classe](../../mfc/reference/cpanedivider-class.md) objetos ou [CMultiPaneFrameWnd classe](../../mfc/reference/cmultipaneframewnd-class.md) objetos.  
+ O framework cria automaticamente as instâncias do `CPaneContainerManager` objetos e os insere ou em [classe CPaneDivider](../../mfc/reference/cpanedivider-class.md) objetos ou no [classe CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md) objetos.  
   
  O `CPaneContainerManager` classe armazena um ponteiro para a raiz de uma árvore binária que é criada a partir [CPaneContainer](../../mfc/reference/cpanecontainer-class.md) objetos.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como obter uma referência a um `CPaneContainerManager` objeto. Este trecho de código é parte do [exemplo Definir tamanho do painel](../../visual-cpp-samples.md).  
+ O exemplo a seguir demonstra como obter uma referência a um `CPaneContainerManager` objeto. Este trecho de código é parte do [exemplo de definir o tamanho do painel](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_SetPaneSize#5](../../mfc/reference/codesnippet/cpp/cpanecontainermanager-class_1.cpp)]  
   
@@ -352,7 +352,7 @@ BOOL CheckAndRemoveNonValidPane(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWnd*  
+ [in] *Apropriei*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -835,7 +835,7 @@ virtual void ResizePaneContainers(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nSide*  
+ [in] *Xplorando o*  
  [in] *bExpand*  
  [in] *nOffset*  
  [in] *hdwp*  
@@ -904,7 +904,7 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CObject](../../mfc/reference/cobject-class.md)   
  [Classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md)   

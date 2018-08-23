@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57444d41efffcb36e023c7055335159b69737a8a
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a8721bd4754ff64fb6e7068da25775e165cae066
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018797"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584190"
 ---
 # <a name="srwlocksharedtraitsgetinvalidvalue-method"></a>Método SRWLockSharedTraits::GetInvalidValue
-Recupera uma **SRWLockSharedTraits** objeto sempre é inválido.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-inline static Type GetInvalidValue();  
-```  
-  
-## <a name="return-value"></a>Valor de retorno  
- Um identificador para um **SRWLockSharedTraits** objeto.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Consulte também  
- [Estrutura SRWLockSharedTraits](../windows/srwlocksharedtraits-structure.md)
+
+Recupera uma **SRWLockSharedTraits** objeto sempre é inválido.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+## <a name="return-value"></a>Valor de retorno
+
+Um identificador para um **SRWLockSharedTraits** objeto.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Consulte também
+
+[Estrutura SRWLockSharedTraits](../windows/srwlocksharedtraits-structure.md)

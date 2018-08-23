@@ -59,12 +59,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f87ea6791144b7ce40f4e2d71a2ca7f031adbedf
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 7023ef21258a5b93d889d02c1b586b524c8b98be
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376102"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572124"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 O cabeçalho STL/CLR `<cliext/adapter>` especifica duas classes de modelo (`collection_adapter` e `range_adapter`) e a função de modelo `make_collection`.  

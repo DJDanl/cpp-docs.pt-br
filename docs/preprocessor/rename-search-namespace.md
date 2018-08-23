@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 367294991b9cbb07ee7c852d757842a20c51cc30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20072a5196ce476cf178f7c6e1071bd495202062
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850249"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541150"
 ---
 # <a name="renamesearchnamespace"></a>rename_search_namespace
-**Específicas do C++**  
+**Específico do C++**  
   
- Tem a mesma funcionalidade que o [rename_namespace](../preprocessor/rename-namespace.md) de atributo, mas em bibliotecas de tipo que você usar a diretiva #import com o [auto_search](../preprocessor/auto-search.md) atributo.  
+Tem a mesma funcionalidade que o [rename_namespace](../preprocessor/rename-namespace.md) do atributo, mas é usado em bibliotecas de tipos que você usar o `#import` diretiva com o [auto_search](../preprocessor/auto-search.md) atributo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,13 +34,15 @@ ms.locfileid: "33850249"
 rename_search_namespace("NewName")  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `NewName`  
- O nome do novo namespace.  
+### <a name="parameters"></a>Parâmetros  
+*NewName*  
+O nome do novo namespace.  
   
 ## <a name="remarks"></a>Comentários  
- **TÉRMINO específicas do C++**  
+ 
+**FIM de específico de C++**  
   
 ## <a name="see-also"></a>Consulte também  
- [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import diretiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

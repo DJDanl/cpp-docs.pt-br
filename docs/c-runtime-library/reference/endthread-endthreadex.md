@@ -40,16 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4588829b3ec1d348405be925a75c493f4e8594b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 898281e0652345f22c63076cf4b0a73294faaf04
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397747"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572806"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
-Encerra um thread; **endthread** encerra um thread que é criado por **beginthread** e **endthreadex** encerra um thread que é criado pela **beginthreadex**.
+Termina um thread; **endthread** termina um thread criado pela **beginthread** e **endthreadex** termina um thread criado pelo **beginthreadex**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -62,21 +62,21 @@ void _endthreadex(
 
 ### <a name="parameters"></a>Parâmetros
 
-*retval* código de saída do Thread.
+*retval* código de saída de Thread.
 
 ## <a name="remarks"></a>Comentários
 
-Você pode chamar **endthread** ou **endthreadex** explicitamente para encerrar um thread; no entanto, **endthread** ou **endthreadex** é chamado automaticamente quando o thread retorna da rotina passado como um parâmetro para **beginthread** ou **beginthreadex**. Encerrando um thread com uma chamada para **endthread** ou **endthreadex** ajuda a garantir a recuperação adequada de recursos alocados para o thread.
+Você pode chamar **endthread** ou **endthreadex** explicitamente para terminar um thread; no entanto, **endthread** ou **endthreadex** é chamado automaticamente quando o thread volta da rotina passado como um parâmetro para **beginthread** ou **beginthreadex**. Encerrar um thread com uma chamada para **endthread** ou **endthreadex** ajuda a garantir que a recuperação apropriada dos recursos alocados para o thread.
 
 > [!NOTE]
-> No caso de arquivos executáveis vinculados a Libcmt.lib, não chame a API [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) do Win32. Isso impede que o sistema do tempo de execução recupere os recursos alocados. **endthread** e **endthreadex** recuperar os recursos de thread alocado e, em seguida, chamar **ExitThread**.
+> No caso de arquivos executáveis vinculados a Libcmt.lib, não chame a API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) do Win32. Isso impede que o sistema do tempo de execução recupere os recursos alocados. **endthread** e **endthreadex** recuperar os recursos alocados ao thread e, em seguida, chame **ExitThread**.
 
-**endthread** fecha automaticamente o identificador de thread. (Esse comportamento difere do Win32 **ExitThread** API.) Portanto, quando você usa **beginthread** e **endthread**, não feche explicitamente o identificador de thread chamando o Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API.
+**endthread** fecha automaticamente o identificador de thread. (Esse comportamento difere do Win32 **ExitThread** API.) Portanto, quando você usa **beginthread** e **endthread**, não feche explicitamente o identificador de thread chamando Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API.
 
-O Win32, como **ExitThread** API, **endthreadex** não fechar o identificador de thread. Portanto, quando você usa **beginthreadex** e **endthreadex**, você deve fechar o identificador de thread chamando o Win32 **CloseHandle** API.
+Como o Win32 **ExitThread** API, **endthreadex** não fecha o identificador de thread. Portanto, quando você usa **beginthreadex** e **endthreadex**, você deve fechar o identificador de thread chamando Win32 **CloseHandle** API.
 
 > [!NOTE]
-> **endthread** e **endthreadex** causar destruidores C++ pendentes no thread não deve ser chamada.
+> **endthread** e **endthreadex** fazer com que os destruidores C++ pendentes no thread não deve ser chamada.
 
 ## <a name="requirements"></a>Requisitos
 

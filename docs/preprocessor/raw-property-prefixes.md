@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1f548c9513a086dd4741a9c61c51acebebb25db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 423a66b698f4e421ff29e6ac3dfddd11fa11c58f
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840123"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541521"
 ---
 # <a name="rawpropertyprefixes"></a>raw_property_prefixes
-**Específicas do C++**  
+**Específico do C++**  
   
- Especifica prefixos alternativos para três métodos da propriedade.  
+Especifica prefixos alternativos para três métodos da propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,21 +34,23 @@ ms.locfileid: "33840123"
 raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `GetPrefix`  
- Prefixo a ser usado para o **propget** métodos.  
+### <a name="parameters"></a>Parâmetros  
+*GetPrefix*  
+Prefixo a ser usado para o `propget` métodos.  
   
- `PutPrefix`  
- Prefixo a ser usado para o **propput** métodos.  
+*PutPrefix*  
+Prefixo a ser usado para o `propput` métodos.  
   
- `PutRefPrefix`  
- Prefixo a ser usado para o **propputref** métodos.  
+*PutRefPrefix*  
+Prefixo a ser usado para o `propputref` métodos.  
   
 ## <a name="remarks"></a>Comentários  
- Por padrão, de baixo nível **propget**, **propput**, e **propputref** métodos são expostos pelas funções de membro chamadas com prefixos de **get _**, **Put _**, e **putref_** respectivamente. Esses prefixos são compatíveis com os nomes usados nos arquivos de cabeçalho gerados pelo MIDL.  
+ 
+Por padrão, de baixo nível `propget`, `propput`, e `propputref` métodos são expostos por funções de membro nomeadas com prefixos de **get _**, **Put _**, e **PUTREF _** respectivamente. Esses prefixos são compatíveis com os nomes usados nos arquivos de cabeçalho gerados pelo MIDL.  
   
- **TÉRMINO específicas do C++**  
+**FIM de específico de C++**  
   
 ## <a name="see-also"></a>Consulte também  
- [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import diretiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

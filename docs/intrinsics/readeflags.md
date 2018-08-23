@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8233b949fc0ab06663e9f20fad8f47f633fadf6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6488cc42519bbbee8c8fefb242996144f6bb8a8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340093"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541527"
 ---
 # <a name="readeflags"></a>__readeflags
 Lê que o status do programa e o controle (EFLAGS) registram.  
@@ -34,7 +34,7 @@ unsigned __int64 __readeflags(void);
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- O valor do registro EFLAGS. O valor de retorno é de 32 bits do tempo em uma plataforma de 32 bits e 64 bits longa em uma plataforma de 64 bits.  
+ O valor do registrador EFLAGS. O valor de retorno é de 32 bits longa em uma plataforma de 32 bits e 64 bits longa em uma plataforma de 64 bits.  
   
 ## <a name="remarks"></a>Comentários  
  Essas rotinas estão disponíveis apenas como intrínsecos.  
@@ -43,9 +43,9 @@ unsigned __int64 __readeflags(void);
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__readeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readeflags`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 **Fim da seção específica da Microsoft**  
   

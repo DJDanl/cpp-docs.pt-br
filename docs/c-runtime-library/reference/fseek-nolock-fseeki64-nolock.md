@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _fseek_nolock
@@ -39,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40eca7e4944d74e8b86d5318702c954d86a3f54f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b1ce866f7438ebc677156e6cfc9113f9725b65d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397347"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571540"
 ---
 # <a name="fseeknolock-fseeki64nolock"></a>_fseek_nolock, _fseeki64_nolock
 
@@ -67,7 +68,7 @@ int _fseeki64_nolock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
 *deslocamento*<br/>
@@ -78,11 +79,11 @@ Posição inicial.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Mesmo que [fseek](fseek-fseeki64.md) e [fseeki64](fseek-fseeki64.md), respectivamente.
+Mesmo que [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md), respectivamente.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções são as versões de não bloqueio de [fseek](fseek-fseeki64.md) e [fseeki64](fseek-fseeki64.md), respectivamente. Eles são idênticos aos [fseek](fseek-fseeki64.md) e [fseeki64](fseek-fseeki64.md) exceto que eles não são protegidos contra interferência por outros threads. Essas funções podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+Essas funções são as versões sem bloqueio [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md), respectivamente. Esses são idênticos aos [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md) , exceto que eles não são protegidos contra interferência de outros threads. Essas funções podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
 ## <a name="requirements"></a>Requisitos
 

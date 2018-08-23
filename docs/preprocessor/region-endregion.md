@@ -22,15 +22,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5590d2b251d86a9d20b62bfdb3d5bf929e3d92d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e6ec22be873dcec06f224913eb905a2779e4efd
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839441"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541340"
 ---
 # <a name="region-endregion"></a>region, endregion
-**região #pragma** permite que você especifique um bloco de código que você pode expandir ou recolher ao usar o [recurso de estrutura de tópicos](/visualstudio/ide/outlining) do Editor de código do Visual Studio.  
+`#pragma region` permite que você especifique um bloco de código que você pode expandir ou recolher ao usar o [recurso de estrutura de tópicos](/visualstudio/ide/outlining) do Editor de código do Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,21 +39,22 @@ ms.locfileid: "33839441"
 #pragma endregion comment  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- `comment`(opcional)  
- Um comentário será exibido no editor de códigos.  
+### <a name="parameters"></a>Parâmetros  
+*comentário* (opcional)  
+Um comentário será exibido no editor de códigos.  
   
- *nome*(opcional)  
- O nome da região.  Esse nome será exibido no editor de códigos.  
+*nome* (opcional)  
+O nome da região.  Esse nome será exibido no editor de códigos.  
   
 ## <a name="remarks"></a>Comentários  
- **endregion #pragma** marca o fim de um **#pragma região** bloco.  
+ 
+`#pragma endregion` marca o fim de um `#pragma region` bloco.  
   
- Um `#region` bloco deve ser terminado com **#pragma endregion**.  
+Um `#region` bloco deverá ser encerrado com `#pragma endregion`.  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // pragma_directives_region.cpp  
 #pragma region Region_1  
 void Test() {}  
@@ -65,4 +66,5 @@ int main() {}
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

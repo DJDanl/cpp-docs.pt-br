@@ -18,6 +18,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-locale-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - localeconv
@@ -32,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3cc75430dfa9bb2f4c5513f4b2ba5a2fd1c4c9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f4e8a20ef31f4379e7ddf6b7425fd7ecc70294a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405244"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572317"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -51,7 +52,7 @@ struct lconv *localeconv( void );
 
 ## <a name="return-value"></a>Valor de retorno
 
-**localeconv** retorna um ponteiro para um objeto preenchido do tipo [lconv struct](../../c-runtime-library/standard-types.md). Os valores contidos no objeto são copiados de configurações de localidade no armazenamento local de thread e pode ser substituídos por chamadas subsequentes para **localeconv**. As alterações feitas aos valores neste objeto não modifique as configurações de localidade. Chamadas para [setlocale](setlocale-wsetlocale.md) com *categoria* valores de **LC_ALL**, **LC_MONETARY**, ou **LC_NUMERIC** Substitua o conteúdo da estrutura.
+**localeconv** retorna um ponteiro para um objeto preenchido do tipo [struct lconv](../../c-runtime-library/standard-types.md). Os valores contidos no objeto são copiados das configurações de localidade no armazenamento local de thread e podem ser substituídos por chamadas subsequentes a **localeconv**. As alterações feitas para os valores nesse objeto não modificam as configurações de localidade. Chamadas para [setlocale](setlocale-wsetlocale.md) com *categoria* valores de **LC_ALL**, **LC_MONETARY**, ou **LC_NUMERIC** Substitua o conteúdo da estrutura.
 
 ## <a name="remarks"></a>Comentários
 
@@ -59,12 +60,12 @@ O **localeconv** função obtém informações detalhadas sobre a formatação n
 
 |Campo|Significado|
 |-|-|
-decimal_point,<br/>_W_decimal_point|Ponteiro para o ponto decimal de caractere para quantidades monetárias.
-thousands_sep,<br/>_W_thousands_sep|Ponteiro para o caractere que separa os grupos de dígitos à esquerda do ponto decimal para quantidades monetárias.
-agrupando|Ponteiro para um **char**-tamanho inteiro que contém o tamanho de cada grupo de dígitos em quantidades monetárias.
-int_curr_symbol,<br/>_W_int_curr_symbol|Ponteiro para o símbolo de moeda para a localidade atual. Os três primeiros caracteres especificam o símbolo de moeda alfabético internacional, conforme definido na norma *ISO 4217, Códigos para a Representação de Moedas e Fundos*. O quarto caractere (caractere nulo imediatamente anterior) separa o símbolo de moeda internacional da quantidade monetária.
+decimal_point,<br/>_W_decimal_point|Ponteiro para caractere para quantidades não monetárias de ponto decimal.
+thousands_sep,<br/>_W_thousands_sep|Ponteiro para o caractere que separa grupos de dígitos à esquerda do ponto decimal para quantidades não monetárias.
+agrupando|Ponteiro para um **char**-tamanho inteiro que contém o tamanho de cada grupo de dígitos em quantidades não monetárias.
+int_curr_symbol,<br/>_W_int_curr_symbol|Ponteiro para o símbolo de moeda internacional para a localidade atual. Os três primeiros caracteres especificam o símbolo de moeda alfabético internacional, conforme definido na norma *ISO 4217, Códigos para a Representação de Moedas e Fundos*. O quarto caractere (caractere nulo imediatamente anterior) separa o símbolo de moeda internacional da quantidade monetária.
 currency_symbol,<br/>_W_currency_symbol|Ponteiro para o símbolo de moeda local para a localidade atual.
-mon_decimal_point,<br/>_W_mon_decimal_point|Ponteiro para o ponto decimal caractere para quantidades monetárias.
+mon_decimal_point,<br/>_W_mon_decimal_point|Ponteiro para caractere para quantidades monetárias de ponto decimal.
 mon_thousands_sep,<br/>_W_mon_thousands_sep|Ponteiro para o separador para grupos de dígitos à esquerda da casa decimal em quantidades monetárias.
 mon_grouping|Ponteiro para um **char**-tamanho inteiro que contém o tamanho de cada grupo de dígitos em quantidades monetárias.
 positive_sign,<br/>_W_positive_sign|Cadeia de caracteres indicando o sinal para quantidades monetárias não negativas.
@@ -78,11 +79,11 @@ n_sep_by_space|Definido como 1 se o símbolo de moeda for separado por espaço d
 p_sign_posn|Posição do sinal positivo em quantidades monetárias formatadas não negativas.
 n_sign_posn|Posição do sinal positivo em quantidades monetárias formatadas negativas.
 
-Exceto como membros especificados, o **lconv** estrutura que têm `char *` e `wchar_t *` versões são ponteiros para cadeias de caracteres. Qualquer um desses é igual a **""** (ou **L ""** para **wchar_t \*** ) é de comprimento zero ou não tem suporte na localidade atual. Observe que **decimal_point** e **_W_decimal_point** são sempre com suporte e de comprimento diferente de zero.
+Exceto conforme especificados, membros do **lconv** estrutura que têm `char *` e `wchar_t *` versões são ponteiros para cadeias de caracteres. Qualquer um desses que é igual a **""** (ou **L ""** para **wchar_t \*** ) é de comprimento zero ou não tem suporte na localidade atual. Observe que **decimal_point** e **_W_decimal_point** sempre terão suporte e comprimento diferente de zero.
 
-O **char** membros da estrutura são números que não pequenos, não caracteres. Qualquer um desses que seja igual a **CHAR_MAX** não terá suporte na localidade atual.
+O **char** membros da estrutura são números pequenos não negativos, não caracteres. Qualquer um desses que seja igual a **CHAR_MAX** não terá suporte na localidade atual.
 
-Os valores de **agrupamento** e **mon_grouping** são interpretados de acordo com as regras a seguir:
+Os valores de **agrupando** e **mon_grouping** são interpretados de acordo com as regras a seguir:
 
 - **CHAR_MAX** -não execute qualquer agrupamento adicional.
 
@@ -98,27 +99,27 @@ Os valores para **int_curr_symbol** são interpretados de acordo com as regras a
 
 Os valores para **p_cs_precedes** e **n_cs_precedes** são interpretados de acordo com as regras a seguir (a regra para **n_cs_precedes** está entre parênteses):
 
-- 0 - símbolo de moeda segue o valor não negativo (negativo) formatado valor monetário.
+- 0 - o símbolo de moeda Sucede o valor para não negativo (negativo) valor monetário formatado.
 
-- 1 - símbolo de moeda precede o valor não negativo (negativo) formatado valor monetário.
+- 1 - formato de moeda precede o valor para não negativo (negativo) valor monetário formatado.
 
 Os valores para **p_sep_by_space** e **n_sep_by_space** são interpretados de acordo com as regras a seguir (a regra para **n_sep_by_space** está entre parênteses):
 
-- 0 - símbolo de moeda é separado do valor de espaço para não-negativo (negativo) formatado valor monetário.
+- 0 - o símbolo de moeda é separado por espaço para não negativo (negativo) monetária formatada do valor.
 
-- 1 - não há separação nenhum espaço entre o símbolo de moeda e o valor não negativo (negativo) formatado valor monetário.
+- 1 - não há nenhuma separação por espaço entre o símbolo de moeda e o valor não negativo (negativo) valor monetário formatado.
 
 Os valores para **p_sign_posn** e **n_sign_posn** são interpretados de acordo com as regras a seguir:
 
-- 0 - parênteses envolvem o símbolo de moeda e quantidade.
+- 0 - parênteses circundam os símbolos de quantidade e moeda.
 
-- 1 - cadeia de caracteres de sign precede o símbolo de moeda e quantidade.
+- 1 - entrada de cadeia de caracteres precede a símbolos de quantidade e moeda.
 
-- 2 - cadeia de caracteres de entrada segue o símbolo de moeda e quantidade.
+- 2 - cadeia de caracteres de entrada segue os símbolos de quantidade e moeda.
 
-- 3 - cadeia de caracteres de entrada precede o símbolo de moeda.
+- 3 - entrada de cadeia de caracteres precede o símbolo de moeda.
 
-- 4 - sinal de cadeia de caracteres imediatamente símbolo de moeda da seguinte maneira.
+- 4 - entrada de cadeia de caracteres imediatamente o símbolo de moeda da seguinte maneira.
 
 ## <a name="requirements"></a>Requisitos
 

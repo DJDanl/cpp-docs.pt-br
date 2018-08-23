@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e41b0edd9b2a3da1046888f16a55e19f2d9f20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 96d20916210b0fe55817dceb86d388a33f8e238b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324506"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540938"
 ---
 # <a name="sidt"></a>__sidt
 **Seção específica da Microsoft**  
   
- Armazena o valor do registro de tabela de descritor de interrupção (IDTR) no local de memória especificada.  
+ Armazena o valor do registro de tabela de descritor (IDTR) interrupção no local da memória especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,12 +46,12 @@ void __sidt(
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__sidt`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__sidt`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- O `__sidt` função é equivalente a `SIDT` instrução da máquina. Para obter mais informações, pesquise o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: referência de conjunto de instruções," no [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
+ O `__sidt` função é equivalente ao `SIDT` instruções de máquina. Para obter mais informações, pesquise o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: referência de conjunto de instruções," no [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
   
 **Fim da seção específica da Microsoft**  
   

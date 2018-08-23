@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b58b02781f266b24fa321b3849f42b2e090b860
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9a5e9ce2480612cdc84982cd1474e003d9151557
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842970"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540932"
 ---
 # <a name="strictgscheck"></a>strict_gs_check
 Este pragma fornece verificação de segurança aprimorada.  
@@ -36,16 +36,18 @@ Este pragma fornece verificação de segurança aprimorada.
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Ele instrui o compilador a inserir um cookie aleatório na pilha de função para ajudar a detectar algumas categorias de saturação de buffer baseada em fila. Por padrão, a opção /GS (verificação de segurança do buffer) do compilador não insere um cookie para todas as funções. Para obter mais informações, consulte [/GS (verificação de segurança do buffer)](../build/reference/gs-buffer-security-check.md).  
+ 
+Ele instrui o compilador a inserir um cookie aleatório na pilha de função para ajudar a detectar algumas categorias de saturação de buffer baseada em fila. Por padrão, o `/GS` (Buffer Security Check) a opção de compilador não insere um cookie para todas as funções. Para obter mais informações, consulte [/GS (verificação de segurança do buffer)](../build/reference/gs-buffer-security-check.md).  
   
- Você deve compilar com /GS (verificação de segurança do buffer) para habilitar strict_gs_check.  
+Você deve compilar com `/GS` (Buffer Security Check) para habilitar **strict_gs_check**.  
   
- Use este pragma em módulos de código que são expostos a dados potencialmente nocivos. Este pragma é muito agressivo. Ele é aplicado às funções que podem não precisar dessa defesa, mas é otimizado para minimizar seu efeito no desempenho do aplicativo resultante.  
+Use este pragma em módulos de código que são expostos a dados potencialmente nocivos. Este pragma é muito agressivo. Ele é aplicado às funções que podem não precisar dessa defesa, mas é otimizado para minimizar seu efeito no desempenho do aplicativo resultante.  
   
- Mesmo ao usar esse pragma, o ideal é escrever um código seguro. Ou seja, certifique-se de que seu código não tenha nenhum saturações de buffer. strict_gs_check pode proteger seu aplicativo contra saturações de buffer que permanecem em seu código.  
+Mesmo ao usar esse pragma, o ideal é escrever um código seguro. Ou seja, certifique-se de que seu código não tem nenhum estouros de buffer. **strict_gs_check** pode proteger seu aplicativo contra estouros de buffer que permanecem em seu código.  
   
 ## <a name="example"></a>Exemplo  
- No código a seguir, uma saturação de buffer ocorre quando copiamos uma matriz para uma matriz local. Quando você cria este código com /GS, nenhum cookie é inserido na pilha, pois o tipo de dados da matriz é um ponteiro. A adição do pragma strict_gs_check força o cookie da pilha na pilha da função.  
+ 
+No código a seguir, uma saturação de buffer ocorre quando copiamos uma matriz para uma matriz local. Quando você compilar esse código com `/GS`, nenhum cookie é inserido na pilha, porque o tipo de dados de matriz é um ponteiro. Adicionando o **strict_gs_check** pragma força o cookie da pilha na pilha da função.  
   
 ```cpp  
 // pragma_strict_gs_check.cpp  
@@ -70,9 +72,9 @@ void ** ReverseArray(void **pData,
   
     return pData;  
 }  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Diretivas pragma e a palavra-chave pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [/GS (verificação de segurança do buffer)](../build/reference/gs-buffer-security-check.md)
+ 
+[Diretivas pragma e a palavra-chave pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[/GS (verificação de segurança do buffer)](../build/reference/gs-buffer-security-check.md)

@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81f2214ef6a3e33b573a88ac4e23ae6aad64ea01
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e993c58ea6fc84e0b4001b488632858e5251d67b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015684"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583965"
 ---
 # <a name="semaphoretraitsunlock-method"></a>Método SemaphoreTraits::Unlock
-Controle de versões de um recurso compartilhado.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-inline static void Unlock(  
-   _In_ Type h  
-);  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *h*  
- Identificador para um **semáforo** objeto.  
-  
-## <a name="remarks"></a>Comentários  
- Se não for bem-sucedida, a operação de desbloqueio **Unlock()** emite um erro que indica a causa da falha.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Consulte também  
- [Estrutura SemaphoreTraits](../windows/semaphoretraits-structure.md)
+
+Controle de versões de um recurso compartilhado.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+inline static void Unlock(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*h*  
+Identificador para um **semáforo** objeto.
+
+## <a name="remarks"></a>Comentários
+
+Se não for bem-sucedida, a operação de desbloqueio **Unlock()** emite um erro que indica a causa da falha.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Consulte também
+
+[Estrutura SemaphoreTraits](../windows/semaphoretraits-structure.md)

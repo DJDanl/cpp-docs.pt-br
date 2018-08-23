@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58090351829f6a12ae90d56e8985bf615966f65
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 731229f8aca9d564e418382a54e097ff61316586
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852257"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541160"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl Class
 O `CNetAddressCtrl` classe representa o controle de endereço de rede, que você pode usar a entrada e validar o formato de IPv4, IPv6 e endereços DNS nomeados.  
@@ -72,7 +72,7 @@ class CNetAddressCtrl : public CEdit
   
  A figura abaixo mostra uma caixa de diálogo que contém um controle de endereço de rede. O texto caixa (1) para o controle de endereço de rede contém um endereço de rede inválido. A mensagem de InfoDica (2) é exibida se o endereço de rede é inválido.  
   
- ![Caixa de diálogo com um controle de endereço de rede e uma InfoDica. ] (../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
+ ![Caixa de diálogo com um controle de endereço de rede e uma InfoDica. ](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir é uma parte de uma caixa de diálogo que valida um endereço de rede. Os manipuladores de eventos para três botões de opção especificam que o endereço de rede pode ser um dos três tipos de endereço. O usuário insere um endereço na caixa de texto do controle de rede e, em seguida, pressiona um botão para validar o endereço. Se o endereço é válido, uma mensagem de êxito será exibida; Caso contrário, é exibida a mensagem de erro predefinidos InfoDica.  
@@ -98,7 +98,7 @@ class CNetAddressCtrl : public CEdit
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxcmn. h  
   
- Essa classe é compatível com [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] e versões posteriores.  
+ Essa classe tem suporte no Windows Vista e posterior.  
   
  Requisitos adicionais para esta classe são descritos em [compilar requisitos para o Windows Vista controles comuns](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   

@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-conio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _getche_nolock
@@ -43,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e83d398330e2c7fbbf80ca5b14ef7b1099e56bc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 319c9e56cfbd4e52d9edac841ff6d4d8df73528c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400096"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572614"
 ---
 # <a name="getchenolock-getwchenolock"></a>_getche_nolock, _getwche_nolock
 
@@ -70,7 +71,7 @@ Retorna o caractere lido. Nenhum erro é retornado.
 
 ## <a name="remarks"></a>Comentários
 
-**getche_nolock** e **getwche_nolock** são idênticos aos **getche** e **getwche** exceto que eles não protegidos contra interferência por outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+**getche_nolock** e **getwche_nolock** são idênticas às **getche** e **getwche** , exceto que não serem protegidas contra interferência de outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

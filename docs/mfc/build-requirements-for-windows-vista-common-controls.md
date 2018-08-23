@@ -15,36 +15,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8f167ac560fd8e2109c149f30841ecbe3c44fc8
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: d8d3e5c8cd6b4a0876d0cac8e1fb3c7e87eed9cc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930970"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540380"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Requisitos de build para controles comuns do Windows Vista
-A biblioteca Microsoft Foundation Class (MFC) dá suporte à versão de controles comuns do Windows 6.1. Os controles comuns são incluídos no [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] e a biblioteca está incluída no [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. A biblioteca fornece novos métodos que aprimoram as classes existentes e novas classes e métodos que oferecem suporte a [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] controles comuns. Quando você criar seu aplicativo, você deve seguir os requisitos de compilação e a migração são descritos nas seções a seguir.  
+A biblioteca Microsoft Foundation Class (MFC) oferece suporte à versão de controles comuns do Windows 6.1. Os controles comuns são incluídos no Windows Vista e a biblioteca é incluída no SDK do Visual Studio. A biblioteca fornece novos métodos que melhoram a classes existentes e novas classes e métodos que oferecem suporte a controles comuns do Windows Vista. Quando você compila seu aplicativo, você deve seguir os requisitos de migração e de compilação que são descritos nas seções a seguir.  
   
 ## <a name="compilation-requirements"></a>Requisitos de compilação  
   
 ### <a name="supported-versions"></a>Versões com suporte  
- Algumas novas classes e métodos suportam somente [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] e versões posteriores, enquanto outros métodos também oferecem suporte a sistemas operacionais anteriores. Uma observação a `Requirements` seção de cada tópico de método Especifica quando o requisito mínimo de sistema operacional é [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)].  
+ Algumas novas classes e métodos dão suporte somente o Windows Vista e posterior, enquanto outros métodos também dão suporte a sistemas operacionais anteriores. Uma observação no `Requirements` seção de cada tópico do método Especifica quando o mínimo necessário de sistema operacional é Windows Vista.  
   
- Mesmo se o computador não for executado [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)], você pode criar um aplicativo MFC que será executado em [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] se você tiver os arquivos de cabeçalho do MFC versão 6.1 em seu computador. No entanto, controles comuns que são projetados especificamente para [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] funcionam somente no sistema e são ignoradas pelos sistemas operacionais anteriores.  
+ Mesmo se o computador não executa o Windows Vista, você pode criar um aplicativo do MFC que serão executados no Windows Vista, se você tiver arquivos de cabeçalho MFC versão 6.1 em seu computador. No entanto, controles comuns que são projetados especificamente para o Windows Vista funcionam somente no sistema e são ignorados pelos sistemas operacionais anteriores.  
   
 ### <a name="supported-character-sets"></a>Conjuntos de caracteres com suporte  
- Os novos controles comuns do Windows oferecem suporte a apenas o conjunto de caracteres Unicode e não o conjunto de caracteres ANSI. Se você criar seu aplicativo na linha de comando, use os dois seguintes definem (/ D) conjunto de caracteres de opções do compilador para especificar Unicode como subjacente:  
+ Os novos controles comuns do Windows dão suporte a apenas o conjunto de caracteres Unicode e não o conjunto de caracteres ANSI. Se você compilar seu aplicativo na linha de comando, use os dois seguintes definem (/ 1!d) conjunto de caracteres de opções do compilador para especificar Unicode como subjacente:  
   
 ```  
 /D_UNICODE /DUNICODE  
 ```  
   
- Se você criar seu aplicativo no ambiente de desenvolvimento integrado (IDE) do Visual Studio, especifique o **do conjunto de caracteres Unicode** opção do **do conjunto de caracteres** propriedade o **geral**  nó das propriedades do projeto.  
+ Se você compilar seu aplicativo no ambiente de desenvolvimento integrado (IDE) do Visual Studio, especifique o **conjunto de caracteres Unicode** opção do **conjunto de caracteres** propriedade no **geral**  nó das propriedades do projeto.  
   
- A versão ANSI dos vários métodos MFC foram preteridos a partir controles comuns do Windows versão 6.1. Para obter mais informações, consulte [preteridos ANSI APIs](../mfc/deprecated-ansi-apis.md).  
+ A versão ANSI de vários métodos MFC foram preteridas começando com a versão 6.1 controles comuns do Windows. Para obter mais informações, consulte [preteridos ANSI APIs](../mfc/deprecated-ansi-apis.md).  
   
 ## <a name="migration-requirements"></a>Requisitos de migração  
- Se você usar o IDE do Visual Studio para criar um novo aplicativo do MFC que usa controles comuns do Windows versão 6.1, o IDE declara automaticamente um manifesto apropriado. No entanto, se você migrar um aplicativo MFC existente de uma versão anterior do Visual Studio e você deseja usar os novos controles comuns, o IDE não automaticamente fornece informações do manifesto para atualizar seu aplicativo. Em vez disso, você deve inserir manualmente o seguinte código-fonte em seu **Stdafx. h** arquivo:  
+ Se você usar o IDE do Visual Studio para criar um novo aplicativo do MFC que usa controles comuns do Windows versão 6.1, o IDE declara automaticamente um manifesto apropriado. No entanto, se você migra um aplicativo MFC existente de uma versão anterior do Visual Studio e você deseja usar os novos controles comuns, o IDE não automaticamente fornece informações de manifesto para atualizar seu aplicativo. Em vez disso, é necessário inserir manualmente o seguinte código-fonte no seu **Stdafx. h** arquivo:  
   
 ```  
 #ifdef UNICODE  
@@ -62,6 +62,6 @@ A biblioteca Microsoft Foundation Class (MFC) dá suporte à versão de controle
   
 ## <a name="see-also"></a>Consulte também  
  [Tópicos MFC gerais](../mfc/general-mfc-topics.md)   
- [Gráfico de hierarquia](../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../mfc/hierarchy-chart.md)   
  [APIs ANSI preteridas](../mfc/deprecated-ansi-apis.md)
 

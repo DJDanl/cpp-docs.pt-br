@@ -50,15 +50,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81087eb5f611edd5ad41725177226c2c2b7a9c2d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 394cd0da74171e517086886a5c0c915fc77ba49c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851334"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541542"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Classe CMFCOutlookBarPane
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
  Um controle derivado de [classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) que podem ser inseridos em uma barra do Outlook ( [classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)). Painel da barra do Outlook contém uma coluna de botões grandes. O usuário pode rolar para cima e para a lista de botões se for maior do que o painel. Quando o usuário desanexa um painel de barra da barra do Outlook, ele pode flutuar ou encaixar na janela do quadro principal.  
   
@@ -222,7 +222,7 @@ BOOL AddButton(
  Se o índice especificado por *iInsertAt* é -1, o botão é adicionado ao final da página.  
   
 ##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
 ```  
 virtual BOOL CanBeAttached() const;  

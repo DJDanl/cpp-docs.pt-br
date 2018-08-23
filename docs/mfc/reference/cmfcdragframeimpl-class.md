@@ -16,16 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 458288ecff0b457205ba1735494ad8106c3feae7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: aee2c58d8763581987fec40b0cb486c67363697b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040942"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540534"
 ---
 # <a name="cmfcdragframeimpl-class"></a>Classe CMFCDragFrameImpl
-O `CMFCDragFrameImpl` classe desenha arrastar retângulo que é exibido quando o usuário arrasta um painel no modo padrão de encaixe.  
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+O `CMFCDragFrameImpl` classe desenha o retângulo que aparece quando o usuário arrasta um painel no modo padrão do dock.  
+   Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
    
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,9 +34,9 @@ class CMFCDragFrameImpl
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Um objeto dessa classe é inserido em cada [CPane classe](../../mfc/reference/cpane-class.md) objeto. Assim, cada painel que usa o `CanFloat` método exibe um retângulo de arrastar quando o usuário arrasta-lo.  
+ Um objeto dessa classe é inserido em cada [classe CPane](../../mfc/reference/cpane-class.md) objeto. Assim, cada painel que usa o `CanFloat` método exibe um retângulo de arrastar quando o usuário arrasta-lo.  
   
- Você pode controlar a espessura do retângulo arrastar usando [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) e [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).  
+ Você pode controlar a espessura do retângulo de arrastar usando [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) e [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CMFCDragFrameImpl](../../mfc/reference/cmfcdragframeimpl-class.md)  
@@ -120,6 +120,6 @@ void ResetState();
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CPane](../../mfc/reference/cpane-class.md)

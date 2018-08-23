@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7561e9d9b49f9af885299a6b94d3edbcf8f2a74
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70049daf514659a9ae525e1fca40152df4ab382a
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912804"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541520"
 ---
 # <a name="autorename"></a>auto_rename
-**Específicas do C++**  
+**Específico do C++**  
   
- Renomeia palavras reservadas C++ com dois sublinhados (__) para o nome da variável para resolver possíveis conflitos de nome.  
+Renomeia palavras reservadas C++ com dois sublinhados (__) para o nome da variável para resolver possíveis conflitos de nome.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,11 +34,13 @@ ms.locfileid: "33912804"
 auto_rename  
 ```  
   
-## <a name="remarks"></a>Comentários  
- Esse atributo é usado para importar uma biblioteca de tipos que usa uma ou mais palavras reservadas C++ (palavras-chave ou macros) como nomes de variáveis.  
+## <a name="remarks"></a>Comentários 
+
+Esse atributo é usado para importar uma biblioteca de tipos que usa uma ou mais palavras reservadas C++ (palavras-chave ou macros) como nomes de variáveis.  
   
- **TÉRMINO específicas do C++**  
+ **FIM de específico de C++**  
   
-## <a name="see-also"></a>Consulte também  
- [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import diretiva](../preprocessor/hash-import-directive-cpp.md)
+## <a name="see-also"></a>Consulte também 
+
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

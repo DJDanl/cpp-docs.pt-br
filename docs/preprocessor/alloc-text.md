@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1e07b630254d7691321443a74973e06ed50ae2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c90545bb2806b97ccdd47ae90f8ab41bf1b3422c
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912765"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541154"
 ---
 # <a name="alloctext"></a>alloc_text
 Nomeia a seção de código onde as definições de função especificadas devem residir. O pragma deve estar entre um declarador de função e a definição de função para as funções nomeadas.  
@@ -31,26 +31,27 @@ Nomeia a seção de código onde as definições de função especificadas devem
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 #pragma alloc_text( "  
 textsection  
 ", function1, ... )  
 ```  
   
-## <a name="remarks"></a>Comentários  
- O **alloc_text** pragma não lida com funções de membro de C++ ou sobrecarregado. É aplicável somente às funções declaradas com vínculo a C — ou seja, as funções declaradas com o **extern "C"** especificação de vinculação. Se você tentar usar esse pragma em uma função com vinculação C++, um erro do compilador será gerado.  
+## <a name="remarks"></a>Comentários 
+
+O **alloc_text** pragma não trata funções de membro C++ ou funções sobrecarregadas. Ele é aplicável somente às funções declaradas com vinculação C — ou seja, as funções declaradas com o **extern "C"** especificação de vinculação. Se você tentar usar esse pragma em uma função com vinculação C++, um erro do compilador será gerado.  
   
- Função endereçamento usando `__based` não é suportada, especificando os locais de seção requer o uso do **alloc_text** pragma. O nome especificado pelo *textsection* devem ser colocados entre aspas duplas.  
+Desde a função usando endereçamento `__based` não for compatível, especificar locais de seção requer o uso do **alloc_text** pragma. O nome especificado por *textsection* deve ser colocado entre aspas duplas.  
   
- O **alloc_text** pragma deve aparecer após as declarações de qualquer uma das funções especificadas e antes das definições dessas funções.  
+O **alloc_text** pragma deve aparecer após as declarações de qualquer uma das funções especificadas e antes das definições dessas funções.  
   
- As funções referenciadas em uma **alloc_text** pragma deve ser definido no mesmo módulo como o pragma. Se isso não for feito e uma função indefinida for compilada posteriormente em uma seção de texto diferente, o erro poderá ou não ser detectado. Embora o programa seja executado corretamente no geral, a função não será alocada nas seções desejadas.  
+Funções referenciadas em uma **alloc_text** pragma deve ser definido no mesmo módulo do pragma. Se isso não for feito e uma função indefinida for compilada posteriormente em uma seção de texto diferente, o erro poderá ou não ser detectado. Embora o programa seja executado corretamente no geral, a função não será alocada nas seções desejadas.  
   
- Outras limitações em **alloc_text** são da seguinte maneira:  
+Outra limitação ao **alloc_text** são da seguinte maneira:  
   
--   Não pode ser usado dentro de uma função.  
+- Não pode ser usado dentro de uma função.  
   
--   Deve ser usado depois que a função é declarada, mas antes de a função ser definida.  
+- Deve ser usado depois que a função é declarada, mas antes de a função ser definida.  
   
-## <a name="see-also"></a>Consulte também  
- [Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Consulte também 
+
+[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

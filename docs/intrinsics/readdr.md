@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee18591ea3729551f00267fef6e4594a45f673ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd45e8919e7b1f0347511e2c3ad782975ecbe71a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332969"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540742"
 ---
 # <a name="readdr"></a>__readdr
-Lê o valor do registro de depuração especificado.  
+Lê o valor de registro de depuração especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,21 +35,21 @@ unsigned __int64 __readdr(unsigned int DebugRegister);
   
 #### <a name="parameters"></a>Parâmetros  
  [in] `DebugRegister`  
- Registrar uma constante de 0 a 7 que identifica a depuração.  
+ Registre-se de uma constante de 0 a 7 que identifica a depuração.  
   
 ## <a name="return-value"></a>Valor de retorno  
  O valor do registro de depuração especificado.  
   
 ## <a name="remarks"></a>Comentários  
- Esses intrínsecos estão disponíveis apenas no modo de kernel e as rotinas estão disponíveis apenas como intrínsecos.  
+ Esses intrínsecos estão disponíveis somente no modo kernel e as rotinas estão disponíveis apenas como intrínsecos.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__readdr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readdr`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 **Fim da seção específica da Microsoft**  
   

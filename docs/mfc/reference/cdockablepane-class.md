@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05d7897bf7b18d804d787f865b80b615b7564919
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028285"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538397"
 ---
 # <a name="cdockablepane-class"></a>Classe CDockablePane
 Implementa um painel que pode ser encaixado em um local de encaixe ou incluído em um painel com guias.  
@@ -927,7 +927,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ### <a name="remarks"></a>Comentários  
  O framework chama este método para manipular o encaixe de um painel flutuante.  
   
- Para barras de ferramentas flutuantes ou que usam o modo de encaixe DT_IMMEDIATE painéis de encaixe, a estrutura atrasa o comando de encaixe para permitir que o usuário mover a janela para fora da área de cliente do quadro principal antes que ocorra de encaixe. O comprimento do atraso é medido em milissegundos e é controlado pela [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) membro de dados... O valor padrão de [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) é 200. Esse comportamento emula o comportamento de encaixe de [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)] 2007.  
+ Para barras de ferramentas flutuantes ou que usam o modo de encaixe DT_IMMEDIATE painéis de encaixe, a estrutura atrasa o comando de encaixe para permitir que o usuário mover a janela para fora da área de cliente do quadro principal antes que ocorra de encaixe. O comprimento do atraso é medido em milissegundos e é controlado pela [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) membro de dados... O valor padrão de [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) é 200. Esse comportamento emula o comportamento de encaixe do Microsoft Word 2007.  
   
  Para atrasada encaixe estados de (CS_DELAY_DOCK e CS_DELAY_DOCK_TO_TAB), a estrutura não executa até que o usuário libera o botão do mouse de encaixe. Se um painel usa o modo de encaixe DT_STANDARD, o framework exibe um retângulo no local de encaixe projetado. Se um painel usa o modo de encaixe DT_SMART, o framework exibe marcadores inteligentes de encaixe e retângulos semitransparentes no local de encaixe projetado. Para especificar o modo de encaixe para seu painel, chame o [CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode) método. Para obter mais informações sobre o encaixe inteligentes, consulte [CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams).  
   
@@ -1186,7 +1186,7 @@ AFX_IMPORT_DATA static int m_nSlideSteps;
  Para obter um efeito de animação mais rápido, diminua esse valor. Para obter um efeito de animação mais lento, aumente esse valor.  
   
 ##  <a name="onafterchangeparent"></a>  CDockablePane::OnAfterChangeParent  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);

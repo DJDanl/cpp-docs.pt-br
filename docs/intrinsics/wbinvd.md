@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be74b466ed641474283e26217ae728c57f28edd8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ccee7703550bff7980e1cf07b30f29d284e2a3a5
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326339"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539938"
 ---
 # <a name="wbinvd"></a>__wbinvd
 **Seção específica da Microsoft**  
   
- Gera a gravar e invalidar o Cache (`wbinvd`) instrução.  
+ Gera o gravar novamente e invalidar o Cache (`wbinvd`) instrução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,12 +39,12 @@ void __wbinvd(void);
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__wbinvd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__wbinvd`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- Essa função só está disponível no modo de kernel com um nível de privilégio (CPL) 0, e a rotina só está disponível como um intrínseco.  
+ Essa função só está disponível no modo de kernel com um nível de privilégio (CPL) igual a 0 e a rotina só está disponível como um intrínseco.  
   
 **Fim da seção específica da Microsoft**  
   

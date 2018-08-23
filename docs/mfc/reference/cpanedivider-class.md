@@ -94,17 +94,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7315adc855b0bfbe1cc4ffae87c416fbaa584d57
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d19ede21d90353f9741a5a1250eddf049de71aa6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079358"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539357"
 ---
 # <a name="cpanedivider-class"></a>Classe CPaneDivider
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
- O `CPaneDivider` classe divide dois painéis, divide dois grupos de painéis ou separa um grupo de painéis da área cliente da janela do quadro principal.  
+ O `CPaneDivider` classe divide dois painéis, dois grupos de painéis ou separa um grupo de painéis da área de cliente da janela do quadro principal.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -163,27 +163,27 @@ class CPaneDivider : public CBasePane
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CPaneDivider::GetPanes](#getpanes)|Retorna a lista de painéis que residem no [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md). Esse método deve ser chamado somente para divisores de painel padrão.|  
-|[CPaneDivider::GetPaneDividers](#getpanedividers)|Retorna a lista de divisores de painel que residem no [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md). Esse método deve ser chamado somente para divisores de painel padrão.|  
+|[CPaneDivider::GetPanes](#getpanes)|Retorna a lista de painéis que residem na [classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Esse método deve ser chamado apenas para divisores de painel padrão.|  
+|[CPaneDivider::GetPaneDividers](#getpanedividers)|Retorna a lista de divisores de painel que residem na [classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Esse método deve ser chamado apenas para divisores de painel padrão.|  
   
 ### <a name="data-members"></a>Membros de Dados  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Especifica a largura padrão em pixels de todos os divisores de painel no aplicativo.|  
+|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Especifica a largura padrão, em pixels, de todos os divisores de painel no aplicativo.|  
 |[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Contém um ponteiro para as informações de classe de tempo de execução sobre um `CPaneDivider`-objeto derivado.|  
   
 ## <a name="remarks"></a>Comentários  
- Cria a estrutura `CPaneDivider` objetos automaticamente quando um painel está encaixado.  
+ A estrutura cria `CPaneDivider` objetos automaticamente quando um painel está encaixado.  
   
- Há dois tipos de divisores do painel:  
+ Há dois tipos de divisores de painel:  
   
--   um divisor de painel padrão é criado quando um grupo de painéis é encaixado em um lado da janela do quadro principal. O divisor de painéis padrão contém um ponteiro para o [CPaneContainerManager classe](../../mfc/reference/cpanecontainermanager-class.md) e redireciona a maioria das operações no grupo de painéis (como redimensionar um painel ou encaixar outro contêiner ou painel) para o Gerenciador de contêiner. Cada painel ancorado mantém um ponteiro para o divisor de painel padrão.  
+-   um divisor do painel padrão é criado quando um grupo de painéis é encaixado para um lado da janela do quadro principal. O divisor do painel padrão contém um ponteiro para o [classe CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) e redireciona a maioria das operações no grupo de painéis (como redimensionar um painel ou encaixando outro painel ou um contêiner) para o Gerenciador de contêiner. Cada painel ancorado mantém um ponteiro para o divisor do painel padrão.  
   
--   Um divisor de painel regular divide apenas dois painéis em um contêiner. Para obter mais informações, consulte [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md).  
+-   Um divisor do painel regular apenas divide dois painéis em um contêiner. Para obter mais informações, consulte [classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como obter um `CPaneDivider` de objeto um `CWorkspaceBar` objeto. Este trecho de código é parte do [exemplo de demonstração de guias MDI](../../visual-cpp-samples.md).  
+ O exemplo a seguir demonstra como obter um `CPaneDivider` do objeto de um `CWorkspaceBar` objeto. Este trecho de código faz parte de [amostra de demonstração de guias MDI](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]  
   
@@ -440,7 +440,7 @@ const CBasePane* GetFirstPane() const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="getpanedividers"></a>  CPaneDivider::GetPaneDividers  
- Retorna a lista de divisores de painel que residem no [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md). Esse método deve ser chamado somente para divisores de painel padrão.  
+ Retorna a lista de divisores de painel que residem na [classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Esse método deve ser chamado apenas para divisores de painel padrão.  
   
 ```  
 void GetPaneDividers(CObList& lstSliders);
@@ -451,7 +451,7 @@ void GetPaneDividers(CObList& lstSliders);
  Contém a lista de divisores de painel que residem no contêiner do painel.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método deve ser chamado para apenas divisores de painel padrão. Um divisor de painel padrão é uma linha divisória que redimensiona o contêiner de todo o painel.  
+ Esse método deve ser chamado para apenas divisores de painel padrão. Um divisor do painel padrão é um divisor que redimensiona o contêiner de todo o painel.  
   
 ##  <a name="getpanedividerstyle"></a>  CPaneDivider::GetPaneDividerStyle  
 
@@ -465,7 +465,7 @@ DWORD GetPaneDividerStyle() const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="getpanes"></a>  CPaneDivider::GetPanes  
- Retorna a lista de painéis que residem no [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md). Esse método deve ser chamado somente para recuperar divisores de painel padrão.  
+ Retorna a lista de painéis que residem na [classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Esse método deve ser chamado apenas para recuperar os divisores de painel padrão.  
   
 ```  
 void GetPanes(CObList& lstBars);
@@ -476,7 +476,7 @@ void GetPanes(CObList& lstBars);
  Contém a lista de painéis que residem no contêiner do painel.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método deve ser chamado para apenas divisores de painel padrão. Um divisor de painel padrão é uma linha divisória que redimensiona o contêiner de todo o painel.  
+ Esse método deve ser chamado para apenas divisores de painel padrão. Um divisor do painel padrão é um divisor que redimensiona o contêiner de todo o painel.  
   
 ##  <a name="getrootcontainerrect"></a>  CPaneDivider::GetRootContainerRect  
 
@@ -599,7 +599,7 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pSliderRTC;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Defina essa variável de membro, se você criar um divisor de painel personalizados. Isso permite que a estrutura criar o divisor do painel quando o painel é desenhado.  
+ Se você criar um divisor de painel personalizado, defina essa variável de membro. Isso permite que o framework para criar seu divisor do painel quando o painel é desenhado.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como definir o `m_pSliderRTC` variável de membro:  
@@ -742,7 +742,7 @@ void StoreRecentTabRelatedInfo(
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)   
  [Classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md)   

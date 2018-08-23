@@ -1,7 +1,7 @@
 ---
-title: Combinando C (estruturadas) e exceções do C++ | Microsoft Docs
+title: Combinando C (estruturada) e exceções do C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/14/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,33 +18,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e632faddb3b4f59733710a915ed121a12f4e0c6
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 580fb4c96db70b612135ac48e30bd9c0d45c4d1c
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404857"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573207"
 ---
-# <a name="mixing-c-structured-and-c-exceptions"></a>Combinação de exceções C (Estruturada) e C++
-Se você quiser escrever um código mais portátil, não recomendamos o uso de tratamento de exceções estruturadas em um programa C/C++. No entanto, às vezes, convém compilar com **/EHa** e combinar exceções estruturadas e código-fonte C++ e precisar de algum recurso para lidar com ambos os tipos de exceções. Como um manipulador de exceção estruturada não tem nenhum conceito de objetos ou exceções tipadas, ele não pode tratar exceções geradas por código C++. No entanto, C++ **catch** manipuladores podem tratar exceções estruturadas. Como tal, sintaxe de tratamento de exceções de C++ (**tente**, **throw**, **catch**) não é aceito pelo compilador C, mas a sintaxe de tratamento de exceções estruturado (**Try** , **EXCEPT**, **Finally**) é suportado pelo compilador do C++.  
-  
- Ver [set_se_translator](../c-runtime-library/reference/set-se-translator.md) para obter informações sobre o tratamento de exceções estruturadas como exceções C++.  
-  
- Se você combinar exceções estruturadas e exceções C++, observe o seguinte:  
-  
-1.  As exceções C++ e as exceções estruturadas não podem ser combinadas na mesma função.  
-  
-2.  Manipuladores de terminação (**Finally** blocos) são sempre executados, mesmo durante o desenrolamento depois que uma exceção será lançada.  
-  
-3.  Tratamento de exceções C++ pode capturar e preservar semânticas de desenrolamento em todos os módulos compilados com o [/EH](../build/reference/eh-exception-handling-model.md) opção do compilador (essa opção habilita a semântica de liberação).  
-  
-4.  Pode haver algumas situações nas quais as funções de destruidor não sejam chamadas de todos os objetos. Por exemplo, se uma exceção estruturada ocorre ao tentar fazer uma chamada de função por meio de um ponteiro de função não inicializado, e essa função usar como parâmetros objetos que foram criados antes da chamada, os destruidores desses objetos não serão chamados durante o desenrolamento de pilha.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
-  
--   [Usando setjmp ou longjmp em programas C++](../cpp/using-setjmp-longjmp.md)  
-  
--   [Diferenças entre SEH e C++ EH](../cpp/exception-handling-differences.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Tratamento de exceções em C++](../cpp/cpp-exception-handling.md)
+# <a name="mixing-c-structured-and-c-exceptions"></a>Combinando C (estruturada) e exceções do C++
+
+Se você quiser escrever um código portátil, não é recomendado o uso estruturado de manipulação de exceção (SEH) em um programa C++. No entanto, às vezes, convém compilar usando [/EHa](../build/reference/eh-exception-handling-model.md) e combinar exceções estruturadas e código-fonte C++ e precisar de algum recurso para lidar com ambos os tipos de exceções. Como um manipulador de exceção estruturada não tem nenhum conceito de objetos ou exceções tipadas, ela não pode manipular as exceções geradas por código C++. No entanto, C++ **catch** manipuladores podem tratar exceções estruturadas. Sintaxe de tratamento de exceções C++ (**tente**, **throw**, **catch**) não é aceito pelo compilador C, mas a sintaxe de tratamento de exceções estruturado (**Try**, **EXCEPT**, **Finally**) é suportado pelo compilador do C++.
+
+Ver [set_se_translator](../c-runtime-library/reference/set-se-translator.md) para obter informações sobre como lidar com exceções estruturadas como exceções C++.
+
+Se você combinar a estruturadas e exceções do C++, esteja ciente desses problemas potenciais:
+
+- As exceções C++ e as exceções estruturadas não podem ser combinadas na mesma função.
+
+- Manipuladores de terminação (**Finally** blocos) são sempre executados, mesmo durante o desenrolamento depois que uma exceção será lançada.
+
+- Tratamento de exceções C++ pode capturar e preservar semânticas de desenrolamento em todos os módulos compilados com o [/EH](../build/reference/eh-exception-handling-model.md) opções do compilador, semântica de liberação que habilitar.
+
+- Pode haver algumas situações nas quais as funções de destruidor não sejam chamadas de todos os objetos. Por exemplo, se uma exceção estruturada ocorre ao tentar fazer com que uma função chamada por meio de um ponteiro de função não inicializado, e essa função usa como parâmetros objetos que foram criados antes da chamada, os destruidores desses objetos não são chamados durante o desenrolamento de pilha.
+
+## <a name="next-steps"></a>Próximas etapas
+
+- [Usando setjmp ou longjmp em programas C++](../cpp/using-setjmp-longjmp.md)
+
+  Veja mais informações sobre o uso de `setjmp` e `longjmp` em programas C++.
+
+- [Tratar exceções estruturadas em C++](../cpp/exception-handling-differences.md)
+
+  Consulte exemplos dos modos que você pode usar C++ para manipular estruturado de exceções.
+
+## <a name="see-also"></a>Consulte também
+
+[Tratamento de exceções em C++](../cpp/cpp-exception-handling.md)  

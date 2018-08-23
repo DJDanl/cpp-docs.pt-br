@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 932185002032ab86ca80b2b3384bfe6cbb69f8b1
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 59e890e9d38ff0a37114f2f15217a748c21fff44
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338704"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572321"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Dando suporte a transações em banco de dados OLE
 Um [transação](../../data/transactions-mfc-data-access.md) é uma maneira de grupo, ou um lote, uma série de atualizações para uma fonte de dados para que tudo tenha êxito e são confirmados ao mesmo tempo ou (se qualquer uma falha) nenhum serão confirmadas e toda a transação será revertida. Esse processo garante a integridade do resultado na fonte de dados.  
   
  OLE DB dá suporte a transações com três métodos a seguir:  
   
--   [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/library/ms709786.aspx)  
+-   [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
   
--   [ITransaction::Commit](https://msdn.microsoft.com/library/ms713008.aspx)  
+-   [ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
   
--   [ITransaction::Abort](https://msdn.microsoft.com/library/ms709833.aspx)  
+-   [ITransaction::Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>Relação de sessões e transações  
  Um objeto de fonte de dados pode criar um ou mais objetos de sessão, cada um dos quais pode estar dentro ou fora do escopo de uma transação em um determinado momento.  
@@ -55,7 +55,7 @@ Um [transação](../../data/transactions-mfc-data-access.md) é uma maneira de g
  Chamando `ITransaction::Commit` ou `ITransaction::Abort` termina a transação. `Commit` faz com que todas as alterações dentro do escopo da transação a ser aplicado ao armazenamento de dados. `Abort` faz com que todas as alterações dentro do escopo de transação a ser cancelado e o armazenamento de dados será deixado no estado que ele tinha antes da transação foi iniciada.  
   
 ## <a name="nested-transactions"></a>Transações aninhadas  
- Um [transaction aninhada](https://msdn.microsoft.com/library/ms716985.aspx) ocorre quando você inicia uma nova transação local quando uma transação ativa já existe na sessão. A nova transação seja iniciada como uma transação aninhada abaixo da transação atual. Se o provedor não oferece suporte a transações aninhadas, chamando `StartTransaction` quando já houver uma transação ativa na sessão retorna XACT_E_XTIONEXISTS.  
+ Um [transaction aninhada](/previous-versions/windows/desktop/ms716985\(v=vs.85\)) ocorre quando você inicia uma nova transação local quando uma transação ativa já existe na sessão. A nova transação seja iniciada como uma transação aninhada abaixo da transação atual. Se o provedor não oferece suporte a transações aninhadas, chamando `StartTransaction` quando já houver uma transação ativa na sessão retorna XACT_E_XTIONEXISTS.  
   
 ## <a name="distributed-transactions"></a>Transações distribuídas  
  Uma transação distribuída é uma transação que atualiza dados distribuídos; ou seja, os dados em mais de um sistema de computador em rede. Se você quiser dar suporte a transações em um sistema distribuído, você deve usar o .NET Framework em vez do suporte a transações OLE DB.  

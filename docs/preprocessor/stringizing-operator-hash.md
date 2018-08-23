@@ -22,26 +22,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7891b03fe80b5ad91ad52cf4577d237350d4584c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2bbb1aa7db586a4b45084883491c8869b434eb8b
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841693"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538772"
 ---
 # <a name="stringizing-operator-"></a>Operador stringizing (#)
-O sinal de número ou o operador "stringizing" (**#**) converte os parâmetros de macro em literais de cadeia de caracteres sem expandir a definição de parâmetro. É usado apenas com macros que aceitam argumentos. Se ele preceder um parâmetro formal na definição da macro, o argumento real passado por invocação de macro é colocado entre em aspas e tratado como literal de cadeia de caracteres. O literal da cadeia de caracteres substitui cada ocorrência de uma combinação do operador stringizing e do parâmetro formal na definição da macro.  
+O sinal de número ou o operador "stringizing" (**#**) converte parâmetros de macro em literais de cadeia de caracteres sem expandir a definição do parâmetro. É usado apenas com macros que aceitam argumentos. Se ele preceder um parâmetro formal na definição da macro, o argumento real passado por invocação de macro é colocado entre em aspas e tratado como literal de cadeia de caracteres. O literal da cadeia de caracteres substitui cada ocorrência de uma combinação do operador stringizing e do parâmetro formal na definição da macro.  
   
 > [!NOTE]
->  A extensão do Microsoft C (versões 6.0 e anteriores) para o padrão ANSI C, que anteriormente expandia os argumentos formais de macro que apareciam em literais de cadeias de caracteres e constantes de caracteres, não tem mais suporte. Código que confiam nessa extensão deve ser reescrito usando o stringizing (**#**) operador.  
+> A extensão do Microsoft C (versões 6.0 e anteriores) para o padrão ANSI C, que anteriormente expandia os argumentos formais de macro que apareciam em literais de cadeias de caracteres e constantes de caracteres, não tem mais suporte. Código que usava esta extensão deve ser reescrito usando o stringizing (**#**) operador.  
   
 O espaço em branco que precede o primeiro token do argumento real e depois do último token do argumento real é ignorado. Todo o espaço em branco entre os tokens no argumento real é reduzido a um único espaço em branco no literal de cadeia de caracteres resultante. Assim, se um comentário ocorrer entre dois tokens no argumento real, ele será reduzido a um único espaço em branco. O literal de cadeia de caracteres resultante é concatenada automaticamente com os literais de cadeia de caracteres adjacentes dos quais ele esteja separado apenas por espaço em branco.  
   
-Além disso, se um caractere contido no argumento normalmente requer uma sequência de escape quando usado em uma cadeia de caracteres literal (por exemplo, as aspas (**"**) ou barra invertida (**\\**) caracteres), o barra invertida de escape necessários é automaticamente inserida antes do caractere.  
+Além disso, se um caractere contido no argumento geralmente requer uma sequência de escape quando usado em uma cadeia de caracteres literal (por exemplo, a marca de aspas (**"**) ou barra invertida (**\\**) caracteres), o barra invertida de escape necessária é automaticamente inserida antes do caractere.  
   
-O operador stringizing do Visual C++ não funcionar corretamente quando ele é usado com cadeias de caracteres que incluem as sequências de escape. Nessa situação, o compilador gera [C2017 de erro do compilador](../error-messages/compiler-errors-1/compiler-error-c2017.md).  
+O operador stringizing do Visual C++ não funcionar corretamente quando ele é usado com cadeias de caracteres que incluem as sequências de escape. Nessa situação, o compilador gera [erro do compilador C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).  
   
-## <a name="example"></a>Exemplo  
+## <a name="examples"></a>Exemplos  
+
 O exemplo a seguir mostra uma definição macro que inclui o operador stringizing e uma função main que invoca a macro:  
   
 Essas invocações seriam expandidas durante o pré-processamento, gerando o seguinte código:  
@@ -70,8 +71,7 @@ In quotes in the printf function call
 "In quotes when printed to the screen"  
 "This: \"  prints an escaped double quote"  
 ```  
-  
-## <a name="example"></a>Exemplo  
+ 
 O exemplo a seguir mostra como você pode expandir um parâmetro de macro:  
   
 ```cpp  
@@ -86,4 +86,5 @@ FB1(F B)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Operadores de pré-processador](../preprocessor/preprocessor-operators.md)
+ 
+[Operadores de pré-processador](../preprocessor/preprocessor-operators.md)

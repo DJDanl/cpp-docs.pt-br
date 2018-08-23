@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8287f96f80748272e29b22ed5c43c364f4353b86
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b2bc1a0bbf56623feccd4d3bd96f1e719e192d48
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691671"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539732"
 ---
 # <a name="shared-openmp"></a>shared (OpenMP)
-Especifica que uma ou mais variáveis devem ser compartilhados entre todos os threads.  
+Especifica que uma ou mais variáveis devem ser compartilhadas entre todos os threads.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ shared(var)
  onde,  
   
  `var`  
- Um mais mais variáveis para compartilhar. Se mais de uma variável for especificada, separe os nomes de variável com uma vírgula.  
+ Uma ou mais variáveis para compartilhar. Se mais de uma variável for especificada, separe os nomes de variável com uma vírgula.  
   
 ## <a name="remarks"></a>Comentários  
  Outra maneira de compartilhar variáveis entre threads é com o [copyprivate](../../../parallel/openmp/reference/copyprivate.md) cláusula.  
@@ -52,7 +52,7 @@ shared(var)
  Para obter mais informações, consulte [2.7.2.4 compartilhado](../../../parallel/openmp/2-7-2-4-shared.md).  
   
 ## <a name="example"></a>Exemplo  
- Consulte [privada](../../../parallel/openmp/reference/private-openmp.md) para obter um exemplo de como usar `shared`.  
+ Ver [privados](../../../parallel/openmp/reference/private-openmp.md) para obter um exemplo de como usar `shared`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Cláusulas](../../../parallel/openmp/reference/openmp-clauses.md)

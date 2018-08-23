@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26c8b474c8b2c37e082c8c49f0d232f3f91d6a2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3fa5bda2af8d6d6d95474743725c399d3ef5269
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324623"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540958"
 ---
 # <a name="writecr8"></a>__writecr8
 **Seção específica da Microsoft**  
   
- Grava o valor `Data` ao registro CR8.  
+ Grava o valor `Data` ao registro de CR8.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,15 +38,15 @@ void writecr8(
   
 #### <a name="parameters"></a>Parâmetros  
  [in] `Data`  
- O valor para gravar o registro de CR8.  
+ O valor a ser gravado para o registro de CR8.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__writecr8`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writecr8`|X64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  Esse intrínseco só está disponível no modo kernel e a rotina só está disponível como um intrínseco.  

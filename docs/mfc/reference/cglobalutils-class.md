@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ffd681a589f9e8cc1c9cc56139f7b155773038f
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6c92ccfe9dbf25fa1355885a5f6dd3570df4884b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952079"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538795"
 ---
 # <a name="cglobalutils-class"></a>Classe CGlobalUtils
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -104,7 +104,7 @@ void AdjustRectToworkArea(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out no] *rect*  
+ [no, out] *rect*  
  [in] *pRectDelta*  
   
 ### <a name="remarks"></a>Comentários  
@@ -140,7 +140,7 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWnd*  
+ [in] *Apropriei*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -154,7 +154,7 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWnd*  
+ [in] *Apropriei*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -233,7 +233,7 @@ void FlipRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out no] *rect*  
+ [no, out] *rect*  
  [in] *nDegrees*  
   
 ### <a name="remarks"></a>Comentários  
@@ -249,7 +249,7 @@ void ForceAdjustLayout(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out no] *pDockManager*  
+ [no, out] *pDockManager*  
  [in] *bForce*  
  [in] *bForceInvisible*  
   
@@ -263,7 +263,7 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWnd*  
+ [in] *Apropriei*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -316,7 +316,7 @@ HICON GetWndIcon(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWnd*  
+ [in] *Apropriei*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -374,5 +374,5 @@ BOOL StringFromDecimal(
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)

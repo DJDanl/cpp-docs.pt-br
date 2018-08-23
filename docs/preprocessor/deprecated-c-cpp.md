@@ -1,5 +1,5 @@
 ---
-title: obsoleto (C/C++) | Microsoft Docs
+title: preterido (C/C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2280d5245292625bfc29815475eaca63d4d500bd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d51ee23ab4e4be9cf24b913cb0c4ffa325a9bbf5
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839813"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539728"
 ---
 # <a name="deprecated-cc"></a>deprecated (C/C++)
-O **preterido** pragma permite você indicar que uma função, tipo ou qualquer outro identificador talvez não tenha suporte em um futuro de versão ou não deve mais ser usado.  
+O **preterido** permite de pragma indicar que uma função, tipo ou qualquer outro identificador pode não ter suporte em uma futura versão ou não deve mais ser usado.  
 > [!NOTE]
-> Para obter informações sobre o C++ 14 `[[deprecated]]` atributo e orientações sobre quando usar esse atributo vs o pragma ou declspec da Microsoft, consulte [atributos padrão do C++](../cpp/attributes.md) atributo.
+> Para obter informações sobre o c++14 `[[deprecated]]` atributo e orientação sobre quando usá-lo atributo vs, a Microsoft declspec ou o pragma, consulte [atributos padrão do C++](../cpp/attributes.md) atributo.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,17 +37,17 @@ O **preterido** pragma permite você indicar que uma função, tipo ou qualquer 
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Quando o compilador encontra um identificador especificado por uma **preterido** pragma, ele emite o aviso do compilador [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).   
+Quando o compilador encontra um identificador especificado por um **preterido** pragma, ele emite aviso do compilador [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).   
   
- Você pode preterir nomes de macro. Coloque o nome da macro entre aspas. Caso contrário, haverá uma expansão na macro.  
+Você pode preterir nomes de macro. Coloque o nome da macro entre aspas. Caso contrário, haverá uma expansão na macro.  
   
- Porque o **preterido** pragma funciona em todos os identificadores correspondentes e não consideram assinaturas, não é a melhor opção para reprovando versões específicas de funções sobrecarregadas. Qualquer nome de função correspondente que é colocado no escopo dispara o aviso.
+Porque o **preterido** pragma funciona em todos os identificadores correspondentes e não consideram assinaturas, não é a melhor opção para a substituição de versões específicas de funções sobrecarregadas. Qualquer nome de função correspondente que é colocado no escopo dispara o aviso.
 
-  É recomendável usar o C++ 14 `[[deprecated]]` de atributo, quando possível, em vez do **preterido** pragma. Específicos do Microsoft [__declspec(deprecated)](../cpp/deprecated-cpp.md) modificador de declaração também é uma opção melhor em muitos casos que o **preterido** pragma. O `[[deprecated]]` atributo e `__declspec(deprecated)` modificador permitem que você especifique status preterido para formulários específicos de funções sobrecarregadas. O diagnóstico aviso aparece apenas sobre referências à função sobrecarregada específica o atributo ou modificador aplica-se a.  
+É recomendável que você use o c++14 `[[deprecated]]` de atributo, quando possível, em vez do **preterido** pragma. Específicos da Microsoft [__declspec(deprecated)](../cpp/deprecated-cpp.md) modificador de declaração também é uma escolha melhor em muitos casos que o **preterida** pragma. O `[[deprecated]]` atributo e `__declspec(deprecated)` modificador permitem que você especificar o status preterido de formatos específicos de funções sobrecarregadas. O diagnóstico aviso aparece apenas sobre referências à função sobrecarregada específica o atributo ou modificador aplica-se a.  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // pragma_directive_deprecated.cpp  
 // compile with: /W3  
 #include <stdio.h>  
@@ -66,9 +66,9 @@ int main() {
 }  
 ```  
   
- O exemplo a seguir mostra como preterir uma classe:  
+O exemplo a seguir mostra como preterir uma classe:  
   
-```  
+```cpp  
 // pragma_directive_deprecated2.cpp  
 // compile with: /W3  
 #pragma deprecated(X)  
@@ -83,4 +83,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

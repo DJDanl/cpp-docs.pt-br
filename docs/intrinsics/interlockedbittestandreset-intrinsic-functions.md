@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c292d344727f2cc473dc444853a2c46d94150dd0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 433d4ba23cbf4ed7e2819a3752cd2155b7c20371
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340444"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540939"
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>Funções intrínsecas _interlockedbittestandreset
 **Seção específica da Microsoft**  
@@ -95,14 +95,14 @@ unsigned char _interlockedbittestandreset64_HLERelease(
   
 |Intrínseco|Arquitetura|Cabeçalho|  
 |---------------|------------------|------------|  
-|`_interlockedbittestandreset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_interlockedbittestandreset`|x86, ARM, x64|\<intrin.h>|  
 |`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<intrin.h>|  
-|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
-|`_interlockedbittestandreset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, x64|\<immintrin.h>|  
+|`_interlockedbittestandreset64`|X64|\<intrin.h>|  
+|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|X64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Comentários  
- Em processadores x86 e [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], esses intrínsecos usam a instrução `lock btr`, que lê e define o bit especificado como zero em uma operação atômica.  
+ Em processadores x86 e x64, esses intrínsecos usam a `lock btr` instrução, que lê e define o bit especificado como zero em uma operação atômica.  
   
  Em processadores de ARM, use intrínsecos com os sufixos `_acq` e `_rel` para semântica de aquisição e liberação, como no início e no final de uma seção crítica. Os intrínsecos de ARM com um sufixo `_nf` ("no fence") não funcionam como uma barreira de memória.  
   

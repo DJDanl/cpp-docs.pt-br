@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 51593d14967e2814d69cb0a912d937b689dc3632
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d0dfc28a510ab9fcc18149f1cd96037e6754d3d7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337109"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572907"
 ---
 # <a name="idbpropertiesimpl-class"></a>Classe IDBPropertiesImpl
 Fornece uma implementação para o `IDBProperties` interface.  
@@ -69,7 +69,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 |[SetProperties](#setproperties)|Define propriedades em grupos de propriedades fonte de dados e de inicialização, para objetos de fonte de dados, ou o grupo de propriedades de inicialização para enumeradores.|  
   
 ## <a name="remarks"></a>Comentários  
- [IDBProperties](https://msdn.microsoft.com/library/ms719607.aspx) é uma interface obrigatória para objetos de fonte de dados e uma interface opcional para enumeradores. No entanto, se expõe um enumerador [IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx), ele deve expor `IDBProperties`. `IDBPropertiesImpl` implementa `IDBProperties` usando uma função estática definida por [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+ [IDBProperties](/previous-versions/windows/desktop/ms719607\(v=vs.85\)) é uma interface obrigatória para objetos de fonte de dados e uma interface opcional para enumeradores. No entanto, se expõe um enumerador [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\)), ele deve expor `IDBProperties`. `IDBPropertiesImpl` implementa `IDBProperties` usando uma função estática definida por [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ## <a name="getproperties"></a> Idbpropertiesimpl:: GetProperties
 Retorna os valores das propriedades dos grupos de propriedade de inicialização, informações de fonte de dados e fonte de dados que estão atualmente definidas no objeto de fonte de dados ou os valores das propriedades no grupo de propriedades de inicialização são definidas no momento no enumerador.  
@@ -84,7 +84,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [idbproperties:: GetProperties](https://msdn.microsoft.com/library/ms714344.aspx) na *referência do programador do OLE DB*.  
+ Ver [idbproperties:: GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) na *referência do programador do OLE DB*.  
   
  Alguns parâmetros correspondem aos *referência do programador DB OLE* parâmetros de nomes diferentes, que são descritos em `IDBProperties::GetProperties`:  
   
@@ -112,7 +112,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [idbproperties:: Getpropertyinfo](https://msdn.microsoft.com/library/ms718175.aspx) na *referência do programador do OLE DB*.  
+ Ver [idbproperties:: Getpropertyinfo](/previous-versions/windows/desktop/ms718175\(v=vs.85\)) na *referência do programador do OLE DB*.  
   
  Alguns parâmetros correspondem aos *referência do programador DB OLE* parâmetros de nomes diferentes, que são descritos em `IDBProperties::GetPropertyInfo`:  
   
@@ -135,7 +135,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [idbproperties:: SetProperties](https://msdn.microsoft.com/library/ms723049.aspx) na *referência do programador do OLE DB*.  
+ Ver [idbproperties:: SetProperties](/previous-versions/windows/desktop/ms723049\(v=vs.85\)) na *referência do programador do OLE DB*.  
   
 ### <a name="remarks"></a>Comentários  
  Se o provedor é inicializado, esse método define os valores das propriedades de DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO, grupos de propriedades DBPROPSET_DBINIT para o objeto de fonte de dados. Se o provedor não é inicializado, ele define somente propriedades de grupo DBPROPSET_DBINIT.  

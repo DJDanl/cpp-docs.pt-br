@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eecf1740855c2feef0d7cac4bbcc85ad95eade6f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d1b5ed266f1b8929deee3ffb60a10b18b7604afc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372845"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571916"
 ---
 # <a name="manifestinput-specify-manifest-input"></a>/MANIFESTINPUT (especificar entrada de manifesto)
-Especifica um arquivo de manifesto de entrada para incluir no manifesto do que é inserido na imagem.  
+Especifica um arquivo de entrada de manifesto para incluir no manifesto inserido na imagem.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,9 +33,9 @@ Especifica um arquivo de manifesto de entrada para incluir no manifesto do que �
  O arquivo de manifesto para incluir no manifesto inserido.  
   
 ## <a name="remarks"></a>Comentários  
- O **/MANIFESTINPUT** opção especifica o caminho de um arquivo de entrada a ser usado para criar o manifesto inserido em uma imagem executável. Se você tiver o manifesto de vários arquivos de entrada, use a opção várias vezes, uma vez para cada arquivo de entrada. Os arquivos de manifesto de entrada são mesclados para criar o manifesto inserido. Essa opção requer o **/manifesto: inserir** opção.  
+ O **/MANIFESTINPUT** opção especifica o caminho de um arquivo de entrada para usar para criar o manifesto inserido em uma imagem executável. Se você tiver o manifesto de vários arquivos de entrada, use a opção várias vezes — uma vez para cada arquivo de entrada. Os arquivos de entrada de manifesto são mesclados para criar o manifesto inserido. Essa opção requer o **/MANIFEST: inserir** opção.  
   
- Essa opção não pode ser definida diretamente em [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Em vez disso, use o **arquivos de manifesto adicionais** propriedade do projeto para especificar os arquivos de manifesto adicionais para incluir. Para obter mais informações, consulte [entrada e saída, a ferramenta de manifesto, propriedades de configuração, \<Projectname > caixa de diálogo de páginas de propriedade](../../ide/input-and-output-manifest-tool.md).  
+ Essa opção não pode ser definida diretamente no Visual Studio. Em vez disso, use o **arquivos de manifesto adicionais** propriedade do projeto para especificar os arquivos de manifesto adicionais para incluir. Para obter mais informações, consulte [entrada e saída, ferramenta de manifesto, propriedades de configuração \<Projectname > caixa de diálogo páginas de propriedades](../../ide/input-and-output-manifest-tool.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   

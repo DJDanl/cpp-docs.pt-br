@@ -24,17 +24,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f162a8da230177509ebe67741580ef224b20ba19
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 1ea72c42f1c10e8d5cd27537db13c7b7baafef5d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040789"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538980"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>Classe CMFCDesktopAlertDialog
-O `CMFCDesktopAlertDialog` classe é usada junto com o [CMFCDesktopAlertWnd classe](../../mfc/reference/cmfcdesktopalertwnd-class.md) para exibir uma caixa de diálogo personalizada em uma janela pop-up.  
+O `CMFCDesktopAlertDialog` classe é usada junto com o [classe CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md) para exibir uma caixa de diálogo personalizada em uma janela pop-up.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,15 +54,15 @@ class CMFCDesktopAlertDialog : public CDialogEx
 |[CMFCDesktopAlertDialog::PreTranslateMessage](#pretranslatemessage)|(Substitui `CDialogEx::PreTranslateMessage`.)|  
   
 ### <a name="remarks"></a>Comentários  
- Execute as etapas a seguir para exibir uma caixa de diálogo personalizada em uma janela pop-up:  
+ Execute as seguintes etapas para exibir uma caixa de diálogo personalizada em uma janela pop-up:  
   
 1.  Derive uma classe de `CMFCDesktopAlertDialog`.  
   
-2.  Crie um modelo de caixa de diálogo de filho nos recursos do projeto.  
+2.  Crie um modelo de caixa de diálogo filho nos recursos do projeto.  
   
-3.  Chamar [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) com a ID de recurso do modelo de caixa de diálogo e um ponteiro para as informações de classe de tempo de execução da classe derivada como parâmetros.  
+3.  Chame [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) com a ID de recurso do modelo de caixa de diálogo e um ponteiro para as informações de classe de tempo de execução da classe derivada como parâmetros.  
   
-4.  A caixa de diálogo personalizada para lidar com todas as notificações são provenientes de controles hospedados de programas ou programar os controles hospedados para lidar com essas notificações diretamente.  
+4.  A caixa de diálogo personalizada para lidar com todas as notificações são provenientes dos controles hospedados de programa ou programar os controles hospedados para lidar com essas notificações diretamente.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -90,7 +90,7 @@ BOOL CreateFromParams(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *params*  
+ [in] *param. autom.*  
  [in] *pParent*  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -134,7 +134,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
  [Classe CMFCDesktopAlertWndInfo](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)   

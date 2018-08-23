@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f2a0d91d0f0dd3d23886ade75072526e6c895f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 093c994de24b947c53bfc19d33213e77f3ec2593
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849448"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541522"
 ---
 # <a name="rawdispinterfaces"></a>raw_dispinterfaces
-**Específicas do C++**  
+**Específico do C++**  
   
- Informa ao compilador para gerar funções de invólucro de baixo nível para dispinterface métodos e propriedades que chamam **IDispatch:: Invoke** e retornar o `HRESULT` código de erro.  
+Instrui o compilador a gerar funções wrapper de nível baixo para dispinterface métodos e propriedades que chamam `IDispatch::Invoke` e retornar o código de erro HRESULT.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,10 +35,12 @@ raw_dispinterfaces
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Se esse atributo não for especificado, apenas os wrappers de alto nível serão gerados, que lançam exceções de C++ em caso de falha.  
+ 
+Se esse atributo não for especificado, apenas os wrappers de alto nível serão gerados, que lançam exceções de C++ em caso de falha.  
   
- **TÉRMINO específicas do C++**  
+**FIM de específico de C++**  
   
 ## <a name="see-also"></a>Consulte também  
- [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import diretiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

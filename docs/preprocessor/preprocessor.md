@@ -14,37 +14,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bb5a9740bab3f69ff66a51cd58e6e1378e178f0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 980058c588e02751113b889d44cf0bb5f69066f1
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848444"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539727"
 ---
 # <a name="preprocessor"></a>Pré-processador
 O pré-processador é um processador de texto que manipula o texto de um arquivo de origem como parte da primeira fase da tradução. O pré-processador não analisa o texto de origem, mas o divide em tokens com a finalidade de localizar as chamadas macro. Embora o compilador invoque normalmente o pré-processador na primeira passagem, o pré-processador também pode ser invocado separadamente para processar o texto sem compilar.  
   
- O material de referência no pré-processador inclui as seguintes seções:  
+O material de referência no pré-processador inclui as seguintes seções:  
   
--   [Diretivas de pré-processador](../preprocessor/preprocessor-directives.md)  
+- [Diretivas de pré-processador](../preprocessor/preprocessor-directives.md)  
   
--   [Operadores de pré-processador](../preprocessor/preprocessor-operators.md)  
+- [Operadores de pré-processador](../preprocessor/preprocessor-operators.md)  
   
--   [Macros predefinidas](../preprocessor/predefined-macros.md)  
+- [Macros predefinidas](../preprocessor/predefined-macros.md)  
   
--   [Pragmas](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
+- [Pragmas](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
   
- **Seção específica da Microsoft**  
+**Seção específica da Microsoft**  
   
- Você pode obter uma listagem de código-fonte depois de pré-processamento usando o [/E](../build/reference/e-preprocess-to-stdout.md) ou [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) opção de compilador. As duas opções invocam o pré-processador e tem como saída o texto resultante no dispositivo de saída padrão que, na maioria dos casos, é o console. A diferença entre as duas opções é que /E inclui as políticas `#line` e /EP as retira.  
+Você pode obter uma listagem de código-fonte após o pré-processamento usando o [/E](../build/reference/e-preprocess-to-stdout.md) ou [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) opção de compilador. As duas opções invocam o pré-processador e tem como saída o texto resultante no dispositivo de saída padrão que, na maioria dos casos, é o console. A diferença entre as duas opções é que /E inclui as políticas `#line` e /EP as retira.  
   
- **Fim da seção específica da Microsoft**  
+**Fim da seção específica da Microsoft**  
   
-##  <a name="_predir_special_terminology"></a> Terminologia específica  
- Na documentação de pré-processador, o termo "argumento" refere-se à entidade passada para uma função. Em alguns casos, ele é modificado por "atual" ou "formal", que descreve a expressão do argumento especificada na chamada de função e na declaração do argumento especificada na definição de função, respectivamente.  
+##  <a name="_predir_special_terminology"></a> Terminologia especial  
+
+Na documentação de pré-processador, o termo "argumento" refere-se à entidade passada para uma função. Em alguns casos, ele é modificado por "atual" ou "formal", que descreve a expressão do argumento especificada na chamada de função e na declaração do argumento especificada na definição de função, respectivamente.  
   
- O termo "variável" se refere a um objeto de dados simples do tipo C. O termo "objeto" se refere a objetos e variáveis C++; ele é um termo inclusivo.  
+O termo "variável" se refere a um objeto de dados simples do tipo C. O termo "objeto" se refere a objetos e variáveis C++; ele é um termo inclusivo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de pré-processador C/C++](../preprocessor/c-cpp-preprocessor-reference.md)   
- [Fases de translação](../preprocessor/phases-of-translation.md)
+ 
+[Referência de pré-processador C/C++](../preprocessor/c-cpp-preprocessor-reference.md)   
+[Fases de translação](../preprocessor/phases-of-translation.md)

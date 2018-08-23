@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e24c5286afbe20b1f5b71a67b0d10385f80874
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1077a9567509d98b68a864d7478ab84b94d11054
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208790"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42543088"
 ---
 # <a name="colecurrency-class"></a>Classe COleCurrency
 Encapsula o `CURRENCY` tipo de dados de automação OLE.  
@@ -137,11 +137,11 @@ COleCurrency(
   
 - COleCurrency (`curSrc`) constrói uma `COleCurrency` objeto de uma já existente `COleCurrency` objeto. O novo objeto tem o mesmo status que o objeto de origem.  
   
-- COleCurrency (`varSrc`) constrói uma `COleCurrency` objeto. Tenta converter um [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) estrutura ou `COleVariant` objeto como um valor de moeda (VT_CY). Se essa conversão for bem-sucedida, o valor convertido é copiado no novo `COleCurrency` objeto. Se não estiver, o valor da `COleCurrency` objeto é definido como zero (0) e seu status para inválida.  
+- COleCurrency (`varSrc`) constrói uma `COleCurrency` objeto. Tenta converter um [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) estrutura ou `COleVariant` objeto como um valor de moeda (VT_CY). Se essa conversão for bem-sucedida, o valor convertido é copiado no novo `COleCurrency` objeto. Se não estiver, o valor da `COleCurrency` objeto é definido como zero (0) e seu status para inválida.  
   
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency' objeto dos componentes numéricos especificados. Se o valor absoluto da parte fracionária é maior que 10.000, o ajuste apropriado é feito para as unidades. Observe que as unidades e a parte fracionária são especificados por valores longo com sinal.  
   
- Para obter mais informações, consulte o [moeda](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) e [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) entradas no SDK do Windows.  
+ Para obter mais informações, consulte o [moeda](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) e [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) entradas no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  Os exemplos a seguir mostram os efeitos dos construtores de parâmetro de zero e dois parâmetros:  
@@ -304,7 +304,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
   
 - **operador = (** *1&gt;Operator=(&lt;1}{2&gt;varsrc&lt;2}{3&gt;)&lt;3* **)** se a conversão do `VARIANT` valor (ou [COleVariant](../../mfc/reference/colevariant-class.md) objeto) em uma moeda ( `VT_CY`) é for bem-sucedido, o valor convertido é copiado para esse `COleCurrency` objeto e seu status é definido como válido. Se a conversão não for bem-sucedida, o valor da `COleCurrency` objeto é definido como 0 e seu status como inválido.  
   
- Para obter mais informações, consulte o [moeda](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) e [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) entradas no SDK do Windows.  
+ Para obter mais informações, consulte o [moeda](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) e [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) entradas no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
@@ -450,7 +450,7 @@ throw(COleException*);
 ### <a name="remarks"></a>Comentários  
  Ele usa as especificações de idioma local (IDs de localidade) para o significado dos caracteres não numéricos na cadeia de caracteres de origem.  
   
- Para uma discussão sobre os valores de ID de localidade, consulte [que dão suporte a vários idiomas](http://msdn.microsoft.com/47dc5add-232c-4268-b977-43e12da81ede).  
+ Para uma discussão sobre os valores de ID de localidade, consulte [que dão suporte a vários idiomas](/previous-versions/windows/desktop/automat/supporting-multiple-national-languages).  
   
  Se a cadeia de caracteres foi convertida com êxito em uma moeda de valor, o valor deste `COleCurrency` objeto é definido como valor e seu status como válido.  
   

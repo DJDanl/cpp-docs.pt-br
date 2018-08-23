@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17ec3560e7faf8c49f410437c79609bfb871a9c9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849943"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540940"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Classe CMFCVisualManagerWindows7
-O `CMFCVisualManagerWindows7` fornece um aplicativo a aparência de um [!INCLUDE[win7](../../build/includes/win7_md.md)] aplicativo.  
+O `CMFCVisualManagerWindows7` fornece a um aplicativo a aparência de um aplicativo do Windows 7.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -103,7 +103,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::SetStyle`|Define o esquema de cores a `CMFCVisualManagerWindows7` GUI.|  
   
 ## <a name="remarks"></a>Comentários  
- Use o `CMFCVisualManagerWindows7` classe para alterar a aparência do seu aplicativo para simular um padrão [!INCLUDE[win7](../../build/includes/win7_md.md)] aplicativo. Essa classe pode não ser válida, se seu aplicativo estiver em execução em uma versão do Windows anteriores ao [!INCLUDE[win7](../../build/includes/win7_md.md)]. Nesse cenário, o aplicativo usa o Gerenciador de visual padrão definido no [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
+ Use o `CMFCVisualManagerWindows7` classe para alterar a aparência do seu aplicativo para simular um aplicativo do Windows 7 padrão. Essa classe pode não ser válida, se seu aplicativo estiver em execução em uma versão do Windows anteriores ao Windows 7. Nesse cenário, o aplicativo usa o Gerenciador de visual padrão definido no [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
   
  O CMFCVisualManagerWindows7 herda vários métodos de ambos os [classe CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md) e o `CMFCVisualManager` classe. Os métodos listados na seção anterior são novos para o `CMFCVisualManagerWindows7` classe.  
   

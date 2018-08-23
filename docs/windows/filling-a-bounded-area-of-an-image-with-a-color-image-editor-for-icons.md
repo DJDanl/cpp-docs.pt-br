@@ -18,34 +18,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc632f251e618e5816b1b8d8ea8280cba3d7b217
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 47b8837cafaab2501e201a747fd9463e1e00639e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652484"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42580963"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Preenchendo uma área limitada de uma imagem com uma cor (editor de imagens para ícones)
-O editor de imagens fornece o **preencher** colocados de ferramenta para o preenchimento de qualquer área de imagem com a cor de desenho atual ou a cor de plano de fundo atual.  
-  
+
+O editor de imagens fornece o **preencher** colocados de ferramenta para o preenchimento de qualquer área de imagem com a cor de desenho atual ou a cor de plano de fundo atual.
+
 > [!TIP]
->  Dicas de ferramenta aparecem quando você passa o cursor sobre um botão de barra de ferramentas. Estas dicas podem ajudá-lo a identificar a função de cada botão.  
-  
-### <a name="to-use-the-fill-tool"></a>Para usar a ferramenta de preenchimento  
-  
-1.  Sobre o **Editor de imagens** barra de ferramentas (ou o **imagem** menu, **ferramentas** comando), clique no **preencher** ferramenta.  
-  
-2.  Se necessário, escolha as cores de desenho: na [paleta de cores](../windows/colors-window-image-editor-for-icons.md), clique no botão esquerdo do mouse para selecionar uma cor de primeiro plano ou o botão direito do mouse para selecionar uma cor de plano de fundo.  
-  
-3.  Mover o **preenchimento** ferramenta para a área que você deseja preencher.  
-  
-4.  Clique no botão esquerdo ou direito do mouse para preencher com a cor de primeiro plano ou a cor do plano de fundo, respectivamente.  
-  
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisitos  
- Nenhum  
-  
-## <a name="see-also"></a>Consulte também  
- [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Trabalhando com cor](../windows/working-with-color-image-editor-for-icons.md)
+> Dicas de ferramenta aparecem quando você passa o cursor sobre um botão de barra de ferramentas. Estas dicas podem ajudá-lo a identificar a função de cada botão.
+
+### <a name="to-use-the-fill-tool"></a>Para usar a ferramenta de preenchimento
+
+1. Sobre o **Editor de imagens** barra de ferramentas (ou o **imagem** menu, **ferramentas** comando), clique no **preencher** ferramenta.
+
+2. Se necessário, escolha as cores de desenho: na [paleta de cores](../windows/colors-window-image-editor-for-icons.md), clique no botão esquerdo do mouse para selecionar uma cor de primeiro plano ou o botão direito do mouse para selecionar uma cor de plano de fundo.
+
+3. Mover o **preenchimento** ferramenta para a área que você deseja preencher.
+
+4. Clique no botão esquerdo ou direito do mouse para preencher com a cor de primeiro plano ou a cor do plano de fundo, respectivamente.
+
+Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisitos
+
+Nenhum
+
+## <a name="see-also"></a>Consulte também
+
+[Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Trabalhando com cor](../windows/working-with-color-image-editor-for-icons.md)

@@ -12,32 +12,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e0f86467de8256eaecbfbf42765de551a1e2f6e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d2c53ceb50057e789856aa8e7f67c9f788aa5a0a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690605"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539538"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Usando objetos accelerator e accelerator_view
-Você pode usar o [accelerator](../../parallel/amp/reference/accelerator-class.md) e [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) classes para especificar o dispositivo ou emulador para executar seu código C++ AMP em. Um sistema pode ter vários dispositivos ou emuladores que diferem por quantidade de memória, suporte à memória compartilhada, suporte à depuração ou suporte de precisão dupla. C++ Accelerated Massive Parallelism (C++ AMP) fornece APIs que você pode usar para examinar os Aceleradores disponíveis, definido como o padrão, especifique vários accelerator_views para várias chamadas para parallel_for_each e executar tarefas de depuração especiais.  
+Você pode usar o [accelerator](../../parallel/amp/reference/accelerator-class.md) e [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) classes para especificar o dispositivo ou emulador para executar seu código C++ AMP em. Um sistema pode ter vários dispositivos ou emuladores que diferem pela quantidade de memória, suporte à memória compartilhada, suporte à depuração ou suporte de precisão dupla. C++ Accelerated Massive Parallelism (C++ AMP) fornece APIs que você pode usar para examinar os Aceleradores disponíveis, definir um como padrão, especificar várias accelerator_views para chamadas múltiplas ao parallel_for_each e executar tarefas de depuração especiais.  
   
 ## <a name="using-the-default-accelerator"></a>Usando o acelerador padrão  
- O tempo de execução C++ AMP escolhe um acelerador padrão, a menos que você escrever código para escolher um específico. O tempo de execução escolhe o acelerador padrão da seguinte maneira:  
+ 
+O tempo de execução C++ AMP escolhe um acelerador padrão, a menos que você escreva código para escolher um específico. O tempo de execução escolhe o acelerador padrão da seguinte maneira:  
   
-1.  Se o aplicativo estiver em execução no modo de depuração, um acelerador que dá suporte à depuração.  
+1. Se o aplicativo estiver em execução no modo de depuração, um acelerador que oferece suporte à depuração.  
   
-2.  Caso contrário, o acelerador especificado pela variável de ambiente CPPAMP_DEFAULT_ACCELERATOR, se ele for definido.  
+2. Caso contrário, o Acelerador que é especificado pela variável de ambiente CPPAMP_DEFAULT_ACCELERATOR, se ele for definido.  
   
-3.  Caso contrário, um dispositivo não emulados.  
+3. Caso contrário, um dispositivo não emulado.  
   
-4.  Caso contrário, o dispositivo que tem a maior quantidade de memória disponível.  
+4. Caso contrário, o dispositivo que tem a maior quantidade de memória disponível.  
   
-5.  Caso contrário, um dispositivo que não está anexado à exibição.  
+5. Caso contrário, um dispositivo que não está anexado à exibição.  
   
- Além disso, o tempo de execução Especifica um `access_type` de `access_type_auto` para o acelerador padrão. Isso significa que o acelerador padrão usa a memória compartilhada se ele tem suporte e suas características de desempenho (largura de banda e latência) são conhecidas como a mesma memória dedicada (não compartilhado).  
+Além disso, o tempo de execução Especifica um `access_type` de `access_type_auto` para o acelerador padrão. Isso significa que o acelerador padrão usa a memória compartilhada se ele tem suporte e se suas características de desempenho (largura de banda e latência) são conhecidas por ser o mesmo que a memória dedicada (não compartilhada).  
   
- Você pode determinar as propriedades do acelerador padrão construindo o acelerador padrão e examinar suas propriedades. O exemplo de código a seguir imprime o caminho, a quantidade de memória de aceleração, suporte à memória compartilhada, suporte de precisão dupla e suporte limitado de precisão dupla do acelerador padrão.  
+Você pode determinar as propriedades do acelerador padrão construindo o acelerador padrão e examinando suas propriedades. O exemplo de código a seguir mostra o caminho, a quantidade de memória do acelerador, suporte à memória compartilhada, suporte de precisão dupla e suporte de precisão dupla limitado do acelerador padrão.  
   
 ```cpp  
 void default_properties() {  
@@ -51,11 +52,10 @@ void default_properties() {
     std::wcout << (accs[i].supports_limited_double_precision ?   
         "limited double precision: true" : "limited double precision: false") << "\n";  
 }  
- 
 ```  
   
 ### <a name="cppampdefaultaccelerator-environment-variable"></a>Variável de ambiente CPPAMP_DEFAULT_ACCELERATOR  
- Você pode definir a variável de ambiente CPPAMP_DEFAULT_ACCELERATOR para especificar o `accelerator::device_path` do acelerador padrão. O caminho é dependente do hardware. O código a seguir usa o `accelerator::get_all` de função para recuperar uma lista de aceleradores de disponível e, em seguida, exibe o caminho e as características de cada acelerador.  
+Você pode definir a variável de ambiente CPPAMP_DEFAULT_ACCELERATOR para especificar o `accelerator::device_path` do acelerador padrão. O caminho é dependente de hardware. O código a seguir usa o `accelerator::get_all` de função para recuperar uma lista de Aceleradores disponíveis e, em seguida, exibe o caminho e as características de cada acelerador.  
   
 ```cpp  
 void list_all_accelerators()  
@@ -76,7 +76,8 @@ void list_all_accelerators()
 ```  
   
 ## <a name="selecting-an-accelerator"></a>Selecionando um acelerador  
- Para selecionar um acelerador, use o `accelerator::get_all` método para recuperar uma lista de aceleradores de disponível e, em seguida, selecione uma com base em suas propriedades. Este exemplo mostra como selecionar o Acelerador que tem a maior parte da memória:  
+ 
+Para selecionar um acelerador, use o `accelerator::get_all` método para recuperar uma lista de Aceleradores disponíveis e, em seguida, selecione uma com base em suas propriedades. Este exemplo mostra como escolher o Acelerador que tem a maior memória:  
   
 ```cpp  
 void pick_with_most_memory()  
@@ -97,14 +98,15 @@ void pick_with_most_memory()
 ```  
   
 > [!NOTE]
->  Um dos aceleradores que são retornados pelo `accelerator::get_all` é o Acelerador de CPU. Você não pode executar código no Acelerador de CPU. Para filtrar o Acelerador de CPU, comparar o valor da [device_path](reference/accelerator-class.md#device_path) propriedade do acelerador que é retornado por `accelerator::get_all` com o valor da [Accelerator:: cpu_accelerator](reference/accelerator-class.md#cpu_accelerator). Para obter mais informações, consulte a seção "Aceleradores especial" neste artigo.  
+> Um dos aceleradores que são retornados pelo `accelerator::get_all` é o Acelerador de CPU. Você não pode executar o código no Acelerador CPU. Para filtrar o Acelerador de CPU, compare o valor da [device_path](reference/accelerator-class.md#device_path) propriedade do acelerador que é retornado pelo `accelerator::get_all` com o valor da [Accelerator:: cpu_accelerator](reference/accelerator-class.md#cpu_accelerator). Para obter mais informações, consulte a seção "Aceleradores especiais" neste artigo.  
   
 ## <a name="shared-memory"></a>Memória compartilhada  
- Memória compartilhada é a memória que pode ser acessada por CPU e o acelerador. O uso de memória compartilhada elimina ou reduz significativamente a sobrecarga de cópia de dados entre a CPU e o acelerador. Embora a memória é compartilhada, não pode ser acessado simultaneamente por CPU e o acelerador, e isso fizer um comportamento indefinido. A propriedade accelerator [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) retorna `true` se o Acelerador oferece suporte à memória compartilhada e o [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) propriedade obtém o padrão [access_type](reference/concurrency-namespace-enums-amp.md#access_type) para a memória alocada no `accelerator`— por exemplo, `array`s associados a `accelerator`, ou `array_view` objetos acessados no `accelerator`. 
+ 
+Memória compartilhada é a memória que pode ser acessada pela CPU e pelo acelerador. O uso de memória compartilhada elimina ou reduz significativamente a sobrecarga de copiar dados entre a CPU e o acelerador. Embora a memória for compartilhada, não pode ser acessada simultaneamente pela CPU e pelo Acelerador, e isso fizer um comportamento indefinido. A propriedade do acelerador [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) retorna **verdadeiro** se o Acelerador oferece suporte à memória compartilhada e o [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) obtenções de propriedade o padrão [access_type](reference/concurrency-namespace-enums-amp.md#access_type) da memória alocada na `accelerator`— por exemplo, **matriz**s associados com o `accelerator`, ou `array_view` objetos acessados no `accelerator`. 
   
- O tempo de execução C++ AMP escolhe automaticamente o melhor padrão `access_type` para cada `accelerator`, mas as características de desempenho (largura de banda e latência) de memória compartilhada podem ser piores do que aqueles de memória dedicada accelerator (não compartilhada) durante a leitura da CPU, gravando da CPU, ou ambos. Se a memória compartilhada executa, bem como memória dedicada para leitura e gravação da CPU, o tempo de execução padrão `access_type_read_write`; caso contrário, o tempo de execução escolhe um padrão mais conservadora `access_type`e permite que o aplicativo para substituí-la se acessar a memória padrões de kernels sua computação se beneficiar de um `access_type`.  
+O tempo de execução C++ AMP escolhe automaticamente o melhor padrão `access_type` para cada `accelerator`, mas as características de desempenho (largura de banda e latência) de memória compartilhada podem ser piores do que aqueles de memória do acelerador de (não compartilhada) dedicada ao ler da CPU, gravar da CPU, ou ambos. Se a memória compartilhada funcionar tão bem como a memória dedicada para ler e gravar da CPU, o tempo de execução padrão será `access_type_read_write`; caso contrário, o tempo de execução escolhe um padrão mais conservador `access_type`e permite que o aplicativo substituí-la se acessar a memória padrões dos kernels de computação se beneficiar de um outro `access_type`.  
   
- O exemplo de código a seguir mostra como determinar se o acelerador padrão oferece suporte à memória compartilhada e, em seguida, substitui o seu tipo de acesso padrão e cria um `accelerator_view` dele.  
+O exemplo de código a seguir mostra como determinar se o acelerador padrão dá suporte à memória compartilhada e, em seguida, substitui seu tipo de acesso padrão e cria um `accelerator_view` dele.  
   
 ```cpp  
 #include <amp.h>  
@@ -133,10 +135,11 @@ int main()
 }  
 ```  
   
- Um `accelerator_view` sempre reflete o `default_cpu_access_type` do `accelerator` está associado, e não fornece nenhuma interface para substituir ou alterar seu `access_type`.  
+Uma `accelerator_view` sempre reflete o `default_cpu_access_type` da `accelerator` está associado, e não fornece nenhuma interface para substituir ou alterar seu `access_type`.  
   
 ## <a name="changing-the-default-accelerator"></a>Alterando o acelerador padrão  
- Você pode alterar o acelerador padrão chamando o `accelerator::set_default` método. Você pode alterar o acelerador padrão apenas uma vez por aplicativo execução e você deve alterá-la antes de qualquer código que é executado na GPU. Qualquer chamada de função subsequentes para alterar o Acelerador de retorna `false`. Se você deseja usar um acelerador de diferente em uma chamada para `parallel_for_each`, leia a seção "Usando vários aceleradores" neste artigo. O exemplo de código a seguir define o acelerador padrão para um que não é emulado, não está conectado a uma exibição e dá suporte à precisão dupla.  
+ 
+Você pode alterar o acelerador padrão chamando o `accelerator::set_default` método. Você pode alterar o acelerador padrão apenas uma vez por aplicativo de execução e você deve alterá-lo antes de qualquer código é executado na GPU. Quaisquer chamadas de função subsequentes para alterar o acelerador retornam **falsos**. Se você deseja usar um acelerador diferente em uma chamada para `parallel_for_each`, leia a seção "Usando múltiplos aceleradores" neste artigo. O exemplo de código a seguir define o acelerador padrão para um que não é emulado, não está conectado a uma exibição e dá suporte à precisão dupla.  
   
 ```cpp  
 bool pick_accelerator()  
@@ -161,26 +164,30 @@ bool pick_accelerator()
 }  
 ```  
   
-## <a name="using-multiple-accelerators"></a>Usando vários aceleradores  
- Há duas maneiras de usar aceleradores de vários em seu aplicativo:  
+## <a name="using-multiple-accelerators"></a>Usando múltiplos aceleradores  
+ 
+Há duas maneiras de usar múltiplos aceleradores em seu aplicativo:  
 
--   Você pode passar `accelerator_view` objetos para as chamadas para o [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) método.  
+- Você pode passar `accelerator_view` objetos para as chamadas para o [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) método.  
   
--   Você pode construir um `array` usando uma versão específica do objeto `accelerator_view` objeto. O tempo de execução do C + AMP escolherá o `accelerator_view` objeto de capturados `array` objeto na expressão lambda.  
+- Você pode construir uma **array** usando uma versão específica do objeto `accelerator_view` objeto. O tempo de execução C++ AMP pegará o `accelerator_view` objeto do capturado **matriz** objeto na expressão lambda.  
   
 ## <a name="special-accelerators"></a>Aceleradores especiais  
- Os caminhos de dispositivo de três Aceleradores especiais estão disponíveis como propriedades da `accelerator` classe:  
+ 
+Os caminhos de dispositivo dos três Aceleradores especiais estão disponíveis como propriedades do `accelerator` classe:  
   
-- [Accelerator:: direct3d_ref membro de dados](reference/accelerator-class.md#direct3d_ref): esse acelerador de thread único usa software da CPU para emular uma placa gráfica genérico. Ele é usado por padrão para depuração, mas não é útil em produção porque é mais lenta do que os aceleradores de hardware. Além disso, ele só está disponível no SDK do DirectX e o SDK do Windows e é improvável ser instalado em computadores de seus clientes. Para obter mais informações, consulte [depuração GPU código](/visualstudio/debugger/debugging-gpu-code).  
+- [Membro de dados de Accelerator::direct3d_ref](reference/accelerator-class.md#direct3d_ref): Este acelerador de thread único usa software na CPU para emular uma placa gráfica genérica. Ele é usado por padrão para depuração, mas não é útil na produção porque é mais lento do que os aceleradores de hardware. Além disso, ele só está disponível no SDK do DirectX e o SDK do Windows e é improvável que esteja instalado nos computadores dos seus clientes. Para obter mais informações, consulte [depurando código de GPU](/visualstudio/debugger/debugging-gpu-code).  
   
-- [Accelerator:: direct3d_warp membro de dados](reference/accelerator-class.md#direct3d_warp): esse acelerador fornece uma solução de fallback para a execução de código C++ AMP em CPUs de vários núcleos que usam extensões de SIMD de Streaming (SSE).  
+- [Membro de dados de Accelerator::direct3d_warp](reference/accelerator-class.md#direct3d_warp): Este acelerador fornece uma solução de fallback para a execução de código C++ AMP em CPUs de vários núcleos que usam extensões de SIMD de Streaming (SSE).  
   
-- [Accelerator:: cpu_accelerator membro de dados](reference/accelerator-class.md#cpu_accelerator): você pode usar esse acelerador para configurar conjuntos de preparo. Ele não é possível executar o código C++ AMP. Para obter mais informações, consulte o [matrizes de preparo no C++ AMP](http://go.microsoft.com/fwlink/p/?linkId=248485) postagem em programação paralela no blog de código nativo.  
+- [Accelerator:: cpu_accelerator membro de dados](reference/accelerator-class.md#cpu_accelerator): você pode usar esse acelerador para configurar matrizes de teste. Ele não é possível executar o código de C++ AMP. Para obter mais informações, consulte o [Preparando matrizes no C++ AMP](http://go.microsoft.com/fwlink/p/?linkId=248485) postar no blog programação paralela em código nativo.  
   
 ## <a name="interoperability"></a>Interoperabilidade  
- O tempo de execução C++ AMP dá suporte a interoperabilidade entre o `accelerator_view` classe e o Direct3D [ID3D11Device interface](http://go.microsoft.com/fwlink/p/?linkId=248488). O [create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) leva um `IUnknown` interface e retorna um `accelerator_view` objeto. O [get_device](http://msdn.microsoft.com/en-us/8194125e-8396-4d62-aa8a-65831dea8439) leva um `accelerator_view` objeto e retorna um `IUknown` interface.  
+ 
+O tempo de execução C++ AMP oferece suporte à interoperabilidade entre o `accelerator_view` classe e o Direct3D [ID3D11Device interface](http://go.microsoft.com/fwlink/p/?linkId=248488). O [create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) leva um `IUnknown` interface e retorna um `accelerator_view` objeto. O [get_device](http://msdn.microsoft.com/8194125e-8396-4d62-aa8a-65831dea8439) leva um `accelerator_view` objeto e retorna um `IUknown` interface.  
   
 ## <a name="see-also"></a>Consulte também  
- [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
- [Depurando código de GPU](/visualstudio/debugger/debugging-gpu-code)   
- [Classe accelerator_view](../../parallel/amp/reference/accelerator-view-class.md)
+ 
+[C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
+[Depurando código de GPU](/visualstudio/debugger/debugging-gpu-code)   
+[Classe accelerator_view](../../parallel/amp/reference/accelerator-view-class.md)

@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb529e8aab204df85de2da0a2fdf4c820964239
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae300569c4aa04a313f44a23fe988f1de7b826a1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340600"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540370"
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 **Seção específica da Microsoft**  
   
- Gera o [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] versão estendida do inteiro converter 64 bits para o valor de ponto flutuante de precisão única escalares (`cvtsi2ss`) instrução.  
+ Gera o x64 estendido a versão do inteiro convertido de 64 bits para o valor de ponto flutuante de precisão única escalares (`cvtsi2ss`) instrução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,13 +40,13 @@ __m128 _mm_cvtsi64x_ss(
   
 #### <a name="parameters"></a>Parâmetros  
  [in] `a`  
- Um `__m128` estrutura que contém quatro valores de ponto flutuantes de precisão simples.  
+ Um `__m128` estrutura que contém quatro valores de ponto flutuante de precisão simples.  
   
  [in] `b`  
  Um inteiro de 64 bits a ser convertido em um valor de ponto flutuante.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Um `__m128` estrutura cujo primeiro valor de ponto flutuante é o resultado da conversão. Os três valores são copiados inalterado desde `a`.  
+ Um `__m128` estrutura cujo primeiro valor de ponto flutuante é o resultado da conversão. Os três valores são copiados sem alterações de `a`.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -54,10 +54,10 @@ __m128 _mm_cvtsi64x_ss(
 |---------------|------------------|  
 |`_mm_cvtsi64x_ss`|X64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- O `__m128` estrutura representa um registro XMM, portanto nesse intrínseco permite que o valor `b` da memória de sistema a ser movido para um XMM registrar.  
+ O `__m128` estrutura representa um registro de registros de MMX, portanto, esse intrínseco permite que o valor `b` da memória do sistema a ser movido para um XMM registrar.  
   
  Essa rotina só está disponível como função intrínseca.  
   

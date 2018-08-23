@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7ac671c938b80fc69b8214456efecf798e1e5f6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9b94e5b8eccdc63735c7cb25faa7eacb1e23670
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840349"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541523"
 ---
 # <a name="floatcontrol"></a>float_control
 Especifica o comportamento de ponto flutuante para uma função.  
@@ -35,21 +35,23 @@ float_control( value,setting [push] | push | pop )
 ```  
   
 ## <a name="flags"></a>Sinalizadores  
- `value`, `setting` **[push]**  
- Especifica o comportamento de ponto flutuante. `value` pode ser **preciso** ou **exceto**. Para obter mais informações, consulte [/fp (especificar comportamento de ponto flutuante)](../build/reference/fp-specify-floating-point-behavior.md). `setting` pode ser **na** ou **off**.  
+ 
+*valor*, *configuração* *[envio]*  
+Especifica o comportamento de ponto flutuante. *valor* pode ser `precise` ou `except`. Para obter mais informações, consulte [/fp (especificar comportamento de ponto flutuante)](../build/reference/fp-specify-floating-point-behavior.md). *definindo* pode ser `on` ou `off`.  
   
- Se `value` é **preciso**, as configurações de **preciso** e **exceto** estão sendo especificados. **exceto** só pode ser definida como **na** quando **preciso** também é definido como **em**.  
+Se *valor* é `precise`, as configurações para `precise` e `except` estão sendo especificados. `except` só pode ser definida como `on` quando `precise` também é definido como `on`.  
   
- Se opcional **push** token é adicionado, atual configuração `value` é enviada em para a pilha do compilador interno.  
+Se o opcional *por push* token é adicionado, atual definindo para *valor* é empurrado na pilha interna do compilador.  
   
- **push**  
- Enviar por push a configuração atual de `float_control` para a pilha interna do compilador  
+*push*  
+Enviar por push o atual **float_control** definindo na pilha interna do compilador  
   
- **pop**  
- Remove o `float_control` configuração da parte superior da pilha do compilador interno e faz com que o novo `float_control` configuração.  
+*pop*  
+Remove o **float_control** configuração da parte superior da pilha interna do compilador e faz com que a nova **float_control** configuração.  
   
 ## <a name="remarks"></a>Comentários  
- Você não pode ativar `float_control precise` off quando **exceto** está em. Da mesma forma, **preciso** não podem ser desativadas quando `fenv_access` está em. Para ir do modelo estrito para um modelo rápido com o pragma `float_control`, use o seguinte código:  
+ 
+Você não pode desativar `float_control precise` quando `except` está ativado. Da mesma forma, `precise` não pode ser desativado quando `fenv_access` está ativado. Para ir do modelo estrito para um modelo rápido com o **float_control** pragma, use o seguinte código:  
   
 ```  
 #pragma float_control(except, off)  
@@ -57,7 +59,7 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(precise, off)  
 ```  
   
- Para ir do modelo rápido para um modelo estrito com o pragma `float_control`, use o seguinte código:  
+Para ir do modelo rápido para um modelo estrito com o **float_control** pragma, use o seguinte código:  
   
 ```  
 #pragma float_control(precise, on)  
@@ -65,16 +67,17 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(except, on)  
 ```  
   
- Outros pragmas de ponto flutuante incluem:  
+Outros pragmas de ponto flutuante incluem:  
   
--   [fenv_access](../preprocessor/fenv-access.md)  
+- [fenv_access](../preprocessor/fenv-access.md)  
   
--   [fp_contract](../preprocessor/fp-contract.md)  
+- [fp_contract](../preprocessor/fp-contract.md)  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como capturar uma exceção de ponto flutuante de estouro usando o pragma `float_control`.  
+ 
+O exemplo a seguir mostra como capturar uma exceção de ponto flutuante de estouro usando o pragma **float_control**.  
   
-```  
+```cpp  
 // pragma_directive_float_control.cpp  
 // compile with: /EHa  
 #include <stdio.h>  
@@ -113,4 +116,5 @@ Pass
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  

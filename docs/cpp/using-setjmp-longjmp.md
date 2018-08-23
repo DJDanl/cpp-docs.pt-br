@@ -1,7 +1,7 @@
 ---
-title: Usando setjmp-longjmp | Microsoft Docs
+title: Usando setjmp e o longjmp | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/14/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -22,22 +22,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2073729fc5445fc36e3d8a6f52c4f69b079c8b47
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a83253fb98506bb586af2b52ef3321bada7ca01f
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462125"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572526"
 ---
-# <a name="using-setjmplongjmp"></a>Usando setjmp/longjmp
-Quando [setjmp](../c-runtime-library/reference/setjmp.md) e [longjmp](../c-runtime-library/reference/longjmp.md) são usados juntos, eles fornecem uma maneira de executar um não-local **goto**. Normalmente, eles são usados para transmitir o controle de execução para o código de recuperação ou de tratamento de erros em uma rotina anteriormente chamada anteriormente sem usar as convenções padrão de chamada ou de retorno.  
-  
+# <a name="using-setjmp-and-longjmp"></a>Usando setjmp e o longjmp
+
+Quando [setjmp](../c-runtime-library/reference/setjmp.md) e [longjmp](../c-runtime-library/reference/longjmp.md) são usados juntos, eles fornecem uma maneira de executar um não-local **goto**. Eles são normalmente usados no código C para transmitir o controle de execução para o código de tratamento de erros ou recuperação em uma rotina anteriormente chamada anteriormente sem usar o padrão de chamada convenções ou de retornam.
+
 > [!CAUTION]
->  No entanto, porque **setjmp** e **longjmp** não dão suporte a semântica de objeto C++ e como podem prejudicar o desempenho evitando a otimização em variáveis locais, é recomendável que você não use -las em programas C++. É recomendável que você use **tente**/**catch** constrói em vez disso.  
-  
- Se você decidir usar **setjmp**/**longjmp** em um programa C++, também incluem \<setjmp > ou \<setjmpex > para garantir a interação correta entre o funções e tratamento de exceções C++. Se você usar [/EH](../build/reference/eh-exception-handling-model.md) para compilar, os destruidores de objetos locais são chamados durante o desenrolamento de pilha. Se você usar **/EHs** para compilar e uma das funções chamar uma função que usa [nothrow](../cpp/nothrow-cpp.md) e a função que usa **nothrow** chamadas **longjmp**, em seguida, o desenrolamento do destruidor poderá não ocorrer, dependendo do otimizador.  
-  
- No código portátil, quando não-local **goto** que chama **longjmp** é executado, destruição correta dos objetos baseados em quadro pode não ser confiável.  
-  
-## <a name="see-also"></a>Consulte também  
- [Combinação de exceções C (estruturadas) e C++](../cpp/mixing-c-structured-and-cpp-exceptions.md)
+> Porque `setjmp` e `longjmp` não oferecem suporte a destruição correta dos objetos de quadro de pilha forma portátil entre os compiladores de C++ e como podem prejudicar o desempenho evitando a otimização em variáveis locais, não recomendamos seu uso em C++ programas. É recomendável que você use **tente** e **catch** constrói em vez disso.
+
+Se você decidir usar `setjmp` e `longjmp` em um programa C++, também incluem \<setjmp > ou \<setjmpex > para garantir a interação correta entre as funções e a exceção de tratamento de exceção estruturada (SEH) ou C++ manipulação.
+
+**Seção específica da Microsoft**
+
+Se você usar um [/EH](../build/reference/eh-exception-handling-model.md) opção para compilar código C++, os destruidores de objetos locais são chamados durante o desenrolamento de pilha. No entanto, se você usar **/EHs** ou **/EHsc** para compilação e uma de suas funções que usa [noexcept](../cpp/noexcept-cpp.md) chamadas `longjmp`, em seguida, o destruidor de desenrolamento para essa função poderá não ocorrer, dependendo do estado de otimizador.
+
+No código portátil, quando um `longjmp` chamada é executada, destruição correta dos objetos baseados em quadro explicitamente não é garantida por padrão e pode não ter suporte por outros compiladores. Para permitir que você sabe, no nível de aviso 4, uma chamada para `setjmp` faz com que o aviso C4611: interação entre 'setjmp' e a destruição de objeto de C++ é não portátil.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Combinação de exceções C (estruturadas) e C++](../cpp/mixing-c-structured-and-cpp-exceptions.md)  

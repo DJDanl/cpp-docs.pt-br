@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c282456f74fa86940e3d1ffc77d0226a28ed0b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eeb63aa411278c2ca6b2217d9243331b57cd7624
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326157"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539935"
 ---
 # <a name="ud2"></a>__ud2
 **Seção específica da Microsoft**  
@@ -38,20 +38,20 @@ void __ud2();
 ## <a name="remarks"></a>Comentários  
  O processador gerará uma exceção de opcode inválido, se você executar uma instrução indefinida.  
   
- O `__ud2` função é equivalente ao `UD2` instrução do computador e está disponível apenas no modo de kernel. Para obter mais informações, pesquise o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: referência de conjunto de instruções," no [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
+ O `__ud2` função é equivalente ao `UD2` instruções de máquina e está disponível apenas no modo kernel. Para obter mais informações, pesquise o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: referência de conjunto de instruções," no [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__ud2`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ud2`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 **Fim da seção específica da Microsoft**  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir executa uma instrução indefinida, o que gera uma exceção. O manipulador de exceção, em seguida, altera o código de retorno de zero para um.  
+ O exemplo a seguir executa uma instrução indefinida, o que gera uma exceção. O manipulador de exceção, em seguida, altera o código de retorno de zero a um.  
   
 ```  
 // __ud2_intrinsic.cpp  

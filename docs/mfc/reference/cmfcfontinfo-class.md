@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ff2d857938881f1c3d9f02a1d8465a5a4e97c7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff2f4a6962ee70882ba85a15ea213f7fe6ffe11f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852406"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538783"
 ---
 # <a name="cmfcfontinfo-class"></a>Classe CMFCFontInfo
 O `CMFCFontInfo` classe descreve o nome e outros atributos de uma fonte.  
@@ -115,7 +115,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="return-value"></a>Valor de retorno  
   
 ### <a name="remarks"></a>Comentários  
- Esta documentação usa os termos *conjunto de caracteres* e *script* alternadamente. Um *script*, que é também conhecido como um sistema de escrita, é uma coleção de regras para escrever esses caracteres em um ou mais idiomas e caracteres. A coleção de caracteres inclui o alfabeto e pontuação usados no script. Por exemplo, o script latino é usado para inglês conforme ele é falado nos Estados Unidos, e seu alfabeto inclui os caracteres de À Z. O `lfCharSet` membro a [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estrutura Especifica um conjunto de caracteres. Por exemplo, o valor ANSI_CHARSET Especifica o [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] conjunto de caracteres, que inclui o alfabeto de script latino.  
+ Esta documentação usa os termos *conjunto de caracteres* e *script* alternadamente. Um *script*, que é também conhecido como um sistema de escrita, é uma coleção de regras para escrever esses caracteres em um ou mais idiomas e caracteres. A coleção de caracteres inclui o alfabeto e pontuação usados no script. Por exemplo, o script latino é usado para inglês conforme ele é falado nos Estados Unidos, e seu alfabeto inclui os caracteres de À Z. O `lfCharSet` membro a [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estrutura Especifica um conjunto de caracteres. Por exemplo, o valor ANSI_CHARSET Especifica o conjunto de caracteres ANSI, que inclui o alfabeto de script latino.  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  Recupera os nomes concatenados de uma fonte e seu caractere de conjunto (script).  

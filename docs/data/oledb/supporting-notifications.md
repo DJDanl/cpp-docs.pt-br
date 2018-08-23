@@ -20,19 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9fea13ef4a89ee2a1105702db4fe692c12643d2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 39d310b882047955201f74695f68906cabcb9d7c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337934"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572803"
 ---
 # <a name="supporting-notifications"></a>Dando suporte a notificações
 
 ## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>Implementando Interfaces de ponto de Conexão no provedor e consumidor  
  Para implementar notificações, uma classe de provedor deve herdar de [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md) e [IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md).  
   
- `IRowsetNotifyCP` implementa o site do provedor para a interface de ponto de conexão [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx). `IRowsetNotifyCP` implementa funções para informar ouvintes no ponto de conexão de difusão `IID_IRowsetNotify` de alterações no conteúdo do conjunto de linhas.  
+ `IRowsetNotifyCP` implementa o site do provedor para a interface de ponto de conexão [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)). `IRowsetNotifyCP` implementa funções para informar ouvintes no ponto de conexão de difusão `IID_IRowsetNotify` de alterações no conteúdo do conjunto de linhas.  
   
  Observe que você também deve implementar e registrar `IRowsetNotify` consumidor (também conhecido como o coletor) usando [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) para que o consumidor pode lidar com notificações. Para obter informações sobre como implementar a interface de ponto de conexão no consumidor, consulte [recebendo notificações](../../data/oledb/receiving-notifications.md).  
   
@@ -47,7 +47,7 @@ END_CONNECTION_POINT_MAP
 ## <a name="adding-irowsetnotify"></a>Adicionando IRowsetNotify  
  Para adicionar `IRowsetNotify`, você precisará adicionar `IConnectionPointContainerImpl<rowset-name>` e `IRowsetNotifyCP<rowset-name>` para sua cadeia de herança.  
   
- Por exemplo, aqui está a cadeia de herança para `RUpdateRowset` na [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f):  
+ Por exemplo, aqui está a cadeia de herança para `RUpdateRowset` na [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV):  
   
 > [!NOTE]
 >  O código de exemplo pode ser diferente daquele que está listado aqui. Você deve considerar o código de exemplo como a versão mais recente.  

@@ -18,28 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f6f379e61ea84c1142bd94be49b55a50b28753
-ms.sourcegitcommit: 1ac8f983eeaacd09135a249dea00f10e1c94e0e3
+ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36963317"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538568"
 ---
 # <a name="fenvaccess"></a>fenv_access
-
-Desabilita (**na**) ou permite (**off**) otimizações que podem alterar o ambiente de ponto flutuante sinalizador testes e alterações de modo.
+Desabilita (**na**) ou habilita (**off**) otimizações que poderiam alterar o ambiente de ponto flutuante sinalizador testes e alterações de modo.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **#pragma fenv_access (** { **na** | **off** } **)**  
+> **#pragma fenv_access (** { **nos** | **off** } **)**  
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, **fenv_access** é **off**. Se o compilador pode assumir que seu código não acessar ou manipular o ambiente de ponto flutuante, ele pode realizar várias otimizações de ponto flutuante de código. Definir **fenv_access** para **em** para informar ao compilador que seu código acessa o ambiente de ponto flutuante para testar sinalizadores de status, exceções, ou para definir sinalizadores de modo de controle. O compilador desabilita essas otimizações para que seu código pode acessar o ambiente de ponto flutuante consistentemente. 
+Por padrão, **fenv_access** é **off**. Se o compilador não pode presumir que seu código não acessar ou manipular o ambiente de ponto flutuante, em seguida, ele pode executar muitas otimizações de código de ponto flutuante. Definir **fenv_access** à **em** para informar ao compilador que seu código acessa o ambiente de ponto flutuante para testar sinalizadores de status, exceções, ou para definir sinalizadores de modo de controle. O compilador desabilita essas otimizações para que seu código possa acessar o ambiente de ponto flutuante consistentemente. 
 
 Para obter mais informações sobre o comportamento de ponto flutuante, consulte [/fp (Especificar comportamento de ponto flutuante)](../build/reference/fp-specify-floating-point-behavior.md).
 
-Os tipos de otimizações que estão sujeitos à **fenv_access** são:
+Os tipos de otimizações que estão sujeitos aos **fenv_access** são:
 
 - Eliminação de subexpressão comum global
 
@@ -55,7 +54,7 @@ Outros pragmas de ponto flutuante incluem:
 
 ## <a name="examples"></a>Exemplos
 
-Este exemplo define **fenv_access** para **em** para definir o registro de controle de ponto flutuante de precisão de 24 bits:
+Este exemplo define **fenv_access** à **em** para definir o registro de controle de ponto flutuante de precisão de 24 bits:
 
 ```cpp
 // pragma_directive_fenv_access_x86.cpp
@@ -85,7 +84,7 @@ int main() {
 out=9.999999776482582e-003
 ```
 
-Se você comentar `#pragma fenv_access (on)` do exemplo anterior, observe que a saída é diferente porque o compilador faz a avaliação do tempo de compilação, o que não usa o modo de controle.
+Se você comentar `#pragma fenv_access (on)` do exemplo anterior, observe que a saída é diferente porque o compilador faz a avaliação do tempo de compilação, que não usa o modo de controle.
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp

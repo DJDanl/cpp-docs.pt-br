@@ -17,52 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8dbb3bfbf61c4ad7303c6cee272e14fc91bc9656
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6d282731320ba52299cb0b6f2813f5f42a229b46
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011849"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583742"
 ---
 # <a name="sizeis"></a>size_is
-Especifique o tamanho da memória alocada para ponteiros de tamanho, tamanho de ponteiros para ponteiros de tamanho e único ou matrizes multidimensionais.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-[ size_is(  
-   "expression"  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *Expressão*  
- O tamanho da memória alocada para ponteiros de tamanho.  
-  
-## <a name="remarks"></a>Comentários  
- O **size_is** atributo C++ tem a mesma funcionalidade que o [size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) atributo MIDL.  
-  
-## <a name="example"></a>Exemplo  
- Veja o exemplo de [first_is](../windows/first-is.md) para obter um exemplo de como especificar uma seção de uma matriz.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Atributo de contexto  
-  
-|||  
-|-|-|  
-|**Aplica-se a**|Campo do **struct** ou **união**, a interface do parâmetro, o método de interface|  
-|**Repetível**|Não|  
-|**Atributos obrigatórios**|Nenhum|  
-|**Atributos inválidos**|`max_is`|  
-  
- Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Atributos IDL](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union e Struct atributos](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Atributos de parâmetro](../windows/parameter-attributes.md)   
- [first_is](../windows/first-is.md)   
- [last_is](../windows/last-is.md)   
- [max_is](../windows/max-is.md)   
- [length_is](../windows/length-is.md)   
+
+Especifique o tamanho da memória alocada para ponteiros de tamanho, tamanho de ponteiros para ponteiros de tamanho e único ou matrizes multidimensionais.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+[ size_is(
+   "expression"
+) ]
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*Expressão*  
+O tamanho da memória alocada para ponteiros de tamanho.
+
+## <a name="remarks"></a>Comentários
+
+O **size_is** atributo C++ tem a mesma funcionalidade que o [size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) atributo MIDL.
+
+## <a name="example"></a>Exemplo
+
+Veja o exemplo de [first_is](../windows/first-is.md) para obter um exemplo de como especificar uma seção de uma matriz.
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Atributo de contexto
+
+|||
+|-|-|
+|**Aplica-se a**|Campo do **struct** ou **união**, a interface do parâmetro, o método de interface|
+|**Repetível**|Não|
+|**Atributos obrigatórios**|Nenhum|
+|**Atributos inválidos**|`max_is`|
+
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Atributos de IDL](../windows/idl-attributes.md)  
+[Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Atributos de parâmetro](../windows/parameter-attributes.md)  
+[first_is](../windows/first-is.md)  
+[last_is](../windows/last-is.md)  
+[max_is](../windows/max-is.md)  
+[length_is](../windows/length-is.md)  

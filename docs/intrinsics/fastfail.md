@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b59aeb1bd2e7986e173608689b0b1c37a0ef247e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a0346be9f7a48defc702c9f2ef6aa187c37f187
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334360"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541714"
 ---
 # <a name="fastfail"></a>__fastfail
 **Seção específica da Microsoft**  
@@ -38,14 +38,14 @@ void __fastfail(unsigned int code);
  O intrínseco `__fastfail` não retorna.  
   
 ## <a name="remarks"></a>Comentários  
- O `__fastfail` intrínseco fornece um mecanismo para um *rápida falha* solicitação — uma forma de um processo potencialmente danificado para encerramento do processo imediato de solicitação. Falhas críticas que podem ter corrompido o estado de programa e pilha além da recuperação não podem ser tratadas pela recurso de manipulação de exceção regular. Use `__fastfail` para finalizar o processo usando uma sobrecarga mínima.  
+ O `__fastfail` intrínseco que fornece um mecanismo para um *rápida fail* solicitação — uma maneira para um processo potencialmente corrompido de terminação imediata do processo de solicitação. Falhas críticas que podem ter corrompido o estado de programa e pilha além da recuperação não podem ser tratadas pela recurso de manipulação de exceção regular. Use `__fastfail` para finalizar o processo usando uma sobrecarga mínima.  
   
  Internamente, `__fastfail` é implementado usando diversos mecanismos de arquitetura:  
   
 |Arquitetura|Instrução|Local do argumento de código|  
 |------------------|-----------------|-------------------------------|  
 |x86|int 0x29|ecx|  
-|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|int 0x29|rcx|  
+|X64|int 0x29|rcx|  
 |ARM|Opcode 0xDEFB|r0|  
   
  Uma solicitação de falha rápida é independente e normalmente exige apenas dois instruções para executar. Após a execução de uma solicitação de falha rápida, o kernel executa a ação apropriada. No código do modo de usuário, não há nenhuma dependência de memória além do ponteiro de instruções quando um evento de falha rápida é gerado. Isso aumenta sua confiabilidade, mesmo se houver corrupção de memória grave.  
@@ -62,9 +62,9 @@ void __fastfail(unsigned int code);
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__fastfail`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], ARM|  
+|`__fastfail`|x86, x64, ARM|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 **Fim da seção específica da Microsoft**  
   

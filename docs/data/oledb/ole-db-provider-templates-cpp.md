@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 204abfb28ed58051f27f62b522ed0b02a0a78585
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 4983234cdbc64f4ca8364c5afcc2d8e735ba2d01
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339569"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575438"
 ---
 # <a name="ole-db-provider-templates-c"></a>Modelos de provedor de banco de dados OLE (C++)
 OLE DB é uma parte importante da estratégia de acesso de dados Universal da Microsoft. O design de OLE DB permite que o acesso a dados de alto desempenho de qualquer fonte de dados. Quaisquer dados tabulares são visíveis através do OLE DB, independentemente se ela veio de um banco de dados. A flexibilidade oferece uma enorme quantidade de energia.  
@@ -63,7 +63,7 @@ OLE DB é uma parte importante da estratégia de acesso de dados Universal da Mi
  Provedores podem variar muito em complexidade e a funcionalidade. É útil categorizar os provedores em provedores de somente leitura e atualizável:  
   
 -   Visual C++ 6.0 tem suporte somente os provedores de somente leitura. [Criando um provedor OLE DB](../../data/oledb/creating-an-ole-db-provider.md) discute como criar um provedor somente leitura.  
--   Visual C++ oferece suporte a provedores atualizáveis, o que podem atualizar (gravar) o repositório de dados. Para obter informações sobre os provedores atualizáveis, consulte [criando um provedor atualizável](../../data/oledb/creating-an-updatable-provider.md); o [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f) é um exemplo de um provedor atualizável.  
+-   Visual C++ oferece suporte a provedores atualizáveis, o que podem atualizar (gravar) o repositório de dados. Para obter informações sobre os provedores atualizáveis, consulte [criando um provedor atualizável](../../data/oledb/creating-an-updatable-provider.md); o [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) é um exemplo de um provedor atualizável.  
   
  Para obter mais informações, consulte:  
   
@@ -75,5 +75,5 @@ OLE DB é uma parte importante da estratégia de acesso de dados Universal da Mi
   
 ## <a name="see-also"></a>Consulte também  
  [Acesso a dados](../data-access-in-cpp.md)   
- [Documentação do SDK do OLE DB](https://msdn.microsoft.com/library/ms722784.aspx)   
- [Referência do programador do OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)
+ [Documentação do SDK do OLE DB](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
+ [Referência do programador do OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))

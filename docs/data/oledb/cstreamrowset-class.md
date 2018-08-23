@@ -38,12 +38,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b9f1c7aef4116ae057d771e66b5027c5783f64e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2a8e4af6e85dbfa3b617471b592f806ae1ef5548
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338006"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572711"
 ---
 # <a name="cstreamrowset-class"></a>Classe CStreamRowset
 Usado em uma `CCommand` ou `CTable` declaração.  
@@ -69,7 +69,7 @@ class CStreamRowset
 |||  
 |-|-|  
 |[CStreamRowset](#cstreamrowset)|Construtor. Cria uma instância e inicializa o `CStreamRowset` objeto.|  
-|[Fechar](#close)|Versões do [ISequentialStream](https://msdn.microsoft.com/library/ms718035.aspx) ponteiro de interface na classe.|  
+|[Fechar](#close)|Versões do [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\)) ponteiro de interface na classe.|  
   
 ## <a name="remarks"></a>Comentários  
  Use `CStreamRowset` em seu `CCommand` ou `CTable` declaração, por exemplo:  
@@ -99,7 +99,7 @@ CStreamRowset();
 ```  
 
 ## <a name="close"></a> Cstreamrowset:: Close
-Versões do [ISequentialStream](https://msdn.microsoft.com/library/ms718035.aspx) ponteiro de interface na classe.  
+Versões do [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\)) ponteiro de interface na classe.  
   
 ### <a name="syntax"></a>Sintaxe  
   

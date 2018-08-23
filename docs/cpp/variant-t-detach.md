@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895df401ab10ae85641fd2eed9f7a9654916f33f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 42fc4bd5186ade5efaa9c4fa8e9f567f37509039
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465216"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571457"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
 **Seção específica da Microsoft**  
@@ -41,7 +41,7 @@ VARIANT Detach( );
  Encapsulado `VARIANT`.  
   
 ## <a name="remarks"></a>Comentários  
- Extrai e retorna encapsulado `VARIANT`, em seguida, limpa esse `_variant_t` objeto sem destruí-lo. Essa função membro remove os `VARIANT` do encapsulamento e define o `VARTYPE` isso `_variant_t` objeto como VT_EMPTY. Cabe a você liberar retornado `VARIANT` chamando o [VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835) função.  
+ Extrai e retorna encapsulado `VARIANT`, em seguida, limpa esse `_variant_t` objeto sem destruí-lo. Essa função membro remove os `VARIANT` do encapsulamento e define o `VARTYPE` isso `_variant_t` objeto como VT_EMPTY. Cabe a você liberar retornado `VARIANT` chamando o [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear) função.  
   
  **Fim da seção específica da Microsoft**  
   

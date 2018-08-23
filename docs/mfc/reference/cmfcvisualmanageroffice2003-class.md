@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbfa31831fd2db73fb1154c20cd9d246efad4917
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b8acf472d3727534bacd70664dc559b9d8f23d16
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854129"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538205"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>Classe CMFCVisualManagerOffice2003
 `CMFCVisualManagerOffice2003` Fornece uma aparência do Microsoft Office 2003 a um aplicativo.  
@@ -720,7 +720,7 @@ virtual void OnDrawBarGripper(
  A implementação padrão desse método exibe garra padrão. Para personalizar a aparência da garra, substitua este método em uma classe personalizada derivada de [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md) classe.  
   
 ##  <a name="ondrawbrowsebutton"></a>  CMFCVisualManagerOffice2003::OnDrawBrowseButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
 ```  
 virtual BOOL OnDrawBrowseButton(

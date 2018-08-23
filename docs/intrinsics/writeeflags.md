@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a2885f2ea103ad43535b11c526b96ed42de45fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a6f3d8f8a3527e193ed1bec0f7dc4b563593b84
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340522"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540541"
 ---
 # <a name="writeeflags"></a>__writeeflags
-Grava o valor especificado para o programa de registram o status e o controle (EFLAGS).  
+Grava o valor especificado para o programa de registram o status e control (EFLAGS).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +37,7 @@ void __writeeflags(unsigned __int64 Value);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `Value`|O valor para gravar o registro EFLAGS. O `Value` parâmetro é de 32 bits para uma plataforma de 32 bits e 64 bits para uma plataforma de 64 bits.|  
+|[in] `Value`|O valor a ser gravado para o registro EFLAGS. O `Value` parâmetro é de 32 bits do tempo para uma plataforma de 32 bits e 64 bits para uma plataforma de 64 bits.|  
   
 ## <a name="remarks"></a>Comentários  
  Essas rotinas estão disponíveis apenas como intrínsecos.  
@@ -46,9 +46,9 @@ void __writeeflags(unsigned __int64 Value);
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__writeeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writeeflags`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 **Fim da seção específica da Microsoft**  
   

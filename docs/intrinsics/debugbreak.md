@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3dcead3129c87b2d02f8822019af763c0fe8b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71b7dfca165e76880370368282bdbd7728315cfa
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340171"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539736"
 ---
 # <a name="debugbreak"></a>__debugbreak
 **Seção específica da Microsoft**  
@@ -40,13 +40,13 @@ void __debugbreak();
   
 |Intrínseco|Arquitetura|Cabeçalho|  
 |---------------|------------------|------------|  
-|`__debugbreak`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`__debugbreak`|x86, ARM, x64|\<intrin.h>|  
   
 ## <a name="remarks"></a>Comentários  
- O `__debugbreak` compilador intrínseco, semelhante ao [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), é uma maneira de Win32 portátil para fazer com que um ponto de interrupção.  
+ O `__debugbreak` compilador intrínseco, semelhante ao [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), é uma maneira portátil do Win32 para fazer com que um ponto de interrupção.  
   
 > [!NOTE]
->  Ao compilar com **/clr**, uma função que contém `__debugbreak` serão compilados para MSIL. `asm int 3` faz com que a função seja compilada como nativa. Para obter mais informações, consulte [ASM](../assembler/inline/asm.md).  
+>  Ao compilar com **/clr**, uma função contendo `__debugbreak` serão compilados para MSIL. `asm int 3` faz com que a função seja compilada como nativa. Para obter mais informações, consulte [ASM](../assembler/inline/asm.md).  
   
  Por exemplo:  
   

@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc25fdc4d43b7454761787264583b5e4f8fa47e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7abc221b81b6ace3afb165585b7e24655d348c2b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333688"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545737"
 ---
 # <a name="outwordstring"></a>__outwordstring
 **Seção específica da Microsoft**  
   
- Gera o `rep outsw` instrução, que envia `Count` palavras que começam em `Buffer` para a porta de e/s especificada pelo `Port`.  
+ Gera o `rep outsw` instrução, que envia `Count` palavras que começam com `Buffer` para a porta de e/s especificada pelo `Port`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,9 +54,9 @@ void __outwordstring(
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__outwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outwordstring`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  Essa rotina só está disponível como função intrínseca.  

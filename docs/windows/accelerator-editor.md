@@ -22,40 +22,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0aed7c8ef617152144bbe211f83f442fe93d525e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 81642132272b40229437c2be8bac32d160885600
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648279"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578088"
 ---
 # <a name="accelerator-editor"></a>Editor de aceleradores
-Uma tabela de Aceleradores é um recurso do Windows que contém uma lista de teclas de aceleração (também conhecido como teclas de atalho) e os identificadores de comando que estão associados eles. Um programa pode ter mais de uma tabela de aceleradores.  
-  
- Normalmente, os aceleradores são usados como atalhos de teclado para comandos de programa que também estão disponíveis em um menu ou barra de ferramentas. No entanto, você pode usar a tabela de aceleradores para definir as combinações de teclas para comandos que não têm um objeto de interface do usuário associado a eles.  
-  
- Você pode usar [modo de exibição de classe](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) conectem os comandos do acelerador chave ao código.  
-  
- Com o **Accelerator** editor, você pode:  
-  
--   [Definir propriedades do acelerador](../windows/setting-accelerator-properties.md)  
-  
--   [Associar uma tecla de aceleração um Item de Menu](../windows/associating-an-accelerator-key-with-a-menu-item.md)  
-  
--   [Editar tabelas de aceleradores](../windows/editing-accelerator-tables.md)  
-  
--   [Use as teclas de aceleração predefinidas](../windows/predefined-accelerator-keys.md)  
-  
-    > [!TIP]
-    >  Ao usar o **Accelerator** editor, clique para exibir um menu de atalho de comandos usados com frequência. Os comandos disponíveis dependem do que o ponteiro estiver apontando para.  
-  
-    > [!NOTE]
-    >  Windows não permitem que você crie tabelas de aceleradores vazio. Se você criar uma tabela de aceleradores sem entradas, ele é excluído automaticamente quando você salva a tabela.  
-  
- Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Consulte também  
- [Editores de recursos](../windows/resource-editors.md)
+
+Uma tabela de Aceleradores é um recurso do Windows que contém uma lista de teclas de aceleração (também conhecido como teclas de atalho) e os identificadores de comando que estão associados eles. Um programa pode ter mais de uma tabela de aceleradores.
+
+Normalmente, os aceleradores são usados como atalhos de teclado para comandos de programa que também estão disponíveis em um menu ou barra de ferramentas. No entanto, você pode usar a tabela de aceleradores para definir as combinações de teclas para comandos que não têm um objeto de interface do usuário associado a eles.
+
+Você pode usar [modo de exibição de classe](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) conectem os comandos do acelerador chave ao código.
+
+Com o **Accelerator** editor, você pode:
+
+- [Definir propriedades do acelerador](../windows/setting-accelerator-properties.md)
+
+- [Associar uma tecla de aceleração um Item de Menu](../windows/associating-an-accelerator-key-with-a-menu-item.md)
+
+- [Editar tabelas de aceleradores](../windows/editing-accelerator-tables.md)
+
+- [Use as teclas de aceleração predefinidas](../windows/predefined-accelerator-keys.md)
+
+   > [!TIP]
+   > Ao usar o **Accelerator** editor, clique para exibir um menu de atalho de comandos usados com frequência. Os comandos disponíveis dependem do que o ponteiro estiver apontando para.
+
+   > [!NOTE]
+   > Windows não permitem que você crie tabelas de aceleradores vazio. Se você criar uma tabela de aceleradores sem entradas, ele é excluído automaticamente quando você salva a tabela.
+
+Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Consulte também
+
+[Editores de recursos](../windows/resource-editors.md)

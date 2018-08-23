@@ -18,37 +18,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9e0c0d140d937b7359ff3abf9c0eae145a89210
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c6aa18936497f0415da331697aceb26f26345500
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912726"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541710"
 ---
 # <a name="charizing-operator-"></a>Operador de caracterização (#@)
 **Seção específica da Microsoft**  
   
- O operador de charizing pode usado apenas com os argumentos das macros. Se **#@** precede um parâmetro formal na definição de macro, o argumento é colocado entre aspas simples e tratado como um caractere quando a macro é expandida. Por exemplo:  
+O operador de charizing pode usado apenas com os argumentos das macros. Se `#@` preceder um parâmetro formal na definição da macro, o argumento real é colocado entre aspas simples e tratado como um caractere quando a macro é expandida. Por exemplo:  
   
 ```  
 #define makechar(x)  #@x  
 ```  
   
- faz com que a instrução  
+faz com que a instrução  
   
 ```  
 a = makechar(b);  
 ```  
   
- seja expandida para  
+seja expandida para  
   
 ```  
 a = 'b';  
 ```  
   
- O caractere de aspas simples não pode ser usado com o operador de charizing.  
+O caractere de aspas simples não pode ser usado com o operador de charizing.  
   
- **Fim da seção específica da Microsoft**  
+**Fim da seção específica da Microsoft**  
   
 ## <a name="see-also"></a>Consulte também  
- [Operadores de pré-processador](../preprocessor/preprocessor-operators.md)
+ 
+[Operadores de pré-processador](../preprocessor/preprocessor-operators.md)

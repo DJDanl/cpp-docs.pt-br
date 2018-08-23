@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - wmktemp_s
@@ -41,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ed525f44150943496cddde57699035d8b62b6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb4fcd681cc5286d02f0a7b8cb4ff95b8f3dd911
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405218"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42573013"
 ---
 # <a name="mktemps-wmktemps"></a>_mktemp_s, _wmktemp_s
 
@@ -79,7 +80,7 @@ errno_t _wmktemp_s(
 Padrão de nome de arquivo.
 
 *sizeInChars*<br/>
-Tamanho do buffer em caracteres de byte único em **mktemp_s**; ampla caracteres de **wmktemp_s**, incluindo o terminador nulo.
+Tamanho do buffer em caracteres de byte único na **mktemp_s**; ampla caracteres no **wmktemp_s**, incluindo o terminador nulo.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -87,17 +88,17 @@ Ambas as funções retornam zero em caso de êxito, um código de erro em caso d
 
 ### <a name="error-conditions"></a>Condições de Erro
 
-|*nameTemplate*|*sizeInChars*|Valor retornado|Novo valor em *nameTemplate*|
+|*nameTemplate*|*sizeInChars*|Valor retornado|Novo valor na *nameTemplate*|
 |----------------|-------------------|----------------------|-------------------------------|
 |**NULL**|qualquer|**EINVAL**|**NULL**|
 |Formato incorreto (consulte comentários seção para o formato correto)|qualquer|**EINVAL**|cadeia de caracteres vazia|
 |qualquer|<= número de X's|**EINVAL**|cadeia de caracteres vazia|
 
-Se qualquer uma das condições de erro acima ocorrer, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e retorna as funções **EINVAL**.
+Se qualquer uma das condições de erro acima ocorrer, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e as funções retornarão **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-O **mktemp_s** função cria um nome de arquivo exclusivo, modificando o *nameTemplate* argumento, para que após a chamada a *nameTemplate* ponteiro aponta para uma cadeia de caracteres que contém o novo nome de arquivo. **mktemp_s** manipula automaticamente os argumentos da cadeia de caracteres multibyte conforme apropriado, reconhecer sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento pelo sistema de tempo de execução. **wmktemp_s** é uma versão de caractere largo de **mktemp_s**; o argumento de **wmktemp_s** é uma cadeia de caracteres largos. **wmktemp_s** e **mktemp_s** se comportam de forma idêntica caso contrário, exceto que **wmktemp_s** não trata cadeias de caracteres multibyte.
+O **mktemp_s** função cria um nome de arquivo exclusivo modificando o *nameTemplate* argumento, para que depois da chamada, o *nameTemplate* ponteiro aponta para uma cadeia de caracteres que contém o novo nome de arquivo. **mktemp_s** manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento pelo sistema de tempo de execução. **wmktemp_s** é uma versão de caractere largo de **mktemp_s**; o argumento da **wmktemp_s** é uma cadeia de caracteres largos. **wmktemp_s** e **mktemp_s** se comportam de forma idêntica caso contrário, exceto que **wmktemp_s** não manipula cadeias de caracteres multibyte.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -105,17 +106,17 @@ O **mktemp_s** função cria um nome de arquivo exclusivo, modificando o *nameTe
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**tmktemp_s**|**_mktemp_s**|**_mktemp_s**|**_wmktemp_s**|
 
-O *nameTemplate* argumento tem o formato **baseXXXXXX**, onde *base* é a parte do novo nome do arquivo que você fornecer e cada X é um espaço reservado para um caractere fornecido pelo **mktemp_s**. Cada caractere de espaço reservado em *nameTemplate* deve ser um x maiusculo **mktemp_s** preserva *base* e substitui o primeiro X à direita com um caractere alfabético. **mktemp_s** substitui a seguir à direita x com um valor de cinco dígitos; esse valor é um número exclusivo que identifica a chamada de processo, ou em programas multithread, o thread de chamada.
+O *nameTemplate* argumento tem o formato **baseXXXXXX**, onde *base* é a parte do novo nome do arquivo que você fornece e cada X é um espaço reservado para um caractere fornecido pelo **mktemp_s**. Cada caractere de espaço reservado na *nameTemplate* deve ser um x maiusculo. **mktemp_s** preserva *base* e substitui o primeiro X à direita com um caractere alfabético. **mktemp_s** substitui à direita seguinte x com um valor de cinco dígitos; esse valor é um número exclusivo que identifica o processo de chamada ou em programas multithread, o thread de chamada.
 
-Cada chamada bem-sucedida para **mktemp_s** modifica *nameTemplate*. Em cada chamada subsequente do mesmo processo ou thread com o mesmo *nameTemplate* argumento, **mktemp_s** procura nomes de arquivos que correspondem aos nomes retornados por **mktemp_s** em chamadas anteriores. Se o arquivo não existe para um determinado nome **mktemp_s** retorna esse nome. Se existirem arquivos para todos os retornados anteriormente nomes, **mktemp_s** cria um novo nome, substituindo o caractere alfabético-usado no nome do previamente retornado com a próxima letra de minúsculas disponível, em ordem, de 'a' a 'z'. Por exemplo, se *base* é:
+Cada chamada bem-sucedida para **mktemp_s** modifica *nameTemplate*. Em cada chamada subsequente do mesmo processo ou thread com o mesmo *nameTemplate* argumento **mktemp_s** procura nomes de arquivo que correspondem aos nomes retornados por **mktemp_s** em chamadas anteriores. Se o arquivo não existe para um determinado nome, **mktemp_s** retorna esse nome. Se existirem arquivos para todos os nomes retornados anteriormente, **mktemp_s** cria um novo nome, substituindo o caractere alfabético que ele usado no nome retornado anteriormente com a próxima letra de minúscula disponível, em ordem, de 'a' a 'z'. Por exemplo, se *base* é:
 
 > **Fn**
 
-e o valor de cinco dígitos fornecido pelo **mktemp_s** é 12345, o nome retornado é:
+e o valor de cinco dígitos fornecido pelo **mktemp_s** for 12345, o primeiro nome retornado será:
 
 > **fna12345**
 
-Se esse nome é usado para criar o arquivo FNA12345 e esse arquivo ainda existe, o nome do próximo retornado em uma chamada do mesmo processo ou thread com o mesmo *base* para *nameTemplate* é:
+Se esse nome é usado para criar o arquivo FNA12345 e esse arquivo ainda existe, o próximo nome retornado em uma chamada do mesmo processo ou thread com o mesmo *base* para *nameTemplate* é:
 
 > **fnb12345**
 
@@ -123,7 +124,7 @@ Se FNA12345 não existir, o próximo nome retornado será novamente:
 
 > **fna12345**
 
-**mktemp_s** pode criar no máximo 26 nomes de arquivo exclusivo para uma combinação específica de *base* e *nameTemplate* valores. Portanto, FNZ12345 é o último nome de arquivo exclusivo **mktemp_s** pode criar para o *base* e *nameTemplate* valores usados neste exemplo.
+**mktemp_s** pode criar no máximo 26 nomes de arquivo exclusivos para qualquer determinada combinação de *base* e *nameTemplate* valores. Portanto, FNZ12345 é o último nome de arquivo exclusivo **mktemp_s** pode criar para o *base* e *nameTemplate* valores usados neste exemplo.
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

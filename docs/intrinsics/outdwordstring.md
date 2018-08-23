@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 942a98b9a9d43d349f6273b77c8d56967b927eae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adc104e3325a2a9fda922f8ef32aa84982f35366
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331754"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541350"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
 **Seção específica da Microsoft**  
   
- Gera o `rep outsd` instrução, que envia `Count` doublewords começando em `Buffer` para a porta de e/s especificada pelo `Port`.  
+ Gera o `rep outsd` instrução, que envia `Count` palavras duplas começando `Buffer` para a porta de e/s especificada pelo `Port`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,15 +48,15 @@ void __outdwordstring(
  Um ponteiro para os dados a serem enviadas a porta especificada.  
   
  [in] `Count`  
- O número de doublewords para enviar.  
+ O número de palavras duplas para enviar.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__outdwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outdwordstring`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  Essa rotina só está disponível como função intrínseca.  

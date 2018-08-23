@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8da1e3d2c5b1a2018df0e46f085fede9b923fff8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7d93cff5c1be0847a6c88f0d60b89527388e4d8b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332404"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538981"
 ---
 # <a name="vmxvmclear"></a>__vmx_vmclear
 **Seção específica da Microsoft**  
   
- Inicializa a estrutura de controle de máquina virtual especificada (VMCS) e define seu estado de inicialização `Clear`.  
+ Inicializa a estrutura de controle de máquina virtual especificada (VMCS) e define seu estado de inicialização para `Clear`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +41,7 @@ unsigned char __vmx_vmclear(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `VmcsPhysicalAddress`|Um ponteiro para um local de memória de 64 bits que contém o endereço físico de VMCS para limpar.|  
+|[in] `VmcsPhysicalAddress`|Um ponteiro para um local de memória de 64 bits que contém o endereço físico do VMCS para limpar.|  
   
 ## <a name="return-value"></a>Valor de retorno  
   
@@ -52,17 +52,17 @@ unsigned char __vmx_vmclear(
 |2|Falha na operação sem status disponível.|  
   
 ## <a name="remarks"></a>Comentários  
- Um aplicativo pode executar uma operação de inserir a VM usando o [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) ou [__vmx_vmresume](../intrinsics/vmx-vmresume.md) função. O [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) função pode ser usada somente com um VMCS cujo estado da inicialização `Clear`e o [__vmx_vmresume](../intrinsics/vmx-vmresume.md) função pode ser usada somente com um VMCS cujo estado de inicialização é `Launched`. Consequentemente, use o [__vmx_vmclear](../intrinsics/vmx-vmclear.md) função para definir o estado de inicialização de um VMCS para `Clear`. Use o [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) função para a primeira operação de VM-enter e o [__vmx_vmresume](../intrinsics/vmx-vmresume.md) função para operações subsequentes de VM-enter.  
+ Um aplicativo pode executar uma operação de inserir a VM usando o [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) ou [__vmx_vmresume](../intrinsics/vmx-vmresume.md) função. O [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) função pode ser usada somente com um VMCS cujo estado de inicialização `Clear`e o [__vmx_vmresume](../intrinsics/vmx-vmresume.md) função pode ser usada somente com um VMCS cujo estado de inicialização é `Launched`. Consequentemente, usar o [__vmx_vmclear](../intrinsics/vmx-vmclear.md) função para definir o estado de inicialização de um VMCS para `Clear`. Use o [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) função para a operação de inserir a VM primeiro e o [__vmx_vmresume](../intrinsics/vmx-vmresume.md) função para operações subsequentes de VM-enter.  
   
- O `__vmx_vmclear` função é equivalente a `VMCLEAR` instrução da máquina. Essa função oferece suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento, "Intel Virtualization Technical especificação para a arquitetura IA-32 Intel," documento número C97063-002, no [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
+ O `__vmx_vmclear` função é equivalente ao `VMCLEAR` instruções de máquina. Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento, "Intel Virtualization Technical especificação para a arquitetura IA-32 Intel," documento número C97063-002, o [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__vmx_vmclear`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmclear`|X64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 **Fim da seção específica da Microsoft**  
   

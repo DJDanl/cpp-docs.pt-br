@@ -1,5 +1,5 @@
 ---
-title: '#linha de diretiva (C/C++) | Microsoft Docs'
+title: '#linha diretiva (C/C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 10/18/2017
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ebbcea7432b27e9269b5041d90d14534a77b812
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0994c8266828ab8bff8d43171c275d9058a3b7ce
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839748"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541708"
 ---
 # <a name="line-directive-cc"></a>Diretiva #line (C/C++)
 
-A política `#line` instrui o pré-processador a alterar o número de linha e nome de arquivo do compilador armazenados internamente para um dado número de linha e nome de arquivo.
+O **#line** diretiva informa o pré-processador para alterar o número de linha armazenado internamente do compilador e o nome de arquivo para um dado número de linha e o nome do arquivo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,23 +37,23 @@ A política `#line` instrui o pré-processador a alterar o número de linha e no
 
 O compilador usa o número de linha e o nome de arquivo opcional para fazer referência aos erros que encontra durante a compilação. O número de linha geralmente se refere à linha de entrada atual, e o nome de arquivo se refere ao arquivo de entrada atual. O número de linha é incrementado depois que cada linha é processada.
 
-O *sequência de dígitos* valor pode ser uma constante inteira. É possível executar a substituição de macro nos tokens de pré-processamento, mas o resultado deve ser avaliado com a sintaxe correta. O *filename* pode ser qualquer combinação de caracteres e devem ser colocados entre aspas duplas (**""**). Se *filename* for omitido, o nome do arquivo anterior permanecerá inalterado.
+O *sequência de dígitos* valor pode ser qualquer constante inteira. É possível executar a substituição de macro nos tokens de pré-processamento, mas o resultado deve ser avaliado com a sintaxe correta. O *filename* pode ser qualquer combinação de caracteres e deve ser colocado entre aspas duplas (**""**). Se *filename* é omitido, o nome do arquivo anterior permanecerá inalterado.
 
-Você pode alterar o número de linha e o nome de arquivo de origem escrevendo uma política `#line`. O conversor usa o número de linha e o nome de arquivo para determinar os valores de macros predefinidas **&#95; &#95;arquivo&#95; &#95;** e **&#95; &#95;linha&#95; &#95;**. Você pode usar essas macros para inserir mensagens de erro autodescritivas no texto do programa. Para obter mais informações sobre essas macros predefinidas, consulte [Macros predefinidas](../preprocessor/predefined-macros.md).
+Você pode alterar o número de linha de código-fonte e o nome do arquivo, escrevendo uma **#line** diretiva. O conversor usa o número de linha e o nome de arquivo para determinar os valores das macros predefinidas `__FILE__` e `__LINE__`. Você pode usar essas macros para inserir mensagens de erro autodescritivas no texto do programa. Para obter mais informações sobre essas macros predefinidas, consulte [Macros predefinidas](../preprocessor/predefined-macros.md).
 
-O **&#95; &#95;arquivo&#95; &#95;** macro se expande para uma cadeia de caracteres cujo conteúdo é o nome de arquivo entre aspas duplas (**""**).
+O `__FILE__` macro se expande para uma cadeia de caracteres cujo conteúdo é o nome do arquivo, cercada por aspas duplas (**""**).
 
-Se você alterar o número de linha e o nome de arquivo, o compilador irá ignorar os valores anteriores e continuar o processamento com os novos valores. Em geral, a política `#line` é usada por geradores de programas para fazer com que as mensagens de erro se refiram ao arquivo de origem original em vez de ao programa gerado.
+Se você alterar o número de linha e o nome de arquivo, o compilador irá ignorar os valores anteriores e continuar o processamento com os novos valores. O **#line** diretiva é normalmente usada por geradores de programas para gerar mensagens de erro, consulte o arquivo de origem original em vez de ao programa gerado.
 
-Os exemplos a seguir ilustram `#line` e **&#95; &#95;linha&#95; &#95;** e **&#95; &#95;arquivo&#95; &#95;** macros.
+Os exemplos a seguir ilustram **#line** e o `__LINE__` e `__FILE__` macros.
 
-Nesta instrução, o número da linha armazenadas internamente é definido como 151 e o nome do arquivo é alterado para copy.c.
+Nesta instrução, o número de linha armazenado internamente é definido como 151 e o nome do arquivo é alterado para copy.c.
 
 ```cpp
 #line 151 "copy.c"
 ```
 
- Neste exemplo, a macro `ASSERT` usa as macros predefinidas **&#95; &#95;linha&#95; &#95;** e **&#95; &#95;arquivo&#95; &#95;** para imprimir um mensagem de erro sobre o arquivo de origem se um determinado asserção não for verdadeira.
+Neste exemplo, a macro `ASSERT` usa as macros predefinidas `__LINE__` e `__FILE__` para imprimir uma mensagem de erro sobre o arquivo de origem, se uma asserção de determinado não for verdadeira.
 
 ```cpp
 #define ASSERT(cond) if( !(cond) )\

@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae312de1311bfe068ac48838f2720bd8a2a83e53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6bf4cc0ce245b6b80165ced5a9649586f9214639
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339534"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539756"
 ---
 # <a name="mulh"></a>__mulh
 **Seção específica da Microsoft**  
   
- Retorna os alta 64 bits do produto de dois inteiros com sinal de 64 bits.  
+ Retorna os 64 bits altos do produto de dois inteiros com sinal de 64 bits.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,9 +51,9 @@ __int64 __mulh(
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__mulh`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__mulh`|X64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  Essa rotina só está disponível como função intrínseca.  

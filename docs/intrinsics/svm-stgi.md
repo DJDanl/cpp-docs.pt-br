@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba43b12377bd9df959434c1c38d80ed8220c818a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4717fdc2018788d1fe56c26ae913a71e4f83475f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333330"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539158"
 ---
 # <a name="svmstgi"></a>__svm_stgi
 **Seção específica da Microsoft**  
   
- Define o sinalizador global de interrupção.  
+ Define o sinalizador de interrupção global.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,17 +36,17 @@ void __svm_stgi(void);
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O `__svm_stgi` função é equivalente a `STGI` instrução da máquina. O sinalizador global interrupção determina se o microprocessador ignora, adia ou manipula interrupções devido a eventos como uma conclusão de e/s, um alerta de temperatura de hardware ou uma exceção de depuração.  
+ O `__svm_stgi` função é equivalente ao `STGI` instruções de máquina. O sinalizador de interrupção global determina se o microprocessador ignora, adia ou lida com interrupções devido a eventos como uma conclusão de e/s, um alerta de temperatura de hardware ou uma exceção de depuração.  
   
- Essa função oferece suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento, "Manual Volume do programador de arquitetura AMD64 2: programação do sistema," número 24593, 3.11, de revisão de documento no [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) site.  
+ Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento "Volume de Manual do programador da arquitetura AMD64 2: programação do sistema," número 24593, 3.11, de revisão de documentos na [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) site.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__svm_stgi`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_stgi`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 **Fim da seção específica da Microsoft**  
   

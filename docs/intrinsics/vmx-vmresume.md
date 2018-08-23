@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8809489a71410af21e47d8771ec208340fc893a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57bcd86606ef1d8e874abf2c7ad5f57ebf6deeed
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330873"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538977"
 ---
 # <a name="vmxvmresume"></a>__vmx_vmresume
 **Seção específica da Microsoft**  
   
- Reinicia a operação de raiz não VMX usando a estrutura de controle da máquina virtual atual (VMCS).  
+ Reinicia a operação de não-raiz VMX usando a estrutura de controle da máquina virtual atual (VMCS).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,17 +45,17 @@ unsigned char __vmx_vmresume(
 |2|Falha na operação sem status disponível.|  
   
 ## <a name="remarks"></a>Comentários  
- Um aplicativo pode executar uma operação de inserir a VM usando o [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) ou `__vmx_vmresume` função. O `__vmx_vmlaunch` função pode ser usada somente com um VMCS cujo estado da inicialização `Clear`e o `__vmx_vmresume` função pode ser usada somente com um VMCS cujo estado de inicialização é `Launched`. Consequentemente, use o [__vmx_vmclear](../intrinsics/vmx-vmclear.md) função para definir o estado de inicialização de um VMCS para `Clear`e, em seguida, use o `__vmx_vmlaunch` função para a primeira operação de VM-enter e o `__vmx_vmresume` função para inserir subsequentes de VM operações.  
+ Um aplicativo pode executar uma operação de inserir a VM usando o [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) ou `__vmx_vmresume` função. O `__vmx_vmlaunch` função pode ser usada somente com um VMCS cujo estado de inicialização `Clear`e o `__vmx_vmresume` função pode ser usada somente com um VMCS cujo estado de inicialização é `Launched`. Consequentemente, usar o [__vmx_vmclear](../intrinsics/vmx-vmclear.md) função para definir o estado de inicialização de um VMCS para `Clear`e, em seguida, usar os `__vmx_vmlaunch` função para sua primeira operação de VM-enter e o `__vmx_vmresume` função para inserir subsequentes de VM operações.  
   
- O `__vmx_vmresume` função é equivalente a `VMRESUME` instrução da máquina. Essa função oferece suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento PDF, "Intel Virtualization Technical especificação para a arquitetura IA-32 Intel," documento número C97063-002, no [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
+ O `__vmx_vmresume` função é equivalente ao `VMRESUME` instruções de máquina. Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento PDF, "Intel Virtualization Technical especificação para a arquitetura IA-32 Intel," documento número C97063-002, o [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__vmx_vmresume`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmresume`|X64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 **Fim da seção específica da Microsoft**  
   

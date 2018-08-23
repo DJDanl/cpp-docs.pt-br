@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e48fc39fd972387ee9fbbe587dc53bf61f2ae59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 656d0edf1a4f2e740599490e6ce77cbc97426850
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330389"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541716"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 **Seção específica da Microsoft**  
   
- Invalida a entrada de mapeamento de endereço no buffer de visão-aside de tradução do computador. Parâmetros especificam o endereço virtual e o identificador de espaço de endereço da página para invalidar.  
+ Invalida a entrada de mapeamento de endereço no buffer de à parte de translação do computador. Os parâmetros especificam o endereço virtual e o identificador de espaço de endereço da página a ser invalidada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,19 +41,19 @@ void __svm_invlpga(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `Va`|O endereço virtual da página para invalidar.|  
-|[in] `ASID`|O identificador do espaço de endereço (ASID) da página para invalidar.|  
+|[in] `Va`|O endereço virtual da página ser invalidada.|  
+|[in] `ASID`|O identificador do espaço de endereço (ASID) da página ser invalidada.|  
   
 ## <a name="remarks"></a>Comentários  
- O `__svm_invlpga` função é equivalente a `INVLPGA` instrução da máquina. Essa função oferece suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento, "Manual Volume do programador de arquitetura AMD64 2: programação do sistema," número 24593, 3.11, de revisão de documento no [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) site.  
+ O `__svm_invlpga` função é equivalente ao `INVLPGA` instruções de máquina. Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento "Volume de Manual do programador da arquitetura AMD64 2: programação do sistema," número 24593, 3.11, de revisão de documentos na [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) site.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__svm_invlpga`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_invlpga`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 **Fim da seção específica da Microsoft**  
   

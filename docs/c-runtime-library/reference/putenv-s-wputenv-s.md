@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-environment-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - putenv_s
@@ -40,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e84d7a68530a748c9b1ad7c553fad80ed4e7c86b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de777c05d3b5186966e78b80e6fb1b10221d031a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405569"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572230"
 ---
 # <a name="putenvs-wputenvs"></a>_putenv_s, _wputenv_s
 
@@ -86,7 +87,7 @@ Retorna 0 se for bem-sucedido ou um código de erro.
 |**NULL**|qualquer|**EINVAL**|
 |qualquer|**NULL**|**EINVAL**|
 
-Se uma das condições de erro ocorrer, essas funções invocarão um manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam **EINVAL** e defina **errno** para **EINVAL**.
+Se uma das condições de erro ocorrer, essas funções invocarão um manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EINVAL** e defina **errno** para **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
@@ -98,16 +99,16 @@ O **putenv_s** função adiciona novas variáveis de ambiente ou modifica os val
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tputenv_s**|**_putenv_s**|**_putenv_s**|**_wputenv_s**|
 
-*varname* é o nome da variável de ambiente a ser adicionado ou modificado e *sequência_dovalor* é o valor da variável. Se *varname* já faz parte do ambiente, seu valor é substituído por *sequência_dovalor*; caso contrário, o novo *varname* variável e seu *sequência_dovalor*  são adicionadas ao ambiente. Você pode remover uma variável de ambiente especificando uma cadeia de caracteres vazia (isto é, "") para *sequência_dovalor*.
+*varname* é o nome da variável de ambiente a ser adicionada ou modificada e *sequência_dovalor* é o valor da variável. Se *varname* já é parte do ambiente, seu valor é substituído pelo *sequência_dovalor*; caso contrário, o novo *varname* variável e seu *sequência_dovalor*  são adicionadas ao ambiente. Você pode remover uma variável do ambiente especificando uma cadeia de caracteres vazia (ou seja, "") para *sequência_dovalor*.
 
-**putenv_s** e **wputenv_s** afetam apenas o ambiente local para o processo atual; você não pode usá-los para modificar o ambiente de nível de comando. Essas funções operam somente nas estruturas de dados que são acessíveis para a biblioteca em tempo de execução e não no “segmento” de ambiente que o sistema operacional cria para um processo. Quando o processo atual termina, o ambiente será revertido para o nível do processo de chamada, que, na maioria dos casos, é o nível do sistema operacional. No entanto, o ambiente modificado pode ser passado para novos processos que são criados por **spawn**, **EXEC**, ou **sistema**, e esses novos processos de obtém os itens novos são adicionado por **putenv_s** e **wputenv_s**.
+**putenv_s** e **wputenv_s** afetam apenas o ambiente local para o processo atual; você não pode usá-los para modificar o ambiente de nível de comando. Essas funções operam somente nas estruturas de dados que são acessíveis para a biblioteca em tempo de execução e não no “segmento” de ambiente que o sistema operacional cria para um processo. Quando o processo atual termina, o ambiente será revertido para o nível do processo de chamada, que, na maioria dos casos, é o nível do sistema operacional. No entanto, o ambiente modificado pode ser passado para novos processos criados por **spawn**, **EXEC**, ou **sistema**, e esses novos processos obtém os novos itens que são adicionado pelo **putenv_s** e **wputenv_s**.
 
-Não altere uma entrada de ambiente diretamente. em vez disso, use **putenv_s** ou **wputenv_s** alterá-lo. Em particular, liberando diretamente elementos do **[ Environ]** matriz global pode causar a memória inválido ser resolvido.
+Não altere uma entrada de ambiente diretamente. em vez disso, use **putenv_s** ou **wputenv_s** alterá-la. Em particular, diretamente, liberar elementos dos **[ Environ]** matriz global pode causar a memória inválida ser resolvido.
 
-**GETENV** e **putenv_s** usar a variável global **Environ** para acessar a tabela do ambiente. **wgetenv** e **wputenv_s** usar **wenviron**. **putenv_s** e **wputenv_s** pode alterar o valor de **Environ** e **wenviron**e assim invalidar o *envp*argumento **principal** e **_wenvp** argumento **wmain**. Portanto, é mais seguro usar **Environ** ou **wenviron** para acessar as informações de ambiente. Para obter mais informações sobre a relação de **putenv_s** e **wputenv_s** variáveis globais, consulte [Environ, wenviron](../../c-runtime-library/environ-wenviron.md).
+**GETENV** e **putenv_s** usa a variável global **Environ** para acessar a tabela de ambiente; **wgetenv** e **wputenv_s** usar **wenviron**. **putenv_s** e **wputenv_s** pode alterar o valor de **Environ** e **wenviron**, invalidando o *envp*argumento para **principal** e o **_wenvp** argumento **wmain**. Portanto, é mais seguro usar **Environ** ou **wenviron** para acessar as informações de ambiente. Para obter mais informações sobre a relação de **putenv_s** e **wputenv_s** variáveis globais, consulte [Environ, wenviron](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
-> O **putenv_s** e **_getenv_s** famílias de funções não são thread-safe. **_getenv_s** poderia retornar um ponteiro de cadeia de caracteres ao **putenv_s** está modificando a cadeia de caracteres e, assim, causar falhas aleatórias. As chamadas para essas funções devem estar sincronizadas.
+> O **putenv_s** e **_getenv_s** famílias de funções não são thread-safe. **_getenv_s** poderia retornar um ponteiro de cadeia de caracteres enquanto **putenv_s** está modificando a cadeia de caracteres e, portanto, causar falhas aleatórias. As chamadas para essas funções devem estar sincronizadas.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,5 +1,5 @@
 ---
-title: Páginas de propriedades do ATL COM | Microsoft Docs
+title: Páginas de propriedade do ATL COM | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d7904b9f31a1be858dadaa8a087c720c277465
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fdf0d53cca00424c2c933e2578fb5c70b7d07e1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357526"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571646"
 ---
 # <a name="atl-com-property-pages"></a>Página de propriedades ATL COM
-Páginas de propriedades COM fornecem uma interface de usuário para definir as propriedades (ou chamar os métodos) de um ou mais objetos. Páginas de propriedade forem usadas extensivamente por controles ActiveX para fornecer interfaces do usuário avançadas que permitem que as propriedades de controle a ser definido em tempo de design.  
+Páginas de propriedades COM fornecem uma interface do usuário para definir as propriedades (ou chamar os métodos) de um ou mais objetos de COM. Páginas de propriedades são usadas amplamente por controles ActiveX para fornecer interfaces do usuário avançadas que permitem que as propriedades de controle a ser definido em tempo de design.  
   
- Páginas de propriedades são COM os objetos que implementam o [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) ou [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) interface. Essas interfaces fornecem métodos que permitem que a página a ser associado com um `site` (um objeto COM que representa o contêiner da página) e um número de *objetos* (objetos cujos métodos serão chamados em resposta a alterações feitas pelo usuário na página de propriedade). O contêiner da página de propriedade é responsável por chamar os métodos na interface de página de propriedade para indicar a página quando mostrar ou ocultar a interface do usuário e quando aplicar as alterações feitas pelo usuário para os objetos subjacentes.  
+ Páginas de propriedades são COM objetos que implementam o [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) ou [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) interface. Essas interfaces fornecem métodos que permitem que a página a ser associada com um `site` (um objeto COM que representa o contêiner da página) e um número de *objetos* (objetos cujos métodos serão chamados em resposta a alterações feitas pelo usuário da página de propriedades). O contêiner de página de propriedade é responsável por chamar métodos na interface de página de propriedade para informar a página quando mostrar ou ocultar sua interface do usuário e quando aplicar as alterações feitas pelo usuário para os objetos subjacentes.  
   
- Cada página de propriedades pode ser construída completamente independentemente dos objetos cujas propriedades podem ser definidas. Tudo o que uma página de propriedades é precisa entender uma interface específica (ou conjunto de interfaces) e para fornecer uma interface de usuário para chamar métodos nessa interface.  
+ Cada página de propriedades pode ser criada independentemente dos objetos cujas propriedades podem ser definidas completamente. Tudo o que uma página de propriedades é precisa entender uma interface específica (ou conjunto de interfaces) e fornecer uma interface do usuário para chamar métodos nessa interface.  
   
- Para obter mais informações, consulte [folhas de propriedades e páginas de propriedade](http://msdn.microsoft.com/library/windows/desktop/ms686577) no [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ Para obter mais informações, consulte [folhas de propriedades e páginas de propriedade](http://msdn.microsoft.com/library/windows/desktop/ms686577) no SDK do Windows.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Especificando páginas de propriedades](../atl/specifying-property-pages.md)  
- Lista as etapas para especificar as páginas de propriedade para o controle e mostra um exemplo de classe.  
+ Lista as etapas para especificar as páginas de propriedades para o controle e mostra um exemplo de classe.  
   
  [Implementando páginas de propriedades](../atl/implementing-property-pages.md)  
- Lista as etapas para implementar as páginas de propriedades, incluindo métodos para substituir. Orienta você por meio de um exemplo completo baseado no programa de exemplo ATLPages.  
+ Lista as etapas para a implementação de páginas de propriedades, incluindo métodos para substituir. Orienta você por meio de um exemplo completo, com base em que o programa de exemplo ATLPages.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Exemplo de ATLPages](../visual-cpp-samples.md)  

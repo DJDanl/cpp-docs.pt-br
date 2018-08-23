@@ -1,5 +1,5 @@
 ---
-title: Referência LIB | Microsoft Docs
+title: Referência de LIB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a77056c6a3d0427c865658cd945e74e29d672b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b6eb6e9a1b7be12d125a68d3873401ccdeb7be3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371935"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572233"
 ---
 # <a name="lib-reference"></a>Referência LIB
-O Gerenciador de biblioteca da Microsoft (LIB.exe) cria e gerencia uma biblioteca de arquivos de objeto do formato de arquivo de objeto comum (COFF). LIB também pode ser usado para criar arquivos de exportação e bibliotecas de importação para referência exportada de definições.  
+O Gerenciador de biblioteca da Microsoft (LIB.exe) cria e gerencia uma biblioteca de arquivos de objeto comum objeto COFF (File Format). LIB também pode ser usado para criar arquivos de exportação e importe as bibliotecas para referenciar definições exportadas.  
   
 > [!NOTE]
->  Você pode iniciar essa ferramenta apenas o [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] prompt de comando. Você não pode iniciá-lo em um prompt de comando do sistema ou no Explorador de arquivos.  
+>  Você pode iniciar essa ferramenta apenas de prompt de comando do Visual Studio. Você não pode iniciá-lo em um prompt de comando do sistema ou no Explorador de arquivos.  
   
 -   [Visão geral de LIB](../../build/reference/overview-of-lib.md)  
   

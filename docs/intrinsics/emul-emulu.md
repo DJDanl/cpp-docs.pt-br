@@ -20,17 +20,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc98119f6174f299b8de72383610aac72032d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6e9e7ee594f2587334d93173daa147d81dcebb2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331029"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538209"
 ---
 # <a name="emul-emulu"></a>__emul, __emulu
 **Seção específica da Microsoft**  
   
- Executa multiplicações que estourar o que pode conter um inteiro de 32 bits.  
+ Executa multiplicações que estouram o que pode conter um inteiro de 32 bits.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,15 +59,15 @@ unsigned __int64 __emulu(
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__emul`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__emulu`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__emul`|x86, x64|  
+|`__emulu`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- `__emul` usa dois valores de 32 bits assinados e retorna o resultado da multiplicação como um valor inteiro com sinal de 64 bits.  
+ `__emul` usa dois valores com sinal de 32 bits e retorna o resultado da multiplicação como um valor inteiro com sinal de 64 bits.  
   
- `__emulu` usa dois valores de inteiro não assinado de 32 bits e retorna o resultado da multiplicação como um valor inteiro não assinado de 64 bits.  
+ `__emulu` usa dois valores de inteiro sem sinal de 32 bits e retorna o resultado da multiplicação como um valor inteiro sem sinal de 64 bits.  
   
 ## <a name="example"></a>Exemplo  
   

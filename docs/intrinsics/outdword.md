@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa7aea4b0be8eaa7b6d76e948e845d31f6ffa3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 326ebeeb1d282950ed7d481014d4349c168dc897
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332826"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538211"
 ---
 # <a name="outdword"></a>__outdword
 **Seção específica da Microsoft**  
   
- Gera o `out` instruções para enviar um doubleword `Data` para a porta `Port`.  
+ Gera o `out` instrução para enviar uma palavras duplas `Data` a porta de saída `Port`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,15 +44,15 @@ void __outdword(
  A porta para enviar os dados.  
   
  [in] `Data`  
- O doubleword para serem enviadas.  
+ As palavras duplas a serem enviados.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__outdword`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outdword`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  Essa rotina só está disponível como função intrínseca.  

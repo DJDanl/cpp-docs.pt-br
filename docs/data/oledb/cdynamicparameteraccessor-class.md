@@ -101,12 +101,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b29a5d0538cb3608ceeb5ec09bd629b1de18b4b6
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a39e4d600ab5bb209a74ce74dd37af2eb496de0d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338214"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571919"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>Classe CDynamicParameterAccessor
 
@@ -304,7 +304,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
  [in] O número do parâmetro (deslocamento de 1). O parâmetro 0 é reservado para valores de retorno. O número do parâmetro é o índice do parâmetro com base em sua ordem no SQL ou chamada de procedimento armazenado. Ver [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obter um exemplo.  
   
  *pStatus*  
- [out] Um ponteiro para a variável que contém o status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](https://msdn.microsoft.com/library/ms722617.aspx) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.  
+ [out] Um ponteiro para a variável que contém o status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.  
   
 ### <a name="remarks"></a>Comentários  
  A primeira substituição retorna **verdadeira** em caso de sucesso ou **falso** em caso de falha. A segunda substituição aponta para a memória que contém o status do parâmetro especificado.
@@ -407,7 +407,7 @@ bool SetParam(TCHAR* pParamName,
  [in] O ponteiro para a memória que contém os dados a serem gravados no buffer.  
   
  *status*  
- [in] O status da coluna DBSTATUS. Para obter informações sobre valores DBSTATUS, consulte [Status](https://msdn.microsoft.com/library/ms722617.aspx) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.  
+ [in] O status da coluna DBSTATUS. Para obter informações sobre valores DBSTATUS, consulte [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna **verdadeira** em caso de sucesso ou **falso** em caso de falha.  
@@ -449,7 +449,7 @@ bool SetParamStatus(DBORDINAL nParam,
  [in] O número do parâmetro (deslocamento de 1). O parâmetro 0 é reservado para valores de retorno. O número do parâmetro é o índice do parâmetro com base em sua ordem no SQL ou chamada de procedimento armazenado. Ver [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obter um exemplo.  
   
  *status*  
- [in] O status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](https://msdn.microsoft.com/library/ms722617.aspx) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.  
+ [in] O status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.  
   
 ### <a name="remarks"></a>Comentários  
  Retorna **verdadeira** em caso de sucesso ou **falso** em caso de falha. 
@@ -475,7 +475,7 @@ bool SetParamString(DBORDINAL nParam,
  [in] Um ponteiro para o ANSI (**CHAR**) ou Unicode (**WCHAR**) dados do parâmetro especificado da cadeia de caracteres. Consulte DBSTATUS OLEDB.  
   
  *status*  
- [in] O status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](https://msdn.microsoft.com/library/ms722617.aspx) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.  
+ [in] O status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.  
   
 ### <a name="remarks"></a>Comentários  
  Retorna **verdadeira** em caso de sucesso ou **falso** em caso de falha.  

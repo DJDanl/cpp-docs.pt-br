@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 483584c7b38db05c920134cfc675538be36a3816
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 0adcca7c8080d6603e4e4de8c2002b2ace6f9ad9
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028015"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538379"
 ---
 # <a name="colecontrol-class"></a>Classe COleControl
 Uma classe base poderosa para desenvolvimento de controles OLE.  
@@ -1129,7 +1129,7 @@ void FireKeyDown(
   
 ### <a name="parameters"></a>Parâmetros  
  *pnChar*  
- Ponteiro para o valor de código de tecla virtual da tecla pressionada. Para uma lista de códigos de tecla virtuais padrão, consulte WinUser. h  
+ Ponteiro para o valor de código de tecla virtual da tecla pressionada. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h  
   
  *nShiftState*  
  Contém uma combinação dos sinalizadores a seguir:  
@@ -1174,7 +1174,7 @@ void FireKeyUp(
   
 ### <a name="parameters"></a>Parâmetros  
  *pnChar*  
- Ponteiro para o valor de código de tecla virtual da chave lançado. Para uma lista de códigos de tecla virtuais padrão, consulte WinUser. h  
+ Ponteiro para o valor de código de tecla virtual da chave lançado. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h  
   
  *nShiftState*  
  Contém uma combinação dos sinalizadores a seguir:  

@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7160f2998eee18439baa67a93a73fcd73b5c0f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61fc3d0ddf07887af2f565fd338b337eacd130ef
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853544"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541354"
 ---
 # <a name="cmonthcalctrl-class"></a>Classe CMonthCalCtrl
 Encapsula a funcionalidade de um controle de calendário mensal.  
@@ -736,7 +736,7 @@ void SetCalendarBorder(int cxyBorder);
 |[in] *cxyBorder*|A largura da borda, em pixels.|  
   
 ### <a name="remarks"></a>Comentários  
- Se esse método for bem-sucedido, a largura da borda é definida como o *cxyBorder* parâmetro. Caso contrário, a largura da borda é redefinida para o valor padrão que é especificado pelo atual [tema](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), ou zero se não forem usados temas.  
+ Se esse método for bem-sucedido, a largura da borda é definida como o *cxyBorder* parâmetro. Caso contrário, a largura da borda é redefinida para o valor padrão que é especificado pelo atual [tema](/windows/desktop/Controls/visual-styles-overview), ou zero se não forem usados temas.  
   
  Esse método envia o [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) mensagem, que é descrita no SDK do Windows.  
   
@@ -758,7 +758,7 @@ void SetCalendarBorderDefault();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A largura da borda é definida como o valor padrão especificado pelo atual [tema](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), ou zero se não forem usados temas.  
+ A largura da borda é definida como o valor padrão especificado pelo atual [tema](/windows/desktop/Controls/visual-styles-overview), ou zero se não forem usados temas.  
   
  Esse método envia o [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) mensagem, que é descrita no SDK do Windows.  
   

@@ -1,5 +1,5 @@
 ---
-title: Ativar | Microsoft Docs
+title: Habilitar | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e6c8ba9fc1b4dff9b1ad947a770ae901937611
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ca265bc8a6adc3da747e94ca67cd57749687f21
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330939"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538775"
 ---
 # <a name="enable"></a>_enable
 **Seção específica da Microsoft**  
@@ -41,9 +41,9 @@ void _enable(void);
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`_enable`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_enable`|x86, ARM, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  `_enable` instrui o processador para definir o sinalizador de interrupção. Em sistemas x86, essa função gera a instrução Definir Sinalizador de Interrupção (`sti`).  

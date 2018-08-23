@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: edc18dcb83b2dda63fd5cfb5c56c3c95baa72df0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 85f08ae7a996a762be915bcce820c33a0a8e549c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340723"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572906"
 ---
 # <a name="caccessorrowset-class"></a>Classe CAccessorRowset
 Encapsula um conjunto de linhas e de seus acessadores associados em uma única classe.  
@@ -79,7 +79,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|Construtor.|  
 |[Fechar](#close)|Fecha o conjunto de linhas e qualquer acessadores.|  
 |[FreeRecordMemory](#freerecordmemory)|Libera quaisquer colunas no registro atual que precise ser liberada.|  
-|[GetColumnInfo](#getcolumninfo)|Implementa [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx).|  
+|[GetColumnInfo](#getcolumninfo)|Implementa [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|  
   
 ## <a name="remarks"></a>Comentários  
  Classe `TAccessor` gerencia o acessador. Classe *TRowset* gerencia o conjunto de linhas.  
@@ -141,7 +141,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx) na *referência do programador do OLE DB*.  
+ Ver [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) na *referência do programador do OLE DB*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um HRESULT padrão.  
@@ -149,7 +149,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ### <a name="remarks"></a>Comentários  
  O usuário deve liberar o buffer de cadeia de caracteres e informações de coluna retornada. Use a segunda versão desse método, quando você usa [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) e precisar substituir as associações.  
   
- Para obter mais informações, consulte [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx) na *referência do programador DB OLE*.  
+ Para obter mais informações, consulte [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) na *referência do programador DB OLE*.  
   
 ## <a name="see-also"></a>Consulte também  
  [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 219f0bc1f5b9959a424a8c3a63ec0c4e3505eb55
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d843b3b491973c32d8fb5ff3160327a9e82223c8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852582"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540537"
 ---
 # <a name="cmfctabctrl-class"></a>Classe CMFCTabCtrl
 O `CMFCTabCtrl` classe fornece funcionalidade para um controle guia. O controle de guia exibe uma janela encaixável com guias planas ou tridimensionais na parte superior ou inferior. As guias podem exibir texto e imagem e podem alterar a cor quando ativos.  
@@ -221,7 +221,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 -   Janelas com guias desanexáveis.  
   
- O `CMFCTabCtrl` classe pode ser usada com uma caixa de diálogo, mas serve para aplicativos que usam o encaixe controlam como as barras [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] e [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Para obter mais informações, consulte [classe CDockablePane](../../mfc/reference/cdockablepane-class.md).  
+ O `CMFCTabCtrl` classe pode ser usada com uma caixa de diálogo, mas serve para aplicativos que usam o encaixe controlam barras como o Microsoft Excel e o Visual Studio. Para obter mais informações, consulte [classe CDockablePane](../../mfc/reference/cdockablepane-class.md).  
   
  Siga estas etapas para adicionar um redimensionável, encaixe o controle de guia em seu aplicativo:  
   
@@ -269,7 +269,7 @@ void ActivateMDITab(int nTab = -1);
  O índice baseado em zero de uma guia para exibir ou -1 para especificar a guia ativa no momento.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  

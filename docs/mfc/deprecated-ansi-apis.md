@@ -1,5 +1,5 @@
 ---
-title: Preterido APIs ANSI | Microsoft Docs
+title: APIs ANSI preteridas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d612cca5d0c95b411f5278fe92404166d26b53b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95eed7834e46f6a42a363e8a8f8134945beb54fc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342053"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538578"
 ---
 # <a name="deprecated-ansi-apis"></a>APIs ANSI preteridas
-A biblioteca Microsoft Foundation Class (MFC) está migrando para classes e métodos que se baseiam no conjunto de caracteres Unicode. Consequentemente, as versões ANSI dos vários métodos MFC foram preteridas. Use as versões de Unicode desses métodos em seus aplicativos futuros.  
+A biblioteca Microsoft Foundation Class (MFC) está migrando em direção a classes e métodos que se baseiam no conjunto de caracteres Unicode. Consequentemente, as versões ANSI de vários métodos MFC foram preteridas. Use as versões Unicode desses métodos em seus aplicativos futuros.  
   
- Começando com a versão de controles comuns do Windows 6.1, que é fornecido com [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)], os seguintes métodos de ANSI são preteridos.  
+ Começando com a controles comuns do Windows versão 6.1, que é fornecida no Windows Vista, os seguintes métodos de ANSI são preteridos.  
   
 ## <a name="cbutton-class"></a>Classe CButton  
   

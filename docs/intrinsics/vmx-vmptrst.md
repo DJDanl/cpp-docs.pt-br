@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad1b6587f4386565ae7de84a7b6a170da98b6df8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2997ed93de7291c22ae4f147bdd2392b71385e6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328588"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539544"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 **Seção específica da Microsoft**  
@@ -39,20 +39,20 @@ void __vmx_vmptrst(
   
 #### <a name="parameters"></a>Parâmetros  
  [in] *`VmcsPhysicalAddress`  
- O endereço onde o ponteiro VMCS atual está armazenado.  
+ O endereço onde o ponteiro VMCS atual é armazenado.  
   
 ## <a name="remarks"></a>Comentários  
  O ponteiro VMCS é um endereço físico de 64 bits.  
   
- O `__vmx_vmptrst` função é equivalente a `VMPTRST` instrução da máquina. Essa função oferece suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento, "Intel Virtualization Technical especificação para a arquitetura IA-32 Intel," documento número C97063-002, no [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
+ O `__vmx_vmptrst` função é equivalente ao `VMPTRST` instruções de máquina. Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento, "Intel Virtualization Technical especificação para a arquitetura IA-32 Intel," documento número C97063-002, o [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__vmx_vmptrst`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmptrst`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 **Fim da seção específica da Microsoft**  
   

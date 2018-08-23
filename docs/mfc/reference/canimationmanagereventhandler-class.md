@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a775457d6da763a5c8426146d421a4cc958454
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: bfc64617002db0536dc3d62e70082c27b260802f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955642"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541544"
 ---
 # <a name="canimationmanagereventhandler-class"></a>Classe CAnimationManagerEventHandler
 Implementa um retorno de chamada, que é chamado pela API de animação quando um status de um Gerenciador de animação é alterado.  
@@ -57,7 +57,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 |[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Armazena um ponteiro para o controlador de animação para eventos de rota.|  
   
 ## <a name="remarks"></a>Comentários  
- Este manipulador de eventos é criado e passado para o método IUIAnimationManager::SetManagerEventHandler, quando você chamar CAnimationController::EnableAnimationManagerEvent.  
+ Esse manipulador de eventos é criado e passado para o método IUIAnimationManager::SetManagerEventHandler, quando você chama CAnimationController::EnableAnimationManagerEvent.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `CUIAnimationCallbackBase`  
@@ -70,7 +70,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
  **Cabeçalho:** afxanimationcontroller.h  
   
 ##  <a name="canimationmanagereventhandler"></a>  CAnimationManagerEventHandler::CAnimationManagerEventHandler  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ O Visual Studio 2010 SP1 é necessário.  
   
  Constrói um objeto CAnimationManagerEventHandler.  
   
@@ -79,7 +79,7 @@ CAnimationManagerEventHandler();
 ```  
   
 ##  <a name="createinstance"></a>  CAnimationManagerEventHandler::CreateInstance  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ O Visual Studio 2010 SP1 é necessário.  
   
  Cria uma instância do objeto CAnimationManagerEventHandler.  
   
@@ -91,16 +91,16 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
   
 ### <a name="parameters"></a>Parâmetros  
  *pAnimationController*  
- Um ponteiro para o controlador de animação, que irá receber eventos.  
+ Um ponteiro para o controlador de animação, que receberá eventos.  
   
  *ppManagerEventHandler*  
- Saída. Se o método for bem-sucedido ele contém um ponteiro para o objeto COM que tratará as atualizações de status para um Gerenciador de animação.  
+ Saída. Se o método obtiver êxito ela contém um ponteiro para objeto COM que manipulará as atualizações de status para um Gerenciador de animação.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Se o método for bem-sucedido, retornará S_OK. Caso contrário, ele retorna um código de erro HRESULT.  
+ Se o método for bem-sucedido, retornará S_OK. Caso contrário, ele retornará um código de erro HRESULT.  
   
 ##  <a name="onmanagerstatuschanged"></a>  CAnimationManagerEventHandler::OnManagerStatusChanged  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ O Visual Studio 2010 SP1 é necessário.  
   
  Chamado quando um status de Gerenciador de animação é alterado.  
   
@@ -121,7 +121,7 @@ IFACEMETHOD(OnManagerStatusChanged)(
  Sempre a implementação atual Retorna S_OK;  
   
 ##  <a name="setanimationcontroller"></a>  CAnimationManagerEventHandler::SetAnimationController  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ O Visual Studio 2010 SP1 é necessário.  
   
  Armazena um ponteiro para o controlador de animação para eventos de rota.  
   
@@ -131,7 +131,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
   
 ### <a name="parameters"></a>Parâmetros  
  *pAnimationController*  
- Um ponteiro para o controlador de animação, que irá receber eventos.  
+ Um ponteiro para o controlador de animação, que receberá eventos.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classes](../../mfc/reference/mfc-classes.md)

@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a93a89ed0ace158a0864d7987cafd838eed304
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
-ms.translationtype: HT
+ms.openlocfilehash: 8b7501adf2f424f2232df05e26f5d0ac4a35158c
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853735"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42543090"
 ---
 # <a name="colevariant-class"></a>Classe COleVariant
-Encapsula o [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) tipo de dados.  
+Encapsula o [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) tipo de dados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -76,14 +76,14 @@ class COleVariant : public tagVARIANT
 |[COleVariant::operator &lt; &lt;, &gt;&gt;](#operator_lt_lt__gt_gt)|Saídas de um `COleVariant` valor para `CArchive` ou `CDumpContext` e insere um `COleVariant` do objeto de `CArchive`.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse tipo de dados é usado na automação OLE. Especificamente, o [DISPPARAMS](http://msdn.microsoft.com/a16e5a21-766e-4287-b039-13429aa78f8b) estrutura contém um ponteiro para uma matriz de estruturas de VARIANTE. Um `DISPPARAMS` estrutura é usada para passar parâmetros para [IDispatch:: Invoke](http://msdn.microsoft.com/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
+ Esse tipo de dados é usado na automação OLE. Especificamente, o [DISPPARAMS](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagdispparams) estrutura contém um ponteiro para uma matriz de estruturas de VARIANTE. Um `DISPPARAMS` estrutura é usada para passar parâmetros para [IDispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).  
   
 > [!NOTE]
 >  Essa classe é derivada de `VARIANT` estrutura. Isso significa que você pode passar uma `COleVariant` em um parâmetro que chama uma `VARIANT` e que os membros de dados de `VARIANT` estrutura são membros de dados acessíveis de `COleVariant`.  
   
  Os dois relacionados classes MFC [COleCurrency](../../mfc/reference/colecurrency-class.md) e [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) encapsulam os tipos de dados variant moeda ( `VT_CY`) e data ( `VT_DATE`). O `COleVariant` classe é amplamente usado nas classes DAO; consulte essas classes para uso típico dessa classe, por exemplo [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) e [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).  
   
- Para obter mais informações, consulte o [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118), [moeda](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e), [DISPPARAMS](http://msdn.microsoft.com/a16e5a21-766e-4287-b039-13429aa78f8b), e [IDispatch:: Invoke](http://msdn.microsoft.com/964ade8e-9d8a-4d32-bd47-aa678912a54d) entradas no SDK do Windows.  
+ Para obter mais informações, consulte o [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [moeda](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e), [DISPPARAMS](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagdispparams), e [IDispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) entradas no SDK do Windows.  
   
  Para obter mais informações sobre o `COleVariant` classe e seu uso na automação OLE, consulte "Passando parâmetros na automação OLE" no artigo [automação](../../mfc/automation.md).  
   
@@ -96,7 +96,7 @@ class COleVariant : public tagVARIANT
  **Cabeçalho:** afxdisp.h  
   
 ##  <a name="attach"></a>  COleVariant::Attach  
- Chame essa função para anexar a determinada [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) objeto atual `COleVariant` objeto.  
+ Chame essa função para anexar a determinada [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) objeto atual `COleVariant` objeto.  
   
 ```  
 void Attach(VARIANT& varSrc);
@@ -109,7 +109,7 @@ void Attach(VARIANT& varSrc);
 ### <a name="remarks"></a>Comentários  
  Essa função define a [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) dos *1&gt;Operator=(&lt;1}{2&gt;varsrc&lt;2}{3&gt;)&lt;3* como VT_EMPTY.  
   
- Para obter mais informações, consulte o [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) e [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) entradas no SDK do Windows.  
+ Para obter mais informações, consulte o [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) e [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) entradas no SDK do Windows.  
   
 ##  <a name="colevariant"></a>  COleVariant::COleVariant  
  Constrói um objeto `COleVariant`.  
@@ -221,10 +221,10 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
  O [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) para este `COleVariant` objeto.  
   
  *pSrc*  
- Um ponteiro para o [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) objeto a ser convertido. Se esse valor for NULL, isso `COleVariant` objeto é usado como a origem para a conversão.  
+ Um ponteiro para o [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) objeto a ser convertido. Se esse valor for NULL, isso `COleVariant` objeto é usado como a origem para a conversão.  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações, consulte o [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4), e [VariantChangeType](http://msdn.microsoft.com/48a51e32-95d7-4eeb-8106-f5043ffa2fd1) entradas no SDK do Windows.  
+ Para obter mais informações, consulte o [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4), e [VariantChangeType](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantchangetype) entradas no SDK do Windows.  
   
 ##  <a name="clear"></a>  COleVariant::Clear  
  Limpa o `VARIANT`.  
@@ -239,7 +239,7 @@ void Clear();
  Para obter mais informações, consulte o `VARIANT`, VARTYPE, e `VariantClear` entradas no SDK do Windows.  
   
 ##  <a name="detach"></a>  COleVariant::Detach  
- Desanexa subjacente [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) objeto deste `COleVariant` objeto.  
+ Desanexa subjacente [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) objeto deste `COleVariant` objeto.  
   
 ```  
 VARIANT Detach();
@@ -251,7 +251,7 @@ VARIANT Detach();
 > [!NOTE]
 >  Depois de chamar `Detach`, é responsabilidade do chamador para chamar `VariantClear` em resultante `VARIANT` estrutura.  
   
- Para obter mais informações, consulte o [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4), e [VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835) entradas no SDK do Windows.  
+ Para obter mais informações, consulte o [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4), e [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear) entradas no SDK do Windows.  
   
 ##  <a name="getbytearrayfromvariantarray"></a>  COleVariant::GetByteArrayFromVariantArray  
  Recupera uma matriz de bytes de uma matriz de variant existente  
@@ -332,7 +332,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
   
 - **operador = (** `lbSrc` **)** cópias de um [CLongBinary](../../mfc/reference/clongbinary-class.md) objeto nesta `COleVariant` objeto.  
   
- Para obter mais informações, consulte o [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) e [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) entradas no SDK do Windows.  
+ Para obter mais informações, consulte o [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) e [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) entradas no SDK do Windows.  
   
 ##  <a name="operator_eq_eq"></a>  COleVariant::operator = =  
  Esse operador compara dois valores variantes e retorna não zero, se eles forem iguais; Caso contrário, 0.  

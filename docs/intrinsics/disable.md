@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4359d77f13338e2e007236b0103fd358dffd0ce1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2748d0412c9ee0f7e7684d35a38f3c2b5d133754
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324253"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541177"
 ---
 # <a name="disable"></a>_disable
 **Seção específica da Microsoft**  
@@ -41,9 +41,9 @@ void _disable(void);
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`_disable`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_disable`|x86, ARM, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  `_disable` instrui o processador para limpar o sinalizador de interrupção. Em sistemas x86, essa função gera a instrução Limpar Sinalizador de Interrupção (`cli`).  

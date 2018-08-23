@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70d6f047cf18b8b768d40533e2acc6cb2f649327
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a40cf81d0b00123692c9ea8b0e2f3111fb914fbb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378997"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573297"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (especificar subsistema)
 ```  
@@ -37,46 +37,46 @@ ms.locfileid: "32378997"
 ```  
   
  BOOT_APPLICATION  
- Um aplicativo que é executado no ambiente de inicialização do Windows. Para obter mais informações sobre aplicativos de inicialização, consulte [sobre BCD](http://msdn.microsoft.com/library/windows/desktop/aa362639).  
+ Um aplicativo que é executado no ambiente de inicialização do Windows. Para obter mais informações sobre aplicativos de inicialização, consulte [BCD sobre](http://msdn.microsoft.com/library/windows/desktop/aa362639).  
   
  CONSOLE  
- Aplicativo de modo caractere Win32. O sistema operacional fornece um console para aplicativos de console. Se `main` ou `wmain` está definido para código nativo, `int main(array<String ^> ^)` está definido para código gerenciado, ou criar o aplicativo completamente usando `/clr:safe`, CONSOLE é o padrão.  
+ Aplicativo de modo caractere Win32. O sistema operacional fornece um console para aplicativos de console. Se `main` ou `wmain` está definido para código nativo, `int main(array<String ^> ^)` está definido para código gerenciado, ou você compilar o aplicativo completamente usando `/clr:safe`, CONSOLE é o padrão.  
   
  Interface de Firmware extensível  
  Os subsistemas de EFI_ *. Consulte a especificação de EFI para obter mais informações. Por exemplo, consulte o site da Intel. A versão mínima de versão e o padrão é 1.0.  
   
  NATIVO  
- Drivers do modo kernel para Windows NT. Essa opção normalmente é reservada para os componentes de sistema do Windows. Se [/driver: WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) for especificado, nativo é o padrão.  
+ Drivers do modo kernel para Windows NT. Essa opção normalmente é reservada para componentes de sistema do Windows. Se [/driver: WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) for especificado, NATIVE é o padrão.  
   
  POSIX  
- Aplicativo que é executado com o subsistema POSIX em Windows NT.  
+ Aplicativo que é executado com o subsistema POSIX no Windows NT.  
   
  WINDOWS  
- Aplicativo não exigir um console, provavelmente porque cria suas próprias janelas para interação com o usuário. Se `WinMain` ou `wWinMain` está definido para código nativo, ou `WinMain(HISTANCE *, HINSTANCE *, char *, int)` ou `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` é definido para código gerenciado, o WINDOWS é o padrão.  
+ Aplicativo não exige um console, provavelmente porque cria suas próprias janelas para interação com o usuário. Se `WinMain` ou `wWinMain` está definido para código nativo, ou `WinMain(HISTANCE *, HINSTANCE *, char *, int)` ou `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` é definido para código gerenciado, o WINDOWS é o padrão.  
   
  `Major` e `minor` (opcional)  
- Especifique a versão mínima necessária do subsistema. Os argumentos são números decimais no intervalo de 0 a 65.535. Consulte os Comentários para obter mais informações. Não há nenhum limites superiores para números de versão.  
+ Especifique a versão mínima necessária do subsistema. Os argumentos são números decimais no intervalo de 0 a 65.535. Consulte os Comentários para obter mais informações. Há não há limites superiores para números de versão.  
   
 ## <a name="remarks"></a>Comentários  
  A opção /SUBSYSTEM Especifica o ambiente para o executável.  
   
- A escolha de subsistema afeta o símbolo de ponto de entrada (ou a função de ponto de entrada) que seleciona o vinculador.  
+ A escolha do subsistema afeta o símbolo de ponto de entrada (ou a função de ponto de entrada) que o vinculador selecionará.  
   
- O padrão e o mínimo opcional `major` e `minor` números de versão para os subsistemas são da seguinte maneira.  
+ O mínimo opcional e o padrão `major` e `minor` números de versão para os subsistemas são da seguinte maneira.  
   
-|Subsistema|Mínimo|Padrão|  
+|subsistema|Mínimo|Padrão|  
 |---------------|-------------|-------------|  
 |BOOT_APPLICATION|1.0|1.0|  
-|CONSOLE|5.01 (x86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6.00 (x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
-|WINDOWS|5.01 (x86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6.00 (x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
-|NATIVO (com o DRIVER: WDM)|1,00 (x86) 1.10 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], ARM)|1,00 (x86) 1.10 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], ARM)|  
-|NATIVO (sem /driver: WDM)|4.00 (x86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|4.00 (x86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
+|CONSOLE|5.01 (x86) 5.02 (x64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|  
+|WINDOWS|5.01 (x86) 5.02 (x64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|  
+|NATIVO (com o DRIVER: WDM)|1,00 (x86) 1.10 (x64, ARM)|1,00 (x86) 1.10 (x64, ARM)|  
+|NATIVO (sem /driver: WDM)|4.00 (x86) 5.02 (x64) 6.02 (ARM)|4.00 (x86) 5.02 (x64) 6.02 (ARM)|  
 |POSIX|1.0|19.90|  
 |EFI_APPLICATION, EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).  
   
 2.  Selecione a pasta do vinculador.  
   

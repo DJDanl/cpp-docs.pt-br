@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bdfe58f5b42b4c06b3eda3f641bb9f2a4c628cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b0b259c730a7db343cc08ff077cf57043f292a6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326905"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540140"
 ---
 # <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
 **Seção específica da Microsoft**  
   
- Fornece o endereço do local de memória que contém o endereço de retorno da função atual. Esse endereço não pode ser usado para acessar outros locais de memória (por exemplo, os argumentos da função).  
+ Fornece o endereço do local da memória que contém o endereço de retorno da função atual. Esse endereço não pode ser usado para acessar outros locais de memória (por exemplo, os argumentos da função).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,12 +40,12 @@ void * _AddressOfReturnAddress();
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`_AddressOfReturnAddress`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_AddressOfReturnAddress`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- Quando `_AddressOfReturnAddress` é usado em um programa compilado com [/clr](../build/reference/clr-common-language-runtime-compilation.md), a função que contém o `_AddressOfReturnAddress` chamada é compilada como uma função nativa. Quando uma função é compilado como gerenciado chama a função que contém `_AddressOfReturnAddress`, `_AddressOfReturnAddress` podem não funcionar conforme o esperado.  
+ Quando `_AddressOfReturnAddress` é usado em um programa compilado com [/clr](../build/reference/clr-common-language-runtime-compilation.md), a função que contém o `_AddressOfReturnAddress` chamada é compilada como uma função nativa. Quando uma função é compilado como gerenciado chama a função contendo `_AddressOfReturnAddress`, `_AddressOfReturnAddress` pode não se comportar conforme o esperado.  
   
  Essa rotina só está disponível como função intrínseca.  
   

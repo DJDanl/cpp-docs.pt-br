@@ -122,17 +122,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecefc377c620028b520945c6aaefd8b178d9ff9f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 091c201b3b0b67879178d32f495410a1bbe22a53
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338444"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540382"
 ---
 # <a name="cmdichildwndex-class"></a>Classe CMDIChildWndEx
 O `CMDIChildWndEx` classe fornece a funcionalidade de um Windows vários janela filho da MDI (interface MDI) documento. Ela estende a funcionalidade do [classe CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). A estrutura exige essa classe quando um aplicativo MDI usa determinadas classes do MFC.  
  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
 
   
 ## <a name="syntax"></a>Sintaxe  
@@ -775,7 +775,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
   
 ### <a name="parameters"></a>Parâmetros  
  *dwFlags*  
- Uma combinação de valores STPFLAG. Para obter mais informações, consulte [ITaskbarList4::SetTabProperties](http://msdn.microsoft.com/library/dd562049\(vs.85\).aspx).  
+ Uma combinação de valores STPFLAG. Para obter mais informações, consulte [ITaskbarList4::SetTabProperties](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-itaskbarlist4-settabproperties).  
   
 ### <a name="remarks"></a>Comentários  
   

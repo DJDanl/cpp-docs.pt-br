@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4643181bf70bc92f4ef5e88b8a9add1ba7bdaad7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63097c9ac47f3b791ff7fd5949cece4d85e5ca1f
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849295"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540735"
 ---
 # <a name="rawinterfacesonly"></a>raw_interfaces_only
-**Específicas do C++**  
+**Específico do C++**  
   
- Suprime a geração de funções de invólucro de tratamento de erros e [propriedade](../cpp/property-cpp.md) declarações que usam essas funções de wrapper.  
+Suprime a geração de funções de wrapper de tratamento de erros e [propriedade](../cpp/property-cpp.md) declarações que usam essas funções wrapper.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,12 +35,14 @@ raw_interfaces_only
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O atributo `raw_interfaces_only` também faz com que o prefixo padrão usado na nomenclatura das funções que não são da propriedade seja removido. Normalmente, o prefixo é **raw_**. Se esse atributo for especificado, os nomes de função serão diretamente da biblioteca de tipos.  
+ 
+O **raw_interfaces_only** atributo também faz com que o prefixo padrão usado na nomeação as funções não são da propriedade a ser removido. Normalmente, é o prefixo **RAW _**. Se esse atributo for especificado, os nomes de função serão diretamente da biblioteca de tipos.  
   
- Esse atributo permite que você exiba somente o conteúdo de nível baixo da biblioteca de tipos.  
+Esse atributo permite que você exiba somente o conteúdo de nível baixo da biblioteca de tipos.  
   
- **TÉRMINO específicas do C++**  
+**FIM de específico de C++**  
   
 ## <a name="see-also"></a>Consulte também  
- [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import diretiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

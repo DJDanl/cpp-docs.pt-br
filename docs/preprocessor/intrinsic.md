@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e908a07253e924fa3cfc0a11cdef57a9253eee00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c222a939ccb00dc3b7466a1cb1a83abe7ea4036
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844784"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539347"
 ---
 # <a name="intrinsic"></a>intrinsic
 
@@ -37,11 +37,11 @@ Especifica que as chamadas para as funções especificadas na lista de argumento
 
 ## <a name="remarks"></a>Comentários
 
-O **intrínseco** pragma informa ao compilador que uma função tem conhecidos comportamento.  O compilador pode chamar a função e não substituir a chamada de função pelas instruções embutidas, se isso resultar em um melhor desempenho.
+O **intrínseco** pragma informa ao compilador que uma função tem um comportamento conhecido.  O compilador pode chamar a função e não substituir a chamada de função pelas instruções embutidas, se isso resultar em um melhor desempenho.
 
-As funções da biblioteca com formas intrínsecas estão listadas abaixo. Uma vez um **intrínseco** pragma é visto, ele entra em vigor na primeira definição de função que contém uma função intrínseca especificada. O efeito continuará até o final do arquivo de origem ou a aparência de um **função** pragma especificando a mesma função intrínseca. O **intrínseco** pragma pode ser usado somente fora de uma definição de função — no nível global.
+As funções da biblioteca com formas intrínsecas estão listadas abaixo. Uma vez um **intrínseco** pragma é considerado, ele entra em vigor na primeira definição de função que contém uma função intrínseca especificada. O efeito continua até o final do arquivo de origem ou até o aparecimento de um `function` pragma especificando a mesma função intrínseca. O **intrínseco** pragma pode ser usado apenas uma definição de função — no nível global.
 
-As funções a seguir têm intrínsecos formulários e os formulários intrínsecos são usados quando você especificar [/Oi](../build/reference/oi-generate-intrinsic-functions.md):
+As seguintes funções têm formas intrínsecas e as formas intrínsecas são usadas quando você especifica [/Oi](../build/reference/oi-generate-intrinsic-functions.md):
 
 |||||
 |-|-|-|-|
@@ -56,11 +56,11 @@ Os programas que usam funções intrínsecas são mais rápidos porque não têm
 
 **x86 específico**
 
-O **_disable** e **habilitar** intrínsecos gerar instruções de modo kernel para habilitar/desabilitar interrupções e pode ser útil em drivers do modo kernel.
+O `_disable` e `_enable` intrínsecos gerar instruções de modo kernel para desabilitar/habilitar interrupções e podem ser úteis nos drivers do modo kernel.
 
 ### <a name="example"></a>Exemplo
 
-Compile o código a seguir na linha de comando com "cl -c -FAs sample.c" e verifique sample.asm para ver que eles se transformam em CLI e STI de instruções x86:
+Compile o código a seguir na linha de comando com `cl -c -FAs sample.c` e examine sample.asm para ver o que eles se transformar em x86 da CLI e STI de instruções:
 
 ```cpp
 // pragma_directive_intrinsic.cpp
@@ -77,7 +77,7 @@ int main() {
 }
 ```
 
-**Término x86 específico**
+**X86 de fim de específico**
 
 As funções de ponto flutuante listadas abaixo não têm formas intrínsecas reais. Elas têm versões que passam argumentos diretamente para o chip de ponto flutuante em vez enviá-los para a pilha do programa:
 
@@ -86,7 +86,7 @@ As funções de ponto flutuante listadas abaixo não têm formas intrínsecas re
 |[acos](../c-runtime-library/reference/acos-acosf-acosl.md)|[cosh](../c-runtime-library/reference/cosh-coshf-coshl.md)|[pow](../c-runtime-library/reference/pow-powf-powl.md)|[tanh](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|
 |[asin](../c-runtime-library/reference/asin-asinf-asinl.md)|[fmod](../c-runtime-library/reference/fmod-fmodf.md)|[sinh](../c-runtime-library/reference/sinh-sinhf-sinhl.md)||
 
- As funções de ponto flutuantes listadas abaixo têm formulários intrínsecos true quando você especificar [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/Og](../build/reference/og-global-optimizations.md), e [Fast](../build/reference/fp-specify-floating-point-behavior.md) (ou qualquer opção que inclui /Og: [/ OX](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)e /O2):
+ As funções de ponto flutuantes listadas abaixo têm formas intrínsecas reais quando você especifica [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/Og](../build/reference/og-global-optimizations.md), e [Fast](../build/reference/fp-specify-floating-point-behavior.md) (ou qualquer opção que incluir /Og: [/ OX](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)e/O2):
 
 |||||
 |-|-|-|-|
@@ -96,9 +96,9 @@ As funções de ponto flutuante listadas abaixo não têm formas intrínsecas re
 
 Você pode usar [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md) ou [/Za](../build/reference/za-ze-disable-language-extensions.md) para substituir a geração das opções de ponto flutuantes intrínsecas true. Nesse caso, as funções são geradas como rotinas de biblioteca que passam argumentos diretamente para o chip de ponto flutuante em vez de enviá-los para a pilha do programa.
 
-Consulte [#pragma função](../preprocessor/function-c-cpp.md) para obter informações e um exemplo de como habilitar/desabilitar intrínsecos de um bloco de texto de origem.
+Ver [#pragma função](../preprocessor/function-c-cpp.md) para obter informações e um exemplo de como habilitar/desabilitar intrínsecos para um bloco de texto de origem.
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
+[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)  

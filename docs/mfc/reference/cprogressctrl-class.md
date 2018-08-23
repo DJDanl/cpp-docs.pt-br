@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1c4d1d2a7c37838a57a55189330465cd0700e8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850151"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538800"
 ---
 # <a name="cprogressctrl-class"></a>Classe CProgressCtrl
 Fornece a funcionalidade do controle de barra de progresso comuns do Windows.  
@@ -350,10 +350,12 @@ COLORREF SetBarColor(COLORREF clrBar);
 |[in] *clrBar*|Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que especifica a nova cor da barra do indicador de progresso. Especifique CLR_DEFAULT para fazer com que a barra de progresso usar sua cor padrão.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- A cor anterior da barra do indicador de progresso, representado como uma [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor ou CLR_DEFAULT se a cor da barra do indicador de progresso é a cor padrão.  
+
+A cor anterior da barra do indicador de progresso, representado como uma [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor ou CLR_DEFAULT se a cor da barra do indicador de progresso é a cor padrão.  
   
 ### <a name="remarks"></a>Comentários  
- O `SetBarColor` o barra de progresso da somente se de cor do método define uma [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] [tema](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx) não está em vigor.  
+
+O `SetBarColor` método define o barra de progresso da somente se de cor de um Windows Vista [tema](/windows/desktop/Controls/visual-styles-overview) não está em vigor.  
   
  Esse método envia o [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838) mensagem, que é descrita no SDK do Windows.  
   

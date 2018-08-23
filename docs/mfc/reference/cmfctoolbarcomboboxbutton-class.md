@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24fee4d4a73fb2933b00160879be130f4c33083b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4555de3e42efd298cc7a6f67949a8b474f76064
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854051"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538573"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Classe CMFCToolBarComboBoxButton
 Um botão de barra de ferramentas que contém um controle de caixa de combinação ( [classe CComboBox](../../mfc/reference/ccombobox-class.md)).  
@@ -1165,7 +1165,7 @@ void SetText(LPCTSTR lpszText);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *lpszText*  
- Ponteiro para uma cadeia de caracteres que que contém o texto para a caixa de edição.  
+ Ponteiro para uma cadeia de caracteres que contém o texto para a caixa de edição.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   

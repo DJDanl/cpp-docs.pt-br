@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e4503ab027589f54c5b5bce60dc405a570dcc59
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 345da5de492c33107effffb9c97b2fe60906e899
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849685"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538973"
 ---
 # <a name="nosmartpointers"></a>no_smart_pointers
-**Específicas do C++**  
+**Específico do C++**  
   
- Suprime a criação de ponteiros inteligentes para todas as interfaces na biblioteca de tipos.  
+Suprime a criação de ponteiros inteligentes para todas as interfaces na biblioteca de tipos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,10 +35,12 @@ no_smart_pointers
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Por padrão, quando você usa `#import`, consegue uma declaração de ponteiro inteligente em todas as interfaces na biblioteca de tipos. Esses ponteiros inteligentes são do tipo [com_ptr_t classe](../cpp/com-ptr-t-class.md).  
+ 
+Por padrão, quando você usa `#import`, consegue uma declaração de ponteiro inteligente em todas as interfaces na biblioteca de tipos. Esses ponteiros inteligentes são do tipo [classe com_ptr_t](../cpp/com-ptr-t-class.md).  
   
- **TÉRMINO específicas do C++**  
+**FIM de específico de C++**  
   
 ## <a name="see-also"></a>Consulte também  
- [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import diretiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

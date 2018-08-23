@@ -23,40 +23,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b20a476e1701f58782b97f986ee6c3d4b310b566
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 76a29a7ae4734e5d1f1930d5309163d1e1519aa4
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846227"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540732"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Diretivas Pragma e a palavra-chave __Pragma
-As políticas de pragma especificam recursos de compilador específicos do computador ou da operação. A palavra-chave `__pragma`, que é específica do compilador da Microsoft, permite codificar políticas de pragma dentro de definições de macro.  
+As políticas de pragma especificam recursos de compilador específicos do computador ou da operação. O **pragma** palavra-chave, que é específico para o compilador da Microsoft, permite codificar políticas de pragma dentro de definições de macro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      #pragma token-string  
+#pragma token-string  
 __pragma(token-string)  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Cada implementação de C e C++ oferece suporte a alguns recursos exclusivos para seu computador host ou sistema operacional. Alguns programas, por exemplo, devem exercitar o controle preciso sobre as áreas de memória onde os dados são colocados ou para controlar a maneira como determinadas funções recebem parâmetros. As políticas `#pragma` proporcionam uma maneira para que cada compilador ofereça recursos específicos de máquinas e sistemas operacionais enquanto mantém a compatibilidade geral com as linguagens C e C++.  
+ 
+Cada implementação de C e C++ oferece suporte a alguns recursos exclusivos para seu computador host ou sistema operacional. Alguns programas, por exemplo, devem exercitar o controle preciso sobre as áreas de memória onde os dados são colocados ou para controlar a maneira como determinadas funções recebem parâmetros. O **#pragma** diretivas oferecem uma maneira para que cada compilador ofereça recursos específicos do computador e do sistema operacional enquanto mantém a compatibilidade geral com as linguagens C e C++.  
   
- Os pragmas são específicos do computador ou do sistema operacional por definição e normalmente são diferentes para todos os compiladores. Os pragmas podem ser usados em instruções condicionais para fornecerem nova funcionalidade de pré-processador ou para fornecerem informações definidas pela implementação ao compilador.  
+Os pragmas são específicos do computador ou do sistema operacional por definição e normalmente são diferentes para todos os compiladores. Os pragmas podem ser usados em instruções condicionais para fornecerem nova funcionalidade de pré-processador ou para fornecerem informações definidas pela implementação ao compilador.  
   
- `token-string` é uma série de caracteres que oferece uma instrução de compilador específica e argumentos, se houver. O sinal de número (**#**) deve ser o primeiro caractere que não esteja em branco na linha que contém o pragma; caracteres de espaço em branco pode separar o sinal de número e a palavra "pragma". Depois de `#pragma`, escreva qualquer texto que o conversor possa analisar, como tokens de pré-processamento. O argumento para `#pragma` está sujeito a uma expansão de macro.  
+`token-string` é uma série de caracteres que oferece uma instrução de compilador específica e argumentos, se houver. O sinal de número (**#**) deve ser o primeiro caractere diferente de espaço em branco na linha que contém o pragma; os caracteres de espaço em branco podem separar o sinal de número e a palavra "pragma". A seguir **#pragma**, escreva qualquer texto que o conversor possa analisar como tokens de pré-processamento. O argumento **#pragma** está sujeito a expansão de macro.  
   
- Se o compilador encontrar um pragma que não reconhecer, ele emitirá um aviso e continuará a compilação.  
+Se o compilador encontrar um pragma que não reconhecer, ele emitirá um aviso e continuará a compilação.  
   
- Os compiladores C e C++ da Microsoft reconhecem os seguintes pragmas:  
+Os compiladores C e C++ da Microsoft reconhecem os seguintes pragmas:  
   
 ||||  
 |-|-|-|  
 |[alloc_text](../preprocessor/alloc-text.md)|[auto_inline](../preprocessor/auto-inline.md)|[bss_seg](../preprocessor/bss-seg.md)|  
 |[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[comment](../preprocessor/comment-c-cpp.md)|  
-|[componente](../preprocessor/component.md)|[está de acordo com](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|  
+|[componente](../preprocessor/component.md)|[está em conformidade com](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|  
 |[data_seg](../preprocessor/data-seg.md)|[preterido](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|  
 |[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|  
 |[function](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|  
@@ -73,7 +73,8 @@ __pragma(token-string)
  1. Com suporte apenas do compilador C++.  
   
 ## <a name="pragmas-and-compiler-options"></a>Pragmas e opções do compilador  
- Alguns pragmas oferecem a mesma funcionalidade que as opções de compilador. Quando um pragma está localizado no código-fonte, ele substitui o comportamento especificado pela opção do compilador. Por exemplo, se você especificou [/Zp8](../build/reference/zp-struct-member-alignment.md), você pode substituir essa configuração de compilador seções específicas do código com [pacote](../preprocessor/pack.md):  
+ 
+Alguns pragmas oferecem a mesma funcionalidade que as opções de compilador. Quando um pragma está localizado no código-fonte, ele substitui o comportamento especificado pela opção do compilador. Por exemplo, se você especificou [/zp8](../build/reference/zp-struct-member-alignment.md), você pode substituir essa configuração de compilador para seções específicas do código com [pack](../preprocessor/pack.md):  
   
 ```  
 cl /Zp8 ...  
@@ -87,11 +88,12 @@ cl /Zp8 ...
 ```  
   
 ## <a name="the-pragma-keyword"></a>A palavra-chave __pragma()  
- **Específico da Microsoft**  
+ 
+**Específico da Microsoft**  
   
- O compilador também oferece suporte à palavra-chave `__pragma`, que tem a mesma funcionalidade que a política `#pragma`, mas que pode ser usada integrada a uma definição de macro. O `#pragma` diretiva não pode ser usada em uma definição de macro porque o compilador interpreta o caractere de sinal de número ('#') na diretiva para ser o [operador stringizing (#)](../preprocessor/stringizing-operator-hash.md).  
+O compilador também dá suporte a **pragma** palavra-chave, que tem a mesma funcionalidade como a **#pragma** diretiva, mas pode ser usada integrada a uma definição de macro. O **#pragma** diretiva não pode ser usada em uma definição de macro porque o compilador interpreta o caractere de sinal de número ('#') na diretiva seja a [operador stringizing (#)](../preprocessor/stringizing-operator-hash.md).  
   
- O exemplo de código a seguir demonstra como a palavra-chave `__pragma` pode ser usada em uma macro. Esse código foi retirado do cabeçalho mfcdual.h no exemplo ACDUAL em "Exemplos de suporte a COM de compilador":  
+O exemplo de código a seguir demonstra como o **pragma** palavra-chave pode ser usado em uma macro. Esse código foi retirado do cabeçalho mfcdual.h no exemplo ACDUAL em "Exemplos de suporte a COM de compilador":  
   
 ```  
 #define CATCH_ALL_DUAL \  
@@ -111,9 +113,10 @@ END_CATCH_ALL \
 return _hr; \  
 ```  
   
- **Encerrar específicas da Microsoft**  
+**Final específico da Microsoft**  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de pré-processador C/C++](../preprocessor/c-cpp-preprocessor-reference.md)   
- [Pragmas de C](../c-language/c-pragmas.md)   
- [Palavras-chave](../cpp/keywords-cpp.md)
+ 
+[Referência de pré-processador C/C++](../preprocessor/c-cpp-preprocessor-reference.md)   
+[Pragmas C](../c-language/c-pragmas.md)   
+[Palavras-chave](../cpp/keywords-cpp.md)

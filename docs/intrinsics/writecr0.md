@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1437aa6f13a6f19afad36a59985c4d14e8e6a1d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68bb7ec3d89ac7fffbc2896023fbd2f1dd0584ba
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325832"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539953"
 ---
 # <a name="writecr0"></a>__writecr0
 **Seção específica da Microsoft**  
   
- Grava o valor `Data` ao registro CR0.  
+ Grava o valor `Data` para o registro CR0.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,9 +44,9 @@ void writecr0(
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__writecr0`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writecr0`|x86, x64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  Esse intrínseco só está disponível no modo kernel e a rotina só está disponível como um intrínseco.  

@@ -124,17 +124,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1da517ef952dd3fcdb0772feedb8e576be9502b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff14a4d8e013adc401b13daa68ffcb9a739706d8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850014"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540540"
 ---
 # <a name="cmfcribbonbutton-class"></a>Classe CMFCRibbonButton
 O `CMFCRibbonButton` classe implementa botões que você pode posicionar em elementos de barra de faixa de opções, como painéis, barras de ferramentas de acesso rápido e menus pop-up.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxe  
   

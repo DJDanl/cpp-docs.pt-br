@@ -1,5 +1,5 @@
 ---
-title: Suporte multithread para código anterior (Visual C++) | Microsoft Docs
+title: Suporte de multithreading para código anterior (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,47 +20,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4ecd5f210aa01c41b3806ce15e19e77b8c93324
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c911ff2f0dcd43a6f07144f893b91f3a97c6708b
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687719"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538378"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Suporte multithread para código anterior (Visual C++)
-Visual C++ permitem que você tenha vários threads simultâneos de execução em execução simultaneamente. Com multithread, você pode executar tarefas em segundo plano, gerenciar simultâneos fluxos de entrada, gerenciar uma interface de usuário e muito mais.  
+Visual C++ permite que você tenha vários threads simultâneos de execução sendo executados simultaneamente. Com o multithreading, você pode rotacionar tarefas em segundo plano, gerenciar fluxos simultâneos de entrada, gerenciar uma interface do usuário e muito mais.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Multithreading com C e Win32](../parallel/multithreading-with-c-and-win32.md)  
- Fornece suporte para a criação de aplicativos multithread com o Microsoft Windows  
+ 
+[Multithreading com C e Win32](../parallel/multithreading-with-c-and-win32.md)  
+Fornece suporte para criar aplicativos multithread com o Microsoft Windows  
   
- [Multithreading com C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
- Descreve quais são os processos e threads e o método do MFC para multithreading é.  
+[Multithreading com C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
+Descreve quais são os processos e threads e o que a abordagem MFC para multithreading é.  
   
- [Multithread e localidades](../parallel/multithreading-and-locales.md)  
- Aborda problemas que surgem ao usar a funcionalidade de localidade da biblioteca de tempo de execução do C e a biblioteca padrão C++ em um aplicativo multithread.  
+[Multithread e localidades](../parallel/multithreading-and-locales.md)  
+Discute problemas que ocorrem ao usar a funcionalidade de localidade da biblioteca de tempo de execução C e a biblioteca padrão C++ em um aplicativo multithreaded.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [CWinThread](../mfc/reference/cwinthread-class.md)  
- Representa um segmento de execução dentro de um aplicativo.  
+ 
+[CWinThread](../mfc/reference/cwinthread-class.md)  
+Representa um segmento de execução dentro de um aplicativo.  
   
- [CSyncObject](../mfc/reference/csyncobject-class.md)  
- Descreve uma classe pura virtual que fornece funcionalidade comum para os objetos de sincronização no Win32.  
+[CSyncObject](../mfc/reference/csyncobject-class.md)  
+Descreve uma classe virtual pura que fornece funcionalidade comum para os objetos de sincronização no Win32.  
   
- [CSemaphore](../mfc/reference/csemaphore-class.md)  
- Representa um semáforo, que é um objeto de sincronização que permite que um número limitado de threads em um ou mais processos para acessar um recurso.  
+[CSemaphore](../mfc/reference/csemaphore-class.md)  
+Representa um semáforo, que é um objeto de sincronização que permite que um número limitado de threads em um ou mais processos para acessar um recurso.  
   
- [CMutex](../mfc/reference/cmutex-class.md)  
- Representa um mutex, que é um objeto de sincronização que permite que um thread mutuamente acesse um recurso.  
+[CMutex](../mfc/reference/cmutex-class.md)  
+Representa um mutex, que é um objeto de sincronização que permite um acesso mutuamente exclusivo de thread a um recurso.  
   
- [CCriticalSection](../mfc/reference/ccriticalsection-class.md)  
- Representa uma seção crítica, o que é um objeto de sincronização que permite que um segmento por vez para acessar um recurso ou uma seção de código.  
+[CCriticalSection](../mfc/reference/ccriticalsection-class.md)  
+Representa uma seção crítica, o que é um objeto de sincronização que permite que um thread por vez para acessar um recurso ou seção de código.  
   
- [CEvent](../mfc/reference/cevent-class.md)  
- Representa um evento, que é um objeto de sincronização que permite que um thread notificar o outro que um evento ocorreu.  
+[CEvent](../mfc/reference/cevent-class.md)  
+Representa um evento, que é um objeto de sincronização que permite que um thread notifique outro que ocorreu um evento.  
   
- [CMultiLock](../mfc/reference/cmultilock-class.md)  
- Representa o mecanismo de controle de acesso usado para controlar o acesso a recursos em um programa multi-threaded.  
+[CMultiLock](../mfc/reference/cmultilock-class.md)  
+Representa o mecanismo de controle de acesso usado no controle de acesso aos recursos em um programa multi-threaded.  
   
- [CSingleLock](../mfc/reference/csinglelock-class.md)  
- Representa o mecanismo de controle de acesso usado para controlar o acesso a um recurso em um programa multi-threaded.  
+[CSingleLock](../mfc/reference/csinglelock-class.md)  
+Representa o mecanismo de controle de acesso usado no controle de acesso a um recurso em um programa multi-threaded.  

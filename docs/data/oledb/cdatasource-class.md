@@ -68,12 +68,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5c3bd275c189e7c99bbc275caf31436b5f5a1d5e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 69a96cf199e7ce131e91f750cdd83ebc915c38d8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340079"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572025"
 ---
 # <a name="cdatasource-class"></a>Classe CDataSource
 Corresponde a um objeto de fonte de dados do OLE DB, que representa uma conexão por meio de um provedor para uma fonte de dados.  
@@ -153,7 +153,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [idbproperties:: GetProperties](https://msdn.microsoft.com/library/ms714344.aspx) na *referência do programador do OLE DB* no Windows SDK.  
+ Ver [idbproperties:: GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) na *referência do programador do OLE DB* no Windows SDK.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um HRESULT padrão.  
@@ -238,10 +238,10 @@ HRESULT Open(LPCSTR szProgID,
  [in] O `CLSID` do provedor de dados.  
   
  *pPropSet*  
- [in] Um ponteiro para uma matriz de [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) estruturas que contém as propriedades e valores a serem definidos. Ver [conjuntos de propriedades e grupos de propriedades](https://msdn.microsoft.com/library/ms713696.aspx) na *referência do programador do OLE DB* no Windows SDK.  
+ [in] Um ponteiro para uma matriz de [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) estruturas que contém as propriedades e valores a serem definidos. Ver [conjuntos de propriedades e grupos de propriedades](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) na *referência do programador do OLE DB* no Windows SDK.  
   
  *nPropertySets*  
- [in] O número de [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) estruturas passada a *pPropSet* argumento.  
+ [in] O número de [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) estruturas passada a *pPropSet* argumento.  
   
  *pName*  
  [in] O nome do banco de dados ao qual se conectar.  
@@ -253,7 +253,7 @@ HRESULT Open(LPCSTR szProgID,
  [in] A senha do usuário.  
   
  *nInitMode*  
- [in] Modo de inicialização do banco de dados. Ver [propriedades de inicialização](https://msdn.microsoft.com/library/ms723127.aspx)na *referência do programador DB OLE* no SDK do Windows para obter uma lista dos modos de inicialização válido. Se *nInitMode* é zero, nenhuma inicialização modo é incluído no conjunto de propriedades usado para abrir a conexão.  
+ [in] Modo de inicialização do banco de dados. Ver [propriedades de inicialização](/previous-versions/windows/desktop/ms723127\(v=vs.85\))na *referência do programador DB OLE* no SDK do Windows para obter uma lista dos modos de inicialização válido. Se *nInitMode* é zero, nenhuma inicialização modo é incluído no conjunto de propriedades usado para abrir a conexão.  
   
  *szProgID*  
  [in] Um identificador de programa.  
@@ -293,7 +293,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
  *szFileName*  
  [in] O nome de um arquivo, normalmente, uma conexão de fonte de dados (. Arquivo UDL).  
   
- Para obter mais informações sobre arquivos de link de dados (arquivos. udl), consulte [visão geral da API de Link de dados](https://msdn.microsoft.com/library/ms718102.aspx) no SDK do Windows.  
+ Para obter mais informações sobre arquivos de link de dados (arquivos. udl), consulte [visão geral da API de Link de dados](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um HRESULT padrão.  
@@ -376,10 +376,10 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
  [in] ID de um provedor de dados do programa.  
   
  *pPropset*  
- [in] Um ponteiro para uma matriz de [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) estruturas que contém as propriedades e valores a serem definidos. Ver [conjuntos de propriedades e grupos de propriedades](https://msdn.microsoft.com/library/ms713696.aspx) na *referência do programador do OLE DB* no Windows SDK. Se o objeto de fonte de dados for inicializado, as propriedades devem pertencer ao grupo de propriedades de fonte de dados. Se a mesma propriedade for especificada mais de uma vez na *pPropset*, em seguida, o valor que é usado é específica do provedor. Se *ulPropSets* for zero, esse parâmetro será ignorado.  
+ [in] Um ponteiro para uma matriz de [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) estruturas que contém as propriedades e valores a serem definidos. Ver [conjuntos de propriedades e grupos de propriedades](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) na *referência do programador do OLE DB* no Windows SDK. Se o objeto de fonte de dados for inicializado, as propriedades devem pertencer ao grupo de propriedades de fonte de dados. Se a mesma propriedade for especificada mais de uma vez na *pPropset*, em seguida, o valor que é usado é específica do provedor. Se *ulPropSets* for zero, esse parâmetro será ignorado.  
   
  *ulPropSets*  
- [in] O número de [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) estruturas passada a *pPropSet* argumento. Se isso for zero, o provedor ignora *pPropset*.  
+ [in] O número de [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) estruturas passada a *pPropSet* argumento. Se isso for zero, o provedor ignora *pPropset*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um HRESULT padrão.  

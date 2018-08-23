@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37bd71ae328af76a01106d2efe6cd3945ddb25b9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 5ba3b93c1c45edabc86759a14f27309849d58553
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853531"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42539179"
 ---
 # <a name="crebarctrl-class"></a>Classe CReBarCtrl
 Encapsula a funcionalidade de um controle rebar, que é um contêiner para uma janela filho.  
@@ -341,7 +341,7 @@ BOOL DeleteBand(UINT uBand);
  [!code-cpp[NVC_MFC_CReBarCtrl#4](../../mfc/reference/codesnippet/cpp/crebarctrl-class_2.cpp)]  
   
 ##  <a name="dragmove"></a>  CReBarCtrl::DragMove  
- Implementa o comportamento da mensagem do Win32 [RB_DRAGMOVE](https://msdn.microsoft.com/library/bb774433.aspx), conforme descrito no SDK do Windows.  
+ Implementa o comportamento da mensagem do Win32 [RB_DRAGMOVE](/windows/desktop/Controls/rb-dragmove), conforme descrito no SDK do Windows.  
   
 ```  
 void DragMove(DWORD dwPos = (DWORD)-1);
