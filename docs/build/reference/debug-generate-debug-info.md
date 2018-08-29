@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f93c47a0f96cf0b75b453bcea97212d4ab2fd6d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11b3799447e160a56d73441b60215f1dfcb3e227
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375721"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132129"
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG (gerar informações de depuração)
 ```  
@@ -42,37 +42,37 @@ ms.locfileid: "32375721"
 
 O **/Debug** opção cria informações de depuração para o executável.    
   
-O vinculador coloca as informações de depuração em um arquivo de programa (PDB) de banco de dados. Atualiza o PDB durante compilações subsequentes do programa.  
+O vinculador coloca as informações de depuração em um arquivo de banco de dados (PDB) do programa. Ele atualiza o PDB durante compilações subsequentes do programa.  
   
-Um executável (arquivo .exe ou DLL) criado para depuração contém o nome e caminho de PDB correspondente. O depurador lê o nome inserido e usa o PDB ao depurar o programa. O vinculador usa o nome base do programa e a extensão. PDB para nomear o banco de dados do programa e incorpora o caminho onde ele foi criado. Para substituir esse padrão, defina [/PDB](../../build/reference/pdb-use-program-database.md) e especifique um nome de arquivo diferente.  
+Um arquivo executável (arquivo .exe ou DLL) criado para depuração contém o nome e caminho de PDB correspondente. O depurador lê o nome inserido e usa o PDB quando você depura o programa. O vinculador usa o nome base do programa e a extensão. PDB para nomear o banco de dados do programa e insere o caminho onde ele foi criado. Para substituir esse padrão, defina [/PDB](../../build/reference/pdb-use-program-database.md) e especifique um nome de arquivo diferente.  
 
-O **/Debug: fastlink** opção deixa as informações de símbolo privada os produtos individuais de compilação usados para criar o arquivo executável. Ele gera um PDB limitado que indexa para as informações de depuração nos arquivos de objeto e usadas para criar o executável em vez de fazer uma cópia completa de bibliotecas. Essa opção pode vincular de dois a quatro vezes mais rápido a geração de PDB completa e é recomendada quando você estiver depurando localmente e tiver os compilação de produtos disponíveis. Esta limitado PDB não pode ser usado para depuração quando os produtos de compilação necessários não estão disponíveis, como quando o executável é implantado em outro computador. Em um prompt de comando do desenvolvedor, você pode usar a ferramenta mspdbcmf.exe para gerar um PDB completo desse PDB limitado. No Visual Studio, use os itens de menu do projeto ou de compilação para gerar um arquivo PDB completo para criar um PDB completo para o projeto ou solução.  
+O **/Debug: fastlink** opção está disponível no Visual Studio 2017 e posterior. Essa opção deixa as informações de símbolo privada nos produtos individuais de compilação usados para criar o arquivo executável. Ele gera um PDB de limitado para as informações de depuração nos arquivos de objeto e bibliotecas usadas para criar o arquivo executável em vez de fazer uma cópia completa de índices. Essa opção pode vincular de duas a quatro vezes mais depressa a geração de PDB completa e é recomendada quando você estiver depurando localmente e tiver os produtos de build disponíveis. Esse PDB limitado não pode ser usado para depuração quando os produtos de compilação necessários não estiverem disponíveis, como quando o executável é implantado em outro computador. Em um prompt de comando do desenvolvedor, você pode usar a ferramenta mspdbcmf.exe para gerar um PDB completo desse PDB limitado. No Visual Studio, use os itens de menu do projeto ou de compilação para gerar um arquivo PDB completo para criar um PDB completo para o projeto ou solução.  
   
-O **/Debug: full** opção move todas as informações de símbolo privada de produtos individuais de compilação (arquivos de objeto e bibliotecas) em um único PDB e pode ser a parte mais demorada do link. No entanto, o PDB completo pode ser usado para depurar o executável quando outros produtos de compilação não estiverem disponíveis, como quando o executável é implantado.  
+O **/Debug: full** opção move todas as informações de símbolo privada de produtos individuais de compilação (arquivos de objeto e bibliotecas) para um único PDB e pode ser a parte mais demorada do link. No entanto, o PDB completo pode ser usado para depurar o executável quando não há outros produtos de build estiverem disponíveis, como quando o executável é implantado.  
   
-O **/Debug: nenhum** opção gera um PDB.  
+O **/Debug: nenhum** opção não gera um PDB.  
   
-Quando você especifica **/Debug** sem opções adicionais, o vinculador assume como padrão **/Debug: full** de linha de comando e makefile compilações, versão cria no Visual Studio IDE e de depuração e versão cria no Visual Studio 2015 e versões anteriores. A partir do Visual Studio de 2017, o sistema de compilação no IDE assume como padrão **/Debug: fastlink** quando você especifica o **/Debug** opção para compilações de depuração. Outros padrões foram alterados para manter a compatibilidade com versões anteriores.  
+Quando você especifica **/Debug** sem opções adicionais, o vinculador usa como padrão **/Debug: full** para linha de comando e compilações de makefile, versão se baseia no IDE do Visual Studio e para depuração e versão o build no Visual Studio 2015 e versões anteriores. A partir do Visual Studio 2017, o sistema de compilação no IDE assume como padrão **/Debug: fastlink** quando você especifica a **/Debug** opção para compilações de depuração. Outros padrões não foram alterados para manter a compatibilidade com versões anteriores.  
   
-O compilador [compatível C7](../../build/reference/z7-zi-zi-debug-information-format.md) (/ Z7) opção faz com que o compilador deixar as informações de depuração nos arquivos. obj. Você também pode usar o [banco de dados do programa](../../build/reference/z7-zi-zi-debug-information-format.md) opção de compilador (/Zi) para armazenar as informações de depuração em um PDB para o arquivo. obj. O vinculador procura PDB do objeto primeiro no caminho absoluto gravado no arquivo. obj, e, em seguida, no diretório que contém o arquivo. obj. Não é possível especificar o nome do arquivo PDB de um objeto ou o local para o vinculador.  
+O compilador [compatível com C7](../../build/reference/z7-zi-zi-debug-information-format.md) (/ Z7) opção faz com que o compilador deixar as informações de depuração em arquivos. obj. Você também pode usar o [banco de dados do programa](../../build/reference/z7-zi-zi-debug-information-format.md) (/Zi) a opção de compilador para armazenar as informações de depuração em um PDB para o arquivo. obj. O vinculador procura PDB do objeto primeiro no caminho absoluto gravado no arquivo. obj e, em seguida, no diretório que contém o arquivo. obj. Não é possível especificar o nome do arquivo PDB de um objeto ou o local para o vinculador.  
   
-[/ INCREMENTAL](../../build/reference/incremental-link-incrementally.md) está implícita quando /DEBUG é especificado.  
+[/ INCREMENTAL](../../build/reference/incremental-link-incrementally.md) é inferido quando /DEBUG é especificado.  
   
-/ DEBUG altera os padrões para o [/opt](../../build/reference/opt-optimizations.md) opção de REF de NOREF e ICF para NOICF, portanto, se você quiser que os padrões originais, você deve especificar explicitamente /OPT: ref ou /OPT: ICF.  
+/ DEPURAÇÃO altera os padrões para o [/opt](../../build/reference/opt-optimizations.md) opção de REF NOREF em ICF para NOICF, portanto, se você quiser que os padrões de originais, você deve especificar explicitamente /OPT: ref ou /OPT: ICF.  
   
 Não é possível criar um .exe ou. dll que contém informações de depuração. Depurar informações sempre são colocadas em um arquivo. obj ou. PDB.  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).  
   
 2.  Clique o **vinculador** pasta.  
   
 3.  Clique o **depuração** página de propriedades.  
   
-4.  Modificar o **gerar informações de depuração** propriedade para habilitar a geração de PDB. Isso permite que /Debug: fastlink por padrão no Visual Studio de 2017.  
+4.  Modificar a **gerar informações de depuração** propriedade para habilitar a geração de PDB. Isso permite que o /Debug: fastlink por padrão no Visual Studio 2017.  
   
-4.  Modificar o **gerar arquivo de banco de dados do programa completo** propriedade para habilitar /Debug: full para a geração de PDB completa para cada compilação incremental.  
+4.  Modificar a **gerar arquivo completo do banco de dados do programa** propriedade para habilitar /Debug: full para geração de PDB completa para cada compilação incremental.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   

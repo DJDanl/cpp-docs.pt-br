@@ -1,5 +1,5 @@
 ---
-title: Expressões Lambda em C++ constexpr | Microsoft Docs
+title: as expressões lambda constexpr em C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2017
 ms.technology:
@@ -14,14 +14,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b78fa3de7777ffc6702902cf967a405595caf12f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1b4636333861cc853130a777956ca4b88114f3c6
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408197"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131393"
 ---
-# <a name="constexpr-lambda-expressions-in-c"></a>constexpr expressões Lambda em C++
+# <a name="constexpr-lambda-expressions-in-c"></a>expressões lambda constexpr em C++
 **Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): uma expressão lambda pode ser declarada como **constexpr** ou usado em uma expressão da constante quando a inicialização de cada membro de dados que ele captura ou apresenta é permitido dentro de uma expressão constante.  
 
 ```cpp

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15748249a39813edc4446fa25511d20361b0706c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e4aea3a0125e2712203eb668197d42bd850aef5e
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405104"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131885"
 ---
 # <a name="if-else-statement-c"></a>Instrução if-else (C++)
 Controla a ramificação condicional. As instruções na *bloco if* são executados somente se o *expressão if* é avaliada como um valor diferente de zero (ou TRUE). Se o valor de *expressão* for diferente de zero *instrução1* e quaisquer outras instruções no bloco são executadas e o-bloco else, se presente, será ignorado. Se o valor de *expressão* for zero, em seguida, o bloco de if é ignorado e o-bloco else, se presente, é executado. São expressões que são avaliadas como diferente de zero
@@ -119,7 +119,8 @@ int main()
     }
 }
 ```  
-## <a name="if-statement-with-an-initializer"></a>Se a instrução com um inicializador
+## <a name="if_with_init"></a> Se a instrução com um inicializador
+
 **Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): uma **se** instrução também pode conter uma expressão que declara e inicializa uma variável nomeada. Use este formulário da instrução if quando a variável é necessária somente dentro do escopo do bloco if. 
 
 ```cpp
@@ -169,8 +170,8 @@ int main()
   
  O **else** cláusula de uma `if...else` instrução está associada com o mais próximo anterior **se** instrução no mesmo escopo que não tem um correspondente **else** instrução.   
 
-## <a name="constexpr-if-statements"></a>constexpr se instruções
-**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): em modelos de função, você pode usar um `constexpr if` instrução para tomar decisões de ramificação de tempo de compilação sem precisar recorrer a vários sobrecargas de função. Por exemplo, você pode escrever uma única função esse parâmetro de identificadores desempacotar (nenhuma sobrecarga de parâmetro de zero é necessária): 
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Se as instruções de constexpr
+**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): em modelos de função, você pode usar um **se constexpr** instrução para tomar decisões de ramificação de tempo de compilação sem precisar recorrer a várias sobrecargas de função. Por exemplo, você pode escrever uma única função esse parâmetro de identificadores desempacotar (nenhuma sobrecarga de parâmetro de zero é necessária): 
 
 ```cpp
 template <class T, class... Rest>
@@ -180,9 +181,8 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   constexpr if (sizeof...(r)) 
+   if constexpr (sizeof...(r)) 
    {
-      
       f(r...); 
    }
    else

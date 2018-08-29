@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb06a4ef2229b2b9e98bf7acabbe757744fc73
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 3708bce00b01ee796067bf91d99645cb61f19a53
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42573301"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900694"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Melhorias de conformidade do C++ no Visual Studio 2017 versões 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157) e [15.8](#update_158)
 
@@ -1680,6 +1680,8 @@ struct S : Base<T> {
 ```
 
 Para corrigir o erro, altere a instrução `return` para `return this->base_value;`.
+
+**Observação:** na biblioteca python Boost, já existe há algum tempo uma solução alternativa específica ao MSVC para uma declaração de encaminhamento de modelo no [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp). No modo [/permissive-](build/reference/permissive-standards-conformance.md), a partir do Visual Studio 2017 versão 15.8 (_MSC_VER=1915), o compilador de MSVC faz a pesquisa de nome dependente de argumento (ADL) corretamente e é consistente com outros compiladores, tornando essa proteção alternativa desnecessária. Para evitar o erro *C3861: 'unwind_type': identificador não encontrado*, confira [PR 229](https://github.com/boostorg/python/pull/229) no repositório Boostorg para atualizar o arquivo de cabeçalho. Já corrigimos o pacote Boost [vcpkg](vcpkg.md), portanto, se você obter ou atualizar suas fontes de Boost do vcpkg, não será necessário aplicar o patch separadamente.
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>Declarações e definições de encaminhamento no namespace std
 

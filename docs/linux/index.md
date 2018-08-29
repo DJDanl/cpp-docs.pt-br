@@ -1,20 +1,22 @@
 ---
 layout: LandingPage
-author: jasongroce
-ms.author: apexprodleads
 ms.topic: landing-page
 title: Documentação de desenvolvimento em Linux com C++
 description: Criar e depurar aplicativos em execução no Linux.
-ms.openlocfilehash: c4794dbeb7e5a1d356e251686653c6c0aa0a023a
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+author: mikeblome
+ms.author: mblome
+ms.workload:
+- cplusplus
+ms.openlocfilehash: adedfd2a6589d7d7d0fad453428d409932007e15
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "29794174"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131899"
 ---
 # <a name="linux-development-with-c-documentation"></a>Documentação de desenvolvimento em Linux com C++
 
-Criar e depurar aplicativos em execução no Linux.
+Use o Visual Studio 2017 para criar e depurar aplicativos em execução no Linux.
 
 <ul class="panelContent cardsF">
     <li>
@@ -29,7 +31,7 @@ Criar e depurar aplicativos em execução no Linux.
                     </div>
                     <div class="cardText">
                         <h3>Instalar e configurar a carga de trabalho do Linux</h3>
-                        <p>Saiba como configurar o Visual Studio para criar aplicativos do Linux em C++.</p>
+                        <p>Aprenda como configurar o Visual Studio 2017 e versões mais recentes para criar aplicativos do Linux em C++.</p>
                     </div>
                 </div>
             </div>

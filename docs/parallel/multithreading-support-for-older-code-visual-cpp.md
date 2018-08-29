@@ -1,7 +1,7 @@
 ---
 title: Suporte de multithreading para código anterior (Visual C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -20,25 +20,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c911ff2f0dcd43a6f07144f893b91f3a97c6708b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7b1b301186036460acc07a526267503da8b97678
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538378"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132096"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Suporte multithread para código anterior (Visual C++)
 Visual C++ permite que você tenha vários threads simultâneos de execução sendo executados simultaneamente. Com o multithreading, você pode rotacionar tarefas em segundo plano, gerenciar fluxos simultâneos de entrada, gerenciar uma interface do usuário e muito mais.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  
-[Multithreading com C e Win32](../parallel/multithreading-with-c-and-win32.md)  
+[Multithreading com C e Win32](multithreading-with-c-and-win32.md)  
 Fornece suporte para criar aplicativos multithread com o Microsoft Windows  
   
-[Multithreading com C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
+[Multithreading com C++ e MFC](multithreading-with-cpp-and-mfc.md)  
 Descreve quais são os processos e threads e o que a abordagem MFC para multithreading é.  
   
-[Multithread e localidades](../parallel/multithreading-and-locales.md)  
+[Multithread e localidades](multithreading-and-locales.md)  
 Discute problemas que ocorrem ao usar a funcionalidade de localidade da biblioteca de tempo de execução C e a biblioteca padrão C++ em um aplicativo multithreaded.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
