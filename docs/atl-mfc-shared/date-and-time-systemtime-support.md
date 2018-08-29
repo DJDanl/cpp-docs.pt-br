@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf48881b3baeb7dc5ab48483ae9b075a9c048a38
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 0698dbcb27e471218c39517676654156634aa022
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883561"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131380"
 ---
 # <a name="date-and-time-systemtime-support"></a>Data e hora: suporte a SYSTEMTIME
 O [CTime](../atl-mfc-shared/reference/ctime-class.md) classe tem construtores que aceitam os horários de sistema e o arquivo do Win32. Se você usa objetos `CTime` para esse fim, deve modificar sua inicialização de acordo, conforme descrito neste artigo.  
@@ -52,8 +52,6 @@ O [CTime](../atl-mfc-shared/reference/ctime-class.md) classe tem construtores qu
 -   [Data geral e da programação de tempo no MFC](../atl-mfc-shared/date-and-time.md)  
   
 -   [Suporte de automação de data e a programação de tempo](../atl-mfc-shared/date-and-time-automation-support.md)  
-  
--   [Classes de uso geral para programação de hora e data](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Data e hora](../atl-mfc-shared/date-and-time.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Multithreading: Como usar as Classes de sincronização | Microsoft Docs'
+title: 'Multithreading: Como usar as Classes de sincronização do MFC | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cec2f873f1fc46ebac2e0f1714c8f46ebc10eac4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e36f63f74a0edc1f6cbcf28b85adceed954cce3d
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597883"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131256"
 ---
-# <a name="multithreading-how-to-use-the-synchronization-classes"></a>Multithread: como usar as classes de sincronização
+# <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>Multithreading: Como usar as Classes de sincronização do MFC
 Sincronizar acesso a recursos entre threads é um problema comum ao escrever aplicativos multi-threaded. Ter dois ou mais threads simultaneamente os mesmos dados podem levar a resultados indesejáveis e imprevisíveis de acesso. Por exemplo, um thread pode estar sendo atualizada o conteúdo de uma estrutura enquanto outro thread esteja lendo o conteúdo da mesma estrutura. Ele é desconhecido que receberá o thread de leitura de dados: os dados antigos, os dados gravados recentemente ou, possivelmente, uma mistura de ambos. MFC fornece uma série de sincronização e classes de acesso de sincronização para ajudar a resolver esse problema. Este tópico explica as classes disponíveis e como usá-los para criar classes thread-safe em um aplicativo típico de vários threads.  
   
 Um aplicativo multithread típico tem uma classe que representa um recurso a ser compartilhado entre threads. Uma classe projetada corretamente, totalmente thread-safe não exige que você chamar quaisquer funções de sincronização. Tudo o que é tratado internamente a classe, permitindo que você se concentrar em como usar melhor a classe, não sobre como ele pode obter corrompido. É uma técnica eficaz para a criação de uma classe totalmente thread-safe mesclar a classe de sincronização na classe de recurso. Mesclando as classes de sincronização a classe compartilhada é um processo simples.  
@@ -63,8 +63,8 @@ singleLock.Unlock();
   
 As desvantagens dessa abordagem são que a classe será um pouco mais lenta do que a mesma classe sem os objetos de sincronização adicionados. Além disso, se houver uma chance de que mais de um thread pode excluir o objeto, a abordagem mesclada talvez nem sempre funciona. Nessa situação, é melhor manter objetos de sincronização separado.  
   
-Para obter informações sobre como determinar qual classe de sincronização a ser usado em situações diferentes, consulte [Multithreading: quando usar as Classes de sincronização](../parallel/multithreading-when-to-use-the-synchronization-classes.md). Para obter mais informações sobre a sincronização, consulte [sincronização](http://msdn.microsoft.com/library/windows/desktop/ms686353) no SDK do Windows. Para obter mais informações sobre suporte multithreading no MFC, consulte [Multithreading com C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md).  
+Para obter informações sobre como determinar qual classe de sincronização a ser usado em situações diferentes, consulte [Multithreading: quando usar as Classes de sincronização](multithreading-when-to-use-the-synchronization-classes.md). Para obter mais informações sobre a sincronização, consulte [sincronização](/windows/desktop/Sync/synchronization) no SDK do Windows. Para obter mais informações sobre suporte multithreading no MFC, consulte [Multithreading com C++ e MFC](multithreading-with-cpp-and-mfc.md).  
   
 ## <a name="see-also"></a>Consulte também  
  
-[Multithreading com C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Multithreading com C++ e MFC](multithreading-with-cpp-and-mfc.md)

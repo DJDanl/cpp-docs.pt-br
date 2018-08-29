@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1899187bd1ff8315300a1d60b24dbfb04f77a15a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 08a5e75092aaa467c6e1f937cc00a541aaf24bfa
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540364"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131330"
 ---
 # <a name="sample-multithread-c-program"></a>Programa C multithread de exemplo
-Bounce é um programa multithread de exemplo que cria um novo thread cada vez que a letra `a` ou `A` é digitado. Cada thread ignora uma face feliz de cor diferente na tela. Até 32 segmentos podem ser criados. Um encerramento normal do programa ocorre quando `q` ou `Q` é digitado. Para obter informações sobre a compilação e vinculação do Bounce, consulte [compilando e vinculando programas Multithread](../parallel/compiling-and-linking-multithread-programs.md).  
+Bounce é um programa multithread de exemplo que cria um novo thread cada vez que a letra `a` ou `A` é digitado. Cada thread ignora uma face feliz de cor diferente na tela. Até 32 segmentos podem ser criados. Um encerramento normal do programa ocorre quando `q` ou `Q` é digitado. Para obter informações sobre a compilação e vinculação do Bounce, consulte [compilando e vinculando programas Multithread](compiling-and-linking-multithread-programs.md).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -220,4 +220,4 @@ q
   
 ## <a name="see-also"></a>Consulte também  
 
-[Multithreading com C e Win32](../parallel/multithreading-with-c-and-win32.md)
+[Multithreading com C e Win32](multithreading-with-c-and-win32.md)

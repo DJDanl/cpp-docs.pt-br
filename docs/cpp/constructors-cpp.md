@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f60ba71a82bf09361e55f8c6b7cab82f49d47bd
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42573195"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131836"
 ---
 # <a name="constructors-c"></a>Construtores (C++)
 
@@ -598,7 +598,7 @@ O objeto criado pelos construtores é inicializado totalmente assim que o constr
 
 ## <a name="inheriting_constructors"></a> Herdar construtores (c++11)
 
-Uma classe derivada pode herdar os construtores de uma classe base direta usando uma declaração, conforme mostrado no exemplo a seguir:
+Uma classe derivada pode herdar os construtores de uma classe base direta usando um **usando** declaração conforme mostrado no exemplo a seguir:
 
 ```cpp
 #include <iostream>
@@ -647,7 +647,7 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-A instrução using traz para o escopo de todos os construtores da classe base, exceto aqueles que têm uma assinatura idêntica à construtores na classe derivada. Em geral, é melhor usar herança construtores, quando a classe derivada não declara nenhum membro de dados novo ou construtores.
+**Visual Studio 2017 versão 15.7 e posterior**: O **usando** instrução no **/std: c + + 17** modo traz para o escopo de todos os construtores da classe base, exceto aqueles que têm uma assinatura idêntica para construtores na classe derivada. Em geral, é melhor usar herança construtores, quando a classe derivada não declara nenhum membro de dados novo ou construtores. Consulte também [melhorias no Visual Studio 2017 versão 15.7](../cpp-conformance-improvements-2017.md#improvements_157).
 
 Um modelo de classe pode herdar todos os construtores de um argumento de tipo, se esse tipo Especifica uma classe base:
 

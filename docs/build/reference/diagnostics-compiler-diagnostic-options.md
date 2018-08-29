@@ -1,5 +1,5 @@
 ---
-title: -Diagnóstico (opções do compilador diagnósticas) | Microsoft Docs
+title: -diagnostics (opções do compilador diagnóstico) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/11/2016
 ms.technology:
@@ -19,14 +19,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d874e26a922a7f9cce7223b574d525d37733598
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f1dce7c7c48e7c7c94da95ca187e0388b3f5d4d
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371766"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131635"
 ---
-# <a name="diagnostics-compiler-diagnostic-options"></a>/Diagnostics (opções do compilador diagnósticas)  
+# <a name="diagnostics-compiler-diagnostic-options"></a>/Diagnostics (opções do compilador diagnóstico)  
   
 Use o **/diagnostics** opção de compilador para especificar a exibição de informações de local de erro e aviso.  
   
@@ -37,25 +37,28 @@ Use o **/diagnostics** opção de compilador para especificar a exibição de in
 ```  
 
 ## <a name="remarks"></a>Comentários  
+
+Essa opção tem suporte no Visual Studio 2017 e posterior.
+
 O **/diagnostics** opção de compilador controla a exibição de informações de aviso e erro.  
   
 O **/diagnostics:classic** é a opção padrão, que informa apenas o número de linha em que o problema foi encontrado.  
   
-O **/diagnostics:column** opção também inclui a coluna onde o problema foi encontrado. Isso pode ajudá-lo a identificar a construção de idioma específico ou o caractere que está causando o problema.  
+O **/diagnostics:column** opção também inclui a coluna onde o problema foi encontrado. Isso pode ajudá-lo a identificar o constructo de linguagem específica ou um caractere que está causando o problema.  
   
-O **/diagnostics:caret** opção inclui a coluna em que o problema foi encontrado e coloca um acento circunflexo (^) no local na linha do código onde o problema foi detectado.  
+O **/diagnostics:caret** opção inclui a coluna onde o problema foi encontrado e coloca um acento circunflexo (^) no local na linha de código em que o problema foi detectado.  
   
-Observe que em alguns casos, o compilador não detecta um problema em que ele ocorreu. Por exemplo, um ponto e vírgula ausente pode não ser detectado até que outros, inesperados símbolos foram encontrados. A coluna é informada e o cursor é colocado em que o compilador detectado que algo estava errado, o que nem sempre é aqui que você precisa fazer a correção.  
+Observe que, em alguns casos, o compilador não detecta um problema em que ele ocorreu. Por exemplo, um ponto e vírgula ausente pode não ser detectado até que os símbolos de outros, inesperados foram encontrados. A coluna é informada e o cursor é colocado em que o compilador detectou que algo estiver errado, o que nem sempre é onde você precisa fazer sua correção.  
   
-O **/diagnostics** opção está disponível a partir do Visual Studio de 2017.  
+O **/diagnostics** opção está disponível a partir do Visual Studio 2017.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
 1. Abra seu projeto **páginas de propriedade** caixa de diálogo.   
   
-2. Em **propriedades de configuração**, expanda o **C/C++** pasta e escolha o **geral** página de propriedades.  
+2. Sob **propriedades de configuração**, expanda o **C/C++** pasta e escolha o **geral** página de propriedades.  
   
-3. Use o controle de lista suspensa no **formato diagnóstico** opção de exibição do campo para selecionar um diagnóstico. Escolha **Okey** ou **aplicar** para salvar suas alterações.  
+3. Use o controle de lista suspensa na **formato de diagnóstico** opção de exibição de campo para selecionar um diagnóstico. Escolher **Okey** ou **aplicar** para salvar suas alterações.  
   
 ## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
