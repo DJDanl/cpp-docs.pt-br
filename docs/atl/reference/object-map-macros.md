@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0e2e14309b7175b003fbab9214d9dffde63af63
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 0786ada9a9548fa4e3517cb74fe37e5b7f244be2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026011"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218642"
 ---
 # <a name="object-map-macros"></a>Macros de mapa de objeto
 Essas macros definem entradas e mapas de objeto.  
@@ -47,7 +47,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
  [in] Descrição do objeto de classe.  
   
 ### <a name="remarks"></a>Comentários  
- ATL insere essa descrição no mapa de objetos por meio de [OBJECT_ENTRY](http://msdn.microsoft.com/abd10ee2-54f0-4f94-9ec2-ddf8f4c8c8cd) macro.  
+ ATL insere essa descrição no mapa de objetos por meio de [OBJECT_ENTRY](https://msdn.microsoft.com/abd10ee2-54f0-4f94-9ec2-ddf8f4c8c8cd) macro.  
   
  DECLARE_OBJECT_DESCRIPTION implementa um `GetObjectDescription` função, que você pode usar para substituir o [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) método.  
 

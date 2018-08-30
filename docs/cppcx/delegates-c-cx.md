@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 050b11050cc280fc6d3aa8900487442bd723a57f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fda9cab73088746ec64caf482f9e606d713eaa4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592767"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222737"
 ---
 # <a name="delegates-ccx"></a>Delegados (C++/CX)
 O `delegate` palavra-chave é usada para declarar um tipo de referência que é o equivalente de tempo de execução do Windows de um objeto de função em C++ padrão. Uma declaração delegate semelhante a uma assinatura de função especifica o tipo de retorno e os tipos de parâmetro que sua função envolvida deve ter. Esta é uma declaração delegate definida pelo usuário:  
@@ -29,7 +29,7 @@ O `delegate` palavra-chave é usada para declarar um tipo de referência que é 
 event PrimeFoundHandler^ primeFoundEvent;  
 ```  
   
- Ao declarar representantes que ficarão expostos aos clientes pela interface binária de aplicativo de tempo de execução do Windows, use [Windows::Foundation::TypedEventHandler\<TSender, TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx). Este representante possui proxy predefinido e binários stub que permitem seu consumo por clientes JavaScript.  
+ Ao declarar representantes que ficarão expostos aos clientes pela interface binária de aplicativo de tempo de execução do Windows, use [Windows::Foundation::TypedEventHandler\<TSender, TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx). Este representante possui proxy predefinido e binários stub que permitem seu consumo por clientes JavaScript.  
   
 ## <a name="consuming-delegates"></a>Consumindo delegados  
  Quando você cria um aplicativo da plataforma Universal do Windows, geralmente trabalha com um delegado como o tipo de um evento que expõe uma classe de tempo de execução do Windows. Para assinar um evento, crie uma instância do tipo do seu representante especificando uma função (ou lambda) que corresponda à assinatura do representante. Use o operador `+=` para passar o objeto do representante ao membro de evento na classe. Isso é conhecido como assinar o evento. Quando a instância da classe "dispara" o evento, sua função é chamada, juntamente com qualquer outro manipulador que tenha sido adicionado pelo seu objeto ou outros objetos.  

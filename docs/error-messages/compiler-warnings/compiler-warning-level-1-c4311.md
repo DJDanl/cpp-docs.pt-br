@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4311 | Microsoft Docs
+title: Compilador aviso (nível 1) C4311 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba06488ed41e7e296f9f6c16f34af827274acfd4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adfd27a116ae5747a2dd899ce51c38f01055f356
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279117"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218534"
 ---
-# <a name="compiler-warning-level-1-c4311"></a>Compilador C4311 de aviso (nível 1)
+# <a name="compiler-warning-level-1-c4311"></a>Compilador aviso (nível 1) C4311
 'variable': truncamento de ponteiro de 'type' para 'type'  
   
- Esse aviso detecta problemas de truncamento de ponteiro de 64 bits. Por exemplo, se o código é compilado para uma arquitetura de 64 bits, o valor de um ponteiro (64 bits) será truncado se ele for atribuído a um `int` (32 bits). Para obter mais informações, consulte [regras para usar ponteiros](http://msdn.microsoft.com/library/windows/desktop/aa384242).  
+ Esse aviso detecta problemas de truncamento de ponteiro de 64 bits. Por exemplo, se o código é compilado para uma arquitetura de 64 bits, o valor de um ponteiro (64 bits) será truncado se ele for atribuído a um `int` (32 bits). Para obter mais informações, consulte [regras para usar ponteiros](/windows/desktop/WinProg64/rules-for-using-pointers).  
   
- Para obter informações adicionais sobre as causas comuns de aviso C4311, consulte [erros comuns de compilador](http://msdn.microsoft.com/library/windows/desktop/aa384160).  
+ Para obter informações adicionais sobre as causas comuns de aviso C4311, consulte [comuns de erros de compilador](/windows/desktop/WinProg64/common-compiler-errors).  
   
- O exemplo de código a seguir gera C4311 quando compilado para um destino de 64 bits e, em seguida, demonstra como corrigi-lo:  
+ O exemplo de código a seguir gera C4311 quando compilada para um destino de 64 bits e, em seguida, demonstra como corrigi-lo:  
   
 ```  
 // C4311.cpp  

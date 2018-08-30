@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538397"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223059"
 ---
 # <a name="cdockablepane-class"></a>Classe CDockablePane
 Implementa um painel que pode ser encaixado em um local de encaixe ou incluído em um painel com guias.  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Especifica se as guias estão localizadas na parte superior ou inferior do painel.|  
 |[CDockablePane::IsTracked](#istracked)|Especifica se um painel está sendo arrastado pelo usuário.|  
 |[CDockablePane::IsVisible](#isvisible)|Determina se o painel atual está visível.|  
-|[CDockablePane::LoadState](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Usado internamente.|  
+|[CDockablePane::LoadState](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Usado internamente.|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Chamado pelo framework quando o pai de um painel é alterado. (Substitui [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Chamado pelo framework quando uma barra de encaixe flutuante se encaixa em uma janela do quadro.|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Chamado pelo framework quando o pai do painel está prestes a ser alterada. (Substitui [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|  

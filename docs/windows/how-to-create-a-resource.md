@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d269dbc83c11fa4ece55d8df8f6629d1afd52c03
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 771b7d91c4c5cfdb66908870675ab5cf53f2fdd4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594507"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221014"
 ---
 # <a name="how-to-create-a-resource"></a>Como criar um recurso
 
@@ -48,7 +48,7 @@ ms.locfileid: "42594507"
 
 ### <a name="to-create-a-new-resource-in-class-view"></a>Para criar um novo recurso no modo de exibição de classe
 
-1. Na [Class View](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), sua classe com o botão direito e escolha **Add**, em seguida, clique em **adicionar recurso** no menu de atalho.
+1. Na [Class View](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), sua classe com o botão direito e escolha **Add**, em seguida, clique em **adicionar recurso** no menu de atalho.
 
 2. No [caixa de diálogo Adicionar recurso](../windows/add-resource-dialog-box.md), escolha o tipo de recurso que você deseja adicionar ao seu projeto.
 

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85415ee73b65619a2da0a3e7720250a3618a0fec
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: f6d17ec38820e82a97435e04f2126f87ef9208aa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883512"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218430"
 ---
 # <a name="cfiletimespan-class"></a>Classe CFileTimeSpan
 Essa classe fornece métodos para gerenciamento de data relativa e valores de tempo associados com um arquivo.  
@@ -272,7 +272,7 @@ void SetTimeSpan(LONGLONG nSpan) throw();
  O novo valor para o período de tempo em milissegundos.  
   
 ## <a name="see-also"></a>Consulte também  
- [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)   
+ [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)   
  [Classe CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md)   
  [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes compartilhadas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57ae6a7d084a497ec41c9b66b314ad1fdb3e7fc
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 16d9123125cc6cb01ee5dfb03f771e263d9915f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406565"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221433"
 ---
 # <a name="function-overloading"></a>Sobrecarga de função
 O C++ permite a especificação de mais de uma função do mesmo nome no mesmo escopo. Eles são chamados *sobrecarregados* funções. Funções sobrecarregadas permitem que você fornecer a semântica diferente para uma função, dependendo dos tipos e do número de argumentos. 
@@ -43,8 +43,9 @@ Você pode sobrecarregar funções membro e funções não membro. A tabela a se
 |**Const** ou **volátil**|Sim, quando aplicado a função inteira|
 |[ref-qualifier](#ref-qualifier)|Sim|  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir ilustra como a sobrecarga pode ser usada.  
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir ilustra como a sobrecarga pode ser usada.  
   
 ```cpp 
 // function_overloading.cpp  
@@ -270,9 +271,9 @@ volatile Over&
   
 1.  Correspondência exata. Uma correspondência exata entre os tipos com que a função é chamada e os tipos declarados no protótipo da função sempre é a melhor correspondência. As sequências de conversões triviais são classificadas como correspondências exatas. No entanto, as sequências que não fazem qualquer uma dessas conversões são consideradas melhor do que as sequências que convertem:  
   
-    -   De ponteiro em ponteiro para **const** (`type` **\*** para **const** `type` **\*** ).  
+    -   De ponteiro em ponteiro para **const** (`type` <strong>\*</strong> para **const** `type` <strong>\*</strong> ).  
   
-    -   De ponteiro em ponteiro para **volátil** (`type` **\*** para **volátil** `type` **\***).  
+    -   De ponteiro em ponteiro para **volátil** (`type` <strong>\*</strong> para **volátil** `type` <strong>\*</strong>).  
   
     -   De referência, em referência a **const** (`type` **&** para **const** `type` **&**).  
   

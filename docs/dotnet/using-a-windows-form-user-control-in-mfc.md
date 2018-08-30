@@ -1,5 +1,5 @@
 ---
-title: Controle de usuário usando um Windows do formulário em MFC | Microsoft Docs
+title: Usando um Windows formam o controle de usuário no MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 1/08/2018
 ms.technology:
@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8ceb424d6c5061ac5ccafc62d8748be4de3ab3d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 795c16a46356eb9599e02b43b51066b603b8b9ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33174307"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222102"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Usando um controle de usuário do Windows Form no MFC
 
-Usando as classes de suporte do MFC Windows Forms, é possível hospedar controles de formulários do Windows em seus aplicativos MFC como um controle ActiveX em caixas de diálogo do MFC ou modos de exibição. Além disso, os formulários do Windows forms podem ser hospedados como caixas de diálogo do MFC.
+Usando as classes de suporte do MFC Windows Forms, você pode hospedar controles dos Windows Forms em seus aplicativos do MFC como um controle ActiveX em caixas de diálogo do MFC ou modos de exibição. Além disso, os formulários do Windows Forms podem ser hospedados como caixas de diálogo do MFC.
 
 As seções a seguir descrevem como:
 
@@ -40,16 +40,12 @@ As seções a seguir descrevem como:
 - Hospede um formulário do Windows Forms como uma caixa de diálogo do MFC.
 
 > [!NOTE]
-> Integração de formulários do Windows MFC funciona apenas em projetos que vincular dinamicamente a MFC (projetos em que `_AFXDLL` é definido).
+> Integração de formulários do Windows MFC funciona apenas em projetos que vincular dinamicamente ao MFC (projetos nos quais `_AFXDLL` é definida).
 
 > [!NOTE]
-> Quando você criar seu aplicativo usando uma cópia privada (modificada) das interfaces de formulários do Windows MFC DLL (mfcmifc80), ele não será instalado no GAC, a menos que você substitua a chave da Microsoft com sua própria chave de fornecedor. Para obter mais informações sobre assinatura de assembly, consulte [programação com Assemblies](/dotnet/framework/app-domains/programming-with-assemblies) e [Assemblies com nome forte (assinatura de Assembly) (C + + CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+> Quando você compila seu aplicativo usando uma cópia privada (modificada) das interfaces de formulários do Windows MFC DLL (mfcmifc80.dll), ele será instalado no GAC, a menos que você substitua a chave da Microsoft com sua própria chave de fornecedor. Para obter mais informações sobre assinatura de assembly, consulte [Programando com Assemblies](/dotnet/framework/app-domains/programming-with-assemblies) e [Assemblies com nome forte (assinatura de Assembly) (C + + / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
-Para aplicativos de exemplo usando o Windows Forms, consulte [BirthdayPicker exemplo: demonstra recursos do .NET Framework com o Windows Forms](http://msdn.microsoft.com/ac932aed-5502-4667-be29-709bca435317), [Calculadora de exemplo: Calculadora do Windows Forms Pocket](http://msdn.microsoft.com/2283b516-3b7e-45f2-80c4-fdcfb366ce25)e [ Rabisco exemplo: Aplicativo de desenho MDI](http://msdn.microsoft.com/f025da3e-659b-4222-b991-554a1b8b2358).
-
-Para um aplicativo de exemplo que mostra usado com MFC de formulários do Windows, consulte [MFC e integração de formulários do Windows](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
-
-Se o aplicativo do MFC usar formulários do Windows, você precisa redistribuir mfcmifc80 com seu aplicativo. Para obter mais informações, consulte [redistribuindo a biblioteca do MFC](../ide/redistributing-the-mfc-library.md).
+Se seu aplicativo do MFC usa o Windows Forms, você precisará redistribuir mfcmifc80.dll com seu aplicativo. Para obter mais informações, consulte [redistribuindo a biblioteca do MFC](../ide/redistributing-the-mfc-library.md).
 
 ## <a name="in-this-section"></a>Nesta seção
 

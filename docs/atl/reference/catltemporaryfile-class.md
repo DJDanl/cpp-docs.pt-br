@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3492f71ab119bb272576fe8c67bc6d05163785fb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6eee23ebbfc25d76ca255505322f609973f79f57
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883138"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222866"
 ---
 # <a name="catltemporaryfile-class"></a>Classe CAtlTemporaryFile
 Essa classe fornece métodos para a criação e uso de um arquivo temporário.  
@@ -143,10 +143,10 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
   
 ### <a name="parameters"></a>Parâmetros  
  *pszDir*  
- O caminho para o arquivo temporário. Se isso for NULL, [GetTempPath](http://msdn.microsoft.com/library/windows/desktop/aa364992) será chamado para atribuir um caminho.  
+ O caminho para o arquivo temporário. Se isso for NULL, [GetTempPath](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha) será chamado para atribuir um caminho.  
   
  *dwDesiredAccess*  
- O acesso desejado. Ver *dwDesiredAccess* na [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) no SDK do Windows.  
+ O acesso desejado. Ver *dwDesiredAccess* na [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
@@ -334,7 +334,7 @@ LPCTSTR TempFileName() throw();
  Retorna o LPCTSTR apontando para o nome do arquivo.  
   
 ### <a name="remarks"></a>Comentários  
- O nome do arquivo é gerado no [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile) com uma chamada para o [GetTempFile](http://msdn.microsoft.com/library/windows/desktop/aa364991)função do SDK do Windows. A extensão de arquivo sempre será "TFR" para o arquivo temporário.  
+ O nome do arquivo é gerado no [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile) com uma chamada para o [GetTempFile](/windows/desktop/api/fileapi/nf-fileapi-gettempfilenamea)função do SDK do Windows. A extensão de arquivo sempre será "TFR" para o arquivo temporário.  
   
 ##  <a name="unlockrange"></a>  CAtlTemporaryFile::UnlockRange  
  Chame esse método para desbloquear uma região do arquivo temporário.  

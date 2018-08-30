@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: e6607016e2661817de04fce505bc921a3a25320a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42575451"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219487"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -69,7 +69,7 @@ Para localizar os nomes decorados produzidos pelo compilador, use o [DUMPBIN](..
   
 Você pode usar*ordinal* para especificar que um número e não o nome da função, irá na tabela de exportação da DLL. Muitos DLLs do Windows exportam ordinais para dar suporte a código legado. Era comum usar ordinais em código do Windows de 16 bits, pois isso podia ajudar a minimizar o tamanho de um DLL. Não recomendamos exportar funções por ordinais, a menos que os clientes DLL precisem disso para suporte legado. Como o arquivo .LIB conterá o mapeamento entre o ordinal e a função, é possível usar o nome da função como normalmente se faria em projetos que usam o DLL.  
   
-Usando a palavra-chave `NONAME` opcional, é possível exportar apenas por ordinal e reduzir o tamanho da tabela de exportação no DLL resultante. No entanto, se você quiser usar [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) no DLL, você deve conhecer o ordinal porque o nome não será válido.  
+Usando a palavra-chave `NONAME` opcional, é possível exportar apenas por ordinal e reduzir o tamanho da tabela de exportação no DLL resultante. No entanto, se você quiser usar [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) no DLL, você deve conhecer o ordinal porque o nome não será válido.  
   
 A palavra-chave opcional `PRIVATE` impede *Nome_da_entrada* sejam incluídos na biblioteca de importação gerada por LINK. Não afeta a exportação na imagem também gerada por LINK.  
   

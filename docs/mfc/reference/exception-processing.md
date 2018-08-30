@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e77284d36a7290f5d9070bb355a8affae9ba864f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 186a6705649cee7095d3d2e4c4bb237498fdcea0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336855"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221265"
 ---
 # <a name="exception-processing"></a>Processamento de exceção
 Quando um programa é executado, um número de condições anormais e chamados "exceções" de erros pode ocorrer. Eles podem incluir falta de memória, erros de alocação de recursos e de falha para encontrar arquivos.  
@@ -350,7 +350,7 @@ void AfxThrowMemoryException();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Chame essa função se chamadas para alocadores de memória de sistema subjacente (como **malloc** e o [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) função do Windows) falhar. Não é necessário chamá-lo para **novos** porque **novos** lançará uma exceção de memória automaticamente se a alocação de memória falhar.  
+ Chame essa função se chamadas para alocadores de memória de sistema subjacente (como **malloc** e o [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) função do Windows) falhar. Não é necessário chamá-lo para **novos** porque **novos** lançará uma exceção de memória automaticamente se a alocação de memória falhar.  
   
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** AFX. h  
@@ -444,7 +444,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
  Identificador para um código de resultado que indica o motivo da exceção.  
   
 ### <a name="remarks"></a>Comentários  
- A versão que usa HRESULT como um argumento converte esse código de resultado no SCODE correspondente. Para obter mais informações sobre o HRESULT e SCODE, consulte [estrutura de códigos de erro COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) no SDK do Windows.  
+ A versão que usa HRESULT como um argumento converte esse código de resultado no SCODE correspondente. Para obter mais informações sobre o HRESULT e SCODE, consulte [estrutura de códigos de erro COM](/windows/desktop/com/structure-of-com-error-codes) no SDK do Windows.  
   
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdao.h  

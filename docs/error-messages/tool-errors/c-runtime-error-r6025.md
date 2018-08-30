@@ -1,5 +1,5 @@
 ---
-title: R6025 de erro de tempo de execução C | Microsoft Docs
+title: C R6025 de erro de tempo de execução | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abdbdbf918462dfb83eff07190c32af1f1b3d015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b774c5f99387ca4403941d1461593bef8801e5de
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302020"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220626"
 ---
-# <a name="c-runtime-error-r6025"></a>R6025 de erro de tempo de execução do C
+# <a name="c-runtime-error-r6025"></a>C R6025 de erro de tempo de execução
 chamada de função virtual pura  
   
 > [!NOTE]
->  Se você receber essa mensagem de erro durante a execução de um aplicativo, o aplicativo foi desligado porque ele tem um problema interno. O motivo mais comum para esse erro é um bug no aplicativo ou uma instalação corrompida.  
+>  Se você encontrar esta mensagem de erro durante a execução de um aplicativo, o aplicativo foi encerrado porque ele tem um problema interno. O motivo mais comum para esse erro é um bug no aplicativo ou uma instalação corrompida.  
 >   
 >  Você pode tentar corrigir esse erro com estas etapas:  
 >   
 >  -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.  
-> -   Verificar **Windows Update** no **painel de controle** para atualizações de software.  
+> -   Verifique **Windows Update** na **painel de controle** para atualizações de software.  
 > -   Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.  
   
- **Informações para os programadores**  
+ **Informações para programadores**  
   
- Nenhum objeto instanciado para lidar com a chamada de função virtual pura.  
+ Nenhum objeto de instância foi instanciado para lidar com a chamada de função virtual pura.  
   
- Esse erro é causado por chamando uma função virtual em uma classe base abstrata através de um ponteiro que é criada por uma conversão para o tipo de classe derivada, mas, na verdade, um ponteiro para a classe base. Isso pode ocorrer quando a conversão de um **void\***  para um ponteiro para uma classe quando o **void\***  foi criado durante a construção da classe base.  
+ Esse erro é causado por chamar uma função virtual em uma classe base abstrata através de um ponteiro que é criado por uma conversão para o tipo da classe derivada, mas é, na verdade, um ponteiro para a classe base. Isso pode ocorrer ao converter de um **void** <strong>\*</strong> em um ponteiro para uma classe quando o **void** <strong>\*</strong> foi criado durante a construção da classe base.  
   
  Para obter mais informações, consulte o [o suporte da Microsoft](http://go.microsoft.com/fwlink/p/?linkid=75220) site.

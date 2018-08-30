@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c14beb076a83952529155fa0a4b1da780efae3c7
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d179e53967817bb622074987e3309e159547e819
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451856"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218099"
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
 
@@ -90,20 +90,20 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se **mbstowcs** com êxito converte a cadeia de caracteres de origem, ele retorna o número de caracteres multibyte convertidos. Se o *wcstr* argumento é **nulo**, a função retorna o tamanho necessário (em caracteres largos) da cadeia de caracteres de destino. Se **mbstowcs** encontra um caractere multibyte inválido, retornará -1. Se o valor de retorno é *contagem*, a cadeia de caracteres amplo não é terminada em nulo.
+Se **mbstowcs** converte com êxito a cadeia de caracteres de origem, ele retorna o número de caracteres multibyte convertidos. Se o *wcstr* argumento é **nulo**, a função retorna o tamanho necessário (em caracteres largos) da cadeia de caracteres de destino. Se **mbstowcs** encontrar um caractere multibyte inválido, ele retornará -1. Se o valor retornado será *contagem*, a cadeia de caracteres largos não é terminada em nulo.
 
 > [!IMPORTANT]
-> Certifique-se de que *wcstr* e *mbstr* não se sobrepõem e que *contagem* corretamente reflete o número de caracteres multibyte para converter.
+> Certifique-se de que *wcstr* e *mbstr* não se sobrepõem e que *contagem* reflete corretamente o número de caracteres multibyte a ser convertido.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbstowcs** função converte até um número máximo de *contagem* caracteres multibyte apontada pelo *mbstr* para uma cadeia de caracteres largos correspondentes que são determinado pela localidade atual. Ele armazena a cadeia de caracteres largos resultante no endereço representado por *wcstr*. O resultado é semelhante a uma série de chamadas para [mbtowc](mbtowc-mbtowc-l.md). Se **mbstowcs** encontra o caractere null de byte único ('\0') antes ou quando *contagem* ocorrer, ele converte o caractere nulo para um caractere null de caractere largo (L '\0') e para. Assim, a cadeia de caracteres largos no *wcstr* é terminada em nulo apenas se um caractere nulo é encontrado durante a conversão. Se as sequências apontada pelo *wcstr* e *mbstr* se sobrepõem, o comportamento será indefinido.
+O **mbstowcs** função converte até um número máximo de *contagem* caracteres multibyte apontada por *mbstr* em uma cadeia de caracteres largos correspondentes que são determinado pela localidade atual. Ele armazena a cadeia de caracteres largos resultante no endereço representado por *wcstr*. O resultado é semelhante a uma série de chamadas para [mbtowc](mbtowc-mbtowc-l.md). Se **mbstowcs** encontra o caractere nulo de byte único ('\0') antes ou quando *contagem* ocorre, ele converte o caractere nulo para um caractere nulo de caractere largo (L '\0') e é interrompido. Dessa forma, a cadeia de caracteres largos em *wcstr* é terminada em nulo somente se um caractere nulo é encontrado durante a conversão. Se as sequências apontadas por *wcstr* e *mbstr* se sobrepuserem, o comportamento será indefinido.
 
 Se o *wcstr* argumento é **nulo**, **mbstowcs** retorna o número de caracteres largos que resultariam da conversão, não incluindo um terminador nulo. A cadeia de caracteres de origem deve ser terminada em nulo para o valor correto ser retornado. Se você precisar que a cadeia de caracteres largos seja terminada em nulo, adicione um ao valor retornado.
 
-Se o *mbstr* argumento é **nulo**, ou se *contagem* é > **INT_MAX**, o manipulador de parâmetro inválido é invocado, conforme descrito em [ Validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução é permitida para continuar, errno é definido como **EINVAL** e a função retornará -1.
+Se o *mbstr* argumento é **nulo**, ou se *contagem* é > **INT_MAX**, o manipulador de parâmetro inválido será invocado, conforme descrito no [ Validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, errno é definido como **EINVAL** e a função retornará -1.
 
-**mbstowcs** usa a localidade atual para qualquer comportamento dependente de localidade; **mbstowcs_l** é idêntico, exceto que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**mbstowcs** usa a localidade atual para qualquer comportamento dependente da localidade. **mbstowcs_l** é idêntico, exceto que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
@@ -220,4 +220,4 @@ Convert back to wide-character string:
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)<br/>
+[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>

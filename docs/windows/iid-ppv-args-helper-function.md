@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d22d6a7fce670f7da7740b5f0678eafaa49f519
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a6131cea7a7684036fd7183a79214c7c6936540b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604017"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218742"
 ---
 # <a name="iidppvargshelper-function"></a>Função IID_PPV_ARGS_Helper
 
 Verifica se o tipo do argumento especificado deriva o `IUnknown` interface.
 
 > [!IMPORTANT]
-> Essa especialização de modelo oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código. Use [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) em vez disso.
+> Essa especialização de modelo oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código. Use [IID_PPV_ARGS](https://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) em vez disso.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -62,4 +62,4 @@ Um erro de tempo de compilação será gerado se o parâmetro de modelo *T* não
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência (biblioteca de tempo de execução do Windows)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)
+[Referência (biblioteca de tempo de execução do Windows)](https://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6630ad9721b7a58e7da2660337660cc7916db01
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: bb4d7a06d728bddfd4ba1ee355cb4d1e0b5b9fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42544395"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221704"
 ---
 # <a name="ccmdtarget-class"></a>Classe CCmdTarget
 A classe base para a arquitetura de mapa de mensagem da biblioteca Microsoft Foundation Class.  
@@ -163,19 +163,19 @@ BOOL DoOleVerb(
  Identificador numérico do verbo.  
   
  *lpMsg*  
- Ponteiro para o [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) estrutura que descreve o evento (por exemplo, um clique duplo) que invocou o verbo.  
+ Ponteiro para o [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) estrutura que descreve o evento (por exemplo, um clique duplo) que invocou o verbo.  
   
  *hWndParent*  
  Identificador da janela do documento que contém o objeto.  
   
  *lpRect*  
- Ponteiro para o [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém as coordenadas, em pixels, que definem um objeto do retângulo no delimitador *hwndParent*.  
+ Ponteiro para o [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém as coordenadas, em pixels, que definem um objeto do retângulo no delimitador *hwndParent*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se bem-sucedido, caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função membro é basicamente uma implementação de [IOleObject:: DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508). As ações possíveis são enumeradas pelo [CCmdTarget::EnumOleVerbs](#enumoleverbs).  
+ Essa função membro é basicamente uma implementação de [IOleObject:: DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb). As ações possíveis são enumeradas pelo [CCmdTarget::EnumOleVerbs](#enumoleverbs).  
   
 ##  <a name="enableautomation"></a>  CCmdTarget::EnableAutomation  
  Chame essa função para habilitar a automação OLE para um objeto.  
@@ -229,13 +229,13 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
   
 ### <a name="parameters"></a>Parâmetros  
  *ppenumOleVerb*  
- Um ponteiro para um ponteiro para um [IEnumOLEVERB](http://msdn.microsoft.com/library/windows/desktop/ms695084) interface.  
+ Um ponteiro para um ponteiro para um [IEnumOLEVERB](/windows/desktop/api/oleidl/nn-oleidl-ienumoleverb) interface.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o objeto dá suporte a pelo menos um verbo OLE (caso em que \* *ppenumOleVerb* aponta para um `IEnumOLEVERB` interface de enumerador), caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função membro é basicamente uma implementação de [IOleObject:: Enumverbs](http://msdn.microsoft.com/library/windows/desktop/ms692781).  
+ Essa função membro é basicamente uma implementação de [IOleObject:: Enumverbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs).  
   
 ##  <a name="fromidispatch"></a>  CCmdTarget::FromIDispatch  
  Chame essa função para mapear uma `IDispatch` ponteiro, recebido das funções de membro de automação de uma classe, em de `CCmdTarget` objeto que implementa as interfaces do `IDispatch` objeto.  
@@ -263,7 +263,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
   
 ### <a name="parameters"></a>Parâmetros  
  *pIID*  
- Um ponteiro para uma ID de interface (um [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931)).  
+ Um ponteiro para uma ID de interface (um [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931)).  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se bem-sucedido, caso contrário, FALSE. Se for bem-sucedido, \* *pIID* é definido como a ID de interface de expedição primária.  
@@ -288,7 +288,7 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
  O `IDispatch` ponteiro associado ao objeto.  
   
 ### <a name="remarks"></a>Comentários  
- Para objetos que chamam `EnableAutomation` em seus construtores, tornando-os automação habilitada, essa função retorna um ponteiro para a implementação da classe base `IDispatch` que é usado por clientes que se comunicam por meio de `IDispatch` interface. Chamar essa função automaticamente adiciona uma referência ao ponteiro, portanto, não é necessário fazer uma chamada para [IUnknown:: AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379).  
+ Para objetos que chamam `EnableAutomation` em seus construtores, tornando-os automação habilitada, essa função retorna um ponteiro para a implementação da classe base `IDispatch` que é usado por clientes que se comunicam por meio de `IDispatch` interface. Chamar essa função automaticamente adiciona uma referência ao ponteiro, portanto, não é necessário fazer uma chamada para [IUnknown:: AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref).  
   
 ##  <a name="gettypeinfocount"></a>  CCmdTarget::GetTypeInfoCount  
  Recupera o número de interfaces de informações de tipo que fornece um objeto.  
@@ -320,7 +320,7 @@ HRESULT GetTypeInfoOfGuid(
  Um identificador de localidade ( `LCID`).  
   
  *guid*  
- O [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931) da descrição de tipo.  
+ O [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) da descrição de tipo.  
   
  *ppTypeInfo*  
  Ponteiro para um ponteiro para o `ITypeInfo` interface.  

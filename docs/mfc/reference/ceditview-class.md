@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7323dfa06e73342e956a9aacb1ad925b6fb022f2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bcc4af6f4aeb6c7a0df005d164729cf87065f613
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338483"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220824"
 ---
 # <a name="ceditview-class"></a>Classe CEditView
 Um tipo de classe de exibição que fornece a funcionalidade de um Windows controle de edição e pode ser usado para implementar a funcionalidade do editor de texto simples.  
@@ -120,7 +120,7 @@ class CEditView : public CCtrlView
   
  A implementação padrão da classe `CEditView` lida com os seguintes comandos: ID_EDIT_SELECT_ALL, ID_EDIT_FIND, ID_EDIT_REPLACE, ID_EDIT_REPEAT e ID_FILE_PRINT.  
   
- O limite de caracteres padrão para `CEditView` é (1024 \* 1024-1 = 1048575). Isso pode ser alterado, chamando a função EM_LIMITTEXT do controle de edição subjacente. No entanto, os limites são diferentes dependendo do sistema operacional e o tipo de editar o controle (única ou várias linhas). Para obter mais informações sobre esses limites, consulte [EM_LIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761607).  
+ O limite de caracteres padrão para `CEditView` é (1024 \* 1024-1 = 1048575). Isso pode ser alterado, chamando a função EM_LIMITTEXT do controle de edição subjacente. No entanto, os limites são diferentes dependendo do sistema operacional e o tipo de editar o controle (única ou várias linhas). Para obter mais informações sobre esses limites, consulte [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext).  
   
  Para alterar esse limite em seu controle, substitua os `OnCreate()` funcionar para sua `CEditView` de classe e insira a seguinte linha de código:  
   

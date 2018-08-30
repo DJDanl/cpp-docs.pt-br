@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da7cdd5601785f43748ec87d3219f43728536855
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2211b4243ddf44194959a263fd90ec1a615ea0a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228981"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220275"
 ---
 # <a name="fatal-error-c1900"></a>Erro fatal C1900
-II Incompatibilidade entre a versão "number1" da "tool1" e a versão "number2" da "tool2"  
-  
- As ferramentas executadas em vários passos do compilador não correspondem. ***Número1*** e ***Número2*** se referir às datas nos arquivos. Por exemplo, na etapa 1, o front-end do compilador é executado (c1.dll) e na etapa 2, o back-end do compilador é executado (c2.dll). As datas nos arquivos devem ser correspondentes.  
-  
- Para corrigir esse problema, certifique-se de que todas as atualizações foram aplicadas ao Visual Studio. Se o problema persistir, use **programas e recursos** no painel de controle do Windows para reparar ou reinstalar o Visual Studio.
+
+> Incompatibilidade de linguagem intermediária entre '*tool1*'version'*Número1*'e'*tool2*'version'*Número2*'
+
+As ferramentas executadas em vários passos do compilador não correspondem. *Número1* e *Número2* consulte as datas nos arquivos. Por exemplo, na etapa 1, o front-end do compilador é executado (c1.dll) e na etapa 2, o back-end do compilador é executado (c2.dll). As datas nos arquivos devem ser correspondentes.
+
+Para corrigir esse problema, certifique-se de que todas as atualizações foram aplicadas ao Visual Studio. Se o problema persistir, use **programas e recursos** no painel de controle do Windows para reparar ou reinstalar o Visual Studio.

@@ -18,19 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928a954be6a96f5026a98f724a77bebd51be27f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28191191572e508828a23f0e719a57d63163b08d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345072"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222345"
 ---
 # <a name="memory-management"></a>Gerenciamento de memória
-Este grupo de artigos descreve como tirar proveito dos serviços de uso gerais da Microsoft Foundation Class Library (MFC) relacionadas ao gerenciamento de memória. Alocação de memória pode ser dividida em duas categorias principais: alocações e as alocações de heap do quadro.  
+Esse grupo de artigos descreve como tirar proveito dos serviços de uso geral da Microsoft Foundation Class Library (MFC) relacionados ao gerenciamento de memória. Alocação de memória pode ser dividida em duas categorias principais: alocações e alocações de heap de quadro.  
   
- Uma diferença principal entre as técnicas de duas alocação é que com alocação de quadro, que você normalmente trabalha com a memória real bloquear em si, embora com alocação de heap você sempre terá um ponteiro para o bloco de memória. Uma outra grande diferença entre os dois esquemas é que objetos de quadro são automaticamente excluídos, enquanto os objetos do heap devem ser excluídos explicitamente pelo programador.  
+ Uma diferença principal entre as técnicas de duas alocação é que com a alocação de quadro, que você normalmente trabalha com a memória real bloquear em si, embora com alocação de heap você sempre terá um ponteiro para o bloco de memória. Uma outra grande diferença entre os dois esquemas é que objetos de quadro são automaticamente excluídos, enquanto os objetos de heap devem ser excluídos explicitamente pelo programador.  
   
- Para obter informações sobre o gerenciamento de memória em programas para Windows não MFC, consulte [gerenciamento de memória](http://msdn.microsoft.com/library/windows/desktop/aa366779) no SDK do Windows.  
+ Para obter informações sobre o gerenciamento de memória em programas para Windows não MFC, consulte [gerenciamento de memória](https://msdn.microsoft.com/library/windows/desktop/aa366779) no SDK do Windows.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
   
@@ -40,7 +40,7 @@ Este grupo de artigos descreve como tirar proveito dos serviços de uso gerais d
   
 -   [Ao alocar memória para uma matriz](../mfc/memory-management-examples.md)  
   
--   [Desalocando memória para uma matriz de heap](../mfc/memory-management-examples.md)  
+-   [Desalocando memória para uma matriz do heap](../mfc/memory-management-examples.md)  
   
 -   [Ao alocar memória para uma estrutura de dados](../mfc/memory-management-examples.md)  
   

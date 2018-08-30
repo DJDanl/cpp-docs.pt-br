@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dbaa4631e50b14131418b902dd008e74060dbf6
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 94532b40bb44094290eab29a2b8a1f6095a225c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881907"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221095"
 ---
 # <a name="ccomallocator-class"></a>Classe CComAllocator
 Essa classe fornece métodos para gerenciamento de memória usando COM rotinas de memória.  
@@ -67,7 +67,7 @@ static void* Allocate(size_t nBytes) throw();
  Retorna um ponteiro nulo para o espaço alocado ou nulo se não houver memória suficiente disponível.  
   
 ### <a name="remarks"></a>Comentários  
- Aloca memória. Ver [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) para obter mais detalhes.  
+ Aloca memória. Ver [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) para obter mais detalhes.  
   
 ##  <a name="free"></a>  CComAllocator::Free  
  Chame essa função estática para liberar a memória alocada.  
@@ -81,7 +81,7 @@ static void Free(void* p) throw();
  Ponteiro para a memória alocada.  
   
 ### <a name="remarks"></a>Comentários  
- Libera a memória alocada. Ver [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) para obter mais detalhes.  
+ Libera a memória alocada. Ver [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) para obter mais detalhes.  
   
 ##  <a name="reallocate"></a>  CComAllocator::Reallocate  
  Chame essa função estática para realocar a memória.  
@@ -101,7 +101,7 @@ static void* Reallocate(void* p, size_t nBytes) throw();
  Retorna um ponteiro nulo para o espaço alocado ou nulo se não houver memória insuficiente  
   
 ### <a name="remarks"></a>Comentários  
- Redimensiona a quantidade de memória alocada. Ver [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280) para obter mais detalhes.  
+ Redimensiona a quantidade de memória alocada. Ver [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc) para obter mais detalhes.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   

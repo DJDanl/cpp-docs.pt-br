@@ -112,12 +112,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b77254c78dbb84d546e080ca5bc275919aac64a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1f67107b17f304c5a9c4d6f68d68797370502065
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539537"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221721"
 ---
 # <a name="clistbox-class"></a>Classe CListBox
 Fornece a funcionalidade de uma caixa de listagem do Windows.  
@@ -644,7 +644,7 @@ DWORD_PTR GetItemData(int nIndex) const;
  [!code-cpp[NVC_MFC_CListBox#15](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]  
   
 ##  <a name="getitemdataptr"></a>  CListBox::GetItemDataPtr  
- Recupera o valor de 32 bits fornecida pelo aplicativo associado ao item de caixa de listagem especificada como um ponteiro ( **void\***).  
+ Recupera o valor de 32 bits fornecida pelo aplicativo associado ao item de caixa de listagem especificada como um ponteiro (**void** <strong>\*</strong>).  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
@@ -710,7 +710,7 @@ DWORD GetListBoxInfo() const;
  Número de itens por coluna do `CListBox` objeto.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função membro emula a funcionalidade dos [LB_GETLISTBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775208) da mensagem, conforme descrito no SDK do Windows.  
+ Essa função membro emula a funcionalidade dos [LB_GETLISTBOXINFO](/windows/desktop/Controls/lb-getlistboxinfo) da mensagem, conforme descrito no SDK do Windows.  
   
 ##  <a name="getlocale"></a>  CListBox::GetLocale  
  Recupera a localidade usada pela caixa de listagem.  
@@ -1144,7 +1144,7 @@ int SetItemData(
  [!code-cpp[NVC_MFC_CListBox#34](../../mfc/codesnippet/cpp/clistbox-class_34.cpp)]  
   
 ##  <a name="setitemdataptr"></a>  CListBox::SetItemDataPtr  
- Define o valor de 32 bits associado com o item especificado em uma caixa de listagem para ser o ponteiro especificado ( **void\***).  
+ Define o valor de 32 bits associado com o item especificado em uma caixa de listagem para ser o ponteiro especificado ( **void** <strong>\*</strong>).  
   
 ```  
 int SetItemDataPtr(

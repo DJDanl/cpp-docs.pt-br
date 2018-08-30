@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80291c805cad3ef041fffc58983ff399da07c9d9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4a2dcbc55d6a2d033cde3b6189618afd67bdc3fb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057715"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221503"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
-Habilita e desabilita recursos do assembler.  
+Habilita e desabilita recursos do montador.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ optionlist
 |**PROC**|**PRÓLOGO**|**READONLY**|**NOREADONLY**|  
 |**SCOPED**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|  
   
- A sintaxe de LINGUAGEM é **opção de LINGUAGEM: * x*, onde *x* é C, SYSCALL, STDCALL, PASCAL, FORTRAN ou BASIC.  SYSCALL, PASCAL, FORTRAN e BASIC não têm suporte com usado com [. MODELO](../../assembler/masm/dot-model.md) simples.  
+ A sintaxe de LINGUAGEM é **opção de LINGUAGEM:**<em>x</em>, onde *x* é um dos C, SYSCALL, STDCALL, PASCAL, FORTRAN ou BASIC.  SYSCALL, PASCAL, FORTRAN e BASIC não têm suporte com usado com [. MODELO](../../assembler/masm/dot-model.md) simples.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de diretivas](../../assembler/masm/directives-reference.md)

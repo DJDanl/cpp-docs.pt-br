@@ -15,21 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3739c053797bdccd08310e17bf669413ead0db48
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c9e1d883e0c7a2b214842b096fdf697ffc7d0192
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367167"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221735"
 ---
 # <a name="command-modifiers"></a>Modificadores de comando
-Você pode especificar um ou mais modificadores de comando anterior de um comando, opcionalmente, separado por tabulações ou espaços. Assim como acontece com comandos, modificadores devem ser recuados.  
+Você pode especificar um ou mais modificadores de comando anterior de um comando, opcionalmente, separado por espaços ou tabulações. Assim como acontece com comandos, modificadores devem ser recuados.  
   
 |Modificador|Finalidade|  
 |--------------|-------------|  
-|@*Comando*|Impede a exibição do comando. Exibição por comandos não será suprimida. Por padrão, NMAKE exibe executar todos os comandos. Use /S para suprimir a exibição para o makefile inteiro; Use **. SILENCIOSA** para suprimir a exibição para a parte do makefile.|  
-|**-**[`number` ]*comando*|Desativa a verificação de erros de *comando*. Por padrão, NMAKE é interrompida quando um comando retorna um código de saída diferente de zero. Se -`number` é usado, NMAKE para de se o código de saída exceder `number`. Tabulações ou espaços não podem aparecer entre o traço e *número.* Pelo menos um espaço ou tabulação deve aparecer entre `number` e *comando*. Use/i para desativar a verificação de erros para o makefile inteiro; Use **. Ignorar** para desativar a verificação de erros para a parte do makefile.|  
-|**!** *command*|Executa *comando* para cada arquivo dependente se *comando* usa **$ \* \*** (todos os arquivos dependentes na dependência) ou **$?** (todos os arquivos dependentes em dependência com um carimbo de hora posterior que o destino.)|  
+|@*Comando*|Impede a exibição do comando. Exibição por comandos não será suprimida. Por padrão, NMAKE ecoa comandos executados tudo. Use /S para suprimir a exibição para o makefile inteira; usar **. SILENCIOSA** para suprimir a exibição para a parte do makefile.|  
+|**-**\[*número*] *comando*|Desativa a verificação de erros para *comando*. Por padrão, NMAKE é interrompida quando um comando retorna um código de saída diferente de zero. Se -*número* é usado, NMAKE parará se o código de saída excede *número*. Espaços ou tabulações não podem aparecer entre o traço e *número.* Pelo menos um espaço ou tabulação deve aparecer entre `number` e *comando*. Use/i para desativar a verificação de erros para o makefile inteiro; usar **. Ignorar** para desativar a verificação de erros para a parte do makefile.|  
+|**!** *command*|Executa *comando* para cada arquivo dependente se *comando* usa <strong>$ \* \*</strong> (todos os arquivos dependentes na dependência) ou **$?** (todos os arquivos dependentes na dependência com um carimbo de hora posterior que o destino.)|  
   
 ## <a name="see-also"></a>Consulte também  
  [Comandos em um makefile](../build/commands-in-a-makefile.md)

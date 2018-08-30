@@ -55,12 +55,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c1c4c22bb309516c751af66845acdb69b090797
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baa34ae887e12a59785bafd0551fe383fac5f7b1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417308"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220444"
 ---
 # <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 Grave saída formatada usando um ponteiro para uma lista de argumentos. Versões mais seguras dessas funções estão disponíveis; consulte [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).
@@ -132,7 +132,7 @@ int _vswprintf_l(
 Local de armazenamento de saída.
 
 *count*<br/>
-Número máximo de caracteres para armazenar, nas versões de cadeia de caracteres larga dessa função.
+Número máximo de caracteres a ser armazenado nas versões de cadeia de caracteres largos dessa função.
 
 *format*<br/>
 Especificação de formato.
@@ -145,20 +145,20 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**vsprintf** e **vswprintf** retornar o número de caracteres gravados, não incluindo o caractere null de terminação ou um valor negativo se ocorrer um erro de saída. Se *buffer* ou *formato* é um ponteiro nulo, essas funções invocam o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam -1 e defina **errno** para **EINVAL**.
+**vsprintf** e **vswprintf** retornar o número de caracteres gravados, não incluindo o caractere nulo de terminação ou um valor negativo se ocorrer um erro de saída. Se *buffer* ou *formato* é um ponteiro nulo, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e defina **errno** à **EINVAL**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, formata e escreve os dados fornecidos para a memória apontada pelo *buffer*.
+Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, formata e grava os dados fornecidos para a memória apontada por *buffer*.
 
-As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
 > [!IMPORTANT]
-> Usando **vsprintf**, existem é nenhuma maneira de limitar o número de caracteres gravada, que significa que o código usando essa função é suscetível a saturações de buffer. Use [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) em vez disso ou chame [_vsnprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) para determinar o tamanho necessário do buffer. Além disso, verifique se *formato* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).
+> Usando o **vsprintf**, existem é nenhuma maneira de limitar o número de caracteres gravada, que significa que o código usando essa função é suscetível a estouros de buffer. Use [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) em vez disso ou chame [_vsnprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) para determinar o tamanho necessário do buffer. Além disso, certifique-se de que *formato* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
-**vswprintf** está em conformidade com o ISO C Standard, que requer o segundo parâmetro, *contagem*, do tipo **size_t**. Para forçar o antigo comportamento não padrão, definir **_CRT_NON_CONFORMING_SWPRINTFS**. O comportamento antigo não pode estar em uma versão futura, portanto o código deve ser alterado para usar o novo comportamento compatível.
+**vswprintf** está em conformidade com o ISO C Standard, que exige que o segundo parâmetro, *contagem*, do tipo **size_t**. Para forçar o antigo comportamento não padrão, defina **_CRT_NON_CONFORMING_SWPRINTFS**. O comportamento antigo não estejam em uma versão futura, portanto, o código deve ser alterado para usar o novo comportamento compatível.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

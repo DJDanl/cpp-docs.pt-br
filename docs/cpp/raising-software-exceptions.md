@@ -23,17 +23,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b4469d7d53a7374f62e0ec232a7836e80ab75d8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 587ce3800be5c58e4882b6ac3239de614739bcb8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606409"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219655"
 ---
 # <a name="raising-software-exceptions"></a>Acionando exceções de software
 Algumas das origens mais comuns de erros do programa não são sinalizadas como exceções pelo sistema. Por exemplo, se você tenta alocar um bloco de memória, mas não há memória suficiente, o tempo de execução ou a função de API não geram uma exceção, mas retornam um código de erro.  
   
- No entanto, você pode tratar qualquer condição como uma exceção detectando essa condição em seu código e em seguida, o relatório por meio da chamada a [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) função. Ao sinalizar erros dessa maneira, você aproveitas as vantagens de manipulação de exceções estruturada em qualquer tipo de erro de tempo de execução.  
+ No entanto, você pode tratar qualquer condição como uma exceção detectando essa condição em seu código e em seguida, o relatório por meio da chamada a [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) função. Ao sinalizar erros dessa maneira, você aproveitas as vantagens de manipulação de exceções estruturada em qualquer tipo de erro de tempo de execução.  
   
  Para usar a manipulação de exceção estruturada com erros:  
   
@@ -68,7 +68,7 @@ if (lpstr == NULL)
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);  
 ```  
   
- Se você quiser simplesmente gerar uma exceção, pode definir os últimos três parâmetros como 0. Os últimos três parâmetros são úteis para passar informações adicionais e definir um sinalizador que impeça manipuladores de continuarem a execução. Consulte a [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) função no SDK do Windows para obter mais informações.  
+ Se você quiser simplesmente gerar uma exceção, pode definir os últimos três parâmetros como 0. Os últimos três parâmetros são úteis para passar informações adicionais e definir um sinalizador que impeça manipuladores de continuarem a execução. Consulte a [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) função no SDK do Windows para obter mais informações.  
   
  Em seus filtros de manipulação de exceções, você pode testar os códigos que você definiu. Por exemplo:  
   

@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220e2befc40dba342a7f8c2aa4c94294bc667ce0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69123bfd07d992d96c504e538ded157c49991dab
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411416"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221602"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -77,19 +77,19 @@ void _wsplitpath(
 
 *caminho* caminho completo.
 
-*unidade* letra da unidade, seguida por dois-pontos (**:**). Você pode passar **nulo** para esse parâmetro se você não precisa a letra da unidade.
+*unidade* letra da unidade, seguida por dois-pontos (**:**). Você pode passar **nulo** para esse parâmetro se você não precisa ter a letra da unidade.
 
-*dir* caminho de diretório, incluindo a barra à direita. Barras duplas ( **/** ), barras invertidas ( **\\** ), ou ambos podem ser usadas. Você pode passar **nulo** para esse parâmetro se o caminho do diretório não é necessário.
+*dir* caminho de diretório, incluindo barra à direita. Barras ( **/** ), barras invertidas ( **\\** ), ou ambos podem ser usadas. Você pode passar **nulo** para esse parâmetro se você não precisa o caminho do diretório.
 
 *fname* basear o nome do arquivo (sem extensão). Você pode passar **nulo** para esse parâmetro se o nome do arquivo não é necessário.
 
-*ext* extensão de nome de arquivo, incluindo à esquerda período (**.**). Você pode passar **nulo** para esse parâmetro se a extensão de nome de arquivo não é necessário.
+*ext* extensão de nome de arquivo, incluindo ponto à esquerda (**.**). Você pode passar **nulo** para esse parâmetro se a extensão de nome de arquivo não é necessária.
 
 ## <a name="remarks"></a>Comentários
 
-O **splitpath** função quebras de um caminho em quatro componentes. **splitpath** manipula automaticamente os argumentos da cadeia de caracteres multibyte conforme apropriado, reconhecer sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento. **wsplitpath** é uma versão de caractere largo de **splitpath**; os argumentos para **wsplitpath** são cadeias de caracteres do caractere largo. Caso contrário, essas funções se comportam de forma idêntica.
+O **splitpath** função divide um caminho em seus quatro componentes. **splitpath** manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo as sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento. **wsplitpath** é uma versão de caractere largo de **splitpath**; os argumentos a serem **wsplitpath** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
-**Observação de segurança** Essas funções acarretam uma ameaça em potencial em relação a um problema de estouro de buffer. Os problemas de estouro de buffer são um método frequente de ataque ao sistema, resultando em uma elevação de privilégio sem garantia. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer). Versões mais seguras dessas funções estão disponíveis; consulte [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
+**Observação de segurança** Essas funções acarretam uma ameaça em potencial em relação a um problema de estouro de buffer. Os problemas de estouro de buffer são um método frequente de ataque ao sistema, resultando em uma elevação de privilégio sem garantia. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer). Versões mais seguras dessas funções estão disponíveis; consulte [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -97,7 +97,7 @@ O **splitpath** função quebras de um caminho em quatro componentes. **splitpat
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
-Cada componente do caminho completo é armazenado em um buffer separado; as constantes de manifesto **max_drive**, **max_dir**, **max_fname**, e **max_ext** (definido em STDLIB. H) Especifique o tamanho máximo para cada componente de arquivo. Componentes de arquivo maiores do que as constantes de manifesto correspondentes causam corrupção de heap.
+Cada componente do caminho completo é armazenado em um buffer separado; as constantes de manifesto **max_drive**, **max_dir**, **max_fname**, e **max_ext** (definida em STDLIB. H) especificam o tamanho máximo para cada componente de arquivo. Componentes de arquivo maiores do que as constantes de manifesto correspondentes causam corrupção de heap.
 
 Cada buffer deve ser tão grande quanto a constante de manifesto correspondente para evitar um possível estouro de buffer.
 
@@ -110,11 +110,11 @@ A tabela a seguir lista os valores das constantes do manifesto.
 |**MAX_FNAME**|256|
 |**MAX_EXT**|256|
 
-Se o caminho completo não tem um componente (por exemplo, um nome de arquivo), **splitpath** atribui vazio cadeias de caracteres para os buffers correspondentes.
+Se o caminho completo não contém um componente (por exemplo, um nome de arquivo), **splitpath** atribui vazio cadeias de caracteres aos buffers correspondentes.
 
-Você pode passar **nulo** para **splitpath** para qualquer parâmetro diferente de *caminho* que não é necessário.
+Você pode passar **nulo** à **splitpath** para qualquer parâmetro diferente de *caminho* que você não precisa.
 
-Se *caminho* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retorna **EINVAL**.
+Se *caminho* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

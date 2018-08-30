@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a3a3fa5d6e9836f7de949d4c13ec19f90dbcb02
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: f0baf6eb87cd73293bc02b670e915bfd4a10cbfd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572807"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219146"
 ---
 # <a name="string-and-character-literals--c"></a>Cadeia de caracteres e literais de caracteres (C++)
 C++ oferece suporte a vários tipos de cadeia de caracteres e caracteres e fornece modos para expressar valores literais de cada um desses tipos. No seu código-fonte, é possível expressar o conteúdo de seu literais de caracteres e cadeia de caracteres usando um conjunto de caracteres. Nomes de caracteres universais e caracteres de escape permitem expressar qualquer cadeia de caracteres usando apenas o conjunto de caracteres de origem básicos. Uma cadeia de caracteres bruta literal permite que você evite usar caracteres de escape e pode ser usada para expressar todos os tipos de literais de cadeia de caracteres. Você também pode criar literais de std:: String sem ter que executar etapas de conversão ou extra construção.  
@@ -206,7 +206,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
   
  Nomes de caractere universal não é possível codificar valores no intervalo de ponto de código substituto u+D800 DFFF. Para pares substitutos de Unicode, especifique o nome de caractere universal usando `\UNNNNNNNN`, onde NNNNNNNN é o ponto de código de oito dígitos do caractere. O compilador gera um par substituto, se necessário.  
   
- No c++03, a linguagem somente permitido a um subconjunto de caracteres a ser representado por seus nomes de caractere universal e permitidos alguns nomes de caractere universal que, na verdade, não representam caracteres Unicode válidos. Isso foi corrigido o padrão c++11. No c++11, identificadores e literais de caracteres e cadeia de caracteres podem usar nomes de caracteres universais.  Para obter mais informações sobre nomes de caracteres universais, consulte [conjuntos de caracteres](../cpp/character-sets.md). Para obter mais informações sobre Unicode, consulte [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Para obter mais informações sobre pares substitutos, consulte [pares substitutos e caracteres suplementares](/windows/desktop/Intl/surrogates-and-supplementary-characters).  
+ No c++03, a linguagem somente permitido a um subconjunto de caracteres a ser representado por seus nomes de caractere universal e permitidos alguns nomes de caractere universal que, na verdade, não representam caracteres Unicode válidos. Isso foi corrigido o padrão c++11. No c++11, identificadores e literais de caracteres e cadeia de caracteres podem usar nomes de caracteres universais.  Para obter mais informações sobre nomes de caracteres universais, consulte [conjuntos de caracteres](../cpp/character-sets.md). Para obter mais informações sobre Unicode, consulte [Unicode](https://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Para obter mais informações sobre pares substitutos, consulte [pares substitutos e caracteres suplementares](/windows/desktop/Intl/surrogates-and-supplementary-characters).  
   
 ## <a name="string-literals"></a>Literais de cadeia de caracteres  
  Uma literal de cadeia de caracteres representa uma sequência de caracteres que, juntos, formam uma cadeia de caracteres terminada em nulo. Os caracteres devem ser incluídos entre aspas duplas. Existem os seguintes tipos de literais de cadeias de caracteres:  

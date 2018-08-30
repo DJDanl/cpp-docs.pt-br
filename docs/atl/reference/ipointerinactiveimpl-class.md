@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d916d2e2f8f42a4162966a1d0ddc7de55eb6bd4b
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5d7c4ed7634cc1818250d8945a057f97c53edffc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883574"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223193"
 ---
 # <a name="ipointerinactiveimpl-class"></a>Classe IPointerInactiveImpl
-Essa classe implementa `IUnknown` e o [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) métodos de interface.  
+Essa classe implementa `IUnknown` e o [IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive) métodos de interface.  
   
 > [!IMPORTANT]
 >  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
@@ -59,7 +59,7 @@ class IPointerInactiveImpl
 ## <a name="remarks"></a>Comentários  
  Um objeto inativo é aquele que é simplesmente carregado ou em execução. Ao contrário de um objeto do Active Directory, um objeto inativo não pode receber mensagens de mouse e teclado do Windows. Assim, os objetos inativos usam menos recursos e são geralmente mais eficientes.  
   
- O [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) interface permite que um objeto dar suporte a um nível mínimo de interação do mouse enquanto permanecem inativos. Essa funcionalidade é particularmente útil para controles.  
+ O [IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive) interface permite que um objeto dar suporte a um nível mínimo de interação do mouse enquanto permanecem inativos. Essa funcionalidade é particularmente útil para controles.  
   
  Classe `IPointerInactiveImpl` implementa o `IPointerInactive` métodos por simplesmente retornar E_NOTIMPL. No entanto, ele implementa `IUnknown` enviando informações para o despejo de compilações de dispositivo na depuração.  
   
@@ -84,7 +84,7 @@ HRESULT GetActivationPolicy(DWORD* pdwPolicy);
  Retornará E_NOTIMPL.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IPointerInactive::GetActivationPolicy](http://msdn.microsoft.com/library/windows/desktop/ms692470) no Windows SDK.  
+ Ver [IPointerInactive::GetActivationPolicy](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-getactivationpolicy) no Windows SDK.  
   
 ##  <a name="oninactivemousemove"></a>  IPointerInactiveImpl::OnInactiveMouseMove  
  Notifica o objeto que o ponteiro do mouse foi movido sobre ele, que indica o objeto pode disparar eventos de mouse.  
@@ -101,7 +101,7 @@ HRESULT OnInactiveMouseMove(
  Retornará E_NOTIMPL.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IPointerInactive::OnInactiveMouseMove](http://msdn.microsoft.com/library/windows/desktop/ms693374) no Windows SDK.  
+ Ver [IPointerInactive::OnInactiveMouseMove](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-oninactivemousemove) no Windows SDK.  
   
 ##  <a name="oninactivesetcursor"></a>  IPointerInactiveImpl::OnInactiveSetCursor  
  Define o ponteiro do mouse para o objeto inativo.  
@@ -119,7 +119,7 @@ HRESULT OnInactiveSetCursor(
  Retornará E_NOTIMPL.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IPointerInactive::OnInactiveSetCursor](http://msdn.microsoft.com/library/windows/desktop/ms694336) no Windows SDK.  
+ Ver [IPointerInactive::OnInactiveSetCursor](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-oninactivesetcursor) no Windows SDK.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)

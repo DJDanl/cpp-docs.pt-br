@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07e38d11ef25ebc2f1da888594ab84fe2261c53a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d32b6e61ab0dbac6010c6ed233f2cd822e73c2d5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028327"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220969"
 ---
 # <a name="multiset-class"></a>Classe multiset
 
@@ -116,13 +116,16 @@ class multiset
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave* tipo de dados do elemento a ser armazenado no multiset.
+*Chave*<br/>
+ O tipo de dados do elemento a ser armazenado no multiset.
 
-*Comparar* o tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no multiset. O predicado binário **less**\<Key> é o valor padrão.
+*Compare*<br/>
+ O tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no multiset. O predicado binário **less**\<Key> é o valor padrão.
 
 No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predicado `std::less<>` ou o `std::greater<>`, que não tem nenhum parâmetro de tipo. Para obter mais informações, consulte [Pesquisa heterogênea em contêineres associativos](../standard-library/stl-containers.md#sequence_containers)
 
-*Alocador* o tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre o multiset alocação e desalocação de memória. O valor padrão é **alocador * * *\<Key >.*
+*Alocador*<br/>
+ O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação do multiset da memória. O valor padrão é `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentários
 
@@ -478,7 +481,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*chave* a chave dos elementos a serem correspondidos do multiset.
+*key*<br/>
+ A chave dos elementos a serem correspondidos do multiset.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -636,8 +640,7 @@ typedef typename allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>Comentários
 
-
-          `difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. `difference_type` geralmente é usado para representar o número de elementos no intervalo [`first`, `last`) entre os iteradores `first` e `last`, inclui o elemento apontado por `first` e o intervalo de elementos até, mas sem incluir, o elemento apontado por `last`.
+`difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. `difference_type` geralmente é usado para representar o número de elementos no intervalo [`first`, `last`) entre os iteradores `first` e `last`, inclui o elemento apontado por `first` e o intervalo de elementos até, mas sem incluir, o elemento apontado por `last`.
 
 Observe que, embora `difference_type` esteja disponível para todos os iteradores que atendem aos requisitos de um iterador de entrada, que inclui a classe de iteradores bidirecionais com suporte dos contêineres reversíveis, como um conjunto, a subtração entre iteradores só tem suporte dos iteradores de acesso aleatório fornecidos por um contêiner de acesso aleatório, como um vetor.
 
@@ -874,7 +877,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*chave* a chave do argumento a ser comparado com a chave de classificação de um elemento do multiset que está sendo pesquisado.
+*key*<br/>
+ A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -958,13 +962,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Onde* posição do elemento a ser removido.
+*Where*<br/>
+ A posição do elemento a ser removido.
 
-*Primeiro* posição do primeiro elemento a ser removido.
+*Primeiro*<br/>
+ A posição do primeiro elemento a ser removido.
 
-*Última* posição logo após o último elemento a ser removido.
+*último*<br/>
+ A posição logo após o último elemento a ser removido.
 
-*Chave* o valor da chave dos elementos a ser removido.
+*Chave*<br/>
+ O valor de chave dos elementos a serem removidos.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -989,7 +997,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*chave* o valor da chave a ser correspondido pela chave de classificação de um elemento do multiset que está sendo pesquisado.
+*key*<br/>
+ O valor da chave a ser comparado pela chave de classificação de um elemento do multiconjunto que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1431,7 +1440,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*chave* a chave do argumento a ser comparado com a chave de classificação de um elemento do multiset que está sendo pesquisado.
+*key*<br/>
+ A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2037,7 +2047,8 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o multiset do argumento que fornece os elementos a serem trocados com o multiset de destino.
+*right*<br/>
+ O multiset do argumento que fornece os elementos a serem trocados com o multiset de destino.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2105,7 +2116,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*chave* a chave do argumento a ser comparado com a chave de classificação de um elemento do multiset que está sendo pesquisado.
+*key*<br/>
+ A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2308,7 +2320,7 @@ The multiset has elements: 10 20.
 
 ## <a name="see-also"></a>Consulte também
 
-[\<Definir > membros](http://msdn.microsoft.com/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
+[\<Definir > membros](https://msdn.microsoft.com/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
 [Contêineres](../cpp/containers-modern-cpp.md)<br/>
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ecf0dc1907d2f78a844756d0efc8add04de6046
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: afbb4600098591900491e7c1ec6f256bc58c26a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885267"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220643"
 ---
 # <a name="catlfile-class"></a>Classe CAtlFile
 Essa classe fornece um wrapper estreito ao redor do Windows API de manipulação de arquivos.  
@@ -132,7 +132,7 @@ HRESULT Create(
  O nome de arquivo.  
   
  *dwDesiredAccess*  
- O acesso desejado. Ver *dwDesiredAccess* na [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) no SDK do Windows.  
+ O acesso desejado. Ver *dwDesiredAccess* na [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) no SDK do Windows.  
   
  *dwShareMode*  
  O modo de compartilhamento. Ver *dwShareMode* em `CreateFile`.  
@@ -153,7 +153,7 @@ HRESULT Create(
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Chamadas [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) para criar ou abrir o arquivo.  
+ Chamadas [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) para criar ou abrir o arquivo.  
   
 ##  <a name="flush"></a>  CAtlFile::Flush  
  Chame esse método para limpar os buffers para o arquivo e fazer com que todos os dados armazenados em buffer sejam gravados no arquivo.  
@@ -166,7 +166,7 @@ HRESULT Flush() throw();
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Chamadas [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) liberar dados armazenados em buffer para o arquivo.  
+ Chamadas [FlushFileBuffers](/windows/desktop/api/fileapi/nf-fileapi-flushfilebuffers) liberar dados armazenados em buffer para o arquivo.  
   
 ##  <a name="getoverlappedresult"></a>  CAtlFile::GetOverlappedResult  
  Chame esse método para obter os resultados de uma operação sobreposta no arquivo.  
@@ -180,7 +180,7 @@ HRESULT GetOverlappedResult(
   
 ### <a name="parameters"></a>Parâmetros  
  *pOverlapped*  
- A estrutura sobreposta. Ver *lpOverlapped* na [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) no SDK do Windows.  
+ A estrutura sobreposta. Ver *lpOverlapped* na [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) no SDK do Windows.  
   
  *dwBytesTransferred*  
  Os bytes transferidos. Ver *lpNumberOfBytesTransferred* em `GetOverlappedResult`.  
@@ -192,7 +192,7 @@ HRESULT GetOverlappedResult(
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Chamadas [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) para obter os resultados de uma operação sobreposta no arquivo.  
+ Chamadas [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) para obter os resultados de uma operação sobreposta no arquivo.  
   
 ##  <a name="getposition"></a>  CAtlFile::GetPosition  
  Chame esse método para obter a posição atual do ponteiro de arquivo.  
@@ -209,7 +209,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Chamadas [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) para obter a posição atual do ponteiro de arquivo.  
+ Chamadas [SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) para obter a posição atual do ponteiro de arquivo.  
   
 ##  <a name="getsize"></a>  CAtlFile::GetSize  
  Chame esse método para obter o tamanho em bytes do arquivo.  
@@ -226,7 +226,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Chamadas [GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) para obter o tamanho em bytes do arquivo.  
+ Chamadas [GetFileSize](/windows/desktop/api/fileapi/nf-fileapi-getfilesize) para obter o tamanho em bytes do arquivo.  
   
 ##  <a name="lockrange"></a>  CAtlFile::LockRange  
  Chame esse método para bloquear uma região no arquivo para impedir que outros processos de acessá-la.  
@@ -246,7 +246,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Chamadas [arquivo](http://msdn.microsoft.com/library/windows/desktop/aa365202) bloquear uma região no arquivo. Os bytes bloqueados em um arquivo impedem o acesso a esses bytes por outros processos. Você pode bloquear mais de uma região de um arquivo, mas não há regiões sobrepostas são permitidos. Quando você desbloqueia uma região, usando [CAtlFile::UnlockRange](#unlockrange), o intervalo de bytes deve corresponder exatamente à região que foi bloqueado anteriormente. `LockRange` não mescla regiões adjacentes; Se duas regiões bloqueadas forem adjacentes, você deve desbloquear cada uma separadamente.  
+ Chamadas [arquivo](/windows/desktop/api/fileapi/nf-fileapi-lockfile) bloquear uma região no arquivo. Os bytes bloqueados em um arquivo impedem o acesso a esses bytes por outros processos. Você pode bloquear mais de uma região de um arquivo, mas não há regiões sobrepostas são permitidos. Quando você desbloqueia uma região, usando [CAtlFile::UnlockRange](#unlockrange), o intervalo de bytes deve corresponder exatamente à região que foi bloqueado anteriormente. `LockRange` não mescla regiões adjacentes; Se duas regiões bloqueadas forem adjacentes, você deve desbloquear cada uma separadamente.  
   
 ##  <a name="m_ptm"></a>  CAtlFile::m_pTM  
  Ponteiro para um `CAtlTransactionManager` objeto.  
@@ -293,16 +293,16 @@ HRESULT Read(
  O número de bytes lidos.  
   
  *pOverlapped*  
- A estrutura sobreposta. Ver *lpOverlapped* na [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467) no SDK do Windows.  
+ A estrutura sobreposta. Ver *lpOverlapped* na [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile) no SDK do Windows.  
   
  *pfnCompletionRoutine*  
- A rotina de conclusão. Ver *lpCompletionRoutine* na [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) no SDK do Windows.  
+ A rotina de conclusão. Ver *lpCompletionRoutine* na [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- As primeiras três formas de chamar [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), a última [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) para ler dados do arquivo. Use [CAtlFile::Seek](#seek) para mover o ponteiro do arquivo.  
+ As primeiras três formas de chamar [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile), a última [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) para ler dados do arquivo. Use [CAtlFile::Seek](#seek) para mover o ponteiro do arquivo.  
   
 ##  <a name="seek"></a>  CAtlFile::Seek  
  Chame esse método para mover o ponteiro do arquivo do arquivo.  
@@ -324,7 +324,7 @@ HRESULT Seek(
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Chamadas [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) para mover o ponteiro do arquivo.  
+ Chamadas [SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) para mover o ponteiro do arquivo.  
   
 ##  <a name="setsize"></a>  CAtlFile::SetSize  
  Chame esse método para definir o tamanho do arquivo.  
@@ -341,7 +341,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Chamadas [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) e [SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) para definir o tamanho do arquivo. No retorno, o ponteiro do arquivo é posicionado no final do arquivo.  
+ Chamadas [SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) e [SetEndOfFile](/windows/desktop/api/fileapi/nf-fileapi-setendoffile) para definir o tamanho do arquivo. No retorno, o ponteiro do arquivo é posicionado no final do arquivo.  
   
 ##  <a name="unlockrange"></a>  CAtlFile::UnlockRange  
  Chame esse método para desbloquear uma região do arquivo.  
@@ -361,7 +361,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Chamadas [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) para desbloquear uma região do arquivo.  
+ Chamadas [UnlockFile](/windows/desktop/api/fileapi/nf-fileapi-unlockfile) para desbloquear uma região do arquivo.  
   
 ##  <a name="write"></a>  CAtlFile::Write  
  Chame esse método para gravar dados no arquivo começando na posição indicada pelo ponteiro de arquivo.  
@@ -392,10 +392,10 @@ HRESULT Write(
  O número de bytes a serem transferidos do buffer.  
   
  *pOverlapped*  
- A estrutura sobreposta. Ver *lpOverlapped* na [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747) no SDK do Windows.  
+ A estrutura sobreposta. Ver *lpOverlapped* na [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) no SDK do Windows.  
   
  *pfnCompletionRoutine*  
- A rotina de conclusão. Ver *lpCompletionRoutine* na [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) no SDK do Windows.  
+ A rotina de conclusão. Ver *lpCompletionRoutine* na [WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) no SDK do Windows.  
   
  *pnBytesWritten*  
  Os bytes gravados.  
@@ -404,7 +404,7 @@ HRESULT Write(
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- As primeiras três formas de chamar [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747), as chamadas a última [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) para gravar dados no arquivo. Use [CAtlFile::Seek](#seek) para mover o ponteiro do arquivo.  
+ As primeiras três formas de chamar [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile), as chamadas a última [WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) para gravar dados no arquivo. Use [CAtlFile::Seek](#seek) para mover o ponteiro do arquivo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de letreiro](../../visual-cpp-samples.md)   

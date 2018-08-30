@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 004da50bf8d688f1d7b0432e5196094b878870cf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 43a8851d11e6113d52b2ad128b1ff41e66c1ad12
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955001"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223229"
 ---
 # <a name="sample-container-class"></a>Exemplo de Classe de Contêiner
 
@@ -34,7 +34,7 @@ Algumas limitações adicionais:
 
 - Se a expressão `~Ty` gera uma exceção, o estado resultante do objeto de contêiner é indefinido.
 
-- Se o contêiner armazenar um objeto de alocador *al*, e *al* lança uma exceção diferente como resultado de uma chamada para * * al**allocate**, o estado resultante do contêiner objeto é indefinido.
+- Se o contêiner armazenar um objeto de alocador *al*, e *al* lança uma exceção diferente como resultado de uma chamada para `al.allocate`, o estado resultante do objeto de contêiner é indefinido.
 
 - Se o contêiner armazenar um objeto de função *comp*, para determinar como ordenar a sequência controlada, *comp* gera uma exceção de qualquer tipo, o estado resultante do objeto de contêiner é indefinido.
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7cbfd0e8b9ef95aac083b367980571c5535e6a7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ca91e614438695a14c6c16c05c5d778b143657eb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599036"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219377"
 ---
 # <a name="c-amp-overview"></a>Visão geral do C++ AMP
 C++ Accelerated Massive Parallelism (C++ AMP) acelera a execução do código C++, tirando proveito do hardware de dados paralelos, como uma unidade de processamento gráfico (GPU) em uma placa gráfica discreta. Usando o C++ AMP, você pode codificar algoritmos de dados multidimensionais, de modo que a execução possa ser acelerada usando o paralelismo em hardware heterogêneo. O modelo de programação do C++ AMP inclui matrizes multidimensionais, indexação, transferência de memória, agrupamento lado a lado e uma biblioteca de funções matemáticas. Você pode usar extensões de linguagem do C++ AMP para controlar como os dados são movidos da CPU para a GPU e vice-versa, para que você pode melhorar o desempenho.  
@@ -464,7 +464,7 @@ C++ AMP inclui uma biblioteca de elementos gráficos que se destina a programaç
   
 - [Classe writeonly_texture_view](../../parallel/amp/reference/writeonly-texture-view-class.md): fornece acesso somente gravação para qualquer textura.  
   
-- [Biblioteca de vetor de curto](http://msdn.microsoft.com/en-us/4c4f5bed-c396-493b-a238-c347563f645f): define um conjunto de tipos de vetor curto de comprimento 2, 3 e 4, que se baseiam **int**, `uint`, **float**, **double**, [norma](../../parallel/amp/reference/norm-class.md), ou [unorm](../../parallel/amp/reference/unorm-class.md).  
+- [Biblioteca de vetor de curto](https://msdn.microsoft.com/4c4f5bed-c396-493b-a238-c347563f645f): define um conjunto de tipos de vetor curto de comprimento 2, 3 e 4, que se baseiam **int**, `uint`, **float**, **double**, [norma](../../parallel/amp/reference/norm-class.md), ou [unorm](../../parallel/amp/reference/unorm-class.md).  
   
 ## <a name="universal-windows-platform-uwp-apps"></a>Aplicativos do Universal Windows Platform (UWP)  
  

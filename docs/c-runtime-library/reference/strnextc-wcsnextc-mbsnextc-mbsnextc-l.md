@@ -54,19 +54,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f759ce9a4617ab0ca8e97ef308508d836b53b742
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4ede89a5290bca14c39aa16c68071edefd0ebd08
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414240"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222423"
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 
 Localiza o próximo caractere em uma cadeia de caracteres.
 
 > [!IMPORTANT]
-> **mbsnextc** e **mbsnextc_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnextc** e **_mbsnextc_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -97,15 +97,15 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna o valor inteiro do próximo caractere *str*.
+Cada uma dessas funções retorna o valor de inteiro do próximo caractere em *str*.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbsnextc** função retorna o valor inteiro do próximo caractere multibyte em *str*, sem Avançar o ponteiro de cadeia de caracteres. **mbsnextc** reconhece sequências de caracteres multibyte de acordo com o [página de código multibyte](../../c-runtime-library/code-pages.md) atualmente em uso.
+O **_mbsnextc** função retorna o valor inteiro do próximo caractere multibyte na *str*, sem Avançar o ponteiro de cadeia de caracteres. **_mbsnextc** reconhece sequências de caracteres multibyte de acordo com o [página de código multibyte](../../c-runtime-library/code-pages.md) atualmente em uso.
 
-Se *str* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retornará 0.
+Se *str* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará 0.
 
-**Observação de segurança** Essa API causa uma ameaça em potencial em relação ao problema de estouro de buffer. Os problemas de estouro de buffer são um método frequente de ataque ao sistema, resultando em uma elevação de privilégio sem garantia. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).
+**Observação de segurança** Essa API causa uma ameaça em potencial em relação ao problema de estouro de buffer. Os problemas de estouro de buffer são um método frequente de ataque ao sistema, resultando em uma elevação de privilégio sem garantia. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -113,9 +113,9 @@ Se *str* é **nulo**, o manipulador de parâmetro inválido é invocado, conform
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
 
-**strnextc** e **wcsnextc** são cadeia de caracteres de byte único e versões de cadeia de caracteres largos do **mbsnextc**. **wcsnextc** retorna o valor inteiro do próximo caractere grande em *str*; **strnextc** retorna o valor inteiro do próximo caractere de byte único em *str*. **strnextc** e **wcsnextc** são fornecidos apenas para esse mapeamento e não deve ser usado caso contrário. Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).
+**_strnextc** e **_wcsnextc** são a cadeia de caracteres de byte único e de cadeia de caracteres largos em versões do **_mbsnextc**. **_wcsnextc** retorna o valor inteiro do próximo caractere largo em *str*; **_strnextc** retorna o valor inteiro do próximo caractere de byte único nos *str*. **_strnextc** e **_wcsnextc** são fornecidos apenas para esse mapeamento e não deve ser usado caso contrário. Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).
 
-**mbsnextc_l** é idêntico, exceto que ele usa o parâmetro de localidade passado em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_mbsnextc_l** é idêntico, exceto que ele usa o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

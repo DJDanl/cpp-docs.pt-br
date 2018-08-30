@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c939a2a96d0f8a34dbe9424ab7e07c5a60c2224
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7a8bb269f1d572fed2d7fc85ee33f07d22a98aae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610199"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220576"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Extensões de componente para plataformas de tempo de execução
 
@@ -34,7 +34,7 @@ Visual C++ fornece extensões de linguagem para ajudar você programe em platafo
 
 C + + c++ /CX é um subconjunto do C + + c++ /CLI CLI. Para extensões que são comuns a C + + c++ /CLI CX e C + + / CLI, a semântica depende se você está visando o common language runtime (CLR) ou o tempo de execução do Windows. Para compilar seu aplicativo seja executado no tempo de execução do Windows, especifique o `/ZW` opção de compilador. Para compilá-lo para ser executado no CLR, especifique o `/clr` opção de compilador. Essas opções são definidas automaticamente quando você usa o Visual Studio para criar um projeto.
 
-Para obter mais informações sobre como criar aplicativos da plataforma Universal do Windows em C++, consulte [aplicativos de roteiro para o Windows Runtime usando C++](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx).
+Para obter mais informações sobre como criar aplicativos da plataforma Universal do Windows em C++, consulte [aplicativos de roteiro para o Windows Runtime usando C++](https://msdn.microsoft.com/library/windows/apps/hh700360.aspx).
 
 C + + c++ CLI estende o padrão ISO/ANSI C++ e é definido em Ecma C + c++ padrão da CLI. Para obter mais informações, consulte [programação do .NET com C + + c++ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 

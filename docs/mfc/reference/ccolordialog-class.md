@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0445939c7437e4978ee698005cc2f7541e6684b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c528e2a80894db1da82d7b07ba34a7c62b6237da
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339300"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219013"
 ---
 # <a name="ccolordialog-class"></a>Classe CColorDialog
 Permite que você incorpore uma caixa de diálogo de seleção de cor em seu aplicativo.  
@@ -80,13 +80,13 @@ class CColorDialog : public CCommonDialog
   
  Para construir um `CColorDialog` do objeto, use o construtor fornecido ou derivar uma nova classe e usar seu próprio construtor personalizado.  
   
- Depois que a caixa de diálogo foi construída, você pode definir ou modificar quaisquer valores na [m_cc](#m_cc) estrutura para inicializar os valores dos controles da caixa de diálogo. O *m_cc* estrutura é do tipo [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
+ Depois que a caixa de diálogo foi construída, você pode definir ou modificar quaisquer valores na [m_cc](#m_cc) estrutura para inicializar os valores dos controles da caixa de diálogo. O *m_cc* estrutura é do tipo [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora).  
   
  Depois de inicializar os controles da caixa de diálogo, chame o `DoModal` a função de membro para exibir a caixa de diálogo e permitir que o usuário selecione uma cor. `DoModal` Retorna a seleção do usuário do botão Okey (IDOK) ou Cancelar (IDCANCEL) de qualquer um da caixa de diálogo.  
   
  Se `DoModal` retorna IDOK, você pode usar um dos `CColorDialog`de funções de membro para recuperar as informações de entrada do usuário.  
   
- Você pode usar o Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) função para determinar se ocorreu um erro durante a inicialização da caixa de diálogo e para saber mais sobre o erro.  
+ Você pode usar o Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) função para determinar se ocorreu um erro durante a inicialização da caixa de diálogo e para saber mais sobre o erro.  
   
  `CColorDialog` depende do COMMDLG. Arquivo DLL que acompanha o Windows versões 3.1 e posteriores.  
   
@@ -130,7 +130,7 @@ CColorDialog(
  A seleção de cor padrão. Se nenhum valor for especificado, o padrão é RGB(0,0,0) (preto).  
   
  *dwFlags*  
- Um conjunto de sinalizadores que personalizam a função e aparência da caixa de diálogo. Para obter mais informações, consulte o [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) estrutura no SDK do Windows.  
+ Um conjunto de sinalizadores que personalizam a função e aparência da caixa de diálogo. Para obter mais informações, consulte o [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora) estrutura no SDK do Windows.  
   
  *pParentWnd*  
  Um ponteiro para a janela do pai ou proprietária da caixa de diálogo.  
@@ -146,7 +146,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- IDOK ou IDCANCEL. Se IDCANCEL for retornado, chame o Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) função para determinar se ocorreu um erro.  
+ IDOK ou IDCANCEL. Se IDCANCEL for retornado, chame o Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) função para determinar se ocorreu um erro.  
   
  IDOK e IDCANCEL são constantes que indicam se o usuário selecionou o botão Okey ou em Cancelar.  
   
@@ -166,7 +166,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que contém as informações de RGB para a cor selecionada na caixa de diálogo de cor.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) valor que contém as informações de RGB para a cor selecionada na caixa de diálogo de cor.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#50](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]  
@@ -190,7 +190,7 @@ static COLORREF* PASCAL GetSavedCustomColors();
  [!code-cpp[NVC_MFCDocView#51](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]  
   
 ##  <a name="m_cc"></a>  CColorDialog::m_cc  
- Uma estrutura do tipo [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830), cujos membros armazenam as características e os valores da caixa de diálogo.  
+ Uma estrutura do tipo [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora), cujos membros armazenam as características e os valores da caixa de diálogo.  
   
 ```  
 CHOOSECOLOR m_cc;  

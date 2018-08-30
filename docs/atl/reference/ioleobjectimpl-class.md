@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aec4de071df8dcca960a0f1cb802375e5553ceb3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3646a640cb3873ec32f6284f8d2be99469ef7633
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880296"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220897"
 ---
 # <a name="ioleobjectimpl-class"></a>Classe IOleObjectImpl
 Essa classe implementa `IUnknown` e é a principal interface por meio do qual um contêiner se comunica com um controle.  
@@ -131,7 +131,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 |[IOleObjectImpl::Update](#update)|Atualiza o controle. A implementação de ATL Retorna S_OK.|  
   
 ## <a name="remarks"></a>Comentários  
- O [IOleObject](http://msdn.microsoft.com/library/windows/desktop/dd542709) interface é a principal interface por meio do qual um contêiner se comunica com um controle. Classe `IOleObjectImpl` fornece uma implementação padrão dessa interface e implementa `IUnknown` enviando informações para o despejo de compilações de dispositivo na depuração.  
+ O [IOleObject](/windows/desktop/api/oleidl/nn-oleidl-ioleobject) interface é a principal interface por meio do qual um contêiner se comunica com um controle. Classe `IOleObjectImpl` fornece uma implementação padrão dessa interface e implementa `IUnknown` enviando informações para o despejo de compilações de dispositivo na depuração.  
   
  **Artigos relacionados** [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -153,7 +153,7 @@ STDMETHOD(Advise)(
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) no Windows SDK.  
+ Ver [IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise) no Windows SDK.  
   
 ##  <a name="close"></a>  IOleObjectImpl::Close  
  Altera o estado do controle de execução para carregar.  
@@ -167,7 +167,7 @@ STDMETHOD(Close)(DWORD dwSaveOption);
   
  Os ponteiros são mantidos nos membros de dados de classe de controle [CComControlBase::m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite) e [CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink) são lançadas e os membros de dados [CComControlBase:: m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd), [CComControlBase::m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless), e [CComControlBase::m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex) estiverem definidas como FALSE.  
   
- Ver [IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) no Windows SDK.  
+ Ver [IOleObject::Close](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-close) no Windows SDK.  
   
 ##  <a name="doverb"></a>  IOleObjectImpl::DoVerb  
  Informa o controle para executar uma das suas ações enumeradas.  
@@ -196,7 +196,7 @@ STDMETHOD(DoVerb)(
 |OLEIVERB_SHOW|[DoVerbShow](#doverbshow)|  
 |OLEIVERB_UIACTIVATE|[DoVerbUIActivate](#doverbuiactivate)|  
   
- Ver [IOleObject:: DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) no Windows SDK.  
+ Ver [IOleObject:: DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) no Windows SDK.  
   
 ##  <a name="doverbdiscardundo"></a>  IOleObjectImpl::DoVerbDiscardUndo  
  Informa o controle para descartar qualquer estado de desfazer que ele mantém.  
@@ -250,7 +250,7 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
  Um dos valores HRESULT padrão.  
   
 ### <a name="remarks"></a>Comentários  
- Ativa o controle em vigor, chamando [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). A menos que o membro de dados da classe de controle `m_bWindowOnly` for TRUE, `DoVerbInPlaceActivate` primeiro tenta ativar o controle como um controle sem janelas (possível somente se o contêiner dá suporte a [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)). Se isso falhar, a função tenta ativar o controle com os recursos estendidos (possível somente se o contêiner dá suporte a [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)). Se isso falhar, a função tenta ativar o controle sem nenhum recurso estendido (possível somente se o contêiner dá suporte a [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)). Se a ativação for bem-sucedida, a função notifica o contêiner de que controle foi ativado.  
+ Ativa o controle em vigor, chamando [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). A menos que o membro de dados da classe de controle `m_bWindowOnly` for TRUE, `DoVerbInPlaceActivate` primeiro tenta ativar o controle como um controle sem janelas (possível somente se o contêiner dá suporte a [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless)). Se isso falhar, a função tenta ativar o controle com os recursos estendidos (possível somente se o contêiner dá suporte a [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex)). Se isso falhar, a função tenta ativar o controle sem nenhum recurso estendido (possível somente se o contêiner dá suporte a [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)). Se a ativação for bem-sucedida, a função notifica o contêiner de que controle foi ativado.  
   
 ##  <a name="doverbopen"></a>  IOleObjectImpl::DoVerbOpen  
  Faz com que o controle a ser editado em aberto em uma janela separada.  
@@ -331,7 +331,7 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IOleObject::EnumAdvise](http://msdn.microsoft.com/library/windows/desktop/ms682355) no Windows SDK.  
+ Ver [IOleObject::EnumAdvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumadvise) no Windows SDK.  
   
 ##  <a name="enumverbs"></a>  IOleObjectImpl::EnumVerbs  
  Fornece uma enumeração de ações registradas (verbos) para esse controle chamando `OleRegEnumVerbs`.  
@@ -343,7 +343,7 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 ### <a name="remarks"></a>Comentários  
  Você pode adicionar verbos para o arquivo do projeto. rgs. Por exemplo, consulte CIRCCTL. RGS na [c](../../visual-cpp-samples.md) exemplo.  
   
- Ver [IOleObject:: Enumverbs](http://msdn.microsoft.com/library/windows/desktop/ms692781) no Windows SDK.  
+ Ver [IOleObject:: Enumverbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs) no Windows SDK.  
   
 ##  <a name="getclientsite"></a>  IOleObjectImpl::GetClientSite  
  Coloca o ponteiro em membro de dados da classe de controle [CComControlBase::m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) em *ppClientSite* e incrementa a contagem de referência no ponteiro.  
@@ -353,7 +353,7 @@ STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IOleObject::GetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms692603) no Windows SDK.  
+ Ver [IOleObject::GetClientSite](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getclientsite) no Windows SDK.  
   
 ##  <a name="getclipboarddata"></a>  IOleObjectImpl::GetClipboardData  
  Recupera dados da área de transferência.  
@@ -368,7 +368,7 @@ STDMETHOD(GetClipboardData)(
  Retornará E_NOTIMPL.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IOleObject::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms682288) no Windows SDK.  
+ Ver [IOleObject::GetClipboardData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getclipboarddata) no Windows SDK.  
   
 ##  <a name="getextent"></a>  IOleObjectImpl::GetExtent  
  Recupera o tamanho de exibição do controle em execução em unidades HIMETRIC (corresponde a 0,01 milímetro por unidade).  
@@ -382,7 +382,7 @@ STDMETHOD(GetExtent)(
 ### <a name="remarks"></a>Comentários  
  O tamanho é armazenado no membro de dados de classe de controle [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).  
   
- Ver [IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) no Windows SDK.  
+ Ver [IOleObject::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getextent) no Windows SDK.  
   
 ##  <a name="getmiscstatus"></a>  IOleObjectImpl::GetMiscStatus  
  Retorna um ponteiro para informações de status registrado para o controle chamando `OleRegGetMiscStatus`.  
@@ -396,7 +396,7 @@ STDMETHOD(GetMiscStatus)(
 ### <a name="remarks"></a>Comentários  
  As informações de status incluem comportamentos de suporte de controle e a apresentação de dados. Você pode adicionar informações de status para o arquivo do projeto. rgs.  
   
- Ver [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) no Windows SDK.  
+ Ver [IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) no Windows SDK.  
   
 ##  <a name="getmoniker"></a>  IOleObjectImpl::GetMoniker  
  Recupera o identificador de origem do controle.  
@@ -412,7 +412,7 @@ STDMETHOD(GetMoniker)(
  Retornará E_NOTIMPL.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IOleObject::GetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms686576) no Windows SDK.  
+ Ver [IOleObject::GetMoniker](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmoniker) no Windows SDK.  
   
 ##  <a name="getuserclassid"></a>  IOleObjectImpl::GetUserClassID  
  Retorna o identificador de classe do controle.  
@@ -422,7 +422,7 @@ STDMETHOD(GetUserClassID)(CLSID* pClsid);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IOleObject::GetUserClassID](http://msdn.microsoft.com/library/windows/desktop/ms682313) no Windows SDK.  
+ Ver [IOleObject::GetUserClassID](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getuserclassid) no Windows SDK.  
   
 ##  <a name="getusertype"></a>  IOleObjectImpl::GetUserType  
  Retorna o nome do tipo de usuário do controle chamando `OleRegGetUserType`.  
@@ -436,7 +436,7 @@ STDMETHOD(GetUserType)(
 ### <a name="remarks"></a>Comentários  
  O nome do tipo de usuário é usado para exibição em elementos de interfaces do usuário, como menus e caixas de diálogo. Você pode alterar o nome do tipo de usuário no arquivo. rgs do seu projeto.  
   
- Ver [IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) no Windows SDK.  
+ Ver [IOleObject::GetUserType](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getusertype) no Windows SDK.  
   
 ##  <a name="initfromdata"></a>  IOleObjectImpl::InitFromData  
  Inicializa o controle de dados selecionada.  
@@ -452,7 +452,7 @@ STDMETHOD(InitFromData)(
  Retornará E_NOTIMPL.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) no Windows SDK.  
+ Ver [IOleObject::InitFromData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-initfromdata) no Windows SDK.  
   
 ##  <a name="isuptodate"></a>  IOleObjectImpl::IsUpToDate  
  Verifica se o controle está atualizado.  
@@ -465,7 +465,7 @@ STDMETHOD(IsUpToDate)(void);
  Retorna S_OK.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) no Windows SDK.  
+ Ver [IOleObject::IsUpToDate](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-isuptodate) no Windows SDK.  
   
 ##  <a name="onpostverbdiscardundo"></a>  IOleObjectImpl::OnPostVerbDiscardUndo  
  Chamado pelo [DoVerbDiscardUndo](#doverbdiscardundo) depois que o estado de desfazer é descartado.  
@@ -633,7 +633,7 @@ STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
 ### <a name="remarks"></a>Comentários  
  O método, em seguida, Retorna S_OK.  
   
- Ver [IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) no Windows SDK.  
+ Ver [IOleObject::SetClientSite](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setclientsite) no Windows SDK.  
   
 ##  <a name="setcolorscheme"></a>  IOleObjectImpl::SetColorScheme  
  Recomenda um esquema de cores para o aplicativo do controle, se houver.  
@@ -646,7 +646,7 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
  Retornará E_NOTIMPL.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) no Windows SDK.  
+ Ver [IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) no Windows SDK.  
   
 ##  <a name="setextent"></a>  IOleObjectImpl::SetExtent  
  Define a extensão da área de exibição do controle.  
@@ -664,7 +664,7 @@ STDMETHOD(SetExtent)(
   
  Se o controle de membro de dados de classe [CComControlBase::m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize) for TRUE, `SetExtent` chamadas `SendOnDataChange` e `SendOnViewChange` para notificar o comunicado de todos os coletores registrados com o detentor da advise que tem o tamanho do controle alterado.  
   
- Ver [IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) no Windows SDK.  
+ Ver [IOleObject::SetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setextent) no Windows SDK.  
   
 ##  <a name="sethostnames"></a>  IOleObjectImpl::SetHostNames  
  Informa o controle os nomes do aplicativo de contêiner e do documento contêiner.  
@@ -677,7 +677,7 @@ STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainer
  Retorna S_OK.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) no Windows SDK.  
+ Ver [IOleObject::SetHostNames](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-sethostnames) no Windows SDK.  
   
 ##  <a name="setmoniker"></a>  IOleObjectImpl::SetMoniker  
  Informa ao controle qual é seu identificador de origem.  
@@ -692,7 +692,7 @@ STDMETHOD(SetMoniker)(
  Retornará E_NOTIMPL.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IOleObject::SetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679671) no Windows SDK.  
+ Ver [IOleObject::SetMoniker](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setmoniker) no Windows SDK.  
   
 ##  <a name="unadvise"></a>  IOleObjectImpl::Unadvise  
  Exclui a conexão de consultoria armazenado na classe de controle `m_spOleAdviseHolder` membro de dados.  
@@ -702,7 +702,7 @@ STDMETHOD(Unadvise)(DWORD dwConnection);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) no Windows SDK.  
+ Ver [IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise) no Windows SDK.  
   
 ##  <a name="update"></a>  IOleObjectImpl::Update  
  Atualiza o controle.  
@@ -715,9 +715,9 @@ STDMETHOD(Update)(void);
  Retorna S_OK.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IOleObject::Update](http://msdn.microsoft.com/library/windows/desktop/ms679699) no Windows SDK.  
+ Ver [IOleObject::Update](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-update) no Windows SDK.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CComControl](../../atl/reference/ccomcontrol-class.md)   
- [Interfaces de controles ActiveX](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
+ [Interfaces de controles ActiveX](/windows/desktop/com/activex-controls-interfaces)   
  [Visão geral da classe](../../atl/atl-class-overview.md)

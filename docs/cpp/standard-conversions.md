@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1365e950077a65150d8f71fd640f69d1750068c9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 87c8cb1bbd007022a5c01b2aaacdb0233a59068f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462304"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220782"
 ---
 # <a name="standard-conversions"></a>Conversões padrão
-A linguagem C++ define conversões entre seus tipos básicos. Ela também define conversões para o ponteiro, referência e tipos derivados de ponteiro ao membro. Essas conversões são chamadas de “conversões padrão”. (Para obter mais informações sobre tipos, tipos padrão e tipos derivados, consulte [tipos](http://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
+A linguagem C++ define conversões entre seus tipos básicos. Ela também define conversões para o ponteiro, referência e tipos derivados de ponteiro ao membro. Essas conversões são chamadas de “conversões padrão”. (Para obter mais informações sobre tipos, tipos padrão e tipos derivados, consulte [tipos](https://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
   
  Esta seção aborda as seguintes conversões padrão:  
   
@@ -210,7 +210,7 @@ Gráfico de herança para ilustração de acessibilidade a classe base
 ||Protegido|Sim|  
 ||Público|Sim|  
   
- O segundo caso em que um ponteiro para uma classe pode ser convertido em um ponteiro para uma classe base é quando uma conversão de tipo explícita. (Consulte [expressões com conversões de tipo explícitas](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) para obter mais informações sobre conversões de tipo explícitas.)  
+ O segundo caso em que um ponteiro para uma classe pode ser convertido em um ponteiro para uma classe base é quando uma conversão de tipo explícita. (Consulte [expressões com conversões de tipo explícitas](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) para obter mais informações sobre conversões de tipo explícitas.)  
   
  O resultado dessa conversão é um ponteiro para o "subobjeto", a parte do objeto que é totalmente descrita pela classe base.  
   
@@ -249,7 +249,7 @@ int main()
  Um ponteiro para uma função pode ser convertido no tipo `void *`, se tipo `void *` é grande o suficiente para reter esse ponteiro.  
   
 ### <a name="pointer-to-void"></a>Ponteiro para void  
- Ponteiros para o tipo **void** podem ser convertidos em ponteiros para qualquer outro tipo, mas apenas com uma conversão de tipo explícito (ao contrário do C). (Consulte [expressões com conversões de tipo explícitas](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) para obter mais informações sobre conversões de tipo.) Um ponteiro para qualquer tipo pode ser convertido implicitamente em um ponteiro para o tipo **void**. Um ponteiro para um objeto incompleto de um tipo pode ser convertido em um ponteiro para **void** (implicitamente) e vice-versa (explicitamente). O resultado dessa conversão é igual ao valor do ponteiro original. Um objeto é considerado incompleto se for declarado, mas informações disponíveis o suficiente para determinar seu tamanho ou a classe base.  
+ Ponteiros para o tipo **void** podem ser convertidos em ponteiros para qualquer outro tipo, mas apenas com uma conversão de tipo explícito (ao contrário do C). (Consulte [expressões com conversões de tipo explícitas](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) para obter mais informações sobre conversões de tipo.) Um ponteiro para qualquer tipo pode ser convertido implicitamente em um ponteiro para o tipo **void**. Um ponteiro para um objeto incompleto de um tipo pode ser convertido em um ponteiro para **void** (implicitamente) e vice-versa (explicitamente). O resultado dessa conversão é igual ao valor do ponteiro original. Um objeto é considerado incompleto se for declarado, mas informações disponíveis o suficiente para determinar seu tamanho ou a classe base.  
   
  Um ponteiro para qualquer objeto que não esteja **const** ou **volátil** pode ser convertido implicitamente em um ponteiro de tipo `void *`.  
   

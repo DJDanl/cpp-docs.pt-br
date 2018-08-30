@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56fc61fa7dd7973a6ee1cc4c5a20311bf43b056f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4550d523a4410734c391e2e4d266ae536b4610b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573120"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218663"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Solucionando problemas de aplicativos isolados do C/C++ e assemblies lado a lado
 Carregar um aplicativo C/C++ pode falhar se as bibliotecas dependentes não podem ser encontradas. Este artigo descreve algumas razões comuns por que um aplicativo C/C++ Falha ao carregar, e sugere etapas para resolver os problemas.  
@@ -46,14 +46,14 @@ Carregar um aplicativo C/C++ pode falhar se as bibliotecas dependentes não pode
   
 3.  Se seu aplicativo depende de assemblies lado a lado e um manifesto não estiver presente, você precisa garantir que o vinculador gera um manifesto para seu projeto. Marque a opção de vinculador **gerar manifesto** na **propriedades do projeto** caixa de diálogo para o projeto.  
   
-4.  Se o manifesto é incorporado no binário, certifique-se de que a ID de RT_MANIFEST está correto para esse tipo de binário. Para obter mais informações sobre qual ID do recurso para usar, consulte [Assemblies lado a lado de uso como um recurso (Windows)](http://msdn.microsoft.com/library/windows/desktop/aa376617.aspx). Se o manifesto é em um arquivo separado, abra-o em um editor de XML ou editor de texto. Para obter mais informações sobre manifestos e regras de implantação, consulte [manifestos](http://msdn.microsoft.com/library/aa375365).  
+4.  Se o manifesto é incorporado no binário, certifique-se de que a ID de RT_MANIFEST está correto para esse tipo de binário. Para obter mais informações sobre qual ID do recurso para usar, consulte [Assemblies lado a lado de uso como um recurso (Windows)](https://msdn.microsoft.com/library/windows/desktop/aa376617.aspx). Se o manifesto é em um arquivo separado, abra-o em um editor de XML ou editor de texto. Para obter mais informações sobre manifestos e regras de implantação, consulte [manifestos](https://msdn.microsoft.com/library/aa375365).  
   
     > [!NOTE]
     >  Se um manifesto inserido e um arquivo de manifesto separado estiverem presentes, o carregador do sistema operacional usa o manifesto inserido e ignora o arquivo separado. No entanto, no Windows XP, o oposto é verdadeiro, o arquivo de manifesto separado é usado e o manifesto inserido é ignorado.  
   
-5.  É recomendável que você inserir um manifesto em todas as DLLs porque manifestos externos são ignorados quando uma DLL é carregada no entanto uma `LoadLibrary` chamar. Para obter mais informações, consulte [manifestos de Assembly](http://msdn.microsoft.com/library/aa374219).  
+5.  É recomendável que você inserir um manifesto em todas as DLLs porque manifestos externos são ignorados quando uma DLL é carregada no entanto uma `LoadLibrary` chamar. Para obter mais informações, consulte [manifestos de Assembly](/windows/desktop/SbsCs/assembly-manifests).  
   
-6.  Verifique se todos os assemblies que são enumerados no manifesto estão corretamente instalados no computador. Cada assembly é especificado no manifesto pelo seu nome, número de versão e arquitetura do processador. Se seu aplicativo depender de assemblies lado a lado, verifique se esses assemblies estão corretamente instalados no computador para que o carregador do sistema operacional pode encontrá-los, conforme descrito em [sequência de pesquisa de Assembly](http://msdn.microsoft.com/library/aa374224). Lembre-se de que os assemblies de 64 bits não podem ser carregados em processos de 32 bits e não podem ser executados em sistemas operacionais de 32 bits.  
+6.  Verifique se todos os assemblies que são enumerados no manifesto estão corretamente instalados no computador. Cada assembly é especificado no manifesto pelo seu nome, número de versão e arquitetura do processador. Se seu aplicativo depender de assemblies lado a lado, verifique se esses assemblies estão corretamente instalados no computador para que o carregador do sistema operacional pode encontrá-los, conforme descrito em [sequência de pesquisa de Assembly](/windows/desktop/SbsCs/assembly-searching-sequence). Lembre-se de que os assemblies de 64 bits não podem ser carregados em processos de 32 bits e não podem ser executados em sistemas operacionais de 32 bits.  
   
 ## <a name="example"></a>Exemplo  
  Suponha que temos um aplicativo, appl.exe, que é criado usando o Visual C++. O manifesto do aplicativo é incorporado na appl.exe como o recurso binário RT_MANIFEST, que tem um igual ID como 1, ou é armazenado como o appl.exe.manifest arquivo separado. O conteúdo deste manifesto se parece com isso:  
@@ -82,7 +82,7 @@ Carregar um aplicativo C/C++ pode falhar se as bibliotecas dependentes não pode
 </assembly>  
 ```  
   
- Também podem usar os assemblies lado a lado [arquivos de configuração de publicador](http://msdn.microsoft.com/library/aa375682)— também conhecidos como arquivos de política — para redirecionar globalmente aplicativos e assemblies para usar uma versão de um assembly lado a lado em vez de outra versão do mesmo assembly. Você pode verificar as políticas para um assembly compartilhado na pasta %WINDIR%\WinSxS\Policies\. Aqui está um exemplo de arquivo de política:  
+ Também podem usar os assemblies lado a lado [arquivos de configuração de publicador](/windows/desktop/SbsCs/publisher-configuration-files)— também conhecidos como arquivos de política — para redirecionar globalmente aplicativos e assemblies para usar uma versão de um assembly lado a lado em vez de outra versão do mesmo assembly. Você pode verificar as políticas para um assembly compartilhado na pasta %WINDIR%\WinSxS\Policies\. Aqui está um exemplo de arquivo de política:  
   
 ```  
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -106,7 +106,7 @@ Carregar um aplicativo C/C++ pode falhar se as bibliotecas dependentes não pode
   
 2.  Tente abrir o \\< assemblyName\>\ na pasta que contém appl.exe, e se \\< assemblyName\>\ existe, tente carregar um arquivo de manifesto que tem o nome \<assemblyName >. manifesto dessa pasta. Se o manifesto for encontrado, o carregador carrega o assembly a partir de \\< assemblyName\>\ pasta. Se o assembly não for encontrado, o carregamento falhará.  
   
- Para obter mais informações sobre como o carregador pesquisará os assemblies dependentes, consulte [sequência de pesquisa de Assembly](http://msdn.microsoft.com/library/aa374224). Se o carregador não consegue encontrar um assembly dependente como um assembly privado, o carregamento falhará e será exibida a mensagem "o sistema não é possível executar o programa especificado". Para resolver esse erro, verifique se assemblies dependentes — e as DLLs que são parte deles — são instalados no computador como assemblies particulares ou compartilhados.  
+ Para obter mais informações sobre como o carregador pesquisará os assemblies dependentes, consulte [sequência de pesquisa de Assembly](/windows/desktop/SbsCs/assembly-searching-sequence). Se o carregador não consegue encontrar um assembly dependente como um assembly privado, o carregamento falhará e será exibida a mensagem "o sistema não é possível executar o programa especificado". Para resolver esse erro, verifique se assemblies dependentes — e as DLLs que são parte deles — são instalados no computador como assemblies particulares ou compartilhados.  
   
 ## <a name="see-also"></a>Consulte também  
  [Conceitos de aplicativos isolados e Assemblies lado a lado](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   

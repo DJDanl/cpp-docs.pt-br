@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ea6f4a5770163ddaa34478f6630ed2a24ffbd6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4594e24ddf88292d311679b64371ac981642bc5d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954962"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222715"
 ---
 # <a name="basicfilebuf-class"></a>Classe basic_filebuf
 
@@ -70,9 +70,11 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem* elemento básico no buffer de arquivo.
+*Elem*<br/>
+ O elemento básico no buffer de arquivo.
 
-*TR* as características do elemento básico no buffer de arquivo (geralmente `char_traits` <  `Elem`>).
+*Tr*<br/>
+ As características do elemento básico no buffer de arquivo (geralmente `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>Comentários
 
@@ -410,11 +412,14 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nome de arquivo* o nome do arquivo a ser aberto.
+*Nome de arquivo*<br/>
+ O nome do arquivo a ser aberto.
 
-*Modo* uma das enumerações nos [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*Modo*<br/>
+ Uma das enumerações em [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot* proteção, equivalente de abertura de arquivo padrão a *shflag* parâmetro na [fsopen, wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*<br/>
+ Proteção, equivalente de abertura de arquivo padrão a *shflag* parâmetro na [fsopen, wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -456,7 +461,8 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* uma referência rvalue para um [basic_filebuf](../standard-library/basic-filebuf-class.md) objeto.
+*right*<br/>
+ Uma referência rvalue para um objeto [basic_filebuf](../standard-library/basic-filebuf-class.md).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -476,7 +482,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Meta* o caractere a ser inserido no buffer ou `traits_type::eof`.
+*_Meta*<br/>
+ O caractere a ser inserido no buffer ou `traits_type::eof`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -484,7 +491,7 @@ Se a função não conseguir obter êxito, ela retornará `traits_type::eof`. Ca
 
 ### <a name="remarks"></a>Comentários
 
-Se _ * * Meta **! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof), a função membro virtual protegida buscará inserir o elemento **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type) (\_ *Meta*) no buffer de saída. Isso pode ser feito de várias maneiras:
+Se *_Meta* **! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof), a função membro virtual protegida buscará inserir o elemento **ch = traits_type::** [ to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*_Meta*) no buffer de saída. Isso pode ser feito de várias maneiras:
 
 - Se houver uma posição de gravação disponível, ela poderá armazenar o elemento na posição de gravação e incrementar o próximo ponteiro para o buffer de saída.
 
@@ -502,7 +509,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Meta* o caractere a ser inserido no buffer, ou `traits_type::eof`.
+*_Meta*<br/>
+ O caractere a ser inserido no buffer ou `traits_type::eof`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -538,11 +546,14 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off* a posição para buscar com relação a *Way*.
+*Off*<br/>
+ A posição para buscar com relação a *Way*.
 
-*Way* o ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#seekdir) para valores possíveis.
+*Way*<br/>
+ O ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#seekdir) para valores possíveis.
 
-*_Which* Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
+*_Which*<br/>
+ Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -566,9 +577,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Sp* a posição pela qual buscar.
+*_Sp*<br/>
+ A posição pela qual buscar.
 
-*_Which* Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
+*_Which*<br/>
+ Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -594,9 +607,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Buffer* ponteiro para um buffer.
+*_Buffer*<br/>
+ Ponteiro para um buffer.
 
-*Contagem de* tamanho do buffer.
+*count*<br/>
+ O tamanho do buffer.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -616,7 +631,8 @@ void swap(basic_filebuf& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* uma `lvalue` referência a outro `basic_filebuf`.
+*right*<br/>
+ Um `lvalue` referência a outro `basic_filebuf`.
 
 ## <a name="sync"></a>  basic_filebuf::sync
 

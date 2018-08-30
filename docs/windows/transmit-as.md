@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32dec06fe458ceba26aaf9348d3fb12647a2a2ae
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0082626926e711d5c8f122b10552328fac52a069
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593697"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222947"
 ---
 # <a name="transmitas"></a>transmit_as
 
@@ -43,7 +43,7 @@ Especifica o tipo de dados que é transmitido entre cliente e servidor.
 
 ## <a name="remarks"></a>Comentários
 
-O **transmit_as** atributo C++ tem a mesma funcionalidade que o [transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) atributo MIDL.
+O **transmit_as** atributo C++ tem a mesma funcionalidade que o [transmit_as](/windows/desktop/Midl/transmit-as) atributo MIDL.
 
 ## <a name="example"></a>Exemplo
 

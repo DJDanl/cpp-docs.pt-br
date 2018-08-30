@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bd0aba0637101f7895be89b9d5531f77ee45b76
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544374"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222770"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Classe CMFCShellTreeCtrl
 O `CMFCShellTreeCtrl` classe estende [classe CTreeCtrl](../../mfc/reference/ctreectrl-class.md) funcionalidade exibindo uma hierarquia de itens de Shell.  
@@ -62,7 +62,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Habilita ou desabilita o menu de atalho.|  
-|[CMFCShellTreeCtrl::GetFlags](#getflags)|Retorna uma combinação de sinalizadores que são passados para [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066).|  
+|[CMFCShellTreeCtrl::GetFlags](#getflags)|Retorna uma combinação de sinalizadores que são passados para [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).|  
 |[CMFCShellTreeCtrl::GetItemPath](#getitempath)|Recupera o caminho para um item.|  
 |[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|Retorna um ponteiro para o [classe CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) objeto que é usado junto com isso `CMFCShellTreeCtrl` objeto para criar uma janela semelhante ao Explorer.|  
 |[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|Essa função membro é chamada pela janela pai desta janela quando recebe uma mensagem de notificação que se aplica a esta janela. (Substitui [CWnd::OnChildNotify](../../mfc/reference/cwnd-class.md#onchildnotify).)|  
@@ -118,7 +118,7 @@ DWORD GetFlags() const;
  Defina um valor DWORD que especifica a combinação de sinalizadores no momento.  
   
 ### <a name="remarks"></a>Comentários  
- Os sinalizadores definidos `CMFCShellTreeCtrl` são enviados para o método [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066) sempre que o objeto é atualizado. Você pode alterar os sinalizadores com os [CMFCShellTreeCtrl::SetFlags](#setflags) método.  
+ Os sinalizadores definidos `CMFCShellTreeCtrl` são enviados para o método [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066) sempre que o objeto é atualizado. Você pode alterar os sinalizadores com os [CMFCShellTreeCtrl::SetFlags](#setflags) método.  
   
 ##  <a name="getitempath"></a>  CMFCShellTreeCtrl::GetItemPath  
  Recupera o caminho de um item na [classe CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) objeto.  
@@ -254,7 +254,7 @@ void SetFlags(
  Um valor booleano que especifica se o `CMFCShellTreeCtrl` deve ser atualizado imediatamente.  
   
 ### <a name="remarks"></a>Comentários  
- O `CMFCShellTreeCtrl` passa tudo definir sinalizadores para [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066). Para obter mais informações sobre os valores dos sinalizadores diferentes, consulte [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066).  
+ O `CMFCShellTreeCtrl` passa tudo definir sinalizadores para [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066). Para obter mais informações sobre os valores dos sinalizadores diferentes, consulte [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).  
   
 ##  <a name="setrelatedlist"></a>  CMFCShellTreeCtrl::SetRelatedList  
  Associa um [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) do objeto com um [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) objeto.  

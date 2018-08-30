@@ -27,17 +27,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e07849c151cf2e361324a83b86bf98c24525f4ce
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 99cf5f3c1eb0a81a636407a722149d6cee1bee64
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601570"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220680"
 ---
 # <a name="resource-files-visual-studio"></a>Arquivos de recurso (Visual Studio)
 
 > [!NOTE]
-> Este material se aplica a aplicativos de área de trabalho do Windows. Para obter informações sobre recursos em aplicativos da plataforma Universal do Windows, consulte [definindo recursos do aplicativo](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Este material se aplica a aplicativos de área de trabalho do Windows. Para obter informações sobre recursos em aplicativos da plataforma Universal do Windows, consulte [definindo recursos do aplicativo](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
 >
 > Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
 >
@@ -97,4 +97,4 @@ Win32
 
 [Editores de recursos](../windows/resource-editors.md)  
 [Trabalhando com arquivos de recurso](../windows/working-with-resource-files.md)  
-[Menus e outros recursos](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[Menus e outros recursos](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

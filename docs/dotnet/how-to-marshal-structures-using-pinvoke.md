@@ -18,36 +18,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4ff1801c9bb2de06ae2717e8f69bcd39fdf3bc98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a26394a906f40d6dc194118bb312cfe1a0ce834e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136607"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219878"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Como realizar marshaling de estruturas usando PInvoke
-Este documento explica como nativas funções que aceitam a estruturas de estilo C podem ser chamadas de funções gerenciadas pelo usando P/Invoke. Embora, recomendamos que você use os recursos de interoperabilidade C++ em vez de P/Invoke porque P/Invoke fornece relatórios, pouco de erros de tempo de compilação não é fortemente tipado e poderá ser tediosa implementar, se a API não gerenciada é empacotada como uma DLL e o código-fonte não é disponível, P/Invoke é a única opção. Caso contrário, consulte os seguintes documentos:  
+Este documento explica como nativas funções que aceitam a C-style structs podem ser chamados de funções gerenciadas pelo usando P/Invoke. Embora seja recomendável que você use os recursos de interoperabilidade C++ em vez de P/Invoke como P/Invoke oferece pouco tempo de compilação relatório de erro, não é fortemente tipado e pode ser enfadonho implementar, se a API não gerenciada é empacotada como uma DLL e o código-fonte não é disponível, o P/Invoke é a única opção. Caso contrário, consulte os seguintes documentos:  
   
 -   [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
   
 -   [Como realizar marshaling de cadeias de caracteres usando PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
   
- Por padrão, as estruturas nativas e gerenciadas são dispostas diferente na memória, êxito passar estruturas através dos limites gerenciados/requer etapas adicionais para preservar a integridade dos dados.  
+ Por padrão, nativas e gerenciadas estruturas são dispostas diferente na memória, isso com êxito a passagem de estruturas além do limite gerenciado/requer etapas adicionais para preservar a integridade dos dados.  
   
- Este documento explica as etapas necessárias para definir equivalentes gerenciados de estruturas nativas e como as estruturas resultantes podem ser passadas para funções não gerenciadas. Este documento assume que simples estruturas — aqueles que não contêm cadeias de caracteres ou ponteiros — são usados. Para obter informações sobre a interoperabilidade não blittable, consulte [usando Interop C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke não podem ter tipos blittable não como um valor de retorno. Tipos blittable tem a mesma representação em código gerenciado e não gerenciado. Para obter mais informações, consulte [Blittable e tipos Blittable não](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3).  
+ Este documento explica as etapas necessárias para definir equivalentes gerenciados de estruturas nativas e como estruturas resultantes podem ser passadas para funções não gerenciadas. Este documento presume que simples estruturas — aquelas que não contêm cadeias de caracteres ou ponteiros — são usados. Para obter informações sobre a interoperabilidade não blittable, consulte [usando Interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke não pode ter tipos não blittable como um valor de retorno. Tipos blittable têm a mesma representação em código gerenciado e não gerenciado. Para obter mais informações, consulte [Blittable e não blittable](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3).  
   
- Marshaling simples, estruturas de blittable através dos limites gerenciados/primeiro requer que gerenciado versões de cada estrutura nativo seja definida. Essas estruturas podem ter qualquer nome válido; Não há nenhuma relação entre a versão nativa e gerenciada de duas estruturas diferente de seu layout de dados. Portanto, é vital que a versão gerenciada contém campos que são do mesmo tamanho e na mesma ordem que a versão nativa. (Não há nenhum mecanismo para garantir que as versões gerenciadas e nativas da estrutura são equivalentes, para que incompatibilidades não ficará visível até que o tempo de execução. É responsabilidade do programador para garantir que as duas estruturas tenham o mesmo layout de dados.)  
+ Marshaling simples, estruturas de blittable além do limite gerenciado/primeiro requer que versões gerenciadas de cada estrutura nativa seja definida. Essas estruturas podem ter qualquer nome válido; Não há nenhuma relação entre a versão nativa e gerenciada de duas estruturas que não seja o seu layout de dados. Portanto, é vital que a versão gerenciada contém campos que são do mesmo tamanho e na mesma ordem que a versão nativa. (Não há nenhum mecanismo para garantir que as versões gerenciadas e nativas da estrutura são equivalentes, para que as incompatibilidades não se tornará aparentes até o tempo de execução. É responsabilidade do programador garantir que as duas estruturas tenham o mesmo layout de dados.)  
   
- Como os membros de estruturas gerenciados são reorganizados, às vezes, por motivos de desempenho, é necessário usar o <xref:System.Runtime.InteropServices.StructLayoutAttribute> atributo para indicar que a estrutura são apresentados em sequência. Também é uma boa ideia para definir explicitamente a estrutura de configuração para ser o mesmo usado pela estrutura nativo de remessa. (Embora, por padrão, o Visual C++ usa uma estrutura de 8 bytes de empacotamento para os dois código gerenciado.)  
+ Como os membros de estruturas gerenciadas são reorganizados, às vezes, para fins de desempenho, é necessário usar o <xref:System.Runtime.InteropServices.StructLayoutAttribute> atributo para indicar que a estrutura são dispostos sequencialmente. Também é uma boa ideia definir explicitamente a estrutura de configuração para ser o mesmo usado pela estrutura nativa de remessa. (Embora, por padrão, o Visual C++ usa uma estrutura de 8 bytes de remessa para código gerenciado.)  
   
-1.  Em seguida, use <xref:System.Runtime.InteropServices.DllImportAttribute> para declarar os pontos de entrada que correspondem a todas as funções não gerenciadas que aceitam a estrutura, mas usar a versão gerenciada da estrutura de assinaturas de função, que é uma questão se você usar o mesmo nome para as duas versões das estrutura.  
+1.  Em seguida, use <xref:System.Runtime.InteropServices.DllImportAttribute> para declarar os pontos de entrada que correspondem a todas as funções não gerenciadas que aceitam a estrutura, mas usar a versão gerenciada da estrutura de assinaturas de função, que é um tema controverso, se você usar o mesmo nome para ambas as versões das estrutura.  
   
-2.  Agora o código gerenciado pode passar a versão gerenciada da estrutura de para as funções não gerenciadas como se estivessem realmente gerenciadas funções. Essas estruturas podem ser passadas por valor ou por referência, conforme demonstrado no exemplo a seguir.  
+2.  Agora o código gerenciado pode passar a versão gerenciada da estrutura para as funções não gerenciadas como se fossem funções gerenciadas, na verdade. Essas estruturas podem ser passadas por valor ou por referência, conforme demonstrado no exemplo a seguir.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir consiste em uma não gerenciado e um módulo gerenciado. O módulo não gerenciado é uma DLL que define uma estrutura chamada local e uma função chamada GetDistance que aceita as duas instâncias da estrutura de local. O segundo módulo é um aplicativo gerenciado de linha de comando que importa a função GetDistance, mas define em termos de um equivalente gerenciado da estrutura de local, MLocation. Na prática, o mesmo nome provavelmente seria usado para ambas as versões de estrutura. No entanto, um nome diferente é usado aqui para demonstrar que o protótipo de DllImport está definido em termos de versão gerenciada.  
+ O código a seguir consiste em uma não gerenciado e um módulo gerenciado. O módulo não gerenciado é uma DLL que define uma estrutura chamada local e uma função chamada GetDistance que aceita duas instâncias da estrutura de local. O segundo módulo é um aplicativo gerenciado de linha de comando que importa a função GetDistance, mas define isso em termos de um equivalente gerenciado da estrutura de localização, MLocation. Na prática o mesmo nome provavelmente seria usado para ambas as versões da estrutura; No entanto, um nome diferente é usado aqui para demonstrar que o protótipo de DllImport é definido em termos da versão gerenciada.  
   
- Observe que nenhuma parte da DLL é exposto para o código gerenciado usando o tradicional # diretiva include. Na verdade, a DLL é acessada no tempo de execução, para que problemas com funções importados com DllImport não ser detectados em tempo de compilação.  
+ Observe que nenhuma parte da DLL é exposta ao código gerenciado usando o tradicional # diretiva include. Na verdade, a DLL é acessada no tempo de execução, para que problemas com as funções importadas com DllImport não ser detectados em tempo de compilação.  
   
 ```  
 // TraditionalDll3.cpp  

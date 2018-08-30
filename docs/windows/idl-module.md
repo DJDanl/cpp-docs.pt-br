@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7424581c277e7b20132fd5e667acb77a4a95789e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9fc3be9fb25b6593f4b69f846394544b7b7d756a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598644"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220459"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -65,10 +65,10 @@ A ID do tópico da Ajuda em um arquivo. hlp ou. chm.
 A identificação de ajuda para esta biblioteca de tipos.
 
 *oculto* (opcional)  
-Um parâmetro que impede que a biblioteca que está sendo exibido. Consulte a [ocultos](http://msdn.microsoft.com/library/windows/desktop/aa366861) atributo MIDL para obter mais informações.
+Um parâmetro que impede que a biblioteca que está sendo exibido. Consulte a [ocultos](/windows/desktop/Midl/hidden) atributo MIDL para obter mais informações.
 
 *restrito* (opcional)  
-Membros da biblioteca não podem ser chamados arbitrariamente. Consulte a [restrito](http://msdn.microsoft.com/library/windows/desktop/aa367157) atributo MIDL para obter mais informações.
+Membros da biblioteca não podem ser chamados arbitrariamente. Consulte a [restrito](/windows/desktop/Midl/restricted) atributo MIDL para obter mais informações.
 
 *declaração de função*  
 A função que serão definidos.
@@ -77,7 +77,7 @@ A função que serão definidos.
 
 O **idl_module** atributo C++ permite que você especifique o ponto de entrada em um arquivo. dll, que lhe permite importar de um arquivo. dll.
 
-O **idl_module** atributo tem uma funcionalidade semelhante para o [módulo](http://msdn.microsoft.com/library/windows/desktop/aa367099) atributo MIDL.
+O **idl_module** atributo tem uma funcionalidade semelhante para o [módulo](/windows/desktop/Midl/module) atributo MIDL.
 
 Você pode exportar qualquer coisa de um objeto COM que você pode exportar de um arquivo. dll, colocando um ponto de entrada da DLL no bloco de biblioteca de um arquivo. idl.
 

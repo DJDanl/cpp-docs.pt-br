@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48bc0f76ce5b8b3c1bafe3fcd0d6d793a217ae63
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849678"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221126"
 ---
 # <a name="csettingsstore-class"></a>Classe CSettingsStore
 Encapsula as funções de API do Windows, fornecendo uma interface orientada a objeto que você usa para acessar o registro.  
@@ -130,7 +130,7 @@ CSettingsStore(
 ### <a name="remarks"></a>Comentários  
  Se *bCaminho Admin* é definida como TRUE, o `m_hKey` variável de membro é definido como **HKEY_LOCAL_MACHINE**. Se você definir *bCaminho Admin* como FALSE, o `m_hKey` é definido como **HKEY_CURRENT_USER**.  
   
- O acesso de segurança depende de *bReadOnly* parâmetro. Se *bReadonly* é FALSE, o acesso de segurança será definido como **KEY_ALL_ACCESS**. Se *bReadyOnly* for TRUE, o acesso de segurança será definido como uma combinação de **KEY_QUERY_VALUE, KEY_NOTIFY** e **KEY_ENUMERATE_SUB_KEYS**. Para obter mais informações sobre o acesso de segurança junto com o registro, consulte [direitos de acesso e segurança de chave do registro](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
+ O acesso de segurança depende de *bReadOnly* parâmetro. Se *bReadonly* é FALSE, o acesso de segurança será definido como **KEY_ALL_ACCESS**. Se *bReadyOnly* for TRUE, o acesso de segurança será definido como uma combinação de **KEY_QUERY_VALUE, KEY_NOTIFY** e **KEY_ENUMERATE_SUB_KEYS**. Para obter mais informações sobre o acesso de segurança junto com o registro, consulte [direitos de acesso e segurança de chave do registro](/windows/desktop/SysInfo/registry-key-security-and-access-rights).  
   
  O destruidor `CSettingsStore` libera `m_hKey` automaticamente.  
   

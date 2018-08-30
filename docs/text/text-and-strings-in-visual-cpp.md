@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4232c73122e797a3b0e7aa17c43cde5ab47cf5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cf9133965a9009421c28f64c1f4157b4a6a6d6b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610708"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223289"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Texto e cadeias de caracteres no Visual C++
 Um aspecto importante do desenvolvimento de aplicativos para mercados internacionais é a representação adequada de conjuntos de caracteres local. O conjunto de caracteres ASCII define caracteres no intervalo 0x00 a 0x7F. Há outros conjuntos de caracteres, principalmente europeus, que definem os caracteres dentro do intervalo 0x00 a 0x7F de forma idêntica ao conjunto de caracteres ASCII e também definem um caractere estendido definido de 0x80 a 0xFF. Portanto, um conjunto de 8 bits, o caractere de byte único (SBCS) é suficiente para representar o conjunto de caracteres ASCII, bem como os conjuntos de caracteres de vários idiomas europeus. No entanto, alguns conjuntos de caracteres não europeus, como japonês Kanji, incluem muitos caracteres de um esquema de codificação de byte único pode representar e, portanto, exigem o conjunto de caracteres multibyte (MBCS) codificação.  
@@ -64,7 +64,7 @@ Um aspecto importante do desenvolvimento de aplicativos para mercados internacio
  [Internacionalização](../c-runtime-library/internationalization.md)  
  Discute o suporte internacional na biblioteca de tempo de execução C.  
   
- [Exemplos internacionais](http://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
+ [Exemplos internacionais](https://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
  Fornece links para exemplos demonstram internacionalização no Visual C++.  
   
  [Idiomas e cadeias de caracteres de país/região](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2b1ba0c95a87ce1743d225fd6af4bffee148d6ab
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bc10f86a8fa646a1072de8b7c5e30121d98750cf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601887"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219946"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -43,7 +43,7 @@ A DLL de usar para executar a pesquisa de cadeia de caracteres do documento.
 
 ## <a name="remarks"></a>Comentários
 
-O **helpstringdll** atributo C++ tem a mesma funcionalidade que o [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) atributo MIDL.
+O **helpstringdll** atributo C++ tem a mesma funcionalidade que o [helpstringdll](/windows/desktop/Midl/helpstringdll) atributo MIDL.
 
 ## <a name="example"></a>Exemplo
 

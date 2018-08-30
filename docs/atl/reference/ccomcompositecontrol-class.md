@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6414856aa893a9dba67dce5ffd9650fd03289ae
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 892cccea65b9e1b6f0c1eec21d3973e84a0fba03
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885234"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223253"
 ---
 # <a name="ccomcompositecontrol-class"></a>Classe CComCompositeControl
 Essa classe fornece os métodos necessários para implementar um controle composto.  
@@ -174,7 +174,7 @@ HWND Create(
  Reservado.  
   
  *dwInitParam*  
- Dados a serem passados para o controle durante a criação do controle. Os dados passados como *dwInitParam* será exibida como o parâmetro LPARAM do [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) mensagem, que será enviada ao controle de composição quando ela é criada.  
+ Dados a serem passados para o controle durante a criação do controle. Os dados passados como *dwInitParam* será exibida como o parâmetro LPARAM do [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) mensagem, que será enviada ao controle de composição quando ela é criada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um identificador para a caixa de diálogo controle de composição criado recentemente.  

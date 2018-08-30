@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca7b7d38c204d7dd8402b9d610a5800dcef6ced9
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 89f811f476fb21d2880169c168671515c9d8caf9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883223"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223132"
 ---
 # <a name="ccomenumonstl-class"></a>Classe CComEnumOnSTL
 Essa classe define um objeto de enumerador COM base em uma coleção de biblioteca padrão C++.  
@@ -41,7 +41,7 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
   
 #### <a name="parameters"></a>Parâmetros  
  *Base de dados de*  
- Um enumerador de COM ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) interface.  
+ Um enumerador de COM. Ver [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) para obter um exemplo. 
   
  *piid*  
  Um ponteiro para a ID de interface da interface do enumerador.  

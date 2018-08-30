@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c9a1786e5b3a6fb150e3e27fb459ac4341486ca
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e1520cd301fa46fb4d9521fd6d4180ebd3710f67
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604782"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218244"
 ---
 # <a name="manifest-resources"></a>Recursos de manifesto
 
@@ -43,11 +43,11 @@ Recursos de manifesto são arquivos XML que descrevem as dependências que um ap
 </dependency>
 ```
 
-Para um aplicativo do Windows XP ou Windows Vista, o recurso de manifesto não só especifica que o aplicativo usar a versão mais atual dos controles comuns do Windows (v 6.0, como mostrado acima), mas ele também dá suporte a [controle Syslink](http://msdn.microsoft.com/library/windows/desktop/bb760706).
+Para um aplicativo do Windows XP ou Windows Vista, o recurso de manifesto não só especifica que o aplicativo usar a versão mais atual dos controles comuns do Windows (v 6.0, como mostrado acima), mas ele também dá suporte a [controle Syslink](/windows/desktop/Controls/syslink-overview).
 
-Para exibir a versão e digite as informações contidas em um recurso de manifesto, você pode abrir o arquivo em um visualizador XML ou no Visual Studio [Editor de texto](http://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1). Para obter mais informações, consulte [abrindo um recurso de manifesto no Editor de texto do Visual Studio](../windows/how-to-open-a-manifest-resource.md).
+Para exibir a versão e digite as informações contidas em um recurso de manifesto, você pode abrir o arquivo em um visualizador XML ou no Visual Studio [Editor de texto](https://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1). Para obter mais informações, consulte [abrindo um recurso de manifesto no Editor de texto do Visual Studio](../windows/how-to-open-a-manifest-resource.md).
 
-Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos a propriedades, consulte [passo a passo: usando recursos para localização com o ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos a propriedades, consulte [passo a passo: usando recursos para localização com o ASP.NET](https://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
 
 ## <a name="limitations"></a>Limitações
 

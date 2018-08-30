@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a7764e15b18249a9ee3ddd452ae792c8ad172f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc7d2b959bd8ad3ed89ae270e1f7d93406526695
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404474"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218380"
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 
@@ -80,7 +80,7 @@ Modo do fluxo retornado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um fluxo associado a uma extremidade do pipe criado. A outra extremidade do pipe está associada à entrada ou saída padrão do comando gerado. As funções retornam **Nulo** em caso de erro. Se o erro é um parâmetro inválido, como se *comando* ou *modo* é um ponteiro nulo, ou *modo* não é um modo válido, **errno** é definido como **EINVAL**. Consulte a seção Comentários para ver os modos válidos.
+Retorna um fluxo associado a uma extremidade do pipe criado. A outra extremidade do pipe está associada à entrada ou saída padrão do comando gerado. As funções retornam **Nulo** em caso de erro. Se o erro é um parâmetro inválido, por exemplo, se *comando* ou *modo* é um ponteiro nulo, ou *modo* não é um modo válido, **errno** é definido como **EINVAL**. Consulte a seção Comentários para ver os modos válidos.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -88,16 +88,16 @@ Para obter informações sobre esses e outros códigos de erro, consulte [_doser
 
 O **popen** função cria um pipe e executa uma cópia gerada do processador de comando com a cadeia de caracteres especificada de forma assíncrona *comando*. A cadeia de caracteres *mode* especifica o tipo de acesso solicitado da seguinte maneira.
 
-**"r"** o processo de chamada pode ler a saída padrão do comando gerado, usando o fluxo retornado.
+**"r"** o processo de chamada pode ler a saída do padrão do comando gerado usando o fluxo retornado.
 
-**"w"** o processo de chamada pode gravar a entrada do padrão do comando gerado usando o fluxo retornado.
+**"w"** o processo de chamada pode gravar a entrada de padrão do comando gerado usando o fluxo retornado.
 
 **"b"** aberto no modo binário.
 
 **"t"** aberto no modo de texto.
 
 > [!NOTE]
-> Se usado em um programa do Windows, o **popen** função retorna um ponteiro de arquivo inválido que faz com que o programa pare de responder indefinidamente. **popen** funciona corretamente em um aplicativo de console. Para criar um aplicativo do Windows que redireciona a entrada e saída, consulte [criando um processo filho com redirecionado entrada e saída](http://msdn.microsoft.com/library/windows/desktop/ms682499) no SDK do Windows.
+> Se usado em um programa do Windows, o **popen** função retorna um ponteiro de arquivo inválido que faz com que o programa pare de responder indefinidamente. **popen** funciona corretamente em um aplicativo de console. Para criar um aplicativo do Windows que redireciona a entrada e saída, consulte [criando um processo filho com entrada e saída redirecionadas](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) no SDK do Windows.
 
 **wpopen** é uma versão de caractere largo de **popen**; o *caminho* argumento **wpopen** é uma cadeia de caracteres largos. **wpopen** e **popen** se comportam de forma idêntica caso contrário.
 

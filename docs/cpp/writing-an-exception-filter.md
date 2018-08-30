@@ -14,18 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb9307b68b5d664e477f0139824ff02d00b7c134
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 447f843bcc8f07d76084d1db68890237474ce200
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462112"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222145"
 ---
 # <a name="writing-an-exception-filter"></a>Escrevendo um filtro de exceção
 Você pode lidar com uma exceção indo diretamente ao nível do manipulador de exceção ou continuando a execução. Em vez de usar o código do manipulador de exceção para lidar com a exceção e queda, você pode usar *filtro* para limpar o problema e em seguida, ao retornar -1, retomar o fluxo normal sem limpar a pilha.  
   
 > [!NOTE]
->  Algumas exceções não podem ser retomadas. Se *filtro* é avaliada como -1 para essa exceção, o sistema gerará uma nova exceção. Quando você chama [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552), você determina se a exceção continuará.  
+>  Algumas exceções não podem ser retomadas. Se *filtro* é avaliada como -1 para essa exceção, o sistema gerará uma nova exceção. Quando você chama [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552), você determina se a exceção continuará.  
   
  Por exemplo, o código a seguir usa uma chamada de função na *filtro* expressão: essa função tratará o problema e, em seguida, retorna -1 para retomar o fluxo de controle normal:  
   
@@ -56,7 +56,7 @@ int Eval_Exception ( int n_except ) {
   
  Ele é uma boa ideia usar uma chamada de função na *filtro* expressão sempre que *filtro* precisa fazer algo complexo. Avaliar a expressão causa a execução da função, nesse caso, `Eval_Exception`.  
   
- Observe o uso de [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356) para determinar a exceção. Você deve chamar essa função dentro do próprio filtro. `Eval_Exception` não é possível chamar `GetExceptionCode`, mas ele deve ter o código de exceção passado para ele.  
+ Observe o uso de [GetExceptionCode](/windows/desktop/Debug/getexceptioncode) para determinar a exceção. Você deve chamar essa função dentro do próprio filtro. `Eval_Exception` não é possível chamar `GetExceptionCode`, mas ele deve ter o código de exceção passado para ele.  
   
  Esse manipulador passa o controle para outro manipulador, a menos que a exceção seja um inteiro ou um estouro de ponto flutuante. Se for o caso, o manipulador chamará uma função (`ResetVars` é apenas um exemplo, não uma função de API) para redefinir alguns variáveis globais. *Instrução de bloco de 2*, que neste exemplo está vazio, nunca pode ser executado porque `Eval_Exception` nunca retorna EXCEPTION_EXECUTE_HANDLER (1).  
   

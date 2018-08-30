@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 634a7a7373f6686ad36b645a73613a4ae350bbab
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 08cde95cf7ce680137aa932eb9642b9cd910318a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884695"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223207"
 ---
 # <a name="ipersiststorageimpl-class"></a>Classe IPersistStorageImpl
-Essa classe implementa a [IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731) interface.  
+Essa classe implementa a [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage) interface.  
   
 > [!IMPORTANT]
 >  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
@@ -64,9 +64,9 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 |[IPersistStorageImpl::SaveCompleted](#savecompleted)|Notifica um objeto que ele pode retornar ao modo Normal para gravar em seu objeto de armazenamento. A implementação de ATL Retorna S_OK.|  
   
 ## <a name="remarks"></a>Comentários  
- `IPersistStorageImpl` implementa o [IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731) de interface, que permite que um cliente para solicitar que o carregamento do objeto e salve seus dados persistentes usando um armazenamento.  
+ `IPersistStorageImpl` implementa o [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage) de interface, que permite que um cliente para solicitar que o carregamento do objeto e salve seus dados persistentes usando um armazenamento.  
   
- A implementação dessa classe requer a classe `T` para tornar uma implementação do `IPersistStreamInit` disponíveis por meio da interface `QueryInterface`. Normalmente, isso significa que a classe `T` deve derivar de [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), forneça uma entrada para `IPersistStreamInit` no [mapa COM](http://msdn.microsoft.com/library/ead2a1e3-334d-44ad-bb1f-b94bb14c2333)e usar um [mapa de propriedade](http://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427) a descrição de dados persistentes da classe.  
+ A implementação dessa classe requer a classe `T` para tornar uma implementação do `IPersistStreamInit` disponíveis por meio da interface `QueryInterface`. Normalmente, isso significa que a classe `T` deve derivar de [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), forneça uma entrada para `IPersistStreamInit` no [mapa COM](https://msdn.microsoft.com/library/ead2a1e3-334d-44ad-bb1f-b94bb14c2333)e usar um [mapa de propriedade](https://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427) a descrição de dados persistentes da classe.  
   
  **Artigos relacionados** [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -86,7 +86,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) no Windows SDK.  
+ Ver [IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) no Windows SDK.  
   
 ##  <a name="handsoffstorage"></a>  IPersistStorageImpl::HandsOffStorage  
  Instrui o objeto para liberar todos os objetos de armazenamento e entrar no modo de HandsOff.  
@@ -99,7 +99,7 @@ STDMETHOD(HandsOffStorage)(void);
  Retorna S_OK.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IPersistStorage::HandsOffStorage](http://msdn.microsoft.com/library/windows/desktop/ms679742) no Windows SDK.  
+ Ver [IPersistStorage::HandsOffStorage](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-handsoffstorage) no Windows SDK.  
   
 ##  <a name="initnew"></a>  IPersistStorageImpl::InitNew  
  Inicializa um novo armazenamento.  
@@ -109,9 +109,9 @@ STDMETHOD(InitNew)(IStorage*);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A implementação de ATL delega para o [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) interface.  
+ A implementação de ATL delega para o [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) interface.  
   
- Ver [IPersistStorage:InitNew](http://msdn.microsoft.com/library/windows/desktop/ms687194) no Windows SDK.  
+ Ver [IPersistStorage:InitNew](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-initnew) no Windows SDK.  
   
 ##  <a name="isdirty"></a>  IPersistStorageImpl::IsDirty  
  Verifica se os dados do objeto foi alterado desde que foi salvo pela última vez.  
@@ -121,9 +121,9 @@ STDMETHOD(IsDirty)(void);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A implementação de ATL delega para o [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) interface.  
+ A implementação de ATL delega para o [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) interface.  
   
- Ver [IPersistStorage:IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910) no Windows SDK.  
+ Ver [IPersistStorage:IsDirty](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-isdirty) no Windows SDK.  
   
 ##  <a name="load"></a>  IPersistStorageImpl::Load  
  Carrega as propriedades do objeto de armazenamento especificado.  
@@ -133,9 +133,9 @@ STDMETHOD(Load)(IStorage* pStorage);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A implementação de ATL delega para o [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) interface. `Load` usa um fluxo chamado "Conteúdo" para recuperar os dados do objeto. O [salvar](#save) método originalmente cria esse fluxo.  
+ A implementação de ATL delega para o [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) interface. `Load` usa um fluxo chamado "Conteúdo" para recuperar os dados do objeto. O [salvar](#save) método originalmente cria esse fluxo.  
   
- Ver [IPersistStorage:Load](http://msdn.microsoft.com/library/windows/desktop/ms680557) no Windows SDK.  
+ Ver [IPersistStorage:Load](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-load) no Windows SDK.  
   
 ##  <a name="save"></a>  IPersistStorageImpl::Save  
  Salva as propriedades do objeto para o armazenamento especificado.  
@@ -145,9 +145,9 @@ STDMETHOD(Save)(IStorage* pStorage, BOOL fSameAsLoad);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A implementação de ATL delega para o [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) interface. Quando `Save` é a primeira chamada, ele cria um fluxo nomeado "Conteúdo" em armazenamento especificado. Esse fluxo, em seguida, é usado em chamadas posteriores para `Save` e em chamadas para [carga](#load).  
+ A implementação de ATL delega para o [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) interface. Quando `Save` é a primeira chamada, ele cria um fluxo nomeado "Conteúdo" em armazenamento especificado. Esse fluxo, em seguida, é usado em chamadas posteriores para `Save` e em chamadas para [carga](#load).  
   
- Ver [IPersistStorage:Save](http://msdn.microsoft.com/library/windows/desktop/ms680680) no Windows SDK.  
+ Ver [IPersistStorage:Save](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-save) no Windows SDK.  
   
 ##  <a name="savecompleted"></a>  IPersistStorageImpl::SaveCompleted  
  Notifica um objeto que ele pode retornar ao modo Normal para gravar em seu objeto de armazenamento.  
@@ -160,10 +160,10 @@ STDMETHOD(SaveCompleted)(IStorage*);
  Retorna S_OK.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IPersistStorage:SaveCompleted](http://msdn.microsoft.com/library/windows/desktop/ms679713) no Windows SDK.  
+ Ver [IPersistStorage:SaveCompleted](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-savecompleted) no Windows SDK.  
   
 ## <a name="see-also"></a>Consulte também  
- [Fluxos e armazenamentos](http://msdn.microsoft.com/library/windows/desktop/aa380352)   
+ [Fluxos e armazenamentos](/windows/desktop/Stg/storages-and-streams)   
  [Classe IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)   
  [Classe IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md)   
  [Visão geral da classe](../../atl/atl-class-overview.md)

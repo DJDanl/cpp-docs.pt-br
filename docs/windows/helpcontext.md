@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d782246f44148805f9acc8d912b0fbf554227f7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5644f99e15685f8f1784cc40886709b05a9a06bd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595722"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221278"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -43,7 +43,7 @@ A ID de contexto do tópico da Ajuda. Ver [Ajuda em HTML: sensível ao contexto 
 
 ## <a name="remarks"></a>Comentários
 
-O **helpcontext** atributo C++ tem a mesma funcionalidade que o [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) atributo MIDL.
+O **helpcontext** atributo C++ tem a mesma funcionalidade que o [helpcontext](/windows/desktop/Midl/helpcontext) atributo MIDL.
 
 ## <a name="example"></a>Exemplo
 

@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fe6616cd22ee9de9ffbb6b3a26620a7ccdebc63
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 223359e10ef0e64860a611079abf9e7e83a26fe1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598071"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222802"
 ---
 # <a name="attributed-programming-concepts"></a>Conceitos de programação atribuídos
 
 O Visual C++ inclui uma variedade de materiais para ajudá-lo a usar os atributos em seus programas. Atributos, um novo recurso no Visual C++, são projetados para simplificar a programação COM e desenvolvimento do .NET Framework common language runtime. Quando você inclui atributos nos arquivos de origem, o compilador trabalha com bibliotecas de vínculo dinâmico (DLL) para inserir o código ou modificar o código nos arquivos de objeto gerado do provedor. Há atributos que auxiliam na criação de arquivos. idl, interfaces, bibliotecas de tipos e outros elementos de COM. No ambiente de desenvolvimento integrado (IDE), os atributos têm suporte dos assistentes e pela janela de propriedades.
 
-Embora atributos eliminam alguns da codificação detalhada necessária para escrever objetos COM, você precisa em um plano de fundo [COM fundamentals](http://msdn.microsoft.com/library/windows/desktop/ms694363) usá-los melhor.
+Embora atributos eliminam alguns da codificação detalhada necessária para escrever objetos COM, você precisa em um plano de fundo [COM fundamentals](/windows/desktop/com/the-component-object-model) usá-los melhor.
 
 ## <a name="in-this-section"></a>Nesta seção
 

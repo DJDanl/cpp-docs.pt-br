@@ -1,7 +1,7 @@
 ---
-title: Compilador (nível 1) de aviso C4679 | Microsoft Docs
+title: Compilador aviso (nível 1) C4679 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 951a2f5198a788395e4a870b204229f101ea4a50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca05c7983e87816e77f16ddbfe2fc9952b407f90
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281537"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221841"
 ---
-# <a name="compiler-warning-level-1-c4679"></a>Compilador C4679 de aviso (nível 1)
-O compilador encontrou uma construção que não tem suporte, que não pode ser importada de metadados.  
-  
- **'**   
- ***membro* ': não foi possível importar membro**  
-  
- Não tente usar a construção.
+# <a name="compiler-warning-level-1-c4679"></a>Compilador aviso (nível 1) C4679
+
+> '*membro*': não foi possível importar membro
+
+O compilador encontrou uma construção que não tem suporte, que não pode ser importada dos metadados.
+
+Não tente usar a construção.

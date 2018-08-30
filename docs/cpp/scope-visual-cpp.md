@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6194addc8ae950cf5cdcb8b7946ab4f5f6c042
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1f99f79e0e5f4f53356ed96528e310465b3ed2f0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460704"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220084"
 ---
 # <a name="scope-c"></a>Escopo (C++)
 
@@ -41,7 +41,7 @@ Há seis tipos de escopo:
 
 - **Escopo local** um nome declarado em uma função ou lambda, incluindo os nomes de parâmetro, têm escopo local. Eles são geralmente denominados "locais". Eles são visíveis apenas de seu ponto de declaração até o final do corpo da função ou lambda. Escopo local é um tipo de escopo de bloco, que é abordado neste artigo.
 
-- **Escopo de classe** nomes de membros de classe têm escopo de classe, que se estende em toda a definição de classe, independentemente do ponto de declaração. Acessibilidade de membro de classe é mais controlada pela **pública**, **privada**, e **protegido** palavras-chave. Membros públicos ou protegidos podem ser acessados usando os operadores de seleção de membro (**.** ou **->**) ou operadores de ponteiro para membro (**.\***  ou **-> \***).
+- **Escopo de classe** nomes de membros de classe têm escopo de classe, que se estende em toda a definição de classe, independentemente do ponto de declaração. Acessibilidade de membro de classe é mais controlada pela **pública**, **privada**, e **protegido** palavras-chave. Membros públicos ou protegidos podem ser acessados usando os operadores de seleção de membro (**.** ou **->**) ou operadores de ponteiro para membro (**.** <strong>\*</strong> ou **->** <strong>\*</strong>).
 
 - **Escopo da instrução** nomes declarados em uma **para**, **se**, **enquanto**, ou **alternar** instrução são visíveis até o final das bloco de instrução.
 
@@ -114,7 +114,7 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > A reutilização de nomes de identificadores como mostrada neste exemplo é considerada um estilo de programação ruim.
 
- Para obter mais informações sobre ponteiros, consulte [tipos derivados de](http://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c). Para obter informações sobre declaração e inicialização de objetos de classe, consulte [Classes, estruturas e uniões](../cpp/classes-and-structs-cpp.md). Para obter informações sobre como usar o **novos** e **excluir** operadores de armazenamento livre, consulte [novo e excluir operadores](new-and-delete-operators.md).
+ Para obter mais informações sobre ponteiros, consulte [tipos derivados de](https://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c). Para obter informações sobre declaração e inicialização de objetos de classe, consulte [Classes, estruturas e uniões](../cpp/classes-and-structs-cpp.md). Para obter informações sobre como usar o **novos** e **excluir** operadores de armazenamento livre, consulte [novo e excluir operadores](new-and-delete-operators.md).
 
 ## <a name="hiding-names-with-global-scope"></a>Ocultando nomes com escopo global
 

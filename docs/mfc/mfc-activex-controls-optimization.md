@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4459865bc2ba374048622167fadb7bcf8fb97c99
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 424bb8e7082432cea3f730bb0783c2c1912c293f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028168"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220500"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Controles ActiveX MFC: otimização
 Este artigo explica as técnicas que você pode usar para otimizar seus controles ActiveX para melhorar o desempenho.  
@@ -53,7 +53,7 @@ Este artigo explica as técnicas que você pode usar para otimizar seus controle
 |**As notificações quando inativo do ponteiro do mouse** caixa de seleção|Selecionar|[Fornecendo interação do mouse enquanto inativo](../mfc/providing-mouse-interaction-while-inactive.md)|  
 |**Com a otimização de código de desenho** caixa de seleção|Selecionar|[Otimizando o desenho de controle](../mfc/optimizing-control-drawing.md)|  
   
- Para obter informações detalhadas sobre as funções de membro que implementam essas otimizações, consulte [COleControl](../mfc/reference/colecontrol-class.md). As funções de membro são listadas por uso, tais como [operações sem janelas](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) e [funções de manipulação de ponteiro inativo](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
+ Para obter informações detalhadas sobre as funções de membro que implementam essas otimizações, consulte [COleControl](../mfc/reference/colecontrol-class.md).  
   
  Para obter mais informações, consulte:  
   
