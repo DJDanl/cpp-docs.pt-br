@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e5f5ac8396c32e56e4c0f2f951f45bb33714822
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53cf33a551dc95e7ed282b599673f627ff8a7b21
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341519"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220931"
 ---
 # <a name="creating-the-image-lists"></a>Criando as listas de imagens
-Criar listas de imagens é o mesmo se você usar [CListView](../mfc/reference/clistview-class.md) ou [CListCtrl](../mfc/reference/clistctrl-class.md).  
+Criando listas de imagens é o mesmo se você usar [CListView](../mfc/reference/clistview-class.md) ou [CListCtrl](../mfc/reference/clistctrl-class.md).  
   
 > [!NOTE]
->  Você só precisa de imagem listas se o controle de lista inclui o `LVS_ICON` estilo.  
+>  Você só precisa imagem listas se seu controle lista inclui o `LVS_ICON` estilo.  
   
- Use a classe `CImageList` para criar uma ou mais listas de imagens (para estados, ícones pequenos e ícones em tamanho normal). Consulte [CImageList](../mfc/reference/cimagelist-class.md)e consulte [listas de imagens de exibição de lista](http://msdn.microsoft.com/library/windows/desktop/bb774736) no SDK do Windows.  
+ Use a classe `CImageList` para criar um ou mais listas de imagens (para os ícones em tamanho normal, ícones pequenos e estados). Ver [CImageList](../mfc/reference/cimagelist-class.md)e veja [listas de imagens do modo de exibição de lista](/windows/desktop/Controls/using-list-view-controls) no SDK do Windows.  
   
- Chamar [CListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) para cada lista de imagem; transmitir um ponteiro para apropriada `CImageList` objeto.  
+ Chame [CListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) para cada lista de imagem; passar um ponteiro para o apropriada `CImageList` objeto.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando CListCtrl](../mfc/using-clistctrl.md)   

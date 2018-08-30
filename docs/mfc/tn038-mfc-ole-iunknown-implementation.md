@@ -28,23 +28,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acf33139250e6876dde6d86f7e8ed144dbe23180
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: df624c04b1fd5a80b6e54928adb8f3ca7424920a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539178"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215170"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: implementação de IUnknown MFC/OLE
 
 > [!NOTE]
 > A nota técnica a seguir não foi atualizada desde que foi incluído pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizadas ou incorretas. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice da documentação online.
 
-No coração do OLE 2 é o "OLE Component Object Model", ou COM. COM define um padrão para os objetos de cooperação como se comunicar entre si. Isso inclui os detalhes dos quais um "objeto" se parece com, incluindo como os métodos são despachados em um objeto. COM também define uma classe base, da qual todas as classes de compatível COM são derivadas. Essa classe base é [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509). Embora o [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interface é conhecido como uma classe do C++, COM não é específico para qualquer linguagem — pode ser implementado em C, PASCAL ou qualquer outra linguagem que pode dar suporte o layout binário de um objeto COM.
+No coração do OLE 2 é o "OLE Component Object Model", ou COM. COM define um padrão para os objetos de cooperação como se comunicar entre si. Isso inclui os detalhes dos quais um "objeto" se parece com, incluindo como os métodos são despachados em um objeto. COM também define uma classe base, da qual todas as classes de compatível COM são derivadas. Essa classe base é [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown). Embora o [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) interface é conhecido como uma classe do C++, COM não é específico para qualquer linguagem — pode ser implementado em C, PASCAL ou qualquer outra linguagem que pode dar suporte o layout binário de um objeto COM.
 
-OLE refere-se a todas as classes derivadas [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) como "interfaces." Essa é uma distinção importante, desde uma "interface", como [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) não implica nenhuma implementação. Ele simplesmente define o protocolo pelo qual objetos se comunicam, não as especificidades do que essas implementações fazem. Isso é razoável para um sistema que permite a máxima flexibilidade. É do MFC para implementar um comportamento padrão para programas MFC/C++.
+OLE refere-se a todas as classes derivadas [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) como "interfaces." Essa é uma distinção importante, desde uma "interface", como [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) não implica nenhuma implementação. Ele simplesmente define o protocolo pelo qual objetos se comunicam, não as especificidades do que essas implementações fazem. Isso é razoável para um sistema que permite a máxima flexibilidade. É do MFC para implementar um comportamento padrão para programas MFC/C++.
 
-Para entender a implementação do MFC de [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) você deve primeiro compreender o que é essa interface. Uma versão simplificada [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) está definida abaixo:
+Para entender a implementação do MFC de [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) você deve primeiro compreender o que é essa interface. Uma versão simplificada [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) está definida abaixo:
 
 ```cpp
 class IUnknown
@@ -59,9 +59,9 @@ public:
 > [!NOTE]
 > Detalha determinada convenção de chamada, como `__stdcall` foram deixados de fora para esta ilustração.
 
-O [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [versão](http://msdn.microsoft.com/library/windows/desktop/ms682317) funções de membro de controlam o gerenciamento de memória do objeto. COM usa um esquema de contagem de referência para manter o controle de objetos. Um objeto nunca é referenciado diretamente como você faria em C++. Em vez disso, os objetos COM são sempre referenciados por meio de um ponteiro. Para liberar o objeto quando o proprietário é feito usando-o, o objeto [Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) membro é chamado (em vez de usar o operador delete, como seria feito para um objeto de C++ tradicional). A mecanismo de contagem de referência permite que várias referências a um único objeto a serem gerenciados. Uma implementação de [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [versão](http://msdn.microsoft.com/library/windows/desktop/ms682317) mantém uma contagem de referência no objeto — o objeto não é excluído até que sua contagem de referência chega a zero.
+O [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) e [versão](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) funções de membro de controlam o gerenciamento de memória do objeto. COM usa um esquema de contagem de referência para manter o controle de objetos. Um objeto nunca é referenciado diretamente como você faria em C++. Em vez disso, os objetos COM são sempre referenciados por meio de um ponteiro. Para liberar o objeto quando o proprietário é feito usando-o, o objeto [Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) membro é chamado (em vez de usar o operador delete, como seria feito para um objeto de C++ tradicional). A mecanismo de contagem de referência permite que várias referências a um único objeto a serem gerenciados. Uma implementação de [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) e [versão](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) mantém uma contagem de referência no objeto — o objeto não é excluído até que sua contagem de referência chega a zero.
 
-[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [versão](http://msdn.microsoft.com/library/windows/desktop/ms682317) são relativamente simples de um ponto de vista de implementação. Aqui está uma implementação trivial:
+[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) e [versão](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) são relativamente simples de um ponto de vista de implementação. Aqui está uma implementação trivial:
 
 ```cpp
 ULONG CMyObj::AddRef()
@@ -80,7 +80,7 @@ ULONG CMyObj::Release()
 }
 ```
 
-O [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) função de membro é um pouco mais interessante. Não é muito interessante ter um objeto cujas funções membro são [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) — seria ótimo dizer o objeto para fazer mais coisas que [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) fornece. É aí que [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) é útil. Ele permite que você obtenha uma "interface" diferente no mesmo objeto. Essas interfaces geralmente são derivadas de [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) e adicionar funcionalidade adicional, adicionando novas funções de membro. Interfaces COM nunca têm variáveis de membros declaradas na interface e todas as funções membro são declaradas como virtuais puras. Por exemplo,
+O [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) função de membro é um pouco mais interessante. Não é muito interessante ter um objeto cujas funções membro são [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) e [Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) — seria ótimo dizer o objeto para fazer mais coisas que [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) fornece. É aí que [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) é útil. Ele permite que você obtenha uma "interface" diferente no mesmo objeto. Essas interfaces geralmente são derivadas de [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) e adicionar funcionalidade adicional, adicionando novas funções de membro. Interfaces COM nunca têm variáveis de membros declaradas na interface e todas as funções membro são declaradas como virtuais puras. Por exemplo,
 
 ```cpp
 class IPrintInterface : public IUnknown
@@ -90,7 +90,7 @@ public:
 };
 ```
 
-Para obter um IPrintInterface se você tiver apenas um [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), chame [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) usando o `IID` do `IPrintInterface`. Um `IID` é um número de 128 bits que identifica exclusivamente a interface. Há um `IID` para cada interface que você ou o OLE define. Se *pUnk* é um ponteiro para um [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) do objeto, o código para recuperar um IPrintInterface dele pode ser:
+Para obter um IPrintInterface se você tiver apenas um [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown), chame [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) usando o `IID` do `IPrintInterface`. Um `IID` é um número de 128 bits que identifica exclusivamente a interface. Há um `IID` para cada interface que você ou o OLE define. Se *pUnk* é um ponteiro para um [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) do objeto, o código para recuperar um IPrintInterface dele pode ser:
 
 ```cpp
 IPrintInterface* pPrint = NULL;
@@ -102,7 +102,7 @@ if (pUnk->QueryInterface(IID_IPrintInterface, (void**)&pPrint) == NOERROR)
 }
 ```
 
-Isso é parece bastante fácil, mas como você implementaria um objeto que oferece suporte a IPrintInterface e [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interface nesse caso, é simple, pois o IPrintInterface seja diretamente derivado de [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) — implementando IPrintInterface, [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) terá suporte automaticamente. Por exemplo:
+Isso é parece bastante fácil, mas como você implementaria um objeto que oferece suporte a IPrintInterface e [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) interface nesse caso, é simple, pois o IPrintInterface seja diretamente derivado de [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) — implementando IPrintInterface, [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) terá suporte automaticamente. Por exemplo:
 
 ```cpp
 class CPrintObj : public CPrintInterface
@@ -114,7 +114,7 @@ class CPrintObj : public CPrintInterface
 };
 ```
 
-As implementações de [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [versão](http://msdn.microsoft.com/library/windows/desktop/ms682317) seria exatamente as mesmas que aquelas implementadas acima. `CPrintObj::QueryInterface` seria algo parecido com isto:
+As implementações de [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) e [versão](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) seria exatamente as mesmas que aquelas implementadas acima. `CPrintObj::QueryInterface` seria algo parecido com isto:
 
 ```cpp
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
@@ -129,7 +129,7 @@ HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
 }
 ```
 
-Como você pode ver, se o identificador de interface (IID) for reconhecido, um ponteiro é retornado ao objeto; Caso contrário, ocorrerá um erro. Observe também que bem-sucedida [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) resulta em um implícitas [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379). É claro, você também precisaria implementar ceditobj:: Print. Isso é simples porque o IPrintInterface foi derivado diretamente do [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interface. No entanto, se você quisesse dar suporte a duas interfaces diferentes, ambas derivadas [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), considere o seguinte:
+Como você pode ver, se o identificador de interface (IID) for reconhecido, um ponteiro é retornado ao objeto; Caso contrário, ocorrerá um erro. Observe também que bem-sucedida [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) resulta em um implícitas [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref). É claro, você também precisaria implementar ceditobj:: Print. Isso é simples porque o IPrintInterface foi derivado diretamente do [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) interface. No entanto, se você quisesse dar suporte a duas interfaces diferentes, ambas derivadas [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown), considere o seguinte:
 
 ```cpp
 class IEditInterface : public IUnkown
@@ -244,7 +244,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(REFIID iid, void** ppvObj)
 }
 ```
 
-Observe que a maioria dos [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) implementação é colocada na classe CEditPrintObj em vez de duplicar o código em Ceditprintobj e ceditprintobj::. Isso reduz a quantidade de código e evita bugs. O ponto principal aqui é que da interface IUnknown é possível chamar [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) para recuperar qualquer interface o objeto possa ter suporte e de cada uma dessas interfaces, é possível fazer o mesmo. Isso significa que todos os [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) funções disponíveis de cada interface devem se comportar exatamente da mesma maneira. Para esses objetos inseridos chamem a implementação no "objeto externo", um ponteiro de retorno é usado (m_pParent). O ponteiro m_pParent é inicializado durante o construtor CEditPrintObj. Em seguida, você poderia implementar PrintObject e Ceditprintobj também. Um pouco de código foi adicionado ao adicionar um recurso — a capacidade de editar o objeto. Felizmente, é muito incomum para interfaces ter apenas uma única função de membro (embora isso aconteça) e, nesse caso, EditObject e PrintObject geralmente seriam combinados em uma única interface.
+Observe que a maioria dos [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) implementação é colocada na classe CEditPrintObj em vez de duplicar o código em Ceditprintobj e ceditprintobj::. Isso reduz a quantidade de código e evita bugs. O ponto principal aqui é que da interface IUnknown é possível chamar [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) para recuperar qualquer interface o objeto possa ter suporte e de cada uma dessas interfaces, é possível fazer o mesmo. Isso significa que todos os [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) funções disponíveis de cada interface devem se comportar exatamente da mesma maneira. Para esses objetos inseridos chamem a implementação no "objeto externo", um ponteiro de retorno é usado (m_pParent). O ponteiro m_pParent é inicializado durante o construtor CEditPrintObj. Em seguida, você poderia implementar PrintObject e Ceditprintobj também. Um pouco de código foi adicionado ao adicionar um recurso — a capacidade de editar o objeto. Felizmente, é muito incomum para interfaces ter apenas uma única função de membro (embora isso aconteça) e, nesse caso, EditObject e PrintObject geralmente seriam combinados em uma única interface.
 
 Isso é muita explicação e muito código para um cenário tão simples. As classes do MFC/OLE fornecem uma alternativa mais simples. A implementação do MFC usa uma técnica semelhante à forma como as mensagens do Windows são encapsuladas com mapas de mensagem. Esse recurso é chamado *mapas de Interface* e é abordado na próxima seção.
 
@@ -252,11 +252,11 @@ Isso é muita explicação e muito código para um cenário tão simples. As cla
 
 MFC/OLE inclui uma implementação de "Mapas de Interface" semelhante do MFC "Mapas de mensagem" e "Mapas de expedição" em conceito e em execução. Os principais recursos do mapas de Interface MFC são da seguinte maneira:
 
-- Uma implementação padrão de [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), compilada no `CCmdTarget` classe.
+- Uma implementação padrão de [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown), compilada no `CCmdTarget` classe.
 
-- Manutenção da contagem de referência, modificada por [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [versão](http://msdn.microsoft.com/library/windows/desktop/ms682317)
+- Manutenção da contagem de referência, modificada por [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) e [versão](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)
 
-- Implementação de orientada a dados [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)
+- Implementação de orientada a dados [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))
 
 Além disso, os mapas de interface suportam os seguintes recursos avançados:
 
@@ -268,7 +268,7 @@ Além disso, os mapas de interface suportam os seguintes recursos avançados:
 
 Para obter mais informações sobre agregação, consulte o [agregação](/windows/desktop/com/aggregation) tópico.
 
-Suporte de mapa de interface do MFC está enraizado no `CCmdTarget` classe. `CCmdTarget` "*tem um*" fazer referência a contagem, bem como todas as funções de membro associadas com o [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) implementação (por exemplo é a contagem de referência em `CCmdTarget`). Para criar uma classe que suporta OLE COM, você deriva uma classe de `CCmdTarget` e usa várias macros, bem como funções de membro de `CCmdTarget` para implementar as interfaces desejadas. A implementação do MFC usa classes aninhadas para definir cada implementação da interface muito semelhante ao exemplo acima. Isso é facilitado com uma implementação padrão de IUnknown, bem como um número de macros que eliminam parte do código repetitivo.
+Suporte de mapa de interface do MFC está enraizado no `CCmdTarget` classe. `CCmdTarget` "*tem um*" fazer referência a contagem, bem como todas as funções de membro associadas com o [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) implementação (por exemplo é a contagem de referência em `CCmdTarget`). Para criar uma classe que suporta OLE COM, você deriva uma classe de `CCmdTarget` e usa várias macros, bem como funções de membro de `CCmdTarget` para implementar as interfaces desejadas. A implementação do MFC usa classes aninhadas para definir cada implementação da interface muito semelhante ao exemplo acima. Isso é facilitado com uma implementação padrão de IUnknown, bem como um número de macros que eliminam parte do código repetitivo.
 
 ## <a name="interface-map-basics"></a>Noções básicas de mapa de interface
 
@@ -288,7 +288,7 @@ Suporte de mapa de interface do MFC está enraizado no `CCmdTarget` classe. `CCm
 
 7. Use a macro METHOD_PROLOGUE para acessar o pai, `CCmdTarget`-objeto derivado.
 
-8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [Release](http://msdn.microsoft.com/library/windows/desktop/ms682317), e [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) pode delegar para o `CCmdTarget` implementação dessas funções (`ExternalAddRef`, `ExternalRelease`, e `ExternalQueryInterface`).
+8. [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), [Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), e [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) pode delegar para o `CCmdTarget` implementação dessas funções (`ExternalAddRef`, `ExternalRelease`, e `ExternalQueryInterface`).
 
 O exemplo de CPrintEditObj acima poderia ser implementado da seguinte maneira:
 
@@ -312,7 +312,7 @@ protected:
 };
 ```
 
-A declaração acima cria uma classe derivada de `CCmdTarget`. A macro DECLARE_INTERFACE_MAP informa a estrutura que essa classe terá um mapa de interface personalizada. Além disso, as macros BEGIN_INTERFACE_PART e END_INTERFACE_PART definem classes aninhadas, nesse caso, com nomes CEditObj e CPrintObj (o X é usado para diferenciar as classes aninhadas de classes globais que começam com "C" e a interface de classes que somente Inicie com "I"). Dois membros aninhados dessas classes são criados: m_CEditObj e m_CPrintObj, respectivamente. As macros declaram automaticamente a [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [versão](http://msdn.microsoft.com/library/windows/desktop/ms682317), e [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) funções; portanto, você declara somente as funções específicas dessa interface: EditObject e PrintObject (a macro OLE STDMETHOD é usado para que **stdcall** e palavras-chave virtuais sejam fornecidas conforme apropriado para a plataforma de destino).
+A declaração acima cria uma classe derivada de `CCmdTarget`. A macro DECLARE_INTERFACE_MAP informa a estrutura que essa classe terá um mapa de interface personalizada. Além disso, as macros BEGIN_INTERFACE_PART e END_INTERFACE_PART definem classes aninhadas, nesse caso, com nomes CEditObj e CPrintObj (o X é usado para diferenciar as classes aninhadas de classes globais que começam com "C" e a interface de classes que somente Inicie com "I"). Dois membros aninhados dessas classes são criados: m_CEditObj e m_CPrintObj, respectivamente. As macros declaram automaticamente a [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), [versão](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), e [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) funções; portanto, você declara somente as funções específicas dessa interface: EditObject e PrintObject (a macro OLE STDMETHOD é usado para que **stdcall** e palavras-chave virtuais sejam fornecidas conforme apropriado para a plataforma de destino).
 
 Para implementar o mapa de interface para esta classe:
 
@@ -323,9 +323,9 @@ BEGIN_INTERFACE_MAP(CPrintEditObj, CCmdTarget)
 END_INTERFACE_MAP()
 ```
 
-Isso conecta o IID IID_IPrintInterface com m_CPrintObj e IID_IEditInterface com m_CEditObj respectivamente. O `CCmdTarget` implementací [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) (`CCmdTarget::ExternalQueryInterface`) usa esse mapa para retornar ponteiros para m_CPrintObj e m_ceditobj quando for solicitado. Não é necessário incluir uma entrada para `IID_IUnknown`; a estrutura usará a primeira interface no mapa (neste caso, m_CPrintObj) quando `IID_IUnknown` é solicitada.
+Isso conecta o IID IID_IPrintInterface com m_CPrintObj e IID_IEditInterface com m_CEditObj respectivamente. O `CCmdTarget` implementací [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) (`CCmdTarget::ExternalQueryInterface`) usa esse mapa para retornar ponteiros para m_CPrintObj e m_ceditobj quando for solicitado. Não é necessário incluir uma entrada para `IID_IUnknown`; a estrutura usará a primeira interface no mapa (neste caso, m_CPrintObj) quando `IID_IUnknown` é solicitada.
 
-Mesmo que a macro BEGIN_INTERFACE_PART declarado automaticamente a [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) e [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) funções para você, você ainda precisará implementá-los:
+Mesmo que a macro BEGIN_INTERFACE_PART declarado automaticamente a [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), [Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) e [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) funções para você, você ainda precisará implementá-los:
 
 ```cpp
 ULONG FAR EXPORT CEditPrintObj::XEditObj::AddRef()
@@ -381,7 +381,7 @@ Há duas maneiras de usar a agregação: (1) usando um objeto COM que dá suport
 
 ### <a name="using-an-aggregate-object"></a>Usando um objeto agregado
 
-Para usar um objeto agregado, haverá necessidade de alguma forma para vincular a agregação em mecanismo de QueryInterface. Em outras palavras, o objeto agregado deve se comportar como se fosse uma parte nativa de seu objeto. Então, como faz a ligação no mecanismo de mapa de interface do MFC, além de macro INTERFACE_PART, onde um objeto aninhado é mapeado para uma IID, você também pode declarar um objeto agregado como parte de seu `CCmdTarget` classe derivada. Para fazer isso, a macro INTERFACE_AGGREGATE é usada. Isso permite que você especifique uma variável de membro (que deve ser um ponteiro para um [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) ou classe derivada), que deve ser integrada ao mecanismo de mapa de interface. Se o ponteiro não for nulo quando `CCmdTarget::ExternalQueryInterface` é chamado, a estrutura chamará automaticamente o objeto agregado [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) função de membro, se o `IID` solicitado não é um dos nativo `IID`s suporte a `CCmdTarget` objeto propriamente dito.
+Para usar um objeto agregado, haverá necessidade de alguma forma para vincular a agregação em mecanismo de QueryInterface. Em outras palavras, o objeto agregado deve se comportar como se fosse uma parte nativa de seu objeto. Então, como faz a ligação no mecanismo de mapa de interface do MFC, além de macro INTERFACE_PART, onde um objeto aninhado é mapeado para uma IID, você também pode declarar um objeto agregado como parte de seu `CCmdTarget` classe derivada. Para fazer isso, a macro INTERFACE_AGGREGATE é usada. Isso permite que você especifique uma variável de membro (que deve ser um ponteiro para um [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) ou classe derivada), que deve ser integrada ao mecanismo de mapa de interface. Se o ponteiro não for nulo quando `CCmdTarget::ExternalQueryInterface` é chamado, a estrutura chamará automaticamente o objeto agregado [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) função de membro, se o `IID` solicitado não é um dos nativo `IID`s suporte a `CCmdTarget` objeto propriamente dito.
 
 #### <a name="to-use-the-interfaceaggregate-macro"></a>Para usar a macro INTERFACE_AGGREGATE
 
@@ -432,15 +432,15 @@ BEGIN_INTERFACE_MAP(CAggrExample, CCmdTarget)
 END_INTERFACE_MAP()
 ```
 
-A variável m_lpAggrInner é inicializada no construtor para NULL. A estrutura ignora uma variável de membro NULL na implementação padrão de [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521). `OnCreateAggregates` é um bom lugar para criar realmente seus objetos agregados. Você terá que chamar explicitamente se você estiver criando o objeto fora de implementação MFC de `COleObjectFactory`. O motivo para criar agregações em `CCmdTarget::OnCreateAggregates` , bem como o uso de `CCmdTarget::GetControllingUnknown` se tornará aparente quando a criação de objetos agregáveis são discutidas.
+A variável m_lpAggrInner é inicializada no construtor para NULL. A estrutura ignora uma variável de membro NULL na implementação padrão de [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)). `OnCreateAggregates` é um bom lugar para criar realmente seus objetos agregados. Você terá que chamar explicitamente se você estiver criando o objeto fora de implementação MFC de `COleObjectFactory`. O motivo para criar agregações em `CCmdTarget::OnCreateAggregates` , bem como o uso de `CCmdTarget::GetControllingUnknown` se tornará aparente quando a criação de objetos agregáveis são discutidas.
 
-Essa técnica dará ao objeto todas as interfaces que o objeto agregado suporta além de suas interfaces nativas. Se você quiser apenas um subconjunto das interfaces que dá suporte a agregação, você pode substituir `CCmdTarget::GetInterfaceHook`. Isso lhe permite hookability de nível muito baixo, semelhante à [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521). Geralmente, você deseja que todas as interfaces que dá suporte à agregação.
+Essa técnica dará ao objeto todas as interfaces que o objeto agregado suporta além de suas interfaces nativas. Se você quiser apenas um subconjunto das interfaces que dá suporte a agregação, você pode substituir `CCmdTarget::GetInterfaceHook`. Isso lhe permite hookability de nível muito baixo, semelhante à [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)). Geralmente, você deseja que todas as interfaces que dá suporte à agregação.
 
 ### <a name="making-an-object-implementation-aggregatable"></a>Tornando uma implementação de objeto agregável
 
-Para um objeto seja agregável, a implementação de [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [Release](http://msdn.microsoft.com/library/windows/desktop/ms682317), e [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) deverá delegar a um "controle desconhecido". Em outras palavras, para que ele seja parte do objeto, ele deverá delegar [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [Release](http://msdn.microsoft.com/library/windows/desktop/ms682317), e [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) para um objeto diferente, também derivado de [ IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509). Esse "controle desconhecido" é fornecido para o objeto quando ele é criado, ou seja, ele é fornecido para a implementação de `COleObjectFactory`. Implementar isso representa uma pequena quantidade de sobrecarga e em alguns casos não for desejável, portanto, o MFC torna isso opcional. Para ativar um objeto seja agregável, chame `CCmdTarget::EnableAggregation` do construtor do objeto.
+Para um objeto seja agregável, a implementação de [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), [Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), e [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) deverá delegar a um "controle desconhecido". Em outras palavras, para que ele seja parte do objeto, ele deverá delegar [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), [Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), e [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) para um objeto diferente, também derivado de [ IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown). Esse "controle desconhecido" é fornecido para o objeto quando ele é criado, ou seja, ele é fornecido para a implementação de `COleObjectFactory`. Implementar isso representa uma pequena quantidade de sobrecarga e em alguns casos não for desejável, portanto, o MFC torna isso opcional. Para ativar um objeto seja agregável, chame `CCmdTarget::EnableAggregation` do construtor do objeto.
 
-Se o objeto também usar agregados, você também deve ser transmita correto "controle desconhecido" para os objetos agregados. Normalmente, isso [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) ponteiro é passado para o objeto quando a agregação é criada. Por exemplo, o parâmetro pUnkOuter é o "controle desconhecido" para objetos criados com `CoCreateInstance`. O ponteiro do "controle desconhecido" correto pode ser recuperado chamando `CCmdTarget::GetControllingUnknown`. O valor retornado dessa função, no entanto, não é válido durante o construtor. Por esse motivo, é recomendável que você crie seus agregados somente em uma substituição de `CCmdTarget::OnCreateAggregates`, em que o valor retornado de `GetControllingUnknown` é confiável, mesmo se criado a partir de `COleObjectFactory` implementação.
+Se o objeto também usar agregados, você também deve ser transmita correto "controle desconhecido" para os objetos agregados. Normalmente, isso [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) ponteiro é passado para o objeto quando a agregação é criada. Por exemplo, o parâmetro pUnkOuter é o "controle desconhecido" para objetos criados com `CoCreateInstance`. O ponteiro do "controle desconhecido" correto pode ser recuperado chamando `CCmdTarget::GetControllingUnknown`. O valor retornado dessa função, no entanto, não é válido durante o construtor. Por esse motivo, é recomendável que você crie seus agregados somente em uma substituição de `CCmdTarget::OnCreateAggregates`, em que o valor retornado de `GetControllingUnknown` é confiável, mesmo se criado a partir de `COleObjectFactory` implementação.
 
 Também é importante que o objeto manipule a contagem de referência correta ao adicionar ou liberar contagens de referência artificiais. Para garantir que esse é o caso, sempre chame `ExternalAddRef` e `ExternalRelease` em vez de `InternalRelease` e `InternalAddRef`. É raro para chamar `InternalRelease` ou `InternalAddRef` em uma classe que dá suporte à agregação.
 
@@ -528,7 +528,7 @@ O nome da interface que essa classe implementa
 
 #### <a name="remarks"></a>Comentários
 
-Para cada interface que sua classe implementará, você precisa ter um par BEGIN_INTERFACE_PART e END_INTERFACE_PART. Essas macros definem uma classe local derivada da interface OLE que você define, bem como uma variável de membro inserida dessa classe. O [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [Release](http://msdn.microsoft.com/library/windows/desktop/ms682317), e [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) membros são declarados automaticamente. Você deve incluir as declarações para as outras funções de membro que fazem parte da interface que está sendo implementada (as declarações são colocadas entre as macros BEGIN_INTERFACE_PART e END_INTERFACE_PART).
+Para cada interface que sua classe implementará, você precisa ter um par BEGIN_INTERFACE_PART e END_INTERFACE_PART. Essas macros definem uma classe local derivada da interface OLE que você define, bem como uma variável de membro inserida dessa classe. O [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), [Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), e [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) membros são declarados automaticamente. Você deve incluir as declarações para as outras funções de membro que fazem parte da interface que está sendo implementada (as declarações são colocadas entre as macros BEGIN_INTERFACE_PART e END_INTERFACE_PART).
 
 O *iface* argumento é a interface OLE que você deseja implementar, tais como `IAdviseSink`, ou `IPersistStorage` (ou sua própria interface personalizada).
 
@@ -598,7 +598,7 @@ IUnknown
             IOleInPlaceFrameWindow
 ```
 
-Se um objeto que implementa `IOleInPlaceFrameWindow`, um cliente poderá `QueryInterface` em qualquer uma dessas interfaces: `IOleUIWindow`, `IOleWindow`, ou [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), além da interface "mais derivada" `IOleInPlaceFrameWindow` (aquele que está realmente Implementando). Para lidar com isso, você pode usar mais de uma macro INTERFACE_PART para mapear cada interface base para o `IOleInPlaceFrameWindow` interface:
+Se um objeto que implementa `IOleInPlaceFrameWindow`, um cliente poderá `QueryInterface` em qualquer uma dessas interfaces: `IOleUIWindow`, `IOleWindow`, ou [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown), além da interface "mais derivada" `IOleInPlaceFrameWindow` (aquele que está realmente Implementando). Para lidar com isso, você pode usar mais de uma macro INTERFACE_PART para mapear cada interface base para o `IOleInPlaceFrameWindow` interface:
 
 no arquivo de definição de classe:
 
@@ -634,7 +634,7 @@ O nome da variável de membro que deve ser agregada.
 
 #### <a name="remarks"></a>Comentários
 
-Essa macro é usada para informar a estrutura que a classe está usando um objeto agregado. Ele deve aparecer entre as macros BEGIN_INTERFACE_PART e END_INTERFACE_PART. Um objeto agregado é um objeto separado, derivado de [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509). Ao usar uma agregação e a macro INTERFACE_AGGREGATE, você pode fazer todas as interfaces que suportam agregados parecerem ser diretamente suportados pelo objeto. O *theAggr* argumento é simplesmente o nome de uma variável de membro da sua classe que deriva [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) (direta ou indiretamente). Todas as macros INTERFACE_AGGREGATE devem seguir as macros INTERFACE_PART quando colocada em um mapa de interface.
+Essa macro é usada para informar a estrutura que a classe está usando um objeto agregado. Ele deve aparecer entre as macros BEGIN_INTERFACE_PART e END_INTERFACE_PART. Um objeto agregado é um objeto separado, derivado de [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown). Ao usar uma agregação e a macro INTERFACE_AGGREGATE, você pode fazer todas as interfaces que suportam agregados parecerem ser diretamente suportados pelo objeto. O *theAggr* argumento é simplesmente o nome de uma variável de membro da sua classe que deriva [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) (direta ou indiretamente). Todas as macros INTERFACE_AGGREGATE devem seguir as macros INTERFACE_PART quando colocada em um mapa de interface.
 
 ## <a name="see-also"></a>Consulte também
 

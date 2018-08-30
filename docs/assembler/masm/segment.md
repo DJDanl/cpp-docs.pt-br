@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c55416cc5a757128c9cc97b2f342953911ac2946
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f5defce11b611f23b67e5e44ac1b9d406f73c0ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32058105"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210413"
 ---
 # <a name="segment"></a>SEGMENT
 Define um segmento de programa chamado *nome* ter atributos de segmento  
@@ -37,32 +37,32 @@ name ENDS
   
 #### <a name="parameters"></a>Parâmetros  
  *align*  
- O intervalo de endereços de memória do qual pode ser selecionado um endereço inicial do segmento. O tipo de alinhamento pode ser qualquer um dos seguintes:  
+ O intervalo de endereços de memória do qual um endereço inicial para o segmento pode ser selecionado. O tipo de alinhamento pode ser qualquer uma das seguintes opções:  
   
-|Alinhar o texto|Endereço inicial|  
+|Alinhar tipo|Endereço inicial|  
 |----------------|----------------------|  
 |**BYTE**|Próximo endereço de bytes disponíveis.|  
-|**WORD**|Próximo endereço disponível word (2 bytes por palavra).|  
-|**DWORD**|Próximo endereço de palavra de dupla disponível (4 bytes por palavra dupla).|  
-|**PARA**|Próximo endereço de parágrafo disponíveis (16 bytes por parágrafo).|  
-|**PAGE**|Próximo endereço de páginas disponível (256 bytes por página).|  
-|**ALIGN**(*n*)|Avançar disponível *n*endereço do número especificado de bytes. Consulte a seção comentários para obter mais informações.|  
+|**WORD**|Próximo endereço disponível do word (2 bytes por palavra).|  
+|**DWORD**|Próximo endereço disponível palavra de dupla (4 bytes por palavra dupla).|  
+|**PARA**|Endereço do próximo parágrafo disponíveis (16 bytes por parágrafo).|  
+|**PAGE**|Endereço de próxima página disponível (256 bytes por página).|  
+|**ALIGN**(*n*)|Próxima disponível *n*endereço de byte th. Consulte a seção Observações para obter mais informações.|  
   
  Se esse parâmetro não for especificado, **PARA** é usado por padrão.  
   
  *combine*  
- **PÚBLICO**, **pilha**, **comuns**, **memória**, **em * endereço*, **PRIVADA**  
+ **PÚBLICO**, **pilha**, **comuns**, **memória**, **em**<em>endereço</em>, **Particular**  
   
  *Use*  
  **USE16**, **USE32**, **FLAT**  
   
  `characteristics`  
- **INFORMAÇÕES**, **ler**, **gravar**, **EXECUTE**, **compartilhado**, **NOPAGE**, **NOCACHE**, e **descartar**  
+ **INFO**, **leia**, **ESCREVER**, **EXECUTE**, **compartilhado**, **NOPAGE**, **NOCACHE**, e **descartar**  
   
- Eles têm suporte apenas para COFF e correspondem às características de seção COFF de nome semelhante (por exemplo, **compartilhado** corresponde à IMAGE_SCN_MEM_SHARED). LEITURA define o sinalizador IMAGE_SCN_MEM_READ. O sinalizador somente leitura obsoleto causou a seção limpar o sinalizador IMG_SCN_MEM_WRITE. Se houver `characteristics` estão configurados, as características de padrão não são usadas e apenas os sinalizadores especificados pelo programador estão em vigor.  
+ Esses são suportados apenas para COFF e correspondem às características de seção COFF de nome semelhante (por exemplo, **compartilhado** corresponde à IMAGE_SCN_MEM_SHARED). LEITURA define o sinalizador IMAGE_SCN_MEM_READ. O sinalizador somente leitura obsoleto causado a seção para limpar o sinalizador IMG_SCN_MEM_WRITE. Se houver `characteristics` forem definidos, as características padrão não são usadas e somente os sinalizadores especificados pelo programador estão em vigor.  
   
  `ALIAS(``string``)`  
- Essa cadeia de caracteres é usada como o nome da seção no objeto COFF emitido.  Cria várias seções com o mesmo nome externo, com nomes distintos de segmento (MASM).  
+ Essa cadeia de caracteres é usada como o nome da seção no objeto COFF emitido.  Cria várias seções com o mesmo nome externo, com nomes distintos de segmentos (MASM).  
   
  Não há suportada com **/omf**.  
   
@@ -70,7 +70,7 @@ name ENDS
  Designa como segmentos devem ser combinados e ordenados no arquivo montado. Os valores típicos são, `'DATA'`, `'CODE'`, `'CONST'` e `'STACK'`  
   
 ## <a name="remarks"></a>Comentários  
- Para `ALIGN(n)`, `n` pode ser qualquer potência de 2 de 1 para 8192; não tem suporte com **/omf**.  
+ Para `ALIGN(n)`, `n` pode ser qualquer potência de 2 de 1 a 8192; não tem suporte com **/omf**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de diretivas](../../assembler/masm/directives-reference.md)

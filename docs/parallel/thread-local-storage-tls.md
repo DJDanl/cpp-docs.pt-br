@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43abbae434c21557a83463e1691e344123a940db
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: e5720fcbc5c52936a0e29c2ccf0847309636b5f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132070"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211851"
 ---
 # <a name="thread-local-storage-tls"></a>Armazenamento local de thread (TLS)
 Armazenamento Local do thread (TLS) é o método pelo qual cada thread em um processo multithread determinado pode alocar locais para armazenar dados específicos de segmento. Dinamicamente dados específicos de segmento de limite (tempo de execução) são suportados por meio da API de TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 e o compilador do Visual C++ agora dão suporte a dados associados estaticamente (tempo de carregamento) por thread, além da implementação da API existente.  
@@ -113,7 +113,7 @@ As diretrizes a seguir devem ser observadas quando declarar estaticamente vincul
   
      O C++ não permite essa inicialização dinâmica de dados de thread devido a possíveis aprimoramentos futuros para o recurso de armazenamento local de thread.  
   
-- Em sistemas de operacionais Windows anteriores ao Windows Vista, `__declspec`(thread) tem algumas limitações. Se uma DLL declara quaisquer dados ou objeto como `__declspec`(thread), isso pode causar uma falha de proteção se carregado dinamicamente. Depois que a DLL é carregada com [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175), ele causa falha do sistema sempre que o código faz referência a `__declspec`dados (thread). Como o espaço de variável global para um thread é alocado em tempo de execução, o tamanho desse espaço se baseia em um cálculo de requisitos do aplicativo mais os requisitos de todas as DLLs vinculadas estaticamente. Quando você usa `LoadLibrary`, você não pode estender esse espaço para permitir que as variáveis locais de thread declaradas com `__declspec`(thread). Use as APIs de TLS, tais como [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801), em sua DLL para alocar TLS, se a DLL pode ser carregada com `LoadLibrary`.  
+- Em sistemas de operacionais Windows anteriores ao Windows Vista, `__declspec`(thread) tem algumas limitações. Se uma DLL declara quaisquer dados ou objeto como `__declspec`(thread), isso pode causar uma falha de proteção se carregado dinamicamente. Depois que a DLL é carregada com [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175), ele causa falha do sistema sempre que o código faz referência a `__declspec`dados (thread). Como o espaço de variável global para um thread é alocado em tempo de execução, o tamanho desse espaço se baseia em um cálculo de requisitos do aplicativo mais os requisitos de todas as DLLs vinculadas estaticamente. Quando você usa `LoadLibrary`, você não pode estender esse espaço para permitir que as variáveis locais de thread declaradas com `__declspec`(thread). Use as APIs de TLS, tais como [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), em sua DLL para alocar TLS, se a DLL pode ser carregada com `LoadLibrary`.  
   
 ## <a name="see-also"></a>Consulte também  
  
