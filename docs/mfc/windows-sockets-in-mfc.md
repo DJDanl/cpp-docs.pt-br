@@ -20,36 +20,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84fc25ab6515b22fa647b3cc32833c791b59f2b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8b497fc7e5e22a654d1f5037a983165fcd5594c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385506"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194975"
 ---
 # <a name="windows-sockets-in-mfc"></a>Windows Sockets em MFC
 > [!NOTE]
->  MFC dá suporte ao Windows Sockets 1, mas não oferece suporte a [Windows Sockets 2](http://msdn.microsoft.com/library/windows/desktop/ms740673). Windows Sockets 2 primeiro fornecido com o Windows 98 e é a versão incluída no Windows 2000.  
+>  MFC dá suporte ao Windows Sockets 1, mas não suporta [Windows Sockets 2](/windows/desktop/WinSock/windows-sockets-start-page-2). Windows Sockets 2 primeiro fornecido com o Windows 98 e é a versão incluída com o Windows 2000.  
   
- MFC fornece dois modelos para escrever programas de comunicações de rede com o Windows Sockets, incorporados em duas classes MFC. Este artigo descreve esses modelos e outros detalhes sobre o MFC soquetes de suporte. Um soquete"" é um ponto de extremidade de comunicação: um objeto por meio do qual seu aplicativo se comunica com outros aplicativos do Windows Sockets por uma rede.  
+ MFC fornece dois modelos para escrever programas de comunicações de rede com o Windows Sockets, incorporadas ao duas classes do MFC. Este artigo descreve esses modelos e outros detalhes sobre o MFC de soquetes suporte. Um soquete de"" é um ponto de extremidade de comunicação: um objeto por meio do qual seu aplicativo se comunica com outros aplicativos do Windows Sockets em uma rede.  
   
- Para obter informações sobre o Windows Sockets, incluindo uma explicação sobre o conceito de soquete, consulte [Windows Sockets: plano de fundo](../mfc/windows-sockets-background.md).  
+ Para obter informações sobre o Windows Sockets, incluindo uma explicação sobre o conceito de soquete, consulte [Windows Sockets: tela de fundo](../mfc/windows-sockets-background.md).  
   
 ##  <a name="_core_sockets_programming_models"></a> Modelos de programação de soquetes  
- O Windows Sockets do MFC dois modelos de programação há suporte para as classes a seguir:  
+ Os soquetes do Windows MFC dois modelos de programação têm suporte para as classes a seguir:  
   
 -   `CAsyncSocket`  
   
-     Essa classe encapsula a API do Windows Sockets. [CAsyncSocket](../mfc/reference/casyncsocket-class.md) é para os programadores que sabe a programação de rede e a flexibilidade de programação diretamente para a API de soquetes mas também evitar a conveniência de funções de retorno de chamada para notificação de eventos de rede. Diferente de empacotamento soquetes na forma orientada a objeto para uso em C++, a abstração adicional somente que essa classe fornece está convertendo determinadas mensagens do Windows relacionados de soquete em retornos de chamada. Para obter mais informações, consulte [Windows Sockets: notificações de soquete](../mfc/windows-sockets-socket-notifications.md).  
+     Essa classe encapsula a API do Windows Sockets. [CAsyncSocket](../mfc/reference/casyncsocket-class.md) é para os programadores que conhecer a programação de rede e querem a flexibilidade da programação diretamente para a API do sockets, mas também querem a conveniência de funções de retorno de chamada de notificação de eventos de rede. Diferente de empacotamento de soquetes em forma orientada a objeto para uso em C++, a essa classe fornece apenas adicional de abstração é converter determinadas mensagens do Windows relacionados ao soquete em retornos de chamada. Para obter mais informações, consulte [Windows Sockets: notificações de soquete](../mfc/windows-sockets-socket-notifications.md).  
   
 -   `CSocket`  
   
-     Essa classe derivada de `CAsyncSocket`, fornece uma abstração de nível superior para trabalhar com sockets por meio de um MFC [CArchive](../mfc/reference/carchive-class.md) objeto. Usando um soquete com um arquivo morto bastante semelhante usando o protocolo de serialização de arquivo do MFC. Isso torna mais fácil de usar do que o `CAsyncSocket` modelo. [CSocket](../mfc/reference/csocket-class.md) herda muitas funções de membro de `CAsyncSocket` que encapsulam a APIs do Windows Sockets; você terá que usar algumas dessas funções e entender a programação geral de soquetes. Mas `CSocket` gerencia vários aspectos da comunicação que você precisa fazer por conta própria usando o bruto API ou classe `CAsyncSocket`. Mais importante, `CSocket` fornece bloqueio (com processamento em segundo plano das mensagens do Windows), que é essencial para a operação síncrona de `CArchive`.  
+     Essa classe, derivada de `CAsyncSocket`, fornece uma abstração de nível superior para trabalhar com soquetes por meio de um MFC [CArchive](../mfc/reference/carchive-class.md) objeto. Usando um soquete com um arquivo morto bastante semelhante usando o protocolo de serialização de arquivo do MFC. Isso torna mais fácil de usar do que o `CAsyncSocket` modelo. [CSocket](../mfc/reference/csocket-class.md) herda muitas funções de membro de `CAsyncSocket` que encapsulam as APIs do Windows Sockets; você terá que usar algumas dessas funções e entender os soquetes de programação em geral. Mas `CSocket` gerencia muitos aspectos da comunicação que teria de fazer por conta própria usando o brutos API ou classe `CAsyncSocket`. Mais importante, `CSocket` fornece o bloqueio (com processamento em segundo plano de mensagens do Windows), que é essencial para a operação síncrona de `CArchive`.  
   
- Criando e usando `CSocket` e `CAsyncSocket` objetos é descrito na [Windows Sockets: usando soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md) e [Windows Sockets: usando classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md).  
+ Criando e usando `CSocket` e `CAsyncSocket` objetos é descrito em [Windows Sockets: usando soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md) e [Windows Sockets: usando classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md).  
   
-##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a> DLLs de Windows Sockets  
- Os sistemas operacionais Microsoft Windows fornecem as bibliotecas de vínculo dinâmico (DLL) do Windows Sockets. Visual C++ fornece os arquivos de cabeçalho apropriado e bibliotecas e a especificação de Windows Sockets.  
+##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a> DLLs de soquetes do Windows  
+ Os sistemas operacionais Microsoft Windows fornece as bibliotecas de vínculo dinâmico (DLL) do Windows Sockets. Visual C++ fornece os arquivos de cabeçalho apropriado e bibliotecas e a especificação de soquetes do Windows.  
   
  Para obter mais informações sobre o Windows Sockets, consulte:  
   

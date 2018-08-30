@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57dc254bab0acd875378dfd26ba3fe6e8d5650f4
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: afecaafc5a9d3c1eb9a9466cce303a493d355ce0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407504"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196201"
 ---
 # <a name="based-pointers-c"></a>Ponteiros baseados (C++)
 **Seção específica da Microsoft**  
@@ -56,7 +56,7 @@ struct llist_t {
  O ponteiro `vpBuffer` é atribuído ao endereço da memória alocada em algum momento posterior no programa. A lista vinculada é realocada em relação ao valor de `vpBuffer`.  
   
 > [!NOTE]
->  Identificadores persistentes que contêm ponteiros também podem ser feitos por meio [arquivos mapeados na memória](http://msdn.microsoft.com/library/windows/desktop/aa366556).  
+>  Identificadores persistentes que contêm ponteiros também podem ser feitos por meio [arquivos mapeados na memória](/windows/desktop/Memory/file-mapping).  
   
  Ao desreferenciar um ponteiro baseado, a base deve ser especificada explicitamente ou implicitamente conhecida na declaração.  
   

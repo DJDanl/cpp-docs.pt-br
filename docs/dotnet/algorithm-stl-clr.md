@@ -151,12 +151,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 353044389b6be308eca2fae65f21eeae4e78532a
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 93bbc86e32d75e81c342a0a0a71b823b87df62b0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376144"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196759"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 Define as funções de modelo de contêiner STL/CLR que executam algoritmos.  
@@ -287,7 +287,7 @@ template<class _InIt, class _OutIt> inline
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Essa função se comporta da mesma que a função de biblioteca padrão C++ `copy`. Para obter mais informações, consulte [cópia](http://msdn.microsoft.com/Library/f1fec7da-e01b-40f1-b5bd-6b81e304cae1). 
+ Essa função se comporta da mesma que a função de biblioteca padrão C++ `copy`. Para obter mais informações, consulte [cópia](../standard-library/algorithm-functions.md#copy). 
 
 ## <a name="copy_backward"></a> copy_backward (STL/CLR)
 Atribui os valores dos elementos de um intervalo de origem a um intervalo de destino, iterando pela sequência de elementos de origem e atribuindo-lhes novas posições em uma direção retroativa.  
@@ -826,7 +826,7 @@ template<class _FwdIt, class _Ty> inline
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Essa função se comporta da mesma que a função de biblioteca padrão C++ `remove`. Para obter mais informações, consulte [remover](http://msdn.microsoft.com/Library/77e2585c-441e-448d-bd1d-c893d1356ed8).  
+ Essa função se comporta da mesma que a função de biblioteca padrão C++ `remove`. Para obter mais informações, consulte [remover](../standard-library/algorithm-functions.md#remove).  
 
 ## <a name="remove_copy"></a> remove_copy (STL/CLR)
 Copia os elementos de um intervalo de origem em um intervalo de destino, exceto os elementos de um valor especificado não são copiados, sem afetar a ordem dos elementos restantes e retornando ao fim de um novo intervalo de destino.  
@@ -1149,7 +1149,7 @@ Troca os valores dos elementos entre dois tipos de objeto, atribuindo o conteúd
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Essa função se comporta da mesma que a função de biblioteca padrão C++ `swap`. Para obter mais informações, consulte [permuta](http://msdn.microsoft.com/Library/b471a2de-035e-4aff-b1c7-345d85d93972).  
+ Essa função se comporta da mesma que a função de biblioteca padrão C++ `swap`. Para obter mais informações, consulte [permuta](../standard-library/algorithm-functions.md#swap).  
 
 ## <a name="swap_ranges"></a> swap_ranges (STL/CLR)
 Troca os elementos de um intervalo com os elementos de outro, de tamanho igual.  

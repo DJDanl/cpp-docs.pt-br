@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a0fe657089c33679cf8d18f95268a70335804c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 539e7411dcc47be17bb10a5322e30a524679ca8c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348878"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194205"
 ---
 # <a name="processing-header-control-notifications"></a>Processando notificações de controle do cabeçalho
-Em sua classe de exibição ou a caixa de diálogo, use a janela Propriedades para criar um [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) função de manipulador com uma instrução switch para qualquer controle de cabeçalho ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) mensagens de notificação que você deseja tratar (consulte [mapeando mensagens para funções](../mfc/reference/mapping-messages-to-functions.md)). As notificações são enviadas para a janela pai quando o usuário clica ou clica duas vezes em um item de cabeçalho, arrasta a divisória entre itens e assim por diante.  
+Em sua classe de exibição ou a caixa de diálogo, use a janela Propriedades para criar uma [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) função de manipulador com uma instrução switch para qualquer controle de cabeçalho ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) mensagens de notificação que você deseja manipular (consulte [mapeando mensagens para funções](../mfc/reference/mapping-messages-to-functions.md)). As notificações são enviadas para a janela pai quando o usuário clica ou clica duas vezes em um item de cabeçalho, arrastar um divisor entre itens e assim por diante.  
   
- As mensagens de notificação associadas a um controle de cabeçalho são listadas em [referência de controle de cabeçalho](http://msdn.microsoft.com/library/windows/desktop/bb775239) no SDK do Windows.  
+ As mensagens de notificação associadas com um controle de cabeçalho são listadas na [referência de controle de cabeçalho](https://msdn.microsoft.com/library/windows/desktop/bb775239) no SDK do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando CHeaderCtrl](../mfc/using-cheaderctrl.md)   

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b79700277486c43035bd7d448fc942f785f4cc8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ab1d229f2c1933025993aa1bc3a3a8b91b41a2cc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959923"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195809"
 ---
 # <a name="output-file-stream-member-functions"></a>Funções de Membro de Fluxo de Arquivo de Saída
 
@@ -96,7 +96,7 @@ int main( )
 }
 ```
 
-O `write` função não é interrompida quando atinge um caractere nulo, portanto, a estrutura de classe completa é gravada. A função leva dois argumentos: um **char** ponteiro e uma contagem de caracteres a serem gravados. Observe a conversão necessária para **char\*** antes do endereço do objeto de estrutura.
+O `write` função não é interrompida quando atinge um caractere nulo, portanto, a estrutura de classe completa é gravada. A função leva dois argumentos: um **char** ponteiro e uma contagem de caracteres a serem gravados. Observe a conversão necessária para **char** <strong>\*</strong> antes do endereço do objeto de estrutura.
 
 ## <a name="the-seekp-and-tellp-functions"></a>As funções seekp e tellp
 
@@ -114,12 +114,12 @@ Use essas funções membro para testar se há erros ao gravar em um fluxo:
 
 |Função|Valor retornado|
 |--------------|------------------|
-|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Retorna **true** se houver um erro irrecuperável.|
-|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Retorna **true** se houver um erro irrecuperável ou uma condição “esperada”, como um erro de conversão ou se o arquivo não for encontrado. Processamento geralmente pode retomar após uma chamada para `clear` com um argumento de zero.|
-|[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Retorna **true** não se houver nenhuma condição de erro (recuperável ou não) e o sinalizador de fim de arquivo não estiver definido.|
-|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Retorna **true** na condição de fim de arquivo.|
-|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Define o estado de erro interno. Se chamado com os argumentos padrão, limpa todos os bits de erro.|
-|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Retorna o estado de erro atual.|
+|[bad](basic-ios-class.md#bad)|Retorna **true** se houver um erro irrecuperável.|
+|[fail](basic-ios-class.md#fail)|Retorna **true** se houver um erro irrecuperável ou uma condição “esperada”, como um erro de conversão ou se o arquivo não for encontrado. Processamento geralmente pode retomar após uma chamada para `clear` com um argumento de zero.|
+|[good](basic-ios-class.md#good)|Retorna **true** não se houver nenhuma condição de erro (recuperável ou não) e o sinalizador de fim de arquivo não estiver definido.|
+|[eof](basic-ios-class.md#eof)|Retorna **true** na condição de fim de arquivo.|
+|[clear](basic-ios-class.md#clear)|Define o estado de erro interno. Se chamado com os argumentos padrão, limpa todos os bits de erro.|
+|[rdstate] (basic-ios-class.md #rdstate|Retorna o estado de erro atual.|
 
 O **!** operador está sobrecarregado para executar a mesma função que o `fail` função. Portanto, a expressão:
 

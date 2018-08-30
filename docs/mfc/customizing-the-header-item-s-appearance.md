@@ -1,5 +1,5 @@
 ---
-title: Personalizando o Item de cabeçalho&#39;aparência de s | Microsoft Docs
+title: Personalizando o Item de cabeçalho&#39;aparência s | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09f8bc0b61e22435ee348968f117940b57132e3
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 3523feb14d49a0e275fd3024925287aa05521f4b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930869"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195512"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>Personalizando o Item de cabeçalho&#39;s aparência
 Definindo o *dwStyle* parâmetro quando você cria um controle de cabeçalho ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)), você pode definir a aparência e comportamento do cabeçalho de itens ou do cabeçalho de controle em si.  
   
- Aqui está uma amostra dos estilos que você pode definir e sua finalidade:  
+ Aqui está uma amostragem dos estilos que podem ser definidas e sua finalidade:  
   
--   Para fazer com que um item de cabeçalho a aparência de um botão de ação, use o **HDS_BUTTONS** estilo.  
+-   Para fazer com que um item de cabeçalho se parecer com um botão de ação, use o **HDS_BUTTONS** estilo.  
   
-     Se você quiser executar ações em resposta aos cliques do mouse em um item de cabeçalho, como classificar dados por uma coluna específica, como é feito no Microsoft Outlook, use este estilo.  
+     Use esse estilo se você quiser executar ações em resposta a cliques do mouse em um item de cabeçalho, como classificar dados por uma coluna específica, como é feito no Microsoft Outlook.  
   
--   Para fornecer os itens de cabeçalho uma aparência "rastreio" quando o cursor do mouse passa sobre eles, use o **HDS_HOTTRACK** estilo.  
+-   Para fornecer os itens de cabeçalho uma aparência "rastreio importante" quando o cursor do mouse passa sobre eles, use o **HDS_HOTTRACK** estilo.  
   
-     Rastreio importante exibe uma estrutura de tópicos 3D conforme o ponteiro passa sobre um item em uma outra forma simples barra.  
+     Rastreio importante exibe uma estrutura de tópicos 3D quando o ponteiro passa sobre um item em uma outra forma simples barra.  
   
 -   Para indicar que o controle de cabeçalho deve ser ocultado, use o **HDS_HIDDEN** estilo.  
   
-     O **HDS_HIDDEN** estilo indica que o controle de cabeçalho é destinado a ser usado como um contêiner de dados e não um controle visual. Este estilo não oculta o controle automaticamente, mas, em vez disso, afeta o comportamento de `CHeaderCtrl::Layout`. O valor retornado no *cy* membro o `WINDOWPOS` estrutura será zero que indica que o controle não deve ser visível para o usuário.  
+     O **HDS_HIDDEN** estilo indica que o controle de cabeçalho é destinado a ser usado como um contêiner de dados e não um controle visual. Esse estilo não oculta o controle automaticamente, mas, em vez disso, afeta o comportamento de `CHeaderCtrl::Layout`. O valor retornado na *cy* membro do `WINDOWPOS` estrutura será zero que indica que o controle não deve ser visível para o usuário.  
   
- Para obter mais informações sobre essas propriedades, consulte [itens](http://msdn.microsoft.com/library/windows/desktop/bb775238) no SDK do Windows. Para obter informações sobre como adicionar itens a um controle de cabeçalho, consulte [adicionando itens ao controle de cabeçalho](../mfc/adding-items-to-the-header-control.md).  
+ Para obter mais informações sobre essas propriedades, consulte [itens](/windows/desktop/Controls/header-controls) no SDK do Windows. Para obter informações sobre como adicionar itens a um controle de cabeçalho, consulte [adicionando itens ao controle de cabeçalho](../mfc/adding-items-to-the-header-control.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando CHeaderCtrl](../mfc/using-cheaderctrl.md)   

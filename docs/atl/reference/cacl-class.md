@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3408e098b7d7b29ff9ee82775954734e3e768dcb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 066f9ac076d4371692331231b5f6f212947b2001
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879976"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196478"
 ---
 # <a name="cacl-class"></a>Classe CAcl
 Essa classe é um wrapper para um `ACL` estrutura (lista de controle de acesso).  
@@ -92,7 +92,7 @@ class CAcl
 |[CAcl::operator =](#operator_eq)|Operador de atribuição.|  
   
 ## <a name="remarks"></a>Comentários  
- O `ACL` estrutura é o cabeçalho de uma ACL (lista de controle de acesso). Uma ACL inclui uma lista sequencial de zero ou mais [ACEs](http://msdn.microsoft.com/library/windows/desktop/aa374868) (entradas de controle de acesso). As ACEs individuais em uma ACL são numeradas de 0 a *n-1*, onde *n* é o número de ACEs na ACL. Ao editar uma ACL, um aplicativo se refere a uma entrada de controle de acesso (ACE) na ACL por seu índice.  
+ O `ACL` estrutura é o cabeçalho de uma ACL (lista de controle de acesso). Uma ACL inclui uma lista sequencial de zero ou mais [ACEs](/windows/desktop/SecAuthZ/access-control-entries) (entradas de controle de acesso). As ACEs individuais em uma ACL são numeradas de 0 a *n-1*, onde *n* é o número de ACEs na ACL. Ao editar uma ACL, um aplicativo se refere a uma entrada de controle de acesso (ACE) na ACL por seu índice.  
   
  Há dois tipos ACL:  
   
@@ -104,9 +104,9 @@ class CAcl
   
  Um objeto também pode ter informações de segurança em nível de sistema associadas a ele, na forma de um sistema de ACL controlado por um administrador do sistema. Um ACL de sistema pode permitir que o administrador do sistema qualquer tentativa de obter acesso a um objeto de auditoria.  
   
- Para obter mais detalhes, consulte o [ACL](http://msdn.microsoft.com/library/windows/desktop/aa374872) discussão no SDK do Windows.  
+ Para obter mais detalhes, consulte o [ACL](/windows/desktop/SecAuthZ/access-control-lists) discussão no SDK do Windows.  
   
- Para obter uma introdução ao modelo de controle de acesso no Windows, consulte [controle de acesso](http://msdn.microsoft.com/library/windows/desktop/aa374860) no SDK do Windows.  
+ Para obter uma introdução ao modelo de controle de acesso no Windows, consulte [controle de acesso](/windows/desktop/SecAuthZ/access-control) no SDK do Windows.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsecurity. h  
@@ -129,7 +129,7 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Este typedef Especifica o tipo de matriz usado para definir os sinalizadores de controle específicos do tipo ACE (entrada) controle de acesso. Consulte a [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) definição para a lista completa dos sinalizadores possíveis.  
+ Este typedef Especifica o tipo de matriz usado para definir os sinalizadores de controle específicos do tipo ACE (entrada) controle de acesso. Consulte a [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) definição para a lista completa dos sinalizadores possíveis.  
   
 ##  <a name="cacetypearray"></a>  CAcl::CAceTypeArray  
  Uma matriz de BYTEs.  
@@ -139,7 +139,7 @@ typedef CAtlArray<BYTE> CAceTypeArray;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Este typedef Especifica o tipo de matriz usado para definir a natureza dos objetos ACE (entrada) do controle de acesso, como ACCESS_ALLOWED_ACE_TYPE ou ACCESS_DENIED_ACE_TYPE. Consulte a [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) definição para a lista completa de tipos possíveis.  
+ Este typedef Especifica o tipo de matriz usado para definir a natureza dos objetos ACE (entrada) do controle de acesso, como ACCESS_ALLOWED_ACE_TYPE ou ACCESS_DENIED_ACE_TYPE. Consulte a [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) definição para a lista completa de tipos possíveis.  
   
 ##  <a name="cacl"></a>  CAcl::CAcl  
  O construtor.  
@@ -205,7 +205,7 @@ void GetAclEntries(
   
  O conteúdo de cada matriz corresponde uns aos outros, ou seja, o primeiro elemento do `CAccessMaskArray` matriz corresponde ao primeiro elemento no `CSidArray` matriz e assim por diante.  
   
- Ver [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) para obter mais detalhes sobre os tipos ACE e sinalizadores.  
+ Ver [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) para obter mais detalhes sobre os tipos ACE e sinalizadores.  
   
 ##  <a name="getaclentry"></a>  CAcl::GetAclEntry  
  Recupera todas as informações sobre uma entrada em uma lista de controle de acesso (ACL).  
@@ -246,7 +246,7 @@ void GetAclEntry(
 ### <a name="remarks"></a>Comentários  
  Esse método irá recuperar todas as informações sobre uma ACE individual, fornecendo mais informações do que [CAcl::GetAclEntries](#getaclentries) sozinho torna disponível.  
   
- Ver [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) para obter mais detalhes sobre os tipos ACE e sinalizadores.  
+ Ver [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) para obter mais detalhes sobre os tipos ACE e sinalizadores.  
   
 ##  <a name="getlength"></a>  CAcl::GetLength  
  Retorna o comprimento da lista de controle de acesso (ACL).  

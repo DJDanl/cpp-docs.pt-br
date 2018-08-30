@@ -104,12 +104,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ab94a9aadc40b4313995a71171d6712657e7ff0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6bacb90052b46b687349e9069fd7c47f825f0221
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964945"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202786"
 ---
 # <a name="basicstreambuf-class"></a>Classe basic_streambuf
 
@@ -664,7 +664,7 @@ O elemento atual.
 
 ### <a name="remarks"></a>Comentários
 
-Se uma posição de leitura estiver disponível, a função membro retornará **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **\*** [gptr](#gptr)) e incrementará o ponteiro seguinte para o buffer de entrada. Caso contrário, retorna [uflow](#uflow).
+Se uma posição de leitura estiver disponível, a função membro retornará **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( <strong>\*</strong> [gptr](#gptr)) e incrementará o ponteiro seguinte para o buffer de entrada. Caso contrário, retorna [uflow](#uflow).
 
 ### <a name="example"></a>Exemplo
 

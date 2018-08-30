@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a10594391b0f3be490608f7dfa006b0c32aa2e0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: acc43bc4175f42282014e94426717527143dc059
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609274"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197050"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (exigir verificação de assinatura)
 Especifica que a assinatura digital da imagem binária deve ser verificada em tempo de carregamento.  
@@ -47,5 +47,5 @@ Especifica que a assinatura digital da imagem binária deve ser verificada em te
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
  [Opções do vinculador](../../build/reference/linker-options.md)   
  [Arquivos de integridade de assinatura de PE (executável portátil) forçado](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)   
- [Instruções passo a passo de assinatura de código de modo kernel](http://msdn.microsoft.com/windows/hardware/gg487328.aspx)   
- [DLLs do AppInit no Windows 7 e Windows Server 2008](http://msdn.microsoft.com/windows/hardware/gg463040.aspx)
+ [Instruções passo a passo de assinatura de código de modo kernel](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)   
+ [DLLs do AppInit no Windows 7 e Windows Server 2008](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)

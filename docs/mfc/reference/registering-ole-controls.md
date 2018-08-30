@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 468eb677a0073e25c9ef33182aea0d321cded352
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4855ca5c461b7437345150f5d199521c48f0b253
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335611"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196547"
 ---
 # <a name="registering-ole-controls"></a>Registrando controles OLE
 Controles OLE, como outros objetos de servidor OLE, podem ser acessados por outros aplicativos com reconhecimento de OLE. Isso é feito registrando a biblioteca de tipos e a classe do controle.  
@@ -83,7 +83,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
   
 - `afxRegFreeThreading` Define o modelo de threading no registro para ThreadingModel = gratuito.  
   
-     Você pode combinar os dois sinalizadores `afxRegApartmentThreading` e `afxRegFreeThreading` definir ThreadingModel = Both. Ver [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) no SDK do Windows para obter mais informações sobre o registro do modelo de threading.  
+     Você pode combinar os dois sinalizadores `afxRegApartmentThreading` e `afxRegFreeThreading` definir ThreadingModel = Both. Ver [InprocServer32](/windows/desktop/com/inprocserver32) no SDK do Windows para obter mais informações sobre o registro do modelo de threading.  
   
 > [!NOTE]
 >  Nas versões MFC antes 4.2 do MFC, o **int** *nRegFlags* parâmetro era um parâmetro BOOL *bInsertable*, que permitidos ou não o controle a ser inserido da inserção Caixa de diálogo do objeto.  
@@ -142,7 +142,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  Diferente de zero se a classe de controle tiver sido registrada; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Isso permite que o controle a ser usada por contêineres que estão cientes de controle OLE. `AfxOleRegisterControlClass` atualiza o registro com o nome do controle e o local no sistema e também define o modelo de threading que permite o controle no registro. Para obter mais informações, consulte [64 de observação técnica](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Modelo Apartment Threading em OLE controles," e [sobre processos e Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917) no SDK do Windows.  
+ Isso permite que o controle a ser usada por contêineres que estão cientes de controle OLE. `AfxOleRegisterControlClass` atualiza o registro com o nome do controle e o local no sistema e também define o modelo de threading que permite o controle no registro. Para obter mais informações, consulte [64 de observação técnica](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Modelo Apartment Threading em OLE controles," e [sobre processos e Threads](/windows/desktop/ProcThread/about-processes-and-threads) no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
@@ -189,7 +189,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  Diferente de zero se a classe de controle tiver sido registrada; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Isso permite que a página de propriedade a ser usada por contêineres que estão cientes de controle OLE. `AfxOleRegisterPropertyPageClass` atualiza o registro com o nome da página de propriedade e sua localização no sistema e também define o modelo de threading que permite o controle no registro. Para obter mais informações, consulte [64 de observação técnica](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Modelo Apartment Threading em OLE controles," e [sobre processos e Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917) no SDK do Windows.  
+ Isso permite que a página de propriedade a ser usada por contêineres que estão cientes de controle OLE. `AfxOleRegisterPropertyPageClass` atualiza o registro com o nome da página de propriedade e sua localização no sistema e também define o modelo de threading que permite o controle no registro. Para obter mais informações, consulte [64 de observação técnica](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Modelo Apartment Threading em OLE controles," e [sobre processos e Threads](/windows/desktop/ProcThread/about-processes-and-threads) no SDK do Windows.  
   
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxctl. h  

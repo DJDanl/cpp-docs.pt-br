@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28501c0105ce9d62c72dc9013b881029f4bc8bfb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: faa2a3be7260eecb16599db967336bcb7b774c99
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590660"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200120"
 ---
 # <a name="switchtype"></a>switch_type
 
@@ -43,9 +43,9 @@ O tipo de comutador, pode ser um tipo de caractere, inteiro, booliano ou enumera
 
 ## <a name="remarks"></a>Comentários
 
-O **switch_type** atributo C++ tem a mesma funcionalidade que o [switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) atributo MIDL.
+O **switch_type** atributo C++ tem a mesma funcionalidade que o [switch_type](/windows/desktop/Midl/switch-type) atributo MIDL.
 
-Atributos de C++ não oferecem suporte a [encapsulada uniões](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Uniões nonencapsulated](http://msdn.microsoft.com/library/windows/desktop/aa367119) têm suporte apenas no seguinte formato:
+Atributos de C++ não oferecem suporte a [encapsulada uniões](/windows/desktop/Midl/encapsulated-unions). [Uniões nonencapsulated](/windows/desktop/Midl/nonencapsulated-unions) têm suporte apenas no seguinte formato:
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp

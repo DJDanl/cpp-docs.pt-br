@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c773cb242b3ac432ad5c0482bfad318c4c33b78a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fb99d0cb37fff5abe5a7eb54d3ba9c4226e5fd1c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883842"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197195"
 ---
 # <a name="cwindowimpl-class"></a>Classe CWindowImpl
 Fornece métodos para criar ou uma janela de subclasses.  
@@ -150,22 +150,22 @@ HWND Create(
  [in] O identificador para a janela pai ou proprietária.  
   
  *Rect*  
- [in] Um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) especificando a posição da janela de estrutura. O `RECT` pode ser passada por um ponteiro ou referência.  
+ [in] Um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) especificando a posição da janela de estrutura. O `RECT` pode ser passada por um ponteiro ou referência.  
   
  *szWindowName*  
  [in] Especifica o nome da janela. O valor padrão é NULL.  
   
  *dwStyle*  
- [in] O estilo da janela. Esse valor é combinado com o estilo fornecido pela classe de características da janela. O valor padrão fornece as características de controle completo sobre o estilo de classe. Para obter uma lista de valores possíveis, consulte [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) no SDK do Windows.  
+ [in] O estilo da janela. Esse valor é combinado com o estilo fornecido pela classe de características da janela. O valor padrão fornece as características de controle completo sobre o estilo de classe. Para obter uma lista de valores possíveis, consulte [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) no SDK do Windows.  
   
  *dwExStyle*  
- [in] O estilo de janela estendidos. Esse valor é combinado com o estilo fornecido pela classe de características da janela. O valor padrão fornece as características de controle completo sobre o estilo de classe. Para obter uma lista de valores possíveis, consulte [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
+ [in] O estilo de janela estendidos. Esse valor é combinado com o estilo fornecido pela classe de características da janela. O valor padrão fornece as características de controle completo sobre o estilo de classe. Para obter uma lista de valores possíveis, consulte [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
   
  *MenuOrID*  
  [in] Para uma janela filho, o identificador de janela. Para uma janela de nível superior, um identificador de menu da janela. O valor padrão é **0U**.  
   
  *lpCreateParam*  
- [in] Um ponteiro para dados de criação da janela. Para obter uma descrição completa, consulte a descrição para o parâmetro final [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Um ponteiro para dados de criação da janela. Para obter uma descrição completa, consulte a descrição para o parâmetro final [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se for bem-sucedido, o identificador para a janela criada recentemente. Caso contrário, nulo.  
@@ -207,7 +207,7 @@ LRESULT DefWindowProc();
  O resultado do processamento da mensagem.  
   
 ### <a name="remarks"></a>Comentários  
- Por padrão, `DefWindowProc` chamadas a [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) para enviar as informações de mensagem para o procedimento de janela especificado na função do Win32 [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
+ Por padrão, `DefWindowProc` chamadas a [CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571) para enviar as informações de mensagem para o procedimento de janela especificado na função do Win32 [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
  A função sem nenhum parâmetro recupera os parâmetros necessários automaticamente a mensagem atual.  
   
@@ -262,7 +262,7 @@ WNDPROC m_pfnSuperWindowProc;
   
 |Tipo de janela|Procedimento de janela|  
 |--------------------|----------------------|  
-|Uma janela com base em uma nova classe de janela, especificada por meio de [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) macro.|O [DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572) função do Win32.|  
+|Uma janela com base em uma nova classe de janela, especificada por meio de [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) macro.|O [DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572) função do Win32.|  
 |Uma janela com base em uma classe de janela que modifica uma classe existente, especificada por meio de [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) macro.|Procedimento de janela da classe de janela existente.|  
 |Uma janela de subclasse.|A subclasse original procedimento da janela.|  
   

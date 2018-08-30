@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611fecad210b9297b6c7cd16c83dbd0c6c3e41a8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 68283d8dc0e8b2152b28a2fe2990ddc22fafa6d3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886161"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196391"
 ---
 # <a name="ustringorid-class"></a>Classe u_stringorid
 Essa classe de adaptador do argumento permite que os nomes de recursos (LPCTSTRs) ou IDs de recurso (unidades) a serem passados para uma função sem exigir que o chamador converter a ID em uma cadeia de caracteres usando a macro MAKEINTRESOURCE.  
@@ -53,7 +53,7 @@ class _U_STRINGorID
 |[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|O identificador de recurso.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe é projetada para a implementação de invólucros para a API de gerenciamento do recurso, no Windows, como o [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042), [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), e [LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990) funções que aceitam um argumento LPCTSTR que pode ser o nome de um recurso ou sua ID.  
+ Essa classe é projetada para a implementação de invólucros para a API de gerenciamento do recurso, no Windows, como o [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea), [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona), e [LoadMenu](/windows/desktop/api/winuser/nf-winuser-loadmenua) funções que aceitam um argumento LPCTSTR que pode ser o nome de um recurso ou sua ID.  
   
  A classe define duas sobrecargas de construtor: uma aceita um argumento LPCTSTR e o outra aceita um argumento UINT. O argumento UINT é convertido em um tipo de recurso compatível com funções de gerenciamento de recursos do Windows usando a macro MAKEINTRESOURCE e o resultado armazenado no membro de dados único da classe, [m_lpstr](#_u_stringorid__m_lpstr). O argumento para o construtor LPCTSTR é armazenado diretamente, sem conversão.  
   

@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b68ebd20d449c11ac8c62a6a01c086dbe566811
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ccfb9c8873ff7e954e4e8169fafb94c53e6a311e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027667"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205981"
 ---
 # <a name="ctime-class"></a>Classe CTime
 Representa uma data e a hora absoluta.  
@@ -66,7 +66,7 @@ class CTime
 |[CTime::Format](#format)|Converte um `CTime` objeto em uma cadeia de caracteres formatada — com base no fuso horário local.|  
 |[CTime::FormatGmt](#formatgmt)|Converte um `CTime` objeto em uma cadeia de caracteres formatada — com base em UTC.|  
 |[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Converte as informações de hora armazenadas no `CTime` objeto a uma estrutura compatível com o Win32 DBTIMESTAMP.|  
-|[CTime::GetAsSystemTime](#getassystemtime)|Converte as informações de hora armazenadas na `CTime` objeto para uma compatível com o Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura.|  
+|[CTime::GetAsSystemTime](#getassystemtime)|Converte as informações de hora armazenadas na `CTime` objeto para uma compatível com o Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura.|  
 |[CTime::GetCurrentTime](#getcurrenttime)|Cria um `CTime` objeto que representa a hora atual (função de membro estático).|  
 |[CTime::GetDay](#getday)|Retorna representam o dia, o `CTime` objeto.|  
 |[CTime::GetDayOfWeek](#getdayofweek)|Retorna o dia da semana representado pelo `CTime` objeto.|  
@@ -210,7 +210,7 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
     > [!NOTE]
     >  O construtor usando `DBTIMESTAMP` parâmetro está disponível apenas quando OLEDB é incluído.  
   
- Para obter mais informações, consulte o [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) e [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) estrutura no SDK do Windows. Consulte também o [MS-DOS data e hora](http://msdn.microsoft.com/library/windows/desktop/ms724503) entrada no SDK do Windows.  
+ Para obter mais informações, consulte o [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) e [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) estrutura no SDK do Windows. Consulte também o [MS-DOS data e hora](/windows/desktop/SysInfo/ms-dos-date-and-time) entrada no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATLMFC_Utilities#148](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]  
@@ -288,7 +288,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
  [!code-cpp[NVC_ATLMFC_Utilities#150](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
   
 ##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime  
- Chame essa função de membro para converter as informações de hora armazenadas na `CTime` objeto para uma compatível com o Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura.  
+ Chame essa função de membro para converter as informações de hora armazenadas na `CTime` objeto para uma compatível com o Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura.  
   
 ```  
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
@@ -296,7 +296,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
   
 ### <a name="parameters"></a>Parâmetros  
  *timeDest*  
- Uma referência a um [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que conterá o valor de data/hora convertido do `CTime` objeto.  
+ Uma referência a um [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que conterá o valor de data/hora convertido do `CTime` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se bem-sucedido; Caso contrário, FALSE.  

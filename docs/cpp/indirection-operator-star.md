@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80fdbe14539c5b32c2da80a5de75fbe0a2b64241
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a23951697a5f736305734c6d49044a2e33ac4783
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409121"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200487"
 ---
 # <a name="indirection-operator-"></a>Operador de indireção: *
 ## <a name="syntax"></a>Sintaxe  
@@ -32,7 +32,7 @@ ms.locfileid: "39409121"
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O operador unário de indireção (**\***) cancela a referência de um ponteiro; ou seja, ele converte um valor de ponteiro em um l-value. O operando do operador de indireção deve ser um ponteiro para um tipo. O resultado da expressão de indireção é o tipo do qual o tipo do ponteiro é derivado. O uso do **\*** operador nesse contexto é diferente de seu significado como um operador binário, que é de multiplicação.  
+ O operador unário de indireção (<strong>\*</strong>) cancela a referência de um ponteiro; ou seja, ele converte um valor de ponteiro em um l-value. O operando do operador de indireção deve ser um ponteiro para um tipo. O resultado da expressão de indireção é o tipo do qual o tipo do ponteiro é derivado. O uso do <strong>\*</strong> operador nesse contexto é diferente de seu significado como um operador binário, que é de multiplicação.  
   
  Se o operando apontar para uma função, o resultado será um designador de função. Se ele apontar para um local de armazenamento, o resultado será um valor l que designa o local de armazenamento.  
   

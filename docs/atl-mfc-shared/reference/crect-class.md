@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a1b968e09ed40959c30a649d4d4e17baea28703
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3d49b7a96f98c701c2748379ed880267bff3fa5a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881081"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196642"
 ---
 # <a name="crect-class"></a>Classe CRect
 Semelhante a um Windows [RECT](../../mfc/reference/rect-structure1.md) estrutura.  
@@ -375,7 +375,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
  Especifica o número de unidades de deflate superior e inferior de `CRect`.  
   
  *size*  
- Um [tamanho](http://msdn.microsoft.com/library/windows/desktop/dd145106) ou [CSize](csize-class.md) que especifica o número de unidades a serem deflate `CRect`. O `cx` valor Especifica o número de unidades para os lados esquerdo e direito de deflate e o `cy` valor Especifica o número de unidades a serem deflate superior e inferior.  
+ Um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) ou [CSize](csize-class.md) que especifica o número de unidades a serem deflate `CRect`. O `cx` valor Especifica o número de unidades para os lados esquerdo e direito de deflate e o `cy` valor Especifica o número de unidades a serem deflate superior e inferior.  
   
  *lpRect*  
  Aponta para um [RECT](../../mfc/reference/rect-structure1.md) estrutura ou `CRect` que especifica o número de unidades a serem deflate cada lado.  
@@ -494,7 +494,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
  Especifica o número de unidades para Inflar superior e inferior de `CRect`.  
   
  *size*  
- Um [tamanho](http://msdn.microsoft.com/library/windows/desktop/dd145106) ou [CSize](csize-class.md) que especifica o número de unidades para Inflar `CRect`. O `cx` valor Especifica o número de unidades para inflar os lados esquerdo e direito e o `cy` valor Especifica o número de unidades para Inflar superior e inferior.  
+ Um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) ou [CSize](csize-class.md) que especifica o número de unidades para Inflar `CRect`. O `cx` valor Especifica o número de unidades para inflar os lados esquerdo e direito e o `cy` valor Especifica o número de unidades para Inflar superior e inferior.  
   
  *lpRect*  
  Aponta para um [RECT](../../mfc/reference/rect-structure1.md) estrutura ou `CRect` que especifica o número de unidades para Inflar cada lado.  
@@ -753,7 +753,7 @@ void OffsetRect(SIZE size) throw();
  Contém uma [ponto](../../mfc/reference/point-structure1.md) estrutura ou [CPoint](cpoint-class.md) objeto especificando ambas as dimensões pela qual mover.  
   
  *size*  
- Contém uma [tamanho](http://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou [CSize](csize-class.md) objeto especificando ambas as dimensões pela qual mover.  
+ Contém uma [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou [CSize](csize-class.md) objeto especificando ambas as dimensões pela qual mover.  
   
 ### <a name="remarks"></a>Comentários  
  Move `CRect` *x* unidades no eixo e *y* unidades no eixo y. O *x* e *y* parâmetros são valores assinados, portanto, `CRect` pode ser movido para a esquerda ou para a direita e para cima ou para baixo.  
@@ -919,7 +919,7 @@ void operator+=(LPCRECT lpRect) throw();
  Um [ponto](../../mfc/reference/point-structure1.md) estrutura ou [CPoint](cpoint-class.md) objeto que especifica o número de unidades para mover o retângulo.  
   
  *size*  
- Um [tamanho](http://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou [CSize](csize-class.md) objeto que especifica o número de unidades para mover o retângulo.  
+ Um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou [CSize](csize-class.md) objeto que especifica o número de unidades para mover o retângulo.  
   
  *lpRect*  
  Aponta para um [RECT](../../mfc/reference/rect-structure1.md) estrutura ou `CRect` objeto que contém o número de unidades para Inflar cada lado da `CRect`.  
@@ -958,7 +958,7 @@ void operator-=(LPCRECT lpRect) throw();
  Um [ponto](../../mfc/reference/point-structure1.md) estrutura ou [CPoint](cpoint-class.md) objeto que especifica o número de unidades para mover o retângulo.  
   
  *size*  
- Um [tamanho](http://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou [CSize](csize-class.md) objeto que especifica o número de unidades para mover o retângulo.  
+ Um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou [CSize](csize-class.md) objeto que especifica o número de unidades para mover o retângulo.  
   
  *lpRect*  
  Aponta para um [RECT](../../mfc/reference/rect-structure1.md) estrutura ou `CRect` objeto que contém o número de unidades para deflate cada lado da `CRect`.  
@@ -1050,7 +1050,7 @@ CRect operator+(SIZE size) const throw();
  Um [ponto](../../mfc/reference/point-structure1.md) estrutura ou [CPoint](cpoint-class.md) objeto que especifica o número de unidades para mover o valor de retorno.  
   
  *size*  
- Um [tamanho](http://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou [CSize](csize-class.md) objeto que especifica o número de unidades para mover o valor de retorno.  
+ Um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou [CSize](csize-class.md) objeto que especifica o número de unidades para mover o valor de retorno.  
   
  *lpRect*  
  Aponta para um [RECT](../../mfc/reference/rect-structure1.md) estrutura ou `CRect` objeto que contém o número de unidades para Inflar cada lado do valor de retorno.  
@@ -1089,7 +1089,7 @@ CRect operator-(LPCRECT lpRect) const throw();
  Um [ponto](../../mfc/reference/point-structure1.md) estrutura ou `CPoint` objeto que especifica o número de unidades para mover o valor de retorno.  
   
  *size*  
- Um [tamanho](http://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou `CSize` objeto que especifica o número de unidades para mover o valor de retorno.  
+ Um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou `CSize` objeto que especifica o número de unidades para mover o valor de retorno.  
   
  *lpRect*  
  Aponta para um [RECT](../../mfc/reference/rect-structure1.md) estrutura ou `CRect` objeto que contém o número de unidades para deflate cada lado do valor de retorno.  

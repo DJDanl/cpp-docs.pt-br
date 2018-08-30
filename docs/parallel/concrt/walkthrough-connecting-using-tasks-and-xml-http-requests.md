@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8333ffcb1de62f4af5ee0a3ec0412ad742af7192
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 42588b844158ebe995a9d07dc206679580db12fe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42540158"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201162"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Instruções passo a passo: conexão usando tarefas e solicitações HTTP XML
 Este exemplo mostra como usar o [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) e [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfaces junto com tarefas enviar solicitações HTTP GET e POST para um serviço web em um Windows UWP (plataforma Universal ) aplicativo. Combinando `IXMLHTTPRequest2` junto com tarefas, você pode escrever código que compõe com outras tarefas. Por exemplo, você pode usar a tarefa de download como parte de uma cadeia de tarefas. A tarefa de download também pode responder quando o trabalho é cancelado.  
@@ -33,7 +33,7 @@ Este exemplo mostra como usar o [IXMLHTTPRequest2](/previous-versions/windows/de
   
  Primeiro, este documento mostra como criar `HttpRequest` e suas classes de suporte. Ela mostra também como usar essa classe de um aplicativo UWP que usa C++ e XAML.  
   
- Para obter um exemplo mais completo que usa o `HttpReader` classe descrita neste documento, consulte [desenvolvimento do Bing Maps Trip Optimizer, um aplicativo da Windows Store em JavaScript e C++](http://msdn.microsoft.com/library/974cf025-de1a-4299-b7dd-c6c7bf0e5d30). Para obter outro exemplo que usa `IXMLHTTPRequest2` , mas não usa tarefas, consulte [guia de início rápido: conectando-se usando a solicitação de HTTP XML (IXMLHTTPRequest2)](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35).  
+ Para obter um exemplo mais completo que usa o `HttpReader` classe descrita neste documento, consulte [desenvolvimento do Bing Maps Trip Optimizer, um aplicativo da Windows Store em JavaScript e C++](https://msdn.microsoft.com/library/974cf025-de1a-4299-b7dd-c6c7bf0e5d30). Para obter outro exemplo que usa `IXMLHTTPRequest2` , mas não usa tarefas, consulte [guia de início rápido: conectando-se usando a solicitação de HTTP XML (IXMLHTTPRequest2)](https://msdn.microsoft.com/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35).  
   
 > [!TIP]
 >  `IXMLHTTPRequest2` e `IXMLHTTPRequest2Callback` são as interfaces que recomendamos para uso em um aplicativo UWP. Você também pode adaptar este exemplo para uso em um aplicativo da área de trabalho.  
@@ -72,7 +72,7 @@ Este exemplo mostra como usar o [IXMLHTTPRequest2](/previous-versions/windows/de
   
 #### <a name="to-use-the-httprequest-class"></a>Para Usar a Classe HttpRequest  
   
-1.  Em MainPage. XAML, defina as [StackPanel](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) elemento da seguinte maneira.  
+1.  Em MainPage. XAML, defina as [StackPanel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) elemento da seguinte maneira.  
   
      [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]  
   
@@ -121,6 +121,6 @@ Este exemplo mostra como usar o [IXMLHTTPRequest2](/previous-versions/windows/de
  [Cancelamento no PPL](cancellation-in-the-ppl.md)   
  [Programação assíncrona em C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)   
  [Criando operações assíncronas em C++ para aplicativos UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
- [Guia de início rápido: Conectando-se usando a solicitação de HTTP XML (IXMLHTTPRequest2)](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
+ [Guia de início rápido: Conectando-se usando a solicitação de HTTP XML (IXMLHTTPRequest2)](https://msdn.microsoft.com/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
  [tarefa de classe (tempo de execução de simultaneidade)](../../parallel/concrt/reference/task-class.md)   
  [Classe task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)

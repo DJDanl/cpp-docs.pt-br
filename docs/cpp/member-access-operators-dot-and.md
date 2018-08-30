@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ec7e11272e0a7286d77e3fc96b7437007a0f8d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a4af9fa780aca1bc1c1304b45d226984fbb5eb7e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408781"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201439"
 ---
 # <a name="member-access-operators--and--gt"></a>Operadores de acesso de membro:. e -&gt;
 ## <a name="syntax"></a>Sintaxe  
@@ -46,7 +46,7 @@ postfix-expression -> name
   
 1.  No primeiro formato, *postfix-expression* representa um valor de struct, classe ou tipo de união, e *nome* nomeia um membro da estrutura especificada, união ou classe. O valor da operação é de *nome* e é um l-value se *postfix-expression* é um l-value.  
   
-2.  Na segunda forma *postfix-expression* representa um ponteiro para uma estrutura, união ou classe, e *nome* nomeia um membro da estrutura especificada, união ou classe. O valor é de *nome* e é um l-value. O **->** operador desreferencia o ponteiro. Portanto, as expressões * e ***->** `member` e **(\****eletrônico***)**.`member` (onde *eletrônico* representa um ponteiro) geram resultados idênticos (exceto quando os operadores **->** ou **\*** são sobrecarregados).  
+2.  Na segunda forma *postfix-expression* representa um ponteiro para uma estrutura, união ou classe, e *nome* nomeia um membro da estrutura especificada, união ou classe. O valor é de *nome* e é um l-value. O **->** operador desreferencia o ponteiro. Portanto, as expressões `e->member` e `(*e).member` (onde *eletrônico* representa um ponteiro) geram resultados idênticos (exceto quando os operadores **->** ou <strong>\*</strong> são sobrecarregados).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra as duas formas de operador de acesso do membro.  

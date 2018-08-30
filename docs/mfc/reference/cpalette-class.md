@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdd8dd32b0f805e55e17d12428c045d64820196d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff3a68e585cecb8affb0a5f4ffb7ff81929c955a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849399"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201097"
 ---
 # <a name="cpalette-class"></a>Classe CPalette
 Encapsula uma paleta de cores do Windows.  
@@ -115,12 +115,12 @@ void AnimatePalette(
  Especifica o número de entradas na paleta a ser animada.  
   
  *lpPaletteColors*  
- Aponta para o primeiro membro de uma matriz de [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) estruturas para substituir as entradas da paleta identificadas pelo *nStartIndex* e *nNumEntries*.  
+ Aponta para o primeiro membro de uma matriz de [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) estruturas para substituir as entradas da paleta identificadas pelo *nStartIndex* e *nNumEntries*.  
   
 ### <a name="remarks"></a>Comentários  
  Quando um aplicativo chama `AnimatePalette`, ele não precisa atualizar sua área de cliente, porque o Windows mapeia as novas entradas na paleta do sistema imediatamente.  
   
- O `AnimatePalette` função alterará apenas entradas com o sinalizador PC_RESERVED definido nas correspondentes `palPaletteEntry` membro do [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) estrutura que é anexada ao `CPalette` objeto. Consulte LOGPALETTE no SDK do Windows para obter mais informações sobre essa estrutura.  
+ O `AnimatePalette` função alterará apenas entradas com o sinalizador PC_RESERVED definido nas correspondentes `palPaletteEntry` membro do [LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette) estrutura que é anexada ao `CPalette` objeto. Consulte LOGPALETTE no SDK do Windows para obter mais informações sobre essa estrutura.  
   
 ##  <a name="cpalette"></a>  CPalette::CPalette  
  Constrói um objeto `CPalette`.  
@@ -147,7 +147,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
  Diferente de zero se a função for bem-sucedida; caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Um aplicativo deve criar uma paleta de meio-tom quando o modo de alongamento de um contexto de dispositivo é definido como o meio-tom. A paleta de meio-tom lógico retornada pela [CreateHalftonePalette](http://msdn.microsoft.com/library/windows/desktop/dd183503) função de membro deve ser selecionada e realizada no contexto de dispositivo antes do [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) ou [ StretchDIBits](http://msdn.microsoft.com/library/windows/desktop/dd145121) função é chamada.  
+ Um aplicativo deve criar uma paleta de meio-tom quando o modo de alongamento de um contexto de dispositivo é definido como o meio-tom. A paleta de meio-tom lógico retornada pela [CreateHalftonePalette](/windows/desktop/api/wingdi/nf-wingdi-createhalftonepalette) função de membro deve ser selecionada e realizada no contexto de dispositivo antes do [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) ou [ StretchDIBits](/windows/desktop/api/wingdi/nf-wingdi-stretchdibits) função é chamada.  
   
  Consulte o SDK do Windows para obter mais informações `CreateHalftonePalette` e `StretchDIBits`.  
   
@@ -160,7 +160,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
   
 ### <a name="parameters"></a>Parâmetros  
  *lpLogPalette*  
- Aponta para um [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) estrutura que contém informações sobre as cores da paleta lógica.  
+ Aponta para um [LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette) estrutura que contém informações sobre as cores da paleta lógica.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
@@ -227,7 +227,7 @@ UINT GetPaletteEntries(
  Especifica o número de entradas na paleta lógica a ser recuperado.  
   
  *lpPaletteColors*  
- Aponta para uma matriz de [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) estruturas de dados para receber as entradas da paleta. A matriz deve conter pelo menos o mesmo número de estruturas de dados conforme especificado por *nNumEntries*.  
+ Aponta para uma matriz de [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) estruturas de dados para receber as entradas da paleta. A matriz deve conter pelo menos o mesmo número de estruturas de dados conforme especificado por *nNumEntries*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O número de entradas recuperados da paleta lógica; 0 se a função falhou.  
@@ -245,7 +245,7 @@ operator HPALETTE() const;
 ### <a name="remarks"></a>Comentários  
  Esse operador é um operador de conversão, que dá suporte ao uso direto de um objeto HPALETTE.  
   
- Para obter mais informações sobre como usar objetos gráficos, consulte o artigo [gráfico de objetos](http://msdn.microsoft.com/library/windows/desktop/dd144962) no SDK do Windows.  
+ Para obter mais informações sobre como usar objetos gráficos, consulte o artigo [gráfico de objetos](/windows/desktop/gdi/graphic-objects) no SDK do Windows.  
   
 ##  <a name="resizepalette"></a>  CPalette::ResizePalette  
  Altera o tamanho da paleta lógica anexado para o `CPalette` objeto para o número de entradas especificado pelo *nNumEntries*.  
@@ -264,7 +264,7 @@ BOOL ResizePalette(UINT nNumEntries);
 ### <a name="remarks"></a>Comentários  
  Se um aplicativo chamar `ResizePalette` para reduzir o tamanho da paleta, as entradas restantes na paleta redimensionada são as mesmas. Se o aplicativo chama `ResizePalette` para aumentar a paleta, as entradas da paleta adicionais são definidas para preto (os valores de vermelhos, verdes e azuis são todos 0) e os sinalizadores para todas as entradas adicionais são definidos como 0.  
   
- Para obter mais informações sobre a API do Windows `ResizePalette`, consulte [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) no SDK do Windows.  
+ Para obter mais informações sobre a API do Windows `ResizePalette`, consulte [ResizePalette](/windows/desktop/api/wingdi/nf-wingdi-resizepalette) no SDK do Windows.  
   
 ##  <a name="setpaletteentries"></a>  CPalette::SetPaletteEntries  
  Define os sinalizadores e valores de cor RGB em um intervalo de entradas em uma paleta lógica.  
@@ -284,7 +284,7 @@ UINT SetPaletteEntries(
  Especifica o número de entradas na paleta lógica a ser definido.  
   
  *lpPaletteColors*  
- Aponta para uma matriz de [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) estruturas de dados para receber as entradas da paleta. A matriz deve conter pelo menos o mesmo número de estruturas de dados conforme especificado por *nNumEntries*.  
+ Aponta para uma matriz de [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) estruturas de dados para receber as entradas da paleta. A matriz deve conter pelo menos o mesmo número de estruturas de dados conforme especificado por *nNumEntries*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O número de entradas definido na paleta lógica; 0 se a função falhou.  
@@ -292,7 +292,7 @@ UINT SetPaletteEntries(
 ### <a name="remarks"></a>Comentários  
  Se a paleta lógica está selecionada em um contexto de dispositivo quando o aplicativo chama `SetPaletteEntries`, as alterações não entrarão em vigor até que o aplicativo chama [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).  
   
- Para obter mais informações sobre a estrutura do Windows `PALETTEENTRY`, consulte [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) no SDK do Windows.  
+ Para obter mais informações sobre a estrutura do Windows `PALETTEENTRY`, consulte [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) no SDK do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo MFC DIBLOOK](../../visual-cpp-samples.md)   

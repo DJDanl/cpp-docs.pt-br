@@ -42,44 +42,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45a2f99001d45de71ca3ea8a525152d53d67ee64
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efda2666a1d7cf47a485a9e1ceb53c09f4966989
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348564"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203826"
 ---
 # <a name="device-contexts"></a>Contextos de dispositivo
-Um contexto de dispositivo é uma estrutura de dados do Windows que contém informações sobre os atributos de desenho de um dispositivo, como uma exibição ou uma impressora. Todas as chamadas de desenho são feitas por meio de um objeto de contexto de dispositivo, que encapsula as APIs do Windows para desenho linhas, formas e texto. Contextos de dispositivo permitem desenho independente de dispositivo no Windows. Contextos de dispositivo podem ser usados para desenhar a tela, a impressora ou metarquivo.  
+Um contexto de dispositivo é uma estrutura de dados do Windows que contém informações sobre os atributos de desenho de um dispositivo, como uma exibição ou uma impressora. Todas as chamadas de desenho são feitas por meio de um objeto de contexto de dispositivo, que encapsula as APIs do Windows para o desenho de linhas, formas e texto. Contextos de dispositivo permitem que o desenho independente de dispositivo no Windows. Contextos de dispositivo podem ser usados para desenhar na tela, para a impressora ou a um metarquivo.  
   
- [CPaintDC](../mfc/reference/cpaintdc-class.md) objetos encapsulam o idioma comuns do Windows, chamando o `BeginPaint` função, em seguida, no contexto do dispositivo e chamar o `EndPaint` função. O `CPaintDC` chamadas de construtor `BeginPaint` para você e as chamadas de destruidor `EndPaint`. O processo simplificado é criar o [CDC](../mfc/reference/cdc-class.md) do objeto, desenhar e, em seguida, destrua o `CDC` objeto. Na estrutura, grande parte do mesmo esse processo será automatizado. Em particular, seu `OnDraw` função é passada uma `CPaintDC` já preparado (via `OnPrepareDC`), e você simplesmente desenhar nele. Ele será destruído pelo framework e o contexto de dispositivo subjacente é liberado para o Windows após o retorno de chamada para o `OnDraw` função.  
+ [CPaintDC](../mfc/reference/cpaintdc-class.md) objetos encapsulam a linguagem comum do Windows, chamando o `BeginPaint` função, em seguida, desenhando no contexto de dispositivo e chamar o `EndPaint` função. O `CPaintDC` chamadas de construtor `BeginPaint` para você e o destruidor chama `EndPaint`. O processo simplificado é criar o [CDC](../mfc/reference/cdc-class.md) do objeto, desenhar e, em seguida, destrua o `CDC` objeto. No framework, grande parte do mesmo esse processo é automatizado. Em particular, sua `OnDraw` função é passada uma `CPaintDC` já foi preparado (via `OnPrepareDC`), e você simplesmente desenha nele. Ele é destruído pelo framework e o contexto de dispositivo subjacente é liberado para o Windows após o retorno da chamada para seu `OnDraw` função.  
   
- [CClientDC](../mfc/reference/cclientdc-class.md) objetos encapsulam trabalhar com um contexto de dispositivo que representa somente a área do cliente de uma janela. O `CClientDC` construtor chama o `GetDC` função e as chamadas de destruidor de `ReleaseDC` função. [CWindowDC](../mfc/reference/cwindowdc-class.md) objetos encapsulam um contexto de dispositivo que representa a janela inteira, incluindo seu quadro.  
+ [CClientDC](../mfc/reference/cclientdc-class.md) objetos encapsulam trabalhar com um contexto de dispositivo que representa apenas a área de cliente de uma janela. O `CClientDC` construtor chama o `GetDC` função e o destruidor chama o `ReleaseDC` função. [CWindowDC](../mfc/reference/cwindowdc-class.md) objetos encapsulam um contexto de dispositivo que representa a janela inteira, incluindo seu quadro.  
   
- [CMetaFileDC](../mfc/reference/cmetafiledc-class.md) objetos encapsulam desenho em um metarquivo do Windows. Em comparação com o `CPaintDC` passado para `OnDraw`, nesse caso, você deve chamar [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) por conta própria.  
+ [CMetaFileDC](../mfc/reference/cmetafiledc-class.md) encapsulam a objetos de desenho em um metarquivo do Windows. Em contraste com o `CPaintDC` passado para `OnDraw`, nesse caso, você deve chamar [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) por conta própria.  
   
 ## <a name="mouse-drawing"></a>Desenho de mouse  
- Desenhando a maioria em um programa do framework — e, portanto, a maioria dos trabalho de contexto de dispositivo — é feita no modo de exibição `OnDraw` função de membro. No entanto, você ainda pode usar objetos de contexto de dispositivo para outras finalidades. Por exemplo, para fornecer comentários de acompanhamento do movimento do mouse em uma exibição, você precisa desenhar diretamente no modo de exibição, sem esperar que `OnDraw` a ser chamado.  
+ Desenhando a maioria em um programa do framework — e, portanto, a maioria dos trabalho de contexto de dispositivo — é feito no modo de exibição `OnDraw` função de membro. No entanto, você ainda pode usar objetos de contexto de dispositivo para outras finalidades. Por exemplo, para fornecer comentários de acompanhamento de movimento do mouse em uma exibição, você precisa desenhar diretamente na exibição sem aguardar `OnDraw` a ser chamado.  
   
- Nesse caso, você pode usar um [CClientDC](../mfc/reference/cclientdc-class.md) objeto de contexto de dispositivo para desenhar diretamente no modo de exibição.  
+ Nesse caso, você pode usar um [CClientDC](../mfc/reference/cclientdc-class.md) objeto de contexto de dispositivo para desenhar diretamente na exibição.  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
   
--   [Contextos de dispositivo (definição)](http://msdn.microsoft.com/library/windows/desktop/dd183553)  
+-   [Contextos de dispositivo (definição)](https://msdn.microsoft.com/library/windows/desktop/dd183553)  
   
 -   [Desenhando em uma exibição](../mfc/drawing-in-a-view.md)  
   
 -   [Interpretando a entrada do usuário por meio de uma exibição](../mfc/interpreting-user-input-through-a-view.md)  
   
--   [Linhas e curvas](http://msdn.microsoft.com/library/windows/desktop/dd145028)  
+-   [Linhas e curvas](https://msdn.microsoft.com/library/windows/desktop/dd145028)  
   
--   [Formas preenchidas](http://msdn.microsoft.com/library/windows/desktop/dd162714)  
+-   [Formas preenchidas](https://msdn.microsoft.com/library/windows/desktop/dd162714)  
   
--   [Fontes e texto](http://msdn.microsoft.com/library/windows/desktop/dd144819)  
+-   [Fontes e texto](/windows/desktop/gdi/fonts-and-text)  
   
--   [Cores](http://msdn.microsoft.com/library/windows/desktop/dd183450)  
+-   [Cores](https://msdn.microsoft.com/library/windows/desktop/dd183450)  
   
--   [Espaços de coordenadas e transformações](http://msdn.microsoft.com/library/windows/desktop/dd183475)  
+-   [Espaços de coordenadas e transformações](https://msdn.microsoft.com/library/windows/desktop/dd183475)  
   
 ## <a name="see-also"></a>Consulte também  
  [Objetos de janela](../mfc/window-objects.md)

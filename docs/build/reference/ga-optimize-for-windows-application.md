@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 387732c5bde04970e3a467ca4f43f911afa7a9a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61bf8844a5471a97214ca6f3d3b5b473c9cd6217
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374252"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194657"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (otimizar para aplicativo do Windows)
 Resulta em um código mais eficiente para um arquivo .exe para acessar variáveis de armazenamento local de thread (TLS).  
@@ -37,19 +37,19 @@ Resulta em um código mais eficiente para um arquivo .exe para acessar variávei
 ```  
   
 ## <a name="remarks"></a>Comentários  
- **/GA** acelera o acesso a dados declarados com [__declspec(thread)](../../cpp/declspec.md) em um programa baseado no Windows. Quando essa opção for definida, o [__tls_index](http://msdn.microsoft.com/library/windows/desktop/ms686749) macro deve para ser 0.  
+ **/GA** acelera o acesso a dados declarados com [__declspec(thread)](../../cpp/declspec.md) em um programa baseado em Windows. Quando essa opção for definida, o [__tls_index](/windows/desktop/ProcThread/thread-local-storage) macro será considerada como 0.  
   
- Usando **/GA** para uma DLL pode resultar na geração de código inválido.  
+ Usando o **/GA** para uma DLL pode resultar na geração de código incorreto.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
 2.  Clique o **C/C++** pasta.  
   
 3.  Clique o **linha de comando** página de propriedades.  
   
-4.  Digite a opção de compilador no **opções adicionais** caixa.  
+4.  Digite a opção de compilador na **opções adicionais** caixa.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   

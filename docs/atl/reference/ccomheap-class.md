@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d45a999f777a2d497542544c2d3c7f079b7a32b0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c456aaa6f3448cf4386e0556773f2a9839702ccd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881598"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202416"
 ---
 # <a name="ccomheap-class"></a>Classe CComHeap
 Essa classe implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) usando as funções de alocação de memória COM.  
@@ -52,7 +52,7 @@ class CComHeap : public IAtlMemMgr
 |[CComHeap::Reallocate](#reallocate)|Chame esse método para realocar a memória alocada por este Gerenciador de memória.|  
   
 ## <a name="remarks"></a>Comentários  
- `CComHeap` implementa as funções de alocação de memória usando as funções de alocação de COM, incluindo [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)e [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280). A quantidade máxima de memória que pode ser alocada é igual a INT_MAX (2147483647) bytes.  
+ `CComHeap` implementa as funções de alocação de memória usando as funções de alocação de COM, incluindo [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize)e [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc). A quantidade máxima de memória que pode ser alocada é igual a INT_MAX (2147483647) bytes.  
   
 ## <a name="example"></a>Exemplo  
  Veja o exemplo de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -82,7 +82,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Comentários  
  Chame [CComHeap::Free](#free) ou [CComHeap::Reallocate](#reallocate) para liberar a memória alocada por esse método.  
   
- Implementado usando [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727).  
+ Implementado usando [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc).  
   
 ##  <a name="free"></a>  CComHeap::Free  
  Chame esse método para liberar um bloco de memória alocada por este Gerenciador de memória.  
@@ -96,7 +96,7 @@ virtual void Free(void* p) throw();
  Ponteiro de memória alocado anteriormente por este Gerenciador de memória. NULL é um valor válido e não faz nada.  
   
 ### <a name="remarks"></a>Comentários  
- Implementado usando [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722).  
+ Implementado usando [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree).  
   
 ##  <a name="getsize"></a>  CComHeap::GetSize  
  Chame esse método para obter o tamanho alocado de um bloco de memória alocado por este Gerenciador de memória.  
@@ -113,7 +113,7 @@ virtual size_t GetSize(void* p) throw();
  Retorna o tamanho do bloco de memória alocada em bytes.  
   
 ### <a name="remarks"></a>Comentários  
- Implementado usando [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226).  
+ Implementado usando [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize).  
   
 ##  <a name="reallocate"></a>  CComHeap::Reallocate  
  Chame esse método para realocar a memória alocada por este Gerenciador de memória.  
@@ -135,7 +135,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>Comentários  
  Chame [CComHeap::Free](#free) para liberar a memória alocada por esse método.  
   
- Implementado usando [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280).  
+ Implementado usando [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc).  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de DynamicConsumer](../../visual-cpp-samples.md)   

@@ -42,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b5b42c72f4ea2756358208f85d9c01f7863dba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3d83c1e86c574f56b08eecdf2c29e7ab20a28b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400558"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194312"
 ---
 # <a name="fgetchar-fgetwchar"></a>_fgetchar, _fgetwchar
 
@@ -62,13 +62,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Valor de retorno
 
-**fgetchar** retorna o caractere lido como um **int** ou retornar **EOF** para indicar um erro ou o final do arquivo. **_ * fgetwchar** retorna, como um [wint_t](../../c-runtime-library/standard-types.md), o caractere largo que corresponde ao caractere de leitura ou retorna **WEOF** para indicar um erro ou o final do arquivo. Para ambas as funções, use **feof** ou **ferror** para distinguir entre um erro e uma condição de fim de arquivo.
+**\_fgetchar** retorna o caractere lido como uma **int** ou retorna `EOF` para indicar um erro ou fim do arquivo. **\_fgetwchar** retorna, como um [wint_t](../../c-runtime-library/standard-types.md), o caractere largo que corresponde ao caractere lido ou retorna `WEOF` para indicar um erro ou fim do arquivo. Para ambas as funções, use **feof** ou **ferror** para distinguir entre um erro e uma condição de fim-de-arquivo.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções ler um único caractere de **stdin**. A função, em seguida, incrementa o ponteiro de arquivo associado (se definido) para apontar para o próximo caractere. Se o fluxo estiver no fim do arquivo, o indicador de fim de arquivo para o fluxo será definido.
+Essas funções leem um único caractere de **stdin**. A função, em seguida, incrementa o ponteiro de arquivo associado (se definido) para apontar para o próximo caractere. Se o fluxo estiver no fim do arquivo, o indicador de fim de arquivo para o fluxo será definido.
 
-**fgetchar** é equivalente a `fgetc( stdin )`. Também é equivalente a **getchar**, mas implementado apenas como uma função, em vez de como uma função e uma macro. **fgetwchar** é a versão de caractere largo de **fgetchar**.
+**fgetchar** é equivalente a `fgetc( stdin )`. Também é equivalente a **getchar**, mas implementado somente como uma função, em vez de uma função e uma macro. **fgetwchar** é a versão de caractere largo de **fgetchar**.
 
 Essas funções não são compatíveis com o padrão ANSI.
 
@@ -85,7 +85,7 @@ Essas funções não são compatíveis com o padrão ANSI.
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos do Windows UWP (plataforma Universal). Os identificadores de fluxo padrão que estão associados com o console —**stdin**, **stdout**, e **stderr**— deverá ser redirecionado para funções de tempo de execução C podem usá-los em aplicativos UWP . Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console —**stdin**, **stdout**, e **stderr**— deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

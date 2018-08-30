@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b328cb869f971afb0251750d7847d6850688731
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 11f61e89ab888b678bf54f65b999c0fd4394dbea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879829"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201656"
 ---
 # <a name="cwndclassinfo-class"></a>Classe de CWndClassInfo
 Essa classe fornece métodos para registrar informações de uma classe de janela.  
@@ -79,7 +79,7 @@ class CWndClassInfo
   
  [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
   
- Para obter mais informações sobre classes de janela, consulte [Classes de janela](http://msdn.microsoft.com/library/windows/desktop/ms632596) no SDK do Windows.  
+ Para obter mais informações sobre classes de janela, consulte [Classes de janela](https://msdn.microsoft.com/library/windows/desktop/ms632596) no SDK do Windows.  
   
  Para obter mais informações sobre como usar o windows em ATL, consulte o artigo [Classes de janela ATL](../../atl/atl-window-classes.md).  
   
@@ -138,7 +138,7 @@ TCHAR m_szAutoName[13];
  `CWndClassInfo` usa `m_szAutoName` somente se NULL for passado o `WndClassName` parâmetro [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), o [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) ou [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . ATL será construir um nome quando a classe de janela é registrada.  
   
 ##  <a name="m_wc"></a>  CWndClassInfo::m_wc  
- Mantém as informações de classe de janela em um [WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577) estrutura.  
+ Mantém as informações de classe de janela em um [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577) estrutura.  
   
 ```
 WNDCLASSEX m_wc;

@@ -20,30 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef23f0b7e031c6866b7792bca61c5e4d5bd470da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c6c39c47762f4ac61e3192d5d3ecef997c3078bc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353622"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204108"
 ---
 # <a name="ole-in-mfc"></a>OLE no MFC
-Esses artigos explicam os fundamentos da programação OLE usando MFC. MFC fornece a maneira mais fácil para gravar programas que usam OLE:  
+Estes artigos explicam os conceitos básicos da programação de OLE usando o MFC. MFC fornece a maneira mais fácil escrever programas que usam OLE:  
   
--   Para usar OLE visual edição (ativação no local).  
+-   Para usar OLE visual edição (ativação in-loco).  
   
--   Para funcionar como servidores ou contêineres OLE.  
+-   Para funcionar como contêineres OLE ou servidores.  
   
 -   Para implementar a funcionalidade de arrastar e soltar.  
   
 -   Para trabalhar com dados de data e hora.  
   
--   Para gerenciar os dados de estado do MFC módulos, incluindo exportados pontos de entrada da função DLL, pontos de entrada da interface OLE/COM e pontos de entrada do procedimento de janela.  
+-   Para gerenciar os dados de estado do MFC, módulos, incluindo exportados pontos de entrada da função DLL, pontos de entrada da interface OLE/COM e pontos de entrada do procedimento de janela.  
   
  Você também pode usar [automação](../mfc/automation.md).  
   
 > [!NOTE]
->  O termo que OLE indica as tecnologias associadas vinculando e inserindo, incluindo contêineres OLE, servidores OLE, itens OLE, ativação no local (ou edição visual), controladores, arrastar e soltar e mesclagem de menu. O termo Active aplica-se ao modelo de objeto de componente (COM) e COM base em objetos, como controles ActiveX. Automação OLE agora é chamada de automação.  
+>  O termo que OLE denota as tecnologias associadas com a vinculação e incorporação, incluindo contêineres OLE, servidores OLE, itens OLE, ativação no local (ou edição visual), rastreadores, arrastar e soltar e mesclagem de menu. O termo ativo se aplica ao modelo COM (Component Object) e COM base em objetos, como controles ActiveX. Automação OLE agora é chamada de automação.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Tela de fundo OLE](../mfc/ole-background.md)  
@@ -53,7 +53,7 @@ Esses artigos explicam os fundamentos da programação OLE usando MFC. MFC forne
  Descreve a função de ativação na edição de itens OLE.  
   
  [Contêineres](../mfc/containers.md)  
- Fornece links para o uso de contêineres em OLE.  
+ Fornece links para o uso de contêineres OLE.  
   
  [Objetos de dados e fontes de dados](../mfc/data-objects-and-data-sources-ole.md)  
  Fornece links para tópicos que abordam o uso do `COleDataObject` e `COleDataSource` classes.  
@@ -77,11 +77,11 @@ Esses artigos explicam os fundamentos da programação OLE usando MFC. MFC forne
  [Pontos de conexão](../mfc/connection-points.md)  
  Explica como implementar pontos de conexão (anteriormente conhecidos como pontos de conexão OLE) usando as classes MFC `CCmdTarget` e `CConnectionPoint`.  
   
- [Componentes COM de contêiner/servidor](../mfc/containers-advanced-features.md)  
- Descreve as etapas necessárias para incorporar recursos avançados opcionais em aplicativos existentes do contêiner.  
+ [Componentes do contêiner/servidor COM](../mfc/containers-advanced-features.md)  
+ Descreve as etapas necessárias para incorporar recursos avançados opcionais em aplicativos de contêiner existentes.  
   
- [O modelo de objeto do componente](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
- Descreve como usar OLE sem MFC.  
+ [O modelo de objeto de componente](/windows/desktop/com/the-component-object-model)  
+ Descreve como usar o OLE sem MFC.  
   
 ## <a name="see-also"></a>Consulte também  
  [Conceitos](../mfc/mfc-concepts.md)

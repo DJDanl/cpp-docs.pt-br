@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55f7d676988e43216adbf6e8a0b6c21afd958a3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d8371ec583bd8b9ee4962445e4c2b6f2fbfa6280
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884081"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196956"
 ---
 # <a name="cthreadpool-class"></a>Classe CThreadPool
 Essa classe fornece um pool de threads de trabalho que processam uma fila de itens de trabalho.  
@@ -83,9 +83,9 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="remarks"></a>Comentários  
  Threads no pool são criados e destruídos quando o pool é inicializado, redimensionado ou desligado. Uma instância da classe *trabalhador* será criado na pilha de cada thread de trabalho no pool. Cada instância ficará ativo para o tempo de vida do thread.  
   
- Imediatamente após a criação de um thread *trabalhador*:: `Initialize` será chamado no objeto associado a esse thread. Imediatamente antes da destruição de um thread *trabalhador*:: `Terminate` será chamado. Ambos os métodos devem aceitar uma **void\***  argumento. O valor desse argumento é passado para o pool de threads por meio de *pvWorkerParam* parâmetro do [CThreadPool::Initialize](#initialize).  
+ Imediatamente após a criação de um thread *trabalhador*::`Initialize` será chamado no objeto associado a esse thread. Imediatamente antes da destruição de um thread *trabalhador*::`Terminate` será chamado. Ambos os métodos devem aceitar uma **void** <strong>\*</strong> argumento. O valor desse argumento é passado para o pool de threads por meio de *pvWorkerParam* parâmetro do [CThreadPool::Initialize](#initialize).  
   
- Quando há itens de trabalho nos threads de fila e de trabalho disponível para o trabalho, um thread de trabalho efetuará pull de um item de fila e a chamada a `Execute` método da *trabalhador* objeto para esse thread. Três itens, em seguida, são passados para o método: o item da fila, o mesmo `pvWorkerParam` passado para *trabalhador*:: `Initialize` e *trabalho*:: `Terminate`e um ponteiro para o [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) estrutura usada para a fila de porta de conclusão de e/s.  
+ Quando há itens de trabalho nos threads de fila e de trabalho disponível para o trabalho, um thread de trabalho efetuará pull de um item de fila e a chamada a `Execute` método da *trabalhador* objeto para esse thread. Três itens, em seguida, são passados para o método: o item da fila, o mesmo `pvWorkerParam` passado para *trabalhador*:: `Initialize` e *trabalho*:: `Terminate`e um ponteiro para o [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) estrutura usada para a fila de porta de conclusão de e/s.  
   
  O *trabalhador* classe declara o tipo dos itens que serão enfileiradas no pool de threads, fornecendo um typedef *trabalhador*:: `RequestType`. Esse tipo deve ser capaz de que está sendo convertido de e para um ULONG_PTR.  
   
@@ -308,7 +308,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
  O tempo máximo solicitado em milissegundos que o pool de threads irá esperar por um segmento para desligar. Se 0 ou nenhum valor for fornecido, esse método usará o tempo limite definido [CThreadPool::SetTimeout](#settimeout).  
   
 ### <a name="remarks"></a>Comentários  
- Esse método envia uma solicitação de desligamento para todos os threads no pool. Se o tempo limite expirar, esse método chamará [TerminateThread](http://msdn.microsoft.com/library/windows/desktop/ms686717) em qualquer thread que não foi encerrado. Esse método é chamado automaticamente do destruidor da classe.  
+ Esse método envia uma solicitação de desligamento para todos os threads no pool. Se o tempo limite expirar, esse método chamará [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) em qualquer thread que não foi encerrado. Esse método é chamado automaticamente do destruidor da classe.  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)   

@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295fb6944c3c18c2e7794ca13ad5ab93b788a776
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6d87a3b0e4ed9c5c558c90a2935c538b4fb826be
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883473"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201674"
 ---
 # <a name="message-map-macros-atl"></a>Macros de mapa de mensagem (ATL)
 Essas macros definem entradas e mapas de mensagem.  
@@ -346,7 +346,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
  **Cabeçalho:** atlwin   
   
 ##  <a name="command_code_handler"></a>  COMMAND_CODE_HANDLER  
- Semelhante ao [COMMAND_HANDLER](#command_handler), mas mapeia uma [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensagem com base apenas no código de notificação.  
+ Semelhante ao [COMMAND_HANDLER](#command_handler), mas mapeia uma [WM_COMMAND](/windows/desktop/menurc/wm-command) mensagem com base apenas no código de notificação.  
   
 ```
 COMMAND_CODE_HANDLER(code, func)
@@ -380,7 +380,7 @@ COMMAND_HANDLER(id, code, func)
  [in] O nome da função de manipulador de mensagens.  
   
 ### <a name="remarks"></a>Comentários  
- COMMAND_HANDLER mapeia uma [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensagem para a função de manipulador especificado, com base no código de notificação e o identificador de controle. Por exemplo:  
+ COMMAND_HANDLER mapeia uma [WM_COMMAND](/windows/desktop/menurc/wm-command) mensagem para a função de manipulador especificado, com base no código de notificação e o identificador de controle. Por exemplo:  
   
  [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]  
   
@@ -401,7 +401,7 @@ COMMAND_HANDLER(id, code, func)
  **Cabeçalho:** atlwin   
   
 ##  <a name="command_id_handler"></a>  COMMAND_ID_HANDLER  
- Semelhante ao [COMMAND_HANDLER](#command_handler), mas mapeia uma [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensagem com base apenas no identificador do controle, item de menu ou acelerador.  
+ Semelhante ao [COMMAND_HANDLER](#command_handler), mas mapeia uma [WM_COMMAND](/windows/desktop/menurc/wm-command) mensagem com base apenas no identificador do controle, item de menu ou acelerador.  
   
 ```
 COMMAND_ID_HANDLER(id, func)
@@ -418,7 +418,7 @@ COMMAND_ID_HANDLER(id, func)
  **Cabeçalho:** atlwin   
   
 ##  <a name="command_range_code_handler"></a>  COMMAND_RANGE_CODE_HANDLER  
- Semelhante ao [COMMAND_RANGE_HANDLER](#command_range_handler), mas mapeia [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensagens com um código de notificação específica de uma variedade de controles para uma função de manipulador único.  
+ Semelhante ao [COMMAND_RANGE_HANDLER](#command_range_handler), mas mapeia [WM_COMMAND](/windows/desktop/menurc/wm-command) mensagens com um código de notificação específica de uma variedade de controles para uma função de manipulador único.  
   
 ```
 COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
@@ -444,7 +444,7 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
  **Cabeçalho:** atlwin   
   
 ##  <a name="command_range_handler"></a>  COMMAND_RANGE_HANDLER  
- Semelhante ao [COMMAND_HANDLER](#command_handler), mas mapeia [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensagens de uma variedade de controles para uma função de manipulador único.  
+ Semelhante ao [COMMAND_HANDLER](#command_handler), mas mapeia [WM_COMMAND](/windows/desktop/menurc/wm-command) mensagens de uma variedade de controles para uma função de manipulador único.  
   
 ```
 COMMAND_RANGE_HANDLER( idFirst, idLast, func)
@@ -553,7 +553,7 @@ MESSAGE_HANDLER( msg, func )
 > [!NOTE]
 >  Sempre começam com um mapa de mensagem [BEGIN_MSG_MAP](#begin_msg_map). Em seguida, você pode declarar mapas de mensagem alternativa subsequentes com [ALT_MSG_MAP](#alt_msg_map). O [END_MSG_MAP](#end_msg_map) macro marca o fim do mapa de mensagens. Cada mapa de mensagem deve ter exatamente uma instância de BEGIN_MSG_MAP e END_MSG_MAP.  
   
- Além de MESSAGE_HANDLER, você pode usar [COMMAND_HANDLER](#command_handler) e [NOTIFY_HANDLER](#notify_handler) mapear [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) e [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) mensagens , respectivamente.  
+ Além de MESSAGE_HANDLER, você pode usar [COMMAND_HANDLER](#command_handler) e [NOTIFY_HANDLER](#notify_handler) mapear [WM_COMMAND](/windows/desktop/menurc/wm-command) e [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) mensagens , respectivamente.  
   
  Para obter mais informações sobre como usar mapas de mensagem em ATL, consulte [mapas de mensagem](../../atl/message-maps-atl.md).  
   
@@ -584,7 +584,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
  **Cabeçalho:** atlwin   
   
 ##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER  
- Semelhante ao [NOTIFY_HANDLER](#notify_handler), mas mapeia uma [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) mensagem com base apenas no código de notificação.  
+ Semelhante ao [NOTIFY_HANDLER](#notify_handler), mas mapeia uma [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) mensagem com base apenas no código de notificação.  
   
 ```
 NOTIFY_CODE_HANDLER(cd, func)
@@ -618,7 +618,7 @@ NOTIFY_HANDLER( id, cd, func )
  [in] O nome da função de manipulador de mensagens.  
   
 ### <a name="remarks"></a>Comentários  
- NOTIFY_HANDLER mapeia uma [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) mensagem para a função de manipulador especificado, com base no código de notificação e o identificador de controle.  
+ NOTIFY_HANDLER mapeia uma [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) mensagem para a função de manipulador especificado, com base no código de notificação e o identificador de controle.  
   
  Qualquer função especificada em uma macro NOTIFY_HANDLER deve ser definida da seguinte maneira:  
   
@@ -640,7 +640,7 @@ NOTIFY_HANDLER( id, cd, func )
  **Cabeçalho:** atlwin   
   
 ##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER  
- Semelhante ao [NOTIFY_HANDLER](#notify_handler), mas mapeia uma [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) mensagem com base apenas no identificador do controle.  
+ Semelhante ao [NOTIFY_HANDLER](#notify_handler), mas mapeia uma [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) mensagem com base apenas no identificador do controle.  
   
 ```
 NOTIFY_ID_HANDLER( id, func )
@@ -657,7 +657,7 @@ NOTIFY_ID_HANDLER( id, func )
  **Cabeçalho:** atlwin   
   
 ##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER  
- Semelhante ao [NOTIFY_RANGE_HANDLER](#notify_range_handler), mas mapeia [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) mensagens com um código de notificação específica de uma variedade de controles para uma função de manipulador único.  
+ Semelhante ao [NOTIFY_RANGE_HANDLER](#notify_range_handler), mas mapeia [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) mensagens com um código de notificação específica de uma variedade de controles para uma função de manipulador único.  
   
 ```
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -683,7 +683,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
  **Cabeçalho:** atlwin   
   
 ##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER  
- Semelhante ao [NOTIFY_HANDLER](#notify_handler), mas mapeia [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) mensagens de uma variedade de controles para uma função de manipulador único.  
+ Semelhante ao [NOTIFY_HANDLER](#notify_handler), mas mapeia [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) mensagens de uma variedade de controles para uma função de manipulador único.  
   
 ```
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )

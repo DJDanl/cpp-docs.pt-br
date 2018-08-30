@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a2d8668f0ed5d58ce3b8028fb02d572bb04f8bc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c463dbcb68b5a4b875dbb109eedc07a3b4b27c86
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613568"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203022"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Classe Platform::Collections::UnorderedMapView
 Representa uma exibição somente leitura em um *mapa*, que é uma coleção de pares chave-valor.  
@@ -71,7 +71,7 @@ ref class UnorderedMapView sealed;
  **Namespace:** Platform::Collections  
 
 ## <a name="first"></a>  Método UnorderedMapView::First
-Retorna um iterador que especifica o primeiro [ikeyvaluepair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento no mapa não ordenado.  
+Retorna um iterador que especifica o primeiro [ikeyvaluepair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento no mapa não ordenado.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -126,7 +126,7 @@ V Lookup(K key);
 
 
 ## <a name="size"></a>  Método UnorderedMapView::Size
-Retorna o número de [ikeyvaluepair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos em UnorderedMapView.  
+Retorna o número de [ikeyvaluepair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos em UnorderedMapView.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -221,7 +221,7 @@ UnorderedMapView(
  O typename de UnorderedMapView.  
   
  `H`  
- Um objeto de função que gera um valor de hash para uma chave. O padrão é [std:: hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104) para os tipos que `std::hash` dá suporte.  
+ Um objeto de função que gera um valor de hash para uma chave. O padrão é [std:: hash\<K >](https://msdn.microsoft.com/54f67435-af9d-4217-a29d-fa4d2491a104) para os tipos que `std::hash` dá suporte.  
   
  `P`  
  Um tipo que fornece um objeto de função que pode comparar duas chaves para determinar sua igualdade. O padrão é [std:: equal_to\<K >](../standard-library/equal-to-struct.md).  

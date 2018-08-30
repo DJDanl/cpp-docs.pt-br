@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a19e58e68b7f03269c002072859c2410a38c397b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b910ce2416dc345e2a36c9858f260ef5b42c2cc8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597612"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203316"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -36,7 +36,7 @@ Quando usado no cabeçalho da interface, permite que você use o compilador MIDL
 
 ## <a name="remarks"></a>Comentários
 
-O **local** atributo C++ tem a mesma funcionalidade que o [local](http://msdn.microsoft.com/library/windows/desktop/aa367071) atributo MIDL.
+O **local** atributo C++ tem a mesma funcionalidade que o [local](/windows/desktop/Midl/local) atributo MIDL.
 
 ## <a name="example"></a>Exemplo
 

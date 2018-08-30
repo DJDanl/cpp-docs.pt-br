@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e9d212e74f77d21efa1b2ed030f8a1446d111fc
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 74f1f0f88828b5d6355c692aa8eaeecd5869bf57
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882943"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202928"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Suporte a Unicode e Multibyte Character Set (MBCS)
 
@@ -67,9 +67,9 @@ Programação de Unicode completa do seu aplicativo, você também deve:
 
    - Usar TCHAR onde você usaria **char**.
 
-   - Usar LPTSTR onde você usaria **char\***.
+   - Usar LPTSTR onde você usaria **char**<strong>\*</strong>.
 
-   - Usar LPCTSTR onde você usaria **const char\***. `CString` fornece o operador LPCTSTR para converter entre `CString` e LPCTSTR.
+   - Usar LPCTSTR onde você usaria **const char**<strong>\*</strong>. `CString` fornece o operador LPCTSTR para converter entre `CString` e LPCTSTR.
 
 `CString` também fornece reconhecimento Unicode construtores, operadores de atribuição e operadores de comparação.
 
@@ -101,7 +101,7 @@ Em DBCS, uma determinada cadeia de caracteres pode conter todos os caracteres de
 
 Mapeamentos de função de texto genérico para todas as rotinas de manipulação de cadeia de caracteres de tempo de execução são discutidos [referência de biblioteca de tempo de execução C](../c-runtime-library/c-run-time-library-reference.md). Para obter uma lista, consulte [internacionalização](../c-runtime-library/internationalization.md).
 
-Da mesma forma, `CString` métodos são implementados usando mapeamentos de tipo de dados genéricos. Para habilitar o MBCS e Unicode, o MFC usa TCHAR para **char** ou `wchar_t`, LPTSTR para **char\***  ou `wchar_t*`e LPCTSTR para **char const\***  ou `const wchar_t*`. Eles garantem os mapeamentos corretos para MBCS ou Unicode.
+Da mesma forma, `CString` métodos são implementados usando mapeamentos de tipo de dados genéricos. Para habilitar o MBCS e Unicode, o MFC usa TCHAR para **char** ou `wchar_t`, LPTSTR para **char** <strong>\*</strong> ou `wchar_t*`e LPCTSTR para **const char** <strong>\*</strong> ou `const wchar_t*`. Eles garantem os mapeamentos corretos para MBCS ou Unicode.
 
 ## <a name="see-also"></a>Consulte também
 

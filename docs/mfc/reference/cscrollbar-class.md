@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c37e8cb4d69e93fd0842aa7cb2149331f502eae
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 03588a0c41633f632c99c8c178d6b69b39b00e48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850037"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199195"
 ---
 # <a name="cscrollbar-class"></a>Classe CScrollBar
 Fornece a funcionalidade de um controle de barra de rolagem do Windows.  
@@ -195,13 +195,13 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
   
 ### <a name="parameters"></a>Parâmetros  
  *pScrollInfo*  
- Um ponteiro para o [SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535) estrutura.  
+ Um ponteiro para o [SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo) estrutura.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna verdadeiro em caso de êxito, FALSE em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função membro emula a funcionalidade dos [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) da mensagem, conforme descrito no SDK do Windows.  
+ Essa função membro emula a funcionalidade dos [SBM_SCROLLBARINFO](/windows/desktop/Controls/sbm-getscrollbarinfo) da mensagem, conforme descrito no SDK do Windows.  
   
 ##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
  Recupera as informações que o `SCROLLINFO` estrutura mantém sobre uma barra de rolagem.  
@@ -214,7 +214,7 @@ BOOL GetScrollInfo(
   
 ### <a name="parameters"></a>Parâmetros  
  *lpScrollInfo*  
- Um ponteiro para um [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) estrutura. Consulte o SDK do Windows para obter mais informações sobre essa estrutura.  
+ Um ponteiro para um [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) estrutura. Consulte o SDK do Windows para obter mais informações sobre essa estrutura.  
   
  *nMask*  
  Especifica os parâmetros da barra de rolagem para recuperar. Uso normal, SIF_ALL, especifica uma combinação de SIF_PAGE, SIF_POS, SIF_TRACKPOS e SIF_RANGE. Consulte `SCROLLINFO` para obter mais informações sobre os valores de nMask.  
@@ -225,7 +225,7 @@ BOOL GetScrollInfo(
 ### <a name="remarks"></a>Comentários  
  `GetScrollInfo` permite que aplicativos usem as posições de rolagem de 32 bits.  
   
- O [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) estrutura contém informações sobre uma barra, incluindo o mínimo e máximo para a posição da caixa de rolagem (thumb), o tamanho da página e posições de rolagem de rolagem. Consulte o `SCROLLINFO` tópico de estrutura no SDK do Windows para obter mais informações sobre como alterar os padrões de estrutura.  
+ O [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) estrutura contém informações sobre uma barra, incluindo o mínimo e máximo para a posição da caixa de rolagem (thumb), o tamanho da página e posições de rolagem de rolagem. Consulte o `SCROLLINFO` tópico de estrutura no SDK do Windows para obter mais informações sobre como alterar os padrões de estrutura.  
   
  O Windows MFC manipuladores que indicam a posição da barra de rolagem, da mensagem [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) e [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), forneça somente 16 bits de dados de posição. `GetScrollInfo` e `SetScrollInfo` fornecem 32 bits de barra de dados da posição de rolagem. Portanto, um aplicativo pode chamar `GetScrollInfo` durante o processamento de uma `CWnd::OnHScroll` ou `CWnd::OnVScroll` para obter dados de posição de barra de rolagem de 32 bits.  
   
@@ -294,7 +294,7 @@ BOOL SetScrollInfo(
   
 ### <a name="parameters"></a>Parâmetros  
  *lpScrollInfo*  
- Um ponteiro para um [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) estrutura.  
+ Um ponteiro para um [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) estrutura.  
   
  *bRedraw*  
  Especifica se a barra de rolagem deve ser redesenhada para refletir as novas informações. Se *bRedraw* for TRUE, a barra de rolagem é redesenhada. Se for FALSE, não é redesenhado. A barra de rolagem é redesenhada por padrão.  
@@ -305,7 +305,7 @@ BOOL SetScrollInfo(
 ### <a name="remarks"></a>Comentários  
  Você deve fornecer os valores necessários para o `SCROLLINFO` estruturar os parâmetros, incluindo os valores de sinalizador.  
   
- O `SCROLLINFO` estrutura contém informações sobre uma barra, incluindo o mínimo e máximo para a posição da caixa de rolagem (thumb), o tamanho da página e posições de rolagem de rolagem. Consulte a [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) tópico de estrutura no SDK do Windows para obter mais informações sobre como alterar os padrões de estrutura.  
+ O `SCROLLINFO` estrutura contém informações sobre uma barra, incluindo o mínimo e máximo para a posição da caixa de rolagem (thumb), o tamanho da página e posições de rolagem de rolagem. Consulte a [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) tópico de estrutura no SDK do Windows para obter mais informações sobre como alterar os padrões de estrutura.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  

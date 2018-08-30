@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7aad2093ecc9511c3b15f68963b496130bf3c3f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 62ed04d8e54e4bf107ae12b9a4165b663c9d10d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882105"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203865"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Classe CComCachedTearOffObject
-Essa classe implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para uma interface destacáveis.  
+Essa classe implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) para uma interface destacáveis.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -76,7 +76,7 @@ public CComObjectRootEx<contained
 |[CComCachedTearOffObject::m_contained](#m_contained)|Um `CComContainedObject` objeto derivado da sua classe destacáveis (a classe `contained`).|  
   
 ## <a name="remarks"></a>Comentários  
- `CComCachedTearOffObject` implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para uma interface destacáveis. Essa classe difere `CComTearOffObject` em que `CComCachedTearOffObject` tem seu próprio `IUnknown`separado do objeto proprietário `IUnknown` (o proprietário é o objeto para o qual o destacável está sendo criado). `CComCachedTearOffObject` mantém seu próprio contagem de referência em seu `IUnknown` e excluir a próprio quando sua contagem de referência é zero. No entanto, se você consultar para qualquer um dos seus destacáveis interfaces, a contagem de referência de objeto do proprietário `IUnknown` será incrementado.  
+ `CComCachedTearOffObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) para uma interface destacáveis. Essa classe difere `CComTearOffObject` em que `CComCachedTearOffObject` tem seu próprio `IUnknown`separado do objeto proprietário `IUnknown` (o proprietário é o objeto para o qual o destacável está sendo criado). `CComCachedTearOffObject` mantém seu próprio contagem de referência em seu `IUnknown` e excluir a próprio quando sua contagem de referência é zero. No entanto, se você consultar para qualquer um dos seus destacáveis interfaces, a contagem de referência de objeto do proprietário `IUnknown` será incrementado.  
   
  Se o `CComCachedTearOffObject` implementar o destacáveis já é instanciado e a interface destacável é consultada para novamente, o mesmo objeto `CComCachedTearOffObject` objeto é reutilizado. Por outro lado, se uma interface destacáveis implementada por um `CComTearOffObject` será novamente consultada para, por meio do objeto proprietário, outro `CComTearOffObject` será instanciada.  
   

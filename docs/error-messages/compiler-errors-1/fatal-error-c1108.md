@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de8b00f61a70e7c40f442173acace2e9f186d1d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84f301669e1aeead5a8c92f59fbaaaf87167fef4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225166"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203918"
 ---
 # <a name="fatal-error-c1108"></a>Erro fatal C1108
-não é possível localizar a DLL: 'dll'  
-  
- A DLL especificada (***dll***) não pôde ser encontrado no caminho.  
-  
- Para resolver esse erro, reinstale o Visual C++ ou copiar o arquivo. dll apropriados do CD de instalação para o computador.
+
+> não é possível localizar a DLL: '*nome da dll*'
+
+A DLL especificada (*nome da dll*) não pôde ser encontrado no caminho.
+
+Para resolver esse erro, reinstale o Visual C++ ou copiar o arquivo. dll apropriado da instalação para o computador.

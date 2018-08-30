@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75742b466b284a24d6771971a831dfc91303c834
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882426"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203710"
 ---
 # <a name="composite-control-global-functions"></a>Funções globais de controle de composição
 Essas funções fornecem suporte para a criação de caixas de diálogo e para criação, hospedagem e licenciando controles ActiveX.  
@@ -77,13 +77,13 @@ ATLAPI_(int) AtlAxDialogBox(
  [in] Identifica uma instância do módulo cujo arquivo executável contém o modelo de caixa de diálogo.  
   
  *lpTemplateName*  
- [in] Identifica o modelo de caixa de diálogo. Esse parâmetro é o ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do modelo de caixa de diálogo ou um valor inteiro que especifica o identificador de recurso do modelo de caixa de diálogo. Se o parâmetro especifica um identificador de recurso, sua palavra de ordem superior deve ser zero e a palavra de ordem inferior deve conter o identificador. Você pode usar o [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) macro para criar esse valor.  
+ [in] Identifica o modelo de caixa de diálogo. Esse parâmetro é o ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do modelo de caixa de diálogo ou um valor inteiro que especifica o identificador de recurso do modelo de caixa de diálogo. Se o parâmetro especifica um identificador de recurso, sua palavra de ordem superior deve ser zero e a palavra de ordem inferior deve conter o identificador. Você pode usar o [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) macro para criar esse valor.  
   
  *hWndParent*  
  [in] Identifica a janela que possui a caixa de diálogo.  
   
  *lpDialogProc*  
- [in] Aponta para o procedimento de caixa de diálogo. Para obter mais informações sobre o procedimento de caixa de diálogo, consulte [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
+ [in] Aponta para o procedimento de caixa de diálogo. Para obter mais informações sobre o procedimento de caixa de diálogo, consulte [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).  
   
  *dwInitParam*  
  [in] Especifica o valor para passar para a caixa de diálogo do *lParam* parâmetro da mensagem WM_INITDIALOG.  
@@ -99,9 +99,9 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- Para obter mais informações sobre como editar scripts de recurso, consulte [como: abrir um arquivo de Script de recurso no formato de texto](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Para obter mais informações sobre instruções de definição de recurso de controle, consulte [parâmetros de controle comuns](http://msdn.microsoft.com/library/windows/desktop/aa380902) no SDK do Windows *: SDK Tools*.  
+ Para obter mais informações sobre como editar scripts de recurso, consulte [como: abrir um arquivo de Script de recurso no formato de texto](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Para obter mais informações sobre instruções de definição de recurso de controle, consulte [parâmetros de controle comuns](/windows/desktop/menurc/common-control-parameters) no SDK do Windows *: SDK Tools*.  
   
- Para obter mais informações sobre caixas de diálogo em geral, consulte [DialogBox](http://msdn.microsoft.com/library/windows/desktop/ms645452) e [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) no SDK do Windows.  
+ Para obter mais informações sobre caixas de diálogo em geral, consulte [DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa) e [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) no SDK do Windows.  
   
 ##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog  
  Cria uma caixa de diálogo sem modo a partir de um modelo de caixa de diálogo fornecido pelo usuário.  
@@ -120,13 +120,13 @@ ATLAPI_(HWND) AtlAxCreateDialog(
  [in] Identifica uma instância do módulo cujo arquivo executável contém o modelo de caixa de diálogo.  
   
  *lpTemplateName*  
- [in] Identifica o modelo de caixa de diálogo. Esse parâmetro é o ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do modelo de caixa de diálogo ou um valor inteiro que especifica o identificador de recurso do modelo de caixa de diálogo. Se o parâmetro especifica um identificador de recurso, sua palavra de ordem superior deve ser zero e a palavra de ordem inferior deve conter o identificador. Você pode usar o [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) macro para criar esse valor.  
+ [in] Identifica o modelo de caixa de diálogo. Esse parâmetro é o ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do modelo de caixa de diálogo ou um valor inteiro que especifica o identificador de recurso do modelo de caixa de diálogo. Se o parâmetro especifica um identificador de recurso, sua palavra de ordem superior deve ser zero e a palavra de ordem inferior deve conter o identificador. Você pode usar o [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) macro para criar esse valor.  
   
  *hWndParent*  
  [in] Identifica a janela que possui a caixa de diálogo.  
   
  *lpDialogProc*  
- [in] Aponta para o procedimento de caixa de diálogo. Para obter mais informações sobre o procedimento de caixa de diálogo, consulte [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
+ [in] Aponta para o procedimento de caixa de diálogo. Para obter mais informações sobre o procedimento de caixa de diálogo, consulte [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).  
   
  *dwInitParam*  
  [in] Especifica o valor para passar para a caixa de diálogo do *lParam* parâmetro da mensagem WM_INITDIALOG.  
@@ -137,7 +137,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 ### <a name="remarks"></a>Comentários  
  A caixa de diálogo resultante pode conter controles ActiveX.  
   
- Ver [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) e [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) no Windows SDK.  
+ Ver [CreateDialog](/windows/desktop/api/winuser/nf-winuser-createdialoga) e [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) no Windows SDK.  
   
 ##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl  
  Cria um controle ActiveX, inicializa-o e hospeda-o na janela especificada.  
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  Diferente de zero se a inicialização do controle de código de hospedagem foi bem-sucedida; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função deve ser chamada antes de usar o controle ATL que hospeda a API. Após uma chamada para essa função, o **"AtlAxWin"** classe de janela pode ser usado em chamadas para [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) ou [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680), conforme descrito no SDK do Windows.  
+ Essa função deve ser chamada antes de usar o controle ATL que hospeda a API. Após uma chamada para essa função, o **"AtlAxWin"** classe de janela pode ser usado em chamadas para [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) ou [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680), conforme descrito no SDK do Windows.  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  Essa função cancela o controle do ATL que hospeda o código Cancelando o registro a **"AtlAxWin80"** e **"AtlAxWinLic80"** classes de janela.  
@@ -455,7 +455,7 @@ inline BOOL AtlAxWinTerm();
  Sempre retorna TRUE.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função simplesmente chama [UnregisterClass](http://msdn.microsoft.com/library/windows/desktop/ms644899) conforme descrito no SDK do Windows.  
+ Essa função simplesmente chama [UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) conforme descrito no SDK do Windows.  
   
  Chame essa função para limpar após todas as janelas existentes de host tenham sido destruídas se você chamasse [AtlAxWinInit](#atlaxwininit) e você não precisa criar host do windows. Se você não chamar essa função, a classe de janela será cancelada automaticamente quando o processo termina.  
   

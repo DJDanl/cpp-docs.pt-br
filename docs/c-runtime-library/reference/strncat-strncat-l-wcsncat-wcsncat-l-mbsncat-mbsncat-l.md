@@ -67,19 +67,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d80ca39f4bb12fa28190c499d93ad4152831b4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e689f29433712f2f8a2adc1730c803ab6c55ba82
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417581"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202862"
 ---
 # <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
 Acrescenta caracteres a uma cadeia de caracteres. Versões mais seguras dessas funções estão disponíveis, consulte [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md).
 
 > [!IMPORTANT]
-> **mbsncat** e **mbsncat_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsncat** e **mbsncat_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -152,12 +152,12 @@ Retorna um ponteiro para a cadeia de caracteres de destino. Nenhum valor retorna
 
 ## <a name="remarks"></a>Comentários
 
-O **strncat** função acrescenta, no máximo, o primeiro *contagem* caracteres de *strSource* para *strDest*. O caractere inicial do *strSource* substitui o caractere null de terminação de *strDest*. Se um caractere null aparece na *strSource* antes de *contagem* caracteres são anexados, **strncat** anexa todos os caracteres de *strSource*, até o caractere nulo. Se *contagem* é maior que o comprimento de *strSource*, o comprimento de *strSource* é usado no lugar de *contagem*. Em todos os casos, a cadeia de caracteres resultante é encerrada com um caractere nulo. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
+O **strncat** função acrescenta, no máximo, os primeiros *contagem* caracteres da *strSource* para *strDest*. O caractere inicial de *strSource* substitui o caractere nulo de terminação de *strDest*. Se aparecer um caractere nulo em *strSource* antes de *contagem* caracteres serem acrescentados, **strncat** acrescenta todos os caracteres da *strSource*, até o caractere nulo. Se *contagem* é maior que o comprimento de *strSource*, o comprimento da *strSource* é usado no lugar de *contagem*. Em todos os casos, a cadeia de caracteres resultante é encerrada com um caractere nulo. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
 > [!IMPORTANT]
-> **strncat** não verifica se há espaço suficiente na *strDest*; portanto, é uma causa potencial de saturações de buffer. Tenha em mente que *contagem* limita o número de caracteres adicionadas; não é um limite no tamanho do *strDest*. Consulte o exemplo abaixo. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).
+> **strncat** verifica se há espaço suficiente no *strDest*; portanto, é uma causa potencial de sobrecargas de buffer. Tenha em mente que *contagem* limita o número de caracteres acrescentado; não é um limite no tamanho da *strDest*. Consulte o exemplo abaixo. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
-**wcsncat** e **mbsncat** são versões de caracteres largos e caracteres multibyte **strncat**. O valor de retorno e argumentos de cadeia de caracteres **wcsncat** são caracteres largos cadeias de caracteres; desses **mbsncat** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+**wcsncat** e **mbsncat** são versões de caractere largo e caracteres multibyte **strncat**. Os argumentos de cadeia de caracteres e o valor de retorno **wcsncat** são largos cadeias de caracteres; aqueles de **mbsncat** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
@@ -171,7 +171,7 @@ No C++, essas funções têm sobrecargas de modelo. Para obter mais informaçõe
 |**tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l** e **_wcsncat_l** não ter nenhuma dependência de localidade e não deve ser chamado diretamente. Eles são fornecidos para uso interno por **tcsncat_l**.
+> **strncat_l** e **wcsncat_l** não têm nenhuma dependência de localidade e não se destinam a serem chamadas diretamente. Eles são fornecidos para uso interno pela **tcsncat_l**.
 
 ## <a name="requirements"></a>Requisitos
 

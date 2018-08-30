@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66c85999e70e505176700ecaac69b75048ce2422
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a9d65f77126ceb4268d41610c6d5fe3a07968d02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595236"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200562"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -49,7 +49,7 @@ Um parâmetro para indicar quando o objeto COM pode ser agregado:
 
 ## <a name="remarks"></a>Comentários
 
-O **agregável** atributo C++ tem a mesma funcionalidade que o [agregável](http://msdn.microsoft.com/library/windows/desktop/aa366721) atributo MIDL. Isso significa que o compilador passará a **agregável** por meio do atributo para o arquivo. idl gerado.
+O **agregável** atributo C++ tem a mesma funcionalidade que o [agregável](/windows/desktop/Midl/aggregatable) atributo MIDL. Isso significa que o compilador passará a **agregável** por meio do atributo para o arquivo. idl gerado.
 
 Este atributo exige que o [coclass](../windows/coclass.md), [progid](../windows/progid.md), ou [vi_progid](../windows/vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicadas ao mesmo elemento. Se qualquer atributo único for usado, os outros dois são aplicados automaticamente. Por exemplo, se `progid` for aplicada, `vi_progid` e `coclass` também são aplicadas.
 
@@ -97,4 +97,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 [Atributos de IDL](../windows/idl-attributes.md)  
 [Atributos de classe](../windows/class-attributes.md)  
 [Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Agregação](http://msdn.microsoft.com/library/windows/desktop/ms686558)  
+[Agregação](/windows/desktop/com/aggregation)  

@@ -1,7 +1,7 @@
 ---
-title: Erro de Build prj0021 no projeto | Microsoft Docs
+title: Erro de Build prj0021 do projeto | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1695a9bf75fe5b3f0fa05b42245067f98c5e1655
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6697fbfd23dbf07a66292ca7d15ca8ef3b064cd9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324451"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203333"
 ---
 # <a name="project-build-error-prj0021"></a>Erro de Build PRJ0021 no Projeto
-Ferramenta 'ferramenta' propriedade 'property' contém o nome de arquivo inválido.  
-  
- O nome do arquivo especificado na propriedade, ***propriedade***, para a ferramenta ***ferramenta***, era inválido.  
-  
- Você pode ter usado uma macro desconhecida ou inválida.  
-  
- Consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md) para obter informações sobre como acessar as propriedades do projeto.
+
+> Ferramenta '*ferramenta*', propriedade '*propriedade*' contém o nome de arquivo inválido.
+
+O nome do arquivo especificado na propriedade *propriedade* para a ferramenta *ferramenta* era inválido.
+
+Você pode ter usado uma macro desconhecida ou inválida.
+
+Ver [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md) para obter informações sobre como acessar as propriedades do projeto.

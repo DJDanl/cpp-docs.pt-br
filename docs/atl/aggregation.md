@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2457d6e94677c43985cadf8ca49a176a82566b6a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 83d19e53b50791255b87cfa73a51761e2cdf5e1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37847863"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196139"
 ---
 # <a name="aggregation"></a>Agregação
 Há vezes quando o implementador de um objeto gostaria de aproveitar os serviços oferecidos pelo predefinidas, de outro objeto. Além disso, ele gostaria que este segundo objeto a ser exibido como uma parte natural do primeiro. COM atinge ambas essas metas por meio de agregação e confinamento.  
@@ -31,5 +31,5 @@ Há vezes quando o implementador de um objeto gostaria de aproveitar os serviço
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução a COM](../atl/introduction-to-com.md)   
- [Reutilizando objetos](http://msdn.microsoft.com/library/windows/desktop/ms678443)
+ [Reutilizando objetos](/windows/desktop/com/reusing-objects)
 

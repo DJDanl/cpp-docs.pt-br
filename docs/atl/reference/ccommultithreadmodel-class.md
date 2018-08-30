@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb6a75fe2d973b0330c66faaae6c4daede224c5e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 25c9e21aa4b0f09db83632973d3a5046e3e2aa4a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880499"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206114"
 ---
 # <a name="ccommultithreadmodel-class"></a>Classe CComMultiThreadModel
 `CComMultiThreadModel` fornece métodos thread-safe para incrementar e diminuir o valor de uma variável.  
@@ -158,7 +158,7 @@ typedef CComCriticalSection CriticalSection;
  Ver [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).  
   
 ##  <a name="decrement"></a>  CComMultiThreadModel::Decrement  
- A função estática chama a função Win32 [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580), que diminui o valor da variável apontado por *p*.  
+ A função estática chama a função Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement), que diminui o valor da variável apontado por *p*.  
   
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw ();
@@ -175,7 +175,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
  `InterlockedDecrement` impede que mais de um thread simultaneamente usando essa variável.  
   
 ##  <a name="increment"></a>  CComMultiThreadModel::Increment  
- A função estática chama a função Win32 [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614), que incrementa o valor da variável apontado por *p*.  
+ A função estática chama a função Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement), que incrementa o valor da variável apontado por *p*.  
   
 ```
 static ULONG WINAPI Increment(LPLONG p) throw ();

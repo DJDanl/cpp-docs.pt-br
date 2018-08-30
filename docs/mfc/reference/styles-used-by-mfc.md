@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318951b5216513c20cdb21ac4a4fcfff9c3e0ac7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540538"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199915"
 ---
 # <a name="styles-used-by-mfc"></a>Estilos usados pelo MFC  
   
@@ -308,7 +308,7 @@ Os seguintes estilos de caixa de combinação estão disponíveis no MFC. Para o
   
 ## <a name="edit-styles"></a>  Editar estilos  
   
-Editar estilos [classe CEdit](../../mfc/reference/cedit-class.md) objetos. Especificar uma combinação de estilos a *dwStyle* parâmetro do [CEdit::Create](../../mfc/reference/cedit-class.md#create). Para obter mais informações sobre estilos de controle de edição no Windows, consulte [Editar estilos de controle (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+Editar estilos [classe CEdit](../../mfc/reference/cedit-class.md) objetos. Especificar uma combinação de estilos a *dwStyle* parâmetro do [CEdit::Create](../../mfc/reference/cedit-class.md#create). Para obter mais informações sobre estilos de controle de edição no Windows, consulte [Editar estilos de controle (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464).  
   
 |Estilo|Descrição|  
 |-----------|-----------------|  
@@ -403,7 +403,7 @@ Os estilos de caixa de mensagem a seguir estão disponíveis.
   
 ## <a name="scroll-bar-styles"></a> Estilos de barra de rolagem  
   
-Estilos de barra de rolagem se aplicam a [classe CScrollBar](../../mfc/reference/cscrollbar-class.md) objetos. Especificar uma combinação de estilos a *dwStyle* parâmetro do [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Para obter mais informações sobre a rolagem da barra estilos de controle no Windows, consulte [estilos de controle de barra de rolagem (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533).  
+Estilos de barra de rolagem se aplicam a [classe CScrollBar](../../mfc/reference/cscrollbar-class.md) objetos. Especificar uma combinação de estilos a *dwStyle* parâmetro do [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Para obter mais informações sobre a rolagem da barra estilos de controle no Windows, consulte [estilos de controle de barra de rolagem (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533).  
   
 |Estilo|Descrição|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ Estilos de barra de rolagem se aplicam a [classe CScrollBar](../../mfc/reference
   
 ## <a name="static-styles"></a> Estilos estáticos  
   
-Estilos estáticos se aplicam a [classe CStatic](../../mfc/reference/cstatic-class.md) objetos. Especificar uma combinação de estilos a *dwStyle* parâmetro do [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Para obter mais informações sobre estilos de controle estático no Windows, consulte [estilos de controle estático (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773).  
+Estilos estáticos se aplicam a [classe CStatic](../../mfc/reference/cstatic-class.md) objetos. Especificar uma combinação de estilos a *dwStyle* parâmetro do [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Para obter mais informações sobre estilos de controle estático no Windows, consulte [estilos de controle estático (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773).  
   
 |Estilo|Descrição|  
 |-----------|-----------------|  
@@ -498,7 +498,7 @@ Estilos de janela estendidos se aplicam a [classe CWnd](../../mfc/reference/cwnd
 |WS_EX_CONTEXTHELP|Inclui um ponto de interrogação na barra de título da janela. Quando o usuário clica no ponto de interrogação, o cursor muda para um ponto de interrogação com um ponteiro. Se o usuário clica em uma janela filho, a filha receberá uma mensagem WM_HELP.|  
 |WS_EX_CONTROLPARENT|Permite que o usuário navegue entre as janelas filho da janela usando a tecla TAB.|  
 |WS_EX_DLGMODALFRAME|Designa uma janela com uma borda dupla que (opcionalmente) pode ser criada com um título de barras ao especificar o sinalizador de estilo WS_CAPTION na *dwStyle* parâmetro.|  
-|WS_EX_LAYERED|A janela é uma [janela em camadas](http://msdn.microsoft.com/library/ms632599.aspx#layered). Esse estilo não pode ser usado se a janela tem um [estilo da classe](http://msdn.microsoft.com/library/ms633574.aspx#class_styles) de CS_OWNDC ou CS_CLASSDC. No entanto, o Microsoft Windows 8 oferece suporte o estilo WS_EX_LAYERED para janelas filho, em que as versões anteriores do Windows dão suporte a ele somente para janelas de nível superior.|  
+|WS_EX_LAYERED|A janela é uma [janela em camadas](/windows/desktop/winmsg/window-features). Esse estilo não pode ser usado se a janela tem um [estilo da classe](/windows/desktop/winmsg/about-window-classes) de CS_OWNDC ou CS_CLASSDC. No entanto, o Microsoft Windows 8 oferece suporte o estilo WS_EX_LAYERED para janelas filho, em que as versões anteriores do Windows dão suporte a ele somente para janelas de nível superior.|  
 |WS_EX_LEFT|Fornece propriedades genéricas alinhado à esquerda da janela. Esse é o padrão.|  
 |WS_EX_LEFTSCROLLBAR|Coloca uma barra de rolagem vertical à esquerda da área de cliente.|  
 |WS_EX_LTRREADING|Exibe o texto da janela esquerda para direita propriedades de ordem de leitura. Esse é o padrão.|  
@@ -524,14 +524,14 @@ Estilos de janela estendidos se aplicam a [classe CWnd](../../mfc/reference/cwnd
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)  
+[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
+[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
 [Estilos de botão (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
 [Estilos de caixa de combinação (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[Editar estilos de controle (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)  
+[Editar estilos de controle (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
 [Listar estilos de caixa (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
 [função MessageBox (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[estilos de controle de barra de rolagem (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[Estilos de controle estático (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[estilos de controle de barra de rolagem (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
+[Estilos de controle estático (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
 [Estilos de janela (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
 [Estilos de janela estendidos (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  

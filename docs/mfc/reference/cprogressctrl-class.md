@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42538800"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196184"
 ---
 # <a name="cprogressctrl-class"></a>Classe CProgressCtrl
 Fornece a funcionalidade do controle de barra de progresso comuns do Windows.  
@@ -143,14 +143,14 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parâmetros  
  *dwStyle*  
- Especifica o estilo do controle de barra de progresso. Aplicar qualquer combinação de janela stylesdescribed na [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) no SDK do Windows, além de barra estilos de controle para o controle de progresso seguinte:  
+ Especifica o estilo do controle de barra de progresso. Aplicar qualquer combinação de janela stylesdescribed na [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) no SDK do Windows, além de barra estilos de controle para o controle de progresso seguinte:  
   
 - PBS_VERTICAL exibe informações de andamento verticalmente, de cima para baixo. Sem esse sinalizador, o controle de barra de progresso exibe horizontalmente, da esquerda para a direita.  
   
 - Gradual de PBS_SMOOTH exibe, suave de preenchimento no controle de barra de progresso. Sem esse sinalizador, o controle preencherá com blocos.  
   
  *Rect*  
- Especifica o tamanho e a posição do controle de barra de progresso. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura. Como o controle deve ser uma janela filho, as coordenadas especificadas são em relação à área do cliente do *pParentWnd*.  
+ Especifica o tamanho e a posição do controle de barra de progresso. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura. Como o controle deve ser uma janela filho, as coordenadas especificadas são em relação à área do cliente do *pParentWnd*.  
   
  *pParentWnd*  
  Especifica o barra de progresso da janela do pai do controle, geralmente um `CDialog`. Ele não deve ser NULL.  
@@ -181,13 +181,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parâmetros  
  *dwExStyle*  
- Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o *dwExStyle* parâmetro para [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
+ Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o *dwExStyle* parâmetro para [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
   
  *dwStyle*  
- Especifica o estilo do controle de barra de progresso. Aplicar qualquer combinação de estilos de janela descrito em [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) no SDK do Windows.  
+ Especifica o estilo do controle de barra de progresso. Aplicar qualquer combinação de estilos de janela descrito em [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) no SDK do Windows.  
   
  *Rect*  
- Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.  
+ Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.  
   
  *pParentWnd*  
  Um ponteiro para a janela que é o pai do controle.  
@@ -209,10 +209,10 @@ COLORREF GetBarColor() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- A cor da barra de progresso atual, representado como uma [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor ou CLR_DEFAULT se a cor de barra do indicador de progresso é a cor padrão.  
+ A cor da barra de progresso atual, representado como uma [COLORREF](/windows/desktop/gdi/colorref) valor ou CLR_DEFAULT se a cor de barra do indicador de progresso é a cor padrão.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método envia o [PBM_GETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760826) mensagem, que é descrita no SDK do Windows.  
+ Esse método envia o [PBM_GETBARCOLOR](/windows/desktop/Controls/pbm-getbarcolor) mensagem, que é descrita no SDK do Windows.  
   
 ##  <a name="getbkcolor"></a>  CProgressCtrl::GetBkColor  
  Obtém a cor do plano de fundo da barra de progresso atual.  
@@ -222,10 +222,10 @@ COLORREF GetBkColor() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- A cor do plano de fundo da barra de progresso atual, representado como uma [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor.  
+ A cor do plano de fundo da barra de progresso atual, representado como uma [COLORREF](/windows/desktop/gdi/colorref) valor.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método envia o [PBM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760828) mensagem, que é descrita no SDK do Windows.  
+ Esse método envia o [PBM_GETBKCOLOR](/windows/desktop/Controls/pbm-getbkcolor) mensagem, que é descrita no SDK do Windows.  
   
 ##  <a name="getpos"></a>  CProgressCtrl::GetPos  
  Recupera a posição atual da barra de progresso.  
@@ -282,7 +282,7 @@ int GetState() const;
 |PBST_PAUSED|Paused|  
   
 ### <a name="remarks"></a>Comentários  
- Esse método envia o [PBM_GETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760834) mensagem, que é descrita no SDK do Windows.  
+ Esse método envia o [PBM_GETSTATE](/windows/desktop/Controls/pbm-getstate) mensagem, que é descrita no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo de código a seguir define a variável `m_progressCtrl`, que é usado para acessar programaticamente o controle de barra de progresso. Essa variável é usada no exemplo a seguir.  
@@ -307,7 +307,7 @@ int GetStep() const;
 ### <a name="remarks"></a>Comentários  
  O incremento de etapa é a quantidade pela qual uma chamada para [CProgressCtrl::StepIt](#stepit) aumenta a posição atual da barra de progresso.  
   
- Esse método envia o [PBM_GETSTEP](http://msdn.microsoft.com/library/windows/desktop/bb760836) mensagem, que é descrita no SDK do Windows.  
+ Esse método envia o [PBM_GETSTEP](/windows/desktop/Controls/pbm-getstep) mensagem, que é descrita no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo de código a seguir define a variável `m_progressCtrl`, que é usado para acessar programaticamente o controle de barra de progresso. Essa variável é usada no exemplo a seguir.  
@@ -347,17 +347,17 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *clrBar*|Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que especifica a nova cor da barra do indicador de progresso. Especifique CLR_DEFAULT para fazer com que a barra de progresso usar sua cor padrão.|  
+|[in] *clrBar*|Um [COLORREF](/windows/desktop/gdi/colorref) valor que especifica a nova cor da barra do indicador de progresso. Especifique CLR_DEFAULT para fazer com que a barra de progresso usar sua cor padrão.|  
   
 ### <a name="return-value"></a>Valor de retorno  
 
-A cor anterior da barra do indicador de progresso, representado como uma [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor ou CLR_DEFAULT se a cor da barra do indicador de progresso é a cor padrão.  
+A cor anterior da barra do indicador de progresso, representado como uma [COLORREF](/windows/desktop/gdi/colorref) valor ou CLR_DEFAULT se a cor da barra do indicador de progresso é a cor padrão.  
   
 ### <a name="remarks"></a>Comentários  
 
 O `SetBarColor` método define o barra de progresso da somente se de cor de um Windows Vista [tema](/windows/desktop/Controls/visual-styles-overview) não está em vigor.  
   
- Esse método envia o [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838) mensagem, que é descrita no SDK do Windows.  
+ Esse método envia o [PBM_SETBARCOLOR](/windows/desktop/Controls/pbm-setbarcolor) mensagem, que é descrita no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo de código a seguir define a variável `m_progressCtrl`, que é usado para acessar programaticamente o controle de barra de progresso. Essa variável é usada no exemplo a seguir.  
@@ -381,7 +381,7 @@ COLORREF SetBkColor(COLORREF clrNew);
  Um valor COLORREF que especifica a nova cor de plano de fundo. Especifique o valor CLR_DEFAULT para usar a cor de plano de fundo padrão para a barra de progresso.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que indica a cor de plano de fundo anterior ou CLR_DEFAULT, se a cor do plano de fundo é a cor padrão.  
+ O [COLORREF](/windows/desktop/gdi/colorref) valor que indica a cor de plano de fundo anterior ou CLR_DEFAULT, se a cor do plano de fundo é a cor padrão.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CProgressCtrl#6](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_10.cpp)]  
@@ -408,7 +408,7 @@ BOOL SetMarquee(
 ### <a name="remarks"></a>Comentários  
  Quando o modo de marca de seleção está ativado, a barra de progresso é animada e rola, como um sinal de um letreiro de teatro.  
   
- Esse método envia o [PBM_SETMARQUEE](http://msdn.microsoft.com/library/windows/desktop/bb760842) mensagem, que é descrita no SDK do Windows.  
+ Esse método envia o [PBM_SETMARQUEE](/windows/desktop/Controls/pbm-setmarquee) mensagem, que é descrita no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo de código a seguir define a variável `m_progressCtrl`, que é usado para acessar programaticamente o controle de barra de progresso. Essa variável é usada no exemplo a seguir.  
@@ -484,7 +484,7 @@ int SetState(int iState);
  O estado anterior do controle de barra de progresso atual.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método envia o [PBM_SETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760850) mensagem, que é descrita no SDK do Windows.  
+ Esse método envia o [PBM_SETSTATE](/windows/desktop/Controls/pbm-setstate) mensagem, que é descrita no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo de código a seguir define a variável `m_progressCtrl`, que é usado para acessar programaticamente o controle de barra de progresso. Essa variável é usada no exemplo a seguir.  

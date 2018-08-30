@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce8ac623337d6b1b1dafbe242a9d13979b81a01
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4a0c6b9a9f01746788a01b6528a7508db141089e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337004"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195846"
 ---
 # <a name="cbitmap-class"></a>Classe CBitmap
 Encapsula um bitmap de interface (GDI) do dispositivo de gráficos Windows e fornece funções de membro para manipular o bitmap.  
@@ -174,7 +174,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="remarks"></a>Comentários  
  Embora um bitmap não pode ser selecionado diretamente para um dispositivo de vídeo, ele pode ser selecionado como o bitmap atual para um contexto de dispositivo de memória usando [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) e copiados para qualquer contexto de dispositivo compatíveis usando o [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) ou [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) função. (O [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt) função pode copiar o bitmap do pincel atual diretamente para o contexto de dispositivo de exibição.)  
   
- Se o `BITMAP` estrutura apontada pela *lpBitmap* parâmetro tiver sido preenchido usando o `GetObject` função, os bits de bitmap não forem especificados e o bitmap não foi inicializado. Para inicializar o bitmap, um aplicativo pode usar uma função, como [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) ou [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) para copiar os bits de bitmap identificado pelo primeiro parâmetro do `CGdiObject::GetObject` no bitmap criado por `CreateBitmapIndirect`.  
+ Se o `BITMAP` estrutura apontada pela *lpBitmap* parâmetro tiver sido preenchido usando o `GetObject` função, os bits de bitmap não forem especificados e o bitmap não foi inicializado. Para inicializar o bitmap, um aplicativo pode usar uma função, como [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) ou [SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) para copiar os bits de bitmap identificado pelo primeiro parâmetro do `CGdiObject::GetObject` no bitmap criado por `CreateBitmapIndirect`.  
   
  Quando você terminar com o `CBitmap` objeto criado com `CreateBitmapIndirect` funcionar, primeiro selecione o bitmap fora do contexto de dispositivo e excluir o `CBitmap` objeto.  
   
@@ -374,7 +374,7 @@ BOOL LoadMappedBitmap(
 ### <a name="remarks"></a>Comentários  
  Por padrão, `LoadMappedBitmap` mapeará as cores usadas comumente em glifos de botão.  
   
- Para obter informações sobre como criar um bitmap mapeado, consulte a função do Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) e o [substituição](http://msdn.microsoft.com/library/windows/desktop/bb760448) estrutura no SDK do Windows.  
+ Para obter informações sobre como criar um bitmap mapeado, consulte a função do Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) e o [substituição](/windows/desktop/api/commctrl/ns-commctrl-_colormap) estrutura no SDK do Windows.  
   
 ##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap  
  Carrega um bitmap predefinido usado pelo Windows.  
@@ -428,7 +428,7 @@ operator HBITMAP() const;
 ### <a name="remarks"></a>Comentários  
  Este operador é um operador de conversão, que dá suporte ao uso direto de um `HBITMAP` objeto.  
   
- Para obter mais informações sobre como usar objetos gráficos, consulte [gráfico de objetos](http://msdn.microsoft.com/library/windows/desktop/dd144962) no SDK do Windows.  
+ Para obter mais informações sobre como usar objetos gráficos, consulte [gráfico de objetos](/windows/desktop/gdi/graphic-objects) no SDK do Windows.  
   
 ##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
  Define os bits de um bitmap para os valores de bit fornecidos pelo *lpBits*.  

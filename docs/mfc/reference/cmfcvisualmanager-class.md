@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9ac21e909c8286ef6a7d1973837b0caf69b711c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0eb6e8da3caa9286e14072726488ad1c16f47b1e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539955"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203636"
 ---
 # <a name="cmfcvisualmanager-class"></a>Classe CMFCVisualManager
 Fornece suporte para alterar a aparência do seu aplicativo em um nível global. O `CMFCVisualManager` classe trabalha em conjunto com uma classe que fornece instruções para desenhar os controles de GUI do seu aplicativo usando um estilo consistente. Essas outras classes são chamados de gerentes visuais e herdam de `CMFCBaseVisualManager`.  
@@ -790,7 +790,7 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
  Um ponteiro para um botão de ocultamento automático.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parâmetro que especifica a cor do texto *pButton*.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que especifica a cor do texto *pButton*.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método em uma classe derivada para personalizar a cor do texto de um botão Ocultar automaticamente em seu aplicativo. Para fazer isso, retorne a cor que você deseja que seu aplicativo para usar como a cor do texto.  
@@ -820,7 +820,7 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
  Um ponteiro para uma barra de legenda.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parâmetro que indica a cor do texto na *pBar*.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que indica a cor do texto na *pBar*.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método em sua classe derivada para personalizar a cor do texto de uma barra de legenda. Em seu método substituído, retorna a cor desejada.  
@@ -998,7 +998,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
  Um ponteiro para a lista de propriedades que o framework está desenhando.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parâmetro que indica a cor de fundo *pPropList*.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que indica a cor de fundo *pPropList*.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua essa função para personalizar a cor do plano de fundo de uma lista de propriedades em seu aplicativo.  
@@ -1015,7 +1015,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
  Um ponteiro para a lista de propriedades.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parâmetro que indica a cor do texto da lista de propriedades.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que indica a cor do texto da lista de propriedades.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua essa função para personalizar a cor do texto de uma lista de propriedades em seu aplicativo.  
@@ -1214,7 +1214,7 @@ virtual void GetTabFrameColors(
  Um ponteiro para a janela com guias em que o quadro está desenhando uma guia.  
   
  [out] *clrDark*  
- Uma referência a um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parâmetro em que este método armazena a cor da Borda escura de uma guia.  
+ Uma referência a um [COLORREF](/windows/desktop/gdi/colorref) parâmetro em que este método armazena a cor da Borda escura de uma guia.  
   
  [out] *clrBlack*  
  Uma referência a um parâmetro COLORREF onde esse método armazena a cor da borda da janela de guia. A cor de borda padrão é preta.  
@@ -1778,7 +1778,7 @@ virtual BOOL OnDrawBrowseButton(
  Um valor enumerado que especifica o estado do botão.  
   
  [out] *clrText*  
- Uma referência a um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parâmetro. Isso é um valor reservado e não está sendo utilizado.  
+ Uma referência a um [COLORREF](/windows/desktop/gdi/colorref) parâmetro. Isso é um valor reservado e não está sendo utilizado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se bem-sucedido; Caso contrário, FALSE.  
@@ -2578,7 +2578,7 @@ virtual COLORREF OnDrawPaneCaption(
  Um retângulo que especifica os limites dos botões de legenda.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parâmetro que indica a cor do texto da legenda.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que indica a cor do texto da legenda.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método em um derivada Gerenciador visual para personalizar a aparência das legendas do painel.  
@@ -2805,7 +2805,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  Um ponteiro para uma barra de legenda. O Gerenciador visual desenha isso [classe CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md) objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parâmetro que indica a cor do texto na barra de legenda.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que indica a cor do texto na barra de legenda.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método em uma classe derivada para personalizar a aparência da barra de legenda para uma categoria de faixa de opções. Para obter mais informações sobre a barra de legenda, consulte [classe CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md).  
@@ -3590,7 +3590,7 @@ virtual void OnDrawStatusBarProgress(
  O progresso atual para a barra de progresso.  
   
  [in] *clrBar*  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parâmetro que indica a cor inicial para a barra de progresso. O valor é o início de um gradiente de cores ou a cor completa da barra de progresso.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que indica a cor inicial para a barra de progresso. O valor é o início de um gradiente de cores ou a cor completa da barra de progresso.  
   
  [in] *clrProgressBarDest*  
  Um parâmetro COLORREF que indica o final de um gradiente de cores para a barra de progresso. Se *clrProgressBarDest* é -1, a estrutura não desenhar a barra de progresso como um gradiente de cores. Em vez disso, ele preenche a barra de progresso inteira com a cor especificada pela *clrBar*.  
@@ -4250,7 +4250,7 @@ virtual void OnFillOutlookBarCaption(
  Um retângulo que especifica os limites da barra de legenda.  
   
  [out] *clrText*  
- Uma referência a um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parâmetro. O método grava a cor do texto na barra de legenda para este parâmetro.  
+ Uma referência a um [COLORREF](/windows/desktop/gdi/colorref) parâmetro. O método grava a cor do texto na barra de legenda para este parâmetro.  
   
 ### <a name="remarks"></a>Comentários  
  A implementação padrão desse método preenche a barra de legenda com a cor de sombras com base na capa atual. Substitua este método em um derivada Gerenciador visual para personalizar a cor da barra de legenda do Outlook.  
@@ -4281,7 +4281,7 @@ virtual void OnFillOutlookPageButton(
  Um parâmetro booliano que especifica se o botão é pressionado.  
   
  [out] *clrText*  
- Uma referência a um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parâmetro. Este método armazena a cor do texto do botão de página outlook nesse parâmetro.  
+ Uma referência a um [COLORREF](/windows/desktop/gdi/colorref) parâmetro. Este método armazena a cor do texto do botão de página outlook nesse parâmetro.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua essa função em um derivada Gerenciador visual para personalizar a aparência dos botões de página do Outlook.  

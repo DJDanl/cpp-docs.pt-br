@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df5185c0dc699764427989b2f46345d90ded1729
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 234ec5bd703a390d1e2ee60e48d99d346d4aad95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055919"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203107"
 ---
 # <a name="fpo"></a>.FPO
-A. Diretiva FPO controla a emissão de registros de depuração para o segmento de F $. Debug ou seção.  
+A. Diretiva FPO controla a emissão de registros de depuração para o segmento de F. Debug$ ou seção.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,22 +48,22 @@ cbFrame
   
 #### <a name="parameters"></a>Parâmetros  
  `cdwLocals`  
- Número de variáveis locais, um valor de 32 bits sem sinal.  
+ Número de variáveis locais, um valor sem sinal de 32 bits.  
   
  `cdwParams`  
- Tamanho dos parâmetros no DWORDS, um valor de 16 bits sem sinal.  
+ Tamanho dos parâmetros no DWORDS, um valor sem sinal de 16 bits.  
   
  *cbProlog*  
  Número de bytes no código de prólogo da função, um valor de 8 bits sem sinal.  
   
  `cbRegs`  
- Número de registros salvados.  
+ Número de registros salvos.  
   
  `fUseBP`  
  Indica se o registro EBP foi alocado. 0 ou 1.  
   
  *cbFrame*  
- Indica o tipo de quadro.  Consulte [FPO_DATA](http://msdn.microsoft.com/library/windows/desktop/ms679352) para obter mais informações.  
+ Indica o tipo de quadro.  Ver [FPO_DATA](/windows/desktop/api/winnt/ns-winnt-_fpo_data) para obter mais informações.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de diretivas](../../assembler/masm/directives-reference.md)

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cabf1cde43f11997de27b2b2f148482d4f024455
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 627fb8e1ad1341257e3064ee195952c37dd4a481
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852347"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195532"
 ---
 # <a name="coccmanager-class"></a>Classe COccManager
 Gerencia vários sites de controle personalizado; implementado pelo `COleControlContainer` e `COleControlSite` objetos.  
@@ -334,7 +334,7 @@ static void AFX_CDECL SetDefaultButton(
 ### <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  O controle deve ter o conjunto de bits de status OLEMISC_ACTSLIKEBUTTON. Para obter mais informações sobre sinalizadores OLEMISC, consulte o [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) tópico no SDK do Windows.  
+>  O controle deve ter o conjunto de bits de status OLEMISC_ACTSLIKEBUTTON. Para obter mais informações sobre sinalizadores OLEMISC, consulte o [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) tópico no SDK do Windows.  
   
 ##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate  
  Chamado pelo framework para dividir os controles ActiveX em controles de caixa de diálogo comuns.  

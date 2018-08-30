@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a81caaf62154d8bdcf1c357da2cc156e2da21f3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2a01c319f8a93931539b8ba79cc9c9f554317bab
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594397"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200163"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Adicionando arquivos a aplicativos Win32 vazios
 
@@ -45,4 +45,4 @@ Para adicionar arquivos que não são código-fonte, cabeçalho ou arquivos de r
 ## <a name="see-also"></a>Consulte também
 
 [Criando um aplicativo da área de trabalho do Windows vazio](../windows/creating-an-empty-windows-desktop-application.md)  
-[Implantando aplicativos](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+[Implantando aplicativos](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

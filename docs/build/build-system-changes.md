@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3d6dffb4a4b0b4f5ef3a373cf2dcd0d93d1bd12
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e29d664824a01c0e2a0c0e738368f8d025a239ee
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613195"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202151"
 ---
 # <a name="build-system-changes"></a>Alterações no sistema de build
 O sistema MSBuild é usado para compilar projetos do Visual C++. No entanto, no Visual Studio 2008 e versões anteriores, o sistema de VCBuild foi usado. Determinados tipos de arquivo e conceitos que dependem de VCBuild não existem ou são representados de maneira diferente no sistema atual. Este documento discute as diferenças no sistema de compilação atual.  
@@ -55,7 +55,7 @@ O sistema MSBuild é usado para compilar projetos do Visual C++. No entanto, no 
   
  Na versão atual, a herança é compatível com especificando o valor de uma propriedade como a concatenação de um ou mais valores literais e macros de propriedade. O **$ (Inherit)** e **$ (noInherit)** macros não têm suporte.  
   
- No exemplo a seguir, uma lista delimitada por ponto e vírgula é atribuída a uma propriedade em uma página de propriedades. A lista consiste de concatenação do  *\<valor >* literal e o valor da `MyProperty` propriedade, que pode é acessada usando a notação de macro, **$(***MyProperty***)** .  
+ No exemplo a seguir, uma lista delimitada por ponto e vírgula é atribuída a uma propriedade em uma página de propriedades. A lista consiste de concatenação do  *\<valor >* literal e o valor da `MyProperty` propriedade, que pode é acessada usando a notação de macro, **$(**  <em>MyProperty</em>**)**.  
   
 ```  
 Property=<value>;$(MyProperty)  

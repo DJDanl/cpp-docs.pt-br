@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51933ac5aeb3c14a25b3989809aab2e09686b9a3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538579"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202970"
 ---
 # <a name="cusertool-class"></a>Classe CUserTool
 Uma ferramenta de usuário é um item de menu que executa um aplicativo externo. O **ferramentas** guia o **personalizar** caixa de diálogo ( [classe CMFCToolBarsCustomizeDialog](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) permite que o usuário adicione ferramentas de usuário e especifique o nome, o comando, argumentos, e diretório inicial para cada ferramenta de usuário.  
@@ -159,7 +159,7 @@ virtual BOOL Invoke();
  Diferente de zero se o comando foi executado com êxito; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Chamadas [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) para executar um comando associado com a ferramenta de usuário. A função falhará se o comando está vazio ou se [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) falhar.  
+ Chamadas [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) para executar um comando associado com a ferramenta de usuário. A função falhará se o comando está vazio ou se [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) falhar.  
   
 ##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon  
  Carrega o ícone padrão para uma ferramenta de usuário.  

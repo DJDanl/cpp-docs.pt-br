@@ -1,7 +1,7 @@
 ---
-title: Compilador (nível 4) de aviso C4559 | Microsoft Docs
+title: Compilador aviso (nível 4) C4559 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c853fa55482604d97c29653fadb06b0afdd44977
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d5743b33f62aa954c3765b729ab5c0297b20e32
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295344"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195570"
 ---
-# <a name="compiler-warning-level-4-c4559"></a>Compilador C4559 de aviso (nível 4)
-'function': redefinição; a função obtém __declspec(modifier)  
-  
- Uma função foi redefinida ou declarado novamente e a segunda definição ou declaração adicionado um _**declspec** modificador (***modificador***). Esse aviso é informativo. Para corrigir esse aviso, exclua uma das definições.  
-  
- O exemplo a seguir gera C4559:  
-  
-```  
-// C4559.cpp  
-// compile with: /W4 /LD  
-void f();  
-__declspec(noalias) void f();   // C4559  
+# <a name="compiler-warning-level-4-c4559"></a>Compilador aviso (nível 4) C4559
+
+> '*função*': redefinição; os ganhos de função declspec (*modificador*)
+
+## <a name="remarks"></a>Comentários
+
+Uma função foi redefinida ou declarado novamente e a segunda definição ou declaração adicionada uma **declspec** modificador (*modificador*). Esse aviso é informativo. Para corrigir este aviso, exclua uma das definições.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C4559:
+
+```cpp
+// C4559.cpp
+// compile with: /W4 /LD
+void f();
+__declspec(noalias) void f();   // C4559
 ```

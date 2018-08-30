@@ -1,7 +1,7 @@
 ---
 title: Compilador aviso (nível 3) C4278 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b556166f61c5d77ac34fb7243ac25d5baeaa2b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f63337de2e14b1cb0f9d854df962ab2aa9c8014e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296670"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205775"
 ---
-# <a name="compiler-warning-level-3-c4278"></a>Compilador C4278 de aviso (nível 3)
-'Identificador': identificador em biblioteca de tipos 'tlb' já é uma macro; Use o qualificador 'rename'  
-  
- Ao usar [#import](../../preprocessor/hash-import-directive-cpp.md), um identificador em typelib que você está importando está tentando declarar um identificador ***identificador***. No entanto, isso já é um símbolo válido.  
-  
- Use o `#import` **Renomear** atributo para atribuir um alias para o símbolo na biblioteca de tipos.
+# <a name="compiler-warning-level-3-c4278"></a>Compilador aviso (nível 3) C4278
+
+> '*identificador*': identificador em biblioteca de tipos '*tlb*' já é uma macro; use o qualificador 'rename'
+
+Ao usar [#import](../../preprocessor/hash-import-directive-cpp.md), um identificador em typelib que está sendo importado está tentando declarar um identificador *identificador*. No entanto, isso já é um símbolo válido.
+
+Use o `#import` **Renomear** atributo para atribuir um alias para o símbolo na biblioteca de tipos.

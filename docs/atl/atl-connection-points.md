@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 179f4329d55261d71d3d122e6a2601ce7e805c0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ec0e902f2b01e33ac460c6210d51c5e0637c3282
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354662"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202914"
 ---
 # <a name="atl-connection-points"></a>Pontos de conexão ATL
 Um objeto conectável é aquele que oferece suporte a interfaces de saída. Uma interface de saída permite que o objeto se comunique com um cliente. Para cada interface de saída, o objeto conectável expõe um ponto de conexão. Cada interface de saída é implementada por um cliente em um objeto denominado de um coletor.  
   
  ![Pontos de Conexão](../atl/media/vc2zw31.gif "vc2zw31")  
   
- Dá suporte a cada ponto de conexão a [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) interface. O objeto conectável expõe seus pontos de conexão para o cliente por meio de [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857) interface.  
+ Cada ponto de conexão dá suporte a [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) interface. O objeto conectável expõe seus pontos de conexão para o cliente por meio de [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer) interface.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Classes de ponto de conexão da ATL](../atl/atl-connection-point-classes.md)  

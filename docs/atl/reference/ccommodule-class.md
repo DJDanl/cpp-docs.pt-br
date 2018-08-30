@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae4218d6c6446554d5fb45d680588127ec3e0ee
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: e1ee6ee76840774fd750df95f73c105c059cae59
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883086"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196515"
 ---
 # <a name="ccommodule-class"></a>Classe CComModule
 A partir do ATL 7.0 `CComModule` foi preterido: ver [Classes de módulo ATL](../../atl/atl-module-classes.md) para obter mais detalhes.  
@@ -346,10 +346,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
   
 ### <a name="parameters"></a>Parâmetros  
  *dwClsContext*  
- [in] Especifica o contexto no qual o objeto de classe deve ser executado. Os valores possíveis são CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER ou CLSCTX_LOCAL_SERVER. Para obter uma descrição desses valores, consulte [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) no SDK do Windows.  
+ [in] Especifica o contexto no qual o objeto de classe deve ser executado. Os valores possíveis são CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER ou CLSCTX_LOCAL_SERVER. Para obter uma descrição desses valores, consulte [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) no SDK do Windows.  
   
  *dwFlags*  
- [in] Determina os tipos de conexão para o objeto de classe. Os valores possíveis são REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE ou REGCLS_MULTI_SEPARATE. Para obter uma descrição desses valores, consulte [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) no SDK do Windows.  
+ [in] Determina os tipos de conexão para o objeto de classe. Os valores possíveis são REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE ou REGCLS_MULTI_SEPARATE. Para obter uma descrição desses valores, consulte [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um valor padrão de HRESULT.  

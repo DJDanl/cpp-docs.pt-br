@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b914e950fd94435768c355f327d3d48a653e0d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78e3d346bca087a6fd855e6428e6a53779cd7355
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407139"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202510"
 ---
 # <a name="setnewmode"></a>_set_new_mode
 
-Define um novo modo de manipulador para **malloc**.
+Define um novo modo do manipulador **malloc**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -54,15 +54,15 @@ int _set_new_mode( int newhandlermode );
 ### <a name="parameters"></a>Parâmetros
 
 *newhandlermode*<br/>
-Novo modo de manipulador para **malloc**; válido valor for 0 ou 1.
+Novo modo do manipulador **malloc**; válido valor for 0 ou 1.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna o manipulador anterior modo conjunto para **malloc**. A retornar o valor de 1 indica que, em caso de falha ao alocar memória, **malloc** anteriormente chamado de rotina do manipulador de novo; um valor de retorno 0 indica que não compraram. Se o *newhandlermode* argumento não é igual a 0 ou 1, retornará -1.
+Retorna o manipulador anterior para o conjunto de modos **malloc**. Um valor retornado de 1 indica que, em caso de falha ao alocar memória, **malloc** chamado anteriormente a nova rotina do manipulador; um valor de retorno 0 indica que não funcionou. Se o *newhandlermode* argumento não é igual a 0 ou 1, retorna -1.
 
 ## <a name="remarks"></a>Comentários
 
-A função de C++ **set_new_mode** define o novo modo do manipulador para [malloc](malloc.md). O novo modo de manipulador indica se, em caso de falha **malloc** é chamar a rotina do manipulador de novo conforme definido pela [set_new_handler](set-new-handler.md). Por padrão, **malloc** não chamar a rotina do manipulador de novo em caso de falha ao alocar memória. Você pode substituir esse comportamento padrão para que, quando **malloc** Falha ao alocar memória, **malloc** chama a rotina do manipulador de novo na mesma forma que o **novo** does de operador Quando falhar pela mesma razão. Para obter mais informações, consulte os operadores [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) na *Referência da Linguagem C++*. Para substituir o padrão, chame:
+A função de C++ **set_new_mode** define o novo modo do manipulador para [malloc](malloc.md). O novo modo do manipulador indica se, em caso de falha, **malloc** é chamar a nova rotina do manipulador conforme definido pela [set_new_handler](set-new-handler.md). Por padrão, **malloc** não chama a nova rotina do manipulador em caso de falha ao alocar memória. Você pode substituir esse comportamento padrão para que, quando **malloc** falhar ao alocar memória, **malloc** chame a nova rotina do manipulador da mesma forma que o **novo** operador faz Quando ele falha pelo mesmo motivo. Para obter mais informações, consulte os operadores [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) na *Referência da Linguagem C++*. Para substituir o padrão, chame:
 
 ```cpp
 _set_new_mode(1);
@@ -70,7 +70,7 @@ _set_new_mode(1);
 
 no início do seu programa ou vincule com Newmode.obj (consulte [Opções de link](../../c-runtime-library/link-options.md)).
 
-Esta função valida seu parâmetro. Se *newhandlermode* qualquer coisa diferente de 0 ou 1, a função invoca o manipulador de parâmetro inválido, como descrita no [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **_ * set_new_mode** retorna -1 e define **errno** para **EINVAL**.
+Esta função valida seu parâmetro. Se *newhandlermode* é qualquer coisa diferente de 0 ou 1, a função invocará o manipulador de parâmetro inválido, como descrita em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, <strong>set_new_mode</strong> retornará -1 e definirá **errno** para `EINVAL`.
 
 ## <a name="requirements"></a>Requisitos
 

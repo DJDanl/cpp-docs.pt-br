@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a23ed1283241d3582c0bd548553cb2fed9a47fa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 532f1e060398b20d4714f461c2d687031756c910
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596789"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201116"
 ---
 # <a name="general-mbcs-programming-advice"></a>Aviso de programação MBCS geral
 Use as dicas a seguir:  
@@ -41,7 +41,7 @@ Use as dicas a seguir:
   
 -   Tenha cuidado ao selecionar fontes para seu aplicativo, pois algumas fontes não estão disponíveis em todos os sistemas.  
   
--   Ao selecionar a fonte para caixas de diálogo, use [MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112) em vez de MS Sans Serif ou Helvetica. MS Shell Dlg é substituído com a fonte correta pelo sistema antes de criar a caixa de diálogo. Usar o MS Shell Dlg garante que as alterações no sistema operacional para lidar com essa fonte automaticamente estarão disponíveis. (MFC substitui MS Shell Dlg com o DEFAULT_GUI_FONT ou a fonte do sistema no Windows 95, Windows 98 e Windows NT 4 porque esses sistemas não tratam MS Shell Dlg corretamente.)  
+-   Ao selecionar a fonte para caixas de diálogo, use [MS Shell Dlg](/windows/desktop/Intl/using-ms-shell-dlg-and-ms-shell-dlg-2) em vez de MS Sans Serif ou Helvetica. MS Shell Dlg é substituído com a fonte correta pelo sistema antes de criar a caixa de diálogo. Usar o MS Shell Dlg garante que as alterações no sistema operacional para lidar com essa fonte automaticamente estarão disponíveis. (MFC substitui MS Shell Dlg com o DEFAULT_GUI_FONT ou a fonte do sistema no Windows 95, Windows 98 e Windows NT 4 porque esses sistemas não tratam MS Shell Dlg corretamente.)  
   
 -   Ao projetar seu aplicativo, decida quais cadeias de caracteres podem ser localizadas. Em caso de dúvida, suponha que qualquer cadeia de caracteres fornecida será localizada. Como tal, não misture cadeias de caracteres que podem ser localizadas com aquelas que não é possível.  
   

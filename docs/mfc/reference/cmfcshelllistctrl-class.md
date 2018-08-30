@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a75d3f40ade42c25de51a3c65c98e8c448b03ed
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: aef6192218f5fae40bca6aa6fb8202a0d238091a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539159"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195826"
 ---
 # <a name="cmfcshelllistctrl-class"></a>Classe CMFCShellListCtrl
 O `CMFCShellListCtrl` classe fornece funcionalidade de controle de lista do Windows e expandi-la incluindo a capacidade de exibir uma lista de itens de shell.  
@@ -212,7 +212,7 @@ const IShellFolder* GetCurrentShellFolder() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o [IShellFolder Interface](http://msdn.microsoft.com/library/windows/desktop/bb775075) para o objeto selecionado.  
+ Um ponteiro para o [IShellFolder Interface](https://msdn.microsoft.com/library/windows/desktop/bb775075) para o objeto selecionado.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método retornará nulo se nenhum objeto está selecionado no momento.  
@@ -247,7 +247,7 @@ SHCONTF GetItemTypes() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539) que contém o tipo dos itens listados no valor de `CMFCShellListCtrl`.  
+ Um [SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf) que contém o tipo dos itens listados no valor de `CMFCShellListCtrl`.  
   
 ### <a name="remarks"></a>Comentários  
  Para definir o tipo dos itens listados em uma `CMFCShellListCtrl`, chame [CMFCShellListCtrl::SetItemTypes](#setitemtypes).  
@@ -406,7 +406,7 @@ void SetItemTypes(SHCONTF nTypes);
  Tipos de uma lista de itens que o `CMFCShellListCtrl` objeto dá suporte.  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações sobre a lista de tipos de item, consulte [SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539).  
+ Para obter mais informações sobre a lista de tipos de item, consulte [SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf).  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   

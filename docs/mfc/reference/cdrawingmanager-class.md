@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 52ded6eb4b6b757934bcdb62c280c6d57e1b171e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209164"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196054"
 ---
 # <a name="cdrawingmanager-class"></a>Classe CDrawingManager
 O `CDrawingManager` classe implementa os algoritmos de desenho complexos.  
@@ -169,7 +169,7 @@ static HBITMAP __stdcall CreateBitmap_32(
  Um identificador para o bitmap DIB recém-criado se esse método for bem-sucedida; Caso contrário, nulo.  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações sobre como criar um bitmap DIB, consulte [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491).  
+ Para obter mais informações sobre como criar um bitmap DIB, consulte [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap).  
   
 ##  <a name="drawalpha"></a>  CDrawingManager::DrawAlpha  
  Exibe os bitmaps que possuem pixels transparentes ou semitransparentes.  
@@ -196,7 +196,7 @@ void DrawAlpha(
  O retângulo de origem.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método realiza a transparência para dois bitmaps. Para obter mais informações sobre transparência, consulte [AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) no SDK do Windows.  
+ Esse método realiza a transparência para dois bitmaps. Para obter mais informações sobre transparência, consulte [AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) no SDK do Windows.  
   
 ##  <a name="drawellipse"></a>  CDrawingManager::DrawEllipse  
  Desenha uma elipse com as cores da borda e preenchimento fornecidas.  

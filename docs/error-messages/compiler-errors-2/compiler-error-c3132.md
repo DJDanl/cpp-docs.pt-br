@@ -1,5 +1,5 @@
 ---
-title: C3132 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3132 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb2ecc863bc06542e4bb2e78e71ce95279c004f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb32d65b119330e49773118e38e1c8b618d03cfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252381"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204752"
 ---
-# <a name="compiler-error-c3132"></a>C3132 de erro do compilador
-'parâmetro de função': matrizes de parâmetro só podem ser aplicados a um argumento formal do tipo 'array gerenciado unidimensional'  
+# <a name="compiler-error-c3132"></a>Erro do compilador C3132
+'-parâmetro de função': matrizes de parâmetro só podem ser aplicados a um argumento formal do tipo 'matriz gerenciada unidimensional'  
   
- O [ParamArray](https://msdn.microsoft.com/en-us/library/system.paramarrayattribute.aspx) atributo foi aplicado a um parâmetro que não é uma matriz de dimensão única.  
+ O [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx) atributo foi aplicado a um parâmetro que não era uma matriz de dimensão única.  
   
  O exemplo a seguir gera C3132:  
   
