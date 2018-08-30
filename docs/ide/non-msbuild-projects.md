@@ -1,7 +1,7 @@
 ---
 title: Projetos Abrir Pasta no Visual C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 08/02/2017
+ms.date: 06/01/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,15 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d4444e70ec158d7afa35c3955bbef9af4bfa12f2
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337279"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131317"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Projetos Abrir Pasta no Visual C++
-O Visual Studio 2017 introduz o recurso "Abrir Pasta", que permite abrir uma pasta de arquivos de origem e imediatamente iniciar a codificação com suporte para IntelliSense, navegação, refatoração, depuração e assim por diante. Nenhum arquivo .sln ou .vcxproj é carregado; se necessário, especifique tarefas personalizadas, além de compilar e iniciar parâmetros por meio de arquivos .json simples. Ativado pelo recurso Abrir Pasta, o Visual C++ agora pode dar suporte não apenas a coleções flexíveis de arquivos, mas também a praticamente qualquer sistema de build, incluindo CMake, Ninja, QMake (para projetos Qt), gyp, SCons, Gradle, Buck, make e muito mais. 
+
+No Visual Studio 2017 e posteriores, o recurso "Abrir Pasta" permite que você abra uma pasta de arquivos de origem e comece a codificar imediatamente, com suporte para IntelliSense, navegação, refatoração, depuração e assim por diante. Nenhum arquivo .sln ou .vcxproj é carregado; se necessário, especifique tarefas personalizadas, além de compilar e iniciar parâmetros por meio de arquivos .json simples. Ativado pelo recurso Abrir Pasta, o Visual C++ agora pode dar suporte não apenas a coleções flexíveis de arquivos, mas também a praticamente qualquer sistema de build, incluindo CMake, Ninja, QMake (para projetos Qt), gyp, SCons, Gradle, Buck, make e muito mais. 
 
 Para usar o recurso Abrir Pasta, no menu principal, selecione *Arquivo | Abrir | Pasta* ou pressione *Ctrl+Shift+Alt+O*. Imediatamente, o Gerenciador de Soluções exibe todos os arquivos da pasta. Você pode clicar em qualquer arquivo para começar a editá-lo. Em segundo plano, o Visual Studio inicia a indexação dos arquivos para habilitar os recursos de IntelliSense, navegação e refatoração. À medida que você edita, cria, move ou exclui arquivos, o Visual Studio rastreia as alterações automaticamente e atualiza continuamente seu índice do IntelliSense. 
   
@@ -30,7 +31,7 @@ Para usar o recurso Abrir Pasta, no menu principal, selecione *Arquivo | Abrir |
 O CMake é integrado ao IDE do Visual Studio como as Ferramentas CMake para Visual C++, um componente da carga de trabalho de área de trabalho do C++. Para saber mais, veja [Ferramentas do CMake no Visual C++](cmake-tools-for-visual-cpp.md).
  
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>Projetos QMake direcionados à estrutura Qt
-Use as Ferramentas CMake para Visual C++ para direcionar o Qt a projetos Qt de build ou use a Extensão do Visual Studio para Qt. Observação: a partir de agosto de 2017, o [suporte à Extensão do Visual Studio para Qt para o Visual Studio 2017](https://download.qt.io/development_releases/vsaddin/) está disponível como uma versão beta.
+Você pode usar as Ferramentas CMake para Visual C++ para direcionar ao Qt para criar projetos Qt ou usar a [Extensão Qt Visual Studio](https://download.qt.io/development_releases/vsaddin/) para Visual Studio 2015 ou Visual Studio 2017.
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp, Cons, SCons, Buck, etc.
 Use qualquer sistema de build no Visual C++ e ainda aproveite as vantagens do IDE e do depurador do Visual C++. Quando você abre a pasta raiz do projeto, o Visual C++ usa a heurística para indexar os arquivos de origem para o IntelliSense e a navegação. Forneça dicas sobre a estrutura do código editando o arquivo CppProperties.json. De maneira semelhante, configure o programa de build editando o arquivo launch.vs.json. 

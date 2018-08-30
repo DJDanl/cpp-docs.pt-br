@@ -9,31 +9,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc79d438b61fce90faf1f8548671ec882c5099a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 6d3a3ec1fec213cc6fa1bb5dc0ebfdadbe7d22b2
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569690"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131714"
 ---
-# <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Novidades do Visual C++ no [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
+# <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Novidades do Visual C++ no Visual Studio 2017
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] traz muitas atualizações e correções para o ambiente do Visual C++. Corrigimos mais de 250 bugs e problemas relatados no compilador e nas ferramentas, muitos deles enviados pelos clientes pelas opções [Relatar um Problema](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) e [Fornecer uma Sugestão](https://visualstudio.uservoice.com/) em **Enviar Comentários**. Obrigado por relatar bugs! Para obter mais informações sobre todas as novidades do Visual Studio, visite [Novidades no [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]](https://go.microsoft.com/fwlink/p/?linkid=834481).
+O Visual Studio 2017 traz muitas atualizações e correções para o ambiente do Visual C++. Corrigimos mais de 250 bugs e problemas relatados no compilador e nas ferramentas, muitos deles enviados pelos clientes pelas opções [Relatar um Problema](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) e [Fornecer uma Sugestão](https://visualstudio.uservoice.com/) em **Enviar Comentários**. Obrigado por relatar bugs! Para obter mais informações sobre todas as novidades do Visual Studio, visite [Novidades no Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=834481).
 
-<!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
+<!--The compiler and tools version number in Visual Studio 2017 is 14.10.24629. -->
 
 ## <a name="c-compiler"></a>compilador C++
 
 ### <a name="c-conformance-improvements"></a>Aprimoramentos de conformidade do C++
 
 Nesta versão, atualizamos o compilador do C++ e a biblioteca padrão com suporte aprimorado para os recursos C++11 e C++14, bem como o suporte preliminar para determinados recursos esperados no padrão C++ 17. Para obter informações detalhadas, consulte [Aprimoramentos de conformidade do C++ no Visual Studio 2017](cpp-conformance-improvements-2017.md).
-**Visual Studio 2017 versão 15.5**:  
 
-   O compilador é compatível com cerca de 75% das funcionalidades novas do C++17, incluindo associações estruturadas, lambdas `constexpr`, `if constexpr`, variáveis embutidas, expressões de dobra e adição de `noexcept` ao tipo sistema. Essas funcionalidades estão disponíveis na opção **/std:c++17**. Para obter mais informações, veja [Melhorias de conformidade do C++ no Visual Studio 2017](cpp-conformance-improvements-2017.md)
+**Visual Studio 2017 versão 15.5**: o compilador dá suporte a cerca de 75% dos recursos novos no C++17, incluindo associações estruturadas, lambdas `constexpr`, `if constexpr`, variáveis embutidas, expressões fold e a adição de `noexcept` ao sistema de tipos. Essas funcionalidades estão disponíveis na opção **/std:c++17**. Para obter mais informações, veja [Melhorias de conformidade do C++ no Visual Studio 2017](cpp-conformance-improvements-2017.md)
 
-**Visual Studio 2017 versão 15.7**:  
-
-Agora, o conjunto de ferramentas do compilador do MSVC no Visual Studio versão 15.7 é compatível com o padrão do C++. Para obter mais informações, veja [Apresentação: MSVC é compatível com o padrão C++](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/) e [Conformidade de linguagem do Visual C++](visual-cpp-language-conformance.md).
+**Visual Studio 2017 versão 15.7**: o conjunto de ferramentas do compilador do MSVC no Visual Studio versão 15.7 é compatível com o padrão do C++. Para obter mais informações, veja [Apresentação: MSVC é compatível com o padrão C++](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/) e [Conformidade de linguagem do Visual C++](visual-cpp-language-conformance.md).
 
 ### <a name="new-compiler-options"></a>Novas opções do compilador
 
@@ -43,7 +40,7 @@ Agora, o conjunto de ferramentas do compilador do MSVC no Visual Studio versão 
 
 - [/debug:fastlink](build/reference/debug-generate-debug-info.md): habilite um tempo de vinculação incremental até 30% mais rápido (em relação ao Visual Studio 2015) ao não copiar todas as informações de depuração para o arquivo PDB. Em vez disso, o arquivo PDB aponta para as informações de depuração para os arquivos de biblioteca e de objeto usados para criar o executável. Veja [Faster C++ build cycle in VS "15" with /Debug:fastlink](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/) (Ciclo de build do C++ mais rápido no VS "15" com /Debug:fastlink) e [Recommendations to speed C++ builds in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/) (Recomendações para acelerar builds do C++ no Visual Studio).
 
-- O [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] permite o uso de [/sdl](build/reference/sdl-enable-additional-security-checks.md) com [/await](build/reference/await-enable-coroutine-support.md). Removemos a limitação [/RTC](build/reference/rtc-run-time-error-checks.md) com corrotinas.
+- O Visual Studio 2017 permite o uso de [/sdl](build/reference/sdl-enable-additional-security-checks.md) com [/await](build/reference/await-enable-coroutine-support.md). Removemos a limitação [/RTC](build/reference/rtc-run-time-error-checks.md) com corrotinas.
 
    **Visual Studio 2017 versão 15.3**:  
 - [/std:c++14 e /std:c++latest](build/reference/std-specify-language-standard-version.md): com essas opções do compilador, é possível aceitar versões específicas de linguagem de programação ISO C++ em um projeto. A maioria das novas funcionalidades padrão de rascunho é protegida pela opção **/std:c++latest**.
@@ -406,7 +403,7 @@ A partir do [build 17025 do SDK do Windows Insider Preview](https://blogs.window
 
 ## <a name="clangc2-platform-toolset"></a>Conjunto de ferramentas de plataforma Clang/C2
 
-O conjunto de ferramentas Clang/C2 que acompanha o [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] agora é compatível com a opção **/bigobj**, que é essencial para a compilação de projetos grandes. Ele também inclui várias correções de bugs importantes, tanto em front-end quanto em back-end do compilador.
+O conjunto de ferramentas Clang/C2 que acompanha o Visual Studio 2017 agora dá suporte à opção **/bigobj**, essencial para a criação de projetos grandes. Ele também inclui várias correções de bugs importantes, tanto em front-end quanto em back-end do compilador.
 
 ## <a name="c-code-analysis"></a>Análise de código C++
 

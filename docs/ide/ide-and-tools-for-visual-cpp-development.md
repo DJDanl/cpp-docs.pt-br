@@ -1,7 +1,7 @@
 ---
 title: IDE e ferramentas para desenvolvimento do Visual C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/02/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3668fb438c2a0aa7fa14cff97f498a9becc67b36
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: df30bdea71a890eed25f546a53e7f329fa330762
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705394"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132014"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE e ferramentas para desenvolvimento do Visual C++
 
@@ -29,7 +29,11 @@ Além das ferramentas compartilhadas no IDE do Visual Studio, o MSVC tem várias
 
 ## <a name="creating-a-solution-and-projects"></a>Criando uma solução e projetos
 
-Um *projeto* é basicamente um conjunto de arquivos de código-fonte e recursos, como imagens ou arquivos de dados que são compilados em um arquivo executável. O Visual Studio 2017 pode dar suporte a qualquer sistema de build ou ferramenta de build personalizada que você deseje usar, com suporte total ao IntelliSense, à navegação e à depuração:
+Um *projeto* é basicamente um conjunto de arquivos de código-fonte e recursos, como imagens ou arquivos de dados que são compilados em um arquivo executável. 
+
+O Visual Studio 2015 dá suporte para projetos do MSBuild. Você pode baixar extensões do Visual Studio para outros sistemas de build, como Qt ou CMake.
+
+O Visual Studio 2017 dá suporte a qualquer sistema de build ou ferramenta de build personalizada que você deseje usar, com suporte total para IntelliSense, navegação e depuração:
 
 - O MSBuild é o sistema de build nativo do Visual Studio e, geralmente, é a melhor escolha para aplicativos UWP (Plataforma Universal do Windows) ou aplicativos herdados da área de trabalho do Windows que usam o MFC ou a ATL. Para obter mais informações sobre projetos do C++ baseados no MSBuild, confira [Criando e gerenciando projetos baseados no MSBuild](creating-and-managing-visual-cpp-projects.md).
 - O CMake é um sistema de build multiplataforma integrado ao IDE do Visual Studio durante a instalação da carga de trabalho Desenvolvimento para desktop com C++. Para saber mais, veja [Projetos CMake no Visual C++](cmake-tools-for-visual-cpp.md).
@@ -105,13 +109,17 @@ Use também o compilador (cl.exe) e muitas outras ferramentas autônomas relacio
 
 O Visual Studio inclui uma estrutura de teste de unidade para o C++ nativo e o C++/CLI. Para obter mais informações, confira [Verificando o código usando testes de unidade](/visualstudio/test/unit-test-your-code) e [Escrevendo teste de unidade para o C/C++ com o Microsoft Unit Testing Framework para C++](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)
 
+## <a name="analyze"></a>Analisar
+
+O Visual Studio inclui ferramentas de análise estática de código para C++, incluindo uma implementação dos verificadores de regras [Diretrizes Principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Para obter mais informações, confira [Visão geral da análise de código do C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+
 ## <a name="debug"></a>Depurar
 
 Depure o programa pressionando **F5** quando a configuração de projeto estiver definida como Depuração. Durante a depuração, defina pontos de interrupção, pressionando **F9**, execute o código em etapas pressionando **F10**, exiba os valores de variáveis ou de registros especificados e, até mesmo em alguns casos, faça alterações no código e continue a depuração sem a recompilação. Para obter mais informações, consulte [Depuração no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
 
 ## <a name="deploy-completed-applications"></a>Implantar aplicativos concluídos
 
-Implante um aplicativo UWP nos clientes por meio da Microsoft Store na opção de menu **Projeto** > **Loja**. A implantação do CRT é manipulada automaticamente em segundo plano. Para obter mais informações, confira [Vendendo aplicativos](http://go.microsoft.com/fwlink/p/?LinkId=262280).
+Implante um aplicativo UWP nos clientes por meio da Microsoft Store na opção de menu **Projeto** > **Loja**. A implantação do CRT é manipulada automaticamente em segundo plano. Para obter mais informações, confira [Publicar aplicativos e jogos do Windows](/windows/uwp/publish/). 
 
 Ao implantar um aplicativo da área de trabalho do C++ nativo em outro computador, você precisa instalar o próprio aplicativo e os arquivos de biblioteca dos quais o aplicativo depende. Há três maneiras de implantar o UCRT (Tempo de Execução do C++ Universal) com um aplicativo: implantação central, implantação local ou vinculação estática. Para obter mais informações, confira [Implantando aplicativos da área de trabalho](../ide/deploying-native-desktop-applications-visual-cpp.md).
 

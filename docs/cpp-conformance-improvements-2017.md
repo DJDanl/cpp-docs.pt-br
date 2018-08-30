@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3708bce00b01ee796067bf91d99645cb61f19a53
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 9bce71c444426d5d1a2d5340c603118a09e8275f
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900694"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132237"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Melhorias de conformidade do C++ no Visual Studio 2017 versões 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157) e [15.8](#update_158)
 
@@ -55,19 +55,19 @@ Baseada em intervalo para loops que não exigem mais que begin() e end() retorne
 
 ### <a name="constexpr-lambdas"></a>Lambdas constexpr
 
-Expressões Lambda agora podem ser usadas em expressões de constante. Para saber mais, veja [Constexpr lambda](http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4487.pdf).
+Expressões Lambda agora podem ser usadas em expressões de constante. Para saber mais, veja [Expressões lambda constexpr em C++](cpp/lambda-expressions-constexpr.md).
 
 ### <a name="if-constexpr-in-function-templates"></a>if constexpr em modelos de função
 
-Um modelo de função pode conter instruções `if constexpr` para habilitar a ramificação de tempo de compilação. Para saber mais, veja [if constexpr](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0128r1.html).
+Um modelo de função pode conter instruções `if constexpr` para habilitar a ramificação de tempo de compilação. Para saber mais, veja [Instruções if constexpr](cpp/if-else-statement-cpp.md#if_constexpr).
 
 ### <a name="selection-statements-with-initializers"></a>Instruções de seleção com inicializadores
 
-Uma instrução `if` pode conter um inicializador que apresenta uma variável no escopo de bloco dentro da instrução em si. Para saber mais, veja [Instruções de seleção com inicializador](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0305r1.html).
+Uma instrução `if` pode conter um inicializador que apresenta uma variável no escopo de bloco dentro da instrução em si. Para saber mais, veja [Instruções if com inicializador](cpp/if-else-statement-cpp.md#if_with_init).
 
 ### <a name="maybeunused-and-nodiscard-attributes"></a>Atributos [[maybe_unused]] e [[nodiscard]]
 
-Novos atributos para silenciar avisos quando uma entidade não for usada ou criar um aviso se o valor retornado de uma chamada de função for descartado. Para saber mais, veja [Palavras para o atributo maybe_unused](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0212r0.pdf) e [Proposta de atributos unused, nodiscard e fallthrough](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf).
+Novos atributos para silenciar avisos quando uma entidade não for usada ou criar um aviso se o valor retornado de uma chamada de função for descartado. Para saber mais, veja [Atributos em C++](cpp/attributes.md).
 
 ### <a name="using-attribute-namespaces-without-repetition"></a>Uso de namespaces de atributo sem repetição
 
@@ -75,11 +75,11 @@ Nova sintaxe para permitir apenas um único identificador de namespace em uma li
 
 ### <a name="structured-bindings"></a>Associações estruturadas
 
-Agora é possível em uma única declaração armazenar um valor com os nomes individuais de seus componentes, quando o valor é uma matriz, std::tuple ou std::pair ou tem todos os membros de dados não estáticos públicos. Para saber mais, veja [Associações estruturadas](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf).
+Agora é possível em uma única declaração armazenar um valor com os nomes individuais de seus componentes, quando o valor é uma matriz, std::tuple ou std::pair ou tem todos os membros de dados não estáticos públicos. Para saber mais, veja [Associações estruturadas](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) e [Retornar vários valores de uma função](cpp/functions-cpp.md#multi_val).
 
 ### <a name="construction-rules-for-enum-class-values"></a>Regras de construção para valores de classe de enumeração
 
-Agora há uma conversão implícita/não restrição do tipo subjacente de uma enumeração com escopo para a enumeração em si, quando sua definição não apresenta enumerador e a origem usa uma sintaxe de inicialização da lista. Para saber mais, veja [Regras de construção para valores de classe de enumeração](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf).
+Agora há uma conversão implícita/não restrição do tipo subjacente de uma enumeração com escopo para a enumeração em si, quando sua definição não apresenta enumerador e a origem usa uma sintaxe de inicialização da lista. Para saber mais, veja [Regras de construção para valores de classe de enumeração](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)e[Enumerações](cpp/enumerations-cpp.md#no_enumerators).
 
 ### <a name="capturing-this-by-value"></a>Como capturar \*isto por valor
 
@@ -212,6 +212,8 @@ struct B : A {
 
 B b(42L); // now calls B(int)
 ```
+
+Para saber mais, veja [Construtores](cpp/constructors-cpp.md#inheriting_constructors).
 
 ### <a name="c17-extended-aggregate-initialization"></a>C++17 Inicialização de agregação estendida
 

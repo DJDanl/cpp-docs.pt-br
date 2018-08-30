@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c98cca6afb096cc9b5e88fe31aa949621d326c98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d6422162d0497ec97c3803e0aace298536cb87a
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390018"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131733"
 ---
 # <a name="thread-local-storage"></a>Armazenamento local de thread
 **Seção específica da Microsoft**  
   
- O armazenamento local de thread (TLS) é o mecanismo pelo qual cada thread em um processo multithread determinado aloca o armazenamento para dados específicos de threads. Em programas multithread padrão, os dados são compartilhados entre todos os threads de um processo específico, enquanto o armazenamento local de threads é o mecanismo para alocar dados por thread. Para ler uma discussão completa sobre threads, consulte [Processos e threads](http://msdn.microsoft.com/library/windows/desktop/ms684841) em [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+ O armazenamento local de thread (TLS) é o mecanismo pelo qual cada thread em um processo multithread determinado aloca o armazenamento para dados específicos de threads. Em programas multithread padrão, os dados são compartilhados entre todos os threads de um processo específico, enquanto o armazenamento local de threads é o mecanismo para alocar dados por thread. Para obter uma discussão completa sobre threads, confira [Processos e threads](/windows/desktop/ProcThread/processes-and-threads) no SDK do Windows.  
   
  A linguagem Microsoft C inclui o atributo de classe de armazenamento estendida, thread, que é usado com a palavra-chave __declspec para declarar uma variável local de thread. Por exemplo, o código a seguir declara uma variável local de thread de inteiro e a inicializa com um valor:  
   
